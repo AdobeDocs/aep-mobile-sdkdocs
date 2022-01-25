@@ -24,7 +24,7 @@ module.exports = {
     ],
     pages: [
       {
-        title: 'Adobe Analytics',
+        title: 'Mobile SDK',
         path: '/'
       },
       {
