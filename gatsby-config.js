@@ -12,16 +12,16 @@
 
 module.exports = {
   siteMetadata: {
-    versions: [
-      {
-        title: 'v2.0',
-        selected: true
-      },
-      {
-        title: 'v1.4',
-        path: 'https://github.com/AdobeDocs/analytics-1.4-apis'
-      }
-    ],
+    // versions: [
+    //   {
+    //     title: 'v2.0',
+    //     selected: true
+    //   },
+    //   {
+    //     title: 'v1.4',
+    //     path: 'https://github.com/AdobeDocs/analytics-1.4-apis'
+    //   }
+    // ],
     pages: [
       {
         title: 'Mobile SDK',

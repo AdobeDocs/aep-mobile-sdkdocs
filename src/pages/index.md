@@ -69,3 +69,13 @@ The Adobe Experience Platform Mobile SDK supports the following platforms:
 ## Get help
 
 If you have any questions about the SDK, please visit the [SDK community forum](https://forums.adobe.com/community/experience-cloud/platform/launch/sdk). If you need immediate assistance, please contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support).
+
+<TabsBlock orientation="horizontal" slots="heading, content, repeat=2" theme="light" />
+
+### Create PDF from URL
+
+Here is some text
+
+### Dynamic PDF Document Generation
+
+Some more text
