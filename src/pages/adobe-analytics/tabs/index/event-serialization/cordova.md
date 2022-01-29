@@ -1,4 +1,6 @@
-### Cordova
+<TextBlock slots="heading, text" hasCodeBlock/>
+
+#### Cordova
 
 **Syntax**
 

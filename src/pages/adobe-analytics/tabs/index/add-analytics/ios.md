@@ -5,30 +5,31 @@ title: Add Analytics - iOS
 
 <TextBlock slots="heading, text" hasCodeBlock/>
 
-### iOS
+#### iOS
 
-1. Add the [Mobile Core](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core) and Analytics extensions to your project using Cocoapods.
-2. Add the following pods in your `Podfile`:
+Add the [Mobile Core](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core) and Analytics extensions to your project using Cocoapods.
 
-   ```ruby
-    pod 'ACPCore'
-    pod 'ACPAnalytics'
-   ```
+Add the following pods in your `Podfile`:
 
-3. Import the Analytics and Identity libraries:
+```ruby
+pod 'ACPCore'
+pod 'ACPAnalytics'
+```
 
-   **Objective-C**
+Import the Analytics and Identity libraries:
 
-   ```objectivec
-    #import "ACPCore.h"
-    #import "ACPAnalytics.h"
-    #import "ACPIdentity.h"
-   ```
+**Objective-C**
 
-   **Swift**
+```objectivec
+#import "ACPCore.h"
+#import "ACPAnalytics.h"
+#import "ACPIdentity.h"
+```
 
-   ```swift
-    import ACPCore
-    import ACPAnalytics
-    import ACPIdentity
-   ```
+**Swift**
+
+```swift
+import ACPCore
+import ACPAnalytics
+import ACPIdentity
+```

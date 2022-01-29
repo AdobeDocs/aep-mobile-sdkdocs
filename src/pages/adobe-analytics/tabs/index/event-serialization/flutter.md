@@ -1,4 +1,6 @@
-### Dart
+<TextBlock slots="heading, text" hasCodeBlock/>
+
+#### Dart
 
 **Syntax**
 

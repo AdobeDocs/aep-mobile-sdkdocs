@@ -1,6 +1,12 @@
-### C\#
+<TextBlock slots="heading, text" hasCodeBlock/>
 
-**iOS syntax**
+aaaa
+
+#### C#
+
+<CodeBlock slots="heading, code" repeat="2" languages="csharp, csharp" />
+
+## iOS Syntax
 
 ```csharp
 var contextData = new NSMutableDictionary<NSString, NSString>
@@ -9,7 +15,7 @@ var contextData = new NSMutableDictionary<NSString, NSString>
 };
 ```
 
-**iOS example**
+## iOS example
 
 ```csharp
 // create a context data dictionary and add events
@@ -25,6 +31,8 @@ ACPCore.TrackAction("Action Name", contextData);
 // trackState example:
 ACPCore.TrackState("State Name", contextData);
 ```
+
+ESXT
 
 **Android syntax**
 

@@ -1,4 +1,6 @@
-### Java
+<TextBlock slots="heading, text" hasCodeBlock/>
+
+#### Java
 
 **Syntax**
 

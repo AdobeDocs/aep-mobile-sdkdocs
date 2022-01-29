@@ -5,16 +5,16 @@ title: Add Analytics - Unity
 
 <TextBlock slots="heading, text" hasCodeBlock/>
 
-### C#
+#### C#
 
-1. After importing the [ACPAnalytics.unitypackage](https://github.com/adobe/unity-acpanalytics/blob/master/bin/ACPAnalytics-0.0.1-Unity.zip), add the Analytics extension for Unity.
+After importing the [ACPAnalytics.unitypackage](https://github.com/adobe/unity-acpanalytics/blob/master/bin/ACPAnalytics-0.0.1-Unity.zip), add the Analytics extension for Unity.
 
-   ```csharp
-   using com.adobe.marketing.mobile;
-   ```
+```csharp
+using com.adobe.marketing.mobile;
+```
 
-2. Get the extension version.
+Get the extension version.
 
-   ```csharp
-   ACPAnalytics.extensionVersion();
-   ```
+```csharp
+ACPAnalytics.extensionVersion();
+```

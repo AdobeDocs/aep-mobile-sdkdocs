@@ -1,4 +1,4 @@
-### C\#
+#### C#
 
 Register the extension in the `start()` function:
 

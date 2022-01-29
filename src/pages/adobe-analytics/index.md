@@ -34,23 +34,23 @@ import UpdateXamarin from './tabs/index/update-analytics/xamarin.md'
 
 # Adobe Analytics
 
-## Configure the Analytics extension in Adobe Experience Platform Launch
+## Configure the Analytics extension in the Data Collection UI
 
-1. In Experience Platform Launch, click the **Extensions** tab.
-2. On the **Catalog** tab, locate the **Adobe Analytics** extension, and click **Install**.
+1. In the Data Collection UI, select the **Extensions** tab.
+2. On the **Catalog** tab, locate the **Adobe Analytics** extension, and select **Install**.
 3. Type the extension settings. For more information, please read the [configure the Analytics Extension section](./#configure-the-analytics-extension).
 4. Click **Save**.
 5. Follow the publishing process to update SDK configuration.
 
-<!-- ![Workflow overview for Experience Platform Launch, the Mobile SDK, and Adobe Analytics](../../.gitbook/assets/group-7.png) -->
+![Workflow overview for Experience Platform Launch, the Mobile SDK, and Adobe Analytics](./images/index/workflow.png)
 
 ### Configure the Analytics extension
 
-<!-- ![Adobe Analytics Extension Configuration](../../.gitbook/assets/mobile-analytics-configuration.png) -->
+![Adobe Analytics Extension Configuration](./images/index/mobile-analytics-configuration.png)
 
 #### Analytics company
 
-<!-- ![Adobe Analytics Company](../../.gitbook/assets/mobile-analytics-company.png) -->
+![Adobe Analytics Company](./images/index/mobile-analytics-company.png)
 
 If you have access to more than one Analytics company, a select menu will appear, allowing you to choose which company you want to use. If you only have access to one Analytics company, this select menu will not appear.
 
@@ -255,7 +255,7 @@ The following video shows you how to use [trackState](../../foundation-extension
 
 <Media slots="video"/>
 
-<https://video.tv.adobe.com/v/26260>
+https://video.tv.adobe.com/v/26260
 
 ## Configuration keys
 

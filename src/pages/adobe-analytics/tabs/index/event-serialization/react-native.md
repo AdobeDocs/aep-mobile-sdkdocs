@@ -1,4 +1,6 @@
-### JavaScript
+<TextBlock slots="heading, text" hasCodeBlock/>
+
+#### JavaScript
 
 **Syntax**
 

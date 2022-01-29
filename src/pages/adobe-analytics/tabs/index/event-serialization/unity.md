@@ -1,4 +1,6 @@
-### C\#
+<TextBlock slots="heading, text" hasCodeBlock/>
+
+#### C#
 
 **Syntax**
 

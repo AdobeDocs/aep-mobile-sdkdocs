@@ -1,4 +1,6 @@
-### Objective-C
+<TextBlock slots="heading, text" hasCodeBlock/>
+
+#### Objective-C
 
 **Syntax**
 

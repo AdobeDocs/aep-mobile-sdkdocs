@@ -28,8 +28,8 @@ module.exports = {
         path: '/'
       },
       {
-        title: 'Guides',
-        path: '/guides/'
+        title: 'Adobe Analytics',
+        path: '/adobe-analytics/'
       },
       {
         title: 'API Reference',
@@ -50,28 +50,16 @@ module.exports = {
     ],
     subPages: [
       {
-        title: 'Get Started',
-        path: '/guides/',
+        title: 'Adobe Analytics',
+        path: '/adobe-analytics/',
         pages: [
           {
-            title: 'Overview',
-            path: '/guides/'
+              title: 'Event Reference',
+              path: '/adobe-analytics/event-reference/'
           },
           {
-            title: 'Creating an OAuth Client',
-            path: '/guides/creating_oauth_client/'
-          },
-          {
-            title: 'OAuth using cURL',
-            path: '/guides/oauth_using_curl/'
-          },
-          {
-            title: 'OAuth using POSTMAN',
-            path: '/guides/oauth_using_postman/'
-          },
-          {
-            title: 'JWT Authentication',
-            path: '/guides/jwt_authentication/'
+            title: 'Release Notes',
+            path: '/adobe-analytics/release-notes/'
           }
         ]
       },
