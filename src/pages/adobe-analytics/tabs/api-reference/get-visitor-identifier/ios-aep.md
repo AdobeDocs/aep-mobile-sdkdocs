@@ -1,3 +1,1 @@
-### getVisitorIdentifier
-
-See [getVisitorIdentifierWithCompletionHandler](analytics-api-reference.md#getvisitoridentifierwithcompletionHandler)
+For more information on using this API call, please read [getVisitorIdentifierWithCompletionHandler](#getvisitoridentifierwithcompletionHandler).

@@ -1,8 +1,8 @@
-### getVisitorIdentifierWithCompletionHandler
+#### Objective-C
 
 **Syntax**
 
-```text
+```objc
 + (void) getVisitorIdentifierWithCompletionHandler: (nonnull void (^) (NSString* __nullable visitorIdentifier, NSError* __nullable error)) completionHandler;
 ```
 
@@ -10,15 +10,15 @@
 
 **Example**
 
-**Objective-C**
-
-```text
+```objc
 [ACPAnalytics getVisitorIdentifierWithCompletionHandler:^(NSString * _Nullable visitorIdentifier, NSError * _Nullable error) {
     // Handle the error (if non-nil) or use the visitorIdentifier value
 }];
 ```
 
-**Swift**
+#### Swift
+
+**Example**
 
 ```swift
 ACPAnalytics.getVisitorIdentifierWithCompletionHandler { (visitorIdentifier, error) in

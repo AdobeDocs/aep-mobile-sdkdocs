@@ -1,8 +1,8 @@
-### getQueueSize
+#### Objective-C
 
 **Syntax**
 
-```text
+```objc
 + (void) getQueueSize: (nonnull void (^) (NSUInteger queueSize)) callback;
 ```
 
@@ -10,17 +10,15 @@
 
 **Example**
 
-Here are examples in Objective-C and Swift:
-
-**Objective-C**
-
-```text
+```objc
 [ACPAnalytics getQueueSize: ^(NSUInteger queueSize) {    
     // handle queue size
 }];
 ```
 
-**Swift**
+#### Swift
+
+**Example**
 
 ```swift
 ACPAnalytics.getQueueSize { (queueSize) in    

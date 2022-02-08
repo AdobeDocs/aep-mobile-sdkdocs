@@ -1,8 +1,8 @@
-### setVisitorIdentifier
+#### Objective-C
 
 **Syntax**
 
-```text
+```objc
 + (void) setVisitorIdentifier: (nonnull NSString*) visitorIdentifier;
 ```
 
@@ -10,15 +10,13 @@
 
 **Example**
 
-Here are examples in Objective-C and Swift:
-
-**Objective-C**
-
-```text
+```objc
 [ACPAnalytics setVisitorIdentifier:@"custom_identifier"];
 ```
 
-**Swift**
+#### Swift
+
+**Example**
 
 ```swift
 ACPAnalytics.setVisitorIdentifier("custom_identifier")

@@ -1,4 +1,4 @@
-### getQueueSize
+#### Swift
 
 **Syntax**
 
@@ -20,7 +20,7 @@ Analytics.getQueueSize { (queueSize, error) in
 
 **Objective-C**
 
-```text
+```objc
 [AEPMobileAnalytics getQueueSize:^(NSInteger queueSize, NSError * _Nullable error) {
     // Handle error (if non-nil) or use queueSize.
  }];

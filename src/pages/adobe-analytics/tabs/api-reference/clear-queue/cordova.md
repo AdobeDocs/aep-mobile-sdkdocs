@@ -1,9 +1,8 @@
-
-### clearQueue
-
 <InlineAlert variant="warning" slots="text"/>
+
 Use caution when manually clearing the queue. This operation cannot be reverted.
 
+#### Cordova
 
 **Syntax**
 

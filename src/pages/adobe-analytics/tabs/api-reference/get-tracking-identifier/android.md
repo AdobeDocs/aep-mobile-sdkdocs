@@ -1,6 +1,4 @@
-### getTrackingIdentifier
-
-Retrieves the Analytics tracking identifier.
+#### Java
 
 **Syntax**
 

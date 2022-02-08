@@ -1,6 +1,4 @@
-**JavaScript**
-
-### getQueueSize
+#### JavaScript
 
 **Syntax**
 

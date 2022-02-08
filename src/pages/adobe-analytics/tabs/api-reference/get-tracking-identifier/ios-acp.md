@@ -1,10 +1,8 @@
-### getTrackingIdentifier
-
-Retrieves the Analytics tracking identifier.
+#### Objective-C
 
 **Syntax**
 
-```text
+```objc
 + (void) getTrackingIdentifier: (nonnull void (^) (NSString* __nullable trackingIdentifier)) callback;
 ```
 
@@ -16,7 +14,7 @@ Here are examples in Objective-C and Swift:
 
 **Objective-C**
 
-```text
+```objc
 [ACPAnalytics getTrackingIdentifier:^(NSString * _Nullable trackingIdentifier) {
     // check the trackingIdentifier value  
 }];

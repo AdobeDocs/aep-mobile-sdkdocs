@@ -1,6 +1,4 @@
-### getTrackingIdentifier
-
-Retrieves the Analytics tracking identifier.
+#### Swift
 
 **Syntax**
 
@@ -20,7 +18,7 @@ Analytics.getTrackingIdentifier { (trackingId, error) in
 
 **Objective-C**
 
-```text
+```objc
 AEPMobileAnalytics getTrackingIdentifier:^(NSString * _Nullable trackingIdentifier, NSError * _Nullable error) {
    // Handle the error (if non-nil) or use the trackingIdentifier value
 }];

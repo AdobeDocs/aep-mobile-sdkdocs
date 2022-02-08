@@ -6,6 +6,6 @@ let version = Analytics.extensionVersion
 
 **Objective-C**
 
-```text
+```objc
 NSString *version = [AEPMobileAnalytics extensionVersion];
 ```

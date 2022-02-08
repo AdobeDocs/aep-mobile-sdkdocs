@@ -1,10 +1,8 @@
-### sendQueuedHits
-
-This method forces the library to send all hits in the offline queue, regardless of how many hits are currently queued.
+#### Swift
 
 <InlineAlert variant="warning" slots="text"/>
-Use caution when manually clearing the queue. This operation cannot be reverted.
 
+Use caution when manually clearing the queue. This operation cannot be reverted.
 
 **Syntax**
 
@@ -14,13 +12,13 @@ static func sendQueuedHits()
 
 **Example**
 
-**Objective-C**
-
-```text
+```objc
 Analytics.sendQueuedHits()
 ```
 
-**Swift**
+#### Objective-C
+
+**Example**
 
 ```swift
 [AEPMobileAnalytics sendQueueHits];

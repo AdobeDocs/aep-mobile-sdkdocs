@@ -1,7 +1,5 @@
 #### Dart
 
-Retrieves the Analytics tracking identifier.
-
 **Syntax**
 
 ```dart

@@ -1,8 +1,8 @@
-### getVisitorIdentifier
+#### Objective-C
 
 **Syntax**
 
-```text
+```objc
 + (void) getVisitorIdentifier: (nonnull void (^) (NSString* __nullable visitorIdentifier)) callback;
 ```
 
@@ -12,7 +12,7 @@
 
 **Objective-C**
 
-```text
+```objc
 [ACPAnalytics getVisitorIdentifier:^(NSString * _Nullable visitorIdentifier) {
     // check the visitorIdentifier value   
 }];

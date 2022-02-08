@@ -1,8 +1,8 @@
-### getQueueSizeWithCompletionHandler
+#### Objective-C
 
 **Syntax**
 
-```text
+```objc
 + (void) getQueueSizeWithCompletionHandler: (nonnull void (^) (NSUInteger queueSize, NSError* __nullable error)) completionHandler;
 ```
 
@@ -22,7 +22,7 @@ ACPAnalytics.getQueueSizeWithCompletionHandler { (queueSize, error) in
 
 **Objective-C**
 
-```text
+```objc
 [ACPAnalytics getQueueSizeWithCompletionHandler: ^(NSUInteger queueSize, NSError * _Nullable error) {    
     // Handle error (if non-nil) or use queueSize.
 }];

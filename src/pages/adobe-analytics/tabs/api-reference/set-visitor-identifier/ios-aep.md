@@ -1,4 +1,4 @@
-### setVisitorIdentifier
+#### Swift
 
 **Syntax**
 
@@ -10,14 +10,14 @@ static func setVisitorIdentifier(visitorIdentifier: String)
 
 **Example**
 
-**Swift**
-
 ```swift
 Analytics.setVisitorIdentifier(visitorIdentifier:"custom_identifier")
 ```
 
-**Objective-C**
+#### Objective-C
 
-```text
+**Example**
+
+```objc
 [AEPMobileAnalytics setVisitorIdentifier:@"custom_identifier"];
 ```

@@ -1,8 +1,8 @@
-### getTrackingIdentifierWithCompletionHandler
+#### Objective-C
 
 **Syntax**
 
-```text
+```objc
 + (void) getTrackingIdentifierWithCompletionHandler: (nonnull void (^) (NSString* __nullable trackingIdentifier, NSError* __nullable error)) completionHandler;
 ```
 

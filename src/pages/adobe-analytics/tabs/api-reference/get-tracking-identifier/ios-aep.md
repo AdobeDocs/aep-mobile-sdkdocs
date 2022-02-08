@@ -1,3 +1,1 @@
-### getTrackingIdentifier
-
-Retrieves the Analytics tracking identifier. See [getTrackingIdentifierWithCompletionHandler](analytics-api-reference.md#gettrackingidentifierwithcompletionhandler)
+Please see the [getTrackingIdentifierWithCompletionHandler](#gettrackingidentifierwithcompletionhandler) section for using this API call.
