@@ -53,9 +53,21 @@ module.exports = {
         title: 'Adobe Analytics',
         path: '/adobe-analytics/',
         pages: [
+            {
+                title: "API reference",
+                path: "/adobe-analytics/api-reference/"
+            },
           {
-              title: 'Event Reference',
+              title: 'Event reference',
               path: '/adobe-analytics/event-reference/'
+          },
+          {
+              title: "Migration",
+              path: "adobe-analytics/migration/"
+          },
+          {
+              title: "Product variable",
+              path: "adobe-analytics/product-variable"
           },
           {
             title: 'Release Notes',
