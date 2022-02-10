@@ -1,0 +1,1 @@
+No setup is required on iOS, since icons are automatically handled by the SDK.
