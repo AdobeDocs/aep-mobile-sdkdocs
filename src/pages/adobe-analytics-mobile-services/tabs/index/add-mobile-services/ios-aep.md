@@ -2,7 +2,7 @@ You can add the library to your project through your `Podfile` by adding the `AE
 
 Import the library into your project:
 
-### Swift
+#### Swift
 
 ```swift
 import AEPCore
@@ -13,7 +13,7 @@ import AEPAnalytics
 import AEPMobileServices
 ```
 
-### Objective-C
+#### Objective-C
 
 ```objectivec
 @import AEPCore

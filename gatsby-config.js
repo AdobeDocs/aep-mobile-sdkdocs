@@ -24,12 +24,16 @@ module.exports = {
     // ],
     pages: [
       {
-        title: 'Mobile SDK',
-        path: '/'
+        title: 'Documentation',
+        path: '/',
       },
       {
         title: 'Adobe Analytics',
         path: '/adobe-analytics/'
+      },
+      {
+          title: "Adobe Analytics - Mobile Services",
+          path: "/adobe-analytics-mobile-services/"
       },
       {
         title: 'API Reference',
@@ -49,6 +53,14 @@ module.exports = {
       }
     ],
     subPages: [
+        {
+            title: "Home",
+            path: "/",
+            pages: [{
+                title: "Overview",
+                path: "/"
+            }]
+        },
       {
         title: 'Adobe Analytics',
         path: '/adobe-analytics/',
@@ -76,78 +88,32 @@ module.exports = {
         ]
       },
       {
-        title: 'Reporting API',
-        path: '/guides/reporting_api/',
-        pages: [
-          {
-            title: 'Overview',
-            path: '/guides/reporting_api/'
-          },
-          {
-            title: 'Reporting with breakdowns',
-            path: '/guides/reporting_api/reporting_breakdowns/',
-            pages: [
+          title: "Adobe Analytics - Mobile Services",
+          path: "/adobe-analytics-mobile-services",
+          pages: [
               {
-                title: 'Reporting with single breakdowns',
-                path: '/guides/reporting_api/reporting_breakdowns/',
+                  title: "API reference",
+                  path: "adobe-analytics-mobile-services/api-reference/"
               },
               {
-                title: 'Reporting with multiple breakdowns',
-                path: '/guides/reporting_api/reporting_breakdowns/reporting_multiple_breakdowns/',
+                  title: "Migration",
+                  path: "adobe-analytics-mobile-services/migration/"
               },
-            ]
-          },
-          {
-            title: 'Reporting tips and tricks',
-            path: '/guides/reporting_api/reporting_tips_tricks/'
-          }
-        ]
+              {
+                title: "Release notes",
+                path: "adobe-analytics-mobile-services/release-notes/"
+              }
+          ]
       },
       {
-        title: 'Discovery API',
-        path: '/guides/discovery_api/'
-      },
-      {
-        title: 'Segments API',
-        path: '/guides/segments_api/'
-      },
-      {
-        title: 'Calculated Metrics API',
-        path: '/guides/calculated_metrics_api/'
-      },
-      {
-        title: 'Migrating',
-        path: '/guides/migrating/'
-      },
-      {
-        title: 'Overview',
-        path: '/support/',
-        header: true,
-        pages: [
-          {
-            title: 'Help',
-            path: '/support/'
-          },
-          {
-            title: 'FAQ',
-            path: '/support/FAQ/'
-          },
-          {
-            title: 'How to contribute',
-            path: '/support/contribute/'
-          }
-        ]
-      },
-      {
-        title: 'Community',
-        path: '/support/community/',
-        header: true,
-        pages: [
-          {
-            title: 'Information',
-            path: '/support/community/'
-          }
-        ]
+          title: "Adobe Audience Manager",
+          path: "/adobe-audience-manager/",
+          pages: [
+              {
+                  title: "Release notes",
+                  path: "adobe-audience-manager/release-notes"
+              }
+          ]
       }
     ]
   },

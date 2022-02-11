@@ -2,7 +2,7 @@ You can add the library to your project through your `Podfile` by adding the `AC
 
 Import the library into your project:
 
-### Objective-C
+#### Objective-C
 
 ```objectivec
 #import "ACPCore.h"
@@ -11,7 +11,8 @@ Import the library into your project:
 #import "ACPAnalytics.h"
 #import "ACPMobileServices.h"
 ```
-### Swift
+
+#### Swift
 
 ```swift
 import ACPCore

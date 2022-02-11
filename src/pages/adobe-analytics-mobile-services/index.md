@@ -39,7 +39,7 @@ Review the following Mobile Services functionality documentation for context and
 
 <InlineAlert variant="warning" slots="text"/>
 
-Postbacks created from the Mobile Services interface are **not** supported. Please use a Launch rule with the Mobile Core extension to create a postback. [Signal extension and Rules Engine integration](../../resources/user-guides/signal-extension-and-rules-engine-integration.md). FIX LINK
+Postbacks created from the Mobile Services interface are **not** supported. Please use a rule defined in the Data Collection UI with the Mobile Core extension to create a postback. [Signal extension and Rules Engine integration](../../resources/user-guides/signal-extension-and-rules-engine-integration.md). FIX LINK
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -51,12 +51,12 @@ To use location-based functionality for Mobile Services, see the documentation o
 
 To use the Mobile Services extension, complete the following steps:
 
-1. Configure the Mobile Services extension in Launch.
+1. Configure the Mobile Services extension in the Data Collection UI.
 2. If using acquisition and marketing links, update your configuration in the Analytics extension.
 3. Add Mobile Services extension to your app.
 4. Implement the Mobile Services APIs in your app.
 
-## Configure the Mobile Services extension in Experience Platform Launch
+## Configure the Mobile Services extension in the Data Collection UI
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -64,11 +64,11 @@ The Mobile Services extension requires the Analytics extension for reporting. It
 
 ### Automatic configuration (Recommended)
 
-1. In Experience Platform Launch, click the **Extensions** tab.
-2. Choose **Catalog**, locate the **Adobe Analytics – Mobile Services** extension, and click **Install**.
+1. In the Data Collection UI, select the **Extensions** tab.
+2. Choose **Catalog**, locate the **Adobe Analytics – Mobile Services** extension, and select **Install**.
 3. Select a Mobile Services app and complete the following tasks:
    1. In **Mobile Services app**, select app from the drop-down list.
-   2. Click **Save**.
+   2. Select **Save**.
    3. Follow the publishing process to update the SDK configuration.
 
 ![Mobile Services Extension Configuration](images/index/install-extension.png)
@@ -103,12 +103,12 @@ To install the Mobile Services extension, complete the following steps:
 
    ![](images/index/adb-mobile-config.png)
 
-6. Click **Save**.
+6. Select **Save**.
 7. Follow the publishing process to update your SDK configuration.
 
 ## Configure the Adobe Analytics extension
 
-1. To ensure that this extension is correctly configured and implemented, follow the steps in the [configure the Mobile Services extension in Experience Platform Launch](https://app.gitbook.com/@aep-sdks/s/docs/~/drafts/-LzsbnKuIZ7JbOKOD9DC/using-mobile-extensions/adobe-analytics-mobile-services#configure-the-adobe-analytics-extension) tutorial. FIX LINK
+1. To ensure that this extension is correctly configured and implemented, follow the steps in the [configure the Mobile Services extension in the Data Collection UI](https://app.gitbook.com/@aep-sdks/s/docs/~/drafts/-LzsbnKuIZ7JbOKOD9DC/using-mobile-extensions/adobe-analytics-mobile-services#configure-the-adobe-analytics-extension) tutorial. FIX LINK
 2. In **Launch Hit Delay**, type a value of 5s or more to ensure that the acquisition context is sent to Analytics with your Lifecycle information.
 
 ![](images/index/launch-hit-delay.png)
@@ -131,7 +131,7 @@ The Mobile Services extension depends on the Core extension, which includes the 
 
 #### iOS (ACP 2.x)
 
-<AddMobileServiceIosACP/>
+<AddMobileServicesIosACP/>
 
 ## Register Mobile Services with Mobile Core
 
@@ -253,8 +253,8 @@ The SDK automatically tracks metrics for your in-app messages.
 For full screen and alert style in-app messages, the following metrics are tracked:
 
 * **Impressions**: when user triggers an in-app message.
-* **Click throughs**: when user clicks the **Click through** button.
-* **Cancels**: when user clicks the **Cancel** button.
+* **Click throughs**: when user selects the **Click through** button.
+* **Cancels**: when user selects the **Cancel** button.
 
 For custom full screen in-app messages, the HTML content in the message needs to include the correct code to notify the SDK tracking about the following buttons:
 

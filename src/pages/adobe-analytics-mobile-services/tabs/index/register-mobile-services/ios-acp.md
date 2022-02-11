@@ -1,6 +1,6 @@
 In your app's `application:didFinishLaunchingWithOptions` function, register the Mobile Services extension with the Mobile Core:
 
-### Objective-C
+#### Objective-C
 
 ```objectivec
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -13,7 +13,8 @@ In your app's `application:didFinishLaunchingWithOptions` function, register the
    return YES;
 }
 ```
-### Swift
+
+#### Swift
 
 ```swift
 func application(_application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool{
