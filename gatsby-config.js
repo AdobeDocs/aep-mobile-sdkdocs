@@ -25,7 +25,7 @@ module.exports = {
     pages: [
       {
         title: 'Documentation',
-        path: '/',
+        path: '/documentation',
       },
       {
         title: 'Adobe Analytics',
@@ -53,65 +53,61 @@ module.exports = {
       }
     ],
     subPages: [
-        {
+      {
             title: "Home",
-            path: "/",
-            pages: [{
-                title: "Overview",
-                path: "/"
-            }]
+            path: "/documentation"
         },
       {
         title: 'Adobe Analytics',
-        path: '/adobe-analytics/',
+        path: '/documentation/adobe-analytics/',
         pages: [
             {
                 title: "API reference",
-                path: "/adobe-analytics/api-reference/"
+                path: "/documentation/adobe-analytics/api-reference/"
             },
           {
               title: 'Event reference',
-              path: '/adobe-analytics/event-reference/'
+              path: '/documentation/adobe-analytics/event-reference/'
           },
           {
               title: "Migration",
-              path: "adobe-analytics/migration/"
+              path: "/documentation/adobe-analytics/migration/"
           },
           {
               title: "Product variable",
-              path: "adobe-analytics/product-variable"
+              path: "/documentation/adobe-analytics/product-variable"
           },
           {
             title: 'Release Notes',
-            path: '/adobe-analytics/release-notes/'
+            path: '/documentation/adobe-analytics/release-notes/'
           }
         ]
       },
       {
           title: "Adobe Analytics - Mobile Services",
-          path: "/adobe-analytics-mobile-services",
+          path: "/documentation/adobe-analytics-mobile-services",
           pages: [
               {
                   title: "API reference",
-                  path: "adobe-analytics-mobile-services/api-reference/"
+                  path: "/documentation/adobe-analytics-mobile-services/api-reference/"
               },
               {
                   title: "Migration",
-                  path: "adobe-analytics-mobile-services/migration/"
+                  path: "/documentation/adobe-analytics-mobile-services/migration/"
               },
               {
                 title: "Release notes",
-                path: "adobe-analytics-mobile-services/release-notes/"
+                path: "/documentation/adobe-analytics-mobile-services/release-notes/"
               }
           ]
       },
       {
           title: "Adobe Audience Manager",
-          path: "/adobe-audience-manager/",
+          path: "/documentation/adobe-audience-manager/",
           pages: [
               {
                   title: "Release notes",
-                  path: "adobe-audience-manager/release-notes"
+                  path: "/documentation/adobe-audience-manager/release-notes"
               }
           ]
       }
