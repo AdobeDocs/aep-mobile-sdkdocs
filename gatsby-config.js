@@ -106,6 +106,10 @@ module.exports = {
           path: "/documentation/adobe-audience-manager/",
           pages: [
               {
+                  title: "API reference",
+                  path: "documentation/adobe-audience-manager/api-reference"
+              },
+              {
                   title: "Release notes",
                   path: "/documentation/adobe-audience-manager/release-notes"
               }

@@ -25,15 +25,6 @@ The Swift versions of the iOS SDKs have been released!
 
 For more information on the Swift versions, including available Swift extensions and reference information, please read the [current SDK versions document](#).<br/><br/>Additionally, the Swift iOS SDKs are open source. You can learn more about this move to Swift and open source in the [Adobe Tech Blog](https://medium.com/adobetech/adobe-experience-platform-mobile-sdks-move-to-swift-for-ios-6aa67b67b4d4).
 
-<Resources slots="heading, links"/>
-
-#### Resources
-
-* [Getting started](#)
-* [Getting the Experience Platform SDKs](#)
-* [Frequently asked questions](#)
-* [Why use the Adobe Experience Platform Mobile SDKs](https://medium.com/adobetech/accelerate-your-mobile-application-development-with-adobe-experience-platform-mobile-sdk-and-launch-ed023536d611)
-
 <InlineAlert variant="success" slots="header, text"/>
 
 Support for Adobe Experience Platform Edge Network
@@ -69,3 +60,10 @@ The Adobe Experience Platform Mobile SDK supports the following platforms:
 ## Get help
 
 If you have any questions about the SDK, please visit the [SDK community forum](https://forums.adobe.com/community/experience-cloud/platform/launch/sdk). If you need immediate assistance, please contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support).
+
+## Resources
+
+* [Getting started](#) FIX LINK
+* [Getting the Experience Platform SDKs](#) FIX LINK
+* [Frequently asked questions](#) FIX LINK
+* [Why use the Adobe Experience Platform Mobile SDKs](https://medium.com/adobetech/accelerate-your-mobile-application-development-with-adobe-experience-platform-mobile-sdk-and-launch-ed023536d611)
