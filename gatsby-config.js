@@ -110,6 +110,14 @@ module.exports = {
                   path: "documentation/adobe-audience-manager/api-reference"
               },
               {
+                  title: "Event reference",
+                  path: "documentation/adobe-audience-manager/event-reference"
+              },
+              {
+                  title: "Migration",
+                  path: "documentation/adobe-audience-manager/migration"
+              },
+              {
                   title: "Release notes",
                   path: "/documentation/adobe-audience-manager/release-notes"
               }
