@@ -122,6 +122,24 @@ module.exports = {
                   path: "/documentation/adobe-audience-manager/release-notes"
               }
           ]
+      },
+      {
+          title: "Adobe Campaign Standard",
+          path: "/documentation/adobe-campaign-standard",
+          pages: [
+              {
+                  title: "API reference",
+                  path: "documentation/adobe-campaign-standard/api-reference"
+              },
+              {
+                  title: "Event reference",
+                  path: "documentation/adobe-campaign-standard/event-reference"
+              },
+              {
+                  title: "Release notes",
+                  path: "documentation/adobe-campaign-standard/release-notes"
+              }
+          ]
       }
     ]
   },

@@ -1,3 +1,21 @@
+import AddExtensionReactNative from './tabs/index/add-extension/react-native.md'
+import AddExtensionIos from './tabs/index/add-extension/ios.md'
+import AddExtensionAndroid from './tabs/index/add-extension/android.md'
+import RegisterExtensionReactNative from './tabs/index/register-extension/react-native.md'
+import RegisterExtensionIos from './tabs/index/register-extension/ios.md'
+import RegisterExtensionAndroid from './tabs/index/register-extension/android.md'
+import SetUpPushMessagingReactNative from './tabs/index/set-up-push-messaging/react-native.md'
+import SetUpPushMessagingIos from './tabs/index/set-up-push-messaging/ios.md'
+import SetUpPushMessagingAndroid from './tabs/index/set-up-push-messaging/android.md'
+import CustomizeRequestFrequencyIos from './tabs/index/customize-request-frequency/ios.md'
+import CustomizeRequestFrequencyAndroid from './tabs/index/customize-request-frequency/android.md'
+import HandlingClickthroughsIos from './tabs/index/handling-clickthroughs/ios.md'
+import HandlingClickthroughsAndroid from './tabs/index/handling-clickthroughs/android.md'
+import InitializeSDKIos from './tabs/index/initialize-sdk/ios.md'
+import InitializeSDKAndroid from './tabs/index/initialize-sdk/android.md'
+import TrackingPushNotificationInteractionsIos from './tabs/index/tracking-push-notification-interactions/ios.md'
+import TrackingPushNotificationInteractionsAndroid from './tabs/index/tracking-push-notification-interactions/android.md'
+
 # Adobe Campaign Standard
 
 <InlineAlert variant="info" slots="text"/>
@@ -18,7 +36,7 @@ If you participated in the Campaign Standard beta, to use the new Campaign Stand
 
 ### Configure the Campaign Standard extension
 
-![](../../.gitbook/assets/campaign-extension-config-v5.png)
+![](./images/index/configure.png)
 
 ### Campaign Standard endpoints
 
@@ -54,7 +72,7 @@ The request timeout value must be a non-zero number.
 
 Remember the following information when you add the Campaign extension to your app:
 
-FIX LINK
+FIX LINKS
 
 | Extension | Information |
 | :--- | :--- |
@@ -99,7 +117,7 @@ The instructions to add these extensions to your mobile app are also available i
 
 ### Initialize the SDK and set up tracking
 
-To initialize the SDK and set up tracking, see the [initialize the SDK and set up tracking tutorial](https://aep-sdks.gitbook.io/docs/getting-started/initialize-the-sdk).
+To initialize the SDK and set up tracking, see the [initialize the SDK and set up tracking tutorial](https://aep-sdks.gitbook.io/docs/getting-started/initialize-the-sdk). FIX LINK
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -112,6 +130,8 @@ To initialize the SDK and set up tracking, see the [initialize the SDK and set u
 <InitializeSDKIos/>
 
 ### Set up push messaging
+
+FIX LINK
 
 To enable push messaging with Adobe Campaign, call `setPushIdentifer` to send the push identifier that is received from the Apple Push Notification Service (APNS) or Firebase Cloud Messaging Platform (FCM) to the Adobe Identity service. For more information about the `setPushIdentifer` API, see the [setPushIdentifier section of the Adobe Identity API guide](https://aep-sdks.gitbook.io/docs/foundation-extensions/mobile-core/identity/identity-api-reference#setpushidentifier).
 
@@ -161,7 +181,7 @@ Deleting your property in the Experience Platform Data Connection UI might cause
 
 In the Data Collection UI, if you delete your mobile property, review your mobile property status in the Campaign Standard extension and ensure that the property displays an updated **Deleted in Launch** status. For more information about deleting a property, please read the [delete a property](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=en#delete-a-property) section within the Data Collection UI documentation.
 
-To remove the corresponding mobile app in Campaign Standard, click **Remove from ACS**. For more information, see the section on [deleting your tags-enabled mobile application](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-channels/configuring-a-mobile-application.html?lang=en#delete-app).
+To remove the corresponding mobile app in Campaign Standard, select **Remove from ACS**. For more information, see the section on [deleting your tags-enabled mobile application](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-channels/configuring-a-mobile-application.html?lang=en#delete-app).
 
 <InlineAlert variant="warning" slots="text"/>
 

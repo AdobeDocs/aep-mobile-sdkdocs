@@ -2,7 +2,7 @@
 
 iOS simulators do **not** support push messaging.
 
-### Objective-C
+#### Objective-C
 
 **Example**
 
@@ -14,7 +14,7 @@ iOS simulators do **not** support push messaging.
 }
 ```
 
-### Swift
+#### Swift
 
 **Example**
 
