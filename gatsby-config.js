@@ -136,8 +136,30 @@ module.exports = {
                   path: "documentation/adobe-campaign-standard/event-reference"
               },
               {
+                  title: "Migration",
+                  path: "documentation/adobe-campaign-standard/migration"
+              },
+              {
                   title: "Release notes",
                   path: "documentation/adobe-campaign-standard/release-notes"
+              }
+          ]
+      },
+      {
+          title: "Adobe Campaign Classic",
+          path: "/documentation/adobe-campaign-classic",
+          pages: [
+              {
+                  title: "API reference",
+                  path: "documentation/adobe-campaign-classic/api-reference"
+              },
+              {
+                  title: "Event reference",
+                  path: "documentation/adobe-campaign-classic/event-reference"
+              },
+              {
+                  title: "Release notes",
+                  path: "documentation/adobe-campaign-classic/release-notes"
               }
           ]
       }
