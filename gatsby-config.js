@@ -162,6 +162,16 @@ module.exports = {
                   path: "documentation/adobe-campaign-classic/release-notes"
               }
           ]
+      },
+      {
+          title: "Adobe Journey Optimizer",
+          path: "/documentation/adobe-journey-optimizer",
+          pages: [
+              {
+                  title: "Release notes",
+                  path: "documentation/adobe-journey-optimizer/release-notes"
+              }
+          ]
       }
     ]
   },
