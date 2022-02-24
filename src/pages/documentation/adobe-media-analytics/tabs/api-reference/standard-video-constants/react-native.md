@@ -1,0 +1,25 @@
+#### JavaScript
+
+**Syntax**
+
+```jsx
+import {ACPMediaConstants} from '@adobe/react-native-acpmedia';
+
+ACPMediaConstants.ACPVideoMetadataKeyShow
+ACPMediaConstants.ACPVideoMetadataKeySeason
+ACPMediaConstants.ACPVideoMetadataKeyEpisode
+ACPMediaConstants.ACPVideoMetadataKeyAssetId
+ACPMediaConstants.ACPVideoMetadataKeyGenre
+ACPMediaConstants.ACPVideoMetadataKeyFirstAirDate
+ACPMediaConstants.ACPVideoMetadataKeyFirstDigitalDate
+ACPMediaConstants.ACPVideoMetadataKeyRating
+ACPMediaConstants.ACPVideoMetadataKeyOriginator
+ACPMediaConstants.ACPVideoMetadataKeyNetwork
+ACPMediaConstants.ACPVideoMetadataKeyShowType
+ACPMediaConstants.ACPVideoMetadataKeyAdLoad
+ACPMediaConstants.ACPVideoMetadataKeyMvpd
+ACPMediaConstants.ACPVideoMetadataKeyAuthorized
+ACPMediaConstants.ACPVideoMetadataKeyDayPart
+ACPMediaConstants.ACPVideoMetadataKeyFeed
+ACPMediaConstants.ACPVideoMetadataKeyStreamFormat
+```

@@ -168,10 +168,28 @@ module.exports = {
           path: "/documentation/adobe-journey-optimizer",
           pages: [
               {
+                  title: "API reference",
+                  path: "documentation/adobe-journey-optimizer/api-reference"
+              },
+              {
                   title: "Release notes",
                   path: "documentation/adobe-journey-optimizer/release-notes"
               }
           ]
+      },
+      {
+        title: "Adobe Media Analytics",
+        path: "/documentation/adobe-media-analytics",
+        pages: [
+            {
+                title: "API reference",
+                path: "documentation/adobe-media-analytics/api-reference"
+            },
+            {
+                title: "Release notes",
+                path: "documentation/adobe-media-analytics/release-notes"
+            }
+        ]
       }
     ]
   },
