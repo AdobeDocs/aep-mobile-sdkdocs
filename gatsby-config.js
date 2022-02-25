@@ -186,6 +186,10 @@ module.exports = {
                 path: "documentation/adobe-media-analytics/api-reference"
             },
             {
+                title: "Migration",
+                path: "documentation/adobe-media-analytics/migration"
+            },
+            {
                 title: "Release notes",
                 path: "documentation/adobe-media-analytics/release-notes"
             }
