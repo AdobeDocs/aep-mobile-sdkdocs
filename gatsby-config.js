@@ -194,6 +194,32 @@ module.exports = {
                 path: "documentation/adobe-media-analytics/release-notes"
             }
         ]
+      },
+      {
+          title: "Adobe Target",
+          path: "/documentation/adobe-target",
+          pages: [
+              {
+                  title: "API reference",
+                  path: "documentation/adobe-target/api-reference"
+              },
+              {
+                  title: "Event reference",
+                  path: "documentation/adobe-target/event-reference"
+              },
+              {
+                  title: "Migration",
+                  path: "documentation/adobe-target/migration"
+              },
+              {
+                  title: "Release notes",
+                  path: "documentation/adobe-target/release-notes"
+              },
+              {
+                  title: "Deprecated APIs",
+                  path: "documentation/adobe-target/deprecated-apis"
+              }
+          ]
       }
     ]
   },
