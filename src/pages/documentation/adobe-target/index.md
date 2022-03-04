@@ -71,7 +71,7 @@ React Native
 
 <AddTargetReactNative/>
 
-### Register Target with Mobile Core
+## Register Target with Mobile Core
 
 To register the Target extension with Mobile Core:
 
