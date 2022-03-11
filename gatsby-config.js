@@ -224,5 +224,5 @@ module.exports = {
     ]
   },
   plugins: [`@adobe/gatsby-theme-aio`],
-  pathPrefix: process.env.PATH_PREFIX || '/dev-site-documentation-template/'
+  pathPrefix: process.env.PATH_PREFIX || '/client-sdk/'
 };
