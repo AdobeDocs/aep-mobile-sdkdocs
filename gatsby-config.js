@@ -12,24 +12,28 @@
 
 module.exports = {
   siteMetadata: {
-    versions: [
-      {
-        title: 'v2.0',
-        selected: true
-      },
-      {
-        title: 'v1.4',
-        path: 'https://github.com/AdobeDocs/analytics-1.4-apis'
-      }
-    ],
+    // versions: [
+    //   {
+    //     title: 'v2.0',
+    //     selected: true
+    //   },
+    //   {
+    //     title: 'v1.4',
+    //     path: 'https://github.com/AdobeDocs/analytics-1.4-apis'
+    //   }
+    // ],
     pages: [
       {
-        title: 'Adobe Analytics',
-        path: '/'
+        title: 'Documentation',
+        path: '/documentation',
       },
       {
-        title: 'Guides',
-        path: '/guides/'
+        title: 'Adobe Analytics',
+        path: '/adobe-analytics/'
+      },
+      {
+          title: "Adobe Analytics - Mobile Services",
+          path: "/adobe-analytics-mobile-services/"
       },
       {
         title: 'API Reference',
@@ -50,107 +54,175 @@ module.exports = {
     ],
     subPages: [
       {
-        title: 'Get Started',
-        path: '/guides/',
+            title: "Home",
+            path: "/documentation"
+        },
+      {
+        title: 'Adobe Analytics',
+        path: '/documentation/adobe-analytics/',
         pages: [
+            {
+                title: "API reference",
+                path: "/documentation/adobe-analytics/api-reference/"
+            },
           {
-            title: 'Overview',
-            path: '/guides/'
+              title: 'Event reference',
+              path: '/documentation/adobe-analytics/event-reference/'
           },
           {
-            title: 'Creating an OAuth Client',
-            path: '/guides/creating_oauth_client/'
+              title: "Migration",
+              path: "/documentation/adobe-analytics/migration/"
           },
           {
-            title: 'OAuth using cURL',
-            path: '/guides/oauth_using_curl/'
+              title: "Product variable",
+              path: "/documentation/adobe-analytics/product-variable"
           },
           {
-            title: 'OAuth using POSTMAN',
-            path: '/guides/oauth_using_postman/'
-          },
-          {
-            title: 'JWT Authentication',
-            path: '/guides/jwt_authentication/'
+            title: 'Release Notes',
+            path: '/documentation/adobe-analytics/release-notes/'
           }
         ]
       },
       {
-        title: 'Reporting API',
-        path: '/guides/reporting_api/',
-        pages: [
-          {
-            title: 'Overview',
-            path: '/guides/reporting_api/'
-          },
-          {
-            title: 'Reporting with breakdowns',
-            path: '/guides/reporting_api/reporting_breakdowns/',
-            pages: [
+          title: "Adobe Analytics - Mobile Services",
+          path: "/documentation/adobe-analytics-mobile-services",
+          pages: [
               {
-                title: 'Reporting with single breakdowns',
-                path: '/guides/reporting_api/reporting_breakdowns/',
+                  title: "API reference",
+                  path: "/documentation/adobe-analytics-mobile-services/api-reference/"
               },
               {
-                title: 'Reporting with multiple breakdowns',
-                path: '/guides/reporting_api/reporting_breakdowns/reporting_multiple_breakdowns/',
+                  title: "Migration",
+                  path: "/documentation/adobe-analytics-mobile-services/migration/"
               },
-            ]
-          },
-          {
-            title: 'Reporting tips and tricks',
-            path: '/guides/reporting_api/reporting_tips_tricks/'
-          }
-        ]
+              {
+                title: "Release notes",
+                path: "/documentation/adobe-analytics-mobile-services/release-notes/"
+              }
+          ]
       },
       {
-        title: 'Discovery API',
-        path: '/guides/discovery_api/'
+          title: "Adobe Audience Manager",
+          path: "/documentation/adobe-audience-manager/",
+          pages: [
+              {
+                  title: "API reference",
+                  path: "documentation/adobe-audience-manager/api-reference"
+              },
+              {
+                  title: "Event reference",
+                  path: "documentation/adobe-audience-manager/event-reference"
+              },
+              {
+                  title: "Migration",
+                  path: "documentation/adobe-audience-manager/migration"
+              },
+              {
+                  title: "Release notes",
+                  path: "/documentation/adobe-audience-manager/release-notes"
+              }
+          ]
       },
       {
-        title: 'Segments API',
-        path: '/guides/segments_api/'
+          title: "Adobe Campaign Standard",
+          path: "/documentation/adobe-campaign-standard",
+          pages: [
+              {
+                  title: "API reference",
+                  path: "documentation/adobe-campaign-standard/api-reference"
+              },
+              {
+                  title: "Event reference",
+                  path: "documentation/adobe-campaign-standard/event-reference"
+              },
+              {
+                  title: "Migration",
+                  path: "documentation/adobe-campaign-standard/migration"
+              },
+              {
+                  title: "Release notes",
+                  path: "documentation/adobe-campaign-standard/release-notes"
+              }
+          ]
       },
       {
-        title: 'Calculated Metrics API',
-        path: '/guides/calculated_metrics_api/'
+          title: "Adobe Campaign Classic",
+          path: "/documentation/adobe-campaign-classic",
+          pages: [
+              {
+                  title: "API reference",
+                  path: "documentation/adobe-campaign-classic/api-reference"
+              },
+              {
+                  title: "Event reference",
+                  path: "documentation/adobe-campaign-classic/event-reference"
+              },
+              {
+                  title: "Release notes",
+                  path: "documentation/adobe-campaign-classic/release-notes"
+              }
+          ]
       },
       {
-        title: 'Migrating',
-        path: '/guides/migrating/'
+          title: "Adobe Journey Optimizer",
+          path: "/documentation/adobe-journey-optimizer",
+          pages: [
+              {
+                  title: "API reference",
+                  path: "documentation/adobe-journey-optimizer/api-reference"
+              },
+              {
+                  title: "Release notes",
+                  path: "documentation/adobe-journey-optimizer/release-notes"
+              }
+          ]
       },
       {
-        title: 'Overview',
-        path: '/support/',
-        header: true,
+        title: "Adobe Media Analytics",
+        path: "/documentation/adobe-media-analytics",
         pages: [
-          {
-            title: 'Help',
-            path: '/support/'
-          },
-          {
-            title: 'FAQ',
-            path: '/support/FAQ/'
-          },
-          {
-            title: 'How to contribute',
-            path: '/support/contribute/'
-          }
+            {
+                title: "API reference",
+                path: "documentation/adobe-media-analytics/api-reference"
+            },
+            {
+                title: "Migration",
+                path: "documentation/adobe-media-analytics/migration"
+            },
+            {
+                title: "Release notes",
+                path: "documentation/adobe-media-analytics/release-notes"
+            }
         ]
       },
       {
-        title: 'Community',
-        path: '/support/community/',
-        header: true,
-        pages: [
-          {
-            title: 'Information',
-            path: '/support/community/'
-          }
-        ]
+          title: "Adobe Target",
+          path: "/documentation/adobe-target",
+          pages: [
+              {
+                  title: "API reference",
+                  path: "documentation/adobe-target/api-reference"
+              },
+              {
+                  title: "Event reference",
+                  path: "documentation/adobe-target/event-reference"
+              },
+              {
+                  title: "Migration",
+                  path: "documentation/adobe-target/migration"
+              },
+              {
+                  title: "Release notes",
+                  path: "documentation/adobe-target/release-notes"
+              },
+              {
+                  title: "Deprecated APIs",
+                  path: "documentation/adobe-target/deprecated-apis"
+              }
+          ]
       }
     ]
   },
   plugins: [`@adobe/gatsby-theme-aio`],
-  pathPrefix: process.env.PATH_PREFIX || '/dev-site-documentation-template/'
+  pathPrefix: process.env.PATH_PREFIX || '/client-sdk/'
 };
