@@ -26,30 +26,6 @@ module.exports = {
       {
         title: 'Documentation',
         path: '/documentation',
-      },
-      {
-        title: 'Adobe Analytics',
-        path: '/adobe-analytics/'
-      },
-      {
-          title: "Adobe Analytics - Mobile Services",
-          path: "/adobe-analytics-mobile-services/"
-      },
-      {
-        title: 'API Reference',
-        menu: [{
-          title: 'API Reference v2.0',
-          description: 'Adobe Analytics Reporting API',
-          path: '/api/index.md'
-        }, {
-          title: 'API Reference v1.4',
-          description: 'API Spec for the Adobe Marketing Cloud',
-          path: '/api/1.4.md'
-        }]
-      },
-      {
-        title: 'Support',
-        path: '/support/'
       }
     ],
     subPages: [
@@ -218,6 +194,28 @@ module.exports = {
               {
                   title: "Deprecated APIs",
                   path: "documentation/adobe-target/deprecated-apis"
+              }
+          ]
+      },
+      {
+          title: "Mobile Core",
+          path: "/documentation/mobile-core",
+          pages: [
+              {
+                  title: "API reference",
+                  path: "documentation/mobile-core/api-reference"
+              },
+              {
+                  title: "Event reference",
+                  path: "documentation/mobile-core/event-reference"
+              },
+              {
+                  title: "Migration",
+                  path: "documentation/mobile-core/migration"
+              },
+              {
+                  title: "Release notes",
+                  path: "documentation/mobile-core/release-notes"
               }
           ]
       }
