@@ -208,6 +208,10 @@ module.exports = {
                       {
                           title: "API reference",
                           path: "documentation/mobile-core/configuration/api-reference"
+                      },
+                      {
+                          title: "Event reference",
+                          path: "documentation/mobile-core/configuration/event-reference"
                       }
                   ]
               },
