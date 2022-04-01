@@ -202,6 +202,16 @@ module.exports = {
           path: "/documentation/mobile-core",
           pages: [
               {
+                  title: "Configuration",
+                  path: "documentation/mobile-core/configuration",
+                  pages: [
+                      {
+                          title: "API reference",
+                          path: "documentation/mobile-core/configuration/api-reference"
+                      }
+                  ]
+              },
+              {
                   title: "API reference",
                   path: "documentation/mobile-core/api-reference"
               },

@@ -1,3 +1,22 @@
+import ConfigureWithIosACP from './tabs/index/configure-with/ios-acp.md'
+import ConfigureWithIosAEP from './tabs/index/configure-with/ios-aep.md'
+import ConfigureWithAndroid from './tabs/index/configure-with/android.md'
+import ConfigureWithCordova from './tabs/index/configure-with/cordova.md'
+import ConfigureWithUnity from './tabs/index/configure-with/unity.md'
+import ConfigureWithXamarin from './tabs/index/configure-with/xamarin.md'
+import BundledFileIosACP from './tabs/index/bundled-file/ios-acp.md'
+import BundledFileIosAEP from './tabs/index/bundled-file/ios-aep.md'
+import BundledFileAndroid from './tabs/index/bundled-file/android.md'
+import BundledFileXamarin from './tabs/index/bundled-file/xamarin.md'
+import ProgrammaticUpdatesIosACP from './tabs/index/programmatic-updates/ios-acp.md'
+import ProgrammaticUpdatesIosAEP from './tabs/index/programmatic-updates/ios-aep.md'
+import ProgrammaticUpdatesAndroid from './tabs/index/programmatic-updates/android.md'
+import ProgrammaticUpdatesCordova from './tabs/index/programmatic-updates/cordova.md'
+import ProgrammaticUpdatesFlutter from './tabs/index/programmatic-updates/flutter.md'
+import ProgrammaticUpdatesReactNative from './tabs/index/programmatic-updates/react-native.md'
+import ProgrammaticUpdatesUnity from './tabs/index/programmatic-updates/unity.md'
+import ProgrammaticUpdatesXamarin from './tabs/index/programmatic-updates/xamarin.md'
+
 # Configuration
 
 The Configuration extension is built into the Mobile Core extension. It provides several different APIs for you to setup the configuration either remotely in the Data Collection UI or locally.
@@ -60,31 +79,31 @@ Android
 
 iOS (AEP 3.x)
 
-<ProgrammaticUpdateIosAEP/>
+<ProgrammaticUpdatesIosAEP/>
 
 iOS (ACP 2.x)
 
-<ProgrammaticUpdateIosACP/>
+<ProgrammaticUpdatesIosACP/>
 
 React Native
 
-<ProgrammaticUpdateReactNative/>
+<ProgrammaticUpdatesReactNative/>
 
 Flutter
 
-<ProgrammaticUpdateFlutter/>
+<ProgrammaticUpdatesFlutter/>
 
 Cordova
 
-<ProgrammaticUpdateCordova/>
+<ProgrammaticUpdatesCordova/>
 
 Unity
 
-<ProgrammaticUpdateUnity/>
+<ProgrammaticUpdatesUnity/>
 
 Xamarin
 
-<ProgrammaticUpdateXamarin/>
+<ProgrammaticUpdatesXamarin/>
 
 ## Clearing programmatic updates to the configuration
 
