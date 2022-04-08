@@ -2,7 +2,7 @@
 
 This document is a reference comparison of AEPTarget(3.x) APIs against their equivalent ACPTarget (2.x) APIs for an iOS mobile application implementation.
 
-The AEPTarget extension is implemented purely in Swift and is compatible with the AEPCore Swift SDK. To ensure a smooth transition from the ACPTarget SDK, there are no major changes on the API names or definition. For more details, follow the migration guide below for your Swift or Objective-C mobile application. If explanation beyond showing API differences is necessary, it will be captured as an info hint within that API's section.
+The AEPTarget extension is implemented purely in Swift and is compatible with the AEPCore Swift SDK. To ensure a smooth transition from the ACPTarget SDK, there are no major changes on the API names or definition. For more details, follow the migration guide below for your Swift or Objective-C mobile application. If an explanation beyond showing API differences is necessary, it will be captured as an info hint within that API's section.
 
 ## Public classes
 
@@ -25,7 +25,7 @@ AEP 3.x (Swift)
 
 <ClearPrefetchCacheAEPSwift/>
 
-AEP 3.x (OBjective-C)
+AEP 3.x (Objective-C)
 
 <ClearPrefetchCacheAEPObjectiveC/>
 
