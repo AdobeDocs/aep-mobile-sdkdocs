@@ -196,6 +196,42 @@ module.exports = {
                   path: "documentation/adobe-target/deprecated-apis"
               }
           ]
+      },
+      {
+          title: "Mobile Core",
+          path: "/documentation/mobile-core",
+          pages: [
+              {
+                  title: "Configuration",
+                  path: "documentation/mobile-core/configuration",
+                  pages: [
+                      {
+                          title: "API reference",
+                          path: "documentation/mobile-core/configuration/api-reference"
+                      },
+                      {
+                          title: "Event reference",
+                          path: "documentation/mobile-core/configuration/event-reference"
+                      }
+                  ]
+              },
+              {
+                  title: "API reference",
+                  path: "documentation/mobile-core/api-reference"
+              },
+              {
+                  title: "Event reference",
+                  path: "documentation/mobile-core/event-reference"
+              },
+              {
+                  title: "Migration",
+                  path: "documentation/mobile-core/migration"
+              },
+              {
+                  title: "Release notes",
+                  path: "documentation/mobile-core/release-notes"
+              }
+          ]
       }
     ]
   },
