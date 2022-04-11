@@ -37,7 +37,7 @@ static func getExperienceCloudId(completionHandler: @escaping (String?, Error?) 
 ```
 
 * _callback_ is invoked after the ECID is available.
-* _completionHandler_ is invoked with _experienceCloudId_ after the ECID is available, or _error_ if an unexpected error occurs or the request times out. The returned `NSError` contains the [ACPError](../api-reference.md#acperror) code of the specific error. The default timeout of 500ms.
+* _completionHandler_ is invoked with _experienceCloudId_ after the ECID is available, or _error_ if an unexpected error occurs or the request times out. The returned `NSError` contains the [ACPError](../../api-reference.md#public-classes) code of the specific error. The default timeout of 500ms.
 
 **Example**
 

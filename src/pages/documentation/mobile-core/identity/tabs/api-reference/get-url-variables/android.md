@@ -4,7 +4,7 @@
 
 This method was added in Core version 1.4.0 and Identity version 1.1.0.
 
-This API can be called with [AdobeCallback](../api-reference.md#adobecallback) or [AdobeCallbackWithError](../api-reference.md#adobecallbackwitherror) for retrieving the attributes from the Mobile SDK. When `AdobeCallbackWithError` is provided, this API uses a default timeout of 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate [AdobeError](../api-reference.md#adobeerror).
+This API can be called with [AdobeCallback](../../api-reference.md#public-classes) or [AdobeCallbackWithError](../../api-reference.md#public-classes) for retrieving the attributes from the Mobile SDK. When `AdobeCallbackWithError` is provided, this API uses a default timeout of 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate [AdobeError](../../api-reference.md#public-classes).
 
 **Syntax**
 

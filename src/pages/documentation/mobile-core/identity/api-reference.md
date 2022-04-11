@@ -1,3 +1,97 @@
+import AppendToUrlIosACP from './tabs/api-reference/append-to-url/ios-acp.md'
+import AppendToUrlIosAEP from './tabs/api-reference/append-to-url/ios-aep.md'
+import AppendToUrlAndroid from './tabs/api-reference/append-to-url/android.md'
+import AppendToUrlCordova from './tabs/api-reference/append-to-url/cordova.md'
+import AppendToUrlFlutter from './tabs/api-reference/append-to-url/flutter.md'
+import AppendToUrlReactNative from './tabs/api-reference/append-to-url/react-native.md'
+import AppendToUrlUnity from './tabs/api-reference/append-to-url/unity.md'
+import AppendToUrlXamarin from './tabs/api-reference/append-to-url/xamarin.md'
+import ExtensionVersionIosACP from './tabs/api-reference/extension-version/ios-acp.md'
+import ExtensionVersionIosAEP from './tabs/api-reference/extension-version/ios-aep.md'
+import ExtensionVersionAndroid from './tabs/api-reference/extension-version/android.md'
+import ExtensionVersionCordova from './tabs/api-reference/extension-version/cordova.md'
+import ExtensionVersionFlutter from './tabs/api-reference/extension-version/flutter.md'
+import ExtensionVersionReactNative from './tabs/api-reference/extension-version/react-native.md'
+import ExtensionVersionUnity from './tabs/api-reference/extension-version/unity.md'
+import ExtensionVersionXamarin from './tabs/api-reference/extension-version/xamarin.md'
+import GetExperienceCloudIdIosACP from './tabs/api-reference/get-experience-cloud-id/ios-acp.md'
+import GetExperienceCloudIdIosAEP from './tabs/api-reference/get-experience-cloud-id/ios-aep.md'
+import GetExperienceCloudIdAndroid from './tabs/api-reference/get-experience-cloud-id/android.md'
+import GetExperienceCloudIdCordova from './tabs/api-reference/get-experience-cloud-id/cordova.md'
+import GetExperienceCloudIdFlutter from './tabs/api-reference/get-experience-cloud-id/flutter.md'
+import GetExperienceCloudIdReactNative from './tabs/api-reference/get-experience-cloud-id/react-native.md'
+import GetExperienceCloudIdUnity from './tabs/api-reference/get-experience-cloud-id/unity.md'
+import GetExperienceCloudIdXamarin from './tabs/api-reference/get-experience-cloud-id/xamarin.md'
+import GetIdentifiersIosACP from './tabs/api-reference/get-identifiers/ios-acp.md'
+import GetIdentifiersIosAEP from './tabs/api-reference/get-identifiers/ios-aep.md'
+import GetIdentifiersAndroid from './tabs/api-reference/get-identifiers/android.md'
+import GetIdentifiersCordova from './tabs/api-reference/get-identifiers/cordova.md'
+import GetIdentifiersFlutter from './tabs/api-reference/get-identifiers/flutter.md'
+import GetIdentifiersReactNative from './tabs/api-reference/get-identifiers/react-native.md'
+import GetIdentifiersUnity from './tabs/api-reference/get-identifiers/unity.md'
+import GetIdentifiersXamarin from './tabs/api-reference/get-identifiers/xamarin.md'
+import GetUrlVariablesIosACP from './tabs/api-reference/get-url-variables/ios-acp.md'
+import GetUrlVariablesIosAEP from './tabs/api-reference/get-url-variables/ios-aep.md'
+import GetUrlVariablesAndroid from './tabs/api-reference/get-url-variables/android.md'
+import GetUrlVariablesCordova from './tabs/api-reference/get-url-variables/cordova.md'
+import GetUrlVariablesFlutter from './tabs/api-reference/get-url-variables/flutter.md'
+import GetUrlVariablesReactNative from './tabs/api-reference/get-url-variables/react-native.md'
+import GetUrlVariablesUnity from './tabs/api-reference/get-url-variables/unity.md'
+import GetUrlVariablesXamarin from './tabs/api-reference/get-url-variables/xamarin.md'
+import PublicClassesIosACP from './tabs/api-reference/public-classes/ios-acp.md'
+import PublicClassesIosAEP from './tabs/api-reference/public-classes/ios-aep.md'
+import PublicClassesAndroid from './tabs/api-reference/public-classes/android.md'
+import PublicClassesCordova from './tabs/api-reference/public-classes/cordova.md'
+import PublicClassesFlutter from './tabs/api-reference/public-classes/flutter.md'
+import PublicClassesReactNative from './tabs/api-reference/public-classes/react-native.md'
+import PublicClassesUnity from './tabs/api-reference/public-classes/unity.md'
+import PublicClassesXamarin from './tabs/api-reference/public-classes/xamarin.md'
+import RegisterExtensionIosACP from './tabs/api-reference/register-extension/ios-acp.md'
+import RegisterExtensionIosAEP from './tabs/api-reference/register-extension/ios-aep.md'
+import RegisterExtensionAndroid from './tabs/api-reference/register-extension/android.md'
+import RegisterExtensionCordova from './tabs/api-reference/register-extension/cordova.md'
+import RegisterExtensionFlutter from './tabs/api-reference/register-extension/flutter.md'
+import RegisterExtensionReactNative from './tabs/api-reference/register-extension/react-native.md'
+import RegisterExtensionUnity from './tabs/api-reference/register-extension/unity.md'
+import RegisterExtensionXamarin from './tabs/api-reference/register-extension/xamarin.md'
+import SetAdvertisingIdentifierIosACP from './tabs/api-reference/set-advertising-identifier/ios-acp.md'
+import SetAdvertisingIdentifierIosAEP from './tabs/api-reference/set-advertising-identifier/ios-aep.md'
+import SetAdvertisingIdentifierAndroid from './tabs/api-reference/set-advertising-identifier/android.md'
+import SetAdvertisingIdentifierCordova from './tabs/api-reference/set-advertising-identifier/cordova.md'
+import SetAdvertisingIdentifierFlutter from './tabs/api-reference/set-advertising-identifier/flutter.md'
+import SetAdvertisingIdentifierReactNative from './tabs/api-reference/set-advertising-identifier/react-native.md'
+import SetAdvertisingIdentifierUnity from './tabs/api-reference/set-advertising-identifier/unity.md'
+import SetAdvertisingIdentifierXamarin from './tabs/api-reference/set-advertising-identifier/xamarin.md'
+import SetPushIdentifierIosACP from './tabs/api-reference/set-push-identifier/ios-acp.md'
+import SetPushIdentifierIosAEP from './tabs/api-reference/set-push-identifier/ios-aep.md'
+import SetPushIdentifierAndroid from './tabs/api-reference/set-push-identifier/android.md'
+import SetPushIdentifierReactNative from './tabs/api-reference/set-push-identifier/react-native.md'
+import SyncIdentifierIosACP from './tabs/api-reference/sync-identifier/ios-acp.md'
+import SyncIdentifierIosAEP from './tabs/api-reference/sync-identifier/ios-aep.md'
+import SyncIdentifierAndroid from './tabs/api-reference/sync-identifier/android.md'
+import SyncIdentifierCordova from './tabs/api-reference/sync-identifier/cordova.md'
+import SyncIdentifierFlutter from './tabs/api-reference/sync-identifier/flutter.md'
+import SyncIdentifierReactNative from './tabs/api-reference/sync-identifier/react-native.md'
+import SyncIdentifierUnity from './tabs/api-reference/sync-identifier/unity.md'
+import SyncIdentifierXamarin from './tabs/api-reference/sync-identifier/xamarin.md'
+import SyncIdentifiersIosACP from './tabs/api-reference/sync-identifiers/ios-acp.md'
+import SyncIdentifiersIosAEP from './tabs/api-reference/sync-identifiers/ios-aep.md'
+import SyncIdentifiersAndroid from './tabs/api-reference/sync-identifiers/android.md'
+import SyncIdentifiersCordova from './tabs/api-reference/sync-identifiers/cordova.md'
+import SyncIdentifiersFlutter from './tabs/api-reference/sync-identifiers/flutter.md'
+import SyncIdentifiersReactNative from './tabs/api-reference/sync-identifiers/react-native.md'
+import SyncIdentifiersUnity from './tabs/api-reference/sync-identifiers/unity.md'
+import SyncIdentifiersXamarin from './tabs/api-reference/sync-identifiers/xamarin.md'
+import SyncIdentifiersOverloadedIosACP from './tabs/api-reference/sync-identifiers-overloaded/ios-acp.md'
+import SyncIdentifiersOverloadedIosAEP from './tabs/api-reference/sync-identifiers-overloaded/ios-aep.md'
+import SyncIdentifiersOverloadedAndroid from './tabs/api-reference/sync-identifiers-overloaded/android.md'
+import SyncIdentifiersOverloadedCordova from './tabs/api-reference/sync-identifiers-overloaded/cordova.md'
+import SyncIdentifiersOverloadedFlutter from './tabs/api-reference/sync-identifiers-overloaded/flutter.md'
+import SyncIdentifiersOverloadedReactNative from './tabs/api-reference/sync-identifiers-overloaded/react-native.md'
+import SyncIdentifiersOverloadedUnity from './tabs/api-reference/sync-identifiers-overloaded/unity.md'
+import SyncIdentifiersOverloadedXamarin from './tabs/api-reference/sync-identifiers-overloaded/xamarin.md'
+
+
 # Identity API reference
 
 ## appendToURL / appendVisitorInfoForURL
@@ -327,115 +421,22 @@ This API sets the device token for push notifications in the SDK. If the current
 You should call `setPushIdentifier` on each application launch to ensure the most up-to-date device token is set to the SDK. If no device token is available, `null`/`nil` should be passed.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
-{% tab title="Android" %}
-### Java
 
-**Syntax**
+Android
 
-```java
-public static void setPushIdentifier(final String pushIdentifier);
-```
+<SetPushIdentifierAndroid/>
 
-* _pushIdentifier_  is a string that contains the device token for push notifications.
+iOS (AEP 3.x)
 
-**Example**
+<SetPushIdentifierIosAEP/>
 
-```java
-//Retrieve the token from either GCM or FCM, and pass it to the SDK
-MobileCore.setPushIdentifier(token);
-```
-{% endtab %}
+iOS (ACP 2.x)
 
-{% tab title="iOS (AEP 3.x)" %}
-### Swift
+<SetPushIdentifierIosACP/>
 
-**Syntax**
+React Native
 
-```swift
-@objc(setPushIdentifier:)
-public static func setPushIdentifier(_ deviceToken: Data?)
-```
-
-* _deviceToken_  is a string that contains the device token for push notifications.
-
-**Example**
-
-```swift
-// Set the deviceToken that the APNs has assigned to the device
-MobileCore.setPushIdentifier(deviceToken)
-```
-
-### Objective-C
-
-**Syntax**
-
-```objectivec
-+ (void) setPushIdentifier: (NSString * _Nullable deviceToken);
-```
-
-**Example**
-
-```objectivec
-// Set the deviceToken that the APNS has assigned to the device
-[AEPMobileCore setPushIdentifier:deviceToken];
-```
-
-{% endtab %}
-
-{% tab title="iOS (ACP 2.x)" %}
-
-### Swift
-
-**Syntax**
-
-```swift
-static func setPushIdentifier(deviceToken: NSData?)
-```
-
-* _deviceToken_  is a string that contains the device token for push notifications.
-
-**Example**
-
-```swift
-// Set the deviceToken that the APNs has assigned to the device
-ACPCore.setPushIdentifier(deviceToken)
-```
-
-### Objective-C
-
-**Syntax**
-
-```objectivec
-+ (void) setPushIdentifier: (nullable NSData*) deviceToken;
-```
-
-**Example**
-
-```objectivec
-// Set the deviceToken that the APNS has assigned to the device
-[ACPCore setPushIdentifier:deviceToken];
-```
-
-{% endtab %}
-
-{% tab title="React Native" %}
-### JavaScript
-
-**Syntax**
-
-```jsx
-ACPCore.setPushIdentifier(pushIdentifier);
-```
-
-* _pushIdentifier_ is a string that contains the device token for push notifications.
-
-**Example**
-
-```jsx
-ACPCore.setPushIdentifier("pushID");
-```
-{% endtab %}
-{% endtabs %}
+<SetPushIdentifierReactNative/>
 
 ## syncIdentifier
 
@@ -452,505 +453,76 @@ If the current SDK privacy status is `MobilePrivacyStatus.OPT_OUT`, calling this
 This API updates or appends the provided customer identifier type key and value with the given authentication state to the Experience Cloud Identity Service. If the specified customer ID type exists in the service, the ID is updated with the new ID and authentication state. Otherwise a new customer ID is added.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
-{% tab title="Android" %}
-### Java
 
-**Syntax**
+Android
 
-```java
-public static void syncIdentifier(final String identifierType,
-                                  final String identifier,
-                                  final VisitorID.AuthenticationState authenticationState);
-```
+<SyncIdentifierAndroid/>
 
-* _identifierType (String)_ contains the `identifier type`, and this parameter should not be null or empty. The allowed characters are [A-Za-z0-9_.]
-* _identifier (String)_ contains the `identifier value`, and this parameter should not be null or empty.
-* _authenticationState (AuthenticationState)_ indicates the authentication state of the user and contains one of the [VisitorID.AuthenticationState](#public-classes) values.
+iOS (AEP 3.x)
 
-**Example**
+<SyncIdentifierIosAEP/>
 
-```java
-Identity.syncIdentifier("idType",
-                        "idValue",
-                        VisitorID.AuthenticationState.AUTHENTICATED);
-```
-{% endtab %}
+iOS (ACP 2.x)
 
-{% tab title="iOS (AEP 3.x)" %}
-### Swift
+<SyncIdentifierIosACP/>
 
-**Syntax**
+React Native
 
-```swift
-@objc(syncIdentifierWithType:identifier:authenticationState:)
-static func syncIdentifier(identifierType: String, identifier: String, authenticationState: MobileVisitorAuthenticationState)
-```
+<SyncIdentifierReactNative/>
 
-* The _identifierType (String)_ contains the `identifier type`, and this parameter should not be null or empty. The allowed characters are [A-Za-z0-9_.]
-* The _identifier (String)_ contains the `identifier` value, and this parameter should not be null or empty.
+Flutter
 
-  If either the `identifierType` or `identifier` contains a null or an empty string, the identifier is ignored by the Identity extension.
+<SyncIdentifierFlutter/>
 
-* The _authenticationState (MobileVisitorAuthenticationState)_ value indicates the authentication state for the user and contains one of the [MobileVisitorAuthenticationState](#public-classes) values.
+Cordova
 
-**Example**
+<SyncIdentifierCordova/>
 
-```swift
-Identity.syncIdentifier(identifierType: "idType",
-                            identifier: "idValue",
-                        authentication: .unknown)
-```
+Unity
 
-### Objective-C
+<SyncIdentifierUnity/>
 
-**Syntax**
+Xamarin
 
-```objectivec
-+ (void) syncIdentifierWithType: (NSString * _Nonnull identifierType)
-										 identifier: (NSString * _Nonnull identifier)
-								 authentication: (enum AEPAuthenticationState authenticationState);
-```
-
-**Example**
-
-```objectivec
-[AEPMobileIdentity syncIdentifierWithType:@"idType"
-                               identifier:@"idValue"
-                      authenticationState:AEPMobileVisitorAuthStateUnknown];
-```
-{% endtab %}
-
-{% tab title="iOS (ACP 2.x)" %}
-### Swift
-
-**Syntax**
-```swift
-static func syncIdentifier(_ identifierType: String, identifier: String, authentication authenticationState: ACPMobileVisitorAuthenticationState)
-```
-
-* The _identifierType (String)_ contains the `identifier type`, and this parameter should not be null or empty. The allowed characters are [A-Za-z0-9_.]
-* The _identifier (String)_ contains the `identifier` value, and this parameter should not be null or empty.
-
-  If either the `identifier type` or `identifier` contains a null or an empty string, the identifier is ignored by the Identity extension.
-
-* The _authenticationState (ACPMobileVisitorAuthenticationState)_ value indicates the authentication state for the user and contains one of the [ACPMobileVisitorAuthenticationState](#public-classes) values.
-
-**Example**
-
-```swift
-ACPIdentity.syncIdentifier("idType", identifier: "idValue", authentication: ACPMobileVisitorAuthenticationState.unknown)
-```
-
-### Objective-C
-
-**Syntax**
-
-```objectivec
-+ (void) syncIdentifier: (nonnull NSString*) identifierType             
-             identifier: (nonnull NSString*) identifier
-         authentication: (ADBMobileVisitorAuthenticationState) authenticationState;
-```
-
-**Example**
-
-```objectivec
-[ACPIdentity syncIdentifier:@"idType" identifier:@"idValue" authentication:ACPMobileVisitorAuthenticationStateUnknown];
-```
-{% endtab %}
-
-{% tab title="React Native" %}
-### JavaScript
-
-**Syntax**
-
-```jsx
-syncIdentifier(identifierType: String, identifier: String, authenticationState: string);
-```
-
-* The _identifierType (String)_ contains the `identifier type`, and this parameter should not be null or empty. The allowed characters are [A-Za-z0-9_.]
-* The _identifier (String)_ contains the `identifier` value, and this parameter should not be null or empty.
-
-  If either the `identifier type` or `identifier` contains a null or an empty string, the identifier is ignored by the Identity extension.
-
-* _authenticationState (ACPMobileVisitorAuthenticationState)_ value indicating authentication state for the user and contains one of the following [ACPMobileVisitorAuthenticationState](#public-classes) values.
-
-**Example**
-
-```jsx
-import {ACPMobileVisitorAuthenticationState} from '@adobe/react-native-acpcore';
-
-ACPIdentity.syncIdentifier("identifierType", "identifier", ACPMobileVisitorAuthenticationState.AUTHENTICATED);
-```
-{% endtab %}
-
-{% tab title="Flutter" %}
-### Dart
-
-**Syntax**
-
-```dart
-Future<void> syncIdentifier(String identifierType, String identifier, ACPMobileVisitorAuthenticationState authState);
-```
-
-* The _identifierType (String)_ contains the `identifier type`, and this parameter should not be null or empty. The allowed characters are [A-Za-z0-9_.]
-* The _identifier (String)_ contains the `identifier` value, and this parameter should not be null or empty.
-
-  If either the `identifier type` or `identifier` contains a null or an empty string, the identifier is ignored by the Identity extension.
-
-* _authState (ACPMobileVisitorAuthenticationState_ value indicating authentication state for the user and contains one of the following [ACPMobileVisitorAuthenticationState](#public-classes) values.
-
-**Example**
-
-```dart
-import 'package:flutter_acpcore/src/acpmobile_visitor_id.dart';
-
-FlutterACPIdentity.syncIdentifier("identifierType", "identifier", ACPMobileVisitorAuthenticationState.AUTHENTICATED);
-```
-{% endtab %}
-
-{% tab title="Cordova" %}
-### Cordova
-
-**Syntax**
-
-```jsx
-ACPIdentity.syncIdentifier = function(identifierType, identifier, authState, success, fail);
-```
-
-* The _identifierType (String)_ contains the `identifier type`, and this parameter should not be null or empty. The allowed characters are [A-Za-z0-9_.]
-* The _identifier (String)_ contains the `identifier` value, and this parameter should not be null or empty.
-
-  If either the `identifier type` or `identifier` contains a null or an empty string, the identifier is ignored by the Identity extension.
-
-* _authState (ACPMobileVisitorAuthenticationState)_ value indicating authentication state for the user and contains one of the following [ACPMobileVisitorAuthenticationState](#public-classes) values.
-* _success_ is a callback containing the visitor id type, value, and authentication state if the `syncIdentifier` API executed without any errors.
-* _fail_ is a callback containing error information if the `syncIdentifier` API was executed with errors.
-
-**Example**
-
-```jsx
-ACPIdentity.syncIdentifier("id1", "value1", ACPIdentity.ACPMobileVisitorAuthenticationStateUnknown, function (handleCallback) {
-  console.log("AdobeExperenceSDK: Identifier synced successfully : " + handleCallback);
-}, function (handleError) {
-  console.log("AdobeExperenceSDK: Failed to sync identifier : " + handleError);
-});
-```
-{% endtab %}
-
-{% tab title="Unity" %}
-### C#
-
-**Syntax**
-
-```csharp
-public static void SyncIdentifier(string identifierType, string identifier, ACPAuthenticationState authState)
-```
-
-* The _identifierType (String)_ contains the `identifier type`, and this parameter should not be null or empty. The allowed characters are [A-Za-z0-9_.]
-* The _identifier (String)_ contains the `identifier` value, and this parameter should not be null or empty.
-
-  If either the `identifier type` or `identifier` contains a null or an empty string, the identifier is ignored by the Identity extension.
-
-* _authState (ACPAuthenticationState)_ value indicating authentication state for the user and contains one of the following [ACPAuthenticationState](#public-classes) values.
-
-**Example**
-
-```text
-ACPIdentity.SyncIdentifier("idType1", "idValue1", ACPIdentity.ACPAuthenticationState.AUTHENTICATED);
-```
-{% endtab %}
-
-{% tab title="Xamarin" %}
-### C#
-
-**iOS Syntax**
-
-```csharp
-public static void SyncIdentifier (string identifierType, string identifier, ACPMobileVisitorAuthenticationState authenticationState);
-```
-
-* The _identifierType (String)_ contains the `identifier type`, and this parameter should not be null or empty. The allowed characters are [A-Za-z0-9_.]
-* The _identifier (String)_ contains the `identifier` value, and this parameter should not be null or empty.
-
-  If either the `identifier type` or `identifier` contains a null or an empty string, the identifier is ignored by the Identity extension.
-
-* _authenticationState (ACPMobileVisitorAuthenticationState_ value indicating authentication state for the user and contains one of the following [ACPMobileVisitorAuthenticationState](#public-classes) values.
-
-**Android Syntax**
-
-```csharp
-public unsafe static void SyncIdentifier (string identifierType, string identifier, VisitorID.AuthenticationState authenticationState);
-```
-
-* The _identifierType (String)_ contains the `identifier type`, and this parameter should not be null or empty. The allowed characters are [A-Za-z0-9_.]
-* The _identifier (String)_ contains the `identifier` value, and this parameter should not be null or empty.
-
-  If either the `identifier type` or `identifier` contains a null or an empty string, the identifier is ignored by the Identity extension.
-
-* _authenticationState (AuthenticationState)_ value indicating authentication state for the user and contains one of the following [VisitorID.AuthenticationState](#public-classes) values.
-
-**iOS Example**
-
-```csharp
-ACPIdentity.SyncIdentifier("idType1", "idValue1", ACPMobileVisitorAuthenticationState.Authenticated);
-```
-
-**Android Example**
-
-```csharp
-ACPIdentity.SyncIdentifier("idType1", "idValue1", VisitorID.AuthenticationState.Authenticated);
-```
-{% endtab %}
-{% endtabs %}
+<SyncIdentifierXamarin/>
 
 ## syncIdentifiers
 
 This API is an overloaded version, which does not include the parameter for the authentication state and it assumes a default value of `VisitorID.AuthenticationState.UNKNOWN`.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
-{% tab title="Android" %}
-### Java
 
-**Syntax**
+Android
 
-```java
-public static void syncIdentifiers(final Map<String, String> identifiers);
-```
+<SyncIdentifiersAndroid/>
 
-* _identifiers_ is a map that contains the identifiers with the Identifier type as the key, and the string identifier as the value.
+iOS (AEP 3.x)
 
-  In each identifier pair, if the `identifier type` contains a null or an empty string, the identifier is ignored by the Identity extension.
+<SyncIdentifiersIosAEP/>
 
-**Example**
+iOS (ACP 2.x)
 
-```java
-Map<String, String> identifiers = new HashMap<String, String>();
-identifiers.put("idType1", "idValue1");
-identifiers.put("idType2", "idValue2");
-identifiers.put("idType3", "idValue3");
-Identity.syncIdentifiers(identifiers);
-```
-{% endtab %}
+<SyncIdentifiersIosACP/>
 
-{% tab title="iOS (AEP 3.x)" %}
-### Swift
+React Native
 
-**Syntax**
+<SyncIdentifiersReactNative/>
 
-```swift
-@objc(syncIdentifiers:)
-static func syncIdentifiers(identifiers: [String: String]?)
-```
+Flutter
 
-* The _identifiers_ dictionary contains identifier type as the key and identifier as the value, both identifier type and identifier should be non empty and non nil values.
+<SyncIdentifiersFlutter/>
 
-**Example**
+Cordova
 
-```swift
-let ids : [String: String] = ["idType1":"idValue1",
-                              "idType2":"idValue2",
-                              "idType3":"idValue3"];
-Identity.syncIdentifiers(identifiers: ids)
-```
+<SyncIdentifiersCordova/>
 
-### Objective-C
+Unity
 
-**Syntax**
-```objectivec
-+ (void) syncIdentifiers: (NSDictionary<NSString *, NSString *> * _Nullable identifiers);
-```
+<SyncIdentifiersUnity/>
 
-**Example**
+Xamarin
 
-```objectivec
-NSDictionary *ids = @{@"idType1":@"idValue1",
-                      @"idType2":@"idValue2",
-                      @"idType3":@"idValue3"};
-[AEPMobileIdentity syncIdentifiers:ids];
-```
-
-{% endtab %}
-
-{% tab title="iOS (ACP 2.x)" %}
-### Swift
-
-**Syntax**
-
-```swift
-static func syncIdentifiers(_ identifiers: [AnyHashable : Any]?)
-```
-
-* The _identifiers_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value.
-
-  If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
-
-**Example**
-
-```swift
-let identifiers : [String: String] = ["idType1":"idValue1",
-                                      "idType2":"idValue2",
-                                      "idType3":"idValue3"];
-ACPIdentity.syncIdentifiers(identifiers)
-```
-
-### Objective-C
-
-**Syntax**
-
-```objectivec
-+ (void) syncIdentifiers: (nullable NSDictionary*) identifiers;
-```
-
-**Example**
-
-```objectivec
-NSDictionary *ids = @{@"idType1":@"idValue1",
-                      @"idType2":@"idValue2",
-                      @"idType3":@"idValue3"};
-[ACPIdentity syncIdentifiers:ids];
-```
-
-{% endtab %}
-
-{% tab title="React Native" %}
-### JavaScript
-
-**Syntax**
-
-```jsx
-syncIdentifiers(identifiers?: {string: string});
-```
-
-* The _identifiers_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value.
-
-  If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
-
-**Example**
-
-```jsx
-ACPIdentity.syncIdentifiers({"id1": "identifier1"});
-```
-{% endtab %}
-
-{% tab title="Flutter" %}
-### Dart
-
-**Syntax**
-
-```dart
-Future<void> syncIdentifiers (Map<String, String> identifiers);
-```
-
-* The _identifiers_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value.
-
-  If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
-
-**Example**
-
-```jsx
-FlutterACPIdentity.syncIdentifiers({"idType1":"idValue1",
-                                    "idType2":"idValue2",
-                                    "idType3":"idValue3"});
-```
-{% endtab %}
-
-{% tab title="Cordova" %}
-### Cordova
-
-**Syntax**
-
-```jsx
-ACPIdentity.syncIdentifiers = function(identifiers, success, fail);
-```
-
-* The _identifiers_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value.
-
-  If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
-
-* _success_ is a callback containing the synced identifiers if the `syncIdentifiers` API executed without any errors.
-* _fail_ is a callback containing error information if the `syncIdentifiers` API was executed with errors.
-
-**Example**
-
-```jsx
-ACPIdentity.syncIdentifiers({"idType1":"idValue1", "idType2":"idValue2", "idType3":"idValue3"}, function (handleCallback) {
-  console.log("AdobeExperienceSDK: " + handleCallback)
-}, function (handleError) {
-  console.log("AdobeExperenceSDK: Failed to sync identifiers : " + handleError)
-});
-```
-{% endtab %}
-
-{% tab title="Unity" %}
-### C#
-
-**Syntax**
-
-```csharp
-public static void SyncIdentifiers(Dictionary<string, string> identifiers)
-```
-
-* The _identifiers_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value.
-
-  If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
-
-**Example**
-
-```csharp
-Dictionary<string, string> ids = new Dictionary<string, string>();
-ids.Add("idsType1", "idValue1");
-ids.Add("idsType2", "idValue2");
-ids.Add("idsType3", "idValue3");
-ACPIdentity.SyncIdentifiers(ids);
-```
-{% endtab %}
-
-{% tab title="Xamarin" %}
-### C#
-
-**iOS Syntax**
-
-```csharp
-public static void SyncIdentifiers (NSDictionary identifiers);
-```
-
-* The _identifiers_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value.
-
-  If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
-
-**Android Syntax**
-
-```csharp
-public unsafe static void SyncIdentifiers (IDictionary<string, string> identifiers);
-```
-
-* The _identifiers_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value.
-
-  If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
-
-**iOS Example**
-
-```csharp
-var ids = new NSMutableDictionary<NSString, NSObject>
-{
-  ["idsType1"] = new NSString("idValue1"),
-  ["idsType2"] = new NSString("idValue2"),
-  ["idsType3"] = new NSString("idValue3")
-};
-ACPIdentity.SyncIdentifiers(ids);
-```
-
-**Android Example**
-
-```csharp
-var ids = new Dictionary<string, string>();
-ids.Add("idsType1", "idValue1");
-ids.Add("idsType2", "idValue2");
-ids.Add("idsType3", "idValue3");
-ACPIdentity.SyncIdentifiers(ids);
-```
-{% endtab %}
-{% endtabs %}
+<SyncIdentifiersXamarin/>
 
 ## syncIdentifiers (overloaded)
 
@@ -959,483 +531,71 @@ The function of this API is the same as the `syncIdentifier` API. This API passe
 Starting with _ACPIdentity v2.1.3 (iOS)_ and _Identity v1.1.2 (Android)_ if the new `identifier` value is null or empty, this ID type is removed from the local storage, Identity shared state and not synced with the Adobe Experience Cloud Identity Service.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
-{% tab title="Android" %}
-### Java
 
-**Syntax**
+Android
 
-```java
-public static void syncIdentifiers(final Map<String, String> identifiers, final VisitorID.AuthenticationState authState)
-```
+<SyncIdentifiersOverloadedAndroid/>
 
-* _identifiers_ is a map that contains IDs with the identifier type as the key, and the string identifier as the value.
-* _authState_ indicates the authentication state for the user, which contains one of the following [VisitorID.AuthenticationState](#public-classes) values.
+iOS (AEP 3.x)
 
-**Example**
+<SyncIdentifiersOverloadedIosAEP/>
 
-```java
-Map<String, String> identifiers = new HashMap<String, String>();
-identifiers.put("idType1", "idValue1");
-identifiers.put("idType2", "idValue2");
-identifiers.put("idType3", "idValue3");
-Identity.syncIdentifiers(identifiers, VisitorID.AuthenticationState.AUTHENTICATED);
-```
-{% endtab %}
+iOS (ACP 2.x)
 
-{% tab title="iOS (AEP 3.x)" %}
-### Swift
+<SyncIdentifiersOverloadedIosACP/>
 
-**Syntax**
+React Native
 
-```swift
-@objc(syncIdentifiers:authenticationState:)
-static func syncIdentifiers(identifiers: [String: String]?, authenticationState: MobileVisitorAuthenticationState)
-```
+<SyncIdentifiersOverloadedReactNative/>
 
-* The _identifiers_ dictionary contains identifier type as the key and identifier as the value, both identifier type and identifier should be non empty and non nil values.
+Flutter
 
-* The _authenticationState (MobileVisitorAuthenticationState)_ indicates the authentication state of the user and contains one of the [MobileVisitorAuthenticationState](#public-classes) values.
+<SyncIdentifiersOverloadedFlutter/>
 
-**Example**
+Cordova
 
-```swift
-let ids : [String: String] = ["idType1":"idValue1",
-                              "idType2":"idValue2",
-                              "idType3":"idValue3"];
-Identity.syncIdentifiers(identifiers: ids, authenticationState: .authenticated)
-```
+<SyncIdentifiersOverloadedCordova/>
 
-### Objective-C
+Unity
 
-**Syntax**
+<SyncIdentifiersOverloadedUnity/>
 
-```objectivec
-+ (void) syncIdentifiers: (NSDictionary<NSString *, NSString *> * _Nullable identifiers)
-				  authentication: (enum AEPAuthenticationState authenticationState);
-```
+Xamarin
 
-**Example**
-
-```objectivec
-NSDictionary *ids = @{@"idType1":@"idValue1",
-                      @"idType2":@"idValue2",
-                      @"idType3":@"idValue3"};
-[AEPMobileIdentity syncIdentifiers:ids authenticationState:AEPMobileVisitorAuthStateAuthenticated];
-```
-
-{% endtab %}
-
-{% tab title="iOS (ACP 2.x)" %}
-### Swift
-
-**Syntax**
-```swift
-static func syncIdentifiers(_ identifiers: [AnyHashable : Any]?, authentication authenticationState: ACPMobileVisitorAuthenticationState)
-```
-
-* The _identifiers_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value.
-
-  If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
-
-* The _authenticationState (ACPMobileVisitorAuthenticationState)_ indicates the authentication state of the user and contains one of the [ACPMobileVisitorAuthenticationState](#public-classes) values.
-
-**Example**
-
-```swift
-let ids : [String: String] = ["idType1":"idValue1",
-                              "idType2":"idValue2",
-                              "idType3":"idValue3"];
-ACPIdentity.syncIdentifiers(identifiers, authentication:
-ACPMobileVisitorAuthenticationState.authenticated)
-```
-
-### Objective-C
-
-**Syntax**
-
-```objectivec
-+ (void) syncIdentifiers: (nullable NSDictionary*) identifiers authentication: (ACPMobileVisitorAuthenticationState) authenticationState;
-```
-
-**Example**
-
-```objectivec
-NSDictionary *ids = @{@"idType1":@"idValue1",
-                      @"idType2":@"idValue2",
-                      @"idType3":@"idValue3"};
-[ACPIdentity syncIdentifiers:ids authentication:ACPMobileVisitorAuthenticationStateAuthenticated];
-```
-
-{% endtab %}
-
-{% tab title="React Native" %}
-### JavaScript
-
-**Syntax**
-
-```jsx
-syncIdentifiersWithAuthState(identifiers?: {string: string}, authenticationState: string);
-```
-
-* The _identifiers_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value.
-
-  If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
-
-* The _authenticationState (ACPMobileVisitorAuthenticationState)_ indicates the authentication state of the user and contains one of the [ACPMobileVisitorAuthenticationState](#public-classes) values.
-
-**Example**
-
-```jsx
-import {ACPMobileVisitorAuthenticationState} from '@adobe/react-native-acpcore';
-
-ACPIdentity.syncIdentifiersWithAuthState({"id1": "identifier1"}, ACPMobileVisitorAuthenticationState.UNKNOWN);
-```
-{% endtab %}
-
-{% tab title="Flutter" %}
-### Dart
-
-**Syntax**
-
-```dart
-Future<void> syncIdentifiersWithAuthState (Map<String, String> identifiers, ACPMobileVisitorAuthenticationState authState);
-```
-
-* The _identifiers_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value.
-
-  If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
-
-* The _authState_ (ACPMobileVisitorAuthenticationState)\_ indicates the authentication state of the user and contains one of the [ACPMobileVisitorAuthenticationState](#public-classes) values.
-
-**Example**
-
-```dart
-import 'package:flutter_acpcore/src/acpmobile_visitor_id.dart';
-
-FlutterACPIdentity.syncIdentifiersWithAuthState({"idType1":"idValue1", "idType2":"idValue2", "idType3":"idValue3"}, ACPMobileVisitorAuthenticationState.UNKNOWN);
-```
-{% endtab %}
-
-{% tab title="Cordova" %}
-### Cordova
-
-**Syntax**
-
-```jsx
-ACPIdentity.syncIdentifiers = function(identifiers, authState, success, fail);
-```
-
-* The _identifiers_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value.
-
-  If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
-
-* _authState_ value indicating authentication state for the identifiers to be synced and contains one of the [ACPMobileVisitorAuthenticationState](#public-classes) values.
-* _success_ is a callback containing the synced identifiers if the `syncIdentifiers` API executed without any errors.
-* _fail_ is a callback containing error information if the `syncIdentifiers` API was executed with errors.
-
-**Example**
-
-```jsx
-ACPIdentity.syncIdentifiers({"idType1":"idValue1", "idType2":"idValue2", "idType3":"idValue3"}, ACPIdentity.ACPMobileVisitorAuthenticationStateAuthenticated, function (handleCallback) {
-  console.log("AdobeExperienceSDK: " + handleCallback)
-}, function (handleError) {
-  console.log("AdobeExperenceSDK: Failed to sync identifiers : " + handleError)
-});
-```
-{% endtab %}
-
-{% tab title="Unity" %}
-### C#
-
-**Syntax**
-
-```csharp
-public static void SyncIdentifiers(Dictionary<string, string> ids, ACPAuthenticationState authenticationState)
-```
-
-* The _ids_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value.
-
-  If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
-
-* _authenticationState_ value indicating authentication state for the identifiers to be synced and contains one of the [ACPAuthenticationState](#public-classes) values.
-
-**Example**
-
-```csharp
-Dictionary<string, string> ids = new Dictionary<string, string>();
-ids.Add("idsType1", "idValue1");
-ids.Add("idsType2", "idValue2");
-ids.Add("idsType3", "idValue3");
-ACPIdentity.SyncIdentifiers(ids, ACPIdentity.ACPAuthenticationState.AUTHENTICATED);
-ACPIdentity.SyncIdentifiers(ids, ACPIdentity.ACPAuthenticationState.LOGGED_OUT);
-ACPIdentity.SyncIdentifiers(ids, ACPIdentity.ACPAuthenticationState.UNKNOWN);
-```
-{% endtab %}
-
-{% tab title="Xamarin" %}
-### C#
-
-**iOS Syntax**
-
-```csharp
-public static void SyncIdentifiers (NSDictionary identifiers, ACPMobileVisitorAuthenticationState authenticationState);
-```
-
-* The _identifiers_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value.
-
-  If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
-
-* _authenticationState_ value indicating authentication state for the user and contains one of the following [ACPMobileVisitorAuthenticationState](#public-classes) values.
-
-**Android Syntax**
-
-```csharp
-public unsafe static void SyncIdentifiers (IDictionary<string, string> identifiers, VisitorID.AuthenticationState authenticationState);
-```
-
-* The _identifiers_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value.
-
-  If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
-
-* _authenticationState_ value indicating authentication state for the user and contains one of the following [VisitorID.AuthenticationState](#public-classes) values.
-
-**iOS Example**
-
-```csharp
-var ids = new NSMutableDictionary<NSString, NSObject>
-{
-  ["idsType1"] = new NSString("idValue1"),
-  ["idsType2"] = new NSString("idValue2"),
-  ["idsType3"] = new NSString("idValue3")
-};
-ACPIdentity.SyncIdentifiers(ids, ACPMobileVisitorAuthenticationState.LoggedOut);
-```
-
-**Android Example**
-
-```csharp
-var ids = new Dictionary<string, string>();
-ids.Add("idsType1", "idValue1");
-ids.Add("idsType2", "idValue2");
-ids.Add("idsType3", "idValue3");
-ACPIdentity.SyncIdentifiers(ids, VisitorID.AuthenticationState.LoggedOut);
-```
-{% endtab %}
-{% endtabs %}
+<SyncIdentifiersOverloadedXamarin/>
 
 ## Public classes
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
-{% tab title="Android" %}
-**Android**
 
-**AuthenticationState**
+Android
 
-This class is used to indicate the authentication state for the current `VisitorID`.
+<PublicClassesAndroid/>
 
-```java
-public enum AuthenticationState {        
-       UNKNOWN,        
-       AUTHENTICATED,        
-       LOGGED_OUT;
-}
-```
+iOS (AEP 3.x)
 
-**VisitorID**
+<PublicClassesIosAEP/>
 
-This class is an identifier to be used with the Adobe Experience Cloud Identity Service.
+iOS (ACP 2.x)
 
-```java
-public class VisitorID {    
-     //Constructor    
-     public VisitorID(String idOrigin, String idType, String id, VisitorID.AuthenticationState authenticationState);
+<PublicClassesIosACP/>
 
-     public VisitorID.AuthenticationState getAuthenticationState();   
+React Native
 
-     public final String getId();  
+<PublicClassesReactNative/>
 
-     public final String getIdOrigin();  
+Flutter
 
-     public final String getIdType();
+<PublicClassesFlutter/>
 
-}
-```
-{% endtab %}
+Cordova
 
-{% tab title="iOS (AEP 3.x)" %}
-**iOS (AEP 3.x)**
+<PublicClassesCordova/>
 
-**MobileVisitorAuthenticationState**
+Unity
 
-This is used to indicate the authentication state for the current `Identifiable`.
+<PublicClassesUnity/>
 
-```swift
-@objc(AEPMobileVisitorAuthState) public enum MobileVisitorAuthenticationState: Int, Codable {
-    case unknown = 0
-    case authenticated = 1
-    case loggedOut = 2
-}
-```
+Xamarin
 
-**Identifiable**
-
-```swift
-@objc(AEPIdentifiable) public protocol Identifiable {
-    /// Origin of the identifier
-    var origin: String? { get }
-
-    /// Type of the identifier
-    var type: String? { get }
-
-    /// The identifier
-    var identifier: String? { get }
-
-    /// The authentication state for the identifier
-    var authenticationState: MobileVisitorAuthenticationState { get }
-}
-```
-{% endtab %}
-
-{% tab title="iOS (ACP 2.x)" %}
-**iOS (ACP 2.x)**
-
-**ACPMobileVisitorAuthenticationState**
-
-This is used to indicate the authentication state for the current `VisitorID`.
-
-```objectivec
-typedef NS_ENUM(NSUInteger,
-    ACPMobileVisitorAuthenticationState) {    
-    ACPMobileVisitorAuthenticationStateUnknown          = 0,    
-    ACPMobileVisitorAuthenticationStateAuthenticated    = 1,    
-    ACPMobileVisitorAuthenticationStateLoggedOut        = 2  };
-```
-
-**ACPMobileVisitorId**
-
-This is an identifier to be used with the Adobe Experience Cloud Identity Service and it contains the origin, the identifier type, the identifier, and the authentication state of the visitor ID.
-
-```objectivec
-@interface ACPMobileVisitorId : NSObject
-
-@property(nonatomic, strong, nullable) NSString* idOrigin;
-@property(nonatomic, strong, nullable) NSString* idType;
-@property(nonatomic, strong, nullable) NSString* identifier;
-@property(nonatomic, readwrite) ACPMobileVisitorAuthenticationState authenticationState;
-
-@end
-```
-{% endtab %}
-
-{% tab title="React Native" %}
-### JavaScript
-
-**ACPVisitorID**
-
-This is an identifier to be used with the Adobe Experience Cloud Identity Service and it contains the origin, the identifier type, the identifier, and the authentication state of the visitor ID.
-
-```jsx
-import {ACPVisitorID} from '@adobe/react-native-acpcore';
-
-var visitorId = new ACPVisitorID(idOrigin?: string, idType: string, id?: string, authenticationState?: ACPMobileVisitorAuthenticationState);
-```
-
-**ACPMobileVisitorAuthenticationState**
-
-This is used to indicate the authentication state for the current `VisitorID`.
-
-```jsx
-import {ACPMobileVisitorAuthenticationState} from '@adobe/react-native-acpcore';
-
-var state = ACPMobileVisitorAuthenticationState.AUTHENTICATED;
-//var state = ACPMobileVisitorAuthenticationState.LOGGED_OUT;
-//var state = ACPMobileVisitorAuthenticationState.UNKNOWN;
-```
-{% endtab %}
-
-{% tab title="Flutter" %}
-### Dart
-
-**ACPVisitorID**
-
-This is an identifier to be used with the Adobe Experience Cloud Identity Service and it contains the origin, the identifier type, the identifier, and the authentication state of the visitor ID.
-
-```dart
-import 'package:flutter_acpcore/src/acpmobile_visitor_id.dart';
-
-
-class ACPMobileVisitorId {
-  String get idOrigin;
-  String get idType;
-  String get identifier;
-  ACPMobileVisitorAuthenticationState get authenticationState;
-};
-```
-
-**ACPMobileVisitorAuthenticationState**
-
-This is used to indicate the authentication state for the current `VisitorID`.
-
-```dart
-import 'package:flutter_acpcore/src/acpmobile_visitor_id.dart';
-
-enum ACPMobileVisitorAuthenticationState {UNKNOWN, AUTHENTICATED, LOGGED_OUT};
-```
-{% endtab %}
-
-{% tab title="Cordova" %}
-### Cordova
-
-**ACPMobileVisitorAuthenticationState**
-
-This is used to indicate the authentication state for the current `VisitorID`.
-
-```jsx
-ACPIdentity.ACPMobileVisitorAuthenticationStateUnknown = 0;
-ACPIdentity.ACPMobileVisitorAuthenticationStateAuthenticated = 1;
-ACPIdentity.ACPMobileVisitorAuthenticationStateLoggedOut = 2;
-```
-{% endtab %}
-
-{% tab title="Unity" %}
-### C#
-
-**ACPAuthenticationState**
-
-This is used to indicate the authentication state for the current `VisitorID`.
-
-```csharp
-ACPIdentity.ACPAuthenticationState.UNKNOWN = 0;
-ACPIdentity.ACPAuthenticationState.AUTHENTICATED = 1;
-ACPIdentity.ACPAuthenticationState.LOGGED_OUT = 2;
-```
-{% endtab %}
-
-{% tab title="Xamarin" %}
-### C#
-
-**iOS**
-
-**ACPMobileVisitorAuthenticationState**
-
-This is used to indicate the authentication state for the current `ACPMobileVisitorId`.
-
-```csharp
-ACPMobileVisitorAuthenticationState.Unknown = 0;
-ACPMobileVisitorAuthenticationState.Authenticated = 1;
-ACPMobileVisitorAuthenticationState.LoggedOut = 2;
-```
-
-**Android**
-
-**VisitorID.AuthenticationState**
-
-This is used to indicate the authentication state for the current `VisitorID`.
-
-```csharp
-VisitorID.AuthenticationState.Unknown = 0;
-VisitorID.AuthenticationState.Authenticated = 1;
-VisitorID.AuthenticationState.LoggedOut = 2;
-```
-{% endtab %}
-{% endtabs %}
+<PublicClassesXamarin/>

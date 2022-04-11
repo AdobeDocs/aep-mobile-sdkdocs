@@ -1,6 +1,6 @@
 #### C#
 
-**iOS Syntax**
+**iOS syntax**
 
 ```csharp
 public unsafe static void GetUrlVariables (Action<NSString> callback);
@@ -8,7 +8,7 @@ public unsafe static void GetUrlVariables (Action<NSString> callback);
 
 * _callback_ is a callback containing the url variables in query parameter form if the `GetUrlVariables` API executed without any errors.
 
-**Android Syntax**
+**Android syntax**
 
 ```csharp
 public unsafe static void GetUrlVariables (IAdobeCallback callback);
@@ -16,7 +16,7 @@ public unsafe static void GetUrlVariables (IAdobeCallback callback);
 
 * _callback_ is a callback containing the url variables in query parameter form if the `GetUrlVariables` API executed without any errors.
 
-**iOS Example**
+**iOS example**
 
 ```csharp
  ACPIdentity.GetUrlVariables(callback => {
@@ -24,7 +24,7 @@ public unsafe static void GetUrlVariables (IAdobeCallback callback);
  });
 ```
 
-**Android Example**
+**Android example**
 
 ```csharp
 ACPIdentity.GetUrlVariables(new StringCallback());

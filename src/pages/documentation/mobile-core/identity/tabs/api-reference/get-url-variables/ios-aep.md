@@ -7,7 +7,7 @@
 static func getUrlVariables(completion: @escaping (String?, Error?) -> Void)
 ```
 
-* _completion_ is invoked with _String_ containing the visitor identifiers as a query string, or _Error_ if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../api-reference.md#aeperror) code of the specific error. The default timeout of 500ms.
+* _completion_ is invoked with _String_ containing the visitor identifiers as a query string, or _Error_ if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../../api-reference.md#public-classes) code of the specific error. The default timeout of 500ms.
 
 **Example**
 

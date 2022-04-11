@@ -1,6 +1,6 @@
 #### C#
 
-**iOS Syntax**
+**iOS syntax**
 
 ```csharp
 public unsafe static void GetExperienceCloudId (Action<NSString> callback);
@@ -8,7 +8,7 @@ public unsafe static void GetExperienceCloudId (Action<NSString> callback);
 
 * _callback_ is a callback containing the ECID if the `getExperienceCloudId` API executed without any errors.
 
-**Android Syntax**
+**Android syntax**
 
 ```csharp
 public unsafe static void GetExperienceCloudId (IAdobeCallback callback);
@@ -16,7 +16,7 @@ public unsafe static void GetExperienceCloudId (IAdobeCallback callback);
 
 * _callback_ is a callback containing the ECID if the `getExperienceCloudId` API executed without any errors.
 
-**iOS Example**
+**iOS example**
 
 ```csharp
 ACPIdentity.GetExperienceCloudId(callback => {
@@ -24,7 +24,7 @@ ACPIdentity.GetExperienceCloudId(callback => {
 });
 ```
 
-**Android Example**
+**Android example**
 
 ```csharp
 ACPIdentity.GetExperienceCloudId(new StringCallback());

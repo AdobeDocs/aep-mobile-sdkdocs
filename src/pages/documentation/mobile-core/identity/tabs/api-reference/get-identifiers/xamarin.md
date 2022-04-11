@@ -1,6 +1,6 @@
 #### C#
 
-**iOS Syntax**
+**iOS syntax**
 
 ```csharp
 public unsafe static void GetIdentifiers (Action<ACPMobileVisitorId[]> callback);
@@ -8,7 +8,7 @@ public unsafe static void GetIdentifiers (Action<ACPMobileVisitorId[]> callback)
 
 * _callback_ is a callback containing the previously synced identifiers if the `GetIdentifiers` API executed without any errors.
 
-**Android Syntax**
+**Android syntax**
 
 ```csharp
 public unsafe static void GetIdentifiers (IAdobeCallback callback);
@@ -16,7 +16,7 @@ public unsafe static void GetIdentifiers (IAdobeCallback callback);
 
 * _callback_ is a callback containing the previously synced identifiers if the `GetIdentifiers` API executed without any errors.
 
-**iOS Example**
+**iOS example**
 
 ```csharp
 Action<ACPMobileVisitorId[]> callback = new Action<ACPMobileVisitorId[]>(handleCallback);
@@ -37,7 +37,7 @@ private void handleCallback(ACPMobileVisitorId[] ids)
 }
 ```
 
-**Android Example**
+**Android example**
 
 ```csharp
 ACPIdentity.GetIdentifiers(new GetIdentifiersCallback());

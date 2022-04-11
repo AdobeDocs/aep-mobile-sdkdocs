@@ -1,6 +1,6 @@
 #### C#
 
-**iOS Syntax**
+**iOS syntax**
 
 ```csharp
 public unsafe static void AppendToUrl (NSUrl baseUrl, Action<NSUrl> callback);
@@ -9,7 +9,7 @@ public unsafe static void AppendToUrl (NSUrl baseUrl, Action<NSUrl> callback);
 * baseUrl _(NSUrl)_ is the URL to which the visitor information needs to be appended. If the visitor information is nil or empty, the URL is returned as is.
 * _callback_ is a callback containing the provided URL with the visitor information appended if the `AppendToUrl` API executed without any errors.
 
-**Android Syntax**
+**Android syntax**
 
 ```csharp
 public unsafe static void AppendVisitorInfoForURL (string baseURL, IAdobeCallback callback);
@@ -18,7 +18,7 @@ public unsafe static void AppendVisitorInfoForURL (string baseURL, IAdobeCallbac
 * baseURL _(string)_ is the URL to which the visitor information needs to be appended. If the visitor information is nil or empty, the URL is returned as is.
 * _callback_ is a callback containing the provided URL with the visitor information appended if the `AppendVisitorInfoForURL` API executed without any errors.
 
-**iOS Example**
+**iOS example**
 
 ```csharp
 ACPIdentity.AppendToUrl(url, callback => {
@@ -26,7 +26,7 @@ ACPIdentity.AppendToUrl(url, callback => {
 });
 ```
 
-**Android Example**
+**Android example**
 
 ```csharp
 ACPIdentity.AppendVisitorInfoForURL("https://example.com", new StringCallback());

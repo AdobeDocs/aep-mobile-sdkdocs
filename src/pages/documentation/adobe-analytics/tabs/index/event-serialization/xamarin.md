@@ -6,7 +6,7 @@ aaaa
 
 <CodeBlock slots="heading, code" repeat="2" languages="csharp, csharp" />
 
-## iOS Syntax
+## iOS syntax
 
 ```csharp
 var contextData = new NSMutableDictionary<NSString, NSString>

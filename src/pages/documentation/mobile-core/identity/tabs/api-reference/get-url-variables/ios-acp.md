@@ -51,7 +51,7 @@ static func getUrlVariables(completionHandler: @escaping (String?, Error?) -> Vo
 ```
 
 * _callback_ has an NSString value that contains the visitor identifiers as a query string after the service request is complete.
-* _completionHandler_ is invoked with _urlVariables_ containing the visitor identifiers as a query string, or _error_ if an unexpected error occurs or the request times out. The returned `NSError` contains the [ACPError](../api-reference.md#acperror) code of the specific error. The default timeout of 500ms.
+* _completionHandler_ is invoked with _urlVariables_ containing the visitor identifiers as a query string, or _error_ if an unexpected error occurs or the request times out. The returned `NSError` contains the [ACPError](../../api-reference.md#public-classes) code of the specific error. The default timeout of 500ms.
 
 **Example**
 

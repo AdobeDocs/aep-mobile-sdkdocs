@@ -1,6 +1,6 @@
 #### Java
 
-This API can be called with [AdobeCallback](../api-reference.md#adobecallback) or [AdobeCallbackWithError](../api-reference.md#adobecallbackwitherror) for retrieving the custom identifiers from the Mobile SDK. When `AdobeCallbackWithError` is provided, this API uses a default timeout of 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate [AdobeError](../api-reference.md#adobeerror).
+This API can be called with [AdobeCallback](../../api-reference.md#public-classes) or [AdobeCallbackWithError](../../api-reference.md#public-classes) for retrieving the custom identifiers from the Mobile SDK. When `AdobeCallbackWithError` is provided, this API uses a default timeout of 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate [AdobeError](../../api-reference.md#public-classes).
 
 **Syntax**
 
