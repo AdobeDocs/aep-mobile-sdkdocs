@@ -259,31 +259,31 @@ Android
 
 iOS (AEP 3.x)
 
-<GetIdentifierIosAEP/>
+<GetIdentifiersIosAEP/>
 
 iOS (ACP 2.x)
 
-<GetIdentifierIosACP/>
+<GetIdentifiersIosACP/>
 
 React Native
 
-<GetIdentifierReactNative/>
+<GetIdentifiersReactNative/>
 
 Flutter
 
-<GetIdentifierFlutter/>
+<GetIdentifiersFlutter/>
 
 Cordova
 
-<GetIdentifierCordova/>
+<GetIdentifiersCordova/>
 
 Unity
 
-<GetIdentifierUnity/>
+<GetIdentifiersUnity/>
 
 Xamarin
 
-<GetIdentifierXamarin/>
+<GetIdentifiersXamarin/>
 
 ## getUrlVariables
 
