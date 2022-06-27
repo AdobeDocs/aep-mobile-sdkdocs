@@ -1,6 +1,6 @@
 #### C#
 
-**iOS Syntax**
+**iOS syntax**
 
 ```csharp
 public static void TrackAction (string action, NSMutableDictionary<NSString, NSString> data);
@@ -9,7 +9,7 @@ public static void TrackAction (string action, NSMutableDictionary<NSString, NSS
 * _action_ contains the name of the action to track.
 * _data_ contains the context data to attach on the hit.
 
-**Android Syntax**
+**Android syntax**
 
 ```csharp
 public unsafe static void TrackAction (string action, IDictionary<string, string> contextData);
@@ -18,7 +18,7 @@ public unsafe static void TrackAction (string action, IDictionary<string, string
 * _action_ contains the name of the action to track.
 * _contextData_ contains the context data to attach on the hit.
 
-**iOS Example**
+**iOS example**
 
 ```csharp
 var data = new NSMutableDictionary<NSString, NSString>

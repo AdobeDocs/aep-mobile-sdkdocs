@@ -6,7 +6,7 @@
 void UpdateConfiguration([NullAllowed] NSDictionary config);
 ```
 
-**iOS Example**
+**iOS example**
 
 ```csharp
  var config = new NSMutableDictionary<NSString, NSObject>
@@ -16,7 +16,7 @@ void UpdateConfiguration([NullAllowed] NSDictionary config);
 ACPCore.UpdateConfiguration(config);
 ```
 
-**Android Example**
+**Android example**
 
 ```csharp
 var config = new Dictionary<string, Java.Lang.Object>();
