@@ -1,4 +1,4 @@
-Add the AEPLifecycle extension and its dependency, the [Mobile Core](../../../../index.md) extension, to your project using Cocoapods.
+Add the AEPLifecycle extension and its dependency, the [Mobile Core](../index.md) extension, to your project using Cocoapods.
 
 Add the following pods in your `Podfile`:
 

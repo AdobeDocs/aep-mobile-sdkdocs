@@ -1,4 +1,4 @@
-The Lifecycle extension is included in the Mobile Core extension. Add the [Mobile Core](../../../../index.md) extension to your project using Cocoapods.
+The Lifecycle extension is included in the Mobile Core extension. Add the [Mobile Core](../index.md) extension to your project using Cocoapods.
 
 Add the following pod in your `Podfile`:
 

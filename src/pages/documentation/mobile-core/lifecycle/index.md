@@ -1,3 +1,10 @@
+import AddLifecycleAndroid from './tabs/index/add-lifecycle/android.md'
+import AddLifecycleIosAEP from './tabs/index/add-lifecycle/ios-aep.md'
+import AddLifecycleIosACP from './tabs/index/add-lifecycle/ios-acp.md'
+import RegisterLifecycleAndroid from './tabs/index/register-lifecycle/android.md'
+import RegisterLifecycleIosAEP from './tabs/index/register-lifecycle/ios-aep.md'
+import RegisterLifecycleIosACP from './tabs/index/register-lifecycle/ios-acp.md'
+
 # Lifecycle
 
 <InlineAlert variant="warning" slots="text"/>
