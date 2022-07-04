@@ -1,4 +1,4 @@
-### Java
+#### Java
 
 After calling the `setApplication()` method in the `onCreate()` method, register the Signal extension. If the registration was not successful, an `InvalidInitException` is thrown.
 

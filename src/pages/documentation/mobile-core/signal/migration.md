@@ -1,6 +1,6 @@
-import ExtensionVersionIosACP from './tabs/migration/extension-version/ios-acp.md'
-import ExtensionVersionIosAEP from './tabs/migration/extension-version/ios-aep.md'
-import ExtensionVersionAndroid from './tabs/migration/extension-version/android.md'
+import ExtensionVersionAEPSwift from './tabs/migration/extension-version/aep-swift.md'
+import ExtensionVersionAEPObjectiveC from './tabs/migration/extension-version/aep-objective-c.md'
+import ExtensionVersionACPObjectiveC from './tabs/migration/extension-version/acp-objective-c.md'
 
 # Migrating to AEPSignal reference
 

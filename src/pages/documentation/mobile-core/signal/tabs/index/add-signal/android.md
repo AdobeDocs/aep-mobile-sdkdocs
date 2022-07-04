@@ -1,4 +1,4 @@
-### Java
+#### Java
 
 Add the [Mobile Core](../index.md) extension to your project using the app's Gradle file.
 

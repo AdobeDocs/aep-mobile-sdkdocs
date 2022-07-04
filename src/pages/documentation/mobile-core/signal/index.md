@@ -43,7 +43,7 @@ iOS (ACP 2.x)
 
 <AddSignalIosACP/>
 
-### Register the Signal extension
+## Register the Signal extension
 
 The `registerExtension()` API registers the Signal extension with the Mobile Core extension. This API allows the extension to send and receive events to and from the Mobile SDK.
 

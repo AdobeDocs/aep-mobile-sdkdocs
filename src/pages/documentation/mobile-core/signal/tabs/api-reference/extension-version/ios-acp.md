@@ -1,4 +1,4 @@
-### Objective-C
+#### Objective-C
 
 **Syntax**
 
@@ -12,7 +12,7 @@
 NSString *signalExtensionVersion = [ACPSignal extensionVersion];
 ```
 
-### Swift
+#### Swift
 
 **Example**
 

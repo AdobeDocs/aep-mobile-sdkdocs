@@ -9,14 +9,14 @@ pod 'AEPSignal','~> 3.0'
 
 Import the Signal libraries:
 
-### Swift
+#### Swift
 
 ```swift
 import AEPCore
 import AEPSignal
 ```
 
-### Objective-C
+#### Objective-C
 
 ```objectivec
 @import AEPCore;

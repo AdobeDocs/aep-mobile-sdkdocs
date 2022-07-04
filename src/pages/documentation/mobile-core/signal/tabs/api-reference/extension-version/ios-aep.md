@@ -1,4 +1,4 @@
-### Swift
+#### Swift
 
 **Syntax**
 
@@ -12,7 +12,7 @@ public static let extensionVersion
 let version = Signal.extensionVersion
 ```
 
-### Objective-C
+#### Objective-C
 
 **Example**
 

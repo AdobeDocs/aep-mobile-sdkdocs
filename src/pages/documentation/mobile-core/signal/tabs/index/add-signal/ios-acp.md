@@ -8,14 +8,14 @@ pod 'ACPCore', '~> 2.0'
 
 Import the Signal libraries:
 
-### Objective-C
+#### Objective-C
 
 ```objectivec
 #import "ACPCore.h"
 #import "ACPSignal.h"
 ```
 
-### Swift
+#### Swift
 
 In Swift, the ACPCore includes ACPSignal:
 
