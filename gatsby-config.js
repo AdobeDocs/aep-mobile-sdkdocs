@@ -216,6 +216,24 @@ module.exports = {
                   ]
               },
               {
+                    title: "Signal",
+                    path: "documentation/mobile-core/signal",
+                    pages: [
+                        {
+                            title: "Migration",
+                            path: "documentation/mobile-core/signal/migration"
+                        },
+                        {
+                            title: "API reference",
+                            path: "documentation/mobile-core/signal/api-reference"
+                        },
+                        {
+                            title: "Event reference",
+                            path: "documentation/mobile-core/signal/event-reference"
+                        }
+                    ]
+              },
+              {
                   title: "API reference",
                   path: "documentation/mobile-core/api-reference"
               },
