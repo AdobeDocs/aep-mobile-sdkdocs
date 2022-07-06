@@ -1,0 +1,141 @@
+# API reference
+
+## extensionVersion
+
+The `extensionVersion()` API returns the version of the Profile extension.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+
+Android
+
+<ExtensionVersionAndroid/>
+
+iOS (AEP 3.x)
+
+<ExtensionVersionIosAEP/>
+
+iOS (ACP 2.x)
+
+<ExtensionVersionIosACP/>
+
+## getUserAttributes
+
+The `getUserAttributes()` API gets the user profile attributes with the given keys.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+
+Android
+
+<GetUserAttributesAndroid/>
+
+iOS (AEP 3.x)
+
+<GetUserAttributesIosAEP/>
+
+iOS (ACP 2.x)
+
+<GetUserAttributesIosACP/>
+
+## registerExtension
+
+Registers the Profile extension with the Mobile Core extension.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+
+Android
+
+<RegisterExtensionAndroid/>
+
+iOS (AEP 3.x)
+
+<RegisterExtensionIosAEP/>
+
+iOS (ACP 2.x)
+
+<RegisterExtensionIosACP/>
+
+## removeUserAttribute
+
+Removes the user profile attribute for the given key.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+
+Android
+
+<RemoveUserAttributeAndroid/>
+
+iOS (AEP 3.x)
+
+<RemoveUserAttributeIosAEP/>
+
+iOS (ACP 2.x)
+
+<RemoveUserAttributeIosACP/>
+
+## removeUserAttributes
+
+Removes the user profile attributes for the given keys.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+
+Android
+
+<RemoveUserAttributesAndroid/>
+
+iOS (AEP 3.x)
+
+<RemoveUserAttributesIosAEP/>
+
+iOS (ACP 2.x)
+
+<RemoveUserAttributesIosACP/>
+
+## updateUserAttribute
+
+Sets the user profile attributes key and value and allows you to create or update a user profile attribute.
+
+Remember the following information:
+
+* If the attribute does not exist, it will be created.
+* If the attribute exists, the value will be updated.
+* A null attribute value removes the attribute.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+
+Android
+
+<UpdateUserAttributeAndroid/>
+
+iOS (AEP 3.x)
+
+<UpdateUserAttributeIosAEP/>
+
+iOS (ACP 2.x)
+
+<UpdateUserAttributeIosACP/>
+
+## updateUserAttributes
+
+Sets the user profile attributes key and value.
+
+Allows you to create/update a batch of user profile attributes:
+
+* String, Integer, Boolean, Double, Array, Map are valid type of user profile attributes.
+* Custom objects cannot be saved as a `UserProfile` attribute.
+* If the attribute does not exist, it is created.
+* If the attribute already exists, the value is updated.
+* A null attribute value will remove the attribute.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+
+Android
+
+<UpdateUserAttributesAndroid/>
+
+iOS (AEP 3.x)
+
+<UpdateUserAttributesIosAEP/>
+
+iOS (ACP 2.x)
+
+<UpdateUserAttributesIosACP/>
