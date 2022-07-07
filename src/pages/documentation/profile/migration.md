@@ -1,3 +1,16 @@
+import ExtensionVersionAEPSwift from './tabs/migration/extension-version/aep-swift.md'
+import ExtensionVersionAEPObjectiveC from './tabs/migration/extension-version/aep-objective-c.md'
+import ExtensionVersionACPObjectiveC from './tabs/migration/extension-version/acp-objective-c.md'
+import UpdateUserAttributesAEPSwift from './tabs/migration/update-user-attributes/aep-swift.md'
+import UpdateUserAttributesAEPObjectiveC from './tabs/migration/update-user-attributes/aep-objective-c.md'
+import UpdateUserAttributesACPObjectiveC from './tabs/migration/update-user-attributes/acp-objective-c.md'
+import RemoveUserAttributeAEPSwift from './tabs/migration/remove-user-attributes/aep-swift.md'
+import RemoveUserAttributeAEPObjectiveC from './tabs/migration/remove-user-attributes/aep-objective-c.md'
+import RemoveUserAttributeACPObjectiveC from './tabs/migration/remove-user-attributes/acp-objective-c.md'
+import GetUserAttributesAEPSwift from './tabs/migration/get-user-attributes/aep-swift.md'
+import GetUserAttributesAEPObjectiveC from './tabs/migration/get-user-attributes/aep-objective-c.md'
+import GetUserAttributesACPObjectiveC from './tabs/migration/get-user-attributes/acp-objective-c.md'
+
 # Migrating to AEPUserProfile
 
 This document is a reference comparison of ACPUserProfile (2.x) APIs against their equivalent APIs in AEPUserProfile (3.x).

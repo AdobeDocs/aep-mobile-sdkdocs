@@ -1,3 +1,10 @@
+import AddProfileAndroid from './tabs/index/add-profile/android.md'
+import AddProfileIosAEP from './tabs/index/add-profile/ios-aep.md'
+import AddProfileIosACP from './tabs/index/add-profile/ios-acp.md'
+import RegisterProfileAndroid from './tabs/index/register-profile/android.md'
+import RegisterProfileIosAEP from './tabs/index/register-profile/ios-aep.md'
+import RegisterProfileIosACP from './tabs/index/register-profile/ios-acp.md'
+
 # Profile
 
 You can use the Profile extension to store attributes about your user on the client. This information can be used later to target and personalize messages during online or offline scenarios, without having to connect to a server for optimal performance. The Profile extension manages the Client-Side Operation Profile (CSOP) and provides a way to react to APIs, updates user profile attributes, and shares the user profile attributes with the rest of the system as a generated event.

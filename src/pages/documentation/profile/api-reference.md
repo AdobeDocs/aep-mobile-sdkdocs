@@ -1,3 +1,25 @@
+import ExtensionVersionAndroid from './tabs/api-reference/extension-version/android.md'
+import ExtensionVersionIosAEP from './tabs/api-reference/extension-version/ios-aep.md'
+import ExtensionVersionIosACP from './tabs/api-reference/extension-version/ios-acp.md'
+import GetUserAttributesAndroid from './tabs/api-reference/get-user-attributes/android.md'
+import GetUserAttributesIosAEP from './tabs/api-reference/get-user-attributes/ios-aep.md'
+import GetUserAttributesIosACP from './tabs/api-reference/get-user-attributes/ios-acp.md'
+import RegisterExtensionAndroid from './tabs/api-reference/register-extension/android.md'
+import RegisterExtensionIosAEP from './tabs/api-reference/register-extension/ios-aep.md'
+import RegisterExtensionIosACP from './tabs/api-reference/register-extension/ios-acp.md'
+import RemoveUserAttributeAndroid from './tabs/api-reference/remove-user-attribute/android.md'
+import RemoveUserAttributeIosAEP from './tabs/api-reference/remove-user-attribute/ios-aep.md'
+import RemoveUserAttributeIosACP from './tabs/api-reference/remove-user-attribute/ios-acp.md'
+import RemoveUserAttributesAndroid from './tabs/api-reference/remove-user-attributes/android.md'
+import RemoveUserAttributesIosAEP from './tabs/api-reference/remove-user-attributes/ios-aep.md'
+import RemoveUserAttributesIosACP from './tabs/api-reference/remove-user-attributes/ios-acp.md'
+import UpdateUserAttributeAndroid from './tabs/api-reference/update-user-attribute/android.md'
+import UpdateUserAttributeIosAEP from './tabs/api-reference/update-user-attribute/ios-aep.md'
+import UpdateUserAttributeIosACP from './tabs/api-reference/update-user-attribute/ios-acp.md'
+import UpdateUserAttributesAndroid from './tabs/api-reference/update-user-attributes/android.md'
+import UpdateUserAttributesIosAEP from './tabs/api-reference/update-user-attributes/ios-aep.md'
+import UpdateUserAttributesIosACP from './tabs/api-reference/update-user-attributes/ios-acp.md'
+
 # API reference
 
 ## extensionVersion
