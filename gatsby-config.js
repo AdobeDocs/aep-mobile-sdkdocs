@@ -198,6 +198,76 @@ module.exports = {
           ]
       },
       {
+            title: "Building mobile extensions",
+            path: "/documentation/building-mobile-extensions",
+            pages: [
+                {
+                    title: "Event processing",
+                    path: "documentation/building-mobile-extensions/event-processing"
+                },
+                {
+                    title: "Shared states and events",
+                    path: "documentation/building-mobile-extensions/shared-states-and-events"
+                },
+                {
+                    title: "Building an extension",
+                    path: "documentation/building-mobile-extensions/building-extension"
+                },
+                {
+                    title: "Listening for events",
+                    path: "documentation/building-mobile-extensions/listening-for-events"
+                },
+                {
+                    title: "Dispatching events from your extension",
+                    path: "documentation/building-mobile-extensions/dispatching-events"
+                },
+                {
+                    title: "Requesting a shared state",
+                    path: "documentation/building-mobile-extensions/requesting-shared-state"
+                },
+                {
+                    title: "Requesting a shared state that is not tied to an event",
+                    path: "documentation/building-mobile-extensions/requesting-non-tied-shared-state"
+                },
+                {
+                    title: "Updating a shared state",
+                    path: "documentation/building-mobile-extensions/updating-shared-state"
+                },
+                {
+                    title: "Updating a shared state that is not tied to an event",
+                    path: "documentation/building-mobile-extensions/updating-non-tied-shared-state"
+                },
+                {
+                    title: "Monitoring shared states",
+                    path: "documentation/building-mobile-extensions/monitoring-shared-state"
+                },
+                {
+                    title: "Clearing a shared state",
+                    path: "documentation/building-mobile-extensions/clearing-shared-state"
+                },
+                {
+                    title: "Building a Tag extension interface",
+                    path: "documentation/building-mobile-extensions/building-tag-extension-interface"
+                },
+                {
+                    title: "Interacting with rules",
+                    path: "documentation/building-mobile-extensions/interacting-with-rules"
+                },
+                {
+                    title: "Get the application context",
+                    path: "documentation/building-mobile-extensions/get-application-context"
+                },
+                {
+                    title: "Extension logging",
+                    path: "documentation/building-mobile-extensions/extension-logging"
+                },
+                {
+                    title: "Mobile extension samples",
+                    path: "documentation/building-mobile-extensions/mobile-extension-samples"
+                }
+            ]
+      },
+      {
           title: "Mobile Core",
           path: "/documentation/mobile-core",
           pages: [
