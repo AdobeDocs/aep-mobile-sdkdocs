@@ -34,7 +34,7 @@ The event hub is the core data structure to which the SDK extensions and other c
 
 The event hub is responsible for receiving events that are dispatched by the application, by the extensions, and processing events and dispatching these events to registered listeners. The event hub is accessed from the application and from the extensions by using the `MobileCore` API that is exposed in the SDK. The application dispatches events indirectly, by calling API methods that cause events to be dispatched in the Experience Platform SDKs. The extensions and internal modules dispatch events directly by calling into the event hub.
 
-![](assets/event-processing/dispatch-flow.png)
+![](./assets/event-processing/dispatch-flow.png)
 
 ## Order of event processing
 
