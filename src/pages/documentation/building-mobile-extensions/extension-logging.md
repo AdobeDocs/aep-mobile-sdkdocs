@@ -1,3 +1,6 @@
+import ExtensionLoggingAndroid from './tabs/extension-logging/android.md'
+import ExtensionLoggingIos from './tabs/extension-logging/ios.md'
+
 # Extension logging
 
 It is recommended that you use the Experience Platform SDK logging API to print a message from the extension code. The Experience Platform SDKs provide the `setLogLevel` API, which is used to set one of the following logging modes:
@@ -23,4 +26,4 @@ iOS
 
 ## Additional information
 
-To learn more, please read the [Mobile SDK logging documentation](../mobile-core/api-reference.md#logging)
+To learn more, please read the [Mobile SDK logging documentation](../mobile-core/api-reference.md#log).

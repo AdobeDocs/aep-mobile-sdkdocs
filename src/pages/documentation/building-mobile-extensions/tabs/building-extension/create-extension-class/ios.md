@@ -3,7 +3,7 @@
 The `ACPExtension` class has the following method that you must override:
 
 * `name`: Returns the name of the extension.  
-  Extension developers must prefix their extension names with the company name (for example, `com.myCompany.myExtension`). For more information about the naming constraints, please read the [namespace conventions section](./#namespace-conventions). The name that you use to register **cannot** conflict with other registered extensions or Adobe internal modules.
+  Extension developers must prefix their extension names with the company name (for example, `com.myCompany.myExtension`). For more information about the naming constraints, please read the [namespace conventions section](../index.md#namespace-conventions). The name that you use to register **cannot** conflict with other registered extensions or Adobe internal modules.
 
   All Adobe module names are prefixed with `com.adobe.module` and are considered reserved.
 

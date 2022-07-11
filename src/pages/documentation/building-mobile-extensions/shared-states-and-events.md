@@ -1,3 +1,16 @@
+import ClearSharedStateAndroid from './tabs/shared-states/clear-shared-state/android.md'
+import ClearSharedStateIos from './tabs/shared-states/clear-shared-state/ios.md'
+import MonitorSharedStateAndroid from './tabs/shared-states/monitor-shared-state/android.md'
+import MonitorSharedStateIos from './tabs/shared-states/monitor-shared-state/ios.md'
+import RequestSharedStateAndroid from './tabs/shared-states/request-shared-state/android.md'
+import RequestSharedStateIos from './tabs/shared-states/request-shared-state/ios.md'
+import RequestNotTiedSharedStateAndroid from './tabs/shared-states/request-not-tied-shared-state/android.md'
+import RequestNotTiedSharedStateIos from './tabs/shared-states/request-not-tied-shared-state/ios.md'
+import UpdateSharedStateAndroid from './tabs/shared-states/update-shared-state/android.md'
+import UpdateSharedStateIos from './tabs/shared-states/update-shared-state/ios.md'
+import UpdateNotTiedSharedStateAndroid from './tabs/shared-states/update-not-tied-shared-state/android.md'
+import UpdateNotTiedSharedStateIos from './tabs/shared-states/update-not-tied-shared-state/ios.md'
+
 # Shared states and events
 
 A shared state is composed of the following:
@@ -56,11 +69,11 @@ In the example below, you can find the listener that is being registered in the 
 
 Android
 
-<MonitoringSharedStateAndroid/>
+<MonitorSharedStateAndroid/>
 
 iOS
 
-<MonitoringSharedStateIos/>
+<MonitorSharedStateIos/>
 
 ## Requesting a shared state
 

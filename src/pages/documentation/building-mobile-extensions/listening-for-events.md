@@ -1,3 +1,10 @@
+import CreateEventListenerAndroid from './tabs/listening-for-events/create-event-listener/android.md'
+import CreateEventListenerIos from './tabs/listening-for-events/create-event-listener/ios.md'
+import RegisterEventListenerAndroid from './tabs/listening-for-events/register-event-listener/android.md'
+import RegisterEventListenerIos from './tabs/listening-for-events/register-event-listener/ios.md'
+import RegisterWildcardListenerAndroid from './tabs/listening-for-events/register-wildcard-listener/android.md'
+import RegisterWildcardListenerIos from './tabs/listening-for-events/register-wildcard-listener/ios.md'
+
 # Listening for events
 
 A common use case is to add an event listener to get notifications for events. The main location to add an event listener is in the `init` method, although you can add listeners by using other callbacks later. You can add the logic that you want executed when an event occurs, and for which you have a listener, in the `hear` method of your listener class.

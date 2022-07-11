@@ -1,3 +1,10 @@
+import CreateEventAndroid from './tabs/dispatching-events/create-event/android.md'
+import CreateEventIos from './tabs/dispatching-events/create-event/ios.md'
+import DispatchEventAndroid from './tabs/dispatching-events/dispatch-event/android.md'
+import DispatchEventIos from './tabs/dispatching-events/dispatch-event/ios.md'
+import DispatchPairedEventsAndroid from './tabs/dispatching-events/dispatch-paired-events/android.md'
+import DispatchPairedEventsIos from './tabs/dispatching-events/dispatch-paired-events/ios.md'
+
 # Dispatching events from your extension
 
 Events can be used by extensions in the following scenarios:

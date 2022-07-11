@@ -222,31 +222,7 @@ module.exports = {
                     path: "documentation/building-mobile-extensions/dispatching-events"
                 },
                 {
-                    title: "Requesting a shared state",
-                    path: "documentation/building-mobile-extensions/requesting-shared-state"
-                },
-                {
-                    title: "Requesting a shared state that is not tied to an event",
-                    path: "documentation/building-mobile-extensions/requesting-non-tied-shared-state"
-                },
-                {
-                    title: "Updating a shared state",
-                    path: "documentation/building-mobile-extensions/updating-shared-state"
-                },
-                {
-                    title: "Updating a shared state that is not tied to an event",
-                    path: "documentation/building-mobile-extensions/updating-non-tied-shared-state"
-                },
-                {
-                    title: "Monitoring shared states",
-                    path: "documentation/building-mobile-extensions/monitoring-shared-state"
-                },
-                {
-                    title: "Clearing a shared state",
-                    path: "documentation/building-mobile-extensions/clearing-shared-state"
-                },
-                {
-                    title: "Building a Tag extension interface",
+                    title: "Building a tag extension interface",
                     path: "documentation/building-mobile-extensions/building-tag-extension-interface"
                 },
                 {

@@ -1,3 +1,10 @@
+import CreateExtensionClassAndroid from './tabs/building-extension/create-extension-class/android.md'
+import CreateExtensionClassIos from './tabs/building-extension/create-extension-class/ios.md'
+import RegisterExtensionAndroid from './tabs/building-extension/register-extension/android.md'
+import RegisterExtensionIos from './tabs/building-extension/register-extension/ios.md'
+import UnregisterExtensionAndroid from './tabs/building-extension/unregister-extension/android.md'
+import UnregisterExtensionIos from './tabs/building-extension/unregister-extension/ios.md'
+
 # Building an extension
 
 ## Prerequisites to building an extension
@@ -41,7 +48,7 @@ Android
 
 iOS
 
-<CreateExtensionClassIos>
+<CreateExtensionClassIos/>
 
 ### Registering your extension
 

@@ -4,7 +4,7 @@ The `Extension` class has the following method that you must override:
 
 * `getName`, which returns the name of the extension.
 
-  Extension developers must prefix their extension names with the company name (for example, `com.myCompany.myExtension`). For more information about the naming constraints, see the [namespace conventions section](./#namespace-conventions). The name that you use to register **cannot** conflict with other registered extensions or Adobe internal modules.
+  Extension developers must prefix their extension names with the company name (for example, `com.myCompany.myExtension`). For more information about the naming constraints, see the [namespace conventions section](../index.md#namespace-conventions). The name that you use to register **cannot** conflict with other registered extensions or Adobe internal modules.
 
 The name that you use to register cannot conflict with other registered extensions or Adobe internal modules. The extension name is considered case insensitive by the Mobile SDK.
 

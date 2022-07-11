@@ -59,7 +59,7 @@ Conditions can be supported by publishing the shared state keys or events that y
 
 ### Publishing supported actions
 
-Conditions can be supported by publishing the events that you want to use in a rule. For more information, see the Launch documentation on [action types](https://experienceleague.adobe.com/docs/experience-platform/tags/extension-dev/web/action-types.html).
+Conditions can be supported by publishing the events that you want to use in a rule. For more information, see the tags documentation on [action types](https://experienceleague.adobe.com/docs/experience-platform/tags/extension-dev/web/action-types.html).
 
 ```json
     "actions": [
@@ -83,7 +83,7 @@ You should provide support for the events, actions, and conditions that you publ
 
 ### Publishing a shared state `condition` at runtime
 
-A shared state that was published by your extension can be used as a `condition` when configuring a rule in Experience Platform Launch. To learn how you can publish a shared state, see the [updating the shared state document](./updating-shared-state.md).
+A shared state that was published by your extension can be used as a `condition` when configuring a rule in Experience Platform Launch. To learn how you can publish a shared state, see the [updating the shared state document](./shared-states-and-events#updating-the-shared-state.md).
 
 ### Dispatching an event `condition` at runtime
 
