@@ -198,6 +198,28 @@ module.exports = {
           ]
       },
       {
+          title: "Profile",
+          path: "/documentation/profile",
+          pages: [
+            {
+                title: "Migration",
+                path: "documentation/profile/migration"
+            },
+            {
+                title: "API reference",
+                path: "documentation/profile/api-reference"
+            },
+            {
+                title: "Event reference",
+                path: "documentation/profile/event-reference"
+            },
+            {
+                title: "Release notes",
+                path: "documentation/profile/release-notes"
+            }
+          ]
+      },
+      {
           title: "Mobile Core",
           path: "/documentation/mobile-core",
           pages: [
