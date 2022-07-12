@@ -216,6 +216,20 @@ module.exports = {
                   ]
               },
               {
+                    title: "Rules Engine",
+                    path: "documentation/mobile-core/rules-engine",
+                    pages: [
+                        {
+                            title: "Technical details",
+                            path: "documentation/mobile-core/rules-engine/technical-details"
+                        },
+                        {
+                            title: "Consequence details",
+                            path: "documentation/mobile-core/rules-engine/consequence-details"
+                        }
+                    ]
+              },
+              {
                   title: "API reference",
                   path: "documentation/mobile-core/api-reference"
               },
