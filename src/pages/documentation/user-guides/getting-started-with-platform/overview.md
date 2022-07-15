@@ -178,13 +178,13 @@ AEP Assurance (also known as Project Griffon) is a product from Adobe that lets 
 
    To check the XDM Experience event was successfully validated, check that the `validation for the given event was successful` message is present in the `service com.adobe.streaming.validation` event.
 
-### Queries in Adobe Experience Platform
+## Queries in Adobe Experience Platform
 
 After using the sample demo application to view products and checkout items in a cart, the XDM Experience Events containing the commerce data are sent to Adobe Experience Platform through Experience Edge.
 
-{% hint style="info" %}
+<InlineAlert variant="info" slots="text"/>
+
 It may take up to 15-20 minutes before the data shows up in Adobe Experience Platform.
-{% endhint %}
 
 Query the dataset which stores the commerce data by doing the following:
 
@@ -196,26 +196,26 @@ Query the dataset which stores the commerce data by doing the following:
 6. In the text box, enter a SQL query against your dataset table.
 
    ```sql
-   select * from paste_your_table_name_here     where eventType = 'commerce.purchases' LIMIT 10
+   SELECT * FROM paste_your_table_name_here WHERE eventType = 'commerce.purchases' LIMIT 10
    ```
 
 7. Select the "Play" icon to run the query. The results will appear in the **Results** tab at the bottom.
 
-{% hint style="info" %}
-You can save this query and run it later when needed.
-{% endhint %}
+<InlineAlert variant="info" slots="text"/>
 
-### Implement Add to cart XDM events <a id="implement-add-to-cart-xdm-events"></a>
+You can save this query and run it later when needed.
+
+## Implement Add to cart XDM events
 
 For this exercise, implement the "Add to cart functionality" in the sample application. Navigate to `EdgeViewController.swift` (iOS) / `EdgeTab.java`(Android) and implement the `sendAddToCartXDMEvent` function. The recommended eventType is `commerce.productListAdds`.
 
-{% hint style="info" %}
+<InlineAlert variant="info" slots="text"/>
+
 Use the `sendPurchaseXDMEvent` as an example and Project Griffon to validate that the XDM Experience Event is properly formatted.
-{% endhint %}
 
-### Next steps <a id="next-steps"></a>
+## Next steps
 
-If you would like to explore other XDM schemas for your mobile use-case, find more details in the [Adobe Experience Platform - Experience Edge](https://aep-sdks.gitbook.io/docs/beta/experience-platform-extension) page.
+If you would like to explore other XDM schemas for your mobile use-case, find more details in the [Adobe Experience Platform - Experience Edge](https://aep-sdks.gitbook.io/docs/beta/experience-platform-extension) page. FIX LINK
 
 To learn more about Experience Data Model (XDM), schemas, datasets, and field groups, read [XDM System overview](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html).
 
@@ -223,7 +223,7 @@ To learn more about Experience Data Model (XDM), schemas, datasets, and field gr
 
 ### Sample XDM implementation
 
-To see a sample XDM implementation, please read the [sample XDM Implementation tutorial](./ample-xdm-implementation.md).
+To see a sample XDM implementation, please read the [sample XDM Implementation tutorial](./sample-xdm-implementation.md).
 
 ### Rules and XDM events
 
