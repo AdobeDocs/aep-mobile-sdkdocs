@@ -37,7 +37,7 @@ The Adobe Experience Platform Mobile SDK helps power Adobe's Experience Cloud so
 
 The SDK is comprised of the Mobile Core and a series of modular Adobe Experience Cloud solutions or third-party vendor extensions that depend on the Mobile Core. Extensions interact with the Mobile Core to provide features specific to the solution or service they represent.
 
-Experience Platform Mobile SDKs are available for Android, iOS, and a [variety](#) of cross-platform development frameworks. SDKs configuration is managed through the Adobe Experience Platform Launch for flexible configuration and extensible, rules-based integrations.
+Experience Platform Mobile SDKs are available for Android, iOS, and a [variety](#) of cross-platform development frameworks. SDKs configuration is managed through the Data Collection UI for flexible configuration and extensible, rules-based integrations.
 
 <Media slots="video"/>
 

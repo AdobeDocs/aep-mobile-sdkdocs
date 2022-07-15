@@ -42,7 +42,7 @@ import UpdateXamarin from './tabs/index/update-analytics/xamarin.md'
 4. Click **Save**.
 5. Follow the publishing process to update SDK configuration.
 
-![Workflow overview for Experience Platform Launch, the Mobile SDK, and Adobe Analytics](./images/index/workflow.png)
+![Workflow overview for the Data Collection UI, the Mobile SDK, and Adobe Analytics](./images/index/workflow.png)
 
 ### Configure the Analytics extension
 
@@ -211,7 +211,7 @@ To see the performance of your Target activities for some segments, you can set 
 
 ### Server-side forwarding with Audience Manager
 
-To enable the ability to share Analytics data with Audience Manager, in the Experience Platform Launch UI, select the **Audience Manager Forwarding** checkbox. For more information, go to [Audience Manager](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-audience-manager).
+To enable the ability to share Analytics data with Audience Manager, in the Data Collection UI, select the **Audience Manager Forwarding** checkbox. For more information, go to [Audience Manager](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-audience-manager).
 
 ### Audio and video analytics
 
