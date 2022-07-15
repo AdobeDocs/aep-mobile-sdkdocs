@@ -1,3 +1,8 @@
+import TrackBeaconAndroid from './tabs/track-beacon/track-beacon/android.md'
+import TrackBeaconIos from './tabs/track-beacon/track-beacon/ios.md'
+import ClearBeaconAndroid from './tabs/track-beacon/clear-beacon/android.md'
+import ClearBeaconIos from './tabs/track-beacon/clear-beacon/ios.md'
+
 # Tracking Beacons
 
 ## Emulate the trackBeacon call from the v4 SDKs

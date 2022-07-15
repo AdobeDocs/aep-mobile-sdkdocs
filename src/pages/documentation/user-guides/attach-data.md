@@ -1,3 +1,6 @@
+import AttachingDataAnalytics from './tabs/attach-data/attaching-data/analytics.md'
+import AttachingDataTarget from './tabs/attach-data/attaching-data/target.md'
+
 # Attach data to SDK events
 
 The attach data_rule action is supported in [Mobile Core](../../foundation-extensions/mobile-core/) starting from version 2.1.8 (Launch), 2.3.5 (iOS), and 1.4.5 (Android). This action is powerful, complex, and enables advanced use cases.

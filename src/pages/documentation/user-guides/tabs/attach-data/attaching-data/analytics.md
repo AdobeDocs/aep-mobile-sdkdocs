@@ -19,7 +19,7 @@ If you do not have existing rules for this property, the **Create New Rule** but
 4. From the **Event Type** dropdown list, select **Track Action**.
 5. Select **Keep Changes**.
 
-![](../../.gitbook/assets/setevent.png)
+![](../../../assets/attach-data/set-event.png)
 
 #### Define the action
 
@@ -33,14 +33,14 @@ On the right pane, you can add a freeform JSON payload that adds data to an SDK 
 
 In the following example, `launches` and `anAddedKey` keys are added to the `contextdata` of the Analytics event. Values for the new keys can either be hardcoded in the rule, or dynamically determined by the SDK when this event processes by using data elements.
 
-![](../../.gitbook/assets/setaction.png)
+![](../../../assets/attach-data/set-action.png)
 
 
 #### Save the rule and rebuild your property
 
 After you complete your configuration, verify that your rule looks like the following:
 
-![](../../.gitbook/assets/rulecomplete.png)
+![](../../../assets/attach-data/rule-complete.png)
 
 1. Select **Save**
 2. Rebuild your mobile property and deploy it to the correct Environment.

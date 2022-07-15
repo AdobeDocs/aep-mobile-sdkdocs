@@ -25,7 +25,7 @@ If you do not have existing rules for this property, the **Create New Rule** but
 4. From the **Event Type** dropdown list, select **Content Requested**.
 5. Select **Keep Changes**.
 
-![](./assets/attach-data/target-attach-data-event-setup.png)
+![](../../../assets/attach-data/target-attach-data-event-setup.png)
 
 #### Define the action
 
@@ -58,7 +58,7 @@ In the above example,  the JSON payload adds custom parameters to each of the Ta
 
 After you complete your configuration, verify that your rule looks like the following:
 
-![](./assets/attach-data/target-attach-data-rule-setup.png)
+![](../../../assets/attach-data/target-attach-data-rule-setup.png)
 
 1. Select **Save**
 2. Rebuild your mobile property and deploy it to the correct Environment.
@@ -86,7 +86,7 @@ If you do not have existing rules for this property, the **Create New Rule** but
 4. From the **Event Type** dropdown list, select **Content Prefetched**.
 5. Select **Keep Changes**.
 
-![](./assets/attach-data/target-attach-data-event-setup-prefetch.png)
+![](../../../assets/attach-data/target-attach-data-event-setup-prefetch.png)
 
 #### Define the action
 
@@ -119,7 +119,7 @@ In the above example, the JSON payload adds custom mbox parameters to each of th
 
 After you complete your configuration, verify that your rule looks like the following:
 
-![](./assets/attach-data/target-attach-data-rule-setup-prefetch.png)
+![](../../../assets/attach-data/target-attach-data-rule-setup-prefetch.png)
 
 1. Select **Save**
 2. Rebuild your mobile property and deploy it to the correct Environment.
@@ -147,7 +147,7 @@ If you do not have existing rules for this property, the **Create New Rule** but
 4. From the **Event Type** dropdown list, select **Location Selected**.
 5. Select **Keep Changes**.
 
-![](./assets/attach-data/target-attach-data-event-setup-location-clicked.png)
+![](../../../assets/attach-data/target-attach-data-event-setup-location-clicked.png)
 
 ### Define the action
 
@@ -161,17 +161,17 @@ On the right pane, you can add a freeform JSON payload that adds data to an SDK 
 
 In the following example, **extraKey** and **extraKey2** are added to the profile parameters. A key named `customMboxParameter` and a data element that was defined for the **OS version** are added to the mbox parameters of the Target event. Values for the new keys can either be hardcoded in the rule or be dynamically determined by the SDK when this event processes by using data elements.
 
-![](./assets/attach-data/target-attach-data-json-example-location-clicked.png)
+![](../../../assets/attach-data/target-attach-data-json-example-location-clicked.png)
 
 The following example shows how the data element for this OS version was created.
 
-![](./assets/attach-data/target-attach-data-data-element-setup.png)
+![](../../../assets/attach-data/target-attach-data-data-element-setup.png)
 
 ### Save the rule and rebuild your property
 
 After you complete your configuration, verify that your rule looks like the following:
 
-![](./assets/attach-data/target-attach-data-rule-setup-location-clicked.png)
+![](../../../assets/attach-data/target-attach-data-rule-setup-location-clicked.png)
 
 1. Select **Save**
 2. Rebuild your mobile property and deploy it to the correct Environment.
@@ -199,7 +199,7 @@ If you do not have existing rules for this property, the **Create New Rule** but
 4. From the **Event Type** dropdown list, select **Location Displayed**.
 5. Select **Keep Changes**.
 
-![](./assets/attach-data/target-attach-data-event-setup-location-displayed.png)
+![](../../../assets/attach-data/target-attach-data-event-setup-location-displayed.png)
 
 ### Define the action
 
@@ -213,13 +213,13 @@ On the right pane, you can add a freeform JSON payload that adds data to an SDK 
 
 In the following example, **extraKey** and **extraKey2** are added to the profile parameters. A key named `customMboxParameter` and a data element that was defined for the OS version are added to the mbox parameters of the Target event. Values for the new keys can either be hardcoded in the rule or be dynamically determined by the SDK when this event processes by using data elements.
 
-![](./assets/attach-data/target-attach-data-json-example-location-clicked.png)
+![](../../../assets/attach-data/target-attach-data-json-example-location-clicked.png)
 
 ### Save the rule and rebuild your property
 
 After you complete your configuration, verify that your rule looks like the following:
 
-![](./assets/attach-data/target-attach-data-rule-setup-location-displayed.png)
+![](../../../assets/attach-data/target-attach-data-rule-setup-location-displayed.png)
 
 1. Select **Save**
 2. Rebuild your mobile property and deploy it to the correct Environment.

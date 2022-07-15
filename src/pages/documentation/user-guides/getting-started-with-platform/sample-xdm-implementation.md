@@ -1,3 +1,10 @@
+import DownloadSampleApplicationAndroid from './tabs/sample-xdm-implementation/download-sample-application/android.md'
+import DownloadSampleApplicationIos from './tabs/sample-xdm-implementation/download-sample-application/ios.md'
+import BuildXDMObjectsAndroid from './tabs/sample-xdm-implementation/build-xdm-objects/android.md'
+import BuildXDMObjectsIos from './tabs/sample-xdm-implementation/build-xdm-objects/ios.md'
+import OverrideDefaultDatasetAndroid from './tabs/sample-xdm-implementation/override-default-dataset/android.md'
+import OverrideDefaultDatasetIos from './tabs/sample-xdm-implementation/override-default-dataset/ios.md'
+
 # Sample XDM Implementation
 
 ## Prerequisites for this tutorial
