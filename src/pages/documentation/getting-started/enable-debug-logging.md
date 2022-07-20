@@ -1,3 +1,9 @@
+import EnableDebugLoggingIosACP from './tabs/enable-debug-logging/enable-debug-logging/ios-acp.md'
+import EnableDebugLoggingIosAEP from './tabs/enable-debug-logging/enable-debug-logging/ios-aep.md'
+import EnableDebugLoggingAndroid from './tabs/enable-debug-logging/enable-debug-logging/android.md'
+import LifecycleMetricsIos from './tabs/enable-debug-logging/lifecycle-metrics/ios.md'
+import LifecycleMetricsAndroid from './tabs/enable-debug-logging/lifecycle-metrics/android.md'
+
 # Debugging & lifecycle metrics
 
 ## Debug logging

@@ -1,3 +1,14 @@
+import TrackAppStatesIosACP from './tabs/initialize-the-sdk/track-app-states/ios-acp.md'
+import TrackAppStatesIosAEP from './tabs/initialize-the-sdk/track-app-states/ios-aep.md'
+import TrackAppStatesAndroid from './tabs/initialize-the-sdk/track-app-states/android.md'
+import TrackUserActionsIosACP from './tabs/initialize-the-sdk/track-user-actions/ios-acp.md'
+import TrackUserActionsIosAEP from './tabs/initialize-the-sdk/track-user-actions/ios-aep.md'
+import TrackUserActionsAndroid from './tabs/initialize-the-sdk/track-user-actions/android.md'
+import CreateExperienceEventIos from './tabs/initialize-the-sdk/create-experience-event/ios.md'
+import CreateExperienceEventAndroid from './tabs/initialize-the-sdk/create-experience-event/android.md'
+import SendToEdgeIos from './tabs/initialize-the-sdk/send-to-edge/ios.md'
+import SendToEdgeAndroid from './tabs/initialize-the-sdk/send-to-edge/android.md'
+
 # Track events
 
 The SDK provides three event tracking APIs to log events for reporting, segmentation, and various other data collection use cases:

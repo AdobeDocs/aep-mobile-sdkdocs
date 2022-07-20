@@ -1,3 +1,13 @@
+import AddDependenciesIosACP from './tabs/get-the-sdk/add-dependencies/ios-acp.md'
+import AddDependenciesIosAEP from './tabs/get-the-sdk/add-dependencies/ios-aep.md'
+import AddDependenciesAndroid from './tabs/get-the-sdk/add-dependencies/android.md'
+import AddInitializationCodeIosACP from './tabs/get-the-sdk/add-initialization-code/ios-acp.md'
+import AddInitializationCodeIosAEP from './tabs/get-the-sdk/add-initialization-code/ios-aep.md'
+import AddInitializationCodeAndroid from './tabs/get-the-sdk/add-initialization-code/android.md'
+import GetTheSdkIosACP from './tabs/get-the-sdk/get-the-sdk/ios-acp.md'
+import GetTheSdkIosAEP from './tabs/get-the-sdk/get-the-sdk/ios-aep.md'
+import GetTheSdkAndroid from './tabs/get-the-sdk/get-the-sdk/android.md'
+
 # Get the Experience Platform SDK
 
 The Adobe Experience Platform SDK is available for Apple iOS (includes iOS, iPadOS, and tvOS) via [Cocoapods](https://cocoapods.org/), for Google Android via [Gradle](https://gradle.org), and for various cross-platform platforms such as Cordova, Flutter, React Native, Unity, and Xamarin.

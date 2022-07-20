@@ -198,6 +198,45 @@ module.exports = {
           ]
       },
       {
+        title: "Getting started",
+        path: "/documentation/getting-started",
+        header: true,
+        pages: [
+            {
+                title: "Overview",
+                path: "/documentation/getting-started"
+            },
+            {
+                title: "Set up schemas and datasets",
+                path: "/documentation/getting-started/set-up-schemas-and-datasets"
+            },
+            {
+                title: "Configure datastreams",
+                path: "/documentation/getting-started/configure-datastreams"
+            },
+            {
+                title: "Set up a mobile property",
+                path: "/documentation/getting-started/create-a-mobile-property"
+            },
+            {
+                title: "Get the Experience Platform SDK",
+                path: "/documentation/getting-started/get-the-sdk"
+            },
+            {
+                title: "Debugging and lifecycle metrics",
+                path: "/documentation/getting-started/enable-debug-logging"
+            },
+            {
+                title: "Track events",
+                path: "/documentation/getting-started/initialize-the-sdk"
+            },
+            {
+                title: "Validation and next steps",
+                path: "/documentation/getting-started/validate"
+            }
+        ]
+      },
+      {
           title: "Mobile Core",
           path: "/documentation/mobile-core",
           pages: [
