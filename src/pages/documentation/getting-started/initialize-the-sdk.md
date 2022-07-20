@@ -14,8 +14,8 @@ import SendToEdgeAndroid from './tabs/initialize-the-sdk/send-to-edge/android.md
 The SDK provides three event tracking APIs to log events for reporting, segmentation, and various other data collection use cases:
 
 1. [Send events to Edge Network](#send-events-to-edge-network) (requires Edge Network extension)
-2. [Track user actions](#track-user-actions) (requires Adobe Analytics extension)
-3. [Track app states and screens](#track-app-states-and-screens) (requires Adobe Analytics extension)
+2. [Track user actions](#track-user-actions-for-adobe-analytics) (requires Adobe Analytics extension)
+3. [Track app states and screens](#track-app-states-and-screens-for-adobe-analytics) (requires Adobe Analytics extension)
 
 ## Send events to Edge Network
 

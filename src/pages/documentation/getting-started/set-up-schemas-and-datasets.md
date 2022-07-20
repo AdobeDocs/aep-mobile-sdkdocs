@@ -12,8 +12,8 @@ To leverage data collection via the Experience Platform Edge Network, data has t
 
 In order to begin sending XDM data from your mobile application to Edge Network, you'll need to do the following:
 
-1. [Create and configure your XDM schema](setup-schemas-and-datasets.md#create-and-configure-your-xdm-schema)
-2. [Create and configure your dataset based on the previously created schema](setup-schemas-and-datasets.md#create-and-configure-a-dataset)
+1. [Create and configure your XDM schema](#create-and-configure-your-xdm-schema)
+2. [Create and configure your dataset based on the previously created schema](#create-and-configure-a-dataset)
 
 ## Create and configure your XDM schema
 

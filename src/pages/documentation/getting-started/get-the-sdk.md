@@ -10,7 +10,7 @@ import GetTheSdkAndroid from './tabs/get-the-sdk/get-the-sdk/android.md'
 
 # Get the Experience Platform SDK
 
-The Adobe Experience Platform SDK is available for Apple iOS (includes iOS, iPadOS, and tvOS) via [Cocoapods](https://cocoapods.org/), for Google Android via [Gradle](https://gradle.org), and for various cross-platform platforms such as Cordova, Flutter, React Native, Unity, and Xamarin.
+The Adobe Experience Platform SDK is available for Apple iOS (includes iOS, iPadOS, and tvOS) via [Cocoapods](https://cocoapods.org/) and for Google Android via [Gradle](https://gradle.org).
 
 Follow the directions below to include the SDK into your mobile application.
 
@@ -34,7 +34,7 @@ iOS (ACP 2.x)
 
 ## Installation instructions
 
-If you cannot access the **Mobile Install Instructions** dialog box in Experience Platform Launch, complete the following sections to get the Adobe Experience Platform SDK. If you already completed the steps in the Mobile Install Instructions dialog box, no need to complete these steps.
+If you cannot access the **Mobile Install Instructions** dialog box in the Data Collection UI, complete the following sections to get the Adobe Experience Platform SDK. If you already completed the steps in the Mobile Install Instructions dialog box, no need to complete these steps.
 
 ### 1. Add dependencies to your project
 
