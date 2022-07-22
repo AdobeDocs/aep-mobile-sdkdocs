@@ -232,6 +232,15 @@ module.exports = {
                   path: "documentation/mobile-core/release-notes"
               }
           ]
+      },
+      {
+        title: "Adobe Experience Platform Edge Network",
+        path: "/documentation/edge-network-extensions",
+        pages: [
+            {
+                title: ""
+            }
+        ]
       }
     ]
   },
