@@ -1,3 +1,19 @@
+import ExtensionVersionIosAEP from './tabs/api-reference/extension-version/ios-aep.md'
+import ExtensionVersionAndroid from './tabs/api-reference/extension-version/android.md'
+import EdgeEventHandleIosAEP from './tabs/api-reference/edge-event-handle/ios-aep.md'
+import EdgeEventHandleAndroid from './tabs/api-reference/edge-event-handle/android.md'
+import ExperienceEventIosAEP from './tabs/api-reference/experience-event/ios-aep.md'
+import ExperienceEventAndroid from './tabs/api-reference/experience-event/android.md'
+import RegisterExtensionIosAEP from './tabs/api-reference/register-extension/ios-aep.md'
+import RegisterExtensionAndroid from './tabs/api-reference/register-extension/android.md'
+import ResetIdentitiesIosAEP from './tabs/api-reference/reset-identities/ios-aep.md'
+import ResetIdentitiesAndroid from './tabs/api-reference/reset-identities/android.md'
+import SendEventIosAEP from './tabs/api-reference/send-event/ios-aep.md'
+import SendEventAndroid from './tabs/api-reference/send-event/android.md'
+import XdmSchemaIosAEP from './tabs/api-reference/xdm-schema/ios-aep.md'
+import XdmSchemaAndroid from './tabs/api-reference/xdm-schema/android.md'
+
+
 # Edge Network API reference
 
 ## extensionVersion
@@ -41,16 +57,6 @@ Android
 iOS (AEP 3.x)
 
 <RegisterExtensionIosAEP/>
-
-{% tab title="Android" %}
-
-{% endtab %}
-
-{% tab title="iOS (AEP 3.x)" %}
-
-
-{% endtab %}
-{% endtabs %}
 
 ## resetIdentities
 

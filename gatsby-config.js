@@ -238,7 +238,20 @@ module.exports = {
         path: "/documentation/edge-network-extensions",
         pages: [
             {
-                title: ""
+                title: "API reference",
+                path: "/documentation/edge-network-extensions/api-reference"
+            },
+            {
+                title: "XDM Experience Events",
+                path: "/documentation/edge-network-extensions/xdm-experience-events"
+            },
+            {
+                title: "Validation",
+                path: "/documentation/edge-network-extensions/validation"
+            },
+            {
+                title: "Release Notes",
+                path: "/documentation/edge-network-extensions/release-notes"
             }
         ]
       }

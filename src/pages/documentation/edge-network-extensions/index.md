@@ -1,3 +1,9 @@
+import RegisterEdgeIosAEP from './tabs/index/register-edge/ios-aep.md'
+import RegisterEdgeAndroid from './tabs/index/register-edge/android.md'
+import DownloadEdgeIosACP from './tabs/index/download-edge/ios-acp.md'
+import DownloadEdgeIosAEP from './tabs/index/download-edge/ios-aep.md'
+import DownloadEdgeAndroid from './tabs/index/download-edge/android.md'
+
 # Adobe Experience Platform Edge Network
 
 ## Before starting
@@ -23,9 +29,9 @@ If no datastream was previously created, see [Configure datastreams](../getting-
 
 You may configure only the required datastream for the production environment, and by default the staging and development environments will use the same datastream. Alternatively, if you want to use different datastreams per each environment, select the desired ones from the corresponding drop-down lists.
 
-{% hint style="info" %}
+<InlineAlert variant="info" slots="text"/>
+
 If your organization uses multiple sandboxes, select the **Sandbox** first, then select the **Datastream** for each environment.
-{% endhint %}
 
 The datastream used by the client-side implementation is one of the followings:
 
