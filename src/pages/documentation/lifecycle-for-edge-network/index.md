@@ -12,17 +12,17 @@ Include the "AEP Mobile Lifecycle Details" field group to the schema defined in 
 4. Search for **AEP Mobile Lifecycle Details**. Select it, then select **Add field groups**.
 5. Select **Save**.
 
-![](../../.gitbook/assets/xdm-schema-add-mobile-lifecycle-details.png)
+![](./assets/index/add-mobile-lifecycle-details.png)
 
 ## Configure the Adobe Experience Platform Lifecycle extension in Data Collection UI
 
-{% hint style="info" %}
-The Lifecycle for Edge Network extension is part of the Mobile Core extension. There is no separate card for the Lifecycle for Edge Network extension in the Extensions Catalog.
-{% endhint %}
+<InlineAlert variant="info" slots="text"/>
 
-{% hint style="warning" %}
+The Lifecycle for Edge Network extension is part of the Mobile Core extension. There is no separate card for the Lifecycle for Edge Network extension in the Extensions Catalog.
+
+<InlineAlert variant="warning" slots="text"/>
+
 The configuration setting "Session Timeout" in the Mobile Core extension configuration is used when collecting Lifecycle session data for Analytics and is not used for the Lifecycle for Edge Network extension.
-{% endhint %}
 
 1. In the Data Collection UI, from your mobile property, select the **Extensions** tab.
 2. On the **Catalog** tab, locate or search for the **Mobile Core** extension, and select **Install**.
@@ -32,7 +32,7 @@ The configuration setting "Session Timeout" in the Mobile Core extension configu
 
 In addition, use the following steps to [Configure the Edge Network extension](../experience-platform-extension#configure-edge-network-extension).
 
-![Mobile Core extension configuration](../../.gitbook/assets/mobile-core-launch-configuration.png)
+![Mobile Core extension configuration](./assets/index/configuration.png)
 
 ## Configure a Rule to forward Lifecycle metrics to Platform
 
@@ -45,9 +45,9 @@ The Lifecycle for Edge Network extension dispatches application foreground and b
 
    In this example, the rule is named "Forward Lifecycle XDM events to Edge Network".
 
-{% hint style="info" %}
+<InlineAlert variant="info" slots="text"/>
+
 If you do not have existing rules for this property, the **Create New Rule** button will be in the middle of the screen. If your property has rules, the button will be in the top right of the screen.
-{% endhint %}
 
 ### Select an event
 
@@ -60,7 +60,7 @@ If you do not have existing rules for this property, the **Create New Rule** but
 7. From the **Event Type** dropdown list, select **Background**.
 8. Select **Keep Changes**.
 
-![](../../.gitbook/assets/setevent-foreground-background.png)
+![](./assets/index/select-event.png)
 
 ### Define the action
 
@@ -69,20 +69,20 @@ If you do not have existing rules for this property, the **Create New Rule** but
 3. From the **Action Type** dropdown list, select **Forward event to Edge Network**.
 4. Select **Keep Changes**.
 
-![](../../.gitbook/assets/setaction-forward-to-edge-network.png)
+![](./assets/index/define-action.png)
 
 ### Save the rule and rebuild your property
 
 After you complete your configuration, verify that your rule looks like the following:
 
-![](../../.gitbook/assets/rulecomplete-forward-lifecycle-to-edge-network.png)
+![](./assets/index/save-rule.png)
 
 1. Select **Save**.
 2. Rebuild your mobile property and deploy it to the correct environment.
 
 ## Add the Lifecycle extension to your app
 
-For implementation details, please reference: 1. [Add Lifecycle to your app](../mobile-core/lifecycle#add-lifecycle-to-your-app). 2. [Register Lifecycle with Mobile Core and add appropriate Start/Pause calls](../mobile-core/lifecycle#register-lifecycle-with-mobile-core-and-add-appropriate-start-pause-calls).
+For implementation details, please reference the Lifecycle documentation to learn how to [add Lifecycle to your app](../mobile-core/lifecycle/index.md#add-lifecycle-to-your-app). as well as [register Lifecycle with Mobile Core and add appropriate the Start/Pause calls](../mobile-core/lifecycle/index.md#register-lifecycle-with-mobile-core-and-add-appropriate-start-pause-calls).
 
-In addition, use the following steps to [add the Edge Network extension to your app](../experience-platform-extension#add-the-edge-network-extension-to-your-app).
+In addition, use the following steps to [add the Edge Network extension to your app](../edge-network-extensions/index.md#add-the-edge-network-extension-to-your-app).
 
