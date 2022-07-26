@@ -232,6 +232,25 @@ module.exports = {
                   path: "documentation/mobile-core/release-notes"
               }
           ]
+      },
+      {
+        title: "Lifecycle for Edge Network",
+        path: "/documentation/lifecycle-for-edge-network",
+        pages: [
+            {
+                title: "API reference",
+                path: "documentation/lifecycle-for-edge-network/api-reference"
+            },
+            {
+                title: "Event reference",
+                path: "documentation/lifecycle-for-edge-network/event-reference"
+            },
+            {
+                title: "Metrics",
+                path: "documentation/lifecycle-for-edge-network/metrics"
+            }
+        ]
+
       }
     ]
   },
