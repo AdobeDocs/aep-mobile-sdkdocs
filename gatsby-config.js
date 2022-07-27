@@ -232,6 +232,40 @@ module.exports = {
                             path: "documentation/mobile-core/signal/event-reference"
                         }
                     ]
+                },
+                {
+                  title: "Lifecycle",
+                  path: "documentation/mobile-core/lifecycle",
+                  pages: [ 
+                      {
+                          title: "Migration",
+                          path: "documentation/mobile-core/lifecycle/migration"
+                      },
+                      {
+                          title: "Lifecycle extension in Android",
+                          path: "documentation/mobile-core/lifecycle/android"
+                      },
+                      {
+                          title: "Lifecycle extension in iOS",
+                          path: "documentation/mobile-core/lifecycle/ios"
+                      },
+                      {
+                          title: "API reference",
+                          path: "documentation/mobile-core/lifecycle/api-reference"
+                      },
+                      {
+                          title: "Event reference",
+                          path: "documentation/mobile-core/lifecycle/event-reference"
+                      },
+                      {
+                          title: "Metrics",
+                          path: "documentation/mobile-core/lifecycle/metrics"
+                      },
+                      {
+                          title: "Configuration keys",
+                          path: "documentation/mobile-core/lifecycle/configuration-keys"
+                      }
+                  ]
               },
               {
                   title: "API reference",

@@ -35,7 +35,7 @@ The following message is an example of a postback:
     "id": "9d40f5665d5bdbe96dcb3a24f4e4fe98d686a602",
     "type": "pb",
     "detail": {
-        "templateurl": "https://www.endpoint.com/post/{%urlenc(~sdkver)%}",
+        "templateurl": "https://www.endpoint.com/post/<div data-gb-custom-block data-tag="urlenc"></div>",
         "templatebody": "{\"jsonkey\":\"jsonvalue\",\"sdkkey\":\"{%~sdkver%}\"}",
         "contenttype": "application/json",
         "timeout": 5
