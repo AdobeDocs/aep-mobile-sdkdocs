@@ -6,7 +6,7 @@ The following metrics are collected on each [Lifecycle data content response](./
 
 ### Install
 
-| **Metric** | **Key** | **DescriptIon** |
+| **Metric** | **Key** | **Description** |
 | :--- | :--- | :--- |
 | First Launches | `a.InstallEvent` | Triggered at the first run after installation or re-installation. |
 | Install Date | `a.InstallDate` | Date of first launch after installation. The format is `M/d/yyyy`, and an example is `5/3/2017`. |
@@ -57,7 +57,7 @@ The following metrics are collected on each [Lifecycle Application Foreground](.
 
 ### Application
 
-| **Property** | **Type** | **DescriptIon** |
+| **Property** | **Type** | **Description** |
 | :--- | :--- | :--- |
 | xdm:id | String | Identifier of the application. |
 | xdm:name | String | Name of the application. |
@@ -68,7 +68,7 @@ The following metrics are collected on each [Lifecycle Application Foreground](.
 
 ### Device
 
-| **Property** | **Type** | **DescriptIon** |
+| **Property** | **Type** | **Description** |
 | :--- | :--- | :--- |
 | xdm:type | String | Type of device being tracked. |
 | xdm:manufacturer | String | The name of the organization who owns the design and creation of the device. |
@@ -79,7 +79,7 @@ The following metrics are collected on each [Lifecycle Application Foreground](.
 
 ### Environment
 
-| **Property** | **Type** | **DescriptIon** |
+| **Property** | **Type** | **Description** |
 | :--- | :--- | :--- |
 | xdm:type | String | The type of the application environment. |
 | xdm:carrier | String | A mobile network carrier or MNO, also known as a wireless service provider, wireless carrier, cellular company, or mobile network carrier. |
@@ -93,7 +93,7 @@ The following metrics are collected on each [Lifecycle Application Background](.
 
 ### Application
 
-| **Property** | **Type** | **DescriptIon** |
+| **Property** | **Type** | **Description** |
 | :--- | :--- | :--- |
 | xdm:isClose | boolean | Close of an application. Every application background event sets `isClose` to `true`. |
 | xdm:closeType | String | Type of application close, sent on application isClose. Type is "close" on graceful termination of an application, or "unknown" when application termination source is unknown. |
