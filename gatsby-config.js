@@ -45,6 +45,28 @@ module.exports = {
             title: "Adobe Experience Cloud & Apple's IDFA, Privacy announcement",
             path: "/documentation/privacy-announcement"
         },
+        {
+            title: "Adobe Experience Platform Assurance",
+            path: "/documentation/platform-assurance",
+            pages: [
+                {
+                    title: "Migration",
+                    path: "/documentation/platform-assurance/migration"
+                },
+                {
+                    title: "API reference",
+                    path: "/documentation/platform-assurance/api-reference"
+                },
+                {
+                    title: "Resolving common issues",
+                    path: "/documentation/platform-assurance/error-logs"
+                },
+                {
+                    title: "Release notes",
+                    path: "/documentation/platform-assurance/release-notes"
+                }
+            ]
+        },
       {
         title: 'Adobe Analytics',
         path: '/documentation/adobe-analytics/',
