@@ -1,6 +1,7 @@
 # Frequently asked question
 
 <InlineAlert variant="info" slots="text"/>
+
 While the Adobe Experience Platform SDK for WeChat Mini Program is complimentarily available for all Adobe customers, the SDK for the WeChat Mini Program requires in-country data collection.
 
 ## I don't see data in my Adobe Analytics report suite. What can I do?
