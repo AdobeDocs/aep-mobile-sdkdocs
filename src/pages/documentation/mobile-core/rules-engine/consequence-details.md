@@ -65,12 +65,12 @@ This rule is currently handled by the [Signal](..//signal/index.md) extension.
 
 ## Profile consequence
 
-This rule is currently handled by the [Profile](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/profile) extension. FIX LINK
+This rule is currently handled by the [Profile](../../profile/index.md) extension.
 
 | Friendly name | Key | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | Operation to perform | `operation` | String | Yes | Determines the type of operation to be performed on the profile. The following operations are supported:  <ul><li> `write`: Saves the `value` in the given `key` in the shared state and the local profile. If an associated value for the key already exists, the existing value will be overwritten.</li><li> `delete`: Removes `key` from the profile's shared state and the local profile.</li></ul> |
-| Device-side profile key | key | String | Yes | Key in the device-side profile on which the requested operation will be performed.  **Note**: This key will be accessible later through the shared state from the Profile extension. For more details, please read the [user profile shared state](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/profile/profiles-event-reference#shared-state). FIX LINK |
+| Device-side profile key | key | String | Yes | Key in the device-side profile on which the requested operation will be performed.  **Note**: This key will be accessible later through the shared state from the Profile extension. For more details, please read the [user profile shared state](../../profile/event-reference#shared-state). |
 | Device-side profile value | value | String or Number | Yes, for write operations | New value to write to the key. |
 
 ## Attach data consequence
@@ -79,5 +79,5 @@ This rule is currently handled by the [Mobile Core](../index.md) extension.
 
 | Friendly name | Key | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| Event data | `eventdata` | object | Yes | Dictionary of pairs to overlay on the triggering event's EventData. For more information, see the [attach data tutorial](https://aep-sdks.gitbook.io/docs/resources/user-guides/attach-data). FIX LINK |
+| Event data | `eventdata` | object | Yes | Dictionary of pairs to overlay on the triggering event's EventData. For more information, see the [attach data tutorial](../../user-guides/attach-data.md). |
 

@@ -14,7 +14,7 @@
 
 ## Rules delivery
 
-Rules delivery occurs by using a network request from the Experience Platform SDKs to a static endpoint that is defined as part of the SDK configuration. The rules file for each mobile property is hosted on [https://assets.adobedtm.com](https://assets.adobedtm.com). <!--- This URL does not work???>
+Rules delivery occurs by using a network request from the Experience Platform SDKs to a static endpoint that is defined as part of the SDK configuration. The rules file for each mobile property is hosted on `https://assets.adobedtm.com`.
 
 This request is a conditional `GET` and occurs by default at the start of each new application session. In Experience Platform Launch, when the set of rules that were configured for a mobile property change, these changes will be picked up by the Experience Platform SDK in the next session or after the application is restarted.
 
