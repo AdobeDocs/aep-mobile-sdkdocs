@@ -303,39 +303,87 @@ module.exports = {
           title: "Mobile Core",
           path: "/documentation/mobile-core",
           pages: [
-              {
-                  title: "Configuration",
-                  path: "documentation/mobile-core/configuration",
-                  pages: [
-                      {
-                          title: "API reference",
-                          path: "documentation/mobile-core/configuration/api-reference"
-                      },
-                      {
-                          title: "Event reference",
-                          path: "documentation/mobile-core/configuration/event-reference"
-                      }
-                  ]
-              },
-              {
-                  title: "Identity",
-                  path: "documentation/mobile-core/identity",
-                  pages: [
-                      {
-                          title: "API reference",
-                          path: "documentation/mobile-core/identity/api-reference"
-                      },
-                      {
-                          title: "Event reference",
-                          path: "documentation/mobile-core/identity/event-reference"
-                      },
-                      {
-                          title: "Migration",
-                          path: "documentation/mobile-core/identity/migration"
-                      }
-                  ]
-              },
-              {
+                {
+                    title: "Configuration",
+                    path: "documentation/mobile-core/configuration",
+                    pages: [
+                        {
+                            title: "API reference",
+                            path: "documentation/mobile-core/configuration/api-reference"
+                        },
+                        {
+                            title: "Event reference",
+                            path: "documentation/mobile-core/configuration/event-reference"
+                        }
+                    ]
+                },
+                {
+                    title: "Identity",
+                    path: "documentation/mobile-core/identity",
+                    pages: [
+                        {
+                            title: "API reference",
+                            path: "documentation/mobile-core/identity/api-reference"
+                        },
+                        {
+                            title: "Event reference",
+                            path: "documentation/mobile-core/identity/event-reference"
+                        },
+                        {
+                            title: "Migration",
+                            path: "documentation/mobile-core/identity/migration"
+                        }
+                    ]
+                },
+                {
+                    title: "Lifecycle",
+                    path: "documentation/mobile-core/lifecycle",
+                    pages: [ 
+                        {
+                            title: "Migration",
+                            path: "documentation/mobile-core/lifecycle/migration"
+                        },
+                        {
+                            title: "Lifecycle extension in Android",
+                            path: "documentation/mobile-core/lifecycle/android"
+                        },
+                        {
+                            title: "Lifecycle extension in iOS",
+                            path: "documentation/mobile-core/lifecycle/ios"
+                        },
+                        {
+                            title: "API reference",
+                            path: "documentation/mobile-core/lifecycle/api-reference"
+                        },
+                        {
+                            title: "Event reference",
+                            path: "documentation/mobile-core/lifecycle/event-reference"
+                        },
+                        {
+                            title: "Metrics",
+                            path: "documentation/mobile-core/lifecycle/metrics"
+                        },
+                        {
+                            title: "Configuration keys",
+                            path: "documentation/mobile-core/lifecycle/configuration-keys"
+                        }
+                    ]
+                },
+                {
+                    title: "Rules Engine",
+                    path: "documentation/mobile-core/rules-engine",
+                    pages: [
+                        {
+                            title: "Technical details",
+                            path: "documentation/mobile-core/rules-engine/technical-details"
+                        },
+                        {
+                            title: "Consequence details",
+                            path: "documentation/mobile-core/rules-engine/consequence-details"
+                        }
+                    ]
+                },
+                {
                     title: "Signal",
                     path: "documentation/mobile-core/signal",
                     pages: [
@@ -353,40 +401,6 @@ module.exports = {
                         }
                     ]
                 },
-                {
-                  title: "Lifecycle",
-                  path: "documentation/mobile-core/lifecycle",
-                  pages: [ 
-                      {
-                          title: "Migration",
-                          path: "documentation/mobile-core/lifecycle/migration"
-                      },
-                      {
-                          title: "Lifecycle extension in Android",
-                          path: "documentation/mobile-core/lifecycle/android"
-                      },
-                      {
-                          title: "Lifecycle extension in iOS",
-                          path: "documentation/mobile-core/lifecycle/ios"
-                      },
-                      {
-                          title: "API reference",
-                          path: "documentation/mobile-core/lifecycle/api-reference"
-                      },
-                      {
-                          title: "Event reference",
-                          path: "documentation/mobile-core/lifecycle/event-reference"
-                      },
-                      {
-                          title: "Metrics",
-                          path: "documentation/mobile-core/lifecycle/metrics"
-                      },
-                      {
-                          title: "Configuration keys",
-                          path: "documentation/mobile-core/lifecycle/configuration-keys"
-                      }
-                  ]
-              },
               {
                   title: "API reference",
                   path: "documentation/mobile-core/api-reference"
