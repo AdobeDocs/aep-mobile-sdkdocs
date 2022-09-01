@@ -519,25 +519,29 @@ Unity
 
 <TrackStateUnity/>
 
+Xamarin
+
+<TrackStateXamarin/>
+
 ## Public classes
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
 Android
 
-<PublicClassAndroid/>
+<PublicClassesAndroid/>
 
 iOS (AEP 3.x)
 
-<PublicClassIosAEP/>
+<PublicClassesIosAEP/>
 
 iOS (ACP 2.x)
 
-<PublicClassIosACP/>
+<PublicClassesIosACP/>
 
 Xamarin
 
-<PublicClassXamarin/>
+<PublicClassesXamarin/>
 
 ## Additional information
 

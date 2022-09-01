@@ -250,6 +250,24 @@ module.exports = {
                   ]
               },
               {
+                  title: "Identity",
+                  path: "documentation/mobile-core/identity",
+                  pages: [
+                      {
+                          title: "API reference",
+                          path: "documentation/mobile-core/identity/api-reference"
+                      },
+                      {
+                          title: "Event reference",
+                          path: "documentation/mobile-core/identity/event-reference"
+                      },
+                      {
+                          title: "Migration",
+                          path: "documentation/mobile-core/identity/migration"
+                      }
+                  ]
+              },
+              {
                     title: "Signal",
                     path: "documentation/mobile-core/signal",
                     pages: [
