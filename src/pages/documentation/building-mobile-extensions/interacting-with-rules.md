@@ -83,13 +83,13 @@ You should provide support for the events, actions, and conditions that you publ
 
 ### Publishing a shared state `condition` at runtime
 
-A shared state that was published by your extension can be used as a `condition` when configuring a rule in Experience Platform Launch. To learn how you can publish a shared state, see the [updating the shared state document](./shared-states-and-events#updating-the-shared-state.md).
+A shared state that was published by your extension can be used as a `condition` when configuring tag rules. To learn how you can publish a shared state, see the [updating the shared state document](./shared-states-and-events#updating-the-shared-state.md).
 
 ### Dispatching an event `condition` at runtime
 
-An event that was dispatched by your extension can be used as a `condition` when configuring a rule in Experience Platform Launch. To learn how you can dispatch an event, see the [dispatching events from your extension document](./dispatching-events.md).
+An event that was dispatched by your extension can be used as a `condition` when configuring tag rules. To learn how you can dispatch an event, see the [dispatching events from your extension document](./dispatching-events.md).
 
 ### Handling an event `action` at runtime
 
-For an event that your extension registered, a listener for can be used as an `action` when configuring a rule in Experience Platform Launch. To learn how you can register a listener for your events, see the [listening for events document](./listening-for-events.md).
+For an event that your extension registered, a listener for can be used as an `action` when configuring tag rules. To learn how you can register a listener for your events, see the [listening for events document](./listening-for-events.md).
 

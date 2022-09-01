@@ -4,7 +4,7 @@ description: This information can help you understand how to build your own exte
 
 # Building mobile extensions
 
-To support customer-specific features, and allow for the greatest flexibility, Adobe Experience Platform Mobile SDK provides an interface that allows customers to integrate with the Mobile Core at a much lower level. This interface allows customers to define extensions, which are similar in capabilities to the extensions that Launch has written for Adobe's internal services. The Mobile Core allows all extensions to access the events and data being sent through the Experience Platform SDK.
+To support customer-specific features, and allow for the greatest flexibility, Adobe Experience Platform Mobile SDK provides an interface that allows customers to integrate with the Mobile Core at a much lower level. This interface allows customers to define extensions, which are similar in capabilities to the [tag extensions](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/overview.html). The Mobile Core allows all extensions to access the events and data being sent through the Experience Platform SDK.
 
 Extensions allow customers to extend the Experience Platform SDKs with their own code. This includes listening for and dispatching events, reading the shared state of any registered extension, and sharing the state of the current extension. The application can use the extension to monitor for information that Adobe does not expose by default. It can also use the extension to modify Experience Platform SDK internal operations. For example, the application can use the extension to add additional data to messages that are sent or by sending data to other systems.
 

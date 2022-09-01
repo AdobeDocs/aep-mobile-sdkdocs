@@ -10,7 +10,7 @@ To learn more about the skeleton extension, please look at the code within the [
 
 ## Weather extension
 
-The Weather extension example for both iOS and Android shows a complete client-side and Experience Platform Launch UI extension that uses an API to fetch weather information using the [OpenWeatherMap online service](https://openweathermap.org/). The weather conditions are published on to the Mobile Core event hub and are saved as a shared state. The Experience Platform Launch UI extension shows how an extension can be used to not only pass configuration values to the client-side extension, but to integrate with the Experience Platform Launch workflow rules engine.
+The Weather extension example for both iOS and Android shows a complete tag extension that uses an API to fetch weather information using the [OpenWeatherMap online service](https://openweathermap.org/). The weather conditions are published on to the Mobile Core event hub and are saved as a shared state. The tag extension can be used not only to pass configuration values to the client, but also to integrate with the tag rules engine.
 
 ![](./assets/mobile-extension-samples/weather-extension.png)
 
