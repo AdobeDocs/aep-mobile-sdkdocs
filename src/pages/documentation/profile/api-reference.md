@@ -8,7 +8,6 @@ import RegisterExtensionAndroid from './tabs/api-reference/register-extension/an
 import RegisterExtensionIosAEP from './tabs/api-reference/register-extension/ios-aep.md'
 import RegisterExtensionIosACP from './tabs/api-reference/register-extension/ios-acp.md'
 import RemoveUserAttributeAndroid from './tabs/api-reference/remove-user-attribute/android.md'
-import RemoveUserAttributeIosAEP from './tabs/api-reference/remove-user-attribute/ios-aep.md'
 import RemoveUserAttributeIosACP from './tabs/api-reference/remove-user-attribute/ios-acp.md'
 import RemoveUserAttributesAndroid from './tabs/api-reference/remove-user-attributes/android.md'
 import RemoveUserAttributesIosAEP from './tabs/api-reference/remove-user-attributes/ios-aep.md'
@@ -17,7 +16,6 @@ import UpdateUserAttributeAndroid from './tabs/api-reference/update-user-attribu
 import UpdateUserAttributeIosAEP from './tabs/api-reference/update-user-attribute/ios-aep.md'
 import UpdateUserAttributeIosACP from './tabs/api-reference/update-user-attribute/ios-acp.md'
 import UpdateUserAttributesAndroid from './tabs/api-reference/update-user-attributes/android.md'
-import UpdateUserAttributesIosAEP from './tabs/api-reference/update-user-attributes/ios-aep.md'
 import UpdateUserAttributesIosACP from './tabs/api-reference/update-user-attributes/ios-acp.md'
 
 # API reference
@@ -80,15 +78,11 @@ iOS (ACP 2.x)
 
 Removes the user profile attribute for the given key.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <RemoveUserAttributeAndroid/>
-
-iOS (AEP 3.x)
-
-<RemoveUserAttributeIosAEP/>
 
 iOS (ACP 2.x)
 
@@ -122,15 +116,11 @@ Remember the following information:
 * If the attribute exists, the value will be updated.
 * A null attribute value removes the attribute.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <UpdateUserAttributeAndroid/>
-
-iOS (AEP 3.x)
-
-<UpdateUserAttributeIosAEP/>
 
 iOS (ACP 2.x)
 
