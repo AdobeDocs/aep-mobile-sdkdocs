@@ -1,0 +1,3 @@
+```objc
+[ACPCore lifecyclePause];
+```
