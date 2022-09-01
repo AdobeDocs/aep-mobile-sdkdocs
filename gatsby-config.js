@@ -29,9 +29,43 @@ module.exports = {
       }
     ],
     subPages: [
-      {
+        {
             title: "Home",
             path: "/documentation"
+        },
+        {
+            title: "Version 4 Mobile SDKs end-of-support FAQ",
+            path: "/documentation/v4-end-of-life-faq"
+        },
+        {
+            title: "Version 4 API changelog",
+            path: "/documentation/api-changelog"
+        },
+        {
+            title: "Adobe Experience Cloud & Apple's IDFA, Privacy announcement",
+            path: "/documentation/privacy-announcement"
+        },
+        {
+            title: "Adobe Experience Platform Assurance",
+            path: "/documentation/platform-assurance",
+            pages: [
+                {
+                    title: "Migration",
+                    path: "/documentation/platform-assurance/migration"
+                },
+                {
+                    title: "API reference",
+                    path: "/documentation/platform-assurance/api-reference"
+                },
+                {
+                    title: "Resolving common issues",
+                    path: "/documentation/platform-assurance/error-logs"
+                },
+                {
+                    title: "Release notes",
+                    path: "/documentation/platform-assurance/release-notes"
+                }
+            ]
         },
       {
         title: 'Adobe Analytics',
@@ -238,6 +272,76 @@ module.exports = {
                   ]
               },
               {
+                  title: "Identity",
+                  path: "documentation/mobile-core/identity",
+                  pages: [
+                      {
+                          title: "API reference",
+                          path: "documentation/mobile-core/identity/api-reference"
+                      },
+                      {
+                          title: "Event reference",
+                          path: "documentation/mobile-core/identity/event-reference"
+                      },
+                      {
+                          title: "Migration",
+                          path: "documentation/mobile-core/identity/migration"
+                      }
+                  ]
+              },
+              {
+                    title: "Signal",
+                    path: "documentation/mobile-core/signal",
+                    pages: [
+                        {
+                            title: "Migration",
+                            path: "documentation/mobile-core/signal/migration"
+                        },
+                        {
+                            title: "API reference",
+                            path: "documentation/mobile-core/signal/api-reference"
+                        },
+                        {
+                            title: "Event reference",
+                            path: "documentation/mobile-core/signal/event-reference"
+                        }
+                    ]
+                },
+                {
+                  title: "Lifecycle",
+                  path: "documentation/mobile-core/lifecycle",
+                  pages: [ 
+                      {
+                          title: "Migration",
+                          path: "documentation/mobile-core/lifecycle/migration"
+                      },
+                      {
+                          title: "Lifecycle extension in Android",
+                          path: "documentation/mobile-core/lifecycle/android"
+                      },
+                      {
+                          title: "Lifecycle extension in iOS",
+                          path: "documentation/mobile-core/lifecycle/ios"
+                      },
+                      {
+                          title: "API reference",
+                          path: "documentation/mobile-core/lifecycle/api-reference"
+                      },
+                      {
+                          title: "Event reference",
+                          path: "documentation/mobile-core/lifecycle/event-reference"
+                      },
+                      {
+                          title: "Metrics",
+                          path: "documentation/mobile-core/lifecycle/metrics"
+                      },
+                      {
+                          title: "Configuration keys",
+                          path: "documentation/mobile-core/lifecycle/configuration-keys"
+                      }
+                  ]
+              },
+              {
                   title: "API reference",
                   path: "documentation/mobile-core/api-reference"
               },
@@ -254,6 +358,83 @@ module.exports = {
                   path: "documentation/mobile-core/release-notes"
               }
           ]
+      },
+      {
+        title: "Resources",
+        header: true,
+        path: "/documentation/resources",
+        pages: [
+            {
+                title: "Upgrade to the Experience Platform SDKs",
+                path: "documentation/upgrading-to-experience-platform-sdks",
+                pages: [
+                    {
+                        title: "SDK comparison",
+                        path: "documentation/upgrading-to-experience-platform-sdks/comparison"
+                    },
+                    {
+                        title: "Manual Lifecycle implementation",
+                        path: "documentation/upgrading-to-experience-platform-sdks/manual-lifecycle-implementation"
+                    },
+                    {
+                        title: "API changelog",
+                        path: "documentation/upgrading-to-experience-platform-sdks/api-changelog.md"
+                    },
+                    {
+                        title: "Current SDK versions",
+                        path: "documentation/upgrading-to-experience-platform-sdks/current-sdk-versions.md"
+                    },
+                    {
+                        title: "Migration",
+                        path: "documentation/upgrading-to-experience-platform-sdks/analytics-comparison.md"
+                    }
+                ]
+            },
+            {
+                title: "Troubleshooting guides",
+                path: "documentation/troubleshooting-guides",
+                pages: [
+                    {
+                        title: "Push messaging",
+                        path: "documentation/troubleshooting-guides/push-messaging"
+                    },
+                    {
+                        title: "Push notifications",
+                        path: "documentation/troubleshooting-guides/push-notifications"
+                    }
+                ]
+            },
+            {
+                title: "Frequently asked questions",
+                path: "documentation/faq"
+            },
+            {
+                title: "Migrate to Swift",
+                path: "documentation/migrate-to-swift"
+            },
+            {
+                title: "Privacy and GDPR",
+                path: "documentation/privacy-and-gdpr"
+            },
+            {
+                title: "WeChat Mini Programs",
+                path: "documentation/platform-minis",
+                pages: [
+                    {
+                        title: "Implementation",
+                        path: "/documentation/platform-minis/implementation"
+                    },
+                    {
+                        title: "Implementation - 中文–简体",
+                        path: "/documentation/platform-minis/implementation-zh"
+                    },
+                    {
+                        title: "Frequently asked questions",
+                        path: "/documentation/platform-minis/faq"
+                    }
+                ]
+            }
+        ]
       }
     ]
   },
