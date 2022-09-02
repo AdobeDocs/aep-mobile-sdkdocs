@@ -519,27 +519,31 @@ Unity
 
 <TrackStateUnity/>
 
+Xamarin
+
+<TrackStateXamarin/>
+
 ## Public classes
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
 Android
 
-<PublicClassAndroid/>
+<PublicClassesAndroid/>
 
 iOS (AEP 3.x)
 
-<PublicClassIosAEP/>
+<PublicClassesIosAEP/>
 
 iOS (ACP 2.x)
 
-<PublicClassIosACP/>
+<PublicClassesIosACP/>
 
 Xamarin
 
-<PublicClassXamarin/>
+<PublicClassesXamarin/>
 
 ## Additional information
 
-To learn what context data is, please read the [documentation on context data](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html?lang=en).
+To learn what context data is, please read the [documentation on context data](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html).
 
