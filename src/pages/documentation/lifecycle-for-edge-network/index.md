@@ -1,6 +1,6 @@
 # Lifecycle for Edge Network
 
-The Adobe Experience Platform Mobile SDK Lifecycle extension enables application lifecycle data collection from your mobile app when using the Adobe Experience Platform Mobile SDK and the [Edge Network extension](../experience-platform-extension/). Use the following steps to set up an application to forward Lifecycle extension metrics to the Adobe Experience Platform.
+The Adobe Experience Platform Mobile SDK Lifecycle extension enables application lifecycle data collection from your mobile app when using the Adobe Experience Platform Mobile SDK and the [Edge Network extension](../edge-network-extensions/index.md). Use the following steps to set up an application to forward Lifecycle extension metrics to the Adobe Experience Platform.
 
 ## Add AEP Mobile Lifecycle Details field group to your XDM Schema in Adobe Experience Platform
 
@@ -30,7 +30,7 @@ The configuration setting "Session Timeout" in the Mobile Core extension configu
 4. Select **Save**.
 5. Follow the publishing process to update SDK configuration.
 
-In addition, use the following steps to [Configure the Edge Network extension](../experience-platform-extension#configure-edge-network-extension).
+In addition, use the following steps to [Configure the Edge Network extension](../edge-network-extensions/index.md#configure-edge-network-extension).
 
 ![Mobile Core extension configuration](./assets/index/configuration.png)
 
