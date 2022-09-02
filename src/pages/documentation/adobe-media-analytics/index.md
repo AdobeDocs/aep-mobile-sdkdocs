@@ -9,7 +9,7 @@ import RegisterMediaReactNative from './tabs/index/register-media/react-native.m
 
 <InlineAlert variant="warning" slots="text"/>
 
-This extension requires the [Adobe Analytics for Media](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=en) add-on SKU. To learn more, contact your Adobe Customer Success Manager.
+This extension requires the [Adobe Analytics for Media](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html) add-on SKU. To learn more, contact your Adobe Customer Success Manager.
 
 ## Configure Media Analytics extension in the Data Collection UI
 
