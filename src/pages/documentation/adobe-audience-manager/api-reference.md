@@ -110,7 +110,7 @@ This API helps you reset the Audience Manager UUID and purges the current visito
 
 <InlineAlert variant="info" slots="text"/>
 
-For more information about the UUID, the DPID, the DPUUID and other Audience Manager identifiers, see [Index of IDs in Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en).
+For more information about the UUID, the DPID, the DPUUID and other Audience Manager identifiers, see [Index of IDs in Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
@@ -138,7 +138,7 @@ If you are using the Experience Cloud ID (ECID) Service (formerly MCID), the ECI
 
 <InlineAlert variant="info" slots="text"/>
 
-For more information about the UUID and other Audience Manager identifiers, see the [index of IDs in Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en).
+For more information about the UUID and other Audience Manager identifiers, see the [index of IDs in Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
