@@ -174,6 +174,28 @@ module.exports = {
           ]
       },
       {
+        title: "Adobe Experience Platform Edge Network",
+        path: "/documentation/edge-network-extensions",
+        pages: [
+            {
+                title: "API reference",
+                path: "/documentation/edge-network-extensions/api-reference"
+            },
+            {
+                title: "XDM Experience Events",
+                path: "/documentation/edge-network-extensions/xdm-experience-events"
+            },
+            {
+                title: "Validation",
+                path: "/documentation/edge-network-extensions/validation"
+            },
+            {
+                title: "Release Notes",
+                path: "/documentation/edge-network-extensions/release-notes"
+            }
+        ]
+    },
+      {
           title: "Adobe Journey Optimizer",
           path: "/documentation/adobe-journey-optimizer",
           pages: [
@@ -231,7 +253,6 @@ module.exports = {
               }
           ]
       },
-
         {
             title: "Building mobile extensions",
             path: "/documentation/building-mobile-extensions",
@@ -316,7 +337,7 @@ module.exports = {
                     path: "/documentation/getting-started/validate"
                 }
             ]
-            },
+        },
         {
           title: "Profile",
           path: "/documentation/profile",
@@ -459,7 +480,8 @@ module.exports = {
               }
           ]
       },
-      {
+
+    {
         title: "Resources",
         header: true,
         path: "/documentation/resources",
