@@ -8,7 +8,7 @@ To create a datastream, your organization must be provisioned for this feature i
 
 <InlineAlert variant="info" slots="text"/>
 
-The Datastreams tool is available to customers on the _allow list_ regardless whether they use the Data Collection UI for web tag management or to manage mobile app configuration. <br/><br/>Users will require **Develop** permissions for the Data Collection UI. See the [user permissions](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html) article for more details.
+The Datastreams tool is available to customers on the _allow list_ regardless whether they use the Data Collection UI for web tag management or to manage mobile app configuration. <br/><br/>Users require **Develop** permissions for the Data Collection UI. See the [user permissions](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html) article for more details.
 
 ## What is a datastream?
 
@@ -24,9 +24,9 @@ The following steps illustrate how to create a sample datastream for a mobile im
 
 ![Creating a datastream](./assets/configure-datastreams/create-datastream.png)
 
-1. In the next screen, select **Add Service**.
+5. In the next screen, select **Add Service**.
 
-2. From the Service drop-down, select **Adobe Experience Platform** and:
+6. From the Service drop-down, select **Adobe Experience Platform** and:
 
    * Make sure the service toggle is **Enabled**.
 

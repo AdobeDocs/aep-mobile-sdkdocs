@@ -4,7 +4,7 @@
 
 - Create a new company. For more information, see the document on [company setup](https://experienceleague.adobe.com/docs/experience-platform/tags/extension-dev/submit/setup.html).
 - (Optional) Create a new listing in the Exchange Partner Portal. For more information, see the document on [creating an exchange listing](https://experienceleague.adobe.com/docs/experience-platform/tags/extension-dev/submit/create-listing.html).
-- Create a new Adobe I/O integration. For more information, see the tutorial on [creating an Adobe I/O integration](https://experienceleague.adobe.com/docs/experience-platform/tags/extension-dev/submit/upload-and-test.html?lang=en#integration).
+- Create a new Adobe I/O integration. For more information, see the tutorial on [creating an Adobe I/O integration](https://experienceleague.adobe.com/docs/experience-platform/tags/extension-dev/submit/upload-and-test.html#integration).
 
 ## Build a tag extension interface
 
@@ -36,5 +36,5 @@ To build the configuration interface for your tag extension, please complete the
 
 <InlineAlert variant="info" slots="text"/>
 
-Adobe I/O integration keys are needed before you can build the interface. For more information, see [Create an Adobe I/O Integration](https://experienceleague.adobe.com/docs/experience-platform/tags/extension-dev/submit/upload-and-test.html?lang=en#integration).
+Adobe I/O integration keys are needed before you can build the interface. For more information, see [Create an Adobe I/O Integration](https://experienceleague.adobe.com/docs/experience-platform/tags/extension-dev/submit/upload-and-test.html#integration).
 

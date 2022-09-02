@@ -10,7 +10,7 @@ Before you can set up your mobile property, complete the following prerequisites
 
 The Data Collection UI is fully integrated with your Adobe ID. User permissions are managed through the Admin Console with other Adobe products and solutions from the Creative Cloud, Document Cloud, and Experience Cloud.
 
-For detailed instructions on how to create groups and add users in the Data Collection UI, see [user permissions](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html?lang=en).
+For detailed instructions on how to create groups and add users in the Data Collection UI, see [user permissions](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html).
 
 ### Log in to the Data Collection UI
 
@@ -38,7 +38,7 @@ The default privacy status is set to _opted in_ and might impact data collection
 
 An extension is an integration built by Adobe or an Adobe partner that adds new options you can use in your apps. By default, all new mobile properties come with the Mobile Core and Profile extensions installed.
 
-The Mobile Core extension provides a robust default set of functionality, including lifecycle events and conditions. The Profile extension allows storing of data into a client-side profile. Additional functionality for Analytics, Target, and so on will come from extensions that you install from the catalog. For more information, see the document on [adding a new extension](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/overview.html?lang=en#add-a-new-extension).
+The Mobile Core extension provides a robust default set of functionality, including lifecycle events and conditions. The Profile extension allows storing of data into a client-side profile. Additional functionality for Analytics, Target, and so on will come from extensions that you install from the catalog. For more information, see the document on [adding a new extension](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/overview.html#add-a-new-extension).
 
 ## Set up your extensions
 
@@ -86,7 +86,7 @@ The library of changes are then published to the Development environment and the
 
 <InlineAlert variant="info" slots="text"/>
 
-Testing can be done using the configuration in the Development environment. The library can later be deployed to the **Staging** and **Production** environments by using the rest of the publishing workflow. For more information, see the documentation on [publishing in the Data Collection UI](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/overview.html?lang=en).
+Testing can be done using the configuration in the Development environment. The library can later be deployed to the **Staging** and **Production** environments by using the rest of the publishing workflow. For more information, see the documentation on [publishing in the Data Collection UI](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/overview.html).
 
 Now that you published your configuration, get the Adobe Experience Platform SDK for your application. For more information, see tutorial on [getting the Experience Platform SDKs](./get-the-sdk.md).
 
