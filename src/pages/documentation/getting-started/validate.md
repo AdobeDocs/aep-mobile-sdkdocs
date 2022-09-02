@@ -4,15 +4,15 @@ As you begin to add solution APIs to your mobile implementation, you are going t
 
 Assurance is available across all [SDK platforms and frameworks](https://aep-sdks.gitbook.io/docs/resources/upgrading-to-aep/current-sdk-versions). Installation and setup instructions are available [here](../beta/project-griffon/#quick-setup). FIX LINKS
 
-Once you have Griffon integrated, you can create a [new session](https://aep-sdks.gitbook.io/docs/beta/project-griffon/using-project-griffon#creating-sessions) by either scanning a QR code or by following a unique deep link URL. FIX LINK
+Once you have Assurance integrated, you can create a [new session](https://aep-sdks.gitbook.io/docs/beta/project-griffon/using-project-griffon#creating-sessions) by either scanning a QR code or by following a unique deep link URL. FIX LINK
 
-The main interface for Griffon will show a running event list of all SDK events, including a configuration response event that will provide a readout of all configuration values obtained from the Data Collection UI.
+The main interface for Assurance will show a running event list of all SDK events, including a configuration response event that will provide a readout of all configuration values obtained from the Data Collection UI.
 
 ![Assurance Configuration Response](./assets/validate/configuration-response.png)
 
 ## Adobe Analytics view
 
-The [Adobe Analytics](../beta/project-griffon/using-project-griffon/adobe-analytics-and-project-griffon.md#using-project-griffon-for-adobe-analytics) event list offers a focused view of analytics events triggered in the application. You can sort through all of the track action and track state calls. In the [analytics view in Griffon](../beta/project-griffon/using-project-griffon/adobe-analytics-and-project-griffon.md), you can see both the raw hit request sent to Analytics and the post-processed details. FIX LINKS
+The [Adobe Analytics](../beta/project-griffon/using-project-griffon/adobe-analytics-and-project-griffon.md#using-project-griffon-for-adobe-analytics) event list offers a focused view of analytics events triggered in the application. You can sort through all of the track action and track state calls. In the [analytics view in Adobe Experience Platform Assurance](../beta/project-griffon/using-project-griffon/adobe-analytics-and-project-griffon.md), you can see both the raw hit request sent to Analytics and the post-processed details. FIX LINKS
 
 ![Assurance analytics view](./assets/validate/assurance-analytics.png)
 
@@ -20,7 +20,7 @@ The [Adobe Analytics](../beta/project-griffon/using-project-griffon/adobe-analyt
 
 Assurance simplifies testing point of interest entries and exits. The Places event list provides a focused view showing all events related to Places Service, including user authorization level granted and requests for nearby points of interest (POIs).
 
-While a device is connected to an active Griffon session, the map view will show a timeline of POI entries and exits. If you want to test actions or experiences triggered by geofence entries and exits, the map view will allow you to spoof or simulate your location by clicking on any area within the map.
+While a device is connected to an active Assurance session, the map view will show a timeline of POI entries and exits. If you want to test actions or experiences triggered by geofence entries and exits, the map view will allow you to spoof or simulate your location by clicking on any area within the map.
 
 To learn more about the Places Service, please read the [Places Service overview](https://experienceleague.adobe.com/docs/places/using/home.html)
 
