@@ -339,6 +339,24 @@ module.exports = {
             ]
         },
         {
+            title: "Lifecycle for Edge Network",
+            path: "/documentation/lifecycle-for-edge-network",
+            pages: [
+                {
+                    title: "API reference",
+                    path: "documentation/lifecycle-for-edge-network/api-reference"
+                },
+                {
+                    title: "Event reference",
+                    path: "documentation/lifecycle-for-edge-network/event-reference"
+                },
+                {
+                    title: "Metrics",
+                    path: "documentation/lifecycle-for-edge-network/metrics"
+                }
+            ]
+        },
+        {
           title: "Profile",
           path: "/documentation/profile",
           pages: [
@@ -480,7 +498,6 @@ module.exports = {
               }
           ]
       },
-
     {
         title: "Resources",
         header: true,
