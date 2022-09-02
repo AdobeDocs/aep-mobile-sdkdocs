@@ -34,6 +34,28 @@ module.exports = {
             path: "/documentation"
         },
         {
+            title: "Release notes",
+            path: "/documentation/release-notes",
+            pages: [
+                {
+                    title: "2021",
+                    path: "/documentation/release-notes/2021"
+                },
+                {
+                    title: "2020",
+                    path: "/documentation/release-notes/2020"
+                },
+                {
+                    title: "2019",
+                    path: "/documentation/release-notes/2019"
+                },
+                {
+                    title: "2018",
+                    path: "/documentation/release-notes/2018"
+                }
+            ]
+        },
+        {
             title: "Version 4 Mobile SDKs end-of-support FAQ",
             path: "/documentation/v4-end-of-life-faq"
         },
