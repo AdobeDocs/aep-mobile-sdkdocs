@@ -25,7 +25,8 @@ module.exports = {
             title: 'Documentation',
             path: '/documentation',
         }],
-        subPages: [{
+        subPages: [
+            {
                 title: "Home",
                 path: "/documentation"
             },
