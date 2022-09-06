@@ -13,7 +13,6 @@ import RemoveUserAttributesAndroid from './tabs/api-reference/remove-user-attrib
 import RemoveUserAttributesIosAEP from './tabs/api-reference/remove-user-attributes/ios-aep.md'
 import RemoveUserAttributesIosACP from './tabs/api-reference/remove-user-attributes/ios-acp.md'
 import UpdateUserAttributeAndroid from './tabs/api-reference/update-user-attribute/android.md'
-import UpdateUserAttributeIosAEP from './tabs/api-reference/update-user-attribute/ios-aep.md'
 import UpdateUserAttributeIosACP from './tabs/api-reference/update-user-attribute/ios-acp.md'
 import UpdateUserAttributesAndroid from './tabs/api-reference/update-user-attributes/android.md'
 import UpdateUserAttributesIosACP from './tabs/api-reference/update-user-attributes/ios-acp.md'
