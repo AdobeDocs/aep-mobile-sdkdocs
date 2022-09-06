@@ -321,12 +321,7 @@ module.exports = {
             {
                 title: "Getting started",
                 path: "/documentation/getting-started",
-                header: true,
                 pages: [
-                    {
-                        title: "Overview",
-                        path: "/documentation/getting-started"
-                    },
                     {
                         title: "Set up schemas and datasets",
                         path: "/documentation/getting-started/set-up-schemas-and-datasets"
@@ -519,7 +514,6 @@ module.exports = {
             },
             {
                 title: "Resources",
-                header: true,
                 path: "/documentation/resources",
                 pages: [
                     {
@@ -575,7 +569,7 @@ module.exports = {
                         path: "documentation/privacy-and-gdpr"
                     },
                     {
-                        title: "WeChat Mini Programs",
+                        title: "WeChat mini programs",
                         path: "documentation/platform-minis",
                         pages: [
                             {
