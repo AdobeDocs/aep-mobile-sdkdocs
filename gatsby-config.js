@@ -463,6 +463,24 @@ module.exports = {
                         ]
                     },
                     {
+                        title: "Platform services",
+                        path: "documentation/mobile-core/platform-services",
+                        pages: [
+                            {
+                                title: "Data queue service",
+                                path: "documentation/mobile-core/platform-services/data-queue-service"
+                            },
+                            {
+                                title: "Network service",
+                                path: "documentation/mobile-core/platform-services/network-service"
+                            },
+                            {
+                                title: "System device info service",
+                                path: "documentation/mobile-core/platform-services/system-device-info-service"
+                            }
+                        ]
+                    },
+                    {
                         title: "Rules Engine",
                         path: "documentation/mobile-core/rules-engine",
                         pages: [
