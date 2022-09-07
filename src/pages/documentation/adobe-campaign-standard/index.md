@@ -179,9 +179,9 @@ The code samples below are provided as examples on how to correctly invoke the `
 
 Deleting your property in the Experience Platform Data Connection UI might cause disruption to your recurring push and in-app messaging activities.
 
-In the Data Collection UI, if you delete your mobile property, review your mobile property status in the Campaign Standard extension and ensure that the property displays an updated **Deleted in Launch** status. For more information about deleting a property, please read the [delete a property](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=en#delete-a-property) section within the Data Collection UI documentation.
+In the Data Collection UI, if you delete your mobile property, review your mobile property status in the Campaign Standard extension and ensure that the property displays an updated **Deleted in Launch** status. For more information about deleting a property, please read the [delete a property](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html#delete-a-property) section within the Data Collection UI documentation.
 
-To remove the corresponding mobile app in Campaign Standard, select **Remove from ACS**. For more information, see the section on [deleting your tags-enabled mobile application](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-channels/configuring-a-mobile-application.html?lang=en#delete-app).
+To remove the corresponding mobile app in Campaign Standard, select **Remove from ACS**. For more information, see the section on [deleting your tags-enabled mobile application](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-channels/configuring-a-mobile-application.html#delete-app).
 
 <InlineAlert variant="warning" slots="text"/>
 

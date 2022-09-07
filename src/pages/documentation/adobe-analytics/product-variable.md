@@ -13,7 +13,7 @@ import SetVariableFlutter from './tabs/products-variable/set-variable/flutter.md
 
 Since the products variable cannot be set by processing rules, you need to set serialized events directly on the hits that are sent to Analytics.
 
-To set the products variable, set a context data key to `&&products`, and set the value to the products or merchandising variable. For more information, see the [implementing a merchandising variable tutorial](https://experienceleague.adobe.com/docs/analytics/components/dimensions/evar-merchandising.html?lang=en).
+To set the products variable, set a context data key to `&&products`, and set the value to the products or merchandising variable. For more information, see the [implementing a merchandising variable tutorial](https://experienceleague.adobe.com/docs/analytics/components/dimensions/evar-merchandising.html).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
