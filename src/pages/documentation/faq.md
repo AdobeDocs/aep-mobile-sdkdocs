@@ -1,3 +1,5 @@
+import FAQ from './tabs/faq.md'
+
 # Frequently asked questions
 
 ## What's new in the Adobe Experience Platform Mobile SDK?
@@ -8,7 +10,7 @@ There are several new features and benefits of using the Experience Platform Mob
 | :--- | :--- | :--- |
 | Server-side, dynamic configuration | ✔️ |  |
 | Programmatic configuration | ✔️ | ✔️ |
-| Configuration UI | [Launch](https://experience.adobe.com/#/data-collection/) | [Mobile Services](https://mobilemarketing.adobe.com) |
+| Configuration UI | [Data Collection UI](https://experience.adobe.com/#/data-collection/) | [Mobile Services](https://mobilemarketing.adobe.com) |
 | Partner SDK extensions | ✔️ |  |
 | Lifecycle metrics | ✔️ | ✔️ |
 | GET/POST postbacks | ✔️ | ✔️ |
@@ -26,67 +28,63 @@ There are several new features and benefits of using the Experience Platform Mob
 | Places Service | ✔️ |  |
 | Adobe Experience Platform Assurance | ✔️ |  |
 
-## Do I need additional permissions to create a mobile property in Experience Platform Launch?
+## Do I need additional permissions to create a mobile property in the Data Collection UI?
 
-If you need access to Experience Platform Launch, see the [user permissions document](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html?lang=en). If you create a web property, you can also create a mobile property. If you do not see the option to create a mobile property, turn off your ad blocker, and refresh the page.
+If you need access to the Data Collection UI, see the [user permissions document](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html?lang=en). If you create a web property, you can also create a mobile property. If you do not see the option to create a mobile property, turn off your ad blocker, and refresh the page.
 
 ## Should I create one property per app or multiple properties per app platform?
 
 If your apps send data to the same Adobe Analytics report suites, use the same extensions, rules, and data elements. You should group all of these mobile apps into the same property. If your apps send data to different Adobe Analytics report suites or user different extensions per app, create separate mobile properties. If you group your mobile apps into one property, you can also split them into separate properties over time.
 
-## How do I delete a mobile property in Adobe Experience Platform Launch?
+## How do I delete a mobile property in the Data Collection UI?
 
-To delete a mobile property from Adobe Experience Platform Launch, please read the [delete a property tutorial](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=en#delete-a-property).
+To delete a mobile property in the Data Collection UI, please read the [delete a property tutorial](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=en#delete-a-property).
 
-{% hint style="warning" %}
+<InlineAlert variant="warning" slots="text"/>
+
 If you delete a mobile property, you cannot undo this action!
-{% endhint %}
 
 ## General implementation and migration
 
 ### Where can I download the SDK?
 
-The Experience Platform SDK is available through [Cocoapods](https://cocoapods.org) and [Gradle](https://gradle.org/), and [Github](https://github.com/Adobe-Marketing-Cloud/acp-sdks/). For more information, please read the [get the SDK tutorial](../../getting-started/get-the-sdk.md).
+The Experience Platform SDK is available through [Cocoapods](https://cocoapods.org) and [Gradle](https://gradle.org/), and [Github](https://github.com/Adobe-Marketing-Cloud/acp-sdks/). For more information, please read the [get the SDK tutorial](./getting-started/get-the-sdk.md).
 
 ### Can I use both the 4x SDK and the new Experience Platform SDK at the same time?
 
 Implementing two the SDKs in your app is not supported.
 
-The Experience Platform SDK migrates the locally stored user contexts from the 4x SDKs. Using both SDKs will cause severe data quality issues. For more information, please read the [upgrade to the Experience Platform SDKs tutorial](../upgrading-to-aep/).
+The Experience Platform SDK migrates the locally stored user contexts from the 4x SDKs. Using both SDKs will cause severe data quality issues. For more information, please read the [upgrade to the Experience Platform SDKs tutorial](./upgrading-to-experience-platform-sdks/index.md).
 
 ### What platforms are supported?
 
-For a complete list of supported platforms, please read the [latest SDK versions document](https://aep-sdks.gitbook.io/docs/resources/upgrading-to-aep/current-sdk-versions).
+For a complete list of supported platforms, please read the [latest SDK versions document](./upgrading-to-experience-platform-sdks/current-sdk-versions.md).
 
 ### What OS and platform versions are supported?
 
-* Android versions 4.0 or later \(API levels 14 or later\)
+* Android versions 4.0 or later (API levels 14 or later)
 * iOS versions 10 or later
 * React Native versions 0.44.0 or later
 * Flutter versions 1.10.0 or later
 * Cordova 9.0.0 or later
 * Xamarin - MonoAndroid 9.0+ and Xamarin.iOS 1.0+
-* Unity 2019.3.10f1or later
+* Unity 2019.3.10f1 or later
 
 ### Where does the SDK store identities and preferences on the app?
 
-{% tabs %}
-{% tab title="Android" %}
-The SDK uses the cache and shared preferences at these locations:
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-data/data/your.app.package/cache
+Android
 
-data/data/your.app.package/shared\_prefs
-{% endtab %}
+<FAQ query="platform=android"/>
 
-{% tab title="iOS" %}
-The SDK uses `NSUserDefaults` using the prefix `adobe.*`.
-{% endtab %}
-{% endtabs %}
+iOS
+
+<FAQ query="platform=ios"/>
 
 ### What is the size of the SDK?
 
-| Extension | iOS \(KB\) | Android \(KB\) |
+| Extension | iOS (KB) | Android (KB) |
 | :--- | :--- | :--- |
 | Core | 504 | 168 |
 | Adobe Analytics | 54 | 21 |
@@ -99,12 +97,12 @@ The SDK uses `NSUserDefaults` using the prefix `adobe.*`.
 
 The size values in the table are provided as indicative estimates, with the following considerations:
 
-* Mobile Core, which includes the Lifecycle, the Identity, and the Signals extensions, is required for all other extensions. The final app size increase can be calculated by adding the Mobile Core size to each of the enabled extensions. For example, the iOS app distribution using the Target and Analytics extensions will have a total size increase of 635 KB. \(Core: 504 KB + Analytics: 54 KB + Target: 77 KB\).
-* The iOS \(SDK extension versions 2+\) estimates are based on Xcode’s App Thinning size report for one architecture. The Android \(SDK extension versions 1+\) size estimates listed refer to unsigned apps and do not account for proguarding.
+* Mobile Core, which includes the Lifecycle, the Identity, and the Signals extensions, is required for all other extensions. The final app size increase can be calculated by adding the Mobile Core size to each of the enabled extensions. For example, the iOS app distribution using the Target and Analytics extensions will have a total size increase of 635 KB. (Core: 504 KB + Analytics: 54 KB + Target: 77 KB).
+* The iOS (SDK extension versions 2+) estimates are based on Xcode’s App Thinning size report for one architecture. The Android (SDK extension versions 1+) size estimates listed refer to unsigned apps and do not account for proguarding.
 
 ### How can I use ProGuard with the Android SDK?
 
-Android developer documentation recommends that you should enable shrinking to remove unused code and resources in your release build to make your APK file as small as possible. For more information, please read the [shrink, obfuscate, and optimize your app tutorial](https://developer.android.com/studio/build/shrink-code). Shrinking is accomplished by using [ProGuard](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/index.html#manual/introduction.html). The Experience Platform Mobile SDK for Android comes with default ProGuard rules that are included in the Core `AAR` package \(see `proguard.txt`\). You should use this default package when you implement.
+Android developer documentation recommends that you should enable shrinking to remove unused code and resources in your release build to make your APK file as small as possible. For more information, please read the [shrink, obfuscate, and optimize your app tutorial](https://developer.android.com/studio/build/shrink-code). Shrinking is accomplished by using [ProGuard](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/index.html#manual/introduction.html). The Experience Platform Mobile SDK for Android comes with default ProGuard rules that are included in the Core `AAR` package (see `proguard.txt`). You should use this default package when you implement.
 
 Add the following rule to your custom ProGuard rules file, typically labeled `proguard-rules.pro`. For more information, please read the [shrink, obfuscate, and optimize your app tutorial](https://developer.android.com/studio/build/shrink-code).
 
@@ -126,11 +124,11 @@ Implementing push notification tracking and measurement with the SDK depends on 
 
 ### What are Lifecycle metrics?
 
-Lifecycle metrics are out-of-the-box metrics that are automatically collected when the SDK is first implemented in your app. For more information, please read the [documentation on Lifecycle metrics](../../foundation-extensions/mobile-core/lifecycle/).
+Lifecycle metrics are out-of-the-box metrics that are automatically collected when the SDK is first implemented in your app. For more information, please read the [documentation on Lifecycle metrics](./mobile-core/lifecycle/index.md).
 
 ## Adobe Analytics
 
-See the [frequently asked questions for Analytics](../../using-mobile-extensions/adobe-analytics/analytics-faq.md).
+See the [frequently asked questions for Analytics](./adobe-analytics/faq.md).
 
 ## Adobe Experience Platform Edge Network
 
@@ -150,15 +148,16 @@ Yes, offline tracking is supported by default when sending XDM Experience events
 You may encounter this error when using the AEP SDK for a tvOS app target, with the following message "'X' is unavailable in application extension for tvOS". This behavior is unexpected for tvOS targets and it seems to be an issue in Xcode where it apples additional checks for tvOSApplicationExtension API compatibility.
 Until this issue is resolved in the future Xcode versions, a workaround is to mark the classes or functions with the attribute: @available(tvOSApplicationExtension, unavailable) to suppress the error as in the examples below:
 
-#### Sample
-```Swift
+#### Example
+
+```swift
 @available(tvOSApplicationExtension, unavailable)
 class ErrorThrowingClass {
   ...
 }
 ```
 
-```Swift
+```swift
 @available(tvOSApplicationExtension, unavailable)
 func errorThrowingFunction() {
   ...
