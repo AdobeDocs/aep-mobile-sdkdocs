@@ -37,7 +37,7 @@ To understand the expected behavior, see the _Update and get collect consent pre
 public static void getConsents(final AdobeCallback<Map<String, Object>> callback);
 ```
 
-* _callback_ - callback invoked with the current consents of the extension. If an `AdobeCallbackWithError` is provided, an `AdobeError`, can be retruned in the eventuality of any error that occured while getting the user consents. The callback may be invoked on a different thread.
+* _callback_ - callback invoked with the current consents of the extension. If an `AdobeCallbackWithError` is provided, an `AdobeError`, can be returned in the eventuality of any error that occured while getting the user consents. The callback may be invoked on a different thread.
 
 **Example**
 
