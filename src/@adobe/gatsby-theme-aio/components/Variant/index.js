@@ -13,7 +13,7 @@
 export const Variant = (props) => {
     const queryParams = new URLSearchParams(props.query);
     const keys = queryParams.keys();
-  
+
     // Get all elements that can be toggled by this Variant
     const elements = [];
     for (const key of Object.keys(props)) {
@@ -21,8 +21,8 @@ export const Variant = (props) => {
         elements.push(props[key]);
       }
     }
-  
-    // Show all elements if the query matches a property on the Variant
+
+    // Show all elements if the query matches all properties on the Variant
     let variantMatch = 0;
     let variantLength = 0;
     for (const key of keys) {
@@ -32,9 +32,8 @@ export const Variant = (props) => {
       variantLength += 1;
     }
     if (variantMatch === variantLength) {
-      return elements;
+        return elements;
     }
-  
     return null;
   };
   
