@@ -33,9 +33,9 @@ The Adobe Analytics Mobile Marketing Add-on SKU is required to enable Mobile Ser
 Review the following Mobile Services functionality documentation for context and set up before implementation at these links:
 
 * [Getting started with Mobile Services](https://experienceleague.adobe.com/docs/mobile-services/using/get-started-ug/gs.html)
-* [Create and managing apps](https://experienceleague.adobe.com/docs/mobile-services/using/manage-apps-ug/manage-apps.html?lang=en)
-* [Acquisition and marketing links](https://experienceleague.adobe.com/docs/mobile-services/using/acquisition-main-ug/acquisition-main.html?lang=en)
-* [Push and in-app messaging](https://experienceleague.adobe.com/docs/mobile-services/using/messaging-ug/in-app-messaging.html?lang=en)
+* [Create and managing apps](https://experienceleague.adobe.com/docs/mobile-services/using/manage-apps-ug/manage-apps.html)
+* [Acquisition and marketing links](https://experienceleague.adobe.com/docs/mobile-services/using/acquisition-main-ug/acquisition-main.html)
+* [Push and in-app messaging](https://experienceleague.adobe.com/docs/mobile-services/using/messaging-ug/in-app-messaging.html)
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -43,11 +43,11 @@ Postbacks created from the Mobile Services interface are **not** supported. Plea
 
 <InlineAlert variant="warning" slots="text"/>
 
-Before you configure the Mobile Services extension, ensure that you previously created apps in [Mobile Services](https://mobilemarketing.adobe.com). To learn how to create an app in Mobile Services, see the [add a new App](https://experienceleague.adobe.com/docs/mobile-services/using/manage-apps-ug/t-new-app.html?lang=en) tutorial.
+Before you configure the Mobile Services extension, ensure that you previously created apps in [Mobile Services](https://mobilemarketing.adobe.com). To learn how to create an app in Mobile Services, see the [add a new App](https://experienceleague.adobe.com/docs/mobile-services/using/manage-apps-ug/t-new-app.html) tutorial.
 
 <InlineAlert variant="info" slots="text"/>
 
-To use location-based functionality for Mobile Services, see the documentation on the [Places Service](https://experienceleague.adobe.com/docs/places/using/home.html?lang=en).
+To use location-based functionality for Mobile Services, see the documentation on the [Places Service](https://experienceleague.adobe.com/docs/places/using/home.html).
 
 To use the Mobile Services extension, complete the following steps:
 
@@ -494,6 +494,6 @@ To prepare for your migration, please note the following information:
 
 ### Additional information
 
-* Visit [Mobile Services documentation](https://experienceleague.adobe.com/docs/mobile-services/using/home.html?lang=en)
+* Visit [Mobile Services documentation](https://experienceleague.adobe.com/docs/mobile-services/using/home.html)
 * Visit [Mobile Services](https://mobilemarketing.adobe.com)
 
