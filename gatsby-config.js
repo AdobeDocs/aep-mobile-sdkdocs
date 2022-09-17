@@ -605,6 +605,46 @@ module.exports = {
                         ]
                     }
                 ]
+            },
+            {
+                title: "User guides",
+                path: "documentation/user-guides",
+                pages: [
+                    {
+                        title: "Getting started with Platform",
+                        path: "documentation/user-guides/getting-started-with-platform/overview",
+                        pages: [
+                            {
+                                title: "Rules and XDM events",
+                                path: "documentation/user-guides/getting-started-with-platform/rules-and-xdm-events"
+                            },
+                            {
+                                title: "Sample XDM implementation",
+                                path: "documentation/user-guides/getting-started-with-platform/sample-xdm-implementation"
+                            }
+                        ]
+                    },
+                    {
+                        title: "App extension",
+                        path: "documentation/user-guides/app-extension"
+                    },
+                    {
+                        title: "Modify data",
+                        path: "documentation/user-guides/modify-data"
+                    },
+                    {
+                        title: "Rules engine integration",
+                        path: "documentation/user-guides/rules-engine-integration.md"
+                    },
+                    {
+                        title: "Tags data elements",
+                        path: "documentation/user-guides/tags-data-elements"
+                    },
+                    {
+                        title: "Track beacon",
+                        path: "documentation/user-guides/track-beacon"
+                    }
+                ]
             }
         ]
     },
