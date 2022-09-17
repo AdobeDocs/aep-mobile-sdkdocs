@@ -54,11 +54,11 @@ The Experience Platform SDK is available through [Cocoapods](https://cocoapods.o
 
 Implementing two the SDKs in your app is not supported.
 
-The Experience Platform SDK migrates the locally stored user contexts from the 4x SDKs. Using both SDKs will cause severe data quality issues. For more information, please read the [upgrade to the Experience Platform SDKs tutorial](./upgrading-to-experience-platform-sdks/index.md).
+The Experience Platform SDK migrates the locally stored user contexts from the 4x SDKs. Using both SDKs will cause severe data quality issues. For more information, please read the [upgrade to the Experience Platform SDKs tutorial](./upgrade-platform-sdks/index.md).
 
 ### What platforms are supported?
 
-For a complete list of supported platforms, please read the [latest SDK versions document](./upgrading-to-experience-platform-sdks/current-sdk-versions.md).
+For a complete list of supported platforms, please read the [latest SDK versions document](./upgrade-platform-sdks/current-sdk-versions.md).
 
 ### What OS and platform versions are supported?
 

@@ -1,11 +1,11 @@
-import analyticsconfigandroid from "../tabs/analyticsConfig-android.md"
-import analyticsconfigios from "../tabs/analyticsConfig-ios.md"
-import aepinstallandroid from "../tabs/aep-install-android.md"
-import aepinstallios from "../tabs/aep-install-ios.md"
-import apichangesandroid from "../tabs/api-changes-android.md"
-import apichangesios from "../tabs/api-changes-ios.md"
-import privacychangesandroid from "../tabs/privacy-changes-android.md"
-import privacychangesios from "../tabs/privacy-changes-ios.md"
+import analyticsconfigandroid from "./tabs/analyticsConfig-android.md"
+import analyticsconfigios from "./tabs/analyticsConfig-ios.md"
+import aepinstallandroid from "./tabs/aep-install-android.md"
+import aepinstallios from "./tabs/aep-install-ios.md"
+import apichangesandroid from "./tabs/api-changes-android.md"
+import apichangesios from "./tabs/api-changes-ios.md"
+import privacychangesandroid from "./tabs/privacy-changes-android.md"
+import privacychangesios from "./tabs/privacy-changes-ios.md"
 
 # V4 Mobile SDKs to Experience Platform Analytics migration
 
