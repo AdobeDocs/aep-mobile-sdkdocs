@@ -536,27 +536,27 @@ module.exports = {
                 pages: [
                     {
                         title: "Upgrade to the Experience Platform SDKs",
-                        path: "documentation/upgrading-to-experience-platform-sdks",
+                        path: "documentation/upgrade-platform-sdks",
                         pages: [
                             {
                                 title: "SDK comparison",
-                                path: "documentation/upgrading-to-experience-platform-sdks/comparison"
+                                path: "documentation/upgrade-platform-sdks/comparison"
                             },
                             {
                                 title: "Manual Lifecycle implementation",
-                                path: "documentation/upgrading-to-experience-platform-sdks/manual-lifecycle-implementation"
+                                path: "documentation/upgrade-platform-sdks/manual-lifecycle-implementation"
                             },
                             {
                                 title: "API changelog",
-                                path: "documentation/upgrading-to-experience-platform-sdks/api-changelog.md"
+                                path: "documentation/upgrade-platform-sdks/api-changelog.md"
                             },
                             {
                                 title: "Current SDK versions",
-                                path: "documentation/upgrading-to-experience-platform-sdks/current-sdk-versions.md"
+                                path: "documentation/upgrade-platform-sdks/current-sdk-versions.md"
                             },
                             {
                                 title: "Migration",
-                                path: "documentation/upgrading-to-experience-platform-sdks/analytics-comparison.md"
+                                path: "documentation/upgrade-platform-sdks/analytics-comparison.md"
                             }
                         ]
                     },

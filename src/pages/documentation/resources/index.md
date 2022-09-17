@@ -6,7 +6,7 @@ The following document provides a list of resources for you to better understand
 
 You can upgrade to the Experience Platform SDKs by following the instructions within this section of documentation.
 
-To learn more about upgrading your SDKs, please read the the [upgrading to Experience Platform SDKs overview](../upgrading-to-experience-platform-sdks/index.md).
+To learn more about upgrading your SDKs, please read the the [upgrading to Experience Platform SDKs overview](../upgrade-platform-sdks/index.md).
 
 ## Troubleshooting guides
 

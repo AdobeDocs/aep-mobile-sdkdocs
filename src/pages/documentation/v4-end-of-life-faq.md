@@ -35,7 +35,7 @@ Solutions such as [Places Service](https://experienceleague.adobe.com/docs/place
 
 ### Where do I learn more about upgrading/migrating to the Experience Platform Mobile SDKs?
 
-To upgrade to the Experience Platform SDKs, see [Upgrade to the Experience Platform SDKs](./upgrading-to-experience-platform-sdks/index.md).
+To upgrade to the Experience Platform SDKs, see [Upgrade to the Experience Platform SDKs](./upgrade-platform-sdks/index.md).
 
 ### Will Mobile Services functionality still work?
 

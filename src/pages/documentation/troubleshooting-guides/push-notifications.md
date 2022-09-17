@@ -1,7 +1,7 @@
-import campaignPushandroid from `../tabs/campaignPush-android.md`
-import campaignPushios from `../tabs/campaignPush-ios.md`
-import receivePushandroid from `../tabs/receivePush-android.md`
-import receivePushios from `../tabs/receivePush-ios.md`
+import campaignPushandroid from "./tabs/campaignPush-android.md"
+import campaignPushios from "./tabs/campaignPush-ios.md"
+import receivePushandroid from "./tabs/receivePush-android.md"
+import receivePushios from "./tabs/receivePush-ios.md"
 
 # Campaign Push Notifications
 
