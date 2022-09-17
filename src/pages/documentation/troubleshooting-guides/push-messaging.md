@@ -1,6 +1,6 @@
-import setPushandroid from `../tabs/setPush-android.md`
-import setPushios from `../tabs/setPush-ios.md`
-import setPushreact from `../tabs/setPush-react-native.md`
+import setPushandroid from "../tabs/setPush-android.md"
+import setPushios from "../tabs/setPush-ios.md"
+import setPushreact from "../tabs/setPush-react-native.md"
 
 # Troubleshooting push messaging
 
