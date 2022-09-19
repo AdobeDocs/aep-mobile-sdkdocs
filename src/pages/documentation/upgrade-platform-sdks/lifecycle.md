@@ -1,9 +1,9 @@
-import importlifecycleandroid from "./tabs/import-lifecycle-android.md"
-import importlifecycleios from "./tabs/import-lifecycle-ios.md"
-import collectlifecycleandroid from "./tabs/collect-lifecycle-android.md"
-import collectlifecycleios from "./tabs/collect-lifecycle-ios.md"
-import pauselifecycleandroid from "./tabs/pause-lifecycle-android.md"
-import pauselifecycleios from "./tabs/pause-lifecycle-ios.md"
+import importlifecycleandroid from './tabs/import-lifecycle-android.md'
+import importlifecycleios from './tabs/import-lifecycle-ios.md'
+import collectlifecycleandroid from './tabs/collect-lifecycle-android.md'
+import collectlifecycleios from './tabs/collect-lifecycle-ios.md'
+import pauselifecycleandroid from './tabs/pause-lifecycle-android.md'
+import pauselifecycleios from './tabs/pause-lifecycle-ios.md'
 
 # Manual Lifecycle Implementation
 

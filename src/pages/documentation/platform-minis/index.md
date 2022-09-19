@@ -1,5 +1,5 @@
-import miniprogramseng from "./tabs/miniprogramseng.md"
-import miniprogramschi from "./tabs/miniprogramschi.md"
+import miniprogramseng from './tabs/miniprogramseng.md'
+import miniprogramschi from './tabs/miniprogramschi.md'
 
 # WeChat Mini Programs
 
