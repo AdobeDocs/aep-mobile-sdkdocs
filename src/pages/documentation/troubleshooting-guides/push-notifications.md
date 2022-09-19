@@ -53,15 +53,15 @@ The value of the action should be 7 for impression, 2 for the click, and 1 for o
 
 Impression event tracking (action value 7)
 
-![Impression event tracking](../images/push-notifications/push_tracking_impression.png)
+![Impression event tracking](./images/push-notifications/push_tracking_impression.png)
 
 Click event tracking (action value 2)
 
-![Click event tracking](../images/push-notifications/push_tracking_click.png)
+![Click event tracking](./images/push-notifications/push_tracking_click.png)
 
 Open event tracking (action value 1)
 
-![Open event tracking](../images/push-notifications/push_tracking_open.png)
+![Open event tracking](./images/push-notifications/push_tracking_open.png)
 
 ### Troubleshooting using Charles
 
@@ -69,12 +69,12 @@ To verify that a successful network call is made to track the push notification 
 
 Impression event tracking (action value 7)
 
-![Impression event tracking](../images/push-notifications/tracking_impression.png)
+![Impression event tracking](./images/push-notifications/tracking_impression.png)
 
 Click event tracking (action value 2)
 
-![Click event tracking](../images/push-notifications/tracking_click.png)
+![Click event tracking](./images/push-notifications/tracking_click.png)
 
 Open event tracking (action value 1)
 
-![Click event tracking](../images/push-notifications/tracking_open.png)
+![Click event tracking](./images/push-notifications/tracking_open.png)
