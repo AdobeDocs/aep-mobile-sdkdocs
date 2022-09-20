@@ -22,7 +22,7 @@ Review the following checklist to understand some of the changes and what is req
 1. Begin with the [Getting Started](https://aep-sdks.gitbook.io/docs/getting-started/create-a-mobile-property) section and ensure that you are appropriately provisioned for tags.
 1. Ensure all of the required SDK APIs that you currently use are available in the new SDK.<br/>For more information, see [Experience Platform SDKs vs. the 4x SDKs](comparison.md).<br/>**Tip:** The Experience Platform SDK supports iOS versions 10+, Android 4+ (API 14+).
 1. If you are implementing Analytics, see [Processing rules overview](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html?lang=en) to map the variables and rules.
-1. In the Experience Platform SDK, you need to manually implement your Lifecycle calls. For more information, see [Manual Lifecycle Implementation](manual-lifecycle-implementation.md).
+1. In the Experience Platform SDK, you need to manually implement your Lifecycle calls. For more information, see [Manual Lifecycle Implementation](lifecycle.md).
 
 The Experience Platform SDK automatically performs migration tasks that are required to preserve locally stored user context. Without manual intervention, you should expect no change to your visitor reporting or marketing campaigns.
 
