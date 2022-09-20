@@ -117,6 +117,7 @@ jobs:
           npm run clean
       - name: Build
         run: |
+          export NODE_OPTIONS="--max_old_space_size=4096"
           npm run build
         env:
           PREFIX_PATHS: true # works like --prefix-paths flag for 'gatsby build'
@@ -161,8 +162,7 @@ jobs:
         with:
           fastly-token: ${{ secrets.AIO_FASTLY_TOKEN }}
           fastly-url:
-            '${{ secrets.AIO_FASTLY_DEV_URL}}${{
-            needs.set-state.outputs.path_prefix }}'
+            '${{ secrets.AIO_FASTLY_DEV_URL}}${{needs.set-state.outputs.path_prefix }}'
 
   pre-build-production:
     needs: [set-state]
@@ -207,6 +207,7 @@ jobs:
           npm run clean
       - name: Build
         run: |
+          export NODE_OPTIONS="--max_old_space_size=4096"
           npm run build
         env:
           PREFIX_PATHS: true # works like --prefix-paths flag for 'gatsby build'
@@ -255,5 +256,4 @@ jobs:
         with:
           fastly-token: ${{ secrets.AIO_FASTLY_TOKEN }}
           fastly-url:
-            '${{ secrets.AIO_FASTLY_PROD_URL }}${{
-            needs.set-state.outputs.path_prefix }}'
+            '${{ secrets.AIO_FASTLY_PROD_URL }}${{needs.set-state.outputs.path_prefix }}'
