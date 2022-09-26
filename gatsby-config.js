@@ -371,6 +371,20 @@ module.exports = {
                 ]
             },
             {
+                title: "Adobe Experience Platform Location Service",
+                path: "/documentation/places",
+                pages: [
+                    {
+                        title: "API reference",
+                        path: "documentation/places/api-reference.md"
+                    },
+                    {
+                        title: "Migration",
+                        path: "documentation/places/migration.md"
+                    }
+                ]
+            },
+            {
                 title: "Profile",
                 path: "/documentation/profile",
                 pages: [
