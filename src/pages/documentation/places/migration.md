@@ -19,225 +19,131 @@ The AEPPlaces extension is implemented purely in Swift and is compatible with th
 
 ### clear
 
-{% tabs %}
-{% tab title="AEP 3.x (Swift)" %}
-```swift
-static func clear()
-```
-{% endtab %}
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-{% tab title="AEP 3.x (Objective-C)" %}
-```text
-+ (void) clear;
-```
-{% endtab %}
+AEP 3.x (Swift)
 
-{% tab title="ACP 2.x (Objective-C)" %}
-```text
-+ (void) clear;
-```
-{% endtab %}
-{% endtabs %}
+<Tabs query="language=aep-swift&api=clear"/>
+
+AEP 3.x (Objective-C)
+
+<Tabs query="language=aep-objc&api=clear"/>
+
+ACP 2.x (Objective-C)
+
+<Tabs query="language=acp-objc&api=clear"/>
 
 ### extensionVersion
 
-{% tabs %}
-{% tab title="AEP 3.x (Swift)" %}
-```swift
-static var extensionVersion: String
-```
-{% endtab %}
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-{% tab title="AEP 3.x (Objective-C)" %}
-```text
-+ (nonnull NSString*) extensionVersion;
-```
-{% endtab %}
+AEP 3.x (Swift)
 
-{% tab title="ACP 2.x (Objective-C)" %}
-```text
-+ (nonnull NSString*) extensionVersion;
-```
-{% endtab %}
-{% endtabs %}
+<Tabs query="language=aep-swift&api=extension-version"/>
+
+AEP 3.x (Objective-C)
+
+<Tabs query="language=aep-objc&api=extension-version"/>
+
+ACP 2.x (Objective-C)
+
+<Tabs query="language=acp-objc&api=extension-version"/>
 
 ### getCurrentPointsOfInterest
 
-{% tabs %}
-{% tab title="AEP 3.x (Swift)" %}
-```swift
-static func getCurrentPointsOfInterest(_ closure: @escaping ([PointOfInterest]) -> Void)
-```
-{% endtab %}
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-{% tab title="AEP 3.x (Objective-C)" %}
-```text
-+ (void) getCurrentPointsOfInterest: ^(NSArray<AEPPlacesPoi*>* _Nonnull pois) closure;
-```
-{% endtab %}
+AEP 3.x (Swift)
 
-{% tab title="ACP 2.x (Objective-C)" %}
-```text
-+ (void) getCurrentPointsOfInterest: (nullable void (^) (NSArray<ACPPlacesPoi*>* _Nullable userWithinPoi)) callback;
-```
-{% endtab %}
-{% endtabs %}
+<Tabs query="language=aep-swift&api=get-current-points-of-interest"/>
+
+AEP 3.x (Objective-C)
+
+<Tabs query="language=aep-objc&api=get-current-points-of-interest"/>
+
+ACP 2.x (Objective-C)
+
+<Tabs query="language=acp-objc&api=get-current-points-of-interest"/>
 
 ### getLastKnownLocation
 
-{% tabs %}
-{% tab title="AEP 3.x (Swift)" %}
-```swift
-static func getLastKnownLocation(_ closure: @escaping (CLLocation?) -> Void)
-```
-{% endtab %}
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-{% tab title="AEP 3.x (Objective-C)" %}
-```text
-+ (void) getLastKnownLocation: ^(CLLocation* _Nullable lastLocation) closure;
-```
-{% endtab %}
+AEP 3.x (Swift)
 
-{% tab title="ACP 2.x (Objective-C)" %}
-{% hint style="info" %}
-If the SDK has no last known location, it will pass a `CLLocation` object with a value of `999.999` for latitude and longitude to the callback.
-{% endhint %}
+<Tabs query="language=aep-swift&api=get-last-known-location"/>
 
-```text
-+ (void) getLastKnownLocation: (nullable void (^) (CLLocation* _Nullable lastLocation)) callback;
-```
-{% endtab %}
-{% endtabs %}
+AEP 3.x (Objective-C)
+
+<Tabs query="language=aep-objc&api=get-last-known-location"/>
+
+ACP 2.x (Objective-C)
+
+<Tabs query="language=acp-objc&api=get-last-known-location"/>
 
 ### getNearbyPointsOfInterest
 
-{% tabs %}
-{% tab title="AEP 3.x (Swift)" %}
-{% hint style="info" %}
-Rather than providing an overloaded method, a single method supports retrieval of nearby Points of Interest. The provided closure accepts two parameters, representing the resulting nearby points of interest (if any) and the response code.
-{% endhint %}
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-```swift
-static func getNearbyPointsOfInterest(forLocation location: CLLocation,
-                                      withLimit limit: UInt,
-                                      closure: @escaping ([PointOfInterest], PlacesQueryResponseCode) -> Void)
-```
-{% endtab %}
+AEP 3.x (Swift)
 
-{% tab title="AEP 3.x (Objective-C)" %}
-```text
-+ (void) getNearbyPointsOfInterest: (nonnull CLLocation*) currentLocation
-                             limit: (NSUInteger) limit
-                          callback: ^ (NSArray<AEPPlacesPoi*>* _Nonnull, AEPPlacesQueryResponseCode) closure;
-```
-{% endtab %}
+<Tabs query="language=aep-swift&api=get-nearby-points-of-interest"/>
 
-{% tab title="ACP 2.x (Objective-C)" %}
-{% hint style="info" %}
-Two `getNearbyPointsOfInterest` methods exist. The overloaded version allows the caller to provide an `errorCallback` parameter in the case of failure.
-{% endhint %}
+AEP 3.x (Objective-C)
 
-```text
-// without error handling
-+ (void) getNearbyPointsOfInterest: (nonnull CLLocation*) currentLocation
-                             limit: (NSUInteger) limit
-                          callback: (nullable void (^) (NSArray<ACPPlacesPoi*>* _Nullable nearbyPoi)) callback;
+<Tabs query="language=aep-objc&api=get-nearby-points-of-interest"/>
 
-// with error handling
-+ (void) getNearbyPointsOfInterest: (nonnull CLLocation*) currentLocation
-                             limit: (NSUInteger) limit
-                          callback: (nullable void (^) (NSArray<ACPPlacesPoi*>* _Nullable nearbyPoi)) callback
-                     errorCallback: (nullable void (^) (ACPPlacesRequestError result)) errorCallback;
-```
-{% endtab %}
-{% endtabs %}
+ACP 2.x (Objective-C)
+
+<Tabs query="language=acp-objc&api=get-nearby-points-of-interest"/>
 
 ### processRegionEvent
 
-{% tabs %}
-{% tab title="AEP 3.x (Swift)" %}
-{% hint style="info" %}
-The order of parameters has the `PlacesRegionEvent` first, and the `CLRegion` that triggered the event second. This aligns better with Swift API naming conventions.
-{% endhint %}
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-```swift
-static func processRegionEvent(_ regionEvent: PlacesRegionEvent,
-                               forRegion region: CLRegion)
-```
-{% endtab %}
+AEP 3.x (Swift)
 
-{% tab title="AEP 3.x (Objective-C)" %}
-```text
-+ (void) processRegionEvent: (AEPRegionEventType) eventType
-                  forRegion: (nonnull CLRegion*) region;
-```
-{% endtab %}
+<Tabs query="language=aep-swift&api=process-region-event"/>
 
-{% tab title="ACP 2.x (Objective-C)" %}
-{% hint style="info" %}
-The order of parameters has the `CLRegion` that triggered the event first, and the `ACPRegionEventType` second.
-{% endhint %}
+AEP 3.x (Objective-C)
 
-```text
-+ (void) processRegionEvent: (nonnull CLRegion*) region
-         forRegionEventType: (ACPRegionEventType) eventType;
-```
-{% endtab %}
-{% endtabs %}
+<Tabs query="language=aep-objc&api=process-region-event"/>
+
+ACP 2.x (Objective-C)
+
+<Tabs query="language=acp-objc&api=process-region-event"/>
 
 ### registerExtension
 
-{% tabs %}
-{% tab title="AEP 3.x (Swift)" %}
-{% hint style="info" %}
-Registration occurs by passing `Places` to the `MobileCore.registerExtensions` API.
-{% endhint %}
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-```swift
-MobileCore.registerExtensions([Places.self])
-```
-{% endtab %}
+AEP 3.x (Swift)
 
-{% tab title="AEP 3.x (Objective-C)" %}
-{% hint style="info" %}
-Registration occurs by passing `AEPMobilePlaces` to the `[AEPMobileCore registerExtensions:completion:]` API.
-{% endhint %}
+<Tabs query="language=aep-swift&api=register-extension"/>
 
-```text
-[AEPMobileCore registerExtensions:@[AEPMobilePlaces.class] completion:nil];
-```
-{% endtab %}
+AEP 3.x (Objective-C)
 
-{% tab title="ACP 2.x (Objective-C)" %}
-```text
-+ (void) registerExtension;
-```
-{% endtab %}
-{% endtabs %}
+<Tabs query="language=aep-objc&api=register-extension"/>
+
+ACP 2.x (Objective-C)
+
+<Tabs query="language=acp-objc&api=register-extension"/>
 
 ### setAuthorizationStatus
 
-{% tabs %}
-{% tab title="AEP 3.x (Swift)" %}
-```swift
-static func setAuthorizationStatus(status: CLAuthorizationStatus)
-```
-{% endtab %}
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-{% tab title="AEP 3.x (Objective-C)" %}
-```text
-+ (void) setAuthorizationStatus: (CLAuthorizationStatus) status;
-```
-{% endtab %}
+AEP 3.x (Swift)
 
-{% tab title="ACP 2.x (Objective-C)" %}
-```text
-+ (void) setAuthorizationStatus: (CLAuthorizationStatus) status;
-```
-{% endtab %}
-{% endtabs %}
+<Tabs query="language=aep-swift&api=set-authorization-status"/>
 
-{% hint style="info" %}
-For additional details see also [Places API reference](https://aep-sdks.gitbook.io/docs/foundation-extensions/places/places-usage-reference).
-{% endhint %}
+AEP 3.x (Objective-C)
+
+<Tabs query="language=aep-objc&api=set-authorization-status"/>
+
+ACP 2.x (Objective-C)
+
+<Tabs query="language=acp-objc&api=set-authorization-status"/>
+
+For additional details, please read the [Places API reference](./api-reference.md).
 
