@@ -54,7 +54,7 @@ let placesVersion = Places.extensionVersion
 NSString *placesVersion = [AEPMobilePlaces extensionVersion];
 ```
 
-<Variant language="swift" api="get-current-point-of-interest" repeat="4"/>
+<Variant language="swift" api="get-current-points-of-interest" repeat="4"/>
 
 **Syntax**
 
@@ -70,7 +70,7 @@ Places.getCurrentPointsOfInterest() { currentPois in
 }
 ```
 
-<Variant language="objc" api="get-current-point-of-interest" repeat="4"/>
+<Variant language="objc" api="get-current-points-of-interest" repeat="4"/>
 
 **Syntax**
 
