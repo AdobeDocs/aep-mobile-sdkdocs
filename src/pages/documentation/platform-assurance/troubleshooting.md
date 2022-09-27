@@ -24,7 +24,7 @@ You may change SDK log levels using the [`setLogLevel`](../mobile-core/api-refer
 
 <InlineAlert variant="info" slots="text"/>
 
-For Android, the`startSession` API does not need to be explicitly called. For iOS, use the API as described in [Adobe Experience Platform Assurance](../platform-assurance-sdk/index.md#implement-aep-assurance-session-start-apis-ios-only).
+For Android, the `startSession` API does not need to be explicitly called. For iOS, use the API as described in [Adobe Experience Platform Assurance](../platform-assurance-sdk/index.md#implement-aep-assurance-session-start-apis-ios-only).
 
 ### Authentication overlay appears, but app fails to connect
 

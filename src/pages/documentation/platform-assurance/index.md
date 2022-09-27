@@ -12,7 +12,7 @@ Get started in a hurry with few lines of code. For mobile apps, Assurance works 
 
 ### No-hassle Connection
 
-With Assurance, we've made connecting your app with our service simple and reliable. We've saved you the hassle of using network proxies,[MiTM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)) and other network gymnastics - connecting your app to Assurance is made as easy as scanning a QR code or tapping a button.
+With Assurance, we've made connecting your app with our service simple and reliable. We've saved you the hassle of using network proxies, [MiTM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)), and other network gymnastics - connecting your app to Assurance is made as easy as scanning a QR code or tapping a button.
 
 ![](./assets/index/no-hassle-connection.png)
 
@@ -64,5 +64,5 @@ To get started with Assurance, see the following:
 * [Set up Assurance](./set-up.md)
 * [Using Assurance](./tutorials/index.md)
 
-To access Assurance, see instructions on [Set up Assurance](set-up-project-griffon.md#how-to-participate-in-the-project-griffon-beta)
+To access Assurance, see instructions on [Set up Assurance](set-up.md#how-to-participate-in-the-project-griffon-beta)
 

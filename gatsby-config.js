@@ -70,7 +70,7 @@ module.exports = {
                 pages: [
                     {
                         title: "Using Assurance",
-                        path: "/documentation/tutorials",
+                        path: "/documentation/platform-assurance/tutorials",
                         pages: [
                             {
                                 title: "Adobe Analytics",
