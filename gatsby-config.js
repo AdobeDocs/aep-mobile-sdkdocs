@@ -411,6 +411,24 @@ module.exports = {
                 ]
             },
             {
+                title: "Identity for Edge Network",
+                path: "/documentation/identity-for-edge-network",
+                pages: [
+                    {
+                        title: "API reference",
+                        path: "documentation/identity-for-edge-network/api-reference"
+                    },
+                    {
+                        title: "FAQ",
+                        path: "documentation/identity-for-edge-network/faq"
+                    },
+                    {
+                        title: "Release notes",
+                        path: "documentation/identity-for-edge-network/release-notes"
+                    }
+                ]
+            },
+            {
                 title: "Lifecycle for Edge Network",
                 path: "/documentation/lifecycle-for-edge-network",
                 pages: [

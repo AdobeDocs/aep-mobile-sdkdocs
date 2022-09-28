@@ -7,6 +7,7 @@
 ```java
 public static String extensionVersion()
 ```
+
 **Example**
 
 ```java
@@ -45,9 +46,9 @@ NSString *extensionVersion = [AEPMobileEdgeIdentity extensionVersion];
 
 <Variant platform="android" api="get-experience-cloud-id" repeat="7"/>
 
-The ECID value is returned via the [AdobeCallback](../../mobile-core/api-reference.md#public-classes). When [AdobeCallbackWithError](../../mobile-core/api-reference.md#public-classes) is provided to this API, the timeout value is 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate [AdobeError](../../mobile-core/api-reference.md#public-classes).
+The ECID value is returned via the [AdobeCallback](../mobile-core/api-reference.md#public-classes). When [AdobeCallbackWithError](../mobile-core/api-reference.md#public-classes) is provided to this API, the timeout value is 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate [AdobeError](../mobile-core/api-reference.md#public-classes).
 
-### Java
+**Java**
 
 **Syntax**
 
@@ -110,7 +111,7 @@ Identity.getExperienceCloudId { (ecid, error) in
 
 <Variant platform="android" api="get-identities" repeat="7"/>
 
-When [AdobeCallbackWithError](../../mobile-core/api-reference.md#public-classes) is provided, and you are fetching the identities from the Mobile SDK, the timeout value is 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate [AdobeError](../../mobile-core/api-reference.md#public-classes).
+When [AdobeCallbackWithError](../mobile-core/api-reference.md#public-classes) is provided, and you are fetching the identities from the Mobile SDK, the timeout value is 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate [AdobeError](../mobile-core/api-reference.md#public-classes).
 
 **Java**
 
@@ -174,7 +175,6 @@ Identity.getIdentities { (identityMap, error) in
 ```
 
 <Variant platform="android" api="get-url-variables" repeat="7"/>
-
 
 When `AdobeCallbackWithError` is provided and you are fetching the URL variables from the Mobile SDK, the timeout value is 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate `AdobeError`.
 
@@ -290,7 +290,7 @@ Identity.registerExtension();
 
 <Variant platform="ios-aep" api="register-extension" repeat="11"/>
 
-In iOS, the registration occurs by passing Identity for Edge Network extension to the [MobileCore.registerExtensions API](../../mobile-core/api-reference.md#registerextension-s).
+In iOS, the registration occurs by passing Identity for Edge Network extension to the [MobileCore.registerExtensions API](../mobile-core/api-reference.md#registerextension-s).
 
 **Swift**
 
@@ -377,9 +377,9 @@ AEPIdentityItem *item = [[AEPIdentityItem alloc] initWithId:@"user@example.com" 
 [AEPMobileEdgeIdentity removeIdentityItem:item withNamespace:@"Email"];
 ```
 
-<Variant platform="android" api="set-advertising-identifier" repeat="17"/>
+<Variant platform="android" api="set-advertising-identifier" repeat="16"/>
 
-In order to enable collection of the user's current advertising tracking authorization selection for the provided advertising identifier, you need to install and register the [AEPEdgeConsent](../../consent-for-edge-network/index.md) extension and update the [AEPEdge](../../edge-network-extensions/index.md) dependency to minimum 1.3.2.
+In order to enable collection of the user's current advertising tracking authorization selection for the provided advertising identifier, you need to install and register the [AEPEdgeConsent](../consent-for-edge-network/index.md) extension and update the [AEPEdge](../edge-network-extensions/index.md) dependency to minimum 1.3.2.
 
 These examples require Google Play Services to be configured in your mobile application and use the Google Mobile Ads Lite SDK. For instructions on how to import the SDK and configure your `ApplicationManifest.xml` file see [Google Mobile Ads Lite SDK setup](https://developers.google.com/admob/android/lite-sdk). For more information about advertising identifiers and how to handle them correctly in your mobile application see [Google Play Services documentation about AdvertisingIdClient](https://developers.google.com/android/reference/com/google/android/gms/ads/identifier/AdvertisingIdClient).
 
@@ -493,7 +493,7 @@ val scope = CoroutineScope(Dispatchers.IO).launch {
 
 <Variant platform="ios-aep" api="set-advertising-identifier" repeat="14"/>
 
-In order to enable the collection of current advertising tracking user's selection based on the provided advertising identifier, you need to install and register the [AEPEdgeConsent](../../consent-for-edge-network/index.md) extension and update the [AEPEdge](../../edge-network-extensions/index.md) dependency to minimum 1.4.1. 
+In order to enable the collection of current advertising tracking user's selection based on the provided advertising identifier, you need to install and register the [AEPEdgeConsent](../consent-for-edge-network/index.md) extension and update the [AEPEdge](../edge-network-extensions/index.md) dependency to minimum 1.4.1. 
 
 Starting from iOS 14+, applications must use the [App Tracking Transparency](https://developer.apple.com/documentation/apptrackingtransparency) framework to request user authorization before using the Identifier for Advertising (IDFA). To access IDFA and handle it correctly in your mobile application, see the [Apple developer documentation about IDFA](https://developer.apple.com/documentation/adsupport/asidentifiermanager). 
 
@@ -505,6 +505,7 @@ Starting from iOS 14+, applications must use the [App Tracking Transparency](htt
 @objc(setAdvertisingIdentifier:)
 public static func setAdvertisingIdentifier(_ identifier: String?)
 ```
+
 - _identifier_ is an ID string that provides developers with a simple, standard system to continue to track ads throughout their apps.
 
 **Example**
