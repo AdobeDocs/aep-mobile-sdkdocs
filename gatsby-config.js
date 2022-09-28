@@ -397,6 +397,20 @@ module.exports = {
                 ]
             },
             {
+                title: "Consent for Edge Network",
+                path: "/documentation/consent-for-edge-network",
+                pages: [
+                    {
+                        title: "API reference",
+                        path: "documentation/consent-for-edge-network/api-reference"
+                    },
+                    {
+                        title: "Release notes",
+                        path: "documentation/consent-for-edge-network/release-notes"
+                    }
+                ]
+            },
+            {
                 title: "Lifecycle for Edge Network",
                 path: "/documentation/lifecycle-for-edge-network",
                 pages: [
