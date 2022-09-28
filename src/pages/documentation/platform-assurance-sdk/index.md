@@ -15,8 +15,8 @@ To get started with Assurance in your app, you'll need to:
 
 Go to the [Experience Platform Data Collection UI](https://experience.adobe.com/#/data-collection/) and select your mobile property:
 
-1. In the Data Collection UI, click the **Extensions** tab.
-2. On the **Catalog** tab, locate the **AEP Assurance** extension, and click **Install**.
+1. In the Data Collection UI, select the **Extensions** tab.
+2. On the **Catalog** tab, locate the **AEP Assurance** extension, and select **Install**.
 3. Follow the publishing process to update the Mobile SDK configuration.
 
 ![](./assets/index/assurance-extension.png)
@@ -58,7 +58,6 @@ Unity
 Xamarin
 
 <Tabs query="platform=xamarin&task=import-library"/>
-
 
 ### Register AEPAssurance with Mobile Core
 

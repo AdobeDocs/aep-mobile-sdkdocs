@@ -69,20 +69,64 @@ module.exports = {
                 path: "/documentation/platform-assurance",
                 pages: [
                     {
+                        title: "Using Assurance",
+                        path: "/documentation/platform-assurance/tutorials",
+                        pages: [
+                            {
+                                title: "Adobe Analytics",
+                                path: "/documentation/platform-assurance/tutorials/adobe-analytics.md"
+                            },
+                            {
+                                title: "Adobe Analytics for Streaming Media",
+                                path: "/documentation/platform-assurance/tutorials/adobe-analytics-streaming-media.md"
+                            },
+                            {
+                                title: "Custom validation",
+                                path: "/documentation/platform-assurance/tutorials/custom-validation.md"
+                            },
+                            {
+                                title: "Places Service",
+                                path: "/documentation/platform-assurance/tutorials/places-service"
+                            },
+                            {
+                                title: "On-device views",
+                                path: "/documentation/platform-assurance/tutorials/on-device-views.md"
+                            },
+                            {
+                                title: "Validation summary",
+                                path: "/documentation/platform-assurance/tutorials/validation-summary.md"
+                            }
+                        ]
+                    },
+                    {
+                        title: "Set up",
+                        path: "/documentation/platform-assurance/set-up.md"
+                    },
+                    {
+                        title: "Troubleshooting",
+                        path: "/documentation/platform-assurance/troubleshooting.md"
+                    }
+                ]
+            },
+            {
+                title: "Adobe Experience Platform Assurance extension",
+                path: "/documentation/platform-assurance-sdk",
+                pages: [
+                    {
                         title: "Migration",
-                        path: "/documentation/platform-assurance/migration"
+                        path: "/documentation/platform-assurance-sdk/migration"
                     },
                     {
                         title: "API reference",
-                        path: "/documentation/platform-assurance/api-reference"
+                        path: "/documentation/platform-assurance-sdk/api-reference"
                     },
                     {
                         title: "Resolving common issues",
-                        path: "/documentation/platform-assurance/error-logs"
+                        path: "/documentation/platform-assurance-sdk/error-logs"
                     },
                     {
                         title: "Release notes",
-                        path: "/documentation/platform-assurance/release-notes"
+                        path: "/documentation/platform-assurance-sdk/release-notes"
                     }
                 ]
             },
