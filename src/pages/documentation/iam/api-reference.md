@@ -1,6 +1,6 @@
 import Tabs from './tabs/usage.md'
 
-# Usage
+# API reference
 
 This document details how to use the in-app messaging APIs provided by the AEPMessaging framework.
 
@@ -20,4 +20,4 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=refresh"/>
+<Tabs query="platform=ios&api=refresh"/>

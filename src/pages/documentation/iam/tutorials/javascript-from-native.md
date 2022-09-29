@@ -24,9 +24,9 @@ Android
 
 <Tabs query="platform=android&task=obtain"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=obtain"/>
+<Tabs query="platform=ios&task=obtain"/>
 
 ## Call the JavaScript method
 
@@ -36,6 +36,6 @@ Android
 
 <Tabs query="platform=android&task=call"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=call"/>
+<Tabs query="platform=ios&task=call"/>

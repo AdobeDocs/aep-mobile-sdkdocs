@@ -1,13 +1,13 @@
 # Prerequisites
 
-### Configure the datastream
+## Configure the datastream
 
 * To create the datastream, please follow the [tutorial on creating a datastream](../getting-started/configure-datastreams.md).
 * From the `Profile Dataset` drop-down, select a profile-enabled dataset based on the XDM ExperienceEvent schema that contains the `pushNotificationTracking` field group
 
 ![Datastream](./assets/configure/configure.png)
 
-### Setup mobile property in Adobe Data Collection
+## Set up mobile property in Adobe Data Collection
 
 * To learn how to create the mobile property, please read the tutorial on [creating a mobile property](../getting-started/create-a-mobile-property.md)
 * To learn how to configure the Edge Network extension, please read the tutorial on [configuring the Edge Network extension](../edge-network-extensions/index.md)

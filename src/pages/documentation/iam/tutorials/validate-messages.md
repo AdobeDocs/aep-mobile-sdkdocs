@@ -75,7 +75,7 @@ Complete the following steps to validate a response containing in-app messages:
 
 ![AEP Response Event Handle](./assets/validate-messages/message-response.png)
 
-1. Expand the **Payload** section in the right window and continue down the tree until you find the **items** array. The full path to **items** is:
+4. Expand the **Payload** section in the right window and continue down the tree until you find the **items** array. The full path to **items** is:
 
 ```
 ACPExtensionEventData.payload.0.items

@@ -14,9 +14,9 @@ Android (Gradle)
 
 iOS (Cocoapods)
 
-<Tabs query="platform=ios-aep&task=install"/>
+<Tabs query="platform=ios&task=install"/>
 
-### Import and register the Messaging extension
+## Import and register the Messaging extension
 
 Import the AEPMessaging framework and its dependencies, then register the Messaging extension and dependencies.
 
@@ -28,4 +28,4 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=register"/>
+<Tabs query="platform=ios&task=register"/>

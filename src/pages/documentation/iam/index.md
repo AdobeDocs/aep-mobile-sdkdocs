@@ -6,12 +6,12 @@ In-app messaging functionality powered by Adobe Journey Optimizer is a beta prod
 
 ### Prerequisites
 
-* [Configure Adobe Data Collection and Adobe Experience Platform](./edge-and-launch-configuration.md)
+* [Configure Adobe Data Collection and Adobe Experience Platform](./prerequisites.md)
 
 ### Getting started with AEPMessaging Extension
 
 * [Setup](./setup.md)
-* [Usage](./usage.md)
+* [API reference](./api-reference.md)
 
 ### Other public classes, methods, and enums
 
