@@ -1,4 +1,4 @@
-#  Configure Adobe Data Collection and Adobe Experience Platform
+# Prerequisites
 
 ### Configure the datastream
 
