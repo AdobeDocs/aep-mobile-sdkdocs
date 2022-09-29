@@ -1,0 +1,1 @@
+import Tabs from './tabs/usage.md'
