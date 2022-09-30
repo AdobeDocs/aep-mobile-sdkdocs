@@ -40,4 +40,4 @@ In your app's `application:didFinishLaunchingWithOptions:` method, register the 
     }
 ```
 
-For more information about starting Lifecycle, see the [Lifecycle extension in iOS guide](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/lifecycle/lifecycle-extension-in-ios).
+For more information about starting Lifecycle, see the [Lifecycle extension in iOS guide](../mobile-core/lifecycle/ios.md).

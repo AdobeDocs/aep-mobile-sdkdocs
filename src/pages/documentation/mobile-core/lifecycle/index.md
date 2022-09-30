@@ -9,7 +9,7 @@ import RegisterLifecycleIosACP from './tabs/index/register-lifecycle/ios-acp.md'
 
 <InlineAlert variant="warning" slots="text"/>
 
-In version 4 of the iOS SDK, this implementation was completed automatically. <br/><br/> The Experience Platform SDK will not automatically collect Lifecycle metrics. To continue collecting Lifecycle metrics, you must add code to your app. For more information, see [Manual Lifecycle Implementation](https://aep-sdks.gitbook.io/docs/resources/upgrading-to-aep/manual-lifecycle-implementation).
+In version 4 of the iOS SDK, this implementation was completed automatically. <br/><br/> The Experience Platform SDK will not automatically collect Lifecycle metrics. To continue collecting Lifecycle metrics, you must add code to your app. For more information, see [Manual Lifecycle Implementation](../../upgrading-platform-sdks/lifecycle.md).
 
 Sessions contain information about the app's current lifecycle, such as the device information, the application install or upgrade information, the session start and pause times, the number of application launches, and additional context data that is provided by the developer through the `LifecycleStart` API. Session data is persisted, so it is available across application launches.
 

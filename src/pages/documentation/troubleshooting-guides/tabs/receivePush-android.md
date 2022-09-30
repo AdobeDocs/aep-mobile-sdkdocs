@@ -4,7 +4,7 @@
 
 1. Create the Firebase Messaging Service and add it to the Android Manifest file.<br/>For more information, see [Set up a Firebase Cloud Messaging client app on Android](https://firebase.google.com/docs/cloud-messaging/android/client).
 1. Generate a push token for the app using FireBase Instance ID class.
-1. In the `onComplete` function of `OnCompleteListener`, set the Push identifier by calling the API `MobileCore.setPushIdentifier`.<br/>For more information, see [setPushIdentifier](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-analytics-mobile-services#set-up-push-messaging).
+1. In the `onComplete` function of `OnCompleteListener`, set the Push identifier by calling the API `MobileCore.setPushIdentifier`.<br/>For more information, see [setPushIdentifier](../adobe-analytics-mobile-services/index.md#set-up-push-messaging).
 
 **Verify that the push token has successfully synced with the Experience Cloud ID service**
 

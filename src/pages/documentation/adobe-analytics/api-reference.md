@@ -250,7 +250,7 @@ Retrieves the Analytics tracking identifier that is generated for this app/devic
 
 <InlineAlert variant="info" slots="text"/>
 
-If you have an [Experience Cloud ID](https://app.gitbook.com/@aep-sdks/s/docs/using-mobile-extensions/mobile-core/identity/identity-api-reference#getexperiencecloudid) and have not yet configured a visitor ID grace period, the value returned by `getTrackingIdentifier` may be null.
+If you have an [Experience Cloud ID](../mobile-core/identity/api-reference.md#getexperiencecloudid) and have not yet configured a visitor ID grace period, the value returned by `getTrackingIdentifier` may be null.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -268,7 +268,7 @@ If you have an [Experience Cloud ID](https://app.gitbook.com/@aep-sdks/s/docs/us
 
 Before using this API, see [Identify unique visitors](https://experienceleague.adobe.com/docs/analytics/components/metrics/unique-visitors.html).
 
-This API gets a custom Analytics visitor identifier, which has been set previously using [setVisitorIdentifier](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-analytics/analytics-api-reference#setvisitoridentifier).
+This API gets a custom Analytics visitor identifier, which has been set previously using [setVisitorIdentifier](#setvisitoridentifier).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
@@ -310,7 +310,7 @@ This API gets a custom Analytics visitor identifier, which has been set previous
 
 Before using this API, see [Identify unique visitors](https://experienceleague.adobe.com/docs/analytics/components/metrics/unique-visitors.html).
 
-This API gets a custom Analytics visitor identifier, which has been set previously using [setVisitorIdentifier](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-analytics/analytics-api-reference#setvisitoridentifier). Callback with NSError if an unexpected error occurs or the request times out.
+This API gets a custom Analytics visitor identifier, which has been set previously using [setVisitorIdentifier](#setvisitoridentifier). Callback with NSError if an unexpected error occurs or the request times out.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

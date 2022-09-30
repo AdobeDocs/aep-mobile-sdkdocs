@@ -10,9 +10,9 @@ If you are developing an Android application, to correctly display fullscreen in
 <activity android:name="com.adobe.marketing.mobile.FullscreenMessageActivity" />
 ```
 
-In addition to adding the `FullscreenMessageActivity`, a global lifecycle callback must be defined in your app's MainActivity to ensure the proper display of fullscreen in-app messages. To define the global lifecycle callback, see the [implementing global lifecycle callbacks section](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/lifecycle/lifecycle-extension-in-android#implementing-global-lifecycle-callbacks) within the Lifecycle documentation.
+In addition to adding the `FullscreenMessageActivity`, a global lifecycle callback must be defined in your app's MainActivity to ensure the proper display of fullscreen in-app messages. To define the global lifecycle callback, see the [implementing global lifecycle callbacks section](../mobile-core/lifecycle/android.md#implementing-global-lifecycle-callbacks) within the Lifecycle documentation.
 
 
 ### Set up local notifications
 
-To set up local notifications in Android, update the AndroidManifest.xml file with `<receiver android:name="com.adobe.marketing.mobile.LocalNotificationHandler"/>`. To configure the notification icons that the local notification will use, see the [configuring notification icons section](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-analytics-mobile-services#configuring-notification-icons) within the Adobe Analytics - Mobile Services documentation.
+To set up local notifications in Android, update the AndroidManifest.xml file with `<receiver android:name="com.adobe.marketing.mobile.LocalNotificationHandler"/>`. To configure the notification icons that the local notification will use, see the [configuring notification icons section](../adobe-analytics-mobile-services/index.md#configuring-notification-icons) within the Adobe Analytics - Mobile Services documentation.

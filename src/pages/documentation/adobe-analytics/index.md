@@ -197,11 +197,11 @@ To automatically report on the application lifecycle details in Analytics, ensur
 
 ## Send app states and actions to Analytics
 
-To track mobile app states and actions in Adobe Analytics, implement the [trackAction](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/mobile-core-api-reference#trackaction) and [trackState](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/mobile-core-api-reference#trackstate) APIs from the Mobile Core extension. For more information, see the [track app actions](../../foundation-extensions/mobile-core/mobile-core-api-reference.md#track-app-actions) and [track app states](../../foundation-extensions/mobile-core/mobile-core-api-reference.md#track-app-states-and-views) tutorials.
+To track mobile app states and actions in Adobe Analytics, implement the [trackAction](../mobile-core/api-reference.md#trackaction) and [trackState](../mobile-core/api-reference.md#trackstate) APIs from the Mobile Core extension. For more information, see the [track app actions](../../foundation-extensions/mobile-core/mobile-core-api-reference.md#track-app-actions) and [track app states](../../foundation-extensions/mobile-core/mobile-core-api-reference.md#track-app-states-and-views) tutorials.
 
 <InlineAlert variant="info" slots="text"/>
 
-[trackState](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/mobile-core-api-reference#trackstate) reports the view state as the **Page Name**, and state views are reported as **Page View** in Analytics. The value is sent to Analytics by using the page name variable (`pagename=value`).<br/><br/> [trackAction](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/mobile-core-api-reference#trackaction) reports the Action as an **event** and does not increment your page views in Analytics. The value is sent to Analytics by using the action variable (`action=value`).
+[trackState](../mobile-core/api-reference.md#trackstate) reports the view state as the **Page Name**, and state views are reported as **Page View** in Analytics. The value is sent to Analytics by using the page name variable (`pagename=value`).<br/><br/> [trackAction](../mobile-core/api-reference.md#trackaction) reports the Action as an **event** and does not increment your page views in Analytics. The value is sent to Analytics by using the action variable (`action=value`).
 
 ## Integrations with Adobe Experience Platform solutions and services
 
@@ -211,11 +211,11 @@ To see the performance of your Target activities for some segments, you can set 
 
 ### Server-side forwarding with Audience Manager
 
-To enable the ability to share Analytics data with Audience Manager, in the Data Collection UI, select the **Audience Manager Forwarding** checkbox. For more information, go to [Audience Manager](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-audience-manager).
+To enable the ability to share Analytics data with Audience Manager, in the Data Collection UI, select the **Audience Manager Forwarding** checkbox. For more information, go to [Audience Manager](../adobe-audience-manager/index.md).
 
 ### Audio and video analytics
 
-For more information about collecting audio and video analytics, please read the documentation on [Media Analytics for audio and video](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-media-analytics/).
+For more information about collecting audio and video analytics, please read the documentation on [Media Analytics for audio and video](../adobe-media-analytics/index.md).
 
 ## Event serialization
 
@@ -302,5 +302,5 @@ To update the SDK configuration programmatically, use the following information 
 
 <UpdateXamarin/>
 
-For more information, see the [configuration API reference](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/configuration/configuration-api-reference).
+For more information, see the [configuration API reference](../mobile-core/configuration/api-reference.md).
 

@@ -3,7 +3,7 @@
 **Set up the iOS app**
 
 1. After you launch the app, call `registerForRemoteNotifications` to register the app and receive the APNS token.<br/>This API generates and returns the APNS token through the `application:didRegisterForRemoteNotificationsWithDeviceToken: delegate` function.<br/>For more information, see [Registering Your App with APNs](https://developer.apple.com/documentation/usernotifications/registering_your_app_with_apns?language=objc).
-1. In `application:didRegisterForRemoteNotificationsWithDeviceToken:`, call `setPushIdentifier` to set the Push identifier.<br/>or more information, see [setPushIdentifier](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-analytics-mobile-services#set-up-push-messaging).
+1. In `application:didRegisterForRemoteNotificationsWithDeviceToken:`, call `setPushIdentifier` to set the Push identifier.<br/>or more information, see [setPushIdentifier](../adobe-analytics-mobile-services/index.md#set-up-push-messaging).
 
 **Verify that the push token has successfully synced with the Experience Cloud ID service**
 

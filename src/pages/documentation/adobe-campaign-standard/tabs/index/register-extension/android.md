@@ -31,4 +31,4 @@ In your app's `OnCreate` method, register the Campaign, Identity, Signal, and Li
     }
 ```
 
-For more information about starting Lifecycle, see the [Lifecycle extension in Android guide](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/lifecycle/lifecycle-extension-in-android).
+For more information about starting Lifecycle, see the [Lifecycle extension in Android guide](../mobile-core/lifecycle/android.md).
