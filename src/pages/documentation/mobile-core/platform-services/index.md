@@ -9,7 +9,7 @@ The Platform Services are provided by the Adobe Experience Platform Mobile SDKs 
 
 <InlineAlert variant="info" slots="text"/>
 
-This feature is only available in [Android Core 1.8.0](https://aep-sdks.gitbook.io/docs/release-notes#android-core-1-8-0) or later and [iOS Core 3.0.0](https://aep-sdks.gitbook.io/docs/release-notes#adobe-experience-platform-ios-core-sdks) or later. FIX LINKS
+This feature is only available in [Android Core 1.8.0](../../release-notes/2021.md#android-core-1-8-0) or later and [iOS Core 3.0.0](../../release-notes/2021.md#adobe-experience-platform-ios-core-sdks) or later.
 
 | Service  | Android SDK | iOS SDK |
 | :------- | :---------- | :------ |

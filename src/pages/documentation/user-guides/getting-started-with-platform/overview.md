@@ -53,7 +53,7 @@ To create a configuration identifier use the following steps:
    
    - Select `Add service` and from the drop-down select `Adobe Experience Platform`.
    
-   * For the `Event Dataset`, select the XDM dataset you created in [Initialize Adobe Experience Platform for data collection](https://aep-sdks.gitbook.io/docs/v/AEP-Edge-Docs/resources/user-guides/tutorial-1-edge-extension-setup#initialize-adobe-experience-platform-for-data-collection). FIX LINK
+   * For the `Event Dataset`, select the XDM dataset you created in [Initialize Adobe Experience Platform for data collection](../../edge-network-extensions/index.md).
    * Click `Save`.
 
 ![](./assets/overview/enable-datastreams.png)
@@ -64,7 +64,7 @@ As a prerequisite, the Adobe Experience Platform Edge extension requires the suc
 
 Experience Edge extension relies on the [Mobile Core](../../mobile-core/index.md) for the transmission of events, managing identity (ECID), and triggering client-side rules based on XDM.
 
-1. First, follow the steps in the [set up a mobile property tutorial](https://aep-sdks.gitbook.io/docs/getting-started/create-a-mobile-property) in the Data Collection UI. FIX LINK
+1. First, follow the steps in the [set up a mobile property tutorial](../../getting-started/create-a-mobile-property.md) in the Data Collection UI.
 2. Install the `Adobe Experience Platform Edge` extension from the Catalog.
 3. In the configuration view, from `Edge Configuration`  section select the `Datastream` configuration you created in the `Generate a Datastream identifier` step and click `Save`.
 4. Install the `AEP Assurance` extension from the Catalog.
@@ -174,7 +174,7 @@ AEP Assurance (also known as Project Griffon) is a product from Adobe that lets 
    ![](./assets/overview/commerce-griffon-connection.png)
 
 7. Once connected to Assurance, you will see a Platform icon in red color on the top right corner of the app view. The color of the Platform icon becomes gray if the connectivity to Assurance server is lost for any reason. In this case, you want to reconnect to continue to see the session in the UI.
-8. In the Assurance session, you should now start seeing events populating the Events List. When clicking the `Purchase` button from the `Edge` tab, you should see the Experience events sent to Experience Edge. For more details, refer to [Event types handled by the AEP Mobile extension](https://aep-sdks.gitbook.io/docs/beta/experience-platform-extension/experience-platform-debugging). FIX LINK
+8. In the Assurance session, you should now start seeing events populating the Events List. When clicking the `Purchase` button from the `Edge` tab, you should see the Experience events sent to Experience Edge. For more details, refer to [Event types handled by the AEP Mobile extension](../../edge-network-extensions/validation.md).
 
    To check the XDM Experience event was successfully validated, check that the `validation for the given event was successful` message is present in the `service com.adobe.streaming.validation` event.
 
@@ -215,7 +215,7 @@ Use the `sendPurchaseXDMEvent` as an example and Project Griffon to validate tha
 
 ## Next steps
 
-If you would like to explore other XDM schemas for your mobile use-case, find more details in the [Adobe Experience Platform - Experience Edge](https://aep-sdks.gitbook.io/docs/beta/experience-platform-extension) page. FIX LINK
+If you would like to explore other XDM schemas for your mobile use-case, find more details in the [Adobe Experience Platform - Experience Edge](../../edge-network-extensions/index.md) page.
 
 To learn more about Experience Data Model (XDM), schemas, datasets, and field groups, read [XDM System overview](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html).
 
