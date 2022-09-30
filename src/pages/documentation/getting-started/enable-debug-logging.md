@@ -51,7 +51,7 @@ This section shows you how to collect lifecycle metrics. To view, and report on 
 
 <InlineAlert variant="success" slots="text"/>
 
-Lifecycle metrics are now available for Edge Network implementations. For more details about the XDM-based lifecycle metrics, see [Lifecycle for Edge Network](../foundation-extensions/lifecycle-for-edge-network/README.md). FIX LINK
+Lifecycle metrics are now available for Edge Network implementations. For more details about the XDM-based lifecycle metrics, see [Lifecycle for Edge Network](../lifecycle-for-edge-network/index.md).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

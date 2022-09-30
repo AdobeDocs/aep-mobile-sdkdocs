@@ -39,7 +39,7 @@ Review the following Mobile Services functionality documentation for context and
 
 <InlineAlert variant="warning" slots="text"/>
 
-Postbacks created from the Mobile Services interface are **not** supported. Please use a rule defined in the Data Collection UI with the Mobile Core extension to create a postback. [Signal extension and Rules Engine integration](../../resources/user-guides/signal-extension-and-rules-engine-integration.md). FIX LINK
+Postbacks created from the Mobile Services interface are **not** supported. Please use a rule defined in the Data Collection UI with the Mobile Core extension to create a postback. [Signal extension and Rules Engine integration](../user-guides/rules-engine-integration.md).
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -108,7 +108,7 @@ To install the Mobile Services extension, complete the following steps:
 
 ## Configure the Adobe Analytics extension
 
-1. To ensure that this extension is correctly configured and implemented, follow the steps in the [configure the Mobile Services extension in the Data Collection UI](https://app.gitbook.com/@aep-sdks/s/docs/~/drafts/-LzsbnKuIZ7JbOKOD9DC/using-mobile-extensions/adobe-analytics-mobile-services#configure-the-adobe-analytics-extension) tutorial. FIX LINK
+1. To ensure that this extension is correctly configured and implemented, follow the steps in the [configure the Mobile Services extension in the Data Collection UI](#configure-the-mobile-services-extension-in-the-data-collection-ui) section.
 2. In **Launch Hit Delay**, type a value of 5s or more to ensure that the acquisition context is sent to Analytics with your Lifecycle information.
 
 ![](images/index/launch-hit-delay.png)

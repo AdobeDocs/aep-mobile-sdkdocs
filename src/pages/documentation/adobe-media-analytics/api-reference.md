@@ -197,8 +197,8 @@ Creates an instance of the Media object.
 | `name` | Media name | Yes |
 | `mediaId` | Media unique identifier | Yes |
 | `length` | Media length | Yes |
-| `streamType` | [Stream type](media-api-reference.md#stream-type) | Yes |
-| `mediaType` | [Media type](media-api-reference.md#media-type) | Yes |
+| `streamType` | [Stream type](#stream-type) | Yes |
+| `mediaType` | [Media type](#media-type) | Yes |
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
@@ -341,11 +341,9 @@ React Native
 
 Creates an instance of the Player State object.
 
-FIX LINK
-
 | Variable Name | Description | Required |
 | :--- | :--- | :---: |
-| `name` | State name(Use [Player State constants](media-api-reference.md#player-state-constants) to track standard player states) | Yes |
+| `name` | State name(Use [Player State constants](#player-state-constants) to track standard player states) | Yes |
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
@@ -369,12 +367,12 @@ React Native
 
 ### trackSessionStart
 
-Tracks the intention to start playback. This starts a tracking session on the media tracker instance. To learn how to resume a previously closed session, please read the [media resume guide](media-api-reference.md#media-resume)
+Tracks the intention to start playback. This starts a tracking session on the media tracker instance. To learn how to resume a previously closed session, please read the [media resume guide](#media-resume)
 
 | Variable Name | Description | Required |
 | :--- | :--- | :---: |
-| `mediaInfo` | Media information created using the [createMediaObject](media-api-reference.md#createmediaobject) method. | Yes |
-| `contextData` | Optional Media context data. For standard metadata keys, use [standard video constants](media-api-reference.md#standard-video-constants) or [standard audio constants](media-api-reference.md#standard-audio-constants). | No |
+| `mediaInfo` | Media information created using the [createMediaObject](#createmediaobject) method. | Yes |
+| `contextData` | Optional Media context data. For standard metadata keys, use [standard video constants](#standard-video-constants) or [standard audio constants](#standard-audio-constants). | No |
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
@@ -512,12 +510,10 @@ React Native
 
 Tracks media events.
 
-FIX LINK
-
 | Variable Name | Description |
 | :--- | :--- |
-| `event` | [Media event](media-api-reference.md#media-events) |
-| `info` | For an `AdBreakStart` event, the `adBreak` information is created by using the [createAdBreakObject](media-api-reference.md#createadbreakobject) method.   For an `AdStart` event, the Ad information is created by using the [createAdObject](media-api-reference.md#createadobject) method.   For `ChapterStart` event, the Chapter information is created by using the [createChapterObject](media-api-reference.md#createchapterobject) method.  For `StateStart` and `StateEnd` event, the State information is created by using the [createStateObject](media-api-reference.md#createstateobject) method. |
+| `event` | [Media event](#media-events) |
+| `info` | For an `AdBreakStart` event, the `adBreak` information is created by using the [createAdBreakObject](#createadbreakobject) method.   For an `AdStart` event, the Ad information is created by using the [createAdObject](#createadobject) method.   For `ChapterStart` event, the Chapter information is created by using the [createChapterObject](#createchapterobject) method.  For `StateStart` and `StateEnd` event, the State information is created by using the [createStateObject](#createstateobject) method. |
 | `data` | Optional context data can be provided for `AdStart` and `ChapterStart` events. This is not required for other events. |
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
@@ -568,11 +564,9 @@ React Native
 
 Provides the media tracker with the current QoE information. For accurate tracking, call this method multiple times when the media player provides the updated QoE information.
 
-FIX LINK
-
 | Variable name | Description |
 | :--- | :--- |
-| `qoeObject` | Current QoE information that was created by using the [createQoEObject](media-api-reference.md#createqoeobject) method. |
+| `qoeObject` | Current QoE information that was created by using the [createQoEObject](#createqoeobject) method. |
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 

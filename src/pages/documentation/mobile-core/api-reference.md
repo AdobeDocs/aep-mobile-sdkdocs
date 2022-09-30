@@ -182,7 +182,7 @@ To retrieve data as a JSON string from the SDKs and send this data to your serve
 
 <InlineAlert variant="warning" slots="text"/>
 
-You must call the API below and retrieve identities stored in the SDK, **before** the user opts out.<br/><br/>This API does **not** include the identities stored in the Edge Identity extension. To retrieve the identities from the Edge Identity extension, use [getIdentities](https://github.com/Adobe-Marketing-Cloud/aep-sdks-documentation/tree/09dd71f04d377c356dd24aac9b89ed0fffc1cf63/using-mobile-extensions/adobe-edge-identity/adobe-edge-identity-api-reference.md#getidentities). (FIX LINK)
+You must call the API below and retrieve identities stored in the SDK, **before** the user opts out.<br/><br/>This API does **not** include the identities stored in the Edge Identity extension. To retrieve the identities from the Edge Identity extension, use [getIdentities](../identity-for-edge-network/api-reference.md#getidentities).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
@@ -270,9 +270,7 @@ Xamarin
 
 ## registerURLHandler 
 
-FIX LINK
-
-Mobile SDK allows you to add a callback function that is triggered before the [`open url`](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/rules-engine#consequence-types) action occurs. If the callback function returns **Yes**, the SDK does not complete the `open url` action. If the callback function returns **No**, the SDK completes the `open url` action.
+Mobile SDK allows you to add a callback function that is triggered before the [`open url`](./rules-engine/index.md#consequence-types) action occurs. If the callback function returns **Yes**, the SDK does not complete the `open url` action. If the callback function returns **No**, the SDK completes the `open url` action.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 

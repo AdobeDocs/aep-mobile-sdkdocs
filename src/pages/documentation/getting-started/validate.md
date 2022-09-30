@@ -1,10 +1,10 @@
 # Validation and next steps
 
-As you begin to add solution APIs to your mobile implementation, you are going to want to validate that specific actions and experiences work as intended. Adding [Adobe Experience Platform Assurance](../beta/project-griffon/#what-can-project-griffon-do-for-you) to your application at the beginning of your implementation provides a way to quickly check to make sure the SDK has been instrumented properly and that data is flowing to Adobe Analytics and other solutions. FIX LINK
+As you begin to add solution APIs to your mobile implementation, you are going to want to validate that specific actions and experiences work as intended. Adding [Adobe Experience Platform Assurance](../platform-assurance/index.md#what-can-assurance-do-for-you) to your application at the beginning of your implementation provides a way to quickly check to make sure the SDK has been instrumented properly and that data is flowing to Adobe Analytics and other solutions.
 
-Assurance is available across all [SDK platforms and frameworks](https://aep-sdks.gitbook.io/docs/resources/upgrading-to-aep/current-sdk-versions). Installation and setup instructions are available [here](../beta/project-griffon/#quick-setup). FIX LINKS
+Assurance is available across all [SDK platforms and frameworks](../upgrade-platform-sdks/current-sdk-versions.md). Installation and setup instructions are available [here](../platform-assurance/index.md#quick-setup).
 
-Once you have Assurance integrated, you can create a [new session](https://aep-sdks.gitbook.io/docs/beta/project-griffon/using-project-griffon#creating-sessions) by either scanning a QR code or by following a unique deep link URL. FIX LINK
+Once you have Assurance integrated, you can create a [new session](../platform-assurance/tutorials/index.md#creating-sessions) by either scanning a QR code or by following a unique deep link URL.
 
 The main interface for Assurance will show a running event list of all SDK events, including a configuration response event that will provide a readout of all configuration values obtained from the Data Collection UI.
 
@@ -12,7 +12,7 @@ The main interface for Assurance will show a running event list of all SDK event
 
 ## Adobe Analytics view
 
-The [Adobe Analytics](../beta/project-griffon/using-project-griffon/adobe-analytics-and-project-griffon.md#using-project-griffon-for-adobe-analytics) event list offers a focused view of analytics events triggered in the application. You can sort through all of the track action and track state calls. In the [analytics view in Adobe Experience Platform Assurance](../beta/project-griffon/using-project-griffon/adobe-analytics-and-project-griffon.md), you can see both the raw hit request sent to Analytics and the post-processed details. FIX LINKS
+The [Adobe Analytics](../platform-assurance/tutorials/adobe-analytics.md#using-project-griffon-for-adobe-analytics) event list offers a focused view of analytics events triggered in the application. You can sort through all of the track action and track state calls. In the [analytics view in Adobe Experience Platform Assurance](../platform-assurance/tutorials/adobe-analytics.md), you can see both the raw hit request sent to Analytics and the post-processed details.
 
 ![Assurance analytics view](./assets/validate/assurance-analytics.png)
 
@@ -26,7 +26,7 @@ To learn more about the Places Service, please read the [Places Service overview
 
 ![Assurance Places Service Location Simulation](./assets/validate/assurance-places.png)
 
-To learn more about Assurance, please read the [Assurance setup guide](../beta/project-griffon/set-up-project-griffon.md) FIX LINK
+To learn more about Assurance, please read the [Assurance setup guide](../platform-assurance/set-up.md)
 
 ## Next steps
 

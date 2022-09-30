@@ -13,7 +13,7 @@ This document is a reference comparison of ACPMobileServices(1.x) APIs against t
 
 ## Mobile Services extension APIs
 
-For more information, please read the [Mobile Services API reference](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-analytics-mobile-services/mobileservices-api-reference). FIX LINK
+For more information, please read the [Mobile Services API reference](./api-reference.md).
 
 ### trackAdobeDeepLink
 

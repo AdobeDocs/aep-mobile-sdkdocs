@@ -63,7 +63,7 @@ If you have any questions about the SDK, please visit the [SDK community forum](
 
 ## Resources
 
-* [Getting started](#) FIX LINK
-* [Getting the Experience Platform SDKs](#) FIX LINK
-* [Frequently asked questions](#) FIX LINK
+* [Getting started](./getting-started/index.md)
+* [Getting the Experience Platform SDKs](./getting-started/get-the-sdk.md)
+* [Frequently asked questions](./faq.md)
 * [Why use the Adobe Experience Platform Mobile SDKs](https://medium.com/adobetech/accelerate-your-mobile-application-development-with-adobe-experience-platform-mobile-sdk-and-launch-ed023536d611)
