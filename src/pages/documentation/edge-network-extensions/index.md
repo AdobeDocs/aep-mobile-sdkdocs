@@ -35,9 +35,9 @@ If your organization uses multiple sandboxes, select the **Sandbox** first, then
 
 The datastream used by the client-side implementation is one of the followings:
 
-* the `Production environment` configuration when the Launch library is published to production (in the Published column in the Launch publishing flow).
-* the `Staging environment` configuration when the Launch library is published to staging (in the Submitted column in the Launch publishing flow).
-* the `Development environment` configuration when the Launch library is in development.
+* the `Production environment` configuration when the tag library is published to production (in the Published column in the publishing flow).
+* the `Staging environment` configuration when the tag library is published to staging (in the Submitted column in the publishing flow).
+* the `Development environment` configuration when the tag library is in development.
 
 ### Domain configuration
 

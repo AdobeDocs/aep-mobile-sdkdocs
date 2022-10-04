@@ -59,7 +59,7 @@ The Adobe Experience Platform Mobile SDK supports the following platforms:
 
 ## Get help
 
-If you have any questions about the SDK, please visit the [SDK community forum](https://forums.adobe.com/community/experience-cloud/platform/launch/sdk). If you need immediate assistance, please contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support).
+If you have any questions about the SDK, please visit the [SDK community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-sdks/ct-p/platform-sdk). If you need immediate assistance, please contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support).
 
 ## Resources
 

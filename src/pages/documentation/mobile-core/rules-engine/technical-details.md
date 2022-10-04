@@ -7,16 +7,16 @@
 * A rule is a set of conditions and the associated consequence(s).
 * A triggering event is the event that started the rule evaluation.
 
-  The Adobe Experience Platform Mobile SDK evaluates each rule configured in Experience Platform Launch for the current event that is processed by the Event Hub.
+  The Adobe Experience Platform Mobile SDK evaluates each tag rule for the current event that is processed by the Event Hub.
 
-* Rules Engine is the system that processes the mobile rules that were configured in Experience Platform Launch and initiates the associated actions when the conditions are met.
+* Rules Engine is the system that processes the mobile tag rules and initiates the associated actions when the conditions are met.
 * An asset is an opaque data blob that is needed by a specific consequence.
 
 ## Rules delivery
 
 Rules delivery occurs by using a network request from the Experience Platform SDKs to a static endpoint that is defined as part of the SDK configuration. The rules file for each mobile property is hosted on `https://assets.adobedtm.com`.
 
-This request is a conditional `GET` and occurs by default at the start of each new application session. In Experience Platform Launch, when the set of rules that were configured for a mobile property change, these changes will be picked up by the Experience Platform SDK in the next session or after the application is restarted.
+This request is a conditional `GET` and occurs by default at the start of each new application session. When the set of tag rules that were configured for a mobile property change, these changes will be picked up by the Experience Platform SDK in the next session or after the application is restarted.
 
 ## File format
 

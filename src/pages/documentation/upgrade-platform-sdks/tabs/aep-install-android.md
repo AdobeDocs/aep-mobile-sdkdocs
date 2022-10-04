@@ -18,7 +18,7 @@ public void onCreate(Bundle savedInstanceState) {
     MobileCore.start(new AdobeCallback() {
       @Override
       public void call(Object o) {
-        // add your app id from the "Environments" tab on Launch.
+        // add your app id from the "Environments" tab on the Data Collection UI.
         MobileCore.configureWithAppID("your-app-id");
       }
     });

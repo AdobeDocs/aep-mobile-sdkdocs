@@ -23,7 +23,7 @@ This extension requires the [Adobe Analytics for Media](https://experienceleague
 
 <InlineAlert variant="info" slots="text"/>
 
-If you update the Adobe Media Analytics for Audio and Video launch extension to v2.x in your launch property, you must make sure to update and use AEP SDK Media extension v2.0.0 and higher.
+If you update the Adobe Media Analytics for Audio and Video tag extension to v2.x in your tag property, you must make sure to update and use AEP SDK Media extension v2.0.0 and higher.
 
 ![Adobe Media Analytics Extension Configuration](./images/index/configuration.png)
 
@@ -55,7 +55,7 @@ If you are using Media Extension v1.x, then go to Legacy settings section 1. Ena
 
 <InlineAlert variant="info" slots="text"/>
 
-This extension requires the [Adobe Analytics extension](../adobe-analytics/index.md). You must add the Analytics extension to your Launch property and make sure the extension is correctly configured.
+This extension requires the [Adobe Analytics extension](../adobe-analytics/index.md). You must add the Analytics extension to your mobile property and make sure the extension is correctly configured.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 

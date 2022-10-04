@@ -13,8 +13,8 @@ import privacychangesios from './tabs/privacy-changes-ios.md'
 
 The Adobe Experience Platform Analytics extension uses [tags](https://experience.adobe.com/#/data-collection/) to configure the Adobe Experience Platform SDKs. This replaces the ADBMobileConfig.json which the Mobile Services SDK used for configuration. To get started with the AEP SDKs:
 
-1. Create a mobile property on Launch. <br/>See [Set up a mobile property](../getting-started/create-a-mobile-property.md) for more information.
-2. Configure your mobile app with the create mobile property.<br/>The AEP Mobile Core extension provides general functionality required by all the Adobe AEP extensions. The Configuration extension is built into the Mobile Core and contains the configureWithAppId API. This API is used to link the Launch mobile property with your mobile app. The documentation for this API can be seen at the [Configuration API Reference](../mobile-core/configuration/api-reference.md#configurewithappid) page. A code sample showing the usage of this API is provided below.
+1. Create a mobile property on tags. <br/>See [Set up a mobile property](../getting-started/create-a-mobile-property.md) for more information.
+2. Configure your mobile app with the create mobile property.<br/>The AEP Mobile Core extension provides general functionality required by all the Adobe AEP extensions. The Configuration extension is built into the Mobile Core and contains the configureWithAppId API. This API is used to link the tag mobile property with your mobile app. The documentation for this API can be seen at the [Configuration API Reference](../mobile-core/configuration/api-reference.md#configurewithappid) page. A code sample showing the usage of this API is provided below.
 3. Once all the Platform extensions are imported and configured correctly, remove the v4 Mobile SDK dependency. <br/>This step is mandatory and a mix of v4 and AEP API calls is not supported.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>

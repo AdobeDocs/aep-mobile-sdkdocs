@@ -21,9 +21,9 @@
 
 ## April 13, 2021
 
-### Identity Launch Extension
+### Identity tags Extension
 
-You can now find the `Identity` extension in the Launch extensions catalog for mobile properties.
+You can now find the `Identity` extension in the tags extensions catalog for mobile properties.
 
 ## April 8, 2021
 
