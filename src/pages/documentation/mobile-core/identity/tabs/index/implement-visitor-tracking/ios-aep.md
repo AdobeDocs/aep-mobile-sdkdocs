@@ -1,4 +1,4 @@
-To append visitor information to the URL that is being used to open the web view, call [appendToUrl](api-reference.md#appendtourl-appendvisitorinfoforurl): FIX LINK
+To append visitor information to the URL that is being used to open the web view, call [appendToUrl](#appendtourl-appendvisitorinfoforurl): 
 
 #### Swift
 

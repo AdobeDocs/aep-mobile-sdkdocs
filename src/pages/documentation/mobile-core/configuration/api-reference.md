@@ -91,7 +91,7 @@ Xamarin
 
 This API is only available in Android and was added in Android was added in Android Core version 1.7.0.
 
-You can bundle a JSON configuration file in the app's Assets folder to replace or complement the configuration that was downloaded by using the [Configure with App ID per environment](./#configure-with-app-id-per-environment) approach.
+You can bundle a JSON configuration file in the app's Assets folder to replace or complement the configuration that was downloaded by using the [Configure with App ID per environment](./index.md#configure-with-app-id-per-environment) approach.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
@@ -101,7 +101,7 @@ Android
 
 ## configureWithFileInPath
 
-You can include a bundled JSON configuration file in your app package to replace or complement the configuration that was downloaded by using the [Configure with App ID per environment](./#configure-with-app-id-per-environment) approach. FIX LINK
+You can include a bundled JSON configuration file in your app package to replace or complement the configuration that was downloaded by using the [Configure with App ID per environment](./index.md#configure-with-app-id-per-environment) approach.
 
 To pass in a bundled path and file name:
 
@@ -173,7 +173,7 @@ Keys that are not found on the current configuration are added when this method 
 
 <InlineAlert variant="warning" slots="text"/>
 
-Do not use this API to update the `build.environment` key or any key with an environment prefix, because it can lead to unexpected behaviors. For more information, read [Environment-aware configuration properties](./#environment-aware-configuration-properties). (FIX LINK)
+Do not use this API to update the `build.environment` key or any key with an environment prefix, because it can lead to unexpected behaviors. For more information, read [Environment-aware configuration properties](./index.md#environment-aware-configuration-properties).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 

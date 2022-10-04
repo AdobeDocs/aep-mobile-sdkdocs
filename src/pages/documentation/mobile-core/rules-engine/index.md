@@ -10,7 +10,7 @@ The Rules Engine, when implemented through tags in the [Data Collection UI](http
 
 Data elements are the building blocks for the applications data dictionary and are used to collect, organize, and deliver data across marketing and ad technology.
 
-A data element is a variable where the value can be mapped to a Visitor ID, a Carrier Name, an Advertising ID, a Push ID and so on. In Experience Platform Launch, you can reference this value by its variable name. This collection of data elements becomes the dictionary of defined data that you can use to build your rules (events, conditions, and actions), and this dictionary is shared across Experience Platform Launch where it can be used with any extension in your property.
+A data element is a variable where the value can be mapped to a Visitor ID, a Carrier Name, an Advertising ID, a Push ID and so on. In the Data Collection UI, you can reference this value by its variable name. This collection of data elements becomes the dictionary of defined data that you can use to build your rules (events, conditions, and actions), and this dictionary is shared across the Data Collection UI where it can be used with any extension in your property.
 
 ## Rules
 
@@ -35,7 +35,7 @@ An exception is defined as a NOT condition, and this condition excludes a specif
 
 ## Actions (Then)
 
-An action, also known as a consequence, triggers an event after a rule's events have occurred, and the conditions in the rule have evaluated to `true`. A rule in Experience Platform Launch can trigger as many discrete actions as you want. For example, a rule can be triggered to set and send a data element’s value to Adobe Analytics and send the same set of data to a third-party extension. You do not need to create separate rules for each extension or tag.
+An action, also known as a consequence, triggers an event after a rule's events have occurred, and the conditions in the rule have evaluated to `true`. A tag rule can trigger as many discrete actions as you want. For example, a rule can be triggered to set and send a data element’s value to Adobe Analytics and send the same set of data to a third-party extension. You do not need to create separate rules for each extension or tag.
 
 Rules include data elements, events, conditions, and actions that are provided by the relevant extensions. These rules can be modified at any time and are saved and published as a new library that the SDK downloads as the latest set of rules.
 

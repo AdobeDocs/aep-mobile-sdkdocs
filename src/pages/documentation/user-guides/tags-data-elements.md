@@ -65,7 +65,7 @@ In the following example, a rule is created to send a postback that contains the
 
 ## Publish the configuration
 
-After the property is published, this new rule is made available for download by the applications that are configured for this property. For more information, please read the [publish the configuration tutorial](https://aep-sdks.gitbook.io/docs/getting-started/create-a-mobile-property#publish-configuration) and the[configure the SDK with an Environment ID tutorial](https://aep-sdks.gitbook.io/docs/getting-started/initialize-the-sdk#configure-the-sdk-with-an-environment-id). When the application launches, this rule is triggered and, if the ECID exists in the SDK, a postback is sent to the URL with the ECID value. FIX LINKS
+After the property is published, this new rule is made available for download by the applications that are configured for this property. For more information, please read the [publish the configuration tutorial](../getting-started/create-a-mobile-property.md#publish-configuration) and the[configure the SDK with an Environment ID tutorial](../getting-started/initialize-the-sdk.md#configure-the-sdk-with-an-environment-id). When the application launches, this rule is triggered and, if the ECID exists in the SDK, a postback is sent to the URL with the ECID value.
 
 ## Additional information
 

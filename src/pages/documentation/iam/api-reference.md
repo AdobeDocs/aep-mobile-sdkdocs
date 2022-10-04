@@ -1,4 +1,4 @@
-import Tabs from './tabs/usage.md'
+import Tabs from './tabs/api-reference.md'
 
 # API reference
 

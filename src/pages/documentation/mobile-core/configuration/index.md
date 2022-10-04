@@ -27,7 +27,7 @@ When you configure a mobile property, a unique environment ID is generated that 
 
 <InlineAlert variant="success" slots="text"/>
 
-As best practice, you should configure a mobile property in the Data Collection UI and use environment IDs to configure your application. Follow the steps in the tutorial on [setting up a mobile property](https://aep-sdks.gitbook.io/docs/getting-started/create-a-mobile-property) if you need to create a new Experience Platform App. (FIX LINK)
+As best practice, you should configure a mobile property in the Data Collection UI and use environment IDs to configure your application. Follow the steps in the tutorial on [setting up a mobile property](../../getting-started/create-a-mobile-property.md) if you need to create a new Experience Platform App.
 
 After the configuration is retrieved when the app is initially launched, the configuration is stored in local cache. The SDK tries to refresh the configuration every cold launch or when a new session is detected. If there is no change or a network request error occurs while downloading the configuration file, the cached configuration will be used.
 
@@ -69,7 +69,7 @@ Keys that are not found on the current configuration are added when this method 
 
 <InlineAlert variant="warning" slots="text"/>
 
-Do not use this API to update the build.environment or any key with an environment prefix, because it can lead to unexpected behavior. For more information, read [Environment-aware configuration properties](./#environment-aware-configuration-properties). FIX LINK
+Do not use this API to update the build.environment or any key with an environment prefix, because it can lead to unexpected behavior. For more information, read [Environment-aware configuration properties](./index.md#environment-aware-configuration-properties).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
@@ -117,7 +117,7 @@ For implementation details, please refer to [Configuration API reference](./api-
 
 ## Using a bundled file configuration
 
-You can include a bundled JSON configuration file in your app package to replace or complement the configuration that was downloaded by using the [Configure with App ID per environment](./#configure-with-app-id-per-environment) approach. FIX LINK
+You can include a bundled JSON configuration file in your app package to replace or complement the configuration that was downloaded by using the [Configure with App ID per environment](./index.md#configure-with-app-id-per-environment) approach.
 
 To download the JSON configuration file, use the following URL:
 

@@ -46,7 +46,7 @@ const AdobeSDK = require('AdobeSDK.js');
 
 如果需要将数据发送给多个报表包，可以在相应配置中用逗号分割RSID。例如：<br/>`"analytics.rsids": "example.rsid1,example.rsid2"`。这个写法会把数据发送给`example.rsid1`和`example.rsid2`这两个报表包。
 
-SDK初始化完成之后，会自动开始收集数据，并向Adobe Analytics发送生命周期指标。请在 [生命周期指标](https://aep-sdks.gitbook.io/docs/resources/adobe-experience-platform-mini-programs-sdk/implementation-zhong-wen-1#life-cyclecn-2)查看完整的生命周期指标。
+SDK初始化完成之后，会自动开始收集数据，并向Adobe Analytics发送生命周期指标。请在 [生命周期指标](#生命周期指标)查看完整的生命周期指标。
 
 ## 启用调试日志功能
 

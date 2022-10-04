@@ -6,7 +6,7 @@ title: Add Analytics - Java
 
 #### Java
 
-Add the [Mobile Core](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core) and Analytics extensions to your project using the app's Gradle file.
+Add the [Mobile Core](../mobile-core/index.md) and Analytics extensions to your project using the app's Gradle file.
 
 ```java
 implementation 'com.adobe.marketing.mobile:sdk-core:1.+'

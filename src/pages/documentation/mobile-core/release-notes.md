@@ -525,7 +525,7 @@ The following updates were made in this release:
 
 ### iOS Core 2.6.0
 
-* Added support for overriding internal network stack with customer-provided implementation. For more information, see [Override network stack](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/platform-services#ios).
+* Added support for overriding internal network stack with customer-provided implementation. For more information, see [Override network stack](../mobile-core/platform-services/index.md#ios).
 
 ## March 16, 2020
 

@@ -273,6 +273,20 @@ module.exports = {
                 ]
             },
             {
+                title: "Adobe Journey Optimizer Decisioning",
+                path: "/documentation/adobe-journey-optimizer-decisioning",
+                pages: [
+                    {
+                        title: "API reference",
+                        path: "documentation/adobe-journey-optimizer-decisioning/api-reference"
+                    },
+                    {
+                        title: "Release notes",
+                        path: "documentation/adobe-journey-optimizer-decisioning/release-notes"
+                    }
+                ]
+            },
+            {
                 title: "Adobe Journey Optimizer - in-app messaging",
                 path: "/documentation/iam",
                 pages: [
@@ -788,5 +802,5 @@ module.exports = {
         ]
     },
     plugins: [`@adobe/gatsby-theme-aio`],
-    pathPrefix: process.env.PATH_PREFIX || '/client-sdk/'
+    pathPrefix: process.env.PATH_PREFIX || '/client-sdks/'
 };

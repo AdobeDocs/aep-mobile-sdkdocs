@@ -7,7 +7,7 @@ title: Add Analytics - iOS
 
 #### iOS
 
-Add the [Mobile Core](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core) and Analytics extensions to your project using Cocoapods.
+Add the [Mobile Core](../mobile-core/index.md) and Analytics extensions to your project using Cocoapods.
 
 Add the following pods in your `Podfile`:
 

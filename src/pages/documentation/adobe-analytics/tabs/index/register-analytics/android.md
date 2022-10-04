@@ -1,6 +1,6 @@
 #### Java
 
-The following sample shows how to set up methods that call the [setApplication()](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/mobile-core-api-reference#setapplication) method in the `onCreate()` method:
+The following sample shows how to set up methods that call the [setApplication()](../mobile-core/api-reference.md#setapplication) method in the `onCreate()` method:
 
 ```java
 public class MobileApp extends Application {

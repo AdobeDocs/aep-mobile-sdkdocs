@@ -6,7 +6,7 @@ The following events are handled by the Signal extension:
 
 ### Rules Engine response content
 
-This event is used by the Signal extension to queue and send network calls that correspond to the [Sync PII Consequence](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/rules-engine/rules-engine-consequence-details#sync-pii-consequence) or postback message. FIX LINK
+This event is used by the Signal extension to queue and send network calls that correspond to the [Sync PII Consequence](../rules-engine/consequence-details.md#sync-pii-consequence) or postback message.
 
 This event is triggered by the Rules Engine when the events and conditions are met.
 
@@ -22,7 +22,7 @@ The following key-value pairs in this event correspond to postback and sync PII:
 
 | Key | Friendly name | Type | Optional | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| `triggeredconsequence` | Description URL | Map | Yes | Triggered Consequence details in the map.    For the detailed description of each rule consequence, see the following pages:  [Postback consequence](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/rules-engine/rules-engine-consequence-details#postback-consequence) [Sync PII consequence](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/rules-engine/rules-engine-consequence-details#sync-pii-consequence) [Open URL consequence](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/mobile-core/rules-engine/rules-engine-consequence-details#open-url-consequence) |
+| `triggeredconsequence` | Description URL | Map | Yes | Triggered Consequence details in the map.    For the detailed description of each rule consequence, see the following pages:  [Postback consequence](../rules-engine/technical-details.md#postback-consequence) [Sync PII consequence](../rules-engine/technical-details.md#sync-pii-consequence) [Open URL consequence](../rules-engine/technical-details.md#open-url-consequence) |
 
 FIX ABOVE LINKS
 
