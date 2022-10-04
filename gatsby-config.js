@@ -475,7 +475,6 @@ module.exports = {
                         title: "Frequently asked questions",
                         path: "documentation/identity-for-edge-network/faq"
                     }
-
                 ]
             },
             {
