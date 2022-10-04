@@ -464,17 +464,18 @@ module.exports = {
                 path: "/documentation/identity-for-edge-network",
                 pages: [
                     {
+                        title: "Release notes",
+                        path: "documentation/identity-for-edge-network/release-notes"
+                    },
+                    {
                         title: "API reference",
                         path: "documentation/identity-for-edge-network/api-reference"
                     },
                     {
-                        title: "FAQ",
+                        title: "Frequently asked questions",
                         path: "documentation/identity-for-edge-network/faq"
-                    },
-                    {
-                        title: "Release notes",
-                        path: "documentation/identity-for-edge-network/release-notes"
                     }
+
                 ]
             },
             {
