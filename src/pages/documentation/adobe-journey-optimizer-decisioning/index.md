@@ -300,5 +300,3 @@ To update the SDK configuration programmatically, use the following information 
 <InlineAlert variant="info" slots="text"/>
 
 If the override dataset is used for proposition tracking, make sure the corresponding schema definition contains the `Experience Event - Proposition Interaction` field group. For more information, see the [setup schemas and datasets guide](../getting-started/set-up-schemas-and-datasets.md).
-
-
