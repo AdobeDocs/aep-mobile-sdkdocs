@@ -407,7 +407,7 @@ public class Proposition {
 }
 ```
 
-<Variant platform="ios" task="proposition-tracking-edge" repeat="5"/>
+<Variant platform="ios" task="proposition-tracking-edge" repeat="3"/>
 
 #### Swift
 

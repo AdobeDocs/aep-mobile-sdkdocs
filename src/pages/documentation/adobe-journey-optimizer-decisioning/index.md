@@ -20,7 +20,7 @@ On [Experience Platform Data Collection](https://experience.adobe.com/#/data-col
 
 1. In the datastream, click on the desired environment from the list. Make sure **Adobe Experience Platform** section is enabled and configured with the required information like **Sandbox** and **Event Dataset**.
 2. For Journey Optimizer - Offer Decisioning, navigate to **Adobe Experience Platform** section and enable **Offer Decisioning** checkbox.
-![Datastream configuration - Offer Decisioning](../assets/index/configuration-offer-decisioning.png)
+![Datastream configuration - Offer Decisioning](./assets/index/configuration-offer-decisioning.png)
 3. For Adobe Target, navigate to **Adobe Target** section and enable it. Specify the configuration. For more information on the configuration settings, refer to the [Administer Target Overview](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en).
 ![Datastream configuration - Adobe Target](./assets/index/configuration-adobe-target.png)
 1. Click **Save**.
@@ -65,17 +65,6 @@ Android
 iOS (AEP 3.x)
 
 <Tabs query="platform=ios&task=register"/>
-
-{% tabs %}
-{% tab title="Android" %}
-
-{% endtab %}
-{% tab title="iOS (AEP 3.x)" %}
-
-
-
-{% endtab %}
-{% endtabs %}
 
 ## Adobe Journey Optimizer - Offer Decisioning
 
@@ -139,17 +128,6 @@ iOS (AEP 3.x)
 
 <Tabs query="platform=ios&task=target-parameters"/>
 
-{% tabs %}
-{% tab title="Android" %}
-
-{% endtab %}
-{% tab title="iOS (AEP 3.x)" %}
-
-
-
-{% endtab %}
-{% endtabs %}
-
 ### Target Third Party ID
 
 To use Target Third Party ID in the Experience Edge mobile workflows, the corresponding namespace needs to be configured in Experience Platform Data Collection.
@@ -172,15 +150,6 @@ Android
 iOS (AEP 3.x)
 
 <Tabs query="platform=ios&task=target-tpid"/>
- 
-{% tabs %}
-{% tab title="Android" %}
-
-{% endtab %}
-{% tab title="iOS (AEP 3.x)" %}
-
-{% endtab %}
-{% endtabs %}
 
 ### Target Audience Segmentation using Mobile Lifecycle Metrics
 
@@ -293,15 +262,6 @@ Android
 iOS (AEP 3.x)
 
 <Tabs query="platform=ios&task=send-event-offer"/>
-
-{% tabs %}
-{% tab title="Android" %}
-
-{% endtab %}
-{% tab title="iOS (AEP 3.x)" %}
-
-{% endtab %}
-{% endtabs %}
 
 ### Proposition tracking using Edge extension API
 
