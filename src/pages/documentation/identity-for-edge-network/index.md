@@ -4,7 +4,7 @@ import Tabs from './tabs/index.md'
 
 The Adobe Experience Platform Identity mobile extension enables identity management from your mobile app when using the Adobe Experience Platform Mobile SDK and the [Edge Network extension](../edge-network-extensions/index.md).
 
-## Configure the Adobe Experience Platform Identity extension in the Data Collection UI
+## Configure the Identity extension in the Data Collection UI
 
 1. In Data Collection UI, in your mobile property, select the **Extensions** tab.
 2. On the **Catalog** tab, locate or search for the **Identity** extension, and select **Install**.
@@ -60,10 +60,10 @@ Ad tracking enabled - when the new value sent to the API is:
 - A valid UUID string (example: `"a127a99e-50be-4d87-bf6f-6ab9541c105b"`)
 
 Process:
-1. Updates the client side XDM `IdentityMap` with the new value for IDFA/GAID, which is included in subsequent [XDM Experience events](../edge-network-extensions/xdm-experience-events.md). For more details, see the [standard Identity namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#standard). 
+1. Updates the client side XDM `IdentityMap` with the new value for IDFA/GAID, which is included in subsequent [XDM Experience events](../edge-network-extensions/xdm-experience-events.md). For more details, see the [standard Identity namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#standard).
 2. Sends a [consent update event](https://experienceleague.adobe.com/docs/experience-platform/xdm/data-types/consents.html) with ad ID consent preferences set to `yes` (only when a valid ad ID is absent from the `IdentityMap` and the Edge Consent extension is registered and properly configured).
 
-Ad tracking disabled - Given a valid ad ID already exists in the `IdentityMap`, and the new value sent to the API is: 
+Ad tracking disabled - Given a valid ad ID already exists in the `IdentityMap`, and the new value sent to the API is:
 - `null`/`nil`
 - Empty string (`""`)
 - All-zeros string (`"00000000-0000-0000-0000-000000000000"`)  
