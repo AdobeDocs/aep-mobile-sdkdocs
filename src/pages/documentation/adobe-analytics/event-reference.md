@@ -191,8 +191,7 @@ The Analytics request identity event is responsible for fetching the Analytics t
 After the Analytics identity request event is received, the Analytics extension completes one of the following tasks:
 
 * Checks the persistence for the saved AID and VID.
-* If the event received is `nil`, creates a sync network request to the Analytics server to retrieve the AID.
-* Dispatches an Analytics Identity Response Event with the AID and VID value.
+* If AID and VID are set, dispatches an Analytics Identity Response Event with the AID and VID value.
 
 #### Data payload definition
 
@@ -213,6 +212,8 @@ This event will be generated in the following scenarios:
 * Initial config requested by the customer.
 * Configuration modified (remote update or local developer action).
 * In response to a configuration request event with the `config.getData` data key.
+
+For more information about the data payload definition for this event, see the **Data payload definition** section for each extension.
 
 #### Data payload definition
 

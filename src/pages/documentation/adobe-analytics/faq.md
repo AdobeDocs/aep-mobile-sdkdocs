@@ -34,7 +34,7 @@ Yes. To capture data in multiple report suites, please read the [report suites g
 
 If you have followed the documentation and are unable to see reporting data in your Adobe Analytics dashboard, please consider the following next steps:
 
-## Verify that the Analytics extension is registered
+### Verify that the Analytics extension is registered
 
 The [Analytics extension](./index.md) and its dependent [Identity extension](../mobile-core/identity/index.md) should be registered and configured correctly for the SDK to start processing trackAction/trackState requests.
 
