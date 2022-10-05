@@ -12,7 +12,7 @@ The main interface for Assurance will show a running event list of all SDK event
 
 ## Adobe Analytics view
 
-The [Adobe Analytics](../platform-assurance/tutorials/adobe-analytics.md#using-project-griffon-for-adobe-analytics) event list offers a focused view of analytics events triggered in the application. You can sort through all of the track action and track state calls. In the [analytics view in Adobe Experience Platform Assurance](../platform-assurance/tutorials/adobe-analytics.md), you can see both the raw hit request sent to Analytics and the post-processed details.
+The [Adobe Analytics](../platform-assurance/tutorials/adobe-analytics.md#using-assurance-for-adobe-analytics) event list offers a focused view of analytics events triggered in the application. You can sort through all of the track action and track state calls. In the [analytics view in Adobe Experience Platform Assurance](../platform-assurance/tutorials/adobe-analytics.md), you can see both the raw hit request sent to Analytics and the post-processed details.
 
 ![Assurance analytics view](./assets/validate/assurance-analytics.png)
 

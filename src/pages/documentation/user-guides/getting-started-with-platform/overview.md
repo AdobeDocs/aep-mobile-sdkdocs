@@ -8,7 +8,7 @@ The demo mobile application has multiple tabs. For this exercise, the `Edge` and
 
 * Access to Adobe Experience Platform
 * Access to Data Collection UI dashboard
-* Access to Project Griffon
+* Access to Adobe Experience Platform Assurance
 * Minimal Swift/Android development knowledge
 * General knowledge about the Adobe Experience Platform Mobile SDKs
 
@@ -158,18 +158,18 @@ AEP Assurance (formerly known as Project Griffon) is a product from Adobe that l
    * Select `Create Session` in the top right.
    * In the `Create New Session` dialog, review the instructions, and then select `Start`.
    * When asked for the **Base URL**, enter `sampleapp://` , then click `Next`.
-3. After starting an Assurance session, click on the the Session Details button on the right corner of the Project Griffon page and copy the session link.
+3. After starting an Assurance session, click on the the Session Details button on the right corner of the Assurance page and copy the session link.
 
    If you are using a real device, you can also use the `Scan QR Code` functionality. You can then skip to step 6.
 
    ![](./assets/overview/commerces-session-details.png)
 
 4. Go to the sample application that is installed on your device, and click on the `Assurance` tab.
-5. Paste the **Assurance Session URL** that you copied from Project Griffon, and click `Connect`.
+5. Paste the **Assurance Session URL** that you copied from Assurance, and click `Connect`.
 
    ![](./assets/overview/commerce-assurance-login.png)
 
-6. Enter the PIN from Project Griffon and click `Connect`.
+6. Enter the PIN from Assurance and click `Connect`.
 
    ![](./assets/overview/commerce-assurance-connection.png)
 
@@ -211,7 +211,7 @@ For this exercise, implement the "Add to cart functionality" in the sample appli
 
 <InlineAlert variant="info" slots="text"/>
 
-Use the `sendPurchaseXDMEvent` as an example and Project Griffon to validate that the XDM Experience Event is properly formatted.
+Use the `sendPurchaseXDMEvent` as an example and Assurance to validate that the XDM Experience Event is properly formatted.
 
 ## Next steps
 

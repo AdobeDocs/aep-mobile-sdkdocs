@@ -177,7 +177,7 @@ For SceneDelegate based applications
 **Example**
 
 ```javascript
-AEPAssurance.startSession("your-griffon-session-url");
+AEPAssurance.startSession("your-assurance-session-url");
 ```
 
 <Variant platform="flutter" api="start-session" repeat="5"/>

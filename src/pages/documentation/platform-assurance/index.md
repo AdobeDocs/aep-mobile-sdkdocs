@@ -63,6 +63,3 @@ To get started with Assurance, see the following:
 
 * [Set up Assurance](./set-up.md)
 * [Using Assurance](./tutorials/index.md)
-
-To access Assurance, see instructions on [Set up Assurance](set-up.md#how-to-participate-in-the-project-griffon-beta)
-
