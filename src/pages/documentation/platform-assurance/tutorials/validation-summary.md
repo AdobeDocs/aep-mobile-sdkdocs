@@ -75,5 +75,5 @@ If an error occurs in the JavaScript code editor, an `ERROR` status is displayed
 
 Additionally, you can also reach out to our team on our Slack Channel at [https://projectgriffon.slack.com/](https://projectgriffon.slack.com/).
 
-To learn more about validations, you can visit the [Adobe Experience Platform Assurance Validations](https://github.com/adobe/griffon-validation-plugins) GitHub. There you can find examples from validations owned by Adobe, as well as the [wiki](https://github.com/adobe/griffon-validation-plugins/wiki) that describes validations in more detail.
+To learn more about validations, you can visit the [Adobe Experience Platform Assurance Validations](https://github.com/adobe/assurance-validation-plugins) GitHub. There you can find examples from validations owned by Adobe, as well as the [wiki](https://github.com/adobe/assurance-validation-plugins/wiki) that describes validations in more detail.
 

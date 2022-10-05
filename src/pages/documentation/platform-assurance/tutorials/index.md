@@ -2,7 +2,7 @@
 
 ## Log in
 
-1. Visit the [Adobe Experience Platform Assurance UI](https://experience.adobe.com/griffon)
+1. Visit the [Adobe Experience Platform Assurance UI](https://experience.adobe.com/assurance)
 2. Log in using your Adobe ID credentials for the Experience Cloud.
 
    If you do not know your Adobe ID credentials, contact your Adobe administrator or see [how to log in](https://docs.adobe.com/content/help/en/core-services/interface/manage-users-and-products/getting-started-experience-cloud.html).
