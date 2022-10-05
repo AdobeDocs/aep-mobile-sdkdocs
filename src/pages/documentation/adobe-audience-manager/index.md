@@ -11,7 +11,7 @@ Adobe Audience Manager is a versatile audience data management platform. With th
 
 ## Configuring the Audience Manager extension in the Data Collection UI
 
-![Adobe Audience Manager Extension Configuration](images/index/configure.png)
+![Adobe Audience Manager Extension Configuration](assets/index/configure.png)
 
 1. In the Data Collection UI, click the **Extensions** tab.
 2. Choose **Catalog**, locate the **Adobe Audience Manager** extension, and select **Install**.

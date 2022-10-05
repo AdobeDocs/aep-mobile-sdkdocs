@@ -36,7 +36,7 @@ After you have tested your function, you can select **Upload** to save your vali
 | `uuid` | String | Universally unique identifier for the event. |
 | `timestamp` | Number | Timestamp from the client when the event was sent to Assurance. |
 | `eventNumber` | Number | Used to order when the event was sent. This key is useful when events have the same timestamp. |
-| `vendor` | String | Vendor identification string in the reverse domain name format (for example, com.adobe.griffon). |
+| `vendor` | String | Vendor identification string in the reverse domain name format (for example, com.adobe.assurance). |
 | `type` | String | Used to denote the type of event. |
 | `payload` | Object | Defines the data for the event and contains unique and common properties. Some common properties include `ACPExtensionEventSource and ACPExtensionEventType`. |
 | `annotations` | Array | An array of annotation objects. |
@@ -75,5 +75,5 @@ If an error occurs in the JavaScript code editor, an `ERROR` status is displayed
 
 Additionally, you can also reach out to our team on our Slack Channel at [https://projectgriffon.slack.com/](https://projectgriffon.slack.com/).
 
-To learn more about validations, you can visit the [Adobe Experience Platform Assurance Validations](https://github.com/adobe/griffon-validation-plugins) GitHub. There you can find examples from validations owned by Adobe, as well as the [wiki](https://github.com/adobe/griffon-validation-plugins/wiki) that describes validations in more detail.
+To learn more about validations, you can visit the [Adobe Experience Platform Assurance Validations](https://github.com/adobe/assurance-validation-plugins) GitHub. There you can find examples from validations owned by Adobe, as well as the [wiki](https://github.com/adobe/assurance-validation-plugins/wiki) that describes validations in more detail.
 

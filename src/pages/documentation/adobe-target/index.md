@@ -38,7 +38,7 @@ To get started with Target, follow these steps:
 
 ## Configure the Target extension in the Data Collection UI
 
-![Adobe Target Extension Configuration](./images/index/configuration.png)
+![Adobe Target Extension Configuration](./assets/index/configuration.png)
 
 1. In the Data Collection UI, select the **Extensions** tab.
 2. On the **Catalog** tab, locate the Adobe Target extension, and select **Install**.

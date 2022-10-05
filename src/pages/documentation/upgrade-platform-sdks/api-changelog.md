@@ -4,7 +4,7 @@ This page details SDK API changes between the Experience Platform SDKs and 4x SD
 
 ## Mobile Core APIs 
 
-For more information, see [Mobile Core API reference](https://github.com/Adobe-Marketing-Cloud/aep-sdks-documentation/blob/master/foundation-extensions/mobile-core/mobile-core-api-reference.md).
+For more information, see [Mobile Core API reference](../mobile-core/api-reference.md).
 
 ### Supported APIs
 
@@ -18,10 +18,10 @@ For more information, see [Mobile Core API reference](https://github.com/Adobe-M
 | [configureWithAppId](https://github.com/Adobe-Marketing-Cloud/aep-sdks-documentation/blob/master/resources/upgrading-to-aep/api-change-log.md): | Not applicable |
 | updateConfiguration: | Not applicable |
 | setAppGroup: | setAppGroup: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/ios-ext/ios-ext.html?lang=en))
-| [trackState:data](https://github.com/Adobe-Marketing-Cloud/aep-sdks-documentation/blob/master/foundation-extensions/mobile-core/mobile-core-api-reference.md#track-app-states-and-views): | trackState:data: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/states.html?lang=en) / [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/states.html?lang=en)) |
-| [trackAction:data](https://github.com/Adobe-Marketing-Cloud/aep-sdks-documentation/blob/master/foundation-extensions/mobile-core/mobile-core-api-reference.md#track-app-states-and-views): | trackAction:data: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/actions.html?lang=en) / [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/actions.html?lang=en)) |
-| [collectPII](https://github.com/Adobe-Marketing-Cloud/aep-sdks-documentation/blob/master/foundation-extensions/mobile-core/mobile-core-api-reference.md#collect-pii): | collectPII: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/postbacks/c-pii-postbacks.html?lang=en) / [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/postbacks/c-pii-postbacks.html?lang=en)) |
-| [getSdkIdentities](https://github.com/Adobe-Marketing-Cloud/aep-sdks-documentation/blob/master/foundation-extensions/mobile-core/identity/identity-api-reference.md#getidentifiers): | getAllIdentifiersAsync: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/privacy-gdpr-ios/c-mob-gdpr-ret-stored-ids-ios.html?lang=en) / [Android](https://experienceleague.adobe.com/docs/mobile-services/android/gdpr-privacy-android/c-mob-gdpr-ret-stored-ids-android.html?lang=en)) |
+| [trackState:data](../mobile-core/api-reference.md#track-app-states-and-views): | trackState:data: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/states.html?lang=en) / [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/states.html?lang=en)) |
+| [trackAction:data](../mobile-core/api-reference.md#track-app-states-and-views): | trackAction:data: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/actions.html?lang=en) / [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/actions.html?lang=en)) |
+| [collectPII](../mobile-core/api-reference.md#collect-pii): | collectPII: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/postbacks/c-pii-postbacks.html?lang=en) / [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/postbacks/c-pii-postbacks.html?lang=en)) |
+| [getSdkIdentities](../mobile-core/identity/api-reference.md#getidentifiers): | getAllIdentifiersAsync: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/privacy-gdpr-ios/c-mob-gdpr-ret-stored-ids-ios.html?lang=en) / [Android](https://experienceleague.adobe.com/docs/mobile-services/android/gdpr-privacy-android/c-mob-gdpr-ret-stored-ids-android.html?lang=en)) |
 
 ### Deprecated APIs and functionality
 
@@ -47,9 +47,9 @@ For more information, see [Mobile Core API reference](https://github.com/Adobe-M
 
 <InlineAlert variant="info" slots="text"/>
 
-In the v4 iOS SDK, Lifecycle start and stop calls are made automatically by the SDK. In the AEP SDK, the calls to start and stop lifecycle will need to be made by the application developer. For more information, see [Lifecycle extension in iOS](https://github.com/Adobe-Marketing-Cloud/aep-sdks-documentation/blob/master/foundation-extensions/mobile-core/lifecycle/lifecycle-extension-in-ios.md). 
+In the v4 iOS SDK, Lifecycle start and stop calls are made automatically by the SDK. In the AEP SDK, the calls to start and stop lifecycle will need to be made by the application developer. For more information, see [Lifecycle extension in iOS](../mobile-core/lifecycle/ios.md). 
 
-For more information, see [Lifecycle API reference](https://github.com/Adobe-Marketing-Cloud/aep-sdks-documentation/blob/master/foundation-extensions/mobile-core/lifecycle/lifecycle-api-reference.md).
+For more information, see [Lifecycle API reference](../mobile-core/lifecycle/api-reference.md).
 
 | Experience Platform SDK | 4x SDK |
 |---|---|

@@ -17,7 +17,7 @@ import AddCampaignClassicAndroid from './tabs/index/add-campaign-classic/android
 
 ### Configure Campaign Classic extension
 
-![Configuring the Campaign Classic extension](./images/index/configure.png)
+![Configuring the Campaign Classic extension](./assets/index/configure.png)
 
 <InlineAlert variant="info" slots="text"/>
 

@@ -3,7 +3,7 @@ import AttachingDataTarget from './tabs/attach-data/attaching-data/target.md'
 
 # Attach data to SDK events
 
-The attach data_rule action is supported in [Mobile Core](../../foundation-extensions/mobile-core/) starting from version 2.1.8 (Launch), 2.3.5 (iOS), and 1.4.5 (Android). This action is powerful, complex, and enables advanced use cases.
+The attach data_rule action is supported in [Mobile Core](../mobile-core/index.md) starting from version 2.1.8 (Launch), 2.3.5 (iOS), and 1.4.5 (Android). This action is powerful, complex, and enables advanced use cases.
 
 To use this action, you need to learn how events flow in the Adobe Experience Platform Mobile SDK and how they interact with the [rules engine](../mobile-core/rules-engine/index.md).
 
