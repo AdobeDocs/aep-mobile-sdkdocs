@@ -1,5 +1,42 @@
 # Release Notes
 
+## August 25, 2022
+
+### iOS ACPAnalytics 2.5.4
+
+* Fix race conditions in AnalyticsHitQueue to prevent crash related to concurrent reset of database.
+
+## June 30, 2022
+
+### iOS AEPAnalytics 3.2.0
+
+* Added tvOS support.
+
+## June 7, 2022
+
+### iOS ACPAnalytics 2.5.3
+
+* Fix crash in AnalyticsHitDatabase caused by unprotected shared access of AnalyticsState object.
+
+
+## May 24, 2022
+
+### iOS Analytics 2.5.2
+
+* Fixed a bug for the integration with Assurance where "No Debug Flag" was showing in the UI for some events.
+
+## March 31, 2022
+
+### iOS AEPAnalytics 3.0.4
+
+* Fixed `getTrackingIdentifier` and `getVisitorIdentifier` APIs to `return nil` instead of `AEPError.unexpected` error when AID/VID values are not found in persistence.
+
+## March 3, 2022
+
+### Android Analytics 1.2.10
+
+* Fixed a bug for the integration with Assurance where "No Debug Flag" was showing in the UI for some events.
+
 ## October 25, 2021
 
 ### iOS AEPAnalytics 3.0.3

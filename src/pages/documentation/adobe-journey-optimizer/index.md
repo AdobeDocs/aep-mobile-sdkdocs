@@ -16,9 +16,9 @@ The following documentation details how to use the extension and required config
 1. Read the tutorial on [getting started with push configuration](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/configuration/push-config/push-gs.html) to learn how to configure push channels in Adobe Journey Optimizer.
 2. [Update your app's Datastream](#update-datastream-with-profile-dataset) in [Adobe Experience Platform Data Collection](https://experience.adobe.com/#/data-collection/)
 3. Integrate with following extensions:
-   * [Mobile Core](../../foundation-extensions/mobile-core/)
-   * [Adobe Experience Platform Edge Network](../../foundation-extensions/experience-platform-extension/)
-   * [Identity for Edge Network](../../foundation-extensions/identity-for-edge-network/)
+   * [Mobile Core](../mobile-core/index.md)
+   * [Adobe Experience Platform Edge Network](../edge-network-extensions/index.md)
+   * [Identity for Edge Network](../identity-for-edge-network/index.md)
 
 ### Update Datastream with a Profile dataset
 

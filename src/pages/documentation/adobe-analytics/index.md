@@ -193,11 +193,11 @@ The number of seconds to wait before Analytics launch hits are sent from the SDK
 
 ## Send Lifecycle metrics to Analytics
 
-To automatically report on the application lifecycle details in Analytics, ensure that you properly configure the lifecycle data collection. For more information, see the documentation on [Lifecycle metrics](../../foundation-extensions/mobile-core/lifecycle/).
+To automatically report on the application lifecycle details in Analytics, ensure that you properly configure the lifecycle data collection. For more information, see the documentation on [Lifecycle metrics](../mobile-core/lifecycle/metrics.md).
 
 ## Send app states and actions to Analytics
 
-To track mobile app states and actions in Adobe Analytics, implement the [trackAction](../mobile-core/api-reference.md#trackaction) and [trackState](../mobile-core/api-reference.md#trackstate) APIs from the Mobile Core extension. For more information, see the [track app actions](../../foundation-extensions/mobile-core/mobile-core-api-reference.md#track-app-actions) and [track app states](../../foundation-extensions/mobile-core/mobile-core-api-reference.md#track-app-states-and-views) tutorials.
+To track mobile app states and actions in Adobe Analytics, implement the [trackAction](../mobile-core/api-reference.md#trackaction) and [trackState](../mobile-core/api-reference.md#trackstate) APIs from the Mobile Core extension. For more information, see the [track app actions](../mobile-core/api-reference.md#track-app-actions) and [track app states](../mobile-core/api-reference.md#track-app-states-and-views) tutorials.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -251,7 +251,7 @@ Event serialization is not supported by processing rules. To set serialized even
 
 <SerializeXamarin/>
 
-The following video shows you how to use [trackState](../../foundation-extensions/mobile-core/mobile-core-api-reference.md#track-app-states-and-views) APIs to send data to Adobe Analytics.
+The following video shows you how to use [trackState](../mobile-core/api-reference.md#track-app-states-and-views) APIs to send data to Adobe Analytics.
 
 <Media slots="video"/>
 

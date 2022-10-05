@@ -44,7 +44,7 @@ The handleNotificationResponse function transmits the push notification interact
 
 ## registerExtension
 
-The registerExtension API lets you register your extension with the [Mobile Core](../../foundation-extensions/mobile-core/).
+The registerExtension API lets you register your extension with the [Mobile Core](../mobile-core/index.md).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

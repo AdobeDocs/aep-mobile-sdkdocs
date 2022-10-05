@@ -244,7 +244,7 @@ Starting with v1.2.9 (Android) / v3.0.3(iOS AEPAnalytics) / v2.5.1 (iOS ACPAnaly
 
 <InlineAlert variant="warning" slots="text"/>
 
-Before you use this API, please read the documentation on [identifying unique visitors](https://experienceleague.adobe.com/docs/analytics/components/metrics/unique-visitors.html).
+Starting with v1.2.9 (Android) / v3.0.3(iOS AEPAnalytics) / v2.5.1 (iOS ACPAnalytics) this API does not generate or retrieve a new tracking identifier (AID) for new visitors. For the visitors which have an AID previously generated will continue retrieve the AID value with this API, and new users will use the ECID (MID) value as the primary identity.<br/><br/>Before you use this API, please read the documentation on [identifying unique visitors](https://experienceleague.adobe.com/docs/analytics/components/metrics/unique-visitors.html).
 
 Retrieves the Analytics tracking identifier that is generated for this app/device instance. This identifier is an app-specific, unique visitor ID that is generated at the initial launch and is stored and used after the initial launch. The ID is preserved between app upgrades and is removed when the app is uninstalled. Invoke the callback with NSError if an unexpected error occurs or the request times out.
 
@@ -328,7 +328,7 @@ Clears the identities stored in the Analytics extension - `tracking identifier (
 
 <InlineAlert variant="info" slots="text"/>
 
-Support for this API was added in: <ul><li>Android Analytics version 1.2.9</li><li>iOS AEPAnalytics version 3.0.3</li></ul><br/>See [MobileCore.resetIdentities](../../foundation-extensions/mobile-core/mobile-core-api-reference.md#resetidentities) for more details.
+Support for this API was added in: <ul><li>Android Analytics version 1.2.9</li><li>iOS AEPAnalytics version 3.0.3</li></ul><br/>See [MobileCore.resetIdentities](../mobile-core/api-reference.md#resetidentities) for more details.
 
 ## sendQueuedHits
 
