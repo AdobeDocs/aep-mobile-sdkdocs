@@ -35,11 +35,11 @@ To set the products variable, set a context data key to `&&products`, and set th
 
 A sample network request can be seen in the image below:
 
-![Sample network request](./images/product-variable/sample-network-request.png)
+![Sample network request](./assets/product-variable/sample-network-request.png)
 
 _`products`_ is set directly on the image request, and the other variables are set as context data. All context data variables must be mapped by using processing rules:
 
-![Map products](./images/product-variable/map-products.png)
+![Map products](./assets/product-variable/map-products.png)
 
 You do **not** need to map the `products` variable using processing rules because it is set directly on the image request by the SDK.
 

@@ -26,7 +26,7 @@ Navigate to a previously configured Datastream by following the instructions in 
 
 Select the pre-created **CJM Push Profile Dataset** in **Profile Dataset** dropdown (under the **Adobe Experience Platform** section) and select **Save**.
 
-![](./images/index/update-datastream.png)
+![](./assets/index/update-datastream.png)
 
 ## Setup Adobe Journey Optimizer extension
 
@@ -43,7 +43,7 @@ Go to the [Experience Platform Data Collection UI](https://experience.adobe.com/
 
 The datasets selected should use a schema that uses the "Push Notification Tracking" XDM field group. The pre-created CJM Push Tracking Dataset contains this XDM field group in its schema definition. For more information, please read the tutorial on [setting up schemas and datasets](../../getting-started/setup-schemas-and-datasets.md).
 
-![](./images/index/configuration.png)
+![](./assets/index/configuration.png)
 
 ### Implement extension in mobile app
 

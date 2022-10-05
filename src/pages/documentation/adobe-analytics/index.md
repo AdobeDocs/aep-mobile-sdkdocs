@@ -42,15 +42,15 @@ import UpdateXamarin from './tabs/index/update-analytics/xamarin.md'
 4. Click **Save**.
 5. Follow the publishing process to update SDK configuration.
 
-![Workflow overview for the Data Collection UI, the Mobile SDK, and Adobe Analytics](./images/index/workflow.png)
+![Workflow overview for the Data Collection UI, the Mobile SDK, and Adobe Analytics](./assets/index/workflow.png)
 
 ### Configure the Analytics extension
 
-![Adobe Analytics Extension Configuration](./images/index/mobile-analytics-configuration.png)
+![Adobe Analytics Extension Configuration](./assets/index/mobile-analytics-configuration.png)
 
 #### Analytics company
 
-![Adobe Analytics Company](./images/index/mobile-analytics-company.png)
+![Adobe Analytics Company](./assets/index/mobile-analytics-company.png)
 
 If you have access to more than one Analytics company, a select menu will appear, allowing you to choose which company you want to use. If you only have access to one Analytics company, this select menu will not appear.
 

@@ -71,7 +71,7 @@ The Mobile Services extension requires the Analytics extension for reporting. It
    2. Select **Save**.
    3. Follow the publishing process to update the SDK configuration.
 
-![Mobile Services Extension Configuration](images/index/install-extension.png)
+![Mobile Services Extension Configuration](assets/index/install-extension.png)
 
 ### Manual configuration
 
@@ -83,7 +83,7 @@ The following instructions only apply if you **do not** see your app listed or n
 
 If you are sending data to multiple Analytics report suites, use the Acquisition App ID from the app that is associated with the first report suite in your list of report suite IDs.
 
-![Mobile Services Extension Configuration](images/index/custom-install-extension.png)
+![Mobile Services Extension Configuration](assets/index/custom-install-extension.png)
 
 To install the Mobile Services extension, complete the following steps:
 
@@ -95,13 +95,13 @@ To install the Mobile Services extension, complete the following steps:
 
 4. Select your app, navigate to Manage App Settings page, and in the **SDK Acquisition Options** section, copy the hashed string similar to the highlighted value:
 
-   ![](images/index/sdk-acquisition-options.png)
+   ![](assets/index/sdk-acquisition-options.png)
 
 5. Provide the **Messages URL**. This value would look something similar to: `https://assets.adobedtm.com/b213432c5204bf94318f4ef0539a38b487d10368/scripts/satellite-5c7711bc64746d7f5800036e.json`
 
    You can find the Messages URL from your `ADBMobileConfig.json` file typically near the bottom of the file.
 
-   ![](images/index/adb-mobile-config.png)
+   ![](assets/index/adb-mobile-config.png)
 
 6. Select **Save**.
 7. Follow the publishing process to update your SDK configuration.
@@ -111,7 +111,7 @@ To install the Mobile Services extension, complete the following steps:
 1. To ensure that this extension is correctly configured and implemented, follow the steps in the [configure the Mobile Services extension in the Data Collection UI](#configure-the-mobile-services-extension-in-the-data-collection-ui) section.
 2. In **Launch Hit Delay**, type a value of 5s or more to ensure that the acquisition context is sent to Analytics with your Lifecycle information.
 
-![](images/index/launch-hit-delay.png)
+![](assets/index/launch-hit-delay.png)
 
 ## Add the Mobile Services extension to your app
 

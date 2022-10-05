@@ -25,7 +25,7 @@ This extension requires the [Adobe Analytics for Media](https://experienceleague
 
 If you update the Adobe Media Analytics for Audio and Video tag extension to v2.x in your tag property, you must make sure to update and use AEP SDK Media extension v2.0.0 and higher.
 
-![Adobe Media Analytics Extension Configuration](./images/index/configuration.png)
+![Adobe Media Analytics Extension Configuration](./assets/index/configuration.png)
 
 To configure the Media Analytics extension, complete the following steps:
 

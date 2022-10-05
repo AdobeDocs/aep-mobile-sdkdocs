@@ -36,7 +36,7 @@ If you participated in the Campaign Standard beta, to use the new Campaign Stand
 
 ### Configure the Campaign Standard extension
 
-![](./images/index/configure.png)
+![](./assets/index/configure.png)
 
 ### Campaign Standard endpoints
 
