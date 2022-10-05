@@ -9,7 +9,7 @@ import OverrideDefaultDatasetIos from './tabs/sample-xdm-implementation/override
 
 ## Prerequisites for this tutorial
 
-Before starting this tutorial, please read and follow the steps in the [getting started with Adobe Experience Platform tutorial](./).
+Before starting this tutorial, please read and follow the steps in the [getting started with Adobe Experience Platform tutorial](./overview.md).
 
 ### Download the sample application
 

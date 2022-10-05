@@ -119,6 +119,10 @@ To install the Mobile Services extension, complete the following steps:
 
 The Mobile Services extension depends on the Core extension, which includes the Identity and Lifecycle frameworks and the Analytics extension.
 
+<InlineAlert variant="warning" slots="text"/>
+
+iOS AEP (3.x) Mobile Services extension only supports Cocoapods. It does **not** work with Swift Package Manager or when included in your app as an XCFramework dependency.
+
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 #### Android
