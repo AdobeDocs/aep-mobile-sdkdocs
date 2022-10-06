@@ -1,1 +1,0 @@
-No additional setup is needed for iOS in-app messaging and local notifications.

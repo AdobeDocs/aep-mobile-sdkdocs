@@ -16,11 +16,13 @@ import InitializeSDKAndroid from './tabs/index/initialize-sdk/android.md'
 import TrackingPushNotificationInteractionsIos from './tabs/index/tracking-push-notification-interactions/ios.md'
 import TrackingPushNotificationInteractionsAndroid from './tabs/index/tracking-push-notification-interactions/android.md'
 
+import Tabs from './tabs/index.md'
+
 # Adobe Campaign Standard
 
 <InlineAlert variant="info" slots="text"/>
 
-**Before** you install or configure the Campaign Standard extension, please read the [getting started guide](../../getting-started/create-a-mobile-property.md) and the [configuring a mobile application using Adobe Experience Platform SDKs guide](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-channels/configuring-a-mobile-application.html).
+**Before** you install or configure the Campaign Standard extension, please read the [getting started guide](../getting-started/create-a-mobile-property.md) and the [configuring a mobile application using Adobe Experience Platform SDKs guide](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-channels/configuring-a-mobile-application.html).
 
 <InlineAlert variant="warning" slots="text"/>
 

@@ -1,5 +1,3 @@
-<InlineAlert variant="warning" slots="text"/>
-
 iOS simulators do **not** support push messaging.
 
 #### Objective-C
