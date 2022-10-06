@@ -1,5 +1,23 @@
 # Release Notes
 
+## September 1, 2022
+
+### iOS Campaign Classic 3.0.0
+
+* Initial release to support [Adobe Campaign Classic workflows](https://github.com/Adobe-Marketing-Cloud/aep-sdks-documentation/tree/master/using-mobile-extensions/adobe-campaignclassic) for Adobe Experience Platform Mobile SDKs for iOS in Swift. This extension library is available as an [open source project on Github](https://github.com/adobe/aepsdk-campaignclassic-ios/).
+
+## May 18, 2022
+
+### Android Campaign Classic 1.0.2
+
+* Android Campaign Classic SDK is now Adobe Campaign Classic (ACC) v8 compatible! Broadlog ID can be provided in the UUID format in the notification tracking APIs.
+
+## May 17, 2022
+
+### iOS Campaign Classic 2.1.1
+
+* ACPCampaignClassic iOS SDK is now Adobe Campaign Classic (ACC) v8 compatible! Broadlog ID can be provided in the UUID format in the notification tracking APIs.
+
 ## December 18, 2020
 
 ### iOS Campaign Classic 2.1.0

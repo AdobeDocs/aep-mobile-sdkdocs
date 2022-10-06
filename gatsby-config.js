@@ -529,6 +529,10 @@ module.exports = {
                                 path: "documentation/adobe-campaign-classic/event-reference"
                             },
                             {
+                                title: "Migration",
+                                path: "documentation/adobe-campaign-classic/migration"
+                            },
+                            {
                                 title: "Release notes",
                                 path: "documentation/adobe-campaign-classic/release-notes"
                             }
