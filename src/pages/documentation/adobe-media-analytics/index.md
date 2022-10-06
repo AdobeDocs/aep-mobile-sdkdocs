@@ -1,9 +1,4 @@
-import AddAnalyticsIos from './tabs/index/add-analytics/ios.md'
-import AddAnalyticsAndroid from './tabs/index/add-analytics/android.md'
-import AddAnalyticsReactNative from './tabs/index/add-analytics/react-native.md'
-import RegisterMediaIos from './tabs/index/register-media/ios.md'
-import RegisterMediaAndroid from './tabs/index/register-media/android.md'
-import RegisterMediaReactNative from './tabs/index/register-media/react-native.md'
+import Tabs from './tabs/index.md'
 
 # Adobe Analytics - Media Analytics for Audio and Video
 
@@ -57,35 +52,43 @@ If you are using Media Extension v1.x, then go to Legacy settings section 1. Ena
 
 This extension requires the [Adobe Analytics extension](../adobe-analytics/index.md). You must add the Analytics extension to your mobile property and make sure the extension is correctly configured.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
 Android
 
-<AddAnalyticsAndroid/>
+<Tabs query="platform=android&task=add"/>
 
-iOS
+iOS (AEP 3.x)
 
-<AddAnalyticsIos/>
+<Tabs query="platform=ios-aep&task=add"/>
+
+iOS (ACP 2.x)
+
+<Tabs query="platform=ios-acp&task=add"/>
 
 React Native
 
-<AddAnalyticsReactNative/>
+<Tabs query="platform=react-native&task=add"/>
 
 ## Register Media with Mobile Core
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
 Android
 
-<RegisterMediaAndroid/>
+<Tabs query="platform=android&task=register"/>
 
-iOS
+iOS (AEP 3.x)
 
-<RegisterMediaIos/>
+<Tabs query="platform=ios-aep&task=register"/>
+
+iOS (ACP 2.x)
+
+<Tabs query="platform=ios-acp&task=register"/>
 
 React Native
 
-<RegisterMediaReactNative/>
+<Tabs query="platform=react-native&task=register"/>
 
 ## Configuration keys
 
