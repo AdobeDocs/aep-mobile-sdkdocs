@@ -1,9 +1,4 @@
-import RegisterAudienceManagerReactNative from './tabs/index/register-audience-manager/react-native.md'
-import RegisterAudienceManagerIos from './tabs/index/register-audience-manager/ios.md'
-import RegisterAudienceManagerAndroid from './tabs/index/register-audience-manager/android.md'
-import AddAudienceManagerReactNative from './tabs/index/add-audience-manager/react-native.md'
-import AddAudienceManagerIos from './tabs/index/add-audience-manager/ios.md'
-import AddAudienceManagerAndroid from './tabs/index/add-audience-manager/android.md'
+import Tabs from './tabs/index.md'
 
 # Adobe Audience Manager
 
@@ -11,7 +6,7 @@ Adobe Audience Manager is a versatile audience data management platform. With th
 
 ## Configuring the Audience Manager extension in the Data Collection UI
 
-![Adobe Audience Manager Extension Configuration](assets/index/configure.png)
+![Adobe Audience Manager Extension Configuration](./assets/index/configure.png)
 
 1. In the Data Collection UI, click the **Extensions** tab.
 2. Choose **Catalog**, locate the **Adobe Audience Manager** extension, and select **Install**.
@@ -22,35 +17,43 @@ Adobe Audience Manager is a versatile audience data management platform. With th
 
 ## Add Audience Manager to your app
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
-#### Android
+Android
 
-<AddAudienceManagerAndroid/>
+<Tabs query="platform=android&task=add"/>
 
-#### iOS
+iOS (AEP 3.x)
 
-<AddAudienceManagerIos/>
+<Tabs query="platform=ios-aep&task=add"/>
 
-#### React Native
+iOS (ACP 2.x)
 
-<AddAudienceManagerReactNative/>
+<Tabs query="platform=ios-acp&task=add"/>
+
+React Native
+
+<Tabs query="platform=react-native&task=add"/>
 
 ## Register Audience Manager with Mobile Core
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
-#### Android
+Android
 
-<RegisterAudienceManagerAndroid/>
+<Tabs query="platform=android&task=register"/>
 
-#### iOS
+iOS (AEP 3.x)
 
-<RegisterAudienceManagerIos/>
+<Tabs query="platform=ios-aep&task=register"/>
 
-#### React Native
+iOS (ACP 2.x)
 
-<RegisterAudienceManagerReactNative/>
+<Tabs query="platform=ios-acp&task=register"/>
+
+React Native
+
+<Tabs query="platform=react-native&task=register"/>
 
 ## Implement Audience Manager APIs
 

@@ -1,26 +1,10 @@
-import AddExtensionReactNative from './tabs/index/add-extension/react-native.md'
-import AddExtensionIos from './tabs/index/add-extension/ios.md'
-import AddExtensionAndroid from './tabs/index/add-extension/android.md'
-import RegisterExtensionReactNative from './tabs/index/register-extension/react-native.md'
-import RegisterExtensionIos from './tabs/index/register-extension/ios.md'
-import RegisterExtensionAndroid from './tabs/index/register-extension/android.md'
-import SetUpPushMessagingReactNative from './tabs/index/set-up-push-messaging/react-native.md'
-import SetUpPushMessagingIos from './tabs/index/set-up-push-messaging/ios.md'
-import SetUpPushMessagingAndroid from './tabs/index/set-up-push-messaging/android.md'
-import CustomizeRequestFrequencyIos from './tabs/index/customize-request-frequency/ios.md'
-import CustomizeRequestFrequencyAndroid from './tabs/index/customize-request-frequency/android.md'
-import HandlingClickthroughsIos from './tabs/index/handling-clickthroughs/ios.md'
-import HandlingClickthroughsAndroid from './tabs/index/handling-clickthroughs/android.md'
-import InitializeSDKIos from './tabs/index/initialize-sdk/ios.md'
-import InitializeSDKAndroid from './tabs/index/initialize-sdk/android.md'
-import TrackingPushNotificationInteractionsIos from './tabs/index/tracking-push-notification-interactions/ios.md'
-import TrackingPushNotificationInteractionsAndroid from './tabs/index/tracking-push-notification-interactions/android.md'
+import Tabs from './tabs/index.md'
 
 # Adobe Campaign Standard
 
 <InlineAlert variant="info" slots="text"/>
 
-**Before** you install or configure the Campaign Standard extension, please read the [getting started guide](../../getting-started/create-a-mobile-property.md) and the [configuring a mobile application using Adobe Experience Platform SDKs guide](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-channels/configuring-a-mobile-application.html).
+**Before** you install or configure the Campaign Standard extension, please read the [getting started guide](../getting-started/create-a-mobile-property.md) and the [configuring a mobile application using Adobe Experience Platform SDKs guide](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-channels/configuring-a-mobile-application.html).
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -83,49 +67,62 @@ Remember the following information when you add the Campaign extension to your a
 
 The instructions to add these extensions to your mobile app are also available in the Data Collection UI. To access the installation dialog box, open your mobile property, select the **Environments** tab, followed by **Install**.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
-#### Android
+Android
 
-<AddExtensionAndroid/>
+<Tabs query="platform=android&task=add"/>
 
-#### iOS
+iOS (AEP 3.x)
 
-<AddExtensionIos/>
+<Tabs query="platform=ios-aep&task=add"/>
 
-#### React Native
+iOS (ACP 1.x)
 
-<AddExtensionReactNative/>
+<Tabs query="platform=ios-acp&task=add"/>
+
+React Native
+
+<Tabs query="platform=react-native&task=add"/>
+
 
 ### Register the Campaign Standard extension with Mobile Core
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
-#### Android
+Android
 
-<RegisterExtensionAndroid/>
+<Tabs query="platform=android&task=register"/>
 
-#### iOS
+iOS (AEP 3.x)
 
-<RegisterExtensionIos/>
+<Tabs query="platform=ios-aep&task=register"/>
 
-#### React Native
+iOS (ACP 1.x)
 
-<RegisterExtensionReactNative/>
+<Tabs query="platform=ios-acp&task=register"/>
+
+React Native
+
+<Tabs query="platform=react-native&task=register"/>
 
 ### Initialize the SDK and set up tracking
 
 To initialize the SDK and set up tracking, see the [initialize the SDK and set up tracking tutorial](../getting-started/initialize-the-sdk.md).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### Android
+Android
 
-<InitializeSDKAndroid/>
+<Tabs query="platform=android&task=initialize"/>
 
-#### iOS
+iOS (AEP 3.x)
 
-<InitializeSDKIos/>
+<Tabs query="platform=ios-aep&task=initialize"/>
+
+iOS (ACP 1.x)
+
+<Tabs query="platform=ios-acp&task=initialize"/>
 
 ### Set up push messaging
 
@@ -137,19 +134,23 @@ For more information about setting up your iOS app to connect to APNS and retrie
 
 To learn more about creating a push notification using Adobe Campaign, see the tutorial on [preparing and sending a push notification](https://experienceleague.adobe.com/docs/campaign-standard/using/communication-channels/push-notifications/preparing-and-sending-a-push-notification.html).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
-#### Android
+Android
 
-<SetUpPushMessagingAndroid/>
+<Tabs query="platform=android&task=push-messaging"/>
 
-#### iOS
+iOS (AEP 3.x)
 
-<SetUpPushMessagingIos/>
+<Tabs query="platform=ios-aep&task=push-messaging"/>
 
-#### React Native
+iOS (ACP 1.x)
 
-<SetUpPushMessagingReactNative/>
+<Tabs query="platform=ios-acp&task=push-messaging"/>
+
+React Native
+
+<Tabs query="platform=react-native&task=push-messaging"/>
 
 ## Tracking local and push notification message interactions
 
@@ -159,15 +160,19 @@ User interactions with local or push notifications can be tracked by invoking th
 
 The code samples below are provided as examples on how to correctly invoke the `collectMessageInfo` API. For more specific details, please read the tutorials on [implementing local notification tracking](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-mobile/local-tracking.html) and [configuring push tracking](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-mobile/push-tracking.html) within the Adobe Campaign documentation.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### Android
+Android
 
-<TrackPushNotificationInteractionsAndroid/>
+<Tabs query="platform=android&task=track"/>
 
-#### iOS
+iOS (AEP 3.x)
 
-<TrackPushNotificationInteractionsIos/>
+<Tabs query="platform=ios-aep&task=track"/>
+
+iOS (ACP 1.x)
+
+<Tabs query="platform=ios-acp&task=track"/>
 
 ### Deleting mobile properties in the Data Collection UI
 
@@ -187,15 +192,19 @@ Deleting your mobile property in the Data Collection UI does not automatically d
 
 A destination URL can be added to in-app messages that are delivered from Adobe Campaign. The destination can be a website URL such as [https://www.adobe.com](https://www.adobe.com) or a deep link such as `campaigndemoapp://signupactivity?paidaccount=true` which can be used to direct the user to a specific area of your app.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### Android
+Android
 
-<HandlingClickthroughsAndroid/>
+<Tabs query="platform=android&task=handling"/>
 
-#### iOS
+iOS (AEP 3.x)
 
-<HandlingClickthroughIos/>
+<Tabs query="platform=ios-aep&task=handling"/>
+
+iOS (ACP 1.x)
+
+<Tabs query="platform=ios-acp&task=handling"/>
 
 ### Customizing the frequency of registration requests sent to Campaign
 
@@ -205,15 +214,19 @@ The frequency of registration requests sent to Campaign are reduced starting wit
 
 The configuration setting to pause registration requests is provided for specific use cases only. The use of this configuration setting should be **avoided** when possible.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### Android
+Android
 
-<CustomizeRequestFrequencyAndroid/>
+<Tabs query="platform=android&task=customize"/>
 
-#### iOS
+iOS (AEP 3.x)
 
-<CustomizeRequestFrequencyIos/>
+<Tabs query="platform=ios-aep&task=customize"/>
+
+iOS (ACP 1.x)
+
+<Tabs query="platform=ios-acp&task=customize"/>
 
 Giving a value of `0` when setting `campaign.registrationDelay` will send a registration request on every launch event. This is the previous behavior seen before the registration request reduction enhancement was added.
 

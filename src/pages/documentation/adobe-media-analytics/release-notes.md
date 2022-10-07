@@ -1,5 +1,11 @@
 # Release Notes
 
+## June 30, 2022
+
+### iOS AEPMedia 3.1.0
+
+* Added tvOS support.
+
 ## Sep 17, 2021
 
 ### iOS Media 2.3.2
@@ -21,7 +27,7 @@
 
 ### iOS AEPMedia 3.0.0
 
-* Initial release to support [Adobe Analytics - Media Analytics workflows](./) for Adobe Experience Platform Mobile SDKs for iOS in Swift. This extension library is [available as an open source project on Github](https://github.com/adobe/aepsdk-media-ios/).
+* Initial release to support [Adobe Analytics - Media Analytics workflows](./index.md) for Adobe Experience Platform Mobile SDKs for iOS in Swift. This extension library is [available as an open source project on Github](https://github.com/adobe/aepsdk-media-ios/).
 
 ## March 29, 2021
 

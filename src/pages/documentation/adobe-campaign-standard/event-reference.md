@@ -12,9 +12,9 @@ The Campaign request event is dispatched from the Event Hub when a Campaign rule
 
 The following key-value pairs are present in this event:
 
-| **Key** | **Value Type** | **Optional** | **Description** |
+| **Key** | **Value Type** | **Required** | **Description** |
 | :--- | :--- | :--- | :--- |
-| `triggeredconsequence` | Map | No | The triggered Campaign rule consequence. |
+| `triggeredconsequence` | Map | Yes | The triggered Campaign rule consequence. |
 
 #### Example
 
@@ -48,19 +48,19 @@ The data property in the configuration response event is used by each extension 
 
 The following key value pairs are supported for Adobe Campaign Standard extension when reading from the configuration event:
 
-| **Key** | **Value Type** | **Optional** | **Description** |
+| **Key** | **Value Type** | **Required** | **Description** |
 | :--- | :--- | :--- | :--- |
-| `__dev__campaign.server` | String | Yes | This contains the endpoint URL for the development environment in the Adobe Campaign Standard instance. |
-| `__dev__campaign.pkey` | String | Yes | This contains the identifier for a mobile app that was configured in the development environment in Adobe Campaign Standard. |
-| `__stage__campaign.server` | String | Yes | This contains the endpoint URL for the staging environment in the Adobe Campaign Standard instance. |
-| `__stage__campaign.pkey` | String | Yes | This contains the identifier for a mobile app that was configured in the staging environment in Adobe Campaign Standard. |
-| `campaign.server` | String | No | This contains the endpoint URL for the production environment in the Adobe Campaign Standard instance. |
-| `campaign.pkey` | String | No | This contains the identifier for a mobile app that was configured in the production environment in Adobe Campaign Standard. |
-| `campaign.mcias` | String | No | This contains the in-app messaging service URL endpoint. |
-| `campaign.timeout` | Integer | No | This contains the amount of time to wait for a response from the in-app messaging service. |
-| `global.privacy` | Boolean | Yes | This contains the mobile privacy status settings. |
-| `campaign.registrationDelay` | Integer | Yes | This contains the number of days to delay the sending of the next Adobe Campaign Standard registration request. |
-| `campaign.registrationPaused` | Boolean | Yes | This contains the Adobe Campaign Standard registration request paused status. |
+| `__dev__campaign.server` | String | No | This contains the endpoint URL for the development environment in the Adobe Campaign Standard instance. |
+| `__dev__campaign.pkey` | String | No | This contains the identifier for a mobile app that was configured in the development environment in Adobe Campaign Standard. |
+| `__stage__campaign.server` | String | No | This contains the endpoint URL for the staging environment in the Adobe Campaign Standard instance. |
+| `__stage__campaign.pkey` | String | No | This contains the identifier for a mobile app that was configured in the staging environment in Adobe Campaign Standard. |
+| `campaign.server` | String | Yes | This contains the endpoint URL for the production environment in the Adobe Campaign Standard instance. |
+| `campaign.pkey` | String | Yes | This contains the identifier for a mobile app that was configured in the production environment in Adobe Campaign Standard. |
+| `campaign.mcias` | String | Yes | This contains the in-app messaging service URL endpoint. |
+| `campaign.timeout` | Integer | Yes | This contains the amount of time to wait for a response from the in-app messaging service. |
+| `global.privacy` | Boolean | No | This contains the mobile privacy status settings. |
+| `campaign.registrationDelay` | Integer | No | This contains the number of days to delay the sending of the next Adobe Campaign Standard registration request. |
+| `campaign.registrationPaused` | Boolean | No | This contains the Adobe Campaign Standard registration request paused status. |
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -94,9 +94,9 @@ The request identity event is dispatched by the API to set linkageFields, which 
 
 The following key-value pairs are supported in this event:
 
-| **Key** | **Value Type** | **Optional** | **Description** |
+| **Key** | **Value Type** | **Required** | **Description** |
 | :--- | :--- | :--- | :--- |
-| `linkagefields` | Map | No | This map contains at least one of the linkage fields that are used to personally identify the logged in user. |
+| `linkagefields` | Map | Yes | This map contains at least one of the linkage fields that are used to personally identify the logged in user. |
 
 #### Example
 
@@ -127,9 +127,9 @@ The lifecycle response event is a response from the Lifecycle extension that not
 
 The following key-value pairs are used in this event:
 
-| **Key** | **Value Type** | **Optional** | **Description** |
+| **Key** | **Value Type** | **Required** | **Description** |
 | :--- | :--- | :--- | :--- |
-| `lifecyclecontextdata` | Map | No | The map that contains the stored lifecycle metrics. |
+| `lifecyclecontextdata` | Map | Yes | The map that contains the stored lifecycle metrics. |
 
 #### Example
 
@@ -162,11 +162,11 @@ The generic data OS event is dispatched by the Core extension to the Event Hub w
 
 The following key-value pairs are used in this event:
 
-| **Key** | **Value Type** | **Optional** | **Description** |
+| **Key** | **Value Type** | **Required** | **Description** |
 | :--- | :--- | :--- | :--- |
-| `deliveryId` | String | No | The string that contains the delivery ID of the message for which there were interactions. |
-| `action` | String | No | The string that contains the message interaction ID. |
-| `broadlogId` | String | No | The string that contains the broadlog ID of the message for which there were interactions. |
+| `deliveryId` | String | Yes | The string that contains the delivery ID of the message for which there were interactions. |
+| `action` | String | Yes | The string that contains the message interaction ID. |
+| `broadlogId` | String | Yes | The string that contains the broadlog ID of the message for which there were interactions. |
 
 #### Event data example
 
@@ -184,7 +184,7 @@ The following events are dispatched by the Campaign Standard extension:
 
 ### Campaign response
 
-The Campaign response event is a response from the Adobe Campaign Standard extension and contains the message interaction details: Viewed, Triggered or Clicked.
+The Campaign response event is a response from the Adobe Campaign Standard extension and contains the message interaction details: Viewed, Triggered, or Clicked.
 
 #### Event details
 

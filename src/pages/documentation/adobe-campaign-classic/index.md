@@ -1,7 +1,4 @@
-import RegisterCampaignClassicIos from './tabs/index/register-campaign-classic/ios.md'
-import RegisterCampaignClassicAndroid from './tabs/index/register-campaign-classic/android.md'
-import AddCampaignClassicIos from './tabs/index/add-campaign-classic/ios.md'
-import AddCampaignClassicAndroid from './tabs/index/add-campaign-classic/android.md'
+import Tabs from './tabs/index.md'
 
 # Adobe Campaign Classic
 
@@ -53,27 +50,35 @@ The request timeout is the amount of time, in seconds, to wait for a response fr
 
 ## Add Campaign Classic to your app
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### Android
+Android
 
-<AddCampaignClassicAndroid/>
+<Tabs query="platform=android&task=add"/>
 
-#### iOS
+iOS (AEP 3.x)
 
-<AddCampaignClassicIos/>
+<Tabs query="platform=ios-aep&task=add"/>
+
+iOS (ACP 2.x)
+
+<Tabs query="platform=ios-acp&task=add"/>
 
 ### Register Campaign Classic with Mobile Core
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### Android
+Android
 
-<RegisterCampaignClassicAndroid/>
+<Tabs query="platform=android&task=register"/>
 
-#### iOS
+iOS (AEP 3.x)
 
-<RegisterCampaignClassicIos/>
+<Tabs query="platform=ios-aep&task=register"/>
+
+iOS (ACP 2.x)
+
+<Tabs query="platform=ios-acp&task=register"/>
 
 ## Configuration keys
 

@@ -1,75 +1,4 @@
-import ClearPrefetchCacheIosACP from './tabs/api-reference/clear-prefetch-cache/ios-acp.md'
-import ClearPrefetchCacheIosAEP from './tabs/api-reference/clear-prefetch-cache/ios-aep.md'
-import ClearPrefetchCacheAndroid from './tabs/api-reference/clear-prefetch-cache/android.md'
-import ClearPrefetchCacheReactNative from './tabs/api-reference/clear-prefetch-cache/react-native.md'
-import ClickedLocationIosACP from './tabs/api-reference/clicked-location/ios-acp.md'
-import ClickedLocationIosAEP from './tabs/api-reference/clicked-location/ios-aep.md'
-import ClickedLocationAndroid from './tabs/api-reference/clicked-location/android.md'
-import ClickedLocationReactNative from './tabs/api-reference/clicked-location/react-native.md'
-import DisplayedLocationsIosACP from './tabs/api-reference/displayed-locations/ios-acp.md'
-import DisplayedLocationsIosAEP from './tabs/api-reference/displayed-locations/ios-aep.md'
-import DisplayedLocationsAndroid from './tabs/api-reference/displayed-locations/android.md'
-import DisplayedLocationsReactNative from './tabs/api-reference/displayed-locations/react-native.md'
-import ExtensionVersionIosACP from './tabs/api-reference/extension-version/ios-acp.md'
-import ExtensionVersionIosAEP from './tabs/api-reference/extension-version/ios-aep.md'
-import ExtensionVersionAndroid from './tabs/api-reference/extension-version/android.md'
-import ExtensionVersionReactNative from './tabs/api-reference/extension-version/react-native.md'
-import GetThirdPartyIdIosACP from './tabs/api-reference/get-third-party-id/ios-acp.md'
-import GetThirdPartyIdIosAEP from './tabs/api-reference/get-third-party-id/ios-aep.md'
-import GetThirdPartyIdAndroid from './tabs/api-reference/get-third-party-id/android.md'
-import GetThirdPartyIdReactNative from './tabs/api-reference/get-third-party-id/react-native.md'
-import GetTntIdIosACP from './tabs/api-reference/get-tnt-id/ios-acp.md'
-import GetTntIdIosAEP from './tabs/api-reference/get-tnt-id/ios-aep.md'
-import GetTntIdAndroid from './tabs/api-reference/get-tnt-id/android.md'
-import GetTntIdReactNative from './tabs/api-reference/get-tnt-id/react-native.md'
-import PrefetchContentIosACP from './tabs/api-reference/prefetch-content/ios-acp.md'
-import PrefetchContentIosAEP from './tabs/api-reference/prefetch-content/ios-aep.md'
-import PrefetchContentAndroid from './tabs/api-reference/prefetch-content/android.md'
-import PrefetchContentReactNative from './tabs/api-reference/prefetch-content/react-native.md'
-import RegisterExtensionIosACP from './tabs/api-reference/register-extension/ios-acp.md'
-import RegisterExtensionIosAEP from './tabs/api-reference/register-extension/ios-aep.md'
-import RegisterExtensionAndroid from './tabs/api-reference/register-extension/android.md'
-import RegisterExtensionReactNative from './tabs/api-reference/register-extension/react-native.md'
-import ResetExperienceIosACP from './tabs/api-reference/reset-experience/ios-acp.md'
-import ResetExperienceIosAEP from './tabs/api-reference/reset-experience/ios-aep.md'
-import ResetExperienceAndroid from './tabs/api-reference/reset-experience/android.md'
-import ResetExperienceReactNative from './tabs/api-reference/reset-experience/react-native.md'
-import RetrieveLocationContentIosACP from './tabs/api-reference/retrieve-location-content/ios-acp.md'
-import RetrieveLocationContentIosAEP from './tabs/api-reference/retrieve-location-content/ios-aep.md'
-import RetrieveLocationContentAndroid from './tabs/api-reference/retrieve-location-content/android.md'
-import RetrieveLocationContentReactNative from './tabs/api-reference/retrieve-location-content/react-native.md'
-import SetPreviewRestartDeepLinkIosACP from './tabs/api-reference/set-preview-restart-deep-link/ios-acp.md'
-import SetPreviewRestartDeepLinkIosAEP from './tabs/api-reference/set-preview-restart-deep-link/ios-aep.md'
-import SetPreviewRestartDeepLinkAndroid from './tabs/api-reference/set-preview-restart-deep-link/android.md'
-import SetPreviewRestartDeepLinkReactNative from './tabs/api-reference/set-preview-restart-deep-link/react-native.md'
-import SetThirdPartyIdIosACP from './tabs/api-reference/set-third-party-id/ios-acp.md'
-import SetThirdPartyIdIosAEP from './tabs/api-reference/set-third-party-id/ios-aep.md'
-import SetThirdPartyIdAndroid from './tabs/api-reference/set-third-party-id/android.md'
-import SetThirdPartyIdReactNative from './tabs/api-reference/set-third-party-id/react-native.md'
-import TargetCallbackAndroid from './tabs/api-reference/target-callback/android.md'
-import TargetOrderIosACP from './tabs/api-reference/target-order/ios-acp.md'
-import TargetOrderIosAEP from './tabs/api-reference/target-order/ios-aep.md'
-import TargetOrderAndroid from './tabs/api-reference/target-order/android.md'
-import TargetOrderReactNative from './tabs/api-reference/target-order/react-native.md'
-import TargetParametersIosACP from './tabs/api-reference/target-parameters/ios-acp.md'
-import TargetParametersIosAEP from './tabs/api-reference/target-parameters/ios-aep.md'
-import TargetParametersAndroid from './tabs/api-reference/target-parameters/android.md'
-import TargetParametersReactNative from './tabs/api-reference/target-parameters/react-native.md'
-import TargetPrefetchIosACP from './tabs/api-reference/target-prefetch/ios-acp.md'
-import TargetPrefetchIosAEP from './tabs/api-reference/target-prefetch/ios-aep.md'
-import TargetPrefetchAndroid from './tabs/api-reference/target-prefetch/android.md'
-import TargetPrefetchReactNative from './tabs/api-reference/target-prefetch/react-native.md'
-import TargetProductIosACP from './tabs/api-reference/target-product/ios-acp.md'
-import TargetProductIosAEP from './tabs/api-reference/target-product/ios-aep.md'
-import TargetProductAndroid from './tabs/api-reference/target-product/android.md'
-import TargetProductReactNative from './tabs/api-reference/target-product/react-native.md'
-import TargetRequestIosACP from './tabs/api-reference/target-request/ios-acp.md'
-import TargetRequestIosAEP from './tabs/api-reference/target-request/ios-aep.md'
-import TargetRequestAndroid from './tabs/api-reference/target-request/android.md'
-import TargetRequestReactNative from './tabs/api-reference/target-request/react-native.md'
-import VisualPreviewIosACP from './tabs/api-reference/visual-preview/ios-acp.md'
-import VisualPreviewIosAEP from './tabs/api-reference/visual-preview/ios-aep.md'
-import VisualPreviewAndroid from './tabs/api-reference/visual-preview/android.md'
+import Tabs from './tabs/api-reference.md'
 
 # Target API reference
 
@@ -81,19 +10,19 @@ This API clears the in-memory cache that contains the prefetched offers.
 
 Android
 
-<ClearPrefetchCacheAndroid/>
+<Tabs query="platform=android&api=clear-prefetch-cache"/>
 
 iOS (AEP 3.x)
 
-<ClearPrefetchCacheIosAEP/>
+<Tabs query="platform=ios-aep&api=clear-prefetch-cache"/>
 
 iOS (ACP 2.x)
 
-<ClearPrefetchCacheIosACP/>
+<Tabs query="platform=ios-acp&api=clear-prefetch-cache"/>
 
 React Native
 
-<ClearPrefetchCacheReactNative/>
+<Tabs query="platform=react-native&api=clear-prefetch-cache"/>
 
 ## clickedLocation
 
@@ -106,19 +35,19 @@ This API sends a location click notification for an mbox to the configured Targe
 
 Android
 
-<ClickedLocationAndroid/>
+<Tabs query="platform=android&api=clicked-location"/>
 
 iOS (AEP 3.x)
 
-<ClickedLocationIosAEP/>
+<Tabs query="platform=ios-aep&api=clicked-location"/>
 
 iOS (ACP 2.x)
 
-<ClickedLocationIosACP/>
+<Tabs query="platform=ios-acp&api=clicked-location"/>
 
 React Native
 
-<ClickedLocationReactNative/>
+<Tabs query="platform=react-native&api=clicked-location"/>
 
 ## displayedLocations
 
@@ -128,19 +57,20 @@ This API sends a location display notification for an mbox to the configured Tar
 
 Android
 
-<DisplayedLocationsAndroid/>
+<Tabs query="platform=android&api=displayed-locations"/>
 
 iOS (AEP 3.x)
 
-<DisplayedLocationsIosAEP/>
+<Tabs query="platform=ios-aep&api=displayed-locations"/>
 
 iOS (ACP 2.x)
 
-<DisplayedLocationsIosACP/>
+<Tabs query="platform=ios-acp&api=displayed-locations"/>
 
 React Native
 
-<DisplayedLocationsReactNative/>
+<Tabs query="platform=react-native&api=displayed-locations"/>
+
 
 ## extensionVersion
 
@@ -150,19 +80,40 @@ Returns the running version of the Target extension.
 
 Android
 
-<ExtensionVersionAndroid/>
+<Tabs query="platform=android&api=extension-version"/>
 
 iOS (AEP 3.x)
 
-<ExtensionVersionIosAEP/>
+<Tabs query="platform=ios-aep&api=extension-version"/>
 
 iOS (ACP 2.x)
 
-<ExtensionVersionIosACP/>
+<Tabs query="platform=ios-acp&api=extension-version"/>
 
 React Native
 
-<ExtensionVersionReactNative/>
+<Tabs query="platform=react-native&api=extension-version"/>
+
+
+## getSessionId
+
+This API gets the Target session identifier. 
+
+The session ID is generated locally in the SDK upon initial Target request and persisted for a period defined by `target.sessionTimeout` configuration setting. If the session timeout happens upon a subsequent Target request, a new session ID will be generated for use in the request and persisted in the SDK.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+
+Android
+
+<Tabs query="platform=android&api=get-session-id"/>
+
+iOS (AEP 3.x)
+
+<Tabs query="platform=ios-aep&api=get-session-id"/>
+
+iOS (ACP 2.x)
+
+<Tabs query="platform=ios-acp&api=get-session-id"/>
 
 ## getThirdPartyId
 
@@ -172,19 +123,20 @@ This API gets the custom visitor ID for Target. If no `third-party` ID was previ
 
 Android
 
-<GetThirdPartyIdAndroid/>
+<Tabs query="platform=android&api=get-third-party-id"/>
 
 iOS (AEP 3.x)
 
-<GetThirdPartyIdIosAEP/>
+<Tabs query="platform=ios-aep&api=get-third-party-id"/>
 
 iOS (ACP 2.x)
 
-<GetThirdPartyIdIosACP/>
+<Tabs query="platform=ios-acp&api=get-third-party-id"/>
 
 React Native
 
-<GetThirdPartyIdReactNative/>
+<Tabs query="platform=react-native&api=get-third-party-id"/>
+
 
 ## getTntId
 
@@ -194,19 +146,20 @@ This API gets the Target user ID (also known as the `tntId`) from the Target ser
 
 Android
 
-<GetTntIdAndroid/>
+<Tabs query="platform=android&api=get-tnt-id"/>
 
 iOS (AEP 3.x)
 
-<GetTntIdIosAEP/>
+<Tabs query="platform=ios-aep&api=get-tnt-id"/>
 
 iOS (ACP 2.x)
 
-<GetTntIdIosACP/>
+<Tabs query="platform=ios-acp&api=get-tnt-id"/>
 
 React Native
 
-<GetTntIdReactNative/>
+<Tabs query="platform=react-native&api=get-tnt-id"/>
+
 
 ## prefetchContent
 
@@ -216,19 +169,20 @@ This API sends a prefetch request to your configured Target server. The prefetch
 
 Android
 
-<PrefetchContentAndroid/>
+<Tabs query="platform=android&api=prefetch-content"/>
 
 iOS (AEP 3.x)
 
-<PrefetchContentIosAEP/>
+<Tabs query="platform=ios-aep&api=prefetch-content"/>
 
 iOS (ACP 2.x)
 
-<PrefetchContentIosACP/>
+<Tabs query="platform=ios-acp&api=prefetch-content"/>
 
 React Native
 
-<PrefetchContentReactNative/>
+<Tabs query="platform=react-native&api=prefetch-content"/>
+
 
 ## registerExtension
 
@@ -238,19 +192,20 @@ Registers the Target extension with the Mobile Core.
 
 Android
 
-<RegisterExtensionAndroid/>
+<Tabs query="platform=android&api=register-extension"/>
 
 iOS (AEP 3.x)
 
-<RegisterExtensionIosAEP/>
+<Tabs query="platform=ios-aep&api=register-extension"/>
 
 iOS (ACP 2.x)
 
-<RegisterExtensionIosACP/>
+<Tabs query="platform=ios-acp&api=register-extension"/>
 
 React Native
 
-<RegisterExtensionReactNative/>
+<Tabs query="platform=react-native&api=register-extension"/>
+
 
 ## resetExperience
 
@@ -260,19 +215,19 @@ This API resets the user's experience by removing the visitor identifiers and re
 
 Android
 
-<ResetExperienceAndroid/>
+<Tabs query="platform=android&api=reset-experience"/>
 
 iOS (AEP 3.x)
 
-<ResetExperienceIosAEP/>
+<Tabs query="platform=ios-aep&api=reset-experience"/>
 
 iOS (ACP 2.x)
 
-<ResetExperienceIosACP/>
+<Tabs query="platform=ios-acp&api=reset-experience"/>
 
 React Native
 
-<ResetExperienceReactNative/>
+<Tabs query="platform=react-native&api=reset-experience"/>
 
 ## retrieveLocationContent
 
@@ -290,19 +245,20 @@ When using `contentWithData` callback to instantiate TargetRequest object, the f
 
 Android
 
-<RetrieveLocationContentAndroid/>
+<Tabs query="platform=android&api=retrieve-location-content"/>
 
 iOS (AEP 3.x)
 
-<RetrieveLocationContentIosAEP/>
+<Tabs query="platform=ios-aep&api=retrieve-location-content"/>
 
 iOS (ACP 2.x)
 
-<RetrieveLocationContentIosACP/>
+<Tabs query="platform=ios-acp&api=retrieve-location-content"/>
 
 React Native
 
-<RetrieveLocationContentReactNative/>
+<Tabs query="platform=react-native&api=retrieve-location-content"/>
+
 
 ## setPreviewRestartDeepLink
 
@@ -312,19 +268,42 @@ This API sets a specific location in the app to be displayed when preview mode s
 
 Android
 
-<SetPreviewRestartDeepLinkAndroid/>
+<Tabs query="platform=android&api=set-preview-restart-deep-link"/>
 
 iOS (AEP 3.x)
 
-<SetPreviewRestartDeepLinkIosAEP/>
+<Tabs query="platform=ios-aep&api=set-preview-restart-deep-link"/>
 
 iOS (ACP 2.x)
 
-<SetPreviewRestartDeepLinkIosACP/>
+<Tabs query="platform=ios-acp&api=set-preview-restart-deep-link"/>
 
 React Native
 
-<SetPreviewRestartDeepLinkReactNative/>
+<Tabs query="platform=react-native&api=set-preview-restart-deep-link"/>
+
+
+## setSessionId
+
+This API sets the Target session identifier.
+
+The provided session ID is persisted in the SDK for a period defined by `target.sessionTimeout` configuration setting. If the provided session ID is nil/null or empty, or if the privacy status is opted out, the SDK will remove the session ID value from the persistence.
+
+This ID is preserved between app upgrades, is saved and restored during the standard application backup process, and is removed at uninstall, upon privacy status update to opted out, or when the resetExperience API is used.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+
+Android
+
+<Tabs query="platform=android&api=set-session-id"/>
+
+iOS (AEP 3.x)
+
+<Tabs query="platform=ios-aep&api=set-session-id"/>
+
+iOS (ACP 2.x)
+
+<Tabs query="platform=ios-acp&api=set-session-id"/>
 
 ## setThirdPartyId
 
@@ -334,19 +313,41 @@ This API sets the custom visitor ID for Target. This ID is preserved between app
 
 Android
 
-<SetThirdPartyIdAndroid/>
+<Tabs query="platform=android&api=set-third-party-id"/>
 
 iOS (AEP 3.x)
 
-<SetThirdPartyIdIosAEP/>
+<Tabs query="platform=ios-aep&api=set-third-party-id"/>
 
 iOS (ACP 2.x)
 
-<SetThirdPartyIdIosACP/>
+<Tabs query="platform=ios-acp&api=set-third-party-id"/>
 
 React Native
 
-<SetThirdPartyIdReactNative/>
+<Tabs query="platform=react-native&api=set-third-party-id"/>
+
+## setTntId
+
+This API sets the Target user identifier.
+
+The provided tnt ID is persisted in the SDK and attached to subsequent Target requests. It is used to derive the edge host value in the SDK, which is also persisted and used in future Target requests. If the provided tnt ID is nil/null or empty, or if the privacy status is opted out, the SDK will remove the tnt ID and edge host values from the persistence.
+
+This ID is preserved between app upgrades, is saved and restored during the standard application backup process, and is removed at uninstall, upon privacy status update to opted out, or when the `resetExperience` API is used.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+
+Android
+
+<Tabs query="platform=android&api=set-tnt-id"/>
+
+iOS (AEP 3.x)
+
+<Tabs query="platform=ios-aep&api=set-tnt-id"/>
+
+iOS (ACP 2.x)
+
+<Tabs query="platform=ios-acp&api=set-tnt-id"/>
 
 ## Visual preview
 
@@ -356,15 +357,16 @@ Target visual preview mode allows you to easily perform end-to-end QA activities
 
 Android
 
-<VisualPreviewAndroid/>
+<Tabs query="platform=android&api=visual-preview"/>
 
 iOS (AEP 3.x)
 
-<VisualPreviewIosAEP/>
+<Tabs query="platform=ios-aep&api=visual-preview"/>
 
 iOS (ACP 2.x)
 
-<VisualPreviewIosACP/>
+<Tabs query="platform=ios-acp&api=visual-preview"/>
+
 
 ## Public classes
 
@@ -376,19 +378,20 @@ The following is a list of all the public classes available when using the Adobe
 
 Android
 
-<TargetRequestAndroid/>
+<Tabs query="platform=android&api=target-request"/>
 
 iOS (AEP 3.x)
 
-<TargetRequestIosAEP/>
+<Tabs query="platform=ios-aep&api=target-request"/>
 
 iOS (ACP 2.x)
 
-<TargetRequestIosACP/>
+<Tabs query="platform=ios-acp&api=target-request"/>
 
 React Native
 
-<TargetRequestReactNative/>
+<Tabs query="platform=react-native&api=target-request"/>
+
 
 ### Target prefetch
 
@@ -396,39 +399,41 @@ React Native
 
 Android
 
-<TargetPrefetchAndroid/>
+<Tabs query="platform=android&api=target-prefetch"/>
 
 iOS (AEP 3.x)
 
-<TargetPrefetchIosAEP/>
+<Tabs query="platform=ios-aep&api=target-prefetch"/>
 
 iOS (ACP 2.x)
 
-<TargetPrefetchIosACP/>
+<Tabs query="platform=ios-acp&api=target-prefetch"/>
 
 React Native
 
-<TargetPrefetchReactNative/>
+<Tabs query="platform=react-native&api=target-prefetch"/>
+
 
 ### Target parameters
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
-Android 
+Android
 
-<TargetParametersAndroid/>
+<Tabs query="platform=android&api=target-parameters"/>
 
 iOS (AEP 3.x)
 
-<TargetParametersIosAEP/>
+<Tabs query="platform=ios-aep&api=target-parameters"/>
 
 iOS (ACP 2.x)
 
-<TargetParametersIosACP/>
+<Tabs query="platform=ios-acp&api=target-parameters"/>
 
 React Native
 
-<TargetParametersReactNative/>
+<Tabs query="platform=react-native&api=target-parameters"/>
+
 
 ### Target order
 
@@ -436,19 +441,20 @@ React Native
 
 Android
 
-<TargetOrderAndroid/>
+<Tabs query="platform=android&api=target-order"/>
 
 iOS (AEP 3.x)
 
-<TargetOrderIosAEP/>
+<Tabs query="platform=ios-aep&api=target-order"/>
 
 iOS (ACP 2.x)
 
-<TargetOrderIosACP/>
+<Tabs query="platform=ios-acp&api=target-order"/>
 
 React Native
 
-<TargetOrderReactNative/>
+<Tabs query="platform=react-native&api=target-order"/>
+
 
 ### Target product
 
@@ -456,19 +462,20 @@ React Native
 
 Android
 
-<TargetProductAndroid/>
+<Tabs query="platform=android&api=target-product"/>
 
 iOS (AEP 3.x)
 
-<TargetProductIosAEP/>
+<Tabs query="platform=ios-aep&api=target-product"/>
 
 iOS (ACP 2.x)
 
-<TargetProductIosACP/>
+<Tabs query="platform=ios-acp&api=target-product"/>
 
 React Native
 
-<TargetProductReactNative/>
+<Tabs query="platform=react-native&api=target-product"/>
+
 
 ### Target callback
 
@@ -476,5 +483,5 @@ React Native
 
 Android
 
-<TargetCallbackAndroid/>
+<Tabs query="platform=android&api=target-callback"/>
 

@@ -1,10 +1,22 @@
 # Release Notes
 
+## May 18, 2022
+
+### iOS AEPAudience 3.0.4
+
+* Fixed an issue where lifecycle data was included in signalWithData requests.
+
+## May 9, 2022
+
+### iOS AEPAudience 3.0.3
+
+- Fixed integration with Lifecycle extension to send lifecycle metrics when a new app session is started.
+
 ## Jul 13, 2021
 
 ### iOS AEPAudience 3.0.2
 
-* Added support to handle the MobileCore.resetIdentities\(\) API.
+* Added support to handle the MobileCore.resetIdentities() API.
 
 ## April 1, 2021
 
@@ -17,7 +29,7 @@
 
 ### iOS Audience 3.0.0
 
-* Initial release to support [Adobe Audience](./)  for Adobe Experience Platform Mobile SDKs for iOS in Swift. This extension library is available as an [open sourced project on Github](https://github.com/adobe/aepsdk-audience-ios/).
+* Initial release to support [Adobe Audience](./index.md)  for Adobe Experience Platform Mobile SDKs for iOS in Swift. This extension library is available as an [open sourced project on Github](https://github.com/adobe/aepsdk-audience-ios/).
 
 ## January 20, 2021
 

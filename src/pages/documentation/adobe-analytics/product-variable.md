@@ -1,11 +1,4 @@
-import ProductsIos from './tabs/products-variable/products/ios.md'
-import ProductsAndroid from './tabs/products-variable/products/android.md'
-import ProductsReactNative from './tabs/products-variable/products/react-native.md'
-import ProductsFlutter from './tabs/products-variable/products/flutter.md'
-import SetVariableIos from './tabs/products-variable/set-variable/ios.md'
-import SetVariableAndroid from './tabs/products-variable/set-variable/android.md'
-import SetVariableReactNative from './tabs/products-variable/set-variable/react-native.md'
-import SetVariableFlutter from './tabs/products-variable/set-variable/flutter.md'
+import Tabs from './tabs/product-variable.md'
 
 # Products variable
 
@@ -15,23 +8,27 @@ Since the products variable cannot be set by processing rules, you need to set s
 
 To set the products variable, set a context data key to `&&products`, and set the value to the products or merchandising variable. For more information, see the [implementing a merchandising variable tutorial](https://experienceleague.adobe.com/docs/analytics/components/dimensions/evar-merchandising.html).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="5"/>
 
-#### Android
+Android
 
-<SetVariableAndroid/>
+<Tabs query="platform=android&task=set-variable"/>
 
-#### iOS
+iOS (AEP 3.x)
 
-<SetVariableIos/>
+<Tabs query="platform=ios-aep&task=set-variable"/>
 
-#### React Native
+iOS (ACP 2.x)
 
-<SetVariableReactNative/>
+<Tabs query="platform=ios-acp&task=set-variable"/>
 
-#### Flutter
+React Native
 
-<SetVariableFlutter/>
+<Tabs query="platform=react-native&task=set-variable"/>
+
+Flutter
+
+<Tabs query="platform=flutter&task=set-variable"/>
 
 A sample network request can be seen in the image below:
 
@@ -47,23 +44,27 @@ You do **not** need to map the `products` variable using processing rules becaus
 
 The following code samples show an example of the products variable with merchandising eVars and product-specific events.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="5"/>
 
-#### Android
+Android
 
-<ProductsAndroid/>
+<Tabs query="platform=android&task=products"/>
 
-#### iOS
+iOS (AEP 3.x)
 
-<ProductsIos/>
+<Tabs query="platform=ios-aep&task=products"/>
 
-#### React Native
+iOS (ACP 2.x)
 
-<ProductsReactNative/>
+<Tabs query="platform=ios-acp&task=products"/>
 
-#### Flutter
+React Native
 
-<ProductsFlutter/>
+<Tabs query="platform=react-native&task=products"/>
+
+Flutter
+
+<Tabs query="platform=flutter&task=products"/>
 
 <InlineAlert variant="info" slots="text"/> 
 
