@@ -15,6 +15,7 @@ ACPCore.collectLaunchInfo(["adb_deeplink" : "com.adobe.targetpreview://app.adobe
 #### Objective-C
 
 **Syntax**
+
 ```objectivec
 + (void) collectLaunchInfo: (nonnull NSDictionary*) userInfo;
 ```

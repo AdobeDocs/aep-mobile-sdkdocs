@@ -179,7 +179,7 @@ public class MobileApp extends Application {
 
 <Variant platform="ios-aep" task="register" repeat="6"/>
 
-### Swift
+#### Swift
 
 In your app's `_:didFinishLaunchingWithOptions` function, register the Audience Manager extension with the Mobile Core:
 
@@ -192,7 +192,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-### Objective-C
+#### Objective-C
 
 In your app's `application:didFinishLaunchingWithOptions`, register Media with Mobile Core:
 
