@@ -4,7 +4,7 @@
 let version = MobileCore.extensionVersion
 ```
 
-#### Objective C
+#### Objective-C
 
 ```objectivec
 NSString *version = [AEPMobileCore extensionVersion];

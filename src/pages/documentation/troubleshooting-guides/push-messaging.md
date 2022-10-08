@@ -1,6 +1,6 @@
-import setPushandroid from './tabs/setPush-android.md'
-import setPushios from './tabs/setPush-ios.md'
-import setPushreact from './tabs/setPush-react-native.md'
+import SetPushandroid from './tabs/setPush-android.md'
+import SetPushios from './tabs/setPush-ios.md'
+import SetPushreact from './tabs/setPush-react-native.md'
 
 # Troubleshooting push messaging
 
@@ -29,15 +29,15 @@ If SDK privacy status isoptedout, the push identifier will not be set.
 
 #### Android
 
-<setPushandroid/>
+<SetPushandroid/>
 
 #### iOS
 
-<setPushios/>
+<SetPushios/>
 
 #### React Native
 
-<setPushreact/>
+<SetPushreact/>
 
 ## Verify push token sync with the Experience Cloud Identity service
 

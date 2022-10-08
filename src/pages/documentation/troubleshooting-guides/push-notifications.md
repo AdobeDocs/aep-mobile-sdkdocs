@@ -1,7 +1,7 @@
-import campaignPushandroid from './tabs/campaignPush-android.md'
-import campaignPushios from './tabs/campaignPush-ios.md'
-import receivePushandroid from './tabs/receivePush-android.md'
-import receivePushios from './tabs/receivePush-ios.md'
+import CampaignPushandroid from './tabs/campaignPush-android.md'
+import CampaignPushios from './tabs/campaignPush-ios.md'
+import ReceivePushandroid from './tabs/receivePush-android.md'
+import ReceivePushios from './tabs/receivePush-ios.md'
 
 # Campaign Push Notifications
 
@@ -9,11 +9,11 @@ import receivePushios from './tabs/receivePush-ios.md'
 
 #### Android
 
-<campaignPushandroid/>
+<CampaignPushandroid/>
 
 #### iOS
 
-<campaignPushios/>
+<CampaignPushios/>
 
 For more information about configuration, see [Channel specific application configuration in Adobe Campaign](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-channels/configuring-a-mobile-application.html?lang=en).
 
@@ -23,11 +23,11 @@ For more information about configuration, see [Channel specific application conf
 
 #### Android
 
-<receivePushandroid/>
+<ReceivePushandroid/>
 
 #### iOS
 
-<receivePushios/>
+<ReceivePushios/>
 
 ## Troubleshooting push notification events tracking
 
