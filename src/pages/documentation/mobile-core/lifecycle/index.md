@@ -1,9 +1,4 @@
-import AddLifecycleAndroid from './tabs/index/add-lifecycle/android.md'
-import AddLifecycleIosAEP from './tabs/index/add-lifecycle/ios-aep.md'
-import AddLifecycleIosACP from './tabs/index/add-lifecycle/ios-acp.md'
-import RegisterLifecycleAndroid from './tabs/index/register-lifecycle/android.md'
-import RegisterLifecycleIosAEP from './tabs/index/register-lifecycle/ios-aep.md'
-import RegisterLifecycleIosACP from './tabs/index/register-lifecycle/ios-acp.md'
+import Tabs from './tabs/index.md'
 
 # Lifecycle
 
@@ -15,35 +10,72 @@ Sessions contain information about the app's current lifecycle, such as the devi
 
 ## Add Lifecycle to your app
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
 Android
 
-<AddLifecycleAndroid/>
+<Tabs query="platform=android&task=add"/>
 
 iOS (AEP 3.x)
 
-<AddLifecycleIosAEP/>
+<Tabs query="platform=ios-aep&task=add"/>
 
 iOS (ACP 2.x)
 
-<AddLifecycleIosACP/>
+<Tabs query="platform=ios-acp&task=add"/>
+
+React Native
+
+<Tabs query="platform=react-native&task=add"/>
+
+Flutter
+
+<Tabs query="platform=flutter&task=add"/>
+
+Cordova
+
+<Tabs query="platform=cordova&task=add"/>
+
+Unity
+
+<Tabs query="platform=unity&task=add"/>
+
+Xamarin
+
+<Tabs query="platform=xamarin&task=add"/>
+
 
 ## Register Lifecycle with Mobile Core and add appropriate Start/Pause calls
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="7"/>
 
 Android
 
-<RegisterLifecycleAndroid/>
+<Tabs query="platform=android&task=register"/>
 
 iOS (AEP 3.x)
 
-<RegisterLifecycleIosAEP/>
+<Tabs query="platform=ios-aep&task=register"/>
 
 iOS (ACP 2.x)
 
-<RegisterLifecycleIosACP/>
+<Tabs query="platform=ios-acp&task=register"/>
+
+React Native
+
+<Tabs query="platform=react-native&task=register"/>
+
+Cordova
+
+<Tabs query="platform=cordova&task=register"/>
+
+Unity
+
+<Tabs query="platform=unity&task=register"/>
+
+Xamarin
+
+<Tabs query="platform=xamarin&task=register"/>
 
 
 ## Lifecycle metrics
