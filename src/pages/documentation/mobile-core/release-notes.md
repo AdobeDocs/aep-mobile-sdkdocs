@@ -1,5 +1,100 @@
 # Release Notes
 
+## September 9, 2022
+
+### Android Core 1.11.4
+
+* Fixed a bug that prevents bundled rules from being retrieved from the correct location.
+
+## September 8, 2022
+
+### Android Core 1.11.3
+
+* Fixed a bug that prevents early events from being processed correctly by the rules engine.
+* Removed unnecessary `AtomicBoolean` usage while listening to Android Activity lifecycle changes.
+
+## August 25, 2022
+
+### iOS ACPCore 2.9.6
+
+* Fix race conditions in HitQueue.
+
+## August 18, 2022
+
+### Android Core 1.11.2
+
+* Added support for bundled rules.
+* Fixed a crash that can occur while extracting data from launch intent of an Android Activity.
+
+### Android Identity 1.3.2
+
+* Fixed a crash that can occur during construction of a query string of IDs.
+
+## August 10, 2022
+
+### iOS AEPCore 3.7.1
+
+* Made improvements to retry logic when downloading the remote Configuration fails
+* Made changes in Identity to speed up boot up
+* Fixed a bug where early events do not properly get processed by the rules engine
+* Improved Objective-C naming for MessagingDelegate methods
+* Updated UI classes to respect safe area when showing fullscreen messages
+
+## June 16, 2022
+
+### iOS AEPCore 3.7.0
+
+* Added tvOS support.
+* Fixed a few race conditions in the EventHub and MobileCore.
+* Made changes in AEPIdentity to speed up boot.
+
+## June 15, 2022
+
+### Android Core 1.11.1
+
+* Fixed a crash which was caused by an exception thrown from the Android Activity class. 
+
+## May 9, 2022
+
+### iOS AEPCore 3.6.0
+
+* Added support for using the Core SDK in [App Extensions.](https://developer.apple.com/app-extensions/)
+* Added a new API to the Extension protocol for getting the latest non-pending shared state.
+* Added support for using Bundled Rules.
+* Added support for cached images for Fullscreen Messages.
+* Fixed a bug preventing Fullscreen Messages from being dismissed in certain conditions.
+
+## April 21, 2022
+
+### Android Core 1.11.0
+
+* Internal fixes to support In-App Messaging with the AEPMessaging extension.
+
+### Android Identity 1.3.1
+
+* Improved extension stability by adding additional error checks when processing sync identifier requests.
+
+## April 8, 2022
+
+### iOS AEPCore 3.5.0
+
+* Adds two APIs to `Date+Format` class. Method `getISO8601UTCDateWithMilliseconds` formats a Date to string as with fractional seconds and UTC time zone, while `getISO8601FullDate` formats a Date to string with date without time using the local time zone.
+* Lifecycle foreground and background events for Edge Network now format timestamps with fractional seconds and UTC time zone.
+* Updates the timestamp format for rule token `~timestampp` with fractional seconds and UTC time zone. This rule token is used to set the mobile property data element "Adobe Experience Platform Timestamp".
+* Improves Signal logging by treating all 2xx network responses as success.
+* Fixes bug where dispatched events failed due to use of single quotes in name.
+* Fixes format of push token string by uppercasing characters.
+
+## March 11, 2022
+
+### Android Core 1.10.1
+
+* Updates the timestamp format for rule token `~timestampp`  with fractional seconds and UTC time zone. This rule token is used to set the mobile property data element "Adobe Experience Platform Timestamp". 
+
+### Android Lifecycle 1.1.1
+
+* Lifecycle foreground and background events for Edge Network now format timestamps with fractional seconds and UTC time zone. 
+
 ## February 14, 2022
 
 ### iOS Core 2.9.5
