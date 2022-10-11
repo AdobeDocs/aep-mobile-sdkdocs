@@ -53,7 +53,7 @@ import AEPIdentity
 import AEPAnalytics
 ```
 
-**Objective C**
+**Objective-C**
 
 ```objectivec
 @import AEPCore;

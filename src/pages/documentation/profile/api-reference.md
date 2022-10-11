@@ -1,21 +1,4 @@
-import ExtensionVersionAndroid from './tabs/api-reference/extension-version/android.md'
-import ExtensionVersionIosAEP from './tabs/api-reference/extension-version/ios-aep.md'
-import ExtensionVersionIosACP from './tabs/api-reference/extension-version/ios-acp.md'
-import GetUserAttributesAndroid from './tabs/api-reference/get-user-attributes/android.md'
-import GetUserAttributesIosAEP from './tabs/api-reference/get-user-attributes/ios-aep.md'
-import GetUserAttributesIosACP from './tabs/api-reference/get-user-attributes/ios-acp.md'
-import RegisterExtensionAndroid from './tabs/api-reference/register-extension/android.md'
-import RegisterExtensionIosAEP from './tabs/api-reference/register-extension/ios-aep.md'
-import RegisterExtensionIosACP from './tabs/api-reference/register-extension/ios-acp.md'
-import RemoveUserAttributeAndroid from './tabs/api-reference/remove-user-attribute/android.md'
-import RemoveUserAttributeIosACP from './tabs/api-reference/remove-user-attribute/ios-acp.md'
-import RemoveUserAttributesAndroid from './tabs/api-reference/remove-user-attributes/android.md'
-import RemoveUserAttributesIosAEP from './tabs/api-reference/remove-user-attributes/ios-aep.md'
-import RemoveUserAttributesIosACP from './tabs/api-reference/remove-user-attributes/ios-acp.md'
-import UpdateUserAttributeAndroid from './tabs/api-reference/update-user-attribute/android.md'
-import UpdateUserAttributeIosACP from './tabs/api-reference/update-user-attribute/ios-acp.md'
-import UpdateUserAttributesAndroid from './tabs/api-reference/update-user-attributes/android.md'
-import UpdateUserAttributesIosACP from './tabs/api-reference/update-user-attributes/ios-acp.md'
+import Tabs from './tabs/api-reference.md'
 
 # API reference
 
@@ -23,37 +6,70 @@ import UpdateUserAttributesIosACP from './tabs/api-reference/update-user-attribu
 
 The `extensionVersion()` API returns the version of the Profile extension.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
 Android
 
-<ExtensionVersionAndroid/>
+<Tabs query="platform=android&api=extension-version"/>
 
 iOS (AEP 3.x)
 
-<ExtensionVersionIosAEP/>
+<Tabs query="platform=ios-aep&api=extension-version"/>
 
 iOS (ACP 2.x)
 
-<ExtensionVersionIosACP/>
+<Tabs query="platform=ios-acp&api=extension-version"/>
+
+React Native
+
+<Tabs query="platform=react-native&api=extension-version"/>
+
+Flutter
+
+<Tabs query="platform=flutter&api=extension-version"/>
+
+Cordova
+
+<Tabs query="platform=cordova&api=extension-version"/>
+
+Unity
+
+<Tabs query="platform=unity&api=extension-version"/>
+
+Xamarin
+
+<Tabs query="platform=xamarin&api=extension-version"/>
 
 ## getUserAttributes
 
 The `getUserAttributes()` API gets the user profile attributes with the given keys.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="6"/>
 
 Android
 
-<GetUserAttributesAndroid/>
+<Tabs query="platform=android&api=get-user-attributes"/>
 
 iOS (AEP 3.x)
 
-<GetUserAttributesIosAEP/>
+<Tabs query="platform=ios-aep&api=get-user-attributes"/>
 
 iOS (ACP 2.x)
 
-<GetUserAttributesIosACP/>
+<Tabs query="platform=ios-acp&api=get-user-attributes"/>
+
+Flutter
+
+<Tabs query="platform=flutter&api=get-user-attributes"/>
+
+Cordova
+
+<Tabs query="platform=cordova&api=get-user-attributes"/>
+
+Xamarin
+
+<Tabs query="platform=xamarin&api=get-user-attributes"/>
+
 
 ## registerExtension
 
@@ -63,47 +79,71 @@ Registers the Profile extension with the Mobile Core extension.
 
 Android
 
-<RegisterExtensionAndroid/>
+<Tabs query="platform=android&api=register-extension"/>
 
 iOS (AEP 3.x)
 
-<RegisterExtensionIosAEP/>
+<Tabs query="platform=ios-aep&api=register-extension"/>
 
 iOS (ACP 2.x)
 
-<RegisterExtensionIosACP/>
+<Tabs query="platform=ios-acp&api=register-extension"/>
 
 ## removeUserAttribute
 
 Removes the user profile attribute for the given key.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="5"/>
 
 Android
 
-<RemoveUserAttributeAndroid/>
+<Tabs query="platform=android&api=remove-user-attribute"/>
 
 iOS (ACP 2.x)
 
-<RemoveUserAttributeIosACP/>
+<Tabs query="platform=ios-acp&api=remove-user-attribute"/>
+
+Flutter
+
+<Tabs query="platform=flutter&api=remove-user-attribute"/>
+
+Cordova
+
+<Tabs query="platform=cordova&api=remove-user-attribute"/>
+
+Xamarin
+
+<Tabs query="platform=xamarin&api=remove-user-attribute"/>
 
 ## removeUserAttributes
 
 Removes the user profile attributes for the given keys.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="6"/>
 
 Android
 
-<RemoveUserAttributesAndroid/>
+<Tabs query="platform=android&api=remove-user-attributes"/>
 
 iOS (AEP 3.x)
 
-<RemoveUserAttributesIosAEP/>
+<Tabs query="platform=android&api=remove-user-attributes"/>
 
 iOS (ACP 2.x)
 
-<RemoveUserAttributesIosACP/>
+<Tabs query="platform=ios-acp&api=remove-user-attributes"/>
+
+Flutter
+
+<Tabs query="platform=flutter&api=remove-user-attributes"/>
+
+Cordova
+
+<Tabs query="platform=cordova&api=remove-user-attributes"/>
+
+Xamarin
+
+<Tabs query="platform=xamarin&api=remove-user-attributes"/>
 
 ## updateUserAttribute
 
@@ -115,15 +155,27 @@ Remember the following information:
 * If the attribute exists, the value will be updated.
 * A null attribute value removes the attribute.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="5"/>
 
 Android
 
-<UpdateUserAttributeAndroid/>
+<Tabs query="platform=android&api=update-user-attribute"/>
 
 iOS (ACP 2.x)
 
-<UpdateUserAttributeIosACP/>
+<Tabs query="platform=ios-acp&api=update-user-attribute"/>
+
+Flutter
+
+<Tabs query="platform=flutter&api=update-user-attribute"/>
+
+Cordova
+
+<Tabs query="platform=cordova&api=update-user-attribute"/>
+
+Xamarin
+
+<Tabs query="platform=xamarin&api=update-user-attribute"/>
 
 ## updateUserAttributes
 
@@ -137,16 +189,28 @@ Allows you to create/update a batch of user profile attributes:
 * If the attribute already exists, the value is updated.
 * A null attribute value will remove the attribute.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="6"/>
 
 Android
 
-<UpdateUserAttributesAndroid/>
+<Tabs query="platform=android&api=update-user-attributes"/>
 
 iOS (AEP 3.x)
 
-<UpdateUserAttributesIosAEP/>
+<Tabs query="platform=android&api=update-user-attributes"/>
 
 iOS (ACP 2.x)
 
-<UpdateUserAttributesIosACP/>
+<Tabs query="platform=ios-acp&api=update-user-attributes"/>
+
+Flutter
+
+<Tabs query="platform=flutter&api=update-user-attributes"/>
+
+Cordova
+
+<Tabs query="platform=cordova&api=update-user-attributes"/>
+
+Xamarin
+
+<Tabs query="platform=xamarin&api=update-user-attributes"/>

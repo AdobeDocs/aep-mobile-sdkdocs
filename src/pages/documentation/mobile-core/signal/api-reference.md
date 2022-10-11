@@ -1,9 +1,4 @@
-import ExtensionVersionIosACP from './tabs/api-reference/extension-version/ios-acp.md'
-import ExtensionVersionIosAEP from './tabs/api-reference/extension-version/ios-aep.md'
-import ExtensionVersionAndroid from './tabs/api-reference/extension-version/android.md'
-import RegisterExtensionIosACP from './tabs/api-reference/register-extension/ios-acp.md'
-import RegisterExtensionIosAEP from './tabs/api-reference/register-extension/ios-aep.md'
-import RegisterExtensionAndroid from './tabs/api-reference/register-extension/android.md'
+import Tabs from './tabs/api-reference.md'
 
 # Signal API reference
 
@@ -13,39 +8,65 @@ The `extensionVersion()` API returns the version of the Signal extension that is
 
 To get the version of the Signal extension, use the following code sample:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
 Android
 
-<ExtensionVersionAndroid/>
+<Tabs query="platform=android&api=extension-version"/>
 
 iOS (AEP 3.x)
 
-<ExtensionVersionIosAEP/>
+<Tabs query="platform=ios-aep&api=extension-version"/>
 
 iOS (ACP 2.x)
 
-<ExtensionVersionIosACP/>
+<Tabs query="platform=ios-acp&api=extension-version"/>
+
+React Native
+
+<Tabs query="platform=react-native&api=extension-version"/>
+
+Flutter
+
+<Tabs query="platform=flutter&api=extension-version"/>
+
+Cordova
+
+<Tabs query="platform=cordova&api=extension-version"/>
+
+Unity
+
+<Tabs query="platform=unity&api=extension-version"/>
+
+Xamarin
+
+<Tabs query="platform=xamarin&api=extension-version"/>
+
 
 ## registerExtension
 
 Registers the Signal extension with the Mobile Core.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
 Android
 
-<RegisterExtensionAndroid/>
+<Tabs query="platform=android&api=register-extension"/>
 
 iOS (AEP 3.x)
 
-<RegisterExtensionIosAEP/>
+<Tabs query="platform=ios-aep&api=register-extension"/>
 
 iOS (ACP 2.x)
 
-<RegisterExtensionIosACP/>
+<Tabs query="platform=ios-acp&api=register-extension"/>
 
-## CollectPII API
+React Native
+
+<Tabs query="platform=react-native&api=register-extension"/>
+
+
+## collectPII
 
 The Signal extension can be used to handle `collectPII` rules. For more information, see the [collectPII](../api-reference.md#collectpii) API.
 

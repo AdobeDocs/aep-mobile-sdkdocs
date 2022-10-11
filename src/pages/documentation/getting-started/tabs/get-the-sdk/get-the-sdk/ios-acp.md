@@ -14,7 +14,7 @@ In order to support the new Apple M1 architecture while maintaining support for 
 
 2. On the **Mobile Install Instructions** dialog box, select **iOS**.
 3. Follow the instructions for using CocoaPods with iOS.
-4. Under the initialization code, choose Objective C or Swift.
+4. Under the initialization code, choose Objective-C or Swift.
 
 The necessary dependencies and initialization code can be copied from the dialog box to your app project.
 

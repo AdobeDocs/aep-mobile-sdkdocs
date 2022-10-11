@@ -1,6 +1,6 @@
 #### iOS
 
-**Objective C**
+**Objective-C**
 
 **Syntax**
 

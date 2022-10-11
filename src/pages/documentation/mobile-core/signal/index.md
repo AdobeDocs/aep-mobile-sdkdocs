@@ -1,9 +1,4 @@
-import AddSignalIosACP from './tabs/index/add-signal/ios-acp.md'
-import AddSignalIosAEP from './tabs/index/add-signal/ios-aep.md'
-import AddSignalAndroid from './tabs/index/add-signal/android.md'
-import RegisterSignalIosACP from './tabs/index/register-signal/ios-acp.md'
-import RegisterSignalIosAEP from './tabs/index/register-signal/ios-aep.md'
-import RegisterSignalAndroid from './tabs/index/register-signal/android.md'
+import Tabs from './tabs/index.md'
 
 # Signal
 
@@ -29,19 +24,40 @@ For more information about creating and configuring a rule in the Data Collectio
 
 ## Add the Signal extension to your app
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
 Android
 
-<AddSignalAndroid/>
+<Tabs query="platform=android&task=add"/>
 
 iOS (AEP 3.x)
 
-<AddSignalIosAEP/>
+<Tabs query="platform=ios-aep&task=add"/>
 
 iOS (ACP 2.x)
 
-<AddSignalIosACP/>
+<Tabs query="platform=ios-acp&task=add"/>
+
+React Native
+
+<Tabs query="platform=react-native&task=add"/>
+
+Flutter
+
+<Tabs query="platform=flutter&task=add"/>
+
+Cordova
+
+<Tabs query="platform=cordova&task=add"/>
+
+Unity
+
+<Tabs query="platform=unity&task=add"/>
+
+Xamarin
+
+<Tabs query="platform=xamarin&task=add"/>
+
 
 ## Register the Signal extension
 
@@ -49,19 +65,39 @@ The `registerExtension()` API registers the Signal extension with the Mobile Cor
 
 To register the Identity extension, use the following code sample:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
 Android
 
-<RegisterSignalAndroid/>
+<Tabs query="platform=android&task=register"/>
 
 iOS (AEP 3.x)
 
-<RegisterSignalIosAEP/>
+<Tabs query="platform=ios-aep&task=register"/>
 
 iOS (ACP 2.x)
 
-<RegisterSignalIosACP/>
+<Tabs query="platform=ios-acp&task=register"/>
+
+React Native
+
+<Tabs query="platform=react-native&task=register"/>
+
+Flutter
+
+<Tabs query="platform=flutter&task=register"/>
+
+Cordova
+
+<Tabs query="platform=cordova&task=register"/>
+
+Unity
+
+<Tabs query="platform=unity&task=register"/>
+
+Xamarin
+
+<Tabs query="platform=xamarin&task=register"/>
 
 ## Implement the Mobile SDK to send PII data to external destinations
 

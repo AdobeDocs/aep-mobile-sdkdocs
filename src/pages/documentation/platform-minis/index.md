@@ -1,5 +1,5 @@
-import miniprogramseng from './tabs/miniprogramseng.md'
-import miniprogramschi from './tabs/miniprogramschi.md'
+import Miniprogramseng from './tabs/miniprogramseng.md'
+import Miniprogramschi from './tabs/miniprogramschi.md'
 
 # WeChat Mini Programs
 
@@ -17,8 +17,8 @@ The SDK for WeChat Mini Programs provides the following functionality:
 
 #### English
 
-<miniprogramseng/>
+<Miniprogramseng/>
 
 #### 中文 – 简体
 
-<miniprogramschi/>
+<Miniprogramschi/>

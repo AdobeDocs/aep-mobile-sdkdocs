@@ -1,9 +1,4 @@
-import AddProfileAndroid from './tabs/index/add-profile/android.md'
-import AddProfileIosAEP from './tabs/index/add-profile/ios-aep.md'
-import AddProfileIosACP from './tabs/index/add-profile/ios-acp.md'
-import RegisterProfileAndroid from './tabs/index/register-profile/android.md'
-import RegisterProfileIosAEP from './tabs/index/register-profile/ios-aep.md'
-import RegisterProfileIosACP from './tabs/index/register-profile/ios-acp.md'
+import Tabs from './tabs/index.md'
 
 # Profile
 
@@ -37,32 +32,65 @@ To get started with the Profile extension:
 
 To add the Profile extension to your app:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="6"/>
 
 Android
 
-<AddProfileAndroid/>
+<Tabs query="platform=android&task=add"/>
 
 iOS (AEP 3.x)
 
-<AddProfileIosAEP/>
+<Tabs query="platform=ios-aep&task=add"/>
 
 iOS (ACP 2.x)
 
-<AddProfileIosACP/>
+<Tabs query="platform=ios-acp&task=add"/>
+
+Cordova
+
+<Tabs query="platform=cordova&task=add"/>
+
+Unity
+
+<Tabs query="platform=unity&task=add"/>
+
+Xamarin
+
+<Tabs query="platform=xamarin&task=add"/>
+
 
 ## Register the extension
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
 Android
 
-<RegisterProfileAndroid/>
+<Tabs query="platform=android&task=register"/>
 
 iOS (AEP 3.x)
 
-<RegisterProfileIosAEP/>
+<Tabs query="platform=ios-aep&task=register"/>
 
 iOS (ACP 2.x)
 
-<RegisterProfileIosACP/>
+<Tabs query="platform=ios-acp&task=register"/>
+
+React Native
+
+<Tabs query="platform=react-native&task=register"/>
+
+Flutter
+
+<Tabs query="platform=flutter&task=register"/>
+
+Cordova
+
+<Tabs query="platform=cordova&task=register"/>
+
+Unity
+
+<Tabs query="platform=unity&task=register"/>
+
+Xamarin
+
+<Tabs query="platform=xamarin&task=register"/>
