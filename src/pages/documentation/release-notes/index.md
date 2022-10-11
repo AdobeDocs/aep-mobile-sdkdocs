@@ -4,12 +4,6 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
-## October 11, 2022
-
-### iOS AEPPlaces 3.0.2
-
-* Non-string values in Point of Interest metadata are now correctly handled.
-
 ## June 30, 2022
 
 ### iOS AEPAnalytics 3.2.0
