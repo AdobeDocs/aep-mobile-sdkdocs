@@ -1,9 +1,9 @@
-import importlifecycleandroid from './tabs/import-lifecycle-android.md'
-import importlifecycleios from './tabs/import-lifecycle-ios.md'
-import collectlifecycleandroid from './tabs/collect-lifecycle-android.md'
-import collectlifecycleios from './tabs/collect-lifecycle-ios.md'
-import pauselifecycleandroid from './tabs/pause-lifecycle-android.md'
-import pauselifecycleios from './tabs/pause-lifecycle-ios.md'
+import Importlifecycleandroid from './tabs/import-lifecycle-android.md'
+import Importlifecycleios from './tabs/import-lifecycle-ios.md'
+import Collectlifecycleandroid from './tabs/collect-lifecycle-android.md'
+import Collectlifecycleios from './tabs/collect-lifecycle-ios.md'
+import Pauselifecycleandroid from './tabs/pause-lifecycle-android.md'
+import Pauselifecycleios from './tabs/pause-lifecycle-ios.md'
 
 # Manual Lifecycle Implementation
 
@@ -17,11 +17,11 @@ In version 4 of the iOS SDK, this implementation was completed automatically.<br
 
 #### Android
 
-<importlifecycleandroid/>
+<Importlifecycleandroid/>
 
 #### iOS
 
-<importlifecycleios/>
+<Importlifecycleios/>
 
 ## Start collecting Lifecycle information
 
@@ -31,11 +31,11 @@ You can start collecting Lifecycle information at any time in your app, but we r
 
 #### Android
 
-<collectlifecycleandroid/>
+<Collectlifecycleandroid/>
 
 #### iOS
 
-<collectlifecycleios/>
+<Collectlifecycleios/>
 
 ## Pause Lifecycle Collection
 
@@ -45,8 +45,8 @@ You should pause Lifecycle collection when the user stops using your app. The be
 
 #### Android
 
-<pauselifecycleandroid/>
+<Pauselifecycleandroid/>
 
 #### iOS
 
-<pauselifecycleios/>
+<Pauselifecycleios/>

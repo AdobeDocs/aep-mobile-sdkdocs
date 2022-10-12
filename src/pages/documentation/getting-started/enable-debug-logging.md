@@ -1,4 +1,4 @@
-omport Tabs from './tabs/enable-debug-logging.md'
+import Tabs from './tabs/enable-debug-logging.md'
 
 # Debugging & lifecycle metrics
 

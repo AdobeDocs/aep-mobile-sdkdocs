@@ -8,7 +8,7 @@ Before implementing these controls, read the [Adobe Experience Platform Privacy 
 
 When Adobe provides software and services to an enterprise, Adobe acts as a data processor for any personal data it processes and stores as part of providing these services. As a data processor, Adobe processes personal data in accordance with your company’s permission and instructions, as set out in your agreement with Adobe. As a data controller, you can use the Experience Platform SDKs to support privacy retrieve and delete requests from your mobile apps.
 
-# Setup steps
+## Setup steps
 
 The following sections provide details on how you can collect consent and privacy status to ensure collection of data suits your user's preferences.
 
