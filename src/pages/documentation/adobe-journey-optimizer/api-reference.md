@@ -1,16 +1,4 @@
-import ExtensionVersionIos from './tabs/api-reference/extension-version/ios.md'
-import ExtensionVersionAndroid from './tabs/api-reference/extension-version/android.md'
-import HandleNotificationResponseIos from './tabs/api-reference/handle-notification-response/ios.md'
-import HandleNotificationResponseAndroid from './tabs/api-reference/handle-notification-response/android.md'
-import PayloadKeysIos from './tabs/api-reference/payload-keys/ios.md'
-import PayloadKeysAndroid from './tabs/api-reference/payload-keys/android.md'
-import RegisterExtensionIos from './tabs/api-reference/register-extension/ios.md'
-import RegisterExtensionAndroid from './tabs/api-reference/register-extension/android.md'
-import SetPushIdentifierIos from './tabs/api-reference/set-push-identifier/ios.md'
-import SetPushIdentifierAndroid from './tabs/api-reference/set-push-identifier/android.md'
-import AddPushTrackingDetailsAndroid from './tabs/api-reference/add-push-tracking-details/android.md'
-import MessagingPushPayloadAndroid from './tabs/api-reference/messaging-push-payload/android.md'
-import PublicApisAndroid from './tabs/api-reference/public-apis/android.md'
+import Tabs from './tabs/api-reference.md'
 
 # Adobe Journey Optimizer API reference
 
@@ -20,13 +8,13 @@ The extensionVersion API returns the library version.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-#### Android
+Android
 
-<ExtensionVersionAndroid/>
+<Tabs query="platform=android&api=extension-version"/>
 
-#### iOS
+iOS
 
-<ExtensionVersionIos/>
+<Tabs query="platform=ios&api=extension-version"/>
 
 ## handleNotificationResponse
 
@@ -34,13 +22,14 @@ The handleNotificationResponse function transmits the push notification interact
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-#### Android
+Android
 
-<HandleNotificationResponseAndroid/>
+<Tabs query="platform=android&api=handle-notification-response"/>
 
-#### iOS
+iOS
 
-<HandleNotificationResponseIos/>
+<Tabs query="platform=ios&api=handle-notification-response"/>
+
 
 ## registerExtension
 
@@ -48,13 +37,14 @@ The registerExtension API lets you register your extension with the [Mobile Core
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-#### Android
+Android
 
-<RegisterExtensionAndroid/>
+<Tabs query="platform=android&api=register-extension"/>
 
-#### iOS
+iOS
 
-<RegisterExtensionIos/>
+<Tabs query="platform=ios&api=register-extension"/>
+
 
 ## setPushIdentifier
 
@@ -68,11 +58,12 @@ The setPushIdentifier API sets the push token, allowing you to sync it with Prof
 
 Android
 
-<SetPushIdentifierAndroid/>
+<Tabs query="platform=android&api=set-push-identifier"/>
 
 iOS
 
-<SetPushIdentifierIos/>
+<Tabs query="platform=ios&api=set-push-identifier"/>
+
 
 ## addPushTrackingDetails 
 
@@ -86,7 +77,7 @@ Calling this API is mandatory, so the pending intent can be used while tracking 
 
 Android
 
-<AddPushTrackingDetailsAndroid/>
+<Tabs query="platform=android&api=add-push-tracking-details"/>
 
 ## Public classes
 
@@ -98,7 +89,7 @@ Android
 
 Android
 
-<MessagingPushPayloadAndroid/>
+<Tabs query="platform=android&api=messaging-push-payload"/>
 
 ### Public APIs
 
@@ -108,7 +99,7 @@ Public APIs are used to get attributes from the push payload, which are used whi
 
 Android
 
-<PublicApisAndroid/>
+<Tabs query="platform=android&api=public-apis"/>
 
 ### Payload keys
 
@@ -116,8 +107,8 @@ Android
 
 Android
 
-<PayloadKeysAndroid/>
+<Tabs query="platform=android&api=payload-keys"/>
 
 iOS
 
-<PayloadKeysIos/>
+<Tabs query="platform=ios&api=payload-keys"/>
