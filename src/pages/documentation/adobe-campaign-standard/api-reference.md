@@ -1,19 +1,4 @@
-import ExtensionVersionReactNative from './tabs/api-reference/extension-version/react-native.md'
-import ExtensionVersionIosAEP from './tabs/api-reference/extension-version/ios-aep.md'
-import ExtensionVersionIosACP from './tabs/api-reference/extension-version/ios-acp.md'
-import ExtensionVersionAndroid from './tabs/api-reference/extension-version/android.md'
-import RegisterExtensionReactNative from './tabs/api-reference/register-extension/react-native.md'
-import RegisterExtensionIosAEP from './tabs/api-reference/register-extension/ios-aep.md'
-import RegisterExtensionIosACP from './tabs/api-reference/register-extension/ios-acp.md'
-import RegisterExtensionAndroid from './tabs/api-reference/register-extension/android.md'
-import ResetLinkageFieldsReactNative from './tabs/api-reference/reset-linkage-fields/react-native.md'
-import ResetLinkageFieldsIosAEP from './tabs/api-reference/reset-linkage-fields/ios-aep.md'
-import ResetLinkageFieldsIosACP from './tabs/api-reference/reset-linkage-fields/ios-acp.md'
-import ResetLinkageFieldsAndroid from './tabs/api-reference/reset-linkage-fields/android.md'
-import SetLinkageFieldsReactNative from './tabs/api-reference/set-linkage-fields/react-native.md'
-import SetLinkageFieldsIosAEP from './tabs/api-reference/set-linkage-fields/ios-aep.md'
-import SetLinkageFieldsIosACP from './tabs/api-reference/set-linkage-fields/ios-acp.md'
-import SetLinkageFieldsAndroid from './tabs/api-reference/set-linkage-fields/android.md'
+import Tabs from './tabs/api-reference.md'
 
 # Adobe Campaign Standard API reference
 
@@ -23,21 +8,21 @@ Returns the running version of the Campaign Standard extension.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
-#### Android
+Android
 
-<ExtensionVersionAndroid/>
+<Tabs query="platform=android&api=extension-version"/>
 
-#### iOS (AEP 3.x)
+iOS (AEP 3.x)
 
-<ExtensionVersionIosAEP/>
+<Tabs query="platform=ios-aep&api=extension-version"/>
 
-#### iOS (ACP 1.x)
+iOS (ACP 1.x)
 
-<ExtensionVersionIosACP/>
+<Tabs query="platform=ios-acp&api=extension-version"/>
 
-#### React Native
+React Native
 
-<ExtensionVersionReactNative/>
+<Tabs query="platform=react-native&api=extension-version"/>
 
 ## registerExtension
 
@@ -45,21 +30,21 @@ Registers the Campaign Standard extension with the Mobile Core.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
-#### Android
+Android
 
-<RegisterExtensionAndroid/>
+<Tabs query="platform=android&api=register-extension"/>
 
-#### iOS (AEP 3.x)
+iOS (AEP 3.x)
 
-<RegisterExtensionIosAEP/>
+<Tabs query="platform=ios-aep&api=register-extension"/>
 
-#### iOS (ACP 1.x)
+iOS (ACP 1.x)
 
-<RegisterExtensionIosACP/>
+<Tabs query="platform=ios-acp&api=register-extension"/>
 
-#### React Native
+React Native
 
-<RegisterExtensionReactNative/>
+<Tabs query="platform=react-native&api=register-extension"/>
 
 ## resetLinkageFields
 
@@ -69,21 +54,21 @@ This method unregisters any previously registered rules with the Rules Engine an
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
-#### Android
+Android
 
-<ResetLinkageFieldsAndroid/>
+<Tabs query="platform=android&api=reset-linkage-fields"/>
 
-#### iOS (AEP 3.x)
+iOS (AEP 3.x)
 
-<ResetLinkageFieldsIosAEP/>
+<Tabs query="platform=ios-aep&api=reset-linkage-fields"/>
 
-#### iOS (ACP 1.x)
+iOS (ACP 1.x)
 
-<ResetLinkageFieldsIosACP/>
+<Tabs query="platform=ios-acp&api=reset-linkage-fields"/>
 
-#### React Native
+React Native
 
-<ResetLinkageFieldsReactNative/>
+<Tabs query="platform=react-native&api=reset-linkage-fields"/>
 
 ## setLinkageFields
 
@@ -93,19 +78,19 @@ The set linkage fields are stored as a base64 encoded JSON string in memory and 
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
-#### Android
+Android
 
-<SetLinkageFieldsAndroid/>
+<Tabs query="platform=android&api=set-linkage-fields"/>
 
-#### iOS (AEP 3.x)
+iOS (AEP 3.x)
 
-<SetLinkageFieldsIosAEP/>
+<Tabs query="platform=ios-aep&api=set-linkage-fields"/>
 
-#### iOS (ACP 1.x)
+iOS (ACP 1.x)
 
-<SetLinkageFieldsIosACP/>
+<Tabs query="platform=ios-acp&api=set-linkage-fields"/>
 
-#### React Native
+React Native
 
-<SetLinkageFieldsReactNative/>
+<Tabs query="platform=react-native&api=set-linkage-fields"/>
 
