@@ -1,24 +1,4 @@
-import ClearQueueAEPSwift from './tabs/migration/clear-queue/aep-swift.md'
-import ClearQueueAEPObjectiveC from './tabs/migration/clear-queue/aep-objective-c.md'
-import ClearQueueACPObjectiveC from './tabs/migration/clear-queue/acp-objective-c.md'
-import ExtensionVersionAEPSwift from './tabs/migration/extension-version/aep-swift.md'
-import ExtensionVersionAEPObjectiveC from './tabs/migration/extension-version/aep-objective-c.md'
-import ExtensionVersionACPObjectiveC from './tabs/migration/extension-version/acp-objective-c.md'
-import GetQueueSizeAEPSwift from './tabs/migration/get-queue-size/aep-swift.md'
-import GetQueueSizeAEPObjectiveC from './tabs/migration/get-queue-size/aep-objective-c.md'
-import GetQueueSizeACPObjectiveC from './tabs/migration/get-queue-size/acp-objective-c.md'
-import GetTrackingIdentifierAEPSwift from './tabs/migration/get-tracking-identifier/aep-swift.md'
-import GetTrackingIdentifierAEPObjectiveC from './tabs/migration/get-tracking-identifier/aep-objective-c.md'
-import GetTrackingIdentifierACPObjectiveC from './tabs/migration/get-tracking-identifier/acp-objective-c.md'
-import GetVisitorIdentifierAEPSwift from './tabs/migration/get-visitor-identifier/aep-swift.md'
-import GetVisitorIdentifierAEPObjectiveC from './tabs/migration/get-visitor-identifier/aep-objective-c.md'
-import GetVisitorIdentifierACPObjectiveC from './tabs/migration/get-visitor-identifier/acp-objective-c.md'
-import SendQueuedHitsAEPSwift from './tabs/migration/send-queued-hits/aep-swift.md'
-import SendQueuedHitsAEPObjectiveC from './tabs/migration/send-queued-hits/aep-objective-c.md'
-import SendQueuedHitsACPObjectiveC from './tabs/migration/send-queued-hits/acp-objective-c.md'
-import SetVisitorIdentifierAEPSwift from './tabs/migration/set-visitor-identifier/aep-swift.md'
-import SetVisitorIdentifierAEPObjectiveC from './tabs/migration/set-visitor-identifier/aep-objective-c.md'
-import SetVisitorIdentifierACPObjectiveC from './tabs/migration/set-visitor-identifier/acp-objective-c.md'
+import Tabs from './tabs/migration.md'
 
 # Migrating to AEPAnalytics
 
@@ -38,112 +18,112 @@ The AEPAnalytics extension is implemented purely in Swift and is compatible with
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### AEP 3.x (Swift)
+AEP 3.x (Swift)
 
-<ClearQueueAEPSwift/>
+<Tabs query="platform=aep-swift&api=clear-queue"/>
 
-#### AEP 3.x (Objective-C)
+AEP 3.x (Objective-C)
 
-<ClearQueueAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=clear-queue"/>
 
-#### ACP 2.x (Objective-C)
+ACP 2.x (Objective-C)
 
-<ClearQueueACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=clear-queue"/>
 
 ### extensionVersion
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### AEP 3.x (Swift)
+AEP 3.x (Swift)
 
-<ExtensionVersionAEPSwift/>
+<Tabs query="platform=aep-swift&api=extension-version"/>
 
-#### AEP 3.x (Objective-C)
+AEP 3.x (Objective-C)
 
-<ExtensionVersionAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=extension-version"/>
 
-#### ACP 2.x (Objective-C)
+ACP 2.x (Objective-C)
 
-<ExtensionVersionACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=extension-version"/>
 
 ### getQueueSize
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### AEP 3.x (Swift)
+AEP 3.x (Swift)
 
-<GetQueueSizeAEPSwift/>
+<Tabs query="platform=aep-swift&api=get-queue-size"/>
 
-#### AEP 3.x (Objective-C)
+AEP 3.x (Objective-C)
 
-<GetQueueSizeAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=get-queue-size"/>
 
-#### ACP 2.x (Objective-C)
+ACP 2.x (Objective-C)
 
-<GetQueueSizeACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=get-queue-size"/>
 
 ### getTrackingIdentifier
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### AEP 3.x (Swift)
+AEP 3.x (Swift)
 
-<GetTrackingIdentifierAEPSwift/>
+<Tabs query="platform=aep-swift&api=get-tracking-identifier"/>
 
-#### AEP 3.x (Objective-C)
+AEP 3.x (Objective-C)
 
-<GetTrackingIdentifierAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=get-tracking-identifier"/>
 
-#### ACP 2.x (Objective-C)
+ACP 2.x (Objective-C)
 
-<GetTrackingIdentifierACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=get-tracking-identifier"/>
 
 ### getVisitorIdentifier
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### AEP 3.x (Swift)
+AEP 3.x (Swift)
 
-<GetVisitorIdentifierAEPSwift/>
+<Tabs query="platform=aep-swift&api=get-visitor-identifier"/>
 
-#### AEP 3.x (Objective-C)
+AEP 3.x (Objective-C)
 
-<GetVisitorIdentifierAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=get-visitor-identifier"/>
 
-#### ACP 2.x (Objective-C)
+ACP 2.x (Objective-C)
 
-<GetVisitorIdentifierACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=get-visitor-identifier"/>
 
 ### sendQueuedHits
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### AEP 3.x (Swift)
+AEP 3.x (Swift)
 
-<SendQueuedHitsAEPSwift/>
+<Tabs query="platform=aep-swift&api=send-queued-hits"/>
 
-#### AEP 3.x (Objective-C)
+AEP 3.x (Objective-C)
 
-<SendQueuedHitsAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=send-queued-hits"/>
 
-#### ACP 2.x (Objective-C)
+ACP 2.x (Objective-C)
 
-<SendQueuedHitsACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=send-queued-hits"/>
 
 ### setVisitorIdentifier
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### AEP 3.x (Swift)
+AEP 3.x (Swift)
 
-<SetVisitorIdentifierAEPSwift/>
+<Tabs query="platform=aep-swift&api=set-visitor-identifier"/>
 
-#### AEP 3.x (Objective-C)
+AEP 3.x (Objective-C)
 
-<SetVisitorIdentifierAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=set-visitor-identifier"/>
 
-#### ACP 2.x (Objective-C)
+ACP 2.x (Objective-C)
 
-<SetVisitorIdentifierACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=set-visitor-identifier"/>
 
 
