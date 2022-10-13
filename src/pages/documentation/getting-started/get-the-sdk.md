@@ -1,12 +1,4 @@
-import AddDependenciesIosACP from './tabs/get-the-sdk/add-dependencies/ios-acp.md'
-import AddDependenciesIosAEP from './tabs/get-the-sdk/add-dependencies/ios-aep.md'
-import AddDependenciesAndroid from './tabs/get-the-sdk/add-dependencies/android.md'
-import AddInitializationCodeIosACP from './tabs/get-the-sdk/add-initialization-code/ios-acp.md'
-import AddInitializationCodeIosAEP from './tabs/get-the-sdk/add-initialization-code/ios-aep.md'
-import AddInitializationCodeAndroid from './tabs/get-the-sdk/add-initialization-code/android.md'
-import GetTheSdkIosACP from './tabs/get-the-sdk/get-the-sdk/ios-acp.md'
-import GetTheSdkIosAEP from './tabs/get-the-sdk/get-the-sdk/ios-aep.md'
-import GetTheSdkAndroid from './tabs/get-the-sdk/get-the-sdk/android.md'
+import Tabs from './tabs/get-the-sdk.md'
 
 # Get the Experience Platform SDK
 
@@ -18,19 +10,40 @@ Follow the directions below to include the SDK into your mobile application.
 
 For iOS and Android projects, the recommended approach for integrating the SDK is to use supported dependency and package managers as listed for each platform such as Maven and Cocoapods. SDKs are also available for download on [GitHub](https://github.com/Adobe-Marketing-Cloud/acp-sdks/).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
 Android
 
-<GetTheSdkAndroid/>
+<Tabs query="platform=android&task=get"/>
 
 iOS (AEP 3.x)
 
-<GetTheSdkIosAEP/>
+<Tabs query="platform=ios-aep&task=get"/>
 
 iOS (ACP 2.x)
 
-<GetTheSdkIosACP/>
+<Tabs query="platform=ios-acp&task=get"/>
+
+React Native
+
+<Tabs query="platform=react-native&task=get"/>
+
+Flutter
+
+<Tabs query="platform=flutter&task=get"/>
+
+Cordova
+
+<Tabs query="platform=cordova&task=get"/>
+
+Unity
+
+<Tabs query="platform=unity&task=get"/>
+
+Xamarin
+
+<Tabs query="platform=xamarin&task=get"/>
+
 
 ## Installation instructions
 
@@ -44,15 +57,15 @@ Each extension needs to be added as a dependency to the mobile application proje
 
 Android
 
-<AddDependenciesAndroid/>
+<Tabs query="platform=android&task=add-dependencies"/>
 
 iOS (AEP 3.x)
 
-<AddDependenciesIosAEP/>
+<Tabs query="platform=ios-aep&task=add-dependencies"/>
 
 iOS (ACP 2.x)
 
-<AddDependenciesIosACP/>
+<Tabs query="platform=ios-acp&task=add-dependencies"/>
 
 ### 2. Add initialization code
 
@@ -64,19 +77,39 @@ Extension registration is **mandatory**. Attempting to make extension-specific A
 
 The following code snippets demonstrate how you can import and register the Mobile Core and Profile extensions. You can also see, for reference, how Identity, Lifecycle, Signal, Profile, and other extensions are imported and registered.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
 Android
 
-<AddInitializationCodeAndroid/>
+<Tabs query="platform=android&task=add-initialization"/>
 
 iOS (AEP 3.x)
 
-<AddInitializationCodeIosAEP/>
+<Tabs query="platform=ios-aep&task=add-initialization"/>
 
 iOS (ACP 2.x)
 
-<AddInitializationCodeIosACP/>
+<Tabs query="platform=ios-acp&task=add-initialization"/>
+
+React Native
+
+<Tabs query="platform=react-native&task=add-initialization"/>
+
+Flutter
+
+<Tabs query="platform=flutter&task=add-initialization"/>
+
+Cordova
+
+<Tabs query="platform=cordova&task=add-initialization"/>
+
+Unity
+
+<Tabs query="platform=unity&task=add-initialization"/>
+
+Xamarin
+
+<Tabs query="platform=xamarin&task=add-initialization"/>
 
 ### 3. Ensure app permissions (Android only)
 

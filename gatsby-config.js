@@ -824,7 +824,7 @@ module.exports = {
                     },
                     {
                         title: "Track events",
-                        path: "/documentation/getting-started/initialize-the-sdk"
+                        path: "/documentation/getting-started/track-events"
                     },
                     {
                         title: "Validation and next steps",
@@ -854,7 +854,7 @@ module.exports = {
                             },
                             {
                                 title: "Manual Lifecycle implementation",
-                                path: "documentation/upgrade-platform-sdks/manual-lifecycle-implementation"
+                                path: "documentation/upgrade-platform-sdks/lifecycle"
                             },
                             {
                                 title: "API changelog",

@@ -55,14 +55,14 @@ Set the `LAUNCH_ENVIRONMENT_FILE_ID` to the copied Environment File ID in the `M
 
 ![](./assets/sample-xdm-implementation/xdm-product-review.png)
 
-1. The previously created schema wil be used for the profiles you are about to create.
+3. The previously created schema wil be used for the profiles you are about to create.
    * Select the Schema name, then from the right panel enable the **Profile** toggle.
    * When the **Enable for Profile** pop-up is displayed, select **Enable**.
-2. Create a dataset for the schema:
+4. Create a dataset for the schema:
    * Select **Datasets** from the left panel, followed by **Create dataset** and **Create dataset from schema**.
    * Search for the previously created "Product Reviews" schema and select it.
    * Select **Next** and name the dataset "Product Reviews", followed by selecting **Finish**.
-3. Finally, you will want to include this dataset with Real-time Customer Profile:
+5. Finally, you will want to include this dataset with Real-time Customer Profile:
    * Select the previously created "Product Reviews" dataset.
    * From the right panel, enable the **Profile** toggle.
 

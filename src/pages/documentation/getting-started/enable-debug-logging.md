@@ -1,8 +1,4 @@
-import EnableDebugLoggingIosACP from './tabs/enable-debug-logging/enable-debug-logging/ios-acp.md'
-import EnableDebugLoggingIosAEP from './tabs/enable-debug-logging/enable-debug-logging/ios-aep.md'
-import EnableDebugLoggingAndroid from './tabs/enable-debug-logging/enable-debug-logging/android.md'
-import LifecycleMetricsIos from './tabs/enable-debug-logging/lifecycle-metrics/ios.md'
-import LifecycleMetricsAndroid from './tabs/enable-debug-logging/lifecycle-metrics/android.md'
+import Tabs from './tabs/enable-debug-logging.md'
 
 # Debugging & lifecycle metrics
 
@@ -25,19 +21,36 @@ Using `Debug` or `Verbose` log levels may cause performance or security concerns
 
 To enable debug logging, use the following methods:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="7"/>
 
 Android
 
-<EnableDebugLoggingAndroid/>
+<Tabs query="platform=android&task=enable"/>
 
 iOS (AEP 3.x)
 
-<EnableDebugLoggingIosAEP/>
+<Tabs query="platform=ios-aep&task=enable"/>
 
 iOS (ACP 2.x)
 
-<EnableDebugLoggingIosACP/>
+<Tabs query="platform=ios-acp&task=enable"/>
+
+React Native
+
+<Tabs query="platform=react-native&task=enable"/>
+
+Flutter
+
+<Tabs query="platform=flutter&task=enable"/>
+
+Cordova
+
+<Tabs query="platform=cordova&task=enable"/>
+
+Unity
+
+<Tabs query="platform=unity&task=enable"/>
+
 
 ## Lifecycle metrics
 
@@ -53,15 +66,36 @@ This section shows you how to collect lifecycle metrics. To view, and report on 
 
 Lifecycle metrics are now available for Edge Network implementations. For more details about the XDM-based lifecycle metrics, see [Lifecycle for Edge Network](../lifecycle-for-edge-network/index.md).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="7"/>
 
 Android
 
-<LifecycleMetricsAndroid/>
+<Tabs query="platform=android&task=metrics"/>
 
 iOS
 
-<LifecycleMetricsIos/>
+<Tabs query="platform=ios&task=metrics"/>
+
+React Native
+
+<Tabs query="platform=react-native&task=metrics"/>
+
+Flutter
+
+<Tabs query="platform=flutter&task=metrics"/>
+
+Cordova
+
+<Tabs query="platform=cordova&task=metrics"/>
+
+Unity
+
+<Tabs query="platform=unity&task=metrics"/>
+
+Xamarin
+
+<Tabs query="platform=xamarin&task=metrics"/>
+
 
 For more information, see the documentation on [Lifecycle metrics](../mobile-core/lifecycle/index.md).
 

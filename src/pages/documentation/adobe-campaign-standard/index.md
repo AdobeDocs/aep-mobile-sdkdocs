@@ -108,7 +108,7 @@ React Native
 
 ### Initialize the SDK and set up tracking
 
-To initialize the SDK and set up tracking, see the [initialize the SDK and set up tracking tutorial](../getting-started/initialize-the-sdk.md).
+To initialize the SDK and set up tracking, see the [initialize the SDK and set up tracking tutorial](../getting-started/track-events.md).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 

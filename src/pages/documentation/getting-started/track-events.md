@@ -1,13 +1,4 @@
-import TrackAppStatesIosACP from './tabs/initialize-the-sdk/track-app-states/ios-acp.md'
-import TrackAppStatesIosAEP from './tabs/initialize-the-sdk/track-app-states/ios-aep.md'
-import TrackAppStatesAndroid from './tabs/initialize-the-sdk/track-app-states/android.md'
-import TrackUserActionsIosACP from './tabs/initialize-the-sdk/track-user-actions/ios-acp.md'
-import TrackUserActionsIosAEP from './tabs/initialize-the-sdk/track-user-actions/ios-aep.md'
-import TrackUserActionsAndroid from './tabs/initialize-the-sdk/track-user-actions/android.md'
-import CreateExperienceEventIos from './tabs/initialize-the-sdk/create-experience-event/ios.md'
-import CreateExperienceEventAndroid from './tabs/initialize-the-sdk/create-experience-event/android.md'
-import SendToEdgeIos from './tabs/initialize-the-sdk/send-to-edge/ios.md'
-import SendToEdgeAndroid from './tabs/initialize-the-sdk/send-to-edge/android.md'
+import Tabs from './tabs/track-events.md'
 
 # Track events
 
@@ -40,11 +31,11 @@ Additionally, you'll need to add the `Environment Details` field group and creat
 
 Android
 
-<CreateExperienceEventAndroid/>
+<Tabs query="platform=android&task=create"/>
 
 iOS (AEP 3.x)
 
-<CreateExperienceEventIos/>
+<Tabs query="platform=ios-aep&task=create"/>
 
 ### Send the Experience Event to Edge Network
 
@@ -54,11 +45,11 @@ Use the Adobe Experience Platform Edge Mobile Extension to send the Experience E
 
 Android
 
-<SendToEdgeAndroid/>
+<Tabs query="platform=android&task=send"/>
 
-iOS
+iOS (AEP 3.x)
 
-<SendToEdgeIos/>
+<Tabs query="platform=ios-aep&task=send"/>
 
 ## Track user actions (for Adobe Analytics)
 
@@ -70,37 +61,77 @@ Actions are events that occur in your app. Use this API to track and measure an 
 
 You must call this API when an event that you want to track occurs. In addition to the action name, you can send additional context data with each track action call.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
 Android
 
-<TrackUserActionsAndroid/>
+<Tabs query="platform=android&task=track-action"/>
 
 iOS (AEP 3.x)
 
-<TrackUserActionsIosAEP/>
+<Tabs query="platform=ios-aep&task=track-action"/>
 
 iOS (ACP 2.x)
 
-<TrackUserActionsIosACP/>
+<Tabs query="platform=ios-acp&task=track-action"/>
+
+React Native
+
+<Tabs query="platform=react-native&task=track-action"/>
+
+Flutter
+
+<Tabs query="platform=flutter&task=track-action"/>
+
+Cordova
+
+<Tabs query="platform=cordova&task=track-action"/>
+
+Unity
+
+<Tabs query="platform=unity&task=track-action"/>
+
+Xamarin
+
+<Tabs query="platform=xamarin&task=track-action"/>
 
 ## Track app states and screens (for Adobe Analytics)
 
 States represent screens or views in your app. The `trackState` method is called every time a new state is displayed in your application. For example, this method would be called when a user navigates from the home page to the news feed. This method also sends an Adobe Analytics state-tracking hit with optional context data.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
 Android
 
-<TrackAppStatesAndroid/>
+<Tabs query="platform=android&task=track-state"/>
 
 iOS (AEP 3.x)
 
-<TrackAppStatesIosAEP/>
+<Tabs query="platform=ios-aep&task=track-state"/>
 
 iOS (ACP 2.x)
 
-<TrackAppStatesIosACP/>
+<Tabs query="platform=ios-acp&task=track-state"/>
+
+React Native
+
+<Tabs query="platform=react-native&task=track-state"/>
+
+Flutter
+
+<Tabs query="platform=flutter&task=track-state"/>
+
+Cordova
+
+<Tabs query="platform=cordova&task=track-state"/>
+
+Unity
+
+<Tabs query="platform=unity&task=track-state"/>
+
+Xamarin
+
+<Tabs query="platform=xamarin&task=track-state"/>
 
 For more information, see the [Mobile Core API Reference](../mobile-core/api-reference.md).
 

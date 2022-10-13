@@ -35,9 +35,9 @@ The following tables provide information about the differences between the new E
 
 | Functionality | 4x SDK | Experience Platform SDK |
 |---|---|---|
-| Postbacks - Get/POST URL requests | Yes |	Yes - [Signals](..mobile-core/signal/index.md) extension |
-| Postbacks - PII Get/POST URL requests | Yes | Yes - [Signals](..mobile-core/signal/index.md) extension |
-| Postbacks - Open app deeplink | Yes | Yes - [Signals](..mobile-core/signal/index.md) extension |
+| Postbacks - Get/POST URL requests | Yes |	Yes - [Signals](../mobile-core/signal/index.md) extension |
+| Postbacks - PII Get/POST URL requests | Yes | Yes - [Signals](../mobile-core/signal/index.md) extension |
+| Postbacks - Open app deeplink | Yes | Yes - [Signals](../mobile-core/signal/index.md) extension |
 | Push Messaging | Yes | Yes - [Mobile Services](../adobe-analytics-mobile-services/index.md) extension | 
 | In-app Messaging | Yes | Yes - [Mobile Services](../adobe-analytics-mobile-services/index.md) extension |
 | Marketing/Acquisition Links | Yes | Yes - [Mobile Services](../adobe-analytics-mobile-services/index.md) extension |

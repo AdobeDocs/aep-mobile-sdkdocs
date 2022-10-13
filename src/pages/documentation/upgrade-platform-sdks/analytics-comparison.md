@@ -1,11 +1,11 @@
-import analyticsconfigandroid from './tabs/analyticsConfig-android.md'
-import analyticsconfigios from './tabs/analyticsConfig-ios.md'
-import aepinstallandroid from './tabs/aep-install-android.md'
-import aepinstallios from './tabs/aep-install-ios.md'
-import apichangesandroid from './tabs/api-changes-android.md'
-import apichangesios from './tabs/api-changes-ios.md'
-import privacychangesandroid from './tabs/privacy-changes-android.md'
-import privacychangesios from './tabs/privacy-changes-ios.md'
+import Analyticsconfigandroid from './tabs/analyticsConfig-android.md'
+import Analyticsconfigios from './tabs/analyticsConfig-ios.md'
+import Aepinstallandroid from './tabs/aep-install-android.md'
+import Aepinstallios from './tabs/aep-install-ios.md'
+import Apichangesandroid from './tabs/api-changes-android.md'
+import Apichangesios from './tabs/api-changes-ios.md'
+import Privacychangesandroid from './tabs/privacy-changes-android.md'
+import Privacychangesios from './tabs/privacy-changes-ios.md'
 
 # V4 Mobile SDKs to Experience Platform Analytics migration
 
@@ -21,11 +21,11 @@ The Adobe Experience Platform Analytics extension uses [tags](https://experience
 
 #### Android
 
-<analyticsconfigandroid/>
+<Analyticsconfigandroid/>
 
 #### iOS
 
-<analyticsconfigios/>
+<Analyticsconfigios/>
 
 ## Analytics Migration Overview
 
@@ -55,11 +55,11 @@ In your app's Application class add the Adobe Experience Platform extension regi
 
 #### Android
 
-<aepinstallandroid/>
+<Aepinstallandroid/>
 
 #### iOS
 
-<aepinstallios/>
+<Aepinstallios/>
 
 For more details, see [Add Analytics to your application](../adobe-analytics/index.md#add-analytics-to-your-application).
 
@@ -71,11 +71,11 @@ For more details, see [Add Analytics to your application](../adobe-analytics/ind
 
 #### Android
 
-<apichangesandroid/>
+<Apichangesandroid/>
 
 #### iOS
 
-<apichangesios/>
+<Apichangesios/>
 
 ## Privacy status changes in the AEP SDK
 
@@ -91,8 +91,8 @@ The privacy status API `setPrivacyStatus` and `getPrivacyStatus` can be found in
 
 #### Android
 
-<privacychangesandroid/>
+<Privacychangesandroid/>
 
 #### iOS
 
-<privacychangesios/>
+<Privacychangesios/>
