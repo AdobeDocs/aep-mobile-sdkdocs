@@ -1,5 +1,4 @@
-import TrackDeeplinkIosAEP from './tabs/migration/track-deeplink/ios-aep.md'
-import TrackDeeplinkIosACP from './tabs/migration/track-deeplink/ios-acp.md'
+import Tabs from './tabs/migration.md'
 
 # Migrating to AEPMobileServices reference
 
@@ -19,10 +18,10 @@ For more information, please read the [Mobile Services API reference](./api-refe
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-#### iOS (AEP 3.x)
+AEP 3.x (Objective-C)
 
-<TrackDeeplinkIosAEP/>
+<Tabs query="platform=aep-objc&api=track-adobe-deep-link"/>
 
-#### iOS (ACP 2.x)
+ACP 2.x (Objective-C)
 
-<TrackDeeplinkIosACP/>
+<Tabs query="platform=acp-objc&api=track-adobe-deep-link"/>
