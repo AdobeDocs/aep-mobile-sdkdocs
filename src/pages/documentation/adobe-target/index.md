@@ -1,26 +1,4 @@
-import AddTargetIosACP from './tabs/index/add-target/ios-acp.md'
-import AddTargetIosAEP from './tabs/index/add-target/ios-aep.md'
-import AddTargetAndroid from './tabs/index/add-target/android.md'
-import AddTargetReactNative from './tabs/index/add-target/react-native.md'
-import RegisterTargetIosACP from './tabs/index/register-target/ios-acp.md'
-import RegisterTargetIosAEP from './tabs/index/register-target/ios-aep.md'
-import RegisterTargetAndroid from './tabs/index/register-target/android.md'
-import RegisterTargetReactNative from './tabs/index/register-target/react-native.md'
-import TargetOrderClassIosACP from './tabs/index/target-order-class/ios-acp.md'
-import TargetOrderClassIosAEP from './tabs/index/target-order-class/ios-aep.md'
-import TargetOrderClassAndroid from './tabs/index/target-order-class/android.md'
-import TargetOrderClassReactNative from './tabs/index/target-order-class/react-native.md'
-import TargetParametersIosACP from './tabs/index/target-parameters/ios-acp.md'
-import TargetParametersIosAEP from './tabs/index/target-parameters/ios-aep.md'
-import TargetParametersAndroid from './tabs/index/target-parameters/android.md'
-import TargetParametersReactNative from './tabs/index/target-parameters/react-native.md'
-import TargetProductClassIosACP from './tabs/index/target-product-class/ios-acp.md'
-import TargetProductClassIosAEP from './tabs/index/target-product-class/ios-aep.md'
-import TargetProductClassAndroid from './tabs/index/target-product-class/android.md'
-import TargetProductClassReactNative from './tabs/index/target-product-class/react-native.md'
-import VisualPreviewIosACP from './tabs/index/visual-preview/ios-acp.md'
-import VisualPreviewIosAEP from './tabs/index/visual-preview/ios-aep.md'
-import VisualPreviewAndroid from './tabs/index/visual-preview/android.md'
+import Tabs from './tabs/index.md'
 
 # Adobe Target
 
@@ -57,19 +35,19 @@ To add the Target extension to your app:
 
 Android
 
-<AddTargetAndroid/>
+<Tabs query="platform=android&task=add"/>
 
 iOS (AEP 3.x)
 
-<AddTargetIosAEP/>
+<Tabs query="platform=ios-aep&task=add"/>
 
 iOS (ACP 2.x)
 
-<AddTargetIosACP/>
+<Tabs query="platform=ios-acp&task=add"/>
 
 React Native
 
-<AddTargetReactNative/>
+<Tabs query="platform=react-native&task=add"/>
 
 ## Register Target with Mobile Core
 
@@ -79,19 +57,19 @@ To register the Target extension with Mobile Core:
 
 Android
 
-<RegisterTargetAndroid/>
+<Tabs query="platform=android&task=register"/>
 
 iOS (AEP 3.x)
 
-<RegisterTargetIosAEP/>
+<Tabs query="platform=ios-aep&task=register"/>
 
 iOS (ACP 2.x)
 
-<RegisterTargetIosACP/>
+<Tabs query="platform=ios-acp&task=register"/>
 
 React Native
 
-<RegisterTargetReactNative/>
+<Tabs query="platform=react-native&task=register"/>
 
 ## Parameters in a Target request
 
@@ -105,19 +83,19 @@ The `TargetOrder` class encapsulates the order ID, the order total, and the purc
 
 Android
 
-<TargetOrderClassAndroid/>
+<Tabs query="platform=android&task=target-order"/>
 
 iOS (AEP 3.x)
 
-<TargetOrderClassIosAEP/>
+<Tabs query="platform=ios-aep&task=target-order"/>
 
 iOS (ACP 2.x)
 
-<TargetOrderClassIosACP/>
+<Tabs query="platform=ios-acp&task=target-order"/>
 
 React Native
 
-<TargetOrderClassReactNative/>
+<Tabs query="platform=react-native&task=target-order"/>
 
 ### Target Product class
 
@@ -127,19 +105,19 @@ The `TargetProduct` class encapsulates the product ID and the product category I
 
 Android
 
-<TargetProductClassAndroid/>
+<Tabs query="platform=android&task=target-product"/>
 
 iOS (AEP 3.x)
 
-<TargetProductClassIosAEP/>
+<Tabs query="platform=ios-aep&task=target-product"/>
 
 iOS (ACP 2.x)
 
-<TargetProductClassIosACP/>
+<Tabs query="platform=ios-acp&task=target-product"/>
 
 React Native
 
-<TargetProductClassReactNative/>
+<Tabs query="platform=react-native&task=target-product"/>
 
 ### Target Parameters
 
@@ -149,19 +127,19 @@ React Native
 
 Android
 
-<TargetParametersAndroid/>
+<Tabs query="platform=android&task=target-parameters"/>
 
 iOS (AEP 3.x)
 
-<TargetParametersIosAEP/>
+<Tabs query="platform=ios-aep&task=target-parameters"/>
 
 iOS (ACP 2.x)
 
-<TargetParametersIosACP/>
+<Tabs query="platform=ios-acp&task=target-parameters"/>
 
 React Native
 
-<TargetParametersReactNative/>
+<Tabs query="platform=react-native&task=target-parameters"/>
 
 ### Merge behavior of Target parameters
 
@@ -193,15 +171,15 @@ The mbox request that failed can be retried to successfully retrieve the test of
 
 Android
 
-<VisualPreviewAndroid/>
+<Tabs query="platform=android&task=visual-preview"/>
 
 iOS (AEP 3.x)
 
-<VisualPreviewIosAEP/>
+<Tabs query="platform=ios-aep&task=visual-preview"/>
 
 iOS (ACP 2.x)
 
-<VisualPreviewIosACP/>
+<Tabs query="platform=ios-acp&task=visual-preview"/>
 
 ## Offer Prefetch
 

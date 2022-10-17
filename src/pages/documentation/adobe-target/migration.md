@@ -1,3 +1,5 @@
+import Tabs from './tabs/migration.md'
+
 # Migrating to AEPTarget reference
 
 This document is a reference comparison of AEPTarget(3.x) APIs against their equivalent ACPTarget (2.x) APIs for an iOS mobile application implementation.
@@ -23,15 +25,15 @@ The AEPTarget extension is implemented purely in Swift and is compatible with th
 
 AEP 3.x (Swift)
 
-<ClearPrefetchCacheAEPSwift/>
+<Tabs query="platform=aep-swift&api=clear-prefetch-cache"/>
 
 AEP 3.x (Objective-C)
 
-<ClearPrefetchCacheAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=clear-prefetch-cache"/>
 
 ACP 2.x (Objective-C)
 
-<ClearPrefetchCacheACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=clear-prefetch-cache"/>
 
 ### clickedLocation
 
@@ -39,15 +41,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<ClickedLocationAEPSwift/>
+<Tabs query="platform=aep-swift&api=clicked-location"/>
 
 AEP 3.x (Objective-C)
 
-<ClickedLocationAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=clicked-location"/>
 
 ACP 2.x (Objective-C)
 
-<ClickedLocationACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=clicked-location"/>
 
 ### extensionVersion
 
@@ -55,15 +57,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<ExtensionVersionAEPSwift/>
+<Tabs query="platform=aep-swift&api=extension-version"/>
 
 AEP 3.x (Objective-C)
 
-<ExtensionVersionAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=extension-version"/>
 
 ACP 2.x (Objective-C)
 
-<ExtensionVersionACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=extension-version"/>
 
 ### getThirdPartyId
 
@@ -71,15 +73,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<GetThirdPartyIdAEPSwift/>
+<Tabs query="platform=aep-swift&api=get-third-party-id"/>
 
 AEP 3.x (Objective-C)
 
-<GetThirdPartyIdAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=get-third-party-id"/>
 
 ACP 2.x (Objective-C)
 
-<GetThirdPartyIdACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=get-third-party-id"/>
 
 ### getTntId
 
@@ -87,15 +89,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<GetTntIdAEPSwift/>
+<Tabs query="platform=aep-swift&api=get-tnt-id"/>
 
 AEP 3.x (Objective-C)
 
-<GetTntIdAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=get-tnt-id"/>
 
 ACP 2.x (Objective-C)
 
-<GetTntIdACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=get-tnt-id"/>
 
 ### prefetchContent
 
@@ -103,15 +105,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<PrefetchContentAEPSwift/>
+<Tabs query="platform=aep-swift&api=prefetch-content"/>
 
 AEP 3.x (Objective-C)
 
-<PrefetchContentAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=prefetch-content"/>
 
 ACP 2.x (Objective-C)
 
-<PrefetchContentACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=prefetch-content"/>
 
 ### registerExtension
 
@@ -119,15 +121,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<RegisterExtensionAEPSwift/>
+<Tabs query="platform=aep-swift&api=register-extension"/>
 
 AEP 3.x (Objective-C)
 
-<RegisterExtensionAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=register-extension"/>
 
 ACP 2.x (Objective-C)
 
-<RegisterExtensionACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=register-extension"/>
 
 ### retrieveLocationContent
 
@@ -135,15 +137,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<RetrieveLocationContentAEPSwift/>
+<Tabs query="platform=aep-swift&api=retrieve-location-content"/>
 
 AEP 3.x (Objective-C)
 
-<RetrieveLocationContentAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=retrieve-location-content"/>
 
 ACP 2.x (Objective-C)
 
-<RetrieveLocationContentACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=retrieve-location-content"/>
 
 ### setPreviewRestartDeepLink
 
@@ -151,15 +153,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<SetPreviewRestartDeepLinkAEPSwift/>
+<Tabs query="platform=aep-swift&api=set-preview-restart-deep-link"/>
 
 AEP 3.x (Objective-C)
 
-<SetPreviewRestartDeepLinkAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=set-preview-restart-deep-link"/>
 
 ACP 2.x (Objective-C)
 
-<SetPreviewRestartDeepLinkACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=set-preview-restart-deep-link"/>
 
 ### setThirdPartyId
 
@@ -167,13 +169,13 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<SetThirdPartyIdAEPSwift/>
+<Tabs query="platform=aep-swift&api=set-third-party-id"/>
 
 AEP 3.x (Objective-C)
 
-<SetThirdPartyIdAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=set-third-party-id"/>
 
 ACP 2.x (Objective-C)
 
-<SetThirdPartyIdACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=set-third-party-id"/>
 
