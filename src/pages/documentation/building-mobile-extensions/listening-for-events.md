@@ -1,9 +1,4 @@
-import CreateEventListenerAndroid from './tabs/listening-for-events/create-event-listener/android.md'
-import CreateEventListenerIos from './tabs/listening-for-events/create-event-listener/ios.md'
-import RegisterEventListenerAndroid from './tabs/listening-for-events/register-event-listener/android.md'
-import RegisterEventListenerIos from './tabs/listening-for-events/register-event-listener/ios.md'
-import RegisterWildcardListenerAndroid from './tabs/listening-for-events/register-wildcard-listener/android.md'
-import RegisterWildcardListenerIos from './tabs/listening-for-events/register-wildcard-listener/ios.md'
+import Tabs from './tabs/listening-for-events.md'
 
 # Listening for events
 
@@ -27,11 +22,11 @@ The event type and event source that are associated with the received event can 
 
 Android
 
-<CreateEventListenerAndroid/>
+<Tabs query="platform=android&task=create"/>
 
 iOS
 
-<CreateEventListenerIos/>
+<Tabs query="platform=ios&task=create"/>
 
 ### What can you do in your event handler?
 
@@ -47,11 +42,11 @@ The following example calls the listeners `hear` method when a change to the Ado
 
 Android
 
-<RegisterEventListenerAndroid/>
+<Tabs query="platform=android&task=register-event"/>
 
 iOS
 
-<RegisterEventListenerIos/>
+<Tabs query="platform=ios&task=register-event"/>
 
 ## Registering a wildcard listener
 
@@ -65,8 +60,8 @@ The `hear` method of this listener can be called often, and you should not do in
 
 Android
 
-<RegisterWildcardListenerAndroid/>
+<Tabs query="platform=android&task=register-wildcard"/>
 
 iOS
 
-<RegisterWildcardListenerIos/>
+<Tabs query="platform=ios&task=register-wildcard"/>

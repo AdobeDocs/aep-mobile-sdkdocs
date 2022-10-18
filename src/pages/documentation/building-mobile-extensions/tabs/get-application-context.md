@@ -1,6 +1,6 @@
-#### Java
+<Variant platform="android" task="get" repeat="6"/>
 
-<InlineAlert variant="warning" slots="text"/>
+#### Java
 
 `MobileCore.getApplication` may return `null` if the `android.app.Application` object was destroyed or if `MobileCore.setApplication`was not previously called.
 

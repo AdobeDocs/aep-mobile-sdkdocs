@@ -1,15 +1,4 @@
-import ClearSharedStateAndroid from './tabs/shared-states/clear-shared-state/android.md'
-import ClearSharedStateIos from './tabs/shared-states/clear-shared-state/ios.md'
-import MonitorSharedStateAndroid from './tabs/shared-states/monitor-shared-state/android.md'
-import MonitorSharedStateIos from './tabs/shared-states/monitor-shared-state/ios.md'
-import RequestSharedStateAndroid from './tabs/shared-states/request-shared-state/android.md'
-import RequestSharedStateIos from './tabs/shared-states/request-shared-state/ios.md'
-import RequestNotTiedSharedStateAndroid from './tabs/shared-states/request-not-tied-shared-state/android.md'
-import RequestNotTiedSharedStateIos from './tabs/shared-states/request-not-tied-shared-state/ios.md'
-import UpdateSharedStateAndroid from './tabs/shared-states/update-shared-state/android.md'
-import UpdateSharedStateIos from './tabs/shared-states/update-shared-state/ios.md'
-import UpdateNotTiedSharedStateAndroid from './tabs/shared-states/update-not-tied-shared-state/android.md'
-import UpdateNotTiedSharedStateIos from './tabs/shared-states/update-not-tied-shared-state/ios.md'
+import Tabs from './tabs/shared-states.md'
 
 # Shared states and events
 
@@ -53,11 +42,11 @@ To manage identifiers, an API is available that clears the existing shared state
 
 Android
 
-<ClearSharedStateAndroid/>
+<Tabs query="platform=android&task=clear"/>
 
 iOS
 
-<ClearSharedStateIos/>
+<Tabs query="platform=ios&task=clear"/>
 
 ## Monitoring shared states
 
@@ -69,11 +58,11 @@ In the example below, you can find the listener that is being registered in the 
 
 Android
 
-<MonitorSharedStateAndroid/>
+<Tabs query="platform=android&task=monitor"/>
 
 iOS
 
-<MonitorSharedStateIos/>
+<Tabs query="platform=ios&task=monitor"/>
 
 ## Requesting a shared state
 
@@ -85,11 +74,11 @@ The following example shows a typical scenario where shared state is requested. 
 
 Android
 
-<RequestSharedStateAndroid/>
+<Tabs query="platform=android&task=request"/>
 
 iOS
 
-<RequestSharedStateIos/>
+<Tabs query="platform=ios&task=request"/>
 
 ### Public shared state constants
 
@@ -121,11 +110,11 @@ The caller must be careful to account for null values being passed back.
 
 Android
 
-<RequestNotTiedSharedStateAndroid/>
+<Tabs query="platform=android&task=request-not-tied"/>
 
 iOS
 
-<RequestNotTiedSharedStateIos/>
+<Tabs query="platform=ios&task=request-not-tied"/>
 
 ## Updating the shared state
 
@@ -135,11 +124,11 @@ Extensions set a shared state by creating an event data that the extensions save
 
 Android
 
-<UpdateSharedStateAndroid/>
+<Tabs query="platform=android&task=update"/>
 
 iOS
 
-<UpdateSharedStateIos/>
+<Tabs query="platform=ios&task=update"/>
 
 ## Updating a shared state that is not tied to an event
 
@@ -149,8 +138,8 @@ Here, extensions can skip passing the `ACPExtensionEvent` (iOS) / `Event` (Andro
 
 Android
 
-<UpdateNotTiedSharedStateAndroid/>
+<Tabs query="platform=android&task=update-not-tied"/>
 
 iOS
 
-<UpdateNotTiedSharedStateIos/>
+<Tabs query="platform=ios&task=update-not-tied"/>

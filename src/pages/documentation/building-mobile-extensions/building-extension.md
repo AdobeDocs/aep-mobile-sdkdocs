@@ -1,9 +1,4 @@
-import CreateExtensionClassAndroid from './tabs/building-extension/create-extension-class/android.md'
-import CreateExtensionClassIos from './tabs/building-extension/create-extension-class/ios.md'
-import RegisterExtensionAndroid from './tabs/building-extension/register-extension/android.md'
-import RegisterExtensionIos from './tabs/building-extension/register-extension/ios.md'
-import UnregisterExtensionAndroid from './tabs/building-extension/unregister-extension/android.md'
-import UnregisterExtensionIos from './tabs/building-extension/unregister-extension/ios.md'
+import Tabs from './tabs/building-extension.md'
 
 # Building an extension
 
@@ -44,11 +39,11 @@ The `ACPExtension`(iOS) or `Extension` (Android) class is the base class from wh
 
 Android
 
-<CreateExtensionClassAndroid/>
+<Tabs query="platform=android&task=create"/>
 
 iOS
 
-<CreateExtensionClassIos/>
+<Tabs query="platform=ios&task=create"/>
 
 ### Registering your extension
 
@@ -62,11 +57,11 @@ Registration can be completed any time after the app is launched.
 
 Android
 
-<RegisterExtensionAndroid/>
+<Tabs query="platform=android&task=register"/>
 
 iOS
 
-<RegisterExtensionIos/>
+<Tabs query="platform=ios&task=register"/>
 
 #### Unregistering your extension
 
@@ -80,8 +75,8 @@ If you retained a reference to the extension instance (for example by storing `s
 
 Android
 
-<UnregisterExtensionAndroid/>
+<Tabs query="platform=android&task=unregister"/>
 
 iOS 
 
-<UnregisterExtensionIos/>
+<Tabs query="platform=ios&task=unregister"/>

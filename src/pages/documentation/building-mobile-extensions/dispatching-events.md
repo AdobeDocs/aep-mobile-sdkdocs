@@ -1,9 +1,4 @@
-import CreateEventAndroid from './tabs/dispatching-events/create-event/android.md'
-import CreateEventIos from './tabs/dispatching-events/create-event/ios.md'
-import DispatchEventAndroid from './tabs/dispatching-events/dispatch-event/android.md'
-import DispatchEventIos from './tabs/dispatching-events/dispatch-event/ios.md'
-import DispatchPairedEventsAndroid from './tabs/dispatching-events/dispatch-paired-events/android.md'
-import DispatchPairedEventsIos from './tabs/dispatching-events/dispatch-paired-events/ios.md'
+import Tabs from './tabs/dispatching-events.md'
 
 # Dispatching events from your extension
 
@@ -32,11 +27,11 @@ In the example below, a custom event called `MyCustomEvent` is created with cust
 
 Android
 
-<CreateEventAndroid/>
+<Tabs query="platform=android&task=create"/>
 
 iOS
 
-<CreateEventIos/>
+<Tabs query="platform=ios&task=create"/>
 
 ### Dispatch your event
 
@@ -48,11 +43,11 @@ You may need to dispatch an event from one of your APIs or application methods t
 
 Android
 
-<DispatchEventAndroid/>
+<Tabs query="platform=android&task=dispatch"/>
 
 iOS
 
-<DispatchEventIos/>
+<Tabs query="platform=ios&task=dispatch"/>
 
 ### Dispatch paired events
 
@@ -68,8 +63,8 @@ The following example shows how to implement paired events:
 
 Android
 
-<DispatchPairedEventsAndroid/>
+<Tabs query="platform=android&task=dispatch-paired"/>
 
 iOS
 
-<DispatchPairedEventsIos/>
+<Tabs query="platform=ios&task=dispatch-paired"/>

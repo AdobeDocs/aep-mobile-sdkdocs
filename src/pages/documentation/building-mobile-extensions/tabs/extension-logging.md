@@ -1,3 +1,5 @@
+<Variant platform="android" task="logging" repeat="3"/>
+
 #### Java
 
 **Example**
@@ -13,4 +15,22 @@ ExtensionErrorCallback<ExtensionError> errorCallback = new ExtensionErrorCallbac
     }
 };
 MobileCore.registerExtension(MyExtension.class, errorCallback);
+```
+
+<Variant platform="ios" task="logging" repeat="3"/>
+
+#### Objective-C
+
+**Example**
+
+```objectivec
+NSString* extensionName = @"com.example.MyExtension";
+...
+
+NSError *error = nil;
+if ([ACPCore registerExtension:[MyExtension class] error:&error]) {
+    [ACPCore log:ACPMobileLogLevelDebug tag:extensionName message:@"MyExtension was successfully registered"];
+} else {
+    [ACPCore log:ACPMobileLogLevelWarning tag:extensionName message:@"An error occurred while attempting to register MyExtension"];
+}
 ```

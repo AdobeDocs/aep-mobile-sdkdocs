@@ -1,5 +1,4 @@
-import ExtensionLoggingAndroid from './tabs/extension-logging/android.md'
-import ExtensionLoggingIos from './tabs/extension-logging/ios.md'
+import Tabs from './tabs/extension-logging.md'
 
 # Extension logging
 
@@ -18,11 +17,11 @@ The Experience Platform SDK uses the extension name as the log tag for the Adobe
 
 Android
 
-<ExtensionLoggingAndroid/>
+<Tabs query="platform=android&task=logging"/>
 
 iOS
 
-<ExtensionLoggingIos/>
+<Tabs query="platform=ios&task=logging"/>
 
 ## Additional information
 
