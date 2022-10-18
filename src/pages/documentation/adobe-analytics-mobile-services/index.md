@@ -1,22 +1,4 @@
-import AddMobileServicesIosAEP from './tabs/index/add-mobile-services/ios-aep.md'
-import AddMobileServicesIosACP from './tabs/index/add-mobile-services/ios-acp.md'
-import AddMobileServicesAndroid from './tabs/index/add-mobile-services/android.md'
-import RegisterMobileServicesIosAEP from './tabs/index/register-mobile-services/ios-aep.md'
-import RegisterMobileServicesIosACP from './tabs/index/register-mobile-services/ios-acp.md'
-import RegisterMobileServicesAndroid from './tabs/index/register-mobile-services/android.md'
-import SetIconIos from './tabs/index/set-icon/ios.md'
-import SetIconAndroid from './tabs/index/set-icon/android.md'
-import SetUpInAppMessagingIos from './tabs/index/set-up-in-app-messaging/ios.md'
-import SetUpInAppMessagingAndroid from './tabs/index/set-up-in-app-messaging/android.md'
-import SetUpPushMessagingIosAEP from './tabs/index/set-up-push-messaging/ios-aep.md'
-import SetUpPushMessagingIosACP from './tabs/index/set-up-push-messaging/ios-acp.md'
-import SetUpPushMessagingAndroid from './tabs/index/set-up-push-messaging/android.md'
-import SetUpPushTrackingIosAEP from './tabs/index/set-up-push-tracking/ios-aep.md'
-import SetUpPushTrackingIosACP from './tabs/index/set-up-push-tracking/ios-acp.md'
-import SetUpPushTrackingAndroid from './tabs/index/set-up-push-tracking/android.md'
-import TrackDeeplinkIosAEP from './tabs/index/track-deeplink/ios-aep.md'
-import TrackDeeplinkIosACP from './tabs/index/track-deeplink/ios-acp.md'
-import TrackDeeplinkAndroid from './tabs/index/track-deeplink/android.md'
+import Tabs from './tabs/index.md'
 
 # Adobe Analytics - Mobile Services
 
@@ -125,33 +107,33 @@ iOS AEP (3.x) Mobile Services extension only supports Cocoapods. It does **not**
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### Android
+Android
 
-<AddMobileServicesAndroid/>
+<Tabs query="platform=android&task=add"/>
 
-#### iOS (AEP 3.x)
+iOS (AEP 3.x)
 
-<AddMobileServicesIosAEP/>
+<Tabs query="platform=ios-aep&task=add"/>
 
-#### iOS (ACP 2.x)
+iOS (ACP 2.x)
 
-<AddMobileServicesIosACP/>
+<Tabs query="platform=ios-acp&task=add"/>
 
 ## Register Mobile Services with Mobile Core
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### Android
+Android
 
-<RegisterMobileServicesAndroid/>
+<Tabs query="platform=android&task=register"/>
 
-#### iOS (AEP 3.x)
+iOS (AEP 3.x)
 
-<RegisterMobileServicesIosAEP/>
+<Tabs query="platform=ios-aep&task=register"/>
 
-#### iOS (ACP 2.x)
+iOS (ACP 2.x)
 
-<RegisterMobileServicesIosACP/>
+<Tabs query="platform=ios-acp&task=register"/>
 
 ## Implement Mobile Services APIs in your app
 
@@ -161,17 +143,17 @@ To use your Android or iOS extension with the Experience Platform SDKs, implemen
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### Android
+Android
 
-<SetUpPushMessagingAndroid/>
+<Tabs query="platform=android&task=set-push-messaging"/>
 
-#### iOS (AEP 3.x)
+iOS (AEP 3.x)
 
-<SetUpPushMessagingIosAEP/>
+<Tabs query="platform=ios-aep&task=set-push-messaging"/>
 
-#### iOS (ACP 2.x)
+iOS (ACP 2.x)
 
-<SetUpPushMessagingIosACP/>
+<Tabs query="platform=ios-acp&task=set-push-messaging"/>
 
 ### Debugging the push messaging set up
 
@@ -193,17 +175,17 @@ Using the following API does not increment page views.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### Android
+Android
 
-<SetUpPushTrackingAndroid/>
+<Tabs query="platform=android&task=set-push-tracking"/>
 
-#### iOS (AEP 3.x)
+iOS (AEP 3.x)
 
-<SetUpPushTrackingIosAEP/>
+<Tabs query="platform=ios-aep&task=set-push-tracking"/>
 
-#### iOS (ACP 2.x)
+iOS (ACP 2.x)
 
-<SetUpPushTrackingIosACP/>
+<Tabs query="platform=ios-acp&task=set-push-tracking"/>
 
 ## Troubleshooting push messaging
 
@@ -220,13 +202,13 @@ To set up your app for in-app messages, implement the following instructions. Yo
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-#### Android
+Android
 
-<SetUpInAppMessagingAndroid/>
+<Tabs query="platform=android&task=set-in-app-messaging"/>
 
-#### iOS
+iOS
 
-<SetUpInAppMessagingIos/>
+<Tabs query="platform=ios&task=set-in-app-messaging"/>
 
 ## Fallback images
 
@@ -242,13 +224,13 @@ The following methods allow you to configure the small and large icons that appe
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-#### Android
+Android
 
-<SetIconAndroid/>
+<Tabs query="platform=android&task=set-icon"/>
 
-#### iOS
+iOS
 
-<SetIconIos/>
+<Tabs query="platform=ios&task=set-icon"/>
 
 ### Tracking in-app messages
 
@@ -440,17 +422,17 @@ Ensure that the deep link URL has the `a.deeplink.id` key in the URL string. If 
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### Android
+Android
 
-<TrackDeeplinkAndroid/>
+<Tabs query="platform=android&task=track-deep-link"/>
 
-#### iOS (AEP 3.x)
+iOS (AEP 3.x)
 
-<TrackDeeplinkIosAEP/>
+<Tabs query="platform=ios-aep&task=track-deep-link"/>
 
-#### iOS (ACP 2.x)
+iOS (ACP 2.x)
 
-<TrackDeeplinkIosACP/>
+<Tabs query="platform=ios-acp&task=track-deep-link"/>
 
 ## Integration with Apple Search Ads (iOS)
 

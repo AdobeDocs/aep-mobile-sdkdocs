@@ -1,3 +1,0 @@
-```objc
-+ (nonnull NSString*) extensionVersion;
-```

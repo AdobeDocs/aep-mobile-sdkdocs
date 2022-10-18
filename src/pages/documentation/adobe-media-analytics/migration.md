@@ -1,81 +1,4 @@
-import CreateAdBreakObjectAEPSwift from './tabs/migration/create-ad-break-object/swift-aep.md'
-import CreateAdBreakObjectACPObjectiveC from './tabs/migration/create-ad-break-object/objective-c-acp.md'
-import CreateAdBreakObjectAEPObjectiveC from './tabs/migration/create-ad-break-object/objective-c-aep.md'
-import CreateAdObjectAEPSwift from './tabs/migration/create-ad-object/swift-aep.md'
-import CreateAdObjectACPObjectiveC from './tabs/migration/create-ad-object/objective-c-acp.md'
-import CreateAdObjectAEPObjectiveC from './tabs/migration/create-ad-object/objective-c-aep.md'
-import CreateChapterObjectAEPSwift from './tabs/migration/create-chapter-object/swift-aep.md'
-import CreateChapterObjectACPObjectiveC from './tabs/migration/create-chapter-object/objective-c-acp.md'
-import CreateChapterObjectAEPObjectiveC from './tabs/migration/create-chapter-object/objective-c-aep.md'
-import CreateMediaObjectAEPSwift from './tabs/migration/create-media-object/swift-aep.md'
-import CreateMediaObjectACPObjectiveC from './tabs/migration/create-media-object/objective-c-acp.md'
-import CreateMediaObjectAEPObjectiveC from './tabs/migration/create-media-object/objective-c-aep.md'
-import CreateQoeObjectAEPSwift from './tabs/migration/create-qoe-object/swift-aep.md'
-import CreateQoeObjectACPObjectiveC from './tabs/migration/create-qoe-object/objective-c-acp.md'
-import CreateQoeObjectAEPObjectiveC from './tabs/migration/create-qoe-object/objective-c-aep.md'
-import CreateStateObjectAEPSwift from './tabs/migration/create-state-object/swift-aep.md'
-import CreateStateObjectACPObjectiveC from './tabs/migration/create-state-object/objective-c-acp.md'
-import CreateStateObjectAEPObjectiveC from './tabs/migration/create-state-object/objective-c-aep.md'
-import CreateTrackerAEPSwift from './tabs/migration/create-tracker/swift-aep.md'
-import CreateTrackerACPObjectiveC from './tabs/migration/create-tracker/objective-c-acp.md'
-import CreateTrackerAEPObjectiveC from './tabs/migration/create-tracker/objective-c-aep.md'
-import CreateTrackerWithConfigAEPSwift from './tabs/migration/create-tracker-with-config/swift-aep.md'
-import CreateTrackerWithConfigACPObjectiveC from './tabs/migration/create-tracker-with-config/objective-c-acp.md'
-import CreateTrackerWithConfigAEPObjectiveC from './tabs/migration/create-tracker-with-config/objective-c-aep.md'
-import ExtensionVersionAEPSwift from './tabs/migration/extension-version/swift-aep.md'
-import ExtensionVersionACPObjectiveC from './tabs/migration/extension-version/objective-c-acp.md'
-import ExtensionVersionAEPObjectiveC from './tabs/migration/extension-version/objective-c-aep.md'
-import MediaEventsAEPSwift from './tabs/migration/media-events/swift-aep.md'
-import MediaEventsACPObjectiveC from './tabs/migration/media-events/objective-c-acp.md'
-import MediaEventsAEPObjectiveC from './tabs/migration/media-events/objective-c-aep.md'
-import MediaResumeAEPSwift from './tabs/migration/media-resume/swift-aep.md'
-import MediaResumeACPObjectiveC from './tabs/migration/media-resume/objective-c-acp.md'
-import MediaResumeAEPObjectiveC from './tabs/migration/media-resume/objective-c-aep.md'
-import MediaTypeAEPSwift from './tabs/migration/media-type/swift-aep.md'
-import MediaTypeACPObjectiveC from './tabs/migration/media-type/objective-c-acp.md'
-import MediaTypeAEPObjectiveC from './tabs/migration/media-type/objective-c-aep.md'
-import PlayerStateConstantsAEPSwift from './tabs/migration/player-state-constants/swift-aep.md'
-import PlayerStateConstantsACPObjectiveC from './tabs/migration/player-state-constants/objective-c-acp.md'
-import PlayerStateConstantsAEPObjectiveC from './tabs/migration/player-state-constants/objective-c-aep.md'
-import StandardAdConstantsAEPSwift from './tabs/migration/standard-ad-constants/swift-aep.md'
-import StandardAdConstantsACPObjectiveC from './tabs/migration/standard-ad-constants/objective-c-acp.md'
-import StandardAdConstantsAEPObjectiveC from './tabs/migration/standard-ad-constants/objective-c-aep.md'
-import StandardAudioConstantsAEPSwift from './tabs/migration/standard-audio-constants/swift-aep.md'
-import StandardAudioConstantsACPObjectiveC from './tabs/migration/standard-audio-constants/objective-c-acp.md'
-import StandardAudioConstantsAEPObjectiveC from './tabs/migration/standard-audio-constants/objective-c-aep.md'
-import StandardVideoConstantsAEPSwift from './tabs/migration/standard-video-constants/swift-aep.md'
-import StandardVideoConstantsACPObjectiveC from './tabs/migration/standard-video-constants/objective-c-acp.md'
-import StandardVideoConstantsAEPObjectiveC from './tabs/migration/standard-video-constants/objective-c-aep.md'
-import StreamTypeAEPSwift from './tabs/migration/stream-type/swift-aep.md'
-import StreamTypeACPObjectiveC from './tabs/migration/stream-type/objective-c-acp.md'
-import StreamTypeAEPObjectiveC from './tabs/migration/stream-type/objective-c-aep.md'
-import TrackCompleteAEPSwift from './tabs/migration/track-complete/swift-aep.md'
-import TrackCompleteACPObjectiveC from './tabs/migration/track-complete/objective-c-acp.md'
-import TrackCompleteAEPObjectiveC from './tabs/migration/track-complete/objective-c-aep.md'
-import TrackErrorAEPSwift from './tabs/migration/track-error/swift-aep.md'
-import TrackErrorACPObjectiveC from './tabs/migration/track-error/objective-c-acp.md'
-import TrackErrorAEPObjectiveC from './tabs/migration/track-error/objective-c-aep.md'
-import TrackEventAEPSwift from './tabs/migration/track-event/swift-aep.md'
-import TrackEventACPObjectiveC from './tabs/migration/track-event/objective-c-acp.md'
-import TrackEventAEPObjectiveC from './tabs/migration/track-event/objective-c-aep.md'
-import TrackPauseAEPSwift from './tabs/migration/track-pause/swift-aep.md'
-import TrackPauseACPObjectiveC from './tabs/migration/track-pause/objective-c-acp.md'
-import TrackPauseAEPObjectiveC from './tabs/migration/track-pause/objective-c-aep.md'
-import TrackPlayAEPSwift from './tabs/migration/track-play/swift-aep.md'
-import TrackPlayACPObjectiveC from './tabs/migration/track-play/objective-c-acp.md'
-import TrackPlayAEPObjectiveC from './tabs/migration/track-play/objective-c-aep.md'
-import TrackSessionEndAEPSwift from './tabs/migration/track-session-end/swift-aep.md'
-import TrackSessionEndACPObjectiveC from './tabs/migration/track-session-end/objective-c-acp.md'
-import TrackSessionEndAEPObjectiveC from './tabs/migration/track-session-end/objective-c-aep.md'
-import TrackSessionStartAEPSwift from './tabs/migration/track-session-start/swift-aep.md'
-import TrackSessionStartACPObjectiveC from './tabs/migration/track-session-start/objective-c-acp.md'
-import TrackSessionStartAEPObjectiveC from './tabs/migration/track-session-start/objective-c-aep.md'
-import UpdateCurrentPlayheadAEPSwift from './tabs/migration/update-current-playhead/swift-aep.md'
-import UpdateCurrentPlayheadACPObjectiveC from './tabs/migration/update-current-playhead/objective-c-acp.md'
-import UpdateCurrentPlayheadAEPObjectiveC from './tabs/migration/update-current-playhead/objective-c-aep.md'
-import UpdateQoeObjectAEPSwift from './tabs/migration/update-qoe-object/swift-aep.md'
-import UpdateQoeObjectACPObjectiveC from './tabs/migration/update-qoe-object/objective-c-acp.md'
-import UpdateQoeObjectAEPObjectiveC from './tabs/migration/update-qoe-object/objective-c-aep.md'
+import Tabs from './tabs/migration.md'
 
 # Migrating to AEPMedia reference
 
@@ -97,15 +20,15 @@ The AEPMedia extension is implemented purely in Swift and is compatible with the
 
 AEP 3.x (Swift)
 
-<ExtensionVersionAEPSwift/>
+<Tabs query="platform=aep-swift&api=extension-version"/>
 
 AEP 3.x (Objective-C)
 
-<ExtensionVersionAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=extension-version"/>
 
 ACP 2.x (Objective-C)
 
-<ExtensionVersionACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=extension-version"/>
 
 ### createTracker
 
@@ -113,15 +36,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<CreateTrackerAEPSwift/>
+<Tabs query="platform=aep-swift&api=create-tracker"/>
 
 AEP 3.x (Objective-C)
 
-<CreateTrackerAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=create-tracker"/>
 
 ACP 2.x (Objective-C)
 
-<CreateTrackerACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=create-tracker"/>
 
 ### createTrackerWithConfig
 
@@ -129,15 +52,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<CreateTrackerWithConfigAEPSwift/>
+<Tabs query="platform=aep-swift&api=create-tracker-with-config"/>
 
 AEP 3.x (Objective-C)
 
-<CreateTrackerWithConfigAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=create-tracker-with-config"/>
 
 ACP 2.x (Objective-C)
 
-<CreateTrackerWithConfigACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=create-tracker-with-config"/>
 
 ### createMediaObject
 
@@ -145,15 +68,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<CreateMediaObjectAEPSwift/>
+<Tabs query="platform=aep-swift&api=create-media-object"/>
 
 AEP 3.x (Objective-C)
 
-<CreateMediaObjectAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=create-media-object"/>
 
 ACP 2.x (Objective-C)
 
-<CreateMediaObjectACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=create-media-object"/>
 
 ### createAdBreakObject
 
@@ -161,15 +84,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<CreateAdBreakObjectAEPSwift/>
+<Tabs query="platform=aep-swift&api=create-ad-break-object"/>
 
 AEP 3.x (Objective-C)
 
-<CreateAdBreakObjectAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=create-ad-break-object"/>
 
 ACP 2.x (Objective-C)
 
-<CreateAdBreakObjectACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=create-ad-break-object"/>
 
 ### createAdObject
 
@@ -177,15 +100,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<CreateAdObjectAEPSwift/>
+<Tabs query="platform=aep-swift&api=create-ad-object"/>
 
 AEP 3.x (Objective-C)
 
-<CreateAdObjectAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=create-ad-object"/>
 
 ACP 2.x (Objective-C)
 
-<CreateAdObjectACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=create-ad-object"/>
 
 ### createChapterObject
 
@@ -193,15 +116,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<CreateChapterObjectAEPSwift/>
+<Tabs query="platform=aep-swift&api=create-chapter-object"/>
 
 AEP 3.x (Objective-C)
 
-<CreateChapterObjectAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=create-chapter-object"/>
 
 ACP 2.x (Objective-C)
 
-<CreateChapterObjectACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=create-chapter-object"/>
 
 ### createQoEObject
 
@@ -209,15 +132,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<CreateQoeObjectAEPSwift/>
+<Tabs query="platform=aep-swift&api=create-qoe-object"/>
 
 AEP 3.x (Objective-C)
 
-<CreateQoeObjectAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=create-qoe-object"/>
 
 ACP 2.x (Objective-C)
 
-<CreateQoeObjectACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=create-qoe-object"/>
 
 ### createStateObject
 
@@ -225,15 +148,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<CreateStateObjectAEPSwift/>
+<Tabs query="platform=aep-swift&api=create-state-object"/>
 
 AEP 3.x (Objective-C)
 
-<CreateStateObjectAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=create-state-object"/>
 
 ACP 2.x (Objective-C)
 
-<CreateStateObjectACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=create-state-object"/>
 
 ## Media tracker API reference
 
@@ -243,15 +166,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<TrackEventAEPSwift/>
+<Tabs query="platform=aep-swift&api=track-event"/>
 
 AEP 3.x (Objective-C)
 
-<TrackEventAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=track-event"/>
 
 ACP 2.x (Objective-C)
 
-<TrackEventACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=track-event"/>
 
 ### trackSessionStart
 
@@ -259,15 +182,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<TrackSessionStartAEPSwift/>
+<Tabs query="platform=aep-swift&api=track-session-start"/>
 
 AEP 3.x (Objective-C)
 
-<TrackSessionStartAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=track-session-start"/>
 
 ACP 2.x (Objective-C)
 
-<TrackSessionStartACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=track-session-start"/>
 
 ### trackPlay
 
@@ -275,15 +198,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<TrackPlayAEPSwift/>
+<Tabs query="platform=aep-swift&api=track-play"/>
 
 AEP 3.x (Objective-C)
 
-<TrackPlayAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=track-play"/>
 
 ACP 2.x (Objective-C)
 
-<TrackPlayACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=track-play"/>
 
 ### trackPause
 
@@ -291,15 +214,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<TrackPauseAEPSwift/>
+<Tabs query="platform=aep-swift&api=track-pause"/>
 
 AEP 3.x (Objective-C)
 
-<TrackPauseAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=track-pause"/>
 
 ACP 2.x (Objective-C)
 
-<TrackPauseACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=track-pause"/>
 
 ### trackComplete
 
@@ -307,15 +230,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<TrackCompleteAEPSwift/>
+<Tabs query="platform=aep-swift&api=track-complete"/>
 
 AEP 3.x (Objective-C)
 
-<TrackCompleteAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=track-complete"/>
 
 ACP 2.x (Objective-C)
 
-<TrackCompleteACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=track-complete"/>
 
 ### trackSessionEnd
 
@@ -323,15 +246,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<TrackSessionEndAEPSwift/>
+<Tabs query="platform=aep-swift&api=track-session-end"/>
 
 AEP 3.x (Objective-C)
 
-<TrackSessionEndAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=track-session-end"/>
 
 ACP 2.x (Objective-C)
 
-<TrackSessionEndACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=track-session-end"/>
 
 ### trackError
 
@@ -339,15 +262,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<TrackErrorAEPSwift/>
+<Tabs query="platform=aep-swift&api=track-error"/>
 
 AEP 3.x (Objective-C)
 
-<TrackErrorAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=track-error"/>
 
 ACP 2.x (Objective-C)
 
-<TrackErrorACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=track-error"/>
 
 ### updateCurrentPlayhead
 
@@ -355,15 +278,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<UpdateCurrentPlayheadAEPSwift/>
+<Tabs query="platform=aep-swift&api=update-current-playhead"/>
 
 AEP 3.x (Objective-C)
 
-<UpdateCurrentPlayheadAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=update-current-playhead"/>
 
 ACP 2.x (Objective-C)
 
-<UpdateCurrentPlayheadACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=update-current-playhead"/>
 
 ### updateQoEObject
 
@@ -371,15 +294,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<UpdateQoeObjectAEPSwift/>
+<Tabs query="platform=aep-swift&api=update-qoe-object"/>
 
 AEP 3.x (Objective-C)
 
-<UpdateQoeObjectAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=update-qoe-object"/>
 
 ACP 2.x (Objective-C)
 
-<UpdateQoeObjectACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=update-qoe-object"/>
 
 ## Media constants
 
@@ -389,15 +312,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<MediaTypeAEPSwift/>
+<Tabs query="platform=aep-swift&api=media-type"/>
 
 AEP 3.x (Objective-C)
 
-<MediaTypeAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=media-type"/>
 
 ACP 2.x (Objective-C)
 
-<MediaTypeACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=media-type"/>
 
 ### Stream type
 
@@ -409,15 +332,15 @@ For the full list of constant type, please refer to the [Media API reference](./
 
 AEP 3.x (Swift)
 
-<StreamTypeAEPSwift/>
+<Tabs query="platform=aep-swift&api=stream-type"/>
 
 AEP 3.x (Objective-C)
 
-<StreamTypeAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=stream-type"/>
 
 ACP 2.x (Objective-C)
 
-<StreamTypeACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=stream-type"/>
 
 ### Standard video constants
 
@@ -429,15 +352,15 @@ For the full list of constant type, please refer to the [Media API reference](./
 
 AEP 3.x (Swift)
 
-<StandardVideoConstantsAEPSwift/>
+<Tabs query="platform=aep-swift&api=standard-video-constants"/>
 
 AEP 3.x (Objective-C)
 
-<StandardVideoConstantsAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=standard-video-constants"/>
 
 ACP 2.x (Objective-C)
 
-<StandardVideoConstantsACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=standard-video-constants"/>
 
 ### Standard audio constants
 
@@ -449,15 +372,15 @@ For the full list of constant type, please refer to the [Media API reference](./
 
 AEP 3.x (Swift)
 
-<StandardAudioConstantsAEPSwift/>
+<Tabs query="platform=aep-swift&api=standard-audio-constants"/>
 
 AEP 3.x (Objective-C)
 
-<StandardAudioConstantsAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=standard-audio-constants"/>
 
 ACP 2.x (Objective-C)
 
-<StandardAudioConstantsACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=standard-audio-constants"/>
 
 ### Standard ad constants
 
@@ -469,15 +392,15 @@ For the full list of constant type, please refer to the [Media API reference](./
 
 AEP 3.x (Swift)
 
-<StandardAdConstantsAEPSwift/>
+<Tabs query="platform=aep-swift&api=standard-ad-constants"/>
 
 AEP 3.x (Objective-C)
 
-<StandardAdConstantsAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=standard-ad-constants"/>
 
 ACP 2.x (Objective-C)
 
-<StandardAdConstantsACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=standard-ad-constants"/>
 
 ### Player state constants
 
@@ -489,15 +412,15 @@ For the full list of constant type, please refer to the [Media API reference](./
 
 AEP 3.x (Swift)
 
-<PlayerStateConstantsAEPSwift/>
+<Tabs query="platform=aep-swift&api=player-state-constants"/>
 
 AEP 3.x (Objective-C)
 
-<PlayerStateConstantsAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=player-state-constants"/>
 
 ACP 2.x (Objective-C)
 
-<PlayerStateConstantsACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=player-state-constants"/>
 
 ### Media events
 
@@ -509,15 +432,15 @@ For the full list of constant type, please refer to the [Media API reference](./
 
 AEP 3.x (Swift)
 
-<MediaEventsAEPSwift/>
+<Tabs query="platform=aep-swift&api=media-events"/>
 
 AEP 3.x (Objective-C)
 
-<MediaEventsAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=media-events"/>
 
 ACP 2.x (Objective-C)
 
-<MediaEventsACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=media-events"/>
 
 ### Media resume
 
@@ -525,12 +448,12 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<MediaResumeAEPSwift/>
+<Tabs query="platform=aep-swift&api=media-resume"/>
 
 AEP 3.x (Objective-C)
 
-<MediaResumeAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=media-resume"/>
 
 ACP 2.x (Objective-C)
 
-<MediaResumeACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=media-resume"/>

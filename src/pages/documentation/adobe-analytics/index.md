@@ -3,34 +3,7 @@ title: Adobe Analytics extension
 description: Configuring the Adobe Analytics extension in the Data Collection UI
 ---
 
-import AddAnalyticsIos from './tabs/index/add-analytics/ios.md'
-import AddAnalyticsAndroid from './tabs/index/add-analytics/android.md'
-import AddAnalyticsCordova from './tabs/index/add-analytics/cordova.md'
-import AddAnalyticsFlutter from './tabs/index/add-analytics/flutter.md'
-import AddAnalyticsUnity from './tabs/index/add-analytics/unity.md'
-import AddAnalyticsReactNative from './tabs/index/add-analytics/react-native.md'
-import AddAnalyticsXamarin from './tabs/index/add-analytics/xamarin.md'
-import RegisterAnalyticsIos from './tabs/index/register-analytics/ios.md'
-import RegisterAnalyticsAndroid from './tabs/index/register-analytics/android.md'
-import RegisterAnalyticsCordova from './tabs/index/register-analytics/cordova.md'
-import RegisterAnalyticsFlutter from './tabs/index/register-analytics/flutter.md'
-import RegisterAnalyticsUnity from './tabs/index/register-analytics/unity.md'
-import RegisterAnalyticsReactNative from './tabs/index/register-analytics/react-native.md'
-import RegisterAnalyticsXamarin from './tabs/index/register-analytics/xamarin.md'
-import SerializeIos from './tabs/index/event-serialization/ios.md'
-import SerializeAndroid from './tabs/index/event-serialization/android.md'
-import SerializeCordova from './tabs/index/event-serialization/cordova.md'
-import SerializeFlutter from './tabs/index/event-serialization/flutter.md'
-import SerializeUnity from './tabs/index/event-serialization/unity.md'
-import SerializeReactNative from './tabs/index/event-serialization/react-native.md'
-import SerializeXamarin from './tabs/index/event-serialization/xamarin.md'
-import UpdateIos from './tabs/index/update-analytics/ios.md'
-import UpdateAndroid from './tabs/index/update-analytics/android.md'
-import UpdateCordova from './tabs/index/update-analytics/cordova.md'
-import UpdateFlutter from './tabs/index/update-analytics/flutter.md'
-import UpdateUnity from './tabs/index/update-analytics/unity.md'
-import UpdateReactNative from './tabs/index/update-analytics/react-native.md'
-import UpdateXamarin from './tabs/index/update-analytics/xamarin.md'
+import Tabs from './tabs/index.md'
 
 # Adobe Analytics
 
@@ -129,67 +102,75 @@ The number of seconds to wait before Analytics launch hits are sent from the SDK
 
 ## Add Analytics to your application
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="7"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
-### Java
+Android
 
-<AddAnalyticsAndroid/>
+<Tabs query="platform=android&task=add"/>
 
-### iOS
+iOS (AEP 3.x)
 
-<AddAnalyticsIos/>
+<Tabs query="platform=ios-aep&task=add"/>
 
-### React Native
+iOS (ACP 2.x)
 
-<AddAnalyticsReactNative/>
+<Tabs query="platform=ios-acp&task=add"/>
 
-### Flutter
+React Native
 
-<AddAnalyticsFlutter/>
+<Tabs query="platform=react-native&task=add"/>
 
-### Cordova
+Flutter
 
-<AddAnalyticsCordova/>
+<Tabs query="platform=flutter&task=add"/>
 
-### Unity
+Cordova
 
-<AddAnalyticsUnity/>
+<Tabs query="platform=cordova&task=add"/>
 
-### Xamarin
+Unity
 
-<AddAnalyticsXamarin/>
+<Tabs query="platform=unity&task=add"/>
+
+Xamarin
+
+<Tabs query="platform=xamarin&task=add"/>
 
 ## Register Analytics with Mobile Core
 
-<TabsBlock orientation="horizontal" slots="heading, content"  repeat="7"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
-### Android
+Android
 
-<RegisterAnalyticsAndroid/>
+<Tabs query="platform=android&task=register"/>
 
-### iOS
+iOS (AEP 3.x)
 
-<RegisterAnalyticsIos/>
+<Tabs query="platform=ios-aep&task=register"/>
 
-### React Native
+iOS (ACP 2.x)
 
-<RegisterAnalyticsReactNative/>
+<Tabs query="platform=ios-acp&task=register"/>
 
-### Flutter
+React Native
 
-<RegisterAnalyticsFlutter/>
+<Tabs query="platform=react-native&task=register"/>
 
-### Cordova
+Flutter
 
-<RegisterAnalyticsCordova/>
+<Tabs query="platform=flutter&task=register"/>
 
-### Unity
+Cordova
 
-<RegisterAnalyticsUnity/>
+<Tabs query="platform=cordova&task=register"/>
 
-### Xamarin
+Unity
 
-<RegisterAnalyticsXamarin/>
+<Tabs query="platform=unity&task=register"/>
+
+Xamarin
+
+<Tabs query="platform=xamarin&task=register"/>
 
 ## Send Lifecycle metrics to Analytics
 
@@ -221,41 +202,42 @@ For more information about collecting audio and video analytics, please read the
 
 Event serialization is not supported by processing rules. To set serialized events directly on the hits sent to Analytics, use the following syntax in context data parameters:
 
-<TabsBlock orientation="horizontal" slots="heading, content"  repeat="7"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
-### Android
+Android
 
-<SerializeAndroid/>
+<Tabs query="platform=android&task=serialize"/>
 
-### iOS
+iOS (AEP 3.x)
 
-<SerializeIos/>
+<Tabs query="platform=ios-aep&task=serialize"/>
 
-### React Native
+iOS (ACP 2.x)
 
-<SerializeReactNative/>
+<Tabs query="platform=ios-acp&task=serialize"/>
 
-### Flutter
+React Native
 
-<SerializeFlutter/>
+<Tabs query="platform=react-native&task=serialize"/>
 
-### Cordova
+Flutter
 
-<SerializeCordova/>
+<Tabs query="platform=flutter&task=serialize"/>
 
-### Unity
+Cordova
 
-<SerializeUnity/>
+<Tabs query="platform=cordova&task=serialize"/>
 
-### Xamarin
+Unity
 
-<SerializeXamarin/>
+<Tabs query="platform=unity&task=serialize"/>
 
-The following video shows you how to use [trackState](../mobile-core/api-reference.md#track-app-states-and-views) APIs to send data to Adobe Analytics.
+Xamarin
 
-<Media slots="video"/>
+<Tabs query="platform=xamarin&task=serialize"/>
 
-https://video.tv.adobe.com/v/26260
+The [linked video](https://video.tv.adobe.com/v/26260
+) shows you how to use [trackState](../mobile-core/api-reference.md#track-app-states-and-views) APIs to send data to Adobe Analytics.
 
 ## Configuration keys
 
@@ -272,35 +254,39 @@ To update the SDK configuration programmatically, use the following information 
 
 ## Update Analytics configuration
 
-<TabsBlock orientation="horizontal" slots="heading, content"  repeat="7"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
-### Android
+Android
 
-<UpdateAndroid/>
+<Tabs query="platform=android&task=update"/>
 
-### iOS
+iOS (AEP 3.x)
 
-<UpdateIos/>
+<Tabs query="platform=ios-aep&task=update"/>
 
-### React Native
+iOS (ACP 2.x)
 
-<UpdateReactNative/>
+<Tabs query="platform=ios-acp&task=update"/>
 
-### Flutter
+React Native
 
-<UpdateFlutter/>
+<Tabs query="platform=react-native&task=update"/>
 
-### Cordova
+Flutter
 
-<UpdateCordova/>
+<Tabs query="platform=flutter&task=update"/>
 
-### Unity
+Cordova
 
-<UpdateUnity/>
+<Tabs query="platform=cordova&task=update"/>
 
-### Xamarin
+Unity
 
-<UpdateXamarin/>
+<Tabs query="platform=unity&task=update"/>
+
+Xamarin
+
+<Tabs query="platform=xamarin&task=update"/>
 
 For more information, see the [configuration API reference](../mobile-core/configuration/api-reference.md).
 

@@ -3,68 +3,7 @@ title: Adobe Analytics API reference
 description: An API reference for the Adobe Analytics mobile extension.
 ---
 
-import ClearQueueIosAEP from './tabs/api-reference/clear-queue/ios-aep.md'
-import ClearQueueIosACP from './tabs/api-reference/clear-queue/ios-acp.md'
-import ClearQueueAndroid from './tabs/api-reference/clear-queue/android.md'
-import ClearQueueCordova from './tabs/api-reference/clear-queue/cordova.md'
-import ClearQueueFlutter from './tabs/api-reference/clear-queue/flutter.md'
-import ClearQueueUnity from './tabs/api-reference/clear-queue/unity.md'
-import ClearQueueReactNative from './tabs/api-reference/clear-queue/react-native.md'
-import ClearQueueXamarin from './tabs/api-reference/clear-queue/xamarin.md'
-import ExtensionVersionIosAEP from './tabs/api-reference/extension-version/ios-aep.md'
-import ExtensionVersionIosACP from './tabs/api-reference/extension-version/ios-acp.md'
-import ExtensionVersionAndroid from './tabs/api-reference/extension-version/android.md'
-import ExtensionVersionCordova from './tabs/api-reference/extension-version/cordova.md'
-import ExtensionVersionFlutter from './tabs/api-reference/extension-version/flutter.md'
-import ExtensionVersionUnity from './tabs/api-reference/extension-version/unity.md'
-import ExtensionVersionReactNative from './tabs/api-reference/extension-version/react-native.md'
-import ExtensionVersionXamarin from './tabs/api-reference/extension-version/xamarin.md'
-import GetQueueSizeIosAEP from './tabs/api-reference/get-queue-size/ios-aep.md'
-import GetQueueSizeIosACP from './tabs/api-reference/get-queue-size/ios-acp.md'
-import GetQueueSizeAndroid from './tabs/api-reference/get-queue-size/android.md'
-import GetQueueSizeCordova from './tabs/api-reference/get-queue-size/cordova.md'
-import GetQueueSizeFlutter from './tabs/api-reference/get-queue-size/flutter.md'
-import GetQueueSizeUnity from './tabs/api-reference/get-queue-size/unity.md'
-import GetQueueSizeReactNative from './tabs/api-reference/get-queue-size/react-native.md'
-import GetQueueSizeXamarin from './tabs/api-reference/get-queue-size/xamarin.md'
-import GetQueueSizeHandlerIosAEP from './tabs/api-reference/get-queue-size-handler/ios-aep.md'
-import GetQueueSizeHandlerIosACP from './tabs/api-reference/get-queue-size-handler/ios-acp.md'
-import GetTrackingIdentifierIosAEP from './tabs/api-reference/get-tracking-identifier/ios-aep.md'
-import GetTrackingIdentifierIosACP from './tabs/api-reference/get-tracking-identifier/ios-acp.md'
-import GetTrackingIdentifierAndroid from './tabs/api-reference/get-tracking-identifier/android.md'
-import GetTrackingIdentifierCordova from './tabs/api-reference/get-tracking-identifier/cordova.md'
-import GetTrackingIdentifierFlutter from './tabs/api-reference/get-tracking-identifier/flutter.md'
-import GetTrackingIdentifierUnity from './tabs/api-reference/get-tracking-identifier/unity.md'
-import GetTrackingIdentifierReactNative from './tabs/api-reference/get-tracking-identifier/react-native.md'
-import GetTrackingIdentifierXamarin from './tabs/api-reference/get-tracking-identifier/xamarin.md'
-import GetTrackingIdentifierHandlerIosAEP from './tabs/api-reference/get-tracking-identifier-handler/ios-aep.md'
-import GetTrackingIdentifierHandlerIosACP from './tabs/api-reference/get-tracking-identifier-handler/ios-acp.md'
-import GetVisitorIdentifierIosAEP from './tabs/api-reference/get-visitor-identifier/ios-aep.md'
-import GetVisitorIdentifierIosACP from './tabs/api-reference/get-visitor-identifier/ios-acp.md'
-import GetVisitorIdentifierAndroid from './tabs/api-reference/get-visitor-identifier/android.md'
-import GetVisitorIdentifierCordova from './tabs/api-reference/get-visitor-identifier/cordova.md'
-import GetVisitorIdentifierFlutter from './tabs/api-reference/get-visitor-identifier/flutter.md'
-import GetVisitorIdentifierUnity from './tabs/api-reference/get-visitor-identifier/unity.md'
-import GetVisitorIdentifierReactNative from './tabs/api-reference/get-visitor-identifier/react-native.md'
-import GetVisitorIdentifierXamarin from './tabs/api-reference/get-visitor-identifier/xamarin.md'
-import GetVisitorIdentifierHandlerIosAEP from './tabs/api-reference/get-visitor-identifier-handler/ios-aep.md'
-import GetVisitorIdentifierHandlerIosACP from './tabs/api-reference/get-visitor-identifier-handler/ios-acp.md'
-import SendQueuedHitsIosAEP from './tabs/api-reference/send-queued-hits/ios-aep.md'
-import SendQueuedHitsIosACP from './tabs/api-reference/send-queued-hits/ios-acp.md'
-import SendQueuedHitsAndroid from './tabs/api-reference/send-queued-hits/android.md'
-import SendQueuedHitsCordova from './tabs/api-reference/send-queued-hits/cordova.md'
-import SendQueuedHitsFlutter from './tabs/api-reference/send-queued-hits/flutter.md'
-import SendQueuedHitsUnity from './tabs/api-reference/send-queued-hits/unity.md'
-import SendQueuedHitsReactNative from './tabs/api-reference/send-queued-hits/react-native.md'
-import SendQueuedHitsXamarin from './tabs/api-reference/send-queued-hits/xamarin.md'
-import SetVisitorIdentifierIosAEP from './tabs/api-reference/set-visitor-identifier/ios-aep.md'
-import SetVisitorIdentifierIosACP from './tabs/api-reference/set-visitor-identifier/ios-acp.md'
-import SetVisitorIdentifierAndroid from './tabs/api-reference/set-visitor-identifier/android.md'
-import SetVisitorIdentifierCordova from './tabs/api-reference/set-visitor-identifier/cordova.md'
-import SetVisitorIdentifierFlutter from './tabs/api-reference/set-visitor-identifier/flutter.md'
-import SetVisitorIdentifierUnity from './tabs/api-reference/set-visitor-identifier/unity.md'
-import SetVisitorIdentifierReactNative from './tabs/api-reference/set-visitor-identifier/react-native.md'
-import SetVisitorIdentifierXamarin from './tabs/api-reference/set-visitor-identifier/xamarin.md'
+import Tabs from './tabs/api-reference.md'
 
 # Analytics API reference
 
@@ -72,39 +11,43 @@ import SetVisitorIdentifierXamarin from './tabs/api-reference/set-visitor-identi
 
 Force delete, without sending to Analytics, all hits being stored or batched on the SDK.
 
+<InlineAlert variant="warning" slots="text"/>
+
+Use caution when manually clearing the queue. This operation cannot be reverted.
+
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
-### Android
+Android
 
-<ClearQueueAndroid/>
+<Tabs query="platform=android&api=clear-queue"/>
 
-### iOS (AEP 3.x)
+iOS (AEP 3.x)
 
-<ClearQueueIosAEP/>
+<Tabs query="platform=ios-aep&api=clear-queue"/>
 
-### iOS (ACP 2.x)
+iOS (ACP 2.x)
 
-<ClearQueueIosACP/>
+<Tabs query="platform=ios-acp&api=clear-queue"/>
 
-### React Native
+React Native
 
-<ClearQueueReactNative/>
+<Tabs query="platform=react-native&api=clear-queue"/>
 
-### Flutter
+Flutter
 
-<ClearQueueFlutter/>
+<Tabs query="platform=flutter&api=clear-queue"/>
 
-### Cordova
+Cordova
 
-<ClearQueueCordova/>
+<Tabs query="platform=cordova&api=clear-queue"/>
 
-### Unity
+Unity
 
-<ClearQueueUnity/>
+<Tabs query="platform=unity&api=clear-queue"/>
 
-### Xamarin
+Xamarin
 
-<ClearQueueXamarin/>
+<Tabs query="platform=xamarin&api=clear-queue"/>
 
 ## extensionVersion
 
@@ -114,37 +57,37 @@ To get the version of the Analytics extension, use the following code sample:
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
-### Android
+Android
 
-<ExtensionVersionAndroid/>
+<Tabs query="platform=android&api=extension-version"/>
 
-### iOS (AEP 3.x)
+iOS (AEP 3.x)
 
-<ExtensionVersionIosAEP/>
+<Tabs query="platform=ios-aep&api=extension-version"/>
 
-### iOS (ACP 2.x)
+iOS (ACP 2.x)
 
-<ExtensionVersionIosACP/>
+<Tabs query="platform=ios-acp&api=extension-version"/>
 
-### React Native
+React Native
 
-<ExtensionVersionReactNative/>
+<Tabs query="platform=react-native&api=extension-version"/>
 
-### Flutter
+Flutter
 
-<ExtensionVersionFlutter/>
+<Tabs query="platform=flutter&api=extension-version"/>
 
-### Cordova
+Cordova
 
-<ExtensionVersionCordova/>
+<Tabs query="platform=cordova&api=extension-version"/>
 
-### Unity
+Unity
 
-<ExtensionVersionUnity/>
+<Tabs query="platform=unity&api=extension-version"/>
 
-### Xamarin
+Xamarin
 
-<ExtensionVersionXamarin/>
+<Tabs query="platform=xamarin&api=extension-version"/>
 
 ## getQueueSize 
 
@@ -152,37 +95,37 @@ Retrieves the total number of Analytics hits in the tracking queue.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
-### Android
+Android
 
-<GetQueueSizeAndroid/>
+<Tabs query="platform=android&api=get-queue-size"/>
 
-### iOS (AEP 3.x)
+iOS (AEP 3.x)
 
-<GetQueueSizeIosAEP/>
+<Tabs query="platform=ios-aep&api=get-queue-size"/>
 
-### iOS (ACP 2.x)
+iOS (ACP 2.x)
 
-<GetQueueSizeIosACP/>
+<Tabs query="platform=ios-acp&api=get-queue-size"/>
 
-### React Native
+React Native
 
-<GetQueueSizeReactNative/>
+<Tabs query="platform=react-native&api=get-queue-size"/>
 
-### Flutter
+Flutter
 
-<GetQueueSizeFlutter/>
+<Tabs query="platform=flutter&api=get-queue-size"/>
 
-### Cordova
+Cordova
 
-<GetQueueSizeCordova/>
+<Tabs query="platform=cordova&api=get-queue-size"/>
 
-### Unity
+Unity
 
-<GetQueueSizeUnity/>
+<Tabs query="platform=unity&api=get-queue-size"/>
 
-### Xamarin
+Xamarin
 
-<GetQueueSizeXamarin/>
+<Tabs query="platform=xamarin&api=get-queue-size"/>
 
 ## getQueueSizeWithCompletionHandler <a id="getqueuesizewithcompletionhandler"></a>
 
@@ -190,13 +133,13 @@ Retrieves the total number of Analytics hits in the tracking queue. Invoke the c
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-### iOS (AEP 3.x)
+iOS (AEP 3.x)
 
-<GetQueueSizeHandlerIosAEP/>
+<Tabs query="platform=ios-aep&api=get-queue-size-with-completion-handler"/>
 
-### iOS (ACP 2.x)
+iOS (ACP 2.x)
 
-<GetQueueSizeHandlerIosACP/>
+<Tabs query="platform=ios-acp&api=get-queue-size-with-completion-handler"/>
 
 ## getTrackingIdentifier
 
@@ -208,37 +151,37 @@ Starting with v1.2.9 (Android) / v3.0.3(iOS AEPAnalytics) / v2.5.1 (iOS ACPAnaly
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
-### Android
+Android
 
-<GetTrackingIdentifierAndroid/>
+<Tabs query="platform=android&api=get-tracking-identifier"/>
 
-### iOS (AEP 3.x)
+iOS (AEP 3.x)
 
-<GetTrackingIdentifierIosAEP/>
+<Tabs query="platform=ios-aep&api=get-tracking-identifier"/>
 
-### iOS (ACP 2.x)
+iOS (ACP 2.x)
 
-<GetTrackingIdentifierIosACP/>
+<Tabs query="platform=ios-acp&api=get-tracking-identifier"/>
 
-### React Native
+React Native
 
-<GetTrackingIdentifierReactNative/>
+<Tabs query="platform=react-native&api=get-tracking-identifier"/>
 
-### Flutter
+Flutter
 
-<GetTrackingIdentifierFlutter/>
+<Tabs query="platform=flutter&api=get-tracking-identifier"/>
 
-### Cordova
+Cordova
 
-<GetTrackingIdentifierCordova/>
+<Tabs query="platform=cordova&api=get-tracking-identifier"/>
 
-### Unity
+Unity
 
-<GetTrackingIdentifierUnity/>
+<Tabs query="platform=unity&api=get-tracking-identifier"/>
 
-### Xamarin
+Xamarin
 
-<GetTrackingIdentifierXamarin/>
+<Tabs query="platform=xamarin&api=get-tracking-identifier"/>
 
 ## getTrackingIdentifierWithCompletionHandler
 
@@ -254,13 +197,13 @@ If you have an [Experience Cloud ID](../mobile-core/identity/api-reference.md#ge
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-### iOS (AEP 3.x)
+iOS (AEP 3.x)
 
-<GetTrackingIdentifierHandlerIosAEP/>
+<Tabs query="platform=ios-aep&api=get-tracking-identifier-with-completion-handler"/>
 
-### iOS (ACP 2.x)
+iOS (ACP 2.x)
 
-<GetTrackingIdentifierHandlerIosACP/>
+<Tabs query="platform=ios-acp&api=get-tracking-identifier-with-completion-handler"/>
 
 ## getVisitorIdentifier
 
@@ -272,37 +215,37 @@ This API gets a custom Analytics visitor identifier, which has been set previous
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
-### Android
+Android
 
-<GetVisitorIdentifierAndroid/>
+<Tabs query="platform=android&api=get-visitor-identifier"/>
 
-### iOS (AEP 3.x)
+iOS (AEP 3.x)
 
-<GetVisitorIdentifierIosAEP/>
+<Tabs query="platform=ios-aep&api=get-visitor-identifier"/>
 
-### iOS (ACP 2.x)
+iOS (ACP 2.x)
 
-<GetVisitorIdentifierIosACP/>
+<Tabs query="platform=ios-acp&api=get-visitor-identifier"/>
 
-### React Native
+React Native
 
-<GetVisitorIdentifierReactNative/>
+<Tabs query="platform=react-native&api=get-visitor-identifier"/>
 
-### Flutter
+Flutter
 
-<GetVisitorIdentifierFlutter/>
+<Tabs query="platform=flutter&api=get-visitor-identifier"/>
 
-### Cordova
+Cordova
 
-<GetVisitorIdentifierCordova/>
+<Tabs query="platform=cordova&api=get-visitor-identifier"/>
 
-### Unity
+Unity
 
-<GetVisitorIdentifierUnity/>
+<Tabs query="platform=unity&api=get-visitor-identifier"/>
 
-### Xamarin
+Xamarin
 
-<GetVisitorIdentifierXamarin/>
+<Tabs query="platform=xamarin&api=get-visitor-identifier"/>
 
 ## getVisitorIdentifierWithCompletionHandler
 
@@ -314,13 +257,13 @@ This API gets a custom Analytics visitor identifier, which has been set previous
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-### iOS (AEP 3.x)
+iOS (AEP 3.x)
 
-<GetVisitorIdentifierHandlerIosAEP/>
+<Tabs query="platform=ios-aep&api=get-visitor-identifier-with-completion-handler"/>
 
-### iOS (ACP 2.x)
+iOS (ACP 2.x)
 
-<GetVisitorIdentifierHandlerIosACP/>
+<Tabs query="platform=ios-acp&api=get-visitor-identifier-with-completion-handler"/>
 
 ## resetIdentities
 
@@ -334,39 +277,45 @@ Support for this API was added in: <ul><li>Android Analytics version 1.2.9</li><
 
 Sends all queued hits to Analytics, regardless of the current hit batch settings.
 
+This method forces the library to send all hits in the offline queue, regardless of how many hits are currently queued.
+
+<InlineAlert variant="warning" slots="text"/>
+
+Use caution when manually clearing the queue. This operation cannot be reverted.
+
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
-### Android
+Android
 
-<SendQueuedHitsAndroid/>
+<Tabs query="platform=android&api=send-queued-hits"/>
 
-### iOS (AEP 3.x)
+iOS (AEP 3.x)
 
-<SendQueuedHitIosAEP/>
+<Tabs query="platform=ios-aep&api=send-queued-hits"/>
 
-### iOS (ACP 2.x)
+iOS (ACP 2.x)
 
-<SendQueuedHitIosACP/>
+<Tabs query="platform=ios-acp&api=send-queued-hits"/>
 
-### React Native
+React Native
 
-<SendQueuedHitReactNative/>
+<Tabs query="platform=react-native&api=send-queued-hits"/>
 
-### Flutter
+Flutter
 
-<SendQueuedHitFlutter/>
+<Tabs query="platform=flutter&api=send-queued-hits"/>
 
-### Cordova
+Cordova
 
-<SendQueuedHitCordova/>
+<Tabs query="platform=cordova&api=send-queued-hits"/>
 
-### Unity
+Unity
 
-<SendQueuedHitUnity/>
+<Tabs query="platform=unity&api=send-queued-hits"/>
 
-### Xamarin
+Xamarin
 
-<SendQueuedHitXamarin/>
+<Tabs query="platform=xamarin&api=send-queued-hits"/>
 
 ## setVisitorIdentifier
 
@@ -378,34 +327,34 @@ Sets a custom Analytics visitor identifier. For more information, see [Custom Vi
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
-### Android
+Android
 
-<SetVisitorIdentifierAndroid/>
+<Tabs query="platform=android&api=set-visitor-identifier"/>
 
-### iOS (AEP 3.x)
+iOS (AEP 3.x)
 
-<SetVisitorIdentifierIosAEP/>
+<Tabs query="platform=ios-aep&api=set-visitor-identifier"/>
 
-### iOS (ACP 2.x)
+iOS (ACP 2.x)
 
-<SetVisitorIdentifierIosACP/>
+<Tabs query="platform=ios-acp&api=set-visitor-identifier"/>
 
-### React Native
+React Native
 
-<SetVisitorIdentifierReactNative/>
+<Tabs query="platform=react-native&api=set-visitor-identifier"/>
 
-### Flutter
+Flutter
 
-<SetVisitorIdentifierFlutter/>
+<Tabs query="platform=flutter&api=set-visitor-identifier"/>
 
-### Cordova
+Cordova
 
-<SetVisitorIdentifierCordova/>
+<Tabs query="platform=cordova&api=set-visitor-identifier"/>
 
-### Unity
+Unity
 
-<SetVisitorIdentifierUnity/>
+<Tabs query="platform=unity&api=set-visitor-identifier"/>
 
-### Xamarin
+Xamarin
 
-<SetVisitorIdentifierXamarin/>
+<Tabs query="platform=xamarin&api=set-visitor-identifier"/>

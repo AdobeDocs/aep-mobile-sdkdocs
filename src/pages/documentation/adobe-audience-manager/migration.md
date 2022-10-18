@@ -1,15 +1,4 @@
-import ExtensionVersionAEPSwift from './tabs/migration/extension-version/aep-swift.md'
-import ExtensionVersionAEPObjectiveC from './tabs/migration/extension-version/aep-objective-c.md'
-import ExtensionVersionACPObjectiveC from './tabs/migration/extension-version/acp-objective-c.md'
-import GetVisitorProfileAEPSwift from './tabs/migration/get-visitor-profile/aep-swift.md'
-import GetVisitorProfileAEPObjectiveC from './tabs/migration/get-visitor-profile/aep-objective-c.md'
-import GetVisitorProfileACPObjectiveC from './tabs/migration/get-visitor-profile/acp-objective-c.md'
-import ResetAEPSwift from './tabs/migration/reset/aep-swift.md'
-import ResetAEPObjectiveC from './tabs/migration/reset/aep-objective-c.md'
-import ResetACPObjectiveC from './tabs/migration/reset/acp-objective-c.md'
-import SignalWithDataAEPSwift from './tabs/migration/signal-with-data/aep-swift.md'
-import SignalWithDataAEPObjectiveC from './tabs/migration/signal-with-data/aep-objective-c.md'
-import SignalWithDataACPObjectiveC from './tabs/migration/signal-with-data/acp-objective-c.md'
+import Tabs from './tabs/migration.md'
 
 # Migrating to AEPAudience
 
@@ -29,64 +18,68 @@ The AEPAudience extension is implemented purely in Swift and is compatible with 
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### AEP 3.x (Swift)
+AEP 3.x (Swift)
 
-<ExtensionVersionAEPSwift/>
+<Tabs query="platform=aep-swift&api=extension-version"/>
 
-#### AEP 3.x (Objective-C)
+AEP 3.x (Objective-C)
 
-<ExtensionVersionAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=extension-version"/>
 
-#### ACP 2.x (Objective-C)
 
-<ExtensionVersionACPObjectiveC/>
+ACP 2.x (Objective-C)
+
+<Tabs query="platform=acp-objc&api=extension-version"/>
 
 ### getVisitorProfile
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### AEP 3.x (Swift)
+AEP 3.x (Swift)
 
-<GetVisitorProfileAEPSwift/>
+<Tabs query="platform=aep-swift&api=get-visitor-profile"/>
 
-#### AEP 3.x (Objective-C)
+AEP 3.x (Objective-C)
 
-<GetVisitorProfileAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=get-visitor-profile"/>
 
-#### ACP 2.x (Objective-C)
 
-<GetVisitorProfileACPObjectiveC/>
+ACP 2.x (Objective-C)
+
+<Tabs query="platform=acp-objc&api=get-visitor-profile"/>
 
 ### reset
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### AEP 3.x (Swift)
+AEP 3.x (Swift)
 
-<ResetAEPSwift/>
+<Tabs query="platform=aep-swift&api=reset"/>
 
-#### AEP 3.x (Objective-C)
+AEP 3.x (Objective-C)
 
-<ResetAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=reset"/>
 
-#### ACP 2.x (Objective-C)
 
-<ResetACPObjectiveC/>
+ACP 2.x (Objective-C)
+
+<Tabs query="platform=acp-objc&api=reset"/>
 
 ### signalWithData
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### AEP 3.x (Swift)
+AEP 3.x (Swift)
 
-<SignalWithDataAEPSwift/>
+<Tabs query="platform=aep-swift&api=signal-with-data"/>
 
-#### AEP 3.x (Objective-C)
+AEP 3.x (Objective-C)
 
-<SignalWithDataAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=signal-with-data"/>
 
-#### ACP 2.x (Objective-C)
+ACP 2.x (Objective-C)
 
-<SignalWithDataACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=signal-with-data"/>
+
 
 

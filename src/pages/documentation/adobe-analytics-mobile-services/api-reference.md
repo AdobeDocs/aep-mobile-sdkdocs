@@ -1,9 +1,4 @@
-import ExtensionVersionIosAEP from './tabs/api-reference/extension-version/ios-aep.md'
-import ExtensionVersionIosACP from './tabs/api-reference/extension-version/ios-acp.md'
-import ExtensionVersionAndroid from './tabs/api-reference/extension-version/android.md'
-import TrackDeeplinkIosAEP from './tabs/api-reference/track-deeplink/ios-aep.md'
-import TrackDeeplinkIosACP from './tabs/api-reference/track-deeplink/ios-acp.md'
-import TrackDeeplinkAndroid from './tabs/api-reference/track-deeplink/android.md'
+import Tabs from './tabs/api-reference.md'
 
 # Mobile Services API reference
 
@@ -13,17 +8,17 @@ The `extensionVersion()` API returns the version of the Mobile Services extensio
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### Android
+Android
 
-<ExtensionVersionAndroid/>
+<Tabs query="platform=android&api=extension-version"/>
 
-#### iOS (AEP 3.x)
+iOS (AEP 3.x)
 
-<ExtensionVersionIosAEP/>
+<Tabs query="platform=ios-aep&api=extension-version"/>
 
-#### iOS (ACP 2.x)
+iOS (ACP 2.x)
 
-<ExtensionVersionIosACP/>
+<Tabs query="platform=ios-acp&api=extension-version"/>
 
 ## processReferrer
 
@@ -33,7 +28,7 @@ You can use this API to process the referrer intent that was received from Andro
 
 This API is **only** available in Android.
 
-**Java**
+#### Java
 
 **Syntax**
 
@@ -57,7 +52,7 @@ You can use this API to process the data you get from the Google Play Install Re
 
 This API is **only** available on Android, starting in version `1.1.0`.
 
-**Java**
+#### Java
 
 **Syntax**
 
@@ -136,14 +131,14 @@ You can use this API to track a deep link or a marketing link, as long as the li
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### Android
+Android
 
-<TrackDeeplinkAndroid/>
+<Tabs query="platform=android&api=track-adobe-deep-link"/>
 
-#### iOS (AEP 3.x)
+iOS (AEP 3.x)
 
-<TrackDeeplinkIosAEP/>
+<Tabs query="platform=ios-aep&api=track-adobe-deep-link"/>
 
-#### iOS (ACP 2.x)
+iOS (ACP 2.x)
 
-<TrackDeeplinkIosACP/>
+<Tabs query="platform=ios-acp&api=track-adobe-deep-link"/>

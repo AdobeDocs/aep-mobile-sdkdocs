@@ -1,107 +1,4 @@
-import CreateAdBreakObjectIosAEP from './tabs/api-reference/create-ad-break-object/ios-aep.md'
-import CreateAdBreakObjectIosACP from './tabs/api-reference/create-ad-break-object/ios-acp.md'
-import CreateAdBreakObjectAndroid from './tabs/api-reference/create-ad-break-object/android.md'
-import CreateAdBreakObjectReactNative from './tabs/api-reference/create-ad-break-object/react-native.md'
-import CreateAdObjectIosAEP from './tabs/api-reference/create-ad-object/ios-aep.md'
-import CreateAdObjectIosACP from './tabs/api-reference/create-ad-object/ios-acp.md'
-import CreateAdObjectAndroid from './tabs/api-reference/create-ad-object/android.md'
-import CreateAdObjectReactNative from './tabs/api-reference/create-ad-object/react-native.md'
-import CreateChapterObjectIosAEP from './tabs/api-reference/create-chapter-object/ios-aep.md'
-import CreateChapterObjectIosACP from './tabs/api-reference/create-chapter-object/ios-acp.md'
-import CreateChapterObjectAndroid from './tabs/api-reference/create-chapter-object/android.md'
-import CreateChapterObjectReactNative from './tabs/api-reference/create-chapter-object/react-native.md'
-import CreateMediaObjectIosAEP from './tabs/api-reference/create-media-object/ios-aep.md'
-import CreateMediaObjectIosACP from './tabs/api-reference/create-media-object/ios-acp.md'
-import CreateMediaObjectAndroid from './tabs/api-reference/create-media-object/android.md'
-import CreateMediaObjectReactNative from './tabs/api-reference/create-media-object/react-native.md'
-import CreateQoeObjectIosAEP from './tabs/api-reference/create-qoe-object/ios-aep.md'
-import CreateQoeObjectIosACP from './tabs/api-reference/create-qoe-object/ios-acp.md'
-import CreateQoeObjectAndroid from './tabs/api-reference/create-qoe-object/android.md'
-import CreateQoeObjectReactNative from './tabs/api-reference/create-qoe-object/react-native.md'
-import CreateStateObjectIosAEP from './tabs/api-reference/create-state-object/ios-aep.md'
-import CreateStateObjectIosACP from './tabs/api-reference/create-state-object/ios-acp.md'
-import CreateStateObjectAndroid from './tabs/api-reference/create-state-object/android.md'
-import CreateStateObjectReactNative from './tabs/api-reference/create-state-object/react-native.md'
-import CreateTrackerIosAEP from './tabs/api-reference/create-tracker/ios-aep.md'
-import CreateTrackerIosACP from './tabs/api-reference/create-tracker/ios-acp.md'
-import CreateTrackerAndroid from './tabs/api-reference/create-tracker/android.md'
-import CreateTrackerReactNative from './tabs/api-reference/create-tracker/react-native.md'
-import CreateTrackerWithConfigIosAEP from './tabs/api-reference/create-tracker-with-config/ios-aep.md'
-import CreateTrackerWithConfigIosACP from './tabs/api-reference/create-tracker-with-config/ios-acp.md'
-import CreateTrackerWithConfigAndroid from './tabs/api-reference/create-tracker-with-config/android.md'
-import CreateTrackerWithConfigReactNative from './tabs/api-reference/create-tracker-with-config/react-native.md'
-import ExtensionVersionIosAEP from './tabs/api-reference/extension-version/ios-aep.md'
-import ExtensionVersionIosACP from './tabs/api-reference/extension-version/ios-acp.md'
-import ExtensionVersionAndroid from './tabs/api-reference/extension-version/android.md'
-import ExtensionVersionReactNative from './tabs/api-reference/extension-version/react-native.md'
-import MediaEventsIosAEP from './tabs/api-reference/media-events/ios-aep.md'
-import MediaEventsIosACP from './tabs/api-reference/media-events/ios-acp.md'
-import MediaEventsAndroid from './tabs/api-reference/media-events/android.md'
-import MediaEventsReactNative from './tabs/api-reference/media-events/react-native.md'
-import MediaResumeIosAEP from './tabs/api-reference/media-resume/ios-aep.md'
-import MediaResumeIosACP from './tabs/api-reference/media-resume/ios-acp.md'
-import MediaResumeAndroid from './tabs/api-reference/media-resume/android.md'
-import MediaResumeReactNative from './tabs/api-reference/media-resume/react-native.md'
-import MediaTypeIosAEP from './tabs/api-reference/media-type/ios-aep.md'
-import MediaTypeIosACP from './tabs/api-reference/media-type/ios-acp.md'
-import MediaTypeAndroid from './tabs/api-reference/media-type/android.md'
-import MediaTypeReactNative from './tabs/api-reference/media-type/react-native.md'
-import PlayerStateConstantsIosAEP from './tabs/api-reference/player-state-constants/ios-aep.md'
-import PlayerStateConstantsIosACP from './tabs/api-reference/player-state-constants/ios-acp.md'
-import PlayerStateConstantsAndroid from './tabs/api-reference/player-state-constants/android.md'
-import PlayerStateConstantsReactNative from './tabs/api-reference/player-state-constants/react-native.md'
-import StandardAdConstantsIosAEP from './tabs/api-reference/standard-ad-constants/ios-aep.md'
-import StandardAdConstantsIosACP from './tabs/api-reference/standard-ad-constants/ios-acp.md'
-import StandardAdConstantsAndroid from './tabs/api-reference/standard-ad-constants/android.md'
-import StandardAdConstantsReactNative from './tabs/api-reference/standard-ad-constants/react-native.md'
-import StandardAudioConstantsIosAEP from './tabs/api-reference/standard-audio-constants/ios-aep.md'
-import StandardAudioConstantsIosACP from './tabs/api-reference/standard-audio-constants/ios-acp.md'
-import StandardAudioConstantsAndroid from './tabs/api-reference/standard-audio-constants/android.md'
-import StandardAudioConstantsReactNative from './tabs/api-reference/standard-audio-constants/react-native.md'
-import StandardVideoConstantsIosAEP from './tabs/api-reference/standard-video-constants/ios-aep.md'
-import StandardVideoConstantsIosACP from './tabs/api-reference/standard-video-constants/ios-acp.md'
-import StandardVideoConstantsAndroid from './tabs/api-reference/standard-video-constants/android.md'
-import StandardVideoConstantsReactNative from './tabs/api-reference/standard-video-constants/react-native.md'
-import StreamTypeIosAEP from './tabs/api-reference/stream-type/ios-aep.md'
-import StreamTypeIosACP from './tabs/api-reference/stream-type/ios-acp.md'
-import StreamTypeAndroid from './tabs/api-reference/stream-type/android.md'
-import StreamTypeReactNative from './tabs/api-reference/stream-type/react-native.md'
-import TrackCompleteIosAEP from './tabs/api-reference/track-complete/ios-aep.md'
-import TrackCompleteIosACP from './tabs/api-reference/track-complete/ios-acp.md'
-import TrackCompleteAndroid from './tabs/api-reference/track-complete/android.md'
-import TrackCompleteReactNative from './tabs/api-reference/track-complete/react-native.md'
-import TrackErrorIosAEP from './tabs/api-reference/track-error/ios-aep.md'
-import TrackErrorIosACP from './tabs/api-reference/track-error/ios-acp.md'
-import TrackErrorAndroid from './tabs/api-reference/track-error/android.md'
-import TrackErrorReactNative from './tabs/api-reference/track-error/react-native.md'
-import TrackEventIosAEP from './tabs/api-reference/track-event/ios-aep.md'
-import TrackEventIosACP from './tabs/api-reference/track-event/ios-acp.md'
-import TrackEventAndroid from './tabs/api-reference/track-event/android.md'
-import TrackEventReactNative from './tabs/api-reference/track-event/react-native.md'
-import TrackPauseIosAEP from './tabs/api-reference/track-pause/ios-aep.md'
-import TrackPauseIosACP from './tabs/api-reference/track-pause/ios-acp.md'
-import TrackPauseAndroid from './tabs/api-reference/track-pause/android.md'
-import TrackPauseReactNative from './tabs/api-reference/track-pause/react-native.md'
-import TrackPlayIosAEP from './tabs/api-reference/track-play/ios-aep.md'
-import TrackPlayIosACP from './tabs/api-reference/track-play/ios-acp.md'
-import TrackPlayAndroid from './tabs/api-reference/track-play/android.md'
-import TrackPlayReactNative from './tabs/api-reference/track-play/react-native.md'
-import TrackSessionEndIosAEP from './tabs/api-reference/track-session-end/ios-aep.md'
-import TrackSessionEndIosACP from './tabs/api-reference/track-session-end/ios-acp.md'
-import TrackSessionEndAndroid from './tabs/api-reference/track-session-end/android.md'
-import TrackSessionEndReactNative from './tabs/api-reference/track-session-end/react-native.md'
-import TrackSessionStartIosAEP from './tabs/api-reference/track-session-start/ios-aep.md'
-import TrackSessionStartIosACP from './tabs/api-reference/track-session-start/ios-acp.md'
-import TrackSessionStartAndroid from './tabs/api-reference/track-session-start/android.md'
-import TrackSessionStartReactNative from './tabs/api-reference/track-session-start/react-native.md'
-import UpdateCurrentPlayheadIosAEP from './tabs/api-reference/update-current-playhead/ios-aep.md'
-import UpdateCurrentPlayheadIosACP from './tabs/api-reference/update-current-playhead/ios-acp.md'
-import UpdateCurrentPlayheadAndroid from './tabs/api-reference/update-current-playhead/android.md'
-import UpdateCurrentPlayheadReactNative from './tabs/api-reference/update-current-playhead/react-native.md'
-import UpdateQoeObjectIosAEP from './tabs/api-reference/update-qoe-object/ios-aep.md'
-import UpdateQoeObjectIosACP from './tabs/api-reference/update-qoe-object/ios-acp.md'
-import UpdateQoeObjectAndroid from './tabs/api-reference/update-qoe-object/android.md'
-import UpdateQoeObjectReactNative from './tabs/api-reference/update-qoe-object/react-native.md'
+import Tabs from './tabs/api-reference.md'
 
 # API reference
 
@@ -117,19 +14,19 @@ To get the version of the Media extension, use the following code sample:
 
 Android
 
-<ExtensionVersionAndroid/>
+<Tabs query="platform=android&api=extension-version"/>
 
 iOS (AEP 3.x)
 
-<ExtensionVersionIosAEP/>
+<Tabs query="platform=ios-aep&api=extension-version"/>
 
 iOS (ACP 2.x)
 
-<ExtensionVersionIosACP/>
+<Tabs query="platform=ios-acp&api=extension-version"/>
 
 React Native
 
-<ExtensionVersionReactNative/>
+<Tabs query="platform=react-native&api=extension-version"/>
 
 ### createTracker
 
@@ -143,19 +40,19 @@ The createTracker function with a callback has been **deprecated**. Please use t
 
 Android
 
-<CreateTrackerAndroid/>
+<Tabs query="platform=android&api=create-tracker"/>
 
 iOS (AEP 3.x)
 
-<CreateTrackerIosAEP/>
+<Tabs query="platform=ios-aep&api=create-tracker"/>
 
 iOS (ACP 2.x)
 
-<CreateTrackerIosACP/>
+<Tabs query="platform=ios-acp&api=create-tracker"/>
 
 React Native
 
-<CreateTrackerReactNative/>
+<Tabs query="platform=react-native&api=create-tracker"/>
 
 ### createTrackerWithConfig
 
@@ -174,19 +71,19 @@ The createTracker function with a callback has been **deprecated**. Please use t
 
 Android
 
-<CreateTrackerWithConfigAndroid/>
+<Tabs query="platform=android&api=create-tracker-with-config"/>
 
 iOS (AEP 3.x)
 
-<CreateTrackerWithConfigIosAEP/>
+<Tabs query="platform=ios-aep&api=create-tracker-with-config"/>
 
 iOS (ACP 2.x)
 
-<CreateTrackerWithConfigIosACP/>
+<Tabs query="platform=ios-acp&api=create-tracker-with-config"/>
 
 React Native
 
-<CreateTrackerWithConfigReactNative/>
+<Tabs query="platform=react-native&api=create-tracker-with-config"/>
 
 ### createMediaObject
 
@@ -204,19 +101,19 @@ Creates an instance of the Media object.
 
 Android
 
-<CreateMediaObjectAndroid/>
+<Tabs query="platform=android&api=create-media-object"/>
 
 iOS (AEP 3.x)
 
-<CreateMediaObjectIosAEP/>
+<Tabs query="platform=ios-aep&api=create-media-object"/>
 
 iOS (ACP 2.x)
 
-<CreateMediaObjectIosACP/>
+<Tabs query="platform=ios-acp&api=create-media-object"/>
 
 React Native
 
-<CreateMediaObjectReactNative/>
+<Tabs query="platform=react-native&api=create-media-object"/>
 
 ### createAdBreakObject
 
@@ -232,19 +129,19 @@ Creates an instance of the AdBreak object.
 
 Android
 
-<CreateAdBreakObjectAndroid/>
+<Tabs query="platform=android&api=create-ad-break-object"/>
 
 iOS (AEP 3.x)
 
-<CreateAdBreakObjectIosAEP/>
+<Tabs query="platform=ios-aep&api=create-ad-break-object"/>
 
 iOS (ACP 2.x)
 
-<CreateAdBreakObjectIosACP/>
+<Tabs query="platform=ios-acp&api=create-ad-break-object"/>
 
 React Native
 
-<CreateAdBreakObjectReactNative/>
+<Tabs query="platform=react-native&api=create-ad-break-object"/>
 
 ### createAdObject
 
@@ -261,19 +158,19 @@ Creates an instance of the Ad object.
 
 Android
 
-<CreateAdObjectAndroid/>
+<Tabs query="platform=android&api=create-ad-object"/>
 
 iOS (AEP 3.x)
 
-<CreateAdObjectIosAEP/>
+<Tabs query="platform=ios-aep&api=create-ad-object"/>
 
 iOS (ACP 2.x)
 
-<CreateAdObjectIosACP/>
+<Tabs query="platform=ios-acp&api=create-ad-object"/>
 
 React Native
 
-<CreateAdObjectReactNative/>
+<Tabs query="platform=react-native&api=create-ad-object"/>
 
 ### createChapterObject
 
@@ -290,19 +187,19 @@ Creates an instance of the Chapter object.
 
 Android
 
-<CreateChapterObjectAndroid/>
+<Tabs query="platform=android&api=create-chapter-object"/>
 
 iOS (AEP 3.x)
 
-<CreateChapterObjectIosAEP/>
+<Tabs query="platform=ios-aep&api=create-chapter-object"/>
 
 iOS (ACP 2.x)
 
-<CreateChapterObjectIosACP/>
+<Tabs query="platform=ios-acp&api=create-chapter-object"/>
 
 React Native
 
-<CreateChapterObjectReactNative/>
+<Tabs query="platform=react-native&api=create-chapter-object"/>
 
 ### createQoEObject
 
@@ -323,19 +220,19 @@ All the QoE values `bitrate`, `startupTime`, `fps`, `droppedFrames` would be con
 
 Android
 
-<CreateQoeObjectAndroid/>
+<Tabs query="platform=android&api=create-qoe-object"/>
 
 iOS (AEP 3.x)
 
-<CreateQoeObjectIosAEP/>
+<Tabs query="platform=ios-aep&api=create-qoe-object"/>
 
 iOS (ACP 2.x)
 
-<CreateQoeObjectIosACP/>
+<Tabs query="platform=ios-acp&api=create-qoe-object"/>
 
 React Native
 
-<CreateQoeObjectReactNative/>
+<Tabs query="platform=react-native&api=create-qoe-object"/>
 
 ### createStateObject
 
@@ -349,19 +246,19 @@ Creates an instance of the Player State object.
 
 Android
 
-<CreateStateObjectAndroid/>
+<Tabs query="platform=android&api=create-state-object"/>
 
 iOS (AEP 3.x)
 
-<CreateStateObjectIosAEP/>
+<Tabs query="platform=ios-aep&api=create-state-object"/>
 
 iOS (ACP 2.x)
 
-<CreateStateObjectIosACP/>
+<Tabs query="platform=ios-acp&api=create-state-object"/>
 
 React Native
 
-<CreateStateObjectReactNative/>
+<Tabs query="platform=react-native&api=create-state-object"/>
 
 ## Media tracker API reference
 
@@ -378,19 +275,19 @@ Tracks the intention to start playback. This starts a tracking session on the me
 
 Android
 
-<TrackSessionStartAndroid/>
+<Tabs query="platform=android&api=track-session-start"/>
 
 iOS (AEP 3.x)
 
-<TrackSessionStartIosAEP/>
+<Tabs query="platform=ios-aep&api=track-session-start"/>
 
 iOS (ACP 2.x)
 
-<TrackSessionStartIosACP/>
+<Tabs query="platform=ios-acp&api=track-session-start"/>
 
 React Native
 
-<TrackSessionStartReactNative/>
+<Tabs query="platform=react-native&api=track-session-start"/>
 
 ### trackPlay
 
@@ -400,20 +297,19 @@ Tracks the media play, or resume, after a previous pause.
 
 Android
 
-<TrackPlayAndroid/>
+<Tabs query="platform=android&api=track-play"/>
 
 iOS (AEP 3.x)
 
-<TrackPlayIosAEP/>
+<Tabs query="platform=ios-aep&api=track-play"/>
 
 iOS (ACP 2.x)
 
-<TrackPlayIosACP/>
+<Tabs query="platform=ios-acp&api=track-play"/>
 
 React Native
 
-<TrackPlayReactNative/>
-
+<Tabs query="platform=react-native&api=track-play"/>
 ### trackPause
 
 Tracks the media pause.
@@ -422,19 +318,19 @@ Tracks the media pause.
 
 Android
 
-<TrackPauseAndroid/>
+<Tabs query="platform=android&api=track-pause"/>
 
 iOS (AEP 3.x)
 
-<TrackPauseIosAEP/>
+<Tabs query="platform=ios-aep&api=track-pause"/>
 
 iOS (ACP 2.x)
 
-<TrackPauseIosACP/>
+<Tabs query="platform=ios-acp&api=track-pause"/>
 
 React Native
 
-<TrackPauseReactNative/>
+<Tabs query="platform=react-native&api=track-pause"/>
 
 ### trackComplete
 
@@ -444,19 +340,19 @@ Tracks media complete. Call this method only when the media has been completely 
 
 Android
 
-<TrackCompleteAndroid/>
+<Tabs query="platform=android&api=track-complete"/>
 
 iOS (AEP 3.x)
 
-<TrackCompleteIosAEP/>
+<Tabs query="platform=ios-aep&api=track-complete"/>
 
 iOS (ACP 2.x)
 
-<TrackCompleteIosACP/>
+<Tabs query="platform=ios-acp&api=track-complete"/>
 
 React Native
 
-<TrackCompleteReactNative/>
+<Tabs query="platform=react-native&api=track-complete"/>
 
 ### trackSessionEnd
 
@@ -466,19 +362,19 @@ Tracks the end of a viewing session. Call this method even if the user does not 
 
 Android
 
-<TrackSessionEndAndroid/>
+<Tabs query="platform=android&api=track-session-end"/>
 
 iOS (AEP 3.x)
 
-<TrackSessionEndIosAEP/>
+<Tabs query="platform=ios-aep&api=track-session-end"/>
 
 iOS (ACP 2.x)
 
-<TrackSessionEndIosACP/>
+<Tabs query="platform=ios-acp&api=track-session-end"/>
 
 React Native
 
-<TrackSessionEndReactNative/>
+<Tabs query="platform=react-native&api=track-session-end"/>
 
 ### trackError
 
@@ -492,19 +388,19 @@ Tracks an error in media playback.
 
 Android
 
-<TrackErrorAndroid/>
+<Tabs query="platform=android&api=track-error"/>
 
 iOS (AEP 3.x)
 
-<TrackErrorIosAEP/>
+<Tabs query="platform=ios-aep&api=track-error"/>
 
 iOS (ACP 2.x)
 
-<TrackErrorIosACP/>
+<Tabs query="platform=ios-acp&api=track-error"/>
 
 React Native
 
-<TrackErrorReactNative/>
+<Tabs query="platform=react-native&api=track-error"/>
 
 ### trackEvent
 
@@ -520,19 +416,19 @@ Tracks media events.
 
 Android
 
-<TrackEventAndroid/>
+<Tabs query="platform=android&api=track-event"/>
 
 iOS (AEP 3.x)
 
-<TrackEventIosAEP/>
+<Tabs query="platform=ios-aep&api=track-event"/>
 
 iOS (ACP 2.x)
 
-<TrackEventIosACP/>
+<Tabs query="platform=ios-acp&api=track-event"/>
 
 React Native
 
-<TrackEventReactNative/>
+<Tabs query="platform=react-native&api=track-event"/>
 
 ### updateCurrentPlayhead
 
@@ -546,19 +442,19 @@ Provides a media tracker with the current media playhead. For accurate tracking,
 
 Android
 
-<UpdateCurrentPlayheadAndroid/>
+<Tabs query="platform=android&api=update-current-playhead"/>
 
 iOS (AEP 3.x)
 
-<UpdateCurrentPlayheadIosAEP/>
+<Tabs query="platform=ios-aep&api=update-current-playhead"/>
 
 iOS (ACP 2.x)
 
-<UpdateCurrentPlayheadIosACP/>
+<Tabs query="platform=ios-acp&api=update-current-playhead"/>
 
 React Native
 
-<UpdateCurrentPlayheadReactNative/>
+<Tabs query="platform=react-native&api=update-current-playhead"/>
 
 ### updateQoEObject
 
@@ -572,19 +468,19 @@ Provides the media tracker with the current QoE information. For accurate tracki
 
 Android
 
-<UpdateQoeObjectAndroid/>
+<Tabs query="platform=android&api=update-qoe-object"/>
 
 iOS (AEP 3.x)
 
-<UpdateQoeObjectIosAEP/>
+<Tabs query="platform=ios-aep&api=update-qoe-object"/>
 
 iOS (ACP 2.x)
 
-<UpdateQoeObjectIosACP/>
+<Tabs query="platform=ios-acp&api=update-qoe-object"/>
 
 React Native
 
-<UpdateQoeObjectReactNative/>
+<Tabs query="platform=react-native&api=update-qoe-object"/>
 
 ## Media constants
 
@@ -596,19 +492,19 @@ Defines the type of a media that is currently tracked.
 
 Android
 
-<MediaTypeAndroid/>
+<Tabs query="platform=android&api=media-type"/>
 
 iOS (AEP 3.x)
 
-<MediaTypeIosAEP/>
+<Tabs query="platform=ios-aep&api=media-type"/>
 
 iOS (ACP 2.x)
 
-<MediaTypeIosACP/>
+<Tabs query="platform=ios-acp&api=media-type"/>
 
 React Native
 
-<MediaTypeReactNative/>
+<Tabs query="platform=react-native&api=media-type"/>
 
 ### Stream type
 
@@ -618,19 +514,19 @@ Defines the stream type of the content that is currently tracked.
 
 Android
 
-<StreamTypeAndroid/>
+<Tabs query="platform=android&api=stream-type"/>
 
 iOS (AEP 3.x)
 
-<StreamTypeIosAEP/>
+<Tabs query="platform=ios-aep&api=stream-type"/>
 
 iOS (ACP 2.x)
 
-<StreamTypeIosACP/>
+<Tabs query="platform=ios-acp&api=stream-type"/>
 
 React Native
 
-<StreamTypeReactNative/>
+<Tabs query="platform=react-native&api=stream-type"/>
 
 ### Standard video constants
 
@@ -640,19 +536,19 @@ Defines the standard metadata keys for video streams.
 
 Android
 
-<StandardVideoConstantsAndroid/>
+<Tabs query="platform=android&api=standard-video-constants"/>
 
 iOS (AEP 3.x)
 
-<StandardVideoConstantsIosAEP/>
+<Tabs query="platform=ios-aep&api=standard-video-constants"/>
 
 iOS (ACP 2.x)
 
-<StandardVideoConstantsIosACP/>
+<Tabs query="platform=ios-acp&api=standard-video-constants"/>
 
 React Native
 
-<StandardVideoConstantsReactNative/>
+<Tabs query="platform=react-native&api=standard-video-constants"/>
 
 ### Standard audio constants
 
@@ -662,19 +558,19 @@ Defines the standard metadata keys for audio streams.
 
 Android
 
-<StandardAudioConstantsAndroid/>
+<Tabs query="platform=android&api=standard-audio-constants"/>
 
 iOS (AEP 3.x)
 
-<StandardAudioConstantsIosAEP/>
+<Tabs query="platform=ios-aep&api=standard-audio-constants"/>
 
 iOS (ACP 2.x)
 
-<StandardAudioConstantsIosACP/>
+<Tabs query="platform=ios-acp&api=standard-audio-constants"/>
 
 React Native
 
-<StandardAudioConstantsReactNative/>
+<Tabs query="platform=react-native&api=standard-audio-constants"/>
 
 ### Standard ad constants
 
@@ -684,19 +580,19 @@ Defines the standard metadata keys for ads.
 
 Android
 
-<StandardAdConstantsAndroid/>
+<Tabs query="platform=android&api=standard-ad-constants"/>
 
 iOS (AEP 3.x)
 
-<StandardAdConstantsIosAEP/>
+<Tabs query="platform=ios-aep&api=standard-ad-constants"/>
 
 iOS (ACP 2.x)
 
-<StandardAdConstantsIosACP/>
+<Tabs query="platform=ios-acp&api=standard-ad-constants"/>
 
 React Native
 
-<StandardAdConstantsReactNative/>
+<Tabs query="platform=react-native&api=standard-ad-constants"/>
 
 ### Player state constants
 
@@ -706,19 +602,19 @@ Defines some common Player State constants.
 
 Android
 
-<PlayerStateConstantsAndroid/>
+<Tabs query="platform=android&api=player-state-constants"/>
 
 iOS (AEP 3.x)
 
-<PlayerStateConstantsIosAEP/>
+<Tabs query="platform=ios-aep&api=player-state-constants"/>
 
 iOS (ACP 2.x)
 
-<PlayerStateConstantsIosACP/>
+<Tabs query="platform=ios-acp&api=player-state-constants"/>
 
 React Native
 
-<PlayerStateConstantsReactNative/>
+<Tabs query="platform=react-native&api=player-state-constants"/>
 
 ### Media events
 
@@ -728,19 +624,19 @@ Defines the type of a tracking event.
 
 Android
 
-<MediaEventsAndroid/>
+<Tabs query="platform=android&api=media-events"/>
 
 iOS (AEP 3.x)
 
-<MediaEventsIosAEP/>
+<Tabs query="platform=ios-aep&api=media-events"/>
 
 iOS (ACP 2.x)
 
-<MediaEventsIosACP/>
+<Tabs query="platform=ios-acp&api=media-events"/>
 
 React Native
 
-<MediaEventsReactNative/>
+<Tabs query="platform=react-native&api=media-events"/>
 
 ### Media resume
 
@@ -750,16 +646,16 @@ Constant to denote that the current tracking session is resuming a previously cl
 
 Android
 
-<MediaResumeAndroid/>
+<Tabs query="platform=android&api=media-resume"/>
 
 iOS (AEP 3.x)
 
-<MediaResumeIosAEP/>
+<Tabs query="platform=ios-aep&api=media-resume"/>
 
 iOS (ACP 2.x)
 
-<MediaResumeIosACP/>
+<Tabs query="platform=ios-acp&api=media-resume"/>
 
 React Native
 
-<MediaResumeReactNative/>
+<Tabs query="platform=react-native&api=media-resume"/>
