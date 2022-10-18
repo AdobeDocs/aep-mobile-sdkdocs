@@ -89,7 +89,7 @@ Within this file you'll need to add a Variant block, followed by the API informa
 | --------- | ----------- | ------- |
 | `{PLATFORM_NAME}` | The name of the platform for the API. This **must** match the name within the previously written query. | `android` |
 | `{API_NAME}` | The name of the API. This **must** match the name within the previously written query. | `get-identities` |
-| `{PARAGRAPH_NUMBERS}` | The number of paragraphs within the API blurb. Please note that **each new line counts as a new paragraph**. |
+| `{PARAGRAPH_NUMBERS}` | The number of paragraphs within the API blurb. Please note that **each new line counts as a new paragraph**. Additionally, a code block and a list count only as **one** paragraph, despite how long a code block or list can be. If you are unsure about what number to put here, make sure you run the documentation site locally and ensure it renders properly. |
 
 An full example of a Variant block with the API information can be seen below:
 

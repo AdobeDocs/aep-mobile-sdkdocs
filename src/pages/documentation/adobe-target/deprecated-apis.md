@@ -1,11 +1,4 @@
-import LoadTargetRequestsIos from './tabs/deprecated-apis/load-target-requests/ios.md'
-import LoadTargetRequestsAndroid from './tabs/deprecated-apis/load-target-requests/android.md'
-import LocationClickedIos from './tabs/deprecated-apis/location-clicked/ios.md'
-import LocationClickedAndroid from './tabs/deprecated-apis/location-clicked/android.md'
-import PrefetchApisIos from './tabs/deprecated-apis/prefetch-apis/ios.md'
-import PrefetchApisAndroid from './tabs/deprecated-apis/prefetch-apis/android.md'
-import PublicClassesIos from './tabs/deprecated-apis/public-classes/ios.md'
-import PublicClassesAndroid from './tabs/deprecated-apis/public-classes/android.md'
+import Tabs from './tabs/deprecated-apis.md'
 
 # Deprecated Target APIs
 
@@ -21,11 +14,11 @@ The `prefetchContent` API signature has changed. Please use the parameters encap
 
 Android
 
-<PrefetchApisAndroid/>
+<Tabs query="platform=android&api=prefetch-apis"/>
 
 iOS
 
-<PrefetchApisIos/>
+<Tabs query="platform=ios&api=prefetch-apis"/>
 
 ## Load Target requests
 
@@ -41,11 +34,11 @@ When working with prefetch APIs, and switching to the new `retrieveLocationConte
 
 Android
 
-<LoadTargetRequestsAndroid/>
+<Tabs query="platform=android&api=load-target-requests"/>
 
 iOS
 
-<LoadTargetRequestsIos/>
+<Tabs query="platform=ios&api=load-target-requests"/>
 
 ## locationClicked
 
@@ -59,11 +52,11 @@ Sends a click notification to the configured Target server for a prefetched or r
 
 Android
 
-<LocationClickedAndroid/>
+<Tabs query="platform=android&api=location-clicked"/>
 
 iOS
 
-<LocationClickedIos/>
+<Tabs query="platform=ios&api=location-clicked"/>
 
 ## Public classes
 
@@ -71,9 +64,9 @@ iOS
 
 Android
 
-<PublicClassesAndroid/>
+<Tabs query="platform=android&api=public-classes"/>
 
 iOS
 
-<PublicClassesIos/>
+<Tabs query="platform=ios&api=public-classes"/>
 
