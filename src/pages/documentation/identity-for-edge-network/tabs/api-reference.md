@@ -121,7 +121,7 @@ When [AdobeCallbackWithError](../mobile-core/api-reference.md#public-classes) is
 public static void getIdentities(final AdobeCallback<IdentityMap> callback);
 ```
 
-* _callback_ is invoked after the identities are available. The return format is an instance of [IdentityMap](api-reference.md#identitymap). The callback may be invoked on a different thread.
+* _callback_ is invoked after the identities are available. The return format is an instance of [IdentityMap](#identitymap). The callback may be invoked on a different thread.
 
 **Example**
 
