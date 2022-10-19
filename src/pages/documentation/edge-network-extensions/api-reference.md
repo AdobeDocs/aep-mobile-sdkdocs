@@ -1,16 +1,4 @@
-import ExtensionVersionIosAEP from './tabs/api-reference/extension-version/ios-aep.md'
-import ExtensionVersionAndroid from './tabs/api-reference/extension-version/android.md'
-import EdgeEventHandleIosAEP from './tabs/api-reference/edge-event-handle/ios-aep.md'
-import EdgeEventHandleAndroid from './tabs/api-reference/edge-event-handle/android.md'
-import ExperienceEventIosAEP from './tabs/api-reference/experience-event/ios-aep.md'
-import ExperienceEventAndroid from './tabs/api-reference/experience-event/android.md'
-import RegisterExtensionIosAEP from './tabs/api-reference/register-extension/ios-aep.md'
-import RegisterExtensionAndroid from './tabs/api-reference/register-extension/android.md'
-import SendEventIosAEP from './tabs/api-reference/send-event/ios-aep.md'
-import SendEventAndroid from './tabs/api-reference/send-event/android.md'
-import XdmSchemaIosAEP from './tabs/api-reference/xdm-schema/ios-aep.md'
-import XdmSchemaAndroid from './tabs/api-reference/xdm-schema/android.md'
-
+import Tabs from './tabs/api-reference.md'
 
 # Edge Network API reference
 
@@ -22,11 +10,11 @@ Returns the version of the client-side Edge extension.
 
 Android
 
-<ExtensionVersionAndroid/>
+<Tabs query="platform=android&api=extension-version"/>
 
 iOS (AEP 3.x)
 
-<ExtensionVersionIosAEP/>
+<Tabs query="platform=ios-aep&api=extension-version"/>
 
 ## sendEvent
 
@@ -36,11 +24,11 @@ Sends an Experience event to Adobe Experience Platform Edge Network.
 
 Android
 
-<SendEventAndroid/>
+<Tabs query="platform=android&api=send-event"/>
 
 iOS (AEP 3.x)
 
-<SendEventIosAEP/>
+<Tabs query="platform=ios-aep&api=send-event"/>
 
 ## registerExtension
 
@@ -50,11 +38,11 @@ Registers the Edge extension with the Mobile Core SDK.
 
 Android
 
-<RegisterExtensionAndroid/>
+<Tabs query="platform=android&api=register-extension"/>
 
 iOS (AEP 3.x)
 
-<RegisterExtensionIosAEP/>
+<Tabs query="platform=ios-aep&api=register-extension"/>
 
 ## resetIdentities
 
@@ -72,11 +60,11 @@ The AEP Edge extension provides the Schema and Property interfaces (Android) / X
 
 Android
 
-<XdmSchemaAndroid/>
+<Tabs query="platform=android&api=xdm-schema"/>
 
 iOS (AEP 3.x)
 
-<XdmSchemaIosAEP/>
+<Tabs query="platform=ios-aep&api=xdm-schema"/>
 
 ### EdgeEventHandle
 
@@ -87,11 +75,11 @@ One event can receive none, one or multiple `EdgeEventHandle`(s) as response.
 
 Android
 
-<EdgeEventHandleAndroid/>
+<Tabs query="platform=android&api=edge-event-handle"/>
 
 iOS (AEP 3.x)
 
-<EdgeEventHandleIosAEP/>
+<Tabs query="platform=ios-aep&api=edge-event-handle"/>
 
 Use this class when calling the [sendEvent](#sendevent) API with EdgeCallback.
 
@@ -104,10 +92,10 @@ The XDM data is required for any Experience Event being sent using the Edge exte
 
 Android
 
-<ExperienceEventAndroid/>
+<Tabs query="platform=android&api=experience-event"/>
 
 iOS (AEP 3.x)
 
-<ExperienceEventIosAEP/>
+<Tabs query="platform=ios-aep&api=experience-event"/>
 
 See [Edge Extension Usage](https://github.com/adobe/aepsdk-edge-ios/blob/main/docs/ExtensionUsage.md) for more examples.

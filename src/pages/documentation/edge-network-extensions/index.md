@@ -1,8 +1,4 @@
-import RegisterEdgeIosAEP from './tabs/index/register-edge/ios-aep.md'
-import RegisterEdgeAndroid from './tabs/index/register-edge/android.md'
-import DownloadEdgeIosACP from './tabs/index/download-edge/ios-acp.md'
-import DownloadEdgeIosAEP from './tabs/index/download-edge/ios-aep.md'
-import DownloadEdgeAndroid from './tabs/index/download-edge/android.md'
+import Tabs from './tabs/index.md'
 
 # Adobe Experience Platform Edge Network
 
@@ -55,15 +51,15 @@ If you have a first-party domain mapped to the Adobe-provisioned Edge Network do
 
 Android
 
-<DownloadEdgeAndroid/>
+<Tabs query="platform=android&task=add"/>
 
 iOS (AEP 3.x)
 
-<DownloadEdgeIosAEP/>
+<Tabs query="platform=ios-aep&task=add"/>
 
 iOS (ACP 2.x)
 
-<DownloadEdgeIosACP/>
+<Tabs query="platform=ios-acp&task=add"/>
 
 ### Register Edge with Mobile Core
 
@@ -71,11 +67,11 @@ iOS (ACP 2.x)
 
 Android
 
-<RegisterEdgeAndroid/>
+<Tabs query="platform=android&task=register"/>
 
 iOS (AEP 3.x)
 
-<RegisterEdgeIosAEP/>
+<Tabs query="platform=ios-aep&task=register"/>
 
 ## Next steps
 
