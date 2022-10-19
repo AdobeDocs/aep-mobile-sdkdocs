@@ -1,19 +1,16 @@
-import CampaignPushandroid from './tabs/campaignPush-android.md'
-import CampaignPushios from './tabs/campaignPush-ios.md'
-import ReceivePushandroid from './tabs/receivePush-android.md'
-import ReceivePushios from './tabs/receivePush-ios.md'
+import Tabs from './tabs/push-notifications.md'
 
 # Campaign Push Notifications
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-#### Android
+Android
 
-<CampaignPushandroid/>
+<Tabs query="platform=android&task=campaign"/>
 
 #### iOS
 
-<CampaignPushios/>
+<Tabs query="platform=ios&task=campaign"/>
 
 For more information about configuration, see [Channel specific application configuration in Adobe Campaign](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-channels/configuring-a-mobile-application.html?lang=en).
 
@@ -21,13 +18,13 @@ For more information about configuration, see [Channel specific application conf
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-#### Android
+Android
 
-<ReceivePushandroid/>
+<Tabs query="platform=android&task=receive"/>
 
-#### iOS
+iOS
 
-<ReceivePushios/>
+<Tabs query="platform=ios&task=receive"/>
 
 ## Troubleshooting push notification events tracking
 
@@ -53,15 +50,15 @@ The value of the action should be 7 for impression, 2 for the click, and 1 for o
 
 Impression event tracking (action value 7)
 
-![Impression event tracking](./assets/push-notifications/push_tracking_impression.png)
+![Impression event tracking](./assets/push-notifications/push-tracking-impression.png)
 
 Click event tracking (action value 2)
 
-![Click event tracking](./assets/push-notifications/push_tracking_click.png)
+![Click event tracking](./assets/push-notifications/push-tracking-click.png)
 
 Open event tracking (action value 1)
 
-![Open event tracking](./assets/push-notifications/push_tracking_open.png)
+![Open event tracking](./assets/push-notifications/push-tracking-open.png)
 
 ### Troubleshooting using Charles
 
@@ -69,12 +66,12 @@ To verify that a successful network call is made to track the push notification 
 
 Impression event tracking (action value 7)
 
-![Impression event tracking](./assets/push-notifications/tracking_impression.png)
+![Impression event tracking](./assets/push-notifications/tracking-impression.png)
 
 Click event tracking (action value 2)
 
-![Click event tracking](./assets/push-notifications/tracking_click.png)
+![Click event tracking](./assets/push-notifications/tracking-click.png)
 
 Open event tracking (action value 1)
 
-![Click event tracking](./assets/push-notifications/tracking_open.png)
+![Click event tracking](./assets/push-notifications/tracking-open.png)
