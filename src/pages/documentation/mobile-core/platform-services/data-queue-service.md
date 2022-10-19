@@ -1,5 +1,4 @@
-import UsageIos from './tabs/data-queue-service/usage/ios.md'
-import UsageAndroid from './tabs/data-queue-service/usage/android.md'
+import Tabs from './tabs/data-queue-service.md'
 
 # DataQueue Service
 
@@ -15,8 +14,8 @@ The following code snippet shows how to create a `DataQueue` and add a `DataEnti
 
 Android
 
-<UsageAndroid/>
+<Tabs query="platform=android&task=usage"/>
 
 iOS
 
-<UsageIos/>
+<Tabs query="platform=ios&task=usage"/>

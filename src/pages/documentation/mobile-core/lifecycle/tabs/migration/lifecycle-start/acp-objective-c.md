@@ -1,3 +1,0 @@
-```objc
-[ACPCore lifecycleStart: data];
-```

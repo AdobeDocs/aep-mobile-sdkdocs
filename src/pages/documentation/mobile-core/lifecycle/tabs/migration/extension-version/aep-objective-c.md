@@ -1,3 +1,0 @@
-```objc
-[AEPMobileLifecycle extensionVersion];
-```

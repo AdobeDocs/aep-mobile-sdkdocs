@@ -1,5 +1,4 @@
-import UsageIos from './tabs/system-device-info-service/usage/ios.md'
-import UsageAndroid from './tabs/system-device-info-service/usage/android.md'
+import Tabs from './tabs/system-device-info-service.md'
 
 # SystemInfo Service (iOS) & DeviceInfo Service (Android)
 
@@ -15,8 +14,8 @@ The following code snippet shows how to retrieve the active locale.
 
 Android
 
-<UsageAndroid/>
+<Tabs query="platform=android&task=usage"/>
 
 iOS
 
-<UsageIos/>
+<Tabs query="platform=ios&task=usage"/>

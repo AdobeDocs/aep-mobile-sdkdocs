@@ -1,3 +1,0 @@
-```objc
-[AEPMobileCore lifecycleStart: data];
-```

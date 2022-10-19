@@ -1,3 +1,0 @@
-```objc
-[ACPCore lifecyclePause];
-```

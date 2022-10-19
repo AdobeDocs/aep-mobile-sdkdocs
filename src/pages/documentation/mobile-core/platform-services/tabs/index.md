@@ -1,3 +1,159 @@
+<Variant platform="android" task="access" repeat="1"/>
+
+```java
+import com.adobe.marketing.mobile.services.*;
+
+// Get an instance of the current network service
+Networking networkService = ServiceProvider.getInstance().getNetworkService();
+```
+
+<Variant platform="ios" task="access" repeat="1"/>
+
+```swift
+import AEPServices
+
+// Get an instance of the current network service
+let networkService = ServiceProvider.shared.networkService
+```
+
+<Variant platform="android" task="override" repeat="9"/>
+
+#### 1. Create custom HTTPConnectionPerformer implementation
+
+The `HTTPConnectionPerformer` class is an abstract base class that must be subclassed. This class contains one required method, `connect`, which must be overridden. Optionally, it's possible to override the `shouldOverride` method if you want to conditionally override network requests (if you do not override this method, all requests will be overridden by default).
+
+**Example**
+
+This is just an implementation example. For more information about handling network requests correctly in your mobile application, see [HttpURLConnection](https://developer.android.com/reference/java/net/HttpURLConnection).
+
+```java
+package com.adobe.example;
+
+import java.io.BufferedOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Map;
+import com.adobe.marketing.mobile.AndroidNetworkServiceOverrider.HTTPConnectionPerformer;
+import com.adobe.marketing.mobile.AndroidNetworkServiceOverrider.Connecting;
+
+// Sample implementation of HTTPConnectionPerformer for AEP SDK Network Override.
+class SampleHTTPConnectionPerformer extends HTTPConnectionPerformer {        
+  // Modifications here would allow for conditional overriding based on the url/method.
+  // Overriding this method is optional, by default it will always return true (meaning
+  // all network requests should be overridden).
+  @Override
+  public boolean shouldOverride(String url, String method) {
+    return true;
+  }
+
+  // Overriding the connect method is required.  This method must perform a synchronous
+  // (blocking) network request and return an object conforming to the
+  // Connection interface.
+  @Override
+  public Connection connect(String url, String method, byte[] payload, Map<String, String> headers, int connectionTimeoutSeconds, int readTimeoutSeconds) {
+    try {
+      final URL dest = new URL(url);
+      final HttpURLConnection con = (HttpURLConnection) dest.openConnection();
+      con.setReadTimeout(readTimeoutSeconds * 1000);
+      con.setConnectTimeout(connectionTimeoutSeconds * 1000);
+
+      con.setRequestMethod(method);
+
+      for (final Map.Entry<String, String> entry : headers.entrySet()) {
+        con.setRequestProperty(entry.getKey(), entry.getValue());
+      }
+
+      if (method.equals("POST") && payload != null) {
+        con.setDoOutput(true);
+        con.setFixedLengthStreamingMode(payload.length);
+      }
+
+      con.connect();
+
+      if (method.equals("POST") && payload != null) {
+        final OutputStream os = new BufferedOutputStream(con.getOutputStream());
+        os.write(payload);
+        os.flush();
+        os.close();
+      }
+
+      final InputStream inputStream = con.getInputStream();
+      final int responseCode = con.getResponseCode();
+      final String responseMessage = con.getResponseMessage();
+
+      return new AndroidNetworkServiceOverrider.Connection() {
+        @Override
+        public InputStream getInputStream() {
+          return inputStream;
+        }
+
+        @Override
+        public int getResponseCode() {
+          return responseCode;
+        }
+
+        @Override
+        public String getResponseMessage() {
+          return responseMessage;
+        }
+
+        @Override
+        public String getResponsePropertyValue(String responsePropertyKey) {
+          final String responseHeaderValue = con.getHeaderField(responsePropertyKey);
+          return responseHeaderValue;
+        }
+
+        @Override
+        public void close() {
+          if (inputStream != null) {
+            try {
+              inputStream.close();
+            } catch (final Exception ex) {
+            }
+          }
+          con.disconnect();
+        }
+      };
+
+
+    } catch (final MalformedURLException ex) {
+      return CONNECTION_ERROR_URL;
+
+    } catch (final IOException ex) {
+      return CONNECTION_ERROR_IO;
+    }
+  }
+}
+```
+
+Your implementation must return an object conforming to the `Connection` interface when the connection has succeeded. If the connection does not succeed, you will need to return these constants (depending on the scenario): <ul><li>For all URL parsing / malformed URL issues, return `HTTPConnectionPerformer.CONNECTION_ERROR_URL`.</li><li>For any IOExceptions or any other errors, return `HTTPConnectionPerformer.CONNECTION_ERROR_IO`.</li></ul>
+
+#### 2. Register your interface with the SDK.
+
+This step should occur prior to any other interactions with the AEP SDK. While it's possible to register the network override at any point during the application lifecycle, the override will only function for network requests performed after the registration has taken place.
+
+```java
+import com.adobe.marketing.mobile.AndroidNetworkServiceOverrider;
+import com.adobe.marketing.mobile.MobileCore;
+
+public void onCreate() {
+    super.onCreate();
+
+  // Register network override prior to making any other calls to the AEP SDK
+  AndroidNetworkServiceOverrider.setHTTPConnectionPerformer(new SampleHTTPConnectionPerformer());
+
+  // First call to AEP SDK
+  MobileCore.setApplication(this);
+  //... continue with initialization / registering extensions.
+}
+```
+
+<Variant platform="ios" task="override" repeat="18"/>
+
 #### 1. Conform to the ACPHttpConnectionPerformer protocol
 
 The `ACPHttpConnectionPerformer` is a protocol which must be conformed to in order to override the network stack. It provides two methods which must be implemented:
@@ -10,8 +166,6 @@ The `ACPHttpConnectionPerformer` is a protocol which must be conformed to in ord
 The completion block for the `requestUrl` method takes an `ACPHttpConnection` as its parameter. The `ACPHttpConnection` is used when overriding the network stack in place of the internal network connection implementation and represents the response to an HTTP request. It is to be created using the NSURLResponse and NSData from your url request response. In the case of a Network Error, or timeout, the `ACPHttpConnection*` is expected to be nil.
 
 #### Example
-
-<InlineAlert variant="warning" slots="text"/>
 
 This is just an implementation example. For more information about handling network requests correctly in your mobile application, see [NSURLSessionConfiguration](https://developer.apple.com/documentation/foundation/nsurlsessionconfiguration) and [NSMutableURLRequest](https://developer.apple.com/documentation/foundation/nsmutableurlrequest).
 

@@ -1,5 +1,4 @@
-import UsageIos from './tabs/network-service/usage/ios.md'
-import UsageAndroid from './tabs/network-service/usage/android.md'
+import Tabs from './tabs/network-service.md'
 
 # Network Service
 
@@ -15,8 +14,8 @@ The following code snippet details how to make a simple network request and hand
 
 Android
 
-<UsageAndroid/>
+<Tabs query="platform=android&task=usage"/>
 
 iOS
 
-<UsageIos/>
+<Tabs query="platform=ios&task=usage"/>
