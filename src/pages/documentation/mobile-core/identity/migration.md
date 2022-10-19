@@ -1,30 +1,4 @@
-import AppendToUrlACPObjectiveC from './tabs/migration/append-to-url/acp-objective-c.md'
-import AppendToUrlAEPObjectiveC from './tabs/migration/append-to-url/aep-objective-c.md'
-import AppendToUrlAEPSwift from './tabs/migration/append-to-url/aep-swift.md'
-import ExtensionVersionACPObjectiveC from './tabs/migration/extension-version/acp-objective-c.md'
-import ExtensionVersionAEPObjectiveC from './tabs/migration/extension-version/aep-objective-c.md'
-import ExtensionVersionAEPSwift from './tabs/migration/extension-version/aep-swift.md'
-import GetExperienceCloudIdACPObjectiveC from './tabs/migration/get-experience-cloud-id/acp-objective-c.md'
-import GetExperienceCloudIdAEPObjectiveC from './tabs/migration/get-experience-cloud-id/aep-objective-c.md'
-import GetExperienceCloudIdAEPSwift from './tabs/migration/get-experience-cloud-id/aep-swift.md'
-import GetIdentifiersACPObjectiveC from './tabs/migration/get-identifiers/acp-objective-c.md'
-import GetIdentifiersAEPObjectiveC from './tabs/migration/get-identifiers/aep-objective-c.md'
-import GetIdentifiersAEPSwift from './tabs/migration/get-identifiers/aep-swift.md'
-import GetUrlVariablesACPObjectiveC from './tabs/migration/get-url-variables/acp-objective-c.md'
-import GetUrlVariablesAEPObjectiveC from './tabs/migration/get-url-variables/aep-objective-c.md'
-import GetUrlVariablesAEPSwift from './tabs/migration/get-url-variables/aep-swift.md'
-import SetAdvertisingIdentifierACPObjectiveC from './tabs/migration/set-advertising-identifier/acp-objective-c.md'
-import SetAdvertisingIdentifierAEPObjectiveC from './tabs/migration/set-advertising-identifier/aep-objective-c.md'
-import SetAdvertisingIdentifierAEPSwift from './tabs/migration/set-advertising-identifier/aep-swift.md'
-import SetPushIdentifierACPObjectiveC from './tabs/migration/set-push-identifier/acp-objective-c.md'
-import SetPushIdentifierAEPObjectiveC from './tabs/migration/set-push-identifier/aep-objective-c.md'
-import SetPushIdentifierAEPSwift from './tabs/migration/set-push-identifier/aep-swift.md'
-import SyncIdentifierACPObjectiveC from './tabs/migration/sync-identifier/acp-objective-c.md'
-import SyncIdentifierAEPObjectiveC from './tabs/migration/sync-identifier/aep-objective-c.md'
-import SyncIdentifierAEPSwift from './tabs/migration/sync-identifier/aep-swift.md'
-import SyncIdentifiersACPObjectiveC from './tabs/migration/sync-identifiers/acp-objective-c.md'
-import SyncIdentifiersAEPObjectiveC from './tabs/migration/sync-identifiers/aep-objective-c.md'
-import SyncIdentifiersAEPSwift from './tabs/migration/sync-identifiers/aep-swift.md'
+import Tabs from './tabs/migration.md'
 
 # Migrating to AEPIdentity reference
 
@@ -47,47 +21,49 @@ For more information, please read the [Identity API reference](api-reference.md)
 
 AEP 3.x (Swift)
 
-<AppendToUrlAEPSwift/>
+<Tabs query="platform=aep-swift&api=append-to-url"/>
 
 AEP 3.x (Objective-C)
 
-<AppendToUrlAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=append-to-url"/>
 
 ACP 2.x (Objective-C)
 
-<AppendToUrlACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=append-to-url"/>
 
 ### extensionVersion
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
+
 AEP 3.x (Swift)
 
-<ExtensionVersionAEPSwift/>
+<Tabs query="platform=aep-swift&api=extension-version"/>
 
 AEP 3.x (Objective-C)
 
-<ExtensionVersionAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=extension-version"/>
 
 ACP 2.x (Objective-C)
 
-<ExtensionVersionACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=extension-version"/>
 
 ### getExperienceCloudId
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
+
 AEP 3.x (Swift)
 
-<GetExperienceCloudIdAEPSwift/>
+<Tabs query="platform=aep-swift&api=get-experience-cloud-id"/>
 
 AEP 3.x (Objective-C)
 
-<GetExperienceCloudIdAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=get-experience-cloud-id"/>
 
 ACP 2.x (Objective-C)
 
-<GetExperienceCloudIdACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=get-experience-cloud-id"/>
 
 ### getIdentifiers
 
@@ -95,15 +71,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<GetIdentifiersAEPSwift/>
+<Tabs query="platform=aep-swift&api=get-identifiers"/>
 
 AEP 3.x (Objective-C)
 
-<GetIdentifiersAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=get-identifiers"/>
 
 ACP 2.x (Objective-C)
 
-<GetIdentifiersACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=get-identifiers"/>
 
 ### getUrlVariables
 
@@ -111,15 +87,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<GetUrlVariablesAEPSwift/>
+<Tabs query="platform=aep-swift&api=get-url-variables"/>
 
 AEP 3.x (Objective-C)
 
-<GetUrlVariablesAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=get-url-variables"/>
 
 ACP 2.x (Objective-C)
 
-<GetUrlVariablesACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=get-url-variables"/>
 
 ### setAdvertisingIdentifier
 
@@ -127,15 +103,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<SetAdvertisingIdentifierAEPSwift/>
+<Tabs query="platform=aep-swift&api=set-advertising-identifier"/>
 
 AEP 3.x (Objective-C)
 
-<SetAdvertisingIdentifierAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=set-advertising-identifier"/>
 
 ACP 2.x (Objective-C)
 
-<SetAdvertisingIdentifierACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=set-advertising-identifier"/>
 
 ### setPushIdentifier
 
@@ -143,15 +119,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<SetPushIdentifierAEPSwift/>
+<Tabs query="platform=aep-swift&api=set-push-identifier"/>
 
 AEP 3.x (Objective-C)
 
-<SetPushIdentifierAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=set-push-identifier"/>
 
 ACP 2.x (Objective-C)
 
-<SetPushIdentifierACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=set-push-identifier"/>
 
 ### syncIdentifier
 
@@ -159,15 +135,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<SyncIdentifierAEPSwift/>
+<Tabs query="platform=aep-swift&api=sync-identifier"/>
 
 AEP 3.x (Objective-C)
 
-<SyncIdentifierAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=sync-identifier"/>
 
 ACP 2.x (Objective-C)
 
-<SyncIdentifierACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=sync-identifier"/>
 
 ### syncIdentifiers
 
@@ -175,12 +151,12 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<SyncIdentifiersAEPSwift/>
+<Tabs query="platform=aep-swift&api=sync-identifiers"/>
 
 AEP 3.x (Objective-C)
 
-<SyncIdentifiersAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=sync-identifiers"/>
 
 ACP 2.x (Objective-C)
 
-<SyncIdentifiersACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=sync-identifiers"/>

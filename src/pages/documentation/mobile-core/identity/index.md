@@ -1,35 +1,4 @@
-import AddIdentityIosACP from './tabs/index/add-identity/ios-acp.md'
-import AddIdentityIosAEP from './tabs/index/add-identity/ios-aep.md'
-import AddIdentityAndroid from './tabs/index/add-identity/android.md'
-import AddIdentityCordova from './tabs/index/add-identity/cordova.md'
-import AddIdentityFlutter from './tabs/index/add-identity/flutter.md'
-import AddIdentityReactNative from './tabs/index/add-identity/react-native.md'
-import AddIdentityUnity from './tabs/index/add-identity/unity.md'
-import AddIdentityXamarin from './tabs/index/add-identity/xamarin.md'
-import ExtensionVersionIosACP from './tabs/index/extension-version/ios-acp.md'
-import ExtensionVersionIosAEP from './tabs/index/extension-version/ios-aep.md'
-import ExtensionVersionAndroid from './tabs/index/extension-version/android.md'
-import ExtensionVersionCordova from './tabs/index/extension-version/cordova.md'
-import ExtensionVersionFlutter from './tabs/index/extension-version/flutter.md'
-import ExtensionVersionReactNative from './tabs/index/extension-version/react-native.md'
-import ExtensionVersionUnity from './tabs/index/extension-version/unity.md'
-import ExtensionVersionXamarin from './tabs/index/extension-version/xamarin.md'
-import ImplementVisitorTrackingIosACP from './tabs/index/implement-visitor-tracking/ios-acp.md'
-import ImplementVisitorTrackingIosAEP from './tabs/index/implement-visitor-tracking/ios-aep.md'
-import ImplementVisitorTrackingAndroid from './tabs/index/implement-visitor-tracking/android.md'
-import ImplementVisitorTrackingCordova from './tabs/index/implement-visitor-tracking/cordova.md'
-import ImplementVisitorTrackingFlutter from './tabs/index/implement-visitor-tracking/flutter.md'
-import ImplementVisitorTrackingReactNative from './tabs/index/implement-visitor-tracking/react-native.md'
-import ImplementVisitorTrackingUnity from './tabs/index/implement-visitor-tracking/unity.md'
-import ImplementVisitorTrackingXamarin from './tabs/index/implement-visitor-tracking/xamarin.md'
-import RegisterIdentityIosACP from './tabs/index/register-identity/ios-acp.md'
-import RegisterIdentityIosAEP from './tabs/index/register-identity/ios-aep.md'
-import RegisterIdentityAndroid from './tabs/index/register-identity/android.md'
-import RegisterIdentityCordova from './tabs/index/register-identity/cordova.md'
-import RegisterIdentityFlutter from './tabs/index/register-identity/flutter.md'
-import RegisterIdentityReactNative from './tabs/index/register-identity/react-native.md'
-import RegisterIdentityUnity from './tabs/index/register-identity/unity.md'
-import RegisterIdentityXamarin from './tabs/index/register-identity/xamarin.md'
+import Tabs from './tabs/index.md'
 
 # Identity
 
@@ -56,35 +25,35 @@ To get started with Identity, complete the following steps:
 
 Android
 
-<AddIdentityAndroid/>
+<Tabs query="platform=android&task=add"/>
 
 iOS (AEP 3.x)
 
-<AddIdentityIosAEP/>
+<Tabs query="platform=ios-aep&task=add"/>
 
 iOS (ACP 2.x)
 
-<AddIdentityIosACP/>
+<Tabs query="platform=ios-acp&task=add"/>
 
 React Native
 
-<AddIdentityReactNative/>
+<Tabs query="platform=react-native&task=add"/>
 
 Flutter
 
-<AddIdentityFlutter/>
+<Tabs query="platform=flutter&task=add"/>
 
 Cordova
 
-<AddIdentityCordova/>
+<Tabs query="platform=cordova&task=add"/>
 
 Unity
 
-<AddIdentityUnity/>
+<Tabs query="platform=unity&task=add"/>
 
 Xamarin
 
-<AddIdentityXamarin/>
+<Tabs query="platform=xamarin&task=add"/>
 
 ## Register the Identity extension
 
@@ -96,35 +65,35 @@ To register the Identity extension, use the following code sample:
 
 Android
 
-<RegisterIdentityAndroid/>
+<Tabs query="platform=android&task=register"/>
 
 iOS (AEP 3.x)
 
-<RegisterIdentityIosAEP/>
+<Tabs query="platform=ios-aep&task=register"/>
 
 iOS (ACP 2.x)
 
-<RegisterIdentityIosACP/>
+<Tabs query="platform=ios-acp&task=register"/>
 
 React Native
 
-<RegisterIdentityReactNative/>
+<Tabs query="platform=react-native&task=register"/>
 
 Flutter
 
-<RegisterIdentityFlutter/>
+<Tabs query="platform=flutter&task=register"/>
 
 Cordova
 
-<RegisterIdentityCordova/>
+<Tabs query="platform=cordova&task=register"/>
 
 Unity
 
-<RegisterIdentityUnity/>
+<Tabs query="platform=unity&task=register"/>
 
 Xamarin
 
-<RegisterIdentityXamarin/>
+<Tabs query="platform=xamarin&task=register"/>
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -142,35 +111,35 @@ To get the version of the Identity extension, use the following code sample:
 
 Android
 
-<ExtensionVersionAndroid/>
+<Tabs query="platform=android&task=version"/>
 
 iOS (AEP 3.x)
 
-<ExtensionVersionIosAEP/>
+<Tabs query="platform=ios-aep&task=version"/>
 
 iOS (ACP 2.x)
 
-<ExtensionVersionIosACP/>
+<Tabs query="platform=ios-acp&task=version"/>
 
 React Native
 
-<ExtensionVersionReactNative/>
+<Tabs query="platform=react-native&task=version"/>
 
 Flutter
 
-<ExtensionVersionFlutter/>
+<Tabs query="platform=flutter&task=version"/>
 
 Cordova
 
-<ExtensionVersionCordova/>
+<Tabs query="platform=cordova&task=version"/>
 
 Unity
 
-<ExtensionVersionUnity/>
+<Tabs query="platform=unity&task=version"/>
 
 Xamarin
 
-<ExtensionVersionXamarin/>
+<Tabs query="platform=xamarin&task=version"/>
 
 ## Visitor tracking between an app and the mobile web
 
@@ -200,35 +169,35 @@ To use the same visitor ID in the app and mobile web and pass the visitor ID to 
 
 Android
 
-<ImplementVisitorTrackingAndroid/>
+<Tabs query="platform=android&task=implement"/>
 
 iOS (AEP 3.x)
 
-<ImplementVisitorTrackingIosAEP/>
+<Tabs query="platform=ios-aep&task=implement"/>
 
 iOS (ACP 2.x)
 
-<ImplementVisitorTrackingIosACP/>
+<Tabs query="platform=ios-acp&task=implement"/>
 
 React Native
 
-<ImplementVisitorTrackingReactNative/>
+<Tabs query="platform=react-native&task=implement"/>
 
 Flutter
 
-<ImplementVisitorTrackingFlutter/>
+<Tabs query="platform=flutter&task=implement"/>
 
 Cordova
 
-<ImplementVisitorTrackingCordova/>
+<Tabs query="platform=cordova&task=implement"/>
 
 Unity
 
-<ImplementVisitorTrackingUnity/>
+<Tabs query="platform=unity&task=implement"/>
 
 Xamarin
 
-<ImplementVisitorTrackingXamarin/>
+<Tabs query="platform=xamarin&task=implement"/>
 
 The ID service code on the destination domain extracts the ECID from the URL instead of sending a request to Adobe for a new ID. The ID service code on the destination page uses this ECID to track the visitor. On hits from the mobile web content, verify that the `mid` parameter exists on each hit, and that this value matches the `mid`value that is being sent by the app code.
 

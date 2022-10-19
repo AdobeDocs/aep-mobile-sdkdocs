@@ -1,96 +1,4 @@
-import AppendToUrlIosACP from './tabs/api-reference/append-to-url/ios-acp.md'
-import AppendToUrlIosAEP from './tabs/api-reference/append-to-url/ios-aep.md'
-import AppendToUrlAndroid from './tabs/api-reference/append-to-url/android.md'
-import AppendToUrlCordova from './tabs/api-reference/append-to-url/cordova.md'
-import AppendToUrlFlutter from './tabs/api-reference/append-to-url/flutter.md'
-import AppendToUrlReactNative from './tabs/api-reference/append-to-url/react-native.md'
-import AppendToUrlUnity from './tabs/api-reference/append-to-url/unity.md'
-import AppendToUrlXamarin from './tabs/api-reference/append-to-url/xamarin.md'
-import ExtensionVersionIosACP from './tabs/api-reference/extension-version/ios-acp.md'
-import ExtensionVersionIosAEP from './tabs/api-reference/extension-version/ios-aep.md'
-import ExtensionVersionAndroid from './tabs/api-reference/extension-version/android.md'
-import ExtensionVersionCordova from './tabs/api-reference/extension-version/cordova.md'
-import ExtensionVersionFlutter from './tabs/api-reference/extension-version/flutter.md'
-import ExtensionVersionReactNative from './tabs/api-reference/extension-version/react-native.md'
-import ExtensionVersionUnity from './tabs/api-reference/extension-version/unity.md'
-import ExtensionVersionXamarin from './tabs/api-reference/extension-version/xamarin.md'
-import GetExperienceCloudIdIosACP from './tabs/api-reference/get-experience-cloud-id/ios-acp.md'
-import GetExperienceCloudIdIosAEP from './tabs/api-reference/get-experience-cloud-id/ios-aep.md'
-import GetExperienceCloudIdAndroid from './tabs/api-reference/get-experience-cloud-id/android.md'
-import GetExperienceCloudIdCordova from './tabs/api-reference/get-experience-cloud-id/cordova.md'
-import GetExperienceCloudIdFlutter from './tabs/api-reference/get-experience-cloud-id/flutter.md'
-import GetExperienceCloudIdReactNative from './tabs/api-reference/get-experience-cloud-id/react-native.md'
-import GetExperienceCloudIdUnity from './tabs/api-reference/get-experience-cloud-id/unity.md'
-import GetExperienceCloudIdXamarin from './tabs/api-reference/get-experience-cloud-id/xamarin.md'
-import GetIdentifiersIosACP from './tabs/api-reference/get-identifiers/ios-acp.md'
-import GetIdentifiersIosAEP from './tabs/api-reference/get-identifiers/ios-aep.md'
-import GetIdentifiersAndroid from './tabs/api-reference/get-identifiers/android.md'
-import GetIdentifiersCordova from './tabs/api-reference/get-identifiers/cordova.md'
-import GetIdentifiersFlutter from './tabs/api-reference/get-identifiers/flutter.md'
-import GetIdentifiersReactNative from './tabs/api-reference/get-identifiers/react-native.md'
-import GetIdentifiersUnity from './tabs/api-reference/get-identifiers/unity.md'
-import GetIdentifiersXamarin from './tabs/api-reference/get-identifiers/xamarin.md'
-import GetUrlVariablesIosACP from './tabs/api-reference/get-url-variables/ios-acp.md'
-import GetUrlVariablesIosAEP from './tabs/api-reference/get-url-variables/ios-aep.md'
-import GetUrlVariablesAndroid from './tabs/api-reference/get-url-variables/android.md'
-import GetUrlVariablesCordova from './tabs/api-reference/get-url-variables/cordova.md'
-import GetUrlVariablesFlutter from './tabs/api-reference/get-url-variables/flutter.md'
-import GetUrlVariablesReactNative from './tabs/api-reference/get-url-variables/react-native.md'
-import GetUrlVariablesUnity from './tabs/api-reference/get-url-variables/unity.md'
-import GetUrlVariablesXamarin from './tabs/api-reference/get-url-variables/xamarin.md'
-import PublicClassesIosACP from './tabs/api-reference/public-classes/ios-acp.md'
-import PublicClassesIosAEP from './tabs/api-reference/public-classes/ios-aep.md'
-import PublicClassesAndroid from './tabs/api-reference/public-classes/android.md'
-import PublicClassesCordova from './tabs/api-reference/public-classes/cordova.md'
-import PublicClassesFlutter from './tabs/api-reference/public-classes/flutter.md'
-import PublicClassesReactNative from './tabs/api-reference/public-classes/react-native.md'
-import PublicClassesUnity from './tabs/api-reference/public-classes/unity.md'
-import PublicClassesXamarin from './tabs/api-reference/public-classes/xamarin.md'
-import RegisterExtensionIosACP from './tabs/api-reference/register-extension/ios-acp.md'
-import RegisterExtensionIosAEP from './tabs/api-reference/register-extension/ios-aep.md'
-import RegisterExtensionAndroid from './tabs/api-reference/register-extension/android.md'
-import RegisterExtensionCordova from './tabs/api-reference/register-extension/cordova.md'
-import RegisterExtensionFlutter from './tabs/api-reference/register-extension/flutter.md'
-import RegisterExtensionReactNative from './tabs/api-reference/register-extension/react-native.md'
-import RegisterExtensionUnity from './tabs/api-reference/register-extension/unity.md'
-import RegisterExtensionXamarin from './tabs/api-reference/register-extension/xamarin.md'
-import SetAdvertisingIdentifierIosACP from './tabs/api-reference/set-advertising-identifier/ios-acp.md'
-import SetAdvertisingIdentifierIosAEP from './tabs/api-reference/set-advertising-identifier/ios-aep.md'
-import SetAdvertisingIdentifierAndroid from './tabs/api-reference/set-advertising-identifier/android.md'
-import SetAdvertisingIdentifierCordova from './tabs/api-reference/set-advertising-identifier/cordova.md'
-import SetAdvertisingIdentifierFlutter from './tabs/api-reference/set-advertising-identifier/flutter.md'
-import SetAdvertisingIdentifierReactNative from './tabs/api-reference/set-advertising-identifier/react-native.md'
-import SetAdvertisingIdentifierUnity from './tabs/api-reference/set-advertising-identifier/unity.md'
-import SetAdvertisingIdentifierXamarin from './tabs/api-reference/set-advertising-identifier/xamarin.md'
-import SetPushIdentifierIosACP from './tabs/api-reference/set-push-identifier/ios-acp.md'
-import SetPushIdentifierIosAEP from './tabs/api-reference/set-push-identifier/ios-aep.md'
-import SetPushIdentifierAndroid from './tabs/api-reference/set-push-identifier/android.md'
-import SetPushIdentifierReactNative from './tabs/api-reference/set-push-identifier/react-native.md'
-import SyncIdentifierIosACP from './tabs/api-reference/sync-identifier/ios-acp.md'
-import SyncIdentifierIosAEP from './tabs/api-reference/sync-identifier/ios-aep.md'
-import SyncIdentifierAndroid from './tabs/api-reference/sync-identifier/android.md'
-import SyncIdentifierCordova from './tabs/api-reference/sync-identifier/cordova.md'
-import SyncIdentifierFlutter from './tabs/api-reference/sync-identifier/flutter.md'
-import SyncIdentifierReactNative from './tabs/api-reference/sync-identifier/react-native.md'
-import SyncIdentifierUnity from './tabs/api-reference/sync-identifier/unity.md'
-import SyncIdentifierXamarin from './tabs/api-reference/sync-identifier/xamarin.md'
-import SyncIdentifiersIosACP from './tabs/api-reference/sync-identifiers/ios-acp.md'
-import SyncIdentifiersIosAEP from './tabs/api-reference/sync-identifiers/ios-aep.md'
-import SyncIdentifiersAndroid from './tabs/api-reference/sync-identifiers/android.md'
-import SyncIdentifiersCordova from './tabs/api-reference/sync-identifiers/cordova.md'
-import SyncIdentifiersFlutter from './tabs/api-reference/sync-identifiers/flutter.md'
-import SyncIdentifiersReactNative from './tabs/api-reference/sync-identifiers/react-native.md'
-import SyncIdentifiersUnity from './tabs/api-reference/sync-identifiers/unity.md'
-import SyncIdentifiersXamarin from './tabs/api-reference/sync-identifiers/xamarin.md'
-import SyncIdentifiersOverloadedIosACP from './tabs/api-reference/sync-identifiers-overloaded/ios-acp.md'
-import SyncIdentifiersOverloadedIosAEP from './tabs/api-reference/sync-identifiers-overloaded/ios-aep.md'
-import SyncIdentifiersOverloadedAndroid from './tabs/api-reference/sync-identifiers-overloaded/android.md'
-import SyncIdentifiersOverloadedCordova from './tabs/api-reference/sync-identifiers-overloaded/cordova.md'
-import SyncIdentifiersOverloadedFlutter from './tabs/api-reference/sync-identifiers-overloaded/flutter.md'
-import SyncIdentifiersOverloadedReactNative from './tabs/api-reference/sync-identifiers-overloaded/react-native.md'
-import SyncIdentifiersOverloadedUnity from './tabs/api-reference/sync-identifiers-overloaded/unity.md'
-import SyncIdentifiersOverloadedXamarin from './tabs/api-reference/sync-identifiers-overloaded/xamarin.md'
-
+import Tabs from './tabs/api-reference.md'
 
 # Identity API reference
 
@@ -137,35 +45,35 @@ If your application uses more complicated URLs, such as Angular URLs, you should
 
 Android
 
-<AppendToUrlAndroid/>
+<Tabs query="platform=android&api=append-to-url"/>
 
 iOS (AEP 3.x)
 
-<AppendToUrlIosAEP/>
+<Tabs query="platform=ios-aep&api=append-to-url"/>
 
 iOS (ACP 2.x)
 
-<AppendToUrlIosACP/>
+<Tabs query="platform=ios-acp&api=append-to-url"/>
 
 React Native
 
-<AppendToUrlReactNative/>
+<Tabs query="platform=react-native&api=append-to-url"/>
 
 Flutter
 
-<AppendToUrlFlutter/>
+<Tabs query="platform=flutter&api=append-to-url"/>
 
 Cordova
 
-<AppendToUrlCordova/>
+<Tabs query="platform=cordova&api=append-to-url"/>
 
 Unity
 
-<AppendToUrlUnity/>
+<Tabs query="platform=unity&api=append-to-url"/>
 
 Xamarin
 
-<AppendToUrlXamarin/>
+<Tabs query="platform=xamarin&api=append-to-url"/>
 
 ## extensionVersion
 
@@ -177,35 +85,35 @@ To get the version of the Identity extension, use the following code sample:
 
 Android
 
-<ExtensionVersionAndroid/>
+<Tabs query="platform=android&api=extension-version"/>
 
 iOS (AEP 3.x)
 
-<ExtensionVersionIosAEP/>
+<Tabs query="platform=ios-aep&api=extension-version"/>
 
 iOS (ACP 2.x)
 
-<ExtensionVersionIosACP/>
+<Tabs query="platform=ios-acp&api=extension-version"/>
 
 React Native
 
-<ExtensionVersionReactNative/>
+<Tabs query="platform=react-native&api=extension-version"/>
 
 Flutter
 
-<ExtensionVersionFlutter/>
+<Tabs query="platform=flutter&api=extension-version"/>
 
 Cordova
 
-<ExtensionVersionCordova/>
+<Tabs query="platform=cordova&api=extension-version"/>
 
 Unity
 
-<ExtensionVersionUnity/>
+<Tabs query="platform=unity&api=extension-version"/>
 
 Xamarin
 
-<ExtensionVersionXamarin/>
+<Tabs query="platform=xamarin&api=extension-version"/>
 
 ## getExperienceCloudId
 
@@ -217,35 +125,35 @@ This ID is preserved between app upgrades, is saved and restored during the stan
 
 Android
 
-<GetExperienceCloudIdAndroid/>
+<Tabs query="platform=android&api=get-experience-cloud-id"/>
 
 iOS (AEP 3.x)
 
-<GetExperienceCloudIdIosAEP/>
+<Tabs query="platform=ios-aep&api=get-experience-cloud-id"/>
 
 iOS (ACP 2.x)
 
-<GetExperienceCloudIdIosACP/>
+<Tabs query="platform=ios-acp&api=get-experience-cloud-id"/>
 
 React Native
 
-<GetExperienceCloudIdReactNative/>
+<Tabs query="platform=react-native&api=get-experience-cloud-id"/>
 
 Flutter
 
-<GetExperienceCloudIdFlutter/>
+<Tabs query="platform=flutter&api=get-experience-cloud-id"/>
 
 Cordova
 
-<GetExperienceCloudIdCordova/>
+<Tabs query="platform=cordova&api=get-experience-cloud-id"/>
 
 Unity
 
-<GetExperienceCloudIdUnity/>
+<Tabs query="platform=unity&api=get-experience-cloud-id"/>
 
 Xamarin
 
-<GetExperienceCloudIdXamarin/>
+<Tabs query="platform=xamarin&api=get-experience-cloud-id"/>
 
 ## getIdentifiers
 
@@ -255,35 +163,35 @@ This API returns all customer identifiers that were previously synced with the A
 
 Android
 
-<GetIdentifiersAndroid/>
+<Tabs query="platform=android&api=get-identifiers"/>
 
 iOS (AEP 3.x)
 
-<GetIdentifiersIosAEP/>
+<Tabs query="platform=ios-aep&api=get-identifiers"/>
 
 iOS (ACP 2.x)
 
-<GetIdentifiersIosACP/>
+<Tabs query="platform=ios-acp&api=get-identifiers"/>
 
 React Native
 
-<GetIdentifiersReactNative/>
+<Tabs query="platform=react-native&api=get-identifiers"/>
 
 Flutter
 
-<GetIdentifiersFlutter/>
+<Tabs query="platform=flutter&api=get-identifiers"/>
 
 Cordova
 
-<GetIdentifiersCordova/>
+<Tabs query="platform=cordova&api=get-identifiers"/>
 
 Unity
 
-<GetIdentifiersUnity/>
+<Tabs query="platform=unity&api=get-identifiers"/>
 
 Xamarin
 
-<GetIdentifiersXamarin/>
+<Tabs query="platform=xamarin&api=get-identifiers"/>
 
 ## getUrlVariables
 
@@ -302,35 +210,35 @@ If an error occurs while retrieving the URL string, the callback handler will be
 
 Android
 
-<GetUrlVariablesAndroid/>
+<Tabs query="platform=android&api=get-url-variables"/>
 
 iOS (AEP 3.x)
 
-<GetUrlVariablesIosAEP/>
+<Tabs query="platform=ios-aep&api=get-url-variables"/>
 
 iOS (ACP 2.x)
 
-<GetUrlVariablesIosACP/>
+<Tabs query="platform=ios-acp&api=get-url-variables"/>
 
 React Native
 
-<GetUrlVariablesReactNative/>
+<Tabs query="platform=react-native&api=get-url-variables"/>
 
 Flutter
 
-<GetUrlVariablesFlutter/>
+<Tabs query="platform=flutter&api=get-url-variables"/>
 
 Cordova
 
-<GetUrlVariablesCordova/>
+<Tabs query="platform=cordova&api=get-url-variables"/>
 
 Unity
 
-<GetUrlVariablesUnity/>
+<Tabs query="platform=unity&api=get-url-variables"/>
 
 Xamarin
 
-<GetUrlVariablesXamarin/>
+<Tabs query="platform=xamarin&api=get-url-variables"/>
 
 ## registerExtension
 
@@ -340,35 +248,35 @@ The `registerExtension()` API registers the Identity extension with the Mobile C
 
 Android
 
-<RegisterExtensionAndroid/>
+<Tabs query="platform=android&api=register-extension"/>
 
 iOS (AEP 3.x)
 
-<RegisterExtensionIosAEP/>
+<Tabs query="platform=ios-aep&api=register-extension"/>
 
 iOS (ACP 2.x)
 
-<RegisterExtensionIosACP/>
+<Tabs query="platform=ios-acp&api=register-extension"/>
 
 React Native
 
-<RegisterExtensionReactNative/>
+<Tabs query="platform=react-native&api=register-extension"/>
 
 Flutter
 
-<RegisterExtensionFlutter/>
+<Tabs query="platform=flutter&api=register-extension"/>
 
 Cordova
 
-<RegisterExtensionCordova/>
+<Tabs query="platform=cordova&api=register-extension"/>
 
 Unity
 
-<RegisterExtensionUnity/>
+<Tabs query="platform=unity&api=register-extension"/>
 
 Xamarin
 
-<RegisterExtensionXamarin/>
+<Tabs query="platform=xamarin&api=register-extension"/>
 
 ## setAdvertisingIdentifier
 
@@ -382,35 +290,35 @@ If the current SDK privacy status is `optedout`, the advertising identifier is n
 
 Android
 
-<SetAdvertisingIdentifierAndroid/>
+<Tabs query="platform=android&api=set-advertising-identifier"/>
 
 iOS (AEP 3.x)
 
-<SetAdvertisingIdentifierIosAEP/>
+<Tabs query="platform=ios-aep&api=set-advertising-identifier"/>
 
 iOS (ACP 2.x)
 
-<SetAdvertisingIdentifierIosACP/>
+<Tabs query="platform=ios-acp&api=set-advertising-identifier"/>
 
 React Native
 
-<SetAdvertisingIdentifierReactNative/>
+<Tabs query="platform=react-native&api=set-advertising-identifier"/>
 
 Flutter
 
-<SetAdvertisingIdentifierFlutter/>
+<Tabs query="platform=flutter&api=set-advertising-identifier"/>
 
 Cordova
 
-<SetAdvertisingIdentifierCordova/>
+<Tabs query="platform=cordova&api=set-advertising-identifier"/>
 
 Unity
 
-<SetAdvertisingIdentifierUnity/>
+<Tabs query="platform=unity&api=set-advertising-identifier"/>
 
 Xamarin
 
-<SetAdvertisingIdentifierXamarin/>
+<Tabs query="platform=xamarin&api=set-advertising-identifier"/>
 
 ## setPushIdentifier
 
@@ -424,19 +332,19 @@ You should call `setPushIdentifier` on each application launch to ensure the mos
 
 Android
 
-<SetPushIdentifierAndroid/>
+<Tabs query="platform=android&api=set-push-identifier"/>
 
 iOS (AEP 3.x)
 
-<SetPushIdentifierIosAEP/>
+<Tabs query="platform=ios-aep&api=set-push-identifier"/>
 
 iOS (ACP 2.x)
 
-<SetPushIdentifierIosACP/>
+<Tabs query="platform=ios-acp&api=set-push-identifier"/>
 
 React Native
 
-<SetPushIdentifierReactNative/>
+<Tabs query="platform=react-native&api=set-push-identifier"/>
 
 ## syncIdentifier
 
@@ -456,35 +364,35 @@ This API updates or appends the provided customer identifier type key and value 
 
 Android
 
-<SyncIdentifierAndroid/>
+<Tabs query="platform=android&api=sync-identifier"/>
 
 iOS (AEP 3.x)
 
-<SyncIdentifierIosAEP/>
+<Tabs query="platform=ios-aep&api=sync-identifier"/>
 
 iOS (ACP 2.x)
 
-<SyncIdentifierIosACP/>
+<Tabs query="platform=ios-acp&api=sync-identifier"/>
 
 React Native
 
-<SyncIdentifierReactNative/>
+<Tabs query="platform=react-native&api=sync-identifier"/>
 
 Flutter
 
-<SyncIdentifierFlutter/>
+<Tabs query="platform=flutter&api=sync-identifier"/>
 
 Cordova
 
-<SyncIdentifierCordova/>
+<Tabs query="platform=cordova&api=sync-identifier"/>
 
 Unity
 
-<SyncIdentifierUnity/>
+<Tabs query="platform=unity&api=sync-identifier"/>
 
 Xamarin
 
-<SyncIdentifierXamarin/>
+<Tabs query="platform=xamarin&api=sync-identifier"/>
 
 ## syncIdentifiers
 
@@ -494,35 +402,35 @@ This API is an overloaded version, which does not include the parameter for the 
 
 Android
 
-<SyncIdentifiersAndroid/>
+<Tabs query="platform=android&api=sync-identifiers"/>
 
 iOS (AEP 3.x)
 
-<SyncIdentifiersIosAEP/>
+<Tabs query="platform=ios-aep&api=sync-identifiers"/>
 
 iOS (ACP 2.x)
 
-<SyncIdentifiersIosACP/>
+<Tabs query="platform=ios-acp&api=sync-identifiers"/>
 
 React Native
 
-<SyncIdentifiersReactNative/>
+<Tabs query="platform=react-native&api=sync-identifiers"/>
 
 Flutter
 
-<SyncIdentifiersFlutter/>
+<Tabs query="platform=flutter&api=sync-identifiers"/>
 
 Cordova
 
-<SyncIdentifiersCordova/>
+<Tabs query="platform=cordova&api=sync-identifiers"/>
 
 Unity
 
-<SyncIdentifiersUnity/>
+<Tabs query="platform=unity&api=sync-identifiers"/>
 
 Xamarin
 
-<SyncIdentifiersXamarin/>
+<Tabs query="platform=xamarin&api=sync-identifiers"/>
 
 ## syncIdentifiers (overloaded)
 
@@ -534,35 +442,35 @@ Starting with _ACPIdentity v2.1.3 (iOS)_ and _Identity v1.1.2 (Android)_ if the 
 
 Android
 
-<SyncIdentifiersOverloadedAndroid/>
+<Tabs query="platform=android&api=sync-identifiers-overloaded"/>
 
 iOS (AEP 3.x)
 
-<SyncIdentifiersOverloadedIosAEP/>
+<Tabs query="platform=ios-aep&api=sync-identifiers-overloaded"/>
 
 iOS (ACP 2.x)
 
-<SyncIdentifiersOverloadedIosACP/>
+<Tabs query="platform=ios-acp&api=sync-identifiers-overloaded"/>
 
 React Native
 
-<SyncIdentifiersOverloadedReactNative/>
+<Tabs query="platform=react-native&api=sync-identifiers-overloaded"/>
 
 Flutter
 
-<SyncIdentifiersOverloadedFlutter/>
+<Tabs query="platform=flutter&api=sync-identifiers-overloaded"/>
 
 Cordova
 
-<SyncIdentifiersOverloadedCordova/>
+<Tabs query="platform=cordova&api=sync-identifiers-overloaded"/>
 
 Unity
 
-<SyncIdentifiersOverloadedUnity/>
+<Tabs query="platform=unity&api=sync-identifiers-overloaded"/>
 
 Xamarin
 
-<SyncIdentifiersOverloadedXamarin/>
+<Tabs query="platform=xamarin&api=sync-identifiers-overloaded"/>
 
 ## Public classes
 
@@ -570,32 +478,32 @@ Xamarin
 
 Android
 
-<PublicClassesAndroid/>
+<Tabs query="platform=android&api=public-classes"/>
 
 iOS (AEP 3.x)
 
-<PublicClassesIosAEP/>
+<Tabs query="platform=ios-aep&api=public-classes"/>
 
 iOS (ACP 2.x)
 
-<PublicClassesIosACP/>
+<Tabs query="platform=ios-acp&api=public-classes"/>
 
 React Native
 
-<PublicClassesReactNative/>
+<Tabs query="platform=react-native&api=public-classes"/>
 
 Flutter
 
-<PublicClassesFlutter/>
+<Tabs query="platform=flutter&api=public-classes"/>
 
 Cordova
 
-<PublicClassesCordova/>
+<Tabs query="platform=cordova&api=public-classes"/>
 
 Unity
 
-<PublicClassesUnity/>
+<Tabs query="platform=unity&api=public-classes"/>
 
 Xamarin
 
-<PublicClassesXamarin/>
+<Tabs query="platform=xamarin&api=public-classes"/>
