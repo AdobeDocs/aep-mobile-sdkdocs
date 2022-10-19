@@ -1,31 +1,4 @@
-import ClearUpdatedConfigurationIosAEP from './tabs/api-reference/clear-updated-configuration/ios-aep.md'
-import ClearUpdatedConfigurationAndroid from './tabs/api-reference/clear-updated-configuration/android.md'
-import ConfigureWithAppIdIosACP from './tabs/api-reference/configure-with-app-id/ios-acp.md'
-import ConfigureWithAppIdIosAEP from './tabs/api-reference/configure-with-app-id/ios-aep.md'
-import ConfigureWithAppIdAndroid from './tabs/api-reference/configure-with-app-id/android.md'
-import ConfigureWithAppIdUnity from './tabs/api-reference/configure-with-app-id/unity.md'
-import ConfigureWithAppIdXamarin from './tabs/api-reference/configure-with-app-id/xamarin.md'
-import ConfigureWithFileInAssetsAndroid from './tabs/api-reference/configure-with-file-in-assets/android.md'
-import ConfigureWithFileInPathIosACP from './tabs/api-reference/configure-with-file-in-path/ios-acp.md'
-import ConfigureWithFileInPathIosAEP from './tabs/api-reference/configure-with-file-in-path/ios-aep.md'
-import ConfigureWithFileInPathAndroid from './tabs/api-reference/configure-with-file-in-path/android.md'
-import ConfigureWithFileInPathXamarin from './tabs/api-reference/configure-with-file-in-path/xamarin.md'
-import ExtensionVersionIosACP from './tabs/api-reference/extension-version/ios-acp.md'
-import ExtensionVersionIosAEP from './tabs/api-reference/extension-version/ios-aep.md'
-import ExtensionVersionAndroid from './tabs/api-reference/extension-version/android.md'
-import ExtensionVersionCordova from './tabs/api-reference/extension-version/cordova.md'
-import ExtensionVersionFlutter from './tabs/api-reference/extension-version/flutter.md'
-import ExtensionVersionReactNative from './tabs/api-reference/extension-version/react-native.md'
-import ExtensionVersionUnity from './tabs/api-reference/extension-version/unity.md'
-import ExtensionVersionXamarin from './tabs/api-reference/extension-version/xamarin.md'
-import UpdateConfigurationIosACP from './tabs/api-reference/update-configuration/ios-acp.md'
-import UpdateConfigurationIosAEP from './tabs/api-reference/update-configuration/ios-aep.md'
-import UpdateConfigurationAndroid from './tabs/api-reference/update-configuration/android.md'
-import UpdateConfigurationCordova from './tabs/api-reference/update-configuration/cordova.md'
-import UpdateConfigurationFlutter from './tabs/api-reference/update-configuration/flutter.md'
-import UpdateConfigurationReactNative from './tabs/api-reference/update-configuration/react-native.md'
-import UpdateConfigurationUnity from './tabs/api-reference/update-configuration/unity.md'
-import UpdateConfigurationXamarin from './tabs/api-reference/update-configuration/xamarin.md'
+import Tabs from './tabs/api-reference.md'
 
 # Configuration API reference
 
@@ -53,11 +26,11 @@ You can clear any programmatic updates made to the configuration via the `clearU
 
 Android 
 
-<ClearUpdatedConfigurationAndroid/>
+<Tabs query="platform=android&api=clear-updated-configuration"/>
 
 iOS (AEP 3.x)
 
-<ClearUpdatedConfigurationIosAEP/>
+<Tabs query="platform=ios-aep&api=clear-updated-configuration"/>
 
 ## configureWithAppID
 
@@ -67,23 +40,23 @@ This API causes the SDK to download the configuration for the provided app ID an
 
 Android
 
-<ConfigureWithAppIdAndroid/>
+<Tabs query="platform=android&api=configure-with-app-id"/>
 
 iOS (AEP 3.x)
 
-<ConfigureWithAppIdIosAEP/>
+<Tabs query="platform=ios-aep&api=configure-with-app-id"/>
 
 iOS (ACP 2.x)
 
-<ConfigureWithAppIdIosACP/>
+<Tabs query="platform=ios-acp&api=configure-with-app-id"/>
 
 Unity
 
-<ConfigureWithAppIdUnity/>
+<Tabs query="platform=unity&api=configure-with-app-id"/>
 
 Xamarin
 
-<ConfigureWithAppIdXamarin/>
+<Tabs query="platform=xamarin&api=configure-with-app-id"/>
 
 ## configureWithFileInAssets
 
@@ -97,7 +70,7 @@ You can bundle a JSON configuration file in the app's Assets folder to replace o
 
 Android
 
-<ConfigureWithFileInAssetsAndroid/>
+<Tabs query="platform=android&api=configure-with-file-in-assets"/>
 
 ## configureWithFileInPath
 
@@ -109,19 +82,19 @@ To pass in a bundled path and file name:
 
 Android
 
-<ConfigureWithFileInPathAndroid/>
+<Tabs query="platform=android&api=configure-with-file-in-path"/>
 
 iOS (AEP 3.x)
 
-<ConfigureWithFileInPathIosAEP/>
+<Tabs query="platform=ios-aep&api=configure-with-file-in-path"/>
 
 iOS (ACP 2.x)
 
-<ConfigureWithFileInPathIosACP/>
+<Tabs query="platform=ios-acp&api=configure-with-file-in-path"/>
 
 Xamarin
 
-<ConfigureWithFileInPathXamarin/>
+<Tabs query="platform=xamarin&api=configure-with-file-in-path"/>
 
 ## extensionVersion
 
@@ -133,35 +106,35 @@ To get the version of the Configuration extension, use the following code sample
 
 Android
 
-<ExtensionVersionAndroid/>
+<Tabs query="platform=android&api=extension-version"/>
 
 iOS (AEP 3.x)
 
-<ExtensionVersionIosAEP/>
+<Tabs query="platform=ios-aep&api=extension-version"/>
 
 iOS (ACP 2.x)
 
-<ExtensionVersionIosACP/>
+<Tabs query="platform=ios-acp&api=extension-version"/>
 
 React Native
 
-<ExtensionVersionReactNative/>
+<Tabs query="platform=react-native&api=extension-version"/>
 
 Flutter
 
-<ExtensionVersionFlutter/>
+<Tabs query="platform=flutter&api=extension-version"/>
 
 Cordova
 
-<ExtensionVersionCordova/>
+<Tabs query="platform=cordova&api=extension-version"/>
 
 Unity
 
-<ExtensionVersionUnity/>
+<Tabs query="platform=unity&api=extension-version"/>
 
 Xamarin
 
-<ExtensionVersionXamarin/>
+<Tabs query="platform=xamarin&api=extension-version"/>
 
 ## updateConfiguration
 
@@ -179,32 +152,32 @@ Do not use this API to update the `build.environment` key or any key with an env
 
 Android
 
-<UpdateConfigurationAndroid/>
+<Tabs query="platform=android&api=update-configuration"/>
 
 iOS (AEP 3.x)
 
-<UpdateConfigurationIosAEP/>
+<Tabs query="platform=ios-aep&api=update-configuration"/>
 
 iOS (ACP 2.x)
 
-<UpdateConfigurationIosACP/>
+<Tabs query="platform=ios-acp&api=update-configuration"/>
 
 React Native
 
-<UpdateConfigurationReactNative/>
+<Tabs query="platform=react-native&api=update-configuration"/>
 
 Flutter
 
-<UpdateConfigurationFlutter/>
+<Tabs query="platform=flutter&api=update-configuration"/>
 
 Cordova
 
-<UpdateConfigurationCordova/>
+<Tabs query="platform=cordova&api=update-configuration"/>
 
 Unity
 
-<UpdateConfigurationUnity/>
+<Tabs query="platform=unity&api=update-configuration"/>
 
 Xamarin
 
-<UpdateConfigurationXamarin/>
+<Tabs query="platform=xamarin&api=update-configuration"/>
