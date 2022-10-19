@@ -1,6 +1,4 @@
-import ExtensionVersionAEPSwift from './tabs/migration/extension-version/aep-swift.md'
-import ExtensionVersionAEPObjectiveC from './tabs/migration/extension-version/aep-objective-c.md'
-import ExtensionVersionACPObjectiveC from './tabs/migration/extension-version/acp-objective-c.md'
+import Tabs from './tabs/migration.md'
 
 # Migrating to AEPSignal reference
 
@@ -22,12 +20,12 @@ The AEPSignal extension is implemented purely in Swift and is compatible with th
 
 AEP 3.x (Swift)
 
-<ExtensionVersionAEPSwift/>
+<Tabs query="platform=aep-swift&api=extension-version"/>
 
 AEP 3.x (Objective-C)
 
-<ExtensionVersionAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=extension-version"/>
 
 ACP 2.x (Objective-C)
 
-<ExtensionVersionACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=extension-version"/>

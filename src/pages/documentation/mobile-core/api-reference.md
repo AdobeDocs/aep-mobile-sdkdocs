@@ -1,75 +1,4 @@
-import CollectLaunchInfoIosACP from './tabs/api-reference/collect-launch-info/ios-acp.md'
-import CollectLaunchInfoIosAEP from './tabs/api-reference/collect-launch-info/ios-aep.md'
-import CollectLaunchInfoAndroid from './tabs/api-reference/collect-launch-info/android.md'
-import CollectPiiIosACP from './tabs/api-reference/collect-pii/ios-acp.md'
-import CollectPiiIosAEP from './tabs/api-reference/collect-pii/ios-aep.md'
-import CollectPiiAndroid from './tabs/api-reference/collect-pii/android.md'
-import CollectPiiReactNative from './tabs/api-reference/collect-pii/react-native.md'
-import GetApplicationXamarin from './tabs/api-reference/get-application/xamarin.md'
-import GetApplicationAndroid from './tabs/api-reference/get-application/android.md'
-import GetLogLevelIosACP from './tabs/api-reference/get-log-level/ios-acp.md'
-import GetLogLevelIosAEP from './tabs/api-reference/get-log-level/ios-aep.md'
-import GetLogLevelAndroid from './tabs/api-reference/get-log-level/android.md'
-import GetLogLevelReactNative from './tabs/api-reference/get-log-level/react-native.md'
-import GetLogLevelUnity from './tabs/api-reference/get-log-level/unity.md'
-import GetLogLevelXamarin from './tabs/api-reference/get-log-level/xamarin.md'
-import GetSdkIdentitiesIosACP from './tabs/api-reference/get-sdk-identities/ios-acp.md'
-import GetSdkIdentitiesIosAEP from './tabs/api-reference/get-sdk-identities/ios-aep.md'
-import GetSdkIdentitiesAndroid from './tabs/api-reference/get-sdk-identities/android.md'
-import LogIosACP from './tabs/api-reference/log/ios-acp.md'
-import LogIosAEP from './tabs/api-reference/log/ios-aep.md'
-import LogAndroid from './tabs/api-reference/log/android.md'
-import LogReactNative from './tabs/api-reference/log/react-native.md'
-import LogXamarin from './tabs/api-reference/log/xamarin.md'
-import PublicClassesIosACP from './tabs/api-reference/public-classes/ios-acp.md'
-import PublicClassesIosAEP from './tabs/api-reference/public-classes/ios-aep.md'
-import PublicClassesAndroid from './tabs/api-reference/public-classes/android.md'
-import PublicClassesXamarin from './tabs/api-reference/public-classes/xamarin.md'
-import RegisterExtensionIosACP from './tabs/api-reference/register-extension/ios-acp.md'
-import RegisterExtensionIosAEP from './tabs/api-reference/register-extension/ios-aep.md'
-import RegisterExtensionAndroid from './tabs/api-reference/register-extension/android.md'
-import RegisterExtensionCordova from './tabs/api-reference/register-extension/cordova.md'
-import RegisterExtensionFlutter from './tabs/api-reference/register-extension/flutter.md'
-import RegisterExtensionReactNative from './tabs/api-reference/register-extension/react-native.md'
-import RegisterExtensionUnity from './tabs/api-reference/register-extension/unity.md'
-import RegisterExtensionXamarin from './tabs/api-reference/register-extension/xamarin.md'
-import RegisterUrlHandlerIosACP from './tabs/api-reference/register-url-handler/ios-acp.md'
-import ResetIdentitiesIosAEP from './tabs/api-reference/reset-identities/ios-aep.md'
-import ResetIdentitiesAndroid from './tabs/api-reference/reset-identities/android.md'
-import SetAppGroupIosACP from './tabs/api-reference/set-app-group/ios-acp.md'
-import SetAppGroupIosAEP from './tabs/api-reference/set-app-group/ios-aep.md'
-import SetAppGroupXamarin from './tabs/api-reference/set-app-group/xamarin.md'
-import SetApplicationXamarin from './tabs/api-reference/set-application/xamarin.md'
-import SetApplicationAndroid from './tabs/api-reference/set-application/android.md'
-import SetIconResourceIdXamarin from './tabs/api-reference/set-icon-resource-id/xamarin.md'
-import SetIconResourceIdAndroid from './tabs/api-reference/set-icon-resource-id/android.md'
-import SetLogLevelIosACP from './tabs/api-reference/set-log-level/ios-acp.md'
-import SetLogLevelIosAEP from './tabs/api-reference/set-log-level/ios-aep.md'
-import SetLogLevelAndroid from './tabs/api-reference/set-log-level/android.md'
-import SetLogLevelCordova from './tabs/api-reference/set-log-level/cordova.md'
-import SetLogLevelFlutter from './tabs/api-reference/set-log-level/flutter.md'
-import SetLogLevelReactNative from './tabs/api-reference/set-log-level/react-native.md'
-import SetLogLevelUnity from './tabs/api-reference/set-log-level/unity.md'
-import SetLogLevelXamarin from './tabs/api-reference/set-log-level/xamarin.md'
-import SetPushIdentifierIosACP from './tabs/api-reference/set-push-identifier/ios-acp.md'
-import SetPushIdentifierIosAEP from './tabs/api-reference/set-push-identifier/ios-aep.md'
-import SetPushIdentifierAndroid from './tabs/api-reference/set-push-identifier/android.md'
-import TrackActionIosACP from './tabs/api-reference/track-action/ios-acp.md'
-import TrackActionIosAEP from './tabs/api-reference/track-action/ios-aep.md'
-import TrackActionAndroid from './tabs/api-reference/track-action/android.md'
-import TrackActionCordova from './tabs/api-reference/track-action/cordova.md'
-import TrackActionFlutter from './tabs/api-reference/track-action/flutter.md'
-import TrackActionReactNative from './tabs/api-reference/track-action/react-native.md'
-import TrackActionUnity from './tabs/api-reference/track-action/unity.md'
-import TrackActionXamarin from './tabs/api-reference/track-action/xamarin.md'
-import TrackStateIosACP from './tabs/api-reference/track-state/ios-acp.md'
-import TrackStateIosAEP from './tabs/api-reference/track-state/ios-aep.md'
-import TrackStateAndroid from './tabs/api-reference/track-state/android.md'
-import TrackStateCordova from './tabs/api-reference/track-state/cordova.md'
-import TrackStateFlutter from './tabs/api-reference/track-state/flutter.md'
-import TrackStateReactNative from './tabs/api-reference/track-state/react-native.md'
-import TrackStateUnity from './tabs/api-reference/track-state/unity.md'
-import TrackStateXamarin from './tabs/api-reference/track-state/xamarin.md'
+import Tabs from './tabs/api-reference.md'
 
 # Mobile Core API reference
 
@@ -85,15 +14,15 @@ If the Adobe Analytics extension is enabled in your SDK, collecting this launch 
 
 Android
 
-<CollectLaunchInfoAndroid/>
+<Tabs query="platform=android&api=collect-launch-info"/>
 
 iOS (AEP 3.x)
 
-<CollectLaunchInfoIosAEP/>
+<Tabs query="platform=ios-aep&api=collect-launch-info"/>
 
 iOS (ACP 2.x)
 
-<CollectLaunchInfoIosACP/>
+<Tabs query="platform=ios-acp&api=collect-launch-info"/>
 
 ## collectPii
 
@@ -107,19 +36,19 @@ Although this method enables the collection of sensitive data, no data is sent t
 
 Android
 
-<CollectPiiAndroid/>
+<Tabs query="platform=android&api=collect-pii"/>
 
 iOS (AEP 3.x)
 
-<CollectPiiIosAEP/>
+<Tabs query="platform=ios-aep&api=collect-pii"/>
 
 iOS (ACP 2.x)
 
-<CollectPiiIosACP/>
+<Tabs query="platform=ios-acp&api=collect-pii"/>
 
 React Native
 
-<CollectPiiReactNative/>
+<Tabs query="platform=react-native&api=collect-pii"/>
 
 ## getApplication
 
@@ -129,11 +58,11 @@ You can use the `getApplication` method to get the previously set Android `Appli
 
 Android
 
-<GetApplicationAndroid/>
+<Tabs query="platform=android&api=get-application"/>
 
 Xamarin
 
-<GetApplicationXamarin/>
+<Tabs query="platform=xamarin&api=get-application"/>
 
 ## getLogLevel
 
@@ -143,27 +72,27 @@ This API gets the current log level being used in the SDK.
 
 Android
 
-<GetLogLevelAndroid/>
+<Tabs query="platform=android&api=get-log-level"/>
 
 iOS (AEP 3.x)
 
-<GetLogLevelIosAEP/>
+<Tabs query="platform=ios-aep&api=get-log-level"/>
 
 iOS (ACP 2.x)
 
-<GetLogLevelIosACP/>
+<Tabs query="platform=ios-acp&api=get-log-level"/>
 
 React Native
 
-<GetLogLevelReactNative/>
+<Tabs query="platform=react-native&api=get-log-level"/>
 
 Unity
 
-<GetLogLevelUnity/>
+<Tabs query="platform=unity&api=get-log-level"/>
 
 Xamarin
 
-<GetLogLevelXamarin/>
+<Tabs query="platform=xamarin&api=get-log-level"/>
 
 ## getSdkIdentities
 
@@ -188,15 +117,15 @@ You must call the API below and retrieve identities stored in the SDK, **before*
 
 Android
 
-<GetSdkIdentitiesAndroid/>
+<Tabs query="platform=android&api=get-sdk-identities"/>
 
 iOS (AEP 3.x)
 
-<GetSdkIdentitiesIosAEP/>
+<Tabs query="platform=ios-aep&api=get-sdk-identities"/>
 
 iOS (ACP 2.x)
 
-<GetSdkIdentitiesIosACP/>
+<Tabs query="platform=ios-acp&api=get-sdk-identities"/>
 
 ## log
 
@@ -206,23 +135,23 @@ This is the API used to log from the SDK.
 
 Android
 
-<LogAndroid/>
+<Tabs query="platform=android&api=log"/>
 
 iOS (AEP 3.x)
 
-<LogIosAEP/>
+<Tabs query="platform=ios-aep&api=log"/>
 
 iOS (ACP 2.x)
 
-<LogIosACP/>
+<Tabs query="platform=ios-acp&api=log"/>
 
 React Native
 
-<LogReactNative/>
+<Tabs query="platform=react-native&api=log"/>
 
 Xamarin
 
-<LogXamarin/>
+<Tabs query="platform=xamarin&api=log"/>
 
 ## registerExtension(s)
 
@@ -238,35 +167,35 @@ The following code snippets demonstrate how you can import and register the Mobi
 
 Android
 
-<RegisterExtensionAndroid/>
+<Tabs query="platform=android&api=register-extension"/>
 
 iOS (AEP 3.x)
 
-<RegisterExtensionIosAEP/>
+<Tabs query="platform=ios-aep&api=register-extension"/>
 
 iOS (ACP 2.x)
 
-<RegisterExtensionIosACP/>
+<Tabs query="platform=ios-acp&api=register-extension"/>
 
 React Native
 
-<RegisterExtensionReactNative/>
+<Tabs query="platform=react-native&api=register-extension"/>
 
 Flutter
 
-<RegisterExtensionFlutter/>
+<Tabs query="platform=flutter&api=register-extension"/>
 
 Cordova
 
-<RegisterExtensionCordova/>
+<Tabs query="platform=cordova&api=register-extension"/>
 
 Unity
 
-<RegisterExtensionUnity/>
+<Tabs query="platform=unity&api=register-extension"/>
 
 Xamarin
 
-<RegisterExtensionXamarin/>
+<Tabs query="platform=xamarin&api=register-extension"/>
 
 ## registerURLHandler 
 
@@ -276,7 +205,7 @@ Mobile SDK allows you to add a callback function that is triggered before the [`
 
 iOS (ACP 2.x)
 
-<RegisterUrlHandlerIosACP/>
+<Tabs query="platform=ios-acp&api=register-url-handler"/>
 
 ## resetIdentities
 
@@ -286,11 +215,11 @@ The `resetIdentities` method requests that each extension resets the identities 
 
 Android
 
-<ResetIdentitiesAndroid/>
+<Tabs query="platform=android&api=reset-identities"/>
 
 iOS (AEP 3.x)
 
-<ResetIdentitiesIosAEP/>
+<Tabs query="platform=ios-aep&api=reset-identities"/>
 
 ## setAdvertisingIdentifier
 
@@ -310,15 +239,15 @@ This API _must_ be called in `AppDidFinishLaunching` and before any other intera
 
 iOS (AEP 3.x)
 
-<SetAppGroupIosAEP/>
+<Tabs query="platform=ios-aep&api=set-app-group"/>
 
 iOS (ACP 2.x)
 
-<SetAppGroupIosACP/>
+<Tabs query="platform=ios-acp&api=set-app-group"/>
 
 Xamarin
 
-<SetAppGroupXamarin/>
+<Tabs query="platform=xamarin&api=set-app-group"/>
 
 ## setApplication
 
@@ -334,11 +263,11 @@ You can use the `setApplication` method to pass the Android `Application` instan
 
 Android
 
-<SetApplicationAndroid/>
+<Tabs query="platform=android&api=set-application"/>
 
 Xamarin
 
-<SetApplicationXamarin/>
+<Tabs query="platform=xamarin&api=set-application"/>
 
 ## setLogLevel
 
@@ -361,41 +290,41 @@ By default, Mobile SDK logging mode is set to `LoggingMode.ERROR` for Android an
 
 <InlineAlert variant="info" slots="text"/>
 
-<ul><li>On **Android**, Mobile SDK uses the `android.util.Log` class to log messages.</li><li>On **iOS**, Mobile SDK uses `NSLog` to messages to Apple System Log facility.</li></ul>
+On **Android**, Mobile SDK uses the `android.util.Log` class to log messages.<br/><br/>On **iOS**, Mobile SDK uses `NSLog` to messages to Apple System Log facility.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
 
 Android
 
-<SetLogLevelAndroid/>
+<Tabs query="platform=android&api=set-log-level"/>
 
 iOS (AEP 3.x)
 
-<SetLogLevelIosAEP/>
+<Tabs query="platform=ios-aep&api=set-log-level"/>
 
 iOS (ACP 2.x)
 
-<SetLogLevelIosACP/>
+<Tabs query="platform=ios-acp&api=set-log-level"/>
 
 React Native
 
-<SetLogLevelReactNative/>
+<Tabs query="platform=react-native&api=set-log-level"/>
 
 Flutter
 
-<SetLogLevelFlutter/>
+<Tabs query="platform=flutter&api=set-log-level"/>
 
 Cordova
 
-<SetLogLevelCordova/>
+<Tabs query="platform=cordova&api=set-log-level"/>
 
 Unity
 
-<SetLogLevelUnity/>
+<Tabs query="platform=unity&api=set-log-level"/>
 
 Xamarin
 
-<SetLogLevelXamarin/>
+<Tabs query="platform=xamarin&api=set-log-level"/>
 
 ## setPushIdentifier
 
@@ -409,15 +338,15 @@ You should call `setPushIdentifier` on each application launch to ensure the mos
 
 Android
 
-<SetPushIdentifierAndroid/>
+<Tabs query="platform=android&api=set-push-identifier"/>
 
 iOS (AEP 3.x)
 
-<SetPushIdentifierIosAEP/>
+<Tabs query="platform=ios-aep&api=set-push-identifier"/>
 
 iOS (ACP 2.x)
 
-<SetPushIdentifierIosACP/>
+<Tabs query="platform=ios-acp&api=set-push-identifier"/>
 
 ## setSmallIconResourceID / setLargeIconResourceID 
 
@@ -427,11 +356,11 @@ You can set the small and large icons that will be used for notifications that a
 
 Android
 
-<SetIconResourceIdAndroid/>
+<Tabs query="platform=android&api=set-icon-resource-id"/>
 
 Xamarin
 
-<SetIconResourceIdXamarin/>
+<Tabs query="platform=xamarin&api=set-icon-resource-id"/>
 
 ## trackAction
 
@@ -449,35 +378,35 @@ If you installed and configured the Adobe Analytics extension, this method sends
 
 Android
 
-<TrackActionAndroid/>
+<Tabs query="platform=android&api=track-action"/>
 
 iOS (AEP 3.x)
 
-<TrackActionIosAEP/>
+<Tabs query="platform=ios-aep&api=track-action"/>
 
 iOS (ACP 2.x)
 
-<TrackActionIosACP/>
+<Tabs query="platform=ios-acp&api=track-action"/>
 
 React Native
 
-<TrackActionReactNative/>
+<Tabs query="platform=react-native&api=track-action"/>
 
 Flutter
 
-<TrackActionFlutter/>
-
-Unity
-
-<TrackActionUnity/>
+<Tabs query="platform=flutter&api=track-action"/>
 
 Cordova
 
-<TrackActionCordova/>
+<Tabs query="platform=cordova&api=track-action"/>
+
+Unity
+
+<Tabs query="platform=unity&api=track-action"/>
 
 Xamarin
 
-<TrackActionXamarin/>
+<Tabs query="platform=xamarin&api=track-action"/>
 
 ## trackState
 
@@ -491,35 +420,35 @@ If you installed and configured the Adobe Analytics extension, the `trackState` 
 
 Android
 
-<TrackStateAndroid/>
+<Tabs query="platform=android&api=track-state"/>
 
 iOS (AEP 3.x)
 
-<TrackStateIosAEP/>
+<Tabs query="platform=ios-aep&api=track-state"/>
 
 iOS (ACP 2.x)
 
-<TrackStateIosACP/>
+<Tabs query="platform=ios-acp&api=track-state"/>
 
 React Native
 
-<TrackStateReactNative/>
+<Tabs query="platform=react-native&api=track-state"/>
 
 Flutter
 
-<TrackStateFlutter/>
+<Tabs query="platform=flutter&api=track-state"/>
 
 Cordova
 
-<TrackStateCordova/>
+<Tabs query="platform=cordova&api=track-state"/>
 
 Unity
 
-<TrackStateUnity/>
+<Tabs query="platform=unity&api=track-state"/>
 
 Xamarin
 
-<TrackStateXamarin/>
+<Tabs query="platform=xamarin&api=track-state"/>
 
 ## Public classes
 
@@ -527,19 +456,19 @@ Xamarin
 
 Android
 
-<PublicClassesAndroid/>
+<Tabs query="platform=android&api=public-classes"/>
 
 iOS (AEP 3.x)
 
-<PublicClassesIosAEP/>
+<Tabs query="platform=ios-aep&api=public-classes"/>
 
 iOS (ACP 2.x)
 
-<PublicClassesIosACP/>
+<Tabs query="platform=ios-acp&api=public-classes"/>
 
 Xamarin
 
-<PublicClassesXamarin/>
+<Tabs query="platform=xamarin&api=public-classes"/>
 
 ## Additional information
 
