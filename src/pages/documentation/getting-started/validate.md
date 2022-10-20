@@ -2,7 +2,7 @@
 
 As you begin to add solution APIs to your mobile implementation, you are going to want to validate that specific actions and experiences work as intended. Adding [Adobe Experience Platform Assurance](../platform-assurance/index.md#what-can-assurance-do-for-you) to your application at the beginning of your implementation provides a way to quickly check to make sure the SDK has been instrumented properly and that data is flowing to Adobe Analytics and other solutions.
 
-Assurance is available across all [SDK platforms and frameworks](../upgrade-platform-sdks/current-sdk-versions.md). Installation and setup instructions are available [here](../platform-assurance/index.md#quick-setup).
+Assurance is available across all [SDK platforms and frameworks](../current-sdk-versions.md). Installation and setup instructions are available [here](../platform-assurance/index.md#quick-setup).
 
 Once you have Assurance integrated, you can create a [new session](../platform-assurance/tutorials/index.md#creating-sessions) by either scanning a QR code or by following a unique deep link URL.
 

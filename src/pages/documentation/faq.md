@@ -58,7 +58,7 @@ The Experience Platform SDK migrates the locally stored user contexts from the 4
 
 ### What platforms are supported?
 
-For a complete list of supported platforms, please read the [latest SDK versions document](./upgrade-platform-sdks/current-sdk-versions.md).
+For a complete list of supported platforms, please read the [latest SDK versions document](./current-sdk-versions.md).
 
 ### What OS and platform versions are supported?
 
