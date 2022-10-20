@@ -1,9 +1,4 @@
-import Importlifecycleandroid from './tabs/import-lifecycle-android.md'
-import Importlifecycleios from './tabs/import-lifecycle-ios.md'
-import Collectlifecycleandroid from './tabs/collect-lifecycle-android.md'
-import Collectlifecycleios from './tabs/collect-lifecycle-ios.md'
-import Pauselifecycleandroid from './tabs/pause-lifecycle-android.md'
-import Pauselifecycleios from './tabs/pause-lifecycle-ios.md'
+import Tabs from './tabs/lifecycle.md'
 
 # Manual Lifecycle Implementation
 
@@ -15,13 +10,13 @@ In version 4 of the iOS SDK, this implementation was completed automatically.<br
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-#### Android
+Android
 
-<Importlifecycleandroid/>
+<Tabs query="platform=android&task=import"/>
 
-#### iOS
+iOS
 
-<Importlifecycleios/>
+<Tabs query="platform=ios&task=import"/>
 
 ## Start collecting Lifecycle information
 
@@ -29,13 +24,13 @@ You can start collecting Lifecycle information at any time in your app, but we r
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-#### Android
+Android
 
-<Collectlifecycleandroid/>
+<Tabs query="platform=android&task=collect"/>
 
-#### iOS
+iOS
 
-<Collectlifecycleios/>
+<Tabs query="platform=ios&task=collect"/>
 
 ## Pause Lifecycle Collection
 
@@ -43,10 +38,10 @@ You should pause Lifecycle collection when the user stops using your app. The be
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-#### Android
+Android
 
-<Pauselifecycleandroid/>
+<Tabs query="platform=android&task=pause"/>
 
-#### iOS
+iOS
 
-<Pauselifecycleios/>
+<Tabs query="platform=ios&task=pause"/>
