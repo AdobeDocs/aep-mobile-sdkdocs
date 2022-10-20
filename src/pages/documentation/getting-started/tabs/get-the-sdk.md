@@ -26,11 +26,11 @@ The necessary dependencies and initialization code can be copied from the dialog
 
 Adobe Experience Platform SDKs for iOS support **iOS 10 or later**; **requires** Swift 5.1 or newer; **and** Xcode 11.0 or newer.
 
-In order to support the new Apple M1 architecture while maintaining support for existing Intel architecture, the Adobe Experience Platform SDKs are now distributed using XCFrameworks. <br/><br/> Please see the [release notes](../release-notes/2020.md#december-18-2020) and the document on [current SDK versions](../upgrade-platform-sdks/current-sdk-versions.md) for more information on the latest extension versions.
+In order to support the new Apple M1 architecture while maintaining support for existing Intel architecture, the Adobe Experience Platform SDKs are now distributed using XCFrameworks. <br/><br/> Please see the [release notes](../release-notes/2020.md#december-18-2020) and the document on [current SDK versions](../current-sdk-versions.md) for more information on the latest extension versions.
 
 #### Swift
 
-Add the dependencies to your `Podfile` for each extension. For a complete list of available SDK extension libraries, please read the documentation on [current SDK Versions](../upgrade-platform-sdks/current-sdk-versions.md).
+Add the dependencies to your `Podfile` for each extension. For a complete list of available SDK extension libraries, please read the documentation on [current SDK Versions](../current-sdk-versions.md).
 
 ```swift
 use_frameworks!

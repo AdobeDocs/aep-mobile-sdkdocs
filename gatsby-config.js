@@ -31,6 +31,10 @@ module.exports = {
                 path: "/documentation"
             },
             {
+                title: "Current SDK versions",
+                path: "documentation/current-sdk-versions"
+            },
+            {
                 title: "Release notes",
                 path: "/documentation/release-notes",
                 pages: [
@@ -67,6 +71,44 @@ module.exports = {
             {
                 title: "Adobe Experience Cloud & Apple's IDFA, Privacy announcement",
                 path: "/documentation/privacy-announcement"
+            },
+            {
+                title: "Getting started",
+                path: "/documentation/getting-started",
+                pages: [
+                    {
+                        title: "Overview",
+                        path: "/documentation/getting-started"
+                    },
+                    {
+                        title: "Set up schemas and datasets",
+                        path: "/documentation/getting-started/set-up-schemas-and-datasets"
+                    },
+                    {
+                        title: "Configure datastreams",
+                        path: "/documentation/getting-started/configure-datastreams"
+                    },
+                    {
+                        title: "Set up a mobile property",
+                        path: "/documentation/getting-started/create-a-mobile-property"
+                    },
+                    {
+                        title: "Get the Experience Platform SDK",
+                        path: "/documentation/getting-started/get-the-sdk"
+                    },
+                    {
+                        title: "Debugging and lifecycle metrics",
+                        path: "/documentation/getting-started/enable-debug-logging"
+                    },
+                    {
+                        title: "Track events",
+                        path: "/documentation/getting-started/track-events"
+                    },
+                    {
+                        title: "Validation and next steps",
+                        path: "/documentation/getting-started/validate"
+                    }
+                ]
             },
             {
                 title: "Mobile Foundation extensions",
@@ -356,7 +398,7 @@ module.exports = {
                             }
                         ]
                     },
-                    
+
 
             {
                 title: "Adobe Experience Platform Location Service",
@@ -784,48 +826,6 @@ module.exports = {
                         path: "documentation/building-mobile-extensions/mobile-extension-samples"
                     }
                 ]
-            },
-            {
-                title: "Getting started",
-                path: "/documentation/getting-started",
-                pages: [
-                    {
-                        title: "Overview",
-                        path: "/documentation/getting-started"
-                    },
-                    {
-                        title: "Set up schemas and datasets",
-                        path: "/documentation/getting-started/set-up-schemas-and-datasets"
-                    },
-                    {
-                        title: "Configure datastreams",
-                        path: "/documentation/getting-started/configure-datastreams"
-                    },
-                    {
-                        title: "Set up a mobile property",
-                        path: "/documentation/getting-started/create-a-mobile-property"
-                    },
-                    {
-                        title: "Get the Experience Platform SDK",
-                        path: "/documentation/getting-started/get-the-sdk"
-                    },
-                    {
-                        title: "Debugging and lifecycle metrics",
-                        path: "/documentation/getting-started/enable-debug-logging"
-                    },
-                    {
-                        title: "Track events",
-                        path: "/documentation/getting-started/track-events"
-                    },
-                    {
-                        title: "Validation and next steps",
-                        path: "/documentation/getting-started/validate"
-                    }
-                ]
-            },
-            {
-                title: "Current SDK versions",
-                path: "documentation/upgrade-platform-sdks/current-sdk-versions.md"
             },
             {
                 title: "Resources",

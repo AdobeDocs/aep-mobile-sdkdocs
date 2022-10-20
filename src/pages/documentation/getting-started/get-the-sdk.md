@@ -132,7 +132,7 @@ To enable these permissions, add the following lines to your `AndroidManifest.xm
 
 * [How to use Gradle for Android](https://docs.gradle.org/current/userguide/userguide.html)
 * [How to use CocoaPods for iOS ](https://guides.cocoapods.org/using/using-cocoapods)
-* [Current SDK Versions](../upgrade-platform-sdks/current-sdk-versions.md)
+* [Current SDK Versions](../current-sdk-versions.md)
 
 ## Get help
 
