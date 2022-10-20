@@ -147,6 +147,72 @@ NSDictionary *data = @{ @"sample" : @"data"};
 }];
 ```
 
+<Variant platform="android" api="get-location-hint" repeat="6"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void getLocationHint(final AdobeCallback<String> callback)
+```
+* _callback_ is invoked with the location hint. The location hint value may be null if the location hint expired or was not set. The callback may be invoked on a different thread. If `AdobeCallbackWithError` is provided, the default timeout is 1000ms and the `fail` method is called if the operation times out or an unexpected error occurs.
+
+**Example**
+
+```java
+Edge.getLocationHint(new AdobeCallbackWithError<String>() {
+    @Override
+    public void call(final String hint) {
+        // handle the hint here
+    }
+
+    @Override
+    public void fail(AdobeError adobeError) {
+        // handle error here
+    }
+});
+```
+
+<Variant platform="ios-aep" api="get-location-hint" repeat="11"/>
+
+#### Swift
+
+**Syntax**
+
+```swift
+static func getLocationHint(completion: @escaping (String?, Error?) -> Void)
+```
+* _completion_ is invoked with the location hint, or an `AEPError` if the request times out or an unexpected error occurs. The location hint value may be nil if the location hint expired or was not set. The default timeout is 1000ms. The completion handler may be invoked on a different thread.
+
+**Example**
+
+```swift
+Edge.getLocationHint { (hint, error) in
+  if let error = error {
+    // handle error here
+  } else {
+    // handle location hint here
+  }
+}
+```
+
+#### Objective-C
+
+**Syntax**
+
+```objectivec
++ (void) getLocationHint:^(NSString * _Nullable hint, NSError * _Nullable error)completion
+```
+
+**Example**
+
+```objectivec
+[AEPMobileEdge getLocationHint:^(NSString *hint, NSError *error) {   
+    // handle the error and the hint here
+}];
+```
+
 <Variant platform="android" api="register-extension" repeat="5"/>
 
 #### Java
@@ -205,6 +271,55 @@ Use the AEPMobileCore API to register the Edge extension.
 
 [AEPMobileCore registerExtensions:@[AEPMobileEdge.class] completion:nil];...
 
+```
+
+<Variant platform="android" api="set-location-hint" repeat="6"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void setLocationHint(final String hint)
+```
+- _hint_ the Edge Network location hint to use when connecting to the Adobe Experience Platform Edge Network.
+
+**Example**
+
+```java
+Edge.setLocationHint(hint);
+```
+
+<Variant platform="ios-aep" api="set-location-hint" repeat="11"/>
+
+#### Swift
+
+**Syntax**
+
+```swift
+@objc(setLocationHint:)
+public static func setLocationHint(_ hint: String?)
+```
+- _hint_ the Edge Network location hint to use when connecting to the Adobe Experience Platform Edge Network.
+
+**Example**
+
+```swift
+Edge.setLocationHint(hint)
+```
+
+#### Objective-C
+
+**Syntax**
+
+```objectivec
++ (void) setLocationHint: (NSString * _Nullable hint);
+```
+
+**Example**
+
+```objectivec
+[AEPMobileEdge setLocationHint:hint];
 ```
 
 <Variant platform="android" api="xdm-schema" repeat="5"/>
