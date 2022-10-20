@@ -80,7 +80,7 @@ Due to sunset of [JCenter by JFrog](https://jfrog.com/blog/into-the-sunset-bintr
 
 <InlineAlert variant="info" slots="text"/>
 
-Adobe Experience Platform Mobile SDK for iOS supports iOS 10 or later (includes support for iOS, iPadOS, and tvOS). 
+Adobe Experience Platform Mobile SDK for iOS supports iOS 10 or later (includes support for iOS, iPadOS, and tvOS).
 
 | Extension | tvOS | App Extension | CocoaPods | GitHub |
 |---|---|---|---|---|
@@ -110,7 +110,7 @@ Adobe Experience Platform Mobile SDK plugin for React Native supports React Nati
 
 <InlineAlert variant="info" slots="text"/>
 
-Adobe Experience Platform Mobile SDK plugins (AEP 1.x) for React Native are compatible only with [Android](#android) and [iOS - Swift](https://github.com/Adobe-Marketing-Cloud/aep-sdks-documentation/blob/master/resources/upgrading-to-aep/current-sdk-versions/README.md#ios-swift) libraries.
+Adobe Experience Platform Mobile SDK plugins (AEP 1.x) for React Native are compatible only with [Android](#android) and [iOS - Swift](#ios--swift) libraries.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -132,7 +132,7 @@ Adobe Experience Platform Mobile SDK plugin for React Native supports React Nati
 
 <InlineAlert variant="info" slots="text"/>
 
-Adobe Experience Platform Mobile SDK plugins (ACP 2.x) for React Native are compatible only with [Android](#android) and [iOS — Objective-C](https://github.com/Adobe-Marketing-Cloud/aep-sdks-documentation/blob/master/resources/upgrading-to-aep/current-sdk-versions/README.md#ios-objective-c) libraries. 
+Adobe Experience Platform Mobile SDK plugins (ACP 2.x) for React Native are compatible only with [Android](#android) and [iOS — Objective-C](#ios--objective-c) libraries.
 
 <InlineAlert variant="info" slots="text"/>
 
