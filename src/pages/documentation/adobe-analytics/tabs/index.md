@@ -43,7 +43,7 @@ import AEPIdentity
 @import AEPCore;
 @import AEPAnalytics;
 @import AEPIdentity;
-``` 
+```
 
 <Variant platform="ios-acp" task="add" repeat="7"/>
 
@@ -217,7 +217,7 @@ In your app's `_:didFinishLaunchingWithOptions` function, register the Audience 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
    MobileCore.registerExtensions([Analytics.self, Identity.self], {
-   MobileCore.configureWith(appId: "yourAppId") 
+   MobileCore.configureWith(appId: "yourAppId")
  })  
  ...
 }
@@ -274,19 +274,19 @@ Analytics depends on the Identity extension and is automatically included in the
 
 #### JavaScript
 
-When using React Native, register AEP Assurance with Mobile Core in native code as shown on the Android and iOS tabs.
+When using React Native, register Analytics with Mobile Core in native code as shown on the Android and iOS tabs.
 
 <Variant platform="flutter" task="register" repeat="2"/>
 
 #### Dart
 
-When using Flutter, register AEP Assurance with Mobile Core in native code as shown on the Android and iOS tabs.
+When using Flutter, register Analytics with Mobile Core in native code as shown on the Android and iOS tabs.
 
 <Variant platform="cordova" task="register" repeat="2"/>
 
 #### Cordova
 
-When using Cordova, register AEP Assurance with Mobile Core in native code as shown on the Android and iOS tabs.
+When using Cordova, register Analytics with Mobile Core in native code as shown on the Android and iOS tabs.
 
 <Variant platform="unity" task="register" repeat="3"/>
 
@@ -303,7 +303,7 @@ public class MainScript : MonoBehaviour
     [MonoPInvokeCallback(typeof(AdobeStartCallback))]
     public static void HandleStartAdobeCallback()
     {   
-        ACPCore.ConfigureWithAppID("1423ae38-8385-8963-8693-28375403491d"); 
+        ACPCore.ConfigureWithAppID("1423ae38-8385-8963-8693-28375403491d");
     }
 
     // Start is called before the first frame update
@@ -674,9 +674,9 @@ NSDictionary *updatedConfig = @{@"analytics.server":@"sample.analytics.tracking.
 **Example**
 
 ```swift
-let updatedConfig = ["analytics.server":"sample.analytics.tracking.server", 
-                     "analytics.rsids":"rsid1,rsid2", 
-                     "analytics.batchLimit":10, 
+let updatedConfig = ["analytics.server":"sample.analytics.tracking.server",
+                     "analytics.rsids":"rsid1,rsid2",
+                     "analytics.batchLimit":10,
                      "analytics.offlineEnabled":true]
 ACPCore.updateConfiguration(updatedConfig)
 ```
