@@ -1,12 +1,4 @@
-import ExtensionVersionAEPObjectiveC from './tabs/migration/extension-version/aep-objective-c.md'
-import ExtensionVersionAEPSwift from './tabs/migration/extension-version/aep-swift.md'
-import ExtensionVersionACPObjectiveC from './tabs/migration/extension-version/acp-objective-c.md'
-import LifecycleStartAEPObjectiveC from './tabs/migration/lifecycle-start/aep-objective-c.md'
-import LifecycleStartAEPSwift from './tabs/migration/lifecycle-start/aep-swift.md'
-import LifecycleStartACPObjectiveC from './tabs/migration/lifecycle-start/acp-objective-c.md'
-import LifecyclePauseAEPObjectiveC from './tabs/migration/lifecycle-pause/aep-objective-c.md'
-import LifecyclePauseAEPSwift from './tabs/migration/lifecycle-pause/aep-swift.md'
-import LifecyclePauseACPObjectiveC from './tabs/migration/lifecycle-pause/acp-objective-c.md'
+import Tabs from './tabs/migration.md'
 
 # Migrating to AEPLifecycle reference
 
@@ -29,15 +21,15 @@ For more information, please read the [Lifecycle API reference](./api-reference.
 
 AEP 3.x (Swift)
 
-<ExtensionVersionAEPSwift/>
+<Tabs query="platform=aep-swift&api=extension-version"/>
 
 AEP 3.x (Objective-C)
 
-<ExtensionVersionAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=extension-version"/>
 
 ACP 2.x (Objective-C)
 
-<ExtensionVersionACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=extension-version"/>
 
 ### lifecycleStart
 
@@ -45,15 +37,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<LifecycleStartAEPSwift/>
+<Tabs query="platform=aep-swift&api=lifecycle-start"/>
 
 AEP 3.x (Objective-C)
 
-<LifecycleStartAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=lifecycle-start"/>
 
 ACP 2.x (Objective-C)
 
-<LifecycleStartACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=lifecycle-start"/>
 
 ### lifecyclePause
 
@@ -61,13 +53,13 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<LifecyclePauseAEPSwift/>
+<Tabs query="platform=aep-swift&api=lifecycle-pause"/>
 
 AEP 3.x (Objective-C)
 
-<LifecyclePauseAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=lifecycle-pause"/>
 
 ACP 2.x (Objective-C)
 
-<LifecyclePauseACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=lifecycle-pause"/>
 

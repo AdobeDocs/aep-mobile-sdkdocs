@@ -1,40 +1,4 @@
-import CollectLaunchInfoAEPObjectiveC from './tabs/migration/collect-launch-info/aep-objective-c.md'
-import CollectLaunchInfoAEPSwift from './tabs/migration/collect-launch-info/aep-swift.md'
-import CollectLaunchInfoACPObjectiveC from './tabs/migration/collect-launch-info/acp-objective-c.md'
-import CollectPiiAEPObjectiveC from './tabs/migration/collect-pii/aep-objective-c.md'
-import CollectPiiAEPSwift from './tabs/migration/collect-pii/aep-swift.md'
-import CollectPiiACPObjectiveC from './tabs/migration/collect-pii/acp-objective-c.md'
-import ConfigureWithAppIdAEPObjectiveC from './tabs/migration/configure-with-app-id/aep-objective-c.md'
-import ConfigureWithAppIdAEPSwift from './tabs/migration/configure-with-app-id/aep-swift.md'
-import ConfigureWithAppIdACPObjectiveC from './tabs/migration/configure-with-app-id/acp-objective-c.md'
-import ConfigureWithFileInPathAEPObjectiveC from './tabs/migration/configure-with-file-in-path/aep-objective-c.md'
-import ConfigureWithFileInPathAEPSwift from './tabs/migration/configure-with-file-in-path/aep-swift.md'
-import ConfigureWithFileInPathACPObjectiveC from './tabs/migration/configure-with-file-in-path/acp-objective-c.md'
-import ExtensionVersionAEPObjectiveC from './tabs/migration/extension-version/aep-objective-c.md'
-import ExtensionVersionAEPSwift from './tabs/migration/extension-version/aep-swift.md'
-import ExtensionVersionACPObjectiveC from './tabs/migration/extension-version/acp-objective-c.md'
-import GetSdkIdentitiesAEPObjectiveC from './tabs/migration/get-sdk-identities/aep-objective-c.md'
-import GetSdkIdentitiesAEPSwift from './tabs/migration/get-sdk-identities/aep-swift.md'
-import GetSdkIdentitiesACPObjectiveC from './tabs/migration/get-sdk-identities/acp-objective-c.md'
-import RegisterUrlHandlerAEPObjectiveC from './tabs/migration/register-url-handler/aep-objective-c.md'
-import RegisterUrlHandlerAEPSwift from './tabs/migration/register-url-handler/aep-swift.md'
-import RegisterUrlHandlerACPObjectiveC from './tabs/migration/register-url-handler/acp-objective-c.md'
-import SetAppGroupAEPObjectiveC from './tabs/migration/set-app-group/aep-objective-c.md'
-import SetAppGroupAEPSwift from './tabs/migration/set-app-group/aep-swift.md'
-import SetAppGroupACPObjectiveC from './tabs/migration/set-app-group/acp-objective-c.md'
-import SetLogLevelAEPObjectiveC from './tabs/migration/set-log-level/aep-objective-c.md'
-import SetLogLevelAEPSwift from './tabs/migration/set-log-level/aep-swift.md'
-import SetLogLevelACPObjectiveC from './tabs/migration/set-log-level/acp-objective-c.md'
-import TrackActionAEPObjectiveC from './tabs/migration/track-action/aep-objective-c.md'
-import TrackActionAEPSwift from './tabs/migration/track-action/aep-swift.md'
-import TrackActionACPObjectiveC from './tabs/migration/track-action/acp-objective-c.md'
-import TrackStateAEPObjectiveC from './tabs/migration/track-state/aep-objective-c.md'
-import TrackStateAEPSwift from './tabs/migration/track-state/aep-swift.md'
-import TrackStateACPObjectiveC from './tabs/migration/track-state/acp-objective-c.md'
-import UpdateConfigurationAEPObjectiveC from './tabs/migration/update-configuration/aep-objective-c.md'
-import UpdateConfigurationAEPSwift from './tabs/migration/update-configuration/aep-swift.md'
-import UpdateConfigurationACPObjectiveC from './tabs/migration/update-configuration/acp-objective-c.md'
-
+import Tabs from './tabs/migration.md'
 
 # Migrating to AEPCore reference
 
@@ -55,15 +19,15 @@ This document is a reference comparison of ACPCore (2.x) APIs against their equi
 
 AEP 3.x (Swift)
 
-<TrackActionAEPSwift/>
+<Tabs query="platform=aep-swift&api=track-action"/>
 
 AEP 3.x (Objective-C)
 
-<TrackActionAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=track-action"/>
 
 ACP 2.x (Objective-C)
 
-<TrackActionACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=track-action"/>
 
 ### trackState
 
@@ -71,15 +35,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<TrackStateAEPSwift/>
+<Tabs query="platform=aep-swift&api=track-state"/>
 
 AEP 3.x (Objective-C)
 
-<TrackStateAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=track-state"/>
 
 ACP 2.x (Objective-C)
 
-<TrackStateACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=track-state"/>
 
 ### collectPii
 
@@ -87,15 +51,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<CollectPiiAEPSwift/>
+<Tabs query="platform=aep-swift&api=collect-pii"/>
 
 AEP 3.x (Objective-C)
 
-<CollectPiiAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=collect-pii"/>
 
 ACP 2.x (Objective-C)
 
-<CollectPiiACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=collect-pii"/>
 
 ### collectLaunchInfo
 
@@ -103,15 +67,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<CollectLaunchInfoAEPSwift/>
+<Tabs query="platform=aep-swift&api=collect-launch-info"/>
 
 AEP 3.x (Objective-C)
 
-<CollectLaunchInfoAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=collect-launch-info"/>
 
 ACP 2.x (Objective-C)
 
-<CollectLaunchInfoACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=collect-launch-info"/>
 
 ### getSdkIdentities
 
@@ -119,15 +83,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<GetSdkIdentitiesAEPSwift/>
+<Tabs query="platform=aep-swift&api=get-sdk-identities"/>
 
 AEP 3.x (Objective-C)
 
-<GetSdkIdentitiesAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=get-sdk-identities"/>
 
 ACP 2.x (Objective-C)
 
-<GetSdkIdentitiesACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=get-sdk-identities"/>
 
 ### setLogLevel
 
@@ -135,15 +99,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<SetLogLevelAEPSwift/>
+<Tabs query="platform=aep-swift&api=set-log-level"/>
 
 AEP 3.x (Objective-C)
 
-<SetLogLevelAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=set-log-level"/>
 
 ACP 2.x (Objective-C)
 
-<SetLogLevelACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=set-log-level"/>
 
 ### registerURLHandler
 
@@ -151,15 +115,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<RegisterUrlHandlerAEPSwift/>
+<Tabs query="platform=aep-swift&api=register-url-handler"/>
 
 AEP 3.x (Objective-C)
 
-<RegisterUrlHandlerAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=register-url-handler"/>
 
 ACP 2.x (Objective-C)
 
-<RegisterUrlHandlerACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=register-url-handler"/>
 
 ### setAppGroup
 
@@ -167,15 +131,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<SetAppGroupAEPSwift/>
+<Tabs query="platform=aep-swift&api=set-app-group"/>
 
 AEP 3.x (Objective-C)
 
-<SetAppGroupAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=set-app-group"/>
 
 ACP 2.x (Objective-C)
 
-<SetAppGroupACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=set-app-group"/>
 
 ### configureWithAppId
 
@@ -183,15 +147,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<ConfigureWithAppIdAEPSwift/>
+<Tabs query="platform=aep-swift&api=configure-with-app-id"/>
 
 AEP 3.x (Objective-C)
 
-<ConfigureWithAppIdAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=configure-with-app-id"/>
 
 ACP 2.x (Objective-C)
 
-<ConfigureWithAppIdACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=configure-with-app-id"/>
 
 ### updateConfiguration
 
@@ -199,15 +163,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<UpdateConfigurationAEPSwift/>
+<Tabs query="platform=aep-swift&api=update-configuration"/>
 
 AEP 3.x (Objective-C)
 
-<UpdateConfigurationAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=update-configuration"/>
 
 ACP 2.x (Objective-C)
 
-<UpdateConfigurationACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=update-configuration"/>
 
 ### configureWithFileInPath
 
@@ -215,15 +179,15 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<ConfigureWithFileInPathAEPSwift/>
+<Tabs query="platform=aep-swift&api=configure-with-file-in-path"/>
 
 AEP 3.x (Objective-C)
 
-<ConfigureWithFileInPathAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=configure-with-file-in-path"/>
 
 ACP 2.x (Objective-C)
 
-<ConfigureWithFileInPathACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=configure-with-file-in-path"/>
 
 ### extensionVersion
 
@@ -231,13 +195,13 @@ ACP 2.x (Objective-C)
 
 AEP 3.x (Swift)
 
-<ExtensionVersionAEPSwift/>
+<Tabs query="platform=aep-swift&api=extension-version"/>
 
 AEP 3.x (Objective-C)
 
-<ExtensionVersionAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=extension-version"/>
 
 ACP 2.x (Objective-C)
 
-<ExtensionVersionACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=extension-version"/>
 

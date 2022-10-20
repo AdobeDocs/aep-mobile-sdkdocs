@@ -1,7 +1,4 @@
-import AccessingServicesIos from './tabs/index/accessing-services/ios.md'
-import AccessingServicesAndroid from './tabs/index/accessing-services/android.md'
-import OverrideNetworkStackIos from './tabs/index/override-network-stack/ios.md'
-import OverrideNetworkStackAndroid from './tabs/index/override-network-stack/android.md'
+import Tabs from './tabs/index.md'
 
 # Platform Services
 
@@ -27,11 +24,11 @@ The following code snippet shows how to access `Network Service`  as an example.
 
 Android
 
-<AccessingServicesAndroid/>
+<Tabs query="platform=android&task=access"/>
 
 iOS
 
-<AccessingServicesIos/>
+<Tabs query="platform=ios&task=access"/>
 
 ## Override network stack
 
@@ -45,8 +42,8 @@ This feature is only available in Android Core version 1.8.0 or later and iOS Co
 
 Android
 
-<OverrideNetworkStackAndroid/>
+<Tabs query="platform=android&task=override"/>
 
 iOS
 
-<OverrideNetworkStackIos/>
+<Tabs query="platform=ios&task=override"/>

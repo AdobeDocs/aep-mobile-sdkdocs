@@ -1,11 +1,4 @@
-import Analyticsconfigandroid from './tabs/analyticsConfig-android.md'
-import Analyticsconfigios from './tabs/analyticsConfig-ios.md'
-import Aepinstallandroid from './tabs/aep-install-android.md'
-import Aepinstallios from './tabs/aep-install-ios.md'
-import Apichangesandroid from './tabs/api-changes-android.md'
-import Apichangesios from './tabs/api-changes-ios.md'
-import Privacychangesandroid from './tabs/privacy-changes-android.md'
-import Privacychangesios from './tabs/privacy-changes-ios.md'
+import Tabs from './tabs/analytics-comparison.md'
 
 # V4 Mobile SDKs to Experience Platform Analytics migration
 
@@ -19,17 +12,17 @@ The Adobe Experience Platform Analytics extension uses [tags](https://experience
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-#### Android
+Android
 
-<Analyticsconfigandroid/>
+<Tabs query="platform=android&task=config"/>
 
-#### iOS
+iOS
 
-<Analyticsconfigios/>
+<Tabs query="platform=ios&task=config"/>
 
 ## Analytics Migration Overview
 
-For an overview of the API mapping between the Mobile Services SDK and Adobe Experience Platform SDKs, see the [API Change Log](../upgrade-platform-sdks/api-changelog.md). This section describes the Analytics-specific changes made with the AEP Analytics extension.
+For an overview of the API mapping between the Mobile Services SDK and Adobe Experience Platform SDKs, see the [API Change Log](./api-changelog.md). This section describes the Analytics-specific changes made with the AEP Analytics extension.
 
 ### Deprecated API
 
@@ -53,13 +46,13 @@ In your app's Application class add the Adobe Experience Platform extension regi
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-#### Android
+Android
 
-<Aepinstallandroid/>
+<Tabs query="platform=android&task=aep-install"/>
 
-#### iOS
+iOS
 
-<Aepinstallios/>
+<Tabs query="platform=ios&task=aep-install"/>
 
 For more details, see [Add Analytics to your application](../adobe-analytics/index.md#add-analytics-to-your-application).
 
@@ -69,13 +62,13 @@ For more details, see [Add Analytics to your application](../adobe-analytics/ind
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-#### Android
+Android
 
-<Apichangesandroid/>
+<Tabs query="platform=android&task=api-changes"/>
 
-#### iOS
+iOS
 
-<Apichangesios/>
+<Tabs query="platform=ios&task=api-changes"/>
 
 ## Privacy status changes in the AEP SDK
 
@@ -89,10 +82,10 @@ The privacy status API `setPrivacyStatus` and `getPrivacyStatus` can be found in
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-#### Android
+Android
 
-<Privacychangesandroid/>
+<Tabs query="platform=android&task=privacy-changes"/>
 
-#### iOS
+iOS
 
-<Privacychangesios/>
+<Tabs query="platform=ios&task=privacy-changes"/>

@@ -1,3 +1,0 @@
-```swift
-Lifecycle.extensionVersion
-```

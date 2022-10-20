@@ -1,21 +1,4 @@
-import ConfigureWithIosACP from './tabs/index/configure-with/ios-acp.md'
-import ConfigureWithIosAEP from './tabs/index/configure-with/ios-aep.md'
-import ConfigureWithAndroid from './tabs/index/configure-with/android.md'
-import ConfigureWithCordova from './tabs/index/configure-with/cordova.md'
-import ConfigureWithUnity from './tabs/index/configure-with/unity.md'
-import ConfigureWithXamarin from './tabs/index/configure-with/xamarin.md'
-import BundledFileIosACP from './tabs/index/bundled-file/ios-acp.md'
-import BundledFileIosAEP from './tabs/index/bundled-file/ios-aep.md'
-import BundledFileAndroid from './tabs/index/bundled-file/android.md'
-import BundledFileXamarin from './tabs/index/bundled-file/xamarin.md'
-import ProgrammaticUpdatesIosACP from './tabs/index/programmatic-updates/ios-acp.md'
-import ProgrammaticUpdatesIosAEP from './tabs/index/programmatic-updates/ios-aep.md'
-import ProgrammaticUpdatesAndroid from './tabs/index/programmatic-updates/android.md'
-import ProgrammaticUpdatesCordova from './tabs/index/programmatic-updates/cordova.md'
-import ProgrammaticUpdatesFlutter from './tabs/index/programmatic-updates/flutter.md'
-import ProgrammaticUpdatesReactNative from './tabs/index/programmatic-updates/react-native.md'
-import ProgrammaticUpdatesUnity from './tabs/index/programmatic-updates/unity.md'
-import ProgrammaticUpdatesXamarin from './tabs/index/programmatic-updates/xamarin.md'
+import Tabs from './tabs/index.md'
 
 # Configuration
 
@@ -37,27 +20,27 @@ The unique environment ID from the Data Collection UI can be configured with the
 
 Android
 
-<ConfigureWithAndroid/>
+<Tabs query="platform=android&task=configure"/>
 
 iOS (AEP 3.x)
 
-<ConfigureWithIosAEP/>
+<Tabs query="platform=ios-aep&task=configure"/>
 
 iOS (ACP 2.x)
 
-<ConfigureWithIosACP/>
+<Tabs query="platform=ios-acp&task=configure"/>
 
 Cordova
 
-<ConfigureWithCordova/>
+<Tabs query="platform=cordova&task=configure"/>
 
 Unity
 
-<ConfigureWithUnity/>
+<Tabs query="platform=unity&task=configure"/>
 
 Xamarin
 
-<ConfigureWithXamarin/>
+<Tabs query="platform=xamarin&task=configure"/>
 
 ## Programmatic updates to configuration
 
@@ -75,35 +58,35 @@ Do not use this API to update the build.environment or any key with an environme
 
 Android
 
-<ProgrammaticUpdatesAndroid/>
+<Tabs query="platform=android&task=update"/>
 
 iOS (AEP 3.x)
 
-<ProgrammaticUpdatesIosAEP/>
+<Tabs query="platform=ios-aep&task=update"/>
 
 iOS (ACP 2.x)
 
-<ProgrammaticUpdatesIosACP/>
+<Tabs query="platform=ios-acp&task=update"/>
 
 React Native
 
-<ProgrammaticUpdatesReactNative/>
+<Tabs query="platform=react-native&task=update"/>
 
 Flutter
 
-<ProgrammaticUpdatesFlutter/>
+<Tabs query="platform=flutter&task=update"/>
 
 Cordova
 
-<ProgrammaticUpdatesCordova/>
+<Tabs query="platform=cordova&task=update"/>
 
 Unity
 
-<ProgrammaticUpdatesUnity/>
+<Tabs query="platform=unity&task=update"/>
 
 Xamarin
 
-<ProgrammaticUpdatesXamarin/>
+<Tabs query="platform=xamarin&task=update"/>
 
 ## Clearing programmatic updates to the configuration
 
@@ -134,19 +117,19 @@ To pass in a bundled path and file name:
 
 Android
 
-<BundledFileAndroid/>
+<Tabs query="platform=android&task=bundle"/>
 
 iOS (AEP 3.x)
 
-<BundledFileIosAEP/>
+<Tabs query="platform=ios-aep&task=bundle"/>
 
 iOS (ACP 2.x)
 
-<BundledFileIosACP/>
+<Tabs query="platform=ios-acp&task=bundle"/>
 
 Xamarin
 
-<BundledFileXamarin/>
+<Tabs query="platform=xamarin&task=bundle"/>
 
 ## Environment-aware configuration properties
 

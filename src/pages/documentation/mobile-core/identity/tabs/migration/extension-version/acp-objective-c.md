@@ -1,3 +1,0 @@
-```objectivec
-+ (nonnull NSString*) extensionVersion;
-```
