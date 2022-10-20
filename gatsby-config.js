@@ -680,15 +680,6 @@ module.exports = {
                     }
                 ]
             },
-
-
-
-
-
-
-
-
-
             {
                 title: "Adobe Journey Optimizer - in-app messaging",
                 path: "/documentation/iam",
@@ -833,6 +824,10 @@ module.exports = {
                 ]
             },
             {
+                title: "Current SDK versions",
+                path: "documentation/upgrade-platform-sdks/current-sdk-versions.md"
+            },
+            {
                 title: "Resources",
                 path: "/documentation/resources",
                 pages: [
@@ -861,11 +856,7 @@ module.exports = {
                                 path: "documentation/upgrade-platform-sdks/api-changelog.md"
                             },
                             {
-                                title: "Current SDK versions",
-                                path: "documentation/upgrade-platform-sdks/current-sdk-versions.md"
-                            },
-                            {
-                                title: "Migration",
+                                title: "Analytics migration",
                                 path: "documentation/upgrade-platform-sdks/analytics-comparison.md"
                             }
                         ]
