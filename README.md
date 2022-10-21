@@ -155,6 +155,39 @@ Identity.getIdentities(new AdobeCallback<IdentityMap>() {
 
 If necessary, you can include more information, such as **specific information** for that language and descriptions of the parameters for the API.
 
+### How do I add an inline alert to the documentation?
+
+To add an inline alert (or hint bubble) to the documentation, you need to an InlineAlert block.
+
+A proper example for an inline alert would be as follows:
+
+````md
+<InlineAlert variant="info" slots="text"/>
+
+Adobe Experience Platform Mobile SDK for Android supports Google Android API 14 (Ice Cream Sandwich) or later. The Adobe Experience Platform Edge Network extension and other for Edge Network extensions require Android versions 4.4 or later (API levels 19 or later).
+````
+
+Supported values for the `variant` include the following:
+
+- `info`
+- `help`
+- `error`
+- `success`
+- `warning`
+- `neutral`
+
+More information about the `InlineAlert` block can be found within the [Adobe I/O GitHub](https://github.com/adobe/aio-theme#inlinealert-block-updated-2022-06-08).
+
+If you want to include a hint that has multiple lines, you'll need to include an HTML line break tag.
+
+An example of this can be seen below:
+
+````md
+<InlineAlert variant="info" slots="text"/>
+
+**Swift SDKs are here!**<br/>We've released Swift versions of our iOS SDKs for Core and select extensions - please scroll down for available Swift extensions and reference documentation for more information.
+````
+
 ## How to deploy
 
 For any team that wishes to deploy to the adobe.io and stage.adobe.io website, they must be in contact with the dev-site team. Teams will be given a path that will follow the pattern `adobe.io/{product}/`. This will allow doc developers to setup their subpaths to look something like:
