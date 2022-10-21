@@ -44,109 +44,6 @@ let extensionVersion = Edge.extensionVersion
 NSString *extensionVersion = [AEPMobileEdge extensionVersion];
 ```
 
-<Variant platform="android" api="send-event" repeat="8"/>
-
-#### Java
-
-**Syntax**
-
-```java
-public static void sendEvent(final ExperienceEvent experienceEvent, final EdgeCallback callback);
-```
-
-* _experienceEvent_ - the XDM [Experience Event](#experienceevent) to be sent to Adobe Experience Platform Edge Network
-* _completion_ - optional callback to be invoked when the request is complete, returning the associated [EdgeEventHandle(s)](#edgeeventhandle) received from the Adobe Experience Platform Edge Network. It may be invoked on a different thread.
-
-**Example**
-
-```java
-// create experience event from Map
-Map<String, Object> xdmData = new HashMap<>();
-xdmData.put("eventType", "SampleXDMEvent");
-xdmData.put("sample", "data");
-		
-ExperienceEvent experienceEvent = new ExperienceEvent.Builder()
-	.setXdmSchema(xdmData)
-	.build();
-```
-
-```java
-// example 1 - send the experience event without handling the Edge Network response
-Edge.sendEvent(experienceEvent, null);
-```
-
-```java
-// example 2 - send the experience event and handle the Edge Network response onComplete
-Edge.sendEvent(experienceEvent, new EdgeCallback() {
-  @Override
-  public void onComplete(final List<EdgeEventHandle> handles) {
-        // handle the Edge Network response 
-  }
-});
-```
-
-<Variant platform="ios-aep" api="send-event" repeat="15"/>
-
-#### Swift
-
-**Syntax**
-
-```swift
-static func sendEvent(experienceEvent: ExperienceEvent, _ completion: (([EdgeEventHandle]) -> Void)? = nil)
-```
-
-* _experienceEvent_ - the XDM [Experience Event](#experienceevent) to be sent to Adobe Experience Platform Edge Network
-* _completion_ - optional callback to be invoked when the request is complete, returning the associated [EdgeEventHandle(s)](#edgeeventhandle) received from the Adobe Experience Platform Edge Network. It may be invoked on a different thread.
-
-**Example**
-
-```swift
-//create experience event from dictionary:
-var xdmData : [String: Any] = ["eventType" : "SampleXDMEvent",
-                              "sample": "data"]
-let experienceEvent = ExperienceEvent(xdm: xdmData)
-```
-
-```swift
-// example 1 - send the experience event without handling the Edge Network response
-Edge.sendEvent(experienceEvent: experienceEvent)
-```
-
-```swift
-// example 2 - send the experience event and handle the Edge Network response onComplete
-Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
-            // handle the Edge Network response
-        }
-```
-
-#### Objective-C
-
-**Syntax**
-
-```objectivec
-+ (void) sendExperienceEvent:(AEPExperienceEvent * _Nonnull) completion:^(NSArray<AEPEdgeEventHandle *> * _Nonnull)completion
-```
-
-**Example**
-
-```objectivec
-//create experience event from dictionary:
-NSDictionary *xdmData = @{ @"eventType" : @"SampleXDMEvent"};
-NSDictionary *data = @{ @"sample" : @"data"};
-```
-
-```objectivec
-// example 1 - send the experience event without handling the Edge Network response
-[AEPMobileEdge sendExperienceEvent:event completion:nil];
-```
-
-```objectivec
-// example 2 - send the experience event and handle the Edge Network response onComplete
-[AEPMobileEdge sendExperienceEvent:event completion:^(NSArray<AEPEdgeEventHandle *> * _Nonnull handles) {
-  // handle the Edge Network response
-}];
-```
-
 <Variant platform="android" api="get-location-hint" repeat="6"/>
 
 #### Java
@@ -271,6 +168,109 @@ Use the AEPMobileCore API to register the Edge extension.
 
 [AEPMobileCore registerExtensions:@[AEPMobileEdge.class] completion:nil];...
 
+```
+
+<Variant platform="android" api="send-event" repeat="8"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void sendEvent(final ExperienceEvent experienceEvent, final EdgeCallback callback);
+```
+
+* _experienceEvent_ - the XDM [Experience Event](#experienceevent) to be sent to Adobe Experience Platform Edge Network
+* _completion_ - optional callback to be invoked when the request is complete, returning the associated [EdgeEventHandle(s)](#edgeeventhandle) received from the Adobe Experience Platform Edge Network. It may be invoked on a different thread.
+
+**Example**
+
+```java
+// create experience event from Map
+Map<String, Object> xdmData = new HashMap<>();
+xdmData.put("eventType", "SampleXDMEvent");
+xdmData.put("sample", "data");
+    
+ExperienceEvent experienceEvent = new ExperienceEvent.Builder()
+  .setXdmSchema(xdmData)
+  .build();
+```
+
+```java
+// example 1 - send the experience event without handling the Edge Network response
+Edge.sendEvent(experienceEvent, null);
+```
+
+```java
+// example 2 - send the experience event and handle the Edge Network response onComplete
+Edge.sendEvent(experienceEvent, new EdgeCallback() {
+  @Override
+  public void onComplete(final List<EdgeEventHandle> handles) {
+        // handle the Edge Network response 
+  }
+});
+```
+
+<Variant platform="ios-aep" api="send-event" repeat="15"/>
+
+#### Swift
+
+**Syntax**
+
+```swift
+static func sendEvent(experienceEvent: ExperienceEvent, _ completion: (([EdgeEventHandle]) -> Void)? = nil)
+```
+
+* _experienceEvent_ - the XDM [Experience Event](#experienceevent) to be sent to Adobe Experience Platform Edge Network
+* _completion_ - optional callback to be invoked when the request is complete, returning the associated [EdgeEventHandle(s)](#edgeeventhandle) received from the Adobe Experience Platform Edge Network. It may be invoked on a different thread.
+
+**Example**
+
+```swift
+//create experience event from dictionary:
+var xdmData : [String: Any] = ["eventType" : "SampleXDMEvent",
+                              "sample": "data"]
+let experienceEvent = ExperienceEvent(xdm: xdmData)
+```
+
+```swift
+// example 1 - send the experience event without handling the Edge Network response
+Edge.sendEvent(experienceEvent: experienceEvent)
+```
+
+```swift
+// example 2 - send the experience event and handle the Edge Network response onComplete
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+            // handle the Edge Network response
+        }
+```
+
+#### Objective-C
+
+**Syntax**
+
+```objectivec
++ (void) sendExperienceEvent:(AEPExperienceEvent * _Nonnull) completion:^(NSArray<AEPEdgeEventHandle *> * _Nonnull)completion
+```
+
+**Example**
+
+```objectivec
+//create experience event from dictionary:
+NSDictionary *xdmData = @{ @"eventType" : @"SampleXDMEvent"};
+NSDictionary *data = @{ @"sample" : @"data"};
+```
+
+```objectivec
+// example 1 - send the experience event without handling the Edge Network response
+[AEPMobileEdge sendExperienceEvent:event completion:nil];
+```
+
+```objectivec
+// example 2 - send the experience event and handle the Edge Network response onComplete
+[AEPMobileEdge sendExperienceEvent:event completion:^(NSArray<AEPEdgeEventHandle *> * _Nonnull handles) {
+  // handle the Edge Network response
+}];
 ```
 
 <Variant platform="android" api="set-location-hint" repeat="6"/>

@@ -69,6 +69,7 @@ iOS (AEP 3.x)
 Sets the Edge Network location hint used in requests to the Adobe Experience Platform Edge Network. Passing nil or an empty string clears the existing location hint. Edge Network responses may overwrite the location hint to a new value when necessary to manage network traffic.
 
 <InlineAlert variant="warning" slots="text"/>
+
 Use caution when setting the location hint. Only use location hints for the "EdgeNetwork" scope. An incorrect location hint value will cause all Edge Network requests to fail with 404 response code.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
