@@ -128,7 +128,7 @@ After you complete your configuration, verify that your rule looks like the foll
 
 The following sample shows how to add additional mbox and profile parameters in all outgoing `locationClicked` Target network requests. To create this type of rule, select your property in the Data Collection UI and complete the following steps.
 
-### Create a rule
+#### Create a rule
 
 1. On the **Rules** tab, select **Create New Rule**.
 
@@ -136,7 +136,7 @@ The following sample shows how to add additional mbox and profile parameters in 
 
 If you do not have existing rules for this property, the **Create New Rule** button will be in the middle of the screen. If your property has rules, the button will be in the top right of the screen.
 
-### Select an event
+#### Select an event
 
 1. Give your rule an easily recognizable name in your list of rules.
 
@@ -149,7 +149,7 @@ If you do not have existing rules for this property, the **Create New Rule** but
 
 ![](../../../assets/attach-data/target-attach-data-event-setup-location-clicked.png)
 
-### Define the action
+#### Define the action
 
 1. Under the **Actions** section, select **Add**.
 2. From the **Extension** dropdown list, select **Mobile Core**.
@@ -167,7 +167,7 @@ The following example shows how the data element for this OS version was created
 
 ![](../../../assets/attach-data/target-attach-data-data-element-setup.png)
 
-### Save the rule and rebuild your property
+#### Save the rule and rebuild your property
 
 After you complete your configuration, verify that your rule looks like the following:
 
@@ -176,11 +176,11 @@ After you complete your configuration, verify that your rule looks like the foll
 1. Select **Save**
 2. Rebuild your mobile property and deploy it to the correct Environment.
 
-### Attach additional data to Target location-displayed events
+#### Attach additional data to Target location-displayed events
 
 The following sample shows how to add additional mbox and profile parameters in all outgoing `locationDisplayed` Target network requests. To create this type of rule, select your property in the Data Collection UI and complete the following steps.
 
-### Create a rule
+#### Create a rule
 
 1. On the **Rules** tab, select **Create New Rule**.
 
@@ -188,7 +188,7 @@ The following sample shows how to add additional mbox and profile parameters in 
 
 If you do not have existing rules for this property, the **Create New Rule** button will be in the middle of the screen. If your property has rules, the button will be in the top right of the screen.
 
-### Select an event
+#### Select an event
 
 1. Give your rule an easily recognizable name in your list of rules.
 
@@ -201,7 +201,7 @@ If you do not have existing rules for this property, the **Create New Rule** but
 
 ![](../../../assets/attach-data/target-attach-data-event-setup-location-displayed.png)
 
-### Define the action
+#### Define the action
 
 1. Under the **Actions** section, select **Add**.
 2. From the **Extension** dropdown list, select **Mobile Core**.
@@ -215,7 +215,7 @@ In the following example, **extraKey** and **extraKey2** are added to the profil
 
 ![](../../../assets/attach-data/target-attach-data-json-example-location-clicked.png)
 
-### Save the rule and rebuild your property
+#### Save the rule and rebuild your property
 
 After you complete your configuration, verify that your rule looks like the following:
 

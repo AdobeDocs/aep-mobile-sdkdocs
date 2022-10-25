@@ -232,7 +232,7 @@ NSString *analyticsExtensionVersion = [ACPAnalytics extensionVersion];
 
 <Variant platform="react-native" api="extension-version" repeat="2"/>
 
-### JavaScript
+#### JavaScript
 
 ```jsx
 ACPAnalytics.extensionVersion().then(analyticsExtensionVersion => console.log("AdobeExperienceSDK: ACPAnalytics version: " + analyticsExtensionVersion));

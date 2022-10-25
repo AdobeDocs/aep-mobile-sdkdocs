@@ -286,27 +286,27 @@ module.exports = {
                     },
                     {
                         title: "Adobe Experience Platform Edge Network",
-                        path: "/documentation/edge-network-extensions",
+                        path: "/documentation/edge-network",
                         pages: [
                             {
                                 title: "Overview",
-                                path: "/documentation/edge-network-extensions"
+                                path: "/documentation/edge-network"
                             },
                             {
                                 title: "API reference",
-                                path: "/documentation/edge-network-extensions/api-reference"
+                                path: "/documentation/edge-network/api-reference"
                             },
                             {
                                 title: "XDM Experience Events",
-                                path: "/documentation/edge-network-extensions/xdm-experience-events"
+                                path: "/documentation/edge-network/xdm-experience-events"
                             },
                             {
                                 title: "Validation",
-                                path: "/documentation/edge-network-extensions/validation"
+                                path: "/documentation/edge-network/validation"
                             },
                             {
                                 title: "Release Notes",
-                                path: "/documentation/edge-network-extensions/release-notes"
+                                path: "/documentation/edge-network/release-notes"
                             }
                         ]
                     },

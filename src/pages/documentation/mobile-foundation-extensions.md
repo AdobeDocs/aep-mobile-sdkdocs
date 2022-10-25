@@ -11,7 +11,7 @@ Mobile foundation extensions are the main extensions you can use when using the 
   - [Signal](./mobile-core/signal/index.md)
   - [Rules Engine](./mobile-core/rules-engine/index.md)
   - [Platform Services](./mobile-core/platform-services/index.md)
-- [Adobe Experience Platform Edge Network](./edge-network-extensions/index.md)
+- [Adobe Experience Platform Edge Network](./edge-network/index.md)
 - [Consent for Edge Network](./consent-for-edge-network/index.md)
 - [Identity for Edge Network](./identity-for-edge-network/index.md)
 - [Lifecycle for Edge Network](./lifecycle-for-edge-network/index.md)

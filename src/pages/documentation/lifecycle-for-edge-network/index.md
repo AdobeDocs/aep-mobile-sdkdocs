@@ -1,6 +1,6 @@
 # Lifecycle for Edge Network
 
-The Adobe Experience Platform Mobile SDK Lifecycle extension enables application lifecycle data collection from your mobile app when using the Adobe Experience Platform Mobile SDK and the [Edge Network extension](../edge-network-extensions/index.md). Use the following steps to set up an application to forward Lifecycle extension metrics to the Adobe Experience Platform.
+The Adobe Experience Platform Mobile SDK Lifecycle extension enables application lifecycle data collection from your mobile app when using the Adobe Experience Platform Mobile SDK and the [Edge Network extension](../edge-network/index.md). Use the following steps to set up an application to forward Lifecycle extension metrics to the Adobe Experience Platform.
 
 ## Add AEP Mobile Lifecycle Details field group to your XDM Schema in Adobe Experience Platform
 
@@ -30,7 +30,7 @@ The configuration setting "Session Timeout" in the Mobile Core extension configu
 4. Select **Save**.
 5. Follow the publishing process to update SDK configuration.
 
-In addition, use the following steps to [Configure the Edge Network extension](../edge-network-extensions/index.md#configure-edge-network-extension).
+In addition, use the following steps to [Configure the Edge Network extension](../edge-network/index.md#configure-edge-network-extension).
 
 ![Mobile Core extension configuration](./assets/index/configuration.png)
 
@@ -84,5 +84,5 @@ After you complete your configuration, verify that your rule looks like the foll
 
 For implementation details, please reference the Lifecycle documentation to learn how to [add Lifecycle to your app](../mobile-core/lifecycle/index.md#add-lifecycle-to-your-app). as well as [register Lifecycle with Mobile Core and add appropriate the Start/Pause calls](../mobile-core/lifecycle/index.md#register-lifecycle-with-mobile-core-and-add-appropriate-start-pause-calls).
 
-In addition, use the following steps to [add the Edge Network extension to your app](../edge-network-extensions/index.md#add-the-edge-network-extension-to-your-app).
+In addition, use the following steps to [add the Edge Network extension to your app](../edge-network/index.md#add-the-edge-network-extension-to-your-app).
 
