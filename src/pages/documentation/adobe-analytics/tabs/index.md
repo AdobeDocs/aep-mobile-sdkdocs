@@ -167,7 +167,7 @@ ACPAnalytics.extensionVersion();
 
 <Variant platform="xamarin" task="add" repeat="5"/>
 
-#### **C#**
+#### C#
 
 1. After adding the iOS or Android ACPAnalytics NuGet package, add the Analytics extension.
 

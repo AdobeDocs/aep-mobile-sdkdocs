@@ -72,7 +72,7 @@ public func show()
 public void dismiss(final boolean suppressAutoTrack)
 ```
 
-###### Parameters
+##### Parameters
 
 * *suppressAutoTrack* - if set to `true`, the "inapp.dismiss" Edge Event will not be sent regardless of the `autoTrack` setting.
 
@@ -96,7 +96,7 @@ public func dismiss(suppressAutoTrack: Bool? = false)
 public void track(final String interaction, final MessagingEdgeEventType eventType)
 ```
 
-###### Parameters
+##### Parameters
 
 * *interaction* - a custom `String` value to be recorded in the interaction
 * *eventType* - the [`MessagingEdgeEventType`](#enum-messagingedgeeventtype) to be used for the ensuing Edge Event
@@ -122,7 +122,7 @@ public func track(_ interaction: String?, withEdgeEventType eventType: Messaging
 public void handleJavascriptMessage(final String name, final AdobeCallback<String> callback)
 ```
 
-###### Parameters
+##### Parameters
 
 * *name* - the name of the message that should be handled by the `callback`
 * *callback* - a callback which will be called with the body of the message created in the Message's JavaScript
@@ -135,7 +135,7 @@ public void handleJavascriptMessage(final String name, final AdobeCallback<Strin
 public func handleJavascriptMessage(_ name: String, withHandler handler: @escaping (Any?) -> Void)
 ```
 
-###### Parameters
+##### Parameters
 
 * *name* - the name of the message that should be handled by `handler`
 * *handler* - the method or closure to be called with the body of the message created in the Message's JavaScript

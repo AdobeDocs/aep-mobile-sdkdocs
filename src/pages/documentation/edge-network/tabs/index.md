@@ -32,7 +32,7 @@ end
 
 2. Import the Mobile Core and Edge libraries:
 
-### Swift
+#### Swift
 
 ```swift
 // AppDelegate.swift
@@ -41,7 +41,7 @@ import AEPEdge
 import AEPEdgeIdentity
 ```
 
-### Objective-C
+#### Objective-C
 
 ```objectivec
 // AppDelegate.h
