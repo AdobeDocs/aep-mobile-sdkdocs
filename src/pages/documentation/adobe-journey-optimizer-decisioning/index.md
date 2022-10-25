@@ -40,7 +40,7 @@ On [Experience Platform Data Collection](https://experience.adobe.com/#/data-col
 
 <InlineAlert variant="warning" slots="text"/>
 
-For the AEPOptimize APIs to work properly, you need to integrate Mobile Core and Edge extensions in your mobile app. For more details see, documentation on [Mobile Core](../mobile-core/index.md) and [Adobe Experience Platform Edge Network](../edge-network-extensions/index.md).
+For the AEPOptimize APIs to work properly, you need to integrate Mobile Core and Edge extensions in your mobile app. For more details see, documentation on [Mobile Core](../mobile-core/index.md) and [Adobe Experience Platform Edge Network](../edge-network/index.md).
 
 ### Install the Experience Platform Mobile SDK
 
@@ -277,7 +277,7 @@ iOS (AEP 3.x)
 
 <Tabs query="platform=ios&task=proposition-tracking-edge"/>
 
-The Edge `sendEvent` API can then be used to send this tracking XDM data along with any additional XDM and freeform data to the Experience Edge network. Additionally, an override dataset can also be specified for tracking data. For more details, see [Edge - sendEvent API](../edge-network-extensions/api-reference.md#sendevent).
+The Edge `sendEvent` API can then be used to send this tracking XDM data along with any additional XDM and freeform data to the Experience Edge network. Additionally, an override dataset can also be specified for tracking data. For more details, see [Edge - sendEvent API](../edge-network/api-reference.md#sendevent).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

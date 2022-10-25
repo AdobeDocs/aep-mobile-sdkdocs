@@ -2,7 +2,7 @@ import Tabs from './tabs/index.md'
 
 # Identity for Edge Network
 
-The Adobe Experience Platform Identity mobile extension enables identity management from your mobile app when using the Adobe Experience Platform Mobile SDK and the [Edge Network extension](../edge-network-extensions/index.md).
+The Adobe Experience Platform Identity mobile extension enables identity management from your mobile app when using the Adobe Experience Platform Mobile SDK and the [Edge Network extension](../edge-network/index.md).
 
 ## Configure the Identity extension in the Data Collection UI
 
@@ -60,7 +60,7 @@ Ad tracking enabled - when the new value sent to the API is:
 - A valid UUID string (example: `"a127a99e-50be-4d87-bf6f-6ab9541c105b"`)
 
 Process:
-1. Updates the client side XDM `IdentityMap` with the new value for IDFA/GAID, which is included in subsequent [XDM Experience events](../edge-network-extensions/xdm-experience-events.md). For more details, see the [standard Identity namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#standard).
+1. Updates the client side XDM `IdentityMap` with the new value for IDFA/GAID, which is included in subsequent [XDM Experience events](../edge-network/xdm-experience-events.md). For more details, see the [standard Identity namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#standard).
 2. Sends a [consent update event](https://experienceleague.adobe.com/docs/experience-platform/xdm/data-types/consents.html) with ad ID consent preferences set to `yes` (only when a valid ad ID is absent from the `IdentityMap` and the Edge Consent extension is registered and properly configured).
 
 Ad tracking disabled - Given a valid ad ID already exists in the `IdentityMap`, and the new value sent to the API is:
@@ -69,7 +69,7 @@ Ad tracking disabled - Given a valid ad ID already exists in the `IdentityMap`, 
 - All-zeros string (`"00000000-0000-0000-0000-000000000000"`)  
 
 Process:
-1. Removes the ad ID from the client side XDM `IdentityMap`, which is removed from subsequent [XDM Experience events](../edge-network-extensions/xdm-experience-events.md).
+1. Removes the ad ID from the client side XDM `IdentityMap`, which is removed from subsequent [XDM Experience events](../edge-network/xdm-experience-events.md).
 2. Sends a [consent update event](https://experienceleague.adobe.com/docs/experience-platform/xdm/data-types/consents.html) with ad ID consent preferences set to `no` (only when the Edge Consent extension is registered and properly configured).
 
 No operations are executed when no changes are detected between the previously stored and new ad ID value.

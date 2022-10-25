@@ -12,7 +12,7 @@ The following documentation details how to use the extension and required config
 2. [Update your app's Datastream](#update-datastream-with-profile-dataset) in [Adobe Experience Platform Data Collection](https://experience.adobe.com/#/data-collection/)
 3. Integrate with following extensions:
    * [Mobile Core](../mobile-core/index.md)
-   * [Adobe Experience Platform Edge Network](../edge-network-extensions/index.md)
+   * [Adobe Experience Platform Edge Network](../edge-network/index.md)
    * [Identity for Edge Network](../identity-for-edge-network/index.md)
 
 ### Update Datastream with a Profile dataset

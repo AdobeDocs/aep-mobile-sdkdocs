@@ -379,7 +379,7 @@ AEPIdentityItem *item = [[AEPIdentityItem alloc] initWithId:@"user@example.com" 
 
 <Variant platform="android" api="set-advertising-identifier" repeat="16"/>
 
-In order to enable collection of the user's current advertising tracking authorization selection for the provided advertising identifier, you need to install and register the [AEPEdgeConsent](../consent-for-edge-network/index.md) extension and update the [AEPEdge](../edge-network-extensions/index.md) dependency to minimum 1.3.2.
+In order to enable collection of the user's current advertising tracking authorization selection for the provided advertising identifier, you need to install and register the [AEPEdgeConsent](../consent-for-edge-network/index.md) extension and update the [AEPEdge](../edge-network/index.md) dependency to minimum 1.3.2.
 
 These examples require Google Play Services to be configured in your mobile application and use the Google Mobile Ads Lite SDK. For instructions on how to import the SDK and configure your `ApplicationManifest.xml` file see [Google Mobile Ads Lite SDK setup](https://developers.google.com/admob/android/lite-sdk). For more information about advertising identifiers and how to handle them correctly in your mobile application see [Google Play Services documentation about AdvertisingIdClient](https://developers.google.com/android/reference/com/google/android/gms/ads/identifier/AdvertisingIdClient).
 
@@ -493,7 +493,7 @@ val scope = CoroutineScope(Dispatchers.IO).launch {
 
 <Variant platform="ios-aep" api="set-advertising-identifier" repeat="14"/>
 
-In order to enable the collection of current advertising tracking user's selection based on the provided advertising identifier, you need to install and register the [AEPEdgeConsent](../consent-for-edge-network/index.md) extension and update the [AEPEdge](../edge-network-extensions/index.md) dependency to minimum 1.4.1. 
+In order to enable the collection of current advertising tracking user's selection based on the provided advertising identifier, you need to install and register the [AEPEdgeConsent](../consent-for-edge-network/index.md) extension and update the [AEPEdge](../edge-network/index.md) dependency to minimum 1.4.1. 
 
 Starting from iOS 14+, applications must use the [App Tracking Transparency](https://developer.apple.com/documentation/apptrackingtransparency) framework to request user authorization before using the Identifier for Advertising (IDFA). To access IDFA and handle it correctly in your mobile application, see the [Apple developer documentation about IDFA](https://developer.apple.com/documentation/adsupport/asidentifiermanager). 
 
