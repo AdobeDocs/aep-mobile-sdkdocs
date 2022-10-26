@@ -699,6 +699,10 @@ module.exports = {
                                 path: "/documentation/platform-assurance/tutorials/custom-validation.md"
                             },
                             {
+                                title: "In-App Messaging",
+                                path: "/documentation/platform-assurance/tutorials/in-app-messaging.md"
+                            },
+                            {
                                 title: "Places Service",
                                 path: "/documentation/platform-assurance/tutorials/places-service"
                             },
