@@ -4,6 +4,26 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## October 25, 2022
+
+### iOS AEPEdgeBridge 1.0.0
+
+The `Adobe Experience Platform Mobile SDK - Edge Bridge` extension is now available for iOS!
+
+With this release, the extension enables a drop-in solution for converting Adobe Analytics track events into Edge Network events. The configured Data Collection datastream for the mobile application can define a mapping of the track event's `contextdata` to an XDM schema using [Data Prep for Data Collection](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/data-prep.html).
+
+For an end-to-end guide on how to use the extension, see the [Edge Bridge tutorial](https://github.com/adobe/aepsdk-edgebridge-ios/blob/main/Documentation/tutorials/edge-bridge-tutorial.md).
+
+## October 24, 2022
+
+### Android Edge Bridge 1.0.0
+
+The `Adobe Experience Platform Mobile SDK - Edge Bridge` extension is now available for Android!
+
+With this release, the extension enables a drop-in solution for converting Adobe Analytics track events into Edge Network events. The configured Data Collection datastream for the mobile application can define a mapping of the track event's `contextdata` to an XDM schema using [Data Prep for Data Collection](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/data-prep.html).
+
+For an end-to-end guide on how to use the extension, see the [Edge Bridge tutorial](https://github.com/adobe/aepsdk-edgebridge-android/blob/main/Documentation/tutorials/edge-bridge-tutorial.md).
+
 ## October 19, 2022
 
 ### iOS AEPEdge 1.5.0
