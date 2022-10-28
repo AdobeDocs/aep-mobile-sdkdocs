@@ -4,6 +4,16 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## October 26, 2022
+
+### AEP Flutter plugins for Edge Network
+
+The following AEP Flutter plugins have been published:
+
+* [flutter_aepedge@1.0.0](https://pub.dev/packages/flutter_aepedge)
+* [flutter_aepedgeidentity@1.0.0](https://pub.dev/packages/flutter_aepedgeidentity)
+* [flutter_aepedgeconsent@1.0.0](https://pub.dev/packages/flutter_aepedgeconsent)
+
 ## October 25, 2022
 
 ### iOS AEPEdgeBridge 1.0.0
