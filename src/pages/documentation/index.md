@@ -13,7 +13,7 @@ Welcome to the home of Adobe Experience Platform Mobile SDK documentation.
 
 Good to go for iOS 16 and Android 13
 
-Latest versions of the Adobe Experience Platform SDK for Google Android and Apple iOS (Swift & Objective-C) are tested for compatibilit with release verisons of Apple iOS 16 and Google Android 13. See [Current SDK Versions](./current-sdk-versions.md) to find our latest SDK versions or [release notes](./release-notes/index.md) for information on changes and updates.
+The latest versions of the Adobe Experience Platform SDK for Google Android and Apple iOS (Swift and Objective-C) are tested for compatibility with release verisons of Apple iOS 16 and Google Android 13. See [Current SDK Versions](./current-sdk-versions.md) to find our latest SDK versions or [release notes](./release-notes/index.md) for information on changes and updates.
 
 <InlineAlert variant="success" slots="header, text"/>
 
