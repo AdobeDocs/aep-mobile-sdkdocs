@@ -41,10 +41,9 @@ The Adobe Experience Platform Mobile SDK supports the following platforms:
 - [Flutter (AEP 1.x)](./current-sdk-versions.md#flutter-aep-1x)
 - [Flutter (ACP 2.x)](./current-sdk-versions.md#flutter-acp-2x)
 - [Cordova](./current-sdk-versions.md#cordova)
-- [WeChat Mini Programs](./platform-minis)
 - [Xamarin](./current-sdk-versions.md#xamarin)
 
-<InlineAlert variant="info" slots="header, text"/>
+<InlineAlert variant="warning" slots="header, text"/>
 
 End of support for Adobe Experience Platform Mobile SDK plugins for Unity
 
@@ -57,6 +56,8 @@ Effective March 30, 2022, support for Adobe Experience Platform Mobile SDKs on U
 * [Frequently asked questions](./faq.md)
 * [Why use the Adobe Experience Platform Mobile SDKs](https://medium.com/adobetech/accelerate-your-mobile-application-development-with-adobe-experience-platform-mobile-sdk-and-launch-ed023536d611)
 
-## Get help
+## Futher Help 
 
-If you have any questions about the SDK, please visit the [SDK community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-sdks/ct-p/platform-sdk). If you need immediate assistance, please contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support).
+If you have any questions about the SDK, please visit the [SDK community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-sdks/ct-p/platform-sdk). 
+
+If you need immediate assistance, please contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support).
