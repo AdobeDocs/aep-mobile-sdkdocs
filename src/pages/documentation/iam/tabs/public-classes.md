@@ -74,7 +74,7 @@ public void dismiss(final boolean suppressAutoTrack)
 
 ##### Parameters
 
-* *suppressAutoTrack* - if set to `true`, the "inapp.dismiss" Edge Event will not be sent regardless of the `autoTrack` setting.
+* *suppressAutoTrack* - if set to `true`, the "decisioning.propositionDismiss" Edge Event will not be sent regardless of the `autoTrack` setting.
 
 <Variant platform="ios" function="dismiss" repeat="4"/>
 
@@ -86,7 +86,7 @@ public func dismiss(suppressAutoTrack: Bool? = false)
 
 ###### Parameters
 
-* *suppressAutoTrack* - if set to `true`, the "inapp.dismiss" Edge Event will not be sent regardless of the `autoTrack` setting.
+* *suppressAutoTrack* - if set to `true`, the "decisioning.propositionDismiss" Edge Event will not be sent regardless of the `autoTrack` setting.
 
 <Variant platform="android" function="track" repeat="4"/>
 
@@ -221,10 +221,10 @@ public enum MessagingEdgeEventType: Int {
 
 | Case | String value |
 | ---- | ------------ |
-| IN_APP_DISMISS | `inapp.dismiss` |
-| IN_APP_INTERACT | `inapp.interact` |
-| IN_APP_TRIGGER | `inapp.trigger` |
-| IN_APP_DISPLAY | `inapp.display` |
+| IN_APP_DISMISS | `decisioning.propositionDismiss` |
+| IN_APP_INTERACT | `decisioning.propositionInteract` |
+| IN_APP_TRIGGER | `decisioning.propositionTrigger` |
+| IN_APP_DISPLAY | `decisioning.propositionDisplay` |
 | PUSH_APPLICATION_OPENED | `pushTracking.applicationOpened` |
 | PUSH_CUSTOM_ACTION | `pushTracking.customAction` |
 
@@ -232,9 +232,9 @@ public enum MessagingEdgeEventType: Int {
 
 | Case | String value |
 | ---- | ------------ |
-| inappDismiss | `inapp.dismiss` |
-| inappInteract | `inapp.interact` |
-| inappTrigger | `inapp.trigger` |
-| inappDisplay | `inapp.display` |
+| inappDismiss | `decisioning.propositionDismiss` |
+| inappInteract | `decisioning.propositionInteract` |
+| inappTrigger | `decisioning.propositionTrigger` |
+| inappDisplay | `decisioning.propositionDisplay` |
 | pushApplicationOpened | `pushTracking.applicationOpened` |
 | pushCustomAction | `pushTracking.customAction` |
