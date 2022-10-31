@@ -94,13 +94,13 @@ On iOS, the `MessagingDelegate` protocol, which is implemented in the `AEPServic
 /// UI Message delegate which is used to listen for current message lifecycle events
 @objc(AEPMessagingDelegate)
 public protocol MessagingDelegate {
-    /// Invoked when the any message is displayed
+    /// Invoked when a message is displayed
     /// - Parameters:
     ///     - message: UIMessaging message that is being displayed
     @objc(onShow:)
     func onShow(message: Showable)
 
-    /// Invoked when the any message is dismissed
+    /// Invoked when a message is dismissed
     /// - Parameters:
     ///     - message: UIMessaging message that is being dismissed
     @objc(onDismiss:)
