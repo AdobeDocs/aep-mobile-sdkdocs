@@ -479,6 +479,10 @@ module.exports = {
                                 path: "/documentation/adobe-analytics/product-variable"
                             },
                             {
+                                title: "Frequently asked questions",
+                                path: "/documentation/adobe-analytics/faq/"
+                            },
+                            {
                                 title: 'Release Notes',
                                 path: '/documentation/adobe-analytics/release-notes/'
                             }
