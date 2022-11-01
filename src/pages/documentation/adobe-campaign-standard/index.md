@@ -6,10 +6,6 @@ import Tabs from './tabs/index.md'
 
 **Before** you install or configure the Campaign Standard extension, please read the [getting started guide](../getting-started/create-a-mobile-property.md) and the [configuring a mobile application using Adobe Experience Platform SDKs guide](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-channels/configuring-a-mobile-application.html).
 
-<InlineAlert variant="warning" slots="text"/>
-
-If you participated in the Campaign Standard beta, to use the new Campaign Standard extension, go to the [Data Collection UI](https://experience.adobe.com/data-collection/), instead of the Data Collection integration environment.
-
 ## Configure the Campaign Standard extension in the Data Collection UI
 
 1. In the Data Collection UI, select the **Extensions** tab.
