@@ -67,4 +67,4 @@ JavaScript body passed to native callback: native callbacks are cool!
 The test apps in this repository demonstrate calling native code from JavaScript:
 
 - [Swift](https://github.com/adobe/aepsdk-messaging-ios/tree/staging/TestApps/MessagingDemoApp)
-- [Objective-c](https://github.com/adobe/aepsdk-messaging-ios/tree/staging/TestApps/MessagingDemoAppObjC)
+- [Objective-C](https://github.com/adobe/aepsdk-messaging-ios/tree/staging/TestApps/MessagingDemoAppObjC)

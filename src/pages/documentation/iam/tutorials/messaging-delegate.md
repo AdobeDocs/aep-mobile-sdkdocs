@@ -69,7 +69,7 @@ iOS
 The test apps in this repository demonstrate using a `MessagingDelegate`:
 
 - [Swift](https://github.com/adobe/aepsdk-messaging-ios/tree/staging/TestApps/MessagingDemoApp)
-- [Objective-c](https://github.com/adobe/aepsdk-messaging-ios/tree/staging/TestApps/MessagingDemoAppObjC)
+- [Objective-C](https://github.com/adobe/aepsdk-messaging-ios/tree/staging/TestApps/MessagingDemoAppObjC)
 
 #### Further reading
 

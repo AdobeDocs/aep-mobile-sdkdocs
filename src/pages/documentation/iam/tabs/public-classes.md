@@ -74,7 +74,7 @@ public void dismiss(final boolean suppressAutoTrack)
 
 ##### Parameters
 
-* *suppressAutoTrack* - if set to `true`, the "decisioning.propositionDismiss" Edge Event will not be sent regardless of the `autoTrack` setting.
+* *suppressAutoTrack* - if set to `true`, the `decisioning.propositionDismiss` Edge Event will not be sent regardless of the `autoTrack` setting.
 
 <Variant platform="ios" function="dismiss" repeat="4"/>
 
@@ -86,7 +86,7 @@ public func dismiss(suppressAutoTrack: Bool? = false)
 
 ###### Parameters
 
-* *suppressAutoTrack* - if set to `true`, the "decisioning.propositionDismiss" Edge Event will not be sent regardless of the `autoTrack` setting.
+* *suppressAutoTrack* - if set to `true`, the `decisioning.propositionDismiss` Edge Event will not be sent regardless of the `autoTrack` setting.
 
 <Variant platform="android" function="track" repeat="4"/>
 
