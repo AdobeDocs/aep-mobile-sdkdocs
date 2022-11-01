@@ -101,46 +101,6 @@ Previously known as MCID, the Experience Cloud ID (ECID) is a 38 character ID th
 
 After the configuration is complete, an ECID is generated and, where applicable, is included on all Analytics and Audience Manager hits. Other IDs, such as custom and automatically-generated IDs, continue to be sent with each hit.
 
-## Version of the Identity extension
-
-The `extensionVersion()` API returns the version of the Identity extension that is registered with the Mobile Core extension.
-
-To get the version of the Identity extension, use the following code sample:
-
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
-
-Android
-
-<Tabs query="platform=android&task=version"/>
-
-iOS (AEP 3.x)
-
-<Tabs query="platform=ios-aep&task=version"/>
-
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=version"/>
-
-React Native
-
-<Tabs query="platform=react-native&task=version"/>
-
-Flutter
-
-<Tabs query="platform=flutter&task=version"/>
-
-Cordova
-
-<Tabs query="platform=cordova&task=version"/>
-
-Unity
-
-<Tabs query="platform=unity&task=version"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&task=version"/>
-
 ## Visitor tracking between an app and the mobile web
 
 If your app opens mobile web content, you need to ensure that visitors are not identified separately as they move between the native and mobile web.

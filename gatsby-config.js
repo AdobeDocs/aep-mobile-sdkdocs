@@ -305,7 +305,7 @@ module.exports = {
                                 path: "/documentation/edge-network/validation"
                             },
                             {
-                                title: "Release Notes",
+                                title: "Release notes",
                                 path: "/documentation/edge-network/release-notes"
                             }
                         ]
@@ -483,7 +483,7 @@ module.exports = {
                                 path: "/documentation/adobe-analytics/faq/"
                             },
                             {
-                                title: 'Release Notes',
+                                title: 'Release notes',
                                 path: '/documentation/adobe-analytics/release-notes/'
                             }
                         ]

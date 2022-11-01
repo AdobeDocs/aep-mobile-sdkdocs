@@ -165,8 +165,7 @@ When using React Native, registering Identity with Mobile Core should be done in
 
 <Variant platform="flutter" task="register" repeat="1"/>
 
-When using React Native, registering Identity with Mobile Core should be done in native code, which is shown under the Android and iOS tabs.
-
+When using Flutter, registering Identity with Mobile Core should be done in native code, which is shown under the Android and iOS tabs.
 
 <Variant platform="cordova" task="register" repeat="1"/>
 
@@ -239,86 +238,6 @@ class CoreStartCompletionCallback : Java.Lang.Object, IAdobeCallback
 }
 ```
 
-<Variant platform="android" task="version" repeat="2"/>
-
-#### Java
-
-```java
-String identityExtensionVersion = Identity.extensionVersion();
-```
-
-<Variant platform="ios-aep" task="version" repeat="4"/>
-
-#### Swift
-
-```swift
-var identityExtensionVersion  = Identity.extensionVersion
-```
-
-#### Objective-C
-
-```objectivec
-NSString *identityExtensionVersion = [AEPMobileIdentity extensionVersion];
-```
-
-<Variant platform="ios-acp" task="version" repeat="4"/>
-
-#### Swift
-
-```swift
-var identityExtensionVersion  = ACPIdentity.extensionVersion()
-```
-
-#### Objective-C
-
-```objectivec
-NSString *identityExtensionVersion = [ACPIdentity extensionVersion];
-```
-
-<Variant platform="react-native" task="version" repeat="2"/>
-
-#### JavaScript
-
-```jsx
-ACPIdentity.extensionVersion().then(identityExtensionVersion => console.log("Identity version: " + identityExtensionVersion));
-```
-
-<Variant platform="flutter" task="version" repeat="2"/>
-
-#### Dart
-
-```dart
-String identityExtensionVersion = await FlutterACPIdentity.extensionVersion;
-```
-
-<Variant platform="cordova" task="version" repeat="2"/>
-
-#### Cordova
-
-```jsx
-ACPIdentity.extensionVersion(function (handleCallback) {
-  console.log("AdobeExperienceSDK: ACPIdentity version: " + handleCallback)
-}, function (handleError) {
-  console.log("AdobeExperenceSDK: failed to get extension version : " + handleError)
-});
-```
-
-<Variant platform="unity" task="version" repeat="2"/>
-
-#### C#
-
-```csharp
-string identityVersion = ACPIdentity.ExtensionVersion();
-```
-
-<Variant platform="xamarin" task="version" repeat="2"/>
-
-#### C#
-
-```csharp
-string identityVersion = ACPIdentity.ExtensionVersion();
-```
-
 <Variant platform="android" task="implement" repeat="5"/>
 
 #### Java
@@ -357,7 +276,7 @@ Identity.getUrlVariables(new AdobeCallback<String>() {
 
 <Variant platform="ios-aep" task="implement" repeat="10"/>
 
-To append visitor information to the URL that is being used to open the web view, call [appendToUrl](#appendtourl-appendvisitorinfoforurl): 
+To append visitor information to the URL that is being used to open the web view, call [appendToUrl](./api-reference.md#appendtourl-appendvisitorinfoforurl): 
 
 #### Swift
 
@@ -424,7 +343,7 @@ Identity.getUrlVariables { urlVariables, error in
 
 #### Objective-C
 
-To append visitor information to the URL that is being used to open the web view, call [appendToUrl](api-reference.md#appendtourl-appendvisitorinfoforurl):
+To append visitor information to the URL that is being used to open the web view, call [appendToUrl](./api-reference.md#appendtourl-appendvisitorinfoforurl):
 
 ```objectivec
 NSURL* url = [[NSURL alloc] initWithString:@"www.example.com"];

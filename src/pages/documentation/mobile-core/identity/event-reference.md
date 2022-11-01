@@ -208,7 +208,7 @@ The following key-value pairs are used in this event:
 | `pushidentifier` | String | No | The Push Identifier if one was previously set. |
 | `blob` | String | No | The blob value retrieved from the ECID Service. |
 | `locationhint` | String | No | The location hint value retrieved from the ECID Service. |
-| `visitoridslist` | `<List>` | No | A list of visitor identifiers that were previously synced using `syncIdentifier` or `syncIdentifiers` public APIs. Each visitor ID will have the following keys: `id_origin`, `id_type`, `id`, `authentication_state`. |
+| `visitoridslist` | `List` | No | A list of visitor identifiers that were previously synced using `syncIdentifier` or `syncIdentifiers` public APIs. Each visitor ID will have the following keys: `id_origin`, `id_type`, `id`, `authentication_state`. |
 | `lastsync` | Long | No | Timestamp in seconds of the last sync call sent to the ECID Service, by default it is 0. |
 | `updatedurl` | String | No | The update URL when `appendVisitorInfoForURL` (Android) / `appendToUrl` (iOS) public API is called. |
 | `urlvariables` | String | No | The Visitor IDs as query parameters string when `getUrlVariables` API is called. |
