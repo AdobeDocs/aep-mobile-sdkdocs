@@ -135,7 +135,7 @@ Finally, you'll need to scan through your current implementation and replace ACP
 | [Core](./mobile-core/index.md) | [AEPCore](./mobile-core/migration.md) |
 | [Identity](./mobile-core/identity/index.md) | [AEPIdentity](./mobile-core/identity/migration.md) |
 | [Lifecycle](./mobile-core/lifecycle/index.md) | [AEPLifecycle](./mobile-core/lifecycle/migration.md) |
-| [Signal](./mobile-core/signals/index.md) | [AEPSignal](./mobile-core/signals/migration.md) |
+| [Signal](./mobile-core/signal/index.md) | [AEPSignal](./mobile-core/signals/migration.md) |
 | [Profile](./profile/index.md) | [AEPUserProfile](./profile/migration.md) |
 | [Adobe Experience Platform Assurance](./platform-assurance/index.md) | [AEPAssurance](./platform-assurance/migration.md) |
 | [Adobe Experience Platform Places Service](./places/index.md) | [AEPPlaces](./places/migration.md) |

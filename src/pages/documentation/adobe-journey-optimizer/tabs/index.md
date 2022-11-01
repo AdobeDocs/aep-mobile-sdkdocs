@@ -68,7 +68,7 @@ public class MobileApp extends Application {
     public void onCreate() {
       super.onCreate();
       MobileCore.setApplication(this);
-      MobileCore.configureWithAppID("yourLaunchEnvironmentID");
+      MobileCore.configureWithAppID("yourAppId");
       try {
         Edge.registerExtension();
         Identity.registerExtension();
@@ -93,7 +93,7 @@ public class MobileApp extends Application {
 // AppDelegate.swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     MobileCore.registerExtensions([Identity.self, Edge.self, Messaging.self], {
-        MobileCore.configureWith(appId: "yourLaunchEnvironmentID")
+        MobileCore.configureWith(appId: "yourAppId")
     })
   ...
 }
@@ -105,7 +105,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 // AppDelegate.m
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [AEPMobileCore registerExtensions:@[AEPMobileEdgeIdentity.class, AEPMobileEdge.class, AEPMobileMessaging.class] completion:^{
-    [AEPMobileCore configureWithAppId: @"yourLaunchEnvironmentID"];
+    [AEPMobileCore configureWithAppId: @"yourAppId"];
   }];
   ...
 }

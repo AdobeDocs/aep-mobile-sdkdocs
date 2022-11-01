@@ -174,7 +174,7 @@ using Com.Adobe.Marketing.Mobile;
 AEPAssurance.ExtensionVersion();
 ```
 
-<Variant platform="android" task="register-assurance" repeat="7"/>
+<Variant platform="android" task="register-assurance" repeat="6"/>
 
 To start using the extension library, you must first register the extension with the [Mobile Core](../mobile-core/index.md) extension.
 
@@ -365,7 +365,7 @@ class CoreStartCompletionCallback : Java.Lang.Object, IAdobeCallback
 }
 ```
 
-<Variant platform="ios-aep" task="implement-assurance" repeat="11"/>
+<Variant platform="ios-aep" task="implement-assurance" repeat="12"/>
 
 #### Swift
 

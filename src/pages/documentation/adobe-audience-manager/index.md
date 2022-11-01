@@ -8,7 +8,7 @@ Adobe Audience Manager is a versatile audience data management platform. With th
 
 ![Adobe Audience Manager Extension Configuration](./assets/index/configure.png)
 
-1. In the Data Collection UI, click the **Extensions** tab.
+1. In the Data Collection UI, select the **Extensions** tab.
 2. Choose **Catalog**, locate the **Adobe Audience Manager** extension, and select **Install**.
 3. Type your Audience Manager server.
 4. Type a timeout value. This value is the period, in seconds, to wait for a response from Audience Manager before timing out. For best practices, you should use a default value of 2s.

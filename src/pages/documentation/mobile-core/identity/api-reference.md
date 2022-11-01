@@ -280,7 +280,7 @@ Xamarin
 
 ## setAdvertisingIdentifier
 
-The advertising ID is preserved between app upgrades, is saved and restored during the standard application backup process, available via the [Signals](../signals/index.md) extension, and is removed at uninstall.
+The advertising ID is preserved between app upgrades, is saved and restored during the standard application backup process, available via the [Signals](../signal/index.md) extension, and is removed at uninstall.
 
 <InlineAlert variant="info" slots="text"/>
 

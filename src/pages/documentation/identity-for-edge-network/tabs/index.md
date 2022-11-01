@@ -109,7 +109,7 @@ public class MobileApp extends Application {
 // AppDelegate.swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     MobileCore.registerExtensions([Identity.self, Consent.self, Edge.self], {
-    MobileCore.configureWith(appId: "yourLaunchEnvironmentID")
+    MobileCore.configureWith(appId: "yourAppId")
   })
   ...
 }
@@ -123,7 +123,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     [AEPMobileCore registerExtensions:@[AEPMobileEdgeIdentity.class, AEPMobileEdgeConsent.class, AEPMobileEdge.class] completion:^{
     ...
   }];
-  [AEPMobileCore configureWithAppId: @"yourLaunchEnvironmentID"];
+  [AEPMobileCore configureWithAppId: @"yourAppId"];
   ...
 }
 ```

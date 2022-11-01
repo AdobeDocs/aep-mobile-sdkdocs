@@ -58,7 +58,7 @@ import AEPEdgeConsent
 
 <Variant platform="ios-acp" task="download" repeat="1"/>
 
-This extension is built on the AEPCore (3.x) and it is not compatible with ACPCore (2.x). Please follow [the guide for migrating to the Swift AEPCore](../../migrate-to-swift.md).
+This extension is built on the AEPCore (3.x) and it is not compatible with ACPCore (2.x). Please follow [the guide for migrating to the Swift AEPCore](../migrate-to-swift.md).
 
 <Variant platform="android" task="register" repeat="2"/>
 
@@ -96,7 +96,7 @@ public class MobileApp extends Application {
 // AppDelegate.swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     MobileCore.registerExtensions([Identity.self, Edge.self, Consent.self], {
-        MobileCore.configureWith(appId: "yourLaunchEnvironmentID")
+        MobileCore.configureWith(appId: "yourAppId")
     })
   ...
 }
@@ -108,7 +108,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 // AppDelegate.m
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [AEPMobileCore registerExtensions:@[AEPMobileEdgeIdentity.class, AEPMobileEdge.class, AEPMobileEdgeConsent.class] completion:^{
-    [AEPMobileCore configureWithAppId: @"yourLaunchEnvironmentID"];
+    [AEPMobileCore configureWithAppId: @"yourAppId"];
   }];
   ...
 }

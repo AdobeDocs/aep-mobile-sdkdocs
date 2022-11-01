@@ -98,7 +98,7 @@ In your app's `application:didFinishLaunchingWithOptions` function, register the
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     MobileCore.registerExtensions([Identity.self, Lifecycle.self, Analytics.self,  AEPMobileServices.self], {
-        MobileCore.configureWith(appId: "yourLaunchEnvironmentID")
+        MobileCore.configureWith(appId: "yourAppId")
         MobileCore.lifecycleStart(additionalContextData: ["contextDataKey": "contextDataVal"])
     })
   ...
@@ -112,7 +112,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     NSArray *extensionsToRegister = @[AEPMobileIdentity.class, AEPMobileLifecycle.class, AEPMobileAnalytics.class, AEPMobileServices.class];
     [AEPMobileCore registerExtensions:extensionsToRegister completion:^{
         // Use the App id assigned to this application via Adobe Launch
-        [AEPMobileCore configureWithAppId: @"yourLaunchEnvironmentID"];
+        [AEPMobileCore configureWithAppId: @"yourAppId"];
         [AEPMobileCore lifecycleStart:@{@"contextDataKey": @"contextDataVal"}];
     }];
     ....

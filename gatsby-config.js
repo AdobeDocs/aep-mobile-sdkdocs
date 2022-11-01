@@ -305,7 +305,7 @@ module.exports = {
                                 path: "/documentation/edge-network/validation"
                             },
                             {
-                                title: "Release Notes",
+                                title: "Release notes",
                                 path: "/documentation/edge-network/release-notes"
                             }
                         ]
@@ -390,7 +390,7 @@ module.exports = {
                             },
                             {
                                 title: "Resolving common issues",
-                                path: "/documentation/platform-assurance-sdk/error-logs"
+                                path: "/documentation/platform-assurance-sdk/common-issues/"
                             },
                             {
                                 title: "Release notes",
@@ -479,7 +479,11 @@ module.exports = {
                                 path: "/documentation/adobe-analytics/product-variable"
                             },
                             {
-                                title: 'Release Notes',
+                                title: "Frequently asked questions",
+                                path: "/documentation/adobe-analytics/faq/"
+                            },
+                            {
+                                title: 'Release notes',
                                 path: '/documentation/adobe-analytics/release-notes/'
                             }
                         ]
@@ -713,6 +717,10 @@ module.exports = {
                         ]
                     },
                     {
+                        title: "Get access",
+                        path: "/documentation/platform-assurance/get-access/"
+                    },
+                    {
                         title: "Set up",
                         path: "/documentation/platform-assurance/set-up.md"
                     },
@@ -874,7 +882,7 @@ module.exports = {
                                 path: "documentation/troubleshooting-guides/push-messaging"
                             },
                             {
-                                title: "Push notifications",
+                                title: "Campaign push notifications",
                                 path: "documentation/troubleshooting-guides/push-notifications"
                             }
                         ]

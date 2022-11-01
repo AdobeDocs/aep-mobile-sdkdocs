@@ -30,10 +30,6 @@ Flutter
 
 <Tabs query="platform=flutter&task=set-variable"/>
 
-A sample network request can be seen in the image below:
-
-![Sample network request](./assets/product-variable/sample-network-request.png)
-
 _`products`_ is set directly on the image request, and the other variables are set as context data. All context data variables must be mapped by using processing rules:
 
 ![Map products](./assets/product-variable/map-products.png)

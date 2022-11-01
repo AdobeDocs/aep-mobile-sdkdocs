@@ -4,13 +4,13 @@ import Tabs from './tabs/push-messaging.md'
 
 <InlineAlert variant="info" slots="text"/>
 
-This troubleshooting guide requires [Adobe Experience Platform Assurance](../platform-assurance/index.md). For more information about access and how to set up Assurance, see the [documentation](../platform-assurance/index.md).
+This troubleshooting guide requires Adobe Experience Platform Assurance. For more information about access and how to set up Assurance, see the [documentation](../platform-assurance/index.md).
 
 When implementing push messaging via the Adobe Experience Platform Mobile SDK, you can validate the client-side implementation by verifying that you completed the following steps:
 
-1. Pass the device's push token to the SDK,
+1. Pass the device's push token to the SDK.
 1. Verify push token sync with the Experience Cloud Identity service.
-1. Ensure user opt-in for push in Adobe Analytics
+1. Ensure user opt-in for push in Adobe Analytics.
 1. Confirm user ID is correctly set (and is the same as Steps 2 and 3, above).
 
 ## Pass the Push Identifier to the SDK
