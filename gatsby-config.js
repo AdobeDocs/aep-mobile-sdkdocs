@@ -878,7 +878,7 @@ module.exports = {
                                 path: "documentation/troubleshooting-guides/push-messaging"
                             },
                             {
-                                title: "Push notifications",
+                                title: "Campaign push notifications",
                                 path: "documentation/troubleshooting-guides/push-notifications"
                             }
                         ]
