@@ -111,7 +111,7 @@ public class MobileApp extends Application {
 // AppDelegate.swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     MobileCore.registerExtensions([Places.self], {
-        MobileCore.configureWith(appId: "yourLaunchEnvironmentID")
+        MobileCore.configureWith(appId: "yourAppId")
     })
     ...
 }
@@ -125,7 +125,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     [AEPMobileCore registerExtensions:@[AEPMobilePlaces.class] completion:^{
         ...
     }];
-    [AEPMobileCore configureWithAppId: @"yourLaunchEnvironmentID"];
+    [AEPMobileCore configureWithAppId: @"yourAppId"];
     ...
 }
 ```
@@ -138,7 +138,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 // AppDelegate.swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     ACPPlaces.registerExtension()
-    ACPCore.configure(withAppId: "yourLaunchEnvironmentID")
+    ACPCore.configure(withAppId: "yourAppId")
     ACPCore.start()
   })
   ...
@@ -151,7 +151,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 // AppDelegate.m
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [ACPPlaces registerExtension];
-    [ACPCore configureWithAppId:@"yourLaunchEnvironmentID"];    
+    [ACPCore configureWithAppId:@"yourAppId"];    
     [ACPCore start];  
     ...
 }
