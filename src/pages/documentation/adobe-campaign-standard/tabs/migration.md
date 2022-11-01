@@ -59,7 +59,7 @@ static func resetLinkageFields()
 <Variant platform="aep-swift" api="set-linkage-fields" repeat="1"/>
 
 ```swift
-static func setLinkageFields(_linkageFields: [String: String])
+static func setLinkageFields(_ linkageFields: [String: String])
 ```
 
 <Variant platform="aep-objc" api="set-linkage-fields" repeat="1"/>
