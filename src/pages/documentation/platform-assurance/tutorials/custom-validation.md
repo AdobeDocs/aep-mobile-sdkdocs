@@ -9,7 +9,7 @@ You may use the Custom Validation feature to quickly and easily write a JavaScri
 To use this view, complete the following steps:
 
 1. [Set up Assurance](../set-up.md)
-2. [Create](./index.md#creating-sessions) and [connect](./index.md#connecting-to-a-session) to an Assurance session
+2. [Create](../index.md#creating-sessions) and [connect](../index.md#connecting-to-a-session) to an Assurance session
 3. In the **Home** view, select **Validation Scripts**
 
 ![Custom Validation](./assets/custom-validation/validation-menu.png)

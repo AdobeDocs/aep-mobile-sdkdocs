@@ -9,7 +9,7 @@ You may use the Validation Summary feature to quickly and easily manage JavaScri
 To use this view, complete the following steps:
 
 1. [Set up Adobe Experience Platform Assurance](../set-up.md)
-2. [Create](./index.md#creating-sessions) and [connect](./index.md#connecting-to-a-session) to a Assurance session
+2. [Create](../index.md#creating-sessions) and [connect](../index.md#connecting-to-a-session) to a Assurance session
 3. In the **Home** view, select **Validation Summary**
 
 ![Validation Summary](./assets/validation-summary/validation-summary.png)
