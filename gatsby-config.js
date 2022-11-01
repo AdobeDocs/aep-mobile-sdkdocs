@@ -390,7 +390,7 @@ module.exports = {
                             },
                             {
                                 title: "Resolving common issues",
-                                path: "/documentation/platform-assurance-sdk/error-logs"
+                                path: "/documentation/platform-assurance-sdk/common-issues/"
                             },
                             {
                                 title: "Release notes",
@@ -715,6 +715,10 @@ module.exports = {
                                 path: "/documentation/platform-assurance/tutorials/validation-summary.md"
                             }
                         ]
+                    },
+                    {
+                        title: "Get access",
+                        path: "/documentation/platform-assurance/get-access/"
                     },
                     {
                         title: "Set up",
