@@ -1,3 +1,0 @@
-```swift
-static func resetLinkageFields()
-```

@@ -1,15 +1,4 @@
-import ExtensionVersionAEPSwift from './tabs/migration/extension-version/swift-aep.md'
-import ExtensionVersionACPObjectiveC from './tabs/migration/extension-version/objective-c-acp.md'
-import ExtensionVersionAEPObjectiveC from './tabs/migration/extension-version/objective-c-aep.md'
-import RegisterExtensionAEPSwift from './tabs/migration/register-extension/swift-aep.md'
-import RegisterExtensionACPObjectiveC from './tabs/migration/register-extension/objective-c-acp.md'
-import RegisterExtensionAEPObjectiveC from './tabs/migration/register-extension/objective-c-aep.md'
-import ResetLinkageFieldsAEPSwift from './tabs/migration/reset-linkage-fields/swift-aep.md'
-import ResetLinkageFieldsACPObjectiveC from './tabs/migration/reset-linkage-fields/objective-c-acp.md'
-import ResetLinkageFieldsAEPObjectiveC from './tabs/migration/reset-linkage-fields/objective-c-aep.md'
-import SetLinkageFieldsAEPSwift from './tabs/migration/set-linkage-fields/swift-aep.md'
-import SetLinkageFieldsACPObjectiveC from './tabs/migration/set-linkage-fields/objective-c-acp.md'
-import SetLinkageFieldsAEPObjectiveC from './tabs/migration/set-linkage-fields/objective-c-aep.md'
+import Tabs from './tabs/migration.md'
 
 # Migrating to AEPCampaign reference
 
@@ -29,63 +18,63 @@ The AEPCampaign extension is implemented purely in Swift and is compatible with 
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### AEP 3.x (Swift)
+AEP 3.x (Swift)
 
-<ExtensionVersionAEPSwift/>
+<Tabs query="platform=aep-swift&api=extension-version"/>
 
-#### AEP 3.x (Objective-C)
+AEP 3.x (Objective-C)
 
-<ExtensionVersionAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=extension-version"/>
 
-#### ACP 1.x (Objective-C)
+ACP 1.x (Objective-C)
 
-<ExtensionVersionACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=extension-version"/>
+
 
 ### registerExtension
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### AEP 3.x (Swift)
+AEP 3.x (Swift)
 
-<RegisterExtensionAEPSwift/>
+<Tabs query="platform=aep-swift&api=register-extension"/>
 
-#### AEP 3.x (Objective-C)
+AEP 3.x (Objective-C)
 
-<RegisterExtensionAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=register-extension"/>
 
-#### ACP 1.x (Objective-C)
+ACP 1.x (Objective-C)
 
-<RegisterExtensionACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=register-extension"/>
 
 ### resetLinkageFields
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### AEP 3.x (Swift)
+AEP 3.x (Swift)
 
-<ResetLinkageFieldsAEPSwift/>
+<Tabs query="platform=aep-swift&api=reset-linkage-fields"/>
 
-#### AEP 3.x (Objective-C)
+AEP 3.x (Objective-C)
 
-<ResetLinkageFieldsAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=reset-linkage-fields"/>
 
-#### ACP 1.x (Objective-C)
+ACP 1.x (Objective-C)
 
-<ResetLinkageFieldsACPObjectiveC/>
+<Tabs query="platform=acp-objc&api=reset-linkage-fields"/>
 
 ### setLinkageFields
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-#### AEP 3.x (Swift)
+AEP 3.x (Swift)
 
-<SetLinkageFieldsAEPSwift/>
+<Tabs query="platform=aep-swift&api=set-linkage-fields"/>
 
-#### AEP 3.x (Objective-C)
+AEP 3.x (Objective-C)
 
-<SetLinkageFieldsAEPObjectiveC/>
+<Tabs query="platform=aep-objc&api=set-linkage-fields"/>
 
-#### ACP 1.x (Objective-C)
+ACP 1.x (Objective-C)
 
-<SetLinkageFieldsACPObjectiveC/>
-
+<Tabs query="platform=acp-objc&api=set-linkage-fields"/>
