@@ -898,28 +898,6 @@ module.exports = {
                     {
                         title: "Privacy and GDPR",
                         path: "documentation/privacy-and-gdpr"
-                    },
-                    {
-                        title: "WeChat mini programs",
-                        path: "documentation/platform-minis",
-                        pages: [
-                            {
-                                title: "Overview",
-                                path: "documentation/platform-minis"
-                            },
-                            {
-                                title: "Implementation",
-                                path: "/documentation/platform-minis/implementation"
-                            },
-                            {
-                                title: "Implementation - 中文–简体",
-                                path: "/documentation/platform-minis/implementation-zh"
-                            },
-                            {
-                                title: "Frequently asked questions",
-                                path: "/documentation/platform-minis/faq"
-                            }
-                        ]
                     }
                 ]
             },
