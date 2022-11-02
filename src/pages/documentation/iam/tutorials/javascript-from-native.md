@@ -39,3 +39,10 @@ Android
 iOS
 
 <Tabs query="platform=ios&task=call"/>
+
+## Examples
+
+The test apps in this repository demonstrate executing JavaScript code from an in-app message's webview:
+
+- [Swift](https://github.com/adobe/aepsdk-messaging-ios/tree/staging/TestApps/MessagingDemoApp)
+- [Objective-C](https://github.com/adobe/aepsdk-messaging-ios/tree/staging/TestApps/MessagingDemoAppObjC)

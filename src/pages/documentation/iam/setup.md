@@ -4,7 +4,7 @@ import Tabs from './tabs/setup.md'
 
 ## Beta instructions
 
-While the in-app messaging feature is in beta, the developer will need to use the Messaging extension on the `staging` branch of this repo.
+While the in-app messaging feature is in beta, the developer will need to use the Messaging extension from the `staging` branch of the iOS repo, or the beta SNAPSHOT build for Android.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -18,7 +18,7 @@ iOS (Cocoapods)
 
 ## Import and register the Messaging extension
 
-Import the AEPMessaging framework and its dependencies, then register the Messaging extension and dependencies.
+Import the Messaging module/package and its dependencies, then register the Messaging extension and dependencies.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

@@ -4,7 +4,7 @@ In the `shouldShowMessage` function of the `MessagingDelegate`, call `public voi
 
 The name of the message you intend to pass from the JavaScript side should be specified in the first parameter.
 
-The following example shows a handler that dispatches an `inapp.interact` Experience Event natively when the JavaScript of the in-app message posts a `myInappCallback` message:
+The following example shows a handler that dispatches a `decisioning.propositionInteract` Experience Event natively when the JavaScript of the in-app message posts a `myInappCallback` message:
 
 #### Java
 
@@ -31,7 +31,7 @@ In the `shouldShowMessage` function of the `MessagingDelegate`, call [`handleJav
 
 The name of the message you intend to pass from the JavaScript side should be specified in the first parameter.
 
-The following example shows a handler that dispatches an `inapp.interact` Experience Event natively when the JavaScript of the in-app message posts a `myInappCallback` message:
+The following example shows a handler that dispatches a `decisioning.propositionInteract` Experience Event natively when the JavaScript of the in-app message posts a `myInappCallback` message:
 
 #### Swift
 

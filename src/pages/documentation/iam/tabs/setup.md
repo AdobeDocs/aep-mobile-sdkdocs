@@ -1,6 +1,6 @@
 <Variant platform="android" task="install" repeat="7"/>
 
-In-app messages are enabled in Messaging SDK version `1.2.0` or newer. Libraries built from the staging branch will contain `beta` in the artifact name.
+In-app messages are enabled in Messaging SDK version `1.3.0` or newer. Libraries built from the staging branch will contain `beta` in the artifact name.
 
 The Messaging SDK is available from the Sonatype snapshot repository while it is in beta. In your app's top level Gradle file, add a reference to the repository:
 
@@ -14,11 +14,8 @@ allprojects {
 } 
 ```
 
-The Messaging extension has a dependency on the Optimize extension. The Optimize extension must be added as a dependency in the app level Gradle file.
-
 ```groovy
-implementation('com.adobe.marketing.mobile:messaging:1.2.0-beta-1-SNAPSHOT')
-implementation('com.adobe.marketing.mobile:optimize:1.0.0-SNAPSHOT')
+implementation('com.adobe.marketing.mobile:messaging:1.3.0-beta-3-SNAPSHOT')
 ```
 
 If you use the Messaging extension (In-App beta) alongside the Campaign Standard extension, Campaign Standard extension version 1.0.9 or newer must be used to resolve a compatibility issue:
@@ -33,7 +30,6 @@ The example below shows how to point to the `staging` branch in a Cocoapods `Pod
 
 ```
 pod 'AEPMessaging', :git => 'https://github.com/adobe/aepsdk-messaging-ios.git', :branch => 'staging'
-pod 'AEPOptimize', :git => 'https://github.com/adobe/aepsdk-optimize-ios.git', :branch => 'staging'
 ```
 
 <Variant platform="android" task="register" repeat="2"/>
@@ -49,7 +45,6 @@ import com.adobe.marketing.mobile.LoggingMode;
 import com.adobe.marketing.mobile.Messaging;
 import com.adobe.marketing.mobile.MobileCore;
 import com.adobe.marketing.mobile.edge.identity.Identity;
-import com.adobe.marketing.mobile.optimize.Optimize;
 
 public class MainApplication extends Application {
 
@@ -62,7 +57,6 @@ public class MainApplication extends Application {
 
         try {
             Messaging.registerExtension();
-            Optimize.registerExtension();
             Identity.registerExtension();
             Edge.registerExtension();
 
@@ -90,7 +84,6 @@ import AEPMessaging
 import AEPCore
 import AEPEdge
 import AEPEdgeIdentity
-import AEPOptimize
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -101,8 +94,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let extensions = [
             Messaging.self,
             AEPEdgeIdentity.Identity.self,
-            Edge.self,
-            Optimize.self
+            Edge.self
         ]
 
         MobileCore.registerExtensions(extensions) {            

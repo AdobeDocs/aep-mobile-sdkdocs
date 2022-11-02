@@ -3,7 +3,11 @@
 ## Configure the datastream
 
 * To create the datastream, please follow the [tutorial on creating a datastream](../getting-started/configure-datastreams.md).
-* From the `Profile Dataset` drop-down, select a profile-enabled dataset based on the XDM ExperienceEvent schema that contains the `pushNotificationTracking` field group
+* When creating the datastream service for *Adobe Experience Platform*, ensure that the following are selected:
+    * For *Event Dataset*, select *AJO Inbound Experience Event*.
+    * For *Profile Dataset*, select *AJO Push Profile Dataset*.
+    * Ensure the *Personalized Destinations* box is checked.
+    * Ensure the *Adobe Journey Optimizer* box is checked.
 
 ![Datastream](./assets/configure/configure.png)
 

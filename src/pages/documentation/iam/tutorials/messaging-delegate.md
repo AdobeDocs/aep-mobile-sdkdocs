@@ -64,6 +64,13 @@ iOS
 
 <Tabs query="platform=ios&function=integrate-message"/>
 
+## Examples
+
+The test apps in this repository demonstrate using a `MessagingDelegate`:
+
+- [Swift](https://github.com/adobe/aepsdk-messaging-ios/tree/staging/TestApps/MessagingDemoApp)
+- [Objective-C](https://github.com/adobe/aepsdk-messaging-ios/tree/staging/TestApps/MessagingDemoAppObjC)
+
 #### Further reading
 
 * [More information on how to use the Message object](../public-classes.md)
