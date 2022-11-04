@@ -17,7 +17,7 @@ import com.adobe.marketing.mobile.CampaignClassic;
 import com.adobe.marketing.mobile.Lifecycle;
 ```
 
-<Variant platform="ios-aep" task="add" repeat="1"/>
+<Variant platform="ios-aep" task="add" repeat="8"/>
 
 1. Add the Campaign Classic and [Mobile Core](../mobile-core/index.md) libraries to your project.
 
@@ -93,7 +93,12 @@ public class CampaignClassicTestApp extends Application {
         try {
             CampaignClassic.registerExtension();
             Lifecycle.registerExtension();
-            MobileCore.start(null);
+            MobileCore.start(new AdobeCallback () {
+              @Override
+              public void call(Object o) {
+                  MobileCore.configureWithAppID("<YOUR_ENVIRONMENT_FILE_ID>");
+                }
+              });
         } catch (Exception e) {
             Log.e("CampaignClassicTestApp", e.getMessage());
         }
@@ -102,7 +107,7 @@ public class CampaignClassicTestApp extends Application {
 }
 ```
 
-<Variant platform="ios-aep" task="register" repeat="1"/>
+<Variant platform="ios-aep" task="register" repeat="5"/>
 
 In your app's `application:didFinishLaunchingWithOptions:` method, register the Campaign Classic extension:
 
@@ -112,7 +117,7 @@ In your app's `application:didFinishLaunchingWithOptions:` method, register the 
 // AppDelegate.swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
   MobileCore.registerExtensions([CampaignClassic.self], {
-    MobileCore.configureWith(appId: "APP-ID")
+    MobileCore.configureWith(appId: "<YOUR_ENVIRONMENT_FILE_ID>")
   })
   return true;
 }
@@ -124,7 +129,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 // AppDelegate.m
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [AEPMobileCore registerExtensions:@[AEPMobileCampaignClassic.class] completion:^{
-    [AEPMobileCore configureWithAppId: @"APP-ID"];
+    [AEPMobileCore configureWithAppId: @"<YOUR_ENVIRONMENT_FILE_ID>"];
   }];
   return YES;
 }
