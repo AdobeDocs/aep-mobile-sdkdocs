@@ -19,7 +19,32 @@ import com.adobe.marketing.mobile.Lifecycle;
 
 <Variant platform="ios-aep" task="add" repeat="1"/>
 
-Adobe Campaign Classic has not yet been released as an AEP 3.x Swift extension. Please reach out to your Adobe customer account manager if you have any questions or would like to express interest in the AEP 3.x Campaign Classic extension.
+1. Add the Campaign Classic and [Mobile Core](../mobile-core/index.md) libraries to your project.
+
+   You can add the following pods to your `Podfile`:
+
+   ```text
+   pod 'AEPCore'
+   pod 'AEPCampaignClassic'
+   ```
+
+   or you can manually include the XCFrameworks by following this GitHub [documentation](https://github.com/adobe/aepsdk-campaignclassic-ios/#binaries).
+
+2. In the Xcode project, import the Mobile Core and Campaign Classic extensions:
+
+#### Swift
+
+```swift
+	import AEPCore
+	import AEPCampaignClassic
+```
+
+#### Objective-C
+
+```objectivec
+	@import AEPCore;
+	@import AEPCampaignClassic;
+```
 
 <Variant platform="ios-acp" task="add" repeat="8"/>
 
@@ -35,7 +60,15 @@ pod 'ACPCore'
 
 2. In the Xcode project, import the Mobile Core and Campaign Classic extensions:
 
-**Objective-C**
+#### Swift
+
+```swift
+   import ACPCore
+   import ACPCampaignClassic
+   import ACPLifecycle
+```
+
+#### Objective-C
 
 ```objectivec
    #import "ACPCore.h"
@@ -43,13 +76,6 @@ pod 'ACPCore'
    #import "ACPLifecycle.h"
 ```
 
-**Swift**
-
-```swift
-   import ACPCore
-   import ACPCampaignClassic
-   import ACPLifecycle
-```
 
 <Variant platform="android" task="register" repeat="2"/>
 
@@ -78,7 +104,31 @@ public class CampaignClassicTestApp extends Application {
 
 <Variant platform="ios-aep" task="register" repeat="1"/>
 
-Adobe Campaign Classic has not yet been released as an AEP 3.x Swift extension. Please reach out to your Adobe customer account manager if you have any questions or would like to express interest in the AEP 3.x Campaign Classic extension.
+In your app's `application:didFinishLaunchingWithOptions:` method, register the Campaign Classic extension:
+
+#### Swift
+
+```swift
+// AppDelegate.swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+  MobileCore.registerExtensions([CampaignClassic.self], {
+    MobileCore.configureWith(appId: "APP-ID")
+  })
+  return true;
+}
+```
+
+#### Objective-C
+
+```objectivec
+// AppDelegate.m
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [AEPMobileCore registerExtensions:@[AEPMobileCampaignClassic.class] completion:^{
+    [AEPMobileCore configureWithAppId: @"APP-ID"];
+  }];
+  return YES;
+}
+```
 
 <Variant platform="ios-acp" task="register" repeat="5"/>
 
@@ -87,6 +137,7 @@ In your app's `application:didFinishLaunchingWithOptions:` method, register the 
 #### Swift
 
 ```swift
+// AppDelegate.swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
    ACPCampaignClassic.registerExtension();
    ACPLifecycle.registerExtension();
@@ -98,6 +149,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 #### Objective-C
 
 ```objectivec
+// AppDelegate.m
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [ACPCampaignClassic registerExtension];
     [ACPLifecycle registerExtension];
