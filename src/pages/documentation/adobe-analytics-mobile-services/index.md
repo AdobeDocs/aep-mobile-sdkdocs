@@ -2,6 +2,9 @@ import Tabs from './tabs/index.md'
 
 # Adobe Analytics - Mobile Services
 
+<InlineAlert variant="warning" slots="text"/>
+Adobe Mobile Service’s end-of-life date is December 31, 2022. See Mobile Services [End of Life FAQ](https://experienceleague.adobe.com/docs/mobile-services/using/eol.html) or contact your Adobe customer success manager for further information.
+
 This extension enables in-app messaging, push notifications, and marketing links functionality from [Mobile Services](https://mobilemarketing.adobe.com) on the Experience Platform SDK.
 
 <InlineAlert variant="warning" slots="text"/>
