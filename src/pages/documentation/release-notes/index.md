@@ -8,7 +8,7 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 ### iOS AEPCore 3.7.3
 
-* Fixed a bug in AEPIdentity where CusomterIdentities with the same type could cause a crash.
+* Fixed a bug in AEPIdentity where CustomerIdentities with the same type could cause a crash.
 
 ## October 27, 2022
 
