@@ -711,6 +711,10 @@ module.exports = {
                                 path: "/documentation/platform-assurance/tutorials/places-service"
                             },
                             {
+                                title: "Push Debug",
+                                path: "/documentation/platform-assurance/tutorials/push-debug-view"
+                            },
+                            {
                                 title: "On-device views",
                                 path: "/documentation/platform-assurance/tutorials/on-device-views.md"
                             },
