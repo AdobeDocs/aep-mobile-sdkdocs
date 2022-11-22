@@ -17,7 +17,7 @@ import com.adobe.marketing.mobile.CampaignClassic;
 import com.adobe.marketing.mobile.Lifecycle;
 ```
 
-<Variant platform="ios-aep" task="add" repeat="8"/>
+<Variant platform="ios-aep" task="add" repeat="9"/>
 
 1. Add the Campaign Classic and [Mobile Core](../mobile-core/index.md) libraries to your project.
 
