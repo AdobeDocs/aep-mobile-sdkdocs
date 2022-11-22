@@ -721,6 +721,10 @@ module.exports = {
                             {
                                 title: "Validation summary",
                                 path: "/documentation/platform-assurance/tutorials/validation-summary.md"
+                            },
+                            {
+                                title: "Versions",
+                                path: "/documentation/platform-assurance/tutorials/versions.md"
                             }
                         ]
                     },
