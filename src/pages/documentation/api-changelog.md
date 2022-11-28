@@ -10,13 +10,13 @@ For more information, see [Mobile Core API reference](./mobile-core/api-referenc
 
 | Experience Platform SDK | 4x SDK |
 | :--- | :--- |
-| extensionVersion | version/getVersion ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html?lang=en)) |
-| [getPrivacyStatus](./privacy-and-gdpr.md#set-and-get-privacy-status) | privacyStatus ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html?lang=en)) |
-| [setPrivacyStatus](./privacy-and-gdpr.md#set-and-get-privacy-status) | setPrivacyStatus: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html?lang=en)) |
-| [setLogLevel](getting-started/track-events.md#enable-debug-logging) | setDebugLogging: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html?lang=en)\| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html?lang=en)) |
+| [extensionVersion:](./mobile-core/configuration/api-reference.md#extensionversion) | version/getVersion ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html?lang=en)) |
+| [getPrivacyStatus:](./privacy-and-gdpr.md#set-and-get-privacy-status) | privacyStatus ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html?lang=en)) |
+| [setPrivacyStatus:](./privacy-and-gdpr.md#set-and-get-privacy-status) | setPrivacyStatus: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html?lang=en)) |
+| [setLogLevel:](getting-started/track-events.md#enable-debug-logging) | setDebugLogging: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html?lang=en)\| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html?lang=en)) |
 | [configureWithFileInPath:](./mobile-core/configuration/api-reference/#configurewithfileinpath) | overrideConfigPath: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html?lang=en)) |
-| [configureWithAppId:](./mobile-core/configuration/api-reference/#updateconfiguration) | Not applicable |
-| [updateConfiguration:](./mobile-core/configuration/api-reference/#configurewithappid) | Not applicable |
+| [configureWithAppId:](./mobile-core/configuration/api-reference/#configurewithappid) | Not applicable |
+| [updateConfiguration:](./mobile-core/configuration/api-reference/#updateconfiguration) | Not applicable |
 | [setAppGroup:](./mobile-core/api-reference.md#setappgroup) | setAppGroup: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/ios-ext/ios-ext.html?lang=en)) |
 | [trackState:data:](./mobile-core/api-reference.md#track-app-states-and-views) | trackState:data: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/states.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/states.html?lang=en)) |
 | [trackAction:data:](./mobile-core/api-reference.md#track-app-states-and-views) | trackAction:data: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/actions.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/actions.html?lang=en)) |
@@ -77,9 +77,9 @@ For more information, see [Identity API reference](./mobile-core/identity/api-re
 | [syncIdentifiers:](./mobile-core/identity/api-reference.md#syncidentifiers) | visitorSyncIdentifiers ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/exp-cloud-ios/mc-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/mc-methods.html?lang=en)) |
 | [syncIdentifiers:authentication:](./mobile-core/identity/api-reference.md#syncidentifiers-overloaded) | visitorSyncIdentifiers:authenticationState: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/exp-cloud-ios/mc-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/mc-methods.html?lang=en)) |
 | [syncIdentifier:identifier:authentication:](./mobile-core/identity/api-reference.md#syncidentifier) | visitorSyncIdentifiersWithType:identifier:authenticationState: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/exp-cloud-ios/mc-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/mc-methods.html?lang=en)) |
-| [getIdentifiers](./mobile-core/identity/api-reference.md#getidentifiers) | visitorGetIDs ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/exp-cloud-ios/mc-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/mc-methods.html?lang=en)) |
+| [getIdentifiers:](./mobile-core/identity/api-reference.md#getidentifiers) | visitorGetIDs ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/exp-cloud-ios/mc-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/mc-methods.html?lang=en)) |
 | [appendToURL:withCallback:](./mobile-core/identity/api-reference.md#appendtourl-appendvisitorinfoforurl) | visitorAppendToURL: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/exp-cloud-ios/mc-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/mc-methods.html?lang=en)) |
-| [getUrlVariables](./mobile-core/identity/api-reference.md#geturlvariables) | visitorGetUrlVariablesAsync: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/sdk-reference-android/hybrid-app.html?lang=en)) |
+| [getUrlVariables:](./mobile-core/identity/api-reference.md#geturlvariables) | visitorGetUrlVariablesAsync: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/sdk-reference-android/hybrid-app.html?lang=en)) |
 
 ## Adobe Analytics extension APIs <a id="audience-manager-extension-apis"></a>
 
@@ -94,7 +94,7 @@ For more information, see [Analytics API reference](./adobe-analytics/api-refere
 | [getTrackingIdentifier:](./adobe-analytics/api-reference.md#gettrackingidentifier) | trackingIdentifier ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html?lang=en)) |
 | [sendQueuedHits:](./adobe-analytics/api-reference.md#sendqueuedhits) | trackingSendQueuedHits ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/analytics-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/analytics-methods.html?lang=en)) |
 | [clearQueue:](./adobe-analytics/api-reference.md#clearqueue) | trackingClearQueue ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/analytics-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/analytics-methods.html?lang=en)) |
-| [getQueueSize](./adobe-analytics/api-reference.md#getqueuesize) | trackingGetQueueSize ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/analytics-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/analytics-methods.html?lang=en)) |
+| [getQueueSize:](./adobe-analytics/api-reference.md#getqueuesize) | trackingGetQueueSize ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/analytics-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/analytics-methods.html?lang=en)) |
 
 ## Adobe Audience Manager extension APIs <a id="audience-manager-extension-apis"></a>
 
@@ -104,8 +104,8 @@ For more information, see [Audience Manager Extension API Reference](./adobe-aud
 
 | Experience Platform SDK | 4x SDK ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/aam-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/audience-manager-android/c-audience-manager-methods.html?lang=en)) |
 | :--- | :--- |
-| [extensionVersion](./adobe-audience-manager/api-reference.md#extensionversion) | Not applicable |
-| [​getVisitorProfile​](./adobe-audience-manager/api-reference.md#get-visitor-profile) | audienceVisitorProfile |
+| [extensionVersion:](./adobe-audience-manager/api-reference.md#extensionversion) | Not applicable |
+| [​getVisitorProfile:​](./adobe-audience-manager/api-reference.md#get-visitor-profile) | audienceVisitorProfile |
 | [​signalWithData:callback:​](./adobe-audience-manager/api-reference.md#send-signals-to-audience-manager) | audienceSignalWithData:callback |
 | [​reset​](./adobe-audience-manager/api-reference.md#reset-identifiers-and-profiles) | audienceReset |
 
