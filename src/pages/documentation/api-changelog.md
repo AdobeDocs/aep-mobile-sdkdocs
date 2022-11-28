@@ -14,10 +14,10 @@ For more information, see [Mobile Core API reference](./mobile-core/api-referenc
 | [getPrivacyStatus](./privacy-and-gdpr.md#set-and-get-privacy-status) | privacyStatus ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html?lang=en)) |
 | [setPrivacyStatus](./privacy-and-gdpr.md#set-and-get-privacy-status) | setPrivacyStatus: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html?lang=en)) |
 | [setLogLevel](getting-started/track-events.md#enable-debug-logging) | setDebugLogging: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html?lang=en)\| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html?lang=en)) |
-| [configureWithFileInPath:](./api-changelog.md) | overrideConfigPath: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html?lang=en)) |
-| [configureWithAppId:](./api-changelog.md) | Not applicable |
-| [updateConfiguration:](./api-changelog.md) | Not applicable |
-| setAppGroup: | setAppGroup: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/ios-ext/ios-ext.html?lang=en)) |
+| [configureWithFileInPath:](./mobile-core/configuration/api-reference/#configurewithfileinpath) | overrideConfigPath: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html?lang=en)) |
+| [configureWithAppId:](./mobile-core/configuration/api-reference/#updateconfiguration) | Not applicable |
+| [updateConfiguration:](./mobile-core/configuration/api-reference/#configurewithappid) | Not applicable |
+| [setAppGroup:](./mobile-core/api-reference.md#setappgroup) | setAppGroup: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/ios-ext/ios-ext.html?lang=en)) |
 | [trackState:data:](./mobile-core/api-reference.md#track-app-states-and-views) | trackState:data: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/states.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/states.html?lang=en)) |
 | [trackAction:data:](./mobile-core/api-reference.md#track-app-states-and-views) | trackAction:data: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/actions.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/actions.html?lang=en)) |
 | [collectPII:](./mobile-core/api-reference.md#collect-pii) | collectPII: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/postbacks/c-pii-postbacks.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/postbacks/c-pii-postbacks.html?lang=en)) |
@@ -104,7 +104,7 @@ For more information, see [Audience Manager Extension API Reference](./adobe-aud
 
 | Experience Platform SDK | 4x SDK ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/aam-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/audience-manager-android/c-audience-manager-methods.html?lang=en)) |
 | :--- | :--- |
-| extensionVersion | Not applicable |
+| [extensionVersion](./adobe-audience-manager/api-reference.md#extensionversion) | Not applicable |
 | [​getVisitorProfile​](./adobe-audience-manager/api-reference.md#get-visitor-profile) | audienceVisitorProfile |
 | [​signalWithData:callback:​](./adobe-audience-manager/api-reference.md#send-signals-to-audience-manager) | audienceSignalWithData:callback |
 | [​reset​](./adobe-audience-manager/api-reference.md#reset-identifiers-and-profiles) | audienceReset |
@@ -123,7 +123,7 @@ For more information see [Target API reference](./adobe-target/api-reference.md)
 
 ### Supported APIs
 
-| Experience Platform SDK | 4x SDK (iOS | Android) |
+| Experience Platform SDK | 4x SDK (iOS \| Android) |
 | :--- | :--- |
 | getThirdPartyId: | targetThirdPartyID |
 | setThirdPartyId: | targetSetThirdPartyID |
