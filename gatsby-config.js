@@ -743,7 +743,7 @@ module.exports = {
                 ]
             },
             {
-                title: "Adobe Journey Optimizer - in-app messaging",
+                title: "Adobe Journey Optimizer - in-app messaging (BETA)",
                 path: "/documentation/iam",
                 pages: [
                     {
