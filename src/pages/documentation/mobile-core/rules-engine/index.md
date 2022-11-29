@@ -35,7 +35,7 @@ An exception is defined as a NOT condition, and this condition excludes a specif
 
 ## Actions (Then)
 
-An action, also known as a consequence, triggers an event after a rule's events have occurred, and the conditions in the rule have evaluated to `true`. A tag rule can trigger as many discrete actions as you want. For example, a rule can be triggered to set and send a data element’s value to Adobe Analytics and send the same set of data to a third-party extension. You do not need to create separate rules for each extension or tag.
+An action, also known as a consequence, triggers an event after a rule's events have occurred, and the conditions in the rule have evaluated to `true`. A tag rule can trigger as many discrete actions as you want. For example, a rule can be triggered to set and send a data element's value to Adobe Analytics and send the same set of data to a third-party extension. You do not need to create separate rules for each extension or tag.
 
 Rules include data elements, events, conditions, and actions that are provided by the relevant extensions. These rules can be modified at any time and are saved and published as a new library that the SDK downloads as the latest set of rules.
 
@@ -55,7 +55,9 @@ On older versions of Experience Platform Mobile SDKs (prior to iOS version 1.6.2
 
 In addition to the remote configuration, you can also include a rules zip file in your app bundle to be used by the SDK before rules have been downloaded from the Data Collection UI. To add bundled rules to your app, follow these steps:
 1. Download the rules zip file using the following URL: `https://assets.adobedtm.com/PASTE-ENVIRONMENT-ID-rules.zip` replacing `PASTE-ENVIRONMENT-ID` with your mobile property environment ID. 
-2. Rename the zip file to "ADBMobileConfig-rules.zip" and place the zip anywhere that it is accessible in your app bundle.
+2. Rename the zip file to "ADBMobileConfig-rules.zip" and place the it in the relevant location for your device:
+- IOS: Place the zip anywhere that it is accessible in your app bundle.
+- Android: Place the zip file in the assets folder.
 
 For more information about the technical details of the Rules Engine, please read the [technical details guide](./technical-details).
 
