@@ -51,7 +51,7 @@ Conditions can be one match or a group of matches.
 
 On older versions of Experience Platform Mobile SDKs (prior to iOS version 1.6.2, Android version 1.5.4), after the first launch of the app, it always takes some time to download the rules from the remote servers. During this time, Rules Engine won't be able to evaluate the first several events until the rules are loaded. Starting from iOS version 1.6.2 and Android version 1.5.4, we add the capability to cache the events before the rules are downloaded and will re-evaluate those events afterward. This change is mainly to enable the trigger of Postback based on the install event.
 
-## Using Bundled Rules (iOS AEP 3.x Only)
+## Using Bundled Rules
 
 In addition to the remote configuration, you can also include a rules zip file in your app bundle to be used by the SDK before rules have been downloaded from the Data Collection UI. To add bundled rules to your app, follow these steps:
 1. Download the rules zip file using the following URL: `https://assets.adobedtm.com/PASTE-ENVIRONMENT-ID-rules.zip` replacing `PASTE-ENVIRONMENT-ID` with your mobile property environment ID. 
