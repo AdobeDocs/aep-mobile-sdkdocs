@@ -22,7 +22,7 @@ This feature allows you to create, edit, or delete validation functions for your
 2. Enter a **name** to identify the validation, then provide a **category** and a **description**.
 3. Edit the code in the editor to validate the events for your Assurance session.
 
-The validation function will automatically be tested after any text changes in the code editor. After you have tested your function, you can click **Publish** to save your validation.
+Once the function tests are complete, select **Publish** to save your validation.
 
 ### Event Definition
 
@@ -57,7 +57,7 @@ The validation function is expected to return an object that contains the follow
 
 ## Viewing Results
 
-The results of the function will be displayed in the results section just below the code editor. When a validation result is `unknown` or `not matched` and the `events` array has one or more `uuids`, then those events will be highlighted in the timeline with the following colors:
+The results of the function are displayed in the results section below the code editor. If the validation result is `unknown` or `not matched` and the `events` array has one or more `uuids`, the events will be highlighted in the timeline with the following colors:
 * Green - matched
 * Orange - unknown
 * Red - not matched
@@ -70,4 +70,4 @@ You can add `console.log()` in your function to print items to the developer con
 
 If an error occurs in the JavaScript code editor, an error status is displayed along with the reason.
 
-To learn more about validations, you can visit the [Adobe Experience Platform Assurance Validations](https://github.com/adobe/griffon-validation-plugins) GitHub. There you can find examples from validations owned by Adobe, as well as the [wiki](https://github.com/adobe/griffon-validation-plugins/wiki) that describes validations in more detail.
+To learn more about validations, please visit the [Adobe Experience Platform Assurance Validations](https://github.com/adobe/griffon-validation-plugins) GitHub. There you will find examples of validations owned by Adobe. See the [wiki](https://github.com/adobe/griffon-validation-plugins/wiki) for more detailed descriptions of validations.
