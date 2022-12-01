@@ -3,7 +3,7 @@ import TrackBeaconIos from './tabs/track-beacon/track-beacon/ios.md'
 import ClearBeaconAndroid from './tabs/track-beacon/clear-beacon/android.md'
 import ClearBeaconIos from './tabs/track-beacon/clear-beacon/ios.md'
 
-# Tracking Beacons
+# Tracking beacons
 
 ## Emulate the trackBeacon call from the v4 SDKs
 
@@ -67,4 +67,3 @@ Before you can use beacon data in your actions, create a data element for each v
 After creating a data element, you can use this data element as a token replacement in our actions. The graphic below shows an action that sends data to Adobe Analytics and attaches the `beacon.major` data element as additional context data:
 
 ![](./assets/track-beacon/beacon-token-replacement.png)
-

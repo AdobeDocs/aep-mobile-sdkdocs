@@ -930,33 +930,37 @@ module.exports = {
                                 path: "documentation/user-guides/getting-started-with-platform/overview"
                             },
                             {
-                                title: "Rules and XDM events",
-                                path: "documentation/user-guides/getting-started-with-platform/rules-and-xdm-events"
-                            },
-                            {
                                 title: "Sample XDM implementation",
                                 path: "documentation/user-guides/getting-started-with-platform/sample-xdm-implementation"
+                            },
+                            {
+                                title: "Rules and XDM events",
+                                path: "documentation/user-guides/getting-started-with-platform/rules-and-xdm-events"
                             }
                         ]
                     },
                     {
-                        title: "App extension",
-                        path: "documentation/user-guides/app-extension"
+                        title: "Attach data to SDK events",
+                        path: "documentation/user-guides/attach-data"
                     },
                     {
-                        title: "Modify data",
+                        title: "Modify data in SDK events",
                         path: "documentation/user-guides/modify-data"
-                    },
-                    {
-                        title: "Rules engine integration",
-                        path: "documentation/user-guides/rules-engine-integration.md"
                     },
                     {
                         title: "Tags data elements",
                         path: "documentation/user-guides/tags-data-elements"
                     },
                     {
-                        title: "Track beacon",
+                        title: "Signal and rules engine integration",
+                        path: "documentation/user-guides/rules-engine-integration.md"
+                    },
+                    {
+                        title: "iOS App Extensions",
+                        path: "documentation/user-guides/app-extension"
+                    },
+                    {
+                        title: "Tracking beacons",
                         path: "documentation/user-guides/track-beacon"
                     }
                 ]
