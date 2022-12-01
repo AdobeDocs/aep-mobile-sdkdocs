@@ -699,10 +699,6 @@ module.exports = {
                                 path: "/documentation/platform-assurance/tutorials/adobe-analytics-streaming-media.md"
                             },
                             {
-                                title: "Custom validation",
-                                path: "/documentation/platform-assurance/tutorials/custom-validation.md"
-                            },
-                            {
                                 title: "In-App Messaging",
                                 path: "/documentation/platform-assurance/tutorials/in-app-messaging.md"
                             },
@@ -719,7 +715,7 @@ module.exports = {
                                 path: "/documentation/platform-assurance/tutorials/on-device-views.md"
                             },
                             {
-                                title: "Validation summary",
+                                title: "Validation Editor",
                                 path: "/documentation/platform-assurance/tutorials/validation-summary.md"
                             },
                             {
