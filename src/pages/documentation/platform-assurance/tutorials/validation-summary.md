@@ -8,8 +8,8 @@ You may use the Validation Editor feature to quickly and easily manage JavaScrip
 
 To use this view, complete the following steps:
 
-1. [Setup Adobe Experience Platform Assurance](../set-up-project-griffon.md)
-2. [Create](./#creating-sessions) and [connect](./#connecting-to-a-session) to a Assurance session
+1. [Set up Adobe Experience Platform Assurance](../set-up-project-griffon.md)
+2. [Create](../index.md#creating-sessions) and [connect](../index.md#connecting-to-a-session) to a Assurance session
 3. In the **Home** view, select **Validation Editor**
 
 ![Validation-Editor-Screen-Shot](https://user-images.githubusercontent.com/6597105/198680074-f548a646-6f2f-4a65-82fd-0f1687d869bf.png)
