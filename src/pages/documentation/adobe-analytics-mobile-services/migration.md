@@ -16,12 +16,8 @@ For more information, please read the [Mobile Services API reference](./api-refe
 
 ### trackAdobeDeepLink
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=track-adobe-deep-link"/>
-
-ACP 2.x (Objective-C)
-
-<Tabs query="platform=acp-objc&api=track-adobe-deep-link"/>

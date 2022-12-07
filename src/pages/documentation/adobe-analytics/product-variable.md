@@ -8,27 +8,23 @@ Since the products variable cannot be set by processing rules, you need to set s
 
 To set the products variable, set a context data key to `&&products`, and set the value to the products or merchandising variable. For more information, see the [implementing a merchandising variable tutorial](https://experienceleague.adobe.com/docs/analytics/components/dimensions/evar-merchandising.html).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="5"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=set-variable"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=set-variable"/>
 
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=set-variable"/>
-
-React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&task=set-variable"/>
 
 Flutter
 
-<Tabs query="platform=flutter&task=set-variable"/>
+<Tabs query="platform=flutter&task=set-variable"/> -->
 
 _`products`_ is set directly on the image request, and the other variables are set as context data. All context data variables must be mapped by using processing rules:
 
@@ -40,27 +36,23 @@ You do **not** need to map the `products` variable using processing rules becaus
 
 The following code samples show an example of the products variable with merchandising eVars and product-specific events.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="5"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=products"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=products"/>
 
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=products"/>
-
-React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&task=products"/>
 
 Flutter
 
-<Tabs query="platform=flutter&task=products"/>
+<Tabs query="platform=flutter&task=products"/> -->
 
 <InlineAlert variant="info" slots="text"/> 
 

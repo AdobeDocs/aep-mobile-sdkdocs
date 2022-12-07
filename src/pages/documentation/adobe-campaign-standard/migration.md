@@ -16,7 +16,7 @@ The AEPCampaign extension is implemented purely in Swift and is compatible with 
 
 ### extensionVersion
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 AEP 3.x (Swift)
 
@@ -26,14 +26,9 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=extension-version"/>
 
-ACP 1.x (Objective-C)
-
-<Tabs query="platform=acp-objc&api=extension-version"/>
-
-
 ### registerExtension
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 AEP 3.x (Swift)
 
@@ -43,13 +38,9 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=register-extension"/>
 
-ACP 1.x (Objective-C)
-
-<Tabs query="platform=acp-objc&api=register-extension"/>
-
 ### resetLinkageFields
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 AEP 3.x (Swift)
 
@@ -59,13 +50,9 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=reset-linkage-fields"/>
 
-ACP 1.x (Objective-C)
-
-<Tabs query="platform=acp-objc&api=reset-linkage-fields"/>
-
 ### setLinkageFields
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 AEP 3.x (Swift)
 
@@ -74,7 +61,3 @@ AEP 3.x (Swift)
 AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=set-linkage-fields"/>
-
-ACP 1.x (Objective-C)
-
-<Tabs query="platform=acp-objc&api=set-linkage-fields"/>

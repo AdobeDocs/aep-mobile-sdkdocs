@@ -50,7 +50,7 @@ Android
 
 <Tabs query="platform=android&task=install"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&task=install"/>
 
@@ -62,7 +62,7 @@ Android
 
 <Tabs query="platform=android&task=register"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&task=register"/>
 
@@ -82,7 +82,7 @@ Android
 
 <Tabs query="platform=android&task=decisionscope"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&task=decisionscope"/>
 
@@ -94,7 +94,7 @@ Android
 
 <Tabs query="platform=android&task=encodedscope"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&task=encodedscope"/>
 
@@ -110,7 +110,7 @@ Android
 
 <Tabs query="platform=android&task=target-location"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&task=target-location"/>
 
@@ -124,7 +124,7 @@ Android
 
 <Tabs query="platform=android&task=target-parameters"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&task=target-parameters"/>
 
@@ -147,7 +147,7 @@ Android
 
 <Tabs query="platform=android&task=target-tpid"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&task=target-tpid"/>
 
@@ -247,7 +247,7 @@ Android
 
 <Tabs query="platform=android&task=proposition-tracking-offer"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&task=proposition-tracking-offer"/>
 
@@ -259,7 +259,7 @@ Android
 
 <Tabs query="platform=android&task=send-event-offer"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&task=send-event-offer"/>
 
@@ -273,7 +273,7 @@ Android
 
 <Tabs query="platform=android&task=proposition-tracking-edge"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&task=proposition-tracking-edge"/>
 
@@ -285,7 +285,7 @@ Android
 
 <Tabs query="platform=android&task=send-event-edge"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&task=send-event-edge"/>
 

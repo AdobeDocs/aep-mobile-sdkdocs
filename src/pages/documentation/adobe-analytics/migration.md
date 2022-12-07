@@ -16,7 +16,7 @@ The AEPAnalytics extension is implemented purely in Swift and is compatible with
 
 ### clearQueue
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 AEP 3.x (Swift)
 
@@ -26,13 +26,9 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=clear-queue"/>
 
-ACP 2.x (Objective-C)
-
-<Tabs query="platform=acp-objc&api=clear-queue"/>
-
 ### extensionVersion
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 AEP 3.x (Swift)
 
@@ -42,13 +38,9 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=extension-version"/>
 
-ACP 2.x (Objective-C)
-
-<Tabs query="platform=acp-objc&api=extension-version"/>
-
 ### getQueueSize
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 AEP 3.x (Swift)
 
@@ -58,13 +50,9 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=get-queue-size"/>
 
-ACP 2.x (Objective-C)
-
-<Tabs query="platform=acp-objc&api=get-queue-size"/>
-
 ### getTrackingIdentifier
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 AEP 3.x (Swift)
 
@@ -74,13 +62,9 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=get-tracking-identifier"/>
 
-ACP 2.x (Objective-C)
-
-<Tabs query="platform=acp-objc&api=get-tracking-identifier"/>
-
 ### getVisitorIdentifier
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 AEP 3.x (Swift)
 
@@ -90,13 +74,9 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=get-visitor-identifier"/>
 
-ACP 2.x (Objective-C)
-
-<Tabs query="platform=acp-objc&api=get-visitor-identifier"/>
-
 ### sendQueuedHits
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 AEP 3.x (Swift)
 
@@ -106,13 +86,9 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=send-queued-hits"/>
 
-ACP 2.x (Objective-C)
-
-<Tabs query="platform=acp-objc&api=send-queued-hits"/>
-
 ### setVisitorIdentifier
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 AEP 3.x (Swift)
 
@@ -121,9 +97,3 @@ AEP 3.x (Swift)
 AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=set-visitor-identifier"/>
-
-ACP 2.x (Objective-C)
-
-<Tabs query="platform=acp-objc&api=set-visitor-identifier"/>
-
-
