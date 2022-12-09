@@ -6,7 +6,7 @@ import Tabs from './tabs/api-reference.md'
 
 Returns the current version of the AEP Assurance extension.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="7"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
@@ -16,25 +16,13 @@ iOS
 
 <Tabs query="platform=ios&api=extension-version"/>
 
-React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&api=extension-version"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=extension-version"/>
-
-Cordova
-
-<Tabs query="platform=cordova&api=extension-version"/>
-
-Unity
-
-<Tabs query="platform=unity&api=extension-version"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&api=extension-version"/>
+<Tabs query="platform=flutter&api=extension-version"/> -->
 
 ## startSession
 
@@ -54,22 +42,10 @@ iOS
 
 <Tabs query="platform=ios&api=start-session"/>
 
-React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&api=start-session"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=start-session"/>
-
-Cordova
-
-<Tabs query="platform=cordova&api=start-session"/>
-
-Unity
-
-<Tabs query="platform=unity&api=start-session"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&api=start-session"/>
+<Tabs query="platform=flutter&api=start-session"/> -->

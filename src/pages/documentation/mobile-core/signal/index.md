@@ -24,40 +24,23 @@ For more information about creating and configuring a rule in the Data Collectio
 
 ## Add the Signal extension to your app
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=add"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=add"/>
 
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=add"/>
-
-React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&task=add"/>
 
 Flutter
 
-<Tabs query="platform=flutter&task=add"/>
-
-Cordova
-
-<Tabs query="platform=cordova&task=add"/>
-
-Unity
-
-<Tabs query="platform=unity&task=add"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&task=add"/>
-
+<Tabs query="platform=flutter&task=add"/> -->
 
 ## Register the Signal extension
 
@@ -65,39 +48,23 @@ The `registerExtension()` API registers the Signal extension with the Mobile Cor
 
 To register the Identity extension, use the following code sample:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=register"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=register"/>
 
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=register"/>
-
-React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&task=register"/>
 
 Flutter
 
-<Tabs query="platform=flutter&task=register"/>
-
-Cordova
-
-<Tabs query="platform=cordova&task=register"/>
-
-Unity
-
-<Tabs query="platform=unity&task=register"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&task=register"/>
+<Tabs query="platform=flutter&task=register"/> -->
 
 ## Implement the Mobile SDK to send PII data to external destinations
 

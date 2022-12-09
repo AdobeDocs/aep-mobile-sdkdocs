@@ -26,19 +26,15 @@ The following instructions are for configuring an application using Adobe Experi
 
 When using the [`setAdvertisingIdentifier`](./api-reference.md#setadvertisingidentifier) API, see the setup guide for [AEP Consent for Edge Network](../consent-for-edge-network/index.md) for instructions on setting up the extension and profile schema for proper usage.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=download"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=download"/>
-
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=download"/>
 
 ### Register the Identity extension with Mobile Core
 
@@ -48,7 +44,7 @@ Android
 
 <Tabs query="platform=android&task=register"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=register"/>
 
