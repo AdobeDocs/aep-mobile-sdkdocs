@@ -16,7 +16,7 @@ The AEPAudience extension is implemented purely in Swift and is compatible with 
 
 ### extensionVersion
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 AEP 3.x (Swift)
 
@@ -26,9 +26,14 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=extension-version"/>
 
+
+ACP 2.x (Objective-C)
+
+<Tabs query="platform=acp-objc&api=extension-version"/>
+
 ### getVisitorProfile
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 AEP 3.x (Swift)
 
@@ -38,9 +43,14 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=get-visitor-profile"/>
 
+
+ACP 2.x (Objective-C)
+
+<Tabs query="platform=acp-objc&api=get-visitor-profile"/>
+
 ### reset
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 AEP 3.x (Swift)
 
@@ -50,9 +60,14 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=reset"/>
 
+
+ACP 2.x (Objective-C)
+
+<Tabs query="platform=acp-objc&api=reset"/>
+
 ### signalWithData
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 AEP 3.x (Swift)
 
@@ -61,3 +76,10 @@ AEP 3.x (Swift)
 AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=signal-with-data"/>
+
+ACP 2.x (Objective-C)
+
+<Tabs query="platform=acp-objc&api=signal-with-data"/>
+
+
+

@@ -16,7 +16,7 @@ The AEPCampaignClassic extension is implemented purely in Swift and is compatibl
 
 ### extensionVersion
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 AEP 3.x (Swift)
 
@@ -26,9 +26,13 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=extension-version"/>
 
+ACP 2.x (Objective-C)
+
+<Tabs query="platform=acp-objc&api=extension-version"/>
+
 ### registerExtension
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 AEP 3.x (Swift)
 
@@ -38,9 +42,13 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=register-extension"/>
 
+ACP 2.x (Objective-C)
+
+<Tabs query="platform=acp-objc&api=register-extension"/>
+
 ### registerDevice
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 AEP 3.x (Swift)
 
@@ -50,9 +58,13 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=register-device"/>
 
+ACP 2.x (Objective-C)
+
+<Tabs query="platform=acp-objc&api=register-device"/>
+
 ### trackNotificationClick
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 AEP 3.x (Swift)
 
@@ -62,9 +74,13 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=track-notification-click"/>
 
+ACP 2.x (Objective-C)
+
+<Tabs query="platform=acp-objc&api=track-notification-click"/>
+
 ### trackNotificationReceive
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 AEP 3.x (Swift)
 
@@ -73,3 +89,7 @@ AEP 3.x (Swift)
 AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=track-notification-receive"/>
+
+ACP 2.x (Objective-C)
+
+<Tabs query="platform=acp-objc&api=track-notification-receive"/>

@@ -21,7 +21,7 @@ The AEPTarget extension is implemented purely in Swift and is compatible with th
 
 ### clearPrefetchCache
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 AEP 3.x (Swift)
 
@@ -31,9 +31,13 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=clear-prefetch-cache"/>
 
+ACP 2.x (Objective-C)
+
+<Tabs query="platform=acp-objc&api=clear-prefetch-cache"/>
+
 ### clickedLocation
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 AEP 3.x (Swift)
 
@@ -43,9 +47,13 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=clicked-location"/>
 
+ACP 2.x (Objective-C)
+
+<Tabs query="platform=acp-objc&api=clicked-location"/>
+
 ### extensionVersion
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 AEP 3.x (Swift)
 
@@ -55,9 +63,13 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=extension-version"/>
 
+ACP 2.x (Objective-C)
+
+<Tabs query="platform=acp-objc&api=extension-version"/>
+
 ### getThirdPartyId
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 AEP 3.x (Swift)
 
@@ -67,9 +79,13 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=get-third-party-id"/>
 
+ACP 2.x (Objective-C)
+
+<Tabs query="platform=acp-objc&api=get-third-party-id"/>
+
 ### getTntId
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 AEP 3.x (Swift)
 
@@ -79,9 +95,13 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=get-tnt-id"/>
 
+ACP 2.x (Objective-C)
+
+<Tabs query="platform=acp-objc&api=get-tnt-id"/>
+
 ### prefetchContent
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 AEP 3.x (Swift)
 
@@ -91,9 +111,13 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=prefetch-content"/>
 
+ACP 2.x (Objective-C)
+
+<Tabs query="platform=acp-objc&api=prefetch-content"/>
+
 ### registerExtension
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 AEP 3.x (Swift)
 
@@ -103,9 +127,13 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=register-extension"/>
 
+ACP 2.x (Objective-C)
+
+<Tabs query="platform=acp-objc&api=register-extension"/>
+
 ### retrieveLocationContent
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 AEP 3.x (Swift)
 
@@ -115,9 +143,13 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=retrieve-location-content"/>
 
+ACP 2.x (Objective-C)
+
+<Tabs query="platform=acp-objc&api=retrieve-location-content"/>
+
 ### setPreviewRestartDeepLink
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 AEP 3.x (Swift)
 
@@ -127,9 +159,13 @@ AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=set-preview-restart-deep-link"/>
 
+ACP 2.x (Objective-C)
+
+<Tabs query="platform=acp-objc&api=set-preview-restart-deep-link"/>
+
 ### setThirdPartyId
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 AEP 3.x (Swift)
 
@@ -138,3 +174,8 @@ AEP 3.x (Swift)
 AEP 3.x (Objective-C)
 
 <Tabs query="platform=aep-objc&api=set-third-party-id"/>
+
+ACP 2.x (Objective-C)
+
+<Tabs query="platform=acp-objc&api=set-third-party-id"/>
+
