@@ -57,7 +57,3 @@ iOS
 <!-- React Native
 
 <Tabs query="platform=react-native&task=register"/>
-
-Flutter
-
-<Tabs query="platform=flutter&task=register"/> -->

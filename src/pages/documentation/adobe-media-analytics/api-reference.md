@@ -20,10 +20,6 @@ iOS
 
 <Tabs query="platform=ios-aep&api=extension-version"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&api=extension-version"/> -->
-
 ### createTracker
 
 Creates a media tracker instance that tracks the playback session. The tracker created should be used to track the streaming content and it sends periodic pings to the media analytics backend.
@@ -41,10 +37,6 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=create-tracker"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&api=create-tracker"/> -->
 
 ### createTrackerWithConfig
 
@@ -69,10 +61,6 @@ iOS
 
 <Tabs query="platform=ios-aep&api=create-tracker-with-config"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&api=create-tracker-with-config"/> -->
-
 ### createMediaObject
 
 Creates an instance of the Media object.
@@ -95,10 +83,6 @@ iOS
 
 <Tabs query="platform=ios-aep&api=create-media-object"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&api=create-media-object"/> -->
-
 ### createAdBreakObject
 
 Creates an instance of the AdBreak object.
@@ -118,10 +102,6 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=create-ad-break-object"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&api=create-ad-break-object"/> -->
 
 ### createAdObject
 
@@ -144,10 +124,6 @@ iOS
 
 <Tabs query="platform=ios-aep&api=create-ad-object"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&api=create-ad-object"/> -->
-
 ### createChapterObject
 
 Creates an instance of the Chapter object.
@@ -168,10 +144,6 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=create-chapter-object"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&api=create-chapter-object"/> -->
 
 ### createQoEObject
 
@@ -198,10 +170,6 @@ iOS
 
 <Tabs query="platform=ios-aep&api=create-qoe-object"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&api=create-qoe-object"/> -->
-
 ### createStateObject
 
 Creates an instance of the Player State object.
@@ -219,10 +187,6 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=create-state-object"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&api=create-state-object"/> -->
 
 ## Media tracker API reference
 
@@ -245,10 +209,6 @@ iOS
 
 <Tabs query="platform=ios-aep&api=track-session-start"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&api=track-session-start"/> -->
-
 ### trackPlay
 
 Tracks the media play, or resume, after a previous pause.
@@ -262,10 +222,6 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=track-play"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&api=track-play"/> -->
 
 ### trackPause
 
@@ -281,10 +237,6 @@ iOS
 
 <Tabs query="platform=ios-aep&api=track-pause"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&api=track-pause"/> -->
-
 ### trackComplete
 
 Tracks media complete. Call this method only when the media has been completely viewed.
@@ -299,10 +251,6 @@ iOS
 
 <Tabs query="platform=ios-aep&api=track-complete"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&api=track-complete"/> -->
-
 ### trackSessionEnd
 
 Tracks the end of a viewing session. Call this method even if the user does not view the media to completion.
@@ -316,10 +264,6 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=track-session-end"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&api=track-session-end"/> -->
 
 ### trackError
 
@@ -338,10 +282,6 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=track-error"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&api=track-error"/> -->
 
 ### trackEvent
 
@@ -363,10 +303,6 @@ iOS
 
 <Tabs query="platform=ios-aep&api=track-event"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&api=track-event"/> -->
-
 ### updateCurrentPlayhead
 
 Provides a media tracker with the current media playhead. For accurate tracking, call this method multiple times when the playhead changes.
@@ -384,10 +320,6 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=update-current-playhead"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&api=update-current-playhead"/> -->
 
 ### updateQoEObject
 
@@ -407,10 +339,6 @@ iOS
 
 <Tabs query="platform=ios-aep&api=update-qoe-object"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&api=update-qoe-object"/> -->
-
 ## Media constants
 
 ### Media type
@@ -427,10 +355,6 @@ iOS
 
 <Tabs query="platform=ios-aep&api=media-type"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&api=media-type"/> -->
-
 ### Stream type
 
 Defines the stream type of the content that is currently tracked.
@@ -444,10 +368,6 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=stream-type"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&api=stream-type"/> -->
 
 ### Standard video constants
 
@@ -463,10 +383,6 @@ iOS
 
 <Tabs query="platform=ios-aep&api=standard-video-constants"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&api=standard-video-constants"/> -->
-
 ### Standard audio constants
 
 Defines the standard metadata keys for audio streams.
@@ -480,10 +396,6 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=standard-audio-constants"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&api=standard-audio-constants"/> -->
 
 ### Standard ad constants
 
@@ -499,10 +411,6 @@ iOS
 
 <Tabs query="platform=ios-aep&api=standard-ad-constants"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&api=standard-ad-constants"/> -->
-
 ### Player state constants
 
 Defines some common Player State constants.
@@ -516,10 +424,6 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=player-state-constants"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&api=player-state-constants"/> -->
 
 ### Media events
 
@@ -535,10 +439,6 @@ iOS
 
 <Tabs query="platform=ios-aep&api=media-events"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&api=media-events"/> -->
-
 ### Media resume
 
 Constant to denote that the current tracking session is resuming a previously closed session. This information **must** be provided when starting a tracking session.
@@ -552,7 +452,3 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=media-resume"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&api=media-resume"/> -->

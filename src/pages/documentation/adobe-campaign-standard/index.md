@@ -73,10 +73,6 @@ iOS
 
 <Tabs query="platform=ios-aep&task=add"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&task=add"/> -->
-
 ### Register the Campaign Standard extension with Mobile Core
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
@@ -88,10 +84,6 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&task=register"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&task=register"/> -->
 
 ### Initialize the SDK and set up tracking
 
@@ -126,10 +118,6 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&task=push-messaging"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&task=push-messaging"/> -->
 
 ## Tracking local and push notification message interactions
 

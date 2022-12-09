@@ -18,14 +18,6 @@ iOS
 
 <Tabs query="platform=ios-aep&api=extension-version"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&api=extension-version"/>
-
-Flutter
-
-<Tabs query="platform=flutter&api=extension-version"/> -->
-
 ## getVisitorProfile
 
 This API returns the most recently obtained visitor profile. The visitor profile is saved in the SDK's local storage for access across multiple launches of your app. If no audience signal has been sent before, when this API is called, a null value is returned.
@@ -40,10 +32,6 @@ iOS
 
 <Tabs query="platform=ios-aep&api=get-visitor-profile"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&api=get-visitor-profile"/> -->
-
 ## registerExtension
 
 This API registers an extension class that was derived from `ACPExtension` with a unique name. This call validates the parameters to ensure that the name is not empty, the name is unique, and that the parent class is `ACPExtension`.
@@ -57,10 +45,6 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=register-extension"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&api=register-extension"/> -->
 
 ## reset
 
@@ -79,10 +63,6 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=reset"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&api=reset"/> -->
 
 ## signalWithData
 
@@ -103,7 +83,3 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=signal-with-data"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&api=signal-with-data"/> -->

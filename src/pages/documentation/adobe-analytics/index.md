@@ -112,14 +112,6 @@ iOS
 
 <Tabs query="platform=ios-aep&task=add"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&task=add"/>
-
-Flutter
-
-<Tabs query="platform=flutter&task=add"/> -->
-
 ## Register Analytics with Mobile Core
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
@@ -131,14 +123,6 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&task=register"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&task=register"/>
-
-Flutter
-
-<Tabs query="platform=flutter&task=register"/> -->
 
 ## Send Lifecycle metrics to Analytics
 
@@ -180,14 +164,6 @@ iOS
 
 <Tabs query="platform=ios-aep&task=serialize"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&task=serialize"/>
-
-Flutter
-
-<Tabs query="platform=flutter&task=serialize"/> -->
-
 The [linked video](https://video.tv.adobe.com/v/26260
 ) shows you how to use [trackState](../mobile-core/api-reference.md#track-app-states-and-views) APIs to send data to Adobe Analytics.
 
@@ -215,13 +191,5 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&task=update"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&task=update"/>
-
-Flutter
-
-<Tabs query="platform=flutter&task=update"/> -->
 
 For more information, see the [configuration API reference](../mobile-core/configuration/api-reference.md).

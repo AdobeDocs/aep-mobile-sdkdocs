@@ -18,14 +18,6 @@ iOS
 
 <Tabs query="platform=ios-aep&task=set-variable"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&task=set-variable"/>
-
-Flutter
-
-<Tabs query="platform=flutter&task=set-variable"/> -->
-
 _`products`_ is set directly on the image request, and the other variables are set as context data. All context data variables must be mapped by using processing rules:
 
 ![Map products](./assets/product-variable/map-products.png)
@@ -45,14 +37,6 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&task=products"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&task=products"/>
-
-Flutter
-
-<Tabs query="platform=flutter&task=products"/> -->
 
 <InlineAlert variant="info" slots="text"/> 
 

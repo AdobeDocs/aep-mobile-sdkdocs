@@ -12,17 +12,13 @@ Android
 
 <Tabs query="platform=android&api=extension-version"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=extension-version"/>
 
 <!-- React Native
 
-<Tabs query="platform=react-native&api=extension-version"/>
-
-Flutter
-
-<Tabs query="platform=flutter&api=extension-version"/> -->
+<Tabs query="platform=react-native&api=extension-version"/> -->
 
 ## getUserAttributes
 
@@ -37,10 +33,6 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=get-user-attributes"/>
-
-<!-- Flutter
-
-<Tabs query="platform=flutter&api=get-user-attributes"/> -->
 
 ## registerExtension
 
@@ -66,10 +58,6 @@ Android
 
 <Tabs query="platform=android&api=remove-user-attribute"/>
 
-<!-- Flutter
-
-<Tabs query="platform=flutter&api=remove-user-attribute"/> -->
-
 ## removeUserAttributes
 
 Removes the user profile attributes for the given keys.
@@ -83,10 +71,6 @@ Android
 iOS
 
 <Tabs query="platform=android&api=remove-user-attributes"/>
-
-<!-- Flutter
-
-<Tabs query="platform=flutter&api=remove-user-attributes"/> -->
 
 ## updateUserAttribute
 
@@ -103,10 +87,6 @@ Remember the following information:
 Android
 
 <Tabs query="platform=android&api=update-user-attribute"/>
-
-<!-- Flutter
-
-<Tabs query="platform=flutter&api=update-user-attribute"/> -->
 
 ## updateUserAttributes
 
@@ -129,7 +109,3 @@ Android
 iOS
 
 <Tabs query="platform=android&api=update-user-attributes"/>
-
-<!-- Flutter
-
-<Tabs query="platform=flutter&api=update-user-attributes"/> -->

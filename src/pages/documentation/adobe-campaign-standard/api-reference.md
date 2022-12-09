@@ -16,10 +16,6 @@ iOS
 
 <Tabs query="platform=ios-aep&api=extension-version"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&api=extension-version"/> -->
-
 ## registerExtension
 
 Registers the Campaign Standard extension with the Mobile Core.
@@ -33,10 +29,6 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=register-extension"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&api=register-extension"/> -->
 
 ## resetLinkageFields
 
@@ -54,10 +46,6 @@ iOS
 
 <Tabs query="platform=ios-aep&api=reset-linkage-fields"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&api=reset-linkage-fields"/> -->
-
 ## setLinkageFields
 
 Sets the Campaign linkage fields (CRM IDs) in the mobile SDK to be used for downloading personalized messages from Campaign.
@@ -73,7 +61,3 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=set-linkage-fields"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&api=set-linkage-fields"/> -->

@@ -62,10 +62,6 @@ iOS
 
 <Tabs query="platform=ios-aep&task=add"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&task=add"/> -->
-
 ## Register Media with Mobile Core
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
@@ -77,10 +73,6 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&task=register"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&task=register"/> -->
 
 ## Configuration keys
 

@@ -25,14 +25,6 @@ iOS
 
 <Tabs query="platform=ios-aep&api=clear-queue"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&api=clear-queue"/>
-
-Flutter
-
-<Tabs query="platform=flutter&api=clear-queue"/> -->
-
 ## extensionVersion
 
 The `extensionVersion()` API returns the version of the Analytics extension that is registered with the Mobile Core extension.
@@ -49,14 +41,6 @@ iOS
 
 <Tabs query="platform=ios-aep&api=extension-version"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&api=extension-version"/>
-
-Flutter
-
-<Tabs query="platform=flutter&api=extension-version"/> -->
-
 ## getQueueSize 
 
 Retrieves the total number of Analytics hits in the tracking queue.
@@ -70,14 +54,6 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=get-queue-size"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&api=get-queue-size"/>
-
-Flutter
-
-<Tabs query="platform=flutter&api=get-queue-size"/> -->
 
 ## getQueueSizeWithCompletionHandler <a id="getqueuesizewithcompletionhandler"></a>
 
@@ -106,14 +82,6 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=get-tracking-identifier"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&api=get-tracking-identifier"/>
-
-Flutter
-
-<Tabs query="platform=flutter&api=get-tracking-identifier"/> -->
 
 ## getTrackingIdentifierWithCompletionHandler
 
@@ -150,14 +118,6 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=get-visitor-identifier"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&api=get-visitor-identifier"/>
-
-Flutter
-
-<Tabs query="platform=flutter&api=get-visitor-identifier"/> -->
 
 ## getVisitorIdentifierWithCompletionHandler
 
@@ -201,14 +161,6 @@ iOS
 
 <Tabs query="platform=ios-aep&api=send-queued-hits"/>
 
-<!-- React Native
-
-<Tabs query="platform=react-native&api=send-queued-hits"/>
-
-Flutter
-
-<Tabs query="platform=flutter&api=send-queued-hits"/> -->
-
 ## setVisitorIdentifier
 
 <InlineAlert variant="warning" slots="text"/>
@@ -226,11 +178,3 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=set-visitor-identifier"/>
-
-<!-- React Native
-
-<Tabs query="platform=react-native&api=set-visitor-identifier"/>
-
-Flutter
-
-<Tabs query="platform=flutter&api=set-visitor-identifier"/> -->
