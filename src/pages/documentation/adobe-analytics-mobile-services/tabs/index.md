@@ -38,30 +38,6 @@ import AEPMobileServices
 @import AEPMobileServices
 ```
 
-<Variant platform="ios-acp" task="add" repeat="6"/>
-
-You can add the library to your project through your `Podfile` by adding the `ACPMobileServices` pod.
-
-Import the library into your project:
-
-#### Swift
-
-```swift
-import ACPCore
-import ACPAnalytics
-import ACPMobileServices
-```
-
-#### Objective-C
-
-```objectivec
-#import "ACPCore.h"
-#import "ACPIdentity.h"
-#import "ACPLifecycle.h"
-#import "ACPAnalytics.h"
-#import "ACPMobileServices.h"
-```
-
 <Variant platform="android" task="register" repeat="3"/>
 
 #### Java
@@ -116,40 +92,6 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
         [AEPMobileCore lifecycleStart:@{@"contextDataKey": @"contextDataVal"}];
     }];
     ....
-}
-```
-
-<Variant platform="ios-acp" task="register" repeat="5"/>
-
-In your app's `application:didFinishLaunchingWithOptions` function, register the Mobile Services extension with the Mobile Core:
-
-#### Swift
-
-```swift
-func application(_application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool{
-        ACPAnalytics.registerExtension()
-        ACPIdentity.registerExtension()
-        ACPLifecycle.registerExtension()
-        ACPMobileServices.registerExtension()
-        ACPCore.start {
-        	ACPCore.lifecycleStart(nil)
-        }
-    ...
-    return true
-  }
-```
-
-#### Objective-C
-
-```objectivec
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-   [ACPAnalytics registerExtension];
-   [ACPLifecycle registerExtension];
-   [ACPIdentity registerExtension];
-   [ACPMobileServices registerExtension];
-   [ACPCore start:nil]
-   // Override point for customization after application launch.
-   return YES;
 }
 ```
 
@@ -219,43 +161,6 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 }
 ```
 
-<Variant platform="ios-acp" task="set-push-messaging" repeat="9"/>
-
-iOS simulators do not support push messaging.
-
-After following Apple's [configure remote notification document](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/HandlingRemoteNotifications.html#//apple_ref/doc/uid/TP40008194-CH6-SW1), to get your app ready to handle push notifications, set the push token by using the [`setPushIdentifier`](../mobile-core/identity/api-reference.md#setpushidentifier) API:
-
-**Syntax**
-
-```objectivec
-+ (void) setPushIdentifier: (nullable NSData*) deviceToken;
-```
-
-**Example**
-
-#### Swift
-
-```swift
-func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-    let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
-    let token = tokenParts.joined()
-    print("Device Token: (token)")
-
-    // Send push token to experience platform
-    ACPCore.setPushIdentifier(deviceToken)
-}
-```
-
-#### Objective-C
-
-```objectivec
-- (void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-  // Set the deviceToken that the APNS has assigned to the device
-  [ACPCore setPushIdentifier:deviceToken];
-  //...
-}
-```
-
 <Variant platform="android" task="set-push-tracking" repeat="1"/>
 
 On Android, the SDK handles push tracking to analytics without any additional set up. If the application has implemented the `FirebaseMessaginService` class and will handle the push notifications when the application is in foreground, read the push data from the received Intent and add it to the intent extras of the Activity to be launched. An example can be found in [the Mobile Services implement push messaging tutorial](https://experienceleague.adobe.com/docs/mobile-services_en/android/messaging-android/push-messaging/t-mob-impl-push-deeplinking-android-4x.html?lang=en).
@@ -283,30 +188,6 @@ AEPCore.collectLaunchInfo(userInfo)
 
 ```objectivec
 [AEPMobileCore collectLaunchInfo:userInfo];
-```
-
-<Variant platform="ios-acp" task="set-push-tracking" repeat="8"/>
-
-Use the following API to track a push messaging click in Adobe Analytics.
-
-**Syntax**
-
-```objectivec
-+ (void) collectLaunchInfo:(NSDictionary *)userInfo;
-```
-
-**Example**
-
-#### Swift
-
-```swift
-ACPCore.collectLaunchInfo(userInfo)
-```
-
-#### Objective-C
-
-```objectivec
-[ACPCore collectLaunchInfo:userInfo];
 ```
 
 <Variant platform="android" task="set-in-app-messaging" repeat="8"/>
@@ -459,69 +340,5 @@ func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>)
 - (void)scene:(UIScene *)scene openURLContexts:(nonnull NSSet<UIOpenURLContext *> *)URLContexts {
     NSURL *url = [[URLContexts allObjects] firstObject].URL;
     [AEPMobileServices trackAdobeDeepLink:url];
-}
-```
-
-<Variant platform="ios-acp" task="track-deep-link" repeat="15"/>
-
-**Syntax**
-
-```objectivec
-+ (void) trackAdobeDeepLink: (NSURL* _Nonnull) deeplink;
-```
-
-#### Swift
-
-**Example**
-
-```swift
-func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-    ACPMobileServices.trackAdobeDeepLink(url)
-    /*
-     Handle deep link
-     */
-    return true
-}
-```
-
-#### Objective-C
-
-**Example**
-
-```objectivec
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *, id> *)options {
-    [ACPMobileServices trackAdobeDeepLink:url];
-    /*
-     Handle deep link
-     */
-    return YES;
-}
-```
-
-In iOS 13 and later, for a scene-based application, use the `UISceneDelegate`'s `scene(_:openURLContexts:)` method as follows:
-
-**Swift**
-
-```swift
-func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-    guard let urlContexts = URLContexts.first else { return }
-    ACPMobileServices.trackAdobeDeepLink(urlContexts.url)
-    /*
-     Handle deep link
-     */
-}
-```
-
-**Objective-C**
-
-```objectivec
-- (void) scene:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts {
-    UIOpenURLContext * urlContext = URLContexts.anyObject;
-    if (urlContext != nil) {
-        [ACPMobileServices trackAdobeDeepLink:url];
-        /*
-         Handle deep link
-         */
-    }
 }
 ```

@@ -20,21 +20,7 @@ let version = Lifecycle.extensionVersion
 NSString *version = [AEPMobileLifecycle extensionVersion];
 ```
 
-<Variant platform="ios-acp" api="extension-version" repeat="4"/>
-
-**Swift**
-
-```swift
-let lifecycleExtensionVersion  = ACPLifecycle.extensionVersion()
-```
-
-**Objective-C**
-
-```objectivec
-NSString *lifecycleExtensionVersion = [ACPLifecycle extensionVersion];
-```
-
-<Variant platform="react-native" api="extension-version" repeat="2"/>
+<!-- <Variant platform="react-native" api="extension-version" repeat="2"/>
 
 **JavaScript**
 
@@ -48,35 +34,7 @@ ACPLifecycle.extensionVersion().then(lifecycleExtensionVersion => console.log("A
 
 ```dart
 String lifeycycleExtensionVersion = await FlutterACPLifecycle.extensionVersion;
-```
-
-<Variant platform="cordova" api="extension-version" repeat="2"/>
-
-**Cordova**
-
-```jsx
-ACPLifecycle.extensionVersion(function(version) {  
-   console.log("ACPLifecycle version: " + version);
-}, function(error) {  
-   console.log(error);  
-});
-```
-
-<Variant platform="unity" api="extension-version" repeat="2"/>
-
-**C#**
-
-```csharp
-string lifecycleVersion = ACPLifecycle.ExtensionVersion();
-```
-
-<Variant platform="xamarin" api="extension-version" repeat="2"/>
-
-**C#**
-
-```csharp
-string lifecycleVersion = ACPLifecycle.ExtensionVersion();
-```
+``` -->
 
 <Variant platform="android" api="lifecycle-start" repeat="8"/>
 
@@ -132,95 +90,11 @@ If you need to collect additional lifecycle data:
  [AEPMobileCore lifecycleStart:@{@"contextDataKey": @"contextDataVal"}];
 ```
 
-<Variant platform="ios-acp" api="lifecycle-start" repeat="9"/>
-
-#### Swift
-
-```swift
-ACPCore.lifecycleStart(["state": "appResume"])
-```
-
-#### Objective-C
-
-**Syntax**
-
-```text
-+ (void) lifecycleStart: (nullable NSDictionary<NSString*, NSString*>*) additionalContextData;
-```
-
-**Example**
-
-```objc
-[ACPCore lifecycleStart:nil];
-```
-
-If you need to collect additional lifecycle data:
-
-```objc
-[ACPCore lifecycleStart:@{@"state": @"appResume"}];
-```
-
-<Variant platform="react-native" api="lifecycle-start" repeat="2"/>
+<!-- <Variant platform="react-native" api="lifecycle-start" repeat="2"/>
 
 #### JavaScript
 
-When using React Native, starting to collect lifecycle data should be done in native code which is shown under the Android and iOS (ACP 2.x) tabs.
-
-<Variant platform="cordova" api="lifecycle-start" repeat="2"/>
-
-#### Cordova
-
-When using Cordova, the `lifecycleStart` method call must be made in native code which is shown under the Android and iOS tabs.
-
-<Variant platform="unity" api="lifecycle-start" repeat="3"/>
-
-#### C#
-
-When using Unity, the `LifecycleStart` method call must be made from the `OnApplicationPause` method.
-
-```csharp
-private void OnApplicationPause(bool pauseStatus)
-{
-  if (!pauseStatus)
-  {
-    ACPCore.LifecyclePause();
-  }
-  else
-  {
-    var cdata = new Dictionary<string, string>();
-    cdata.Add("launch.data", "added");
-    ACPCore.LifecycleStart(cdata);
-  }
-}
-```
-
-<Variant platform="xamarin" api="lifecycle-start" repeat="7"/>
-
-#### C#
-
-**iOS**
-
-When using iOS, the `LifecycleStart` method call must be made from the `OnActivated` method.
-
-```csharp
-public override void OnActivated(UIApplication uiApplication)
-{
-  base.OnActivated(uiApplication);
-  ACPCore.LifecycleStart(null);
-}
-```
-
-**Android**
-
-When using Android, the `LifecycleStart` method call must be made from the `OnResume` method.
-
-```csharp
-protected override void OnResume()
-{
-  base.OnResume();
-  ACPCore.LifecycleStart(null);
-}
-```
+When using React Native, starting to collect lifecycle data should be done in native code which is shown under the Android and iOS (ACP 2.x) tabs. -->
 
 <Variant platform="android" api="lifecycle-pause" repeat="5"/>
 
@@ -261,86 +135,8 @@ MobileCore.lifecyclePause();
  [AEPMobileCore lifecyclePause];
 ```
 
-<Variant platform="ios-acp" api="lifecycle-pause" repeat="7"/>
-
-#### Swift
-
-```swift
-ACPCore.lifecyclePause()
-```
-
-#### Objective-C
-
-**Syntax**
-
-```objc
-+ (void) lifecyclePause;
-```
-
-**Example**
-
-```objc
-[ACPCore lifecyclePause];
-```
-
-<Variant platform="react-native" api="lifecycle-pause" repeat="2"/>
+<!-- <Variant platform="react-native" api="lifecycle-pause" repeat="2"/>
 
 #### JavaScript
 
-When using React Native, pausing the collection of lifecycle data should be done in native code which is shown under the Android and iOS (ACP 2.x) tabs.
-
-<Variant platform="cordova" api="lifecycle-pause" repeat="2"/>
-
-#### Cordova
-
-When using Cordova, the `lifecyclePause` method call must be made in native code which is shown under the Android and iOS tabs.
-
-<Variant platform="unity" api="lifecycle-pause" repeat="3"/>
-
-#### C#
-
-When using Unity, the `LifecyclePause` method call must be made from the `OnApplicationPause` method.
-
-```csharp
-private void OnApplicationPause(bool pauseStatus)
-{
-  if (!pauseStatus)
-  {
-    ACPCore.LifecyclePause();
-  }
-  else
-  {
-    var cdata = new Dictionary<string, string>();
-    cdata.Add("launch.data", "added");
-    ACPCore.LifecycleStart(cdata);
-  }
-}
-```
-
-<Variant platform="xamarin" api="lifecycle-pause" repeat="7"/>
-
-#### C#
-
-**iOS**
-
-When using iOS, the `LifecyclePause` method call must be made from the `OnResignActivation` method.
-
-```csharp
-public override void OnResignActivation(UIApplication uiApplication)
-{
-  base.OnResignActivation(uiApplication);
-  ACPCore.LifecyclePause();
-}
-```
-
-**Android**
-
-When using Android, the `LifecyclePause` method call must be made from the `OnPause` method.
-
-```csharp
-protected override void OnPause()
-{
-  base.OnPause();
-  ACPCore.LifecyclePause();
-}
-```
+When using React Native, pausing the collection of lifecycle data should be done in native code which is shown under the Android and iOS (ACP 2.x) tabs. -->

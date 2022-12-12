@@ -43,35 +43,7 @@ pod 'AEPTarget','~>3.0'
     @import AEPIdentity
 ```
 
-<Variant platform="ios-acp" task="add" repeat="7"/>
-
-1. Add the ACPCore and ACPTarget CocoaPods to your project via your `Podfile`.
-
-```ruby
-pod 'ACPCore','~>2.0'
-pod 'ACPTarget','~>2.0'
-```
-
-2. Import the Target and Identity libraries.
-
-**Swift**
-
-```swift
-    import ACPCore
-    import ACPTarget
-```
-
-**Objective-C**
-
-```objectivec
-    #import "ACPCore.h"
-    #import "ACPTarget.h"
-    #import "ACPIdentity.h"
-    #import "ACPTargetRequestObject.h"
-    #import "ACPTargetPrefetchObject.h"
-```
-
-<Variant platform="react-native" task="add" repeat="7"/>
+<!-- <Variant platform="react-native" task="add" repeat="7"/>
 
 #### JavaScript
 
@@ -92,7 +64,7 @@ import {ACPTarget, ACPTargetPrefetchObject, ACPTargetRequestObject, ACPTargetOrd
 
 ```javascript
 ACPTarget.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPTarget version: " + version));
-```
+``` -->
 
 <Variant platform="android" task="register" repeat="4"/>
 
@@ -153,37 +125,7 @@ In your app's `didFinishLaunchingWithOptions` function, register the Target exte
 }
 ```
 
-<Variant platform="ios-acp" task="register" repeat="5"/>
-
-#### Swift
-
-```swift
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-  ACPCore.configure(withAppId: "yourAppId")   
-  ACPTarget.registerExtension()
-  ACPIdentity.registerExtension()
-  ACPCore.start(nil)
-  // Override point for customization after application launch.
-  return true
-}
-```
-
-#### Objective-C
-
-In your app's `didFinishLaunchingWithOptions` function, register the Target extension with Mobile Core:
-
-```objectivec
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  [ACPCore configureWithAppId:@"yourAppId"];
-  [ACPTarget registerExtension];
-  [ACPIdentity registerExtension];
-  [ACPCore start:nil];
-  // Override point for customization after application launch.
-  return YES;
-}
-```
-
-<Variant platform="react-native" task="register" repeat="3"/>
+<!-- <Variant platform="react-native" task="register" repeat="3"/>
 
 To register the Target extension with the Mobile Core extension, use the following API:
 
@@ -191,7 +133,7 @@ To register the Target extension with the Mobile Core extension, use the followi
 
 ```javascript
 ACPTarget.registerExtension();
-```
+``` -->
 
 <Variant platform="android" task="target-order" repeat="5"/>
 
@@ -242,43 +184,13 @@ let order = TargetOrder(id: "id1", total: 1.0, purchasedProductIds: ["ppId1"])
 AEPTargetOrder *order = [[AEPTargetOrder alloc] initWithId:@"id1" total:1.0 purchasedProductIds:@[@"ppId1"]];
 ```
 
-<Variant platform="ios-acp" task="target-order" repeat="10"/>
-
-#### Swift
-
-**Syntax**
-
-```swift
-public convenience init(id orderId: String, total: NSNumber?, purchasedProductIds: [String]?)
-```
-
-**Example**
-
-```swift
-let order = ACPTargetOrder(id: "ADCKKBC", total: NSNumber(value: 400.50), purchasedProductIds: ["34", "125"])
-```
-
-#### Objective-C
-
-**Syntax**
-
-```objectivec
-+ (nonnull instancetype) targetOrderWithId: (nonnull NSString*) orderId total: (nullable NSNumber*) total purchasedProductIds: (nullable NSArray <NSString*>*)  purchasedProductIds;
-```
-
-**Example**
-
-```objectivec
-ACPTargetOrder *order = [ACPTargetOrder targetOrderWithId:@"ADCKKBC" total:@(400.50) purchasedProductIds:@[@"34", @"125"]];
-```
-
-<Variant platform="react-native" task="target-order" repeat="2"/>
+<!-- <Variant platform="react-native" task="target-order" repeat="2"/>
 
 **JavaScript**
 
 ```javascript
 var targetOrder = new ACPTargetOrder("ADCKKBC", 400.50, ["34","125"]);
-```
+``` -->
 
 <Variant platform="android" task="target-product" repeat="5"/>
 
@@ -326,42 +238,13 @@ let product = TargetProduct(productId: "pId1", categoryId: "cId1")
 AEPTargetProduct *product =[[AEPTargetProduct alloc] initWithProductId:@"pId1" categoryId:@"cId1"];
 ```
 
-<Variant platform="ios-acp" task="target-product" repeat="10"/>
-
-### Swift
-
-**Syntax**
-```swift
-public convenience init(id productId: String, categoryId: String?)
-```
-
-**Example**
-
-```swift
-let product = ACPTargetProduct(id: "24D334", categoryId: "Stationary")
-```
-
-#### Objective-C
-
-**Syntax**
-
-```objectivec
-+ (nonnull instancetype) targetProductWithId: (nonnull NSString*) productId categoryId: (nullable NSString*) categoryId;
-```
-
-**Example**
-
-```objectivec
-ACPTargetProduct *product = [ACPTargetProduct targetProductWithId:@"24D334" categoryId:@"Stationary"];
-```
-
-<Variant platform="react-native" task="target-product" repeat="2"/>
+<!-- <Variant platform="react-native" task="target-product" repeat="2"/>
 
 **JavaScript**
 
 ```javascript
 var targetProduct = new ACPTargetProduct("24D334", "Stationary");
-```
+``` -->
 
 <Variant platform="android" task="target-parameters" repeat="5"/>
 
@@ -450,58 +333,7 @@ AEPTargetOrder *order = [[AEPTargetOrder alloc] initWithId:@"id1" total:1.0 purc
 AEPTargetParameters * targetParams = [[AEPTargetParameters alloc] initWithParameters:mboxParameters profileParameters:profileParameters order:order product:product];
 ```
 
-<Variant platform="ios-acp" task="target-parameters" repeat="10"/>
-
-#### Swift
-
-**Syntax**
-
-```swift
-public convenience init(parameters: [AnyHashable: Any]?, profileParameters: [AnyHashable: Any]?, order: ACPTargetOrder?, product: ACPTargetProduct?)
-```
-
-**Example**
-
-```swift
-let mboxParameters = [
-"status": "Platinum"
-]
-let profileParameters = [
-"gender": "female"
-]
-
-let product = ACPTargetProduct(id: "24D334", categoryId: "Stationary")
-
-let order = ACPTargetOrder(id: "ADCKKBC", total: NSNumber(value: 400.50), purchasedProductIds: ["34", "125"])
-
-let targetParameters = ACPTargetParameters(parameters: mboxParameters, profileParameters: profileParameters, product: product, order: order)
-```
-
-#### Objective-C
-
-**Syntax**
-
-```objectivec
-+ (nonnull instancetype) targetParametersWithParameters: (nullable NSDictionary*) targetParameters profileParameters: (nullable NSDictionary*) profileParameters product: (nullable ACPTargetProduct*) product order: (nullable ACPTargetOrder*) order;
-```
-
-**Example**
-
-```objectivec
-NSDictionary *mboxParameters = @{@"status":@"Platinum"};
-NSDictionary *profileParameters = @{@"gender":@"female"};
-
-ACPTargetProduct *product = [ACPTargetProduct targetProductWithId:@"24D334" categoryId:@"Stationary"];
-
-ACPTargetOrder *order = [ACPTargetOrder targetOrderWithId:@"ADCKKBC" total:@(400.50) purchasedProductIds:@[@"34", @"125"]];
-
-ACPTargetParameters *targetParameters = [ACPTargetParameters targetParametersWithParameters:mboxParameters
-profileParameters:profileParameters
-product:product
-order:order];
-```
-
-<Variant platform="react-native" task="target-parameters" repeat="2"/>
+<!-- <Variant platform="react-native" task="target-parameters" repeat="2"/>
 
 **JavaScript**
 
@@ -512,7 +344,7 @@ var targetProduct = new ACPTargetProduct("24D334", "Stationary");
 var purchaseIDs = ["34","125"];
 var targetOrder = new ACPTargetOrder("ADCKKBC", 400.50, purchaseIDs);
 var targetParameters = new ACPTargetParameters(mboxParameters, profileParameters, targetProduct, targetOrder);
-```
+``` -->
 
 <Variant platform="android" task="visual-preview" repeat="2"/>
 
@@ -548,33 +380,3 @@ public static func collectLaunchInfo(_ userInfo: [String: Any])
 ```objectivec
  [AEPMobileCore collectLaunchInfo:@{@"adb_deeplink" : @"com.adobe.targetpreview://app.adobetarget.com?at_preview_token=tokenFromTarget"}];
  ```
-
-<Variant platform="ios-acp" task="visual-preview" repeat="10"/>
-
-#### Swift
-
-**Syntax**
-
-```swift
-open class func collectLaunchInfo(_ userinfo: [AnyHashable: Any])
-```
-
-**Example**
-
-```swift
-ACPCore.collectLaunchInfo(["adb_deeplink" : "com.adobe.targetpreview://app.adobetarget.com?at_preview_token=tokenFromTarget"])
-```
-
-#### Objective-C
-
-**Syntax**
-
-```objectivec
-+ (void) collectLaunchInfo: (nonnull NSDictionary*) userInfo;
-```
-
-**Example**
-
-```objectivec
-[ACPCore collectLaunchInfo: @{@"adb_deeplink":@"com.adobe.targetpreview://app.adobetarget.com?at_preview_token=tokenFromTarget"}];`
-```

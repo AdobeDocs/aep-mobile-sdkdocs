@@ -46,36 +46,6 @@ import AEPPlaces
 @import AEPPlaces;
 ```
 
-<Variant platform="ios-acp" task="download" repeat="7"/>
-
-1. Add the Mobile Core and Places extensions to your project using CocoaPods. Add the following pods in your `Podfile`:
-
-```swift
-use_frameworks!
-target 'YourTargetApp' do
-   pod 'ACPCore', '~> 2.0'
-   pod 'ACPPlaces', '~> 1.0'
-end
-```
-
-2. Import the Mobile Core and Places modules:
-
-**Swift**
-
-```swift
-// AppDelegate.swift
-import ACPCore
-import ACPPlaces
-```
-
-**Objective-C**
-
-```objectivec
-// AppDelegate.h
-#import "ACPCore.h"
-#import "ACPPlaces.h"
-```
-
 <Variant platform="android" task="register" repeat="2"/>
 
 **Java**
@@ -126,33 +96,6 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
         ...
     }];
     [AEPMobileCore configureWithAppId: @"yourAppId"];
-    ...
-}
-```
-
-<Variant platform="ios-acp" task="register" repeat="4"/>
-
-**Swift**
-
-```swift
-// AppDelegate.swift
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    ACPPlaces.registerExtension()
-    ACPCore.configure(withAppId: "yourAppId")
-    ACPCore.start()
-  })
-  ...
-}
-```
-
-**Objective-C**
-
-```objectivec
-// AppDelegate.m
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [ACPPlaces registerExtension];
-    [ACPCore configureWithAppId:@"yourAppId"];    
-    [ACPCore start];  
     ...
 }
 ```
