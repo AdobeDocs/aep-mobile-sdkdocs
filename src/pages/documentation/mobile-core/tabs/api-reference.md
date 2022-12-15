@@ -1655,9 +1655,8 @@ MobileCore.trackAction("loginClicked", additionalContextData);
 
 **Syntax**
 
-```swift
-@objc(trackAction:data:)
-static func track(action: String?, data: [String: Any]?)
+```objc
++ (void) trackAction: (nullable NSString*) action data: (nullable NSDictionary*) contextData;
 ```
 
 * _action_ contains the name of the action to track.
@@ -1666,7 +1665,7 @@ static func track(action: String?, data: [String: Any]?)
 **Example**
 
 ```swift
-ACPCore.track(action: "action name", data: ["key": "value"])
+ACPCore.trackAction("action name", data: ["key": "value"])
 ```
 
 #### Objective-C
