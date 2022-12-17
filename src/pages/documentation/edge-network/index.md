@@ -47,19 +47,15 @@ If you have a first-party domain mapped to the Adobe-provisioned Edge Network do
 
 ### Download and import the Edge extension
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=add"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=add"/>
-
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=add"/>
 
 ### Register Edge with Mobile Core
 
@@ -69,7 +65,7 @@ Android
 
 <Tabs query="platform=android&task=register"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=register"/>
 

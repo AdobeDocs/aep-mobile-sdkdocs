@@ -21,39 +21,23 @@ To get started with Identity, complete the following steps:
 
 ## Add the Identity extension to your app
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=add"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=add"/>
 
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=add"/>
-
-React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&task=add"/>
 
 Flutter
 
-<Tabs query="platform=flutter&task=add"/>
-
-Cordova
-
-<Tabs query="platform=cordova&task=add"/>
-
-Unity
-
-<Tabs query="platform=unity&task=add"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&task=add"/>
+<Tabs query="platform=flutter&task=add"/> -->
 
 ## Register the Identity extension
 
@@ -61,39 +45,23 @@ The `registerExtension()` API registers the Identity extension with the Mobile C
 
 To register the Identity extension, use the following code sample:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=register"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=register"/>
 
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=register"/>
-
-React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&task=register"/>
 
 Flutter
 
-<Tabs query="platform=flutter&task=register"/>
-
-Cordova
-
-<Tabs query="platform=cordova&task=register"/>
-
-Unity
-
-<Tabs query="platform=unity&task=register"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&task=register"/>
+<Tabs query="platform=flutter&task=register"/> -->
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -125,39 +93,23 @@ To use the same visitor ID in the app and mobile web and pass the visitor ID to 
 
 ### Implementing visitor tracking between an app and the mobile web
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=implement"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=implement"/>
 
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=implement"/>
-
-React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&task=implement"/>
 
 Flutter
 
-<Tabs query="platform=flutter&task=implement"/>
-
-Cordova
-
-<Tabs query="platform=cordova&task=implement"/>
-
-Unity
-
-<Tabs query="platform=unity&task=implement"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&task=implement"/>
+<Tabs query="platform=flutter&task=implement"/> -->
 
 The ID service code on the destination domain extracts the ECID from the URL instead of sending a request to Adobe for a new ID. The ID service code on the destination page uses this ECID to track the visitor. On hits from the mobile web content, verify that the `mid` parameter exists on each hit, and that this value matches the `mid`value that is being sent by the app code.
 

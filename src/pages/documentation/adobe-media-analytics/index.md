@@ -52,43 +52,27 @@ If you are using Media Extension v1.x, then go to Legacy settings section 1. Ena
 
 This extension requires the [Adobe Analytics extension](../adobe-analytics/index.md). You must add the Analytics extension to your mobile property and make sure the extension is correctly configured.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=add"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=add"/>
 
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=add"/>
-
-React Native
-
-<Tabs query="platform=react-native&task=add"/>
-
 ## Register Media with Mobile Core
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=register"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=register"/>
-
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=register"/>
-
-React Native
-
-<Tabs query="platform=react-native&task=register"/>
 
 ## Configuration keys
 
