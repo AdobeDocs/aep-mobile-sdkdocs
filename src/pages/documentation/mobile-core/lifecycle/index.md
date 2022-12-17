@@ -10,73 +10,39 @@ Sessions contain information about the app's current lifecycle, such as the devi
 
 ## Add Lifecycle to your app
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=add"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=add"/>
 
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=add"/>
-
-React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&task=add"/>
 
 Flutter
 
-<Tabs query="platform=flutter&task=add"/>
-
-Cordova
-
-<Tabs query="platform=cordova&task=add"/>
-
-Unity
-
-<Tabs query="platform=unity&task=add"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&task=add"/>
-
+<Tabs query="platform=flutter&task=add"/> -->
 
 ## Register Lifecycle with Mobile Core and add appropriate Start/Pause calls
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="7"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=register"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=register"/>
 
-iOS (ACP 2.x)
+<!-- React Native
 
-<Tabs query="platform=ios-acp&task=register"/>
-
-React Native
-
-<Tabs query="platform=react-native&task=register"/>
-
-Cordova
-
-<Tabs query="platform=cordova&task=register"/>
-
-Unity
-
-<Tabs query="platform=unity&task=register"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&task=register"/>
-
+<Tabs query="platform=react-native&task=register"/> -->
 
 ## Lifecycle metrics
 

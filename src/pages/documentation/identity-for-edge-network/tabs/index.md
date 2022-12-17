@@ -65,10 +65,6 @@ import AEPEdgeConsent
 @import AEPEdgeConsent;
 ```
 
-<Variant platform="ios-acp" task="download" repeat="1"/>
-
-This extension is built on the AEPCore (3.x) and it is not compatible with ACPCore (2.x). Please follow [the guide for migrating to the Swift AEPCore](../migrate-to-swift.md).
-
 <Variant platform="android" task="register" repeat="2"/>
 
 **Java**

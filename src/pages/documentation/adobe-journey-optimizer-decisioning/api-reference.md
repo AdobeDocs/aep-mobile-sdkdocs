@@ -12,7 +12,7 @@ Android
 
 <Tabs query="platform=android&api=clear-propositions"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&api=clear-propositions"/>
 
@@ -26,7 +26,7 @@ Android
 
 <Tabs query="platform=android&api=extension-version"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&api=extension-version"/>
 
@@ -40,7 +40,7 @@ Android
 
 <Tabs query="platform=android&api=get-propositions"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&api=get-propositions"/>
 
@@ -54,7 +54,7 @@ Android
 
 <Tabs query="platform=android&api=on-propositions-update"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&api=on-propositions-update"/>
 
@@ -68,7 +68,7 @@ Android
 
 <Tabs query="platform=android&api=register-extension"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&api=register-extension"/>
 
@@ -87,7 +87,7 @@ Android
 
 <Tabs query="platform=android&api=update-propositions"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&api=update-propositions"/>
 
@@ -109,7 +109,7 @@ Android
 
 <Tabs query="platform=android&api=decisionscope"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&api=decisionscope"/>
 
@@ -123,7 +123,7 @@ Android
 
 <Tabs query="platform=android&api=proposition"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&api=proposition"/>
 
@@ -137,7 +137,7 @@ Android
 
 <Tabs query="platform=android&api=offer"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&api=offer"/>
 
@@ -151,6 +151,6 @@ Android
 
 <Tabs query="platform=android&api=offertype"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&api=offertype"/>

@@ -44,36 +44,6 @@ let campaignClassicVersion = CampaignClassic.extensionVersion
 NSString *campaignClassicVersion = [AEPMobileCampaignClassic extensionVersion];
 ```
 
-<Variant platform="ios-acp" api="extension-version" repeat="10"/>
-
-#### Swift
-
-**Syntax**
-
-```swift
-static func extensionVersion() -> String
-```
-
-**Example**
-
-```swift
-let campaignClassicExtensionVersion  = ACPCampaignClassic.extensionVersion()
-```
-
-#### Objective-C
-
-**Syntax**
-
-```objc
-+(NSString) extensionVersion;
-```
-
-**Example**
-
-```objectivec
-NSString *campaignClassicExtensionVersion = [ACPCampaignClassic extensionVersion];
-```
-
 <Variant platform="android" api="register-device" repeat="7"/>
 
 To prepare your app to handle push notifications, see the tutorial on [setting up a Firebase Cloud Messaging client app on Android](https://firebase.google.com/docs/cloud-messaging/android/client). After you receive the Firebase Cloud Messaging (FCM) SDK registration token, send this token and the device information to Campaign Classic by using the `registerDevice` API.
@@ -163,58 +133,6 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 }
 ```
 
-<Variant platform="ios-acp" api="register-device" repeat="12"/>
-
-To get your app ready to handle push notifications, see the tutorial on [configuring remote notification support](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/HandlingRemoteNotifications.html#//apple_ref/doc/uid/TP40008194-CH6-SW1). After you receive the Apple Push Notification service (APNs) token, send this token and the device information to Campaign Classic using the `registerDevice` API.
-
-The `registerDevice` API registers a device with your Campaign Classic registration server. It takes the APNS token as a parameter with a user key that identifies a user, such as an email address or a login name. You can also provide a map of the custom key-value pairs that you want to associate with the registration. A boolean value is returned in the callback, which signals whether the registration was successful.
-
-#### Swift
-
-**Syntax**
-
-```swift
-static func registerDevice(_ token: Data, userKey: String?, additionalParams: [String: Any]?, callback: ((Bool) -> Void)?)
-```
-
-**Example**
-
-```swift
-func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-  let params: [String: Any] = [
-    "name": "John",
-    "serial": 12345,
-    "premium": true
-  ]
-  ACPCampaignClassic.registerDevice(deviceToken, userKey: "john@example.com", additionalParams: params) {
-    result in
-    print("Registration status: \(result)")
-  }
-}
-```
-
-#### Objective-C
-
-**Syntax**
-
-```objectivec
-+ (void) registerDevice: (nonnull NSData*) token userKey: (nullable NSString*) userKey additionalParams: (nullable NSDictionary*) additionalParams callback: (nullable void (^) (BOOL success)) callback;
-```
-
-**Example**
-
-```objectivec
-- (void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-  // Set the deviceToken that the APNS has assigned to the device
-  NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithObjectsAndKeys:          @"John", @"name", nil];
-  [params setObject: [NSNumber numberWithInt:12345] forKey: @"serial"];
-  [params setObject: [NSNumber numberWithBool:YES]  forKey: @"premium"];
-
-[ACPCampaignClassic registerDevice:deviceToken userKey:@"john@example.com" additionalParams:params callback:^(BOOL success) {
-    NSLog(@"Registration Status: %d", success);
-}];
-```
-
 <Variant platform="android" api="track-notification-click" repeat="6"/>
 
 #### Java
@@ -290,50 +208,6 @@ static func trackNotificationClick(withUserInfo userInfo: [AnyHashable: Any])
     NSDictionary *userInfo = response.notification.request.content.userInfo;
     [AEPMobileCampaignClassic trackNotificationClickWithUserInfo:userInfo];
     completionHandler();
-}
-```
-
-<Variant platform="ios-acp" api="track-notification-click" repeat="11"/>
-
-You can pass the `launchOptions` that were received upon opening the application or `userInfo`, which contains the received push payload in `trackInfo`. If `trackInfo` is null or does not contain the necessary tracking identifiers, `broadlogId` (`_mId`) and `deliveryId` (`_dId`), a track request is **not** sent.
-
-#### Swift
-
-**Syntax**
-
-```swift
-static func trackNotificationClick(_ trackInfo: [String: String])
-```
-
-**Example**
-
-```swift
-func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-  guard let userInfo = response.notification.request.content.userInfo as? [String: String] else {
-    return;
-  }
-  ACPCampaignClassic.trackNotificationClick(userInfo);
-  completionHandler();
-}
-```
-
-#### Objective-C
-
-**Syntax**
-
-```objectivec
-+ (void) trackNotificationClick: (nonnull NSDictionary<NSString*, NSString*>*) trackInfo;
-```
-
-**Example**
-
-```objectivec
--(void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)(void))completionHandler
-{
-  NSLog(@"User Info : %@",response.notification.request.content.userInfo);
-  // Track action selected by the user for a given notification
-  [ACPCampaignClassic trackNotificationClick:response.notification.request.content.userInfo];
-  completionHandler();
 }
 ```
 
@@ -418,58 +292,6 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
   if ( [launchOptions[@"aps"][@"content-available"] intValue] == 1 ) {
     NSLog(@"Silent Push Notification");
     [AEPMobileCampaignClassic trackNotificationReceiveWithUserInfo:userInfo];
-    completionHandler(UIBackgroundFetchResultNoData);
-  }
-}
-```
-
-<Variant platform="ios-acp" api="track-notification-receive" repeat="11"/>
-
-You can pass the `launchOptions` that were received upon opening the application or `userInfo` , which contains the received push payload in `trackInfo`. If `trackInfo` is null or does not contain the necessary tracking identifiers, `broadlogId` (`_mId`) and `deliveryId` (`_dId`), a track request is **not** sent.
-
-#### Swift
-
-**Syntax**
-
-```swift
-static func trackNotificationReceive(_ trackInfo: [String: String])
-```
-
-**Example**
-
-```swift
-func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-
-  guard let aps = userInfo["aps"] as? [String: Any] else {
-    completionHandler(.failed)
-    return
-  }
-  if aps["content-available"] as? Int == 1 {
-    // Track silent push notification receive
-    ACPCampaignClassic.trackNotificationReceive(userInfo)
-    completionHandler(.noData)
-  }
-}
-```
-
-#### Objective-C
-
-**Syntax**
-
-```objectivec
-+ (void) trackNotificationReceive: (nonnull NSDictionary<NSString*, NSString*>*) trackInfo;
-```
-
-**Example**
-
-```objectivec
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)launchOptions fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
-{
-  if ( launchOptions) NSLog(@"launchOptions: %@", [launchOptions description]);
-  // Tracking silent push notification receive
-  if ( [launchOptions[@"aps"][@"content-available"] intValue] == 1 ) {
-    NSLog(@"Silent Push Notification");
-    [ACPCampaignClassic trackNotificationReceive:launchOptions];
     completionHandler(UIBackgroundFetchResultNoData);
   }
 }

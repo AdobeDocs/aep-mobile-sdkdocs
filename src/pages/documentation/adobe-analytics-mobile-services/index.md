@@ -3,7 +3,7 @@ import Tabs from './tabs/index.md'
 # Adobe Analytics - Mobile Services
 
 <InlineAlert variant="warning" slots="text"/>
-Adobe Mobile Service’s end-of-life date is December 31, 2022. See Mobile Services [End of life FAQ](https://experienceleague.adobe.com/docs/mobile-services/using/eol.html) or contact your Adobe customer success manager for further information.
+Adobe Mobile Service's end-of-life date is December 31, 2022. See Mobile Services [End of life FAQ](https://experienceleague.adobe.com/docs/mobile-services/using/eol.html) or contact your Adobe customer success manager for further information.
 
 This extension enables in-app messaging, push notifications, and marketing links functionality from [Mobile Services](https://mobilemarketing.adobe.com) on the Experience Platform SDK.
 
@@ -108,35 +108,27 @@ The Mobile Services extension depends on the Core extension, which includes the 
 
 iOS AEP (3.x) Mobile Services extension only supports Cocoapods. It does **not** work with Swift Package Manager or when included in your app as an XCFramework dependency.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=add"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=add"/>
 
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=add"/>
-
 ## Register Mobile Services with Mobile Core
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=register"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=register"/>
-
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=register"/>
 
 ## Implement Mobile Services APIs in your app
 
@@ -144,19 +136,15 @@ To use your Android or iOS extension with the Experience Platform SDKs, implemen
 
 ### Set up push messaging
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=set-push-messaging"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=set-push-messaging"/>
-
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=set-push-messaging"/>
 
 ### Debugging the push messaging set up
 
@@ -176,19 +164,15 @@ Use the following API to track a push messaging click in Adobe Analytics.
 
 Using the following API does not increment page views.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=set-push-tracking"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=set-push-tracking"/>
-
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=set-push-tracking"/>
 
 ## Troubleshooting push messaging
 
@@ -215,7 +199,7 @@ iOS
 
 ## Fallback images
 
-When creating a full-screen message, you can optionally specify a fallback image. If your message cannot retrieve its intended image from the web, the SDK attempts to load the image with the same name from your application’s assets folder. This allows you to show your message in its original form, even if the user is offline or the predetermined image is unreachable.
+When creating a full-screen message, you can optionally specify a fallback image. If your message cannot retrieve its intended image from the web, the SDK attempts to load the image with the same name from your application's assets folder. This allows you to show your message in its original form, even if the user is offline or the predetermined image is unreachable.
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -423,19 +407,15 @@ You can also append one or more of the following reserved keys, with user-genera
 
 Ensure that the deep link URL has the `a.deeplink.id` key in the URL string. If `a.deeplink.id` is not found, none of the appended URL parameters are sent to Analytics via context data.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=track-deep-link"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=track-deep-link"/>
-
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=track-deep-link"/>
 
 ## Integration with Apple Search Ads (iOS)
 

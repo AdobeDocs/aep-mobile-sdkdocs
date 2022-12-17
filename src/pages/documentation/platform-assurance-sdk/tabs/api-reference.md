@@ -38,7 +38,7 @@ AEPAssurance.extensionVersion()
 [AEPAssurance extensionVersion];
 ```
 
-<Variant platform="react-native" api="extension-version" repeat="3"/>
+<!-- <Variant platform="react-native" api="extension-version" repeat="3"/>
 
 #### JavaScript
 
@@ -62,53 +62,7 @@ static Future<String> get extensionVersion async
 
 ```dart
 assuranceVersion = await FlutterAssurance.extensionVersion;
-```
-
-<Variant platform="cordova" api="extension-version" repeat="4"/>
-
-**Syntax**
-
-```javascript
-AEPAssurance.extensionVersion = function(success, fail);
-```
-
-**Example**
-
-```javascript
-AEPAssurance.extensionVersion(function(version) {  
-   console.log("AEPAssurance version: " + version);
-}, function(error) {  
-   console.log(error);  
-});
-```
-
-<Variant platform="unity" api="extension-version" repeat="5"/>
-
-#### C#
-
-**Syntax**
-
-```csharp
-public static string ExtensionVersion()
-```
-
-**Example**
-
-```csharp
-string version = AEPAssurance.ExtensionVersion();
-print(LOG_TAG + "Assurance version: "+version);
-```
-
-<Variant platform="xamarin" api="extension-version" repeat="3"/>
-
-#### C#
-
-**Example**
-
-```csharp
-string version = AEPAssurance.ExtensionVersion()  
-Console.WriteLine("AEPAssurance version installed is: " + version);
-```
+``` -->
 
 <Variant platform="android" api="start-session" repeat="7"/>
 
@@ -170,7 +124,7 @@ For SceneDelegate based applications
 }
 ```
 
-<Variant platform="react-native" api="start-session" repeat="3"/>
+<!-- <Variant platform="react-native" api="start-session" repeat="3"/>
 
 #### JavaScript
 
@@ -194,46 +148,4 @@ static Future<void> startSession(String url);
 
 ```dart
 FlutterAssurance.startSession(url);
-```
-
-<Variant platform="cordova" api="start-session" repeat="4"/>
-
-**Syntax**
-
-```javascript
-AEPAssurance.startSession = function(sessionurl,success, fail);
-```
-
-**Example**
-
-```javascript
-AEPAssurance.startSession(url,function(result) {  
-   console.log("AdobeExperenceSDK: AEPAssurance session started succesfully: " + result);
-}, function(error) {  
-   console.log("AdobeExperenceSDK: Failed to start AEPAssurance session: " + error);
-});
-```
-
-<Variant platform="unity" api="start-session" repeat="5"/>
-
-#### C#
-
-**Syntax**
-
-```csharp
-public static void StartSession(string url)
-```
-
-**Example**
-
-```csharp
-AEPAssurance.StartSession(url);
-```
-
-<Variant platform="xamarin" api="start-session" repeat="2"/>
-
-#### C#
-
-```csharp
-AEPAssurance.StartSession(url);
-```
+``` -->

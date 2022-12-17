@@ -35,47 +35,16 @@ import com.adobe.marketing.mobile.Lifecycle;
 #### Swift
 
 ```swift
-	import AEPCore
-	import AEPCampaignClassic
+    import AEPCore
+    import AEPCampaignClassic
 ```
 
 #### Objective-C
 
 ```objectivec
-	@import AEPCore;
-	@import AEPCampaignClassic;
+    @import AEPCore;
+    @import AEPCampaignClassic;
 ```
-
-<Variant platform="ios-acp" task="add" repeat="8"/>
-
-1. Add the Campaign Classic and [Mobile Core](../mobile-core/index.md) libraries to your project.
-
-You can manually include the [Mobile Core](https://github.com/Adobe-Marketing-Cloud/acp-sdks/releases/tag/v1.0.1-ACPCore) and [Campaign Classic](https://github.com/Adobe-Marketing-Cloud/acp-sdks/releases/tag/v1.0.0-ACPCampaignClassic) libraries found in Github or add the following pods to your `Podfile`:
-
-```pod
-pod 'ACPCampaignClassic'
-pod 'ACPLifecycle'
-pod 'ACPCore'
-```
-
-2. In the Xcode project, import the Mobile Core and Campaign Classic extensions:
-
-#### Swift
-
-```swift
-   import ACPCore
-   import ACPCampaignClassic
-   import ACPLifecycle
-```
-
-#### Objective-C
-
-```objectivec
-   #import "ACPCore.h"
-   #import "ACPCampaignClassic.h"
-   #import "ACPLifecycle.h"
-```
-
 
 <Variant platform="android" task="register" repeat="2"/>
 
@@ -131,34 +100,6 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     [AEPMobileCore registerExtensions:@[AEPMobileCampaignClassic.class] completion:^{
     [AEPMobileCore configureWithAppId: @"<YOUR_ENVIRONMENT_FILE_ID>"];
   }];
-  return YES;
-}
-```
-
-<Variant platform="ios-acp" task="register" repeat="5"/>
-
-In your app's `application:didFinishLaunchingWithOptions:` method, register the Campaign Classic and Lifecycle extensions:
-
-#### Swift
-
-```swift
-// AppDelegate.swift
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-   ACPCampaignClassic.registerExtension();
-   ACPLifecycle.registerExtension();
-  // Override point for customization after application launch.
-  return true;
-}
-```
-
-#### Objective-C
-
-```objectivec
-// AppDelegate.m
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [ACPCampaignClassic registerExtension];
-    [ACPLifecycle registerExtension];
-  // Override point for customization after application launch.
   return YES;
 }
 ```

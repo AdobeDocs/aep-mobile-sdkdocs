@@ -12,7 +12,7 @@ Android
 
 <Tabs query="platform=android&api=extension-version"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=extension-version"/>
 
@@ -26,7 +26,7 @@ Android
 
 <Tabs query="platform=android&api=get-location-hint"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=get-location-hint"/>
 
@@ -40,7 +40,7 @@ Android
 
 <Tabs query="platform=android&api=register-extension"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=register-extension"/>
 
@@ -60,7 +60,7 @@ Android
 
 <Tabs query="platform=android&api=send-event"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=send-event"/>
 
@@ -78,7 +78,7 @@ Android
 
 <Tabs query="platform=android&api=set-location-hint"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=set-location-hint"/>
 
@@ -94,7 +94,7 @@ Android
 
 <Tabs query="platform=android&api=xdm-schema"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=xdm-schema"/>
 
@@ -109,7 +109,7 @@ Android
 
 <Tabs query="platform=android&api=edge-event-handle"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=edge-event-handle"/>
 
@@ -126,7 +126,7 @@ Android
 
 <Tabs query="platform=android&api=experience-event"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=experience-event"/>
 

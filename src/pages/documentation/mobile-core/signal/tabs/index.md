@@ -41,34 +41,7 @@ import AEPSignal
 @import AEPSignal;
 ```
 
-<Variant platform="ios-acp" task="add" repeat="9"/>
-
-​The Signal extension is included in the Mobile Core extension. Add the [Mobile Core](../index.md) extension to your project using Cocoapods.
-
-Add following pods in your `Podfile`:
-
-```pod
-pod 'ACPCore', '~> 2.0'
-```
-
-Import the Signal libraries:
-
-#### Objective-C
-
-```objectivec
-#import "ACPCore.h"
-#import "ACPSignal.h"
-```
-
-#### Swift
-
-In Swift, the ACPCore includes ACPSignal:
-
-```swift
-import ACPCore
-```
-
-<Variant platform="react-native" task="add" repeat="3"/>
+<!-- <Variant platform="react-native" task="add" repeat="3"/>
 
 #### JavaScript
 
@@ -86,37 +59,7 @@ Importing the Signal extension:
 
 ```dart
 import 'package:flutter_acpcore/flutter_acpsignal.dart';
-```
-
-<Variant platform="cordova" task="add" repeat="3"/>
-
-#### Cordova
-
-After creating your Cordova app and adding the Android and iOS platforms, the Signal extension for Cordova can be added with this command:
-
-```text
-cordova plugin add https://github.com/adobe/cordova-acpcore.git
-```
-
-<Variant platform="unity" task="add" repeat="3"/>
-
-#### C#
-
-After importing the [ACPCore.unitypackage](https://github.com/adobe/unity-acpcore/blob/master/bin/ACPCore-0.0.1-Unity.zip), the Signal extension for Unity can be added with following code in the MainScript
-
-```csharp
-using com.adobe.marketing.mobile;
-```
-
-<Variant platform="xamarin" task="add" repeat="3"/>
-
-#### C#
-
-After adding the iOS ACPCore NuGet package or the Android ACPSignal NuGet package, the Signal extension can be added by this import statement
-
-```csharp
-using Com.Adobe.Marketing.Mobile;
-```
+``` -->
 
 <Variant platform="android" task="register" repeat="4"/>
 
@@ -177,37 +120,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
  }
 ```
 
-<Variant platform="ios-acp" task="register" repeat="6"/>
-
-In your app's`application:didFinishLaunchingWithOptions`, register the Signal extension with Mobile Core:
-
-#### Objective-C
-
-```objectivec
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [ACPCore configureWithAppId:@"yourAppId"];
-    [ACPSignal registerExtension];
-    [ACPCore start:nil];
-    // Override point for customization after application launch.
-    return YES;
- }
-```
-
-#### Swift
-
-```swift
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-     ACPCore.configure(withAppId: "yourAppId")   
-     ACPSignal.registerExtension()
-     ACPCore.start(nil)
-     // Override point for customization after application launch.
-     return true;
-}
-```
-
-Please note that the Signal extension is automatically included in the Mobile Core pod. When you manually install the Signal extension, ensure that you add the `libACPSignal_iOS.a` library to your project.
-
-<Variant platform="react-native" task="register" repeat="2"/>
+<!-- <Variant platform="react-native" task="register" repeat="2"/>
 
 #### JavaScript
 
@@ -217,73 +130,4 @@ When using React Native, registering Signal with Mobile Core should be done in n
 
 #### Dart
 
-When using Flutter, registering Signal with Mobile Core should be done in native code which is shown under the Android and iOS tabs.
-
-<Variant platform="cordova" task="register" repeat="2"/>
-
-#### Cordova
-
-When using Cordova, registering Signal with Mobile Core must be done in native code which is shown under the Android and iOS tabs.
-
-<Variant platform="unity" task="register" repeat="3"/>
-
-#### C#
-
-Register the extension in the `start()` function:
-
-```csharp
-void Start()
-{   
-  ACPSignal.RegisterExtension();
-}
-```
-
-<Variant platform="xamarin" task="register" repeat="7"/>
-
-#### C#
-
-**iOS**
-
-Register the Signal extension with the Mobile Core by adding the following to your app's `FinishedLaunching:` delegate method:
-
-```csharp
-public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-{
-  ACPSignal.RegisterExtension();
-  // start Mobile Core
-  ACPCore.Start(startCallback);
-
-  return base.FinishedLaunching(app, options);
-}
-
-private void startCallback()
-{
-  // set app id from the Data Collection UI
-  ACPCore.ConfigureWithAppID("yourAppId");
-}
-```
-
-**Android**
-
-Register the Signal extension with the Mobile Core by adding the following to your app's `OnCreate:` method:
-
-```csharp
-protected override void OnCreate(Bundle savedInstanceState)
-{
-  base.OnCreate(savedInstanceState);
-    LoadApplication(new App());
-  ACPCore.Application = this.Application;
-  ACPSignal.RegisterExtension();
-  // start Mobile Core
-  ACPCore.Start(new CoreStartCompletionCallback());
-}
-
-class CoreStartCompletionCallback : Java.Lang.Object, IAdobeCallback
-{
-  public void Call(Java.Lang.Object callback)
-  {
-  // set app id from the Data Collection UI
-    ACPCore.ConfigureWithAppID("yourAppId");
-  }
-}
-```
+When using Flutter, registering Signal with Mobile Core should be done in native code which is shown under the Android and iOS tabs. -->

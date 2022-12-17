@@ -20,7 +20,7 @@ Android
 
 <Tabs query="platform=android&task=download"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=download"/>
 
@@ -32,7 +32,7 @@ Android
 
 <Tabs query="platform=android&task=register"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=register"/>
 
@@ -124,6 +124,6 @@ Android
 
 <Tabs query="platform=android&task=link"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=link"/>

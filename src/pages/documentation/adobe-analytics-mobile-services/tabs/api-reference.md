@@ -20,20 +20,6 @@ let mobileServicesExtensionVersion  = AEPMobileServices.extensionVersion()
 NSString *mobileServicesExtensionVersion = [AEPMobileServices extensionVersion];
 ```
 
-<Variant platform="ios-acp" api="extension-version" repeat="4"/>
-
-#### Objective-C
-
-```objectivec
-NSString *mobileServicesExtensionVersion = [ACPMobileServices extensionVersion];
-```
-
-#### Swift
-
-```swift
-let mobileServicesExtensionVersion  = ACPMobileServices.extensionVersion()
-```
-
 <Variant platform="android" api="track-adobe-deep-link" repeat="5"/>
 
 #### Java
@@ -81,29 +67,4 @@ AEPMobileServices.trackAdobeDeepLink(url)
 NSURL* url = [NSURL URLWithString:@"adobelinktest://x?a.deeplink.id=test_deeplinkId&a.launch.campaign.trackingcode=code&test_key=test_value"];
 
 [AEPMobileServices trackAdobeDeepLink:url];
-```
-
-<Variant platform="ios-acp" api="track-adobe-deep-link" repeat="7"/>
-
-**Syntax**
-
-```objectivec
-+ (void) trackAdobeDeepLink: (NSURL*) url;
-```
-
-**Example**
-
-**Swift**
-
-```swift
-let url = URL(string: "adobelinktest://x?a.deeplink.id=test_deeplinkId&a.launch.campaign.trackingcode=code&test_key=test_value")!
-ACPMobileServices.trackAdobeDeepLink(url)
-```
-
-**Objective-C**
-
-```objectivec
-NSURL* url = [NSURL URLWithString:@"adobelinktest://x?a.deeplink.id=test_deeplinkId&a.launch.campaign.trackingcode=code&test_key=test_value"];
-
-[ACPMobileServices trackAdobeDeepLink:url];
 ```

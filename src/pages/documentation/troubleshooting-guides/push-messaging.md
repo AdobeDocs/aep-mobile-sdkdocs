@@ -23,7 +23,7 @@ If SDK privacy status isoptedout, the push identifier will not be set.
 
 ### setPushIdentifier
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
@@ -33,9 +33,9 @@ iOS
 
 <Tabs query="platform=ios&task=set-push"/>
 
-React Native
+<!-- React Native
 
-<Tabs query="platform=react-native&task=set-push"/>
+<Tabs query="platform=react-native&task=set-push"/> -->
 
 ## Verify push token sync with the Experience Cloud Identity service
 
