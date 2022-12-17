@@ -10,7 +10,7 @@ Android
 
 <Tabs query="platform=android&task=campaign"/>
 
-#### iOS
+iOS
 
 <Tabs query="platform=ios&task=campaign"/>
 

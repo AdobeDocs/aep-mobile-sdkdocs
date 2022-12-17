@@ -12,7 +12,7 @@ Android
 
 <Tabs query="platform=android&api=extension-version"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=extension-version"/>
 
@@ -26,7 +26,7 @@ Android
 
 <Tabs query="platform=android&api=get-experience-cloud-id"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=get-experience-cloud-id"/>
 
@@ -40,7 +40,7 @@ Android
 
 <Tabs query="platform=android&api=get-identities"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=get-identities"/>
 
@@ -64,7 +64,7 @@ Android
 
 <Tabs query="platform=android&api=get-url-variables"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=get-url-variables"/>
 
@@ -82,7 +82,7 @@ Android
 
 <Tabs query="platform=android&api=register-extension"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=register-extension"/>
 
@@ -104,7 +104,7 @@ Android
 
 <Tabs query="platform=android&api=remove-identity"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=remove-identity"/>
 
@@ -143,7 +143,7 @@ Android
 
 <Tabs query="platform=android&api=set-advertising-identifier"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=set-advertising-identifier"/>
 
@@ -165,7 +165,7 @@ Android
 
 <Tabs query="platform=android&api=update-identities"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=update-identities"/>
 
@@ -216,7 +216,7 @@ Android
 
 <Tabs query="platform=android&api=identity-map"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=identity-map"/>
 
@@ -232,7 +232,7 @@ Android
 
 <Tabs query="platform=android&api=identity-item"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=identity-item"/>
 
@@ -252,6 +252,6 @@ Android
 
 <Tabs query="platform=android&api=authenticated-state"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=authenticated-state"/>

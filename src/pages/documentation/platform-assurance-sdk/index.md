@@ -25,75 +25,43 @@ Go to the [Experience Platform Data Collection UI](https://experience.adobe.com/
 
 ### Import the library to your app code
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=import-library"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=import-library"/>
 
-iOS (AEP 1.x)
-
-<Tabs query="platform=ios-acp&task=import-library"/>
-
-React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&task=import-library"/>
 
 Flutter
 
-<Tabs query="platform=flutter&task=import-library"/>
-
-Cordova
-
-<Tabs query="platform=cordova&task=import-library"/>
-
-Unity
-
-<Tabs query="platform=unity&task=import-library"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&task=import-library"/>
+<Tabs query="platform=flutter&task=import-library"/> -->
 
 ### Register AEPAssurance with Mobile Core
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=register-assurance"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&task=register-assurance"/>
 
-iOS (AEP 1.x)
-
-<Tabs query="platform=ios-acp&task=register-assurance"/>
-
-React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&task=register-assurance"/>
 
 Flutter
 
-<Tabs query="platform=flutter&task=register-assurance"/>
-
-Cordova
-
-<Tabs query="platform=cordova&task=register-assurance"/>
-
-Unity
-
-<Tabs query="platform=unity&task=register-assurance"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&task=register-assurance"/>
+<Tabs query="platform=flutter&task=register-assurance"/> -->
 
 ### Implement AEP Assurance session start APIs (iOS only)
 
@@ -105,12 +73,9 @@ To learn how to start sessions for other platforms, please read the [Platform As
 
 You may call this API when the app launches with a url (see code snippet below for sample usage) <br/><br/> The AEP Assurance Android extension does not require this API to be called since it registers the app lifecycle handlers which automatically pick up any deep links and use them to start the session.<br/><br/>When using the AEP Assurance iOS extension, you should call this API when the app launches with a URL (see code snippet below for sample usage).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 iOS (AEP 3.x)
 
 <Tabs query="platform=ios-aep&task=register-assurance"/>
 
-iOS (AEP 1.x)
-
-<Tabs query="platform=ios-acp&task=register-assurance"/>

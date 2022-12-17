@@ -12,7 +12,7 @@ Android
 
 <Tabs query="platform=android&api=extension-version"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=extension-version"/>
 
@@ -26,7 +26,7 @@ Android
 
 <Tabs query="platform=android&api=get-consents"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=get-consents"/>
 
@@ -40,7 +40,7 @@ Android
 
 <Tabs query="platform=android&api=register-extension"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=register-extension"/>
 
@@ -54,7 +54,7 @@ Android
 
 <Tabs query="platform=android&api=update-consents"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios-aep&api=update-consents"/>
 
