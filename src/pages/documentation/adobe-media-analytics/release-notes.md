@@ -29,11 +29,6 @@
 
 * Updated "Content-Type" header to "application/json" in Media Collection API requests.
 
-### @adobe/react-native-acpmedia 2.3.1
-
-* Updated to iOS Media v2.3.1.
-* Updated to Android Media v2.1.1.
-
 ## October 7, 2020
 
 ### Android Media 2.1.0

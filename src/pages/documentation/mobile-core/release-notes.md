@@ -60,7 +60,7 @@
 
 ### Android Core 1.11.1
 
-* Fixed a crash which was caused by an exception thrown from the Android Activity class. 
+* Fixed a crash which was caused by an exception thrown from the Android Activity class.
 
 ## May 9, 2022
 
@@ -97,11 +97,11 @@
 
 ### Android Core 1.10.1
 
-* Updates the timestamp format for rule token `~timestampp`  with fractional seconds and UTC time zone. This rule token is used to set the mobile property data element "Adobe Experience Platform Timestamp". 
+* Updates the timestamp format for rule token `~timestampp`  with fractional seconds and UTC time zone. This rule token is used to set the mobile property data element "Adobe Experience Platform Timestamp".
 
 ### Android Lifecycle 1.1.1
 
-* Lifecycle foreground and background events for Edge Network now format timestamps with fractional seconds and UTC time zone. 
+* Lifecycle foreground and background events for Edge Network now format timestamps with fractional seconds and UTC time zone.
 
 ## February 8, 2022
 
@@ -176,17 +176,17 @@ Released with sdk-core version 1.10.0
 
 * Bug fix to improve Signal stability.
 
-## November 9, 2021 
+## November 9, 2021
 
-### iOS AEPCore 3.3.1 
+### iOS AEPCore 3.3.1
 
-* Fixed a bug where Date was not persisted correctly in iOS versions less than 13. 
+* Fixed a bug where Date was not persisted correctly in iOS versions less than 13.
 
 ### iOS AEPLifecycle 3.3.1
 
-* Added session start time to Lifecycle shared state. 
+* Added session start time to Lifecycle shared state.
 
-### iOS AEPIdentity 3.3.1 
+### iOS AEPIdentity 3.3.1
 
 * Fixed a bug where the default Experience Cloud ID server URL was not used when the `experienceCloud.server` configuration parameter was an empty string.
 
@@ -204,7 +204,7 @@ Released with sdk-core version 1.10.0
 ### Android Core 1.9.0
 
 * Added support for dispatch event rules consequence.
-* Added getFriendlyName API for third party extensions. 
+* Added getFriendlyName API for third party extensions.
 * Specifies mutability for PendingIntent in the UIService in preparation for Android 12 changes.
 
 ### Android Lifecycle 1.1.0
@@ -213,7 +213,7 @@ Released with sdk-core version 1.10.0
 
 ### Mobile Core Launch extension v2.1.20
 
-* New `Foreground` and `Background` event types to be used in rules for triggering actions based on Mobile Application Lifecycle XDM events. 
+* New `Foreground` and `Background` event types to be used in rules for triggering actions based on Mobile Application Lifecycle XDM events.
 
 ## Aug 27, 2021
 
@@ -246,7 +246,7 @@ Released with sdk-core version 1.10.0
 
 ### iOS AEPCore 3.2.1
 
-* Update version for bundled ACPIdentity 3.2.1 release.
+* Update version for bundled AEPIdentity 3.2.1 release.
 
 ## iOS AEPIdentity 3.2.1
 
@@ -348,6 +348,10 @@ Released with sdk-core version 1.10.0
 * New API - `MobileCore.dispatchEventWithResponseCallback()` - See API Reference for more information.
 * The EventHub's shared state dictionary now uses the full name of each registered extension as its key.
 
+#### Android Lifecycle 1.0.7
+
+* No longer generate invalid values for `Days Since Last Use`, `Days Since First Use` and `Days Since Last Upgrade` metrics when the time setting on the device is off.
+
 ### February 24, 2021
 
 #### Android Core 1.7.0
@@ -376,14 +380,6 @@ The brand new Adobe Experience Platform Core iOS swift SDKs are live! It is [ope
 * AEPSignal 3.0.0
 * AEPLifecycle 3.0.0
 * AEPRulesEngine 1.0.0
-
-### December 18, 2020
-
-#### iOS Core 2.9.0, iOS Identity 2.5.0, iOS Lifecycle 2.2.0, iOS Signal 2.2.0
-
-* The AEP SDKs are now distributed using XCFrameworks in order to support hardware with the new Apple M1 architecture while maintaining support for existing Intel architecture.
-  * **IMPORTANT**: Upgrading to XCFrameworks distribution requires Xcode 12.0 or newer
-  * **IMPORTANT**: If using Cocoapods, upgrading to the XCFrameworks distribution requires Cocoapods 1.10.0 or newer
 
 ### December 3, 2020
 
@@ -539,4 +535,3 @@ The following updates were made in this release:
 * The duplicate advertising identifier value is removed from the Identity-shared state when MobileCore.setAdvertisingIdentifier is called with a new value.
 * The global.ssl configuration settings are ignored, and SSL is enabled by default.
 * Fixed an issue where appendVisitorInfoForURL uses the wrong query delimiter when the source URL contains a question mark in its fragment identifier component.
-

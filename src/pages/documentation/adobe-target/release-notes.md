@@ -8,7 +8,7 @@ Added getter and setter APIs for Target tnt IDs and session IDs to enable cross-
 
 * The `setSessionId` API should be invoked prior to any Target request to prevent the Mobile SDK from generating a session ID locally. The set session ID will follow the session expiry as governed by the `target.sessionTimeout` configuration setting. You can use this API in conjunction with `setTntId` API to set both of the value in the SDK.
 * The `setTntId` API, when invoked, also sets the Target edge host value in the SDK by deriving it from the profile location hint supplied in the tnt ID.
-* The `getSessionId` and `getTntId` APIs can be used to retrieve the current Target session ID and tnt ID values respectively. 
+* The `getSessionId` and `getTntId` APIs can be used to retrieve the current Target session ID and tnt ID values respectively.
 
 ## July 29, 2022
 
@@ -147,4 +147,3 @@ The Target Client Code is now automatically added based on your Experience Cloud
 
 * If no code is found, you can type it in.
 * If multiple codes are found, you can select the code from the drop-down list.
-

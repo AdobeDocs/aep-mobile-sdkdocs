@@ -6,12 +6,6 @@
 
 * Added tvOS support.
 
-## May 24, 2022
-
-### iOS Analytics 2.5.2
-
-* Fixed a bug for the integration with Assurance where "No Debug Flag" was showing in the UI for some events.
-
 ## March 31, 2022
 
 ### iOS AEPAnalytics 3.0.4
@@ -45,10 +39,6 @@
 * Fixed an issue where entire context data dictionary in track request was dropped if any of its key had non string value.
 
 ## July 21, 2021
-
-### iOS Analytics 2.5.1
-
-* Removed retrieval and generation of Analytics tracking identifier (AID). Existing AID values stored on the device will continue to be loaded and used, however new visitors will not be assigned an AID value.
 
 ### Android Analytics 1.2.8
 
