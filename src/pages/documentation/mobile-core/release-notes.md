@@ -432,6 +432,8 @@ The brand new Adobe Experience Platform Core iOS swift SDKs are live! It is [ope
 * Fixed a bug where the shared state of event hub was not properly created.
 * Fixed a security issue.
 
+## April 21, 2020
+
 ### Android Core 1.5.3
 
 * Fixed a performance issue where the initiliaztion of SDK extensions could block the main thread for a while.
