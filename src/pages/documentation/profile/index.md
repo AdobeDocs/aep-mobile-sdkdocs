@@ -54,6 +54,6 @@ iOS
 
 <Tabs query="platform=ios-aep&task=register"/>
 
-<!-- React Native
+<!--- React Native
 
 <Tabs query="platform=react-native&task=register"/>

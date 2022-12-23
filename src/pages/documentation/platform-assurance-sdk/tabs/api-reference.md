@@ -38,7 +38,7 @@ AEPAssurance.extensionVersion()
 [AEPAssurance extensionVersion];
 ```
 
-<!-- <Variant platform="react-native" api="extension-version" repeat="3"/>
+<!--- <Variant platform="react-native" api="extension-version" repeat="3"/>
 
 #### JavaScript
 
@@ -62,7 +62,7 @@ static Future<String> get extensionVersion async
 
 ```dart
 assuranceVersion = await FlutterAssurance.extensionVersion;
-``` -->
+``` --->
 
 <Variant platform="android" api="start-session" repeat="7"/>
 
@@ -124,7 +124,7 @@ For SceneDelegate based applications
 }
 ```
 
-<!-- <Variant platform="react-native" api="start-session" repeat="3"/>
+<!--- <Variant platform="react-native" api="start-session" repeat="3"/>
 
 #### JavaScript
 
@@ -148,4 +148,4 @@ static Future<void> startSession(String url);
 
 ```dart
 FlutterAssurance.startSession(url);
-``` -->
+``` --->

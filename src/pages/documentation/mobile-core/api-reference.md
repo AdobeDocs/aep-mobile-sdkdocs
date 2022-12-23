@@ -38,9 +38,9 @@ iOS
 
 <Tabs query="platform=ios-aep&api=collect-pii"/>
 
-<!-- React Native
+<!--- React Native
 
-<Tabs query="platform=react-native&api=collect-pii"/> -->
+<Tabs query="platform=react-native&api=collect-pii"/> --->
 
 ## getApplication
 
@@ -66,9 +66,9 @@ iOS
 
 <Tabs query="platform=ios-aep&api=get-log-level"/>
 
-<!-- React Native
+<!--- React Native
 
-<Tabs query="platform=react-native&api=get-log-level"/> -->
+<Tabs query="platform=react-native&api=get-log-level"/> --->
 
 ## getSdkIdentities
 
@@ -113,9 +113,9 @@ iOS
 
 <Tabs query="platform=ios-aep&api=log"/>
 
-<!-- React Native
+<!--- React Native
 
-<Tabs query="platform=react-native&api=log"/> -->
+<Tabs query="platform=react-native&api=log"/> --->
 
 ## registerExtension(s)
 
@@ -137,13 +137,13 @@ iOS
 
 <Tabs query="platform=ios-aep&api=register-extension"/>
 
-<!-- React Native
+<!--- React Native
 
 <Tabs query="platform=react-native&api=register-extension"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=register-extension"/> -->
+<Tabs query="platform=flutter&api=register-extension"/> --->
 
 ## resetIdentities
 
@@ -228,13 +228,13 @@ iOS
 
 <Tabs query="platform=ios-aep&api=set-log-level"/>
 
-<!-- React Native
+<!--- React Native
 
 <Tabs query="platform=react-native&api=set-log-level"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=set-log-level"/> -->
+<Tabs query="platform=flutter&api=set-log-level"/> --->
 
 ## setPushIdentifier
 
@@ -286,13 +286,13 @@ iOS
 
 <Tabs query="platform=ios-aep&api=track-action"/>
 
-<!-- React Native
+<!--- React Native
 
 <Tabs query="platform=react-native&api=track-action"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=track-action"/> -->
+<Tabs query="platform=flutter&api=track-action"/> --->
 
 ## trackState
 
@@ -312,13 +312,13 @@ iOS
 
 <Tabs query="platform=ios-aep&api=track-state"/>
 
-<!-- React Native
+<!--- React Native
 
 <Tabs query="platform=react-native&api=track-state"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=track-state"/> -->
+<Tabs query="platform=flutter&api=track-state"/> --->
 
 ## Public classes
 
