@@ -176,7 +176,7 @@ let version = MobileCore.extensionVersion
 NSString *version = [AEPMobileCore extensionVersion];
 ```
 
-<!-- <Variant platform="react-native" api="extension-version" repeat="2"/>
+<!--- <Variant platform="react-native" api="extension-version" repeat="2"/>
 
 #### JavaScript
 
@@ -190,7 +190,7 @@ ACPCore.extensionVersion().then(coreExtensionVersion => console.log("AdobeExperi
 
 ```dart
 String coreExtensionVersion = await FlutterACPCore.extensionVersion;
-``` -->
+``` --->
 
 <Variant platform="android" api="update-configuration" repeat="5"/>
 
@@ -243,7 +243,7 @@ static func updateConfigurationWith(configDict: [String: Any])
  [AEPMobileCore updateConfiguration:updatedConfig];
 ```
 
-<!-- <Variant platform="react-native" api="update-configuration" repeat="5"/>
+<!--- <Variant platform="react-native" api="update-configuration" repeat="5"/>
 
 #### JavaScript
 
@@ -273,4 +273,4 @@ static Future<void> updateConfiguration(Map<String, Object> configMap);
 
 ```dart
 FlutterACPCore.updateConfiguration({"global.privacy":"optedout"});
-``` -->
+``` --->

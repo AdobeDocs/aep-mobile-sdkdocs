@@ -33,9 +33,9 @@ iOS
 
 <Tabs query="platform=ios&task=set-push"/>
 
-<!-- React Native
+<!--- React Native
 
-<Tabs query="platform=react-native&task=set-push"/> -->
+<Tabs query="platform=react-native&task=set-push"/> --->
 
 ## Verify push token sync with the Experience Cloud Identity service
 

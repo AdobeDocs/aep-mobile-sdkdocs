@@ -106,7 +106,7 @@ MobileCore.collectPii(["key1" : "value1","key2" : "value2"]);
                             }];
 ```
 
-<!-- <Variant platform="react-native" api="collect-pii" repeat="10"/>
+<!--- <Variant platform="react-native" api="collect-pii" repeat="10"/>
 
 #### Javascript
 
@@ -134,7 +134,7 @@ ACPCore.collectPii(data: [String : String])
 
 ```objectivec
 MobileCore.collectPii(["key1" : "value1","key2" : "value2"]);
-``` -->
+``` --->
 
 <Variant platform="android" api="get-application" repeat="6"/>
 
@@ -207,7 +207,7 @@ var logLevel = Log.logFilter
 AEPLogLevel logLevel = [AEPLog logFilter];
 ```
 
-<!-- <Variant platform="react-native" api="get-log-level" repeat="3"/>
+<!--- <Variant platform="react-native" api="get-log-level" repeat="3"/>
 
 #### Javascript
 
@@ -215,7 +215,7 @@ AEPLogLevel logLevel = [AEPLog logFilter];
 
 ```jsx
 ACPCore.getLogLevel().then(level => console.log("AdobeExperienceSDK: Log Level = " + level));
-``` -->
+``` --->
 
 <Variant platform="android" api="get-sdk-identities" repeat="6"/>
 
@@ -369,7 +369,7 @@ public static func error(label: String, _ message: String)
 [AEPLog errorWithLabel:@"testLabel" message:@"testMessage"];
 ```
 
-<!-- <Variant platform="react-native" api="log" repeat="6"/>
+<!--- <Variant platform="react-native" api="log" repeat="6"/>
 
 #### JavaScript
 
@@ -388,7 +388,7 @@ const ERROR = "ACP_LOG_LEVEL_ERROR";
 const WARNING = "ACP_LOG_LEVEL_WARNING";
 const DEBUG = "ACP_LOG_LEVEL_DEBUG";
 const VERBOSE = "ACP_LOG_LEVEL_VERBOSE";
-``` -->
+``` --->
 
 <Variant platform="android" api="register-extension" repeat="4"/>
 
@@ -468,7 +468,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-<!-- <Variant platform="react-native" api="register-extension" repeat="5"/>
+<!--- <Variant platform="react-native" api="register-extension" repeat="5"/>
 
 For React Native apps, initialize the SDK using native code in your `AppDelegate` (iOS) and `MainApplication` (Android).
 
@@ -552,7 +552,7 @@ public class MainApplication extends Application implements ReactApplication {
 
 For Flutter apps, initialize the SDK using native code in your `AppDelegate` and `MainApplication` in iOS and Android, respectively.
 
-The initialization code is located in the [Flutter ACPCore Github README](https://github.com/adobe/flutter_acpcore). -->
+The initialization code is located in the [Flutter ACPCore Github README](https://github.com/adobe/flutter_acpcore). --->
 
 <Variant platform="android" api="reset-identities" repeat="6"/>
 
@@ -714,7 +714,7 @@ import AEPServices
  [AEPMobileCore setLogLevel: AEPLogLevelTrace];
 ```
 
-<!-- <Variant platform="react-native" api="set-log-level" repeat="5"/>
+<!--- <Variant platform="react-native" api="set-log-level" repeat="5"/>
 
 #### Javascript
 
@@ -746,7 +746,7 @@ ACPCore.setLogLevel(ACPMobileLogLevel.VERBOSE);
 ```dart
 import 'package:flutter_acpcore/src/acpmobile_logging_level.dart';
 FlutterACPCore.setLogLevel(ACPLoggingLevel.VERBOSE);
-``` -->
+``` --->
 
 <Variant platform="android" api="set-push-identifier" repeat="6"/>
 
@@ -889,7 +889,7 @@ MobileCore.trackAction("loginClicked", additionalContextData);
 ```
 
 <<<<<<< HEAD
-<!-- <Variant platform="react-native" api="track-action" repeat="6"/>
+<!--- <Variant platform="react-native" api="track-action" repeat="6"/>
 =======
 <Variant platform="ios-acp" api="track-action" repeat="12"/>
 
@@ -964,7 +964,7 @@ Future<void> trackAction (String action, {Map<String, String> contextData});
 
 ```dart
 FlutterACPCore.trackAction("action name",  data: {"key": "value"});
-``` -->
+``` --->
 
 <Variant platform="android" api="track-state" repeat="7"/>
 
@@ -1026,7 +1026,7 @@ MobileCore.trackState("homePage", additionalContextData);
   [AEPMobileCore trackState:@"state name" data:@{@"key":@"value"}];
 ```
 
-<!-- <Variant platform="react-native" api="track-state" repeat="6"/>
+<!--- <Variant platform="react-native" api="track-state" repeat="6"/>
 
 #### Javascript
 
@@ -1062,7 +1062,7 @@ Future<void> trackState (String state, {Map<String, String> contextData});
 
 ```dart
 FlutterACPCore.trackState("state name",  data: {"key1: "value"})
-``` -->
+``` --->
 
 <Variant platform="android" api="public-classes" repeat="13"/>
 
