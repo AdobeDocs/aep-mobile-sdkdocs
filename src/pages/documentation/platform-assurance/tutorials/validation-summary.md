@@ -50,9 +50,9 @@ The validation function is expected to return an object that contains the follow
 
 | Key | Type | Description |
 | :--- | :--- | :--- | 
-| `message` | String | The validation message to display in the summary results. |
+| `message` | String | The validation message to display. |
 | `events` | Array | An array of event uuids to be reported as matched or not matched. |
-| `links` | Array | An array of ValidationResultLink objects {( type: 'doc'|'product', url: String )} to reference documentation and other resources |
+| `links` | Array | An array of ValidationResultLink objects `{( type: 'doc'\|'product', url: String )}` to reference documentation and other resources |
 | `result` | String | This is the validation result and is expected to be one of the enumerated strings: "matched", "not matched", "unknown" |
 
 ## Viewing Results

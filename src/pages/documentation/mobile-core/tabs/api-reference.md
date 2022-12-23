@@ -888,7 +888,47 @@ MobileCore.trackAction("loginClicked", additionalContextData);
   [AEPMobileCore trackAction:@"action name" data:@{@"key":@"value"}];
 ```
 
+<<<<<<< HEAD
 <!-- <Variant platform="react-native" api="track-action" repeat="6"/>
+=======
+<Variant platform="ios-acp" api="track-action" repeat="12"/>
+
+#### Swift
+
+**Syntax**
+
+```objc
++ (void) trackAction: (nullable NSString*) action data: (nullable NSDictionary*) contextData;
+```
+
+* _action_ contains the name of the action to track.
+* _contextData_ contains the context data to attach on the hit.
+
+**Example**
+
+```swift
+ACPCore.trackAction("action name", data: ["key": "value"])
+```
+
+#### Objective-C
+
+**Syntax**
+
+```objc
++ (void) trackAction: (nullable NSString*) action data: (nullable NSDictionary*) contextData;
+```
+
+* _action_ contains the name of the action to track.
+* _contextData_ contains the context data to attach on the hit.
+
+**Example**
+
+```objc
+ [ACPCore trackAction:@"action name" data:@{@"key":@"value"}];
+```
+
+<Variant platform="react-native" api="track-action" repeat="6"/>
+>>>>>>> main
 
 #### Javascript
 
@@ -1161,4 +1201,177 @@ MobileCore.getSdkIdentities { (content, error) in
 
     ...
 }];
+<<<<<<< HEAD
 ```
+=======
+```
+
+<Variant platform="ios-acp" api="public-classes" repeat="8"/>
+
+#### ACPError
+
+The `ACPError` class shows the errors that can be passed to a completion handler callback from any API which uses one:
+
+* `ACPErrorUnexpected` - An unexpected error occurred.
+* `ACPErrorCallbackTimeout` - The timeout was met.
+* `ACPErrorCallbackNil` - The provided callback function is nil.
+* `ACPErrorExtensionNotInitialized` - The extension is not initialized.
+
+**Example**
+
+**Objective-C**
+
+```objc
+[ACPCore getSdkIdentities:^(NSString * _Nullable content, NSError * _Nullable error) {
+  if (error) {
+    if (error.code == ACPErrorCallbackTimeout) {
+      // handle timeout error
+    } else if (error.code == ACPErrorCallbackNil) {
+      // handle nil callback error
+    } else if (error.code == ACPErrorExtensionNotInitialized) {
+      // handle extension not initialized error
+    } else if (error.code == ACPErrorUnexpected) {
+      // handle unexpected error
+
+    ....
+
+  } else {
+    // use privacy status
+  }
+}];
+```
+
+**Swift**
+
+```swift
+ACPCore.getPrivacyStatus { (privacyStatus, error) in
+  if let error = error {
+    let callbackError: NSError = (error as NSError)
+    if (callbackError.code == ACPError.callbackTimeout.rawValue) {
+      // handle timeout error
+    } else if (callbackError.code == ACPError.callbackNil.rawValue) {
+      // handle nil callback error
+    } else if (callbackError.code == ACPError.extensionNotInitialized.rawValue) {
+      // handle extension not initialized error
+    } else if (callbackError.code == ACPError.unexpected.rawValue) {
+      // handle unexpected error
+    }
+  } else {
+    // use privacyStatus
+  }
+}
+```
+
+<Variant platform="xamarin" api="public-classes" repeat="18"/>
+
+#### Android
+
+**IAdobeCallback**
+
+This class provides the interface to receive results when the async APIs perform the requested action.
+
+```csharp
+public interface IAdobeCallback : IJavaObject, IDisposable, IJavaPeerable
+{
+    void Call (Java.Lang.Object p0);
+}
+```
+
+**IAdobeCallbackWithError**
+
+This class provides the interface to receive results or an error when the async APIs perform the requested action. When using this class, if the request cannot be completed within the default timeout or an unexpected error occurs, the request is aborted and the _fail_ method is called with the corresponding _AdobeError_.
+
+```csharp
+public interface IAdobeCallbackWithError : IAdobeCallback, IJavaObject, IDisposable, IJavaPeerable
+{
+    void Fail (AdobeError p0);
+}
+```
+
+**AdobeError**
+
+Errors which may be passed to an AdobeCallbackWithError:
+
+* `UnexpectedError` - An unexpected error occurred.
+* `CallbackTimeout` - The timeout was met.
+* `CallbackNull` - The provided callback function is null.
+* `ExtensionNotInitialized` - The extension is not initialized.
+
+**Example**
+
+```csharp
+ACPCore.GetPrivacyStatus(new AdobeCallbackWithError());
+class AdobeCallbackWithError : Java.Lang.Object, IAdobeCallbackWithError
+{
+  public void Call(Java.Lang.Object stringContent)
+  {
+    if (stringContent != null)
+    {
+      Console.WriteLine("String callback content: " + stringContent);
+    }
+    else
+    {
+      Console.WriteLine("null content in string callback");
+    }
+  }
+  public void Fail(AdobeError error)
+  {
+    if (error == AdobeError.UnexpectedError)
+    {
+      // handle unexpected error
+    }
+    else if (error == AdobeError.CallbackTimeout)
+    {
+      // handle timeout error
+    }
+    else if (error == AdobeError.CallbackNull)
+    {
+      // handle null callback error
+    }
+    else if (error == AdobeError.ExtensionNotInitialized)
+    {
+        // handle extension not initialized error
+    }
+```
+
+#### iOS
+
+**ACPError**
+
+Errors which may be passed to a completion handler callback from any API which uses one:
+
+* `ACPError.Unexpected` - An unexpected error occurred.
+* `ACPError.CallbackTimeout` - The timeout was met.
+* `ACPError.CallbackNil` - The provided callback function is nil.
+* `ACPError.ExtensionNotInitialized` - The extension is not initialized.
+
+**Example**
+
+```csharp
+ACPCore.GetPrivacyStatusWithCompletionHandler((privacyStatus, error) => {
+  if (error != null)
+  {
+    if ( error.Code == (int)ACPError.CallbackTimeout)
+    {
+      // handle timeout error
+    }
+    else if (error.Code == (int)ACPError.CallbackNil) 
+    {
+      // handle nil callback error
+    }
+    else if (error.Code == (int)ACPError.ExtensionNotInitialized)
+    {
+      // handle extension not initialized error
+    }
+    else if (error.Code == (int)ACPError.Unexpected)
+    {
+      // handle unexpected error
+    }
+  }
+  else
+  {
+    Console.WriteLine("privacy status: " + privacyStatus);
+  }
+});
+```
+>>>>>>> main
