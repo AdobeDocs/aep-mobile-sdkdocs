@@ -57,3 +57,5 @@ iOS
 <!--- React Native
 
 <Tabs query="platform=react-native&task=register"/>
+
+--->
