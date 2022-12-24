@@ -32,7 +32,7 @@ The `startSession` API needs to be called to begin a AEP Assurance session. When
 
 You may call this API when the app launches with a URL (see code snippet below for sample usage)
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="7"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
