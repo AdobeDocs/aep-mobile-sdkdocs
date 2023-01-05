@@ -14,12 +14,12 @@ module.exports = {
         versions: [
             {
                 title: 'AEP SDKs',
-                path: '/client-sdks/documentation',
+                path: '/client-sdks/documentation/',
                 selected: true
               },
               {
                 title: 'ACP SDKs',
-                path: '/client-sdks/acp/documentation'
+                path: '/client-sdks/acp/documentation/'
               }
           ],
         pages: [{
