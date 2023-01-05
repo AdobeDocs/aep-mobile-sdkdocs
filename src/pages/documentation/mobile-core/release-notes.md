@@ -1,5 +1,17 @@
 # Release Notes
 
+## January 5, 2023
+
+### iOS AEPCore 3.7.4
+
+* Fixes an issue where Lifecycle launch events may set an invalid XDM _environment.\_dc.language_ field when the device is set to specific locales.
+* Fixes an issue where Lifecycle may set invalid negative times for metrics `daysSinceFirstLaunch`, `daysSinceLastLaunch`, and `daysSinceLastUpgrade`.
+* Adds performance improvements to `FullscreenMessage.show`.
+
+### Android Lifecycle 1.1.2
+
+* Fixes an issue where Lifecycle launch events may set an invalid XDM _environment.\_dc.language_ field when the device is set to specific locales.
+
 ## November 11, 2022
 
 ### iOS AEPCore 3.7.3
