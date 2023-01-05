@@ -18,7 +18,7 @@ module.exports = {
                 selected: true
               },
               {
-                title: 'ACP SDKs apis',
+                title: 'ACP SDKs',
                 path: '/client-sdks/acp/documentation'
               }
           ],
