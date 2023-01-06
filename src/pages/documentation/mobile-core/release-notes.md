@@ -12,6 +12,8 @@
 
 * Fixes an issue where Lifecycle launch events may set an invalid XDM _environment.\_dc.language_ field when the device is set to specific locales.
 
+Released with sdk-core version 1.11.5
+
 ## November 11, 2022
 
 ### iOS AEPCore 3.7.3

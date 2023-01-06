@@ -15,3 +15,5 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 ### Android Lifecycle 1.1.2
 
 * Fixes an issue where Lifecycle launch events may set an invalid XDM _environment.\_dc.language_ field when the device is set to specific locales.
+
+Released with sdk-core version 1.11.5
