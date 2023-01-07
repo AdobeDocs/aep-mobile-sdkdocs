@@ -19,7 +19,7 @@ module.exports = {
               },
               {
                 title: 'ACP SDKs',
-                path: '/client-sdks/acp/documentation/'
+                path: '/client-sdks/acp/'
               }
           ],
         pages: [{
