@@ -28,7 +28,7 @@ The `collectPii` method lets the SDK to collect sensitive or personally identifi
 
 Although this method enables the collection of sensitive data, no data is sent to any Adobe or other third-party endpoints. To send the data to an endpoint, use a PII type postback.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -38,9 +38,9 @@ iOS
 
 <Tabs query="platform=ios-aep&api=collect-pii"/>
 
-<!--- React Native
+React Native
 
-<Tabs query="platform=react-native&api=collect-pii"/> --->
+<Tabs query="platform=react-native&api=collect-pii"/>
 
 ## getApplication
 
@@ -56,7 +56,7 @@ Android
 
 This API gets the current log level being used in the SDK.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -66,9 +66,9 @@ iOS
 
 <Tabs query="platform=ios-aep&api=get-log-level"/>
 
-<!--- React Native
+React Native
 
-<Tabs query="platform=react-native&api=get-log-level"/> --->
+<Tabs query="platform=react-native&api=get-log-level"/>
 
 ## getSdkIdentities
 
@@ -89,7 +89,7 @@ To retrieve data as a JSON string from the SDKs and send this data to your serve
 
 You must call the API below and retrieve identities stored in the SDK, **before** the user opts out.<br/><br/>This API does **not** include the identities stored in the Edge Identity extension. To retrieve the identities from the Edge Identity extension, use [getIdentities](../identity-for-edge-network/api-reference.md#getidentities).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -99,11 +99,15 @@ iOS
 
 <Tabs query="platform=ios-aep&api=get-sdk-identities"/>
 
+React Native
+
+<Tabs query="platform=react-native&api=get-sdk-identities"/>
+
 ## log
 
 This is the API used to log from the SDK.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -113,9 +117,9 @@ iOS
 
 <Tabs query="platform=ios-aep&api=log"/>
 
-<!--- React Native
+React Native
 
-<Tabs query="platform=react-native&api=log"/> --->
+<Tabs query="platform=react-native&api=log"/>
 
 ## registerExtension(s)
 
@@ -127,7 +131,7 @@ Extension registration is **mandatory**. Attempting to make extension-specific A
 
 The following code snippets demonstrate how you can import and register the Mobile Core and Profile extensions. You can also see, for reference, how Identity, Lifecycle, Signal, Profile, and other extensions are imported and registered.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -137,19 +141,19 @@ iOS
 
 <Tabs query="platform=ios-aep&api=register-extension"/>
 
-<!--- React Native
+React Native
 
 <Tabs query="platform=react-native&api=register-extension"/>
 
-Flutter
+<!-- Flutter
 
-<Tabs query="platform=flutter&api=register-extension"/> --->
+<Tabs query="platform=flutter&api=register-extension"/> -->
 
 ## resetIdentities
 
 The `resetIdentities` method requests that each extension resets the identities it owns and each extension responds to this request uniquely. For more details, check the `resetIdentities` API reference on each of the extensions you use.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -158,6 +162,10 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=reset-identities"/>
+
+React Native
+
+<Tabs query="platform=react-native&api=reset-identities"/>
 
 ## setAdvertisingIdentifier
 
@@ -228,13 +236,13 @@ iOS
 
 <Tabs query="platform=ios-aep&api=set-log-level"/>
 
-<!--- React Native
+React Native
 
 <Tabs query="platform=react-native&api=set-log-level"/>
 
-Flutter
+<!--  Flutter
 
-<Tabs query="platform=flutter&api=set-log-level"/> --->
+<Tabs query="platform=flutter&api=set-log-level"/> -->
 
 ## setPushIdentifier
 
@@ -244,7 +252,7 @@ This API sets the device token for push notifications in the SDK. If the current
 
 You should call `setPushIdentifier` on each application launch to ensure the most up-to-date device token is set to the SDK. If no device token is available, `null`/`nil` should be passed.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -253,6 +261,10 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=set-push-identifier"/>
+
+React Native
+
+<Tabs query="platform=react-native&api=set-push-identifier"/>
 
 ## setSmallIconResourceID / setLargeIconResourceID 
 
@@ -286,13 +298,13 @@ iOS
 
 <Tabs query="platform=ios-aep&api=track-action"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&api=track-action"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=track-action"/> --->
+<Tabs query="platform=flutter&api=track-action"/> -->
 
 ## trackState
 
@@ -312,13 +324,13 @@ iOS
 
 <Tabs query="platform=ios-aep&api=track-state"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&api=track-state"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=track-state"/> --->
+<Tabs query="platform=flutter&api=track-state"/> -->
 
 ## Public classes
 

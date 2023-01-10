@@ -48,13 +48,13 @@ iOS
 
 <Tabs query="platform=ios-aep&task=update"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&task=update"/>
 
 Flutter
 
-<Tabs query="platform=flutter&task=update"/> --->
+<Tabs query="platform=flutter&task=update"/> -->
 
 ## Clearing programmatic updates to the configuration
 

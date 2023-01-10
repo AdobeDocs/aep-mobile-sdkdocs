@@ -41,7 +41,7 @@ import AEPSignal
 @import AEPSignal;
 ```
 
-<!--- <Variant platform="react-native" task="add" repeat="3"/>
+<!-- <Variant platform="react-native" task="add" repeat="3"/>
 
 #### JavaScript
 
@@ -59,7 +59,7 @@ Importing the Signal extension:
 
 ```dart
 import 'package:flutter_acpcore/flutter_acpsignal.dart';
-``` --->
+``` -->
 
 <Variant platform="android" task="register" repeat="4"/>
 
@@ -120,7 +120,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
  }
 ```
 
-<!--- <Variant platform="react-native" task="register" repeat="2"/>
+<!-- <Variant platform="react-native" task="register" repeat="2"/>
 
 #### JavaScript
 
@@ -130,4 +130,4 @@ When using React Native, registering Signal with Mobile Core should be done in n
 
 #### Dart
 
-When using Flutter, registering Signal with Mobile Core should be done in native code which is shown under the Android and iOS tabs. --->
+When using Flutter, registering Signal with Mobile Core should be done in native code which is shown under the Android and iOS tabs. -->

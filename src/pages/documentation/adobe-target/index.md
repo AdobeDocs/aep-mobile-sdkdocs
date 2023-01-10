@@ -41,9 +41,9 @@ iOS
 
 <Tabs query="platform=ios-aep&task=add"/>
 
-<!--- React Native
+<!-- React Native
 
-<Tabs query="platform=react-native&task=add"/> --->
+<Tabs query="platform=react-native&task=add"/> -->
 
 ## Register Target with Mobile Core
 
@@ -59,9 +59,9 @@ iOS
 
 <Tabs query="platform=ios-aep&task=register"/>
 
-<!--- React Native
+<!-- React Native
 
-<Tabs query="platform=react-native&task=register"/> --->
+<Tabs query="platform=react-native&task=register"/> -->
 
 ## Parameters in a Target request
 
@@ -81,9 +81,9 @@ iOS
 
 <Tabs query="platform=ios-aep&task=target-order"/>
 
-<!--- React Native
+<!-- React Native
 
-<Tabs query="platform=react-native&task=target-order"/> --->
+<Tabs query="platform=react-native&task=target-order"/> -->
 
 ### Target Product class
 
@@ -99,9 +99,9 @@ iOS
 
 <Tabs query="platform=ios-aep&task=target-product"/>
 
-<!--- React Native
+<!-- React Native
 
-<Tabs query="platform=react-native&task=target-product"/> --->
+<Tabs query="platform=react-native&task=target-product"/> -->
 
 ### Target Parameters
 
@@ -117,9 +117,9 @@ iOS
 
 <Tabs query="platform=ios-aep&task=target-parameters"/>
 
-<!--- React Native
+<!-- React Native
 
-<Tabs query="platform=react-native&task=target-parameters"/> --->
+<Tabs query="platform=react-native&task=target-parameters"/> -->
 
 ### Merge behavior of Target parameters
 

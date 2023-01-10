@@ -31,13 +31,13 @@ iOS
 
 <Tabs query="platform=ios-aep&task=add"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&task=add"/>
 
 Flutter
 
-<Tabs query="platform=flutter&task=add"/> --->
+<Tabs query="platform=flutter&task=add"/> -->
 
 ## Register the Identity extension
 
@@ -55,13 +55,13 @@ iOS
 
 <Tabs query="platform=ios-aep&task=register"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&task=register"/>
 
 Flutter
 
-<Tabs query="platform=flutter&task=register"/> --->
+<Tabs query="platform=flutter&task=register"/> -->
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -103,13 +103,13 @@ iOS
 
 <Tabs query="platform=ios-aep&task=implement"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&task=implement"/>
 
 Flutter
 
-<Tabs query="platform=flutter&task=implement"/> --->
+<Tabs query="platform=flutter&task=implement"/> -->
 
 The ID service code on the destination domain extracts the ECID from the URL instead of sending a request to Adobe for a new ID. The ID service code on the destination page uses this ECID to track the visitor. On hits from the mobile web content, verify that the `mid` parameter exists on each hit, and that this value matches the `mid`value that is being sent by the app code.
 

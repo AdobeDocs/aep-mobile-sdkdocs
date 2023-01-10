@@ -34,13 +34,13 @@ iOS
 
 <Tabs query="platform=ios-aep&task=add"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&task=add"/>
 
 Flutter
 
-<Tabs query="platform=flutter&task=add"/> --->
+<Tabs query="platform=flutter&task=add"/> -->
 
 ## Register the Signal extension
 
@@ -58,13 +58,13 @@ iOS
 
 <Tabs query="platform=ios-aep&task=register"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&task=register"/>
 
 Flutter
 
-<Tabs query="platform=flutter&task=register"/> --->
+<Tabs query="platform=flutter&task=register"/> -->
 
 ## Implement the Mobile SDK to send PII data to external destinations
 

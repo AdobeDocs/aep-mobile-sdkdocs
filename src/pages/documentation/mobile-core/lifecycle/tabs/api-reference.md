@@ -20,7 +20,7 @@ let version = Lifecycle.extensionVersion
 NSString *version = [AEPMobileLifecycle extensionVersion];
 ```
 
-<!--- <Variant platform="react-native" api="extension-version" repeat="2"/>
+<!-- <Variant platform="react-native" api="extension-version" repeat="2"/>
 
 **JavaScript**
 
@@ -34,7 +34,7 @@ ACPLifecycle.extensionVersion().then(lifecycleExtensionVersion => console.log("A
 
 ```dart
 String lifeycycleExtensionVersion = await FlutterACPLifecycle.extensionVersion;
-``` --->
+``` -->
 
 <Variant platform="android" api="lifecycle-start" repeat="8"/>
 
@@ -90,11 +90,11 @@ If you need to collect additional lifecycle data:
  [AEPMobileCore lifecycleStart:@{@"contextDataKey": @"contextDataVal"}];
 ```
 
-<!--- <Variant platform="react-native" api="lifecycle-start" repeat="2"/>
+<!-- <Variant platform="react-native" api="lifecycle-start" repeat="2"/>
 
 #### JavaScript
 
-When using React Native, starting to collect lifecycle data should be done in native code which is shown under the Android and iOS (ACP 2.x) tabs. --->
+When using React Native, starting to collect lifecycle data should be done in native code which is shown under the Android and iOS (ACP 2.x) tabs. -->
 
 <Variant platform="android" api="lifecycle-pause" repeat="5"/>
 
@@ -135,8 +135,8 @@ MobileCore.lifecyclePause();
  [AEPMobileCore lifecyclePause];
 ```
 
-<!--- <Variant platform="react-native" api="lifecycle-pause" repeat="2"/>
+<!-- <Variant platform="react-native" api="lifecycle-pause" repeat="2"/>
 
 #### JavaScript
 
-When using React Native, pausing the collection of lifecycle data should be done in native code which is shown under the Android and iOS (ACP 2.x) tabs. --->
+When using React Native, pausing the collection of lifecycle data should be done in native code which is shown under the Android and iOS (ACP 2.x) tabs. -->

@@ -24,7 +24,7 @@ import AEPIdentity
 @import AEPIdentity;
 ```
 
-<!--- <Variant platform="react-native" task="add" repeat="2"/>
+<!-- <Variant platform="react-native" task="add" repeat="2"/>
 
 #### JavaScript
 
@@ -38,7 +38,7 @@ import {ACPIdentity} from '@adobe/react-native-acpcore';
 
 ```dart
 import 'package:flutter_acpcore/flutter_acpidentity.dart';
-``` --->
+``` -->
 
 <Variant platform="android" task="register" repeat="3"/>
 
@@ -88,13 +88,13 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-<!--- <Variant platform="react-native" task="register" repeat="1"/>
+<!-- <Variant platform="react-native" task="register" repeat="1"/>
 
 When using React Native, registering Identity with Mobile Core should be done in native code, which is shown under the Android and iOS tabs.
 
 <Variant platform="flutter" task="register" repeat="1"/>
 
-When using Flutter, registering Identity with Mobile Core should be done in native code, which is shown under the Android and iOS tabs. --->
+When using Flutter, registering Identity with Mobile Core should be done in native code, which is shown under the Android and iOS tabs. -->
 
 <Variant platform="android" task="implement" repeat="5"/>
 
@@ -197,7 +197,7 @@ Identity.getUrlVariables { urlVariables, error in
 }];
 ```
 
-<!--- <Variant platform="react-native" task="implement" repeat="5"/>
+<!-- <Variant platform="react-native" task="implement" repeat="5"/>
 
 #### JavaScript
 
@@ -239,4 +239,4 @@ try {
 } on PlatformException {
   log("Failed to get url variables");
 }
-``` --->
+``` -->

@@ -57,13 +57,13 @@ iOS
 
 <Tabs query="platform=ios-aep&api=append-to-url"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&api=append-to-url"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=append-to-url"/> --->
+<Tabs query="platform=flutter&api=append-to-url"/> -->
 
 ## extensionVersion
 
@@ -81,13 +81,13 @@ iOS
 
 <Tabs query="platform=ios-aep&api=extension-version"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&api=extension-version"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=extension-version"/> --->
+<Tabs query="platform=flutter&api=extension-version"/> -->
 
 ## getExperienceCloudId
 
@@ -105,13 +105,13 @@ iOS
 
 <Tabs query="platform=ios-aep&api=get-experience-cloud-id"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&api=get-experience-cloud-id"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=get-experience-cloud-id"/> --->
+<Tabs query="platform=flutter&api=get-experience-cloud-id"/> -->
 
 ## getIdentifiers
 
@@ -127,13 +127,13 @@ iOS
 
 <Tabs query="platform=ios-aep&api=get-identifiers"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&api=get-identifiers"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=get-identifiers"/> --->
+<Tabs query="platform=flutter&api=get-identifiers"/> -->
 
 ## getUrlVariables
 
@@ -158,13 +158,13 @@ iOS
 
 <Tabs query="platform=ios-aep&api=get-url-variables"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&api=get-url-variables"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=get-url-variables"/> --->
+<Tabs query="platform=flutter&api=get-url-variables"/> -->
 
 ## registerExtension
 
@@ -180,13 +180,13 @@ iOS
 
 <Tabs query="platform=ios-aep&api=register-extension"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&api=register-extension"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=register-extension"/> --->
+<Tabs query="platform=flutter&api=register-extension"/> -->
 
 ## setAdvertisingIdentifier
 
@@ -206,13 +206,13 @@ iOS
 
 <Tabs query="platform=ios-aep&api=set-advertising-identifier"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&api=set-advertising-identifier"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=set-advertising-identifier"/> --->
+<Tabs query="platform=flutter&api=set-advertising-identifier"/> -->
 
 ## setPushIdentifier
 
@@ -232,9 +232,9 @@ iOS
 
 <Tabs query="platform=ios-aep&api=set-push-identifier"/>
 
-<!--- React Native
+<!-- React Native
 
-<Tabs query="platform=react-native&api=set-push-identifier"/> --->
+<Tabs query="platform=react-native&api=set-push-identifier"/> -->
 
 ## syncIdentifier
 
@@ -260,13 +260,13 @@ iOS
 
 <Tabs query="platform=ios-aep&api=sync-identifier"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&api=sync-identifier"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=sync-identifier"/> --->
+<Tabs query="platform=flutter&api=sync-identifier"/> -->
 
 ## syncIdentifiers
 
@@ -282,13 +282,13 @@ iOS
 
 <Tabs query="platform=ios-aep&api=sync-identifiers"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&api=sync-identifiers"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=sync-identifiers"/> --->
+<Tabs query="platform=flutter&api=sync-identifiers"/> -->
 
 ## syncIdentifiers (overloaded)
 
@@ -306,13 +306,13 @@ iOS
 
 <Tabs query="platform=ios-aep&api=sync-identifiers-overloaded"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&api=sync-identifiers-overloaded"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=sync-identifiers-overloaded"/> --->
+<Tabs query="platform=flutter&api=sync-identifiers-overloaded"/> -->
 
 ## Public classes
 
@@ -326,10 +326,10 @@ iOS
 
 <Tabs query="platform=ios-aep&api=public-classes"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&api=public-classes"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=public-classes"/> --->
+<Tabs query="platform=flutter&api=public-classes"/> -->

@@ -20,13 +20,13 @@ iOS
 
 <Tabs query="platform=ios-aep&task=add"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&task=add"/>
 
 Flutter
 
-<Tabs query="platform=flutter&task=add"/> --->
+<Tabs query="platform=flutter&task=add"/> -->
 
 ## Register Lifecycle with Mobile Core and add appropriate Start/Pause calls
 
@@ -40,9 +40,9 @@ iOS
 
 <Tabs query="platform=ios-aep&task=register"/>
 
-<!--- React Native
+<!-- React Native
 
-<Tabs query="platform=react-native&task=register"/> --->
+<Tabs query="platform=react-native&task=register"/> -->
 
 ## Lifecycle metrics
 

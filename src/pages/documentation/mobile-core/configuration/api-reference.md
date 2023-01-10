@@ -92,13 +92,13 @@ iOS
 
 <Tabs query="platform=ios-aep&api=extension-version"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&api=extension-version"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=extension-version"/> --->
+<Tabs query="platform=flutter&api=extension-version"/> -->
 
 ## updateConfiguration
 
@@ -122,10 +122,10 @@ iOS
 
 <Tabs query="platform=ios-aep&api=update-configuration"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&api=update-configuration"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=update-configuration"/> --->
+<Tabs query="platform=flutter&api=update-configuration"/> -->

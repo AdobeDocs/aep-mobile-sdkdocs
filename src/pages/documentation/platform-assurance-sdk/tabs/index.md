@@ -165,17 +165,17 @@ To start using the extension library, you must first register the extension with
 }
 ```
 
-<!--- <Variant platform="react-native" task="register-assurance" repeat="2"/>
+<Variant platform="react-native" task="register-assurance" repeat="2"/>
 
 #### JavaScript
 
 When using React Native, register AEP Assurance with Mobile Core in native code as shown on the Android and iOS tabs.
 
-<Variant platform="flutter" task="register-assurance" repeat="2"/>
+<!-- <Variant platform="flutter" task="register-assurance" repeat="2"/>
 
 #### Dart
 
-When using Flutter, register AEP Assurance with Mobile Core in native code as shown on the Android and iOS tabs. --->
+When using Flutter, register AEP Assurance with Mobile Core in native code as shown on the Android and iOS tabs. -->
 
 <Variant platform="ios-aep" task="implement-assurance" repeat="12"/>
 

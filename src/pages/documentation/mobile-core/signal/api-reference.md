@@ -18,13 +18,13 @@ iOS
 
 <Tabs query="platform=ios-aep&api=extension-version"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&api=extension-version"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=extension-version"/> --->
+<Tabs query="platform=flutter&api=extension-version"/> -->
 
 ## registerExtension
 
@@ -40,9 +40,9 @@ iOS
 
 <Tabs query="platform=ios-aep&api=register-extension"/>
 
-<!--- React Native
+<!-- React Native
 
-<Tabs query="platform=react-native&api=register-extension"/> --->
+<Tabs query="platform=react-native&api=register-extension"/> -->
 
 ## collectPII
 
