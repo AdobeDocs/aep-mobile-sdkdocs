@@ -65,7 +65,7 @@ cd MyReactApp
 npm install @adobe/react-native-aepedgeconsent
 ```
 
-2. Import the Mobile Core and Edge libraries. Please refer to the native code tabs to learn how to import these libraries.
+2. Import the Mobile Core and the Consent for Edge libraries. Please refer to the native code tabs to learn how to import these libraries.
 
 <Variant platform="android" task="register" repeat="2"/>
 

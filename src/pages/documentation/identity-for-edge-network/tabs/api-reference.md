@@ -44,6 +44,20 @@ let extensionVersion = EdgeIdentity.extensionVersion
 NSString *extensionVersion = [AEPMobileEdgeIdentity extensionVersion];
 ```
 
+<Variant platform="react-native" api="extension-version" repeat="4"/>
+
+**Syntax**
+
+```typescript
+extensionVersion(): Promise<string>;
+```
+
+**Example**
+
+```typescript
+Identity.extensionVersion().then(version => console.log("AdobeExperienceSDK: EdgeIdentity version: " + version));
+```
+
 <Variant platform="android" api="get-experience-cloud-id" repeat="7"/>
 
 The ECID value is returned via the [AdobeCallback](../mobile-core/api-reference.md#public-classes). When [AdobeCallbackWithError](../mobile-core/api-reference.md#public-classes) is provided to this API, the timeout value is 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate [AdobeError](../mobile-core/api-reference.md#public-classes).
@@ -109,6 +123,20 @@ Identity.getExperienceCloudId { (ecid, error) in
 }];
 ```
 
+<Variant platform="react-native" api="get-experience-cloud-id" repeat="4"/>
+
+**Syntax**
+
+```typescript
+getExperienceCloudId(): Promise<string>;
+```
+
+**Example**
+
+```typescript
+Identity.getExperienceCloudId().then(experienceCloudId => console.log("AdobeExperienceSDK: Experience Cloud Id = " + experienceCloudId));
+```
+
 <Variant platform="android" api="get-identities" repeat="7"/>
 
 When [AdobeCallbackWithError](../mobile-core/api-reference.md#public-classes) is provided, and you are fetching the identities from the Mobile SDK, the timeout value is 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate [AdobeError](../mobile-core/api-reference.md#public-classes).
@@ -172,6 +200,20 @@ Identity.getIdentities { (identityMap, error) in
 [AEPMobileEdgeIdentity getIdentities:^(AEPIdentityMap *map, NSError *error) {   
     // handle the error and the retrieved ID here
 }];
+```
+
+<Variant platform="react-native" api="get-identities" repeat="4"/>
+
+**Syntax**
+
+```typescript
+getIdentities(): Promise<IdentityMap>;
+```
+
+**Example**
+
+```typescript
+Identity.getIdentities().then(identities => console.log("AdobeExperienceSDK: Get Identities = " + JSON.stringify(identities)));
 ```
 
 <Variant platform="android" api="get-url-variables" repeat="7"/>
@@ -269,6 +311,20 @@ Identity.getUrlVariables { (urlVariables, error) in
 }];
 ```
 
+<Variant platform="react-native" api="get-url-variables" repeat="4"/>
+
+**Syntax**
+
+```typescript
+getUrlVariables(): Promise<string>;
+```
+
+**Example**
+
+```typescript
+Identity.getUrlVariables().then(urlVariables => console.log("AdobeExperienceSDK: URL Variables = " + urlVariables));
+```
+
 <Variant platform="android" api="register-extension" repeat="5"/>
 
 **Java**
@@ -328,6 +384,10 @@ MobileCore.registerExtensions([Identity.self])
 [AEPMobileCore registerExtensions:@[AEPMobileEdgeIdentity.class] completion:nil];
 ```
 
+<Variant platform="react-native" api="register-extension" repeat="1"/>
+
+Please refer to the native code tabs to learn how to register the Identity extension.
+
 <Variant platform="android" api="remove-identity" repeat="5"/>
 
 **Java**
@@ -375,6 +435,21 @@ Identity.removeIdentity(item: IdentityItem(id: "user@example.com"), withNamespac
 ```objectivec
 AEPIdentityItem *item = [[AEPIdentityItem alloc] initWithId:@"user@example.com" authenticatedState:AEPAuthenticatedStateAuthenticated primary:false];
 [AEPMobileEdgeIdentity removeIdentityItem:item withNamespace:@"Email"];
+```
+
+<Variant platform="react-native" api="remove-identity" repeat="4"/>
+
+**Syntax**
+
+```typescript
+removeIdentity(item: IdentityItem, namespace: string);
+```
+
+**Example**
+
+```typescript
+let identityItem  = new IdentityItem("user@example.com");
+Identity.removeIdentity(identityItem, "Email");
 ```
 
 <Variant platform="android" api="set-advertising-identifier" repeat="16"/>
@@ -630,6 +705,20 @@ func setAdvertisingIdentifierUsingTrackingManager() {
 }
 ```
 
+<Variant platform="react-native" api="set-advertising-identifier" repeat="4"/>
+
+**Syntax**
+
+```typescript
+setAdvertisingIdentifier(advertisingIdentifier?: string)
+```
+
+**Example**
+
+```typescript
+MobileCore.setAdvertisingIdentifier("adID");
+```
+
 <Variant platform="android" api="update-identities" repeat="5"/>
 
 **Java**
@@ -682,6 +771,23 @@ AEPIdentityItem *item = [[AEPIdentityItem alloc] initWithId:@"user@example.com" 
 AEPIdentityMap *map = [[AEPIdentityMap alloc] init];
 [map addItem:item withNamespace:@"Email"];
 [AEPMobileEdgeIdentity updateIdentities:map];
+```
+
+<Variant platform="react-native" api="update-identities" repeat="4"/>
+
+**Syntax**
+
+```typescript
+updateIdentities(identityMap: IdentityMap);
+```
+
+**Example**
+
+```typescript
+let identityItem  = new IdentityItem("user@example.com");
+let map = new IdentityMap();
+map.addItem(identityItem, "Email");
+Identity.updateIdentities(map);
 ```
 
 <Variant platform="android" api="identity-map" repeat="3"/>
@@ -764,6 +870,31 @@ NSArray<NSString*>* namespaces = identityMap.namespaces;
 bool hasNoIdentities = identityMap.isEmpty;
 ```
 
+<Variant platform="react-native" api="identity-map" repeat="2"/>
+
+**Example**
+
+```typescript
+let map = new IdentityMap();
+
+// Add an item
+let identityItem  = new IdentityItem("user@example.com");
+map.addItem(identityItem, "Email");
+
+// Remove an item
+let identityItem  = new IdentityItem("user@example.com");
+map.removeItem(identityItem, "Email");
+
+//Get a list of items for a given namespace
+let namespacecheck = map.getIdentityItemsForNamespace("Email");
+
+//Get a list of all namespaces used in current IdentityMap
+let namespaces = map.getNamespaces();
+
+//Check if IdentityMap has no identities
+let hasNoIdentities = map.isEmpty();
+```
+
 <Variant platform="android" api="identity-item" repeat="3"/>
 
 **Java**
@@ -821,6 +952,23 @@ long state = primaryEmail.authenticatedState;
 bool primary = primaryEmail.primary;
 ```
 
+<Variant platform="react-native" api="identity-item" repeat="2"/>
+
+**Example**
+
+```typescript
+// Initialize
+let item  = new IdentityItem("identifier");
+
+let item  = new IdentityItem("identifier", AuthenticatedState.AUTHENTICATED, false);
+
+//Getters
+let id = item.id;
+let state = item.authenticatedState;
+let primary = item.primary
+```
+
+
 <Variant platform="android" api="authenticated-state" repeat="2"/>
 
 **Syntax**
@@ -844,4 +992,16 @@ public enum AuthenticatedState: Int, RawRepresentable, Codable {
     case authenticated = 1
     case loggedOut = 2
 }
+```
+
+<Variant platform="react-native" api="authenticated-state" repeat="2"/>
+
+**Syntax**
+
+```typescript
+ export enum AuthenticatedState {
+   AUTHENTICATED = 'authenticated',
+   LOGGED_OUT = 'loggedOut',
+   AMBIGUOUS = 'ambiguous'
+ }
 ```

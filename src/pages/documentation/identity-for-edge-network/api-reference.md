@@ -6,7 +6,7 @@ import Tabs from './tabs/api-reference.md'
 
 The extensionVersion() API returns the version of the Identity for Edge Network extension.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -16,11 +16,15 @@ iOS
 
 <Tabs query="platform=ios-aep&api=extension-version"/>
 
+React Native
+
+<Tabs query="platform=react-native&api=extension-version"/>
+
 ## getExperienceCloudId
 
 This API retrieves the Experience Cloud ID (ECID) that was generated when the app was initially launched. This ID is preserved between app upgrades, is saved and restored during the standard application backup process, and is removed at uninstall.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -30,11 +34,15 @@ iOS
 
 <Tabs query="platform=ios-aep&api=get-experience-cloud-id"/>
 
+React Native
+
+<Tabs query="platform=react-native&api=get-experience-cloud-id"/>
+
 ## getIdentities
 
 Get all identities in the Identity for Edge Network extension, including customer identifiers which were previously added.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -43,6 +51,10 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=get-identities"/>
+
+React Native
+
+<Tabs query="platform=react-native&api=get-identities"/>
 
 ## getUrlVariables
 
@@ -58,7 +70,7 @@ An example of an encoded string is as follows: `"adobe_mc=TS%3DTIMESTAMP_VALUE%7
 - `MCORGID`: This is also known as the Experience Cloud Organization ID.
 - `TS`: The timestamp that is taken when the request was made.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -68,6 +80,10 @@ iOS
 
 <Tabs query="platform=ios-aep&api=get-url-variables"/>
 
+React Native
+
+<Tabs query="platform=react-native&api=get-url-variables"/>
+
 ## registerExtension
 
 Registers the Identity for Edge Network extension with the Mobile Core extension.
@@ -76,7 +92,7 @@ Registers the Identity for Edge Network extension with the Mobile Core extension
 
 If your use-case covers both Edge Network and Adobe Experience Cloud Solutions extensions, you need to register Identity for Edge Network and Identity for Experience Cloud Identity Service from Mobile Core extensions. For more details, see the [frequently asked questions](./faq.md#q-i-am-using-aep-edge-and-adobe-solutions-extensions-which-identity-extension-should-i-install-and-register).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -85,6 +101,10 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=register-extension"/>
+
+React Native
+
+<Tabs query="platform=react-native&api=register-extension"/>
 
 ## removeIdentity
 
@@ -98,7 +118,7 @@ Removing identities using a reserved namespace is not allowed using this API. Th
 * IDFA
 * GAID
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -107,6 +127,10 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=remove-identity"/>
+
+React Native
+
+<Tabs query="platform=react-native&api=remove-identity/>
 
 ## resetIdentities
 
@@ -137,7 +161,7 @@ When this API is called with a valid advertising identifier, the Identity for Ed
 
 The advertising identifier is preserved between app upgrades, is saved and restored during the standard application backup process, and is removed at uninstall.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -146,6 +170,10 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=set-advertising-identifier"/>
+
+React Native
+
+<Tabs query="platform=react-native&api=set-advertising-identifier"/>
 
 ## updateIdentities
 
@@ -159,7 +187,7 @@ Updating identities using a reserved namespace is not allowed using this API. Th
 * IDFA
 * GAID
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -169,6 +197,10 @@ iOS
 
 <Tabs query="platform=ios-aep&api=update-identities"/>
 
+React Native
+
+<Tabs query="platform=react-native&api=update-identities"/>
+
 ## Public Classes
 
 ### IdentityMap
@@ -177,7 +209,7 @@ Defines a map containing a set of end user identities, keyed on either namespace
 
 The format of the IdentityMap class is defined by the [XDM Identity Map Schema](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/shared/identitymap.schema.md).
 
-For more information, please read an overview of the [AEP Identity Service](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html).
+For more information, please read an overview of the [Platform Identity Service](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html).
 
 ```json
 "identityMap" : {
@@ -210,7 +242,7 @@ For more information, please read an overview of the [AEP Identity Service](http
   }
 ```
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -220,13 +252,17 @@ iOS
 
 <Tabs query="platform=ios-aep&api=identity-map"/>
 
+React Native
+
+<Tabs query="platform=react-native&api=identity-map"/>
+
 ### IdentityItem
 
 Defines an identity to be included in an [IdentityMap](#identitymap).
 
 The format of the IdentityItem class is defined by the [XDM Identity Item Schema](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/identityitem.schema.md).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -235,6 +271,10 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=identity-item"/>
+
+React Native
+
+<Tabs query="platform=react-native&api=identity-item"/>
 
 ### AuthenticatedState
 
@@ -246,7 +286,7 @@ The possible authenticated states are:
 * Authenticated - the user is identified by a login or similar action
 * LoggedOut - the user was identified by a login action at a previous time, but is not logged in now
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -255,3 +295,7 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=authenticated-state"/>
+
+React Native
+
+<Tabs query="platform=react-native&api=authenticated-state"/>
