@@ -25,6 +25,18 @@ target 'YourAppTarget' do
 end
 ```
 
+<Variant platform="react-native" task="install" repeat="2"/>
+
+Install the `@adobe/react-native/aepoptimize` package:
+
+```bash
+# NPM
+npm install @adobe/react-native-aepoptimize
+
+# Yarn
+yarn add @adobe/react-native-aepoptimize
+```
+
 <Variant platform="android" task="register" repeat="2"/>
 
 #### Java
@@ -104,6 +116,10 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
+<Variant platform="react-native" task="register" repeat="1"/>
+
+Please refer to the native code tabs to learn how to register the Optimize extension.
+
 <Variant platform="android" task="decisionscope" repeat="2"/>
 
 #### Java
@@ -129,6 +145,38 @@ AEPDecisionScope* decisionScope = [[AEPDecisionScope alloc] initWithActivityId:@
                                                                    placementId:@"xcore:offer-placement:1111111111111111" 
                                                                      itemCount:3];
 ```
+
+<Variant platform="react-native" task="decisionscope" repeat="1"/>
+
+```typescript
+/**
+* class represents a decision scope used to fetch personalized offers from the Experience Edge network.
+*/
+module.exports = class DecisionScope {
+    name: string;        
+
+    constructor(name?: string, activityId?: string, placementId?: string, itemCount?: number) {                
+        if(name && name.trim()) {
+            this.name = name;
+        } else {            
+            const decisionScopeObject = {};
+            decisionScopeObject['activityId'] = activityId;            
+            decisionScopeObject['placementId'] = placementId;    
+            decisionScopeObject['itemCount'] = itemCount;   
+            this.name = Buffer.from(JSON.stringify(decisionScopeObject)).toString("base64");            
+        }                
+    }
+
+    /**
+    * Gets the name of this scope
+    * @return {string} - The name of the scope
+    */
+    getName(): string {
+       return this.name; 
+    }
+};
+```
+
 
 <Variant platform="android" task="encodedscope" repeat="2"/>
 

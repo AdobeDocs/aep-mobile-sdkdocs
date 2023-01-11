@@ -46,7 +46,7 @@ Follow these steps to integrate the Adobe Journey Optimizer extension.
 
 #### Import the extension
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
@@ -56,9 +56,6 @@ iOS
 
 <Tabs query="platform=ios-aep&task=import"/>
 
-React Native
-
-<Tabs query="platform=react-native&task=import"/>
 
 #### Register the extension with Mobile Core
 

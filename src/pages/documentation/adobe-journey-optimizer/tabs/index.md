@@ -54,9 +54,6 @@ import AEPMessaging
 @import AEPMessaging;
 ```
 
-<Variant platform="react-native" task="import" repeat="7"/>
-
-
 <Variant platform="android" task="register" repeat="2"/>
 
 #### Java
