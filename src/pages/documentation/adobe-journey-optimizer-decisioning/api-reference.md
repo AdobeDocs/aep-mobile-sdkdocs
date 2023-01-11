@@ -169,6 +169,10 @@ iOS
 
 <Tabs query="platform=ios&api=offer"/>
 
+React Native
+
+<Tabs query="platform=react-native&api=offer"/>
+
 ### OfferType
 
 An enum indicating the type of an offer, derived from the proposition item `format` field in personalization query response.
@@ -183,6 +187,3 @@ iOS
 
 <Tabs query="platform=ios&api=offertype"/>
 
-React Native
-
-<Tabs query="platform=react-native&api=offertype"/>
