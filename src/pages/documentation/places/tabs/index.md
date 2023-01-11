@@ -46,6 +46,9 @@ import AEPPlaces
 @import AEPPlaces;
 ```
 
+<Variant platform="react-native" task="download" repeat="5"/>
+
+
 <Variant platform="android" task="register" repeat="2"/>
 
 **Java**
