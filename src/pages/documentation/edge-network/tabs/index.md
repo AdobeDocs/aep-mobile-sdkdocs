@@ -50,6 +50,21 @@ import AEPEdgeIdentity
 @import AEPEdgeIdentity;
 ```
 
+<Variant platform="react-native" task="add" repeat="4"/>
+
+1. Install the `@adobe/react-native-aepedge` package:
+
+```bash
+cd MyReactApp
+npm install @adobe/react-native-aepedge
+```
+
+2. Import the Edge library:
+   
+```typescript
+import {Edge, ExperienceEvent} from '@adobe/react-native-aepedge';
+```
+
 <Variant platform="android" task="register" repeat="2"/>
 
 #### Java
@@ -103,4 +118,60 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
   [AEPMobileCore configureWithAppId: @"yourAppId"];
   ...
 }
+```
+
+<Variant platform="react-native" task="register" repeat="4"/>
+
+**iOS**
+
+```objc
+// AppDelegate.h
+@import AEPCore;
+@import AEPEdge;
+@import AEPEdgeIdentity;
+...
+@implementation AppDelegate
+
+// AppDelegate.m
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [AEPMobileCore setLogLevel: AEPLogLevelDebug];
+    [AEPMobileCore registerExtensions:@[AEPMobileEdgeIdentity.class, 
+                                        AEPMobileEdge.class] completion:^{
+        [AEPMobileCore configureWithAppId:@"yourAppID"];  
+    ...   
+   }]; 
+   return YES;   
+ } 
+
+@end
+```
+
+**Android**
+
+```java
+import com.adobe.marketing.mobile.LoggingMode;
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Edge;
+  
+...
+import android.app.Application;
+...
+public class MainApplication extends Application implements ReactApplication {
+  ...
+  @Override
+  public void on Create(){
+    super.onCreate();
+    ...
+    MobileCore.setApplication(this);
+    MobileCore.setLogLevel(LoggingMode.DEBUG);
+    MobileCore.configureWithAppID("yourAppID");
+    Edge.registerExtension();
+    com.adobe.marketing.mobile.edge.identity.Identity.registerExtension();
+    MobileCore.start(new AdobeCallback() {
+        @Override
+        public void call(Object o) {
+        
+        }});
+    }
+}     
 ```

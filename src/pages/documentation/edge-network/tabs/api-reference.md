@@ -44,6 +44,21 @@ let extensionVersion = Edge.extensionVersion
 NSString *extensionVersion = [AEPMobileEdge extensionVersion];
 ```
 
+<Variant platform="react-native" api="extension-version" repeat="4"/>
+
+**Syntax**
+
+```typescript
+extensionVersion(): Promise<string>;
+```
+
+**Example**
+
+```typescript
+Edge.extensionVersion().then(version => console.log("AdobeExperienceSDK: Edge version: " + version));
+```
+
+
 <Variant platform="android" api="get-location-hint" repeat="6"/>
 
 #### Java
@@ -170,6 +185,10 @@ Use the AEPMobileCore API to register the Edge extension.
 
 ```
 
+<Variant platform="react-native" api="register-extension" repeat="1"/>
+
+You can use native code, using the AEPCore API to register the Edge extension.
+
 <Variant platform="android" api="send-event" repeat="8"/>
 
 #### Java
@@ -272,6 +291,29 @@ NSDictionary *data = @{ @"sample" : @"data"};
   // handle the Edge Network response
 }];
 ```
+
+<Variant platform="react-native" api="send-event" repeat="4"/>
+
+**Syntax**
+
+```typescript
+sendEvent(experienceEvent: ExperienceEvent): Promise<Array<EdgeEventHandle>>;
+```
+
+**Example**
+
+```typescript
+var xdmData  = {"eventType" : "SampleXDMEvent"};
+var data  = {"free": "form", "data": "example"};
+let experienceEvent = new ExperienceEvent(xdmData, data);
+
+// send ExperienceEvent ignoring the promise
+Edge.sendEvent(experienceEvent);
+
+// send ExperienceEvent with promise
+Edge.sendEvent(experienceEvent).then(eventHandles => console.log("Edge.sentEvent returned EdgeEventHandles = " + JSON.stringify(eventHandles)));
+```
+
 
 <Variant platform="android" api="set-location-hint" repeat="6"/>
 

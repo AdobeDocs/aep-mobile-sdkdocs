@@ -6,7 +6,7 @@ import Tabs from './tabs/api-reference.md'
 
 Returns the version of the client-side Edge extension.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -15,6 +15,10 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=extension-version"/>
+
+React Native
+
+<Tabs query="platform=react-native&api=extension-version"/>
 
 ## getLocationHint
 
@@ -34,7 +38,7 @@ iOS
 
 Registers the Edge extension with the Mobile Core SDK.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -43,6 +47,10 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=register-extension"/>
+
+React Native
+
+<Tabs query="platform=react-native&api=register-extension"/>
 
 ## resetIdentities
 
@@ -54,7 +62,7 @@ See [MobileCore.resetIdentities](../mobile-core/api-reference.md#resetidentities
 
 Sends an Experience event to Adobe Experience Platform Edge Network.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -63,6 +71,10 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=send-event"/>
+
+React Native
+
+<Tabs query="platform=react-native&api=send-event"/>
 
 ## setLocationHint
 
