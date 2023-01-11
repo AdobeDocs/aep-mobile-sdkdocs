@@ -56,9 +56,16 @@ import AEPEdgeConsent
 @import AEPEdgeConsent;
 ```
 
-<Variant platform="ios-acp" task="download" repeat="1"/>
+<Variant platform="react-native" task="download" repeat="1"/>
 
-This extension is built on the AEPCore (3.x) and it is not compatible with ACPCore (2.x). Please follow [the guide for migrating to the Swift AEPCore](../migrate-to-swift.md).
+1. Install the `@adobe/react-native-aepedgeconsent` package.
+
+```bash
+cd MyReactApp
+npm install @adobe/react-native-aepedgeconsent
+```
+
+2. Import the Mobile Core and Edge libraries. Please refer to the native code tabs to learn how to import these libraries.
 
 <Variant platform="android" task="register" repeat="2"/>
 
@@ -113,3 +120,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
   ...
 }
 ```
+
+<Variant platform="react-native" task="register" repeat="1"/>
+
+Please refer to the native code tabs to learn how to register the Consent extension.

@@ -26,7 +26,7 @@ The use of this extension is currently limited to the setting (and enforcement) 
 
 ### Download and import the Consent extension
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -36,9 +36,13 @@ iOS
 
 <Tabs query="platform=ios-aep&task=download"/>
 
+React Native
+
+<Tabs query="platform=react-native&task=download"/>
+
 ### Register Edge extensions with Mobile Core
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -47,6 +51,10 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&task=register"/>
+
+React Native
+
+<Tabs query="platform=react-native&task=register"/>
 
 ## Configuration keys
 
