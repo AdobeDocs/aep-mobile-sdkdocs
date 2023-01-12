@@ -43,28 +43,32 @@ pod 'AEPTarget','~>3.0'
     @import AEPIdentity
 ```
 
-<!-- <Variant platform="react-native" task="add" repeat="7"/>
+<Variant platform="react-native" task="add" repeat="4"/>
 
-#### JavaScript
+1. Install the `@adobe/react-native-aeptarget` package:
 
-1. Install Target.
+```bash
+# NPM
 
-```javascript
-npm install @adobe/react-native-acptarget
-react-native link @adobe/react-native-acptarget
+npm install @adobe/react-native-aeptarget
+
+# Yarn
+
+yarn add @adobe/react-native-aeptarget
 ```
 
-2. Import the extension and related libraries.
+2. Import the Target extension:
 
-```javascript
-import {ACPTarget, ACPTargetPrefetchObject, ACPTargetRequestObject, ACPTargetOrder, ACPTargetProduct, ACPTargetParameters} from '@adobe/react-native-acptarget';
+```typescript
+import {
+  Target,
+  TargetOrder,
+  TargetParameters,
+  TargetPrefetchObject,
+  TargetProduct,
+  TargetRequestObject
+} from '@adobe/react-native-aeptarget';
 ```
-
-3. Get the extension version.
-
-```javascript
-ACPTarget.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPTarget version: " + version));
-``` -->
 
 <Variant platform="android" task="register" repeat="4"/>
 
@@ -125,15 +129,9 @@ In your app's `didFinishLaunchingWithOptions` function, register the Target exte
 }
 ```
 
-<!-- <Variant platform="react-native" task="register" repeat="3"/>
+<Variant platform="react-native" task="register" repeat="1"/>
 
-To register the Target extension with the Mobile Core extension, use the following API:
-
-#### JavaScript
-
-```javascript
-ACPTarget.registerExtension();
-``` -->
+Please refer to the native code tabs to learn how to register the Target extension.
 
 <Variant platform="android" task="target-order" repeat="5"/>
 
@@ -184,13 +182,19 @@ let order = TargetOrder(id: "id1", total: 1.0, purchasedProductIds: ["ppId1"])
 AEPTargetOrder *order = [[AEPTargetOrder alloc] initWithId:@"id1" total:1.0 purchasedProductIds:@[@"ppId1"]];
 ```
 
-<!-- <Variant platform="react-native" task="target-order" repeat="2"/>
+<Variant platform="react-native" task="target-order" repeat="4"/>
 
-**JavaScript**
+**Syntax**
 
-```javascript
-var targetOrder = new ACPTargetOrder("ADCKKBC", 400.50, ["34","125"]);
-``` -->
+```typescript
+constructor(orderId: string, total?: number, purchasedProductIds: Array<string>);
+```
+
+**Example**
+
+```ts
+var targetOrder = new AEPTargetOrder("ADCKKBC", 400.50, ["34","125"]);
+```
 
 <Variant platform="android" task="target-product" repeat="5"/>
 
@@ -238,13 +242,19 @@ let product = TargetProduct(productId: "pId1", categoryId: "cId1")
 AEPTargetProduct *product =[[AEPTargetProduct alloc] initWithProductId:@"pId1" categoryId:@"cId1"];
 ```
 
-<!-- <Variant platform="react-native" task="target-product" repeat="2"/>
+<Variant platform="react-native" task="target-product" repeat="4"/>
 
-**JavaScript**
+**Syntax**
+
+```typescript
+constructor(productId: string, categoryId: string);
+```
+
+**Example**
 
 ```javascript
-var targetProduct = new ACPTargetProduct("24D334", "Stationary");
-``` -->
+var targetProduct = new AEPTargetProduct("24D334", "Stationary");
+```
 
 <Variant platform="android" task="target-parameters" repeat="5"/>
 
@@ -333,18 +343,24 @@ AEPTargetOrder *order = [[AEPTargetOrder alloc] initWithId:@"id1" total:1.0 purc
 AEPTargetParameters * targetParams = [[AEPTargetParameters alloc] initWithParameters:mboxParameters profileParameters:profileParameters order:order product:product];
 ```
 
-<!-- <Variant platform="react-native" task="target-parameters" repeat="2"/>
+<Variant platform="react-native" task="target-parameters" repeat="4"/>
 
-**JavaScript**
+**Syntax**
 
-```javascript
+```typescript
+constructor(parameters?: Record<string, string>, profileParameters?: Record<string, string>, product?: TargetProduct, order?: TargetOrder);
+```
+
+**Example**
+
+```ts
 var mboxParameters = {"status": "platinum"};
 var profileParameters = {"gender": "female"};
-var targetProduct = new ACPTargetProduct("24D334", "Stationary");
+var targetProduct = new AEPTargetProduct("24D334", "Stationary");
 var purchaseIDs = ["34","125"];
-var targetOrder = new ACPTargetOrder("ADCKKBC", 400.50, purchaseIDs);
-var targetParameters = new ACPTargetParameters(mboxParameters, profileParameters, targetProduct, targetOrder);
-``` -->
+var targetOrder = new AEPTargetOrder("ADCKKBC", 400.50, purchaseIDs);
+var targetParameters = new AEPTargetParameters(mboxParameters, profileParameters, targetProduct, targetOrder);
+```
 
 <Variant platform="android" task="visual-preview" repeat="2"/>
 

@@ -27,7 +27,7 @@ This API sends a location click notification for an mbox to the configured Targe
 * For a prefetched mbox, after the mbox content is retrieved using the `retrieveLocationContent` API.
 * For a regular mbox, where no previous prefetch request is made, and the mbox content is retrieved using the `retrieveLocationContent` API.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -37,15 +37,15 @@ iOS
 
 <Tabs query="platform=ios-aep&api=clicked-location"/>
 
-<!-- React Native
+React Native
 
-<Tabs query="platform=react-native&api=clicked-location"/> -->
+<Tabs query="platform=react-native&api=clicked-location"/>
 
 ## displayedLocations
 
 This API sends a location display notification for an mbox to the configured Target server. The API should be invoked for a prefetched mbox after the mbox content is retrieved using the `retrieveLocationContent` API. If no previous prefetch request is made, and the mbox content is retrieved using the `retrieveLocationContent` API, calling this API does not trigger a notification request to the Target server.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -55,15 +55,15 @@ iOS
 
 <Tabs query="platform=ios-aep&api=displayed-locations"/>
 
-<!-- React Native
+React Native
 
-<Tabs query="platform=react-native&api=displayed-locations"/> -->
+<Tabs query="platform=react-native&api=displayed-locations"/>
 
 ## extensionVersion
 
 Returns the running version of the Target extension.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -73,9 +73,9 @@ iOS
 
 <Tabs query="platform=ios-aep&api=extension-version"/>
 
-<!-- React Native
+React Native
 
-<Tabs query="platform=react-native&api=extension-version"/> -->
+<Tabs query="platform=react-native&api=extension-version"/>
 
 ## getSessionId
 
@@ -83,7 +83,7 @@ This API gets the Target session identifier.
 
 The session ID is generated locally in the SDK upon initial Target request and persisted for a period defined by `target.sessionTimeout` configuration setting. If the session timeout happens upon a subsequent Target request, a new session ID will be generated for use in the request and persisted in the SDK.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -93,11 +93,15 @@ iOS
 
 <Tabs query="platform=ios-aep&api=get-session-id"/>
 
+React Native
+
+<Tabs query="platform=react-native&api=get-session-id"/>
+
 ## getThirdPartyId
 
 This API gets the custom visitor ID for Target. If no `third-party` ID was previously set, or if the ID was reset by calling resetExperience API, it will have a `nil` value.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -107,15 +111,15 @@ iOS
 
 <Tabs query="platform=ios-aep&api=get-third-party-id"/>
 
-<!-- React Native
+React Native
 
-<Tabs query="platform=react-native&api=get-third-party-id"/> -->
+<Tabs query="platform=react-native&api=get-third-party-id"/>
 
 ## getTntId
 
 This API gets the Target user ID (also known as the `tntId`) from the Target service. The `tntId` is returned in the network response after a successful call to `prefetchContent` or `retrieveLocationContent`, which is then persisted in the SDK. This ID is preserved between app upgrades, is saved and restored during the standard application backup process, and is removed at uninstall or when the `resetExperience` API is used.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -125,15 +129,15 @@ iOS
 
 <Tabs query="platform=ios-aep&api=get-tnt-id"/>
 
-<!-- React Native
+React Native
 
-<Tabs query="platform=react-native&api=get-tnt-id"/> -->
+<Tabs query="platform=react-native&api=get-tnt-id"/>
 
 ## prefetchContent
 
 This API sends a prefetch request to your configured Target server. The prefetch request is sent with the prefetch objects array and the specified Target parameters.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -143,15 +147,15 @@ iOS
 
 <Tabs query="platform=ios-aep&api=prefetch-content"/>
 
-<!-- React Native
+React Native
 
-<Tabs query="platform=react-native&api=prefetch-content"/> -->
+<Tabs query="platform=react-native&api=prefetch-content"/>
 
 ## registerExtension
 
 Registers the Target extension with the Mobile Core.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -161,15 +165,15 @@ iOS
 
 <Tabs query="platform=ios-aep&api=register-extension"/>
 
-<!-- React Native
+React Native
 
-<Tabs query="platform=react-native&api=register-extension"/> -->
+<Tabs query="platform=react-native&api=register-extension"/>
 
 ## resetExperience
 
 This API resets the user's experience by removing the visitor identifiers and resetting the Target session. Invoking this API also removes previously set Target user ID and custom visitor IDs, Target Edge Host, and the session information from persistent storage.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -179,9 +183,9 @@ iOS
 
 <Tabs query="platform=ios-aep&api=reset-experience"/>
 
-<!-- React Native
+React Native
 
-<Tabs query="platform=react-native&api=reset-experience"/> -->
+<Tabs query="platform=react-native&api=reset-experience"/>
 
 ## retrieveLocationContent
 
@@ -195,7 +199,7 @@ When using `contentWithData` callback to instantiate TargetRequest object, the f
 * analytics.payload (A4T payload)
 * clickmetric.analytics.payload (Click tracking A4T payload)
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -205,9 +209,9 @@ iOS
 
 <Tabs query="platform=ios-aep&api=retrieve-location-content"/>
 
-<!-- React Native
+React Native
 
-<Tabs query="platform=react-native&api=retrieve-location-content"/> -->
+<Tabs query="platform=react-native&api=retrieve-location-content"/>
 
 ## setPreviewRestartDeepLink
 
@@ -223,9 +227,9 @@ iOS
 
 <Tabs query="platform=ios-aep&api=set-preview-restart-deep-link"/>
 
-<!-- React Native
+React Native
 
-<Tabs query="platform=react-native&api=set-preview-restart-deep-link"/> -->
+<Tabs query="platform=react-native&api=set-preview-restart-deep-link"/>
 
 ## setSessionId
 
@@ -235,7 +239,7 @@ The provided session ID is persisted in the SDK for a period defined by `target.
 
 This ID is preserved between app upgrades, is saved and restored during the standard application backup process, and is removed at uninstall, upon privacy status update to opted out, or when the resetExperience API is used.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -245,11 +249,15 @@ iOS
 
 <Tabs query="platform=ios-aep&api=set-session-id"/>
 
+React Native
+
+<Tabs query="platform=react-native&api=set-session-id"/>
+
 ## setThirdPartyId
 
 This API sets the custom visitor ID for Target. This ID is preserved between app upgrades, is saved and restored during the standard application backup process, and is removed at uninstall or when the resetExperience API is used.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -259,9 +267,9 @@ iOS
 
 <Tabs query="platform=ios-aep&api=set-third-party-id"/>
 
-<!-- React Native
+React Native
 
-<Tabs query="platform=react-native&api=set-third-party-id"/> -->
+<Tabs query="platform=react-native&api=set-third-party-id"/>
 
 ## setTntId
 
@@ -271,7 +279,7 @@ The provided tnt ID is persisted in the SDK and attached to subsequent Target re
 
 This ID is preserved between app upgrades, is saved and restored during the standard application backup process, and is removed at uninstall, upon privacy status update to opted out, or when the `resetExperience` API is used.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -280,6 +288,10 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&api=set-tnt-id"/>
+
+React Native
+
+<Tabs query="platform=react-native&api=set-tnt-id"/>
 
 ## Visual preview
 

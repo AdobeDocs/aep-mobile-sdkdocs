@@ -125,41 +125,31 @@ AEPTargetParameters * targetParams = [[AEPTargetParameters alloc] initWithParame
 [AEPMobileTarget clickedLocation:@"aep-loc-1" withTargetParameters:targetParams];
 ```
 
-<!-- <Variant platform="react-native" api="clicked-location" repeat="6"/>
-
-#### JavaScript
+<Variant platform="react-native" api="clicked-location" repeat="4"/>
 
 **Syntax**
 
-```javascript
-locationClickedWithName(name: string, parameters?: ACPTargetParameters)
+```typescript
+clickedLocation(<locationName>, <TargetParameters>): void;
 ```
-
-* _name_ is a string that contains the mbox location for which the click notification will be sent to Target.
-* _parameters_ is the configured `ACPTargetParameters` for the request.
 
 **Example**
 
-```javascript
-// Mbox parameters
-var mboxParameters = {"membership": "prime"};
+```typescript
+var purchaseIDs = ['34', '125'];
 
-// Product parameters
-var productParameters = new ACPTargetProduct("CEDFJC", "Electronics");
+var targetOrder = new TargetOrder('ADCKKIM', 344.3, purchaseIDs);
+var targetProduct = new TargetProduct('24D3412', 'Books');
+var profileParameters1 = { ageGroup: '20-32' };
+var parameters = new TargetParameters(
+  { parameters: 'parametervalue' },
+  profileParameters1,
+  targetProduct,
+  targetOrder
+);
 
-// Order parameters
-var orderParameters = new ACPTargetOrder("NJJICK", 650, ["81","123","190"]);
-
-// Profile parameters
-var profileParameters = {"ageGroup": "20-32"};
-
-// Create Target parameters
-var product = new ACPTargetProduct("24D334", "Stationary");
-var order = new ACPTargetOrder("ADCKKBC", 400.50, ["34","125"]);
-var targetParameters = new ACPTargetParameters(null, null, product, order);
-
-ACPTarget.locationClickedWithName("cartLocation", targetParameters);
-``` -->
+Target.clickedLocation('locationName', parameters);
+```
 
 <Variant platform="android" api="displayed-locations" repeat="6"/>
 
@@ -233,28 +223,31 @@ AEPTargetParameters * targetParams = [[AEPTargetParameters alloc] initWithParame
 [AEPMobileTarget displayedLocations:@[@"mboxName1", @"mboxName2"] withTargetParameters:targetParams];
 ```
 
-<!-- <Variant platform="react-native" api="displayed-locations" repeat="6"/>
-
-#### JavaScript
+<Variant platform="react-native" api="displayed-locations" repeat="4"/>
 
 **Syntax**
 
-```javascript
-locationsDisplayed(mboxNames: Array<string>, parameters?: ACPTargetParameters)
+```typescript
+displayedLocations(Array<string>, <TargetParameters>): void;
 ```
-
-* _mboxNames_ is an Array of the mbox locations for which the display notification will be sent to Target.
-* _targetParameters_ is the configured `ACPTargetParameters` for the request.
 
 **Example**
 
-```javascript
-var product = new ACPTargetProduct("24D334", "Stationary");
-var order = new ACPTargetOrder("ADCKKBC", 400.50, ["34", "125"]);
-var targetParameters = new ACPTargetParameters(null, null, product, order);
+```typescript
+var purchaseIDs = ['34', '125'];
 
-ACPTarget.locationsDisplayed(["mboxName1", "mboxName2"], targetParameters);
-``` -->
+var targetOrder = new TargetOrder('ADCKKIM', 344.3, purchaseIDs);
+var targetProduct = new TargetProduct('24D3412', 'Books');
+var profileParameters1 = { ageGroup: '20-32' };
+var parameters = new TargetParameters(
+  { parameters: 'parametervalue' },
+  profileParameters1,
+  targetProduct,
+  targetOrder
+);
+
+Target.displayedLocations(['locationName', 'locationName1'], parameters);
+```
 
 <Variant platform="android" api="extension-version" repeat="5"/>
 
@@ -294,23 +287,20 @@ let targetVersion = Target.extensionVersion
 NSString *targetVersion = [AEPMobileTarget extensionVersion];
 ```
 
-<!-- <Variant platform="react-native" api="extension-version" repeat="5"/>
-
-#### JavaScript
+<Variant platform="react-native" api="extension-version" repeat="4"/>
 
 **Syntax**
 
-```javascript
+```typescript
 extensionVersion(): Promise<string>
 ```
 
 **Example**
 
-```javascript
-ACPTarget.extensionVersion().then(version => {
-            // read Target extension version 
-});
-``` -->
+```typescript
+const version = await Target.extensionVersion();
+console.log('AdobeExperienceSDK: AEPTarget version: ' + version);
+```
 
 <Variant platform="android" api="get-session-id" repeat="6"/>
 
@@ -363,6 +353,22 @@ Target.getSessionId { (id, err) in
 }];
 ```
 
+<Variant platform="react-native" api="get-session-id" repeat="4"/>
+
+**Syntax**
+
+```typescript
+getSessionId(): Promise<string>
+```
+
+**Example**
+
+```typescript
+const id = await Target.getSessionId();
+console.log('AdobeExperienceSDK: Session ID ' + id);
+```
+
+
 <Variant platform="android" api="get-third-party-id" repeat="6"/>
 
 #### Java
@@ -414,25 +420,22 @@ Target.getThirdPartyId { (id, err) in
 }];
 ```
 
-<!-- <Variant platform="react-native" api="get-third-party-id" repeat="6"/>
 
-#### JavaScript
+
+<Variant platform="react-native" api="get-third-party-id" repeat="4"/>
 
 **Syntax**
 
-```javascript
+```typescript
 getThirdPartyId(): Promise<string>
 ```
 
-* A _Promise_ object is returned and is resolved with the `thirdPartyId` value.
-
 **Example**
 
-```javascript
-ACPTarget.getThirdPartyId().then(thirdPartyId => {
-            // read Target thirdPartyId 
-});
-``` -->
+```typescript
+const id = await Target.getThirdPartyId();
+console.log('AdobeExperienceSDK: Third Party ID: ' + id);
+```
 
 <Variant platform="android" api="get-tnt-id" repeat="6"/>
 
@@ -485,25 +488,20 @@ Target.getTntId({ (id, err) in
 }];
 ```
 
-<!-- <Variant platform="react-native" api="get-tnt-id" repeat="6"/>
-
-#### JavaScript
+<Variant platform="react-native" api="get-tnt-id" repeat="4"/>
 
 **Syntax**
 
-```javascript
+```typescript
 getTntId(): Promise<string>
 ```
 
-* A _Promise_ object is returned and is resolved with the `thirdPartyId` value.
-
 **Example**
 
-```javascript
-ACPTarget.getTntId().then(tntId => {
-            // read target's tntId                         
-});
-``` -->
+```typescript
+const id = await Target.getTntId();
+console.log('AdobeExperienceSDK: TNT ID ' + id);
+```
 
 <Variant platform="android" api="prefetch-content" repeat="6"/>
 
@@ -647,51 +645,47 @@ product:product];
 }];
 ```
 
-<!-- <Variant platform="react-native" api="prefetch-content" repeat="6"/>
-
-#### JavaScript
+<Variant platform="react-native" api="prefetch-content" repeat="4"/>
 
 **Syntax**
 
-```javascript
-prefetchContent(prefetchObjectArray: Array<ACPTargetPrefetchObject>, parameters?: ACPTargetParameters): Promise<any>
+```typescript
+prefetchContent(Array<TargetPrefetchObject>, <TargetParameters>): Promise<any>
 ```
-
-* _prefetchObjectArray_ is an Array of `ACPTargetPrefetchObject` objects for various mbox locations.
-* _parameters_ is the configured `ACPTargetParameters` for the prefetch request.
-* A Promise object is returned and is resolved with true value or is rejected with the reason for the error.
 
 **Example**
 
-```javascript
-var mboxParameters1 = {"status": "platinum"};
-var profileParameters1 = {"age": "20"};
-var product1 = new ACPTargetProduct("24D3412", "Books");
-var order1 = new ACPTargetOrder("ADCKKIM", 344.30, ["34","125"]);
-var targetParameters1 = new ACPTargetParameters(mboxParameters1, profileParameters1, product1, order1);
+```typescript
+var mboxParameters1 = { status: 'platinum' };
+var mboxParameters2 = { userType: 'Paid' };
+var purchaseIDs = ['34', '125'];
 
-var mboxParameters2 = {"userType": "Paid"};
-var product2 = new ACPTargetProduct("764334", "Online");
-var order2 = new ACPTargetOrder("ADCKKIM", 344.30, ["id1","id2"]);
-var targetParameters2 = new ACPTargetParameters(mboxParameters2, null, product2, order2);
+var targetOrder = new TargetOrder('ADCKKIM', 344.3, purchaseIDs);
+var targetProduct = new TargetProduct('24D3412', 'Books');
+var parameters1 = new TargetParameters(mboxParameters1, null, null, null);
+var prefetch1 = new TargetPrefetchObject('mboxName2', parameters1);
 
-// Creating Prefetch Objects
-var prefetch1 = new ACPTargetPrefetchObject("logo", targetParameters1);
-var prefetch2 = new ACPTargetPrefetchObject("buttonColor", targetParameters2);
+var parameters2 = new TargetParameters(
+  mboxParameters1,
+  { profileParameters: 'parameterValue' },
+  targetProduct,
+  targetOrder
+);
+var prefetch2 = new TargetPrefetchObject('mboxName2', parameters2);
 
-// Creating prefetch Array
 var prefetchList = [prefetch1, prefetch2];
+var profileParameters1 = { ageGroup: '20-32' };
 
-// Creating Target parameters
-var mboxParameters = {"status": "progressive"};
-var profileParameters = {"age": "20-32"};
-var product = new ACPTargetProduct("24D334", "Stationary");
-var order = new ACPTargetOrder("ADCKKBC", 400.50, ["34","125"]);
-var targetParameters = new ACPTargetParameters(mboxParameters, profileParameters, product, order);
-
-// Target API Call
-ACPTarget.prefetchContent(prefetchList, targetParameters).then(success => console.log(success)).catch(err => console.log(err));
-``` -->
+var parameters = new TargetParameters(
+  { parameters: 'parametervalue' },
+  profileParameters1,
+  targetProduct,
+  targetOrder
+);
+Target.prefetchContent(prefetchList, parameters)
+  .then((success) => console.log(success))
+  .catch((err) => console.log(err));
+```
 
 <Variant platform="android" api="register-extension" repeat="5"/>
 
@@ -713,9 +707,9 @@ Target.registerExtension();
 
 This API no longer exists in `Target`. Instead, the extension should be registered by calling the `registerExtensions` API in the MobileCore. Please see the updated SDK initialization steps at the [migrate to Swift tutorial](../migrate-to-swift.md#update-sdk-initialization).
 
-<!-- <Variant platform="react-native" api="register-extension" repeat="1"/>
+<Variant platform="react-native" api="register-extension" repeat="1"/>
 
-When using React Native, register the Target extension with Mobile Core in native code as shown on the Android and iOS tabs. -->
+Please refer to the native code tabs to learn how to register the Target extension.
 
 <Variant platform="android" api="reset-experience" repeat="5"/>
 
@@ -755,21 +749,19 @@ Target.resetExperience()
 [AEPMobileTarget resetExperience];
 ```
 
-<!-- <Variant platform="react-native" api="reset-experience" repeat="5"/>
-
-#### JavaScript
+<Variant platform="react-native" api="reset-experience" repeat="4"/>
 
 **Syntax**
 
-```javascript
-resetExperience()
+```typescript
+resetExperience(): void
 ```
 
 **Example**
 
-```javascript
-ACPTarget.resetExperience();
-``` -->
+```typescript
+Target.resetExperience();
+```
 
 <Variant platform="android" api="retrieve-location-content" repeat="6"/>
 
@@ -982,61 +974,67 @@ AEPTargetParameters *targetParameters = [[AEPTargetParameters alloc] initWithPar
 [AEPMobileTarget retrieveLocationContent: requestArray withParameters: targetParameters];
 ```
 
-<!-- <Variant platform="react-native" api="retrieve-location-content" repeat="6"/>
-
-#### JavaScript
+<Variant platform="react-native" api="retrieve-location-content" repeat="4"/>
 
 **Syntax**
 
-```javascript
-retrieveLocationContent(requests: Array<ACPTargetRequestObject>, parameters?: ACPTargetParameters)
+```typescript
+retrieveLocationContent(Array<TargetRequestObject>, <TargetParameters>): void
 ```
-
-* _requests_ is an Array of `ACPTargetRequestObject` objects for various mbox locations.
-* _parameters_ is the configured `ACPTargetParameters` for the load request.
 
 **Example**
 
-```javascript
-var mboxParameters1 = {"status": "platinum"};
-var product1 = new ACPTargetProduct("24D3412", "Books");
-var order1 = new ACPTargetOrder("ADCKKIM", 344.30, ["a","b"]);
+```typescript
+var mboxParameters1 = { status: 'platinum' };
+var mboxParameters2 = { userType: 'Paid' };
+var purchaseIDs = ['34', '125'];
 
-var mboxParameters2 = {"userType": "Paid"};
-var product2 = new ACPTargetProduct("764334", "Online");
-var order2 = new ACPTargetOrder("4t4uxksa", 54.90, ["id1","id2"]);
+var targetOrder = new TargetOrder('ADCKKIM', 344.3, purchaseIDs);
+var targetProduct = new TargetProduct('24D3412', 'Books');
+var parameters1 = new TargetParameters(mboxParameters1, null, null, null);
+var request1 = new TargetRequestObject(
+  'mboxName2',
+  parameters1,
+  'defaultContent1',
+  (error, content) => {
+    if (error) {
+      console.error(error);
+    } else {
+      console.log('Adobe content:' + content);
+    }
+  }
+);
 
-var params1 = new ACPTargetParameters(mboxParameters1, null, product1, order1);
-var request1 = new ACPTargetRequestObject("logo", params1, "BlueWhale", (error, content) => {
-      if (error) {
-        console.error(error);
-      } else {
-        console.log("Target content:" + content);
-      }
-});
+var parameters2 = new TargetParameters(
+  mboxParameters1,
+  { profileParameters: 'parameterValue' },
+  targetProduct,
+  targetOrder
+);
+var request2 = new TargetRequestObject(
+  'mboxName2',
+  parameters2,
+  'defaultContent2',
+  (error, content) => {
+    if (error) {
+      console.error(error);
+    } else {
+      console.log('Adobe content:' + content);
+    }
+  }
+);
 
-var params2 = new ACPTargetParameters(mboxParameters2, null, product2, order2);
-var request2 = new ACPTargetRequestObject("logo", params1, "red", (error, content) => {
-      if (error) {
-        console.error(error);
-      } else {
-        console.log("Target content:" + content);
-      }
-});
+var locationRequests = [request1, request2];
+var profileParameters1 = { ageGroup: '20-32' };
 
-// Create request object array
-let requestArray = [request1, request2]
-
-// Creating Target parameters
-var mboxParameters = {"status": "progressive"};
-var profileParameters = {"age": "20-32"};
-var product = new ACPTargetProduct("24D334", "Stationary");
-var order = new ACPTargetOrder("ADCKKBC", 400.50, ["34","125"]);
-var targetParameters = new ACPTargetParameters(mboxParameters, profileParameters, product, order);
-
-// Target API Call
-ACPTarget.retrieveLocationContent(requestArray, targetParameters);
-``` -->
+var parameters = new TargetParameters(
+  { parameters: 'parametervalue' },
+  profileParameters1,
+  targetProduct,
+  targetOrder
+);
+Target.retrieveLocationContent(locationRequests, parameters);
+```
 
 <Variant platform="android" api="set-preview-restart-deep-link" repeat="6"/>
 
@@ -1082,23 +1080,20 @@ if let url = URL(string: "myapp://HomePage") {
 [AEPMobileTarget setPreviewRestartDeepLink:@"myapp://HomePage"];
 ```
 
-<!-- <Variant platform="react-native" api="set-preview-restart-deep-link" repeat="6"/>
-
-#### JavaScript
+<Variant platform="react-native" api="set-preview-restart-deep-link" repeat="4"/>
 
 **Syntax**
 
-```javascript
-setPreviewRestartDeeplink(deepLink: string)
+```typescript
+setPreviewRestartDeeplink(<deeplink>): void;
 ```
-
-* _deepLink_ is a string that contains the preview restart deeplink.
 
 **Example**
 
-```javascript
-ACPTarget.setPreviewRestartDeeplink("myapp://HomePage");
-``` -->
+```typescript
+Target.setPreviewRestartDeeplink('https://www.adobe.com');
+```
+
 
 <Variant platform="android" api="set-session-id" repeat="6"/>
 
@@ -1140,6 +1135,20 @@ Target.setSessionId("3f24b997-ea74-420c-81f8-96a8b92c3961")
 
 ```objc
 [AEPMobileTarget setSessionId:@"3f24b997-ea74-420c-81f8-96a8b92c3961"]
+```
+
+<Variant platform="react-native" api="set-session-id" repeat="4"/>
+
+**Syntax**
+
+```typescript
+Target.setSessionId(<sessionId>): void
+```
+
+**Example**
+
+```typescript
+Target.setSessionId('sessionId');
 ```
 
 <Variant platform="android" api="set-third-party-id" repeat="6"/>
@@ -1184,23 +1193,19 @@ Target.setThirdPartyId("third-party-id")
 [AEPMobileTarget setThirdPartyId:@"third-party-id"]
 ```
 
-<!-- <Variant platform="react-native" api="set-third-party-id" repeat="6"/>
-
-#### JavaScript
+<Variant platform="react-native" api="set-third-party-id" repeat="4"/>
 
 **Syntax**
 
-```javascript
-setThirdPartyId(thirdPartyId: string)
+```typescript
+setThirdPartyId(<id>): void
 ```
-
-* _thirdPartyId_ is a string that contains the custom visitor ID to be set in Target.
 
 **Example**
 
-```javascript
-ACPTarget.setThirdPartyId("third-party-id");
-``` -->
+```typescript
+Target.setThirdPartyId('thirdPartyId');
+```
 
 <Variant platform="android" api="set-tnt-id" repeat="6"/>
 
@@ -1242,6 +1247,20 @@ Target.setTntId("f741a5d5-09c0-4931-bf53-b9e568c5f782.35_0")
 
 ```objc
 [AEPMobileTarget setTntId:@"f741a5d5-09c0-4931-bf53-b9e568c5f782.35_0"]
+```
+
+<Variant platform="react-native" api="set-tnt-id" repeat="4"/>
+
+**Syntax**
+
+```typescript
+Target.setTntId(<tntId>): void
+```
+
+**Example**
+
+```typescript
+Target.setTntId('tntId');
 ```
 
 <Variant platform="android" api="visual-preview" repeat="2"/>

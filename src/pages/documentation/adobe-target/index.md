@@ -31,7 +31,7 @@ To get started with Target, follow these steps:
 
 To add the Target extension to your app:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -41,15 +41,15 @@ iOS
 
 <Tabs query="platform=ios-aep&task=add"/>
 
-<!-- React Native
+React Native
 
-<Tabs query="platform=react-native&task=add"/> -->
+<Tabs query="platform=react-native&task=add"/>
 
 ## Register Target with Mobile Core
 
 To register the Target extension with Mobile Core:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -59,9 +59,9 @@ iOS
 
 <Tabs query="platform=ios-aep&task=register"/>
 
-<!-- React Native
+React Native
 
-<Tabs query="platform=react-native&task=register"/> -->
+<Tabs query="platform=react-native&task=register"/>
 
 ## Parameters in a Target request
 
@@ -71,7 +71,7 @@ Here is some information about the parameters in a Target request:
 
 The `TargetOrder` class encapsulates the order ID, the order total, and the purchased product IDs. You can instantiate this class to create order parameters. For more information about Target Order parameters, see [Create an Order Confirmation mbox - mbox.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/implement-target-for-client-side-web.html).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -81,15 +81,15 @@ iOS
 
 <Tabs query="platform=ios-aep&task=target-order"/>
 
-<!-- React Native
+React Native
 
-<Tabs query="platform=react-native&task=target-order"/> -->
+<Tabs query="platform=react-native&task=target-order"/>
 
 ### Target Product class
 
 The `TargetProduct` class encapsulates the product ID and the product category ID, and you can instantiate this class to create order parameters. For more information about Target Product parameters, see [Entity attributes](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html)
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -99,15 +99,15 @@ iOS
 
 <Tabs query="platform=ios-aep&task=target-product"/>
 
-<!-- React Native
+React Native
 
-<Tabs query="platform=react-native&task=target-product"/> -->
+<Tabs query="platform=react-native&task=target-product"/>
 
 ### Target Parameters
 
 `TargetParameters` encapsulates `mboxParameters`, `profileParameters`, `orderParameters`, and `productParameters`, and allows you easily pass these parameters in a Target request.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -117,9 +117,9 @@ iOS
 
 <Tabs query="platform=ios-aep&task=target-parameters"/>
 
-<!-- React Native
+React Native
 
-<Tabs query="platform=react-native&task=target-parameters"/> -->
+<Tabs query="platform=react-native&task=target-parameters"/>
 
 ### Merge behavior of Target parameters
 
