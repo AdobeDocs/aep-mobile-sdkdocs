@@ -313,7 +313,7 @@ The following is a list of all the public classes available when using the Adobe
 
 ### Target request
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -323,13 +323,13 @@ iOS
 
 <Tabs query="platform=ios-aep&api=target-request"/>
 
-<!-- React Native
+React Native
 
-<Tabs query="platform=react-native&api=target-request"/> -->
+<Tabs query="platform=react-native&api=target-request"/>
 
 ### Target prefetch
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -339,13 +339,13 @@ iOS
 
 <Tabs query="platform=ios-aep&api=target-prefetch"/>
 
-<!-- React Native
+React Native
 
-<Tabs query="platform=react-native&api=target-prefetch"/> -->
+<Tabs query="platform=react-native&api=target-prefetch"/>
 
 ### Target parameters
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -355,13 +355,13 @@ iOS
 
 <Tabs query="platform=ios-aep&api=target-parameters"/>
 
-<!-- React Native
+React Native
 
-<Tabs query="platform=react-native&api=target-parameters"/> -->
+<Tabs query="platform=react-native&api=target-parameters"/>
 
 ### Target order
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -371,13 +371,13 @@ iOS
 
 <Tabs query="platform=ios-aep&api=target-order"/>
 
-<!-- React Native
+React Native
 
-<Tabs query="platform=react-native&api=target-order"/> -->
+<Tabs query="platform=react-native&api=target-order"/>
 
 ### Target product
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -387,9 +387,9 @@ iOS
 
 <Tabs query="platform=ios-aep&api=target-product"/>
 
-<!-- React Native
+React Native
 
-<Tabs query="platform=react-native&api=target-product"/> -->
+<Tabs query="platform=react-native&api=target-product"/>
 
 ### Target callback
 

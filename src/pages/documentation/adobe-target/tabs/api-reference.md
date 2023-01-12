@@ -1441,26 +1441,15 @@ AEPTargetRequestObject *request2 = [[AEPTargetRequestObject alloc] initWithMboxN
 }];
 ```
 
-<!-- <Variant platform="react-native" api="target-request" repeat="5"/>
+<Variant platform="react-native" api="target-request" repeat="3"/>
 
-#### ACPTargetRequestObject
-
-This class extends `ACPTargetPrefetchObject` by adding default content and a callback block that is invoked to return mbox content from Target.
-
-#### JavaScript
+The Target extension exports a class `TargetRequestObject`, which extends `TargetPrefetchObject`.
 
 **Syntax**
 
-```javascript
-class ACPTargetRequestObject extends ACPTargetPrefetchObject {
-  defaultContent:   string;
-
-  constructor(name: string, targetParameters: ACPTargetParameters, defaultContent: string) {
-    super(name, targetParameters);
-    this.defaultContent = defaultContent;
-  }
-}
-``` -->
+```typescript
+constructor(name: string, targetParameters: TargetParameters, defaultContent: string);
+```
 
 <Variant platform="android" api="target-prefetch" repeat="4"/>
 
@@ -1526,28 +1515,13 @@ The following example can be used to create an instance of a TargetPrefetch obje
 AEPTargetPrefetchObject *prefetch = [[AEPTargetPrefetchObject alloc] initWithName:@"mboxName" targetParameters:nil];
 ```
 
-<!-- <Variant platform="react-native" api="target-prefetch" repeat="5"/>
-
-#### ACPTargetPrefetchObject
-
-This class contains the name of the Target location/mbox and Target parameters to be used in a prefetch request.
-
-#### JavaScript
+<Variant platform="react-native" api="target-prefetch" repeat="2"/>
 
 **Syntax**
 
-```javascript
-class ACPTargetPrefetchObject {
-  name:   string;
-  targetParameters: ACPTargetParameters;
-
-  constructor(name?: string, targetParameters?: ACPTargetParameters) {
-      this.name = name;
-    this.targetParameters = targetParameters;
-  }
-
-}
-``` -->
+```typescript
+constructor(name?: string, targetParameters?: TargetParameters);
+```
 
 <Variant platform="android" api="target-parameters" repeat="4"/>
 
@@ -1662,31 +1636,13 @@ public class TargetParameters: NSObject, Codable {
 
 Examples for creating instances of TargetParameters can be seen in the [Target overview](./index.md#target-parameters).
 
-<!-- <Variant platform="react-native" api="target-parameters" repeat="5"/>
-
-#### ACPTargetParameters
-
-This class contains an mbox parameters dictionary, a profile parameters dictionary, an `ACPTargetOrder` object, and an `ACPTargetProduct` object.
-
-#### JavaScript
+<Variant platform="react-native" api="target-parameters" repeat="2"/>
 
 **Syntax**
 
-```javascript
-class ACPTargetParameters {
-  parameters: {string: string};
-  profileParameters: {string: string};
-  order: ACPTargetOrder;
-  product: ACPTargetProduct;
-
-  constructor(parameters?: {string: string}, profileParameters?: {string: string}, product?: ACPTargetProduct, order?: ACPTargetOrder) {
-      this.parameters = parameters;
-    this.profileParameters = profileParameters;
-    this.product = product;
-    this.order = order;
-  }
-}
-``` -->
+```typescript
+constructor(parameters?: Record<string, string>, profileParameters?: Record<string, string>, product?: TargetProduct, order?: TargetOrder);
+```
 
 <Variant platform="android" api="target-order" repeat="5"/>
 
@@ -1765,29 +1721,13 @@ public class TargetOrder: NSObject, Codable {
 
 Examples for creating instances of TargetOrder can be seen in the [Target overview](./index.md#arget-order-class).
 
-<!-- <Variant platform="react-native" api="target-order" repeat="5"/>
-
-#### ACPTargetOrder
-
-This class contains an `orderId`, the total, and an array, for `purchasedProductIds`.
-
-#### JavaScript
+<Variant platform="react-native" api="target-order" repeat="2"/>
 
 **Syntax**
 
-```javascript
-class ACPTargetOrder {
-  orderId:   string;
-  total:     number;
-  purchasedProductIds: Array<string>;
-
-  constructor(orderId: string, total?: number, purchasedProductIds: Array<string>) {
-      this.orderId = orderId;
-    this.total = total;
-    this.purchasedProductIds = purchasedProductIds;
-  }
-}
-``` -->
+```typescript
+constructor(orderId: string, total?: number, purchasedProductIds: Array<string>);
+```
 
 <Variant platform="android" api="target-product" repeat="4"/>
 
@@ -1854,27 +1794,13 @@ public class TargetProduct: NSObject, Codable {
 
 Examples for creating instances of TargetProduct can be seen in the [Target overview](./index.md#target-product-class)
 
-<!-- <Variant platform="react-native" api="target-product" repeat="5"/>
-
-#### ACPTargetProduct
-
-This class contains a productId and a categoryId.
-
-#### JavaScript
+<Variant platform="react-native" api="target-product" repeat="2"/>
 
 **Syntax**
 
-```javascript
-class ACPTargetProduct {
-  productId: string;
-  categoryId: string;
-
-  constructor(productId: string, categoryId: string) {
-      this.productId = productId;
-    this.categoryId = categoryId;
-  }
-}
-``` -->
+```typescript
+constructor(productId: string, categoryId: string);
+```
 
 <Variant platform="android" api="target-callback" repeat="4"/>
 
