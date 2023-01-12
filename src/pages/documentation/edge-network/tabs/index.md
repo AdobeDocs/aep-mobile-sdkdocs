@@ -120,58 +120,6 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-<Variant platform="react-native" task="register" repeat="4"/>
+<Variant platform="react-native" task="register" repeat="1"/>
 
-**iOS**
-
-```objc
-// AppDelegate.h
-@import AEPCore;
-@import AEPEdge;
-@import AEPEdgeIdentity;
-...
-@implementation AppDelegate
-
-// AppDelegate.m
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [AEPMobileCore setLogLevel: AEPLogLevelDebug];
-    [AEPMobileCore registerExtensions:@[AEPMobileEdgeIdentity.class, 
-                                        AEPMobileEdge.class] completion:^{
-        [AEPMobileCore configureWithAppId:@"yourAppID"];  
-    ...   
-   }]; 
-   return YES;   
- } 
-
-@end
-```
-
-**Android**
-
-```java
-import com.adobe.marketing.mobile.LoggingMode;
-import com.adobe.marketing.mobile.MobileCore;
-import com.adobe.marketing.mobile.Edge;
-  
-...
-import android.app.Application;
-...
-public class MainApplication extends Application implements ReactApplication {
-  ...
-  @Override
-  public void on Create(){
-    super.onCreate();
-    ...
-    MobileCore.setApplication(this);
-    MobileCore.setLogLevel(LoggingMode.DEBUG);
-    MobileCore.configureWithAppID("yourAppID");
-    Edge.registerExtension();
-    com.adobe.marketing.mobile.edge.identity.Identity.registerExtension();
-    MobileCore.start(new AdobeCallback() {
-        @Override
-        public void call(Object o) {
-        
-        }});
-    }
-}     
-```
+Please refer to the native code tabs to learn how to register the Edge extension.

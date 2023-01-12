@@ -50,7 +50,7 @@ The request timeout is the amount of time, in seconds, to wait for a response fr
 
 ## Add Campaign Classic to your app
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -60,9 +60,13 @@ iOS
 
 <Tabs query="platform=ios-aep&task=add"/>
 
+React Native
+
+<Tabs query="platform=react-native&task=add"/>
+
 ### Register Campaign Classic with Mobile Core
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -71,6 +75,10 @@ Android
 iOS
 
 <Tabs query="platform=ios-aep&task=register"/>
+
+React Native
+
+<Tabs query="platform=react-native&task=register"/>
 
 ## Configuration keys
 

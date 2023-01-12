@@ -56,7 +56,7 @@ import AEPEdgeConsent
 @import AEPEdgeConsent;
 ```
 
-<Variant platform="react-native" task="download" repeat="1"/>
+<Variant platform="react-native" task="download" repeat="4"/>
 
 1. Install the `@adobe/react-native-aepedgeconsent` package.
 
@@ -65,7 +65,12 @@ cd MyReactApp
 npm install @adobe/react-native-aepedgeconsent
 ```
 
-2. Import the Mobile Core and the Consent for Edge libraries. Please refer to the native code tabs to learn how to import these libraries.
+2. Import the Consent for Edge library. 
+
+```typescript
+import {Consent} from '@adobe/react-native-aepedgeconsent';
+```
+
 
 <Variant platform="android" task="register" repeat="2"/>
 

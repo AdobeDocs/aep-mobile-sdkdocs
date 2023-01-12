@@ -44,6 +44,21 @@ let campaignClassicVersion = CampaignClassic.extensionVersion
 NSString *campaignClassicVersion = [AEPMobileCampaignClassic extensionVersion];
 ```
 
+<Variant platform="react-native" api="extension-version" repeat="4"/>
+
+**Syntax**
+
+```typescript
+extensionVersion(): Promise<string>
+```
+
+**Example**
+
+```typescript
+const version = await CampaignClassic.extensionVersion();
+console.log(`AdobeExperienceSDK: Campaign Classic version: ${version}`);
+```
+
 <Variant platform="android" api="register-device" repeat="7"/>
 
 To prepare your app to handle push notifications, see the tutorial on [setting up a Firebase Cloud Messaging client app on Android](https://firebase.google.com/docs/cloud-messaging/android/client). After you receive the Firebase Cloud Messaging (FCM) SDK registration token, send this token and the device information to Campaign Classic by using the `registerDevice` API.
@@ -133,6 +148,25 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 }
 ```
 
+<Variant platform="react-native" api="register-device" repeat="4"/>
+
+**Syntax**
+
+```typescript
+registerDeviceWithToken(
+    token: string,
+    userKey: string,
+    additionalParameters?: Record<string, any>
+): void
+```
+
+**Example**
+
+```typescript
+CampaignClassic.registerDeviceWithToken('myToken', 'myUserKey')
+);
+```
+
 <Variant platform="android" api="track-notification-click" repeat="6"/>
 
 #### Java
@@ -209,6 +243,20 @@ static func trackNotificationClick(withUserInfo userInfo: [AnyHashable: Any])
     [AEPMobileCampaignClassic trackNotificationClickWithUserInfo:userInfo];
     completionHandler();
 }
+```
+
+<Variant platform="react-native" api="track-notification-click" repeat="4"/>
+
+**Syntax**
+
+```typescript
+trackNotificationClickWithUserInfo(userInfo: Record<string, any>): void
+```
+
+**Example**
+
+```typescript
+CampaignClassic.trackNotificationClickWithUserInfo({ _mId: 'testId', _dId: 'testId' });
 ```
 
 <Variant platform="android" api="track-notification-receive" repeat="6"/>
@@ -295,4 +343,18 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
     completionHandler(UIBackgroundFetchResultNoData);
   }
 }
+```
+
+<Variant platform="react-native" api="track-notification-receive" repeat="4"/>
+
+**Syntax**
+
+```typescript
+CampaignClassic.trackNotificationReceiveWithUserInfo(userInfo: Record<string, any>): void;
+```
+
+**Example**
+
+```typescript
+CampaignClassic.trackNotificationReceiveWithUserInfo({ _mId: 'testId', _dId: 'testId' });
 ```

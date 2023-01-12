@@ -65,7 +65,7 @@ import AEPEdgeConsent
 @import AEPEdgeConsent;
 ```
 
-<Variant platform="react-native" task="register" repeat="3"/>
+<Variant platform="react-native" task="register" repeat="4"/>
 
 1. Install the `@adobe/react-native-aepedgeidentity` package:
 
@@ -74,7 +74,11 @@ cd MyReactApp
 npm install @adobe/react-native-aepedgeidentity
 ```
 
-2. Import the Mobile Core and the Identity for Edge libraries. Please refer to the native code tabs to learn how to import these libraries.
+2. Import the Identity for Edge library.
+
+```typescript
+import {Identity} from '@adobe/react-native-aepedgeidentity';
+```
 
 <Variant platform="android" task="register" repeat="2"/>
 

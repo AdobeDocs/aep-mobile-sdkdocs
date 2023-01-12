@@ -46,6 +46,26 @@ import com.adobe.marketing.mobile.Lifecycle;
     @import AEPCampaignClassic;
 ```
 
+<Variant platform="react-native" task="add" repeat="4"/>
+
+1. Install the `@adobe/react-native-aepcampaignclassic` package:
+
+```bash
+# NPM
+
+npm install @adobe/react-native-aepcampaignclassic
+
+# Yarn
+
+yarn add @adobe/react-native-aepcampaignclassic
+```
+
+2. Import the Campaign Classic extension:
+
+```typescript
+import { CampaignClassic } from '@adobe/react-native-AEPCampaignClassic';
+```
+
 <Variant platform="android" task="register" repeat="2"/>
 
 In your app's `OnCreate` method, register the Campaign Classic and Lifecycle extensions:
@@ -103,3 +123,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
   return YES;
 }
 ```
+
+<Variant platform="react-native" task="register" repeat="1"/>
+
+Please refer to the native code tabs to learn how to register the Campaign Classic extension.
