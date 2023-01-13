@@ -1,4 +1,6 @@
-<Variant language="swift" api="clear" repeat="4"/>
+<Variant platform="ios" api="clear" repeat="10"/>
+
+#### Swift
 
 **Syntax**
 
@@ -12,7 +14,7 @@ static func clear()
 Places.clear()
 ```
 
-<Variant language="objc" api="clear" repeat="4"/>
+#### Objective-C
 
 **Syntax**
 
@@ -26,7 +28,23 @@ Places.clear()
 [AEPMobilePlaces clear];
 ```
 
-<Variant language="swift" api="extension-version" repeat="4"/>
+<Variant platform="react-native" api="clear" repeat="4"/>
+
+**Syntax**
+
+```typescript
+clear(): void
+```
+
+**Example**
+
+```typescript
+Places.clear();
+```
+
+<Variant platform="ios" api="extension-version" repeat="10"/>
+
+#### Swift
 
 **Syntax**
 
@@ -40,7 +58,7 @@ static var extensionVersion: String
 let placesVersion = Places.extensionVersion
 ```
 
-<Variant language="objc" api="extension-version" repeat="4"/>
+#### Objective-C
 
 **Syntax**
 
@@ -54,7 +72,24 @@ let placesVersion = Places.extensionVersion
 NSString *placesVersion = [AEPMobilePlaces extensionVersion];
 ```
 
-<Variant language="swift" api="get-current-points-of-interest" repeat="4"/>
+<Variant platform="react-native" api="extension-version" repeat="4"/>
+
+**Syntax**
+
+```typescript
+extensionVersion(): Promise<string>
+```
+
+**Example**
+
+```typescript
+const version = await Places.extensionVersion();
+console.log(`AdobeExperienceSDK: Places version: ${version}`);
+```
+
+<Variant platform="ios" api="get-current-points-of-interest" repeat="10"/>
+
+#### Swift
 
 **Syntax**
 
@@ -70,7 +105,7 @@ Places.getCurrentPointsOfInterest() { currentPois in
 }
 ```
 
-<Variant language="objc" api="get-current-points-of-interest" repeat="4"/>
+#### Objective-C
 
 **Syntax**
 
@@ -86,7 +121,25 @@ Places.getCurrentPointsOfInterest() { currentPois in
 }];
 ```
 
-<Variant language="swift" api="get-last-known-location" repeat="4"/>
+<Variant platform="react-native" api="get-current-points-of-interest" repeat="4"/>
+
+**Syntax**
+
+```typescript
+getCurrentPointsOfInterest(): Promise<Array<PlacesPOI>>
+```
+
+**Example**
+
+```typescript
+const pois = await Places.getCurrentPointsOfInterest();
+console.log('AdobeExperienceSDK: Places pois: ' + pois);
+);
+```
+
+<Variant platform="ios" api="get-last-known-location" repeat="10"/>
+
+#### Swift
 
 **Syntax**
 
@@ -104,7 +157,7 @@ Places.getLastKnownLocation() { location in
 }
 ```
 
-<Variant language="objc" api="get-last-known-location" repeat="4"/>
+#### Objective-C
 
 **Syntax**
 
@@ -122,7 +175,25 @@ Places.getLastKnownLocation() { location in
 }];
 ```
 
-<Variant language="swift" api="get-nearby-points-of-interest" repeat="4"/>
+<Variant platform="react-native" api="get-last-known-location" repeat="4"/>
+
+**Syntax**
+
+```typescript
+getLastKnownLocation(): Promise<PlacesLocation>
+```
+
+**Example**
+
+```typescript
+const location = await Places.getLastKnownLocation();
+console.log('AdobeExperienceSDK: Places location: ' + location)
+);
+```
+
+<Variant platform="ios" api="get-nearby-points-of-interest" repeat="10"/>
+
+#### Swift
 
 **Syntax**
 
@@ -141,7 +212,7 @@ Places.getNearbyPointsOfInterest(forLocation: location, withLimit: 10) { (nearby
 }
 ```
 
-<Variant language="objc" api="get-nearby-points-of-interest" repeat="4"/>
+#### Objective-C
 
 **Syntax**
 
@@ -164,7 +235,30 @@ CLLocation *location = [[CLLocation alloc] initWithLatitude:40.4350229 longitude
 }];
 ```
 
-<Variant language="swift" api="process-region-event" repeat="4"/>
+<Variant platform="react-native" api="get-nearby-points-of-interest" repeat="4"/>
+
+**Syntax**
+
+```typescript
+getNearbyPointsOfInterest(location, <limit>): Promise<Array<PlacesPOI>>
+```
+
+**Example**
+
+```typescript
+let location = new PlacesLocation(<latitude>, <longitude>, <optional altitude>, <optional speed>, <optional accuracy>);
+
+try {
+  const pois = await Places.getNearbyPointsOfInterest(location, <limit>);
+  console.log(`AdobeExperienceSDK: Places pois: ${pois}`)
+} catch(error) {
+  console.log(`AdobeExperienceSDK: Places error: ${error}`
+}
+```
+
+<Variant platform="ios" api="process-region-event" repeat="4"/>
+
+#### Swift
 
 **Syntax**
 
@@ -183,7 +277,7 @@ let region = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 40.388684
 Places.processRegionEvent(.entry, forRegion: region)
 ```
 
-<Variant language="objc" api="process-region-event" repeat="4"/>
+#### Objective-C
 
 **Syntax**
 
@@ -202,7 +296,13 @@ CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:CLLocationCo
 [AEPMobilePlaces processRegionEvent:AEPPlacesRegionEventEntry forRegion:region];
 ```
 
-<Variant language="swift" api="register-extension" repeat="2"/>
+<Variant platform="react-native" api="process-region-event" repeat="1"/>
+
+Missing?
+
+<Variant platform="ios" api="register-extension" repeat="4"/>
+
+#### Swift
 
 **Example**
 
@@ -210,7 +310,7 @@ CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:CLLocationCo
 MobileCore.registerExtensions([Places.self])
 ```
 
-<Variant language="objc" api="register-extension" repeat="2"/>
+#### Objective-C
 
 **Example**
 
@@ -218,7 +318,13 @@ MobileCore.registerExtensions([Places.self])
 [AEPMobileCore registerExtensions:@[AEPMobilePlaces.class] completion:nil];
 ```
 
-<Variant language="swift" api="set-accuracy-authorization" repeat="4"/>
+<Variant platform="react-native" api="register-extension" repeat="1"/>
+
+Please refer to the native code tabs to learn how to register the Places extension.
+
+<Variant platform="ios" api="set-accuracy-authorization" repeat="10"/>
+
+#### Swift
 
 **Syntax**
 
@@ -232,7 +338,7 @@ static func setAccuracyAuthorization(_ accuracy: CLAccuracyAuthorization)
 Places.setAccuracyAuthorization(.fullAccuracy)
 ```
 
-<Variant language="objc" api="set-accuracy-authorization" repeat="4"/>
+#### Objective-C
 
 **Syntax**
 
@@ -246,7 +352,13 @@ Places.setAccuracyAuthorization(.fullAccuracy)
 [AEPMobilePlaces setAccuracyAuthorization:CLAccuracyAuthorizationFullAccuracy];
 ```
 
-<Variant language="swift" api="set-authorization-status" repeat="4"/>
+<Variant platform="react-native" api="set-accuracy-authorization" repeat="1"/>
+
+Missing????
+
+<Variant platform="ios" api="set-authorization-status" repeat="10"/>
+
+#### Swift
 
 **Syntax**
 
@@ -264,7 +376,7 @@ func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
 }
 ```
 
-<Variant language="objc" api="set-authorization-status" repeat="4"/>
+#### Objective-C
 
 **Syntax**
 
@@ -280,4 +392,22 @@ func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
 - (void)locationManagerDidChangeAuthorization:(CLLocationManager *)manager {
     [AEPMobilePlaces setAuthorizationStatus:manager.authorizationStatus];
 }
+```
+
+<Variant platform="react-native" api="set-authorization-status" repeat="4"/>
+
+**Syntax**
+
+```typescript
+setAuthorizationStatus(authStatus?: PlacesAuthStatus): void;
+```
+
+**Example**
+
+```typescript
+Places.setAuthorizationStatus(PlacesAuthStatus.ALWAYS);
+Places.setAuthorizationStatus(PlacesAuthStatus.DENIED);
+Places.setAuthorizationStatus(PlacesAuthStatus.RESTRICTED);
+Places.setAuthorizationStatus(PlacesAuthStatus.WHEN_IN_USE);
+Places.setAuthorizationStatus(PlacesAuthStatus.UNKNOWN);
 ```

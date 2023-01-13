@@ -16,13 +16,13 @@ Clears out the client-side data for Places in shared state, local storage, and i
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-Swift
+iOS
 
-<Tabs query="language=swift&api=clear"/>
+<Tabs query="platform=ios&api=clear"/>
 
-Objective-C
+React Native
 
-<Tabs query="language=objc&api=clear"/>
+<Tabs query="platform=react-native&api=clear"/>
 
 ### extensionVersion
 
@@ -30,13 +30,13 @@ Returns the running version of the AEPPlaces extension.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-Swift
+iOS
 
-<Tabs query="language=swift&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
-Objective-C
+React Native
 
-<Tabs query="language=objc&api=extension-version"/>
+<Tabs query="platform=react-native&api=extension-version"/>
 
 ### getCurrentPointsOfInterest
 
@@ -44,13 +44,13 @@ Returns all points of interest (POI) of which the device is currently known to b
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-Swift
+iOS
 
-<Tabs query="language=swift&api=get-current-points-of-interest"/>
+<Tabs query="platform=ios&api=get-current-points-of-interest"/>
 
-Objective-C
+React Native
 
-<Tabs query="language=objc&api=get-current-points-of-interest"/>
+<Tabs query="platform=react-native&api=get-current-points-of-interest"/>
 
 ### getLastKnownLocation
 
@@ -60,13 +60,13 @@ If the Places Extension does not have a valid last known location for the user, 
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-Swift
+iOS
 
-<Tabs query="language=swift&api=get-last-known-location"/>
+<Tabs query="platform=ios&api=get-last-known-location"/>
 
-Objective-C
+React Native
 
-<Tabs query="language=objc&api=get-last-known-location"/>
+<Tabs query="platform=react-native&api=get-last-known-location"/>
 
 ### getNearbyPointsOfInterest
 
@@ -74,13 +74,13 @@ Requests a list of nearby Points of Interest (POI) and returns them in a closure
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-Swift
+iOS
 
-<Tabs query="language=swift&api=get-nearby-points-of-interest"/>
+<Tabs query="platform=ios&api=get-nearby-points-of-interest"/>
 
-Objective-C
+React Native
 
-<Tabs query="language=objc&api=get-nearby-points-of-interest"/>
+<Tabs query="platform=react-native&api=get-nearby-points-of-interest"/>
 
 ### processRegionEvent
 
@@ -90,13 +90,13 @@ Calling this method will result in an `Event` being dispatched to the SDK's `Eve
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-Swift
+iOS
 
-<Tabs query="language=swift&api=process-region-event"/>
+<Tabs query="platform=ios&api=process-region-event"/>
 
-Objective-C
+React Native
 
-<Tabs query="language=objc&api=process-region-event"/>
+<Tabs query="platform=react-native&api=process-region-event"/>
 
 ### registerExtension
 
@@ -104,13 +104,13 @@ This API no longer exists in `AEPPlaces`. Instead, the extension should be regis
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-Swift
+iOS
 
-<Tabs query="language=swift&api=register-extension"/>
+<Tabs query="platform=ios&api=register-extension"/>
 
-Objective-C
+React Native
 
-<Tabs query="language=objc&api=register-extension"/>
+<Tabs query="platform=react-native&api=register-extension"/>
 
 ### setAccuracyAuthorization
 
@@ -120,13 +120,13 @@ The value provided is stored in the Places shared state, and is for reference on
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-Swift
+iOS
 
-<Tabs query="language=swift&api=set-accuracy-authorization"/>
+<Tabs query="platform=ios&api=set-accuracy-authorization"/>
 
-Objective-C
+React Native
 
-<Tabs query="language=objc&api=set-accuracy-authorization"/>
+<Tabs query="platform=react-native&api=set-accuracy-authorization"/>
 
 ### setAuthorizationStatus
 
@@ -140,13 +140,13 @@ This method should only be called from the `CLLocationManagerDelegate` protocol 
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-Swift
+iOS
 
-<Tabs query="language=swift&api=set-authorization-status"/>
+<Tabs query="platform=ios&api=set-authorization-status"/>
 
-Objective-C
+React Native
 
-<Tabs query="language=objc&api=set-authorization-status"/>
+<Tabs query="platform=react-native&api=set-authorization-status"/>
 
 ## Additional classes and enums
 

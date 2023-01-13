@@ -32,7 +32,7 @@ To get started with the Profile extension:
 
 To add the Profile extension to your app:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -42,9 +42,13 @@ iOS
 
 <Tabs query="platform=ios-aep&task=add"/>
 
+React Native
+
+<Tabs query="platform=react-native&task=add"/>
+
 ## Register the extension
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -54,8 +58,7 @@ iOS
 
 <Tabs query="platform=ios-aep&task=register"/>
 
-<!-- React Native
+React Native
 
 <Tabs query="platform=react-native&task=register"/>
 
--->
