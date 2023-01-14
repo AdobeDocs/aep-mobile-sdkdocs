@@ -47,7 +47,7 @@ adobe_mc = TS=XXXXXX|MCMID=XXXXXX|MCAID=XXXXXX|MCORGID=XXXXXX@AdobeOrg
 
 If your application uses more complicated URLs, such as Angular URLs, you should use [getUrlVariables](#geturlvariables).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -57,11 +57,11 @@ iOS
 
 <Tabs query="platform=ios-aep&api=append-to-url"/>
 
-<!-- React Native
+React Native
 
 <Tabs query="platform=react-native&api=append-to-url"/>
 
-Flutter
+<!--  Flutter
 
 <Tabs query="platform=flutter&api=append-to-url"/> -->
 
@@ -71,7 +71,7 @@ The `extensionVersion()` API returns the version of the Identity extension that 
 
 To get the version of the Identity extension, use the following code sample:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -81,11 +81,11 @@ iOS
 
 <Tabs query="platform=ios-aep&api=extension-version"/>
 
-<!-- React Native
+React Native
 
 <Tabs query="platform=react-native&api=extension-version"/>
 
-Flutter
+<!-- Flutter
 
 <Tabs query="platform=flutter&api=extension-version"/> -->
 
@@ -95,7 +95,7 @@ This API retrieves the Adobe Experience Cloud ID (ECID) that was generated when 
 
 This ID is preserved between app upgrades, is saved and restored during the standard application backup process, and is removed at uninstall.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -105,11 +105,11 @@ iOS
 
 <Tabs query="platform=ios-aep&api=get-experience-cloud-id"/>
 
-<!-- React Native
+React Native
 
 <Tabs query="platform=react-native&api=get-experience-cloud-id"/>
 
-Flutter
+<!--  Flutter
 
 <Tabs query="platform=flutter&api=get-experience-cloud-id"/> -->
 
@@ -117,7 +117,7 @@ Flutter
 
 This API returns all customer identifiers that were previously synced with the Adobe Experience Cloud Identity Service.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -127,11 +127,11 @@ iOS
 
 <Tabs query="platform=ios-aep&api=get-identifiers"/>
 
-<!-- React Native
+React Native
 
 <Tabs query="platform=react-native&api=get-identifiers"/>
 
-Flutter
+<!--  Flutter
 
 <Tabs query="platform=flutter&api=get-identifiers"/> -->
 
@@ -148,7 +148,7 @@ If an error occurs while retrieving the URL string, the callback handler will be
   * `TS` - A timestamp taken when this request was made
 * The optional `adobe_aa_vid` attribute is the URL-encoded Analytics Custom Visitor ID (VID), if previously set in the [Analytics extension](../../adobe-analytics/index.md).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -158,11 +158,11 @@ iOS
 
 <Tabs query="platform=ios-aep&api=get-url-variables"/>
 
-<!-- React Native
+React Native
 
 <Tabs query="platform=react-native&api=get-url-variables"/>
 
-Flutter
+<!--  Flutter
 
 <Tabs query="platform=flutter&api=get-url-variables"/> -->
 
@@ -180,11 +180,11 @@ iOS
 
 <Tabs query="platform=ios-aep&api=register-extension"/>
 
-<!-- React Native
+React Native
 
 <Tabs query="platform=react-native&api=register-extension"/>
 
-Flutter
+<!--  Flutter
 
 <Tabs query="platform=flutter&api=register-extension"/> -->
 
@@ -196,7 +196,7 @@ The advertising ID is preserved between app upgrades, is saved and restored duri
 
 If the current SDK privacy status is `optedout`, the advertising identifier is not set or stored.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -206,11 +206,11 @@ iOS
 
 <Tabs query="platform=ios-aep&api=set-advertising-identifier"/>
 
-<!-- React Native
+React Native
 
 <Tabs query="platform=react-native&api=set-advertising-identifier"/>
 
-Flutter
+<!-- Flutter
 
 <Tabs query="platform=flutter&api=set-advertising-identifier"/> -->
 

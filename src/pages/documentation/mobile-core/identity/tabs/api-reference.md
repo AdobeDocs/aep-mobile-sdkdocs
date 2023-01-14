@@ -91,25 +91,21 @@ NSURL* url = [NSURL URLWithString:@"https://example.com"];
 }];
 ```
 
-<!-- <Variant platform="react-native" api="append-to-url" repeat="6"/>
-
-#### JavaScript
+<Variant platform="react-native" api="append-to-url" repeat="4"/>
 
 **Syntax**
 
-```jsx
-appendVisitorInfoForURL(baseURL?: String): Promise<?string>;
+```typescript
+appendVisitorInfoForURL(baseURL?: String): Promise<string> 
 ```
-
-* _baseUrl_ is the URL to which the visitor information needs to be appended. If the visitor information is nil or empty, the URL is returned as is.
 
 **Example**
 
-```jsx
-ACPIdentity.appendVisitorInfoForURL("https://example.com").then(urlWithVistorData => console.log("AdobeExperenceSDK: Url with Visitor Data = " + urlWithVisitorData));
+```typescript
+Identity.appendVisitorInfoForURL("test.com").then(urlWithVisitorData => console.log("AdobeExperienceSDK: VisitorData = " + urlWithVisitorData));
 ```
 
-<Variant platform="flutter" api="append-to-url" repeat="6"/>
+<!--  <Variant platform="flutter" api="append-to-url" repeat="6"/>
 
 #### Dart
 
@@ -171,15 +167,21 @@ let identityExtensionVersion  = Identity.extensionVersion
 NSString *identityVersion = [AEPMobileIdentity extensionVersion];
 ```
 
-<!-- <Variant platform="react-native" api="extension-version" repeat="2"/>
+<Variant platform="react-native" api="extension-version" repeat="4"/>
 
-#### JavaScript
+**Syntax**
 
-```jsx
-ACPIdentity.extensionVersion().then(identityExtensionVersion => console.log("AdobeExperienceSDK: ACPIdentity version: " + identityExtensionVersion));
+```typescript
+extensionVersion(): Promise<string>
 ```
 
-<Variant platform="flutter" api="extension-version" repeat="2"/>
+**Example**
+
+```typescript
+Identity.extensionVersion().then(version => console.log("AdobeExperienceSDK: Identity version: " + version));
+```
+
+<!--  <Variant platform="flutter" api="extension-version" repeat="2"/>
 
 #### Dart
 
@@ -257,23 +259,21 @@ Identity.getExperienceCloudId { ecid, error in
 }];
 ```
 
-<!-- <Variant platform="react-native" api="get-experience-cloud-id" repeat="5"/>
-
-#### JavaScript
+<Variant platform="react-native" api="get-experience-cloud-id" repeat="4"/>
 
 **Syntax**
 
-```jsx
-getExperienceCloudId(): Promise<?string>;
+```typescript
+getExperienceCloudId(): Promise<string>
 ```
 
 **Example**
 
-```jsx
-ACPIdentity.getExperienceCloudId().then(cloudId => console.log("AdobeExperienceSDK: CloudID = " + cloudId));
+```typescript
+Identity.getExperienceCloudId().then(cloudId => console.log("AdobeExperienceSDK: CloudID = " + cloudId));
 ```
 
-<Variant platform="flutter" api="get-experience-cloud-id" repeat="5"/>
+<!--  <Variant platform="flutter" api="get-experience-cloud-id" repeat="5"/>
 
 #### Dart
 
@@ -366,23 +366,21 @@ Identity.getIdentifiers { identifiers, error in
 }];
 ```
 
-<!-- <Variant platform="react-native" api="get-identifiers" repeat="5"/>
-
-#### JavaScript
+<Variant platform="react-native" api="get-identifiers" repeat="4"/>
 
 **Syntax**
 
-```jsx
-getIdentifiers(): Promise<Array<?ACPVisitorID>>;
+```typescript
+getIdentifiers(): Promise<Array<VisitorID>>
 ```
 
 **Example**
 
-```jsx
-ACPIdentity.getIdentifiers().then(identifiers => console.log("AdobeExperienceSDK: Identifiers = " + identifiers));
+```typescript
+Identity.getIdentifiers().then(identifiers => console.log("AdobeExperienceSDK: Identifiers = " + identifiers));
 ```
 
-<Variant platform="flutter" api="get-identifiers" repeat="5"/>
+<!-- <Variant platform="flutter" api="get-identifiers" repeat="5"/>
 
 #### Dart
 
@@ -500,25 +498,21 @@ Identity.getUrlVariables { (urlVariables, error) in
 }];
 ```
 
-<!-- <Variant platform="react-native" api="get-url-variables" repeat="6"/>
-
-This method was added in react-native-acpcore v1.0.5.
-
-#### JavaScript
+<Variant platform="react-native" api="get-url-variables" repeat="4"/>
 
 **Syntax**
 
-```jsx
-getUrlVariables(): Promise<?string>;
+```typescript
+getUrlVariables(): Promise<string>
 ```
 
 **Example**
 
-```jsx
-ACPIdentity.getUrlVariables().then(urlVariables => console.log("AdobeExperenceSDK: query params = " + urlVariables));
+```typescript
+Identity.getUrlVariables().then(urlVariables => console.log("AdobeExperienceSDK: UrlVariables = " + urlVariables));
 ```
 
-<Variant platform="flutter" api="get-url-variables" repeat="5"/>
+<!--  <Variant platform="flutter" api="get-url-variables" repeat="5"/>
 
 #### Dart
 
@@ -593,13 +587,11 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-<!-- <Variant platform="react-native" api="register-extension" repeat="2"/>
+<Variant platform="react-native" api="register-extension" repeat="1"/>
 
-#### JavaScript
+Please refer to the native code tabs to learn how to register the Identity extension for Mobile Core.
 
-When using React Native, registering Identity with Mobile Core should be done in native code which is shown under the Android and iOS tabs.
-
-<Variant platform="flutter" api="register-extension" repeat="2"/>
+<!--  <Variant platform="flutter" api="register-extension" repeat="2"/>
 
 #### Dart
 
@@ -799,25 +791,21 @@ func setAdvertisingIdentiferUsingTrackingManager() {
 }
 ```
 
-<!-- <Variant platform="react-native" api="set-advertising-identifier" repeat="6"/>
-
-#### JavaScript
+<Variant platform="react-native" api="set-advertising-identifier" repeat="4"/>
 
 **Syntax**
 
-```jsx
-setAdvertisingIdentifier(advertisingIdentifier?: String);
+```typescript
+setAdvertisingIdentifier(advertisingIdentifier?: string)
 ```
-
-* _adID_ is a string that provides developers with a simple, standard system to continue to track the Ads through their apps.
 
 **Example**
 
-```jsx
-ACPCore.setAdvertisingIdentifier("ADVTID");
+```typescript
+MobileCore.setAdvertisingIdentifier("adID");
 ```
 
-<Variant platform="flutter" api="set-advertising-identifier" repeat="6"/>
+<!--  <Variant platform="flutter" api="set-advertising-identifier" repeat="6"/>
 
 #### Dart
 
