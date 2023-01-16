@@ -33,17 +33,15 @@ import AEPLifecycle
 @import AEPLifecycle;
 ```
 
-<!-- <Variant platform="react-native" task="add" repeat="3"/>
+<Variant platform="react-native" task="add" repeat="2"/>
 
-#### JavaScript
-
-Import the Lifecycle extension
+Import the Lifecycle extension:
 
 ```jsx
-import {ACPLifecycle} from '@adobe/react-native-acpcore';
+import {Lifecycle} from '@adobe/react-native-acpcore';
 ```
 
-<Variant platform="flutter" task="add" repeat="3"/>
+<!-- <Variant platform="flutter" task="add" repeat="3"/>
 
 #### Dart
 
@@ -238,8 +236,6 @@ In iOS 13 and later, for a scene-based application, use the `UISceneDelegate`'s 
 
 For more information on handling backgrounding applications with Scenes, refer to Apple's documentation [here](https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_background)
 
-<!-- <Variant platform="react-native" task="register" repeat="2"/>
+<Variant platform="react-native" task="register" repeat="2"/>
 
-**Registering the extension with Core**
-
-When using React Native, registering Lifecycle with Mobile Core should be done in native code which is shown under the Android and iOS (ACP 2.x) tabs. -->
+Please refer to the native code tabs to learn how to register the Lifecycle extension.

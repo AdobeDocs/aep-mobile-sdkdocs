@@ -24,7 +24,7 @@ For more information about creating and configuring a rule in the Data Collectio
 
 ## Add the Signal extension to your app
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -34,11 +34,11 @@ iOS
 
 <Tabs query="platform=ios-aep&task=add"/>
 
-<!-- React Native
+React Native
 
 <Tabs query="platform=react-native&task=add"/>
 
-Flutter
+<!--  Flutter
 
 <Tabs query="platform=flutter&task=add"/> -->
 
@@ -58,11 +58,11 @@ iOS
 
 <Tabs query="platform=ios-aep&task=register"/>
 
-<!-- React Native
+React Native
 
 <Tabs query="platform=react-native&task=register"/>
 
-Flutter
+<!-- Flutter
 
 <Tabs query="platform=flutter&task=register"/> -->
 

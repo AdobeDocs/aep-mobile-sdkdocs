@@ -21,7 +21,7 @@ To get started with Identity, complete the following steps:
 
 ## Add the Identity extension to your app
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -31,11 +31,11 @@ iOS
 
 <Tabs query="platform=ios-aep&task=add"/>
 
-<!-- React Native
+React Native
 
 <Tabs query="platform=react-native&task=add"/>
 
-Flutter
+<!-- Flutter
 
 <Tabs query="platform=flutter&task=add"/> -->
 
@@ -45,7 +45,7 @@ The `registerExtension()` API registers the Identity extension with the Mobile C
 
 To register the Identity extension, use the following code sample:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -55,11 +55,11 @@ iOS
 
 <Tabs query="platform=ios-aep&task=register"/>
 
-<!-- React Native
+React Native
 
 <Tabs query="platform=react-native&task=register"/>
 
-Flutter
+<!-- Flutter
 
 <Tabs query="platform=flutter&task=register"/> -->
 
@@ -93,7 +93,7 @@ To use the same visitor ID in the app and mobile web and pass the visitor ID to 
 
 ### Implementing visitor tracking between an app and the mobile web
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -103,11 +103,11 @@ iOS
 
 <Tabs query="platform=ios-aep&task=implement"/>
 
-<!-- React Native
+React Native
 
 <Tabs query="platform=react-native&task=implement"/>
 
-Flutter
+<!-- Flutter
 
 <Tabs query="platform=flutter&task=implement"/> -->
 

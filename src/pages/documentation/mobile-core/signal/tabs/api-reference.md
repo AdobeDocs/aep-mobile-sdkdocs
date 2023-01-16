@@ -36,15 +36,21 @@ let version = Signal.extensionVersion
 NSString *version = [AEPMobileSignal extensionVersion];
 ```
 
-<!-- <Variant platform="react-native" api="extension-version" repeat="2"/>
+<Variant platform="react-native" api="extension-version" repeat="4"/>
 
-#### JavaScript
+**Syntax**
 
-```jsx
-ACPSignal.extensionVersion().then(signalExtensionVersion => console.log("AdobeExperienceSDK: ACPSignal version: " + signalExtensionVersion));
+```typescript
+extensionVersion(): Promise<string>
 ```
 
-<Variant platform="flutter" api="extension-version" repeat="2"/>
+**Example**
+
+```typescript
+Signal.extensionVersion().then(version => console.log("AdobeExperienceSDK: Signal version: " + version));
+```
+
+<!--  <Variant platform="flutter" api="extension-version" repeat="2"/>
 
 #### Dart
 
@@ -72,6 +78,6 @@ Signal.registerExtension();
 
 This API no longer exists in `Signal`. Instead, the extension should be registered by calling the `registerExtensions` API in the MobileCore. Please see the updated SDK initialization steps at the [migrate to Swift tutorial.](../../migrate-to-swift.md#update-sdk-initialization)
 
-<!-- <Variant platform="react-native" api="register-extension" repeat="1"/>
+<Variant platform="react-native" api="register-extension" repeat="1"/>
 
-When using React Native, register the Signal extension with Mobile Core in native code as shown on the Android and iOS tabs. -->
+Please refer to the native code tabs to learn how to register the Signal extension for Mobile Core.

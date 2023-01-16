@@ -877,23 +877,20 @@ MobileCore.setPushIdentifier(deviceToken)
 [AEPMobileCore setPushIdentifier:deviceToken];
 ```
 
-<!-- <Variant platform="react-native" api="set-push-identifier" repeat="6"/>
-
-#### JavaScript
+<Variant platform="react-native" api="set-push-identifier" repeat="4"/>
 
 **Syntax**
 
-```jsx
-ACPCore.setPushIdentifier(pushIdentifier);
+```typescript
+setPushIdentifier(pushIdentifier?: string) 
 ```
-
-* _pushIdentifier_ is a string that contains the device token for push notifications.
 
 **Example**
 
-```jsx
-ACPCore.setPushIdentifier("pushID");
-``` -->
+```typescript
+MobileCore.setPushIdentifier("pushIdentifier");
+```
+
 
 <Variant platform="android" api="sync-identifier" repeat="6"/>
 
@@ -960,29 +957,21 @@ Identity.syncIdentifier(identifierType: "idType",
                       authenticationState:AEPMobileVisitorAuthStateUnknown];
 ```
 
-<!-- <Variant platform="react-native" api="sync-identifier" repeat="6"/>
-
-#### JavaScript
+<Variant platform="react-native" api="sync-identifier" repeat="4"/>
 
 **Syntax**
 
-```jsx
-syncIdentifier(identifierType: String, identifier: String, authenticationState: string);
+```typescript
+ syncIdentifier(identifierType: String, identifier: String, authenticationState: MobileVisitorAuthenticationState) 
 ```
-
-* The _identifierType (String)_ contains the `identifier type`, and this parameter should not be null or empty. The allowed characters are [A-Za-z0-9_.]
-* The _identifier (String)_ contains the `identifier` value, and this parameter should not be null or empty. If either the `identifier type` or `identifier` contains a null or an empty string, the identifier is ignored by the Identity extension.
-* _authenticationState (ACPMobileVisitorAuthenticationState)_ value indicating authentication state for the user and contains one of the following [ACPMobileVisitorAuthenticationState](#public-classes) values.
 
 **Example**
 
-```jsx
-import {ACPMobileVisitorAuthenticationState} from '@adobe/react-native-acpcore';
-
-ACPIdentity.syncIdentifier("identifierType", "identifier", ACPMobileVisitorAuthenticationState.AUTHENTICATED);
+```typescript
+Identity.syncIdentifier("identifierType", "identifier", MobileVisitorAuthenticationState.AUTHENTICATED);
 ```
 
-<Variant platform="flutter" api="sync-identifier" repeat="6"/>
+<!--  <Variant platform="flutter" api="sync-identifier" repeat="6"/>
 
 #### Dart
 
@@ -1065,25 +1054,21 @@ NSDictionary *ids = @{@"idType1":@"idValue1",
 [AEPMobileIdentity syncIdentifiers:ids];
 ```
 
-<!-- <Variant platform="react-native" api="sync-identifiers" repeat="6"/>
-
-#### JavaScript
+<Variant platform="react-native" api="sync-identifiers" repeat="4"/>
 
 **Syntax**
 
-```jsx
-syncIdentifiers(identifiers?: {string: string});
+```typescript
+syncIdentifiers(identifiers?: Record<string, string>)
 ```
-
-* The _identifiers_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value. If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
 
 **Example**
 
-```jsx
-ACPIdentity.syncIdentifiers({"id1": "identifier1"});
+```typescript
+Identity.syncIdentifiers({"id1": "identifier1"});
 ```
 
-<Variant platform="flutter" api="sync-identifiers" repeat="6"/>
+<!--  <Variant platform="flutter" api="sync-identifiers" repeat="6"/>
 
 #### Dart
 
@@ -1167,28 +1152,31 @@ NSDictionary *ids = @{@"idType1":@"idValue1",
 [AEPMobileIdentity syncIdentifiers:ids authenticationState:AEPMobileVisitorAuthStateAuthenticated];
 ```
 
-<!-- <Variant platform="react-native" api="sync-identifiers-overloaded" repeat="6"/>
-
-#### JavaScript
+<Variant platform="react-native" api="sync-identifiers-overloaded" repeat="6"/>
 
 **Syntax**
 
-```jsx
-syncIdentifiersWithAuthState(identifiers?: {string: string}, authenticationState: string);
+```typescript
+syncIdentifiersWithAuthState(identifiers: Record<string, string> | null, authenticationState: MobileVisitorAuthenticationState)
 ```
-
-* The _identifiers_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value. If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
-* The _authenticationState (ACPMobileVisitorAuthenticationState)_ indicates the authentication state of the user and contains one of the [ACPMobileVisitorAuthenticationState](#public-classes) values.
 
 **Example**
 
-```jsx
-import {ACPMobileVisitorAuthenticationState} from '@adobe/react-native-acpcore';
+```typescript
+import {MobileVisitorAuthenticationState} from '@adobe/react-native-aepcore';
 
-ACPIdentity.syncIdentifiersWithAuthState({"id1": "identifier1"}, ACPMobileVisitorAuthenticationState.UNKNOWN);
+Identity.syncIdentifiersWithAuthState({"id1": "identifier1"}, MobileVisitorAuthenticationState.UNKNOWN);
 ```
 
-<Variant platform="flutter" api="sync-identifiers-overloaded" repeat="6"/>
+Note: `MobileVisitorAuthenticationState` contains the following getters:
+
+```typescript
+const AUTHENTICATED = "VISITOR_AUTH_STATE_AUTHENTICATED";
+const LOGGED_OUT = "VISITOR_AUTH_STATE_LOGGED_OUT";
+const UNKNOWN = "VISITOR_AUTH_STATE_UNKNOWN";
+```
+
+<!--  <Variant platform="flutter" api="sync-identifiers-overloaded" repeat="6"/>
 
 #### Dart
 
@@ -1275,33 +1263,29 @@ This is used to indicate the authentication state for the current `Identifiable`
 }
 ```
 
-<!-- <Variant platform="react-native" api="public-classes" repeat="7"/>
+<Variant platform="react-native" api="public-classes" repeat="5"/>
 
-#### JavaScript
+**VisitorID**
 
-**ACPVisitorID**
+```typescript
+import {VisitorID} from '@adobe/react-native-aepcore';
 
-This is an identifier to be used with the Adobe Experience Cloud Identity Service and it contains the origin, the identifier type, the identifier, and the authentication state of the visitor ID.
-
-```jsx
-import {ACPVisitorID} from '@adobe/react-native-acpcore';
-
-var visitorId = new ACPVisitorID(idOrigin?: string, idType: string, id?: string, authenticationState?: ACPMobileVisitorAuthenticationState);
+var visitorId = new VisitorID(idOrigin?: string, idType: string, id?: string, authenticationState?: MobileVisitorAuthenticationState)
 ```
 
-**ACPMobileVisitorAuthenticationState**
+**MobileVisitorAuthenticationState**
 
 This is used to indicate the authentication state for the current `VisitorID`.
 
-```jsx
-import {ACPMobileVisitorAuthenticationState} from '@adobe/react-native-acpcore';
+```typescript
+import {MobileVisitorAuthenticationState} from '@adobe/react-native-aepcore';
 
-var state = ACPMobileVisitorAuthenticationState.AUTHENTICATED;
-//var state = ACPMobileVisitorAuthenticationState.LOGGED_OUT;
-//var state = ACPMobileVisitorAuthenticationState.UNKNOWN;
+var state = MobileVisitorAuthenticationState.AUTHENTICATED;
+//var state = MobileVisitorAuthenticationState.LOGGED_OUT;
+//var state = MobileVisitorAuthenticationState.UNKNOWN;
 ```
 
-<Variant platform="flutter" api="public-classes" repeat="7"/>
+<!--  <Variant platform="flutter" api="public-classes" repeat="7"/>
 
 #### Dart
 

@@ -20,15 +20,21 @@ let version = Lifecycle.extensionVersion
 NSString *version = [AEPMobileLifecycle extensionVersion];
 ```
 
-<!-- <Variant platform="react-native" api="extension-version" repeat="2"/>
+<Variant platform="react-native" api="extension-version" repeat="4"/>
 
-**JavaScript**
+**Syntax**
 
-```jsx
-ACPLifecycle.extensionVersion().then(lifecycleExtensionVersion => console.log("AdobeExperienceSDK: ACPLifecycle version: " + lifecycleExtensionVersion));
+```typescript
+extensionVersion(): Promise<string>
 ```
 
-<Variant platform="flutter" api="extension-version" repeat="2"/>
+**Example**
+
+```typescript
+Lifecycle.extensionVersion().then(version => console.log("AdobeExperienceSDK: Lifecycle version: " + version));
+```
+
+<!--  <Variant platform="flutter" api="extension-version" repeat="2"/>
 
 **Dart**
 

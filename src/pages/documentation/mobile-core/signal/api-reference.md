@@ -8,7 +8,7 @@ The `extensionVersion()` API returns the version of the Signal extension that is
 
 To get the version of the Signal extension, use the following code sample:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -18,11 +18,11 @@ iOS
 
 <Tabs query="platform=ios-aep&api=extension-version"/>
 
-<!-- React Native
+React Native
 
 <Tabs query="platform=react-native&api=extension-version"/>
 
-Flutter
+<!-- Flutter
 
 <Tabs query="platform=flutter&api=extension-version"/> -->
 
@@ -30,7 +30,7 @@ Flutter
 
 Registers the Signal extension with the Mobile Core.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -40,9 +40,9 @@ iOS
 
 <Tabs query="platform=ios-aep&api=register-extension"/>
 
-<!-- React Native
+React Native
 
-<Tabs query="platform=react-native&api=register-extension"/> -->
+<Tabs query="platform=react-native&api=register-extension"/>
 
 ## collectPII
 

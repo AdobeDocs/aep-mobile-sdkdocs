@@ -222,7 +222,7 @@ This API sets the device token for push notifications in the SDK. If the current
 
 You should call `setPushIdentifier` on each application launch to ensure the most up-to-date device token is set to the SDK. If no device token is available, `null`/`nil` should be passed.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -232,9 +232,9 @@ iOS
 
 <Tabs query="platform=ios-aep&api=set-push-identifier"/>
 
-<!-- React Native
+React Native
 
-<Tabs query="platform=react-native&api=set-push-identifier"/> -->
+<Tabs query="platform=react-native&api=set-push-identifier"/>
 
 ## syncIdentifier
 
@@ -250,7 +250,7 @@ If the current SDK privacy status is `MobilePrivacyStatus.OPT_OUT`, calling this
 
 This API updates or appends the provided customer identifier type key and value with the given authentication state to the Experience Cloud Identity Service. If the specified customer ID type exists in the service, the ID is updated with the new ID and authentication state. Otherwise a new customer ID is added.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -260,11 +260,11 @@ iOS
 
 <Tabs query="platform=ios-aep&api=sync-identifier"/>
 
-<!-- React Native
+React Native
 
 <Tabs query="platform=react-native&api=sync-identifier"/>
 
-Flutter
+<!--  Flutter
 
 <Tabs query="platform=flutter&api=sync-identifier"/> -->
 
@@ -272,7 +272,7 @@ Flutter
 
 This API is an overloaded version, which does not include the parameter for the authentication state and it assumes a default value of `VisitorID.AuthenticationState.UNKNOWN`.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -282,11 +282,11 @@ iOS
 
 <Tabs query="platform=ios-aep&api=sync-identifiers"/>
 
-<!-- React Native
+React Native
 
 <Tabs query="platform=react-native&api=sync-identifiers"/>
 
-Flutter
+<!--  Flutter
 
 <Tabs query="platform=flutter&api=sync-identifiers"/> -->
 
@@ -296,7 +296,7 @@ The function of this API is the same as the `syncIdentifier` API. This API passe
 
 Starting with _ACPIdentity v2.1.3 (iOS)_ and _Identity v1.1.2 (Android)_ if the new `identifier` value is null or empty, this ID type is removed from the local storage, Identity shared state and not synced with the Adobe Experience Cloud Identity Service.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -306,17 +306,17 @@ iOS
 
 <Tabs query="platform=ios-aep&api=sync-identifiers-overloaded"/>
 
-<!-- React Native
+React Native
 
 <Tabs query="platform=react-native&api=sync-identifiers-overloaded"/>
 
-Flutter
+<!-- Flutter
 
 <Tabs query="platform=flutter&api=sync-identifiers-overloaded"/> -->
 
 ## Public classes
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -326,10 +326,10 @@ iOS
 
 <Tabs query="platform=ios-aep&api=public-classes"/>
 
-<!-- React Native
+React Native
 
 <Tabs query="platform=react-native&api=public-classes"/>
 
-Flutter
+<!-- Flutter
 
 <Tabs query="platform=flutter&api=public-classes"/> -->
