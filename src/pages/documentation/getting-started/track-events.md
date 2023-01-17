@@ -61,7 +61,7 @@ Actions are events that occur in your app. Use this API to track and measure an 
 
 You must call this API when an event that you want to track occurs. In addition to the action name, you can send additional context data with each track action call.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
@@ -71,19 +71,15 @@ iOS (AEP 3.x)
 
 <Tabs query="platform=ios-aep&task=track-action"/>
 
-iOS (ACP 2.x)
+<!-- React Native
 
-<Tabs query="platform=ios-acp&task=track-action"/>
+<Tabs query="platform=react-native&task=track-action"/> -->
 
-React Native
+<!-- Flutter
 
-<Tabs query="platform=react-native&task=track-action"/>
+<Tabs query="platform=flutter&task=track-action"/> -->
 
-Flutter
-
-<Tabs query="platform=flutter&task=track-action"/>
-
-Cordova
+<!-- Cordova
 
 <Tabs query="platform=cordova&task=track-action"/>
 
@@ -93,13 +89,13 @@ Unity
 
 Xamarin
 
-<Tabs query="platform=xamarin&task=track-action"/>
+<Tabs query="platform=xamarin&task=track-action"/> -->
 
 ## Track app states and screens (for Adobe Analytics)
 
 States represent screens or views in your app. The `trackState` method is called every time a new state is displayed in your application. For example, this method would be called when a user navigates from the home page to the news feed. This method also sends an Adobe Analytics state-tracking hit with optional context data.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
@@ -109,19 +105,15 @@ iOS (AEP 3.x)
 
 <Tabs query="platform=ios-aep&task=track-state"/>
 
-iOS (ACP 2.x)
+<!-- React Native
 
-<Tabs query="platform=ios-acp&task=track-state"/>
+<Tabs query="platform=react-native&task=track-state"/> -->
 
-React Native
+<!-- Flutter
 
-<Tabs query="platform=react-native&task=track-state"/>
+<Tabs query="platform=flutter&task=track-state"/> -->
 
-Flutter
-
-<Tabs query="platform=flutter&task=track-state"/>
-
-Cordova
+<!-- Cordova
 
 <Tabs query="platform=cordova&task=track-state"/>
 
@@ -131,7 +123,7 @@ Unity
 
 Xamarin
 
-<Tabs query="platform=xamarin&task=track-state"/>
+<Tabs query="platform=xamarin&task=track-state"/> -->
 
 For more information, see the [Mobile Core API Reference](../mobile-core/api-reference.md).
 
