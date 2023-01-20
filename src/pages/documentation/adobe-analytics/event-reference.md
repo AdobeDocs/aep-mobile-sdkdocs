@@ -314,7 +314,7 @@ The Analytics extension only listens for the Lifecycle start event, and the Anal
 
 #### Data payload definition
 
-The payload definition is composed of hte following elements:
+The payload definition is composed of the following elements:
 
 | **Key** | **Value type** | **Optional** | **Description** |
 | :--- | :--- | :--- | :--- |
