@@ -80,16 +80,21 @@ func shouldShowMessage(message: Showable) -> Bool {
     let fullscreenMessage = message as? FullscreenMessage
     let message = fullscreenMessage?.parent
 
-    let messageWebView = message?.view as? WKWebView
-    messageWebView?.evaluateJavaScript("startTimer();") { result, error in
-        if error != nil {
-            // handle error
-            return
-        }
+    // the `shouldShowMessage` delegate method is called on a background thread.
+    // need to dispatch code that uses the webview back to the main thread.
+    DispatchQueue.main.async {
+        let messageWebView = message?.view as? WKWebView
 
-        if result != nil {
-            // do something with the result
-        }
+        messageWebView?.evaluateJavaScript("startTimer();") { result, error in
+            if error != nil {
+                // handle error
+                return
+            }
+
+            if result != nil {
+                // do something with the result
+            }
+        }                
     }
 
     ...
