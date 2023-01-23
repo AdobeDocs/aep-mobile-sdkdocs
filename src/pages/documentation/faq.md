@@ -93,7 +93,6 @@ iOS
 | Profile | 20 | 8 |
 | Adobe Campaign Standard | 60 | 30 |
 | Places | 36 | 20 |
-| Places Monitor | 10 | 19 |
 
 The size values in the table are provided as indicative estimates, with the following considerations:
 
