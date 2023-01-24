@@ -15,8 +15,6 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 ### Android Lifecycle 1.1.2
 
 * Fixes an issue where Lifecycle launch events may set an invalid XDM `environment._dc.language` field when the device is set to specific locales.
-
-<<<<<<< HEAD
 * Added location hint result to EventSource keys for Edge.
 * Fixed a bug preventing in-app messages from being dismissed in some situations.
 * Added Target identities to MobileCore.getSDKIdentities response.
@@ -360,6 +358,3 @@ Released with sdk-core version 1.10.0
 
 * Expanded configuration options for Fullscreen Messages.
 * Added support for delegating in-app message delivery.
-=======
-Released with sdk-core version 1.11.5
->>>>>>> main
