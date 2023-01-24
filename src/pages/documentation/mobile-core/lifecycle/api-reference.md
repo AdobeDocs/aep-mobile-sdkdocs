@@ -80,7 +80,7 @@ Xamarin
 
 <Tabs query="platform=xamarin&api=lifecycle-start"/>
 
-### lifecyclePause
+## lifecyclePause
 
 Pauses the collection of lifecycle data.
 
