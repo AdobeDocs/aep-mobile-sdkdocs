@@ -82,7 +82,7 @@ Adobe Experience Platform Mobile SDK plugin for React Native supports React Nati
 
 <InlineAlert variant="info" slots="text"/>
 
-Adobe Experience Platform Mobile SDK plugins (AEP 1.x) for React Native are compatible only with [Android](#android) and [iOS - Swift](#ios--swift) libraries.
+Adobe Experience Platform Mobile SDK plugins (AEP 1.x) for React Native are compatible only with [Android](#android) and [iOS - Swift](#ios) libraries.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -107,7 +107,7 @@ Adobe Experience Platform Mobile SDK plugin for Flutter supports Flutter **versi
 
 <InlineAlert variant="info" slots="text"/>
 
-Adobe Experience Platform Mobile SDK plugins for Flutter are compatible with [Android](#android) and [iOS — Swift ](#ios--swift) libraries, at this time.
+Adobe Experience Platform Mobile SDK plugins for Flutter are compatible with [Android](#android) and [iOS](#ios) libraries, at this time.
 
 | Extension | pub.dev |
 |---|---|
