@@ -16,7 +16,7 @@ import com.adobe.marketing.mobile.MobileCore;
 import com.adobe.marketing.mobile.Analytics;
 ```
 
-<Variant platform="ios-aep" task="add" repeat="7"/>
+<Variant platform="ios" task="add" repeat="7"/>
 
 1. Add the [Mobile Core](../mobile-core/index.md) and Analytics extensions to your project using Cocoapods.
 2. Add the following pods in your `Podfile`:
@@ -72,7 +72,7 @@ public class MobileApp extends Application {
 
 Analytics depends on the Identity extension and is automatically included in Core by Maven. When manually installing the Analytics extension, ensure that you add the `identity-1.x.x.aar` library to your project.
 
-<Variant platform="ios-aep" task="register" repeat="6"/>
+<Variant platform="ios" task="register" repeat="6"/>
 
 #### Swift
 
@@ -126,7 +126,7 @@ MobileCore.trackAction("Action Name", cdata);
 MobileCore.trackState("State Name", cdata);
 ```
 
-<Variant platform="ios-aep" task="serialize" repeat="10"/>
+<Variant platform="ios" task="serialize" repeat="10"/>
 
 #### Swift
 
@@ -193,7 +193,7 @@ data.put("analytics.offlineEnabled", true);
 MobileCore.updateConfiguration(data);
 ```
 
-<Variant platform="ios-aep" task="update" repeat="6"/>
+<Variant platform="ios" task="update" repeat="6"/>
 
 #### Swift
 

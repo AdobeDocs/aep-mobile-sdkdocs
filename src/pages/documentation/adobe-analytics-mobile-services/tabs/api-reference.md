@@ -6,7 +6,7 @@
 String mobileServicesExtensionVersion = MobileServices.extensionVersion();
 ```
 
-<Variant platform="ios-aep" api="extension-version" repeat="4"/>
+<Variant platform="ios" api="extension-version" repeat="4"/>
 
 #### Swift
 
@@ -44,7 +44,7 @@ Uri testUri = new Uri.Builder()
 ```
 
 
-<Variant platform="ios-aep" api="track-adobe-deep-link" repeat="7"/>
+<Variant platform="ios" api="track-adobe-deep-link" repeat="7"/>
 
 **Syntax**
 

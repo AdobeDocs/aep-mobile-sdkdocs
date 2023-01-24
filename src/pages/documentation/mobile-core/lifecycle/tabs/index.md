@@ -6,7 +6,7 @@ Import the library:
    import com.adobe.marketing.mobile.*;
 ```
 
-<Variant platform="ios-aep" task="add" repeat="8"/>
+<Variant platform="ios" task="add" repeat="8"/>
 
 Add the AEPLifecycle extension and its dependency, the [Mobile Core](../index.md) extension, to your project using Cocoapods.
 
@@ -104,7 +104,7 @@ Setting the application is only necessary on activities that are entry points fo
 
 To ensure accurate session and crash reporting, this call must be added to every activity.
 
-<Variant platform="ios-aep" task="register" repeat="32"/>
+<Variant platform="ios" task="register" repeat="32"/>
 
 #### Swift
 

@@ -55,7 +55,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=add"/>
+<Tabs query="platform=ios&task=add"/>
 
 ### Register Edge with Mobile Core
 
@@ -67,7 +67,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=register"/>
+<Tabs query="platform=ios&task=register"/>
 
 ## Next steps
 

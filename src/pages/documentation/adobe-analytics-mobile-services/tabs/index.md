@@ -10,7 +10,7 @@ Import the Mobile Services extension in your application's main activity.
 import com.adobe.marketing.mobileservices.*;
 ```
 
-<Variant platform="ios-aep" task="add" repeat="6"/>
+<Variant platform="ios" task="add" repeat="6"/>
 
 You can add the library to your project through your `Podfile` by adding the `AEPMobileServices` pod.
 
@@ -65,7 +65,7 @@ public void onCreate() {
 }
 ```
 
-<Variant platform="ios-aep" task="register" repeat="5"/>
+<Variant platform="ios" task="register" repeat="5"/>
 
 In your app's `application:didFinishLaunchingWithOptions` function, register the Mobile Services extension with the Mobile Core:
 
@@ -113,7 +113,7 @@ void setPushIdentifier(final String registrationID)
 MobileCore.setPushIdentifier(registrationID);
 ```
 
-<Variant platform="ios-aep" task="set-push-messaging" repeat="9"/>
+<Variant platform="ios" task="set-push-messaging" repeat="9"/>
 
 iOS simulators do not support push messaging.
 
@@ -165,7 +165,7 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 
 On Android, the SDK handles push tracking to analytics without any additional set up. If the application has implemented the `FirebaseMessaginService` class and will handle the push notifications when the application is in foreground, read the push data from the received Intent and add it to the intent extras of the Activity to be launched. An example can be found in [the Mobile Services implement push messaging tutorial](https://experienceleague.adobe.com/docs/mobile-services_en/android/messaging-android/push-messaging/t-mob-impl-push-deeplinking-android-4x.html?lang=en).
 
-<Variant platform="ios-aep" task="set-push-tracking" repeat="8"/>
+<Variant platform="ios" task="set-push-tracking" repeat="8"/>
 
 Use the following API to track a push messaging click in Adobe Analytics.
 
@@ -281,7 +281,7 @@ public static void trackAdobeDeepLink(final Uri uri)
 MobileServices.trackAdobeDeepLink
 ```
 
-<Variant platform="ios-aep" task="track-deep-link" repeat="15"/>
+<Variant platform="ios" task="track-deep-link" repeat="15"/>
 
 #### Swift
 

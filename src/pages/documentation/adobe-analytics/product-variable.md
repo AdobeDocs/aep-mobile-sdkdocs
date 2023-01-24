@@ -16,7 +16,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=set-variable"/>
+<Tabs query="platform=ios&task=set-variable"/>
 
 _`products`_ is set directly on the image request, and the other variables are set as context data. All context data variables must be mapped by using processing rules:
 
@@ -36,7 +36,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=products"/>
+<Tabs query="platform=ios&task=products"/>
 
 <InlineAlert variant="info" slots="text"/> 
 

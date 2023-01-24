@@ -15,7 +15,7 @@ implementation 'com.adobe.marketing.mobile:target:1.+'
 import com.adobe.marketing.mobile.*;
 ```
 
-<Variant platform="ios-aep" task="add" repeat="7"/>
+<Variant platform="ios" task="add" repeat="7"/>
 
 1. Add the AEPCore, AEPIdentity, and AEPTarget CocoaPods to your project via your `Podfile`.
 
@@ -94,7 +94,7 @@ public class TargetApp extends Application {
 }
 ```
 
-<Variant platform="ios-aep" task="register" repeat="5"/>
+<Variant platform="ios" task="register" repeat="5"/>
 
 #### Swift
 
@@ -154,7 +154,7 @@ purchasedProductIds.add("125");
 TargetOrder targetOrder = new TargetOrder("123", 567.89, purchasedProductIds);
 ```
 
-<Variant platform="ios-aep" task="target-order" repeat="10"/>
+<Variant platform="ios" task="target-order" repeat="10"/>
 
 #### Swift
 
@@ -208,7 +208,7 @@ public TargetProduct(final String id, final String categoryId)
 TargetProduct targetProduct = new TargetProduct("123", "Books");
 ```
 
-<Variant platform="ios-aep" task="target-product" repeat="10"/>
+<Variant platform="ios" task="target-product" repeat="10"/>
 
 #### Swift
 
@@ -285,7 +285,7 @@ TargetParameters targetParameters = new TargetParameters.Builder()
 .build();
 ```
 
-<Variant platform="ios-aep" task="target-parameters" repeat="10"/>
+<Variant platform="ios" task="target-parameters" repeat="10"/>
 
 #### Swift
 
@@ -352,7 +352,7 @@ On Android, when the application is launched as a result of a deep link, the `co
 
 The SDK can only collect information from the launching Activity if [`setApplication`](../mobile-core/api-reference.md#application-reference-android-only) has been called. Setting the Application is only necessary on an Activity that is also an entry point for your application. However, setting the Application on each Activity has no negative impact and ensures that the SDK always has the necessary reference to your Application. We recommend that you call `setApplication` in each of your Activities.
 
-<Variant platform="ios-aep" task="visual-preview" repeat="10"/>
+<Variant platform="ios" task="visual-preview" repeat="10"/>
 
 #### Swift
 

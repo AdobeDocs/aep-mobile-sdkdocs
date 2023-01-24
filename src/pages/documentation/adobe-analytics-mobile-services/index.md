@@ -116,7 +116,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=add"/>
+<Tabs query="platform=ios&task=add"/>
 
 ## Register Mobile Services with Mobile Core
 
@@ -128,7 +128,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=register"/>
+<Tabs query="platform=ios&task=register"/>
 
 ## Implement Mobile Services APIs in your app
 
@@ -144,7 +144,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=set-push-messaging"/>
+<Tabs query="platform=ios&task=set-push-messaging"/>
 
 ### Debugging the push messaging set up
 
@@ -172,7 +172,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=set-push-tracking"/>
+<Tabs query="platform=ios&task=set-push-tracking"/>
 
 ## Troubleshooting push messaging
 
@@ -415,7 +415,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=track-deep-link"/>
+<Tabs query="platform=ios&task=track-deep-link"/>
 
 ## Integration with Apple Search Ads (iOS)
 

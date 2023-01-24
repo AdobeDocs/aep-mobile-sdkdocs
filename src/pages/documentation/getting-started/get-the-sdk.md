@@ -16,9 +16,9 @@ Android
 
 <Tabs query="platform=android&task=get"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=get"/>
+<Tabs query="platform=ios&task=get"/>
 
 <!--  React Native
 
@@ -54,9 +54,9 @@ Android
 
 <Tabs query="platform=android&task=add-dependencies"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=add-dependencies"/>
+<Tabs query="platform=ios&task=add-dependencies"/>
 
 ### 2. Add initialization code
 
@@ -74,9 +74,9 @@ Android
 
 <Tabs query="platform=android&task=add-initialization"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=add-initialization"/>
+<Tabs query="platform=ios&task=add-initialization"/>
 
 <!-- React Native
 

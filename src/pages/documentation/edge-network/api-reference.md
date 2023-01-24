@@ -14,7 +14,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
 ## getLocationHint
 
@@ -28,7 +28,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-location-hint"/>
+<Tabs query="platform=ios&api=get-location-hint"/>
 
 ## registerExtension
 
@@ -42,7 +42,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=register-extension"/>
+<Tabs query="platform=ios&api=register-extension"/>
 
 ## resetIdentities
 
@@ -62,7 +62,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=send-event"/>
+<Tabs query="platform=ios&api=send-event"/>
 
 ## setLocationHint
 
@@ -80,7 +80,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=set-location-hint"/>
+<Tabs query="platform=ios&api=set-location-hint"/>
 
 ## Public classes
 
@@ -96,7 +96,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=xdm-schema"/>
+<Tabs query="platform=ios&api=xdm-schema"/>
 
 ### EdgeEventHandle
 
@@ -111,7 +111,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=edge-event-handle"/>
+<Tabs query="platform=ios&api=edge-event-handle"/>
 
 Use this class when calling the [sendEvent](#sendevent) API with EdgeCallback.
 
@@ -128,6 +128,6 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=experience-event"/>
+<Tabs query="platform=ios&api=experience-event"/>
 
 See [Edge Extension Usage](https://github.com/adobe/aepsdk-edge-ios/blob/main/docs/ExtensionUsage.md) for more examples.

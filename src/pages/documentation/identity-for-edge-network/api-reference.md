@@ -14,7 +14,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
 ## getExperienceCloudId
 
@@ -28,7 +28,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-experience-cloud-id"/>
+<Tabs query="platform=ios&api=get-experience-cloud-id"/>
 
 ## getIdentities
 
@@ -42,7 +42,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-identities"/>
+<Tabs query="platform=ios&api=get-identities"/>
 
 ## getUrlVariables
 
@@ -66,7 +66,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-url-variables"/>
+<Tabs query="platform=ios&api=get-url-variables"/>
 
 ## registerExtension
 
@@ -84,7 +84,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=register-extension"/>
+<Tabs query="platform=ios&api=register-extension"/>
 
 ## removeIdentity
 
@@ -106,7 +106,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=remove-identity"/>
+<Tabs query="platform=ios&api=remove-identity"/>
 
 ## resetIdentities
 
@@ -145,7 +145,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=set-advertising-identifier"/>
+<Tabs query="platform=ios&api=set-advertising-identifier"/>
 
 ## updateIdentities
 
@@ -167,7 +167,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=update-identities"/>
+<Tabs query="platform=ios&api=update-identities"/>
 
 ## Public Classes
 
@@ -218,7 +218,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=identity-map"/>
+<Tabs query="platform=ios&api=identity-map"/>
 
 ### IdentityItem
 
@@ -234,7 +234,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=identity-item"/>
+<Tabs query="platform=ios&api=identity-item"/>
 
 ### AuthenticatedState
 
@@ -254,4 +254,4 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=authenticated-state"/>
+<Tabs query="platform=ios&api=authenticated-state"/>

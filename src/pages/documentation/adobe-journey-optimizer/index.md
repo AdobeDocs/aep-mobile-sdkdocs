@@ -54,7 +54,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=import"/>
+<Tabs query="platform=ios&task=import"/>
 
 #### Register the extension with Mobile Core
 
@@ -66,7 +66,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=register"/>
+<Tabs query="platform=ios&task=register"/>
 
 #### Sync the user push token with Adobe
 
@@ -80,7 +80,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=sync"/>
+<Tabs query="platform=ios&task=sync"/>
 
 ## Next steps
 

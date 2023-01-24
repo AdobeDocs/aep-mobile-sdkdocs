@@ -22,7 +22,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=download"/>
+<Tabs query="platform=ios&task=download"/>
 
 #### Register the Identity and Identity for Edge Network extensions with Mobile Core
 
@@ -34,7 +34,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=register"/>
+<Tabs query="platform=ios&task=register"/>
 
 ## Q: Will an existing Experience Cloud ID (ECID) migrate to the Identity for Edge Network extension?
 
@@ -126,4 +126,4 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=link"/>
+<Tabs query="platform=ios&task=link"/>

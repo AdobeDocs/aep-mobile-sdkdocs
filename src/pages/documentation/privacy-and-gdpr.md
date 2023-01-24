@@ -49,7 +49,7 @@ Android
 
 iOS
 
-<PrivacyTabs query="platform=ios-aep&task=collect-consent-settings"/>
+<PrivacyTabs query="platform=ios&task=collect-consent-settings"/>
 
 ### getConsents
 
@@ -63,7 +63,7 @@ Android
 
 iOS
 
-<PrivacyTabs query="platform=ios-aep&task=get-consents"/>
+<PrivacyTabs query="platform=ios&task=get-consents"/>
 
 ### updateConsents
 
@@ -77,7 +77,7 @@ Android
 
 iOS
 
-<PrivacyTabs query="platform=ios-aep&task=update-consents"/>
+<PrivacyTabs query="platform=ios&task=update-consents"/>
 
 ### getIdentities
 
@@ -119,7 +119,7 @@ Android
 
 iOS
 
-<PrivacyTabs query="platform=ios-aep&task=set-privacy-status"/>
+<PrivacyTabs query="platform=ios&task=set-privacy-status"/>
 
 ### getPrivacyStatus
 
@@ -133,7 +133,7 @@ Android
 
 iOS
 
-<PrivacyTabs query="platform=ios-aep&task=get-privacy-status"/>
+<PrivacyTabs query="platform=ios&task=get-privacy-status"/>
 
 ### getSdkIdentities
 

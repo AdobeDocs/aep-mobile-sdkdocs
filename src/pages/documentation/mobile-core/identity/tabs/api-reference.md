@@ -29,7 +29,7 @@ Identity.appendVisitorInfoForURL("https://example.com", new AdobeCallback<String
 });
 ```
 
-<Variant platform="ios-aep" api="append-to-url" repeat="11"/>
+<Variant platform="ios" api="append-to-url" repeat="11"/>
 
 #### Swift
 
@@ -141,7 +141,7 @@ try {
 String identityExtensionVersion = Identity.extensionVersion();
 ```
 
-<Variant platform="ios-aep" api="extension-version" repeat="10"/>
+<Variant platform="ios" api="extension-version" repeat="10"/>
 
 #### Swift
 
@@ -212,7 +212,7 @@ Identity.getExperienceCloudId(new AdobeCallback<String>() {
 });
 ```
 
-<Variant platform="ios-aep" api="get-experience-cloud-id" repeat="11"/>
+<Variant platform="ios" api="get-experience-cloud-id" repeat="11"/>
 
 #### Swift
 
@@ -321,7 +321,7 @@ Identity.getIdentifiers(new AdobeCallback<List<VisitorID>>() {
 });
 ```
 
-<Variant platform="ios-aep" api="get-identifiers" repeat="11"/>
+<Variant platform="ios" api="get-identifiers" repeat="11"/>
 
 #### Swift
 
@@ -436,7 +436,7 @@ Identity.getUrlVariables(new AdobeCallback<String>() {
 });
 ```
 
-<Variant platform="ios-aep" api="get-url-variables" repeat="11"/>
+<Variant platform="ios" api="get-url-variables" repeat="11"/>
 
 #### Swift
 
@@ -561,7 +561,7 @@ super.onCreate();
 }
 ```
 
-<Variant platform="ios-aep" api="register-extension" repeat="7"/>
+<Variant platform="ios" api="register-extension" repeat="7"/>
 
 For iOS AEP libraries, registration is changed to a single API call. Calling the MobileCore.start API is no longer required. See [MobileCore.registerExtensions()](../api-reference.md#registerextension-s) for more information.
 
@@ -662,7 +662,7 @@ public void onResume() {
 }
 ```
 
-<Variant platform="ios-aep" api="set-advertising-identifier" repeat="13"/>
+<Variant platform="ios" api="set-advertising-identifier" repeat="13"/>
 
 To access IDFA and handle it correctly in your mobile application, see the [Apple developer documentation about IDFA](https://developer.apple.com/documentation/adsupport/asidentifiermanager)
 
@@ -854,7 +854,7 @@ public static void setPushIdentifier(final String pushIdentifier);
 MobileCore.setPushIdentifier(token);
 ```
 
-<Variant platform="ios-aep" api="set-push-identifier" repeat="11"/>
+<Variant platform="ios" api="set-push-identifier" repeat="11"/>
 
 #### Swift
 
@@ -931,7 +931,7 @@ Identity.syncIdentifier("idType",
                         VisitorID.AuthenticationState.AUTHENTICATED);
 ```
 
-<Variant platform="ios-aep" api="sync-identifier" repeat="11"/>
+<Variant platform="ios" api="sync-identifier" repeat="11"/>
 
 #### Swift
 
@@ -1038,7 +1038,7 @@ identifiers.put("idType3", "idValue3");
 Identity.syncIdentifiers(identifiers);
 ```
 
-<Variant platform="ios-aep" api="sync-identifiers" repeat="11"/>
+<Variant platform="ios" api="sync-identifiers" repeat="11"/>
 
 #### Swift
 
@@ -1138,7 +1138,7 @@ identifiers.put("idType3", "idValue3");
 Identity.syncIdentifiers(identifiers, VisitorID.AuthenticationState.AUTHENTICATED);
 ```
 
-<Variant platform="ios-aep" api="sync-identifiers-overloaded" repeat="11"/>
+<Variant platform="ios" api="sync-identifiers-overloaded" repeat="11"/>
 
 #### Swift
 
@@ -1255,7 +1255,7 @@ public class VisitorID {
 }
 ```
 
-<Variant platform="ios-aep" api="public-classes" repeat="5"/>
+<Variant platform="ios" api="public-classes" repeat="5"/>
 
 **MobileVisitorAuthenticationState**
 

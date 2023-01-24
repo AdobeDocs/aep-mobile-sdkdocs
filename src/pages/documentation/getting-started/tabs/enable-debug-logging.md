@@ -9,7 +9,7 @@ MobileCore.setLogLevel(LoggingMode.DEBUG);
 // MobileCore.setLogLevel(LoggingMode.ERROR);
 ```
 
-<Variant platform="ios-aep" task="enable" repeat="4"/>
+<Variant platform="ios" task="enable" repeat="4"/>
 
 #### Swift
 

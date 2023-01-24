@@ -10,7 +10,7 @@
 import com.adobe.marketing.mobile.*;
 ```
 
-<Variant platform="ios-aep" task="add" repeat="7"/>
+<Variant platform="ios" task="add" repeat="7"/>
 
 1. Add the Mobile Core and Profile extensions to your project using Cocoapods. Add following pods in your `Podfile`:
 
@@ -71,7 +71,7 @@ This can be done after calling `setApplication()` in the `onCreate()` method. He
    }
 ```
 
-<Variant platform="ios-aep" task="register" repeat="4"/>
+<Variant platform="ios" task="register" repeat="4"/>
 
 #### Swift
 

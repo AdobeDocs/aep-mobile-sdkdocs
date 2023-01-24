@@ -8,7 +8,7 @@
 String audienceExtensionVersion = Audience.extensionVersion();
 ```
 
-<Variant platform="ios-aep" api="extension-version" repeat="10"/>
+<Variant platform="ios" api="extension-version" repeat="10"/>
 
 #### Swift
 
@@ -65,7 +65,7 @@ AdobeCallback<Map<String, String>> visitorProfileCallback = new AdobeCallback<Ma
 Audience.getVisitorProfile(visitorProfileCallback);
 ```
 
-<Variant platform="ios-aep" api="get-visitor-profile" repeat="11"/>
+<Variant platform="ios" api="get-visitor-profile" repeat="11"/>
 
 This API returns the most recently obtained visitor profile.
 
@@ -125,7 +125,7 @@ public  static void registerExtension() throws InvalidInitException
 Audience.registerExtension();
 ```
 
-<Variant platform="ios-aep" api="register-extension" repeat="10"/>
+<Variant platform="ios" api="register-extension" repeat="10"/>
 
 #### Swift
 
@@ -175,7 +175,7 @@ public static void reset()
 Audience.reset();
 ```
 
-<Variant platform="ios-aep" api="reset" repeat="11"/>
+<Variant platform="ios" api="reset" repeat="11"/>
 
 This API resets the Audience Manager UUID and purges the current visitor profile from `UserDefaults`. The Audience reset also clears the current in-memory DPID and DPUUID variables.
 
@@ -241,7 +241,7 @@ traits.put("trait", "xyz");
 Audience.signalWithData(traits, visitorProfileCallback);
 ```
 
-<Variant platform="ios-aep" api="signal-with-data" repeat="13"/>
+<Variant platform="ios" api="signal-with-data" repeat="13"/>
 
 The `signalWithData` API sends Audience Manager a signal with traits and returns the matching segments for the visitor in a closure.
 

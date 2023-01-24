@@ -14,7 +14,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
 ## registerExtension
 
@@ -28,7 +28,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=register-extension"/>
+<Tabs query="platform=ios&api=register-extension"/>
 
 ## resetLinkageFields
 
@@ -44,7 +44,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=reset-linkage-fields"/>
+<Tabs query="platform=ios&api=reset-linkage-fields"/>
 
 ## setLinkageFields
 
@@ -60,4 +60,4 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=set-linkage-fields"/>
+<Tabs query="platform=ios&api=set-linkage-fields"/>

@@ -18,7 +18,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=collect-launch-info"/>
+<Tabs query="platform=ios&api=collect-launch-info"/>
 
 ## collectPii
 
@@ -36,7 +36,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=collect-pii"/>
+<Tabs query="platform=ios&api=collect-pii"/>
 
 <!--- React Native
 
@@ -64,7 +64,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-log-level"/>
+<Tabs query="platform=ios&api=get-log-level"/>
 
 <!--- React Native
 
@@ -97,7 +97,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-sdk-identities"/>
+<Tabs query="platform=ios&api=get-sdk-identities"/>
 
 ## log
 
@@ -111,7 +111,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=log"/>
+<Tabs query="platform=ios&api=log"/>
 
 <!--- React Native
 
@@ -135,7 +135,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=register-extension"/>
+<Tabs query="platform=ios&api=register-extension"/>
 
 <!--- React Native
 
@@ -157,7 +157,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=reset-identities"/>
+<Tabs query="platform=ios&api=reset-identities"/>
 
 ## setAdvertisingIdentifier
 
@@ -177,7 +177,7 @@ This API _must_ be called in `AppDidFinishLaunching` and before any other intera
 
 iOS
 
-<Tabs query="platform=ios-aep&api=set-app-group"/>
+<Tabs query="platform=ios&api=set-app-group"/>
 
 ## setApplication
 
@@ -226,7 +226,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=set-log-level"/>
+<Tabs query="platform=ios&api=set-log-level"/>
 
 <!--- React Native
 
@@ -252,7 +252,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=set-push-identifier"/>
+<Tabs query="platform=ios&api=set-push-identifier"/>
 
 ## setSmallIconResourceID / setLargeIconResourceID 
 
@@ -284,7 +284,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=track-action"/>
+<Tabs query="platform=ios&api=track-action"/>
 
 <!--- React Native
 
@@ -310,7 +310,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=track-state"/>
+<Tabs query="platform=ios&api=track-state"/>
 
 <!--- React Native
 
@@ -330,7 +330,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=public-classes"/>
+<Tabs query="platform=ios&api=public-classes"/>
 
 ## Additional information
 

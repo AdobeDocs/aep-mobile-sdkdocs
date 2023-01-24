@@ -14,7 +14,7 @@ public static String extensionVersion()
 String extensionVersion = Identity.extensionVersion();
 ```
 
-<Variant platform="ios-aep" api="extension-version" repeat="10"/>
+<Variant platform="ios" api="extension-version" repeat="10"/>
 
 **Swift**
 
@@ -69,7 +69,7 @@ Identity.getExperienceCloudId(new AdobeCallback<String>() {
 });
 ```
 
-<Variant platform="ios-aep" api="get-experience-cloud-id" repeat="11"/>
+<Variant platform="ios" api="get-experience-cloud-id" repeat="11"/>
 
 **Swift**
 
@@ -134,7 +134,7 @@ Identity.getIdentities(new AdobeCallback<IdentityMap>() {
 });
 ```
 
-<Variant platform="ios-aep" api="get-identities" repeat="11"/>
+<Variant platform="ios" api="get-identities" repeat="11"/>
 
 **Swift**
 
@@ -203,7 +203,7 @@ Identity.getUrlVariables(new AdobeCallback<String>() {
 });
 ```
 
-<Variant platform="ios-aep" api="get-url-variables" repeat="11"/>
+<Variant platform="ios" api="get-url-variables" repeat="11"/>
 
 **Swift**
 
@@ -288,7 +288,7 @@ import com.adobe.marketing.mobile.edge.identity.Identity
 Identity.registerExtension();
 ```
 
-<Variant platform="ios-aep" api="register-extension" repeat="11"/>
+<Variant platform="ios" api="register-extension" repeat="11"/>
 
 In iOS, the registration occurs by passing Identity for Edge Network extension to the [MobileCore.registerExtensions API](../mobile-core/api-reference.md#registerextension-s).
 
@@ -345,7 +345,7 @@ IdentityItem item = new IdentityItem("user@example.com");
 Identity.removeIdentity(item, "Email");
 ```
 
-<Variant platform="ios-aep" api="remove-identity" repeat="10"/>
+<Variant platform="ios" api="remove-identity" repeat="10"/>
 
 **Swift**
 
@@ -491,7 +491,7 @@ val scope = CoroutineScope(Dispatchers.IO).launch {
 }
 ```
 
-<Variant platform="ios-aep" api="set-advertising-identifier" repeat="14"/>
+<Variant platform="ios" api="set-advertising-identifier" repeat="14"/>
 
 In order to enable the collection of current advertising tracking user's selection based on the provided advertising identifier, you need to install and register the [AEPEdgeConsent](../consent-for-edge-network/index.md) extension and update the [AEPEdge](../edge-network/index.md) dependency to minimum 1.4.1. 
 
@@ -649,7 +649,7 @@ identityMap.addItem(item, "Email")
 Identity.updateIdentities(identityMap);
 ```
 
-<Variant platform="ios-aep" api="update-identities" repeat="10"/>
+<Variant platform="ios" api="update-identities" repeat="10"/>
 
 **Swift**
 
@@ -712,7 +712,7 @@ List<String> namespaces = identityMap.getNamespaces();
 boolean hasNotIdentities = identityMap.isEmpty();
 ```
 
-<Variant platform="ios-aep" api="identity-map" repeat="6"/>
+<Variant platform="ios" api="identity-map" repeat="6"/>
 
 **Swift**
 
@@ -785,7 +785,7 @@ AuthenticatedState state = item.getAuthenticatedState();
 boolean primary = item.isPrimary();
 ```
 
-<Variant platform="ios-aep" api="identity-item" repeat="6"/>
+<Variant platform="ios" api="identity-item" repeat="6"/>
 
 **Swift**
 
@@ -833,7 +833,7 @@ public enum AuthenticatedState {
 }
 ```
 
-<Variant platform="ios-aep" api="authenticated-state" repeat="2"/>
+<Variant platform="ios" api="authenticated-state" repeat="2"/>
 
 **Syntax**
 

@@ -24,7 +24,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=configure"/>
+<Tabs query="platform=ios&task=configure"/>
 
 ## Programmatic updates to configuration
 
@@ -46,7 +46,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=update"/>
+<Tabs query="platform=ios&task=update"/>
 
 <!--- React Native
 
@@ -60,7 +60,7 @@ Flutter
 
 <InlineAlert variant="info" slots="text"/>
 
-This API is only available in Android and iOS (AEP 3.x).
+This API is only available in Android and iOS.
 
 You can clear any programmatic updates made to the configuration via the `clearUpdatedConfiguration` API. This will clear programmatic updates to configuration made via the `updateConfiguration(configMap)`(Android)/ `updateConfigurationWith(configDict:)`(iOS) API. It will also clear any updates to the `MobilePrivacyStatus`(Android)/ `PrivacyStatus`(iOS)  made via `setPrivacyStatus(privacyStatus)`(Android)/ `setPrivacyStatus(_ status:)`(iOS).
 
@@ -89,7 +89,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=bundle"/>
+<Tabs query="platform=ios&task=bundle"/>
 
 ## Environment-aware configuration properties
 

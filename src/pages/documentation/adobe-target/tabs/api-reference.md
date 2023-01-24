@@ -14,7 +14,7 @@ public static void clearPrefetchCache()
 Target.clearPrefetchCache();
 ```
 
-<Variant platform="ios-aep" api="clear-prefetch-cache" repeat="7"/>
+<Variant platform="ios" api="clear-prefetch-cache" repeat="7"/>
 
 **Syntax**
 
@@ -97,7 +97,7 @@ TargetParameters targetParameters = new TargetParameters.Builder(mboxParameters)
 Target.locationClicked("cartLocation", targetParameters);
 ```
 
-<Variant platform="ios-aep" api="clicked-location" repeat="8"/>
+<Variant platform="ios" api="clicked-location" repeat="8"/>
 
 **Syntax**
 
@@ -197,7 +197,7 @@ mboxList.add("mboxName1");
 Target.locationsDisplayed(mboxList, targetParameters);
 ```
 
-<Variant platform="ios-aep" api="displayed-locations" repeat="8"/>
+<Variant platform="ios" api="displayed-locations" repeat="8"/>
 
 **Syntax**
 
@@ -272,7 +272,7 @@ public String extensionVersion()
 Target.extensionVersion();
 ```
 
-<Variant platform="ios-aep" api="extension-version" repeat="7"/>
+<Variant platform="ios" api="extension-version" repeat="7"/>
 
 **Syntax**
 
@@ -335,7 +335,7 @@ Target.getSessionId(new AdobeCallback<String>() {
 });
 ```
 
-<Variant platform="ios-aep" api="get-session-id" repeat="8"/>
+<Variant platform="ios" api="get-session-id" repeat="8"/>
 
 **Syntax**
 
@@ -386,7 +386,7 @@ Target.getThirdPartyId(new AdobeCallback<String>() {
 });
 ```
 
-<Variant platform="ios-aep" api="get-third-party-id" repeat="8"/>
+<Variant platform="ios" api="get-third-party-id" repeat="8"/>
 
 **Syntax**
 
@@ -457,7 +457,7 @@ Target.getTntId(new AdobeCallback<String>() {
 });
 ```
 
-<Variant platform="ios-aep" api="get-tnt-id" repeat="8"/>
+<Variant platform="ios" api="get-tnt-id" repeat="8"/>
 
 **Syntax**
 
@@ -560,7 +560,7 @@ TargetParamters targetParameters = null;
 Target.prefetchContent(prefetchMboxesList, targetParameters, prefetchStatusCallback);
 ```
 
-<Variant platform="ios-aep" api="prefetch-content" repeat="8"/>
+<Variant platform="ios" api="prefetch-content" repeat="8"/>
 
 **Syntax**
 
@@ -709,7 +709,7 @@ public static void registerExtension()
 Target.registerExtension();
 ```
 
-<Variant platform="ios-aep" api="register-extension" repeat="1"/>
+<Variant platform="ios" api="register-extension" repeat="1"/>
 
 This API no longer exists in `Target`. Instead, the extension should be registered by calling the `registerExtensions` API in the MobileCore. Please see the updated SDK initialization steps at the [migrate to Swift tutorial](../migrate-to-swift.md#update-sdk-initialization).
 
@@ -733,7 +733,7 @@ public static void resetExperience()
 Target.resetExperience();
 ```
 
-<Variant platform="ios-aep" api="reset-experience" repeat="7"/>
+<Variant platform="ios" api="reset-experience" repeat="7"/>
 
 **Syntax**
 
@@ -867,7 +867,7 @@ TargetParameters parameters = new TargetParameters.Builder().profileParameters(p
 Target.retrieveLocationContent(locationRequests, parameters);
 ```
 
-<Variant platform="ios-aep" api="retrieve-location-content" repeat="8"/>
+<Variant platform="ios" api="retrieve-location-content" repeat="8"/>
 
 **Syntax**
 
@@ -1056,7 +1056,7 @@ public static void setPreviewRestartDeepLink(final Uri deepLink)
 Target.setPreviewRestartDeepLink("myapp://HomePage");
 ```
 
-<Variant platform="ios-aep" api="set-preview-restart-deep-link" repeat="8"/>
+<Variant platform="ios" api="set-preview-restart-deep-link" repeat="8"/>
 
 **Syntax**
 
@@ -1118,7 +1118,7 @@ public static void setSessionId(final String sessionId)
 Target.setSessionId("3f24b997-ea74-420c-81f8-96a8b92c3961");
 ```
 
-<Variant platform="ios-aep" api="set-session-id" repeat="8"/>
+<Variant platform="ios" api="set-session-id" repeat="8"/>
 
 **Syntax**
 
@@ -1160,7 +1160,7 @@ public static void setThirdPartyId(final String thirdPartyId)
 Target.setThirdPartyId("third-party-id");
 ```
 
-<Variant platform="ios-aep" api="set-third-party-id" repeat="8"/>
+<Variant platform="ios" api="set-third-party-id" repeat="8"/>
 
 **Syntax**
 
@@ -1220,7 +1220,7 @@ public static void setTntId(final String tntId)
 Target.setTntId("f741a5d5-09c0-4931-bf53-b9e568c5f782.35_0");
 ```
 
-<Variant platform="ios-aep" api="set-tnt-id" repeat="8"/>
+<Variant platform="ios" api="set-tnt-id" repeat="8"/>
 
 **Syntax**
 
@@ -1250,7 +1250,7 @@ On Android, when the application is launched as a result of a deep link, the `co
 
 The SDK can only collect information from the launching Activity if [`setApplication`](../mobile-core/api-reference.md#application-reference-android-only) has been called. Setting the Application is only necessary on an Activity that is also an entry point for your application. However, setting the Application on each Activity has no negative impact and ensures that the SDK always has the necessary reference to your Application. We recommend that you call `setApplication` in each of your Activities.
 
-<Variant platform="ios-aep" api="visual-preview" repeat="11"/>
+<Variant platform="ios" api="visual-preview" repeat="11"/>
 
 To enter the visual preview mode, use the `collectLaunchInfo` API to enable the mode, and select the red floating button that appears on the app screen.
 
@@ -1320,7 +1320,7 @@ public class TargetRequest extends TargetObject {
 }
 ```
 
-<Variant platform="ios-aep" api="target-request" repeat="10"/>
+<Variant platform="ios" api="target-request" repeat="10"/>
 
 #### TargetRequest
 
@@ -1463,7 +1463,7 @@ public class TargetPrefetch extends TargetObject {
 }
 ```
 
-<Variant platform="ios-aep" api="target-prefetch" repeat="11"/>
+<Variant platform="ios" api="target-prefetch" repeat="11"/>
 
 #### TargetPrefetch
 
@@ -1606,7 +1606,7 @@ public class TargetParameters {
 }
 ```
 
-<Variant platform="ios-aep" api="target-parameters" repeat="6"/>
+<Variant platform="ios" api="target-parameters" repeat="6"/>
 
 #### TargetParameters
 
@@ -1713,7 +1713,7 @@ public class TargetOrder {
 }
 ```
 
-<Variant platform="ios-aep" api="target-order" repeat="6"/>
+<Variant platform="ios" api="target-order" repeat="6"/>
 
 #### TargetOrder
 
@@ -1805,7 +1805,7 @@ public class TargetProduct {
 }
 ```
 
-<Variant platform="ios-aep" api="target-product" repeat="6"/>
+<Variant platform="ios" api="target-product" repeat="6"/>
 
 #### TargetProduct
 

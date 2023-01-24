@@ -27,9 +27,9 @@ Android
 
 <Tabs query="platform=android&task=enable"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=enable"/>
+<Tabs query="platform=ios&task=enable"/>
 
 <!-- React Native
 

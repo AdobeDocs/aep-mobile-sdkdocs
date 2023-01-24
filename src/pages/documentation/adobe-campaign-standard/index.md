@@ -71,7 +71,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=add"/>
+<Tabs query="platform=ios&task=add"/>
 
 ### Register the Campaign Standard extension with Mobile Core
 
@@ -83,7 +83,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=register"/>
+<Tabs query="platform=ios&task=register"/>
 
 ### Initialize the SDK and set up tracking
 
@@ -97,7 +97,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=initialize"/>
+<Tabs query="platform=ios&task=initialize"/>
 
 ### Set up push messaging
 
@@ -117,7 +117,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=push-messaging"/>
+<Tabs query="platform=ios&task=push-messaging"/>
 
 ## Tracking local and push notification message interactions
 
@@ -135,7 +135,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=track"/>
+<Tabs query="platform=ios&task=track"/>
 
 ### Deleting mobile properties in the Data Collection UI
 
@@ -163,7 +163,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=handling"/>
+<Tabs query="platform=ios&task=handling"/>
 
 ### Customizing the frequency of registration requests sent to Campaign
 
@@ -181,7 +181,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=customize"/>
+<Tabs query="platform=ios&task=customize"/>
 
 Giving a value of `0` when setting `campaign.registrationDelay` will send a registration request on every launch event. This is the previous behavior seen before the registration request reduction enhancement was added.
 

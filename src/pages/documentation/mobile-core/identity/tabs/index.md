@@ -8,7 +8,7 @@ Import the library:
 import com.adobe.marketing.mobile.*;
 ```
 
-<Variant platform="ios-aep" task="add" repeat="4"/>
+<Variant platform="ios" task="add" repeat="4"/>
 
 #### Swift
 
@@ -61,7 +61,7 @@ super.onCreate();
 }
 ```
 
-<Variant platform="ios-aep" task="register" repeat="6"/>
+<Variant platform="ios" task="register" repeat="6"/>
 
 Register the Identity extension in your app's `didFinishLaunchingWithOptions` function:
 
@@ -132,7 +132,7 @@ Identity.getUrlVariables(new AdobeCallback<String>() {
 });
 ```
 
-<Variant platform="ios-aep" task="implement" repeat="10"/>
+<Variant platform="ios" task="implement" repeat="10"/>
 
 To append visitor information to the URL that is being used to open the web view, call [appendToUrl](./api-reference.md#appendtourl-appendvisitorinfoforurl): 
 

@@ -14,7 +14,7 @@ public String extensionVersion()
 Campaign.extensionVersion();
 ```
 
-<Variant platform="ios-aep" api="extension-version" repeat="10"/>
+<Variant platform="ios" api="extension-version" repeat="10"/>
 
 #### Swift
 
@@ -60,7 +60,7 @@ public static void registerExtension()
 Campaign.registerExtension();
 ```
 
-<Variant platform="ios-aep" api="register-extension" repeat="1"/>
+<Variant platform="ios" api="register-extension" repeat="1"/>
 
 This API no longer exists in the Adobe Campaign Standard extension. Instead, the extension should be registered by calling the `registerExtensions` API in the MobileCore. Please see the updated SDK initialization steps at the [migrate to Swift tutorial](../migrate-to-swift.md).
 
@@ -80,7 +80,7 @@ public static void resetLinkageFields()
 Campaign.resetLinkageFields()
 ```
 
-<Variant platform="ios-aep" api="reset-linkage-fields" repeat="10"/>
+<Variant platform="ios" api="reset-linkage-fields" repeat="10"/>
 
 #### Swift
 
@@ -130,7 +130,7 @@ linkageFields.put("cusEmail", "john.doe@email.com");
 Campaign.setLinkageFields(linkageFields);
 ```
 
-<Variant platform="ios-aep" api="set-linkage-fields" repeat="10"/>
+<Variant platform="ios" api="set-linkage-fields" repeat="10"/>
 
 #### Swift
 

@@ -14,7 +14,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
 ## getConsents
 
@@ -28,7 +28,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-consents"/>
+<Tabs query="platform=ios&api=get-consents"/>
 
 ## registerExtension
 
@@ -42,7 +42,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=register-extension"/>
+<Tabs query="platform=ios&api=register-extension"/>
 
 ## updateConsents
 
@@ -56,5 +56,5 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=update-consents"/>
+<Tabs query="platform=ios&api=update-consents"/>
 

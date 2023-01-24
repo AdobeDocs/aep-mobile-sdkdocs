@@ -6,7 +6,7 @@ import Tabs from './tabs/api-reference.md'
 
 <InlineAlert variant="info" slots="text"/>
 
-This API is only available in Android and iOS (AEP 3.x).
+This API is only available in Android and iOS.
 
 You can clear any programmatic updates made to the configuration via the `clearUpdatedConfiguration` API. This will clear programmatic updates to configuration made via the `updateConfiguration(configMap)`(Android)/ `updateConfigurationWith(configDict:)`(iOS) API. It will also clear any updates to the `MobilePrivacyStatus`(Android)/ `PrivacyStatus`(iOS)  made via `setPrivacyStatus(privacyStatus)`(Android)/ `setPrivacyStatus(_ status:)`(iOS).
 
@@ -30,7 +30,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=clear-updated-configuration"/>
+<Tabs query="platform=ios&api=clear-updated-configuration"/>
 
 ## configureWithAppID
 
@@ -44,7 +44,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=configure-with-app-id"/>
+<Tabs query="platform=ios&api=configure-with-app-id"/>
 
 ## configureWithFileInAssets
 
@@ -74,7 +74,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=configure-with-file-in-path"/>
+<Tabs query="platform=ios&api=configure-with-file-in-path"/>
 
 ## extensionVersion
 
@@ -90,7 +90,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
 <!--- React Native
 
@@ -120,7 +120,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=update-configuration"/>
+<Tabs query="platform=ios&api=update-configuration"/>
 
 <!--- React Native
 
