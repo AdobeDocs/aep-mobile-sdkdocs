@@ -14,7 +14,7 @@ public static String extensionVersion();
 String extensionVersion = Edge.extensionVersion();
 ```
 
-<Variant platform="ios-aep" api="extension-version" repeat="10"/>
+<Variant platform="ios" api="extension-version" repeat="10"/>
 
 #### Swift
 
@@ -71,7 +71,7 @@ Edge.getLocationHint(new AdobeCallbackWithError<String>() {
 });
 ```
 
-<Variant platform="ios-aep" api="get-location-hint" repeat="11"/>
+<Variant platform="ios" api="get-location-hint" repeat="11"/>
 
 #### Swift
 
@@ -126,7 +126,7 @@ public static void registerExtension();
 Edge.registerExtension();
 ```
 
-<Variant platform="ios-aep" api="register-extension" repeat="12"/>
+<Variant platform="ios" api="register-extension" repeat="12"/>
 
 #### Swift
 
@@ -211,7 +211,7 @@ Edge.sendEvent(experienceEvent, new EdgeCallback() {
 });
 ```
 
-<Variant platform="ios-aep" api="send-event" repeat="15"/>
+<Variant platform="ios" api="send-event" repeat="15"/>
 
 #### Swift
 
@@ -290,7 +290,7 @@ public static void setLocationHint(final String hint)
 Edge.setLocationHint(hint);
 ```
 
-<Variant platform="ios-aep" api="set-location-hint" repeat="11"/>
+<Variant platform="ios" api="set-location-hint" repeat="11"/>
 
 #### Swift
 
@@ -374,7 +374,7 @@ public interface Property {
 
 When defining your custom XDM schema(s), implement these interfaces to ensure that the AEP Edge extension successfully serializes the provided data before sending it to Adobe Experience Platform Edge Network.
 
-<Variant platform="ios-aep" api="xdm-schema" repeat="2"/>
+<Variant platform="ios" api="xdm-schema" repeat="2"/>
 
 #### Swift
 
@@ -421,7 +421,7 @@ public class EdgeEventHandle {
 ```
 
 
-<Variant platform="ios-aep" api="edge-event-handle" repeat="2"/>
+<Variant platform="ios" api="edge-event-handle" repeat="2"/>
 
 #### Swift
 
@@ -570,7 +570,7 @@ ExperienceEvent experienceEvent = new ExperienceEvent.Builder()
   .build();
 ```
 
-<Variant platform="ios-aep" api="experience-event" repeat="10"/>
+<Variant platform="ios" api="experience-event" repeat="10"/>
 
 ```swift
 @objc(AEPExperienceEvent)

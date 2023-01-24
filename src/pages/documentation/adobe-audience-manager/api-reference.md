@@ -16,7 +16,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
 ## getVisitorProfile
 
@@ -30,7 +30,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-visitor-profile"/>
+<Tabs query="platform=ios&api=get-visitor-profile"/>
 
 ## registerExtension
 
@@ -44,7 +44,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=register-extension"/>
+<Tabs query="platform=ios&api=register-extension"/>
 
 ## reset
 
@@ -62,7 +62,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=reset"/>
+<Tabs query="platform=ios&api=reset"/>
 
 ## signalWithData
 
@@ -82,4 +82,4 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=signal-with-data"/>
+<Tabs query="platform=ios&api=signal-with-data"/>

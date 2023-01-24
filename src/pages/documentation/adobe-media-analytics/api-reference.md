@@ -18,7 +18,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
 ### createTracker
 
@@ -36,7 +36,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=create-tracker"/>
+<Tabs query="platform=ios&api=create-tracker"/>
 
 ### createTrackerWithConfig
 
@@ -59,7 +59,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=create-tracker-with-config"/>
+<Tabs query="platform=ios&api=create-tracker-with-config"/>
 
 ### createMediaObject
 
@@ -81,7 +81,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=create-media-object"/>
+<Tabs query="platform=ios&api=create-media-object"/>
 
 ### createAdBreakObject
 
@@ -101,7 +101,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=create-ad-break-object"/>
+<Tabs query="platform=ios&api=create-ad-break-object"/>
 
 ### createAdObject
 
@@ -122,7 +122,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=create-ad-object"/>
+<Tabs query="platform=ios&api=create-ad-object"/>
 
 ### createChapterObject
 
@@ -143,7 +143,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=create-chapter-object"/>
+<Tabs query="platform=ios&api=create-chapter-object"/>
 
 ### createQoEObject
 
@@ -168,7 +168,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=create-qoe-object"/>
+<Tabs query="platform=ios&api=create-qoe-object"/>
 
 ### createStateObject
 
@@ -186,7 +186,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=create-state-object"/>
+<Tabs query="platform=ios&api=create-state-object"/>
 
 ## Media tracker API reference
 
@@ -207,7 +207,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=track-session-start"/>
+<Tabs query="platform=ios&api=track-session-start"/>
 
 ### trackPlay
 
@@ -221,7 +221,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=track-play"/>
+<Tabs query="platform=ios&api=track-play"/>
 
 ### trackPause
 
@@ -235,7 +235,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=track-pause"/>
+<Tabs query="platform=ios&api=track-pause"/>
 
 ### trackComplete
 
@@ -249,7 +249,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=track-complete"/>
+<Tabs query="platform=ios&api=track-complete"/>
 
 ### trackSessionEnd
 
@@ -263,7 +263,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=track-session-end"/>
+<Tabs query="platform=ios&api=track-session-end"/>
 
 ### trackError
 
@@ -281,7 +281,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=track-error"/>
+<Tabs query="platform=ios&api=track-error"/>
 
 ### trackEvent
 
@@ -301,7 +301,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=track-event"/>
+<Tabs query="platform=ios&api=track-event"/>
 
 ### updateCurrentPlayhead
 
@@ -319,7 +319,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=update-current-playhead"/>
+<Tabs query="platform=ios&api=update-current-playhead"/>
 
 ### updateQoEObject
 
@@ -337,7 +337,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=update-qoe-object"/>
+<Tabs query="platform=ios&api=update-qoe-object"/>
 
 ## Media constants
 
@@ -353,7 +353,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=media-type"/>
+<Tabs query="platform=ios&api=media-type"/>
 
 ### Stream type
 
@@ -367,7 +367,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=stream-type"/>
+<Tabs query="platform=ios&api=stream-type"/>
 
 ### Standard video constants
 
@@ -381,7 +381,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=standard-video-constants"/>
+<Tabs query="platform=ios&api=standard-video-constants"/>
 
 ### Standard audio constants
 
@@ -395,7 +395,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=standard-audio-constants"/>
+<Tabs query="platform=ios&api=standard-audio-constants"/>
 
 ### Standard ad constants
 
@@ -409,7 +409,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=standard-ad-constants"/>
+<Tabs query="platform=ios&api=standard-ad-constants"/>
 
 ### Player state constants
 
@@ -423,7 +423,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=player-state-constants"/>
+<Tabs query="platform=ios&api=player-state-constants"/>
 
 ### Media events
 
@@ -437,7 +437,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=media-events"/>
+<Tabs query="platform=ios&api=media-events"/>
 
 ### Media resume
 
@@ -451,4 +451,4 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=media-resume"/>
+<Tabs query="platform=ios&api=media-resume"/>

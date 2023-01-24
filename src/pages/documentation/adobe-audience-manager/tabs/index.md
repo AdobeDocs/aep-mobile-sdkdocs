@@ -11,7 +11,7 @@ import com.adobe.marketing.mobile.*;
 
 Audience Manager depends on the Identity extension and is automatically included in the Core pod. When manually installing the Audience Manager extension, ensure that you add the `identity-1.x.x.aar` library to your project.
 
-<Variant platform="ios-aep" task="add" repeat="6"/>
+<Variant platform="ios" task="add" repeat="6"/>
 
 1. Add the [Mobile Core](../mobile-core/index.md) and Audience extensions to your project using Cocoapods.
 2. Add the following pods in your `Podfile`:
@@ -67,7 +67,7 @@ public void onCreate() {
 }
 ```
 
-<Variant platform="ios-aep" task="register" repeat="6"/>
+<Variant platform="ios" task="register" repeat="6"/>
 
 #### Swift
 

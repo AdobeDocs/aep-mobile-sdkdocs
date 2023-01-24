@@ -16,7 +16,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
 <!--- React Native
 
@@ -42,7 +42,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=lifecycle-start"/>
+<Tabs query="platform=ios&api=lifecycle-start"/>
 
 <!--- React Native
 
@@ -64,7 +64,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=lifecycle-pause"/>
+<Tabs query="platform=ios&api=lifecycle-pause"/>
 
 <!--- React Native
 

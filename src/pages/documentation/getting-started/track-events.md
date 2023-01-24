@@ -33,9 +33,9 @@ Android
 
 <Tabs query="platform=android&task=create"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=create"/>
+<Tabs query="platform=ios&task=create"/>
 
 ### Send the Experience Event to Edge Network
 
@@ -47,9 +47,9 @@ Android
 
 <Tabs query="platform=android&task=send"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=send"/>
+<Tabs query="platform=ios&task=send"/>
 
 ## Track user actions (for Adobe Analytics)
 
@@ -67,9 +67,9 @@ Android
 
 <Tabs query="platform=android&task=track-action"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=track-action"/>
+<Tabs query="platform=ios&task=track-action"/>
 
 <!-- React Native
 
@@ -101,9 +101,9 @@ Android
 
 <Tabs query="platform=android&task=track-state"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=track-state"/>
+<Tabs query="platform=ios&task=track-state"/>
 
 <!-- React Native
 

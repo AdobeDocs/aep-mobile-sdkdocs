@@ -18,7 +18,7 @@ import com.adobe.marketing.mobile.*;
 import com.adobe.marketing.mobile.edge.identity.Identity;
 ```
 
-<Variant platform="ios-aep" task="import" repeat="7"/>
+<Variant platform="ios" task="import" repeat="7"/>
 
 1. Add the Mobile Core, Edge, Edge Identity, and Messaging extensions to your project using Cocoapods. Add the following pods to your `Podfile`:
 
@@ -81,7 +81,7 @@ public class MobileApp extends Application {
 }
 ```
 
-<Variant platform="ios-aep" task="register" repeat="4"/>
+<Variant platform="ios" task="register" repeat="4"/>
 
 #### Swift
 
@@ -138,7 +138,7 @@ FirebaseMessaging.getInstance().getToken()
         });
 ```
 
-<Variant platform="ios-aep" task="sync" repeat="13"/>
+<Variant platform="ios" task="sync" repeat="13"/>
 
 #### Swift
 

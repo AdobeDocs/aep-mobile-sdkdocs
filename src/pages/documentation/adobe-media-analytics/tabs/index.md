@@ -24,7 +24,7 @@ You can also manually include the libraries. Get `.aar` libraries from [Github](
 import com.adobe.marketing.mobile.*;
 ```
 
-<Variant platform="ios-aep" task="add" repeat="11"/>
+<Variant platform="ios" task="add" repeat="11"/>
 
 The latest iOS SDK versions:
 
@@ -95,7 +95,7 @@ public class MobileApp extends Application {
 }
 ```
 
-<Variant platform="ios-aep" task="register" repeat="6"/>
+<Variant platform="ios" task="register" repeat="6"/>
 
 #### Swift
 

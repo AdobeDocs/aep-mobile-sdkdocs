@@ -34,14 +34,9 @@ Experience Platform Mobile SDKs are available for Android, iOS, and a [variety](
 The Adobe Experience Platform Mobile SDK supports the following platforms:
 
 - [Android](./current-sdk-versions.md#android)
-- [iOS - Swift](./current-sdk-versions.md#ios--swift)
-- [iOS - Objective-C](./current-sdk-versions.md#ios--objective-c)
-- [React Native (AEP 1.x)](./current-sdk-versions.md#react-native-aep-1x)
-- [React Native (ACP 2.x)](./current-sdk-versions.md#react-native-acp-2x)
-- [Flutter (AEP 1.x)](./current-sdk-versions.md#flutter-aep-1x)
-- [Flutter (ACP 2.x)](./current-sdk-versions.md#flutter-acp-2x)
-- [Cordova](./current-sdk-versions.md#cordova)
-- [Xamarin](./current-sdk-versions.md#xamarin)
+- [iOS](./current-sdk-versions.md#ios)
+- [React Native](./current-sdk-versions.md#react-native)
+- [Flutter](./current-sdk-versions.md#flutter)
 
 <InlineAlert variant="warning" slots="header, text"/>
 

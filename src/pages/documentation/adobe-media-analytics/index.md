@@ -60,7 +60,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=add"/>
+<Tabs query="platform=ios&task=add"/>
 
 ## Register Media with Mobile Core
 
@@ -72,7 +72,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=register"/>
+<Tabs query="platform=ios&task=register"/>
 
 ## Configuration keys
 

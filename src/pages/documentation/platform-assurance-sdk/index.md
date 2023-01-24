@@ -33,7 +33,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=import-library"/>
+<Tabs query="platform=ios&task=import-library"/>
 
 <!--- React Native
 
@@ -53,7 +53,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=register-assurance"/>
+<Tabs query="platform=ios&task=register-assurance"/>
 
 <!--- React Native
 
@@ -75,7 +75,7 @@ You may call this API when the app launches with a url (see code snippet below f
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=register-assurance"/>
+<Tabs query="platform=ios&task=register-assurance"/>
 

@@ -16,7 +16,7 @@ import com.adobe.marketing.mobile.MobileCore;
 import com.adobe.marketing.mobile.Places;
 ```
 
-<Variant platform="ios-aep" task="download" repeat="7"/>
+<Variant platform="ios" task="download" repeat="7"/>
 
 1. Add the Mobile Core and Places extensions to your project using CocoaPods. Add the following pods in your `Podfile`:
 
@@ -73,7 +73,7 @@ public class MobileApp extends Application {
 }
 ```
 
-<Variant platform="ios-aep" task="register" repeat="4"/>
+<Variant platform="ios" task="register" repeat="4"/>
 
 **Swift**
 

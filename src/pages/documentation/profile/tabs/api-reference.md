@@ -14,7 +14,7 @@ public static String extensionVersion()
 String extensionVersion = UserProfile.extensionVersion();
 ```
 
-<Variant platform="ios-aep" api="extension-version" repeat="10"/>
+<Variant platform="ios" api="extension-version" repeat="10"/>
 
 #### Swift
 
@@ -75,7 +75,7 @@ UserProfile.getUserAttributes(Arrays.asList("itemsAddedToCart"), new AdobeCallba
         });
 ```
 
-<Variant platform="ios-aep" api="get-user-attributes" repeat="13"/>
+<Variant platform="ios" api="get-user-attributes" repeat="13"/>
 
 #### Swift
 
@@ -136,7 +136,7 @@ import com.adobe.marketing.mobile.UserProfile
 UserProfile.registerExtension();
 ```
 
-<Variant platform="ios-aep" api="register-extension" repeat="11"/>
+<Variant platform="ios" api="register-extension" repeat="11"/>
 
 On iOS, the registration occurs by passing UserProfile extension to the [MobileCore.registerExtensions API](../mobile-core/api-reference.md#registerextension-s).
 
@@ -220,7 +220,7 @@ You want to remove `username`, `usertype` user data when session timeout occurs.
 UserProfile.removeUserAttributes(Arrays.asList("username", "usertype"));
 ```
 
-<Variant platform="ios-aep" api="remove-user-attributes" repeat="11"/>
+<Variant platform="ios" api="remove-user-attributes" repeat="11"/>
 
 #### Swift
 
@@ -292,7 +292,7 @@ profileMap.put("usertype","Actor");
 UserProfile.updateUserAttributes(profileMap);
 ```
 
-<Variant platform="ios-aep" api="update-user-attributes" repeat="11"/>
+<Variant platform="ios" api="update-user-attributes" repeat="11"/>
 
 #### Swift
 

@@ -17,7 +17,7 @@ implementation 'com.adobe.marketing.mobile:edgeidentity:1.+'
 import com.adobe.marketing.mobile.*;
 ```
 
-<Variant platform="ios-aep" task="download" repeat="7"/>
+<Variant platform="ios" task="download" repeat="7"/>
 
 1. Add the Mobile Core and Edge extensions to your project using CocoaPods. Add following pods in your `Podfile`:
 
@@ -82,7 +82,7 @@ public class MobileApp extends Application {
 }
 ```
 
-<Variant platform="ios-aep" task="register" repeat="4"/>
+<Variant platform="ios" task="register" repeat="4"/>
 
 **Swift**
 
@@ -125,7 +125,7 @@ com.adobe.marketing.mobile.edge.identity.Identity.getExperienceCloudId(new Adobe
 MobileCore.setPrivacyStatus(MobilePrivacyStatus.OPT_IN);
 ```
 
-<Variant platform="ios-aep" task="link" repeat="4"/>
+<Variant platform="ios" task="link" repeat="4"/>
 
 **Swift**
 

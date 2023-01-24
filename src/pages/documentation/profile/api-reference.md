@@ -14,7 +14,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
 <!--- React Native
 
@@ -32,7 +32,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-user-attributes"/>
+<Tabs query="platform=ios&api=get-user-attributes"/>
 
 ## registerExtension
 
@@ -46,7 +46,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=register-extension"/>
+<Tabs query="platform=ios&api=register-extension"/>
 
 ## removeUserAttribute
 

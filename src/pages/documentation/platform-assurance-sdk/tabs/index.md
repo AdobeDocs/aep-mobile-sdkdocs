@@ -14,7 +14,7 @@ import com.adobe.marketing.mobile.Assurance;
 import com.adobe.marketing.mobile.MobileCore;
 ```
 
-<Variant platform="ios-aep" task="import-library" repeat="7"/>
+<Variant platform="ios" task="import-library" repeat="7"/>
 
 Add the library to your project via your [Cocoapods](https://cocoapods.org/pods/AEPAssurance) `Podfile`:
 
@@ -131,7 +131,7 @@ To find your app ID, which is mentioned below, please read the [Mobile Install I
 }
 ```
 
-<Variant platform="ios-aep" task="register-assurance" repeat="5"/>
+<Variant platform="ios" task="register-assurance" repeat="5"/>
 
 To start using the extension library, you must first register the extension with the [Mobile Core](../mobile-core/index.md) extension.
 
@@ -177,7 +177,7 @@ When using React Native, register AEP Assurance with Mobile Core in native code 
 
 When using Flutter, register AEP Assurance with Mobile Core in native code as shown on the Android and iOS tabs. --->
 
-<Variant platform="ios-aep" task="implement-assurance" repeat="12"/>
+<Variant platform="ios" task="implement-assurance" repeat="12"/>
 
 #### Swift
 

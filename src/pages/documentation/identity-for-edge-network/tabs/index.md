@@ -29,7 +29,7 @@ import com.adobe.marketing.mobile.edge.identity.Identity
 import com.adobe.marketing.mobile.edge.consent.Consent
 ```
 
-<Variant platform="ios-aep" task="download" repeat="7"/>
+<Variant platform="ios" task="download" repeat="7"/>
 
 1. Add the Mobile Core and Edge extensions to your project using CocoaPods. Add following pods in your `Podfile`:
 
@@ -97,7 +97,7 @@ public class MobileApp extends Application {
 }
 ```
 
-<Variant platform="ios-aep" task="register" repeat="4"/>
+<Variant platform="ios" task="register" repeat="4"/>
 
 **Swift**
 

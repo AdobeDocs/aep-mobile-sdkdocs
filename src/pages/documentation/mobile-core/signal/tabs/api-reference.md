@@ -14,7 +14,7 @@ public static String extensionVersion();
 String signalExtensionVersion = Signal.extensionVersion();
 ```
 
-<Variant platform="ios-aep" api="extension-version" repeat="7"/>
+<Variant platform="ios" api="extension-version" repeat="7"/>
 
 **Syntax**
 
@@ -68,7 +68,7 @@ public static void registerExtension()
 Signal.registerExtension();
 ```
 
-<Variant platform="ios-aep" api="register-extension" repeat="1"/>
+<Variant platform="ios" api="register-extension" repeat="1"/>
 
 This API no longer exists in `Signal`. Instead, the extension should be registered by calling the `registerExtensions` API in the MobileCore. Please see the updated SDK initialization steps at the [migrate to Swift tutorial.](../../migrate-to-swift.md#update-sdk-initialization)
 

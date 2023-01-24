@@ -14,7 +14,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=clear-prefetch-cache"/>
+<Tabs query="platform=ios&api=clear-prefetch-cache"/>
 
 <!--- React Native
 
@@ -35,7 +35,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=clicked-location"/>
+<Tabs query="platform=ios&api=clicked-location"/>
 
 <!--- React Native
 
@@ -53,7 +53,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=displayed-locations"/>
+<Tabs query="platform=ios&api=displayed-locations"/>
 
 <!--- React Native
 
@@ -71,7 +71,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
 <!--- React Native
 
@@ -91,7 +91,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-session-id"/>
+<Tabs query="platform=ios&api=get-session-id"/>
 
 ## getThirdPartyId
 
@@ -105,7 +105,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-third-party-id"/>
+<Tabs query="platform=ios&api=get-third-party-id"/>
 
 <!--- React Native
 
@@ -123,7 +123,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-tnt-id"/>
+<Tabs query="platform=ios&api=get-tnt-id"/>
 
 <!--- React Native
 
@@ -141,7 +141,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=prefetch-content"/>
+<Tabs query="platform=ios&api=prefetch-content"/>
 
 <!--- React Native
 
@@ -159,7 +159,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=register-extension"/>
+<Tabs query="platform=ios&api=register-extension"/>
 
 <!--- React Native
 
@@ -177,7 +177,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=reset-experience"/>
+<Tabs query="platform=ios&api=reset-experience"/>
 
 <!--- React Native
 
@@ -203,7 +203,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=retrieve-location-content"/>
+<Tabs query="platform=ios&api=retrieve-location-content"/>
 
 <!--- React Native
 
@@ -221,7 +221,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=set-preview-restart-deep-link"/>
+<Tabs query="platform=ios&api=set-preview-restart-deep-link"/>
 
 <!--- React Native
 
@@ -243,7 +243,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=set-session-id"/>
+<Tabs query="platform=ios&api=set-session-id"/>
 
 ## setThirdPartyId
 
@@ -257,7 +257,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=set-third-party-id"/>
+<Tabs query="platform=ios&api=set-third-party-id"/>
 
 <!--- React Native
 
@@ -279,7 +279,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=set-tnt-id"/>
+<Tabs query="platform=ios&api=set-tnt-id"/>
 
 ## Visual preview
 
@@ -293,7 +293,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=visual-preview"/>
+<Tabs query="platform=ios&api=visual-preview"/>
 
 ## Public classes
 
@@ -309,7 +309,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=target-request"/>
+<Tabs query="platform=ios&api=target-request"/>
 
 <!--- React Native
 
@@ -325,7 +325,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=target-prefetch"/>
+<Tabs query="platform=ios&api=target-prefetch"/>
 
 <!--- React Native
 
@@ -341,7 +341,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=target-parameters"/>
+<Tabs query="platform=ios&api=target-parameters"/>
 
 <!--- React Native
 
@@ -357,7 +357,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=target-order"/>
+<Tabs query="platform=ios&api=target-order"/>
 
 <!--- React Native
 
@@ -373,7 +373,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=target-product"/>
+<Tabs query="platform=ios&api=target-product"/>
 
 <!--- React Native
 

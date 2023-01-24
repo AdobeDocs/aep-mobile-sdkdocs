@@ -22,7 +22,7 @@ You should see a dialog box similar to the following:
 
 The necessary dependencies and initialization code can be copied from the dialog box to your mobile application project.
 
-<Variant platform="ios-aep" task="get" repeat="5"/>
+<Variant platform="ios" task="get" repeat="5"/>
 
 Adobe Experience Platform SDKs for iOS support **iOS 10 or later**; **requires** Swift 5.1 or newer; **and** Xcode 11.0 or newer.
 
@@ -133,7 +133,7 @@ implementation 'com.adobe.marketing.mobile:userprofile:1.+'
 implementation 'com.adobe.marketing.mobile:sdk-core:1.+'
 ```
 
-<Variant platform="ios-aep" task="add-dependencies" repeat="8"/>
+<Variant platform="ios" task="add-dependencies" repeat="8"/>
 
 
 Create a `Podfile` if you do not already have one:
@@ -206,7 +206,7 @@ public class MainApp extends Application {
 }
 ```
 
-<Variant platform="ios-aep" task="add-initialization" repeat="5"/>
+<Variant platform="ios" task="add-initialization" repeat="5"/>
 
 For iOS Swift libraries, registration is changed to a single API call (as shown in the snippets below). Calling the`MobileCore.start` API is no longer required.
 

@@ -14,7 +14,7 @@ public static String extensionVersion();
 String campaignClassicExtensionVersion = CampaignClassic.extensionVersion();
 ```
 
-<Variant platform="ios-aep" api="extension-version" repeat="10"/>
+<Variant platform="ios" api="extension-version" repeat="10"/>
 
 #### Swift
 
@@ -86,7 +86,7 @@ public void onNewToken(String token) {
 }
 ```
 
-<Variant platform="ios-aep" api="register-device" repeat="12"/>
+<Variant platform="ios" api="register-device" repeat="12"/>
 
 To get your app ready to handle push notifications, see the tutorial on [configuring remote notification support](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/HandlingRemoteNotifications.html#//apple_ref/doc/uid/TP40008194-CH6-SW1). After you receive the Apple Push Notification service (APNs) token, send this token and the device information to Campaign Classic using the `registerDevice` API.
 
@@ -173,7 +173,7 @@ public void onResume() {
 }
 ```
 
-<Variant platform="ios-aep" api="track-notification-click" repeat="11"/>
+<Variant platform="ios" api="track-notification-click" repeat="11"/>
 
 You can pass the `launchOptions` that were received upon opening the application or `userInfo`, which contains the received push payload in `userInfo`. If `userInfo` is null or does not contain the necessary tracking identifiers, `broadlogId` (`_mId`) and `deliveryId` (`_dId`), a track request is **not** sent.
 
@@ -245,7 +245,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 }
 ```
 
-<Variant platform="ios-aep" api="track-notification-receive" repeat="11"/>
+<Variant platform="ios" api="track-notification-receive" repeat="11"/>
 
 You can pass the `launchOptions` that were received upon opening the application or `userInfo`, which contains the received push payload in `userInfo`. If `userInfo` is null or does not contain the necessary tracking identifiers, `broadlogId` (`_mId`) and `deliveryId` (`_dId`), a track request is **not** sent.
 

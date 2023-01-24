@@ -39,7 +39,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=add"/>
+<Tabs query="platform=ios&task=add"/>
 
 <!--- React Native
 
@@ -57,7 +57,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=register"/>
+<Tabs query="platform=ios&task=register"/>
 
 <!--- React Native
 
@@ -79,7 +79,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=target-order"/>
+<Tabs query="platform=ios&task=target-order"/>
 
 <!--- React Native
 
@@ -97,7 +97,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=target-product"/>
+<Tabs query="platform=ios&task=target-product"/>
 
 <!--- React Native
 
@@ -115,7 +115,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=target-parameters"/>
+<Tabs query="platform=ios&task=target-parameters"/>
 
 <!--- React Native
 
@@ -155,7 +155,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=visual-preview"/>
+<Tabs query="platform=ios&task=visual-preview"/>
 
 ## Offer Prefetch
 

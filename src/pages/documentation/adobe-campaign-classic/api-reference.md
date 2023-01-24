@@ -14,7 +14,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
 ## registerDevice
 
@@ -28,7 +28,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=register-device"/>
+<Tabs query="platform=ios&api=register-device"/>
 
 ## trackNotificationReceive
 
@@ -42,7 +42,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=track-notification-receive"/>
+<Tabs query="platform=ios&api=track-notification-receive"/>
 
 ## trackNotificationClick
 
@@ -56,4 +56,4 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=track-notification-click"/>
+<Tabs query="platform=ios&api=track-notification-click"/>

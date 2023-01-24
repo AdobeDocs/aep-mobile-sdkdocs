@@ -31,7 +31,7 @@ In addition to `ACPCore` being replaced with `AEPCore`, you will also need to ex
 
 ### Manual library import
 
-If you are manually importing SDK libraries, ensure you identify all currently used ACP-prefix libraries and switch them over to AEP-prefix libraries. The list of current AEP-prefix SDK libraries can be found in the [current SDK versions document](current-sdk-versions.md#ios-swift) (in the Swift section).
+If you are manually importing SDK libraries, ensure you identify all currently used ACP-prefix libraries and switch them over to AEP-prefix libraries. The list of current AEP-prefix SDK libraries can be found in the [current SDK versions document](current-sdk-versions.md#ios).
 
 ### CocoaPods
 

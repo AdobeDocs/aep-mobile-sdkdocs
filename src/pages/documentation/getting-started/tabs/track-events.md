@@ -18,7 +18,7 @@ ExperienceEvent experienceEvent = new ExperienceEvent.Builder()
                 .build();
 ```
 
-<Variant platform="ios-aep" task="create" repeat="4"/>
+<Variant platform="ios" task="create" repeat="4"/>
 
 #### Swift
 
@@ -53,7 +53,7 @@ AEPExperienceEvent *experienceEvent = [[AEPExperienceEvent alloc] initWithXdm:xd
 Edge.sendEvent(experienceEvent, null);
 ```
 
-<Variant platform="ios-aep" task="send" repeat="4"/>
+<Variant platform="ios" task="send" repeat="4"/>
 
 #### Swift
 
@@ -85,7 +85,7 @@ additionalContextData.put("customKey", "value");
 MobileCore.trackAction("loginClicked", additionalContextData);
 ```
 
-<Variant platform="ios-aep" task="track-action" repeat="10"/>
+<Variant platform="ios" task="track-action" repeat="10"/>
 
 #### Swift
 
@@ -208,7 +208,7 @@ additionalContextData.put("customKey", "value");
 MobileCore.trackState("homePage", additionalContextData);
 ```
 
-<Variant platform="ios-aep" task="track-state" repeat="10"/>
+<Variant platform="ios" task="track-state" repeat="10"/>
 
 #### Swift
 

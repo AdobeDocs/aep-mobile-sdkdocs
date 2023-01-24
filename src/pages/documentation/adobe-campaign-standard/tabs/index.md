@@ -22,7 +22,7 @@ import com.adobe.marketing.mobile.UserProfile;
 
 To complete a manual installation, go to the [Adobe Experience Platform SDKs for Android GitHub](https://github.com/Adobe-Marketing-Cloud/acp-sdks/tree/master/android) repo, fetch the Mobile Core, Campaign Standard, Profile, Lifecycle, and Signal artifacts, and complete the steps in the [manual installation](https://github.com/Adobe-Marketing-Cloud/acp-sdks/blob/master/README.md#manual-installation) section.
 
-<Variant platform="ios-aep" task="add" repeat="7"/>
+<Variant platform="ios" task="add" repeat="7"/>
 
 1. Add the Campaign Standard, [Mobile Core](../mobile-core/index.md), and [Profile](../profile/index.md) extensions to your project using Cocoapods.
 
@@ -91,7 +91,7 @@ In your app's `OnCreate` method, register the Campaign, Identity, Signal, and Li
 
 For more information about starting Lifecycle, see the [Lifecycle extension in Android guide](../mobile-core/lifecycle/android.md).
 
-<Variant platform="ios-aep" task="register" repeat="6"/>
+<Variant platform="ios" task="register" repeat="6"/>
 
 In your app's `application:didFinishLaunchingWithOptions:` method, register the Campaign, Identity, Signal, and Lifecycle extensions:
 
@@ -161,7 +161,7 @@ In addition to adding the `FullscreenMessageActivity`, a global lifecycle callba
 
 To set up local notifications in Android, update the AndroidManifest.xml file with `<receiver android:name="com.adobe.marketing.mobile.LocalNotificationHandler"/>`. To configure the notification icons that the local notification will use, see the [configuring notification icons section](../adobe-analytics-mobile-services/index.md#configuring-notification-icons) within the Adobe Analytics - Mobile Services documentation.
 
-<Variant platform="ios-aep" task="initialize" repeat="1"/>
+<Variant platform="ios" task="initialize" repeat="1"/>
 
 No additional setup is needed for iOS in-app messaging and local notifications.
 
@@ -189,7 +189,7 @@ FirebaseInstanceId.getInstance().getInstanceId()
 });
 ```
 
-<Variant platform="ios-aep" task="push-messaging" repeat="7"/>
+<Variant platform="ios" task="push-messaging" repeat="7"/>
 
 iOS simulators do **not** support push messaging.
 
@@ -274,7 +274,7 @@ private void handleTracking() {
 }
 ```
 
-<Variant platform="ios-aep" task="track" repeat="12"/>
+<Variant platform="ios" task="track" repeat="12"/>
 
 #### Swift
 
@@ -391,7 +391,7 @@ Android app links were introduced with Android OS 6.0. They are similar to deep 
 
 For more information on the additional verification setup needed, please read the tutorial on [verifying Android app links](https://developer.android.com/training/app-links/verify-site-associations.html). The resulting app link can be used to redirect to specific areas of your app if the app is installed or redirect to your app's website if the app isn't installed. For more information on Android app links, please read the guide on [handling Android app links](https://developer.android.com/training/app-links/index.html#add-app-links).
 
-<Variant platform="ios-aep" task="handling" repeat="27"/>
+<Variant platform="ios" task="handling" repeat="27"/>
 
 #### Handling alert or fullscreen notification website URLs on iOS
 
@@ -544,7 +544,7 @@ MobileCore.updateConfiguration(new HashMap<String, Object>() {
 });
 ```
 
-<Variant platform="ios-aep" task="customize" repeat="6"/>
+<Variant platform="ios" task="customize" repeat="6"/>
 
 #### Swift
 

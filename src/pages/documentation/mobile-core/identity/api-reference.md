@@ -55,7 +55,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=append-to-url"/>
+<Tabs query="platform=ios&api=append-to-url"/>
 
 <!--- React Native
 
@@ -79,7 +79,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
 <!--- React Native
 
@@ -103,7 +103,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-experience-cloud-id"/>
+<Tabs query="platform=ios&api=get-experience-cloud-id"/>
 
 <!--- React Native
 
@@ -125,7 +125,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-identifiers"/>
+<Tabs query="platform=ios&api=get-identifiers"/>
 
 <!--- React Native
 
@@ -156,7 +156,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-url-variables"/>
+<Tabs query="platform=ios&api=get-url-variables"/>
 
 <!--- React Native
 
@@ -178,7 +178,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=register-extension"/>
+<Tabs query="platform=ios&api=register-extension"/>
 
 <!--- React Native
 
@@ -204,7 +204,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=set-advertising-identifier"/>
+<Tabs query="platform=ios&api=set-advertising-identifier"/>
 
 <!--- React Native
 
@@ -230,7 +230,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=set-push-identifier"/>
+<Tabs query="platform=ios&api=set-push-identifier"/>
 
 <!--- React Native
 
@@ -258,7 +258,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=sync-identifier"/>
+<Tabs query="platform=ios&api=sync-identifier"/>
 
 <!--- React Native
 
@@ -280,7 +280,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=sync-identifiers"/>
+<Tabs query="platform=ios&api=sync-identifiers"/>
 
 <!--- React Native
 
@@ -304,7 +304,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=sync-identifiers-overloaded"/>
+<Tabs query="platform=ios&api=sync-identifiers-overloaded"/>
 
 <!--- React Native
 
@@ -324,7 +324,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=public-classes"/>
+<Tabs query="platform=ios&api=public-classes"/>
 
 <!--- React Native
 

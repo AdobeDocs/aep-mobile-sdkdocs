@@ -14,7 +14,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
 ## processReferrer
 
@@ -133,4 +133,4 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=track-adobe-deep-link"/>
+<Tabs query="platform=ios&api=track-adobe-deep-link"/>

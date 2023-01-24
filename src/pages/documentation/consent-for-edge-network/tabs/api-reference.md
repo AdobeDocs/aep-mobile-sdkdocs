@@ -14,7 +14,7 @@ public static String extensionVersion();
 String extensionVersion = Consent.extensionVersion();
 ```
 
-<Variant platform="ios-aep" api="extension-version" repeat="10"/>
+<Variant platform="ios" api="extension-version" repeat="10"/>
 
 **Swift**
 
@@ -67,7 +67,7 @@ Consent.getConsents(new AdobeCallback<Map<String, Object>>() {
 });
 ```
 
-<Variant platform="ios-aep" api="get-consents" repeat="11"/>
+<Variant platform="ios" api="get-consents" repeat="11"/>
 
 **Swift**
 
@@ -119,7 +119,7 @@ public static void registerExtension();
 Consent.registerExtension();
 ```
 
-<Variant platform="ios-aep" api="register-extension" repeat="12"/>
+<Variant platform="ios" api="register-extension" repeat="12"/>
 
 **Swift**
 
@@ -203,7 +203,7 @@ consents.put("consents", collectConsents);
 Consent.update(consents);
 ```
 
-<Variant platform="ios-aep" api="update-consents" repeat="11"/>
+<Variant platform="ios" api="update-consents" repeat="11"/>
 
 **Swift**
 
