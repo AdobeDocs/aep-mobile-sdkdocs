@@ -48,7 +48,7 @@ iOS
 
 <Tabs query="platform=react-native&api=lifecycle-start"/> --->
 
-### lifecyclePause
+## lifecyclePause
 
 Pauses the collection of lifecycle data.
 
