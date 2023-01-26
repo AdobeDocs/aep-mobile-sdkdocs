@@ -19,7 +19,7 @@ module.exports = {
               },
               {
                 title: 'Previous versions',
-                path: '/client-sdks/acp/'
+                path: '/client-sdks/previous-versions/'
               }
           ],
         pages: [{
