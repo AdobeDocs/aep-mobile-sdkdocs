@@ -12,7 +12,7 @@
 
 <InlineAlert variant="info" slots="text"/>
 
-Adobe Experience Platform Mobile SDK for Android supports Google Android API 19 (Kitkat) or later.
+Adobe Experience Platform Mobile SDK for Android supports Google Android API 19 (KitKat) or later.
 
 <InlineAlert variant="info" slots="text"/>
 
