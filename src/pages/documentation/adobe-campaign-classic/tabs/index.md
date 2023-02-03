@@ -22,14 +22,14 @@ import com.adobe.marketing.mobile.Lifecycle;
 
 1. Add the Campaign Classic and [Mobile Core](../mobile-core/index.md) libraries to your project.
 
-   You can add the following pods to your `Podfile`:
+You can add the following pods to your `Podfile`:
 
-   ```text
-   pod 'AEPCore'
-   pod 'AEPCampaignClassic'
-   ```
+```ruby
+pod 'AEPCore'
+pod 'AEPCampaignClassic'
+```
 
-   or you can manually include the XCFrameworks by following this GitHub [documentation](https://github.com/adobe/aepsdk-campaignclassic-ios/#binaries).
+or you can manually include the XCFrameworks by following this GitHub [documentation](https://github.com/adobe/aepsdk-campaignclassic-ios/#binaries).
 
 2. In the Xcode project, import the Mobile Core and Campaign Classic extensions:
 
@@ -47,33 +47,51 @@ import com.adobe.marketing.mobile.Lifecycle;
     @import AEPCampaignClassic;
 ```
 
-<Variant platform="android" task="register" repeat="2"/>
+<Variant platform="android" task="register" repeat="5"/>
 
 In your app's `OnCreate` method, register the Campaign Classic and Lifecycle extensions:
 
+#### Java
+
 ```java
 public class CampaignClassicTestApp extends Application {
+
+    private final String ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID";
 
     @Override
     public void onCreate() {
         super.onCreate();
         MobileCore.setApplication(this);
-        MobileCore.setLogLevel(LoggingMode.VERBOSE);
-
-        try {
-            CampaignClassic.registerExtension();
-            Lifecycle.registerExtension();
-            MobileCore.start(new AdobeCallback () {
-              @Override
-              public void call(Object o) {
-                  MobileCore.configureWithAppID("<YOUR_ENVIRONMENT_FILE_ID>");
-                }
-              });
-        } catch (Exception e) {
-            Log.e("CampaignClassicTestApp", e.getMessage());
-        }
-
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
+        
+        MobileCore.registerExtensions(
+            Arrays.asList(CampaignClassic.EXTENSION, Lifecycle.EXTENSION),
+            o -> Log.d("MainApp", "Adobe Experience Platform Campaign Classic Mobile SDK was initialized.")
+        );
     }
+}
+```
+
+#### Kotlin
+
+```java
+class MainApp : Application() {
+
+  private var ENVIRONMENT_FILE_ID: String = "YOUR_APP_ENVIRONMENT_ID"
+
+    override fun onCreate() {
+        super.onCreate()
+
+        MobileCore.setApplication(this)
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
+
+        MobileCore.registerExtensions(
+          listOf(CampaignClassic.EXTENSION, Lifecycle.EXTENSION)
+        ) {
+          Log.d("MainApp", "Adobe Experience Platform Campaign Classic Mobile SDK was initialized")
+        }
+    }
+
 }
 ```
 
