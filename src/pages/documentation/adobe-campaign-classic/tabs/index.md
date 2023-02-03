@@ -1,18 +1,19 @@
-<Variant platform="android" task="add" repeat="6"/>
+<Variant platform="android" task="add" repeat="5"/>
 
 #### Java
 
 1. Add the Campaign Classic extension to your project using the app's Gradle file.
 
-```java
-implementation 'com.adobe.marketing.mobile:campaignclassic:1.+'
+```gradle
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:lifecycle:2.+'
+implementation 'com.adobe.marketing.mobile:campaignclassic:2.+'
 ```
-
-or you can manually include the binaries found in the [acp-sdks](https://github.com/Adobe-Marketing-Cloud/acp-sdks/) repo on GitHub.
 
 2. Import the Campaign Classic and Lifecycle extensions in your application's main activity.
 
 ```java
+import com.adobe.marketing.mobile.MobileCore;
 import com.adobe.marketing.mobile.CampaignClassic;
 import com.adobe.marketing.mobile.Lifecycle;
 ```

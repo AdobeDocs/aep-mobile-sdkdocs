@@ -5,8 +5,8 @@
 1. Add the [Mobile Core](../mobile-core/index.md) and Analytics extensions to your project using the app's Gradle file.
 
 ```java
-implementation 'com.adobe.marketing.mobile:sdk-core:1.+'
-implementation 'com.adobe.marketing.mobile:analytics:1.+'
+implementation 'com.adobe.marketing.mobile:core:2.x.x'
+implementation 'com.adobe.marketing.mobile:analytics:2.x.x'
 ```
 
 2. Import the Analytics extension in your application's main activity.
