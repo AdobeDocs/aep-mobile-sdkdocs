@@ -2,16 +2,26 @@
 
 1. Add the Campaign Standard, [Mobile Core](../mobile-core/index.md) and [Profile](../profile/index.md) extensions to your project using the app's Gradle file.
 
+<InlineNestedAlert variant="warning" header="true" iconPosition="left">
+
+a
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the managing Gradle dependencies guide for more information. 
+
+</InlineNestedAlert>
+
 ```java
-implementation 'com.adobe.marketing.mobile:campaign:1.+'
-implementation 'com.adobe.marketing.mobile:userprofile:1.+'
-implementation 'com.adobe.marketing.mobile:sdk-core:1.+'
+implementation 'com.adobe.marketing.mobile:campaign:2.+'
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:identity:2.+'
+implementation 'com.adobe.marketing.mobile:lifecycle:2.+'
+implementation 'com.adobe.marketing.mobile:signal:2.+'
+implementation 'com.adobe.marketing.mobile:userprofile:2.+'
 ```
 
-2. Import the Campaign Standard, [Mobile Core](../mobile-core/index.md), [Profile](../profile/index.md), [Lifecycle](../mobile-core/lifecycle/index.md), and [Signal](../mobile-core/signals/index.md) extensions in your application's main activity.
+1. Import the Campaign Standard, [Mobile Core](../mobile-core/index.md), [Profile](../profile/index.md), [Lifecycle](../mobile-core/lifecycle/index.md), and [Signal](../mobile-core/signals/index.md) extensions in your application's main activity.
 
 ```java
-import com.adobe.marketing.mobile.AdobeCallback;
 import com.adobe.marketing.mobile.Campaign;
 import com.adobe.marketing.mobile.Identity;
 import com.adobe.marketing.mobile.Lifecycle;
@@ -19,8 +29,6 @@ import com.adobe.marketing.mobile.MobileCore;
 import com.adobe.marketing.mobile.Signal;
 import com.adobe.marketing.mobile.UserProfile;
 ```
-
-To complete a manual installation, go to the [Adobe Experience Platform SDKs for Android GitHub](https://github.com/Adobe-Marketing-Cloud/acp-sdks/tree/master/android) repo, fetch the Mobile Core, Campaign Standard, Profile, Lifecycle, and Signal artifacts, and complete the steps in the [manual installation](https://github.com/Adobe-Marketing-Cloud/acp-sdks/blob/master/README.md#manual-installation) section.
 
 <Variant platform="ios" task="add" repeat="7"/>
 
@@ -56,37 +64,52 @@ import AEPServices
 
 <Variant platform="android" task="register" repeat="4"/>
 
-**Java**
+In your app's `OnCreate` method, call the `setApplication` method.
 
-In your app's `OnCreate` method, register the Campaign, Identity, Signal, and Lifecycle extensions:
+#### Java
 
 ```java
-    public class CampaignTestApp extends Application {
+public class MainApp extends Application {
+    private static final String APP_ID = "YOUR_APP_ID";
 
-        @Override
-        public void onCreate() {
+    @Override
+    public void onCreate() {
         super.onCreate();
+
         MobileCore.setApplication(this);
-        MobileCore.setLogLevel(LoggingMode.DEBUG);
+        MobileCore.configureWithAppID(APP_ID);
 
-        try {
-            Campaign.registerExtension();
-            UserProfile.registerExtension();
-            Identity.registerExtension();
-            Lifecycle.registerExtension();
-            Signal.registerExtension();
-            MobileCore.start(new AdobeCallback () {
-            @Override
-            public void call(Object o) {
-                MobileCore.configureWithAppID("launch-EN2c0ccd3a457a4c47b65a6b085e269c91-staging");
-            }
-            });
-        } catch (InvalidInitException e) {
-            Log.e("CampaignTestApp", e.getMessage());
-        }
+        List<Class<? extends Extension>> extensions = new ArrayList<>();
+        extensions.add(Campaign.EXTENSION);
+        extensions.add(Identity.EXTENSION);
+        extensions.add(Lifecycle.EXTENSION);
+        extensions.add(Signal.EXTENSION);
+        extensions.add(UserProfile.EXTENSION);
+        MobileCore.registerExtensions(extensions, o -> {
+            Log.d(LOG_TAG, "AEP Mobile SDK is initialized");
+        });
+    }
 
+}
+```
+
+#### Kotlin
+
+```java
+class MyApp : Application() {
+
+    override fun onCreate() {
+        super.onCreate()
+        MobileCore.setApplication(this)
+        MobileCore.configureWithAppID("YOUR_APP_ID")
+
+        val extensions = listOf(Campaign.EXTENSION, Identity.EXTENSION, Lifecycle.EXTENSION, Signal.EXTENSION, UserProfile.EXTENSION)
+        MobileCore.registerExtensions(extensions) {
+            Log.d(LOG_TAG, "AEP Mobile SDK is initialized")
         }
     }
+
+}
 ```
 
 For more information about starting Lifecycle, see the [Lifecycle extension in Android guide](../mobile-core/lifecycle/android.md).
@@ -143,7 +166,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 For more information about starting Lifecycle, see the [Lifecycle extension in iOS guide](../mobile-core/lifecycle/ios.md).
 
-<Variant platform="android" task="initialize" repeat="7"/>
+<Variant platform="android" task="initialize" repeat="9"/>
 
 #### Set up in-app messaging
 
@@ -159,7 +182,13 @@ In addition to adding the `FullscreenMessageActivity`, a global lifecycle callba
 
 #### Set up local notifications
 
-To set up local notifications in Android, update the AndroidManifest.xml file with `<receiver android:name="com.adobe.marketing.mobile.LocalNotificationHandler"/>`. To configure the notification icons that the local notification will use, see the [configuring notification icons section](../adobe-analytics-mobile-services/index.md#configuring-notification-icons) within the Adobe Analytics - Mobile Services documentation.
+To set up local notifications in Android, update the AndroidManifest.xml file:
+
+```markup
+<receiver android:name="com.adobe.marketing.mobile.LocalNotificationHandler"/>
+``` 
+
+To configure the notification icons that the local notification will use, see the [configuring notification icons section](../adobe-analytics-mobile-services/index.md#configuring-notification-icons) within the Adobe Analytics - Mobile Services documentation.
 
 <Variant platform="ios" task="initialize" repeat="1"/>
 
