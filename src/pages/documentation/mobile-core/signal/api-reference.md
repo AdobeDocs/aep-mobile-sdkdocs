@@ -27,18 +27,17 @@ Flutter
 <Tabs query="platform=flutter&api=extension-version"/> --->
 
 ## registerExtension
+<InlineAlert variant="warning" slots="text"/>
+
+This API is only available in Android and is deprecated in the latest version of the Signal extension. Use [`MobileCore.registerExtensions()`](../api-reference.md#registerextensions) instead.
 
 Registers the Signal extension with the Mobile Core.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 Android
 
 <Tabs query="platform=android&api=register-extension"/>
-
-iOS
-
-<Tabs query="platform=ios&api=register-extension"/>
 
 <!--- React Native
 

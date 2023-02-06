@@ -68,10 +68,6 @@ public static void registerExtension()
 Signal.registerExtension();
 ```
 
-<Variant platform="ios" api="register-extension" repeat="1"/>
-
-This API no longer exists in `Signal`. Instead, the extension should be registered by calling the `registerExtensions` API in the MobileCore. Please see the updated SDK initialization steps at the [migrate to Swift tutorial.](../../migrate-to-swift.md#update-sdk-initialization)
-
 <!--- <Variant platform="react-native" api="register-extension" repeat="1"/>
 
 When using React Native, register the Signal extension with Mobile Core in native code as shown on the Android and iOS tabs. --->
