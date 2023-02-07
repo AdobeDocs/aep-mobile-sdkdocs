@@ -5,6 +5,7 @@
 **Syntax**
 
 ```java
+@NonNull
 public static String extensionVersion();
 ```
 

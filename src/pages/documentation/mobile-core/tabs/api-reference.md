@@ -390,9 +390,15 @@ const DEBUG = "ACP_LOG_LEVEL_DEBUG";
 const VERBOSE = "ACP_LOG_LEVEL_VERBOSE";
 ``` --->
 
-<Variant platform="android" api="register-extensions" repeat="3"/>
+<Variant platform="android" api="register-extensions" repeat="5"/>
 
 #### Java
+
+**Syntax**
+
+```java
+public static void registerExtensions(@NonNull final List<Class<? extends Extension>> extensions, @Nullable final AdobeCallback<?> completionCallback)
+```
 
 **Example**
 
@@ -433,9 +439,15 @@ public class MainApp extends Application {
 }
 ```
 
-<Variant platform="ios" api="register-extensions" repeat="6"/>
+<Variant platform="ios" api="register-extensions" repeat="8"/>
 
 #### Swift
+
+**Syntax**
+
+```swift
+public static func registerExtensions(_ extensions: [NSObject.Type], _ completion: (() -> Void)? = nil)
+```
 
 **Example**
 

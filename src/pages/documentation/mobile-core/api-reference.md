@@ -120,7 +120,7 @@ iOS
 ## registerExtensions
 
 Extensions are registered with Mobile Core so that they can dispatch and listen for events.
-This API can be used to register desired extensions and boot up the SDK for event processing. Calling `MobileCore.start()` API is no longer required when using `MobileCore.registerExtensions()`.
+This API can be used to register desired extensions and boot up the SDK for event processing. Calling `MobileCore.start()` API is deprecated starting Mobile Core v2.0.0 and is no longer required when using `MobileCore.registerExtensions()`.
 
 <InlineAlert variant="warning" slots="text"/>
 
