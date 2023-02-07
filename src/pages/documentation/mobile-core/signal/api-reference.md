@@ -29,7 +29,7 @@ Flutter
 ## registerExtension
 <InlineAlert variant="warning" slots="text"/>
 
-This API is only available in Android and is deprecated starting version 2.0.0 of the Signal extension. Use [`MobileCore.registerExtensions()`](../api-reference.md#registerextensions) instead.
+This API is only available in Android and is deprecated starting version 2.0.0 of the Signal extension. Use [`MobileCore.registerExtensions()`](../../api-reference.md#registerextensions) instead.
 
 Registers the Signal extension with the Mobile Core.
 
@@ -45,5 +45,5 @@ Android
 
 ## collectPII
 
-The Signal extension can be used to handle `collectPII` rules. For more information, see the [collectPII](../api-reference.md#collectpii) API.
+The Signal extension can be used to handle `collectPII` rules. For more information, see the [collectPII](../../api-reference.md#collectpii) API.
 
