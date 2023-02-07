@@ -5,7 +5,7 @@
 **Syntax**
 
 ```java
-public static String extensionVersion()
+@NonNull public static String extensionVersion()
 ```
 
 **Example**
@@ -51,10 +51,10 @@ NSString *extensionVersion = [AEPMobileUserProfile extensionVersion];
 **Syntax**
 
 ```java
-public static void getUserAttributes(List<String> keys, AdobeCallback<Map<String, Object>> callback)
+public static void getUserAttributes(@NonNull final List<String> keys, @NonNull final AdobeCallback<Map<String, Object>> callback)
 ```
 
-* _callback_ is invoked after the customer attributes are available.
+- _callback_ is invoked after the customer attributes are available.
 
 **Example**
 
@@ -85,7 +85,7 @@ UserProfile.getUserAttributes(Arrays.asList("itemsAddedToCart"), new AdobeCallba
 static func getUserAttributes(attributeNames: [String], completion: @escaping ([String: Any]?, AEPError) -> Void)
 ```
 
-* _completion_ is the callback `function` which will be called with user attributes.
+- _completion_ is the callback `function` which will be called with user attributes.
 
 **Example**
 
@@ -123,6 +123,7 @@ NSArray *attributes = @[@"itemsAddedToCart"];
 **Syntax**
 
 ```java
+@Deprecated
 public static void registerExtension()
 ```
 
@@ -145,7 +146,7 @@ On iOS, the registration occurs by passing UserProfile extension to the [MobileC
 **Syntax**
 
 ```swift
-static func registerExtensions(_ extensions: [NSObject.Type], 
+static func registerExtensions(_ extensions: [NSObject.Type],
                                _ completion: (() -> Void)? = nil)
 ```
 
@@ -155,7 +156,7 @@ static func registerExtensions(_ extensions: [NSObject.Type],
 import AEPUserProfile
 
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-  
+
   MobileCore.registerExtensions([UserProfile.self])
   // Override point for customization after application launch.
   return true;
@@ -167,7 +168,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 **Syntax**
 
 ```objectivec
-+ (void) registerExtensions: (NSArray<Class*>* _Nonnull) extensions 
++ (void) registerExtensions: (NSArray<Class*>* _Nonnull) extensions
                  completion: (void (^ _Nullable)(void)) completion;
 ```
 
@@ -177,7 +178,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 @import AEPUserProfile;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  
+
   [AEPMobileCore registerExtensions:@[AEPMobileUserProfile.class] completion:nil];
   // Override point for customization after application launch.
   return YES;
@@ -191,7 +192,8 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 **Syntax**
 
 ```java
-public static void removeUserAttribute(String attributeName)
+@Deprecated
+public static void removeUserAttribute(@NonNull final String attributeName)
 ```
 
 **Example**
@@ -209,7 +211,7 @@ UserProfile.removeUserAttribute("itemsAddedToCart");
 **Syntax**
 
 ```java
-public static void removeUserAttributes(List<String> attributeNames)
+public static void removeUserAttributes(@NonNull final List<String> attributeNames)
 ```
 
 **Example**
@@ -259,8 +261,8 @@ UserProfile.removeUserAttributes(Arrays.asList("username", "usertype"));
 **Syntax**
 
 ```java
-public static void updateUserAttribute(String attributeName, 
-                                       Object attributeValue)
+@Deprecated
+public static void updateUserAttribute(@NonNull final String attributeName, @Nullable final Object attributeValue)
 ```
 
 **Example**
@@ -278,7 +280,7 @@ UserProfile.updateUserAttribute("username", "Will Smith");
 **Syntax**
 
 ```java
-public static void updateUserAttributes(Map<String, Object> attributeMap)
+public static void updateUserAttributes(@NonNull final Map<String, Object> attributeMap)
 ```
 
 **Example**
