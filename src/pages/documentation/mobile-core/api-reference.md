@@ -172,25 +172,26 @@ iOS
 
 <Tabs query="platform=react-native&api=log"/> --->
 
-## registerExtension(s)
+## registerExtensions
 
 Extensions are registered with Mobile Core so that they can dispatch and listen for events.
+This API can be used to register desired extensions and boot up the SDK for event processing. Calling `MobileCore.start()` API is deprecated starting Mobile Core v2.0.0 and is no longer required when using `MobileCore.registerExtensions()`.
 
 <InlineAlert variant="warning" slots="text"/>
 
 Extension registration is **mandatory**. Attempting to make extension-specific API calls without registering the extension will lead to undefined behavior.
 
-The following code snippets demonstrate how you can import and register the Mobile Core and Profile extensions. You can also see, for reference, how Identity, Lifecycle, Signal, Profile, and other extensions are imported and registered.
+The following code snippets demonstrate how Lifecycle, Signal, Profile, Edge, and other extensions are imported and registered.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
-<Tabs query="platform=android&api=register-extension"/>
+<Tabs query="platform=android&api=register-extensions"/>
 
 iOS
 
-<Tabs query="platform=ios&api=register-extension"/>
+<Tabs query="platform=ios&api=register-extensions"/>
 
 <!--- React Native
 
