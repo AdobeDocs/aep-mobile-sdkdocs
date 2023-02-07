@@ -390,7 +390,7 @@ const DEBUG = "ACP_LOG_LEVEL_DEBUG";
 const VERBOSE = "ACP_LOG_LEVEL_VERBOSE";
 ``` --->
 
-<Variant platform="android" api="register-extension" repeat="3"/>
+<Variant platform="android" api="register-extensions" repeat="3"/>
 
 #### Java
 
@@ -410,14 +410,14 @@ import com.adobe.marketing.mobile.UserProfile;
 import android.app.Application;
 ...
 public class MainApp extends Application {
-    private static final String APP_ID = "YOUR_APP_ID";
+    private static final String ENVIRONMENT_FILE_ID = "YOUR_ENVIRONMENT_FILE_ID";
 
     @Override
     public void onCreate() {
         super.onCreate();
 
         MobileCore.setApplication(this);
-        MobileCore.configureWithAppID(APP_ID);
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
 
         List<Class<? extends Extension>> extensions = Arrays.asList(
                 Lifecycle.EXTENSION,
@@ -433,7 +433,7 @@ public class MainApp extends Application {
 }
 ```
 
-<Variant platform="ios" api="register-extension" repeat="6"/>
+<Variant platform="ios" api="register-extensions" repeat="6"/>
 
 #### Swift
 

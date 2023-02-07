@@ -29,7 +29,7 @@ Flutter
 ## registerExtension
 <InlineAlert variant="warning" slots="text"/>
 
-This API is only available in Android and is deprecated in the latest version of the Signal extension. Use [`MobileCore.registerExtensions()`](../api-reference.md#registerextensions) instead.
+This API is only available in Android and is deprecated starting version 2.0.0 of the Signal extension. Use [`MobileCore.registerExtensions()`](../api-reference.md#registerextensions) instead.
 
 Registers the Signal extension with the Mobile Core.
 

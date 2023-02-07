@@ -126,17 +126,17 @@ This API can be used to register desired extensions and boot up the SDK for even
 
 Extension registration is **mandatory**. Attempting to make extension-specific API calls without registering the extension will lead to undefined behavior.
 
-The following code snippets demonstrate how Lifecycle, Signal, Profile, Edge and other extensions are imported and registered.
+The following code snippets demonstrate how Lifecycle, Signal, Profile, Edge, and other extensions are imported and registered.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
-<Tabs query="platform=android&api=register-extension"/>
+<Tabs query="platform=android&api=register-extensions"/>
 
 iOS
 
-<Tabs query="platform=ios&api=register-extension"/>
+<Tabs query="platform=ios&api=register-extensions"/>
 
 <!--- React Native
 

@@ -2,15 +2,18 @@
 
 #### Java
 
-Add the [Mobile Core](../index.md) extension to your project using the app's Gradle file.
+Add the Signal extension and it's dependency, the [Mobile Core](../index.md) extension to your project using the app's Gradle file.
 
 ```java
-implementation 'com.adobe.marketing.mobile:sdk-core:2.+'
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:signal:2.+'
 ```
 
-Import the Signal extension in your application's main activity.
+Import the Signal and MobileCore extensions in your application's main activity.
+
 
 ```java
+import com.adobe.marketing.mobile.MobileCore;
 import com.adobe.marketing.mobile.Signal;
 ```
 
