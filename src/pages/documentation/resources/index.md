@@ -20,7 +20,15 @@ To see the most frequently asked questions about Mobile SDK, please read the doc
 
 You can migrate your Objective-C-based version of the SDK to the Swift-based version of the SDK. 
 
-To learn know how to migrate your Mobile SDK implementation to Swift, please read the guide on [migrating to Swift](../migrate-to-swift.md).
+To learn how to migrate your Mobile SDK implementation to Swift, please read the guide on [migrating to Swift](../migrate-to-swift.md).
+
+## Managing Gradle dependencies 
+
+To learn how to manage Gradle dependencies of Mobile SDKs, please read the guide on [managing Gradle dependencies](../manage-gradle-dependencies.md).
+
+## Managing SPM dependencies 
+
+To learn how to manage SPM dependencies of Mobile SDKs, please read the guide on [managing SPM dependencies](../manage-spm-dependencies.md).
 
 ## Privacy and GDPR
 
