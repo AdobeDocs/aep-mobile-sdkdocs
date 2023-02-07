@@ -136,6 +136,123 @@ ACPCore.collectPii(data: [String : String])
 MobileCore.collectPii(["key1" : "value1","key2" : "value2"]);
 ``` --->
 
+<Variant platform="android" api="dispatch-event" repeat="5"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void dispatchEvent(@NonNull final Event event)
+```
+
+**Example**
+
+```java
+final Map<String, Object> eventData = new HashMap<>();
+eventData.put("sampleKey", "sampleValue");
+
+final Event sampleEvent = new Event.Builder("SampleEventName", "SampleEventType", "SampleEventSource")
+                          .setEventData(eventData)
+                          .build();
+
+MobileCore.dispatchEvent(sampleEvent);
+```
+
+<Variant platform="ios" api="dispatch-event" repeat="10"/>
+
+#### Swift
+
+**Syntax**
+
+```swift
+
+```
+
+**Example**
+
+```swift
+let event = Event(name: "Sample Event Name", type: EventType.custom, source: EventType.custom, data: ["sampleKey": "sampleValue"])
+MobileCore.dispatch(event: event)
+```
+
+#### Objective-C
+
+**Syntax**
+
+```objectivec
+
+```
+
+**Example**
+
+```objectivec
+AEPEvent *event = [[AEPEvent alloc] initWithName:@"My Event" type:AEPEventType.custom source:AEPEventType.custom data:@{@"sampleKey": @"sampleValue"}];
+[AEPMobileCore dispatch:event];
+```
+
+<Variant platform="android" api="dispatch-event-with-response-callback" repeat="5"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void dispatchEventWithResponseCallback(@NonNull final Event event, final long timeoutMS, @NonNull final AdobeCallbackWithError<Event> responseCallback)
+```
+
+**Example**
+
+```java
+final Map<String, Object> eventData = new HashMap<>();
+eventData.put("sampleKey", "sampleValue");
+
+final Event sampleEvent = new Event.Builder("My Event", "SampleEventType", "SampleEventSource")
+                          .setEventData(eventData)
+                          .build();
+
+MobileCore.dispatchEventWithResponseCallback(sampleEvent, 5000L, new AdobeCallbackWithError<Event>() {
+    // handle response event
+});
+```
+
+<Variant platform="ios" api="dispatch-event-with-response-callback" repeat="10"/>
+
+#### Swift
+
+**Syntax**
+
+```swift
+public static func dispatch(event: Event, timeout: TimeInterval = 1, responseCallback: @escaping (Event?) -> Void)
+```
+
+**Example**
+
+```swift
+let event = Event(name: "My Event", type: EventType.custom, source: EventType.custom, data: ["sampleKey": "sampleValue"])
+MobileCore.dispatch(event: event) { (responseEvent) in
+    // handle responseEvent
+}
+```
+
+#### Objective-C
+
+**Syntax**
+
+```objectivec
+
+```
+
+**Example**
+
+```objectivec
+AEPEvent *event = [[AEPEvent alloc] initWithName:@"My Event" type:AEPEventType.custom source:AEPEventType.custom data:@{@"sampleKey": @"sampleValue"}];
+[AEPMobileCore dispatch:event responseCallback:^(AEPEvent * _Nullable responseEvent) {
+    // handle responseEvent
+}];
+```
+
+
 <Variant platform="android" api="get-application" repeat="6"/>
 
 #### Java
@@ -285,7 +402,9 @@ static func getSdkIdentities(completion: @escaping (String?, Error?) -> Void)
  }];
 ```
 
-<Variant platform="android" api="log" repeat="10"/>
+<Variant platform="android" api="log" repeat="11"/>
+
+This API was deprecated in v2.0.0 of the Mobile Core extension. Use the `com.adobe.marketing.mobile.services.Log` instead.
 
 #### Java
 
@@ -829,6 +948,56 @@ public static void setLargeIconResourceID(int resourceID)
 ```java
  MobileCore.setLargeIconResourceID(R.mipmap.ic_launcher_round);
 ```
+
+<Variant platform="android" api="set-wrapper-type" repeat="6"/>
+
+The wrapper type can be set to one of the follwing types: `NONE`, `REACT_NATIVE`, `FLUTTER`, `CORDOVA`, `UNITY`, `XAMARIN`.
+
+#### Java
+
+**Syntax**
+
+```java
+public static void setWrapperType(@NonNull final WrapperType wrapperType)
+```
+
+**Example**
+
+```java
+MobileCore.setWrapperType(WrapperType.REACT_NATIVE);
+```
+
+<Variant platform="ios" api="set-wrapper-type" repeat="11"/>
+
+The wrapper type can be set to one of the follwing types: `none`, `reactNative`, `flutter`, `cordova`, `unity`, `xamarin`.
+
+#### Swift
+
+**Syntax**
+
+```swift
+public static func setWrapperType(_ type: WrapperType)
+```
+
+**Example**
+
+```swift
+MobileCore.setWrapperType(.flutter)
+```
+
+#### Objective-C
+
+**Syntax**
+
+```objc
+[AEPMobileCore setWrapperType:AEPWrapperTypeFlutter];
+```
+
+**Example**
+
+```objectivec
+```
+
 
 <Variant platform="android" api="track-action" repeat="6"/>
 

@@ -2,6 +2,14 @@ import Tabs from './tabs/api-reference.md'
 
 # Mobile Core API reference
 
+## clearUpdatedConfiguration
+
+You can clear any programmatic updates made to the configuration via the `clearUpdatedConfiguration` API. For more information about configuration in Mobile Core, please refer to the [Configuration API reference](configuration/api-reference.md#clearupdateconfiguration).
+
+## collectMessageInfo
+
+
+
 ## collectLaunchInfo
 
 You can provide the user information to the SDK from various launch points in your application.
@@ -42,6 +50,49 @@ iOS
 
 <Tabs query="platform=react-native&api=collect-pii"/> --->
 
+## configureWithAppId
+
+The `configureWithAppId` API can be used to download the configuration for the provided app ID and apply the configuration to the current session.
+For more information about configuration in Mobile Core, please refer to the [Configuration API reference](configuration/api-reference.md#configurewithappid).
+
+## configureWithFileInAssets
+
+You can bundle a JSON configuration file in the app's Assets folder and use `configureWithFileInAssets` API to replace or complement the configuration that was downloaded using the [`configureWithAppId`](#configurewithappid) API.
+For more information about configuration in Mobile Core, please refer to the [Configuration API reference](configuration/api-reference.md#configurewithfileinassets).
+
+## configureWithFileInPath
+
+You can bundle a JSON configuration file in you app package and use `configureWithFileInPath` API to replace or complement the configuration that was downloaded using the [`configureWithAppId`](#configurewithappid) API.
+For more information about configuration in Mobile Core, please refer to the [Configuration API reference](configuration/api-reference.md#configurewithfileinpath).
+
+## dispatch / dispatchEvent
+
+This method can be used to send an event through the Mobile Core for other extensions to consume.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<Tabs query="platform=android&api=dispatch-event"/>
+
+iOS
+
+<Tabs query="platform=ios&api=dispatch-event"/>
+
+## dispatch / dispatchEventWithResponseCallback
+
+This method can be used to send an event through the Mobile Core for other extensions to consume. The provided event is used as a trigger and in return a response Event is provided as a callback. The callback is invoked with a null event if the response could not be provided within the timeout provided.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<Tabs query="platform=android&api=dispatch-event-with-response-callback"/>
+
+iOS
+
+<Tabs query="platform=ios&api=dispatch-event-with-response-callback"/>
+
 ## getApplication
 
 You can use the `getApplication` method to get the previously set Android `Application` instance. The `Application` instance is mainly provided for third-party extensions.
@@ -69,6 +120,10 @@ iOS
 <!--- React Native
 
 <Tabs query="platform=react-native&api=get-log-level"/> --->
+
+## getPrivacyStatus
+
+You can use the `getPrivacyStatus` API to retrieve the current privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../privacy-and-gdpr.md#get-privacy-status)
 
 ## getSdkIdentities
 
@@ -236,6 +291,10 @@ Flutter
 
 <Tabs query="platform=flutter&api=set-log-level"/> --->
 
+## setPrivacyStatus
+
+You can use the `setPrivacyStatus` API to set the privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../privacy-and-gdpr.md#set-privacy-status) API's.
+
 ## setPushIdentifier
 
 This API sets the device token for push notifications in the SDK. If the current SDK privacy status is `optedout`, the push identifier is not set.
@@ -263,6 +322,37 @@ You can set the small and large icons that will be used for notifications that a
 Android
 
 <Tabs query="platform=android&api=set-icon-resource-id"/>
+
+## setWrapperType
+
+You should use the `setWrapperType` API to set the wrapper type when the SDK is being used in a cross platform environment.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<Tabs query="platform=android&api=set-wrapper-type"/>
+
+iOS
+
+<Tabs query="platform=ios&api=set-wrapper-type"/>
+
+## start
+
+<InlineAlert variant="warning" slots="text"/>
+
+This is an Android only api and has been deprecated starting Mobile Core extension v2.0.0.
+Use [registerExtensions](#registerExtensions) register desired extensions and boot up the SDK for event processing. Calling `MobileCore.start()` API is no longer required when using `MobileCore.registerExtensions()`.
+
+The `start` API triggers Mobile Core to start event processing. This should be used after the desired set of extensions have been registered using `MobileCore.registerExtension()`  or `<EXTENSION_NAME>.registerExtension()`. 
+A call to `start` will wait for any outstanding registrations to complete and then start event processing. You can use the callback to kickoff additional operations immediately after any operations kicked off during registration.
+This method should not be invoked more than once in your app.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+
+Android
+
+<Tabs query="platform=android&api=start"/>
 
 ## trackAction
 
