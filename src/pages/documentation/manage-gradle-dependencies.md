@@ -2,7 +2,7 @@
 
 Installation via [Maven](https://maven.apache.org/) & [Gradle](https://gradle.org/) is the easiest and recommended way to get the AEP SDK into your Android app. 
 
-Our getting started guide and the Android installation instructions generated for Mobile Properties in [Data Collection UI](https://developer-stage.adobe.com/client-sdks/documentation/getting-started/get-the-sdk/) use dynamic versioning for Gradle dependencies. This is done to simplyfy getting started with the latest versions of our SDKs. Use of dynamic dependency version is not recommended as it makes builds non-deterministic. This causes builds to break without any obvious change, and worse, can be caused by a transitive dependency that the build author has no control over.
+The Android installation instructions generated for mobile properties in the Data Collection UI, as indicated in our [getting started guide](https://developer.adobe.com/client-sdks/documentation/getting-started/get-the-sdk/), use dynamic versioning for Gradle dependencies. This is done to simplify getting started with the latest versions of our SDKs. Use of dynamic dependency version is not recommended as it makes builds non-deterministic. This causes builds to break without any obvious change, and worse, can be caused by a transitive dependency that the build author has no control over.
 
 To have predictable builds, follow one of these approaches when managing gradle dependencies. 
 
@@ -19,4 +19,4 @@ IDEs such as Android Studio or IntelliJ highlight dynamic or outdated dependenci
 
 Gradle dependency locking is a feature that allows developers to lock the versions of dependencies used in a project, ensuring that the same versions are used consistently across different builds and environments. This increases build's stability and predictability, and prevents version conflicts or unexpected behavior caused by using different versions of dependencies.
 
-For instructions on how to enable and utilize dependency locking within your project, please refer to the following resource: [https://docs.gradle.org/current/userguide/dependency_locking.html](https://docs.gradle.org/current/userguide/dependency_locking.html)
+Please refer to the gradle [locking dependency versions guide](https://docs.gradle.org/current/userguide/dependency_locking.html) to enable dependency locking in your project.
