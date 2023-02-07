@@ -1,3 +1,44 @@
+<Variant platform="android" task="add" repeat="3"/>
+
+#### Java
+
+1. Add the `UserProfile` library to your project using the app's gradle file.
+
+2. Import the `UserProfile` library and any other SDK library in your application's main activity.
+
+```java
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.UserProfile;
+```
+
+<Variant platform="ios" task="add" repeat="7"/>
+
+1. Add the Mobile Core and Profile extensions to your project using Cocoapods. Add following pods in your `Podfile`:
+
+```ruby
+use_frameworks!
+target 'YourTargetApp' do
+    pod 'AEPCore', '~> 3.0'
+    pod 'AEPUserProfile', '~> 3.0'
+end
+```
+
+2. Import the UserProfile library.
+
+#### Swift
+
+```swift
+   import AEPCore
+   import AEPUserProfile
+```
+
+#### Objective-C
+
+```objectivec
+   @import AEPCore;
+   @import AEPUserProfile;
+```
+
 <Variant platform="android" task="register" repeat="5"/>
 
 #### Java
@@ -45,45 +86,4 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
   // Override point for customization after application launch.
   return YES;
 }
-```
-
-<Variant platform="android" task="add" repeat="3"/>
-
-#### Java
-
-1. Add the `UserProfile` library to your project using the app's gradle file.
-
-2. Import the `UserProfile` library and any other SDK library in your application's main activity.
-
-```java
-import com.adobe.marketing.mobile.MobileCore;
-import com.adobe.marketing.mobile.UserProfile;
-```
-
-<Variant platform="ios" task="add" repeat="7"/>
-
-1. Add the Mobile Core and Profile extensions to your project using Cocoapods. Add following pods in your `Podfile`:
-
-```ruby
-use_frameworks!
-target 'YourTargetApp' do
-    pod 'AEPCore', '~> 3.0'
-    pod 'AEPUserProfile', '~> 3.0'
-end
-```
-
-2. Import the UserProfile library.
-
-#### Swift
-
-```swift
-   import AEPCore
-   import AEPUserProfile
-```
-
-#### Objective-C
-
-```objectivec
-   @import AEPCore;
-   @import AEPUserProfile;
 ```
