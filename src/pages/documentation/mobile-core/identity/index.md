@@ -2,7 +2,7 @@ import Tabs from './tabs/index.md'
 
 # Identity
 
-The Identity extension is bundled with [Mobile Core](../index.md) and enables your app with the Experience Cloud ID (ECID). This service helps with the synchronization of Adobe and other customer identifiers.
+The Identity extension enables your app with the Experience Cloud ID (ECID). This service helps with the synchronization of Adobe and other customer identifiers.
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -12,12 +12,12 @@ To get started with Identity, complete the following steps:
 
 1. Add the **Identity** extension to your app.
 2. Implement the SDK APIs to complete the following tasks:
-   * Update customer IDs.
-   * Append Adobe visitor data to a URL string.
-   * Return customer IDs.
-   * Retrieve Experience Cloud IDs.
-   * Set advertising IDs.
-   * Set the device notification for push notifications.
+   - Update customer IDs.
+   - Append Adobe visitor data to a URL string.
+   - Return customer IDs.
+   - Retrieve Experience Cloud IDs.
+   - Set advertising IDs.
+   - Set the device notification for push notifications.
 
 ## Add the Identity extension to your app
 
@@ -31,17 +31,9 @@ iOS
 
 <Tabs query="platform=ios&task=add"/>
 
-<!--- React Native
-
-<Tabs query="platform=react-native&task=add"/>
-
-Flutter
-
-<Tabs query="platform=flutter&task=add"/> --->
-
 ## Register the Identity extension
 
-The `registerExtension()` API registers the Identity extension with the Mobile Core extension. This API allows the extension to send and receive events to and from the Mobile SDK.
+The `MobileCore.registerExtensions()` API can be used to register the Identity extension with the Mobile Core extension. This API allows the extension to send and receive events to and from the Mobile SDK.
 
 To register the Identity extension, use the following code sample:
 
@@ -54,14 +46,6 @@ Android
 iOS
 
 <Tabs query="platform=ios&task=register"/>
-
-<!--- React Native
-
-<Tabs query="platform=react-native&task=register"/>
-
-Flutter
-
-<Tabs query="platform=flutter&task=register"/> --->
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -112,4 +96,3 @@ Flutter
 <Tabs query="platform=flutter&task=implement"/> --->
 
 The ID service code on the destination domain extracts the ECID from the URL instead of sending a request to Adobe for a new ID. The ID service code on the destination page uses this ECID to track the visitor. On hits from the mobile web content, verify that the `mid` parameter exists on each hit, and that this value matches the `mid`value that is being sent by the app code.
-
