@@ -4,10 +4,11 @@ import Tabs from './tabs/api-reference.md'
 
 ## clearUpdatedConfiguration
 
-You can clear any programmatic updates made to the configuration via the `clearUpdatedConfiguration` API. For more information about configuration in Mobile Core, please refer to the [Configuration API reference](configuration/api-reference.md#clearupdateconfiguration).
+Programmatic updates made to the configuration can be cleared via the `clearUpdatedConfiguration` API. For more information about configuration in Mobile Core, please refer to the [Configuration API reference](configuration/api-reference.md#clearupdatedconfiguration).
 
 ## collectMessageInfo
 
+User interactions with local or push notifications can be tracked by invoking the `collectMessageInfo`. Please refer to [this page](../../documentation/adobe-campaign-standard#tracking-local-and-push-notification-message-interactions) for more information about tracking local and push notification message interactions.
 
 
 ## collectLaunchInfo
@@ -81,7 +82,7 @@ iOS
 
 ## dispatch / dispatchEventWithResponseCallback
 
-This method can be used to send an event through the Mobile Core for other extensions to consume. The provided event is used as a trigger and in return a response Event is provided as a callback. The callback is invoked with a null event if the response could not be provided within the timeout provided.
+This method can be used to send an event through the Mobile Core for other extensions to consume. The provided event is used as a trigger and in return a response Event is provided as a callback. The callback is invoked with a null event if the response could not be provided within the given timeout.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -171,6 +172,36 @@ iOS
 <!--- React Native
 
 <Tabs query="platform=react-native&api=log"/> --->
+
+
+## registerEventListener
+
+
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<Tabs query="platform=android&api=register-event-listener"/>
+
+iOS
+
+<Tabs query="platform=ios&api=register-event-listener"/>
+
+
+## registerExtension
+
+Extensions can be incrementally registered with Mobile Core using `registerExtension` API.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<Tabs query="platform=android&api=register-extension"/>
+
+iOS
+
+<Tabs query="platform=ios&api=register-extension"/>
 
 ## registerExtensions
 
@@ -343,7 +374,7 @@ iOS
 <InlineAlert variant="warning" slots="text"/>
 
 This is an Android only api and has been deprecated starting Mobile Core extension v2.0.0.
-Use [registerExtensions](#registerExtensions) register desired extensions and boot up the SDK for event processing. Calling `MobileCore.start()` API is no longer required when using `MobileCore.registerExtensions()`.
+Use [registerExtensions](#registerExtensions) to register desired extensions and boot up the SDK for event processing. Calling `MobileCore.start()` API is no longer required when using `MobileCore.registerExtensions()`.
 
 The `start` API triggers Mobile Core to start event processing. This should be used after the desired set of extensions have been registered using `MobileCore.registerExtension()`  or `<EXTENSION_NAME>.registerExtension()`. 
 A call to `start` will wait for any outstanding registrations to complete and then start event processing. You can use the callback to kickoff additional operations immediately after any operations kicked off during registration.
@@ -410,6 +441,10 @@ iOS
 Flutter
 
 <Tabs query="platform=flutter&api=track-state"/> --->
+
+## updateConfiguration
+
+You can update the configuration programmatically by passing configuration keys and values to override the existing configuration using `updateConfiguration` API. For more information about configuration in Mobile Core, please refer to the [Configuration API reference](configuration/api-reference.md#updateconfiguration).
 
 ## Public classes
 

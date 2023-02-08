@@ -60,7 +60,7 @@ public static func collectLaunchInfo(_ userInfo: [String: Any])
 **Syntax**
 
 ```java
-public static void collectPII(final Map<String, String> piiData);
+public static void collectPII(@NonNull final Map<String, String> piiData);
 ```
 
 **Example**
@@ -509,6 +509,110 @@ const DEBUG = "ACP_LOG_LEVEL_DEBUG";
 const VERBOSE = "ACP_LOG_LEVEL_VERBOSE";
 ``` --->
 
+<Variant platform="android" api="register-event-listener" repeat="5"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void registerEventListener(@NonNull final String eventType, @NonNull final String eventSource, @NonNull final AdobeCallback<Event> callback)
+```
+
+**Example**
+
+```java
+MobileCore.registerEventListener(EventType.CONFIGURATION, EventSource.RESPONSE_CONTENT, new AdobeCallback<Event>() {
+    @Override
+    public void call(Event value) {
+        // handle event
+    }
+});
+```
+
+<Variant platform="ios" api="register-event-listener" repeat="10"/>
+
+
+#### Swift
+
+**Syntax**
+
+```swift
+public static func registerEventListener(type: String, source: String, listener: @escaping EventListener)
+```
+
+**Example**
+
+```swift
+MobileCore.registerEventListener(type: EventType.configuration, source: EventSource.responseContent, listener: { event in
+   // handle event 
+})
+```
+
+#### Objective-C
+
+**Syntax**
+
+```objc
+```
+
+**Example**
+
+```objectivec
+[AEPMobileCore registerEventListenerWithType: type source: source listener:^(AEPEvent * _Nonnull event) {
+   // handle event
+}];
+```
+
+<Variant platform="android" api="register-extension" repeat="5"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static boolean registerExtension(@NonNull final Class<? extends Extension> extensionClass, @Nullable final ExtensionErrorCallback<ExtensionError> errorCallback)
+```
+
+**Example**
+
+```java
+```
+
+<Variant platform="ios" api="register-extension" repeat="10"/>
+
+
+#### Swift
+
+**Syntax**
+
+```swift
+public static func registerExtension(_ exten: Extension.Type, _ completion: (() -> Void)? = nil)
+```
+
+**Example**
+
+```swift
+MobileCore.registerExtension(Lifecycle.self) {
+    // handle completion
+}
+```
+
+#### Objective-C
+
+**Syntax**
+
+```objc
+```
+
+**Example**
+
+```objectivec
+[AEPMobileCore registerExtension:AEPMobileLifecycle.class completion:^{
+   // handle completion
+}];
+```
+
 <Variant platform="android" api="register-extensions" repeat="5"/>
 
 #### Java
@@ -535,6 +639,8 @@ import com.adobe.marketing.mobile.UserProfile;
 import android.app.Application;
 ...
 public class MainApp extends Application {
+
+    // Set up the preferred Environment File ID from your mobile property configured in Data Collection UI 
     private static final String ENVIRONMENT_FILE_ID = "YOUR_ENVIRONMENT_FILE_ID";
 
     @Override
@@ -1000,14 +1106,56 @@ MobileCore.setWrapperType(.flutter)
 **Syntax**
 
 ```objc
-[AEPMobileCore setWrapperType:AEPWrapperTypeFlutter];
 ```
 
 **Example**
 
 ```objectivec
+[AEPMobileCore setWrapperType:AEPWrapperTypeFlutter];
 ```
 
+<Variant platform="android" api="start" repeat="5"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void start(@Nullable final AdobeCallback<?> completionCallback)
+```
+
+**Example**
+
+```java
+import com.adobe.marketing.mobile.AdobeCallback;
+import com.adobe.marketing.mobile.Lifecycle;
+import com.adobe.marketing.mobile.LoggingMode;
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Signal;
+import com.adobe.marketing.mobile.UserProfile;
+...
+import android.app.Application;
+...
+public class MyApp extends Application {
+  ...
+  @Override
+  public void on Create(){
+    super.onCreate();
+
+    MobileCore.setApplication(this);
+
+    UserProfile.registerExtension();
+    Lifecycle.registerExtension();
+    Signal.registerExtension();
+    MobileCore.start(new AdobeCallback () {
+        @Override
+        public void call(Object o) {
+          // implement callback
+        }
+    });
+  }
+}
+```
 
 <Variant platform="android" api="track-action" repeat="6"/>
 
