@@ -1069,7 +1069,7 @@ tracker.trackError(errorId: "errorId")
 [_tracker trackError:@"errorId"];
 ```
 
-<Variant platform="android" api="track-event" repeat="16"/>
+<Variant platform="android" api="track-event" repeat="32"/>
 
 #### Java
 
@@ -1244,7 +1244,6 @@ public void trackEvent(Media.Event event, Map<String, Object> info, Map<String, 
 // ChapterSkip
   tracker.trackEvent(Media.Event.ChapterSkip, null, null)
 ```
-
 
 **Tracking playback events**
 
@@ -1474,7 +1473,7 @@ func trackEvent(event: MediaEvent, info: [String: Any]?, metadata: [String: Stri
   [_tracker trackEvent:AEPMediaEventBitrateChange info:nil metadata:nil];
 ```
 
-<Variant platform="android" api="update-current-playhead" repeat="7"/>
+<Variant platform="android" api="update-current-playhead" repeat="14"/>
 
 #### Java
 
@@ -1487,7 +1486,7 @@ public void updateCurrentPlayhead(double time);
 **Example**
 
 ```java
-_tracker.updateCurrentPlayhead(1);
+tracker.updateCurrentPlayhead(1);
 ```
 
 **Live streaming example**
@@ -1496,7 +1495,29 @@ _tracker.updateCurrentPlayhead(1);
 //Calculation for number of seconds since midnight UTC of the day
 double timeFromMidnightInSecond = (System.currentTimeMillis()/1000) % 86400;
 
-_tracker.updateCurrentPlayhead(timeFromMidnightInSecond);
+tracker.updateCurrentPlayhead(timeFromMidnightInSecond);
+```
+
+#### Kotlin
+
+**Syntax**
+
+```java
+public void updateCurrentPlayhead(double time);
+```
+
+**Example**
+
+```java
+tracker.updateCurrentPlayhead(1);
+```
+
+**Live streaming example**
+
+```java
+val timeFromMidnightInSecond = (System.currentTimeMillis() / 1000 % 86400).toDouble()
+tracker.updateCurrentPlayhead(timeFromMidnightInSecond);
+}
 ```
 
 <Variant platform="ios" api="update-current-playhead" repeat="12"/>
@@ -1539,7 +1560,7 @@ tracker.updateCurrentPlayhead(time: timeFromMidnightInSecond)
 [_tracker updateCurrentPlayhead:1];
 ```
 
-<Variant platform="android" api="update-qoe-object" repeat="5"/>
+<Variant platform="android" api="update-qoe-object" repeat="10"/>
 
 #### Java
 
@@ -1553,7 +1574,22 @@ public void updateQoEObject(Map<String, Object> qoeObject);
 
 ```java
 HashMap<String, Object> qoeObject = Media.createQoEObject(1000000L, 2D, 25D, 10D);
-_tracker.updateQoEObject(qoeObject);
+tracker.updateQoEObject(qoeObject);
+```
+
+#### Kotlin
+
+**Syntax**
+
+```java
+public void updateQoEObject(Map<String, Object> qoeObject);
+```
+
+**Example**
+
+```java
+val qoeObject = Media.createQoEObject(1000000L, 2D, 25D, 10D)
+tracker.updateQoEObject(qoeObject)
 ```
 
 <Variant platform="ios" api="update-qoe-object" repeat="10"/>

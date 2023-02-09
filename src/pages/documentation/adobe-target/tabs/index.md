@@ -5,8 +5,8 @@
 1. Add the Mobile Core and Target extensions to your project using the app's Gradle file.
 
 ```java
-implementation 'com.adobe.marketing.mobile:sdk-core:1.+'
-implementation 'com.adobe.marketing.mobile:target:1.+'
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:target:2.+'
 ```
 
 2. Import the Target extension to your application's main activity.
@@ -66,31 +66,60 @@ import {ACPTarget, ACPTargetPrefetchObject, ACPTargetRequestObject, ACPTargetOrd
 ACPTarget.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPTarget version: " + version));
 ``` --->
 
-<Variant platform="android" task="register" repeat="4"/>
+<Variant platform="android" task="register" repeat="5"/>
 
 #### Java
 
 In your Application's `onCreate()` method, after calling the `setApplication()` method, register Target with Mobile Core.
 
-Here is code sample that calls these set up methods:
+```java
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Target;
+import com.adobe.marketing.mobile.AdobeCallback;
+
+public class MainApp extends Application {
+
+  private final String ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID";
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        MobileCore.setApplication(this);
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
+
+        MobileCore.registerExtensions(
+            Arrays.asList(Target.EXTENSION),
+            o -> Log.d("MainApp", "Adobe Target Mobile SDK was initialized.")
+        );
+    }
+}
+```
+
+#### Kotlin
 
 ```java
-public class TargetApp extends Application {
+import com.adobe.marketing.mobile.MobileCore
+import com.adobe.marketing.mobile.Target
+import com.adobe.marketing.mobile.AdobeCallback
 
- @Override
- public void onCreate() {
-     super.onCreate();
-     MobileCore.setApplication(this);
-     MobileCore.configureWithAppId("yourAppId");
+class MainApp : Application() {
 
-     try {
-         Target.registerExtension();
-         Identity.registerExtension();
-         MobileCore.start(null);
-     } catch (Exception e) {
-         //Log the exception
-     }
- }
+  private var ENVIRONMENT_FILE_ID: String = "YOUR_APP_ENVIRONMENT_ID"
+
+    override fun onCreate() {
+        super.onCreate()
+
+        MobileCore.setApplication(this)
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
+
+        MobileCore.registerExtensions(
+          listOf(Target.EXTENSION)
+        ) {
+          Log.d("MainApp", "Adobe Target Mobile SDK was initialized")
+        }
+    }
+
 }
 ```
 
