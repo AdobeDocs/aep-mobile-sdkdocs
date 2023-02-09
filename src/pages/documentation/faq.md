@@ -96,9 +96,16 @@ iOS
 | Consent for Edge Network  | 33       | 25           | Edge Network extension, Identity for Edge Network |
 | Analytics                 | 133      | 95           |                                                   |
 | Assurance                 | 917      | 527          | Android only: `androidx.constraintlayout`         |
-| User Profile              | 18       | 29           |                                                   |
+| Audience                  | 82       | 44           | Identity                                          |
+| Campaign                  | 166      | 80           | Identity                                          |
+| Campaign Classic          | 34       | 42           | Identity                                          |
+| Edge Bridge               | 0.84     | 6            |                                                   |
+| Media                     | 283      | 137          |                                                   |
+| Messaging                 | 33       | 77           | Edge Network extension, Identity for Edge Network |
+| Optimize                  | 88       | 80           | Edge Network extension, Identity for Edge Network |
+| Places                    | 799      | 59           |                                                   |
 | Target                    | 283      | 99           |                                                   |
-
+| User Profile              | 18       | 29           |                                                   |
 
 The sizes in the table are provided for estimation purposes only, with the following considerations:
 
