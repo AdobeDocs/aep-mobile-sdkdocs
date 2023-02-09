@@ -1,4 +1,4 @@
-<Variant platform="android" task="add" repeat="5"/>
+<Variant platform="android" task="add" repeat="6"/>
 
 #### Java
 
@@ -9,6 +9,12 @@ implementation 'com.adobe.marketing.mobile:core:2.+'
 implementation 'com.adobe.marketing.mobile:lifecycle:2.+'
 implementation 'com.adobe.marketing.mobile:campaignclassic:2.+'
 ```
+
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+
+</InlineNestedAlert>
 
 2. Import the Campaign Classic and Lifecycle extensions in your application's main activity.
 

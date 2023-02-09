@@ -2,14 +2,6 @@
 
 1. Add the Campaign Standard, [Mobile Core](../mobile-core/index.md) and [Profile](../profile/index.md) extensions to your project using the app's Gradle file.
 
-<InlineNestedAlert variant="warning" header="true" iconPosition="left">
-
-a
-
-Using dynamic dependency versions is **not** recommended for production apps. Please read the managing Gradle dependencies guide for more information. 
-
-</InlineNestedAlert>
-
 ```java
 implementation 'com.adobe.marketing.mobile:campaign:2.+'
 implementation 'com.adobe.marketing.mobile:core:2.+'
@@ -19,7 +11,13 @@ implementation 'com.adobe.marketing.mobile:signal:2.+'
 implementation 'com.adobe.marketing.mobile:userprofile:2.+'
 ```
 
-1. Import the Campaign Standard, [Mobile Core](../mobile-core/index.md), [Profile](../profile/index.md), [Lifecycle](../mobile-core/lifecycle/index.md), and [Signal](../mobile-core/signals/index.md) extensions in your application's main activity.
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+
+</InlineNestedAlert>
+
+2. Import the Campaign Standard, [Mobile Core](../mobile-core/index.md), [Profile](../profile/index.md), [Lifecycle](../mobile-core/lifecycle/index.md), and [Signal](../mobile-core/signals/index.md) extensions in your application's main activity.
 
 ```java
 import com.adobe.marketing.mobile.Campaign;

@@ -1,4 +1,4 @@
-<Variant platform="android" task="download" repeat="5"/>
+<Variant platform="android" task="download" repeat="6"/>
 
 **Java**
 
@@ -10,6 +10,12 @@ implementation 'com.adobe.marketing.mobile:edge:1.+'
 implementation 'com.adobe.marketing.mobile:edgeidentity:1.+'
 implementation 'com.adobe.marketing.mobile:edgeconsent:1.+'
 ```
+
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+
+</InlineNestedAlert>
 
 2. Import the Mobile Core and Edge extensions in your Application class.
 

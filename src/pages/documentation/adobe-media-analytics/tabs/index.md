@@ -1,4 +1,4 @@
-<Variant platform="android" task="add" repeat="9"/>
+<Variant platform="android" task="add" repeat="10"/>
 
 The latest Android SDK versions:
 
@@ -16,6 +16,12 @@ implementation 'com.adobe.marketing.mobile:identity:2.+'
 implementation 'com.adobe.marketing.mobile:analytics:2.+'
 implementation 'com.adobe.marketing.mobile:media:3.+'
 ```
+
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+
+</InlineNestedAlert>
 
 2. Import the libraries in your application's main activity.
 
