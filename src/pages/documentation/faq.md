@@ -92,8 +92,8 @@ iOS
 | Lifecycle                 | 150      | 59           |                                                   |
 | Signal                    | 18       | 33           |                                                   |
 | Edge Network extension    | 253      | 99           | Identity for Edge Network                         |
-| Identity for Edge Network | 69       | 49           |                                                   |
 | Consent for Edge Network  | 33       | 25           | Edge Network extension, Identity for Edge Network |
+| Identity for Edge Network | 69       | 49           |                                                   |
 | Analytics                 | 133      | 95           |                                                   |
 | Assurance                 | 917      | 527          | Android only: `androidx.constraintlayout`         |
 | Audience                  | 82       | 44           | Identity                                          |
