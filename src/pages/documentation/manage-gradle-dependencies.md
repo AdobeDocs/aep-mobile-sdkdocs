@@ -1,8 +1,8 @@
 # Manage dependencies using Gradle
 
-Installation via [Maven](https://maven.apache.org/) & [Gradle](https://gradle.org/) is recommended, as it's the easiest way to get the Adobe Experience Platform Mobile SDK into your Android app.
+Installation via [Maven](https://maven.apache.org/) and [Gradle](https://gradle.org/) is recommended, as it's the easiest way to get the Adobe Experience Platform Mobile SDK into your Android app.
 
-The Android installation instructions generated for mobile properties in the Data Collection UI, as indicated in the [getting started guide](./getting-started/get-the-sdk.md), use dynamic versioning for Gradle dependencies. This is done to simplify getting started with the latest versions of our SDKs. Use of dynamic dependency versions is not recommended, as it makes builds non-deterministic, which can cause builds to break without any obvious change, and worse, can be caused by a transitive dependency that the build author has no control over.
+The Android installation instructions generated for mobile properties in the Data Collection UI, as indicated in the [getting started guide](./getting-started/get-the-sdk.md), use dynamic versioning for Gradle dependencies. This is done to simplify getting started with the latest versions of our SDKs. Use of dynamic dependency versions is **not** recommended, as it makes builds non-deterministic, which can cause builds to break without any obvious change, and worse, can be caused by a transitive dependency that the build author has no control over.
 
 To have predictable builds, follow one of the following approaches when managing gradle dependencies. 
 
