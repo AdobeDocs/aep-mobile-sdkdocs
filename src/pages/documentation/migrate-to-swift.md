@@ -54,9 +54,9 @@ Save the `Podfile` and run `pod repo update` to update your local CocoaPods repo
 
 Once the previous command is complete, run `pod install` or `pod update` to update the application dependencies.
 
-### Swift Package Manager
+### Swift Package Manager (SPM)
 
-AEP SDKs also support installation through Swift Package Manager (SPM). Read the guide on [managing SPM dependencies](./manage-spm-dependencies.md) to install AEP SDK using SPM.
+Swift SDKs also support installation through Swift Package Manager (SPM). Read the guide on [managing SPM dependencies](./manage-spm-dependencies.md) to install Swift SDK using SPM.
 
 ## Update SDK initialization
 
