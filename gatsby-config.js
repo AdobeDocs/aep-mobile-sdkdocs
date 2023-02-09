@@ -899,6 +899,14 @@ module.exports = {
                     {
                         title: "Privacy and GDPR",
                         path: "documentation/privacy-and-gdpr"
+                    },
+                    {
+                        title: "Manage Gradle dependencies",
+                        path: "documentation/manage-gradle-dependencies"
+                    },
+                    {
+                        title: "Manage SPM dependencies",
+                        path: "documentation/manage-spm-dependencies"
                     }
                 ]
             },
