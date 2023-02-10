@@ -31,6 +31,11 @@ iOS
 
 <Tabs query="platform=ios&task=add"/>
 
+<!--- React Native
+<Tabs query="platform=react-native&task=add"/>
+Flutter
+<Tabs query="platform=flutter&task=add"/> --->
+
 ## Register the Identity extension
 
 The `MobileCore.registerExtensions()` API can be used to register the Identity extension with the Mobile Core extension. This API allows the extension to send and receive events to and from the Mobile SDK.
@@ -46,6 +51,11 @@ Android
 iOS
 
 <Tabs query="platform=ios&task=register"/>
+
+<!--- React Native
+<Tabs query="platform=react-native&task=register"/>
+Flutter
+<Tabs query="platform=flutter&task=register"/> --->
 
 <InlineAlert variant="info" slots="text"/>
 
