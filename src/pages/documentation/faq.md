@@ -85,6 +85,7 @@ iOS
 ### What is the size of the SDK?
 
 #### Adobe Experience Platform SDKs
+
 | Extension                 | iOS (KB) | Android (KB) | Additional Dependencies†                          |
 | :------------------------ | :------- | :----------- | :------------------------------------------------ |
 | Core                      | 925      | 497          | Android only: `kotlin-stdlib`                     |
