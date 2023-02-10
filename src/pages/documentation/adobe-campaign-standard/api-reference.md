@@ -48,7 +48,7 @@ iOS
 
 ## setLinkageFields
 
-Sets the Campaign linkage fields (CRM IDs) in the mobile SDK to be used for downloading personalized messages from Campaign.
+Sets the Campaign linkage fields (CRM IDs) in Mobile SDK to be used for downloading personalized messages from Campaign.
 
 The set linkage fields are stored as a base64 encoded JSON string in memory and they are sent in a custom HTTP header `X-InApp-Auth`.
 
