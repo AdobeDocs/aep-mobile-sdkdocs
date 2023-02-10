@@ -390,18 +390,23 @@ const DEBUG = "ACP_LOG_LEVEL_DEBUG";
 const VERBOSE = "ACP_LOG_LEVEL_VERBOSE";
 ``` --->
 
-<Variant platform="android" api="register-extension" repeat="4"/>
-
-After you register the extensions, call the `start` API in Mobile Core to initialize the SDK as shown below. This step is required to boot up the SDK for event processing. The following code snippet is provided as a sample reference.
+<Variant platform="android" api="register-extensions" repeat="5"/>
 
 #### Java
+
+**Syntax**
+
+```java
+public static void registerExtensions(@NonNull final List<Class<? extends Extension>> extensions, @Nullable final AdobeCallback<?> completionCallback)
+```
 
 **Example**
 
 ```java
 import com.adobe.marketing.mobile.AdobeCallback;
-import com.adobe.marketing.mobile.Identity;
-import com.adobe.marketing.mobile.InvalidInitException;
+import com.adobe.marketing.mobile.Edge;
+import com.adobe.marketing.mobile.edge.consent.Consent;
+import com.adobe.marketing.mobile.edge.identity.Identity;
 import com.adobe.marketing.mobile.Lifecycle;
 import com.adobe.marketing.mobile.LoggingMode;
 import com.adobe.marketing.mobile.MobileCore;
@@ -411,43 +416,45 @@ import com.adobe.marketing.mobile.UserProfile;
 import android.app.Application;
 ...
 public class MainApp extends Application {
-  ...
-  @Override
-  public void on Create(){
-    super.onCreate();
-    MobileCore.setApplication(this);
-        MobileCore.setLogLevel(LoggingMode.DEBUG);
-    ...
-    try {
-      UserProfile.registerExtension();
-            Identity.registerExtension();
-            Lifecycle.registerExtension();
-            Signal.registerExtension();
-            MobileCore.start(new AdobeCallback () {
-            @Override
-            public void call(Object o) {
-            MobileCore.configureWithAppID("<your_environment_id_from_Launch>");
+    private static final String ENVIRONMENT_FILE_ID = "YOUR_ENVIRONMENT_FILE_ID";
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        MobileCore.setApplication(this);
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
+
+        List<Class<? extends Extension>> extensions = Arrays.asList(
+                Lifecycle.EXTENSION,
+                Signal.EXTENSION,
+                UserProfile.EXTENSION
+                Edge.EXTENSION,
+                Consent.EXTENSION,
+                EdgeIdentity.EXTENSION);
+        MobileCore.registerExtensions(extensions, o -> {
+            Log.d(LOG_TAG, "AEP Mobile SDK is initialized");
+        });
     }
-});
-    } catch (InvalidInitException e) {
-      ...
-    }
-  }
 }
 ```
 
-<Variant platform="ios" api="register-extension" repeat="7"/>
-
-For iOS Swift libraries, registration is changed to a single API call (as shown in the snippets below). Calling the `MobileCore.start` API is no longer required.
+<Variant platform="ios" api="register-extensions" repeat="8"/>
 
 #### Swift
+
+**Syntax**
+
+```swift
+public static func registerExtensions(_ extensions: [NSObject.Type], _ completion: (() -> Void)? = nil)
+```
 
 **Example**
 
 ```swift
 // AppDelegate.swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    MobileCore.registerExtensions([Signal.self, Lifecycle.self, UserProfile.self, Edge.self, AEPEdgeIdentity.Identity.self, Consent.self, AEPIdentity.Identity.self, Analytics.self], {
+    MobileCore.registerExtensions([Signal.self, Lifecycle.self, UserProfile.self, Edge.self, AEPEdgeIdentity.Identity.self, Consent.self], {
         MobileCore.configureWith(appId: "yourAppId")
     })
   ...
@@ -461,7 +468,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 ```objectivec
 // AppDelegate.m
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [AEPMobileCore registerExtensions:@[AEPMobileSignal.class, AEPMobileLifecycle.class, AEPMobileUserProfile.class, AEPMobileEdge.class, AEPMobileEdgeIdentity.class, AEPMobileEdgeConsent.class, AEPMobileIdentity.class, AEPMobileAnalytics.class] completion:^{
+    [AEPMobileCore registerExtensions:@[AEPMobileSignal.class, AEPMobileLifecycle.class, AEPMobileUserProfile.class, AEPMobileEdge.class, AEPMobileEdgeIdentity.class, AEPMobileEdgeConsent.class] completion:^{
     [AEPMobileCore configureWithAppId: @"yourAppId"];
   }];
   ...
@@ -554,11 +561,9 @@ For Flutter apps, initialize the SDK using native code in your `AppDelegate` and
 
 The initialization code is located in the [Flutter ACPCore Github README](https://github.com/adobe/flutter_acpcore). --->
 
-<Variant platform="android" api="reset-identities" repeat="6"/>
+<Variant platform="android" api="reset-identities" repeat="5"/>
 
 #### Java
-
-This method is only available in Mobile Core v.1.8.0 and above.
 
 **Syntax**
 
@@ -653,7 +658,12 @@ public class CoreApp extends Application {
    public void onCreate() {
       super.onCreate();
       MobileCore.setApplication(this);
-      MobileCore.start(null);
+
+      List<Class<? extends Extension>> extensions = Arrays.asList(
+                Lifecycle.EXTENSION, Signal.EXTENSION, UserProfile.EXTENSION...);
+      MobileCore.registerExtensions(extensions, o -> {
+          Log.d(LOG_TAG, "AEP Mobile SDK is initialized");
+      });
    }
 }
 ```

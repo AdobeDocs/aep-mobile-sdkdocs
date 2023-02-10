@@ -77,5 +77,5 @@ You may call this API when the app launches with a url (see code snippet below f
 
 iOS
 
-<Tabs query="platform=ios&task=register-assurance"/>
+<Tabs query="platform=ios&task=implement-assurance"/>
 

@@ -59,6 +59,16 @@ iOS
 
 <Tabs query="platform=react-native&api=displayed-locations"/> --->
 
+## executeRawRequest
+
+This API can be used to retrieve prefetch or execute responses for mbox locations from the configured Target server.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+
+Android
+
+<Tabs query="platform=android&api=execute-raw-request"/>
+
 ## extensionVersion
 
 Returns the running version of the Target extension.
@@ -208,6 +218,16 @@ iOS
 <!--- React Native
 
 <Tabs query="platform=react-native&api=retrieve-location-content"/> --->
+
+## sendRawNotifications
+
+This API sends notification request(s) to the configured Target server for click or display notifications. The event tokens required for the Target click or display notifications can be retrieved from a previous `executeRawRequest` API response.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+
+Android
+
+<Tabs query="platform=android&api=send-raw-notifications"/>
 
 ## setPreviewRestartDeepLink
 

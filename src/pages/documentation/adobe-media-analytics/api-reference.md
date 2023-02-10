@@ -24,10 +24,6 @@ iOS
 
 Creates a media tracker instance that tracks the playback session. The tracker created should be used to track the streaming content and it sends periodic pings to the media analytics backend.
 
-<InlineAlert variant="warning" slots="text"/>
-
-The createTracker function with a callback has been **deprecated**. Please use the synchronous version of this API instead.
-
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
@@ -46,10 +42,6 @@ Creates a media tracker instance based on the configuration to track the playbac
 | :--- | :--- | :--- | :---: |
 | `config.channel` | Channel name for media. Set this to overwrite the channel name configured from launch for media tracked with this tracker instance. | String | No |
 | `config.downloadedcontent` | Creates a tracker instance to track downloaded media. Instead of sending periodic pings, the tracker only sends one ping for the entire content. | Boolean | No |
-
-<InlineAlert variant="warning" slots="text"/>
-
-The createTracker function with a callback has been **deprecated**. Please use the synchronous version of this API instead.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -197,7 +189,7 @@ Tracks the intention to start playback. This starts a tracking session on the me
 | Variable Name | Description | Required |
 | :--- | :--- | :---: |
 | `mediaInfo` | Media information created using the [createMediaObject](#createmediaobject) method. | Yes |
-| `contextData` | Optional Media context data. For standard metadata keys, use [standard video constants](#standard-video-constants) or [standard audio constants](#standard-audio-constants). | No |
+| `contextData` | Media context data. For standard metadata keys, use [standard video constants](#standard-video-constants) or [standard audio constants](#standard-audio-constants). | No |
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

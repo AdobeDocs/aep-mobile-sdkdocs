@@ -50,18 +50,6 @@ module.exports = {
                     {
                         title: "2021",
                         path: "/documentation/release-notes/2021"
-                    },
-                    {
-                        title: "2020",
-                        path: "/documentation/release-notes/2020"
-                    },
-                    {
-                        title: "2019",
-                        path: "/documentation/release-notes/2019"
-                    },
-                    {
-                        title: "2018",
-                        path: "/documentation/release-notes/2018"
                     }
                 ]
             },
@@ -903,6 +891,14 @@ module.exports = {
                     {
                         title: "Privacy and GDPR",
                         path: "documentation/privacy-and-gdpr"
+                    },
+                    {
+                        title: "Manage Gradle dependencies",
+                        path: "documentation/manage-gradle-dependencies"
+                    },
+                    {
+                        title: "Manage SPM dependencies",
+                        path: "documentation/manage-spm-dependencies"
                     }
                 ]
             },

@@ -1,4 +1,4 @@
-<Variant platform="android" task="add" repeat="9"/>
+<Variant platform="android" task="add" repeat="10"/>
 
 The latest Android SDK versions:
 
@@ -11,17 +11,25 @@ The latest Android SDK versions:
 1. Add the Media extension and its dependencies to your project using the app's Gradle file.
 
 ```java
-implementation 'com.adobe.marketing.mobile:sdk-core:1.+'
-implementation 'com.adobe.marketing.mobile:analytics:1.+'
-implementation 'com.adobe.marketing.mobile:media:2.+'
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:identity:2.+'
+implementation 'com.adobe.marketing.mobile:analytics:2.+'
+implementation 'com.adobe.marketing.mobile:media:3.+'
 ```
 
-You can also manually include the libraries. Get `.aar` libraries from [Github](https://github.com/Adobe-Marketing-Cloud/acp-sdks/tree/master/android).
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
-2. Import the Media extension in your application's main activity.
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+
+</InlineNestedAlert>
+
+2. Import the libraries in your application's main activity.
 
 ```java
-import com.adobe.marketing.mobile.*;
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Identity;
+import com.adobe.marketing.mobile.Analytics;
+import com.adobe.marketing.mobile.Media;
 ```
 
 <Variant platform="ios" task="add" repeat="11"/>
@@ -64,34 +72,46 @@ import AEPAnalytics
 
 <Variant platform="android" task="register" repeat="3"/>
 
+To register Media with Mobile Core, import the Media library and register it:
+
 #### Java
 
-To register media with Mobile Core, call the `setApplication()` method in `onCreate()` and call set up methods, as shown in this sample:
+```java
+public class MainApp extends Application {
+     private final String ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID";
+
+     @Override
+     public void onCreate() {
+         super.onCreate();
+
+         MobileCore.setApplication(this);
+         MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
+
+         List<Class<? extends Extension>> extensions = Arrays.asList(
+                 Media.EXTENSION, Analytics.EXTENSION, Identity.EXTENSION);
+         MobileCore.registerExtensions(extensions, o -> {
+             Log.d(LOG_TAG, "AEP Mobile SDK is initialized");
+         });
+     }
+ }
+```
+
+#### Kotlin
 
 ```java
-import com.adobe.marketing.mobile.*;
+class MyApp : Application() {
+    val ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID"
+    
+    override fun onCreate() {
+        super.onCreate()
+        MobileCore.setApplication(this)
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
 
-public class MobileApp extends Application {
-
-  @Override
-  public void onCreate() {
-      super.onCreate();
-      MobileCore.setApplication(this);
-
-      try {
-          Media.registerExtension();
-          Analytics.registerExtension();
-          Identity.registerExtension();
-          MobileCore.start(new AdobeCallback () {
-              @Override
-              public void call(Object o) {
-                  MobileCore.configureWithAppID("your-launch-app-id");
-              }
-          });
-      } catch (InvalidInitException e) {
-
-      }
-  }
+        val extensions = listOf(Media.EXTENSION, Analytics.EXTENSION, Identity.EXTENSION)
+        MobileCore.registerExtensions(extensions) {
+            Log.d(LOG_TAG, "AEP Mobile SDK is initialized")
+        }
+    }
 }
 ```
 
