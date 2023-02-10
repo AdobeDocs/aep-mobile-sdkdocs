@@ -53,3 +53,7 @@ Android
 iOS
 
 <Tabs query="platform=ios&task=register"/>
+
+<!--- React Native
+<Tabs query="platform=react-native&task=register"/>
+--->
