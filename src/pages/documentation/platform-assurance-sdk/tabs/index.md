@@ -11,6 +11,8 @@ implementation 'com.adobe.marketing.mobile:assurance:2.+'
 
 Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
 
+</InlineNestedAlert>
+
 2. Import the Assurance library along with the other Mobile SDK libraries:
 
 ```java
