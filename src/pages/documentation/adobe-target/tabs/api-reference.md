@@ -59,7 +59,7 @@ ACPTarget.clearPrefetchCache();
 **Syntax**
 
 ```java
-public static void locationClicked(final String mboxName, final TargetParameters parameters)
+public static void clickedLocation(final String mboxName, final TargetParameters parameters)
 ```
 
 * _mboxName_ is a String that contains the mbox location for which the click notification will be sent to Target.
@@ -94,7 +94,7 @@ TargetParameters targetParameters = new TargetParameters.Builder(mboxParameters)
                                 .product(targetProduct)
                                 .build();
 
-Target.locationClicked("cartLocation", targetParameters);
+Target.clickedLocation("cartLocation", targetParameters);
 ```
 
 <Variant platform="ios" api="clicked-location" repeat="8"/>
@@ -168,7 +168,7 @@ ACPTarget.locationClickedWithName("cartLocation", targetParameters);
 **Syntax**
 
 ```java
-public static void locationsDisplayed(final List<String> mboxNames, final TargetParameters targetParameters)
+public static void displayedLocations(final List<String> mboxNames, final TargetParameters targetParameters)
 ```
 
 * _mboxNames_ is a list of the mbox locations for which the display notification will be sent to Target.
@@ -194,7 +194,7 @@ TargetParameters targetParameters = new TargetParameters.Builder()
 List<String> mboxList = new ArrayList<>();
 mboxList.add("mboxName1");
 
-Target.locationsDisplayed(mboxList, targetParameters);
+Target.displayedLocations(mboxList, targetParameters);
 ```
 
 <Variant platform="ios" api="displayed-locations" repeat="8"/>
@@ -255,6 +255,94 @@ var targetParameters = new ACPTargetParameters(null, null, product, order);
 
 ACPTarget.locationsDisplayed(["mboxName1", "mboxName2"], targetParameters);
 ``` --->
+
+<Variant platform="android" api="execute-raw-request" repeat="6"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void executeRawRequest(final Map<String, Object> request, final AdobeCallback<Map<String, Object>> callback)
+```
+
+* `request`: A map containing prefetch or execute request data in the Target v1 delivery API request format.
+* `callback`: An AdobeCallback instance which will be called after the Target request is completed. The parameter in the callback will contain the response data if the request executed successfully, or it will contain null otherwise. 
+
+**Example**
+
+```java
+final Map<String, Object> executeMbox1 = new HashMap<String, Object>() {
+    {
+        put("index", 0);
+        put("name", "mbox1");
+        put("parameters", new HashMap<String, String>() {
+            {
+                put("mbox_parameter_key1", "mbox_parameter_value1");
+            }
+        });
+        put("profileParameters", new HashMap<String, String>() {
+            {
+                put("subscription", "premium");
+            }
+        });
+        put("order", new HashMap<String, Object>() {
+            {
+                put("id", "id1");
+                put("total", 100.34);
+                put("purchasedProductIds", new ArrayList<String>() {
+                    {
+                        add("pId1");
+                    }
+                });
+            }
+        });
+        put("product", new HashMap<String, String>() {
+            {
+                put("id", "pId1");
+                put("categoryId", "cId1");
+            }
+        });
+    }
+};
+
+final Map<String, Object> executeMbox2 = new HashMap<String, Object>() {
+    {
+        put("index", 1);
+        put("name", "mbox2");
+        put("parameters", new HashMap<String, String>() {
+            {
+                put("mbox_parameter_key2", "mbox_parameter_value2");
+            }
+        });
+    }
+};
+
+final List<Map<String, Object>> executeMboxes = new ArrayList<>();
+executeMboxes.add(executeMbox1);
+executeMboxes.add(executeMbox2);
+
+final Map<String, Object> request = new HashMap<String, Object>() {
+    {
+        put("execute", new HashMap<String, Object>() {
+            {
+                put("mboxes", executeMboxes);
+            }
+        });
+    }
+};
+
+Target.executeRawRequest(request, response -> {
+    System.out.println("Received Target raw response.");
+
+    if (response == null) {
+        System.out.println("Null Target response!");
+        return;
+    }
+
+    // handle response
+});
+```
 
 <Variant platform="android" api="extension-version" repeat="5"/>
 
@@ -693,25 +781,13 @@ var targetParameters = new ACPTargetParameters(mboxParameters, profileParameters
 ACPTarget.prefetchContent(prefetchList, targetParameters).then(success => console.log(success)).catch(err => console.log(err));
 ``` --->
 
-<Variant platform="android" api="register-extension" repeat="5"/>
+<Variant platform="android" api="register-extension" repeat="1"/>
 
-#### Java
-
-**Syntax**
-
-```java
-public static void registerExtension()
-```
-
-**Example**
-
-```java
-Target.registerExtension();
-```
+This API has been deprecated from version 2.0.0. Instead, the extension should be registered by calling the `registerExtensions` API in Mobile Core. For more information, please read the [Mobile Core API guide](../../mobile-core/api-reference.md).
 
 <Variant platform="ios" api="register-extension" repeat="1"/>
 
-This API no longer exists in `Target`. Instead, the extension should be registered by calling the `registerExtensions` API in the MobileCore. Please see the updated SDK initialization steps at the [migrate to Swift tutorial](../migrate-to-swift.md#update-sdk-initialization).
+This API no longer exists in `Target`. Instead, the extension should be registered by calling the `registerExtensions` API in Mobile Core. Please see the updated SDK initialization steps at the [migrate to Swift tutorial](../migrate-to-swift.md#update-sdk-initialization).
 
 <!--- <Variant platform="react-native" api="register-extension" repeat="1"/>
 
@@ -1038,6 +1114,52 @@ var targetParameters = new ACPTargetParameters(mboxParameters, profileParameters
 ACPTarget.retrieveLocationContent(requestArray, targetParameters);
 ``` --->
 
+<Variant platform="android" api="send-raw-notifications" repeat="5"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void sendRawNotifications(final Map<String, Object> request)
+```
+
+* `request`: A map containing notifications data in the Target v1 delivery API request format.
+
+**Example**
+
+```java
+final List<Map<String, Object>> notifications = new ArrayList<>();
+final Map<String, Object> notification = new HashMap<String, Object>() {
+    {
+        put("id", "0");
+        put("timestamp", (long)(System.currentTimeMillis()));
+        put("type", "click");
+        put("mbox", new HashMap<String, Object>() {
+            {
+                put("name", "mbox1");
+            }
+        });
+        put("tokens", new ArrayList<String>() {
+            {
+                add("someClickToken");
+            }
+        });
+        put("parameters", new HashMap<String, Object>() {
+            {
+                put("mbox_parameter_key3", "mbox_parameter_value3");
+            }
+        });
+    }
+};
+notifications.add(notification);
+final Map<String, Object> request = new HashMap<>();
+request.put("notifications", notifications);
+Target.sendRawNotifications(request);
+```
+
+
+
 <Variant platform="android" api="set-preview-restart-deep-link" repeat="6"/>
 
 #### Java
@@ -1099,6 +1221,7 @@ setPreviewRestartDeeplink(deepLink: string)
 ```javascript
 ACPTarget.setPreviewRestartDeeplink("myapp://HomePage");
 ``` --->
+
 
 <Variant platform="android" api="set-session-id" repeat="6"/>
 
@@ -1248,7 +1371,11 @@ Target.setTntId("f741a5d5-09c0-4931-bf53-b9e568c5f782.35_0")
 
 On Android, when the application is launched as a result of a deep link, the `collectLaunchInfo` API is internally invoked, and the Target activity and deep link information is extracted from the Intent extras.
 
+<InlineNestedAlert variant="info" header="false" iconPosition="left">
+
 The SDK can only collect information from the launching Activity if [`setApplication`](../mobile-core/api-reference.md#application-reference-android-only) has been called. Setting the Application is only necessary on an Activity that is also an entry point for your application. However, setting the Application on each Activity has no negative impact and ensures that the SDK always has the necessary reference to your Application. We recommend that you call `setApplication` in each of your Activities.
+
+</InlineNestedAlert>
 
 <Variant platform="ios" api="visual-preview" repeat="11"/>
 
@@ -1884,3 +2011,4 @@ public interface AdobeTargetDetailedCallback {
     void fail(final AdobeError error);
 }
 ```
+

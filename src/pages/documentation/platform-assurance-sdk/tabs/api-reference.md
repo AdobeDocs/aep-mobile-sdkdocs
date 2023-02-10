@@ -1,4 +1,4 @@
-<Variant platform="android" api="extension-version" repeat="5"/>
+<Variant platform="android" api="extension-version" repeat="8"/>
 
 #### Java
 
@@ -11,7 +11,15 @@ public static String extensionVersion()
 **Example**
 
 ```java
-Assurance.extensionVersion()
+final String extensionVersion = Assurance.extensionVersion();
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+val extensionVersion: String = Assurance.extensionVersion()
 ```
 
 <Variant platform="ios" api="extension-version" repeat="8"/>
@@ -64,7 +72,7 @@ static Future<String> get extensionVersion async
 assuranceVersion = await FlutterAssurance.extensionVersion;
 ``` --->
 
-<Variant platform="android" api="start-session" repeat="7"/>
+<Variant platform="android" api="start-session" repeat="10"/>
 
 This API is optional for Android.
 
@@ -81,7 +89,17 @@ public static void startSession(final String url)
 **Example**
 
 ```java
- Assurance.startSession(url);
+final String url = "<assurance_session_url>"
+Assurance.startSession(url);
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+val url: String = "<assurance_session_url>"
+Assurance.startSession(url)
 ```
 
 <Variant platform="ios" api="start-session" repeat="10"/>

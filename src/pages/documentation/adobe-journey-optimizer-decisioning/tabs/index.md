@@ -1,4 +1,4 @@
-<Variant platform="android" task="install" repeat="2"/>
+<Variant platform="android" task="install" repeat="3"/>
 
 Add the Mobile Core, Edge, Identity for Edge Network and Optimize dependencies in your app's gradle file.
 
@@ -8,6 +8,12 @@ implementation 'com.adobe.marketing.mobile:edge:1.+'
 implementation 'com.adobe.marketing.mobile:edgeidentity:1.+'
 implementation 'com.adobe.marketing.mobile:optimize:1.+'
 ```
+
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+
+</InlineNestedAlert>
 
 <Variant platform="ios" task="install" repeat="2"/>
 

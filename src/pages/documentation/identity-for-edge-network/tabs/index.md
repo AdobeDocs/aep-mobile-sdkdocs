@@ -1,4 +1,4 @@
-<Variant platform="android" task="download" repeat="7"/>
+<Variant platform="android" task="download" repeat="8"/>
 
 1. Add the Mobile Core and Edge extensions to your project using the app's Gradle file.
 
@@ -8,6 +8,12 @@ implementation 'com.adobe.marketing.mobile:edge:1.+'
 implementation 'com.adobe.marketing.mobile:edgeidentity:1.+'
 implementation 'com.adobe.marketing.mobile:edgeconsent:1.+' // Recommended when using the setAdvertisingIdentifier API
 ```
+
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+
+</InlineNestedAlert>
 
 2. Import the Mobile Core and Edge extensions in your Application class.
 
