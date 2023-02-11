@@ -84,5 +84,3 @@ To update SDK configuration programmatically, use the following information to c
 | `campaignclassic.trackingServer` | Yes | Sets the tracking server, which receives tracking requests. | String |
 | `campaignclassic.ios.integrationKey` | Yes | Sets the iOS mobile app integration key, which links the app to an iOS application campaign in Campaign Classic. | String |
 | `campaignclassic.android.integrationKey` | Yes | Sets the Android mobile app integration key, which links the app to an Android application campaign in Campaign Classic. | String |
-
-

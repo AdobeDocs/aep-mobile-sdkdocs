@@ -3,7 +3,7 @@
 #### Java
 
 ```java
-String lifecycleExtensionVersion = Lifecycle.extensionVersion();
+final String lifecycleExtensionVersion = Lifecycle.extensionVersion();
 ```
 
 <Variant platform="ios" api="extension-version" repeat="4"/>

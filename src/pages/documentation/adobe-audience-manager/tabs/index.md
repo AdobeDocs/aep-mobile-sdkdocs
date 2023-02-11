@@ -1,4 +1,4 @@
-<Variant platform="android" task="add" repeat="4"/>
+<Variant platform="android" task="add" repeat="5"/>
 
 #### Java
 
@@ -8,6 +8,12 @@
 ```java
 import com.adobe.marketing.mobile.*;
 ```
+
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+
+</InlineNestedAlert>
 
 Audience Manager depends on the Identity extension and is automatically included in the Core pod. When manually installing the Audience Manager extension, ensure that you add the `identity-1.x.x.aar` library to your project.
 
