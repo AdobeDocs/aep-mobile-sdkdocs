@@ -121,7 +121,7 @@ Manifest merger failed : uses-sdk:minSdkVersion 14 cannot be smaller than versio
 
 To fix this build failure, increase the minSdkVersion for your Android project to **19** or above.
 
-### When I add Android SDK my project, why do i get an error about invoke-custom support and enabling desugaring?
+### When I add Android SDK to my project, why do I get an error about invoke-custom support and enabling desugaring?
 
 Android SDK uses Java 8 language features and desugaring is disabled by default. If your application uses Android Gradle plugin (AGP) v4.2 and has not enabled Java 8 support, you will see the following build failure:
 
@@ -144,7 +144,7 @@ To fix this build failure, you can follow one of two options:
 - Add the listed compileOptions from the error message to your app-level build.gradle file.
 - Increase the minSdkVersion for your Android project to 26 or above.
 
-### Why do i see a warning in AndroidManifest.xml about missing 'com.adobe.marketing.mobile.FullscreenMessageActivity' class?
+### Why do I see a warning in AndroidManifest.xml about missing 'com.adobe.marketing.mobile.FullscreenMessageActivity' class?
 
 After upgrading to latest Android SDK, you will see the following build warning if your application previously set up in-app messages with Campaign Standard. 
 
@@ -154,7 +154,7 @@ Class referenced in the manifest, `com.adobe.marketing.mobile.FullscreenMessageA
 Unresolved class 'FullscreenMessageActivity'
 ```
 
-To resolve the build warning, remove FullscreenMessageActivity from your application's manifest file. Campaign Standard no longer requires appliction to add **FullscreenMessageActivity** to their manifest.
+To resolve the build warning, remove FullscreenMessageActivity from your application's manifest file. Campaign Standard SDK no longer requires appliction to add **FullscreenMessageActivity** to their manifest.
 
 
 ### How can I track user engagement of push notifications using the Experience Platform Mobile SDK?
