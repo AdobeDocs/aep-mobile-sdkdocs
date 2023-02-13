@@ -176,7 +176,7 @@ iOS
 
 ## registerEventListener
 
-
+An EventListener can be registered with MobileCore to be notified when Events matching a type and source are dispatched.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -190,6 +190,11 @@ iOS
 
 
 ## registerExtension
+
+<InlineAlert variant="warning" slots="text"/>
+
+This API has been deprecated starting Mobile Core extension v2.0.0.
+Use [registerExtensions](#registerExtensions) to register desired extensions and boot up the SDK for event processing. Calling `MobileCore.start()` API is no longer required when using `MobileCore.registerExtensions()`.
 
 Extensions can be incrementally registered with Mobile Core using `registerExtension` API.
 

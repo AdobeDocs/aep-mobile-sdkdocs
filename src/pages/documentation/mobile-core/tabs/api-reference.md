@@ -166,7 +166,8 @@ MobileCore.dispatchEvent(sampleEvent);
 **Syntax**
 
 ```swift
-
+@objc(dispatch:)
+public static func dispatch(event: Event)
 ```
 
 **Example**
@@ -187,7 +188,7 @@ MobileCore.dispatch(event: event)
 **Example**
 
 ```objectivec
-AEPEvent *event = [[AEPEvent alloc] initWithName:@"My Event" type:AEPEventType.custom source:AEPEventType.custom data:@{@"sampleKey": @"sampleValue"}];
+AEPEvent *event = [[AEPEvent alloc] initWithName:@"Sample Event Name" type:AEPEventType.custom source:AEPEventType.custom data:@{@"sampleKey": @"sampleValue"}];
 [AEPMobileCore dispatch:event];
 ```
 
@@ -262,6 +263,7 @@ AEPEvent *event = [[AEPEvent alloc] initWithName:@"My Event" type:AEPEventType.c
 **Syntax**
 
 ```java
+@Nullable
 public static Application getApplication()
 ```
 
@@ -281,6 +283,7 @@ if (app != null) {
 **Syntax**
 
 ```java
+@NonNull
 public static LoggingMode getLogLevel()
 ```
 
@@ -341,7 +344,7 @@ ACPCore.getLogLevel().then(level => console.log("AdobeExperienceSDK: Log Level =
 **Syntax**
 
 ```java
-void getSdkIdentities(AdobeCallback<String> callback);
+void getSdkIdentities(@NonNull AdobeCallback<String> callback);
 ```
 
 * _callback_ is invoked with the SDK identities as a JSON string. If an instance of  `AdobeCallbackWithError` is provided, and you are fetching the attributes from the Mobile SDK, the timeout value is 5000ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate `AdobeError`.
@@ -577,6 +580,9 @@ public static boolean registerExtension(@NonNull final Class<? extends Extension
 **Example**
 
 ```java
+MobileCore.registerExtension(Signal.EXTENSION, errorCallback -> {
+  // handle callback                   
+});
 ```
 
 <Variant platform="ios" api="register-extension" repeat="10"/>
@@ -871,7 +877,7 @@ public static func setAppGroup(_ group: String?)
 **Syntax**
 
 ```java
-public static void setApplication(final Application app)
+public static void setApplication(@NonNull final Application app)
 ```
 
 **Example**
@@ -900,7 +906,7 @@ public class CoreApp extends Application {
 **Syntax**
 
 ```java
-public static void setLogLevel(LoggingMode mode)
+public static void setLogLevel(@NonNull LoggingMode mode)
 ```
 
 **Example**
@@ -990,7 +996,7 @@ FlutterACPCore.setLogLevel(ACPLoggingLevel.VERBOSE);
 **Syntax**
 
 ```java
-public static void setPushIdentifier(final String pushIdentifier);
+public static void setPushIdentifier(@Nullable final String pushIdentifier);
 ```
 
 * _pushIdentifier_  is a string that contains the device token for push notifications.
@@ -1164,7 +1170,7 @@ public class MyApp extends Application {
 **Syntax**
 
 ```java
-public static void trackAction(final String action, final Map<String, String> contextData)
+public static void trackAction(@NonNull final String action, @Nullable final Map<String, String> contextData)
 ```
 
 * _action_ contains the name of the action to track.
@@ -1262,7 +1268,7 @@ In Android, `trackState` is typically called every time a new `Activity` is load
 **Syntax**
 
 ```java
-public static void trackState(final String state, final Map<String, String> contextData)
+public static void trackState(@NonNull final String state, @Nullable final Map<String, String> contextData)
 ```
 
 * _state_ contains the name of the state to track.
