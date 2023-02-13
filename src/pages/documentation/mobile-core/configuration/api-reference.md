@@ -4,10 +4,6 @@ import Tabs from './tabs/api-reference.md'
 
 ## clearUpdatedConfiguration
 
-<InlineAlert variant="info" slots="text"/>
-
-This API is only available in Android and iOS.
-
 You can clear any programmatic updates made to the configuration via the `clearUpdatedConfiguration` API. This will clear programmatic updates to configuration made via the `updateConfiguration(configMap)`(Android)/ `updateConfigurationWith(configDict:)`(iOS) API. It will also clear any updates to the `MobilePrivacyStatus`(Android)/ `PrivacyStatus`(iOS)  made via `setPrivacyStatus(privacyStatus)`(Android)/ `setPrivacyStatus(_ status:)`(iOS).
 
  Here are some examples of scenarios:
@@ -50,7 +46,7 @@ iOS
 
 <InlineAlert variant="info" slots="text"/>
 
-This API is only available in Android and was added in Android was added in Android Core version 1.7.0.
+This API is only available in Android
 
 You can bundle a JSON configuration file in the app's Assets folder to replace or complement the configuration that was downloaded by using the [Configure with App ID per environment](./index.md#configure-with-app-id-per-environment) approach.
 
