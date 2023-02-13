@@ -54,61 +54,9 @@ Save the `Podfile` and run `pod repo update` to update your local CocoaPods repo
 
 Once the previous command is complete, run `pod install` or `pod update` to update the application dependencies.
 
-### Swift Package Manager
+### Swift Package Manager (SPM)
 
-#### Swift Package Collection
-
-In Swift 5.5, the Swift Package Manager (SPM) adds support for [package collections](https://www.swift.org/blog/package-collections). You can configure package collection in Xcode 13 for easy installation of AEP SDKs. The Swift package collection for the Adobe Experience Platform SDKs is available at the [Adobe Open Source site](https://opensource.adobe.com/aepsdk-core-ios/swift/packages/aep.json).
-
-To add the Swift package collection in Xcode 13, select File followed by Add Packages", selecting the plus sign on the bottom left and choosing "Add Swift Package Collection"
-
-![](./assets/migrate-to-swift/add-package-collection.png)
-
-Next, enter the package collection URL and click "Load". After the package collection has loaded, click "Add Collection" to add the collection.
-
-![](./assets/migrate-to-swift/add-package-collection-load.png)
-
-You should now see the added package collection on the left pane. Once selected, you will see all of the packages included in the collection listed.
-
-![](./assets/migrate-to-swift/package-collection.png)
-
-
-#### Installing AEP SDKs using SPM 
-
-To add the AEP SDK Packages to your application, from the Xcode 13 menu select **File**, followed by **Add Packages**.
-
-If you have configured package collection as mentioned above, select each package you would like to add to your project and click "Add Package" on the bottom right.
-
-If not, enter the Package URL for the AEP SDK repositories: 
-
-- AEPCore: `https://github.com/adobe/aepsdk-core-ios.git`
-- AEPUserProfile: `https://github.com/adobe/aepsdk-userprofile-ios.git`
-
-For each package, specify the Dependency rule as a specific version or a range of versions and select the Project. 
-
-When prompted, select all the `AEP*` libraries, then click `Add Package`.
-
-
-Alternatively, if your project has a `Package.swift` file, you can add AEPCore and AEPUserProfile directly to your dependencies:
-
-```ruby
-dependencies: [
-    .package(url: "https://github.com/adobe/aepsdk-core-ios.git", .upToNextMajor(from: "3.0.0")),
-    .package(url: "https://github.com/adobe/aepsdk-userprofile-ios.git", .upToNextMajor(from: "3.0.0")),
-],
-targets: [
-    .target(name: "YourTarget",
-            dependencies: [
-                .product(name: "AEPCore", package: "AEPCore"),
-                .product(name: "AEPIdentity", package: "AEPCore"),
-                .product(name: "AEPSignal", package: "AEPCore"),
-                .product(name: "AEPLifecycle", package: "AEPCore"),
-                .product(name: "AEPServices", package: "AEPCore"),
-                .product(name: "AEPUserProfile", package: "AEPUserProfile"),
-            ],
-            path: "your/path"),
-]
-```
+Swift SDKs also support installation through Swift Package Manager (SPM). Read the guide on [managing SPM dependencies](./manage-spm-dependencies.md) to install Swift SDK using SPM.
 
 ## Update SDK initialization
 

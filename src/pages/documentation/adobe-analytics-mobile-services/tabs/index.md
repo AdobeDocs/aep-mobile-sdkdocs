@@ -1,4 +1,4 @@
-<Variant platform="android" task="add" repeat="4"/>
+<Variant platform="android" task="add" repeat="5"/>
 
 Add the Mobile Services extension to your project using the app's Gradle file.
 
@@ -9,6 +9,12 @@ Import the Mobile Services extension in your application's main activity.
 ```java
 import com.adobe.marketing.mobileservices.*;
 ```
+
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+
+</InlineNestedAlert>
 
 <Variant platform="ios" task="add" repeat="6"/>
 
