@@ -166,7 +166,6 @@ MobileCore.dispatchEvent(sampleEvent);
 **Syntax**
 
 ```swift
-@objc(dispatch:)
 public static func dispatch(event: Event)
 ```
 
@@ -182,7 +181,8 @@ MobileCore.dispatch(event: event)
 **Syntax**
 
 ```objectivec
-
+@objc(dispatch:)
+public static func dispatch(event: Event)
 ```
 
 **Example**
@@ -241,7 +241,8 @@ MobileCore.dispatch(event: event) { (responseEvent) in
 **Syntax**
 
 ```objectivec
-
+@objc(dispatch:timeout:responseCallback:)
+public static func dispatch(event: Event, timeout: TimeInterval = 1, responseCallback: @escaping (Event?) -> Void)
 ```
 
 **Example**
@@ -557,6 +558,8 @@ MobileCore.registerEventListener(type: EventType.configuration, source: EventSou
 **Syntax**
 
 ```objc
+@objc(registerEventListenerWithType:source:listener:)
+public static func registerEventListener(type: String, source: String, listener: @escaping EventListener)
 ```
 
 **Example**
@@ -609,6 +612,8 @@ MobileCore.registerExtension(Lifecycle.self) {
 **Syntax**
 
 ```objc
+@objc(registerExtension:completion:)
+public static func registerExtension(_ exten: Extension.Type, _ completion: (() -> Void)? = nil)
 ```
 
 **Example**
@@ -670,7 +675,7 @@ public class MainApp extends Application {
 }
 ```
 
-<Variant platform="ios" api="register-extensions" repeat="8"/>
+<Variant platform="ios" api="register-extensions" repeat="10"/>
 
 #### Swift
 
@@ -693,6 +698,13 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 ```
 
 #### Objective-C
+
+**Syntax**
+
+```objc
+@objc(registerExtensions:completion:)
+public static func registerExtensions(_ extensions: [NSObject.Type], _ completion: (() -> Void)? = nil)
+```
 
 **Example**
 
@@ -1112,6 +1124,8 @@ MobileCore.setWrapperType(.flutter)
 **Syntax**
 
 ```objc
+@objc(setWrapperType:)
+public static func setWrapperType(_ type: WrapperType)
 ```
 
 **Example**
