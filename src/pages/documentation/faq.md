@@ -154,7 +154,7 @@ Class referenced in the manifest, `com.adobe.marketing.mobile.FullscreenMessageA
 Unresolved class 'FullscreenMessageActivity'
 ```
 
-To resolve the build warning, remove FullscreenMessageActivity from your application's manifest file. Campaign Standard SDK no longer requires appliction to add **FullscreenMessageActivity** to their manifest.
+To resolve the build warning, remove FullscreenMessageActivity from your application's manifest file. Campaign Standard SDK no longer requires application to add **FullscreenMessageActivity** to their manifest.
 
 
 ### How can I track user engagement of push notifications using the Experience Platform Mobile SDK?
