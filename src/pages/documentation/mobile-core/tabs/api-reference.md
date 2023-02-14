@@ -590,7 +590,6 @@ MobileCore.registerExtension(Signal.EXTENSION, errorCallback -> {
 
 <Variant platform="ios" api="register-extension" repeat="10"/>
 
-
 #### Swift
 
 **Syntax**
