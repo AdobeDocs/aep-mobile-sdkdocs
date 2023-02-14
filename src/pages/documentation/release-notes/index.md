@@ -4,6 +4,12 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## Feburary 13, 2023
+
+### Android Edge 1.4.1
+
+* Improves error handling when processing `Edge.sendEvent` requests by catching and logging `RuntimeException` instances thrown from the application provided `EdgeCallback` handler.
+
 ## January 5, 2023
 
 ### iOS AEPCore 3.7.4
