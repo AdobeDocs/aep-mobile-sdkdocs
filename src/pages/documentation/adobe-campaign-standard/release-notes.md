@@ -1,5 +1,11 @@
 # Release Notes
 
+## February 13, 2023
+
+### Android Campaign Standard 1.0.10
+
+* Fixed a crash which could occur when loading Campaign in-app messages.
+
 ## May 27, 2022
 
 ### Android Campaign Standard 1.0.9
