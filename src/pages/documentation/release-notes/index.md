@@ -4,7 +4,7 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
-## Feburary 13, 2023
+## February 13, 2023
 
 ### Android Edge 1.4.1
 
