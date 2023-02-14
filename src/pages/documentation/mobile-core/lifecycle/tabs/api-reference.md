@@ -6,7 +6,7 @@
 final String lifecycleExtensionVersion = Lifecycle.extensionVersion();
 ```
 
-<Variant platform="ios" api="extension-version" repeat="4"/>
+<Variant platform="ios" api="extension-version" repeat="10"/>
 
 #### Swift
 
@@ -77,7 +77,7 @@ contextData.put("myapp.category", "Game");
 MobileCore.lifecycleStart(additionalContextData);
 ```
 
-<Variant platform="ios" api="lifecycle-start" repeat="9"/>
+<Variant platform="ios" api="lifecycle-start" repeat="13"/>
 
 #### Swift
 
@@ -142,7 +142,7 @@ public static void lifecyclePause()
 MobileCore.lifecyclePause();
 ```
 
-<Variant platform="ios" api="lifecycle-pause" repeat="7"/>
+<Variant platform="ios" api="lifecycle-pause" repeat="10"/>
 
 #### Swift
 
