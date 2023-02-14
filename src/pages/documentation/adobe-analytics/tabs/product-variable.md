@@ -1,4 +1,4 @@
-<Variant platform="android" task="set-variable" repeat="5"/>
+<Variant platform="android" task="set-variable" repeat="8"/>
 
 #### Java
 
@@ -24,7 +24,24 @@ MobileCore.trackAction("purchase", cdata);
 // trackState example:
 MobileCore.trackState("Order Confirmation", cdata);
 ```
+#### Kotlin
 
+**Example**
+
+```kotlin
+//create a context data dictionary
+val cdata: Map<String, Any?> = mapOf(
+    "&&products" to ";Running Shoes;1;69.95,;Running Socks;10;29.99",
+    "myapp.purchase" to "1",
+    "myapp.purchaseid" to "1234567890"
+)
+
+// send a tracking call - use either a trackAction or TrackState call.
+// trackAction example:
+MobileCore.trackAction("purchase", cdata);
+// trackState example:
+MobileCore.trackState("Order Confirmation", cdata);
+```
 <Variant platform="ios" task="set-variable" repeat="10"/>
 
 #### Swift
@@ -82,7 +99,7 @@ NSMutableDictionary *contextData = [NSMutableDictionary dictionary];
 [AEPMobileCore trackState:@"Order Confirmation" data:contextData];
 ```
 
-<Variant platform="android" task="products" repeat="3"/>
+<Variant platform="android" task="products" repeat="6"/>
 
 #### Java
 
@@ -105,6 +122,25 @@ cdata.put("myapp.purchaseid", "1234567890");
 // trackAction example: 
 MobileCore.trackAction("purchase", cdata); 
 // trackState example: 
+MobileCore.trackState("Order Confirmation", cdata);
+```
+#### Kotlin
+
+**Example**
+
+```kotlin
+//create a context data dictionary
+val cdata: Map<String, Any?> = mapOf(
+    "&&events" to "event1",
+    "&&products" to ";Running Shoes;1;69.95;event1=5.5;eVar1=Merchandising,;Running Socks;10;29.99",
+    "myapp.purchase" to "1",
+    "myapp.purchaseid" to "1234567890"
+)
+
+// send a tracking call - use either a trackAction or TrackState call.
+// trackAction example:
+MobileCore.trackAction("purchase", cdata);
+// trackState example:
 MobileCore.trackState("Order Confirmation", cdata);
 ```
 

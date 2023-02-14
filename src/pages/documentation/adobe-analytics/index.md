@@ -164,9 +164,6 @@ iOS
 
 <Tabs query="platform=ios&task=serialize"/>
 
-The [linked video](https://video.tv.adobe.com/v/26260
-) shows you how to use [trackState](../mobile-core/api-reference.md#track-app-states-and-views) APIs to send data to Adobe Analytics.
-
 ## Configuration keys
 
 To update the SDK configuration programmatically, use the following information to change your Analytics configuration values.

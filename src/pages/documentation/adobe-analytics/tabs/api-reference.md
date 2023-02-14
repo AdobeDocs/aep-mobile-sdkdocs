@@ -1,4 +1,4 @@
-<Variant platform="android" api="clear-queue" repeat="10"/>
+<Variant platform="android" api="clear-queue" repeat="8"/>
 
 #### Java
 
@@ -15,12 +15,6 @@ Analytics.clearQueue();
 ```
 
 #### Kotlin
-
-**Syntax**
-
-```java
-public static void clearQueue()
-```
 
 **Example**
 
@@ -58,7 +52,7 @@ Analytics.clearQueue()
 [AEPMobileAnalytics clearQueue];
 ```
 
-<Variant platform="android" api="extension-version" repeat="10"/>
+<Variant platform="android" api="extension-version" repeat="8"/>
 
 #### Java
 
@@ -75,12 +69,6 @@ String analyticsExtensionVersion = Analytics.extensionVersion();
 ```
 
 #### Kotlin
-
-**Syntax**
-
-```java
-public static String extensionVersion()
-```
 
 **Example**
 
@@ -118,7 +106,7 @@ let version = Analytics.extensionVersion
 NSString *version = [AEPMobileAnalytics extensionVersion];
 ```
 
-<Variant platform="android" api="get-queue-size" repeat="10"/>
+<Variant platform="android" api="get-queue-size" repeat="8"/>
 
 #### Java
 
@@ -145,12 +133,6 @@ Analytics.getQueueSize(new AdobeCallbackWithError<Long>() {
 ```
 
 #### Kotlin
-
-**Syntax**
-
-```java
-public static void getQueueSize(@NonNull final AdobeCallback<Long> callback)
-```
 
 **Example**
 
@@ -204,7 +186,7 @@ Analytics.getQueueSize { (queueSize, error) in
  }];
 ```
 
-<Variant platform="android" api="get-tracking-identifier" repeat="12"/>
+<Variant platform="android" api="get-tracking-identifier" repeat="10"/>
 
 #### Java
 
@@ -233,14 +215,6 @@ Analytics.getTrackingIdentifier(new AdobeCallbackWithError<String>() {
 ```
 
 #### Kotlin
-
-**Syntax**
-
-```java
-public static void getTrackingIdentifier(@NonNull final AdobeCallback<String> callback)
-```
-
-* _callback_ is invoked with the tracking Identifier string value. When an AdobeCallbackWithError is provided, an AdobeError can be returned in the eventuality of an unexpected error or if the default timeout (5000ms) is met before the callback is returned with analytics tracking identifier.
 
 **Example**
 
@@ -294,7 +268,7 @@ AEPMobileAnalytics getTrackingIdentifier:^(NSString * _Nullable trackingIdentifi
 }];
 ```
 
-<Variant platform="android" api="get-visitor-identifier" repeat="12"/>
+<Variant platform="android" api="get-visitor-identifier" repeat="9"/>
 
 #### Java
 
@@ -323,14 +297,6 @@ Analytics.getVisitorIdentifier(new AdobeCallbackWithError<String>() {
 ```
 
 #### Kotlin
-
-**Syntax**
-
-```java
-public static void getVisitorIdentifier(@NonNull final AdobeCallback<String> callback)
-```
-
-* _callback_ is invoked with the visitor identifier value. When an AdobeCallbackWithError is provided, an AdobeError can be returned in the eventuality of an unexpected error or if the default timeout (5000ms) is met before the callback is returned with visitor identifier.
 
 **Example**
 
@@ -384,7 +350,7 @@ Analytics.getVisitorIdentifier { (visitorIdentifier, error) in
 }];
 ```
 
-<Variant platform="android" api="send-queued-hits" repeat="10"/>
+<Variant platform="android" api="send-queued-hits" repeat="8"/>
 
 #### Java
 
@@ -401,12 +367,6 @@ Analytics.sendQueuedHits();
 ```
 
 #### Kotlin
-
-**Syntax**
-
-```java
-public static void sendQueuedHits()
-```
 
 **Example**
 
@@ -444,7 +404,7 @@ static func sendQueuedHits()
 Analytics.sendQueuedHits()
 ```
 
-<Variant platform="android" api="set-visitor-identifier" repeat="12"/>
+<Variant platform="android" api="set-visitor-identifier" repeat="9"/>
 
 #### Java
 
@@ -463,14 +423,6 @@ Analytics.setVisitorIdentifier("custom_identifier");
 ```
 
 #### Kotlin
-
-**Syntax**
-
-```java
-public static void setVisitorIdentifier(@NonNull final String visitorID)
-```
-
-* _visitorIdentifier_ is the new value for the visitor identifier.
 
 **Example**
 
