@@ -92,6 +92,39 @@ NSURL* url = [NSURL URLWithString:@"https://example.com"];
 }];
 ```
 
+<!--- <Variant platform="react-native" api="append-to-url" repeat="6"/>
+
+#### JavaScript
+**Syntax**
+```jsx
+appendVisitorInfoForURL(baseURL?: String): Promise<?string>;
+```
+* _baseUrl_ is the URL to which the visitor information needs to be appended. If the visitor information is nil or empty, the URL is returned as is.
+**Example**
+```jsx
+ACPIdentity.appendVisitorInfoForURL("https://example.com").then(urlWithVistorData => console.log("AdobeExperenceSDK: Url with Visitor Data = " + urlWithVisitorData));
+```
+<Variant platform="flutter" api="append-to-url" repeat="6"/>
+#### Dart
+
+**Syntax**
+
+```dart
+Future<String> appendToUrl (String url);
+```
+
+* _url_ is the URL to which the visitor information needs to be appended. If the visitor information is nil or empty, the URL is returned as is.
+**Example**
+
+```dart
+String result = "";
+try {
+  result = await FlutterACPIdentity.appendToUrl("https://example.com");
+} on PlatformException {
+  log("Failed to append URL");
+}
+``` --->
+
 <Variant platform="android" api="extension-version" repeat="1"/>
 
 #### Java
@@ -138,6 +171,17 @@ let identityExtensionVersion  = Identity.extensionVersion
 ```objectivec
 NSString *identityVersion = [AEPMobileIdentity extensionVersion];
 ```
+
+<!--- <Variant platform="react-native" api="extension-version" repeat="2"/>
+#### JavaScript
+```jsx
+ACPIdentity.extensionVersion().then(identityExtensionVersion => console.log("AdobeExperienceSDK: ACPIdentity version: " + identityExtensionVersion));
+```
+<Variant platform="flutter" api="extension-version" repeat="2"/>
+#### Dart
+```dart
+String identityExtensionVersion = FlutterACPIdentity.extensionVersion;
+``` --->
 
 <Variant platform="android" api="get-experience-cloud-id" repeat="7"/>
 
@@ -209,6 +253,32 @@ Identity.getExperienceCloudId { ecid, error in
 }];
 ```
 
+<!--- <Variant platform="react-native" api="get-experience-cloud-id" repeat="5"/>
+#### JavaScript
+**Syntax**
+```jsx
+getExperienceCloudId(): Promise<?string>;
+```
+**Example**
+```jsx
+ACPIdentity.getExperienceCloudId().then(cloudId => console.log("AdobeExperienceSDK: CloudID = " + cloudId));
+```
+<Variant platform="flutter" api="get-experience-cloud-id" repeat="5"/>
+#### Dart
+**Syntax**
+```dart
+Future<String> experienceCloudId;
+```
+**Example**
+```dart
+String result = "";
+try {
+  result = await FlutterACPIdentity.experienceCloudId;
+} on PlatformException {
+  log("Failed to get experienceCloudId");
+}
+``` --->
+
 <Variant platform="android" api="get-identifiers" repeat="7"/>
 
 #### Java
@@ -279,6 +349,32 @@ Identity.getIdentifiers { identifiers, error in
   }
 }];
 ```
+
+<!--- <Variant platform="react-native" api="get-identifiers" repeat="5"/>
+#### JavaScript
+**Syntax**
+```jsx
+getIdentifiers(): Promise<Array<?ACPVisitorID>>;
+```
+**Example**
+```jsx
+ACPIdentity.getIdentifiers().then(identifiers => console.log("AdobeExperienceSDK: Identifiers = " + identifiers));
+```
+<Variant platform="flutter" api="get-identifiers" repeat="5"/>
+#### Dart
+**Syntax**
+```dart
+ Future<List<ACPMobileVisitorId>> identifiers;
+```
+**Example**
+```dart
+List<ACPMobileVisitorId> result;
+try {
+  result = await FlutterACPIdentity.identifiers;
+} on PlatformException {
+  log("Failed to get identifiers");
+}
+``` --->
 
 <Variant platform="android" api="get-url-variables" repeat="8"/>
 
@@ -375,6 +471,33 @@ Identity.getUrlVariables { (urlVariables, error) in
   }
 }];
 ```
+
+<!--- <Variant platform="react-native" api="get-url-variables" repeat="6"/>
+This method was added in react-native-acpcore v1.0.5.
+#### JavaScript
+**Syntax**
+```jsx
+getUrlVariables(): Promise<?string>;
+```
+**Example**
+```jsx
+ACPIdentity.getUrlVariables().then(urlVariables => console.log("AdobeExperenceSDK: query params = " + urlVariables));
+```
+<Variant platform="flutter" api="get-url-variables" repeat="5"/>
+#### Dart
+**Syntax**
+```dart
+ Future<String> urlVariables;
+```
+**Example**
+```dart
+String result = "";
+try {
+  result = await FlutterACPIdentity.urlVariables;
+} on PlatformException {
+  log("Failed to get url variables");
+}
+``` --->
 
 <Variant platform="android" api="register-extension" repeat="3"/>
 
@@ -635,6 +758,29 @@ func setAdvertisingIdentiferUsingTrackingManager() {
 }
 ```
 
+<!--- <Variant platform="react-native" api="set-advertising-identifier" repeat="6"/>
+#### JavaScript
+**Syntax**
+```jsx
+setAdvertisingIdentifier(advertisingIdentifier?: String);
+```
+* _adID_ is a string that provides developers with a simple, standard system to continue to track the Ads through their apps.
+**Example**
+```jsx
+ACPCore.setAdvertisingIdentifier("ADVTID");
+```
+<Variant platform="flutter" api="set-advertising-identifier" repeat="6"/>
+#### Dart
+**Syntax**
+```dart
+Future<void> setAdvertisingIdentifier (String aid);
+```
+* _aid_ is a string that provides developers with a simple, standard system to continue to track the Ads through their apps.
+**Example**
+```dart
+FlutterACPCore.setAdvertisingIdentifier("ADVTID");
+``` --->
+
 <Variant platform="android" api="set-push-identifier" repeat="6"/>
 
 #### Java
@@ -688,6 +834,18 @@ MobileCore.setPushIdentifier(deviceToken)
 // Set the deviceToken that the APNS has assigned to the device
 [AEPMobileCore setPushIdentifier:deviceToken];
 ```
+
+<!--- <Variant platform="react-native" api="set-push-identifier" repeat="6"/>
+#### JavaScript
+**Syntax**
+```jsx
+ACPCore.setPushIdentifier(pushIdentifier);
+```
+* _pushIdentifier_ is a string that contains the device token for push notifications.
+**Example**
+```jsx
+ACPCore.setPushIdentifier("pushID");
+``` --->
 
 <Variant platform="android" api="sync-identifier" repeat="6"/>
 
@@ -755,6 +913,35 @@ Identity.syncIdentifier(identifierType: "idType",
                       authenticationState:AEPMobileVisitorAuthStateUnknown];
 ```
 
+<!--- <Variant platform="react-native" api="sync-identifier" repeat="6"/>
+#### JavaScript
+**Syntax**
+```jsx
+syncIdentifier(identifierType: String, identifier: String, authenticationState: string);
+```
+* The _identifierType (String)_ contains the `identifier type`, and this parameter should not be null or empty. The allowed characters are [A-Za-z0-9_.]
+* The _identifier (String)_ contains the `identifier` value, and this parameter should not be null or empty. If either the `identifier type` or `identifier` contains a null or an empty string, the identifier is ignored by the Identity extension.
+* _authenticationState (ACPMobileVisitorAuthenticationState)_ value indicating authentication state for the user and contains one of the following [ACPMobileVisitorAuthenticationState](#public-classes) values.
+**Example**
+```jsx
+import {ACPMobileVisitorAuthenticationState} from '@adobe/react-native-acpcore';
+ACPIdentity.syncIdentifier("identifierType", "identifier", ACPMobileVisitorAuthenticationState.AUTHENTICATED);
+```
+<Variant platform="flutter" api="sync-identifier" repeat="6"/>
+#### Dart
+**Syntax**
+```dart
+Future<void> syncIdentifier(String identifierType, String identifier, ACPMobileVisitorAuthenticationState authState);
+```
+* The _identifierType (String)_ contains the `identifier type`, and this parameter should not be null or empty. The allowed characters are [A-Za-z0-9_.]
+* The _identifier (String)_ contains the `identifier` value, and this parameter should not be null or empty. If either the `identifier type` or `identifier` contains a null or an empty string, the identifier is ignored by the Identity extension.
+* _authState (ACPMobileVisitorAuthenticationState_ value indicating authentication state for the user and contains one of the following [ACPMobileVisitorAuthenticationState](#public-classes) values.
+**Example**
+```dart
+import 'package:flutter_acpcore/src/acpmobile_visitor_id.dart';
+FlutterACPIdentity.syncIdentifier("identifierType", "identifier", ACPMobileVisitorAuthenticationState.AUTHENTICATED);
+``` --->
+
 <Variant platform="android" api="sync-identifiers" repeat="6"/>
 
 #### Java
@@ -815,6 +1002,31 @@ NSDictionary *ids = @{@"idType1":@"idValue1",
                       @"idType3":@"idValue3"};
 [AEPMobileIdentity syncIdentifiers:ids];
 ```
+
+<!--- <Variant platform="react-native" api="sync-identifiers" repeat="6"/>
+#### JavaScript
+**Syntax**
+```jsx
+syncIdentifiers(identifiers?: {string: string});
+```
+* The _identifiers_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value. If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
+**Example**
+```jsx
+ACPIdentity.syncIdentifiers({"id1": "identifier1"});
+```
+<Variant platform="flutter" api="sync-identifiers" repeat="6"/>
+#### Dart
+**Syntax**
+```dart
+Future<void> syncIdentifiers (Map<String, String> identifiers);
+```
+* The _identifiers_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value. If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
+**Example**
+```jsx
+FlutterACPIdentity.syncIdentifiers({"idType1":"idValue1",
+                                    "idType2":"idValue2",
+                                    "idType3":"idValue3"});
+``` --->
 
 <Variant platform="android" api="sync-identifiers-overloaded" repeat="6"/>
 
@@ -882,6 +1094,33 @@ NSDictionary *ids = @{@"idType1":@"idValue1",
 [AEPMobileIdentity syncIdentifiers:ids authenticationState:AEPMobileVisitorAuthStateAuthenticated];
 ```
 
+<!--- <Variant platform="react-native" api="sync-identifiers-overloaded" repeat="6"/>
+#### JavaScript
+**Syntax**
+```jsx
+syncIdentifiersWithAuthState(identifiers?: {string: string}, authenticationState: string);
+```
+* The _identifiers_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value. If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
+* The _authenticationState (ACPMobileVisitorAuthenticationState)_ indicates the authentication state of the user and contains one of the [ACPMobileVisitorAuthenticationState](#public-classes) values.
+**Example**
+```jsx
+import {ACPMobileVisitorAuthenticationState} from '@adobe/react-native-acpcore';
+ACPIdentity.syncIdentifiersWithAuthState({"id1": "identifier1"}, ACPMobileVisitorAuthenticationState.UNKNOWN);
+```
+<Variant platform="flutter" api="sync-identifiers-overloaded" repeat="6"/>
+#### Dart
+**Syntax**
+```dart
+Future<void> syncIdentifiersWithAuthState (Map<String, String> identifiers, ACPMobileVisitorAuthenticationState authState);
+```
+* The _identifiers_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value. If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
+* The _authState (ACPMobileVisitorAuthenticationState)_ indicates the authentication state of the user and contains one of the [ACPMobileVisitorAuthenticationState](#public-classes) values.
+**Example**
+```dart
+import 'package:flutter_acpcore/src/acpmobile_visitor_id.dart';
+FlutterACPIdentity.syncIdentifiersWithAuthState({"idType1":"idValue1", "idType2":"idValue2", "idType3":"idValue3"}, ACPMobileVisitorAuthenticationState.UNKNOWN);
+``` --->
+
 <Variant platform="android" api="public-classes" repeat="6"/>
 
 **AuthenticationState**
@@ -947,3 +1186,39 @@ This is used to indicate the authentication state for the current `Identifiable`
     var authenticationState: MobileVisitorAuthenticationState { get }
 }
 ```
+
+<!--- <Variant platform="react-native" api="public-classes" repeat="7"/>
+#### JavaScript
+**ACPVisitorID**
+This is an identifier to be used with the Adobe Experience Cloud Identity Service and it contains the origin, the identifier type, the identifier, and the authentication state of the visitor ID.
+```jsx
+import {ACPVisitorID} from '@adobe/react-native-acpcore';
+var visitorId = new ACPVisitorID(idOrigin?: string, idType: string, id?: string, authenticationState?: ACPMobileVisitorAuthenticationState);
+```
+**ACPMobileVisitorAuthenticationState**
+This is used to indicate the authentication state for the current `VisitorID`.
+```jsx
+import {ACPMobileVisitorAuthenticationState} from '@adobe/react-native-acpcore';
+var state = ACPMobileVisitorAuthenticationState.AUTHENTICATED;
+//var state = ACPMobileVisitorAuthenticationState.LOGGED_OUT;
+//var state = ACPMobileVisitorAuthenticationState.UNKNOWN;
+```
+<Variant platform="flutter" api="public-classes" repeat="7"/>
+#### Dart
+**ACPVisitorID**
+This is an identifier to be used with the Adobe Experience Cloud Identity Service and it contains the origin, the identifier type, the identifier, and the authentication state of the visitor ID.
+```dart
+import 'package:flutter_acpcore/src/acpmobile_visitor_id.dart';
+class ACPMobileVisitorId {
+  String get idOrigin;
+  String get idType;
+  String get identifier;
+  ACPMobileVisitorAuthenticationState get authenticationState;
+};
+```
+**ACPMobileVisitorAuthenticationState**
+This is used to indicate the authentication state for the current `VisitorID`.
+```dart
+import 'package:flutter_acpcore/src/acpmobile_visitor_id.dart';
+enum ACPMobileVisitorAuthenticationState {UNKNOWN, AUTHENTICATED, LOGGED_OUT};
+``` --->

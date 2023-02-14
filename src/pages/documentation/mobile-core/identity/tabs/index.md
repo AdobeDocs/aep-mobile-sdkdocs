@@ -7,6 +7,7 @@ Import the library:
 ```java
 import com.adobe.marketing.mobile.MobileCore;
 import com.adobe.marketing.mobile.Identity;
+import com.adobe.marketing.mobile.Extension;
 ```
 
 <Variant platform="ios" task="add" repeat="4"/>
@@ -24,6 +25,17 @@ import AEPIdentity
 @import AEPCore;
 @import AEPIdentity;
 ```
+
+<!--- <Variant platform="react-native" task="add" repeat="2"/>
+#### JavaScript
+```jsx
+import {ACPIdentity} from '@adobe/react-native-acpcore';
+```
+<Variant platform="flutter" task="add" repeat="2"/>
+#### Dart
+```dart
+import 'package:flutter_acpcore/flutter_acpidentity.dart';
+``` --->
 
 <Variant platform="android" task="register" repeat="3"/>
 
