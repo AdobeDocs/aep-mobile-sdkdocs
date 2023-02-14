@@ -8,7 +8,7 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 ### Android Edge 1.4.1
 
-* Improves error handling when processing `Edge.sendEvent` requests by catching and logging `RuntimeException` instances thrown from the application provided `EdgeCallback` handler.
+* Improves error handling when processing `Edge.sendEvent` requests by catching and logging unexpected `RuntimeException` instances thrown from within caller's `EdgeCallback` handler implementation.
 
 ## January 5, 2023
 
