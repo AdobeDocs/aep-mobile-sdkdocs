@@ -77,7 +77,7 @@ contextData.put("myapp.category", "Game");
 MobileCore.lifecycleStart(additionalContextData);
 ```
 
-<Variant platform="ios" api="lifecycle-start" repeat="13"/>
+<Variant platform="ios" api="lifecycle-start" repeat="14"/>
 
 #### Swift
 
