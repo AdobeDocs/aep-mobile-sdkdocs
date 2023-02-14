@@ -111,9 +111,9 @@ Add the following rule to your custom ProGuard rules file, typically labeled `pr
 }
 ```
 
-### Is there a change in minimum API level supported by Android SDK?
+### Is there a change in minimum API level supported by Mobile SDK for Android?
 
-Android SDK now supports a minimum API level of **19**.  If your application targets a lower API level, you will see the following build failure:
+Mobile SDK for Android now supports a minimum API level of **19**.  If your application targets a lower API level, you will see the following build failure:
 
 ```
 Manifest merger failed : uses-sdk:minSdkVersion 14 cannot be smaller than version 19 declared in library [com.adobe.marketing.mobile:core:2.0.0]
@@ -121,9 +121,9 @@ Manifest merger failed : uses-sdk:minSdkVersion 14 cannot be smaller than versio
 
 To fix this build failure, increase the minSdkVersion for your Android project to **19** or above.
 
-### When I add Android SDK to my project, why do I get an error about invoke-custom support and enabling desugaring?
+### When I add Mobile SDK to my Android project, why do I get an error about invoke-custom support and enabling desugaring?
 
-Android SDK uses Java 8 language features and desugaring is disabled by default. If your application uses Android Gradle plugin (AGP) v4.2 and has not enabled Java 8 support, you will see the following build failure:
+Mobile SDK for Android uses Java 8 language features and desugaring is disabled by default. If your application uses Android Gradle plugin (AGP) v4.2 and has not enabled Java 8 support, you will see the following build failure:
 
 ```
 D8: Invoke-customs are only supported starting with Android O (--min-api 26)
@@ -146,7 +146,7 @@ To fix this build failure, you can follow one of two options:
 
 ### Why do I see a warning in AndroidManifest.xml about missing 'com.adobe.marketing.mobile.FullscreenMessageActivity' class?
 
-After upgrading to latest Android SDK, you will see the following build warning if your application previously set up in-app messages with Campaign Standard. 
+After upgrading to latest version of Mobile SDK for Android, you will see the following build warning if your application previously set up in-app messages with Campaign Standard. 
 
 ```
 Class referenced in the manifest, `com.adobe.marketing.mobile.FullscreenMessageActivity`, was not found in the project or the libraries
