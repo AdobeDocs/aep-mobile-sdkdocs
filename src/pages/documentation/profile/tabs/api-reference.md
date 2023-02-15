@@ -72,15 +72,15 @@ When `AdobeCallbackWithError` is provided, if the operation times out (5s) or an
 
 ```java
 UserProfile.getUserAttributes(Arrays.asList("itemsAddedToCart"), new AdobeCallbackWithError<Map<String, Object>>() {
-            @Override
-            public void fail(AdobeError adobeError) {
-                // your customized code
-            }
-            @Override
-            public void call(Map<String, Object> stringObjectMap) {
-                     // your customized code
-            }
-        });
+    @Override
+    public void fail(AdobeError adobeError) {
+         // your customized code
+    }
+    @Override
+    public void call(Map<String, Object> stringObjectMap) {
+        // your customized code
+    }
+});
 ```
 
 #### Kotlin
