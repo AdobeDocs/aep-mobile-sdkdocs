@@ -60,7 +60,7 @@ public static func collectLaunchInfo(_ userInfo: [String: Any])
 **Syntax**
 
 ```java
-public static void collectPII(final Map<String, String> piiData);
+public static void collectPII(@NonNull final Map<String, String> piiData);
 ```
 
 **Example**
@@ -136,6 +136,125 @@ ACPCore.collectPii(data: [String : String])
 MobileCore.collectPii(["key1" : "value1","key2" : "value2"]);
 ``` --->
 
+<Variant platform="android" api="dispatch-event" repeat="5"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void dispatchEvent(@NonNull final Event event)
+```
+
+**Example**
+
+```java
+final Map<String, Object> eventData = new HashMap<>();
+eventData.put("sampleKey", "sampleValue");
+
+final Event sampleEvent = new Event.Builder("SampleEventName", "SampleEventType", "SampleEventSource")
+                          .setEventData(eventData)
+                          .build();
+
+MobileCore.dispatchEvent(sampleEvent);
+```
+
+<Variant platform="ios" api="dispatch-event" repeat="10"/>
+
+#### Swift
+
+**Syntax**
+
+```swift
+public static func dispatch(event: Event)
+```
+
+**Example**
+
+```swift
+let event = Event(name: "Sample Event Name", type: EventType.custom, source: EventType.custom, data: ["sampleKey": "sampleValue"])
+MobileCore.dispatch(event: event)
+```
+
+#### Objective-C
+
+**Syntax**
+
+```objectivec
+@objc(dispatch:)
+public static func dispatch(event: Event)
+```
+
+**Example**
+
+```objectivec
+AEPEvent *event = [[AEPEvent alloc] initWithName:@"Sample Event Name" type:AEPEventType.custom source:AEPEventType.custom data:@{@"sampleKey": @"sampleValue"}];
+[AEPMobileCore dispatch:event];
+```
+
+<Variant platform="android" api="dispatch-event-with-response-callback" repeat="5"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void dispatchEventWithResponseCallback(@NonNull final Event event, final long timeoutMS, @NonNull final AdobeCallbackWithError<Event> responseCallback)
+```
+
+**Example**
+
+```java
+final Map<String, Object> eventData = new HashMap<>();
+eventData.put("sampleKey", "sampleValue");
+
+final Event sampleEvent = new Event.Builder("My Event", "SampleEventType", "SampleEventSource")
+                          .setEventData(eventData)
+                          .build();
+
+MobileCore.dispatchEventWithResponseCallback(sampleEvent, 5000L, new AdobeCallbackWithError<Event>() {
+    // handle response event
+});
+```
+
+<Variant platform="ios" api="dispatch-event-with-response-callback" repeat="10"/>
+
+#### Swift
+
+**Syntax**
+
+```swift
+public static func dispatch(event: Event, timeout: TimeInterval = 1, responseCallback: @escaping (Event?) -> Void)
+```
+
+**Example**
+
+```swift
+let event = Event(name: "My Event", type: EventType.custom, source: EventType.custom, data: ["sampleKey": "sampleValue"])
+MobileCore.dispatch(event: event) { (responseEvent) in
+    // handle responseEvent
+}
+```
+
+#### Objective-C
+
+**Syntax**
+
+```objectivec
+@objc(dispatch:timeout:responseCallback:)
+public static func dispatch(event: Event, timeout: TimeInterval = 1, responseCallback: @escaping (Event?) -> Void)
+```
+
+**Example**
+
+```objectivec
+AEPEvent *event = [[AEPEvent alloc] initWithName:@"My Event" type:AEPEventType.custom source:AEPEventType.custom data:@{@"sampleKey": @"sampleValue"}];
+[AEPMobileCore dispatch:event responseCallback:^(AEPEvent * _Nullable responseEvent) {
+    // handle responseEvent
+}];
+```
+
+
 <Variant platform="android" api="get-application" repeat="6"/>
 
 #### Java
@@ -145,6 +264,7 @@ MobileCore.collectPii(["key1" : "value1","key2" : "value2"]);
 **Syntax**
 
 ```java
+@Nullable
 public static Application getApplication()
 ```
 
@@ -164,6 +284,7 @@ if (app != null) {
 **Syntax**
 
 ```java
+@NonNull
 public static LoggingMode getLogLevel()
 ```
 
@@ -224,7 +345,7 @@ ACPCore.getLogLevel().then(level => console.log("AdobeExperienceSDK: Log Level =
 **Syntax**
 
 ```java
-void getSdkIdentities(AdobeCallback<String> callback);
+void getSdkIdentities(@NonNull AdobeCallback<String> callback);
 ```
 
 * _callback_ is invoked with the SDK identities as a JSON string. If an instance of  `AdobeCallbackWithError` is provided, and you are fetching the attributes from the Mobile SDK, the timeout value is 5000ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate `AdobeError`.
@@ -285,7 +406,9 @@ static func getSdkIdentities(completion: @escaping (String?, Error?) -> Void)
  }];
 ```
 
-<Variant platform="android" api="log" repeat="10"/>
+<Variant platform="android" api="log" repeat="11"/>
+
+This API was deprecated in v2.0.0 of the Mobile Core extension. Use the `com.adobe.marketing.mobile.services.Log` instead.
 
 #### Java
 
@@ -390,6 +513,116 @@ const DEBUG = "ACP_LOG_LEVEL_DEBUG";
 const VERBOSE = "ACP_LOG_LEVEL_VERBOSE";
 ``` --->
 
+<Variant platform="android" api="register-event-listener" repeat="5"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void registerEventListener(@NonNull final String eventType, @NonNull final String eventSource, @NonNull final AdobeCallback<Event> callback)
+```
+
+**Example**
+
+```java
+MobileCore.registerEventListener(EventType.CONFIGURATION, EventSource.RESPONSE_CONTENT, new AdobeCallback<Event>() {
+    @Override
+    public void call(Event value) {
+        // handle event
+    }
+});
+```
+
+<Variant platform="ios" api="register-event-listener" repeat="10"/>
+
+
+#### Swift
+
+**Syntax**
+
+```swift
+public static func registerEventListener(type: String, source: String, listener: @escaping EventListener)
+```
+
+**Example**
+
+```swift
+MobileCore.registerEventListener(type: EventType.configuration, source: EventSource.responseContent, listener: { event in
+   // handle event 
+})
+```
+
+#### Objective-C
+
+**Syntax**
+
+```objc
+@objc(registerEventListenerWithType:source:listener:)
+public static func registerEventListener(type: String, source: String, listener: @escaping EventListener)
+```
+
+**Example**
+
+```objectivec
+[AEPMobileCore registerEventListenerWithType: type source: source listener:^(AEPEvent * _Nonnull event) {
+   // handle event
+}];
+```
+
+<Variant platform="android" api="register-extension" repeat="5"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static boolean registerExtension(@NonNull final Class<? extends Extension> extensionClass, @Nullable final ExtensionErrorCallback<ExtensionError> errorCallback)
+```
+
+**Example**
+
+```java
+MobileCore.registerExtension(Signal.EXTENSION, errorCallback -> {
+  // handle callback                   
+});
+```
+
+<Variant platform="ios" api="register-extension" repeat="10"/>
+
+#### Swift
+
+**Syntax**
+
+```swift
+public static func registerExtension(_ exten: Extension.Type, _ completion: (() -> Void)? = nil)
+```
+
+**Example**
+
+```swift
+MobileCore.registerExtension(Lifecycle.self) {
+    // handle completion
+}
+```
+
+#### Objective-C
+
+**Syntax**
+
+```objc
+@objc(registerExtension:completion:)
+public static func registerExtension(_ exten: Extension.Type, _ completion: (() -> Void)? = nil)
+```
+
+**Example**
+
+```objectivec
+[AEPMobileCore registerExtension:AEPMobileLifecycle.class completion:^{
+   // handle completion
+}];
+```
+
 <Variant platform="android" api="register-extensions" repeat="5"/>
 
 #### Java
@@ -416,6 +649,8 @@ import com.adobe.marketing.mobile.UserProfile;
 import android.app.Application;
 ...
 public class MainApp extends Application {
+
+    // Set up the preferred Environment File ID from your mobile property configured in Data Collection UI 
     private static final String ENVIRONMENT_FILE_ID = "YOUR_ENVIRONMENT_FILE_ID";
 
     @Override
@@ -439,7 +674,7 @@ public class MainApp extends Application {
 }
 ```
 
-<Variant platform="ios" api="register-extensions" repeat="8"/>
+<Variant platform="ios" api="register-extensions" repeat="10"/>
 
 #### Swift
 
@@ -462,6 +697,13 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 ```
 
 #### Objective-C
+
+**Syntax**
+
+```objc
+@objc(registerExtensions:completion:)
+public static func registerExtensions(_ extensions: [NSObject.Type], _ completion: (() -> Void)? = nil)
+```
 
 **Example**
 
@@ -646,7 +888,7 @@ public static func setAppGroup(_ group: String?)
 **Syntax**
 
 ```java
-public static void setApplication(final Application app)
+public static void setApplication(@NonNull final Application app)
 ```
 
 **Example**
@@ -675,7 +917,7 @@ public class CoreApp extends Application {
 **Syntax**
 
 ```java
-public static void setLogLevel(LoggingMode mode)
+public static void setLogLevel(@NonNull LoggingMode mode)
 ```
 
 **Example**
@@ -765,7 +1007,7 @@ FlutterACPCore.setLogLevel(ACPLoggingLevel.VERBOSE);
 **Syntax**
 
 ```java
-public static void setPushIdentifier(final String pushIdentifier);
+public static void setPushIdentifier(@Nullable final String pushIdentifier);
 ```
 
 * _pushIdentifier_  is a string that contains the device token for push notifications.
@@ -840,6 +1082,100 @@ public static void setLargeIconResourceID(int resourceID)
  MobileCore.setLargeIconResourceID(R.mipmap.ic_launcher_round);
 ```
 
+<Variant platform="android" api="set-wrapper-type" repeat="6"/>
+
+The wrapper type can be set to one of the follwing types: `NONE`, `REACT_NATIVE`, `FLUTTER`, `CORDOVA`, `UNITY`, `XAMARIN`.
+
+#### Java
+
+**Syntax**
+
+```java
+public static void setWrapperType(@NonNull final WrapperType wrapperType)
+```
+
+**Example**
+
+```java
+MobileCore.setWrapperType(WrapperType.REACT_NATIVE);
+```
+
+<Variant platform="ios" api="set-wrapper-type" repeat="11"/>
+
+The wrapper type can be set to one of the follwing types: `none`, `reactNative`, `flutter`, `cordova`, `unity`, `xamarin`.
+
+#### Swift
+
+**Syntax**
+
+```swift
+public static func setWrapperType(_ type: WrapperType)
+```
+
+**Example**
+
+```swift
+MobileCore.setWrapperType(.flutter)
+```
+
+#### Objective-C
+
+**Syntax**
+
+```objc
+@objc(setWrapperType:)
+public static func setWrapperType(_ type: WrapperType)
+```
+
+**Example**
+
+```objectivec
+[AEPMobileCore setWrapperType:AEPWrapperTypeFlutter];
+```
+
+<Variant platform="android" api="start" repeat="5"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void start(@Nullable final AdobeCallback<?> completionCallback)
+```
+
+**Example**
+
+```java
+import com.adobe.marketing.mobile.AdobeCallback;
+import com.adobe.marketing.mobile.Lifecycle;
+import com.adobe.marketing.mobile.LoggingMode;
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Signal;
+import com.adobe.marketing.mobile.UserProfile;
+...
+import android.app.Application;
+...
+public class MyApp extends Application {
+  ...
+  @Override
+  public void on Create(){
+    super.onCreate();
+
+    MobileCore.setApplication(this);
+
+    UserProfile.registerExtension();
+    Lifecycle.registerExtension();
+    Signal.registerExtension();
+    MobileCore.start(new AdobeCallback () {
+        @Override
+        public void call(Object o) {
+          // implement callback
+        }
+    });
+  }
+}
+```
+
 <Variant platform="android" api="track-action" repeat="6"/>
 
 #### Java
@@ -847,7 +1183,7 @@ public static void setLargeIconResourceID(int resourceID)
 **Syntax**
 
 ```java
-public static void trackAction(final String action, final Map<String, String> contextData)
+public static void trackAction(@NonNull final String action, @Nullable final Map<String, String> contextData)
 ```
 
 * _action_ contains the name of the action to track.
@@ -945,7 +1281,7 @@ In Android, `trackState` is typically called every time a new `Activity` is load
 **Syntax**
 
 ```java
-public static void trackState(final String state, final Map<String, String> contextData)
+public static void trackState(@NonNull final String state, @Nullable final Map<String, String> contextData)
 ```
 
 * _state_ contains the name of the state to track.
