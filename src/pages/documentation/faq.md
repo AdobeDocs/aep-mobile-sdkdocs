@@ -111,6 +111,52 @@ Add the following rule to your custom ProGuard rules file, typically labeled `pr
 }
 ```
 
+### Is there a change in minimum API level supported by Mobile SDK for Android?
+
+Mobile SDK for Android now supports a minimum API level of **19**. If your application targets a lower API level, you will see the following build failure:
+
+```
+Manifest merger failed : uses-sdk:minSdkVersion 14 cannot be smaller than version 19 declared in library [com.adobe.marketing.mobile:core:2.0.0]
+```
+
+To fix this build failure, increase the minSdkVersion for your Android project to **19** or above.
+
+### When I add Mobile SDK to my Android project, why do I get an error about invoke-custom support and enabling desugaring?
+
+Mobile SDK for Android uses Java 8 language features and desugaring is disabled by default. If your application uses Android Gradle plugin (AGP) v4.2 and has not enabled Java 8 support, you will see the following build failure:
+
+```
+D8: Invoke-customs are only supported starting with Android O (--min-api 26)
+Caused by: com.android.builder.dexing.DexArchiveBuilderException: Error while dexing.
+The dependency contains Java 8 bytecode. Please enable desugaring by adding the following to build.gradle
+android {
+	compileOptions {
+		sourceCompatibility 1.8
+		targetCompatibility 1.8
+	}
+}
+
+See https://developer.android.com/studio/write/java8-support.html for details.
+Alternatively, increase the minSdkVersion to 26 or above.
+```
+
+To fix this build failure, you can follow one of two options:
+- Add the listed compileOptions from the error message to your app-level build.gradle file.
+- Increase the minSdkVersion for your Android project to **26** or above.
+
+### Why do I see a warning in AndroidManifest.xml about missing 'com.adobe.marketing.mobile.FullscreenMessageActivity' class?
+
+After upgrading to latest version of Mobile SDK for Android, you will see the following build warning if your application previously set up in-app messages with Campaign Standard. 
+
+```
+Class referenced in the manifest, `com.adobe.marketing.mobile.FullscreenMessageActivity`, was not found in the project or the libraries
+
+Unresolved class 'FullscreenMessageActivity'
+```
+
+To resolve the build warning, remove FullscreenMessageActivity from your application's manifest file. Campaign Standard SDK no longer requires application to add **FullscreenMessageActivity** to their manifest.
+
+
 ### How can I track user engagement of push notifications using the Experience Platform Mobile SDK?
 
 Implementing push notification tracking and measurement with the SDK depends on the Experience Cloud solution being used.
@@ -131,21 +177,21 @@ See the [frequently asked questions for Analytics](./adobe-analytics/faq.md).
 
 ## Adobe Experience Platform Edge Network
 
-### Does AEP Edge Network extension support offline tracking?
+### Does the Edge Network extension support offline tracking?
 
 Yes, offline tracking is supported by default when sending XDM Experience events since these events have a required timestamp, and there is no separate setting for this as it used to be in the Adobe Analytics extension. The events are backed up in the persistence layer and then sent to the Edge Network in current session if possible, or queued until the next session when a network connection is available.
 
 ## Get help
 
-* Visit the SDK [community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-sdks/ct-p/platform-sdk) to ask questions
+* Visit the SDK [community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform/ct-p/adobe-experience-platform-community) to ask questions
 * Contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support) for immediate assistance
 
-## Using AEP Swift SDKs with tvOS
+## Using Experience Platform Swift SDKs with tvOS
 
 ### 'X' is unavailable in application extension for tvOS
 
-You may encounter this error when using the AEP SDK for a tvOS app target, with the following message "'X' is unavailable in application extension for tvOS". This behavior is unexpected for tvOS targets and it seems to be an issue in Xcode where it apples additional checks for tvOSApplicationExtension API compatibility.
-Until this issue is resolved in the future Xcode versions, a workaround is to mark the classes or functions with the attribute: @available(tvOSApplicationExtension, unavailable) to suppress the error as in the examples below:
+You may encounter this error when using the Experience Platform SDK for a tvOS app target, with the following message "'X' is unavailable in application extension for tvOS". This behavior is unexpected for tvOS targets and it seems to be an issue in Xcode where it applies additional checks for `tvOSApplicationExtension` API compatibility.
+Until this issue is resolved in the future Xcode versions, a workaround is to mark the classes or functions with the attribute: `@available(tvOSApplicationExtension, unavailable)` to suppress the error as in the examples below:
 
 #### Example
 
