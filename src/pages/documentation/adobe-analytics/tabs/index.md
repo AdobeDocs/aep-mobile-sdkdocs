@@ -3,17 +3,17 @@
 
 1. Add the [Mobile Core](../mobile-core/index.md) and Analytics extensions to your project using the app's Gradle file.
 
-```java
-implementation 'com.adobe.marketing.mobile:core:2.x.x'
-implementation 'com.adobe.marketing.mobile:identity:2.x.x'
-implementation 'com.adobe.marketing.mobile:analytics:2.x.x'
-```
-
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
 Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
 
 </InlineNestedAlert>
+
+```java
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:identity:2.+'
+implementation 'com.adobe.marketing.mobile:analytics:2.+'
+```
 
 2. Import the Analytics extension in your application's main activity.
 

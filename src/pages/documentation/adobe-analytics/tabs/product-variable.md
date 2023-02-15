@@ -36,7 +36,7 @@ val cdata: Map<String, Any?> = mapOf(
     "myapp.purchaseid" to "1234567890"
 )
 
-// send a tracking call - use either a trackAction or TrackState call.
+// send a tracking call - use either a trackAction or trackState call.
 // trackAction example:
 MobileCore.trackAction("purchase", cdata);
 // trackState example:
@@ -137,7 +137,7 @@ val cdata: Map<String, Any?> = mapOf(
     "myapp.purchaseid" to "1234567890"
 )
 
-// send a tracking call - use either a trackAction or TrackState call.
+// send a tracking call - use either a trackAction or trackState call.
 // trackAction example:
 MobileCore.trackAction("purchase", cdata);
 // trackState example:

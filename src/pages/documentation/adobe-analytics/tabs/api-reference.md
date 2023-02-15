@@ -186,7 +186,7 @@ Analytics.getQueueSize { (queueSize, error) in
  }];
 ```
 
-<Variant platform="android" api="get-tracking-identifier" repeat="10"/>
+<Variant platform="android" api="get-tracking-identifier" repeat="9"/>
 
 #### Java
 
@@ -348,6 +348,62 @@ Analytics.getVisitorIdentifier { (visitorIdentifier, error) in
 [AEPMobileAnalytics getVisitorIdentifier:^(NSString * _Nullable visitorIdentifier, NSError * _Nullable error) {
    // Handle the error (if non-nil) or use the visitorIdentifier value
 }];
+```
+
+<Variant platform="android" api="register-extension" repeat="8"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public  static void registerExtension() throws InvalidInitException
+```
+
+**Example**
+
+```java
+Analytics.registerExtension();
+```
+
+#### Kotlin
+
+**Example**
+
+```kotlin
+Analytics.registerExtension()
+```
+
+<Variant platform="ios" api="register-extension" repeat="10"/>
+
+#### Swift
+
+**Syntax**
+
+```swift
+static func registerExtensions(_ extensions: [NSObject.Type], 
+                               _ completion: (() -> Void)? = nil)
+```
+
+**Example**
+
+```swift
+MobileCore.registerExtension([Analytics.self])
+```
+
+#### Objective-C
+
+**Syntax**
+
+```objectivec
++ (void) registerExtensions: (NSArray<Class*>* _Nonnull) extensions 
+                 completion: (void (^ _Nullable)(void)) completion;
+```
+
+**Example**
+
+```objectivec
+[AEPMobileCore registerExtensions:@[AEPMobileAnalytics.class] completion:nil];
 ```
 
 <Variant platform="android" api="send-queued-hits" repeat="8"/>

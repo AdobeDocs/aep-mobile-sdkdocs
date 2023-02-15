@@ -133,6 +133,24 @@ iOS
 
 <Tabs query="platform=ios&api=get-visitor-identifier-with-completion-handler"/>
 
+## registerExtension
+
+Registers the Analytics extension with the Mobile Core SDK.
+
+<InlineAlert variant="warning" slots="text"/>
+
+Deprecated as of 2.0.0. Use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<Tabs query="platform=android&api=register-extension"/>
+
+iOS
+
+<Tabs query="platform=ios&api=register-extension"/>
+
 ## resetIdentities
 
 Clears the identities stored in the Analytics extension - `tracking identifier (AID)` and the `custom visitor identifiers (VID)` stored in the Analytics extension and force deletes, without sending to Analytics, all hits being stored or batched on the SDK.
