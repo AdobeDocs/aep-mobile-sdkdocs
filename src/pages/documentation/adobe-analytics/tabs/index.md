@@ -55,28 +55,44 @@ import AEPIdentity
 
 #### Java
 
-The following sample shows how to set up methods that call the [setApplication()](..//mobile-core/api-reference.md#setapplication-android-only) method in the `onCreate()` method:
+```java
+public class MainApp extends Application {
+     private final String ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID";
+
+     @Override
+     public void onCreate() {
+         super.onCreate();
+
+         MobileCore.setApplication(this);
+         MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
+
+         List<Class<? extends Extension>> extensions = Arrays.asList(
+                 Analytics.EXTENSION, Identity.EXTENSION);
+         MobileCore.registerExtensions(extensions, o -> {
+             Log.d(LOG_TAG, "AEP Mobile SDK is initialized");
+         });
+     }
+ }
+```
+
+#### Kotlin
 
 ```java
-public class MobileApp extends Application {
+class MyApp : Application() {
+    val ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID"
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        MobileCore.setApplication(this);
-        MobileCore.configureWithAppID("yourAppId");
-        try {
-            Analytics.registerExtension(); //Register Analytics with Mobile Core
-            Identity.registerExtension();
-            MobileCore.start(null);
-        } catch (Exception e) {
-            //Log the exception
-         }
+    override fun onCreate() {
+        super.onCreate()
+        MobileCore.setApplication(this)
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
+
+        val extensions = listOf(Analytics.EXTENSION, Identity.EXTENSION)
+        MobileCore.registerExtensions(extensions) {
+            Log.d(LOG_TAG, "AEP Mobile SDK is initialized")
+        }
     }
 }
 ```
-
-Analytics depends on the Identity extension and is automatically included in Core by Maven. When manually installing the Analytics extension, ensure that you add the `identity-1.x.x.aar` library to your project.
 
 <Variant platform="ios" task="register" repeat="6"/>
 

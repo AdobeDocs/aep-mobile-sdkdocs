@@ -1,4 +1,4 @@
-<Variant platform="android" api="extension-version" repeat="5"/>
+<Variant platform="android" api="extension-version" repeat="10"/>
 
 #### Java
 
@@ -12,6 +12,20 @@ public static String extensionVersion();
 
 ```java
 String extensionVersion = Edge.extensionVersion();
+```
+
+#### Kotlin
+
+**Syntax**
+
+```java
+fun extensionVersion(): String
+```
+
+**Example**
+
+```java
+val extensionVersion = EdgeBridge.extensionVersion()
 ```
 
 <Variant platform="ios" api="extension-version" repeat="10"/>
@@ -44,7 +58,7 @@ let extensionVersion = Edge.extensionVersion
 NSString *extensionVersion = [AEPMobileEdge extensionVersion];
 ```
 
-<Variant platform="android" api="get-location-hint" repeat="6"/>
+<Variant platform="android" api="get-location-hint" repeat="11"/>
 
 #### Java
 
@@ -53,6 +67,7 @@ NSString *extensionVersion = [AEPMobileEdge extensionVersion];
 ```java
 public static void getLocationHint(final AdobeCallback<String> callback)
 ```
+
 * _callback_ is invoked with the location hint. The location hint value may be null if the location hint expired or was not set. The callback may be invoked on a different thread. If `AdobeCallbackWithError` is provided, the default timeout is 1000ms and the `fail` method is called if the operation times out or an unexpected error occurs.
 
 **Example**
@@ -69,6 +84,27 @@ Edge.getLocationHint(new AdobeCallbackWithError<String>() {
         // handle error here
     }
 });
+```
+
+#### Kotlin
+
+**Syntax**
+
+```java
+fun getLocationHint(callback: AdobeCallback<String>)
+```
+
+**Example**
+
+```java
+Edge.getLocationHint(object: AdobeCallbackWithError<String> {
+    override fun call(hint: String) {
+      // Handle the hint here
+    }
+    override fun fail(error: AdobeError?) {
+      // Handle the error here
+    }
+})
 ```
 
 <Variant platform="ios" api="get-location-hint" repeat="11"/>
@@ -170,7 +206,7 @@ Use the AEPMobileCore API to register the Edge extension.
 
 ```
 
-<Variant platform="android" api="send-event" repeat="8"/>
+<Variant platform="android" api="send-event" repeat="15"/>
 
 #### Java
 
@@ -209,6 +245,39 @@ Edge.sendEvent(experienceEvent, new EdgeCallback() {
         // handle the Edge Network response 
   }
 });
+```
+
+#### Kotlin
+
+**Syntax**
+
+```java
+fun sendEvent(experienceEvent: ExperienceEvent, callback: EdgeCallback?)
+```
+
+**Example**
+
+```java
+// Create experience event from Map
+val xdmData = mutableMapOf<String, Any>()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
+
+val experienceEvent = ExperienceEvent.Builder()
+  .setXdmSchema(xdmData)
+  .build()
+```
+
+```java
+// Example 1 - send the experience event without handling the Edge Network response
+Edge.sendEvent(experienceEvent, null)
+```
+
+```java
+// Example 2 - send the experience event and handle the Edge Network response onComplete
+Edge.sendEvent(experienceEvent) {
+  // Handle the Edge Network response 
+}
 ```
 
 <Variant platform="ios" api="send-event" repeat="15"/>
@@ -273,7 +342,7 @@ NSDictionary *data = @{ @"sample" : @"data"};
 }];
 ```
 
-<Variant platform="android" api="set-location-hint" repeat="6"/>
+<Variant platform="android" api="set-location-hint" repeat="11"/>
 
 #### Java
 
@@ -288,6 +357,20 @@ public static void setLocationHint(final String hint)
 
 ```java
 Edge.setLocationHint(hint);
+```
+
+#### Kotlin
+
+**Syntax**
+
+```java
+fun setLocationHint(hint: String?)
+```
+
+**Example**
+
+```java
+Edge.setLocationHint(hint)
 ```
 
 <Variant platform="ios" api="set-location-hint" repeat="11"/>
