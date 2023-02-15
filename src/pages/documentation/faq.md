@@ -113,7 +113,7 @@ Add the following rule to your custom ProGuard rules file, typically labeled `pr
 
 ### Is there a change in minimum API level supported by Mobile SDK for Android?
 
-Mobile SDK for Android now supports a minimum API level of **19**.  If your application targets a lower API level, you will see the following build failure:
+Mobile SDK for Android now supports a minimum API level of **19**. If your application targets a lower API level, you will see the following build failure:
 
 ```
 Manifest merger failed : uses-sdk:minSdkVersion 14 cannot be smaller than version 19 declared in library [com.adobe.marketing.mobile:core:2.0.0]
@@ -142,7 +142,7 @@ Alternatively, increase the minSdkVersion to 26 or above.
 
 To fix this build failure, you can follow one of two options:
 - Add the listed compileOptions from the error message to your app-level build.gradle file.
-- Increase the minSdkVersion for your Android project to 26 or above.
+- Increase the minSdkVersion for your Android project to **26** or above.
 
 ### Why do I see a warning in AndroidManifest.xml about missing 'com.adobe.marketing.mobile.FullscreenMessageActivity' class?
 
