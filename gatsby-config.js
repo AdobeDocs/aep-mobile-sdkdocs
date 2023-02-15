@@ -631,7 +631,7 @@ module.exports = {
                                 path: "documentation/adobe-journey-optimizer/release-notes"
                             }
                             {
-                                title: "AJO Powered In-app messaging",
+                                title: "In-app messaging",
                                 path: "/documentation/adobe-journey-optimizer/iam",
                                 pages: [
                                     {
@@ -648,7 +648,7 @@ module.exports = {
                                     },
                                     {
                                         title: "API reference",
-                                        path: "d/documentation/adobe-journey-optimizer/iam/api-reference"
+                                        path: "/documentation/adobe-journey-optimizer/iam/api-reference"
                                     },
                                     {
                                         title: "Public classes and enums",
@@ -682,7 +682,7 @@ module.exports = {
                                     }
 
                                 ]
-                            },
+                            }
                         ]
                     },
                     {

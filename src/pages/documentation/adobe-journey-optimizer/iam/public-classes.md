@@ -102,6 +102,8 @@ Signals to the UIService that the message should be shown.
 
 If `autoTrack` is true, calling this method will result in an "decisioning.propositionDisplay" Edge Event being dispatched.
 
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
 Android
 
 <Tabs query="platform=android&function=show"/>
@@ -112,6 +114,8 @@ Signals to the UIService that the message should be removed from the UI.
 
 If `autoTrack` is true, calling this method will result in an "decisioning.propositionDismiss" Edge Event being dispatched.
 
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
 Android
 
 <Tabs query="platform=android&function=dismiss"/>
@@ -119,6 +123,8 @@ Android
 ### track
 
 Generates and dispatches an Edge Event for the provided `interaction` and `eventType`.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
@@ -128,6 +134,8 @@ Android
 
 Sets the `Message's` auto tracking preference.
 
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
 Android
 
 <Tabs query="platform=android&function=auto-track"/>
@@ -135,6 +143,8 @@ Android
 ### evaluateJavascript
 
 Evaluates the passed in `String` content containing javascript code using the `Message's ` webview. `handleJavascriptMessage` must be called with a valid callback before calling `evaluateJavascript` as the body of the message passed from the javascript code execution will be returned in the `AdobeCallback` .
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
@@ -148,6 +158,8 @@ The  `AdobeCallback` will contain the body of the message passed from the `WebVi
 
 For a full guide on how to use `handleJavascriptMessage`, read [Call native code from the Javascript of an in-app message](./how-to-call-native-from-javascript.md).
 
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
 Android
 
 <Tabs query="platform=android&function=handle-javascript-message"/>
@@ -155,6 +167,8 @@ Android
 ### getId
 
 Returns the message's id.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
@@ -164,6 +178,8 @@ Android
 
 Returns the `Object` which created this `Message`.
 
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
 Android
 
 <Tabs query="platform=android&function=parent"/>
@@ -171,6 +187,8 @@ Android
 ### getWebView
 
 Returns a reference to the message's  `WebView`  instance, if it exists.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
