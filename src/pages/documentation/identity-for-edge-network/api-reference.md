@@ -70,11 +70,9 @@ iOS
 
 ## registerExtension
 
-Registers the Identity for Edge Network extension with the Mobile Core extension.
+<InlineAlert variant="warning" slots="text"/>
 
-<InlineAlert variant="info" slots="text"/>
-
-If your use-case covers both Edge Network and Adobe Experience Cloud Solutions extensions, you need to register Identity for Edge Network and Identity for Experience Cloud Identity Service from Mobile Core extensions. For more details, see the [frequently asked questions](./faq.md#q-i-am-using-aep-edge-and-adobe-solutions-extensions-which-identity-extension-should-i-install-and-register).
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
