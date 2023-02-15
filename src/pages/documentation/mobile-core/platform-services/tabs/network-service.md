@@ -205,6 +205,7 @@ class MyCustomNetworkService implements Networking {
         return new MyCustomResponse(connection);
     }
 }
+```
 
 3. Override the default implementation of `NetworkService` provided by `ServiceProvider`. This step should occur prior to any other interactions with the SDK. While it is possible to register the network override at any point during the application lifecycle, the override will only function for network requests performed after the registration has taken place.
 
