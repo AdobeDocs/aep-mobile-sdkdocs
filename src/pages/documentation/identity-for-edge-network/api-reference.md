@@ -117,7 +117,7 @@ Some example use cases for this API are:
 * During debugging, to see how new ECIDs (and other identifiers paired with it) behave with existing rules and metrics.
 * A last-resort reset for when an ECID should no longer be used.
 
-This API is not recommended for:
+This API is **not** recommended for:
 
 * Resetting a user's consent and privacy settings; see [Privacy and GDPR](../privacy-and-gdpr.md).
 * Removing existing custom identifiers; use the [`removeIdentity`](#removeidentity) API instead.
