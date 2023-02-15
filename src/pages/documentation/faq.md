@@ -112,8 +112,8 @@ The sizes in the table are provided for estimation purposes only, with the follo
 
 * †Mobile Core, which includes the Rules Engine and Services extensions, is required for all other extensions. The final app size increase can be calculated by adding the Mobile Core size to each of the enabled extensions. 
   * For example, the iOS app distribution using the Target and Analytics extensions will have a total size increase of 1341 KB. (Core: 925 KB + Analytics: 133 KB + Target: 283 KB).
-* The iOS (SDK extension versions 3+) estimates are based on [Google's CocoaPods Size Measurement tool](https://github.com/google/cocoapods-size). 
-* The Android (SDK extension versions 2+) size estimates listed refer to unsigned apps and do not account for applying ProGuard.
+* The iOS size estimates are based on [Google's CocoaPods Size Measurement tool](https://github.com/google/cocoapods-size). 
+* The Android size estimates listed refer to unsigned apps and do not account for applying ProGuard.
 * For Android Mobile SDKs, the full list of dependencies for each SDK and version can be found at [Maven Repository](https://mvnrepository.com/artifact/com.adobe.marketing.mobile). 
 
 ### How can I use ProGuard with the Android SDK?
