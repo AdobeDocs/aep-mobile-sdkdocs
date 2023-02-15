@@ -1,5 +1,11 @@
 # Release Notes
 
+## February 13, 2023
+
+### Android Edge 1.4.1
+
+* Improves error handling when processing `Edge.sendEvent` requests by catching and logging unexpected `RuntimeException` instances thrown from within caller's `EdgeCallback` handler implementation.
+
 ## October 19, 2022
 
 ### iOS AEPEdge 1.5.0
