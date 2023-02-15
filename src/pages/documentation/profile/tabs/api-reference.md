@@ -1,4 +1,4 @@
-<Variant platform="android" api="extension-version" repeat="5"/>
+<Variant platform="android" api="extension-version" repeat="8"/>
 
 #### Java
 
@@ -12,6 +12,14 @@ public static String extensionVersion()
 
 ```java
 String extensionVersion = UserProfile.extensionVersion();
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+val extensionVersion = UserProfile.extensionVersion();
 ```
 
 <Variant platform="ios" api="extension-version" repeat="10"/>
@@ -44,7 +52,7 @@ let extensionVersion = UserProfile.extensionVersion
 NSString *extensionVersion = [AEPMobileUserProfile extensionVersion];
 ```
 
-<Variant platform="android" api="get-user-attributes" repeat="8"/>
+<Variant platform="android" api="get-user-attributes" repeat="13"/>
 
 #### Java
 
@@ -73,6 +81,28 @@ UserProfile.getUserAttributes(Arrays.asList("itemsAddedToCart"), new AdobeCallba
                      // your customized code
             }
         });
+```
+
+#### Kotlin
+
+**Example**
+
+A retail application wants to get the `itemsAddedToCart` user data when processing checkout.
+
+When `AdobeCallbackWithError` is provided, if the operation times out (5s) or an unexpected error occurs, the `fail` method is called with the appropriate `AdobeError`.
+
+```java
+UserProfile.getUserAttributes(listOf("itemsAddedToCart")) {
+    object : AdobeCallbackWithError<Map<String, Any?>> {
+        override fun fail(adobeError: AdobeError) {
+            // your customized code
+        }
+
+        override fun call(value: Map<String, Any?>) {
+            // your customized code
+        }
+    }
+}
 ```
 
 <Variant platform="ios" api="get-user-attributes" repeat="13"/>
