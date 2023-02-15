@@ -232,7 +232,7 @@ A retail application wants to remove the `itemsAddedToCart` user data after the 
 UserProfile.removeUserAttribute("itemsAddedToCart");
 ```
 
-<Variant platform="android" api="remove-user-attributes" repeat="6"/>
+<Variant platform="android" api="remove-user-attributes" repeat="10"/>
 
 #### Java
 
@@ -248,6 +248,16 @@ You want to remove `username`, `usertype` user data when session timeout occurs.
 
 ```java
 UserProfile.removeUserAttributes(Arrays.asList("username", "usertype"));
+```
+
+#### Kotlin
+
+**Example**
+
+You want to remove `username`, `usertype` user data when session timeout occurs.
+
+```java
+UserProfile.removeUserAttributes(listOf("username", "usertype"))
 ```
 
 <Variant platform="ios" api="remove-user-attributes" repeat="11"/>
@@ -313,13 +323,27 @@ public static void updateUserAttributes(Map<String, Object> attributeMap)
 
 **Example**
 
-You want to update `username, usertype` of a user obtained in the log in page:
+You want to update `username`, `usertype` of a user obtained in the log in page:
 
 ```java
 HashMap<String, Object> profileMap = new HashMap<>();
 profileMap.put("username","Will Smith");
 profileMap.put("usertype","Actor");
 UserProfile.updateUserAttributes(profileMap);
+```
+
+#### Kotlin
+
+**Example**
+
+You want to update `username`, `usertype` of a user obtained in the log in page:
+
+```java
+val profileMap = mapOf(
+        "username" to "Will Smith",
+        "usertype" to "Actor"
+    )
+UserProfile.updateUserAttributes(profileMap)
 ```
 
 <Variant platform="ios" api="update-user-attributes" repeat="11"/>

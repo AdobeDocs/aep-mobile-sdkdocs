@@ -52,7 +52,7 @@ iOS
 
 ## removeUserAttribute
 
-Removes the user profile attribute for the given key.
+Deprecated as of 2.0.0. Please use the [removeUserAttributes](#removeuserattributes) API instead.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
@@ -76,13 +76,7 @@ iOS
 
 ## updateUserAttribute
 
-Sets the user profile attributes key and value and allows you to create or update a user profile attribute.
-
-Remember the following information:
-
-* If the attribute does not exist, it will be created.
-* If the attribute exists, the value will be updated.
-* A null attribute value removes the attribute.
+Deprecated as of 2.0.0. Please use the [updateeUserAttributes](#updateuserattributes) API instead.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
