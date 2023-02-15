@@ -52,7 +52,7 @@ The Experience Platform SDK is available through [Cocoapods](https://cocoapods.o
 
 ### Can I use both the 4x SDK and the new Experience Platform SDK at the same time?
 
-Implementing two the SDKs in your app is not supported.
+Implementing the two SDKs in your app is not supported.
 
 The Experience Platform SDK migrates the locally stored user contexts from the 4x SDKs. Using both SDKs will cause severe data quality issues. For more information, please read the [upgrade to the Experience Platform SDKs tutorial](./upgrade-platform-sdks/index.md).
 
