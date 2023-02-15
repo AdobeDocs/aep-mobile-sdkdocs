@@ -186,7 +186,7 @@ To set up local notifications in Android, update the AndroidManifest.xml file:
 <receiver android:name="com.adobe.marketing.mobile.LocalNotificationHandler"/>
 ``` 
 
-To configure the notification icons that the local notification will use, see the [configuring notification icons section](../adobe-analytics-mobile-services/index.md#configuring-notification-icons) within the Adobe Analytics - Mobile Services documentation.
+To configure the notification icons that the local notification will use, see the [configuring notification icons section](../mobile-core/api-reference.md#setsmalliconresourceid--setlargeiconresourceid) within the Mobile Core.
 
 <Variant platform="ios" task="initialize" repeat="1"/>
 

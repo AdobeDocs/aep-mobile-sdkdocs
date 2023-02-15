@@ -38,9 +38,6 @@ The following tables provide information about the differences between the new E
 | Postbacks - Get/POST URL requests | Yes |	Yes - [Signals](../mobile-core/signal/index.md) extension |
 | Postbacks - PII Get/POST URL requests | Yes | Yes - [Signals](../mobile-core/signal/index.md) extension |
 | Postbacks - Open app deeplink | Yes | Yes - [Signals](../mobile-core/signal/index.md) extension |
-| Push Messaging | Yes | Yes - [Mobile Services](../adobe-analytics-mobile-services/index.md) extension | 
-| In-app Messaging | Yes | Yes - [Mobile Services](../adobe-analytics-mobile-services/index.md) extension |
-| Marketing/Acquisition Links | Yes | Yes - [Mobile Services](../adobe-analytics-mobile-services/index.md) extension |
 | Geo location and beacon tracking | Yes | Yes - Use [Places extension](../places/index.md) |
 | Geo points-of-interest management | Yes | Yes - Use [Places extension](../places/index.md) |
 

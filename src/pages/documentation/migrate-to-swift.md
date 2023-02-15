@@ -87,7 +87,6 @@ Finally, you'll need to scan through your current implementation and replace ACP
 | [Profile](./profile/index.md) | [AEPUserProfile](./profile/migration.md) |
 | [Adobe Experience Platform Assurance](./platform-assurance/index.md) | [AEPAssurance](./platform-assurance/migration.md) |
 | [Adobe Experience Platform Places Service](./places/index.md) | [AEPPlaces](./places/migration.md) |
-| [Adobe Analytics - Mobile Services](./adobe-analytics-mobile-services/index.md) | [AEPMobileService](./adobe-analytics-mobile-services/migration.md) |
 | [Adobe Analytics](./adobe-analytics/index.md) | [AEPAnalytics](./adobe-analytics/migration.md) |
 | [Adobe Analytics - Media Analytics for Audio & Video](./adobe-media-analytics/index.md) | [AEPMedia](./adobe-media-analytics/migration.md) |
 | [Adobe Audience](./adobe-audience-manager/index.md) | [AEPAudience](./adobe-audience-manager/migration.md) |
