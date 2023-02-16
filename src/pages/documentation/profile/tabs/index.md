@@ -1,13 +1,23 @@
-<Variant platform="android" task="add" repeat="3"/>
-
-#### Java
+<Variant platform="android" task="add" repeat="5"/>
 
 1. Add the `UserProfile` library to your project using the app's gradle file.
+
+```java
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:userprofile:2.+'
+```
+
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+
+</InlineNestedAlert>
 
 2. Import the `UserProfile` library and any other SDK library in your application's main activity.
 
 ```java
-import com.adobe.marketing.mobile.*;
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.UserProfile;
 ```
 
 <Variant platform="ios" task="add" repeat="7"/>
@@ -42,33 +52,44 @@ end
 
 #### Java
 
-**Required:** The `setApplication()` method must be called once in the `onCreate()` method of your main activity.
+```java
+public class MainApp extends Application {
+     private static final String APP_ID = "YOUR_APP_ID";
 
-1. The `UserProfile` extension must be registered with Mobile Core before calling an `UserProfile` API.
+     @Override
+     public void onCreate() {
+         super.onCreate();
 
-This can be done after calling `setApplication()` in the `onCreate()` method. Here is a code sample, which calls these set up methods:
+         MobileCore.setApplication(this);
+         MobileCore.setLogLevel(LoggingMode.VERBOSE);
+         MobileCore.configureWithAppID(APP_ID);
+
+         List<Class<? extends Extension>> extensions = Arrays.asList(
+                 UserProfile.EXTENSION,...);
+         MobileCore.registerExtensions(extensions, o -> {
+             Log.d(LOG_TAG, "AEP Mobile SDK is initialized");
+         });
+     }
+ }
+```
+
+#### Kotlin
 
 ```java
-   public class MobileApp extends Application {
+class MyApp : Application() {
 
-       @Override
-       public void onCreate() {
-           super.onCreate();
-           MobileCore.setApplication(this);
-           try {
-               // register other extensions
-               UserProfile.registerExtension();
-               MobileCore.start(new AdobeCallback () {
-                   @Override
-                   public void call(Object o) {
-                       MobileCore.configureWithAppID("yourAppId");
-                   }
-               });    
-           } catch (Exception e) {
-               //Log the exception
-            }
-       }
-   }
+    override fun onCreate() {
+        super.onCreate()
+        MobileCore.setApplication(this)
+        MobileCore.setLogLevel(LoggingMode.VERBOSE)
+        MobileCore.configureWithAppID("YOUR_APP_ID")
+
+        val extensions = listOf(UserProfile.EXTENSION, ...)
+        MobileCore.registerExtensions(extensions) {
+            Log.d(LOG_TAG, "AEP Mobile SDK is initialized")
+        }
+    }
+}
 ```
 
 <Variant platform="ios" task="register" repeat="4"/>

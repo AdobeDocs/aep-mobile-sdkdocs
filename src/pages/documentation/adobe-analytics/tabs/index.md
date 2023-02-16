@@ -88,7 +88,7 @@ public class MainApp extends Application {
 
 #### Kotlin
 
-```kotlin
+```java
 class MyApp : Application() {
     val ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID"
 
@@ -104,7 +104,6 @@ class MyApp : Application() {
     }
 }
 ```
-
 
 <Variant platform="ios" task="register" repeat="6"/>
 
