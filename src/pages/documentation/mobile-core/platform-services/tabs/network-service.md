@@ -1,4 +1,6 @@
-<Variant platform="android" task="usage" repeat="1"/>
+<Variant platform="android" task="usage" repeat="2"/>
+
+#### Java
 
 ```java
 import com.adobe.marketing.mobile.services.NetworkCallback;
@@ -29,7 +31,9 @@ final NetworkCallback networkCallback = response -> {
 ServiceProvider.getInstance().getNetworkService().connectAsync(networkRequest, networkCallback);
 ```
 
-<Variant platform="ios" task="usage" repeat="1"/>
+<Variant platform="ios" task="usage" repeat="2"/>
+
+#### Swift
 
 ```swift
 import AEPServices
@@ -46,7 +50,9 @@ networkService.connectAsync(networkRequest: networkRequest) { httpConnection in
 }
 ```
 
-<Variant platform="android" task="override" repeat="6"/>
+<Variant platform="android" task="override" repeat="7"/>
+
+#### Java
 
 1. Create a custom implementation of `HttpConnecting` that represents a response to a network request. This will be used to handle network completion when overriding the network stack in place of internal network connection implementation.
 
@@ -229,7 +235,42 @@ public class MyApp extends Application {
 }
 ```
 
-<Variant platform="ios" task="override" repeat="1"/>
+<Variant platform="ios" task="override" repeat="8"/>
+
+#### Swift
+
+First, you must implement the `Networking` protocol which has just one method: `connectAsync(networkRequest: completionHandler:)`. Your implementation will probably be more robust, but the important aspects are highlighted below.
+
+1. You must use the `AEPServices.NetworkRequest` to pass the relevant data needed to start a network request.
+2. You must call the completionHandler with an `AEPServices.HttpConnection`
 
 ```swift
+import AEPServices
+
+class SampleNetworkOverride: Networking {
+    func connectAsync(networkRequest: AEPServices.NetworkRequest, completionHandler: ((AEPServices.HttpConnection) -> Void)?) {
+        let urlRequest = URLRequest(url: networkRequest.url)
+        let urlSession = URLSession(configuration: .default)
+        let task = urlSession.dataTask(with: urlRequest) { data, response, error in
+            if let completionHandler = completionHandler {
+                let httpConnection = HttpConnection(data: data, response: response as? HTTPURLResponse, error: error)
+                completionHandler(httpConnection)
+            }
+        }
+        
+        task.resume()
+    }
+}
+```
+
+Once you have implemented the `Networking` protocol, all that's left is to override the ServiceProvider's NetworkService as follows:
+
+```swift
+ServiceProvider.shared.networkService = SampleNetworkOverride()
+```
+
+If you would like to revert back to the default `NetworkService`, simply set the `networkService` to nil.
+
+```swift
+ServiceProvider.shared.networkService = nil
 ```

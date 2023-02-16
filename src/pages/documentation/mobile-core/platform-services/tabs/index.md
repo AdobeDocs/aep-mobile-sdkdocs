@@ -1,6 +1,6 @@
 <Variant platform="android" task="access" repeat="2"/>
 
-**Java**
+#### Java
 
 ```java
 CacheService cacheService = ServiceProvider.getInstance().getCacheService();
@@ -8,7 +8,7 @@ CacheService cacheService = ServiceProvider.getInstance().getCacheService();
 
 <Variant platform="ios" task="access" repeat="2"/>
 
-**Swift**
+#### Swift
 
 ```swift
 private var cacheService: Caching { return ServiceProvider.shared.cacheService }
@@ -16,7 +16,7 @@ private var cacheService: Caching { return ServiceProvider.shared.cacheService }
 
 <Variant platform="android" task="override" repeat="7"/>
 
-**Java**
+#### Java
 
 First, implement a class that conforms to the `Logging` interface. Below is an example of a logging service that only prints out messages with a log level of Error.
 
@@ -52,7 +52,7 @@ ServiceProvider.getInstance().setLoggingService(null);
 
 <Variant platform="ios" task="override" repeat="7"/>
 
-**Swift**
+#### Swift
 
 First, implement a type that conforms to the Logging protocol, as defined above.  Below is an example of a logging service that only prints out messages with a log level of `Error`.
 
