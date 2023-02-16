@@ -5,9 +5,9 @@
 1. Add the Mobile Core and Edge extensions to your project using the app's Gradle file.
 
 ```java
-implementation 'com.adobe.marketing.mobile:core:1.+'
-implementation 'com.adobe.marketing.mobile:edge:1.+'
-implementation 'com.adobe.marketing.mobile:edgeidentity:1.+'
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:edge:2.+'
+implementation 'com.adobe.marketing.mobile:edgeidentity:2.+'
 ```
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
@@ -56,31 +56,50 @@ import AEPEdgeIdentity
 @import AEPEdgeIdentity;
 ```
 
-<Variant platform="android" task="register" repeat="2"/>
+<Variant platform="android" task="register" repeat="4"/>
 
 #### Java
 
 ```java
-public class MobileApp extends Application {
+public class MainApp extends Application {
 
-    @Override
-    public void onCreate() {
-      super.onCreate();
-      MobileCore.setApplication(this);
+  private final String ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID";
 
-      try {
-        Edge.registerExtension();
-        com.adobe.marketing.mobile.edge.identity.Identity.registerExtension();
-        // register other extensions
-        MobileCore.start(new AdobeCallback() {
-          @Override
-          public void call(final Object o) {
-            MobileCore.configureWithAppID("yourAppId");
-          }});
-      } catch (Exception e) {
-        //Log the exception
-      }
+	@Override
+	public void onCreate() {
+		super.onCreate();
+
+		MobileCore.setApplication(this);
+		MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
+
+		MobileCore.registerExtensions(
+			Arrays.asList(Edge.EXTENSION, Identity.EXTENSION),
+			o -> Log.d("MainApp", "Adobe Experience Platform Mobile SDK was initialized.")
+		);
+	}
+}
+```
+
+#### Kotlin
+
+```java
+class MainApp : Application() {
+
+  private var ENVIRONMENT_FILE_ID: String = "YOUR_APP_ENVIRONMENT_ID"
+
+    override fun onCreate() {
+        super.onCreate()
+
+        MobileCore.setApplication(this)
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
+
+        MobileCore.registerExtensions(
+          listOf(Edge.EXTENSION, Identity.EXTENSION)
+        ) {
+          Log.d("MainApp", "Adobe Experience Platform Mobile SDK was initialized")
+        }
     }
+
 }
 ```
 
