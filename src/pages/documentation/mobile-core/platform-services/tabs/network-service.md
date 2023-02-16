@@ -155,12 +155,12 @@ class MyCustomNetworkService implements Networking {
                 });
     }
 
-	/**
-	 * Utility method to perform the network connectionconnection.
-	 * @praram - the `NetworkRequest` whose details should be used for connecting
-	 *
-	 * @return `MyCustomResponse` after making a connection
-	 */
+    /**
+     * Utility method to perform the network connection.
+     * @praram - the `NetworkRequest` whose details should be used for connecting
+     *
+     * @return `MyCustomResponse` after making a connection
+     */
     private MyCustomResponse doConnection(final NetworkRequest request) {
         HttpsURLConnection connection = null;
 
