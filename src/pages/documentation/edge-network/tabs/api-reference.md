@@ -1,4 +1,4 @@
-<Variant platform="android" api="extension-version" repeat="10"/>
+<Variant platform="android" api="extension-version" repeat="8"/>
 
 #### Java
 
@@ -52,7 +52,7 @@ let extensionVersion = Edge.extensionVersion
 NSString *extensionVersion = [AEPMobileEdge extensionVersion];
 ```
 
-<Variant platform="android" api="get-location-hint" repeat="11"/>
+<Variant platform="android" api="get-location-hint" repeat="9"/>
 
 #### Java
 
@@ -194,7 +194,7 @@ Use the AEPMobileCore API to register the Edge extension.
 
 ```
 
-<Variant platform="android" api="send-event" repeat="15"/>
+<Variant platform="android" api="send-event" repeat="13"/>
 
 #### Java
 
@@ -324,7 +324,7 @@ NSDictionary *data = @{ @"sample" : @"data"};
 }];
 ```
 
-<Variant platform="android" api="set-location-hint" repeat="11"/>
+<Variant platform="android" api="set-location-hint" repeat="9"/>
 
 #### Java
 

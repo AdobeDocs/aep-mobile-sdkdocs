@@ -1,4 +1,4 @@
-<Variant platform="android" api="extension-version" repeat="10"/>
+<Variant platform="android" api="extension-version" repeat="8"/>
 
 #### Java
 
@@ -52,7 +52,7 @@ let extensionVersion = Consent.extensionVersion
 NSString *extensionVersion = [AEPMobileEdgeConsent extensionVersion];
 ```
 
-<Variant platform="android" api="get-consents" repeat="11"/>
+<Variant platform="android" api="get-consents" repeat="9"/>
 
 #### Java
 
@@ -179,7 +179,7 @@ Use the AEPMobileCore API to register the Edge Consent extension.
 [AEPMobileCore registerExtensions:@[AEPMobileEdgeConsent.class] completion:nil];
 ```
 
-<Variant platform="android" api="update-consents" repeat="11"/>
+<Variant platform="android" api="update-consents" repeat="9"/>
 
 #### Java
 

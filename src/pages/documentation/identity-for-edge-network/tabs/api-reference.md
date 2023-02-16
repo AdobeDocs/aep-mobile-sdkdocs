@@ -1,4 +1,4 @@
-<Variant platform="android" api="extension-version" repeat="10"/>
+<Variant platform="android" api="extension-version" repeat="8"/>
 
 #### Java
 
@@ -52,7 +52,7 @@ let extensionVersion = EdgeIdentity.extensionVersion
 NSString *extensionVersion = [AEPMobileEdgeIdentity extensionVersion];
 ```
 
-<Variant platform="android" api="get-experience-cloud-id" repeat="12"/>
+<Variant platform="android" api="get-experience-cloud-id" repeat="10"/>
 
 <InlineNestedAlert variant="info" header="false" iconPosition="left">
 
@@ -131,7 +131,7 @@ Identity.getExperienceCloudId { (ecid, error) in
 }];
 ```
 
-<Variant platform="android" api="get-identities" repeat="12"/>
+<Variant platform="android" api="get-identities" repeat="10"/>
 
 <InlineNestedAlert variant="info" header="false" iconPosition="left">
 
@@ -210,7 +210,7 @@ Identity.getIdentities { (identityMap, error) in
 }];
 ```
 
-<Variant platform="android" api="get-url-variables" repeat="12"/>
+<Variant platform="android" api="get-url-variables" repeat="10"/>
 
 <InlineNestedAlert variant="info" header="false" iconPosition="left">
 
@@ -341,47 +341,7 @@ import com.adobe.marketing.mobile.edge.identity.Identity
 Identity.registerExtension();
 ```
 
-<Variant platform="ios" api="register-extension" repeat="11"/>
-
-In iOS, the registration occurs by passing Identity for Edge Network extension to the [MobileCore.registerExtensions API](../mobile-core/api-reference.md#registerextension-s).
-
-#### Swift
-
-**Syntax**
-
-```swift
-static func registerExtensions(_ extensions: [NSObject.Type], 
-                               _ completion: (() -> Void)? = nil)
-```
-
-**Example**
-
-```swift
-import AEPEdgeIdentity
-
-...
-MobileCore.registerExtensions([Identity.self])
-```
-
-#### Objective-C
-
-**Syntax**
-
-```objectivec
-+ (void) registerExtensions: (NSArray<Class*>* _Nonnull) extensions 
-                 completion: (void (^ _Nullable)(void)) completion;
-```
-
-**Example**
-
-```objectivec
-@import AEPEdgeIdentity;
-
-...
-[AEPMobileCore registerExtensions:@[AEPMobileEdgeIdentity.class] completion:nil];
-```
-
-<Variant platform="android" api="remove-identity" repeat="10"/>
+<Variant platform="android" api="remove-identity" repeat="8"/>
 
 #### Java
 
@@ -439,7 +399,7 @@ AEPIdentityItem *item = [[AEPIdentityItem alloc] initWithId:@"user@example.com" 
 [AEPMobileEdgeIdentity removeIdentityItem:item withNamespace:@"Email"];
 ```
 
-<Variant platform="android" api="set-advertising-identifier" repeat="16"/>
+<Variant platform="android" api="set-advertising-identifier" repeat="14"/>
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
@@ -700,7 +660,7 @@ func setAdvertisingIdentifierUsingTrackingManager() {
 }
 ```
 
-<Variant platform="android" api="update-identities" repeat="10"/>
+<Variant platform="android" api="update-identities" repeat="8"/>
 
 #### Java
 
