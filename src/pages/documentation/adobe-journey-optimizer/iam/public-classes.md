@@ -12,7 +12,7 @@ The `Message` class contains the definition of an in-app message and controls it
 
 Identifier of the `Message`. This value matches the Message Execution ID assigned by Adobe Journey Optimizer (AJO) Campaign.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 iOS
 
@@ -22,7 +22,7 @@ iOS
 
 If set to `true` (default), Experience Edge events will automatically be generated when this `Message` is triggered, displayed, and dismissed.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 iOS
 
@@ -32,7 +32,7 @@ iOS
 
 Holds a reference to the message's `WKWebView` (iOS) or `WebView` (Android) instance, if it exists.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 iOS
 
@@ -46,7 +46,7 @@ Signals to the UIService (in `AEPServices`) that the message should be shown.
 
 If `autoTrack` is true, calling this method will result in an `decisioning.propositionTrigger` Edge Event being dispatched.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 iOS
 
@@ -58,7 +58,7 @@ Signals to the UIService that the message should be removed from the UI.
 
 If `autoTrack` is true, calling this method will result in an `decisioning.propositionDismiss` Edge Event being dispatched.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 iOS
 
@@ -68,7 +68,7 @@ iOS
 
 Generates and dispatches an Edge Event for the provided `interaction` and `eventType`.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 iOS
 
@@ -82,7 +82,7 @@ The parameter passed to `handler` will contain the body of the message passed fr
 
 For a full guide on how to use `handleJavascriptMessage`, read [Call native code from the Javascript of an in-app message](./tutorials/native-from-javascript.md).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 iOS
 
@@ -102,7 +102,7 @@ Signals to the UIService that the message should be shown.
 
 If `autoTrack` is true, calling this method will result in an "decisioning.propositionDisplay" Edge Event being dispatched.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 Android
 
@@ -114,7 +114,7 @@ Signals to the UIService that the message should be removed from the UI.
 
 If `autoTrack` is true, calling this method will result in an "decisioning.propositionDismiss" Edge Event being dispatched.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 Android
 
@@ -124,7 +124,7 @@ Android
 
 Generates and dispatches an Edge Event for the provided `interaction` and `eventType`.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 Android
 
@@ -134,7 +134,7 @@ Android
 
 Sets the `Message's` auto tracking preference.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 Android
 
@@ -144,7 +144,7 @@ Android
 
 Evaluates the passed in `String` content containing javascript code using the `Message's ` webview. `handleJavascriptMessage` must be called with a valid callback before calling `evaluateJavascript` as the body of the message passed from the javascript code execution will be returned in the `AdobeCallback` .
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 Android
 
@@ -158,7 +158,7 @@ The  `AdobeCallback` will contain the body of the message passed from the `WebVi
 
 For a full guide on how to use `handleJavascriptMessage`, read [Call native code from the Javascript of an in-app message](./how-to-call-native-from-javascript.md).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 Android
 
@@ -168,7 +168,7 @@ Android
 
 Returns the message's id.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 Android
 
@@ -178,7 +178,7 @@ Android
 
 Returns the `Object` which created this `Message`.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 Android
 
@@ -188,7 +188,7 @@ Android
 
 Returns a reference to the message's  `WebView`  instance, if it exists.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 Android
 

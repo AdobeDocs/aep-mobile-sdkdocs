@@ -629,7 +629,7 @@ module.exports = {
                             {
                                 title: "Release notes",
                                 path: "documentation/adobe-journey-optimizer/release-notes"
-                            }
+                            },
                             {
                                 title: "In-app messaging",
                                 path: "/documentation/adobe-journey-optimizer/iam",
