@@ -5,6 +5,7 @@
 **Syntax**
 
 ```java
+@NonNull
 public static String extensionVersion()
 ```
 
@@ -72,24 +73,26 @@ static Future<String> get extensionVersion async
 assuranceVersion = await FlutterAssurance.extensionVersion;
 ``` --->
 
-<Variant platform="android" api="start-session" repeat="10"/>
+<Variant platform="android" api="start-session" repeat="9"/>
 
-This API is optional for Android.
+<InlineNestedAlert variant="info" header="false" iconPosition="left">
 
-Android does not require this API to be called. When the `registerExtension` API is called, AEP Assurance extension registers the app lifecycle handlers which automatically pick up any deep links and use them to start the session.
+This API is optional for Android. Deep link is the recommended way of connecting to an Assurance session when using the Android SDK. Assurance SDK on Android is already setup to handle incoming intents to your app. It is sufficient to [add an intent filter for incoming links in your app](https://developer.android.com/training/app-links/deep-linking) to complete the deep link configuration.
+
+</InlineNestedAlert>
 
 #### Java
 
 **Syntax**
 
 ```java
-public static void startSession(final String url)
+public static void startSession(@NonNull final String url)
 ```
 
 **Example**
 
 ```java
-final String url = "<assurance_session_url>"
+final String url = "<assurance_session_url>";
 Assurance.startSession(url);
 ```
 
@@ -167,3 +170,19 @@ static Future<void> startSession(String url);
 ```dart
 FlutterAssurance.startSession(url);
 ``` --->
+
+<Variant platform="android" api="register-extension" repeat="5"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void registerExtension()
+```
+
+**Example**
+
+```java
+Assurance.registerExtension();
+```
