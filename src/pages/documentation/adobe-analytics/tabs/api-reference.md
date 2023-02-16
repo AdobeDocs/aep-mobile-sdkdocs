@@ -374,38 +374,6 @@ Analytics.registerExtension();
 Analytics.registerExtension()
 ```
 
-<Variant platform="ios" api="register-extension" repeat="10"/>
-
-#### Swift
-
-**Syntax**
-
-```swift
-static func registerExtensions(_ extensions: [NSObject.Type], 
-                               _ completion: (() -> Void)? = nil)
-```
-
-**Example**
-
-```swift
-MobileCore.registerExtension([Analytics.self])
-```
-
-#### Objective-C
-
-**Syntax**
-
-```objectivec
-+ (void) registerExtensions: (NSArray<Class*>* _Nonnull) extensions 
-                 completion: (void (^ _Nullable)(void)) completion;
-```
-
-**Example**
-
-```objectivec
-[AEPMobileCore registerExtensions:@[AEPMobileAnalytics.class] completion:nil];
-```
-
 <Variant platform="android" api="send-queued-hits" repeat="8"/>
 
 #### Java
