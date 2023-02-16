@@ -16,12 +16,6 @@ String extensionVersion = Edge.extensionVersion();
 
 #### Kotlin
 
-**Syntax**
-
-```java
-fun extensionVersion(): String
-```
-
 **Example**
 
 ```java
@@ -76,23 +70,17 @@ public static void getLocationHint(final AdobeCallback<String> callback)
 Edge.getLocationHint(new AdobeCallbackWithError<String>() {
     @Override
     public void call(final String hint) {
-        // handle the hint here
+        // Handle the hint here
     }
 
     @Override
     public void fail(AdobeError adobeError) {
-        // handle error here
+        // Handle the error here
     }
 });
 ```
 
 #### Kotlin
-
-**Syntax**
-
-```java
-fun getLocationHint(callback: AdobeCallback<String>)
-```
 
 **Example**
 
@@ -123,9 +111,9 @@ static func getLocationHint(completion: @escaping (String?, Error?) -> Void)
 ```swift
 Edge.getLocationHint { (hint, error) in
   if let error = error {
-    // handle error here
+    // Handle the error here
   } else {
-    // handle location hint here
+    // Handle the location hint here
   }
 }
 ```
@@ -182,7 +170,7 @@ import AEPEdge
 
 ...
 MobileCore.registerExtensions([Edge.self, ...], {
-  // processing after registration
+  // Processing after registration
 })
 ```
 
@@ -222,7 +210,7 @@ public static void sendEvent(final ExperienceEvent experienceEvent, final EdgeCa
 **Example**
 
 ```java
-// create experience event from Map
+// Create Experience Event from map
 Map<String, Object> xdmData = new HashMap<>();
 xdmData.put("eventType", "SampleXDMEvent");
 xdmData.put("sample", "data");
@@ -233,32 +221,26 @@ ExperienceEvent experienceEvent = new ExperienceEvent.Builder()
 ```
 
 ```java
-// example 1 - send the experience event without handling the Edge Network response
+// Example 1 - send the Experience Event without handling the Edge Network response
 Edge.sendEvent(experienceEvent, null);
 ```
 
 ```java
-// example 2 - send the experience event and handle the Edge Network response onComplete
+// Example 2 - send the Experience Event and handle the Edge Network response onComplete
 Edge.sendEvent(experienceEvent, new EdgeCallback() {
   @Override
   public void onComplete(final List<EdgeEventHandle> handles) {
-        // handle the Edge Network response 
+        // Handle the Edge Network response 
   }
 });
 ```
 
 #### Kotlin
 
-**Syntax**
-
-```java
-fun sendEvent(experienceEvent: ExperienceEvent, callback: EdgeCallback?)
-```
-
 **Example**
 
 ```java
-// Create experience event from Map
+// Create Experience Event from map
 val xdmData = mutableMapOf<String, Any>()
 xdmData["eventType"] = "SampleXDMEvent"
 xdmData["sample"] = "data"
@@ -269,12 +251,12 @@ val experienceEvent = ExperienceEvent.Builder()
 ```
 
 ```java
-// Example 1 - send the experience event without handling the Edge Network response
+// Example 1 - send the Experience Event without handling the Edge Network response
 Edge.sendEvent(experienceEvent, null)
 ```
 
 ```java
-// Example 2 - send the experience event and handle the Edge Network response onComplete
+// Example 2 - send the Experience Event and handle the Edge Network response onComplete
 Edge.sendEvent(experienceEvent) {
   // Handle the Edge Network response 
 }
@@ -296,21 +278,21 @@ static func sendEvent(experienceEvent: ExperienceEvent, _ completion: (([EdgeEve
 **Example**
 
 ```swift
-//create experience event from dictionary:
+// Create Experience Event from dictionary:
 var xdmData : [String: Any] = ["eventType" : "SampleXDMEvent",
                               "sample": "data"]
 let experienceEvent = ExperienceEvent(xdm: xdmData)
 ```
 
 ```swift
-// example 1 - send the experience event without handling the Edge Network response
+// Example 1 - send the Experience Event without handling the Edge Network response
 Edge.sendEvent(experienceEvent: experienceEvent)
 ```
 
 ```swift
-// example 2 - send the experience event and handle the Edge Network response onComplete
+// Example 2 - send the Experience Event and handle the Edge Network response onComplete
 Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
-            // handle the Edge Network response
+            // Handle the Edge Network response
         }
 ```
 
@@ -325,18 +307,18 @@ Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) 
 **Example**
 
 ```objectivec
-//create experience event from dictionary:
+// Create Experience Event from dictionary:
 NSDictionary *xdmData = @{ @"eventType" : @"SampleXDMEvent"};
 NSDictionary *data = @{ @"sample" : @"data"};
 ```
 
 ```objectivec
-// example 1 - send the experience event without handling the Edge Network response
+// Example 1 - send the Experience Event without handling the Edge Network response
 [AEPMobileEdge sendExperienceEvent:event completion:nil];
 ```
 
 ```objectivec
-// example 2 - send the experience event and handle the Edge Network response onComplete
+// Example 2 - send the Experience Event and handle the Edge Network response onComplete
 [AEPMobileEdge sendExperienceEvent:event completion:^(NSArray<AEPEdgeEventHandle *> * _Nonnull handles) {
   // handle the Edge Network response
 }];
@@ -360,12 +342,6 @@ Edge.setLocationHint(hint);
 ```
 
 #### Kotlin
-
-**Syntax**
-
-```java
-fun setLocationHint(hint: String?)
-```
 
 **Example**
 
@@ -590,8 +566,8 @@ public final class ExperienceEvent {
 **Examples**
 
 ```java
-//Example 1
-// set freeform data to the Experience event
+// Example 1
+// Create Experience Event with both XDM and freeform data using maps
 Map<String, Object> xdmData = new HashMap<>();
 xdmData.put("eventType", "SampleXDMEvent");
 xdmData.put("sample", "data");
@@ -607,8 +583,8 @@ ExperienceEvent experienceEvent = new ExperienceEvent.Builder()
 ```
 
 ```java
-//Example 2
-// Create Experience Event from XDM Schema implementations
+// Example 2
+// Create Experience Event from XDM Schema implementation
 public class XDMSchemaExample implements com.adobe.marketing.mobile.xdm.Schema {
   private String eventType;
   private String otherField;
@@ -642,8 +618,8 @@ ExperienceEvent experienceEvent = new ExperienceEvent.Builder()
 ```
 
 ```java
-//Example 3
-// Set the destination Dataset identifier to the current Experience event:
+// Example 3
+// Set the destination Dataset identifier to the current Experience Event
 Map<String, Object> xdmData = new HashMap<>();
 xdmData.put("eventType", "SampleXDMEvent");
 xdmData.put("sample", "data");
@@ -688,8 +664,8 @@ public class ExperienceEvent: NSObject {
 **Examples**
 
 ```swift
-//Example 1
-// set freeform data to the Experience event
+// Example 1
+// Create Experience Event with both XDM and freeform data using dictionaries
 var xdmData : [String: Any] = ["eventType" : "SampleXDMEvent",
                               "sample": "data"]
 
@@ -697,8 +673,8 @@ let experienceEvent = ExperienceEvent(xdm: xdmData, data: ["free": "form", "data
 ```
 
 ```swift
-//Example 2
-// Create Experience Event from XDM Schema implementations
+// Example 2
+// Create Experience Event from XDM Schema implementation
 import AEPEdge
 
 public struct XDMSchemaExample : XDMSchema {
@@ -734,8 +710,8 @@ let event = ExperienceEvent(xdm: xdmData)
 ```
 
 ```swift
-//Example 3
-// Set the destination Dataset identifier to the current Experience event:
+// Example 3
+// Set the destination Dataset identifier to the current Experience Event
 var xdmData : [String: Any] = ["eventType" : "SampleXDMEvent",
                               "sample": "data"]
 
@@ -747,8 +723,8 @@ let experienceEvent = ExperienceEvent(xdm: xdmData, datasetIdentifier: "datasetI
 **Examples**
 
 ```objectivec
-//Example 1
-// set freeform data to the Experience event
+// Example 1
+// Create Experience Event with both XDM and freeform data using dictionaries
 NSDictionary *xdmData = @{ @"eventType" : @"SampleXDMEvent"};
 NSDictionary *data = @{ @"sample" : @"data"};
     
@@ -756,8 +732,8 @@ NSDictionary *data = @{ @"sample" : @"data"};
 ```
 
 ```objectivec
-//Example 2
-// Set the destination Dataset identifier to the current Experience event:
+// Example 2
+// Set the destination Dataset identifier to the current Experience Event
 NSDictionary *xdmData = @{ @"eventType" : @"SampleXDMEvent"};
    
 AEPExperienceEvent *event = [[AEPExperienceEvent alloc] initWithXdm:xdmData data:nil datasetIdentifier:@"datasetIdExample"];
