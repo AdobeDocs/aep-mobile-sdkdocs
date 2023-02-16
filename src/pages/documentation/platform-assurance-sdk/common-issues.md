@@ -26,7 +26,7 @@ When the generated link or QR code from Adobe Experience Platform Assurance is o
 
 ### Register Assurance SDK extension with Mobile Core
 
-Please refer to [this page](../index.md#register-aepassurance-with-mobile-core) for more details.
+Please refer to the [Assurance overview](../index.md#register-aepassurance-with-mobile-core) for more details.
 
 ### Copy link or open QR code from Adobe Experience Platform Assurance
 

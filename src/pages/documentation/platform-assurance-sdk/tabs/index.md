@@ -197,11 +197,11 @@ When using Flutter, register AEP Assurance with Mobile Core in native code as sh
 
 <Variant platform="android" task="implement-assurance" repeat="1"/>
 
-Deep link is the recommended way of connecting to an Assurance session when using the Android SDK. Assurance SDK on Android is already setup to handle incoming intents to your app. It is sufficient to [add an intent filter for incoming links in your app](https://developer.android.com/training/app-links/deep-linking) to complete the deep link configuration. The combination of `android:host` and `android:scheme` (in the form of `<host>://<scheme>`) of this intent filter will serve as the Base URL while creating a session in the [Adobe Experience Platform Assurance UI](https://experience.adobe.com/assurance)
+Deep linking is the best way to connnect to an Assurance session when using the Android SDK. Assurance SDK on Android is already setup to handle incoming intents to your app. You can [add an intent filter for incoming links in your app](https://developer.android.com/training/app-links/deep-linking) to complete the deep link configuration. The combination of `android:host` and `android:scheme` (in the form of `<host>://<scheme>`) for this intent filter will serve as the Base URL while creating a session in the [Adobe Experience Platform Assurance UI](https://experience.adobe.com/assurance)
 
 <Variant platform="ios" task="implement-assurance" repeat="13"/>
 
-The [startSession](./assurance-api-reference.md#startsession) API needs to be called to begin an Adobe Experience Platform Assurance session. You should call this API when the app launches with a URL (see code snippet below for sample usage). When called, SDK displays a PIN authentication overlay to begin a session. 
+The [startSession](./api-reference.md#startsession) API needs to be called to begin an Adobe Experience Platform Assurance session. You should call this API when the app launches with a URL (see code snippet below for sample usage). When called, SDK displays a PIN authentication overlay to begin a session. 
 
 #### Swift
 

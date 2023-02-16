@@ -77,7 +77,7 @@ assuranceVersion = await FlutterAssurance.extensionVersion;
 
 <InlineNestedAlert variant="info" header="false" iconPosition="left">
 
-This API is optional for Android. Deep link is the recommended way of connecting to an Assurance session when using the Android SDK. Assurance SDK on Android is already setup to handle incoming intents to your app. It is sufficient to [add an intent filter for incoming links in your app](https://developer.android.com/training/app-links/deep-linking) to complete the deep link configuration.
+This API is optional for Android. Deep linking is the best way to connect to an Assurance session when using the Android SDK. Assurance SDK on Android is already setup to handle incoming intents to your app. You can [add an intent filter for incoming links in your app](https://developer.android.com/training/app-links/deep-linking) to complete the deep link configuration.
 
 </InlineNestedAlert>
 
