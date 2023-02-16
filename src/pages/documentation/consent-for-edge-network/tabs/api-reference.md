@@ -1,6 +1,6 @@
-<Variant platform="android" api="extension-version" repeat="5"/>
+<Variant platform="android" api="extension-version" repeat="10"/>
 
-**Java**
+#### Java
 
 **Syntax**
 
@@ -14,9 +14,23 @@ public static String extensionVersion();
 String extensionVersion = Consent.extensionVersion();
 ```
 
+#### Kotlin
+
+**Syntax**
+
+```java
+fun extensionVersion(): String
+```
+
+**Example**
+
+```java
+val extensionVersion = Consent.extensionVersion()
+```
+
 <Variant platform="ios" api="extension-version" repeat="10"/>
 
-**Swift**
+#### Swift
 
 **Syntax**
 
@@ -30,7 +44,7 @@ static var extensionVersion: String
 let extensionVersion = Consent.extensionVersion
 ```
 
-**Objective-C**
+#### Objective-C
 
 **Syntax**
 
@@ -44,9 +58,9 @@ let extensionVersion = Consent.extensionVersion
 NSString *extensionVersion = [AEPMobileEdgeConsent extensionVersion];
 ```
 
-<Variant platform="android" api="get-consents" repeat="6"/>
+<Variant platform="android" api="get-consents" repeat="11"/>
 
-**Java**
+#### Java
 
 **Syntax**
 
@@ -67,9 +81,25 @@ Consent.getConsents(new AdobeCallback<Map<String, Object>>() {
 });
 ```
 
+#### Kotlin
+
+**Syntax**
+
+```java
+fun getConsents(callback: AdobeCallback<Map<String, Object>>)
+```
+
+**Example**
+
+```java
+Consent.getConsents { currentConsents ->
+    // handle currentConsents
+}
+```
+
 <Variant platform="ios" api="get-consents" repeat="11"/>
 
-**Swift**
+#### Swift
 
 **Syntax**
 
@@ -87,7 +117,7 @@ Consent.getConsents { currentConsents, error in
 }
 ```
 
-**Objective-C**
+#### Objective-C
 
 **Syntax**
 
@@ -105,7 +135,7 @@ Consent.getConsents { currentConsents, error in
 
 <Variant platform="android" api="register-extension" repeat="5"/>
 
-**Java**
+#### Java
 
 **Syntax**
 
@@ -121,7 +151,7 @@ Consent.registerExtension();
 
 <Variant platform="ios" api="register-extension" repeat="12"/>
 
-**Swift**
+#### Swift
 
 Use the MobileCore API to register the Edge Consent extension.
 
@@ -141,7 +171,7 @@ import AEPEdgeConsent
 MobileCore.registerExtensions([Consent.self])
 ```
 
-**Objective-C**
+#### Objective-C
 
 Use the AEPMobileCore API to register the Edge Consent extension.
 
@@ -161,9 +191,9 @@ Use the AEPMobileCore API to register the Edge Consent extension.
 [AEPMobileCore registerExtensions:@[AEPMobileEdgeConsent.class] completion:nil];
 ```
 
-<Variant platform="android" api="update-consents" repeat="6"/>
+<Variant platform="android" api="update-consents" repeat="11"/>
 
-**Java**
+#### Java
 
 **Syntax**
 
@@ -203,9 +233,39 @@ consents.put("consents", collectConsents);
 Consent.update(consents);
 ```
 
+#### Kotlin
+
+**Syntax**
+
+```java
+fun update(consents: Map<String, Object>)
+```
+
+**Example**
+
+```java
+// example 1, updating users collect consent to 'yes'
+val collectConsents = mutableMapOf<String, Any>()
+collectConsents["collect"] = mutableMapOf("val" to "y")
+
+val consents = mutableMapOf<String, Any>()
+consents["consents"] = collectConsents
+
+Consent.update(consents)
+
+// example 2, updating users collect consent to 'no'
+val collectConsents = mutableMapOf<String, Any>()
+collectConsents["collect"] = mutableMapOf("val" to "n")
+
+val consents = mutableMapOf<String, Any>()
+consents["consents"] = collectConsents
+
+Consent.update(consents)
+```
+
 <Variant platform="ios" api="update-consents" repeat="11"/>
 
-**Swift**
+#### Swift
 
 **Syntax**
 
@@ -229,7 +289,7 @@ let currentConsents = ["consents": collectConsent]
 Consent.update(with: currentConsents)
 ```
 
-**Objective-C**
+#### Objective-C
 
 **Syntax**
 

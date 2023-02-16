@@ -51,7 +51,7 @@ MobileCore.clearUpdatedConfiguration()
 **Syntax**
 
 ```java
-public static void configureWithAppID(final String appId);
+public static void configureWithAppID(@NonNull final String appId);
 ```
 
 **Example**
@@ -97,7 +97,7 @@ MobileCore.configureWithAppId("1423ae38-8385-8963-8693-28375403491d");
 **Syntax**
 
 ```java
-public static void configureWithFileInAssets(final String fileName);
+public static void configureWithFileInAssets(@NonNull final String fileName);
 ```
 
 **Example**
@@ -113,7 +113,7 @@ MobileCore.configureWithFileInAssets("exampleJSONfile.json");
 **Syntax**
 
 ```java
-public static void configureWithFileInPath(final String filePath);
+public static void configureWithFileInPath(@NonNull final String filePath);
 ```
 
 **Example**
@@ -199,7 +199,7 @@ String coreExtensionVersion = await FlutterACPCore.extensionVersion;
 **Syntax**
 
 ```java
-public static void updateConfiguration(final Map configMap);
+public static void updateConfiguration(@NonNull final Map configMap);
 ```
 
 **Example**
