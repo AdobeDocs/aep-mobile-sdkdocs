@@ -10,7 +10,7 @@ The MobileCore extension provides a shared `ServiceProvider`, responsible for ma
 
 Some services provide wrapper classes. For example, the `Log` class is a wrapper around the `LoggingService`. However, in some cases, a wrapper class may not exist, and one might need to access a service directly from the `ServiceProvider`. The recommended way to do this is through a computed variable or directly through the ServiceProvider when required. This ensures that if the service is overridden, the service consumer always uses the correct service implementation.
 
-Below is an example of how to access CacheService.
+The following code snippet shows how to access `CacheService` as an example.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
