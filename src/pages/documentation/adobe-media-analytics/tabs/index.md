@@ -1,4 +1,4 @@
-<Variant platform="android" task="add" repeat="9"/>
+<Variant platform="android" task="add" repeat="8"/>
 
 1. Add the Media extension and its dependencies to your project using the app's Gradle file.
 
@@ -36,7 +36,7 @@ import com.adobe.marketing.mobile.Media
 ```
 
 
-<Variant platform="ios" task="add" repeat="8"/>
+<Variant platform="ios" task="add" repeat="7"/>
 
 1. To add the Media library and its dependencies to your project, add the following pods to your `Podfile`:
 
