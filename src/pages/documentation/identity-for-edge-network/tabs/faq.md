@@ -12,7 +12,7 @@ implementation 'com.adobe.marketing.mobile:edgeidentity:2.+'
 
 <Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
-1. Import the Mobile Core and Edge extensions in your application class.
+2. Import the Mobile Core and Edge extensions in your application class.
 
 ```java
 import com.adobe.marketing.mobile.MobileCore;
