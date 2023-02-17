@@ -91,9 +91,9 @@ Each identity extension has its own API to retrieve their respective ECIDs as we
 
 A: Use both `getSdkIdentities` and `getIdentities`
 
-To get the identifiers used by the Adobe Solutions extensions, call [getSdkIdentities](../mobile-core/api-reference.md#retrieving-stored-identifiers).
+To get the identifiers used by the Adobe Solutions extensions, call [getSdkIdentities](../mobile-core/api-reference.md#getsdkidentities).
 
-To get the identifiers used by the AEP Edge extensions, call [getIdentities](./api-reference.md#getidentities).
+To get the identifiers used by the Edge extensions, call [getIdentities](./api-reference.md#getidentities).
 
 ## Q: How can I clear all the identifiers from the SDK when using both AEP Edge extensions and Adobe Solutions extensions?
 

@@ -1,3 +1,5 @@
+import Alerts from '../../resources/alerts.md'
+
 <Variant platform="android" task="download" repeat="5"/>
 
 1. Add the Mobile Core and Edge extensions to your project using the app's Gradle file.
@@ -8,13 +10,9 @@ implementation 'com.adobe.marketing.mobile:edge:2.+'
 implementation 'com.adobe.marketing.mobile:edgeidentity:2.+'
 ```
 
-<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
-
-</InlineNestedAlert>
-
-2. Import the Mobile Core and Edge extensions in your application class.
+1. Import the Mobile Core and Edge extensions in your application class.
 
 ```java
 import com.adobe.marketing.mobile.MobileCore;
