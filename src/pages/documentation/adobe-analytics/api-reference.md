@@ -105,7 +105,7 @@ iOS
 
 <InlineAlert variant="warning" slots="text"/>
 
-Before using this API, see [Identify unique visitors](https://experienceleague.adobe.com/docs/analytics/components/metrics/unique-visitors.html).
+Before using this API, please read the documentation on [identifying unique visitors](https://experienceleague.adobe.com/docs/analytics/components/metrics/unique-visitors.html).
 
 This API gets a custom Analytics visitor identifier, which has been set previously using [setVisitorIdentifier](#setvisitoridentifier).
 
@@ -132,6 +132,20 @@ This API gets a custom Analytics visitor identifier, which has been set previous
 iOS
 
 <Tabs query="platform=ios&api=get-visitor-identifier-with-completion-handler"/>
+
+## registerExtension
+
+Registers the Analytics extension with the Mobile Core SDK.
+
+<InlineAlert variant="warning" slots="text"/>
+
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+
+Android
+
+<Tabs query="platform=android&api=register-extension"/>
 
 ## resetIdentities
 

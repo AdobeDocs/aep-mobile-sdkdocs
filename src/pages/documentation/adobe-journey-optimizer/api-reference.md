@@ -33,7 +33,9 @@ iOS
 
 ## registerExtension
 
-The registerExtension API lets you register your extension with the [Mobile Core](../mobile-core/index.md).
+<InlineAlert variant="warning" slots="text"/>
+
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

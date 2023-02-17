@@ -53,6 +53,6 @@ Effective March 30, 2022, support for Adobe Experience Platform Mobile SDKs on U
 
 ## Get Help 
 
-If you have any questions about the SDK, please visit the [SDK community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-sdks/ct-p/platform-sdk). 
+If you have any questions about the SDK, please visit the [SDK community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform/ct-p/adobe-experience-platform-community). 
 
 If you need immediate assistance, please contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support).

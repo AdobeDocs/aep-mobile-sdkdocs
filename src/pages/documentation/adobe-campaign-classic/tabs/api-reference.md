@@ -5,6 +5,7 @@
 **Syntax**
 
 ```java
+@NonNull 
 public static String extensionVersion();
 ```
 
@@ -55,7 +56,7 @@ The `registerDevice` API registers a device with your Campaign Classic registrat
 **Syntax**
 
 ```java
-public static void registerDevice(final String token, final String userKey, final Map<String, Object> additionalParams, final AdobeCallback<Boolean> callback)
+public static void registerDevice(@NonNull final String token, final String userKey, final Map<String, Object> additionalParams)
 ```
 
 **Example**
@@ -65,24 +66,19 @@ public static void registerDevice(final String token, final String userKey, fina
 public void onNewToken(String token) {
     Log.d("TestApp", "Refreshed token: " + token);
 
-    // If you want to send messages to this application instance or
-    // manage this app's subscriptions on the server side, send the
-    // Instance ID token to your app server.
-    if (token != null) {
-                Log.d("TestApp", "FCM SDK registration token received : " + token);
-                // Create a map of additional parameters
-                Map<String, Object> additionalParams = new HashMap<String, Object>();
-                additionalParams.put("name", "John");
-                additionalParams.put("serial", 12345);
-                additionalParams.put("premium", true);
-                // Send the registration info
-                CampaignClassic.registerDevice(token, "john@example.com",additionalParams,new AdobeCallback<Boolean>() {
-                    @Override
-                    public void call(final Boolean status) {
-                        Log.d("TestApp", "Registration Status: " + status);
-                    }
-                });
-      }
+  // If you want to send messages to this application instance or
+  // manage this app's subscriptions on the server side, send the
+  // Instance ID token to your app server.
+  if (token != null) {
+    Log.d("TestApp", "FCM SDK registration token received : " + token);
+    // Create a map of additional parameters
+    Map<String, Object> additionalParams = new HashMap<String, Object>();
+    additionalParams.put("name", "John");
+    additionalParams.put("serial", 12345);
+    additionalParams.put("premium", true);
+    // Send the registration info
+    CampaignClassic.registerDevice(token, "john@example.com", additionalParams);
+  }
 }
 ```
 
@@ -142,7 +138,7 @@ If `trackInfo` is null, or does not contain the necessary tracking identifiers, 
 **Syntax**
 
 ```java
-public static void trackNotificationClick(final Map<String, String> trackInfo)
+public static void trackNotificationClick(@NonNull final Map<String, String> trackInfo)
 ```
 
 **Example**
@@ -220,7 +216,7 @@ If `trackInfo` is null or does not contain the necessary tracking identifiers, `
 **Syntax**
 
 ```java
-public static void trackNotificationReceive(final Map<String, String> trackInfo)
+public static void trackNotificationReceive(@NonNull final Map<String, String> trackInfo)
 ```
 
 **Example**

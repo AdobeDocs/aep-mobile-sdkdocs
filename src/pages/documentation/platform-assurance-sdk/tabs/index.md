@@ -1,11 +1,17 @@
-<Variant platform="android" task="import-library" repeat="4"/>
+<Variant platform="android" task="import-library" repeat="5"/>
 
 1. Add the following libraries in your project's `build.gradle` file:
 
 ```java
-implementation 'com.adobe.marketing.mobile:core:1+'
-implementation 'com.adobe.marketing.mobile:assurance:1+'
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:assurance:2.+'
 ```
+
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+
+</InlineNestedAlert>
 
 2. Import the Assurance library along with the other Mobile SDK libraries:
 
@@ -97,35 +103,51 @@ import 'package:flutter_assurance/flutter_assurance.dart';
 String version = await FlutterAEPAssurance.extensionVersion;
 ``` --->
 
-<Variant platform="android" task="register-assurance" repeat="6"/>
+<Variant platform="android" task="register-assurance" repeat="7"/>
 
-To start using the extension library, you must first register the extension with the [Mobile Core](../mobile-core/index.md) extension.
-
-#### Java
-
-Register the extension when you register other extensions.
+To start using the extension library, you must first register the extension with the [Mobile Core](../mobile-core/index.md) extension. You should register the extension when you register other extensions.
 
 To find your app ID, which is mentioned below, please read the [Mobile Install Instructions](../mobile-core/configuration/index.md#configure-with-app-id-per-environment). Within the "Publishing Flow", select the small gray box next to the "Environment" dropdown.
    
 ![](../assets/index/install-instructions.png)
 
+#### Java
+
 ```java
- public class MobileApp extends Application {
+public class MainApp extends Application {
+    private static final String APP_ID = "YOUR_APP_ID";
+
     @Override
     public void onCreate() {
         super.onCreate();
-        MobileCore.setApplication(this);
 
-        try {
-        // register other necessary extensions
-        Assurance.registerExtension();            
-        MobileCore.start(new AdobeCallback() {
-            @Override
-            public void call(final Object o) {
-                MobileCore.configureWithAppID("yourAppId");
-            }});
-        } catch (Exception e) {
-        // Log the exception
+        MobileCore.setApplication(this);
+        MobileCore.setLogLevel(LoggingMode.VERBOSE);
+        MobileCore.configureWithAppID(APP_ID);
+
+        List<Class<? extends Extension>> extensions = Arrays.asList(
+                Assurance.EXTENSION,...);
+        MobileCore.registerExtensions(extensions, o -> {
+            Log.d(LOG_TAG, "AEP Mobile SDK is initialized");
+        });
+    }
+}
+```
+
+#### Kotlin
+
+```java
+class MyApp : Application() {
+
+    override fun onCreate() {
+        super.onCreate()
+        MobileCore.setApplication(this)
+        MobileCore.setLogLevel(LoggingMode.VERBOSE)
+        MobileCore.configureWithAppID("YOUR_APP_ID")
+
+        val extensions = listOf(Assurance.EXTENSION, ...)
+        MobileCore.registerExtensions(extensions) {
+            Log.d(LOG_TAG, "AEP Mobile SDK is initialized")
         }
     }
 }

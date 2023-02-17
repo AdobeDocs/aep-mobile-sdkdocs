@@ -50,18 +50,6 @@ module.exports = {
                     {
                         title: "2021",
                         path: "/documentation/release-notes/2021"
-                    },
-                    {
-                        title: "2020",
-                        path: "/documentation/release-notes/2020"
-                    },
-                    {
-                        title: "2019",
-                        path: "/documentation/release-notes/2019"
-                    },
-                    {
-                        title: "2018",
-                        path: "/documentation/release-notes/2018"
                     }
                 ]
             },
@@ -142,10 +130,6 @@ module.exports = {
                                     {
                                         title: "API reference",
                                         path: "documentation/mobile-core/configuration/api-reference"
-                                    },
-                                    {
-                                        title: "Event reference",
-                                        path: "documentation/mobile-core/configuration/event-reference"
                                     }
                                 ]
                             },
@@ -160,10 +144,6 @@ module.exports = {
                                     {
                                         title: "API reference",
                                         path: "documentation/mobile-core/identity/api-reference"
-                                    },
-                                    {
-                                        title: "Event reference",
-                                        path: "documentation/mobile-core/identity/event-reference"
                                     },
                                     {
                                         title: "Migration",
@@ -194,10 +174,6 @@ module.exports = {
                                     {
                                         title: "API reference",
                                         path: "documentation/mobile-core/lifecycle/api-reference"
-                                    },
-                                    {
-                                        title: "Event reference",
-                                        path: "documentation/mobile-core/lifecycle/event-reference"
                                     },
                                     {
                                         title: "Metrics",
@@ -264,20 +240,12 @@ module.exports = {
                                     {
                                         title: "API reference",
                                         path: "documentation/mobile-core/signal/api-reference"
-                                    },
-                                    {
-                                        title: "Event reference",
-                                        path: "documentation/mobile-core/signal/event-reference"
                                     }
                                 ]
                             },
                             {
                                 title: "API reference",
                                 path: "documentation/mobile-core/api-reference"
-                            },
-                            {
-                                title: "Event reference",
-                                path: "documentation/mobile-core/event-reference"
                             },
                             {
                                 title: "Migration",
@@ -911,6 +879,14 @@ module.exports = {
                     {
                         title: "Privacy and GDPR",
                         path: "documentation/privacy-and-gdpr"
+                    },
+                    {
+                        title: "Manage Gradle dependencies",
+                        path: "documentation/manage-gradle-dependencies"
+                    },
+                    {
+                        title: "Manage SPM dependencies",
+                        path: "documentation/manage-spm-dependencies"
                     }
                 ]
             },

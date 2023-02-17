@@ -4,6 +4,12 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## February 13, 2023
+
+### Android Edge 1.4.1
+
+* Improves error handling when processing `Edge.sendEvent` requests by catching and logging unexpected `RuntimeException` instances thrown from within caller's `EdgeCallback` handler implementation.
+
 ## January 5, 2023
 
 ### iOS AEPCore 3.7.4
@@ -11,13 +17,6 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 * Fixes an issue where Lifecycle launch events may set an invalid XDM `environment._dc.language` field when the device is set to specific locales.
 * Fixes an issue where Lifecycle may set invalid negative times for metrics `daysSinceFirstLaunch`, `daysSinceLastLaunch`, and `daysSinceLastUpgrade`.
 * Adds performance improvements to `FullscreenMessage.show`.
-
-### Android Lifecycle 1.1.2
-
-* Fixes an issue where Lifecycle launch events may set an invalid XDM `environment._dc.language` field when the device is set to specific locales.
-* Added location hint result to EventSource keys for Edge.
-* Fixed a bug preventing in-app messages from being dismissed in some situations.
-* Added Target identities to MobileCore.getSDKIdentities response.
 
 ## October 26, 2022
 
@@ -83,12 +82,6 @@ For an end-to-end guide on how to use the extension, see the [Edge Bridge tutori
 * Fixed a few race conditions in the EventHub and MobileCore.
 * Made changes in AEPIdentity to speed up boot.
 
-## June 15, 2022
-
-### Android Core 1.11.1
-
-* Fixed a crash which was caused by an exception thrown from the Android Activity class.
-
 ## June 10, 2022
 
 ### Adobe Journey Optimizer - Decisioning extension 1.0.0
@@ -150,10 +143,6 @@ With this release, the extension provides APIs that you can use to:
 * Fetch personalized offers from the decisioning services enabled in the datastreams e.g. Adobe Target, Adobe Journey Optimizer Offer Decisioning.
 * Track user interactions with those offers.
 
-### Android Campaign Standard 1.0.9
-
-* Fixed a compatibility issue seen when using the Campaign Standard and Messaging In-App beta extensions in the same mobile app.
-
 ## May 26, 2022
 
 ### iOS AEPTarget 3.1.3
@@ -165,10 +154,6 @@ With this release, the extension provides APIs that you can use to:
 ### iOS AEPAudience 3.0.4
 
 * Fixed an issue where lifecycle data was included in signalWithData requests.
-
-### Android Campaign Classic 1.0.2
-
-* Android Campaign Classic SDK is now Adobe Campaign Classic (ACC) v8 compatible! Broadlog ID can be provided in the UUID format in the notification tracking APIs.
 
 ## May 12, 2022
 
@@ -189,17 +174,6 @@ With this release, the extension provides APIs that you can use to:
 ### iOS AEPAudience 3.0.3
 
 - Fixed integration with Lifecycle extension to send lifecycle metrics when a new app session is started.
-
-## April 21, 2022
-
-### Android Core 1.11.0
-
-* Internal fixes to support In-App Messaging with the AEPMessaging extension.
-* Fixed a crash that could happen while initializing event history database.
-
-### Android Identity 1.3.1
-
-* Improved extension stability by adding additional error checks when processing sync identifier requests.
 
 ## April 12, 2022
 
@@ -258,40 +232,9 @@ For more details, see the documentation and release notes in the [aepsdk-react-n
 
 * Fixed `getTrackingIdentifier` and `getVisitorIdentifier` APIs to `return nil` instead of `AEPError.unexpected` error when AID/VID values are not found in persistence.
 
-## March 11, 2022
-
-### Android Core 1.10.1
-
-* Updates the timestamp format for rule token `~timestampp`  with fractional seconds and UTC time zone. This rule token is used to set the mobile property data element "Adobe Experience Platform Timestamp".
-
-### Android Lifecycle 1.1.1
-
-* Lifecycle foreground and background events for Edge Network now format timestamps with fractional seconds and UTC time zone.
-
-### Android Edge 1.3.1
-
-* Updates timestamp in Experience Events to use fractional seconds.
-
-### Android Consent 1.0.1
-
-* Updates timestamp in Consent requests to use fractional seconds.
-
-## March 3, 2022
-
-### Android Analytics 1.2.10
-
-* Fixed a bug for the integration with Assurance where "No Debug Flag" was showing in the UI for some events.
-
 ## February 22, 2022
 
 ### iOS Assurance 3.0.1
-
-* Add support for transmitting large events.
-* Assurance extension now prompts an error message when attempting to connect to a deleted session.
-* Improved logging for troubleshooting.
-* Fixed an issue to ensure that event collection stops on session disconnection.
-
-### Android Assurance 1.0.4
 
 * Add support for transmitting large events.
 * Assurance extension now prompts an error message when attempting to connect to a deleted session.
@@ -303,26 +246,6 @@ For more details, see the documentation and release notes in the [aepsdk-react-n
 ### iOS Campaign Standard 3.0.1
 
 * Fixed an issue with the Campaign message tracking URL being incorrectly built.
-
-## February 8, 2022
-
-### Android Identity 1.3.0
-
-- Added a `device_consent` status parameter when `setAdvertisingIdentifier` is called after ad tracking is enabled/disabled.
-- Added support to handle the MobileCore.resetIdentities() API.
-- Fixes intermittent issue for GetUrlVariables and AppendToUrl APIs when custom Analytics identifiers are being used.
-- Stability improvements for network connections.
-
-Released with sdk-core version 1.10.0
-
-## February 7, 2022
-
-### Android Core 1.10.0
-
-* Added support for a new API `clearUpdatedConfiguration()`, see Configuration API reference for more details.
-* Added support for optionally capturing event history on the device.
-* Added support for triggering rules engine conditions based on event history.
-* Added public platform support for datastore and UI services.
 
 ## February 3, 2022
 
