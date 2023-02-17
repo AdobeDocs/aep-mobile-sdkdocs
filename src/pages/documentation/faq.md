@@ -52,7 +52,7 @@ The Experience Platform SDK is available through [Cocoapods](https://cocoapods.o
 
 ### Can I use both the 4x SDK and the new Experience Platform SDK at the same time?
 
-Implementing two the SDKs in your app is not supported.
+Implementing the two SDKs in your app is not supported.
 
 The Experience Platform SDK migrates the locally stored user contexts from the 4x SDKs. Using both SDKs will cause severe data quality issues. For more information, please read the [upgrade to the Experience Platform SDKs tutorial](./upgrade-platform-sdks/index.md).
 
@@ -84,20 +84,37 @@ iOS
 
 ### What is the size of the SDK?
 
-| Extension | iOS (KB) | Android (KB) |
-| :--- | :--- | :--- |
-| Core | 504 | 168 |
-| Adobe Analytics | 54 | 21 |
-| Adobe Audience Manager | 40 | 13 |
-| Adobe Target | 77 | 27 |
-| Profile | 20 | 8 |
-| Adobe Campaign Standard | 60 | 30 |
-| Places | 36 | 20 |
+#### Adobe Experience Platform SDKs
 
-The size values in the table are provided as indicative estimates, with the following considerations:
+| Extension | iOS (KB) | Android (KB) | Additional Dependencies† |
+| :-------- | :------- | :----------- | :----------------------- |
+| Core | 925 | 497 | Android only: `kotlin-stdlib` |
+| Identity | 136 | 51 | |
+| Lifecycle | 150 | 59 | |
+| Signal | 18 | 33 | |
+| Edge Network extension | 253 | 99 | Identity for Edge Network |
+| Consent for Edge Network | 33 | 25 | Edge Network extension |
+| Identity for Edge Network | 69 | 49 | |
+| Analytics | 133 | 95 | |
+| Assurance | 917 | 527 | Android only: `androidx.constraintlayout` |
+| Audience | 82 | 44 | Identity |
+| Campaign | 166 | 80 | Identity |
+| Campaign Classic | 34 | 42 | Identity |
+| Edge Bridge | 0.84 | 6 | |
+| Media | 283 | 137 | |
+| Messaging | 33 | 77 | Edge Network extension |
+| Optimize | 88 | 80 | Edge Network extension |
+| Places | 799 | 59 | |
+| Target | 283 | 99 | |
+| User Profile | 18 | 29 | |
 
-* Mobile Core, which includes the Lifecycle, the Identity, and the Signals extensions, is required for all other extensions. The final app size increase can be calculated by adding the Mobile Core size to each of the enabled extensions. For example, the iOS app distribution using the Target and Analytics extensions will have a total size increase of 635 KB. (Core: 504 KB + Analytics: 54 KB + Target: 77 KB).
-* The iOS (SDK extension versions 2+) estimates are based on Xcode’s App Thinning size report for one architecture. The Android (SDK extension versions 1+) size estimates listed refer to unsigned apps and do not account for proguarding.
+The sizes in the table are provided for estimation purposes only, with the following considerations:
+
+* †Mobile Core, which includes the Rules Engine and Services extensions, is required for all other extensions. The final app size increase can be calculated by adding the Mobile Core size to each of the enabled extensions. 
+  * For example, the iOS app distribution using the Target and Analytics extensions will have a total size increase of 1341 KB. (Core: 925 KB + Analytics: 133 KB + Target: 283 KB).
+* The iOS size estimates are based on [Google's CocoaPods Size Measurement tool](https://github.com/google/cocoapods-size). 
+* The Android size estimates listed refer to unsigned apps and do not account for applying ProGuard.
+* For Android Mobile SDKs, the full list of dependencies for each SDK and version can be found at [Maven Repository](https://mvnrepository.com/artifact/com.adobe.marketing.mobile). 
 
 ### How can I use ProGuard with the Android SDK?
 
@@ -110,6 +127,52 @@ Add the following rule to your custom ProGuard rules file, typically labeled `pr
     <init>(...);
 }
 ```
+
+### Is there a change in minimum API level supported by Mobile SDK for Android?
+
+Mobile SDK for Android now supports a minimum API level of **19**. If your application targets a lower API level, you will see the following build failure:
+
+```
+Manifest merger failed : uses-sdk:minSdkVersion 14 cannot be smaller than version 19 declared in library [com.adobe.marketing.mobile:core:2.0.0]
+```
+
+To fix this build failure, increase the minSdkVersion for your Android project to **19** or above.
+
+### When I add Mobile SDK to my Android project, why do I get an error about invoke-custom support and enabling desugaring?
+
+Mobile SDK for Android uses Java 8 language features and desugaring is disabled by default. If your application uses Android Gradle plugin (AGP) v4.2 and has not enabled Java 8 support, you will see the following build failure:
+
+```
+D8: Invoke-customs are only supported starting with Android O (--min-api 26)
+Caused by: com.android.builder.dexing.DexArchiveBuilderException: Error while dexing.
+The dependency contains Java 8 bytecode. Please enable desugaring by adding the following to build.gradle
+android {
+	compileOptions {
+		sourceCompatibility 1.8
+		targetCompatibility 1.8
+	}
+}
+
+See https://developer.android.com/studio/write/java8-support.html for details.
+Alternatively, increase the minSdkVersion to 26 or above.
+```
+
+To fix this build failure, you can follow one of two options:
+- Add the listed compileOptions from the error message to your app-level build.gradle file.
+- Increase the minSdkVersion for your Android project to **26** or above.
+
+### Why do I see a warning in AndroidManifest.xml about missing 'com.adobe.marketing.mobile.FullscreenMessageActivity' class?
+
+After upgrading to latest version of Mobile SDK for Android, you will see the following build warning if your application previously set up in-app messages with Campaign Standard. 
+
+```
+Class referenced in the manifest, `com.adobe.marketing.mobile.FullscreenMessageActivity`, was not found in the project or the libraries
+
+Unresolved class 'FullscreenMessageActivity'
+```
+
+To resolve the build warning, remove FullscreenMessageActivity from your application's manifest file. Campaign Standard SDK no longer requires application to add **FullscreenMessageActivity** to their manifest.
+
 
 ### How can I track user engagement of push notifications using the Experience Platform Mobile SDK?
 
@@ -130,21 +193,21 @@ See the [frequently asked questions for Analytics](./adobe-analytics/faq.md).
 
 ## Adobe Experience Platform Edge Network
 
-### Does AEP Edge Network extension support offline tracking?
+### Does the Edge Network extension support offline tracking?
 
 Yes, offline tracking is supported by default when sending XDM Experience events since these events have a required timestamp, and there is no separate setting for this as it used to be in the Adobe Analytics extension. The events are backed up in the persistence layer and then sent to the Edge Network in current session if possible, or queued until the next session when a network connection is available.
 
 ## Get help
 
-* Visit the SDK [community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-sdks/ct-p/platform-sdk) to ask questions
+* Visit the SDK [community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform/ct-p/adobe-experience-platform-community) to ask questions
 * Contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support) for immediate assistance
 
-## Using AEP Swift SDKs with tvOS
+## Using Experience Platform Swift SDKs with tvOS
 
 ### 'X' is unavailable in application extension for tvOS
 
-You may encounter this error when using the AEP SDK for a tvOS app target, with the following message "'X' is unavailable in application extension for tvOS". This behavior is unexpected for tvOS targets and it seems to be an issue in Xcode where it apples additional checks for tvOSApplicationExtension API compatibility.
-Until this issue is resolved in the future Xcode versions, a workaround is to mark the classes or functions with the attribute: @available(tvOSApplicationExtension, unavailable) to suppress the error as in the examples below:
+You may encounter this error when using the Experience Platform SDK for a tvOS app target, with the following message "'X' is unavailable in application extension for tvOS". This behavior is unexpected for tvOS targets and it seems to be an issue in Xcode where it applies additional checks for `tvOSApplicationExtension` API compatibility.
+Until this issue is resolved in the future Xcode versions, a workaround is to mark the classes or functions with the attribute: `@available(tvOSApplicationExtension, unavailable)` to suppress the error as in the examples below:
 
 #### Example
 
