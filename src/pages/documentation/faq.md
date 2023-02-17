@@ -86,27 +86,27 @@ iOS
 
 #### Adobe Experience Platform SDKs
 
-| Extension                 | iOS (KB) | Android (KB) | Additional Dependencies†                          |
-| :------------------------ | :------- | :----------- | :------------------------------------------------ |
-| Core                      | 925      | 497          | Android only: `kotlin-stdlib`                     |
-| Identity                  | 136      | 51           |                                                   |
-| Lifecycle                 | 150      | 59           |                                                   |
-| Signal                    | 18       | 33           |                                                   |
-| Edge Network extension    | 253      | 99           | Identity for Edge Network                         |
-| Consent for Edge Network  | 33       | 25           | Edge Network extension                            |
-| Identity for Edge Network | 69       | 49           |                                                   |
-| Analytics                 | 133      | 95           |                                                   |
-| Assurance                 | 917      | 527          | Android only: `androidx.constraintlayout`         |
-| Audience                  | 82       | 44           | Identity                                          |
-| Campaign                  | 166      | 80           | Identity                                          |
-| Campaign Classic          | 34       | 42           | Identity                                          |
-| Edge Bridge               | 0.84     | 6            |                                                   |
-| Media                     | 283      | 137          |                                                   |
-| Messaging                 | 33       | 77           | Edge Network extension                            |
-| Optimize                  | 88       | 80           | Edge Network extension                            |
-| Places                    | 799      | 59           |                                                   |
-| Target                    | 283      | 99           |                                                   |
-| User Profile              | 18       | 29           |                                                   |
+| Extension | iOS (KB) | Android (KB) | Additional Dependencies† |
+| :-------- | :------- | :----------- | :----------------------- |
+| Core | 925 | 497 | Android only: `kotlin-stdlib` |
+| Identity | 136 | 51 | |
+| Lifecycle | 150 | 59 | |
+| Signal | 18 | 33 | |
+| Edge Network extension | 253 | 99 | Identity for Edge Network |
+| Consent for Edge Network | 33 | 25 | Edge Network extension |
+| Identity for Edge Network | 69 | 49 | |
+| Analytics | 133 | 95 | |
+| Assurance | 917 | 527 | Android only: `androidx.constraintlayout` |
+| Audience | 82 | 44 | Identity |
+| Campaign | 166 | 80 | Identity |
+| Campaign Classic | 34 | 42 | Identity |
+| Edge Bridge | 0.84 | 6 | |
+| Media | 283 | 137 | |
+| Messaging | 33 | 77 | Edge Network extension |
+| Optimize | 88 | 80 | Edge Network extension |
+| Places | 799 | 59 | |
+| Target | 283 | 99 | |
+| User Profile | 18 | 29 | |
 
 The sizes in the table are provided for estimation purposes only, with the following considerations:
 
