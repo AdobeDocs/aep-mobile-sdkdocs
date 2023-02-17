@@ -357,7 +357,7 @@ Analytics.getVisitorIdentifier { (visitorIdentifier, error) in
 **Syntax**
 
 ```java
-public  static void registerExtension() throws InvalidInitException
+public static void registerExtension()
 ```
 
 **Example**

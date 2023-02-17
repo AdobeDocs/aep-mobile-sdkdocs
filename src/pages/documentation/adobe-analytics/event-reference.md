@@ -186,7 +186,7 @@ The following examples show how to use the event data:
 
 ### Analytics request identity
 
-The Analytics request identity event is responsible for fetching the Analytics tracking identifier (AID) and custom visitor identifier (VID) from the Analytics extension and is generated in the Analytics [getTrackingIdentifier](./api-reference.md#gettrackingidentifier) and [getCustomVisitorIdentifier](./api-reference.md##setvisitoridentifier) calls.
+The Analytics request identity event is responsible for fetching the Analytics tracking identifier (AID) and custom visitor identifier (VID) from the Analytics extension and is generated in the Analytics [getTrackingIdentifier](./api-reference.md#gettrackingidentifier) and [getCustomVisitorIdentifier](./api-reference.md#getvisitoridentifier) calls.
 
 After the Analytics identity request event is received, the Analytics extension completes one of the following tasks:
 
