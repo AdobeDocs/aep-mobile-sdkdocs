@@ -52,7 +52,7 @@ The Experience Platform SDK is available through [Cocoapods](https://cocoapods.o
 
 ### Can I use both the 4x SDK and the new Experience Platform SDK at the same time?
 
-Implementing two the SDKs in your app is not supported.
+Implementing the two SDKs in your app is not supported.
 
 The Experience Platform SDK migrates the locally stored user contexts from the 4x SDKs. Using both SDKs will cause severe data quality issues. For more information, please read the [upgrade to the Experience Platform SDKs tutorial](./upgrade-platform-sdks/index.md).
 
@@ -84,20 +84,37 @@ iOS
 
 ### What is the size of the SDK?
 
-| Extension | iOS (KB) | Android (KB) |
-| :--- | :--- | :--- |
-| Core | 504 | 168 |
-| Adobe Analytics | 54 | 21 |
-| Adobe Audience Manager | 40 | 13 |
-| Adobe Target | 77 | 27 |
-| Profile | 20 | 8 |
-| Adobe Campaign Standard | 60 | 30 |
-| Places | 36 | 20 |
+#### Adobe Experience Platform SDKs
 
-The size values in the table are provided as indicative estimates, with the following considerations:
+| Extension | iOS (KB) | Android (KB) | Additional Dependencies† |
+| :-------- | :------- | :----------- | :----------------------- |
+| Core | 925 | 497 | Android only: `kotlin-stdlib` |
+| Identity | 136 | 51 | |
+| Lifecycle | 150 | 59 | |
+| Signal | 18 | 33 | |
+| Edge Network extension | 253 | 99 | Identity for Edge Network |
+| Consent for Edge Network | 33 | 25 | Edge Network extension |
+| Identity for Edge Network | 69 | 49 | |
+| Analytics | 133 | 95 | |
+| Assurance | 917 | 527 | Android only: `androidx.constraintlayout` |
+| Audience | 82 | 44 | Identity |
+| Campaign | 166 | 80 | Identity |
+| Campaign Classic | 34 | 42 | Identity |
+| Edge Bridge | 0.84 | 6 | |
+| Media | 283 | 137 | |
+| Messaging | 33 | 77 | Edge Network extension |
+| Optimize | 88 | 80 | Edge Network extension |
+| Places | 799 | 59 | |
+| Target | 283 | 99 | |
+| User Profile | 18 | 29 | |
 
-* Mobile Core, which includes the Lifecycle, the Identity, and the Signals extensions, is required for all other extensions. The final app size increase can be calculated by adding the Mobile Core size to each of the enabled extensions. For example, the iOS app distribution using the Target and Analytics extensions will have a total size increase of 635 KB. (Core: 504 KB + Analytics: 54 KB + Target: 77 KB).
-* The iOS (SDK extension versions 2+) estimates are based on Xcode’s App Thinning size report for one architecture. The Android (SDK extension versions 1+) size estimates listed refer to unsigned apps and do not account for proguarding.
+The sizes in the table are provided for estimation purposes only, with the following considerations:
+
+* †Mobile Core, which includes the Rules Engine and Services extensions, is required for all other extensions. The final app size increase can be calculated by adding the Mobile Core size to each of the enabled extensions. 
+  * For example, the iOS app distribution using the Target and Analytics extensions will have a total size increase of 1341 KB. (Core: 925 KB + Analytics: 133 KB + Target: 283 KB).
+* The iOS size estimates are based on [Google's CocoaPods Size Measurement tool](https://github.com/google/cocoapods-size). 
+* The Android size estimates listed refer to unsigned apps and do not account for applying ProGuard.
+* For Android Mobile SDKs, the full list of dependencies for each SDK and version can be found at [Maven Repository](https://mvnrepository.com/artifact/com.adobe.marketing.mobile). 
 
 ### How can I use ProGuard with the Android SDK?
 
