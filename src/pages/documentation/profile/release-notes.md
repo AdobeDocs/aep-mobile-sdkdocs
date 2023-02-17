@@ -4,7 +4,7 @@
 
 ### Android UserProfile 2.0.0
 
-- Initial release to work with Android SDK 2.0. It is [open sourced on Github](https://github.com/adobe/aepsdk-userprofile-android). Also, the following APIs have been deprecated and will be removed in a future release:
+- Initial release to work with the latest Adobe Experience Platform Mobile SDK for Android. It is [open sourced on Github](https://github.com/adobe/aepsdk-userprofile-android). Also, the following APIs have been deprecated and will be removed in a future release:
 
   | Deprecated API                      | Recommended Alternative              |
   | ----------------------------------- | ------------------------------------ |
