@@ -1,8 +1,17 @@
-<Variant platform="android" task="add" repeat="3"/>
-
-#### Java
+<Variant platform="android" task="add" repeat="5"/>
 
 1. Add the `UserProfile` library to your project using the app's gradle file.
+
+```java
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:userprofile:2.+'
+```
+
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+
+</InlineNestedAlert>
 
 2. Import the `UserProfile` library and any other SDK library in your application's main activity.
 
@@ -41,11 +50,12 @@ end
 
 <Variant platform="android" task="register" repeat="5"/>
 
-#### Java
 
 After calling the `setApplication()` method in the `onCreate()` method, register the UserProfile extension.
 
 1. The `UserProfile` extension must be registered with Mobile Core before calling an `UserProfile` API.
+
+#### Java
 
 ```java
    public class MobileApp extends Application {
@@ -60,6 +70,25 @@ After calling the `setApplication()` method in the `onCreate()` method, register
             });
        }
    }
+```
+
+#### Kotlin
+
+```java
+class MyApp : Application() {
+
+    override fun onCreate() {
+        super.onCreate()
+        MobileCore.setApplication(this)
+        MobileCore.setLogLevel(LoggingMode.VERBOSE)
+        MobileCore.configureWithAppID("YOUR_APP_ID")
+
+        val extensions = listOf(UserProfile.EXTENSION, ...)
+        MobileCore.registerExtensions(extensions) {
+            Log.d(LOG_TAG, "AEP Mobile SDK is initialized")
+        }
+    }
+}
 ```
 
 <Variant platform="ios" task="register" repeat="1"/>

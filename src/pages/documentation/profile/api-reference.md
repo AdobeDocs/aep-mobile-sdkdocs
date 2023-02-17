@@ -54,7 +54,7 @@ Android
 
 This API is only available in Android and is deprecated starting in version 2.0.0 of the UserProfile extension. Use [`removeUserAttributes`](#removeuserattributes) API instead.
 
-Removes the user profile attribute for the given key.
+Deprecated as of 2.0.0. Please use the [removeUserAttributes](#removeuserattributes) API instead.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 

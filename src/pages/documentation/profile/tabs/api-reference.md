@@ -1,4 +1,4 @@
-<Variant platform="android" api="extension-version" repeat="5"/>
+<Variant platform="android" api="extension-version" repeat="8"/>
 
 #### Java
 
@@ -12,6 +12,14 @@
 
 ```java
 String extensionVersion = UserProfile.extensionVersion();
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+val extensionVersion = UserProfile.extensionVersion();
 ```
 
 <Variant platform="ios" api="extension-version" repeat="10"/>
@@ -44,7 +52,7 @@ let extensionVersion = UserProfile.extensionVersion
 NSString *extensionVersion = [AEPMobileUserProfile extensionVersion];
 ```
 
-<Variant platform="android" api="get-user-attributes" repeat="8"/>
+<Variant platform="android" api="get-user-attributes" repeat="13"/>
 
 #### Java
 
@@ -64,15 +72,37 @@ When `AdobeCallbackWithError` is provided, if the operation times out (5s) or an
 
 ```java
 UserProfile.getUserAttributes(Arrays.asList("itemsAddedToCart"), new AdobeCallbackWithError<Map<String, Object>>() {
-            @Override
-            public void fail(AdobeError adobeError) {
-                // your customized code
-            }
-            @Override
-            public void call(Map<String, Object> stringObjectMap) {
-                     // your customized code
-            }
-        });
+    @Override
+    public void fail(AdobeError adobeError) {
+         // your customized code
+    }
+    @Override
+    public void call(Map<String, Object> stringObjectMap) {
+        // your customized code
+    }
+});
+```
+
+#### Kotlin
+
+**Example**
+
+A retail application wants to get the `itemsAddedToCart` user data when processing checkout.
+
+When `AdobeCallbackWithError` is provided, if the operation times out (5s) or an unexpected error occurs, the `fail` method is called with the appropriate `AdobeError`.
+
+```java
+UserProfile.getUserAttributes(listOf("itemsAddedToCart")) {
+    object : AdobeCallbackWithError<Map<String, Any?>> {
+        override fun fail(adobeError: AdobeError) {
+            // your customized code
+        }
+
+        override fun call(value: Map<String, Any?>) {
+            // your customized code
+        }
+    }
+}
 ```
 
 <Variant platform="ios" api="get-user-attributes" repeat="13"/>
@@ -204,7 +234,7 @@ A retail application wants to remove the `itemsAddedToCart` user data after the 
 UserProfile.removeUserAttribute("itemsAddedToCart");
 ```
 
-<Variant platform="android" api="remove-user-attributes" repeat="6"/>
+<Variant platform="android" api="remove-user-attributes" repeat="10"/>
 
 #### Java
 
@@ -220,6 +250,16 @@ You want to remove `username`, `usertype` user data when session timeout occurs.
 
 ```java
 UserProfile.removeUserAttributes(Arrays.asList("username", "usertype"));
+```
+
+#### Kotlin
+
+**Example**
+
+You want to remove `username`, `usertype` user data when session timeout occurs.
+
+```java
+UserProfile.removeUserAttributes(listOf("username", "usertype"))
 ```
 
 <Variant platform="ios" api="remove-user-attributes" repeat="11"/>
@@ -285,13 +325,27 @@ public static void updateUserAttributes(@NonNull final Map<String, Object> attri
 
 **Example**
 
-You want to update `username, usertype` of a user obtained in the log in page:
+You want to update `username`, `usertype` of a user obtained in the log in page:
 
 ```java
 HashMap<String, Object> profileMap = new HashMap<>();
 profileMap.put("username","Will Smith");
 profileMap.put("usertype","Actor");
 UserProfile.updateUserAttributes(profileMap);
+```
+
+#### Kotlin
+
+**Example**
+
+You want to update `username`, `usertype` of a user obtained in the log in page:
+
+```java
+val profileMap = mapOf(
+        "username" to "Will Smith",
+        "usertype" to "Actor"
+    )
+UserProfile.updateUserAttributes(profileMap)
 ```
 
 <Variant platform="ios" api="update-user-attributes" repeat="11"/>
