@@ -1,7 +1,5 @@
 <Variant platform="android" task="add" repeat="9"/>
 
-The latest Android SDK versions:
-
 1. Add the Media extension and its dependencies to your project using the app's Gradle file.
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
@@ -39,8 +37,6 @@ import com.adobe.marketing.mobile.Media
 
 
 <Variant platform="ios" task="add" repeat="8"/>
-
-The latest iOS SDK versions:
 
 1. To add the Media library and its dependencies to your project, add the following pods to your `Podfile`:
 
