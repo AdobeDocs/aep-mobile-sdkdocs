@@ -1,4 +1,4 @@
-<Variant platform="android" api="extension-version" repeat="10"/>
+<Variant platform="android" api="extension-version" repeat="8"/>
 
 #### Java
 
@@ -15,12 +15,6 @@ String extensionVersion = Consent.extensionVersion();
 ```
 
 #### Kotlin
-
-**Syntax**
-
-```java
-fun extensionVersion(): String
-```
 
 **Example**
 
@@ -58,7 +52,7 @@ let extensionVersion = Consent.extensionVersion
 NSString *extensionVersion = [AEPMobileEdgeConsent extensionVersion];
 ```
 
-<Variant platform="android" api="get-consents" repeat="11"/>
+<Variant platform="android" api="get-consents" repeat="9"/>
 
 #### Java
 
@@ -76,24 +70,18 @@ public static void getConsents(final AdobeCallback<Map<String, Object>> callback
 Consent.getConsents(new AdobeCallback<Map<String, Object>>() {
     @Override
     public void call(Map<String, Object> currentConsents) {
-        // handle currentConsents
+        // Handle currentConsents
     }
 });
 ```
 
 #### Kotlin
 
-**Syntax**
-
-```java
-fun getConsents(callback: AdobeCallback<Map<String, Object>>)
-```
-
 **Example**
 
 ```java
 Consent.getConsents { currentConsents ->
-    // handle currentConsents
+    // Handle currentConsents
 }
 ```
 
@@ -113,7 +101,7 @@ static func getConsents(completion: @escaping ([String: Any]?, Error?) -> Void)
 
 ```swift
 Consent.getConsents { currentConsents, error in
-    // handle currentConsents
+    // Handle currentConsents
 }
 ```
 
@@ -129,7 +117,7 @@ Consent.getConsents { currentConsents, error in
 
 ```objectivec
 [AEPMobileEdgeConsent getConsents:^(NSDictionary *currentConsents, NSError *error){
-    // handle currentConsents
+    // Handle currentConsents
 }];
 ```
 
@@ -191,7 +179,7 @@ Use the AEPMobileCore API to register the Edge Consent extension.
 [AEPMobileCore registerExtensions:@[AEPMobileEdgeConsent.class] completion:nil];
 ```
 
-<Variant platform="android" api="update-consents" repeat="11"/>
+<Variant platform="android" api="update-consents" repeat="9"/>
 
 #### Java
 
@@ -206,7 +194,7 @@ public static void update(final Map<String, Object> consents);
 **Example**
 
 ```java
-// example 1, updating users collect consent to 'yes'
+// Example 1, updating users collect consent to 'yes'
 final Map<String, Object> collectConsents = new HashMap<>();
 collectConsents.put("collect", new HashMap<String, String>() {
     {
@@ -219,7 +207,7 @@ consents.put("consents", collectConsents);
 
 Consent.update(consents);
 
-// example 2, updating users collect consent to 'no'
+// Example 2, updating users collect consent to 'no'
 final Map<String, Object> collectConsents = new HashMap<>();
 collectConsents.put("collect", new HashMap<String, String>() {
     {
@@ -235,16 +223,10 @@ Consent.update(consents);
 
 #### Kotlin
 
-**Syntax**
-
-```java
-fun update(consents: Map<String, Object>)
-```
-
 **Example**
 
 ```java
-// example 1, updating users collect consent to 'yes'
+// Example 1, updating users collect consent to 'yes'
 val collectConsents = mutableMapOf<String, Any>()
 collectConsents["collect"] = mutableMapOf("val" to "y")
 
@@ -253,7 +235,7 @@ consents["consents"] = collectConsents
 
 Consent.update(consents)
 
-// example 2, updating users collect consent to 'no'
+// Example 2, updating users collect consent to 'no'
 val collectConsents = mutableMapOf<String, Any>()
 collectConsents["collect"] = mutableMapOf("val" to "n")
 
@@ -278,12 +260,12 @@ static func update(with consents: [String: Any])
 **Example**
 
 ```swift
-// example 1, updating users collect consent to 'yes'
+// Example 1, updating users collect consent to 'yes'
 let collectConsent = ["collect": ["val": "y"]]
 let currentConsents = ["consents": collectConsent]
 Consent.update(with: currentConsents)
 
-// example 2, updating users collect consent to 'no'
+// Example 2, updating users collect consent to 'no'
 let collectConsent = ["collect": ["val": "n"]]
 let currentConsents = ["consents": collectConsent]
 Consent.update(with: currentConsents)
@@ -300,11 +282,11 @@ Consent.update(with: currentConsents)
 **Example**
 
 ```objc
-// example 1, updating users collect consent to 'yes'
+// Example 1, updating users collect consent to 'yes'
 NSDictionary *collectConsent = @{ @"collect": @{@"val": @"y"};
 [AEPMobileEdgeConsent updateWithConsents:@{@"consents": collectConsent}];
 
-// example 2, updating users collect consent to 'no'
+// Example 2, updating users collect consent to 'no'
 NSDictionary *collectConsent = @{ @"collect": @{@"val": @"n"};
 [AEPMobileEdgeConsent updateWithConsents:@{@"consents": collectConsent}];
 ```
