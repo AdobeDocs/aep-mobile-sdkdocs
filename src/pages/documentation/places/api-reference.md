@@ -6,7 +6,7 @@ This document contains usage information for the public functions, classes, and 
 
 <InlineAlert variant="info" slots="text"/>
 
-This page only contains information about the 3.x `AEPPlaces` extension for iOS.<br/><br/>A full API reference for the Android `Places` extension and 2.x `ACPPlaces` extension for iOS can be found [here](https://experienceleague.adobe.com/docs/places/using/places-ext-aep-sdks/places-extension/places-api-reference.html?lang=en).
+This page only contains information about the 3.x `AEPPlaces` extension.<br/><br/>A full API reference for the 2.x `ACPPlaces` extension for iOS can be found [here](https://experienceleague.adobe.com/docs/places/using/places-ext-aep-sdks/places-extension/places-api-reference.html?lang=en).
 
 ## Static functions
 
@@ -16,13 +16,13 @@ Clears out the client-side data for Places in shared state, local storage, and i
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-Swift
+Android
 
-<Tabs query="language=swift&api=clear"/>
+<Tabs query="platform=android&api=clear"/>
 
-Objective-C
+iOS
 
-<Tabs query="language=objc&api=clear"/>
+<Tabs query="platform=ios&api=clear"/>
 
 ### extensionVersion
 
@@ -30,13 +30,13 @@ Returns the running version of the AEPPlaces extension.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-Swift
+Android
 
-<Tabs query="language=swift&api=extension-version"/>
+<Tabs query="platform=android&api=extension-version"/>
 
-Objective-C
+iOS
 
-<Tabs query="language=objc&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
 ### getCurrentPointsOfInterest
 
@@ -44,13 +44,13 @@ Returns all points of interest (POI) of which the device is currently known to b
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-Swift
+Android
 
-<Tabs query="language=swift&api=get-current-points-of-interest"/>
+<Tabs query="platform=android&api=get-current-points-of-interest"/>
 
-Objective-C
+iOS
 
-<Tabs query="language=objc&api=get-current-points-of-interest"/>
+<Tabs query="platform=ios&api=get-current-points-of-interest"/>
 
 ### getLastKnownLocation
 
@@ -60,13 +60,13 @@ If the Places Extension does not have a valid last known location for the user, 
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-Swift
+Android
 
-<Tabs query="language=swift&api=get-last-known-location"/>
+<Tabs query="platform=android&api=get-last-known-location"/>
 
-Objective-C
+iOS
 
-<Tabs query="language=objc&api=get-last-known-location"/>
+<Tabs query="platform=ios&api=get-last-known-location"/>
 
 ### getNearbyPointsOfInterest
 
@@ -74,13 +74,37 @@ Requests a list of nearby Points of Interest (POI) and returns them in a closure
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-Swift
+Android
 
-<Tabs query="language=swift&api=get-nearby-points-of-interest"/>
+<Tabs query="platform=android&api=get-nearby-points-of-interest"/>
 
-Objective-C
+iOS
 
-<Tabs query="language=objc&api=get-nearby-points-of-interest"/>
+<Tabs query="platform=ios&api=get-nearby-points-of-interest"/>
+
+### processGeofence 
+
+When a device crosses one of your app’s pre-defined Places Service region boundaries, the region and event type are passed to the SDK for processing.
+
+Process a Geofence region event for the provided transitionType.
+
+You can pass the transitionType from `GeofencingEvent.getGeofenceTransition()`. Currently `Geofence.GEOFENCE_TRANSITION_ENTER` and `Geofence.GEOFENCE_TRANSITION_EXIT` are supported.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+
+Android
+
+<Tabs query="platform=android&api=process-geofence"/>
+
+### processGeofenceEvent
+
+Process all Geofences in the GeofencingEvent at the same time.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+
+Android
+
+<Tabs query="platform=android&api=process-geofence-event"/>
 
 ### processRegionEvent
 
@@ -88,29 +112,27 @@ Passes a `CLRegion` and a `PlacesRegionEvent` to be processed by the Places exte
 
 Calling this method will result in an `Event` being dispatched to the SDK's `EventHub`. This enables rule processing based on the triggering region event.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-Swift
+iOS
 
-<Tabs query="language=swift&api=process-region-event"/>
-
-Objective-C
-
-<Tabs query="language=objc&api=process-region-event"/>
+<Tabs query="platform=ios&api=process-region-event"/>
 
 ### registerExtension
 
-This API no longer exists in `AEPPlaces`. Instead, the extension should be registered by calling the `registerExtensions` API in the `MobileCore`.
+<InlineAlert variant="warning" slots="text"/>
+
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-Swift
+Android
 
-<Tabs query="language=swift&api=register-extension"/>
+<Tabs query="platform=android&api=register-extension"/>
 
-Objective-C
+iOS
 
-<Tabs query="language=objc&api=register-extension"/>
+<Tabs query="platform=ios&api=register-extension"/>
 
 ### setAccuracyAuthorization
 
@@ -118,15 +140,11 @@ Sets the accuracy authorization status in the Places extension.
 
 The value provided is stored in the Places shared state, and is for reference only. Calling this method does not impact the actual location accuracy authorization for this device.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-Swift
+iOS
 
-<Tabs query="language=swift&api=set-accuracy-authorization"/>
-
-Objective-C
-
-<Tabs query="language=objc&api=set-accuracy-authorization"/>
+<Tabs query="platform=ios&api=set-accuracy-authorization"/>
 
 ### setAuthorizationStatus
 
@@ -140,13 +158,13 @@ This method should only be called from the `CLLocationManagerDelegate` protocol 
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-Swift
+Android
 
-<Tabs query="language=swift&api=set-authorization-status"/>
+<Tabs query="platform=android&api=set-authorization-status"/>
 
-Objective-C
+iOS
 
-<Tabs query="language=objc&api=set-authorization-status"/>
+<Tabs query="platform=ios&api=set-authorization-status"/>
 
 ## Additional classes and enums
 

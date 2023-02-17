@@ -70,21 +70,15 @@ iOS
 
 ## registerExtension
 
-Registers the Identity for Edge Network extension with the Mobile Core extension.
+<InlineAlert variant="warning" slots="text"/>
 
-<InlineAlert variant="info" slots="text"/>
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
 
-If your use-case covers both Edge Network and Adobe Experience Cloud Solutions extensions, you need to register Identity for Edge Network and Identity for Experience Cloud Identity Service from Mobile Core extensions. For more details, see the [frequently asked questions](./faq.md#q-i-am-using-aep-edge-and-adobe-solutions-extensions-which-identity-extension-should-i-install-and-register).
-
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 Android
 
 <Tabs query="platform=android&api=register-extension"/>
-
-iOS
-
-<Tabs query="platform=ios&api=register-extension"/>
 
 ## removeIdentity
 
@@ -119,7 +113,7 @@ Some example use cases for this API are:
 * During debugging, to see how new ECIDs (and other identifiers paired with it) behave with existing rules and metrics.
 * A last-resort reset for when an ECID should no longer be used.
 
-This API is not recommended for:
+This API is **not** recommended for:
 
 * Resetting a user's consent and privacy settings; see [Privacy and GDPR](../privacy-and-gdpr.md).
 * Removing existing custom identifiers; use the [`removeIdentity`](#removeidentity) API instead.

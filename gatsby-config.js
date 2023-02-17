@@ -130,10 +130,6 @@ module.exports = {
                                     {
                                         title: "API reference",
                                         path: "documentation/mobile-core/configuration/api-reference"
-                                    },
-                                    {
-                                        title: "Event reference",
-                                        path: "documentation/mobile-core/configuration/event-reference"
                                     }
                                 ]
                             },
@@ -174,10 +170,6 @@ module.exports = {
                                     {
                                         title: "API reference",
                                         path: "documentation/mobile-core/lifecycle/api-reference"
-                                    },
-                                    {
-                                        title: "Event reference",
-                                        path: "documentation/mobile-core/lifecycle/event-reference"
                                     },
                                     {
                                         title: "Metrics",
@@ -244,20 +236,12 @@ module.exports = {
                                     {
                                         title: "API reference",
                                         path: "documentation/mobile-core/signal/api-reference"
-                                    },
-                                    {
-                                        title: "Event reference",
-                                        path: "documentation/mobile-core/signal/event-reference"
                                     }
                                 ]
                             },
                             {
                                 title: "API reference",
                                 path: "documentation/mobile-core/api-reference"
-                            },
-                            {
-                                title: "Event reference",
-                                path: "documentation/mobile-core/event-reference"
                             },
                             {
                                 title: "Migration",
