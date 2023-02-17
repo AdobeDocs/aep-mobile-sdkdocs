@@ -127,7 +127,7 @@ class MyCustomResponse implements HttpConnecting {
 }
 ```
 
-2. Create a custom implementation of `Networking` interface and implement the `connectAsync` method. The implementation of `connectAsync` should handle the connection establishment with the details provided in the `NetworkRequest` and, notify the caller of a response using the `NetworkCallback` parameter.
+2. Create a custom implementation of `Networking` interface and, implement the `connectAsync` method. The implementation of `connectAsync` should handle the connection establishment with the details provided in the `NetworkRequest` and, notify the caller of a response using the `NetworkCallback` parameter.
 
 ```java
 /**
@@ -269,7 +269,7 @@ Once you have implemented the `Networking` protocol, all that's left is to overr
 ServiceProvider.shared.networkService = SampleNetworkOverride()
 ```
 
-If you would like to revert back to the default `NetworkService`, simply set the `networkService` to nil.
+If you would like to revert back to the default `NetworkService`, set the `networkService` to nil.
 
 ```swift
 ServiceProvider.shared.networkService = nil

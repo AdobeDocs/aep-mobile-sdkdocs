@@ -2,7 +2,7 @@ import Tabs from './tabs/index.md'
 
 # Platform Services
 
-The Platform Services are provided by the Adobe Experience Platform Mobile SDKs as part of the Mobile Core extension. These services provide shared functionality throughout the SDK that can be shared by extensions. For example, services provide shared functionality for networking, data queuing, caching, and more. For more information on services provided by the SDK please see documentation in our [iOS](https://github.com/adobe/aepsdk-core-ios/blob/main/Documentation/Services/README.md) and [Android](https://github.com/adobe/aepsdk-core-ios/tree/main/Documentation/Services) repositories.
+The Platform Services are provided by the Adobe Experience Platform Mobile SDKs as part of the Mobile Core extension. These services provide shared functionality throughout the SDK that can be shared by extensions. For example, services provide shared functionality for networking, data queuing, and caching. For more information on services provided by the SDK please see documentation in our [iOS](https://github.com/adobe/aepsdk-core-ios/blob/main/Documentation/Services/README.md) and [Android](https://github.com/adobe/aepsdk-core-ios/tree/main/Documentation/Services) repositories.
 
 ## Accessing services
 
@@ -10,7 +10,7 @@ The MobileCore extension provides a shared `ServiceProvider`, responsible for ma
 
 Some services provide wrapper classes. For example, the `Log` class is a wrapper around the `LoggingService`. However, in some cases, a wrapper class may not exist, and one might need to access a service directly from the `ServiceProvider`. The recommended way to do this is through a computed variable or directly through the ServiceProvider when required. This ensures that if the service is overridden, the service consumer always uses the correct service implementation.
 
-The following code snippet shows how to access `CacheService` as an example.
+For example, the following code snippet shows how to access `CacheService`.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
