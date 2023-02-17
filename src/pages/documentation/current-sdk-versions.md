@@ -73,8 +73,7 @@ Due to sunset of [JCenter by JFrog](https://jfrog.com/blog/into-the-sunset-bintr
 | [Adobe Campaign Standard](../adobe-campaign-standard/index.md) |   |   | [![Cocoapods](https://img.shields.io/cocoapods/v/AEPCampaign.svg?color=orange&label=AEPCampaign&logo=apple&logoColor=white&style=flat-square)](https://cocoapods.org/pods/AEPCampaign) | [Link](https://github.com/adobe/aepsdk-campaign-ios) |
 | [Adobe Campaign Classic](../adobe-campaign-classic/index.md) |   |   | [![Cocoapods](https://img.shields.io/cocoapods/v/AEPCampaignClassic.svg?color=orange&label=AEPCampaignClassic&logo=apple&logoColor=white&style=flat-square)](https://cocoapods.org/pods/AEPCampaignClassic) | [Link](https://github.com/adobe/aepsdk-campaignclassic-ios) |
 | [Adobe Audience Manager](../adobe-audience-manager/index.md) |   |   | [![Cocoapods](https://img.shields.io/cocoapods/v/AEPAudience.svg?color=orange&label=AEPAudience&logo=apple&logoColor=white&style=flat-square)](https://cocoapods.org/pods/AEPAudience) | [Link](https://github.com/adobe/aepsdk-audience-ios) |
-| [Adobe Analytics - Mobile Services](../adobe-analytics-mobile-services/index.md) | | 
-Deprecated | | |
+| [Adobe Analytics - Mobile Services](../adobe-analytics-mobile-services/index.md) | | Deprecated | | |
 | Places Monitor | | Deprecated | | |
 
 ## React Native
