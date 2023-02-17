@@ -52,6 +52,30 @@ let mediaExtensionVersion  = Media.extensionVersion()
 NSString *mediaExtensionVersion = [AEPMobileMedia extensionVersion];
 ```
 
+<Variant platform="android" api="register-extension" repeat="8"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void registerExtension()
+```
+
+**Example**
+
+```java
+Media.registerExtension();
+```
+
+#### Kotlin
+
+**Example**
+
+```kotlin
+Media.registerExtension()
+```
+
 <Variant platform="android" api="create-tracker" repeat="10"/>
 
 The createTracker function returns the instance of MediaTracker for tracking a media session. The createTracker function with callback as a parameter has been deprecated.
