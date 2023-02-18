@@ -61,7 +61,7 @@ If SDK privacy status is `optedout`, the push identifier will not be set.
 
    ![ECID network request for push token sync](../assets/push-notifications/push-identifier.png)
 
-<Variant platform="ios" task="receive" repeat="5"/>
+<Variant platform="ios" task="receive" repeat="4"/>
 
 #### Set up the iOS app
 
@@ -72,6 +72,8 @@ If SDK privacy status is `optedout`, the push identifier will not be set.
    For more information, see [Registering Your App with APNs](https://developer.apple.com/documentation/usernotifications/registering_your_app_with_apns?language=objc)
 
 2. In `application:didRegisterForRemoteNotificationsWithDeviceToken:`, call `setPushIdentifier` to set the Push identifier.
+
+For more information, see [setPushIdentifier](../mobile-core/api-reference.md#setpushidentifier).
 
 #### Verify that the push token has successfully synced with the Experience Cloud ID service
 
