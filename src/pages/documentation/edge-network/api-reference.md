@@ -128,4 +128,4 @@ iOS
 
 <Tabs query="platform=ios&api=experience-event"/>
 
-See [Edge Extension Usage](https://github.com/adobe/aepsdk-edge-ios/blob/main/docs/ExtensionUsage.md) for more examples.
+See [Edge Extension Usage](https://github.com/adobe/aepsdk-edge-ios/blob/main/Documentation/extension-usage.md) for more examples.

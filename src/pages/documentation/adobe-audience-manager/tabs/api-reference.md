@@ -1,11 +1,25 @@
-<Variant platform="android" api="extension-version" repeat="3"/>
+<Variant platform="android" api="extension-version" repeat="8"/>
 
 #### Java
+
+**Syntax**
+
+```java
+public static String extensionVersion()
+```
 
 **Example**
 
 ```java
 String audienceExtensionVersion = Audience.extensionVersion();
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+val extensionVersion = Audience.extensionVersion();
 ```
 
 <Variant platform="ios" api="extension-version" repeat="10"/>
@@ -38,7 +52,7 @@ let audienceExtensionVersion  = Audience.extensionVersion()
 NSString *audienceExtensionVersion = [AEPMobileAudience extensionVersion];
 ```
 
-<Variant platform="android" api="get-visitor-profile" repeat="7"/>
+<Variant platform="android" api="get-visitor-profile" repeat="10"/>
 
 This API returns the most recently obtained visitor profile. For easy access across multiple launches of your app, the visitor profile is saved in `SharedPreferences`. If no signal has been submitted, null is returned.
 
@@ -63,6 +77,16 @@ AdobeCallback<Map<String, String>> visitorProfileCallback = new AdobeCallback<Ma
 };
 
 Audience.getVisitorProfile(visitorProfileCallback);
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+Audience.getVisitorProfile { visitorProfile ->
+    // provide code to process the visitorProfile
+}
 ```
 
 <Variant platform="ios" api="get-visitor-profile" repeat="11"/>
@@ -109,14 +133,14 @@ Audience.getVisitorProfile { (visitorProfile, error) in
 }];
 ```
 
-<Variant platform="android" api="register-extension" repeat="5"/>
+<Variant platform="android" api="register-extension" repeat="8"/>
 
 #### Java
 
 **Syntax**
 
 ```java
-public  static void registerExtension() throws InvalidInitException
+public  static void registerExtension()
 ```
 
 **Example**
@@ -125,39 +149,15 @@ public  static void registerExtension() throws InvalidInitException
 Audience.registerExtension();
 ```
 
-<Variant platform="ios" api="register-extension" repeat="10"/>
-
-#### Swift
-
-**Syntax**
-
-```swift
-static func registerExtensions(_ extensions: [NSObject.Type], 
-                               _ completion: (() -> Void)? = nil)
-```
+#### Kotlin
 
 **Example**
 
-```swift
-MobileCore.registerExtension([Audience.self])
+```java
+Audience.registerExtension()
 ```
 
-#### Objective-C
-
-**Syntax**
-
-```objectivec
-+ (void) registerExtensions: (NSArray<Class*>* _Nonnull) extensions 
-                 completion: (void (^ _Nullable)(void)) completion;
-```
-
-**Example**
-
-```objectivec
-[AEPMobileCore registerExtensions:@[AEPMobileAudience.class] completion:nil];
-```
-
-<Variant platform="android" api="reset" repeat="6"/>
+<Variant platform="android" api="reset" repeat="9"/>
 
 This API resets the Audience Manager UUID and purges the current visitor profile from `android.content.SharedPreferences`. The Audience reset also clears the current in-memory DPID and DPUUID variables.
 
@@ -173,6 +173,14 @@ public static void reset()
 
 ```java
 Audience.reset();
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+Audience.reset()
 ```
 
 <Variant platform="ios" api="reset" repeat="11"/>
@@ -207,7 +215,7 @@ Audience.reset()
 [AEPMobileAudience reset];
 ```
 
-<Variant platform="android" api="signal-with-data" repeat="9"/>
+<Variant platform="android" api="signal-with-data" repeat="12"/>
 
 The `signalWithData` API sends Audience Manager a signal with traits and returns the matching segments for the visitor in a callback.
 
@@ -239,6 +247,20 @@ AdobeCallback<Map<String, String>> visitorProfileCallback = new AdobeCallback<Ma
 Map<String, String> traits = new HashMap<String, String>();
 traits.put("trait", "xyz");
 Audience.signalWithData(traits, visitorProfileCallback);
+```
+#### Kotlin
+
+**Example**
+
+```java
+val traits: Map<String, String?> = mapOf(
+    "trait1" to "value1",
+    "trait2" to "value2"
+)
+
+Audience.signalWithData(traits) { visitorProfile ->
+    // handle the returned visitorProfile
+}
 ```
 
 <Variant platform="ios" api="signal-with-data" repeat="13"/>
