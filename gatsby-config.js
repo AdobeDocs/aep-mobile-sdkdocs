@@ -144,10 +144,6 @@ module.exports = {
                                     {
                                         title: "API reference",
                                         path: "documentation/mobile-core/identity/api-reference"
-                                    },
-                                    {
-                                        title: "Migration",
-                                        path: "documentation/mobile-core/identity/migration"
                                     }
                                 ]
                             },
