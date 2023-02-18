@@ -266,7 +266,7 @@ Identity.getUrlVariables { urlVariablesString ->
 static func getUrlVariables(completion: @escaping (String?, Error?) -> Void)
 ```
 
-- `completion` is invoked with `urlVariables` containing the visitor identifiers as a query string, or with `error` if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../mobile-core/mobile-core-api-reference#aeperror) code of the specific error. The default timeout is 1000ms.
+- `completion` is invoked with `urlVariables` containing the visitor identifiers as a query string, or with `error` if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../mobile-core/api-reference.md#public-classes) code of the specific error. The default timeout is 1000ms.
 
 **Example**
 
