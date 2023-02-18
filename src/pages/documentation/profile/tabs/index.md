@@ -32,7 +32,7 @@ target 'YourTargetApp' do
 end
 ```
 
-2. Import the UserProfile library.  
+2. Import the UserProfile library.
 
 #### Swift
 
@@ -50,27 +50,26 @@ end
 
 <Variant platform="android" task="register" repeat="5"/>
 
+
+After calling the `setApplication()` method in the `onCreate()` method, register the UserProfile extension.
+
+1. The `UserProfile` extension must be registered with Mobile Core before calling an `UserProfile` API.
+
 #### Java
 
 ```java
-public class MainApp extends Application {
-     private static final String APP_ID = "YOUR_APP_ID";
+   public class MobileApp extends Application {
 
-     @Override
-     public void onCreate() {
-         super.onCreate();
-
-         MobileCore.setApplication(this);
-         MobileCore.setLogLevel(LoggingMode.VERBOSE);
-         MobileCore.configureWithAppID(APP_ID);
-
-         List<Class<? extends Extension>> extensions = Arrays.asList(
-                 UserProfile.EXTENSION,...);
-         MobileCore.registerExtensions(extensions, o -> {
-             Log.d(LOG_TAG, "AEP Mobile SDK is initialized");
-         });
-     }
- }
+       @Override
+       public void onCreate() {
+            super.onCreate();
+            MobileCore.setApplication(this);
+            List<Class<? extends Extension>> extensions = Arrays.asList(UserProfile.EXTENSION, ...);
+            MobileCore.registerExtensions(extensions, o -> {
+                // Any other post registration processing
+            });
+       }
+   }
 ```
 
 #### Kotlin
@@ -92,7 +91,7 @@ class MyApp : Application() {
 }
 ```
 
-<Variant platform="ios" task="register" repeat="4"/>
+<Variant platform="ios" task="register" repeat="1"/>
 
 #### Swift
 
