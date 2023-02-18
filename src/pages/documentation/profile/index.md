@@ -15,8 +15,8 @@ To get started with the Profile extension:
 1. Configure the Profile Extension in the Data Collection UI.
 2. Add the Profile extension to your app.
 3. Implement Profile APIs to:
-   * Update user attributes.
-   * Remove user attributes.
+   - Update user attributes.
+   - Remove user attributes.
 
 ## Install the Profile extension in the Data Collection UI
 
@@ -55,7 +55,5 @@ iOS
 <Tabs query="platform=ios&task=register"/>
 
 <!--- React Native
-
 <Tabs query="platform=react-native&task=register"/>
-
 --->
