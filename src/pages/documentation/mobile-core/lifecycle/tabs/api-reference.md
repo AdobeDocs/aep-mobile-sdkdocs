@@ -6,15 +6,31 @@
 final String lifecycleExtensionVersion = Lifecycle.extensionVersion();
 ```
 
-<Variant platform="ios" api="extension-version" repeat="4"/>
+<Variant platform="ios" api="extension-version" repeat="10"/>
 
-**Swift**
+#### Swift
+
+**Syntax**
+
+```swift
+static var extensionVersion: String
+```
+
+**Example**
 
 ```swift
 let version = Lifecycle.extensionVersion
 ```
 
-**Objective-C**
+#### Objective-C
+
+**Syntax**
+
+```swift
+@objc static var extensionVersion: String
+```
+
+**Example**
 
 ```objectivec
 NSString *version = [AEPMobileLifecycle extensionVersion];
@@ -61,9 +77,23 @@ contextData.put("myapp.category", "Game");
 MobileCore.lifecycleStart(additionalContextData);
 ```
 
-<Variant platform="ios" api="lifecycle-start" repeat="9"/>
+<Variant platform="ios" api="lifecycle-start" repeat="14"/>
 
 #### Swift
+
+**Syntax**
+
+```swift
+ static func lifecycleStart(additionalContextData: [String: Any]?)
+```
+
+**Example**
+
+```swift
+ MobileCore.lifecycleStart(additionalContextData: nil)
+```
+
+If you need to collect additional lifecycle data:
 
 ```swift
  MobileCore.lifecycleStart(additionalContextData: ["contextDataKey": "contextDataVal"])
@@ -112,9 +142,17 @@ public static void lifecyclePause()
 MobileCore.lifecyclePause();
 ```
 
-<Variant platform="ios" api="lifecycle-pause" repeat="7"/>
+<Variant platform="ios" api="lifecycle-pause" repeat="10"/>
 
 #### Swift
+
+**Syntax**
+
+```swift
+ static func lifecyclePause()
+```
+
+**Example**
 
 ```swift
  MobileCore.lifecyclePause()

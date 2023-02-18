@@ -84,12 +84,3 @@ To update your SDK configuration programmatically, use the following information
 | `media.channel` | No | Channel name. For more information, see [Channel](#channel). | String |
 | `media.playerName` | No | Name of the media player in use, i.e., "AVPlayer", "HTML5 Player", "My Custom Player". For more information, see [Player Name](#player-name). | String |
 | `media.appVersion` | No | Version of the media player app/SDK. For more information, see [Application Version](#application-version). | String |
-
-## Platform Support
-
-| Platform | Support Status |
-| :--- | :--- |
-| Android | Supported |
-| Apple iOS​ | Supported |
-| React Native (iOS & Android) | Supported |
-
