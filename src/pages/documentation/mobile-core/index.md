@@ -30,7 +30,7 @@ Rules Engine looks for the interactions between users and their associated data 
 
 ## Signal
 
-The Signal extension allows you to send data third-party endpoints via GET and POST requests. Signals are configured by using rules in the Data Collection UI. For more information, please read the documentation on the [Signal extension](signals/index.md).
+The Signal extension allows you to send data third-party endpoints via GET and POST requests. Signals are configured by using rules in the Data Collection UI. For more information, please read the documentation on the [Signal extension](signal/index.md).
 
 ## Platform Services
 
