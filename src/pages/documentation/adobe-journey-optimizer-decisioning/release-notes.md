@@ -1,5 +1,11 @@
 # Release Notes
 
+## February 2, 2023
+
+### Android Optimize 2.0.0
+
+* Major version update for [Adobe Journey Optimizer - Decisioning](./index.md) on Android for Adobe Experience Platform Mobile SDKs compatible with Mobile Core 2.0.0. This extension library is already available as an [open source project on Github](https://github.com/adobe/aepsdk-optimize-android/).
+
 ## October 10, 2022
 
 ### Android Optimize 1.0.1
