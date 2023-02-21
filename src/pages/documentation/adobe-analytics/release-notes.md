@@ -12,7 +12,7 @@
 
 ### Android Analytics 2.0.0
 
-* Initial release to support [Adobe Analytics](./index.md) for Adobe Experience Platform Mobile SDKs for Android compatible with Mobile Core 2.0.0. This library is available as an [open sourced project on Github](https://github.com/adobe/aepsdk-analytics-android/).
+* Initial release to support [Adobe Analytics](./index.md) for Adobe Experience Platform Mobile SDKs for Android compatible with Mobile Core 2.0.0. This library is available as an [open sourced project on GitHub](https://github.com/adobe/aepsdk-analytics-android/).
 
 ## June 30, 2022
 
@@ -50,4 +50,4 @@
 
 ### iOS AEPAnalytics 3.0.0
 
-* Initial release to support [Adobe Analytics](./index.md) for Adobe Experience Platform Mobile SDKs for iOS in Swift. This library is available as an [open sourced project on Github](https://github.com/adobe/aepsdk-analytics-ios/).
+* Initial release to support [Adobe Analytics](./index.md) for Adobe Experience Platform Mobile SDKs for iOS in Swift. This library is available as an [open sourced project on GitHub](https://github.com/adobe/aepsdk-analytics-ios/).
