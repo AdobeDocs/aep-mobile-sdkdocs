@@ -144,10 +144,6 @@ module.exports = {
                                     {
                                         title: "API reference",
                                         path: "documentation/mobile-core/identity/api-reference"
-                                    },
-                                    {
-                                        title: "Migration",
-                                        path: "documentation/mobile-core/identity/migration"
                                     }
                                 ]
                             },
@@ -392,16 +388,8 @@ module.exports = {
                         path: "/documentation/profile"
                     },
                     {
-                        title: "Migration",
-                        path: "documentation/profile/migration"
-                    },
-                    {
                         title: "API reference",
                         path: "documentation/profile/api-reference"
-                    },
-                    {
-                        title: "Event reference",
-                        path: "documentation/profile/event-reference"
                     },
                     {
                         title: "Release notes",

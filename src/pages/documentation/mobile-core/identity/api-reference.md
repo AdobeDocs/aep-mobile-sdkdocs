@@ -8,12 +8,12 @@ This API appends Adobe visitor information to the query component of the specifi
 
 If the provided URL is null or empty, it is returned as is. Otherwise, the following information is added to the query component of the specified URL and is returned in the callback function:
 
-* The `adobe_mc` attribute is a URL encoded list that contains:
-  * `MCMID` - Experience Cloud ID (ECID)
-  * `MCORGID` - Experience Cloud Org ID
-  * `MCAID` - Analytics Tracking ID (AID), if available from the [Analytics extension](../../adobe-analytics/api-reference.md#gettrackingidentifier)
-  * `TS` - A timestamp taken when this request was made
-* The optional `adobe_aa_vid` attribute is the URL-encoded Analytics Custom Visitor ID (VID), if previously set in the [Analytics extension](../../adobe-analytics/api-reference.md#setvisitoridentifier).
+- The `adobe_mc` attribute is a URL encoded list that contains:
+  - `MCMID` - Experience Cloud ID (ECID)
+  - `MCORGID` - Experience Cloud Org ID
+  - `MCAID` - Analytics Tracking ID (AID), if available from the [Analytics extension](../../adobe-analytics/api-reference.md#gettrackingidentifier)
+  - `TS` - A timestamp taken when this request was made
+- The optional `adobe_aa_vid` attribute is the URL-encoded Analytics Custom Visitor ID (VID), if previously set in the [Analytics extension](../../adobe-analytics/api-reference.md#setvisitoridentifier).
 
 This API is designed to handle the following URL formats:
 
@@ -141,12 +141,12 @@ This API gets the Adobe Experience Cloud Identity Service variables in URL query
 
 If an error occurs while retrieving the URL string, the callback handler will be called with a null value. Otherwise, the following information is added to the string that is returned in the callback:
 
-* The `adobe_mc` attribute is an URL encoded list that contains:
-  * `MCMID` - Experience Cloud ID (ECID)
-  * `MCORGID` - Experience Cloud Org ID
-  * `MCAID` - Analytics Tracking ID (AID), if available from the [Analytics extension](../../adobe-analytics/index.md)
-  * `TS` - A timestamp taken when this request was made
-* The optional `adobe_aa_vid` attribute is the URL-encoded Analytics Custom Visitor ID (VID), if previously set in the [Analytics extension](../../adobe-analytics/index.md).
+- The `adobe_mc` attribute is an URL encoded list that contains:
+  - `MCMID` - Experience Cloud ID (ECID)
+  - `MCORGID` - Experience Cloud Org ID
+  - `MCAID` - Analytics Tracking ID (AID), if available from the [Analytics extension](../../adobe-analytics/index.md)
+  - `TS` - A timestamp taken when this request was made
+- The optional `adobe_aa_vid` attribute is the URL-encoded Analytics Custom Visitor ID (VID), if previously set in the [Analytics extension](../../adobe-analytics/index.md).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -170,25 +170,15 @@ Flutter
 
 <InlineAlert variant="warning" slots="text"/>
 
-Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
+This API is only available in Android and is deprecated starting in version 2.0.0 of the Identity extension. Use [`MobileCore.registerExtensions()`](../../api-reference.md#registerextensions) instead.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+The `registerExtension()` API registers the Identity extension with the Mobile Core extension. This API allows the extension to send and receive events to and from the Mobile SDK.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 Android
 
 <Tabs query="platform=android&api=register-extension"/>
-
-iOS
-
-<Tabs query="platform=ios&api=register-extension"/>
-
-<!--- React Native
-
-<Tabs query="platform=react-native&api=register-extension"/>
-
-Flutter
-
-<Tabs query="platform=flutter&api=register-extension"/> --->
 
 ## setAdvertisingIdentifier
 
