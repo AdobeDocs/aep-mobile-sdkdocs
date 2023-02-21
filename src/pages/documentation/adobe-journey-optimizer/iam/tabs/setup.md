@@ -1,4 +1,4 @@
-<Variant platform="android" task="install" repeat="2"/>
+<Variant platform="android" task="install" repeat="7"/>
 
 In-app messages are enabled in Messaging extension version `2.0.1` or newer.
 
