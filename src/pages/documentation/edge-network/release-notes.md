@@ -10,7 +10,7 @@
 
 ### Android Edge 2.0.0
 
-* Initial release to support [Edge Network](./index.md) for Adobe Experience Platform Mobile SDKs for Android compatible with Mobile Core 2.0.0. This library is available as an [open sourced project on GitHub](https://github.com/adobe/aepsdk-edge-android).
+* Major version update for [Edge Network](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edge-android).
 
 ## October 19, 2022
 

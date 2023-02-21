@@ -4,7 +4,7 @@
 
 ### Android Campaign Standard 2.0.0
 
-* Initial release to support [Adobe Campaign Standard workflows](./index.md) for Adobe Experience Platform Mobile SDKs for Android compatible with Mobile Core 2.0.0. This library is available as an [open sourced project on GitHub](https://github.com/adobe/aepsdk-campaign-android).
+* Major version update for [Adobe Campaign Standard workflows](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaign-android).
 
 ## February 9, 2022
 
