@@ -1,5 +1,16 @@
 # Release Notes
 
+## January 30, 2021
+
+### Adobe Experience Platform Android Core SDKs
+
+The brand new Adobe Experience Platform Core Android SDKs are live! It is [open sourced on GitHub](https://github.com/adobe/aepsdk-core-android), containing the following extensions:
+
+* Core 2.0.0
+* Identity 2.0.0
+* Signal 2.0.0
+* Lifecycle 2.0.0
+
 ## January 5, 2023
 
 ### iOS AEPCore 3.7.4
@@ -237,7 +248,7 @@ Released with sdk-core version 1.11.5
 
 ### Adobe Experience Platform iOS Core SDKs
 
-The brand new Adobe Experience Platform Core iOS swift SDKs are live! It is [open sourced on github](https://github.com/adobe/aepsdk-core-ios/), containing the following extensions:
+The brand new Adobe Experience Platform Core iOS swift SDKs are live! It is [open sourced on GitHub](https://github.com/adobe/aepsdk-core-ios), containing the following extensions:
 
 * AEPCore 3.0.0
 * AEPServices 3.0.0
