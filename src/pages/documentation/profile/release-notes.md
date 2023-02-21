@@ -4,7 +4,7 @@
 
 ### Android UserProfile 2.0.0
 
-- Initial release to work with the latest Adobe Experience Platform Mobile SDK for Android. It is [open sourced on Github](https://github.com/adobe/aepsdk-userprofile-android). Also, the following APIs have been deprecated and will be removed in a future release:
+- Initial release to work with the latest Adobe Experience Platform Mobile SDK for Android. It is [open sourced on GitHub](https://github.com/adobe/aepsdk-userprofile-android). Also, the following APIs have been deprecated and will be removed in a future release:
 
   | Deprecated API                      | Recommended Alternative              |
   | ----------------------------------- | ------------------------------------ |
@@ -22,4 +22,4 @@
 
 ### iOS AEPUserProfile 3.0.0
 
-- Released the brand new Adobe Experience Platform User Profile Swift SDK. It is [open sourced on Github](https://github.com/adobe/aepsdk-userprofile-ios).
+- Released the brand new Adobe Experience Platform User Profile Swift SDK. It is [open sourced on GitHub](https://github.com/adobe/aepsdk-userprofile-ios).

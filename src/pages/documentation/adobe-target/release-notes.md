@@ -4,7 +4,7 @@
 
 ### Android Target 2.0.0
 
-* Initial release to support [Adobe Target](./index.md) for Adobe Experience Platform Mobile SDKs for Android compatible with Mobile Core 2.0.0. This library is available as an [open sourced project on Github](https://github.com/adobe/aepsdk-target-android).
+* Initial release to support [Adobe Target](./index.md) for Adobe Experience Platform Mobile SDKs for Android compatible with Mobile Core 2.0.0. This library is available as an [open sourced project on GitHub](https://github.com/adobe/aepsdk-target-android).
 
 ## August 2, 2022
 

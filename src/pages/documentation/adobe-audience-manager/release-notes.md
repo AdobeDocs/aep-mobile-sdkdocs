@@ -4,7 +4,7 @@
 
 ### Android Audience 2.0.0
 
-* Initial release to support [Adobe Audience Manager](./index.md) for Adobe Experience Platform Mobile SDKs for Android compatible with Mobile Core 2.0.0. This library is available as an [open sourced project on Github](https://github.com/adobe/aepsdk-audience-android).
+* Initial release to support [Adobe Audience Manager](./index.md) for Adobe Experience Platform Mobile SDKs for Android compatible with Mobile Core 2.0.0. This library is available as an [open sourced project on GitHub](https://github.com/adobe/aepsdk-audience-android).
 
 ## May 18, 2022
 
@@ -35,4 +35,4 @@
 
 ### iOS Audience 3.0.0
 
-* Initial release to support [Adobe Audience](./index.md)  for Adobe Experience Platform Mobile SDKs for iOS in Swift. This extension library is available as an [open sourced project on Github](https://github.com/adobe/aepsdk-audience-ios/).
+* Initial release to support [Adobe Audience](./index.md)  for Adobe Experience Platform Mobile SDKs for iOS in Swift. This extension library is available as an [open sourced project on GitHub](https://github.com/adobe/aepsdk-audience-ios/).
