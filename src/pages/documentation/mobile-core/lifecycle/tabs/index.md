@@ -66,7 +66,7 @@ import 'package:flutter_acpcore/flutter_acplifecycle.dart';
 1. Register the Lifecycle extension:
 
 ```java
-public class MobiletApp extends Application {
+public class MobileApp extends Application {
 @Override
 public void onCreate() {
 super.onCreate();
