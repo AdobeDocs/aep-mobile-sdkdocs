@@ -1,6 +1,28 @@
 # Release Notes
 
-## January 30, 2021
+## February 9, 2023
+
+### Android Mobile Core 2.0.1
+
+* Fixed issue causing large delays in configuration download retries.
+* Fixed issue causing backdrop opacity being set incorrectly in `MessageSettings`.
+* Fixed issue with javadoc generation.
+* Improved resource handling after network connection attempts.
+* Improved database handling during fresh installation scenarios.
+
+### Android Signal 2.0.1
+
+* Fixed issue with javadoc generation.
+
+### Android Lifecycle 2.0.1
+
+* Fixed issue with javadoc generation.
+
+### Android Identity 2.0.1
+
+* Fixed issue with javadoc generation.
+
+## January 30, 2023
 
 ### Adobe Experience Platform Android Core SDKs
 
