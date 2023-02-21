@@ -1,8 +1,6 @@
 import Tabs from './tabs/public-classes.md'
 
-# Public classes and Interfaces
-
-## iOS Class - Message
+# iOS Class - Message
 
 The `Message` class contains the definition of an in-app message and controls its tracking via Experience Edge events.
 
@@ -14,39 +12,31 @@ The `Message` class contains the definition of an in-app message and controls it
 
 Identifier of the `Message`. This value matches the Message Execution ID assigned by Adobe Journey Optimizer (AJO) Campaign.
 
-#### iOS
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-#### Swift
+iOS
 
-```swift
-public var id: String
-```
+<Tabs query="platform=ios&function=id"/>
 
 ### autoTrack
 
 If set to `true` (default), Experience Edge events will automatically be generated when this `Message` is triggered, displayed, and dismissed.
 
-#### iOS
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-#### Swift
+iOS
 
-```swift
-public var autoTrack: Bool = true
-```
+<Tabs query="platform=ios&function=auto-track"/>
 
 ### view
 
 Holds a reference to the message's `WKWebView` (iOS) or `WebView` (Android) instance, if it exists.
 
-#### iOS
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-#### Swift
+iOS
 
-```swift
-public var view: UIView? {
-    fullscreenMessage?.webView
-}
-```
+<Tabs query="platform=ios&function=view"/>
 
 ## Public functions
 
@@ -56,13 +46,11 @@ Signals to the UIService (in `AEPServices`) that the message should be shown.
 
 If `autoTrack` is true, calling this method will result in an `decisioning.propositionTrigger` Edge Event being dispatched.
 
-#### iOS
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-#### Swift
+iOS
 
-```swift
-public func show()
-```
+<Tabs query="platform=ios&function=show"/>
 
 ### dismiss(suppressAutoTrack:)
 
@@ -70,34 +58,21 @@ Signals to the UIService that the message should be removed from the UI.
 
 If `autoTrack` is true, calling this method will result in an `decisioning.propositionDismiss` Edge Event being dispatched.
 
-#### iOS
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-#### Swift
+iOS
 
-```swift
-public func dismiss(suppressAutoTrack: Bool? = false)
-```
-
-###### Parameters
-
-* *suppressAutoTrack* - if set to `true`, the `decisioning.propositionDismiss` Edge Event will not be sent regardless of the `autoTrack` setting.
+<Tabs query="platform=ios&function=dismiss"/>
 
 ### track(_:withEdgeEventType:)
 
 Generates and dispatches an Edge Event for the provided `interaction` and `eventType`.
 
-#### iOS
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-#### Swift
+iOS
 
-```swift
-public func track(_ interaction: String?, withEdgeEventType eventType: MessagingEdgeEventType)
-```
-
-###### Parameters
-
-* *interaction* - a custom `String` value to be recorded in the interaction
-* *eventType* - the [`MessagingEdgeEventType`](#enum-messagingedgeeventtype) to be used for the ensuing Edge Event
+<Tabs query="platform=ios&function=track"/>
 
 ### handleJavascriptMessage(_:withHandler:)
 
@@ -107,18 +82,11 @@ The parameter passed to `handler` will contain the body of the message passed fr
 
 For a full guide on how to use `handleJavascriptMessage`, read [Call native code from the Javascript of an in-app message](./tutorials/native-from-javascript.md).
 
-#### iOS
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-#### Swift
+iOS
 
-```swift
-public func handleJavascriptMessage(_ name: String, withHandler handler: @escaping (Any?) -> Void)
-```
-
-##### Parameters
-
-* *name* - the name of the message that should be handled by `handler`
-* *handler* - the method or closure to be called with the body of the message created in the Message's JavaScript
+<Tabs query="platform=ios&function=handle-javascript-message"/>
 
 ## Android Interface - Message
 
@@ -134,13 +102,11 @@ Signals to the UIService that the message should be shown.
 
 If `autoTrack` is true, calling this method will result in an "decisioning.propositionDisplay" Edge Event being dispatched.
 
-#### Android
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-#### Java
+Android
 
-```java
-void show()
-```
+<Tabs query="platform=android&function=show"/>
 
 ### dismiss
 
@@ -148,66 +114,41 @@ Signals to the UIService that the message should be removed from the UI.
 
 If `autoTrack` is true, calling this method will result in an "decisioning.propositionDismiss" Edge Event being dispatched.
 
-#### Android
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-#### Java
+Android
 
-```java
-void dismiss(final boolean suppressAutoTrack)
-```
-
-##### Parameters
-
-* *suppressAutoTrack* - if set to `true`, the `decisioning.propositionDismiss` Edge Event will not be sent regardless of the `autoTrack` setting.
+<Tabs query="platform=android&function=dismiss"/>
 
 ### track
 
 Generates and dispatches an Edge Event for the provided `interaction` and `eventType`.
 
-#### Android
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-#### Java
+Android
 
-```java
-void track(final String interaction, final MessagingEdgeEventType eventType)
-```
-
-##### Parameters
-
-* *interaction* - a custom `String` value to be recorded in the interaction
-* *eventType* - the [`MessagingEdgeEventType`](#enum-messagingedgeeventtype) to be used for the ensuing Edge Event
+<Tabs query="platform=android&function=track"/>
 
 ### setAutoTrack
 
 Sets the `Message's` auto tracking preference.
 
-#### Android
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-#### Java
+Android
 
-```java
-void setAutoTrack(boolean enabled)
-```
-
-##### Parameters
-
-- *enabled* - if true, Experience Edge events will automatically be generated when this `Message` is triggered, displayed, or dismissed.
+<Tabs query="platform=android&function=auto-track"/>
 
 ### evaluateJavascript
 
 Evaluates the passed in `String` content containing javascript code using the `Message's ` webview. `handleJavascriptMessage` must be called with a valid callback before calling `evaluateJavascript` as the body of the message passed from the javascript code execution will be returned in the `AdobeCallback` .
 
-#### Android
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-#### Java
+Android
 
-```java
-void evaluateJavascript(final String content)
-```
-
-##### Parameters
-
-* *content* - a string containing the javascript code to be executed
+<Tabs query="platform=android&function=evaluate-javascript"/>
 
 ### handleJavascriptMessage
 
@@ -217,54 +158,41 @@ The  `AdobeCallback` will contain the body of the message passed from the `WebVi
 
 For a full guide on how to use `handleJavascriptMessage`, read [Call native code from the Javascript of an in-app message](./how-to-call-native-from-javascript.md).
 
-#### Android
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-#### Java
+Android
 
-```java
-void handleJavascriptMessage(final String name, final AdobeCallback<String> callback)
-```
-
-##### Parameters
-
-* *name* - the name of the message that should be handled by the `callback`
-* *callback* - a callback which will be called with the body of the message created in the Message's JavaScript
+<Tabs query="platform=android&function=handle-javascript-message"/>
 
 ### getId
 
 Returns the message's id.
 
-#### Android
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-#### Java
+Android
 
-```java
-String getId()
-```
+<Tabs query="platform=android&function=id"/>
 
 ### getParent
 
 Returns the `Object` which created this `Message`.
 
-#### Android
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-#### Java
+Android
 
-```java
-Object getParent()
-```
+<Tabs query="platform=android&function=parent"/>
 
 ### getWebView
 
 Returns a reference to the message's  `WebView`  instance, if it exists.
 
-#### Android
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-#### Java
+Android
 
-```java
-WebView getWebView()
-```
+<Tabs query="platform=android&function=view"/>
 
 # Enum - MessagingEdgeEventType
 
@@ -276,11 +204,11 @@ This enum is used in conjunction with the [`track(_:withEdgeEventType:)`](#track
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-#### Android
+Android
 
 <Tabs query="platform=android&function=enum"/>
 
-#### iOS
+iOS
 
 <Tabs query="platform=ios&function=enum"/>
 
@@ -290,10 +218,10 @@ Below is the table of values returned by calling the `toString` method for each 
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-#### Android
+Android
 
 <Tabs query="platform=android&function=string-values"/>
 
-#### iOS
+iOS
 
 <Tabs query="platform=ios&function=string-values"/>

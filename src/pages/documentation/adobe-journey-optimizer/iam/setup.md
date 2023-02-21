@@ -2,11 +2,13 @@ import Tabs from './tabs/setup.md'
 
 #  Set up AEPMessaging SDK
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 Android (Gradle)
 
 <Tabs query="platform=android&task=install"/>
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 iOS (Cocoapods)
 
@@ -16,11 +18,13 @@ iOS (Cocoapods)
 
 Import the Messaging module/package and its dependencies, then register the Messaging extension and dependencies.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 Android
 
 <Tabs query="platform=android&task=register"/>
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 iOS
 
