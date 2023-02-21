@@ -36,15 +36,11 @@ iOS
 
 Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 Android
 
 <Tabs query="platform=android&api=register-extension"/>
-
-iOS
-
-<Tabs query="platform=ios&api=register-extension"/>
 
 ## resetIdentities
 
@@ -132,4 +128,4 @@ iOS
 
 <Tabs query="platform=ios&api=experience-event"/>
 
-See [Edge Extension Usage](https://github.com/adobe/aepsdk-edge-ios/blob/main/docs/ExtensionUsage.md) for more examples.
+See [Edge Extension Usage](https://github.com/adobe/aepsdk-edge-ios/blob/main/Documentation/extension-usage.md) for more examples.

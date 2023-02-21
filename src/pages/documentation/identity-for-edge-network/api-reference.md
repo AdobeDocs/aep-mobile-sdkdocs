@@ -74,15 +74,11 @@ iOS
 
 Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 Android
 
 <Tabs query="platform=android&api=register-extension"/>
-
-iOS
-
-<Tabs query="platform=ios&api=register-extension"/>
 
 ## removeIdentity
 
@@ -175,7 +171,7 @@ Defines a map containing a set of end user identities, keyed on either namespace
 
 The format of the IdentityMap class is defined by the [XDM Identity Map Schema](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/shared/identitymap.schema.md).
 
-For more information, please read an overview of the [AEP Identity Service](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html).
+For more information, please read an overview of the [Identity Service](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html).
 
 ```json
 "identityMap" : {

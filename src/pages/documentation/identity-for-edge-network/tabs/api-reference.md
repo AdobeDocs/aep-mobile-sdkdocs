@@ -1,4 +1,4 @@
-<Variant platform="android" api="extension-version" repeat="10"/>
+<Variant platform="android" api="extension-version" repeat="8"/>
 
 #### Java
 
@@ -15,12 +15,6 @@ String extensionVersion = Identity.extensionVersion();
 ```
 
 #### Kotlin
-
-**Syntax**
-
-```java
-fun extensionVersion(): String
-```
 
 **Example**
 
@@ -58,7 +52,7 @@ let extensionVersion = EdgeIdentity.extensionVersion
 NSString *extensionVersion = [AEPMobileEdgeIdentity extensionVersion];
 ```
 
-<Variant platform="android" api="get-experience-cloud-id" repeat="12"/>
+<Variant platform="android" api="get-experience-cloud-id" repeat="10"/>
 
 <InlineNestedAlert variant="info" header="false" iconPosition="left">
 
@@ -82,24 +76,18 @@ public static void getExperienceCloudId(final AdobeCallback<String> callback);
 Identity.getExperienceCloudId(new AdobeCallback<String>() {    
     @Override    
     public void call(String id) {        
-         //Handle the ID returned here    
+         // Handle the ID returned here    
     }
 });
 ```
 
 #### Kotlin
 
-**Syntax**
-
-```java
-fun getExperienceCloudId(callback: AdobeCallback<String>)
-```
-
 **Example**
 
 ```java
 Identity.getExperienceCloudId { id ->
-    //Handle the ID returned here
+    // Handle the ID returned here
 }
 ```
 
@@ -113,16 +101,16 @@ Identity.getExperienceCloudId { id ->
 static func getExperienceCloudId(completion: @escaping (String?, Error?) -> Void)
 ```
 
-* _completion_ is invoked after the ECID is available.  The default timeout is 1000ms.
+* _completion_ is invoked after the ECID is available. The default timeout is 1000ms.
 
 **Example**
 
 ```swift
 Identity.getExperienceCloudId { (ecid, error) in
   if let error = error {
-    // handle error here
+    // Handle the error here
   } else {
-    // handle the retrieved ID here
+    // Handle the retrieved ID here
   }
 }
 ```
@@ -143,7 +131,7 @@ Identity.getExperienceCloudId { (ecid, error) in
 }];
 ```
 
-<Variant platform="android" api="get-identities" repeat="12"/>
+<Variant platform="android" api="get-identities" repeat="10"/>
 
 <InlineNestedAlert variant="info" header="false" iconPosition="left">
 
@@ -167,24 +155,18 @@ public static void getIdentities(final AdobeCallback<IdentityMap> callback);
 Identity.getIdentities(new AdobeCallback<IdentityMap>() {    
     @Override    
     public void call(IdentityMap identityMap) {        
-         //Handle the IdentityMap returned here    
+         // Handle the IdentityMap returned here    
     }
 });
 ```
 
 #### Kotlin
 
-**Syntax**
-
-```java
-fun getIdentities(callback: AdobeCallback<IdentityMap>)
-```
-
 **Example**
 
 ```java
 Identity.getIdentities { identityMap ->
-  //Handle the IdentityMap returned here        
+  // Handle the IdentityMap returned here        
 }
 ```
 
@@ -205,9 +187,9 @@ static func getIdentities(completion: @escaping (IdentityMap?, Error?) -> Void)
 ```swift
 Identity.getIdentities { (identityMap, error) in
   if let error = error {
-    // handle error here
+    // Handle the error here
   } else {
-    // handle the retrieved identitites here
+    // Handle the retrieved identitites here
   }
 }
 ```
@@ -228,7 +210,7 @@ Identity.getIdentities { (identityMap, error) in
 }];
 ```
 
-<Variant platform="android" api="get-url-variables" repeat="12"/>
+<Variant platform="android" api="get-url-variables" repeat="10"/>
 
 <InlineNestedAlert variant="info" header="false" iconPosition="left">
 
@@ -252,10 +234,10 @@ public static void getUrlVariables(final AdobeCallback<String> callback);
 Identity.getUrlVariables(new AdobeCallback<String>() {    
     @Override    
     public void call(String urlVariablesString) {        
-        //handle the URL query parameter string here
-        //For example, open the URL in a webView  
+        // Handle the URL query parameter string here
+        // For example, open the URL in a webView  
         WebView webView;
-        webView = (WebView)findViewById(R.id.your_webview); // initialize with your webView
+        webView = (WebView)findViewById(R.id.your_webview); // Initialize with your webView
         webview.loadUrl("https://example.com?" + urlVariablesString);
     }
 });
@@ -263,19 +245,13 @@ Identity.getUrlVariables(new AdobeCallback<String>() {
 
 #### Kotlin
 
-**Syntax**
-
-```java
-fun getUrlVariables(callback: AdobeCallback<String>)
-```
-
 **Example**
 
 ```java
 Identity.getUrlVariables { urlVariablesString ->
-  //handle the URL query parameter string here
-  //For example, open the URL in a webView      
-  val webView = findViewById<WebView>(R.id.your_webview) // initialize with your webView
+  // Handle the URL query parameter string here
+  // For example, open the URL in a webView      
+  val webView = findViewById<WebView>(R.id.your_webview) // Initialize with your webView
   webView.loadUrl("http://www.example.com?" + urlVariablesString)    
 }
 ```
@@ -290,14 +266,14 @@ Identity.getUrlVariables { urlVariablesString ->
 static func getUrlVariables(completion: @escaping (String?, Error?) -> Void)
 ```
 
-- `completion` is invoked with `urlVariables` containing the visitor identifiers as a query string, or with `error` if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../mobile-core/mobile-core-api-reference#aeperror) code of the specific error. The default timeout is 1000ms.
+- `completion` is invoked with `urlVariables` containing the visitor identifiers as a query string, or with `error` if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../mobile-core/api-reference.md#public-classes) code of the specific error. The default timeout is 1000ms.
 
 **Example**
 
 ```swift
 Identity.getUrlVariables { (urlVariables, error) in
   if let error = error {
-    // handle error here
+    // Handle the error here
   } else {
     var urlStringWithVisitorData: String = "https://example.com"
     if let urlVariables: String = urlVariables {
@@ -305,11 +281,11 @@ Identity.getUrlVariables { (urlVariables, error) in
     }
 
     guard let urlWithVisitorData: URL = URL(string: urlStringWithVisitorData) else {
-      // handle error, unable to construct URL
+      // Handle the error, unable to construct URL
       return
     }
 
-    // handle the retrieved urlVariables encoded string here
+    // Handle the retrieved urlVariables encoded string here
     // APIs which update the UI must be called from main thread
     DispatchQueue.main.async {
         self.webView.load(URLRequest(url: urlWithVisitorData))
@@ -331,9 +307,9 @@ Identity.getUrlVariables { (urlVariables, error) in
 ```objectivec
 [AEPMobileEdgeIdentity getUrlVariables:^(NSString *urlVariables, NSError *error){
   if (error) {
-  // handle error here
+  // Handle the error here
   } else {
-    // handle the URL query parameter string here
+    // Handle the URL query parameter string here
     NSString* urlString = @"https://example.com";
     NSString* urlStringWithVisitorData = [NSString stringWithFormat:@"%@?%@", urlString, urlVariables];
     NSURL* urlWithVisitorData = [NSURL URLWithString:urlStringWithVisitorData];
@@ -365,47 +341,7 @@ import com.adobe.marketing.mobile.edge.identity.Identity
 Identity.registerExtension();
 ```
 
-<Variant platform="ios" api="register-extension" repeat="11"/>
-
-In iOS, the registration occurs by passing Identity for Edge Network extension to the [MobileCore.registerExtensions API](../mobile-core/api-reference.md#registerextension-s).
-
-#### Swift
-
-**Syntax**
-
-```swift
-static func registerExtensions(_ extensions: [NSObject.Type], 
-                               _ completion: (() -> Void)? = nil)
-```
-
-**Example**
-
-```swift
-import AEPEdgeIdentity
-
-...
-MobileCore.registerExtensions([Identity.self])
-```
-
-#### Objective-C
-
-**Syntax**
-
-```objectivec
-+ (void) registerExtensions: (NSArray<Class*>* _Nonnull) extensions 
-                 completion: (void (^ _Nullable)(void)) completion;
-```
-
-**Example**
-
-```objectivec
-@import AEPEdgeIdentity;
-
-...
-[AEPMobileCore registerExtensions:@[AEPMobileEdgeIdentity.class] completion:nil];
-```
-
-<Variant platform="android" api="remove-identity" repeat="10"/>
+<Variant platform="android" api="remove-identity" repeat="8"/>
 
 #### Java
 
@@ -423,12 +359,6 @@ Identity.removeIdentity(item, "Email");
 ```
 
 #### Kotlin
-
-**Syntax**
-
-```java
-fun removeIdentity(item: IdentityItem, namespace: String)
-```
 
 **Example**
 
@@ -469,7 +399,7 @@ AEPIdentityItem *item = [[AEPIdentityItem alloc] initWithId:@"user@example.com" 
 [AEPMobileEdgeIdentity removeIdentityItem:item withNamespace:@"Email"];
 ```
 
-<Variant platform="android" api="set-advertising-identifier" repeat="16"/>
+<Variant platform="android" api="set-advertising-identifier" repeat="14"/>
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
@@ -540,12 +470,6 @@ public void onResume() {
 
 #### Kotlin
 
-**Syntax**
-
-```java
-public fun setAdvertisingIdentifier(advertisingIdentifier: String)
-```
-
 - _advertisingIdentifier_ is an ID string that provides developers with a simple, standard system to continue to track ads throughout their apps.
 
 **Example**
@@ -599,7 +523,7 @@ val scope = CoroutineScope(Dispatchers.IO).launch {
 
 <Variant platform="ios" api="set-advertising-identifier" repeat="14"/>
 
-In order to enable the collection of current advertising tracking user's selection based on the provided advertising identifier, you need to install and register the [AEPEdgeConsent](../consent-for-edge-network/index.md) extension and update the [AEPEdge](../edge-network/index.md) dependency to minimum 1.4.1. 
+In order to enable the collection of current advertising tracking user's selection based on the provided advertising identifier, you need to install and register the [Consent for Edge Network](../consent-for-edge-network/index.md) extension and update the [Edge Network extension](../edge-network/index.md) dependency to minimum 1.4.1. 
 
 Starting from iOS 14+, applications must use the [App Tracking Transparency](https://developer.apple.com/documentation/apptrackingtransparency) framework to request user authorization before using the Identifier for Advertising (IDFA). To access IDFA and handle it correctly in your mobile application, see the [Apple developer documentation about IDFA](https://developer.apple.com/documentation/adsupport/asidentifiermanager). 
 
@@ -736,7 +660,7 @@ func setAdvertisingIdentifierUsingTrackingManager() {
 }
 ```
 
-<Variant platform="android" api="update-identities" repeat="10"/>
+<Variant platform="android" api="update-identities" repeat="8"/>
 
 #### Java
 
@@ -756,12 +680,6 @@ Identity.updateIdentities(identityMap);
 ```
 
 #### Kotlin
-
-**Syntax**
-
-```java
-fun updateIdentities(identityMap: IdentityMap)
-```
 
 **Example**
 
