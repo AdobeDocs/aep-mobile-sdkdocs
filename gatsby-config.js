@@ -54,18 +54,6 @@ module.exports = {
                 ]
             },
             {
-                title: "Version 4 Mobile SDKs end-of-support FAQ",
-                path: "/documentation/v4-end-of-life-faq"
-            },
-            {
-                title: "Version 4 API changelog",
-                path: "/documentation/api-changelog"
-            },
-            {
-                title: "Adobe Experience Cloud & Apple's IDFA, Privacy announcement",
-                path: "/documentation/privacy-announcement"
-            },
-            {
                 title: "Getting started",
                 path: "/documentation/getting-started",
                 pages: [
@@ -795,6 +783,14 @@ module.exports = {
                     {
                         title: "Overview",
                         path: "/documentation/resources"
+                    },
+                    {
+                        title: "Version 4 Mobile SDKs end-of-support FAQ",
+                        path: "/documentation/v4-end-of-life-faq"
+                    },
+                    {
+                        title: "Adobe Experience Cloud & Apple's IDFA, Privacy announcement",
+                        path: "/documentation/privacy-announcement"
                     },
                     {
                         title: "Upgrade to the Experience Platform SDKs",
