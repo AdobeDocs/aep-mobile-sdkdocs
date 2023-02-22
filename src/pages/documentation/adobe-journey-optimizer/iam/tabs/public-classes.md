@@ -124,7 +124,7 @@ void handleJavascriptMessage(final String name, final AdobeCallback<String> call
 * *name* - the name of the message that should be handled by the `callback`
 * *callback* - a callback which will be called with the body of the message created in the Message's JavaScript
 
-<Variant platform="android" function="auto-track" repeat="2"/>
+<Variant platform="android" function="auto-track" repeat="4"/>
 
 #### Java
 
@@ -136,7 +136,7 @@ void setAutoTrack(boolean enabled)
 
 - *enabled* - if true, Experience Edge events will automatically be generated when this `Message` is triggered, displayed, or dismissed.
 
-<Variant platform="android" function="evaluate-javascript" repeat="3"/>
+<Variant platform="android" function="evaluate-javascript" repeat="4"/>
 
 #### Java
 
