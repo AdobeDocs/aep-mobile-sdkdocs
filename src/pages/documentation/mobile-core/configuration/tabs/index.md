@@ -5,7 +5,7 @@
 **Syntax**
 
 ```java
-public static void configureWithAppID(final String appId);
+public static void configureWithAppID(@NonNull final String appId);
 ```
 
 **Example**
@@ -53,7 +53,7 @@ Alternatively, you can also place the environment ID in your iOS project's _Info
 **Syntax**
 
 ```java
-public static void updateConfiguration(final Map<String, Object> configMap);
+public static void updateConfiguration(@NonNull final Map<String, Object> configMap);
 ```
 
 **Example**
@@ -129,9 +129,17 @@ static Future<void> updateConfiguration(Map<String, Object> configMap);
 FlutterACPCore.updateConfiguration({"global.privacy":"optedout"});
 ``` --->
 
-<Variant platform="android" task="bundle" repeat="2"/>
+<Variant platform="android" task="bundle" repeat="5"/>
 
 #### Java
+
+**Syntax**
+
+```java
+public static void configureWithFileInPath(@NonNull final String filePath)
+```
+
+**Example**
 
 ```java
 // Case 1: to use ADBMobileConfig.json in the assets folder

@@ -1,6 +1,14 @@
-<Variant platform="android" api="extension-version" repeat="2"/>
+<Variant platform="android" api="extension-version" repeat="5"/>
 
 #### Java
+
+**Syntax**
+
+```java
+public static String extensionVersion()
+```
+
+**Example**
 
 ```java
 final String lifecycleExtensionVersion = Lifecycle.extensionVersion();
@@ -61,7 +69,7 @@ This method should be called from the Activity onResume method.
 **Syntax**
 
 ```java
-public static void lifecycleStart(final Map<String, String> additionalContextData);
+public static void lifecycleStart(@Nullable final Map<String, String> additionalContextData)
 ```
 
 **Example**
@@ -178,3 +186,18 @@ MobileCore.lifecyclePause();
 #### JavaScript
 
 When using React Native, pausing the collection of lifecycle data should be done in native code which is shown under the Android and iOS (ACP 2.x) tabs. --->
+
+<Variant platform="android" api="register-extension" repeat="5"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void registerExtension()
+```
+
+**Example**
+
+```java
+Lifecycle.registerExtension();
