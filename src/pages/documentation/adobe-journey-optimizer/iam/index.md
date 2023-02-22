@@ -1,9 +1,5 @@
 # Adobe Journey Optimizer - In-app messaging
 
-<InlineAlert variant="warning" slots="text"/>
-
-In-app messaging functionality powered by Adobe Journey Optimizer is a beta product. <br/><br/>If you would like access to the beta, please contact your account representative.
-
 ### Prerequisites
 
 * [Configure Adobe Data Collection and Adobe Experience Platform](./prerequisites.md)

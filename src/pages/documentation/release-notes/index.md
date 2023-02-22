@@ -48,6 +48,17 @@ Note that all these extensions must be updated together. Flutter and React plugi
 
 * Improves error handling when processing `Edge.sendEvent` requests by catching and logging unexpected `RuntimeException` instances thrown from within caller's `EdgeCallback` handler implementation.
 
+## February 9, 2023
+
+### iOS AEPMessaging 1.1.0
+
+* Adds support for Adobe Journey Optimizer powered in-app messages.
+
+### Android AEPMessaging 2.0.1
+
+* Adds support for Adobe Journey Optimizer powered in-app messages.
+* Adds support for AEP 2.x extensions. Note, AEPMessaging 2.0.1 is not backwards compatible with the ACP 1.x extensions.
+
 ## February 2, 2023
 
 ### Android Optimize 2.0.0
