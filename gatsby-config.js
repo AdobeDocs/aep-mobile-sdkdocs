@@ -805,16 +805,16 @@ module.exports = {
                                 path: "documentation/upgrade-platform-sdks"
                             },
                             {
-                                title: "SDK comparison",
+                                title: "v4 SDK comparison",
                                 path: "documentation/upgrade-platform-sdks/comparison"
+                            },
+                            {
+                                title: "v4 API changelog",
+                                path: "documentation/upgrade-platform-sdks/api-changelog.md"
                             },
                             {
                                 title: "Manual Lifecycle implementation",
                                 path: "documentation/upgrade-platform-sdks/lifecycle"
-                            },
-                            {
-                                title: "API changelog",
-                                path: "documentation/upgrade-platform-sdks/api-changelog.md"
                             },
                             {
                                 title: "Analytics migration",
@@ -843,10 +843,6 @@ module.exports = {
                     {
                         title: "Frequently asked questions",
                         path: "documentation/faq"
-                    },
-                    {
-                        title: "Migrate to Swift",
-                        path: "documentation/migrate-to-swift"
                     },
                     {
                         title: "Privacy and GDPR",
