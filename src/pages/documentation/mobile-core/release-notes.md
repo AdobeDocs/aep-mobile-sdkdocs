@@ -1,5 +1,39 @@
 # Release Notes
 
+## February 9, 2023
+
+### Android Mobile Core 2.0.1
+
+* Fixed issue causing large delays in configuration download retries.
+* Fixed issue causing backdrop opacity being set incorrectly in `MessageSettings`.
+* Updated `MessagingDelegate` to mirror the implementation of the iOS SDK, and exposed `Message` interface for app developers to access InternalMessage objects created by Messaging extension.
+* Fixed issue with javadoc generation.
+* Improved resource handling after network connection attempts.
+* Improved database handling during fresh installation scenarios.
+
+### Android Signal 2.0.1
+
+* Fixed issue with javadoc generation.
+
+### Android Lifecycle 2.0.1
+
+* Fixed issue with javadoc generation.
+
+### Android Identity 2.0.1
+
+* Fixed issue with javadoc generation.
+
+## January 30, 2023
+
+### Adobe Experience Platform Android Core SDKs
+
+The brand new Adobe Experience Platform Core Android SDKs are live! It is [open sourced on GitHub](https://github.com/adobe/aepsdk-core-android), containing the following extensions:
+
+* Core 2.0.0
+* Identity 2.0.0
+* Signal 2.0.0
+* Lifecycle 2.0.0
+
 ## January 5, 2023
 
 ### iOS AEPCore 3.7.4
@@ -237,7 +271,7 @@ Released with sdk-core version 1.11.5
 
 ### Adobe Experience Platform iOS Core SDKs
 
-The brand new Adobe Experience Platform Core iOS swift SDKs are live! It is [open sourced on github](https://github.com/adobe/aepsdk-core-ios/), containing the following extensions:
+The brand new Adobe Experience Platform Core iOS swift SDKs are live! It is [open sourced on GitHub](https://github.com/adobe/aepsdk-core-ios), containing the following extensions:
 
 * AEPCore 3.0.0
 * AEPServices 3.0.0
