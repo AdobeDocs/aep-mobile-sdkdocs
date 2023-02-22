@@ -4,6 +4,36 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## February 22, 2023
+
+New major versions of Android Core have been released along with updates to other extensions to take advantage of the new features and improvements. These improvements include:
+
+* Android SDKs updated to have similar architecture to iOS Swift SDKs.
+* All extensions open-sourced.
+* Integration with Kotlin apps improved.
+* AndroidX support added.
+* Security improvements added.
+
+Note that all these extensions must be updated together. Flutter and React plugins not yet updated with these versions, but coming soon.
+* Android Mobile Core 2.0.1
+* Android Signal 2.0.1
+* Android Lifecycle 2.0.1
+* Android Identity 2.0.1
+* Android Profile 2.0.0
+* Android Adobe Experience Platform Assurance 2.0.0
+* Android Adobe Experience Platform Edge Network 2.0.0
+* Android Identity for Edge Network 2.0.0
+* Android Consent for Edge Network 2.0.0
+* Android Adobe Journey Optimizer 2.0.1
+* Android Adobe Journey Optimizer - Decisioning 2.0.0
+* Android Places Service 2.0.0
+* Android Adobe Analytics 2.0.1
+* Android Adobe Analytics - Media Analytics for Audio & Video 3.0.0
+* Android Adobe Target 2.0.0
+* Android Adobe Campaign Standard 2.0.2
+* Android Adobe Campaign Classic 2.0.0
+* Android Adobe Audience Manager 2.0.0 
+
 ## February 17, 2023
 
 ### Android Analytics 2.0.1
@@ -18,11 +48,28 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 * Improves error handling when processing `Edge.sendEvent` requests by catching and logging unexpected `RuntimeException` instances thrown from within caller's `EdgeCallback` handler implementation.
 
+## February 9, 2023
+
+### iOS AEPMessaging 1.1.0
+
+* Adds support for Adobe Journey Optimizer powered in-app messages.
+
+### Android AEPMessaging 2.0.1
+
+* Adds support for Adobe Journey Optimizer powered in-app messages.
+* Adds support for AEP 2.x extensions. Note, AEPMessaging 2.0.1 is not backwards compatible with the ACP 1.x extensions.
+
+## February 2, 2023
+
+### Android Optimize 2.0.0
+
+* Major version update for [Adobe Journey Optimizer - Decisioning](../adobe-journey-optimizer-decisioning/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This extension library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-optimize-android/).
+
 ## January 31, 2023
 
 ### Android Campaign Classic 2.0.0
 
-* Initial release to support [Adobe Campaign Classic workflows](../adobe-campaign-classic/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This extension library is available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaignclassic-android/).
+* Major version update for [Adobe Campaign Classic workflows](../adobe-campaign-classic/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This extension library is available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaignclassic-android/).
 
 ## January 5, 2023
 

@@ -1,5 +1,11 @@
 # Release Notes
 
+## February 9, 2023
+
+### Android Target 2.0.0
+
+* Major version update for [Adobe Target](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-target-android).
+
 ## August 2, 2022
 
 ### Android Target 1.3.0
