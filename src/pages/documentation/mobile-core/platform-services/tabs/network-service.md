@@ -3,7 +3,6 @@
 #### Java
 
 ```java
-import com.adobe.marketing.mobile.services.NetworkCallback;
 import com.adobe.marketing.mobile.services.NetworkRequest;
 import com.adobe.marketing.mobile.services.ServiceProvider;
 
@@ -12,23 +11,20 @@ final int READ_TIMEOUT_MS = 5000;
 final String URL_TO_CONNECT = "URL_TO_CONNNECT_TO";
 final byte[] body = "SampleRequestBody".getBytes(StandardCharsets.UTF_8);
 final Map<String, String> headers = new HashMap<>();
-headers.put("myHeaderName", "myHeaderValue");
+headers.put("myCustomHeaderName", "myCustomHeaderValue");
 
 // Create a NetworkRequest
 final NetworkRequest networkRequest = new NetworkRequest(URL_TO_CONNECT, HttpMethod.GET, body, headers, CONNECTION_TIMEOUT_MS, READ_TIMEOUT_MS);
 
-// Create a NetworkCallback to handle the response
-final NetworkCallback networkCallback = response -> {
-					// handle connection response
-					
-					// close the response
-					if (response != null) {
-						response.close();
-					}
-				};
-
 // Make the request
-ServiceProvider.getInstance().getNetworkService().connectAsync(networkRequest, networkCallback);
+ServiceProvider.getInstance().getNetworkService().connectAsync(networkRequest, response -> {
+                    // handle connection response
+
+                    // close the response
+                    if (response != null) {
+                        response.close();
+                    }
+                });
 ```
 
 <Variant platform="ios" task="usage" repeat="2"/>
@@ -223,7 +219,7 @@ public class MyApp extends Application {
         super.onCreate();
 
 		// Set the network override prior to making any other calls to the SDK
-		ServiceProvider.getInstance().seNetworkService(new MyCustomNetworkService());
+		ServiceProvider.getInstance().setNetworkService(new MyCustomNetworkService());
 
         MobileCore.setApplication(this);
 
