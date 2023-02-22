@@ -54,18 +54,6 @@ module.exports = {
                 ]
             },
             {
-                title: "Version 4 Mobile SDKs end-of-support FAQ",
-                path: "/documentation/v4-end-of-life-faq"
-            },
-            {
-                title: "Version 4 API changelog",
-                path: "/documentation/api-changelog"
-            },
-            {
-                title: "Adobe Experience Cloud & Apple's IDFA, Privacy announcement",
-                path: "/documentation/privacy-announcement"
-            },
-            {
                 title: "Getting started",
                 path: "/documentation/getting-started",
                 pages: [
@@ -765,16 +753,16 @@ module.exports = {
                                 path: "documentation/upgrade-platform-sdks"
                             },
                             {
-                                title: "SDK comparison",
+                                title: "v4 SDK comparison",
                                 path: "documentation/upgrade-platform-sdks/comparison"
+                            },
+                            {
+                                title: "v4 API changelog",
+                                path: "documentation/upgrade-platform-sdks/api-changelog.md"
                             },
                             {
                                 title: "Manual Lifecycle implementation",
                                 path: "documentation/upgrade-platform-sdks/lifecycle"
-                            },
-                            {
-                                title: "API changelog",
-                                path: "documentation/upgrade-platform-sdks/api-changelog.md"
                             },
                             {
                                 title: "Analytics migration",
@@ -805,10 +793,6 @@ module.exports = {
                         path: "documentation/faq"
                     },
                     {
-                        title: "Migrate to Swift",
-                        path: "documentation/migrate-to-swift"
-                    },
-                    {
                         title: "Privacy and GDPR",
                         path: "documentation/privacy-and-gdpr"
                     },
@@ -819,6 +803,14 @@ module.exports = {
                     {
                         title: "Manage SPM dependencies",
                         path: "documentation/manage-spm-dependencies"
+                    },
+                    {
+                        title: "Version 4 Mobile SDKs end-of-support FAQ",
+                        path: "/documentation/v4-end-of-life-faq"
+                    },
+                    {
+                        title: "Adobe Experience Cloud & Apple's IDFA, Privacy announcement",
+                        path: "/documentation/privacy-announcement"
                     }
                 ]
             },
