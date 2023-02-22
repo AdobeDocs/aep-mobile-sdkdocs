@@ -148,7 +148,6 @@ Note that all these extensions must be updated together. Flutter and React plugi
 
   | Deprecated API                      | Recommended Alternative              |
   | ----------------------------------- | ------------------------------------ |
-  | `UserProfile.registerExtension()`   | `MobileCore.registerExtensions()`    |
   | `UserProfile.updateUserAttribute()` | `UserProfile.updateUserAttributes()` |
   | `UserProfile.removeUserAttribute()` | `UserProfile.removeUserAttributes()` |
 

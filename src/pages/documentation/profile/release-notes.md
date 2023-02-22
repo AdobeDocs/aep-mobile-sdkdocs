@@ -9,7 +9,6 @@
 
   | Deprecated API                      | Recommended Alternative              |
   | ----------------------------------- | ------------------------------------ |
-  | `UserProfile.registerExtension()`   | `MobileCore.registerExtensions()`    |
   | `UserProfile.updateUserAttribute()` | `UserProfile.updateUserAttributes()` |
   | `UserProfile.removeUserAttribute()` | `UserProfile.removeUserAttributes()` |
 
