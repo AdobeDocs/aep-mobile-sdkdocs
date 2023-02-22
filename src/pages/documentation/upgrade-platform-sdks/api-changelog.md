@@ -4,7 +4,7 @@ This page details SDK API changes between the Experience Platform SDKs and 4x SD
 
 ## Mobile Core APIs
 
-For more information, see [Mobile Core API reference](../mobile-core/api-reference.md).
+For more information, see the [Mobile Core API reference](../mobile-core/api-reference.md).
 
 ### Supported APIs
 
@@ -65,7 +65,7 @@ For more information, see the [Lifecycle API reference](../mobile-core/lifecycle
 
 ## Identity extension APIs
 
-For more information, see [Identity API reference](../mobile-core/identity/api-reference.md).
+For more information, see the [Identity API reference](../mobile-core/identity/api-reference.md).
 
 ### Supported APIs
 
@@ -83,7 +83,7 @@ For more information, see [Identity API reference](../mobile-core/identity/api-r
 
 ## Adobe Analytics extension APIs
 
-For more information, see [Analytics API reference](../adobe-analytics/api-reference.md).
+For more information, see the [Analytics API reference](../adobe-analytics/api-reference.md).
 
 ### Supported APIs
 
