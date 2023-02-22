@@ -54,18 +54,6 @@ module.exports = {
                 ]
             },
             {
-                title: "Version 4 Mobile SDKs end-of-support FAQ",
-                path: "/documentation/v4-end-of-life-faq"
-            },
-            {
-                title: "Version 4 API changelog",
-                path: "/documentation/api-changelog"
-            },
-            {
-                title: "Adobe Experience Cloud & Apple's IDFA, Privacy announcement",
-                path: "/documentation/privacy-announcement"
-            },
-            {
                 title: "Getting started",
                 path: "/documentation/getting-started",
                 pages: [
@@ -356,10 +344,6 @@ module.exports = {
                     {
                         title: "API reference",
                         path: "documentation/places/api-reference.md"
-                    },
-                    {
-                        title: "Migration",
-                        path: "documentation/places/migration.md"
                     }
                 ]
             },
@@ -408,10 +392,6 @@ module.exports = {
                                 path: '/documentation/adobe-analytics/event-reference/'
                             },
                             {
-                                title: "Migration",
-                                path: "/documentation/adobe-analytics/migration/"
-                            },
-                            {
                                 title: "Product variable",
                                 path: "/documentation/adobe-analytics/product-variable"
                             },
@@ -438,10 +418,6 @@ module.exports = {
                                 path: "/documentation/adobe-analytics-mobile-services/api-reference/"
                             },
                             {
-                                title: "Migration",
-                                path: "/documentation/adobe-analytics-mobile-services/migration/"
-                            },
-                            {
                                 title: "Release notes",
                                 path: "/documentation/adobe-analytics-mobile-services/release-notes/"
                             }
@@ -458,10 +434,6 @@ module.exports = {
                             {
                                 title: "API reference",
                                 path: "documentation/adobe-media-analytics/api-reference"
-                            },
-                            {
-                                title: "Migration",
-                                path: "documentation/adobe-media-analytics/migration"
                             },
                             {
                                 title: "Release notes",
@@ -484,10 +456,6 @@ module.exports = {
                             {
                                 title: "Event reference",
                                 path: "documentation/adobe-audience-manager/event-reference"
-                            },
-                            {
-                                title: "Migration",
-                                path: "documentation/adobe-audience-manager/migration"
                             },
                             {
                                 title: "Release notes",
@@ -532,10 +500,6 @@ module.exports = {
                             {
                                 title: "Event reference",
                                 path: "documentation/adobe-campaign-standard/event-reference"
-                            },
-                            {
-                                title: "Migration",
-                                path: "documentation/adobe-campaign-standard/migration"
                             },
                             {
                                 title: "Release notes",
@@ -647,10 +611,6 @@ module.exports = {
                             {
                                 title: "Event reference",
                                 path: "documentation/adobe-target/event-reference"
-                            },
-                            {
-                                title: "Migration",
-                                path: "documentation/adobe-target/migration"
                             },
                             {
                                 title: "Release notes",
@@ -793,16 +753,16 @@ module.exports = {
                                 path: "documentation/upgrade-platform-sdks"
                             },
                             {
-                                title: "SDK comparison",
+                                title: "v4 SDK comparison",
                                 path: "documentation/upgrade-platform-sdks/comparison"
+                            },
+                            {
+                                title: "v4 API changelog",
+                                path: "documentation/upgrade-platform-sdks/api-changelog.md"
                             },
                             {
                                 title: "Manual Lifecycle implementation",
                                 path: "documentation/upgrade-platform-sdks/lifecycle"
-                            },
-                            {
-                                title: "API changelog",
-                                path: "documentation/upgrade-platform-sdks/api-changelog.md"
                             },
                             {
                                 title: "Analytics migration",
@@ -833,10 +793,6 @@ module.exports = {
                         path: "documentation/faq"
                     },
                     {
-                        title: "Migrate to Swift",
-                        path: "documentation/migrate-to-swift"
-                    },
-                    {
                         title: "Privacy and GDPR",
                         path: "documentation/privacy-and-gdpr"
                     },
@@ -847,6 +803,14 @@ module.exports = {
                     {
                         title: "Manage SPM dependencies",
                         path: "documentation/manage-spm-dependencies"
+                    },
+                    {
+                        title: "Version 4 Mobile SDKs end-of-support FAQ",
+                        path: "/documentation/v4-end-of-life-faq"
+                    },
+                    {
+                        title: "Adobe Experience Cloud & Apple's IDFA, Privacy announcement",
+                        path: "/documentation/privacy-announcement"
                     }
                 ]
             },
