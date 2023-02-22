@@ -19,7 +19,7 @@ The latest versions of the Adobe Experience Platform SDK for Google Android and 
 
 Project Griffon is now Assurance
 
-We're pleased to announce that Project Griffon is now generally available to all Adobe Experience Cloud customers as Assurance. To learn more about this transition see [here](./platform-assurance/index.md) details.
+We're pleased to announce that Project Griffon is now generally available to all Adobe Experience Cloud customers as Assurance. To learn more about this transition, please read the [Assurance overview](./platform-assurance/index.md).
 
 ## Bring the Adobe Experience Cloud to your apps
 

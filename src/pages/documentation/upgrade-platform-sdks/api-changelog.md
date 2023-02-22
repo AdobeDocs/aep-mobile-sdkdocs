@@ -49,7 +49,7 @@ For more information, see [Mobile Core API reference](../mobile-core/api-referen
 
 In the v4 iOS SDK, Lifecycle start and stop calls are made automatically by the SDK. In the Adobe Experience Platform Mobile SDK, the calls to start and stop lifecycle need to be made by the application developer. For more information, see [Lifecycle extension](../mobile-core/lifecycle/index.md).
 
-For more information, see [Lifecycle API reference](../mobile-core/lifecycle/api-reference.md).
+For more information, see the [Lifecycle API reference](../mobile-core/lifecycle/api-reference.md).
 
 | Experience Platform SDK | 4x SDK |
 |---|---|
@@ -98,7 +98,7 @@ For more information, see [Analytics API reference](../adobe-analytics/api-refer
 
 ## Adobe Audience Manager extension APIs
 
-For more information, see [Audience Manager Extension API reference](../adobe-audience-manager/api-reference.md).
+For more information, see the [Audience Manager Extension API reference](../adobe-audience-manager/api-reference.md).
 
 ### Supported APIs
 

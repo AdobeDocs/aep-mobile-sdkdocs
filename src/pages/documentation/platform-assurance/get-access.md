@@ -4,7 +4,7 @@
 
 ## Project Griffon is now Assurance
 
-We're pleased to announce that Project Griffon is now generally available to all Adobe Experience Cloud customers as Assurance. To learn more about this transition see [here](./index.md).
+We're pleased to announce that Project Griffon is now generally available to all Adobe Experience Cloud customers as Assurance. To learn more about this transition, please read the [Assurance overview](./index.md).
 
 <InlineAlert variant="warning" slots="header, text"/>
 
