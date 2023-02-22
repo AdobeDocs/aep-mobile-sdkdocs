@@ -48,11 +48,28 @@ Note that all these extensions must be updated together. Flutter and React plugi
 
 * Improves error handling when processing `Edge.sendEvent` requests by catching and logging unexpected `RuntimeException` instances thrown from within caller's `EdgeCallback` handler implementation.
 
+## February 9, 2023
+
+### iOS AEPMessaging 1.1.0
+
+* Adds support for Adobe Journey Optimizer powered in-app messages.
+
+### Android AEPMessaging 2.0.1
+
+* Adds support for Adobe Journey Optimizer powered in-app messages.
+* Adds support for AEP 2.x extensions. Note, AEPMessaging 2.0.1 is not backwards compatible with the ACP 1.x extensions.
+
 ## February 2, 2023
 
 ### Android Optimize 2.0.0
 
 * Major version update for [Adobe Journey Optimizer - Decisioning](../adobe-journey-optimizer-decisioning/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This extension library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-optimize-android/).
+
+## January 31, 2023
+
+### Android Campaign Classic 2.0.0
+
+* Major version update for [Adobe Campaign Classic workflows](../adobe-campaign-classic/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This extension library is available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaignclassic-android/).
 
 ## January 5, 2023
 

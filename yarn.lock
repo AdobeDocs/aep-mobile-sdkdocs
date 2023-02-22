@@ -24,10 +24,10 @@
     globby "^11.0.1"
     graphql-fetch "^1.0.1"
 
-"@adobe/gatsby-theme-aio@^4.8.0-rc1":
-  version "4.8.0-rc1"
-  resolved "https://registry.yarnpkg.com/@adobe/gatsby-theme-aio/-/gatsby-theme-aio-4.8.0-rc1.tgz#ff73a553fac9a01103b53a1df3f3011c240df4c6"
-  integrity sha512-5dRGgmsMuVL5n14fTi5MXwx1/PTDR9qfuUGkbzAgjkkM2q/0huNTZ8/cCVpyhbAw/Jqb5dMRRBWi0WGpxDEsPw==
+"@adobe/gatsby-theme-aio@^4.8.1":
+  version "4.8.1"
+  resolved "https://registry.yarnpkg.com/@adobe/gatsby-theme-aio/-/gatsby-theme-aio-4.8.1.tgz#31f539da4e59be3eb85fbdf1edaf1487f1002b51"
+  integrity sha512-A0SGJMvrrsaCVo78xL3xyhwg6qHpHNWaUtxU70R0RZ7NSRDYNf9rYV5tI/dCVPpjB1eynLfUYmlwM6JIXnKFkg==
   dependencies:
     "@adobe/focus-ring-polyfill" "^0.1.5"
     "@adobe/gatsby-source-github-file-contributors" "^0.3.1"
@@ -11711,13 +11711,20 @@ react-tabs@^3.2.2:
     clsx "^1.1.0"
     prop-types "^15.5.0"
 
-react@^17.0.1, react@^17.0.2:
+react@^17.0.1:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"
   integrity sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
+
+react@^18.2.0:
+  version "18.2.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"
+  integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
+  dependencies:
+    loose-envify "^1.1.0"
 
 read@^1.0.7:
   version "1.0.7"

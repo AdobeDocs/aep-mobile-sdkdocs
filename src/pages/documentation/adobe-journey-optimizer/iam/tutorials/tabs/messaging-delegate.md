@@ -6,12 +6,14 @@ On Android, the delegate is registered with the Adobe Service Provider. The `Ser
 
 ```java
 // defined in public class ServiceProvider 
-public void setMessageDelegate(FullscreenMessageDelegate messageDelegate)
+public void setMessageDelegate(MessagingDelegate messageDelegate)
 ```
+On Android, the delegate is registered with Mobile Core. The `MobileCore` contains a method to set the`MessagingDelegate` withing the `ServiceProvider` class.
 
 ```java
 CustomDelegate myMessagingDelegate = new CustomDelegate();
-ServiceProvider.getInstance().setMessageDelegate(myMessagingDelegate);
+
+MobileCore.setMessagingDelegate(myMessagingDelegate);
 ```
 
 <Variant platform="ios" function="register" repeat="5"/>
@@ -37,50 +39,55 @@ MobileCore.messagingDelegate = myMessagingDelegate
 
 <Variant platform="android" function="messaging-delegate" repeat="3"/>
 
-The `FullscreenMessageDelegate` interface, which is implemented in the Android Messaging extension in the `MessagingDelegate` class, is defined below:
+The `MessagingDelegate` interface, which is implemented in the `AEPServices` framework, is defined below:
 
 #### Java
 
 ```java
 /**
- * Delegate for Messaging extension in-app message events.
+ * UI Message delegate which is used to listen for current message lifecycle events and control if
+ * the message should be displayed.
  */
-public interface FullscreenMessageDelegate {
-	/**
-	 * Invoked when the in-app message is displayed.
-	 *
-	 * @param message FullscreenMessage the in-app message being displayed
-	 */
-	void onShow(final FullscreenMessage message);
+public interface MessagingDelegate {
+    /**
+     * Invoked when a message is displayed.
+     *
+     * @param message {@link FullscreenMessage} that is being displayed
+     */
+    default void onShow(final FullscreenMessage message) {
+        Log.debug(ServiceConstants.LOG_TAG, "MessagingDelegate", "Fullscreen message shown.");
+    }
 
-	/**
-	 * Invoked when the in-app message is dismissed.
-	 *
-	 * @param message FullscreenMessage the in-app message being dismissed
-	 */
-	void onDismiss(final FullscreenMessage message);
+    /**
+     * Invoked when a message is dismissed.
+     *
+     * @param message {@link FullscreenMessage} that is being dismissed
+     */
+    default void onDismiss(final FullscreenMessage message) {
+        Log.debug(ServiceConstants.LOG_TAG, "MessagingDelegate", "Fullscreen message dismissed.");
+    }
 
-	/**
-	 * Used to determine if the in-app message should be shown.
-	 *
-	 * @param message FullscreenMessage the in-app message that is about to get displayed
-	 */
-	boolean shouldShowMessage(final FullscreenMessage message);
+    /**
+     * Used to determine if a message should be shown.
+     *
+     * @param message {@link FullscreenMessage} that is about to get displayed
+     * @return true if the message should be displayed, false otherwise
+     */
+    boolean shouldShowMessage(final FullscreenMessage message);
 
-	/**
-	 * Invoked when the in-app message is attempting to load a url.
-	 *
-	 * @param message FullscreenMessage the in-app message attempting to load the url
-	 * @param url     String the url being loaded by the message
-	 *
-	 * @return True if the core wants to handle the URL (and not the fullscreen message view implementation)
-	 */
-	boolean overrideUrlLoad(final FullscreenMessage message, final String url);
-
-	/**
-	 * Invoked when the in-app message failed to be displayed.
-	 */
-	void onShowFailure();
+    /**
+     * Called when the {@link FullscreenMessage} loads a url.
+     *
+     * @param url {@code String} being loaded by the {@code FullscreenMessage}
+     * @param message {@link FullscreenMessage} loading a url {@code String}
+     */
+    default void urlLoaded(final String url, final FullscreenMessage message) {
+        Log.debug(
+                ServiceConstants.LOG_TAG,
+                "MessagingDelegate",
+                "Fullscreen message loaded url: %s",
+                url);
+    }
 }
 ```
 
@@ -129,7 +136,7 @@ public protocol MessagingDelegate {
 
 <Variant platform="android" function="using-object" repeat="4"/>
 
-The user interface methods (except for `onShowFailure()`) in a `FullscreenMessageDelegate` implementation will be passed an `AEPMessage` object. An `AEPMessage` object is the Android Core implementation of the `FullscreenMessage` interface. It contains a reference to the parent `Message` class and is your primary way to interact with the message.
+The user interface methods (except for `onShowFailure()`) in a `MessagingDelegate` implementation will be passed an `AEPMessage` object. An `AEPMessage` object is the Android Core implementation of the `FullscreenMessage` interface. It contains a reference to the parent `Message` class and is your primary way to interact with the message.
 
 A reference to the `AEPMessage` object can be obtained by calling `fullscreenMessage.getParent()` . An example of how to access the `Message` in the `onShow` delegate method can be seen below:
 
@@ -166,7 +173,7 @@ func onShow(message: Showable) {
 
 <Variant platform="android" function="controlling-message" repeat="7"/>
 
-If a custom  `FullscreenMessageDelegate` has been set in the `ServiceProvider`, this delegate's `shouldShowMessage` method will be called prior to displaying an in-app message for which the end user has qualified. You are responsible for returning `true` if the message should be shown, or `false` if the message should be suppressed.
+If a custom  `MessagingDelegate` has been set in the `ServiceProvider`, this delegate's `shouldShowMessage` method will be called prior to displaying an in-app message for which the end user has qualified. You are responsible for returning `true` if the message should be shown, or `false` if the message should be suppressed.
 
 An example of when you may choose to suppress an in-app message due to the status of some other workflow within the app can be seen below:
 

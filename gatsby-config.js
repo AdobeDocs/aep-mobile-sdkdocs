@@ -174,16 +174,8 @@ module.exports = {
                                         path: "documentation/mobile-core/platform-services"
                                     },
                                     {
-                                        title: "Data queue service",
-                                        path: "documentation/mobile-core/platform-services/data-queue-service"
-                                    },
-                                    {
                                         title: "Network service",
                                         path: "documentation/mobile-core/platform-services/network-service"
-                                    },
-                                    {
-                                        title: "System device info service",
-                                        path: "documentation/mobile-core/platform-services/system-device-info-service"
                                     }
                                 ]
                             },
@@ -352,10 +344,6 @@ module.exports = {
                     {
                         title: "API reference",
                         path: "documentation/places/api-reference.md"
-                    },
-                    {
-                        title: "Migration",
-                        path: "documentation/places/migration.md"
                     }
                 ]
             },
@@ -404,10 +392,6 @@ module.exports = {
                                 path: '/documentation/adobe-analytics/event-reference/'
                             },
                             {
-                                title: "Migration",
-                                path: "/documentation/adobe-analytics/migration/"
-                            },
-                            {
                                 title: "Product variable",
                                 path: "/documentation/adobe-analytics/product-variable"
                             },
@@ -434,10 +418,6 @@ module.exports = {
                                 path: "/documentation/adobe-analytics-mobile-services/api-reference/"
                             },
                             {
-                                title: "Migration",
-                                path: "/documentation/adobe-analytics-mobile-services/migration/"
-                            },
-                            {
                                 title: "Release notes",
                                 path: "/documentation/adobe-analytics-mobile-services/release-notes/"
                             }
@@ -454,10 +434,6 @@ module.exports = {
                             {
                                 title: "API reference",
                                 path: "documentation/adobe-media-analytics/api-reference"
-                            },
-                            {
-                                title: "Migration",
-                                path: "documentation/adobe-media-analytics/migration"
                             },
                             {
                                 title: "Release notes",
@@ -482,10 +458,6 @@ module.exports = {
                                 path: "documentation/adobe-audience-manager/event-reference"
                             },
                             {
-                                title: "Migration",
-                                path: "documentation/adobe-audience-manager/migration"
-                            },
-                            {
                                 title: "Release notes",
                                 path: "/documentation/adobe-audience-manager/release-notes"
                             }
@@ -506,10 +478,6 @@ module.exports = {
                             {
                                 title: "Event reference",
                                 path: "documentation/adobe-campaign-classic/event-reference"
-                            },
-                            {
-                                title: "Migration",
-                                path: "documentation/adobe-campaign-classic/migration"
                             },
                             {
                                 title: "Release notes",
@@ -534,10 +502,6 @@ module.exports = {
                                 path: "documentation/adobe-campaign-standard/event-reference"
                             },
                             {
-                                title: "Migration",
-                                path: "documentation/adobe-campaign-standard/migration"
-                            },
-                            {
                                 title: "Release notes",
                                 path: "documentation/adobe-campaign-standard/release-notes"
                             }
@@ -558,6 +522,59 @@ module.exports = {
                             {
                                 title: "Release notes",
                                 path: "documentation/adobe-journey-optimizer/release-notes"
+                            },
+                            {
+                                title: "In-app messaging",
+                                path: "/documentation/adobe-journey-optimizer/iam",
+                                pages: [
+                                    {
+                                        title: "Overview",
+                                        path: "/documentation/adobe-journey-optimizer/iam"
+                                    },
+                                    {       
+                                        title: "Prerequisites",
+                                        path: "/documentation/adobe-journey-optimizer/iam/prerequisites"
+                                    },
+                                    {
+                                        title: "SDK setup",
+                                        path: "/documentation/adobe-journey-optimizer/iam/setup"
+                                    },
+                                    {
+                                        title: "API reference",
+                                        path: "/documentation/adobe-journey-optimizer/iam/api-reference"
+                                    },
+                                    {
+                                        title: "Public classes and enums",
+                                        path: "/documentation/adobe-journey-optimizer/iam/public-classes"
+                                    },
+                                    {
+                                        title: "Tutorials",
+                                        path: "/documentation/adobe-journey-optimizer/iam/tutorials",
+                                        pages: [
+                                            {
+                                                title: "Implement a MessagingDelegate",
+                                                path: "/documentation/adobe-journey-optimizer/iam/tutorials/messaging-delegate"
+                                            },
+                                            {
+                                                title: "Call native code from the JavaScript of an in-app message",
+                                                path: "/documentation/adobe-journey-optimizer/iam/tutorials/native-from-javascript"
+                                            },
+                                            {
+                                                title: "Execute Javascript methods from native code",
+                                                path: "/documentation/adobe-journey-optimizer/iam/tutorials/javascript-from-native"
+                                            },
+                                            {
+                                                title: "Handle URL clicks from an in-app message",
+                                                path: "/documentation/adobe-journey-optimizer/iam/tutorials/handle-clicks"
+                                            },
+                                            {
+                                                title: "Validate in-app messaging using Assurance",
+                                                path: "/documentation/adobe-journey-optimizer/iam/tutorials/validate-messages"
+                                            }
+                                        ]
+                                    }
+
+                                ]
                             }
                         ]
                     },
@@ -594,10 +611,6 @@ module.exports = {
                             {
                                 title: "Event reference",
                                 path: "documentation/adobe-target/event-reference"
-                            },
-                            {
-                                title: "Migration",
-                                path: "documentation/adobe-target/migration"
                             },
                             {
                                 title: "Release notes",
@@ -669,59 +682,6 @@ module.exports = {
                         title: "Troubleshooting",
                         path: "/documentation/platform-assurance/troubleshooting.md"
                     }
-                ]
-            },
-            {
-                title: "Adobe Journey Optimizer - in-app messaging (BETA)",
-                path: "/documentation/iam",
-                pages: [
-                    {
-                        title: "Overview",
-                        path: "/documentation/iam"
-                    },
-                    {
-                        title: "Prerequisites",
-                        path: "documentation/iam/prerequisites"
-                    },
-                    {
-                        title: "SDK setup",
-                        path: "documentation/iam/setup"
-                    },
-                    {
-                        title: "API reference",
-                        path: "documentation/iam/api-reference"
-                    },
-                    {
-                        title: "Public classes and enums",
-                        path: "documentation/iam/public-classes"
-                    },
-                    {
-                        title: "Tutorials",
-                        path: "documentation/iam/tutorials",
-                        pages: [
-                            {
-                                title: "Implement a MessagingDelegate",
-                                path: "documentation/iam/tutorials/messaging-delegate"
-                            },
-                            {
-                                title: "Call native code from the JavaScript of an in-app message",
-                                path: "documentation/iam/tutorials/native-from-javascript"
-                            },
-                            {
-                                title: "Execute Javascript methods from native code",
-                                path: "documentation/iam/tutorials/javascript-from-native"
-                            },
-                            {
-                                title: "Handle URL clicks from an in-app message",
-                                path: "documentation/iam/tutorials/handle-clicks"
-                            },
-                            {
-                                title: "Validate in-app messaging using Assurance",
-                                path: "documentation/iam/tutorials/validate-messages"
-                            }
-                        ]
-                    }
-
                 ]
             },
 
