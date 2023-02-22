@@ -4,7 +4,7 @@
 
 <InlineAlert variant="info" slots="text"/>
 
-Adobe Experience Platform Mobile SDK for Android supports Google Android API 19 (KitKat) or later.
+**Migrate to latest Mobile SDKs for Android**<br/>If you are currently using our Mobile Core 1.x and the compatible libraries, please see the [Migrating to latest Mobile SDKs for Android](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-android/) guide for next steps.<br/>The latest Mobile SDKs for Android support Google Android API 19 (KitKat) or later.
 
 <InlineAlert variant="info" slots="text"/>
 
