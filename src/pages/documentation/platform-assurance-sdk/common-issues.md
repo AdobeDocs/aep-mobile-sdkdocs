@@ -26,15 +26,7 @@ When the generated link or QR code from Adobe Experience Platform Assurance is o
 
 ### Register Assurance SDK extension with Mobile Core
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
-
-Android
-
-<Tabs query="platform=android&task=register-assurance"/>
-
-iOS
-
-<Tabs query="platform=ios&task=register-assurance"/>
+Please refer to the [Assurance overview](../index.md#register-aepassurance-with-mobile-core) for more details.
 
 ### Copy link or open QR code from Adobe Experience Platform Assurance
 
