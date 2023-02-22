@@ -1,5 +1,17 @@
 # Release Notes
 
+## February 17, 2023
+
+### Android Campaign Standard 2.0.2
+
+* Made extension compatible with Kotlin 1.4.
+
+## February 9, 2023
+
+### Android Campaign Standard 2.0.1
+
+* Updates Mobile Core dependency to 2.0.1 which includes stability fixes.
+
 ## February 2, 2023
 
 ### Android Campaign Standard 2.0.0
