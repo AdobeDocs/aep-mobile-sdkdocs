@@ -1,6 +1,14 @@
-<Variant platform="android" task="add" repeat="4"/>
+<Variant platform="android" task="add" repeat="6"/>
 
-Add the Lifecycle extension and it's dependency, the [Mobile Core](../index.md) extension to your project using the app's Gradle file.
+#### Java
+
+Add the Lifecycle extension and its dependency, the [Mobile Core](../index.md) extension to your project using the app's Gradle file.
+
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../manage-gradle-dependencies.md) for more information. 
+
+</InlineNestedAlert>
 
 ```java
 implementation 'com.adobe.marketing.mobile:core:2.+'
@@ -61,7 +69,9 @@ Import the Lifecycle extension
 import 'package:flutter_acpcore/flutter_acplifecycle.dart';
 ``` --->
 
-<Variant platform="android" task="register" repeat="8"/>
+<Variant platform="android" task="register" repeat="9"/>
+
+#### Java
 
 1. Register the Lifecycle extension:
 
