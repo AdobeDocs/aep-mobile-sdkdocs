@@ -156,10 +156,6 @@ module.exports = {
                                         path: "documentation/mobile-core/lifecycle"
                                     },
                                     {
-                                        title: "Migration",
-                                        path: "documentation/mobile-core/lifecycle/migration"
-                                    },
-                                    {
                                         title: "Lifecycle extension in Android",
                                         path: "documentation/mobile-core/lifecycle/android"
                                     },
@@ -222,10 +218,6 @@ module.exports = {
                                         path: "documentation/mobile-core/signal"
                                     },
                                     {
-                                        title: "Migration",
-                                        path: "documentation/mobile-core/signal/migration"
-                                    },
-                                    {
                                         title: "API reference",
                                         path: "documentation/mobile-core/signal/api-reference"
                                     }
@@ -234,10 +226,6 @@ module.exports = {
                             {
                                 title: "API reference",
                                 path: "documentation/mobile-core/api-reference"
-                            },
-                            {
-                                title: "Migration",
-                                path: "documentation/mobile-core/migration"
                             },
                             {
                                 title: "Release notes",
@@ -340,10 +328,6 @@ module.exports = {
                             {
                                 title: "Overview",
                                 path: "/documentation/platform-assurance-sdk"
-                            },
-                            {
-                                title: "Migration",
-                                path: "/documentation/platform-assurance-sdk/migration"
                             },
                             {
                                 title: "API reference",
