@@ -87,6 +87,8 @@ Note that all these extensions must be updated together. Flutter and React plugi
 
 * Major version update for [Adobe Target](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-target-android).
 
+Please note `locationsDisplayed` and `locationCLicked` APIs have been renamed to `displayedLocations` and `clickedLocation` respectively for alignment with iOS.
+
 ### iOS AEPMessaging 1.1.0
 
 * Adds support for Adobe Journey Optimizer powered in-app messages.
@@ -128,6 +130,8 @@ Note that all these extensions must be updated together. Flutter and React plugi
 ### Android Campaign Classic 2.0.0
 
 * Major version update for [Adobe Campaign Classic workflows](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaignclassic-android).
+
+Please note `registerDevice` API, similar to iOS, no longer provides a callback method to provide boolean registration status as a `false` value cannot be accurately used as a signal for achieving success upon retries.
 
 ### Android Consent 2.0.0
 
