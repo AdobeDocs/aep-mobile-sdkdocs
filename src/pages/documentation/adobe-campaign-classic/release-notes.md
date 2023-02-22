@@ -10,4 +10,4 @@
 
 ### iOS Campaign Classic 3.0.0
 
-* Initial release to support [Adobe Campaign Classic workflows](./index.md) for Adobe Experience Platform Mobile SDKs for iOS in Swift. This extension library is available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaignclassic-ios/).
+* Initial release to support [Adobe Campaign Classic workflows](./index.md) for Adobe Experience Platform Mobile SDKs on iOS in Swift. This extension library is available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaignclassic-ios/).

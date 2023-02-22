@@ -49,7 +49,7 @@ NSString *campaignClassicVersion = [AEPMobileCampaignClassic extensionVersion];
 
 To prepare your app to handle push notifications, see the tutorial on [setting up a Firebase Cloud Messaging client app on Android](https://firebase.google.com/docs/cloud-messaging/android/client). After you receive the Firebase Cloud Messaging (FCM) SDK registration token, send this token and the device information to Campaign Classic by using the `registerDevice` API.
 
-The `registerDevice` API registers a device with your Campaign Classic registration server. It takes the FCM registration token as a parameter with a user key that identifies a user, such as an email address or a login name. You can also provide a map of the custom key-value pairs that you want to associate with the registration. A boolean value is returned in the callback, which signals whether the registration was successful.
+The `registerDevice` API registers a device with your Campaign Classic registration server. It takes the FCM registration token as a parameter with a user key that identifies a user, such as an email address or a login name. You can also provide a map of the custom key-value pairs that you want to associate with the registration.
 
 #### Java
 
@@ -127,6 +127,22 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 
 [AEPMobileCampaignClassic registerDeviceWithToken:deviceToken userKey:@"john@example.com" additionalParameters:params];
 }
+```
+
+<Variant platform="android" api="register-extension" repeat="5"/>
+
+#### Java
+
+#### Syntax
+
+```java
+public static void registerExtension()
+```
+
+#### Example
+
+```java
+Optimize.registerExtension();
 ```
 
 <Variant platform="android" api="track-notification-click" repeat="6"/>
