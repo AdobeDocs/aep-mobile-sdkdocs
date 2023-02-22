@@ -364,10 +364,6 @@ module.exports = {
                     {
                         title: "API reference",
                         path: "documentation/places/api-reference.md"
-                    },
-                    {
-                        title: "Migration",
-                        path: "documentation/places/migration.md"
                     }
                 ]
             },
@@ -416,10 +412,6 @@ module.exports = {
                                 path: '/documentation/adobe-analytics/event-reference/'
                             },
                             {
-                                title: "Migration",
-                                path: "/documentation/adobe-analytics/migration/"
-                            },
-                            {
                                 title: "Product variable",
                                 path: "/documentation/adobe-analytics/product-variable"
                             },
@@ -446,10 +438,6 @@ module.exports = {
                                 path: "/documentation/adobe-analytics-mobile-services/api-reference/"
                             },
                             {
-                                title: "Migration",
-                                path: "/documentation/adobe-analytics-mobile-services/migration/"
-                            },
-                            {
                                 title: "Release notes",
                                 path: "/documentation/adobe-analytics-mobile-services/release-notes/"
                             }
@@ -466,10 +454,6 @@ module.exports = {
                             {
                                 title: "API reference",
                                 path: "documentation/adobe-media-analytics/api-reference"
-                            },
-                            {
-                                title: "Migration",
-                                path: "documentation/adobe-media-analytics/migration"
                             },
                             {
                                 title: "Release notes",
@@ -494,10 +478,6 @@ module.exports = {
                                 path: "documentation/adobe-audience-manager/event-reference"
                             },
                             {
-                                title: "Migration",
-                                path: "documentation/adobe-audience-manager/migration"
-                            },
-                            {
                                 title: "Release notes",
                                 path: "/documentation/adobe-audience-manager/release-notes"
                             }
@@ -520,10 +500,6 @@ module.exports = {
                                 path: "documentation/adobe-campaign-classic/event-reference"
                             },
                             {
-                                title: "Migration",
-                                path: "documentation/adobe-campaign-classic/migration"
-                            },
-                            {
                                 title: "Release notes",
                                 path: "documentation/adobe-campaign-classic/release-notes"
                             }
@@ -544,10 +520,6 @@ module.exports = {
                             {
                                 title: "Event reference",
                                 path: "documentation/adobe-campaign-standard/event-reference"
-                            },
-                            {
-                                title: "Migration",
-                                path: "documentation/adobe-campaign-standard/migration"
                             },
                             {
                                 title: "Release notes",
@@ -659,10 +631,6 @@ module.exports = {
                             {
                                 title: "Event reference",
                                 path: "documentation/adobe-target/event-reference"
-                            },
-                            {
-                                title: "Migration",
-                                path: "documentation/adobe-target/migration"
                             },
                             {
                                 title: "Release notes",
