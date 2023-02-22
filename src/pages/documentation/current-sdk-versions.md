@@ -4,11 +4,11 @@
 
 <InlineAlert variant="info" slots="text"/>
 
-**Migrate to latest Mobile SDKs for Android**<br/>If you are currently using our Mobile Core 1.x and the compatible libraries, please see the [Migrating to latest Mobile SDKs for Android](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-android/) guide for next steps.<br/>The latest Mobile SDKs for Android support Google Android API 19 (KitKat) or later.
+**Migrate to latest Mobile SDKs for Android**<br/>If you are currently using the Mobile Core 1.x and the compatible libraries, please see the [Migrating to latest Mobile SDKs for Android](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-android/) guide for next steps.<br/>The latest Mobile SDKs for Android support Google Android API 19 (KitKat) or later.
 
 <InlineAlert variant="info" slots="text"/>
 
-Due to sunset of [JCenter by JFrog](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/), the Mobile SDKs are no longer being uploaded to JCenter. Android libraries are now available on [MavenCentral](https://search.maven.org/search?q=g:com.adobe.marketing.mobile). For more information, see links below or find [the Android libraries on MavenCentral](https://search.maven.org/search?q=g:com.adobe.marketing.mobile). For more information on how to declare dependencies from Maven, please see [Declaring repositories](https://docs.gradle.org/current/userguide/declaring_repositories.html#sec:declaring_multiple_repositories) on Gradle.
+Due to the sunsetting of [JCenter by JFrog](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/), the Mobile SDKs are no longer being uploaded to JCenter. Android libraries are now available on [MavenCentral](https://search.maven.org/search?q=g:com.adobe.marketing.mobile). For more information, see links below or find [the Android libraries on MavenCentral](https://search.maven.org/search?q=g:com.adobe.marketing.mobile). Please see [declaring repositories](https://docs.gradle.org/current/userguide/declaring_repositories.html#sec:declaring_multiple_repositories) on Gradle.
 
 | Extension | Maven | Github |
 |---|---|---|
@@ -74,7 +74,7 @@ Adobe Experience Platform Mobile SDK plugin for React Native supports React Nati
 
 <InlineAlert variant="info" slots="text"/>
 
-Adobe Experience Platform Mobile SDK plugins for React Native are compatible with latest [Android](#android) and [iOS](#ios) native libraries.
+Adobe Experience Platform Mobile SDK plugins for React Native are compatible with the [Android](#android) and [iOS](#ios) native libraries.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -100,7 +100,7 @@ Adobe Experience Platform Mobile SDK plugin for Flutter supports Flutter **versi
 
 <InlineAlert variant="info" slots="text"/>
 
-Adobe Experience Platform Mobile SDK plugins for Flutter are compatible with latest [Android](#android) and [iOS](#ios) native libraries.
+Adobe Experience Platform Mobile SDK plugins for Flutter are compatible with the [Android](#android) and [iOS](#ios) native libraries.
 
 | Extension | pub.dev |
 |---|---|
