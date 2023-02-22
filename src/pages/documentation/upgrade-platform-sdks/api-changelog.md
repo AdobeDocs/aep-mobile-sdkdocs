@@ -47,7 +47,7 @@ For more information, see [Mobile Core API reference](../mobile-core/api-referen
 
 <InlineAlert variant="info" slots="text"/>
 
-In the v4 iOS SDK, Lifecycle start and stop calls are made automatically by the SDK. In the Adobe Experience Platform Mobile SDK, the calls to start and stop lifecycle need to be made by the application developer. For more information, see [Lifecycle extension](../mobile-core/lifecycle/index.md).
+In the v4 iOS SDK, Lifecycle start and stop calls are made automatically by the SDK. In the Adobe Experience Platform Mobile SDK, the calls to start and stop lifecycle need to be made by the application developer. For more information, see the [Lifecycle extension](../mobile-core/lifecycle/index.md).
 
 For more information, see the [Lifecycle API reference](../mobile-core/lifecycle/api-reference.md).
 
