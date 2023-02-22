@@ -2,7 +2,7 @@
 
 #### Java
 
-Add the Signal extension and it's dependency, the [Mobile Core](../index.md) extension to your project using the app's Gradle file.
+Add the Signal extension and its dependency, the [Mobile Core](../index.md) extension to your project using the app's Gradle file.
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
