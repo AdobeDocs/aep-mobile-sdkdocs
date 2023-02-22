@@ -38,13 +38,13 @@ Note that all these extensions must be updated together. Flutter and React plugi
 
 ### Android Analytics 2.0.1
 
-* Made extension compatible with Kotlin 1.4.
+* Made the extension compatible with Kotlin 1.4.
 * Analytics shared state is made available on boot-up if there are any previously stored identifiers.
 * Shared state is only updated when an identifier is set and not on get requests.
 
 ### Android Campaign Standard 2.0.2
 
-* Made extension compatible with Kotlin 1.4.
+* Made the extension compatible with Kotlin 1.4.
 
 ## February 13, 2023
 
@@ -78,7 +78,6 @@ Note that all these extensions must be updated together. Flutter and React plugi
 ### Android Messaging 2.0.1
 
 * Adds support for Adobe Journey Optimizer powered in-app messages.
-* Adds support for AEP 2.x extensions. Note, Messaging 2.0.1 is not backwards compatible with the ACP 1.x extensions.
 
 ### Android Campaign Standard 2.0.1
 

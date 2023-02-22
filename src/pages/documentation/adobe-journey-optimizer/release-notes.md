@@ -9,7 +9,6 @@
 ### Android Messaging 2.0.1
 
 * Adds support for Adobe Journey Optimizer powered in-app messages.
-* Adds support for AEP 2.x extensions. Note, Messaging 2.0.1 is not backwards compatible with the ACP 1.x extensions.
 
 ## February 3, 2023
 
