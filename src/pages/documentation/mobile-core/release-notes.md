@@ -6,6 +6,7 @@
 
 * Fixed issue causing large delays in configuration download retries.
 * Fixed issue causing backdrop opacity being set incorrectly in `MessageSettings`.
+* Updated `MessagingDelegate` to mirror the implementation of the iOS SDK, and exposed `Message` interface for app developers to access InternalMessage objects created by Messaging extension.
 * Fixed issue with javadoc generation.
 * Improved resource handling after network connection attempts.
 * Improved database handling during fresh installation scenarios.
