@@ -2,7 +2,7 @@
 
 ## Implementing Lifecycle Metrics in Android
 
-For implementation details, please reference the guide on [registering Lifecycle with Mobile Core and adding the appropriate start/pause calls](./index.md#register-lifecycle-with-mobile-core-and-add-appropriate-start-pause-calls).
+For implementation details, please reference the guide on [registering Lifecycle with Mobile Core and adding the appropriate start/pause calls](../index.md#register-lifecycle-with-mobile-core-and-add-appropriate-startpause-calls).
 
 ## Tracking app crashes in Android
 
@@ -41,7 +41,8 @@ Starting with API Level 14, Android allows global lifecycle callbacks for activi
 You can use these callbacks to ensure that all of your `Activities` correctly call `AdobeMobileMarketing.lifecycleStart()`, and do not need to implement the code for each of the Activity.
 
 ```java
-import com.adobe.marketing.mobile.*;
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Lifecycle;
 
 public class MainActivity extends Activity {    
 
@@ -81,11 +82,12 @@ protected void onCreate(Bundle savedInstanceState) {
 To include additional data with lifecycle metric calls, pass an additional parameter to `lifecycleStart` that contains context data:
 
 ```java
-@Overridepublic 
-void onResume() {    
+@Override
+public void onResume() {    
   HashMap<String, Object> additionalContextData = new HashMap<String, Object>();    
   contextData.put("myapp.category", "Game");    
-  MobileCore.lifecycleStart(additionalContextData);}
+  MobileCore.lifecycleStart(additionalContextData);
+}
 ```
 
 <InlineAlert variant="info" slots="text"/>

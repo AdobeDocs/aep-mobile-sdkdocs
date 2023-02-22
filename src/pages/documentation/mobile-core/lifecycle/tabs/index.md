@@ -1,9 +1,25 @@
-<Variant platform="android" task="add" repeat="2"/>
+<Variant platform="android" task="add" repeat="6"/>
 
-Import the library:
+#### Java
+
+Add the Lifecycle extension and its dependency, the [Mobile Core](../index.md) extension to your project using the app's Gradle file.
+
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../manage-gradle-dependencies.md) for more information. 
+
+</InlineNestedAlert>
 
 ```java
-   import com.adobe.marketing.mobile.*;
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:lifecycle:2.+'
+```
+
+Import the Lifecycle and MobileCore extensions in your application's main activity.
+
+```java
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Lifecycle;
 ```
 
 <Variant platform="ios" task="add" repeat="8"/>
@@ -53,32 +69,25 @@ Import the Lifecycle extension
 import 'package:flutter_acpcore/flutter_acplifecycle.dart';
 ``` --->
 
-<Variant platform="android" task="register" repeat="8"/>
+<Variant platform="android" task="register" repeat="9"/>
+
+#### Java
 
 1. Register the Lifecycle extension:
 
 ```java
-public class TargetApp extends Application {
-
+public class MobileApp extends Application {
 @Override
 public void onCreate() {
-    super.onCreate();
-    MobileCore.setApplication(this);
+super.onCreate();
+     MobileCore.setApplication(this);
+     List<Class<? extends Extension>> extensions = Arrays.asList(Lifecycle.EXTENSION, ...);
+     MobileCore.registerExtensions(extensions, o -> {
+        // Any other post registration processing
+    });
+  }
+}
 
-    try {
-        Lifecycle.registerExtension();
-        // register other extensions
-        MobileCore.start(new AdobeCallback () {
-            @Override
-            public void call(Object o) {
-                MobileCore.configureWithAppID("yourAppId");
-            }
-        });    
-    } catch (Exception e) {
-        //Log the exception
-    }
-}
-}
 ```
 
 2. In the `onResume` function, start the lifecycle data collection:
