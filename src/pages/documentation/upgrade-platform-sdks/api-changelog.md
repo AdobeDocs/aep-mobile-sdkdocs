@@ -15,8 +15,6 @@ For more information, see the [Mobile Core API reference](../mobile-core/api-ref
 | [setPrivacyStatus:](./privacy-and-gdpr.md#setprivacystatus) | setPrivacyStatus: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html?lang=en)) |
 | [setLogLevel:](../mobile-core/api-reference.md#setloglevel) | setDebugLogging: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html?lang=en)\| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html?lang=en)) |
 | [configureWithFileInPath:](../mobile-core/configuration/api-reference.md/#configurewithfileinpath) | overrideConfigPath: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html?lang=en)) |
-| [configureWithAppId:](../mobile-core/configuration/api-reference.md/#configurewithappid) | Not applicable |
-| [updateConfiguration:](../mobile-core/configuration/api-reference.md/#updateconfiguration) | Not applicable |
 | [setAppGroup:](../mobile-core/api-reference.md#setappgroup) | setAppGroup: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/ios-ext/ios-ext.html?lang=en)) |
 | [trackState:data:](../mobile-core/api-reference.md#trackstate) | trackState:data: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/states.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/states.html?lang=en)) |
 | [trackAction:data:](../mobile-core/api-reference.md#trackaction) | trackAction:data: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/actions.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/actions.html?lang=en)) |
@@ -104,7 +102,6 @@ For more information, see the [Audience Manager Extension API reference](../adob
 
 | Experience Platform SDK | 4x SDK ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/aam-methods.html?lang=en) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/audience-manager-android/c-audience-manager-methods.html?lang=en)) |
 |---|---|
-| [extensionVersion:](../adobe-audience-manager/api-reference.md#extensionversion) | Not applicable |
 | [​getVisitorProfile:​](../adobe-audience-manager/api-reference.md#getvisitorprofile) | audienceVisitorProfile |
 | [​signalWithData:callback:​](../adobe-audience-manager/api-reference.md#signalwithdata) | audienceSignalWithData:callback |
 | [​reset​](../adobe-audience-manager/api-reference.md#reset-identifiers-and-profiles) | audienceReset |
@@ -129,12 +126,12 @@ For more information see [Target API reference](../adobe-target/api-reference.md
 | setThirdPartyId: | targetSetThirdPartyID |
 | getTntId: | Not applicable |
 | resetExperience: | targetClearCookies |
-| targetPrefetchObjectWithName:targetParameters: | targetPrefetchObjectWithName:mboxParameters: |
+| targetPrefetchObjectWithName:targetParameters: | initWithName:targetParameters (AEPTargetPrefetchObject) |
 | prefetchContent:withParameters:callback: | targetPrefetchContent:withProfileParameters:callback: |
 | prefetchClearCache: | targetPrefetchClearCache |
-| targetRequestObjectWithName:targetParameters:defaultContent:callback: | targetRequestObjectWithName:defaultContent:mboxParameters:callback: |
+| targetRequestObjectWithName:targetParameters:defaultContent:callback: | initWithMboxName:defaultContent:targetParameters:contentCallback (AEPTargetRequestObject) |
 | retrieveLocationContent:withParameters: | targetLoadRequests:withProfileParameters: |
-| locationClickedWithName:targetParameters: | locationClickedWithName:mboxParameters:productParameters:orderParameters: |
+| locationClickedWithName:targetParameters: | clickedLocation:withTargetParameters |
 | setPreviewRestartDeeplink: | targetPreviewRestartDeepLink: |
 
 ### Deprecated APIs
