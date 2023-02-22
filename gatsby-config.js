@@ -785,14 +785,6 @@ module.exports = {
                         path: "/documentation/resources"
                     },
                     {
-                        title: "Version 4 Mobile SDKs end-of-support FAQ",
-                        path: "/documentation/v4-end-of-life-faq"
-                    },
-                    {
-                        title: "Adobe Experience Cloud & Apple's IDFA, Privacy announcement",
-                        path: "/documentation/privacy-announcement"
-                    },
-                    {
                         title: "Upgrade to the Experience Platform SDKs",
                         path: "documentation/upgrade-platform-sdks",
                         pages: [
@@ -851,6 +843,14 @@ module.exports = {
                     {
                         title: "Manage SPM dependencies",
                         path: "documentation/manage-spm-dependencies"
+                    },
+                    {
+                        title: "Version 4 Mobile SDKs end-of-support FAQ",
+                        path: "/documentation/v4-end-of-life-faq"
+                    },
+                    {
+                        title: "Adobe Experience Cloud & Apple's IDFA, Privacy announcement",
+                        path: "/documentation/privacy-announcement"
                     }
                 ]
             },
