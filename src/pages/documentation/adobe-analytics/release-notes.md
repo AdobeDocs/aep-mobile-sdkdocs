@@ -4,7 +4,7 @@
 
 ### Android Analytics 2.0.1
 
-* Made extension compatible with Kotlin 1.4.
+* Made the extension compatible with Kotlin 1.4.
 * Analytics shared state is made available on boot-up if there are any previously stored identifiers.
 * Shared state is only updated when an identifier is set and not on get requests.
 
