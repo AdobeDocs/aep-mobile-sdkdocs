@@ -65,6 +65,12 @@ Note that all these extensions must be updated together. Flutter and React plugi
 
 * Major version update for [Adobe Journey Optimizer - Decisioning](../adobe-journey-optimizer-decisioning/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This extension library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-optimize-android/).
 
+## January 31, 2023
+
+### Android Campaign Classic 2.0.0
+
+* Major version update for [Adobe Campaign Classic workflows](../adobe-campaign-classic/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This extension library is available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaignclassic-android/).
+
 ## January 5, 2023
 
 ### iOS AEPCore 3.7.4
