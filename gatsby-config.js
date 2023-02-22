@@ -186,16 +186,8 @@ module.exports = {
                                         path: "documentation/mobile-core/platform-services"
                                     },
                                     {
-                                        title: "Data queue service",
-                                        path: "documentation/mobile-core/platform-services/data-queue-service"
-                                    },
-                                    {
                                         title: "Network service",
                                         path: "documentation/mobile-core/platform-services/network-service"
-                                    },
-                                    {
-                                        title: "System device info service",
-                                        path: "documentation/mobile-core/platform-services/system-device-info-service"
                                     }
                                 ]
                             },
