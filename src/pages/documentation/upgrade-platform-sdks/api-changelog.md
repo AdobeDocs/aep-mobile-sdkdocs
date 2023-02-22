@@ -124,7 +124,6 @@ For more information see [Target API reference](../adobe-target/api-reference.md
 | --- | --- |
 | getThirdPartyId: | targetThirdPartyID |
 | setThirdPartyId: | targetSetThirdPartyID |
-| getTntId: | Not applicable |
 | resetExperience: | targetClearCookies |
 | targetPrefetchObjectWithName:targetParameters: | initWithName:targetParameters (AEPTargetPrefetchObject) |
 | prefetchContent:withParameters:callback: | targetPrefetchContent:withProfileParameters:callback: |
