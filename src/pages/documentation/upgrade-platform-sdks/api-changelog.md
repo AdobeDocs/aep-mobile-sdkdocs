@@ -125,12 +125,12 @@ For more information see [Target API reference](../adobe-target/api-reference.md
 | getThirdPartyId: | targetThirdPartyID |
 | setThirdPartyId: | targetSetThirdPartyID |
 | resetExperience: | targetClearCookies |
-| targetPrefetchObjectWithName:targetParameters: | initWithName:targetParameters (AEPTargetPrefetchObject) |
+| initWithName:targetParameters (AEPTargetPrefetchObject) | targetPrefetchObjectWithName:mboxParameters: |
 | prefetchContent:withParameters:callback: | targetPrefetchContent:withProfileParameters:callback: |
 | prefetchClearCache: | targetPrefetchClearCache |
-| targetRequestObjectWithName:targetParameters:defaultContent:callback: | initWithMboxName:defaultContent:targetParameters:contentCallback (AEPTargetRequestObject) |
+| initWithMboxName:defaultContent:targetParameters:contentCallback (AEPTargetRequestObject) | targetRequestObjectWithName:defaultContent:mboxParameters:callback: |
 | retrieveLocationContent:withParameters: | targetLoadRequests:withProfileParameters: |
-| locationClickedWithName:targetParameters: | clickedLocation:withTargetParameters |
+| clickedLocation:withTargetParameters: | locationClickedWithName:mboxParameters:productParameters:orderParameters: |
 | setPreviewRestartDeeplink: | targetPreviewRestartDeepLink: |
 
 ### Deprecated APIs
