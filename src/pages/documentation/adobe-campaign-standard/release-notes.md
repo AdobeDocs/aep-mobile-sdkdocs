@@ -4,7 +4,7 @@
 
 ### Android Campaign Standard 2.0.2
 
-* Made extension compatible with Kotlin 1.4.
+* Made the extension compatible with Kotlin 1.4.
 
 ## February 9, 2023
 
