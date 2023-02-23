@@ -164,7 +164,7 @@ A proper example for an inline alert would be as follows:
 ````md
 <InlineAlert variant="info" slots="text"/>
 
-Adobe Experience Platform Mobile SDK for Android supports Google Android API 14 (Ice Cream Sandwich) or later. The Adobe Experience Platform Edge Network extension and other for Edge Network extensions require Android versions 4.4 or later (API levels 19 or later).
+Adobe Experience Platform Mobile SDK for Android supports Google Android API 19 (KitKat) or later.
 ````
 
 Supported values for the `variant` include the following:
