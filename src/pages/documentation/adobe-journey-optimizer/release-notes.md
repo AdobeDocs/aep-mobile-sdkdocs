@@ -1,10 +1,26 @@
 # Release Notes
 
+## February 9, 2023
+
+### iOS AEPMessaging 1.1.0
+
+* Adds support for Adobe Journey Optimizer powered in-app messages.
+
+### Android Messaging 2.0.1
+
+* Adds support for Adobe Journey Optimizer powered in-app messages.
+
+## February 3, 2023
+
+### Android Messaging 2.0.0
+
+* Major version update for [Adobe Journey Optimizer](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-messaging-android).
+
 ## June 17, 2021
 
-### iOS Messaging 1.0.0
+### iOS AEPMessaging 1.0.0
 
-* The Adobe Experience Platform Messaging (AEPMessaging) mobile extension is now available on iOS! This extension enables push notifications and measurement for Adobe Journey Optimizer. 
+* The Adobe Experience Platform Messaging (AEPMessaging) mobile extension is now available on iOS! This extension enables push notifications and measurement for Adobe Journey Optimizer.
 
 ### Adobe Journey Optimizer Launch Extension
 

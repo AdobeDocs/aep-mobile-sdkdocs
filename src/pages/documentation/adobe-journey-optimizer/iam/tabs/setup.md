@@ -1,27 +1,9 @@
-<Variant platform="android" task="install" repeat="7"/>
+<Variant platform="android" task="install" repeat="2"/>
 
-In-app messages are enabled in Messaging SDK version `1.3.0` or newer. Libraries built from the staging branch will contain `beta` in the artifact name.
-
-The Messaging SDK is available from the Sonatype snapshot repository while it is in beta. In your app's top level Gradle file, add a reference to the repository:
+In-app messages are enabled in Messaging extension version `2.0.1` or newer.
 
 ```groovy
-allprojects {
-  repositories {
-    // other needed repositories...
-    // add the sonatype snapshot repository
-    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
-  }
-} 
-```
-
-```groovy
-implementation('com.adobe.marketing.mobile:messaging:1.3.0-beta-3-SNAPSHOT')
-```
-
-If you use the Messaging extension (In-App beta) alongside the Campaign Standard extension, Campaign Standard extension version 1.0.9 or newer must be used to resolve a compatibility issue:
-
-```groovy
-implementation 'com.adobe.marketing.mobile:campaign:[1.0.9,)'
+implementation('com.adobe.marketing.mobile:messaging:2.0.+')
 ```
 
 <Variant platform="ios" task="install" repeat="2"/>
