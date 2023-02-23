@@ -1,18 +1,12 @@
-# User Access
-
-<InlineAlert variant="info" slots="text"/>
-
-## Project Griffon is now Assurance
-
-We're pleased to announce that Project Griffon is now generally available to all Adobe Experience Cloud customers as Assurance. To learn more about this transition, please read the [Assurance overview](./index.md).
+# User access
 
 <InlineAlert variant="warning" slots="header, text"/>
 
-User Access Is Changing
+User access is changing
 
-As we make the transition from beta (Project Griffon) to being generally available (as Assurance) to all Adobe Experience Cloud customers - access to Project Griffon / Assurance is changing! Access to Assurance will be managed through the [Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html)
+As we transition from beta (Project Griffon) to being generally available (as Assurance) to all Adobe Experience Cloud customers - access to Project Griffon / Assurance is changing! Access to Assurance will be managed through the [Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html)
 
-## Set Up Access
+## Access setup
 
 <InlineAlert variant="info" slots="text"/>
 

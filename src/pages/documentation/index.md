@@ -9,15 +9,16 @@ Welcome to the home of Adobe Experience Platform Mobile SDK documentation.
 
 <InlineAlert variant="success" slots="header, text"/>
 
-Good to go for iOS 16 and Android 13
+Mobile Core 2.x for Android and the compatible extensions are here!
 
-The latest versions of the Adobe Experience Platform SDK for Google Android and Apple iOS (Swift and Objective-C) are tested for compatibility with release verisons of Apple iOS 16 and Google Android 13. See [Current SDK Versions](./current-sdk-versions.md) to find our latest SDK versions or [release notes](./release-notes/index.md) for information on changes and updates.
+A new major version of the Mobile Core SDK for Android has been released along with updates to other extensions to take advantage of the new features and improvements.
+For more information, check out the [release notes](./release-notes/#february-23-2023).
 
 <InlineAlert variant="success" slots="header, text"/>
 
-Project Griffon is now Assurance
+Good to go for iOS 16 and Android 13
 
-We're pleased to announce that Project Griffon is now generally available to all Adobe Experience Cloud customers as Assurance. To learn more about this transition, please read the [Assurance overview](./platform-assurance/index.md).
+The latest versions of the Adobe Experience Platform SDK for Google Android and Apple iOS (Swift and Objective-C) are tested for compatibility with release verisons of Apple iOS 16 and Google Android 13. See [Current SDK Versions](./current-sdk-versions.md) to find our latest SDK versions or [release notes](./release-notes/index.md) for information on changes and updates.
 
 ## Bring the Adobe Experience Cloud to your apps
 
