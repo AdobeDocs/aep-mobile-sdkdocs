@@ -78,7 +78,7 @@ Note that all these extensions must be updated together. Flutter and React plugi
 
 ### Android Messaging 2.0.1
 
-* Adds support for Adobe Journey Optimizer powered in-app messages.
+* Updates the Core dependency to 2.0.1, which resolves inconsistencies between the Android and iOS MessagingDelegate classes.
 
 ### Android Campaign Standard 2.0.1
 
@@ -88,7 +88,7 @@ Note that all these extensions must be updated together. Flutter and React plugi
 
 * Major version update for [Adobe Target](../adobe-target/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-target-android).
 
-### iOS AEPMessaging 1.1.0
+### iOS Messaging 1.1.0
 
 * Adds support for Adobe Journey Optimizer powered in-app messages.
 
@@ -108,7 +108,8 @@ Note that all these extensions must be updated together. Flutter and React plugi
 
 ### Android Messaging 2.0.0
 
-* Major version update for [Adobe Journey Optimizer](../adobe-journey-optimizer/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-messaging-android).
+* Major version update for [Adobe Journey Optimizer](../adobe-journey-optimizer/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-messaging-android). 
+* Adds support for Adobe Journey Optimizer powered in-app messages.
 
 ## February 2, 2023
 
