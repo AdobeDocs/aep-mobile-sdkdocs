@@ -62,13 +62,10 @@ For a complete list of supported platforms, please read the [latest SDK versions
 
 ### What OS and platform versions are supported?
 
-* Android versions 4.0 or later (API levels 14 or later)
+* Android versions 4.4 or later (API levels 19 or later)
 * iOS versions 10 or later
 * React Native versions 0.44.0 or later
 * Flutter versions 1.10.0 or later
-* Cordova 9.0.0 or later
-* Xamarin - MonoAndroid 9.0+ and Xamarin.iOS 1.0+
-* Unity 2019.3.10f1 or later
 
 ### Where does the SDK store identities and preferences on the app?
 
@@ -128,6 +125,16 @@ Add the following rule to your custom ProGuard rules file, typically labeled `pr
 }
 ```
 
+### How can I track user engagement of push notifications using the Experience Platform Mobile SDK?
+
+Implementing push notification tracking and measurement with the SDK depends on the Experience Cloud solution being used.
+
+* For the Adobe Campaign Standard extension, please read the [Adobe Campaign standard push tracking tutorial](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-mobile/push-tracking.html?lang=en).
+* For the Adobe Campaign Classic extension, please read the [Adobe Campaign Classic push notifications tracking tutorial](./adobe-campaign-classic/api-reference.md#tracknotification-api).
+* For the Adobe Analytics - Mobile Services extension, please read the [set up tracking for Mobile Services push notifications tutorial](./adobe-analytics-mobile-services/index.md#set-up-push-tracking).
+
+## Migrating to Android Mobile Core 2.x and Supported Extensions
+
 ### Is there a change in minimum API level supported by Mobile SDK for Android?
 
 Mobile SDK for Android now supports a minimum API level of **19**. If your application targets a lower API level, you will see the following build failure:
@@ -161,17 +168,12 @@ To fix this build failure, you can follow one of two options:
 - Add the listed compileOptions from the error message to your app-level build.gradle file.
 - Increase the minSdkVersion for your Android project to **26** or above.
 
-### Why do I see a warning in AndroidManifest.xml about missing 'com.adobe.marketing.mobile.FullscreenMessageActivity' class?
+### How do I get the latest Mobile SDK Android dependences for my Application? 
 
-After upgrading to the latest version of Mobile SDK for Android, you will see the following build warning if your application previously set up in-app messages with Campaign Standard. 
-
-```
-Class referenced in the manifest, `com.adobe.marketing.mobile.FullscreenMessageActivity`, was not found in the project or the libraries
-
-Unresolved class 'FullscreenMessageActivity'
-```
-
-To resolve the build warning, remove FullscreenMessageActivity from your application's manifest file. Campaign Standard SDK no longer requires application to add **FullscreenMessageActivity** to their manifest.
+To get the latest Mobile SDK dependencies for your Android application
+* Open the **mobile property** configured in the **Data Collection UI** for your application. 
+* Navigate to the **Extensions** tab and update all the extensions to the latest version. 
+* The [install instructions](./getting-started/get-the-sdk.md#1-add-dependencies-to-your-project) will now show the dependencies for the latest Mobile SDK.
 
 ### Why do I see 'java.lang.NoSuchMethodError' after upgrading to the latest version of Mobile SDK for Android?
 
@@ -202,13 +204,34 @@ com.adobe.marketing.mobile:identity:2.+
 
 Adobe Mobile Service's end-of-life date is [December 31, 2022](https://experienceleague.adobe.com/docs/mobile-services/using/eol.html). To upgrade to the latest version of Mobile SDK for Android, you have to remove the Mobile Services dependency from your app. 
 
-### How can I track user engagement of push notifications using the Experience Platform Mobile SDK?
+### Why do I see a warning in AndroidManifest.xml about missing 'com.adobe.marketing.mobile.FullscreenMessageActivity' class?
 
-Implementing push notification tracking and measurement with the SDK depends on the Experience Cloud solution being used.
+After upgrading to the latest version of Mobile SDK for Android, you will see the following build warning if your application previously set up in-app messages with Campaign Standard. 
 
-* For the Adobe Campaign Standard extension, please read the [Adobe Campaign standard push tracking tutorial](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-mobile/push-tracking.html?lang=en).
-* For the Adobe Campaign Classic extension, please read the [Adobe Campaign Classic push notifications tracking tutorial](./adobe-campaign-classic/api-reference.md#tracknotification-api).
-* For the Adobe Analytics - Mobile Services extension, please read the [set up tracking for Mobile Services push notifications tutorial](./adobe-analytics-mobile-services/index.md#set-up-push-tracking).
+```
+Class referenced in the manifest, `com.adobe.marketing.mobile.FullscreenMessageActivity`, was not found in the project or the libraries
+Unresolved class 'FullscreenMessageActivity'
+```
+
+To resolve the build warning, remove FullscreenMessageActivity from your application's manifest file. Campaign Standard SDK no longer requires application to add **FullscreenMessageActivity** to their manifest.
+
+### Why do I see 'unresolved reference' error when upgrading Adobe Target SDK to the latest version?
+
+The [latest version](./adobe-target/release-notes.md#android-target-200) of Adobe Target Mobile SDK has the following breaking API changes for alignment with the iOS SDK:
+* **locationsDisplayed** is now **displayedLocations**
+* **locationClicked** is now **clickedLocation**
+
+The public classes **TargetRequest**, **TargetPrefetch**, **TargetOrder**, **TargetProduct** and **TargetParameters** are consolidated under the **target** subpackage.
+
+To resolve the error, fix the method references and update your target import statements.
+
+```
+import com.adobe.marketing.mobile.target.TargetRequest;
+import com.adobe.marketing.mobile.target.TargetPrefetch;
+import com.adobe.marketing.mobile.target.TargetOrder;
+import com.adobe.marketing.mobile.target.TargetProduct;
+import com.adobe.marketing.mobile.target.TargetParameters;
+```
 
 ## Mobile Core
 
