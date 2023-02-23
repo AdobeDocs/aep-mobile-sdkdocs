@@ -86,7 +86,7 @@ Note that all these extensions must be updated together. Flutter and React plugi
 
 ### Android Target 2.0.0
 
-* Major version update for [Adobe Target](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-target-android).
+* Major version update for [Adobe Target](../adobe-target/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-target-android).
 
 ### iOS AEPMessaging 1.1.0
 
@@ -96,7 +96,7 @@ Note that all these extensions must be updated together. Flutter and React plugi
 
 ### Android Analytics 2.0.0
 
-* Major version update for [Adobe Analytics](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-analytics-android/).
+* Major version update for [Adobe Analytics](../adobe-analytics/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-analytics-android/).
 
 ### Android Audience 2.0.0
 
