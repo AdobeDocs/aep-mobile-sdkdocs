@@ -6,9 +6,16 @@
 
 * Major version update for [Adobe Target](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-target-android).
 
-Please note that the following APIs have been renamed for alignment with the Adobe Target Mobile SDK for iOS:
+Please note that the following improvements have been made in the current release:
+
+1. The below APIs have been renamed for alignment with the Adobe Target Mobile SDK for iOS:
 * `locationsDisplayed` is now `displayedLocations`
 * `locationClicked` is now `clickedLocation`
+
+2. The public classes `TargetRequest`, `TargetPrefetch`, `TargetOrder`, `TargetProduct` and `TargetParameters` are consolidated under the extension's package and require updating the import statements as shown below:
+
+import com.adobe.marketing.mobile.target.TargetRequest;
+import com.adobe.marketing.mobile.target.TargetPrefetch;
 
 ## August 2, 2022
 

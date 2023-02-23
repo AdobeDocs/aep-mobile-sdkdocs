@@ -86,11 +86,21 @@ Note that all these extensions must be updated together. Flutter and React plugi
 
 ### Android Target 2.0.0
 
-* Major version update for [Adobe Target](../adobe-target/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-target-android).
+* Major version update for [Adobe Target](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-target-android).
 
-Please note that the following APIs have been renamed for alignment with the Adobe Target Mobile SDK for iOS:
+Please note that the following improvements have been made in the current release:
+
+1. The below APIs have been renamed for alignment with the Adobe Target Mobile SDK for iOS:
 * `locationsDisplayed` is now `displayedLocations`
 * `locationClicked` is now `clickedLocation`
+
+2. The public classes `TargetRequest`, `TargetPrefetch`, `TargetOrder`, `TargetProduct` and `TargetParameters` are consolidated under the `target` subpackage and require updating the import statements as shown below:
+
+import com.adobe.marketing.mobile.target.TargetRequest;
+import com.adobe.marketing.mobile.target.TargetPrefetch;
+import com.adobe.marketing.mobile.target.TargetOrder;
+import com.adobe.marketing.mobile.target.TargetProduct;
+import com.adobe.marketing.mobile.target.TargetParameters;
 
 ### iOS Messaging 1.1.0
 
