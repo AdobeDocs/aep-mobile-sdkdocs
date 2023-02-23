@@ -6,7 +6,9 @@
 
 * Major version update for [Adobe Target](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-target-android).
 
-Please note that the `locationsDisplayed` and `locationClicked` APIs have been renamed to `displayedLocations` and `clickedLocation` respectively for alignment with iOS.
+Please note that the following APIs have been renamed for alignment with the Adobe Target Mobile SDK for iOS:
+* `locationsDisplayed` is now `displayedLocations`
+* `locationClicked` is now `clickedLocation`
 
 ## August 2, 2022
 
