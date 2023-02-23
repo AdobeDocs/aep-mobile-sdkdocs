@@ -2,7 +2,7 @@
 
 #### Java
 
-Adobe Experience Platform SDKs for Android supports Android 4.4 (API 19) or later.
+Latest version of the Adobe Experience Platform SDKs for Android supports Android 4.4 (API 19) or later.
 
 1. Open the mobile property you created earlier in the Data Collection UI.
 2. On your mobile property's details page, select the **Environments** tab.

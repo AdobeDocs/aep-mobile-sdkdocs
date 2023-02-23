@@ -64,8 +64,8 @@ For a complete list of supported platforms, please read the [latest SDK versions
 
 * Android versions 4.4 or later (API levels 19 or later)
 * iOS versions 10 or later
-* React Native versions 0.44.0 or later
-* Flutter versions 1.10.0 or later
+* React Native versions 0.60.0 or later
+* Flutter versions 2.0.0 or later
 
 ### Where does the SDK store identities and preferences on the app?
 
@@ -131,9 +131,8 @@ Implementing push notification tracking and measurement with the SDK depends on 
 
 * For the Adobe Campaign Standard extension, please read the [Adobe Campaign standard push tracking tutorial](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-mobile/push-tracking.html?lang=en).
 * For the Adobe Campaign Classic extension, please read the [Adobe Campaign Classic push notifications tracking tutorial](./adobe-campaign-classic/api-reference.md#tracknotification-api).
-* For the Adobe Analytics - Mobile Services extension, please read the [set up tracking for Mobile Services push notifications tutorial](./adobe-analytics-mobile-services/index.md#set-up-push-tracking).
 
-## Migrating to Android Mobile Core 2.x and Compatible Extensions
+## Migrating to Android Mobile Core 2.x and compatible extensions
 
 ### Is there a change in minimum API level supported by Mobile SDK for Android?
 
@@ -193,7 +192,7 @@ To resolve this error, upgrade all your solution SDKs to the [most recent versio
 
 The **com.adobe.marketing.mobile:sdk-core** dependency is no longer available for the latest version of Mobile SDK. Instead, select the appropriate solution SDKs based on your requirements from the following options:
 
-```
+```java
 com.adobe.marketing.mobile:core:2.+
 com.adobe.marketing.mobile:lifecycle:2.+
 com.adobe.marketing.mobile:signal:2.+
@@ -223,9 +222,9 @@ The [latest version](./adobe-target/release-notes.md#android-target-200) of Adob
 
 The public classes **TargetRequest**, **TargetPrefetch**, **TargetOrder**, **TargetProduct** and **TargetParameters** are consolidated under the **target** subpackage.
 
-To resolve the error, fix the method references and update your target import statements.
+To resolve the error, fix the method references and update your target import statements:
 
-```
+```java
 import com.adobe.marketing.mobile.target.TargetRequest;
 import com.adobe.marketing.mobile.target.TargetPrefetch;
 import com.adobe.marketing.mobile.target.TargetOrder;
@@ -233,7 +232,7 @@ import com.adobe.marketing.mobile.target.TargetProduct;
 import com.adobe.marketing.mobile.target.TargetParameters;
 ```
 
-## Mobile Core
+## Lifecycle
 
 ### What are Lifecycle metrics?
 
