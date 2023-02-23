@@ -73,7 +73,7 @@ If SDK privacy status is `optedout`, the push identifier will not be set.
 
 2. In `application:didRegisterForRemoteNotificationsWithDeviceToken:`, call `setPushIdentifier` to set the Push identifier.
 
-   For more information, see [setPushIdentifier](../../adobe-analytics-mobile-services/index.md#set-up-push-messaging).
+    For more information, see [setPushIdentifier](../mobile-core/api-reference.md#setpushidentifier).
 
 #### Verify that the push token has successfully synced with the Experience Cloud ID service
 
