@@ -513,7 +513,7 @@ module.exports = {
                                         title: "Overview",
                                         path: "/documentation/adobe-journey-optimizer/iam"
                                     },
-                                    {       
+                                    {
                                         title: "Prerequisites",
                                         path: "/documentation/adobe-journey-optimizer/iam/prerequisites"
                                     },
