@@ -24,6 +24,7 @@ Note that all these extensions must be updated together. Flutter and React plugi
 * Android Adobe Experience Platform Edge Network 2.0.0
 * Android Identity for Edge Network 2.0.0
 * Android Consent for Edge Network 2.0.0
+* Android Edge Bridge 2.0.0
 * Android Adobe Journey Optimizer 2.0.1
 * Android Adobe Journey Optimizer - Decisioning 2.0.0
 * Android Places Service 2.0.0
@@ -118,6 +119,12 @@ Note that all these extensions must be updated together. Flutter and React plugi
 ### Android Campaign Standard 2.0.0
 
 * Major version update for [Adobe Campaign Standard workflows](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaign-android).
+
+## February 1, 2023
+
+### Android Edge Bridge 2.0.0
+
+* Major version update for Edge Bridge for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgebridge-android).
 
 ## January 31, 2023
 
