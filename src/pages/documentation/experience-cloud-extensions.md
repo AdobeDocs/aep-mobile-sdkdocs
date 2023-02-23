@@ -5,7 +5,6 @@ Experience Cloud extensions are extensions that directly connect with Experience
 ## Extensions
 
 - [Adobe Analytics](./adobe-analytics/index.md)
-- [Adobe Analytics - Mobile Services](./adobe-analytics-mobile-services/index.md)
 - [Adobe Media Analytics](./adobe-media-analytics/index.md)
 - [Adobe Audience Manager](./adobe-audience-manager/index.md)
 - [Adobe Campaign Classic](./adobe-campaign-classic/index.md)

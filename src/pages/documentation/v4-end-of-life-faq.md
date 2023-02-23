@@ -39,7 +39,7 @@ To upgrade to the Experience Platform SDKs, see [Upgrade to the Experience Platf
 
 ### Will Mobile Services functionality still work?
 
-Yes! This end-of-support statement does not affect your use of Mobile Services in any way. You may continue to use features such as marketing links, push notifications, and in-app messaging with version 4 SDKs or by leveraging the [Adobe Analytics - Mobile Services](./adobe-analytics-mobile-services/index.md) extension for the new Experience Platform Mobile SDKs.
+Yes! This end-of-support statement does not affect your use of Mobile Services in any way. You may continue to use features such as marketing links, push notifications, and in-app messaging with version 4 SDKs or by leveraging the Adobe Analytics - Mobile Services extension for the Experience Platform Mobile SDKs. The documentation for this extension is available in the [previous versions of the Mobile SDKs](https://developer.adobe.com/client-sdks/previous-versions/documentation/adobe-analytics-mobile-services/).
 
 ### Can I still download and use the version 4 SDKs?
 
@@ -52,4 +52,3 @@ SDK downloads through GitHub and other locations will be available through **Aug
 ### Who do I contact for more information the end-of-support for Version 4 SDKs?
 
 To discuss your specific situation and receive advice on the best next steps, contact [Adobe Customer Support](https://experienceleague.adobe.com/?support-solution=General#support).
-
