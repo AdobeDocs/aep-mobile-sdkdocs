@@ -178,6 +178,7 @@ To resolve the build warning, remove FullscreenMessageActivity from your applica
 The latest Mobile Core SDK for Android includes changes that break compatiblity with solution SDKs developed for earlier verisons of the Mobile Core SDK. 
 
 If you attempt to use the latest Mobile Core SDK and solution SDKs that were built for previous versions of Mobile Core to build your app, you may encounter the following error:
+
 ```
 2023-02-13 17:45:02.501 14264-14264/XXX E/AndroidRuntime: FATAL EXCEPTION: main
     Process: XXX, PID: XXXXX
@@ -199,7 +200,7 @@ com.adobe.marketing.mobile:identity:2.+
 
 ### How do I upgrade to the latest version of Mobile SDK for Android if my app uses Mobile Services? 
 
-Adobe Mobile Service's end-of-life date is [December 31, 2022](https://experienceleague.adobe.com/docs/mobile-services/using/eol.html). To upgrade to the latest version of Mobile SDK for Android, you have to remove Mobile Services dependency from your app. 
+Adobe Mobile Service's end-of-life date is [December 31, 2022](https://experienceleague.adobe.com/docs/mobile-services/using/eol.html). To upgrade to the latest version of Mobile SDK for Android, you have to remove the Mobile Services dependency from your app. 
 
 ### How can I track user engagement of push notifications using the Experience Platform Mobile SDK?
 
