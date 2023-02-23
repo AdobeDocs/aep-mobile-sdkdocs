@@ -6,7 +6,7 @@ import Tabs from './tabs/api-reference.md'
 
 Returns the current version of the AEP Assurance extension.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="7"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
@@ -16,25 +16,27 @@ iOS
 
 <Tabs query="platform=ios&api=extension-version"/>
 
-React Native
+<!--- React Native
 
 <Tabs query="platform=react-native&api=extension-version"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=extension-version"/>
+<Tabs query="platform=flutter&api=extension-version"/> --->
 
-Cordova
+## registerExtension
 
-<Tabs query="platform=cordova&api=extension-version"/>
+<InlineAlert variant="warning" slots="text"/>
 
-Unity
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
 
-<Tabs query="platform=unity&api=extension-version"/>
+Registers the Assurance extension with the Mobile Core.
 
-Xamarin
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-<Tabs query="platform=xamarin&api=extension-version"/>
+Android
+
+<Tabs query="platform=android&api=register-extension"/>
 
 ## startSession
 
@@ -44,7 +46,7 @@ The `startSession` API needs to be called to begin a AEP Assurance session. When
 
 You may call this API when the app launches with a URL (see code snippet below for sample usage)
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="7"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
@@ -54,22 +56,10 @@ iOS
 
 <Tabs query="platform=ios&api=start-session"/>
 
-React Native
+<!--- React Native
 
 <Tabs query="platform=react-native&api=start-session"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=start-session"/>
-
-Cordova
-
-<Tabs query="platform=cordova&api=start-session"/>
-
-Unity
-
-<Tabs query="platform=unity&api=start-session"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&api=start-session"/>
+<Tabs query="platform=flutter&api=start-session"/> --->

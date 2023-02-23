@@ -1,13 +1,19 @@
-<Variant platform="android" task="install" repeat="2"/>
+<Variant platform="android" task="install" repeat="3"/>
 
 Add the Mobile Core, Edge, Identity for Edge Network and Optimize dependencies in your app's gradle file.
 
 ```java
-implementation 'com.adobe.marketing.mobile:core:1.+'
-implementation 'com.adobe.marketing.mobile:edge:1.+'
-implementation 'com.adobe.marketing.mobile:edgeidentity:1.+'
-implementation 'com.adobe.marketing.mobile:optimize:1.+'
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:edge:2.+'
+implementation 'com.adobe.marketing.mobile:edgeidentity:2.+'
+implementation 'com.adobe.marketing.mobile:optimize:2.+'
 ```
+
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../manage-gradle-dependencies.md) for more information. 
+
+</InlineNestedAlert>
 
 <Variant platform="ios" task="install" repeat="2"/>
 
@@ -25,7 +31,7 @@ target 'YourAppTarget' do
 end
 ```
 
-<Variant platform="android" task="register" repeat="2"/>
+<Variant platform="android" task="register" repeat="4"/>
 
 #### Java
 
@@ -36,23 +42,51 @@ import com.adobe.marketing.mobile.edge.identity.Identity;
 import com.adobe.marketing.mobile.optimize.Optimize;
 import com.adobe.marketing.mobile.AdobeCallback;
 
-public class MobileApp extends Application {
+public class MainApp extends Application {
 
-  @Override
-  public void onCreate() {
-    super.onCreate();
-    MobileCore.setApplication(this);
-    MobileCore.configureWithAppID(<YOUR_ENVIRONMENT_FILE_ID>); // Replace <YOUR_ENVIRONMENT_FILE_ID> with a String containing your own ID.
+  private final String ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID";
 
-    Edge.registerExtension();
-    Identity.registerExtension();
-    Optimize.registerExtension();
-    MobileCore.start(new AdobeCallback() {
-      @Override
-      public void call(final Object o) {
-        // processing after start
-      }});
-  }
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        MobileCore.setApplication(this);
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
+
+        MobileCore.registerExtensions(
+            Arrays.asList(Edge.EXTENSION, Identity.EXTENSION, Optimize.EXTENSION),
+            o -> Log.d("MainApp", "Adobe Journey Optimizer - Decisioning Mobile SDK was initialized.")
+        );
+    }
+}
+```
+
+#### Kotlin
+
+```java
+import com.adobe.marketing.mobile.MobileCore
+import com.adobe.marketing.mobile.Edge
+import com.adobe.marketing.mobile.edge.identity.Identity
+import com.adobe.marketing.mobile.optimize.Optimize
+import com.adobe.marketing.mobile.AdobeCallback
+
+class MainApp : Application() {
+
+  private var ENVIRONMENT_FILE_ID: String = "YOUR_APP_ENVIRONMENT_ID"
+
+    override fun onCreate() {
+        super.onCreate()
+
+        MobileCore.setApplication(this)
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
+
+        MobileCore.registerExtensions(
+          listOf(Edge.EXTENSION, Identity.EXTENSION, Optimize.EXTENSION)
+        ) {
+          Log.d("MainApp", "Adobe Experience Platform Mobile SDK was initialized")
+        }
+    }
+
 }
 ```
 

@@ -16,31 +16,15 @@ After the configuration is retrieved when the app is initially launched, the con
 
 The unique environment ID from the Data Collection UI can be configured with the SDK using the following:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="6"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=configure"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=configure"/>
-
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=configure"/>
-
-Cordova
-
-<Tabs query="platform=cordova&task=configure"/>
-
-Unity
-
-<Tabs query="platform=unity&task=configure"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&task=configure"/>
+<Tabs query="platform=ios&task=configure"/>
 
 ## Programmatic updates to configuration
 
@@ -54,45 +38,25 @@ Keys that are not found on the current configuration are added when this method 
 
 Do not use this API to update the build.environment or any key with an environment prefix, because it can lead to unexpected behavior. For more information, read [Environment-aware configuration properties](./index.md#environment-aware-configuration-properties).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=update"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=update"/>
+<Tabs query="platform=ios&task=update"/>
 
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=update"/>
-
-React Native
+<!--- React Native
 
 <Tabs query="platform=react-native&task=update"/>
 
 Flutter
 
-<Tabs query="platform=flutter&task=update"/>
-
-Cordova
-
-<Tabs query="platform=cordova&task=update"/>
-
-Unity
-
-<Tabs query="platform=unity&task=update"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&task=update"/>
+<Tabs query="platform=flutter&task=update"/> --->
 
 ## Clearing programmatic updates to the configuration
-
-<InlineAlert variant="info" slots="text"/>
-
-This API is only available in Android and iOS (AEP 3.x).
 
 You can clear any programmatic updates made to the configuration via the `clearUpdatedConfiguration` API. This will clear programmatic updates to configuration made via the `updateConfiguration(configMap)`(Android)/ `updateConfigurationWith(configDict:)`(iOS) API. It will also clear any updates to the `MobilePrivacyStatus`(Android)/ `PrivacyStatus`(iOS)  made via `setPrivacyStatus(privacyStatus)`(Android)/ `setPrivacyStatus(_ status:)`(iOS).
 
@@ -113,29 +77,17 @@ You can also load a different `ADBMobileConfig.json` file by using the `Configur
 
 To pass in a bundled path and file name:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=bundle"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=bundle"/>
-
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=bundle"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&task=bundle"/>
+<Tabs query="platform=ios&task=bundle"/>
 
 ## Environment-aware configuration properties
-
-<InlineAlert variant="info" slots="text"/>
-
-This feature is only available in iOS ACPCore version 2.0.3 or later, and iOS AEPCore version 3.0.0 and above.
 
 Some extension developers might use different configuration values based on their environment, and the generated configuration might have several entries for the same property. For example, the Adobe Campaign Standard extension has different endpoints for development, staging, and production servers. Here is an example of a raw configuration that supports multiple build environments:
 

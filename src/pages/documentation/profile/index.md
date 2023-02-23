@@ -15,8 +15,8 @@ To get started with the Profile extension:
 1. Configure the Profile Extension in the Data Collection UI.
 2. Add the Profile extension to your app.
 3. Implement Profile APIs to:
-   * Update user attributes.
-   * Remove user attributes.
+   - Update user attributes.
+   - Remove user attributes.
 
 ## Install the Profile extension in the Data Collection UI
 
@@ -32,65 +32,28 @@ To get started with the Profile extension:
 
 To add the Profile extension to your app:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="6"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=add"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=add"/>
-
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=add"/>
-
-Cordova
-
-<Tabs query="platform=cordova&task=add"/>
-
-Unity
-
-<Tabs query="platform=unity&task=add"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&task=add"/>
-
+<Tabs query="platform=ios&task=add"/>
 
 ## Register the extension
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=register"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=register"/>
+<Tabs query="platform=ios&task=register"/>
 
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=register"/>
-
-React Native
-
+<!--- React Native
 <Tabs query="platform=react-native&task=register"/>
-
-Flutter
-
-<Tabs query="platform=flutter&task=register"/>
-
-Cordova
-
-<Tabs query="platform=cordova&task=register"/>
-
-Unity
-
-<Tabs query="platform=unity&task=register"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&task=register"/>
+--->

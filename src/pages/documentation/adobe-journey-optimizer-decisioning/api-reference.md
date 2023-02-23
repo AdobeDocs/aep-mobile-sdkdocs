@@ -12,7 +12,7 @@ Android
 
 <Tabs query="platform=android&api=clear-propositions"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&api=clear-propositions"/>
 
@@ -26,7 +26,7 @@ Android
 
 <Tabs query="platform=android&api=extension-version"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&api=extension-version"/>
 
@@ -40,7 +40,7 @@ Android
 
 <Tabs query="platform=android&api=get-propositions"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&api=get-propositions"/>
 
@@ -54,28 +54,30 @@ Android
 
 <Tabs query="platform=android&api=on-propositions-update"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&api=on-propositions-update"/>
 
-## registerExtension(s)
+## registerExtension
 
-This API can be invoked to register the Optimize extension with the Mobile Core. On iOS, `registerExtensions` API is part of Mobile Core.
+<InlineAlert variant="warning" slots="text"/>
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 Android
 
 <Tabs query="platform=android&api=register-extension"/>
 
-iOS (AEP 3.x)
-
-<Tabs query="platform=ios&api=register-extension"/>
-
 ## resetIdentities
 
-This `MobileCore` API can also be invoked to clear out the client-side data for the Optimize extension, such as the in-memory propositions cache.
-For details on syntax, usage and availability, refer to [Mobile Core - Reset identities](../mobile-core/api-reference.md#reset-identities).
+<InlineAlert variant="warning" slots="text"/>
+
+This API call can lead to unintended SDK behavior, e.g. resetting of Experience Cloud ID (ECID). So it should be sparingly used and caution should be followed!
+
+This `MobileCore` API is a request to each extension to reset its identities. Every extension responds to this request in its own unique manner. For example, Optimize extension uses this API call to clear out its client-side in-memory propositions cache.
+For details on syntax, usage and availability, refer to [Mobile Core - Reset identities](../mobile-core/api-reference.md#resetidentities).
 
 ## updatePropositions
 
@@ -87,7 +89,7 @@ Android
 
 <Tabs query="platform=android&api=update-propositions"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&api=update-propositions"/>
 
@@ -109,7 +111,7 @@ Android
 
 <Tabs query="platform=android&api=decisionscope"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&api=decisionscope"/>
 
@@ -123,7 +125,7 @@ Android
 
 <Tabs query="platform=android&api=proposition"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&api=proposition"/>
 
@@ -137,7 +139,7 @@ Android
 
 <Tabs query="platform=android&api=offer"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&api=offer"/>
 
@@ -151,6 +153,6 @@ Android
 
 <Tabs query="platform=android&api=offertype"/>
 
-iOS (AEP 3.x)
+iOS
 
 <Tabs query="platform=ios&api=offertype"/>

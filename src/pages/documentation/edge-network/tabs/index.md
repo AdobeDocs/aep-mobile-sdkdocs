@@ -1,14 +1,18 @@
-<Variant platform="android" task="add" repeat="5"/>
+import Alerts from '../../resources/alerts.md'
+
+<Variant platform="android" task="add" repeat="6"/>
 
 #### Java
 
 1. Add the Mobile Core and Edge extensions to your project using the app's Gradle file.
 
 ```java
-implementation 'com.adobe.marketing.mobile:core:1.+'
-implementation 'com.adobe.marketing.mobile:edge:1.+'
-implementation 'com.adobe.marketing.mobile:edgeidentity:1.+'
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:edge:2.+'
+implementation 'com.adobe.marketing.mobile:edgeidentity:2.+'
 ```
+
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
 2. Import the Mobile Core and Edge extensions in your application class.
 
@@ -17,7 +21,7 @@ import com.adobe.marketing.mobile.MobileCore;
 import com.adobe.marketing.mobile.Edge;
 ```
 
-<Variant platform="ios-aep" task="add" repeat="7"/>
+<Variant platform="ios" task="add" repeat="7"/>
 
 1. Add the Mobile Core and Edge extensions to your project using CocoaPods. Add following pods in your `Podfile`:
 
@@ -50,39 +54,54 @@ import AEPEdgeIdentity
 @import AEPEdgeIdentity;
 ```
 
-<Variant platform="ios-acp" task="add" repeat="1"/>
-
-This extension is built on the AEPCore (3.x) and it is not compatible with ACPCore (2.x). Please follow [the guide for migrating to the Swift AEPCore](../migrate-to-swift.md).
-
-<Variant platform="android" task="register" repeat="2"/>
+<Variant platform="android" task="register" repeat="4"/>
 
 #### Java
 
 ```java
-public class MobileApp extends Application {
+public class MainApp extends Application {
 
-    @Override
-    public void onCreate() {
-      super.onCreate();
-      MobileCore.setApplication(this);
+  private final String ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID";
 
-      try {
-        Edge.registerExtension();
-        com.adobe.marketing.mobile.edge.identity.Identity.registerExtension();
-        // register other extensions
-        MobileCore.start(new AdobeCallback() {
-          @Override
-          public void call(final Object o) {
-            MobileCore.configureWithAppID("yourAppId");
-          }});
-      } catch (Exception e) {
-        //Log the exception
-      }
-    }
+	@Override
+	public void onCreate() {
+		super.onCreate();
+
+		MobileCore.setApplication(this);
+		MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
+
+		MobileCore.registerExtensions(
+			Arrays.asList(Edge.EXTENSION, Identity.EXTENSION),
+			o -> Log.d("MainApp", "Adobe Experience Platform Mobile SDK was initialized.")
+		);
+	}
 }
 ```
 
-<Variant platform="ios-aep" task="register" repeat="4"/>
+#### Kotlin
+
+```java
+class MainApp : Application() {
+
+  private var ENVIRONMENT_FILE_ID: String = "YOUR_APP_ENVIRONMENT_ID"
+
+    override fun onCreate() {
+        super.onCreate()
+
+        MobileCore.setApplication(this)
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
+
+        MobileCore.registerExtensions(
+          listOf(Edge.EXTENSION, Identity.EXTENSION)
+        ) {
+          Log.d("MainApp", "Adobe Experience Platform Mobile SDK was initialized")
+        }
+    }
+
+}
+```
+
+<Variant platform="ios" task="register" repeat="4"/>
 
 #### Swift
 

@@ -22,35 +22,27 @@ The SDK extension listens for events that contain GPS coordinates and geofence r
 
 ### Download and import the Places extension
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=download"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=download"/>
-
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=download"/>
+<Tabs query="platform=ios&task=download"/>
 
 ### Register the Places extension with Mobile Core
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=register"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=register"/>
-
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=register"/>
+<Tabs query="platform=ios&task=register"/>
 
 ## Additional Location Service resources
 

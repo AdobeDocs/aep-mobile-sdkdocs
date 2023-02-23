@@ -1,23 +1,26 @@
-<Variant platform="android" task="download" repeat="5"/>
+import Alerts from '../../resources/alerts.md'
 
-**Java**
+<Variant platform="android" task="download" repeat="5"/>
 
 1. Add the Mobile Core and Edge extensions to your project using the app's Gradle file.
 
 ```java
-implementation 'com.adobe.marketing.mobile:core:1.+'
-implementation 'com.adobe.marketing.mobile:identity:1.+'
-implementation 'com.adobe.marketing.mobile:edge:1.+'
-implementation 'com.adobe.marketing.mobile:edgeidentity:1.+'
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:edge:2.+'
+implementation 'com.adobe.marketing.mobile:edgeidentity:2.+'
 ```
+
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
 2. Import the Mobile Core and Edge extensions in your application class.
 
 ```java
-import com.adobe.marketing.mobile.*;
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Edge;
+import com.adobe.marketing.mobile.edge.identity.Identity;
 ```
 
-<Variant platform="ios-aep" task="download" repeat="7"/>
+<Variant platform="ios" task="download" repeat="7"/>
 
 1. Add the Mobile Core and Edge extensions to your project using CocoaPods. Add following pods in your `Podfile`:
 
@@ -53,36 +56,51 @@ import AEPEdgeIdentity
 @import AEPEdgeIdentity;
 ```
 
-<Variant platform="android" task="register" repeat="2"/>
+<Variant platform="android" task="register" repeat="4"/>
 
-**Java**
+#### Java
 
 ```java
 public class MobileApp extends Application {
+    // Set up the preferred Environment File ID from your mobile property configured in Data Collection UI
+    private final String ENVIRONMENT_FILE_ID = "";
 
     @Override
     public void onCreate() {
       super.onCreate();
       MobileCore.setApplication(this);
-      MobileCore.configureWithAppID("yourAppId");
+      MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
 
-      try {
-        Edge.registerExtension();
-        com.adobe.marketing.mobile.edge.identity.Identity.registerExtension(); // Register Identity for Edge Network with Mobile Core
-        com.adobe.marketing.mobile.Identity.registerExtension(); // Register Identity with Mobile Core
-        MobileCore.start(new AdobeCallback() {
-          @Override
-          public void call(final Object o) {
-            // processing after start
-          }});
-      } catch (Exception e) {
-         //Log the exception
-     }
+      // Register Adobe Experience Platform SDK extensions
+      MobileCore.registerExtensions(
+         Arrays.asList(Edge.EXTENSION, Identity.EXTENSION),
+         o -> Log.debug("MobileApp", "MobileApp", "Adobe Experience Platform Mobile SDK initialized.")
+       );
     }
 }
 ```
 
-<Variant platform="ios-aep" task="register" repeat="4"/>
+#### Kotlin
+
+```java
+class MobileApp : Application() {
+    // Set up the preferred Environment File ID from your mobile property configured in Data Collection UI
+    private var ENVIRONMENT_FILE_ID: String = ""
+    override fun onCreate() {
+        super.onCreate()
+        MobileCore.setApplication(this)
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
+        // Register Adobe Experience Platform SDK extensions
+        MobileCore.registerExtensions(
+            listOf(Edge.EXTENSION, Identity.EXTENSION)
+        ) {
+            Log.debug("MobileApp", "MobileApp", "Adobe Experience Platform Mobile SDK initialized.")
+        }
+    }
+}
+```
+
+<Variant platform="ios" task="register" repeat="4"/>
 
 **Swift**
 
@@ -125,7 +143,7 @@ com.adobe.marketing.mobile.edge.identity.Identity.getExperienceCloudId(new Adobe
 MobileCore.setPrivacyStatus(MobilePrivacyStatus.OPT_IN);
 ```
 
-<Variant platform="ios-aep" task="link" repeat="4"/>
+<Variant platform="ios" task="link" repeat="4"/>
 
 **Swift**
 

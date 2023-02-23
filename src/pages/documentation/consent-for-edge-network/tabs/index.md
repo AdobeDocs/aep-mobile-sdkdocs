@@ -1,15 +1,17 @@
-<Variant platform="android" task="download" repeat="5"/>
+import Alerts from '../../resources/alerts.md'
 
-**Java**
+<Variant platform="android" task="download" repeat="5"/>
 
 1. Add the Mobile Core and Edge extensions to your project using the app's Gradle file.
 
 ```java
-implementation 'com.adobe.marketing.mobile:core:1.+'
-implementation 'com.adobe.marketing.mobile:edge:1.+'
-implementation 'com.adobe.marketing.mobile:edgeidentity:1.+'
-implementation 'com.adobe.marketing.mobile:edgeconsent:1.+'
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:edge:2.+'
+implementation 'com.adobe.marketing.mobile:edgeidentity:2.+'
+implementation 'com.adobe.marketing.mobile:edgeconsent:2.+'
 ```
+
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
 2. Import the Mobile Core and Edge extensions in your Application class.
 
@@ -20,7 +22,7 @@ import com.adobe.marketing.mobile.edge.identity.Identity;
 import com.adobe.marketing.mobile.edge.consent.Consent;
 ```
 
-<Variant platform="ios-aep" task="download" repeat="7"/>
+<Variant platform="ios" task="download" repeat="7"/>
 
 1. Add the Mobile Core and Edge extensions to your project using Cocoapods. Add following pods in your `Podfile`:
 
@@ -56,39 +58,51 @@ import AEPEdgeConsent
 @import AEPEdgeConsent;
 ```
 
-<Variant platform="ios-acp" task="download" repeat="1"/>
+<Variant platform="android" task="register" repeat="4"/>
 
-This extension is built on the AEPCore (3.x) and it is not compatible with ACPCore (2.x). Please follow [the guide for migrating to the Swift AEPCore](../migrate-to-swift.md).
-
-<Variant platform="android" task="register" repeat="2"/>
-
-**Java**
+#### Java
 
 ```java
-public class MobileApp extends Application {
+public class MainApp extends Application {
 
-    @Override
-    public void onCreate() {
-      super.onCreate();
-      MobileCore.setApplication(this);
-      try {
-        Edge.registerExtension();
-        Consent.registerExtension(); // register Consent
-        Identity.registerExtension();
-        // register other extensions
-        MobileCore.start(new AdobeCallback() {
-          @Override
-          public void call(final Object o) {
-            MobileCore.configureWithAppID("yourAppId");
-          }});
-      } catch (Exception e) {
-        //Log the exception
-      }
-    }
+  private final String ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID";
+
+	@Override
+	public void onCreate() {
+		super.onCreate();
+
+		MobileCore.setApplication(this);
+		MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
+
+		MobileCore.registerExtensions(
+			Arrays.asList(Consent.EXTENSION, Identity.EXTENSION, Edge.EXTENSION),
+			o -> Log.d("MainApp", "Adobe Experience Platform Mobile SDK was initialized")
+		);
+	}
 }
 ```
 
-<Variant platform="ios-aep" task="register" repeat="4"/>
+#### Kotlin
+
+```java
+class MainApp : Application() {
+
+    override fun onCreate() {
+        super.onCreate()
+
+        MobileCore.setApplication(this)
+        MobileCore.configureWithAppID("YOUR_APP_ENVIRONMENT_ID")
+
+        val extensions = listOf(Consent.EXTENSION, Identity.EXTENSION, Edge.EXTENSION)
+        MobileCore.registerExtensions(extensions) {
+            Log.d("MainApp", "Adobe Experience Platform Mobile SDK was initialized")
+        }
+    }
+
+}
+```
+
+<Variant platform="ios" task="register" repeat="4"/>
 
 **Swift**
 

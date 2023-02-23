@@ -14,7 +14,7 @@ public static void clearPrefetchCache()
 Target.clearPrefetchCache();
 ```
 
-<Variant platform="ios-aep" api="clear-prefetch-cache" repeat="7"/>
+<Variant platform="ios" api="clear-prefetch-cache" repeat="7"/>
 
 **Syntax**
 
@@ -36,29 +36,7 @@ Target.clearPrefetchCache()
 [AEPMobileTarget clearPrefetchCache];
 ```
 
-<Variant platform="ios-acp" api="clear-prefetch-cache" repeat="7"/>
-
-**Syntax**
-
-```objc
-+ (void) clearPrefetchCache;
-```
-
-**Example**
-
-**Swift**
-
-```swift
-ACPTarget.clearPrefetchCache
-```
-
-**Objective-C**
-
-```objc
-[ACPTarget clearPrefetchCache];
-```
-
-<Variant platform="react-native" api="clear-prefetch-cache" repeat="5"/>
+<!--- <Variant platform="react-native" api="clear-prefetch-cache" repeat="5"/>
 
 #### React Native
 
@@ -72,7 +50,7 @@ clearPrefetchCache();
 
 ```js
 ACPTarget.clearPrefetchCache();
-```
+``` --->
 
 <Variant platform="android" api="clicked-location" repeat="6"/>
 
@@ -81,7 +59,7 @@ ACPTarget.clearPrefetchCache();
 **Syntax**
 
 ```java
-public static void locationClicked(final String mboxName, final TargetParameters parameters)
+public static void clickedLocation(final String mboxName, final TargetParameters parameters)
 ```
 
 * _mboxName_ is a String that contains the mbox location for which the click notification will be sent to Target.
@@ -116,10 +94,10 @@ TargetParameters targetParameters = new TargetParameters.Builder(mboxParameters)
                                 .product(targetProduct)
                                 .build();
 
-Target.locationClicked("cartLocation", targetParameters);
+Target.clickedLocation("cartLocation", targetParameters);
 ```
 
-<Variant platform="ios-aep" api="clicked-location" repeat="8"/>
+<Variant platform="ios" api="clicked-location" repeat="8"/>
 
 **Syntax**
 
@@ -147,82 +125,7 @@ AEPTargetParameters * targetParams = [[AEPTargetParameters alloc] initWithParame
 [AEPMobileTarget clickedLocation:@"aep-loc-1" withTargetParameters:targetParams];
 ```
 
-<Variant platform="ios-acp" api="clicked-location" repeat="8"/>
-
-**Syntax**
-
-```objc
-+ (void) locationClickedWithName: (nonnull NSString*) name targetParameters: (nullable ACPTargetParameters*) parameters;
-```
-
-* _name_ is an NSString that contains the mbox location for which the click notification will be sent to Target.
-* _parameters_ is the configured `ACPTargetParameters` for the request.
-
-**Example**
-
-**Swift**
-
-```swift
-// Mbox parameters
-let mboxParameters = [
-"membership": "prime"
-]
-
-// Product parameters
-let productParameters = [
-"id": "CEDFJC",
-"categoryId": "Electronics"
-]
-
-// Order parameters
-let orderParameters = [
-"id": "NJJICK",
-"total": "650",
-"purchasedProductIds": "81, 123, 190"
-]
-
-// Profile parameters
-let profileParameters = [
-"ageGroup": "20-32"
-]
-
-// Create Target parameters
-let product = ACPTargetProduct(id: "24D334", categoryId: "Stationary")
-let order = ACPTargetOrder(id: "ADCKKBC", total: NSNumber(value: 400.50), purchasedProductIds: ["34", "125"])
-let targetParameters = ACPTargetParameters(parameters: nil, profileParameters: nil, product: product, order: order)
-
-ACPTarget.locationClicked(withName: "cartLocation", targetParameters: targetParameters)
-```
-
-**Objective-C**
-
-```objc
-// Mbox parameters
-NSDictionary *mboxParameters = @{@"membership":@"prime"};
-
-// Product parameters
-NSDictionary *productParameters = @{@"id":@"CEDFJC",
-                                    @"categoryId":@"Electronics"};
-// Order parameters
-NSDictionary *orderParameters = @{@"id":@"NJJICK",
-                                    @"total":@"650",
-                                    @"purchasedProductIds":@"81, 123, 190"};
-
-// Profile parameters
-NSDictionary *profileParameters = @{@"ageGroup":@"20-32"};
-
-// Create Target parameters
-ACPTargetProduct *product = [ACPTargetProduct targetProductWithId:@"24D334" categoryId:@"Stationary"];
-ACPTargetOrder *order = [ACPTargetOrder targetOrderWithId:@"ADCKKBC" total:@(400.50) purchasedProductIds:@[@"34", @"125"]];
-ACPTargetParameters *targetParameters = [ACPTargetParameters targetParametersWithParameters:nil
-                                                    profileParameters:nil
-                                                              product:product
-                                                                order:order];
-
-[ACPTarget locationClickedWithName:@"cartLocation" targetParameters:targetParameters];
-```
-
-<Variant platform="react-native" api="clicked-location" repeat="6"/>
+<!--- <Variant platform="react-native" api="clicked-location" repeat="6"/>
 
 #### JavaScript
 
@@ -256,7 +159,7 @@ var order = new ACPTargetOrder("ADCKKBC", 400.50, ["34","125"]);
 var targetParameters = new ACPTargetParameters(null, null, product, order);
 
 ACPTarget.locationClickedWithName("cartLocation", targetParameters);
-```
+``` --->
 
 <Variant platform="android" api="displayed-locations" repeat="6"/>
 
@@ -265,7 +168,7 @@ ACPTarget.locationClickedWithName("cartLocation", targetParameters);
 **Syntax**
 
 ```java
-public static void locationsDisplayed(final List<String> mboxNames, final TargetParameters targetParameters)
+public static void displayedLocations(final List<String> mboxNames, final TargetParameters targetParameters)
 ```
 
 * _mboxNames_ is a list of the mbox locations for which the display notification will be sent to Target.
@@ -291,10 +194,10 @@ TargetParameters targetParameters = new TargetParameters.Builder()
 List<String> mboxList = new ArrayList<>();
 mboxList.add("mboxName1");
 
-Target.locationsDisplayed(mboxList, targetParameters);
+Target.displayedLocations(mboxList, targetParameters);
 ```
 
-<Variant platform="ios-aep" api="displayed-locations" repeat="8"/>
+<Variant platform="ios" api="displayed-locations" repeat="8"/>
 
 **Syntax**
 
@@ -330,48 +233,7 @@ AEPTargetParameters * targetParams = [[AEPTargetParameters alloc] initWithParame
 [AEPMobileTarget displayedLocations:@[@"mboxName1", @"mboxName2"] withTargetParameters:targetParams];
 ```
 
-<Variant platform="ios-acp" api="displayed-locations" repeat="8"/>
-
-**Syntax**
-
-```objc
-+ (void) locationsDisplayed: (nonnull NSArray<NSString*>*) mboxNames 
-withTargetParameters: (nullable ACPTargetParameters*) targetParameters;
-```
-
-* _mboxNames_ is an NSArray of the mbox locations for which the display notification will be sent to Target.
-* _targetParameters_ is the configured `ACPTargetParameters` for the request.
-
-**Example**
-
-**Swift**
-
-```swift
-let product = ACPTargetProduct(id: "24D334", categoryId: "Stationary")
-
-let order = ACPTargetOrder(id: "ADCKKBC", total: NSNumber(value: 400.50), purchasedProductIds: ["34", "125"])
-
-let targetParameters = ACPTargetParameters(parameters: nil, profileParameters: nil, product: product, order: order)
-
-ACPTarget.locationsDisplayed(["mboxName1", "mboxName2"], with: targetParameters)
-```
-
-**Objective-C**
-
-```objc
-ACPTargetProduct *product = [ACPTargetProduct targetProductWithId:@"24D334" categoryId:@"Stationary"];
-
-ACPTargetOrder *order = [ACPTargetOrder targetOrderWithId:@"ADCKKBC" total:@(400.50) purchasedProductIds:@[@"34", @"125"]];
-
-ACPTargetParameters *targetParameters = [ACPTargetParameters targetParametersWithParameters:nil
-profileParameters:nil
-product:product
-order:order];
-
-[ACPTarget locationsDisplayed:@[@"mboxName1", @"mboxName2"] withTargetParameters:targetParameters];
-```
-
-<Variant platform="react-native" api="displayed-locations" repeat="6"/>
+<!--- <Variant platform="react-native" api="displayed-locations" repeat="6"/>
 
 #### JavaScript
 
@@ -392,6 +254,94 @@ var order = new ACPTargetOrder("ADCKKBC", 400.50, ["34", "125"]);
 var targetParameters = new ACPTargetParameters(null, null, product, order);
 
 ACPTarget.locationsDisplayed(["mboxName1", "mboxName2"], targetParameters);
+``` --->
+
+<Variant platform="android" api="execute-raw-request" repeat="6"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void executeRawRequest(final Map<String, Object> request, final AdobeCallback<Map<String, Object>> callback)
+```
+
+* `request`: A map containing prefetch or execute request data in the Target v1 delivery API request format.
+* `callback`: An AdobeCallback instance which will be called after the Target request is completed. The parameter in the callback will contain the response data if the request executed successfully, or it will contain null otherwise. 
+
+**Example**
+
+```java
+final Map<String, Object> executeMbox1 = new HashMap<String, Object>() {
+    {
+        put("index", 0);
+        put("name", "mbox1");
+        put("parameters", new HashMap<String, String>() {
+            {
+                put("mbox_parameter_key1", "mbox_parameter_value1");
+            }
+        });
+        put("profileParameters", new HashMap<String, String>() {
+            {
+                put("subscription", "premium");
+            }
+        });
+        put("order", new HashMap<String, Object>() {
+            {
+                put("id", "id1");
+                put("total", 100.34);
+                put("purchasedProductIds", new ArrayList<String>() {
+                    {
+                        add("pId1");
+                    }
+                });
+            }
+        });
+        put("product", new HashMap<String, String>() {
+            {
+                put("id", "pId1");
+                put("categoryId", "cId1");
+            }
+        });
+    }
+};
+
+final Map<String, Object> executeMbox2 = new HashMap<String, Object>() {
+    {
+        put("index", 1);
+        put("name", "mbox2");
+        put("parameters", new HashMap<String, String>() {
+            {
+                put("mbox_parameter_key2", "mbox_parameter_value2");
+            }
+        });
+    }
+};
+
+final List<Map<String, Object>> executeMboxes = new ArrayList<>();
+executeMboxes.add(executeMbox1);
+executeMboxes.add(executeMbox2);
+
+final Map<String, Object> request = new HashMap<String, Object>() {
+    {
+        put("execute", new HashMap<String, Object>() {
+            {
+                put("mboxes", executeMboxes);
+            }
+        });
+    }
+};
+
+Target.executeRawRequest(request, response -> {
+    System.out.println("Received Target raw response.");
+
+    if (response == null) {
+        System.out.println("Null Target response!");
+        return;
+    }
+
+    // handle response
+});
 ```
 
 <Variant platform="android" api="extension-version" repeat="5"/>
@@ -410,7 +360,7 @@ public String extensionVersion()
 Target.extensionVersion();
 ```
 
-<Variant platform="ios-aep" api="extension-version" repeat="7"/>
+<Variant platform="ios" api="extension-version" repeat="7"/>
 
 **Syntax**
 
@@ -432,29 +382,7 @@ let targetVersion = Target.extensionVersion
 NSString *targetVersion = [AEPMobileTarget extensionVersion];
 ```
 
-<Variant platform="ios-acp" api="extension-version" repeat="7"/>
-
-**Syntax**
-
-```objc
-+ (nonnull NSString*) extensionVersion;
-```
-
-**Example**
-
-**Swift** 
-
-```swift
-let targetVersion = ACPTarget.extensionVersion()
-```
-
-**Objective-C**
-
-```objc
-NSString *targetVersion = [ACPTarget extensionVersion];
-```
-
-<Variant platform="react-native" api="extension-version" repeat="5"/>
+<!--- <Variant platform="react-native" api="extension-version" repeat="5"/>
 
 #### JavaScript
 
@@ -470,7 +398,7 @@ extensionVersion(): Promise<string>
 ACPTarget.extensionVersion().then(version => {
             // read Target extension version 
 });
-```
+``` --->
 
 <Variant platform="android" api="get-session-id" repeat="6"/>
 
@@ -495,7 +423,7 @@ Target.getSessionId(new AdobeCallback<String>() {
 });
 ```
 
-<Variant platform="ios-aep" api="get-session-id" repeat="8"/>
+<Variant platform="ios" api="get-session-id" repeat="8"/>
 
 **Syntax**
 
@@ -523,10 +451,6 @@ Target.getSessionId { (id, err) in
 }];
 ```
 
-<Variant platform="ios-acp" api="get-session-id" repeat="1"/>
-
-This API is not available in Target iOS ACP 2.x SDK.
-
 <Variant platform="android" api="get-third-party-id" repeat="6"/>
 
 #### Java
@@ -550,7 +474,7 @@ Target.getThirdPartyId(new AdobeCallback<String>() {
 });
 ```
 
-<Variant platform="ios-aep" api="get-third-party-id" repeat="8"/>
+<Variant platform="ios" api="get-third-party-id" repeat="8"/>
 
 **Syntax**
 
@@ -578,35 +502,7 @@ Target.getThirdPartyId { (id, err) in
 }];
 ```
 
-<Variant platform="ios-acp" api="get-third-party-id" repeat="8"/>
-
-**Syntax**
-
-```objc
-+ (void) getThirdPartyId: (nonnull void (^) (NSString* __nullable thirdPartyId)) callback;
-```
-
-* _callback_ is invoked with the `thirdPartyId` value. If no third-party ID was set, this value will be `nil`.
-
-**Example**
-
-**Swift**
-
-```swift
-ACPTarget.getThirdPartyId({thirdPartyID in
-       // read Target thirdPartyId
-})
-```
-
-**Objective-C**
-
-```objc
-[ACPTarget getThirdPartyId:^(NSString *thirdPartyId){
-       // read Target thirdPartyId
-}];
-```
-
-<Variant platform="react-native" api="get-third-party-id" repeat="6"/>
+<!--- <Variant platform="react-native" api="get-third-party-id" repeat="6"/>
 
 #### JavaScript
 
@@ -624,7 +520,7 @@ getThirdPartyId(): Promise<string>
 ACPTarget.getThirdPartyId().then(thirdPartyId => {
             // read Target thirdPartyId 
 });
-```
+``` --->
 
 <Variant platform="android" api="get-tnt-id" repeat="6"/>
 
@@ -649,7 +545,7 @@ Target.getTntId(new AdobeCallback<String>() {
 });
 ```
 
-<Variant platform="ios-aep" api="get-tnt-id" repeat="8"/>
+<Variant platform="ios" api="get-tnt-id" repeat="8"/>
 
 **Syntax**
 
@@ -677,35 +573,7 @@ Target.getTntId({ (id, err) in
 }];
 ```
 
-<Variant platform="ios-acp" api="get-tnt-id" repeat="8"/>
-
-**Syntax**
-
-```objc
-+ (void) getTntId: (nonnull void (^) (NSString* __nullable tntId)) callback;
-```
-
-* _callback_ is invoked with the `tntId` value. If no Target ID was set, this value will be `nil`.
-
-**Example**
-
-**Swift**
-
-```swift
-ACPTarget.getTntId({tntId in
-       // read target's tntId
-})
-```
-
-**Objective-C**
-
-```objc
-[ACPTarget getTntId:^(NSString *tntId){
-       // read target's tntId
-}];
-```
-
-<Variant platform="react-native" api="get-tnt-id" repeat="6"/>
+<!--- <Variant platform="react-native" api="get-tnt-id" repeat="6"/>
 
 #### JavaScript
 
@@ -723,7 +591,7 @@ getTntId(): Promise<string>
 ACPTarget.getTntId().then(tntId => {
             // read target's tntId                         
 });
-```
+``` --->
 
 <Variant platform="android" api="prefetch-content" repeat="6"/>
 
@@ -780,7 +648,7 @@ TargetParamters targetParameters = null;
 Target.prefetchContent(prefetchMboxesList, targetParameters, prefetchStatusCallback);
 ```
 
-<Variant platform="ios-aep" api="prefetch-content" repeat="8"/>
+<Variant platform="ios" api="prefetch-content" repeat="8"/>
 
 **Syntax**
 
@@ -867,116 +735,7 @@ product:product];
 }];
 ```
 
-<Variant platform="ios-acp" api="prefetch-content" repeat="7"/>
-
-**Syntax**
-
-```objc
-+ (void) prefetchContent: (nonnull NSArray<ACPTargetPrefetchObject*>*) prefetchObjectArray
-          withParameters: (nullable ACPTargetParameters*) parameters
-                callback: (nullable void (^) (NSError* _Nullable error)) callback;
-```
-
-**Example**
-
-**Swift**
-
-```swift
-let mboxParameters1 = [
-"status": "platinum"
-]
-let profileParameters1 = [
-"age": "20"
-]
-let product1 = ACPTargetProduct(id: "24D3412", categoryId: "Books")
-let order1 = ACPTargetOrder(id: "ADCKKIM", total: NSNumber(value: 344.30), purchasedProductIds: ["34", "125"])
-
-let targetParameters1 = ACPTargetParameters(parameters: mboxParameters1, profileParameters: profileParameters1, product: product1, order: order1)
-
-let mboxParameters2 = [
-"userType": "Paid"
-]
-let product2 = ACPTargetProduct(id: "764334", categoryId: "Online")
-let order2 = ACPTargetOrder(id: "ADCKKIM", total: NSNumber(value: 344.30), purchasedProductIds: ["id1", "id2"])
-
-let targetParameters2 = ACPTargetParameters(parameters: mboxParameters2, profileParameters: nil, product: product2, order: order2)
-
-// Creating Prefetch Objects
-let prefetch1 = ACPTargetPrefetchObject(name: "logo", targetParameters: targetParameters1)
-
-let prefetch2 = ACPTargetPrefetchObject(name: "buttonColor", targetParameters: targetParameters2)
-
-// Creating prefetch Array
-let prefetchArray = [prefetch1, prefetch2]
-
-// Creating Target parameters
-let mboxParameters = [
-"status": "progressive"
-]
-let profileParameters = [
-"age": "20-32"
-]
-let product = ACPTargetProduct(id: "24D334", categoryId: "Stationary")
-let order = ACPTargetOrder(id: "ADCKKBC", total: NSNumber(value: 400.50), purchasedProductIds: ["34", "125"])
-
-let targetParameters = ACPTargetParameters(parameters: mboxParameters, profileParameters: profileParameters, product: product, order: order)
-
-// Target API Call
-ACPTarget.prefetchContent(prefetchArray, with: targetParameters, callback: { error in
-// do something with the callback response
-})
-```
-
-**Objective-C**
-
-```objc
-NSDictionary *mboxParameters1 = @{@"status":@"platinum"};
-NSDictionary *profileParameters1 = @{@"age":@"20"};
-ACPTargetProduct *product1 = [ACPTargetProduct targetProductWithId:@"24D3412" categoryId:@"Books"];
-ACPTargetOrder *order1 = [ACPTargetOrder targetOrderWithId:@"ADCKKIM" total:@(344.30) purchasedProductIds:@[@"34", @"125"]];
-
-ACPTargetParameters *targetParameters1 = [ACPTargetParameters targetParametersWithParameters:mboxParameters1
-profileParameters:profileParameters1
-product:product1
-order:order1];
-
-NSDictionary *mboxParameters2 = @{@"userType":@"Paid"};
-ACPTargetProduct *product2 = [ACPTargetProduct targetProductWithId:@"764334" categoryId:@"Online"];
-ACPTargetOrder *order2 = [ACPTargetOrder targetOrderWithId:@"ADCKKIM" total:@(344.30) purchasedProductIds:@[@"id1",@"id2"]];
-
-ACPTargetParameters *targetParameters2 = [ACPTargetParameters targetParametersWithParameters:mboxParameters2
-profileParameters:nil
-product:product2
-order:order2];
-
-// Creating Prefetch Objects
-ACPTargetPrefetchObject *prefetch1 = [ACPTargetPrefetchObject targetPrefetchObjectWithName:@"logo"
-targetParameters:targetParameters1];
-
-ACPTargetPrefetchObject *prefetch2 = [ACPTargetPrefetchObject targetPrefetchObjectWithName:@"buttonColor"
-targetParameters:targetParameters2];
-
-// Creating prefetch Array
-NSArray *prefetchArray = @[prefetch1,prefetch2];
-
-// Creating Target parameters
-NSDictionary *mboxParameters = @{@"status":@"progressive"};
-NSDictionary *profileParameters = @{@"age":@"20-32"};
-ACPTargetProduct *product = [ACPTargetProduct targetProductWithId:@"24D334" categoryId:@"Stationary"];
-ACPTargetOrder *order = [ACPTargetOrder targetOrderWithId:@"ADCKKBC" total:@(400.50) purchasedProductIds:@[@"34", @"125"]];
-
-ACPTargetParameters *targetParameters = [ACPTargetParameters targetParametersWithParameters:mboxParameters
-profileParameters:profileParameters
-product:product
-order:order];
-
-// Target API Call
-[ACPTarget prefetchContent:prefetchArray withParameters:targetParameters callback:^(NSError * _Nullable error){
-// do something with the callback response
-}];
-```
-
-<Variant platform="react-native" api="prefetch-content" repeat="6"/>
+<!--- <Variant platform="react-native" api="prefetch-content" repeat="6"/>
 
 #### JavaScript
 
@@ -1020,53 +779,19 @@ var targetParameters = new ACPTargetParameters(mboxParameters, profileParameters
 
 // Target API Call
 ACPTarget.prefetchContent(prefetchList, targetParameters).then(success => console.log(success)).catch(err => console.log(err));
-```
+``` --->
 
-<Variant platform="android" api="register-extension" repeat="5"/>
+<Variant platform="android" api="register-extension" repeat="1"/>
 
-#### Java
+This API has been deprecated from version 2.0.0. Instead, the extension should be registered by calling the `registerExtensions` API in Mobile Core. For more information, please read the [Mobile Core API guide](../../mobile-core/api-reference.md).
 
-**Syntax**
+<Variant platform="ios" api="register-extension" repeat="1"/>
 
-```java
-public static void registerExtension()
-```
+This API no longer exists in `Target`. Instead, the extension should be registered by calling the `registerExtensions` API in Mobile Core. Please see the updated SDK initialization steps at the [migrate to Swift tutorial](../migrate-to-swift.md#update-sdk-initialization).
 
-**Example**
+<!--- <Variant platform="react-native" api="register-extension" repeat="1"/>
 
-```java
-Target.registerExtension();
-```
-
-<Variant platform="ios-aep" api="register-extension" repeat="1"/>
-
-This API no longer exists in `Target`. Instead, the extension should be registered by calling the `registerExtensions` API in the MobileCore. Please see the updated SDK initialization steps at the [migrate to Swift tutorial](../migrate-to-swift.md#update-sdk-initialization).
-
-<Variant platform="ios-acp" api="register-extension" repeat="7"/>
-
-**Syntax**
-
-```objc
-+ (void) registerExtension;
-```
-
-**Example**
-
-**Swift**
-
-```swift
-ACPTarget.registerExtension()
-```
-
-**Objective-C**
-
-```objc
-[ACPTarget registerExtension];
-```
-
-<Variant platform="react-native" api="register-extension" repeat="1"/>
-
-When using React Native, register the Target extension with Mobile Core in native code as shown on the Android and iOS tabs.
+When using React Native, register the Target extension with Mobile Core in native code as shown on the Android and iOS tabs. --->
 
 <Variant platform="android" api="reset-experience" repeat="5"/>
 
@@ -1084,7 +809,7 @@ public static void resetExperience()
 Target.resetExperience();
 ```
 
-<Variant platform="ios-aep" api="reset-experience" repeat="7"/>
+<Variant platform="ios" api="reset-experience" repeat="7"/>
 
 **Syntax**
 
@@ -1106,29 +831,7 @@ Target.resetExperience()
 [AEPMobileTarget resetExperience];
 ```
 
-<Variant platform="ios-acp" api="reset-experience" repeat="7"/>
-
-**Syntax**
-
-```objc
-+ (void) resetExperience;
-```
-
-**Example**
-
-**Swift**
-
-```swift
-ACPTarget.resetExperience()
-```
-
-**Objective-C**
-
-```objc
-[ACPTarget resetExperience];
-```
-
-<Variant platform="react-native" api="reset-experience" repeat="5"/>
+<!--- <Variant platform="react-native" api="reset-experience" repeat="5"/>
 
 #### JavaScript
 
@@ -1142,7 +845,7 @@ resetExperience()
 
 ```javascript
 ACPTarget.resetExperience();
-```
+``` --->
 
 <Variant platform="android" api="retrieve-location-content" repeat="6"/>
 
@@ -1240,7 +943,7 @@ TargetParameters parameters = new TargetParameters.Builder().profileParameters(p
 Target.retrieveLocationContent(locationRequests, parameters);
 ```
 
-<Variant platform="ios-aep" api="retrieve-location-content" repeat="8"/>
+<Variant platform="ios" api="retrieve-location-content" repeat="8"/>
 
 **Syntax**
 
@@ -1355,111 +1058,7 @@ AEPTargetParameters *targetParameters = [[AEPTargetParameters alloc] initWithPar
 [AEPMobileTarget retrieveLocationContent: requestArray withParameters: targetParameters];
 ```
 
-<Variant platform="ios-acp" api="retrieve-location-content" repeat="8"/>
-
-**Syntax**
-
-```objc
-+ (void) retrieveLocationContent: (nonnull NSArray<ACPTargetRequestObject*>*) requests
-                  withParameters: (nullable ACPTargetParameters*) parameters;
-```
-
-* _requests_ is an NSArray of `ACPTargetRequestObject` objects for various mbox locations.
-* _parameters_ is the configured `ACPTargetParameters` for the load request.
-
-**Example**
-
-**Swift**
-
-```swift
-let mboxParameters1 = [
-"status": "platinum"
-]
-let product1 = ACPTargetProduct(id: "24D3412", categoryId: "Books")
-let order1 = ACPTargetOrder(id: "ADCKKIM", total: NSNumber(value: 344.30), purchasedProductIds: ["a", "b"])
-
-let mboxParameters2 = [
-"userType": "Paid"
-]
-let product2 = ACPTargetProduct(id: "764334", categoryId: "Online")
-let order2 = ACPTargetOrder(id: "4t4uxksa", total: NSNumber(value: 54.90), purchasedProductIds: ["id1", "id2"])
-
-let params1 = ACPTargetParameters(parameters: mboxParameters1, profileParameters: nil, product: product1, order: order1)
-let request1 = ACPTargetRequestObject(name: "logo", targetParameters: params1, defaultContent: "BlueWhale", callback: { content in
-// do something with the received content
-})
-
-let params2 = ACPTargetParameters(parameters: mboxParameters2, profileParameters: nil, product: product2, order: order2)
-let request2 = ACPTargetRequestObject(name: "logo", targetParameters: params2, defaultContent: "red", callback: { content in
-// do something with the received content
-})
-
-// Create request object array
-let requestArray = [request1, request2]
-
-// Creating Target parameters
-let mboxParameters = [
-"status": "progressive"
-]
-let profileParameters = [
-"age": "20-32"
-]
-let product = ACPTargetProduct(id: "24D334", categoryId: "Stationary")
-let order = ACPTargetOrder(id: "ADCKKBC", total: NSNumber(value: 400.50), purchasedProductIds: ["34", "125"])
-
-let targetParameters = ACPTargetParameters(parameters: mboxParameters, profileParameters: profileParameters, product: product, order: order)
-
-// Call the API
-ACPTarget.retrieveLocationContent(requestArray, with: targetParameters)
-```
-
-**Objective-C**
-
-```objc
-NSDictionary *mboxParameters1 = @{@"status":@"platinum"};
-ACPTargetProduct *product1 = [ACPTargetProduct targetProductWithId:@"24D3412" categoryId:@"Books"];
-ACPTargetOrder *order1 = [ACPTargetOrder targetOrderWithId:@"ADCKKIM" total:@(344.30) purchasedProductIds:@[@"a", @"b"]];
-
-NSDictionary *mboxParameters2 = @{@"userType":@"Paid"};
-ACPTargetProduct *product2 = [ACPTargetProduct targetProductWithId:@"764334" categoryId:@"Online"];
-ACPTargetOrder *order2 = [ACPTargetOrder targetOrderWithId:@"4t4uxksa" total:@(54.90) purchasedProductIds:@[@"id1",@"id2"]];
-
-ACPTargetParameters *params1 = [ACPTargetParameters targetParametersWithParameters:mboxParameters1
-                                                    profileParameters:nil
-                                                              product:product1
-                                                                order:order1];
-ACPTargetRequestObject *request1 = [ACPTargetRequestObject targetRequestObjectWithName:@"logo" targetParameters:params1
-defaultContent:@"BlueWhale" callback:^(NSString * _Nullable content) {
-    // do something with the received content
-  }];
-
-ACPTargetParameters *params2 = [ACPTargetParameters targetParametersWithParameters:mboxParameters2
-                                                    profileParameters:nil
-                                                              product:product2
-                                                                order:order2];
-ACPTargetRequestObject *request2 = [ACPTargetRequestObject targetRequestObjectWithName:@"logo" targetParameters:params2
-defaultContent:@"red" callback:^(NSString * _Nullable content) {
-    // do something with the received content
-  }];
-
-// Create request object array
-NSArray *requestArray = @[request1,request2];
-
-// Creating Target parameters
-NSDictionary *mboxParameters = @{@"status":@"progressive"};
-NSDictionary *profileParameters = @{@"age":@"20-32"};
-ACPTargetProduct *product = [ACPTargetProduct targetProductWithId:@"24D334" categoryId:@"Stationary"];
-ACPTargetOrder *order = [ACPTargetOrder targetOrderWithId:@"ADCKKBC" total:@(400.50) purchasedProductIds:@[@"34", @"125"]];
-
-ACPTargetParameters *targetParameters = [ACPTargetParameters targetParametersWithParameters:mboxParameters
-                                                    profileParameters:profileParameters
-                                                              product:product
-                                                                order:order];
-// Call the API
-[ACPTarget retrieveLocationContent:requestArray withParameters:targetParameters];
-```
-
-<Variant platform="react-native" api="retrieve-location-content" repeat="6"/>
+<!--- <Variant platform="react-native" api="retrieve-location-content" repeat="6"/>
 
 #### JavaScript
 
@@ -1513,7 +1112,53 @@ var targetParameters = new ACPTargetParameters(mboxParameters, profileParameters
 
 // Target API Call
 ACPTarget.retrieveLocationContent(requestArray, targetParameters);
+``` --->
+
+<Variant platform="android" api="send-raw-notifications" repeat="5"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void sendRawNotifications(final Map<String, Object> request)
 ```
+
+* `request`: A map containing notifications data in the Target v1 delivery API request format.
+
+**Example**
+
+```java
+final List<Map<String, Object>> notifications = new ArrayList<>();
+final Map<String, Object> notification = new HashMap<String, Object>() {
+    {
+        put("id", "0");
+        put("timestamp", (long)(System.currentTimeMillis()));
+        put("type", "click");
+        put("mbox", new HashMap<String, Object>() {
+            {
+                put("name", "mbox1");
+            }
+        });
+        put("tokens", new ArrayList<String>() {
+            {
+                add("someClickToken");
+            }
+        });
+        put("parameters", new HashMap<String, Object>() {
+            {
+                put("mbox_parameter_key3", "mbox_parameter_value3");
+            }
+        });
+    }
+};
+notifications.add(notification);
+final Map<String, Object> request = new HashMap<>();
+request.put("notifications", notifications);
+Target.sendRawNotifications(request);
+```
+
+
 
 <Variant platform="android" api="set-preview-restart-deep-link" repeat="6"/>
 
@@ -1533,7 +1178,7 @@ public static void setPreviewRestartDeepLink(final Uri deepLink)
 Target.setPreviewRestartDeepLink("myapp://HomePage");
 ```
 
-<Variant platform="ios-aep" api="set-preview-restart-deep-link" repeat="8"/>
+<Variant platform="ios" api="set-preview-restart-deep-link" repeat="8"/>
 
 **Syntax**
 
@@ -1559,31 +1204,7 @@ if let url = URL(string: "myapp://HomePage") {
 [AEPMobileTarget setPreviewRestartDeepLink:@"myapp://HomePage"];
 ```
 
-<Variant platform="ios-acp" api="set-preview-restart-deep-link" repeat="8"/>
-
-**Syntax**
-
-```objc
-+ (void) setPreviewRestartDeeplink: (nonnull NSURL*) deeplink;
-```
-
-* _deeplink_ is an NSURL that contains the preview restart deeplink.
-
-**Example**
-
-**Swift**
-
-```swift
-ACPTarget.setPreviewRestartDeepLink("myapp://HomePage")
-```
-
-**Objective-C**
-
-```objc
-[ACPTarget setPreviewRestartDeepLink:@"myapp://HomePage"];
-```
-
-<Variant platform="react-native" api="set-preview-restart-deep-link" repeat="6"/>
+<!--- <Variant platform="react-native" api="set-preview-restart-deep-link" repeat="6"/>
 
 #### JavaScript
 
@@ -1599,7 +1220,8 @@ setPreviewRestartDeeplink(deepLink: string)
 
 ```javascript
 ACPTarget.setPreviewRestartDeeplink("myapp://HomePage");
-```
+``` --->
+
 
 <Variant platform="android" api="set-session-id" repeat="6"/>
 
@@ -1619,7 +1241,7 @@ public static void setSessionId(final String sessionId)
 Target.setSessionId("3f24b997-ea74-420c-81f8-96a8b92c3961");
 ```
 
-<Variant platform="ios-aep" api="set-session-id" repeat="8"/>
+<Variant platform="ios" api="set-session-id" repeat="8"/>
 
 **Syntax**
 
@@ -1643,10 +1265,6 @@ Target.setSessionId("3f24b997-ea74-420c-81f8-96a8b92c3961")
 [AEPMobileTarget setSessionId:@"3f24b997-ea74-420c-81f8-96a8b92c3961"]
 ```
 
-<Variant platform="ios-acp" api="set-session-id" repeat="1"/>
-
-This API is not available in Target iOS ACP 2.x SDK.
-
 <Variant platform="android" api="set-third-party-id" repeat="6"/>
 
 #### Java
@@ -1665,7 +1283,7 @@ public static void setThirdPartyId(final String thirdPartyId)
 Target.setThirdPartyId("third-party-id");
 ```
 
-<Variant platform="ios-aep" api="set-third-party-id" repeat="8"/>
+<Variant platform="ios" api="set-third-party-id" repeat="8"/>
 
 **Syntax**
 
@@ -1689,31 +1307,7 @@ Target.setThirdPartyId("third-party-id")
 [AEPMobileTarget setThirdPartyId:@"third-party-id"]
 ```
 
-<Variant platform="ios-acp" api="set-third-party-id" repeat="8"/>
-
-**Syntax**
-
-```objc
-+ (void) setThirdPartyId: (nullable NSString*) thirdPartyId;
-```
-
-* _thirdPartyId_ is a NSString that contains the custom visitor ID to be set in Target.
-
-**Example**
-
-**Swift**
-
-```swift
-ACPTarget.setThirdPartyId("third-party-id")
-```
-
-**Objective-C**
-
-```objc
-[ACPTarget setThirdPartyId:@"third-party-id"];
-```
-
-<Variant platform="react-native" api="set-third-party-id" repeat="6"/>
+<!--- <Variant platform="react-native" api="set-third-party-id" repeat="6"/>
 
 #### JavaScript
 
@@ -1729,7 +1323,7 @@ setThirdPartyId(thirdPartyId: string)
 
 ```javascript
 ACPTarget.setThirdPartyId("third-party-id");
-```
+``` --->
 
 <Variant platform="android" api="set-tnt-id" repeat="6"/>
 
@@ -1749,7 +1343,7 @@ public static void setTntId(final String tntId)
 Target.setTntId("f741a5d5-09c0-4931-bf53-b9e568c5f782.35_0");
 ```
 
-<Variant platform="ios-aep" api="set-tnt-id" repeat="8"/>
+<Variant platform="ios" api="set-tnt-id" repeat="8"/>
 
 **Syntax**
 
@@ -1773,17 +1367,17 @@ Target.setTntId("f741a5d5-09c0-4931-bf53-b9e568c5f782.35_0")
 [AEPMobileTarget setTntId:@"f741a5d5-09c0-4931-bf53-b9e568c5f782.35_0"]
 ```
 
-<Variant platform="ios-acp" api="set-tnt-id" repeat="1"/>
-
-This API is not available in Target iOS ACP 2.x SDK.
-
 <Variant platform="android" api="visual-preview" repeat="2"/>
 
 On Android, when the application is launched as a result of a deep link, the `collectLaunchInfo` API is internally invoked, and the Target activity and deep link information is extracted from the Intent extras.
 
+<InlineNestedAlert variant="info" header="false" iconPosition="left">
+
 The SDK can only collect information from the launching Activity if [`setApplication`](../mobile-core/api-reference.md#application-reference-android-only) has been called. Setting the Application is only necessary on an Activity that is also an entry point for your application. However, setting the Application on each Activity has no negative impact and ensures that the SDK always has the necessary reference to your Application. We recommend that you call `setApplication` in each of your Activities.
 
-<Variant platform="ios-aep" api="visual-preview" repeat="11"/>
+</InlineNestedAlert>
+
+<Variant platform="ios" api="visual-preview" repeat="11"/>
 
 To enter the visual preview mode, use the `collectLaunchInfo` API to enable the mode, and select the red floating button that appears on the app screen.
 
@@ -1813,38 +1407,6 @@ public static func collectLaunchInfo(_ userInfo: [String: Any])
 
 ```objectivec
  [AEPMobileCore collectLaunchInfo:@{@"adb_deeplink" : @"com.adobe.targetpreview://app.adobetarget.com?at_preview_token=tokenFromTarget"}];
-```
-
-<Variant platform="ios-acp" api="visual-preview" repeat="11"/>
-
-To enter the visual preview mode, use the `collectLaunchInfo` API to enable the mode, and select the red floating button that appears on the app screen.
-
-**Swift**
-
-**Syntax**
-
-```swift
-open class func collectLaunchInfo(_ userinfo: [AnyHashable: Any])
-```
-
-**Example**
-
-```swift
-ACPCore.collectLaunchInfo(["adb_deeplink" : "com.adobe.targetpreview://app.adobetarget.com?at_preview_token=tokenFromTarget"])
-```
-
-**Objective-C**
-
-**Syntax**
-
-```objectivec
-+ (void) collectLaunchInfo: (nonnull NSDictionary*) userInfo;
-```
-
-**Example**
-
-```objectivec
-[ACPCore collectLaunchInfo: @{@"adb_deeplink":@"com.adobe.targetpreview://app.adobetarget.com?at_preview_token=tokenFromTarget"}];`
 ```
 
 <Variant platform="android" api="target-request" repeat="4"/>
@@ -1885,7 +1447,7 @@ public class TargetRequest extends TargetObject {
 }
 ```
 
-<Variant platform="ios-aep" api="target-request" repeat="10"/>
+<Variant platform="ios" api="target-request" repeat="10"/>
 
 #### TargetRequest
 
@@ -1987,39 +1549,7 @@ AEPTargetRequestObject *request2 = [[AEPTargetRequestObject alloc] initWithMboxN
 }];
 ```
 
-<Variant platform="ios-acp" api="target-request" repeat="8"/>
-
-#### ACPTargetRequestObject
-
-This class extends `ACPTargetPrefetchObject` by adding default content and a callback block that will be invoked to return mbox content from Target.
-
-**Objective-C**
-
-**Syntax**
-
-```objc
-@interface ACPTargetRequestObject : ACPTargetPrefetchObject
-
-/* The default content that will be returned if Target servers are unreachable */   
-@property(nonatomic, strong, nonnull) NSString* defaultContent;
-
-/* Optional. When batch requesting Target locations, callback will be invoked when content is available for this location. */
-@property(nonatomic, strong, nullable) void (^callback)(NSString* __nullable content);
-@end
-```
-
-**Example**
-
-The following method can be used to create an instance of ACPTargetRequestObject that might be used to make a batch request to the configured Target server to fetch content for mbox locations.
-
-```objc
-+ (nonnull instancetype) targetRequestObjectWithName: (nonnull NSString*) name
-                                    targetParameters: (nullable ACPTargetParameters*) targetParameters
-                                      defaultContent: (nonnull NSString*) defaultContent
-                                            callback: (nullable void (^) (NSString* __nullable content)) callback;
-```
-
-<Variant platform="react-native" api="target-request" repeat="5"/>
+<!--- <Variant platform="react-native" api="target-request" repeat="5"/>
 
 #### ACPTargetRequestObject
 
@@ -2038,7 +1568,7 @@ class ACPTargetRequestObject extends ACPTargetPrefetchObject {
     this.defaultContent = defaultContent;
   }
 }
-```
+``` --->
 
 <Variant platform="android" api="target-prefetch" repeat="4"/>
 
@@ -2060,7 +1590,7 @@ public class TargetPrefetch extends TargetObject {
 }
 ```
 
-<Variant platform="ios-aep" api="target-prefetch" repeat="11"/>
+<Variant platform="ios" api="target-prefetch" repeat="11"/>
 
 #### TargetPrefetch
 
@@ -2104,37 +1634,7 @@ The following example can be used to create an instance of a TargetPrefetch obje
 AEPTargetPrefetchObject *prefetch = [[AEPTargetPrefetchObject alloc] initWithName:@"mboxName" targetParameters:nil];
 ```
 
-<Variant platform="ios-acp" api="target-prefetch" repeat="8"/>
-
-#### ACPTargetPrefetchObject
-
-This class contains the name of the Target location/mbox and target parameters to be used in a prefetch request.
-
-**Objective-C**
-
-**Syntax**
-
-```objc
-@interface ACPTargetPrefetchObject : NSObject
-
-/* The name of the Target location/mbox */
-@property(nonatomic, strong, nullable) NSString* name;
-
-/* Target parameters associated with the prefetch object. You can set all other parameters in this object */
-@property(nonatomic, strong, nullable) ACPTargetParameters* targetParameters;
-@end
-```
-
-**Example**
-
-The following method can be used to create an instance of ACPTargetPrefetchObject that might be used to make a prefetch request to the configured Target server to prefetch content for mbox locations.
-
-```objc
-+ (nonnull instancetype) targetPrefetchObjectWithName: (nonnull NSString*) name
-                                     targetParameters: (nullable ACPTargetParameters*) targetParameters;
-```
-
-<Variant platform="react-native" api="target-prefetch" repeat="5"/>
+<!--- <Variant platform="react-native" api="target-prefetch" repeat="5"/>
 
 #### ACPTargetPrefetchObject
 
@@ -2155,7 +1655,7 @@ class ACPTargetPrefetchObject {
   }
 
 }
-```
+``` --->
 
 <Variant platform="android" api="target-parameters" repeat="4"/>
 
@@ -2233,7 +1733,7 @@ public class TargetParameters {
 }
 ```
 
-<Variant platform="ios-aep" api="target-parameters" repeat="6"/>
+<Variant platform="ios" api="target-parameters" repeat="6"/>
 
 #### TargetParameters
 
@@ -2270,36 +1770,7 @@ public class TargetParameters: NSObject, Codable {
 
 Examples for creating instances of TargetParameters can be seen in the [Target overview](./index.md#target-parameters).
 
-<Variant platform="ios-acp" api="target-parameters" repeat="6"/>
-
-#### ACPTargetParameters
-
-This class contains mbox parameters dictionary, profile parameters dictionary, ACPTargetOrder object as well as ACPTargetProduct object.
-
-**Objective-C**
-
-**Syntax**
-
-```objc
-@interface ACPTargetParameters : NSObject
-
-/* Dictionary containing key-value pairs of parameters */
-@property(nonatomic, strong, nullable) NSDictionary<NSString*, NSString*>* parameters;
-
-/* Dictionary containing key-value pairs of profile parameters */
-@property(nonatomic, strong, nullable) NSDictionary<NSString*, NSString*>* profileParameters;
-
-/* ACPTargetOrder object */
-@property(nonatomic, strong, nullable) ACPTargetOrder* order;
-
-/* ACPTargetProduct object */
-@property(nonatomic, strong, nullable) ACPTargetProduct* product;
-@end
-```
-
-Examples for creating instances of ACPTargetParameters can be seen in the [Target overview](./index.md#target-parameters)
-
-<Variant platform="react-native" api="target-parameters" repeat="5"/>
+<!--- <Variant platform="react-native" api="target-parameters" repeat="5"/>
 
 #### ACPTargetParameters
 
@@ -2323,7 +1794,7 @@ class ACPTargetParameters {
     this.order = order;
   }
 }
-```
+``` --->
 
 <Variant platform="android" api="target-order" repeat="5"/>
 
@@ -2369,7 +1840,7 @@ public class TargetOrder {
 }
 ```
 
-<Variant platform="ios-aep" api="target-order" repeat="6"/>
+<Variant platform="ios" api="target-order" repeat="6"/>
 
 #### TargetOrder
 
@@ -2402,33 +1873,7 @@ public class TargetOrder: NSObject, Codable {
 
 Examples for creating instances of TargetOrder can be seen in the [Target overview](./index.md#arget-order-class).
 
-<Variant platform="ios-acp" api="target-order" repeat="6"/>
-
-#### ACPTargetOrder
-
-This class contains orderId, total, and an array for purchasedProductIds.
-
-**Objective-C**
-
-**Syntax**
-
-```objc
-@interface ACPTargetOrder : NSObject
-
-/* Order ID */
-@property(nonatomic, strong, nonnull) NSString* orderId;
-
-/* Order total */
-@property(nonatomic, strong, nullable) NSNumber* total;
-
-/* Array of Purchased Product Ids */
-@property(nonatomic, strong, nullable) NSArray<NSString*>* purchasedProductIds;
-@end
-```
-
-Examples for creating instances of ACPTargetOrder can be seen in the [Target overview](./index.md#target-order-class)
-
-<Variant platform="react-native" api="target-order" repeat="5"/>
+<!--- <Variant platform="react-native" api="target-order" repeat="5"/>
 
 #### ACPTargetOrder
 
@@ -2450,7 +1895,7 @@ class ACPTargetOrder {
     this.purchasedProductIds = purchasedProductIds;
   }
 }
-```
+``` --->
 
 <Variant platform="android" api="target-product" repeat="4"/>
 
@@ -2487,7 +1932,7 @@ public class TargetProduct {
 }
 ```
 
-<Variant platform="ios-aep" api="target-product" repeat="6"/>
+<Variant platform="ios" api="target-product" repeat="6"/>
 
 #### TargetProduct
 
@@ -2517,30 +1962,7 @@ public class TargetProduct: NSObject, Codable {
 
 Examples for creating instances of TargetProduct can be seen in the [Target overview](./index.md#target-product-class)
 
-<Variant platform="ios-acp" api="target-product" repeat="6"/>
-
-#### ACPTargetProduct
-
-This class contains productId and categoryId.
-
-**Objective-C**
-
-**Syntax**
-
-```objc
-@interface ACPTargetProduct : NSObject
-
-/* Product ID */
-@property(nonatomic, strong, nullable) NSString* productId;
-
-/* Category ID */
-@property(nonatomic, strong, nullable) NSString* categoryId;
-@end
-```
-
-Examples for creating instances of ACPTargetProduct can be seen in the [Target overview](./index.md#target-product-class)
-
-<Variant platform="react-native" api="target-product" repeat="5"/>
+<!--- <Variant platform="react-native" api="target-product" repeat="5"/>
 
 #### ACPTargetProduct
 
@@ -2560,7 +1982,7 @@ class ACPTargetProduct {
     this.categoryId = categoryId;
   }
 }
-```
+``` --->
 
 <Variant platform="android" api="target-callback" repeat="4"/>
 
@@ -2589,3 +2011,4 @@ public interface AdobeTargetDetailedCallback {
     void fail(final AdobeError error);
 }
 ```
+

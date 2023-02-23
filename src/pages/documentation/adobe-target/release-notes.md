@@ -1,5 +1,27 @@
 # Release Notes
 
+## February 9, 2023
+
+### Android Target 2.0.0
+
+* Major version update for [Adobe Target](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-target-android).
+
+Please note that the following improvements have been made in the current release:
+
+1. The below APIs have been renamed for alignment with the Adobe Target Mobile SDK for iOS:
+* `locationsDisplayed` is now `displayedLocations`
+* `locationClicked` is now `clickedLocation`
+
+2. The public classes `TargetRequest`, `TargetPrefetch`, `TargetOrder`, `TargetProduct` and `TargetParameters` are consolidated under the `target` subpackage and require updating the import statements as shown below:
+
+```java
+import com.adobe.marketing.mobile.target.TargetRequest;
+import com.adobe.marketing.mobile.target.TargetPrefetch;
+import com.adobe.marketing.mobile.target.TargetOrder;
+import com.adobe.marketing.mobile.target.TargetProduct;
+import com.adobe.marketing.mobile.target.TargetParameters;
+```
+
 ## August 2, 2022
 
 ### Android Target 1.3.0
@@ -8,7 +30,7 @@ Added getter and setter APIs for Target tnt IDs and session IDs to enable cross-
 
 * The `setSessionId` API should be invoked prior to any Target request to prevent the Mobile SDK from generating a session ID locally. The set session ID will follow the session expiry as governed by the `target.sessionTimeout` configuration setting. You can use this API in conjunction with `setTntId` API to set both of the value in the SDK.
 * The `setTntId` API, when invoked, also sets the Target edge host value in the SDK by deriving it from the profile location hint supplied in the tnt ID.
-* The `getSessionId` and `getTntId` APIs can be used to retrieve the current Target session ID and tnt ID values respectively. 
+* The `getSessionId` and `getTntId` APIs can be used to retrieve the current Target session ID and tnt ID values respectively.
 
 ## July 29, 2022
 
@@ -71,19 +93,7 @@ Added getter and setter APIs for Target tnt IDs and session IDs to enable cross-
 
 * Added the changes to move away from bintray and start using Sonatype to push the SDK to Maven Central.
 
-## December 18, 2020
-
-### iOS Target 2.2.0
-
-* The AEP SDKs are now distributed using XCFrameworks in order to support hardware with the new Apple M1 architecture while maintaining support for existing Intel architecture.
-  * **IMPORTANT**: Upgrading to XCFrameworks distribution requires Xcode 12.0 or newer
-  * **IMPORTANT**: If using Cocoapods, upgrading to the XCFrameworks distribution requires Cocoapods 1.10.0 or newer
-
 ## Aug 31, 2020
-
-### iOS Target 2.1.7
-
-* Added support for configuration option `target.server` which enables a custom host to be used for Target requests. This configuration option is available in the Adobe Target Launch extension starting with version 2.4.0.
 
 ### Android Target 1.1.6
 
@@ -100,20 +110,11 @@ The following updates were made in this release:
 * Target Session Id will now be added as a context data parameter `a.target.sessionId` in the internal Analytics for Target hit sent to Adobe Analytics.
 * Fixed an issue, where on app close and relaunch, previously persisted tntId was not being sent in Target requests.
 
-## March 10, 2020
-
-The following updates were made in this release:
-
-### iOS Target 2.1.6
-
-* Report extension details to Mobile Core for improved logging and Griffon support.
-* Target Session Id will now be added as a context data parameter `a.target.sessionId` in the internal Analytics for Target hit sent to Adobe Analytics.
-
 ## January 29, 2020
 
 The following updates were made in this release:
 
-**Android Target 1.1.4 and iOS Target 2.1.5**
+**Android Target 1.1.4**
 
 * Improved existing log messages and added additional logging to assist with debugging.
 
@@ -121,28 +122,16 @@ The following updates were made in this release:
 
 The following updates were made in this release:
 
-### iOS Target 2.1.4
-
-* The Target session ID and Edge Host will now be persisted in `NSUserDefaults`. If there is no activity for the configured `target.sessionTimeout`, these variables will be reset. The default session timeout value is 30 minutes.    
-
 ### Android Target 1.1.3
 
 * The Target session ID and Edge Host will now be persisted in Shared Preferences. If there is no activity for the configured `target.sessionTimeout`, these variables will be reset. The default session timeout value is 30 minutes.    
 * Fixed an issue where the null `at_property` key, which was passed in mbox parameters, was being sent in Target requests.
 
-## August 8, 2019
-
-The following updates were made in this release:
-
-### iOS Target 2.1.3
-
-* Fixed a bug that, when prefetchContent is called with a nil callback, caused a crash in iOS.
-
 ## August 6, 2019
 
 The following updates were made in this release:
 
-### iOS Target 2.1.2 and Android Target 1.1.2
+### Android Target 1.1.2
 
 * `target.previewEnabled`, a new configuration Boolean key, has been added. This key is used to enable/disable Target Preview.
 
@@ -154,14 +143,14 @@ The following updates were made in this release:
 
 The following updates were made in this release:
 
-### iOS Target 2.1.1 and Android Target 1.1.1
+### Android Target 1.1.1
 
 * Use the `target.propertyToken` configuration setting to configure the `at_property_token` that is generated from the Target UI, instead of passing the token as an mbox parameter.
 * Fixed an issue where JSON offers were not being returned as content but instead default content was served.
 
 ## May 15, 2019
 
-### iOS Target 2.1.0 and Android Target 1.1.0
+### Android Target 1.1.0
 
 * Upgraded the Target Delivery APIs to latest v1 delivery endpoint.
 * Introduced `retrieveLocationContent`, a new API that retrieves content for multiple Target mbox locations simultaneously without increasing the reporting count for prefetch cases.
@@ -180,4 +169,3 @@ The Target Client Code is now automatically added based on your Experience Cloud
 
 * If no code is found, you can type it in.
 * If multiple codes are found, you can select the code from the drop-down list.
-

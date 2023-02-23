@@ -1,13 +1,19 @@
-<Variant platform="android" task="add" repeat="5"/>
+<Variant platform="android" task="add" repeat="6"/>
 
 #### Java
 
 1. Add the Mobile Core and Target extensions to your project using the app's Gradle file.
 
 ```java
-implementation 'com.adobe.marketing.mobile:sdk-core:1.+'
-implementation 'com.adobe.marketing.mobile:target:1.+'
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:target:2.+'
 ```
+
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+
+</InlineNestedAlert>
 
 2. Import the Target extension to your application's main activity.
 
@@ -15,7 +21,7 @@ implementation 'com.adobe.marketing.mobile:target:1.+'
 import com.adobe.marketing.mobile.*;
 ```
 
-<Variant platform="ios-aep" task="add" repeat="7"/>
+<Variant platform="ios" task="add" repeat="7"/>
 
 1. Add the AEPCore, AEPIdentity, and AEPTarget CocoaPods to your project via your `Podfile`.
 
@@ -43,35 +49,7 @@ pod 'AEPTarget','~>3.0'
     @import AEPIdentity
 ```
 
-<Variant platform="ios-acp" task="add" repeat="7"/>
-
-1. Add the ACPCore and ACPTarget CocoaPods to your project via your `Podfile`.
-
-```ruby
-pod 'ACPCore','~>2.0'
-pod 'ACPTarget','~>2.0'
-```
-
-2. Import the Target and Identity libraries.
-
-**Swift**
-
-```swift
-    import ACPCore
-    import ACPTarget
-```
-
-**Objective-C**
-
-```objectivec
-    #import "ACPCore.h"
-    #import "ACPTarget.h"
-    #import "ACPIdentity.h"
-    #import "ACPTargetRequestObject.h"
-    #import "ACPTargetPrefetchObject.h"
-```
-
-<Variant platform="react-native" task="add" repeat="7"/>
+<!--- <Variant platform="react-native" task="add" repeat="7"/>
 
 #### JavaScript
 
@@ -92,37 +70,66 @@ import {ACPTarget, ACPTargetPrefetchObject, ACPTargetRequestObject, ACPTargetOrd
 
 ```javascript
 ACPTarget.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPTarget version: " + version));
-```
+``` --->
 
-<Variant platform="android" task="register" repeat="4"/>
+<Variant platform="android" task="register" repeat="5"/>
 
 #### Java
 
 In your Application's `onCreate()` method, after calling the `setApplication()` method, register Target with Mobile Core.
 
-Here is code sample that calls these set up methods:
-
 ```java
-public class TargetApp extends Application {
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Target;
+import com.adobe.marketing.mobile.AdobeCallback;
 
- @Override
- public void onCreate() {
-     super.onCreate();
-     MobileCore.setApplication(this);
-     MobileCore.configureWithAppId("yourAppId");
+public class MainApp extends Application {
 
-     try {
-         Target.registerExtension();
-         Identity.registerExtension();
-         MobileCore.start(null);
-     } catch (Exception e) {
-         //Log the exception
-     }
- }
+  private final String ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID";
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        MobileCore.setApplication(this);
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
+
+        MobileCore.registerExtensions(
+            Arrays.asList(Target.EXTENSION),
+            o -> Log.d("MainApp", "Adobe Target Mobile SDK was initialized.")
+        );
+    }
 }
 ```
 
-<Variant platform="ios-aep" task="register" repeat="5"/>
+#### Kotlin
+
+```java
+import com.adobe.marketing.mobile.MobileCore
+import com.adobe.marketing.mobile.Target
+import com.adobe.marketing.mobile.AdobeCallback
+
+class MainApp : Application() {
+
+  private var ENVIRONMENT_FILE_ID: String = "YOUR_APP_ENVIRONMENT_ID"
+
+    override fun onCreate() {
+        super.onCreate()
+
+        MobileCore.setApplication(this)
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
+
+        MobileCore.registerExtensions(
+          listOf(Target.EXTENSION)
+        ) {
+          Log.d("MainApp", "Adobe Target Mobile SDK was initialized")
+        }
+    }
+
+}
+```
+
+<Variant platform="ios" task="register" repeat="5"/>
 
 #### Swift
 
@@ -153,37 +160,7 @@ In your app's `didFinishLaunchingWithOptions` function, register the Target exte
 }
 ```
 
-<Variant platform="ios-acp" task="register" repeat="5"/>
-
-#### Swift
-
-```swift
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-  ACPCore.configure(withAppId: "yourAppId")   
-  ACPTarget.registerExtension()
-  ACPIdentity.registerExtension()
-  ACPCore.start(nil)
-  // Override point for customization after application launch.
-  return true
-}
-```
-
-#### Objective-C
-
-In your app's `didFinishLaunchingWithOptions` function, register the Target extension with Mobile Core:
-
-```objectivec
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  [ACPCore configureWithAppId:@"yourAppId"];
-  [ACPTarget registerExtension];
-  [ACPIdentity registerExtension];
-  [ACPCore start:nil];
-  // Override point for customization after application launch.
-  return YES;
-}
-```
-
-<Variant platform="react-native" task="register" repeat="3"/>
+<!--- <Variant platform="react-native" task="register" repeat="3"/>
 
 To register the Target extension with the Mobile Core extension, use the following API:
 
@@ -191,7 +168,7 @@ To register the Target extension with the Mobile Core extension, use the followi
 
 ```javascript
 ACPTarget.registerExtension();
-```
+``` --->
 
 <Variant platform="android" task="target-order" repeat="5"/>
 
@@ -212,7 +189,7 @@ purchasedProductIds.add("125");
 TargetOrder targetOrder = new TargetOrder("123", 567.89, purchasedProductIds);
 ```
 
-<Variant platform="ios-aep" task="target-order" repeat="10"/>
+<Variant platform="ios" task="target-order" repeat="10"/>
 
 #### Swift
 
@@ -242,43 +219,13 @@ let order = TargetOrder(id: "id1", total: 1.0, purchasedProductIds: ["ppId1"])
 AEPTargetOrder *order = [[AEPTargetOrder alloc] initWithId:@"id1" total:1.0 purchasedProductIds:@[@"ppId1"]];
 ```
 
-<Variant platform="ios-acp" task="target-order" repeat="10"/>
-
-#### Swift
-
-**Syntax**
-
-```swift
-public convenience init(id orderId: String, total: NSNumber?, purchasedProductIds: [String]?)
-```
-
-**Example**
-
-```swift
-let order = ACPTargetOrder(id: "ADCKKBC", total: NSNumber(value: 400.50), purchasedProductIds: ["34", "125"])
-```
-
-#### Objective-C
-
-**Syntax**
-
-```objectivec
-+ (nonnull instancetype) targetOrderWithId: (nonnull NSString*) orderId total: (nullable NSNumber*) total purchasedProductIds: (nullable NSArray <NSString*>*)  purchasedProductIds;
-```
-
-**Example**
-
-```objectivec
-ACPTargetOrder *order = [ACPTargetOrder targetOrderWithId:@"ADCKKBC" total:@(400.50) purchasedProductIds:@[@"34", @"125"]];
-```
-
-<Variant platform="react-native" task="target-order" repeat="2"/>
+<!--- <Variant platform="react-native" task="target-order" repeat="2"/>
 
 **JavaScript**
 
 ```javascript
 var targetOrder = new ACPTargetOrder("ADCKKBC", 400.50, ["34","125"]);
-```
+``` --->
 
 <Variant platform="android" task="target-product" repeat="5"/>
 
@@ -296,7 +243,7 @@ public TargetProduct(final String id, final String categoryId)
 TargetProduct targetProduct = new TargetProduct("123", "Books");
 ```
 
-<Variant platform="ios-aep" task="target-product" repeat="10"/>
+<Variant platform="ios" task="target-product" repeat="10"/>
 
 #### Swift
 
@@ -326,42 +273,13 @@ let product = TargetProduct(productId: "pId1", categoryId: "cId1")
 AEPTargetProduct *product =[[AEPTargetProduct alloc] initWithProductId:@"pId1" categoryId:@"cId1"];
 ```
 
-<Variant platform="ios-acp" task="target-product" repeat="10"/>
-
-### Swift
-
-**Syntax**
-```swift
-public convenience init(id productId: String, categoryId: String?)
-```
-
-**Example**
-
-```swift
-let product = ACPTargetProduct(id: "24D334", categoryId: "Stationary")
-```
-
-#### Objective-C
-
-**Syntax**
-
-```objectivec
-+ (nonnull instancetype) targetProductWithId: (nonnull NSString*) productId categoryId: (nullable NSString*) categoryId;
-```
-
-**Example**
-
-```objectivec
-ACPTargetProduct *product = [ACPTargetProduct targetProductWithId:@"24D334" categoryId:@"Stationary"];
-```
-
-<Variant platform="react-native" task="target-product" repeat="2"/>
+<!--- <Variant platform="react-native" task="target-product" repeat="2"/>
 
 **JavaScript**
 
 ```javascript
 var targetProduct = new ACPTargetProduct("24D334", "Stationary");
-```
+``` --->
 
 <Variant platform="android" task="target-parameters" repeat="5"/>
 
@@ -402,7 +320,7 @@ TargetParameters targetParameters = new TargetParameters.Builder()
 .build();
 ```
 
-<Variant platform="ios-aep" task="target-parameters" repeat="10"/>
+<Variant platform="ios" task="target-parameters" repeat="10"/>
 
 #### Swift
 
@@ -450,58 +368,7 @@ AEPTargetOrder *order = [[AEPTargetOrder alloc] initWithId:@"id1" total:1.0 purc
 AEPTargetParameters * targetParams = [[AEPTargetParameters alloc] initWithParameters:mboxParameters profileParameters:profileParameters order:order product:product];
 ```
 
-<Variant platform="ios-acp" task="target-parameters" repeat="10"/>
-
-#### Swift
-
-**Syntax**
-
-```swift
-public convenience init(parameters: [AnyHashable: Any]?, profileParameters: [AnyHashable: Any]?, order: ACPTargetOrder?, product: ACPTargetProduct?)
-```
-
-**Example**
-
-```swift
-let mboxParameters = [
-"status": "Platinum"
-]
-let profileParameters = [
-"gender": "female"
-]
-
-let product = ACPTargetProduct(id: "24D334", categoryId: "Stationary")
-
-let order = ACPTargetOrder(id: "ADCKKBC", total: NSNumber(value: 400.50), purchasedProductIds: ["34", "125"])
-
-let targetParameters = ACPTargetParameters(parameters: mboxParameters, profileParameters: profileParameters, product: product, order: order)
-```
-
-#### Objective-C
-
-**Syntax**
-
-```objectivec
-+ (nonnull instancetype) targetParametersWithParameters: (nullable NSDictionary*) targetParameters profileParameters: (nullable NSDictionary*) profileParameters product: (nullable ACPTargetProduct*) product order: (nullable ACPTargetOrder*) order;
-```
-
-**Example**
-
-```objectivec
-NSDictionary *mboxParameters = @{@"status":@"Platinum"};
-NSDictionary *profileParameters = @{@"gender":@"female"};
-
-ACPTargetProduct *product = [ACPTargetProduct targetProductWithId:@"24D334" categoryId:@"Stationary"];
-
-ACPTargetOrder *order = [ACPTargetOrder targetOrderWithId:@"ADCKKBC" total:@(400.50) purchasedProductIds:@[@"34", @"125"]];
-
-ACPTargetParameters *targetParameters = [ACPTargetParameters targetParametersWithParameters:mboxParameters
-profileParameters:profileParameters
-product:product
-order:order];
-```
-
-<Variant platform="react-native" task="target-parameters" repeat="2"/>
+<!--- <Variant platform="react-native" task="target-parameters" repeat="2"/>
 
 **JavaScript**
 
@@ -512,7 +379,7 @@ var targetProduct = new ACPTargetProduct("24D334", "Stationary");
 var purchaseIDs = ["34","125"];
 var targetOrder = new ACPTargetOrder("ADCKKBC", 400.50, purchaseIDs);
 var targetParameters = new ACPTargetParameters(mboxParameters, profileParameters, targetProduct, targetOrder);
-```
+``` --->
 
 <Variant platform="android" task="visual-preview" repeat="2"/>
 
@@ -520,7 +387,7 @@ On Android, when the application is launched as a result of a deep link, the `co
 
 The SDK can only collect information from the launching Activity if [`setApplication`](../mobile-core/api-reference.md#application-reference-android-only) has been called. Setting the Application is only necessary on an Activity that is also an entry point for your application. However, setting the Application on each Activity has no negative impact and ensures that the SDK always has the necessary reference to your Application. We recommend that you call `setApplication` in each of your Activities.
 
-<Variant platform="ios-aep" task="visual-preview" repeat="10"/>
+<Variant platform="ios" task="visual-preview" repeat="10"/>
 
 #### Swift
 
@@ -548,33 +415,3 @@ public static func collectLaunchInfo(_ userInfo: [String: Any])
 ```objectivec
  [AEPMobileCore collectLaunchInfo:@{@"adb_deeplink" : @"com.adobe.targetpreview://app.adobetarget.com?at_preview_token=tokenFromTarget"}];
  ```
-
-<Variant platform="ios-acp" task="visual-preview" repeat="10"/>
-
-#### Swift
-
-**Syntax**
-
-```swift
-open class func collectLaunchInfo(_ userinfo: [AnyHashable: Any])
-```
-
-**Example**
-
-```swift
-ACPCore.collectLaunchInfo(["adb_deeplink" : "com.adobe.targetpreview://app.adobetarget.com?at_preview_token=tokenFromTarget"])
-```
-
-#### Objective-C
-
-**Syntax**
-
-```objectivec
-+ (void) collectLaunchInfo: (nonnull NSDictionary*) userInfo;
-```
-
-**Example**
-
-```objectivec
-[ACPCore collectLaunchInfo: @{@"adb_deeplink":@"com.adobe.targetpreview://app.adobetarget.com?at_preview_token=tokenFromTarget"}];`
-```

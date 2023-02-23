@@ -50,35 +50,27 @@ The request timeout is the amount of time, in seconds, to wait for a response fr
 
 ## Add Campaign Classic to your app
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=add"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=add"/>
-
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=add"/>
+<Tabs query="platform=ios&task=add"/>
 
 ### Register Campaign Classic with Mobile Core
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=register"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=register"/>
-
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=register"/>
+<Tabs query="platform=ios&task=register"/>
 
 ## Configuration keys
 
@@ -92,5 +84,3 @@ To update SDK configuration programmatically, use the following information to c
 | `campaignclassic.trackingServer` | Yes | Sets the tracking server, which receives tracking requests. | String |
 | `campaignclassic.ios.integrationKey` | Yes | Sets the iOS mobile app integration key, which links the app to an iOS application campaign in Campaign Classic. | String |
 | `campaignclassic.android.integrationKey` | Yes | Sets the Android mobile app integration key, which links the app to an Android application campaign in Campaign Classic. | String |
-
-
