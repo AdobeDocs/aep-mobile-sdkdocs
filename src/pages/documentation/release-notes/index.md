@@ -88,6 +88,22 @@ Note that all these extensions must be updated together. Flutter and React plugi
 
 * Major version update for [Adobe Target](../adobe-target/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-target-android).
 
+Please note that the following improvements have been made in the current release:
+
+1. The below APIs have been renamed for alignment with the Adobe Target Mobile SDK for iOS:
+* `locationsDisplayed` is now `displayedLocations`
+* `locationClicked` is now `clickedLocation`
+
+2. The public classes `TargetRequest`, `TargetPrefetch`, `TargetOrder`, `TargetProduct` and `TargetParameters` are consolidated under the `target` subpackage and require updating the import statements as shown below:
+
+```java
+import com.adobe.marketing.mobile.target.TargetRequest;
+import com.adobe.marketing.mobile.target.TargetPrefetch;
+import com.adobe.marketing.mobile.target.TargetOrder;
+import com.adobe.marketing.mobile.target.TargetProduct;
+import com.adobe.marketing.mobile.target.TargetParameters;
+```
+
 ### iOS Messaging 1.1.0
 
 * Adds support for Adobe Journey Optimizer powered in-app messages.
@@ -136,6 +152,8 @@ Note that all these extensions must be updated together. Flutter and React plugi
 ### Android Campaign Classic 2.0.0
 
 * Major version update for [Adobe Campaign Classic workflows](../adobe-campaign-classic/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaignclassic-android).
+
+Please note that the `registerDevice` API, similar to iOS, no longer provides a callback method for registration status since a `false` value cannot be accurately used as a signal to retry requests.
 
 ### Android Consent 2.0.0
 
