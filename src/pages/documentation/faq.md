@@ -169,7 +169,7 @@ To fix this build failure, you can follow one of two options:
 
 ### How do I get the latest Mobile SDK Android dependences for my Application? 
 
-To get the latest Mobile SDK dependencies for your Android application
+To get the latest Mobile SDK dependencies for your Android application:
 * Open the **mobile property** configured in the **Data Collection UI** for your application. 
 * Navigate to the **Extensions** tab and update all the extensions to the latest version. 
 * The [install instructions](./getting-started/get-the-sdk.md#1-add-dependencies-to-your-project) will now show the dependencies for the latest Mobile SDK.
