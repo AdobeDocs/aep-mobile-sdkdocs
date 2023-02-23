@@ -35,10 +35,7 @@ For an Analytics track event, the detailed view contains the following valuable 
 
 To get started, complete the following steps:
 
-1. Ensure that you implemented the latest versions of the [Assurance](../set-up.md) and [Adobe Analytics](../../adobe-analytics/index.md) extensions.
-2. Go to the [Assurance UI](https://experience.adobe.com/assurance).
-3. Connect your app to an Assurance session. For more information, see [Connect your device](../index.md#connecting-to-a-session).
-4. To view your events, select the **Adobe Analytics** view.
+1. [Set up Adobe Experience Platform Assurance](../set-up.md).
+2. To view your events, select the **Adobe Analytics** view.
 
 ![](./assets/adobe-analytics/using-assurance.png)
-

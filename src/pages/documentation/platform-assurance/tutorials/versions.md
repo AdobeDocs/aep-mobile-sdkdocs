@@ -2,15 +2,14 @@
 
 ## Overview
 
-You may use the Extensions Version view in order to quickly and easily view which Platform extensions you have installed and if they are up to date in a client connected to an Assurance (formerly known as Project Griffon) session. 
+You may use the Extensions Version view in order to quickly and easily view which Platform extensions you have installed and if they are up to date in a client connected to an Assurance (formerly known as Project Griffon) session.
 
 ## Getting Started
 
 To use this view, complete the following steps:
 
-1. [Set up Adobe Experience Platform Assurance](../set-up.md)
-2. [Create](./index.md#creating-sessions) and [connect](./index.md#connecting-to-a-session) to an Assurance session
-3. In the **Home** view, select **Extension Versions**
+1. [Set up Adobe Experience Platform Assurance](../set-up.md).
+2. In the **Home** view, select **Extension Versions**
 
 ![Extension Versions](./assets/versions/versions-extension.png)
 

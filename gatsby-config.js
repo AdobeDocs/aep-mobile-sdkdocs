@@ -619,6 +619,10 @@ module.exports = {
                         path: "/documentation/platform-assurance/tutorials",
                         pages: [
                             {
+                                title: "Event Transactions",
+                                path: "/documentation/platform-assurance/tutorials/event-transactions.md"
+                            },
+                            {
                                 title: "Adobe Analytics",
                                 path: "/documentation/platform-assurance/tutorials/adobe-analytics.md"
                             },
