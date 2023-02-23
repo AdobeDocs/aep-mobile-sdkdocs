@@ -456,7 +456,7 @@ Places.registerExtension();
 Places.registerExtension()
 ```
 
-<Variant platform="ios" api="register-extension" repeat="4"/>
+<Variant platform="ios" api="register-extension" repeat="6"/>
 
 #### Swift
 

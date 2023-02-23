@@ -131,6 +131,10 @@ import com.adobe.marketing.mobile.target.TargetParameters;
 * Major version update for [Adobe Journey Optimizer](../adobe-journey-optimizer/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-messaging-android).
 * Adds support for Adobe Journey Optimizer powered in-app messages.
 
+### Android Places 2.0.0
+
+* Major version update for [Adobe Experience Platform Location Service](../places/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-places-android).
+
 ## February 2, 2023
 
 ### Android Optimize 2.0.0
