@@ -406,24 +406,6 @@ module.exports = {
                         ]
                     },
                     {
-                        title: "Adobe Analytics - Mobile Services",
-                        path: "/documentation/adobe-analytics-mobile-services",
-                        pages: [
-                            {
-                                title: "Overview",
-                                path: "/documentation/adobe-analytics-mobile-services"
-                            },
-                            {
-                                title: "API reference",
-                                path: "/documentation/adobe-analytics-mobile-services/api-reference/"
-                            },
-                            {
-                                title: "Release notes",
-                                path: "/documentation/adobe-analytics-mobile-services/release-notes/"
-                            }
-                        ]
-                    },
-                    {
                         title: "Adobe Media Analytics",
                         path: "/documentation/adobe-media-analytics",
                         pages: [
@@ -531,7 +513,7 @@ module.exports = {
                                         title: "Overview",
                                         path: "/documentation/adobe-journey-optimizer/iam"
                                     },
-                                    {       
+                                    {
                                         title: "Prerequisites",
                                         path: "/documentation/adobe-journey-optimizer/iam/prerequisites"
                                     },
