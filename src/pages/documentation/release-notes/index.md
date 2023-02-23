@@ -4,11 +4,171 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## February 22, 2023
+
+New major versions of Android Core have been released along with updates to other extensions to take advantage of the new features and improvements. These improvements include:
+
+* Android SDKs updated to have similar architecture to iOS Swift SDKs.
+* All extensions open-sourced.
+* Integration with Kotlin apps improved.
+* AndroidX support added.
+* Security improvements added.
+
+Note that all these extensions must be updated together. Flutter and React plugins not yet updated with these versions, but coming soon.
+* Android Mobile Core 2.0.1
+* Android Signal 2.0.1
+* Android Lifecycle 2.0.1
+* Android Identity 2.0.1
+* Android Profile 2.0.0
+* Android Adobe Experience Platform Assurance 2.0.0
+* Android Adobe Experience Platform Edge Network 2.0.0
+* Android Identity for Edge Network 2.0.0
+* Android Consent for Edge Network 2.0.0
+* Android Edge Bridge 2.0.0
+* Android Adobe Journey Optimizer 2.0.1
+* Android Adobe Journey Optimizer - Decisioning 2.0.0
+* Android Places Service 2.0.0
+* Android Adobe Analytics 2.0.1
+* Android Adobe Analytics - Media Analytics for Audio & Video 3.0.0
+* Android Adobe Target 2.0.0
+* Android Adobe Campaign Standard 2.0.2
+* Android Adobe Campaign Classic 2.0.0
+* Android Adobe Audience Manager 2.0.0 
+
+## February 17, 2023
+
+### Android Analytics 2.0.1
+
+* Made the extension compatible with Kotlin 1.4.
+* Analytics shared state is made available on boot-up if there are any previously stored identifiers.
+* Shared state is only updated when an identifier is set and not on get requests.
+
+### Android Campaign Standard 2.0.2
+
+* Made the extension compatible with Kotlin 1.4.
+
 ## February 13, 2023
 
 ### Android Edge 1.4.1
 
 * Improves error handling when processing `Edge.sendEvent` requests by catching and logging unexpected `RuntimeException` instances thrown from within caller's `EdgeCallback` handler implementation.
+
+## February 9, 2023
+
+### Android Mobile Core 2.0.1
+
+* Fixed issue causing large delays in configuration download retries.
+* Fixed issue causing backdrop opacity being set incorrectly in `MessageSettings`.
+* Updated `MessagingDelegate` to mirror the implementation of the iOS SDK, and exposed `Message` interface for app developers to access InternalMessage objects created by Messaging extension.
+* Fixed issue with javadoc generation.
+* Improved resource handling after network connection attempts.
+* Improved database handling during fresh installation scenarios.
+
+### Android Signal 2.0.1
+
+* Fixed issue with javadoc generation.
+
+### Android Lifecycle 2.0.1
+
+* Fixed issue with javadoc generation.
+
+### Android Identity 2.0.1
+
+* Fixed issue with javadoc generation.
+
+### Android Messaging 2.0.1
+
+* Updates the Core dependency to 2.0.1, which resolves inconsistencies between the Android and iOS MessagingDelegate classes.
+
+### Android Campaign Standard 2.0.1
+
+* Updates Mobile Core dependency to 2.0.1 which includes stability fixes.
+
+### Android Target 2.0.0
+
+* Major version update for [Adobe Target](../adobe-target/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-target-android).
+
+### iOS Messaging 1.1.0
+
+* Adds support for Adobe Journey Optimizer powered in-app messages.
+
+## February 3, 2023
+
+### Android Analytics 2.0.0
+
+* Major version update for [Adobe Analytics](../adobe-analytics/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-analytics-android/).
+
+### Android Audience 2.0.0
+
+* Major version update for [Adobe Audience Manager](../adobe-audience-manager/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-audience-android).
+
+### Android Media 3.0.0
+
+* Major version update for [Adobe Analytics - Media Analytics workflows](../adobe-media-analytics/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-media-android).
+
+### Android Messaging 2.0.0
+
+* Major version update for [Adobe Journey Optimizer](../adobe-journey-optimizer/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-messaging-android). 
+* Adds support for Adobe Journey Optimizer powered in-app messages.
+
+## February 2, 2023
+
+### Android Optimize 2.0.0
+
+* Major version update for [Adobe Journey Optimizer - Decisioning](../adobe-journey-optimizer-decisioning/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This extension library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-optimize-android/).
+
+### Android Campaign Standard 2.0.0
+
+* Major version update for [Adobe Campaign Standard workflows](../adobe-campaign-standard/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaign-android).
+
+## February 1, 2023
+
+### Android Edge Bridge 2.0.0
+
+* Major version update for Edge Bridge for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgebridge-android).
+
+## January 31, 2023
+
+### Android Assurance 2.0.0
+
+* Major version update for [Adobe Experience Platform Assurance](../platform-assurance-sdk/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-assurance-android).
+
+### Android Campaign Classic 2.0.0
+
+* Major version update for [Adobe Campaign Classic workflows](../adobe-campaign-classic/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaignclassic-android).
+
+### Android Consent 2.0.0
+
+* Major version update for [Consent for Edge Network](../consent-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgeconsent-android).
+
+### Android Edge 2.0.0
+
+* Major version update for [Edge Network](../edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edge-android).
+
+### Android EdgeIdentity 2.0.0
+
+* Major version update for [Identity for Edge Network](../identity-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgeidentity-android).
+
+### Android UserProfile 2.0.0
+
+- Major version update for [User Profile](../profile/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-userprofile-android).
+- The following APIs have been deprecated and will be removed in a future release:
+
+  | Deprecated API                      | Recommended Alternative              |
+  | ----------------------------------- | ------------------------------------ |
+  | `UserProfile.updateUserAttribute()` | `UserProfile.updateUserAttributes()` |
+  | `UserProfile.removeUserAttribute()` | `UserProfile.removeUserAttributes()` |
+
+## January 30, 2023
+
+### Adobe Experience Platform Android Core SDKs
+
+The brand new Adobe Experience Platform Core Android SDKs are live! It is [open sourced on GitHub](https://github.com/adobe/aepsdk-core-android), containing the following extensions:
+
+* Core 2.0.0
+* Identity 2.0.0
+* Signal 2.0.0
+* Lifecycle 2.0.0
 
 ## January 5, 2023
 

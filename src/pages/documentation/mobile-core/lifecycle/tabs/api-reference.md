@@ -1,20 +1,44 @@
-<Variant platform="android" api="extension-version" repeat="2"/>
+<Variant platform="android" api="extension-version" repeat="5"/>
 
 #### Java
+
+**Syntax**
+
+```java
+public static String extensionVersion()
+```
+
+**Example**
 
 ```java
 final String lifecycleExtensionVersion = Lifecycle.extensionVersion();
 ```
 
-<Variant platform="ios" api="extension-version" repeat="4"/>
+<Variant platform="ios" api="extension-version" repeat="10"/>
 
-**Swift**
+#### Swift
+
+**Syntax**
+
+```swift
+static var extensionVersion: String
+```
+
+**Example**
 
 ```swift
 let version = Lifecycle.extensionVersion
 ```
 
-**Objective-C**
+#### Objective-C
+
+**Syntax**
+
+```swift
+@objc static var extensionVersion: String
+```
+
+**Example**
 
 ```objectivec
 NSString *version = [AEPMobileLifecycle extensionVersion];
@@ -45,7 +69,7 @@ This method should be called from the Activity onResume method.
 **Syntax**
 
 ```java
-public static void lifecycleStart(final Map<String, String> additionalContextData);
+public static void lifecycleStart(@Nullable final Map<String, String> additionalContextData)
 ```
 
 **Example**
@@ -61,9 +85,23 @@ contextData.put("myapp.category", "Game");
 MobileCore.lifecycleStart(additionalContextData);
 ```
 
-<Variant platform="ios" api="lifecycle-start" repeat="9"/>
+<Variant platform="ios" api="lifecycle-start" repeat="14"/>
 
 #### Swift
+
+**Syntax**
+
+```swift
+ static func lifecycleStart(additionalContextData: [String: Any]?)
+```
+
+**Example**
+
+```swift
+ MobileCore.lifecycleStart(additionalContextData: nil)
+```
+
+If you need to collect additional lifecycle data:
 
 ```swift
  MobileCore.lifecycleStart(additionalContextData: ["contextDataKey": "contextDataVal"])
@@ -112,9 +150,17 @@ public static void lifecyclePause()
 MobileCore.lifecyclePause();
 ```
 
-<Variant platform="ios" api="lifecycle-pause" repeat="7"/>
+<Variant platform="ios" api="lifecycle-pause" repeat="10"/>
 
 #### Swift
+
+**Syntax**
+
+```swift
+ static func lifecyclePause()
+```
+
+**Example**
 
 ```swift
  MobileCore.lifecyclePause()
@@ -140,3 +186,18 @@ MobileCore.lifecyclePause();
 #### JavaScript
 
 When using React Native, pausing the collection of lifecycle data should be done in native code which is shown under the Android and iOS (ACP 2.x) tabs. --->
+
+<Variant platform="android" api="register-extension" repeat="5"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void registerExtension()
+```
+
+**Example**
+
+```java
+Lifecycle.registerExtension();

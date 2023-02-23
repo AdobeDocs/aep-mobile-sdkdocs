@@ -1,22 +1,14 @@
 # Current SDK versions
 
-<InlineAlert variant="info" slots="text"/>
-
-**Swift SDKs are here!**<br/>We've released Swift versions of our iOS SDKs for Core and select extensions - please scroll down for available Swift extensions and reference documentation for more information.
-
-<InlineAlert variant="info" slots="text"/>
-
-**Migrate to Swift**<br/>If you are currently using our Objective-C (ACP-prefix libraries), please see the [Migrating to Swift](../migrate-to-swift.md) guide for next steps.
-
 ## Android
 
 <InlineAlert variant="info" slots="text"/>
 
-Adobe Experience Platform Mobile SDK for Android supports Google Android API 19 (KitKat) or later.
+**Migrate to latest Mobile SDKs for Android**<br/>If you are currently using the Mobile Core 1.x and the compatible libraries, please see the [Migrating to latest Mobile SDKs for Android](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-android/) guide for next steps.<br/>The latest Mobile SDKs for Android support Google Android API 19 (KitKat) or later.
 
 <InlineAlert variant="info" slots="text"/>
 
-Due to sunset of [JCenter by JFrog](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/), our SDKs are no longer being uploaded to JCenter. Android libraries are now available on [MavenCentral](https://search.maven.org/search?q=g:com.adobe.marketing.mobile). For more information, see links below or find [our libraries on MavenCentral](https://search.maven.org/search?q=g:com.adobe.marketing.mobile). For more information on how to declare dependencies from Maven, please see [Declaring repositories](https://docs.gradle.org/current/userguide/declaring_repositories.html#sec:declaring_multiple_repositories) on Gradle.
+Due to the sunsetting of [JCenter by JFrog](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/), the Mobile SDKs are no longer being uploaded to JCenter. Android libraries are now available on [MavenCentral](https://search.maven.org/search?q=g:com.adobe.marketing.mobile). For more information, see links below or find [the Android libraries on MavenCentral](https://search.maven.org/search?q=g:com.adobe.marketing.mobile). Please see [declaring repositories](https://docs.gradle.org/current/userguide/declaring_repositories.html#sec:declaring_multiple_repositories) on Gradle.
 
 | Extension | Maven | Github |
 |---|---|---|
@@ -30,12 +22,16 @@ Due to sunset of [JCenter by JFrog](https://jfrog.com/blog/into-the-sunset-bintr
 | [Adobe Experience Platform Edge Network](../edge-network/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edge.svg?logo=android&logoColor=white&label=edge&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edge) | [Link](https://github.com/adobe/aepsdk-edge-android) |
 | [Identity for Edge Network](../identity-for-edge-network/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edgeidentity.svg?logo=android&logoColor=white&label=edgeidentity&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edgeidentity) | [Link](https://github.com/adobe/aepsdk-edgeidentity-android) |
 | [Consent for Edge Network](../consent-for-edge-network/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edgeconsent.svg?logo=android&logoColor=white&label=edgeconsent&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edgeconsent) | [Link](https://github.com/adobe/aepsdk-edgeconsent-android) |
+<<<<<<< HEAD
 | [Adobe Experience Platform Assurance](../platform-assurance-sdk/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/assurance.svg?logo=android&logoColor=white&label=assurance&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/assurance) | [Link](https://github.com/adobe/aepsdk-assurance-android) |
 | [Places Service](https://experienceleague.adobe.com/docs/places/using/home.html?lang=en) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/places.svg?logo=android&logoColor=white&label=places&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/places) | [Link](https://github.com/adobe/aepsdk-places-android) |
 | Places Monitor | Deprecated | |
 | [Adobe Analytics](../adobe-analytics/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/analytics.svg?logo=android&logoColor=white&label=analytics&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/analytics) | [Link](https://github.com/adobe/aepsdk-analytics-android) |
 | [Adobe Analytics - Media Analytics for Audio & Video](../adobe-media-analytics/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/media.svg?logo=android&logoColor=white&label=media&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/media) | [Link](https://github.com/adobe/aepsdk-media-android) |
 | [Adobe Audience Manager](../adobe-audience-manager/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/audience.svg?logo=android&logoColor=white&label=audience&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/audience) | [Link](https://github.com/adobe/aepsdk-audience-android) |
+=======
+| Edge Bridge | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edgebridge.svg?logo=android&logoColor=white&label=edgebridge&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edgebridge) | [Link](https://github.com/adobe/aepsdk-edgebridge-android) |
+>>>>>>> staging
 | [Adobe Journey Optimizer](../adobe-journey-optimizer/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/messaging.svg?logo=android&logoColor=white&label=messaging&style=flat-square)](#) | [Link](https://github.com/adobe/aepsdk-messaging-android) |
 | [Adobe Journey Optimizer - Decisioning](../adobe-journey-optimizer-decisioning/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/optimize.svg?logo=android&logoColor=white&label=optimize&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/optimize) | [Link](https://github.com/adobe/aepsdk-optimize-android) |
 | [Places Service](https://experienceleague.adobe.com/docs/places/using/home.html?lang=en) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/places.svg?logo=android&logoColor=white&label=places&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/places) | [Link](https://github.com/adobe/aepsdk-places-android) |
@@ -51,11 +47,11 @@ Due to sunset of [JCenter by JFrog](https://jfrog.com/blog/into-the-sunset-bintr
 
 <InlineAlert variant="info" slots="text"/>
 
-**Migrate to Swift**<br/>If you are currently using our Objective-C (ACP-prefix) libraries, please see the [Migrating to Swift](../migrate-to-swift.md) guide for next steps.<br/>Adobe Experience Platform Mobile SDK for iOS supports iOS 10 or later; requires Swift 5.1 or newer and Xcode 11.0 or newer. In addition to **CocoaPods**, **Swift Package Manager (SPM)** installation option is supported with the latest iOS Swift SDKs! Find more details at the GitHub links below.
+**Migrate to latest Mobile SDKs for iOS**<br/>If you are currently using the Objective-C (ACP-prefix) libraries, please see the [Migrating to latest Mobile SDKs for iOS](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-swift/) guide for next steps.<br/>The latest Mobile SDK for iOS supports iOS 10 or later; requires Swift 5.1 or newer and Xcode 11.0 or newer. In addition to **CocoaPods**, **Swift Package Manager (SPM)** installation option is supported with the latest iOS Swift SDKs! Find more details at the GitHub links below.
 
 <InlineAlert variant="info" slots="text"/>
 
-**Swift = Open Source**<br/>The Swift iOS SDKs are open source. Read more about [our move to Swift and open source](https://medium.com/adobetech/adobe-experience-platform-mobile-sdks-move-to-swift-for-ios-6aa67b67b4d4).
+**Swift = Open Source**<br/>The latest iOS SDKs are written in Swift and are open source. Read more about [our move to Swift and open source](https://medium.com/adobetech/adobe-experience-platform-mobile-sdks-move-to-swift-for-ios-6aa67b67b4d4).
 
 | Extension | tvOS | App Extension | CocoaPods | GitHub |
 |---|---|---|---|---|
@@ -69,12 +65,7 @@ Due to sunset of [JCenter by JFrog](https://jfrog.com/blog/into-the-sunset-bintr
 | [Adobe Experience Platform Edge Network](../edge-network/index.md) |   |   | [![Cocoapods](https://img.shields.io/cocoapods/v/AEPEdge.svg?color=orange&label=AEPEdge&logo=apple&logoColor=white&style=flat-square)](https://cocoapods.org/pods/AEPEdge) | [Link](https://github.com/adobe/aepsdk-edge-ios) |
 | [Identity for Edge Network](../identity-for-edge-network/index.md) |   |   | [![Cocoapods](https://img.shields.io/cocoapods/v/AEPEdgeIdentity.svg?color=orange&label=AEPEdgeIdentity&logo=apple&logoColor=white&style=flat-square)](https://cocoapods.org/pods/AEPEdgeIdentity) | [Link](https://github.com/adobe/aepsdk-edgeidentity-ios) |
 | [Consent for Edge Network](../consent-for-edge-network/index.md) |  |   | [![Cocoapods](https://img.shields.io/cocoapods/v/AEPEdgeConsent.svg?color=orange&label=AEPEdgeConsent&logo=apple&logoColor=white&style=flat-square)](https://cocoapods.org/pods/AEPEdgeConsent) | [Link](https://github.com/adobe/aepsdk-edgeconsent-ios) |
-| [Adobe Experience Platform Assurance](../platform-assurance-sdk/index.md) |  |   | [![Cocoapods](https://img.shields.io/cocoapods/v/AEPAssurance.svg?color=orange&label=AEPAssurance&logo=apple&logoColor=white&style=flat-square)](https://cocoapods.org/pods/AEPAssurance) | [Link](https://github.com/adobe/aepsdk-assurance-ios) |
-| [Places Service](https://experienceleague.adobe.com/docs/places/using/home.html?lang=en) |  |   | [![Cocoapods](https://img.shields.io/cocoapods/v/AEPPlaces.svg?color=orange&label=AEPPlaces&logo=apple&logoColor=white&style=flat-square)](https://cocoapods.org/pods/AEPPlaces) | [Link](https://github.com/adobe/aepsdk-places-ios) |
-| Places Monitor | | Deprecated | | |
-| [Adobe Analytics](../adobe-analytics/index.md) | ✔️ | ✔️ | [![Cocoapods](https://img.shields.io/cocoapods/v/AEPAnalytics.svg?color=orange&label=AEPAnalytics&logo=apple&logoColor=white&style=flat-square)](https://cocoapods.org/pods/AEPAnalytics) | [Link](https://github.com/adobe/aepsdk-analytics-ios) |
-| [Adobe Analytics - Media Analytics for Audio & Video](../adobe-media-analytics/index.md) | ✔️ |   | [![Cocoapods](https://img.shields.io/cocoapods/v/AEPMedia.svg?color=orange&label=AEPMedia&logo=apple&logoColor=white&style=flat-square)](https://cocoapods.org/pods/AEPMedia) | [Link](https://github.com/adobe/aepsdk-media-ios) |
-| [Adobe Audience Manager](../adobe-audience-manager/index.md) |   |   | [![Cocoapods](https://img.shields.io/cocoapods/v/AEPAudience.svg?color=orange&label=AEPAudience&logo=apple&logoColor=white&style=flat-square)](https://cocoapods.org/pods/AEPAudience) | [Link](https://github.com/adobe/aepsdk-audience-ios) |
+| Edge Bridge |  |   | [![Cocoapods](https://img.shields.io/cocoapods/v/AEPEdgeBridge.svg?color=orange&label=AEPEdgeBridge&logo=apple&logoColor=white&style=flat-square)](https://cocoapods.org/pods/AEPEdgeBridge) | [Link](https://github.com/adobe/aepsdk-edgebridge-ios) |
 | [Adobe Journey Optimizer](../adobe-journey-optimizer/index.md) |   |   | [![Cocoapods](https://img.shields.io/cocoapods/v/AEPMessaging.svg?color=orange&label=AEPMessaging&logo=apple&logoColor=white&style=flat-square)](https://cocoapods.org/pods/AEPMessaging) | [Link](https://github.com/adobe/aepsdk-messaging-ios) |
 | [Adobe Journey Optimizer - Decisioning](../adobe-journey-optimizer-decisioning/index.md) |   | ✔️ | [![Cocoapods](https://img.shields.io/cocoapods/v/AEPOptimize.svg?color=orange&label=AEPOptimize&logo=apple&logoColor=white&style=flat-square)](https://cocoapods.org/pods/AEPOptimize) | [Link](https://github.com/adobe/aepsdk-optimize-ios) |
 | [Places Service](https://experienceleague.adobe.com/docs/places/using/home.html?lang=en) |  |   | [![Cocoapods](https://img.shields.io/cocoapods/v/AEPPlaces.svg?color=orange&label=AEPPlaces&logo=apple&logoColor=white&style=flat-square)](https://cocoapods.org/pods/AEPPlaces) | [Link](https://github.com/adobe/aepsdk-places-ios) |
@@ -92,11 +83,11 @@ Adobe Experience Platform Mobile SDK plugin for React Native supports React Nati
 
 <InlineAlert variant="info" slots="text"/>
 
-Adobe Experience Platform Mobile SDK plugins (AEP 1.x) for React Native are compatible only with [Android](#android) and [iOS - Swift](#ios) libraries.
+Adobe Experience Platform Mobile SDK plugins for React Native are compatible with the [Android](#android) and [iOS](#ios) native libraries.
 
 <InlineAlert variant="info" slots="text"/>
 
-If you are currently using our ACP-prefix React Native libraries, please see [the guide to migrate to the Experience Platform SDK libraries (AEP 1.x)](https://github.com/adobe/aepsdk-react-native/blob/main/docs/migration.md) for React Native.
+If you are currently using the ACP-prefixed React Native libraries, please see [the guide to migrate to latest available version](https://github.com/adobe/aepsdk-react-native/blob/main/docs/migration.md) for React Native.
 
 | Extension | npmjs |
 |---|---|
@@ -118,7 +109,7 @@ Adobe Experience Platform Mobile SDK plugin for Flutter supports Flutter **versi
 
 <InlineAlert variant="info" slots="text"/>
 
-Adobe Experience Platform Mobile SDK plugins for Flutter are compatible with [Android](#android) and [iOS](#ios) libraries, at this time.
+Adobe Experience Platform Mobile SDK plugins for Flutter are compatible with the [Android](#android) and [iOS](#ios) native libraries.
 
 | Extension | pub.dev |
 |---|---|
@@ -127,4 +118,3 @@ Adobe Experience Platform Mobile SDK plugins for Flutter are compatible with [An
 | [Edge](../edge-network/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedge.svg)](https://pub.dartlang.org/packages/flutter_aepedge) |
 | [EdgeIdentity](../identity-for-edge-network/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgeidentity.svg)](https://pub.dartlang.org/packages/flutter_aepedgeidentity) |
 | [EdgeConsent](../consent-for-edge-network/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgeconsent.svg)](https://pub.dartlang.org/packages/flutter_aepedgeconsent) |
-

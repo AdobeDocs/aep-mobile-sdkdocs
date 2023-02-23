@@ -1,6 +1,6 @@
 <Variant platform="android" task="unable-to-open-app" repeat="1"/>
 
-Follow the [Android documention](https://developer.android.com/training/app-links/deep-linking%20) on information about how to set up a deeplink.
+Follow the [Android documention](https://developer.android.com/training/app-links/deep-linking) on information about how to set up a deeplink.
 
 <Variant platform="ios" task="unable-to-open-app" repeat="1"/>
 

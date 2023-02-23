@@ -1,14 +1,12 @@
-<Variant platform="android" task="add" repeat="10"/>
-
-The latest Android SDK versions:
-
-[<img src="https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/core.svg?logo=android&logoColor=white&label=core&style=flat-square" alt="Maven Central" style="width:150px"/>](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/core)
-
-[<img src="https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/analytics.svg?logo=android&logoColor=white&label=analytics&style=flat-square" alt="Maven Central" style="width:150px"/>](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/analytics)
-
-[<img src="https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/media.svg?logo=android&logoColor=white&label=media&style=flat-square" alt="Maven Central" style="width:150px"/>](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/media)
+<Variant platform="android" task="add" repeat="8"/>
 
 1. Add the Media extension and its dependencies to your project using the app's Gradle file.
+
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+
+</InlineNestedAlert>
 
 ```java
 implementation 'com.adobe.marketing.mobile:core:2.+'
@@ -17,13 +15,9 @@ implementation 'com.adobe.marketing.mobile:analytics:2.+'
 implementation 'com.adobe.marketing.mobile:media:3.+'
 ```
 
-<InlineNestedAlert variant="warning" header="false" iconPosition="left">
-
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
-
-</InlineNestedAlert>
-
 2. Import the libraries in your application's main activity.
+
+#### Java
 
 ```java
 import com.adobe.marketing.mobile.MobileCore;
@@ -32,15 +26,17 @@ import com.adobe.marketing.mobile.Analytics;
 import com.adobe.marketing.mobile.Media;
 ```
 
-<Variant platform="ios" task="add" repeat="11"/>
+#### Kotlin
 
-The latest iOS SDK versions:
+```kotlin
+import com.adobe.marketing.mobile.MobileCore
+import com.adobe.marketing.mobile.Identity
+import com.adobe.marketing.mobile.Analytics
+import com.adobe.marketing.mobile.Media
+```
 
-[<img src="https://img.shields.io/cocoapods/v/AEPCore.svg?color=orange&label=AEPCore&logo=apple&logoColor=white&style=flat-square" alt="Cocoapods" style="width:150px"/>](https://cocoapods.org/pods/AEPCore)
 
-[<img src="https://img.shields.io/cocoapods/v/AEPAnalytics.svg?color=orange&label=AEPAnalytics&logo=apple&logoColor=white&style=flat-square" alt="Cocoapods" style="width:150px"/>](https://cocoapods.org/pods/AEPAnalytics)
-
-[<img src="https://img.shields.io/cocoapods/v/AEPMedia.svg?color=orange&label=AEPMedia&logo=apple&logoColor=white&style=flat-square" alt="Cocoapods" style="width:150px"/>](https://cocoapods.org/pods/AEPMedia)
+<Variant platform="ios" task="add" repeat="7"/>
 
 1. To add the Media library and its dependencies to your project, add the following pods to your `Podfile`:
 
@@ -70,7 +66,7 @@ import AEPAnalytics
 @import AEPIdentity;
 ```
 
-<Variant platform="android" task="register" repeat="3"/>
+<Variant platform="android" task="register" repeat="5"/>
 
 To register Media with Mobile Core, import the Media library and register it:
 
@@ -98,7 +94,7 @@ public class MainApp extends Application {
 
 #### Kotlin
 
-```java
+```kotlin
 class MyApp : Application() {
     val ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID"
     

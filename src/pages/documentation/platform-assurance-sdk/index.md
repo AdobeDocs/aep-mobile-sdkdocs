@@ -45,6 +45,8 @@ Flutter
 
 ### Register AEPAssurance with Mobile Core
 
+The `MobileCore.registerExtensions()` API can be used to register the Assurance extension with the Mobile Core extension. This API allows the extension to send and receive events to and from the Mobile SDK.
+
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
@@ -63,17 +65,13 @@ Flutter
 
 <Tabs query="platform=flutter&task=register-assurance"/> --->
 
-### Implement AEP Assurance session start APIs (iOS only)
+### Connect to an Assurance session
 
-The [startSession](./assurance-api-reference.md#startsession) API needs to be called to begin an Adobe Experience Platform Assurance session. When called, SDK displays a PIN authentication overlay to begin a session. 
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-To learn how to start sessions for other platforms, please read the [Platform Assurance API guide](./api-reference.md).
+Android
 
-<InlineAlert variant="info" slots="text"/>
-
-You may call this API when the app launches with a url (see code snippet below for sample usage) <br/><br/> The AEP Assurance Android extension does not require this API to be called since it registers the app lifecycle handlers which automatically pick up any deep links and use them to start the session.<br/><br/>When using the AEP Assurance iOS extension, you should call this API when the app launches with a URL (see code snippet below for sample usage).
-
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+<Tabs query="platform=android&task=implement-assurance"/>
 
 iOS
 
