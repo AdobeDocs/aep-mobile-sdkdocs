@@ -100,15 +100,15 @@ Note that all these extensions must be updated together. Flutter and React plugi
 
 ### Android Audience 2.0.0
 
-* Major version update for [Adobe Audience Manager](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-audience-android).
+* Major version update for [Adobe Audience Manager](../adobe-audience-manager/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-audience-android).
 
 ### Android Media 3.0.0
 
-* Major version update for [Adobe Analytics - Media Analytics workflows](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-media-android).
+* Major version update for [Adobe Analytics - Media Analytics workflows](../adobe-media-analytics/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-media-android).
 
 ### Android Messaging 2.0.0
 
-* Major version update for [Adobe Journey Optimizer](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-messaging-android).
+* Major version update for [Adobe Journey Optimizer](../adobe-journey-optimizer/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-messaging-android).
 
 ## February 2, 2023
 
@@ -118,7 +118,7 @@ Note that all these extensions must be updated together. Flutter and React plugi
 
 ### Android Campaign Standard 2.0.0
 
-* Major version update for [Adobe Campaign Standard workflows](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaign-android).
+* Major version update for [Adobe Campaign Standard workflows](../adobe-campaign-standard/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaign-android).
 
 ## February 1, 2023
 
@@ -130,27 +130,27 @@ Note that all these extensions must be updated together. Flutter and React plugi
 
 ### Android Assurance 2.0.0
 
-* Major version update for [Adobe Experience Platform Assurance](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-assurance-android).
+* Major version update for [Adobe Experience Platform Assurance](../platform-assurance-sdk/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-assurance-android).
 
 ### Android Campaign Classic 2.0.0
 
-* Major version update for [Adobe Campaign Classic workflows](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaignclassic-android).
+* Major version update for [Adobe Campaign Classic workflows](../adobe-campaign-classic/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaignclassic-android).
 
 ### Android Consent 2.0.0
 
-* Major version update for [Consent for Edge Network](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgeconsent-android).
+* Major version update for [Consent for Edge Network](../consent-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgeconsent-android).
 
 ### Android Edge 2.0.0
 
-* Major version update for [Edge Network](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edge-android).
+* Major version update for [Edge Network](../edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edge-android).
 
 ### Android EdgeIdentity 2.0.0
 
-* Major version update for [Identity for Edge Network](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgeidentity-android).
+* Major version update for [Identity for Edge Network](../identity-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgeidentity-android).
 
 ### Android UserProfile 2.0.0
 
-- Major version update for [User Profile](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-userprofile-android).
+- Major version update for [User Profile](../profile/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-userprofile-android).
 - The following APIs have been deprecated and will be removed in a future release:
 
   | Deprecated API                      | Recommended Alternative              |
