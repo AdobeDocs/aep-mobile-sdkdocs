@@ -4,9 +4,9 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
-## February 22, 2023
+## February 23, 2023
 
-New major versions of Android Core have been released along with updates to other extensions to take advantage of the new features and improvements. These improvements include:
+New major version of the Mobile Core SDK for Android has been released along with updates to other extensions to take advantage of the new features and improvements. These improvements include:
 
 * Android SDKs updated to have similar architecture to iOS Swift SDKs.
 * All extensions open-sourced.
@@ -33,7 +33,7 @@ Note that all these extensions must be updated together. Flutter and React plugi
 * Android Adobe Target 2.0.0
 * Android Adobe Campaign Standard 2.0.2
 * Android Adobe Campaign Classic 2.0.0
-* Android Adobe Audience Manager 2.0.0 
+* Android Adobe Audience Manager 2.0.0
 
 ## February 17, 2023
 
@@ -124,7 +124,7 @@ import com.adobe.marketing.mobile.target.TargetParameters;
 
 ### Android Messaging 2.0.0
 
-* Major version update for [Adobe Journey Optimizer](../adobe-journey-optimizer/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-messaging-android). 
+* Major version update for [Adobe Journey Optimizer](../adobe-journey-optimizer/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-messaging-android).
 * Adds support for Adobe Journey Optimizer powered in-app messages.
 
 ## February 2, 2023
