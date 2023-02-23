@@ -6,7 +6,7 @@
 
 * Major version update for [Adobe Campaign Classic workflows](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaignclassic-android).
 
-Please note `registerDevice` API, similar to iOS, no longer provides a callback method to provide boolean registration status as a `false` value cannot be accurately used as a signal for achieving success upon retries.
+Please note that the `registerDevice` API, similar to iOS, no longer provides a callback method to provide boolean registration status since a `false` value cannot be accurately used as a signal to retry request for success.
 
 ## September 1, 2022
 
