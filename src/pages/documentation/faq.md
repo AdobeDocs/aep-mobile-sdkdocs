@@ -133,7 +133,7 @@ Implementing push notification tracking and measurement with the SDK depends on 
 * For the Adobe Campaign Classic extension, please read the [Adobe Campaign Classic push notifications tracking tutorial](./adobe-campaign-classic/api-reference.md#tracknotification-api).
 * For the Adobe Analytics - Mobile Services extension, please read the [set up tracking for Mobile Services push notifications tutorial](./adobe-analytics-mobile-services/index.md#set-up-push-tracking).
 
-## Migrating to Android Mobile Core 2.x and Supported Extensions
+## Migrating to Android Mobile Core 2.x and Compatible Extensions
 
 ### Is there a change in minimum API level supported by Mobile SDK for Android?
 
