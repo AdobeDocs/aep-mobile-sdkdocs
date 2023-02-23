@@ -22,7 +22,7 @@ You should see a dialog box similar to the following:
 
 The necessary dependencies and initialization code can be copied from the dialog box to your mobile application project.
 
-<Variant platform="ios-aep" task="get" repeat="5"/>
+<Variant platform="ios" task="get" repeat="5"/>
 
 Adobe Experience Platform SDKs for iOS support **iOS 10 or later**; **requires** Swift 5.1 or newer; **and** Xcode 11.0 or newer.
 
@@ -54,27 +54,7 @@ target 'YourTargetApp' do
 end
 ```
 
-<Variant platform="ios-acp" task="get" repeat="8"/>
-
-Adobe Experience Platform SDKs for iOS support **iOS 10 or later**; **requires** Swift 5.1 or newer; **and** Xcode 11.0 or newer.
-
-In order to support the new Apple M1 architecture while maintaining support for existing Intel architecture, the Adobe Experience Platform SDKs are now distributed using XCFrameworks. <br/><br/>Please see the [release notes](../release-notes/2020#december-18-2020) and the document on [current SDK versions](../resources/upgrading-to-aep/current-sdk-versions.md) for more information on the latest extension versions.
-
-1. Open a previously created and configured **Mobile** property in the Data Collection UI, and select the **Environments** tab, followed by the install package icon, as seen below.
-
-![](../assets/get-the-sdk/package.png)
-
-2. On the **Mobile Install Instructions** dialog box, select **iOS**.
-3. Follow the instructions for using CocoaPods with iOS.
-4. Under the initialization code, choose Objective-C or Swift.
-
-The necessary dependencies and initialization code can be copied from the dialog box to your app project.
-
-You should see a pop-up similar to the following image:
-
-![](../assets/get-the-sdk/obj-c.png)
-
-<Variant platform="react-native" task="get" repeat="7"/>
+<!-- <Variant platform="react-native" task="get" repeat="7"/>
 
 #### React Native
 
@@ -88,9 +68,9 @@ v2.0.0 and above of the AEP Mobile SDK React Native plugins use [autolinking](ht
 
 To update native dependencies to latest available versions, run the following command:
 
-`cd ios && pod update && cd ..`
+`cd ios && pod update && cd ..` -->
 
-<Variant platform="flutter" task="get" repeat="3"/>
+<!-- <Variant platform="flutter" task="get" repeat="3"/>
 
 #### Flutter
 
@@ -116,9 +96,9 @@ To start using the Adobe Experience Platform Mobile SDK plugin for Cordova, navi
 
 ```shell
 cordova plugin add https://github.com/adobe/cordova-acpcore.git
-```
+``` -->
 
-<Variant platform="unity" task="get" repeat="6"/>
+<!-- <Variant platform="unity" task="get" repeat="6"/>
 
 #### Unity
 
@@ -140,20 +120,27 @@ For instance, to add the Mobile Core extension, you should:
 
 Adobe Experience Platform Mobile SDK plugins for Xamarin require **MonoAndroid 9.0+ and Xamarin.iOS 1.0+**. For the latest Xamarin installation instructions, see the `README` file in the [`xamarin-acpcore`](https://github.com/adobe/xamarin-acpcore) repository.
 
-The Adobe Experience Platform Mobile SDK plugins for Xamarin are packages distributed via [nuget](https://www.nuget.org/packages). NuGet packages can be added to projects within a [Visual Studio](https://visualstudio.microsoft.com/downloads/) solution. The NuGet packages can also be generated locally via the included Makefile located in each of the Xamarin repositories.
+The Adobe Experience Platform Mobile SDK plugins for Xamarin are packages distributed via [nuget](https://www.nuget.org/packages). NuGet packages can be added to projects within a [Visual Studio](https://visualstudio.microsoft.com/downloads/) solution. The NuGet packages can also be generated locally via the included Makefile located in each of the Xamarin repositories. -->
 
 <Variant platform="android" task="add-dependencies" repeat="3"/>
-
-#### Java
 
 Add the dependencies to `build.gradle` for each extension.
 
 ```java
-implementation 'com.adobe.marketing.mobile:userprofile:1.+'
-implementation 'com.adobe.marketing.mobile:sdk-core:1.+'
+implementation 'com.adobe.marketing.mobile:userprofile:2.+'
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:identity:2.+'
+implementation 'com.adobe.marketing.mobile:signal:2.+'
+implementation 'com.adobe.marketing.mobile:lifecycle:2.+'
 ```
 
-<Variant platform="ios-aep" task="add-dependencies" repeat="8"/>
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+
+</InlineNestedAlert>
+
+<Variant platform="ios" task="add-dependencies" repeat="8"/>
 
 
 Create a `Podfile` if you do not already have one:
@@ -168,34 +155,6 @@ Add the dependencies to your `Podfile` for each extension.
 use_frameworks!
 pod 'AEPCore', '~> 1.0'
 pod 'AEPUserProfile', '~> 1.0'
-```
-
-If Cocoapods cannot not find the dependencies, you may need to run this command:
-
-```pod
-pod repo update
-```
-
-Save the `Podfile` and run install:
-
-```pod
-pod install
-```
-
-<Variant platform="ios-acp" task="add-dependencies" repeat="8"/>
-
-Create a `Podfile` if you do not already have one:
-
-```pod
-pod init
-```
-
-Add the dependencies to your `Podfile` for each extension.
-
-```pod
-use_frameworks!
-pod 'ACPCore', '~> 2.0'
-pod 'ACPUserProfile', '~> 2.0'
 ```
 
 If Cocoapods cannot not find the dependencies, you may need to run this command:
@@ -254,7 +213,7 @@ public class MainApp extends Application {
 }
 ```
 
-<Variant platform="ios-aep" task="add-initialization" repeat="5"/>
+<Variant platform="ios" task="add-initialization" repeat="5"/>
 
 For iOS Swift libraries, registration is changed to a single API call (as shown in the snippets below). Calling the`MobileCore.start` API is no longer required.
 

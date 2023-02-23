@@ -12,9 +12,9 @@ Android
 
 <Tabs query="platform=android&api=extension-version"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
 ## getExperienceCloudId
 
@@ -26,9 +26,9 @@ Android
 
 <Tabs query="platform=android&api=get-experience-cloud-id"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&api=get-experience-cloud-id"/>
+<Tabs query="platform=ios&api=get-experience-cloud-id"/>
 
 ## getIdentities
 
@@ -40,9 +40,9 @@ Android
 
 <Tabs query="platform=android&api=get-identities"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&api=get-identities"/>
+<Tabs query="platform=ios&api=get-identities"/>
 
 ## getUrlVariables
 
@@ -64,27 +64,21 @@ Android
 
 <Tabs query="platform=android&api=get-url-variables"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&api=get-url-variables"/>
+<Tabs query="platform=ios&api=get-url-variables"/>
 
 ## registerExtension
 
-Registers the Identity for Edge Network extension with the Mobile Core extension.
+<InlineAlert variant="warning" slots="text"/>
 
-<InlineAlert variant="info" slots="text"/>
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
 
-If your use-case covers both Edge Network and Adobe Experience Cloud Solutions extensions, you need to register Identity for Edge Network and Identity for Experience Cloud Identity Service from Mobile Core extensions. For more details, see the [frequently asked questions](./faq.md#q-i-am-using-aep-edge-and-adobe-solutions-extensions-which-identity-extension-should-i-install-and-register).
-
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 Android
 
 <Tabs query="platform=android&api=register-extension"/>
-
-iOS (AEP 3.x)
-
-<Tabs query="platform=ios-aep&api=register-extension"/>
 
 ## removeIdentity
 
@@ -104,9 +98,9 @@ Android
 
 <Tabs query="platform=android&api=remove-identity"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&api=remove-identity"/>
+<Tabs query="platform=ios&api=remove-identity"/>
 
 ## resetIdentities
 
@@ -119,7 +113,7 @@ Some example use cases for this API are:
 * During debugging, to see how new ECIDs (and other identifiers paired with it) behave with existing rules and metrics.
 * A last-resort reset for when an ECID should no longer be used.
 
-This API is not recommended for:
+This API is **not** recommended for:
 
 * Resetting a user's consent and privacy settings; see [Privacy and GDPR](../privacy-and-gdpr.md).
 * Removing existing custom identifiers; use the [`removeIdentity`](#removeidentity) API instead.
@@ -143,9 +137,9 @@ Android
 
 <Tabs query="platform=android&api=set-advertising-identifier"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&api=set-advertising-identifier"/>
+<Tabs query="platform=ios&api=set-advertising-identifier"/>
 
 ## updateIdentities
 
@@ -165,9 +159,9 @@ Android
 
 <Tabs query="platform=android&api=update-identities"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&api=update-identities"/>
+<Tabs query="platform=ios&api=update-identities"/>
 
 ## Public Classes
 
@@ -177,7 +171,7 @@ Defines a map containing a set of end user identities, keyed on either namespace
 
 The format of the IdentityMap class is defined by the [XDM Identity Map Schema](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/shared/identitymap.schema.md).
 
-For more information, please read an overview of the [AEP Identity Service](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html).
+For more information, please read an overview of the [Identity Service](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html).
 
 ```json
 "identityMap" : {
@@ -216,9 +210,9 @@ Android
 
 <Tabs query="platform=android&api=identity-map"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&api=identity-map"/>
+<Tabs query="platform=ios&api=identity-map"/>
 
 ### IdentityItem
 
@@ -232,9 +226,9 @@ Android
 
 <Tabs query="platform=android&api=identity-item"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&api=identity-item"/>
+<Tabs query="platform=ios&api=identity-item"/>
 
 ### AuthenticatedState
 
@@ -252,6 +246,6 @@ Android
 
 <Tabs query="platform=android&api=authenticated-state"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&api=authenticated-state"/>
+<Tabs query="platform=ios&api=authenticated-state"/>

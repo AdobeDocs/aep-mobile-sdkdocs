@@ -9,7 +9,7 @@ MobileCore.setLogLevel(LoggingMode.DEBUG);
 // MobileCore.setLogLevel(LoggingMode.ERROR);
 ```
 
-<Variant platform="ios-aep" task="enable" repeat="4"/>
+<Variant platform="ios" task="enable" repeat="4"/>
 
 #### Swift
 
@@ -28,27 +28,7 @@ MobileCore.setLogLevel(.debug)
 // [AEPMobileCore setLogLevel:AEPLogLevelWarning];
 // [AEPMobileCore setLogLevel:AEPLogLevelError];
 ```
-
-<Variant platform="ios-acp" task="enable" repeat="4"/>
-
-#### Swift
-
-```swift
-ACPCore.setLogLevel(ACPMobileLogLevel.debug)
-// ACPCore.setLogLevel(ACPMobileLogLevel.verbose)
-// ACPCore.setLogLevel(ACPMobileLogLevel.warning)
-// ACPCore.setLogLevel(ACPMobileLogLevel.error)
-```
-
-#### Objective-C
-
-```objectivec
-[ACPCore setLogLevel:ACPMobileLogLevelDebug];
-// [ACPCore setLogLevel:ACPMobileLogLevelVerbose];
-// [ACPCore setLogLevel:ACPMobileLogLevelWarning];
-// [ACPCore setLogLevel:ACPMobileLogLevelError];
-```
-
+<!-- 
 <Variant platform="react-native" task="enable" repeat="2"/>
 
 #### Javascript
@@ -58,9 +38,9 @@ ACPCore.setLogLevel(ACPMobileLogLevel.DEBUG);
 //ACPCore.setLogLevel(ACPMobileLogLevel.VERBOSE);
 //ACPCore.setLogLevel(ACPMobileLogLevel.WARNING);
 //ACPCore.setLogLevel(ACPMobileLogLevel.ERROR);
-```
+``` -->
 
-<Variant platform="flutter" task="enable" repeat="2"/>
+<!-- <Variant platform="flutter" task="enable" repeat="2"/>
 
 #### Dart
 
@@ -69,9 +49,9 @@ FlutterACPCore.setLogLevel(ACPLoggingLevel.DEBUG);
 //FlutterACPCore.setLogLevel(ACPLoggingLevel.VERBOSE);
 //FlutterACPCore.setLogLevel(ACPLoggingLevel.WARNING);
 //FlutterACPCore.setLogLevel(ACPLoggingLevel.ERROR);
-```
+``` -->
 
-<Variant platform="cordova" task="enable" repeat="2"/>
+<!-- <Variant platform="cordova" task="enable" repeat="2"/>
 
 #### Cordova
 
@@ -91,7 +71,7 @@ ACPCore.SetLogLevel(ACPCore.ACPMobileLogLevel.ERROR);
 ACPCore.SetLogLevel(ACPCore.ACPMobileLogLevel.WARNING);
 ACPCore.SetLogLevel(ACPCore.ACPMobileLogLevel.DEBUG);
 ACPCore.SetLogLevel(ACPCore.ACPMobileLogLevel.VERBOSE);
-```
+``` -->
 
 <Variant platform="android" task="metrics" repeat="7"/>
 
@@ -196,7 +176,7 @@ When the app enters the background, pause Lifecycle data collection from your ap
  }
 ```
 
-<Variant platform="react-native" task="metrics" repeat="6"/>
+<!-- <Variant platform="react-native" task="metrics" repeat="6"/>
 
 #### JavaScript
 
@@ -212,15 +192,15 @@ ACPCore.lifecycleStart({"lifecycleStart": "myData"});
 
 ```jsx
 ACPCore.lifecyclePause();
-```
+``` -->
 
-<Variant platform="flutter" task="metrics" repeat="2"/>
+<!-- <Variant platform="flutter" task="metrics" repeat="2"/>
 
 #### Flutter
 
-You need to implement Lifecycle in native Android and iOS code. For more information on implementing, please read the [Lifecycle documentation](../lifecycle-for-edge-network/index.md).
+You need to implement Lifecycle in native Android and iOS code. For more information on implementing, please read the [Lifecycle documentation](../lifecycle-for-edge-network/index.md). -->
 
-<Variant platform="cordova" task="metrics" repeat="4"/>
+<!-- <Variant platform="cordova" task="metrics" repeat="4"/>
 
 #### Cordova
 
@@ -296,4 +276,4 @@ protected override void OnPause()
   base.OnPause();
   ACPCore.LifecyclePause();
 }
-```
+``` -->

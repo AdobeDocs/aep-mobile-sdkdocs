@@ -300,48 +300,6 @@ public static void registerExtension()
 Optimize.registerExtension();
 ```
 
-<Variant platform="ios" api="register-extension" repeat="12"/>
-
-#### Swift
-
-#### Syntax
-
-```swift
-static func registerExtensions(_ extensions: [NSObject.Type], 
-                               _ completion: (() -> Void)? = nil)
-```
-
-* _extensions_ is an array of metatype of NSObject class from which all SDK extensions inherit.
-* _completion_ is invoked when all the given extensions have been successfully registered with the SDK.
-
-#### Example
-
-```swift
-MobileCore.registerExtensions([Optimize.self, ...]) {
-    // Processing upon registration completion
-}
-```
-
-#### Objective-C
-
-#### Syntax
-
-```objc
-+ (void) registerExtensions: (NSArray<Class*>* _Nonnull) extensions 
-                 completion: (void (^ _Nullable)(void)) completion;
-```
-
-* _extensions_ is an array of opaque type that represents an SDK extension class.
-* _completion_ is invoked when all the given extensions have been successfully registered with the SDK.
-
-#### Example
-
-```objc
-[AEPMobileCore registerExtensions:@[AEPMobileOptimize.class, ...] completion:^{
-  // Processing upon registration completion
-}];
-```
-
 <Variant platform="android" api="update-propositions" repeat="6"/>
 
 #### Java

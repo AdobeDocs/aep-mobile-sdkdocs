@@ -1,8 +1,6 @@
 ---
 title: Mobile SDK overview
 description: This is the overview page of Mobile SDK
-contributors:
-  - https://github.com/icaraps 
 ---
 
 # Mobile SDK documentation
@@ -17,9 +15,9 @@ The latest versions of the Adobe Experience Platform SDK for Google Android and 
 
 <InlineAlert variant="success" slots="header, text"/>
 
-Project Griffon will be Assurance!
+Project Griffon is now Assurance
 
-We're pleased to announce that Project Griffon will be generally available to all Adobe Experience Cloud customers as Assurance. To learn more about this transition see [here](./platform-assurance/index.md) details.
+We're pleased to announce that Project Griffon is now generally available to all Adobe Experience Cloud customers as Assurance. To learn more about this transition, please read the [Assurance overview](./platform-assurance/index.md).
 
 ## Bring the Adobe Experience Cloud to your apps
 
@@ -34,20 +32,9 @@ Experience Platform Mobile SDKs are available for Android, iOS, and a [variety](
 The Adobe Experience Platform Mobile SDK supports the following platforms:
 
 - [Android](./current-sdk-versions.md#android)
-- [iOS - Swift](./current-sdk-versions.md#ios--swift)
-- [iOS - Objective-C](./current-sdk-versions.md#ios--objective-c)
-- [React Native (AEP 1.x)](./current-sdk-versions.md#react-native-aep-1x)
-- [React Native (ACP 2.x)](./current-sdk-versions.md#react-native-acp-2x)
-- [Flutter (AEP 1.x)](./current-sdk-versions.md#flutter-aep-1x)
-- [Flutter (ACP 2.x)](./current-sdk-versions.md#flutter-acp-2x)
-- [Cordova](./current-sdk-versions.md#cordova)
-- [Xamarin](./current-sdk-versions.md#xamarin)
-
-<InlineAlert variant="warning" slots="header, text"/>
-
-End of support for Adobe Experience Platform Mobile SDK plugins for Unity
-
-Effective March 30, 2022, support for Adobe Experience Platform Mobile SDKs on Unity is no longer active. While you may continue using our libraries, Adobe no longer plans to update, modify, or provide support for these libraries. Please contact your Adobe CSM for details.
+- [iOS](./current-sdk-versions.md#ios)
+- [React Native](./current-sdk-versions.md#react-native)
+- [Flutter](./current-sdk-versions.md#flutter)
 
 ## Resources
 
@@ -56,8 +43,8 @@ Effective March 30, 2022, support for Adobe Experience Platform Mobile SDKs on U
 * [Frequently asked questions](./faq.md)
 * [Why use the Adobe Experience Platform Mobile SDKs](https://medium.com/adobetech/accelerate-your-mobile-application-development-with-adobe-experience-platform-mobile-sdk-and-launch-ed023536d611)
 
-## Get Help 
+## Get Help
 
-If you have any questions about the SDK, please visit the [SDK community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform/ct-p/adobe-experience-platform-community). 
+If you have any questions about the SDK, please visit the [SDK community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform/ct-p/adobe-experience-platform-community).
 
 If you need immediate assistance, please contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support).

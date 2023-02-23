@@ -4,10 +4,6 @@ import Tabs from './tabs/api-reference.md'
 
 ## clearUpdatedConfiguration
 
-<InlineAlert variant="info" slots="text"/>
-
-This API is only available in Android and iOS (AEP 3.x).
-
 You can clear any programmatic updates made to the configuration via the `clearUpdatedConfiguration` API. This will clear programmatic updates to configuration made via the `updateConfiguration(configMap)`(Android)/ `updateConfigurationWith(configDict:)`(iOS) API. It will also clear any updates to the `MobilePrivacyStatus`(Android)/ `PrivacyStatus`(iOS)  made via `setPrivacyStatus(privacyStatus)`(Android)/ `setPrivacyStatus(_ status:)`(iOS).
 
  Here are some examples of scenarios:
@@ -28,43 +24,31 @@ Android
 
 <Tabs query="platform=android&api=clear-updated-configuration"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&api=clear-updated-configuration"/>
+<Tabs query="platform=ios&api=clear-updated-configuration"/>
 
 ## configureWithAppID
 
 This API causes the SDK to download the configuration for the provided app ID and apply the configuration to the current session.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="5"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&api=configure-with-app-id"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&api=configure-with-app-id"/>
-
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&api=configure-with-app-id"/>
-
-Unity
-
-<Tabs query="platform=unity&api=configure-with-app-id"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&api=configure-with-app-id"/>
+<Tabs query="platform=ios&api=configure-with-app-id"/>
 
 ## configureWithFileInAssets
 
 <InlineAlert variant="info" slots="text"/>
 
-This API is only available in Android and was added in Android was added in Android Core version 1.7.0.
+This API is only available in Android.
 
-You can bundle a JSON configuration file in the app's Assets folder to replace or complement the configuration that was downloaded by using the [Configure with App ID per environment](./index.md#configure-with-app-id-per-environment) approach.
+You can bundle a JSON configuration file in the app's Assets folder to replace or complement the configuration that was downloaded by using the [Configure with App ID per environment](../#configure-with-app-id-per-environment) approach.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
@@ -74,27 +58,19 @@ Android
 
 ## configureWithFileInPath
 
-You can include a bundled JSON configuration file in your app package to replace or complement the configuration that was downloaded by using the [Configure with App ID per environment](./index.md#configure-with-app-id-per-environment) approach.
+You can include a bundled JSON configuration file in your app package to replace or complement the configuration that was downloaded by using the [Configure with App ID per environment](../#configure-with-app-id-per-environment) approach.
 
 To pass in a bundled path and file name:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&api=configure-with-file-in-path"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&api=configure-with-file-in-path"/>
-
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&api=configure-with-file-in-path"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&api=configure-with-file-in-path"/>
+<Tabs query="platform=ios&api=configure-with-file-in-path"/>
 
 ## extensionVersion
 
@@ -102,39 +78,23 @@ The `extensionVersion()` API returns the version of the Configuration extension.
 
 To get the version of the Configuration extension, use the following code sample:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&api=extension-version"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&api=extension-version"/>
-
-React Native
+<!--- React Native
 
 <Tabs query="platform=react-native&api=extension-version"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=extension-version"/>
-
-Cordova
-
-<Tabs query="platform=cordova&api=extension-version"/>
-
-Unity
-
-<Tabs query="platform=unity&api=extension-version"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&api=extension-version"/>
+<Tabs query="platform=flutter&api=extension-version"/> --->
 
 ## updateConfiguration
 
@@ -148,36 +108,20 @@ Keys that are not found on the current configuration are added when this method 
 
 Do not use this API to update the `build.environment` key or any key with an environment prefix, because it can lead to unexpected behaviors. For more information, read [Environment-aware configuration properties](./index.md#environment-aware-configuration-properties).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&api=update-configuration"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&api=update-configuration"/>
+<Tabs query="platform=ios&api=update-configuration"/>
 
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&api=update-configuration"/>
-
-React Native
+<!--- React Native
 
 <Tabs query="platform=react-native&api=update-configuration"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=update-configuration"/>
-
-Cordova
-
-<Tabs query="platform=cordova&api=update-configuration"/>
-
-Unity
-
-<Tabs query="platform=unity&api=update-configuration"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&api=update-configuration"/>
+<Tabs query="platform=flutter&api=update-configuration"/> --->

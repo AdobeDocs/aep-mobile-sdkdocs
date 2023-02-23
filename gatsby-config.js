@@ -11,16 +11,17 @@
  */
 module.exports = {
     siteMetadata: {
-        // versions: [
-        //   {
-        //     title: 'v2.0',
-        //     selected: true
-        //   },
-        //   {
-        //     title: 'v1.4',
-        //     path: 'https://github.com/AdobeDocs/analytics-1.4-apis'
-        //   }
-        // ],
+        versions: [
+            {
+                title: 'Latest version',
+                path: '/client-sdks/documentation/',
+                selected: true
+              },
+              {
+                title: 'Previous versions',
+                path: '/client-sdks/previous-versions/'
+              }
+          ],
         pages: [{
             title: 'Documentation',
             path: '/documentation',
@@ -49,32 +50,8 @@ module.exports = {
                     {
                         title: "2021",
                         path: "/documentation/release-notes/2021"
-                    },
-                    {
-                        title: "2020",
-                        path: "/documentation/release-notes/2020"
-                    },
-                    {
-                        title: "2019",
-                        path: "/documentation/release-notes/2019"
-                    },
-                    {
-                        title: "2018",
-                        path: "/documentation/release-notes/2018"
                     }
                 ]
-            },
-            {
-                title: "Version 4 Mobile SDKs end-of-support FAQ",
-                path: "/documentation/v4-end-of-life-faq"
-            },
-            {
-                title: "Version 4 API changelog",
-                path: "/documentation/api-changelog"
-            },
-            {
-                title: "Adobe Experience Cloud & Apple's IDFA, Privacy announcement",
-                path: "/documentation/privacy-announcement"
             },
             {
                 title: "Getting started",
@@ -141,10 +118,6 @@ module.exports = {
                                     {
                                         title: "API reference",
                                         path: "documentation/mobile-core/configuration/api-reference"
-                                    },
-                                    {
-                                        title: "Event reference",
-                                        path: "documentation/mobile-core/configuration/event-reference"
                                     }
                                 ]
                             },
@@ -159,14 +132,6 @@ module.exports = {
                                     {
                                         title: "API reference",
                                         path: "documentation/mobile-core/identity/api-reference"
-                                    },
-                                    {
-                                        title: "Event reference",
-                                        path: "documentation/mobile-core/identity/event-reference"
-                                    },
-                                    {
-                                        title: "Migration",
-                                        path: "documentation/mobile-core/identity/migration"
                                     }
                                 ]
                             },
@@ -179,10 +144,6 @@ module.exports = {
                                         path: "documentation/mobile-core/lifecycle"
                                     },
                                     {
-                                        title: "Migration",
-                                        path: "documentation/mobile-core/lifecycle/migration"
-                                    },
-                                    {
                                         title: "Lifecycle extension in Android",
                                         path: "documentation/mobile-core/lifecycle/android"
                                     },
@@ -193,10 +154,6 @@ module.exports = {
                                     {
                                         title: "API reference",
                                         path: "documentation/mobile-core/lifecycle/api-reference"
-                                    },
-                                    {
-                                        title: "Event reference",
-                                        path: "documentation/mobile-core/lifecycle/event-reference"
                                     },
                                     {
                                         title: "Metrics",
@@ -217,16 +174,8 @@ module.exports = {
                                         path: "documentation/mobile-core/platform-services"
                                     },
                                     {
-                                        title: "Data queue service",
-                                        path: "documentation/mobile-core/platform-services/data-queue-service"
-                                    },
-                                    {
                                         title: "Network service",
                                         path: "documentation/mobile-core/platform-services/network-service"
-                                    },
-                                    {
-                                        title: "System device info service",
-                                        path: "documentation/mobile-core/platform-services/system-device-info-service"
                                     }
                                 ]
                             },
@@ -257,30 +206,14 @@ module.exports = {
                                         path: "documentation/mobile-core/signal"
                                     },
                                     {
-                                        title: "Migration",
-                                        path: "documentation/mobile-core/signal/migration"
-                                    },
-                                    {
                                         title: "API reference",
                                         path: "documentation/mobile-core/signal/api-reference"
-                                    },
-                                    {
-                                        title: "Event reference",
-                                        path: "documentation/mobile-core/signal/event-reference"
                                     }
                                 ]
                             },
                             {
                                 title: "API reference",
                                 path: "documentation/mobile-core/api-reference"
-                            },
-                            {
-                                title: "Event reference",
-                                path: "documentation/mobile-core/event-reference"
-                            },
-                            {
-                                title: "Migration",
-                                path: "documentation/mobile-core/migration"
                             },
                             {
                                 title: "Release notes",
@@ -385,10 +318,6 @@ module.exports = {
                                 path: "/documentation/platform-assurance-sdk"
                             },
                             {
-                                title: "Migration",
-                                path: "/documentation/platform-assurance-sdk/migration"
-                            },
-                            {
                                 title: "API reference",
                                 path: "/documentation/platform-assurance-sdk/api-reference"
                             },
@@ -415,10 +344,6 @@ module.exports = {
                     {
                         title: "API reference",
                         path: "documentation/places/api-reference.md"
-                    },
-                    {
-                        title: "Migration",
-                        path: "documentation/places/migration.md"
                     }
                 ]
             },
@@ -431,16 +356,8 @@ module.exports = {
                         path: "/documentation/profile"
                     },
                     {
-                        title: "Migration",
-                        path: "documentation/profile/migration"
-                    },
-                    {
                         title: "API reference",
                         path: "documentation/profile/api-reference"
-                    },
-                    {
-                        title: "Event reference",
-                        path: "documentation/profile/event-reference"
                     },
                     {
                         title: "Release notes",
@@ -475,10 +392,6 @@ module.exports = {
                                 path: '/documentation/adobe-analytics/event-reference/'
                             },
                             {
-                                title: "Migration",
-                                path: "/documentation/adobe-analytics/migration/"
-                            },
-                            {
                                 title: "Product variable",
                                 path: "/documentation/adobe-analytics/product-variable"
                             },
@@ -505,10 +418,6 @@ module.exports = {
                                 path: "/documentation/adobe-analytics-mobile-services/api-reference/"
                             },
                             {
-                                title: "Migration",
-                                path: "/documentation/adobe-analytics-mobile-services/migration/"
-                            },
-                            {
                                 title: "Release notes",
                                 path: "/documentation/adobe-analytics-mobile-services/release-notes/"
                             }
@@ -525,10 +434,6 @@ module.exports = {
                             {
                                 title: "API reference",
                                 path: "documentation/adobe-media-analytics/api-reference"
-                            },
-                            {
-                                title: "Migration",
-                                path: "documentation/adobe-media-analytics/migration"
                             },
                             {
                                 title: "Release notes",
@@ -553,10 +458,6 @@ module.exports = {
                                 path: "documentation/adobe-audience-manager/event-reference"
                             },
                             {
-                                title: "Migration",
-                                path: "documentation/adobe-audience-manager/migration"
-                            },
-                            {
                                 title: "Release notes",
                                 path: "/documentation/adobe-audience-manager/release-notes"
                             }
@@ -579,10 +480,6 @@ module.exports = {
                                 path: "documentation/adobe-campaign-classic/event-reference"
                             },
                             {
-                                title: "Migration",
-                                path: "documentation/adobe-campaign-classic/migration"
-                            },
-                            {
                                 title: "Release notes",
                                 path: "documentation/adobe-campaign-classic/release-notes"
                             }
@@ -603,10 +500,6 @@ module.exports = {
                             {
                                 title: "Event reference",
                                 path: "documentation/adobe-campaign-standard/event-reference"
-                            },
-                            {
-                                title: "Migration",
-                                path: "documentation/adobe-campaign-standard/migration"
                             },
                             {
                                 title: "Release notes",
@@ -718,10 +611,6 @@ module.exports = {
                             {
                                 title: "Event reference",
                                 path: "documentation/adobe-target/event-reference"
-                            },
-                            {
-                                title: "Migration",
-                                path: "documentation/adobe-target/migration"
                             },
                             {
                                 title: "Release notes",
@@ -864,16 +753,16 @@ module.exports = {
                                 path: "documentation/upgrade-platform-sdks"
                             },
                             {
-                                title: "SDK comparison",
+                                title: "v4 SDK comparison",
                                 path: "documentation/upgrade-platform-sdks/comparison"
+                            },
+                            {
+                                title: "v4 API changelog",
+                                path: "documentation/upgrade-platform-sdks/api-changelog.md"
                             },
                             {
                                 title: "Manual Lifecycle implementation",
                                 path: "documentation/upgrade-platform-sdks/lifecycle"
-                            },
-                            {
-                                title: "API changelog",
-                                path: "documentation/upgrade-platform-sdks/api-changelog.md"
                             },
                             {
                                 title: "Analytics migration",
@@ -904,12 +793,24 @@ module.exports = {
                         path: "documentation/faq"
                     },
                     {
-                        title: "Migrate to Swift",
-                        path: "documentation/migrate-to-swift"
-                    },
-                    {
                         title: "Privacy and GDPR",
                         path: "documentation/privacy-and-gdpr"
+                    },
+                    {
+                        title: "Manage Gradle dependencies",
+                        path: "documentation/manage-gradle-dependencies"
+                    },
+                    {
+                        title: "Manage SPM dependencies",
+                        path: "documentation/manage-spm-dependencies"
+                    },
+                    {
+                        title: "Version 4 Mobile SDKs end-of-support FAQ",
+                        path: "/documentation/v4-end-of-life-faq"
+                    },
+                    {
+                        title: "Adobe Experience Cloud & Apple's IDFA, Privacy announcement",
+                        path: "/documentation/privacy-announcement"
                     }
                 ]
             },

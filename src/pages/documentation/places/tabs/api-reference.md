@@ -1,4 +1,24 @@
-<Variant language="swift" api="clear" repeat="4"/>
+<Variant platform="android" api="clear" repeat="6"/>
+
+#### Java
+
+**Example**
+
+```java
+Places.clear();
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+Places.clear()
+```
+
+<Variant platform="ios" api="clear" repeat="10"/>
+
+#### Swift
 
 **Syntax**
 
@@ -12,7 +32,7 @@ static func clear()
 Places.clear()
 ```
 
-<Variant language="objc" api="clear" repeat="4"/>
+#### Objective-C
 
 **Syntax**
 
@@ -26,7 +46,27 @@ Places.clear()
 [AEPMobilePlaces clear];
 ```
 
-<Variant language="swift" api="extension-version" repeat="4"/>
+<Variant platform="android" api="extension-version" repeat="6"/>
+
+#### Java
+
+**Example**
+
+```java
+String placesExtensionVersion = Places.extensionVersion();
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+val placesExtensionVersion: String = Places.extensionVersion()
+```
+
+<Variant platform="ios" api="extension-version" repeat="10"/>
+
+#### Swift
 
 **Syntax**
 
@@ -40,7 +80,7 @@ static var extensionVersion: String
 let placesVersion = Places.extensionVersion
 ```
 
-<Variant language="objc" api="extension-version" repeat="4"/>
+#### Objective-C
 
 **Syntax**
 
@@ -54,7 +94,36 @@ let placesVersion = Places.extensionVersion
 NSString *placesVersion = [AEPMobilePlaces extensionVersion];
 ```
 
-<Variant language="swift" api="get-current-points-of-interest" repeat="4"/>
+<Variant platform="android" api="get-current-points-of-interest" repeat="6"/>
+
+#### Java
+
+**Example**
+
+```java
+Places.getCurrentPointsOfInterest(new AdobeCallback<List<PlacesPOI>>() {
+    @Override
+    public void call(List<PlacesPOI> pois) {
+        // use the obtained POIs that the device is within
+        processUserWithinPois(pois);
+    }
+});
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+Places.getCurrentPointsOfInterest() { pois -> 
+    // use the obtained POIs that the device is within
+    processUserWithinPois(pois)
+}
+```
+
+<Variant platform="ios" api="get-current-points-of-interest" repeat="10"/>
+
+#### Swift
 
 **Syntax**
 
@@ -70,7 +139,7 @@ Places.getCurrentPointsOfInterest() { currentPois in
 }
 ```
 
-<Variant language="objc" api="get-current-points-of-interest" repeat="4"/>
+#### Objective-C
 
 **Syntax**
 
@@ -86,7 +155,36 @@ Places.getCurrentPointsOfInterest() { currentPois in
 }];
 ```
 
-<Variant language="swift" api="get-last-known-location" repeat="4"/>
+<Variant platform="android" api="get-last-known-location" repeat="6"/>
+
+#### Java
+
+**Example**
+
+```java
+Places.getLastKnownLocation(new AdobeCallback<Location>() {
+    @Override
+    public void call(Location lastLocation) {
+        // do something with the last known location
+        processLastKnownLocation(lastLocation);
+    }
+});
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+Places.getLastKnownLocation() { lastLocation -> 
+    // do something with the last known location
+    processLastKnownLocation(lastLocation)
+}
+```
+
+<Variant platform="ios" api="get-last-known-location" repeat="10"/>
+
+#### Swift
 
 **Syntax**
 
@@ -104,7 +202,7 @@ Places.getLastKnownLocation() { location in
 }
 ```
 
-<Variant language="objc" api="get-last-known-location" repeat="4"/>
+#### Objective-C
 
 **Syntax**
 
@@ -122,7 +220,56 @@ Places.getLastKnownLocation() { location in
 }];
 ```
 
-<Variant language="swift" api="get-nearby-points-of-interest" repeat="4"/>
+<Variant platform="android" api="get-nearby-points-of-interest" repeat="8"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void getNearbyPointsOfInterest(@NonNull final Location location,
+    final int limit,
+    @NonNull final AdobeCallback<List<PlacesPOI>> successCallback,
+    @NonNull final AdobeCallback<PlacesRequestError> errorCallback);
+```
+
+**Example**
+
+```java
+Places.getNearbyPointsOfInterest(currentLocation, 10,
+    new AdobeCallback<List<PlacesPOI>>() {
+        @Override
+        public void call(List<PlacesPOI> pois) {
+            // do required processing with the returned nearbyPoi array
+            startMonitoringPois(pois);
+        }
+    }, new AdobeCallback<PlacesRequestError>() {
+        @Override
+        public void call(PlacesRequestError placesRequestError) {
+            // look for the placesRequestError and handle the error accordingly
+            handleError(placesRequestError);
+        }
+    }
+);
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+Places.getNearbyPointsOfInterest(currentLocation, 10, { pois -> 
+    // do required processing with the returned nearbyPoi array
+    startMonitoringPois(pois);
+}, { error -> 
+    // look for the placesRequestError and handle the error accordingly
+    handleError(placesRequestError);
+})
+```
+
+<Variant platform="ios" api="get-nearby-points-of-interest" repeat="10"/>
+
+#### Swift
 
 **Syntax**
 
@@ -141,7 +288,7 @@ Places.getNearbyPointsOfInterest(forLocation: location, withLimit: 10) { (nearby
 }
 ```
 
-<Variant language="objc" api="get-nearby-points-of-interest" repeat="4"/>
+#### Objective-C
 
 **Syntax**
 
@@ -164,7 +311,96 @@ CLLocation *location = [[CLLocation alloc] initWithLatitude:40.4350229 longitude
 }];
 ```
 
-<Variant language="swift" api="process-region-event" repeat="4"/>
+<Variant platform="android" api="process-geofence" repeat="8"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void processGeofence(final Geofence geofence, final int transitionType);
+```
+
+**Example**
+
+```java
+public class GeofenceTransitionsIntentService extends IntentService {
+
+    public GeofenceTransitionsIntentService() {
+        super("GeofenceTransitionsIntentService");
+    }
+
+    protected void onHandleIntent(Intent intent) {
+        GeofencingEvent geofencingEvent = GeofencingEvent.fromIntent(intent);
+
+        List<Geofence> geofences = geofencingEvent.getTriggeringGeofences();
+
+        if (geofences.size() > 0) {
+            // Call the Places API to process information
+            Places.processGeofence(geofences.get(0), geofencingEvent.getGeofenceTransition());
+        }
+    }
+}
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+fun onHandleIntent(intent: Intent) {
+    val geofencingEvent = GeofencingEvent.fromIntent(intent)
+
+    val geofences = geofencingEvent.getTriggeringGeofences()
+
+    if (!geofences.isEmpty()) {
+        Places.processGeofence(geofences.first(), geofencingEvent.getGeofenceTransition())
+    }
+}
+```
+
+<Variant platform="android" api="process-geofence-event" repeat="8"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void processGeofenceEvent(@NonNull final GeofencingEvent geofencingEvent);
+```
+
+**Example**
+
+```java
+public class GeofenceTransitionsIntentService extends IntentService {
+
+    public GeofenceTransitionsIntentService() {
+        super("GeofenceTransitionsIntentService");
+    }
+
+    protected void onHandleIntent(Intent intent) {
+        GeofencingEvent geofencingEvent = GeofencingEvent.fromIntent(intent);
+        // Call the Places API to process information
+        Places.processGeofenceEvent(geofencingEvent);
+    }
+}
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+fun onHandleIntent(intent: Intent) {
+    val geofencingEvent = GeofencingEvent.fromIntent(intent)
+    // Call the Places API to process information
+    Places.processGeofenceEvent(geofencingEvent)
+}
+```
+
+<Variant platform="ios" api="process-region-event" repeat="10"/>
+
+#### Swift
 
 **Syntax**
 
@@ -183,7 +419,7 @@ let region = CLCircularRegion(center: CLLocationCoordinate2D(latitude: 40.388684
 Places.processRegionEvent(.entry, forRegion: region)
 ```
 
-<Variant language="objc" api="process-region-event" repeat="4"/>
+#### Objective-C
 
 **Syntax**
 
@@ -202,7 +438,27 @@ CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:CLLocationCo
 [AEPMobilePlaces processRegionEvent:AEPPlacesRegionEventEntry forRegion:region];
 ```
 
-<Variant language="swift" api="register-extension" repeat="2"/>
+<Variant platform="android" api="register-extension" repeat="6"/>
+
+#### Java
+
+**Example**
+
+```java
+Places.registerExtension();
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+Places.registerExtension()
+```
+
+<Variant platform="ios" api="register-extension" repeat="4"/>
+
+#### Swift
 
 **Example**
 
@@ -210,7 +466,7 @@ CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:CLLocationCo
 MobileCore.registerExtensions([Places.self])
 ```
 
-<Variant language="objc" api="register-extension" repeat="2"/>
+#### Objective-C
 
 **Example**
 
@@ -218,7 +474,9 @@ MobileCore.registerExtensions([Places.self])
 [AEPMobileCore registerExtensions:@[AEPMobilePlaces.class] completion:nil];
 ```
 
-<Variant language="swift" api="set-accuracy-authorization" repeat="4"/>
+<Variant platform="ios" api="set-accuracy-authorization" repeat="10"/>
+
+#### Swift
 
 **Syntax**
 
@@ -232,7 +490,7 @@ static func setAccuracyAuthorization(_ accuracy: CLAccuracyAuthorization)
 Places.setAccuracyAuthorization(.fullAccuracy)
 ```
 
-<Variant language="objc" api="set-accuracy-authorization" repeat="4"/>
+#### Objective-C
 
 **Syntax**
 
@@ -246,7 +504,33 @@ Places.setAccuracyAuthorization(.fullAccuracy)
 [AEPMobilePlaces setAccuracyAuthorization:CLAccuracyAuthorizationFullAccuracy];
 ```
 
-<Variant language="swift" api="set-authorization-status" repeat="4"/>
+<Variant platform="android" api="set-authorization-status" repeat="8"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void setAuthorizationStatus(final PlacesAuthorizationStatus status);
+```
+
+**Example**
+
+```java
+Places.setAuthorizationStatus(PlacesAuthorizationStatus.ALWAYS);
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+Places.setAuthorizationStatus(PlacesAuthorizationStatus.ALWAYS)
+```
+
+<Variant platform="ios" api="set-authorization-status" repeat="10"/>
+
+#### Swift
 
 **Syntax**
 
@@ -264,7 +548,7 @@ func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
 }
 ```
 
-<Variant language="objc" api="set-authorization-status" repeat="4"/>
+#### Objective-C
 
 **Syntax**
 

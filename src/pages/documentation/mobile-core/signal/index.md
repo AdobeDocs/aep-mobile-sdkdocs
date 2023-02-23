@@ -4,7 +4,7 @@ import Tabs from './tabs/index.md'
 
 The Signal extension allows marketers to send a "signal" to their apps through the Adobe Experience Platform Mobile SDKs. This signal might tell the Mobile SDKs or the apps to complete tasks, such as send PII-labeled data, to trigger a postback to a third-party ad-network and open an app deep link or URL. To ensure that signals are sent or are activated, the marketers need to configure triggers and traits in the Data Collection UI.
 
-The Signal extension is bundled with the [MobileCore (Android)/ACPCore (iOS)](../index.md) extension and allows you to send postbacks to third-party endpoints and open URLs, such as web URLs or application deep links, when using rules actions in the Data Collection UI.
+The Signal extension allows you to send postbacks to third-party endpoints and open URLs, such as web URLs or application deep links, when using rules actions in the Data Collection UI.
 
 To send PII data to external destinations, the `PII` action can trigger the Rules Engine when certain triggers and traits match. When setting a rule, you can also set the `PII` action for a Signal event. The `collectPii` API can then be used to trigger the rule and send the PII data to a remote server.
 
@@ -24,80 +24,51 @@ For more information about creating and configuring a rule in the Data Collectio
 
 ## Add the Signal extension to your app
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
+<InlineAlert variant="warning" slots="text"/>
+
+Using dynamic dependency versions is not recommended for production apps. Refer to this [page](../../manage-gradle-dependencies.md) for managing gradle dependencies.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=add"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=add"/>
+<Tabs query="platform=ios&task=add"/>
 
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=add"/>
-
-React Native
+<!--- React Native
 
 <Tabs query="platform=react-native&task=add"/>
 
 Flutter
 
-<Tabs query="platform=flutter&task=add"/>
-
-Cordova
-
-<Tabs query="platform=cordova&task=add"/>
-
-Unity
-
-<Tabs query="platform=unity&task=add"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&task=add"/>
-
+<Tabs query="platform=flutter&task=add"/> --->
 
 ## Register the Signal extension
 
-The `registerExtension()` API registers the Signal extension with the Mobile Core extension. This API allows the extension to send and receive events to and from the Mobile SDK.
+The `MobileCore.registerExtensions()` API can be used to register the Signal extension with the Mobile Core extension. This API allows the extension to send and receive events to and from the Mobile SDK.
 
-To register the Identity extension, use the following code sample:
+To register the Signal extension, use the following code sample:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=register"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=register"/>
+<Tabs query="platform=ios&task=register"/>
 
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=register"/>
-
-React Native
+<!--- React Native
 
 <Tabs query="platform=react-native&task=register"/>
 
 Flutter
 
-<Tabs query="platform=flutter&task=register"/>
-
-Cordova
-
-<Tabs query="platform=cordova&task=register"/>
-
-Unity
-
-<Tabs query="platform=unity&task=register"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&task=register"/>
+<Tabs query="platform=flutter&task=register"/> --->
 
 ## Implement the Mobile SDK to send PII data to external destinations
 

@@ -5,6 +5,7 @@
 **Syntax**
 
 ```java
+@NonNull
 public static String extensionVersion();
 ```
 
@@ -14,7 +15,7 @@ public static String extensionVersion();
 String signalExtensionVersion = Signal.extensionVersion();
 ```
 
-<Variant platform="ios-aep" api="extension-version" repeat="7"/>
+<Variant platform="ios" api="extension-version" repeat="7"/>
 
 **Syntax**
 
@@ -36,29 +37,7 @@ let version = Signal.extensionVersion
 NSString *version = [AEPMobileSignal extensionVersion];
 ```
 
-<Variant platform="ios-acp" api="extension-version" repeat="7"/>
-
-**Syntax**
-
-```objectivec
-(nonnull NSString*) extensionVersion;
-```
-
-**Examples**
-
-**Swift**
-
-```swift
-var signalExtensionVersion  = ACPSignal.extensionVersion()
-```
-
-**Objective-C**
-
-```objectivec
-NSString *signalExtensionVersion = [ACPSignal extensionVersion];
-```
-
-<Variant platform="react-native" api="extension-version" repeat="2"/>
+<!--- <Variant platform="react-native" api="extension-version" repeat="2"/>
 
 #### JavaScript
 
@@ -72,35 +51,7 @@ ACPSignal.extensionVersion().then(signalExtensionVersion => console.log("AdobeEx
 
 ```dart
 String signalExtensionVersion = await FlutterACPSignal.extensionVersion;
-```
-
-<Variant platform="cordova" api="extension-version" repeat="2"/>
-
-#### Cordova
-
-```jsx
-ACPSignal.extensionVersion(function(version) {  
-    console.log("ACPSignal version: " + version);
-}, function(error) {  
-    console.log(error);  
-});
-```
-
-<Variant platform="unity" api="extension-version" repeat="2"/>
-
-#### C#
-
-```csharp
-string signalVersion = ACPSignal.ExtensionVersion();
-```
-
-<Variant platform="xamarin" api="extension-version" repeat="2"/>
-
-#### C#
-
-```csharp
-string signalVersion = ACPSignal.ExtensionVersion();
-```
+``` --->
 
 <Variant platform="android" api="register-extension" repeat="5"/>
 
@@ -118,32 +69,6 @@ public static void registerExtension()
 Signal.registerExtension();
 ```
 
-<Variant platform="ios-aep" api="register-extension" repeat="1"/>
+<!--- <Variant platform="react-native" api="register-extension" repeat="1"/>
 
-This API no longer exists in `Signal`. Instead, the extension should be registered by calling the `registerExtensions` API in the MobileCore. Please see the updated SDK initialization steps at the [migrate to Swift tutorial.](../../migrate-to-swift.md#update-sdk-initialization)
-
-<Variant platform="ios-acp" api="register-extension" repeat="7"/>
-
-**Syntax**
-
-```swift
-+ (void) registerExtension;
-```
-
-**Example**
-
-**Swift**
-
-```swift
-ACPSignal.registerExtension()
-```
-
-**Objective-C**
-
-```objc
-[ACPSignal registerExtension];
-```
-
-<Variant platform="react-native" api="register-extension" repeat="1"/>
-
-When using React Native, register the Signal extension with Mobile Core in native code as shown on the Android and iOS tabs.
+When using React Native, register the Signal extension with Mobile Core in native code as shown on the Android and iOS tabs. --->

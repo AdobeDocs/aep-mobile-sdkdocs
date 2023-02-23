@@ -2,7 +2,7 @@ import Tabs from './tabs/index.md'
 
 # Consent for Edge Network
 
-The Adobe Experience Platform Consent mobile extension enables consent preferences collection from your mobile app when using the [Adobe Experience Platform Mobile SDK](../mobile-core/index.md) and the [Edge Network extension](../experience-platform-extension/index.md).
+The Adobe Experience Platform Consent mobile extension enables consent preferences collection from your mobile app when using the [Adobe Experience Platform Mobile SDK](../mobile-core/index.md) and the [Edge Network extension](../edge-network/index.md).
 
 ## Configure the Adobe Experience Platform Consent extension in Data Collection UI
 
@@ -26,19 +26,15 @@ The use of this extension is currently limited to the setting (and enforcement) 
 
 ### Download and import the Consent extension
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=download"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=download"/>
-
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=download"/>
+<Tabs query="platform=ios&task=download"/>
 
 ### Register Edge extensions with Mobile Core
 
@@ -48,9 +44,9 @@ Android
 
 <Tabs query="platform=android&task=register"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=register"/>
+<Tabs query="platform=ios&task=register"/>
 
 ## Configuration keys
 

@@ -18,7 +18,7 @@ ExperienceEvent experienceEvent = new ExperienceEvent.Builder()
                 .build();
 ```
 
-<Variant platform="ios-aep" task="create" repeat="4"/>
+<Variant platform="ios" task="create" repeat="4"/>
 
 #### Swift
 
@@ -53,7 +53,7 @@ AEPExperienceEvent *experienceEvent = [[AEPExperienceEvent alloc] initWithXdm:xd
 Edge.sendEvent(experienceEvent, null);
 ```
 
-<Variant platform="ios-aep" task="send" repeat="4"/>
+<Variant platform="ios" task="send" repeat="4"/>
 
 #### Swift
 
@@ -85,7 +85,7 @@ additionalContextData.put("customKey", "value");
 MobileCore.trackAction("loginClicked", additionalContextData);
 ```
 
-<Variant platform="ios-aep" task="track-action" repeat="10"/>
+<Variant platform="ios" task="track-action" repeat="10"/>
 
 #### Swift
 
@@ -116,37 +116,7 @@ static func track(action: String?, data: [String: Any]?)
 [AEPMobileCore trackAction:@"action name" data:@{@"key": @"value"}];
 ```
 
-<Variant platform="ios-acp" task="track-action" repeat="10"/>
-
-#### Swift
-
-**Syntax**
-
-```objectivec
-+ (void) trackAction: (nullable NSString*) action data: (nullable NSDictionary*) data;
-```
-
-**Example**
-
-```swift
-ACPCore.trackAction("action name", data: ["key": "value"])
-```
-
-#### Objective-C
-
-**Syntax**
-
-```objectivec
-+ (void) trackAction: (nullable NSString*) action data: (nullable NSDictionary*) data;
-```
-
-**Example**
-
-```objectivec
- [ACPCore trackAction:@"action name" data:@{@"key":@"value"}];
-```
-
-<Variant platform="react-native" task="track-action" repeat="5"/>
+<!-- <Variant platform="react-native" task="track-action" repeat="5"/>
 
 #### JavaScript
 
@@ -160,9 +130,9 @@ trackAction(action?: String, contextData?: { string: string });
 
 ```jsx
 ACPCore.trackAction("action", {"mytest": "action"});
-```
+``` -->
 
-<Variant platform="flutter" task="track-action" repeat="5"/>
+<!-- <Variant platform="flutter" task="track-action" repeat="5"/>
 
 #### Dart
 
@@ -176,9 +146,9 @@ Future<void> trackAction(String action, {Map<String, String> data});
 
 ```dart
 FlutterACPCore.trackAction("mytest",  data: {"mytest": "action"});J
-```
+``` -->
 
-<Variant platform="cordova" task="track-action" repeat="2"/>
+<!-- <Variant platform="cordova" task="track-action" repeat="2"/>
 
 #### Javascript
 
@@ -216,7 +186,7 @@ ACPCore.TrackAction("action", data);
 var data = new Dictionary<string, string>();
 data.Add("key", "value");
 ACPCore.TrackAction("action", data);
-```
+``` -->
 
 <Variant platform="android" task="track-state" repeat="6"/>
 
@@ -238,7 +208,7 @@ additionalContextData.put("customKey", "value");
 MobileCore.trackState("homePage", additionalContextData);
 ```
 
-<Variant platform="ios-aep" task="track-state" repeat="10"/>
+<Variant platform="ios" task="track-state" repeat="10"/>
 
 #### Swift
 
@@ -269,37 +239,7 @@ static func track(state: String?, data: [String: Any]?)
 [AEPMobileCore trackState:@"state name" data:@{@"key": @"value"}];
 ```
 
-<Variant platform="ios-acp" task="track-state" repeat="10"/>
-
-#### Swift
-
-**Syntax**
-
-```text
-+ (void) trackState: (nullable NSString*) state data: (nullable NSDictionary*) data;
-```
-
-**Example**
-
-```swift
-ACPCore.trackState("state name", data: ["key": "value"])
-```
-
-#### Objective-C
-
-**Syntax**
-
-```text
- + (void) trackState: (nullable NSString*) state data: (nullable NSDictionary*) data;
-```
-
-**Example**
-
-```text
- [ACPCore trackState:@"state name" data:@{@"key":@"value"}];
-```
-
-<Variant platform="react-native" task="track-state" repeat="5"/>
+<!-- <Variant platform="react-native" task="track-state" repeat="5"/>
 
 #### JavaScript
 
@@ -313,9 +253,9 @@ trackState(state?: String, contextData?: { string: string });
 
 ```jsx
 ACPCore.trackState("state", {"mytest": "state"});
-```
+``` -->
 
-<Variant platform="flutter" task="track-state" repeat="5"/>
+<!-- <Variant platform="flutter" task="track-state" repeat="5"/>
 
 #### Dart
 
@@ -329,9 +269,9 @@ Future<void> trackState(String state, {Map<String, String> data});
 
 ```dart
 FlutterACPCore.trackState("state",  data: {"mytest": "state"});
-```
+``` -->
 
-<Variant platform="cordova" task="track-state" repeat="2"/>
+<!-- <Variant platform="cordova" task="track-state" repeat="2"/>
 
 #### Javascript
 
@@ -369,4 +309,4 @@ ACPCore.TrackState("state", data);
 var data = new Dictionary<string, string>();
 data.Add("key", "value");
 ACPCore.TrackState("state", data);
-```
+``` -->

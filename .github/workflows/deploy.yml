@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       env:
-        description: 'Deploy to (dev|prod|dev prod)'
+        description: 'Deploy to (stage|prod)'
         required: true
-        default: 'dev'
+        default: 'stage'
       clean:
         description: 'Clean cache (yes|no)'
         required: true
@@ -14,13 +14,13 @@ on:
       excludeSubfolder:
         description: 'Exclude a subfolder from deletion'
         required: false
-        default: ''
+        default: 'previous-versions'
 jobs:
   set-state:
     runs-on: ubuntu-latest
     outputs:
       deploy_prod: ${{ contains(github.event.inputs.env, 'prod') }}
-      deploy_dev: ${{ contains(github.event.inputs.env, 'dev') }}
+      deploy_stage: ${{ contains(github.event.inputs.env, 'stage') }}
       clean_cache: ${{ contains(github.event.inputs.clean, 'yes') }}
       branch_short_ref: ${{ steps.extract_branch.outputs.branch }}
       exclude_subfolder: ${{ github.event.inputs.excludeSubfolder }}
@@ -58,7 +58,7 @@ jobs:
     needs: [set-state]
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Deploy to dev - ${{ needs.set-state.outputs.deploy_dev }}"
+      - run: echo "Deploy to stage - ${{ needs.set-state.outputs.deploy_stage }}"
       - run: echo "Deploy to prod - ${{ needs.set-state.outputs.deploy_prod }}"
       - run: echo "Clean cache - ${{ needs.set-state.outputs.clean_cache }}"
       - run: echo "Repository org - ${{ github.event.repository.owner.login }}"
@@ -71,10 +71,10 @@ jobs:
           echo "Exclude subfolder - ${{
           needs.set-state.outputs.exclude_subfolder }}"
 
-  pre-build-dev:
+  pre-build-stage:
     needs: [set-state]
     runs-on: ubuntu-latest
-    if: needs.set-state.outputs.deploy_dev == 'true'
+    if: needs.set-state.outputs.deploy_stage == 'true'
     steps:
       - name: check dev azure connection string
         if: env.AIO_AZURE_DEV_CONNECTION_STRING == null
@@ -87,11 +87,11 @@ jobs:
           AIO_AZURE_DEV_CONNECTION_STRING:
             ${{ secrets.AIO_AZURE_DEV_CONNECTION_STRING }}
 
-  build-dev:
+  build-stage:
     defaults:
       run:
         shell: bash
-    needs: [set-state, pre-build-dev]
+    needs: [set-state, pre-build-stage]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

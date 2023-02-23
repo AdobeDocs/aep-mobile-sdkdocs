@@ -1,17 +1,26 @@
-<Variant platform="android" api="extension-version" repeat="5"/>
+<Variant platform="android" api="extension-version" repeat="8"/>
 
 #### Java
 
 **Syntax**
 
 ```java
+@NonNull
 public static String extensionVersion()
 ```
 
 **Example**
 
 ```java
-Assurance.extensionVersion()
+final String extensionVersion = Assurance.extensionVersion();
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+val extensionVersion: String = Assurance.extensionVersion()
 ```
 
 <Variant platform="ios" api="extension-version" repeat="8"/>
@@ -38,7 +47,7 @@ AEPAssurance.extensionVersion()
 [AEPAssurance extensionVersion];
 ```
 
-<Variant platform="react-native" api="extension-version" repeat="3"/>
+<!--- <Variant platform="react-native" api="extension-version" repeat="3"/>
 
 #### JavaScript
 
@@ -62,72 +71,38 @@ static Future<String> get extensionVersion async
 
 ```dart
 assuranceVersion = await FlutterAssurance.extensionVersion;
-```
+``` --->
 
-<Variant platform="cordova" api="extension-version" repeat="4"/>
+<Variant platform="android" api="start-session" repeat="9"/>
 
-**Syntax**
+<InlineNestedAlert variant="info" header="false" iconPosition="left">
 
-```javascript
-AEPAssurance.extensionVersion = function(success, fail);
-```
+This API is optional for Android. Deep linking is the best way to connect to an Assurance session when using the Android SDK. Assurance SDK on Android is already setup to handle incoming intents to your app. You can [add an intent filter for incoming links in your app](https://developer.android.com/training/app-links/deep-linking) to complete the deep link configuration.
 
-**Example**
-
-```javascript
-AEPAssurance.extensionVersion(function(version) {  
-   console.log("AEPAssurance version: " + version);
-}, function(error) {  
-   console.log(error);  
-});
-```
-
-<Variant platform="unity" api="extension-version" repeat="5"/>
-
-#### C#
-
-**Syntax**
-
-```csharp
-public static string ExtensionVersion()
-```
-
-**Example**
-
-```csharp
-string version = AEPAssurance.ExtensionVersion();
-print(LOG_TAG + "Assurance version: "+version);
-```
-
-<Variant platform="xamarin" api="extension-version" repeat="3"/>
-
-#### C#
-
-**Example**
-
-```csharp
-string version = AEPAssurance.ExtensionVersion()  
-Console.WriteLine("AEPAssurance version installed is: " + version);
-```
-
-<Variant platform="android" api="start-session" repeat="7"/>
-
-This API is optional for Android.
-
-Android does not require this API to be called. When the `registerExtension` API is called, AEP Assurance extension registers the app lifecycle handlers which automatically pick up any deep links and use them to start the session.
+</InlineNestedAlert>
 
 #### Java
 
 **Syntax**
 
 ```java
-public static void startSession(final String url)
+public static void startSession(@NonNull final String url)
 ```
 
 **Example**
 
 ```java
- Assurance.startSession(url);
+final String url = "<assurance_session_url>";
+Assurance.startSession(url);
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+val url: String = "<assurance_session_url>"
+Assurance.startSession(url)
 ```
 
 <Variant platform="ios" api="start-session" repeat="10"/>
@@ -170,7 +145,7 @@ For SceneDelegate based applications
 }
 ```
 
-<Variant platform="react-native" api="start-session" repeat="3"/>
+<!--- <Variant platform="react-native" api="start-session" repeat="3"/>
 
 #### JavaScript
 
@@ -194,46 +169,20 @@ static Future<void> startSession(String url);
 
 ```dart
 FlutterAssurance.startSession(url);
-```
+``` --->
 
-<Variant platform="cordova" api="start-session" repeat="4"/>
+<Variant platform="android" api="register-extension" repeat="5"/>
+
+#### Java
 
 **Syntax**
 
-```javascript
-AEPAssurance.startSession = function(sessionurl,success, fail);
+```java
+public static void registerExtension()
 ```
 
 **Example**
 
-```javascript
-AEPAssurance.startSession(url,function(result) {  
-   console.log("AdobeExperenceSDK: AEPAssurance session started succesfully: " + result);
-}, function(error) {  
-   console.log("AdobeExperenceSDK: Failed to start AEPAssurance session: " + error);
-});
-```
-
-<Variant platform="unity" api="start-session" repeat="5"/>
-
-#### C#
-
-**Syntax**
-
-```csharp
-public static void StartSession(string url)
-```
-
-**Example**
-
-```csharp
-AEPAssurance.StartSession(url);
-```
-
-<Variant platform="xamarin" api="start-session" repeat="2"/>
-
-#### C#
-
-```csharp
-AEPAssurance.StartSession(url);
+```java
+Assurance.registerExtension();
 ```

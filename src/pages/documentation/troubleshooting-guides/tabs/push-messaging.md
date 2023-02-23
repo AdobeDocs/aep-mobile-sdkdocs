@@ -43,7 +43,7 @@ Void setPushIdentifier(deviceToken: Data?)
 // pass the deviceToken that the APNS has assigned to the device
 ```
 
-<Variant platform="react-native" task="set-push" repeat="3"/>
+<!--- <Variant platform="react-native" task="set-push" repeat="3"/>
 
 **JavaScript**
 
@@ -51,4 +51,4 @@ Void setPushIdentifier(deviceToken: Data?)
 
 ```
 ACPCore.setPushIdentifier("pushIdentifier");
-```
+``` --->

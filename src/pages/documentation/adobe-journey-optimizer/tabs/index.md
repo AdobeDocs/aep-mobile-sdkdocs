@@ -1,4 +1,4 @@
-<Variant platform="android" task="import" repeat="5"/>
+<Variant platform="android" task="import" repeat="6"/>
 
 #### Java
 
@@ -11,6 +11,12 @@ implementation 'com.adobe.marketing.mobile:edgeidentity:1.+'
 implementation 'com.adobe.marketing.mobile:messaging:1.+'
 ```
 
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+
+</InlineNestedAlert>
+
 2. Import the Mobile Core, Edge, Edge Identity, and Messaging extensions in your application class.
 
 ```java
@@ -18,7 +24,7 @@ import com.adobe.marketing.mobile.*;
 import com.adobe.marketing.mobile.edge.identity.Identity;
 ```
 
-<Variant platform="ios-aep" task="import" repeat="7"/>
+<Variant platform="ios" task="import" repeat="7"/>
 
 1. Add the Mobile Core, Edge, Edge Identity, and Messaging extensions to your project using Cocoapods. Add the following pods to your `Podfile`:
 
@@ -54,10 +60,6 @@ import AEPMessaging
 @import AEPMessaging;
 ```
 
-<Variant platform="ios-acp" task="import" repeat="1"/>
-
-This extension is built on AEPCore (3.x) and is not compatible with ACPCore (2.x). Please follow the [guide for migrating to the Swift AEPCore](../migrate-to-swift.md).
-
 <Variant platform="android" task="register" repeat="2"/>
 
 #### Java
@@ -85,7 +87,7 @@ public class MobileApp extends Application {
 }
 ```
 
-<Variant platform="ios-aep" task="register" repeat="4"/>
+<Variant platform="ios" task="register" repeat="4"/>
 
 #### Swift
 
@@ -110,10 +112,6 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
   ...
 }
 ```
-
-<Variant platform="ios-acp" task="register" repeat="1"/>
-
-This extension is built on AEPCore (3.x) and is not compatible with ACPCore (2.x). Please follow the [guide for migrating to the Swift AEPCore](../migrate-to-swift.md).
 
 <Variant platform="android" task="sync" repeat="7"/>
 
@@ -146,7 +144,7 @@ FirebaseMessaging.getInstance().getToken()
         });
 ```
 
-<Variant platform="ios-aep" task="sync" repeat="13"/>
+<Variant platform="ios" task="sync" repeat="13"/>
 
 #### Swift
 
@@ -189,7 +187,3 @@ public static func setPushIdentifier(_ deviceToken: Data?)
     [AEPMobileCore setPushIdentifier:deviceToken];
 }
 ```
-
-<Variant platform="ios-acp" task="sync" repeat="1"/>
-
-This extension is built on AEPCore (3.x) and is not compatible with ACPCore (2.x). Please follow the [guide for migrating to the Swift AEPCore](../migrate-to-swift.md).

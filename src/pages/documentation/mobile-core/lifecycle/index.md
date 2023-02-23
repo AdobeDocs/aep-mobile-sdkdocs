@@ -2,81 +2,43 @@ import Tabs from './tabs/index.md'
 
 # Lifecycle
 
-<InlineAlert variant="warning" slots="text"/>
-
-In version 4 of the iOS SDK, this implementation was completed automatically. <br/><br/> The Experience Platform SDK will not automatically collect Lifecycle metrics. To continue collecting Lifecycle metrics, you must add code to your app. For more information, see [Manual Lifecycle Implementation](../../upgrade-platform-sdks/lifecycle.md).
-
 Sessions contain information about the app's current lifecycle, such as the device information, the application install or upgrade information, the session start and pause times, the number of application launches, and additional context data that is provided by the developer through the `LifecycleStart` API. Session data is persisted, so it is available across application launches.
 
 ## Add Lifecycle to your app
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=add"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=add"/>
+<Tabs query="platform=ios&task=add"/>
 
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=add"/>
-
-React Native
+<!--- React Native
 
 <Tabs query="platform=react-native&task=add"/>
 
 Flutter
 
-<Tabs query="platform=flutter&task=add"/>
-
-Cordova
-
-<Tabs query="platform=cordova&task=add"/>
-
-Unity
-
-<Tabs query="platform=unity&task=add"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&task=add"/>
-
+<Tabs query="platform=flutter&task=add"/> --->
 
 ## Register Lifecycle with Mobile Core and add appropriate Start/Pause calls
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="7"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=register"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=register"/>
+<Tabs query="platform=ios&task=register"/>
 
-iOS (ACP 2.x)
+<!--- React Native
 
-<Tabs query="platform=ios-acp&task=register"/>
-
-React Native
-
-<Tabs query="platform=react-native&task=register"/>
-
-Cordova
-
-<Tabs query="platform=cordova&task=register"/>
-
-Unity
-
-<Tabs query="platform=unity&task=register"/>
-
-Xamarin
-
-<Tabs query="platform=xamarin&task=register"/>
-
+<Tabs query="platform=react-native&task=register"/> --->
 
 ## Lifecycle metrics
 
