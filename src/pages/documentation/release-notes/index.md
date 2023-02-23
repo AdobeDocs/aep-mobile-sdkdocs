@@ -96,11 +96,13 @@ Please note that the following improvements have been made in the current releas
 
 2. The public classes `TargetRequest`, `TargetPrefetch`, `TargetOrder`, `TargetProduct` and `TargetParameters` are consolidated under the `target` subpackage and require updating the import statements as shown below:
 
+```java
 import com.adobe.marketing.mobile.target.TargetRequest;
 import com.adobe.marketing.mobile.target.TargetPrefetch;
 import com.adobe.marketing.mobile.target.TargetOrder;
 import com.adobe.marketing.mobile.target.TargetProduct;
 import com.adobe.marketing.mobile.target.TargetParameters;
+```
 
 ### iOS Messaging 1.1.0
 
