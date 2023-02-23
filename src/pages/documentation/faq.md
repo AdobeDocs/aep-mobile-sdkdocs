@@ -163,7 +163,7 @@ To fix this build failure, you can follow one of two options:
 
 ### Why do I see a warning in AndroidManifest.xml about missing 'com.adobe.marketing.mobile.FullscreenMessageActivity' class?
 
-After upgrading to latest version of Mobile SDK for Android, you will see the following build warning if your application previously set up in-app messages with Campaign Standard. 
+After upgrading to the latest version of Mobile SDK for Android, you will see the following build warning if your application previously set up in-app messages with Campaign Standard. 
 
 ```
 Class referenced in the manifest, `com.adobe.marketing.mobile.FullscreenMessageActivity`, was not found in the project or the libraries
@@ -173,6 +173,33 @@ Unresolved class 'FullscreenMessageActivity'
 
 To resolve the build warning, remove FullscreenMessageActivity from your application's manifest file. Campaign Standard SDK no longer requires application to add **FullscreenMessageActivity** to their manifest.
 
+### Why do I see 'java.lang.NoSuchMethodError' after upgrading to the latest version of Mobile SDK for Android?
+
+The latest Mobile Core SDK for Android includes changes that break compatiblity with solution SDKs developed for earlier verisons of the Mobile Core SDK. 
+
+If you attempt to use the latest Mobile Core SDK and solution SDKs that were built for previous versions of Mobile Core to build your app, you may encounter the following error:
+```
+2023-02-13 17:45:02.501 14264-14264/XXX E/AndroidRuntime: FATAL EXCEPTION: main
+    Process: XXX, PID: XXXXX
+    java.lang.NoSuchMethodError: No static method getCore()Lcom/adobe/marketing/mobile/Core; in class Lcom/adobe/marketing/mobile/MobileCore; or its super classes (declaration of 'com.adobe.marketing.mobile.MobileCore' appears in XXX
+```
+
+To resolve this error, upgrade all your solution SDKs to the [most recent versions](./current-sdk-versions.md#android).
+
+### Why do I not see 'sdk-core' dependency for latest version of Mobile SDK for Android? 
+
+The **com.adobe.marketing.mobile:sdk-core** dependency is no longer available for the latest version of Mobile SDK. Instead, select the appropriate solution SDKs based on your requirements from the following options:
+
+```
+com.adobe.marketing.mobile:core:2.+
+com.adobe.marketing.mobile:lifecycle:2.+
+com.adobe.marketing.mobile:signal:2.+
+com.adobe.marketing.mobile:identity:2.+
+```
+
+### How do I upgrade to the latest version of Mobile SDK for Android if my app uses Mobile Services? 
+
+Adobe Mobile Service's end-of-life date is [December 31, 2022](https://experienceleague.adobe.com/docs/mobile-services/using/eol.html). To upgrade to the latest version of Mobile SDK for Android, you have to remove Mobile Services dependency from your app. 
 
 ### How can I track user engagement of push notifications using the Experience Platform Mobile SDK?
 
