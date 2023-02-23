@@ -17,6 +17,8 @@ To get started, complete the following steps:
 
 ### The event processing flow
 
+![Event transactions view](./assets/event-transactions/event-transactions-view.png)
+
 At a high-level the Event Transactions view displays 3 columns in the order of the event processing flow:
 
 - **CLIENT-SIDE**  - This column represents the events processed or received client-side, accessible to the Mobile SDK. This includes the events that were collected based on an API call, such as `Edge.sendEvent`, or the response handles received by the client from the Edge Network server. Examples of client-side events:
