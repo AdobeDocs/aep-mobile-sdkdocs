@@ -59,16 +59,6 @@ iOS
 
 <Tabs query="platform=react-native&api=displayed-locations"/> --->
 
-## executeRawRequest
-
-This API can be used to retrieve prefetch or execute responses for mbox locations from the configured Target server.
-
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
-
-Android
-
-<Tabs query="platform=android&api=execute-raw-request"/>
-
 ## extensionVersion
 
 Returns the running version of the Target extension.
@@ -163,15 +153,11 @@ iOS
 
 Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 Android
 
 <Tabs query="platform=android&api=register-extension"/>
-
-iOS
-
-<Tabs query="platform=ios&api=register-extension"/>
 
 <!--- React Native
 
@@ -220,16 +206,6 @@ iOS
 <!--- React Native
 
 <Tabs query="platform=react-native&api=retrieve-location-content"/> --->
-
-## sendRawNotifications
-
-This API sends notification request(s) to the configured Target server for click or display notifications. The event tokens required for the Target click or display notifications can be retrieved from a previous `executeRawRequest` API response.
-
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
-
-Android
-
-<Tabs query="platform=android&api=send-raw-notifications"/>
 
 ## setPreviewRestartDeepLink
 
@@ -339,6 +315,8 @@ iOS
 
 ### Target prefetch
 
+This class contains the name of the Target location/mbox and target parameters to be used in a prefetch request.
+
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
@@ -354,6 +332,8 @@ iOS
 <Tabs query="platform=react-native&api=target-prefetch"/> --->
 
 ### Target parameters
+
+This class may optionally contain the mbox parameters dictionary, the profile parameters dictionary, the TargetOrder object, as well as the TargetProduct object.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -371,6 +351,8 @@ iOS
 
 ### Target order
 
+This class contains an orderId, an order total, and an array for purchasedProductIds.
+
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
@@ -386,6 +368,8 @@ iOS
 <Tabs query="platform=react-native&api=target-order"/> --->
 
 ### Target product
+
+This class contains the productId and categoryId.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
