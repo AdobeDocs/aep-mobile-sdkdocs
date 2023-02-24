@@ -71,7 +71,7 @@ public static void clickedLocation(final String mboxName, final TargetParameters
 ```
 
 - `mboxName`: A string that contains the mbox location for which the click notification will be sent to Target.
-- `parameters`: The `TargetParameters` object configured for the request.
+- `parameters`: A `TargetParameters` object configured for the request.
 
 **Example**
 
@@ -116,7 +116,7 @@ static func clickedLocation(_ name: String, targetParameters: TargetParameters?)
 ```
 
 - `name`: A string that contains the mbox location for which the click notification will be sent to Target.
-- `targetParameters`: The `TargetParameters` object configured for the request.
+- `targetParameters`: A `TargetParameters` object configured for the request.
 
 **Example**
 
@@ -133,7 +133,7 @@ Target.clickedLocation("aep-loc-1", targetParameters: TargetParameters(parameter
 ```
 
 - `name`: A string that contains the mbox location for which the click notification will be sent to Target.
-- `targetParameters`: The `TargetParameters` object configured for the request.
+- `targetParameters`: A `TargetParameters` object configured for the request.
 
 **Example**
 
@@ -227,7 +227,7 @@ static func displayedLocations(_ names: [String], targetParameters: TargetParame
 ```
 
 - `names`: An array of the mbox locations for which the display notification will be sent to Target.
-- `targetParameters`: The `TargetParameters` object configured for the request.
+- `targetParameters`: A `TargetParameters` object configured for the request.
 
 **Example**
 
@@ -252,7 +252,7 @@ Target.displayedLocations(
 ```
 
 - `names`: An array of the mbox locations for which the display notification will be sent to Target.
-- `targetParameters`: The `TargetParameters` object configured for the request.
+- `targetParameters`: A `TargetParameters` object configured for the request.
 
 **Example**
 
@@ -460,6 +460,8 @@ Target.getThirdPartyId { (id, err) in
 + (void) getThirdPartyId: (nonnull void (^) (nullable NSString* thirdPartyId, nullable NSError* error)) completion
 ```
 
+- `completion`: A callback that is invoked with the `thirdPartyId` value. If no `third-party` ID was set, this value will be `nil`.
+
 **Example**
 
 ```objc
@@ -498,7 +500,7 @@ ACPTarget.getThirdPartyId().then(thirdPartyId => {
 public static void getTntId(final AdobeCallback<String> callback)
 ```
 
-- `callback`: is invoked with the `tntId` value, or `null` if there was an error retrieving it. 
+- `callback`: A callabck that is invoked with the `tntId` value, or `null` if there was an error retrieving it. 
 
 **Example**
 
@@ -580,7 +582,7 @@ public static void prefetchContent(final List<TargetPrefetch> mboxPrefetchList, 
 ```
 
 - `mboxPrefetchList`: A list of `TargetPrefetch` objects for various mbox locations.
-- `parameters`: The `TargetParameters` object configured for the prefetch request.
+- `parameters`: A `TargetParameters` object configured for the prefetch request.
 - `callback`: A callback that is invoked with a `null` value if the prefetch is successful, or with an error message string otherwise.
 
 **Example**
@@ -633,8 +635,8 @@ static func prefetchContent(_ prefetchArray: [TargetPrefetch], with targetParame
 ```
 
 - `prefetchArray`: An array of `TargetPrefetch` objects for various mbox locations.
-- `targetParameters`: The `TargetParameters` object configured for the prefetch request.
-- `completion`: A callback that is invoked with a nil value if the prefetch is successful, or with an error otherwise.
+- `targetParameters`: A `TargetParameters` object configured for the prefetch request.
+- `completion`: A callback that is invoked with a `nil` value if the prefetch is successful, or with an error otherwise.
 
 **Example**
 
@@ -681,8 +683,8 @@ Target.prefetchContent([
 ```
 
 - `targetPrefetchObjectArray`: An array of `AEPTargetPrefetchObject` objects for various mbox locations.
-- `targetParameters`: The `AEPTargetParameters` object configured for the prefetch request.
-- `completion`: A callback that is invoked with a nil value if the prefetch is successful, or with an error otherwise
+- `targetParameters`: An `AEPTargetParameters` object configured for the prefetch request.
+- `completion`: A callback that is invoked with a `nil` value if the prefetch is successful, or with an error otherwise.
 
 **Example**
 
@@ -862,7 +864,7 @@ public static void retrieveLocationContent(final List<TargetRequest> targetReque
 ```
 
 - `targetRequestList`: A list of `TargetRequest` objects for various mbox locations.
-- `parameters`: The `TargetParameters` object configured for the retrieve location request.
+- `parameters`: A `TargetParameters` object configured for the retrieve location request.
 
 **Example**
 
@@ -957,9 +959,8 @@ Target.retrieveLocationContent(locationRequests, parameters);
 static func retrieveLocationContent(_ requestArray: [TargetRequest], with targetParameters: TargetParameters? = nil)
 ```
 
-- `requestArray`: An array of `TargetRequest` objects to retrieve content
-- `targetParameters`: A `TargetParameters` object containing parameters for all locations in the requests array
-
+- `requestArray`: An array of `TargetRequest` objects to retrieve content.
+- `targetParameters`: A `TargetParameters` object containing parameters for all locations in the requests array.
 **Example**
 
 ```swift
@@ -1015,8 +1016,8 @@ Target.retrieveLocationContent([request1, request2], with: globalTargetParameter
 + (void) retrieveLocationContent: (nonnull NSArray<AEPTargetRequestObject*>*) requests withParameters: (nullable AEPTargetParameters*) parameters
 ```
 
-- `requests`: An array of `TargetRequest` objects to retrieve content
-- `parameters`: An `AEPTargetParameters` object containing parameters for all locations in the requests array
+- `requests`: An array of `TargetRequest` objects to retrieve content.
+- `parameters`: An `AEPTargetParameters` object containing parameters for all locations in the requests array.
 
 **Example**
 
@@ -1173,7 +1174,9 @@ if let url = URL(string: "myapp://HomePage") {
 
 **Syntax**
 
+```objc
 + (void) setPreviewRestartDeeplink: (nonnull NSURL*) deeplink
+```
 
 - `deeplink`: A URL that contains the preview restart deeplink.
 
@@ -1242,7 +1245,9 @@ Target.setSessionId("3f24b997-ea74-420c-81f8-96a8b92c3961")
 
 **Syntax**
 
+```objc
 + (void) setSessionId: (nullable NSString*) id
+```
 
 - `id`: A string that contains the Target session identifier to be set in the SDK.
 
@@ -1362,7 +1367,9 @@ Target.setTntId("f741a5d5-09c0-4931-bf53-b9e568c5f782.35_0")
 
 **Syntax**
 
+```objc
 + (void) setTntId: (nullable NSString*) id
+```
 
 - `id`: A string that contains the Target user identifier to be set in the SDK.
 
