@@ -597,10 +597,6 @@ module.exports = {
                             {
                                 title: "Release notes",
                                 path: "documentation/adobe-target/release-notes"
-                            },
-                            {
-                                title: "Deprecated APIs",
-                                path: "documentation/adobe-target/deprecated-apis"
                             }
                         ]
                     }
