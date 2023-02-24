@@ -35,6 +35,10 @@ Note that all these extensions must be updated together. Flutter and React plugi
 * Android Adobe Campaign Classic 2.0.0
 * Android Adobe Audience Manager 2.0.0
 
+For help on moving to these versions, please see:
+* [Migration guide](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-android)
+* [Migration FAQ](../faq.md#migrating-to-android-mobile-core-2x-and-compatible-extensions)
+
 ## February 17, 2023
 
 ### Android Analytics 2.0.1
