@@ -31,6 +31,29 @@ Please note that this column is dynamic and may display different type of inform
   - Your datastream configuration and the services you have enabled.
   - The type of events sent to the Edge Network.
 
+### Inspecting events
+
+The collection of events displayed in the Event transactions view provide information about the format and content of the data being processed at each state, as well as insightful details about any warnings or errors encountered while data is being processed upstream. The view helps narrowing down the debugging information at the event/request level and identifying errors early on in the development lifecycle.
+
+#### Expanding the event details
+
+To inspect an event, simply select the desired one from the view. This action will expand the `EVENT DETAILS` view on the right side of the screen.
+Nested data is displayed in a tree format. You can inspect nested key-values by selecting the **+** (plus) button in from of the key name.
+
+![Event details](./assets/event-transactions/event-details.png)
+
+#### Inspecting warning or errors
+
+Each event name is prefixed with an icon, which indicates the high-level status of the event processing for that stage.
+* If the event was processed successfully, a green check mark is being displayed.
+* If warnings or errors have been detected, a warning sign is being displayed. Select the respective event to learn more about the cause of the error in the `EVENT DETAILS` view.
+
 ### Configuration settings
 
 You can check the currently used datastream identifier by selecting the info tooltip next to the EDGE NETWORK column header.
+
+![Show the datastream ID](./assets/event-transactions/show-datastream-id.png)
+
+<InlineAlert variant="info" slots="text"/>
+
+When multiple clients connect to the same Assurance session and different datastream IDs are used, you will see all of them displayed here. However, this does not mean you current implementation uses multiple datastreams, only current identifier set in the app is being used for processing new events.
