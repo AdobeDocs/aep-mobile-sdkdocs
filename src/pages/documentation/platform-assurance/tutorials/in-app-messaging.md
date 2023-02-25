@@ -1,4 +1,4 @@
-# In-App Messaging
+# In-App Messaging view
 
 ## Overview
 
