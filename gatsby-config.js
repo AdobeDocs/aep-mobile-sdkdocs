@@ -344,6 +344,10 @@ module.exports = {
                     {
                         title: "API reference",
                         path: "documentation/places/api-reference.md"
+                    },
+                    {
+                        title: "Release notes",
+                        path: "documentation/places/release-notes.md"
                     }
                 ]
             },
@@ -591,16 +595,16 @@ module.exports = {
                                 path: "documentation/adobe-target/api-reference"
                             },
                             {
+                                title: "Raw API reference",
+                                path: "documentation/adobe-target/raw-api-reference"
+                            },
+                            {
                                 title: "Event reference",
                                 path: "documentation/adobe-target/event-reference"
                             },
                             {
                                 title: "Release notes",
                                 path: "documentation/adobe-target/release-notes"
-                            },
-                            {
-                                title: "Deprecated APIs",
-                                path: "documentation/adobe-target/deprecated-apis"
                             }
                         ]
                     }
