@@ -344,6 +344,10 @@ module.exports = {
                     {
                         title: "API reference",
                         path: "documentation/places/api-reference.md"
+                    },
+                    {
+                        title: "Release notes",
+                        path: "documentation/places/release-notes.md"
                     }
                 ]
             },
