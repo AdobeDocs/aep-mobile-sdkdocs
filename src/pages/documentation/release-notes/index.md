@@ -132,11 +132,18 @@ import com.adobe.marketing.mobile.target.TargetParameters;
 
 ### Android Places 2.0.0
 
-* Major version update for [Adobe Experience Platform Location Service](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-places-android).
+* Major version update for [Adobe Experience Platform Location Service](../places/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-places-android).
 
 Please note that the following improvements have been made in the current release:
 
-1. `getNearbyPointsOfInterest` API without the errorcallback has been removed.
+1. The `getNearbyPointsOfInterest` API without the errorCallback has been removed. Alternatively, use the below overloaded API which provides both successCallback and errorCallback:
+
+```java
+public static void getNearbyPointsOfInterest(final Location location,
+      final int limit,
+      final AdobeCallback<List<PlacesPOI>> successCallback,
+      final AdobeCallback<PlacesRequestError> errorCallback)
+```
 
 2. The public classes `PlacesAuthorizationStatus`, `PlacesPOI`, and `PlacesRequestError` are consolidated under the `places` subpackage and require updating the import statements as shown below:
 
@@ -176,7 +183,7 @@ Please note that the `registerDevice` API, similar to iOS, no longer provides a 
 
 ### Android Consent 2.0.0
 
-* Major version update for [Consent for Edge Network](../consent-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgeconsent-android).
+* Major version update for [Consent for Edge Network](../consent-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgeconsent-android).
 
 ### Android Edge 2.0.0
 
@@ -184,7 +191,7 @@ Please note that the `registerDevice` API, similar to iOS, no longer provides a 
 
 ### Android EdgeIdentity 2.0.0
 
-* Major version update for [Identity for Edge Network](../identity-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgeidentity-android).
+* Major version update for [Identity for Edge Network](../identity-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgeidentity-android).
 
 ### Android UserProfile 2.0.0
 

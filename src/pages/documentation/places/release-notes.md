@@ -8,7 +8,14 @@
 
 Please note that the following improvements have been made in the current release:
 
-1. `getNearbyPointsOfInterest` API without the errorcallback has been removed.
+1. The `getNearbyPointsOfInterest` API without the errorCallback has been removed. Alternatively, use the below overloaded API which provides both successCallback and errorCallback:
+
+```java
+public static void getNearbyPointsOfInterest(final Location location,
+      final int limit,
+      final AdobeCallback<List<PlacesPOI>> successCallback,
+      final AdobeCallback<PlacesRequestError> errorCallback)
+```
 
 2. The public classes `PlacesAuthorizationStatus`, `PlacesPOI`, and `PlacesRequestError` are consolidated under the `places` subpackage and require updating the import statements as shown below:
 
