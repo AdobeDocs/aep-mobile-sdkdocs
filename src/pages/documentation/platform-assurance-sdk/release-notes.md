@@ -2,6 +2,12 @@
 
 Release notes and change logs for the Adobe Experience Platform Assurance extension
 
+## February 27, 2023
+
+### Android Assurance 2.0.1
+
+* Contents of the application manifest (AndroidManifest.xml) are now included in the `clientInfo` event.
+
 ## January 31, 2023
 
 ### Android Assurance 2.0.0

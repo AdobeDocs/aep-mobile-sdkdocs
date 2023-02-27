@@ -4,6 +4,12 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## February 27, 2023
+
+### Android Assurance 2.0.1
+
+* Contents of the application manifest (AndroidManifest.xml) are now included in the `clientInfo` event.
+
 ## February 23, 2023
 
 New major version of the Mobile Core SDK for Android has been released along with updates to other extensions to take advantage of the new features and improvements. These improvements include:
