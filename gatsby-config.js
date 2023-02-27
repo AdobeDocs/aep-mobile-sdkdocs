@@ -591,6 +591,10 @@ module.exports = {
                                 path: "documentation/adobe-target/api-reference"
                             },
                             {
+                                title: "Raw API reference",
+                                path: "documentation/adobe-target/raw-api-reference"
+                            },
+                            {
                                 title: "Event reference",
                                 path: "documentation/adobe-target/event-reference"
                             },
