@@ -24,23 +24,23 @@ In this section, get familiar with the Event Transaction view and learn how to u
 At a high-level the Event Transactions view displays 3 columns in the order of the event processing flow:
 
 - **CLIENT-SIDE**  - This column represents the events processed or received client-side, accessible to the Mobile SDK. This includes the events that were collected based on an API call, such as `Edge.sendEvent`, or the response handles received by the client from the Edge Network server. Examples of client-side events:
-  - AEP Request Event represents the experience event sent through the AEP Edge extension and contains the XDM and free-form data.
-  - AEP Response Event Handle represents the event handle received from Experience Edge in response to an AEP Request Event.
+  - AEP Request Event represents the event sent through the Edge extension and contains the XDM and free-form data.
+  - AEP Response Event Handle represents the event handle received from Edge Network in response to an AEP Request Event. An request event may receive none, one or multiple response event handles.
   - AEP Error Response may be seen in case of an error, for example if the XDM payload could not be processed or if one of the upstream services returned an error or warning.
-- **EDGE NETWORK** - This column indicates the event was received server-side by the Edge Network through a network request.
+- **EDGE NETWORK** - This column indicates the event was received server-side by the Edge Network through a network request, and what data or metadata it contained.
 - **UPSTREAM** - This column displays the events received by the configured upstream services, including detailed information about the processing and/or validation results for the incoming event.
-Please note that this column is dynamic and may display different type of information depending on two factors:
+Please note that this column is dynamic and may display different type of information depending on two main factors:
   - Your datastream configuration and the services you have enabled.
   - The type of events sent to the Edge Network.
 
 ### Inspect events
 
-The collection of events displayed in the Event Transactions view provide information about the format and content of the data being processed at each state, as well as insightful details about any warnings or errors encountered while data is being processed upstream. The view helps narrowing down the debugging information at the event/request level and identifying errors early on in the development lifecycle.
+The collection of events displayed in the Event Transactions view provides information about the format and content of the data being processed at each state, as well as insightful details about any warnings or errors encountered while data is being processed upstream. The view helps narrowing down the debugging information at the event/request level and identifying errors early on in the development cycle.
 
 #### Expand the event details
 
-To inspect an event, simply select the desired one from the view. This action will expand the `EVENT DETAILS` view on the right side of the screen.
-Nested data is displayed in a tree format. You can inspect nested key-values by selecting the **+** (plus) button in from of the key name.
+To inspect an event, simply select the desired one from the view. This action expands the `EVENT DETAILS` view on the right side of the screen.
+Nested data is displayed in a tree format. You can inspect nested key-values by selecting the **+** (plus) button in front of the key name.
 
 ![Event details](./assets/event-transactions/event-details.png)
 
@@ -58,4 +58,4 @@ You can check the currently used datastream identifier by selecting the info too
 
 <InlineAlert variant="info" slots="text"/>
 
-When multiple clients connect to the same Assurance session and different datastream IDs are used, you will see all of them displayed here. However, this does not mean you current implementation uses multiple datastreams, only current identifier set in the app is being used for processing new events.
+When multiple clients connect to the same Assurance session and different datastream IDs are used, you will see all of them displayed here. However, this does not mean you current implementation uses multiple datastreams, only current identifier set in the app is being used for processing new events. If you test more complicated use-cases with different configuration settings and multiple clients connected, you may use separate Assurance sessions for simplification.
