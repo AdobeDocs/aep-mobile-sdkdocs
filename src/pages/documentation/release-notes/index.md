@@ -157,7 +157,7 @@ import com.adobe.marketing.mobile.places.PlacesRequestError;
 
 ### Android Optimize 2.0.0
 
-* Major version update for [Adobe Journey Optimizer - Decisioning](../adobe-journey-optimizer-decisioning/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This extension library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-optimize-android/).
+* Major version update for [Adobe Journey Optimizer - Decisioning](../adobe-journey-optimizer-decisioning/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This extension library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-optimize-android/).
 
 ### Android Campaign Standard 2.0.0
 
