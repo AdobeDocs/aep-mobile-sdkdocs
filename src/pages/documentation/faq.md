@@ -217,6 +217,7 @@ To resolve the build warning, remove FullscreenMessageActivity from your applica
 ### Why do I see 'unresolved reference' error when upgrading Adobe Target SDK to the latest version?
 
 The [latest version](./adobe-target/release-notes.md#android-target-200) of Adobe Target Mobile SDK has the following breaking API changes for alignment with the iOS SDK:
+
 * **locationsDisplayed** is now **displayedLocations**
 * **locationClicked** is now **clickedLocation**
 
@@ -230,6 +231,35 @@ import com.adobe.marketing.mobile.target.TargetPrefetch;
 import com.adobe.marketing.mobile.target.TargetOrder;
 import com.adobe.marketing.mobile.target.TargetProduct;
 import com.adobe.marketing.mobile.target.TargetParameters;
+```
+
+In addition, replace the previously deprecated Target APIs and classes since they have been removed. For more information, please read this section on the [deprecated APIs and the recommended alternative APIs](https://developer.adobe.com/client-sdks/previous-versions/documentation/adobe-target/deprecated-apis/).
+
+### Why do I see `registerDevice(String, String, Map<String, Object>)` cannot be applied to [arguments] error when upgrading Adobe Campaign Classic SDK to the latest version?
+
+The `registerDevice` API in the latest Campaign Classic Android Mobile SDK, similar to iOS SDK, no longer provides a callback method for registration status since a `false` value cannot be accurately used as a signal to retry requests.
+
+To resolve the error, remove the callback (`AdobeCallback<Boolean>`) parameter from the method invocation.
+
+### Why do I see `getNearbyPointsOfInterest(Location, int, AdobeCallback<List<PlacesPOI>>, AdobeCallback<PlacesRequestError>)` cannot be applied to [arguments] error when upgrading Adobe Experience Platform Location Service SDK to the latest version?
+
+The `getNearbyPointsOfInterest` API without the error callback has been removed. Alternatively, use the below overloaded API which provides both successCallback and errorCallback:
+
+```java
+public static void getNearbyPointsOfInterest(final Location location,
+      final int limit,
+      final AdobeCallback<List<PlacesPOI>> successCallback,
+      final AdobeCallback<PlacesRequestError> errorCallback)
+```
+
+The public classes `PlacesAuthorizationStatus`, `PlacesPOI`, and `PlacesRequestError` are consolidated under the `places` subpackage.
+
+To resolve the error, fix the method references and update your places import statements:
+
+```java
+import com.adobe.marketing.mobile.places.PlacesAuthorizationStatus;
+import com.adobe.marketing.mobile.places.PlacesPOI;
+import com.adobe.marketing.mobile.places.PlacesRequestError;
 ```
 
 ## Lifecycle
