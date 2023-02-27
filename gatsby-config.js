@@ -506,56 +506,33 @@ module.exports = {
                                 path: "documentation/adobe-journey-optimizer/release-notes"
                             },
                             {
-                                title: "In-app messaging",
-                                path: "/documentation/adobe-journey-optimizer/iam",
+                                title: "Public classes and enums",
+                                path: "documentation/adobe-journey-optimizer/public-classes"
+                            },
+                            {
+                                title: "Tutorials",
+                                path: "documentation/adobe-journey-optimizer/tutorials",
                                 pages: [
                                     {
-                                        title: "Overview",
-                                        path: "/documentation/adobe-journey-optimizer/iam"
+                                        title: "Implement a MessagingDelegate",
+                                        path: "/documentation/adobe-journey-optimizer/tutorials/messaging-delegate"
                                     },
                                     {
-                                        title: "Prerequisites",
-                                        path: "/documentation/adobe-journey-optimizer/iam/prerequisites"
+                                        title: "Call native code from the JavaScript of an in-app message",
+                                        path: "/documentation/adobe-journey-optimizer/tutorials/native-from-javascript"
                                     },
                                     {
-                                        title: "SDK setup",
-                                        path: "/documentation/adobe-journey-optimizer/iam/setup"
+                                        title: "Execute Javascript methods from native code",
+                                        path: "/documentation/adobe-journey-optimizer/tutorials/javascript-from-native"
                                     },
                                     {
-                                        title: "API reference",
-                                        path: "/documentation/adobe-journey-optimizer/iam/api-reference"
+                                        title: "Handle URL clicks from an in-app message",
+                                        path: "/documentation/adobe-journey-optimizer/tutorials/handle-clicks"
                                     },
                                     {
-                                        title: "Public classes and enums",
-                                        path: "/documentation/adobe-journey-optimizer/iam/public-classes"
-                                    },
-                                    {
-                                        title: "Tutorials",
-                                        path: "/documentation/adobe-journey-optimizer/iam/tutorials",
-                                        pages: [
-                                            {
-                                                title: "Implement a MessagingDelegate",
-                                                path: "/documentation/adobe-journey-optimizer/iam/tutorials/messaging-delegate"
-                                            },
-                                            {
-                                                title: "Call native code from the JavaScript of an in-app message",
-                                                path: "/documentation/adobe-journey-optimizer/iam/tutorials/native-from-javascript"
-                                            },
-                                            {
-                                                title: "Execute Javascript methods from native code",
-                                                path: "/documentation/adobe-journey-optimizer/iam/tutorials/javascript-from-native"
-                                            },
-                                            {
-                                                title: "Handle URL clicks from an in-app message",
-                                                path: "/documentation/adobe-journey-optimizer/iam/tutorials/handle-clicks"
-                                            },
-                                            {
-                                                title: "Validate in-app messaging using Assurance",
-                                                path: "/documentation/adobe-journey-optimizer/iam/tutorials/validate-messages"
-                                            }
-                                        ]
+                                        title: "Validate in-app messaging using Assurance",
+                                        path: "/documentation/adobe-journey-optimizer/tutorials/validate-messages"
                                     }
-
                                 ]
                             }
                         ]
