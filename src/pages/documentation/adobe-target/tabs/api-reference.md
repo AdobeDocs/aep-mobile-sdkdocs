@@ -375,6 +375,8 @@ Target.getSessionId(new AdobeCallback<String>() {
 
 <Variant platform="ios" api="get-session-id" repeat="12"/>
 
+#### Swift
+
 **Syntax**
 
 ```swift
@@ -627,6 +629,8 @@ Target.prefetchContent(prefetchMboxesList, targetParameters, prefetchStatusCallb
 ```
 
 <Variant platform="ios" api="prefetch-content" repeat="12"/>
+
+#### Swift
 
 **Syntax**
 
@@ -961,6 +965,7 @@ static func retrieveLocationContent(_ requestArray: [TargetRequest], with target
 
 - `requestArray`: An array of `TargetRequest` objects to retrieve content.
 - `targetParameters`: A `TargetParameters` object containing parameters for all locations in the requests array.
+
 **Example**
 
 ```swift
