@@ -13,12 +13,6 @@ Assurance Public APIs are available!
 
 [The Assurance APIs](https://developer.adobe.com/adobe-assurance-public-apis/) are a collection of APIs that empower users to test and debug their web and mobile apps, when outfitted with the Adobe Assurance Mobile SDK.
 
-A new major version of the Mobile Core SDK for Android has been released along with updates to other extensions to take advantage of the new features and improvements.
-For more information, check out the [release notes](./release-notes/#february-23-2023).
-
-<InlineAlert variant="success" slots="header, text"/>
-
-
 <InlineAlert variant="success" slots="header, text"/>
 
 Mobile Core 2.x for Android and the compatible extensions are here!
