@@ -23,12 +23,12 @@ In this section, get familiar with the Event Transaction view and learn how to u
 
 The Event Transactions view displays three columns in the order of the event processing flow:
 
-- **Client-side**  - This column represents the events processed or received client-side, accessible to the Mobile SDK. This includes the events that were collected based on an API call, such as `Edge.sendEvent`, or the response handles received by the client from the Edge Network server. Examples of client-side events:
+- **Client-side**: This column represents the events processed or received client-side, accessible to the Mobile SDK. This includes the events that were collected based on an API call, such as `Edge.sendEvent`, or the response handles received by the client from the Edge Network server. Examples of client-side events:
   - AEP Request Event represents the event sent through the Edge extension and contains the XDM and free-form data.
   - AEP Response Event Handle represents the event handle received from Edge Network in response to an AEP Request Event. A request event may receive none, one or multiple response event handles.
   - AEP Error Response may be seen in case of an error, for example if the XDM payload could not be processed or if one of the upstream services returned an error or warning.
-- **Edge Network** - This column indicates the event was received server-side by the Edge Network through a network request, and what data or metadata it contained.
-- **Upstream** - This column displays the events received by the configured upstream services, including detailed information about the processing and/or validation results for the incoming event.
+- **Edge Network**: This column indicates the event was received server-side by the Edge Network through a network request, and what data or metadata it contained.
+- **Upstream**: This column displays the events received by the configured upstream services, including detailed information about the processing and/or validation results for the incoming event.
 Please note that this column is dynamic and may display different type of information depending on two main factors:
   - Your datastream configuration and the services you have enabled.
   - The type of events sent to the Edge Network.

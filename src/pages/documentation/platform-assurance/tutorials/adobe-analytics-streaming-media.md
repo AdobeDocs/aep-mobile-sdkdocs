@@ -2,7 +2,7 @@
 
 ## Overview
 
-With the integration between Streaming Media Analytics and Adobe Experience Platform Assurance, you can now validate your AEP Mobile SDK - Media Analytics implementation. Views include what is tracked in the media session such as:
+With the integration between Streaming Media Analytics and Adobe Experience Platform Assurance, you can now validate your Adobe Experience Platform Mobile SDK Media Analytics implementation. Views include what is tracked in the media session such as:
 
 * Session start event that contains all content core, standard metadata and custom metadata properties, also session end and complete.
 * Ad break Start and Ad start event with all ad properties attached, also skip and complete event for both

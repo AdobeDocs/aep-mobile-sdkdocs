@@ -18,7 +18,7 @@ To receive or to maintain uninterrupted access to Assurance, ensure that the fol
 
 Log into the [Admin Console](https://adminconsole.adobe.com/)
 1. Create a new Adobe Experience Platform product profile
-2. Select the **Products** tab, then select the Adobe Experience Platform product card. Note: you may use an existing profile and skip this step.
+2. Select the **Products** tab, then select the Adobe Experience Platform product card. Note: You may use an existing profile and skip this step.
 
 ![Adobe Experience Platform Assurance analytics view](./assets/get-access/analytics-view.png)
 
