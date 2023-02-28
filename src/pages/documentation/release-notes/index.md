@@ -6,6 +6,10 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 ## February 27, 2023
 
+### Android Assurance 2.0.1
+
+* Contents of the application manifest (AndroidManifest.xml) are now included in the `clientInfo` event.
+
 ### iOS Messaging 1.1.1
 
 * Fixes an issue where loaded in-app message rules were not cleared when an empty in-app message payload is received from Adobe Journey Optimizer.
@@ -45,6 +49,10 @@ Note that all these extensions must be updated together. Flutter and React plugi
 * Android Adobe Campaign Standard 2.0.2
 * Android Adobe Campaign Classic 2.0.0
 * Android Adobe Audience Manager 2.0.0
+
+For help on moving to these versions, please see:
+* [Migration guide](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-android)
+* [Migration FAQ](../faq.md#migrating-to-android-mobile-core-2x-and-compatible-extensions)
 
 ## February 17, 2023
 
@@ -115,6 +123,8 @@ import com.adobe.marketing.mobile.target.TargetProduct;
 import com.adobe.marketing.mobile.target.TargetParameters;
 ```
 
+3. The previously deprecated Target APIs and classes have been removed. For more information, please read this section on the [deprecated APIs and the recommended alternative APIs](https://developer.adobe.com/client-sdks/previous-versions/documentation/adobe-target/deprecated-apis/).
+
 ### iOS Messaging 1.1.0
 
 * Adds support for Adobe Journey Optimizer powered in-app messages.
@@ -135,8 +145,30 @@ import com.adobe.marketing.mobile.target.TargetParameters;
 
 ### Android Messaging 2.0.0
 
-* Major version update for [Adobe Journey Optimizer](../adobe-journey-optimizer/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-messaging-android).
-* Adds support for Adobe Journey Optimizer powered in-app messages.
+* Major version update for [Adobe Journey Optimizer](../adobe-journey-optimizer/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-messaging-android).
+
+### Android Places 2.0.0
+
+* Major version update for [Adobe Experience Platform Location Service](../places/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-places-android).
+
+Please note that the following improvements have been made in the current release:
+
+1. The `getNearbyPointsOfInterest` API without the errorCallback has been removed. Alternatively, use the below overloaded API which provides both successCallback and errorCallback:
+
+```java
+public static void getNearbyPointsOfInterest(final Location location,
+      final int limit,
+      final AdobeCallback<List<PlacesPOI>> successCallback,
+      final AdobeCallback<PlacesRequestError> errorCallback)
+```
+
+2. The public classes `PlacesAuthorizationStatus`, `PlacesPOI`, and `PlacesRequestError` are consolidated under the `places` subpackage and require updating the import statements as shown below:
+
+```java
+import com.adobe.marketing.mobile.places.PlacesAuthorizationStatus;
+import com.adobe.marketing.mobile.places.PlacesPOI;
+import com.adobe.marketing.mobile.places.PlacesRequestError;
+```
 
 ## February 2, 2023
 
