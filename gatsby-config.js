@@ -670,58 +670,6 @@ module.exports = {
                     }
                 ]
             },
-
-
-            {
-                title: "Building mobile extensions",
-                path: "/documentation/building-mobile-extensions",
-                pages: [
-                    {
-                        title: "Overview",
-                        path: "/documentation/building-mobile-extensions"
-                    },
-                    {
-                        title: "Event processing",
-                        path: "documentation/building-mobile-extensions/event-processing"
-                    },
-                    {
-                        title: "Shared states and events",
-                        path: "documentation/building-mobile-extensions/shared-states-and-events"
-                    },
-                    {
-                        title: "Building an extension",
-                        path: "documentation/building-mobile-extensions/building-extension"
-                    },
-                    {
-                        title: "Listening for events",
-                        path: "documentation/building-mobile-extensions/listening-for-events"
-                    },
-                    {
-                        title: "Dispatching events from your extension",
-                        path: "documentation/building-mobile-extensions/dispatching-events"
-                    },
-                    {
-                        title: "Building a tag extension interface",
-                        path: "documentation/building-mobile-extensions/building-tag-extension-interface"
-                    },
-                    {
-                        title: "Interacting with rules",
-                        path: "documentation/building-mobile-extensions/interacting-with-rules"
-                    },
-                    {
-                        title: "Get the application context",
-                        path: "documentation/building-mobile-extensions/get-application-context"
-                    },
-                    {
-                        title: "Extension logging",
-                        path: "documentation/building-mobile-extensions/extension-logging"
-                    },
-                    {
-                        title: "Mobile extension samples",
-                        path: "documentation/building-mobile-extensions/mobile-extension-samples"
-                    }
-                ]
-            },
             {
                 title: "Resources",
                 path: "/documentation/resources",
@@ -797,6 +745,10 @@ module.exports = {
                     {
                         title: "Adobe Experience Cloud & Apple's IDFA, Privacy announcement",
                         path: "/documentation/privacy-announcement"
+                    },
+                    {
+                        title: "Building mobile extensions",
+                        path: "/documentation/building-mobile-extensions"
                     }
                 ]
             },

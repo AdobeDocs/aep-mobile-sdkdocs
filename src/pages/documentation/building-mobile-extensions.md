@@ -8,6 +8,25 @@ To support customer-specific features, and allow for the greatest flexibility, A
 
 Extensions allow customers to extend the Experience Platform SDKs with their own code. This includes listening for and dispatching events, reading the shared state of any registered extension, and sharing the state of the current extension. The application can use the extension to monitor for information that Adobe does not expose by default. It can also use the extension to modify Experience Platform SDK internal operations. For example, the application can use the extension to add additional data to messages that are sent or by sending data to other systems.
 
+## Prerequisites to building an extension
+
+Before you build an extension, complete the following tasks:
+
+### Ensure that you are using the Adobe Experience Platform SDKs.
+
+  Extensions extend the behavior of these SDKs.
+
+### Ensure that you can accomplish your goals only by using an extension.
+
+  To determine your goals, think about the following questions:
+
+  * Do you need access to data that is not already exposed via the Adobe Experience Platform SDKs?    
+  * Do you need to be notified when messages will be sent, or data is being collected by the Adobe Experience Platform SDKs?   
+  * Do you need to add data to or modify data for outgoing messages?    
+  * Do you need to expose data to other extensions or to rules processing?
+
+  If your answer to any of these questions is **yes**, build the extension.
+
 ## Namespace conventions
 
 Components or data that are provided by Adobe must be clearly distinguished from the components or data that are provided by external parties. Inconsistent naming conventions impact module naming, event type, source names, and event data keys.
@@ -22,45 +41,13 @@ The following naming rules apply for extensions:
 * Adobe event types follow the pattern `ADOBE_PREFIX.eventType.{eventType}`. 
 * Adobe event sources follow the pattern `ADOBE_PREFIX.eventSource.{eventSource}`. 
 * Shared state **names** (not **keys**) must equal the module name. 
-* All constants will be named using `lowerCamelCase`, and cases are normalized internally to make comparisons case-insensitive.  For example, if you use `Com.Adobe.moDule.AnAlytiCS` it will be internally converted to `com.adobe.module.analytics`. An exception to this rule is that shared state names that are used in rules are compared in a case-sensitive manner. This means that when registering an extension, the actual case is retained internally, so that rule comparison can succeed.
 
 <InlineAlert variant="warning" slots="text"/>
 
 You should use ASCII characters, even if your company name contains non-ASCII characters.
 
-## Extension architecture
 
-![](./assets/index/architecture.png)
-
-### Error handling
-
-When using an extension, you can get asynchronous or synchronous errors.
-
-#### Synchronous errors
-
-Synchronous errors are caught outside the Experience Platform SDK and may occur for the following reasons:
-
-* When registering a class with the incorrect parent class.
-* When passing empty strings to certain parameters. Examples include an extension name, an event type, or a shared state name.
-* When passing malformed JSON `data.Synchronous` errors are returned immediately on the same thread. 
-
-<InlineAlert variant="warning" slots="text"/>
-
-In iOS, a `@false` value is returned to indicate an error and filling in an optional `NSError` out parameter.
-
-#### Asynchronous errors
-
-Asynchronous errors are caught in the Experience Platform SDKs. When they occur, the error is handled with a callback function, which can be called back on a different thread.
-
-Asynchronous errors may occur for the following reasons:
-
-* When registering an extension with a name that duplicates an internal module or a previously registered extension.
-* When using a deprecated shared state name.
-* When registration is attempted during extension shutdown.
-* When an event is being dispatched while the extension is being shut down.
-* When a callback from the Experience Platform SDKs to the external code throws an exception.
-* When an internal error occurs, or an unexpected exception is thrown.
-
-<InlineAlert variant="warning" slots="text"/>
-
-In iOS, asynchronous errors are handled by using the `unexpectedError` method that is defined in the `ACPExtension` class.
+For help on building your own extension, please see:
+* [Building iOS Extension](https://github.com/adobe/aepsdk-core-ios/blob/main/Documentation/EventHub/BuildingExtensions.md)
+* [Building Android Extension](https://github.com/adobe/aepsdk-core-android/blob/main/Documentation/EventHub/BuildingExtensions.md)
+* [Building Tags Extension](https://experienceleague.adobe.com/docs/experience-platform/tags/extension-dev/overview.html?lang=en)
