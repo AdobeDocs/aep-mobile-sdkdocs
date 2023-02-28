@@ -11,6 +11,6 @@ We know that using location context with your app experiences can make them more
 To get started, complete the following steps:
 
 1. [Set up Assurance](../set-up.md).
-2. To view your events, from the left side menu select the **Events view** under the **PLACES SERVICE** section.
+2. To view your events, from the left side menu select the **Events view** under the **Places Service** section.
 
 ![](./assets/places-service/places-view.png)
