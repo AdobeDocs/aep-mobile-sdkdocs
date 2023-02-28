@@ -4,6 +4,12 @@ Adobe Experience Platform Assurance is a product from [Adobe Experience Cloud](h
 
 <InlineAlert variant="success" slots="header, text"/>
 
+Assurance Public APIs are available!
+
+[The Assurance APIs](https://developer.adobe.com/adobe-assurance-public-apis/) are a collection of APIs that empower users to test and debug their web and mobile apps, when outfitted with the Adobe Assurance Mobile SDK.
+
+<InlineAlert variant="success" slots="header, text"/>
+
 Project Griffon is now Assurance
 
 We're pleased to announce that Project Griffon is now generally available to all Adobe Experience Cloud customers as Assurance. To learn more about this transition, please read the [user access](./get-access.md) guide.
