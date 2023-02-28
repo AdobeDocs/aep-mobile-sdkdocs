@@ -2,9 +2,9 @@ import Tabs from './tabs/index.md'
 
 # Adobe Journey Optimizer
 
-The [Adobe Journey Optimizer](https://business.adobe.com/products/journey-optimizer/adobe-journey-optimizer.html) extension for Adobe Experience Platform Mobile SDKs powers push and in-app notifications for your mobile apps. This extension helps you collects user push tokens and manages interaction measurement with Adobe Experience Platform services.
+The [Adobe Journey Optimizer](https://business.adobe.com/products/journey-optimizer/adobe-journey-optimizer.html) extension for Adobe Experience Platform Mobile SDKs powers push notifications and in-app messages for your mobile apps. This extension also helps you to collect user push tokens and manages interaction measurement with Adobe Experience Platform services.
 
-The following documentation details how to use the extension and required configurations to get started with push and in-app notifications for Adobe Journey Optimizer for Adobe Experience Platform services, app stores, and your apps.
+The following documentation details how to use the extension and required configurations to get started with Adobe Journey Optimizer for Adobe Experience Platform services, app stores, and your apps.
 
 ## Before starting
 
