@@ -36,4 +36,4 @@ To learn how to manage consent and privacy obligations with Mobile SDK, please r
 
 ## Building mobile extensions 
 
-To learn how to extend Mobile SDK to support customer-specific features, and allow for the greatest flexibility, please read the guide on [building mobile extensions](../building-mobile-extensions.md)
+To learn how to extend Mobile SDK to support customer-specific features, and allow for the greatest flexibility, please read the guide on [building mobile extensions](../building-mobile-extensions.md).
