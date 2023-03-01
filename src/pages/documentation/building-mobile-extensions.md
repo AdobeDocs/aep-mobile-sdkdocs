@@ -12,11 +12,11 @@ Extensions allow customers to extend the Experience Platform SDKs with their own
 
 Before you build an extension, complete the following tasks:
 
-### Ensure that you are using the Adobe Experience Platform SDKs.
+### Ensure that you are using the Adobe Experience Platform SDKs
 
   Extensions extend the behavior of these SDKs.
 
-### Ensure that you can accomplish your goals only by using an extension.
+### Ensure that you can accomplish your goals only by using an extension
 
   To determine your goals, think about the following questions:
 
@@ -47,6 +47,7 @@ The following naming rules apply for extensions:
 
 You should use ASCII characters, even if your company name contains non-ASCII characters.
 
+## Get started
 
 For help on building your own extension, please see:
 * [Building iOS Extension](https://github.com/adobe/aepsdk-core-ios/blob/main/Documentation/EventHub/BuildingExtensions.md)
