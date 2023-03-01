@@ -4,6 +4,23 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## March 1, 2023
+
+### iOS AEPEdgeConsent 1.1.0
+
+* Added tvOS support.
+
+## February 28, 2023
+
+### iOS AEPEdge 1.6.0
+
+* Added tvOS support.
+
+### iOS AEPEdgeIdentity 1.2.0
+
+* Added tvOS support.
+* Identity map no longer accepts identity item with empty string value for id
+
 ## February 27, 2023
 
 ### Android Assurance 2.0.1

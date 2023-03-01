@@ -1,5 +1,12 @@
 # Release Notes
 
+## February 28, 2023
+
+### iOS AEPEdgeIdentity 1.2.0
+
+* Added tvOS support.
+* Identity map no longer accepts identity item with empty string value for id
+
 ## January 31, 2023
 
 ### Android EdgeIdentity 2.0.0
