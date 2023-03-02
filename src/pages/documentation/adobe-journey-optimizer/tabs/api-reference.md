@@ -170,6 +170,22 @@ public static func registerExtensions(_ extensions: [NSObject.Type], _ completio
 }];
 ```
 
+<Variant platform="android" api="refresh" repeat="2"/>
+
+#### Java
+
+```java
+Messaging.refreshInAppMessages();
+```
+
+<Variant platform="ios" api="refresh" repeat="2"/>
+
+#### Swift
+
+```swift
+Messaging.refreshInAppMessages()
+```
+
 <Variant platform="android" api="set-push-identifier" repeat="7"/>
 
 To retrieve the push token from Firebase Messaging Service, please follow the tutorial within the [Firebase documentation](https://firebase.google.com/docs/cloud-messaging/android/client#retrieve-the-current-registration-token). 
