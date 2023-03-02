@@ -16,6 +16,15 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 * Contents of the application manifest (AndroidManifest.xml) are now included in the `clientInfo` event.
 
+### iOS Messaging 1.1.1
+
+* Fixes an issue where loaded in-app message rules were not cleared when an empty in-app message payload is received from Adobe Journey Optimizer.
+
+### Android Messaging 2.0.2
+
+* Fixes an issue where loaded in-app message rules were not cleared when an empty in-app message payload is received from Adobe Journey Optimizer.
+* Fixes an issue where only the first in-app message present in a payload was being loaded into the rules engine.
+
 ## February 23, 2023
 
 New major version of the Mobile Core SDK for Android has been released along with updates to other extensions to take advantage of the new features and improvements. These improvements include:
