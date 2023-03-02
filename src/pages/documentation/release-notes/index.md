@@ -4,11 +4,37 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## March 1, 2023
+
+### iOS AEPEdgeConsent 1.1.0
+
+* Added tvOS support.
+
+## February 28, 2023
+
+### iOS AEPEdge 1.6.0
+
+* Added tvOS support.
+
+### iOS AEPEdgeIdentity 1.2.0
+
+* Added tvOS support.
+* Identity map no longer accepts identity items with an empty string value for ID.
+
 ## February 27, 2023
 
 ### Android Assurance 2.0.1
 
 * Contents of the application manifest (AndroidManifest.xml) are now included in the `clientInfo` event.
+
+### iOS Messaging 1.1.1
+
+* Fixes an issue where loaded in-app message rules were not cleared when an empty in-app message payload is received from Adobe Journey Optimizer.
+
+### Android Messaging 2.0.2
+
+* Fixes an issue where loaded in-app message rules were not cleared when an empty in-app message payload is received from Adobe Journey Optimizer.
+* Fixes an issue where only the first in-app message present in a payload was being loaded into the rules engine.
 
 ## February 23, 2023
 

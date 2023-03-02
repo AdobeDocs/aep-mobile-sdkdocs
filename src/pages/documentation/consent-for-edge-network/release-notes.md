@@ -1,5 +1,11 @@
 # Release Notes
 
+## March 1, 2023
+
+### iOS AEPEdgeConsent 1.1.0
+
+* Added tvOS support.
+
 ## January 31, 2023
 
 ### Android Consent 2.0.0

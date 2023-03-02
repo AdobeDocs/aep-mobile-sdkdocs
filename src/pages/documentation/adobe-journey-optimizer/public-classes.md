@@ -92,7 +92,7 @@ iOS
 
 The `Message` interface contains the definition of an in-app message and provides a framework to track message interactions via Experience Edge events.
 
-`InternalMessage` objects implementing this interface are created by the AEPMessaging extension, and passed as the `message` parameter in `MessagingDelegate` protocol methods.
+`InternalMessage` objects implementing this interface are created by the AEPMessaging extension, and passed as the `message` parameter in `MessagingDelegate` interface methods.
 
 ## Public functions
 
