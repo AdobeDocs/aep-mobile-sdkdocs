@@ -1,5 +1,11 @@
 # Release Notes
 
+## February 28, 2023
+
+### iOS AEPEdge 1.6.0
+
+* Added tvOS support.
+
 ## February 13, 2023
 
 ### Android Edge 1.4.1
