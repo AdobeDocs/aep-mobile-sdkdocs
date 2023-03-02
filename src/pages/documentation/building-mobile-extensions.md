@@ -27,7 +27,7 @@ Before you build an extension, complete the following tasks:
 
   If your answer to any of these questions is **yes**, build the extension.
 
-## Namespace conventions
+### Review the namespace conventions
 
 Components or data that are provided by Adobe must be clearly distinguished from the components or data that are provided by external parties. Inconsistent naming conventions impact module naming, event type, source names, and event data keys.
 
