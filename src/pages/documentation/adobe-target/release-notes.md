@@ -1,5 +1,11 @@
 # Release Notes
 
+## March 2, 2023
+
+### iOS Target 3.3.1
+
+* `target.previewEnabled` configuration setting is no longer required to enable preview mode in Target iOS SDK. If not configured, the default value here will be set to true.
+
 ## February 9, 2023
 
 ### Android Target 2.0.0
