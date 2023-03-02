@@ -30,7 +30,7 @@ Ensure that your app has registered all necessary AEP SDK extensions by doing th
 | AEPCore | 3.7.4 | core | 2.0.1 |
 | AEPEdge | 1.1.0 | edge | 2.0.0 |
 | AEPEdgeIdentity | 1.0.0 | edgeidentity | 2.0.0 |
-| AEPMessaging | 1.1.0 | messaging | 2.0.1 |
+| AEPMessaging | 1.1.0 | messaging | 2.0.0 |
 
 <InlineAlert variant="info" slots="text"/>
 
