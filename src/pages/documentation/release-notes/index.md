@@ -8,7 +8,7 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 ### iOS Target 3.3.1
 
-* `target.previewEnabled` configuration setting is no longer required to enable preview mode in Target iOS SDK. If not configured, the default value for the setting will be assumed to be true.
+* `target.previewEnabled` configuration setting is no longer required to enable preview mode in Target iOS SDK. If not configured, the default value here will be set to true.
 
 ## February 27, 2023
 
