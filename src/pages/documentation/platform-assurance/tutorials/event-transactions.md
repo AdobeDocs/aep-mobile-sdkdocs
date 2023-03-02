@@ -37,7 +37,7 @@ The events displayed in the Event Transactions view provide information about th
 
 #### Expand the event details
 
-To inspect an event, simply select the desired one from the view. This action expands the **Event Details** view on the right side of the screen.
+To inspect an event, select the desired one from the view. This action expands the **Event Details** view on the right side of the screen.
 Nested data is displayed in a tree format. You can inspect nested key-values by selecting the **+** (plus) button to the left of the key name.
 
 ![Event details](./assets/event-transactions/event-details.png)
