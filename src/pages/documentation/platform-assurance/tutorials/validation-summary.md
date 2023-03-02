@@ -32,7 +32,7 @@ Once the function tests are complete, select **Publish** to save your validation
 | `eventNumber` | Number | Used to order when the event was sent. This key is useful when events have the same timestamp. |
 | `vendor` | String | Vendor identification string in the reverse domain name format (for example, com.adobe.assurance). |
 | `type` | String | Used to denote the type of event. |
-| `payload` | Object | Defines the data for the event and contains unique and common properties. Some common properties include `ACPExtensionEventSource and ACPExtensionEventType`. |
+| `payload` | Object | Defines the data for the event and contains unique and common properties. Some common properties include `ACPExtensionEventSource` and `ACPExtensionEventType`. |
 | `annotations` | Array | An array of annotation objects. |
 
 ### Annotation definition
@@ -51,7 +51,7 @@ The validation function is expected to return an object that contains the follow
 | :--- | :--- | :--- |
 | `message` | String | The validation message to display in the summary results. |
 | `events` | Array | An array of event uuids to be reported as matched or not matched. |
-| `links` | Array | An array of ValidationResultLink objects {( type: 'doc'|'product', url: String )} to reference documentation and other resources |
+| `links` | Array | An array of `ValidationResultLink` objects to reference documentation and other resources `{( type: 'doc'|'product', url: String )}`  |
 | `result` | String | This is the validation result and is expected to be one of the enumerated strings: "matched", "not matched", "unknown" |
 
 ## View the validation results
