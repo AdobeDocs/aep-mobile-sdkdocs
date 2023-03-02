@@ -31,7 +31,7 @@ For an Analytics track event, the detailed view contains the following valuable 
 * OOTB meta and context data from the request, such as report suite ID, SDK extension versions, OOTB context data, and so on.
 * Post-processed information on the Analytics event that contains the mapping of revars, evars, props, and so on.
 
-## Use Assurance for Adobe Analytics
+## Use Assurance with Adobe Analytics
 
 To get started, complete the following steps:
 

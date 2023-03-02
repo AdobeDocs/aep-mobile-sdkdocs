@@ -6,7 +6,7 @@ The **Places** views allow you to inspect location entry and exit events on the 
 
 We know that using location context with your app experiences can make them more engaging. However, debugging and validating location triggers can be painful. Using these views and reviewing the data that you collect on the device helps alleviate that pain.
 
-## Use Assurance for Places Service
+## Use Assurance with Places Service
 
 To get started, complete the following steps:
 

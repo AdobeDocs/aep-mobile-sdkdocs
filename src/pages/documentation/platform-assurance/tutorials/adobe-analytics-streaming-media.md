@@ -12,7 +12,7 @@ With the integration between Streaming Media Analytics and Adobe Experience Plat
 
 Once data is processed in Analytics, post-processed status and data, such as media time spent and total pause duration, are also available in the event detail view.
 
-## Use Assurance for Adobe Analytics for Streaming Media
+## Use Assurance with Adobe Analytics for Streaming Media
 
 After you have connected and [set up](../set-up.md) your app for Adobe Analytics, you are ready to configure it for Streaming Media Analytics. At the bottom of the left panel, click **Configure** to add the Media Analytics Events view and **Save** it.
 
