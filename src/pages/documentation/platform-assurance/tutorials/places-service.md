@@ -1,4 +1,4 @@
-# Places Service view
+# Places Service view in Assurance
 
 ## Overview
 

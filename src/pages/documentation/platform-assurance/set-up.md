@@ -1,8 +1,8 @@
 # Set up Adobe Experience Platform Assurance
 
-## Include Assurance to your app
+## Add Assurance to your app
 
-Install and implement the [Assurance SDK extension](../platform-assurance-sdk/index.md) in your app.
+Follow the steps to [install and implement the Assurance extension](../platform-assurance-sdk/index.md) in your app.
 
 ## Connect to an Assurance session
 

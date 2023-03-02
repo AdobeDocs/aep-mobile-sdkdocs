@@ -2,20 +2,20 @@
 
 ## Overview
 
-You may use the Extensions Version view in order to quickly and easily view which Platform extensions you have installed and if they are up to date in a client connected to an Assurance session.
+You may use the Extensions Version view in order to quickly and easily view which Adobe Experience Platform mobile extensions you have installed and if they are up to date in a client connected to an Assurance session.
 
 ## Get started with Extension Versions views
 
 To use this view, complete the following steps:
 
-1. [Set up Adobe Experience Platform Assurance](../set-up.md).
+1. [Set up Assurance](../set-up.md).
 2. In the **Home** view, select **Extension Versions**
 
 ![Extension Versions](./assets/versions/versions-extension.png)
 
 ## Check if your version is up to date
 
-Inside this view, a table displays both the latest version of each Adobe Experience Platform Mobile SDK, as well as the current version you have installed, if applicable. When a version is in sync with the latest version, the installed version will display a green badge. Otherwise, the badge will be displayed in red.
+Inside this view, a table displays both the latest version of each Mobile SDK, as well as the current version you have installed, if applicable. When a version is in sync with the latest version, the installed version will display a green badge. Otherwise, the badge will be displayed in red.
 
 ![Extension Versions Comparison](./assets/versions/versions-extension-version.png)
 

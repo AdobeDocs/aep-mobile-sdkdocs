@@ -1,4 +1,4 @@
-# In-App Messaging view
+# In-App Messaging view in Assurance
 
 ## Overview
 

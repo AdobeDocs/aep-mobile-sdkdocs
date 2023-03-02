@@ -1,8 +1,8 @@
-# Adobe Analytics view
+# Adobe Analytics view in Assurance
 
 ## Overview
 
-The Assurance integration with Adobe Analytics provides a richer view of SDK events to users debugging and validating their Adobe Analytics implementation. The view now shows lifecycle and action/state events sent to Adobe Analytics from the [Adobe Experience Platform SDK](../../adobe-analytics/index.md). The view also features "response" detail that provides information on how the events were processed after the application of each respective report suite's processing rules.
+The Adobe Experience Platform Assurance integration with Adobe Analytics provides a richer view of SDK events to users debugging and validating their Adobe Analytics implementation. The view now shows lifecycle and action/state events sent to Adobe Analytics from the [Adobe Experience Platform SDK](../../adobe-analytics/index.md). The view also features "response" detail that provides information on how the events were processed after the application of each respective report suite's processing rules.
 
 ![](./assets/adobe-analytics/overview.png)
 
@@ -35,7 +35,7 @@ For an Analytics track event, the detailed view contains the following valuable 
 
 To get started, complete the following steps:
 
-1. [Set up Adobe Experience Platform Assurance](../set-up.md).
+1. [Set up Assurance](../set-up.md).
 2. To view your events, select the **Adobe Analytics** view.
 
 ![](./assets/adobe-analytics/using-assurance.png)

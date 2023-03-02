@@ -12,7 +12,7 @@ As we transition from beta (Project Griffon) to being generally available (as As
 
 Your company's Adobe Experience Cloud administrator will be able to help and perform the following changes.
 
-To receive or to maintain uninterrupted access to Assurance, ensure that the following steps are completed in Admin Console:
+To receive or to maintain uninterrupted access to Assurance, ensure that the following steps are completed in the Admin Console:
 
 ### Create a product profile
 
@@ -22,9 +22,10 @@ Log into the [Admin Console](https://adminconsole.adobe.com/)
 
 ![Adobe Experience Platform Assurance analytics view](./assets/get-access/analytics-view.png)
 
-### Add users to product profile
+### Add users to the product profile
 
-Provide a name and **save** - The Adobe Experience Platform product profile you intend to use for Assurance access does not need any additional permissions added. The default with no additional selections are sufficient.
+Provide a name and select **Save**.
+The product profile you intend to use for Assurance access does not require any additional permissions; the default with settings with no extra selections are sufficient.
 
 ![Adobe Experience Platform product profile](./assets/get-access/product-profile.png)
 
