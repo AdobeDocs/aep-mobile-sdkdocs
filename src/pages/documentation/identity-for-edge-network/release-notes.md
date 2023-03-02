@@ -5,7 +5,7 @@
 ### iOS AEPEdgeIdentity 1.2.0
 
 * Added tvOS support.
-* Identity map no longer accepts identity item with empty string value for id
+* Identity map no longer accepts identity items with an empty string value for id.
 
 ## January 31, 2023
 
