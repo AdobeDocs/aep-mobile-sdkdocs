@@ -44,5 +44,6 @@ iOS
 
 The test apps in this repository demonstrate executing JavaScript code from an in-app message's webview:
 
-- [Swift](https://github.com/adobe/aepsdk-messaging-ios/tree/staging/TestApps/MessagingDemoApp)
-- [Objective-C](https://github.com/adobe/aepsdk-messaging-ios/tree/staging/TestApps/MessagingDemoAppObjC)
+- [Swift](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoApp)
+- [Objective-C](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoAppObjC)
+- [Java](https://github.com/adobe/aepsdk-messaging-android/tree/main/code/app)
