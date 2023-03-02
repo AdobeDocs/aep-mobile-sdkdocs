@@ -37,7 +37,7 @@ The events displayed in the Event Transactions view provide information about th
 
 #### Expand the event details
 
-To inspect an event, simply select the desired one from the view. This action expands the `Event Details` view on the right side of the screen.
+To inspect an event, simply select the desired one from the view. This action expands the **Event Details** view on the right side of the screen.
 Nested data is displayed in a tree format. You can inspect nested key-values by selecting the **+** (plus) button to the left of the key name.
 
 ![Event details](./assets/event-transactions/event-details.png)
@@ -47,15 +47,15 @@ Nested data is displayed in a tree format. You can inspect nested key-values by 
 Each event name is prefixed with an icon which indicates the high-level status of the processing for that event:
 
 * If the event was processed successfully, a green check mark is displayed.
-* If warnings or errors have been detected, a warning sign is displayed. Select the related event to learn more about the cause of the warning or error in the `Event Details` view.
+* If warnings or errors have been detected, a warning sign is displayed. Select the related event to learn more about the cause of the warning or error in the **Event Details** view.
 
 ### Configuration settings
 
-You can check the currently used datastream identifier by selecting the info tooltip next to the `Edge Network` column header.
+You can check the currently used datastream identifier by selecting the info tooltip next to the **Edge Network** column header.
 
 ![Show the datastream ID](./assets/event-transactions/show-datastream-id.png)
 
 <InlineAlert variant="info" slots="text"/>
 
 When multiple clients connect to the same Assurance session and different datastream IDs are used, you will see all of them displayed here.
-However, this doesn't mean that you current implementation is using multiple datastreams; only the current datastream ID set in the tag (mobile property) used by app is used for processing new events from that client. When testing more complicated use-cases with different configuration settings and multiple clients connected, it may be helpful to use separate Assurance sessions to simplify the validation process.
+However, this doesn't mean that your current implementation is using multiple datastreams. Only the current datastream ID set in the tag (mobile property) used by the app is used for processing new events from that client. When testing more complicated use-cases with different configuration settings and multiple clients connected, it may be helpful to use separate Assurance sessions to simplify the validation process.
