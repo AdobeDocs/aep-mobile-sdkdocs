@@ -19,7 +19,7 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 ### iOS AEPEdgeIdentity 1.2.0
 
 * Added tvOS support.
-* Identity map no longer accepts identity items with an empty string value for id.
+* Identity map no longer accepts identity items with an empty string value for ID.
 
 ## February 27, 2023
 
