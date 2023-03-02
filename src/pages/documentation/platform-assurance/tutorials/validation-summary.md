@@ -8,7 +8,7 @@ You may use the Validation Editor feature to quickly and easily manage JavaScrip
 
 To use this view, complete the following steps:
 
-1. [Set up Adobe Experience Platform Assurance](../set-up.md).
+1. [Set up Assurance](../set-up.md).
 2. In the **Home** view, select **Validation Editor**.
 
 ![Validation-Editor-Screen-Shot](https://user-images.githubusercontent.com/6597105/198680074-f548a646-6f2f-4a65-82fd-0f1687d869bf.png)
