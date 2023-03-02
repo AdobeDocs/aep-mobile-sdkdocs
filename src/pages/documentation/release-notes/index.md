@@ -4,6 +4,29 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## March 2, 2023
+
+### iOS Target 3.3.1
+
+* `target.previewEnabled` configuration setting is no longer required to enable preview mode in Target iOS SDK. If not configured, the default value here will be set to true.
+
+## March 1, 2023
+
+### iOS AEPEdgeConsent 1.1.0
+
+* Added tvOS support.
+
+## February 28, 2023
+
+### iOS AEPEdge 1.6.0
+
+* Added tvOS support.
+
+### iOS AEPEdgeIdentity 1.2.0
+
+* Added tvOS support.
+* Identity map no longer accepts identity items with an empty string value for ID.
+
 ## February 27, 2023
 
 ### Android Assurance 2.0.1
