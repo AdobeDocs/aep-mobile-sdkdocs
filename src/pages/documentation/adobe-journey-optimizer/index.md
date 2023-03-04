@@ -31,7 +31,7 @@ Navigate to a previously configured Datastream by following the instructions in 
 
 To learn how to create the mobile property, please read the tutorial on [creating a mobile property](../getting-started/create-a-mobile-property.md)
 
-Now that a mobile property is created, we can add then setup the Adobe Journey Optimizer extension.
+Now that a mobile property is created, we can setup the Adobe Journey Optimizer extension.
 
 ## Setup Adobe Journey Optimizer extension
 
@@ -40,13 +40,13 @@ Now that a mobile property is created, we can add then setup the Adobe Journey O
 Go to the [Experience Platform Data Collection UI](https://experience.adobe.com/#/data-collection/), select mobile property and navigate to **Extensions** from the left navigation panel:
 
 1. Navigate to the **Catalog** tab, locate the **Adobe Journey Optimizer** extension, and select **Install**
-2. Select the pre-created **AJO Push Tracking Event Dataset** from the **Event Dataset** dropdown.
+2. Select the pre-created **AJO Push Tracking Experience Event Dataset** from the **Event Dataset** dropdown.
 3. Select **Save**.
-4. Follow the publishing process to update SDK configuration.
+4. [Follow the publishing process](../getting-started/create-a-mobile-property.md#publish-the-configuration) to update SDK configuration.
 
 <InlineAlert variant="info" slots="text"/>
 
-The datasets selected should use a schema that uses the "Push Notification Tracking" XDM field group. The pre-created CJM Push Tracking Dataset contains this XDM field group in its schema definition. For more information, please read the tutorial on [setting up schemas and datasets](../../getting-started/setup-schemas-and-datasets.md).
+The datasets selected should use a schema that uses the "Push Notification Tracking" XDM field group. The pre-created CJM Push Tracking Dataset contains this XDM field group in its schema definition. For more information, please read the tutorial on [setting up schemas and datasets](../getting-started/set-up-schemas-and-datasets.md).
 
 ![](./assets/index/configuration.png)
 
@@ -94,7 +94,7 @@ iOS
 
 ## Configuration keys
 
-You can update the SDK configuration, including the Messaging configuration values, programatically by using the following information.
+You can update the SDK configuration, including the Messaging configuration values, programmatically by using the following information.
 
 | Key | Required | Description | Data Type | Operating System |
 | :--- | :--- | :--- | :--- | :--- |
