@@ -1,5 +1,12 @@
 # Release Notes
 
+## March 6, 2023
+
+### iOS Places 3.0.3
+
+* Fixed the friendly name for the extension to be `Places` instead of fully qualified extension name.
+* Updated `nearbyPois` in shared state to be an array of POI objects (represented as dictionaries).
+
 ## February 3, 2023
 
 ### Android Places 2.0.0
