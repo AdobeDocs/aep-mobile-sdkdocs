@@ -4,6 +4,13 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## March 6, 2023
+
+### iOS Places 3.0.3
+
+* Fixed the friendly name for the extension to be `Places` instead of fully qualified extension name.
+* Updated `nearbyPois` in shared state to be an array of POI objects (represented as dictionaries).
+
 ## March 2, 2023
 
 ### iOS Target 3.3.1
