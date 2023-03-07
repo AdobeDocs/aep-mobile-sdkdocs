@@ -1,5 +1,12 @@
 # Release Notes
 
+## March 6, 2023
+
+### Android Messaging 2.1.0
+
+* Fixed in-app message deeplink processing.
+* Added a default implementation for `Message.getAutoTrack` to resolve an issue with the Message interface not matching the previous Message class.
+
 ## February 27, 2023
 
 ### iOS Messaging 1.1.1
