@@ -22,6 +22,23 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 * `target.previewEnabled` configuration setting is no longer required to enable preview mode in Target iOS SDK. If not configured, the default value here will be set to true.
 
+### AEP Flutter Plugins 2.0.0
+
+* Updated all the AEP Flutter plugins to use MobileCore 2.x for Android and compatible extensions.
+* Fixed issues where async calls were not properly completed.
+
+The following plugins have been published:
+
+* [flutter_aepcore@2.0.0](https://pub.dev/packages/flutter_aepcore)
+* [flutter_aepassurance@2.0.0](https://pub.dev/packages/flutter_aepassurance)
+* [flutter_aepedge@2.0.0](https://pub.dev/packages/flutter_aepedge)
+* [flutter_aepedgeidentity@2.0.0](https://pub.dev/packages/flutter_aepedgeidentity)
+* [flutter_aepedgeconsent@2.0.0](https://pub.dev/packages/flutter_aepedgeconsent)
+
+### AEP Flutter User Profile 1.0.0
+
+* Added the initial release for [flutter_aepuserprofile@1.0.0](https://pub.dev/packages/flutter_aepuserprofile)
+
 ## March 1, 2023
 
 ### iOS AEPEdgeConsent 1.1.0
