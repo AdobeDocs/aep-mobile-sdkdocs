@@ -24,7 +24,7 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 ### AEP Flutter Plugins 2.0.0
 
-* Updated all the AEP Flutter plugins to use MobileCore for Android 2.x and compatible extensions.
+* Updated all the AEP Flutter plugins to use MobileCore 2.x for Android and compatible extensions.
 * Fixed issues where async calls were not properly completed.
 
 The following plugins have been published:
