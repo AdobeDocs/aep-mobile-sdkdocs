@@ -4,6 +4,18 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## March 6, 2023
+
+### iOS Places 3.0.3
+
+* Fixed the friendly name for the extension to be `Places` instead of fully qualified extension name.
+* Updated `nearbyPois` in shared state to be an array of POI objects (represented as dictionaries).
+
+### Android Messaging 2.1.0
+
+* Fixed in-app message deeplink processing.
+* Added a default implementation for `Message.getAutoTrack` to resolve an issue with the Message interface not matching the previous Message class.
+
 ## March 2, 2023
 
 ### iOS Target 3.3.1
