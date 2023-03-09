@@ -4,6 +4,16 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## March 9, 2023
+
+### AEP React Native libraries 2.0.0
+
+* Updated all the AEP React Native libraries to use MobileCore 2.x for Android and compatible extensions.
+
+The following npms have been published:
+
+
+
 ## March 6, 2023
 
 ### iOS Places 3.0.3
