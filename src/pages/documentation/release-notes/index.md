@@ -12,7 +12,17 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 The following npms have been published:
 
-
+* [@adobe/react-native-aepcore:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepcore/v/2.0.0)
+* [@adobe/react-native-aepassurance:4.0.0](https://www.npmjs.com/package/@adobe/react-native-aepassurance/v/2.0.0)
+* [@adobe/react-native-aepuserprofile:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepuserprofile/v/2.0.0)
+* [@adobe/react-native-aepedge:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedge/v/2.0.0)
+* [@adobe/react-native-aeedgeidentity:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aeedgeidentity/v/2.0.0)
+* [@adobe/react-native-aepedgeconsent:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedgeconsent/v/2.0.0)
+* [@adobe/react-native-aepmessaging:1.0.0](https://www.npmjs.com/package/@adobe/react-native-aepmessaging/v/1.0.0)
+* [@adobe/react-native-aepoptimize:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepoptimize/v/2.0.0)
+* [@adobe/react-native-aepplaces:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepplaces/v/2.0.0)
+* [@adobe/react-native-aeptarget:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aeptarget/v/2.0.0)
+* [@adobe/react-native-aepcampaignclassic:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepcampaignclassic/v/2.0.0)
 
 ## March 6, 2023
 
