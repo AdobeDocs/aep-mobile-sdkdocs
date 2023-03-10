@@ -1,4 +1,4 @@
-<Variant platform="android" function="register" repeat="4"/>
+<Variant platform="android" function="register" repeat="5"/>
 
 On Android, the delegate is registered with the Adobe Service Provider. The `ServiceProvider` class maintains an optional property that holds reference to the `FullscreenMessaageDelegate`.
 
@@ -34,8 +34,6 @@ let myMessagingDelegate = InAppMessagingHandler()
 
 MobileCore.messagingDelegate = myMessagingDelegate
 ```
-
-
 
 <Variant platform="android" function="messaging-delegate" repeat="3"/>
 
