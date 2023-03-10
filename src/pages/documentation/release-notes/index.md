@@ -6,7 +6,7 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 ## March 9, 2023
 
-### AEP React Native libraries 2.0.0
+### AEP React Native libraries
 
 * Updated all the AEP React Native libraries to use MobileCore 2.x for Android and compatible extensions.
 
