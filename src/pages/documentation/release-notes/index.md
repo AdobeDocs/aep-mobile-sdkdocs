@@ -4,6 +4,26 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## March 9, 2023
+
+### AEP React Native libraries
+
+* Updated all the AEP React Native libraries to use MobileCore 2.x for Android and compatible extensions.
+
+The following npms have been published:
+
+* [@adobe/react-native-aepcore:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepcore/v/2.0.0)
+* [@adobe/react-native-aepassurance:4.0.0](https://www.npmjs.com/package/@adobe/react-native-aepassurance/v/4.0.0)
+* [@adobe/react-native-aepuserprofile:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepuserprofile/v/2.0.0)
+* [@adobe/react-native-aepedge:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedge/v/2.0.0)
+* [@adobe/react-native-aeedgeidentity:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aeedgeidentity/v/2.0.0)
+* [@adobe/react-native-aepedgeconsent:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedgeconsent/v/2.0.0)
+* [@adobe/react-native-aepmessaging:1.0.0](https://www.npmjs.com/package/@adobe/react-native-aepmessaging/v/1.0.0)
+* [@adobe/react-native-aepoptimize:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepoptimize/v/2.0.0)
+* [@adobe/react-native-aepplaces:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepplaces/v/2.0.0)
+* [@adobe/react-native-aeptarget:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aeptarget/v/2.0.0)
+* [@adobe/react-native-aepcampaignclassic:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepcampaignclassic/v/2.0.0)
+
 ## March 6, 2023
 
 ### iOS Places 3.0.3
@@ -11,11 +31,33 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 * Fixed the friendly name for the extension to be `Places` instead of fully qualified extension name.
 * Updated `nearbyPois` in shared state to be an array of POI objects (represented as dictionaries).
 
+### Android Messaging 2.1.0
+
+* Fixed in-app message deeplink processing.
+* Added a default implementation for `Message.getAutoTrack` to resolve an issue with the Message interface not matching the previous Message class.
+
 ## March 2, 2023
 
 ### iOS Target 3.3.1
 
 * `target.previewEnabled` configuration setting is no longer required to enable preview mode in Target iOS SDK. If not configured, the default value here will be set to true.
+
+### AEP Flutter Plugins 2.0.0
+
+* Updated all the AEP Flutter plugins to use MobileCore 2.x for Android and compatible extensions.
+* Fixed issues where async calls were not properly completed.
+
+The following plugins have been published:
+
+* [flutter_aepcore@2.0.0](https://pub.dev/packages/flutter_aepcore)
+* [flutter_aepassurance@2.0.0](https://pub.dev/packages/flutter_aepassurance)
+* [flutter_aepedge@2.0.0](https://pub.dev/packages/flutter_aepedge)
+* [flutter_aepedgeidentity@2.0.0](https://pub.dev/packages/flutter_aepedgeidentity)
+* [flutter_aepedgeconsent@2.0.0](https://pub.dev/packages/flutter_aepedgeconsent)
+
+### AEP Flutter User Profile 1.0.0
+
+* Added the initial release for [flutter_aepuserprofile@1.0.0](https://pub.dev/packages/flutter_aepuserprofile)
 
 ## March 1, 2023
 
