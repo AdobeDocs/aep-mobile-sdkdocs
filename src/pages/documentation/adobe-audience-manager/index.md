@@ -1,3 +1,9 @@
+---
+title: Adobe Audience Manager
+description: An overview for the Adobe Audience Manager mobile extension.
+---
+
+
 import Tabs from './tabs/index.md'
 
 # Adobe Audience Manager

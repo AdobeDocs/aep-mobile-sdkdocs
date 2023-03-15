@@ -1,3 +1,9 @@
+---
+title: Adobe Audience Manager event reference
+description: An event reference for the Adobe Audience Manager mobile extension.
+---
+
+
 # Adobe Audience Manager event reference
 
 ## Events handled

@@ -1,3 +1,9 @@
+---
+title: Adobe Audience Manager release notes
+description: The release notes for the Adobe Audience Manager mobile extension.
+---
+
+
 # Release Notes
 
 ## February 3, 2023

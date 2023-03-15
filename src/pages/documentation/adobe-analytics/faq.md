@@ -1,3 +1,8 @@
+---
+title: Adobe Analytics FAQ
+description: A frequently asked questions guide for the Adobe Analytics mobile extension.
+---
+
 # Frequently asked questions
 
 ## How can I set up, configure, or troubleshoot processing rules?

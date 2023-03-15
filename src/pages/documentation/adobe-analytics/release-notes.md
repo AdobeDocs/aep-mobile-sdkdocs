@@ -1,3 +1,8 @@
+---
+title: Adobe Analytics Release Notes
+description: The release notes for the Adobe Analytics mobile extension.
+---
+
 # Release Notes
 
 ## February 17, 2023
