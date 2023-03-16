@@ -4,6 +4,18 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## March 16, 2023
+
+### Android Messaging 2.1.1
+
+* Messaging extension now processes in-app message responses from multiple upstream services.
+
+## March 15, 2023
+
+### iOS AEPMessaging 1.1.2
+
+* Messaging extension now processes in-app message responses from multiple upstream services.
+
 ## March 9, 2023
 
 ### AEP React Native libraries
