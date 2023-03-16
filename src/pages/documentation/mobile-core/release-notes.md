@@ -10,6 +10,7 @@
 
 ### iOS AEPCore 3.8.0
 
+* Updated the minimum supported versions to iOS 11.0, tvOS 11.0.
 * Added support for overriding internal logging service with customer-provided implementation.
 * Added a new API to the LaunchRulesEngine class that enables adding new rules without replacing the existing ones. 
 
