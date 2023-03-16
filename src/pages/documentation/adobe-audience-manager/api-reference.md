@@ -16,7 +16,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
 ## getVisitorProfile
 
@@ -30,21 +30,21 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-visitor-profile"/>
+<Tabs query="platform=ios&api=get-visitor-profile"/>
 
 ## registerExtension
 
-This API registers an extension class that was derived from `ACPExtension` with a unique name. This call validates the parameters to ensure that the name is not empty, the name is unique, and that the parent class is `ACPExtension`.
+This API registers an extension class that was derived from with a unique name. 
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<InlineAlert variant="warning" slots="text"/>
+
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 Android
 
 <Tabs query="platform=android&api=register-extension"/>
-
-iOS
-
-<Tabs query="platform=ios-aep&api=register-extension"/>
 
 ## reset
 
@@ -62,7 +62,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=reset"/>
+<Tabs query="platform=ios&api=reset"/>
 
 ## signalWithData
 
@@ -82,4 +82,4 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=signal-with-data"/>
+<Tabs query="platform=ios&api=signal-with-data"/>

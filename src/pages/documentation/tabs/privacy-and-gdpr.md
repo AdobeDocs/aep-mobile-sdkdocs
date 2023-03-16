@@ -9,7 +9,7 @@ You can set the collect consent to one of the following values:
 
 To understand the expected behavior, see the _Update and get collect consent preferences_ table above.
 
-<Variant platform="ios-aep" task="collect-consent-settings" repeat="7"/>
+<Variant platform="ios" task="collect-consent-settings" repeat="7"/>
 
 You can set the collect consent to one of the following values:
 
@@ -54,7 +54,7 @@ Consent.getConsents(new AdobeCallback<Map<String, Object>>() {
 });
 ```
 
-<Variant platform="ios-aep" task="get-consents" repeat="10"/>
+<Variant platform="ios" task="get-consents" repeat="10"/>
 
 #### Swift
 
@@ -136,7 +136,7 @@ consents.put("consents", collectConsents);
 Consent.update(consents);
 ```
 
-<Variant platform="ios-aep" task="update-consents" repeat="10"/>
+<Variant platform="ios" task="update-consents" repeat="10"/>
 
 #### Swift
 
@@ -204,7 +204,7 @@ public static void setPrivacyStatus(final MobilePrivacyStatus privacyStatus);
 MobileCore.setPrivacyStatus(MobilePrivacyStatus.OPT_OUT);
 ```
 
-<Variant platform="ios-aep" task="set-privacy-status" repeat="13"/>
+<Variant platform="ios" task="set-privacy-status" repeat="13"/>
 
 You can set privacy status to one of the following values:
 
@@ -273,7 +273,7 @@ MobileCore.getPrivacyStatus(new AdobeCallback<MobilePrivacyStatus>() {
 });
 ```
 
-<Variant platform="ios-aep" task="get-privacy-status" repeat="14"/>
+<Variant platform="ios" task="get-privacy-status" repeat="14"/>
 
 The enum representation of the privacy status that corresponds to the following statuses:
 

@@ -132,42 +132,20 @@ public static void registerExtension();
 Messaging.registerExtension();
 ```
 
-<Variant platform="ios" api="register-extension" repeat="12"/>
+<Variant platform="android" api="refresh" repeat="2"/>
+
+#### Java
+
+```java
+Messaging.refreshInAppMessages();
+```
+
+<Variant platform="ios" api="refresh" repeat="2"/>
 
 #### Swift
 
-You can use the MobileCore API to register the Messaging extension.
-
-**Syntax**
-
 ```swift
-public static func registerExtensions(_ extensions: [NSObject.Type], _ completion: (() -> Void)? = nil)
-```
-
-**Example**
-
-```swift
-MobileCore.registerExtensions([Messaging.self, ...], {
-  // processing after registration
-})
-```
-
-#### Objective-C
-
-You can use the AEPMobileCore API to register the Messaging extension.
-
-**Syntax**
-
-```objc
-public static func registerExtensions(_ extensions: [NSObject.Type], _ completion: (() -> Void)? = nil)
-```
-
-**Example**
-
-```objc
-[AEPMobileCore registerExtensions:@[AEPMobileMessaging.class, ...] completion:^{
-  // processing after registration
-}];
+Messaging.refreshInAppMessages()
 ```
 
 <Variant platform="android" api="set-push-identifier" repeat="7"/>

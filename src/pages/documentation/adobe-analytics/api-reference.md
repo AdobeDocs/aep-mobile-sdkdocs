@@ -23,7 +23,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=clear-queue"/>
+<Tabs query="platform=ios&api=clear-queue"/>
 
 ## extensionVersion
 
@@ -39,7 +39,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
 ## getQueueSize 
 
@@ -53,9 +53,9 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-queue-size"/>
+<Tabs query="platform=ios&api=get-queue-size"/>
 
-## getQueueSizeWithCompletionHandler <a id="getqueuesizewithcompletionhandler"></a>
+## getQueueSizeWithCompletionHandler
 
 Retrieves the total number of Analytics hits in the tracking queue. Invoke the callback with NSError if an unexpected error occurs or the request times out.
 
@@ -63,7 +63,7 @@ Retrieves the total number of Analytics hits in the tracking queue. Invoke the c
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-queue-size-with-completion-handler"/>
+<Tabs query="platform=ios&api=get-queue-size-with-completion-handler"/>
 
 ## getTrackingIdentifier
 
@@ -81,7 +81,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-tracking-identifier"/>
+<Tabs query="platform=ios&api=get-tracking-identifier"/>
 
 ## getTrackingIdentifierWithCompletionHandler
 
@@ -99,13 +99,13 @@ If you have an [Experience Cloud ID](../mobile-core/identity/api-reference.md#ge
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-tracking-identifier-with-completion-handler"/>
+<Tabs query="platform=ios&api=get-tracking-identifier-with-completion-handler"/>
 
 ## getVisitorIdentifier
 
 <InlineAlert variant="warning" slots="text"/>
 
-Before using this API, see [Identify unique visitors](https://experienceleague.adobe.com/docs/analytics/components/metrics/unique-visitors.html).
+Before using this API, please read the documentation on [identifying unique visitors](https://experienceleague.adobe.com/docs/analytics/components/metrics/unique-visitors.html).
 
 This API gets a custom Analytics visitor identifier, which has been set previously using [setVisitorIdentifier](#setvisitoridentifier).
 
@@ -117,7 +117,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-visitor-identifier"/>
+<Tabs query="platform=ios&api=get-visitor-identifier"/>
 
 ## getVisitorIdentifierWithCompletionHandler
 
@@ -131,7 +131,21 @@ This API gets a custom Analytics visitor identifier, which has been set previous
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-visitor-identifier-with-completion-handler"/>
+<Tabs query="platform=ios&api=get-visitor-identifier-with-completion-handler"/>
+
+## registerExtension
+
+Registers the Analytics extension with the Mobile Core SDK.
+
+<InlineAlert variant="warning" slots="text"/>
+
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+
+Android
+
+<Tabs query="platform=android&api=register-extension"/>
 
 ## resetIdentities
 
@@ -159,7 +173,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=send-queued-hits"/>
+<Tabs query="platform=ios&api=send-queued-hits"/>
 
 ## setVisitorIdentifier
 
@@ -177,4 +191,4 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=set-visitor-identifier"/>
+<Tabs query="platform=ios&api=set-visitor-identifier"/>

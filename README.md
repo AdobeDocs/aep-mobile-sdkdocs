@@ -70,12 +70,12 @@ Android
 
 <Tabs query="platform=android&api=get-identities"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&api=get-identities"/>
+<Tabs query="platform=ios&api=get-identities"/>
 ```
 
-The above example creates a tab block and inserts the API reference for the two platforms, Android and iOS (AEP 3.x), for the getIdentities API.
+The above example creates a tab block and inserts the API reference for the two platforms, Android and iOS, for the getIdentities API.
 
 After adding your Tab block and queries, you'll need to add the actual content of the APIs. Open the `api-reference.md` file within the `tabs` folder of your extension.
 
@@ -164,7 +164,7 @@ A proper example for an inline alert would be as follows:
 ````md
 <InlineAlert variant="info" slots="text"/>
 
-Adobe Experience Platform Mobile SDK for Android supports Google Android API 14 (Ice Cream Sandwich) or later. The Adobe Experience Platform Edge Network extension and other for Edge Network extensions require Android versions 4.4 or later (API levels 19 or later).
+Adobe Experience Platform Mobile SDK for Android supports Google Android API 19 (KitKat) or later.
 ````
 
 Supported values for the `variant` include the following:

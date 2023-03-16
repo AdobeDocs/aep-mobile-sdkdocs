@@ -10,29 +10,25 @@ Follow the directions below to include the SDK into your mobile application.
 
 For iOS and Android projects, the recommended approach for integrating the SDK is to use supported dependency and package managers as listed for each platform such as Maven and Cocoapods. SDKs are also available for download on [GitHub](https://github.com/Adobe-Marketing-Cloud/acp-sdks/).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=get"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=get"/>
+<Tabs query="platform=ios&task=get"/>
 
-iOS (ACP 2.x)
+<!--  React Native
 
-<Tabs query="platform=ios-acp&task=get"/>
+<Tabs query="platform=react-native&task=get"/> -->
 
-React Native
+<!-- Flutter
 
-<Tabs query="platform=react-native&task=get"/>
+<Tabs query="platform=flutter&task=get"/> -->
 
-Flutter
-
-<Tabs query="platform=flutter&task=get"/>
-
-Cordova
+<!-- Cordova
 
 <Tabs query="platform=cordova&task=get"/>
 
@@ -42,8 +38,7 @@ Unity
 
 Xamarin
 
-<Tabs query="platform=xamarin&task=get"/>
-
+<Tabs query="platform=xamarin&task=get"/>  -->
 
 ## Installation instructions
 
@@ -53,19 +48,15 @@ If you cannot access the **Mobile Install Instructions** dialog box in the Data 
 
 Each extension needs to be added as a dependency to the mobile application project. The following examples will add the Mobile Core and Profile extensions.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=add-dependencies"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=add-dependencies"/>
-
-iOS (ACP 2.x)
-
-<Tabs query="platform=ios-acp&task=add-dependencies"/>
+<Tabs query="platform=ios&task=add-dependencies"/>
 
 ### 2. Add initialization code
 
@@ -77,29 +68,25 @@ Extension registration is **mandatory**. Attempting to make extension-specific A
 
 The following code snippets demonstrate how you can import and register the Mobile Core and Profile extensions. You can also see, for reference, how Identity, Lifecycle, Signal, Profile, and other extensions are imported and registered.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=add-initialization"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=add-initialization"/>
+<Tabs query="platform=ios&task=add-initialization"/>
 
-iOS (ACP 2.x)
+<!-- React Native
 
-<Tabs query="platform=ios-acp&task=add-initialization"/>
+<Tabs query="platform=react-native&task=add-initialization"/> -->
 
-React Native
+<!-- Flutter
 
-<Tabs query="platform=react-native&task=add-initialization"/>
+<Tabs query="platform=flutter&task=add-initialization"/> -->
 
-Flutter
-
-<Tabs query="platform=flutter&task=add-initialization"/>
-
-Cordova
+<!-- Cordova
 
 <Tabs query="platform=cordova&task=add-initialization"/>
 
@@ -109,7 +96,7 @@ Unity
 
 Xamarin
 
-<Tabs query="platform=xamarin&task=add-initialization"/>
+<Tabs query="platform=xamarin&task=add-initialization"/> -->
 
 ### 3. Ensure app permissions (Android only)
 
@@ -136,6 +123,6 @@ To enable these permissions, add the following lines to your `AndroidManifest.xm
 
 ## Get help
 
-* Visit the SDK [community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-sdks/ct-p/platform-sdk) to ask questions
+* Visit the SDK [community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform/ct-p/adobe-experience-platform-community) to ask questions
 * Contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support) for immediate assistance
 

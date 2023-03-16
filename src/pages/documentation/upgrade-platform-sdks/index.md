@@ -20,7 +20,7 @@ Review the following checklist to understand some of the changes and what is req
 ## Upgrade checklist
 
 1. Begin with the [Getting Started](../getting-started/create-a-mobile-property.md) section and ensure that you are appropriately provisioned for tags.
-2. Ensure all of the required SDK APIs that you currently use are available in the new SDK.<br/>For more information, see [Experience Platform SDKs vs. the 4x SDKs](comparison.md).<br/>**Tip:** The Experience Platform SDK supports iOS versions 10+, Android 4+ (API 14+).
+2. Ensure all of the required SDK APIs that you currently use are available in the new SDK.<br/>For more information, see [Experience Platform SDKs vs. the 4x SDKs](comparison.md).<br/>**Tip:** The Experience Platform SDK supports iOS versions 10+, Android 4.4+ (API 19+).
 3. If you are implementing Analytics, see [Processing rules overview](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html?lang=en) to map the variables and rules.
 4. In the Experience Platform SDK, you need to manually implement your Lifecycle calls. For more information, see [Manual Lifecycle Implementation](lifecycle.md).
 
@@ -36,5 +36,5 @@ See [Experience Cloud vs. 4x SDK functionality comparison](comparison.md)
 
 ## Get help
 
-- Visit the SDK [community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-sdks/ct-p/platform-sdk) to ask questions.
+- Visit the SDK [community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform/ct-p/adobe-experience-platform-community) to ask questions.
 - Contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support) for immediate assistance.

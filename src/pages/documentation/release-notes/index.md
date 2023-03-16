@@ -4,19 +4,312 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
-## November 11, 2022
+## March 9, 2023
 
-### iOS AEPCore 3.7.3
+### AEP React Native libraries
 
-* Fixed a bug in AEPIdentity where CustomerIdentities with the same type could cause a crash.
+* Updated all the AEP React Native libraries to use MobileCore 2.x for Android and compatible extensions.
 
-## October 27, 2022
+The following npms have been published:
 
-### iOS AEPCore 3.7.2
+* [@adobe/react-native-aepcore:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepcore/v/2.0.0)
+* [@adobe/react-native-aepassurance:4.0.0](https://www.npmjs.com/package/@adobe/react-native-aepassurance/v/4.0.0)
+* [@adobe/react-native-aepuserprofile:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepuserprofile/v/2.0.0)
+* [@adobe/react-native-aepedge:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedge/v/2.0.0)
+* [@adobe/react-native-aeedgeidentity:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aeedgeidentity/v/2.0.0)
+* [@adobe/react-native-aepedgeconsent:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedgeconsent/v/2.0.0)
+* [@adobe/react-native-aepmessaging:1.0.0](https://www.npmjs.com/package/@adobe/react-native-aepmessaging/v/1.0.0)
+* [@adobe/react-native-aepoptimize:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepoptimize/v/2.0.0)
+* [@adobe/react-native-aepplaces:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepplaces/v/2.0.0)
+* [@adobe/react-native-aeptarget:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aeptarget/v/2.0.0)
+* [@adobe/react-native-aepcampaignclassic:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepcampaignclassic/v/2.0.0)
 
-* Added location hint result to EventSource keys for Edge.
-* Fixed a bug preventing in-app messages from being dismissed in some situations.
-* Added Target identities to MobileCore.getSDKIdentities response.
+## March 6, 2023
+
+### iOS Places 3.0.3
+
+* Fixed the friendly name for the extension to be `Places` instead of fully qualified extension name.
+* Updated `nearbyPois` in shared state to be an array of POI objects (represented as dictionaries).
+
+### Android Messaging 2.1.0
+
+* Fixed in-app message deeplink processing.
+* Added a default implementation for `Message.getAutoTrack` to resolve an issue with the Message interface not matching the previous Message class.
+
+## March 2, 2023
+
+### iOS Target 3.3.1
+
+* `target.previewEnabled` configuration setting is no longer required to enable preview mode in Target iOS SDK. If not configured, the default value here will be set to true.
+
+### AEP Flutter Plugins 2.0.0
+
+* Updated all the AEP Flutter plugins to use MobileCore 2.x for Android and compatible extensions.
+* Fixed issues where async calls were not properly completed.
+
+The following plugins have been published:
+
+* [flutter_aepcore@2.0.0](https://pub.dev/packages/flutter_aepcore)
+* [flutter_aepassurance@2.0.0](https://pub.dev/packages/flutter_aepassurance)
+* [flutter_aepedge@2.0.0](https://pub.dev/packages/flutter_aepedge)
+* [flutter_aepedgeidentity@2.0.0](https://pub.dev/packages/flutter_aepedgeidentity)
+* [flutter_aepedgeconsent@2.0.0](https://pub.dev/packages/flutter_aepedgeconsent)
+
+### AEP Flutter User Profile 1.0.0
+
+* Added the initial release for [flutter_aepuserprofile@1.0.0](https://pub.dev/packages/flutter_aepuserprofile)
+
+## March 1, 2023
+
+### iOS AEPEdgeConsent 1.1.0
+
+* Added tvOS support.
+
+## February 28, 2023
+
+### iOS AEPEdge 1.6.0
+
+* Added tvOS support.
+
+### iOS AEPEdgeIdentity 1.2.0
+
+* Added tvOS support.
+* Identity map no longer accepts identity items with an empty string value for ID.
+
+## February 27, 2023
+
+### Android Assurance 2.0.1
+
+* Contents of the application manifest (AndroidManifest.xml) are now included in the `clientInfo` event.
+
+### iOS Messaging 1.1.1
+
+* Fixes an issue where loaded in-app message rules were not cleared when an empty in-app message payload is received from Adobe Journey Optimizer.
+
+### Android Messaging 2.0.2
+
+* Fixes an issue where loaded in-app message rules were not cleared when an empty in-app message payload is received from Adobe Journey Optimizer.
+* Fixes an issue where only the first in-app message present in a payload was being loaded into the rules engine.
+
+## February 23, 2023
+
+New major version of the Mobile Core SDK for Android has been released along with updates to other extensions to take advantage of the new features and improvements. These improvements include:
+
+* Android SDKs updated to have similar architecture to iOS Swift SDKs.
+* All extensions open-sourced.
+* Integration with Kotlin apps improved.
+* AndroidX support added.
+* Security improvements added.
+
+Note that all these extensions must be updated together. Flutter and React plugins not yet updated with these versions, but coming soon.
+* Android Mobile Core 2.0.1
+* Android Signal 2.0.1
+* Android Lifecycle 2.0.1
+* Android Identity 2.0.1
+* Android Profile 2.0.0
+* Android Adobe Experience Platform Assurance 2.0.0
+* Android Adobe Experience Platform Edge Network 2.0.0
+* Android Identity for Edge Network 2.0.0
+* Android Consent for Edge Network 2.0.0
+* Android Edge Bridge 2.0.0
+* Android Adobe Journey Optimizer 2.0.1
+* Android Adobe Journey Optimizer - Decisioning 2.0.0
+* Android Places Service 2.0.0
+* Android Adobe Analytics 2.0.1
+* Android Adobe Analytics - Media Analytics for Audio & Video 3.0.0
+* Android Adobe Target 2.0.0
+* Android Adobe Campaign Standard 2.0.2
+* Android Adobe Campaign Classic 2.0.0
+* Android Adobe Audience Manager 2.0.0
+
+For help on moving to these versions, please see:
+* [Migration guide](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-android)
+* [Migration FAQ](../faq.md#migrating-to-android-mobile-core-2x-and-compatible-extensions)
+
+## February 17, 2023
+
+### Android Analytics 2.0.1
+
+* Made the extension compatible with Kotlin 1.4.
+* Analytics shared state is made available on boot-up if there are any previously stored identifiers.
+* Shared state is only updated when an identifier is set and not on get requests.
+
+### Android Campaign Standard 2.0.2
+
+* Made the extension compatible with Kotlin 1.4.
+
+## February 13, 2023
+
+### Android Edge 1.4.1
+
+* Improves error handling when processing `Edge.sendEvent` requests by catching and logging unexpected `RuntimeException` instances thrown from within caller's `EdgeCallback` handler implementation.
+
+## February 9, 2023
+
+### Android Mobile Core 2.0.1
+
+* Fixed issue causing large delays in configuration download retries.
+* Fixed issue causing backdrop opacity being set incorrectly in `MessageSettings`.
+* Updated `MessagingDelegate` to mirror the implementation of the iOS SDK, and exposed `Message` interface for app developers to access InternalMessage objects created by Messaging extension.
+* Fixed issue with javadoc generation.
+* Improved resource handling after network connection attempts.
+* Improved database handling during fresh installation scenarios.
+
+### Android Signal 2.0.1
+
+* Fixed issue with javadoc generation.
+
+### Android Lifecycle 2.0.1
+
+* Fixed issue with javadoc generation.
+
+### Android Identity 2.0.1
+
+* Fixed issue with javadoc generation.
+
+### Android Messaging 2.0.1
+
+* Updates the Core dependency to 2.0.1, which resolves inconsistencies between the Android and iOS MessagingDelegate classes.
+
+### Android Campaign Standard 2.0.1
+
+* Updates Mobile Core dependency to 2.0.1 which includes stability fixes.
+
+### Android Target 2.0.0
+
+* Major version update for [Adobe Target](../adobe-target/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-target-android).
+
+Please note that the following improvements have been made in the current release:
+
+1. The below APIs have been renamed for alignment with the Adobe Target Mobile SDK for iOS:
+* `locationsDisplayed` is now `displayedLocations`
+* `locationClicked` is now `clickedLocation`
+
+2. The public classes `TargetRequest`, `TargetPrefetch`, `TargetOrder`, `TargetProduct` and `TargetParameters` are consolidated under the `target` subpackage and require updating the import statements as shown below:
+
+```java
+import com.adobe.marketing.mobile.target.TargetRequest;
+import com.adobe.marketing.mobile.target.TargetPrefetch;
+import com.adobe.marketing.mobile.target.TargetOrder;
+import com.adobe.marketing.mobile.target.TargetProduct;
+import com.adobe.marketing.mobile.target.TargetParameters;
+```
+
+3. The previously deprecated Target APIs and classes have been removed. For more information, please read this section on the [deprecated APIs and the recommended alternative APIs](https://developer.adobe.com/client-sdks/previous-versions/documentation/adobe-target/deprecated-apis/).
+
+### iOS Messaging 1.1.0
+
+* Adds support for Adobe Journey Optimizer powered in-app messages.
+
+## February 3, 2023
+
+### Android Analytics 2.0.0
+
+* Major version update for [Adobe Analytics](../adobe-analytics/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-analytics-android/).
+
+### Android Audience 2.0.0
+
+* Major version update for [Adobe Audience Manager](../adobe-audience-manager/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-audience-android).
+
+### Android Media 3.0.0
+
+* Major version update for [Adobe Analytics - Media Analytics workflows](../adobe-media-analytics/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-media-android).
+
+### Android Messaging 2.0.0
+
+* Major version update for [Adobe Journey Optimizer](../adobe-journey-optimizer/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-messaging-android).
+
+### Android Places 2.0.0
+
+* Major version update for [Adobe Experience Platform Location Service](../places/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-places-android).
+
+Please note that the following improvements have been made in the current release:
+
+1. The `getNearbyPointsOfInterest` API without the errorCallback has been removed. Alternatively, use the below overloaded API which provides both successCallback and errorCallback:
+
+```java
+public static void getNearbyPointsOfInterest(final Location location,
+      final int limit,
+      final AdobeCallback<List<PlacesPOI>> successCallback,
+      final AdobeCallback<PlacesRequestError> errorCallback)
+```
+
+2. The public classes `PlacesAuthorizationStatus`, `PlacesPOI`, and `PlacesRequestError` are consolidated under the `places` subpackage and require updating the import statements as shown below:
+
+```java
+import com.adobe.marketing.mobile.places.PlacesAuthorizationStatus;
+import com.adobe.marketing.mobile.places.PlacesPOI;
+import com.adobe.marketing.mobile.places.PlacesRequestError;
+```
+
+## February 2, 2023
+
+### Android Optimize 2.0.0
+
+* Major version update for [Adobe Journey Optimizer - Decisioning](../adobe-journey-optimizer-decisioning/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This extension library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-optimize-android/).
+
+### Android Campaign Standard 2.0.0
+
+* Major version update for [Adobe Campaign Standard workflows](../adobe-campaign-standard/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaign-android).
+
+## February 1, 2023
+
+### Android Edge Bridge 2.0.0
+
+* Major version update for Edge Bridge for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgebridge-android).
+
+## January 31, 2023
+
+### Android Assurance 2.0.0
+
+* Major version update for [Adobe Experience Platform Assurance](../platform-assurance-sdk/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-assurance-android).
+
+### Android Campaign Classic 2.0.0
+
+* Major version update for [Adobe Campaign Classic workflows](../adobe-campaign-classic/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaignclassic-android).
+
+Please note that the `registerDevice` API, similar to iOS, no longer provides a callback method for registration status since a `false` value cannot be accurately used as a signal to retry requests.
+
+### Android Consent 2.0.0
+
+* Major version update for [Consent for Edge Network](../consent-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgeconsent-android).
+
+### Android Edge 2.0.0
+
+* Major version update for [Edge Network](../edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edge-android).
+
+### Android EdgeIdentity 2.0.0
+
+* Major version update for [Identity for Edge Network](../identity-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgeidentity-android).
+
+### Android UserProfile 2.0.0
+
+- Major version update for [User Profile](../profile/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-userprofile-android).
+- The following APIs have been deprecated and will be removed in a future release:
+
+  | Deprecated API                      | Recommended Alternative              |
+  | ----------------------------------- | ------------------------------------ |
+  | `UserProfile.updateUserAttribute()` | `UserProfile.updateUserAttributes()` |
+  | `UserProfile.removeUserAttribute()` | `UserProfile.removeUserAttributes()` |
+
+## January 30, 2023
+
+### Adobe Experience Platform Android Core SDKs
+
+The brand new Adobe Experience Platform Core Android SDKs are live! It is [open sourced on GitHub](https://github.com/adobe/aepsdk-core-android), containing the following extensions:
+
+* Core 2.0.0
+* Identity 2.0.0
+* Signal 2.0.0
+* Lifecycle 2.0.0
+
+## January 5, 2023
+
+### iOS AEPCore 3.7.4
+
+* Fixes an issue where Lifecycle launch events may set an invalid XDM `environment._dc.language` field when the device is set to specific locales.
+* Fixes an issue where Lifecycle may set invalid negative times for metrics `daysSinceFirstLaunch`, `daysSinceLastLaunch`, and `daysSinceLastUpgrade`.
+* Adds performance improvements to `FullscreenMessage.show`.
 
 ## October 26, 2022
 
@@ -82,12 +375,6 @@ For an end-to-end guide on how to use the extension, see the [Edge Bridge tutori
 * Fixed a few race conditions in the EventHub and MobileCore.
 * Made changes in AEPIdentity to speed up boot.
 
-## June 15, 2022
-
-### Android Core 1.11.1
-
-* Fixed a crash which was caused by an exception thrown from the Android Activity class.
-
 ## June 10, 2022
 
 ### Adobe Journey Optimizer - Decisioning extension 1.0.0
@@ -149,10 +436,6 @@ With this release, the extension provides APIs that you can use to:
 * Fetch personalized offers from the decisioning services enabled in the datastreams e.g. Adobe Target, Adobe Journey Optimizer Offer Decisioning.
 * Track user interactions with those offers.
 
-### Android Campaign Standard 1.0.9
-
-* Fixed a compatibility issue seen when using the Campaign Standard and Messaging In-App beta extensions in the same mobile app.
-
 ## May 26, 2022
 
 ### iOS AEPTarget 3.1.3
@@ -164,10 +447,6 @@ With this release, the extension provides APIs that you can use to:
 ### iOS AEPAudience 3.0.4
 
 * Fixed an issue where lifecycle data was included in signalWithData requests.
-
-### Android Campaign Classic 1.0.2
-
-* Android Campaign Classic SDK is now Adobe Campaign Classic (ACC) v8 compatible! Broadlog ID can be provided in the UUID format in the notification tracking APIs.
 
 ## May 12, 2022
 
@@ -188,17 +467,6 @@ With this release, the extension provides APIs that you can use to:
 ### iOS AEPAudience 3.0.3
 
 - Fixed integration with Lifecycle extension to send lifecycle metrics when a new app session is started.
-
-## April 21, 2022
-
-### Android Core 1.11.0
-
-* Internal fixes to support In-App Messaging with the AEPMessaging extension.
-* Fixed a crash that could happen while initializing event history database.
-
-### Android Identity 1.3.1
-
-* Improved extension stability by adding additional error checks when processing sync identifier requests.
 
 ## April 12, 2022
 
@@ -257,40 +525,9 @@ For more details, see the documentation and release notes in the [aepsdk-react-n
 
 * Fixed `getTrackingIdentifier` and `getVisitorIdentifier` APIs to `return nil` instead of `AEPError.unexpected` error when AID/VID values are not found in persistence.
 
-## March 11, 2022
-
-### Android Core 1.10.1
-
-* Updates the timestamp format for rule token `~timestampp`  with fractional seconds and UTC time zone. This rule token is used to set the mobile property data element "Adobe Experience Platform Timestamp".
-
-### Android Lifecycle 1.1.1
-
-* Lifecycle foreground and background events for Edge Network now format timestamps with fractional seconds and UTC time zone.
-
-### Android Edge 1.3.1
-
-* Updates timestamp in Experience Events to use fractional seconds.
-
-### Android Consent 1.0.1
-
-* Updates timestamp in Consent requests to use fractional seconds.
-
-## March 3, 2022
-
-### Android Analytics 1.2.10
-
-* Fixed a bug for the integration with Assurance where "No Debug Flag" was showing in the UI for some events.
-
 ## February 22, 2022
 
 ### iOS Assurance 3.0.1
-
-* Add support for transmitting large events.
-* Assurance extension now prompts an error message when attempting to connect to a deleted session.
-* Improved logging for troubleshooting.
-* Fixed an issue to ensure that event collection stops on session disconnection.
-
-### Android Assurance 1.0.4
 
 * Add support for transmitting large events.
 * Assurance extension now prompts an error message when attempting to connect to a deleted session.
@@ -302,26 +539,6 @@ For more details, see the documentation and release notes in the [aepsdk-react-n
 ### iOS Campaign Standard 3.0.1
 
 * Fixed an issue with the Campaign message tracking URL being incorrectly built.
-
-## February 8, 2022
-
-### Android Identity 1.3.0
-
-- Added a `device_consent` status parameter when `setAdvertisingIdentifier` is called after ad tracking is enabled/disabled.
-- Added support to handle the MobileCore.resetIdentities() API.
-- Fixes intermittent issue for GetUrlVariables and AppendToUrl APIs when custom Analytics identifiers are being used.
-- Stability improvements for network connections.
-
-Released with sdk-core version 1.10.0
-
-## February 7, 2022
-
-### Android Core 1.10.0
-
-* Added support for a new API `clearUpdatedConfiguration()`, see Configuration API reference for more details.
-* Added support for optionally capturing event history on the device.
-* Added support for triggering rules engine conditions based on event history.
-* Added public platform support for datastore and UI services.
 
 ## February 3, 2022
 

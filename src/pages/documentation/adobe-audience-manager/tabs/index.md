@@ -1,17 +1,38 @@
-<Variant platform="android" task="add" repeat="4"/>
+<Variant platform="android" task="add" repeat="8"/>
+
+1. Add the library to your project.
+
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+
+</InlineNestedAlert>
+
+```java
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:identity:2.+'
+implementation 'com.adobe.marketing.mobile:audience:2.+'
+```
+
+2. Import the library.
 
 #### Java
 
-1. Add the library to your project.
-2. Import the library.
-
 ```java
-import com.adobe.marketing.mobile.*;
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Identity;
+import com.adobe.marketing.mobile.Audience;
 ```
 
-Audience Manager depends on the Identity extension and is automatically included in the Core pod. When manually installing the Audience Manager extension, ensure that you add the `identity-1.x.x.aar` library to your project.
+#### Kotlin
 
-<Variant platform="ios-aep" task="add" repeat="6"/>
+```java
+import com.adobe.marketing.mobile.MobileCore
+import com.adobe.marketing.mobile.Identity
+import com.adobe.marketing.mobile.Audience
+```
+
+<Variant platform="ios" task="add" repeat="6"/>
 
 1. Add the [Mobile Core](../mobile-core/index.md) and Audience extensions to your project using Cocoapods.
 2. Add the following pods in your `Podfile`:
@@ -44,30 +65,47 @@ Please note that the Audience Manager extension depends on the Identity extensio
 
 #### Java
 
-Call the `setApplication()` method once in the `onCreate()` method of your main activity.
-
-For example, your code might look like the following:
-
 ```java
-public class AudiencetApp extends Application {
+public class MainApp extends Application {
+     private final String ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID";
 
-@Override
-public void onCreate() {
-     super.onCreate();
-     MobileCore.setApplication(this);
+     @Override
+     public void onCreate() {
+         super.onCreate();
 
-     try {
-         Audience.registerExtension(); //Register Audience Manager with Mobile Core
-         Identity.registerExtension();
-         MobileCore.start(null);
-     } catch (Exception e) {
-     //Log the exception
-     }
-  }
+         MobileCore.setApplication(this);
+         MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
+
+         List<Class<? extends Extension>> extensions = new ArrayList<>();
+         extensions.add(Audience.EXTENSION);        
+         extensions.add(Identity.EXTENSION);        
+         MobileCore.registerExtensions(extensions, o -> {
+            Log.d(LOG_TAG, "AEP Mobile SDK is initialized");
+        });
+   }
 }
 ```
 
-<Variant platform="ios-aep" task="register" repeat="6"/>
+#### Kotlin
+
+```java
+class MyApp : Application() {
+    val ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID"
+
+    override fun onCreate() {
+        super.onCreate()
+        MobileCore.setApplication(this)
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
+
+        val extensions = listOf(Audience.EXTENSION, Identity.EXTENSION)
+        MobileCore.registerExtensions(extensions) {
+            Log.d(LOG_TAG, "AEP Mobile SDK is initialized")
+        }
+    }
+}
+```
+
+<Variant platform="ios" task="register" repeat="6"/>
 
 #### Swift
 

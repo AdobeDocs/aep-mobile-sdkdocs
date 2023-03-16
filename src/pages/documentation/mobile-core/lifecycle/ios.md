@@ -6,7 +6,7 @@ In version 4 of the iOS SDK, this implementation was completed automatically. <b
 
 ## Implementing Lifecycle metrics in iOS
 
-For implementation details, please reference the guide on [registering Lifecycle with Mobile Core and adding the appropriate start/pause calls](./index.md#register-lifecycle-with-mobile-core-and-add-appropriate-start-pause-calls).
+For implementation details, please reference the guide on [registering Lifecycle with Mobile Core and adding the appropriate start/pause calls](../index.md#register-lifecycle-with-mobile-core-and-add-appropriate-start-pause-calls).
 
 ## Tracking app crashes in iOS
 
@@ -53,16 +53,16 @@ When calling `lifecycleStart:`, you can optionally pass a dictionary of addition
 
 You can pass additional data to lifecycle on app launch, app resume, both, or neither.
 
-```objectivec
-// Objective-C
-- (void) applicationWillEnterForeground:(UIApplication *)application {      
-    [ACPCore lifecycleStart:@{@"state": @"appResume"}];      
-}
-```
-
 ```swift
 // Swift
 func applicationWillEnterForeground(_ application: UIApplication) {      
-    ACPCore.lifecycleStart(["state": "appResume"])
+     MobileCore.lifecycleStart(additionalContextData: ["contextDataKey": "contextDataVal"])
+}
+```
+
+```objectivec
+// Objective-C
+- (void) applicationWillEnterForeground:(UIApplication *)application {      
+     [AEPMobileCore lifecycleStart:@{@"contextDataKey": @"contextDataVal"}];      
 }
 ```

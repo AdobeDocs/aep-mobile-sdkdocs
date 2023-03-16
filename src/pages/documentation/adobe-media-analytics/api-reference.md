@@ -18,15 +18,25 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
+
+### registerExtension
+
+Registers the Media extension with the Mobile Core SDK.
+
+<InlineAlert variant="warning" slots="text"/>
+
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+
+Android
+
+<Tabs query="platform=android&api=register-extension"/>
 
 ### createTracker
 
 Creates a media tracker instance that tracks the playback session. The tracker created should be used to track the streaming content and it sends periodic pings to the media analytics backend.
-
-<InlineAlert variant="warning" slots="text"/>
-
-The createTracker function with a callback has been **deprecated**. Please use the synchronous version of this API instead.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -36,7 +46,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=create-tracker"/>
+<Tabs query="platform=ios&api=create-tracker"/>
 
 ### createTrackerWithConfig
 
@@ -47,10 +57,6 @@ Creates a media tracker instance based on the configuration to track the playbac
 | `config.channel` | Channel name for media. Set this to overwrite the channel name configured from launch for media tracked with this tracker instance. | String | No |
 | `config.downloadedcontent` | Creates a tracker instance to track downloaded media. Instead of sending periodic pings, the tracker only sends one ping for the entire content. | Boolean | No |
 
-<InlineAlert variant="warning" slots="text"/>
-
-The createTracker function with a callback has been **deprecated**. Please use the synchronous version of this API instead.
-
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
@@ -59,7 +65,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=create-tracker-with-config"/>
+<Tabs query="platform=ios&api=create-tracker-with-config"/>
 
 ### createMediaObject
 
@@ -81,7 +87,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=create-media-object"/>
+<Tabs query="platform=ios&api=create-media-object"/>
 
 ### createAdBreakObject
 
@@ -101,7 +107,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=create-ad-break-object"/>
+<Tabs query="platform=ios&api=create-ad-break-object"/>
 
 ### createAdObject
 
@@ -122,7 +128,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=create-ad-object"/>
+<Tabs query="platform=ios&api=create-ad-object"/>
 
 ### createChapterObject
 
@@ -143,7 +149,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=create-chapter-object"/>
+<Tabs query="platform=ios&api=create-chapter-object"/>
 
 ### createQoEObject
 
@@ -168,7 +174,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=create-qoe-object"/>
+<Tabs query="platform=ios&api=create-qoe-object"/>
 
 ### createStateObject
 
@@ -186,7 +192,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=create-state-object"/>
+<Tabs query="platform=ios&api=create-state-object"/>
 
 ## Media tracker API reference
 
@@ -197,7 +203,7 @@ Tracks the intention to start playback. This starts a tracking session on the me
 | Variable Name | Description | Required |
 | :--- | :--- | :---: |
 | `mediaInfo` | Media information created using the [createMediaObject](#createmediaobject) method. | Yes |
-| `contextData` | Optional Media context data. For standard metadata keys, use [standard video constants](#standard-video-constants) or [standard audio constants](#standard-audio-constants). | No |
+| `contextData` | Media context data. For standard metadata keys, use [standard video constants](#standard-video-constants) or [standard audio constants](#standard-audio-constants). | No |
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -207,7 +213,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=track-session-start"/>
+<Tabs query="platform=ios&api=track-session-start"/>
 
 ### trackPlay
 
@@ -221,7 +227,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=track-play"/>
+<Tabs query="platform=ios&api=track-play"/>
 
 ### trackPause
 
@@ -235,7 +241,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=track-pause"/>
+<Tabs query="platform=ios&api=track-pause"/>
 
 ### trackComplete
 
@@ -249,7 +255,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=track-complete"/>
+<Tabs query="platform=ios&api=track-complete"/>
 
 ### trackSessionEnd
 
@@ -263,7 +269,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=track-session-end"/>
+<Tabs query="platform=ios&api=track-session-end"/>
 
 ### trackError
 
@@ -281,7 +287,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=track-error"/>
+<Tabs query="platform=ios&api=track-error"/>
 
 ### trackEvent
 
@@ -301,7 +307,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=track-event"/>
+<Tabs query="platform=ios&api=track-event"/>
 
 ### updateCurrentPlayhead
 
@@ -319,7 +325,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=update-current-playhead"/>
+<Tabs query="platform=ios&api=update-current-playhead"/>
 
 ### updateQoEObject
 
@@ -337,7 +343,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=update-qoe-object"/>
+<Tabs query="platform=ios&api=update-qoe-object"/>
 
 ## Media constants
 
@@ -353,7 +359,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=media-type"/>
+<Tabs query="platform=ios&api=media-type"/>
 
 ### Stream type
 
@@ -367,7 +373,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=stream-type"/>
+<Tabs query="platform=ios&api=stream-type"/>
 
 ### Standard video constants
 
@@ -381,7 +387,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=standard-video-constants"/>
+<Tabs query="platform=ios&api=standard-video-constants"/>
 
 ### Standard audio constants
 
@@ -395,7 +401,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=standard-audio-constants"/>
+<Tabs query="platform=ios&api=standard-audio-constants"/>
 
 ### Standard ad constants
 
@@ -409,7 +415,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=standard-ad-constants"/>
+<Tabs query="platform=ios&api=standard-ad-constants"/>
 
 ### Player state constants
 
@@ -423,7 +429,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=player-state-constants"/>
+<Tabs query="platform=ios&api=player-state-constants"/>
 
 ### Media events
 
@@ -437,7 +443,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=media-events"/>
+<Tabs query="platform=ios&api=media-events"/>
 
 ### Media resume
 
@@ -451,4 +457,4 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=media-resume"/>
+<Tabs query="platform=ios&api=media-resume"/>

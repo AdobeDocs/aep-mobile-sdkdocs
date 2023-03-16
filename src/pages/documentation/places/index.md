@@ -30,7 +30,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=download"/>
+<Tabs query="platform=ios&task=download"/>
 
 React Native
 
@@ -46,7 +46,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&task=register"/>
+<Tabs query="platform=ios&task=register"/>
 
 React Native
 

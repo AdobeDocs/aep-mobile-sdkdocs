@@ -1,6 +1,6 @@
-<Variant platform="android" api="extension-version" repeat="5"/>
+<Variant platform="android" api="extension-version" repeat="8"/>
 
-**Java**
+#### Java
 
 **Syntax**
 
@@ -14,9 +14,17 @@ public static String extensionVersion()
 String extensionVersion = Identity.extensionVersion();
 ```
 
-<Variant platform="ios-aep" api="extension-version" repeat="10"/>
+#### Kotlin
 
-**Swift**
+**Example**
+
+```java
+val extensionVersion = Identity.extensionVersion()
+```
+
+<Variant platform="ios" api="extension-version" repeat="10"/>
+
+#### Swift
 
 **Syntax**
 
@@ -30,7 +38,7 @@ static var extensionVersion: String
 let extensionVersion = EdgeIdentity.extensionVersion
 ```
 
-**Objective-C**
+#### Objective-C
 
 **Syntax**
 
@@ -58,11 +66,15 @@ extensionVersion(): Promise<string>;
 Identity.extensionVersion().then(version => console.log("AdobeExperienceSDK: EdgeIdentity version: " + version));
 ```
 
-<Variant platform="android" api="get-experience-cloud-id" repeat="7"/>
+<Variant platform="android" api="get-experience-cloud-id" repeat="10"/>
+
+<InlineNestedAlert variant="info" header="false" iconPosition="left">
 
 The ECID value is returned via the [AdobeCallback](../mobile-core/api-reference.md#public-classes). When [AdobeCallbackWithError](../mobile-core/api-reference.md#public-classes) is provided to this API, the timeout value is 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate [AdobeError](../mobile-core/api-reference.md#public-classes).
 
-**Java**
+</InlineNestedAlert>
+
+#### Java
 
 **Syntax**
 
@@ -78,14 +90,24 @@ public static void getExperienceCloudId(final AdobeCallback<String> callback);
 Identity.getExperienceCloudId(new AdobeCallback<String>() {    
     @Override    
     public void call(String id) {        
-         //Handle the ID returned here    
+         // Handle the ID returned here    
     }
 });
 ```
 
-<Variant platform="ios-aep" api="get-experience-cloud-id" repeat="11"/>
+#### Kotlin
 
-**Swift**
+**Example**
+
+```java
+Identity.getExperienceCloudId { id ->
+    // Handle the ID returned here
+}
+```
+
+<Variant platform="ios" api="get-experience-cloud-id" repeat="11"/>
+
+#### Swift
 
 **Syntax**
 
@@ -93,21 +115,21 @@ Identity.getExperienceCloudId(new AdobeCallback<String>() {
 static func getExperienceCloudId(completion: @escaping (String?, Error?) -> Void)
 ```
 
-* _completion_ is invoked after the ECID is available.  The default timeout is 1000ms.
+* _completion_ is invoked after the ECID is available. The default timeout is 1000ms.
 
 **Example**
 
 ```swift
 Identity.getExperienceCloudId { (ecid, error) in
   if let error = error {
-    // handle error here
+    // Handle the error here
   } else {
-    // handle the retrieved ID here
+    // Handle the retrieved ID here
   }
 }
 ```
 
-**Objective-C**
+#### Objective-C
 
 **Syntax**
 
@@ -137,11 +159,15 @@ getExperienceCloudId(): Promise<string>;
 Identity.getExperienceCloudId().then(experienceCloudId => console.log("AdobeExperienceSDK: Experience Cloud Id = " + experienceCloudId));
 ```
 
-<Variant platform="android" api="get-identities" repeat="7"/>
+<Variant platform="android" api="get-identities" repeat="10"/>
+
+<InlineNestedAlert variant="info" header="false" iconPosition="left">
 
 When [AdobeCallbackWithError](../mobile-core/api-reference.md#public-classes) is provided, and you are fetching the identities from the Mobile SDK, the timeout value is 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate [AdobeError](../mobile-core/api-reference.md#public-classes).
 
-**Java**
+</InlineNestedAlert>
+
+#### Java
 
 **Syntax**
 
@@ -157,14 +183,24 @@ public static void getIdentities(final AdobeCallback<IdentityMap> callback);
 Identity.getIdentities(new AdobeCallback<IdentityMap>() {    
     @Override    
     public void call(IdentityMap identityMap) {        
-         //Handle the IdentityMap returned here    
+         // Handle the IdentityMap returned here    
     }
 });
 ```
 
-<Variant platform="ios-aep" api="get-identities" repeat="11"/>
+#### Kotlin
 
-**Swift**
+**Example**
+
+```java
+Identity.getIdentities { identityMap ->
+  // Handle the IdentityMap returned here        
+}
+```
+
+<Variant platform="ios" api="get-identities" repeat="11"/>
+
+#### Swift
 
 **Syntax**
 
@@ -179,14 +215,14 @@ static func getIdentities(completion: @escaping (IdentityMap?, Error?) -> Void)
 ```swift
 Identity.getIdentities { (identityMap, error) in
   if let error = error {
-    // handle error here
+    // Handle the error here
   } else {
-    // handle the retrieved identitites here
+    // Handle the retrieved identitites here
   }
 }
 ```
 
-**Objective-C**
+#### Objective-C
 
 **Syntax**
 
@@ -216,11 +252,15 @@ getIdentities(): Promise<IdentityMap>;
 Identity.getIdentities().then(identities => console.log("AdobeExperienceSDK: Get Identities = " + JSON.stringify(identities)));
 ```
 
-<Variant platform="android" api="get-url-variables" repeat="7"/>
+<Variant platform="android" api="get-url-variables" repeat="10"/>
+
+<InlineNestedAlert variant="info" header="false" iconPosition="left">
 
 When `AdobeCallbackWithError` is provided and you are fetching the URL variables from the Mobile SDK, the timeout value is 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate `AdobeError`.
 
-**Java**
+</InlineNestedAlert>
+
+#### Java
 
 **Syntax**
 
@@ -236,18 +276,31 @@ public static void getUrlVariables(final AdobeCallback<String> callback);
 Identity.getUrlVariables(new AdobeCallback<String>() {    
     @Override    
     public void call(String urlVariablesString) {        
-        //handle the URL query parameter string here
-        //For example, open the URL in a webView  
+        // Handle the URL query parameter string here
+        // For example, open the URL in a webView  
         WebView webView;
-        webView = (WebView)findViewById(R.id.your_webview); // initialize with your webView
+        webView = (WebView)findViewById(R.id.your_webview); // Initialize with your webView
         webview.loadUrl("https://example.com?" + urlVariablesString);
     }
 });
 ```
 
-<Variant platform="ios-aep" api="get-url-variables" repeat="11"/>
+#### Kotlin
 
-**Swift**
+**Example**
+
+```java
+Identity.getUrlVariables { urlVariablesString ->
+  // Handle the URL query parameter string here
+  // For example, open the URL in a webView      
+  val webView = findViewById<WebView>(R.id.your_webview) // Initialize with your webView
+  webView.loadUrl("http://www.example.com?" + urlVariablesString)    
+}
+```
+
+<Variant platform="ios" api="get-url-variables" repeat="11"/>
+
+#### Swift
 
 **Syntax**
 
@@ -255,14 +308,14 @@ Identity.getUrlVariables(new AdobeCallback<String>() {
 static func getUrlVariables(completion: @escaping (String?, Error?) -> Void)
 ```
 
-- `completion` is invoked with `urlVariables` containing the visitor identifiers as a query string, or with `error` if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../mobile-core/mobile-core-api-reference#aeperror) code of the specific error. The default timeout is 1000ms.
+- `completion` is invoked with `urlVariables` containing the visitor identifiers as a query string, or with `error` if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../mobile-core/api-reference.md#public-classes) code of the specific error. The default timeout is 1000ms.
 
 **Example**
 
 ```swift
 Identity.getUrlVariables { (urlVariables, error) in
   if let error = error {
-    // handle error here
+    // Handle the error here
   } else {
     var urlStringWithVisitorData: String = "https://example.com"
     if let urlVariables: String = urlVariables {
@@ -270,11 +323,11 @@ Identity.getUrlVariables { (urlVariables, error) in
     }
 
     guard let urlWithVisitorData: URL = URL(string: urlStringWithVisitorData) else {
-      // handle error, unable to construct URL
+      // Handle the error, unable to construct URL
       return
     }
 
-    // handle the retrieved urlVariables encoded string here
+    // Handle the retrieved urlVariables encoded string here
     // APIs which update the UI must be called from main thread
     DispatchQueue.main.async {
         self.webView.load(URLRequest(url: urlWithVisitorData))
@@ -283,7 +336,7 @@ Identity.getUrlVariables { (urlVariables, error) in
 }
 ```
 
-**Objective-C**
+#### Objective-C
 
 **Syntax**
 
@@ -296,9 +349,9 @@ Identity.getUrlVariables { (urlVariables, error) in
 ```objectivec
 [AEPMobileEdgeIdentity getUrlVariables:^(NSString *urlVariables, NSError *error){
   if (error) {
-  // handle error here
+  // Handle the error here
   } else {
-    // handle the URL query parameter string here
+    // Handle the URL query parameter string here
     NSString* urlString = @"https://example.com";
     NSString* urlStringWithVisitorData = [NSString stringWithFormat:@"%@?%@", urlString, urlVariables];
     NSURL* urlWithVisitorData = [NSURL URLWithString:urlStringWithVisitorData];
@@ -327,7 +380,7 @@ Identity.getUrlVariables().then(urlVariables => console.log("AdobeExperienceSDK:
 
 <Variant platform="android" api="register-extension" repeat="5"/>
 
-**Java**
+#### Java
 
 **Syntax**
 
@@ -344,53 +397,13 @@ import com.adobe.marketing.mobile.edge.identity.Identity
 Identity.registerExtension();
 ```
 
-<Variant platform="ios-aep" api="register-extension" repeat="11"/>
-
-In iOS, the registration occurs by passing Identity for Edge Network extension to the [MobileCore.registerExtensions API](../mobile-core/api-reference.md#registerextension-s).
-
-**Swift**
-
-**Syntax**
-
-```swift
-static func registerExtensions(_ extensions: [NSObject.Type], 
-                               _ completion: (() -> Void)? = nil)
-```
-
-**Example**
-
-```swift
-import AEPEdgeIdentity
-
-...
-MobileCore.registerExtensions([Identity.self])
-```
-
-**Objective-C**
-
-**Syntax**
-
-```objectivec
-+ (void) registerExtensions: (NSArray<Class*>* _Nonnull) extensions 
-                 completion: (void (^ _Nullable)(void)) completion;
-```
-
-**Example**
-
-```objectivec
-@import AEPEdgeIdentity;
-
-...
-[AEPMobileCore registerExtensions:@[AEPMobileEdgeIdentity.class] completion:nil];
-```
-
 <Variant platform="react-native" api="register-extension" repeat="1"/>
 
 Please refer to the native code tabs to learn how to register the Identity extension.
 
-<Variant platform="android" api="remove-identity" repeat="5"/>
+<Variant platform="android" api="remove-identity" repeat="8"/>
 
-**Java**
+#### Java
 
 **Syntax**
 
@@ -405,9 +418,18 @@ IdentityItem item = new IdentityItem("user@example.com");
 Identity.removeIdentity(item, "Email");
 ```
 
-<Variant platform="ios-aep" api="remove-identity" repeat="10"/>
+#### Kotlin
 
-**Swift**
+**Example**
+
+```java
+val item = IdentityItem("user@example.com")
+Identity.removeIdentity(item, "Email")
+```
+
+<Variant platform="ios" api="remove-identity" repeat="10"/>
+
+#### Swift
 
 **Syntax**
 
@@ -421,7 +443,7 @@ static func removeIdentity(item: IdentityItem, withNamespace: String)
 Identity.removeIdentity(item: IdentityItem(id: "user@example.com"), withNamespace: "Email")
 ```
 
-**Objective-C**
+#### Objective-C
 
 **Syntax**
 
@@ -452,13 +474,21 @@ let identityItem  = new IdentityItem("user@example.com");
 Identity.removeIdentity(identityItem, "Email");
 ```
 
-<Variant platform="android" api="set-advertising-identifier" repeat="16"/>
+<Variant platform="android" api="set-advertising-identifier" repeat="14"/>
+
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
 In order to enable collection of the user's current advertising tracking authorization selection for the provided advertising identifier, you need to install and register the [AEPEdgeConsent](../consent-for-edge-network/index.md) extension and update the [AEPEdge](../edge-network/index.md) dependency to minimum 1.3.2.
 
+</InlineNestedAlert>
+
+<InlineNestedAlert variant="info" header="false" iconPosition="left">
+
 These examples require Google Play Services to be configured in your mobile application and use the Google Mobile Ads Lite SDK. For instructions on how to import the SDK and configure your `ApplicationManifest.xml` file see [Google Mobile Ads Lite SDK setup](https://developers.google.com/admob/android/lite-sdk). For more information about advertising identifiers and how to handle them correctly in your mobile application see [Google Play Services documentation about AdvertisingIdClient](https://developers.google.com/android/reference/com/google/android/gms/ads/identifier/AdvertisingIdClient).
 
-**Java**
+</InlineNestedAlert>
+
+#### Java
 
 **Syntax**
 
@@ -471,6 +501,12 @@ public static void setAdvertisingIdentifier(final String advertisingIdentifier);
 **Example**
 
 ```java
+import com.google.android.gms.ads.identifier.AdvertisingIdClient;
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.common.GooglePlayServicesRepairableException;
+import java.io.IOException;
+import android.util.Log;
+
 ...
 @Override
 public void onResume() {
@@ -507,19 +543,13 @@ public void onResume() {
 }
 ```
 
-**Kotlin**
-
-**Syntax**
-
-```kotlin
-public fun setAdvertisingIdentifier(advertisingIdentifier: String)
-```
+#### Kotlin
 
 - _advertisingIdentifier_ is an ID string that provides developers with a simple, standard system to continue to track ads throughout their apps.
 
 **Example**
 
-```kotlin
+```java
 import android.content.Context
 import android.util.Log
 import com.google.android.gms.ads.identifier.AdvertisingIdClient
@@ -552,7 +582,7 @@ suspend fun getGAID(applicationContext: Context): String {
 
 Call site:
 
-```kotlin
+```java
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -566,13 +596,13 @@ val scope = CoroutineScope(Dispatchers.IO).launch {
 }
 ```
 
-<Variant platform="ios-aep" api="set-advertising-identifier" repeat="14"/>
+<Variant platform="ios" api="set-advertising-identifier" repeat="14"/>
 
-In order to enable the collection of current advertising tracking user's selection based on the provided advertising identifier, you need to install and register the [AEPEdgeConsent](../consent-for-edge-network/index.md) extension and update the [AEPEdge](../edge-network/index.md) dependency to minimum 1.4.1. 
+In order to enable the collection of current advertising tracking user's selection based on the provided advertising identifier, you need to install and register the [Consent for Edge Network](../consent-for-edge-network/index.md) extension and update the [Edge Network extension](../edge-network/index.md) dependency to minimum 1.4.1. 
 
 Starting from iOS 14+, applications must use the [App Tracking Transparency](https://developer.apple.com/documentation/apptrackingtransparency) framework to request user authorization before using the Identifier for Advertising (IDFA). To access IDFA and handle it correctly in your mobile application, see the [Apple developer documentation about IDFA](https://developer.apple.com/documentation/adsupport/asidentifiermanager). 
 
-**Swift**
+#### Swift
 
 **Syntax**
 
@@ -636,7 +666,7 @@ func setAdvertisingIdentifierUsingTrackingManager() {
 }
 ```
 
-**Objective-C**
+#### Objective-C
 
 **Syntax**
 
@@ -719,9 +749,9 @@ setAdvertisingIdentifier(advertisingIdentifier?: string)
 MobileCore.setAdvertisingIdentifier("adID");
 ```
 
-<Variant platform="android" api="update-identities" repeat="5"/>
+<Variant platform="android" api="update-identities" repeat="8"/>
 
-**Java**
+#### Java
 
 **Syntax**
 
@@ -738,9 +768,20 @@ identityMap.addItem(item, "Email")
 Identity.updateIdentities(identityMap);
 ```
 
-<Variant platform="ios-aep" api="update-identities" repeat="10"/>
+#### Kotlin
 
-**Swift**
+**Example**
+
+```java
+val item = IdentityItem("user@example.com")
+val identityMap = IdentityMap()
+identityMap.addItem(item, "Email")
+Identity.updateIdentities(identityMap)
+```
+
+<Variant platform="ios" api="update-identities" repeat="10"/>
+
+#### Swift
 
 **Syntax**
 
@@ -756,7 +797,7 @@ identityMap.addItem(item: IdentityItem(id: "user@example.com"), withNamespace: "
 Identity.updateIdentities(with: identityMap)
 ```
 
-**Objective-C**
+#### Objective-C
 
 **Syntax**
 
@@ -790,9 +831,9 @@ map.addItem(identityItem, "Email");
 Identity.updateIdentities(map);
 ```
 
-<Variant platform="android" api="identity-map" repeat="3"/>
+<Variant platform="android" api="identity-map" repeat="6"/>
 
-**Java**
+#### Java
 
 **Example**
 
@@ -818,9 +859,35 @@ List<String> namespaces = identityMap.getNamespaces();
 boolean hasNotIdentities = identityMap.isEmpty();
 ```
 
-<Variant platform="ios-aep" api="identity-map" repeat="6"/>
+#### Kotlin
 
-**Swift**
+**Example**
+
+```java
+// Construct
+val identityMap = IdentityMap()
+
+// Add an item
+val item = IdentityItem("user@example.com")
+identityMap.addItem(item, "Email")
+
+// Remove an item
+val item = IdentityItem("user@example.com")
+identityMap.removeItem(item, "Email")
+
+// Get a list of items for a given namespace
+val items = identityMap.getIdentityItemsForNamespace("Email")
+
+// Get a list of all namespaces used in current IdentityMap
+val namespaces = identityMap.getNamespaces()
+
+// Check if IdentityMap has no identities
+val hasNotIdentities = identityMap.isEmpty()
+```
+
+<Variant platform="ios" api="identity-map" repeat="6"/>
+
+#### Swift
 
 **Example**
 
@@ -844,7 +911,7 @@ let namespaces: [String] = identityMap.namespaces
 let hasNoIdentities: Bool = identityMap.isEmpty
 ```
 
-**Objective-C**
+#### Objective-C
 
 **Example**
 
@@ -895,9 +962,9 @@ let namespaces = map.getNamespaces();
 let hasNoIdentities = map.isEmpty();
 ```
 
-<Variant platform="android" api="identity-item" repeat="3"/>
+<Variant platform="android" api="identity-item" repeat="6"/>
 
-**Java**
+#### Java
 
 **Example**
 
@@ -916,9 +983,27 @@ AuthenticatedState state = item.getAuthenticatedState();
 boolean primary = item.isPrimary();
 ```
 
-<Variant platform="ios-aep" api="identity-item" repeat="6"/>
+#### Kotlin
 
-**Swift**
+**Example**
+
+```java
+// Construct
+val item = IdentityItem("identifier")
+
+val item = IdentityItem("identifier", AuthenticatedState.AUTHENTICATED, false)
+
+// Getters
+val id = item.id
+
+val state = item.authenticatedState
+
+val primary = item.isPrimary
+```
+
+<Variant platform="ios" api="identity-item" repeat="6"/>
+
+#### Swift
 
 **Example**
 
@@ -936,7 +1021,7 @@ let state: AuthenticatedState = item.authenticatedState
 let primary: Bool = item.primary
 ```
 
-**Objective-C**
+#### Objective-C
 
 **Example**
 
@@ -968,8 +1053,9 @@ let state = item.authenticatedState;
 let primary = item.primary
 ```
 
+<Variant platform="android" api="authenticated-state" repeat="6"/>
 
-<Variant platform="android" api="authenticated-state" repeat="2"/>
+#### Java
 
 **Syntax**
 
@@ -981,7 +1067,19 @@ public enum AuthenticatedState {
 }
 ```
 
-<Variant platform="ios-aep" api="authenticated-state" repeat="2"/>
+#### Kotlin
+
+**Syntax**
+
+```java
+enum class AuthenticatedState(val name: String) {
+    AMBIGUOUS("ambiguous"),
+    AUTHENTICATED("authenticated"),
+    LOGGED_OUT("loggedOut")
+}
+```
+
+<Variant platform="ios" api="authenticated-state" repeat="2"/>
 
 **Syntax**
 

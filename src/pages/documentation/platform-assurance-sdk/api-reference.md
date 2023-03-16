@@ -24,6 +24,20 @@ Flutter
 
 <Tabs query="platform=flutter&api=extension-version"/> -->
 
+## registerExtension
+
+<InlineAlert variant="warning" slots="text"/>
+
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
+
+Registers the Assurance extension with the Mobile Core.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+
+Android
+
+<Tabs query="platform=android&api=register-extension"/>
+
 ## startSession
 
 The `startSession` API needs to be called to begin a AEP Assurance session. When called, the Mobile SDK displays a PIN authentication overlay to begin a session.

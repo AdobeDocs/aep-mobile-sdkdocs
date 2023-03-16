@@ -1,22 +1,39 @@
-<Variant platform="android" task="add" repeat="5"/>
+<Variant platform="android" task="add" repeat="8"/>
 
-#### Java
 
 1. Add the [Mobile Core](../mobile-core/index.md) and Analytics extensions to your project using the app's Gradle file.
 
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+
+</InlineNestedAlert>
+
 ```java
-implementation 'com.adobe.marketing.mobile:sdk-core:1.+'
-implementation 'com.adobe.marketing.mobile:analytics:1.+'
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:identity:2.+'
+implementation 'com.adobe.marketing.mobile:analytics:2.+'
 ```
 
 2. Import the Analytics extension in your application's main activity.
 
+#### Java
+
 ```java
 import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Identity;
 import com.adobe.marketing.mobile.Analytics;
 ```
 
-<Variant platform="ios-aep" task="add" repeat="7"/>
+#### Kotlin
+
+```kotlin
+import com.adobe.marketing.mobile.MobileCore
+import com.adobe.marketing.mobile.Identity
+import com.adobe.marketing.mobile.Analytics
+```
+
+<Variant platform="ios" task="add" repeat="7"/>
 
 1. Add the [Mobile Core](../mobile-core/index.md) and Analytics extensions to your project using Cocoapods.
 2. Add the following pods in your `Podfile`:
@@ -49,30 +66,46 @@ import AEPIdentity
 
 #### Java
 
-The following sample shows how to set up methods that call the [setApplication()](..//mobile-core/api-reference.md#setapplication-android-only) method in the `onCreate()` method:
+```java
+public class MainApp extends Application {
+     private final String ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID";
+
+     @Override
+     public void onCreate() {
+         super.onCreate();
+
+         MobileCore.setApplication(this);
+         MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
+
+         List<Class<? extends Extension>> extensions = Arrays.asList(
+                 Analytics.EXTENSION, Identity.EXTENSION);
+         MobileCore.registerExtensions(extensions, o -> {
+             Log.d(LOG_TAG, "AEP Mobile SDK is initialized");
+         });
+     }
+ }
+```
+
+#### Kotlin
 
 ```java
-public class MobileApp extends Application {
+class MyApp : Application() {
+    val ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID"
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        MobileCore.setApplication(this);
-        MobileCore.configureWithAppID("yourAppId");
-        try {
-            Analytics.registerExtension(); //Register Analytics with Mobile Core
-            Identity.registerExtension();
-            MobileCore.start(null);
-        } catch (Exception e) {
-            //Log the exception
-         }
+    override fun onCreate() {
+        super.onCreate()
+        MobileCore.setApplication(this)
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
+
+        val extensions = listOf(Analytics.EXTENSION, Identity.EXTENSION)
+        MobileCore.registerExtensions(extensions) {
+            Log.d(LOG_TAG, "AEP Mobile SDK is initialized")
+        }
     }
 }
 ```
 
-Analytics depends on the Identity extension and is automatically included in Core by Maven. When manually installing the Analytics extension, ensure that you add the `identity-1.x.x.aar` library to your project.
-
-<Variant platform="ios-aep" task="register" repeat="6"/>
+<Variant platform="ios" task="register" repeat="6"/>
 
 #### Swift
 
@@ -100,7 +133,7 @@ In your app's `application:didFinishLaunchingWithOptions`, register Media with M
 }
 ```
 
-<Variant platform="android" task="serialize" repeat="5"/>
+<Variant platform="android" task="serialize" repeat="8"/>
 
 #### Java
 
@@ -125,8 +158,24 @@ MobileCore.trackAction("Action Name", cdata);
 // trackState example:
 MobileCore.trackState("State Name", cdata);
 ```
+#### Kotlin
 
-<Variant platform="ios-aep" task="serialize" repeat="10"/>
+**Example**
+
+```kotlin
+//create a context data dictionary
+val cdata: Map<String, Any?> = mapOf(
+    "&&events" to "event1:12341234"
+)
+
+// send a tracking call - use either a trackAction or TrackState call.
+// trackAction example:
+MobileCore.trackAction("Action Name", cdata);
+// trackState example:
+MobileCore.trackState("State Name", cdata);
+```
+
+<Variant platform="ios" task="serialize" repeat="10"/>
 
 #### Swift
 
@@ -177,7 +226,7 @@ NSMutableDictionary *contextData = [NSMutableDictionary dictionary];
 [AEPMobileCore trackState:@"State Name" data:contextData];
 ```
 
-<Variant platform="android" task="update" repeat="3"/>
+<Variant platform="android" task="update" repeat="6"/>
 
 #### Java
 
@@ -192,8 +241,21 @@ data.put("analytics.offlineEnabled", true);
 
 MobileCore.updateConfiguration(data);
 ```
+#### Kotlin
 
-<Variant platform="ios-aep" task="update" repeat="6"/>
+**Example**
+
+```kotlin
+val data: Map<String, Any?> = mapOf(
+    "analytics.server" to "sample.analytics.tracking.server",
+    "analytics.rsids" to "rsid1,rsid2",
+    "analytics.batchLimit" to 10,
+    "analytics.offlineEnabled" to true
+)
+
+MobileCore.updateConfiguration(data)
+```
+<Variant platform="ios" task="update" repeat="6"/>
 
 #### Swift
 

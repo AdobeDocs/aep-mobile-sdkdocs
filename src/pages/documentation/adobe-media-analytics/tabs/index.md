@@ -1,38 +1,42 @@
-<Variant platform="android" task="add" repeat="9"/>
-
-The latest Android SDK versions:
-
-[<img src="https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/core.svg?logo=android&logoColor=white&label=core&style=flat-square" alt="Maven Central" style="width:150px"/>](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/core)
-
-[<img src="https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/analytics.svg?logo=android&logoColor=white&label=analytics&style=flat-square" alt="Maven Central" style="width:150px"/>](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/analytics)
-
-[<img src="https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/media.svg?logo=android&logoColor=white&label=media&style=flat-square" alt="Maven Central" style="width:150px"/>](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/media)
+<Variant platform="android" task="add" repeat="8"/>
 
 1. Add the Media extension and its dependencies to your project using the app's Gradle file.
 
-```java
-implementation 'com.adobe.marketing.mobile:sdk-core:1.+'
-implementation 'com.adobe.marketing.mobile:analytics:1.+'
-implementation 'com.adobe.marketing.mobile:media:2.+'
-```
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
-You can also manually include the libraries. Get `.aar` libraries from [Github](https://github.com/Adobe-Marketing-Cloud/acp-sdks/tree/master/android).
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
 
-2. Import the Media extension in your application's main activity.
+</InlineNestedAlert>
 
 ```java
-import com.adobe.marketing.mobile.*;
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:identity:2.+'
+implementation 'com.adobe.marketing.mobile:analytics:2.+'
+implementation 'com.adobe.marketing.mobile:media:3.+'
 ```
 
-<Variant platform="ios-aep" task="add" repeat="11"/>
+2. Import the libraries in your application's main activity.
 
-The latest iOS SDK versions:
+#### Java
 
-[<img src="https://img.shields.io/cocoapods/v/AEPCore.svg?color=orange&label=AEPCore&logo=apple&logoColor=white&style=flat-square" alt="Cocoapods" style="width:150px"/>](https://cocoapods.org/pods/AEPCore)
+```java
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Identity;
+import com.adobe.marketing.mobile.Analytics;
+import com.adobe.marketing.mobile.Media;
+```
 
-[<img src="https://img.shields.io/cocoapods/v/AEPAnalytics.svg?color=orange&label=AEPAnalytics&logo=apple&logoColor=white&style=flat-square" alt="Cocoapods" style="width:150px"/>](https://cocoapods.org/pods/AEPAnalytics)
+#### Kotlin
 
-[<img src="https://img.shields.io/cocoapods/v/AEPMedia.svg?color=orange&label=AEPMedia&logo=apple&logoColor=white&style=flat-square" alt="Cocoapods" style="width:150px"/>](https://cocoapods.org/pods/AEPMedia)
+```kotlin
+import com.adobe.marketing.mobile.MobileCore
+import com.adobe.marketing.mobile.Identity
+import com.adobe.marketing.mobile.Analytics
+import com.adobe.marketing.mobile.Media
+```
+
+
+<Variant platform="ios" task="add" repeat="7"/>
 
 1. To add the Media library and its dependencies to your project, add the following pods to your `Podfile`:
 
@@ -62,40 +66,52 @@ import AEPAnalytics
 @import AEPIdentity;
 ```
 
-<Variant platform="android" task="register" repeat="3"/>
+<Variant platform="android" task="register" repeat="5"/>
+
+To register Media with Mobile Core, import the Media library and register it:
 
 #### Java
 
-To register media with Mobile Core, call the `setApplication()` method in `onCreate()` and call set up methods, as shown in this sample:
-
 ```java
-import com.adobe.marketing.mobile.*;
+public class MainApp extends Application {
+     private final String ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID";
 
-public class MobileApp extends Application {
+     @Override
+     public void onCreate() {
+         super.onCreate();
 
-  @Override
-  public void onCreate() {
-      super.onCreate();
-      MobileCore.setApplication(this);
+         MobileCore.setApplication(this);
+         MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
 
-      try {
-          Media.registerExtension();
-          Analytics.registerExtension();
-          Identity.registerExtension();
-          MobileCore.start(new AdobeCallback () {
-              @Override
-              public void call(Object o) {
-                  MobileCore.configureWithAppID("your-launch-app-id");
-              }
-          });
-      } catch (InvalidInitException e) {
+         List<Class<? extends Extension>> extensions = Arrays.asList(
+                 Media.EXTENSION, Analytics.EXTENSION, Identity.EXTENSION);
+         MobileCore.registerExtensions(extensions, o -> {
+             Log.d(LOG_TAG, "AEP Mobile SDK is initialized");
+         });
+     }
+ }
+```
 
-      }
-  }
+#### Kotlin
+
+```kotlin
+class MyApp : Application() {
+    val ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID"
+    
+    override fun onCreate() {
+        super.onCreate()
+        MobileCore.setApplication(this)
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
+
+        val extensions = listOf(Media.EXTENSION, Analytics.EXTENSION, Identity.EXTENSION)
+        MobileCore.registerExtensions(extensions) {
+            Log.d(LOG_TAG, "AEP Mobile SDK is initialized")
+        }
+    }
 }
 ```
 
-<Variant platform="ios-aep" task="register" repeat="6"/>
+<Variant platform="ios" task="register" repeat="6"/>
 
 #### Swift
 

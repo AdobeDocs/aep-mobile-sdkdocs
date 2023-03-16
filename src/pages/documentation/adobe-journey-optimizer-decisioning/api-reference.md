@@ -70,19 +70,17 @@ React Native
 
 <Tabs query="platform=react-native&api=on-proposition-update"/>
 
-## registerExtension(s)
+## registerExtension
 
-This API can be invoked to register the Optimize extension with the Mobile Core. On iOS, `registerExtensions` API is part of Mobile Core.
+<InlineAlert variant="warning" slots="text"/>
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&api=register-extension"/>
-
-iOS
-
-<Tabs query="platform=ios&api=register-extension"/>
 
 React Native
 
@@ -90,8 +88,12 @@ React Native
 
 ## resetIdentities
 
-This `MobileCore` API can also be invoked to clear out the client-side data for the Optimize extension, such as the in-memory propositions cache.
-For details on syntax, usage and availability, refer to [Mobile Core - Reset identities](../mobile-core/api-reference.md#reset-identities).
+<InlineAlert variant="warning" slots="text"/>
+
+This API call can lead to unintended SDK behavior, e.g. resetting of Experience Cloud ID (ECID). So it should be sparingly used and caution should be followed!
+
+This `MobileCore` API is a request to each extension to reset its identities. Every extension responds to this request in its own unique manner. For example, Optimize extension uses this API call to clear out its client-side in-memory propositions cache.
+For details on syntax, usage and availability, refer to [Mobile Core - Reset identities](../mobile-core/api-reference.md#resetidentities).
 
 ## updatePropositions
 

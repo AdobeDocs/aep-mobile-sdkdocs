@@ -1,23 +1,22 @@
-<Variant platform="android" task="add" repeat="6"/>
+<Variant platform="android" task="add" repeat="4"/>
 
 #### Java
 
-1. Add the Campaign Classic extension to your project using the app's Gradle file.
+Add the Mobile Core, Lifecycle and Campaign Classic dependencies in your app's Gradle file.
 
-```java
-implementation 'com.adobe.marketing.mobile:campaignclassic:1.+'
+```gradle
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:lifecycle:2.+'
+implementation 'com.adobe.marketing.mobile:campaignclassic:2.+'
 ```
 
-or you can manually include the binaries found in the [acp-sdks](https://github.com/Adobe-Marketing-Cloud/acp-sdks/) repo on GitHub.
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
-2. Import the Campaign Classic and Lifecycle extensions in your application's main activity.
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../manage-gradle-dependencies.md) for more information. 
 
-```java
-import com.adobe.marketing.mobile.CampaignClassic;
-import com.adobe.marketing.mobile.Lifecycle;
-```
+</InlineNestedAlert>
 
-<Variant platform="ios-aep" task="add" repeat="9"/>
+<Variant platform="ios" task="add" repeat="4"/>
 
 1. Add the Campaign Classic and [Mobile Core](../mobile-core/index.md) libraries to your project.
 
@@ -67,36 +66,63 @@ import { CampaignClassic } from '@adobe/react-native-AEPCampaignClassic';
 ```
 
 <Variant platform="android" task="register" repeat="2"/>
+<Variant platform="android" task="register" repeat="5"/>
 
 In your app's `OnCreate` method, register the Campaign Classic and Lifecycle extensions:
 
+#### Java
+
 ```java
-public class CampaignClassicTestApp extends Application {
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.CampaignClassic;
+import com.adobe.marketing.mobile.Lifecycle;
+
+public class MainApp extends Application {
+
+    private final String ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID";
 
     @Override
     public void onCreate() {
         super.onCreate();
         MobileCore.setApplication(this);
-        MobileCore.setLogLevel(LoggingMode.VERBOSE);
-
-        try {
-            CampaignClassic.registerExtension();
-            Lifecycle.registerExtension();
-            MobileCore.start(new AdobeCallback () {
-              @Override
-              public void call(Object o) {
-                  MobileCore.configureWithAppID("<YOUR_ENVIRONMENT_FILE_ID>");
-                }
-              });
-        } catch (Exception e) {
-            Log.e("CampaignClassicTestApp", e.getMessage());
-        }
-
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
+        
+        MobileCore.registerExtensions(
+            Arrays.asList(CampaignClassic.EXTENSION, Lifecycle.EXTENSION),
+            o -> Log.d("MainApp", "Adobe Experience Platform Campaign Classic Mobile SDK was initialized.")
+        );
     }
 }
 ```
 
-<Variant platform="ios-aep" task="register" repeat="5"/>
+#### Kotlin
+
+```java
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.CampaignClassic;
+import com.adobe.marketing.mobile.Lifecycle;
+
+class MainApp : Application() {
+
+  private var ENVIRONMENT_FILE_ID: String = "YOUR_APP_ENVIRONMENT_ID"
+
+    override fun onCreate() {
+        super.onCreate()
+
+        MobileCore.setApplication(this)
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
+
+        MobileCore.registerExtensions(
+          listOf(CampaignClassic.EXTENSION, Lifecycle.EXTENSION)
+        ) {
+          Log.d("MainApp", "Adobe Experience Platform Campaign Classic Mobile SDK was initialized")
+        }
+    }
+
+}
+```
+
+<Variant platform="ios" task="register" repeat="5"/>
 
 In your app's `application:didFinishLaunchingWithOptions:` method, register the Campaign Classic extension:
 
@@ -104,6 +130,10 @@ In your app's `application:didFinishLaunchingWithOptions:` method, register the 
 
 ```swift
 // AppDelegate.swift
+
+import AEPCore
+import AEPCampaignClassic
+
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
   MobileCore.registerExtensions([CampaignClassic.self], {
     MobileCore.configureWith(appId: "<YOUR_ENVIRONMENT_FILE_ID>")
@@ -116,6 +146,10 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 ```objectivec
 // AppDelegate.m
+
+@import AEPCore;
+@import AEPCampaignClassic;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [AEPMobileCore registerExtensions:@[AEPMobileCampaignClassic.class] completion:^{
     [AEPMobileCore configureWithAppId: @"<YOUR_ENVIRONMENT_FILE_ID>"];

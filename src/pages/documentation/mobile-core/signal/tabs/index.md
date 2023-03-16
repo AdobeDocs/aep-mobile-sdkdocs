@@ -1,20 +1,29 @@
-<Variant platform="android" task="add" repeat="5"/>
+<Variant platform="android" task="add" repeat="6"/>
 
 #### Java
 
-Add the [Mobile Core](../index.md) extension to your project using the app's Gradle file.
+Add the Signal extension and its dependency, the [Mobile Core](../index.md) extension to your project using the app's Gradle file.
+
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../manage-gradle-dependencies.md) for more information. 
+
+</InlineNestedAlert>
 
 ```java
-implementation 'com.adobe.marketing.mobile:sdk-core:1.+'
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:signal:2.+'
 ```
 
-Import the Signal extension in your application's main activity.
+Import the Signal and MobileCore extensions in your application's main activity.
+
 
 ```java
-import com.adobe.marketing.mobile.*;
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Signal;
 ```
 
-<Variant platform="ios-aep" task="add" repeat="8"/>
+<Variant platform="ios" task="add" repeat="8"/>
 
 ​Add the AEPSignal extension and it's dependency, the [Mobile Core](../index.md) extension to your project using Cocoapods.
 
@@ -59,11 +68,11 @@ Importing the Signal extension:
 import 'package:flutter_acpcore/flutter_acpsignal.dart';
 ``` -->
 
-<Variant platform="android" task="register" repeat="4"/>
+<Variant platform="android" task="register" repeat="3"/>
+
+After calling the `setApplication()` method in the `onCreate()` method, register the Signal extension.
 
 #### Java
-
-After calling the `setApplication()` method in the `onCreate()` method, register the Signal extension. If the registration was not successful, an `InvalidInitException` is thrown.
 
 ```java
 public class MobileApp extends Application {
@@ -72,25 +81,16 @@ public class MobileApp extends Application {
     public void onCreate() {
         super.onCreate();
         MobileCore.setApplication(this);
-        try {
-            Signal.registerExtension();
-            // register other extensions
-            MobileCore.start(new AdobeCallback () {
-                @Override
-                public void call(Object o) {
-                    MobileCore.configureWithAppID("yourAppId");
-                }
-            });    
-        } catch (Exception e) {
-            //Log the exception
-         }
+
+        List<Class<? extends Extension>> extensions = Arrays.asList(Signal.EXTENSION, ...);
+        MobileCore.registerExtensions(extensions, o -> {
+            // Any other post registration processing
+        });
     }
 }
 ```
 
-Please note that the Signal extension is automatically included in the Mobile Core extension by Maven. When you manually install the Signal extension, ensure that you add the `signal-1.x.x.aar` library to your project.
-
-<Variant platform="ios-aep" task="register" repeat="5"/>
+<Variant platform="ios" task="register" repeat="5"/>
 
 In your app's `application:didFinishLaunchingWithOptions`, register the Signal extension with Mobile Core:
 

@@ -1,5 +1,49 @@
 # Release Notes
 
+## February 9, 2023
+
+### Android Mobile Core 2.0.1
+
+* Fixed issue causing large delays in configuration download retries.
+* Fixed issue causing backdrop opacity being set incorrectly in `MessageSettings`.
+* Updated `MessagingDelegate` to mirror the implementation of the iOS SDK, and exposed `Message` interface for app developers to access InternalMessage objects created by Messaging extension.
+* Fixed issue with javadoc generation.
+* Improved resource handling after network connection attempts.
+* Improved database handling during fresh installation scenarios.
+
+### Android Signal 2.0.1
+
+* Fixed issue with javadoc generation.
+
+### Android Lifecycle 2.0.1
+
+* Fixed issue with javadoc generation.
+
+### Android Identity 2.0.1
+
+* Fixed issue with javadoc generation.
+
+## January 30, 2023
+
+### Adobe Experience Platform Android Core SDKs
+
+The brand new Adobe Experience Platform Core Android SDKs are live! It is [open sourced on GitHub](https://github.com/adobe/aepsdk-core-android), containing the following extensions:
+
+* Core 2.0.0
+* Identity 2.0.0
+* Signal 2.0.0
+* Lifecycle 2.0.0
+
+## January 5, 2023
+
+### iOS AEPCore 3.7.4
+
+* Fixes an issue where Lifecycle launch events may set an invalid XDM `environment._dc.language` field when the device is set to specific locales.
+* Fixes an issue where Lifecycle may set invalid negative times for metrics `daysSinceFirstLaunch`, `daysSinceLastLaunch`, and `daysSinceLastUpgrade`.
+* Adds performance improvements to `FullscreenMessage.show`.
+
+Released with sdk-core version 1.11.5
+
 ## November 11, 2022
 
 ### iOS AEPCore 3.7.3
@@ -13,30 +57,6 @@
 * Added location hint result to EventSource keys for Edge.
 * Fixed a bug preventing in-app messages from being dismissed in some situations.
 * Added Target identities to MobileCore.getSDKIdentities response.
-
-## September 9, 2022
-
-### Android Core 1.11.4
-
-* Fixed a bug that prevents bundled rules from being retrieved from the correct location.
-
-## September 8, 2022
-
-### Android Core 1.11.3
-
-* Fixed a bug that prevents early events from being processed correctly by the rules engine.
-* Removed unnecessary `AtomicBoolean` usage while listening to Android Activity lifecycle changes.
-
-## August 18, 2022
-
-### Android Core 1.11.2
-
-* Added support for bundled rules.
-* Fixed a crash that can occur while extracting data from launch intent of an Android Activity.
-
-### Android Identity 1.3.2
-
-* Fixed a crash that can occur during construction of a query string of IDs.
 
 ## August 10, 2022
 
@@ -56,12 +76,6 @@
 * Fixed a few race conditions in the EventHub and MobileCore.
 * Made changes in AEPIdentity to speed up boot.
 
-## June 15, 2022
-
-### Android Core 1.11.1
-
-* Fixed a crash which was caused by an exception thrown from the Android Activity class.
-
 ## May 9, 2022
 
 ### iOS AEPCore 3.6.0
@@ -71,16 +85,6 @@
 * Added support for using Bundled Rules.
 * Added support for cached images for Fullscreen Messages.
 * Fixed a bug preventing Fullscreen Messages from being dismissed in certain conditions.
-
-## April 21, 2022
-
-### Android Core 1.11.0
-
-* Internal fixes to support In-App Messaging with the AEPMessaging extension.
-
-### Android Identity 1.3.1
-
-* Improved extension stability by adding additional error checks when processing sync identifier requests.
 
 ## April 8, 2022
 
@@ -93,60 +97,35 @@
 * Fixes bug where dispatched events failed due to use of single quotes in name.
 * Fixes format of push token string by uppercasing characters.
 
-## March 11, 2022
-
-### Android Core 1.10.1
-
-* Updates the timestamp format for rule token `~timestampp`  with fractional seconds and UTC time zone. This rule token is used to set the mobile property data element "Adobe Experience Platform Timestamp".
-
-### Android Lifecycle 1.1.1
-
-* Lifecycle foreground and background events for Edge Network now format timestamps with fractional seconds and UTC time zone.
-
-## February 8, 2022
-
-### Android Identity 1.3.0
-
-- Added a `device_consent` status parameter when `setAdvertisingIdentifier` is called after ad tracking is enabled/disabled.
-- Added support to handle the MobileCore.resetIdentities() API.
-- Fixes intermittent issue for GetUrlVariables and AppendToUrl APIs when custom Analytics identifiers are being used.
-- Stability improvements for network connections.
-
-Released with sdk-core version 1.10.0
-
-## February 7, 2022
-
-### Android Core 1.10.0
-
-* Added support for a new API `clearUpdatedConfiguration()`, see Configuration API reference for more details.
-* Added support for optionally capturing event history on the device.
-* Added support for triggering rules engine conditions based on event history.
-* Added public platform support for datastore and UI services.
-
 ## February 3, 2022
 
 ### iOS AEPServices 3.4.2
+
 * Add `@objc` attribute to `messageSettings` in `FullscreenMessage`
 
 ## January 26, 2022
 
 ### iOS AEPCore 3.4.1
+
 * Fixed AEPRulesEngine dependency in Package.swift
 
 ## January 20, 2022
 
 ### iOS AEPCore 3.4.0
+
 * Added support for a new API `clearUpdatedConfiguration()`, see Configuration API reference for more details.
 * Added support for optionally capturing event history on the device.
 * Added support for triggering rules engine conditions based on event history.
 
 ### iOS AEPServices 3.4.0
+
 * Expanded configuration options for Fullscreen Messages.
 * Added support for delegating in-app message delivery.
 
 ## December 22, 2021
 
 ### iOS AEPCore 3.3.2
+
 * Stability improvements for Configuration extension and full screen messages.
 * Configuration now allows for empty appId to reset the previously set appId value.
 * Logging improvements for extensions registration flow.
@@ -158,23 +137,6 @@ Released with sdk-core version 1.10.0
 
 * Fixes a bug where Identity.getIdentifiers API failed to encode the identifiers.
 * Fixes intermittent issue for GetUrlVariables and AppendToUrl APIs when custom Analytics identifiers are being used.
-
-### Android Core 1.9.2
-
-* Fixed a bug where event number was not incremented correctly for shared states.
-* Stability improvements for Configuration extension.
-* Configuration now allows for empty appId to reset the previously set appId value.
-* The Event Hub shares wrapper type in its shared state.
-
-## December 15, 2021
-
-### Android Core 1.9.1
-
-* Fixed an issue that was causing duplicate query parameters in a deep link to be removed.
-
-### Android Signal 1.0.4
-
-* Bug fix to improve Signal stability.
 
 ## November 9, 2021
 
@@ -190,7 +152,7 @@ Released with sdk-core version 1.10.0
 
 * Fixed a bug where the default Experience Cloud ID server URL was not used when the `experienceCloud.server` configuration parameter was an empty string.
 
-## Sept 3, 2021
+## September 3, 2021
 
 ### iOS AEPCore 3.3.0
 
@@ -201,34 +163,18 @@ Released with sdk-core version 1.10.0
 * Lifecycle extension now dispatches two new events `applicationLaunch` and `applicationClose` which contain Mobile Lifecycle metrics in XDM format.
 * Fixed an issue where application upgrades were detected based on changes in `CFBundleShortVersionString` instead of `CFBundleVersion`.
 
-### Android Core 1.9.0
-
-* Added support for dispatch event rules consequence.
-* Added getFriendlyName API for third party extensions.
-* Specifies mutability for PendingIntent in the UIService in preparation for Android 12 changes.
-
-### Android Lifecycle 1.1.0
-
-* Lifecycle extension now dispatches two new events `applicationLaunch` and `applicationClose` which contain Mobile Lifecycle metrics in XDM format.
-
 ### Mobile Core Launch extension v2.1.20
 
 * New `Foreground` and `Background` event types to be used in rules for triggering actions based on Mobile Application Lifecycle XDM events.
 
-## Aug 27, 2021
-
-### Android Core 1.8.3
-
-* Updated proguard rules to fix an issue which caused some extensions to not be registered correctly when using minification.
-
-## Aug 18, 2021
+## August 18, 2021
 
 ### iOS AEPCore 3.2.4
 
 * Fixed data race in `Event` and `ExtensionContainer` classes.
 * Fixed a memory leak in `EventHub.registerResponseListener`.
 
-## Jul 29, 2021
+## July 29, 2021
 
 ### iOS AEPCore 3.2.3
 
@@ -252,18 +198,6 @@ Released with sdk-core version 1.10.0
 
 * Fixed a bug where `Identity.syncIdentifier` and `Identity.syncIdentifiers` APIs would ignore the authentication state settings.
 
-## June 8, 2021
-
-### Android Core 1.8.2
-
-* Fixed a bug in the `PersistentHitQueue` where hits would be retried earlier than desired in certain scenarios
-* Fixed a bug where rule tokens with "&" were not handled correctly
-* Minor change to how the SDK computes the operating system name
-
-### Android Lifecycle 1.0.8
-
-* Minor update to ensure compatibility with the latest Core 1.8.2
-
 ## June 7, 2021
 
 ### iOS AEPCore 3.2.0
@@ -281,12 +215,6 @@ Released with sdk-core version 1.10.0
 * Introduced `webViewDidFinishLoading` to `FullScreenMessageDelegate`
 
 > Note: This release introduces breaking changes to the `NetworkService` and the `SystemInfoService`.
-
-## May 25, 2021
-
-### Android Core 1.8.1
-
-* Added support for Event encode/decode.
 
 ## May 6, 2021
 
@@ -339,40 +267,11 @@ Released with sdk-core version 1.10.0
 * The Locale string used in HTTP Headers is now properly formatted.
 * Fixed a bug that would sometimes prevent downloaded files from being properly unzipped.
 
-### March 31, 2021
-
-#### Android Core 1.8.0
-
-* New API - Public platform services for network, data queue, device info.
-* New API - `MobileCore.resetIdentities()` - See API Reference for more information
-* New API - `MobileCore.dispatchEventWithResponseCallback()` - See API Reference for more information.
-* The EventHub's shared state dictionary now uses the full name of each registered extension as its key.
-
-#### Android Lifecycle 1.0.7
-
-* No longer generate invalid values for `Days Since Last Use`, `Days Since First Use` and `Days Since Last Upgrade` metrics when the time setting on the device is off.
-
-### February 24, 2021
-
-#### Android Core 1.7.0
-
-* Fixed a crash which was caused by the exception thrown from the Android okhttp library.
-* Added new public APIs to set XDM shared state.
-* Added a new API `MobileCore.configureWithFileInAssets()` which allows the app to use a config file in the app's Assets folder.
-
-### February 2, 2021
-
-#### Android Core 1.6.0
-
-* Added a new API `MobileCore.registerEventListener` which can be used to register a permanent event listener.
-* Fixed a bug which prevented cached configuration being loaded during app launch.
-* Fixed a crash which was caused by the exception thrown from the Android `okhttp` library.
-
 ## January 19, 2021
 
 ### Adobe Experience Platform iOS Core SDKs
 
-The brand new Adobe Experience Platform Core iOS swift SDKs are live! It is [open sourced on github](https://github.com/adobe/aepsdk-core-ios/), containing the following extensions:
+The brand new Adobe Experience Platform Core iOS swift SDKs are live! It is [open sourced on GitHub](https://github.com/adobe/aepsdk-core-ios), containing the following extensions:
 
 * AEPCore 3.0.0
 * AEPServices 3.0.0
@@ -380,160 +279,3 @@ The brand new Adobe Experience Platform Core iOS swift SDKs are live! It is [ope
 * AEPSignal 3.0.0
 * AEPLifecycle 3.0.0
 * AEPRulesEngine 1.0.0
-
-### December 3, 2020
-
-#### Android Identity 1.2.2
-
-* Fix issue where push identifier had incorrect value in Identity shared state when `setPushIdentifer` was not called on each launch.
-
-  Released with sdk-core version 1.5.8
-
-## September 9, 2020
-
-### Android Core 1.5.7
-
-* Fixed the issue where it may fail to save caches when `Etag` contains special characters.
-
-### Android Identity 1.2.1
-
-* Report extension details to Mobile Core for improved logging and Griffon support.
-* Identity shared state now gets updated in current session on server response changes for blob or locationHint.
-* In order to improve the Analytics push tracking reports, the push notification preferences \(`a.push.optin`\) are now forwarded to Analytics whenever the value passed to `setPushIdentifier` is different than the previous time it was called.
-* Improved existing log messages and added additional logging to assist with debugging.
-
-### Android Lifecycle 1.0.6
-
-* Added previous application Id and OS version info to lifecycle event data.
-
-## July 31, 2020
-
-### Android Core 1.5.6
-
-* Fixed an issue where null values in rules consequences was not respected.
-* Some internal fixes.
-
-### Android Lifecycle 1.0.5
-
-* Session start time is now added to the shared state of Lifecycle extension.
-
-## July 16, 2020
-
-### Android Core 1.5.5
-
-* Updated the wrapper type strings used by SDK plugins.
-* Added support for the token `~timestampp` which complies with the Adobe Experience Platform Edge Network.
-
-## May 28, 2020
-
-### Android Core 1.5.4
-
-* Added the capability for rules engine to reprocess the events that are dispatched before rules are loaded.
-* Fixed a bug where the shared state of event hub was not properly created.
-* Fixed a security issue.
-
-## April 21, 2020
-
-### Android Core 1.5.3
-
-* Fixed a performance issue where the initiliaztion of SDK extensions could block the main thread for a while.
-
-## April 9, 2020
-
-The following updates were made in this release:
-
-### Android Core 1.5.2
-
-* Fixed several security issues.
-* Improved existing log messages and added additional logging to assist with debugging.
-
-### Android Lifecycle 1.0.3
-
-* Fixed a bug where the `Resolution` was captured in non-English numerals.
-
-## February 27, 2020
-
-The following updates were made in this release:
-
-### Android Core 1.5.1
-
-* Fixed a bug where AppID used non-arabic numbers as app versions.
-* Fixed a bug where app version was not included in AppID on Android 9 or above devices.
-* Added Wrapper Type for Flutter.
-
-### Android Signal 1.0.3
-
-* Logging improvement
-* Report extension details to Mobile Core for improved logging and Griffon support.
-
-### Android Lifecycle 1.0.3
-
-* Logging improvement
-* Report extension details to Mobile Core for improved logging and Griffon support.
-
-## February 4, 2020
-
-The following updates were made in this release:
-
-### Android Core 1.5.0
-
-* Fixed a cursor leak.
-* Mobile Core now shares the list of enabled extensions and their meta data through shared state.
-* Fixed an issue where the advertising identifier was duplicated in the response to the `MobileCore.getSDKIdentifiers` API.
-* Added support for overriding internal network stack with customer-provided code.
-* Added a new interface with failure callback, `AdobeCallbackWithError`, which can be used with the `MobileCore.getPrivacyStatus`, `MobileCore.getSdkIdentities` methods.
-
-  We plan to gradually add the ability to enable failure callback to the other extensions.
-
-### Android Identity 1.2.0
-
-* Added support for the optional `AdobeCallbackWithError` callback that is available in Android Core version 1.5.0 on the following APIs:
-
-  * `appendVisitorInfoForURL`
-  * `getUrlVariables`
-  * `getIdentifiers`
-  * `getExperienceCloudId`
-
-  When the `AdobeCallbackWithError` is used, and you are retrieving the Mobile SDK values, the timeout value is 500ms; if the operation times out or is not successful, an `AdobeError` is returned.
-
-Released with sdk-core version 1.5.0.
-
-## October 25, 2019
-
-The following updates were made in this release:
-
-### Android Core 1.4.5
-
-* Added support for attach data rules consequence.
-* Added support for a boolean-type comparison for the Exist or Not Exist rules condition.
-* Fixed a bug where the Exist and Not Exist rules condition might not work for a List or Map type value.
-* Fixed a bug that, when fetching the remote config from Launch, might cause a crash on some Android devices.
-* Fixed a bug that, when the data URL of an activity did not contain valid schema, might cause a crash.
-
-### Android Identity 1.1.2
-
-* Fixed a bug where the default Experience Cloud Server hostname is now used when no value is configured in the SDK.
-* Fixed a bug where multiple custom identifiers with same idType value were synced with the Visitor ID Service.
-* Custom visitor identifiers can now be cleared from the SDK by providing a null/empty identifier value for a previously synced idType.
-
-## September 17, 2019
-
-The following updates were made in this release:
-
-### Android Core 1.4.4
-
-* Starting in API level 16, notifications now support BigTextStyle.
-  * This enables long notifications to be displayed without being truncated.
-* Fixed the locale string in the HTTP User-Agent to follow the BCP 47 specification.
-
-## September 9, 2019
-
-The following updates were made in this release:
-
-### Android Identity 1.1.1
-
-* Custom identifiers with null or empty IDs are ignored when calling the syncIdentifier or syncIdentifiers APIs because the Visitor ID Service does not support these identifiers.
-* The syncIdentifiers API call is ignored when there is an empty Map.
-* The duplicate advertising identifier value is removed from the Identity-shared state when MobileCore.setAdvertisingIdentifier is called with a new value.
-* The global.ssl configuration settings are ignored, and SSL is enabled by default.
-* Fixed an issue where appendVisitorInfoForURL uses the wrong query delimiter when the source URL contains a question mark in its fragment identifier component.

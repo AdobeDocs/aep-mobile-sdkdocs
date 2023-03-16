@@ -33,18 +33,33 @@ iOS
 
 ## registerExtension
 
-The registerExtension API lets you register your extension with the [Mobile Core](../mobile-core/index.md).
+<InlineAlert variant="warning" slots="text"/>
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 Android
 
 <Tabs query="platform=android&api=register-extension"/>
 
+## refreshInAppMessages
+
+<InlineAlert variant="info" slots="text"/>
+
+By default, the SDK will automatically fetch in-app message definitions from the remote at the time the Messaging extension is registered. This generally happens once per app lifecycle.
+
+Some use cases may require the client to request an update from the remote more frequently. Calling the following API will force the Messaging extension to get an updated definition of messages from the remote:
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<Tabs query="platform=android&api=refresh"/>
+
 iOS
 
-<Tabs query="platform=ios&api=register-extension"/>
-
+<Tabs query="platform=ios&api=refresh"/>
 
 ## setPushIdentifier
 

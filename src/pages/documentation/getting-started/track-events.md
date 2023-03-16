@@ -33,9 +33,9 @@ Android
 
 <Tabs query="platform=android&task=create"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=create"/>
+<Tabs query="platform=ios&task=create"/>
 
 ### Send the Experience Event to Edge Network
 
@@ -47,9 +47,9 @@ Android
 
 <Tabs query="platform=android&task=send"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=send"/>
+<Tabs query="platform=ios&task=send"/>
 
 ## Track user actions (for Adobe Analytics)
 
@@ -61,29 +61,25 @@ Actions are events that occur in your app. Use this API to track and measure an 
 
 You must call this API when an event that you want to track occurs. In addition to the action name, you can send additional context data with each track action call.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=track-action"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=track-action"/>
+<Tabs query="platform=ios&task=track-action"/>
 
-iOS (ACP 2.x)
+<!-- React Native
 
-<Tabs query="platform=ios-acp&task=track-action"/>
+<Tabs query="platform=react-native&task=track-action"/> -->
 
-React Native
+<!-- Flutter
 
-<Tabs query="platform=react-native&task=track-action"/>
+<Tabs query="platform=flutter&task=track-action"/> -->
 
-Flutter
-
-<Tabs query="platform=flutter&task=track-action"/>
-
-Cordova
+<!-- Cordova
 
 <Tabs query="platform=cordova&task=track-action"/>
 
@@ -93,35 +89,31 @@ Unity
 
 Xamarin
 
-<Tabs query="platform=xamarin&task=track-action"/>
+<Tabs query="platform=xamarin&task=track-action"/> -->
 
 ## Track app states and screens (for Adobe Analytics)
 
 States represent screens or views in your app. The `trackState` method is called every time a new state is displayed in your application. For example, this method would be called when a user navigates from the home page to the news feed. This method also sends an Adobe Analytics state-tracking hit with optional context data.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="8"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=track-state"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=track-state"/>
+<Tabs query="platform=ios&task=track-state"/>
 
-iOS (ACP 2.x)
+<!-- React Native
 
-<Tabs query="platform=ios-acp&task=track-state"/>
+<Tabs query="platform=react-native&task=track-state"/> -->
 
-React Native
+<!-- Flutter
 
-<Tabs query="platform=react-native&task=track-state"/>
+<Tabs query="platform=flutter&task=track-state"/> -->
 
-Flutter
-
-<Tabs query="platform=flutter&task=track-state"/>
-
-Cordova
+<!-- Cordova
 
 <Tabs query="platform=cordova&task=track-state"/>
 
@@ -131,12 +123,12 @@ Unity
 
 Xamarin
 
-<Tabs query="platform=xamarin&task=track-state"/>
+<Tabs query="platform=xamarin&task=track-state"/> -->
 
 For more information, see the [Mobile Core API Reference](../mobile-core/api-reference.md).
 
 ## Get help
 
-* Visit the SDK [community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-sdks/ct-p/platform-sdk) to ask questions
+* Visit the SDK [community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform/ct-p/adobe-experience-platform-community) to ask questions
 * Contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support) for immediate assistance
 

@@ -1,21 +1,22 @@
-<Variant platform="android" task="add" repeat="5"/>
+<Variant platform="android" task="add" repeat="4"/>
 
 #### Java
 
-1. Add the Mobile Core and Target extensions to your project using the app's Gradle file.
+1. Add the Mobile Core, Identity and Target extensions to your project using the app's Gradle file.
 
 ```java
-implementation 'com.adobe.marketing.mobile:sdk-core:1.+'
-implementation 'com.adobe.marketing.mobile:target:1.+'
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:identity:2.+'
+implementation 'com.adobe.marketing.mobile:target:2.+'
 ```
 
-2. Import the Target extension to your application's main activity.
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
-```java
-import com.adobe.marketing.mobile.*;
-```
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
 
-<Variant platform="ios-aep" task="add" repeat="7"/>
+</InlineNestedAlert>
+
+<Variant platform="ios" task="add" repeat="7"/>
 
 1. Add the AEPCore, AEPIdentity, and AEPTarget CocoaPods to your project via your `Podfile`.
 
@@ -70,35 +71,72 @@ import {
 } from '@adobe/react-native-aeptarget';
 ```
 
+3. Get the extension version.
+
+```javascript
+ACPTarget.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPTarget version: " + version));
+```
+
 <Variant platform="android" task="register" repeat="4"/>
 
 #### Java
 
 In your Application's `onCreate()` method, after calling the `setApplication()` method, register Target with Mobile Core.
 
-Here is code sample that calls these set up methods:
-
 ```java
-public class TargetApp extends Application {
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Target;
+import com.adobe.marketing.mobile.Identity;
+import com.adobe.marketing.mobile.AdobeCallback;
 
- @Override
- public void onCreate() {
-     super.onCreate();
-     MobileCore.setApplication(this);
-     MobileCore.configureWithAppId("yourAppId");
+public class MainApp extends Application {
 
-     try {
-         Target.registerExtension();
-         Identity.registerExtension();
-         MobileCore.start(null);
-     } catch (Exception e) {
-         //Log the exception
-     }
- }
+  private final String ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID";
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        MobileCore.setApplication(this);
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
+
+        MobileCore.registerExtensions(
+            Arrays.asList(Target.EXTENSION, Identity.EXTENSION),
+            o -> Log.d("MainApp", "Adobe Target Mobile SDK was initialized.")
+        );
+    }
 }
 ```
 
-<Variant platform="ios-aep" task="register" repeat="5"/>
+#### Kotlin
+
+```java
+import com.adobe.marketing.mobile.MobileCore
+import com.adobe.marketing.mobile.Target
+import com.adobe.marketing.mobile.Identity
+import com.adobe.marketing.mobile.AdobeCallback
+
+class MainApp : Application() {
+
+  private var ENVIRONMENT_FILE_ID: String = "YOUR_APP_ENVIRONMENT_ID"
+
+    override fun onCreate() {
+        super.onCreate()
+
+        MobileCore.setApplication(this)
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
+
+        MobileCore.registerExtensions(
+          listOf(Target.EXTENSION, Identity.EXTENSION)
+        ) {
+          Log.d("MainApp", "Adobe Target Mobile SDK was initialized")
+        }
+    }
+
+}
+```
+
+<Variant platform="ios" task="register" repeat="5"/>
 
 #### Swift
 
@@ -119,7 +157,7 @@ In your app's `didFinishLaunchingWithOptions` function, register the Target exte
 
 ```objectivec
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [AEPMobileCore registerExtensions: @[AEPMobileIdentity.class, AEPMobileTarget.class] completion:^{
+    [AEPMobileCore registerExtensions: @[AEPMobileTarget.class, AEPMobileIdentity.class] completion:^{
         //Completion callback
         // Use the app ID assigned to this application via Data Collection UI
         [AEPMobileCore configureWithAppId: @"yourAppId"];
@@ -152,7 +190,7 @@ purchasedProductIds.add("125");
 TargetOrder targetOrder = new TargetOrder("123", 567.89, purchasedProductIds);
 ```
 
-<Variant platform="ios-aep" task="target-order" repeat="10"/>
+<Variant platform="ios" task="target-order" repeat="10"/>
 
 #### Swift
 
@@ -212,7 +250,7 @@ public TargetProduct(final String id, final String categoryId)
 TargetProduct targetProduct = new TargetProduct("123", "Books");
 ```
 
-<Variant platform="ios-aep" task="target-product" repeat="10"/>
+<Variant platform="ios" task="target-product" repeat="10"/>
 
 #### Swift
 
@@ -295,7 +333,7 @@ TargetParameters targetParameters = new TargetParameters.Builder()
 .build();
 ```
 
-<Variant platform="ios-aep" task="target-parameters" repeat="10"/>
+<Variant platform="ios" task="target-parameters" repeat="10"/>
 
 #### Swift
 
@@ -364,18 +402,15 @@ var targetParameters = new AEPTargetParameters(mboxParameters, profileParameters
 
 <Variant platform="android" task="visual-preview" repeat="2"/>
 
-On Android, when the application is launched as a result of a deep link, the `collectLaunchInfo` API is internally invoked, and the Target activity and deep link information is extracted from the Intent extras.
+On Android, when the application is launched as a result of a deep link, the Mobile Core's [collectLaunchInfo](../../mobile-core/api-reference.md#collectlaunchinfo) API is internally invoked, and the Target activity and deep link information is extracted from the Intent extras.
 
-The SDK can only collect information from the launching Activity if [`setApplication`](../mobile-core/api-reference.md#application-reference-android-only) has been called. Setting the Application is only necessary on an Activity that is also an entry point for your application. However, setting the Application on each Activity has no negative impact and ensures that the SDK always has the necessary reference to your Application. We recommend that you call `setApplication` in each of your Activities.
+The SDK can only collect information from the launching Activity if [setApplication](../../mobile-core/api-reference.md#setapplication) has been called. Setting the Application is only necessary on an Activity that is also an entry point for your application. However, setting the Application on each Activity has no negative impact and ensures that the SDK always has the necessary reference to your Application. We recommend that you call `setApplication` API in each of your Activities.
 
-<Variant platform="ios-aep" task="visual-preview" repeat="10"/>
+<Variant platform="ios" task="visual-preview" repeat="7"/>
+
+On iOS, the Mobile Core's [collectLaunchInfo](../../mobile-core/api-reference.md#collectlaunchinfo) API can be invoked with the Target preview deep link as shown below: 
 
 #### Swift
-
-**Syntax**
-```swift
-public static func collectLaunchInfo(_ userInfo: [String: Any])
-```
 
 **Example**
 
@@ -384,12 +419,6 @@ public static func collectLaunchInfo(_ userInfo: [String: Any])
 ```
 
 #### Objective-C
-
-**Syntax**
-
-```objectivec
-+ (void)collectLaunchInfo:(nonnull NSDictionary<NSString*, id>*) userInfo;
-```
 
 **Example**
 

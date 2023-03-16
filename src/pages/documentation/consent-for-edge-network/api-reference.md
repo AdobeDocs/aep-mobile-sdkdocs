@@ -14,7 +14,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
 React Native
 
@@ -32,7 +32,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-consents"/>
+<Tabs query="platform=ios&api=get-consents"/>
 
 React Native
 
@@ -40,17 +40,15 @@ React Native
 
 ## registerExtension
 
-Registers the Edge Consent extension with the Mobile Core SDK.
+<InlineAlert variant="warning" slots="text"/>
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&api=register-extension"/>
-
-iOS
-
-<Tabs query="platform=ios-aep&api=register-extension"/>
 
 React Native
 
@@ -68,7 +66,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=update-consents"/>
+<Tabs query="platform=ios&api=update-consents"/>
 
 React Native
 

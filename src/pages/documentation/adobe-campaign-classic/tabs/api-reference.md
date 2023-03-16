@@ -5,6 +5,7 @@
 **Syntax**
 
 ```java
+@NonNull 
 public static String extensionVersion();
 ```
 
@@ -14,7 +15,7 @@ public static String extensionVersion();
 String campaignClassicExtensionVersion = CampaignClassic.extensionVersion();
 ```
 
-<Variant platform="ios-aep" api="extension-version" repeat="10"/>
+<Variant platform="ios" api="extension-version" repeat="10"/>
 
 #### Swift
 
@@ -63,14 +64,14 @@ console.log(`AdobeExperienceSDK: Campaign Classic version: ${version}`);
 
 To prepare your app to handle push notifications, see the tutorial on [setting up a Firebase Cloud Messaging client app on Android](https://firebase.google.com/docs/cloud-messaging/android/client). After you receive the Firebase Cloud Messaging (FCM) SDK registration token, send this token and the device information to Campaign Classic by using the `registerDevice` API.
 
-The `registerDevice` API registers a device with your Campaign Classic registration server. It takes the FCM registration token as a parameter with a user key that identifies a user, such as an email address or a login name. You can also provide a map of the custom key-value pairs that you want to associate with the registration. A boolean value is returned in the callback, which signals whether the registration was successful.
+The `registerDevice` API registers a device with your Campaign Classic registration server. It takes the FCM registration token as a parameter with a user key that identifies a user, such as an email address or a login name. You can also provide a map of the custom key-value pairs that you want to associate with the registration.
 
 #### Java
 
 **Syntax**
 
 ```java
-public static void registerDevice(final String token, final String userKey, final Map<String, Object> additionalParams, final AdobeCallback<Boolean> callback)
+public static void registerDevice(@NonNull final String token, final String userKey, final Map<String, Object> additionalParams)
 ```
 
 **Example**
@@ -80,28 +81,23 @@ public static void registerDevice(final String token, final String userKey, fina
 public void onNewToken(String token) {
     Log.d("TestApp", "Refreshed token: " + token);
 
-    // If you want to send messages to this application instance or
-    // manage this app's subscriptions on the server side, send the
-    // Instance ID token to your app server.
-    if (token != null) {
-                Log.d("TestApp", "FCM SDK registration token received : " + token);
-                // Create a map of additional parameters
-                Map<String, Object> additionalParams = new HashMap<String, Object>();
-                additionalParams.put("name", "John");
-                additionalParams.put("serial", 12345);
-                additionalParams.put("premium", true);
-                // Send the registration info
-                CampaignClassic.registerDevice(token, "john@example.com",additionalParams,new AdobeCallback<Boolean>() {
-                    @Override
-                    public void call(final Boolean status) {
-                        Log.d("TestApp", "Registration Status: " + status);
-                    }
-                });
-      }
+  // If you want to send messages to this application instance or
+  // manage this app's subscriptions on the server side, send the
+  // Instance ID token to your app server.
+  if (token != null) {
+    Log.d("TestApp", "FCM SDK registration token received : " + token);
+    // Create a map of additional parameters
+    Map<String, Object> additionalParams = new HashMap<String, Object>();
+    additionalParams.put("name", "John");
+    additionalParams.put("serial", 12345);
+    additionalParams.put("premium", true);
+    // Send the registration info
+    CampaignClassic.registerDevice(token, "john@example.com", additionalParams);
+  }
 }
 ```
 
-<Variant platform="ios-aep" api="register-device" repeat="12"/>
+<Variant platform="ios" api="register-device" repeat="12"/>
 
 To get your app ready to handle push notifications, see the tutorial on [configuring remote notification support](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/HandlingRemoteNotifications.html#//apple_ref/doc/uid/TP40008194-CH6-SW1). After you receive the Apple Push Notification service (APNs) token, send this token and the device information to Campaign Classic using the `registerDevice` API.
 
@@ -165,6 +161,21 @@ registerDeviceWithToken(
 ```typescript
 CampaignClassic.registerDeviceWithToken('myToken', 'myUserKey')
 );
+
+<Variant platform="android" api="register-extension" repeat="5"/>
+
+#### Java
+
+#### Syntax
+
+```java
+public static void registerExtension()
+```
+
+#### Example
+
+```java
+Optimize.registerExtension();
 ```
 
 <Variant platform="android" api="track-notification-click" repeat="6"/>
@@ -176,7 +187,7 @@ If `trackInfo` is null, or does not contain the necessary tracking identifiers, 
 **Syntax**
 
 ```java
-public static void trackNotificationClick(final Map<String, String> trackInfo)
+public static void trackNotificationClick(@NonNull final Map<String, String> trackInfo)
 ```
 
 **Example**
@@ -207,7 +218,7 @@ public void onResume() {
 }
 ```
 
-<Variant platform="ios-aep" api="track-notification-click" repeat="11"/>
+<Variant platform="ios" api="track-notification-click" repeat="11"/>
 
 You can pass the `launchOptions` that were received upon opening the application or `userInfo`, which contains the received push payload in `userInfo`. If `userInfo` is null or does not contain the necessary tracking identifiers, `broadlogId` (`_mId`) and `deliveryId` (`_dId`), a track request is **not** sent.
 
@@ -268,7 +279,7 @@ If `trackInfo` is null or does not contain the necessary tracking identifiers, `
 **Syntax**
 
 ```java
-public static void trackNotificationReceive(final Map<String, String> trackInfo)
+public static void trackNotificationReceive(@NonNull final Map<String, String> trackInfo)
 ```
 
 **Example**
@@ -293,7 +304,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 }
 ```
 
-<Variant platform="ios-aep" api="track-notification-receive" repeat="11"/>
+<Variant platform="ios" api="track-notification-receive" repeat="11"/>
 
 You can pass the `launchOptions` that were received upon opening the application or `userInfo`, which contains the received push payload in `userInfo`. If `userInfo` is null or does not contain the necessary tracking identifiers, `broadlogId` (`_mId`) and `deliveryId` (`_dId`), a track request is **not** sent.
 

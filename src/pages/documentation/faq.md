@@ -52,7 +52,7 @@ The Experience Platform SDK is available through [Cocoapods](https://cocoapods.o
 
 ### Can I use both the 4x SDK and the new Experience Platform SDK at the same time?
 
-Implementing two the SDKs in your app is not supported.
+Implementing the two SDKs in your app is not supported.
 
 The Experience Platform SDK migrates the locally stored user contexts from the 4x SDKs. Using both SDKs will cause severe data quality issues. For more information, please read the [upgrade to the Experience Platform SDKs tutorial](./upgrade-platform-sdks/index.md).
 
@@ -62,13 +62,10 @@ For a complete list of supported platforms, please read the [latest SDK versions
 
 ### What OS and platform versions are supported?
 
-* Android versions 4.0 or later (API levels 14 or later)
+* Android versions 4.4 or later (API levels 19 or later)
 * iOS versions 10 or later
-* React Native versions 0.44.0 or later
-* Flutter versions 1.10.0 or later
-* Cordova 9.0.0 or later
-* Xamarin - MonoAndroid 9.0+ and Xamarin.iOS 1.0+
-* Unity 2019.3.10f1 or later
+* React Native versions 0.60.0 or later
+* Flutter versions 2.0.0 or later
 
 ### Where does the SDK store identities and preferences on the app?
 
@@ -84,21 +81,37 @@ iOS
 
 ### What is the size of the SDK?
 
-| Extension | iOS (KB) | Android (KB) |
-| :--- | :--- | :--- |
-| Core | 504 | 168 |
-| Adobe Analytics | 54 | 21 |
-| Adobe Audience Manager | 40 | 13 |
-| Adobe Target | 77 | 27 |
-| Profile | 20 | 8 |
-| Adobe Campaign Standard | 60 | 30 |
-| Places | 36 | 20 |
-| Places Monitor | 10 | 19 |
+#### Adobe Experience Platform SDKs
 
-The size values in the table are provided as indicative estimates, with the following considerations:
+| Extension | iOS (KB) | Android (KB) | Additional Dependencies† |
+| :-------- | :------- | :----------- | :----------------------- |
+| Core | 925 | 497 | Android only: `kotlin-stdlib` |
+| Identity | 136 | 51 | |
+| Lifecycle | 150 | 59 | |
+| Signal | 18 | 33 | |
+| Edge Network extension | 253 | 99 | Identity for Edge Network |
+| Consent for Edge Network | 33 | 25 | Edge Network extension |
+| Identity for Edge Network | 69 | 49 | |
+| Analytics | 133 | 95 | |
+| Assurance | 917 | 527 | Android only: `androidx.constraintlayout` |
+| Audience | 82 | 44 | Identity |
+| Campaign | 166 | 80 | Identity |
+| Campaign Classic | 34 | 42 | Identity |
+| Edge Bridge | 0.84 | 6 | |
+| Media | 283 | 137 | |
+| Messaging | 33 | 77 | Edge Network extension |
+| Optimize | 88 | 80 | Edge Network extension |
+| Places | 799 | 59 | |
+| Target | 283 | 99 | |
+| User Profile | 18 | 29 | |
 
-* Mobile Core, which includes the Lifecycle, the Identity, and the Signals extensions, is required for all other extensions. The final app size increase can be calculated by adding the Mobile Core size to each of the enabled extensions. For example, the iOS app distribution using the Target and Analytics extensions will have a total size increase of 635 KB. (Core: 504 KB + Analytics: 54 KB + Target: 77 KB).
-* The iOS (SDK extension versions 2+) estimates are based on Xcode’s App Thinning size report for one architecture. The Android (SDK extension versions 1+) size estimates listed refer to unsigned apps and do not account for proguarding.
+The sizes in the table are provided for estimation purposes only, with the following considerations:
+
+* †Mobile Core, which includes the Rules Engine and Services extensions, is required for all other extensions. The final app size increase can be calculated by adding the Mobile Core size to each of the enabled extensions. 
+  * For example, the iOS app distribution using the Target and Analytics extensions will have a total size increase of 1341 KB. (Core: 925 KB + Analytics: 133 KB + Target: 283 KB).
+* The iOS size estimates are based on [Google's CocoaPods Size Measurement tool](https://github.com/google/cocoapods-size). 
+* The Android size estimates listed refer to unsigned apps and do not account for applying ProGuard.
+* For Android Mobile SDKs, the full list of dependencies for each SDK and version can be found at [Maven Repository](https://mvnrepository.com/artifact/com.adobe.marketing.mobile). 
 
 ### How can I use ProGuard with the Android SDK?
 
@@ -118,9 +131,138 @@ Implementing push notification tracking and measurement with the SDK depends on 
 
 * For the Adobe Campaign Standard extension, please read the [Adobe Campaign standard push tracking tutorial](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-mobile/push-tracking.html?lang=en).
 * For the Adobe Campaign Classic extension, please read the [Adobe Campaign Classic push notifications tracking tutorial](./adobe-campaign-classic/api-reference.md#tracknotification-api).
-* For the Adobe Analytics - Mobile Services extension, please read the [set up tracking for Mobile Services push notifications tutorial](./adobe-analytics-mobile-services/index.md#set-up-push-tracking).
 
-## Mobile Core
+## Migrating to Android Mobile Core 2.x and compatible extensions
+
+### Is there a change in minimum API level supported by Mobile SDK for Android?
+
+Mobile SDK for Android now supports a minimum API level of **19**. If your application targets a lower API level, you will see the following build failure:
+
+```
+Manifest merger failed : uses-sdk:minSdkVersion 14 cannot be smaller than version 19 declared in library [com.adobe.marketing.mobile:core:2.0.0]
+```
+
+To fix this build failure, increase the minSdkVersion for your Android project to **19** or above.
+
+### When I add Mobile SDK to my Android project, why do I get an error about invoke-custom support and enabling desugaring?
+
+Mobile SDK for Android uses Java 8 language features and desugaring is disabled by default. If your application uses Android Gradle plugin (AGP) v4.2 and has not enabled Java 8 support, you will see the following build failure:
+
+```
+D8: Invoke-customs are only supported starting with Android O (--min-api 26)
+Caused by: com.android.builder.dexing.DexArchiveBuilderException: Error while dexing.
+The dependency contains Java 8 bytecode. Please enable desugaring by adding the following to build.gradle
+android {
+	compileOptions {
+		sourceCompatibility 1.8
+		targetCompatibility 1.8
+	}
+}
+
+See https://developer.android.com/studio/write/java8-support.html for details.
+Alternatively, increase the minSdkVersion to 26 or above.
+```
+
+To fix this build failure, you can follow one of two options:
+- Add the listed compileOptions from the error message to your app-level build.gradle file.
+- Increase the minSdkVersion for your Android project to **26** or above.
+
+### How do I get the latest Mobile SDK Android dependences for my Application? 
+
+To get the latest Mobile SDK dependencies for your Android application:
+* Open the **mobile property** configured in the **Data Collection UI** for your application. 
+* Navigate to the **Extensions** tab and update all the extensions to the latest version. 
+* The [install instructions](./getting-started/get-the-sdk.md#1-add-dependencies-to-your-project) will now show the dependencies for the latest Mobile SDK.
+
+### Why do I see 'java.lang.NoSuchMethodError' after upgrading to the latest version of Mobile SDK for Android?
+
+The latest Mobile Core SDK for Android includes changes that break compatiblity with solution SDKs developed for earlier verisons of the Mobile Core SDK. 
+
+If you attempt to use the latest Mobile Core SDK and solution SDKs that were built for previous versions of Mobile Core to build your app, you may encounter the following error:
+
+```
+2023-02-13 17:45:02.501 14264-14264/XXX E/AndroidRuntime: FATAL EXCEPTION: main
+    Process: XXX, PID: XXXXX
+    java.lang.NoSuchMethodError: No static method getCore()Lcom/adobe/marketing/mobile/Core; in class Lcom/adobe/marketing/mobile/MobileCore; or its super classes (declaration of 'com.adobe.marketing.mobile.MobileCore' appears in XXX
+```
+
+To resolve this error, upgrade all your solution SDKs to the [most recent versions](./current-sdk-versions.md#android).
+
+### Why do I not see 'sdk-core' dependency for latest version of Mobile SDK for Android? 
+
+The **com.adobe.marketing.mobile:sdk-core** dependency is no longer available for the latest version of Mobile SDK. Instead, select the appropriate solution SDKs based on your requirements from the following options:
+
+```java
+com.adobe.marketing.mobile:core:2.+
+com.adobe.marketing.mobile:lifecycle:2.+
+com.adobe.marketing.mobile:signal:2.+
+com.adobe.marketing.mobile:identity:2.+
+```
+
+### How do I upgrade to the latest version of Mobile SDK for Android if my app uses Mobile Services? 
+
+Adobe Mobile Service's end-of-life date is [December 31, 2022](https://experienceleague.adobe.com/docs/mobile-services/using/eol.html). To upgrade to the latest version of Mobile SDK for Android, you have to remove the Mobile Services dependency from your app. 
+
+### Why do I see a warning in AndroidManifest.xml about missing 'com.adobe.marketing.mobile.FullscreenMessageActivity' class?
+
+After upgrading to the latest version of Mobile SDK for Android, you will see the following build warning if your application previously set up in-app messages with Campaign Standard. 
+
+```
+Class referenced in the manifest, `com.adobe.marketing.mobile.FullscreenMessageActivity`, was not found in the project or the libraries
+Unresolved class 'FullscreenMessageActivity'
+```
+
+To resolve the build warning, remove FullscreenMessageActivity from your application's manifest file. Campaign Standard SDK no longer requires application to add **FullscreenMessageActivity** to their manifest.
+
+### Why do I see 'unresolved reference' error when upgrading Adobe Target SDK to the latest version?
+
+The [latest version](./adobe-target/release-notes.md#android-target-200) of Adobe Target Mobile SDK has the following breaking API changes for alignment with the iOS SDK:
+
+* **locationsDisplayed** is now **displayedLocations**
+* **locationClicked** is now **clickedLocation**
+
+The public classes **TargetRequest**, **TargetPrefetch**, **TargetOrder**, **TargetProduct** and **TargetParameters** are consolidated under the **target** subpackage.
+
+To resolve the error, fix the method references and update your target import statements:
+
+```java
+import com.adobe.marketing.mobile.target.TargetRequest;
+import com.adobe.marketing.mobile.target.TargetPrefetch;
+import com.adobe.marketing.mobile.target.TargetOrder;
+import com.adobe.marketing.mobile.target.TargetProduct;
+import com.adobe.marketing.mobile.target.TargetParameters;
+```
+
+In addition, replace the previously deprecated Target APIs and classes since they have been removed. For more information, please read this section on the [deprecated APIs and the recommended alternative APIs](https://developer.adobe.com/client-sdks/previous-versions/documentation/adobe-target/deprecated-apis/).
+
+### Why do I see `registerDevice(String, String, Map<String, Object>)` cannot be applied to [arguments] error when upgrading Adobe Campaign Classic SDK to the latest version?
+
+The `registerDevice` API in the latest Campaign Classic Android Mobile SDK, similar to iOS SDK, no longer provides a callback method for registration status since a `false` value cannot be accurately used as a signal to retry requests.
+
+To resolve the error, remove the callback (`AdobeCallback<Boolean>`) parameter from the method invocation.
+
+### Why do I see `getNearbyPointsOfInterest(Location, int, AdobeCallback<List<PlacesPOI>>, AdobeCallback<PlacesRequestError>)` cannot be applied to [arguments] error when upgrading Adobe Experience Platform Location Service SDK to the latest version?
+
+The `getNearbyPointsOfInterest` API without the error callback has been removed. Alternatively, use the below overloaded API which provides both successCallback and errorCallback:
+
+```java
+public static void getNearbyPointsOfInterest(final Location location,
+      final int limit,
+      final AdobeCallback<List<PlacesPOI>> successCallback,
+      final AdobeCallback<PlacesRequestError> errorCallback)
+```
+
+The public classes `PlacesAuthorizationStatus`, `PlacesPOI`, and `PlacesRequestError` are consolidated under the `places` subpackage.
+
+To resolve the error, fix the method references and update your places import statements:
+
+```java
+import com.adobe.marketing.mobile.places.PlacesAuthorizationStatus;
+import com.adobe.marketing.mobile.places.PlacesPOI;
+import com.adobe.marketing.mobile.places.PlacesRequestError;
+```
+
+## Lifecycle
 
 ### What are Lifecycle metrics?
 
@@ -132,21 +274,21 @@ See the [frequently asked questions for Analytics](./adobe-analytics/faq.md).
 
 ## Adobe Experience Platform Edge Network
 
-### Does AEP Edge Network extension support offline tracking?
+### Does the Edge Network extension support offline tracking?
 
 Yes, offline tracking is supported by default when sending XDM Experience events since these events have a required timestamp, and there is no separate setting for this as it used to be in the Adobe Analytics extension. The events are backed up in the persistence layer and then sent to the Edge Network in current session if possible, or queued until the next session when a network connection is available.
 
 ## Get help
 
-* Visit the SDK [community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-sdks/ct-p/platform-sdk) to ask questions
+* Visit the SDK [community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform/ct-p/adobe-experience-platform-community) to ask questions
 * Contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support) for immediate assistance
 
-## Using AEP Swift SDKs with tvOS
+## Using Experience Platform Swift SDKs with tvOS
 
 ### 'X' is unavailable in application extension for tvOS
 
-You may encounter this error when using the AEP SDK for a tvOS app target, with the following message "'X' is unavailable in application extension for tvOS". This behavior is unexpected for tvOS targets and it seems to be an issue in Xcode where it apples additional checks for tvOSApplicationExtension API compatibility.
-Until this issue is resolved in the future Xcode versions, a workaround is to mark the classes or functions with the attribute: @available(tvOSApplicationExtension, unavailable) to suppress the error as in the examples below:
+You may encounter this error when using the Experience Platform SDK for a tvOS app target, with the following message "'X' is unavailable in application extension for tvOS". This behavior is unexpected for tvOS targets and it seems to be an issue in Xcode where it applies additional checks for `tvOSApplicationExtension` API compatibility.
+Until this issue is resolved in the future Xcode versions, a workaround is to mark the classes or functions with the attribute: `@available(tvOSApplicationExtension, unavailable)` to suppress the error as in the examples below:
 
 #### Example
 

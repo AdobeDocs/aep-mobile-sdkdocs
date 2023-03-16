@@ -5,7 +5,7 @@
 **Syntax**
 
 ```java
-public static void configureWithAppID(final String appId);
+public static void configureWithAppID(@NonNull final String appId);
 ```
 
 **Example**
@@ -14,7 +14,7 @@ public static void configureWithAppID(final String appId);
 MobileCore.configureWithAppId("1423ae38-8385-8963-8693-28375403491d");
 ```
 
-<Variant platform="ios-aep" task="configure" repeat="11"/>
+<Variant platform="ios" task="configure" repeat="11"/>
 
 #### Swift
 
@@ -53,7 +53,7 @@ Alternatively, you can also place the environment ID in your iOS project's _Info
 **Syntax**
 
 ```java
-public static void updateConfiguration(final Map<String, Object> configMap);
+public static void updateConfiguration(@NonNull final Map<String, Object> configMap);
 ```
 
 **Example**
@@ -64,7 +64,7 @@ data.put("global.privacy", "optedout");
 MobileCore.updateConfiguration(data);
 ```
 
-<Variant platform="ios-aep" task="update" repeat="10"/>
+<Variant platform="ios" task="update" repeat="10"/>
 
 #### Swift
 
@@ -129,9 +129,17 @@ static Future<void> updateConfiguration(Map<String, Object> configMap);
 FlutterACPCore.updateConfiguration({"global.privacy":"optedout"});
 ``` -->
 
-<Variant platform="android" task="bundle" repeat="2"/>
+<Variant platform="android" task="bundle" repeat="5"/>
 
 #### Java
+
+**Syntax**
+
+```java
+public static void configureWithFileInPath(@NonNull final String filePath)
+```
+
+**Example**
 
 ```java
 // Case 1: to use ADBMobileConfig.json in the assets folder
@@ -144,7 +152,7 @@ MobileCore.configureWithFileInPath("absolute/path/to/exampleJSONfile.json");
 MobileCore.configureWithFileInAssets("exampleJSONfile.json");
 ```
 
-<Variant platform="ios-aep" task="bundle" repeat="10"/>
+<Variant platform="ios" task="bundle" repeat="10"/>
 
 #### Swift
 

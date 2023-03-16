@@ -1,13 +1,17 @@
 <Variant platform="android" task="download" repeat="5"/>
 
-**Java**
-
 1. Add the Mobile Core and Places extensions to your project using the app's Gradle file.
 
 ```java
-implementation 'com.adobe.marketing.mobile:core:1.+'
-implementation 'com.adobe.marketing.mobile:places:1.+'
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:places:2.+'
 ```
+
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+
+</InlineNestedAlert>
 
 2. Import the Mobile Core and Places extensions in your Application class.
 
@@ -16,7 +20,7 @@ import com.adobe.marketing.mobile.MobileCore;
 import com.adobe.marketing.mobile.Places;
 ```
 
-<Variant platform="ios-aep" task="download" repeat="7"/>
+<Variant platform="ios" task="download" repeat="7"/>
 
 1. Add the Mobile Core and Places extensions to your project using CocoaPods. Add the following pods in your `Podfile`:
 
@@ -71,34 +75,51 @@ import {
 } from '@adobe/react-native-aepplaces';
 ```
 
-<Variant platform="android" task="register" repeat="2"/>
+<Variant platform="android" task="register" repeat="4"/>
 
-**Java**
+#### Java
 
 ```java
-public class MobileApp extends Application {
+public class MainApp extends Application {
+    private static final String APP_ID = "YOUR_APP_ID";
 
     @Override
     public void onCreate() {
         super.onCreate();
+
         MobileCore.setApplication(this);
-        try {            
-            Places.registerExtension();
-            // register other extensions
-            MobileCore.start(new AdobeCallback () {
-                @Override
-                public void call(Object o) {
-                    MobileCore.configureWithAppID("yourAppId");
-                }
-            });    
-        } catch (Exception e) {
-            //Log the exception
-         }
+        MobileCore.configureWithAppID(APP_ID);
+
+        List<Class<? extends Extension>> extensions = new ArrayList<>();
+        extensions.add(Places.EXTENSION);
+        MobileCore.registerExtensions(extensions, o -> {
+            Log.d(LOG_TAG, "AEP Mobile SDK is initialized");
+        });
     }
+
 }
 ```
 
-<Variant platform="ios-aep" task="register" repeat="4"/>
+#### Kotlin
+
+```java
+class MyApp : Application() {
+
+    override fun onCreate() {
+        super.onCreate()
+        MobileCore.setApplication(this)
+        MobileCore.configureWithAppID("YOUR_APP_ID")
+
+        val extensions = listOf(Places.EXTENSION)
+        MobileCore.registerExtensions(extensions) {
+            Log.d(LOG_TAG, "AEP Mobile SDK is initialized")
+        }
+    }
+
+}
+```
+
+<Variant platform="ios" task="register" repeat="4"/>
 
 **Swift**
 

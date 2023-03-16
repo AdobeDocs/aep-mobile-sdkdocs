@@ -16,7 +16,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
 React Native
 
@@ -28,17 +28,17 @@ React Native
 
 ## registerExtension
 
+<InlineAlert variant="warning" slots="text"/>
+
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../../api-reference.md#registerextensions) API instead.
+
 Registers the Signal extension with the Mobile Core.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&api=register-extension"/>
-
-iOS
-
-<Tabs query="platform=ios-aep&api=register-extension"/>
 
 React Native
 
@@ -46,5 +46,5 @@ React Native
 
 ## collectPII
 
-The Signal extension can be used to handle `collectPII` rules. For more information, see the [collectPII](../api-reference.md#collectpii) API.
+The Signal extension can be used to handle `collectPII` rules. For more information, see the [collectPII](../../api-reference.md#collectpii) API.
 

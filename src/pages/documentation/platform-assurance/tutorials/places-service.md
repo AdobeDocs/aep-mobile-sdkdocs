@@ -1,4 +1,4 @@
-# Places Service
+# Places Service view in Assurance
 
 ## Overview
 
@@ -6,14 +6,11 @@ The **Places** views allow you to inspect location entry and exit events on the 
 
 We know that using location context with your app experiences can make them more engaging. However, debugging and validating location triggers can be painful. Using these views and reviewing the data that you collect on the device helps alleviate that pain.
 
-## Using Adobe Experience Platform Assurance for Places Service
+## Use Assurance with Places Service
 
 To get started, complete the following steps:
 
-1. Ensure that you implemented the latest versions of the [Assurance](../set-up.md) and Places Service.
-2. Go to the [Assurance UI](https://experience.adobe.com/assurance).
-3. Connect your app to an Assurance session. For more information, see [Connect your device](../index.md#connecting-to-a-session).
-4. To view your events, from the left side menu select the Events view under the PLACES SERVICE section.
+1. [Set up Assurance](../set-up.md).
+2. To view your events, from the left side menu select the **Events view** under the **Places Service** section.
 
 ![](./assets/places-service/places-view.png)
-

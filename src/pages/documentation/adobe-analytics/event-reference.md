@@ -186,7 +186,7 @@ The following examples show how to use the event data:
 
 ### Analytics request identity
 
-The Analytics request identity event is responsible for fetching the Analytics tracking identifier (AID) and custom visitor identifier (VID) from the Analytics extension and is generated in the Analytics [getTrackingIdentifier](./api-reference.md#gettrackingidentifier) and [getCustomVisitorIdentifier](./api-reference.md#get-the-custom-visitor-identifier) calls.
+The Analytics request identity event is responsible for fetching the Analytics tracking identifier (AID) and custom visitor identifier (VID) from the Analytics extension and is generated in the Analytics [getTrackingIdentifier](./api-reference.md#gettrackingidentifier) and [getCustomVisitorIdentifier](./api-reference.md#getvisitoridentifier) calls.
 
 After the Analytics identity request event is received, the Analytics extension completes one of the following tasks:
 
@@ -302,7 +302,7 @@ Note that the data may contain other custom key-value pairs that are **not** def
 
 ### Lifecycle request content
 
-This event represents a request to the Lifecycle extension to start or stop collecting data and is generated when [lifecycleStart() with null context data](../mobile-core/lifecycle/api-reference.md#lifecycle-start-and-pause), [lifecycleStart() with contextData](../mobile-core/lifecycle/api-reference.md#collect-additional-data-with-lifecycle) or [lifecyclePause()](../mobile-core/lifecycle/api-reference.md#lifecycle-start-and-pause) are used.
+This event represents a request to the Lifecycle extension to start or stop collecting data and is generated when [lifecycleStart](../mobile-core/lifecycle/api-reference.md#lifecyclestart) and [lifecyclePause()](../mobile-core/lifecycle/api-reference.md#lifecyclepause) are used.
 
 The Analytics extension only listens for the Lifecycle start event, and the Analytics database queue should be paused for up to 1000 milliseconds, which is the default value for `DEFAULT_LIFECYCLE_RESPONSE_WAIT_TIMEOUT`.
 
@@ -314,7 +314,7 @@ The Analytics extension only listens for the Lifecycle start event, and the Anal
 
 #### Data payload definition
 
-The payload definition is composed of hte following elements:
+The payload definition is composed of the following elements:
 
 | **Key** | **Value type** | **Optional** | **Description** |
 | :--- | :--- | :--- | :--- |
@@ -491,7 +491,7 @@ The following examples show how event data is used by the Analytics response con
 
 ### Analytics response identity
 
-This event is a response from the Analytics extension that contains the unique tracking identifier. This value may be `null` if the Identity extension is enabled and a valid MID was generated. This event is generated as a paired response for the [getTrackingIdentifier](./api-reference.md#gettrackingidentifier) and [getCustomVisitorIdentifier](./api-reference.md#get-the-custom-visitor-identifier) APIs.
+This event is a response from the Analytics extension that contains the unique tracking identifier. This value may be `null` if the Identity extension is enabled and a valid MID was generated. This event is generated as a paired response for the [getTrackingIdentifier](./api-reference.md#gettrackingidentifier) and [getVisitorIdentifier](./api-reference.md#getvisitoridentifier) APIs.
 
 #### Event details
 

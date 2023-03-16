@@ -1,12 +1,28 @@
-<Variant platform="android" api="extension-version" repeat="2"/>
+<Variant platform="android" api="extension-version" repeat="8"/>
 
 #### Java
+
+**Syntax**
+
+```java
+public static String extensionVersion() {
+```
+
+**Example**
 
 ```java
 String mediaExtensionVersion = Media.extensionVersion();
 ```
 
-<Variant platform="ios-aep" api="extension-version" repeat="10"/>
+#### Kotlin
+
+**Example**
+
+```java
+val mediaExtensionVersion = Media.extensionVersion()
+```
+
+<Variant platform="ios" api="extension-version" repeat="10"/>
 
 #### Swift
 
@@ -36,7 +52,31 @@ let mediaExtensionVersion  = Media.extensionVersion()
 NSString *mediaExtensionVersion = [AEPMobileMedia extensionVersion];
 ```
 
-<Variant platform="android" api="create-tracker" repeat="7"/>
+<Variant platform="android" api="register-extension" repeat="8"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void registerExtension()
+```
+
+**Example**
+
+```java
+Media.registerExtension();
+```
+
+#### Kotlin
+
+**Example**
+
+```kotlin
+Media.registerExtension()
+```
+
+<Variant platform="android" api="create-tracker" repeat="10"/>
 
 The createTracker function returns the instance of MediaTracker for tracking a media session. The createTracker function with callback as a parameter has been deprecated.
 
@@ -48,26 +88,23 @@ If MobileCore.resetIdentities() is called in the implementation, the existing tr
 
 ```java
 public static MediaTracker createTracker()
-
-// Deprecated
-public static void createTracker(AdobeCallback<MediaTracker> callback)
 ```
 
 **Example**
 
 ```java
 MediaTracker mediaTracker = Media.createTracker();  // Use the instance for tracking media.
-
-// Deprecated
-Media.createTracker(new AdobeCallback<MediaTracker>() {
-    @Override
-    public void call(MediaTracker mediaTracker) {
-        // Use the instance for tracking media.
-    }
-});
 ```
 
-<Variant platform="ios-aep" api="create-tracker" repeat="12"/>
+#### Kotlin
+
+**Example**
+
+```java
+val tracker = Media.createTracker()
+```
+
+<Variant platform="ios" api="create-tracker" repeat="12"/>
 
 Creates a media tracker instance that tracks the playback session. The tracker created should be used to track the streaming content and it sends periodic pings to the media analytics backend.
 
@@ -102,28 +139,14 @@ id<AEPMediaTracker> tracker;
 _tracker = [AEPMobileMedia createTracker];  // Use the instance for tracking media.
 ```
 
-<Variant platform="android" api="create-tracker-with-config" repeat="6"/>
+<Variant platform="android" api="create-tracker-with-config" repeat="8"/>
 
 #### Java
-
-Optional configuration about the tracker can be passed to this function. The createTracker function returns the instance of MediaTracker with the configuration for tracking a media session. The createTracker function with callback as a parameter has been deprecated.
 
 **Syntax**
 
 ```java
-public class MediaConstants {
-
-    public static final class Config {
-        public static final String CHANNEL = "config.channel";
-        public static final String DOWNLOADED_CONTENT = "config.downloadedcontent";
-    }
-
-}
-
 public static MediaTracker createTracker(Map<String, Object> config)
-
-// Deprecated
-public static void createTracker(Map<String, Object> config, final AdobeCallback<MediaTracker> callback)
 ```
 
 **Example**
@@ -132,20 +155,22 @@ public static void createTracker(Map<String, Object> config, final AdobeCallback
 HashMap<String, Object> config = new HashMap<String, Object>();
 config.put(MediaConstants.Config.CHANNEL, "custom-channel");  // Override channel configured in the Data Collection UI
 config.put(MediaConstants.Config.DOWNLOADED_CONTENT, true);   // Creates downloaded content tracker
-
-
 MediaTracker mediaTracker = Media.createTracker(config);  // Use the instance for tracking media.
-
-// Deprecated
-Media.createTracker(config, new AdobeCallback<MediaTracker>() {
-    @Override
-    public void call(MediaTracker mediaTracker) {
-        // Use the instance for tracking media.
-    }
-});
 ```
 
-<Variant platform="ios-aep" api="create-tracker-with-config" repeat="11"/>
+#### Kotlin
+
+**Example**
+
+```java
+val config = mapOf(
+                MediaConstants.Config.CHANNEL to "custom-channel",
+                MediaConstants.Config.DOWNLOADED_CONTENT to true
+            )
+val mediaTracker = Media.createTracker(config) // Use the instance for tracking media.
+```
+
+<Variant platform="ios" api="create-tracker-with-config" repeat="11"/>
 
 Creates a media tracker instance based on the configuration to track the playback session.
 
@@ -187,11 +212,9 @@ config[AEPMediaTrackerConfig.DOWNLOADED_CONTENT] = [NSNumber numberWithBool:true
 _tracker = [AEPMobileMedia createTrackerWithConfig:config];
 ```
 
-<Variant platform="android" api="create-media-object" repeat="6"/>
+<Variant platform="android" api="create-media-object" repeat="8"/>
 
 #### Java
-
-Returns a HashMap instance that contains information about the media.
 
 **Syntax**
 
@@ -213,7 +236,19 @@ HashMap<String, Object> mediaInfo = Media.createMediaObject("video-name",
                                                             Media.MediaType.Video);
 ```
 
-<Variant platform="ios-aep" api="create-media-object" repeat="11"/>
+#### Kotlin
+
+**Example**
+
+```java
+var mediaInfo = Media.createMediaObject("video-name",
+                                        "video-id",
+                                        60D,
+                                        MediaConstants.StreamType.VOD,
+                                        Media.MediaType.Video)
+```
+
+<Variant platform="ios" api="create-media-object" repeat="11"/>
 
 Returns a map that contains information about the media.
 
@@ -257,11 +292,9 @@ NSDictionary *mediaObject = [AEPMobileMedia createMediaObjectWith:@"video-name"
                                                          mediaType:AEPMediaTypeVideo];
 ```
 
-<Variant platform="android" api="create-ad-break-object" repeat="6"/>
+<Variant platform="android" api="create-ad-break-object" repeat="8"/>
 
 #### Java
-
-Returns a HashMap instance that contains information about the ad break.
 
 **Syntax**
 
@@ -275,7 +308,15 @@ public static HashMap<String, Object> createAdBreakObject(String name, Long posi
 HashMap<String, Object> adBreakObject = Media.createAdBreakObject("adbreak-name", 1L, 0D);
 ```
 
-<Variant platform="ios-aep" api="create-ad-break-object" repeat="11"/>
+#### Kotlin
+
+**Example**
+
+```java
+val adBreakObject = Media.createAdBreakObject("adbreak-name", 1L, 0D)
+```
+
+<Variant platform="ios" api="create-ad-break-object" repeat="11"/>
 
 Returns a map that contains information about the ad break.
 
@@ -313,11 +354,9 @@ NSDictionary *adBreakObject = [AEPMobileMedia createAdBreakObjectWith:@"adbreak-
                                                             startTime:0];
 ```
 
-<Variant platform="android" api="create-ad-object" repeat="6"/>
+<Variant platform="android" api="create-ad-object" repeat="8"/>
 
 #### Java
-
-Returns a HashMap instance that contains information about the ad.
 
 **Syntax**
 
@@ -331,7 +370,15 @@ public static HashMap<String, Object> createAdObject(String name, String adId, L
 HashMap<String, Object> adInfo = Media.createAdObject("ad-name", "ad-id", 1L, 15D);
 ```
 
-<Variant platform="ios-aep" api="create-ad-object" repeat="11"/>
+#### Kotlin
+
+**Example**
+
+```java
+val adInfo = Media.createAdObject("ad-name", "ad-id", 1L, 15D)
+```
+
+<Variant platform="ios" api="create-ad-object" repeat="11"/>
 
 Returns a map that contains information about the ad.
 
@@ -375,11 +422,9 @@ NSDictionary *adObject = [AEPMobileMedia createAdObjectWith:@"ad-name"
                                                      length:30];
 ```
 
-<Variant platform="android" api="create-chapter-object" repeat="6"/>
+<Variant platform="android" api="create-chapter-object" repeat="8"/>
 
 #### Java
-
-Returns a HashMap instance that contains information about the chapter.
 
 **Syntax**
 
@@ -396,7 +441,15 @@ public static HashMap<String, Object> createChapterObject(String name,
 HashMap<String, Object> chapterInfo = Media.createChapterObject("chapter-name", 1L, 60D, 0D);
 ```
 
-<Variant platform="ios-aep" api="create-chapter-object" repeat="11"/>
+#### Kotlin
+
+**Example**
+
+```java
+val chapterInfo = Media.createChapterObject("chapter-name", 1L, 60D, 0D)
+```
+
+<Variant platform="ios" api="create-chapter-object" repeat="11"/>
 
 Returns a map that contains information about the chapter.
 
@@ -440,11 +493,9 @@ NSDictionary *chapterObject = [AEPMobileMedia createChapterObjectWith:@"chapter_
                                                             startTime:0];
 ```
 
-<Variant platform="android" api="create-qoe-object" repeat="6"/>
+<Variant platform="android" api="create-qoe-object" repeat="8"/>
 
 #### Java
-
-Returns a HashMap instance that contains information about the quality of experience.
 
 **Syntax**
 
@@ -461,7 +512,15 @@ public static HashMap<String, Object> createQoEObject(Long bitrate,
 HashMap<String, Object> qoeInfo = Media.createQoEObject(10000000L, 2D, 23D, 10D);
 ```
 
-<Variant platform="ios-aep" api="create-qoe-object" repeat="11"/>
+#### Kotlin
+
+**Example**
+
+```java
+val qoeInfo = Media.createQoEObject(10000000L, 2D, 23D, 10D)
+```
+
+<Variant platform="ios" api="create-qoe-object" repeat="11"/>
 
 Returns a map that contains information about the quality of experience.
 
@@ -505,11 +564,9 @@ NSDictionary *qoeObject = [AEPMobileMedia createQoEObjectWith:500000
                                                 droppedFrames:10];
 ```
 
-<Variant platform="android" api="create-state-object" repeat="6"/>
+<Variant platform="android" api="create-state-object" repeat="8"/>
 
 #### Java
-
-Returns a HashMap instance that contains information about the State.
 
 **Syntax**
 
@@ -523,7 +580,15 @@ public static HashMap<String, Object> createStateObject(String stateName);
 HashMap<String, Object> playerStateInfo = Media.createStateObject("fullscreen");
 ```
 
-<Variant platform="ios-aep" api="create-state-object" repeat="11"/>
+#### Kotlin
+
+**Example**
+
+```java
+val playerStateInfo = Media.createStateObject("fullscreen")
+```
+
+<Variant platform="ios" api="create-state-object" repeat="11"/>
 
 Returns a map that contains information about the player state.
 
@@ -555,7 +620,7 @@ let fullScreenState = Media.createStateObjectWith(stateName: "fullscreen")
 NSDictionary* fullScreenState = [AEPMobileMedia createStateObjectWith:AEPMediaPlayerState.FULLSCREEN]
 ```
 
-<Variant platform="android" api="track-session-start" repeat="5"/>
+<Variant platform="android" api="track-session-start" repeat="8"/>
 
 #### Java
 
@@ -582,7 +647,31 @@ mediaMetadata.put("tvStation", "Sample TV Station");
 _tracker.trackSessionStart(mediaInfo, mediaMetadata);
 ```
 
-<Variant platform="ios-aep" api="track-session-start" repeat="10"/>
+#### Kotlin
+
+**Example**
+
+```java
+val mediaObject = Media.createMediaObject(
+                        "media-name",
+                        "media-id",
+                        60.0,
+                        MediaConstants.StreamType.VOD,
+                        Media.MediaType.Video
+                    )
+
+val mediaMetadata = HashMap<String, String>()
+// Standard metadata keys provided by adobe.
+mediaMetadata[MediaConstants.VideoMetadataKeys.EPISODE] = "Sample Episode" 
+mediaMetadata[MediaConstants.VideoMetadataKeys.SHOW] = "Sample Show"
+// Custom metadata keys
+mediaMetadata["isUserLoggedIn"] = "false"
+mediaMetadata["tvStation"] = "Sample TV Station"
+
+tracker.trackSessionStart(mediaInfo, mediaMetadata)
+```
+
+<Variant platform="ios" api="track-session-start" repeat="10"/>
 
 #### Swift
 
@@ -634,7 +723,7 @@ NSMutableDictionary *videoMetadata = [[NSMutableDictionary alloc] init];
 [_tracker trackSessionStart:mediaObject metadata:videoMetadata];
 ```
 
-<Variant platform="android" api="track-play" repeat="5"/>
+<Variant platform="android" api="track-play" repeat="8"/>
 
 #### Java
 
@@ -647,10 +736,18 @@ public void trackPlay();
 **Example**
 
 ```java
-_tracker.trackPlay();
+tracker.trackPlay();
 ```
 
-<Variant platform="ios-aep" api="track-play" repeat="10"/>
+#### Kotlin
+
+**Example**
+
+```java
+tracker.trackPlay();
+```
+
+<Variant platform="ios" api="track-play" repeat="10"/>
 
 #### Swift
 
@@ -680,7 +777,7 @@ tracker.trackPlay()
 [_tracker trackPlay];
 ```
 
-<Variant platform="android" api="track-pause" repeat="5"/>
+<Variant platform="android" api="track-pause" repeat="8"/>
 
 #### Java
 
@@ -693,10 +790,18 @@ public void trackPause();
 **Example**
 
 ```java
-_tracker.trackPause();
+tracker.trackPause();
 ```
 
-<Variant platform="ios-aep" api="track-pause" repeat="10"/>
+#### Kotlin
+
+**Example**
+
+```java
+tracker.trackPause();
+```
+
+<Variant platform="ios" api="track-pause" repeat="10"/>
 
 #### Swift
 
@@ -726,7 +831,7 @@ tracker.trackPause()
 [_tracker trackPause];
 ```
 
-<Variant platform="android" api="track-complete" repeat="5"/>
+<Variant platform="android" api="track-complete" repeat="8"/>
 
 #### Java
 
@@ -739,10 +844,18 @@ public void trackComplete();
 **Example**
 
 ```java
-_tracker.trackComplete();
+tracker.trackComplete();
 ```
 
-<Variant platform="ios-aep" api="track-complete" repeat="10"/>
+#### Kotlin
+
+**Example**
+
+```java
+tracker.trackComplete();
+```
+
+<Variant platform="ios" api="track-complete" repeat="10"/>
 
 #### Swift
 
@@ -772,7 +885,7 @@ tracker.trackComplete()
 [_tracker trackComplete];
 ```
 
-<Variant platform="android" api="track-session-end" repeat="5"/>
+<Variant platform="android" api="track-session-end" repeat="8"/>
 
 #### Java
 
@@ -785,10 +898,18 @@ public void trackSessionEnd();
 **Example**
 
 ```java
-_tracker.trackSessionEnd();
+tracker.trackSessionEnd();
 ```
 
-<Variant platform="ios-aep" api="track-session-end" repeat="10"/>
+#### Kotlin
+
+**Example**
+
+```kotlin
+tracker.trackSessionEnd();
+```
+
+<Variant platform="ios" api="track-session-end" repeat="10"/>
 
 #### Swift
 
@@ -818,7 +939,7 @@ tracker.trackSessionEnd()
 [_tracker trackSessionEnd];
 ```
 
-<Variant platform="android" api="track-error" repeat="5"/>
+<Variant platform="android" api="track-error" repeat="8"/>
 
 #### Java
 
@@ -831,10 +952,18 @@ public void trackError(String errorId);
 **Example**
 
 ```java
-_tracker.trackError("errorId");
+tracker.trackError("errorId");
 ```
 
-<Variant platform="ios-aep" api="track-error" repeat="10"/>
+#### Kotlin
+
+**Example**
+
+```java
+tracker.trackError("errorId");
+```
+
+<Variant platform="ios" api="track-error" repeat="10"/>
 
 #### Swift
 
@@ -864,7 +993,7 @@ tracker.trackError(errorId: "errorId")
 [_tracker trackError:@"errorId"];
 ```
 
-<Variant platform="android" api="track-event" repeat="16"/>
+<Variant platform="android" api="track-event" repeat="30"/>
 
 #### Java
 
@@ -968,7 +1097,100 @@ tracker.trackError(errorId: "errorId")
   _tracker.trackEvent(Media.Event.BitrateChange, null, null);
 ```
 
-<Variant platform="ios-aep" api="track-event" repeat="32"/>
+#### Kotlin
+
+**Examples**
+
+**Tracking player states**
+
+```java
+// StateStart
+    val stateObject = Media.createStateObject("fullscreen")
+    tracker.trackEvent(Media.Event.StateStart, stateObject, null)
+
+// StateEnd
+    val stateObject = Media.createStateObject("fullscreen")
+    tracker.trackEvent(Media.Event.StateEnd, stateObject, null)`
+```
+
+**Tracking ad breaks**
+
+```java
+// AdBreakStart
+    val adBreakObject = Media.createAdBreakObject("adbreak-name", 1L, 0.0)
+    tracker.trackEvent(Media.Event.AdBreakStart, adBreakObject, null)
+
+// AdBreakComplete
+    tracker.trackEvent(Media.Event.AdBreakComplete, null, null)
+```
+
+**Tracking ads**
+
+```java
+//AdStart
+    val adObject = Media.createAdObject("ad-name", "ad-id", 1L, 15.0)
+
+    val adMetadata = HashMap<String, String>()
+    // Standard metadata keys provided by adobe.
+    adMetadata[MediaConstants.AdMetadataKeys.ADVERTISER] = "Sample Advertiser"
+    adMetadata[MediaConstants.AdMetadataKeys.CAMPAIGN_ID] = "Sample Campaign"
+    // Custom metadata keys
+    adMetadata["affiliate"] = "Sample affiliate"        
+    tracker.trackEvent(Media.Event.AdStart, adObject, adMetadata)
+
+// AdComplete
+    tracker.trackEvent(Media.Event.AdComplete, null, null)
+
+// AdSkip
+    tracker.trackEvent(Media.Event.AdSkip, null, null)
+```
+
+**Tracking chapters**
+
+```java
+// ChapterStart
+  val chapterObject = Media.createChapterObject("chapter-name", 1L, 60.0, 0.0)
+
+  val chapterMetadata = HashMap<String, String>()
+  chapterMetadata["segmentType"] = "Sample segment type"
+
+  tracker.trackEvent(Media.Event.ChapterStart, chapterObject, chapterMetadata)
+
+// ChapterComplete
+  tracker.trackEvent(Media.Event.ChapterComplete, null, null)
+
+// ChapterSkip
+  tracker.trackEvent(Media.Event.ChapterSkip, null, null)
+```
+
+**Tracking playback events**
+
+```java
+// BufferStart
+   tracker.trackEvent(Media.Event.BufferStart, null, null)
+
+// BufferComplete
+   tracker.trackEvent(Media.Event.BufferComplete, null, null)
+
+// SeekStart
+   tracker.trackEvent(Media.Event.SeekStart, null, null)
+
+// SeekComplete
+   tracker.trackEvent(Media.Event.SeekComplete, null, null)
+```
+
+**Tracking bitrate changes**
+
+```java
+// If the new bitrate value is available provide it to the tracker.
+  val qoeObject = Media.createQoEObject(2000000L, 2D, 25D, 10D)
+  tracker.updateQoEObject(qoeObject)
+
+// Bitrate change
+  tracker.trackEvent(Media.Event.BitrateChange, null, null)
+```
+
+<Variant platform="ios" api="track-event" repeat="32"/>
 
 #### Swift
 
@@ -1169,7 +1391,7 @@ func trackEvent(event: MediaEvent, info: [String: Any]?, metadata: [String: Stri
   [_tracker trackEvent:AEPMediaEventBitrateChange info:nil metadata:nil];
 ```
 
-<Variant platform="android" api="update-current-playhead" repeat="7"/>
+<Variant platform="android" api="update-current-playhead" repeat="12"/>
 
 #### Java
 
@@ -1182,7 +1404,7 @@ public void updateCurrentPlayhead(double time);
 **Example**
 
 ```java
-_tracker.updateCurrentPlayhead(1);
+tracker.updateCurrentPlayhead(1);
 ```
 
 **Live streaming example**
@@ -1191,10 +1413,26 @@ _tracker.updateCurrentPlayhead(1);
 //Calculation for number of seconds since midnight UTC of the day
 double timeFromMidnightInSecond = (System.currentTimeMillis()/1000) % 86400;
 
-_tracker.updateCurrentPlayhead(timeFromMidnightInSecond);
+tracker.updateCurrentPlayhead(timeFromMidnightInSecond);
 ```
 
-<Variant platform="ios-aep" api="update-current-playhead" repeat="12"/>
+#### Kotlin
+
+**Example**
+
+```java
+tracker.updateCurrentPlayhead(1);
+```
+
+**Live streaming example**
+
+```java
+val timeFromMidnightInSecond = (System.currentTimeMillis() / 1000 % 86400).toDouble()
+tracker.updateCurrentPlayhead(timeFromMidnightInSecond);
+}
+```
+
+<Variant platform="ios" api="update-current-playhead" repeat="12"/>
 
 #### Swift
 
@@ -1234,7 +1472,7 @@ tracker.updateCurrentPlayhead(time: timeFromMidnightInSecond)
 [_tracker updateCurrentPlayhead:1];
 ```
 
-<Variant platform="android" api="update-qoe-object" repeat="5"/>
+<Variant platform="android" api="update-qoe-object" repeat="8"/>
 
 #### Java
 
@@ -1248,10 +1486,19 @@ public void updateQoEObject(Map<String, Object> qoeObject);
 
 ```java
 HashMap<String, Object> qoeObject = Media.createQoEObject(1000000L, 2D, 25D, 10D);
-_tracker.updateQoEObject(qoeObject);
+tracker.updateQoEObject(qoeObject);
 ```
 
-<Variant platform="ios-aep" api="update-qoe-object" repeat="10"/>
+#### Kotlin
+
+**Example**
+
+```java
+val qoeObject = Media.createQoEObject(1000000L, 2D, 25D, 10D)
+tracker.updateQoEObject(qoeObject)
+```
+
+<Variant platform="ios" api="update-qoe-object" repeat="10"/>
 
 #### Swift
 
@@ -1303,7 +1550,7 @@ public class Media {
 }
 ```
 
-<Variant platform="ios-aep" api="media-type" repeat="6"/>
+<Variant platform="ios" api="media-type" repeat="6"/>
 
 ```swift
 @objc(AEPMediaType)
@@ -1375,7 +1622,7 @@ public class MediaConstants {
 }
 ```
 
-<Variant platform="ios-aep" api="stream-type" repeat="6"/>
+<Variant platform="ios" api="stream-type" repeat="6"/>
 
 ```swift
 public class MediaConstants: NSObject {
@@ -1447,7 +1694,7 @@ public class MediaConstants {
 }
 ```
 
-<Variant platform="ios-aep" api="standard-video-constants" repeat="6"/>
+<Variant platform="ios" api="standard-video-constants" repeat="6"/>
 
 ```swift
 public class MediaConstants: NSObject {
@@ -1519,7 +1766,7 @@ public class MediaConstants {
 }
 ```
 
-<Variant platform="ios-aep" api="standard-audio-constants" repeat="6"/>
+<Variant platform="ios" api="standard-audio-constants" repeat="6"/>
 
 ```swift
 public class MediaConstants: NSObject {
@@ -1580,7 +1827,7 @@ public class MediaConstants {
 }
 ```
 
-<Variant platform="ios-aep" api="standard-ad-constants" repeat="6"/>
+<Variant platform="ios" api="standard-ad-constants" repeat="6"/>
 
 ```swift
 public class MediaConstants: NSObject {
@@ -1639,7 +1886,7 @@ public class MediaConstants {
 }
 ```
 
-<Variant platform="ios-aep" api="player-state-constants" repeat="6"/>
+<Variant platform="ios" api="player-state-constants" repeat="6"/>
 
 ```swift
 public class MediaConstants: NSObject {
@@ -1759,7 +2006,7 @@ public class Media {
 ```
 
 
-<Variant platform="ios-aep" api="media-events" repeat="6"/>
+<Variant platform="ios" api="media-events" repeat="6"/>
 
 ```swift
 @objc(AEPMediaEvent)
@@ -1842,7 +2089,7 @@ mediaObject.put(MediaConstants.MediaObjectKey.RESUMED, true);
 _tracker.trackSessionStart(mediaObject, null);
 ```
 
-<Variant platform="ios-aep" api="media-resume" repeat="10"/>
+<Variant platform="ios" api="media-resume" repeat="10"/>
 
 #### Swift
 

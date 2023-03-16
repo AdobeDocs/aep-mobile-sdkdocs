@@ -52,7 +52,7 @@ There are no key-value pairs for this event.
 
 #### Hub shared state
 
-Audience Manager listens for the configuration shared state events. For more information about shared state events, see the [shared states and events guide](../building-mobile-extensions/shared-states-and-events.md).
+Audience Manager listens for the configuration shared state events.
 
 ### Configuration response content
 

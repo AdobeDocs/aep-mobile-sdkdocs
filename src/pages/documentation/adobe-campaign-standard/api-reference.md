@@ -14,11 +14,15 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
 ## registerExtension
 
 Registers the Campaign Standard extension with the Mobile Core.
+
+<InlineAlert variant="warning" slots="text"/>
+
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -28,7 +32,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=register-extension"/>
+<Tabs query="platform=ios&api=register-extension"/>
 
 ## resetLinkageFields
 
@@ -44,11 +48,11 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=reset-linkage-fields"/>
+<Tabs query="platform=ios&api=reset-linkage-fields"/>
 
 ## setLinkageFields
 
-Sets the Campaign linkage fields (CRM IDs) in the mobile SDK to be used for downloading personalized messages from Campaign.
+Sets the Campaign linkage fields (CRM IDs) in Mobile SDK to be used for downloading personalized messages from Campaign.
 
 The set linkage fields are stored as a base64 encoded JSON string in memory and they are sent in a custom HTTP header `X-InApp-Auth`.
 
@@ -60,4 +64,4 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=set-linkage-fields"/>
+<Tabs query="platform=ios&api=set-linkage-fields"/>

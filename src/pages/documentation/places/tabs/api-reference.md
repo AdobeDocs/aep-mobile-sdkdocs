@@ -1,3 +1,21 @@
+<Variant platform="android" api="clear" repeat="6"/>
+
+#### Java
+
+**Example**
+
+```java
+Places.clear();
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+Places.clear()
+```
+
 <Variant platform="ios" api="clear" repeat="10"/>
 
 #### Swift
@@ -40,6 +58,22 @@ clear(): void
 
 ```typescript
 Places.clear();
+<Variant platform="android" api="extension-version" repeat="6"/>
+
+#### Java
+
+**Example**
+
+```java
+String placesExtensionVersion = Places.extensionVersion();
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+val placesExtensionVersion: String = Places.extensionVersion()
 ```
 
 <Variant platform="ios" api="extension-version" repeat="10"/>
@@ -85,6 +119,31 @@ extensionVersion(): Promise<string>
 ```typescript
 const version = await Places.extensionVersion();
 console.log(`AdobeExperienceSDK: Places version: ${version}`);
+<Variant platform="android" api="get-current-points-of-interest" repeat="6"/>
+
+#### Java
+
+**Example**
+
+```java
+Places.getCurrentPointsOfInterest(new AdobeCallback<List<PlacesPOI>>() {
+    @Override
+    public void call(List<PlacesPOI> pois) {
+        // use the obtained POIs that the device is within
+        processUserWithinPois(pois);
+    }
+});
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+Places.getCurrentPointsOfInterest() { pois -> 
+    // use the obtained POIs that the device is within
+    processUserWithinPois(pois)
+}
 ```
 
 <Variant platform="ios" api="get-current-points-of-interest" repeat="10"/>
@@ -135,6 +194,31 @@ getCurrentPointsOfInterest(): Promise<Array<PlacesPOI>>
 const pois = await Places.getCurrentPointsOfInterest();
 console.log('AdobeExperienceSDK: Places pois: ' + pois);
 );
+<Variant platform="android" api="get-last-known-location" repeat="6"/>
+
+#### Java
+
+**Example**
+
+```java
+Places.getLastKnownLocation(new AdobeCallback<Location>() {
+    @Override
+    public void call(Location lastLocation) {
+        // do something with the last known location
+        processLastKnownLocation(lastLocation);
+    }
+});
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+Places.getLastKnownLocation() { lastLocation -> 
+    // do something with the last known location
+    processLastKnownLocation(lastLocation)
+}
 ```
 
 <Variant platform="ios" api="get-last-known-location" repeat="10"/>
@@ -189,6 +273,53 @@ getLastKnownLocation(): Promise<PlacesLocation>
 const location = await Places.getLastKnownLocation();
 console.log('AdobeExperienceSDK: Places location: ' + location)
 );
+```
+
+<Variant platform="android" api="get-nearby-points-of-interest" repeat="8"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void getNearbyPointsOfInterest(@NonNull final Location location,
+    final int limit,
+    @NonNull final AdobeCallback<List<PlacesPOI>> successCallback,
+    @NonNull final AdobeCallback<PlacesRequestError> errorCallback);
+```
+
+**Example**
+
+```java
+Places.getNearbyPointsOfInterest(currentLocation, 10,
+    new AdobeCallback<List<PlacesPOI>>() {
+        @Override
+        public void call(List<PlacesPOI> pois) {
+            // do required processing with the returned nearbyPoi array
+            startMonitoringPois(pois);
+        }
+    }, new AdobeCallback<PlacesRequestError>() {
+        @Override
+        public void call(PlacesRequestError placesRequestError) {
+            // look for the placesRequestError and handle the error accordingly
+            handleError(placesRequestError);
+        }
+    }
+);
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+Places.getNearbyPointsOfInterest(currentLocation, 10, { pois -> 
+    // do required processing with the returned nearbyPoi array
+    startMonitoringPois(pois);
+}, { error -> 
+    // look for the placesRequestError and handle the error accordingly
+    handleError(placesRequestError);
+})
 ```
 
 <Variant platform="ios" api="get-nearby-points-of-interest" repeat="10"/>
@@ -256,7 +387,55 @@ try {
 }
 ```
 
-<Variant platform="ios" api="process-region-event" repeat="4"/>
+<Variant platform="android" api="process-geofence" repeat="8"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void processGeofence(final Geofence geofence, final int transitionType);
+```
+
+**Example**
+
+```java
+public class GeofenceTransitionsIntentService extends IntentService {
+
+    public GeofenceTransitionsIntentService() {
+        super("GeofenceTransitionsIntentService");
+    }
+
+    protected void onHandleIntent(Intent intent) {
+        GeofencingEvent geofencingEvent = GeofencingEvent.fromIntent(intent);
+
+        List<Geofence> geofences = geofencingEvent.getTriggeringGeofences();
+
+        if (geofences.size() > 0) {
+            // Call the Places API to process information
+            Places.processGeofence(geofences.get(0), geofencingEvent.getGeofenceTransition());
+        }
+    }
+}
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+fun onHandleIntent(intent: Intent) {
+    val geofencingEvent = GeofencingEvent.fromIntent(intent)
+
+    val geofences = geofencingEvent.getTriggeringGeofences()
+
+    if (!geofences.isEmpty()) {
+        Places.processGeofence(geofences.first(), geofencingEvent.getGeofenceTransition())
+    }
+}
+```
+
+<Variant platform="ios" api="process-region-event" repeat="10"/>
 
 #### Swift
 
@@ -296,11 +475,25 @@ CLCircularRegion *region = [[CLCircularRegion alloc] initWithCenter:CLLocationCo
 [AEPMobilePlaces processRegionEvent:AEPPlacesRegionEventEntry forRegion:region];
 ```
 
-<Variant platform="react-native" api="process-region-event" repeat="1"/>
+<Variant platform="android" api="register-extension" repeat="6"/>
 
-Missing?
+#### Java
 
-<Variant platform="ios" api="register-extension" repeat="4"/>
+**Example**
+
+```java
+Places.registerExtension();
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+Places.registerExtension()
+```
+
+<Variant platform="ios" api="register-extension" repeat="6"/>
 
 #### Swift
 
@@ -352,9 +545,29 @@ Places.setAccuracyAuthorization(.fullAccuracy)
 [AEPMobilePlaces setAccuracyAuthorization:CLAccuracyAuthorizationFullAccuracy];
 ```
 
-<Variant platform="react-native" api="set-accuracy-authorization" repeat="1"/>
+<Variant platform="android" api="set-authorization-status" repeat="8"/>
 
-Missing????
+#### Java
+
+**Syntax**
+
+```java
+public static void setAuthorizationStatus(final PlacesAuthorizationStatus status);
+```
+
+**Example**
+
+```java
+Places.setAuthorizationStatus(PlacesAuthorizationStatus.ALWAYS);
+```
+
+#### Kotlin
+
+**Example**
+
+```java
+Places.setAuthorizationStatus(PlacesAuthorizationStatus.ALWAYS)
+```
 
 <Variant platform="ios" api="set-authorization-status" repeat="10"/>
 

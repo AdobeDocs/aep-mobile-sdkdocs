@@ -14,7 +14,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=clear-prefetch-cache"/>
+<Tabs query="platform=ios&api=clear-prefetch-cache"/>
 
 <!-- React Native
 
@@ -35,7 +35,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=clicked-location"/>
+<Tabs query="platform=ios&api=clicked-location"/>
 
 React Native
 
@@ -53,7 +53,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=displayed-locations"/>
+<Tabs query="platform=ios&api=displayed-locations"/>
 
 React Native
 
@@ -71,7 +71,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
 React Native
 
@@ -91,7 +91,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-session-id"/>
+<Tabs query="platform=ios&api=get-session-id"/>
 
 React Native
 
@@ -109,7 +109,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-third-party-id"/>
+<Tabs query="platform=ios&api=get-third-party-id"/>
 
 React Native
 
@@ -127,7 +127,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=get-tnt-id"/>
+<Tabs query="platform=ios&api=get-tnt-id"/>
 
 React Native
 
@@ -145,7 +145,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=prefetch-content"/>
+<Tabs query="platform=ios&api=prefetch-content"/>
 
 React Native
 
@@ -153,17 +153,15 @@ React Native
 
 ## registerExtension
 
-Registers the Target extension with the Mobile Core.
+<InlineAlert variant="warning" slots="text"/>
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&api=register-extension"/>
-
-iOS
-
-<Tabs query="platform=ios-aep&api=register-extension"/>
 
 React Native
 
@@ -181,7 +179,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=reset-experience"/>
+<Tabs query="platform=ios&api=reset-experience"/>
 
 React Native
 
@@ -207,7 +205,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=retrieve-location-content"/>
+<Tabs query="platform=ios&api=retrieve-location-content"/>
 
 React Native
 
@@ -225,7 +223,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=set-preview-restart-deep-link"/>
+<Tabs query="platform=ios&api=set-preview-restart-deep-link"/>
 
 React Native
 
@@ -247,7 +245,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=set-session-id"/>
+<Tabs query="platform=ios&api=set-session-id"/>
 
 React Native
 
@@ -265,7 +263,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=set-third-party-id"/>
+<Tabs query="platform=ios&api=set-third-party-id"/>
 
 React Native
 
@@ -287,7 +285,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=set-tnt-id"/>
+<Tabs query="platform=ios&api=set-tnt-id"/>
 
 React Native
 
@@ -305,7 +303,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=visual-preview"/>
+<Tabs query="platform=ios&api=visual-preview"/>
 
 ## Public classes
 
@@ -321,13 +319,15 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=target-request"/>
+<Tabs query="platform=ios&api=target-request"/>
 
 React Native
 
 <Tabs query="platform=react-native&api=target-request"/>
 
 ### Target prefetch
+
+This class contains the name of the Target location/mbox and target parameters to be used in a prefetch request.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
@@ -337,13 +337,15 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=target-prefetch"/>
+<Tabs query="platform=ios&api=target-prefetch"/>
 
 React Native
 
 <Tabs query="platform=react-native&api=target-prefetch"/>
 
 ### Target parameters
+
+This class may optionally contain the mbox parameters dictionary, the profile parameters dictionary, the TargetOrder object, as well as the TargetProduct object.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
@@ -353,13 +355,15 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=target-parameters"/>
+<Tabs query="platform=ios&api=target-parameters"/>
 
 React Native
 
 <Tabs query="platform=react-native&api=target-parameters"/>
 
 ### Target order
+
+This class contains an orderId, an order total, and an array for purchasedProductIds.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
@@ -369,13 +373,15 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=target-order"/>
+<Tabs query="platform=ios&api=target-order"/>
 
 React Native
 
 <Tabs query="platform=react-native&api=target-order"/>
 
 ### Target product
+
+This class contains the productId and categoryId.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
@@ -385,7 +391,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=target-product"/>
+<Tabs query="platform=ios&api=target-product"/>
 
 React Native
 

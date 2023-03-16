@@ -1,5 +1,23 @@
 # Release Notes
 
+## February 28, 2023
+
+### iOS AEPEdge 1.6.0
+
+* Added tvOS support.
+
+## February 13, 2023
+
+### Android Edge 1.4.1
+
+* Improves error handling when processing `Edge.sendEvent` requests by catching and logging unexpected `RuntimeException` instances thrown from within caller's `EdgeCallback` handler implementation.
+
+## January 31, 2023
+
+### Android Edge 2.0.0
+
+* Major version update for [Edge Network](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edge-android).
+
 ## October 19, 2022
 
 ### iOS AEPEdge 1.5.0

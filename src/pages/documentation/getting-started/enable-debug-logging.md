@@ -21,36 +21,31 @@ Using `Debug` or `Verbose` log levels may cause performance or security concerns
 
 To enable debug logging, use the following methods:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="7"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&task=enable"/>
 
-iOS (AEP 3.x)
+iOS
 
-<Tabs query="platform=ios-aep&task=enable"/>
+<Tabs query="platform=ios&task=enable"/>
 
-iOS (ACP 2.x)
+<!-- React Native
 
-<Tabs query="platform=ios-acp&task=enable"/>
+<Tabs query="platform=react-native&task=enable"/> -->
 
-React Native
+<!-- Flutter
 
-<Tabs query="platform=react-native&task=enable"/>
+<Tabs query="platform=flutter&task=enable"/> -->
 
-Flutter
-
-<Tabs query="platform=flutter&task=enable"/>
-
-Cordova
+<!-- Cordova
 
 <Tabs query="platform=cordova&task=enable"/>
 
 Unity
 
-<Tabs query="platform=unity&task=enable"/>
-
+<Tabs query="platform=unity&task=enable"/> -->
 
 ## Lifecycle metrics
 
@@ -66,7 +61,7 @@ This section shows you how to collect lifecycle metrics. To view, and report on 
 
 Lifecycle metrics are now available for Edge Network implementations. For more details about the XDM-based lifecycle metrics, see [Lifecycle for Edge Network](../lifecycle-for-edge-network/index.md).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="7"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
@@ -76,15 +71,15 @@ iOS
 
 <Tabs query="platform=ios&task=metrics"/>
 
-React Native
+<!-- React Native
 
-<Tabs query="platform=react-native&task=metrics"/>
+<Tabs query="platform=react-native&task=metrics"/> -->
 
-Flutter
+<!-- Flutter
 
-<Tabs query="platform=flutter&task=metrics"/>
+<Tabs query="platform=flutter&task=metrics"/> -->
 
-Cordova
+<!-- Cordova
 
 <Tabs query="platform=cordova&task=metrics"/>
 
@@ -94,7 +89,7 @@ Unity
 
 Xamarin
 
-<Tabs query="platform=xamarin&task=metrics"/>
+<Tabs query="platform=xamarin&task=metrics"/> -->
 
 
 For more information, see the documentation on [Lifecycle metrics](../mobile-core/lifecycle/index.md).

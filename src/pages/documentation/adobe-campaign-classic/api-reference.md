@@ -14,7 +14,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=extension-version"/>
+<Tabs query="platform=ios&api=extension-version"/>
 
 React Native
 
@@ -32,7 +32,19 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=register-device"/>
+<Tabs query="platform=ios&api=register-device"/>
+
+## registerExtension
+
+<InlineAlert variant="warning" slots="text"/>
+
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+
+Android
+
+<Tabs query="platform=android&api=register-extension"/>
 
 React Native
 
@@ -50,7 +62,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=track-notification-click"/>
+<Tabs query="platform=ios&api=track-notification-click"/>
 
 React Native
 
@@ -68,7 +80,7 @@ Android
 
 iOS
 
-<Tabs query="platform=ios-aep&api=track-notification-receive"/>
+<Tabs query="platform=ios&api=track-notification-receive"/>
 
 React Native
 

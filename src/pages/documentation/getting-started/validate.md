@@ -4,7 +4,7 @@ As you begin to add solution APIs to your mobile implementation, you are going t
 
 Assurance is available across all [SDK platforms and frameworks](../current-sdk-versions.md). Installation and setup instructions are available [here](../platform-assurance/index.md#quick-setup).
 
-Once you have Assurance integrated, you can create a [new session](../platform-assurance/tutorials/index.md#creating-sessions) by either scanning a QR code or by following a unique deep link URL.
+Once you have Assurance integrated, you can create a [new session](../platform-assurance/tutorials/index.md#create-sessions) by either scanning a QR code or by following a unique deep link URL.
 
 The main interface for Assurance will show a running event list of all SDK events, including a configuration response event that will provide a readout of all configuration values obtained from the Data Collection UI.
 
@@ -36,6 +36,5 @@ To get started, see the **Mobile Foundations** and **Experience Cloud** sections
 
 ## Get help
 
-* Visit the SDK [community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-sdks/ct-p/platform-sdk) to ask questions
+* Visit the SDK [community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform/ct-p/adobe-experience-platform-community) to ask questions
 * Contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General&support-tab=home#support) for immediate assistance
-

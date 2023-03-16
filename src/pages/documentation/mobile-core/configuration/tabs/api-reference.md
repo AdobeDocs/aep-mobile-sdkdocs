@@ -14,7 +14,7 @@ public static void clearUpdatedConfiguration();
 MobileCore.clearUpdatedConfiguration();
 ```
 
-<Variant platform="ios-aep" api="clear-updated-configuration" repeat="10"/>
+<Variant platform="ios" api="clear-updated-configuration" repeat="10"/>
 
 #### Swift
 
@@ -65,7 +65,7 @@ MobileCore.clearUpdatedConfiguration();
 **Syntax**
 
 ```java
-public static void configureWithAppID(final String appId);
+public static void configureWithAppID(@NonNull final String appId);
 ```
 
 **Example**
@@ -74,7 +74,7 @@ public static void configureWithAppID(final String appId);
 MobileCore.configureWithAppId("1423ae38-8385-8963-8693-28375403491d");
 ```
 
-<Variant platform="ios-aep" api="configure-with-app-id" repeat="10"/>
+<Variant platform="ios" api="configure-with-app-id" repeat="10"/>
 
 #### Swift
 
@@ -111,7 +111,7 @@ MobileCore.configureWithAppId("1423ae38-8385-8963-8693-28375403491d");
 **Syntax**
 
 ```java
-public static void configureWithFileInAssets(final String fileName);
+public static void configureWithFileInAssets(@NonNull final String fileName);
 ```
 
 **Example**
@@ -127,7 +127,7 @@ MobileCore.configureWithFileInAssets("exampleJSONfile.json");
 **Syntax**
 
 ```java
-public static void configureWithFileInPath(final String filePath);
+public static void configureWithFileInPath(@NonNull final String filePath);
 ```
 
 **Example**
@@ -136,7 +136,7 @@ public static void configureWithFileInPath(final String filePath);
 MobileCore.configureWithFileInPath("absolute/path/to/exampleJSONfile.json");
 ```
 
-<Variant platform="ios-aep" api="configure-with-file-in-path" repeat="10"/>
+<Variant platform="ios" api="configure-with-file-in-path" repeat="10"/>
 
 #### Swift
 
@@ -176,7 +176,7 @@ MobileCore.configureWithFileInPath("absolute/path/to/exampleJSONfile.json");
 String coreExtensionVersion = MobileCore.extensionVersion();
 ```
 
-<Variant platform="ios-aep" api="extension-version" repeat="4"/>
+<Variant platform="ios" api="extension-version" repeat="4"/>
 
 #### Swift
 
@@ -219,7 +219,7 @@ String coreExtensionVersion = await FlutterACPCore.extensionVersion;
 **Syntax**
 
 ```java
-public static void updateConfiguration(final Map configMap);
+public static void updateConfiguration(@NonNull final Map configMap);
 ```
 
 **Example**
@@ -230,7 +230,7 @@ data.put("global.privacy", "optedout");
 MobileCore.updateConfiguration(data);
 ```
 
-<Variant platform="ios-aep" api="update-configuration" repeat="10"/>
+<Variant platform="ios" api="update-configuration" repeat="10"/>
 
 #### Swift
 

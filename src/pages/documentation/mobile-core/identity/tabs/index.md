@@ -5,10 +5,12 @@
 Import the library:
 
 ```java
-import com.adobe.marketing.mobile.*;
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Identity;
+import com.adobe.marketing.mobile.Extension;
 ```
 
-<Variant platform="ios-aep" task="add" repeat="4"/>
+<Variant platform="ios" task="add" repeat="4"/>
 
 #### Swift
 
@@ -27,7 +29,6 @@ import AEPIdentity
 <Variant platform="react-native" task="add" repeat="2"/>
 
 #### JavaScript
-
 ```jsx
 import {AEPIdentity} from '@adobe/react-native-aepcore';
 ```
@@ -35,14 +36,13 @@ import {AEPIdentity} from '@adobe/react-native-aepcore';
 <!-- <Variant platform="flutter" task="add" repeat="2"/>
 
 #### Dart
-
 ```dart
 import 'package:flutter_acpcore/flutter_acpidentity.dart';
 ``` -->
 
 <Variant platform="android" task="register" repeat="3"/>
 
-After calling the `setApplication()` method in the `onCreate()` method, register the extension. If the registration was not successful, an `InvalidInitException` is thrown.
+After calling the `setApplication()` method in the `onCreate()` method, register the Identity extension.
 
 #### Java
 
@@ -52,16 +52,15 @@ public class MobiletApp extends Application {
 public void onCreate() {
 super.onCreate();
      MobileCore.setApplication(this);
-     try {
-         Identity.registerExtension();
-     } catch (Exception e) {
-         //Log the exception
-     }
+     List<Class<? extends Extension>> extensions = Arrays.asList(Identity.EXTENSION, ...);
+     MobileCore.registerExtensions(extensions, o -> {
+        // Any other post registration processing
+    });
   }
 }
 ```
 
-<Variant platform="ios-aep" task="register" repeat="6"/>
+<Variant platform="ios" task="register" repeat="6"/>
 
 Register the Identity extension in your app's `didFinishLaunchingWithOptions` function:
 
@@ -103,15 +102,15 @@ When using Flutter, registering Identity with Mobile Core should be done in nati
 To append visitor information to the URL that is being used to open the web view, call [appendVisitorInfoForUrl](#appendtourl-appendvisitorinfoforurl):
 
 ```java
-Identity.appendVisitorInfoForURL("https://example.com", new AdobeCallback<String>() {    
-    @Override    
-    public void call(String urlWithAdobeVisitorInfo) {        
-        //handle the new URL here        
-        //For example, open the URL on the device browser        
-        //        
-        Intent i = new Intent(Intent.ACTION_VIEW);        
-        i.setData(Uri.parse(urlWithAdobeVisitorInfo));        
-        startActivity(i);    
+Identity.appendVisitorInfoForURL("https://example.com", new AdobeCallback<String>() {
+    @Override
+    public void call(String urlWithAdobeVisitorInfo) {
+        //handle the new URL here
+        //For example, open the URL on the device browser
+        //
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(urlWithAdobeVisitorInfo));
+        startActivity(i);
     }
 });
 ```
@@ -119,22 +118,22 @@ Identity.appendVisitorInfoForURL("https://example.com", new AdobeCallback<String
 Alternately, starting in SDK version 1.4.0 (Identity version 1.1.0), you can call [getUrlVariables](#geturlvariables) and build your own URL:
 
 ```java
-Identity.getUrlVariables(new AdobeCallback<String>() {    
-    @Override    
-    public void call(String stringWithAdobeVisitorInfo) {        
-        //handle the URL query parameter string here 
-        //For example, open the URL on the device browser        
-        //        
-        Intent i = new Intent(Intent.ACTION_VIEW);        
-        i.setData(Uri.parse("https://example.com?" + urlWithAdobeVisitorInfo));        
-        startActivity(i);    
+Identity.getUrlVariables(new AdobeCallback<String>() {
+    @Override
+    public void call(String stringWithAdobeVisitorInfo) {
+        //handle the URL query parameter string here
+        //For example, open the URL on the device browser
+        //
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse("https://example.com?" + urlWithAdobeVisitorInfo));
+        startActivity(i);
     }
 });
 ```
 
-<Variant platform="ios-aep" task="implement" repeat="10"/>
+<Variant platform="ios" task="implement" repeat="10"/>
 
-To append visitor information to the URL that is being used to open the web view, call [appendToUrl](./api-reference.md#appendtourl-appendvisitorinfoforurl): 
+To append visitor information to the URL that is being used to open the web view, call [appendToUrl](./api-reference.md#appendtourl-appendvisitorinfoforurl):
 
 #### Swift
 
