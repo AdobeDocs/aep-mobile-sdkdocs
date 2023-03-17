@@ -1,3 +1,8 @@
+---
+title: Adobe Campaign Standard event reference
+description: An event reference for the Adobe Campaign Standard mobile extension.
+---
+
 # Adobe Campaign Standard event reference
 
 ## Events handled

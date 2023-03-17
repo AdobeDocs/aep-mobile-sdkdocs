@@ -1,3 +1,8 @@
+---
+title: Native handling of JavaScript events
+description: A guide explaining how you can handle events from in-app message interactions natively within your application.
+---
+
 import Tabs from './tabs/native-from-javascript.md'
 
 # Native handling of JavaScript events

@@ -1,3 +1,8 @@
+---
+title: Programatically control the display of in-app messages
+description: A guide that explains how to use a Messaging delegate to programatically control the display of in-app messages.
+---
+
 import Tabs from './tabs/messaging-delegate.md'
 
 # Programmatically control the display of in-app messages

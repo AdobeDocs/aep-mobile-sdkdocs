@@ -1,3 +1,8 @@
+---
+title: Adobe Journey Optimizer tutorials
+description: An overview of the available tutorials for the Adobe Journey Optimizer extension.
+---
+
 # Adobe Journey Optimizer - Guides and how-tos
 
 * [Programmatically control the display of in-app messages](./messaging-delegate.md)

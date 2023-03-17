@@ -1,3 +1,9 @@
+---
+title: Adobe Analytics for Media API release notes
+description: The release notes for the Adobe Analytics for Media mobile extension.
+---
+
+
 # Release Notes
 
 ## February 3, 2023

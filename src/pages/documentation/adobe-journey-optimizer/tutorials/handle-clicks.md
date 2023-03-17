@@ -1,3 +1,8 @@
+---
+title: Handle URL clicks from an in-app message
+description: A tutorial that explains how you can handle URL clicks from an in-app message.
+---
+
 # Handle URL clicks from an in-app message
 
 When a link is clicked in an in-app message, the `FullscreenMessageDelegate` is responsible for handling behavior.

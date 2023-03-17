@@ -1,3 +1,8 @@
+---
+title: Adobe Campaign Standard overview
+description: An overview for the Adobe Campaign Standard mobile extension.
+---
+
 import Tabs from './tabs/index.md'
 
 # Adobe Campaign Standard

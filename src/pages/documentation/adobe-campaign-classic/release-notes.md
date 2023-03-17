@@ -1,3 +1,8 @@
+---
+title: Adobe Campaign Classic release notes
+description: The release notes for the Adobe Campaign Classic mobile extension.
+---
+
 # Release Notes
 
 ## January 31, 2023

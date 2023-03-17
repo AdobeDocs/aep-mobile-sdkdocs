@@ -1,3 +1,8 @@
+---
+title: Adobe Analytics for Media overview
+description: An overview for the Adobe Analytics for Media mobile extension.
+---
+
 import Tabs from './tabs/index.md'
 
 # Adobe Analytics - Media Analytics for Audio and Video

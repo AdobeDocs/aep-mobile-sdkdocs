@@ -1,3 +1,8 @@
+---
+title: Validate in-app messaging
+description: A guide explaining how to validate in-app messaging for Adobe Journey Optimizer using Adobe Experience Platform Assurance.
+---
+
 # Validate in-app messaging using Adobe Experience Platform Assurance
 
 This guide will walk you through steps necessary to ensure your app is properly configured for in-app messaging with Adobe Journey Optimizer (AJO).

@@ -1,3 +1,8 @@
+---
+title: Adobe Campaign Standard release notes
+description: The release notes for the Adobe Campaign Standard mobile extension.
+---
+
 # Release Notes
 
 ## February 17, 2023

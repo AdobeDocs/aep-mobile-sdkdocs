@@ -1,3 +1,8 @@
+---
+title: Execute JavaScript methods from native code
+description: A tutorial that explains how to execute JavaScript in an in-app message from native code.
+---
+
 import Tabs from './tabs/javascript-from-native.md'
 
 # Execute JavaScript methods from native code

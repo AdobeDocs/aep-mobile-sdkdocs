@@ -1,3 +1,8 @@
+---
+title: Adobe Campaign Classic event reference
+description: An event reference for the Adobe Campaign Classic mobile extension.
+---
+
 # Campaign Classic event reference
 
 ## Events handled

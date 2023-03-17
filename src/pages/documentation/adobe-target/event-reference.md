@@ -1,3 +1,8 @@
+---
+title: Adobe Target event reference
+description: An event reference for the Adobe Target mobile extension.
+---
+
 # Adobe Target event reference
 
 <InlineAlert variant="warning" slots="text"/>

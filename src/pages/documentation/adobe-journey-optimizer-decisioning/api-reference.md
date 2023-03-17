@@ -1,3 +1,8 @@
+---
+title: Adobe Journey Optimizer Decisioning API reference
+description: An API reference for the Adobe Journey Optimizer Decisioning mobile extension.
+---
+
 import Tabs from './tabs/api-reference.md'
 
 # API reference
