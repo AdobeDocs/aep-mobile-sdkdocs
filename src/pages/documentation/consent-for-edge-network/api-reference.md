@@ -1,3 +1,8 @@
+---
+title: Consent for Edge Network API reference
+description: An API reference for the Consent for Edge Network mobile extension.
+---
+
 import Tabs from './tabs/api-reference.md'
 
 # API Reference

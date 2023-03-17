@@ -1,3 +1,8 @@
+---
+title: Consent for Edge Network overview
+description: An overview for the Consent for Edge Network mobile extension.
+---
+
 import Tabs from './tabs/index.md'
 
 # Consent for Edge Network

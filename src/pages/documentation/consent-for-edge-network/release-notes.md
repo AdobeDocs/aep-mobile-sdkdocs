@@ -1,3 +1,8 @@
+---
+title: Consent for Edge Network release notes
+description: The release notes for the Consent for Edge Network mobile extension.
+---
+
 # Release Notes
 
 ## March 1, 2023
