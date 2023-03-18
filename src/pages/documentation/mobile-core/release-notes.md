@@ -1,3 +1,8 @@
+---
+title: Mobile Core release notes
+description: The release notes for the Mobile Core extension.
+---
+
 # Release Notes
 
 ## February 9, 2023

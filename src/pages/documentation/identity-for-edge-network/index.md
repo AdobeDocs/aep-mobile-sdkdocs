@@ -1,3 +1,8 @@
+---
+title: Identity for Edge Network overview
+description: An overview for the Identity for Edge Network mobile extension.
+---
+
 import Tabs from './tabs/index.md'
 
 # Identity for Edge Network

@@ -1,3 +1,8 @@
+---
+title: Attach data to SDK events
+description: A guide that explains how to attach data, using  Mobile Core, to your Mobile SDK events.
+---
+
 import AttachingDataAnalytics from './tabs/attach-data/attaching-data/analytics.md'
 import AttachingDataTarget from './tabs/attach-data/attaching-data/target.md'
 

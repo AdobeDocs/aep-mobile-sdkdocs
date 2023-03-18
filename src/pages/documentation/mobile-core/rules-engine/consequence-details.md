@@ -1,3 +1,8 @@
+---
+title: Mobile Core Rules Engine consequence details
+description: A guide that explains the rule consequences/actions that can be executed as part of the Adobe Experience Platform Mobile SDK.
+---
+
 # Rules Engine consequence details
 
 The Adobe Experience Platform Mobile SDK supports multiple types of rule consequences (also known as actions) that can be executed when the trigger event and the conditions are met. This section contains a detailed description of each rule consequence.

@@ -1,6 +1,11 @@
+---
+title: Get the Adobe Experience Platform SDK
+description: A guide that explains how to install the Adobe Experience Platform SDK in your application.
+---
+
 import Tabs from './tabs/get-the-sdk.md'
 
-# Get the Experience Platform SDK
+# Get the Adobe Experience Platform SDK
 
 The Adobe Experience Platform SDK is available for Apple iOS (includes iOS, iPadOS, and tvOS) via [Cocoapods](https://cocoapods.org/) and for Google Android via [Gradle](https://gradle.org).
 

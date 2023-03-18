@@ -1,3 +1,8 @@
+---
+title: Mobile Core lifecycle API reference
+description: An API reference for the Mobile Core lifecycle extension.
+---
+
 import Tabs from './tabs/api-reference.md'
 
 # Lifecycle API reference

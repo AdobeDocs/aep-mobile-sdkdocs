@@ -1,3 +1,8 @@
+---
+title: Mobile Core identity extension overview
+description: An overview for the Mobile Core identity extension.
+---
+
 import Tabs from './tabs/index.md'
 
 # Identity

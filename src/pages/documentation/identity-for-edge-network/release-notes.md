@@ -1,3 +1,8 @@
+---
+title: Identity for Edge Network release notes
+description: The release notes for the Identity for Edge Network mobile extension.
+---
+
 # Release Notes
 
 ## February 28, 2023

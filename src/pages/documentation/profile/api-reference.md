@@ -1,3 +1,8 @@
+---
+title: Profile API reference
+description: An API reference for the Profile extension.
+---
+
 import Tabs from './tabs/api-reference.md'
 
 # API reference

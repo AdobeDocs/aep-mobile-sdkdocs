@@ -1,6 +1,6 @@
 ---
 title: Set up a mobile property
-description: A guide that explains how to 
+description: A guide that explains how to set up a mobile property, by creating the property, installing extensions, and publishing the configuration. Completing this process allows you to use Mobile SDK.
 ---
 
 # Set up a mobile property

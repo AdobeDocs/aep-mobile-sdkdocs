@@ -1,3 +1,8 @@
+---
+title: iOS App Extension implementation
+description: A guide that explains how to implement Adobe Experience Platform mobile extensions in your App Extensions on iOS.
+---
+
 # iOS App Extension implementation
 
 You can use supported Adobe Experience Platform mobile extensions in your App Extensions to collect usage data. The supported Platform mobile extensions are listed [here](../current-sdk-versions.md#ios).

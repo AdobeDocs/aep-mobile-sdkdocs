@@ -1,3 +1,8 @@
+---
+title: Mobile Core lifecycle extension configuration keys
+description: A guide explaining how to use the Mobile Core lifecycle extension configuration keys.
+---
+
 # Configuration keys
 
 ## lifecycle.sessionTimeout

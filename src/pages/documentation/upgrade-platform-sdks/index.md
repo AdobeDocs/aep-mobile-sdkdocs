@@ -1,3 +1,8 @@
+---
+title: Upgrade to the Experience Platform SDKs
+description: A guide that outlines how to upgrade to the Adobe Experience Platform SDKs.
+---
+
 # Upgrade to the Experience Platform SDKs
 
 This section contains a checklist that you can use as you plan your upgrade to the Experience Platform SDKs.

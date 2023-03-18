@@ -1,3 +1,8 @@
+---
+title: Places release notes
+description: The release notes for the Places extension.
+---
+
 # Release Notes
 
 ## March 6, 2023

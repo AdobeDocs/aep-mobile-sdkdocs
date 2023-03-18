@@ -1,3 +1,8 @@
+---
+title: Mobile Core Signal overview
+description: An overview for the Mobile Core Signal extension.
+---
+
 import Tabs from './tabs/index.md'
 
 # Signal

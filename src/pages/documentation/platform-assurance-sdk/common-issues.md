@@ -1,3 +1,8 @@
+---
+title: Adobe Experience Platform Assurance common issues
+description: A guide that explains how to resolves common issues with the Adobe Experience Platform Assurance extension.
+---
+
 import Tabs from './tabs/common-issues.md'
 
 # Resolving common issues

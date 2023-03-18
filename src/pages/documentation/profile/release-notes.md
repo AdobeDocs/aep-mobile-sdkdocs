@@ -1,3 +1,8 @@
+---
+title: Profile release notes
+description: The release notes for the Profile extension.
+---
+
 # Release Notes
 
 ## Jan 31, 2023

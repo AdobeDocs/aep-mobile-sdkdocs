@@ -1,3 +1,8 @@
+---
+title: Troubleshooting push notifications
+description: A guide that explains tips for troubleshooting push notifications.
+---
+
 import Tabs from './tabs/push-notifications.md'
 
 # Troubleshooting Campaign push notifications

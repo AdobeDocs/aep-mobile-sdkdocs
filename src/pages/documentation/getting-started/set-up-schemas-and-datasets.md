@@ -1,3 +1,8 @@
+---
+title: Set up schemas and datasets
+description: A guide that explains how to set up a schema and dataset with Adobe Experience Platform and use the dataset to leverage data from the Adobe Experience Platform Edge Network.
+---
+
 # Set up schemas and datasets
 
 To standardize data collection for use across applications that leverage Adobe Experience Platform, Adobe has created the open and publicly documented standard, [Experience Data Model (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html).

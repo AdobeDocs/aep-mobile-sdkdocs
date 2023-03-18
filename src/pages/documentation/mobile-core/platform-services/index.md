@@ -1,3 +1,8 @@
+---
+title: Mobile Core Platform Services
+description: An overview for the Mobile Core Platform Services.
+---
+
 import Tabs from './tabs/index.md'
 
 # Platform Services

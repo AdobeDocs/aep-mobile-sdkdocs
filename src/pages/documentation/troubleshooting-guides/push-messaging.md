@@ -1,3 +1,8 @@
+---
+title: Troubleshooting push messaging
+description: A guide that explains tips for troubleshooting push messaging.
+---
+
 import Tabs from './tabs/push-messaging.md'
 
 # Troubleshooting push messaging

@@ -1,3 +1,8 @@
+---
+title: Manual Lifecycle implementation
+description: A guide that details how to manually implement the collection of Lifecycle metrics.
+---
+
 import Tabs from './tabs/lifecycle.md'
 
 # Manual Lifecycle Implementation

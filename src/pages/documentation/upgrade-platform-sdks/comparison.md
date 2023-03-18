@@ -1,3 +1,8 @@
+---
+title: V4 Mobile SDKs to Experience Platform SDKs comparison
+description: A guide that details the differences in functionality between the v4 and the Adobe Experience Platform SDKs.
+---
+
 # Experience Platform SDKs vs. 4x SDKs
 
 The following tables provide information about the differences between the new Experience Platform SDKs and the 4x SDKs.

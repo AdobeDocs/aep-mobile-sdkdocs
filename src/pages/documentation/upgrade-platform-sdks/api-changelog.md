@@ -1,3 +1,8 @@
+---
+title: V4 Mobile SDKs to Experience Platform SDKs API changelog
+description: A guide that details the API differences between the v4 and the Adobe Experience Platform SDKs.
+---
+
 # API Changelog
 
 This page details SDK API changes between the Experience Platform SDKs and 4x SDKs.

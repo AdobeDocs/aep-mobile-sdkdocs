@@ -1,3 +1,8 @@
+---
+title: Adobe Experience Platform Assurance overview
+description: An overview for the Adobe Experience Platform Assurance extension.
+---
+
 import Tabs from './tabs/index.md'
 
 # Adobe Experience Platform Assurance extension

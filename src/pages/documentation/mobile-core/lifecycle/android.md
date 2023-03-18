@@ -1,3 +1,8 @@
+---
+title: Mobile Core lifecycle extension in Android
+description: A guide explaining how to use the Mobile Core lifecycle extension in Android.
+---
+
 # Lifecycle extension in Android
 
 ## Implementing Lifecycle Metrics in Android

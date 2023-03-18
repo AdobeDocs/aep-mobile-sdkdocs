@@ -1,3 +1,8 @@
+---
+title: Mobile Core lifecycle extension in iOS
+description: A guide explaining how to use the Mobile Core lifecycle extension in iOS.
+---
+
 # Lifecycle extension in iOS
 
 <InlineAlert variant="warning" slots="text"/>

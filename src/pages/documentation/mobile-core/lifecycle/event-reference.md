@@ -1,3 +1,8 @@
+---
+title: Mobile Core lifecycle extension event reference
+description: An event reference for the Mobile Core lifecycle extension.
+---
+
 # Lifecycle event reference
 
 ## Events handled by Lifecycle

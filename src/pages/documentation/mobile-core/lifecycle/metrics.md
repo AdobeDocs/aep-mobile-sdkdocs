@@ -1,3 +1,8 @@
+---
+title: Mobile Core lifecycle extension metrics
+description: A guide explaining the Mobile Core lifecycle extension's metrics.
+---
+
 # Lifecycle metrics
 
 ## Lifecycle data content response metrics

@@ -1,3 +1,8 @@
+---
+title: Adobe Experience Platform Assurance release ntoes
+description: The release notes for the Adobe Experience Platform Assurance extension.
+---
+
 # Release Notes
 
 Release notes and change logs for the Adobe Experience Platform Assurance extension

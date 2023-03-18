@@ -1,3 +1,8 @@
+---
+title: Mobile Core Rules Engine
+description: An overview for the Mobile Core Rules Engine.
+---
+
 # Rules Engine
 
 The Rules Engine is provided by the Adobe Experience Platform Mobile SDKs as part of the [Mobile Core](../index.md) extension.

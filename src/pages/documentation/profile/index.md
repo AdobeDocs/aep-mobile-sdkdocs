@@ -1,3 +1,8 @@
+---
+title: Profile overview
+description: An overview for the Profile extension.
+---
+
 import Tabs from './tabs/index.md'
 
 # Profile

@@ -1,3 +1,8 @@
+---
+title: V4 Mobile SDKs to Analytics migration guide
+description: A guide that explains how to migrate from v4 of Mobile SDK to the Adobe Experience Platform version.
+---
+
 import Tabs from './tabs/analytics-comparison.md'
 
 # V4 Mobile SDKs to Experience Platform Analytics migration

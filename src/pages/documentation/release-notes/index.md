@@ -1,5 +1,6 @@
 ---
-description: Release notes and change logs for the Adobe Experience Platform Mobile SDKs.
+title: Release notes
+description: Release notes and changelogs for the Adobe Experience Platform Mobile SDKs.
 ---
 
 # Release notes

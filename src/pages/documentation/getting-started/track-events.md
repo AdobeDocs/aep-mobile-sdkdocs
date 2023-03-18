@@ -1,3 +1,8 @@
+---
+title: Track events
+description: A guide that explains how to track events using the Adobe Experience Platform Mobile SDK.
+---
+
 import Tabs from './tabs/track-events.md'
 
 # Track events

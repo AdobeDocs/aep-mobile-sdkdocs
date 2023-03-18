@@ -1,3 +1,8 @@
+---
+title: Mobile Core API reference
+description: An API reference for the Mobile Core extension.
+---
+
 import Tabs from './tabs/api-reference.md'
 
 # Mobile Core API reference

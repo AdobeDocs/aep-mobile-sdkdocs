@@ -1,3 +1,8 @@
+---
+title: Getting Started with the Adobe Experience PLatform Mobile SDK
+description: An overview that explains how to integrate with the Adobe Experience Platform Edge Network.
+---
+
 # Overview
 
 The Adobe Experience Platform Mobile SDKs support interaction with Adobe Experience Cloud solutions and services through one or both of the following methods:

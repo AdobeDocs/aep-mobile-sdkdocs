@@ -1,3 +1,8 @@
+---
+title: Mobile Core identity API reference
+description: An API reference for the Mobile Core identity extension.
+---
+
 import Tabs from './tabs/api-reference.md'
 
 # Identity API reference

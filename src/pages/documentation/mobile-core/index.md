@@ -1,3 +1,8 @@
+---
+title: Mobile Core overview
+description: An overview for the Mobile Core extension.
+---
+
 # Mobile Core
 
 <InlineAlert variant="warning" slots="text"/>
