@@ -1,3 +1,8 @@
+---
+title: Version 4 Mobile SDKs end-of-support FAQ
+description: A guide that lists frequently asked questions about the end of support for the Adobe Experience Platform Mobile SDK version 4.
+---
+
 # Version 4 Mobile SDKs end-of-support FAQ
 
 ## Update on end of support for version 4 Mobile SDKs

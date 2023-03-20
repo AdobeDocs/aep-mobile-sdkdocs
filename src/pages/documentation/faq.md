@@ -1,3 +1,8 @@
+---
+title: Frequently asked questions
+description: An guide listing frequently asked questions about the Adobe Experience Platform Mobile SDKs.
+---
+
 import FAQ from './tabs/faq.md'
 
 # Frequently asked questions

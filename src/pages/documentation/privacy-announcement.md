@@ -1,4 +1,5 @@
 ---
+title: Adobe Experience Cloud and Apple's IDFA
 description: 'Last Updated September 2, 2020'
 ---
 

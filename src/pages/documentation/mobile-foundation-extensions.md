@@ -1,3 +1,8 @@
+---
+title: Mobile foundation extensions
+description: An overview listing the available mobile foundation extensions for the Adobe Experience Platform Mobile SDK.
+---
+
 # Mobile foundation extensions
 
 Mobile foundation extensions are the main extensions you can use when using the Mobile SDKs. These extensions are highly recommended to use when you are implementing your own mobile solution.

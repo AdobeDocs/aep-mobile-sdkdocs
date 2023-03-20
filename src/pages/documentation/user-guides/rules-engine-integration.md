@@ -1,3 +1,8 @@
+---
+title: Signal extension and Rules Engine integration
+description: A guide that explains how to integrate the Signal extension with Mobile Core Rules Engine using the Data Collection UI.
+---
+
 # Signal extension and Rules Engine integration
 
 The rules that you set up can use the available triggers and conditions, which result in one of the following actions:

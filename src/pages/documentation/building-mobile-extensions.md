@@ -1,5 +1,6 @@
 ---
-description: This information can help you understand how to build your own extension.
+title: Building mobile extensions 
+description: An overview that can explains how you can build your own mobile extension.
 ---
 
 # Building mobile extensions

@@ -1,3 +1,8 @@
+---
+title: Experience Cloud extensions
+description: An overview listing the available Experience Cloud mobile extensions for the Adobe Experience Platform Mobile SDK.
+---
+
 # Experience Cloud extensions
 
 Experience Cloud extensions are extensions that directly connect with Experience Cloud solutions. You can use these extensions if you need to connect to other Adobe solutions such as Adobe Analytics or Adobe Target.

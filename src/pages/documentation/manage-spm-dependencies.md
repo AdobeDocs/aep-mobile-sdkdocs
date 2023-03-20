@@ -1,3 +1,8 @@
+---
+title: Manage dependencies using Swift Package Manager
+description: A guide that explains the best practices for managing dependencies for iOS extensions using Swift Package Manager.
+---
+
 # Manage dependencies using Swift Package Manager
 
 The [Swift Package Manager (SPM)](https://www.swift.org/package-manager/) is a tool for managing the distribution of Swift code that's integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies. The Adobe Experience Platform SDKs support installation using SPM. 

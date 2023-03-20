@@ -1,3 +1,8 @@
+---
+title: Using data elements to define dynamic data in rule
+description: A guide that explains how to use data elements in the Adobe Experience Platform Mobile SDK to create rules.
+---
+
 # Using data elements to define dynamic data in rules
 
 Data elements are the building blocks for your data dictionary and are used to collect, organize, and deliver data across marketing and ad technology.
