@@ -396,11 +396,31 @@ To handle deep links in the notification payload, you need to set up URL schemes
 public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.main);
-
+  
     Intent intent = getIntent();
     String action = intent.getAction();
     Uri data = intent.getData();
-      // parse any data present in the deep link
+  
+    if (data != null) {
+      String expectedDeeplinkHostAndScheme = "aepsdksampleapp://adobe";
+      ServiceProvider.getInstance().setURIHandler(new URIHandler() {
+        @Override
+        public Intent getURIDestination(String uri) {
+          // validate the deeplink and return an intent if valid
+          if(uri.contains(expectedDeeplinkHostAndScheme)){
+            // handle any additional query parameters and return the appropriate intent
+            // return new Intent(data.toString());
+          }
+          return null;
+        }
+      });
+
+      // handle the deeplink with the set custom uri handler
+      Intent destinationIntent = ServiceProvider.getInstance().getUIService().getIntentWithURI(data.toString());
+      if (destinationIntent != null) {
+        startActivity(destinationIntent);
+      }
+    }
 }
 ```
 
