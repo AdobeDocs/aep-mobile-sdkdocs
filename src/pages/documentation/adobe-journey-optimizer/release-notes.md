@@ -1,5 +1,11 @@
 # Release Notes
 
+## March 20, 2023
+
+### iOS AEPMessaging 1.1.3
+
+* Drop minimum supported version of iOS to 10.0 to align with minimum supported version in AEPCore.
+
 ## March 16, 2023
 
 ### Android Messaging 2.1.1
