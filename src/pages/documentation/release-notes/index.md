@@ -4,6 +4,18 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## March 20, 2023
+
+### iOS AEPMessaging 1.1.3
+
+* Drop minimum supported version of iOS to 10.0 to align with minimum supported version in AEPCore.
+
+## March 17, 2023
+
+### iOS AEPCore 3.8.1
+
+* Revert changes to minimum supported version of iOS and tvOS back to 10.0.
+
 ## March 16, 2023
 
 ### Android Messaging 2.1.1
@@ -15,6 +27,28 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 ### iOS AEPMessaging 1.1.2
 
 * Messaging extension now processes in-app message responses from multiple upstream services.
+
+### iOS AEPRulesEngine 1.2.2
+
+* Revert changes to minimum supported version of iOS and tvOS back to 10.0.
+
+## March 14, 2023
+
+### Android Mobile Core 2.1.0
+
+* Added a new API to the LaunchRulesEngine class that enables adding new rules without replacing the existing ones. 
+
+## March 13, 2023
+
+### iOS AEPCore 3.8.0
+
+* Updated the minimum supported versions to iOS 11.0, tvOS 11.0.
+* Added support for overriding internal logging service with customer-provided implementation.
+* Added a new API to the LaunchRulesEngine class that enables adding new rules without replacing the existing ones. 
+
+### iOS AEPRulesEngine 1.2.1
+
+* Updated the minimum supported versions to iOS 11.0, tvOS 11.0.
 
 ## March 9, 2023
 
