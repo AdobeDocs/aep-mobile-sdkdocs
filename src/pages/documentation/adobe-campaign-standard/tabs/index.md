@@ -401,25 +401,16 @@ public void onCreate(Bundle savedInstanceState) {
     String action = intent.getAction();
     Uri data = intent.getData();
   
+    Map<String, Intent> urlToIntentMap = new HashMap<>();
+    // add url string to Intent object mappings
+    // e.g. urlToIntentMap.put("https://validUrl.com", new Intent());
     if (data != null) {
-      String expectedDeeplinkHostAndScheme = "aepsdksampleapp://adobe";
       ServiceProvider.getInstance().setURIHandler(new URIHandler() {
         @Override
         public Intent getURIDestination(String uri) {
-          // validate the deeplink and return an intent if valid
-          if(uri.contains(expectedDeeplinkHostAndScheme)){
-            // handle any additional query parameters and return the appropriate intent
-            // return new Intent(data.toString());
-          }
-          return null;
+          return urlToIntentMap.get(uri);
         }
       });
-
-      // handle the deeplink with the set custom uri handler
-      Intent destinationIntent = ServiceProvider.getInstance().getUIService().getIntentWithURI(data.toString());
-      if (destinationIntent != null) {
-        startActivity(destinationIntent);
-      }
     }
 }
 ```

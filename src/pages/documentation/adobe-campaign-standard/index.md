@@ -157,7 +157,7 @@ A destination URL can be added to in-app messages that are delivered from Adobe 
 
 <InlineAlert variant="info" slots="text"/>
 
-The Android Core's `UIService` provides two new APIs,  `getIntentWithURI` and `setURIHandler`, for safer handling of `URIs` and `Intents`. More information regarding the Android security vulnerability can be seen at the Google support article [Remediation for Intent Redirection Vulnerability](https://support.google.com/faqs/answer/9267555?hl=en). The following Android example has been updated to use these newly added APIs.
+The Android Core's `UIService` provides a new API  `setURIHandler` for safer loading of in-app  `URIs`. More information regarding the Android security vulnerability can be seen at the Google support article [Remediation for Intent Redirection Vulnerability](https://support.google.com/faqs/answer/9267555?hl=en). The following Android example has been updated to use these newly added API.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
