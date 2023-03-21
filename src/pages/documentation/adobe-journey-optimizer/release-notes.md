@@ -2,7 +2,7 @@
 
 ## March 20, 2023
 
-### iOS AEPMessaging 1.1.3
+### iOS Messaging 1.1.3
 
 * Drop minimum supported version of iOS to 10.0 to align with minimum supported version in AEPCore.
 
@@ -14,7 +14,7 @@
 
 ## March 15, 2023
 
-### iOS AEPMessaging 1.1.2
+### iOS Messaging 1.1.2
 
 * Messaging extension now processes in-app message responses from multiple upstream services.
 
@@ -27,7 +27,7 @@
 
 ## February 27, 2023
 
-### iOS AEPMessaging 1.1.1
+### iOS Messaging 1.1.1
 
 * Fixes an issue where loaded in-app message rules were not cleared when an empty in-app message payload is received from Adobe Journey Optimizer.
 
@@ -38,7 +38,7 @@
 
 ## February 9, 2023
 
-### iOS AEPMessaging 1.1.0
+### iOS Messaging 1.1.0
 
 * Adds support for Adobe Journey Optimizer powered in-app messages.
 
@@ -55,7 +55,7 @@
 
 ## June 17, 2021
 
-### iOS AEPMessaging 1.0.0
+### iOS Messaging 1.0.0
 
 * The Adobe Experience Platform Messaging (AEPMessaging) mobile extension is now available on iOS! This extension enables push notifications and measurement for Adobe Journey Optimizer.
 
