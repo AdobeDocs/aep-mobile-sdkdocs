@@ -344,6 +344,10 @@ module.exports = {
                     {
                         title: "API reference",
                         path: "documentation/places/api-reference.md"
+                    },
+                    {
+                        title: "Release notes",
+                        path: "documentation/places/release-notes.md"
                     }
                 ]
             },
@@ -506,56 +510,33 @@ module.exports = {
                                 path: "documentation/adobe-journey-optimizer/release-notes"
                             },
                             {
-                                title: "In-app messaging",
-                                path: "/documentation/adobe-journey-optimizer/iam",
+                                title: "Public classes and enums",
+                                path: "documentation/adobe-journey-optimizer/public-classes"
+                            },
+                            {
+                                title: "Tutorials",
+                                path: "documentation/adobe-journey-optimizer/tutorials",
                                 pages: [
                                     {
-                                        title: "Overview",
-                                        path: "/documentation/adobe-journey-optimizer/iam"
+                                        title: "Implement a MessagingDelegate",
+                                        path: "/documentation/adobe-journey-optimizer/tutorials/messaging-delegate"
                                     },
                                     {
-                                        title: "Prerequisites",
-                                        path: "/documentation/adobe-journey-optimizer/iam/prerequisites"
+                                        title: "Call native code from the JavaScript of an in-app message",
+                                        path: "/documentation/adobe-journey-optimizer/tutorials/native-from-javascript"
                                     },
                                     {
-                                        title: "SDK setup",
-                                        path: "/documentation/adobe-journey-optimizer/iam/setup"
+                                        title: "Execute Javascript methods from native code",
+                                        path: "/documentation/adobe-journey-optimizer/tutorials/javascript-from-native"
                                     },
                                     {
-                                        title: "API reference",
-                                        path: "/documentation/adobe-journey-optimizer/iam/api-reference"
+                                        title: "Handle URL clicks from an in-app message",
+                                        path: "/documentation/adobe-journey-optimizer/tutorials/handle-clicks"
                                     },
                                     {
-                                        title: "Public classes and enums",
-                                        path: "/documentation/adobe-journey-optimizer/iam/public-classes"
-                                    },
-                                    {
-                                        title: "Tutorials",
-                                        path: "/documentation/adobe-journey-optimizer/iam/tutorials",
-                                        pages: [
-                                            {
-                                                title: "Implement a MessagingDelegate",
-                                                path: "/documentation/adobe-journey-optimizer/iam/tutorials/messaging-delegate"
-                                            },
-                                            {
-                                                title: "Call native code from the JavaScript of an in-app message",
-                                                path: "/documentation/adobe-journey-optimizer/iam/tutorials/native-from-javascript"
-                                            },
-                                            {
-                                                title: "Execute Javascript methods from native code",
-                                                path: "/documentation/adobe-journey-optimizer/iam/tutorials/javascript-from-native"
-                                            },
-                                            {
-                                                title: "Handle URL clicks from an in-app message",
-                                                path: "/documentation/adobe-journey-optimizer/iam/tutorials/handle-clicks"
-                                            },
-                                            {
-                                                title: "Validate in-app messaging using Assurance",
-                                                path: "/documentation/adobe-journey-optimizer/iam/tutorials/validate-messages"
-                                            }
-                                        ]
+                                        title: "Validate in-app messaging using Assurance",
+                                        path: "/documentation/adobe-journey-optimizer/tutorials/validate-messages"
                                     }
-
                                 ]
                             }
                         ]
@@ -591,16 +572,16 @@ module.exports = {
                                 path: "documentation/adobe-target/api-reference"
                             },
                             {
+                                title: "Raw API reference",
+                                path: "documentation/adobe-target/raw-api-reference"
+                            },
+                            {
                                 title: "Event reference",
                                 path: "documentation/adobe-target/event-reference"
                             },
                             {
                                 title: "Release notes",
                                 path: "documentation/adobe-target/release-notes"
-                            },
-                            {
-                                title: "Deprecated APIs",
-                                path: "documentation/adobe-target/deprecated-apis"
                             }
                         ]
                     }
@@ -618,6 +599,10 @@ module.exports = {
                         title: "Using Assurance",
                         path: "/documentation/platform-assurance/tutorials",
                         pages: [
+                            {
+                                title: "Event Transactions",
+                                path: "/documentation/platform-assurance/tutorials/event-transactions.md"
+                            },
                             {
                                 title: "Adobe Analytics",
                                 path: "/documentation/platform-assurance/tutorials/adobe-analytics.md"
@@ -663,58 +648,6 @@ module.exports = {
                     {
                         title: "Troubleshooting",
                         path: "/documentation/platform-assurance/troubleshooting.md"
-                    }
-                ]
-            },
-
-
-            {
-                title: "Building mobile extensions",
-                path: "/documentation/building-mobile-extensions",
-                pages: [
-                    {
-                        title: "Overview",
-                        path: "/documentation/building-mobile-extensions"
-                    },
-                    {
-                        title: "Event processing",
-                        path: "documentation/building-mobile-extensions/event-processing"
-                    },
-                    {
-                        title: "Shared states and events",
-                        path: "documentation/building-mobile-extensions/shared-states-and-events"
-                    },
-                    {
-                        title: "Building an extension",
-                        path: "documentation/building-mobile-extensions/building-extension"
-                    },
-                    {
-                        title: "Listening for events",
-                        path: "documentation/building-mobile-extensions/listening-for-events"
-                    },
-                    {
-                        title: "Dispatching events from your extension",
-                        path: "documentation/building-mobile-extensions/dispatching-events"
-                    },
-                    {
-                        title: "Building a tag extension interface",
-                        path: "documentation/building-mobile-extensions/building-tag-extension-interface"
-                    },
-                    {
-                        title: "Interacting with rules",
-                        path: "documentation/building-mobile-extensions/interacting-with-rules"
-                    },
-                    {
-                        title: "Get the application context",
-                        path: "documentation/building-mobile-extensions/get-application-context"
-                    },
-                    {
-                        title: "Extension logging",
-                        path: "documentation/building-mobile-extensions/extension-logging"
-                    },
-                    {
-                        title: "Mobile extension samples",
-                        path: "documentation/building-mobile-extensions/mobile-extension-samples"
                     }
                 ]
             },
@@ -793,6 +726,10 @@ module.exports = {
                     {
                         title: "Adobe Experience Cloud & Apple's IDFA, Privacy announcement",
                         path: "/documentation/privacy-announcement"
+                    },
+                    {
+                        title: "Building mobile extensions",
+                        path: "/documentation/building-mobile-extensions"
                     }
                 ]
             },

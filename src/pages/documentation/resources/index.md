@@ -34,6 +34,6 @@ To learn how to manage SPM dependencies of Mobile SDKs, please read the guide on
 
 To learn how to manage consent and privacy obligations with Mobile SDK, please read the guide on [privacy and GDPR](../privacy-and-gdpr.md).
 
-## WeChat Mini Programs
+## Building mobile extensions 
 
-To learn how to connect the Adobe Experience Platform SDK with WeChat Mini Programs, please read the [WeChat Mini Programs overview](../platform-minis/index.md).
+To learn how to extend Mobile SDK to support customer-specific features, and allow for the greatest flexibility, please read the guide on [building mobile extensions](../building-mobile-extensions.md).

@@ -1,5 +1,23 @@
 # Release Notes
 
+## March 6, 2023
+
+### Android Messaging 2.1.0
+
+* Fixed in-app message deeplink processing.
+* Added a default implementation for `Message.getAutoTrack` to resolve an issue with the Message interface not matching the previous Message class.
+
+## February 27, 2023
+
+### iOS Messaging 1.1.1
+
+* Fixes an issue where loaded in-app message rules were not cleared when an empty in-app message payload is received from Adobe Journey Optimizer.
+
+### Android Messaging 2.0.2
+
+* Fixes an issue where loaded in-app message rules were not cleared when an empty in-app message payload is received from Adobe Journey Optimizer.
+* Fixes an issue where only the first in-app message present in a payload was being loaded into the rules engine.
+
 ## February 9, 2023
 
 ### iOS Messaging 1.1.0

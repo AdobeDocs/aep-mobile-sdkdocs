@@ -4,6 +4,107 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## March 14, 2023
+
+### Android Mobile Core 2.1.0
+
+* Added a new API to the LaunchRulesEngine class that enables adding new rules without replacing the existing ones. 
+
+## March 13, 2023
+
+### iOS AEPCore 3.8.0
+
+* Updated the minimum supported versions to iOS 11.0, tvOS 11.0.
+* Added support for overriding internal logging service with customer-provided implementation.
+* Added a new API to the LaunchRulesEngine class that enables adding new rules without replacing the existing ones. 
+
+## March 9, 2023
+
+### AEP React Native libraries
+
+* Updated all the AEP React Native libraries to use MobileCore 2.x for Android and compatible extensions.
+
+The following npms have been published:
+
+* [@adobe/react-native-aepcore:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepcore/v/2.0.0)
+* [@adobe/react-native-aepassurance:4.0.0](https://www.npmjs.com/package/@adobe/react-native-aepassurance/v/4.0.0)
+* [@adobe/react-native-aepuserprofile:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepuserprofile/v/2.0.0)
+* [@adobe/react-native-aepedge:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedge/v/2.0.0)
+* [@adobe/react-native-aeedgeidentity:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aeedgeidentity/v/2.0.0)
+* [@adobe/react-native-aepedgeconsent:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedgeconsent/v/2.0.0)
+* [@adobe/react-native-aepmessaging:1.0.0](https://www.npmjs.com/package/@adobe/react-native-aepmessaging/v/1.0.0)
+* [@adobe/react-native-aepoptimize:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepoptimize/v/2.0.0)
+* [@adobe/react-native-aepplaces:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepplaces/v/2.0.0)
+* [@adobe/react-native-aeptarget:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aeptarget/v/2.0.0)
+* [@adobe/react-native-aepcampaignclassic:2.0.0](https://www.npmjs.com/package/@adobe/react-native-aepcampaignclassic/v/2.0.0)
+
+## March 6, 2023
+
+### iOS Places 3.0.3
+
+* Fixed the friendly name for the extension to be `Places` instead of fully qualified extension name.
+* Updated `nearbyPois` in shared state to be an array of POI objects (represented as dictionaries).
+
+### Android Messaging 2.1.0
+
+* Fixed in-app message deeplink processing.
+* Added a default implementation for `Message.getAutoTrack` to resolve an issue with the Message interface not matching the previous Message class.
+
+## March 2, 2023
+
+### iOS Target 3.3.1
+
+* `target.previewEnabled` configuration setting is no longer required to enable preview mode in Target iOS SDK. If not configured, the default value here will be set to true.
+
+### AEP Flutter Plugins 2.0.0
+
+* Updated all the AEP Flutter plugins to use MobileCore 2.x for Android and compatible extensions.
+* Fixed issues where async calls were not properly completed.
+
+The following plugins have been published:
+
+* [flutter_aepcore@2.0.0](https://pub.dev/packages/flutter_aepcore)
+* [flutter_aepassurance@2.0.0](https://pub.dev/packages/flutter_aepassurance)
+* [flutter_aepedge@2.0.0](https://pub.dev/packages/flutter_aepedge)
+* [flutter_aepedgeidentity@2.0.0](https://pub.dev/packages/flutter_aepedgeidentity)
+* [flutter_aepedgeconsent@2.0.0](https://pub.dev/packages/flutter_aepedgeconsent)
+
+### AEP Flutter User Profile 1.0.0
+
+* Added the initial release for [flutter_aepuserprofile@1.0.0](https://pub.dev/packages/flutter_aepuserprofile)
+
+## March 1, 2023
+
+### iOS AEPEdgeConsent 1.1.0
+
+* Added tvOS support.
+
+## February 28, 2023
+
+### iOS AEPEdge 1.6.0
+
+* Added tvOS support.
+
+### iOS AEPEdgeIdentity 1.2.0
+
+* Added tvOS support.
+* Identity map no longer accepts identity items with an empty string value for ID.
+
+## February 27, 2023
+
+### Android Assurance 2.0.1
+
+* Contents of the application manifest (AndroidManifest.xml) are now included in the `clientInfo` event.
+
+### iOS Messaging 1.1.1
+
+* Fixes an issue where loaded in-app message rules were not cleared when an empty in-app message payload is received from Adobe Journey Optimizer.
+
+### Android Messaging 2.0.2
+
+* Fixes an issue where loaded in-app message rules were not cleared when an empty in-app message payload is received from Adobe Journey Optimizer.
+* Fixes an issue where only the first in-app message present in a payload was being loaded into the rules engine.
+
 ## February 23, 2023
 
 New major version of the Mobile Core SDK for Android has been released along with updates to other extensions to take advantage of the new features and improvements. These improvements include:
@@ -34,6 +135,10 @@ Note that all these extensions must be updated together. Flutter and React plugi
 * Android Adobe Campaign Standard 2.0.2
 * Android Adobe Campaign Classic 2.0.0
 * Android Adobe Audience Manager 2.0.0
+
+For help on moving to these versions, please see:
+* [Migration guide](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-android)
+* [Migration FAQ](../faq.md#migrating-to-android-mobile-core-2x-and-compatible-extensions)
 
 ## February 17, 2023
 
@@ -104,6 +209,8 @@ import com.adobe.marketing.mobile.target.TargetProduct;
 import com.adobe.marketing.mobile.target.TargetParameters;
 ```
 
+3. The previously deprecated Target APIs and classes have been removed. For more information, please read this section on the [deprecated APIs and the recommended alternative APIs](https://developer.adobe.com/client-sdks/previous-versions/documentation/adobe-target/deprecated-apis/).
+
 ### iOS Messaging 1.1.0
 
 * Adds support for Adobe Journey Optimizer powered in-app messages.
@@ -124,8 +231,30 @@ import com.adobe.marketing.mobile.target.TargetParameters;
 
 ### Android Messaging 2.0.0
 
-* Major version update for [Adobe Journey Optimizer](../adobe-journey-optimizer/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-messaging-android).
-* Adds support for Adobe Journey Optimizer powered in-app messages.
+* Major version update for [Adobe Journey Optimizer](../adobe-journey-optimizer/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-messaging-android).
+
+### Android Places 2.0.0
+
+* Major version update for [Adobe Experience Platform Location Service](../places/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-places-android).
+
+Please note that the following improvements have been made in the current release:
+
+1. The `getNearbyPointsOfInterest` API without the errorCallback has been removed. Alternatively, use the below overloaded API which provides both successCallback and errorCallback:
+
+```java
+public static void getNearbyPointsOfInterest(final Location location,
+      final int limit,
+      final AdobeCallback<List<PlacesPOI>> successCallback,
+      final AdobeCallback<PlacesRequestError> errorCallback)
+```
+
+2. The public classes `PlacesAuthorizationStatus`, `PlacesPOI`, and `PlacesRequestError` are consolidated under the `places` subpackage and require updating the import statements as shown below:
+
+```java
+import com.adobe.marketing.mobile.places.PlacesAuthorizationStatus;
+import com.adobe.marketing.mobile.places.PlacesPOI;
+import com.adobe.marketing.mobile.places.PlacesRequestError;
+```
 
 ## February 2, 2023
 

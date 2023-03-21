@@ -51,8 +51,6 @@ The following section displays sample lifecycle content requests.
 
 Lifecycle listens for the Configuration shared state events.
 
-For more information about shared state events, see the [shared states and events guide](../building-mobile-extensions/shared-states-and-events.md).
-
 ## Events dispatched by Lifecycle
 
 The following events are dispatched by the Lifecycle extension:

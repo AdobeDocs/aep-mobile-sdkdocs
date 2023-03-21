@@ -8,9 +8,7 @@ This document contains usage information for the public functions, classes, and 
 
 This page only contains information about the 3.x `AEPPlaces` extension.<br/><br/>A full API reference for the 2.x `ACPPlaces` extension for iOS can be found [here](https://experienceleague.adobe.com/docs/places/using/places-ext-aep-sdks/places-extension/places-api-reference.html?lang=en).
 
-## Static functions
-
-### clear
+## clear
 
 Clears out the client-side data for Places in shared state, local storage, and in-memory.
 
@@ -24,7 +22,7 @@ iOS
 
 <Tabs query="platform=ios&api=clear"/>
 
-### extensionVersion
+## extensionVersion
 
 Returns the running version of the AEPPlaces extension.
 
@@ -38,7 +36,7 @@ iOS
 
 <Tabs query="platform=ios&api=extension-version"/>
 
-### getCurrentPointsOfInterest
+## getCurrentPointsOfInterest
 
 Returns all points of interest (POI) of which the device is currently known to be within.
 
@@ -52,7 +50,7 @@ iOS
 
 <Tabs query="platform=ios&api=get-current-points-of-interest"/>
 
-### getLastKnownLocation
+## getLastKnownLocation
 
 Returns the last latitude and longitude provided to the AEPPlaces Extension.
 
@@ -68,7 +66,7 @@ iOS
 
 <Tabs query="platform=ios&api=get-last-known-location"/>
 
-### getNearbyPointsOfInterest
+## getNearbyPointsOfInterest
 
 Requests a list of nearby Points of Interest (POI) and returns them in a closure.
 
@@ -82,7 +80,7 @@ iOS
 
 <Tabs query="platform=ios&api=get-nearby-points-of-interest"/>
 
-### processGeofence 
+## processGeofence 
 
 When a device crosses one of your app’s pre-defined Places Service region boundaries, the region and event type are passed to the SDK for processing.
 
@@ -96,7 +94,7 @@ Android
 
 <Tabs query="platform=android&api=process-geofence"/>
 
-### processGeofenceEvent
+## processGeofenceEvent
 
 Process all Geofences in the GeofencingEvent at the same time.
 
@@ -106,7 +104,7 @@ Android
 
 <Tabs query="platform=android&api=process-geofence-event"/>
 
-### processRegionEvent
+## processRegionEvent
 
 Passes a `CLRegion` and a `PlacesRegionEvent` to be processed by the Places extension.
 
@@ -118,7 +116,7 @@ iOS
 
 <Tabs query="platform=ios&api=process-region-event"/>
 
-### registerExtension
+## registerExtension
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -134,7 +132,7 @@ iOS
 
 <Tabs query="platform=ios&api=register-extension"/>
 
-### setAccuracyAuthorization
+## setAccuracyAuthorization
 
 Sets the accuracy authorization status in the Places extension.
 
@@ -146,7 +144,7 @@ iOS
 
 <Tabs query="platform=ios&api=set-accuracy-authorization"/>
 
-### setAuthorizationStatus
+## setAuthorizationStatus
 
 Sets the authorization status in the Places extension.
 
