@@ -1,5 +1,19 @@
 # Release Notes
 
+## March 14, 2023
+
+### Android Mobile Core 2.1.0
+
+* Added a new API to the LaunchRulesEngine class that enables adding new rules without replacing the existing ones. 
+
+## March 13, 2023
+
+### iOS AEPCore 3.8.0
+
+* Updated the minimum supported versions to iOS 11.0, tvOS 11.0.
+* Added support for overriding internal logging service with customer-provided implementation.
+* Added a new API to the LaunchRulesEngine class that enables adding new rules without replacing the existing ones. 
+
 ## February 9, 2023
 
 ### Android Mobile Core 2.0.1
