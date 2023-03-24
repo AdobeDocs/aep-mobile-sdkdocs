@@ -1,6 +1,8 @@
 ---
 title: Mobile foundation extensions
 description: An overview listing the available mobile foundation extensions for the Adobe Experience Platform Mobile SDK.
+keyword:
+- Overview
 ---
 
 # Mobile foundation extensions

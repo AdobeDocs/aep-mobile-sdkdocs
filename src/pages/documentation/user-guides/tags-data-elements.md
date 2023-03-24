@@ -1,6 +1,11 @@
 ---
-title: Using data elements to define dynamic data in rule
+title: Using data elements to define dynamic data in rules
 description: A guide that explains how to use data elements in the Adobe Experience Platform Mobile SDK to create rules.
+keywords:
+- Data element
+- Guide
+- Rules Engine
+- Tutorial
 ---
 
 # Using data elements to define dynamic data in rules

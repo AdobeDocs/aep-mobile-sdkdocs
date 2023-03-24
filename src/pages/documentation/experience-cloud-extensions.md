@@ -1,6 +1,8 @@
 ---
 title: Experience Cloud extensions
 description: An overview listing the available Experience Cloud mobile extensions for the Adobe Experience Platform Mobile SDK.
+keywords:
+- Overview
 ---
 
 # Experience Cloud extensions

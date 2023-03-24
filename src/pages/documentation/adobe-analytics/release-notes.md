@@ -1,6 +1,9 @@
 ---
 title: Adobe Analytics Release Notes
 description: The release notes for the Adobe Analytics mobile extension.
+keywords:
+- Adobe Analytics
+- Release notes
 ---
 
 # Release Notes

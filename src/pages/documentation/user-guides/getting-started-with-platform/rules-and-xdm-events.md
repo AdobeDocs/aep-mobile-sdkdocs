@@ -1,4 +1,15 @@
-# Rules & XDM events
+---
+title: Rules and XDM events
+description: A guide that explains how to attach data to Experience Data Model (XDM) events.
+keywords:
+- Adobe Experience Platform
+- Getting started
+- Guide
+- Experience Data Model
+- XDM
+---
+
+# Rules and XDM events
 
 ## Prerequisites for this tutorial
 

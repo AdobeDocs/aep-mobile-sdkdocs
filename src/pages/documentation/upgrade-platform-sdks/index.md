@@ -1,6 +1,9 @@
 ---
-title: Upgrade to the Experience Platform SDKs
-description: A guide that outlines how to upgrade to the Adobe Experience Platform SDKs.
+title: Upgrade to the Experience Platform Mobile SDKs
+description: A guide that outlines how to upgrade to the Adobe Experience Platform Mobile SDKs.
+keywords:
+- Guide
+- Migration
 ---
 
 # Upgrade to the Experience Platform SDKs

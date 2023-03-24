@@ -1,6 +1,10 @@
 ---
 title: Lifecycle for Edge Network event reference
 description: An event reference for the Lifecycle for Edge Network mobile extension.
+keywords:
+- Edge Network
+- Event reference
+- Lifecycle for Edge Network
 ---
 
 # Event Reference

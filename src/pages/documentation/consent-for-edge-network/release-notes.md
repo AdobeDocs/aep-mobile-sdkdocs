@@ -1,6 +1,10 @@
 ---
 title: Consent for Edge Network release notes
 description: The release notes for the Consent for Edge Network mobile extension.
+keywords:
+- Consent for Edge Network
+- Edge Network
+- Release notes
 ---
 
 # Release Notes

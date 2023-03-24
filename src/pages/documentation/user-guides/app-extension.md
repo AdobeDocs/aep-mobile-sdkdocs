@@ -1,6 +1,10 @@
 ---
 title: iOS App Extension implementation
 description: A guide that explains how to implement Adobe Experience Platform mobile extensions in your App Extensions on iOS.
+keywords:
+- Guide
+- iOS
+- Tutorial
 ---
 
 # iOS App Extension implementation

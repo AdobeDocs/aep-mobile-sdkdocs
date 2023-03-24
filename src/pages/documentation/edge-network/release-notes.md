@@ -1,6 +1,9 @@
 ---
 title: Adobe Experience Platform Edge Network release notes
 description: The release notes for the Adobe Experience Platform Edge Network mobile extension.
+keywords:
+- Edge Network
+- Release notes
 ---
 
 # Release Notes

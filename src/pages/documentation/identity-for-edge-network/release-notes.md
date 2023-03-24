@@ -1,6 +1,10 @@
 ---
 title: Identity for Edge Network release notes
 description: The release notes for the Identity for Edge Network mobile extension.
+keywords:
+- Edge Network
+- Identity for Edge Network
+- Release notes
 ---
 
 # Release Notes

@@ -1,6 +1,10 @@
 ---
 title: Mobile Core Platform Services - Network Service
 description: A guide explaining the Network Service for Mobile Core.
+keywords:
+- Mobile Core
+- Network Service
+- Platform Services
 ---
 
 import Tabs from './tabs/network-service.md'

@@ -1,6 +1,11 @@
 ---
 title: Configure datastreams
 description: A guide that explains how to configure datastreams in the Data Collection UI.
+keywords:
+- Datastreams
+- Edge Network
+- Guide
+- Tutorial
 ---
 
 # Configure datastreams

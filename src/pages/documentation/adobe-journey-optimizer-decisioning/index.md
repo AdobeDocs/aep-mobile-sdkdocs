@@ -1,6 +1,9 @@
 ---
 title: Adobe Journey Optimizer Decisioning overview
 description: An overview for the Adobe Journey Optimizer Decisioning mobile extension.
+keywords:
+- Adobe Journey Optimizer Decisioning
+- Product overview
 ---
 
 import Tabs from './tabs/index.md'

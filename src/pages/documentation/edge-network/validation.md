@@ -1,6 +1,10 @@
 ---
 title: Adobe Experience Platform Edge Network validation
 description: A guide explaining how validation works for the Adobe Experience Platform Edge Network mobile extension.
+keywords:
+- Edge Network
+- Guide
+- Validation
 ---
 
 # Validation

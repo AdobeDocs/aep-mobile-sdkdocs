@@ -1,6 +1,11 @@
 ---
 title: Adobe Journey Optimizer tutorials
 description: An overview of the available tutorials for the Adobe Journey Optimizer extension.
+keywords:
+- Adobe Journey Optimizer
+- Guide
+- Messaging
+- Tutorial
 ---
 
 # Adobe Journey Optimizer - Guides and how-tos

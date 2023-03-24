@@ -1,6 +1,9 @@
 ---
 title: Adobe Analytics products variable
 description: A guide explaining the products variable for the Adobe Analytics mobile extension.
+keywords:
+- Adobe Analytics
+- Products variable
 ---
 
 import Tabs from './tabs/product-variable.md'

@@ -1,6 +1,9 @@
 ---
 title: Adobe Analytics extension
 description: Configuring the Adobe Analytics extension in the Data Collection UI
+keywords:
+- Adobe Analytics
+- Product overview
 ---
 
 import Tabs from './tabs/index.md'

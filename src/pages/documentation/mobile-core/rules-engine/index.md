@@ -1,6 +1,11 @@
 ---
 title: Mobile Core Rules Engine
 description: An overview for the Mobile Core Rules Engine.
+keywords:
+- Mobile Core
+- Rules Engine
+- Rules Engine for Mobile Core
+- Product overview
 ---
 
 # Rules Engine

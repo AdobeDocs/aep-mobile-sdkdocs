@@ -1,6 +1,11 @@
 ---
-title: Modify data to SDK events
-description: A guide that explains how to modify data on your Mobile SDK events.
+title: Modify data in SDK events
+description: A guide that explains how to modify data in your Mobile SDK events.
+keywords:
+- Events
+- Guide
+- Mobile Core
+- Tutorial
 ---
 
 # Modify data in SDK events

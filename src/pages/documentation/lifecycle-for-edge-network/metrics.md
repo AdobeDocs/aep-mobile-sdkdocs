@@ -1,6 +1,10 @@
 ---
 title: Lifecycle for Edge Network metrics reference
 description: A guide explaining the available metrics for the Lifecycle for Edge Network mobile extension.
+keywords:
+- Edge Network
+- Lifecycle for Edge Network
+- Metrics
 ---
 
 # Metrics

@@ -1,8 +1,12 @@
 ---
 title: Identity for Edge Network frequently asked questions guide
 description: A list of frequently asked questions about the Identity for Edge Network mobile extension.
+keywords:
+- Edge Network
+- FAQ
+- Frequently asked questions
+- Identity for Edge Network
 ---
-
 
 import Tabs from './tabs/faq.md'
 

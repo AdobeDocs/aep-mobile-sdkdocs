@@ -1,6 +1,11 @@
 ---
 title: Validating the Adobe Experience Platform Mobile SDK
 description: A guide that explains how to validate that the Adobe Experience Platform Mobile SDK has been properly set up.
+keywords:
+- Adobe Experience Platform Assurance
+- Guide
+- Tutorial
+- Validation
 ---
 
 # Validation and next steps

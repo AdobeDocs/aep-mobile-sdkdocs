@@ -1,6 +1,9 @@
 ---
 title: Troubleshooting guides
 description: An overview outlining the different troubleshooting guides.
+keywords:
+- Guide
+- Troubleshooting
 ---
 
 

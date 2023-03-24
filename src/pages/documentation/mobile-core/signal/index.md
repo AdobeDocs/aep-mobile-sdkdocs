@@ -1,6 +1,11 @@
 ---
 title: Mobile Core Signal overview
 description: An overview for the Mobile Core Signal extension.
+keywords:
+- Mobile Core
+- Product overview
+- Signal
+- Signal for Mobile Core
 ---
 
 import Tabs from './tabs/index.md'

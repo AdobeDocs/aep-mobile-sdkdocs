@@ -1,6 +1,12 @@
 ---
 title: Tracking beacons
-description: A guide that explains how to create a tracking beacon to send tracking data in Adobe Analytics.
+description: A guide that explains how to use beacon tracking to send beacon data to Adobe Analytics.
+keywords:
+- Adobe Analytics
+- Beacon
+- Guide
+- Profile
+- Tutorial
 ---
 
 import TrackBeaconAndroid from './tabs/track-beacon/track-beacon/android.md'

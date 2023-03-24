@@ -1,6 +1,12 @@
 ---
 title: Signal extension and Rules Engine integration
 description: A guide that explains how to integrate the Signal extension with Mobile Core Rules Engine using the Data Collection UI.
+keywords:
+- Guide
+- Mobile Core
+- Rules Engine
+- Signal
+- Tutorial
 ---
 
 # Signal extension and Rules Engine integration

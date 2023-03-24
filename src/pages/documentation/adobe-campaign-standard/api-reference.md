@@ -1,6 +1,9 @@
 ---
 title: Adobe Campaign Standard API reference
 description: An API reference for the Adobe Campaign Standard mobile extension.
+keywords:
+- Adobe Campaign Standard
+- API reference
 ---
 
 import Tabs from './tabs/api-reference.md'

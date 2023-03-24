@@ -1,6 +1,12 @@
 ---
-title: Programatically control the display of in-app messages
-description: A guide that explains how to use a Messaging delegate to programatically control the display of in-app messages.
+title: Programmatically control the display of in-app messages
+description: A guide that explains how to use a Messaging delegate to programmatically control the display of in-app messages.
+keywords:
+- Adobe Journey Optimizer
+- Guide
+- In-app messages
+- Messaging
+- Tutorial
 ---
 
 import Tabs from './tabs/messaging-delegate.md'

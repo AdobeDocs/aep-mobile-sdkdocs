@@ -1,6 +1,9 @@
 ---
 title: Adobe Analytics API reference
 description: An API reference for the Adobe Analytics mobile extension.
+keywords:
+- Adobe Analytics
+- API reference
 ---
 
 import Tabs from './tabs/api-reference.md'

@@ -1,6 +1,11 @@
 ---
-title: Mobile Core lifecycle extension configuration keys
-description: A guide explaining how to use the Mobile Core lifecycle extension configuration keys.
+title: Mobile Core Lifecycle extension configuration keys
+description: A guide explaining how to use the Mobile Core Lifecycle extension configuration keys.
+keywords:
+- Configuration keys
+- Lifecycle
+- Lifecycle for Mobile Core
+- Mobile Core
 ---
 
 # Configuration keys

@@ -1,6 +1,14 @@
 ---
 title: Set up schemas and datasets
 description: A guide that explains how to set up a schema and dataset with Adobe Experience Platform and use the dataset to leverage data from the Adobe Experience Platform Edge Network.
+keywords:
+- Dataset
+- Edge Network
+- Experience Data Model
+- Guide
+- Schema
+- Tutorial
+- XDM
 ---
 
 # Set up schemas and datasets

@@ -1,6 +1,11 @@
 ---
 title: Adobe Analytics FAQ
 description: A frequently asked questions guide for the Adobe Analytics mobile extension.
+keywords:
+- Adobe Analytics
+- FAQ
+- Frequently asked questions
+- Troubleshooting
 ---
 
 # Frequently asked questions

@@ -1,6 +1,9 @@
 ---
 title: Mobile Core overview
-description: An overview for the Mobile Core extension.
+description: An overview for Mobile Core and related extensions.
+keywords:
+- Mobile Core
+- Product overview
 ---
 
 # Mobile Core

@@ -1,6 +1,11 @@
 ---
 title: Debugging and Lifecycle Metrics
-description: A guide that explains how to set up a mobile property, by creating the property, installing extensions, and publishing the configuration. Completing this process allows you to use Mobile SDK.
+description: A guide that explains how to enable and use debug logging in your application.
+keywords:
+- Debug
+- Guide
+- Logging
+- Tutorial
 ---
 
 import Tabs from './tabs/enable-debug-logging.md'

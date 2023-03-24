@@ -1,6 +1,9 @@
 ---
 title: Adobe Experience Platform Edge Network overview
 description: An overview for the Adobe Experience Platform Edge Network mobile extension.
+keywords:
+- Edge Network
+- Product overview
 ---
 
 import Tabs from './tabs/index.md'

@@ -1,6 +1,10 @@
 ---
 title: Identity for Edge Network overview
 description: An overview for the Identity for Edge Network mobile extension.
+keywords:
+- Edge Network
+- Identity for Edge Network
+- Product overview
 ---
 
 import Tabs from './tabs/index.md'
@@ -17,9 +21,9 @@ The Adobe Experience Platform Identity mobile extension enables identity managem
 4. Select **Save**.
 5. Follow the publishing process to update SDK configuration.
 
-![AEP Identity for Edge Network extension configuration](./assets/index/configuration.png)
+![Identity for Edge Network extension configuration](./assets/index/configuration.png)
 
-## Add the AEP Identity extension to your app
+## Add the Identity extension to your app
 
 ### Download and import the Identity extension
 

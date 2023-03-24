@@ -1,6 +1,8 @@
 ---
 title: Adobe Journey Optimizer release notes
 description: The release notes for the Adobe Journey Optimizer (AJO) mobile extension.
+- Adobe Journey Optimizer Decisioning
+- Release notes
 ---
 
 # Release Notes

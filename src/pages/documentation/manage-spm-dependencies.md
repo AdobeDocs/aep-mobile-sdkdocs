@@ -1,6 +1,11 @@
 ---
 title: Manage dependencies using Swift Package Manager
-description: A guide that explains the best practices for managing dependencies for iOS extensions using Swift Package Manager.
+description: A guide that explains the best practices for managing Mobile SDK dependencies for iOS apps using Swift Package Manager.
+keywords:
+- iOS
+- Guide
+- Swift Package Manager
+- Tutorial
 ---
 
 # Manage dependencies using Swift Package Manager

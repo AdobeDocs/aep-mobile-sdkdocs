@@ -1,6 +1,9 @@
 ---
 title: Adobe Target event reference
 description: An event reference for the Adobe Target mobile extension.
+keywords:
+- Adobe Target
+- Event reference
 ---
 
 # Adobe Target event reference

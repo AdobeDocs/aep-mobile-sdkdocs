@@ -1,6 +1,9 @@
 ---
 title: Profile overview
-description: An overview for the Profile extension.
+description: An overview for the Profile mobile extension.
+keywords:
+- Product overview
+- Profile
 ---
 
 import Tabs from './tabs/index.md'

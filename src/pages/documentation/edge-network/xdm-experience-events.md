@@ -1,6 +1,11 @@
 ---
 title: Experience Data Model (XDM) Experience Events
-description: A guide that explains how XDM Experience Events can be used with the Adobe Experience Platform Edge Network extensions.
+description: A guide that explains how XDM Experience Events can be used with the Adobe Experience Platform Edge Network extension.
+keywords:
+- Edge Network
+- Experience Data Model
+- Guide
+- XDM
 ---
 
 # Experience Data Model (XDM) Experience Events

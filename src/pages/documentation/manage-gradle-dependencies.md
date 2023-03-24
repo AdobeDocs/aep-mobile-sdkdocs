@@ -1,6 +1,11 @@
 ---
 title: Manage dependencies using Gradle
-description: A guide that explains the best practices for managing dependencies for Android extensions using Gradle.
+description: A guide that explains the best practices for managing Mobile SDK dependencies for Android apps using Gradle.
+keywords:
+- Android
+- Guide
+- Gradle
+- Tutorial
 ---
 
 # Manage dependencies using Gradle

@@ -1,6 +1,9 @@
 ---
 title: Adobe Campaign Classic overview
 description: An overview for the Adobe Campaign Classic mobile extension.
+keywords:
+- Adobe Campaign Classic
+- Product overview
 ---
 
 import Tabs from './tabs/index.md'

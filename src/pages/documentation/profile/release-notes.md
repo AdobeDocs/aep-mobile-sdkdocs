@@ -1,6 +1,9 @@
 ---
 title: Profile release notes
-description: The release notes for the Profile extension.
+description: The release notes for the Profile mobile extension.
+keywords:
+- Profile
+- Release notes
 ---
 
 # Release Notes
@@ -12,8 +15,8 @@ description: The release notes for the Profile extension.
 - Major version update for [User Profile](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-userprofile-android).
 - The following APIs have been deprecated and will be removed in a future release:
 
-  | Deprecated API                      | Recommended Alternative              |
-  | ----------------------------------- | ------------------------------------ |
+  | Deprecated API | Recommended Alternative |
+  | -------------- | ----------------------- |
   | `UserProfile.updateUserAttribute()` | `UserProfile.updateUserAttributes()` |
   | `UserProfile.removeUserAttribute()` | `UserProfile.removeUserAttributes()` |
 

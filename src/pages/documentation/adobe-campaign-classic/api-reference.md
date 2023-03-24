@@ -1,6 +1,9 @@
 ---
 title: Adobe Campaign Classic API reference
 description: An API reference for the Adobe Campaign Classic mobile extension.
+keywords:
+- Adobe Campaign Classic
+- API reference
 ---
 
 import Tabs from './tabs/api-reference.md'

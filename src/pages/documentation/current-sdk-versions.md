@@ -1,6 +1,9 @@
 ---
 title: Current SDK versions
-description: An overview that shows the currently available extensions for each platform.
+description: An overview that shows the currently available mobile extensions, along with their versions, for each platform.
+keywords:
+- Guide
+- Versions
 ---
 
 # Current SDK versions

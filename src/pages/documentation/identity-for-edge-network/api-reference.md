@@ -1,6 +1,10 @@
 ---
 title: Identity for Edge Network API reference
 description: An API reference for the Identity for Edge Network mobile extension.
+keywords:
+- API reference
+- Edge Network
+- Identity for Edge Network
 ---
 
 import Tabs from './tabs/api-reference.md'

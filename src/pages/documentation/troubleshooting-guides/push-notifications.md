@@ -1,6 +1,11 @@
 ---
-title: Troubleshooting push notifications
-description: A guide that explains tips for troubleshooting push notifications.
+title: Troubleshooting Adobe Campaign push notifications
+description: A guide that explains tips for troubleshooting Adobe Campaign push notifications.
+keywords:
+- Adobe Campaign
+- Guide
+- Push notifications
+- Troubleshooting
 ---
 
 import Tabs from './tabs/push-notifications.md'

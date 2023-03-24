@@ -1,6 +1,9 @@
 ---
-title: Adobe Audience Manager
+title: Adobe Audience Manager overview
 description: An overview for the Adobe Audience Manager mobile extension.
+keywords:
+- Adobe Audience Manager
+- Product overview
 ---
 
 

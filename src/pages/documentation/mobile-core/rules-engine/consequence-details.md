@@ -1,6 +1,14 @@
 ---
 title: Mobile Core Rules Engine consequence details
 description: A guide that explains the rule consequences/actions that can be executed as part of the Adobe Experience Platform Mobile SDK.
+keywords:
+- Adobe Analytics
+- Adobe Campaign Standard
+- Consequence details
+- Mobile Core
+- Profile
+- Rules Engine
+- Signal
 ---
 
 # Rules Engine consequence details

@@ -1,8 +1,10 @@
 ---
 title: Adobe Audience Manager release notes
 description: The release notes for the Adobe Audience Manager mobile extension.
+keywords:
+- Adobe Audience Manager
+- Release notes
 ---
-
 
 # Release Notes
 

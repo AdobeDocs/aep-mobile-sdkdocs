@@ -1,6 +1,10 @@
 ---
 title: Adobe Journey Optimizer API reference
 description: An API reference for the Adobe Journey Optimizer (AJO) mobile extension.
+keywords:
+- Adobe Journey Optimizer
+- API reference
+- Messaging
 ---
 
 import Tabs from './tabs/api-reference.md'

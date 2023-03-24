@@ -1,6 +1,9 @@
 ---
 title: Adobe Analytics for Media API reference
 description: An API reference for the Adobe Analytics for Media mobile extension.
+keywords:
+- Adobe Analytics for Media
+- API reference
 ---
 
 import Tabs from './tabs/api-reference.md'

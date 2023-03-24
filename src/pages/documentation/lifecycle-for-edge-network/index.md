@@ -1,6 +1,10 @@
 ---
 title: Lifecycle for Edge Network overview
 description: An overview for the Lifecycle for Edge Network mobile extension.
+keywords:
+- Edge Network
+- Lifecycle for Edge Network
+- Product overview
 ---
 
 # Lifecycle for Edge Network

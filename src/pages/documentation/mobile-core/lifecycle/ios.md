@@ -1,6 +1,11 @@
 ---
-title: Mobile Core lifecycle extension in iOS
-description: A guide explaining how to use the Mobile Core lifecycle extension in iOS.
+title: Mobile Core Lifecycle extension in iOS
+description: A guide explaining how to use the Mobile Core Lifecycle extension in iOS.
+keywords:
+- Lifecycle
+- Lifecycle for Mobile Core
+- iOS
+- Product overview
 ---
 
 # Lifecycle extension in iOS

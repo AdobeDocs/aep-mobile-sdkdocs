@@ -1,6 +1,13 @@
 ---
 title: Handle URL clicks from an in-app message
 description: A tutorial that explains how you can handle URL clicks from an in-app message.
+keywords:
+- Adobe Journey Optimizer
+- Guide
+- In-app message
+- Messaging
+- Tutorial
+- URL clicks
 ---
 
 # Handle URL clicks from an in-app message

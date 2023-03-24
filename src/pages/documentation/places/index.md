@@ -1,6 +1,9 @@
 ---
 title: Places overview
-description: An overview for the Places extension.
+description: An overview for the Places mobile extension.
+keywords:
+- Places
+- Product overview
 ---
 
 import Tabs from './tabs/index.md'
