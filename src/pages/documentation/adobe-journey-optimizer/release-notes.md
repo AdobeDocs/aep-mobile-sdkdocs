@@ -9,6 +9,24 @@ keywords:
 
 # Release Notes
 
+## March 20, 2023
+
+### iOS Messaging 1.1.3
+
+* Drop minimum supported version of iOS to 10.0 to align with minimum supported version in AEPCore.
+
+## March 16, 2023
+
+### Android Messaging 2.1.1
+
+* Messaging extension now processes in-app message responses from multiple upstream services.
+
+## March 15, 2023
+
+### iOS Messaging 1.1.2
+
+* Messaging extension now processes in-app message responses from multiple upstream services.
+
 ## March 6, 2023
 
 ### Android Messaging 2.1.0
