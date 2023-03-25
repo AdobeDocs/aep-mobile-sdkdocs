@@ -1,10 +1,10 @@
 # Validation and next steps
 
-As you begin to add solution APIs to your mobile implementation, you are going to want to validate that specific actions and experiences work as intended. Adding [Adobe Experience Platform Assurance](../platform-assurance/index.md#what-can-assurance-do-for-you) to your application at the beginning of your implementation provides a way to quickly check to make sure the SDK has been instrumented properly and that data is flowing to Adobe Analytics and other solutions.
+As you begin to add solution APIs to your mobile implementation, you are going to want to validate that specific actions and experiences work as intended. Adding [Adobe Experience Platform Assurance](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html?lang=en#what-can-assurance-do-for-you%3F) to your application at the beginning of your implementation provides a way to quickly check to make sure the SDK has been instrumented properly and that data is flowing to Adobe Analytics and other solutions.
 
-Assurance is available across all [SDK platforms and frameworks](../current-sdk-versions.md). Installation and setup instructions are available [here](../platform-assurance/index.md#quick-setup).
+Assurance is available across all [SDK platforms and frameworks](../current-sdk-versions.md). Installation and setup instructions are available [here](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html?lang=en#quick-setup).
 
-Once you have Assurance integrated, you can create a [new session](../platform-assurance/tutorials/index.md#create-sessions) by either scanning a QR code or by following a unique deep link URL.
+Once you have Assurance integrated, you can create a [new session](https://experienceleague.adobe.com/docs/experience-platform/assurance/tutorials/using-assurance.html?lang=en#create-sessions) by either scanning a QR code or by following a unique deep link URL.
 
 The main interface for Assurance will show a running event list of all SDK events, including a configuration response event that will provide a readout of all configuration values obtained from the Data Collection UI.
 
@@ -12,7 +12,7 @@ The main interface for Assurance will show a running event list of all SDK event
 
 ## Adobe Analytics view
 
-The [Adobe Analytics](../platform-assurance/tutorials/adobe-analytics.md#using-assurance-for-adobe-analytics) event list offers a focused view of analytics events triggered in the application. You can sort through all of the track action and track state calls. In the [analytics view in Adobe Experience Platform Assurance](../platform-assurance/tutorials/adobe-analytics.md), you can see both the raw hit request sent to Analytics and the post-processed details.
+The [Adobe Analytics](https://experienceleague.adobe.com/docs/experience-platform/assurance/view/adobe-analytics.html?lang=en) event list offers a focused view of analytics events triggered in the application. You can sort through all of the track action and track state calls. In the [analytics view in Adobe Experience Platform Assurance](https://experienceleague.adobe.com/docs/experience-platform/assurance/view/adobe-analytics.html?lang=en), you can see both the raw hit request sent to Analytics and the post-processed details.
 
 ![Assurance analytics view](./assets/validate/assurance-analytics.png)
 
@@ -26,7 +26,7 @@ To learn more about the Places Service, please read the [Places Service overview
 
 ![Assurance Places Service Location Simulation](./assets/validate/assurance-places.png)
 
-To learn more about Assurance, please read the [Assurance setup guide](../platform-assurance/set-up.md)
+To learn more about Assurance, please read the [Assurance setup guide](https://experienceleague.adobe.com/docs/experience-platform/assurance/tutorials/implement-assurance.html?lang=en#tutorials)
 
 ## Next steps
 
