@@ -6,7 +6,9 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 ## March 27, 2023
 
-* Fixed a bug that was causing status Unavailable to be shown in Adobe Analytics view in Assurance for some track events sent soon after app launch.
+### Android Analytics 2.0.2
+
+* Fixed a bug that was causing the "Unavailable" status to be shown in Adobe Analytics view in Assurance for some track events sent soon after app launch.
 
 ## March 21, 2023
 
