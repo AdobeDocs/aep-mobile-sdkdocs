@@ -1,5 +1,11 @@
 # Release Notes
 
+## March 27, 2023
+
+### Android Analytics 2.0.2
+
+* Fixed a bug that was causing status Unavailable to be shown in Adobe Analytics view in Assurance for some track events sent soon after app launch.
+
 ## February 17, 2023
 
 ### Android Analytics 2.0.1
