@@ -1,5 +1,17 @@
 # Release Notes
 
+## March 28, 2023
+
+### iOS Core 3.8.2
+
+* Fixed some crashes which can happen on shutdown.
+
+## March 17, 2023
+
+### iOS Core 3.8.1
+
+* Revert changes to minimum supported version of iOS and tvOS back to 10.0.
+
 ## March 14, 2023
 
 ### Android Mobile Core 2.1.0
