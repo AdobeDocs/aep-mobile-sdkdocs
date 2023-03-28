@@ -4,6 +4,12 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## March 28, 2023
+
+### iOS Core 3.8.2
+
+* Fixed some crashes which can happen on shutdown.
+
 ## March 27, 2023
 
 ### Android Analytics 2.0.2
