@@ -4,6 +4,12 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## March 29, 2023
+
+### Android Mobile Core 1.11.5
+
+* Fixed crash when initializing SDK in Android direct boot mode. 
+
 ## March 28, 2023
 
 ### iOS Core 3.8.2
