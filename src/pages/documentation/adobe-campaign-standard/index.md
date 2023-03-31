@@ -155,6 +155,10 @@ Deleting your mobile property in the Data Collection UI does not automatically d
 
 A destination URL can be added to in-app messages that are delivered from Adobe Campaign. The destination can be a website URL such as [https://www.adobe.com](https://www.adobe.com) or a deep link such as `campaigndemoapp://signupactivity?paidaccount=true` which can be used to direct the user to a specific area of your app.
 
+<InlineAlert variant="info" slots="text"/>
+
+The Android Core's `UIService` provides a new API  `setURIHandler` for safer loading of in-app  `URIs`. More information regarding the Android security vulnerability can be seen at the Google support article [Remediation for Intent Redirection Vulnerability](https://support.google.com/faqs/answer/9267555?hl=en). The following Android example has been updated to use these newly added API.
+
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android

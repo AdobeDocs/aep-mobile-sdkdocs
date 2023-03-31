@@ -396,11 +396,22 @@ To handle deep links in the notification payload, you need to set up URL schemes
 public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.main);
-
+  
     Intent intent = getIntent();
     String action = intent.getAction();
     Uri data = intent.getData();
-      // parse any data present in the deep link
+  
+    Map<String, Intent> urlToIntentMap = new HashMap<>();
+    // add url string to Intent object mappings
+    // e.g. urlToIntentMap.put("https://validUrl.com", new Intent());
+    if (data != null) {
+      ServiceProvider.getInstance().setURIHandler(new URIHandler() {
+        @Override
+        public Intent getURIDestination(String uri) {
+          return urlToIntentMap.get(uri);
+        }
+      });
+    }
 }
 ```
 
