@@ -1,5 +1,17 @@
 # Release Notes
 
+## March 31, 2023
+
+### Android Mobile Core 2.1.1
+
+* Fixed crash during Core boot when migrating the data from v4 Mobile SDK.
+* Updated POM file with the Apache 2 license URL.
+
+### Android Identity 2.0.2
+
+* Fixed an issue where Identity could block the processing of requests when the first loaded configuration had incorrect format.
+* Updated POM file with the Apache 2 license URL.
+
 ## March 28, 2023
 
 ### iOS Core 3.8.2
