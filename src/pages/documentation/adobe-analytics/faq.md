@@ -2,7 +2,7 @@
 
 ## How can I set up, configure, or troubleshoot processing rules?
 
-To learn about processing rules please read the [processing rules tips and tricks guide](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-tips.html?lang=en).
+To learn about processing rules please read the [processing rules tips and tricks guide](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-tips.html).
 
 ## Why are my Analytics identifiers (AID / MID) changing?
 
