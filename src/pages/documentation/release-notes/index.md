@@ -4,6 +4,37 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## March 31, 2023
+
+### Android Mobile Core 2.1.1
+
+* Fixed crash during Core boot when migrating the data from v4 Mobile SDK.
+* Updated POM file with the Apache 2 license URL.
+
+### Android Identity 2.0.2
+
+* Fixed an issue where Identity could block the processing of requests when the first loaded configuration had incorrect format.
+* Updated POM file with the Apache 2 license URL.
+
+## March 28, 2023
+
+### iOS Core 3.8.2
+
+* Fixed some crashes which can happen on shutdown.
+
+## March 27, 2023
+
+### Android Analytics 2.0.2
+
+* Fixed a bug that was causing the "Unavailable" status to be shown in Adobe Analytics view in Assurance for some track events sent soon after app launch.
+
+## March 21, 2023
+
+### iOS Assurance 3.1.0
+
+* Added an API for a new quick connect capability for quick start workflows that will go beta soon.
+* Security improvements
+
 ## March 20, 2023
 
 ### iOS Messaging 1.1.3
@@ -36,7 +67,7 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 ### Android Mobile Core 2.1.0
 
-* Added a new API to the LaunchRulesEngine class that enables adding new rules without replacing the existing ones. 
+* Added a new API to the LaunchRulesEngine class that enables adding new rules without replacing the existing ones.
 
 ## March 13, 2023
 
@@ -44,7 +75,7 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 * Updated the minimum supported versions to iOS 11.0, tvOS 11.0.
 * Added support for overriding internal logging service with customer-provided implementation.
-* Added a new API to the LaunchRulesEngine class that enables adding new rules without replacing the existing ones. 
+* Added a new API to the LaunchRulesEngine class that enables adding new rules without replacing the existing ones.
 
 ### iOS RulesEngine 1.2.1
 
