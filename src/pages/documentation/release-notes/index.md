@@ -4,6 +4,12 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## April 6, 2023
+
+### iOS Assurance 3.1.1
+
+* Fixed a bug that was causing sessions to not be terminated properly in the Quick Connect flow.
+
 ## March 27, 2023
 
 ### Android Analytics 2.0.2
