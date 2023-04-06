@@ -21,6 +21,12 @@ The Adobe Experience Platform Edge Bridge React Native library is now available.
 With this release, the extension enables a drop-in solution for converting generated events from the Mobile Core track APIs (trackAction and trackState) into Edge Network events.
 * [@adobe/react-native-aepedgebridge:1.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedgebridge/v/1.0.0)
 
+## April 6, 2023
+
+### iOS Assurance 3.1.1
+
+* Fixed a bug that was causing sessions to not be terminated properly in the Quick Connect flow.
+
 ## March 31, 2023
 
 ### Android Mobile Core 2.1.1
