@@ -10,6 +10,24 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 * Fixed a bug that was causing sessions to not be terminated properly in the Quick Connect flow.
 
+## March 31, 2023
+
+### Android Mobile Core 2.1.1
+
+* Fixed crash during Core boot when migrating the data from v4 Mobile SDK.
+* Updated POM file with the Apache 2 license URL.
+
+### Android Identity 2.0.2
+
+* Fixed an issue where Identity could block the processing of requests when the first loaded configuration had incorrect format.
+* Updated POM file with the Apache 2 license URL.
+
+## March 28, 2023
+
+### iOS Core 3.8.2
+
+* Fixed some crashes which can happen on shutdown.
+
 ## March 27, 2023
 
 ### Android Analytics 2.0.2

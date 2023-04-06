@@ -30,7 +30,7 @@ There are several new features and benefits of using the Experience Platform Mob
 
 ## Do I need additional permissions to create a mobile property in the Data Collection UI?
 
-If you need access to the Data Collection UI, see the [user permissions document](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html?lang=en). If you create a web property, you can also create a mobile property. If you do not see the option to create a mobile property, turn off your ad blocker, and refresh the page.
+If you need access to the Data Collection UI, see the [user permissions document](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html). If you create a web property, you can also create a mobile property. If you do not see the option to create a mobile property, turn off your ad blocker, and refresh the page.
 
 ## Should I create one property per app or multiple properties per app platform?
 
@@ -38,7 +38,7 @@ If your apps send data to the same Adobe Analytics report suites, use the same e
 
 ## How do I delete a mobile property in the Data Collection UI?
 
-To delete a mobile property in the Data Collection UI, please read the [delete a property tutorial](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=en#delete-a-property).
+To delete a mobile property in the Data Collection UI, please read the [delete a property tutorial](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html#delete-a-property).
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -129,7 +129,7 @@ Add the following rule to your custom ProGuard rules file, typically labeled `pr
 
 Implementing push notification tracking and measurement with the SDK depends on the Experience Cloud solution being used.
 
-* For the Adobe Campaign Standard extension, please read the [Adobe Campaign standard push tracking tutorial](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-mobile/push-tracking.html?lang=en).
+* For the Adobe Campaign Standard extension, please read the [Adobe Campaign standard push tracking tutorial](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-mobile/push-tracking.html).
 * For the Adobe Campaign Classic extension, please read the [Adobe Campaign Classic push notifications tracking tutorial](./adobe-campaign-classic/api-reference.md#tracknotification-api).
 
 ## Migrating to Android Mobile Core 2.x and compatible extensions

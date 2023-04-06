@@ -52,4 +52,4 @@ You should use ASCII characters, even if your company name contains non-ASCII ch
 For help on building your own extension, please see:
 * [Building iOS Extension](https://github.com/adobe/aepsdk-core-ios/blob/main/Documentation/EventHub/BuildingExtensions.md)
 * [Building Android Extension](https://github.com/adobe/aepsdk-core-android/blob/main/Documentation/EventHub/BuildingExtensions.md)
-* [Building Tags Extension](https://experienceleague.adobe.com/docs/experience-platform/tags/extension-dev/overview.html?lang=en)
+* [Building Tags Extension](https://experienceleague.adobe.com/docs/experience-platform/tags/extension-dev/overview.html)

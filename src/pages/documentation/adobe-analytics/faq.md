@@ -2,7 +2,7 @@
 
 ## How can I set up, configure, or troubleshoot processing rules?
 
-To learn about processing rules please read the [processing rules tips and tricks guide](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-tips.html?lang=en).
+To learn about processing rules please read the [processing rules tips and tricks guide](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-tips.html).
 
 ## Why are my Analytics identifiers (AID / MID) changing?
 
@@ -40,7 +40,7 @@ The [Analytics extension](./index.md) and its dependent [Identity extension](../
 
 ### Verify that network requests are sent to Adobe Analytics <a id="verify-that-network-requests-are-sent-to-adobe-analytics"></a>
 
-You can use [Adobe Experience Platform Assurance](../platform-assurance/index.md) to verify events are being sent to Adobe Analytics.
+You can use [Adobe Experience Platform Assurance](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html) to verify events are being sent to Adobe Analytics.
 
 ### Ensure appropriate timestamp configuration <a id="ensure-appropriate-time-stamp-configuration"></a>
 
