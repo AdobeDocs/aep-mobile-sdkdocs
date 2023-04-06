@@ -7,7 +7,8 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 ### Flutter EdgeBridge plugin 1.0.0
 
-The Adobe Experience Platform Edge Bridge Flutter plugin is now available.
+The Adobe Experience Platform Edge Bridge Flutter plugin is now available. 
+
 With this release, the extension enables a drop-in solution for converting MobileCore track API (trackAction & trackState) generated events into Edge Network events.
 * [flutter_aepedgebridge@1.0.0](https://pub.dev/packages/flutter_aepedgebridge)
 
@@ -15,7 +16,8 @@ With this release, the extension enables a drop-in solution for converting Mobil
 
 ### React Native EdgeBridge library 1.0.0
 
-The Adobe Experience Platform Edge Bridge React Native library is now available.
+The Adobe Experience Platform Edge Bridge React Native library is now available. 
+
 With this release, the extension enables a drop-in solution for converting MobileCore track API (trackAction & trackState) generated events into Edge Network events.
 * [@adobe/react-native-aepedgebridge:1.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedgebridge/v/1.0.0)
 
