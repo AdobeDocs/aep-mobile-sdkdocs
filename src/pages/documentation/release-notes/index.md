@@ -5,7 +5,7 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 # Release notes
 ## April 6, 2023
 
-### Flutter EdgeBridge plugin 1.0.0
+### Flutter Edge Bridge plugin 1.0.0
 
 The Adobe Experience Platform Edge Bridge Flutter plugin is now available. 
 
@@ -14,7 +14,7 @@ With this release, the extension enables a drop-in solution for converting Mobil
 
 ## April 5, 2023
 
-### React Native EdgeBridge library 1.0.0
+### React Native Edge Bridge library 1.0.0
 
 The Adobe Experience Platform Edge Bridge React Native library is now available. 
 
