@@ -8,7 +8,7 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 ### Android Edge 2.1.0
 
-* Added support to overwrite Edge request path with custom path to support Edge requests for Media Analytics service.
+* Added support to overwrite the Edge request path with a custom path to support Edge requests for the Media Analytics service.
 
 ## April 6, 2023
 
