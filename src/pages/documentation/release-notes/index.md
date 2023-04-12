@@ -3,6 +3,13 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 ---
 
 # Release notes
+
+## April 11, 2023
+
+### Android Edge 2.1.0
+
+* Added support to overwrite Edge request path with custom path to support Edge requests for Media Analytics service.
+
 ## April 6, 2023
 
 ### Flutter Edge Bridge plugin 1.0.0
