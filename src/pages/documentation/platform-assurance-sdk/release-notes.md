@@ -2,6 +2,19 @@
 
 Release notes and change logs for the Adobe Experience Platform Assurance extension
 
+## April 6, 2023
+
+### iOS Assurance 3.1.1
+
+* Fixed a bug that was causing sessions to not be terminated properly in the Quick Connect flow.
+
+## March 21, 2023
+
+### iOS Assurance 3.1.0
+
+* Added an API for a new quick connect capability for quick start workflows that will go beta soon.
+* Security improvements
+
 ## February 27, 2023
 
 ### Android Assurance 2.0.1

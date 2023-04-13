@@ -14,7 +14,7 @@ iOS
 
 <Tabs query="platform=ios&task=campaign"/>
 
-For more information about configuration, see [Channel specific application configuration in Adobe Campaign](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-channels/configuring-a-mobile-application.html?lang=en).
+For more information about configuration, see [Channel specific application configuration in Adobe Campaign](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-channels/configuring-a-mobile-application.html).
 
 ## Set up an Android or iOS app to receive push notifications
 
@@ -36,14 +36,14 @@ The following events are related to the tracked push notifications:
 - Click: User clicked the notification.
 - Open: App opened in response to user's click on notification.
 
-For more information about implementing the tracking of push notification events, see [Implementing Push Tracking](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-mobile/push-tracking.html?lang=en).
+For more information about implementing the tracking of push notification events, see [Implementing Push Tracking](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-mobile/push-tracking.html).
 
 ### Troubleshooting using Adobe Experience Platform Assurance
 
 You can verify the push notification tracking in Assurance.
 
 1. Connect your app to an Assurance session.
-1. Send a push notification to app from your Campaign instance.<br/>To know more about how to send push notification, see [Preparing and sending a push notification](https://experienceleague.adobe.com/docs/campaign-standard/using/communication-channels/push-notifications/preparing-and-sending-a-push-notification.html?lang=en).
+1. Send a push notification to app from your Campaign instance.<br/>To know more about how to send push notification, see [Preparing and sending a push notification](https://experienceleague.adobe.com/docs/campaign-standard/using/communication-channels/push-notifications/preparing-and-sending-a-push-notification.html).
 1. Receive a push notification in the device.
 1. Click on the push notification to launch the app.
 1. In the list of events, verify that you have an event with type CollectData.
