@@ -4,7 +4,7 @@
 
 ### Android BOM 1.0.0-beta1
 
-The initial public beta release of the BOM artifact for Android is now available. 
+The initial public beta release of the [BOM](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom/1.0.0-beta1) artifact for Android is now available. 
 
 ## March 31, 2023
 
