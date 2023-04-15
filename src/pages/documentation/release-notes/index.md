@@ -3,6 +3,14 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 ---
 
 # Release notes
+
+## April 14, 2023
+
+### Android Mobile Core 2.1.2
+
+* Fixed an issue that prevented some in-app messaging show frequency rules from working correctly.
+* Improved evaluation of logical operators in rules engine.
+
 ## April 6, 2023
 
 ### Flutter Edge Bridge plugin 1.0.0

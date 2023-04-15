@@ -1,5 +1,12 @@
 # Release Notes
 
+## April 14, 2023
+
+### Android Mobile Core 2.1.2
+
+* Fixed an issue that prevented some in-app messaging show frequency rules from working correctly.
+* Improved evaluation of logical operators in rules engine.
+
 ## March 31, 2023
 
 ### Android Mobile Core 2.1.1
