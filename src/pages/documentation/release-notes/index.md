@@ -3,6 +3,13 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 ---
 
 # Release notes
+
+## April 10, 2023
+
+### Android BOM 1.0.0-beta1
+
+The initial public beta release of the [Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom/1.0.0-beta1) (BOM) artifact for Android is now available. 
+
 ## April 6, 2023
 
 ### Flutter Edge Bridge plugin 1.0.0
