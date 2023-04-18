@@ -7,6 +7,12 @@
 * Fixed an issue that prevented some in-app messaging show frequency rules from working correctly.
 * Improved evaluation of logical operators in rules engine.
 
+## April 10, 2023
+
+### Android BOM 1.0.0-beta1
+
+The initial public beta release of the [Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom/1.0.0-beta1) (BOM) artifact for Android is now available. 
+
 ## March 31, 2023
 
 ### Android Mobile Core 2.1.1
