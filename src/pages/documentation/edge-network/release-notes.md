@@ -1,5 +1,11 @@
 # Release Notes
 
+## April 11, 2023
+
+### Android Edge 2.1.0
+
+* Added support to overwrite the Edge request path with a custom path to support Edge requests for the Media Analytics service.
+
 ## February 28, 2023
 
 ### iOS AEPEdge 1.6.0
