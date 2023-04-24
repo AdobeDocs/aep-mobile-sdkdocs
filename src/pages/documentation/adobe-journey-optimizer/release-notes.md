@@ -1,5 +1,11 @@
 # Release Notes
 
+## April 24, 2023
+
+### Android Messaging 2.1.2
+
+* Fixed a bug causing a crash when incorrectly formatted URLs were used in custom HTML messages.
+
 ## March 20, 2023
 
 ### iOS Messaging 1.1.3
