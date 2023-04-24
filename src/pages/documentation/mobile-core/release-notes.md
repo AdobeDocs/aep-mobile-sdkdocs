@@ -1,5 +1,14 @@
 # Release Notes
 
+## April 24, 2023
+
+### Android Mobile Core 2.1.3
+
+* In-app messages with content overflow now correctly scroll when the message is not observing gestures.
+* Opacity is now correctly calculated for in-app message takeovers.
+* In-app messages will no longer intermittently cause a crash when being displayed on Android 7.
+* Fixed a race condition when querying the event history database.
+
 ## April 14, 2023
 
 ### Android Mobile Core 2.1.2
