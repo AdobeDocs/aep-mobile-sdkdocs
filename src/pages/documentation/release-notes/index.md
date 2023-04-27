@@ -4,6 +4,14 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## April 25, 2023
+
+### Android Assurance 2.1.0
+
+* Added a new API for quick connect capability.
+* Fixed an issue causing pure Jetpack Compose apps implementing Assurance to add xml color attributes.
+* Switched to use vector support library to reduce SDK size.
+
 ## April 24, 2023
 
 ### Android Mobile Core 2.1.3
