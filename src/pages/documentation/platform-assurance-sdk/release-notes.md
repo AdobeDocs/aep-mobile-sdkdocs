@@ -7,7 +7,7 @@ Release notes and change logs for the Adobe Experience Platform Assurance extens
 ### Android Assurance 2.1.0
 
 * Added a new API for quick connect capability.
-* Fixed an issue causing pure Jetpack Compose apps implementing Assurance to add xml color attributes.
+* Fixed an issue causing pure Jetpack Compose apps implementing Assurance to add XML color attributes.
 * Switched to use vector support library to reduce SDK size.
 
 ## April 6, 2023
