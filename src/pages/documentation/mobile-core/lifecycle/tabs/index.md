@@ -53,8 +53,8 @@ import AEPLifecycle
 
 Import the Lifecycle extension:
 
-```jsx
-import {Lifecycle} from '@adobe/react-native-acpcore';
+```ts
+import { Lifecycle } from '@adobe/react-native-aepcore';
 ```
 
 <!-- <Variant platform="flutter" task="add" repeat="3"/>

@@ -65,7 +65,6 @@ yarn add @adobe/react-native-aepcampaignclassic
 import { CampaignClassic } from '@adobe/react-native-AEPCampaignClassic';
 ```
 
-<Variant platform="android" task="register" repeat="2"/>
 <Variant platform="android" task="register" repeat="5"/>
 
 In your app's `OnCreate` method, register the Campaign Classic and Lifecycle extensions:

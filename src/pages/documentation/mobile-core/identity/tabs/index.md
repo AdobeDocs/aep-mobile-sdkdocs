@@ -29,8 +29,9 @@ import AEPIdentity
 <Variant platform="react-native" task="add" repeat="2"/>
 
 #### JavaScript
-```jsx
-import {AEPIdentity} from '@adobe/react-native-aepcore';
+
+```ts
+import {Identity} from '@adobe/react-native-aepcore';
 ```
 
 <!-- <Variant platform="flutter" task="add" repeat="2"/>
