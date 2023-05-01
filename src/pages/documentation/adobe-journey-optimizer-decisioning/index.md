@@ -40,7 +40,7 @@ On [Experience Platform Data Collection](https://experience.adobe.com/#/data-col
 
 <InlineAlert variant="warning" slots="text"/>
 
-For the AEPOptimize APIs to work properly, you need to integrate Mobile Core and Edge extensions in your mobile app. For more details see, documentation on [Mobile Core](../mobile-core/index.md) and [Adobe Experience Platform Edge Network](../edge-network/index.md).
+For the AEPOptimize APIs to work properly, you need to integrate Mobile Core and Edge extensions in your mobile app. For more details see, documentation on [Mobile Core](../mobile-foundation-extensions/mobile-core/index.md) and [Adobe Experience Platform Edge Network](../mobile-foundation-extensions/edge-network/index.md).
 
 ### Install the Experience Platform Mobile SDK
 
@@ -273,7 +273,7 @@ iOS
 
 <Tabs query="platform=ios&task=proposition-tracking-edge"/>
 
-The Edge `sendEvent` API can then be used to send this tracking XDM data along with any additional XDM and freeform data to the Experience Edge network. Additionally, an override dataset can also be specified for tracking data. For more details, see [Edge - sendEvent API](../edge-network/api-reference.md#sendevent).
+The Edge `sendEvent` API can then be used to send this tracking XDM data along with any additional XDM and freeform data to the Experience Edge network. Additionally, an override dataset can also be specified for tracking data. For more details, see [Edge - sendEvent API](../mobile-foundation-extensions/edge-network/api-reference.md#sendevent).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -287,7 +287,7 @@ iOS
 
 ## Configuration keys
 
-To update the SDK configuration programmatically, use the following information to change the Optimize extension configuration values. For more information, see the [programmatic updates to Configuration guide](../mobile-core/configuration/api-reference.md#updateconfiguration).
+To update the SDK configuration programmatically, use the following information to change the Optimize extension configuration values. For more information, see the [programmatic updates to Configuration guide](../mobile-foundation-extensions/mobile-core/configuration/api-reference.md#updateconfiguration).
 
 | Key | Required | Description | Data Type |
 | :--- | :--- | :--- | :--- |

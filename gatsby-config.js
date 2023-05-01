@@ -101,167 +101,167 @@ module.exports = {
                     },
                     {
                         title: "Mobile Core",
-                        path: "/documentation/mobile-core",
+                        path: "/documentation/mobile-foundation-extensions/mobile-core",
                         pages: [
                             {
                                 title: "Overview",
-                                path: "/documentation/mobile-core"
+                                path: "/documentation/mobile-foundation-extensions/mobile-core"
                             },
                             {
                                 title: "Configuration",
-                                path: "documentation/mobile-core/configuration",
+                                path: "documentation/mobile-foundation-extensions/mobile-core/configuration",
                                 pages: [
                                     {
                                         title: "Overview",
-                                        path: "documentation/mobile-core/configuration"
+                                        path: "documentation/mobile-foundation-extensions/mobile-core/configuration"
                                     },
                                     {
                                         title: "API reference",
-                                        path: "documentation/mobile-core/configuration/api-reference"
+                                        path: "documentation/mobile-foundation-extensions/mobile-core/configuration/api-reference"
                                     }
                                 ]
                             },
                             {
                                 title: "Identity",
-                                path: "documentation/mobile-core/identity",
+                                path: "documentation/mobile-foundation-extensions/mobile-core/identity",
                                 pages: [
                                     {
                                         title: "Overview",
-                                        path: "documentation/mobile-core/identity"
+                                        path: "documentation/mobile-foundation-extensions/mobile-core/identity"
                                     },
                                     {
                                         title: "API reference",
-                                        path: "documentation/mobile-core/identity/api-reference"
+                                        path: "documentation/mobile-foundation-extensions/mobile-core/identity/api-reference"
                                     }
                                 ]
                             },
                             {
                                 title: "Lifecycle",
-                                path: "documentation/mobile-core/lifecycle",
+                                path: "documentation/mobile-foundation-extensions/mobile-core/lifecycle",
                                 pages: [
                                     {
                                         title: "Overview",
-                                        path: "documentation/mobile-core/lifecycle"
+                                        path: "documentation/mobile-foundation-extensions/mobile-core/lifecycle"
                                     },
                                     {
                                         title: "Lifecycle extension in Android",
-                                        path: "documentation/mobile-core/lifecycle/android"
+                                        path: "documentation/mobile-foundation-extensions/mobile-core/lifecycle/android"
                                     },
                                     {
                                         title: "Lifecycle extension in iOS",
-                                        path: "documentation/mobile-core/lifecycle/ios"
+                                        path: "documentation/mobile-foundation-extensions/mobile-core/lifecycle/ios"
                                     },
                                     {
                                         title: "API reference",
-                                        path: "documentation/mobile-core/lifecycle/api-reference"
+                                        path: "documentation/mobile-foundation-extensions/mobile-core/lifecycle/api-reference"
                                     },
                                     {
                                         title: "Metrics",
-                                        path: "documentation/mobile-core/lifecycle/metrics"
+                                        path: "documentation/mobile-foundation-extensions/mobile-core/lifecycle/metrics"
                                     },
                                     {
                                         title: "Configuration keys",
-                                        path: "documentation/mobile-core/lifecycle/configuration-keys"
+                                        path: "documentation/mobile-foundation-extensions/mobile-core/lifecycle/configuration-keys"
                                     }
                                 ]
                             },
                             {
                                 title: "Platform services",
-                                path: "documentation/mobile-core/platform-services",
+                                path: "documentation/mobile-foundation-extensions/mobile-core/platform-services",
                                 pages: [
                                     {
                                         title: "Overview",
-                                        path: "documentation/mobile-core/platform-services"
+                                        path: "documentation/mobile-foundation-extensions/mobile-core/platform-services"
                                     },
                                     {
                                         title: "Network service",
-                                        path: "documentation/mobile-core/platform-services/network-service"
+                                        path: "documentation/mobile-foundation-extensions/mobile-core/platform-services/network-service"
                                     }
                                 ]
                             },
                             {
                                 title: "Rules Engine",
-                                path: "documentation/mobile-core/rules-engine",
+                                path: "documentation/mobile-foundation-extensions/mobile-core/rules-engine",
                                 pages: [
                                     {
                                         title: "Overview",
-                                        path: "documentation/mobile-core/rules-engine"
+                                        path: "documentation/mobile-foundation-extensions/mobile-core/rules-engine"
                                     },
                                     {
                                         title: "Technical details",
-                                        path: "documentation/mobile-core/rules-engine/technical-details"
+                                        path: "documentation/mobile-foundation-extensions/mobile-core/rules-engine/technical-details"
                                     },
                                     {
                                         title: "Consequence details",
-                                        path: "documentation/mobile-core/rules-engine/consequence-details"
+                                        path: "documentation/mobile-foundation-extensions/mobile-core/rules-engine/consequence-details"
                                     }
                                 ]
                             },
                             {
                                 title: "Signal",
-                                path: "documentation/mobile-core/signal",
+                                path: "documentation/mobile-foundation-extensions/mobile-core/signal",
                                 pages: [
                                     {
                                         title: "Overview",
-                                        path: "documentation/mobile-core/signal"
+                                        path: "documentation/mobile-foundation-extensions/mobile-core/signal"
                                     },
                                     {
                                         title: "API reference",
-                                        path: "documentation/mobile-core/signal/api-reference"
+                                        path: "documentation/mobile-foundation-extensions/mobile-core/signal/api-reference"
                                     }
                                 ]
                             },
                             {
                                 title: "API reference",
-                                path: "documentation/mobile-core/api-reference"
+                                path: "documentation/mobile-foundation-extensions/mobile-core/api-reference"
                             },
                             {
                                 title: "Release notes",
-                                path: "documentation/mobile-core/release-notes"
+                                path: "documentation/mobile-foundation-extensions/mobile-core/release-notes"
                             }
                         ]
                     },
                     {
                         title: "Adobe Experience Platform Edge Network",
-                        path: "/documentation/edge-network",
+                        path: "/documentation/mobile-foundation-extensions/edge-network",
                         pages: [
                             {
                                 title: "Overview",
-                                path: "/documentation/edge-network"
+                                path: "/documentation/mobile-foundation-extensions/edge-network"
                             },
                             {
                                 title: "API reference",
-                                path: "/documentation/edge-network/api-reference"
+                                path: "/documentation/mobile-foundation-extensions/edge-network/api-reference"
                             },
                             {
                                 title: "XDM Experience Events",
-                                path: "/documentation/edge-network/xdm-experience-events"
+                                path: "/documentation/mobile-foundation-extensions/edge-network/xdm-experience-events"
                             },
                             {
                                 title: "Validation",
-                                path: "/documentation/edge-network/validation"
+                                path: "/documentation/mobile-foundation-extensions/edge-network/validation"
                             },
                             {
                                 title: "Release notes",
-                                path: "/documentation/edge-network/release-notes"
+                                path: "/documentation/mobile-foundation-extensions/edge-network/release-notes"
                             }
                         ]
                     },
                     {
                         title: "Consent for Edge Network",
-                        path: "/documentation/consent-for-edge-network",
+                        path: "/documentation/mobile-foundation-extensions/consent-for-edge-network",
                         pages: [
                             {
                                 title: "Overview",
-                                path: "/documentation/consent-for-edge-network"
+                                path: "/documentation/mobile-foundation-extensions/consent-for-edge-network"
                             },
                             {
                                 title: "API reference",
-                                path: "documentation/consent-for-edge-network/api-reference"
+                                path: "documentation/mobile-foundation-extensions/consent-for-edge-network/api-reference"
                             },
                             {
                                 title: "Release notes",
-                                path: "documentation/consent-for-edge-network/release-notes"
+                                path: "documentation/mobile-foundation-extensions/consent-for-edge-network/release-notes"
                             }
                         ]
                     },
@@ -289,86 +289,86 @@ module.exports = {
                     },
                     {
                         title: "Lifecycle for Edge Network",
-                        path: "/documentation/lifecycle-for-edge-network",
+                        path: "/documentation/mobile-foundation-extensions/lifecycle-for-edge-network",
                         pages: [
                             {
                                 title: "Overview",
-                                path: "/documentation/lifecycle-for-edge-network"
+                                path: "/documentation/mobile-foundation-extensions/lifecycle-for-edge-network"
                             },
                             {
                                 title: "API reference",
-                                path: "documentation/lifecycle-for-edge-network/api-reference"
+                                path: "documentation/mobile-foundation-extensions/lifecycle-for-edge-network/api-reference"
                             },
                             {
                                 title: "Event reference",
-                                path: "documentation/lifecycle-for-edge-network/event-reference"
+                                path: "documentation/mobile-foundation-extensions/lifecycle-for-edge-network/event-reference"
                             },
                             {
                                 title: "Metrics",
-                                path: "documentation/lifecycle-for-edge-network/metrics"
+                                path: "documentation/mobile-foundation-extensions/lifecycle-for-edge-network/metrics"
                             }
                         ]
                     },
                     {
                         title: "Adobe Experience Platform Assurance",
-                        path: "/documentation/platform-assurance-sdk",
+                        path: "/documentation/mobile-foundation-extensions/platform-assurance-sdk",
                         pages: [
                             {
                                 title: "Overview",
-                                path: "/documentation/platform-assurance-sdk"
+                                path: "/documentation/mobile-foundation-extensions/platform-assurance-sdk"
                             },
                             {
                                 title: "API reference",
-                                path: "/documentation/platform-assurance-sdk/api-reference"
+                                path: "/documentation/mobile-foundation-extensions/platform-assurance-sdk/api-reference"
                             },
                             {
                                 title: "Resolving common issues",
-                                path: "/documentation/platform-assurance-sdk/common-issues/"
+                                path: "/documentation/mobile-foundation-extensions/platform-assurance-sdk/common-issues/"
                             },
                             {
                                 title: "Release notes",
-                                path: "/documentation/platform-assurance-sdk/release-notes"
+                                path: "/documentation/mobile-foundation-extensions/platform-assurance-sdk/release-notes"
                             }
                         ]
                     },
 
 
-            {
-                title: "Adobe Experience Platform Location Service",
-                path: "/documentation/places",
-                pages: [
-                    {
-                        title: "Overview",
-                        path: "/documentation/places"
-                    },
-                    {
-                        title: "API reference",
-                        path: "documentation/places/api-reference.md"
-                    },
-                    {
-                        title: "Release notes",
-                        path: "documentation/places/release-notes.md"
-                    }
-                ]
-            },
-            {
-                title: "Profile",
-                path: "/documentation/profile",
-                pages: [
-                    {
-                        title: "Overview",
-                        path: "/documentation/profile"
-                    },
-                    {
-                        title: "API reference",
-                        path: "documentation/profile/api-reference"
-                    },
-                    {
-                        title: "Release notes",
-                        path: "documentation/profile/release-notes"
-                    }
-                ]
-            }
+                {
+                    title: "Adobe Experience Platform Location Service",
+                    path: "/documentation/mobile-foundation-extensions/places",
+                    pages: [
+                        {
+                            title: "Overview",
+                            path: "/documentation/mobile-foundation-extensions/places"
+                        },
+                        {
+                            title: "API reference",
+                            path: "documentation/mobile-foundation-extensions/places/api-reference.md"
+                        },
+                        {
+                            title: "Release notes",
+                            path: "documentation/mobile-foundation-extensions/places/release-notes.md"
+                        }
+                    ]
+                },
+                {
+                    title: "Profile",
+                    path: "/documentation/mobile-foundation-extensions/profile",
+                    pages: [
+                        {
+                            title: "Overview",
+                            path: "/documentation/mobile-foundation-extensions/profile"
+                        },
+                        {
+                            title: "API reference",
+                            path: "documentation/mobile-foundation-extensions/profile/api-reference"
+                        },
+                        {
+                            title: "Release notes",
+                            path: "documentation/mobile-foundation-extensions/profile/release-notes"
+                        }
+                    ]
+                }
                 ]
             },
             {

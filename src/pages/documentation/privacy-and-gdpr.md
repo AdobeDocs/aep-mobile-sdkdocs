@@ -14,7 +14,7 @@ The following sections provide details on how you can collect consent and privac
 
 Depending on the mobile extensions you use, there are two ways of collecting and enforcing consent preferences when using the Experience Platform SDKs:
 
-1. When using the **Edge Network** mobile extensions, you should use the [Consent for Edge Network](./consent-for-edge-network/index.md) extension.
+1. When using the **Edge Network** mobile extensions, you should use the [Consent for Edge Network](./mobile-foundation-extensions/consent-for-edge-network/index.md) extension.
 2. When using **Adobe Experience Cloud** mobile extensions, you should use privacy status settings.
 
 The two options are documented in detail below.
@@ -37,7 +37,7 @@ You can set the collect consent status to ensure collection of data suits your u
 
 <InlineAlert variant="warning" slots="text"/>
 
-Updating the collect consent status to No (n) does not reset or clear the identities of the current user. If you need to reset all current identities, use the [MobileCore.resetIdentities()](./mobile-core/api-reference.md#resetidentities) API.
+Updating the collect consent status to No (n) does not reset or clear the identities of the current user. If you need to reset all current identities, use the [MobileCore.resetIdentities()](./mobile-foundation-extensions/mobile-core/api-reference.md#resetidentities) API.
 
 ### Collect consent settings
 
@@ -85,7 +85,7 @@ When using the Edge Network extensions, use the [Identity.getIdentities](./ident
 
 ## Configuration keys
 
-To programmatically update the SDK configuration, use the following information to change your default consent values. For more information, see the [configuration API reference](./mobile-core/configuration/api-reference.md).
+To programmatically update the SDK configuration, use the following information to change your default consent values. For more information, see the [configuration API reference](./mobile-foundation-extensions/mobile-core/configuration/api-reference.md).
 
 | Key | Description |
 | :--- | :--------- |
@@ -137,15 +137,15 @@ iOS
 
 ### getSdkIdentities
 
-To retrieve all the identifier data stored locally by the SDK as a JSON string, use the [getSdkIdentities](./mobile-core/api-reference.md#getsdkidentities) API from the Mobile Core extension.
+To retrieve all the identifier data stored locally by the SDK as a JSON string, use the [getSdkIdentities](./mobile-foundation-extensions/mobile-core/api-reference.md#getsdkidentities) API from the Mobile Core extension.
 
 <InlineAlert variant="info" slots="text"/>
 
-When using both Edge Network and Adobe Solutions extensions, use both [Identity.getIdentities](./identity-for-edge-network/api-reference.md#getidentities) API and [MobileCore.getSdkIdentities](./mobile-core/api-reference.md#getsdkidentities) APIs to retrieve all the identifier data stored locally by the SDK.
+When using both Edge Network and Adobe Solutions extensions, use both [Identity.getIdentities](./identity-for-edge-network/api-reference.md#getidentities) API and [MobileCore.getSdkIdentities](./mobile-foundation-extensions/mobile-core/api-reference.md#getsdkidentities) APIs to retrieve all the identifier data stored locally by the SDK.
 
 ## Configuration keys
 
-To update the SDK configuration, programmatically, use the following information to change your privacy configuration values. For more information, [Configuration API reference](./mobile-core/configuration/api-reference.md).
+To update the SDK configuration, programmatically, use the following information to change your privacy configuration values. For more information, [Configuration API reference](./mobile-foundation-extensions/mobile-core/configuration/api-reference.md).
 
 | Key | Description |
 | :--- | :--- |

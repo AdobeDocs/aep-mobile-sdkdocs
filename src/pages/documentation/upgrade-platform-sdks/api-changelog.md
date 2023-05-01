@@ -4,7 +4,7 @@ This page details SDK API changes between the Experience Platform SDKs and 4x SD
 
 ## Mobile Core APIs
 
-For more information, see the [Mobile Core API reference](../mobile-core/api-reference.md).
+For more information, see the [Mobile Core API reference](../mobile-foundation-extensions/mobile-core/api-reference.md).
 
 ### Supported APIs
 
@@ -13,13 +13,13 @@ For more information, see the [Mobile Core API reference](../mobile-core/api-ref
 | extensionVersion: | version/getVersion ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html)) |
 | [getPrivacyStatus:](./privacy-and-gdpr.md#getprivacystatus) | privacyStatus ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html)) |
 | [setPrivacyStatus:](./privacy-and-gdpr.md#setprivacystatus) | setPrivacyStatus: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html)) |
-| [setLogLevel:](../mobile-core/api-reference.md#setloglevel) | setDebugLogging: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html)\| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html)) |
-| [configureWithFileInPath:](../mobile-core/configuration/api-reference.md/#configurewithfileinpath) | overrideConfigPath: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html)) |
-| [setAppGroup:](../mobile-core/api-reference.md#setappgroup) | setAppGroup: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/ios-ext/ios-ext.html)) |
-| [trackState:data:](../mobile-core/api-reference.md#trackstate) | trackState:data: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/states.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/states.html)) |
-| [trackAction:data:](../mobile-core/api-reference.md#trackaction) | trackAction:data: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/actions.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/actions.html)) |
-| [collectPII:](../mobile-core/api-reference.md#collectpii) | collectPII: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/postbacks/c-pii-postbacks.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/postbacks/c-pii-postbacks.html)) |
-| [getSdkIdentities:](../mobile-core/identity/api-reference.md#getsdkidentities) | getAllIdentifiersAsync: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/privacy-gdpr-ios/c-mob-gdpr-ret-stored-ids-ios.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/gdpr-privacy-android/c-mob-gdpr-ret-stored-ids-android.html)) |
+| [setLogLevel:](../mobile-foundation-extensions/mobile-core/api-reference.md#setloglevel) | setDebugLogging: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html)\| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html)) |
+| [configureWithFileInPath:](../mobile-foundation-extensions/mobile-core/configuration/api-reference.md/#configurewithfileinpath) | overrideConfigPath: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html)) |
+| [setAppGroup:](../mobile-foundation-extensions/mobile-core/api-reference.md#setappgroup) | setAppGroup: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/ios-ext/ios-ext.html)) |
+| [trackState:data:](../mobile-foundation-extensions/mobile-core/api-reference.md#trackstate) | trackState:data: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/states.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/states.html)) |
+| [trackAction:data:](../mobile-foundation-extensions/mobile-core/api-reference.md#trackaction) | trackAction:data: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/actions.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/actions.html)) |
+| [collectPII:](../mobile-foundation-extensions/mobile-core/api-reference.md#collectpii) | collectPII: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/postbacks/c-pii-postbacks.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/postbacks/c-pii-postbacks.html)) |
+| [getSdkIdentities:](../mobile-foundation-extensions/mobile-core/identity/api-reference.md#getsdkidentities) | getAllIdentifiersAsync: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/privacy-gdpr-ios/c-mob-gdpr-ret-stored-ids-ios.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/gdpr-privacy-android/c-mob-gdpr-ret-stored-ids-android.html)) |
 
 ### Deprecated APIs and functionality
 
@@ -45,15 +45,15 @@ For more information, see the [Mobile Core API reference](../mobile-core/api-ref
 
 <InlineAlert variant="info" slots="text"/>
 
-In the v4 iOS SDK, Lifecycle start and stop calls are made automatically by the SDK. In the Adobe Experience Platform Mobile SDK, the calls to start and stop lifecycle need to be made by the application developer. For more information, see the [Lifecycle extension](../mobile-core/lifecycle/index.md).
+In the v4 iOS SDK, Lifecycle start and stop calls are made automatically by the SDK. In the Adobe Experience Platform Mobile SDK, the calls to start and stop lifecycle need to be made by the application developer. For more information, see the [Lifecycle extension](../mobile-foundation-extensions/mobile-core/lifecycle/index.md).
 
-For more information, see the [Lifecycle API reference](../mobile-core/lifecycle/api-reference.md).
+For more information, see the [Lifecycle API reference](../mobile-foundation-extensions/mobile-core/lifecycle/api-reference.md).
 
 | Experience Platform SDK | 4x SDK |
 |---|---|
-| [lifecycleStart:](../mobile-core/lifecycle/api-reference.md#lifecyclestart) | collectLifecycleData ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html)) |
-| [lifecycleStart:](../mobile-core/lifecycle/api-reference.md#lifecyclestart) | collectLifecycleWithAdditionalData ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html)) |
-| [lifecyclePause](../mobile-core/lifecycle/api-reference.md#lifecyclepause) | pauseCollectingLifecycleData ([Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html) only) |
+| [lifecycleStart:](../mobile-foundation-extensions/mobile-core/lifecycle/api-reference.md#lifecyclestart) | collectLifecycleData ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html)) |
+| [lifecycleStart:](../mobile-foundation-extensions/mobile-core/lifecycle/api-reference.md#lifecyclestart) | collectLifecycleWithAdditionalData ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html)) |
+| [lifecyclePause](../mobile-foundation-extensions/mobile-core/lifecycle/api-reference.md#lifecyclepause) | pauseCollectingLifecycleData ([Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html) only) |
 
 ### Deprecated APIs
 
@@ -63,21 +63,21 @@ For more information, see the [Lifecycle API reference](../mobile-core/lifecycle
 
 ## Identity extension APIs
 
-For more information, see the [Identity API reference](../mobile-core/identity/api-reference.md).
+For more information, see the [Identity API reference](../mobile-foundation-extensions/mobile-core/identity/api-reference.md).
 
 ### Supported APIs
 
 | Experience Platform SDK | 4x SDK |
 |---|---|
-| [setPushIdentifier:](../mobile-core/identity/api-reference.md#setpushidentifier) | setPushIdentifier ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html)) |
-| [setAdvertisingIdentifier:](../mobile-core/identity/api-reference.md#setadvertisingidentifier) | setAdvertisingIdentifier ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html)) |
-| [getExperienceCloudId:](../mobile-core/identity/api-reference.md#getexperiencecloudid) | visitorMarketingCloudID ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/exp-cloud-ios/mc-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/mc-methods.html)) |
-| [syncIdentifiers:](../mobile-core/identity/api-reference.md#syncidentifiers) | visitorSyncIdentifiers ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/exp-cloud-ios/mc-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/mc-methods.html)) |
-| [syncIdentifiers:authentication:](../mobile-core/identity/api-reference.md#syncidentifiers-overloaded) | visitorSyncIdentifiers:authenticationState: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/exp-cloud-ios/mc-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/mc-methods.html)) |
-| [syncIdentifier:identifier:authentication:](../mobile-core/identity/api-reference.md#syncidentifier) |visitorSyncIdentifiersWithType:identifier:authenticationState: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/exp-cloud-ios/mc-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/mc-methods.html)) |
-| [getIdentifiers](../mobile-core/identity/api-reference.md#getidentifiers) | visitorGetIDs ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/exp-cloud-ios/mc-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/mc-methods.html)) |
-| [appendToURL:withCallback:](../mobile-core/identity/api-reference.md#appendtourl--appendvisitorinfoforurl) | visitorAppendToURL: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/exp-cloud-ios/mc-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/mc-methods.html)) |
-| [getUrlVariables](../mobile-core/identity/api-reference.md#geturlvariables) | visitorGetUrlVariablesAsync: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/sdk-reference-android/hybrid-app.html)) |
+| [setPushIdentifier:](../mobile-foundation-extensions/mobile-core/identity/api-reference.md#setpushidentifier) | setPushIdentifier ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html)) |
+| [setAdvertisingIdentifier:](../mobile-foundation-extensions/mobile-core/identity/api-reference.md#setadvertisingidentifier) | setAdvertisingIdentifier ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html)) |
+| [getExperienceCloudId:](../mobile-foundation-extensions/mobile-core/identity/api-reference.md#getexperiencecloudid) | visitorMarketingCloudID ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/exp-cloud-ios/mc-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/mc-methods.html)) |
+| [syncIdentifiers:](../mobile-foundation-extensions/mobile-core/identity/api-reference.md#syncidentifiers) | visitorSyncIdentifiers ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/exp-cloud-ios/mc-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/mc-methods.html)) |
+| [syncIdentifiers:authentication:](../mobile-foundation-extensions/mobile-core/identity/api-reference.md#syncidentifiers-overloaded) | visitorSyncIdentifiers:authenticationState: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/exp-cloud-ios/mc-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/mc-methods.html)) |
+| [syncIdentifier:identifier:authentication:](../mobile-foundation-extensions/mobile-core/identity/api-reference.md#syncidentifier) |visitorSyncIdentifiersWithType:identifier:authenticationState: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/exp-cloud-ios/mc-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/mc-methods.html)) |
+| [getIdentifiers](../mobile-foundation-extensions/mobile-core/identity/api-reference.md#getidentifiers) | visitorGetIDs ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/exp-cloud-ios/mc-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/mc-methods.html)) |
+| [appendToURL:withCallback:](../mobile-foundation-extensions/mobile-core/identity/api-reference.md#appendtourl--appendvisitorinfoforurl) | visitorAppendToURL: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/exp-cloud-ios/mc-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/experience-cloud-android/mc-methods.html)) |
+| [getUrlVariables](../mobile-foundation-extensions/mobile-core/identity/api-reference.md#geturlvariables) | visitorGetUrlVariablesAsync: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/sdk-reference-android/hybrid-app.html)) |
 
 ## Adobe Analytics extension APIs
 

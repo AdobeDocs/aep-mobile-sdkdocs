@@ -362,7 +362,7 @@ import com.adobe.marketing.mobile.target.TargetParameters;
 
 ### Android Places 2.0.0
 
-* Major version update for [Adobe Experience Platform Location Service](../places/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-places-android).
+* Major version update for [Adobe Experience Platform Location Service](../mobile-foundation-extensions/places/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-places-android).
 
 Please note that the following improvements have been made in the current release:
 
@@ -403,7 +403,7 @@ import com.adobe.marketing.mobile.places.PlacesRequestError;
 
 ### Android Assurance 2.0.0
 
-* Major version update for [Adobe Experience Platform Assurance](../platform-assurance-sdk/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-assurance-android).
+* Major version update for [Adobe Experience Platform Assurance](../mobile-foundation-extensions/platform-assurance-sdk/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-assurance-android).
 
 ### Android Campaign Classic 2.0.0
 
@@ -413,11 +413,11 @@ Please note that the `registerDevice` API, similar to iOS, no longer provides a 
 
 ### Android Consent 2.0.0
 
-* Major version update for [Consent for Edge Network](../consent-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgeconsent-android).
+* Major version update for [Consent for Edge Network](../mobile-foundation-extensions/consent-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgeconsent-android).
 
 ### Android Edge 2.0.0
 
-* Major version update for [Edge Network](../edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edge-android).
+* Major version update for [Edge Network](../mobile-foundation-extensions/edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edge-android).
 
 ### Android EdgeIdentity 2.0.0
 
@@ -425,7 +425,7 @@ Please note that the `registerDevice` API, similar to iOS, no longer provides a 
 
 ### Android UserProfile 2.0.0
 
-- Major version update for [User Profile](../profile/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-userprofile-android).
+- Major version update for [User Profile](../mobile-foundation-extensions/profile/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-userprofile-android).
 - The following APIs have been deprecated and will be removed in a future release:
 
   | Deprecated API                      | Recommended Alternative              |
@@ -468,7 +468,7 @@ The following AEP Flutter plugins have been published:
 
 The `Adobe Experience Platform Mobile SDK - Edge Bridge` extension is now available for iOS!
 
-With this release, the extension enables a drop-in solution for converting Core track API (trackAction & trackState) generated events into Edge Network events. This extension may be used to easily route existing track calls, that may have been implemented for Adobe Analytics, to Edge Network. The configured Data Collection datastream for the mobile application can define a mapping of the track event's `contextdata` to an XDM schema using [Data Prep for Data Collection](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/data-prep.html) to route data to Adobe Analytics, Adobe Experience Platform, or to 3rd party vendors via server-side event forwarding.
+With this release, the extension enables a drop-in solution for converting Core track API (trackAction & trackState) generated events into Edge Network events. This extension may be used to easily route existing track calls, that may have been implemented for Adobe Analytics, to Edge Network. The configured Data Collection datastream for the mobile application can define a mapping of the track event's `contextdata` to an XDM schema using [Data Prep for Data Collection](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-foundation-extensions/edge-network/data-prep.html) to route data to Adobe Analytics, Adobe Experience Platform, or to 3rd party vendors via server-side event forwarding.
 
 For an end-to-end guide on how to use the extension, see the [Edge Bridge tutorial](https://github.com/adobe/aepsdk-edgebridge-ios/blob/main/Documentation/tutorials/edge-bridge-tutorial.md).
 
@@ -478,7 +478,7 @@ For an end-to-end guide on how to use the extension, see the [Edge Bridge tutori
 
 The `Adobe Experience Platform Mobile SDK - Edge Bridge` extension is now available for Android!
 
-With this release, the extension enables a drop-in solution for converting Core track API (trackAction & trackState) generated events into Edge Network events. This extension may be used to easily route existing track calls, that may have been implemented for Adobe Analytics, to Edge Network. The configured Data Collection datastream for the mobile application can define a mapping of the track event's `contextdata` to an XDM schema using [Data Prep for Data Collection](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/data-prep.html) to route data to Adobe Analytics, Adobe Experience Platform, or to 3rd party vendors via server-side event forwarding.
+With this release, the extension enables a drop-in solution for converting Core track API (trackAction & trackState) generated events into Edge Network events. This extension may be used to easily route existing track calls, that may have been implemented for Adobe Analytics, to Edge Network. The configured Data Collection datastream for the mobile application can define a mapping of the track event's `contextdata` to an XDM schema using [Data Prep for Data Collection](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-foundation-extensions/edge-network/data-prep.html) to route data to Adobe Analytics, Adobe Experience Platform, or to 3rd party vendors via server-side event forwarding.
 
 For an end-to-end guide on how to use the extension, see the [Edge Bridge tutorial](https://github.com/adobe/aepsdk-edgebridge-android/blob/main/Documentation/tutorials/edge-bridge-tutorial.md).
 

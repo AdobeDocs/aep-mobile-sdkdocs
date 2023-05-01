@@ -96,7 +96,7 @@ An full example of a Variant block with the API information can be seen below:
 ````md
 <Variant platform="android" api="get-identities" repeat="7"/>
 
-When [AdobeCallbackWithError](../mobile-core/api-reference.md#public-classes) is provided, and you are fetching the identities from the Mobile SDK, the timeout value is 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate [AdobeError](../mobile-core/api-reference.md#public-classes).
+When [AdobeCallbackWithError](../mobile-foundation-extensions/mobile-core/api-reference.md#public-classes) is provided, and you are fetching the identities from the Mobile SDK, the timeout value is 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate [AdobeError](../mobile-foundation-extensions/mobile-core/api-reference.md#public-classes).
 
 #### Java
 

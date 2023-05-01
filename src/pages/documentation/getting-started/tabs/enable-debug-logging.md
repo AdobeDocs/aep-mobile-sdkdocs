@@ -198,13 +198,13 @@ ACPCore.lifecyclePause();
 
 #### Flutter
 
-You need to implement Lifecycle in native Android and iOS code. For more information on implementing, please read the [Lifecycle documentation](../lifecycle-for-edge-network/index.md). -->
+You need to implement Lifecycle in native Android and iOS code. For more information on implementing, please read the [Lifecycle documentation](../mobile-foundation-extensions/lifecycle-for-edge-network/index.md). -->
 
 <!-- <Variant platform="cordova" task="metrics" repeat="4"/>
 
 #### Cordova
 
-You need to implement Lifecycle in native Android and iOS code. For more information on implementing, please read the [Lifecycle documentation](../lifecycle-for-edge-network/index.md).
+You need to implement Lifecycle in native Android and iOS code. For more information on implementing, please read the [Lifecycle documentation](../mobile-foundation-extensions/lifecycle-for-edge-network/index.md).
 
 **Getting Lifecycle version**
 

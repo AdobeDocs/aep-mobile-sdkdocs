@@ -139,7 +139,7 @@ The visual preview mode allows you to easily perform end-to-end QA activities by
 
 You can also set an application deep link that can be triggered when selections are made in the preview mode by using the [setPreviewRestartDeeplink](./api-reference.md#setpreviewrestartdeeplink) API.
 
-To enter the preview visual mode, use the `collectLaunchInfo` API to enable the mode and select the red floating button that appears on the app screen. For more information, see [collectLaunchInfo](../mobile-core/api-reference.md#collectlaunchinfo).
+To enter the preview visual mode, use the `collectLaunchInfo` API to enable the mode and select the red floating button that appears on the app screen. For more information, see [collectLaunchInfo](../mobile-foundation-extensions/mobile-core/api-reference.md#collectlaunchinfo).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -182,7 +182,7 @@ For A4T data to be sent to Adobe Analytics client-side, make sure Analytics SDK 
 
 To programmatically update SDK configuration, use the following information to change your Target configuration values:
 
-For more information, see [Programmatic updates to Configuration](../mobile-core/configuration/index.md#programmatic-updates-to-configuration).
+For more information, see [Programmatic updates to Configuration](../mobile-foundation-extensions/mobile-core/configuration/index.md#programmatic-updates-to-configuration).
 
 | Key | Description | Data Type |
 | :--- | :--- | :--- |
@@ -196,5 +196,5 @@ For more information, see [Programmatic updates to Configuration](../mobile-core
 
 <InlineAlert variant="warning" slots="text"/>
 
-Currently, the `target.sessiontimeout` value can only be configured programmatically. For more information, see [updateConfiguration](../mobile-core/configuration/api-reference.md#updateconfiguration).
+Currently, the `target.sessiontimeout` value can only be configured programmatically. For more information, see [updateConfiguration](../mobile-foundation-extensions/mobile-core/configuration/api-reference.md#updateconfiguration).
 

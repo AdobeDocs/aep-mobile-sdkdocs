@@ -7,7 +7,7 @@ import ClearBeaconIos from './tabs/track-beacon/clear-beacon/ios.md'
 
 ## Emulate the trackBeacon call from the v4 SDKs
 
-The `trackBeacon` call is no longer available in the Experience Platform SDKs. Now, you need to manually send beacon tracking data to your Adobe Analytics server and create the rules based on a user's proximity to your beacons. This solution relies on the [Profile extension](../profile/index.md) to generate beacon-related rules.
+The `trackBeacon` call is no longer available in the Experience Platform SDKs. Now, you need to manually send beacon tracking data to your Adobe Analytics server and create the rules based on a user's proximity to your beacons. This solution relies on the [Profile extension](../mobile-foundation-extensions/profile/index.md) to generate beacon-related rules.
 
 This topic contains sample code to help you implement your own `trackBeacon` calls.
 

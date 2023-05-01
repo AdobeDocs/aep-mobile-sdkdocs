@@ -45,7 +45,7 @@ For more information about implementing Audience Manager APIs, please read the [
 
 ## Configuration keys
 
-To update SDK configuration programmatically, use the following information to change your Audience Manager configuration values. For more information, see the [Configuration API reference](../mobile-core/configuration/api-reference.md).
+To update SDK configuration programmatically, use the following information to change your Audience Manager configuration values. For more information, see the [Configuration API reference](../mobile-foundation-extensions/mobile-core/configuration/api-reference.md).
 
 | Key | Required | Description | Data Type |
 | :--- | :--- | :--- | :--- |

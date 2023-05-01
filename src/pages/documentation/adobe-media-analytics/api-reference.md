@@ -26,7 +26,7 @@ Registers the Media extension with the Mobile Core SDK.
 
 <InlineAlert variant="warning" slots="text"/>
 
-Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-foundation-extensions/mobile-core/api-reference.md#registerextensions) API instead.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 

@@ -49,7 +49,7 @@ Unity
 
 ## Lifecycle metrics
 
-Lifecycle metrics are an optional, but valuable feature provided by the Adobe Experience Platform SDK. It provides out-of-the-box, application lifecycle information about your app user. A complete list of available metrics is provided in the [lifecycle documentation](../mobile-core/lifecycle/index.md).
+Lifecycle metrics are an optional, but valuable feature provided by the Adobe Experience Platform SDK. It provides out-of-the-box, application lifecycle information about your app user. A complete list of available metrics is provided in the [lifecycle documentation](../mobile-foundation-extensions/mobile-core/lifecycle/index.md).
 
 These metrics contain information on the app user's engagement lifecycle such as device information, install or upgrade information, and session start and pause times. You may also set additional lifecycle metrics.
 
@@ -59,7 +59,7 @@ This section shows you how to collect lifecycle metrics. To view, and report on 
 
 <InlineAlert variant="success" slots="text"/>
 
-Lifecycle metrics are now available for Edge Network implementations. For more details about the XDM-based lifecycle metrics, see [Lifecycle for Edge Network](../lifecycle-for-edge-network/index.md).
+Lifecycle metrics are now available for Edge Network implementations. For more details about the XDM-based lifecycle metrics, see [Lifecycle for Edge Network](../mobile-foundation-extensions/lifecycle-for-edge-network/index.md).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -92,5 +92,5 @@ Xamarin
 <Tabs query="platform=xamarin&task=metrics"/> -->
 
 
-For more information, see the documentation on [Lifecycle metrics](../mobile-core/lifecycle/index.md).
+For more information, see the documentation on [Lifecycle metrics](../mobile-foundation-extensions/mobile-core/lifecycle/index.md).
 
