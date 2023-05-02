@@ -267,23 +267,23 @@ module.exports = {
                     },
                     {
                         title: "Identity for Edge Network",
-                        path: "/documentation/identity-for-edge-network",
+                        path: "/documentation/mobile-foundation-extensions/identity-for-edge-network",
                         pages: [
                             {
                                 title: "Overview",
-                                path: "/documentation/identity-for-edge-network"
+                                path: "/documentation/mobile-foundation-extensions/identity-for-edge-network"
                             },
                             {
                                 title: "API reference",
-                                path: "documentation/identity-for-edge-network/api-reference"
+                                path: "documentation/mobile-foundation-extensions/identity-for-edge-network/api-reference"
                             },
                             {
                                 title: "Frequently asked questions",
-                                path: "documentation/identity-for-edge-network/faq"
+                                path: "documentation/mobile-foundation-extensions/identity-for-edge-network/faq"
                             },
                             {
                                 title: "Release notes",
-                                path: "documentation/identity-for-edge-network/release-notes"
+                                path: "documentation/mobile-foundation-extensions/identity-for-edge-network/release-notes"
                             }
                         ]
                     },

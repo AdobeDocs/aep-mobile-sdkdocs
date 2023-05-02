@@ -140,7 +140,7 @@ To retrieve data as a JSON string from the SDKs and send this data to your serve
 
 <InlineAlert variant="warning" slots="text"/>
 
-You must call the API below and retrieve identities stored in the SDK, **before** the user opts out.<br/><br/>This API does **not** include the identities stored in the Edge Identity extension. To retrieve the identities from the Edge Identity extension, use [getIdentities](../identity-for-edge-network/api-reference.md#getidentities).
+You must call the API below and retrieve identities stored in the SDK, **before** the user opts out.<br/><br/>This API does **not** include the identities stored in the Edge Identity extension. To retrieve the identities from the Edge Identity extension, use [getIdentities](../mobile-foundation-extensions/identity-for-edge-network/api-reference.md#getidentities).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

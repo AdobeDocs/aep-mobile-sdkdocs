@@ -421,7 +421,7 @@ Please note that the `registerDevice` API, similar to iOS, no longer provides a 
 
 ### Android EdgeIdentity 2.0.0
 
-* Major version update for [Identity for Edge Network](../identity-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgeidentity-android).
+* Major version update for [Identity for Edge Network](../mobile-foundation-extensions/identity-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgeidentity-android).
 
 ### Android UserProfile 2.0.0
 

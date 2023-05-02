@@ -93,7 +93,7 @@ Retrieves the Analytics tracking identifier that is generated for this app/devic
 
 <InlineAlert variant="info" slots="text"/>
 
-If you have an [Experience Cloud ID](../mobile-foundation-extensions/mobile-core/identity/api-reference.md#getexperiencecloudid) and have not yet configured a visitor ID grace period, the value returned by `getTrackingIdentifier` may be null.
+If you have an [Experience Cloud ID](../../mobile-foundation-extensions/mobile-core/identity/api-reference.md#getexperiencecloudid) and have not yet configured a visitor ID grace period, the value returned by `getTrackingIdentifier` may be null.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
@@ -139,7 +139,7 @@ Registers the Analytics extension with the Mobile Core SDK.
 
 <InlineAlert variant="warning" slots="text"/>
 
-Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-foundation-extensions/mobile-core/api-reference.md#registerextensions) API instead.
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../../mobile-foundation-extensions/mobile-core/api-reference.md#registerextensions) API instead.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
@@ -153,7 +153,7 @@ Clears the identities stored in the Analytics extension - `tracking identifier (
 
 <InlineAlert variant="info" slots="text"/>
 
-Support for this API was added in: <ul><li>Android Analytics version 1.2.9</li><li>iOS AEPAnalytics version 3.0.3</li></ul><br/>See [MobileCore.resetIdentities](../mobile-foundation-extensions/mobile-core/api-reference.md#resetidentities) for more details.
+Support for this API was added in: <ul><li>Android Analytics version 1.2.9</li><li>iOS AEPAnalytics version 3.0.3</li></ul><br/>See [MobileCore.resetIdentities](../../mobile-foundation-extensions/mobile-core/api-reference.md#resetidentities) for more details.
 
 ## sendQueuedHits
 

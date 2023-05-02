@@ -9,7 +9,7 @@ This guide will walk you through steps necessary to ensure your app is properly 
 
 ## Prerequisites
 
-- Your app must have the **AEPMessaging** SDK extension installed. Integrate **AEPMessaging** by following the guide on [setting up AEPMessaging SDK](../setup.md).
+- Your app must have the **AEPMessaging** SDK extension installed. Integrate **AEPMessaging** by following the guide on [setting up AEPMessaging SDK](../index.md).
 
 - This troubleshooting guide uses validation provided by the **AEPAssurance** extension and the **Adobe Assurance UI**. Integrate **AEPAssurance** in your application by following the [Adobe Experience Platform Assurance installation guide](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html).
 
@@ -34,7 +34,7 @@ Ensure that your app has registered all necessary AEP SDK extensions by doing th
 
 <InlineAlert variant="info" slots="text"/>
 
-If your app uses the [Edge Consent extension](../../mobile-foundation-extensions/consent-for-edge-network/index.md), the device must be consenting (i.e. - a consent value of `Yes`) in order to download in-app messages.
+If your app uses the [Edge Consent extension](../../../mobile-foundation-extensions/consent-for-edge-network/index.md), the device must be consenting (i.e. - a consent value of `Yes`) in order to download in-app messages.
 
 A sample view in the Assurance UI can be seen below:
 
@@ -115,7 +115,7 @@ Using the IAM plugin you can do the following for each message downloaded by the
 
 ### Q: What do I do when one of the required extensions is missing?
 
-**A:** Ensure that each required extension is linked to your project and registered by `MobileCore`. For more information, please read the [Mobile Core API reference](../../mobile-foundation-extensions/mobile-core/api-reference.md#registerextensions).
+**A:** Ensure that each required extension is linked to your project and registered by `MobileCore`. For more information, please read the [Mobile Core API reference](../../../mobile-foundation-extensions/mobile-core/api-reference.md#registerextensions).
 
 ### Q: Why can't I find an event named `Retrieve message definitions`?
 

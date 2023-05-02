@@ -16,7 +16,7 @@ Before starting, make sure the following steps are completed.
 
 ### Configure the Datastream for Adobe Target and/or Journey Optimizer - Offer Decisioning
 
-On [Experience Platform Data Collection](https://experience.adobe.com/#/data-collection/), navigate to **Data Collection** > **Datatreams** using the left navigation panel. Select an existing datastream or create a new datastream. For more details, see the [configure datastreams guide](../getting-started/configure-datastreams.md).
+On [Experience Platform Data Collection](https://experience.adobe.com/#/data-collection/), navigate to **Data Collection** > **Datatreams** using the left navigation panel. Select an existing datastream or create a new datastream. For more details, see the [configure datastreams guide](../../getting-started/configure-datastreams.md).
 
 1. In the datastream, click on the desired environment from the list. Make sure **Adobe Experience Platform** section is enabled and configured with the required information like **Sandbox** and **Event Dataset**.
 2. For Journey Optimizer - Offer Decisioning, navigate to **Adobe Experience Platform** section and enable **Offer Decisioning** checkbox.
@@ -32,7 +32,7 @@ On [Experience Platform Data Collection](https://experience.adobe.com/#/data-col
 1. In your mobile property, navigate to **Extensions** in the left navigation panel and click on the **Catalog** tab.
 2. In the extensions Catalog, search or locate the **Adobe Journey Optimizer - Decisioning** extension, and click **Install**.
 3. Since an extension configuration is not necessary, click **Save**.
-4. Follow the publishing process to update SDK configuration. For more details, see the [publish the configuration guide](../getting-started/create-a-mobile-property.md.md#publish-the-configuration).
+4. Follow the publishing process to update SDK configuration. For more details, see the [publish the configuration guide](../../getting-started/create-a-mobile-property.md.md#publish-the-configuration).
 
 ![Adobe Journey Optimizer - Decisioning extension configuration](./assets/index/configuration.png)
 
@@ -40,7 +40,7 @@ On [Experience Platform Data Collection](https://experience.adobe.com/#/data-col
 
 <InlineAlert variant="warning" slots="text"/>
 
-For the AEPOptimize APIs to work properly, you need to integrate Mobile Core and Edge extensions in your mobile app. For more details see, documentation on [Mobile Core](../mobile-foundation-extensions/mobile-core/index.md) and [Adobe Experience Platform Edge Network](../mobile-foundation-extensions/edge-network/index.md).
+For the AEPOptimize APIs to work properly, you need to integrate Mobile Core and Edge extensions in your mobile app. For more details see, documentation on [Mobile Core](../../mobile-foundation-extensions/mobile-core/index.md) and [Adobe Experience Platform Edge Network](../../mobile-foundation-extensions/edge-network/index.md).
 
 ### Install the Experience Platform Mobile SDK
 
@@ -135,7 +135,7 @@ To use Target Third Party ID in the Experience Edge mobile workflows, the corres
 
 ![Target Third Party ID configuration](./assets/index/target-tpid.png)
 
-In your mobile application, integrate the Identity for Edge Network extension to add the Target Third Party ID in the Identity Map in the personalization query request to the Edge network when calling the `updatePropositions` API. For more details, see the [Identity for Edge Network - updateIdentities API](../identity-for-edge-network/api-reference.md#updateidentities).
+In your mobile application, integrate the Identity for Edge Network extension to add the Target Third Party ID in the Identity Map in the personalization query request to the Edge network when calling the `updatePropositions` API. For more details, see the [Identity for Edge Network - updateIdentities API](../../mobile-foundation-extensions/identity-for-edge-network/api-reference.md#updateidentities).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -219,7 +219,7 @@ After you finish your rule configuration, verify the rule details are as shown b
 ![Adobe Journey Optimizer - Decisioning extension Lifecycle rule Configuration](./assets/index/lifecycle-rule.png)
 
 1. Click on **Save**.
-2. [Republish your configuration](../getting-started/create-a-mobile-property.md#publish-the-configuration) to the desired environment.
+2. [Republish your configuration](../../getting-started/create-a-mobile-property.md#publish-the-configuration) to the desired environment.
 
 ### Analytics for Target (A4T)
 
@@ -273,7 +273,7 @@ iOS
 
 <Tabs query="platform=ios&task=proposition-tracking-edge"/>
 
-The Edge `sendEvent` API can then be used to send this tracking XDM data along with any additional XDM and freeform data to the Experience Edge network. Additionally, an override dataset can also be specified for tracking data. For more details, see [Edge - sendEvent API](../mobile-foundation-extensions/edge-network/api-reference.md#sendevent).
+The Edge `sendEvent` API can then be used to send this tracking XDM data along with any additional XDM and freeform data to the Experience Edge network. Additionally, an override dataset can also be specified for tracking data. For more details, see [Edge - sendEvent API](../../mobile-foundation-extensions/edge-network/api-reference.md#sendevent).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -287,7 +287,7 @@ iOS
 
 ## Configuration keys
 
-To update the SDK configuration programmatically, use the following information to change the Optimize extension configuration values. For more information, see the [programmatic updates to Configuration guide](../mobile-foundation-extensions/mobile-core/configuration/api-reference.md#updateconfiguration).
+To update the SDK configuration programmatically, use the following information to change the Optimize extension configuration values. For more information, see the [programmatic updates to Configuration guide](../../mobile-foundation-extensions/mobile-core/configuration/api-reference.md#updateconfiguration).
 
 | Key | Required | Description | Data Type |
 | :--- | :--- | :--- | :--- |
@@ -295,4 +295,4 @@ To update the SDK configuration programmatically, use the following information 
 
 <InlineAlert variant="info" slots="text"/>
 
-If the override dataset is used for proposition tracking, make sure the corresponding schema definition contains the `Experience Event - Proposition Interaction` field group. For more information, see the [setup schemas and datasets guide](../getting-started/set-up-schemas-and-datasets.md).
+If the override dataset is used for proposition tracking, make sure the corresponding schema definition contains the `Experience Event - Proposition Interaction` field group. For more information, see the [setup schemas and datasets guide](../../getting-started/set-up-schemas-and-datasets.md).

@@ -6,7 +6,7 @@ import Tabs from './tabs/index.md'
 
 ### Install Identity for Edge Network
 
-The Adobe Experience Platform Edge Network extension requires the Identity for Edge Network extension in order to operate. As a first step install and configure the [Identity for Edge Network](../identity-for-edge-network/index.md) extension, then continue with the steps below.
+The Adobe Experience Platform Edge Network extension requires the Identity for Edge Network extension in order to operate. As a first step install and configure the [Identity for Edge Network](../mobile-foundation-extensions/identity-for-edge-network/index.md) extension, then continue with the steps below.
 
 ## Configure the Edge Network extension in Data Collection UI 
 

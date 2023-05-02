@@ -21,7 +21,7 @@ The two options are documented in detail below.
 
 <InlineAlert variant="info" slots="text"/>
 
-If you are using a mix of Edge Network and Adobe Experience Cloud mobile extensions, please follow the steps for configuring both consent and privacy status settings. See also the [frequently asked questions](./identity-for-edge-network/faq.md) about consent and privacy settings or identities.
+If you are using a mix of Edge Network and Adobe Experience Cloud mobile extensions, please follow the steps for configuring both consent and privacy status settings. See also the [frequently asked questions](./mobile-foundation-extensions/identity-for-edge-network/faq.md) about consent and privacy settings or identities.
 
 ## Using Experience Platform SDKs for Edge Network
 
@@ -81,7 +81,7 @@ iOS
 
 ### getIdentities
 
-When using the Edge Network extensions, use the [Identity.getIdentities](./identity-for-edge-network/api-reference.md#getidentities) API to retrieve all the identifier data stored locally by the SDK and send this data to your servers.
+When using the Edge Network extensions, use the [Identity.getIdentities](./mobile-foundation-extensions/identity-for-edge-network/api-reference.md#getidentities) API to retrieve all the identifier data stored locally by the SDK and send this data to your servers.
 
 ## Configuration keys
 
@@ -141,7 +141,7 @@ To retrieve all the identifier data stored locally by the SDK as a JSON string, 
 
 <InlineAlert variant="info" slots="text"/>
 
-When using both Edge Network and Adobe Solutions extensions, use both [Identity.getIdentities](./identity-for-edge-network/api-reference.md#getidentities) API and [MobileCore.getSdkIdentities](./mobile-foundation-extensions/mobile-core/api-reference.md#getsdkidentities) APIs to retrieve all the identifier data stored locally by the SDK.
+When using both Edge Network and Adobe Solutions extensions, use both [Identity.getIdentities](./mobile-foundation-extensions/identity-for-edge-network/api-reference.md#getidentities) API and [MobileCore.getSdkIdentities](./mobile-foundation-extensions/mobile-core/api-reference.md#getsdkidentities) APIs to retrieve all the identifier data stored locally by the SDK.
 
 ## Configuration keys
 

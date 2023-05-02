@@ -98,7 +98,7 @@ The default value for this setting is 0, which means that hit batching is disabl
 
 #### Launch hit delay
 
-The number of seconds to wait before Analytics launch hits are sent from the SDK. Ensure that this setting is set at 5 seconds or greater when using acquisition functionality from the [Mobile Services](../adobe-analytics-mobile-services/) extension.
+The number of seconds to wait before Analytics launch hits are sent from the SDK. 
 
 ## Add Analytics to your application
 
@@ -126,15 +126,15 @@ iOS
 
 ## Send Lifecycle metrics to Analytics
 
-To automatically report on the application lifecycle details in Analytics, ensure that you properly configure the lifecycle data collection. For more information, see the documentation on [Lifecycle metrics](../mobile-foundation-extensions/mobile-core/lifecycle/metrics.md).
+To automatically report on the application lifecycle details in Analytics, ensure that you properly configure the lifecycle data collection. For more information, see the documentation on [Lifecycle metrics](../../mobile-foundation-extensions/mobile-core/lifecycle/metrics.md).
 
 ## Send app states and actions to Analytics
 
-To track mobile app states and actions in Adobe Analytics, implement the [trackAction](../mobile-foundation-extensions/mobile-core/api-reference.md#trackaction) and [trackState](../mobile-foundation-extensions/mobile-core/api-reference.md#trackstate) APIs from the Mobile Core extension. For more information, see the [track app actions](../mobile-foundation-extensions/mobile-core/api-reference.md#track-app-actions) and [track app states](../mobile-foundation-extensions/mobile-core/api-reference.md#track-app-states-and-views) tutorials.
+To track mobile app states and actions in Adobe Analytics, implement the [trackAction](../../mobile-foundation-extensions/mobile-core/api-reference.md#trackaction) and [trackState](../../mobile-foundation-extensions/mobile-core/api-reference.md#trackstate) APIs from the Mobile Core extension. For more information, see the [track app actions](../../mobile-foundation-extensions/mobile-core/api-reference.md#track-app-actions) and [track app states](../../mobile-foundation-extensions/mobile-core/api-reference.md#track-app-states-and-views) tutorials.
 
 <InlineAlert variant="info" slots="text"/>
 
-[trackState](../mobile-foundation-extensions/mobile-core/api-reference.md#trackstate) reports the view state as the **Page Name**, and state views are reported as **Page View** in Analytics. The value is sent to Analytics by using the page name variable (`pagename=value`).<br/><br/> [trackAction](../mobile-foundation-extensions/mobile-core/api-reference.md#trackaction) reports the Action as an **event** and does not increment your page views in Analytics. The value is sent to Analytics by using the action variable (`action=value`).
+[trackState](../../mobile-foundation-extensions/mobile-core/api-reference.md#trackstate) reports the view state as the **Page Name**, and state views are reported as **Page View** in Analytics. The value is sent to Analytics by using the page name variable (`pagename=value`).<br/><br/> [trackAction](../../mobile-foundation-extensions/mobile-core/api-reference.md#trackaction) reports the Action as an **event** and does not increment your page views in Analytics. The value is sent to Analytics by using the action variable (`action=value`).
 
 ## Integrations with Adobe Experience Platform solutions and services
 
@@ -189,4 +189,4 @@ iOS
 
 <Tabs query="platform=ios&task=update"/>
 
-For more information, see the [configuration API reference](../mobile-foundation-extensions/mobile-core/configuration/api-reference.md).
+For more information, see the [configuration API reference](../../mobile-foundation-extensions/mobile-core/configuration/api-reference.md).

@@ -1,6 +1,6 @@
 <Variant platform="android" task="add" repeat="5"/>
 
-1. Add the Campaign Standard, [Mobile Core](../mobile-foundation-extensions/mobile-core/index.md) and [Profile](../mobile-foundation-extensions/profile/index.md) extensions to your project using the app's Gradle file.
+1. Add the Campaign Standard, [Mobile Core](../../mobile-foundation-extensions/mobile-core/index.md) and [Profile](../../mobile-foundation-extensions/profile/index.md) extensions to your project using the app's Gradle file.
 
 ```java
 implementation 'com.adobe.marketing.mobile:campaign:2.+'
@@ -13,11 +13,11 @@ implementation 'com.adobe.marketing.mobile:userprofile:2.+'
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information. 
 
 </InlineNestedAlert>
 
-2. Import the Campaign Standard, [Mobile Core](../mobile-foundation-extensions/mobile-core/index.md), [Profile](../mobile-foundation-extensions/profile/index.md), [Lifecycle](../mobile-foundation-extensions/mobile-core/lifecycle/index.md), and [Signal](../mobile-foundation-extensions/mobile-core/signals/index.md) extensions in your application's main activity.
+2. Import the Campaign Standard, [Mobile Core](../../mobile-foundation-extensions/mobile-core/index.md), [Profile](../../mobile-foundation-extensions/profile/index.md), [Lifecycle](../../mobile-foundation-extensions/mobile-core/lifecycle/index.md), and [Signal](../../mobile-foundation-extensions/mobile-core/signals/index.md) extensions in your application's main activity.
 
 ```java
 import com.adobe.marketing.mobile.Campaign;
@@ -30,7 +30,7 @@ import com.adobe.marketing.mobile.UserProfile;
 
 <Variant platform="ios" task="add" repeat="7"/>
 
-1. Add the Campaign Standard, [Mobile Core](../mobile-foundation-extensions/mobile-core/index.md), and [Profile](../mobile-foundation-extensions/profile/index.md) extensions to your project using Cocoapods.
+1. Add the Campaign Standard, [Mobile Core](../../mobile-foundation-extensions/mobile-core/index.md), and [Profile](../../mobile-foundation-extensions/profile/index.md) extensions to your project using Cocoapods.
 
 ![](../assets/index/aep-cocoapods.png)
 
@@ -110,7 +110,7 @@ class MyApp : Application() {
 }
 ```
 
-For more information about starting Lifecycle, see the [Lifecycle extension in Android guide](../mobile-foundation-extensions/mobile-core/lifecycle/android.md).
+For more information about starting Lifecycle, see the [Lifecycle extension in Android guide](../../mobile-foundation-extensions/mobile-core/lifecycle/android.md).
 
 <Variant platform="ios" task="register" repeat="6"/>
 
@@ -162,7 +162,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-For more information about starting Lifecycle, see the [Lifecycle extension in iOS guide](../mobile-foundation-extensions/mobile-core/lifecycle/ios.md).
+For more information about starting Lifecycle, see the [Lifecycle extension in iOS guide](../../mobile-foundation-extensions/mobile-core/lifecycle/ios.md).
 
 <Variant platform="android" task="initialize" repeat="6"/>
 
@@ -178,7 +178,7 @@ To set up local notifications in Android, update the AndroidManifest.xml file:
 <receiver android:name="com.adobe.marketing.mobile.LocalNotificationHandler"/>
 ```
 
-To configure the notification icons that the local notification will use, see the [configuring notification icons section](../mobile-foundation-extensions/mobile-core/api-reference.md#setsmalliconresourceid--setlargeiconresourceid) within the Mobile Core.
+To configure the notification icons that the local notification will use, see the [configuring notification icons section](../../mobile-foundation-extensions/mobile-core/api-reference.md#setsmalliconresourceid--setlargeiconresourceid) within the Mobile Core.
 
 <Variant platform="ios" task="initialize" repeat="1"/>
 
