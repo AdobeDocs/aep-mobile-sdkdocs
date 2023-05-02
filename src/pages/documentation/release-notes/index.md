@@ -4,6 +4,16 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## April 28, 2023
+
+### Android Messaging 2.1.3
+
+* Fixed a bug causing in-app message display experience events to be sent even when MessagingDelegate suppressed their display.
+
+### iOS Messaging 1.1.4
+
+* Fixed a bug causing in-app message display experience events to be sent even when MessagingDelegate suppressed their display.
+
 ## April 25, 2023
 
 ### Android Assurance 2.1.0
