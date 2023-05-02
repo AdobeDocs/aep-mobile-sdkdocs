@@ -53,7 +53,7 @@ iOS
 
 ## Track user actions (for Adobe Analytics)
 
-This section shows you how to start track user actions in your mobile app. To view and report on this data in those respective solutions, set up [Adobe Analytics](../adobe-analytics/index.md) or another Experience Cloud solution extensions.
+This section shows you how to start track user actions in your mobile app. To view and report on this data in those respective solutions, set up [Adobe Analytics](../experience-cloud-extensions/adobe-analytics/index.md) or another Experience Cloud solution extensions.
 
 Actions are events that occur in your app. Use this API to track and measure an action, where each action has one or more corresponding metrics that increment each time the event occurs. For example, you might call this API for every new subscription, every time an article is viewed, or every time a level is completed.
 

@@ -130,7 +130,7 @@ Add the following rule to your custom ProGuard rules file, typically labeled `pr
 Implementing push notification tracking and measurement with the SDK depends on the Experience Cloud solution being used.
 
 * For the Adobe Campaign Standard extension, please read the [Adobe Campaign standard push tracking tutorial](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-mobile/push-tracking.html).
-* For the Adobe Campaign Classic extension, please read the [Adobe Campaign Classic push notifications tracking tutorial](./adobe-campaign-classic/api-reference.md#tracknotification-api).
+* For the Adobe Campaign Classic extension, please read the [Adobe Campaign Classic push notifications tracking tutorial](./experience-cloud-extensions/adobe-campaign-classic/api-reference.md#tracknotification-api).
 
 ## Migrating to Android Mobile Core 2.x and compatible extensions
 
@@ -216,7 +216,7 @@ To resolve the build warning, remove FullscreenMessageActivity from your applica
 
 ### Why do I see 'unresolved reference' error when upgrading Adobe Target SDK to the latest version?
 
-The [latest version](./adobe-target/release-notes.md#android-target-200) of Adobe Target Mobile SDK has the following breaking API changes for alignment with the iOS SDK:
+The [latest version](./experience-cloud-extensions/adobe-target/release-notes.md#android-target-200) of Adobe Target Mobile SDK has the following breaking API changes for alignment with the iOS SDK:
 
 * **locationsDisplayed** is now **displayedLocations**
 * **locationClicked** is now **clickedLocation**
@@ -233,7 +233,7 @@ import com.adobe.marketing.mobile.target.TargetProduct;
 import com.adobe.marketing.mobile.target.TargetParameters;
 ```
 
-In addition, replace the previously deprecated Target APIs and classes since they have been removed. For more information, please read this section on the [deprecated APIs and the recommended alternative APIs](https://developer.adobe.com/client-sdks/previous-versions/documentation/adobe-target/deprecated-apis/).
+In addition, replace the previously deprecated Target APIs and classes since they have been removed. For more information, please read this section on the [deprecated APIs and the recommended alternative APIs](https://developer.adobe.com/client-sdks/previous-versions/documentation/experience-cloud-extensions/adobe-target/deprecated-apis/).
 
 ### Why do I see `registerDevice(String, String, Map<String, Object>)` cannot be applied to [arguments] error when upgrading Adobe Campaign Classic SDK to the latest version?
 
@@ -270,7 +270,7 @@ Lifecycle metrics are out-of-the-box metrics that are automatically collected wh
 
 ## Adobe Analytics
 
-See the [frequently asked questions for Analytics](./adobe-analytics/faq.md).
+See the [frequently asked questions for Analytics](./experience-cloud-extensions/adobe-analytics/faq.md).
 
 ## Adobe Experience Platform Edge Network
 

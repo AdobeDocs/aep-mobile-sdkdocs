@@ -60,7 +60,7 @@ Launch your app with the device connected to an [Adobe Experience Platform Assur
 In the list of events, verify that you have an event with type `UPDATED_IDENTITY_RESPONSE`. In the details panel on the right, confirm that the following values are correct:
 
 - The value for `pushidentifier` should match the value that was sent in step 2 above.
-- The value for mid should match the value for mid that is sent to Analytics. If you are using a [custom visitor identifier](../adobe-analytics/api-reference.md#setidentifier), this payload should also contain a vid variable with a value that matches the value that was used to identify this user. 
+- The value for mid should match the value for mid that is sent to Analytics. If you are using a [custom visitor identifier](../experience-cloud-extensions/adobe-analytics/api-reference.md#setidentifier), this payload should also contain a vid variable with a value that matches the value that was used to identify this user. 
 
 ![Configuring the Campaign Classic extension](./assets/push-messaging/push-identities.png)
 

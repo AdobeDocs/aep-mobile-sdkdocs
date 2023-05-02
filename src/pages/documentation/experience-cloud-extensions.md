@@ -4,11 +4,11 @@ Experience Cloud extensions are extensions that directly connect with Experience
 
 ## Extensions
 
-- [Adobe Analytics](./adobe-analytics/index.md)
-- [Adobe Media Analytics](./adobe-media-analytics/index.md)
-- [Adobe Audience Manager](./adobe-audience-manager/index.md)
-- [Adobe Campaign Classic](./adobe-campaign-classic/index.md)
-- [Adobe Campaign Standard](./adobe-campaign-standard/index.md)
-- [Adobe Journey Optimizer](./adobe-journey-optimizer/index.md)
-- [Adobe Journey Optimizer Decisioning](./adobe-journey-optimizer-decisioning/index.md)
-- [Adobe Target](./adobe-target/)
+- [Adobe Analytics](./experience-cloud-extensions/adobe-analytics/index.md)
+- [Adobe Media Analytics](./experience-cloud-extensions/adobe-media-analytics/index.md)
+- [Adobe Audience Manager](./experience-cloud-extensions/adobe-audience-manager/index.md)
+- [Adobe Campaign Classic](./experience-cloud-extensions/adobe-campaign-classic/index.md)
+- [Adobe Campaign Standard](./experience-cloud-extensions/adobe-campaign-standard/index.md)
+- [Adobe Journey Optimizer](./experience-cloud-extensions/adobe-journey-optimizer/index.md)
+- [Adobe Journey Optimizer Decisioning](./experience-cloud-extensions/adobe-journey-optimizer-decisioning/index.md)
+- [Adobe Target](./experience-cloud-extensions/adobe-target/)

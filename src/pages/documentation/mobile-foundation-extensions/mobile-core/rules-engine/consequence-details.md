@@ -4,7 +4,7 @@ The Adobe Experience Platform Mobile SDK supports multiple types of rule consequ
 
 ## Analytics consequence
 
-This rule consequence is currently handled by the [Analytics](../../../adobe-analytics/index.md) extension.
+This rule consequence is currently handled by the [Analytics](../../../experience-cloud-extensions/adobe-analytics/index.md) extension.
 
 | Friendly name | Key | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
@@ -14,7 +14,7 @@ This rule consequence is currently handled by the [Analytics](../../../adobe-ana
 
 ## In-App message consequence
 
-This rule consequence is currently handled by the [Campaign](../../../adobe-campaign-standard/index.md) extension.
+This rule consequence is currently handled by the [Campaign](../../../experience-cloud-extensions/adobe-campaign-standard/index.md) extension.
 
 | Friendly name | Key | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |

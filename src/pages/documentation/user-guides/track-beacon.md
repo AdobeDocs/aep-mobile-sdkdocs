@@ -13,7 +13,7 @@ This topic contains sample code to help you implement your own `trackBeacon` cal
 
 ### Track a beacon
 
-When your user comes within the range of a beacon, call this method to send beacon data to [Adobe Analytics](../adobe-analytics/index.md). This code also saves all beacon-related data in the client-side Profile for use with the Rules Engine.
+When your user comes within the range of a beacon, call this method to send beacon data to [Adobe Analytics](../experience-cloud-extensions/adobe-analytics/index.md). This code also saves all beacon-related data in the client-side Profile for use with the Rules Engine.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

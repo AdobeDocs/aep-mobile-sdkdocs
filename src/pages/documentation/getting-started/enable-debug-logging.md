@@ -55,7 +55,7 @@ These metrics contain information on the app user's engagement lifecycle such as
 
 <InlineAlert variant="warning" slots="text"/>
 
-This section shows you how to collect lifecycle metrics. To view, and report on this data in those respective solutions, you need to set up [Adobe Analytics](../adobe-analytics/index.md) or other Experience Cloud solution extensions.
+This section shows you how to collect lifecycle metrics. To view, and report on this data in those respective solutions, you need to set up [Adobe Analytics](../experience-cloud-extensions/adobe-analytics/index.md) or other Experience Cloud solution extensions.
 
 <InlineAlert variant="success" slots="text"/>
 

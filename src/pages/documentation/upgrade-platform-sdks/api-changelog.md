@@ -81,30 +81,30 @@ For more information, see the [Identity API reference](../mobile-foundation-exte
 
 ## Adobe Analytics extension APIs
 
-For more information, see the [Analytics API reference](../adobe-analytics/api-reference.md).
+For more information, see the [Analytics API reference](../experience-cloud-extensions/adobe-analytics/api-reference.md).
 
 ### Supported APIs
 
 | Experience Platform SDK | 4x SDK |
 |---|---|
-| [getVisitorIdentifier:](../adobe-analytics/api-reference.md#getvisitoridentifier) | getUserIdentifier ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html)) |
-| [setVisitorIdentifier:](../adobe-analytics/api-reference.md#setvisitoridentifier) | setUserIdentifier ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html)) |
-| [getTrackingIdentifier:](../adobe-analytics/api-reference.md#gettrackingidentifier) | trackingIdentifier ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html)) |
-| [sendQueuedHits:](../adobe-analytics/api-reference.md#sendqueuedhits) | trackingSendQueuedHits ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/analytics-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/analytics-methods.html)) |
-| [clearQueue](../adobe-analytics/api-reference.md#clearqueue) | trackingClearQueue ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/analytics-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/analytics-methods.html)) |
-| [getQueueSize](../adobe-analytics/api-reference.md#getqueuesize) | trackingGetQueueSize ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/analytics-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/analytics-methods.html)) |
+| [getVisitorIdentifier:](../experience-cloud-extensions/adobe-analytics/api-reference.md#getvisitoridentifier) | getUserIdentifier ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html)) |
+| [setVisitorIdentifier:](../experience-cloud-extensions/adobe-analytics/api-reference.md#setvisitoridentifier) | setUserIdentifier ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html)) |
+| [getTrackingIdentifier:](../experience-cloud-extensions/adobe-analytics/api-reference.md#gettrackingidentifier) | trackingIdentifier ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/config-ios/sdk-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/configuration-android/methods.html)) |
+| [sendQueuedHits:](../experience-cloud-extensions/adobe-analytics/api-reference.md#sendqueuedhits) | trackingSendQueuedHits ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/analytics-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/analytics-methods.html)) |
+| [clearQueue](../experience-cloud-extensions/adobe-analytics/api-reference.md#clearqueue) | trackingClearQueue ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/analytics-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/analytics-methods.html)) |
+| [getQueueSize](../experience-cloud-extensions/adobe-analytics/api-reference.md#getqueuesize) | trackingGetQueueSize ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/analytics-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/analytics-methods.html)) |
 
 ## Adobe Audience Manager extension APIs
 
-For more information, see the [Audience Manager Extension API reference](../adobe-audience-manager/api-reference.md).
+For more information, see the [Audience Manager Extension API reference](../experience-cloud-extensions/adobe-audience-manager/api-reference.md).
 
 ### Supported APIs
 
 | Experience Platform SDK | 4x SDK ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/aam-methods.html) \| [Android](https://experienceleague.adobe.com/docs/mobile-services/android/audience-manager-android/c-audience-manager-methods.html)) |
 |---|---|
-| [​getVisitorProfile:​](../adobe-audience-manager/api-reference.md#getvisitorprofile) | audienceVisitorProfile |
-| [​signalWithData:callback:​](../adobe-audience-manager/api-reference.md#signalwithdata) | audienceSignalWithData:callback |
-| [​reset​](../adobe-audience-manager/api-reference.md#reset-identifiers-and-profiles) | audienceReset |
+| [​getVisitorProfile:​](../experience-cloud-extensions/adobe-audience-manager/api-reference.md#getvisitorprofile) | audienceVisitorProfile |
+| [​signalWithData:callback:​](../experience-cloud-extensions/adobe-audience-manager/api-reference.md#signalwithdata) | audienceSignalWithData:callback |
+| [​reset​](../experience-cloud-extensions/adobe-audience-manager/api-reference.md#reset-identifiers-and-profiles) | audienceReset |
 
 ### Deprecated APIs
 
@@ -116,7 +116,7 @@ For more information, see the [Audience Manager Extension API reference](../adob
 
 ​## Adobe Target extension APIs
 
-For more information see [Target API reference](../adobe-target/api-reference.md).
+For more information see [Target API reference](../experience-cloud-extensions/adobe-target/api-reference.md).
 
 ### Supported APIs
 

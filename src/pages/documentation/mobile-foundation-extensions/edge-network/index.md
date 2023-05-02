@@ -75,7 +75,7 @@ Install other extensions based on your use-case:
 
 1. If your application requires user consent preferences collection and enforcement, install and configure the [Consent for Edge Network](../consent-for-edge-network/index.md) extension.
 2. Lifecycle extension now supports application lifecycle metrics collection for Edge Network. If you would like to start collecting this type of data, follow the installation instruction for [Lifecycle for Edge Network](../lifecycle-for-edge-network/index.md).
-3. If your application uses push notifications, see also the [Adobe Journey Optimizer](../adobe-journey-optimizer/index.md) extension.
+3. If your application uses push notifications, see also the [Adobe Journey Optimizer](../experience-cloud-extensions/adobe-journey-optimizer/index.md) extension.
 
 ## Configuration keys
 

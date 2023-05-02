@@ -381,161 +381,161 @@ module.exports = {
                     },
                     {
                         title: 'Adobe Analytics',
-                        path: '/documentation/adobe-analytics/',
+                        path: '/documentation/experience-cloud-extensions/adobe-analytics/',
                         pages: [
                             {
                                 title: "Overview",
-                                path: "/documentation/adobe-analytics"
+                                path: "/documentation/experience-cloud-extensions/adobe-analytics"
                             },
                             {
                                 title: "API reference",
-                                path: "/documentation/adobe-analytics/api-reference/"
+                                path: "/documentation/experience-cloud-extensions/adobe-analytics/api-reference/"
                             },
                             {
                                 title: 'Event reference',
-                                path: '/documentation/adobe-analytics/event-reference/'
+                                path: '/documentation/experience-cloud-extensions/adobe-analytics/event-reference/'
                             },
                             {
                                 title: "Product variable",
-                                path: "/documentation/adobe-analytics/product-variable"
+                                path: "/documentation/experience-cloud-extensions/adobe-analytics/product-variable"
                             },
                             {
                                 title: "Frequently asked questions",
-                                path: "/documentation/adobe-analytics/faq/"
+                                path: "/documentation/experience-cloud-extensions/adobe-analytics/faq/"
                             },
                             {
                                 title: 'Release notes',
-                                path: '/documentation/adobe-analytics/release-notes/'
+                                path: '/documentation/experience-cloud-extensions/adobe-analytics/release-notes/'
                             }
                         ]
                     },
                     {
                         title: "Adobe Media Analytics",
-                        path: "/documentation/adobe-media-analytics",
+                        path: "/documentation/experience-cloud-extensions/adobe-media-analytics",
                         pages: [
                             {
                                 title: "Overview",
-                                path: "/documentation/adobe-media-analytics"
+                                path: "/documentation/experience-cloud-extensions/adobe-media-analytics"
                             },
                             {
                                 title: "API reference",
-                                path: "documentation/adobe-media-analytics/api-reference"
+                                path: "documentation/experience-cloud-extensions/adobe-media-analytics/api-reference"
                             },
                             {
                                 title: "Release notes",
-                                path: "documentation/adobe-media-analytics/release-notes"
+                                path: "documentation/experience-cloud-extensions/adobe-media-analytics/release-notes"
                             }
                         ]
                     },
                     {
                         title: "Adobe Audience Manager",
-                        path: "/documentation/adobe-audience-manager/",
+                        path: "/documentation/experience-cloud-extensions/adobe-audience-manager/",
                         pages: [
                             {
                                 title: "Overview",
-                                path: "/documentation/adobe-audience-manager/"
+                                path: "/documentation/experience-cloud-extensions/adobe-audience-manager/"
                             },
                             {
                                 title: "API reference",
-                                path: "documentation/adobe-audience-manager/api-reference"
+                                path: "documentation/experience-cloud-extensions/adobe-audience-manager/api-reference"
                             },
                             {
                                 title: "Event reference",
-                                path: "documentation/adobe-audience-manager/event-reference"
+                                path: "documentation/experience-cloud-extensions/adobe-audience-manager/event-reference"
                             },
                             {
                                 title: "Release notes",
-                                path: "/documentation/adobe-audience-manager/release-notes"
+                                path: "/documentation/experience-cloud-extensions/adobe-audience-manager/release-notes"
                             }
                         ]
                     },
                     {
                         title: "Adobe Campaign Classic",
-                        path: "/documentation/adobe-campaign-classic",
+                        path: "/documentation/experience-cloud-extensions/adobe-campaign-classic",
                         pages: [
                             {
                                 title: "Overview",
-                                path: "/documentation/adobe-campaign-classic"
+                                path: "/documentation/experience-cloud-extensions/adobe-campaign-classic"
                             },
                             {
                                 title: "API reference",
-                                path: "documentation/adobe-campaign-classic/api-reference"
+                                path: "documentation/experience-cloud-extensions/adobe-campaign-classic/api-reference"
                             },
                             {
                                 title: "Event reference",
-                                path: "documentation/adobe-campaign-classic/event-reference"
+                                path: "documentation/experience-cloud-extensions/adobe-campaign-classic/event-reference"
                             },
                             {
                                 title: "Release notes",
-                                path: "documentation/adobe-campaign-classic/release-notes"
+                                path: "documentation/experience-cloud-extensions/adobe-campaign-classic/release-notes"
                             }
                         ]
                     },
                     {
                         title: "Adobe Campaign Standard",
-                        path: "/documentation/adobe-campaign-standard",
+                        path: "/documentation/experience-cloud-extensions/adobe-campaign-standard",
                         pages: [
                             {
                                 title: "Overview",
-                                path: "/documentation/adobe-campaign-standard"
+                                path: "/documentation/experience-cloud-extensions/adobe-campaign-standard"
                             },
                             {
                                 title: "API reference",
-                                path: "documentation/adobe-campaign-standard/api-reference"
+                                path: "documentation/experience-cloud-extensions/adobe-campaign-standard/api-reference"
                             },
                             {
                                 title: "Event reference",
-                                path: "documentation/adobe-campaign-standard/event-reference"
+                                path: "documentation/experience-cloud-extensions/adobe-campaign-standard/event-reference"
                             },
                             {
                                 title: "Release notes",
-                                path: "documentation/adobe-campaign-standard/release-notes"
+                                path: "documentation/experience-cloud-extensions/adobe-campaign-standard/release-notes"
                             }
                         ]
                     },
                     {
                         title: "Adobe Journey Optimizer",
-                        path: "/documentation/adobe-journey-optimizer",
+                        path: "/documentation/experience-cloud-extensions/adobe-journey-optimizer",
                         pages: [
                             {
                                 title: "Overview",
-                                path: "/documentation/adobe-journey-optimizer"
+                                path: "/documentation/experience-cloud-extensions/adobe-journey-optimizer"
                             },
                             {
                                 title: "API reference",
-                                path: "documentation/adobe-journey-optimizer/api-reference"
+                                path: "documentation/experience-cloud-extensions/adobe-journey-optimizer/api-reference"
                             },
                             {
                                 title: "Release notes",
-                                path: "documentation/adobe-journey-optimizer/release-notes"
+                                path: "documentation/experience-cloud-extensions/adobe-journey-optimizer/release-notes"
                             },
                             {
                                 title: "Public classes and enums",
-                                path: "documentation/adobe-journey-optimizer/public-classes"
+                                path: "documentation/experience-cloud-extensions/adobe-journey-optimizer/public-classes"
                             },
                             {
                                 title: "Tutorials",
-                                path: "documentation/adobe-journey-optimizer/tutorials",
+                                path: "documentation/experience-cloud-extensions/adobe-journey-optimizer/tutorials",
                                 pages: [
                                     {
                                         title: "Implement a MessagingDelegate",
-                                        path: "/documentation/adobe-journey-optimizer/tutorials/messaging-delegate"
+                                        path: "/documentation/experience-cloud-extensions/adobe-journey-optimizer/tutorials/messaging-delegate"
                                     },
                                     {
                                         title: "Call native code from the JavaScript of an in-app message",
-                                        path: "/documentation/adobe-journey-optimizer/tutorials/native-from-javascript"
+                                        path: "/documentation/experience-cloud-extensions/adobe-journey-optimizer/tutorials/native-from-javascript"
                                     },
                                     {
                                         title: "Execute Javascript methods from native code",
-                                        path: "/documentation/adobe-journey-optimizer/tutorials/javascript-from-native"
+                                        path: "/documentation/experience-cloud-extensions/adobe-journey-optimizer/tutorials/javascript-from-native"
                                     },
                                     {
                                         title: "Handle URL clicks from an in-app message",
-                                        path: "/documentation/adobe-journey-optimizer/tutorials/handle-clicks"
+                                        path: "/documentation/experience-cloud-extensions/adobe-journey-optimizer/tutorials/handle-clicks"
                                     },
                                     {
                                         title: "Validate in-app messaging using Assurance",
-                                        path: "/documentation/adobe-journey-optimizer/tutorials/validate-messages"
+                                        path: "/documentation/experience-cloud-extensions/adobe-journey-optimizer/tutorials/validate-messages"
                                     }
                                 ]
                             }
@@ -543,45 +543,45 @@ module.exports = {
                     },
                     {
                         title: "Adobe Journey Optimizer Decisioning",
-                        path: "/documentation/adobe-journey-optimizer-decisioning",
+                        path: "/documentation/experience-cloud-extensions/adobe-journey-optimizer-decisioning",
                         pages: [
                             {
                                 title: "Overview",
-                                path: "/documentation/adobe-journey-optimizer-decisioning"
+                                path: "/documentation/experience-cloud-extensions/adobe-journey-optimizer-decisioning"
                             },
                             {
                                 title: "API reference",
-                                path: "documentation/adobe-journey-optimizer-decisioning/api-reference"
+                                path: "documentation/experience-cloud-extensions/adobe-journey-optimizer-decisioning/api-reference"
                             },
                             {
                                 title: "Release notes",
-                                path: "documentation/adobe-journey-optimizer-decisioning/release-notes"
+                                path: "documentation/experience-cloud-extensions/adobe-journey-optimizer-decisioning/release-notes"
                             }
                         ]
                     },
                     {
                         title: "Adobe Target",
-                        path: "/documentation/adobe-target",
+                        path: "/documentation/experience-cloud-extensions/adobe-target",
                         pages: [
                             {
                                 title: "Overview",
-                                path: "/documentation/adobe-target"
+                                path: "/documentation/experience-cloud-extensions/adobe-target"
                             },
                             {
                                 title: "API reference",
-                                path: "documentation/adobe-target/api-reference"
+                                path: "documentation/experience-cloud-extensions/adobe-target/api-reference"
                             },
                             {
                                 title: "Raw API reference",
-                                path: "documentation/adobe-target/raw-api-reference"
+                                path: "documentation/experience-cloud-extensions/adobe-target/raw-api-reference"
                             },
                             {
                                 title: "Event reference",
-                                path: "documentation/adobe-target/event-reference"
+                                path: "documentation/experience-cloud-extensions/adobe-target/event-reference"
                             },
                             {
                                 title: "Release notes",
-                                path: "documentation/adobe-target/release-notes"
+                                path: "documentation/experience-cloud-extensions/adobe-target/release-notes"
                             }
                         ]
                     }

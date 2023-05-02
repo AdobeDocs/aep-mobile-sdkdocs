@@ -8,7 +8,7 @@ Programmatic updates made to the configuration can be cleared via the `clearUpda
 
 ## collectMessageInfo
 
-User interactions with local or push notifications can be tracked by invoking the `collectMessageInfo` API. Please refer to [this page](../../adobe-campaign-standard/index.md#tracking-local-and-push-notification-message-interactions) for more information about tracking local and push notification message interactions.
+User interactions with local or push notifications can be tracked by invoking the `collectMessageInfo` API. Please refer to [this page](../../experience-cloud-extensions/adobe-campaign-standard/index.md#tracking-local-and-push-notification-message-interactions) for more information about tracking local and push notification message interactions.
 
 
 ## collectLaunchInfo
