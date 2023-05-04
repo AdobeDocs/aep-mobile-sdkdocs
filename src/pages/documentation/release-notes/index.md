@@ -8,7 +8,7 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 ### Android Campaign Standard 2.0.3
 
-* Adds support for url encoded URL's with query parameters to be used as an in-app message clickthrough URL.
+* Adds support for URL-encoded URLs with query parameters used to configure in-app message clickthrough destination.
 
 ## April 28, 2023
 

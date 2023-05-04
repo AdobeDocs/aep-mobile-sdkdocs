@@ -1,10 +1,12 @@
 # Release Notes
 
-## February 17, 2023
+## May 4, 2023
 
 ### Android Campaign Standard 2.0.3
 
-* Adds support for url encoded URL's with query parameters to be used as an in-app message clickthrough URL.
+* Adds support for URL-encoded URLs with query parameters used to configure in-app message clickthrough destination.
+
+## February 17, 2023
 
 ### Android Campaign Standard 2.0.2
 
