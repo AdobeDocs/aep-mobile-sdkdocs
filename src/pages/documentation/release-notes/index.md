@@ -4,6 +4,12 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## May 4, 2023
+
+### Android Campaign Standard 2.0.3
+
+* Allow url encoded URL's containing query parameters to be used as an in-app message destination URL. 
+
 ## April 28, 2023
 
 ### Android Messaging 2.1.3

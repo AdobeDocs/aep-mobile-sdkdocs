@@ -2,6 +2,10 @@
 
 ## February 17, 2023
 
+### Android Campaign Standard 2.0.3
+
+* Allow url encoded URL's containing query parameters to be used as an in-app message destination URL. 
+
 ### Android Campaign Standard 2.0.2
 
 * Made the extension compatible with Kotlin 1.4.
