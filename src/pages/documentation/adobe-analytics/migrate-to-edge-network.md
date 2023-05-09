@@ -1,4 +1,4 @@
-# Migrate from Analytics mobile extension to Adobe Experience Platform Edge Network<!-- omit in toc -->
+# Migrate from Analytics mobile extension to Adobe Experience Platform Edge Network
 
 ## Overview
 
