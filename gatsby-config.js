@@ -406,6 +406,10 @@ module.exports = {
                             {
                                 title: 'Release notes',
                                 path: '/documentation/adobe-analytics/release-notes/'
+                            },
+                            {
+                                title: 'Migrate to Edge Network',
+                                path: '/documentation/adobe-analytics/migrate-to-edge-network'
                             }
                         ]
                     },
