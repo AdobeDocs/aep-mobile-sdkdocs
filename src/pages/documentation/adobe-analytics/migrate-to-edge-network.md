@@ -28,7 +28,7 @@ Edge Bridge only supports the Analytics drop-in migration case. If you are looki
 
 <InlineAlert variant="info" slots="text"/>
 
-Other foundational extensions include the Consent for Edge Network extension which [enables consent preferences collection](#consent-for-edge-network-extension) from your mobile app, and the [Assurance extension](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html) for validating your app implementation.
+Other foundational extensions include the Consent for Edge Network extension which [enables consent preferences collection](#consent-for-edge-network-extension) from your mobile app, and the [Assurance extension](../platform-assurance-sdk/index.md) for validating your app implementation.
 
 ### Workflow comparison
 ![compare workflows](./assets/index/compareWorkflows.png)
@@ -42,7 +42,7 @@ Other foundational extensions include the Consent for Edge Network extension whi
 | 2. [Configure a datastream](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/overview.html). A datastream is the server-side configuration used when implementing the Experience Platform Mobile SDK. | ✅	 | ✅	|
 | 3. **Add the Adobe Analytics service** to your datastream. The datastream controls both whether and how data is sent to Adobe Analytics. You will need your Analytics report suite ID (RSID) for this step.  | ✅ | ✅ |
 | 4. **Install the *Edge Network* and *Identity for Edge Network extensions*** in the mobile property (tag) in Data Collection UI, and set the datastream in the Edge Network extension configuration. |  ✅ | ✅ |
-| 5. **In your app code**, register the **Edge Network** and **Identity for Edge Network extensions** and load your mobile tag property configuration. | ✅ | ✅ |
+| 5. **In your app code**, register the **Edge Network** and **Identity for Edge Network extensions** and set your mobile tag property configuration. | ✅ | ✅ |
 | 5b. **In your app code**, also register the **Edge Bridge extension** with registering *Edge Network* and *Identity for Edge Network extensions*. |  | ✅ |
 | 6. **Remove the Analytics extension** dependency and extension registration from your mobile app code. <br/> **NOTE:** You should still keep the Analytics extension installed in the mobile property (tag) to ensure published versions of your app (pre-migration) continue to work seamlessly. |  ✅ | ✅ |
 | 7 .**Use Edge.sendEvent API** to send data in XDM format to Edge Network based on the schema you have defined. |  ✅ |  |
@@ -76,7 +76,7 @@ For more details, please refer to the [Consent for Edge Network extension docume
 
 
 ### Identity consideration for the migration
-When using Identity for Edge Network extension, the Mobile SDK automatically migrates any existing MID/ECID to the new XDM IdentityMap format out of the box. If you are using custom identities with `syncIdentifier` / `syncIdentifiers` APIs, you should consider migrating your IDs to the XDM format.
+When using Identity for Edge Network extension, the Mobile SDK automatically migrates an existing ECID (previously known as MID) to the new XDM IdentityMap format out of the box. If you are using custom identities with the `syncIdentifier` / `syncIdentifiers` APIs, you should consider migrating your IDs to the XDM format.
 
 The previous Identity for Experience Cloud Id Service extension can be safely removed from the SDK registration process if there are no other extensions which rely on it, such as Target, Campaign and others.
 
