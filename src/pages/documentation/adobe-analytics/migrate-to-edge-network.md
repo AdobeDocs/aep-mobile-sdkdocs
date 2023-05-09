@@ -15,7 +15,7 @@ The **Edge Bridge extension** offers a drop in solution for migrating existing A
 
 <InlineAlert variant="info" slots="text"/>
 
-Edge Bridge only supports the Analytics drop-in migration case. If you are looking to migrate your Adobe Target implementation, please refer to the Adobe Journey Optimizer Decisioning [documentation](../adobe-journey-optimizer-decisioning/index.md) for more details.
+Edge Bridge only supports the Analytics drop-in migration case. If you are looking to migrate your Adobe Target implementation, please refer to the [Adobe Journey Optimizer Decisioning documentation](../adobe-journey-optimizer-decisioning/index.md) for more details.
 
 ## Extensions comparison
 
@@ -31,6 +31,7 @@ Edge Bridge only supports the Analytics drop-in migration case. If you are looki
 Other foundational extensions include the Consent for Edge Network extension which [enables consent preferences collection](#consent-for-edge-network-extension) from your mobile app, and the [Assurance extension](../platform-assurance-sdk/index.md) for validating your app implementation.
 
 ### Workflow comparison
+
 ![compare workflows](./assets/index/compareWorkflows.png)
   
 
@@ -65,24 +66,21 @@ To learn about the end to end Edge Bridge extension implementation process, foll
 ## Other migration considerations
 
 ### Not yet on latest Mobile SDK? 
-If you are not using the latest version of the Mobile SDK (that is, still on v4 Mobile SDK or ACP-prefix Mobile SDK), we recommend that you first migrate to the [latest version](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions), and then continue with this guide.
+
+If you are not using the latest version of the Mobile SDK (IE: v4 Mobile SDK or the ACP-prefixed Mobile SDK), you should first migrate to the [latest version](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions), and then continue with this guide.
 
 ### Consent for Edge Network extension
+
 The Consent for Edge Network mobile extension enables consent preference collection from your mobile app when using the Experience Platform Mobile SDK and Edge Network.
 
 The privacy status setting (MobilePrivacyStatus.OPT_IN, OPT_OUT, UNKNOWN) set in the mobile tag property which is used by Adobe Experience Cloud mobile extensions (for example, Analytics and Target), are not read nor used by the Edge Network extensions. The Edge Network extensions rely on the Consent for Edge Network extension for this setting.
 
 For more details, please refer to the [Consent for Edge Network extension documentation](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network).
 
-
 ### Identity consideration for the migration
+
 When using Identity for Edge Network extension, the Mobile SDK automatically migrates an existing ECID (previously known as MID) to the new XDM IdentityMap format out of the box. If you are using custom identities with the `syncIdentifier` / `syncIdentifiers` APIs, you should consider migrating your IDs to the XDM format.
 
 The previous Identity for Experience Cloud Id Service extension can be safely removed from the SDK registration process if there are no other extensions which rely on it, such as Target, Campaign and others.
 
 If you need further assistance, please contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support).
-
-
-
-
-  
