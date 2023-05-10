@@ -3,6 +3,63 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 ---
 
 # Release notes
+
+## May 4, 2023
+
+### Android Campaign Standard 2.0.3
+
+* Adds support for URL-encoded URLs with query parameters used to configure in-app message clickthrough destination.
+
+## April 28, 2023
+
+### Android Messaging 2.1.3
+
+* Fixed a bug causing in-app message display experience events to be sent even when MessagingDelegate suppressed their display.
+
+### iOS Messaging 1.1.4
+
+* Fixed a bug causing in-app message display experience events to be sent even when MessagingDelegate suppressed their display.
+
+## April 25, 2023
+
+### Android Assurance 2.1.0
+
+* Added a new API for quick connect capability.
+* Fixed an issue causing pure Jetpack Compose apps implementing Assurance to add XML color attributes.
+* Switched to use vector support library to reduce SDK size.
+
+## April 24, 2023
+
+### Android Mobile Core 2.1.3
+
+* In-app messages with content overflow now correctly scroll when the message is not observing gestures.
+* Opacity is now correctly calculated for in-app message takeovers.
+* In-app messages will no longer intermittently cause a crash when being displayed on Android 7.
+* Fixed a race condition when querying the event history database.
+
+### Android Messaging 2.1.2
+
+* Fixed a bug causing a crash when incorrectly formatted URLs were used in custom HTML messages.
+
+## April 14, 2023
+
+### Android Mobile Core 2.1.2
+
+* Fixed an issue that prevented some in-app messaging show frequency rules from working correctly.
+* Improved evaluation of logical operators in rules engine.
+
+## April 11, 2023
+
+### Android Edge 2.1.0
+
+* Added support to overwrite the Edge request path with a custom path to support Edge requests for the Media Analytics service.
+
+## April 10, 2023
+
+### Android BOM 1.0.0-beta1
+
+The initial public beta release of the [Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom/1.0.0-beta1) (BOM) artifact for Android is now available. 
+
 ## April 6, 2023
 
 ### Flutter Edge Bridge plugin 1.0.0

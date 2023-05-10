@@ -1,5 +1,27 @@
 # Release Notes
 
+## April 24, 2023
+
+### Android Mobile Core 2.1.3
+
+* In-app messages with content overflow now correctly scroll when the message is not observing gestures.
+* Opacity is now correctly calculated for in-app message takeovers.
+* In-app messages will no longer intermittently cause a crash when being displayed on Android 7.
+* Fixed a race condition when querying the event history database.
+
+## April 14, 2023
+
+### Android Mobile Core 2.1.2
+
+* Fixed an issue that prevented some in-app messaging show frequency rules from working correctly.
+* Improved evaluation of logical operators in rules engine.
+
+## April 10, 2023
+
+### Android BOM 1.0.0-beta1
+
+The initial public beta release of the [Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom/1.0.0-beta1) (BOM) artifact for Android is now available. 
+
 ## March 31, 2023
 
 ### Android Mobile Core 2.1.1

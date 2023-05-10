@@ -20,7 +20,6 @@ Here are end-of-support considerations for the version 4 SDKs:
 
 * [4x SDKs](https://github.com/Adobe-Marketing-Cloud/mobile-services) no longer have support via [Adobe Customer Support](https://experienceleague.adobe.com/?support-solution=General#support) or [forums](https://github.com/Adobe-Marketing-Cloud/mobile-services/issues) beginning **August 31, 2021.**
 * Adobe has released final updates for version 4 SDKs (as needed) to facilitate compatibility with upcoming OS releases including iOS 14 and Android 11.
-* Customer issues will continue to be addressed by impact through **September 30, 2020,** after which Adobe may, in its sole discretion, develop new fixes for problems of high technical impact or business exposure for customers. Based on the customer input, Adobe will determine the degree of impact and exposure and the consequent activities.
 * Starting **September 2021**, no new fixes, OS-related updates, or support for 4x SDKs will be provided.  Customers will be expected to use the new [Experience Platform Mobile SDKs](./index.md).
 
 ## Frequently asked questions
@@ -39,7 +38,7 @@ To upgrade to the Experience Platform SDKs, see [Upgrade to the Experience Platf
 
 ### Will Mobile Services functionality still work?
 
-Yes! This end-of-support statement does not affect your use of Mobile Services in any way. You may continue to use features such as marketing links, push notifications, and in-app messaging with version 4 SDKs or by leveraging the Adobe Analytics - Mobile Services extension for the Experience Platform Mobile SDKs. The documentation for this extension is available in the [previous versions of the Mobile SDKs](https://developer.adobe.com/client-sdks/previous-versions/documentation/adobe-analytics-mobile-services/).
+Yes! This end-of-support statement does not affect your use of Mobile Services in any way. You may continue to use features such as marketing links, push notifications, and in-app messaging by leveraging the Adobe Analytics - Mobile Services extension for the Experience Platform Mobile SDKs. Note that you will need to migrate from version 4 SDKs to Adobe Experience Platform SDKs after August 2021.
 
 ### Can I still download and use the version 4 SDKs?
 
