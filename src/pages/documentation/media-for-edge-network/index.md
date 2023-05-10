@@ -4,9 +4,14 @@ import Tabs from './tabs/index.md'
 
 <InlineAlert variant="warning" slots="text"/>
 
-This extension requires the [Adobe Analytics for Media](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html) add-on SKU. To learn more, contact your Adobe Customer Success Manager.
+This extension requires the setting up of Datastreams with Media forwarding enabled, Dataset, XDM Schema and other AEP settings. Please follow this `backendDocumentationLink` before configuring and implementing the SDK.  
+
 
 ## Configure Edge Media Analytics extension in the Data Collection UI
+
+<InlineAlert variant="warning" slots="text"/>
+
+Media for Edge Network depends on Edge and Edge Identity extensions. Make sure to [configure the Edge extension in Data Collection UI](https://developer.adobe.com/client-sdks/documentation/edge-network/#configure-the-edge-network-extension-in-data-collection-ui) and [configure the Edge Identity extension in Data Collection UI](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/#configure-the-identity-extension-in-the-data-collection-ui) before proceeding.
 
 1. In the Data Collection UI, select the **Extensions** tab.
 2. On the **Catalog** tab, locate the **Adobe Edge Media Analytics for Audio and Video** extension, and select **Install**.
@@ -68,6 +73,6 @@ To update your SDK configuration programmatically, use the following information
 
 | Key | Required | Description | Data Type |
 | :--- | :--- | :--- | :--- |
-| `media.channel` | Yes | The Channel name. For more information, see [Channel](#channel). | String |
-| `media.playerName` | Yes | The media player name, i.e., "AVPlayer", "HTML5 Player", "My Custom Player". For more information, see [Player Name](#player-name). | String |
-| `media.appVersion` | No | Version of the media player app/SDK. For more information, see [Application Version](#application-version). | String |
+| `edgeMedia.channel` | Yes | The Channel name. For more information, see [Channel](#channel). | String |
+| `edgeMedia.playerName` | Yes | The media player name, i.e., "AVPlayer", "HTML5 Player", "My Custom Player". For more information, see [Player Name](#player-name). | String |
+| `edgeMedia.appVersion` | No | Version of the media player app/SDK. For more information, see [Application Version](#application-version). | String |
