@@ -191,6 +191,10 @@ Tracks the intention to start playback. This starts a tracking session on the me
 | `mediaInfo` | Media information created using the [createMediaObject](#createmediaobject) method. | Yes |
 | `contextData` | Optional Media context data. For standard metadata keys, use [standard video constants](#standard-video-constants) or [standard audio constants](#standard-audio-constants). | No |
 
+<InlineAlert variant="info" slots="text"/>
+
+Main ping interval can now be customized to duration between 10 to 50 seconds using [`createTrackerWithConfig`](#createTrackerWithConfig) API.
+
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
@@ -290,6 +294,10 @@ Tracks media events.
 *`info` is a required parameter for `AdBreakStart`, `AdStart`, `ChapterStart`, `StateStart`, `StateEnd` events. Not set for any other event types.
 
 The following APIs are **tracker instance** dependent. Please create tracker instance using [`createTracker`](#createTracker) or [`createTrackerWithConfig`](#createTrackerWithConfig) and call the following APIs.
+
+<InlineAlert variant="info" slots="text"/>
+
+Ad ping interval can now be customized to duration between 1 to 10 seconds using [`createTrackerWithConfig`](#createTrackerWithConfig) API.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

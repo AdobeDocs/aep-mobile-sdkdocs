@@ -2,14 +2,14 @@ import Tabs from './tabs/index.md'
 
 # Adobe Edge Media Analytics for Audio and Video
 
-<InlineAlert variant="warning" slots="text"/>
+<InlineAlert variant="info" slots="text"/>
 
 This extension requires the setting up of Datastreams with Media forwarding enabled, Dataset, XDM Schema and other AEP settings. Please follow this `backendDocumentationLink` before configuring and implementing the SDK.  
 
 
 ## Configure Edge Media Analytics extension in the Data Collection UI
 
-<InlineAlert variant="warning" slots="text"/>
+<InlineAlert variant="info" slots="text"/>
 
 Media for Edge Network depends on Edge and Edge Identity extensions. Make sure to [configure the Edge extension in Data Collection UI](https://developer.adobe.com/client-sdks/documentation/edge-network/#configure-the-edge-network-extension-in-data-collection-ui) and [configure the Edge Identity extension in Data Collection UI](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/#configure-the-identity-extension-in-the-data-collection-ui) before proceeding.
 
