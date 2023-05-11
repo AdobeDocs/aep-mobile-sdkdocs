@@ -1,6 +1,6 @@
 <Variant platform="android" task="add" repeat="8"/>
 
-1. Add the Media For Edge Network extension and its dependencies to your project using the app's Gradle file.
+1. Add the Media for Edge Network extension and its dependencies to your project using the app's Gradle file.
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
@@ -12,7 +12,7 @@ Using dynamic dependency versions is **not** recommended for production apps. Pl
 implementation 'com.adobe.marketing.mobile:core:2.+'
 implementation 'com.adobe.marketing.mobile:edge:2.+'
 implementation 'com.adobe.marketing.mobile:edgeidentity:2.+'
-implementation 'com.adobe.marketing.mobile:media:1.+'
+implementation 'com.adobe.marketing.mobile:edgemedia:1.+'
 ```
 
 2. Import the libraries in your application's main activity.
@@ -38,7 +38,7 @@ import com.adobe.marketing.mobile.edge.media.Media
 
 <Variant platform="ios" task="add" repeat="7"/>
 
-1. To add the Media For Edge Network extension and its dependencies to your project, add the following pods to your `Podfile`:
+1. To add the Media for Edge Network extension and its dependencies to your project, add the following pods to your `Podfile`:
 
 ```ruby
 pod 'AEPCore'
