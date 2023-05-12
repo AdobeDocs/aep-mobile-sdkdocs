@@ -35,7 +35,7 @@ static var extensionVersion: String
 **Example**
 
 ```swift
-let mediaExtensionVersion  = Media.extensionVersion()
+let mediaExtensionVersion = Media.extensionVersion()
 ```
 
 #### Objective-C
@@ -54,9 +54,7 @@ NSString *mediaExtensionVersion = [AEPMobileEdgeMedia extensionVersion];
 
 <Variant platform="android" api="create-tracker" repeat="10"/>
 
-The createTracker function returns the instance of MediaTracker for tracking a media session. The createTracker function with callback as a parameter has been deprecated.
-
-If MobileCore.resetIdentities() is called in the implementation, the existing tracker will stop sending pings. You will need to create a new tracker to generate a new media session.
+Creates a MediaTracker instance that tracks the playback session.
 
 #### Java
 
@@ -82,9 +80,7 @@ val tracker = Media.createTracker()
 
 <Variant platform="ios" api="create-tracker" repeat="12"/>
 
-Creates a media tracker instance that tracks the playback session. The tracker created should be used to track the streaming content and it sends periodic pings to the media analytics backend.
-
-If MobileCore.resetIdentities() is called in the implementation, the existing tracker will stop sending pings. You will need to create a new tracker to generate a new media session.
+Creates a MediaTracker instance that tracks the playback session.
 
 #### Swift
 
@@ -112,7 +108,7 @@ let tracker = Media.createTracker()  // Use the instance for tracking media.
 
 ```objc
 id<AEPEdgeMediaTracker> tracker; 
-_tracker = [AEPMobileEdgeMedia createTracker];  // Use the instance for tracking media.
+tracker = [AEPMobileEdgeMedia createTracker];  // Use the instance for tracking media.
 ```
 
 <Variant platform="android" api="create-tracker-with-config" repeat="8"/>
@@ -146,12 +142,12 @@ val config = mapOf(
                 MediaConstants.Config.AD_PING_INTERVAL to 1,
                 MediaConstants.Config.MAIN_PING_INTERVAL to 30,
             )
-val mediaTracker = Media.createTracker(config) // Use the instance for tracking media.
+val tracker = Media.createTracker(config) // Use the instance for tracking media.
 ```
 
 <Variant platform="ios" api="create-tracker-with-config" repeat="11"/>
 
-Creates a media tracker instance based on the configuration to track the playback session.
+Creates a MediaTracker instance based on the configuration to track the playback session.
 
 #### Swift
 
@@ -183,7 +179,7 @@ let tracker = Media.createTrackerWith(config: config)
 **Example**
 
 ```objectivec
-id<AEPEdgeMediaTracker> _tracker; 
+id<AEPEdgeMediaTracker> tracker; 
 NSMutableDictionary* config = [NSMutableDictionary dictionary];
 
 config[AEPEdgeMediaTrackerConfig.CHANNEL] = @"custom-channel"; // Overrides channel configured in the Data Collection UI.
@@ -191,7 +187,7 @@ config[AEPEdgeMediaTrackerConfig.AD_PING_INTERVAL] = 1; // Overwrites ad content
 config[AEPEdgeMediaTrackerConfig.MAIN_PING_INTERVAL] = 30; // Overwrites main content ping interval to 30 seconds.
 
 
-_tracker = [AEPMobileEdgeMedia createTrackerWithConfig:config];
+tracker = [AEPMobileEdgeMedia createTrackerWithConfig:config];
 ```
 
 <Variant platform="android" api="create-media-object" repeat="8"/>
@@ -202,7 +198,7 @@ _tracker = [AEPMobileEdgeMedia createTrackerWithConfig:config];
 
 ```java
 public static HashMap<String, Object> createMediaObject(String name,
-                                                        String mediaId,
+                                                        String id,
                                                         int length,
                                                         String streamType,
                                                         MediaType mediaType);
@@ -231,8 +227,6 @@ var mediaInfo = Media.createMediaObject("video-name",
 ```
 
 <Variant platform="ios" api="create-media-object" repeat="11"/>
-
-Returns a map that contains information about the media.
 
 #### Swift
 
@@ -287,7 +281,7 @@ public static HashMap<String, Object> createAdBreakObject(String name, int posit
 **Example**
 
 ```java
-HashMap<String, Object> adBreakObject = Media.createAdBreakObject("adbreak-name", 1, 0);
+HashMap<String, Object> adBreakInfo = Media.createAdBreakObject("adbreak-name", 1, 0);
 ```
 
 #### Kotlin
@@ -295,12 +289,10 @@ HashMap<String, Object> adBreakObject = Media.createAdBreakObject("adbreak-name"
 **Example**
 
 ```java
-val adBreakObject = Media.createAdBreakObject("adbreak-name", 1, 0)
+val adBreakInfo = Media.createAdBreakObject("adbreak-name", 1, 0)
 ```
 
 <Variant platform="ios" api="create-ad-break-object" repeat="11"/>
-
-Returns a map that contains information about the ad break.
 
 #### Swift
 
@@ -309,13 +301,13 @@ Returns a map that contains information about the ad break.
 ```swift
 static func createAdBreakObjectWith(name: String,
                                 position: Int, 
-                                startTime: Int) -> [String: Any]?
+                               startTime: Int) -> [String: Any]?
 ```
 
 **Example**
 
 ```swift
-let adBreakObject = Media.createAdBreakObjectWith(name: "adbreak-name", 
+let adBreakInfo = Media.createAdBreakObjectWith(name: "adbreak-name", 
                                               position: 1, 
                                              startTime: 0)
 ```
@@ -331,9 +323,9 @@ let adBreakObject = Media.createAdBreakObjectWith(name: "adbreak-name",
 **Example**
 
 ```objectivec
-NSDictionary *adBreakObject = [AEPMobileEdgeMedia createAdBreakObjectWith:@"adbreak-name" 
-                                                             position:1 
-                                                            startTime:0];
+NSDictionary *adBreakInfo = [AEPMobileEdgeMedia createAdBreakObjectWith:@"adbreak-name" 
+                                                                 position:1 
+                                                                startTime:0];
 ```
 
 <Variant platform="android" api="create-ad-object" repeat="8"/>
@@ -343,7 +335,7 @@ NSDictionary *adBreakObject = [AEPMobileEdgeMedia createAdBreakObjectWith:@"adbr
 **Syntax**
 
 ```java
-public static HashMap<String, Object> createAdObject(String name, String adId, int position, int length);
+public static HashMap<String, Object> createAdObject(String name, String id, int position, int length);
 ```
 
 **Example**
@@ -362,8 +354,6 @@ val adInfo = Media.createAdObject("ad-name", "ad-id", 1, 15)
 
 <Variant platform="ios" api="create-ad-object" repeat="11"/>
 
-Returns a map that contains information about the ad.
-
 #### Swift
 
 **Syntax**
@@ -378,7 +368,7 @@ static func createAdObjectWith(name: String,
 **Example**
 
 ```swift
-let adObject = Media.createObjectWith(name: "ad-name", 
+let adInfo = Media.createObjectWith(name: "ad-name", 
                                         id: "ad-id", 
                                   position: 0, 
                                     length: 30)
@@ -389,7 +379,7 @@ let adObject = Media.createObjectWith(name: "ad-name",
 **Syntax**
 
 ```objectivec
-+ (NSDictionary  <NSString *, id> * _Nullable) createAdObjectWith: (NSString * _Nonnull
++ (NSDictionary  <NSString *, id> * _Nullable) createAdObjectWith:(NSString * _Nonnull)
                                                                id:(NSString * _Nonnull) 
                                                          position:(NSInteger) 
                                                            length:(NSInteger)
@@ -398,10 +388,10 @@ let adObject = Media.createObjectWith(name: "ad-name",
 **Example**
 
 ```objectivec
-NSDictionary *adObject = [AEPMobileEdgeMedia createAdObjectWith:@"ad-name" 
-                                                         id:@"ad-id" 
-                                                   position:0 
-                                                     length:30];
+NSDictionary *adInfo = [AEPMobileEdgeMedia createAdObjectWith:@"ad-name" 
+                                                             id:@"ad-id" 
+                                                       position:0 
+                                                         length:30];
 ```
 
 <Variant platform="android" api="create-chapter-object" repeat="8"/>
@@ -433,8 +423,6 @@ val chapterInfo = Media.createChapterObject("chapter-name", 1, 60, 0)
 
 <Variant platform="ios" api="create-chapter-object" repeat="11"/>
 
-Returns a map that contains information about the chapter.
-
 #### Swift
 
 **Syntax**
@@ -449,7 +437,7 @@ static func createChapterObjectWith(name: String,
 **Example**
 
 ```swift
-let chapterObject = Media.createChapterObjectWith(name: "chapter_name", 
+let chapterInfo = Media.createChapterObjectWith(name: "chapter_name", 
                                               position: 1, 
                                                 length: 60, 
                                              startTime: 0)
@@ -469,10 +457,10 @@ let chapterObject = Media.createChapterObjectWith(name: "chapter_name",
 **Example**
 
 ```objectivc
-NSDictionary *chapterObject = [AEPMobileEdgeMedia createChapterObjectWith:@"chapter_name" 
-                                                             position:1 
-                                                               length:60 
-                                                            startTime:0];
+NSDictionary *chapterInfo = [AEPMobileEdgeMedia createChapterObjectWith:@"chapter_name" 
+                                                                 position:1 
+                                                                   length:60 
+                                                                startTime:0];
 ```
 
 <Variant platform="android" api="create-qoe-object" repeat="8"/>
@@ -504,8 +492,6 @@ val qoeInfo = Media.createQoEObject(10000000, 2, 23, 10)
 
 <Variant platform="ios" api="create-qoe-object" repeat="11"/>
 
-Returns a map that contains information about the quality of experience.
-
 #### Swift
 
 **Syntax**
@@ -520,7 +506,7 @@ static func createQoEObjectWith(bitrate: Int,
 **Example**
 
 ```swift
-let qoeObject = Media.createQoEObjectWith(bitrate: 500000, 
+let qoeInfo = Media.createQoEObjectWith(bitrate: 500000, 
                                       startupTime: 2, 
                                               fps: 24, 
                                     droppedFrames: 10)
@@ -540,10 +526,10 @@ let qoeObject = Media.createQoEObjectWith(bitrate: 500000,
 **Example**
 
 ```objectivec
-NSDictionary *qoeObject = [AEPMobileEdgeMedia createQoEObjectWith:500000 
-                                                    startTime:2 
-                                                          fps:24 
-                                                droppedFrames:10];
+NSDictionary *qoeInfo = [AEPMobileEdgeMedia createQoEObjectWith:500000 
+                                                        startTime:2 
+                                                              fps:24 
+                                                    droppedFrames:10];
 ```
 
 <Variant platform="android" api="create-state-object" repeat="8"/>
@@ -559,7 +545,7 @@ public static HashMap<String, Object> createStateObject(String stateName);
 **Example**
 
 ```java
-HashMap<String, Object> playerStateInfo = Media.createStateObject("fullscreen");
+HashMap<String, Object> fullScreenState = Media.createStateObject(MediaConstants.PlayerState.FULLSCREEN);
 ```
 
 #### Kotlin
@@ -567,12 +553,10 @@ HashMap<String, Object> playerStateInfo = Media.createStateObject("fullscreen");
 **Example**
 
 ```java
-val playerStateInfo = Media.createStateObject("fullscreen")
+val fullScreenState = Media.createStateObject(MediaConstants.PlayerState.FULLSCREEN)
 ```
 
 <Variant platform="ios" api="create-state-object" repeat="11"/>
-
-Returns a map that contains information about the player state.
 
 #### Swift
 
@@ -585,7 +569,7 @@ static func createStateObjectWith(stateName: String) -> [String: Any]
 **Example**
 
 ```swift
-let fullScreenState = Media.createStateObjectWith(stateName: "fullscreen")
+let fullScreenState = Media.createStateObjectWith(stateName: MediaConstants.PlayerState.FULLSCREEN)
 ```
 
 #### Objective-C
@@ -615,7 +599,7 @@ public void trackSessionStart(Map<String, Object> mediaInfo, Map<String, String>
 **Example**
 
 ```java
-HashMap<String, Object> mediaObject = Media.createMediaObject("media-name", "media-id", 60, MediaConstants.StreamType.VOD, Media.MediaType.Video);
+HashMap<String, Object> mediaInfo = Media.createMediaObject("media-name", "media-id", 60, MediaConstants.StreamType.VOD, Media.MediaType.Video);
 
 HashMap<String, String> mediaMetadata = new HashMap<String, String>();
 // Standard metadata keys provided by adobe.
@@ -626,7 +610,7 @@ mediaMetadata.put(MediaConstants.VideoMetadataKeys.SHOW, "Sample Show");
 mediaMetadata.put("isUserLoggedIn", "false");
 mediaMetadata.put("tvStation", "Sample TV Station");
 
-_tracker.trackSessionStart(mediaInfo, mediaMetadata);
+tracker.trackSessionStart(mediaInfo, mediaMetadata);
 ```
 
 #### Kotlin
@@ -634,7 +618,7 @@ _tracker.trackSessionStart(mediaInfo, mediaMetadata);
 **Example**
 
 ```java
-val mediaObject = Media.createMediaObject(
+val mediaInfo = Media.createMediaObject(
                         "media-name",
                         "media-id",
                         60,
@@ -642,13 +626,14 @@ val mediaObject = Media.createMediaObject(
                         Media.MediaType.Video
                     )
 
-val mediaMetadata = HashMap<String, String>()
-// Standard metadata keys provided by adobe.
-mediaMetadata[MediaConstants.VideoMetadataKeys.EPISODE] = "Sample Episode" 
-mediaMetadata[MediaConstants.VideoMetadataKeys.SHOW] = "Sample Show"
-// Custom metadata keys
-mediaMetadata["isUserLoggedIn"] = "false"
-mediaMetadata["tvStation"] = "Sample TV Station"
+val mediaMetadata = mapOf<String, String>(
+    // Standard metadata keys provided by Adobe
+    MediaConstants.VideoMetadataKeys.EPISODE to "Sample Episode",
+    MediaConstants.VideoMetadataKeys.SHOW to "Sample Show",
+    // Custom metadata keys
+    "isUserLoggedIn" to "false",
+    "tvStation" to "Sample TV Station"
+)
 
 tracker.trackSessionStart(mediaInfo, mediaMetadata)
 ```
@@ -666,18 +651,18 @@ public func trackSessionStart(info: [String: Any], metadata: [String: String]? =
 **Example**
 
 ```swift
-let mediaObject = Media.createMediaObjectWith(name: "video-name", id: "videoId", length: 60, streamType: MediaConstants.StreamType.VOD, mediaType: MediaType.Video)
+let mediaInfo = Media.createMediaObjectWith(name: "video-name", id: "videoId", length: 60, streamType: MediaConstants.StreamType.VOD, mediaType: MediaType.Video)
 
-var videoMetadata: [String: String] = [:]
-// Sample implementation for using video standard metadata keys
-videoMetadata[MediaConstants.VideoMetadataKeys.SHOW] = "Sample show"
-videoMetadata[MediaConstants.VideoMetadataKeys.SEASON] = "Sample season"
+var mediaMetadata: [String: String] = [ 
+  // Standard metadata keys provided by Adobe
+  MediaConstants.VideoMetadataKeys.SHOW : "Sample show",
+  MediaConstants.VideoMetadataKeys.SEASON : "Sample season",
+  // Custom metadata keys
+  "isUserLoggedIn" : "false",
+  "isUserLoggedIn" : "Sample TV station"
+]
 
-// Sample implementation for using custom metadata keys
-videoMetadata["isUserLoggedIn"] = "false"
-videoMetadata["tvStation"] = "Sample TV station"
-
-tracker.trackSessionStart(info: mediaObject, metadata: videoMetadata)
+tracker.trackSessionStart(info: mediaInfo, metadata: mediaMetadata)
 ```
 
 #### Objective-C
@@ -691,18 +676,18 @@ tracker.trackSessionStart(info: mediaObject, metadata: videoMetadata)
 **Example**
 
 ```objectivec
-NSDictionary *mediaObject = [AEPMobileEdgeMedia createMediaObjectWith:@"video-name" id:@"video-id" length:60 streamType:AEPEdgeMediaStreamType.VOD mediaType:AEPEdgeMediaTypeVideo];
+NSDictionary *mediaInfo = [AEPMobileEdgeMedia createMediaObjectWith:@"video-name" id:@"video-id" length:60 streamType:AEPEdgeMediaStreamType.VOD mediaType:AEPEdgeMediaTypeVideo];
 
-NSMutableDictionary *videoMetadata = [[NSMutableDictionary alloc] init];
-// Sample implementation for using standard video metadata keys
-[videoMetadata setObject:@"Sample show" forKey:AEPEdgeMediaVideoMetadataKeys.SHOW];
-[videoMetadata setObject:@"Sample Season" forKey:AEPEdgeMediaVideoMetadataKeys.SEASON];
+NSMutableDictionary *mediaMetadata = [[NSMutableDictionary alloc] init];
+// Standard metadata keys provided by Adobe
+[mediaMetadata setObject:@"Sample show" forKey:AEPEdgeMediaVideoMetadataKeys.SHOW];
+[mediaMetadata setObject:@"Sample Season" forKey:AEPEdgeMediaVideoMetadataKeys.SEASON];
 
-// Sample implementation for using custom metadata keys
-[videoMetadata setObject:@"false" forKey:@"isUserLoggedIn"];
-[videoMetadata setObject:@"Sample TV station" forKey:@"tvStation"];
+// Custom metadata keys
+[mediaMetadata setObject:@"false" forKey:@"isUserLoggedIn"];
+[mediaMetadata setObject:@"Sample TV station" forKey:@"tvStation"];
 
-[_tracker trackSessionStart:mediaObject metadata:videoMetadata];
+[tracker trackSessionStart:mediaInfo metadata:mediaMetadata];
 ```
 
 <Variant platform="android" api="track-play" repeat="8"/>
@@ -726,7 +711,7 @@ tracker.trackPlay();
 **Example**
 
 ```java
-tracker.trackPlay();
+tracker.trackPlay()
 ```
 
 <Variant platform="ios" api="track-play" repeat="10"/>
@@ -756,7 +741,7 @@ tracker.trackPlay()
 **Example**
 
 ```objectivec
-[_tracker trackPlay];
+[tracker trackPlay];
 ```
 
 <Variant platform="android" api="track-pause" repeat="8"/>
@@ -780,7 +765,7 @@ tracker.trackPause();
 **Example**
 
 ```java
-tracker.trackPause();
+tracker.trackPause()
 ```
 
 <Variant platform="ios" api="track-pause" repeat="10"/>
@@ -810,7 +795,7 @@ tracker.trackPause()
 **Example**
 
 ```objectivec
-[_tracker trackPause];
+[tracker trackPause];
 ```
 
 <Variant platform="android" api="track-complete" repeat="8"/>
@@ -834,7 +819,7 @@ tracker.trackComplete();
 **Example**
 
 ```java
-tracker.trackComplete();
+tracker.trackComplete()
 ```
 
 <Variant platform="ios" api="track-complete" repeat="10"/>
@@ -864,7 +849,7 @@ tracker.trackComplete()
 **Example**
 
 ```objectivec
-[_tracker trackComplete];
+[tracker trackComplete];
 ```
 
 <Variant platform="android" api="track-session-end" repeat="8"/>
@@ -888,7 +873,7 @@ tracker.trackSessionEnd();
 **Example**
 
 ```kotlin
-tracker.trackSessionEnd();
+tracker.trackSessionEnd()
 ```
 
 <Variant platform="ios" api="track-session-end" repeat="10"/>
@@ -918,7 +903,7 @@ tracker.trackSessionEnd()
 **Example**
 
 ```objectivec
-[_tracker trackSessionEnd];
+[tracker trackSessionEnd];
 ```
 
 <Variant platform="android" api="track-error" repeat="8"/>
@@ -942,7 +927,7 @@ tracker.trackError("errorId");
 **Example**
 
 ```java
-tracker.trackError("errorId");
+tracker.trackError("errorId")
 ```
 
 <Variant platform="ios" api="track-error" repeat="10"/>
@@ -972,7 +957,7 @@ tracker.trackError(errorId: "errorId")
 **Example**
 
 ```objectivec
-[_tracker trackError:@"errorId"];
+[tracker trackError:@"errorId"];
 ```
 
 <Variant platform="android" api="track-event" repeat="30"/>
@@ -993,90 +978,90 @@ tracker.trackError(errorId: "errorId")
 
 ```java
 // StateStart
-  HashMap<String, Object> stateObject = Media.createStateObject("fullscreen");
-  _tracker.trackEvent(Media.Event.StateStart, stateObject, null);
+  HashMap<String, Object> fullScreenState = Media.createStateObject(MediaConstants.PlayerState.FULLSCREEN);
+  tracker.trackEvent(Media.Event.StateStart, fullScreenState, null);
 
 // StateEnd
-  HashMap<String, Object> stateObject = Media.createStateObject("fullscreen");
-  _tracker.trackEvent(Media.Event.StateEnd, stateObject, null);
+  HashMap<String, Object> fullScreenState = Media.createStateObject(MediaConstants.PlayerState.FULLSCREEN);
+  tracker.trackEvent(Media.Event.StateEnd, fullScreenState, null);
 ```
 
 **Tracking ad breaks**
 
 ```java
 // AdBreakStart
-  HashMap<String, Object> adBreakObject = Media.createAdBreakObject("adbreak-name", 1, 0);
-  _tracker.trackEvent(Media.Event.AdBreakStart, adBreakObject, null);
+  HashMap<String, Object> adBreakInfo = Media.createAdBreakObject("adbreak-name", 1, 0);
+  tracker.trackEvent(Media.Event.AdBreakStart, adBreakInfo, null);
 
 // AdBreakComplete
-  _tracker.trackEvent(Media.Event.AdBreakComplete, null, null);
+  tracker.trackEvent(Media.Event.AdBreakComplete, null, null);
 ```
 
 **Tracking ads**
 
 ```java
 // AdStart
-  HashMap<String, Object> adObject = Media.createAdObject("ad-name", "ad-id", 1, 15);
+  HashMap<String, Object> adInfo = Media.createAdObject("ad-name", "ad-id", 1, 15);
 
   HashMap<String, String> adMetadata = new HashMap<String, String>();
-  // Standard metadata keys provided by adobe.
+  // Standard metadata keys provided by Adobe
   adMetadata.put(MediaConstants.AdMetadataKeys.ADVERTISER, "Sample Advertiser");
   adMetadata.put(MediaConstants.AdMetadataKeys.CAMPAIGN_ID, "Sample Campaign");
   // Custom metadata keys
   adMetadata.put("affiliate", "Sample affiliate");
 
-  _tracker.trackEvent(Media.Event.AdStart, adObject, adMetadata);
+  tracker.trackEvent(Media.Event.AdStart, adInfo, adMetadata);
 
 // AdComplete
-  _tracker.trackEvent(Media.Event.AdComplete, null, null);
+  tracker.trackEvent(Media.Event.AdComplete, null, null);
 
 // AdSkip
-  _tracker.trackEvent(Media.Event.AdSkip, null, null);
+  tracker.trackEvent(Media.Event.AdSkip, null, null);
 ```
 
 **Tracking chapters**
 
 ```java
 // ChapterStart
-  HashMap<String, Object> chapterObject = Media.createChapterObject("chapter-name", 1, 60, 0);
+  HashMap<String, Object> chapterInfo = Media.createChapterObject("chapter-name", 1, 60, 0);
 
   HashMap<String, String> chapterMetadata = new HashMap<String, String>();
   chapterMetadata.put("segmentType", "Sample segment type");
 
-  _tracker.trackEvent(Media.Event.ChapterStart, chapterDataInfo, chapterMetadata);
+  tracker.trackEvent(Media.Event.ChapterStart, chapterInfo, chapterMetadata);
 
 // ChapterComplete
-  _tracker.trackEvent(Media.Event.ChapterComplete, null, null);
+  tracker.trackEvent(Media.Event.ChapterComplete, null, null);
 
 // ChapterSkip
-  _tracker.trackEvent(Media.Event.ChapterSkip, null, null);
+  tracker.trackEvent(Media.Event.ChapterSkip, null, null);
 ```
 
 **Tracking playback events**
 
 ```java
 // BufferStart
-  _tracker.trackEvent(Media.Event.BufferStart, null, null);
+  tracker.trackEvent(Media.Event.BufferStart, null, null);
 
 // BufferComplete
-  _tracker.trackEvent(Media.Event.BufferComplete, null, null);
+  tracker.trackEvent(Media.Event.BufferComplete, null, null);
 
 // SeekStart
-  _tracker.trackEvent(Media.Event.SeekStart, null, null);
+  tracker.trackEvent(Media.Event.SeekStart, null, null);
 
 // SeekComplete
-  _tracker.trackEvent(Media.Event.SeekComplete, null, null);
+  tracker.trackEvent(Media.Event.SeekComplete, null, null);
 ```
 
 **Tracking bitrate changes**
 
 ```java
 // If the new bitrate value is available provide it to the tracker.
-  HashMap<String, Object> qoeObject = Media.createQoEObject(2000000, 2, 25, 10);
-  _tracker.updateQoEObject(qoeObject);
+  HashMap<String, Object> qoeInfo = Media.createQoEObject(2000000, 2, 25, 10);
+  tracker.updateQoEObject(qoeInfo);
 
 // Bitrate change
-  _tracker.trackEvent(Media.Event.BitrateChange, null, null);
+  tracker.trackEvent(Media.Event.BitrateChange, null, null);
 ```
 
 #### Kotlin
@@ -1087,20 +1072,20 @@ tracker.trackError(errorId: "errorId")
 
 ```java
 // StateStart
-    val stateObject = Media.createStateObject("fullscreen")
-    tracker.trackEvent(Media.Event.StateStart, stateObject, null)
+    val stateInfo = Media.createStateObject(MediaConstants.PlayerState.FULLSCREEN)
+    tracker.trackEvent(Media.Event.StateStart, stateInfo, null)
 
 // StateEnd
-    val stateObject = Media.createStateObject("fullscreen")
-    tracker.trackEvent(Media.Event.StateEnd, stateObject, null)`
+    val stateInfo = Media.createStateObject(MediaConstants.PlayerState.FULLSCREEN)
+    tracker.trackEvent(Media.Event.StateEnd, stateInfo, null)
 ```
 
 **Tracking ad breaks**
 
 ```java
 // AdBreakStart
-    val adBreakObject = Media.createAdBreakObject("adbreak-name", 1, 0)
-    tracker.trackEvent(Media.Event.AdBreakStart, adBreakObject, null)
+    val adBreakInfo = Media.createAdBreakObject("adbreak-name", 1, 0)
+    tracker.trackEvent(Media.Event.AdBreakStart, adBreakInfo, null)
 
 // AdBreakComplete
     tracker.trackEvent(Media.Event.AdBreakComplete, null, null)
@@ -1110,15 +1095,18 @@ tracker.trackError(errorId: "errorId")
 
 ```java
 //AdStart
-    val adObject = Media.createAdObject("ad-name", "ad-id", 1, 15)
+    val adInfo = Media.createAdObject("ad-name", "ad-id", 1, 15)
 
-    val adMetadata = HashMap<String, String>()
-    // Standard metadata keys provided by adobe.
-    adMetadata[MediaConstants.AdMetadataKeys.ADVERTISER] = "Sample Advertiser"
-    adMetadata[MediaConstants.AdMetadataKeys.CAMPAIGN_ID] = "Sample Campaign"
+    val adMetadata = mapOf<String, String>(
+    // Standard metadata keys provided by Adobe
+    MediaConstants.AdMetadataKeys.ADVERTISER to "Sample advertiser",
+    MediaConstants.AdMetadataKeys.CAMPAIGN_ID to "Sample campaign",
     // Custom metadata keys
-    adMetadata["affiliate"] = "Sample affiliate"        
-    tracker.trackEvent(Media.Event.AdStart, adObject, adMetadata)
+    "affiliate" to "Sample affiliate",
+    "tvStation" to "Sample TV Station"
+    )
+           
+    tracker.trackEvent(Media.Event.AdStart, adInfo, adMetadata)
 
 // AdComplete
     tracker.trackEvent(Media.Event.AdComplete, null, null)
@@ -1131,12 +1119,13 @@ tracker.trackError(errorId: "errorId")
 
 ```java
 // ChapterStart
-  val chapterObject = Media.createChapterObject("chapter-name", 1L, 60, 0)
+  val chapterInfo = Media.createChapterObject("chapter-name", 1L, 60, 0)
 
-  val chapterMetadata = HashMap<String, String>()
-  chapterMetadata["segmentType"] = "Sample segment type"
+  val chapterMetadata = mapOf<String, String>(
+    "segmentType" to "Sample segment type"
+  )
 
-  tracker.trackEvent(Media.Event.ChapterStart, chapterObject, chapterMetadata)
+  tracker.trackEvent(Media.Event.ChapterStart, chapterInfo, chapterMetadata)
 
 // ChapterComplete
   tracker.trackEvent(Media.Event.ChapterComplete, null, null)
@@ -1165,8 +1154,8 @@ tracker.trackError(errorId: "errorId")
 
 ```java
 // If the new bitrate value is available provide it to the tracker.
-  val qoeObject = Media.createQoEObject(2000000, 2, 25, 10)
-  tracker.updateQoEObject(qoeObject)
+  val qoeInfo = Media.createQoEObject(2000000, 2, 25, 10)
+  tracker.updateQoEObject(qoeInfo)
 
 // Bitrate change
   tracker.trackEvent(Media.Event.BitrateChange, null, null)
@@ -1200,8 +1189,8 @@ func trackEvent(event: MediaEvent, info: [String: Any]?, metadata: [String: Stri
 
 ```swift
 // AdBreakStart
-  let adBreakObject = Media.createAdBreakObjectWith(name: "adbreak-name", position: 1, startTime: 0)
-  tracker.trackEvent(event: MediaEvent.AdBreakStart, info: adBreakObject, metadata: nil)
+  let adBreakInfo = Media.createAdBreakObjectWith(name: "adbreak-name", position: 1, startTime: 0)
+  tracker.trackEvent(event: MediaEvent.AdBreakStart, info: adBreakInfo, metadata: nil)
 
 // AdBreakComplete
   tracker.trackEvent(event: MediaEvent.AdBreakComplete, info: nil, metadata: nil)
@@ -1211,9 +1200,9 @@ func trackEvent(event: MediaEvent, info: [String: Any]?, metadata: [String: Stri
 
 ```swift
 // AdStart
-  let adObject = Media.createObjectWith(name: "adbreak-name", id: "ad-id", position: 0, length: 30)
+  let adInfo = Media.createObjectWith(name: "adbreak-name", id: "ad-id", position: 0, length: 30)
 
-// Standard metadata keys provided by adobe.
+// Standard metadata keys provided by Adobe
   var adMetadata: [String: String] = [:]
   adMetadata[MediaConstants.AdMetadataKeys.ADVERTISER] = "Sample Advertiser"
   adMetadata[MediaConstants.AdMetadataKeys.CAMPAIGN_ID] = "Sample Campaign"
@@ -1221,7 +1210,7 @@ func trackEvent(event: MediaEvent, info: [String: Any]?, metadata: [String: Stri
 // Custom metadata keys
   adMetadata["affiliate"] = "Sample affiliate"
 
-  tracker.trackEvent(event: MediaEvent.AdStart, info: adObject, metadata: adMetadata)
+  tracker.trackEvent(event: MediaEvent.AdStart, info: adInfo, metadata: adMetadata)
 
 // AdComplete
   tracker.trackEvent(event: MediaEvent.AdComplete, info: nil, metadata: nil)
@@ -1234,10 +1223,10 @@ func trackEvent(event: MediaEvent, info: [String: Any]?, metadata: [String: Stri
 
 ```swift
 // ChapterStart
-  let chapterObject = Media.createChapterObjectWith(name: "chapter_name", position: 1, length: 60, startTime: 0)
-  let chapterDictionary = ["segmentType": "Sample segment type"]
+  let chapterInfo = Media.createChapterObjectWith(name: "chapter_name", position: 1, length: 60, startTime: 0)
+  let chapterMetadata = ["segmentType": "Sample segment type"]
 
-  tracker.trackEvent(event: MediaEvent.ChapterStart, info: chapterObject, metadata: chapterDictionary)
+  tracker.trackEvent(event: MediaEvent.ChapterStart, info: chapterInfo, metadata: chapterMetadata)
 
 // ChapterComplete
   tracker.trackEvent(event: MediaEvent.ChapterComplete, info: nil, metadata: nil)
@@ -1266,8 +1255,8 @@ func trackEvent(event: MediaEvent, info: [String: Any]?, metadata: [String: Stri
 
 ```swift
 // If the new bitrate value is available provide it to the tracker.
-  let qoeObject = Media.createQoEObjectWith(bitrate: 500000, startupTime: 2, fps: 24, droppedFrames: 10)
-  tracker.updateQoEObject(qoeObject)
+  let qoeInfo = Media.createQoEObjectWith(bitrate: 500000, startupTime: 2, fps: 24, droppedFrames: 10)
+  tracker.updateQoEObject(qoeInfo)
 
 // Bitrate change
   tracker.trackEvent(event: MediaEvent.BitrateChange, info: nil, metadata: nil)
@@ -1288,29 +1277,29 @@ func trackEvent(event: MediaEvent, info: [String: Any]?, metadata: [String: Stri
 ```objectivec
 // StateStart
   NSDictionary* fullScreenState = [AEPMobileEdgeMedia createStateObjectWith:AEPEdgeMediaPlayerState.FULLSCREEN];
-  [_tracker trackEvent:AEPEdgeMediaEventStateStart info:fullScreenState metadata:nil];
+  [tracker trackEvent:AEPEdgeMediaEventStateStart info:fullScreenState metadata:nil];
 
 // StateEnd
   NSDictionary* fullScreenState = [AEPMobileEdgeMedia createStateObjectWith:AEPEdgeMediaPlayerState.FULLSCREEN];
-  [_tracker trackEvent:AEPEdgeMediaEventStateEnd info:fullScreenState metadata:nil];
+  [tracker trackEvent:AEPEdgeMediaEventStateEnd info:fullScreenState metadata:nil];
 ```
 
 **Tracking ad breaks**
 
 ```objectivec
 // AdBreakStart
-  NSDictionary *adBreakObject = [AEPMobileEdgeMedia createAdBreakObjectWith:@"adbreak-name" position:1 startTime:0];
-  [_tracker trackEvent:AEPEdgeMediaEventAdBreakStart info:adBreakObject metadata:nil];
+  NSDictionary *adBreakInfo = [AEPMobileEdgeMedia createAdBreakObjectWith:@"adbreak-name" position:1 startTime:0];
+  [tracker trackEvent:AEPEdgeMediaEventAdBreakStart info:adBreakInfo metadata:nil];
 
 // AdBreakComplete
-  [_tracker trackEvent:AEPEdgeMediaEventAdBreakComplete info:nil metadata:nil];
+  [tracker trackEvent:AEPEdgeMediaEventAdBreakComplete info:nil metadata:nil];
 ```
 
 **Tracking ads**
 
 ```objectivec
 // AdStart
-  NSDictionary *adObject = [AEPMobileEdgeMedia createAdObjectWith:@"ad-name" id:@"ad-id" position:0 length:30];
+  NSDictionary *adInfo = [AEPMobileEdgeMedia createAdObjectWith:@"ad-name" id:@"ad-id" position:0 length:30];
   NSMutableDictionary* adMetadata = [[NSMutableDictionary alloc] init];
 
 // Standard metadata keys provided by adobe.
@@ -1320,57 +1309,57 @@ func trackEvent(event: MediaEvent, info: [String: Any]?, metadata: [String: Stri
 // Custom metadata keys
   [adMetadata setObject:@"Sample affiliate" forKey:@"affiliate"];
 
-  [_tracker trackEvent:AEPEdgeMediaEventAdStart info:adObject metadata:adMetadata];
+  [tracker trackEvent:AEPEdgeMediaEventAdStart info:adInfo metadata:adMetadata];
 
 // AdComplete
-  [_tracker trackEvent:AEPEdgeMediaEventAdComplete info:nil metadata:nil];
+  [tracker trackEvent:AEPEdgeMediaEventAdComplete info:nil metadata:nil];
 
 // AdSkip
-  [_tracker trackEvent:AEPEdgeMediaEventAdSkip info:nil metadata:nil];
+  [tracker trackEvent:AEPEdgeMediaEventAdSkip info:nil metadata:nil];
 ```
 
 **Tracking chapters**
 
 ```objectivec
 // ChapterStart
-  NSDictionary *chapterObject = [AEPMobileEdgeMedia createChapterObjectWith:@"chapter_name" position:1 length:60 startTime:0];
+  NSDictionary *chapterInfo = [AEPMobileEdgeMedia createChapterObjectWith:@"chapter_name" position:1 length:60 startTime:0];
 
   NSMutableDictionary *chapterMetadata = [[NSMutableDictionary alloc] init];
   [chapterMetadata setObject:@"Sample segment type" forKey:@"segmentType"];
 
-  [_tracker trackEvent:AEPEdgeMediaEventChapterStart info:chapterObject metadata:chapterMetadata];
+  [tracker trackEvent:AEPEdgeMediaEventChapterStart info:chapterInfo metadata:chapterMetadata];
 
 // ChapterComplete
-  [_tracker trackEvent:AEPEdgeMediaEventChapterComplete info:nil metadata:nil];
+  [tracker trackEvent:AEPEdgeMediaEventChapterComplete info:nil metadata:nil];
 
 // ChapterSkip
-  [_tracker trackEvent:AEPEdgeMediaEventChapterSkip info:nil metadata:nil];
+  [tracker trackEvent:AEPEdgeMediaEventChapterSkip info:nil metadata:nil];
 ```
 
 **Tracking playback events**
 
 ```objectivec
 // BufferStart
-  [_tracker trackEvent:AEPEdgeMediaEventBufferStart info:nil metadata:nil];
+  [tracker trackEvent:AEPEdgeMediaEventBufferStart info:nil metadata:nil];
 
 // BufferComplete
-  [_tracker trackEvent:AEPEdgeMediaEventBufferComplete info:nil metadata:nil];
+  [tracker trackEvent:AEPEdgeMediaEventBufferComplete info:nil metadata:nil];
 
 // SeekStart
-  [_tracker trackEvent:AEPEdgeMediaEventSeekStart info:nil metadata:nil];
+  [tracker trackEvent:AEPEdgeMediaEventSeekStart info:nil metadata:nil];
 
 // SeekComplete
-  [_tracker trackEvent:AEPEdgeMediaEventSeekComplete info:nil metadata:nil];
+  [tracker trackEvent:AEPEdgeMediaEventSeekComplete info:nil metadata:nil];
 ```
 
 **Tracking bitrate change**
 
 ```objectivec
 // If the new bitrate value is available provide it to the tracker.
-  NSDictionary *qoeObject = [AEPMobileEdgeMedia createQoEObjectWith:50000 startTime:2 fps:24 droppedFrames:10];
+  NSDictionary *qoeInfo = [AEPMobileEdgeMedia createQoEObjectWith:50000 startTime:2 fps:24 droppedFrames:10];
 
 // Bitrate change
-  [_tracker trackEvent:AEPEdgeMediaEventBitrateChange info:nil metadata:nil];
+  [tracker trackEvent:AEPEdgeMediaEventBitrateChange info:nil metadata:nil];
 ```
 
 <Variant platform="android" api="update-current-playhead" repeat="12"/>
@@ -1393,7 +1382,7 @@ tracker.updateCurrentPlayhead(1);
 
 ```java
 //Calculation for number of seconds since midnight UTC of the day
-int timeFromMidnightInSecond = (int)((System.currentTimeMillis()/1000) % 86400);
+int timeFromMidnightInSecond = (int)((System.currentTimeMillis() / 1000) % 86400);
 
 tracker.updateCurrentPlayhead(timeFromMidnightInSecond);
 ```
@@ -1403,14 +1392,14 @@ tracker.updateCurrentPlayhead(timeFromMidnightInSecond);
 **Example**
 
 ```java
-tracker.updateCurrentPlayhead(1);
+tracker.updateCurrentPlayhead(1)
 ```
 
 **Live streaming example**
 
 ```java
-val timeFromMidnightInSecond = (System.currentTimeMillis() / 1000 % 86400).toInt()
-tracker.updateCurrentPlayhead(timeFromMidnightInSecond);
+val timeFromMidnightInSecond = ((System.currentTimeMillis() / 1000) % 86400).toInt()
+tracker.updateCurrentPlayhead(timeFromMidnightInSecond)
 }
 ```
 
@@ -1427,7 +1416,7 @@ func updateCurrentPlayhead(time: Int)
 **Example**
 
 ```swift
-tracker.updateCurrentPlayhead(1);
+tracker.updateCurrentPlayhead(1)
 ```
 
 **Live streaming example**
@@ -1451,7 +1440,7 @@ tracker.updateCurrentPlayhead(time: timeFromMidnightInSecond)
 **Example**
 
 ```objectivec
-[_tracker updateCurrentPlayhead:1];
+[tracker updateCurrentPlayhead:1];
 ```
 
 <Variant platform="android" api="update-qoe-object" repeat="8"/>
@@ -1461,14 +1450,14 @@ tracker.updateCurrentPlayhead(time: timeFromMidnightInSecond)
 **Syntax**
 
 ```java
-public void updateQoEObject(Map<String, Object> qoeObject);
+public void updateQoEObject(Map<String, Object> qoeInfo);
 ```
 
 **Example**
 
 ```java
-HashMap<String, Object> qoeObject = Media.createQoEObject(1000000, 2, 25, 10);
-tracker.updateQoEObject(qoeObject);
+HashMap<String, Object> qoeInfo = Media.createQoEObject(1000000, 2, 25, 10);
+tracker.updateQoEObject(qoeInfo);
 ```
 
 #### Kotlin
@@ -1476,8 +1465,8 @@ tracker.updateQoEObject(qoeObject);
 **Example**
 
 ```java
-val qoeObject = Media.createQoEObject(1000000, 2, 25, 10)
-tracker.updateQoEObject(qoeObject)
+val qoeInfo = Media.createQoEObject(1000000, 2, 25, 10)
+tracker.updateQoEObject(qoeInfo)
 ```
 
 <Variant platform="ios" api="update-qoe-object" repeat="10"/>
@@ -1493,8 +1482,8 @@ func updateQoEObject(qoe: [String: Any])
 **Example**
 
 ```swift
-let qoeObject = Media.createQoEObjectWith(bitrate: 500000, startupTime: 2, fps: 24, droppedFrames: 10)
-tracker.updateQoEObject(qoe: qoeObject)
+let qoeInfo = Media.createQoEObjectWith(bitrate: 500000, startupTime: 2, fps: 24, droppedFrames: 10)
+tracker.updateQoEObject(qoe: qoeInfo)
 ```
 
 #### Objective-C
@@ -1508,8 +1497,8 @@ tracker.updateQoEObject(qoe: qoeObject)
 **Example**
 
 ```objectivec
-NSDictionary *qoeObject = [AEPMobileEdgeMedia createQoEObjectWith:50000 startTime:2 fps:24 droppedFrames:10]
-[_tracker updateQoEObject:qoeObject];
+NSDictionary *qoeInfo = [AEPMobileEdgeMedia createQoEObjectWith:50000 startTime:2 fps:24 droppedFrames:10]
+[tracker updateQoEObject:qoeInfo];
 ```
 
 <Variant platform="android" api="media-type" repeat="1"/>
@@ -1551,9 +1540,9 @@ public enum MediaType: Int, RawRepresentable {
 ```swift
 var mediaObject = Media.createMediaObjectWith(name: "video-name", 
                                                 id: "videoId", 
-                                                length: 60, 
-                                                streamType: MediaConstants.StreamType.VOD, 
-                                                mediaType: MediaType.Video)
+                                            length: 60, 
+                                        streamType: MediaConstants.StreamType.VOD, 
+                                        mediaType: MediaType.Video)
 ```
 
 #### Objective-C
@@ -1561,7 +1550,9 @@ var mediaObject = Media.createMediaObjectWith(name: "video-name",
 ```objc
 NSDictionary *mediaObject = [AEPMobileEdgeMedia createMediaObjectWith:@"video-name"   
                                                                id:@"video-id" 
-                                                               length:60 streamType:AEPEdgeMediaStreamType.VOD mediaType:AEPEdgeMediaTypeVideo];
+                                                               length:60 
+                                                           streamType:AEPEdgeMediaStreamType.VOD 
+                                                            mediaType:AEPEdgeMediaTypeVideo];
 ```
 
 <Variant platform="android" api="stream-type" repeat="1"/>
@@ -1708,27 +1699,27 @@ public class MediaConstants: NSObject {
 #### Swift
 
 ```swift
-var mediaObject = Media.createMediaObjectWith(name: "video-name", id: "videoId", length: 60, streamType: MediaConstants.StreamType.VOD, mediaType: MediaType.Video)
+var mediaInfo = Media.createMediaObjectWith(name: "video-name", id: "videoId", length: 60, streamType: MediaConstants.StreamType.VOD, mediaType: MediaType.Video)
 
 var videoMetadata: [String: String] = [:]
 // Standard Video Metadata
 videoMetadata[MediaConstants.VideoMetadataKeys.SHOW] = "Sample show"
 videoMetadata[MediaConstants.VideoMetadataKeys.SEASON] = "Sample season"
 
-tracker.trackSessionStart(info: mediaObject, metadata: videoMetadata)
+tracker.trackSessionStart(info: mediaInfo, metadata: videoMetadata)
 ```
 
 #### Objective-C
 
 ```objc
-NSDictionary *mediaObject = [AEPMobileEdgeMedia createMediaObjectWith:@"video-name" id:@"video-id" length:60 streamType:AEPEdgeMediaStreamType.VOD mediaType:AEPEdgeMediaTypeVideo];
+NSDictionary *mediaInfo = [AEPMobileEdgeMedia createMediaObjectWith:@"video-name" id:@"video-id" length:60 streamType:AEPEdgeMediaStreamType.VOD mediaType:AEPEdgeMediaTypeVideo];
 
 NSMutableDictionary *videoMetadata = [[NSMutableDictionary alloc] init];
 // Standard Video Metadata
 [videoMetadata setObject:@"Sample show" forKey:AEPEdgeMediaVideoMetadataKeys.SHOW];
 [videoMetadata setObject:@"Sample Season" forKey:AEPEdgeMediaVideoMetadataKeys.SEASON];
 
-[_tracker trackSessionStart:mediaObject metadata:videoMetadata];
+[tracker trackSessionStart:mediaInfo metadata:videoMetadata];
 ```
 
 <Variant platform="android" api="standard-audio-constants" repeat="1"/>
@@ -1789,7 +1780,7 @@ NSMutableDictionary *audioMetadata = [[NSMutableDictionary alloc] init];
 [audioMetadata setObject:@"Sample artist" forKey:AEPEdgeMediaAudioMetadataKeys.ARTIST];
 [audioMetadata setObject:@"Sample album" forKey:AEPEdgeMediaAudioMetadataKeys.ALBUM];
 
-[_tracker trackSessionStart:audioObject metadata:audioMetadata];
+[tracker trackSessionStart:audioObject metadata:audioMetadata];
 ```
 
 <Variant platform="android" api="standard-ad-constants" repeat="1"/>
@@ -1830,26 +1821,26 @@ public class MediaConstants: NSObject {
 #### Swift
 
 ```swift
-let adObject = Media.createObjectWith(name: "adbreak-name", id: "ad-id", position: 0, length: 30)
+let adInfo = Media.createObjectWith(name: "adbreak-name", id: "ad-id", position: 0, length: 30)
 var adMetadata: [String: String] = [:]
 // Standard Ad Metadata
 adMetadata[MediaConstants.AdMetadataKeys.ADVERTISER] = "Sample Advertiser"
 adMetadata[MediaConstants.AdMetadataKeys.CAMPAIGN_ID] = "Sample Campaign"
 
-tracker.trackEvent(event: MediaEvent.AdStart, info: adObject, metadata: adMetadata)
+tracker.trackEvent(event: MediaEvent.AdStart, info: adInfo, metadata: adMetadata)
 ```
 
 #### Objective-C
 
 ```objc
-NSDictionary *adObject = [AEPMobileEdgeMedia createAdObjectWith:@"ad-name" id:@"ad-id" position:0 length:30];
+NSDictionary *adInfo = [AEPMobileEdgeMedia createAdObjectWith:@"ad-name" id:@"ad-id" position:0 length:30];
 
 NSMutableDictionary *adMetadata = [[NSMutableDictionary alloc] init];
 // Standard Ad Metadata
 [adMetadata setObject:@"Sample Advertiser" forKey:AEPEdgeAdMetadataKeys.ADVERTISER];
 [adMetadata setObject:@"Sample Campaign" forKey:AEPEdgeAdMetadataKeys.CAMPAIGN_ID];
 
-[_tracker trackEvent:AEPEdgeMediaEventAdStart info:adObject metadata:adMetadata];
+[tracker trackEvent:AEPEdgeMediaEventAdStart info:adInfo metadata:adMetadata];
 ```
 
 <Variant platform="android" api="player-state-constants" repeat="1"/>
@@ -1860,7 +1851,7 @@ public class MediaConstants {
   public static final class PlayerState {
     public static final String FULLSCREEN = "fullscreen";
     public static final String PICTURE_IN_PICTURE = "pictureInPicture";
-    public static final String CLOSED_CAPTION = "closedCaptioning";
+    public static final String CLOSED_CAPTION = "closeCaption";
     public static final String IN_FOCUS = "inFocus";
     public static final String MUTE = "mute";
   }
@@ -1876,7 +1867,7 @@ public class MediaConstants: NSObject {
   public class PlayerState: NSObject {
         public static let FULLSCREEN = "fullscreen"
         public static let PICTURE_IN_PICTURE = "pictureInPicture"
-        public static let CLOSED_CAPTION = "closedCaptioning"
+        public static let CLOSED_CAPTION = "closeCaption"
         public static let IN_FOCUS = "inFocus"
         public static let MUTE = "mute"
     }
@@ -1896,7 +1887,7 @@ tracker.trackEvent(event: MediaEvent.StateStart, info: inFocusState, metadata: n
 
 ```objc
 NSDictionary* inFocusState = [AEPMobileEdgeMedia createStateObjectWith:AEPEdgeMediaPlayerState.IN_FOCUS];
-[_tracker trackEvent:AEPEdgeMediaEventStateStart info:muteState metadata:nil];
+[tracker trackEvent:AEPEdgeMediaEventStateStart info:muteState metadata:nil];
 ```
 
 <Variant platform="android" api="media-events" repeat="1"/>
@@ -2037,7 +2028,7 @@ tracker.trackEvent(event: MediaEvent.BitrateChange, info: nil, metadata: nil)
 #### Objective-C
 
 ```objc
-[_tracker trackEvent:AEPEdgeMediaEventBitrateChange info:nil metadata:nil];
+[tracker trackEvent:AEPEdgeMediaEventBitrateChange info:nil metadata:nil];
 ```
 
 <Variant platform="android" api="media-resume" repeat="5"/>
@@ -2050,7 +2041,6 @@ tracker.trackEvent(event: MediaEvent.BitrateChange, info: nil, metadata: nil)
 public class MediaConstants {
 
   public static final class MediaObjectKey {
-
       /**
       * Constant defining explicit media resumed property. Set this to true on MediaObject if resuming a previously closed session.
       */
@@ -2068,7 +2058,7 @@ HashMap<String, Object> mediaObject = Media.createMediaObject("media-name", "med
 // Attach media resumed information.
 mediaObject.put(MediaConstants.MediaObjectKey.RESUMED, true);
 
-_tracker.trackSessionStart(mediaObject, null);
+tracker.trackSessionStart(mediaObject, null);
 ```
 
 <Variant platform="ios" api="media-resume" repeat="10"/>
@@ -2113,5 +2103,5 @@ NSDictionary *mediaObject = [AEPMobileEdgeMedia createMediaObjectWith:@"video-na
 NSMutableDictionary *obj  = [mediaObject mutableCopy];
 [obj setObject:@YES forKey:AEPEdgeMediaObjectKey.RESUMED];
 
-[_tracker trackSessionStart:obj metadata:nil];
+[tracker trackSessionStart:obj metadata:nil];
 ```

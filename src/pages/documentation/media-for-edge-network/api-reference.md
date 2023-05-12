@@ -6,9 +6,9 @@ import Tabs from './tabs/api-reference.md'
 
 ### extensionVersion
 
-The `extensionVersion()` API returns the version of the Media extension that is registered with the Mobile Core extension.
+The `extensionVersion()` API returns the version of the Media for Edge Network extension that is registered with the Mobile Core extension.
 
-To get the version of the Media extension, use the following code sample:
+To get the version of the Media for Edge Network extension, use the following code sample:
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -22,7 +22,7 @@ iOS
 
 ### createTracker
 
-Creates a media tracker instance that tracks the playback session. The tracker created should be used to track the streaming content and it sends periodic pings to the Experience Edge Network.
+Creates a MediaTracker instance that tracks the playback session. The tracker created should be used to track the streaming content and it sends periodic pings to the Experience Edge Network.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -36,7 +36,7 @@ iOS
 
 ### createTrackerWithConfig
 
-Creates a media tracker instance based on the provided configuration to track the playback session.
+Creates a MediaTracker instance based on the provided configuration to track the playback session.
 
 | Key | Description | Value | Required |
 | :--- | :--- | :--- | :---: |
@@ -103,7 +103,7 @@ Creates an instance of the Ad object which is a map/dictionary that contains inf
 | Parameter | Description | Required |
 | :--- | :--- | :---: |
 | `name` | The friendly name of the Ad. | Yes |
-| `adId` | The unique identifier for the Ad. | Yes |
+| `id` | The unique identifier for the Ad. | Yes |
 | `position` | The numeric position of the Ad within the ad break, starting with 1. | Yes |
 | `length` | The length of Ad in seconds. | Yes |
 
@@ -176,15 +176,21 @@ iOS
 
 <Tabs query="platform=ios&api=create-state-object"/>
 
-## Media tracker API reference
+## resetIdentities
+
+Aborts all the active tracking sessions and clears all the media trackers.
+
+See [MobileCore.resetIdentities](../mobile-core/api-reference.md#resetidentities) for more details.
+
+## MediaTracker API reference
 
 <InlineAlert variant="info" slots="text"/>
 
-The following APIs are **tracker instance** dependent. Please create tracker instance using [`createTracker`](#createTracker) or [`createTrackerWithConfig`](#createTrackerWithConfig) and call the following APIs.
+The following APIs are **tracker instance** dependent. Create a tracker instance using [`createTracker`](#createTracker) or [`createTrackerWithConfig`](#createTrackerWithConfig) and call the following APIs.
 
 ### trackSessionStart
 
-Tracks the intention to start playback. This starts a tracking session on the media tracker instance. To resume a previously closed session, see the [media resume guide](#media-resume)
+Tracks the intention to start playback. This starts a tracking session on the MediaTracker instance. To resume a previously closed session, see the [media resume guide](#media-resume)
 
 | Parameter | Description | Required |
 | :--- | :--- | :---: |
@@ -293,8 +299,6 @@ Tracks media events.
 
 *`info` is a required parameter for `AdBreakStart`, `AdStart`, `ChapterStart`, `StateStart`, `StateEnd` events. Not set for any other event types.
 
-The following APIs are **tracker instance** dependent. Please create tracker instance using [`createTracker`](#createTracker) or [`createTrackerWithConfig`](#createTrackerWithConfig) and call the following APIs.
-
 <InlineAlert variant="info" slots="text"/>
 
 Ad ping interval can now be customized to duration between 1 to 10 seconds using [`createTrackerWithConfig`](#createTrackerWithConfig) API.
@@ -311,7 +315,7 @@ iOS
 
 ### updateCurrentPlayhead
 
-Provides the current media playhead value to the media tracker instance. For accurate tracking, call this method every time the playhead value changes. If the player does not notify playhead value changes, call this method once every second with the most recent playhead value.
+Provides the current media playhead value to the MediaTracker instance. For accurate tracking, call this method every time the playhead value changes. If the player does not notify playhead value changes, call this method once every second with the most recent playhead value.
 
 | Parameter | Description | Required |
 | :--- | :--- | :---: |
@@ -329,7 +333,7 @@ iOS
 
 ### updateQoEObject
 
-Provides the media tracker with the current Quality of Experience (QoE) information. For accurate tracking, call this method every time the media player provides the updated QoE information.
+Provides the MediaTracker with the current Quality of Experience (QoE) information. For accurate tracking, call this method every time the media player provides the updated QoE information.
 
 | Parameter | Description |  Required |
 | :--- | :--- |
