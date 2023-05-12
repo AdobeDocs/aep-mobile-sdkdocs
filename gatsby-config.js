@@ -14,12 +14,12 @@ module.exports = {
         versions: [
             {
                 title: 'Latest version',
-                path: '/client-sdks/documentation/',
+                path: '/client-sdkstest/documentation/',
                 selected: true
               },
               {
                 title: 'Previous versions',
-                path: '/client-sdks/previous-versions/'
+                path: '/client-sdkstest/previous-versions/'
               }
           ],
         pages: [{
@@ -724,5 +724,5 @@ module.exports = {
         ]
     },
     plugins: [`@adobe/gatsby-theme-aio`],
-    pathPrefix: process.env.PATH_PREFIX || '/client-sdks/'
+    pathPrefix: process.env.PATH_PREFIX || '/client-sdkstest/'
 };
