@@ -213,6 +213,36 @@ public class MainApp extends Application {
 }
 ```
 
+For Android applications configured to be run during Direct Boot mode, verify if the user has unlocked the devices Before initializing the SDK.
+
+#### Java
+
+```java
+...
+import androidx.core.os.UserManagerCompat;
+...
+
+public class MainApp extends Application {
+  ...
+  @Override
+  public void on Create(){
+    super.onCreate();
+    if(UserManagerCompat.isUserUnlocked(this.getApplicationContext())){
+      MobileCore.setApplication(this);
+      MobileCore.setLogLevel(LoggingMode.DEBUG);
+      ...
+      try {
+        ...
+      }
+    }
+});
+    } catch (InvalidInitException e) {
+      ...
+    }
+  }
+}
+```
+
 <Variant platform="ios" task="add-initialization" repeat="5"/>
 
 For iOS Swift libraries, registration is changed to a single API call (as shown in the snippets below). Calling the`MobileCore.start` API is no longer required.
