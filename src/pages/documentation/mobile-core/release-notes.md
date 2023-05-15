@@ -1,5 +1,14 @@
 # Release Notes
 
+## May 15, 2023
+
+### iOS Core 3.9.0
+
+* Added support for chaining related events.
+* Added a new `evaluate` API in the `LaunchRulesEngine` class that returns matching consequences without processing them.
+* Fixed an issue that caused shared state events to be dispatched out of order.
+* Fixed an issue that captured event history before processing rules.
+
 ## April 24, 2023
 
 ### Android Mobile Core 2.1.3
