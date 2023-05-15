@@ -169,7 +169,7 @@ Save the `Podfile` and run install:
 pod install
 ```
 
-<Variant platform="android" task="add-initialization" repeat="3"/>
+<Variant platform="android" task="add-initialization" repeat="4"/>
 
 After you register the extensions, call the `start` API in Mobile Core to initialize the SDK as shown below. This step is required to boot up the SDK for event processing. The following code snippet is provided as a sample reference.
 
@@ -213,9 +213,7 @@ public class MainApp extends Application {
 }
 ```
 
-For Android applications configured to be run during Direct Boot mode, verify if the user has unlocked the devices Before initializing the SDK.
-
-#### Java
+#### Java (Direct Boot enabled)
 
 ```java
 ...
@@ -227,7 +225,7 @@ public class MainApp extends Application {
   @Override
   public void on Create(){
     super.onCreate();
-    if(UserManagerCompat.isUserUnlocked(this.getApplicationContext())){
+    if(UserManagerCompat.isUserUnlocked(this.getApplicationContext())) {
       MobileCore.setApplication(this);
       MobileCore.setLogLevel(LoggingMode.DEBUG);
       ...
