@@ -68,6 +68,8 @@ Extension registration is **mandatory**. Attempting to make extension-specific A
 
 The following code snippets demonstrate how you can import and register the Mobile Core and Profile extensions. You can also see, for reference, how Identity, Lifecycle, Signal, Profile, and other extensions are imported and registered.
 
+Currently, the Adobe Experience Platform SDKs do not support Direct Boot mode on Android devices. Therefore, for Android applications running under Direct Boot mode, it's important to check if users have unlocked the Android devices by calling [UserManager.isUserUnlocked()](https://developer.android.com/reference/android/os/UserManager#isUserUnlocked()) before initializing the SDK.
+
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
