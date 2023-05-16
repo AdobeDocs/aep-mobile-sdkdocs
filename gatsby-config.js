@@ -310,6 +310,20 @@ module.exports = {
                         ]
                     },
                     {
+                        title: "Media for Edge Network",
+                        path: "/documentation/media-for-edge-network",
+                        pages: [
+                            {
+                                title: "Overview",
+                                path: "/documentation/media-for-edge-network"
+                            },
+                            {
+                                title: "API reference",
+                                path: "documentation/media-for-edge-network/api-reference"
+                            }
+                        ]
+                    },
+                    {
                         title: "Adobe Experience Platform Assurance",
                         path: "/documentation/platform-assurance-sdk",
                         pages: [

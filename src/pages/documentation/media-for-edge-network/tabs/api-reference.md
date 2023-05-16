@@ -52,7 +52,7 @@ let mediaExtensionVersion = Media.extensionVersion()
 NSString *mediaExtensionVersion = [AEPMobileEdgeMedia extensionVersion];
 ```
 
-<Variant platform="android" api="create-tracker" repeat="10"/>
+<Variant platform="android" api="create-tracker" repeat="9"/>
 
 Creates a MediaTracker instance that tracks the playback session.
 
@@ -78,9 +78,7 @@ MediaTracker mediaTracker = Media.createTracker();  // Use the instance for trac
 val tracker = Media.createTracker()
 ```
 
-<Variant platform="ios" api="create-tracker" repeat="12"/>
-
-Creates a MediaTracker instance that tracks the playback session.
+<Variant platform="ios" api="create-tracker" repeat="10"/>
 
 #### Swift
 
@@ -145,9 +143,7 @@ val config = mapOf(
 val tracker = Media.createTracker(config) // Use the instance for tracking media.
 ```
 
-<Variant platform="ios" api="create-tracker-with-config" repeat="11"/>
-
-Creates a MediaTracker instance based on the configuration to track the playback session.
+<Variant platform="ios" api="create-tracker-with-config" repeat="10"/>
 
 #### Swift
 
@@ -226,7 +222,7 @@ var mediaInfo = Media.createMediaObject("video-name",
                                         Media.MediaType.Video)
 ```
 
-<Variant platform="ios" api="create-media-object" repeat="11"/>
+<Variant platform="ios" api="create-media-object" repeat="10"/>
 
 #### Swift
 
@@ -292,7 +288,7 @@ HashMap<String, Object> adBreakInfo = Media.createAdBreakObject("adbreak-name", 
 val adBreakInfo = Media.createAdBreakObject("adbreak-name", 1, 0)
 ```
 
-<Variant platform="ios" api="create-ad-break-object" repeat="11"/>
+<Variant platform="ios" api="create-ad-break-object" repeat="10"/>
 
 #### Swift
 
@@ -352,7 +348,7 @@ HashMap<String, Object> adInfo = Media.createAdObject("ad-name", "ad-id", 1, 15)
 val adInfo = Media.createAdObject("ad-name", "ad-id", 1, 15)
 ```
 
-<Variant platform="ios" api="create-ad-object" repeat="11"/>
+<Variant platform="ios" api="create-ad-object" repeat="10"/>
 
 #### Swift
 
@@ -421,7 +417,7 @@ HashMap<String, Object> chapterInfo = Media.createChapterObject("chapter-name", 
 val chapterInfo = Media.createChapterObject("chapter-name", 1, 60, 0)
 ```
 
-<Variant platform="ios" api="create-chapter-object" repeat="11"/>
+<Variant platform="ios" api="create-chapter-object" repeat="10"/>
 
 #### Swift
 
@@ -490,7 +486,7 @@ HashMap<String, Object> qoeInfo = Media.createQoEObject(10000000, 2, 23, 10);
 val qoeInfo = Media.createQoEObject(10000000, 2, 23, 10)
 ```
 
-<Variant platform="ios" api="create-qoe-object" repeat="11"/>
+<Variant platform="ios" api="create-qoe-object" repeat="10"/>
 
 #### Swift
 
@@ -556,7 +552,7 @@ HashMap<String, Object> fullScreenState = Media.createStateObject(MediaConstants
 val fullScreenState = Media.createStateObject(MediaConstants.PlayerState.FULLSCREEN)
 ```
 
-<Variant platform="ios" api="create-state-object" repeat="11"/>
+<Variant platform="ios" api="create-state-object" repeat="10"/>
 
 #### Swift
 

@@ -8,8 +8,6 @@ import Tabs from './tabs/api-reference.md'
 
 The `extensionVersion()` API returns the version of the Media for Edge Network extension that is registered with the Mobile Core extension.
 
-To get the version of the Media for Edge Network extension, use the following code sample:
-
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
@@ -19,6 +17,12 @@ Android
 iOS
 
 <Tabs query="platform=ios&api=extension-version"/>
+
+### resetIdentities
+
+Aborts all the active tracking sessions and clears all the media trackers.
+
+See [MobileCore.resetIdentities](../mobile-core/api-reference.md#resetidentities) for more details.
 
 ### createTracker
 
@@ -175,12 +179,6 @@ Android
 iOS
 
 <Tabs query="platform=ios&api=create-state-object"/>
-
-## resetIdentities
-
-Aborts all the active tracking sessions and clears all the media trackers.
-
-See [MobileCore.resetIdentities](../mobile-core/api-reference.md#resetidentities) for more details.
 
 ## MediaTracker API reference
 
