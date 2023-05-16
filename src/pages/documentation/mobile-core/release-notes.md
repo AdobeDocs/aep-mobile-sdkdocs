@@ -29,7 +29,7 @@
 
 ### Android BOM 1.0.0-beta1
 
-The initial public beta release of the [Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom/1.0.0-beta1) (BOM) artifact for Android is now available. 
+The initial public beta release of the [Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom/1.0.0-beta1) (BOM) artifact for Android is now available.
 
 ## March 31, 2023
 
@@ -59,7 +59,7 @@ The initial public beta release of the [Bill of Materials](https://central.sonat
 
 ### Android Mobile Core 2.1.0
 
-* Added a new API to the LaunchRulesEngine class that enables adding new rules without replacing the existing ones. 
+* Added a new API to the LaunchRulesEngine class that enables adding new rules without replacing the existing ones.
 
 ## March 13, 2023
 
@@ -67,7 +67,7 @@ The initial public beta release of the [Bill of Materials](https://central.sonat
 
 * Updated the minimum supported versions to iOS 11.0, tvOS 11.0.
 * Added support for overriding internal logging service with customer-provided implementation.
-* Added a new API to the LaunchRulesEngine class that enables adding new rules without replacing the existing ones. 
+* Added a new API to the LaunchRulesEngine class that enables adding new rules without replacing the existing ones.
 
 ## February 9, 2023
 
