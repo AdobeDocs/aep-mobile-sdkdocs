@@ -23,7 +23,7 @@ Edge Bridge only supports the Analytics drop-in migration case. If you are looki
 | ----------- | ----------- |-----------|-----------|-----------|-----------|
 | **Edge Network extension** | Edge.sendEvent | 1. Edge Network extension <br/> 2. Identity for Edge Network extension | Client-side| iOS, Android, tvOS, Flutter, React Native | Yes |
 | **Edge Bridge extension** | MobileCore.trackAction  MobileCore.trackState | 1. Edge Bridge extension <br/> 2. Edge Network extension <br/> 3. Identity for Edge Network extension| Server-side through Data Prep mapping| iOS, Android, tvOS, Flutter, React Native | Yes |
-| **Analytics extension** | MobileCore.trackAction  MobileCore.trackState | 1. Analytics extension <br/> 2. Identity for Experience Cloud Id Service extension | N/A| iOS, Android, tvOS| N/A |
+| **Analytics extension** | MobileCore.trackAction  MobileCore.trackState | 1. Analytics extension <br/> 2. Identity for Experience Cloud ID Service extension | N/A| iOS, Android, tvOS| N/A |
 
 
 <InlineAlert variant="info" slots="text"/>
@@ -81,6 +81,6 @@ For more details, please refer to the [Consent for Edge Network extension docume
 
 When using Identity for Edge Network extension, the Mobile SDK automatically migrates an existing ECID (previously known as MID) to the new XDM IdentityMap format out of the box. If you are using custom identities with the `syncIdentifier` / `syncIdentifiers` APIs, you should consider migrating your IDs to the XDM format.
 
-The previous Identity for Experience Cloud Id Service extension can be safely removed from the SDK registration process if there are no other extensions which rely on it, such as Target, Campaign and others.
+The previous Identity for Experience Cloud ID Service extension can be safely removed from the SDK registration process if there are no other extensions which rely on it, such as Target, Campaign and others.
 
 If you need further assistance, please contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support).
