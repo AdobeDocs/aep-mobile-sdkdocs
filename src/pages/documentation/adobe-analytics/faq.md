@@ -59,7 +59,6 @@ In the mobile property (tag) in the Data Collection UI, select the property from
 
 If you are unable to resolve your concerns through resources provided here, please contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support) for immediate assistance.
 
-
 ## How do I send data to Adobe Analytics in React Native and Flutter?
 
 In the latest SDK version (AEP-prefixed) for React Native and Flutter, you can send data to Analytics via the Edge Network using the Edge Network extension and `sendEvent` API. If you want a drop-in migration solution for an existing `trackAction` / `trackState` implementation, you can do this with the help of the Edge Bridge extension. You can learn more about these options in the [migration guide](../adobe-analytics/migrate-to-edge-network.md).

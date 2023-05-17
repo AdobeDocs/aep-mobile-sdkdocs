@@ -25,7 +25,6 @@ Edge Bridge only supports the Analytics drop-in migration case. If you are looki
 | **Edge Bridge extension** | MobileCore.trackAction  MobileCore.trackState | 1. Edge Bridge extension <br/> 2. Edge Network extension <br/> 3. Identity for Edge Network extension| Server-side through Data Prep mapping| iOS, Android, tvOS, Flutter, React Native | Yes |
 | **Analytics extension** | MobileCore.trackAction  MobileCore.trackState | 1. Analytics extension <br/> 2. Identity for Experience Cloud ID Service extension | N/A| iOS, Android, tvOS| N/A |
 
-
 <InlineAlert variant="info" slots="text"/>
 
 Other foundational extensions include the Consent for Edge Network extension which [enables consent preferences collection](#consent-for-edge-network-extension) from your mobile app, and the [Assurance extension](../platform-assurance-sdk/index.md) for validating your app implementation.
@@ -34,7 +33,6 @@ Other foundational extensions include the Consent for Edge Network extension whi
 
 ![compare workflows](./assets/index/compareWorkflows.png)
   
-
 ## Get started with the migration
 
 | Steps  |  Edge Network extension | Edge Bridge extension |
@@ -50,22 +48,21 @@ Other foundational extensions include the Consent for Edge Network extension whi
 | 8. **Keep existing MobileCore.trackAction / MobileCore.trackState API calls** to send data in context data format to Experience Platform.|  | ✅ |
 | 9. **Map your context data to XDM** in Data Prep for Data Collection.|  | ✅ |
 
-
 ### Implement the Edge Network extension
 
 To learn about the end to end Edge Network extension implementation process, follow the tutorials below:
-- [iOS tutorial](https://github.com/adobe/aepsdk-edge-ios/tree/main/Documentation/Tutorials)
-- [Android tutorial](https://github.com/adobe/aepsdk-edge-android/tree/main/Documentation/Tutorials)
+* [iOS tutorial](https://github.com/adobe/aepsdk-edge-ios/tree/main/Documentation/Tutorials)
+* [Android tutorial](https://github.com/adobe/aepsdk-edge-android/tree/main/Documentation/Tutorials)
 
 ### Implement the Edge Bridge extension
 
 To learn about the end to end Edge Bridge extension implementation process, follow the tutorials below:
-- [iOS tutorial](https://github.com/adobe/aepsdk-edgebridge-ios/tree/main/Documentation/tutorials)    
-- [Android tutorial](https://github.com/adobe/aepsdk-edgebridge-android/tree/main/Documentation/tutorials) 
+* [iOS tutorial](https://github.com/adobe/aepsdk-edgebridge-ios/tree/main/Documentation/tutorials)    
+* [Android tutorial](https://github.com/adobe/aepsdk-edgebridge-android/tree/main/Documentation/tutorials) 
   
 ## Other migration considerations
 
-### Not yet on latest Mobile SDK? 
+### Not yet on latest Mobile SDK?
 
 If you are not using the latest version of the Mobile SDK (IE: v4 Mobile SDK or the ACP-prefixed Mobile SDK), you should first migrate to the [latest version](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions), and then continue with this guide.
 
