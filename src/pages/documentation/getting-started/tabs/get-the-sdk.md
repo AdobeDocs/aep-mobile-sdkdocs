@@ -136,12 +136,11 @@ implementation 'com.adobe.marketing.mobile:lifecycle:2.+'
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information.
 
 </InlineNestedAlert>
 
 <Variant platform="ios" task="add-dependencies" repeat="8"/>
-
 
 Create a `Podfile` if you do not already have one:
 
@@ -169,7 +168,7 @@ Save the `Podfile` and run install:
 pod install
 ```
 
-<Variant platform="android" task="add-initialization" repeat="3"/>
+<Variant platform="android" task="add-initialization" repeat="4"/>
 
 After you register the extensions, call the `start` API in Mobile Core to initialize the SDK as shown below. This step is required to boot up the SDK for event processing. The following code snippet is provided as a sample reference.
 
@@ -209,6 +208,33 @@ public class MainApp extends Application {
     } catch (InvalidInitException e) {
       ...
     }
+  }
+}
+```
+
+#### Java (Direct Boot enabled)
+
+```java
+...
+import androidx.core.os.UserManagerCompat;
+...
+
+public class MainApp extends Application {
+  ...
+  @Override
+  public void on Create(){
+    super.onCreate();
+    if(UserManagerCompat.isUserUnlocked(this.getApplicationContext())) {
+      MobileCore.setApplication(this);
+      MobileCore.setLogLevel(LoggingMode.DEBUG);
+      ...
+      try {
+        ...
+      } catch (InvalidInitException e) {
+        ...
+      }
+    }
+    
   }
 }
 ```
@@ -452,7 +478,7 @@ public void onCreate() {
 
 <Variant platform="unity" task="add-initialization" repeat="3"/>
 
-#### C#
+#### CS
 
 For Unity apps, initialize the SDK using the following code in the start function of the `MainScript`.
 
@@ -487,7 +513,7 @@ public class MainScript : MonoBehaviour
 
 <Variant platform="xamarin" task="add-initialization" repeat="6"/>
 
-#### C#
+#### CS
 
 For Xamarin Forms applications, the SDK initialization differs, depending on the platform being targeted.
 
