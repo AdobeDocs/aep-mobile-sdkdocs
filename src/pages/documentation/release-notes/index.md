@@ -67,24 +67,26 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 ### Android BOM 1.0.0-beta1
 
-The initial public beta release of the [Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom/1.0.0-beta1) (BOM) artifact for Android is now available. 
+The initial public beta release of the [Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom/1.0.0-beta1) (BOM) artifact for Android is now available.
 
 ## April 6, 2023
 
 ### Flutter Edge Bridge plugin 1.0.0
 
-The Adobe Experience Platform Edge Bridge Flutter plugin is now available. 
+The Adobe Experience Platform Edge Bridge Flutter plugin is now available.
 
 With this release, the extension enables a drop-in solution for converting generated events from the Mobile Core track APIs (trackAction and trackState) into Edge Network events.
+
 * [flutter_aepedgebridge@1.0.0](https://pub.dev/packages/flutter_aepedgebridge)
 
 ## April 5, 2023
 
 ### React Native Edge Bridge library 1.0.0
 
-The Adobe Experience Platform Edge Bridge React Native library is now available. 
+The Adobe Experience Platform Edge Bridge React Native library is now available.
 
 With this release, the extension enables a drop-in solution for converting generated events from the Mobile Core track APIs (trackAction and trackState) into Edge Network events.
+
 * [@adobe/react-native-aepedgebridge:1.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedgebridge/v/1.0.0)
 
 ## April 6, 2023
@@ -268,6 +270,7 @@ New major version of the Mobile Core SDK for Android has been released along wit
 * Security improvements added.
 
 Note that all these extensions must be updated together. Flutter and React plugins not yet updated with these versions, but coming soon.
+
 * Android Mobile Core 2.0.1
 * Android Signal 2.0.1
 * Android Lifecycle 2.0.1
@@ -289,6 +292,7 @@ Note that all these extensions must be updated together. Flutter and React plugi
 * Android Adobe Audience Manager 2.0.0
 
 For help on moving to these versions, please see:
+
 * [Migration guide](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-android)
 * [Migration FAQ](../faq.md#migrating-to-android-mobile-core-2x-and-compatible-extensions)
 
@@ -348,6 +352,7 @@ For help on moving to these versions, please see:
 Please note that the following improvements have been made in the current release:
 
 1. The below APIs have been renamed for alignment with the Adobe Target Mobile SDK for iOS:
+
 * `locationsDisplayed` is now `displayedLocations`
 * `locationClicked` is now `clickedLocation`
 
@@ -450,8 +455,8 @@ Please note that the `registerDevice` API, similar to iOS, no longer provides a 
 
 ### Android UserProfile 2.0.0
 
-- Major version update for [User Profile](../profile/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-userprofile-android).
-- The following APIs have been deprecated and will be removed in a future release:
+* Major version update for [User Profile](../profile/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-userprofile-android).
+* The following APIs have been deprecated and will be removed in a future release:
 
   | Deprecated API                      | Recommended Alternative              |
   | ----------------------------------- | ------------------------------------ |
@@ -632,7 +637,7 @@ With this release, the extension provides APIs that you can use to:
 
 ### iOS AEPAudience 3.0.3
 
-- Fixed integration with Lifecycle extension to send lifecycle metrics when a new app session is started.
+* Fixed integration with Lifecycle extension to send lifecycle metrics when a new app session is started.
 
 ## April 12, 2022
 
@@ -640,12 +645,12 @@ With this release, the extension provides APIs that you can use to:
 
 The following AEP SDK React Native plugins have been published:
 
- - @adobe/react-native-aepcore@1.0.0
- - @adobe/react-native-aepuserprofile@1.0.0
- - @adobe/react-native-aepassurance@3.0.0
- - @adobe/react-native-aepedge@1.0.0
- - @adobe/react-native-aepedgeconsent@1.0.0
- - @adobe/react-native-aepedgeidentity@1.0.0
+ * @adobe/react-native-aepcore@1.0.0
+ * @adobe/react-native-aepuserprofile@1.0.0
+ * @adobe/react-native-aepassurance@3.0.0
+ * @adobe/react-native-aepedge@1.0.0
+ * @adobe/react-native-aepedgeconsent@1.0.0
+ * @adobe/react-native-aepedgeidentity@1.0.0
 
 For more details, see the documentation and release notes in the [aepsdk-react-native repository](https://github.com/adobe/aepsdk-react-native).
 
