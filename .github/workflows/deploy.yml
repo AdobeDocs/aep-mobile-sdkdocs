@@ -146,7 +146,7 @@ jobs:
           GATSBY_ALGOLIA_SEARCH_INDEX: ${{ secrets.AIO_ALGOLIA_SEARCH_INDEX }}
           GATSBY_FEDS_PRIVACY_ID: ${{ secrets.AIO_FEDS_PRIVACY_ID }}
       - name: Deploy
-        uses: icaraps/static-website-deploy@master
+        uses: icaraps/static-website-deploy@no-downtime
         with:
           enabled-static-website: 'true'
           source: 'public'
@@ -154,11 +154,8 @@ jobs:
           connection-string: ${{ secrets.AIO_AZURE_DEV_CONNECTION_STRING }}
           remove-existing-files: 'true'
           exclude-subfolder: ${{ needs.set-state.outputs.exclude_subfolder }}
-      - name: Delay purge
-        run: sleep 60s
-        shell: bash
       - name: Purge Fastly Cache
-        uses: icaraps/gatsby-fastly-purge-action@master
+        uses: icaraps/gatsby-fastly-purge-action@no-downtime
         with:
           fastly-token: ${{ secrets.AIO_FASTLY_TOKEN }}
           fastly-url:
@@ -240,7 +237,7 @@ jobs:
           GATSBY_ALGOLIA_SEARCH_INDEX: ${{ secrets.AIO_ALGOLIA_SEARCH_INDEX }}
           GATSBY_FEDS_PRIVACY_ID: ${{ secrets.AIO_FEDS_PRIVACY_ID }}
       - name: Deploy
-        uses: icaraps/static-website-deploy@master
+        uses: icaraps/static-website-deploy@no-downtime
         with:
           enabled-static-website: 'true'
           source: 'public'
@@ -248,11 +245,8 @@ jobs:
           connection-string: ${{ secrets.AIO_AZURE_PROD_CONNECTION_STRING }}
           remove-existing-files: 'true'
           exclude-subfolder: ${{ needs.set-state.outputs.exclude_subfolder }}
-      - name: Delay purge
-        run: sleep 60s
-        shell: bash
       - name: Purge Fastly Cache
-        uses: icaraps/gatsby-fastly-purge-action@master
+        uses: icaraps/gatsby-fastly-purge-action@no-downtime
         with:
           fastly-token: ${{ secrets.AIO_FASTLY_TOKEN }}
           fastly-url:
