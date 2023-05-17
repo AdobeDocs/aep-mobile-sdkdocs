@@ -33,6 +33,7 @@ Other foundational extensions include the Consent for Edge Network extension whi
 ![compare workflows](./assets/index/compareWorkflows.png)
   
 ## Get started with the migration
+
 | Steps  |  Edge Network extension | Edge Bridge extension |
 | ----------- | ----------- | ----------- |
 | 1. [Set up an XDM schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html). Experience Data Model (XDM) is the open and publicly documented data model standard created by Adobe to standardize data collection, and is used across applications that leverage Experience Platform. <br/> **NOTE:** Take advantage of [automatic Analytics variable mapping](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html) of XDM fields to Analytics dimensions by using the Adobe managed XDM schemas for Lifecycle, Media, Commerce, and more.| ✅	 | ✅	|
@@ -50,15 +51,15 @@ Other foundational extensions include the Consent for Edge Network extension whi
 
 To learn about the end to end Edge Network extension implementation process, follow the tutorials below:
 
-* [iOS tutorial](https://github.com/adobe/aepsdk-edge-ios/tree/main/Documentation/Tutorials)
-* [Android tutorial](https://github.com/adobe/aepsdk-edge-android/tree/main/Documentation/Tutorials)
+- [iOS tutorial](https://github.com/adobe/aepsdk-edge-ios/tree/main/Documentation/Tutorials)
+- [Android tutorial](https://github.com/adobe/aepsdk-edge-android/tree/main/Documentation/Tutorials)
 
 ### Implement the Edge Bridge extension
 
 To learn about the end to end Edge Bridge extension implementation process, follow the tutorials below:
 
-* [iOS tutorial](https://github.com/adobe/aepsdk-edgebridge-ios/tree/main/Documentation/tutorials)    
-* [Android tutorial](https://github.com/adobe/aepsdk-edgebridge-android/tree/main/Documentation/tutorials) 
+- [iOS tutorial](https://github.com/adobe/aepsdk-edgebridge-ios/tree/main/Documentation/tutorials)  
+- [Android tutorial](https://github.com/adobe/aepsdk-edgebridge-android/tree/main/Documentation/tutorials)
   
 ## Other migration considerations
 
