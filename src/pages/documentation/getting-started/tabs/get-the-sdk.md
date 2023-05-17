@@ -230,12 +230,11 @@ public class MainApp extends Application {
       ...
       try {
         ...
+      } catch (InvalidInitException e) {
+        ...
       }
     }
-});
-    } catch (InvalidInitException e) {
-      ...
-    }
+    
   }
 }
 ```
