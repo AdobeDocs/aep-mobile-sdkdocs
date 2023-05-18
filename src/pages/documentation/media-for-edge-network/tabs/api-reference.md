@@ -1932,7 +1932,7 @@ val adMetadata = mutableMapOf(MediaConstants.AdMetadataKeys.ADVERTISER to "Sampl
                               MediaConstants.AdMetadataKeys.CAMPAIGN_ID to "Sample Campaign")
 
 
-  tracker.trackEvent(Media.Event.AdStart, adInfo, adMetadata)
+tracker.trackEvent(Media.Event.AdStart, adInfo, adMetadata)
 ```
 
 <Variant platform="ios" api="standard-ad-constants" repeat="6"/>

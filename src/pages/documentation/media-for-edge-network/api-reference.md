@@ -20,13 +20,13 @@ iOS
 
 ### resetIdentities
 
-Aborts all the active tracking sessions and clears all the media trackers.
+Immediately aborts all the active tracking sessions and clears all the MediaTracker instances.
 
 See [MobileCore.resetIdentities](../mobile-core/api-reference.md#resetidentities) for more details.
 
 ### createTracker
 
-Creates a MediaTracker instance that tracks the playback session. The tracker created should be used to track the streaming content and it sends periodic pings to the Experience Edge Network.
+Creates a MediaTracker instance that should be used to track a playback session. The tracker sends periodic heartbeat pings to the Experience Edge Network.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -40,7 +40,7 @@ iOS
 
 ### createTrackerWithConfig
 
-Creates a MediaTracker instance based on the provided configuration to track the playback session.
+Creates a MediaTracker instance that should be used to track a playback session. The tracker sends periodic heartbeat pings to the Experience Edge Network.
 
 | Key | Description | Value | Required |
 | :--- | :--- | :--- | :---: |

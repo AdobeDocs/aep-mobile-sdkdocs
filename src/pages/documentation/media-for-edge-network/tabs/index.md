@@ -121,7 +121,7 @@ In your app's `_:didFinishLaunchingWithOptions` function, register the Audience 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
    MobileCore.registerExtensions([Edge.self, Identity.self, Media.self], {
-   MobileCore.configureWith(appId: "yourAppId")
+   MobileCore.configureWith(appId: "yourEnvironmentId")
  })  
  ...
 }
@@ -134,7 +134,7 @@ In your app's `application:didFinishLaunchingWithOptions`, register Media with M
 ```objectivec
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [AEPMobileCore registerExtensions:@[AEPMobileEdgeMedia.class, AEPMobileEdge.class, AEPMobileEdgeIdentity.class] completion:^{
-    [AEPMobileCore configureWithAppId: @"yourAppId"];
+    [AEPMobileCore configureWithAppId: @"yourEnvironmentId"];
   }];
   ...
 }
