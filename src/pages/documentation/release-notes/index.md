@@ -4,6 +4,12 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## May 19, 2023
+
+### iOS Assurance 3.1.2
+
+* Added support for chaining related events.
+
 ## May 15, 2023
 
 ### iOS Core 3.9.0
