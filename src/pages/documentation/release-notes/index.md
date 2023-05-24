@@ -6,6 +6,15 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 ## May 23, 2023
 
+### Android Core 2.2.0
+
+* Added support for chaining related events.
+* Added a new `evaluateEvent` API in the `LaunchRulesEngine` class that returns matching consequences without processing them.
+* Fixed a bug where a non-transparent background was visible behind a message webview.
+* Fixed the back button functionality to allow for the dismissal of a displayed in-app message using the device's back button.
+* Fixed in-app message redraw on device orientation change.
+* Fixed a memory leak with the in-app message webview.
+
 ### Android Messaging 2.1.4
 
 * Handle in-app interaction tracking for back button presses.
