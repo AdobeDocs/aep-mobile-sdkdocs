@@ -1,5 +1,11 @@
 # Release Notes
 
+## May 23, 2023
+
+### Android Messaging 2.1.4
+
+* Handle in-app interaction tracking for back button presses.
+
 ## April 28, 2023
 
 ### Android Messaging 2.1.3
