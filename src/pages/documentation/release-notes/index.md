@@ -4,6 +4,12 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## May 23, 2023
+
+### Android Messaging 2.1.4
+
+* Handle in-app interaction tracking for back button presses.
+
 ## May 15, 2023
 
 ### iOS Core 3.9.0
