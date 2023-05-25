@@ -4,6 +4,12 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## May 25, 2023
+
+### Android Campaign Standard 2.0.4
+
+* Update the AEPCore dependency to version 2.2.0 to resolve a WebView transparency issue and fix message frequency rules for ACS in-app messages.
+
 ## May 23, 2023
 
 ### Android Core 2.2.0
