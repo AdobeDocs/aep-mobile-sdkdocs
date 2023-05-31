@@ -4,6 +4,12 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## May 31, 2023
+
+### Android Campaign Classic 2.0.1
+
+* Updated the extension to dispatch a Campaign Response Content event containing the device registration status.
+
 ## May 25, 2023
 
 ### Android Campaign Standard 2.0.4
