@@ -1,5 +1,11 @@
 # Release Notes
 
+## May 31, 2023
+
+### Android Campaign Classic 2.0.1
+
+* Updated the extension to dispatch a Campaign Response Content event containing the device registration status.
+
 ## January 31, 2023
 
 ### Android Campaign Classic 2.0.0
