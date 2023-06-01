@@ -36,10 +36,42 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 | com.adobe.marketing.mobile:campaignclassic | 2.0.0 | 2.0.0 | 
 | com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 | 
 
-
 </AccordionItem>
-  
+
 </Accordion>
+
+## May 31, 2023
+
+### Android Campaign Classic 2.0.1
+
+* Updated the extension to dispatch a Campaign Response Content event containing the device registration status.
+
+## May 25, 2023
+
+### Android Campaign Standard 2.0.4
+
+* Update the AEPCore dependency to version 2.2.0 to resolve a WebView transparency issue and fix message frequency rules for Campaign Standard in-app messages.
+
+## May 23, 2023
+
+### Android Core 2.2.0
+
+* Added support for chaining related events.
+* Added a new `evaluateEvent` API in the `LaunchRulesEngine` class that returns matching consequences without processing them.
+* Fixed a bug where a non-transparent background was visible behind a message webview.
+* Fixed the back button functionality to allow for the dismissal of a displayed in-app message using the device's back button.
+* Fixed in-app message redraw on device orientation change.
+* Fixed a memory leak with the in-app message webview.
+
+### Android Messaging 2.1.4
+
+* Handle in-app interaction tracking for back button presses.
+
+## May 19, 2023
+
+### iOS Assurance 3.1.2
+
+* Added support for chaining related events.
 
 ## May 15, 2023
 
