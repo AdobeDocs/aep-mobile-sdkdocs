@@ -4,6 +4,75 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## June 1, 2023
+
+### Android BOM 1.0.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom/1.0.0-beta1)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header="Expand">
+
+| Extension artifact | BOM (1.0.0-beta1) | BOM (1.0.0) |  
+|-----|-----|-----|  
+| **com.adobe.marketing.mobile:core** | **2.1.1** | **2.2.0**|  
+| **com.adobe.marketing.mobile:lifecycle** | **2.0.1** | **2.0.2**|  
+| **com.adobe.marketing.mobile:campaign** | **2.0.2** | **2.0.4**|  
+| **com.adobe.marketing.mobile:assurance** | **2.0.1** | **2.1.0**|  
+| **com.adobe.marketing.mobile:edge** | **2.0.0** | **2.1.0**|  
+| **com.adobe.marketing.mobile:messaging** | **2.1.1** | **2.1.4**|  
+| com.adobe.marketing.mobile:identity | 2.0.2 | 2.0.2 |  
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |  
+| com.adobe.marketing.mobile:userprofile | 2.0.0 | 2.0.0 |  
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |  
+| com.adobe.marketing.mobile:optimize | 2.0.0 | 2.0.0 |  
+| com.adobe.marketing.mobile:edgeidentity | 2.0.0 | 2.0.0 |  
+| com.adobe.marketing.mobile:edgebridge | 2.0.0 | 2.0.0 |  
+| com.adobe.marketing.mobile:places | 2.0.0 | 2.0.0 |  
+| com.adobe.marketing.mobile:analytics | 2.0.2 | 2.0.2 |  
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |  
+| com.adobe.marketing.mobile:target | 2.0.0 | 2.0.0 |  
+| com.adobe.marketing.mobile:campaignclassic | 2.0.0 | 2.0.0 |  
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |  
+
+</AccordionItem>
+
+</Accordion>
+
+## May 31, 2023
+
+### Android Campaign Classic 2.0.1
+
+* Updated the extension to dispatch a Campaign Response Content event containing the device registration status.
+
+## May 25, 2023
+
+### Android Campaign Standard 2.0.4
+
+* Update the AEPCore dependency to version 2.2.0 to resolve a WebView transparency issue and fix message frequency rules for Campaign Standard in-app messages.
+
+## May 23, 2023
+
+### Android Core 2.2.0
+
+* Added support for chaining related events.
+* Added a new `evaluateEvent` API in the `LaunchRulesEngine` class that returns matching consequences without processing them.
+* Fixed a bug where a non-transparent background was visible behind a message webview.
+* Fixed the back button functionality to allow for the dismissal of a displayed in-app message using the device's back button.
+* Fixed in-app message redraw on device orientation change.
+* Fixed a memory leak with the in-app message webview.
+
+### Android Messaging 2.1.4
+
+* Handle in-app interaction tracking for back button presses.
+
+## May 19, 2023
+
+### iOS Assurance 3.1.2
+
+* Added support for chaining related events.
+
 ## May 15, 2023
 
 ### iOS Core 3.9.0
