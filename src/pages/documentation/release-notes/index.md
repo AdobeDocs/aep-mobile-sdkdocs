@@ -6,6 +6,20 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 ## June 1, 2023
 
+### iOS Edge 4.0.0
+
+* Set minimum versions to iOS 11, tvOS 11 (previously 10) and builds with Xcode 14.1
+* Removed deprecated class `XDMFormatters`. Use functions `getISO8601UTCDateWithMilliseconds()` and `getISO8601FullDate()` in Date class extension from AEPServices module instead.
+* Fixed issue where empty "payload" array was not included in events dispatched after receiving Edge Network response.
+
+### iOS EdgeIdentity 4.0.0
+
+* Set minimum iOS and tvOS version to 11 (previously 10) and builds with Xcode 14.1
+
+### iOS EdgeConsent 4.0.0
+
+* Set minimum iOS and tvOS version to 11 (previously 10) and builds with Xcode 14.1
+
 ### Android BOM 1.0.0
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom/1.0.0-beta1)) release includes changes to the following Android extensions.

@@ -1,5 +1,11 @@
 # Release Notes
 
+## June 1, 2023
+
+### iOS EdgeConsent 4.0.0
+
+* Set minimum iOS and tvOS version to 11 (previously 10) and builds with Xcode 14.1
+
 ## March 1, 2023
 
 ### iOS AEPEdgeConsent 1.1.0

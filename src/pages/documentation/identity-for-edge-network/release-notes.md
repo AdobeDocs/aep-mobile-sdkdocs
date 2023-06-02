@@ -1,5 +1,11 @@
 # Release Notes
 
+## June 1, 2023
+
+### iOS EdgeIdentity 4.0.0
+
+* Set minimum iOS and tvOS version to 11 (previously 10) and builds with Xcode 14.1
+
 ## February 28, 2023
 
 ### iOS AEPEdgeIdentity 1.2.0

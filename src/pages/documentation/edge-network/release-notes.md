@@ -1,5 +1,13 @@
 # Release Notes
 
+## June 1, 2023
+
+### iOS Edge 4.0.0
+
+* Set minimum iOS and tvOS version to 11 (previously 10) and builds with Xcode 14.1
+* Removed deprecated class `XDMFormatters`. Use functions `getISO8601UTCDateWithMilliseconds()` and `getISO8601FullDate()` in Date class extension from AEPServices module instead.
+* Fixed issue where empty "payload" array was not included in events dispatched after receiving Edge Network response.
+
 ## April 11, 2023
 
 ### Android Edge 2.1.0
