@@ -4,7 +4,172 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## June 8, 2023
+
+### iOS Mobile Core 4.x and compatible extensions
+
+New major version of the Mobile Core SDK for iOS has been released along with updates to other extensions. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0. 
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+
+Note that all these extensions must be updated together.
+
+* iOS Mobile Core 4.0.0
+* iOS Signal 4.0.0
+* iOS Lifecycle 4.0.0
+* iOS Identity 4.0.0
+* iOS Profile 4.0.0
+* iOS Adobe Experience Platform Assurance 4.0.0
+* iOS Adobe Experience Platform Edge Network 4.0.0
+* iOS Identity for Edge Network 4.0.0
+* iOS Consent for Edge Network 4.0.0
+* iOS Edge Bridge 4.0.0
+* iOS Adobe Journey Optimizer 4.0.0
+* iOS Adobe Journey Optimizer - Decisioning 4.0.0
+* iOS Places Service 4.0.0
+* iOS Adobe Analytics 4.0.0
+* iOS Adobe Analytics - Media Analytics for Audio & Video 4.0.0
+* iOS Adobe Target 4.0.0
+* iOS Adobe Campaign Standard 4.0.0
+* iOS Adobe Campaign Classic 4.0.0
+* iOS Adobe Audience Manager 4.0.0
+
+## June 7, 2023
+
+### iOS Target 4.0.0
+
+Major version update for [Adobe Target](../adobe-target/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0. 
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+
+### iOS Audience 4.0.0
+
+ Major version update for [Adobe Audience Manager](../adobe-audience-manager/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0. 
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+
+### iOS Media 4.0.0
+
+Major version update for [Adobe Analytics - Media Analytics workflows](../adobe-media-analytics/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0. 
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+
+## June 6, 2023
+
+### iOS Places 4.0.0
+
+Major version update for [Adobe Experience Platform Location Service](../places/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0. 
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+
+### iOS Analytics 4.0.0
+
+Major version update for [Adobe Analytics](../adobe-analytics/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0. 
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+
+## June 5, 2023
+
+### iOS Campaign Classic 4.0.0
+
+Major version update for [Adobe Campaign Classic workflows](../adobe-campaign-classic/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0. 
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+* Updated the extension to dispatch a Campaign Response Content event containing the device registration status.
+
+### iOS Campaign Standard 4.0.0
+
+Major version update for [Adobe Campaign Standard workflows](../adobe-campaign-standard/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0. 
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+
+### iOS UserProfile 4.0.0
+
+Major version update for [User Profile](../profile/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0. 
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+
+## June 2, 2023
+
+### iOS Edge Bridge 4.0.0
+
+Major version update for Edge Bridge for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0. 
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+
+### iOS Messaging 4.0.0
+
+Major version update for [Adobe Journey Optimizer](../adobe-journey-optimizer/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0. 
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+
+### iOS Optimize 4.0.0
+
+Major version update for [Adobe Journey Optimizer - Decisioning](../adobe-journey-optimizer-decisioning/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0. 
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+
 ## June 1, 2023
+
+### iOS Consent 4.0.0
+
+Major version update for [Consent for Edge Network](../consent-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0. 
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+
+### iOS EdgeIdentity 4.0.0
+
+Major version update for [Identity for Edge Network](../identity-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0. 
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+
+### iOS Edge 4.0.0
+
+Major version update for [Edge Network](../edge-network/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0. 
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+* Removed deprecated class `XDMFormatters`. Use functions `getISO8601UTCDateWithMilliseconds()` and `getISO8601FullDate()` in Date class extension from AEPServices module instead.
+* Fixed issue where empty "payload" array was not included in events dispatched after receiving Edge Network response.
+
+### iOS Assurance 4.0.0
+
+Major version update for [Adobe Experience Platform Assurance](../platform-assurance-sdk/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0. 
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+
+### iOS Core 4.0.0
+
+Major version update of Adobe Experience Platform Core iOS SDKs are live! It contains the following extensions:
+
+* Core 4.0.0
+* Identity 4.0.0
+* Signal 4.0.0
+* Lifecycle 4.0.0
+
+Please note that the current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0. 
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+
+### iOS RulesEngine 4.0.0
+
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0. 
 
 ### Android BOM 1.0.0
 
@@ -338,7 +503,7 @@ New major version of the Mobile Core SDK for Android has been released along wit
 * AndroidX support added.
 * Security improvements added.
 
-Note that all these extensions must be updated together. Flutter and React plugins not yet updated with these versions, but coming soon.
+Note that all these extensions must be updated together.
 
 * Android Mobile Core 2.0.1
 * Android Signal 2.0.1

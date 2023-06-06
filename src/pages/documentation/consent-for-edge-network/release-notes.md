@@ -1,5 +1,14 @@
 # Release Notes
 
+## June 1, 2023
+
+### iOS Consent 4.0.0
+
+Major version update for [Consent for Edge Network](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0. 
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+
 ## March 1, 2023
 
 ### iOS AEPEdgeConsent 1.1.0

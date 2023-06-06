@@ -1,5 +1,21 @@
 # Release Notes
 
+## June 1, 2023
+
+### iOS Core 4.0.0
+
+Major version update of Adobe Experience Platform Core iOS SDKs are live! It contains the following extensions:
+
+* Core 4.0.0
+* Identity 4.0.0
+* Signal 4.0.0
+* Lifecycle 4.0.0
+
+Please note that the current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0. 
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+
 ## May 23, 2023
 
 ### Android Core 2.2.0
