@@ -1,7 +1,7 @@
 # Release Notes
 
-## March 9, 2023
+## June 5, 2023
 
-### iOS Edge Media v1.0.0-beta
+### iOS Edge Media v4.0.0
 
-* First Beta release of the Edge Media extension which enables Media Analytics tracking using Experience Edge Network and also providing a way to send Media Analytics Data to Adobe Experience Platform.
+* General availability release for Adobe Streaming Media for Edge Network extension which sends data about audio and video consumption on your streaming applications to the Adobe Experience Platform Edge Network.  This enables capabilities for measurement, analysis, and activation with media data across the Adobe Experience Cloud solutions.

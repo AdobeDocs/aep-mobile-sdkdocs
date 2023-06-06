@@ -184,11 +184,11 @@ iOS
 
 <InlineAlert variant="info" slots="text"/>
 
-The following APIs are **tracker instance** dependent. Create a tracker instance using [`createTracker`](#createTracker) or [`createTrackerWithConfig`](#createTrackerWithConfig) and call the following APIs.
+The following APIs are **tracker instance** dependent. Create a tracker instance using [`createTracker`](#createtracker) or [`createTrackerWithConfig`](#createtrackerwithconfig) and call the following APIs.
 
 ### trackSessionStart
 
-Tracks the intention to start playback. This starts a tracking session on the MediaTracker instance. To resume a previously closed session, see the [media resume guide](#media-resume)
+Tracks the intention to start playback. This starts a tracking session on the MediaTracker instance. To resume a previously closed session, see the [media resume guide](#media-resume).
 
 | Parameter | Description | Required |
 | :--- | :--- | :---: |
@@ -197,7 +197,7 @@ Tracks the intention to start playback. This starts a tracking session on the Me
 
 <InlineAlert variant="info" slots="text"/>
 
-Main ping interval can now be customized to duration between 10 to 50 seconds using [`createTrackerWithConfig`](#createTrackerWithConfig) API.
+Main ping interval can now be customized to duration between 10 to 50 seconds using [`createTrackerWithConfig`](#createtrackerwithconfig) API.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -239,7 +239,7 @@ iOS
 
 ### trackComplete
 
-Tracks the completion of the media playback session. Call this method only when the media has been completely viewed. If the viewing session is ended before the media is completely viewed, use [`trackSessionEnd`](#trackSessionEnd) instead.
+Tracks the completion of the media playback session. Call this method only when the media has been completely viewed. If the viewing session is ended before the media is completely viewed, use [`trackSessionEnd`](#tracksessionend) instead.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -253,7 +253,7 @@ iOS
 
 ### trackSessionEnd
 
-Tracks the end of a media playback session. Call this method when the viewing session ends, even if the user has not viewed the media to completion. If the media is viewed to completion, use [`trackComplete`](#trackComplete) instead.
+Tracks the end of a media playback session. Call this method when the viewing session ends, even if the user has not viewed the media to completion. If the media is viewed to completion, use [`trackComplete`](#trackcomplete) instead.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -289,8 +289,8 @@ Tracks media events.
 
 | Parameter | Description | Required |
 | :--- | :--- | :--: |
-| `event` | The media event being tracked, use [Media event constants](#media-events-constants) | Yes|
-| `info` | For an `AdBreakStart` event, the AdBreak information is created by using the [`createAdBreakObjectWith`](#createAdBreakObjectWith) method.<br/> For an `AdStart` event, the Ad information is created by using the [`createAdObjectWith`](#createAdObjectWith) method.<br/> For a `ChapterStart` event, the Chapter information is created by using the [`createChapterObjectWith`](#createChapterObjectWith) method.<br/> For a `StateStart` and `StateEnd` event, the State information is created by using the [`createStateObjectWith`](#createStateObjectWith) method. | Yes/No* |
+| `event` | The media event being tracked, use [Media event constants](#media-events) | Yes|
+| `info` | For an `AdBreakStart` event, the AdBreak information is created by using the `createAdBreakObjectWith` method.<br/> For an `AdStart` event, the Ad information is created by using the `createAdObjectWith` method.<br/> For a `ChapterStart` event, the Chapter information is created by using the `createChapterObjectWith` method.<br/> For a `StateStart` and `StateEnd` event, the State information is created by using the `createStateObjectWith` method. | Yes/No* |
 | metadata | Optional context data can be provided for `AdStart` and `ChapterStart` events. This is not required for other events. | No |
 
 <InlineAlert variant="info" slots="text"/>
@@ -299,7 +299,7 @@ Tracks media events.
 
 <InlineAlert variant="info" slots="text"/>
 
-Ad ping interval can now be customized to duration between 1 to 10 seconds using [`createTrackerWithConfig`](#createTrackerWithConfig) API.
+Ad ping interval can now be customized to duration between 1 to 10 seconds using [`createTrackerWithConfig`](#createtrackerwithconfig) API.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

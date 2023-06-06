@@ -121,9 +121,9 @@ public static MediaTracker createTracker(Map<String, Object> config)
 
 ```java
 HashMap<String, Object> config = new HashMap<String, Object>();
-config.put(MediaConstants.Config.CHANNEL, "custom-channel");  // Overwrites channel configured in the Data Collection UI.
-config.put(MediaConstants.Config.AD_PING_INTERVAL, 1);   // Overwrites ad content ping interval to 1 second.
-config.put(MediaConstants.Config.MAIN_PING_INTERVAL, 30);   // Overwrites main content ping interval to 30 seconds.
+config.put(MediaConstants.TrackerConfig.CHANNEL, "custom-channel");  // Overwrites channel configured in the Data Collection UI.
+config.put(MediaConstants.TrackerConfig.AD_PING_INTERVAL, 1);   // Overwrites ad content ping interval to 1 second.
+config.put(MediaConstants.TrackerConfig.MAIN_PING_INTERVAL, 30);   // Overwrites main content ping interval to 30 seconds.
 
 MediaTracker mediaTracker = Media.createTracker(config);  // Use the instance for tracking media.
 ```
@@ -134,9 +134,9 @@ MediaTracker mediaTracker = Media.createTracker(config);  // Use the instance fo
 
 ```java
 val config = mapOf(
-                MediaConstants.Config.CHANNEL to "custom-channel",
-                MediaConstants.Config.AD_PING_INTERVAL to 1,
-                MediaConstants.Config.MAIN_PING_INTERVAL to 30,
+                MediaConstants.TrackerConfig.CHANNEL to "custom-channel",
+                MediaConstants.TrackerConfig.AD_PING_INTERVAL to 1,
+                MediaConstants.TrackerConfig.MAIN_PING_INTERVAL to 30,
             )
 val tracker = Media.createTracker(config) // Use the instance for tracking media.
 ```
@@ -179,7 +179,6 @@ NSMutableDictionary* config = [NSMutableDictionary dictionary];
 config[AEPEdgeMediaTrackerConfig.CHANNEL] = @"custom-channel"; // Overrides channel configured in the Data Collection UI.
 config[AEPEdgeMediaTrackerConfig.AD_PING_INTERVAL] = 1; // Overwrites ad content ping interval to 1 second.
 config[AEPEdgeMediaTrackerConfig.MAIN_PING_INTERVAL] = 30; // Overwrites main content ping interval to 30 seconds.
-
 
 tracker = [AEPMobileEdgeMedia createTrackerWithConfig:config];
 ```
@@ -1684,23 +1683,23 @@ NSDictionary *mediaObject = [AEPMobileEdgeMedia createMediaObjectWith:@"videoNam
 public class MediaConstants {
 
   public static final class VideoMetadataKeys {
-      public static final String SHOW = "a.media.show";
-      public static final String SEASON = "a.media.season";
-      public static final String EPISODE = "a.media.episode";
-      public static final String ASSET_ID = "a.media.asset";
-      public static final String GENRE = "a.media.genre";
-      public static final String FIRST_AIR_DATE = "a.media.airDate";
-      public static final String FIRST_DIGITAL_DATE = "a.media.digitalDate";
-      public static final String RATING = "a.media.rating";
-      public static final String ORIGINATOR = "a.media.originator";
-      public static final String NETWORK = "a.media.network";
-      public static final String SHOW_TYPE = "a.media.type";
-      public static final String AD_LOAD = "a.media.adLoad";
-      public static final String MVPD = "a.media.pass.mvpd";
-      public static final String AUTHORIZED = "a.media.pass.auth";
-      public static final String DAY_PART = "a.media.dayPart";
-      public static final String FEED = "a.media.feed";
-      public static final String STREAM_FORMAT = "a.media.format";
+    public static final String AD_LOAD = "adLoad";
+    public static final String ASSET_ID = "assetID";
+    public static final String AUTHORIZED = "isAuthenticated";
+    public static final String DAY_PART = "dayPart";
+    public static final String EPISODE = "episode";
+    public static final String FEED = "feed";
+    public static final String FIRST_AIR_DATE = "firstAirDate";
+    public static final String FIRST_DIGITAL_DATE = "firstDigitalDate";
+    public static final String GENRE = "genre";
+    public static final String MVPD = "mvpd";
+    public static final String NETWORK = "network";
+    public static final String ORIGINATOR = "originator";
+    public static final String SEASON = "season";
+    public static final String SHOW = "show";
+    public static final String SHOW_TYPE = "showType";
+    public static final String STREAM_FORMAT = "streamFormat";
+    public static final String RATING = "rating";
   }
 
 }
@@ -1747,23 +1746,23 @@ tracker.trackSessionStart(mediaInfo, videoMetadata)
 public class MediaConstants: NSObject {
   @objc(AEPEdgeMediaVideoMetadataKeys)
   public class VideoMetadataKeys: NSObject {
-        public static let SHOW = "a.media.show"
-        public static let SEASON = "a.media.season"
-        public static let EPISODE = "a.media.episode"
-        public static let ASSET_ID = "a.media.asset"
-        public static let GENRE = "a.media.genre"
-        public static let FIRST_AIR_DATE = "a.media.airDate"
-        public static let FIRST_DIGITAL_DATE = "a.media.digitalDate"
-        public static let RATING = "a.media.rating"
-        public static let ORIGINATOR = "a.media.originator"
-        public static let NETWORK = "a.media.network"
-        public static let SHOW_TYPE = "a.media.type"
-        public static let AD_LOAD = "a.media.adLoad"
-        public static let MVPD = "a.media.pass.mvpd"
-        public static let AUTHORIZED = "a.media.pass.auth"
-        public static let DAY_PART = "a.media.dayPart"
-        public static let FEED = "a.media.feed"
-        public static let STREAM_FORMAT = "a.media.format"
+        public static let AD_LOAD = "adLoad"
+        public static let ASSET_ID = "assetID"
+        public static let AUTHORIZED = "isAuthenticated"
+        public static let DAY_PART = "dayPart"
+        public static let EPISODE = "episode"
+        public static let FEED = "feed"
+        public static let FIRST_AIR_DATE = "firstAirDate"
+        public static let FIRST_DIGITAL_DATE = "firstDigitalDate"
+        public static let GENRE = "genre"
+        public static let MVPD = "mvpd"
+        public static let NETWORK = "network"
+        public static let ORIGINATOR = "originator"
+        public static let RATING = "rating"
+        public static let SEASON = "season"
+        public static let SHOW = "show"
+        public static let SHOW_TYPE = "showType"
+        public static let STREAM_FORMAT = "streamFormat"
     }
 }
 ```
@@ -1802,12 +1801,12 @@ NSMutableDictionary *videoMetadata = [[NSMutableDictionary alloc] init];
 public class MediaConstants {
 
   public static final class AudioMetadataKeys {
-    public static final String ARTIST = "a.media.artist";
-    public static final String ALBUM = "a.media.album";
-    public static final String LABEL = "a.media.label";
-    public static final String AUTHOR = "a.media.author";
-    public static final String STATION = "a.media.station";
-    public static final String PUBLISHER = "a.media.publisher";
+    public static final String ALBUM = "album";
+    public static final String ARTIST = "artist";
+    public static final String AUTHOR = "author";
+    public static final String LABEL = "label";
+    public static final String PUBLISHER = "publisher";
+    public static final String STATION = "station";
   }
 
 }
@@ -1853,12 +1852,12 @@ tracker.trackSessionStart(mediaInfo, audioMetadata)
 public class MediaConstants: NSObject {
   @objc(AEPEdgeMediaAudioMetadataKeys)
   public class AudioMetadataKeys: NSObject {
-        public static let ARTIST = "a.media.artist"
-        public static let ALBUM = "a.media.album"
-        public static let LABEL = "a.media.label"
-        public static let AUTHOR = "a.media.author"
-        public static let STATION = "a.media.station"
-        public static let PUBLISHER = "a.media.publisher"
+      public static let ALBUM = "album"
+      public static let ARTIST = "artist"
+      public static let AUTHOR = "author"
+      public static let LABEL = "label"
+      public static let PUBLISHER = "publisher"
+      public static let STATION = "station"
     }
 }
 ```
@@ -1897,12 +1896,12 @@ NSMutableDictionary *audioMetadata = [[NSMutableDictionary alloc] init];
 public class MediaConstants {
 
   public static final class AdMetadataKeys {
-    public static final String ADVERTISER = "a.media.ad.advertiser";
-    public static final String CAMPAIGN_ID = "a.media.ad.campaign";
-    public static final String CREATIVE_ID = "a.media.ad.creative";
-    public static final String PLACEMENT_ID = "a.media.ad.placement";
-    public static final String SITE_ID = "a.media.ad.site";
-    public static final String CREATIVE_URL = "a.media.ad.creativeURL";
+    public static final String ADVERTISER = "advertiser";
+    public static final String CAMPAIGN_ID = "campaignID";
+    public static final String CREATIVE_ID = "creativeID";
+    public static final String CREATIVE_URL = "creativeURL";
+    public static final String PLACEMENT_ID = "placementID";
+    public static final String SITE_ID = "siteID";
   }
 
 }
@@ -1941,12 +1940,12 @@ tracker.trackEvent(Media.Event.AdStart, adInfo, adMetadata)
 public class MediaConstants: NSObject {
   @objc(AEPEdgeAdMetadataKeys)
   public class AdMetadataKeys: NSObject {
-        public static let ADVERTISER = "a.media.ad.advertiser"
-        public static let CAMPAIGN_ID = "a.media.ad.campaign"
-        public static let CREATIVE_ID = "a.media.ad.creative"
-        public static let PLACEMENT_ID = "a.media.ad.placement"
-        public static let SITE_ID = "a.media.ad.site"
-        public static let CREATIVE_URL = "a.media.ad.creativeURL"
+      public static let ADVERTISER = "advertiser"
+      public static let CAMPAIGN_ID = "campaignID"
+      public static let CREATIVE_ID = "creativeID"
+      public static let CREATIVE_URL = "creativeURL"
+      public static let PLACEMENT_ID = "placementID"
+      public static let SITE_ID = "siteID"
     }
 }
 ```
