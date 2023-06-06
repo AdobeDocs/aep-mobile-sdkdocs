@@ -41,14 +41,14 @@ Note that all these extensions must be updated together.
 
 Major version update for [Adobe Target](../adobe-target/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
-* Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
+* Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 
 ### iOS Audience 4.0.0
 
  Major version update for [Adobe Audience Manager](../adobe-audience-manager/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
-* Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
+* Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 
 ### iOS Media 4.0.0
@@ -64,7 +64,7 @@ Major version update for [Adobe Analytics - Media Analytics workflows](../adobe-
 
 Major version update for [Adobe Experience Platform Location Service](../places/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
-* Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
+* Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 
 ### iOS Analytics 4.0.0
@@ -80,7 +80,7 @@ Major version update for [Adobe Analytics](../adobe-analytics/index.md) for Adob
 
 Major version update for [Adobe Campaign Classic workflows](../adobe-campaign-classic/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
-* Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
+* Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 * Updated the extension to dispatch a Campaign Response Content event containing the device registration status.
 
@@ -88,14 +88,14 @@ Major version update for [Adobe Campaign Classic workflows](../adobe-campaign-cl
 
 Major version update for [Adobe Campaign Standard workflows](../adobe-campaign-standard/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
-* Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
+* Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 
 ### iOS UserProfile 4.0.0
 
 Major version update for [User Profile](../profile/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
-* Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
+* Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 
 ## June 2, 2023
@@ -104,21 +104,21 @@ Major version update for [User Profile](../profile/index.md) for Adobe Experienc
 
 Major version update for Edge Bridge for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
-* Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
+* Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 
 ### iOS Messaging 4.0.0
 
 Major version update for [Adobe Journey Optimizer](../adobe-journey-optimizer/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
-* Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
+* Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 
 ### iOS Optimize 4.0.0
 
 Major version update for [Adobe Journey Optimizer - Decisioning](../adobe-journey-optimizer-decisioning/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
-* Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
+* Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 
 ## June 1, 2023
@@ -150,7 +150,7 @@ Major version update for [Edge Network](../edge-network/index.md) for Adobe Expe
 
 Major version update for [Adobe Experience Platform Assurance](../platform-assurance-sdk/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
-* Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
+* Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 
 ### iOS Core 4.0.0
