@@ -5,7 +5,7 @@ The Media for Edge Nework extension enables tracking user's engagement and consu
 
 ## Before starting
 
-### Configure and Setup Adobe Streaming Media for Edge Network with Experience Platform
+### Configure and Setup Adobe Streaming Media for Edge Network
 
 1. [Define a report suite](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/implementation-edge.html#define-a-report-suite)
 2. [Set up the schema in Adobe Experience Platform](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform)
@@ -18,9 +18,9 @@ Follow the full guide for setting up [Adobe Streaming Media for Edge Network wit
 
 Media for Edge Network requires Edge and Edge Identity extensions. Make sure to [configure the Edge extension in Data Collection UI](https://developer.adobe.com/client-sdks/documentation/edge-network/#configure-the-edge-network-extension-in-data-collection-ui) and [configure the Edge Identity extension in Data Collection UI](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/#configure-the-identity-extension-in-the-data-collection-ui) before proceeding.
 
-## Configure Media for Edge Network extension in the Data Collection UI
+## Configure Media for Edge Network extension in the Data Collection Tags
 
-1. In the Data Collection UI, select the **Extensions** tab.
+1. In the Data Collection Tags, select the **Extensions** tab in your mobile property.
 2. On the **Catalog** tab, locate the **Adobe Streaming Media for Edge Network** extension, and select **Install**.
 3. Type the extension settings. For more information, see [Configure Media for Edge Network extension](#configure-the-media-for-edge-network-extension).
 4. Select **Save**.
