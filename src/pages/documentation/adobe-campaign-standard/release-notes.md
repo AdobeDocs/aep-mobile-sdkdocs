@@ -1,5 +1,17 @@
 # Release Notes
 
+## May 25, 2023
+
+### Android Campaign Standard 2.0.4
+
+* Update the AEPCore dependency to version 2.2.0 to resolve a WebView transparency issue and fix message frequency rules for Campaign Standard in-app messages.
+
+## May 4, 2023
+
+### Android Campaign Standard 2.0.3
+
+* Adds support for URL-encoded URLs with query parameters used to configure in-app message clickthrough destination.
+
 ## February 17, 2023
 
 ### Android Campaign Standard 2.0.2

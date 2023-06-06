@@ -3,22 +3,159 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 ---
 
 # Release notes
+
+## June 1, 2023
+
+### Android BOM 1.0.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom/1.0.0-beta1)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header="Expand">
+
+| Extension artifact | BOM (1.0.0-beta1) | BOM (1.0.0) |  
+|-----|-----|-----|  
+| **com.adobe.marketing.mobile:core** | **2.1.1** | **2.2.0**|  
+| **com.adobe.marketing.mobile:lifecycle** | **2.0.1** | **2.0.2**|  
+| **com.adobe.marketing.mobile:campaign** | **2.0.2** | **2.0.4**|  
+| **com.adobe.marketing.mobile:assurance** | **2.0.1** | **2.1.0**|  
+| **com.adobe.marketing.mobile:edge** | **2.0.0** | **2.1.0**|  
+| **com.adobe.marketing.mobile:messaging** | **2.1.1** | **2.1.4**|  
+| com.adobe.marketing.mobile:identity | 2.0.2 | 2.0.2 |  
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |  
+| com.adobe.marketing.mobile:userprofile | 2.0.0 | 2.0.0 |  
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |  
+| com.adobe.marketing.mobile:optimize | 2.0.0 | 2.0.0 |  
+| com.adobe.marketing.mobile:edgeidentity | 2.0.0 | 2.0.0 |  
+| com.adobe.marketing.mobile:edgebridge | 2.0.0 | 2.0.0 |  
+| com.adobe.marketing.mobile:places | 2.0.0 | 2.0.0 |  
+| com.adobe.marketing.mobile:analytics | 2.0.2 | 2.0.2 |  
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |  
+| com.adobe.marketing.mobile:target | 2.0.0 | 2.0.0 |  
+| com.adobe.marketing.mobile:campaignclassic | 2.0.0 | 2.0.0 |  
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |  
+
+</AccordionItem>
+
+</Accordion>
+
+## May 31, 2023
+
+### Android Campaign Classic 2.0.1
+
+* Updated the extension to dispatch a Campaign Response Content event containing the device registration status.
+
+## May 25, 2023
+
+### Android Campaign Standard 2.0.4
+
+* Update the AEPCore dependency to version 2.2.0 to resolve a WebView transparency issue and fix message frequency rules for Campaign Standard in-app messages.
+
+## May 23, 2023
+
+### Android Core 2.2.0
+
+* Added support for chaining related events.
+* Added a new `evaluateEvent` API in the `LaunchRulesEngine` class that returns matching consequences without processing them.
+* Fixed a bug where a non-transparent background was visible behind a message webview.
+* Fixed the back button functionality to allow for the dismissal of a displayed in-app message using the device's back button.
+* Fixed in-app message redraw on device orientation change.
+* Fixed a memory leak with the in-app message webview.
+
+### Android Messaging 2.1.4
+
+* Handle in-app interaction tracking for back button presses.
+
+## May 19, 2023
+
+### iOS Assurance 3.1.2
+
+* Added support for chaining related events.
+
+## May 15, 2023
+
+### iOS Core 3.9.0
+
+* Added support for chaining related events.
+* Added a new `evaluate` API in the `LaunchRulesEngine` class that returns matching consequences without processing them.
+* Fixed an issue that caused shared state events to be dispatched out of order.
+* Fixed an issue that captured event history before processing rules.
+
+## May 4, 2023
+
+### Android Campaign Standard 2.0.3
+
+* Adds support for URL-encoded URLs with query parameters used to configure in-app message clickthrough destination.
+
+## April 28, 2023
+
+### Android Messaging 2.1.3
+
+* Fixed a bug causing in-app message display experience events to be sent even when MessagingDelegate suppressed their display.
+
+### iOS Messaging 1.1.4
+
+* Fixed a bug causing in-app message display experience events to be sent even when MessagingDelegate suppressed their display.
+
+## April 25, 2023
+
+### Android Assurance 2.1.0
+
+* Added a new API for quick connect capability.
+* Fixed an issue causing pure Jetpack Compose apps implementing Assurance to add XML color attributes.
+* Switched to use vector support library to reduce SDK size.
+
+## April 24, 2023
+
+### Android Mobile Core 2.1.3
+
+* In-app messages with content overflow now correctly scroll when the message is not observing gestures.
+* Opacity is now correctly calculated for in-app message takeovers.
+* In-app messages will no longer intermittently cause a crash when being displayed on Android 7.
+* Fixed a race condition when querying the event history database.
+
+### Android Messaging 2.1.2
+
+* Fixed a bug causing a crash when incorrectly formatted URLs were used in custom HTML messages.
+
+## April 14, 2023
+
+### Android Mobile Core 2.1.2
+
+* Fixed an issue that prevented some in-app messaging show frequency rules from working correctly.
+* Improved evaluation of logical operators in rules engine.
+
+## April 11, 2023
+
+### Android Edge 2.1.0
+
+* Added support to overwrite the Edge request path with a custom path to support Edge requests for the Media Analytics service.
+
+## April 10, 2023
+
+### Android BOM 1.0.0-beta1
+
+The initial public beta release of the [Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom/1.0.0-beta1) (BOM) artifact for Android is now available.
+
 ## April 6, 2023
 
 ### Flutter Edge Bridge plugin 1.0.0
 
-The Adobe Experience Platform Edge Bridge Flutter plugin is now available. 
+The Adobe Experience Platform Edge Bridge Flutter plugin is now available.
 
 With this release, the extension enables a drop-in solution for converting generated events from the Mobile Core track APIs (trackAction and trackState) into Edge Network events.
+
 * [flutter_aepedgebridge@1.0.0](https://pub.dev/packages/flutter_aepedgebridge)
 
 ## April 5, 2023
 
 ### React Native Edge Bridge library 1.0.0
 
-The Adobe Experience Platform Edge Bridge React Native library is now available. 
+The Adobe Experience Platform Edge Bridge React Native library is now available.
 
 With this release, the extension enables a drop-in solution for converting generated events from the Mobile Core track APIs (trackAction and trackState) into Edge Network events.
+
 * [@adobe/react-native-aepedgebridge:1.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedgebridge/v/1.0.0)
 
 ## April 6, 2023
@@ -202,6 +339,7 @@ New major version of the Mobile Core SDK for Android has been released along wit
 * Security improvements added.
 
 Note that all these extensions must be updated together. Flutter and React plugins not yet updated with these versions, but coming soon.
+
 * Android Mobile Core 2.0.1
 * Android Signal 2.0.1
 * Android Lifecycle 2.0.1
@@ -223,6 +361,7 @@ Note that all these extensions must be updated together. Flutter and React plugi
 * Android Adobe Audience Manager 2.0.0
 
 For help on moving to these versions, please see:
+
 * [Migration guide](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-android)
 * [Migration FAQ](../faq.md#migrating-to-android-mobile-core-2x-and-compatible-extensions)
 
@@ -282,6 +421,7 @@ For help on moving to these versions, please see:
 Please note that the following improvements have been made in the current release:
 
 1. The below APIs have been renamed for alignment with the Adobe Target Mobile SDK for iOS:
+
 * `locationsDisplayed` is now `displayedLocations`
 * `locationClicked` is now `clickedLocation`
 
@@ -384,8 +524,8 @@ Please note that the `registerDevice` API, similar to iOS, no longer provides a 
 
 ### Android UserProfile 2.0.0
 
-- Major version update for [User Profile](../profile/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-userprofile-android).
-- The following APIs have been deprecated and will be removed in a future release:
+* Major version update for [User Profile](../profile/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-userprofile-android).
+* The following APIs have been deprecated and will be removed in a future release:
 
   | Deprecated API                      | Recommended Alternative              |
   | ----------------------------------- | ------------------------------------ |
@@ -566,7 +706,7 @@ With this release, the extension provides APIs that you can use to:
 
 ### iOS AEPAudience 3.0.3
 
-- Fixed integration with Lifecycle extension to send lifecycle metrics when a new app session is started.
+* Fixed integration with Lifecycle extension to send lifecycle metrics when a new app session is started.
 
 ## April 12, 2022
 
@@ -574,12 +714,12 @@ With this release, the extension provides APIs that you can use to:
 
 The following AEP SDK React Native plugins have been published:
 
- - @adobe/react-native-aepcore@1.0.0
- - @adobe/react-native-aepuserprofile@1.0.0
- - @adobe/react-native-aepassurance@3.0.0
- - @adobe/react-native-aepedge@1.0.0
- - @adobe/react-native-aepedgeconsent@1.0.0
- - @adobe/react-native-aepedgeidentity@1.0.0
+ * @adobe/react-native-aepcore@1.0.0
+ * @adobe/react-native-aepuserprofile@1.0.0
+ * @adobe/react-native-aepassurance@3.0.0
+ * @adobe/react-native-aepedge@1.0.0
+ * @adobe/react-native-aepedgeconsent@1.0.0
+ * @adobe/react-native-aepedgeidentity@1.0.0
 
 For more details, see the documentation and release notes in the [aepsdk-react-native repository](https://github.com/adobe/aepsdk-react-native).
 

@@ -1,5 +1,47 @@
 # Release Notes
 
+## May 23, 2023
+
+### Android Core 2.2.0
+
+* Added support for chaining related events.
+* Added a new `evaluateEvent` API in the `LaunchRulesEngine` class that returns matching consequences without processing them.
+* Fixed a bug where a non-transparent background was visible behind a message webview.
+* Fixed the back button functionality to allow for the dismissal of a displayed in-app message using the device's back button.
+* Fixed in-app message redraw on device orientation change.
+* Fixed a memory leak with the in-app message webview.
+
+## May 15, 2023
+
+### iOS Core 3.9.0
+
+* Added support for chaining related events.
+* Added a new `evaluate` API in the `LaunchRulesEngine` class that returns matching consequences without processing them.
+* Fixed an issue that caused shared state events to be dispatched out of order.
+* Fixed an issue that captured event history before processing rules.
+
+## April 24, 2023
+
+### Android Mobile Core 2.1.3
+
+* In-app messages with content overflow now correctly scroll when the message is not observing gestures.
+* Opacity is now correctly calculated for in-app message takeovers.
+* In-app messages will no longer intermittently cause a crash when being displayed on Android 7.
+* Fixed a race condition when querying the event history database.
+
+## April 14, 2023
+
+### Android Mobile Core 2.1.2
+
+* Fixed an issue that prevented some in-app messaging show frequency rules from working correctly.
+* Improved evaluation of logical operators in rules engine.
+
+## April 10, 2023
+
+### Android BOM 1.0.0-beta1
+
+The initial public beta release of the [Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom/1.0.0-beta1) (BOM) artifact for Android is now available.
+
 ## March 31, 2023
 
 ### Android Mobile Core 2.1.1
@@ -28,7 +70,7 @@
 
 ### Android Mobile Core 2.1.0
 
-* Added a new API to the LaunchRulesEngine class that enables adding new rules without replacing the existing ones. 
+* Added a new API to the LaunchRulesEngine class that enables adding new rules without replacing the existing ones.
 
 ## March 13, 2023
 
@@ -36,7 +78,7 @@
 
 * Updated the minimum supported versions to iOS 11.0, tvOS 11.0.
 * Added support for overriding internal logging service with customer-provided implementation.
-* Added a new API to the LaunchRulesEngine class that enables adding new rules without replacing the existing ones. 
+* Added a new API to the LaunchRulesEngine class that enables adding new rules without replacing the existing ones.
 
 ## February 9, 2023
 
