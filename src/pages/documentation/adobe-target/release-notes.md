@@ -6,7 +6,7 @@
 
 Major version update for [Adobe Target](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
-* Updated the minimum supported version to iOS 11.0 and tvOS 11.0. 
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 
 ## March 2, 2023
@@ -24,6 +24,7 @@ Major version update for [Adobe Target](./index.md) for Adobe Experience Platfor
 Please note that the following improvements have been made in the current release:
 
 1. The below APIs have been renamed for alignment with the Adobe Target Mobile SDK for iOS:
+
 * `locationsDisplayed` is now `displayedLocations`
 * `locationClicked` is now `clickedLocation`
 
