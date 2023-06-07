@@ -1,6 +1,13 @@
 <Variant platform="android" task="add" repeat="8"/>
 
-1. Add the Media extension and its dependencies to your project using the app's Gradle file.
+1. Add the Media for Edge Network extension and its dependencies to your project using the app's Gradle file.
+
+```java
+implementation 'com.adobe.marketing.mobile:core:2.+'
+implementation 'com.adobe.marketing.mobile:edge:2.+'
+implementation 'com.adobe.marketing.mobile:edgeidentity:2.+'
+implementation 'com.adobe.marketing.mobile:edgemedia:2.+'
+```
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
@@ -8,41 +15,35 @@ Using dynamic dependency versions is **not** recommended for production apps. Pl
 
 </InlineNestedAlert>
 
-```java
-implementation 'com.adobe.marketing.mobile:core:2.+'
-implementation 'com.adobe.marketing.mobile:identity:2.+'
-implementation 'com.adobe.marketing.mobile:analytics:2.+'
-implementation 'com.adobe.marketing.mobile:media:3.+'
-```
-
 2. Import the libraries in your application's main activity.
 
 #### Java
 
 ```java
 import com.adobe.marketing.mobile.MobileCore;
-import com.adobe.marketing.mobile.Identity;
-import com.adobe.marketing.mobile.Analytics;
-import com.adobe.marketing.mobile.Media;
+import com.adobe.marketing.mobile.Edge;
+import com.adobe.marketing.mobile.edge.identity.Identity;
+import com.adobe.marketing.mobile.edge.media.Media;
 ```
 
 #### Kotlin
 
 ```kotlin
 import com.adobe.marketing.mobile.MobileCore
-import com.adobe.marketing.mobile.Identity
-import com.adobe.marketing.mobile.Analytics
-import com.adobe.marketing.mobile.Media
+import com.adobe.marketing.mobile.Edge
+import com.adobe.marketing.mobile.edge.identity.Identity
+import com.adobe.marketing.mobile.edge.media.Media
 ```
 
 <Variant platform="ios" task="add" repeat="7"/>
 
-1. To add the Media library and its dependencies to your project, add the following pods to your `Podfile`:
+1. To add the Media for Edge Network extension and its dependencies to your project, add the following pods to your `Podfile`:
 
 ```ruby
 pod 'AEPCore'
-pod 'AEPAnalytics'
-pod 'AEPMedia'
+pod 'AEPEdge'
+pod 'AEPEdgeIdentity'
+pod 'AEPEdgeMedia'
 ```
 
 2. In Xcode project, import the Media extension:
@@ -50,19 +51,19 @@ pod 'AEPMedia'
 **Swift**
 
 ```swift
-import AEPMedia
 import AEPCore
-import AEPIdentity
-import AEPAnalytics
+import AEPEdge
+import AEPEdgeIdentity
+import AEPEdgeMedia
 ```
 
 **Objective-C**
 
 ```objectivec
 @import AEPCore;
-@import AEPMedia;
-@import AEPAnalytics;
-@import AEPIdentity;
+@import AEPEdge;
+@import AEPEdgeIdentity;
+@import AEPEdgeMedia;
 ```
 
 <Variant platform="android" task="register" repeat="5"/>
@@ -83,7 +84,7 @@ public class MainApp extends Application {
          MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
 
          List<Class<? extends Extension>> extensions = Arrays.asList(
-                 Media.EXTENSION, Analytics.EXTENSION, Identity.EXTENSION);
+            Edge.EXTENSION, Identity.EXTENSION, Media.EXTENSION);
          MobileCore.registerExtensions(extensions, o -> {
              Log.d(LOG_TAG, "AEP Mobile SDK is initialized");
          });
@@ -102,7 +103,7 @@ class MyApp : Application() {
         MobileCore.setApplication(this)
         MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
 
-        val extensions = listOf(Media.EXTENSION, Analytics.EXTENSION, Identity.EXTENSION)
+        val extensions = listOf(Edge.EXTENSION, Identity.EXTENSION, Media.EXTENSION)
         MobileCore.registerExtensions(extensions) {
             Log.d(LOG_TAG, "AEP Mobile SDK is initialized")
         }
@@ -118,8 +119,8 @@ In your app's `_:didFinishLaunchingWithOptions` function, register the Audience 
 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-   MobileCore.registerExtensions([Media.self, Analytics.self, Identity.self], {
-   MobileCore.configureWith(appId: "yourAppId")
+   MobileCore.registerExtensions([Edge.self, Identity.self, Media.self], {
+   MobileCore.configureWith(appId: "yourEnvironmentId")
  })
  ...
 }
@@ -131,8 +132,8 @@ In your app's `application:didFinishLaunchingWithOptions`, register Media with M
 
 ```objectivec
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [AEPMobileCore registerExtensions:@[AEPMobileMedia.class, AEPMobileAnalytics.class, AEPMobileIdentity.class] completion:^{
-    [AEPMobileCore configureWithAppId: @"yourAppId"];
+    [AEPMobileCore registerExtensions:@[AEPMobileEdgeMedia.class, AEPMobileEdge.class, AEPMobileEdgeIdentity.class] completion:^{
+    [AEPMobileCore configureWithAppId: @"yourEnvironmentId"];
   }];
   ...
 }
