@@ -24,6 +24,7 @@ Note that all these extensions must be updated together.
 * iOS Adobe Experience Platform Edge Network 4.0.0
 * iOS Identity for Edge Network 4.0.0
 * iOS Consent for Edge Network 4.0.0
+* iOS Media for Edge Network 4.0.0
 * iOS Edge Bridge 4.0.0
 * iOS Adobe Journey Optimizer 4.0.0
 * iOS Adobe Journey Optimizer - Decisioning 4.0.0
