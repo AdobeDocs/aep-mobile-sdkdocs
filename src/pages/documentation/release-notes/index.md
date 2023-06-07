@@ -24,7 +24,7 @@ Note that all these extensions must be updated together.
 * iOS Adobe Experience Platform Edge Network 4.0.0
 * iOS Identity for Edge Network 4.0.0
 * iOS Consent for Edge Network 4.0.0
-* iOS Media for Edge Network 4.0.0
+* iOS Media for Edge Network 4.0.0 (Initial release)
 * iOS Edge Bridge 4.0.0
 * iOS Adobe Journey Optimizer 4.0.0
 * iOS Adobe Journey Optimizer - Decisioning 4.0.0
@@ -58,16 +58,17 @@ Major version update for [Adobe Analytics - Media Analytics workflows](../adobe-
 
 * Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+* Fixed an issue that prevented timer from firing when called from background thread.
 
 ## June 6, 2023
 
-### Android Edge Media 2.0.0 (GA)
+### Android Edge Media 2.0.0
 
-General availability release of the [Adobe Streaming Media for Edge Network](../media-for-edge-network/index.md) extension for Android which sends data about audio and video consumption on your streaming applications to the Adobe Experience Platform Edge Network. This enables capabilities for measurement, analysis, and activation with media data across the Adobe Experience Cloud solutions.
+Initial release of the [Adobe Streaming Media for Edge Network](../media-for-edge-network/index.md) extension for Android which sends data about audio and video consumption on your streaming applications to the Adobe Experience Platform Edge Network. This enables capabilities for measurement, analysis, and activation with media data across the Adobe Experience Cloud solutions.
 
-### iOS Edge Media 4.0.0 (GA)
+### iOS Edge Media 4.0.0
 
-General availability release of the [Adobe Streaming Media for Edge Network](../media-for-edge-network/index.md) extension for iOS which sends data about audio and video consumption on your streaming applications to the Adobe Experience Platform Edge Network. This enables capabilities for measurement, analysis, and activation with media data across the Adobe Experience Cloud solutions.
+Initial release of the [Adobe Streaming Media for Edge Network](../media-for-edge-network/index.md) extension for iOS which sends data about audio and video consumption on your streaming applications to the Adobe Experience Platform Edge Network. This enables capabilities for measurement, analysis, and activation with media data across the Adobe Experience Cloud solutions.
 
 ### iOS Places 4.0.0
 
@@ -83,7 +84,7 @@ Major version update for [Adobe Analytics](../adobe-analytics/index.md) for Adob
 * Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 * Resolved an issue with retrieving post-processed data in Assurance for track calls with empty state.
-* Added `a.systemLocale` to Analytics hits when Lifecycle extension is used.
+* Added `a.systemLocale` to Lifecycle hits.
 
 ## June 5, 2023
 

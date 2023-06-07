@@ -8,6 +8,7 @@ Major version update for [Adobe Analytics - Media Analytics workflows](./index.m
 
 * Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+* Fixed an issue that prevented timer from firing when called from background thread.
 
 ## February 3, 2023
 
