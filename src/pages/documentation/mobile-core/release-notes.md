@@ -15,6 +15,9 @@ Please note that the current release includes the following changes:
 
 * Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+* Added `SystemInfoService.getSystemLocaleName()` API which returns the locale by combining device's preferred language and selected region (as set by the user on the system).
+* Lifecycle extension adds `systemlocale` denoting device's preferred locale to its published shared state.
+* Lifecycle launch events will contain `application._dc.language` XDM field denoting device's preferred locale to shared state.
 
 ## May 23, 2023
 

@@ -60,6 +60,14 @@ Major version update for [Adobe Analytics - Media Analytics workflows](../adobe-
 
 ## June 6, 2023
 
+### Android Edge Media 2.0.0 (GA)
+
+General availability release of the [Adobe Streaming Media for Edge Network](../media-for-edge-network/index.md) extension for Android which sends data about audio and video consumption on your streaming applications to the Adobe Experience Platform Edge Network. This enables capabilities for measurement, analysis, and activation with media data across the Adobe Experience Cloud solutions.
+
+### iOS Edge Media 4.0.0 (GA)
+
+General availability release of the [Adobe Streaming Media for Edge Network](../media-for-edge-network/index.md) extension for iOS which sends data about audio and video consumption on your streaming applications to the Adobe Experience Platform Edge Network. This enables capabilities for measurement, analysis, and activation with media data across the Adobe Experience Cloud solutions.
+
 ### iOS Places 4.0.0
 
 Major version update for [Adobe Experience Platform Location Service](../places/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
@@ -73,6 +81,8 @@ Major version update for [Adobe Analytics](../adobe-analytics/index.md) for Adob
 
 * Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+* Resolved an issue with retrieving post-processed data in Assurance for track calls with empty state.
+* Added `a.systemLocale` to Analytics hits when Lifecycle extension is used.
 
 ## June 5, 2023
 
@@ -167,6 +177,9 @@ Please note that the current release includes the following changes:
 
 * Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+* Added `SystemInfoService.getSystemLocaleName()` API which returns the locale by combining device's preferred language and selected region (as set by the user on the system).
+* Lifecycle extension adds `systemlocale` denoting device's preferred locale to its published shared state.
+* Lifecycle launch events will contain `application._dc.language` XDM field denoting device's preferred locale to shared state.
 
 ### iOS RulesEngine 4.0.0
 

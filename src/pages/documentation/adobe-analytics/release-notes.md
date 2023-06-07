@@ -8,6 +8,8 @@ Major version update for [Adobe Analytics](./index.md) for Adobe Experience Plat
 
 * Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+* Resolved an issue with retrieving post-processed data in Assurance for track calls with empty state.
+* Added `a.systemLocale` to Analytics hits when Lifecycle extension is used.
 
 ## March 27, 2023
 
