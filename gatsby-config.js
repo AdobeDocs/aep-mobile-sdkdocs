@@ -393,11 +393,11 @@ module.exports = {
                             },
                             {
                                 title: "API reference",
-                                path: "/documentation/adobe-analytics/api-reference/"
+                                path: "/documentation/adobe-analytics/api-reference"
                             },
                             {
                                 title: 'Event reference',
-                                path: '/documentation/adobe-analytics/event-reference/'
+                                path: '/documentation/adobe-analytics/event-reference'
                             },
                             {
                                 title: "Product variable",
@@ -405,11 +405,11 @@ module.exports = {
                             },
                             {
                                 title: "Frequently asked questions",
-                                path: "/documentation/adobe-analytics/faq/"
+                                path: "/documentation/adobe-analytics/faq"
                             },
                             {
                                 title: 'Release notes',
-                                path: '/documentation/adobe-analytics/release-notes/'
+                                path: '/documentation/adobe-analytics/release-notes'
                             }
                         ]
                     },
@@ -427,7 +427,7 @@ module.exports = {
                             },
                             {
                                 title: 'Release notes',
-                                path: '/documentation/media-for-edge-network/release-notes/'
+                                path: '/documentation/media-for-edge-network/release-notes'
                             }
                         ]
                     },
