@@ -2,6 +2,11 @@ import Tabs from './tabs/index.md'
 
 # Adobe Analytics - Media Analytics for Audio and Video
 
+<InlineAlert variant="success" slots="header, text"/>
+Adobe Streaming Media for Edge Network extension is now available!
+
+Refer to the [Migrating to Media for Edge Network Guide](migration-guide.md) and [Media for Edge Network extension](../media-for-edge-network/index.md) documentation to learn more about implementing Streaming Media using Adobe Experience Edge Network.
+
 <InlineAlert variant="warning" slots="text"/>
 
 This extension requires the [Adobe Analytics for Media](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html) add-on SKU. To learn more, contact your Adobe Customer Success Manager.
