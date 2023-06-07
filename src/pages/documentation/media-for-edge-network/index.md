@@ -21,7 +21,7 @@ Media for Edge Network requires Edge and Edge Identity extensions. Make sure to 
 
 ## Configure Media for Edge Network extension in the Data Collection Tags
 
-1. In the Data Collection Tags, select the **Extensions** tab in your mobile property.
+1. In the [Data Collection Tags](https://experience.adobe.com/#/data-collection/tags), select the **Extensions** tab in your mobile property.
 2. On the **Catalog** tab, locate the **Adobe Streaming Media for Edge Network** extension, and select **Install**.
 3. Type the extension settings. For more information, see [Configure Media for Edge Network extension](#configure-the-media-for-edge-network-extension).
 4. Select **Save**.
