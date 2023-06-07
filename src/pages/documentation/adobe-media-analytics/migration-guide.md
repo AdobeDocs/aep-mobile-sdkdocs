@@ -21,7 +21,6 @@ import Tabs from './tabs/migration-guide.md'
 | `Player Name` | "edgeMedia.playerName" | String | **Yes** |
 | `Application Version` | "edgeMedia.appVersion" | String | No |
 
-
 ## Dependency Changes
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
@@ -46,8 +45,7 @@ iOS
 
 Refer to the guide on how to [configure and setup Media for Edge Network](../media-for-edge-network/index.md) to learn more.
 
-
-## Install extensions 
+## Install extensions
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -55,12 +53,11 @@ Android
 
 <Tabs query="platform=android&section=install-dependency"/>
 
-iOS 
+iOS
 
 <Tabs query="platform=ios&section=install-dependency"/>
 
-
-## Import & Register extensions 
+## Import & Register extensions
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -71,7 +68,6 @@ Android
 iOS
 
 <Tabs query="platform=ios&section=import-dependency"/>
-
 
 ## Public API changes
 
@@ -87,10 +83,9 @@ iOS
 
 <Tabs query="platform=ios&section=api-changes"/>
 
-
 ## Granular ad tracking
 
-Media extension allowed for ad content tracking of `1 second` when setting the `MediaConstants.MediaObjectKey.GRANULAR_AD_TRACKING` key in the media object. 
+Media extension allowed for ad content tracking of `1 second` when setting the `MediaConstants.MediaObjectKey.GRANULAR_AD_TRACKING` key in the media object.
 
 Media for Edge Network extension supports customizable ping intervals. `Ad content` tracking interval can be set in the range `[1-10] seconds`, and `main content` tracking interval can be set in the range `[10-50] seconds`. For more details, refer to the [createTrackerWithConfig API](../media-for-edge-network/api-reference.md/#createtrackerwithconfig).
 
@@ -104,11 +99,9 @@ iOS
 
 <Tabs query="platform=ios&section=custom-interval"/>
 
-
 ## Downloaded content tracking
 
 Media for Edge Network extension currently does not support the downloaded content tracking workflow.
-
 
 ## API reference
 The Media for Edge Network extension offers APIs that are similar to those provided by the Media Analytics extension. To explore the Media for Edge Network extension APIs and understand their usage, please refer to the [API reference docs](../media-for-edge-network/api-reference.md).

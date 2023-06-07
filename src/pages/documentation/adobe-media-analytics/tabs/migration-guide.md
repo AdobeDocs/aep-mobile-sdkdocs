@@ -41,7 +41,7 @@ a. Using repository URL
 b. Using `Package.swift` file
 
 Make changes to your dependencies as shown below:
-   
+
 ```diff
   dependencies: [
   .package(url: "https://github.com/adobe/aepsdk-core-ios.git", .upToNextMajor(from: "4.0.0")),
@@ -120,12 +120,11 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-
 <Variant platform="android" section="api-changes" repeat="15"/>
 
 #### package name
 
-The Media for Edge Network extension uses the same class names as the Media Analytics extension. The Java package, however, is changed to `com.adobe.marketing.mobile.edge.media`. 
+The Media for Edge Network extension uses the same class names as the Media Analytics extension. The Java package, however, is changed to `com.adobe.marketing.mobile.edge.media`.
 
 ```diff
 - import com.adobe.marketing.mobile.Media;

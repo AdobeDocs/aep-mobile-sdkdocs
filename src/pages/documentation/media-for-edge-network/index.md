@@ -1,6 +1,7 @@
 import Tabs from './tabs/index.md'
 
 # Adobe Streaming Media for Edge Network
+
 The Media for Edge Nework extension enables tracking user's engagement and consumption of audio and video content on mobile devices.
 
 ## Before starting

@@ -164,6 +164,7 @@ iOS
 <Tabs query="platform=ios&api=create-qoe-object"/>
 
 ### createStateObject
+
 Creates an instance of the Player State object which is a dictionary that contains information about the player state.
 
 | Parameter | Description | Required |

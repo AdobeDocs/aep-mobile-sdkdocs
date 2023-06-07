@@ -35,7 +35,6 @@ import com.adobe.marketing.mobile.Analytics
 import com.adobe.marketing.mobile.Media
 ```
 
-
 <Variant platform="ios" task="add" repeat="7"/>
 
 1. To add the Media library and its dependencies to your project, add the following pods to your `Podfile`:
@@ -97,7 +96,7 @@ public class MainApp extends Application {
 ```kotlin
 class MyApp : Application() {
     val ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID"
-    
+
     override fun onCreate() {
         super.onCreate()
         MobileCore.setApplication(this)
@@ -121,7 +120,7 @@ In your app's `_:didFinishLaunchingWithOptions` function, register the Audience 
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
    MobileCore.registerExtensions([Media.self, Analytics.self, Identity.self], {
    MobileCore.configureWith(appId: "yourAppId")
- })  
+ })
  ...
 }
 ```

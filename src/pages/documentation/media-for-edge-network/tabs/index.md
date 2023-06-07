@@ -11,7 +11,7 @@ implementation 'com.adobe.marketing.mobile:edgemedia:2.+'
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information.
 
 </InlineNestedAlert>
 
@@ -34,7 +34,6 @@ import com.adobe.marketing.mobile.Edge
 import com.adobe.marketing.mobile.edge.identity.Identity
 import com.adobe.marketing.mobile.edge.media.Media
 ```
-
 
 <Variant platform="ios" task="add" repeat="7"/>
 
@@ -98,7 +97,7 @@ public class MainApp extends Application {
 ```kotlin
 class MyApp : Application() {
     val ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID"
-    
+
     override fun onCreate() {
         super.onCreate()
         MobileCore.setApplication(this)
@@ -122,7 +121,7 @@ In your app's `_:didFinishLaunchingWithOptions` function, register the Audience 
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
    MobileCore.registerExtensions([Edge.self, Identity.self, Media.self], {
    MobileCore.configureWith(appId: "yourEnvironmentId")
- })  
+ })
  ...
 }
 ```
