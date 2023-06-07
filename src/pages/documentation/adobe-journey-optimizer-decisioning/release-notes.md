@@ -8,6 +8,7 @@ Major version update for [Adobe Journey Optimizer - Decisioning](./index.md) for
 
 * Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+* Added support for using the Optimize SDK extension in [App Extensions](https://developer.apple.com/app-extensions/).
 
 ## February 2, 2023
 
