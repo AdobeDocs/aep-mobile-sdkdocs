@@ -10,7 +10,7 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 New major version of the Mobile Core SDK for iOS has been released along with updates to other extensions. The current release includes the following changes:
 
-* Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0 (for extensions which support tvOS).
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 
 Note that all these extensions must be updated together.
