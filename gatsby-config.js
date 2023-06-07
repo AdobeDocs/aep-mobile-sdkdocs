@@ -424,6 +424,10 @@ module.exports = {
                             {
                                 title: "API reference",
                                 path: "documentation/media-for-edge-network/api-reference"
+                            },
+                            {
+                                title: 'Release notes',
+                                path: '/documentation/media-for-edge-network/release-notes/'
                             }
                         ]
                     },
