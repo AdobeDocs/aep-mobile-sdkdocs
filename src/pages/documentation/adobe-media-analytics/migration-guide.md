@@ -104,4 +104,5 @@ iOS
 Media for Edge Network extension currently does not support the downloaded content tracking workflow.
 
 ## API reference
+
 The Media for Edge Network extension offers APIs that are similar to those provided by the Media Analytics extension. To explore the Media for Edge Network extension APIs and understand their usage, please refer to the [API reference docs](../media-for-edge-network/api-reference.md).
