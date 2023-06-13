@@ -1,5 +1,23 @@
 # Release Notes
 
+## June 12, 2023
+
+### Android Core 2.2.1
+
+* Updated EventDataUtils to drop entries with unsupported values during cloning instead of throwing exception.
+* Fixed a crash when displaying in-app messages.
+* Fixed rounded corners when displaying in-app messages.
+* Fixed an issue where the shared state published by Event Hub was mutable.
+
+### Android Lifecycle 2.0.3
+
+* Fixed an issue where session start time (`starttimestampmillis`) was shared in seconds instead of milliseconds in Lifecycle shared state.
+* Fixed an issue where session start time (`starttimestampmillis`), previous session start time (`previoussessionstarttimestampmillis`) and previous session pause time (`previoussessionpausetimestampmillis`) were shared in seconds instead of milliseconds in Lifecycle response event.
+
+### Android Identity 2.0.3
+
+* Added debug logs around ECID generation.
+
 ## June 1, 2023
 
 ### iOS Core 4.0.0
