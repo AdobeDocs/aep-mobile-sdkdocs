@@ -48,6 +48,10 @@ Please note that the current release includes the following changes:
 * Fixed in-app message redraw on device orientation change.
 * Fixed a memory leak with the in-app message webview.
 
+### Android Lifecycle 2.0.2
+
+* Chain Lifecycle events.
+
 ## May 15, 2023
 
 ### iOS Core 3.9.0

@@ -296,6 +296,10 @@ Please note that the current release includes the following changes:
 * Fixed in-app message redraw on device orientation change.
 * Fixed a memory leak with the in-app message webview.
 
+### Android Lifecycle 2.0.2
+
+* Chain Lifecycle events.
+
 ### Android Messaging 2.1.4
 
 * Handle in-app interaction tracking for back button presses.
