@@ -298,7 +298,7 @@ Please note that the current release includes the following changes:
 
 ### Android Lifecycle 2.0.2
 
-* Chain the Lifecycle events dispatched by the extension to their corresponding Lifecycle request events.
+* Chain the events dispatched by the Lifecycle extension to their corresponding request events.
 
 ### Android Messaging 2.1.4
 
@@ -315,7 +315,7 @@ Please note that the current release includes the following changes:
 ### iOS Core 3.9.0
 
 * Added support for chaining related events.
-* Chain the Lifecycle events dispatched by the extension to their corresponding Lifecycle request events.
+* Chain the events dispatched by the Lifecycle extension to their corresponding request events.
 * Added a new `evaluate` API in the `LaunchRulesEngine` class that returns matching consequences without processing them.
 * Fixed an issue that caused shared state events to be dispatched out of order.
 * Fixed an issue that captured event history before processing rules.
