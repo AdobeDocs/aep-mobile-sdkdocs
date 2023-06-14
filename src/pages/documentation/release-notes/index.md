@@ -50,7 +50,7 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 ### Android Lifecycle 2.0.3
 
 * Fixed an issue where session start time (`starttimestampmillis`) was shared in seconds instead of milliseconds in Lifecycle shared state.
-* Fixed an issue where session start time (`starttimestampmillis`), previous session start time, (`previoussessionstarttimestampmillis`) and previous session pause time (`previoussessionpausetimestampmillis`) were shared in seconds instead of milliseconds in Lifecycle response event.
+* Fixed an issue where session start time (`starttimestampmillis`), previous session start time (`previoussessionstarttimestampmillis`), and previous session pause time (`previoussessionpausetimestampmillis`) were shared in seconds instead of milliseconds in Lifecycle response event.
 
 ### Android Identity 2.0.3
 
