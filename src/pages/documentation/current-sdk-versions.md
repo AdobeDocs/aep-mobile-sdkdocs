@@ -36,6 +36,10 @@
 
 <InlineAlert variant="info" slots="text"/>
 
+[Check out the release details](./key-updates/v4-ios-release.md) for the 4.0 release of the Adobe Experience Platform Mobile SDKs for iOS.
+
+<InlineAlert variant="info" slots="text"/>
+
 **Migrate to latest Mobile SDKs for iOS**<br/>If you are currently using the Objective-C (ACP-prefix) libraries, please see the [Migrating to latest Mobile SDKs for iOS](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-swift/) guide for next steps.<br/>The latest Mobile SDK for iOS supports iOS 11 or later; requires Swift 5.1 or newer and Xcode 14.1 or newer. In addition to **CocoaPods**, **Swift Package Manager (SPM)** installation option is supported with the latest iOS Swift SDKs! Find more details at the GitHub links below.
 
 | Extension | tvOS | App Extension | CocoaPods | GitHub |
