@@ -5,9 +5,10 @@
 1. Add the Mobile Core, Identity and Target extensions to your project using the app's Gradle file.
 
 ```java
-implementation 'com.adobe.marketing.mobile:core:2.+'
-implementation 'com.adobe.marketing.mobile:identity:2.+'
-implementation 'com.adobe.marketing.mobile:target:2.+'
+implementation platform('com.adobe.marketing.mobile:sdk-bom:1.+')
+implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:identity'
+implementation 'com.adobe.marketing.mobile:target'
 ```
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">

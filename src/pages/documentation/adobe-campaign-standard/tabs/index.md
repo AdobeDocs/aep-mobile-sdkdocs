@@ -3,12 +3,13 @@
 1. Add the Campaign Standard, [Mobile Core](../mobile-core/index.md) and [Profile](../profile/index.md) extensions to your project using the app's Gradle file.
 
 ```java
-implementation 'com.adobe.marketing.mobile:campaign:2.+'
-implementation 'com.adobe.marketing.mobile:core:2.+'
-implementation 'com.adobe.marketing.mobile:identity:2.+'
-implementation 'com.adobe.marketing.mobile:lifecycle:2.+'
-implementation 'com.adobe.marketing.mobile:signal:2.+'
-implementation 'com.adobe.marketing.mobile:userprofile:2.+'
+implementation platform('com.adobe.marketing.mobile:sdk-bom:1.+')
+implementation 'com.adobe.marketing.mobile:campaign'
+implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:identity'
+implementation 'com.adobe.marketing.mobile:lifecycle'
+implementation 'com.adobe.marketing.mobile:signal'
+implementation 'com.adobe.marketing.mobile:userprofile'
 ```
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">

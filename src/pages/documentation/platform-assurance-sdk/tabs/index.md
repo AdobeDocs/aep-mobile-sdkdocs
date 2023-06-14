@@ -3,8 +3,9 @@
 1. Add the following libraries in your project's `build.gradle` file:
 
 ```java
-implementation 'com.adobe.marketing.mobile:core:2.+'
-implementation 'com.adobe.marketing.mobile:assurance:2.+'
+implementation platform('com.adobe.marketing.mobile:sdk-bom:1.+')
+implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:assurance'
 ```
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">

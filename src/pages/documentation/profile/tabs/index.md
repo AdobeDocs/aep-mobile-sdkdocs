@@ -3,8 +3,9 @@
 1. Add the `UserProfile` library to your project using the app's gradle file.
 
 ```java
-implementation 'com.adobe.marketing.mobile:core:2.+'
-implementation 'com.adobe.marketing.mobile:userprofile:2.+'
+implementation platform('com.adobe.marketing.mobile:sdk-bom:1.+')
+implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:userprofile'
 ```
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">

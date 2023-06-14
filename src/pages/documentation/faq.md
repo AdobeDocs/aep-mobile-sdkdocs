@@ -193,10 +193,11 @@ To resolve this error, upgrade all your solution SDKs to the [most recent versio
 The **com.adobe.marketing.mobile:sdk-core** dependency is no longer available for the latest version of Mobile SDK. Instead, select the appropriate solution SDKs based on your requirements from the following options:
 
 ```java
-com.adobe.marketing.mobile:core:2.+
-com.adobe.marketing.mobile:lifecycle:2.+
-com.adobe.marketing.mobile:signal:2.+
-com.adobe.marketing.mobile:identity:2.+
+implementation platform('com.adobe.marketing.mobile:sdk-bom:1.+')
+implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:lifecycle'
+implementation 'com.adobe.marketing.mobile:identity'
+implementation 'com.adobe.marketing.mobile:signal'
 ```
 
 ### How do I upgrade to the latest version of Mobile SDK for Android if my app uses Mobile Services? 

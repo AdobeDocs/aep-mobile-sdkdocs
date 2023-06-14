@@ -3,8 +3,9 @@
 1. Add the Mobile Core and Places extensions to your project using the app's Gradle file.
 
 ```java
-implementation 'com.adobe.marketing.mobile:core:2.+'
-implementation 'com.adobe.marketing.mobile:places:2.+'
+implementation platform('com.adobe.marketing.mobile:sdk-bom:1.+')
+implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:places'
 ```
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">

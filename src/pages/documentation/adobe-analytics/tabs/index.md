@@ -10,9 +10,10 @@ Using dynamic dependency versions is **not** recommended for production apps. Pl
 </InlineNestedAlert>
 
 ```java
-implementation 'com.adobe.marketing.mobile:core:2.+'
-implementation 'com.adobe.marketing.mobile:identity:2.+'
-implementation 'com.adobe.marketing.mobile:analytics:2.+'
+implementation platform('com.adobe.marketing.mobile:sdk-bom:1.+')
+implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:identity'
+implementation 'com.adobe.marketing.mobile:analytics'
 ```
 
 2. Import the Analytics extension in your application's main activity.

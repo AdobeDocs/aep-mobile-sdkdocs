@@ -11,8 +11,9 @@ Using dynamic dependency versions is **not** recommended for production apps. Pl
 </InlineNestedAlert>
 
 ```java
-implementation 'com.adobe.marketing.mobile:core:2.+'
-implementation 'com.adobe.marketing.mobile:signal:2.+'
+implementation platform('com.adobe.marketing.mobile:sdk-bom:1.+')
+implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:signal'
 ```
 
 Import the Signal and MobileCore extensions in your application's main activity.
