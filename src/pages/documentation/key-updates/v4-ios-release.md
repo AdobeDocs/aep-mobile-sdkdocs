@@ -4,7 +4,7 @@
 
 ## Why are we getting another major update already?
 
-Apple has added an annual requirement of increasing the minimum version of Xcode used when [submitting to the App Store](https://developer.apple.com/ios/submit/). Each Xcode version only supports back to a specific minimum version of iOS. Loosely speaking, the [Xcode version and _minimum_ iOS version are correlated](https://developer.apple.com/support/xcode/). 
+Apple has added an annual requirement of increasing the minimum version of Xcode used when [submitting to the App Store](https://developer.apple.com/ios/submit/). Each Xcode version only supports back to a specific minimum version of iOS. Loosely speaking, the [Xcode version and *minimum* iOS version are correlated](https://developer.apple.com/support/xcode/).
 
 In order to align with Apple's changing requirements, we will also be publishing an annual major release of the Adobe Experience Platform Mobile SDKs for iOS ("Mobile SDKs"). In this yearly major update, you can expect the following changes:
 
@@ -20,7 +20,7 @@ The main goal for this change is to simplify distribution of the Mobile SDKs. Al
 
 ## Why did some of the extensions skip major versions?
 
-You may be wondering "What happened to versions 2 and 3 of AEPEdge?" 
+You may be wondering "What happened to versions 2 and 3 of AEPEdge?"
 
 In order to achieve our goal of unifying major versions, AEPEdge (and a handful of other extensions) had to skip one or more major versions. Don't worry, you didn't miss them.
 
@@ -54,13 +54,13 @@ Google has been making regular requirements to [increase target API levels for G
 
 Based on their previous activity, here is when we expect platform restrictions to be announced:
 
-* Apple has started enforcing their minimum [Xcode and iOS requirements](https://developer.apple.com/news/upcoming-requirements/) near the end of April every year. 
-* Google has announced that their [Target API level deadlines will change annually on August 31st](https://support.google.com/googleplay/android-developer/answer/11926878?hl=en#). 
+* Apple has started enforcing their minimum [Xcode and iOS requirements](https://developer.apple.com/news/upcoming-requirements/) near the end of April every year.
+* Google has announced that their [Target API level deadlines will change annually on August 31st](https://support.google.com/googleplay/android-developer/answer/11926878?hl=en#).
 
 Our plan is to coordinate major release for both iOS and Android at the same time.
 
-While the SDK release dates won't aligned exactly with the platform requirements, you can count on seeing them sometime _prior_ to the enforcement dates provided by Apple (note that Google is less strict, providing a one year grace period to update Target API).
+While the SDK release dates won't aligned exactly with the platform requirements, you can count on seeing them sometime *prior* to the enforcement dates provided by Apple (note that Google is less strict, providing a one year grace period to update Target API).
 
 ## How will Flutter and React Native versions be maintained?
 
-Flutter and React Native are both wrappers around our native (iOS & Android) SDKs. You can expect to see a major version update for these wrappers near the time of the major version updates to their underlying native SDKs. 
+Flutter and React Native are both wrappers around our native (iOS & Android) SDKs. You can expect to see a major version update for these wrappers near the time of the major version updates to their underlying native SDKs.
