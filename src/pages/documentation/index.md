@@ -7,6 +7,10 @@ description: This is the overview page of Mobile SDK
 
 Welcome to the home of Adobe Experience Platform Mobile SDK documentation.
 
+<InlineAlert variant="info" slots="text"/>
+
+Check out our page discussing how we will [align major SDK versions](./resources/major-version-alignment.md) for future releases of the Adobe Experience Platform Mobile SDKs and wrappers.
+
 <InlineAlert variant="success" slots="header, text"/>
 
 Mobile Core 2.x for Android and the compatible extensions are here!

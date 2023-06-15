@@ -622,6 +622,10 @@ module.exports = {
                         path: "/documentation/resources"
                     },
                     {
+                        title: "Aligning major SDK versions",
+                        path: "/documentation/resources/major-version-alignment"
+                    },
+                    {
                         title: "Upgrade to the Experience Platform SDKs",
                         path: "documentation/upgrade-platform-sdks",
                         pages: [
