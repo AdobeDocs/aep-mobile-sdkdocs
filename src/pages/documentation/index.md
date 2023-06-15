@@ -43,10 +43,10 @@ The Adobe Experience Platform Mobile SDK supports the following platforms:
 
 ## Resources
 
-* [Getting started](./getting-started/index.md)
-* [Getting the Experience Platform SDKs](./getting-started/get-the-sdk.md)
-* [Frequently asked questions](./faq.md)
-* [Why use the Adobe Experience Platform Mobile SDKs](https://medium.com/adobetech/accelerate-your-mobile-application-development-with-adobe-experience-platform-mobile-sdk-and-launch-ed023536d611)
+- [Getting started](./getting-started/index.md)
+- [Getting the Experience Platform SDKs](./getting-started/get-the-sdk.md)
+- [Frequently asked questions](./faq.md)
+- [Why use the Adobe Experience Platform Mobile SDKs](https://medium.com/adobetech/accelerate-your-mobile-application-development-with-adobe-experience-platform-mobile-sdk-and-launch-ed023536d611)
 
 ## Get Help
 
