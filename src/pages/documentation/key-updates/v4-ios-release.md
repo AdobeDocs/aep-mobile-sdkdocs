@@ -52,9 +52,15 @@ Google has been making regular requirements to [increase target API levels for G
 
 ## When will the annual major updates be released?
 
-We plan to align as closely as possible with the changing requirements of the target platform. While the SDK release dates won't be perfectly aligned, you can count on seeing them sometime following the enforcement dates provided by Apple and Google.
-
-Based on their previous activity, we have some good guesses on the time frame when you can expect these requirements:
+Based on their previous activity, here is when we expect platform restrictions to be announced:
 
 * Apple has started enforcing their minimum [Xcode and iOS requirements](https://developer.apple.com/news/upcoming-requirements/) near the end of April every year. 
 * Google has announced that their [Target API level deadlines will change annually on August 31st](https://support.google.com/googleplay/android-developer/answer/11926878?hl=en#). 
+
+Our plan is to coordinate major release for both iOS and Android at the same time.
+
+While the SDK release dates won't aligned exactly with the platform requirements, you can count on seeing them sometime _prior_ to the enforcement dates provided by Apple (note that Google is less strict, providing a one year grace period to update Target API).
+
+## How will Flutter and React Native versions be maintained?
+
+Flutter and React Native are both wrappers around our native (iOS & Android) SDKs. You can expect to see a major version update for these wrappers near the time of the major version updates to their underlying native SDKs. 
