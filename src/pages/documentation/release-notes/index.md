@@ -4,7 +4,67 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
-## June 8, 2023
+## June 15, 2023
+
+### Android Core 2.2.2
+
+* Fixed an issue in Android API 22 and below where the in-app message would sometimes take over the screen, rendering the app unresponsive.
+* Fixed an issue where the onShow method in FullscreenMessageDelegate and MessagingDelegate was being notified multiple times after displaying an in-app message.
+* Improved the handling of in-app messages during orientation changes.
+
+## June 12, 2023
+
+### Android BOM 1.0.1
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom/1.0.1)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header="Expand">
+
+| Extension artifact | BOM (1.0.0) | BOM (1.0.1) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:campaignclassic** | **2.0.0** | **2.0.1**|
+| **com.adobe.marketing.mobile:core** | **2.2.0** | **2.2.1**|
+| **com.adobe.marketing.mobile:identity** | **2.0.2** | **2.0.3**|
+| **com.adobe.marketing.mobile:lifecycle** | **2.0.2** | **2.0.3**|
+| com.adobe.marketing.mobile:analytics | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:assurance | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:edge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.1.4 | 2.1.4 |
+| com.adobe.marketing.mobile:optimize | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:places | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:userprofile | 2.0.0 | 2.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Core 2.2.1
+
+* Updated EventDataUtils to drop entries with unsupported values during cloning instead of throwing an exception.
+* Fixed a crash when displaying in-app messages.
+* Fixed rounded corners when displaying in-app messages.
+* Fixed an issue where the shared state published by Event Hub was mutable.
+
+### Android Lifecycle 2.0.3
+
+* Fixed an issue where session start time (`starttimestampmillis`) was shared in seconds instead of milliseconds in Lifecycle shared state.
+* Fixed an issue where session start time (`starttimestampmillis`), previous session start time (`previoussessionstarttimestampmillis`), and previous session pause time (`previoussessionpausetimestampmillis`) were shared in seconds instead of milliseconds in Lifecycle response event.
+
+### Android Identity 2.0.3
+
+* Added debug logs around ECID generation.
+
+## June 9, 2023
 
 ### iOS Mobile Core 4.x and compatible extensions
 
@@ -13,7 +73,7 @@ New major version of the Mobile Core SDK for iOS has been released along with up
 * Updated the minimum supported version to iOS 11.0 and tvOS 11.0 (for extensions which support tvOS).
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 
-Note that all these extensions must be updated together.
+Note that all these extensions must be updated together. Updates to install instructions in the Data Collection UI are coming soon.
 
 * iOS Mobile Core 4.0.0
 * iOS Signal 4.0.0
@@ -189,7 +249,7 @@ Please note that the current release includes the following changes:
 
 ### Android BOM 1.0.0
 
-* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom/1.0.0-beta1)) release includes changes to the following Android extensions.
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom/1.0.0)) release includes changes to the following Android extensions.
 
 <Accordion>
 
@@ -244,6 +304,10 @@ Please note that the current release includes the following changes:
 * Fixed in-app message redraw on device orientation change.
 * Fixed a memory leak with the in-app message webview.
 
+### Android Lifecycle 2.0.2
+
+* Chain the events dispatched by the Lifecycle extension to their corresponding request events.
+
 ### Android Messaging 2.1.4
 
 * Handle in-app interaction tracking for back button presses.
@@ -259,6 +323,7 @@ Please note that the current release includes the following changes:
 ### iOS Core 3.9.0
 
 * Added support for chaining related events.
+* Chain the events dispatched by the Lifecycle extension to their corresponding request events.
 * Added a new `evaluate` API in the `LaunchRulesEngine` class that returns matching consequences without processing them.
 * Fixed an issue that caused shared state events to be dispatched out of order.
 * Fixed an issue that captured event history before processing rules.
