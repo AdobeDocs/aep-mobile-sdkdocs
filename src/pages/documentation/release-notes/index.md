@@ -4,6 +4,14 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## June 15, 2023
+
+### Android Core 2.2.2
+
+* Fixed an issue in Android API 22 and below where the in-app message would sometimes take over the screen, rendering the app unresponsive.
+* Fixed an issue where the onShow method in FullscreenMessageDelegate and MessagingDelegate was being notified multiple times after displaying an in-app message.
+* Improved the handling of in-app messages during orientation changes.
+
 ## June 12, 2023
 
 ### Android BOM 1.0.1
