@@ -81,7 +81,7 @@ Android deeplinks require intent filters to be added in the app manifest to corr
 
 <InlineAlert variant="help" slots="text"/>
 
-iOS deeplinks require a custom url scheme to be setup in the application's `info` tab within Xcode to correctly handle deeplink URLs. Please see the [Apple developer documentation](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app) for more information.
+iOS deeplinks require a custom URL scheme to be setup in the application's `info` tab within Xcode to correctly handle deeplink URLs. Please see the [Apple developer documentation](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app) for more information.
 
 If the provided URL contains a custom scheme, the app that handles the custom scheme will be launched.
 
