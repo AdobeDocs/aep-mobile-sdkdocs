@@ -8,7 +8,7 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 ### Android BOM 2.0.0
 
-* Align the major version to match the current major version of the MobileCore extension for Android. Refer [Major Version Alignment](../resources/major-version-alignment.md).
+* Align the major version to match the current major version of the MobileCore extension for Android. Please refer to the [major version alignment document](../resources/major-version-alignment.md).
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom/2.0.0)) release includes changes to the following Android extensions.
 
 <Accordion>
