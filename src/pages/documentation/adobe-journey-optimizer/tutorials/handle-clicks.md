@@ -75,10 +75,16 @@ The `link` parameter must be URL encoded. If you are setting this value in the A
 
 ### Open a deeplink
 
-If the provided URL contains a custom scheme, the app that handles the custom scheme will be launched.
-
 The example below will dismiss the current in-app message, then launch an app owned by the same developer which handles the scheme `myAppScheme`:
 
 ```
 adbinapp://dismiss?link=myAppScheme://deeplinked
 ```
+
+<InlineAlert variant="help" slots="text"/>
+
+Android deeplinks require intent filters to be added in the app manifest to correctly handle deeplink URL's. Please see the Android developer documentation for more information: https://developer.android.com/training/app-links/deep-linking
+
+<InlineAlert variant="help" slots="text"/>
+
+iOS deeplinks require a custom url scheme to be setup in the application's `info` tab within Xcode to correctly handle deeplink URL's. Please see the Apple developer documenation for more information: https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app
