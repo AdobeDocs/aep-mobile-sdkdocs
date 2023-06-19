@@ -4,7 +4,7 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
-## June 12, 2023
+## June 19, 2023
 
 ### Android BOM 2.0.0
 
