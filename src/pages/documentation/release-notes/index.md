@@ -4,6 +4,25 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## June 20, 2023
+
+## AEP React Native libraries 5.0.0
+
+The following React Native libraries have been upgraded to use the Adobe iOS SDK 4.x. Starting with version 5.0.0 of the Adobe React Native SDK, all React Native libraries that share the same major version are compatible with each other.
+
+ - [@adobe/react-native-aepcore => 5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepcore/v/5.0.0)
+ - [@adobe/react-native-aepassurance => 5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepassurance/v/5.0.0)
+ - [@adobe/react-native-aepuserprofile => 5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepuserprofile/v/5.0.0)
+ - [@adobe/react-native-aepedgebridge => 5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedgebridge/v/5.0.0)
+ - [@adobe/react-native-aepedgeconsent => 5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedgeconsent/v/5.0.0)
+ - [@adobe/react-native-aepedgeidentity => 5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedgeidentity/v/5.0.0)
+ - [@adobe/react-native-aepoptimize => 5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepoptimize/v/5.0.0)
+ - [@adobe/react-native-aepedge => 5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedge/v/5.0.0)
+ - [@adobe/react-native-aepplaces => 5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepplaces/v/5.0.0)
+ - [@adobe/react-native-aeptarget => 5.0.0](https://www.npmjs.com/package/@adobe/react-native-aeptarget/v/5.0.0)
+ - [@adobe/react-native-aepcampaignclassic => 5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepcampaignclassic/v/5.0.0)
+ 
+
 ## June 15, 2023
 
 ### Android Core 2.2.2
