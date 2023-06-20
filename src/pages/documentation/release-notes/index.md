@@ -21,7 +21,7 @@ The following React Native libraries have been upgraded to use the version 4 of 
  - [@adobe/react-native-aepplaces:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepplaces/v/5.0.0)
  - [@adobe/react-native-aeptarget:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aeptarget/v/5.0.0)
  - [@adobe/react-native-aepcampaignclassic:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepcampaignclassic/v/5.0.0)
- 
+
 ## June 19, 2023
 
 ### Android BOM 2.0.0
