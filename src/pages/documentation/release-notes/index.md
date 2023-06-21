@@ -128,7 +128,7 @@ New major version of the Mobile Core SDK for iOS has been released along with up
 * Updated the minimum supported version to iOS 11.0 and tvOS 11.0 (for extensions which support tvOS).
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 
-Note that all these extensions must be updated together. Updates to install instructions in the Data Collection UI are coming soon.
+Note that all these extensions must be updated together.
 
 * iOS Mobile Core 4.0.0
 * iOS Signal 4.0.0
