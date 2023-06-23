@@ -1,5 +1,31 @@
 # Release Notes
 
+## June 15, 2023
+
+### Android Core 2.2.2
+
+* Fixed an issue in Android API 22 and below where the in-app message would sometimes take over the screen, rendering the app unresponsive.
+* Fixed an issue where the onShow method in FullscreenMessageDelegate and MessagingDelegate was being notified multiple times after displaying an in-app message.
+* Improved the handling of in-app messages during orientation changes.
+
+## June 12, 2023
+
+### Android Core 2.2.1
+
+* Updated EventDataUtils to drop entries with unsupported values during cloning instead of throwing an exception.
+* Fixed a crash when displaying in-app messages.
+* Fixed rounded corners when displaying in-app messages.
+* Fixed an issue where the shared state published by Event Hub was mutable.
+
+### Android Lifecycle 2.0.3
+
+* Fixed an issue where session start time (`starttimestampmillis`) was shared in seconds instead of milliseconds in Lifecycle shared state.
+* Fixed an issue where session start time (`starttimestampmillis`), previous session start time (`previoussessionstarttimestampmillis`), and previous session pause time (`previoussessionpausetimestampmillis`) were shared in seconds instead of milliseconds in Lifecycle response event.
+
+### Android Identity 2.0.3
+
+* Added debug logs around ECID generation.
+
 ## June 1, 2023
 
 ### iOS Core 4.0.0
@@ -30,11 +56,16 @@ Please note that the current release includes the following changes:
 * Fixed in-app message redraw on device orientation change.
 * Fixed a memory leak with the in-app message webview.
 
+### Android Lifecycle 2.0.2
+
+* Chain the events dispatched by the Lifecycle extension to their corresponding request events.
+
 ## May 15, 2023
 
 ### iOS Core 3.9.0
 
 * Added support for chaining related events.
+* Chain the events dispatched by the Lifecycle extension to their corresponding request events.
 * Added a new `evaluate` API in the `LaunchRulesEngine` class that returns matching consequences without processing them.
 * Fixed an issue that caused shared state events to be dispatched out of order.
 * Fixed an issue that captured event history before processing rules.
