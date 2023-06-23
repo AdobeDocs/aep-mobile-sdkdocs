@@ -13,7 +13,7 @@ implementation 'com.adobe.marketing.mobile:target'
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information.
 
 </InlineNestedAlert>
 
@@ -387,7 +387,7 @@ The SDK can only collect information from the launching Activity if [setApplicat
 
 <Variant platform="ios" task="visual-preview" repeat="7"/>
 
-On iOS, the Mobile Core's [collectLaunchInfo](../../mobile-core/api-reference.md#collectlaunchinfo) API can be invoked with the Target preview deep link as shown below: 
+On iOS, the Mobile Core's [collectLaunchInfo](../../mobile-core/api-reference.md#collectlaunchinfo) API can be invoked with the Target preview deep link as shown below:
 
 #### Swift
 

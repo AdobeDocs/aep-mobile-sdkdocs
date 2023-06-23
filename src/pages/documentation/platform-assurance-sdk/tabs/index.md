@@ -10,7 +10,7 @@ implementation 'com.adobe.marketing.mobile:assurance'
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information.
 
 </InlineNestedAlert>
 
@@ -195,14 +195,13 @@ When using React Native, register AEP Assurance with Mobile Core in native code 
 
 When using Flutter, register AEP Assurance with Mobile Core in native code as shown on the Android and iOS tabs. --->
 
-
 <Variant platform="android" task="implement-assurance" repeat="1"/>
 
 Deep linking is the best way to connnect to an Assurance session when using the Android SDK. Assurance SDK on Android is already setup to handle incoming intents to your app. You can [add an intent filter for incoming links in your app](https://developer.android.com/training/app-links/deep-linking) to complete the deep link configuration. The combination of `android:host` and `android:scheme` (in the form of `<host>://<scheme>`) for this intent filter will serve as the Base URL while creating a session in the [Adobe Experience Platform Assurance UI](https://experience.adobe.com/assurance)
 
 <Variant platform="ios" task="implement-assurance" repeat="13"/>
 
-The [startSession](./api-reference.md#startsession) API needs to be called to begin an Adobe Experience Platform Assurance session. You should call this API when the app launches with a URL (see code snippet below for sample usage). When called, SDK displays a PIN authentication overlay to begin a session. 
+The [startSession](./api-reference.md#startsession) API needs to be called to begin an Adobe Experience Platform Assurance session. You should call this API when the app launches with a URL (see code snippet below for sample usage). When called, SDK displays a PIN authentication overlay to begin a session.
 
 #### Swift
 

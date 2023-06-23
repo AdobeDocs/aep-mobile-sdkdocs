@@ -6,7 +6,7 @@ Add the Lifecycle extension and its dependency, the [Mobile Core](../index.md) e
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../manage-gradle-dependencies.md) for more information. 
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../manage-gradle-dependencies.md) for more information.
 
 </InlineNestedAlert>
 
@@ -179,7 +179,6 @@ func sceneDidEnterBackground(_ scene: UIScene) {
 ```
 
 For more information on handling backgrounding applications with Scenes, refer to Apple's documentation [here](https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_background)
-
 
 #### Objective-C
 

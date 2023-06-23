@@ -1,11 +1,10 @@
 <Variant platform="android" task="add" repeat="8"/>
 
-
 1. Add the [Mobile Core](../mobile-core/index.md) and Analytics extensions to your project using the app's Gradle file.
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information.
 
 </InlineNestedAlert>
 
@@ -159,6 +158,7 @@ MobileCore.trackAction("Action Name", cdata);
 // trackState example:
 MobileCore.trackState("State Name", cdata);
 ```
+
 #### Kotlin
 
 **Example**
@@ -242,6 +242,7 @@ data.put("analytics.offlineEnabled", true);
 
 MobileCore.updateConfiguration(data);
 ```
+
 #### Kotlin
 
 **Example**
