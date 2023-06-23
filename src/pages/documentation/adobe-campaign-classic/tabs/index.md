@@ -5,7 +5,7 @@
 Add the Mobile Core, Lifecycle and Campaign Classic dependencies in your app's Gradle file.
 
 ```gradle
-implementation platform('com.adobe.marketing.mobile:sdk-bom:1.+')
+implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
 implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:lifecycle'
 implementation 'com.adobe.marketing.mobile:campaignclassic'

@@ -7,7 +7,7 @@ Download extension with dependencies using [Maven](https://maven.apache.org/) & 
 - implementation 'com.adobe.marketing.mobile:identity:2.+'
 - implementation 'com.adobe.marketing.mobile:analytics:2.+'
 - implementation 'com.adobe.marketing.mobile:media:3.+'
-+ implementation platform('com.adobe.marketing.mobile:sdk-bom:1.+')
++ implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
 + implementation 'com.adobe.marketing.mobile:core'
 + implementation 'com.adobe.marketing.mobile:edge'
 + implementation 'com.adobe.marketing.mobile:edgeidentity'

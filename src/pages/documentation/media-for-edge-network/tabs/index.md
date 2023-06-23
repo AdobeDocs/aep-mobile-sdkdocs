@@ -3,7 +3,7 @@
 1. Add the Media for Edge Network extension and its dependencies to your project using the app's Gradle file.
 
 ```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:1.+')
+implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
 implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:edge'
 implementation 'com.adobe.marketing.mobile:edgeidentity'

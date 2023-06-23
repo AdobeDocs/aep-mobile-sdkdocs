@@ -127,7 +127,7 @@ The Adobe Experience Platform Mobile SDK plugins for Xamarin are packages distri
 Add the dependencies to `build.gradle` for each extension.
 
 ```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:1.+')
+implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
 implementation 'com.adobe.marketing.mobile:userprofile'
 implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:identity'
