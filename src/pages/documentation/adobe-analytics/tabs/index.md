@@ -257,6 +257,7 @@ val data: Map<String, Any?> = mapOf(
 
 MobileCore.updateConfiguration(data)
 ```
+
 <Variant platform="ios" task="update" repeat="6"/>
 
 #### Swift
