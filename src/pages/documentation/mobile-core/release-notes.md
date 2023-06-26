@@ -164,6 +164,10 @@ The brand new Adobe Experience Platform Core Android SDKs are live! It is [open 
 * Signal 2.0.0
 * Lifecycle 2.0.0
 
+<InlineAlert variant="info" slots="text"/>
+
+The `registerExtension` API for each extension is deprecated in the latest version of the mobile SDK. You don't need to register extensions separately, now you can call `MobileCore.registerExtensions` API instead. See the [Update SDK initialization](#update-sdk-initialization) section for more details.
+
 ## January 5, 2023
 
 ### iOS AEPCore 3.7.4
