@@ -661,6 +661,14 @@ Note that all these extensions must be updated together.
 * Android Adobe Campaign Classic 2.0.0
 * Android Adobe Audience Manager 2.0.0
 
+Some of the APIs available in previous major versions of the Mobile SDK for Android are now deprecated. You can choose to replace the deprecated APIs in your code with the alternative APIs in the latest version, as described in the table below:
+
+| Deprecated API | Alternative API |
+| :------------- | :-------------- |
+| `EXTENSION.registerExtension` | `MobileCore.registerExtensions` |
+| `UserProfile.updateUserAttribute` | `UserProfile.updateUserAttributes` |
+| `UserProfile.removeUserAttribute` | `UserProfile.removeUserAttributes` |
+
 For help on moving to these versions, please see:
 
 * [Migration guide](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-android)
