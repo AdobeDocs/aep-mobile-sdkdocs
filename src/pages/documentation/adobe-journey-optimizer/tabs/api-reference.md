@@ -339,7 +339,7 @@ public List<ActionButton> getActionButtons()
 
 ```java
 public enum ActionType {
-    DEEPLINK, WEBURL, DISMISS, NONE
+    DEEPLINK, WEBURL, OPENAPP, NONE
 }
 ```
 
@@ -380,8 +380,8 @@ You should use the `MessagingPushPayload` class to extract the payload values.
             "adb_channel_id": "cid",
             "adb_icon" : "notification_icon",
             "adb_image": "www.imageUrl.com",           
-            "adb_a_type": "DEEPLINK/WEBURL/DISMISS",
-            "adb_uri" : "uri/weburl",
+            "adb_a_type": "DEEPLINK/WEBURL/OPENAPP",
+            "adb_uri" : "deeplinkurl/weburl",
             "adb_act": [
                 {
                     "label" : "deeplink",
@@ -392,11 +392,6 @@ You should use the `MessagingPushPayload` class to extract the payload values.
                     "label" : "weburl",
                     "uri" : "https://www.yahoo.com",
                     "type" : "WEBURL"
-                },
-                {
-                    "label" : "dismiss",
-                    "uri" : "",
-                    "type" : "DISMISS"
                 }
             ],          
             "some_custom_data_key": "some data"
@@ -416,12 +411,12 @@ You should use the `MessagingPushPayload` class to extract the payload values.
 | `adb_channel_id` | String | The push notification's channel ID |
 | `adb_icon` | String | The push notification's icon resource name |
 | `adb_image` | String | The URL of the image to be displayed on the notification |
-| `adb_a_type` | enum | An enum that determines what type of action will be performed when the notification is clicked. It can be one of the following values: `DEEPLINK`, `WEBURL`, or `DISMISS`. |
+| `adb_a_type` | enum | An enum that determines what type of action will be performed when the notification is clicked. It can be one of the following values: `DEEPLINK`, `WEBURL`, or `OPENAPP`. |
 | `adb_uri` | String | The URI used for deeplinking. The deeplink is used to open the appropriate webpage or app screen when the notification is clicked. |
 | `adb_act` | Array | An array that contains the action object(s). |
-| `adb_act.label` | String | The label for the action object |
-| `adb_act.uri` | String | The URI for the action object |
-| `adb_act.type` | enum | The action type for the action object. It can be one of the following values: `DEEPLINK`, `WEBURL`, `DISMISS` |
+| `adb_act.label` | String | The label for custom action button |
+| `adb_act.uri` | String | The URI for custom action button |
+| `adb_act.type` | enum | The action type for custom action button. It can be one of the following values: `DEEPLINK`, `WEBURL`, `OPENAPP` |
 
 <Variant platform="ios" api="payload-keys" repeat="2"/>
 
@@ -429,28 +424,20 @@ You should use the `MessagingPushPayload` class to extract the payload values.
 {
    "aps":{
       "alert":{
-         "title":"Hello from CJM",
-         "body":"Stay safe, wear a mask"
+         "title": "Hello from CJM",
+         "body": "Stay safe, wear a mask"
       },
-      "sound":"dingDong",
+      "sound": "dingDong",
       "badge":2,
       "mutable-content":1,
-      "category":"iosCategory",
-      "thread-id":"myGroup",
+      "category": "iosCategory",
+      "thread-id": "myGroup",
       "content-available":1
    },
-   "a":"x",
-   "b":"y",
-   "adb_media":"www.imageUrl.com",
-   "adb_a_type":"DEEPLINK/WEBURL/DISMISS",
-   "adb_uri":"deeplink://url / weburl",
-   "adb_act":[
-      {
-         "aid":"customId1",
-         "label":"dismiss",
-         "type":"DISMISS"
-      }
-   ]
+   "some_custom_data_key": "some data",
+   "adb_media": "www.imageUrl.com",
+   "adb_a_type": "DEEPLINK/WEBURL/OPENAPP",
+   "adb_uri": "deeplinkUrl/weburl",
 }
 ```
 
@@ -458,8 +445,4 @@ You should use the `MessagingPushPayload` class to extract the payload values.
 | :------ | :------- | :-------------- |
 | `adb_media` | String | The URL of the media. In this situation, media refers to either an image or a video. This URL can be used to download the rich media before showing the push notification. |
 | `adb_uri` | String | The URI used for deeplinking. The deeplink is used to open appropriate webpage or app screen when the notification is clicked. |
-| `adb_a_type` | enum | An enum that determines what type of action will be performed when the notification is selected. It can be one of the following string values: `DEEPLINK`, `WEBURL`, `DISMISS`. |
-| `adb_act` | Array | An array that contains the action object(s). |
-| `adb_act.aid` | String | The ID for the action object. |
-| `adb_act.label` | String | The name for the action object |
-| `adb_act.type` | String | The type for the action object. It can be one of the following string values: `DEEPLINK`, `WEBURL`, `DISMISS` |
+| `adb_a_type` | enum | An enum that determines what type of action will be performed when the notification is selected. It can be one of the following string values: `DEEPLINK`, `WEBURL`, `OPENAPP`. |
