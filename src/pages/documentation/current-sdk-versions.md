@@ -8,7 +8,7 @@
 
 <InlineAlert variant="info" slots="text"/>
 
-**Migrate to using the BOM artifact for Android**<br/> The Adobe SDK BOM artifact enables managing all compatible versions of Adobe Experience Platform Android extensions by specifying a single BOM version. This is now the recommended way to manage Android SDKs.
+**Start using the BOM artifact for Android**<br/> The Adobe SDK BOM artifact enables managing all compatible versions of Adobe Experience Platform Android extensions by specifying a single BOM version. This is now the recommended way to manage Android SDKs.
 
 | Extension | Maven | Github |
 |---|---|---|
