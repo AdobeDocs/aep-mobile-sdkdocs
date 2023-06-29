@@ -107,11 +107,11 @@ iOS
 
 The sizes in the table are provided for estimation purposes only, with the following considerations:
 
-* †Mobile Core, which includes the Rules Engine and Services extensions, is required for all other extensions. The final app size increase can be calculated by adding the Mobile Core size to each of the enabled extensions. 
+* †Mobile Core, which includes the Rules Engine and Services extensions, is required for all other extensions. The final app size increase can be calculated by adding the Mobile Core size to each of the enabled extensions.
   * For example, the iOS app distribution using the Target and Analytics extensions will have a total size increase of 1341 KB. (Core: 925 KB + Analytics: 133 KB + Target: 283 KB).
-* The iOS size estimates are based on [Google's CocoaPods Size Measurement tool](https://github.com/google/cocoapods-size). 
+* The iOS size estimates are based on [Google's CocoaPods Size Measurement tool](https://github.com/google/cocoapods-size).
 * The Android size estimates listed refer to unsigned apps and do not account for applying ProGuard.
-* For Android Mobile SDKs, the full list of dependencies for each SDK and version can be found at [Maven Repository](https://mvnrepository.com/artifact/com.adobe.marketing.mobile). 
+* For Android Mobile SDKs, the full list of dependencies for each SDK and version can be found at [Maven Repository](https://mvnrepository.com/artifact/com.adobe.marketing.mobile).
 
 ### How can I use ProGuard with the Android SDK?
 
@@ -138,7 +138,7 @@ Implementing push notification tracking and measurement with the SDK depends on 
 
 Mobile SDK for Android now supports a minimum API level of **19**. If your application targets a lower API level, you will see the following build failure:
 
-```
+``` text
 Manifest merger failed : uses-sdk:minSdkVersion 14 cannot be smaller than version 19 declared in library [com.adobe.marketing.mobile:core:2.0.0]
 ```
 
@@ -148,7 +148,7 @@ To fix this build failure, increase the minSdkVersion for your Android project t
 
 Mobile SDK for Android uses Java 8 language features and desugaring is disabled by default. If your application uses Android Gradle plugin (AGP) v4.2 and has not enabled Java 8 support, you will see the following build failure:
 
-```
+``` text
 D8: Invoke-customs are only supported starting with Android O (--min-api 26)
 Caused by: com.android.builder.dexing.DexArchiveBuilderException: Error while dexing.
 The dependency contains Java 8 bytecode. Please enable desugaring by adding the following to build.gradle
@@ -164,23 +164,25 @@ Alternatively, increase the minSdkVersion to 26 or above.
 ```
 
 To fix this build failure, you can follow one of two options:
-- Add the listed compileOptions from the error message to your app-level build.gradle file.
-- Increase the minSdkVersion for your Android project to **26** or above.
 
-### How do I get the latest Mobile SDK Android dependences for my Application? 
+* Add the listed compileOptions from the error message to your app-level build.gradle file.
+* Increase the minSdkVersion for your Android project to **26** or above.
+
+### How do I get the latest Mobile SDK Android dependences for my Application?
 
 To get the latest Mobile SDK dependencies for your Android application:
-* Open the **mobile property** configured in the **Data Collection UI** for your application. 
-* Navigate to the **Extensions** tab and update all the extensions to the latest version. 
+
+* Open the **mobile property** configured in the **Data Collection UI** for your application.
+* Navigate to the **Extensions** tab and update all the extensions to the latest version.
 * The [install instructions](./getting-started/get-the-sdk.md#1-add-dependencies-to-your-project) will now show the dependencies for the latest Mobile SDK.
 
 ### Why do I see 'java.lang.NoSuchMethodError' after upgrading to the latest version of Mobile SDK for Android?
 
-The latest Mobile Core SDK for Android includes changes that break compatiblity with solution SDKs developed for earlier verisons of the Mobile Core SDK. 
+The latest Mobile Core SDK for Android includes changes that break compatiblity with solution SDKs developed for earlier verisons of the Mobile Core SDK.
 
 If you attempt to use the latest Mobile Core SDK and solution SDKs that were built for previous versions of Mobile Core to build your app, you may encounter the following error:
 
-```
+``` text
 2023-02-13 17:45:02.501 14264-14264/XXX E/AndroidRuntime: FATAL EXCEPTION: main
     Process: XXX, PID: XXXXX
     java.lang.NoSuchMethodError: No static method getCore()Lcom/adobe/marketing/mobile/Core; in class Lcom/adobe/marketing/mobile/MobileCore; or its super classes (declaration of 'com.adobe.marketing.mobile.MobileCore' appears in XXX
@@ -188,26 +190,27 @@ If you attempt to use the latest Mobile Core SDK and solution SDKs that were bui
 
 To resolve this error, upgrade all your solution SDKs to the [most recent versions](./current-sdk-versions.md#android).
 
-### Why do I not see 'sdk-core' dependency for latest version of Mobile SDK for Android? 
+### Why do I not see 'sdk-core' dependency for latest version of Mobile SDK for Android?
 
 The **com.adobe.marketing.mobile:sdk-core** dependency is no longer available for the latest version of Mobile SDK. Instead, select the appropriate solution SDKs based on your requirements from the following options:
 
 ```java
-com.adobe.marketing.mobile:core:2.+
-com.adobe.marketing.mobile:lifecycle:2.+
-com.adobe.marketing.mobile:signal:2.+
-com.adobe.marketing.mobile:identity:2.+
+implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:lifecycle'
+implementation 'com.adobe.marketing.mobile:identity'
+implementation 'com.adobe.marketing.mobile:signal'
 ```
 
-### How do I upgrade to the latest version of Mobile SDK for Android if my app uses Mobile Services? 
+### How do I upgrade to the latest version of Mobile SDK for Android if my app uses Mobile Services?
 
-Adobe Mobile Service's end-of-life date is [December 31, 2022](https://experienceleague.adobe.com/docs/mobile-services/using/eol.html). To upgrade to the latest version of Mobile SDK for Android, you have to remove the Mobile Services dependency from your app. 
+Adobe Mobile Service's end-of-life date is [December 31, 2022](https://experienceleague.adobe.com/docs/mobile-services/using/eol.html). To upgrade to the latest version of Mobile SDK for Android, you have to remove the Mobile Services dependency from your app.
 
 ### Why do I see a warning in AndroidManifest.xml about missing 'com.adobe.marketing.mobile.FullscreenMessageActivity' class?
 
-After upgrading to the latest version of Mobile SDK for Android, you will see the following build warning if your application previously set up in-app messages with Campaign Standard. 
+After upgrading to the latest version of Mobile SDK for Android, you will see the following build warning if your application previously set up in-app messages with Campaign Standard.
 
-```
+``` text
 Class referenced in the manifest, `com.adobe.marketing.mobile.FullscreenMessageActivity`, was not found in the project or the libraries
 Unresolved class 'FullscreenMessageActivity'
 ```
