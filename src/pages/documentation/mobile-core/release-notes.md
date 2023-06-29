@@ -1,5 +1,12 @@
 # Release Notes
 
+## June 29, 2023
+
+### Android Core 2.2.3
+
+* Fixed handling of back button press in in-app messages.
+* Resolved a crash that occurred when dismissing in-app messages.
+
 ## June 15, 2023
 
 ### Android Core 2.2.2
