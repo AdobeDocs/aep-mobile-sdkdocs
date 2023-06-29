@@ -11,7 +11,7 @@ To send PII data to external destinations, the `PII` action can trigger the Rule
 To get started with Signal extension, complete the following steps:
 
 1. Add the **Signal** extension to your app.
-2. Define the necessary rules in the Data Collection UI. 
+2. Define the necessary rules in the Data Collection UI.
 3. (Optional) When using Send PII actions in the Data Collection UI, implement the APIs to collect PII data and send it to the configured third party destination.
 
 For more information about creating and configuring a rule in the Data Collection UI, see [Rules](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html).
