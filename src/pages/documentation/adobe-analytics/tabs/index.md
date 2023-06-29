@@ -1,18 +1,18 @@
 <Variant platform="android" task="add" repeat="8"/>
 
-
 1. Add the [Mobile Core](../mobile-core/index.md) and Analytics extensions to your project using the app's Gradle file.
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../manage-gradle-dependencies.md) for more information.
 
 </InlineNestedAlert>
 
 ```java
-implementation 'com.adobe.marketing.mobile:core:2.+'
-implementation 'com.adobe.marketing.mobile:identity:2.+'
-implementation 'com.adobe.marketing.mobile:analytics:2.+'
+implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:identity'
+implementation 'com.adobe.marketing.mobile:analytics'
 ```
 
 2. Import the Analytics extension in your application's main activity.
@@ -158,6 +158,7 @@ MobileCore.trackAction("Action Name", cdata);
 // trackState example:
 MobileCore.trackState("State Name", cdata);
 ```
+
 #### Kotlin
 
 **Example**
@@ -241,6 +242,7 @@ data.put("analytics.offlineEnabled", true);
 
 MobileCore.updateConfiguration(data);
 ```
+
 #### Kotlin
 
 **Example**
@@ -255,6 +257,7 @@ val data: Map<String, Any?> = mapOf(
 
 MobileCore.updateConfiguration(data)
 ```
+
 <Variant platform="ios" task="update" repeat="6"/>
 
 #### Swift
