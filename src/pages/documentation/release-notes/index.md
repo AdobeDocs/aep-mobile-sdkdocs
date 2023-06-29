@@ -702,7 +702,7 @@ Note that all these extensions must be updated together.
 * Android Adobe Campaign Classic 2.0.0
 * Android Adobe Audience Manager 2.0.0
 
-For help on moving to these versions, please see:
+For help on moving to these versions, and information on deprecated APIs please see:
 
 * [Migration guide](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-android)
 * [Migration FAQ](../faq.md#migrating-to-android-mobile-core-2x-and-compatible-extensions)
@@ -884,6 +884,10 @@ The brand new Adobe Experience Platform Core Android SDKs are live! It is [open 
 * Identity 2.0.0
 * Signal 2.0.0
 * Lifecycle 2.0.0
+
+<InlineAlert variant="info" slots="text"/>
+
+The `registerExtension` API for each extension is deprecated in the latest version of the mobile SDK. You can call the `MobileCore.registerExtensions` API instead of registering the extensions separately. See the [Migration Guide](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-android) for more details.
 
 ## January 5, 2023
 
