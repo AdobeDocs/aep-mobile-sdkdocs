@@ -4,6 +4,47 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## June 29, 2023
+
+### Android BOM 2.0.1
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom/2.0.1)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header="Expand">
+
+| Extension artifact | BOM (2.0.0) | BOM (2.0.1) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:core** | **2.2.2** | **2.2.3**|
+| com.adobe.marketing.mobile:analytics | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:assurance | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:campaignclassic | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.1.4 | 2.1.4 |
+| com.adobe.marketing.mobile:optimize | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:places | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:userprofile | 2.0.0 | 2.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Core 2.2.3
+
+* Fixed handling of back button press in in-app messages.
+* Resolved a crash that occurred when dismissing in-app messages.
+
 ## June 20, 2023
 
 ### AEP React Native libraries 5.0.0
