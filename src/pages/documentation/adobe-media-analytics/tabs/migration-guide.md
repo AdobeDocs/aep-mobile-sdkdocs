@@ -3,13 +3,15 @@
 Download extension with dependencies using [Maven](https://maven.apache.org/) & [Gradle](https://gradle.org/)
 
 ```diff
-  implementation 'com.adobe.marketing.mobile:core:2.+'
+- implementation 'com.adobe.marketing.mobile:core:2.+'
 - implementation 'com.adobe.marketing.mobile:identity:2.+'
 - implementation 'com.adobe.marketing.mobile:analytics:2.+'
 - implementation 'com.adobe.marketing.mobile:media:3.+'
-+ implementation 'com.adobe.marketing.mobile:edge:2.+'
-+ implementation 'com.adobe.marketing.mobile:edgeidentity:2.+'
-+ implementation 'com.adobe.marketing.mobile:edgemedia:2.+'
++ implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
++ implementation 'com.adobe.marketing.mobile:core'
++ implementation 'com.adobe.marketing.mobile:edge'
++ implementation 'com.adobe.marketing.mobile:edgeidentity'
++ implementation 'com.adobe.marketing.mobile:edgemedia'
 ```
 
 <Variant platform="ios" section="install-dependency" repeat="10"/>

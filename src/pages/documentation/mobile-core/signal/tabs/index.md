@@ -6,17 +6,17 @@ Add the Signal extension and its dependency, the [Mobile Core](../index.md) exte
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../manage-gradle-dependencies.md) for more information. 
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../manage-gradle-dependencies.md) for more information.
 
 </InlineNestedAlert>
 
 ```java
-implementation 'com.adobe.marketing.mobile:core:2.+'
-implementation 'com.adobe.marketing.mobile:signal:2.+'
+implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:signal'
 ```
 
 Import the Signal and MobileCore extensions in your application's main activity.
-
 
 ```java
 import com.adobe.marketing.mobile.MobileCore;

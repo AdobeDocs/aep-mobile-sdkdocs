@@ -5,10 +5,11 @@ import Alerts from '../../resources/alerts.md'
 1. Add the Mobile Core and Edge extensions to your project using the app's Gradle file.
 
 ```java
-implementation 'com.adobe.marketing.mobile:core:2.+'
-implementation 'com.adobe.marketing.mobile:edge:2.+'
-implementation 'com.adobe.marketing.mobile:edgeidentity:2.+'
-implementation 'com.adobe.marketing.mobile:edgeconsent:2.+'
+implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:edge'
+implementation 'com.adobe.marketing.mobile:edgeidentity'
+implementation 'com.adobe.marketing.mobile:edgeconsent'
 ```
 
 <Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
