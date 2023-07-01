@@ -8,6 +8,23 @@ keywords:
 
 # Release Notes
 
+## June 1, 2023
+
+### iOS Edge 4.0.0
+
+Major version update for [Edge Network](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+* Removed deprecated class `XDMFormatters`. Use functions `getISO8601UTCDateWithMilliseconds()` and `getISO8601FullDate()` in Date class extension from AEPServices module instead.
+* Fixed issue where empty "payload" array was not included in events dispatched after receiving Edge Network response.
+
+## April 11, 2023
+
+### Android Edge 2.1.0
+
+* Added support to overwrite the Edge request path with a custom path to support Edge requests for the Media Analytics service.
+
 ## February 28, 2023
 
 ### iOS AEPEdge 1.6.0

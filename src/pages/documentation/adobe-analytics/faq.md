@@ -12,7 +12,7 @@ keywords:
 
 ## How can I set up, configure, or troubleshoot processing rules?
 
-To learn about processing rules please read the [processing rules tips and tricks guide](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-tips.html?lang=en).
+To learn about processing rules please read the [processing rules tips and tricks guide](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-tips.html).
 
 ## Why are my Analytics identifiers (AID / MID) changing?
 
@@ -50,7 +50,7 @@ The [Analytics extension](./index.md) and its dependent [Identity extension](../
 
 ### Verify that network requests are sent to Adobe Analytics <a id="verify-that-network-requests-are-sent-to-adobe-analytics"></a>
 
-You can use [Adobe Experience Platform Assurance](../platform-assurance/index.md) to verify events are being sent to Adobe Analytics.
+You can use [Adobe Experience Platform Assurance](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html) to verify events are being sent to Adobe Analytics.
 
 ### Ensure appropriate timestamp configuration <a id="ensure-appropriate-time-stamp-configuration"></a>
 
@@ -68,3 +68,7 @@ In the mobile property (tag) in the Data Collection UI, select the property from
 ### Contact Adobe Customer Care <a id="contact-adobe-customer-care"></a>
 
 If you are unable to resolve your concerns through resources provided here, please contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support) for immediate assistance.
+
+## How do I send data to Adobe Analytics in React Native and Flutter?
+
+In the latest SDK version (AEP-prefixed) for React Native and Flutter, you can send data to Analytics via the Edge Network using the Edge Network extension and `sendEvent` API. If you want a drop-in migration solution for an existing `trackAction` / `trackState` implementation, you can do this with the help of the Edge Bridge extension. You can learn more about these options in the [migration guide](../adobe-analytics/migrate-to-edge-network.md).

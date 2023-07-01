@@ -8,6 +8,23 @@ keywords:
 
 # Release Notes
 
+## June 6, 2023
+
+### iOS Analytics 4.0.0
+
+Major version update for [Adobe Analytics](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+* Resolved an issue with retrieving post-processed data in Assurance for track calls with empty state.
+* Added `a.systemLocale` to Lifecycle hits.
+
+## March 27, 2023
+
+### Android Analytics 2.0.2
+
+* Fixed a bug that was causing the "Unavailable" status to be shown in Adobe Analytics view in Assurance for some track events sent soon after app launch.
+
 ## February 17, 2023
 
 ### Android Analytics 2.0.1

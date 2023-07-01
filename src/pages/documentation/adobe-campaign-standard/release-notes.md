@@ -8,6 +8,27 @@ keywords:
 
 # Release Notes
 
+## June 5, 2023
+
+### iOS Campaign Standard 4.0.0
+
+Major version update for [Adobe Campaign Standard workflows](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0.
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+
+## May 25, 2023
+
+### Android Campaign Standard 2.0.4
+
+* Update the AEPCore dependency to version 2.2.0 to resolve a WebView transparency issue and fix message frequency rules for Campaign Standard in-app messages.
+
+## May 4, 2023
+
+### Android Campaign Standard 2.0.3
+
+* Adds support for URL-encoded URLs with query parameters used to configure in-app message clickthrough destination.
+
 ## February 17, 2023
 
 ### Android Campaign Standard 2.0.2

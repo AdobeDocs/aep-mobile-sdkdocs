@@ -8,6 +8,15 @@ keywords:
 
 # Release Notes
 
+## June 7, 2023
+
+### iOS Audience 4.0.0
+
+ Major version update for [Adobe Audience Manager](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0.
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+
 ## February 3, 2023
 
 ### Android Audience 2.0.0
@@ -24,7 +33,7 @@ keywords:
 
 ### iOS AEPAudience 3.0.3
 
-- Fixed integration with Lifecycle extension to send lifecycle metrics when a new app session is started.
+* Fixed integration with Lifecycle extension to send lifecycle metrics when a new app session is started.
 
 ## Jul 13, 2021
 

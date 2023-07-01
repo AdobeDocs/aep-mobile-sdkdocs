@@ -23,7 +23,7 @@ This guide will walk you through steps necessary to ensure your app is properly 
 
 - Your app must have the **AEPMessaging** SDK extension installed. Integrate **AEPMessaging** by following the guide on [setting up AEPMessaging SDK](../setup.md).
 
-- This troubleshooting guide uses validation provided by the **AEPAssurance** extension and the **Adobe Assurance UI**. Integrate **AEPAssurance** in your application by following the [Adobe Experience Platform Assurance installation guide](../../platform-assurance/index.md).
+- This troubleshooting guide uses validation provided by the **AEPAssurance** extension and the **Adobe Assurance UI**. Integrate **AEPAssurance** in your application by following the [Adobe Experience Platform Assurance installation guide](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html).
 
 ## Validate the correct extensions are registered
 

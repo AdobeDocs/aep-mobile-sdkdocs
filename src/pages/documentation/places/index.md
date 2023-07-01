@@ -10,7 +10,7 @@ import Tabs from './tabs/index.md'
 
 # Adobe Experience Platform Location Service
 
-Adobe Experience Platform Location Service provides an SDK extension which allows you to act based on the location of your users. This extension is the interface to the [Location Service Web Services APIs](https://experienceleague.adobe.com/docs/places/using/web-service-api/places-web-services.html?lang=en).
+Adobe Experience Platform Location Service provides an SDK extension which allows you to act based on the location of your users. This extension is the interface to the [Location Service Web Services APIs](https://experienceleague.adobe.com/docs/places/using/web-service-api/places-web-services.html).
 
 The SDK extension listens for events that contain GPS coordinates and geofence region events, and dispatches new events that are processed by the Rules Engine. The SDK extension also retrieves and delivers a list of the nearest POI for the app data that retrieves from the APIs. The regions returned by the APIs are stored in cache and persistence, which allows limited offline processing.
 
@@ -56,9 +56,9 @@ iOS
 
 For more information about implementing and using Adobe Experience Platform Location Service, please see the following documentation links:
 
-* [Release notes](https://experienceleague.adobe.com/docs/places/using/release-notes.html?lang=en)
-* [Overview](https://experienceleague.adobe.com/docs/places/using/home.html?lang=en)
-* [Places SDK implementation](https://experienceleague.adobe.com/docs/places/using/places-ext-aep-sdks/places-extension/places-extension.html?lang=en)
+* [Release notes](https://experienceleague.adobe.com/docs/places/using/release-notes.html)
+* [Overview](https://experienceleague.adobe.com/docs/places/using/home.html)
+* [Places SDK implementation](https://experienceleague.adobe.com/docs/places/using/places-ext-aep-sdks/places-extension/places-extension.html)
 * [Cordova Places SDK GitHub readme](https://github.com/adobe/cordova-acpplaces/blob/master/README.md)
 * [React Native Places SDK GitHub readme](https://github.com/adobe/react-native-acpplaces/blob/master/README.md)
 * [Xamarin Places SDK GitHub readme](https://github.com/adobe/xamarin-acpplaces/blob/master/README.md)

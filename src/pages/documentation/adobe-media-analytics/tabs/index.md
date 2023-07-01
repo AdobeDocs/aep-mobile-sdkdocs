@@ -4,15 +4,16 @@
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information. 
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../manage-gradle-dependencies.md) for more information.
 
 </InlineNestedAlert>
 
 ```java
-implementation 'com.adobe.marketing.mobile:core:2.+'
-implementation 'com.adobe.marketing.mobile:identity:2.+'
-implementation 'com.adobe.marketing.mobile:analytics:2.+'
-implementation 'com.adobe.marketing.mobile:media:3.+'
+implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:identity'
+implementation 'com.adobe.marketing.mobile:analytics'
+implementation 'com.adobe.marketing.mobile:media'
 ```
 
 2. Import the libraries in your application's main activity.
@@ -35,14 +36,13 @@ import com.adobe.marketing.mobile.Analytics
 import com.adobe.marketing.mobile.Media
 ```
 
-
 <Variant platform="ios" task="add" repeat="7"/>
 
 1. To add the Media library and its dependencies to your project, add the following pods to your `Podfile`:
 
 ```ruby
-pod 'AEPCore
-pod 'AEPAnalytics
+pod 'AEPCore'
+pod 'AEPAnalytics'
 pod 'AEPMedia'
 ```
 
@@ -97,7 +97,7 @@ public class MainApp extends Application {
 ```kotlin
 class MyApp : Application() {
     val ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID"
-    
+
     override fun onCreate() {
         super.onCreate()
         MobileCore.setApplication(this)
@@ -121,7 +121,7 @@ In your app's `_:didFinishLaunchingWithOptions` function, register the Audience 
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
    MobileCore.registerExtensions([Media.self, Analytics.self, Identity.self], {
    MobileCore.configureWith(appId: "yourAppId")
- })  
+ })
  ...
 }
 ```

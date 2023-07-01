@@ -8,11 +8,134 @@ keywords:
 
 # Release Notes
 
+## June 29, 2023
+
+### Android Core 2.2.3
+
+* Fixed handling of back button press in in-app messages.
+* Resolved a crash that occurred when dismissing in-app messages.
+
+## June 15, 2023
+
+### Android Core 2.2.2
+
+* Fixed an issue in Android API 22 and below where the in-app message would sometimes take over the screen, rendering the app unresponsive.
+* Fixed an issue where the onShow method in FullscreenMessageDelegate and MessagingDelegate was being notified multiple times after displaying an in-app message.
+* Improved the handling of in-app messages during orientation changes.
+
+## June 12, 2023
+
+### Android Core 2.2.1
+
+* Updated EventDataUtils to drop entries with unsupported values during cloning instead of throwing an exception.
+* Fixed a crash when displaying in-app messages.
+* Fixed rounded corners when displaying in-app messages.
+* Fixed an issue where the shared state published by Event Hub was mutable.
+
+### Android Lifecycle 2.0.3
+
+* Fixed an issue where session start time (`starttimestampmillis`) was shared in seconds instead of milliseconds in Lifecycle shared state.
+* Fixed an issue where session start time (`starttimestampmillis`), previous session start time (`previoussessionstarttimestampmillis`), and previous session pause time (`previoussessionpausetimestampmillis`) were shared in seconds instead of milliseconds in Lifecycle response event.
+
+### Android Identity 2.0.3
+
+* Added debug logs around ECID generation.
+
+## June 1, 2023
+
+### iOS Core 4.0.0
+
+Major version update of Adobe Experience Platform Core iOS SDKs are live! It contains the following extensions:
+
+* Core 4.0.0
+* Identity 4.0.0
+* Signal 4.0.0
+* Lifecycle 4.0.0
+
+Please note that the current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+* Added `SystemInfoService.getSystemLocaleName()` API which returns the locale by combining device's preferred language and selected region (as set by the user on the system).
+* Lifecycle extension adds `systemlocale` denoting device's preferred locale to its published shared state.
+* Lifecycle launch events will contain `application._dc.language` XDM field denoting device's preferred locale to shared state.
+
+## May 23, 2023
+
+### Android Core 2.2.0
+
+* Added support for chaining related events.
+* Added a new `evaluateEvent` API in the `LaunchRulesEngine` class that returns matching consequences without processing them.
+* Fixed a bug where a non-transparent background was visible behind a message webview.
+* Fixed the back button functionality to allow for the dismissal of a displayed in-app message using the device's back button.
+* Fixed in-app message redraw on device orientation change.
+* Fixed a memory leak with the in-app message webview.
+
+### Android Lifecycle 2.0.2
+
+* Chain the events dispatched by the Lifecycle extension to their corresponding request events.
+
+## May 15, 2023
+
+### iOS Core 3.9.0
+
+* Added support for chaining related events.
+* Chain the events dispatched by the Lifecycle extension to their corresponding request events.
+* Added a new `evaluate` API in the `LaunchRulesEngine` class that returns matching consequences without processing them.
+* Fixed an issue that caused shared state events to be dispatched out of order.
+* Fixed an issue that captured event history before processing rules.
+
+## April 24, 2023
+
+### Android Mobile Core 2.1.3
+
+* In-app messages with content overflow now correctly scroll when the message is not observing gestures.
+* Opacity is now correctly calculated for in-app message takeovers.
+* In-app messages will no longer intermittently cause a crash when being displayed on Android 7.
+* Fixed a race condition when querying the event history database.
+
+## April 14, 2023
+
+### Android Mobile Core 2.1.2
+
+* Fixed an issue that prevented some in-app messaging show frequency rules from working correctly.
+* Improved evaluation of logical operators in rules engine.
+
+## April 10, 2023
+
+### Android BOM 1.0.0-beta1
+
+The initial public beta release of the [Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom/1.0.0-beta1) (BOM) artifact for Android is now available.
+
+## March 31, 2023
+
+### Android Mobile Core 2.1.1
+
+* Fixed crash during Core boot when migrating the data from v4 Mobile SDK.
+* Updated POM file with the Apache 2 license URL.
+
+### Android Identity 2.0.2
+
+* Fixed an issue where Identity could block the processing of requests when the first loaded configuration had incorrect format.
+* Updated POM file with the Apache 2 license URL.
+
+## March 28, 2023
+
+### iOS Core 3.8.2
+
+* Fixed some crashes which can happen on shutdown.
+
+## March 17, 2023
+
+### iOS Core 3.8.1
+
+* Revert changes to minimum supported version of iOS and tvOS back to 10.0.
+
 ## March 14, 2023
 
 ### Android Mobile Core 2.1.0
 
-* Added a new API to the LaunchRulesEngine class that enables adding new rules without replacing the existing ones. 
+* Added a new API to the LaunchRulesEngine class that enables adding new rules without replacing the existing ones.
 
 ## March 13, 2023
 
@@ -20,7 +143,7 @@ keywords:
 
 * Updated the minimum supported versions to iOS 11.0, tvOS 11.0.
 * Added support for overriding internal logging service with customer-provided implementation.
-* Added a new API to the LaunchRulesEngine class that enables adding new rules without replacing the existing ones. 
+* Added a new API to the LaunchRulesEngine class that enables adding new rules without replacing the existing ones.
 
 ## February 9, 2023
 
@@ -55,6 +178,10 @@ The brand new Adobe Experience Platform Core Android SDKs are live! It is [open 
 * Identity 2.0.0
 * Signal 2.0.0
 * Lifecycle 2.0.0
+
+<InlineAlert variant="info" slots="text"/>
+
+The `registerExtension` API for each extension is deprecated in the latest version of the mobile SDK. You can call the `MobileCore.registerExtensions` API instead of registering the extensions separately. See the [Migration Guide](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-android) for more details.
 
 ## January 5, 2023
 

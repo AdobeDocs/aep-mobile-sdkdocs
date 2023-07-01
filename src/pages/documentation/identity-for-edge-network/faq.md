@@ -137,3 +137,7 @@ Android
 iOS
 
 <Tabs query="platform=ios&task=link"/>
+
+## Q: Can I safely remove the Identity for Experience Cloud ID Service extension in an app if I am using the Edge Network extension?
+
+If no other extension relies on the Identity for Experience Cloud ID Service extension, you can safely remove it. Please refer to the [Identity consideration document](../adobe-analytics/migrate-to-edge-network.md#identity-consideration-for-the-migration) for more information.

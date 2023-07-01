@@ -388,12 +388,16 @@ module.exports = {
                                 path: "/documentation/adobe-analytics"
                             },
                             {
+                                title: 'Migrate to Edge Network',
+                                path: '/documentation/adobe-analytics/migrate-to-edge-network'
+                            },
+                            {
                                 title: "API reference",
-                                path: "/documentation/adobe-analytics/api-reference/"
+                                path: "/documentation/adobe-analytics/api-reference"
                             },
                             {
                                 title: 'Event reference',
-                                path: '/documentation/adobe-analytics/event-reference/'
+                                path: '/documentation/adobe-analytics/event-reference'
                             },
                             {
                                 title: "Product variable",
@@ -401,11 +405,29 @@ module.exports = {
                             },
                             {
                                 title: "Frequently asked questions",
-                                path: "/documentation/adobe-analytics/faq/"
+                                path: "/documentation/adobe-analytics/faq"
                             },
                             {
                                 title: 'Release notes',
-                                path: '/documentation/adobe-analytics/release-notes/'
+                                path: '/documentation/adobe-analytics/release-notes'
+                            }
+                        ]
+                    },
+                    {
+                        title: "Adobe Streaming Media for Edge Network",
+                        path: "/documentation/media-for-edge-network",
+                        pages: [
+                            {
+                                title: "Overview",
+                                path: "/documentation/media-for-edge-network"
+                            },
+                            {
+                                title: "API reference",
+                                path: "documentation/media-for-edge-network/api-reference"
+                            },
+                            {
+                                title: 'Release notes',
+                                path: '/documentation/media-for-edge-network/release-notes'
                             }
                         ]
                     },
@@ -424,7 +446,11 @@ module.exports = {
                             {
                                 title: "Release notes",
                                 path: "documentation/adobe-media-analytics/release-notes"
-                            }
+                            },
+                            {
+                                title: "Migration Guide",
+                                path: "/documentation/adobe-media-analytics/migration-guide"
+                            },
                         ]
                     },
                     {
@@ -588,76 +614,16 @@ module.exports = {
                 ]
             },
             {
-                title: "Adobe Experience Platform Assurance",
-                path: "/documentation/platform-assurance",
-                pages: [
-                    {
-                        title: "Overview",
-                        path: "/documentation/platform-assurance"
-                    },
-                    {
-                        title: "Using Assurance",
-                        path: "/documentation/platform-assurance/tutorials",
-                        pages: [
-                            {
-                                title: "Event Transactions",
-                                path: "/documentation/platform-assurance/tutorials/event-transactions.md"
-                            },
-                            {
-                                title: "Adobe Analytics",
-                                path: "/documentation/platform-assurance/tutorials/adobe-analytics.md"
-                            },
-                            {
-                                title: "Adobe Analytics for Streaming Media",
-                                path: "/documentation/platform-assurance/tutorials/adobe-analytics-streaming-media.md"
-                            },
-                            {
-                                title: "In-App Messaging",
-                                path: "/documentation/platform-assurance/tutorials/in-app-messaging.md"
-                            },
-                            {
-                                title: "Places Service",
-                                path: "/documentation/platform-assurance/tutorials/places-service"
-                            },
-                            {
-                                title: "Push Debug",
-                                path: "/documentation/platform-assurance/tutorials/push-debug-view"
-                            },
-                            {
-                                title: "On-device views",
-                                path: "/documentation/platform-assurance/tutorials/on-device-views.md"
-                            },
-                            {
-                                title: "Validation Editor",
-                                path: "/documentation/platform-assurance/tutorials/validation-summary.md"
-                            },
-                            {
-                                title: "Versions",
-                                path: "/documentation/platform-assurance/tutorials/versions.md"
-                            }
-                        ]
-                    },
-                    {
-                        title: "Get access",
-                        path: "/documentation/platform-assurance/get-access/"
-                    },
-                    {
-                        title: "Set up",
-                        path: "/documentation/platform-assurance/set-up.md"
-                    },
-                    {
-                        title: "Troubleshooting",
-                        path: "/documentation/platform-assurance/troubleshooting.md"
-                    }
-                ]
-            },
-            {
                 title: "Resources",
                 path: "/documentation/resources",
                 pages: [
                     {
                         title: "Overview",
                         path: "/documentation/resources"
+                    },
+                    {
+                        title: "Aligning major SDK versions",
+                        path: "/documentation/resources/major-version-alignment"
                     },
                     {
                         title: "Upgrade to the Experience Platform SDKs",

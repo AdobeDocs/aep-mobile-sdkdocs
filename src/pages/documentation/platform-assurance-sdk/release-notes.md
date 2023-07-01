@@ -10,6 +10,42 @@ keywords:
 
 Release notes and change logs for the Adobe Experience Platform Assurance extension
 
+## June 1, 2023
+
+### iOS Assurance 4.0.0
+
+Major version update for [Adobe Experience Platform Assurance](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0.
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+
+## May 19, 2023
+
+### iOS Assurance 3.1.2
+
+* Added support for chaining related events.
+
+## April 25, 2023
+
+### Android Assurance 2.1.0
+
+* Added a new API for quick connect capability.
+* Fixed an issue causing pure Jetpack Compose apps implementing Assurance to add XML color attributes.
+* Switched to use vector support library to reduce SDK size.
+
+## April 6, 2023
+
+### iOS Assurance 3.1.1
+
+* Fixed a bug that was causing sessions to not be terminated properly in the Quick Connect flow.
+
+## March 21, 2023
+
+### iOS Assurance 3.1.0
+
+* Added an API for a new quick connect capability for quick start workflows that will go beta soon.
+* Security improvements
+
 ## February 27, 2023
 
 ### Android Assurance 2.0.1

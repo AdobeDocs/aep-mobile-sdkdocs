@@ -9,6 +9,37 @@ keywords:
 
 # Release Notes
 
+## June 2, 2023
+
+### iOS Messaging 4.0.0
+
+Major version update for [Adobe Journey Optimizer](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 11.0.
+* Include XCFrameworks built with Xcode 14.1 with the GitHub release.
+
+## May 23, 2023
+
+### Android Messaging 2.1.4
+
+* Handle in-app interaction tracking for back button presses.
+
+## April 28, 2023
+
+### Android Messaging 2.1.3
+
+* Fixed a bug causing in-app message display Experience Events to be sent even when MessagingDelegate suppressed their display.
+
+### iOS Messaging 1.1.4
+
+* Fixed a bug causing in-app message display Experience Events to be sent even when MessagingDelegate suppressed their display.
+
+## April 24, 2023
+
+### Android Messaging 2.1.2
+
+* Fixed a bug causing a crash when incorrectly formatted URLs were used in custom HTML messages.
+
 ## March 20, 2023
 
 ### iOS Messaging 1.1.3

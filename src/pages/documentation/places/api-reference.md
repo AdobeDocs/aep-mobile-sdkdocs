@@ -14,7 +14,7 @@ This document contains usage information for the public functions, classes, and 
 
 <InlineAlert variant="info" slots="text"/>
 
-This page only contains information about the 3.x `AEPPlaces` extension.<br/><br/>A full API reference for the 2.x `ACPPlaces` extension for iOS can be found [here](https://experienceleague.adobe.com/docs/places/using/places-ext-aep-sdks/places-extension/places-api-reference.html?lang=en).
+This page only contains information about the 3.x `AEPPlaces` extension.<br/><br/>A full API reference for the 2.x `ACPPlaces` extension for iOS can be found [here](https://experienceleague.adobe.com/docs/places/using/places-ext-aep-sdks/places-extension/places-api-reference.html).
 
 ## clear
 

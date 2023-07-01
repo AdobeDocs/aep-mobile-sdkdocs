@@ -10,7 +10,7 @@ import Tabs from './tabs/index.md'
 
 # Adobe Experience Platform Assurance extension
 
-This extension enables capabilities for [Adobe Experience Platform Assurance](../platform-assurance/index.md).
+This extension enables capabilities for [Adobe Experience Platform Assurance](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html).
 
 To get started with Assurance in your app, you'll need to:
 

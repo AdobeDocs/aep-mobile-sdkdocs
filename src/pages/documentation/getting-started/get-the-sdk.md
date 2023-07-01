@@ -75,6 +75,10 @@ Next you'll need to import SDK libraries into your project and register them for
 
 Extension registration is **mandatory**. Attempting to make extension-specific API calls without registering the extension will lead to undefined behavior.
 
+<InlineAlert variant="warning" slots="text"/>
+
+Currently, the Adobe Experience Platform SDKs do not support running under [Direct Boot](https://developer.android.com/training/articles/direct-boot) mode on Android devices. For Android applications configured to be run during Direct Boot mode, verify if the user has unlocked the devices by calling [UserManager.isUserUnlocked()](https://developer.android.com/reference/android/os/UserManager#isUserUnlocked()) before initializing the SDK.
+
 The following code snippets demonstrate how you can import and register the Mobile Core and Profile extensions. You can also see, for reference, how Identity, Lifecycle, Signal, Profile, and other extensions are imported and registered.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
@@ -127,11 +131,10 @@ To enable these permissions, add the following lines to your `AndroidManifest.xm
 ## Additional information
 
 * [How to use Gradle for Android](https://docs.gradle.org/current/userguide/userguide.html)
-* [How to use CocoaPods for iOS ](https://guides.cocoapods.org/using/using-cocoapods)
+* [How to use CocoaPods for iOS](https://guides.cocoapods.org/using/using-cocoapods)
 * [Current SDK Versions](../current-sdk-versions.md)
 
 ## Get help
 
 * Visit the SDK [community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform/ct-p/adobe-experience-platform-community) to ask questions
 * Contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support) for immediate assistance
-
