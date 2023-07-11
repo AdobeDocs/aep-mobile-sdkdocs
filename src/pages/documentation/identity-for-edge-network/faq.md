@@ -50,7 +50,7 @@ A: The Identity for Edge Network extension and the Identity for Experience Cloud
 
 At first launch of the application after upgrading to the Identity for Edge Network extension, the existing ECID from the Identity for Experience Cloud ID Service extension is migrated to the Identity for Edge Network extension. In this case both extensions will have the same ECID value.
 
-The [resetIdentities](./api-reference.md#resetidentities) API regenerates a new ECID used by the Identity for Edge Network extension. This API call does not change the ECID used by the Identity for Experience Cloud ID Service extension. After calling this API, the ECID used by each identity extension will be different.
+The [resetIdentities](./api-reference.md#resetidentities) API causes the Identity for Edge Network extension and the Identity for Experience Cloud ID Service extension to independently generate new ECID values. After calling this API, the ECID used by each identity extension will be different.
 
 Changing the privacy status to `optedOut` will clear the ECID value used by the Identity for Experience Cloud ID Service extension. Changing the privacy status back to `optedIn` will generate a new ECID used by the Identity for Experience Cloud ID Service extension. Privacy status changes do not change the ECID used by the Identity for Edge Network extension. Changing the privacy status will cause the ECID used by each identity extension to be different.
 
