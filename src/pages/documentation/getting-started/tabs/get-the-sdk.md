@@ -127,16 +127,17 @@ The Adobe Experience Platform Mobile SDK plugins for Xamarin are packages distri
 Add the dependencies to `build.gradle` for each extension.
 
 ```java
-implementation 'com.adobe.marketing.mobile:userprofile:2.+'
-implementation 'com.adobe.marketing.mobile:core:2.+'
-implementation 'com.adobe.marketing.mobile:identity:2.+'
-implementation 'com.adobe.marketing.mobile:signal:2.+'
-implementation 'com.adobe.marketing.mobile:lifecycle:2.+'
+implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation 'com.adobe.marketing.mobile:userprofile'
+implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:identity'
+implementation 'com.adobe.marketing.mobile:signal'
+implementation 'com.adobe.marketing.mobile:lifecycle'
 ```
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information.
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../manage-gradle-dependencies.md) for more information.
 
 </InlineNestedAlert>
 

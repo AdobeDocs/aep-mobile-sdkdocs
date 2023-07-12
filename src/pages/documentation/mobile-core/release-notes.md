@@ -1,5 +1,12 @@
 # Release Notes
 
+## June 29, 2023
+
+### Android Core 2.2.3
+
+* Fixed handling of back button press in in-app messages.
+* Resolved a crash that occurred when dismissing in-app messages.
+
 ## June 15, 2023
 
 ### Android Core 2.2.2
@@ -163,6 +170,10 @@ The brand new Adobe Experience Platform Core Android SDKs are live! It is [open 
 * Identity 2.0.0
 * Signal 2.0.0
 * Lifecycle 2.0.0
+
+<InlineAlert variant="info" slots="text"/>
+
+The `registerExtension` API for each extension is deprecated in the latest version of the mobile SDK. You can call the `MobileCore.registerExtensions` API instead of registering the extensions separately. See the [Migration Guide](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-android) for more details.
 
 ## January 5, 2023
 

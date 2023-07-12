@@ -6,6 +6,10 @@
 
 **Migrate to latest Mobile SDKs for Android**<br/>If you are currently using the Mobile Core 1.x and the compatible libraries, please see the [Migrating to latest Mobile SDKs for Android](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-android/) guide for next steps.<br/>The latest Mobile SDKs for Android support Google Android API 19 (KitKat) or later.
 
+<InlineAlert variant="info" slots="text"/>
+
+**Start using the BOM artifact for Android**<br/> The Adobe SDK BOM artifact enables managing all compatible versions of Adobe Experience Platform Android extensions by specifying a single BOM version. This is now the recommended way to manage Android SDKs.
+
 | Extension | Maven | Github |
 |---|---|---|
 | [Mobile Core](../mobile-core/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/core.svg?logo=android&logoColor=white&label=core&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/core) | [Link](https://github.com/adobe/aepsdk-core-android) |
