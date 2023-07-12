@@ -48,7 +48,7 @@ The request timeout is the time in seconds to wait for a response from the in-ap
 
 The request timeout value must be a non-zero number.
 
-## Add the Campaign Standard extension to your app
+### Add the Campaign Standard extension to your app
 
 Remember the following information when you add the Campaign extension to your app:
 
@@ -119,7 +119,7 @@ iOS
 
 <Tabs query="platform=ios&task=push-messaging"/>
 
-## Tracking local and push notification message interactions
+### Tracking local and push notification message interactions
 
 User interactions with local or push notifications can be tracked by invoking the `collectMessageInfo` API. After the API is invoked, a network request is made to Campaign that contains the message interaction event.
 
@@ -188,6 +188,25 @@ iOS
 <Tabs query="platform=ios&task=customize"/>
 
 Giving a value of `0` when setting `campaign.registrationDelay` will send a registration request on every launch event. This is the previous behavior seen before the registration request reduction enhancement was added.
+
+### Using a bundled asset as a fullscreen in-app message fallback image
+
+A bunded image asset may be specified on the Campaign Standard UI to be used as a primary image or as a fallback image in the case where a specified remote image url is inaccessible. The bundled image should be specified on the Campaign Standard UI with the file name and file extension. For example, in the `Media URL` or `Bundled Image` text entry field on the Campaign Standard UI, a bundled JPEG file with the file name `adobe` can be provided in the following format:
+
+```text
+adobe.jpg
+```
+
+The specified bundled image must then be included with your app when it is built. To do so:
+
+Android
+
+1. The image must be placed in your app's `assets` directory. This directory is found in the `src/main/` directory of the app. If the directory is not present, it can be created following a  `src/main/assets` directory structure.
+
+iOS
+
+1. Add the image file to your project by going to Xcode's `File > Add Files to "Your App Name"... ` menu and locating the image file that will be bundled with the app. Ensure that the targets that will be using the image file are checked in the `Add to targets` selection menu.
+2. In the `Build Phases` configuration of the app target locate the `Copy Bundle Resources` section. Click the `+` button to add the image file to be bundled with the app.
 
 ## Configuration keys
 
