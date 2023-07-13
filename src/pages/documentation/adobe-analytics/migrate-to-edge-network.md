@@ -26,7 +26,8 @@ Edge Bridge only supports the Analytics drop-in migration case. If you are looki
 | **Analytics extension** | MobileCore.trackAction  MobileCore.trackState | 1. Analytics extension <br/> 2. Identity for Experience Cloud ID Service extension | N/A| iOS, Android, tvOS| N/A |
 
 <InlineAlert variant="info" slots="text"/>
-Other foundational extensions include the Consent for Edge Network extension which [enables consent preferences collection](#consent-for-edge-network-extension) from your mobile app, and the [Assurance extension](../platform-assurance-sdk/index.md) for validating your app implementation.
+
+Other foundational extensions include the [Consent for Edge Network extension](../consent-for-edge-network/index.md) which enables consent preferences collection from your mobile app, and the [Assurance extension](../platform-assurance-sdk/index.md) for validating your app implementation.
 
 ### Workflow comparison
 
