@@ -191,7 +191,7 @@ Giving a value of `0` when setting `campaign.registrationDelay` will send a regi
 
 ### Using a bundled asset as a fullscreen in-app message fallback image
 
-A bunded image asset may be specified on the Campaign Standard UI to be used as a primary image or as a fallback image in the case where a specified remote image url is inaccessible. The bundled image should be specified on the Campaign Standard UI with the file name and file extension. For example, in the `Media URL` or `Bundled Image` text entry field on the Campaign Standard UI, a bundled JPEG file with the file name `adobe` can be provided in the following format:
+A bunded image asset may be specified on the Campaign Standard UI to be used as a primary image or as a fallback image in the case where a specified remote image url is inaccessible. The bundled image should be specified on the Campaign Standard UI with the file name and file extension. For example, in the  `Bundled Image` text entry field on the Campaign Standard UI, a JPEG file with the file name `adobe` can be provided in the following format:
 
 ```text
 adobe.jpg
