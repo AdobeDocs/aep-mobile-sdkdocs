@@ -199,11 +199,11 @@ adobe.jpg
 
 The specified bundled image must then be included with your app when it is built. To do so:
 
-Android
+#### Android
 
 1. The image must be placed in your app's `assets` directory. This directory is found in the `src/main/` directory of the app. If the directory is not present, it can be created following a  `src/main/assets` directory structure.
 
-iOS
+#### iOS
 
 1. Add the image file to your project by going to Xcode's `File > Add Files to "Your App Name"... ` menu and locating the image file that will be bundled with the app. Ensure that the targets that will be using the image file are checked in the `Add to targets` selection menu.
 2. In the `Build Phases` configuration of the app target locate the `Copy Bundle Resources` section. Click the `+` button to add the image file to be bundled with the app.

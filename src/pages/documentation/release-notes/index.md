@@ -8,7 +8,7 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 ### Android Campaign 2.0.5
 
-- Fixed a bug where a bundled asset was not being used in a fullscreen message when the remote image url was inaccessible.
+- Fixed a bug where a bundled asset was not being used in a fullscreen message when the remote image URL was inaccessible.
 
 ## July 11, 2023
 
