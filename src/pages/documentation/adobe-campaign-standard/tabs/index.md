@@ -61,7 +61,7 @@ import AEPServices
 @import AEPServices;
 ```
 
-<Variant platform="android" task="register" repeat="4"/>
+<Variant platform="android" task="register" repeat="6"/>
 
 In your app's `OnCreate` method, call the `setApplication` method.
 
@@ -598,3 +598,11 @@ config[@"campaign.registrationDelay"] = @30; // number of days to delay sending 
 config[@"campaign.registrationPaused"] = [NSNumber numberWithBool:NO]; // boolean signaling if registration requests should be paused
 [AEPMobileCore updateConfiguration:config];
 ```
+
+<Variant platform="android" task="bundled-image" repeat="1"/>
+
+The image must be placed in your app's `assets` directory. This directory is found in the `src/main/` directory of the app. If the directory is not present, it can be created following a  `src/main/assets` directory structure.
+
+<Variant platform="ios" task="bundled-image" repeat="1"/>
+
+Add the image file to your project by going to Xcode's `File > Add Files to "Your App Name"... ` menu and locating the image file that will be bundled with the app. Ensure that the targets that will be using the image file are checked in the `Add to targets` selection menu.
