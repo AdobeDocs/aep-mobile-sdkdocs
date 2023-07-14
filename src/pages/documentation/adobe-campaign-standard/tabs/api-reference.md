@@ -64,7 +64,7 @@ This API has been deprecated as of version 2.0.0. Please use the [Mobile Core re
 
 <Variant platform="ios" api="register-extension" repeat="1"/>
 
-This API no longer exists in the Adobe Campaign Standard extension. Instead, the extension should be registered by calling the `registerExtensions` API in the MobileCore. Please see the updated SDK initialization steps at the [migrate to Swift tutorial](../migrate-to-swift.md).
+This API no longer exists in the Adobe Campaign Standard extension. Instead, the extension should be registered by calling the `registerExtensions` API in the MobileCore. Please see the updated SDK initialization steps at the [migrate to Swift tutorial](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-swift/).
 
 <Variant platform="android" api="reset-linkage-fields" repeat="10"/>
 

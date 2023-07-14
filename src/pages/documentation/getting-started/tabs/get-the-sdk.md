@@ -169,7 +169,7 @@ Save the `Podfile` and run install:
 pod install
 ```
 
-<Variant platform="android" task="add-initialization" repeat="4"/>
+<Variant platform="android" task="add-initialization" repeat="5"/>
 
 After you register the extensions, call the `start` API in Mobile Core to initialize the SDK as shown below. This step is required to boot up the SDK for event processing. The following code snippet is provided as a sample reference.
 
@@ -193,22 +193,21 @@ public class MainApp extends Application {
   public void on Create(){
     super.onCreate();
     MobileCore.setApplication(this);
-        MobileCore.setLogLevel(LoggingMode.DEBUG);
+    MobileCore.setLogLevel(LoggingMode.DEBUG);
     ...
-    try {
-      UserProfile.registerExtension();
-            Identity.registerExtension();
-            Lifecycle.registerExtension();
-            Signal.registerExtension();
-            MobileCore.start(new AdobeCallback () {
-            @Override
-            public void call(Object o) {
-            MobileCore.configureWithAppID("<your_environment_id_from_Launch>");
-    }
-});
-    } catch (InvalidInitException e) {
-      ...
-    }
+    List<Class<? extends Extension>> extensions = Arrays.asList(
+      UserProfile.EXTENSION,
+      Identity.EXTENSION,
+      Lifecycle.EXTENSION,
+      Signal.EXTENSION
+    );
+
+    MobileCore.registerExtensions(extensions, new AdobeCallback () {
+        @Override
+        public void call(Object o) {
+            MobileCore.configureWithAppID("<your_environment_file_id>");
+        }
+    });
   }
 }
 ```
@@ -229,13 +228,20 @@ public class MainApp extends Application {
       MobileCore.setApplication(this);
       MobileCore.setLogLevel(LoggingMode.DEBUG);
       ...
-      try {
-        ...
-      } catch (InvalidInitException e) {
-        ...
-      }
-    }
-    
+      List<Class<? extends Extension>> extensions = Arrays.asList(
+        UserProfile.EXTENSION,
+        Identity.EXTENSION,
+        Lifecycle.EXTENSION,
+        Signal.EXTENSION
+      );
+
+      MobileCore.registerExtensions(extensions, new AdobeCallback () {
+          @Override
+          public void call(Object o) {
+              MobileCore.configureWithAppID("<your_environment_file_id>");
+          }
+      });
+    } 
   }
 }
 ```
@@ -250,7 +256,7 @@ For iOS Swift libraries, registration is changed to a single API call (as shown 
 // AppDelegate.swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     MobileCore.registerExtensions([Signal.self, Lifecycle.self, UserProfile.self, Edge.self, AEPEdgeIdentity.Identity.self, Consent.self, AEPIdentity.Identity.self, Analytics.self], {
-        MobileCore.configureWith(appId: "yourAppId")
+        MobileCore.configureWith(appId: "<your_environment_file_id>")
     })
   ...
 }
@@ -262,7 +268,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 // AppDelegate.m
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [AEPMobileCore registerExtensions:@[AEPMobileSignal.class, AEPMobileLifecycle.class, AEPMobileUserProfile.class, AEPMobileEdge.class, AEPMobileEdgeIdentity.class, AEPMobileEdgeConsent.class, AEPMobileIdentity.class, AEPMobileAnalytics.class] completion:^{
-    [AEPMobileCore configureWithAppId: @"yourAppId"];
+    [AEPMobileCore configureWithAppId: @"<your_environment_file_id>"];
   }];
   ...
 }
@@ -283,7 +289,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   func application(_application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool{
     ACPCore.setLogLevel(.debug)
-        ACPCore.configure(withAppId: "<your_environment_id_from_Launch>")
+        ACPCore.configure(withAppId: "<your_environment_file_id>")
     ...
     ACPUserProfile.registerExtension()
         ACPIdentity.registerExtension()
@@ -311,7 +317,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 @implementation AppDelegate
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   [ACPCore setLogLevel:ACPMobileLogLevelDebug];
-  [ACPCore configureWithAppId:@"<your_environment_id_from_Launch>"];
+  [ACPCore configureWithAppId:@"<your_environment_file_id>"];
     ...
   [ACPUserProfile registerExtension];
     [ACPIdentity registerExtension];
@@ -347,7 +353,7 @@ For React Native apps, initialize the SDK using native code in your `AppDelegate
 @implementation AppDelegate
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [ACPCore setLogLevel:ACPMobileLogLevelDebug];
-    [ACPCore configureWithAppId:@"<your_environment_id_from_Launch>"];
+    [ACPCore configureWithAppId:@"<your_environment_file_id>"];
     [ACPUserProfile registerExtension];
     [ACPIdentity registerExtension];
     [ACPLifecycle registerExtension];
@@ -399,7 +405,7 @@ public class MainApplication extends Application implements ReactApplication {
       MobileCore.start(new AdobeCallback () {
           @Override
           public void call(Object o) {
-            MobileCore.configureWithAppID("<your_environment_id_from_Launch>");
+            MobileCore.configureWithAppID("<your_environment_file_id>");
          }
       });
     } catch (InvalidInitException e) {
@@ -434,7 +440,7 @@ For Cordova apps, initialize the SDK using native code in your `AppDelegate` and
   [ACPCore setWrapperType:ACPMobileWrapperTypeCordova];
 
   //...
-  [ACPCore configureWithAppId:@"yourAppId"];
+  [ACPCore configureWithAppId:@"<your_environment_file_id>"];
   [ACPIdentity registerExtension];
   [ACPLifecycle registerExtension];
   [ACPSignal registerExtension];
@@ -458,7 +464,7 @@ import com.adobe.marketing.mobile.WrapperType;
 public void onCreate() {
   //...
   MobileCore.setApplication(this);
-  MobileCore.configureWithAppID("yourAppId");
+  MobileCore.configureWithAppID("<your_environment_file_id>");
 
   // make sure to set the wrapper type at the beginning of initialization
   MobileCore.setWrapperType(WrapperType.CORDOVA);
@@ -492,7 +498,7 @@ public class MainScript : MonoBehaviour
     [MonoPInvokeCallback(typeof(AdobeStartCallback))]
     public static void HandleStartAdobeCallback()
     {   
-        ACPCore.ConfigureWithAppID("1423ae38-8385-8963-8693-28375403491d");
+        ACPCore.ConfigureWithAppID("<your_environment_file_id>");
     }
 
     // Start is called before the first frame update
@@ -542,7 +548,7 @@ public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsAppli
     ACPCore.SetWrapperType(ACPMobileWrapperType.Xamarin);
 
     // set launch config
-    ACPCore.ConfigureWithAppID("your-app-id");
+    ACPCore.ConfigureWithAppID("<your_environment_file_id>");
 
     // register SDK extensions
     ACPIdentity.RegisterExtension();
