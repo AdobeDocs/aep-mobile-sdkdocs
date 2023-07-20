@@ -2,6 +2,13 @@
 
 Release notes and change logs for the Adobe Experience Platform Assurance extension
 
+## July 21, 2023
+
+### Android Assurance 2.1.1
+
+* Added support for chained events.
+* Improvements to the test app.
+
 ## June 1, 2023
 
 ### iOS Assurance 4.0.0
