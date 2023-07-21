@@ -9,7 +9,6 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 ### Android Assurance 2.1.1
 
 - Added support for chained events.
-- Improvements to the test app.
 
 ## July 12, 2023
 
