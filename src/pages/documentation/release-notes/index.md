@@ -4,17 +4,38 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## July 21, 2023
+
+### iOS Edge 4.1.0
+
+* Added support for chaining related events.
+* Fixed location of event index when decoding network response errors and warnings.
+
+### iOS EdgeBridge 4.1.0
+
+* Added support for chaining related events.
+
+### Android Edge 2.2.0
+
+* Added support for chaining related events.
+* Fixed location of event index when decoding network response errors and warnings.
+
+### Android EdgeBridge 2.1.0
+
+* Added support for chaining related events.
+* Updated POM file with the Apache 2 license URL.
+
 ## July 12, 2023
 
 ### Android Campaign 2.0.5
 
-- Fixed a bug where a bundled asset was not being used in a fullscreen message when the remote image URL was inaccessible.
+* Fixed a bug where a bundled asset was not being used in a fullscreen message when the remote image URL was inaccessible.
 
 ## July 11, 2023
 
 ### iOS Target 4.0.1 and Android Target 2.0.1
 
-- Fixed a bug in which a Target Response containing JSON Array content was rejected.
+* Fixed a bug in which a Target Response containing JSON Array content was rejected.
 
 ## June 29, 2023
 
