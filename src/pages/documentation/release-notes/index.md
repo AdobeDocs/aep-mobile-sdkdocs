@@ -6,12 +6,12 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 ## July 21, 2023
 
-### iOS AEPEdge 4.1.0
+### iOS Edge 4.1.0
 
 - Added support for chaining related events.
 - Fixed location of event index when decoding network response errors and warnings.
 
-### iOS AEPEdgeBridge 4.1.0
+### iOS EdgeBridge 4.1.0
 
 - Added support for chaining related events.
 
