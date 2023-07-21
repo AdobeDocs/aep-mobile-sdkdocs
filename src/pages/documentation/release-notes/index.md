@@ -25,6 +25,8 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 * Added support for chaining related events.
 * Updated POM file with the Apache 2 license URL.
 
+## July 20, 2023
+
 ### Android Assurance 2.1.1
 
 * Added support for chained events.

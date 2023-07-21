@@ -2,7 +2,7 @@
 
 Release notes and change logs for the Adobe Experience Platform Assurance extension
 
-## July 21, 2023
+## July 20, 2023
 
 ### Android Assurance 2.1.1
 
