@@ -1,6 +1,6 @@
 # Release Notes
 
-## July 20, 2023
+## July 21, 2023
 
 ### iOS AEPEdge 4.1.0
 
