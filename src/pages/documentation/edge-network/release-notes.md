@@ -1,5 +1,17 @@
 # Release Notes
 
+## July 20, 2023
+
+### iOS AEPEdge 4.1.0
+
+- Added support for chaining related events.
+- Fixed location of event index when decoding network response errors and warnings.
+
+### Android Edge 2.2.0
+
+- Added support for chaining related events.
+- Fixed location of event index when decoding network response errors and warnings.
+
 ## June 1, 2023
 
 ### iOS Edge 4.0.0

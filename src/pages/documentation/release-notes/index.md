@@ -4,6 +4,27 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## July 20, 2023
+
+### iOS AEPEdge 4.1.0
+
+- Added support for chaining related events.
+- Fixed location of event index when decoding network response errors and warnings.
+
+### iOS AEPEdgeBridge 4.1.0
+
+- Added support for chaining related events.
+
+### Android Edge 2.2.0
+
+- Added support for chaining related events.
+- Fixed location of event index when decoding network response errors and warnings.
+
+### Android EdgeBridge 2.1.0
+
+- Added support for chaining related events.
+- Updated POM file with the Apache 2 license URL.
+
 ## July 12, 2023
 
 ### Android Campaign 2.0.5
