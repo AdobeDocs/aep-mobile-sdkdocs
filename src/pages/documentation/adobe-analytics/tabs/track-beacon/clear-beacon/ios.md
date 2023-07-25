@@ -7,10 +7,10 @@ This example uses `static` constant strings that were provided in the `trackBeac
 ```objectivec
 #if TARGET_OS_IOS
 + (void) clearCurrentBeacon {
-    [ACPUserProfile removeUserAttribute:ACP_BEACON_MAJOR];
-    [ACPUserProfile removeUserAttribute:ACP_BEACON_MINOR];
-    [ACPUserProfile removeUserAttribute:ACP_BEACON_UUID];
-    [ACPUserProfile removeUserAttribute:ACP_BEACON_PROXIMITY];
+    [ACPUserProfile removeUserAttribute:BEACON_MAJOR];
+    [ACPUserProfile removeUserAttribute:BEACON_MINOR];
+    [ACPUserProfile removeUserAttribute:BEACON_UUID];
+    [ACPUserProfile removeUserAttribute:BEACON_PROXIMITY];
 }
 #endif
 ```
@@ -21,10 +21,10 @@ This example uses `static` constant strings that were provided in the `trackBeac
 #if TARGET_OS_IOS
 +clearCurrentBeacon
 do {
-    ACPUserProfile.removeUserAttribute(ACP_BEACON_MAJOR)
-    ACPUserProfile.removeUserAttribute(ACP_BEACON_MINOR)
-    ACPUserProfile.removeUserAttribute(ACP_BEACON_UUID)
-    ACPUserProfile.removeUserAttribute(ACP_BEACON_PROXIMITY)
+    ACPUserProfile.removeUserAttribute(BEACON_MAJOR)
+    ACPUserProfile.removeUserAttribute(BEACON_MINOR)
+    ACPUserProfile.removeUserAttribute(BEACON_UUID)
+    ACPUserProfile.removeUserAttribute(BEACON_PROXIMITY)
 }
 #endif
 ```

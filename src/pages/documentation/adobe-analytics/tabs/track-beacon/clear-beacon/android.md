@@ -2,9 +2,9 @@ This example uses `static` constant strings that were provided in the `trackBeac
 
 ```java
 void clearCurrentBeacon() {
-    UserProfile.removeUserAttribute(ACP_BEACON_MAJOR);
-    UserProfile.removeUserAttribute(ACP_BEACON_MINOR);
-    UserProfile.removeUserAttribute(ACP_BEACON_UUID);
-    UserProfile.removeUserAttribute(ACP_BEACON_PROXIMITY);
+    UserProfile.removeUserAttribute(BEACON_MAJOR);
+    UserProfile.removeUserAttribute(BEACON_MINOR);
+    UserProfile.removeUserAttribute(BEACON_UUID);
+    UserProfile.removeUserAttribute(BEACON_PROXIMITY);
 }
 ```
