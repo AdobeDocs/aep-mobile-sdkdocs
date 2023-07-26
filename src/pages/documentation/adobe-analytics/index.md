@@ -70,7 +70,7 @@ If you currently send Mobile SDK data to a report suite that also collects data 
 
 For more information about Analytics server-side forwarding to Audience Manager, see the documentation on [Analytics sever-side forwarding](./#server-side-forwarding-with-audience-manager).
 
-If you set up Analytics server-side forwarding to Audience Manager in your Analytics report suite, select the **Audience Manager Forwarding** checkbox. When this checkbox is selected, all SDK requests to Analytics servers are sent with an expected response code of **10**. This step ensures that client-side Analytics response traffic is forwarded to Audience Manager within the SDK and that the Audience Manager User Profile is correctly updated in the SDK.
+If you set up Analytics server-side forwarding to Audience Manager in your Analytics report suite, select the **Audience Manager Forwarding** checkbox. When this checkbox is selected, all SDK requests to Analytics servers are sent with an expected response code of **10**. This step ensures that client-side Analytics response traffic is forwarded to the Audience Manager SDK so that the User Profile is correctly updated.
 
 #### Backdate previous session info
 
