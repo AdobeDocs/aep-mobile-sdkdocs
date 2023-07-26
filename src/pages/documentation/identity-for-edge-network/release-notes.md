@@ -7,7 +7,6 @@
 * Added validation to ignore `IdentityItem`s with an empty ID value.
 * Fixed an issue where the `getUrlVariables` API may fail to generate a response on Android 6 (API 23) devices.
 
-
 ## June 1, 2023
 
 ### iOS EdgeIdentity 4.0.0
