@@ -224,7 +224,7 @@ The Analytics extension will read the following keys from the configuration even
 | `analytics.server` | String | No | The Analytics server |
 | `analytics.rsids` | String | No | The Analytics report suites separated by commas. |
 | `analytics.batchLimit` | Int | Yes | The hit batching settings. By default, this value is 0. |
-| `analytics.aamForwardingEnabled` | Bool | Yes | Indicates whether Audience Manager forwarding is enabled. By default, this option is disabled. |
+| `analytics.aamForwardingEnabled` | Bool | Yes | Indicates whether Audience Manager forwarding is enabled in the SDK. By default, this option is disabled. |
 | `analytics.offlineEnabled` | Bool | Yes | Indicates whether Analytics offline batching is enabled. By default, this option is disabled. |
 | `lifecycle.backdateSessionInfo` | Bool | Yes | Indicates whether Analytics should backdate the lifecycle `SessionInfo` hit. This flag is used when `analytics.offlineEnabled` is also enabled. By default, this option is disabled. |
 | `analytics.referrerTimeout` | Int | Yes | Indicates the number of seconds that the SDK will wait for referrer information to arrive. By default, this value is 0. |
