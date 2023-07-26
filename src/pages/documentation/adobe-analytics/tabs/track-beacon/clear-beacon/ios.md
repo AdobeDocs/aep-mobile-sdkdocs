@@ -5,13 +5,9 @@ This example uses `static` constant strings that were provided in the `trackBeac
 #### Swift
 
 ```swift
-#if TARGET_OS_IOS
-+clearCurrentBeacon
-do {
-    ACPUserProfile.removeUserAttribute(BEACON_MAJOR)
-    ACPUserProfile.removeUserAttribute(BEACON_MINOR)
-    ACPUserProfile.removeUserAttribute(BEACON_UUID)
-    ACPUserProfile.removeUserAttribute(BEACON_PROXIMITY)
+#if os(iOS)
+class func clearCurrentBeacon() {
+    UserProfile.removeUserAttributes(attributeNames: [BEACON_MAJOR, BEACON_MINOR, BEACON_UUID, BEACON_PROXIMITY])
 }
 #endif
 ```
