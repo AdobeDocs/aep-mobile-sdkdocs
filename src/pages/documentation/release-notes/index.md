@@ -4,6 +4,13 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## July 25, 2023
+
+### Android EdgeIdentity 2.0.1
+
+* Added validation to ignore `IdentityItem`s with an empty ID value.
+* Fixed an issue where the `getUrlVariables` API may fail to generate a response on Android 6 (API 23) devices.
+
 ## July 21, 2023
 
 ### iOS Edge 4.1.0
