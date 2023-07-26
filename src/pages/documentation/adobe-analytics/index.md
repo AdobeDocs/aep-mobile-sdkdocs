@@ -45,7 +45,6 @@ To narrow the search for a report suite identifier, type a string in the combo b
 
 To learn what a tracking server is and how to find it, please read the documentation on [tracking servers](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/trackingserver.html).
 
-
 The tracking server is the tracking domain that all the Analytics requests should be made.
 
 #### Offline enabled
@@ -143,6 +142,7 @@ To track mobile app states and actions in Adobe Analytics, implement the [trackA
 To see the performance of your Target activities for some segments, you can set up the Analytics extension for Target (A4T) cross-solution integration by enabling the A4T campaigns. This integration allows you to use Analytics reports to examine your results. If you use Analytics as the reporting source for an activity, all reporting and segmentation for that activity is based on Analytics data collection. For more information, see [Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html).
 
 ### Server-side forwarding with Audience Manager
+
 To enable server-side forwarding to share Analytics data with Audience Manager, see the documentation on [Server-side Forwarding](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/server-side-forwarding/ssf.html) to enable server-side forwarding at the report suite level.
 
 To enable client-side forwarding to share Analytics data with Audience Manager within the SDK, in the Data Collection UI, select the **Audience Manager Forwarding** checkbox. For more information, go to [Audience Manager](../adobe-audience-manager/index.md).
