@@ -1,5 +1,19 @@
 # Release Notes
 
+## July 26, 2023
+
+### Android Core 2.3.0
+
+* Added the DeviceInforming.getSystemLocale() API, which returns the locale set by the user in the system.
+* Implemented database recovery in SQLiteDataQueue for cases where adding or removing an entry fails due to unexpected errors.
+* Fixed an issue with the rounded corners and placement of in-app messages on Android 21/22.
+* Fixed a bug where the cached appId could overwrite the one set with MobileCore.configureWithAppId() before extension registration.
+
+### Android Lifecycle 2.0.4
+
+* Lifecycle extension now includes the system locale, indicating the device's preferred locale, in its published shared state.
+* Lifecycle launch events will now include the application._dc.language XDM field, which signifies the device's preferred locale. 
+
 ## June 29, 2023
 
 ### Android Core 2.2.3
@@ -50,7 +64,7 @@ Please note that the current release includes the following changes:
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 * Added `SystemInfoService.getSystemLocaleName()` API which returns the locale by combining device's preferred language and selected region (as set by the user on the system).
 * Lifecycle extension adds `systemlocale` denoting device's preferred locale to its published shared state.
-* Lifecycle launch events will contain `application._dc.language` XDM field denoting device's preferred locale to shared state.
+* Lifecycle launch events will contain `application._dc.language` XDM field denoting device's preferred locale.
 
 ## May 23, 2023
 
