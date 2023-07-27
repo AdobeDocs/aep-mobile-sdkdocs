@@ -55,7 +55,7 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 ### Android Lifecycle 2.0.4
 
 * Lifecycle extension now includes the system locale, indicating the device's preferred locale, in its published shared state.
-* Lifecycle launch events will now include the application._dc.language XDM field, which signifies the device's preferred locale.
+* Lifecycle launch event now includes the application._dc.language XDM field, which signifies the device's preferred locale.
 
 ### Android UserProfile 2.0.1
 
@@ -440,7 +440,7 @@ Please note that the current release includes the following changes:
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 * Added `SystemInfoService.getSystemLocaleName()` API which returns the locale by combining device's preferred language and selected region (as set by the user on the system).
 * Lifecycle extension adds `systemlocale` denoting device's preferred locale to its published shared state.
-* Lifecycle launch events will contain `application._dc.language` XDM field denoting device's preferred locale.
+* Lifecycle launch event now includes the application._dc.language XDM field, which signifies the device's preferred locale.
 
 ### iOS RulesEngine 4.0.0
 
