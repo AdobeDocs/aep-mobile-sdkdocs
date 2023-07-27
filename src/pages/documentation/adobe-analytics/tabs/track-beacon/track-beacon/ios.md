@@ -16,24 +16,25 @@ private let BEACON_PROXIMITY = "a.beacon.prox"
 
 class func trackBeacon(_ beacon: CLBeacon?, data: [String: String]) {
     var contextData: [String: String] = data
+    var userAttributes: [String: Any] = [:]
 
     if beacon?.major != nil {
         contextData[BEACON_MAJOR] = beacon?.major.stringValue ?? ""
-        UserProfile.updateUserAttributes(attributeDict: [BEACON_MAJOR: beacon?.major.stringValue ?? ""])
+        userAttributes[BEACON_MAJOR] = beacon?.major.stringValue ?? ""
     } else {
         UserProfile.removeUserAttributes(attributeNames: [BEACON_MAJOR])
     }
 
     if beacon?.minor != nil {
         contextData[BEACON_MINOR] = beacon?.minor.stringValue ?? ""
-        UserProfile.updateUserAttributes(attributeDict: [BEACON_MINOR: beacon?.minor.stringValue ?? ""])
+        userAttributes[BEACON_MINOR] = beacon?.minor.stringValue ?? ""
     } else {
         UserProfile.removeUserAttributes(attributeNames:[BEACON_MINOR])
     }
 
     if beacon?.proximityUUID.uuidString != nil {
         contextData[BEACON_UUID] = beacon?.proximityUUID.uuidString ?? ""
-        UserProfile.updateUserAttributes(attributeDict: [BEACON_UUID: beacon?.proximityUUID.uuidString ?? ""])
+        userAttributes[BEACON_UUID] = beacon?.proximityUUID.uuidString ?? ""
     } else {
         UserProfile.removeUserAttributes(attributeNames: [BEACON_UUID])
     }
@@ -50,7 +51,8 @@ class func trackBeacon(_ beacon: CLBeacon?, data: [String: String]) {
     default:
         contextData[BEACON_PROXIMITY] = "0"
     }
-    UserProfile.updateUserAttributes(attributeDict: [BEACON_PROXIMITY: contextData[BEACON_PROXIMITY] ?? ""])
+    userAttributes[BEACON_PROXIMITY] = contextData[BEACON_PROXIMITY] ?? ""
+    UserProfile.updateUserAttributes(attributeDict: userAttributes)
 
     let eventData:[String: Any] = [
         "trackinternal": true,
@@ -81,24 +83,25 @@ static NSString* const BEACON_PROXIMITY = @"a.beacon.prox";
 
 + (void) trackBeacon:(CLBeacon *)beacon data:(NSDictionary*)data {
     NSMutableDictionary *contextData = data ? [data mutableCopy] : [@{} mutableCopy];
+    NSMutableDictionary *userAttributes = [@{} mutableCopy];
 
     if (beacon.major) {
         contextData[BEACON_MAJOR] = [beacon.major stringValue];
-        [AEPMobileUserProfile updateUserAttributesWithAttributeDict: @{BEACON_MAJOR : [beacon.major stringValue]}];
+        userAttributes[BEACON_MAJOR] = [beacon.major stringValue];
     } else {
         [AEPMobileUserProfile removeUserAttributesWithAttributeNames: @[BEACON_MAJOR]];
     }
 
     if (beacon.minor) {
         contextData[BEACON_MINOR] = [beacon.minor stringValue];
-        [AEPMobileUserProfile updateUserAttributesWithAttributeDict: @{BEACON_MINOR : [beacon.minor stringValue]}];
+        userAttributes[BEACON_MINOR] = [beacon.minor stringValue];
     } else {
         [AEPMobileUserProfile removeUserAttributesWithAttributeNames: @[BEACON_MINOR]];
     }
 
     if (beacon.proximityUUID.UUIDString) {
         contextData[BEACON_UUID] = beacon.proximityUUID.UUIDString;
-        [AEPMobileUserProfile updateUserAttributesWithAttributeDict: @{BEACON_UUID : beacon.proximityUUID.UUIDString}];
+        userAttributes[BEACON_UUID] = beacon.proximityUUID.UUIDString;
     } else {
         [AEPMobileUserProfile removeUserAttributesWithAttributeNames: @[BEACON_UUID]];
     }
@@ -117,7 +120,8 @@ static NSString* const BEACON_PROXIMITY = @"a.beacon.prox";
         default:
             contextData[BEACON_PROXIMITY] = @"0";
     }
-    [AEPMobileUserProfile updateUserAttributesWithAttributeDict: @{BEACON_PROXIMITY :contextData[BEACON_PROXIMITY]}];
+    userAttributes[BEACON_PROXIMITY] = contextData[BEACON_PROXIMITY];
+    [AEPMobileUserProfile updateUserAttributesWithAttributeDict:userAttributes];
 
     NSDictionary *eventData = @{
                                 @"trackinternal":@(YES),
