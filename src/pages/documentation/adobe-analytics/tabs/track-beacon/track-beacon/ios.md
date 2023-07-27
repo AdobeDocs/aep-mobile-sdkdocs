@@ -66,3 +66,67 @@ class func trackBeacon(_ beacon: CLBeacon?, data: [String: String]) {
 }
 #endif
 ```
+
+#### Objective-C
+```objectivec
+#if TARGET_OS_IOS
+static NSString* const BEACON_MAJOR = @"a.beacon.major";
+static NSString* const BEACON_MINOR = @"a.beacon.minor";
+static NSString* const BEACON_UUID = @"a.beacon.uuid";
+static NSString* const BEACON_PROXIMITY = @"a.beacon.prox";
+
++ (void) trackBeacon:(CLBeacon *)beacon data:(NSDictionary*)data {
+    NSMutableDictionary *contextData = data ? [data mutableCopy] : [@{} mutableCopy];
+
+    if (beacon.major) {
+        contextData[BEACON_MAJOR] = [beacon.major stringValue];
+        [AEPMobileUserProfile updateUserAttributesWithAttributeDict: @{BEACON_MAJOR : [beacon.major stringValue]}];
+    } else {
+        [AEPMobileUserProfile removeUserAttributesWithAttributeNames: @[BEACON_MAJOR]];
+    }
+
+    if (beacon.minor) {
+        contextData[BEACON_MINOR] = [beacon.minor stringValue];
+        [AEPMobileUserProfile updateUserAttributesWithAttributeDict: @{BEACON_MINOR : [beacon.minor stringValue]}];
+    } else {
+        [AEPMobileUserProfile removeUserAttributesWithAttributeNames: @[BEACON_MINOR]];
+    }
+
+    if (beacon.proximityUUID.UUIDString) {
+        contextData[BEACON_UUID] = beacon.proximityUUID.UUIDString;
+        [AEPMobileUserProfile updateUserAttributesWithAttributeDict: @{BEACON_UUID : beacon.proximityUUID.UUIDString}];
+    } else {
+        [AEPMobileUserProfile removeUserAttributesWithAttributeNames: @[BEACON_UUID]];
+    }
+
+    switch (beacon.proximity) {
+        case CLProximityImmediate:
+            contextData[BEACON_PROXIMITY] = @"1";
+            break;
+        case CLProximityNear:
+            contextData[BEACON_PROXIMITY] = @"2";
+            break;
+        case CLProximityFar:
+            contextData[BEACON_PROXIMITY] = @"3";
+            break;
+        case CLProximityUnknown:
+        default:
+            contextData[BEACON_PROXIMITY] = @"0";
+    }
+    [AEPMobileUserProfile updateUserAttributesWithAttributeDict: @{BEACON_PROXIMITY :contextData[BEACON_PROXIMITY]}];
+
+    NSDictionary *eventData = @{
+                                @"trackinternal":@(YES),
+                                @"action":@"Beacon",
+                                @"contextdata":contextData
+                                };
+
+    AEPEvent *event = [[AEPEvent alloc] initWithName:@"TrackBeacon"
+                                                type:@"com.adobe.eventType.generic.track"
+                                              source:@"com.adobe.eventSource.requestContent"
+                                                data:eventData];
+    [AEPMobileCore dispatch:event];
+}
+#endif
+
+```

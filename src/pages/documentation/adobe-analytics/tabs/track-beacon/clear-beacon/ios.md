@@ -17,10 +17,7 @@ class func clearCurrentBeacon() {
 ```objectivec
 #if TARGET_OS_IOS
 + (void) clearCurrentBeacon {
-    [ACPUserProfile removeUserAttribute:BEACON_MAJOR];
-    [ACPUserProfile removeUserAttribute:BEACON_MINOR];
-    [ACPUserProfile removeUserAttribute:BEACON_UUID];
-    [ACPUserProfile removeUserAttribute:BEACON_PROXIMITY];
+    [AEPMobileUserProfile removeUserAttributesWithAttributeNames: @[BEACON_MAJOR, BEACON_MINOR, BEACON_UUID, BEACON_PROXIMITY]];
 }
 #endif
 ```
