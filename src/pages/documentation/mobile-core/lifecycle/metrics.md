@@ -100,4 +100,3 @@ The following metrics are collected on each [Lifecycle Application Background](.
 | xdm:isClose | boolean | Close of an application. Every application background event sets `isClose` to `true`. |
 | xdm:closeType | String | Type of application close, sent on application isClose. Type is "close" on graceful termination of an application, or "unknown" when application termination source is unknown. |
 | xdm:sessionLength | integer | Length of the application session in seconds. Usually referred as the time the application was in foreground. Will not be less than zero. |
-
