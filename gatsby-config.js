@@ -132,6 +132,10 @@ module.exports = {
                                     {
                                         title: "API reference",
                                         path: "documentation/mobile-core/identity/api-reference"
+                                    },
+                                    {
+                                        title: "Push identifier sync",
+                                        path: "documentation/mobile-core/identity/push-messaging"
                                     }
                                 ]
                             },
@@ -658,10 +662,6 @@ module.exports = {
                             {
                                 title: "Overview",
                                 path: "documentation/troubleshooting-guides"
-                            },
-                            {
-                                title: "Push messaging",
-                                path: "documentation/troubleshooting-guides/push-messaging"
                             },
                             {
                                 title: "Campaign push notifications",
