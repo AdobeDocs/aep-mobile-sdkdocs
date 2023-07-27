@@ -69,6 +69,10 @@ class func trackBeacon(_ beacon: CLBeacon?, data: [String: String]) {
 
 #### Objective-C
 ```objectivec
+@import AEPCore;
+@import AEPUserProfile;
+@import CoreLocation;
+
 #if TARGET_OS_IOS
 static NSString* const BEACON_MAJOR = @"a.beacon.major";
 static NSString* const BEACON_MINOR = @"a.beacon.minor";
