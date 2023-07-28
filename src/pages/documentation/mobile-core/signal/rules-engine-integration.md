@@ -8,11 +8,11 @@ The rules that you set up can use the available triggers and conditions, which r
 
 After these actions have been configured to be triggered and published, the Signal extension carries out the requested actions.
 
-To send PII data to external destinations, the `PII` action can trigger the rules engine when certain triggers and traits match. When setting a rule, you can also set the `PII` action for a Signal event. The `collectPii` API can then be used to trigger the rule and send the PII data.
+To send PII data to external destinations, the **Send PII** action can trigger the rules engine when certain triggers and traits match. When setting a rule, you can also set the **Send PII** action for a Signal event. The `collectPii` API can then be used to trigger the rule and send the data.
 
 ## Rules tokens
 
-Rules tokens are special strings that are used in rule actions as values and are expanded by the SDK when the action is carried out. The format of a token is `TOKEN`, where token is any data element that is defined in the Data Collection UI for a mobile property that identifies the source of the data from which the token is expanded. For example, `TOKEN` can be used in the Signal postback action, where `My Data element for ECID` is a data element that was created using the Mobile Core extension, and the data element type is Experience Cloud ID.
+Rules tokens are special strings that are used in rule actions as values and are expanded by the SDK when the action is carried out. The format of a token is `{%%token%%}`, where `token` is any data element that is defined in the Data Collection UI for a mobile property that identifies the source of the data from which the token is expanded. For example, `{%%My Data element for ECID%%}` can be used in the **Signal Postback** action, where `My Data element for ECID` is a data element that was created using the Mobile Core extension, and the data element type is **Experience Cloud ID**.
 
 The token can also be one of the reserved key names. For more information, see the [matching and retrieving values by keys tutorial](../rules-engine/technical-details.md#matching-and-retrieving-values-by-keys).
 
@@ -20,44 +20,65 @@ Some tokens are modifier functions that specify the transformation that is appli
 
 ### Using tokens in Postbacks and PII rule actions
 
-The `Send Postback` and `Send PII` actions allow you to specify a `URL` field and an optional `Post Body` field. You can specify which tokens should be expanded by the Experience Platform SDKs when the postback or PII network call is triggered. For more information on tokens, see the [rule tokens documentation](#rules-tokens).
+The **Send Postback** and **Send PII** actions allow you to specify a `URL` field and an optional `Post Body` field. You can specify which tokens should be expanded by the Experience Platform SDKs when the postback or PII network call is triggered. For more information on tokens, see the [rule tokens documentation](#rules-tokens).
 
 #### Example
 
-The following example shows how to use the data that is passed to the MobileCore (Android) / ACPCore (iOS) `collectPii` API to form a token:
+The following example shows how to use the data that is passed to the MobileCore `collectPii` API to form a token:
 
-1. In the mobile application, call `collectPII` to fire Event with context data.
+1. In the mobile application, call `collectPii` to fire Event with context data.
 
-   ```java
-    // make sure you register the Signal extension along with other extensions you are using
-    MobileCore.registerExtensions(Arrays.asList(
-						Signal.EXTENSION
-				), value -> {
-			// registration completion handler
-		});
-    ...
-    
-    Map<String, String> data = new HashMap<String, String>();
-    data.put("user_email", "user_001@example.com");
-    MobileCore.collectPII(data);
-   ```
+  **Java**
 
-   **Objective-C**
+  ```java
+  import com.adobe.marketing.mobile.Signal;
+  import com.adobe.marketing.mobile.MobileCore;
+  ...
 
-   ```text
-    [ACPSignal registerExtension];
-    ...
-    [ACPCore collectPii:data:@{@"user_email" : @"user_001@example.com"}];
-   ```
+  // make sure you register the Signal extension along with other extensions you are using
+  MobileCore.registerExtensions(Arrays.asList(
+  				Signal.EXTENSION, ...
+  		), value -> {
+  	// registration completion handler
+  });
+  ...
 
-   **Swift**
+  Map<String, String> data = new HashMap<>();
+  data.put("user_email", "user_001@example.com");
+  MobileCore.collectPii(data);
+  ```
 
-   ```swift
-    ACPSignal.registerExtension()
-    ...
-    let piiContextData: [String: String] = ["user_email" : "user_001@example.com"]
-    ACPCore.collectPii(piiContextData)
-   ```
+ **Swift**
+
+ ```swift
+  import AEPSignal
+  import AEPCore
+  ...
+
+  // make sure you register the Signal extension along with other extensions you are using
+  MobileCore.registerExtensions([Signal.self, ...], {
+      // registration completion handler
+  })
+  ...
+  let piiContextData: [String: String] = ["user_email" : "user_001@example.com"]
+  MobileCore.collectPii(piiContextData)
+ ```
+
+ **Objective-C**
+
+ ```objectivec
+  @import AEPSignal;
+  @import AEPCore;
+  ...
+
+  // make sure you register the Signal extension along with other extensions you are using
+  NSArray *extensionsToRegister = @[AEPMobileSignal.class, ...];
+  [AEPMobileCore registerExtensions:extensionsToRegister completion:^{
+      // registration completion handler
+  }];
+  ...
+  [AEPMobileCore collectPii: @{@"user_email" : @"user_001@example.com"}];
+ ```
 
 2. In the Data Collection UI, create a data element for the `user_email` context data key.
 
@@ -77,7 +98,7 @@ The following example shows how to use the data that is passed to the MobileCore
 
    ![Send Postback action example](./assets/rules-engine-integration/send-postback-action.png)
 
-For more information about `collectPii` and its usage, see `collectPii` in the [Mobile Core API reference](../api-reference.md#collect-pii).
+For more information about `collectPii` and its usage, see `collectPii` in the [Mobile Core API reference](../../api-reference.md#collectpii).
 
 ### Using tokens in Open URL rule actions
 

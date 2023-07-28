@@ -44,7 +44,6 @@ Android
 
 <Tabs query="platform=react-native&api=register-extension"/> --->
 
-## collectPII
+## collectPii
 
-The Signal extension can be used to handle `collectPII` rules. For more information, see the [collectPII](../../api-reference.md#collectpii) API.
-
+The Signal extension can be used to handle `collectPii` rules. For more information, see the [collectPII](../../api-reference.md#collectpii) API.
