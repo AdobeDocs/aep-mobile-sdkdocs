@@ -619,35 +619,43 @@ module.exports = {
                 pages: [
                     {
                         title: "Overview",
-                        path: "/documentation/resources"
+                        path: "documentation/resources"
                     },
                     {
                         title: "Aligning major SDK versions",
-                        path: "/documentation/resources/major-version-alignment"
+                        path: "documentation/resources/major-version-alignment"
+                    },
+                    {
+                        title: "Manage Gradle dependencies",
+                        path: "documentation/resources/manage-gradle-dependencies"
+                    },
+                    {
+                        title: "Manage SPM dependencies",
+                        path: "documentation/resources/manage-spm-dependencies"
                     },
                     {
                         title: "Upgrade to the Experience Platform SDKs",
-                        path: "documentation/upgrade-platform-sdks",
+                        path: "documentation/resources/upgrade-platform-sdks",
                         pages: [
                             {
                                 title: "Overview",
-                                path: "documentation/upgrade-platform-sdks"
+                                path: "documentation/resources/upgrade-platform-sdks"
                             },
                             {
                                 title: "v4 SDK comparison",
-                                path: "documentation/upgrade-platform-sdks/comparison"
+                                path: "documentation/resources/upgrade-platform-sdks/comparison"
                             },
                             {
                                 title: "v4 API changelog",
-                                path: "documentation/upgrade-platform-sdks/api-changelog.md"
+                                path: "documentation/resources/upgrade-platform-sdks/api-changelog.md"
                             },
                             {
                                 title: "Manual Lifecycle implementation",
-                                path: "documentation/upgrade-platform-sdks/lifecycle"
+                                path: "documentation/resources/upgrade-platform-sdks/lifecycle"
                             },
                             {
                                 title: "Analytics migration",
-                                path: "documentation/upgrade-platform-sdks/analytics-comparison.md"
+                                path: "documentation/resources/upgrade-platform-sdks/analytics-comparison.md"
                             }
                         ]
                     },
@@ -670,33 +678,21 @@ module.exports = {
                         ]
                     },
                     {
-                        title: "Frequently asked questions",
-                        path: "documentation/faq"
-                    },
-                    {
                         title: "Privacy and GDPR",
-                        path: "documentation/privacy-and-gdpr"
-                    },
-                    {
-                        title: "Manage Gradle dependencies",
-                        path: "documentation/manage-gradle-dependencies"
-                    },
-                    {
-                        title: "Manage SPM dependencies",
-                        path: "documentation/manage-spm-dependencies"
-                    },
-                    {
-                        title: "Version 4 Mobile SDKs end-of-support FAQ",
-                        path: "/documentation/v4-end-of-life-faq"
+                        path: "documentation/resources/privacy-and-gdpr"
                     },
                     {
                         title: "Adobe Experience Cloud & Apple's IDFA, Privacy announcement",
-                        path: "/documentation/privacy-announcement"
+                        path: "documentation/resources/privacy-announcement"
                     },
                     {
-                        title: "Building mobile extensions",
-                        path: "/documentation/building-mobile-extensions"
-                    }
+                        title: "Frequently asked questions",
+                        path: "documentation/resources/faq"
+                    },
+                    {
+                        title: "Version 4 Mobile SDKs end-of-support FAQ",
+                        path: "documentation/resources/v4-end-of-life-faq"
+                    },
                 ]
             },
             {
@@ -748,6 +744,10 @@ module.exports = {
                     {
                         title: "Tracking beacons",
                         path: "documentation/user-guides/track-beacon"
+                    },
+                    {
+                        title: "Building mobile extensions",
+                        path: "documentation/user-guides/building-mobile-extensions"
                     }
                 ]
             }

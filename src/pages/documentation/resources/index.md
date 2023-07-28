@@ -33,7 +33,3 @@ To learn how to manage SPM dependencies of Mobile SDKs, please read the guide on
 ## Privacy and GDPR
 
 To learn how to manage consent and privacy obligations with Mobile SDK, please read the guide on [privacy and GDPR](../privacy-and-gdpr.md).
-
-## Building mobile extensions
-
-To learn how to extend Mobile SDK to support customer-specific features, and allow for the greatest flexibility, please read the guide on [building mobile extensions](../building-mobile-extensions.md).

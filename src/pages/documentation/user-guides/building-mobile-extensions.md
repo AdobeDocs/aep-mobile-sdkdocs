@@ -37,10 +37,10 @@ The following naming rules apply for extensions:
 * The `THIRDPARTY_PREFIX` is `com.`. The prefix `com.adobe.*` is reserved for Adobe.
 * Third parties must prefix their extension name and any custom event types or sources they create with the `THIRDPARTY_PREFIX` followed by their company name.
 * By convention, Adobe will not prefix shared state keys or event data keys.  These names will be in the global namespace. For example: `mid`.
-* Adobe internal module names follow the pattern `ADOBE_PREFIX.module.{moduleName}`. 
-* Adobe event types follow the pattern `ADOBE_PREFIX.eventType.{eventType}`. 
-* Adobe event sources follow the pattern `ADOBE_PREFIX.eventSource.{eventSource}`. 
-* Shared state **names** (not **keys**) must equal the module name. 
+* Adobe internal module names follow the pattern `ADOBE_PREFIX.module.{moduleName}`.
+* Adobe event types follow the pattern `ADOBE_PREFIX.eventType.{eventType}`.
+* Adobe event sources follow the pattern `ADOBE_PREFIX.eventSource.{eventSource}`.
+* Shared state **names** (not **keys**) must equal the module name.
 * All constants will be named using `lowerCamelCase`, and cases are normalized internally to make comparisons case-insensitive. For example, if you use `Com.Adobe.moDule.AnAlytiCS` it will be internally converted to `com.adobe.module.analytics`. An exception to this rule is that shared state names that are used in rules are compared in a case-sensitive manner. This means that when registering an extension, the actual case is retained internally, so that rule comparison can succeed.
 
 <InlineAlert variant="warning" slots="text"/>
