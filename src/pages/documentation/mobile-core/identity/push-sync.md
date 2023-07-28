@@ -1,6 +1,6 @@
-import Tabs from './tabs/push-messaging.md'
+import Tabs from './tabs/push-sync.md'
 
-# Troubleshooting push messaging
+# Troubleshooting push identifier sync
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -13,7 +13,7 @@ When implementing push messaging via the Adobe Experience Platform Mobile SDK, y
 3. Ensure user opt-in for push in Adobe Analytics.
 4. Confirm user ID is correctly set (and is the same as Steps 2 and 3, above).
 
-## Pass the Push Identifier to the SDK
+## Pass the push identifier to the SDK
 
 The `setPushIdentifier` API sets the device token for push notifications in the SDK. This results in a few network calls made to the requisite Adobe servers to associate the user with the push token.
 
@@ -43,7 +43,7 @@ Launch your app with the device connected to an [Adobe Experience Platform Assur
 
 In the list of events, verify that you have an event with type `SetPushIdentifier`. In the details panel on the right, verify the value of the push token for this device. The value in `pushIdentifier` is the same value that is sent to the Adobe servers.
 
-![Verify push identifier received by the SDK](./assets/push-messaging/set-push-token-to-identity.png)
+![Verify push identifier received by the SDK](./assets/push-sync/set-push-token-to-identity.png)
 
 ## Ensure user opt-in for push in Adobe Analytics
 
@@ -51,7 +51,7 @@ Launch your app with the device connected to an [Adobe Experience Platform Assur
 
 In the resulting list of events, verify that you have an event with type `AnalyticsForIdentityRequest`. In the details panel on the right, you can see that there is a value that was sent to Analytics that opts this user in to receive push notifications.
 
-![Verify push preferences are opted in](./assets/push-messaging/push-analytics-optin.png)
+![Verify push preferences are opted in](./assets/push-sync/push-analytics-optin.png)
 
 ## Confirm that the user ID is correctly set
 
@@ -62,6 +62,6 @@ In the list of events, verify that you have an event with type `UPDATED_IDENTITY
 - The value for `pushidentifier` should match the value that was sent in step 2 above.
 - The value for mid should match the value for mid that is sent to Analytics. If you are using a [custom visitor identifier](../adobe-analytics/api-reference.md#setidentifier), this payload should also contain a vid variable with a value that matches the value that was used to identify this user.
 
-![Verify push identifier synced](./assets/push-messaging/push-identities.png)
+![Verify push identifier synced](./assets/push-sync/push-identities.png)
 
 After completing these steps, your app is correctly configured and is ready to send push messages via the SDK and Adobe.

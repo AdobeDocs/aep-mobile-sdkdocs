@@ -135,7 +135,7 @@ module.exports = {
                                     },
                                     {
                                         title: "Push identifier sync",
-                                        path: "documentation/mobile-core/identity/push-messaging"
+                                        path: "documentation/mobile-core/identity/push-sync"
                                     }
                                 ]
                             },
@@ -518,6 +518,10 @@ module.exports = {
                                 path: "documentation/adobe-campaign-standard/event-reference"
                             },
                             {
+                                title: "Campaign push notifications",
+                                path: "documentation/adobe-campaign-standard/push-notifications"
+                            },
+                            {
                                 title: "Release notes",
                                 path: "documentation/adobe-campaign-standard/release-notes"
                             }
@@ -652,20 +656,6 @@ module.exports = {
                             {
                                 title: "Analytics migration",
                                 path: "documentation/upgrade-platform-sdks/analytics-comparison.md"
-                            }
-                        ]
-                    },
-                    {
-                        title: "Troubleshooting guides",
-                        path: "documentation/troubleshooting-guides",
-                        pages: [
-                            {
-                                title: "Overview",
-                                path: "documentation/troubleshooting-guides"
-                            },
-                            {
-                                title: "Campaign push notifications",
-                                path: "documentation/troubleshooting-guides/push-notifications"
                             }
                         ]
                     },
