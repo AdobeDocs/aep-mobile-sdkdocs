@@ -14,7 +14,7 @@ To send PII data to external destinations, the `PII` action can trigger the rule
 
 Rules tokens are special strings that are used in rule actions as values and are expanded by the SDK when the action is carried out. The format of a token is `TOKEN`, where token is any data element that is defined in the Data Collection UI for a mobile property that identifies the source of the data from which the token is expanded. For example, `TOKEN` can be used in the Signal postback action, where `My Data element for ECID` is a data element that was created using the Mobile Core extension, and the data element type is Experience Cloud ID.
 
-The token can also be one of the reserved key names. For more information, see the [matching and retrieving values by keys tutorial](../mobile-core/rules-engine/technical-details.md#matching-and-retrieving-values-by-keys).
+The token can also be one of the reserved key names. For more information, see the [matching and retrieving values by keys tutorial](../rules-engine/technical-details.md#matching-and-retrieving-values-by-keys).
 
 Some tokens are modifier functions that specify the transformation that is applied to the value that was replaced by the token. An example is `urlenc`, which specifies that the value will be URL-encoded before it is replaced in the rule.
 
@@ -29,8 +29,14 @@ The following example shows how to use the data that is passed to the MobileCore
 1. In the mobile application, call `collectPII` to fire Event with context data.
 
    ```java
-    Signal.registerExtension();
+    // make sure you register the Signal extension along with other extensions you are using
+    MobileCore.registerExtensions(Arrays.asList(
+						Signal.EXTENSION
+				), value -> {
+			// registration completion handler
+		});
     ...
+    
     Map<String, String> data = new HashMap<String, String>();
     data.put("user_email", "user_001@example.com");
     MobileCore.collectPII(data);
@@ -71,9 +77,8 @@ The following example shows how to use the data that is passed to the MobileCore
 
    ![Send Postback action example](./assets/rules-engine-integration/send-postback-action.png)
 
-For more information about `collectPii` and its usage, see `collectPii` in the [Mobile Core API reference](../mobile-core/api-reference.md#collect-pii).
+For more information about `collectPii` and its usage, see `collectPii` in the [Mobile Core API reference](../api-reference.md#collect-pii).
 
 ### Using tokens in Open URL rule actions
 
 Similarly to using tokens in postbacks and PII rule actions, `Open URL` actions allow you to specify a URL, which can contain the tokens that will be expanded by the Experience Platform SDKs. For more information about tokens, see the [rule tokens documentation](#rules-tokens).
-
