@@ -121,7 +121,7 @@ iOS
 
 ## getPrivacyStatus
 
-You can use the `getPrivacyStatus` API to retrieve the current privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../privacy-and-gdpr.md#get-privacy-status)
+You can use the `getPrivacyStatus` API to retrieve the current privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../resources/privacy-and-gdpr.md#get-privacy-status)
 
 ## getSdkIdentities
 
@@ -270,7 +270,7 @@ iOS
 
 ## setApplication
 
-When building Android applications, the `android.app.Application` reference must be passed to Mobile SDK, which allows Mobile SDK to access the `android.app.Context` and monitor the lifecycle of the Android application. 
+When building Android applications, the `android.app.Application` reference must be passed to Mobile SDK, which allows Mobile SDK to access the `android.app.Context` and monitor the lifecycle of the Android application.
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -295,7 +295,7 @@ From least to most verbose, the order of Mobile SDK logging modes is as follows:
 * ERROR
 * WARNING
 * DEBUG
-* VERBOSE / TRACE 
+* VERBOSE / TRACE
 
 When debugging on iOS, you can use `LogLevel.verbose` to enable all the logging messages that are coming from Mobile SDK and partner extensions. Similarly, on Android, you can use `LoggingMode.VERBOSE` to enable all the logging messages that are coming from Mobile SDK and partner extensions.
 
@@ -327,7 +327,7 @@ Flutter
 
 ## setPrivacyStatus
 
-You can use the `setPrivacyStatus` API to set the privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../privacy-and-gdpr.md#set-privacy-status) API's.
+You can use the `setPrivacyStatus` API to set the privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../resources/privacy-and-gdpr.md#set-privacy-status) API's.
 
 ## setPushIdentifier
 
@@ -347,7 +347,7 @@ iOS
 
 <Tabs query="platform=ios&api=set-push-identifier"/>
 
-## setSmallIconResourceID / setLargeIconResourceID 
+## setSmallIconResourceID / setLargeIconResourceID
 
 You can set the small and large icons that will be used for notifications that are created by the SDK. The small icon appears in the status bar and is the secondary image that is displayed when the user sees the complete notification in the notification center. The large icon is the primary image that is displayed when the user sees the complete notification in the notification center. Please note that this method is **only** supported on Android versions of Mobile Core.
 
@@ -461,4 +461,3 @@ iOS
 ## Additional information
 
 To learn what context data is, please read the [documentation on context data](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html).
-

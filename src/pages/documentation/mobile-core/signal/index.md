@@ -26,7 +26,7 @@ For more information about creating and configuring a rule in the Data Collectio
 
 <InlineAlert variant="warning" slots="text"/>
 
-Using dynamic dependency versions is not recommended for production apps. Refer to this [page](../manage-gradle-dependencies.md) for managing gradle dependencies.
+Using dynamic dependency versions is not recommended for production apps. Refer to this [page](../resources/manage-gradle-dependencies.md) for managing gradle dependencies.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

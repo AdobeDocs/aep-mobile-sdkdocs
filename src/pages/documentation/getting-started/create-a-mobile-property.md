@@ -23,14 +23,14 @@ After Data Collection UI rights have been added to your Adobe ID, log in to the 
 3. Select **New Property**.
 4. Type a name for the property and select **Mobile** as the platform.
 
-   If necessary, you can change the [**Privacy**](../privacy-and-gdpr.md#setting-privacy-status) setting later.
+   If necessary, you can change the [**Privacy**](../resources/privacy-and-gdpr.md#setting-privacy-status) setting later.
 
 5. Select **Save** to create the mobile property.
 6. Search for the property you just created and select it to open it.
 
 <InlineAlert variant="warning" slots="text"/>
 
-The default privacy status is set to _opted in_ and might impact data collection. For more information, see [Privacy and GDPR](../privacy-and-gdpr.md).
+The default privacy status is set to _opted in_ and might impact data collection. For more information, see [Privacy and GDPR](../resources/privacy-and-gdpr.md).
 
 ![Setting default privacy status](./assets/create-a-mobile-property/create-mobile-property.png)
 
@@ -105,4 +105,3 @@ Now that you published your configuration, get the Adobe Experience Platform SDK
 
 * To ask questions, visit the SDK [community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform/ct-p/adobe-experience-platform-community).
 * For immediate assistance, contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support).
-

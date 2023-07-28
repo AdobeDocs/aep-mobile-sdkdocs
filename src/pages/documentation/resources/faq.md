@@ -58,7 +58,7 @@ The Experience Platform SDK migrates the locally stored user contexts from the 4
 
 ### What platforms are supported?
 
-For a complete list of supported platforms, please read the [latest SDK versions document](./current-sdk-versions.md).
+For a complete list of supported platforms, please read the [latest SDK versions document](../current-sdk-versions.md).
 
 ### What OS and platform versions are supported?
 
@@ -174,7 +174,7 @@ To get the latest Mobile SDK dependencies for your Android application:
 
 * Open the **mobile property** configured in the **Data Collection UI** for your application.
 * Navigate to the **Extensions** tab and update all the extensions to the latest version.
-* The [install instructions](./getting-started/get-the-sdk.md#1-add-dependencies-to-your-project) will now show the dependencies for the latest Mobile SDK.
+* The [install instructions](../getting-started/get-the-sdk.md#1-add-dependencies-to-your-project) will now show the dependencies for the latest Mobile SDK.
 
 ### Why do I see 'java.lang.NoSuchMethodError' after upgrading to the latest version of Mobile SDK for Android?
 
@@ -188,7 +188,7 @@ If you attempt to use the latest Mobile Core SDK and solution SDKs that were bui
     java.lang.NoSuchMethodError: No static method getCore()Lcom/adobe/marketing/mobile/Core; in class Lcom/adobe/marketing/mobile/MobileCore; or its super classes (declaration of 'com.adobe.marketing.mobile.MobileCore' appears in XXX
 ```
 
-To resolve this error, upgrade all your solution SDKs to the [most recent versions](./current-sdk-versions.md#android).
+To resolve this error, upgrade all your solution SDKs to the [most recent versions](../current-sdk-versions.md#android).
 
 ### Why do I not see 'sdk-core' dependency for latest version of Mobile SDK for Android?
 
@@ -219,7 +219,7 @@ To resolve the build warning, remove FullscreenMessageActivity from your applica
 
 ### Why do I see 'unresolved reference' error when upgrading Adobe Target SDK to the latest version?
 
-The [latest version](./adobe-target/release-notes.md#android-target-200) of Adobe Target Mobile SDK has the following breaking API changes for alignment with the iOS SDK:
+The [latest version](../adobe-target/release-notes.md#android-target-200) of Adobe Target Mobile SDK has the following breaking API changes for alignment with the iOS SDK:
 
 * **locationsDisplayed** is now **displayedLocations**
 * **locationClicked** is now **clickedLocation**
@@ -269,11 +269,11 @@ import com.adobe.marketing.mobile.places.PlacesRequestError;
 
 ### What are Lifecycle metrics?
 
-Lifecycle metrics are out-of-the-box metrics that are automatically collected when the SDK is first implemented in your app. For more information, please read the [documentation on Lifecycle metrics](./mobile-core/lifecycle/index.md).
+Lifecycle metrics are out-of-the-box metrics that are automatically collected when the SDK is first implemented in your app. For more information, please read the [documentation on Lifecycle metrics](../mobile-core/lifecycle/index.md).
 
 ## Adobe Analytics
 
-See the [frequently asked questions for Analytics](./adobe-analytics/faq.md).
+See the [frequently asked questions for Analytics](../adobe-analytics/faq.md).
 
 ## Adobe Experience Platform Edge Network
 

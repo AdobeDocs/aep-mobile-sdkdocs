@@ -6,15 +6,11 @@ The following document provides a list of resources for you to better understand
 
 You can upgrade to the Experience Platform SDKs by following the instructions within this section of documentation.
 
-To learn more about upgrading your SDKs, please read the the [upgrading to Experience Platform SDKs overview](../upgrade-platform-sdks/index.md).
+To learn more about upgrading your SDKs, please read the the [upgrading to Experience Platform SDKs overview](./upgrade-platform-sdks/index.md).
 
 ## Troubleshooting guides
 
 To learn how to troubleshoot various implementation issues with Mobile SDK, please read the [troubleshooting guides overview](../troubleshooting-guides/index.md)
-
-## Frequently asked questions
-
-To see the most frequently asked questions about Mobile SDK, please read the document on [frequently asked questions](../faq.md).
 
 ## Migrating to Swift
 
@@ -24,12 +20,16 @@ To learn how to migrate your Mobile SDK implementation to Swift, please read the
 
 ## Managing Gradle dependencies
 
-To learn how to manage Gradle dependencies of Mobile SDKs, please read the guide on [managing Gradle dependencies](../manage-gradle-dependencies.md).
+To learn how to manage Gradle dependencies of Mobile SDKs, please read the guide on [managing Gradle dependencies](manage-gradle-dependencies.md).
 
 ## Managing SPM dependencies
 
-To learn how to manage SPM dependencies of Mobile SDKs, please read the guide on [managing SPM dependencies](../manage-spm-dependencies.md).
+To learn how to manage SPM dependencies of Mobile SDKs, please read the guide on [managing SPM dependencies](manage-spm-dependencies.md).
 
 ## Privacy and GDPR
 
-To learn how to manage consent and privacy obligations with Mobile SDK, please read the guide on [privacy and GDPR](../privacy-and-gdpr.md).
+To learn how to manage consent and privacy obligations with Mobile SDK, please read the guide on [privacy and GDPR](privacy-and-gdpr.md).
+
+## Frequently asked questions
+
+To see the most frequently asked questions about Mobile SDK, please read the document on [frequently asked questions](faq.md).
