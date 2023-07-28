@@ -254,7 +254,6 @@ AEPEvent *event = [[AEPEvent alloc] initWithName:@"My Event" type:AEPEventType.c
 }];
 ```
 
-
 <Variant platform="android" api="get-application" repeat="6"/>
 
 #### Java
@@ -535,7 +534,6 @@ MobileCore.registerEventListener(EventType.CONFIGURATION, EventSource.RESPONSE_C
 ```
 
 <Variant platform="ios" api="register-event-listener" repeat="10"/>
-
 
 #### Swift
 
