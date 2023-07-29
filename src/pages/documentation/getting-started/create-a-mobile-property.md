@@ -23,7 +23,7 @@ After Data Collection UI rights have been added to your Adobe ID, log in to the 
 3. Select **New Property**.
 4. Type a name for the property and select **Mobile** as the platform.
 
-   If necessary, you can change the [**Privacy**](../resources/privacy-and-gdpr.md#setting-privacy-status) setting later.
+   If necessary, you can change the [**Privacy**](../resources/privacy-and-gdpr.md#set-and-get-privacy-status) setting later.
 
 5. Select **Save** to create the mobile property.
 6. Search for the property you just created and select it to open it.

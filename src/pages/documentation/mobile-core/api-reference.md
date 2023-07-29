@@ -10,7 +10,6 @@ Programmatic updates made to the configuration can be cleared via the `clearUpda
 
 User interactions with local or push notifications can be tracked by invoking the `collectMessageInfo` API. Please refer to [this page](../../documentation/adobe-campaign-standard#tracking-local-and-push-notification-message-interactions) for more information about tracking local and push notification message interactions.
 
-
 ## collectLaunchInfo
 
 You can provide the user information to the SDK from various launch points in your application.
@@ -121,7 +120,7 @@ iOS
 
 ## getPrivacyStatus
 
-You can use the `getPrivacyStatus` API to retrieve the current privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../resources/privacy-and-gdpr.md#get-privacy-status)
+You can use the `getPrivacyStatus` API to retrieve the current privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../resources/privacy-and-gdpr.md#getprivacystatus)
 
 ## getSdkIdentities
 
@@ -170,7 +169,6 @@ iOS
 
 <Tabs query="platform=react-native&api=log"/> --->
 
-
 ## registerEventListener
 
 An EventListener can be registered with MobileCore to be notified when Events matching a type and source are dispatched.
@@ -184,7 +182,6 @@ Android
 iOS
 
 <Tabs query="platform=ios&api=register-event-listener"/>
-
 
 ## registerExtension
 
@@ -327,7 +324,7 @@ Flutter
 
 ## setPrivacyStatus
 
-You can use the `setPrivacyStatus` API to set the privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../resources/privacy-and-gdpr.md#set-privacy-status) API's.
+You can use the `setPrivacyStatus` API to set the privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../resources/privacy-and-gdpr.md#setprivacystatus) API's.
 
 ## setPushIdentifier
 
