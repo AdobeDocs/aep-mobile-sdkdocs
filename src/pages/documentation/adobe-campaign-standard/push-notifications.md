@@ -2,7 +2,7 @@ import Tabs from './tabs/push-notifications.md'
 
 # Troubleshooting Campaign push notifications
 
-To set up server key/APNS server certificate in the Campaign instance, complete the following steps:
+To set up server key/APNS server certificate in the Campaign Standard instance, complete the following steps:
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -48,7 +48,7 @@ You can verify the push notification tracking in Assurance.
 1. Click on the push notification to launch the app.
 1. In the list of events, verify that you have an event with type CollectData.
 1. In the Details panel on the right, verify the value of the action.<br/>
-The value of the action should be 7 for impression, 2 for the click, and 1 for open. 
+The value of the action should be 7 for impression, 2 for the click, and 1 for open.
 
 Impression event tracking (action value 7)
 
