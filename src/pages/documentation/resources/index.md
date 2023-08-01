@@ -2,21 +2,9 @@
 
 The following document provides a list of resources for you to better understand how to use Mobile SDK.
 
-## Upgrading to Experience Platform SDKs
+## Aligning major SDK versions
 
-You can upgrade to the Experience Platform SDKs by following the instructions within this section of documentation.
-
-To learn more about upgrading your SDKs, please read the the [upgrading to Experience Platform SDKs overview](./upgrade-platform-sdks/index.md).
-
-## Troubleshooting guides
-
-To learn how to troubleshoot various implementation issues with Mobile SDK, please read the [troubleshooting guides overview](../troubleshooting-guides/index.md)
-
-## Migrating to Swift
-
-You can migrate your Objective-C-based version of the SDK to the Swift-based version of the SDK.
-
-To learn how to migrate your Mobile SDK implementation to Swift, please read the guide on [migrating to Swift](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-swift/).
+Learn how the Adobe Experience Platform Mobile SDKs are going to [align major version releases](major-version-alignment.md) moving forward and find answers to the frequently asked questions around this topic.
 
 ## Managing Gradle dependencies
 
@@ -33,3 +21,15 @@ To learn how to manage consent and privacy obligations with Mobile SDK, please r
 ## Frequently asked questions
 
 To see the most frequently asked questions about Mobile SDK, please read the document on [frequently asked questions](faq.md).
+
+## Upgrading to Experience Platform SDKs
+
+You can upgrade to the Experience Platform SDKs by following the instructions within this section of documentation.
+
+To learn more about upgrading your SDKs, please read the the [upgrading to Experience Platform SDKs overview](./upgrade-platform-sdks/index.md).
+
+## Migrating to Swift
+
+You can migrate your Objective-C-based version of the SDK to the Swift-based version of the SDK.
+
+To learn how to migrate your Mobile SDK implementation to Swift, please read the guide on [migrating to Swift](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-swift/).
