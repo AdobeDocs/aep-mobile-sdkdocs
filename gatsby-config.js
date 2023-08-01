@@ -642,29 +642,6 @@ module.exports = {
                         path: "documentation/resources/manage-spm-dependencies"
                     },
                     {
-<<<<<<< HEAD
-                        title: "Troubleshooting guides",
-                        path: "documentation/troubleshooting-guides",
-                        pages: [
-                            {
-                                title: "Overview",
-                                path: "documentation/troubleshooting-guides"
-                            },
-                            {
-                                title: "Push messaging",
-                                path: "documentation/troubleshooting-guides/push-messaging"
-                            },
-                            {
-                                title: "Campaign push notifications",
-                                path: "documentation/troubleshooting-guides/push-notifications"
-                            }
-                        ]
-=======
-                        title: "Frequently asked questions",
-                        path: "documentation/faq"
->>>>>>> resources-and-guides
-                    },
-                    {
                         title: "Privacy and GDPR",
                         path: "documentation/resources/privacy-and-gdpr"
                     },
