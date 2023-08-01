@@ -46,4 +46,4 @@ Android
 
 ## collectPii
 
-The Signal extension can be used to handle `collectPii` rules. For more information, see the [collectPII](../../api-reference.md#collectpii) API.
+The Signal extension can be used to handle `collectPii` rules. For more information, see the [collectPii](../../api-reference.md#collectpii) API.
