@@ -132,6 +132,10 @@ module.exports = {
                                     {
                                         title: "API reference",
                                         path: "documentation/mobile-core/identity/api-reference"
+                                    },
+                                    {
+                                        title: "Push identifier sync",
+                                        path: "documentation/mobile-core/identity/push-sync"
                                     }
                                 ]
                             },
@@ -514,6 +518,10 @@ module.exports = {
                                 path: "documentation/adobe-campaign-standard/event-reference"
                             },
                             {
+                                title: "Campaign push notifications",
+                                path: "documentation/adobe-campaign-standard/push-notifications"
+                            },
+                            {
                                 title: "Release notes",
                                 path: "documentation/adobe-campaign-standard/release-notes"
                             }
@@ -634,6 +642,7 @@ module.exports = {
                         path: "documentation/resources/manage-spm-dependencies"
                     },
                     {
+<<<<<<< HEAD
                         title: "Troubleshooting guides",
                         path: "documentation/troubleshooting-guides",
                         pages: [
@@ -650,6 +659,10 @@ module.exports = {
                                 path: "documentation/troubleshooting-guides/push-notifications"
                             }
                         ]
+=======
+                        title: "Frequently asked questions",
+                        path: "documentation/faq"
+>>>>>>> resources-and-guides
                     },
                     {
                         title: "Privacy and GDPR",
