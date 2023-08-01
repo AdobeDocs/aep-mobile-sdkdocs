@@ -4,7 +4,7 @@ The following document provides a list of resources for you to better understand
 
 ## Aligning major SDK versions
 
-Learn how the Adobe Experience Platform Mobile SDKs are going to [align major version releases](major-version-alignment.md) moving forward and find answers to the frequently asked questions around this topic.
+Learn how the Adobe Experience Platform Mobile SDKs are going to [align major version releases](major-version-alignment.md) moving forward, and find answers to the frequently asked questions around this topic.
 
 ## Managing Gradle dependencies
 
@@ -20,13 +20,11 @@ To learn how to manage consent and privacy obligations with Mobile SDK, please r
 
 ## Frequently asked questions
 
-To see the most frequently asked questions about Mobile SDK, please read the document on [frequently asked questions](faq.md).
+To find answers to the most frequently asked questions about Mobile SDK, please read the document on [frequently asked questions](faq.md).
 
 ## Upgrading to Experience Platform SDKs
 
-You can upgrade to the Experience Platform SDKs by following the instructions within this section of documentation.
-
-To learn more about upgrading your SDKs, please read the the [upgrading to Experience Platform SDKs overview](./upgrade-platform-sdks/index.md).
+You can learn about upgrading to the Experience Platform SDKs by following the instructions in the [upgrading to Experience Platform SDKs overview](./upgrade-platform-sdks/index.md).
 
 ## Migrating to Swift
 
