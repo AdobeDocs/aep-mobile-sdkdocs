@@ -1,4 +1,4 @@
-# ACP SDKs End-of-Support
+# ACP SDKs end-of-support
 
 ## End of support for ACP iOS SDKs and Wrappers
 
@@ -15,11 +15,11 @@ After August 31, 2023, applications already submitted to the App Store that cont
 Documentation for the latest versions of the Adobe Experience Platform Mobile SDKs can be found [here](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/).
 
 Refer to the following guides to migrate to the latest SDKs.
-| SDK | Migration guide |
-| --- | --- |
+
+| **SDK** | **Migration guide** |
+| :--- | :--- |
 | ACP iOS SDK | [Migrate to AEP iOS SDK](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-swift) |
 | Flutter for ACP | [Migrate to Flutter for AEP](https://github.com/adobe/aepsdk_flutter/blob/main/docs/migration.md) |
 | React Native for ACP | [Migrate to React Native for AEP](https://github.com/adobe/aepsdk-react-native/blob/main/docs/migration.md) |
 | Cordova | Not Supported |
 | Xamarin | Not Supported |
-
