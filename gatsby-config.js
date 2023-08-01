@@ -634,6 +634,36 @@ module.exports = {
                         path: "documentation/resources/manage-spm-dependencies"
                     },
                     {
+                        title: "Troubleshooting guides",
+                        path: "documentation/troubleshooting-guides",
+                        pages: [
+                            {
+                                title: "Overview",
+                                path: "documentation/troubleshooting-guides"
+                            },
+                            {
+                                title: "Push messaging",
+                                path: "documentation/troubleshooting-guides/push-messaging"
+                            },
+                            {
+                                title: "Campaign push notifications",
+                                path: "documentation/troubleshooting-guides/push-notifications"
+                            }
+                        ]
+                    },
+                    {
+                        title: "Privacy and GDPR",
+                        path: "documentation/resources/privacy-and-gdpr"
+                    },
+                    {
+                        title: "Frequently asked questions",
+                        path: "documentation/resources/faq"
+                    },
+                    {
+                        title: "Version 4 Mobile SDKs end-of-support FAQ",
+                        path: "documentation/resources/v4-end-of-life-faq"
+                    },
+                    {
                         title: "Upgrade to the Experience Platform SDKs",
                         path: "documentation/resources/upgrade-platform-sdks",
                         pages: [
@@ -660,39 +690,10 @@ module.exports = {
                         ]
                     },
                     {
-                        title: "Troubleshooting guides",
-                        path: "documentation/troubleshooting-guides",
-                        pages: [
-                            {
-                                title: "Overview",
-                                path: "documentation/troubleshooting-guides"
-                            },
-                            {
-                                title: "Push messaging",
-                                path: "documentation/troubleshooting-guides/push-messaging"
-                            },
-                            {
-                                title: "Campaign push notifications",
-                                path: "documentation/troubleshooting-guides/push-notifications"
-                            }
-                        ]
-                    },
-                    {
-                        title: "Privacy and GDPR",
-                        path: "documentation/resources/privacy-and-gdpr"
-                    },
-                    {
                         title: "Adobe Experience Cloud & Apple's IDFA, Privacy announcement",
                         path: "documentation/resources/privacy-announcement"
-                    },
-                    {
-                        title: "Frequently asked questions",
-                        path: "documentation/resources/faq"
-                    },
-                    {
-                        title: "Version 4 Mobile SDKs end-of-support FAQ",
-                        path: "documentation/resources/v4-end-of-life-faq"
-                    },
+                    }
+
                 ]
             },
             {
