@@ -20,13 +20,13 @@ Some tokens are modifier functions that specify the transformation that is appli
 
 ### Using tokens in Postbacks and PII rule actions
 
-The **Send Postback** and **Send PII** actions allow you to specify a `URL` field and an optional `Post Body` field. You can specify which tokens should be expanded by the Experience Platform SDKs when the postback or PII network call is triggered. For more information on tokens, see the [rule tokens documentation](#rules-tokens).
+The **Send Postback** and **Send PII** actions allow you to specify a `URL` field and an optional `Post Body` field. You can specify which tokens should be expanded by the Experience Platform SDKs when the postback or PII network call is triggered. For more information on tokens, see the [rule tokens section](#rules-tokens).
 
 #### Example
 
 The following example shows how to use the data that is passed to the MobileCore `collectPii` API to form a token:
 
-1. In the mobile application, call `collectPii` to fire Event with context data.
+1. In the mobile application, call `collectPii` to fire an Event with context data.
 
   **Java**
 
@@ -102,4 +102,4 @@ For more information about `collectPii` and its usage, see `collectPii` in the [
 
 ### Using tokens in Open URL rule actions
 
-Similarly to using tokens in postbacks and PII rule actions, `Open URL` actions allow you to specify a URL, which can contain the tokens that will be expanded by the Experience Platform SDKs. For more information about tokens, see the [rule tokens documentation](#rules-tokens).
+Similarly to using tokens in postbacks and PII rule actions, `Open URL` actions allow you to specify a URL, which can contain the tokens that will be expanded by the Experience Platform SDKs. For more information about tokens, see the [rule tokens section](#rules-tokens).
