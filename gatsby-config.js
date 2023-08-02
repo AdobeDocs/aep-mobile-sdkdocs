@@ -650,11 +650,7 @@ module.exports = {
                         path: "documentation/resources/faq"
                     },
                     {
-                        title: "Version 4 Mobile SDKs end-of-support FAQ",
-                        path: "documentation/resources/v4-end-of-life-faq"
-                    },
-                    {
-                        title: "Upgrade to the Experience Platform SDKs",
+                        title: "Adobe Mobile Library (v4) end-of-support",
                         path: "documentation/resources/upgrade-platform-sdks",
                         pages: [
                             {
@@ -676,6 +672,10 @@ module.exports = {
                             {
                                 title: "Analytics migration",
                                 path: "documentation/resources/upgrade-platform-sdks/analytics-comparison.md"
+                            },
+                            {
+                                title: "Frequently asked questions",
+                                path: "documentation/resources/upgrade-platform-sdks/v4-faq"
                             }
                         ]
                     },

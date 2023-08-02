@@ -281,11 +281,6 @@ See the [frequently asked questions for Analytics](../adobe-analytics/faq.md).
 
 Yes, offline tracking is supported by default when sending XDM Experience events since these events have a required timestamp, and there is no separate setting for this as it used to be in the Adobe Analytics extension. The events are backed up in the persistence layer and then sent to the Edge Network in current session if possible, or queued until the next session when a network connection is available.
 
-## Get help
-
-* Visit the SDK [community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform/ct-p/adobe-experience-platform-community) to ask questions
-* Contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support) for immediate assistance
-
 ## Using Experience Platform Swift SDKs with tvOS
 
 ### 'X' is unavailable in application extension for tvOS
@@ -308,3 +303,8 @@ func errorThrowingFunction() {
   ...
 }
 ```
+
+## Get help
+
+* Visit the SDK [community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform/ct-p/adobe-experience-platform-community) to ask questions
+* Contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support) for immediate assistance
