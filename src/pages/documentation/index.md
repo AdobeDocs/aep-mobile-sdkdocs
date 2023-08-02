@@ -9,7 +9,7 @@ Welcome to the home of Adobe Experience Platform Mobile SDK documentation.
 
 <InlineAlert variant="info" slots="text"/>
 
-Effective August 31, 2023: ACP iOS SDKs, Flutter for ACP, React Native for ACP, Cordova, and Xamarin SDKs will no longer be supported. Refer [here](./resources/acp-end-of-support.md) for more information.
+Effective August 31, 2023: ACP iOS SDKs, Flutter for ACP, React Native for ACP, Cordova, and Xamarin SDKs will no longer be supported. Refer to [ACP SDKs end-of-support](./resources/acp-end-of-support.md) for more information.
 
 <InlineAlert variant="info" slots="text"/>
 
