@@ -4,13 +4,13 @@
 
 **Syntax**
 
-```
+```java
 public static void setPushIdentifier(final String pushIdentifier);
 ```
 
 **Example**
 
-```
+```java
 // retrieve the token from either GCM or FCM, and pass it to the SDK
 ```
 
@@ -20,13 +20,13 @@ public static void setPushIdentifier(final String pushIdentifier);
 
 **Syntax**
 
-```
+```swift
 Void setPushIdentifier(deviceToken: Data?)
 ```
 
 **Example**
 
-```
+```swift
 // pass the deviceToken that the APNS has assigned to the device
 ```
 
@@ -34,13 +34,13 @@ Void setPushIdentifier(deviceToken: Data?)
 
 **Syntax**
 
-```
+```objc
 + (void) setPushIdentifier: (nullable NSData*) deviceToken;
 ```
 
 **Example**
 
-```
+```objc
 // pass the deviceToken that the APNS has assigned to the device
 ```
 

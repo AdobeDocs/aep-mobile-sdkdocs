@@ -72,7 +72,7 @@ Complete the following steps to validate a response containing in-app messages:
 
 4. Expand the **Payload** section in the right window. Each entry in the **payload** array contains the rule for a single in-app message that has been previously published in AJO and is now live. The full path to find a message definition is:
 
-    ```
+    ```shell
     ACPExtensionEventData.payload.N.items.0.data.content
     ```
 

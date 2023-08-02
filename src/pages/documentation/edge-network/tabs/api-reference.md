@@ -334,6 +334,7 @@ NSDictionary *data = @{ @"sample" : @"data"};
 ```java
 public static void setLocationHint(final String hint)
 ```
+
 * _hint_ the Edge Network location hint to use when connecting to the Adobe Experience Platform Edge Network.
 
 **Example**
@@ -360,6 +361,7 @@ Edge.setLocationHint(hint)
 @objc(setLocationHint:)
 public static func setLocationHint(_ hint: String?)
 ```
+
 * _hint_ the Edge Network location hint to use when connecting to the Adobe Experience Platform Edge Network.
 
 **Example**

@@ -12,7 +12,7 @@ The slack channel #adobeio-onsite-onboarding is our main point of contact for he
 
 For local development, simply use :
 
-```
+```console
 yarn
 yarn dev
 ```
@@ -194,7 +194,7 @@ An example of this can be seen below:
 
 For any team that wishes to deploy to the adobe.io and stage.adobe.io website, they must be in contact with the dev-site team. Teams will be given a path that will follow the pattern `adobe.io/{product}/`. This will allow doc developers to setup their subpaths to look something like:
 
-```
+```md
 adobe.io/{product}/docs
 adobe.io/{product}/community
 adobe.io/{product}/community/code_of_conduct
