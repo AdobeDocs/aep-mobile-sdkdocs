@@ -2,7 +2,7 @@
 
 #### Java
 
-Import the Lifecycle framework:
+Import the Lifecycle library:
 
 ```java
 import com.adobe.marketing.mobile.*;
