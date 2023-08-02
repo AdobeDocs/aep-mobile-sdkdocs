@@ -7,12 +7,11 @@
 
 ## Mobile SDK
 
-Upgrade your Mobile SDK to following Places extension version 
+Upgrade your Mobile SDK to following Places extension version
 | Platform | Version Supported|
 |---|---|
 |iOS|4.1.0 and above|
 |Android|2.1.0 and above|
-
 
 ## Experience Platform Configuration
 
@@ -25,7 +24,7 @@ Upgrade your Mobile SDK to following Places extension version 
 
 ### Step 2: Adding PlacesContext to your schema
 
-* Under the Field groups section, click **Add**. 
+* Under the Field groups section, click **Add**.
 ![Add New Field Group](./assets/index/add_new_field_group.png)
 
 * Search and Add **Environment Details** Field group.
@@ -33,10 +32,11 @@ Upgrade your Mobile SDK to following Places extension version 
 
 ### Step 3:  Mask/Remove the unnecessary fields from EnvironmentDetails Field groups.
 
-* In the Field Group section, select **Environmen Details**->**placeContext** and on the right pane click on **Manage related fields** 
+* In the Field Group section, select **Environmen Details**->**placeContext** and on the right pane click on **Manage related fields**
+
 ![Manage Places Context Text Fields](./assets/index/manage_places_context_fields.png)
 
-* Uncheck all the fields except for poiID (placeContext -> poiDetail -> poiID). 
+* Uncheck all the fields except for poiID (placeContext -> poiDetail -> poiID).
 
 <InlineAlert variant="info" slots="text"/>
 Also Mask **devices**, and **environment** fields if they are not relevant to your application.
@@ -60,7 +60,6 @@ Hit confirm and finally, your schema's **placeContext** field group should look 
 
 <InlineAlert variant="warning" slots="text"/>
 Please remove `AJO Push Tracking dataset`, if it exist in the list of Event Dataset in your Datastream. This is a system dataset and is not meant to be configured in the Datastream.
-
 
 ## Data Collection Tag Configuration
 
