@@ -8,7 +8,7 @@ Import the Lifecycle library:
 import com.adobe.marketing.mobile.*;
 ```
 
-Register the framework with Mobile Core:
+Register the Lifecycle extension along with other extensions used with Mobile Core:
 
 ```java
 public class MyApp extends Application {​
@@ -18,11 +18,12 @@ public class MyApp extends Application {​
         super.onCreate();
         MobileCore.setApplication(this);
 
-        try {
-            Lifecycle.registerExtension();
-        } catch (Exception e) {
-            // Log the exception
-        }
+        MobileCore.registerExtensions(Arrays.asList(
+						Lifecycle.EXTENSION,
+            ...
+				), value -> {
+    			// registration completion handler
+    		});
     }
 }
 ```
