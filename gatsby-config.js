@@ -212,6 +212,10 @@ module.exports = {
                                     {
                                         title: "API reference",
                                         path: "documentation/mobile-core/signal/api-reference"
+                                    },
+                                    {
+                                        title: "Signal and Rules Engine integration",
+                                        path: "documentation/mobile-core/signal/rules-engine-integration.md"
                                     }
                                 ]
                             },
@@ -730,10 +734,6 @@ module.exports = {
                     {
                         title: "Tags data elements",
                         path: "documentation/user-guides/tags-data-elements"
-                    },
-                    {
-                        title: "Signal and rules engine integration",
-                        path: "documentation/user-guides/rules-engine-integration.md"
                     },
                     {
                         title: "iOS App Extensions",

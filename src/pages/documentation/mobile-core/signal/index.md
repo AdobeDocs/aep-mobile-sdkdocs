@@ -74,6 +74,6 @@ Flutter
 
 To send PII data to external destinations, the `PII` action can trigger the Rules Engine when the configured triggers and traits match. When creating a rule, you can set the `PII` action for a Signal event, so that `collectPii` can trigger the rule and send the `PII` data.
 
-For more information about `collectPii` and its usage, see [collectPii](../api-reference.md#collect-pii).
+For more information about `collectPii` and its usage, see [collectPii](../api-reference.md#collectpii).
 
-For more information about how to configure the Signal postbacks in the Data Collection UI, see [Signal extension and Rules Engine integration](../../user-guides/rules-engine-integration).
+For more information about how to configure the Signal postbacks in the Data Collection UI, see [Signal extension and Rules Engine integration](rules-engine-integration.md).
