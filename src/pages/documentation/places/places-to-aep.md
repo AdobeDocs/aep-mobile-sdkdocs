@@ -24,6 +24,7 @@ Upgrade your Mobile SDK to following Places extension version 
 * Select your Application's Experience Event Schema from the list of schemas.
 
 ### Step 2: Adding PlacesContext to your schema
+
 * Under the Field groups section, click **Add**. 
 ![Add New Field Group](./assets/index/add_new_field_group.png)
 
@@ -31,6 +32,7 @@ Upgrade your Mobile SDK to following Places extension version 
 ![Add Environment Details Field Group](./assets/index/add_environment_details_fieldgroup.png)
 
 ### Step 3:  Mask/Remove the unnecessary fields from EnvironmentDetails Field groups.
+
 * In the Field Group section, select **Environmen Details**->**placeContext** and on the right pane click on **Manage related fields** 
 ![Manage Places Context Text Fields](./assets/index/manage_places_context_fields.png)
 
