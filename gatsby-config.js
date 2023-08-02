@@ -408,6 +408,10 @@ module.exports = {
                                 path: "/documentation/adobe-analytics/product-variable"
                             },
                             {
+                                title: "Tracking beacons",
+                                path: "/documentation/adobe-analytics/track-beacon"
+                            },
+                            {
                                 title: "Frequently asked questions",
                                 path: "/documentation/adobe-analytics/faq"
                             },
@@ -734,10 +738,6 @@ module.exports = {
                     {
                         title: "iOS App Extensions",
                         path: "documentation/user-guides/app-extension"
-                    },
-                    {
-                        title: "Tracking beacons",
-                        path: "documentation/user-guides/track-beacon"
                     }
                 ]
             }
