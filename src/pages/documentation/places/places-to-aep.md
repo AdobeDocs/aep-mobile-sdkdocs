@@ -67,7 +67,7 @@ Please remove `AJO Push Tracking dataset`, if it exist in the list of Event Data
 * From the left panel, select **Tags** tab and from the list select the Tag that is configured for your application.
 * From the left panel, select **Extensions** tab.
 * Update the Places Launch Card to 1.3.0 or greater. No Additional configuration is required.
-* Make sure **Adobe Expereience Edge Network**, **Identity** and **Consent** extensions are installed. 
+* Make sure **Adobe Expereience Edge Network**, **Identity** and **Consent** extensions are installed.
 * Make sure **Adobe Expereience Edge Network** is configured with appropritate datastream which has dataset with **placecontext** field group enabled in their schema.
 
 ![Datacollection tag correct datastream](./assets/index/datacollection_tag_correct_datastream.png)
