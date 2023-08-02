@@ -48,7 +48,7 @@ You can verify the push notification tracking in Assurance.
 1. Click on the push notification to launch the app.
 1. In the list of events, verify that you have an event with type CollectData.
 1. In the Details panel on the right, verify the value of the action.<br/>
-The value of the action should be 7 for impression, 2 for the click, and 1 for open. 
+The value of the action should be 7 for impression, 2 for the click, and 1 for open.
 
 Impression event tracking (action value 7)
 

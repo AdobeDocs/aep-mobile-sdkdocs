@@ -105,4 +105,3 @@ Now that you published your configuration, get the Adobe Experience Platform SDK
 
 * To ask questions, visit the SDK [community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform/ct-p/adobe-experience-platform-community).
 * For immediate assistance, contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support).
-

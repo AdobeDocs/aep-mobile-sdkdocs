@@ -31,6 +31,7 @@ target 'YourAppExtension' do
 end
 
 ```
+
 2. Run `pod install` from the command line to install the pods to the App Extension target.
 
 ## Registering Extensions

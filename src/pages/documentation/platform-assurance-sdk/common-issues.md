@@ -121,4 +121,3 @@ This log message is not an error and will appear with routine usage on Android d
 ```text
 W/AdobeExperienceSDK: Assurance - Failed to show fullscreen takeover, could not get fullScreenTakeover object.
 ```
-

@@ -502,7 +502,7 @@ ACPTarget.getThirdPartyId().then(thirdPartyId => {
 public static void getTntId(final AdobeCallback<String> callback)
 ```
 
-- `callback`: A callabck that is invoked with the `tntId` value, or `null` if there was an error retrieving it. 
+- `callback`: A callabck that is invoked with the `tntId` value, or `null` if there was an error retrieving it.
 
 **Example**
 
@@ -1135,8 +1135,6 @@ var targetParameters = new ACPTargetParameters(mboxParameters, profileParameters
 ACPTarget.retrieveLocationContent(requestArray, targetParameters);
 ``` --->
 
-
-
 <Variant platform="android" api="set-preview-restart-deep-link" repeat="6"/>
 
 #### Java
@@ -1208,7 +1206,6 @@ setPreviewRestartDeeplink(deepLink: string)
 ```javascript
 ACPTarget.setPreviewRestartDeeplink("myapp://HomePage");
 ``` --->
-
 
 <Variant platform="android" api="set-session-id" repeat="6"/>
 
@@ -1988,4 +1985,3 @@ public interface AdobeTargetDetailedCallback {
     void fail(final AdobeError error);
 }
 ```
-

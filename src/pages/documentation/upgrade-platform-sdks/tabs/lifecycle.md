@@ -113,6 +113,7 @@ func applicationWillEnterForeground(_ application: UIApplication) {
     ACPCore.lifecycleStart(nil)
 }
 ```
+
 If your app is a SceneDelegate based iOS application, then use:
 
 ```swift

@@ -605,4 +605,4 @@ The image must be placed in your app's `assets` directory. This directory is fou
 
 <Variant platform="ios" task="bundled-image" repeat="1"/>
 
-Add the image file to your project by going to Xcode's `File > Add Files to "Your App Name"... ` menu and locating the image file that will be bundled with the app. Ensure that the targets that will be using the image file are checked in the `Add to targets` selection menu.
+Add the image file to your project by going to Xcode's `File > Add Files to "Your App Name"...` menu and locating the image file that will be bundled with the app. Ensure that the targets that will be using the image file are checked in the `Add to targets` selection menu.

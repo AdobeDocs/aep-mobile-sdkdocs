@@ -39,6 +39,7 @@ Void setPushIdentifier(deviceToken: Data?)
 ```
 
 **Example**
+
 ```
 // pass the deviceToken that the APNS has assigned to the device
 ```

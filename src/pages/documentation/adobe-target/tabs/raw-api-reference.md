@@ -9,7 +9,7 @@ public static void executeRawRequest(final Map<String, Object> request, final Ad
 ```
 
 - `request`: A map containing prefetch or execute request data in the Target v1 delivery API request format.
-- `callback`: An AdobeCallback instance which will be called after the Target request is completed. The parameter in the callback will contain the response data if the request executed successfully, or it will contain null otherwise. 
+- `callback`: An AdobeCallback instance which will be called after the Target request is completed. The parameter in the callback will contain the response data if the request executed successfully, or it will contain null otherwise.
 
 **Example**
 

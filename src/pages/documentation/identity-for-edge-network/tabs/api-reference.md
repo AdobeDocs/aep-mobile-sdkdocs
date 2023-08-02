@@ -226,7 +226,7 @@ When `AdobeCallbackWithError` is provided and you are fetching the URL variables
 public static void getUrlVariables(final AdobeCallback<String> callback);
 ```
 
-- `callback` has a String value that contains the visitor identifiers as a query string after the service request is complete.
+* `callback` has a String value that contains the visitor identifiers as a query string after the service request is complete.
 
 **Example**
 
@@ -266,7 +266,7 @@ Identity.getUrlVariables { urlVariablesString ->
 static func getUrlVariables(completion: @escaping (String?, Error?) -> Void)
 ```
 
-- `completion` is invoked with `urlVariables` containing the visitor identifiers as a query string, or with `error` if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../mobile-core/api-reference.md#public-classes) code of the specific error. The default timeout is 1000ms.
+* `completion` is invoked with `urlVariables` containing the visitor identifiers as a query string, or with `error` if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../mobile-core/api-reference.md#public-classes) code of the specific error. The default timeout is 1000ms.
 
 **Example**
 
@@ -421,7 +421,7 @@ These examples require Google Play Services to be configured in your mobile appl
 public static void setAdvertisingIdentifier(final String advertisingIdentifier);
 ```
 
-- _advertisingIdentifier_ is an ID string that provides developers with a simple, standard system to continue to track ads throughout their apps.
+* _advertisingIdentifier_ is an ID string that provides developers with a simple, standard system to continue to track ads throughout their apps.
 
 **Example**
 
@@ -470,7 +470,7 @@ public void onResume() {
 
 #### Kotlin
 
-- _advertisingIdentifier_ is an ID string that provides developers with a simple, standard system to continue to track ads throughout their apps.
+* _advertisingIdentifier_ is an ID string that provides developers with a simple, standard system to continue to track ads throughout their apps.
 
 **Example**
 
@@ -523,9 +523,9 @@ val scope = CoroutineScope(Dispatchers.IO).launch {
 
 <Variant platform="ios" api="set-advertising-identifier" repeat="14"/>
 
-In order to enable the collection of current advertising tracking user's selection based on the provided advertising identifier, you need to install and register the [Consent for Edge Network](../consent-for-edge-network/index.md) extension and update the [Edge Network extension](../edge-network/index.md) dependency to minimum 1.4.1. 
+In order to enable the collection of current advertising tracking user's selection based on the provided advertising identifier, you need to install and register the [Consent for Edge Network](../consent-for-edge-network/index.md) extension and update the [Edge Network extension](../edge-network/index.md) dependency to minimum 1.4.1.
 
-Starting from iOS 14+, applications must use the [App Tracking Transparency](https://developer.apple.com/documentation/apptrackingtransparency) framework to request user authorization before using the Identifier for Advertising (IDFA). To access IDFA and handle it correctly in your mobile application, see the [Apple developer documentation about IDFA](https://developer.apple.com/documentation/adsupport/asidentifiermanager). 
+Starting from iOS 14+, applications must use the [App Tracking Transparency](https://developer.apple.com/documentation/apptrackingtransparency) framework to request user authorization before using the Identifier for Advertising (IDFA). To access IDFA and handle it correctly in your mobile application, see the [Apple developer documentation about IDFA](https://developer.apple.com/documentation/adsupport/asidentifiermanager).
 
 #### Swift
 
@@ -536,7 +536,7 @@ Starting from iOS 14+, applications must use the [App Tracking Transparency](htt
 public static func setAdvertisingIdentifier(_ identifier: String?)
 ```
 
-- _identifier_ is an ID string that provides developers with a simple, standard system to continue to track ads throughout their apps.
+* _identifier_ is an ID string that provides developers with a simple, standard system to continue to track ads throughout their apps.
 
 **Example**
 
@@ -599,7 +599,7 @@ func setAdvertisingIdentifierUsingTrackingManager() {
 + (void) setAdvertisingIdentifier: (NSString * _Nullable identifier);
 ```
 
-- _identifier_ is an ID string that provides developers with a simple, standard system to continue to track ads throughout their apps.
+* _identifier_ is an ID string that provides developers with a simple, standard system to continue to track ads throughout their apps.
 
 **Example**
 

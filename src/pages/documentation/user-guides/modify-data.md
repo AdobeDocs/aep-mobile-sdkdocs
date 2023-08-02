@@ -119,4 +119,3 @@ After you complete your configuration, verify that your rule looks like the foll
 
 1. Select **Save**
 2. Rebuild your mobile property and deploy it to the correct Environment.
-

@@ -2,7 +2,7 @@
 
 #### Set up a server key
 
-1. To configure the app in Google Firebase, see [Firebase Console](https://console.firebase.google.com/) and sign in using your Google Developer credentials. 
+1. To configure the app in Google Firebase, see [Firebase Console](https://console.firebase.google.com/) and sign in using your Google Developer credentials.
 2. Add a project and add your app under that project using the application ID that you used in the app.
 
    For more information, see [Add Firebase to your Android project](https://firebase.google.com/docs/android/setup#console).
@@ -50,7 +50,7 @@
 If SDK privacy status is `optedout`, the push identifier will not be set.
 
 1. Verify the push token sync with the Experience Cloud ID service (ECID).  
-2. To verify, launch your app connected to an Adobe Experience Platform Assurance session.   
+2. To verify, launch your app connected to an Adobe Experience Platform Assurance session.
 3. In the list of events, verify that you have an event with type _SetPushIdentifier_.
 4. In the details panel on the right, verify the value of the push token for this device. The value in pushIdentifier is the same value that is sent to the ECID service. ![Verify SetPushIdentifier event](../assets/push-notifications/push-token-to-identity.png)
 5. To verify that app’s push token is mapped to the correct Experience Cloud ID (ECID) in the Campaign instance, click **Adobe Campaign &gt; Administrator &gt; Channels &gt; Mobile App (AEP SDK)**.
@@ -80,7 +80,7 @@ If SDK privacy status is `optedout`, the push identifier will not be set.
 If SDK privacy status is `optedout`, the push identifier will not be set.
 
 1. Verify the push token sync with the Experience Cloud ID service (ECID).  
-2. To verify, launch your app connected to an Adobe Experience Platform Assurance session.   
+2. To verify, launch your app connected to an Adobe Experience Platform Assurance session.
 3. In the list of events, verify that you have an event with type _SetPushIdentifier_.
 4. In the details panel on the right, verify the value of the push token for this device.
 

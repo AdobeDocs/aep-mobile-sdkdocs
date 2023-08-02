@@ -24,4 +24,3 @@ Here is a list of the events currently supported by the AEP Edge extension, that
   * The service events published by `com.adobe.streaming.validation` indicate if the event passed the XDM format validation based on the schema defined in Adobe Experience Platform. This can help you debug parameter type errors, incorrect parameter names and other errors.
 
 **Hint:** If you want to filter out only the events handled by the AEP Edge extension, you can type one of the event names listed above in the **Search Events** input field from the Session View.
-

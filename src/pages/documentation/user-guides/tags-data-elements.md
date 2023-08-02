@@ -44,20 +44,20 @@ In the following example, a rule is created to send a postback that contains the
 
 1. On the property page for your mobile property, select the **Rules** tab, followed by **Create New Rule**.
 2. Type a unique name for the the rule.
-3. In the **Events** section, select **Add** and perform the following actions: 
-   1. In the **Extension** drop-down list, select **Mobile Core**. 
-   2. In the **Event Type** drop-down list, select **Launched**. 
+3. In the **Events** section, select **Add** and perform the following actions:
+   1. In the **Extension** drop-down list, select **Mobile Core**.
+   2. In the **Event Type** drop-down list, select **Launched**.
    3. Afterwards, select **Keep Changes**.
 4. In the **Condition** section, select **Add** and perform the following actions:
-   1. In the **Extension** drop-down list, select **Mobile Core**. 
-   2. In the **Condition Type** drop-down list, select **Data Element**. 
-   3. Enter a name for the condition. 
+   1. In the **Extension** drop-down list, select **Mobile Core**.
+   2. In the **Condition Type** drop-down list, select **Data Element**.
+   3. Enter a name for the condition.
    4. After entering a name, next to the **Data Element** text field, select the cylinder icon and select the ECID that was created in the previous section.
-5. In the **Action** section, select **Add** and perform the following actions: 
-   1. In the **Extension** drop-down list, select **Mobile Core**. 
-   2. In the **Action Type** drop-down list, select **Send Postback**. 
-   3. In the **URL** text field, type a sample URL, for example, `https://my.company.com/launch?ecid=`. 
-   4. Enter a name for the action. 
+5. In the **Action** section, select **Add** and perform the following actions:
+   1. In the **Extension** drop-down list, select **Mobile Core**.
+   2. In the **Action Type** drop-down list, select **Send Postback**.
+   3. In the **URL** text field, type a sample URL, for example, `https://my.company.com/launch?ecid=`.
+   4. Enter a name for the action.
    5. After entering a name, next to the **Data Element** text field, select the cylinder icon and select the ECID that was created in the previous section.
 6. Select **Save**.
 
@@ -78,4 +78,3 @@ Here is some additional information about the Rules Engine and the Signal extens
 * [Signal extension and Rules Engine integration](./rules-engine-integration.md)
 
   This section provides an example of how to create rules to trigger actions in the Signals extension.
-

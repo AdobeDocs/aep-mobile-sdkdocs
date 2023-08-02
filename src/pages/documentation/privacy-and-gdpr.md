@@ -161,4 +161,3 @@ To update the SDK configuration, programmatically, use the following information
 
 * For more information about GDPR, see [GDPR and Your Business](https://www.adobe.com/privacy/general-data-protection-regulation.html)
 * To see the Privacy Service API documentation, go to [Privacy Service API](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html)
-

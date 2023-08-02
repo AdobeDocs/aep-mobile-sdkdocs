@@ -77,7 +77,7 @@ Complete the following steps to validate a response containing in-app messages:
     ```
 
     To find definitions for other live in-app messages, follow the above path for each object in the **payload** array.
-    
+
     ![AEP Response Event Handle Payload](./assets/validate-messages/message-response-payload.png)
 
 ## Use the In-App Messaging Assurance UI plugin
@@ -125,10 +125,10 @@ Using the IAM plugin you can do the following for each message downloaded by the
 
 **A:** If you open the EventData and the `detail` key has a value of "The Decisioning Package was not found.", this likely means the Messaging extension was unable to find the messages for your app. Check the below items to try and resolve the issue:
 
-* Make sure that messages have been published in the AJO Campaigns UI for your app surface
-* Make sure that the bundle identifier (iOS) or package name (Android) matches the value used for your app surface
-* Make sure that the **environment** and **sandbox** being used in AJO matches those being used to configure the app
-* Make sure that your Adobe organization is provisioned for Offers on Edge (this may require contacting your account manager)
+- Make sure that messages have been published in the AJO Campaigns UI for your app surface
+- Make sure that the bundle identifier (iOS) or package name (Android) matches the value used for your app surface
+- Make sure that the **environment** and **sandbox** being used in AJO matches those being used to configure the app
+- Make sure that your Adobe organization is provisioned for Offers on Edge (this may require contacting your account manager)
 
 ### Q: Why don't I see any messages in my `AEP Response Event Handle` event?
 

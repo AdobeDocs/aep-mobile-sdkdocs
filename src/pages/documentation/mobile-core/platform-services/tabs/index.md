@@ -22,19 +22,19 @@ First, implement a class that conforms to the `Logging` interface. Below is an e
 
 ```java
 class ErrorLogger implements Logging {
-	@Override
-	public void trace(String tag, String message) {}
+ @Override
+ public void trace(String tag, String message) {}
 
-	@Override
-	public void debug(String tag, String message) {}
+ @Override
+ public void debug(String tag, String message) {}
 
-	@Override
-	public void warning(String tag, String message) {}
+ @Override
+ public void warning(String tag, String message) {}
 
-	@Override
-	public void error(String tag, String message) {
-		Log.e("ErrorLogger", message);
-	}
+ @Override
+ public void error(String tag, String message) {
+  Log.e("ErrorLogger", message);
+ }
 }
 ```
 
