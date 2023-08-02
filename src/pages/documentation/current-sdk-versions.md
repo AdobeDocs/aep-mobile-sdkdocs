@@ -103,6 +103,10 @@ Adobe Experience Platform Mobile SDK plugin for Flutter supports Flutter **versi
 
 Adobe Experience Platform Mobile SDK plugins for Flutter are compatible with the [Android](#android) and [iOS](#ios) native libraries.
 
+<InlineAlert variant="info" slots="text"/>
+
+If you are currently using the ACP-prefixed Flutter libraries, please see [the guide to migrate to latest available version](https://github.com/adobe/aepsdk_flutter/blob/main/docs/migration.md) for Flutter.
+
 | Extension | pub.dev |
 |---|---|
 | [Mobile Core](../mobile-core/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepcore.svg)](https://pub.dartlang.org/packages/flutter_aepcore) |
