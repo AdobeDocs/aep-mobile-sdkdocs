@@ -212,6 +212,10 @@ module.exports = {
                                     {
                                         title: "API reference",
                                         path: "documentation/mobile-core/signal/api-reference"
+                                    },
+                                    {
+                                        title: "Signal and Rules Engine integration",
+                                        path: "documentation/mobile-core/signal/rules-engine-integration.md"
                                     }
                                 ]
                             },
@@ -406,6 +410,10 @@ module.exports = {
                             {
                                 title: "Product variable",
                                 path: "/documentation/adobe-analytics/product-variable"
+                            },
+                            {
+                                title: "Tracking beacons",
+                                path: "/documentation/adobe-analytics/track-beacon"
                             },
                             {
                                 title: "Frequently asked questions",
@@ -725,20 +733,8 @@ module.exports = {
                         path: "documentation/user-guides/tags-data-elements"
                     },
                     {
-                        title: "Signal and rules engine integration",
-                        path: "documentation/user-guides/rules-engine-integration.md"
-                    },
-                    {
                         title: "iOS App Extensions",
                         path: "documentation/user-guides/app-extension"
-                    },
-                    {
-                        title: "Tracking beacons",
-                        path: "documentation/user-guides/track-beacon"
-                    },
-                    {
-                        title: "Building mobile extensions",
-                        path: "documentation/user-guides/building-mobile-extensions"
                     }
                 ]
             }

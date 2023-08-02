@@ -6,15 +6,3 @@ This sections provides a starting point for mobile application developers who wa
 
 * [Implementing the Experience Cloud in mobile iOS Swift applications](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-mobile-ios-swift-apps-with-launch/index.html)
 * [Implementing the Experience Cloud in mobile Android applications](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-mobile-android-apps-with-launch/index.html)
-
-## Tracking beacons in mobile Android and iOS applications
-
-Sending beacon data to Adobe Analytics for reporting can be an effective to understand how your audience can interact with physical landmarks. You can manually send beacon tracking data to your Analytics server and create rules based on a user's proximity to your beacons. This solution relies on the Profile extension to generate beacon-related rules.
-
-For more information, see the following link:
-
-* [Implementing beacon tracking for Adobe Analytics in mobile Android and iOS applications](./track-beacon.md)
-
-## Building mobile extensions
-
-To learn how to extend Mobile SDK to support customer-specific features, and allow for the greatest flexibility, please read the guide on [building mobile extensions](building-mobile-extensions.md).
