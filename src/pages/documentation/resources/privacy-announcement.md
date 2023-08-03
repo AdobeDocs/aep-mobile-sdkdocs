@@ -8,8 +8,8 @@ description: 'Last Updated September 2, 2020'
 
 Apple recently announced [new changes](https://developer.apple.com/app-store/user-privacy-and-data-use/) to iOS 14, which are scheduled to take effect later in 2020/2021. Among the highlights of the changes:
 
-1. Apple will ask app developers to self-report data types collected and how they may be used by the brand. 
-2. Beginning iOS 14, apps will need to ask & receive user’s permission to be tracked (specifically referring to accessing the device’s advertising identifier or IDFA). 
+1. Apple will ask app developers to self-report data types collected and how they may be used by the brand.
+2. Beginning iOS 14, apps will need to ask & receive user’s permission to be tracked (specifically referring to accessing the device’s advertising identifier or IDFA).
 3. Apple is introducing a new variant of device location signal labelled “reduced” or “Approximate Location”.
 
 ## Next Steps & Industry Reaction
@@ -49,4 +49,3 @@ Audience Manager will continue to enable customers to collect, and store data us
 Advertising Cloud will enable its customers to continue to deliver digital advertising campaigns on app inventory against targeted audiences provided by customers (via standard data onboarding processes). Customers should work with their data providers to only include user IDs they deem appropriate (e.g. opted-in IDFAs) in any segments that are provided to Advertising Cloud for purposes such as targeting, frequency capping, and measurement, etc.
 
 Please contact your Adobe Customer Success Manager or account representatives for further detail.
-

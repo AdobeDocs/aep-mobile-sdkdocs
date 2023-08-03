@@ -1,8 +1,8 @@
 # Manage dependencies using Swift Package Manager
 
-The [Swift Package Manager (SPM)](https://www.swift.org/package-manager/) is a tool for managing the distribution of Swift code that's integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies. The Adobe Experience Platform SDKs support installation using SPM. 
+The [Swift Package Manager (SPM)](https://www.swift.org/package-manager/) is a tool for managing the distribution of Swift code that's integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies. The Adobe Experience Platform SDKs support installation using SPM.
 
-## Swift Package Collection 
+## Swift Package Collection
 
 In Swift 5.5, the Swift Package Manager (SPM) adds support for [package collections](https://www.swift.org/blog/package-collections). You can configure package collection in Xcode for easy installation of the Swift SDKs. The Swift package collection for the Adobe Experience Platform SDKs is available at the [Adobe Open Source site](https://opensource.adobe.com/aepsdk-core-ios/swift/packages/aep.json).
 
@@ -24,11 +24,11 @@ To add the Swift Packages to your application, from the Xcode menu select **File
 
 If you have configured package collection, select each package you would like to add to your project and click **Add Package** on the bottom right.
 
-If not, enter the Package URL for the Swift SDK repositories: 
+If not, enter the Package URL for the Swift SDK repositories:
 
 - AEPCore: `https://github.com/adobe/aepsdk-core-ios.git`
 
-For each package, specify the Dependency rule as a specific version or a range of versions and select the Project. 
+For each package, specify the Dependency rule as a specific version or a range of versions and select the Project.
 
 When prompted, select all the `AEP*` libraries, then click `Add Package`.
 

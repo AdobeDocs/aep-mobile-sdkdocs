@@ -4,7 +4,7 @@
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../manage-gradle-dependencies.md) for more information.
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information.
 
 </InlineNestedAlert>
 
@@ -115,7 +115,7 @@ In your app's `_:didFinishLaunchingWithOptions` function, register the Audience 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {  
   MobileCore.registerExtensions([Audience.self, Identity.self], {
-  MobileCore.configureWith(appId: "yourAppId") 
+  MobileCore.configureWith(appId: "yourAppId")
  })  
  ...
 }
