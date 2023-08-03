@@ -1,6 +1,8 @@
-<Variant platform="android" task="config" repeat="3"/>
+<Variant platform="android" task="config" repeat="4"/>
 
 If using Gradle, remove the v4 Mobile SDK dependency:
+
+#### Java
 
 ```java
 dependencies {
@@ -24,7 +26,9 @@ end
 
 Alternatively, if the v4 Mobile SDK library is linked in Xcode, select the application target and go to `Build Phases`, then `Link Binary With Libraries` and remove `AdobeMobileLibrary.a`.
 
-<Variant platform="android" task="aep-install" repeat="1"/>
+<Variant platform="android" task="aep-install" repeat="2"/>
+
+#### Java
 
 ```java
 import com.adobe.marketing.mobile.MobileCore;
@@ -50,26 +54,7 @@ public void onCreate(Bundle savedInstanceState) {
 
 <Variant platform="ios" task="aep-install" repeat="4"/>
 
-**Objective-C**
-
-```objc
-#import "ACPCore.h"
-#import "ACPAnalytics.h"
-#import "ACPIdentity.h"
-
-- (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [ACPCore setLogLevel:ACPMobileLogLevelDebug];
-    [ACPAnalytics registerExtension];
-    [ACPIdentity registerExtension];
-    [ACPCore start:^{
-      // add your app id from the "Environments" tab on Launch.
-          [ACPCore configureWithAppId:@"your-app-id"];
-    }];
-    return YES;
-}
-```
-
-**Swift**
+#### Swift
 
 ```swift
 import ACPCore
@@ -87,9 +72,30 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-<Variant platform="android" task="api-changes" repeat="8"/>
+#### Objective-C
 
-#### Adobe Mobile Library (v4)
+```objectivec
+#import "ACPCore.h"
+#import "ACPAnalytics.h"
+#import "ACPIdentity.h"
+
+- (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [ACPCore setLogLevel:ACPMobileLogLevelDebug];
+    [ACPAnalytics registerExtension];
+    [ACPIdentity registerExtension];
+    [ACPCore start:^{
+      // add your app id from the "Environments" tab on Launch.
+          [ACPCore configureWithAppId:@"your-app-id"];
+    }];
+    return YES;
+}
+```
+
+<Variant platform="android" task="api-changes" repeat="10"/>
+
+### Adobe Mobile Library (v4)
+
+#### Java
 
 The Adobe Mobile Library (v4) syntax and usage examples for these API are:
 
@@ -113,9 +119,11 @@ Analytics.trackAction("linkClicked", new HashMap<String, Object>() {{
 }});
 ```
 
-#### Experience Platform Mobile SDKs
+### Experience Platform Mobile SDKs
 
 The Mobile SDKs have the `trackAction` and `trackState` APIs to the MobileCore extension. In addition, the context data Map has been changed from `<String, Object>` to `<String, String>`. The syntax is:
+
+#### Java
 
 ```java
 // syntax
@@ -141,9 +149,9 @@ MobileCore.trackAction("linkClicked", new HashMap<String, String>() {{
 
 The Mobile Services SDK syntax and usage examples for these API are:
 
-#### Adobe Mobile Library (v4)
+### Adobe Mobile Library (v4)
 
-```text
+```objectivec
 // syntax
 + (void) trackState:(NSString *)state data:(NSDictionary *)data;
 
@@ -151,7 +159,7 @@ The Mobile Services SDK syntax and usage examples for these API are:
 [ADBMobile trackState:@"MainPage" data:@{@"firstVisit":@true}];
 ```
 
-```text
+```objectivec
 // syntax
 + (void) trackAction:(NSString *)action data:(NSDictionary *)data;
 
@@ -159,37 +167,37 @@ The Mobile Services SDK syntax and usage examples for these API are:
 [ADBMobile trackAction:@"linkClicked" data:@{@"url":@"https://www.adobe.com"}];
 ```
 
-#### Experience Platform Mobile SDKs
+### Experience Platform Mobile SDKs
 
 The Mobile SDKs have moved the `trackAction` and `trackState` APIs to the MobileCore extension. In addition, the NSDictionary has been changed from `<NSString, NSObject>` to `<NSString, NSString>`. The syntax is:
 
-```text
+```objectivec
 + (void) trackAction: (nullable NSString*) action data: (nullable NSDictionary<NSString*, NSString*>*) data;
 ```
 
-```text
+```objectivec
 + (void) trackState: (nullable NSString*) action data: (nullable NSDictionary<NSString*, NSString*>*) data;
 ```
 
 The usage examples are:
 
-**Objective-C**
-
-```text
-[ACPCore trackState:@"MainPage" data:@{@"firstVisit":@"true"}];
-[ACPCore trackAction:@"linkClicked" data:@{@"url":@"https://www.adobe.com"}];
-```
-
-**Swift**
+#### Swift
 
 ```swift
 ACPCore.trackState("MainPage", data: ["firstVisit": "true"])
 ACPCore.trackAction("linkClicked", data: ["url": "https://www.adobe.com"])
 ```
 
+#### Objective-C
+
+```objectivec
+[ACPCore trackState:@"MainPage" data:@{@"firstVisit":@"true"}];
+[ACPCore trackAction:@"linkClicked" data:@{@"url":@"https://www.adobe.com"}];
+```
+
 <Variant platform="android" task="privacy-changes" repeat="6"/>
 
-#### Experience Platform Mobile SDKs
+### Experience Platform Mobile SDKs
 
 The syntax and usage examples for the `setPrivacyStatus` API are:
 
@@ -220,18 +228,18 @@ MobileCore.getPrivacyStatus(new AdobeCallback<MobilePrivacyStatus>() {
 
 <Variant platform="ios" task="privacy-changes" repeat="12"/>
 
-#### Experience Platform Mobile SDKs
+### Experience Platform Mobile SDKs
 
 The syntax for `setPrivacyStatus` is:
 
-```text
+```objectivec
 // syntax
 + (void) setPrivacyStatus: (ACPMobilePrivacyStatus) status;
 ```
 
 The syntax for `getPrivacyStatus` is:
 
-```text
+```objectivec
 // syntax
 + (void) getPrivacyStatus: (nonnull void (^) (ACPMobilePrivacyStatus status)) callback;
 + (void) getPrivacyStatusWithCompletionHandler: (nonnull void (^) (ACPMobilePrivacyStatus status, NSError* _Nullable error)) completionHandler;
@@ -243,28 +251,7 @@ If the API with the completion handler is used, the completion handler will be i
 
 The usage example for `getPrivacyStatus` is:
 
-**Objective-C**
-
-```objc
-[ACPCore getPrivacyStatus:^(ACPMobilePrivacyStatus status) {
-  switch (status) {
-    case ACPMobilePrivacyStatusOptIn: NSLog(@"Privacy Status: Opt-In");
-    case ACPMobilePrivacyStatusOptOut: NSLog(@"Privacy Status: Opt-Out");
-    case ACPMobilePrivacyStatusUnknown: NSLog(@"Privacy Status: Unknown");
-    default: break;
-  }
-}];
-
-[ACPCore getPrivacyStatusWithCompletionHandler:^(ACPMobilePrivacyStatus status, NSError * _Nullable error) {
-  if (error) {
-    // handle error here
-  } else {
-    // handle the retrieved privacy status
-  }
-}];
-```
-
-**Swift**
+#### Swift
 
 ```swift
 ACPCore.getPrivacyStatus({ status in
@@ -283,4 +270,25 @@ ACPCore.getPrivacyStatus(withCompletionHandler: { status, error in
       // handle the retrieved privacy status
     }
 })
+```
+
+#### Objective-C
+
+```objectivec
+[ACPCore getPrivacyStatus:^(ACPMobilePrivacyStatus status) {
+  switch (status) {
+    case ACPMobilePrivacyStatusOptIn: NSLog(@"Privacy Status: Opt-In");
+    case ACPMobilePrivacyStatusOptOut: NSLog(@"Privacy Status: Opt-Out");
+    case ACPMobilePrivacyStatusUnknown: NSLog(@"Privacy Status: Unknown");
+    default: break;
+  }
+}];
+
+[ACPCore getPrivacyStatusWithCompletionHandler:^(ACPMobilePrivacyStatus status, NSError * _Nullable error) {
+  if (error) {
+    // handle error here
+  } else {
+    // handle the retrieved privacy status
+  }
+}];
 ```
