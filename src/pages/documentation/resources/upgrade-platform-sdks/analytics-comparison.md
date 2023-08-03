@@ -54,38 +54,53 @@ iOS
 
 <Tabs query="platform=ios&task=aep-install"/>
 
-For more details, see [Add Analytics to your application](../adobe-analytics/index.md#add-analytics-to-your-application).
+For more details, see [Add Analytics to your application](../../adobe-analytics/index.md#add-analytics-to-your-application).
 
 ## API changes
 
-### Track App State and Track App Actions
+### Track app states and actions
+
+#### Adobe Mobile Library (v4)
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
-<Tabs query="platform=android&task=api-changes"/>
+<Tabs query="platform=android&task=api-changes-v4"/>
 
 iOS
 
-<Tabs query="platform=ios&task=api-changes"/>
+<Tabs query="platform=ios&task=api-changes-v4"/>
 
-## Privacy status changes in the AEP SDK
-
-The privacy status API `setPrivacyStatus` and `getPrivacyStatus` can be found in the MobileCore. Like the Mobile Services SDK, the Analytics extension will follow these behaviors depending on the privacy status set:
-
-**Opted in:** Analytics hits will be sent.
-
-**Unknown:** Analytics hits will be queued.
-
-**Opted out:** Analytics hits will be dropped.
+#### Experience Platform Mobile SDKs
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
-<Tabs query="platform=android&task=privacy-changes"/>
+<Tabs query="platform=android&task=api-changes-aep"/>
 
 iOS
 
-<Tabs query="platform=ios&task=privacy-changes"/>
+<Tabs query="platform=ios&task=api-changes-aep"/>
+
+
+## Privacy status changes in the Experience Platform SDK
+
+The privacy APIs `setPrivacyStatus` and `getPrivacyStatus` can be found in the MobileCore. Similar to the v4 SDK, the Analytics extension will follow these behaviors depending on the privacy status set:
+
+* **Opted in:** Analytics hits will be sent.
+* **Unknown:** Analytics hits will be queued.
+* **Opted out:** Analytics hits will be dropped.
+
+### Experience Platform Mobile SDKs
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<Tabs query="platform=android&task=privacy-changes-aep"/>
+
+iOS
+
+<Tabs query="platform=ios&task=privacy-changes-aep"/>

@@ -2,9 +2,9 @@
 
 If using Gradle, remove the v4 Mobile SDK dependency:
 
-#### Java
+#### Gradle
 
-```java
+```bash
 dependencies {
   implementation 'com.adobe.mobile:adobeMobileLibrary:4.18.2'
   ...
@@ -91,9 +91,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-<Variant platform="android" task="api-changes" repeat="10"/>
-
-### Adobe Mobile Library (v4)
+<Variant platform="android" task="api-changes-v4" repeat="4"/>
 
 #### Java
 
@@ -119,7 +117,29 @@ Analytics.trackAction("linkClicked", new HashMap<String, Object>() {{
 }});
 ```
 
-### Experience Platform Mobile SDKs
+<Variant platform="ios" task="api-changes-v4" repeat="4"/>
+
+#### Objective-C
+
+The Adobe Mobile Library (v4) syntax and usage examples for these API are:
+
+```objectivec
+// syntax
++ (void) trackState:(NSString *)state data:(NSDictionary *)data;
+
+// usage
+[ADBMobile trackState:@"MainPage" data:@{@"firstVisit":@true}];
+```
+
+```objectivec
+// syntax
++ (void) trackAction:(NSString *)action data:(NSDictionary *)data;
+
+// usage
+[ADBMobile trackAction:@"linkClicked" data:@{@"url":@"https://www.adobe.com"}];
+```
+
+<Variant platform="android" task="api-changes-aep" repeat="4"/>
 
 The Mobile SDKs have the `trackAction` and `trackState` APIs to the MobileCore extension. In addition, the context data Map has been changed from `<String, Object>` to `<String, String>`. The syntax is:
 
@@ -145,31 +165,9 @@ MobileCore.trackAction("linkClicked", new HashMap<String, String>() {{
 }});
 ```
 
-<Variant platform="ios" task="api-changes" repeat="13"/>
+<Variant platform="ios" task="api-changes-aep" repeat="8"/>
 
-The Mobile Services SDK syntax and usage examples for these API are:
-
-### Adobe Mobile Library (v4)
-
-```objectivec
-// syntax
-+ (void) trackState:(NSString *)state data:(NSDictionary *)data;
-
-// usage
-[ADBMobile trackState:@"MainPage" data:@{@"firstVisit":@true}];
-```
-
-```objectivec
-// syntax
-+ (void) trackAction:(NSString *)action data:(NSDictionary *)data;
-
-// usage
-[ADBMobile trackAction:@"linkClicked" data:@{@"url":@"https://www.adobe.com"}];
-```
-
-### Experience Platform Mobile SDKs
-
-The Mobile SDKs have moved the `trackAction` and `trackState` APIs to the MobileCore extension. In addition, the NSDictionary has been changed from `<NSString, NSObject>` to `<NSString, NSString>`. The syntax is:
+The Mobile SDKs have moved the `trackAction` and `trackState` APIs to the MobileCore extension. In addition, the context data dictionary has been changed from `<NSString, NSObject>` to `<NSString, NSString>`. The syntax is:
 
 ```objectivec
 + (void) trackAction: (nullable NSString*) action data: (nullable NSDictionary<NSString*, NSString*>*) data;
@@ -181,43 +179,35 @@ The Mobile SDKs have moved the `trackAction` and `trackState` APIs to the Mobile
 
 The usage examples are:
 
-#### Swift
+**Swift**
 
 ```swift
 ACPCore.trackState("MainPage", data: ["firstVisit": "true"])
 ACPCore.trackAction("linkClicked", data: ["url": "https://www.adobe.com"])
 ```
 
-#### Objective-C
+**Objective-C**
 
 ```objectivec
 [ACPCore trackState:@"MainPage" data:@{@"firstVisit":@"true"}];
 [ACPCore trackAction:@"linkClicked" data:@{@"url":@"https://www.adobe.com"}];
 ```
 
-<Variant platform="android" task="privacy-changes" repeat="6"/>
+<Variant platform="android" task="privacy-changes-aep" repeat="5"/>
 
-### Experience Platform Mobile SDKs
+#### Java
 
-The syntax and usage examples for the `setPrivacyStatus` API are:
+The usage example for the `setPrivacyStatus` API is:
 
 ```java
-// syntax
-public static void setPrivacyStatus(final MobilePrivacyStatus privacyStatus);
-
-// usage
 MobileCore.setPrivacyStatus(MobilePrivacyStatus.OPT_IN);
 MobileCore.setPrivacyStatus(MobilePrivacyStatus.OPT_OUT);
 MobileCore.setPrivacyStatus(MobilePrivacyStatus.UNKNOWN);
 ```
 
-The syntax and usage examples for the `getPrivacyStatus` API are:
+The usage example for the `getPrivacyStatus` API is:
 
 ```java
-// syntax
-void getPrivacyStatus(AdobeCallback<MobilePrivacyStatus> callback);
-
-// usage
 MobileCore.getPrivacyStatus(new AdobeCallback<MobilePrivacyStatus>() {
     @Override
     public void call(MobilePrivacyStatus status) {
@@ -226,28 +216,7 @@ MobileCore.getPrivacyStatus(new AdobeCallback<MobilePrivacyStatus>() {
 });
 ```
 
-<Variant platform="ios" task="privacy-changes" repeat="12"/>
-
-### Experience Platform Mobile SDKs
-
-The syntax for `setPrivacyStatus` is:
-
-```objectivec
-// syntax
-+ (void) setPrivacyStatus: (ACPMobilePrivacyStatus) status;
-```
-
-The syntax for `getPrivacyStatus` is:
-
-```objectivec
-// syntax
-+ (void) getPrivacyStatus: (nonnull void (^) (ACPMobilePrivacyStatus status)) callback;
-+ (void) getPrivacyStatusWithCompletionHandler: (nonnull void (^) (ACPMobilePrivacyStatus status, NSError* _Nullable error)) completionHandler;
-```
-
-The callback is invoked after the privacy status is available.
-
-If the API with the completion handler is used, the completion handler will be invoked with the current privacy status, or error if an unexpected error occurs or the request times out. The default timeout is 5000ms.
+<Variant platform="ios" task="privacy-changes-aep" repeat="5"/>
 
 The usage example for `getPrivacyStatus` is:
 
