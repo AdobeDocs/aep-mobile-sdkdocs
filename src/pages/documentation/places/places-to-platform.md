@@ -30,6 +30,7 @@ Upgrade your Mobile SDK to following Places extension version
 ![Add New Field Group](./assets/index/add-new-field-group.png)
 
 * Search and add **Environment Details** field group.
+
 ![Add Environment Details Field Group](./assets/index/add-environment-details-fieldgroup.png)
 
 ### Mask/Remove the unnecessary fields from EnvironmentDetails Field groups.
