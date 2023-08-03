@@ -57,17 +57,15 @@ public void onCreate(Bundle savedInstanceState) {
 #### Swift
 
 ```swift
-import ACPCore
-import ACPAnalytics
-import ACPIdentity
+import AEPCore
+import AEPIdentity
+import AEPAnalytics
 
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-  ACPCore.setLogLevel(ACPMobileLogLevel.debug)
-  ACPAnalytics.registerExtension()
-  ACPIdentity.registerExtension()
-  ACPCore.start(){
-      ACPCore.configureWithAppId("your-app-id")
-  }
+  MobileCore.registerExtensions([Analytics.self, Identity.self], {
+      // Use the environment file id assigned to this application in Data Collection UI
+      MobileCore.configureWith(appId: "your-environment-file-id")
+  })
   return true
 }
 ```
@@ -179,14 +177,14 @@ The Mobile SDKs have moved the `trackAction` and `trackState` APIs to the Mobile
 
 The usage examples are:
 
-**Swift**
+#### Swift
 
 ```swift
-ACPCore.trackState("MainPage", data: ["firstVisit": "true"])
-ACPCore.trackAction("linkClicked", data: ["url": "https://www.adobe.com"])
+MobileCore.track(state: "MainPage", data: ["firstVisit": "true"])
+MobileCore.track(action: "linkClicked", data: ["url": "https://www.adobe.com"])
 ```
 
-**Objective-C**
+#### Objective-C
 
 ```objectivec
 [ACPCore trackState:@"MainPage" data:@{@"firstVisit":@"true"}];
@@ -223,21 +221,14 @@ The usage example for `getPrivacyStatus` is:
 #### Swift
 
 ```swift
-ACPCore.getPrivacyStatus({ status in
+MobileCore.getPrivacyStatus(completion: ({ status in
+  // handle current privacy status
    switch status {
-     case ACPMobilePrivacyStatus.optIn: print ("Privacy Status: Opt-In")
-     case ACPMobilePrivacyStatus.optOut: print("Privacy Status: Opt-Out")
-     case ACPMobilePrivacyStatus.unknown: print("Privacy Status: Unknown")
+     case PrivacyStatus.optedIn: print("Privacy Status: Opt-In")
+     case PrivacyStatus.optedOut: print("Privacy Status: Opt-Out")
+     case PrivacyStatus.unknown: print("Privacy Status: Unknown")
      default: break
    }
-})
-
-ACPCore.getPrivacyStatus(withCompletionHandler: { status, error in
-    if error != nil {
-      // handle error here
-    } else {
-      // handle the retrieved privacy status
-    }
 })
 ```
 
