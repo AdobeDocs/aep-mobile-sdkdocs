@@ -630,6 +630,10 @@ module.exports = {
                         path: "/documentation/resources/major-version-alignment"
                     },
                     {
+                        title: "ACP SDKs end-of-support",
+                        path: "/documentation/resources/acp-end-of-support"
+                    },
+                    {
                         title: "Upgrade to the Experience Platform SDKs",
                         path: "documentation/upgrade-platform-sdks",
                         pages: [
