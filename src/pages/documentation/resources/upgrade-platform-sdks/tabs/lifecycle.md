@@ -28,7 +28,7 @@ public class MyApp extends Application {​
 }
 ```
 
-<Variant platform="ios" task="import" repeat="9"/>
+<Variant platform="ios" task="import" repeat="8"/>
 
 #### Swift
 
@@ -45,23 +45,28 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
       // Use the environment file id assigned to this application in Data Collection UI
       MobileCore.configureWith(appId: "your-environment-file-id")
   })
+
+  return true
 }
 ```
 
 #### Objective-C
 
-Import the Lifecycle extension:
-
 ```objectivec
-#import "ACPLifecycle.h"
+@import AEPCore;
+@import AEPLifecycle;
 ```
 
-Register the Lifecycle extension with the SDK Core by adding the following to your app's `application:didFinishLaunchingWithOptions:` delegate method:
+Register the Lifecycle extension along with the other extensions you use with the Mobile Core by adding the following to your app's `application:didFinishLaunchingWithOptions:` delegate method:
 
 ```objectivec
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // register the lifecycle extension
-    [ACPLifecycle registerExtension];
+  [AEPMobileCore registerExtensions:@[AEPMobileLifecycle.class, ...] completion:^{
+      // Use the environment file id assigned to this application in Data Collection UI
+      [AEPMobileCore configureWithAppId: @"your-environment-file-id"];
+  }];
+
+  return YES;
 }
 ```
 
@@ -132,16 +137,18 @@ If your iOS application supports background capabilities, your `application:didF
 
 ```objectivec
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // register the lifecycle extension
-    [ACPLifecycle registerExtension];
 
     const UIApplicationState appState = application.applicationState;
-    [ACPCore start:^{
+    [AEPMobileCore registerExtensions:@[AEPMobileLifecycle.class, ...] completion:^{
+        // Use the environment file id assigned to this application in Data Collection UI
+        [AEPMobileCore configureWithAppId: @"your-environment-file-id"];
         // only start lifecycle if the application is not in the background
         if (appState != UIApplicationStateBackground) {
-            [ACPCore lifecycleStart:nil];
+            [AEPMobileCore lifecycleStart:nil];
         }
     }];
+
+    return YES;
 }
 ```
 
@@ -149,7 +156,7 @@ When your app is launched, if it is resuming from a backgrounded state, iOS migh
 
 ```objectivec
 - (void) applicationWillEnterForeground:(UIApplication *)application {
-    [ACPCore lifecycleStart:nil];
+    [AEPMobileCore lifecycleStart:nil];
 }
 ```
 
@@ -157,7 +164,7 @@ If your app is a SceneDelegate based iOS application, then use:
 
 ```objectivec
 - (void) sceneWillEnterForeground:(UIScene *)scene {
-    [ACPCore lifecycleStart:nil];
+    [AEPMobileCore lifecycleStart:nil];
 }
 ```
 
@@ -203,15 +210,15 @@ func sceneDidEnterBackground(_ scene: UIScene) {
 When the app enters the background, pause Lifecycle data collection from your app's `applicationDidEnterBackground:` delegate method:
 
 ```objectivec
- - (void) applicationDidEnterBackground:(UIApplication *)application {
-    [ACPCore lifecyclePause];
- }
+- (void) applicationDidEnterBackground:(UIApplication *)application {
+   [AEPMobileCore lifecyclePause];
+}
 ```
 
 If your app is a SceneDelegate based iOS application, then use:
 
 ```objectivec
 - (void) sceneDidEnterBackground:(UIScene *)scene {
-    [ACPCore lifecyclePause];
+    [AEPMobileCore lifecyclePause];
 }
 ```
