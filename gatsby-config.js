@@ -679,7 +679,7 @@ module.exports = {
                             },
                             {
                                 title: "Analytics migration",
-                                path: "documentation/resources/upgrade-platform-sdks/analytics-comparison.md"
+                                path: "documentation/resources/upgrade-platform-sdks/analytics.md"
                             },
                             {
                                 title: "Frequently asked questions",

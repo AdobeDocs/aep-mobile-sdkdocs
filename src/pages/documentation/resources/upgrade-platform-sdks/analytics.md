@@ -1,4 +1,4 @@
-import Tabs from './tabs/analytics-comparison.md'
+import Tabs from './tabs/analytics.md'
 
 # Adobe Mobile Library (v4) to Experience Platform Analytics migration
 
