@@ -334,7 +334,7 @@ module.exports = {
 
 
             {
-                title: "Adobe Experience Platform Location Service",
+                title: "Places Service, powered by Adobe Experience Platform",
                 path: "/documentation/places",
                 pages: [
                     {
@@ -344,6 +344,10 @@ module.exports = {
                     {
                         title: "API reference",
                         path: "documentation/places/api-reference.md"
+                    },
+                    {
+                        title: "Event forwarding to Adobe Experience Platform",
+                        path: "documentation/places/places-to-platform.md"
                     },
                     {
                         title: "Release notes",
