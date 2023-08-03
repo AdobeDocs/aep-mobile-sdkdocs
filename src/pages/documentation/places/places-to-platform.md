@@ -1,13 +1,13 @@
 # Places Service event forwarding to Adobe Experience Platform
 
-## Capablities
+## Capabilities
 
 1. Enriches Adobe Journey Optimizer's ability to engage with users based on location entry and exit triggers.
 2. Allows creating audiences based on points of interest (POI) visits.
 
 ## Mobile SDK
 
-Upgrade your Mobile SDK to following Places extension version
+Upgrade the Mobile SDK to the following Places extension version
 
 | Platform | Version Supported|
 |---|---|
@@ -58,7 +58,7 @@ select confirm. Your schema's **placeContext** field-group should look like:
 * From the left panel, select **Datastreams** and from the list select the datastream that is configured for your application. For more details about configuring datastream, please read [this section](../getting-started/configure-datastreams.md).
 * Find **Adobe Experience Platform** service, select `...` and choose **Edit**.
 
-![Choose AEP Service](./assets/index/datastream-choose-aep-services.png)
+![Choose Platform Service](./assets/index/datastream-choose-platform-services.png)
 
 * Make sure you have set up the dataset with `placeContext` field-group enabled schema as one of your event datasets in the datastream configuration.
 

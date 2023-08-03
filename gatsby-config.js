@@ -334,7 +334,7 @@ module.exports = {
 
 
             {
-                title: "Places Service, powered by Adobe Experience Platform",
+                title: "Adobe Experience Platform Location Service",
                 path: "/documentation/places",
                 pages: [
                     {
