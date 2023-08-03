@@ -73,19 +73,18 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 #### Objective-C
 
 ```objectivec
-#import "ACPCore.h"
-#import "ACPAnalytics.h"
-#import "ACPIdentity.h"
+// AppDelegate.h
+@import AEPCore;
+@import AEPIdentity;
+@import AEPAnalytics;
 
+// AppDelegate.m
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [ACPCore setLogLevel:ACPMobileLogLevelDebug];
-    [ACPAnalytics registerExtension];
-    [ACPIdentity registerExtension];
-    [ACPCore start:^{
-      // add your app id from the "Environments" tab on Launch.
-          [ACPCore configureWithAppId:@"your-app-id"];
-    }];
-    return YES;
+  [AEPMobileCore registerExtensions:@[AEPMobileAnalytics.class, AEPMobileIdentity.class] completion:^{
+      // Use the environment file id assigned to this application in Data Collection UI
+      [AEPMobileCore configureWithAppId: @"your-environment-file-id"];
+  }];
+  return YES;
 }
 ```
 
@@ -187,8 +186,8 @@ MobileCore.track(action: "linkClicked", data: ["url": "https://www.adobe.com"])
 #### Objective-C
 
 ```objectivec
-[ACPCore trackState:@"MainPage" data:@{@"firstVisit":@"true"}];
-[ACPCore trackAction:@"linkClicked" data:@{@"url":@"https://www.adobe.com"}];
+[AEPMobileCore trackState:@"MainPage" data:@{@"firstVisit":@"true"}];
+[AEPMobileCore trackAction:@"linkClicked" data:@{@"url":@"https://www.adobe.com"}];
 ```
 
 <Variant platform="android" task="privacy-changes-aep" repeat="5"/>
@@ -235,20 +234,12 @@ MobileCore.getPrivacyStatus(completion: ({ status in
 #### Objective-C
 
 ```objectivec
-[ACPCore getPrivacyStatus:^(ACPMobilePrivacyStatus status) {
-  switch (status) {
-    case ACPMobilePrivacyStatusOptIn: NSLog(@"Privacy Status: Opt-In");
-    case ACPMobilePrivacyStatusOptOut: NSLog(@"Privacy Status: Opt-Out");
-    case ACPMobilePrivacyStatusUnknown: NSLog(@"Privacy Status: Unknown");
+[AEPMobileCore getPrivacyStatus:^(AEPPrivacyStatus status) {
+    switch (status) {
+    case AEPPrivacyStatusOptedIn: NSLog(@"Privacy Status: Opt-In");
+    case AEPPrivacyStatusOptedOut: NSLog(@"Privacy Status: Opt-Out");
+    case AEPPrivacyStatusUnknown: NSLog(@"Privacy Status: Unknown");
     default: break;
-  }
-}];
-
-[ACPCore getPrivacyStatusWithCompletionHandler:^(ACPMobilePrivacyStatus status, NSError * _Nullable error) {
-  if (error) {
-    // handle error here
-  } else {
-    // handle the retrieved privacy status
   }
 }];
 ```

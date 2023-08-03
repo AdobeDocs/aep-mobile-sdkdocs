@@ -38,11 +38,11 @@ For an overview of the API mapping between the Mobile Services SDK and Adobe Exp
 | trackTimedActionEnd: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/timed-actions.html), [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/timed-actions.html)) | This functionality can be recreated using the [Analytics](../../adobe-analytics/index.md) and [User Profile](../../profile/index.md) extensions.
 | trackTimedActionExists: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/timed-actions.html), [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/timed-actions.html)) | This functionality can be recreated using the [Analytics](../../adobe-analytics/index.md) and [User Profile](../../profile/index.md) extensions.
 
-## AEP SDK Installation and Setup
+## Experience Platform extensions installation and setup
 
-### Register the AEP Extensions and link the app to the configuration created with Data Collection tags
+### Register the extensions and link the app to the configuration created with Data Collection tags
 
-In your app's Application class add the Adobe Experience Platform extension registration and configuration code:
+In your app's Application class add the mobile extension registration and configuration code:
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
