@@ -164,7 +164,7 @@ MobileCore.trackAction("linkClicked", new HashMap<String, String>() {{
 
 <Variant platform="ios" task="api-changes-aep" repeat="8"/>
 
-The Mobile SDKs have moved the `trackAction` and `trackState` APIs to the MobileCore extension, and you may pass the context data values as String. The syntax is:
+The Mobile SDKs have moved the `trackAction` and `trackState` APIs to the MobileCore extension. The syntax is:
 
 ```objectivec
  @objc(trackAction:data:)
