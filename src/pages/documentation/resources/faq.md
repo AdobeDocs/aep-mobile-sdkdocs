@@ -204,7 +204,7 @@ implementation 'com.adobe.marketing.mobile:signal'
 
 ### How do I upgrade to the latest version of Mobile SDK for Android if my app uses Mobile Services?
 
-Adobe Mobile Service's end-of-life date is [December 31, 2022](https://experienceleague.adobe.com/docs/mobile-services/using/eol.html). To upgrade to the latest version of Mobile SDK for Android, you have to remove the Mobile Services dependency from your app.
+Adobe Mobile Service's end-of-life date is [December 31, 2022](https://experienceleague.adobe.com/docs/discontinued/using/mobile-services.html). To upgrade to the latest version of Mobile SDK for Android, you have to remove the Mobile Services dependency from your app.
 
 ### Why do I see a warning in AndroidManifest.xml about missing 'com.adobe.marketing.mobile.FullscreenMessageActivity' class?
 

@@ -28,15 +28,15 @@ For an overview of the API mapping between the Mobile Services SDK and Adobe Exp
 
 | API | Notes |
 |---|---|
-| trackActionFromBackground ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/actions.html)) | Deprecated |
-| trackLocation:data: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/location-ios/geo-poi.html), [Android](https://experienceleague.adobe.com/docs/mobile-services/android/location/geo-poi.html)) | This functionality is available in the [Places extension](../../places/index.md). |
-| trackBeacon:Data: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/location-ios/ibeacon.html), [Android](https://experienceleague.adobe.com/docs/mobile-services/android/location/beacon.html)) | Support modified. [See guide](../../adobe-analytics/track-beacon.md). |
-| trackingClearCurrentBeacon ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/location-ios/ibeacon.html), [Android](https://experienceleague.adobe.com/docs/mobile-services/android/location/beacon.html)) | Support modified. [See guide](../../adobe-analytics/track-beacon.md). |
-| trackLifetimeValueIncrease:data: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/lifetime-value.html), [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/lifetime-value.html)) | This functionality can be recreated using the [Analytics](../../adobe-analytics/index.md) and [User Profile](../../profile/index.md) extensions.
-| trackTimedActionStart: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/timed-actions.html), [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/timed-actions.html)) | This functionality can be recreated using the [Analytics](../../adobe-analytics/index.md) and [User Profile](../../profile/index.md) extensions.
-| trackTimedActionUpdate: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/timed-actions.html), [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/timed-actions.html)) | This functionality can be recreated using the [Analytics](../../adobe-analytics/index.md) and [User Profile](../../profile/index.md) extensions.
-| trackTimedActionEnd: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/timed-actions.html), [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/timed-actions.html)) | This functionality can be recreated using the [Analytics](../../adobe-analytics/index.md) and [User Profile](../../profile/index.md) extensions.
-| trackTimedActionExists: ([iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/analytics-ios/timed-actions.html), [Android](https://experienceleague.adobe.com/docs/mobile-services/android/analytics-android/timed-actions.html)) | This functionality can be recreated using the [Analytics](../../adobe-analytics/index.md) and [User Profile](../../profile/index.md) extensions.
+| trackActionFromBackground | Deprecated |
+| trackLocation:data: | This functionality is available in the [Places extension](../../places/index.md). |
+| trackBeacon:Data: | Support modified. [See guide](../../adobe-analytics/track-beacon.md). |
+| trackingClearCurrentBeacon | Support modified. [See guide](../../adobe-analytics/track-beacon.md). |
+| trackLifetimeValueIncrease:data: | This functionality can be recreated using the [Analytics](../../adobe-analytics/index.md) and [User Profile](../../profile/index.md) extensions.
+| trackTimedActionStart: | This functionality can be recreated using the [Analytics](../../adobe-analytics/index.md) and [User Profile](../../profile/index.md) extensions.
+| trackTimedActionUpdate: | This functionality can be recreated using the [Analytics](../../adobe-analytics/index.md) and [User Profile](../../profile/index.md) extensions.
+| trackTimedActionEnd: | This functionality can be recreated using the [Analytics](../../adobe-analytics/index.md) and [User Profile](../../profile/index.md) extensions.
+| trackTimedActionExists: | This functionality can be recreated using the [Analytics](../../adobe-analytics/index.md) and [User Profile](../../profile/index.md) extensions.
 
 ## Experience Platform extensions installation and setup
 
