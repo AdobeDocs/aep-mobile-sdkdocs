@@ -20,7 +20,7 @@
 </a>
 </div>
 
-The Android BOM (Bill of Materials) artifact has been released to Maven Central. The above Maven Badge displays the latest BOM version. To obtain information about which Android extension versions are mapped to the latest BOM, refer to the [release notes](https://developer.adobe.com/client-sdks/documentation/release-notes/) for further details.
+The Android BOM (Bill of Materials) artifact has been released to Maven Central. The above Maven Badge displays the latest BOM version. To obtain information about which Android extension versions are mapped to the latest BOM, refer to the [release notes](https://developer.adobe.com/client-sdks/documentation/release-notes/).
 
 ### Android extensions
 
