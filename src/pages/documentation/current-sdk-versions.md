@@ -12,7 +12,7 @@
 
 ### BOM to extension version mapping
 
-The latest BOM (Bill of Materials) version is [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/sdk-bom.svg?logo=android&logoColor=white&label=sdk-bom&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/sdk-bom). For your convenience, the table below provides information on which Android extension versions are mapped to the latest BOM.
+The latest BOM (Bill of Materials) version is [**2.1.0**](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/sdk-bom). For your convenience, the table below provides information on which Android extension versions are mapped to the latest BOM.
 
 | Extension artifact| Version | Github |
 |-----|-----|-----|
