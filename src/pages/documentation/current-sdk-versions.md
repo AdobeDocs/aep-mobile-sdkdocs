@@ -8,33 +8,34 @@
 
 <InlineAlert variant="info" slots="text"/>
 
-**Start using the BOM artifact for Android**<br/> The Adobe SDK BOM artifact enables managing all compatible versions of Adobe Experience Platform Android extensions by specifying a single BOM version. This is now the recommended way to manage Android SDKs.
+**Start using the BOM artifact for Android**<br/> The Adobe SDK BOM artifact enables managing all compatible versions of Adobe Experience Platform Android extensions by specifying a single BOM version. This is now the recommended way to manage Android SDKs. For the installation instructions, see the steps to [add dependencies to your project](https://developer.adobe.com/client-sdks/documentation/getting-started/get-the-sdk/#installation-instructions). The BOM project is open-sourced. For more information, please refer to the [README](https://github.com/adobe/aepsdk-commons/blob/main/android/aepsdk-bom/README.md) file located in the public repository.
 
-| Extension | Maven | Github |
-|---|---|---|
-| [Mobile Core](../mobile-core/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/core.svg?logo=android&logoColor=white&label=core&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/core) | [Link](https://github.com/adobe/aepsdk-core-android) |
-| [Rules Engine](../mobile-core/rules-engine/index.md) | Bundled in Mobile Core | — |
-| [Signal](../mobile-core/signal/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/signal.svg?logo=android&logoColor=white&label=signal&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/signal) | [Link](https://github.com/adobe/aepsdk-core-android) |
-| [Lifecycle](../mobile-core/lifecycle/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/lifecycle.svg?logo=android&logoColor=white&label=lifecycle&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/lifecycle) | [Link](https://github.com/adobe/aepsdk-core-android) |
-| [Identity](../mobile-core/identity/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/identity.svg?logo=android&logoColor=white&label=identity&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/identity) | [Link](https://github.com/adobe/aepsdk-core-android) |
-| [Profile](../profile/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/userprofile.svg?logo=android&logoColor=white&label=userprofile&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/userprofile) | [Link](https://github.com/adobe/aepsdk-userprofile-android) |
-| [Adobe Experience Platform Assurance](../platform-assurance-sdk/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/assurance.svg?logo=android&logoColor=white&label=assurance&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/assurance) | [Link](https://github.com/adobe/aepsdk-assurance-android) |
-| [Adobe Experience Platform Edge Network](../edge-network/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edge.svg?logo=android&logoColor=white&label=edge&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edge) | [Link](https://github.com/adobe/aepsdk-edge-android) |
-| [Identity for Edge Network](../identity-for-edge-network/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edgeidentity.svg?logo=android&logoColor=white&label=edgeidentity&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edgeidentity) | [Link](https://github.com/adobe/aepsdk-edgeidentity-android) |
-| [Consent for Edge Network](../consent-for-edge-network/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edgeconsent.svg?logo=android&logoColor=white&label=edgeconsent&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edgeconsent) | [Link](https://github.com/adobe/aepsdk-edgeconsent-android) |
-| [Media for Edge Network](../media-for-edge-network/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edgemedia.svg?logo=android&logoColor=white&label=edgemedia&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edgemedia) | [Link](https://github.com/adobe/aepsdk-edgemedia-android) |
-| [Edge Bridge](../adobe-analytics/migrate-to-edge-network.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edgebridge.svg?logo=android&logoColor=white&label=edgebridge&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edgebridge) | [Link](https://github.com/adobe/aepsdk-edgebridge-android) |
-| [Adobe Journey Optimizer](../adobe-journey-optimizer/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/messaging.svg?logo=android&logoColor=white&label=messaging&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/messaging) | [Link](https://github.com/adobe/aepsdk-messaging-android) |
-| [Adobe Journey Optimizer - Decisioning](../adobe-journey-optimizer-decisioning/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/optimize.svg?logo=android&logoColor=white&label=optimize&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/optimize) | [Link](https://github.com/adobe/aepsdk-optimize-android) |
-| [Places Service](https://experienceleague.adobe.com/docs/places/using/home.html) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/places.svg?logo=android&logoColor=white&label=places&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/places) | [Link](https://github.com/adobe/aepsdk-places-android) |
-| [Adobe Analytics](../adobe-analytics/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/analytics.svg?logo=android&logoColor=white&label=analytics&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/analytics) | [Link](https://github.com/adobe/aepsdk-analytics-android) |
-| [Adobe Analytics - Media Analytics for Audio & Video](../adobe-media-analytics/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/media.svg?logo=android&logoColor=white&label=media&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/media) | [Link](https://github.com/adobe/aepsdk-media-android) |
-| [Adobe Target](../adobe-target/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/target.svg?logo=android&logoColor=white&label=target&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/target) | [Link](https://github.com/adobe/aepsdk-target-android) |
-| [Adobe Campaign Standard](../adobe-campaign-standard/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/campaign.svg?logo=android&logoColor=white&label=campaign&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/campaign) | [Link](https://github.com/adobe/aepsdk-campaign-android) |
-| [Adobe Campaign Classic](../adobe-campaign-classic/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/campaignclassic.svg?logo=android&logoColor=white&label=campaignclassic&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/campaignclassic) | [Link](https://github.com/adobe/aepsdk-campaignclassic-android) |
-| [Adobe Audience Manager](../adobe-audience-manager/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/audience.svg?logo=android&logoColor=white&label=audience&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/audience) | [Link](https://github.com/adobe/aepsdk-audience-android) |
-| Adobe Analytics - Mobile Services | Deprecated | |
-| Places Monitor | Deprecated | |
+### BOM to extension version mapping
+
+The latest BOM (Bill of Materials) version is [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/sdk-bom.svg?logo=android&logoColor=white&label=sdk-bom&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/sdk-bom). For your convenience, the table below provides information on which Android extension versions are mapped to the latest BOM.
+
+| Extension artifact| Version | Github |
+|-----|-----|-----|
+| com.adobe.marketing.mobile:core | 2.3.0| [Link](https://github.com/adobe/aepsdk-core-android) |
+| com.adobe.marketing.mobile:signal | 2.0.1 | [Link](https://github.com/adobe/aepsdk-core-android) |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4| [Link](https://github.com/adobe/aepsdk-core-android) |
+| com.adobe.marketing.mobile:identity | 2.0.3 | [Link](https://github.com/adobe/aepsdk-core-android) |
+| com.adobe.marketing.mobile:userprofile | 2.0.1| [Link](https://github.com/adobe/aepsdk-userprofile-android) |
+| com.adobe.marketing.mobile:assurance | 2.1.1| [Link](https://github.com/adobe/aepsdk-assurance-android) |
+| com.adobe.marketing.mobile:edge | 2.2.0| [Link](https://github.com/adobe/aepsdk-edge-android) |
+| com.adobe.marketing.mobile:edgeidentity  | 2.0.1| [Link](https://github.com/adobe/aepsdk-edgeidentity-android) |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | [Link](https://github.com/adobe/aepsdk-edgeconsent-android) |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | [Link](https://github.com/adobe/aepsdk-edgemedia-android) |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0| [Link](https://github.com/adobe/aepsdk-edgebridge-android) |
+| com.adobe.marketing.mobile:messaging  | 2.1.4 | [Link](https://github.com/adobe/aepsdk-messaging-android) |
+| com.adobe.marketing.mobile:optimize| 2.0.0 | [Link](https://github.com/adobe/aepsdk-optimize-android) |
+| com.adobe.marketing.mobile:analytics | 2.0.3| [Link](https://github.com/adobe/aepsdk-analytics-android) |
+| com.adobe.marketing.mobile:campaign | 2.0.5| [Link](https://github.com/adobe/aepsdk-campaign-android) |
+| com.adobe.marketing.mobile:campaignclassic | 2.0.1 | [Link](https://github.com/adobe/aepsdk-campaignclassic-android) |
+| com.adobe.marketing.mobile:target | 2.0.1| [Link](https://github.com/adobe/aepsdk-target-android) |
+| com.adobe.marketing.mobile:audience | 2.0.0 | [Link](https://github.com/adobe/aepsdk-audience-android) |
+| com.adobe.marketing.mobile:media | 3.0.0 | [Link](https://github.com/adobe/aepsdk-media-android) |
+| com.adobe.marketing.mobile:places  | 2.0.0 | [Link](https://github.com/adobe/aepsdk-places-android) |
 
 ## iOS
 
