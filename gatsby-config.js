@@ -354,6 +354,10 @@ module.exports = {
                         path: "documentation/places/api-reference.md"
                     },
                     {
+                        title: "Event forwarding to Adobe Experience Platform",
+                        path: "documentation/places/places-to-platform.md"
+                    },
+                    {
                         title: "Release notes",
                         path: "documentation/places/release-notes.md"
                     }
@@ -656,6 +660,10 @@ module.exports = {
                     {
                         title: "Frequently asked questions",
                         path: "documentation/resources/faq"
+                    },
+                    {
+                        title: "ACP SDKs end-of-support",
+                        path: "/documentation/resources/acp-end-of-support"
                     },
                     {
                         title: "Adobe Mobile Library (v4) end-of-support",
