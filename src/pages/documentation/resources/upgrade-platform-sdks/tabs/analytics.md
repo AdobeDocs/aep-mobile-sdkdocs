@@ -138,7 +138,7 @@ The Adobe Mobile Library (v4) syntax and usage examples for these API are:
 
 <Variant platform="android" task="api-changes-aep" repeat="4"/>
 
-The Mobile SDKs have the `trackAction` and `trackState` APIs to the MobileCore extension. In addition, the context data Map has been changed from `<String, Object>` to `<String, String>`. The syntax is:
+The Mobile SDKs have moved the `trackAction` and `trackState` APIs to the MobileCore extension. In addition, the context data Map has been changed from `<String, Object>` to `<String, String>`. The syntax is:
 
 #### Java
 
