@@ -14,7 +14,7 @@ implementation 'com.adobe.marketing.mobile:userprofile'
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../manage-gradle-dependencies.md) for more information.
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information.
 
 </InlineNestedAlert>
 
@@ -358,7 +358,7 @@ func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive respo
     if(!broadlogId.length || !deliveryId.length){
       return;
     }
-    
+
     // Send Click Tracking since the user did click on the notification
     [AEPMobileCore collectMessageInfo:@{
       @"broadlogId" : broadlogId,
@@ -397,11 +397,11 @@ To handle deep links in the notification payload, you need to set up URL schemes
 public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.main);
-  
+
     Intent intent = getIntent();
     String action = intent.getAction();
     Uri data = intent.getData();
-  
+
     Map<String, Intent> urlToIntentMap = new HashMap<>();
     // add url string to Intent object mappings
     // e.g. urlToIntentMap.put("https://validUrl.com", new Intent());

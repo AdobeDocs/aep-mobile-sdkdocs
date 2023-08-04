@@ -8,7 +8,23 @@
 
 <InlineAlert variant="info" slots="text"/>
 
-**Start using the BOM artifact for Android**<br/> The Adobe SDK BOM artifact enables managing all compatible versions of Adobe Experience Platform Android extensions by specifying a single BOM version. This is now the recommended way to manage Android SDKs.
+**Start using the BOM artifact for Android**<br/> The Adobe SDK BOM artifact enables managing all compatible versions of Adobe Experience Platform Android extensions by specifying a single BOM version. This is now the recommended way to manage Android SDKs. For the installation instructions, see the steps to [add dependencies to your project](https://developer.adobe.com/client-sdks/documentation/getting-started/get-the-sdk/#installation-instructions). The BOM project is open-sourced. For more information, please refer to the [README](https://github.com/adobe/aepsdk-commons/blob/main/android/aepsdk-bom/README.md) file located in the public repository.
+
+### Android BOM
+
+<div style="height:20px; width:120px;"></div>
+
+<div style="height:30px; width:140px;">
+<a href="https://mvnrepository.com/artifact/com.adobe.marketing.mobile/sdk-bom">
+<img src="https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/sdk-bom.svg?logo=android&logoColor=white&label=sdk-bom&style=flat-square" alt="descriptive text"/>
+</a>
+</div>
+
+The Android BOM (Bill of Materials) artifact has been released to Maven Central. The above Maven Badge displays the latest BOM version. To obtain information about which Android extension versions are mapped to the latest BOM, refer to the [release notes](https://developer.adobe.com/client-sdks/documentation/release-notes/).
+
+### Android extensions
+
+<div style="height:20px; width:120px;"></div>
 
 | Extension | Maven | Github |
 |---|---|---|

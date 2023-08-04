@@ -2,7 +2,7 @@ import Tabs from './tabs/push-notifications.md'
 
 # Troubleshooting Campaign push notifications
 
-To set up server key/APNS server certificate in the Campaign instance, complete the following steps:
+To set up server key/APNS server certificate in the Campaign Standard instance, complete the following steps:
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

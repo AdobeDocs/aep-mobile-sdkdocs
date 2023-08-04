@@ -2,38 +2,32 @@
 
 The following document provides a list of resources for you to better understand how to use Mobile SDK.
 
-## Upgrading to Experience Platform SDKs
+## Aligning major SDK versions
 
-You can upgrade to the Experience Platform SDKs by following the instructions within this section of documentation.
+Learn how the Adobe Experience Platform Mobile SDKs are going to [align major version releases](major-version-alignment.md) moving forward, and find answers to the frequently asked questions around this topic.
 
-To learn more about upgrading your SDKs, please read the the [upgrading to Experience Platform SDKs overview](../upgrade-platform-sdks/index.md).
+## Managing Gradle dependencies
 
-## Troubleshooting guides
+To learn how to manage Gradle dependencies of Mobile SDKs, please read the guide on [managing Gradle dependencies](manage-gradle-dependencies.md).
 
-To learn how to troubleshoot various implementation issues with Mobile SDK, please read the [troubleshooting guides overview](../troubleshooting-guides/index.md)
+## Managing SPM dependencies
+
+To learn how to manage SPM dependencies of Mobile SDKs, please read the guide on [managing SPM dependencies](manage-spm-dependencies.md).
+
+## Privacy and GDPR
+
+To learn how to manage consent and privacy obligations with Mobile SDK, please read the guide on [privacy and GDPR](privacy-and-gdpr.md).
 
 ## Frequently asked questions
 
-To see the most frequently asked questions about Mobile SDK, please read the document on [frequently asked questions](../faq.md).
+To find answers to the most frequently asked questions about Mobile SDK, please read the document on [frequently asked questions](faq.md).
+
+## Adobe Mobile Library (v4) end-of-support
+
+You can learn about upgrading from Adobe Mobile Library (v4) to the Experience Platform SDKs by following the instructions in the [upgrading to Experience Platform SDKs overview](./upgrade-platform-sdks/index.md).
 
 ## Migrating to Swift
 
 You can migrate your Objective-C-based version of the SDK to the Swift-based version of the SDK.
 
 To learn how to migrate your Mobile SDK implementation to Swift, please read the guide on [migrating to Swift](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-swift/).
-
-## Managing Gradle dependencies
-
-To learn how to manage Gradle dependencies of Mobile SDKs, please read the guide on [managing Gradle dependencies](../manage-gradle-dependencies.md).
-
-## Managing SPM dependencies
-
-To learn how to manage SPM dependencies of Mobile SDKs, please read the guide on [managing SPM dependencies](../manage-spm-dependencies.md).
-
-## Privacy and GDPR
-
-To learn how to manage consent and privacy obligations with Mobile SDK, please read the guide on [privacy and GDPR](../privacy-and-gdpr.md).
-
-## Building mobile extensions
-
-To learn how to extend Mobile SDK to support customer-specific features, and allow for the greatest flexibility, please read the guide on [building mobile extensions](../building-mobile-extensions.md).

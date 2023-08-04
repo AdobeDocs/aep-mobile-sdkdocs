@@ -388,7 +388,7 @@ Identity.removeIdentity(item: IdentityItem(id: "user@example.com"), withNamespac
 **Syntax**
 
 ```objectivec
-+ (void) removeIdentityItem:(AEPIdentityItem * _Nonnull) item 
++ (void) removeIdentityItem:(AEPIdentityItem * _Nonnull) item
                              withNamespace: (NSString * _Nonnull) namespace
 ```
 

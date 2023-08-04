@@ -1,12 +1,12 @@
 import Tabs from './tabs/lifecycle.md'
 
-# Manual Lifecycle Implementation
+# Manual Lifecycle implementation
 
 <InlineAlert variant="info" slots="text"/>
 
-In version 4 of the iOS SDK, this implementation was completed automatically.<br/>When upgrading to the Experience Platform SDK, you must add code to continue collecting Lifecycle metrics.
+In Adobe Mobile Library (v4) iOS SDK, this implementation was completed automatically.<br/>When upgrading to the Experience Platform SDK, you must add code to continue collecting Lifecycle metrics.
 
-## Importing and registering the Lifecycle extension
+## Import and register the Lifecycle extension
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -32,7 +32,7 @@ iOS
 
 <Tabs query="platform=ios&task=collect"/>
 
-## Pause Lifecycle Collection
+## Pause Lifecycle collection
 
 You should pause Lifecycle collection when the user stops using your app. The best time to do this is usually when your app has entered the background.
 
