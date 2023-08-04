@@ -2,7 +2,7 @@
 
 The SDK uses the cache and shared preferences at these locations:
 
-```
+```bash
 data/data/your.app.package/cache
 data/data/your.app.package/shared_prefs
 ```

@@ -84,7 +84,6 @@ iOS
 
 <Tabs query="platform=ios&task=api-changes-aep"/>
 
-
 ## Privacy status changes in the Experience Platform SDK
 
 The privacy APIs `setPrivacyStatus` and `getPrivacyStatus` can be found in the Mobile Core. Similar to the v4 SDK, the Analytics extension will follow these behaviors depending on the privacy status set:

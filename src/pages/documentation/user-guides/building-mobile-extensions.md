@@ -20,9 +20,9 @@ Before you build an extension, complete the following tasks:
 
   To determine your goals, think about the following questions:
 
-  * Do you need access to data that is not already exposed via the Adobe Experience Platform SDKs?    
-  * Do you need to be notified when messages will be sent, or data is being collected by the Adobe Experience Platform SDKs?   
-  * Do you need to add data to or modify data for outgoing messages?    
+  * Do you need access to data that is not already exposed via the Adobe Experience Platform SDKs?
+  * Do you need to be notified when messages will be sent, or data is being collected by the Adobe Experience Platform SDKs?
+  * Do you need to add data to or modify data for outgoing messages?
   * Do you need to expose data to other extensions or to rules processing?
 
   If your answer to any of these questions is **yes**, build the extension.
@@ -50,6 +50,7 @@ You should use ASCII characters, even if your company name contains non-ASCII ch
 ## Get started
 
 For help on building your own extension, please see:
+
 * [Building iOS Extension](https://github.com/adobe/aepsdk-core-ios/blob/main/Documentation/EventHub/BuildingExtensions.md)
 * [Building Android Extension](https://github.com/adobe/aepsdk-core-android/blob/main/Documentation/EventHub/BuildingExtensions.md)
 * [Building Tags Extension](https://experienceleague.adobe.com/docs/experience-platform/tags/extension-dev/overview.html)
