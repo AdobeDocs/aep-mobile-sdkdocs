@@ -346,6 +346,10 @@ module.exports = {
                         path: "documentation/places/api-reference.md"
                     },
                     {
+                        title: "Event forwarding to Adobe Experience Platform",
+                        path: "documentation/places/places-to-platform.md"
+                    },
+                    {
                         title: "Release notes",
                         path: "documentation/places/release-notes.md"
                     }
