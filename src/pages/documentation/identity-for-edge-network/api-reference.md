@@ -88,9 +88,9 @@ Identities with an empty _id_ or _namespace_ are not allowed and are ignored.
 
 Removing identities using a reserved namespace is not allowed using this API. The reserved namespaces are:
 
-- ECID
-- IDFA
-- GAID
+* ECID
+* IDFA
+* GAID
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -110,14 +110,14 @@ This is a destructive action, since once an ECID is removed it cannot be reused.
 
 Some example use cases for this API are:
 
-- During debugging, to see how new ECIDs (and other identifiers paired with it) behave with existing rules and metrics.
-- A last-resort reset for when an ECID should no longer be used.
+* During debugging, to see how new ECIDs (and other identifiers paired with it) behave with existing rules and metrics.
+* A last-resort reset for when an ECID should no longer be used.
 
 This API is **not** recommended for:
 
-- Resetting a user's consent and privacy settings; see [Privacy and GDPR](../privacy-and-gdpr.md).
-- Removing existing custom identifiers; use the [`removeIdentity`](#removeidentity) API instead.
-- Removing a previously synced advertising identifier after the advertising tracking settings were changed by the user; use the [`setAdvertisingIdentifier`](../mobile-core/identity/api-reference.md#setadvertisingidentifier) API instead.
+* Resetting a user's consent and privacy settings; see [Privacy and GDPR](../privacy-and-gdpr.md).
+* Removing existing custom identifiers; use the [`removeIdentity`](#removeidentity) API instead.
+* Removing a previously synced advertising identifier after the advertising tracking settings were changed by the user; use the [`setAdvertisingIdentifier`](../mobile-core/identity/api-reference.md#setadvertisingidentifier) API instead.
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -149,9 +149,9 @@ Identities with an empty _id_ or _namespace_ are not allowed and are ignored.
 
 Updating identities using a reserved namespace is not allowed using this API. The reserved namespaces are:
 
-- ECID
-- IDFA
-- GAID
+* ECID
+* IDFA
+* GAID
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -236,9 +236,9 @@ Defines the state an [Identity Item](#identityitem) is authenticated for.
 
 The possible authenticated states are:
 
-- Ambiguous - the state is ambiguous or not defined
-- Authenticated - the user is identified by a login or similar action
-- LoggedOut - the user was identified by a login action at a previous time, but is not logged in now
+* Ambiguous - the state is ambiguous or not defined
+* Authenticated - the user is identified by a login or similar action
+* LoggedOut - the user was identified by a login action at a previous time, but is not logged in now
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
