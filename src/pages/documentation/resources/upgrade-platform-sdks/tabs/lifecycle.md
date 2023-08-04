@@ -94,7 +94,7 @@ Setting the application is only necessary on activities that are entry points fo
 
 #### Swift
 
-Start Lifecycle data collection by calling `lifecycleStart` from the registration completion handler in your app's `application:didFinishLaunchingWithOptions:` delegate method.
+Start Lifecycle data collection by calling `lifecycleStart(additionalContextData:)` from the registration completion handler in your app's `application(_:didFinishLaunchingWithOptions:)` delegate method.
 
 If your iOS application supports background capabilities, your `application(_:didFinishLaunchingWithOptions:)` method might be called when iOS launches your app in the background. If you do not want background launches to count towards your lifecycle metrics, `lifecycleStart(additionalContextData:)` should only be called when the application state is not equal to `UIApplication.State.background`.
 
