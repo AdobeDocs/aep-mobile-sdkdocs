@@ -132,3 +132,17 @@ If you are currently using the ACP-prefixed Flutter libraries, please see [the g
 | [EdgeConsent](../consent-for-edge-network/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgeconsent.svg)](https://pub.dartlang.org/packages/flutter_aepedgeconsent) |
 | [Edge Bridge](../adobe-analytics/migrate-to-edge-network.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgebridge.svg)](https://pub.dartlang.org/packages/flutter_aepedgebridge) |
 | [UserProfile](../profile/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepuserprofile.svg)](https://pub.dartlang.org/packages/flutter_aepuserprofile) |
+
+## Roku
+
+<div style="height:30px; width:140px;">
+<a href="https://github.com/adobe/aepsdk-roku/releases">
+<img src="https://img.shields.io/github/v/release/yangyansong-adbe/aepsdk-roku?label=AEP%20Roku%20SDK&logo=github" alt="descriptive text"/>
+</a>
+</div>
+
+The Adobe Experience Platform SDK for Roku supports Roku OS 11.0+. The project is open sourced in GitHub. For more information, refer to the documentation below in the `aepsdk-roku` repository:
+
+- [Getting Started](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/getting-started.md)
+- [API Reference](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/api-reference.md)
+- [Sample App](https://github.com/adobe/aepsdk-roku/blob/main/sample/simple-videoplayer-channel/README.md)
