@@ -41,8 +41,8 @@ The following tables provide information about the differences between the new E
 | Push Messaging | Yes | Yes - [Mobile Services](https://developer.adobe.com/client-sdks/previous-versions/documentation/adobe-analytics-mobile-services/) extension (deprecated) |
 | In-app Messaging | Yes | Yes - [Mobile Services](https://developer.adobe.com/client-sdks/previous-versions/documentation/adobe-analytics-mobile-services/) extension (deprecated) |
 | Marketing/Acquisition Links | Yes | Yes - [Mobile Services](https://developer.adobe.com/client-sdks/previous-versions/documentation/adobe-analytics-mobile-services/) extension (deprecated)|
-| Geo location and beacon tracking | Yes | Yes - Use [Places extension](../../places/index.md) |
-| Geo points-of-interest management | Yes | Yes - Use [Places extension](../../places/index.md) |
+| Geo location and beacon tracking | Yes | Yes - [Places extension](../../places/index.md) |
+| Geo points-of-interest management | Yes | Yes - [Places extension](../../places/index.md) |
 
 ### Adobe Audience Manager
 

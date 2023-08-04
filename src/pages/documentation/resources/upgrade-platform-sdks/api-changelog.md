@@ -31,7 +31,7 @@ For more information, see the [Mobile Core API reference](../../mobile-core/api-
 | trackingClearCurrentBeacon | Deprecated |
 | registerAdobeDataCallback: | Deprecated |
 | lifetimeValue | Deprecated |
-| trackLifetimeValueIncrease:data: | |
+| trackLifetimeValueIncrease:data: | Deprecated |
 | trackTimedActionStart: | Deprecated |
 | trackTimedActionUpdate: | Deprecated |
 | trackTimedActionEnd: | Deprecated |

@@ -164,14 +164,16 @@ MobileCore.trackAction("linkClicked", new HashMap<String, String>() {{
 
 <Variant platform="ios" task="api-changes-aep" repeat="8"/>
 
-The Mobile SDKs have moved the `trackAction` and `trackState` APIs to the MobileCore extension. In addition, the context data dictionary has been changed from `<NSString, NSObject>` to `<NSString, NSString>`. The syntax is:
+The Mobile SDKs have moved the `trackAction` and `trackState` APIs to the MobileCore extension, and you may pass the context data values as String. The syntax is:
 
 ```objectivec
-+ (void) trackAction: (nullable NSString*) action data: (nullable NSDictionary<NSString*, NSString*>*) data;
+ @objc(trackAction:data:)
+ static func track(action: String?, data: [String: Any]?)
 ```
 
 ```objectivec
-+ (void) trackState: (nullable NSString*) action data: (nullable NSDictionary<NSString*, NSString*>*) data;
+ @objc(trackState:data:)
+ static func track(state: String?, data: [String: Any]?)
 ```
 
 The usage examples are:

@@ -37,7 +37,7 @@ import AEPCore
 import AEPLifecycle
 ```
 
-Register the Lifecycle extension along with the other extensions you use with the Mobile Core by adding the following in your app's `application:didFinishLaunchingWithOptions:` delegate method:
+Register the Lifecycle extension along with the other extensions you use with the Mobile Core by adding the following in your app's `application(_:didFinishLaunchingWithOptions:)` delegate method:
 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -96,7 +96,7 @@ Setting the application is only necessary on activities that are entry points fo
 
 Start Lifecycle data collection by calling `lifecycleStart` from the registration completion handler in your app's `application:didFinishLaunchingWithOptions:` delegate method.
 
-If your iOS application supports background capabilities, your `application:didFinishLaunchingWithOptions:` method might be called when iOS launches your app in the background. If you do not want background launches to count towards your lifecycle metrics, `lifecycleStart:` should only be called when the application state is not equal to `UIApplicationStateBackground`.
+If your iOS application supports background capabilities, your `application(_:didFinishLaunchingWithOptions:)` method might be called when iOS launches your app in the background. If you do not want background launches to count towards your lifecycle metrics, `lifecycleStart(additionalContextData:)` should only be called when the application state is not equal to `UIApplication.State.background`.
 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
