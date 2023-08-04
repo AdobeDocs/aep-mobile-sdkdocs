@@ -142,7 +142,7 @@ Android
 
 ### evaluateJavascript
 
-Evaluates the passed in `String` content containing javascript code using the `Message's` webview. `handleJavascriptMessage` must be called with a valid callback before calling `evaluateJavascript` as the body of the message passed from the javascript code execution will be returned in the `AdobeCallback` .
+Evaluates the passed in `String` content containing javascript code using the `Message's` webview. `handleJavascriptMessage` must be called with a valid callback before calling `evaluateJavascript` as the body of the message passed from the javascript code execution will be returned in the `AdobeCallback`.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
