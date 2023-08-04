@@ -10,7 +10,7 @@
 
 **Start using the BOM artifact for Android**<br/> The Adobe SDK BOM artifact enables managing all compatible versions of Adobe Experience Platform Android extensions by specifying a single BOM version. This is now the recommended way to manage Android SDKs. For the installation instructions, see the steps to [add dependencies to your project](https://developer.adobe.com/client-sdks/documentation/getting-started/get-the-sdk/#installation-instructions). The BOM project is open-sourced. For more information, please refer to the [README](https://github.com/adobe/aepsdk-commons/blob/main/android/aepsdk-bom/README.md) file located in the public repository.
 
-### Android BOM 
+### Android BOM
 
 <div style="height:20px; width:120px;"></div>
 
