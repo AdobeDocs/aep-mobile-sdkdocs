@@ -132,6 +132,10 @@ module.exports = {
                                     {
                                         title: "API reference",
                                         path: "documentation/mobile-core/identity/api-reference"
+                                    },
+                                    {
+                                        title: "Push identifier sync",
+                                        path: "documentation/mobile-core/identity/push-sync"
                                     }
                                 ]
                             },
@@ -208,6 +212,10 @@ module.exports = {
                                     {
                                         title: "API reference",
                                         path: "documentation/mobile-core/signal/api-reference"
+                                    },
+                                    {
+                                        title: "Signal and Rules Engine integration",
+                                        path: "documentation/mobile-core/signal/rules-engine-integration.md"
                                     }
                                 ]
                             },
@@ -346,6 +354,10 @@ module.exports = {
                         path: "documentation/places/api-reference.md"
                     },
                     {
+                        title: "Event forwarding to Adobe Experience Platform",
+                        path: "documentation/places/places-to-platform.md"
+                    },
+                    {
                         title: "Release notes",
                         path: "documentation/places/release-notes.md"
                     }
@@ -402,6 +414,10 @@ module.exports = {
                             {
                                 title: "Product variable",
                                 path: "/documentation/adobe-analytics/product-variable"
+                            },
+                            {
+                                title: "Tracking beacons",
+                                path: "/documentation/adobe-analytics/track-beacon"
                             },
                             {
                                 title: "Frequently asked questions",
@@ -514,6 +530,10 @@ module.exports = {
                                 path: "documentation/adobe-campaign-standard/event-reference"
                             },
                             {
+                                title: "Campaign push notifications",
+                                path: "documentation/adobe-campaign-standard/push-notifications"
+                            },
+                            {
                                 title: "Release notes",
                                 path: "documentation/adobe-campaign-standard/release-notes"
                             }
@@ -619,84 +639,67 @@ module.exports = {
                 pages: [
                     {
                         title: "Overview",
-                        path: "/documentation/resources"
+                        path: "documentation/resources"
                     },
                     {
                         title: "Aligning major SDK versions",
-                        path: "/documentation/resources/major-version-alignment"
-                    },
-                    {
-                        title: "Upgrade to the Experience Platform SDKs",
-                        path: "documentation/upgrade-platform-sdks",
-                        pages: [
-                            {
-                                title: "Overview",
-                                path: "documentation/upgrade-platform-sdks"
-                            },
-                            {
-                                title: "v4 SDK comparison",
-                                path: "documentation/upgrade-platform-sdks/comparison"
-                            },
-                            {
-                                title: "v4 API changelog",
-                                path: "documentation/upgrade-platform-sdks/api-changelog.md"
-                            },
-                            {
-                                title: "Manual Lifecycle implementation",
-                                path: "documentation/upgrade-platform-sdks/lifecycle"
-                            },
-                            {
-                                title: "Analytics migration",
-                                path: "documentation/upgrade-platform-sdks/analytics-comparison.md"
-                            }
-                        ]
-                    },
-                    {
-                        title: "Troubleshooting guides",
-                        path: "documentation/troubleshooting-guides",
-                        pages: [
-                            {
-                                title: "Overview",
-                                path: "documentation/troubleshooting-guides"
-                            },
-                            {
-                                title: "Push messaging",
-                                path: "documentation/troubleshooting-guides/push-messaging"
-                            },
-                            {
-                                title: "Campaign push notifications",
-                                path: "documentation/troubleshooting-guides/push-notifications"
-                            }
-                        ]
-                    },
-                    {
-                        title: "Frequently asked questions",
-                        path: "documentation/faq"
-                    },
-                    {
-                        title: "Privacy and GDPR",
-                        path: "documentation/privacy-and-gdpr"
+                        path: "documentation/resources/major-version-alignment"
                     },
                     {
                         title: "Manage Gradle dependencies",
-                        path: "documentation/manage-gradle-dependencies"
+                        path: "documentation/resources/manage-gradle-dependencies"
                     },
                     {
                         title: "Manage SPM dependencies",
-                        path: "documentation/manage-spm-dependencies"
+                        path: "documentation/resources/manage-spm-dependencies"
                     },
                     {
-                        title: "Version 4 Mobile SDKs end-of-support FAQ",
-                        path: "/documentation/v4-end-of-life-faq"
+                        title: "Privacy and GDPR",
+                        path: "documentation/resources/privacy-and-gdpr"
+                    },
+                    {
+                        title: "Frequently asked questions",
+                        path: "documentation/resources/faq"
+                    },
+                    {
+                        title: "ACP SDKs end-of-support",
+                        path: "/documentation/resources/acp-end-of-support"
+                    },
+                    {
+                        title: "Adobe Mobile Library (v4) end-of-support",
+                        path: "documentation/resources/upgrade-platform-sdks",
+                        pages: [
+                            {
+                                title: "Overview",
+                                path: "documentation/resources/upgrade-platform-sdks"
+                            },
+                            {
+                                title: "v4 SDK comparison",
+                                path: "documentation/resources/upgrade-platform-sdks/comparison"
+                            },
+                            {
+                                title: "v4 API changelog",
+                                path: "documentation/resources/upgrade-platform-sdks/api-changelog.md"
+                            },
+                            {
+                                title: "Manual Lifecycle implementation",
+                                path: "documentation/resources/upgrade-platform-sdks/lifecycle"
+                            },
+                            {
+                                title: "Analytics migration",
+                                path: "documentation/resources/upgrade-platform-sdks/analytics.md"
+                            },
+                            {
+                                title: "Frequently asked questions",
+                                path: "documentation/resources/upgrade-platform-sdks/v4-faq"
+                            }
+                        ]
                     },
                     {
                         title: "Adobe Experience Cloud & Apple's IDFA, Privacy announcement",
-                        path: "/documentation/privacy-announcement"
-                    },
-                    {
-                        title: "Building mobile extensions",
-                        path: "/documentation/building-mobile-extensions"
+                        path: "documentation/resources/privacy-announcement"
                     }
+
                 ]
             },
             {
@@ -738,16 +741,12 @@ module.exports = {
                         path: "documentation/user-guides/tags-data-elements"
                     },
                     {
-                        title: "Signal and rules engine integration",
-                        path: "documentation/user-guides/rules-engine-integration.md"
-                    },
-                    {
                         title: "iOS App Extensions",
                         path: "documentation/user-guides/app-extension"
                     },
                     {
-                        title: "Tracking beacons",
-                        path: "documentation/user-guides/track-beacon"
+                        title: "Building mobile extensions",
+                        path: "documentation/user-guides/building-mobile-extensions"
                     }
                 ]
             }
