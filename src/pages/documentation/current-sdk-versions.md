@@ -137,11 +137,11 @@ If you are currently using the ACP-prefixed Flutter libraries, please see [the g
 
 <div style="height:30px; width:140px;">
 <a href="https://github.com/adobe/aepsdk-roku/releases">
-<img src="https://img.shields.io/github/v/release/yangyansong-adbe/aepsdk-roku?label=AEP%20Roku%20SDK&logo=github" alt="descriptive text"/>
+<img src="https://img.shields.io/github/v/release/adobe/aepsdk-roku?label=AEP%20Roku%20SDK&logo=github" alt="descriptive text"/>
 </a>
 </div>
 
-The Adobe Experience Platform SDK for Roku supports Roku OS 11.0+. The project is open sourced in GitHub. For more information, refer to the documentation below in the `aepsdk-roku` repository:
+The Adobe Experience Platform SDK for Roku supports Roku OS 11.0 or later. The project is open sourced in GitHub. For more information, refer to the documentation below in the `aepsdk-roku` repository:
 
 - [Getting Started](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/getting-started.md)
 - [API Reference](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/api-reference.md)

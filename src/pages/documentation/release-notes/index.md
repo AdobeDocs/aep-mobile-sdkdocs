@@ -12,9 +12,9 @@ This is the first stable release of the AEP Roku SDK, which exposes APIs to help
 
 For more information, refer to the documentation below:
 
-- [Getting Started](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/getting-started.md)
-- [API Reference](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/api-reference.md)
-- [Sample App](https://github.com/adobe/aepsdk-roku/blob/main/sample/simple-videoplayer-channel/README.md)
+* [Getting Started](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/getting-started.md)
+* [API Reference](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/api-reference.md)
+* [Sample App](https://github.com/adobe/aepsdk-roku/blob/main/sample/simple-videoplayer-channel/README.md)
 
 ## July 26, 2023
 
