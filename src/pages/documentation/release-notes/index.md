@@ -12,11 +12,11 @@ This is the first stable release of the Roku SDK, which exposes APIs to help dev
 
 Features:
 
-* **Adobe Experience Edge Network Integration:** Seamlessly send data to the Adobe Experience Edge Network. Optionally include an Experience Edge response callback using the API for greater control over data interactions.
+* **Adobe Experience Edge Network integration:** Seamlessly send data to the Edge Network, and get greater control over data interactions by optionally registering a callback for Edge response handles.
 
-* **Automated ECID and Implementation Attachment:** Experience more efficient tracking and integration as ECID (Experience Cloud ID) and Implementation details are now automatically appended to every XDM Experience Event request.
+* **Automated ECID and implementation attachment:** Experience more efficient tracking and integration as ECID (Experience Cloud ID) and Implementation details are now automatically appended to every XDM Experience Event request.
 
-* **Custom Identity Synchronization:** Personalize user experiences effectively by syncing Custom Identities with each XDM Experience Event request. Unlock the potential of the Adobe Experience Edge Network while maintaining tailored interactions.
+* **Custom identity synchronization:** Personalize user experiences effectively by syncing Custom Identities with each XDM Experience Event request. Unlock the potential of the Edge Network while maintaining tailored interactions.
 
 For more information, refer to the documentation below:
 
