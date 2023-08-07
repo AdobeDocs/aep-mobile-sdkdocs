@@ -125,7 +125,7 @@ try {
 }
 ``` --->
 
-<Variant platform="android" api="extension-version" repeat="1"/>
+<Variant platform="android" api="extension-version" repeat="5"/>
 
 #### Java
 

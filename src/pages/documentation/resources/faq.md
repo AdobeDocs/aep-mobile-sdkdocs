@@ -48,7 +48,7 @@ If you delete a mobile property, you cannot undo this action!
 
 ### Where can I download the SDK?
 
-The Experience Platform SDK is available through [Cocoapods](https://cocoapods.org) and [Gradle](https://gradle.org/), and [Github](https://github.com/Adobe-Marketing-Cloud/acp-sdks/). For more information, please read the [get the SDK tutorial](./getting-started/get-the-sdk.md).
+The Experience Platform SDK is available through [Cocoapods](https://cocoapods.org) and [Gradle](https://gradle.org/), and [Github](https://github.com/Adobe-Marketing-Cloud/acp-sdks/). For more information, please read the [get the SDK tutorial](../getting-started/get-the-sdk.md).
 
 ### Can I use both the 4x SDK and the new Experience Platform SDK at the same time?
 
@@ -130,7 +130,7 @@ Add the following rule to your custom ProGuard rules file, typically labeled `pr
 Implementing push notification tracking and measurement with the SDK depends on the Experience Cloud solution being used.
 
 * For the Adobe Campaign Standard extension, please read the [Adobe Campaign standard push tracking tutorial](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-mobile/push-tracking.html).
-* For the Adobe Campaign Classic extension, please read the [Adobe Campaign Classic push notifications tracking tutorial](./adobe-campaign-classic/api-reference.md#tracknotification-api).
+* For the Adobe Campaign Classic extension, please read the [Adobe Campaign Classic push notifications tracking tutorial](../adobe-campaign-classic/api-reference.md#tracknotification-api).
 
 ## Migrating to Android Mobile Core 2.x and compatible extensions
 

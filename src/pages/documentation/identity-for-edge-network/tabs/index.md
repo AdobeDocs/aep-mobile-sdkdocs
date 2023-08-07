@@ -57,7 +57,7 @@ import AEPEdgeConsent
 @import AEPEdgeConsent;
 ```
 
-<Variant platform="android" task="register" repeat="2"/>
+<Variant platform="android" task="register" repeat="4"/>
 
 #### Java
 
