@@ -6,9 +6,9 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 ## Aug 7, 2023
 
-### AEP Roku SDK 1.0.0
+### Roku SDK 1.0.0
 
-This is the first stable release of the AEP Roku SDK, which exposes APIs to help developers to integrate the Adobe Experience Platform solutions with the Roku channel.
+This is the first stable release of the Roku SDK, which exposes APIs to help developers to integrate the Adobe Experience Platform solutions with the Roku channel.
 
 Features:
 
