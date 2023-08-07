@@ -10,6 +10,14 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 This is the first stable release of the AEP Roku SDK, which exposes APIs to help developers to integrate the Adobe Experience Platform solutions with the Roku channel.
 
+Features:
+
+* **Adobe Experience Edge Network Integration:** Seamlessly send data to the Adobe Experience Edge Network. Optionally include an Experience Edge response callback using the API for greater control over data interactions.
+
+* **Automated ECID and Implementation Attachment:** Experience more efficient tracking and integration as ECID (Experience Cloud ID) and Implementation details are now automatically appended to every XDM Experience Event request.
+
+* **Custom Identity Synchronization:** Personalize user experiences effectively by syncing Custom Identities with each XDM Experience Event request. Unlock the potential of the Adobe Experience Edge Network while maintaining tailored interactions.
+
 For more information, refer to the documentation below:
 
 * [Getting Started](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/getting-started.md)
