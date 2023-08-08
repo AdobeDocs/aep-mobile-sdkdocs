@@ -61,8 +61,8 @@ In addition to the remote configuration, you can also include a rules zip file i
 
 1. Download the rules zip file using the following URL: `https://assets.adobedtm.com/PASTE-ENVIRONMENT-ID-rules.zip` replacing `PASTE-ENVIRONMENT-ID` with your mobile property environment ID.
 2. Rename the zip file to "ADBMobileConfig-rules.zip" and place the it in the relevant location for your device:
-* iOS: Place the zip anywhere that it is accessible in your app bundle.
-* Android: Place the zip file in the assets folder.
+   * iOS: Place the zip anywhere that it is accessible in your app bundle.
+   * Android: Place the zip file in the assets folder.
 
 For more information about the technical details of the Rules Engine, please read the [technical details guide](./technical-details).
 
