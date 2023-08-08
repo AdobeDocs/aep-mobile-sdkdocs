@@ -4,6 +4,12 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## Aug 8, 2023
+
+### Android Core 2.3.1
+
+* Fixed an issue with displaying Android local notifications.
+
 ## Aug 7, 2023
 
 ### Roku SDK 1.0.0
