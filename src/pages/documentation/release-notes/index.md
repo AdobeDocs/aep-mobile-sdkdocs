@@ -8,7 +8,7 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 ### Android Core 2.3.1
 
-* Fixed an issue with displaying Android local notifications.
+* Fixed an issue with displaying local notifications.
 
 ## Aug 7, 2023
 

@@ -4,7 +4,7 @@
 
 ### Android Core 2.3.1
 
-* Fixed an issue with displaying Android local notifications.
+* Fixed an issue with displaying local notifications.
 
 ## July 26, 2023
 
