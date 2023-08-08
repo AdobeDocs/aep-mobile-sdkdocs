@@ -92,7 +92,7 @@ Use the knowledge from Assignment 1 and connect to an Assurance Session to verif
 
 ### Override the default dataset
 
-1. Send the Experience Event using the Adobe Experience Platform Edge extension and specify the dataset identifier for "Product Reviews". 
+1. Send the Experience Event using the Adobe Experience Platform Edge extension and specify the dataset identifier for "Product Reviews".
    * Copy the `<DatasetIdentifier>` from the "Product Reviews" dataset in Platform and replace it in the sample app implementation where indicated below.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>

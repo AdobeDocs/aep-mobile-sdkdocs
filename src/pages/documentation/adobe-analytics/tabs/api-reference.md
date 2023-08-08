@@ -234,7 +234,6 @@ Analytics.getTrackingIdentifier(object: AdobeCallbackWithError<String> {
 
 Please see the [getTrackingIdentifierWithCompletionHandler](#gettrackingidentifierwithcompletionhandler) section for using this API call.
 
-
 <Variant platform="ios" api="get-tracking-identifier-with-completion-handler" repeat="10"/>
 
 #### Swift
@@ -262,6 +261,7 @@ Analytics.getTrackingIdentifier { (trackingId, error) in
 ```
 
 **Example**
+
 ```objectivec
 AEPMobileAnalytics getTrackingIdentifier:^(NSString * _Nullable trackingIdentifier, NSError * _Nullable error) {
    // Handle the error (if non-nil) or use the trackingIdentifier value

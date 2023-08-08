@@ -19,11 +19,11 @@ public class MyApp extends Application {​
         MobileCore.setApplication(this);
 
         MobileCore.registerExtensions(Arrays.asList(
-						Lifecycle.EXTENSION,
+      Lifecycle.EXTENSION,
             ...
-				), value -> {
-    			// registration completion handler
-    		});
+    ), value -> {
+       // registration completion handler
+      });
     }
 }
 ```

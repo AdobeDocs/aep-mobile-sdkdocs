@@ -197,4 +197,3 @@ Shared state for this module is updated when the IDs are set or reset from publi
 | :--- | :--- | :--- |
 | `tntid` | String | This is the primary identifier in Target for a user and is also known as PCID or mboxPCID. The `tntId` is not returned in the Target API response when a `thirdPartyId` or `experienceCloudVisitorId` is provided in the request. |
 | `thirdpartyid` | String | Client-provided visitor ID for Target. |
-

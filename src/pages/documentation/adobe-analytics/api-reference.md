@@ -41,7 +41,7 @@ iOS
 
 <Tabs query="platform=ios&api=extension-version"/>
 
-## getQueueSize 
+## getQueueSize
 
 Retrieves the total number of Analytics hits in the tracking queue.
 

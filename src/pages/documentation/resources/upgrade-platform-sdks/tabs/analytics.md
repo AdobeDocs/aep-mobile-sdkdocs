@@ -43,12 +43,12 @@ public void onCreate(Bundle savedInstanceState) {
   MobileCore.setApplication(getApplication());
 
   MobileCore.registerExtensions(Arrays.asList(
-					Analytics.EXTENSION,
-					Identity.EXTENSION
-				), value -> {
-			// add your Environment file ID from Environments tab in Data Collection tags.
-			MobileCore.configureWithAppID("your-environment-file-id");
-	});
+     Analytics.EXTENSION,
+     Identity.EXTENSION
+    ), value -> {
+   // add your Environment file ID from Environments tab in Data Collection tags.
+   MobileCore.configureWithAppID("your-environment-file-id");
+ });
 }
 ```
 

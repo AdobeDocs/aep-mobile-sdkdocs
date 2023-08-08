@@ -91,6 +91,4 @@ Xamarin
 
 <Tabs query="platform=xamarin&task=metrics"/> -->
 
-
 For more information, see the documentation on [Lifecycle metrics](../mobile-core/lifecycle/index.md).
-

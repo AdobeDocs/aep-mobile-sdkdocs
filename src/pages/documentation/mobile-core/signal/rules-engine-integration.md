@@ -37,9 +37,9 @@ The following example shows how to use the data that is passed to the MobileCore
 
   // make sure you register the Signal extension along with other extensions you are using
   MobileCore.registerExtensions(Arrays.asList(
-  				Signal.EXTENSION, ...
-  		), value -> {
-  	// registration completion handler
+      Signal.EXTENSION, ...
+    ), value -> {
+   // registration completion handler
   });
   ...
 

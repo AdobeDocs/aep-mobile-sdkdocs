@@ -6,7 +6,7 @@ You can execute JavaScript in an in-app message from native code by completing t
 
 - [Implement and assign a `MessagingDelegate`](#implement-and-assign-a-messagingdelegate)
 - [Obtain a reference to the web view](#obtain-a-reference-to-the-web-view)
-- [Call the JavaScript method](#call-the-JavaScript-method)
+- [Call the JavaScript method](#call-the-javascript-method)
 
 ## Implement and assign a `MessagingDelegate`
 
