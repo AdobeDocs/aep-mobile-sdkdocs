@@ -193,7 +193,7 @@ Some example use cases for this API are:
 
 This API is **not** recommended for:
 
-- Resetting a user's privacy settings; see [Privacy and GDPR](../../privacy-and-gdpr.md).
+- Resetting a user's privacy settings; see [Privacy and GDPR](../../resources/privacy-and-gdpr.md).
 - Removing existing custom identifiers; use the [`syncIdentifier`](#syncidentifier) API instead.
 - Removing a previously synced advertising identifier after the advertising tracking settings were changed by the user; use the [`setAdvertisingIdentifier`](#setadvertisingidentifier) API instead.
 

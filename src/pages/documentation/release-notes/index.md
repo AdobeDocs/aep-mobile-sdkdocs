@@ -4,6 +4,32 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## Aug 8, 2023
+
+### Android Core 2.3.1
+
+* Fixed an issue with displaying local notifications.
+
+## Aug 7, 2023
+
+### Roku SDK 1.0.0
+
+This is the first stable release of the Roku SDK, which exposes APIs to help developers to integrate the Adobe Experience Platform solutions with the Roku channel.
+
+Features:
+
+* **Adobe Experience Platform Edge Network integration:** Seamlessly send data to the Edge Network, and get greater control over data interactions by optionally registering a callback for Edge response handles.
+
+* **Automated ECID and ImplementationDetails attachment:** Experience more efficient tracking and integration as ECID (Experience Cloud ID) and Implementation details are now automatically appended to every XDM Experience Event request.
+
+* **Custom identity synchronization:** Personalize user experiences effectively by syncing Custom Identities with each XDM Experience Event request. Unlock the potential of the Edge Network while maintaining tailored interactions.
+
+For more information, refer to the documentation below:
+
+* [Getting Started](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/getting-started.md)
+* [API Reference](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/api-reference.md)
+* [Sample App](https://github.com/adobe/aepsdk-roku/blob/main/sample/simple-videoplayer-channel/README.md)
+
 ## July 26, 2023
 
 ### Android BOM 2.1.0
