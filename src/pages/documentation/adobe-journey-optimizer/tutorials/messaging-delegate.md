@@ -68,12 +68,12 @@ iOS
 
 The test apps in this repository demonstrate using a `MessagingDelegate`:
 
-- [Swift](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoApp)
-- [Objective-C](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoAppObjC)
-- [Java](https://github.com/adobe/aepsdk-messaging-android/tree/main/code/app)
+* [Swift](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoApp)
+* [Objective-C](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoAppObjC)
+* [Java](https://github.com/adobe/aepsdk-messaging-android/tree/main/code/app)
 
 #### Further reading
 
-- [More information on how to use the Message object](../public-classes.md)
-- [Call native code from the JavaScript of an in-app message](./native-from-javascript.md)
-- [Execute JavaScript code in an in-app message from native code](./javascript-from-native.md)
+* [More information on how to use the Message object](../public-classes.md)
+* [Call native code from the JavaScript of an in-app message](./native-from-javascript.md)
+* [Execute JavaScript code in an in-app message from native code](./javascript-from-native.md)
