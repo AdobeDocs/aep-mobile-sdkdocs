@@ -4,7 +4,7 @@
 
 ### iOS Places 4.1.0 and Android Places 2.1.0
 
-* Added support for forwarding location entry and exit events to Adobe Experience Platform. For more information, refer to the [Places Service event forwarding to Adobe Experience Platform](/places/places-to-platform.md) guide.
+* Added support for forwarding location entry and exit events to Adobe Experience Platform. For more information, refer to the [Places Service event forwarding to Adobe Experience Platform](places-to-platform.md) guide.
 
 ## June 6, 2023
 
