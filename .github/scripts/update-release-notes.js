@@ -1,6 +1,14 @@
 var https = require('https');
 const fs = require("fs");
 
+// process.argv.forEach(function (val, index, array) {
+//     console.error(index + ': ' + val);
+//   });
+
+const token = process.argv[2];
+
+console.error(`token = ${token}`)
+
 function updateCoreReleaseNotes() {
     // options for GET
 var optionsget = {
@@ -137,7 +145,7 @@ function fetchReleaseNotes(owner,repo, tag, callback) {
             'Accept': 'application/vnd.github+json',
             'User-Agent': 'server-side',
             'X-GitHub-Api-Version': '2022-11-28',
-            'Authorization': 'Bearer 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',
+            'Authorization': `Bearer ${token}`,
           }
     };
     // do the GET request
