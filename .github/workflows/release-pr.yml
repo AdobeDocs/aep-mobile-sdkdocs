@@ -1,4 +1,4 @@
-name: BOM Update Dependencies
+name: Update release notes
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
@@ -21,7 +21,7 @@ jobs:
         with:
           ref: main
       - name: Update releases notes (for core)
-        run: node .github/scripts/update-release-notes.js
+        run: node .github/scripts/update-release-notes.js ${{ secrets.GITHUB_TOKEN }}
         
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4.2.3
