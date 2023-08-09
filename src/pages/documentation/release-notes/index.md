@@ -8,11 +8,7 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 ### iOS Places 4.1.0 and Android Places 2.1.0
 
-* Support for forwarding location entry and exit events to Adobe Experience Platform.
-
-For more information, refer to the documentation below:
-
-* [Places Service event forwarding to Adobe Experience Platform](/places/places-to-platform.md)
+* Added support for forwarding location entry and exit events to Adobe Experience Platform. For more information, refer to the [Places Service event forwarding to Adobe Experience Platform](/places/places-to-platform.md) guide.
 
 ### Android Core 2.3.1
 
