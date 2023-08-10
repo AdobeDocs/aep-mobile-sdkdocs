@@ -6,7 +6,7 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 ## Aug 9, 2023
 
-### Android BOM  2.2.0
+### Android BOM 2.2.0
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
