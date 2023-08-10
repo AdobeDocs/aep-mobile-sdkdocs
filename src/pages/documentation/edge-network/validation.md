@@ -20,5 +20,5 @@ While the log messages can be quite helpful for an application developer, inspec
 
 Inspect and validate the Experience events using the Event Transactions view in Assurance:
 
-1. In the Assurance UI, from the left navigation menu, select **Event Transactions**. If you don't see this option, select **Configure**, then select **Event Transactions** and **Save**.
+1. In the Assurance UI, from the left navigation menu, select **Event Transactions**. If you don't see this option, select **Configure** in the bottom left of the window, add the **Event Transactions**, and select **Save**.
 2. Follow the link to get familiar with the debugging options in the [Event Transactions view](https://experienceleague.adobe.com/docs/experience-platform/assurance/view/event-transactions.html).
