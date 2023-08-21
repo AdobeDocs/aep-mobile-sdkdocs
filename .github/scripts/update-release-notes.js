@@ -91,13 +91,8 @@ var reqGet = https.request(optionsget, function(res) {
                         const month = date.getMonth()
                         const day = date.getDate()
                         const year = date.getFullYear()
-                        const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
-                        const shortMonth = monthNames[month]
-                        //## Aug 8, 2023
-                        console.error(`## ${shortMonth} ${day}, ${year}`);
-                        //### Android Core 2.3.1
-                        console.error(`### Android BOM  ${version}`);
-                        console.error(releaseNotes)
+                        const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October","November","December"]
+                        const fullMonth = monthNames[month]
 
                         const releaseMdPath = "./src/pages/documentation/release-notes/index.md";
 
@@ -112,7 +107,7 @@ var reqGet = https.request(optionsget, function(res) {
                             console.error("already updated")
                             return
                         }
-                        contentArray.splice(releaseNotesHeaderIndex + 1,0,"",`## ${shortMonth} ${day}, ${year}`,"",`### Android BOM  ${version}`, "",updateBOMReleaseNotesForAdobeIO(releaseNotes));
+                        contentArray.splice(releaseNotesHeaderIndex + 1,0,"",`## ${fullMonth} ${day}, ${year}`,"",`### Android BOM  ${version}`, "",updateBOMReleaseNotesForAdobeIO(releaseNotes));
                         fs.writeFile(releaseMdPath, contentArray.join("\n"), function (err) {
                             if (err) return console.log(err);
                           });

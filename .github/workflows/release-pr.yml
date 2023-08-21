@@ -23,7 +23,7 @@ jobs:
           
       - name: Check existing PRs
         run: |
-          if gh pr list --repo https://github.com/yangyansong-adbe/aep-mobile-sdkdocs --json title | grep 'Updating release notes for BOM'; then
+          if gh pr list --repo https://github.com/AdobeDocs/aep-mobile-sdkdocs --json title | grep 'Updating release notes for BOM'; then
             gh run cancel ${{ github.run_id }}
             gh run watch ${{ github.run_id }}
           else
