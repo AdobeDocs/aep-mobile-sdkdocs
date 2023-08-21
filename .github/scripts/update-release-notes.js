@@ -95,7 +95,7 @@ var reqGet = https.request(optionsget, function(res) {
                         const shortMonth = monthNames[month]
                         //## Aug 8, 2023
                         console.error(`## ${shortMonth} ${day}, ${year}`);
-                        //### Android Core 2.3.1
+                        //### Android BOM 2.3.1
                         console.error(`### Android BOM  ${version}`);
                         console.error(releaseNotes)
 
