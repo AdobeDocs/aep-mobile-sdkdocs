@@ -21,18 +21,10 @@ if(token == undefined) {
 }
 
 function isEarlierThan24Hours(timestampInMilliseconds) {
-    // Convert the timestamp in milliseconds to a Date object.
     const timestamp = new Date(timestampInMilliseconds);
-  
-    // Get the current time.
     const now = new Date();
-  
-    // Check if the timestamp is earlier than the current time.
     return timestamp < now - (24 * 60 * 60 * 1000);
   }
-
-  // gh release view 2.3.1-core --repo adobe/aepsdk-core-android --json body
-
 
 function fetchReleaseNotes(owner,repo, tag, callback) {
     var optionsget = {
@@ -47,7 +39,6 @@ function fetchReleaseNotes(owner,repo, tag, callback) {
             'Authorization': `Bearer ${token}`,
           }
     };
-    // do the GET request
     var reqGet = https.request(optionsget, function(res) {
         // console.log("statusCode: ", res.statusCode);
         var data = [];
@@ -151,7 +142,6 @@ function updateBOMReleaseNotesForAdobeIO(releaseNotesString) {
     releaseNotesForAdobeIO.push("<AccordionItem header='Expand'>")
     releaseNotesForAdobeIO.push("")
     for(line in releaseNotesAsArray) {
-        // console.error(releaseNotesAsArray[line])
         if (releaseNotesAsArray[line].trim().startsWith("|")) {
             releaseNotesForAdobeIO.push(releaseNotesAsArray[line])
         }
