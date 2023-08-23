@@ -76,4 +76,3 @@ Android
 iOS
 
 <Tabs query="platform=ios&task=implement-assurance"/>
-

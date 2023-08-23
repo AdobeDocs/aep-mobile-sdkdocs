@@ -30,7 +30,6 @@ iOS
 
 <Tabs query="platform=ios&api=handle-notification-response"/>
 
-
 ## registerExtension
 
 <InlineAlert variant="warning" slots="text"/>
@@ -79,10 +78,9 @@ iOS
 
 <Tabs query="platform=ios&api=set-push-identifier"/>
 
+## addPushTrackingDetails
 
-## addPushTrackingDetails 
-
-The addPushTrackingDetails API is used to update a pending intent with important information, such as messageId and Customer Journey information. 
+The addPushTrackingDetails API is used to update a pending intent with important information, such as messageId and Customer Journey information.
 
 <InlineAlert variant="help" slots="text"/>
 
@@ -98,7 +96,7 @@ Android
 
 ### MessagingPushPayload
 
-`MessagePushPayload` is a helper class for extracting the data payload attributes from `RemoteMessage`, which are used while creating the push notification. 
+`MessagePushPayload` is a helper class for extracting the data payload attributes from `RemoteMessage`, which are used while creating the push notification.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 

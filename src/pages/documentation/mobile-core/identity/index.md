@@ -12,12 +12,12 @@ To get started with Identity, complete the following steps:
 
 1. Add the **Identity** extension to your app.
 2. Implement the SDK APIs to complete the following tasks:
-   - Update customer IDs.
-   - Append Adobe visitor data to a URL string.
-   - Return customer IDs.
-   - Retrieve Experience Cloud IDs.
-   - Set advertising IDs.
-   - Set the device notification for push notifications.
+   * Update customer IDs.
+   * Append Adobe visitor data to a URL string.
+   * Return customer IDs.
+   * Retrieve Experience Cloud IDs.
+   * Set advertising IDs.
+   * Set the device notification for push notifications.
 
 ## Add the Identity extension to your app
 

@@ -217,17 +217,17 @@ For more information, refer to the documentation below:
 
 The following React Native libraries have been upgraded to use the version 4 of the Adobe Experience Platform Mobile SDK for iOS. Starting with this release, all React Native libraries that share the same major version are compatible with each other.
 
- * [@adobe/react-native-aepcore:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepcore/v/5.0.0)
- * [@adobe/react-native-aepassurance:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepassurance/v/5.0.0)
- * [@adobe/react-native-aepuserprofile:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepuserprofile/v/5.0.0)
- * [@adobe/react-native-aepedge:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedge/v/5.0.0)
- * [@adobe/react-native-aepedgebridge:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedgebridge/v/5.0.0)
- * [@adobe/react-native-aepedgeconsent:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedgeconsent/v/5.0.0)
- * [@adobe/react-native-aepedgeidentity:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedgeidentity/v/5.0.0)
- * [@adobe/react-native-aepoptimize:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepoptimize/v/5.0.0)
- * [@adobe/react-native-aepplaces:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepplaces/v/5.0.0)
- * [@adobe/react-native-aeptarget:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aeptarget/v/5.0.0)
- * [@adobe/react-native-aepcampaignclassic:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepcampaignclassic/v/5.0.0)
+* [@adobe/react-native-aepcore:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepcore/v/5.0.0)
+* [@adobe/react-native-aepassurance:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepassurance/v/5.0.0)
+* [@adobe/react-native-aepuserprofile:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepuserprofile/v/5.0.0)
+* [@adobe/react-native-aepedge:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedge/v/5.0.0)
+* [@adobe/react-native-aepedgebridge:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedgebridge/v/5.0.0)
+* [@adobe/react-native-aepedgeconsent:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedgeconsent/v/5.0.0)
+* [@adobe/react-native-aepedgeidentity:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedgeidentity/v/5.0.0)
+* [@adobe/react-native-aepoptimize:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepoptimize/v/5.0.0)
+* [@adobe/react-native-aepplaces:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepplaces/v/5.0.0)
+* [@adobe/react-native-aeptarget:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aeptarget/v/5.0.0)
+* [@adobe/react-native-aepcampaignclassic:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepcampaignclassic/v/5.0.0)
 
 ## June 19, 2023
 
@@ -1226,12 +1226,12 @@ With this release, the extension provides APIs that you can use to:
 
 The following AEP SDK React Native plugins have been published:
 
- * @adobe/react-native-aepcore@1.0.0
- * @adobe/react-native-aepuserprofile@1.0.0
- * @adobe/react-native-aepassurance@3.0.0
- * @adobe/react-native-aepedge@1.0.0
- * @adobe/react-native-aepedgeconsent@1.0.0
- * @adobe/react-native-aepedgeidentity@1.0.0
+* @adobe/react-native-aepcore@1.0.0
+* @adobe/react-native-aepuserprofile@1.0.0
+* @adobe/react-native-aepassurance@3.0.0
+* @adobe/react-native-aepedge@1.0.0
+* @adobe/react-native-aepedgeconsent@1.0.0
+* @adobe/react-native-aepedgeidentity@1.0.0
 
 For more details, see the documentation and release notes in the [aepsdk-react-native repository](https://github.com/adobe/aepsdk-react-native).
 

@@ -210,4 +210,3 @@ The following key-value pairs are used in this event:
 { "a.message.id": "12345678", "a.message.viewed": "1" }
 { "a.message.id": "12345678", "a.message.clicked": "1" }
 ```
-
