@@ -8,14 +8,14 @@ Follow the directions below to include the SDK into your mobile application.
 
 <InlineAlert variant="info" slots="text"/>
 
-For iOS and Android projects, the recommended approach for integrating the SDK is to use supported dependency and package managers as listed for each platform such as Maven (Android), and Cocoapods or Swift Package Manager (iOS). 
+For iOS and Android projects, the recommended approach for integrating the SDK is to use supported dependency and package managers as listed for each platform such as Maven (Android), and Cocoapods or Swift Package Manager (iOS).
 
 <InlineAlert variant="info" slots="text"/>
 
 The SDK can also be downloaded for iOS and Android projects following the listed methods: 1. For iOS, XCFramework for different SDK extensions are also available for download from corresponding GitHub repositories. For example, Mobile Core and related extensions XCFramework zip file can be found on the GitHub by selecting [Releases](https://github.com/adobe/aepsdk-core-ios/releases). 2. For Android, the aar is already available for download from Maven central. For example, Mobile Core extension aar file can be found under the corresponding [package](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/core/2.3.1/versions) by selecting [Browse](https://repo1.maven.org/maven2/com/adobe/marketing/mobile/core/2.3.1/).
 
 1. Select the tag property you created earlier in the Data Collection UI.
-2. In your tag property's details page, Select the **Environments** tab on the left nav. The **Environments** tab lists the different environments where you can publish, e.g. **Development**, **Staging** and **Production**.
+2. In your tag property's details page, Select the **Environments** tab on the left nav. The **Environments** tab lists the different environments where you can publish, e.g. **Development**, **Staging**, and **Production**.
 3. Select the install package icon (under **INSTALL** column) for the appropriate environment row. You should see a dialog box titled **Mobile Install Instructions**.
 4. On the open dialog box, select the appropriate platform tab **Android** or **iOS**.
 5. Copy the necessary dependencies and initialization code from the dialog box to your mobile application project.
