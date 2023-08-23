@@ -6,8 +6,8 @@ Are you currently using the Adobe Analytics mobile extension and considering a m
 
 This guide outlines the available options for migrating to Edge Network and Analytics service:
 
-- Implement the Edge Network extension using the `Edge.sendEvent` API.
-- Implement the Edge Bridge extension using the `MobileCore.trackAction` and `MobileCore.trackState` APIs.
+* Implement the Edge Network extension using the `Edge.sendEvent` API.
+* Implement the Edge Bridge extension using the `MobileCore.trackAction` and `MobileCore.trackState` APIs.
 
 The **Edge Network extension** and its `sendEvent` API is the recommended implementation path for sending data to Analytics through Edge Network. It sends Experience Data Model (XDM) formatted data directly to Edge Network, which is well understood by Experience Platform and upstream services. That means the same XDM events can be used in Analytics and other powerful solutions within Experience Platform, such as Journey Optimizer, Journey Orchestration, and Server-Side Forwarding.
 
@@ -52,15 +52,15 @@ Other foundational extensions include the [Consent for Edge Network extension](.
 
 To learn about the end to end Edge Network extension implementation process, follow the tutorials below:
 
-- [iOS tutorial](https://github.com/adobe/aepsdk-edge-ios/tree/main/Documentation/Tutorials)
-- [Android tutorial](https://github.com/adobe/aepsdk-edge-android/tree/main/Documentation/Tutorials)
+* [iOS tutorial](https://github.com/adobe/aepsdk-edge-ios/tree/main/Documentation/Tutorials)
+* [Android tutorial](https://github.com/adobe/aepsdk-edge-android/tree/main/Documentation/Tutorials)
 
 ### Implement the Edge Bridge extension
 
 To learn about the end to end Edge Bridge extension implementation process, follow the tutorials below:
 
-- [iOS tutorial](https://github.com/adobe/aepsdk-edgebridge-ios/tree/main/Documentation/tutorials)  
-- [Android tutorial](https://github.com/adobe/aepsdk-edgebridge-android/tree/main/Documentation/tutorials)
+* [iOS tutorial](https://github.com/adobe/aepsdk-edgebridge-ios/tree/main/Documentation/tutorials)  
+* [Android tutorial](https://github.com/adobe/aepsdk-edgebridge-android/tree/main/Documentation/tutorials)
   
 ## Other migration considerations
 
