@@ -226,4 +226,3 @@ To update SDK configuration programmatically, use the following information to c
 | `__stage__campaign.server` | No | Sets the endpoint URL for the staging environment in the Adobe Campaign Standard instance. | String |
 | `campaign.registrationDelay` | No | Sets the number of days to delay the sending of the next Adobe Campaign Standard registration request. | Integer |
 | `campaign.registrationPaused` | No | Sets the Adobe Campaign Standard registration request paused status. | Boolean |
-

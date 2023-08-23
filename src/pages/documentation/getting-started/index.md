@@ -37,4 +37,3 @@ The following information outlines the steps you'll need to follow to get starte
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
 * [What is Experience Data Model (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html)
 * [How to build a schema?](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#schema)
-

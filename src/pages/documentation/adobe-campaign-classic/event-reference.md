@@ -136,4 +136,3 @@ The following key-value pair is used in this event:
     "registrationstatus": true
 }
 ```
-

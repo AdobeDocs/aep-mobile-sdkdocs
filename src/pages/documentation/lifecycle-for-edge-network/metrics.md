@@ -6,4 +6,3 @@ The metrics auto-collected by the Lifecycle extension to support Adobe Experienc
 * [Lifecycle Application Background metrics](../mobile-core/lifecycle/metrics.md#lifecycle-application-background-metrics)
 
 For full metric details, please read the [Lifecycle metrics reference](../mobile-core/lifecycle/metrics.md).
-

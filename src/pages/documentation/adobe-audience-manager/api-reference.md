@@ -34,7 +34,7 @@ iOS
 
 ## registerExtension
 
-This API registers an extension class that was derived from with a unique name. 
+This API registers an extension class that was derived from with a unique name.
 
 <InlineAlert variant="warning" slots="text"/>
 

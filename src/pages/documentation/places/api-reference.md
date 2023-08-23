@@ -80,7 +80,7 @@ iOS
 
 <Tabs query="platform=ios&api=get-nearby-points-of-interest"/>
 
-## processGeofence 
+## processGeofence
 
 When a device crosses one of your app’s pre-defined Places Service region boundaries, the region and event type are passed to the SDK for processing.
 

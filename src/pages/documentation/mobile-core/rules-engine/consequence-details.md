@@ -80,4 +80,3 @@ This rule is currently handled by the [Mobile Core](../index.md) extension.
 | Friendly name | Key | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | Event data | `eventdata` | object | Yes | Dictionary of pairs to overlay on the triggering event's EventData. For more information, see the [attach data tutorial](../../user-guides/attach-data.md). |
-

@@ -435,7 +435,7 @@ public class DecisionScope {
      */
     public String getName() {...}
 }
-```    
+```
 
 <Variant platform="ios" api="decisionscope" repeat="2"/>
 
@@ -527,7 +527,7 @@ public class Proposition {
      */
     public Map<String, Object> generateReferenceXdm() {...}
 }
-```   
+```
 
 <Variant platform="ios" api="proposition" repeat="4"/>
 
