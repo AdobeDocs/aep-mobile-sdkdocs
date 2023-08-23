@@ -2,16 +2,16 @@
 
 This guide will walk you through steps necessary to ensure your app is properly configured for in-app messaging with Adobe Journey Optimizer (AJO).
 
-- [Complete prerequisites for your app](#prerequisites)
-- [Validate the correct extensions are registered](#validate-the-correct-extensions-are-registered)
-- [Validate the event requesting message definitions](#validate-the-event-requesting-message-definitions)
-- [Validate the event containing a message definition response](#validate-the-event-containing-a-message-definition-response)
+* [Complete prerequisites for your app](#prerequisites)
+* [Validate the correct extensions are registered](#validate-the-correct-extensions-are-registered)
+* [Validate the event requesting message definitions](#validate-the-event-requesting-message-definitions)
+* [Validate the event containing a message definition response](#validate-the-event-containing-a-message-definition-response)
 
 ## Prerequisites
 
-- Your app must have the **AEPMessaging** SDK extension installed. Integrate **AEPMessaging** by following the guide on [setting up AEPMessaging SDK](../setup.md).
+* Your app must have the **AEPMessaging** SDK extension installed. Integrate **AEPMessaging** by following the guide on [setting up AEPMessaging SDK](../setup.md).
 
-- This troubleshooting guide uses validation provided by the **AEPAssurance** extension and the **Adobe Assurance UI**. Integrate **AEPAssurance** in your application by following the [Adobe Experience Platform Assurance installation guide](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html).
+* This troubleshooting guide uses validation provided by the **AEPAssurance** extension and the **Adobe Assurance UI**. Integrate **AEPAssurance** in your application by following the [Adobe Experience Platform Assurance installation guide](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html).
 
 ## Validate the correct extensions are registered
 
@@ -102,12 +102,12 @@ If you have already installed the **In-App Messaging** plugin in your Assurance 
 
 Using the IAM plugin you can do the following for each message downloaded by the client:
 
-- In the **Rules** tab - view the rules defining when the message will be shown to the user
-- In the **History** tab - review a history of client events, including a comparison between the event's contents and the message's triggering criteria
-- In the **Message Preview** window - see a preview of the message's html
-- In the **Message Behavior** window - review message behavior, including its supported gestures and animations
-- In the **Message Behavior** window - review message size and positioning properties
-- Clicking the **Simulate on Device** button - trigger the currently selected message, causing it to be displayed on the connected client
+* In the **Rules** tab - view the rules defining when the message will be shown to the user
+* In the **History** tab - review a history of client events, including a comparison between the event's contents and the message's triggering criteria
+* In the **Message Preview** window - see a preview of the message's html
+* In the **Message Behavior** window - review message behavior, including its supported gestures and animations
+* In the **Message Behavior** window - review message size and positioning properties
+* Clicking the **Simulate on Device** button - trigger the currently selected message, causing it to be displayed on the connected client
 
     ![Inspecting a downloaded message](./assets/validate-messages/iam-simulation.png)
 
@@ -125,10 +125,10 @@ Using the IAM plugin you can do the following for each message downloaded by the
 
 **A:** If you open the EventData and the `detail` key has a value of "The Decisioning Package was not found.", this likely means the Messaging extension was unable to find the messages for your app. Check the below items to try and resolve the issue:
 
-- Make sure that messages have been published in the AJO Campaigns UI for your app surface
-- Make sure that the bundle identifier (iOS) or package name (Android) matches the value used for your app surface
-- Make sure that the **environment** and **sandbox** being used in AJO matches those being used to configure the app
-- Make sure that your Adobe organization is provisioned for Offers on Edge (this may require contacting your account manager)
+* Make sure that messages have been published in the AJO Campaigns UI for your app surface
+* Make sure that the bundle identifier (iOS) or package name (Android) matches the value used for your app surface
+* Make sure that the **environment** and **sandbox** being used in AJO matches those being used to configure the app
+* Make sure that your Adobe organization is provisioned for Offers on Edge (this may require contacting your account manager)
 
 ### Q: Why don't I see any messages in my `AEP Response Event Handle` event?
 

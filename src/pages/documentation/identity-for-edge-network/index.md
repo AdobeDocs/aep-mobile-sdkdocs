@@ -54,7 +54,7 @@ The Edge Identity extension compares the previously stored advertising identifie
 
 Ad tracking enabled - when the new value sent to the API is:
 
-- A valid UUID string (example: `"a127a99e-50be-4d87-bf6f-6ab9541c105b"`)
+* A valid UUID string (example: `"a127a99e-50be-4d87-bf6f-6ab9541c105b"`)
 
 Process:
 
@@ -63,9 +63,9 @@ Process:
 
 Ad tracking disabled - Given a valid ad ID already exists in the `IdentityMap`, and the new value sent to the API is:
 
-- `null`/`nil`
-- Empty string (`""`)
-- All-zeros string (`"00000000-0000-0000-0000-000000000000"`)  
+* `null`/`nil`
+* Empty string (`""`)
+* All-zeros string (`"00000000-0000-0000-0000-000000000000"`)  
 
 Process:
 
