@@ -4,8 +4,8 @@ You can use supported Adobe Experience Platform mobile extensions in your App Ex
 
 ## Prerequisites
 
-- This tutorial assumes a basic understanding of how to use the iOS AEP Mobile SDK in applications. For more details see [Getting Started](../getting-started/index.md).
-- You should have CocoaPods installed.
+* This tutorial assumes a basic understanding of how to use the iOS AEP Mobile SDK in applications. For more details see [Getting Started](../getting-started/index.md).
+* You should have CocoaPods installed.
 
 ## Adding the AEP mobile extensions
 

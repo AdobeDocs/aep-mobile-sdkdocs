@@ -33,7 +33,7 @@ Upgrade the Mobile SDK to the following Places extension version
 
 ![Add Environment Details Field Group](./assets/index/add-environment-details-fieldgroup.png)
 
-### Mask/Remove the unnecessary fields from EnvironmentDetails Field groups.
+### Mask/Remove the unnecessary fields from EnvironmentDetails Field groups
 
 * In the Field Group section, select **Environmen Details** followed by **placeContext** and on the right pane, select on **Manage related fields**
 
