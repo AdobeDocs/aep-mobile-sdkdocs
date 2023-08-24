@@ -4,6 +4,133 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 # Release notes
 
+## Aug 9, 2023
+
+### Android BOM 2.2.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.1.0) | BOM (2.2.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:core** | **2.3.0** | **2.3.1**|
+| **com.adobe.marketing.mobile:places** | **2.0.0** | **2.1.0**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:assurance | 2.1.1 | 2.1.1 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.5 | 2.0.5 |
+| com.adobe.marketing.mobile:campaignclassic | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edge | 2.2.0 | 2.2.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.1.4 | 2.1.4 |
+| com.adobe.marketing.mobile:optimize | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+## Aug 8, 2023
+
+### Android Core 2.3.1
+
+* Fixed an issue with displaying local notifications.
+
+## Aug 7, 2023
+
+### Roku SDK 1.0.0
+
+This is the first stable release of the Roku SDK, which exposes APIs to help developers to integrate the Adobe Experience Platform solutions with the Roku channel.
+
+Features:
+
+* **Adobe Experience Platform Edge Network integration:** Seamlessly send data to the Edge Network, and get greater control over data interactions by optionally registering a callback for Edge response handles.
+
+* **Automated ECID and ImplementationDetails attachment:** Experience more efficient tracking and integration as ECID (Experience Cloud ID) and Implementation details are now automatically appended to every XDM Experience Event request.
+
+* **Custom identity synchronization:** Personalize user experiences effectively by syncing Custom Identities with each XDM Experience Event request. Unlock the potential of the Edge Network while maintaining tailored interactions.
+
+For more information, refer to the documentation below:
+
+* [Getting Started](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/getting-started.md)
+* [API Reference](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/api-reference.md)
+* [Sample App](https://github.com/adobe/aepsdk-roku/blob/main/sample/simple-videoplayer-channel/README.md)
+
+## July 26, 2023
+
+### Android BOM 2.1.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom/2.1.0)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header="Expand">
+
+| Extension artifact | BOM (2.0.1) | BOM (2.1.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:edgemedia** |  | **2.0.0** |
+| **com.adobe.marketing.mobile:analytics** | **2.0.2** | **2.0.3**|
+| **com.adobe.marketing.mobile:assurance** | **2.1.0** | **2.1.1**|
+| **com.adobe.marketing.mobile:campaign** | **2.0.4** | **2.0.5**|
+| **com.adobe.marketing.mobile:core** | **2.2.3** | **2.3.0**|
+| **com.adobe.marketing.mobile:edge** | **2.1.0** | **2.2.0**|
+| **com.adobe.marketing.mobile:edgebridge** | **2.0.0** | **2.1.0**|
+| **com.adobe.marketing.mobile:edgeidentity** | **2.0.0** | **2.0.1**|
+| **com.adobe.marketing.mobile:lifecycle** | **2.0.3** | **2.0.4**|
+| **com.adobe.marketing.mobile:target** | **2.0.0** | **2.0.1**|
+| **com.adobe.marketing.mobile:userprofile** | **2.0.0** | **2.0.1**|
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaignclassic | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.1.4 | 2.1.4 |
+| com.adobe.marketing.mobile:optimize | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:places | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Analytics 2.0.3
+
+* Added `a.systemLocale` to Lifecycle hits.
+
+### Android Core 2.3.0
+
+* Added the DeviceInforming.getSystemLocale() API, which returns the locale set by the user in the system.
+* Implemented database recovery in SQLiteDataQueue for cases where adding or removing an entry fails due to unexpected errors.
+* Fixed an issue with the rounded corners and placement of in-app messages on Android 21/22.
+* Fixed a bug where the cached appId could overwrite the one set with MobileCore.configureWithAppId() before extension registration.
+
+### Android Lifecycle 2.0.4
+
+* Lifecycle extension now includes the system locale, indicating the device's preferred locale, in its published shared state.
+* Lifecycle launch event now includes the application._dc.language XDM field, which signifies the device's preferred locale.
+
+### Android UserProfile 2.0.1
+
+* Updated POM file with the Apache 2 license.
+
+## July 25, 2023
+
+### Android EdgeIdentity 2.0.1
+
+* Added validation to ignore `IdentityItem`s with an empty ID value.
+* Fixed an issue where the `getUrlVariables` API may fail to generate a response on Android 6 (API 23) devices.
+
 ## July 21, 2023
 
 ### iOS Edge 4.1.0
@@ -24,6 +151,12 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 * Added support for chaining related events.
 * Updated POM file with the Apache 2 license URL.
+
+## July 20, 2023
+
+### Android Assurance 2.1.1
+
+* Added support for chained events.
 
 ## July 12, 2023
 
@@ -84,17 +217,17 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 The following React Native libraries have been upgraded to use the version 4 of the Adobe Experience Platform Mobile SDK for iOS. Starting with this release, all React Native libraries that share the same major version are compatible with each other.
 
- * [@adobe/react-native-aepcore:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepcore/v/5.0.0)
- * [@adobe/react-native-aepassurance:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepassurance/v/5.0.0)
- * [@adobe/react-native-aepuserprofile:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepuserprofile/v/5.0.0)
- * [@adobe/react-native-aepedge:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedge/v/5.0.0)
- * [@adobe/react-native-aepedgebridge:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedgebridge/v/5.0.0)
- * [@adobe/react-native-aepedgeconsent:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedgeconsent/v/5.0.0)
- * [@adobe/react-native-aepedgeidentity:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedgeidentity/v/5.0.0)
- * [@adobe/react-native-aepoptimize:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepoptimize/v/5.0.0)
- * [@adobe/react-native-aepplaces:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepplaces/v/5.0.0)
- * [@adobe/react-native-aeptarget:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aeptarget/v/5.0.0)
- * [@adobe/react-native-aepcampaignclassic:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepcampaignclassic/v/5.0.0)
+* [@adobe/react-native-aepcore:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepcore/v/5.0.0)
+* [@adobe/react-native-aepassurance:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepassurance/v/5.0.0)
+* [@adobe/react-native-aepuserprofile:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepuserprofile/v/5.0.0)
+* [@adobe/react-native-aepedge:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedge/v/5.0.0)
+* [@adobe/react-native-aepedgebridge:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedgebridge/v/5.0.0)
+* [@adobe/react-native-aepedgeconsent:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedgeconsent/v/5.0.0)
+* [@adobe/react-native-aepedgeidentity:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepedgeidentity/v/5.0.0)
+* [@adobe/react-native-aepoptimize:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepoptimize/v/5.0.0)
+* [@adobe/react-native-aepplaces:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepplaces/v/5.0.0)
+* [@adobe/react-native-aeptarget:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aeptarget/v/5.0.0)
+* [@adobe/react-native-aepcampaignclassic:5.0.0](https://www.npmjs.com/package/@adobe/react-native-aepcampaignclassic/v/5.0.0)
 
 ## June 19, 2023
 
@@ -370,7 +503,7 @@ Please note that the current release includes the following changes:
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 * Added `SystemInfoService.getSystemLocaleName()` API which returns the locale by combining device's preferred language and selected region (as set by the user on the system).
 * Lifecycle extension adds `systemlocale` denoting device's preferred locale to its published shared state.
-* Lifecycle launch events will contain `application._dc.language` XDM field denoting device's preferred locale to shared state.
+* Lifecycle launch event now includes the application._dc.language XDM field, which signifies the device's preferred locale.
 
 ### iOS RulesEngine 4.0.0
 
@@ -1093,12 +1226,12 @@ With this release, the extension provides APIs that you can use to:
 
 The following AEP SDK React Native plugins have been published:
 
- * @adobe/react-native-aepcore@1.0.0
- * @adobe/react-native-aepuserprofile@1.0.0
- * @adobe/react-native-aepassurance@3.0.0
- * @adobe/react-native-aepedge@1.0.0
- * @adobe/react-native-aepedgeconsent@1.0.0
- * @adobe/react-native-aepedgeidentity@1.0.0
+* @adobe/react-native-aepcore@1.0.0
+* @adobe/react-native-aepuserprofile@1.0.0
+* @adobe/react-native-aepassurance@3.0.0
+* @adobe/react-native-aepedge@1.0.0
+* @adobe/react-native-aepedgeconsent@1.0.0
+* @adobe/react-native-aepedgeidentity@1.0.0
 
 For more details, see the documentation and release notes in the [aepsdk-react-native repository](https://github.com/adobe/aepsdk-react-native).
 

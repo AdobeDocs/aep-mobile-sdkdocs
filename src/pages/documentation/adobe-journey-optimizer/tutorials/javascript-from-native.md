@@ -4,9 +4,9 @@ import Tabs from './tabs/javascript-from-native.md'
 
 You can execute JavaScript in an in-app message from native code by completing the following steps:
 
-- [Implement and assign a `MessagingDelegate`](#implement-and-assign-a-messagingdelegate)
-- [Obtain a reference to the web view](#obtain-a-reference-to-the-web-view)
-- [Call the JavaScript method](#call-the-JavaScript-method)
+* [Implement and assign a `MessagingDelegate`](#implement-and-assign-a-messagingdelegate)
+* [Obtain a reference to the web view](#obtain-a-reference-to-the-web-view)
+* [Call the JavaScript method](#call-the-javascript-method)
 
 ## Implement and assign a `MessagingDelegate`
 
@@ -44,6 +44,6 @@ iOS
 
 The test apps in this repository demonstrate executing JavaScript code from an in-app message's webview:
 
-- [Swift](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoApp)
-- [Objective-C](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoAppObjC)
-- [Java](https://github.com/adobe/aepsdk-messaging-android/tree/main/code/app)
+* [Swift](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoApp)
+* [Objective-C](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoAppObjC)
+* [Java](https://github.com/adobe/aepsdk-messaging-android/tree/main/code/app)

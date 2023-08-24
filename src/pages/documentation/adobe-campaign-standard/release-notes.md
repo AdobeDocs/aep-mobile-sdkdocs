@@ -4,7 +4,7 @@
 
 ### Android Campaign 2.0.5
 
-- Fixed a bug where a bundled asset was not being used in a fullscreen message when the remote image URL was inaccessible.
+* Fixed a bug where a bundled asset was not being used in a fullscreen message when the remote image URL was inaccessible.
 
 ## June 5, 2023
 

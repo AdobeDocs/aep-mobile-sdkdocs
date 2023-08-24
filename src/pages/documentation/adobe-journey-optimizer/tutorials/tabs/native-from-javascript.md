@@ -24,7 +24,6 @@ public boolean shouldShowMessage(FullscreenMessage fullscreenMessage) {
 }
 ```
 
-
 <Variant platform="ios" function="register" repeat="5"/>
 
 In the `shouldShowMessage` function of the `MessagingDelegate`, call [`handleJavascriptMessage(_:withHandler)`](./class-message.md#handlejavascriptmessage_withhandler) to register your handler.

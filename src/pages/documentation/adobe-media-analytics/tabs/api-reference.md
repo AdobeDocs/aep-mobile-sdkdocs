@@ -2005,7 +2005,6 @@ public class Media {
 }
 ```
 
-
 <Variant platform="ios" api="media-events" repeat="6"/>
 
 ```swift

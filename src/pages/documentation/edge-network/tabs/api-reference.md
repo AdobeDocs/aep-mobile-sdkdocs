@@ -104,6 +104,7 @@ Edge.getLocationHint(object: AdobeCallbackWithError<String> {
 ```swift
 static func getLocationHint(completion: @escaping (String?, Error?) -> Void)
 ```
+
 * _completion_ is invoked with the location hint, or an `AEPError` if the request times out or an unexpected error occurs. The location hint value may be nil if the location hint expired or was not set. The default timeout is 1000ms. The completion handler may be invoked on a different thread.
 
 **Example**
@@ -333,7 +334,8 @@ NSDictionary *data = @{ @"sample" : @"data"};
 ```java
 public static void setLocationHint(final String hint)
 ```
-- _hint_ the Edge Network location hint to use when connecting to the Adobe Experience Platform Edge Network.
+
+* _hint_ the Edge Network location hint to use when connecting to the Adobe Experience Platform Edge Network.
 
 **Example**
 
@@ -359,7 +361,8 @@ Edge.setLocationHint(hint)
 @objc(setLocationHint:)
 public static func setLocationHint(_ hint: String?)
 ```
-- _hint_ the Edge Network location hint to use when connecting to the Adobe Experience Platform Edge Network.
+
+* _hint_ the Edge Network location hint to use when connecting to the Adobe Experience Platform Edge Network.
 
 **Example**
 
@@ -478,7 +481,6 @@ public class EdgeEventHandle {
   public List<Map<String, Object>> getPayload() {...}
 }
 ```
-
 
 <Variant platform="ios" api="edge-event-handle" repeat="2"/>
 
@@ -690,7 +692,7 @@ public struct XDMSchemaExample : XDMSchema {
     enum CodingKeys: String, CodingKey {
     case eventType = "eventType"
     case otherField = "otherField"
-    }		
+    }  
 }
 
 extension XDMSchemaExample {

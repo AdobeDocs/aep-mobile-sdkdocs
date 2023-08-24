@@ -54,9 +54,9 @@ Returns the identifiers in a URL's query parameters for consumption in **hybrid 
 
 An example of an encoded string is as follows: `"adobe_mc=TS%3DTIMESTAMP_VALUE%7CMCMID%3DYOUR_ECID%7CMCORGID%3D9YOUR_EXPERIENCE_CLOUD_ID"`
 
-- `MCID`: This is also known as the Experience Cloud ID (ECID).
-- `MCORGID`: This is also known as the Experience Cloud Organization ID.
-- `TS`: The timestamp that is taken when the request was made.
+* `MCMID`: This is also known as the Experience Cloud ID (ECID).
+* `MCORGID`: This is also known as the Experience Cloud Organization ID.
+* `TS`: The timestamp that is taken when the request was made.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -115,7 +115,7 @@ Some example use cases for this API are:
 
 This API is **not** recommended for:
 
-* Resetting a user's consent and privacy settings; see [Privacy and GDPR](../privacy-and-gdpr.md).
+* Resetting a user's consent and privacy settings; see [Privacy and GDPR](../resources/privacy-and-gdpr.md).
 * Removing existing custom identifiers; use the [`removeIdentity`](#removeidentity) API instead.
 * Removing a previously synced advertising identifier after the advertising tracking settings were changed by the user; use the [`setAdvertisingIdentifier`](../mobile-core/identity/api-reference.md#setadvertisingidentifier) API instead.
 
