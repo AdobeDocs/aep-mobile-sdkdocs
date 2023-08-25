@@ -16,7 +16,7 @@ The Adobe Journey Optimizer - Decisioning extension powers real-time personaliza
 
 Before starting, make sure the following steps are completed.
 
-* Your organization is provisioned for edge decisioning. 
+* Your organization is provisioned for edge decisioning.
 * If using Adobe Target, Target activities are set up in your desired workspace in your organization on Target UI. For more details, see the [Target activities guide](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html).
 * If using Journey Optimizer - Offer Decisioning, decisions are set up in your desired sandbox in your organization on Experience Platform UI. For more details, see the [create decisions guide](https://experienceleague.adobe.com/docs/offer-decisioning/using/create-manage-activities/create-offer-activities.html).
 
@@ -78,7 +78,7 @@ iOS
 
 ### DecisionScope
 
-The `DecisionScope` public class provides a constructor to create a scope object using the activityId, placementId, and optional itemCount. The decision scope activity and placement information can be obtained from the decision on the Experience Platform UI. 
+The `DecisionScope` public class provides a constructor to create a scope object using the activityId, placementId, and optional itemCount. The decision scope activity and placement information can be obtained from the decision on the Experience Platform UI.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -237,13 +237,13 @@ Once Analytics is listed as the reporting source for an activity on Target UI, A
 
 <InlineAlert variant="warning" slots="text"/>
 
-For this integration to work, make sure Analytics is enabled in your datastream configuration for the desired environment and Report Suite information is provided. 
+For this integration to work, make sure Analytics is enabled in your datastream configuration for the desired environment and Report Suite information is provided.
 
 ## Tracking
 
 ### Proposition tracking using direct Offer class methods
 
-User interactions with the decision propositions can be tracked using the following public methods in the `Offer` class. 
+User interactions with the decision propositions can be tracked using the following public methods in the `Offer` class.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -269,7 +269,7 @@ iOS
 
 ### Proposition tracking using Edge extension API
 
-For more advanced tracking use cases, additional public methods are available in the `Offer` and `Proposition` classes. These methods can be used to generate XDM formatted data for `Experience Event - Proposition Interactions` and `Experience Event - Proposition Reference` field groups. 
+For more advanced tracking use cases, additional public methods are available in the `Offer` and `Proposition` classes. These methods can be used to generate XDM formatted data for `Experience Event - Proposition Interactions` and `Experience Event - Proposition Reference` field groups.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

@@ -48,4 +48,3 @@ Implementation details are automatically collected by the Edge Network extension
 | Environment | For a mobile application the environment is always `app`.|
 
 If you would like to include this information in your dataset, add the "Implementation Details" field group to the schema tied to your dataset.
-

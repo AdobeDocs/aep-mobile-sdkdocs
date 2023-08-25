@@ -8,6 +8,12 @@ keywords:
 
 # Release Notes
 
+## July 26, 2023
+
+### Android UserProfile 2.0.1
+
+* Updated POM file with the Apache 2 license.
+
 ## Jun 5, 2023
 
 ### iOS UserProfile 4.0.0

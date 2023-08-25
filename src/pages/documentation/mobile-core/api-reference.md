@@ -18,7 +18,6 @@ Programmatic updates made to the configuration can be cleared via the `clearUpda
 
 User interactions with local or push notifications can be tracked by invoking the `collectMessageInfo` API. Please refer to [this page](../../documentation/adobe-campaign-standard#tracking-local-and-push-notification-message-interactions) for more information about tracking local and push notification message interactions.
 
-
 ## collectLaunchInfo
 
 You can provide the user information to the SDK from various launch points in your application.
@@ -129,7 +128,7 @@ iOS
 
 ## getPrivacyStatus
 
-You can use the `getPrivacyStatus` API to retrieve the current privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../privacy-and-gdpr.md#get-privacy-status)
+You can use the `getPrivacyStatus` API to retrieve the current privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../resources/privacy-and-gdpr.md#getprivacystatus)
 
 ## getSdkIdentities
 
@@ -178,7 +177,6 @@ iOS
 
 <Tabs query="platform=react-native&api=log"/> --->
 
-
 ## registerEventListener
 
 An EventListener can be registered with MobileCore to be notified when Events matching a type and source are dispatched.
@@ -193,13 +191,12 @@ iOS
 
 <Tabs query="platform=ios&api=register-event-listener"/>
 
-
 ## registerExtension
 
 <InlineAlert variant="warning" slots="text"/>
 
 This API has been deprecated starting in v2.0.0 version of Mobile Core extension.
-Use [registerExtensions](#registerExtensions) to register desired extensions and boot up the SDK for event processing. Calling `MobileCore.start()` API is no longer required when using `MobileCore.registerExtensions()`.
+Use [registerExtensions](#registerextensions) to register desired extensions and boot up the SDK for event processing. Calling `MobileCore.start()` API is no longer required when using `MobileCore.registerExtensions()`.
 
 Extensions can be incrementally registered with Mobile Core using the `registerExtension` API.
 
@@ -278,7 +275,7 @@ iOS
 
 ## setApplication
 
-When building Android applications, the `android.app.Application` reference must be passed to Mobile SDK, which allows Mobile SDK to access the `android.app.Context` and monitor the lifecycle of the Android application. 
+When building Android applications, the `android.app.Application` reference must be passed to Mobile SDK, which allows Mobile SDK to access the `android.app.Context` and monitor the lifecycle of the Android application.
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -303,7 +300,7 @@ From least to most verbose, the order of Mobile SDK logging modes is as follows:
 * ERROR
 * WARNING
 * DEBUG
-* VERBOSE / TRACE 
+* VERBOSE / TRACE
 
 When debugging on iOS, you can use `LogLevel.verbose` to enable all the logging messages that are coming from Mobile SDK and partner extensions. Similarly, on Android, you can use `LoggingMode.VERBOSE` to enable all the logging messages that are coming from Mobile SDK and partner extensions.
 
@@ -335,7 +332,7 @@ Flutter
 
 ## setPrivacyStatus
 
-You can use the `setPrivacyStatus` API to set the privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../privacy-and-gdpr.md#set-privacy-status) API's.
+You can use the `setPrivacyStatus` API to set the privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../resources/privacy-and-gdpr.md#setprivacystatus) API's.
 
 ## setPushIdentifier
 
@@ -355,7 +352,7 @@ iOS
 
 <Tabs query="platform=ios&api=set-push-identifier"/>
 
-## setSmallIconResourceID / setLargeIconResourceID 
+## setSmallIconResourceID / setLargeIconResourceID
 
 You can set the small and large icons that will be used for notifications that are created by the SDK. The small icon appears in the status bar and is the secondary image that is displayed when the user sees the complete notification in the notification center. The large icon is the primary image that is displayed when the user sees the complete notification in the notification center. Please note that this method is **only** supported on Android versions of Mobile Core.
 
@@ -384,7 +381,7 @@ iOS
 <InlineAlert variant="warning" slots="text"/>
 
 This is an Android only API and has been deprecated starting in v2.0.0 of the Mobile Core extension.
-Use [registerExtensions](#registerExtensions) to register desired extensions and boot up the SDK for event processing. Calling `MobileCore.start()` API is no longer required when using `MobileCore.registerExtensions()`.
+Use [registerExtensions](#registerextensions) to register desired extensions and boot up the SDK for event processing. Calling `MobileCore.start()` API is no longer required when using `MobileCore.registerExtensions()`.
 
 The `start` API triggers Mobile Core to start event processing. This should be used after the desired set of extensions have been registered using `MobileCore.registerExtension()`  or `<EXTENSION_NAME>.registerExtension()`. A call to `start` will wait for any outstanding registrations to complete and then start event processing. You can use the callback to kickoff additional operations immediately after any operations kicked off during registration. This method should not be invoked more than once in your app.
 
@@ -469,4 +466,3 @@ iOS
 ## Additional information
 
 To learn what context data is, please read the [documentation on context data](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html).
-

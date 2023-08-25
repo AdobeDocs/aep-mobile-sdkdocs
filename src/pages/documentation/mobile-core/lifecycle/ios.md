@@ -22,7 +22,7 @@ For implementation details, please reference the guide on [registering Lifecycle
 
 This information helps you understand how crashes are tracked and the best practices to handle false crashes.
 
-<InlineAlert variant="info" slots="text"/> 
+<InlineAlert variant="info" slots="text"/>
 
 You should upgrade to Adobe Experience Platform SDKs, which contains critical changes that prevent false crashes from being reported.
 
@@ -59,7 +59,7 @@ The following practices can help prevent false crashes from being reported:
 
 When calling `lifecycleStart:`, you can optionally pass a dictionary of additional data that will be attached to the lifecycle event.
 
-<InlineAlert variant="info" slots="text"/> 
+<InlineAlert variant="info" slots="text"/>
 
 You can pass additional data to lifecycle on app launch, app resume, both, or neither.
 

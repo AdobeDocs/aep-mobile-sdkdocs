@@ -6,8 +6,8 @@ Are you currently using the Adobe Analytics mobile extension and considering a m
 
 This guide outlines the available options for migrating to Edge Network and Analytics service:
 
-- Implement the Edge Network extension using the `Edge.sendEvent` API.
-- Implement the Edge Bridge extension using the `MobileCore.trackAction` and `MobileCore.trackState` APIs.
+* Implement the Edge Network extension using the `Edge.sendEvent` API.
+* Implement the Edge Bridge extension using the `MobileCore.trackAction` and `MobileCore.trackState` APIs.
 
 The **Edge Network extension** and its `sendEvent` API is the recommended implementation path for sending data to Analytics through Edge Network. It sends Experience Data Model (XDM) formatted data directly to Edge Network, which is well understood by Experience Platform and upstream services. That means the same XDM events can be used in Analytics and other powerful solutions within Experience Platform, such as Journey Optimizer, Journey Orchestration, and Server-Side Forwarding.
 
@@ -26,7 +26,8 @@ Edge Bridge only supports the Analytics drop-in migration case. If you are looki
 | **Analytics extension** | MobileCore.trackAction  MobileCore.trackState | 1. Analytics extension <br/> 2. Identity for Experience Cloud ID Service extension | N/A| iOS, Android, tvOS| N/A |
 
 <InlineAlert variant="info" slots="text"/>
-Other foundational extensions include the Consent for Edge Network extension which [enables consent preferences collection](#consent-for-edge-network-extension) from your mobile app, and the [Assurance extension](../platform-assurance-sdk/index.md) for validating your app implementation.
+
+Other foundational extensions include the [Consent for Edge Network extension](../consent-for-edge-network/index.md) which enables consent preferences collection from your mobile app, and the [Assurance extension](../platform-assurance-sdk/index.md) for validating your app implementation.
 
 ### Workflow comparison
 
@@ -36,8 +37,8 @@ Other foundational extensions include the Consent for Edge Network extension whi
 
 | Steps  |  Edge Network extension | Edge Bridge extension |
 | ----------- | ----------- | ----------- |
-| 1. [Set up an XDM schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html). Experience Data Model (XDM) is the open and publicly documented data model standard created by Adobe to standardize data collection, and is used across applications that leverage Experience Platform. <br/> **NOTE:** Take advantage of [automatic Analytics variable mapping](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html) of XDM fields to Analytics dimensions by using the Adobe managed XDM schemas for Lifecycle, Media, Commerce, and more.| ✅	 | ✅	|
-| 2. [Configure a datastream](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/overview.html). A datastream is the server-side configuration used when implementing the Experience Platform Mobile SDK. | ✅	 | ✅	|
+| 1. [Set up an XDM schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html). Experience Data Model (XDM) is the open and publicly documented data model standard created by Adobe to standardize data collection, and is used across applications that leverage Experience Platform. <br/> **NOTE:** Take advantage of [automatic Analytics variable mapping](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html) of XDM fields to Analytics dimensions by using the Adobe managed XDM schemas for Lifecycle, Media, Commerce, and more.| ✅  | ✅ |
+| 2. [Configure a datastream](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/overview.html). A datastream is the server-side configuration used when implementing the Experience Platform Mobile SDK. | ✅  | ✅ |
 | 3. **Add the Adobe Analytics service** to your datastream. The datastream controls both whether and how data is sent to Adobe Analytics. You will need your Analytics report suite ID (RSID) for this step.  | ✅ | ✅ |
 | 4. **Install the *Edge Network* and *Identity for Edge Network extensions*** in the mobile property (tag) in Data Collection UI, and set the datastream in the Edge Network extension configuration. |  ✅ | ✅ |
 | 5. **In your app code**, register the **Edge Network** and **Identity for Edge Network extensions** and set your mobile tag property configuration. | ✅ | ✅ |
@@ -51,15 +52,15 @@ Other foundational extensions include the Consent for Edge Network extension whi
 
 To learn about the end to end Edge Network extension implementation process, follow the tutorials below:
 
-- [iOS tutorial](https://github.com/adobe/aepsdk-edge-ios/tree/main/Documentation/Tutorials)
-- [Android tutorial](https://github.com/adobe/aepsdk-edge-android/tree/main/Documentation/Tutorials)
+* [iOS tutorial](https://github.com/adobe/aepsdk-edge-ios/tree/main/Documentation/Tutorials)
+* [Android tutorial](https://github.com/adobe/aepsdk-edge-android/tree/main/Documentation/Tutorials)
 
 ### Implement the Edge Bridge extension
 
 To learn about the end to end Edge Bridge extension implementation process, follow the tutorials below:
 
-- [iOS tutorial](https://github.com/adobe/aepsdk-edgebridge-ios/tree/main/Documentation/tutorials)  
-- [Android tutorial](https://github.com/adobe/aepsdk-edgebridge-android/tree/main/Documentation/tutorials)
+* [iOS tutorial](https://github.com/adobe/aepsdk-edgebridge-ios/tree/main/Documentation/tutorials)  
+* [Android tutorial](https://github.com/adobe/aepsdk-edgebridge-android/tree/main/Documentation/tutorials)
   
 ## Other migration considerations
 

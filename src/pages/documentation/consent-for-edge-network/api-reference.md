@@ -64,4 +64,3 @@ Android
 iOS
 
 <Tabs query="platform=ios&api=update-consents"/>
-

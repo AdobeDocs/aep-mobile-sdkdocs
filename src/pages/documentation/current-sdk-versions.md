@@ -16,7 +16,23 @@ keywords:
 
 <InlineAlert variant="info" slots="text"/>
 
-**Start using the BOM artifact for Android**<br/> The Adobe SDK BOM artifact enables managing all compatible versions of Adobe Experience Platform Android extensions by specifying a single BOM version. This is now the recommended way to manage Android SDKs.
+**Start using the BOM artifact for Android**<br/> The Adobe SDK BOM artifact enables managing all compatible versions of Adobe Experience Platform Android extensions by specifying a single BOM version. This is now the recommended way to manage Android SDKs. For the installation instructions, see the steps to [add dependencies to your project](https://developer.adobe.com/client-sdks/documentation/getting-started/get-the-sdk/#installation-instructions). The BOM project is open-sourced. For more information, please refer to the [README](https://github.com/adobe/aepsdk-commons/blob/main/android/aepsdk-bom/README.md) file located in the public repository.
+
+### Android BOM
+
+<div style="height:20px; width:120px;"></div>
+
+<div style="height:30px; width:140px;">
+<a href="https://mvnrepository.com/artifact/com.adobe.marketing.mobile/sdk-bom">
+<img src="https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/sdk-bom.svg?logo=android&logoColor=white&label=sdk-bom&style=flat-square" alt="descriptive text"/>
+</a>
+</div>
+
+The Android BOM (Bill of Materials) artifact has been released to Maven Central. The above Maven Badge displays the latest BOM version. To obtain information about which Android extension versions are mapped to the latest BOM, refer to the [release notes](https://developer.adobe.com/client-sdks/documentation/release-notes/).
+
+### Android extensions
+
+<div style="height:20px; width:120px;"></div>
 
 | Extension | Maven | Github |
 |---|---|---|
@@ -111,6 +127,10 @@ Adobe Experience Platform Mobile SDK plugin for Flutter supports Flutter **versi
 
 Adobe Experience Platform Mobile SDK plugins for Flutter are compatible with the [Android](#android) and [iOS](#ios) native libraries.
 
+<InlineAlert variant="info" slots="text"/>
+
+If you are currently using the ACP-prefixed Flutter libraries, please see [the guide to migrate to latest available version](https://github.com/adobe/aepsdk_flutter/blob/main/docs/migration.md) for Flutter.
+
 | Extension | pub.dev |
 |---|---|
 | [Mobile Core](../mobile-core/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepcore.svg)](https://pub.dartlang.org/packages/flutter_aepcore) |
@@ -120,3 +140,15 @@ Adobe Experience Platform Mobile SDK plugins for Flutter are compatible with the
 | [EdgeConsent](../consent-for-edge-network/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgeconsent.svg)](https://pub.dartlang.org/packages/flutter_aepedgeconsent) |
 | [Edge Bridge](../adobe-analytics/migrate-to-edge-network.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgebridge.svg)](https://pub.dartlang.org/packages/flutter_aepedgebridge) |
 | [UserProfile](../profile/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepuserprofile.svg)](https://pub.dartlang.org/packages/flutter_aepuserprofile) |
+
+## Roku
+
+<div style="height:20px; width:120px;"></div>
+
+<div style="height:30px; width:140px;">
+<a href="https://github.com/adobe/aepsdk-roku/releases">
+<img src="https://img.shields.io/github/v/release/adobe/aepsdk-roku.svg?label=AEP%20Roku%20SDK&logo=github"/>
+</a>
+</div>
+
+The Adobe Experience Platform SDK for Roku supports Roku OS 11.0 or later. The project is open sourced in GitHub. For more information, refer to the [aepsdk-roku](https://github.com/adobe/aepsdk-roku) repository.

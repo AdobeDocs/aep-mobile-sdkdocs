@@ -56,7 +56,7 @@ The request timeout is the time in seconds to wait for a response from the in-ap
 
 The request timeout value must be a non-zero number.
 
-## Add the Campaign Standard extension to your app
+### Add the Campaign Standard extension to your app
 
 Remember the following information when you add the Campaign extension to your app:
 
@@ -127,7 +127,7 @@ iOS
 
 <Tabs query="platform=ios&task=push-messaging"/>
 
-## Tracking local and push notification message interactions
+### Tracking local and push notification message interactions
 
 User interactions with local or push notifications can be tracked by invoking the `collectMessageInfo` API. After the API is invoked, a network request is made to Campaign that contains the message interaction event.
 
@@ -197,6 +197,26 @@ iOS
 
 Giving a value of `0` when setting `campaign.registrationDelay` will send a registration request on every launch event. This is the previous behavior seen before the registration request reduction enhancement was added.
 
+### Using a bundled image asset within a full page, large modal, or small modal in-app message
+
+A bundled image asset may be specified on the Campaign Standard UI to be used as a primary image or as a fallback image in the case where a specified remote image URL is inaccessible. The bundled image should be specified on the Campaign Standard UI with the file name and file extension. For example, in the  `Bundled Image` text entry field on the Campaign Standard UI, a JPEG file with the file name `example` can be provided in the following format:
+
+```text
+example.jpg
+```
+
+The specified bundled image must then be included with your app when it is built. To do so:
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<Tabs query="platform=android&task=bundled-image"/>
+
+iOS
+
+<Tabs query="platform=ios&task=bundled-image"/>
+
 ## Configuration keys
 
 To update SDK configuration programmatically, use the following information to change your Campaign Standard configuration values. For more information, see the [Configuration API reference](../mobile-core/configuration/api-reference.md).
@@ -214,4 +234,3 @@ To update SDK configuration programmatically, use the following information to c
 | `__stage__campaign.server` | No | Sets the endpoint URL for the staging environment in the Adobe Campaign Standard instance. | String |
 | `campaign.registrationDelay` | No | Sets the number of days to delay the sending of the next Adobe Campaign Standard registration request. | Integer |
 | `campaign.registrationPaused` | No | Sets the Adobe Campaign Standard registration request paused status. | Boolean |
-

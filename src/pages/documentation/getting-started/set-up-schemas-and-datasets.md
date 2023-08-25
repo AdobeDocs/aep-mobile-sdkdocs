@@ -72,4 +72,3 @@ The following steps illustrate the creation of a sample dataset for mobile data 
    4. Set a name for the dataset and select **Finish**.
 
 ![Dataset creation in Adobe Experience Platform](./assets/set-up-schemas-and-datasets/create-dataset.png)
-

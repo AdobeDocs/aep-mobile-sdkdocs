@@ -60,7 +60,7 @@ A: The Identity for Edge Network extension and the Identity for Experience Cloud
 
 At first launch of the application after upgrading to the Identity for Edge Network extension, the existing ECID from the Identity for Experience Cloud ID Service extension is migrated to the Identity for Edge Network extension. In this case both extensions will have the same ECID value.
 
-The [resetIdentities](./api-reference.md#resetidentities) API regenerates a new ECID used by the Identity for Edge Network extension. This API call does not change the ECID used by the Identity for Experience Cloud ID Service extension. After calling this API, the ECID used by each identity extension will be different.
+The [resetIdentities](./api-reference.md#resetidentities) API causes the Identity for Edge Network extension and the Identity for Experience Cloud ID Service extension to independently generate new ECID values. After calling this API, the ECID used by each identity extension will be different.
 
 Changing the privacy status to `optedOut` will clear the ECID value used by the Identity for Experience Cloud ID Service extension. Changing the privacy status back to `optedIn` will generate a new ECID used by the Identity for Experience Cloud ID Service extension. Privacy status changes do not change the ECID used by the Identity for Edge Network extension. Changing the privacy status will cause the ECID used by each identity extension to be different.
 
@@ -109,7 +109,7 @@ To get the identifiers used by the Edge extensions, call [getIdentities](./api-r
 
 A: Set privacy status to `optedOut` and call `resetIdentities`
 
-To clear the identifiers used by the Adobe Solutions extensions, call [setPrivacyStatus](../privacy-and-gdpr.md#set-and-get-privacy-status) and set the privacy status to `optedOut`.
+To clear the identifiers used by the Adobe Solutions extensions, call [setPrivacyStatus](../resources/privacy-and-gdpr.md#set-and-get-privacy-status) and set the privacy status to `optedOut`.
 
 To clear the identifiers used by the Edge extensions, call [resetIdentities](../mobile-core/api-reference.md#resetidentities)
 
@@ -121,7 +121,7 @@ When using Real-time Customer Profile and Identity Service, the ECIDs from both 
 
 Perform the following API calls to regenerate the ECIDs in sequence:
 
-1. Set [privacy status](../privacy-and-gdpr.md#set-and-get-privacy-status) to `optedOut` to clear the ECID from the Identity direct service extension.
+1. Set [privacy status](../resources/privacy-and-gdpr.md#set-and-get-privacy-status) to `optedOut` to clear the ECID from the Identity direct service extension.
 2. Call [resetIdentities](./api-reference.md#resetidentities) to regenerate a new ECID in the Identity for Edge Network extension.
 3. Call [getExperienceCloudId](./api-reference.md#getexperiencecloudid) on the Identity for Edge Network extension. This ensures the new ECID is generated before continuing.
 4. Set [privacy status](../privacy-and-gdpr.md#set-and-get-privacy-status) to `optedIn` to generate a new ECID in the Identity direct service extension.

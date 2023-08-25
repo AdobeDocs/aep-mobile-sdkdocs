@@ -30,7 +30,7 @@ You can clear any programmatic updates made to the configuration via the `clearU
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-Android 
+Android
 
 <Tabs query="platform=android&api=clear-updated-configuration"/>
 

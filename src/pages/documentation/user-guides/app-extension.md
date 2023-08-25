@@ -13,8 +13,8 @@ You can use supported Adobe Experience Platform mobile extensions in your App Ex
 
 ## Prerequisites
 
-- This tutorial assumes a basic understanding of how to use the iOS AEP Mobile SDK in applications. For more details see [Getting Started](../getting-started/index.md).
-- You should have CocoaPods installed.
+* This tutorial assumes a basic understanding of how to use the iOS AEP Mobile SDK in applications. For more details see [Getting Started](../getting-started/index.md).
+* You should have CocoaPods installed.
 
 ## Adding the AEP mobile extensions
 
@@ -38,8 +38,8 @@ target 'YourAppExtension' do
   pod 'AEPIdentity'
   pod 'AEPAnalytics'
 end
-
 ```
+
 2. Run `pod install` from the command line to install the pods to the App Extension target.
 
 ## Registering Extensions
@@ -78,7 +78,7 @@ override func presentationAnimationDidFinish() {
 
 Please note that in order to register AEPAnalytics, you must use the `AnalyticsAppExtension` class instead of the `Analytics` class used when registering from an application.
 
-1. Managing lifeycle from a Share Extension should be done in the `didSelectCancel` and `didSelectPost` methods which are the delegate methods called when the ShareViewController is dismissed.
+1. Managing lifecycle from a Share Extension should be done in the `didSelectCancel` and `didSelectPost` methods which are the delegate methods called when the ShareViewController is dismissed.
 
 ### Swift
 

@@ -14,16 +14,16 @@ keywords:
 
 This guide will walk you through steps necessary to ensure your app is properly configured for in-app messaging with Adobe Journey Optimizer (AJO).
 
-- [Complete prerequisites for your app](#prerequisites)
-- [Validate the correct extensions are registered](#validate-the-correct-extensions-are-registered)
-- [Validate the event requesting message definitions](#validate-the-event-requesting-message-definitions)
-- [Validate the event containing a message definition response](#validate-the-event-containing-a-message-definition-response)
+* [Complete prerequisites for your app](#prerequisites)
+* [Validate the correct extensions are registered](#validate-the-correct-extensions-are-registered)
+* [Validate the event requesting message definitions](#validate-the-event-requesting-message-definitions)
+* [Validate the event containing a message definition response](#validate-the-event-containing-a-message-definition-response)
 
 ## Prerequisites
 
-- Your app must have the **AEPMessaging** SDK extension installed. Integrate **AEPMessaging** by following the guide on [setting up AEPMessaging SDK](../setup.md).
+* Your app must have the **AEPMessaging** SDK extension installed. Integrate **AEPMessaging** by following the guide on [setting up AEPMessaging SDK](../setup.md).
 
-- This troubleshooting guide uses validation provided by the **AEPAssurance** extension and the **Adobe Assurance UI**. Integrate **AEPAssurance** in your application by following the [Adobe Experience Platform Assurance installation guide](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html).
+* This troubleshooting guide uses validation provided by the **AEPAssurance** extension and the **Adobe Assurance UI**. Integrate **AEPAssurance** in your application by following the [Adobe Experience Platform Assurance installation guide](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html).
 
 ## Validate the correct extensions are registered
 
@@ -84,12 +84,12 @@ Complete the following steps to validate a response containing in-app messages:
 
 4. Expand the **Payload** section in the right window. Each entry in the **payload** array contains the rule for a single in-app message that has been previously published in AJO and is now live. The full path to find a message definition is:
 
-    ```
+    ```shell
     ACPExtensionEventData.payload.N.items.0.data.content
     ```
 
     To find definitions for other live in-app messages, follow the above path for each object in the **payload** array.
-    
+
     ![AEP Response Event Handle Payload](./assets/validate-messages/message-response-payload.png)
 
 ## Use the In-App Messaging Assurance UI plugin
@@ -114,12 +114,12 @@ If you have already installed the **In-App Messaging** plugin in your Assurance 
 
 Using the IAM plugin you can do the following for each message downloaded by the client:
 
-- In the **Rules** tab - view the rules defining when the message will be shown to the user
-- In the **History** tab - review a history of client events, including a comparison between the event's contents and the message's triggering criteria
-- In the **Message Preview** window - see a preview of the message's html
-- In the **Message Behavior** window - review message behavior, including its supported gestures and animations
-- In the **Message Behavior** window - review message size and positioning properties
-- Clicking the **Simulate on Device** button - trigger the currently selected message, causing it to be displayed on the connected client
+* In the **Rules** tab - view the rules defining when the message will be shown to the user
+* In the **History** tab - review a history of client events, including a comparison between the event's contents and the message's triggering criteria
+* In the **Message Preview** window - see a preview of the message's html
+* In the **Message Behavior** window - review message behavior, including its supported gestures and animations
+* In the **Message Behavior** window - review message size and positioning properties
+* Clicking the **Simulate on Device** button - trigger the currently selected message, causing it to be displayed on the connected client
 
     ![Inspecting a downloaded message](./assets/validate-messages/iam-simulation.png)
 

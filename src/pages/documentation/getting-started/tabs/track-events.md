@@ -69,7 +69,7 @@ Edge.sendEvent(experienceEvent: experienceEvent)
 
 <Variant platform="android" task="track-action" repeat="5"/>
 
-#### Java 
+#### Java
 
 **Syntax**
 

@@ -19,7 +19,7 @@ The Adobe Experience Platform Consent mobile extension enables consent preferenc
 2. On the **Catalog** tab, locate or search for the **Consent** extension, and select **Install**.
 3. Set your desired default consent level.
 4. Select **Save**.
-5. Follow the publishing process to update SDK configuration.
+5. Follow the [publishing process](../getting-started/create-a-mobile-property.md#publish-the-configuration) to update SDK configuration.
 
 ![AEP Consent extension configuration](./assets/index/configuration.png)
 
@@ -64,4 +64,3 @@ To update the SDK configuration programmatically, use the following information 
 | Key | Required | Description | Data Type |
 | :--- | :--- | :--- | :--- |
 | consent.default | No | Consents in XDM format. For more details, see [Privacy/Personalization/Marketing Preferences (Consents) Schema](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-consents.schema.md). | Map |
-

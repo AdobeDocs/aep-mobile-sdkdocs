@@ -15,4 +15,3 @@ Events dispatched by the Lifecycle extension to support Adobe Experience Platfor
 * [Lifecycle Application Background](../mobile-core/lifecycle/event-reference.md#lifecycle-application-background)
 
 For full event details, please read the [Lifecycle event reference](../mobile-core/lifecycle/event-reference.md).
-

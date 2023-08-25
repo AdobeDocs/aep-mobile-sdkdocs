@@ -87,6 +87,14 @@ The `link` parameter must be URL encoded. If you are setting this value in the A
 
 ### Open a deeplink
 
+<InlineAlert variant="help" slots="text"/>
+
+Android deeplinks require intent filters to be added in the app manifest to correctly handle deeplink URLs. Please see the [Android developer documentation](https://developer.android.com/training/app-links/deep-linking) for more information.
+
+<InlineAlert variant="help" slots="text"/>
+
+iOS deeplinks require a custom URL scheme to be setup in the application's `info` tab within Xcode to correctly handle deeplink URLs. Please see the [Apple developer documentation](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app) for more information.
+
 If the provided URL contains a custom scheme, the app that handles the custom scheme will be launched.
 
 The example below will dismiss the current in-app message, then launch an app owned by the same developer which handles the scheme `myAppScheme`:

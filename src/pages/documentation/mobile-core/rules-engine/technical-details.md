@@ -400,4 +400,3 @@ The Adobe Experience Platform SDKs process the URL that points to a zipped rules
 | Key | Description |
 | :--- | :--- |
 | `rules.url` | URL that points to the remote file location that contains the rules that were configured for the Mobile SDKs. For more information, see the [rules URL section](#rules-url). |
-

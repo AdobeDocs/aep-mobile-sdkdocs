@@ -8,6 +8,12 @@ keywords:
 
 # Release Notes
 
+## July 26, 2023
+
+### Android Analytics 2.0.3
+
+* Added `a.systemLocale` to Lifecycle hits.
+
 ## June 6, 2023
 
 ### iOS Analytics 4.0.0

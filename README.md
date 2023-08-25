@@ -6,24 +6,26 @@ View the [demo](https://adobedocs.github.io/dev-site-documentation-template/) ru
 
 ## Where to ask for help
 
-The slack channel #adobeio-onsite-onboarding is our main point of contact for help. Feel free to join the channel and ask any questions. 
+The slack channel #adobeio-onsite-onboarding is our main point of contact for help. Feel free to join the channel and ask any questions.
 
 ## How to develop
 
-For local development, simply use :
-```
-$ yarn
-$ yarn dev
+For local development, simply use:
+
+```shell
+yarn
+yarn dev
 ```
 
 For the documentation developer, please read these sections on how to:
-- [Arrange the structure content of your docs](https://github.com/adobe/aio-theme#content-structure)
-- [Linking to pages](https://github.com/adobe/aio-theme#links)
-- [Using assets](https://github.com/adobe/aio-theme-aio#assets)
-- [Setting Global Navigation](https://github.com/adobe/aio-theme#global-navigation)
-- [Setting Side Navigation](https://github.com/adobe/aio-theme#side-navigation)
-- [Using content blocks](https://github.com/adobe/aio-theme#jsx-blocks)
-- [Notes on using Markdown](https://github.com/adobe/aio-theme#writing-enhanced-markdown)
+
+* [Arrange the structure content of your docs](https://github.com/adobe/aio-theme#content-structure)
+* [Linking to pages](https://github.com/adobe/aio-theme#links)
+* [Using assets](https://github.com/adobe/aio-theme-aio#assets)
+* [Setting Global Navigation](https://github.com/adobe/aio-theme#global-navigation)
+* [Setting Side Navigation](https://github.com/adobe/aio-theme#side-navigation)
+* [Using content blocks](https://github.com/adobe/aio-theme#jsx-blocks)
+* [Notes on using Markdown](https://github.com/adobe/aio-theme#writing-enhanced-markdown)
 
 For more in-depth [instructions](https://github.com/adobe/aio-theme#getting-started).
 
@@ -39,7 +41,7 @@ To add a Tabs block, add the following blurb:
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="{API_NUMBERS}"/>
 ```
 
-| Parameter | Description | 
+| Parameter | Description |
 | --------- | ----------- |
 | `{API_NUMBERS}` | The number of platforms the API is represented on. |
 
@@ -126,9 +128,9 @@ This format of adding a Tab block and Variant block applies for all areas where 
 
 For each API reference, at a minimum, the following information should be included within the Variant block:
 
-- API language
-- Syntax
-- Example
+* API language
+* Syntax
+* Example
 
 A proper example for an API blurb would be as follows:
 
@@ -169,12 +171,12 @@ Adobe Experience Platform Mobile SDK for Android supports Google Android API 19 
 
 Supported values for the `variant` include the following:
 
-- `info`
-- `help`
-- `error`
-- `success`
-- `warning`
-- `neutral`
+* `info`
+* `help`
+* `error`
+* `success`
+* `warning`
+* `neutral`
 
 More information about the `InlineAlert` block can be found within the [Adobe I/O GitHub](https://github.com/adobe/aio-theme#inlinealert-block-updated-2022-06-08).
 
@@ -191,7 +193,8 @@ An example of this can be seen below:
 ## How to deploy
 
 For any team that wishes to deploy to the adobe.io and stage.adobe.io website, they must be in contact with the dev-site team. Teams will be given a path that will follow the pattern `adobe.io/{product}/`. This will allow doc developers to setup their subpaths to look something like:
-```
+
+```shell
 adobe.io/{product}/docs
 adobe.io/{product}/community
 adobe.io/{product}/community/code_of_conduct
