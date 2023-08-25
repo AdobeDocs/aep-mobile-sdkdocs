@@ -99,15 +99,23 @@ var reqGet = https.request(optionsget, function(res) {
                         const releaseNotesHeader = "# Release notes";
                         // Read the contents of the markdown file.
                         const contentArray = fs.readFileSync(releaseMdPath, "utf8").toString().split("\n");
-                         // Find the index of the release notes header.
+                        // Find the index of the release notes header.
                         const releaseNotesHeaderIndex = contentArray.indexOf(releaseNotesHeader);
-                        console.error(releaseNotesHeaderIndex)
 
                         if (releaseFileContainsLineStartWith(`### Android BOM  ${version}`) == true) {
                             console.error("already updated")
                             return
                         }
-                        contentArray.splice(releaseNotesHeaderIndex + 1,0,"",`## ${fullMonth} ${day}, ${year}`,"",`### Android BOM  ${version}`, "",updateBOMReleaseNotesForAdobeIO(releaseNotes));
+                        const dateLine = `## ${fullMonth} ${day}, ${year}`
+                        // If the date line exists in the file, find the index of the date line and add the release notes after it.
+                        
+                        if (releaseFileContainsLineStartWith(dateLine) == true) {
+                            const existingDateLine = contentArray.indexOf(dateLine);
+                            contentArray.splice(existingDateLine + 1,0,"",`### Android BOM  ${version}`, "",updateBOMReleaseNotesForAdobeIO(releaseNotes));
+                        } else {
+                            contentArray.splice(releaseNotesHeaderIndex + 1,0,"",dateLine,"",`### Android BOM  ${version}`, "",updateBOMReleaseNotesForAdobeIO(releaseNotes));
+                        }
+                        
                         fs.writeFile(releaseMdPath, contentArray.join("\n"), function (err) {
                             if (err) return console.log(err);
                           });
