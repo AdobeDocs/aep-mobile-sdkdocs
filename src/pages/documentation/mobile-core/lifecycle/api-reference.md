@@ -1,6 +1,6 @@
 ---
-title: Mobile Core lifecycle API reference
-description: An API reference for the Mobile Core lifecycle extension.
+title: Mobile Core Lifecycle API reference
+description: An API reference for the Mobile Core Lifecycle extension.
 keywords:
 - API reference
 - Lifecycle
