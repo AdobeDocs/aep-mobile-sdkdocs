@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 import Alerts from '../../resources/alerts.md'
 
 <Variant platform="android" task="add" repeat="6"/>

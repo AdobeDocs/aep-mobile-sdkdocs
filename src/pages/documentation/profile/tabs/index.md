@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" task="add" repeat="5"/>
 
 1. Add the `UserProfile` library to your project using the app's gradle file.

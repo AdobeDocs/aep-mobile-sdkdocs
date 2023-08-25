@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" api="clear-updated-configuration" repeat="5"/>
 
 #### Java

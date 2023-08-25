@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" repeat="2"/>
 
 The SDK uses the cache and shared preferences at these locations:

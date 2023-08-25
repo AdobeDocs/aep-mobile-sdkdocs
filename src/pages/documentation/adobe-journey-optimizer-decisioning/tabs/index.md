@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" task="install" repeat="3"/>
 
 Add the Mobile Core, Edge, Identity for Edge Network and Optimize dependencies in your app's gradle file.

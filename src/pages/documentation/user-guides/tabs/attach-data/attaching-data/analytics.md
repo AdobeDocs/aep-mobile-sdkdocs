@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 The following sample shows how to attach data to all outgoing `TrackAction` Analytics network requests. To create this type of rule, select your property in the Data Collection UI and complete the following steps.
 
 #### Create a rule
