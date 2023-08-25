@@ -138,4 +138,3 @@ The shared state for this module is updated in the following scenarios:
 | :--- | :--- | :--- |
 | `uuid` | String | The UUID assigned by the Audience server. |
 | `aamprofile` | Dictionary/Map | The matching visitor profile segments associated with the user. |
-

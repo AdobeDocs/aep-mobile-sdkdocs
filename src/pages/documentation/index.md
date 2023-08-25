@@ -40,18 +40,18 @@ Experience Platform Mobile SDKs are available for Android, iOS, and a [variety](
 
 The Adobe Experience Platform Mobile SDK supports the following platforms:
 
-- [Android](./current-sdk-versions.md#android)
-- [iOS](./current-sdk-versions.md#ios)
-- [React Native](./current-sdk-versions.md#react-native)
-- [Flutter](./current-sdk-versions.md#flutter)
-- [Roku](./current-sdk-versions.md#roku)
+* [Android](./current-sdk-versions.md#android)
+* [iOS](./current-sdk-versions.md#ios)
+* [React Native](./current-sdk-versions.md#react-native)
+* [Flutter](./current-sdk-versions.md#flutter)
+* [Roku](./current-sdk-versions.md#roku)
 
 ## Resources
 
-- [Getting started](./getting-started/index.md)
-- [Getting the Experience Platform SDKs](./getting-started/get-the-sdk.md)
-- [Frequently asked questions](./faq.md)
-- [Why use the Adobe Experience Platform Mobile SDKs](https://medium.com/adobetech/accelerate-your-mobile-application-development-with-adobe-experience-platform-mobile-sdk-and-launch-ed023536d611)
+* [Getting started](./getting-started/index.md)
+* [Getting the Experience Platform SDKs](./getting-started/get-the-sdk.md)
+* [Frequently asked questions](./faq.md)
+* [Why use the Adobe Experience Platform Mobile SDKs](https://medium.com/adobetech/accelerate-your-mobile-application-development-with-adobe-experience-platform-mobile-sdk-and-launch-ed023536d611)
 
 ## Get Help
 

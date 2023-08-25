@@ -35,7 +35,6 @@ In the following example, `launches` and `anAddedKey` keys are added to the `con
 
 ![](../../../assets/attach-data/set-action.png)
 
-
 #### Save the rule and rebuild your property
 
 After you complete your configuration, verify that your rule looks like the following:

@@ -93,13 +93,13 @@ The following is a complete list of all of the metrics provided on your user's a
 
 ### Device information
 
-| Metric | Key | Description | 
+| Metric | Key | Description |
 | :----- | :--- | :--------- |
 | App ID | `a.AppId` | Stores the application name and version in the `AppName BundleVersion (app version code)` format. <br/><br/> An example of this format is `MyAppName 1.1(1)`. |
 | Device name | `a.DeviceName` | Stores the device name. |
 | Operating system version | `a.OSVersion` | Stores the operating system name and version. |
 | Carrier name | `a.CarrierName` | Stores the name of the mobile service provider as provided by the devices.<br/><br/>This metric is **not** automatically saved in an Analytics variable. For reporting, you must create a processing rule to copy this value to an Analytics variable. |
-| Resolution | `a.Resolution` | The width x height in pixels. | 
+| Resolution | `a.Resolution` | The width x height in pixels. |
 | Locale | `a.Locale` | The locale set for this device. For example, this can be `en-US`. |
 
 If you need to programmatically update your SDK configuration, use the following information to change your Lifecycle configuration values:

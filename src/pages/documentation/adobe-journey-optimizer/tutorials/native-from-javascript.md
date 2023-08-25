@@ -4,9 +4,9 @@ import Tabs from './tabs/native-from-javascript.md'
 
 You can handle events from in-app message interactions natively within your application by completing the following steps:
 
-- [Implement and assign a `MessagingDelegate`](#implement-and-assign-a-messagingdelegate)
-- [Register a JavaScript handler for your In-App Message](#register-a-javascript-handler-for-your-in-app-message)
-- [Post the JavaScript message from your In-App Message](#post-the-javascript-message-from-your-in-app-message)
+* [Implement and assign a `MessagingDelegate`](#implement-and-assign-a-messagingdelegate)
+* [Register a JavaScript handler for your In-App Message](#register-a-javascript-handler-for-your-in-app-message)
+* [Post the JavaScript message from your In-App Message](#post-the-javascript-message-from-your-in-app-message)
 
 ## Implement and assign a `MessagingDelegate`
 
@@ -66,6 +66,6 @@ JavaScript body passed to native callback: native callbacks are cool!
 
 The test apps in this repository demonstrate calling native code from JavaScript:
 
-- [Swift](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoApp)
-- [Objective-C](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoAppObjC)
-- [Java](https://github.com/adobe/aepsdk-messaging-android/tree/main/code/app)
+* [Swift](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoApp)
+* [Objective-C](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoAppObjC)
+* [Java](https://github.com/adobe/aepsdk-messaging-android/tree/main/code/app)

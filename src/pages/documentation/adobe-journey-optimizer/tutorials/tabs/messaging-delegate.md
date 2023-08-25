@@ -8,6 +8,7 @@ On Android, the delegate is registered with the Adobe Service Provider. The `Ser
 // defined in public class ServiceProvider 
 public void setMessageDelegate(MessagingDelegate messageDelegate)
 ```
+
 On Android, the delegate is registered with Mobile Core. The `MobileCore` contains a method to set the`MessagingDelegate` withing the `ServiceProvider` class.
 
 ```java

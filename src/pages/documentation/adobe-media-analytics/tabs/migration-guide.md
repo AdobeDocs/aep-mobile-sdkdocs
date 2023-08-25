@@ -29,7 +29,7 @@ Download extension with dependencies
 + pod 'AEPEdgeMedia'
 ```
 
-#### 2. Using SPM:
+#### 2. Using SPM
 
 Import the package:
 
