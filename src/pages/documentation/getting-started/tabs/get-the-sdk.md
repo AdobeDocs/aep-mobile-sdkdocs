@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" task="get" repeat="1"/>
 
 Latest version of the Adobe Experience Platform SDKs for Android supports Android 4.4 (API 19) or later.

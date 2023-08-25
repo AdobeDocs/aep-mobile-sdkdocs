@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" api="clear-prefetch-cache" repeat="5"/>
 
 #### Java

@@ -1,3 +1,11 @@
+---
+title: Places API reference
+description: An API reference for the Places mobile extension.
+keywords:
+- API reference
+- Places
+---
+
 import Tabs from './tabs/api-reference.md'
 
 # Places API reference

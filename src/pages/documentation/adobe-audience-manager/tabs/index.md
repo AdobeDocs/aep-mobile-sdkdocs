@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" task="add" repeat="8"/>
 
 1. Add the library to your project.

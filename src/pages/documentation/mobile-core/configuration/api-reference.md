@@ -1,3 +1,13 @@
+---
+title: Mobile Core Configuration API reference
+description: An API reference for the Mobile Core Configuration extension.
+keywords:
+- API reference
+- Configuration for Mobile Core
+- Configuration
+- Mobile Core
+---
+
 import Tabs from './tabs/api-reference.md'
 
 # Configuration API reference

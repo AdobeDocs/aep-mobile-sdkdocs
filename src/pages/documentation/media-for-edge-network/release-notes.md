@@ -1,3 +1,12 @@
+---
+title: Media for Edge Network release notes
+description: The release notes for the Media for Edge Network mobile extension.
+keywords:
+- Release notes
+- Edge Network
+- Media for Edge Network
+---
+
 # Release Notes
 
 ## June 6, 2023

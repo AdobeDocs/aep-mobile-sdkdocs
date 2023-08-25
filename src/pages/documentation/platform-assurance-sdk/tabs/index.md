@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" task="import-library" repeat="5"/>
 
 1. Add the following libraries in your project's `build.gradle` file:

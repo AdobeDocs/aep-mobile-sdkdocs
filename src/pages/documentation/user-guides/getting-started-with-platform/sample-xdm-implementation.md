@@ -1,3 +1,14 @@
+---
+title: Sample XDM implementation
+description: A guide that shows a sample Experience Data Model (XDM) implementation with the Mobile SDK.
+keywords:
+- Adobe Experience Platform
+- Getting started
+- Guide
+- Experience Data Model
+- XDM
+---
+
 import DownloadSampleApplicationAndroid from './tabs/sample-xdm-implementation/download-sample-application/android.md'
 import DownloadSampleApplicationIos from './tabs/sample-xdm-implementation/download-sample-application/ios.md'
 import BuildXDMObjectsAndroid from './tabs/sample-xdm-implementation/build-xdm-objects/android.md'

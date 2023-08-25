@@ -1,5 +1,8 @@
 ---
-description: 'Last Updated September 2, 2020'
+title: Adobe Experience Cloud and Apple's IDFA, Privacy announcements
+description: An announcement regarding Apple's privacy and data use updates, including IDFA tracking starting in iOS 14.5.
+keywords:
+- Privacy
 ---
 
 # Adobe Experience Cloud & Apple’s IDFA, Privacy Announcements

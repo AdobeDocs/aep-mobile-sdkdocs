@@ -1,3 +1,11 @@
+---
+title: Adobe Experience Platform Assurance API reference
+description: An API reference for the Adobe Experience Platform Assurance mobile extension.
+keywords:
+- Adobe Experience Platform Assurance
+- API reference
+---
+
 import Tabs from './tabs/api-reference.md'
 
 # Assurance API reference
