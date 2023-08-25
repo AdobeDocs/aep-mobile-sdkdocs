@@ -132,7 +132,6 @@ iOS
 
 If no other extension relies on the Identity for Experience Cloud ID Service extension, you can safely remove it. Please refer to the [Identity consideration document](../adobe-analytics/migrate-to-edge-network.md#identity-consideration-for-the-migration) for more information.
 
-
 ## Q: In my hybrid app, I need to pass the mobile SDK's ECID to the WebView using getUrlVariables API. However, the Web SDK generates a new ECID instead of recognizing the existing one. How to fix this?
 
 1. Ensure that the output from the getUrlVariables API includes accurate ECID and OrgID values.
