@@ -1,3 +1,12 @@
+---
+title: Set up a mobile property
+description: A guide that explains how to set up a mobile property, by creating the property, installing extensions, and publishing the configuration. Completing this process allows you to use Mobile SDK.
+keywords:
+- Guide
+- Mobile property
+- Tutorial
+---
+
 # Set up a mobile property
 
 A property is a container that you fill with extensions, rules, data elements, and libraries. To use these resources, you need to create and configure a mobile property in the [Data Collection UI](https://experience.adobe.com/#/data-collection/). You will typically create a mobile property for each mobile application you want to manage.

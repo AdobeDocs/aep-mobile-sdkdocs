@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" task="configure" repeat="5"/>
 
 #### Java

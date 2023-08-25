@@ -1,3 +1,11 @@
+---
+title: Adobe Journey Optimizer release notes
+description: The release notes for the Adobe Journey Optimizer (AJO) mobile extension.
+keywords:
+- Adobe Journey Optimizer Decisioning
+- Release notes
+---
+
 # Release Notes
 
 ## June 2, 2023

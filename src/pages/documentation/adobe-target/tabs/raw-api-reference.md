@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" api="execute-raw-request" repeat="6"/>
 
 #### Java

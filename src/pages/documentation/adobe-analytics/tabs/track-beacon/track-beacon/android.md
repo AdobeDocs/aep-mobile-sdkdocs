@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 In this method, the `proximity` parameter is an `int` that represents the various distances:
 
 * 0 - Unknown

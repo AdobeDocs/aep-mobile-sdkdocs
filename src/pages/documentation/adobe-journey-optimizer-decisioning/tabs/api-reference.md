@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" api="clear-propositions" repeat="5"/>
 
 #### Java

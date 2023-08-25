@@ -1,3 +1,11 @@
+---
+title: Adobe Experience Platform Edge Network API reference
+description: An API reference for the Adobe Experience Platform Edge Network mobile extension.
+keywords:
+- API reference
+- Edge Network
+---
+
 import Tabs from './tabs/api-reference.md'
 
 # Edge Network API reference

@@ -1,3 +1,11 @@
+---
+title: Migrating to Adobe Streaming Media for Edge Network extension
+description: Learn how to migrate to the Adobe Streaming Media for Edge Network extension.
+keywords:
+- Adobe Analytics for Media
+- Tutorial
+---
+
 import Tabs from './tabs/migration-guide.md'
 
 # Migrating to Adobe Streaming Media for Edge Network extension

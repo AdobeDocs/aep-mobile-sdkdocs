@@ -1,3 +1,11 @@
+---
+title: Adobe Experience Platform Assurance release notes
+description: The release notes for the Adobe Experience Platform Assurance mobile extension.
+keywords:
+- Adobe Experience Platform Assurance
+- Release notes
+---
+
 # Release Notes
 
 Release notes and change logs for the Adobe Experience Platform Assurance extension

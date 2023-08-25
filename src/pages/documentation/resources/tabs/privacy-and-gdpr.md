@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" task="collect-consent-settings" repeat="4"/>
 
 #### Java

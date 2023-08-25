@@ -1,3 +1,13 @@
+---
+title: Mobile Core Signal API reference
+description: An API reference for the Mobile Core Signal extension.
+keywords:
+- API reference
+- Mobile Core
+- Signal
+- Signal for Mobile Core
+---
+
 import Tabs from './tabs/api-reference.md'
 
 # Signal API reference

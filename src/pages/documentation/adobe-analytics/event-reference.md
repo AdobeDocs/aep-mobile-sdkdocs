@@ -1,3 +1,11 @@
+---
+title: Adobe Analytics event reference
+description: An event reference for the Adobe Analytics mobile extension.
+keywords:
+- Adobe Analytics
+- Event reference
+---
+
 # Analytics event reference
 
 ## Internal events for Adobe Analytics
