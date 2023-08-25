@@ -87,4 +87,3 @@ For more information about `collectPii` and its usage, see `collectPii` in the [
 ### Using tokens in Open URL rule actions
 
 Similarly to using tokens in postbacks and PII rule actions, `Open URL` actions allow you to specify a URL, which can contain the tokens that will be expanded by the Experience Platform SDKs. For more information about tokens, see the [rule tokens documentation](#rules-tokens).
-

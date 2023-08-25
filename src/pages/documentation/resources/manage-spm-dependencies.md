@@ -36,7 +36,7 @@ If you have configured package collection, select each package you would like to
 
 If not, enter the Package URL for the Swift SDK repositories:
 
-- AEPCore: `https://github.com/adobe/aepsdk-core-ios.git`
+* AEPCore: `https://github.com/adobe/aepsdk-core-ios.git`
 
 For each package, specify the Dependency rule as a specific version or a range of versions and select the Project.
 
