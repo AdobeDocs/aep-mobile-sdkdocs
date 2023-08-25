@@ -23,8 +23,12 @@ module.exports = {
               }
           ],
         pages: [{
-            title: 'Documentation',
-            path: '/documentation',
+            title: 'Edge-based extensions',
+            path: '/documentation/edge-extensions',
+        },
+        {
+            title: "Non-edge-based extensions",
+            path: "/documentation/non-edge-extensions"
         }],
         subPages: [
             {
@@ -88,6 +92,102 @@ module.exports = {
                     {
                         title: "Validation and next steps",
                         path: "/documentation/getting-started/validate"
+                    }
+                ]
+            },
+            {
+                title: "Edge extensions",
+                path: "/documentation/edge-extensions",
+                pages: [
+                    {
+                        title: "Identity for Edge Network",
+                        path: "/documentation/edge-extensions/identity-for-edge-network",
+                        pages: [
+                            {
+                                title: "Overview",
+                                path: "/documentation/edge-extensions/identity-for-edge-network"
+                            },
+                            {
+                                title: "API reference",
+                                path: "documentation/edge-extensions/identity-for-edge-network/api-reference"
+                            },
+                            {
+                                title: "Frequently asked questions",
+                                path: "documentation/edge-extensions/identity-for-edge-network/faq"
+                            },
+                            {
+                                title: "Release notes",
+                                path: "documentation/edge-extensions/identity-for-edge-network/release-notes"
+                            }
+                        ]
+                    },
+                    {
+                        title: "Lifecycle for Edge Network",
+                        path: "/documentation/edge-extensions/lifecycle-for-edge-network",
+                        pages: [
+                            {
+                                title: "Overview",
+                                path: "/documentation/edge-extensions/lifecycle-for-edge-network"
+                            },
+                            {
+                                title: "API reference",
+                                path: "documentation/edge-extensions/lifecycle-for-edge-network/api-reference"
+                            },
+                            {
+                                title: "Event reference",
+                                path: "documentation/edge-extensions/lifecycle-for-edge-network/event-reference"
+                            },
+                            {
+                                title: "Metrics",
+                                path: "documentation/edge-extensions/lifecycle-for-edge-network/metrics"
+                            }
+                        ]
+                    },
+                    {
+                        title: "Adobe Streaming Media for Edge Network",
+                        path: "/documentation/edge-extensions/media-for-edge-network",
+                        pages: [
+                            {
+                                title: "Overview",
+                                path: "/documentation/edge-extensions/media-for-edge-network"
+                            },
+                            {
+                                title: "API reference",
+                                path: "documentation/edge-extensions/media-for-edge-network/api-reference"
+                            },
+                            {
+                                title: 'Release notes',
+                                path: '/documentation/edge-extensions/media-for-edge-network/release-notes'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: "Non-edge extensions",
+                path: "/documentation/non-edge-extensions",
+                pages: [
+                    {
+                        title: "Adobe Campaign Classic",
+                        path: "/documentation/non-edge-extensions/adobe-campaign-classic",
+                        pages: [
+                            {
+                                title: "Overview",
+                                path: "/documentation/non-edge-extensions/adobe-campaign-classic"
+                            },
+                            {
+                                title: "API reference",
+                                path: "documentation/non-edge-extensions/adobe-campaign-classic/api-reference"
+                            },
+                            {
+                                title: "Event reference",
+                                path: "documentation/non-edge-extensions/adobe-campaign-classic/event-reference"
+                            },
+                            {
+                                title: "Release notes",
+                                path: "documentation/non-edge-extensions/adobe-campaign-classic/release-notes"
+                            }
+                        ]
                     }
                 ]
             },
@@ -273,50 +373,7 @@ module.exports = {
                             }
                         ]
                     },
-                    {
-                        title: "Identity for Edge Network",
-                        path: "/documentation/identity-for-edge-network",
-                        pages: [
-                            {
-                                title: "Overview",
-                                path: "/documentation/identity-for-edge-network"
-                            },
-                            {
-                                title: "API reference",
-                                path: "documentation/identity-for-edge-network/api-reference"
-                            },
-                            {
-                                title: "Frequently asked questions",
-                                path: "documentation/identity-for-edge-network/faq"
-                            },
-                            {
-                                title: "Release notes",
-                                path: "documentation/identity-for-edge-network/release-notes"
-                            }
-                        ]
-                    },
-                    {
-                        title: "Lifecycle for Edge Network",
-                        path: "/documentation/lifecycle-for-edge-network",
-                        pages: [
-                            {
-                                title: "Overview",
-                                path: "/documentation/lifecycle-for-edge-network"
-                            },
-                            {
-                                title: "API reference",
-                                path: "documentation/lifecycle-for-edge-network/api-reference"
-                            },
-                            {
-                                title: "Event reference",
-                                path: "documentation/lifecycle-for-edge-network/event-reference"
-                            },
-                            {
-                                title: "Metrics",
-                                path: "documentation/lifecycle-for-edge-network/metrics"
-                            }
-                        ]
-                    },
+
                     {
                         title: "Adobe Experience Platform Assurance",
                         path: "/documentation/platform-assurance-sdk",
@@ -430,24 +487,6 @@ module.exports = {
                         ]
                     },
                     {
-                        title: "Adobe Streaming Media for Edge Network",
-                        path: "/documentation/media-for-edge-network",
-                        pages: [
-                            {
-                                title: "Overview",
-                                path: "/documentation/media-for-edge-network"
-                            },
-                            {
-                                title: "API reference",
-                                path: "documentation/media-for-edge-network/api-reference"
-                            },
-                            {
-                                title: 'Release notes',
-                                path: '/documentation/media-for-edge-network/release-notes'
-                            }
-                        ]
-                    },
-                    {
                         title: "Adobe Media Analytics",
                         path: "/documentation/adobe-media-analytics",
                         pages: [
@@ -491,28 +530,7 @@ module.exports = {
                             }
                         ]
                     },
-                    {
-                        title: "Adobe Campaign Classic",
-                        path: "/documentation/adobe-campaign-classic",
-                        pages: [
-                            {
-                                title: "Overview",
-                                path: "/documentation/adobe-campaign-classic"
-                            },
-                            {
-                                title: "API reference",
-                                path: "documentation/adobe-campaign-classic/api-reference"
-                            },
-                            {
-                                title: "Event reference",
-                                path: "documentation/adobe-campaign-classic/event-reference"
-                            },
-                            {
-                                title: "Release notes",
-                                path: "documentation/adobe-campaign-classic/release-notes"
-                            }
-                        ]
-                    },
+                    
                     {
                         title: "Adobe Campaign Standard",
                         path: "/documentation/adobe-campaign-standard",
