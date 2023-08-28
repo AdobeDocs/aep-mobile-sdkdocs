@@ -1,3 +1,12 @@
+---
+title: Adobe Audience Manager overview
+description: An overview for the Adobe Audience Manager mobile extension.
+keywords:
+- Adobe Audience Manager
+- Product overview
+---
+
+
 import Tabs from './tabs/index.md'
 
 # Adobe Audience Manager
@@ -58,4 +67,3 @@ To update SDK configuration programmatically, use the following information to c
 * Want to know more about setting up Adobe Analytics server-side forwarding to Audience Manager?
   * [Server-side forwarding overview](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/server-side-forwarding/ssf.html)
   * [Set up server-side forwarding with Audience Manager](../adobe-analytics/index.md#server-side-forwarding-with-audience-manager)
-

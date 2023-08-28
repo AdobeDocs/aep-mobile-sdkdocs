@@ -1,6 +1,16 @@
-# XDM Experience Events
+---
+title: Experience Data Model (XDM) Experience Events
+description: A guide that explains how XDM Experience Events can be used with the Adobe Experience Platform Edge Network extension.
+keywords:
+- Edge Network
+- Experience Data Model
+- Guide
+- XDM
+---
 
-The Adobe Experience Platform Edge extension can send events that follow a previously defined XDM schema to Adobe Experience Edge Network. This extension automatically adds Identity information to each Experience event as described in this document.
+# Experience Data Model (XDM) Experience Events
+
+The Adobe Experience Platform Edge extension can send events that follow a previously defined Experience Data Model (XDM) schema to Adobe Experience Edge Network. This extension automatically adds Identity information to each Experience event as described in this document.
 
 ## Event structure
 
@@ -38,4 +48,3 @@ Implementation details are automatically collected by the Edge Network extension
 | Environment | For a mobile application the environment is always `app`.|
 
 If you would like to include this information in your dataset, add the "Implementation Details" field group to the schema tied to your dataset.
-

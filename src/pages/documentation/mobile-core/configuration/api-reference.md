@@ -1,3 +1,13 @@
+---
+title: Mobile Core Configuration API reference
+description: An API reference for the Mobile Core Configuration extension.
+keywords:
+- API reference
+- Configuration for Mobile Core
+- Configuration
+- Mobile Core
+---
+
 import Tabs from './tabs/api-reference.md'
 
 # Configuration API reference
@@ -20,7 +30,7 @@ You can clear any programmatic updates made to the configuration via the `clearU
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-Android 
+Android
 
 <Tabs query="platform=android&api=clear-updated-configuration"/>
 

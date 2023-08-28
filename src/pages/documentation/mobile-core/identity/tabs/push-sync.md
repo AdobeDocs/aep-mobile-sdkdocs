@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" task="set-push" repeat="5"/>
 
 #### Java

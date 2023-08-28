@@ -1,3 +1,13 @@
+---
+title: Manage dependencies using Gradle
+description: A guide that explains the best practices for managing Mobile SDK dependencies for Android apps using Gradle.
+keywords:
+- Android
+- Guide
+- Gradle
+- Tutorial
+---
+
 # Manage dependencies using Gradle
 
 Installation via [Maven](https://maven.apache.org/) and [Gradle](https://gradle.org/) is recommended, as it's the easiest way to get the Adobe Experience Platform Mobile SDK into your Android app.

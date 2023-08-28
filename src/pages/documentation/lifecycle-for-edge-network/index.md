@@ -1,3 +1,12 @@
+---
+title: Lifecycle for Edge Network overview
+description: An overview for the Lifecycle for Edge Network mobile extension.
+keywords:
+- Edge Network
+- Lifecycle for Edge Network
+- Product overview
+---
+
 # Lifecycle for Edge Network
 
 The Adobe Experience Platform Mobile SDK Lifecycle extension enables application lifecycle data collection from your mobile app when using the Adobe Experience Platform Mobile SDK and the [Edge Network extension](../edge-network/index.md). Use the following steps to set up an application to forward Lifecycle extension metrics to the Adobe Experience Platform.
@@ -85,4 +94,3 @@ After you complete your configuration, verify that your rule looks like the foll
 For implementation details, please reference the Lifecycle documentation to learn how to [add Lifecycle to your app](../mobile-core/lifecycle/index.md#add-lifecycle-to-your-app). as well as [register Lifecycle with Mobile Core and add appropriate the Start/Pause calls](../mobile-core/lifecycle/index.md#register-lifecycle-with-mobile-core-and-add-appropriate-start-pause-calls).
 
 In addition, use the following steps to [add the Edge Network extension to your app](../edge-network/index.md#add-the-edge-network-extension-to-your-app).
-

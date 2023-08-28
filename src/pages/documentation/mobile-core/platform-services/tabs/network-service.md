@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" task="usage" repeat="2"/>
 
 #### Java
@@ -218,8 +222,8 @@ public class MyApp extends Application {
     public void onCreate() {
         super.onCreate();
 
-		// Set the network override prior to making any other calls to the SDK
-		ServiceProvider.getInstance().setNetworkService(new MyCustomNetworkService());
+        // Set the network override prior to making any other calls to the SDK
+        ServiceProvider.getInstance().setNetworkService(new MyCustomNetworkService());
 
         MobileCore.setApplication(this);
 

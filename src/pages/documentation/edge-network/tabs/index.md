@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 import Alerts from '../../resources/alerts.md'
 
 <Variant platform="android" task="add" repeat="6"/>
@@ -64,18 +68,18 @@ public class MainApp extends Application {
 
   private final String ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID";
 
-	@Override
-	public void onCreate() {
-		super.onCreate();
+ @Override
+ public void onCreate() {
+  super.onCreate();
 
-		MobileCore.setApplication(this);
-		MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
+  MobileCore.setApplication(this);
+  MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
 
-		MobileCore.registerExtensions(
-			Arrays.asList(Edge.EXTENSION, Identity.EXTENSION),
-			o -> Log.d("MainApp", "Adobe Experience Platform Mobile SDK was initialized.")
-		);
-	}
+  MobileCore.registerExtensions(
+   Arrays.asList(Edge.EXTENSION, Identity.EXTENSION),
+   o -> Log.d("MainApp", "Adobe Experience Platform Mobile SDK was initialized.")
+  );
+ }
 }
 ```
 

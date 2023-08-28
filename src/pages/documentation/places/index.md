@@ -1,3 +1,11 @@
+---
+title: Places overview
+description: An overview for the Places mobile extension.
+keywords:
+- Places
+- Product overview
+---
+
 import Tabs from './tabs/index.md'
 
 # Adobe Experience Platform Location Service

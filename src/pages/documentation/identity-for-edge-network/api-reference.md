@@ -1,3 +1,12 @@
+---
+title: Identity for Edge Network API reference
+description: An API reference for the Identity for Edge Network mobile extension.
+keywords:
+- API reference
+- Edge Network
+- Identity for Edge Network
+---
+
 import Tabs from './tabs/api-reference.md'
 
 # API Reference
@@ -54,7 +63,7 @@ Returns the identifiers in a URL's query parameters for consumption in **hybrid 
 
 An example of an encoded string is as follows: `"adobe_mc=TS%3DTIMESTAMP_VALUE%7CMCMID%3DYOUR_ECID%7CMCORGID%3D9YOUR_EXPERIENCE_CLOUD_ID"`
 
-* `MCID`: This is also known as the Experience Cloud ID (ECID).
+* `MCMID`: This is also known as the Experience Cloud ID (ECID).
 * `MCORGID`: This is also known as the Experience Cloud Organization ID.
 * `TS`: The timestamp that is taken when the request was made.
 

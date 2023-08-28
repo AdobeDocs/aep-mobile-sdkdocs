@@ -1,3 +1,13 @@
+---
+title: Manage dependencies using Swift Package Manager
+description: A guide that explains the best practices for managing Mobile SDK dependencies for iOS apps using Swift Package Manager.
+keywords:
+- iOS
+- Guide
+- Swift Package Manager
+- Tutorial
+---
+
 # Manage dependencies using Swift Package Manager
 
 The [Swift Package Manager (SPM)](https://www.swift.org/package-manager/) is a tool for managing the distribution of Swift code that's integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies. The Adobe Experience Platform SDKs support installation using SPM.
@@ -26,7 +36,7 @@ If you have configured package collection, select each package you would like to
 
 If not, enter the Package URL for the Swift SDK repositories:
 
-- AEPCore: `https://github.com/adobe/aepsdk-core-ios.git`
+* AEPCore: `https://github.com/adobe/aepsdk-core-ios.git`
 
 For each package, specify the Dependency rule as a specific version or a range of versions and select the Project.
 

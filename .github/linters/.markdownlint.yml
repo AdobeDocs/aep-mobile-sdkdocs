@@ -48,4 +48,4 @@ single-trailing-newline: true   # Files should end with a single newline charact
 strong-style:
   style: "consistent"
 ul-style:
-  style: "consistent"
+  style: "asterisk"

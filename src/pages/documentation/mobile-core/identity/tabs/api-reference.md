@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" api="append-to-url" repeat="7"/>
 
 #### Java
@@ -11,8 +15,8 @@ public static void appendVisitorInfoForURL(
             @NonNull final String baseURL, @NonNull final AdobeCallback<String> callback)
 ```
 
-- _baseUrl_ is the URL to which the visitor information needs to be appended. If the visitor information is nil or empty, the URL is returned as is.
-- _callback_ is invoked after the updated URL is available.
+* _baseUrl_ is the URL to which the visitor information needs to be appended. If the visitor information is nil or empty, the URL is returned as is.
+* _callback_ is invoked after the updated URL is available.
 
 **Example**
 
@@ -40,8 +44,8 @@ Identity.appendVisitorInfoForURL("https://example.com", new AdobeCallback<String
 static func appendTo(url: URL?, completion: @escaping (URL?, Error?) -> Void)
 ```
 
-- _url_ is the URL to which the visitor information needs to be appended. If the visitor information is nil or empty, the URL is returned as is.
-- _completion_ is invoked after the updated _URL_ is available or _Error_ if an unexpected exception occurs or the request times out. The returned `Error` contains the [AEPError](../api-reference.md#public-classes) code of the specific error.
+* _url_ is the URL to which the visitor information needs to be appended. If the visitor information is nil or empty, the URL is returned as is.
+* _completion_ is invoked after the updated _URL_ is available or _Error_ if an unexpected exception occurs or the request times out. The returned `Error` contains the [AEPError](../api-reference.md#public-classes) code of the specific error.
 
 **Example**
 
@@ -195,7 +199,7 @@ This API can be called with [AdobeCallback](../api-reference.md#public-classes) 
 public static void getExperienceCloudId(@NonNull final AdobeCallback<String> callback)
 ```
 
-- _callback_ is invoked after the ECID is available.
+* _callback_ is invoked after the ECID is available.
 
 **Example**
 
@@ -219,7 +223,7 @@ Identity.getExperienceCloudId(new AdobeCallback<String>() {
 static func getExperienceCloudId(completion: @escaping (String?, Error?) -> Void)
 ```
 
-- _completion_ is invoked with _String_ after the ECID is available, or _Error_ if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../api-reference.md#public-classes) code of the specific error.
+* _completion_ is invoked with _String_ after the ECID is available, or _Error_ if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../api-reference.md#public-classes) code of the specific error.
 
 **Example**
 
@@ -291,7 +295,7 @@ This API can be called with [AdobeCallback](../api-reference.md#public-classes) 
 public static void getIdentifiers(@NonNull final AdobeCallback<List<VisitorID>> callback)
 ```
 
-- _callback_ is invoked after the customer identifiers are available.
+* _callback_ is invoked after the customer identifiers are available.
 
 **Example**
 
@@ -316,7 +320,7 @@ Identity.getIdentifiers(new AdobeCallback<List<VisitorID>>() {
 static func getIdentifiers(completion: @escaping ([Identifiable]?, Error?) -> Void)
 ```
 
-- _completion_ is invoked with a list of _Identifiable_ objects after the customer identifiers are available, or _Error_ if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../api-reference.md#public-classes) code of the specific error.
+* _completion_ is invoked with a list of _Identifiable_ objects after the customer identifiers are available, or _Error_ if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../api-reference.md#public-classes) code of the specific error.
 
 **Example**
 
@@ -390,7 +394,7 @@ This API can be called with [AdobeCallback](../api-reference.md#public-classes) 
 public static void getUrlVariables(final AdobeCallback<String> callback);
 ```
 
-- _callback_ has an NSString value that contains the visitor identifiers as a query string after the service request is complete.
+* _callback_ has an NSString value that contains the visitor identifiers as a query string after the service request is complete.
 
 **Example**
 
@@ -419,7 +423,7 @@ Identity.getUrlVariables(new AdobeCallback<String>() {
 static func getUrlVariables(completion: @escaping (String?, Error?) -> Void)
 ```
 
-- _completion_ is invoked with _String_ containing the visitor identifiers as a query string, or _Error_ if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../api-reference.md#public-classes) code of the specific error. The default timeout of 500ms.
+* _completion_ is invoked with _String_ containing the visitor identifiers as a query string, or _Error_ if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../api-reference.md#public-classes) code of the specific error. The default timeout of 500ms.
 
 **Example**
 
@@ -574,7 +578,7 @@ When using Flutter, registering Identity with Mobile Core should be done in nati
 public static void setAdvertisingIdentifier(@Nullable final String advertisingIdentifier)
 ```
 
-- _advertisingIdentifier_ is a string that provides developers with a simple, standard system to track the Ads through their apps.
+* _advertisingIdentifier_ is a string that provides developers with a simple, standard system to track the Ads through their apps.
 
 **Example**
 
@@ -636,7 +640,7 @@ Starting iOS 14+, applications must use the [App Tracking Transparency](https://
 public static func setAdvertisingIdentifier(_ identifier: String?)
 ```
 
-- _identifier_ is a string that provides developers with a simple, standard system to continue to track the Ads through their apps.
+* _identifier_ is a string that provides developers with a simple, standard system to continue to track the Ads through their apps.
 
 **Example**
 
@@ -791,7 +795,7 @@ FlutterACPCore.setAdvertisingIdentifier("ADVTID");
 public static void setPushIdentifier(@Nullable final String pushIdentifier)
 ```
 
-- _pushIdentifier_ is a string that contains the device token for push notifications.
+* _pushIdentifier_ is a string that contains the device token for push notifications.
 
 **Example**
 
@@ -811,7 +815,7 @@ MobileCore.setPushIdentifier(token);
 public static func setPushIdentifier(_ deviceToken: Data?)
 ```
 
-- _deviceToken_ is a string that contains the device token for push notifications.
+* _deviceToken_ is a string that contains the device token for push notifications.
 
 **Example**
 
@@ -860,9 +864,9 @@ public static void syncIdentifier(
             @NonNull final VisitorID.AuthenticationState authenticationState)
 ```
 
-- _identifierType (String)_ contains the `identifier type`, and this parameter should not be null or empty. The allowed characters are [A-Za-z0-9_.]
-- _identifier (String)_ contains the `identifier value`, and this parameter should not be null or empty.
-- _authenticationState (AuthenticationState)_ indicates the authentication state of the user and contains one of the [VisitorID.AuthenticationState](#public-classes) values.
+* _identifierType (String)_ contains the `identifier type`, and this parameter should not be null or empty. The allowed characters are [A-Za-z0-9_.]
+* _identifier (String)_ contains the `identifier value`, and this parameter should not be null or empty.
+* _authenticationState (AuthenticationState)_ indicates the authentication state of the user and contains one of the [VisitorID.AuthenticationState](#public-classes) values.
 
 **Example**
 
@@ -883,9 +887,9 @@ Identity.syncIdentifier("idType",
 static func syncIdentifier(identifierType: String, identifier: String, authenticationState: MobileVisitorAuthenticationState)
 ```
 
-- The _identifierType (String)_ contains the `identifier type`, and this parameter should not be null or empty. The allowed characters are [A-Za-z0-9_.]
-- The _identifier (String)_ contains the `identifier` value, and this parameter should not be null or empty. If either the `identifierType` or `identifier` contains a null or an empty string, the identifier is ignored by the Identity extension.
-- The _authenticationState (MobileVisitorAuthenticationState)_ value indicates the authentication state for the user and contains one of the [MobileVisitorAuthenticationState](#public-classes) values.
+* The _identifierType (String)_ contains the `identifier type`, and this parameter should not be null or empty. The allowed characters are [A-Za-z0-9_.]
+* The _identifier (String)_ contains the `identifier` value, and this parameter should not be null or empty. If either the `identifierType` or `identifier` contains a null or an empty string, the identifier is ignored by the Identity extension.
+* The _authenticationState (MobileVisitorAuthenticationState)_ value indicates the authentication state for the user and contains one of the [MobileVisitorAuthenticationState](#public-classes) values.
 
 **Example**
 
@@ -952,7 +956,7 @@ FlutterACPIdentity.syncIdentifier("identifierType", "identifier", ACPMobileVisit
 public static void syncIdentifiers(@NonNull final Map<String, String> identifiers)
 ```
 
-- _identifiers_ is a map that contains the identifiers with the Identifier type as the key, and the string identifier as the value. In each identifier pair, if the `identifier type` contains a null or an empty string, the identifier is ignored by the Identity extension.
+* _identifiers_ is a map that contains the identifiers with the Identifier type as the key, and the string identifier as the value. In each identifier pair, if the `identifier type` contains a null or an empty string, the identifier is ignored by the Identity extension.
 
 **Example**
 
@@ -975,7 +979,7 @@ Identity.syncIdentifiers(identifiers);
 static func syncIdentifiers(identifiers: [String: String]?)
 ```
 
-- The _identifiers_ dictionary contains identifier type as the key and identifier as the value, both identifier type and identifier should be non empty and non nil values.
+* The _identifiers_ dictionary contains identifier type as the key and identifier as the value, both identifier type and identifier should be non empty and non nil values.
 
 **Example**
 
@@ -1040,8 +1044,8 @@ public static void syncIdentifiers(
             @NonNull final VisitorID.AuthenticationState authenticationState)
 ```
 
-- _identifiers_ is a map that contains IDs with the identifier type as the key, and the string identifier as the value.
-- _authState_ indicates the authentication state for the user, which contains one of the following [VisitorID.AuthenticationState](#public-classes) values.
+* _identifiers_ is a map that contains IDs with the identifier type as the key, and the string identifier as the value.
+* _authState_ indicates the authentication state for the user, which contains one of the following [VisitorID.AuthenticationState](#public-classes) values.
 
 **Example**
 
@@ -1064,8 +1068,8 @@ Identity.syncIdentifiers(identifiers, VisitorID.AuthenticationState.AUTHENTICATE
 static func syncIdentifiers(identifiers: [String: String]?, authenticationState: MobileVisitorAuthenticationState)
 ```
 
-- The _identifiers_ dictionary contains identifier type as the key and identifier as the value, both identifier type and identifier should be non empty and non nil values.
-- The _authenticationState (MobileVisitorAuthenticationState)_ indicates the authentication state of the user and contains one of the [MobileVisitorAuthenticationState](#public-classes) values.
+* The _identifiers_ dictionary contains identifier type as the key and identifier as the value, both identifier type and identifier should be non empty and non nil values.
+* The _authenticationState (MobileVisitorAuthenticationState)_ indicates the authentication state of the user and contains one of the [MobileVisitorAuthenticationState](#public-classes) values.
 
 **Example**
 

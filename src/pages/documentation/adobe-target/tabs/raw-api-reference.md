@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" api="execute-raw-request" repeat="6"/>
 
 #### Java
@@ -8,8 +12,8 @@
 public static void executeRawRequest(final Map<String, Object> request, final AdobeCallback<Map<String, Object>> callback)
 ```
 
-- `request`: A map containing prefetch or execute request data in the Target v1 delivery API request format.
-- `callback`: An AdobeCallback instance which will be called after the Target request is completed. The parameter in the callback will contain the response data if the request executed successfully, or it will contain null otherwise. 
+* `request`: A map containing prefetch or execute request data in the Target v1 delivery API request format.
+* `callback`: An AdobeCallback instance which will be called after the Target request is completed. The parameter in the callback will contain the response data if the request executed successfully, or it will contain null otherwise.
 
 **Example**
 
@@ -96,8 +100,8 @@ Target.executeRawRequest(request, response -> {
 static func executeRawRequest(_ request: [[String: Any]], _ completion: @escaping ([[String: Any]]?, Error?) -> Void)
 ```
 
-- `request`: A dictionary containing prefetch or execute request data in the Target v1 delivery API request format.
-- `completion`: A callback which will be invoked with the Target response data or error message after the request is completed.
+* `request`: A dictionary containing prefetch or execute request data in the Target v1 delivery API request format.
+* `completion`: A callback which will be invoked with the Target response data or error message after the request is completed.
 
 **Example**
 
@@ -159,8 +163,8 @@ Target.executeRawRequest(request) { responseData, error in
 + (void)executeRawRequest:(nonnull NSDictionary<NSString *, id> *)request completion:(void (nonnull ^)(nullable NSDictionary<NSString *, id> *, nullable NSError *))completion
 ```
 
-- `request`: A dictionary containing prefetch or execute request data in the Target v1 delivery API request format.
-- `completion`: A callback which will be invoked with the Target response data or error message after the request is completed.
+* `request`: A dictionary containing prefetch or execute request data in the Target v1 delivery API request format.
+* `completion`: A callback which will be invoked with the Target response data or error message after the request is completed.
 
 **Example**
 
@@ -222,7 +226,7 @@ NSDictionary *request = @{
 public static void sendRawNotifications(final Map<String, Object> request)
 ```
 
-- `request`: A map containing notifications data in the Target v1 delivery API request format.
+* `request`: A map containing notifications data in the Target v1 delivery API request format.
 
 **Example**
 
@@ -266,7 +270,7 @@ Target.sendRawNotifications(request);
 static func sendRawNotifications(_ request: [String: Any]) 
 ```
 
-- `request`: A dictionary containing notifications data in the Target v1 delivery API request format.
+* `request`: A dictionary containing notifications data in the Target v1 delivery API request format.
 
 **Example**
 
@@ -303,7 +307,7 @@ Target.sendRawNotifications([
 + (void)sendRawNotifications:(nonnull NSDictionary<NSString *, id> *)request
 ```
 
-- `request`: A dictionary containing notifications data in the Target v1 delivery API request format.
+* `request`: A dictionary containing notifications data in the Target v1 delivery API request format.
 
 **Example**
 

@@ -1,3 +1,11 @@
+---
+title: Adobe Campaign Classic API reference
+description: An API reference for the Adobe Campaign Classic mobile extension.
+keywords:
+- Adobe Campaign Classic
+- API reference
+---
+
 import Tabs from './tabs/api-reference.md'
 
 # Adobe Campaign Classic API reference
@@ -58,7 +66,7 @@ iOS
 
 ## trackNotificationClick
 
-The `trackNotificationClick` API sends the clicked push notification's tracking information to the configured Adobe Campaign Classic server. This API can be used to send tracking information when the notification is clicked, which may result in the application being opened. 
+The `trackNotificationClick` API sends the clicked push notification's tracking information to the configured Adobe Campaign Classic server. This API can be used to send tracking information when the notification is clicked, which may result in the application being opened.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" api="extension-version" repeat="5"/>
 
 #### Java
@@ -150,7 +154,7 @@ Messaging.refreshInAppMessages()
 
 <Variant platform="android" api="set-push-identifier" repeat="7"/>
 
-To retrieve the push token from Firebase Messaging Service, please follow the tutorial within the [Firebase documentation](https://firebase.google.com/docs/cloud-messaging/android/client#retrieve-the-current-registration-token). 
+To retrieve the push token from Firebase Messaging Service, please follow the tutorial within the [Firebase documentation](https://firebase.google.com/docs/cloud-messaging/android/client#retrieve-the-current-registration-token).
 
 #### Java
 

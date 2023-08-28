@@ -1,3 +1,11 @@
+---
+title: Mobile Core API reference
+description: An API reference for the Mobile Core extensions.
+keywords:
+- API reference
+- Mobile Core
+---
+
 import Tabs from './tabs/api-reference.md'
 
 # Mobile Core API reference
@@ -188,7 +196,7 @@ iOS
 <InlineAlert variant="warning" slots="text"/>
 
 This API has been deprecated starting in v2.0.0 version of Mobile Core extension.
-Use [registerExtensions](#registerExtensions) to register desired extensions and boot up the SDK for event processing. Calling `MobileCore.start()` API is no longer required when using `MobileCore.registerExtensions()`.
+Use [registerExtensions](#registerextensions) to register desired extensions and boot up the SDK for event processing. Calling `MobileCore.start()` API is no longer required when using `MobileCore.registerExtensions()`.
 
 Extensions can be incrementally registered with Mobile Core using the `registerExtension` API.
 
@@ -373,7 +381,7 @@ iOS
 <InlineAlert variant="warning" slots="text"/>
 
 This is an Android only API and has been deprecated starting in v2.0.0 of the Mobile Core extension.
-Use [registerExtensions](#registerExtensions) to register desired extensions and boot up the SDK for event processing. Calling `MobileCore.start()` API is no longer required when using `MobileCore.registerExtensions()`.
+Use [registerExtensions](#registerextensions) to register desired extensions and boot up the SDK for event processing. Calling `MobileCore.start()` API is no longer required when using `MobileCore.registerExtensions()`.
 
 The `start` API triggers Mobile Core to start event processing. This should be used after the desired set of extensions have been registered using `MobileCore.registerExtension()`  or `<EXTENSION_NAME>.registerExtension()`. A call to `start` will wait for any outstanding registrations to complete and then start event processing. You can use the callback to kickoff additional operations immediately after any operations kicked off during registration. This method should not be invoked more than once in your app.
 

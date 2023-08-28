@@ -1,3 +1,11 @@
+---
+title: Adobe Campaign Standard event reference
+description: An event reference for the Adobe Campaign Standard mobile extension.
+keywords:
+- Adobe Campaign Standard
+- Event reference
+---
+
 # Adobe Campaign Standard event reference
 
 ## Events handled
@@ -210,4 +218,3 @@ The following key-value pairs are used in this event:
 { "a.message.id": "12345678", "a.message.viewed": "1" }
 { "a.message.id": "12345678", "a.message.clicked": "1" }
 ```
-

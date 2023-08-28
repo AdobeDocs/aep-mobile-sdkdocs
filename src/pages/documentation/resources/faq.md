@@ -1,3 +1,11 @@
+---
+title: Frequently asked questions
+description: An guide listing frequently asked questions about the Adobe Experience Platform Mobile SDKs.
+keywords:
+- Frequently asked questions
+- FAQ
+---
+
 import FAQ from './tabs/faq.md'
 
 # Frequently asked questions
@@ -153,10 +161,10 @@ D8: Invoke-customs are only supported starting with Android O (--min-api 26)
 Caused by: com.android.builder.dexing.DexArchiveBuilderException: Error while dexing.
 The dependency contains Java 8 bytecode. Please enable desugaring by adding the following to build.gradle
 android {
-	compileOptions {
-		sourceCompatibility 1.8
-		targetCompatibility 1.8
-	}
+ compileOptions {
+  sourceCompatibility 1.8
+  targetCompatibility 1.8
+ }
 }
 
 See https://developer.android.com/studio/write/java8-support.html for details.

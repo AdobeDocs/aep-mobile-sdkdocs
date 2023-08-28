@@ -1,3 +1,12 @@
+---
+title: Adobe Streaming Media for Edge Network overview
+description: An overview for the Media for Edge Network mobile extension.
+keywords:
+- Product overview
+- Edge Network
+- Media for Edge Network
+---
+
 import Tabs from './tabs/index.md'
 
 # Adobe Streaming Media for Edge Network

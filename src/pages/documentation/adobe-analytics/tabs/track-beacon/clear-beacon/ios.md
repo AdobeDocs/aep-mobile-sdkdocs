@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 Currently, `CLBeacon` is only available on iOS. The sample code contains the necessary checks to ensure OS compatibility.
 
 This example uses `static` constant strings that were provided in the `trackBeacon` code sample above.

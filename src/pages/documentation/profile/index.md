@@ -1,3 +1,11 @@
+---
+title: Profile overview
+description: An overview for the Profile mobile extension.
+keywords:
+- Product overview
+- Profile
+---
+
 import Tabs from './tabs/index.md'
 
 # Profile
@@ -15,8 +23,8 @@ To get started with the Profile extension:
 1. Configure the Profile Extension in the Data Collection UI.
 2. Add the Profile extension to your app.
 3. Implement Profile APIs to:
-   - Update user attributes.
-   - Remove user attributes.
+   * Update user attributes.
+   * Remove user attributes.
 
 ## Install the Profile extension in the Data Collection UI
 

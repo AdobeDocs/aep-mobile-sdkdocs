@@ -1,3 +1,14 @@
+---
+title: Programmatically control the display of in-app messages
+description: A guide that explains how to use a Messaging delegate to programmatically control the display of in-app messages.
+keywords:
+- Adobe Journey Optimizer
+- Guide
+- In-app messages
+- Messaging
+- Tutorial
+---
+
 import Tabs from './tabs/messaging-delegate.md'
 
 # Programmatically control the display of in-app messages
@@ -68,9 +79,9 @@ iOS
 
 The test apps in this repository demonstrate using a `MessagingDelegate`:
 
-- [Swift](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoApp)
-- [Objective-C](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoAppObjC)
-- [Java](https://github.com/adobe/aepsdk-messaging-android/tree/main/code/app)
+* [Swift](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoApp)
+* [Objective-C](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoAppObjC)
+* [Java](https://github.com/adobe/aepsdk-messaging-android/tree/main/code/app)
 
 #### Further reading
 

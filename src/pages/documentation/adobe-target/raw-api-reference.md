@@ -1,3 +1,11 @@
+---
+title: Adobe Target raw API reference
+description: An API reference for executing raw API requests for the Adobe Target mobile extension.
+keywords:
+- Adobe Target
+- API reference
+---
+
 import Tabs from './tabs/raw-api-reference.md'
 
 # Target Raw API reference

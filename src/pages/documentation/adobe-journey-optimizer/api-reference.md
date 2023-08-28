@@ -1,3 +1,12 @@
+---
+title: Adobe Journey Optimizer API reference
+description: An API reference for the Adobe Journey Optimizer (AJO) mobile extension.
+keywords:
+- Adobe Journey Optimizer
+- API reference
+- Messaging
+---
+
 import Tabs from './tabs/api-reference.md'
 
 # Adobe Journey Optimizer API reference
@@ -29,7 +38,6 @@ Android
 iOS
 
 <Tabs query="platform=ios&api=handle-notification-response"/>
-
 
 ## registerExtension
 
@@ -79,10 +87,9 @@ iOS
 
 <Tabs query="platform=ios&api=set-push-identifier"/>
 
+## addPushTrackingDetails
 
-## addPushTrackingDetails 
-
-The addPushTrackingDetails API is used to update a pending intent with important information, such as messageId and Customer Journey information. 
+The addPushTrackingDetails API is used to update a pending intent with important information, such as messageId and Customer Journey information.
 
 <InlineAlert variant="help" slots="text"/>
 
@@ -98,7 +105,7 @@ Android
 
 ### MessagingPushPayload
 
-`MessagePushPayload` is a helper class for extracting the data payload attributes from `RemoteMessage`, which are used while creating the push notification. 
+`MessagePushPayload` is a helper class for extracting the data payload attributes from `RemoteMessage`, which are used while creating the push notification.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 

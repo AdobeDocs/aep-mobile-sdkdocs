@@ -1,3 +1,11 @@
+---
+title: Places release notes
+description: The release notes for the Places mobile extension.
+keywords:
+- Places
+- Release notes
+---
+
 # Release Notes
 
 ## Aug 8, 2023

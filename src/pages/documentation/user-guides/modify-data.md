@@ -1,3 +1,13 @@
+---
+title: Modify data in SDK events
+description: A guide that explains how to modify data in your Mobile SDK events.
+keywords:
+- Events
+- Guide
+- Mobile Core
+- Tutorial
+---
+
 # Modify data in SDK events
 
 The modify data rule action is supported in [Mobile Core](../mobile-core/index.md) starting from version 2.1.14 (Launch), version 2.7.0 (iOS), and 1.5.5 (Android). This action is powerful, complex, and enables advanced use cases.
@@ -119,4 +129,3 @@ After you complete your configuration, verify that your rule looks like the foll
 
 1. Select **Save**
 2. Rebuild your mobile property and deploy it to the correct Environment.
-

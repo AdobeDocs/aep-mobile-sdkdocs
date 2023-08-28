@@ -1,3 +1,13 @@
+---
+title: Mobile Core Rules Engine technical details
+description: An overview for the technical details of the Mobile Core Rules Engine.
+keywords:
+- Mobile Core
+- Rules Engine
+- Rules Engine for Mobile Core
+- Technical overview
+---
+
 # Rules Engine technical details
 
 ## Key definitions
@@ -390,4 +400,3 @@ The Adobe Experience Platform SDKs process the URL that points to a zipped rules
 | Key | Description |
 | :--- | :--- |
 | `rules.url` | URL that points to the remote file location that contains the rules that were configured for the Mobile SDKs. For more information, see the [rules URL section](#rules-url). |
-

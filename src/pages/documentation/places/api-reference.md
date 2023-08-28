@@ -1,3 +1,11 @@
+---
+title: Places API reference
+description: An API reference for the Places mobile extension.
+keywords:
+- API reference
+- Places
+---
+
 import Tabs from './tabs/api-reference.md'
 
 # Places API reference
@@ -80,7 +88,7 @@ iOS
 
 <Tabs query="platform=ios&api=get-nearby-points-of-interest"/>
 
-## processGeofence 
+## processGeofence
 
 When a device crosses one of your app’s pre-defined Places Service region boundaries, the region and event type are passed to the SDK for processing.
 

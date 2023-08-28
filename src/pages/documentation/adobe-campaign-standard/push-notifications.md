@@ -1,3 +1,13 @@
+---
+title: Troubleshooting Adobe Campaign push notifications
+description: A guide that explains tips for troubleshooting Adobe Campaign push notifications.
+keywords:
+- Adobe Campaign
+- Guide
+- Push notifications
+- Troubleshooting
+---
+
 import Tabs from './tabs/push-notifications.md'
 
 # Troubleshooting Campaign push notifications
@@ -32,9 +42,9 @@ iOS
 
 The following events are related to the tracked push notifications:
 
-- Impression: Notification is delivered.
-- Click: User clicked the notification.
-- Open: App opened in response to user's click on notification.
+* Impression: Notification is delivered.
+* Click: User clicked the notification.
+* Open: App opened in response to user's click on notification.
 
 For more information about implementing the tracking of push notification events, see [Implementing Push Tracking](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-mobile/push-tracking.html).
 
