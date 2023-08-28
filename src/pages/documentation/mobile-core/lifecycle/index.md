@@ -1,3 +1,13 @@
+---
+title: Mobile Core Lifecycle extension overview
+description: An overview for the Mobile Core Lifecycle extension.
+keywords:
+- Lifecycle
+- Lifecycle for Mobile Core
+- Mobile Core
+- Product overview
+---
+
 import Tabs from './tabs/index.md'
 
 # Lifecycle

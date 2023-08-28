@@ -1,3 +1,15 @@
+---
+title: Execute JavaScript methods from native code
+description: A tutorial that explains how to execute JavaScript in an in-app message from native code.
+keywords: 
+- Adobe Journey Optimizer
+- Guide
+- JavaScript event
+- Messaging
+- Messaging delegate
+- Tutorial
+---
+
 import Tabs from './tabs/javascript-from-native.md'
 
 # Execute JavaScript methods from native code

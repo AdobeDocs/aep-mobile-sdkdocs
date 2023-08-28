@@ -1,6 +1,8 @@
 ---
 title: Mobile SDK overview
-description: This is the overview page of Mobile SDK
+description: The overview page for the Adobe Experience Platform Mobile SDK documentation.
+keywords:
+- Product overview
 ---
 
 # Mobile SDK documentation

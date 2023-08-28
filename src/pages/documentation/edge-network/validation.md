@@ -1,3 +1,12 @@
+---
+title: Adobe Experience Platform Edge Network validation
+description: A guide explaining how validation works for the Adobe Experience Platform Edge Network mobile extension.
+keywords:
+- Edge Network
+- Guide
+- Validation
+---
+
 # Validation
 
 The Adobe Experience Platform Edge Network extension is integrated with Adobe Experience Platform Assurance mobile extension to allow for request-response events inspection and provides rich verbose logging that can be used when verifying your mobile implementation.

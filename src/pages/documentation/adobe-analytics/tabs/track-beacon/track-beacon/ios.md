@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 Currently, `CLBeacon` is only available in iOS. The sample code contains the necessary checks to ensure OS compatibility.
 
 #### Swift

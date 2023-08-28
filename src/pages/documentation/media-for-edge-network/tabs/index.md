@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" task="add" repeat="8"/>
 
 1. Add the Media for Edge Network extension and its dependencies to your project using the app's Gradle file.

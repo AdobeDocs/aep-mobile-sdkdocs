@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="ios" function="id" repeat="2"/>
 
 #### Swift

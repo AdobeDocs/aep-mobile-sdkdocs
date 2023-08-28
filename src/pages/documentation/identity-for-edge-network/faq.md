@@ -1,3 +1,13 @@
+---
+title: Identity for Edge Network frequently asked questions guide
+description: A list of frequently asked questions about the Identity for Edge Network mobile extension.
+keywords:
+- Edge Network
+- FAQ
+- Frequently asked questions
+- Identity for Edge Network
+---
+
 import Tabs from './tabs/faq.md'
 
 # Frequently asked questions
@@ -12,7 +22,7 @@ When using both Adobe Experience Platform Edge and Adobe Solutions extensions, b
 
 The following instructions are for configuring an application using both Edge Network and Adobe Solutions mobile extensions. If an application will include only Adobe Experience Platform Edge extensions, follow the instructions [here](./index.md#download-and-import-the-identity-extension).
 
-#### Download and import the Identity and Identity for Edge Network extensions
+### Download and import the Identity and Identity for Edge Network extensions
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -24,7 +34,7 @@ iOS
 
 <Tabs query="platform=ios&task=download"/>
 
-#### Register the Identity and Identity for Edge Network extensions with Mobile Core
+### Register the Identity and Identity for Edge Network extensions with Mobile Core
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

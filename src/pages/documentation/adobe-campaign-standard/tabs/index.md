@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" task="add" repeat="5"/>
 
 1. Add the Campaign Standard, [Mobile Core](../mobile-core/index.md) and [Profile](../profile/index.md) extensions to your project using the app's Gradle file.

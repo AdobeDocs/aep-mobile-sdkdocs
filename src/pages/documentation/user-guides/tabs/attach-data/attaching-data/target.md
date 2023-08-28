@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <InlineAlert variant="warning" slots="text"/>
 
 The attach data feature applies **only** to the Target extension.

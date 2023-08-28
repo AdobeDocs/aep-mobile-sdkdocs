@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 This example uses `static` constant strings that were provided in the `trackBeacon` code sample above.
 
 ```java

@@ -1,3 +1,11 @@
+---
+title: Adobe Target overview
+description: An overview for the Adobe Target mobile extension.
+keywords:
+- Adobe Target
+- Product overview
+---
+
 import Tabs from './tabs/index.md'
 
 # Adobe Target

@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" api="collect-launch-info" repeat="2"/>
 
 The Android SDK automatically registers an `Application.ActivityLifecycleCallbacks`and listens for `onActivityResumed`. When an activity is resumed, SDK collects the data from the activity. Currently, it is being used in the following scenarios:
