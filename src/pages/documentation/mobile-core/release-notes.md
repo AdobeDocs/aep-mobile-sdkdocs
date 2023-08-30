@@ -12,9 +12,9 @@ keywords:
 
 ### iOS Core 4.1.0
 
-Fixed a bug where the in-app message was not displayed correctly when there was a change in device orientation.
-Fixed a bug where the cached appId could overwrite the one set with `MobileCore.configureWithAppId()`` before extension registration.
-Added the `contentComplete` event source constant for Edge workflows.
+* Fixed a bug where the in-app message was not displayed correctly when there was a change in device orientation.
+* Fixed a bug where the cached appId could overwrite the one set with `MobileCore.configureWithAppId()`` before extension registration.
+* Added the `contentComplete` event source constant for Edge workflows.
 
 ### Android Core 2.4.0
 
