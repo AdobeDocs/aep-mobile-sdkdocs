@@ -14,6 +14,10 @@ keywords:
 
 * Fixed an issue where Optimize SDK extension was not correctly verifying a set configuration state before processing proposition requests.
 
+### iOS Optimize 4.0.1
+
+* Fixed an issue where Optimize SDK extension was not correctly verifying a set configuration state before processing proposition requests.
+
 ## June 2, 2023
 
 ### iOS Optimize 4.0.0

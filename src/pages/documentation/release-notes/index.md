@@ -25,6 +25,10 @@ Keywords:
 
 * Fixed an issue where Optimize SDK extension was not correctly verifying a set configuration state before processing proposition requests.
 
+### iOS Optimize 4.0.1
+
+* Fixed an issue where Optimize SDK extension was not correctly verifying a set configuration state before processing proposition requests.
+
 ## August 9, 2023
 
 ### Android BOM 2.2.0
