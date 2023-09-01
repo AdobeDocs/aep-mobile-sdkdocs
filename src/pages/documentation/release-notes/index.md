@@ -7,7 +7,29 @@ Keywords:
 
 # Release notes
 
-## Aug 9, 2023
+## August 30, 2023
+
+### iOS Core 4.1.0
+
+* Fixed a bug where the in-app message was not displayed correctly when there was a change in device orientation.
+* Fixed a bug where the cached appId could overwrite the one set with `MobileCore.configureWithAppId()` before extension registration.
+* Added the `contentComplete` event source constant for Edge workflows.
+
+### Android Core 2.4.0
+
+* Fixed a bug where floating button was not being displayed properly after being dismissed.
+* Fixed a bug where `MobileCore.updateConfiguration()` was not updating configuration key for the correct environment.
+* Added the `contentComplete` event source constant for Edge workflows.
+
+### Android Optimize 2.0.1
+
+* Fixed an issue where Optimize SDK extension was not correctly verifying a set configuration state before processing proposition requests.
+
+### iOS Optimize 4.0.1
+
+* Fixed an issue where Optimize SDK extension was not correctly verifying a set configuration state before processing proposition requests.
+
+## August 9, 2023
 
 ### Android BOM 2.2.0
 
@@ -44,7 +66,7 @@ Keywords:
 
 </Accordion>
 
-## Aug 8, 2023
+## August 8, 2023
 
 ### iOS Places 4.1.0 and Android Places 2.1.0
 
@@ -54,7 +76,7 @@ Keywords:
 
 * Fixed an issue with displaying local notifications.
 
-## Aug 7, 2023
+## August 7, 2023
 
 ### Roku SDK 1.0.0
 
