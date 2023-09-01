@@ -10,7 +10,7 @@ on:
            required: true
            default: '24'
          debug_logging:
-           description: 'Leave the input field empty. to disable debug logging'     
+           description: 'Leave the input field empty to disable debug logging'     
            required: true
            default: 'debug'
    schedule:
