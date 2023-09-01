@@ -7,6 +7,15 @@ Keywords:
 
 # Release notes
 
+## September 1, 2023
+
+### iOS Edge 4.2.0
+* Added the ability to request a "completion" event when making an experience event request. The `contentComplete` event is dispatched after the request connection is closed.
+* Fixed record separator logic for iOS 17 and later.
+
+### Android Edge 2.3.0
+* Added the ability to request a "completion" event when making an experience event request. The `contentComplete` event is dispatched after the request connection is closed.
+
 ## August 30, 2023
 
 ### iOS Core 4.1.0
