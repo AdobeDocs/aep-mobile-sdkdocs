@@ -9,10 +9,6 @@ on:
            description: 'SDK released within x hours'     
            required: true
            default: '24'
-         debug_logging:
-           description: 'Leave the input field empty to disable debug logging'     
-           required: true
-           default: 'debug'
    schedule:
      - cron: '00 00 * * *'
      # At 00:00 everyday
@@ -43,7 +39,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Update releases notes (for BOM)
-        run: node .github/scripts/update-release-notes.js ${{ secrets.GITHUB_TOKEN }} ${{ github.event.inputs.time_range_hours }} ${{ github.event.inputs.debug_logging }}
+        run: node .github/scripts/update-release-notes.js ${{ secrets.GITHUB_TOKEN }} ${{ github.event.inputs.time_range_hours }} debug
      
       - name: Check release-notes/index.md
         run: |
