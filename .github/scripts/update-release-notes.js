@@ -15,15 +15,16 @@ const fs = require("fs");
 const execSync = require('child_process').execSync;
 
 const token = process.argv[2];
+const checkReleaseWithinHours = process.argv[3] || 24;
 
 if(token == undefined) {
     throw new Error("token is undefined")
 }
 
-function isEarlierThan24Hours(timestampInMilliseconds) {
+function isEarlierThanXHours(hours, timestampInMilliseconds) {
     const timestamp = new Date(timestampInMilliseconds);
     const now = new Date();
-    return timestamp < now - (24 * 60 * 60 * 1000);
+    return timestamp < now - (hours * 60 * 60 * 1000);
   }
 
 function fetchReleaseNotes(owner,repo, tag, callback) {
@@ -82,7 +83,7 @@ var reqGet = https.request(optionsget, function(res) {
         responseJson = JSON.parse(str)
 
         responseJson.response.docs.forEach(element => {
-            if (isEarlierThan24Hours(element.timestamp) == false) {
+            if (isEarlierThanXHours(checkReleaseWithinHours, element.timestamp) == false) {
                 if (element.a == 'sdk-bom') {
                     const version = element.v
 
