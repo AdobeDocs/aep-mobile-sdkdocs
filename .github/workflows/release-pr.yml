@@ -10,9 +10,9 @@ on:
            required: true
            default: '24'
          debug_logging:
-           description: 'Input (debug) to enable debug logging'     
+           description: 'Leave the input field empty. to disable debug logging'     
            required: true
-           default: 'na'
+           default: 'debug'
    schedule:
      - cron: '00 00 * * *'
      # At 00:00 everyday
