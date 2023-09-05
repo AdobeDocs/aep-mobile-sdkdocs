@@ -15,19 +15,28 @@ const fs = require("fs");
 const execSync = require('child_process').execSync;
 
 const token = process.argv[2];
+const checkReleaseWithinHours = process.argv[3] || 24;
+const debugFlag = (process.argv[4] == 'debug')? true : false;
 
+function debugLog(message) {
+    if (debugFlag == true) {
+        console.log(message)
+    }
+}
 if(token == undefined) {
     throw new Error("token is undefined")
 }
 
-function isEarlierThan24Hours(timestampInMilliseconds) {
+debugLog(`inputs: token: xxx, checkReleaseWithinHours: ${checkReleaseWithinHours}, debugFlag: ${debugFlag}`)
+
+function isEarlierThanXHours(hours, timestampInMilliseconds) {
     const timestamp = new Date(timestampInMilliseconds);
     const now = new Date();
-    return timestamp < now - (24 * 60 * 60 * 1000);
+    return timestamp < now - (hours * 60 * 60 * 1000);
   }
 
 function fetchReleaseNotes(owner,repo, tag, callback) {
-    var optionsget = {
+    var options = {
         host : 'api.github.com', 
         port : 443,
         path :  `/repos/${owner}/${repo}/releases/tags/${tag}`, 
@@ -39,8 +48,9 @@ function fetchReleaseNotes(owner,repo, tag, callback) {
             'Authorization': `Bearer ${token}`,
           }
     };
-    var reqGet = https.request(optionsget, function(res) {
-        // console.log("statusCode: ", res.statusCode);
+    debugLog(`request options: ${JSON.stringify(options)}`)
+    var reqGet = https.request(options, function(res) {
+        debugLog(`response statusCode: ${res.statusCode}`)
         var data = [];
         res.on('data', function(chunk) {
             data.push(chunk);
@@ -48,11 +58,8 @@ function fetchReleaseNotes(owner,repo, tag, callback) {
             var buffer = Buffer.concat(data);
             str = new TextDecoder("utf-8").decode(buffer)
             responseJson = JSON.parse(str)
-            
             callback(responseJson.published_at, responseJson.body)
-            
         });
-     
     });
      
     reqGet.end();
@@ -63,7 +70,7 @@ function fetchReleaseNotes(owner,repo, tag, callback) {
 
 
 function updateBOMReleaseNotes() {
-var optionsget = {
+var options = {
     host : 'search.maven.org', 
     port : 443,
     path :  '/solrsearch/select?q=g:com.adobe.marketing.mobile+AND+a:sdk-bom&core=gav&rows=2&wt=json', 
@@ -73,19 +80,19 @@ var optionsget = {
         'User-Agent': 'server-side',
       }
 };
-
-var reqGet = https.request(optionsget, function(res) {
-    // console.log("statusCode: ", res.statusCode);
- 
+debugLog(`request options: ${JSON.stringify(options)}`)
+var reqGet = https.request(options, function(res) {
+    debugLog(`response statusCode: ${res.statusCode}`)
     res.on('data', function(d) {
         str = new TextDecoder("utf-8").decode(d)
+        debugLog(`response json string: ${str}`)
         responseJson = JSON.parse(str)
 
         responseJson.response.docs.forEach(element => {
-            if (isEarlierThan24Hours(element.timestamp) == false) {
+            if (isEarlierThanXHours(checkReleaseWithinHours, element.timestamp) == false) {
                 if (element.a == 'sdk-bom') {
                     const version = element.v
-
+                    debugLog(`fetch release notes for bom: ${version}`)
                     fetchReleaseNotes('adobe','aepsdk-commons',`bom-${version}`, (ios1086DateStr, releaseNotes) => {
                         const date = new Date(ios1086DateStr)
                         const month = date.getMonth()
@@ -119,6 +126,7 @@ var reqGet = https.request(optionsget, function(res) {
                         fs.writeFile(releaseMdPath, contentArray.join("\n"), function (err) {
                             if (err) return console.log(err);
                           });
+                          debugLog("main release notes page is updated.")
                     })
                 }
                 

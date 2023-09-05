@@ -4,6 +4,11 @@ name: Update release notes
 # or API.
 on: 
    workflow_dispatch:
+      inputs:
+         time_range_hours:
+           description: 'SDK released within x hours'     
+           required: true
+           default: '24'
    schedule:
      - cron: '00 00 * * *'
      # At 00:00 everyday
@@ -34,7 +39,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Update releases notes (for BOM)
-        run: node .github/scripts/update-release-notes.js ${{ secrets.GITHUB_TOKEN }}
+        run: node .github/scripts/update-release-notes.js ${{ secrets.GITHUB_TOKEN }} ${{ github.event.inputs.time_range_hours }} debug
      
       - name: Check release-notes/index.md
         run: |
@@ -57,9 +62,6 @@ jobs:
           labels: |
             release-notes
             automated pr
-          assignees: |
-            yangyansong-adbe
-            praveek
           title: "Updating release notes for BOM"
           body: This PR is automatically created by [update-release-notes] action.
             
