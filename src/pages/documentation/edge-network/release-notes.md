@@ -13,7 +13,6 @@ keywords:
 ### iOS Edge 4.2.0
 
 * Added the ability to request a "completion" event when making an experience event request. The `contentComplete` event is dispatched after the request connection is closed.
-* Fixed record separator logic for iOS 17 and later.
 
 ### Android Edge 2.3.0
 
