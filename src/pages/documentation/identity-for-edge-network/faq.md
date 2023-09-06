@@ -141,3 +141,11 @@ iOS
 ## Q: Can I safely remove the Identity for Experience Cloud ID Service extension in an app if I am using the Edge Network extension?
 
 If no other extension relies on the Identity for Experience Cloud ID Service extension, you can safely remove it. Please refer to the [Identity consideration document](../adobe-analytics/migrate-to-edge-network.md#identity-consideration-for-the-migration) for more information.
+
+## Q: I am passing the ECID from to the WebView using `getUrlVariables` API, but the web interactions get a new ECID assigned, how do I fix this?
+
+1. Ensure that the output from the `getUrlVariables` API includes accurate **ECID** and **Experience Cloud orgID** values. Please note that the orgID set up for the Mobile SDK must match the orgID configured in the Web SDK.
+2. Make sure the timestamp (TS) included in the `getUrlVariables` result did not expire (that is, it is not older than 5 minutes since the time it was retrieved). For this reason, it is recommended that the result from `getUrlVariables` is not cached and reused in the app, but retrieved on demand before loading the WebView.
+3. The query string returned by the `getUrlVariables` API is already encoded, so please ensure that you do not re-encode the generated query string.
+
+For further information, refer to the documentation on [mobile-to-web and cross-domain ID sharing](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/id-sharing.html?lang=en) and [handling WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html?lang=en#implementation).
