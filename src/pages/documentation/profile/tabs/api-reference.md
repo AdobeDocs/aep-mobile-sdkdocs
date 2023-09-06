@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" api="extension-version" repeat="8"/>
 
 #### Java
@@ -62,7 +66,7 @@ NSString *extensionVersion = [AEPMobileUserProfile extensionVersion];
 public static void getUserAttributes(@NonNull final List<String> keys, @NonNull final AdobeCallback<Map<String, Object>> callback)
 ```
 
-- _callback_ is invoked after the customer attributes are available.
+* _callback_ is invoked after the customer attributes are available.
 
 **Example**
 
@@ -115,7 +119,7 @@ UserProfile.getUserAttributes(listOf("itemsAddedToCart")) {
 static func getUserAttributes(attributeNames: [String], completion: @escaping ([String: Any]?, AEPError) -> Void)
 ```
 
-- _completion_ is the callback `function` which will be called with user attributes.
+* _completion_ is the callback `function` which will be called with user attributes.
 
 **Example**
 

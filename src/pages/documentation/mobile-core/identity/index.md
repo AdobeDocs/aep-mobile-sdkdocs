@@ -1,3 +1,13 @@
+---
+title: Mobile Core Identity extension overview
+description: An overview for the Mobile Core Identity extension.
+keywords:
+- Identity for Mobile Core
+- Identity
+- Mobile Core
+- Product overview
+---
+
 import Tabs from './tabs/index.md'
 
 # Identity
@@ -12,12 +22,12 @@ To get started with Identity, complete the following steps:
 
 1. Add the **Identity** extension to your app.
 2. Implement the SDK APIs to complete the following tasks:
-   - Update customer IDs.
-   - Append Adobe visitor data to a URL string.
-   - Return customer IDs.
-   - Retrieve Experience Cloud IDs.
-   - Set advertising IDs.
-   - Set the device notification for push notifications.
+   * Update customer IDs.
+   * Append Adobe visitor data to a URL string.
+   * Return customer IDs.
+   * Retrieve Experience Cloud IDs.
+   * Set advertising IDs.
+   * Set the device notification for push notifications.
 
 ## Add the Identity extension to your app
 
@@ -59,7 +69,7 @@ Flutter
 
 <InlineAlert variant="info" slots="text"/>
 
-Previously known as MCID, the Experience Cloud ID (ECID) is a 38 character ID that uniquely identifies each visitor in the Adobe Experience Platform.
+Previously known as MCID/MID/MCMID, the Experience Cloud ID (ECID) is a 38 character ID that uniquely identifies each visitor in the Adobe Experience Platform.
 
 After the configuration is complete, an ECID is generated and, where applicable, is included on all Analytics and Audience Manager hits. Other IDs, such as custom and automatically-generated IDs, continue to be sent with each hit.
 

@@ -1,6 +1,9 @@
 ---
 title: Adobe Analytics API reference
 description: An API reference for the Adobe Analytics mobile extension.
+keywords:
+- Adobe Analytics
+- API reference
 ---
 
 import Tabs from './tabs/api-reference.md'
@@ -41,7 +44,7 @@ iOS
 
 <Tabs query="platform=ios&api=extension-version"/>
 
-## getQueueSize 
+## getQueueSize
 
 Retrieves the total number of Analytics hits in the tracking queue.
 

@@ -1,3 +1,13 @@
+---
+title: Mobile Core Lifecycle extension metrics
+description: A guide explaining the Mobile Core Lifecycle extension's metrics.
+keywords:
+- Lifecycle
+- Lifecycle for Mobile Core
+- Metrics
+- Mobile Core
+---
+
 # Lifecycle metrics
 
 ## Lifecycle data content response metrics
@@ -49,7 +59,8 @@ The following metrics are collected on each [Lifecycle data content response](./
 | Operating system version | `a.OSVersion` | Stores the operating system's name and version. |
 | Carrier name | `a.CarrierName` | Stores the name of the mobile service provider as provided by the device. <br/><br/> **Important:** This metric is **not** automatically stored in an Analytics variable. You must create a processing rule to copy this value to an Analytics variable for reporting. |
 | Resolution | `a.Resolution` | The width x height in pixels. |
-| Locale | `a.Locale` | The locale set for this device. For example, `en-US`. |
+| Locale | `a.locale` | The locale set for the application. For example, `en-US`. |
+| System Locale | `a.systemLocale` | The locale set for this device. For example, `en-US`. |
 
 ## Lifecycle Application Foreground metrics
 
@@ -65,6 +76,7 @@ The following metrics are collected on each [Lifecycle Application Foreground](.
 | xdm:isLaunch | boolean | Launch of an application. Every application foreground event sets `isLaunch` to `true`. |
 | xdm:isInstall | boolean | Install of an application. If `true`, signifies the first launch of the application. The Experience Event's timestamp property can be used as the application's install date. |
 | xdm:isUpgrade | boolean | Upgrade of an application. If `true`, signifies the first launch of the application after an upgrade. |
+| dc:language | String | The language of the application to represent the user's linguistic, geographical, or cultural preferences for data presentation. |
 
 ### Device
 
@@ -98,4 +110,3 @@ The following metrics are collected on each [Lifecycle Application Background](.
 | xdm:isClose | boolean | Close of an application. Every application background event sets `isClose` to `true`. |
 | xdm:closeType | String | Type of application close, sent on application isClose. Type is "close" on graceful termination of an application, or "unknown" when application termination source is unknown. |
 | xdm:sessionLength | integer | Length of the application session in seconds. Usually referred as the time the application was in foreground. Will not be less than zero. |
-

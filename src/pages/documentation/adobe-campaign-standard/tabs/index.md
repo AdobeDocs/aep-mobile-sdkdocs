@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" task="add" repeat="5"/>
 
 1. Add the Campaign Standard, [Mobile Core](../mobile-core/index.md) and [Profile](../profile/index.md) extensions to your project using the app's Gradle file.
@@ -14,7 +18,7 @@ implementation 'com.adobe.marketing.mobile:userprofile'
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../manage-gradle-dependencies.md) for more information.
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information.
 
 </InlineNestedAlert>
 
@@ -358,7 +362,7 @@ func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive respo
     if(!broadlogId.length || !deliveryId.length){
       return;
     }
-    
+
     // Send Click Tracking since the user did click on the notification
     [AEPMobileCore collectMessageInfo:@{
       @"broadlogId" : broadlogId,
@@ -397,11 +401,11 @@ To handle deep links in the notification payload, you need to set up URL schemes
 public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.main);
-  
+
     Intent intent = getIntent();
     String action = intent.getAction();
     Uri data = intent.getData();
-  
+
     Map<String, Intent> urlToIntentMap = new HashMap<>();
     // add url string to Intent object mappings
     // e.g. urlToIntentMap.put("https://validUrl.com", new Intent());
@@ -605,4 +609,4 @@ The image must be placed in your app's `assets` directory. This directory is fou
 
 <Variant platform="ios" task="bundled-image" repeat="1"/>
 
-Add the image file to your project by going to Xcode's `File > Add Files to "Your App Name"... ` menu and locating the image file that will be bundled with the app. Ensure that the targets that will be using the image file are checked in the `Add to targets` selection menu.
+Add the image file to your project by going to Xcode's `File > Add Files to "Your App Name"...` menu and locating the image file that will be bundled with the app. Ensure that the targets that will be using the image file are checked in the `Add to targets` selection menu.

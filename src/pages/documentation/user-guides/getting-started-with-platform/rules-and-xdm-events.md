@@ -1,4 +1,15 @@
-# Rules & XDM events
+---
+title: Rules and XDM events
+description: A guide that explains how to attach data to Experience Data Model (XDM) events.
+keywords:
+- Adobe Experience Platform
+- Getting started
+- Guide
+- Experience Data Model
+- XDM
+---
+
+# Rules and XDM events
 
 ## Prerequisites for this tutorial
 
@@ -82,7 +93,7 @@ Run the Sample app in a simulator or a device and generate product review XDM ev
 
 * In the sample app, navigate to the Edge tab.
 * Select a product, add the review information and click `Submit Review`.
-* In the console log search for this log message - `Attaching event data` (iOS) / `New EventData for Event` (Android) and check that `ratingDate` and `ratingSource` were attached correctly. 
+* In the console log search for this log message - `Attaching event data` (iOS) / `New EventData for Event` (Android) and check that `ratingDate` and `ratingSource` were attached correctly.
 * Verify if the logging messages are intuitive and descriptive for the use-case you are testing.
 
 ### Validate the event data with AEP Assurance
@@ -105,4 +116,3 @@ For more rules examples in the Data Collection UI, see the following links:
 * [Attach data to SDK events](../attach-data.md)
 * [Modify data in SDK events](../modify-data.md)
 * [Using data elements to define dynamic data in rules](../tags-data-elements.md)
-

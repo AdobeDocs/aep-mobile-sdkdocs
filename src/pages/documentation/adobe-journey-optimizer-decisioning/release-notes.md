@@ -1,4 +1,22 @@
+---
+title: Adobe Journey Optimizer release notes
+description: The release notes for the Adobe Journey Optimizer (AJO) mobile extension.
+keywords:
+- Adobe Journey Optimizer Decisioning
+- Release notes
+---
+
 # Release Notes
+
+## August 30, 2023
+
+### Android Optimize 2.0.1
+
+* Fixed an issue where Optimize SDK extension was not correctly verifying a set configuration state before processing proposition requests.
+
+### iOS Optimize 4.0.1
+
+* Fixed an issue where Optimize SDK extension was not correctly verifying a set configuration state before processing proposition requests.
 
 ## June 2, 2023
 

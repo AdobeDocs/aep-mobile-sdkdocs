@@ -1,6 +1,16 @@
+---
+title: Debugging and Lifecycle Metrics
+description: A guide that explains how to enable and use debug logging in your application.
+keywords:
+- Debug
+- Guide
+- Logging
+- Tutorial
+---
+
 import Tabs from './tabs/enable-debug-logging.md'
 
-# Debugging & lifecycle metrics
+# Debugging and lifecycle metrics
 
 ## Debug logging
 
@@ -9,7 +19,7 @@ Debug logging is an optional, but a recommended and critical SDK feature.
 By enabling logging, you can ensure that the SDK is working as intended. The following table explains levels of logging available and the purpose they serve:
 
 | Log Level | Description |
-| :--- | :--- |
+| :-------- | :---------- |
 | Error | This is the default log level used by SDK. This log level provides the details about unrecoverable errors that occurred during SDK implementation. |
 | Warning | In addition to the details from _Error_ log level, _Warning_ provides error information during SDK integration. This log level might indicate that a request has been made to the SDK, but the SDK might be unable to perform the requested task. For example, this log level might be used when catching an unexpected, but recoverable, exception and printing its message. |
 | Debug | In addition to the details from the _Warning_ log level, _Debug_ also provides high-level information about how the SDK processes network requests/responses data. |
@@ -91,6 +101,4 @@ Xamarin
 
 <Tabs query="platform=xamarin&task=metrics"/> -->
 
-
 For more information, see the documentation on [Lifecycle metrics](../mobile-core/lifecycle/index.md).
-

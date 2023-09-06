@@ -1,3 +1,13 @@
+---
+title: Mobile Core Signal API reference
+description: An API reference for the Mobile Core Signal extension.
+keywords:
+- API reference
+- Mobile Core
+- Signal
+- Signal for Mobile Core
+---
+
 import Tabs from './tabs/api-reference.md'
 
 # Signal API reference
@@ -44,7 +54,6 @@ Android
 
 <Tabs query="platform=react-native&api=register-extension"/> --->
 
-## collectPII
+## collectPii
 
-The Signal extension can be used to handle `collectPII` rules. For more information, see the [collectPII](../../api-reference.md#collectpii) API.
-
+The Signal extension can be used to handle `collectPii` rules. For more information, see the [collectPii](../../api-reference.md#collectpii) API.

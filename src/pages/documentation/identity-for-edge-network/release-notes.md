@@ -1,4 +1,20 @@
+---
+title: Identity for Edge Network release notes
+description: The release notes for the Identity for Edge Network mobile extension.
+keywords:
+- Edge Network
+- Identity for Edge Network
+- Release notes
+---
+
 # Release Notes
+
+## July 25, 2023
+
+### Android EdgeIdentity 2.0.1
+
+* Added validation to ignore `IdentityItem`s with an empty ID value.
+* Fixed an issue where the `getUrlVariables` API may fail to generate a response on Android 6 (API 23) devices.
 
 ## June 1, 2023
 

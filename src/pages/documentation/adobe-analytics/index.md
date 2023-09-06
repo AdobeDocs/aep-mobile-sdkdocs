@@ -1,6 +1,9 @@
 ---
 title: Adobe Analytics extension
 description: Configuring the Adobe Analytics extension in the Data Collection UI
+keywords:
+- Adobe Analytics
+- Product overview
 ---
 
 import Tabs from './tabs/index.md'
@@ -45,7 +48,6 @@ To narrow the search for a report suite identifier, type a string in the combo b
 
 To learn what a tracking server is and how to find it, please read the documentation on [tracking servers](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/trackingserver.html).
 
-
 The tracking server is the tracking domain that all the Analytics requests should be made.
 
 #### Offline enabled
@@ -70,7 +72,7 @@ If you currently send Mobile SDK data to a report suite that also collects data 
 
 For more information about Analytics server-side forwarding to Audience Manager, see the documentation on [Analytics sever-side forwarding](./#server-side-forwarding-with-audience-manager).
 
-If you set up Analytics server-side forwarding to Audience Manager, select the **Audience Manager Forwarding** checkbox. When this checkbox is selected, all SDK requests to Analytics servers are sent with an expected response code of **10**. This step ensures that Analytics traffic is forwarded to Audience Manager and that the Audience Manager User Profile is correctly updated in the SDK.
+If you set up Analytics server-side forwarding to Audience Manager in your Analytics report suite, select the **Audience Manager Forwarding** checkbox. When this checkbox is selected, all SDK requests to Analytics servers are sent with an expected response code of **10**. This step ensures that client-side Analytics response traffic is forwarded to the Audience Manager SDK so that the User Profile is correctly updated.
 
 #### Backdate previous session info
 
@@ -144,7 +146,9 @@ To see the performance of your Target activities for some segments, you can set 
 
 ### Server-side forwarding with Audience Manager
 
-To enable the ability to share Analytics data with Audience Manager, in the Data Collection UI, select the **Audience Manager Forwarding** checkbox. For more information, go to [Audience Manager](../adobe-audience-manager/index.md).
+To enable server-side forwarding to share Analytics data with Audience Manager, see the documentation on [Server-side Forwarding](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/server-side-forwarding/ssf.html) to enable server-side forwarding at the report suite level.
+
+To enable client-side forwarding to share Analytics data with Audience Manager within the SDK, in the Data Collection UI, select the **Audience Manager Forwarding** checkbox. For more information, go to [Audience Manager](../adobe-audience-manager/index.md).
 
 ### Audio and video analytics
 

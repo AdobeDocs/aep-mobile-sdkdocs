@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 The following sample shows how to attach data to all outgoing `TrackAction` Analytics network requests. To create this type of rule, select your property in the Data Collection UI and complete the following steps.
 
 #### Create a rule
@@ -34,7 +38,6 @@ On the right pane, you can add a freeform JSON payload that adds data to an SDK 
 In the following example, `launches` and `anAddedKey` keys are added to the `contextdata` of the Analytics event. Values for the new keys can either be hardcoded in the rule, or dynamically determined by the SDK when this event processes by using data elements.
 
 ![](../../../assets/attach-data/set-action.png)
-
 
 #### Save the rule and rebuild your property
 

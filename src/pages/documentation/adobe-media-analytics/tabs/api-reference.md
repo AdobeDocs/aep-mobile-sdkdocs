@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" api="extension-version" repeat="8"/>
 
 #### Java
@@ -2004,7 +2008,6 @@ public class Media {
 
 }
 ```
-
 
 <Variant platform="ios" api="media-events" repeat="6"/>
 

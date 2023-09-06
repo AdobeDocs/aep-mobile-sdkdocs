@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" api="clear-propositions" repeat="5"/>
 
 #### Java
@@ -435,7 +439,7 @@ public class DecisionScope {
      */
     public String getName() {...}
 }
-```    
+```
 
 <Variant platform="ios" api="decisionscope" repeat="2"/>
 
@@ -527,7 +531,7 @@ public class Proposition {
      */
     public Map<String, Object> generateReferenceXdm() {...}
 }
-```   
+```
 
 <Variant platform="ios" api="proposition" repeat="4"/>
 

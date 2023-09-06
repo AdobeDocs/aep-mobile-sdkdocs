@@ -1,3 +1,11 @@
+---
+title: Adobe Target API reference
+description: An API reference for the Adobe Target mobile extension.
+keywords:
+- Adobe Target
+- API reference
+---
+
 import Tabs from './tabs/api-reference.md'
 
 # Target API reference
@@ -79,7 +87,7 @@ iOS
 
 ## getSessionId
 
-This API gets the Target session identifier. 
+This API gets the Target session identifier.
 
 The session ID is generated locally in the SDK upon initial Target request and persisted for a period defined by `target.sessionTimeout` configuration setting. If the session timeout happens upon a subsequent Target request, a new session ID will be generated for use in the request and persisted in the SDK.
 

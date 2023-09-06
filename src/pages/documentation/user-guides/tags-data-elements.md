@@ -1,3 +1,13 @@
+---
+title: Using data elements to define dynamic data in rules
+description: A guide that explains how to use data elements in the Adobe Experience Platform Mobile SDK to create rules.
+keywords:
+- Data element
+- Guide
+- Rules Engine
+- Tutorial
+---
+
 # Using data elements to define dynamic data in rules
 
 Data elements are the building blocks for your data dictionary and are used to collect, organize, and deliver data across marketing and ad technology.
@@ -44,20 +54,20 @@ In the following example, a rule is created to send a postback that contains the
 
 1. On the property page for your mobile property, select the **Rules** tab, followed by **Create New Rule**.
 2. Type a unique name for the the rule.
-3. In the **Events** section, select **Add** and perform the following actions: 
-   1. In the **Extension** drop-down list, select **Mobile Core**. 
-   2. In the **Event Type** drop-down list, select **Launched**. 
+3. In the **Events** section, select **Add** and perform the following actions:
+   1. In the **Extension** drop-down list, select **Mobile Core**.
+   2. In the **Event Type** drop-down list, select **Launched**.
    3. Afterwards, select **Keep Changes**.
 4. In the **Condition** section, select **Add** and perform the following actions:
-   1. In the **Extension** drop-down list, select **Mobile Core**. 
-   2. In the **Condition Type** drop-down list, select **Data Element**. 
-   3. Enter a name for the condition. 
+   1. In the **Extension** drop-down list, select **Mobile Core**.
+   2. In the **Condition Type** drop-down list, select **Data Element**.
+   3. Enter a name for the condition.
    4. After entering a name, next to the **Data Element** text field, select the cylinder icon and select the ECID that was created in the previous section.
-5. In the **Action** section, select **Add** and perform the following actions: 
-   1. In the **Extension** drop-down list, select **Mobile Core**. 
-   2. In the **Action Type** drop-down list, select **Send Postback**. 
-   3. In the **URL** text field, type a sample URL, for example, `https://my.company.com/launch?ecid=`. 
-   4. Enter a name for the action. 
+5. In the **Action** section, select **Add** and perform the following actions:
+   1. In the **Extension** drop-down list, select **Mobile Core**.
+   2. In the **Action Type** drop-down list, select **Send Postback**.
+   3. In the **URL** text field, type a sample URL, for example, `https://my.company.com/launch?ecid=`.
+   4. Enter a name for the action.
    5. After entering a name, next to the **Data Element** text field, select the cylinder icon and select the ECID that was created in the previous section.
 6. Select **Save**.
 
@@ -65,7 +75,7 @@ In the following example, a rule is created to send a postback that contains the
 
 ## Publish the configuration
 
-After the property is published, this new rule is made available for download by the applications that are configured for this property. For more information, please read the [publish the configuration tutorial](../getting-started/create-a-mobile-property.md#publish-configuration) and the[configure the SDK with an Environment ID tutorial](../getting-started/track-events.md#configure-the-sdk-with-an-environment-id). When the application launches, this rule is triggered and, if the ECID exists in the SDK, a postback is sent to the URL with the ECID value.
+After the property is published, this new rule is made available for download by the applications that are configured for this property. For more information, please read the [publish the configuration tutorial](../getting-started/create-a-mobile-property.md#publish-configuration) and the [configure the SDK with an Environment ID tutorial](../getting-started/track-events.md#configure-the-sdk-with-an-environment-id). When the application launches, this rule is triggered, and if the ECID exists in the SDK, a postback is sent to the URL with the ECID value.
 
 ## Additional information
 
@@ -75,7 +85,6 @@ Here is some additional information about the Rules Engine and the Signal extens
 
   An overview and technical details of the Experience Platform Mobile SDK Rules Engine.
 
-* [Signal extension and Rules Engine integration](./rules-engine-integration.md)
+* [Signal extension and Rules Engine integration](../mobile-core/signal/rules-engine-integration.md)
 
   This section provides an example of how to create rules to trigger actions in the Signals extension.
-

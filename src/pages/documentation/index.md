@@ -1,11 +1,17 @@
 ---
 title: Mobile SDK overview
-description: This is the overview page of Mobile SDK
+description: The overview page for the Adobe Experience Platform Mobile SDK documentation.
+keywords:
+- Product overview
 ---
 
 # Mobile SDK documentation
 
 Welcome to the home of Adobe Experience Platform Mobile SDK documentation.
+
+<InlineAlert variant="info" slots="text"/>
+
+Effective August 31, 2023: ACP iOS SDKs, Flutter for ACP, React Native for ACP, Cordova, and Xamarin SDKs will no longer be supported. Refer to [ACP SDKs end-of-support](./resources/acp-end-of-support.md) for more information.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -36,17 +42,18 @@ Experience Platform Mobile SDKs are available for Android, iOS, and a [variety](
 
 The Adobe Experience Platform Mobile SDK supports the following platforms:
 
-- [Android](./current-sdk-versions.md#android)
-- [iOS](./current-sdk-versions.md#ios)
-- [React Native](./current-sdk-versions.md#react-native)
-- [Flutter](./current-sdk-versions.md#flutter)
+* [Android](./current-sdk-versions.md#android)
+* [iOS](./current-sdk-versions.md#ios)
+* [React Native](./current-sdk-versions.md#react-native)
+* [Flutter](./current-sdk-versions.md#flutter)
+* [Roku](./current-sdk-versions.md#roku)
 
 ## Resources
 
-- [Getting started](./getting-started/index.md)
-- [Getting the Experience Platform SDKs](./getting-started/get-the-sdk.md)
-- [Frequently asked questions](./faq.md)
-- [Why use the Adobe Experience Platform Mobile SDKs](https://medium.com/adobetech/accelerate-your-mobile-application-development-with-adobe-experience-platform-mobile-sdk-and-launch-ed023536d611)
+* [Getting started](./getting-started/index.md)
+* [Getting the Experience Platform SDKs](./getting-started/get-the-sdk.md)
+* [Frequently asked questions](./faq.md)
+* [Why use the Adobe Experience Platform Mobile SDKs](https://medium.com/adobetech/accelerate-your-mobile-application-development-with-adobe-experience-platform-mobile-sdk-and-launch-ed023536d611)
 
 ## Get Help
 

@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" api="extension-version" repeat="5"/>
 
 #### Java

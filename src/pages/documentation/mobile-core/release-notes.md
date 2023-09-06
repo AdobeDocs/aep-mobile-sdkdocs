@@ -1,4 +1,46 @@
+---
+title: Mobile Core release notes
+description: The release notes for the Mobile Core extensions.
+keywords:
+- Mobile Core
+- Release notes
+---
+
 # Release Notes
+
+## August 30, 2023
+
+### iOS Core 4.1.0
+
+* Fixed a bug where the in-app message was not displayed correctly when there was a change in device orientation.
+* Fixed a bug where the cached appId could overwrite the one set with `MobileCore.configureWithAppId()` before extension registration.
+* Added the `contentComplete` event source constant for Edge workflows.
+
+### Android Core 2.4.0
+
+* Fixed a bug where floating button was not being displayed properly after being dismissed.
+* Fixed a bug where `MobileCore.updateConfiguration()` was not updating configuration key for the correct environment.
+* Added the `contentComplete` event source constant for Edge workflows.
+
+## August 8, 2023
+
+### Android Core 2.3.1
+
+* Fixed an issue with displaying local notifications.
+
+## July 26, 2023
+
+### Android Core 2.3.0
+
+* Added the DeviceInforming.getSystemLocale() API, which returns the locale set by the user in the system.
+* Implemented database recovery in SQLiteDataQueue for cases where adding or removing an entry fails due to unexpected errors.
+* Fixed an issue with the rounded corners and placement of in-app messages on Android 21/22.
+* Fixed a bug where the cached appId could overwrite the one set with MobileCore.configureWithAppId() before extension registration.
+
+### Android Lifecycle 2.0.4
+
+* Lifecycle extension now includes the system locale, indicating the device's preferred locale, in its published shared state.
+* Lifecycle launch event now includes the application._dc.language XDM field, which signifies the device's preferred locale.
 
 ## June 29, 2023
 
@@ -50,7 +92,7 @@ Please note that the current release includes the following changes:
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 * Added `SystemInfoService.getSystemLocaleName()` API which returns the locale by combining device's preferred language and selected region (as set by the user on the system).
 * Lifecycle extension adds `systemlocale` denoting device's preferred locale to its published shared state.
-* Lifecycle launch events will contain `application._dc.language` XDM field denoting device's preferred locale to shared state.
+* Lifecycle launch event now includes the application._dc.language XDM field, which signifies the device's preferred locale.
 
 ## May 23, 2023
 

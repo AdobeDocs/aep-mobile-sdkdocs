@@ -1,3 +1,15 @@
+---
+title: Handle URL clicks from an in-app message
+description: A tutorial that explains how you can handle URL clicks from an in-app message.
+keywords:
+- Adobe Journey Optimizer
+- Guide
+- In-app message
+- Messaging
+- Tutorial
+- URL clicks
+---
+
 # Handle URL clicks from an in-app message
 
 When a link is clicked in an in-app message, the `FullscreenMessageDelegate` is responsible for handling behavior.
@@ -19,7 +31,7 @@ In order for the SDK to remove the view containing an in-app message from the UI
 
 The example below is a link that will dismiss the current in-app message:
 
-```
+```shell
 adbinapp://dismiss
 ```
 
@@ -29,7 +41,7 @@ Adding a URL variable named `interaction` will cause the SDK to send an Experien
 
 The example below will dismiss the current in-app message and send a `decisioning.propositionInteract` event to edge with an action of `imageLiked`:
 
-```
+```shell
 adbinapp://dismiss?interaction=imageLiked
 ```
 
@@ -39,7 +51,7 @@ Adding a URL variable named `animate` will cause the SDK to override the dismiss
 
 The example below will dismiss the current in-app message, and override the animation so the message exits to the right side of the screen:
 
-```
+```shell
 adbinapp://dismiss?animate=right
 ```
 
@@ -65,7 +77,7 @@ If the provided URL does not contain a custom scheme, the URL will be loaded in 
 
 The example below will dismiss the current in-app message, send a `decisioning.propositionInteract` event to edge with an action of `adobe`, and open the adobe.com website in the default web browser for the user's device:
 
-```
+```shell
 adbinapp://dismiss?interaction=adobe&link=https%3A%2F%2Fwww.adobe.com%3Fkey%3Dvalue
 ```
 
@@ -87,6 +99,6 @@ If the provided URL contains a custom scheme, the app that handles the custom sc
 
 The example below will dismiss the current in-app message, then launch an app owned by the same developer which handles the scheme `myAppScheme`:
 
-```
+```shell
 adbinapp://dismiss?link=myAppScheme://deeplinked
 ```

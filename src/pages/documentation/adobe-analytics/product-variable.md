@@ -1,3 +1,11 @@
+---
+title: Adobe Analytics products variable
+description: A guide explaining the products variable for the Adobe Analytics mobile extension.
+keywords:
+- Adobe Analytics
+- Products variable
+---
+
 import Tabs from './tabs/product-variable.md'
 
 # Products variable
@@ -38,7 +46,6 @@ iOS
 
 <Tabs query="platform=ios&task=products"/>
 
-<InlineAlert variant="info" slots="text"/> 
+<InlineAlert variant="info" slots="text"/>
 
 If you trigger a product-specific event by using the `&&products` variable, you must also set that event in the `&&events` variable. If you do not set that event, it is filtered out during processing.
-

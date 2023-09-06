@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" task="create" repeat="2"/>
 
 #### Java
@@ -69,7 +73,7 @@ Edge.sendEvent(experienceEvent: experienceEvent)
 
 <Variant platform="android" task="track-action" repeat="5"/>
 
-#### Java 
+#### Java
 
 **Syntax**
 

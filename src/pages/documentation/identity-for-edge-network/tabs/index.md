@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 import Alerts from '../../resources/alerts.md'
 
 <Variant platform="android" task="download" repeat="5"/>
@@ -57,7 +61,7 @@ import AEPEdgeConsent
 @import AEPEdgeConsent;
 ```
 
-<Variant platform="android" task="register" repeat="2"/>
+<Variant platform="android" task="register" repeat="4"/>
 
 #### Java
 

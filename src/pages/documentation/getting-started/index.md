@@ -1,3 +1,12 @@
+---
+title: Getting Started with the Adobe Experience Platform Mobile SDK
+description: An overview that explains how to integrate with the Adobe Experience Cloud solutions using the Adobe Experience Platform Mobile SDKs.
+keywords:
+- Edge Network
+- Experience Cloud solutions
+- Product overview
+---
+
 # Overview
 
 The Adobe Experience Platform Mobile SDKs support interaction with Adobe Experience Cloud solutions and services through one or both of the following methods:
@@ -37,4 +46,3 @@ The following information outlines the steps you'll need to follow to get starte
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
 * [What is Experience Data Model (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html)
 * [How to build a schema?](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#schema)
-

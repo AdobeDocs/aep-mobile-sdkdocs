@@ -1,3 +1,11 @@
+---
+title: Adobe Experience Platform Edge Network overview
+description: An overview for the Adobe Experience Platform Edge Network mobile extension.
+keywords:
+- Edge Network
+- Product overview
+---
+
 import Tabs from './tabs/index.md'
 
 # Adobe Experience Platform Edge Network
@@ -8,7 +16,7 @@ import Tabs from './tabs/index.md'
 
 The Adobe Experience Platform Edge Network extension requires the Identity for Edge Network extension in order to operate. As a first step install and configure the [Identity for Edge Network](../identity-for-edge-network/index.md) extension, then continue with the steps below.
 
-## Configure the Edge Network extension in Data Collection UI 
+## Configure the Edge Network extension in Data Collection UI
 
 1. In the Data Collection UI, in your mobile property, select the **Extensions** tab.
 2. On the **Catalog** tab, locate or search for the **Adobe Experience Platform Edge Network** extension, and select **Install**.
@@ -85,4 +93,3 @@ To update the SDK configuration programmatically, use the following information 
 | :--- | :--- | :--- | :--- |
 | edge.configId | Yes | See [datastreams](#datastreams). | String |
 | edge.domain   | No  | A custom first-party domain mapped to the Adobe provisioned Edge Network domain. | String |
-

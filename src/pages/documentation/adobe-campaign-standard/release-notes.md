@@ -1,10 +1,18 @@
+---
+title: Adobe Campaign Standard release notes
+description: The release notes for the Adobe Campaign Standard mobile extension.
+keywords:
+- Adobe Campaign Standard
+- Release notes
+---
+
 # Release Notes
 
 ## July 12, 2023
 
 ### Android Campaign 2.0.5
 
-- Fixed a bug where a bundled asset was not being used in a fullscreen message when the remote image URL was inaccessible.
+* Fixed a bug where a bundled asset was not being used in a fullscreen message when the remote image URL was inaccessible.
 
 ## June 5, 2023
 

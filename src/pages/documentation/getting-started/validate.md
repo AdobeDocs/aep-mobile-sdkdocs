@@ -1,3 +1,13 @@
+---
+title: Validating the Adobe Experience Platform Mobile SDK
+description: A guide that explains how to validate that the Adobe Experience Platform Mobile SDK has been properly set up.
+keywords:
+- Adobe Experience Platform Assurance
+- Guide
+- Tutorial
+- Validation
+---
+
 # Validation and next steps
 
 As you begin to add solution APIs to your mobile implementation, you are going to want to validate that specific actions and experiences work as intended. Adding [Adobe Experience Platform Assurance](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html#what-can-assurance-do-for-you%3F) to your application at the beginning of your implementation provides a way to quickly check to make sure the SDK has been instrumented properly and that data is flowing to Adobe Analytics and other solutions.

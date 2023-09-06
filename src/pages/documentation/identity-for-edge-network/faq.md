@@ -1,3 +1,13 @@
+---
+title: Identity for Edge Network frequently asked questions guide
+description: A list of frequently asked questions about the Identity for Edge Network mobile extension.
+keywords:
+- Edge Network
+- FAQ
+- Frequently asked questions
+- Identity for Edge Network
+---
+
 import Tabs from './tabs/faq.md'
 
 # Frequently asked questions
@@ -12,7 +22,7 @@ When using both Adobe Experience Platform Edge and Adobe Solutions extensions, b
 
 The following instructions are for configuring an application using both Edge Network and Adobe Solutions mobile extensions. If an application will include only Adobe Experience Platform Edge extensions, follow the instructions [here](./index.md#download-and-import-the-identity-extension).
 
-#### Download and import the Identity and Identity for Edge Network extensions
+### Download and import the Identity and Identity for Edge Network extensions
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -24,7 +34,7 @@ iOS
 
 <Tabs query="platform=ios&task=download"/>
 
-#### Register the Identity and Identity for Edge Network extensions with Mobile Core
+### Register the Identity and Identity for Edge Network extensions with Mobile Core
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -99,7 +109,7 @@ To get the identifiers used by the Edge extensions, call [getIdentities](./api-r
 
 A: Set privacy status to `optedOut` and call `resetIdentities`
 
-To clear the identifiers used by the Adobe Solutions extensions, call [setPrivacyStatus](../privacy-and-gdpr.md#set-and-get-privacy-status) and set the privacy status to `optedOut`.
+To clear the identifiers used by the Adobe Solutions extensions, call [setPrivacyStatus](../resources/privacy-and-gdpr.md#set-and-get-privacy-status) and set the privacy status to `optedOut`.
 
 To clear the identifiers used by the Edge extensions, call [resetIdentities](../mobile-core/api-reference.md#resetidentities)
 
@@ -111,7 +121,7 @@ When using Real-time Customer Profile and Identity Service, the ECIDs from both 
 
 Perform the following API calls to regenerate the ECIDs in sequence:
 
-1. Set [privacy status](../privacy-and-gdpr.md#set-and-get-privacy-status) to `optedOut` to clear the ECID from the Identity direct service extension.
+1. Set [privacy status](../resources/privacy-and-gdpr.md#set-and-get-privacy-status) to `optedOut` to clear the ECID from the Identity direct service extension.
 2. Call [resetIdentities](./api-reference.md#resetidentities) to regenerate a new ECID in the Identity for Edge Network extension.
 3. Call [getExperienceCloudId](./api-reference.md#getexperiencecloudid) on the Identity for Edge Network extension. This ensures the new ECID is generated before continuing.
 4. Set [privacy status](../privacy-and-gdpr.md#set-and-get-privacy-status) to `optedIn` to generate a new ECID in the Identity direct service extension.

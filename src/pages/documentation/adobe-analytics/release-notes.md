@@ -1,4 +1,18 @@
+---
+title: Adobe Analytics Release Notes
+description: The release notes for the Adobe Analytics mobile extension.
+keywords:
+- Adobe Analytics
+- Release notes
+---
+
 # Release Notes
+
+## July 26, 2023
+
+### Android Analytics 2.0.3
+
+* Added `a.systemLocale` to Lifecycle hits.
 
 ## June 6, 2023
 

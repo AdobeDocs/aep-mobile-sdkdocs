@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" api="extension-version" repeat="8"/>
 
 #### Java
@@ -248,6 +252,7 @@ Map<String, String> traits = new HashMap<String, String>();
 traits.put("trait", "xyz");
 Audience.signalWithData(traits, visitorProfileCallback);
 ```
+
 #### Kotlin
 
 **Example**

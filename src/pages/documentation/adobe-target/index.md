@@ -1,3 +1,11 @@
+---
+title: Adobe Target overview
+description: An overview for the Adobe Target mobile extension.
+keywords:
+- Adobe Target
+- Product overview
+---
+
 import Tabs from './tabs/index.md'
 
 # Adobe Target
@@ -197,4 +205,3 @@ For more information, see [Programmatic updates to Configuration](../mobile-core
 <InlineAlert variant="warning" slots="text"/>
 
 Currently, the `target.sessiontimeout` value can only be configured programmatically. For more information, see [updateConfiguration](../mobile-core/configuration/api-reference.md#updateconfiguration).
-

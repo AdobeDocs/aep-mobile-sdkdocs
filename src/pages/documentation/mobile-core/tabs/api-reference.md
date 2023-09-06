@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" api="collect-launch-info" repeat="2"/>
 
 The Android SDK automatically registers an `Application.ActivityLifecycleCallbacks`and listens for `onActivityResumed`. When an activity is resumed, SDK collects the data from the activity. Currently, it is being used in the following scenarios:
@@ -60,7 +64,7 @@ public static func collectLaunchInfo(_ userInfo: [String: Any])
 **Syntax**
 
 ```java
-public static void collectPII(@NonNull final Map<String, String> piiData);
+public static void collectPii(@NonNull final Map<String, String> data)
 ```
 
 **Example**
@@ -70,7 +74,7 @@ Map<String, String> data = new HashMap<String, String>();
 data.put("firstname", "customer");
 //The rule to trigger a PII needs to be setup for this call
 //to result in a network send
-MobileCore.collectPII(data);
+MobileCore.collectPii(data);
 ```
 
 <Variant platform="ios" api="collect-pii" repeat="10"/>
@@ -253,7 +257,6 @@ AEPEvent *event = [[AEPEvent alloc] initWithName:@"My Event" type:AEPEventType.c
     // handle responseEvent
 }];
 ```
-
 
 <Variant platform="android" api="get-application" repeat="6"/>
 
@@ -471,16 +474,16 @@ The log messages from the Adobe Experience SDK are printed to the Apple System L
 
 ```swift
 @objc(traceWithLabel:message:)
-public static func trace(label: String, _ message: String) 
+public static func trace(label: String, _ message: String)
 
 @objc(debugWithLabel:message:)
-public static func debug(label: String, _ message: String) 
+public static func debug(label: String, _ message: String)
 
 @objc(warningWithLabel:message:)
-public static func warning(label: String, _ message: String) 
+public static func warning(label: String, _ message: String)
 
 @objc(errorWithLabel:message:)
-public static func error(label: String, _ message: String) 
+public static func error(label: String, _ message: String)
 ```
 
 **Example**
@@ -536,7 +539,6 @@ MobileCore.registerEventListener(EventType.CONFIGURATION, EventSource.RESPONSE_C
 
 <Variant platform="ios" api="register-event-listener" repeat="10"/>
 
-
 #### Swift
 
 **Syntax**
@@ -549,7 +551,7 @@ public static func registerEventListener(type: String, source: String, listener:
 
 ```swift
 MobileCore.registerEventListener(type: EventType.configuration, source: EventSource.responseContent, listener: { event in
-   // handle event 
+   // handle event
 })
 ```
 
@@ -650,7 +652,7 @@ import android.app.Application;
 ...
 public class MainApp extends Application {
 
-    // Set up the preferred Environment File ID from your mobile property configured in Data Collection UI 
+    // Set up the preferred Environment File ID from your mobile property configured in Data Collection UI
     private static final String ENVIRONMENT_FILE_ID = "YOUR_ENVIRONMENT_FILE_ID";
 
     @Override
@@ -1495,7 +1497,7 @@ MobileCore.getSdkIdentities { (content, error) in
         } else if (error.code == AEPErrorServerError) {
           // handle server error
         } else if (error.code == AEPErrorNetworkError) {
-          // handle network error 
+          // handle network error
         } else if (error.code == AEPErrorInvalidRequest) {
           // handle invalid request error
         } else if (error.code == AEPErrorInvalidResponse) {

@@ -1,10 +1,18 @@
+---
+title: Adobe Target release notes
+description: The release notes for the Adobe Target mobile extension.
+keywords:
+- Adobe Target
+- Release notes
+---
+
 # Release Notes
 
 ## July 11, 2023
 
 ### iOS Target 4.0.1 and Android Target 2.0.1
 
-- Fixed a bug in which a Target Response containing JSON Array content was rejected.
+* Fixed a bug in which a Target Response containing JSON Array content was rejected.
 
 ## June 7, 2023
 

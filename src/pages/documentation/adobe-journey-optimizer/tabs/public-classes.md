@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="ios" function="id" repeat="2"/>
 
 #### Swift
@@ -134,7 +138,7 @@ void setAutoTrack(boolean enabled)
 
 ##### Parameters
 
-- *enabled* - if true, Experience Edge events will automatically be generated when this `Message` is triggered, displayed, or dismissed.
+* *enabled* - if true, Experience Edge events will automatically be generated when this `Message` is triggered, displayed, or dismissed.
 
 <Variant platform="android" function="evaluate-javascript" repeat="4"/>
 

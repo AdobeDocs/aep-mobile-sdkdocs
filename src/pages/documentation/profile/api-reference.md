@@ -1,3 +1,11 @@
+---
+title: Profile API reference
+description: An API reference for the Profile mobile extension.
+keywords:
+- API reference
+- Profile
+---
+
 import Tabs from './tabs/api-reference.md'
 
 # API reference
@@ -86,9 +94,9 @@ Sets the user profile attributes key and value and allows you to create or updat
 
 Remember the following information:
 
-- If the attribute does not exist, it will be created.
-- If the attribute exists, the value will be updated.
-- A null attribute value removes the attribute.
+* If the attribute does not exist, it will be created.
+* If the attribute exists, the value will be updated.
+* A null attribute value removes the attribute.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
@@ -102,11 +110,11 @@ Sets the user profile attributes key and value.
 
 Allows you to create/update a batch of user profile attributes:
 
-- String, Integer, Boolean, Double, Array, Map are valid type of user profile attributes.
-- Custom objects cannot be saved as a `UserProfile` attribute.
-- If the attribute does not exist, it is created.
-- If the attribute already exists, the value is updated.
-- A null attribute value will remove the attribute.
+* String, Integer, Boolean, Double, Array, Map are valid type of user profile attributes.
+* Custom objects cannot be saved as a `UserProfile` attribute.
+* If the attribute does not exist, it is created.
+* If the attribute already exists, the value is updated.
+* A null attribute value will remove the attribute.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

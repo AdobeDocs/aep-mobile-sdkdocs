@@ -1,4 +1,34 @@
+---
+title: Adobe Experience Platform Edge Network release notes
+description: The release notes for the Adobe Experience Platform Edge Network mobile extension.
+keywords:
+- Edge Network
+- Release notes
+---
+
 # Release Notes
+
+## September 1, 2023
+
+### iOS Edge 4.2.0
+
+* Added the ability to request a "completion" event when making an experience event request. The `contentComplete` event is dispatched after the request connection is closed.
+
+### Android Edge 2.3.0
+
+* Added the ability to request a "completion" event when making an experience event request. The `contentComplete` event is dispatched after the request connection is closed.
+
+## July 21, 2023
+
+### iOS Edge 4.1.0
+
+* Added support for chaining related events.
+* Fixed location of event index when decoding network response errors and warnings.
+
+### Android Edge 2.2.0
+
+* Added support for chaining related events.
+* Fixed location of event index when decoding network response errors and warnings.
 
 ## June 1, 2023
 
@@ -19,7 +49,7 @@ Major version update for [Edge Network](./index.md) for Adobe Experience Platfor
 
 ## February 28, 2023
 
-### iOS AEPEdge 1.6.0
+### iOS Edge 1.6.0
 
 * Added tvOS support.
 
@@ -37,7 +67,7 @@ Major version update for [Edge Network](./index.md) for Adobe Experience Platfor
 
 ## October 19, 2022
 
-### iOS AEPEdge 1.5.0
+### iOS Edge 1.5.0
 
 * Adds support for persisting the location hint returned by the Edge Network for the duration of the session for an improved user experience. Includes new APIs `getLocationHint` and `setLocationHint` allowing hybrid applications to share the location hint across SDKs.
 
@@ -47,7 +77,7 @@ Major version update for [Edge Network](./index.md) for Adobe Experience Platfor
 
 ## June 2, 2022
 
-### iOS AEPEdge 1.4.1
+### iOS Edge 1.4.1
 
 * Updates the consent request to use "update" query operation in order to allow for incremental consent preferences changes.
 * Internal updates to use URLComponents builder for Edge endpoints.
@@ -59,7 +89,7 @@ Major version update for [Edge Network](./index.md) for Adobe Experience Platfor
 
 ## April 8, 2022
 
-### iOS AEPEdge 1.4.0
+### iOS Edge 1.4.0
 
 * Updates timestamp in Experience Events to use fractional seconds.
 * Deprecates APIs `XDMFormatters.dateToISO8601String` and `XDMFormatters.dateToFullDateString`. Use the `Date` extension methods `getISO8601UTCDateWithMilliseconds` and `getISO8601FullDate` instead, provided by the AEPServices module within the AEPCore extension.
@@ -80,11 +110,11 @@ Major version update for [Edge Network](./index.md) for Adobe Experience Platfor
 
 ## January 21, 2022
 
-### iOS AEPEdge 1.3.0
+### iOS Edge 1.3.0
 
 * Allows setting a custom first-party domain that is used to interact with the mapped Adobe-provisioned Edge Network domain.
 
-### Android AEPEdge 1.3.0
+### Android Edge 1.3.0
 
 * Allows setting a custom first-party domain that is used to interact with the mapped Adobe-provisioned Edge Network domain.
 
@@ -96,7 +126,7 @@ Major version update for [Edge Network](./index.md) for Adobe Experience Platfor
 
 ## December 22, 2021
 
-### iOS AEPEdge 1.2.0
+### iOS Edge 1.2.0
 
 * Adds XDM Implementation Details to each Experience Event sent to the Edge Network.
 * Fixes generic network error format to conform to EdgeEventError type so they are dispatched back to the caller correctly.
@@ -109,7 +139,7 @@ Major version update for [Edge Network](./index.md) for Adobe Experience Platfor
 
 ## Sept 2, 2021
 
-### iOS AEPEdge 1.1.2
+### iOS Edge 1.1.2
 
 * Edge Network Extension now honors the timestamp set in XDM payload of Experience Event. If no timestamp is set, then timestamp of `Edge.sendEvent()` API call is used.
 
@@ -119,7 +149,7 @@ Major version update for [Edge Network](./index.md) for Adobe Experience Platfor
 
 ## June 10, 2021
 
-### iOS AEPEdge 1.1.1
+### iOS Edge 1.1.1
 
 * Development testing enhancements for Experience Edge.
 
@@ -132,19 +162,19 @@ This SDK is compatible with Android Core 1.8.2 and above.
 
 ## April 8, 2021
 
-### iOS AEPEdge 1.1.0
+### iOS Edge 1.1.0
 
-* Integration with AEPEdgeConsent 1.0.0 and collect consent preferences enforcement on requests to AEP Edge Network.
-* Adds required dependency on AEPEdgeIdentity 1.0.0 that brings XDM IdentityMap support for custom identifiers.
+* Integration with Edge Consent 1.0.0 and collect consent preferences enforcement on requests to AEP Edge Network.
+* Adds required dependency on Edge Identity 1.0.0 that brings XDM IdentityMap support for custom identifiers.
 
 ### Android Edge 1.1.0
 
-* Integration with edgeconsent 1.0.0 and collect consent preferences enforcement on requests to AEP Edge Network.
-* Adds required dependency on edgeidentity 1.0.0 that brings XDM IdentityMap support for custom identifiers.
+* Integration with Edge Consent 1.0.0 and collect consent preferences enforcement on requests to AEP Edge Network.
+* Adds required dependency on Edge Identity 1.0.0 that brings XDM IdentityMap support for custom identifiers.
 
 ## January 19, 2021
 
-### iOS AEPEdge 1.0.0
+### iOS Edge 1.0.0
 
 The Adobe Experience Platform Edge Network (AEPEdge) tag extension is now available in iOS! This extension allows for sending XDM formatted data to Adobe Experience Platform and Adobe Experience Cloud solutions, by leveraging Experience Edge capabilities.
 

@@ -1,3 +1,13 @@
+---
+title: Getting started with Adobe Experience Platform
+description: A guide that explains how to use Adobe Experience Platform with the Data Collection UI and Mobile SDK.
+keywords:
+- Adobe Experience Platform
+- Getting started
+- Guide
+---
+
+
 # Getting started with Adobe Experience Platform
 
 This tutorial illustrates how you may send Experience Data Model (XDM) commerce events to Adobe Experience Platform via Experience Edge using the AEP Edge extension in a sample application, provided to you in iOS (Swift) and Android.
@@ -45,14 +55,14 @@ To create a configuration identifier use the following steps:
 
 1. If your organization is enabled for multiple sandboxes, in [Adobe Experience Platform Data Collection UI](https://experience.adobe.com/#/data-collection) first select the sandbox from the top right corner. For more details about sandboxes, please read the [sandboxes overview](https://experienceleague.adobe.com/docs/experience-platform/sandbox/home.html).
 2. From the left panel select `Datastreams`, then select `New Datastream`.
-3. Provide a name and description, select `Save` and then proceed to next step to set up the services. 
+3. Provide a name and description, select `Save` and then proceed to next step to set up the services.
 
 ![](./assets/overview/create-datastream.png)
 
 1. To send events to Adobe Experience Platform, enable the `Adobe Experience Platform` section as shown below:
-   
-   - Select `Add service` and from the drop-down select `Adobe Experience Platform`.
-   
+
+   * Select `Add service` and from the drop-down select `Adobe Experience Platform`.
+
    * For the `Event Dataset`, select the XDM dataset you created in [Initialize Adobe Experience Platform for data collection](../../edge-network/index.md).
    * Click `Save`.
 
@@ -71,7 +81,7 @@ Experience Edge extension relies on the [Mobile Core](../../mobile-core/index.md
 5. Go to the Publishing Flow menu, select the development library you created and click `Add All Changed Resources`.
 6. Click `Save & Build for Development` to publish the changes in the **Development** environment.
 
-## Download the sample application and the AEP mobile extensions 
+## Download the sample application and the AEP mobile extensions
 
 ### Swift
 
@@ -228,4 +238,3 @@ To see a sample XDM implementation, please read the [sample XDM Implementation t
 ### Rules and XDM events
 
 To learn more about the rules used for XDM events, please read the [rules and XDM events tutorial](./rules-and-xdm-events.md).
-

@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" task="set-variable" repeat="8"/>
 
 #### Java
@@ -24,6 +28,7 @@ MobileCore.trackAction("purchase", cdata);
 // trackState example:
 MobileCore.trackState("Order Confirmation", cdata);
 ```
+
 #### Kotlin
 
 **Example**
@@ -42,6 +47,7 @@ MobileCore.trackAction("purchase", cdata);
 // trackState example:
 MobileCore.trackState("Order Confirmation", cdata);
 ```
+
 <Variant platform="ios" task="set-variable" repeat="10"/>
 
 #### Swift
@@ -124,6 +130,7 @@ MobileCore.trackAction("purchase", cdata);
 // trackState example: 
 MobileCore.trackState("Order Confirmation", cdata);
 ```
+
 #### Kotlin
 
 **Example**

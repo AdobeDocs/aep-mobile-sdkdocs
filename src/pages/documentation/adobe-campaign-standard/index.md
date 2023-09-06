@@ -1,3 +1,11 @@
+---
+title: Adobe Campaign Standard overview
+description: An overview for the Adobe Campaign Standard mobile extension.
+keywords:
+- Adobe Campaign Standard
+- Product overview
+---
+
 import Tabs from './tabs/index.md'
 
 # Adobe Campaign Standard
@@ -226,4 +234,3 @@ To update SDK configuration programmatically, use the following information to c
 | `__stage__campaign.server` | No | Sets the endpoint URL for the staging environment in the Adobe Campaign Standard instance. | String |
 | `campaign.registrationDelay` | No | Sets the number of days to delay the sending of the next Adobe Campaign Standard registration request. | Integer |
 | `campaign.registrationPaused` | No | Sets the Adobe Campaign Standard registration request paused status. | Boolean |
-

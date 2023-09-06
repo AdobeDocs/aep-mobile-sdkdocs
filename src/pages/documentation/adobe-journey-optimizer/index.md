@@ -1,3 +1,12 @@
+---
+title: Adobe Journey Optimizer overview
+description: An overview for the Adobe Journey Optimizer (AJO) mobile extension.
+keywords:
+- Adobe Journey Optimizer
+- Messaging
+- Product overview
+---
+
 import Tabs from './tabs/index.md'
 
 # Adobe Journey Optimizer

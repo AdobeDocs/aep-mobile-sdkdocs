@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" section="install-dependency" repeat="2"/>
 
 Download extension with dependencies using [Maven](https://maven.apache.org/) & [Gradle](https://gradle.org/)
@@ -29,7 +33,7 @@ Download extension with dependencies
 + pod 'AEPEdgeMedia'
 ```
 
-#### 2. Using SPM:
+#### 2. Using SPM
 
 Import the package:
 
