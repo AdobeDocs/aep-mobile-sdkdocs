@@ -87,6 +87,7 @@ If you need further assistance, please contact [Adobe Experience Cloud customer 
 ## Locations of the Extensions
 
 iOS
+
 * [iOS Edge](https://github.com/adobe/aepsdk-edge-ios)
 * [iOS Edge Bridge](https://github.com/adobe/aepsdk-edgebridge-ios)
 
