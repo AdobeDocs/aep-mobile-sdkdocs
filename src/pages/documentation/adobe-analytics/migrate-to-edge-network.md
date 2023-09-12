@@ -85,18 +85,22 @@ The previous Identity for Experience Cloud ID Service extension can be safely re
 If you need further assistance, please contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support).
 
 ## Locations of the Extensions
+
 iOS
 * [iOS Edge](https://github.com/adobe/aepsdk-edge-ios)
 * [iOS Edge Bridge](https://github.com/adobe/aepsdk-edgebridge-ios)
 
 Android
+
 * [Android Edge](https://github.com/adobe/aepsdk-edge-android)
 * [Android Edge Bridge](https://github.com/adobe/aepsdk-edgebridge-android)
 
 React Native
+
 * [React Native Edge](https://github.com/adobe/aepsdk-react-native/tree/main/packages/edge)
 * [React Native Edge Bridge](https://github.com/adobe/aepsdk-react-native/tree/main/packages/edgebridge)
 
 Flutter
+
 * [Flutter Edge](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepedge)
 * [Flutter Edge Bridge](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepedgebridge)
