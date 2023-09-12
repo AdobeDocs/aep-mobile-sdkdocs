@@ -118,7 +118,7 @@ If you are currently using the ACP-prefixed React Native libraries, please see [
 | [Places](./places/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepplaces.svg?color=green&label=%40adobe%2Freact-native-aepplaces&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepplaces) |
 | [Target](../adobe-target/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aeptarget.svg?color=green&label=%40adobe%2Freact-native-aeptarget&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aeptarget) |
 | [Campaign Classic](./adobe-campaign-classic/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepcampaignclassic.svg?color=green&label=%40adobe%2Freact-native-aepcampaignclassic&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepcampaignclassic) |
-| Adobe Analytics| Not Supported - Analytics workflows supported through [Edge](../adobe-analytics/migrate-to-edge-network.md) or [Edge Bridge](../adobe-analytics/migrate-to-edge-network.md) extensions. |
+| Adobe Analytics| Not Supported - Analytics workflows supported through Edge or Edge Bridge extensions, see [guide to migrate to Edge Network](../adobe-analytics/migrate-to-edge-network.md). |
 | Adobe Media Analytics| Not Supported  |
 | Adobe Audience| Not Supported  |
 | Adobe Campaign Standard| Not Supported  |
@@ -145,7 +145,7 @@ If you are currently using the ACP-prefixed Flutter libraries, please see [the g
 | [EdgeConsent](../consent-for-edge-network/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgeconsent.svg)](https://pub.dartlang.org/packages/flutter_aepedgeconsent) |
 | [Edge Bridge](../adobe-analytics/migrate-to-edge-network.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgebridge.svg)](https://pub.dartlang.org/packages/flutter_aepedgebridge) |
 | [UserProfile](../profile/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepuserprofile.svg)](https://pub.dartlang.org/packages/flutter_aepuserprofile) |
-| Adobe Analytics| Not Supported - Analytics workflows supported through [Edge](../adobe-analytics/migrate-to-edge-network.md) or [Edge Bridge](../adobe-analytics/migrate-to-edge-network.md) extensions. |
+| Adobe Analytics| Not Supported - Analytics workflows supported through Edge or Edge Bridge extensions, see [guide to migrate to Edge Network](../adobe-analytics/migrate-to-edge-network.md). |
 | Place Service | Not Supported  |
 | Place Monitor| Deprecated |
 
