@@ -239,7 +239,7 @@ When using server-side logging, [tracking methods](#proposition-tracking-using-d
 
 <InlineAlert variant="info" slots="text"/>
 
-Server-side A4T: If Analytics is enabled and configured in your datastream for the desired environment, then it is considered server-side logging. In this case, the Experience Edge handles forwarding any Target A4T payloads to Adobe Analytics, upon tracking method calls, and no analytics tokens are returned to the client.<br/>Client-side A4T: If Analytics is disabled in your datastream for the desired environment, then it is considered client-side logging. In this case, analytics tokens are returned to the client and it is the responsibility of the customer to extract and send the data to Adobe Analytics, if desired.
+Server-side logging: If Analytics is enabled and configured in your datastream for the desired environment, then it is considered server-side logging. In this case, the Experience Edge handles forwarding any Target A4T payloads to Adobe Analytics, upon tracking method calls, and no analytics tokens are returned to the client.<br/>Client-side logging: If Analytics is disabled in your datastream for the desired environment, then it is considered client-side logging. In this case, analytics tokens are returned to the client and it is the responsibility of the customer to extract and send the data to Adobe Analytics, if desired.
 
 ## Tracking
 
