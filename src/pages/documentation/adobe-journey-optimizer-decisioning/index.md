@@ -231,13 +231,15 @@ After you finish your rule configuration, verify the rule details are as shown b
 
 ### Analytics for Target (A4T)
 
-Set up the Analytics for Target (A4T) cross-solution integration by enabling the A4T campaigns to use Analytics as the reporting source for an activity. Subsequently, all reporting and segmentation for that activity is based on Analytics data collection. For more information, see [Adobe Analytics for Adobe Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html).
+Set up the Analytics for Target (A4T) cross-solution integration by enabling the A4T campaigns to use Adobe Analytics as the reporting source for a Target activity. Subsequently, all reporting and segmentation for that activity is based on Analytics data collection. For more information, see [Adobe Analytics for Adobe Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html).
 
-Once Analytics is listed as the reporting source for an activity on Target UI, A4T works out of the box in the Optimize SDK. The Experience Edge handles forwarding any Target A4T payloads to Adobe Analytics and no additional action is required on the client-side.
+Once Analytics is listed as the reporting source for an activity on Target UI, based on server-side or client-side logging appropriate actions need to be taken in the customer mobile apps to register impressions, visits/visitors and possibly conversions with Adobe Analytics.
 
-<InlineAlert variant="warning" slots="text"/>
+When using server-side logging, [tracking methods](#proposition-tracking-using-direct-offer-class-methods) need to be implemented in the customer mobile apps for server-side data exchange to happen with Adobe Analytics. This is because Optimize mobile SDK operates in prefetch mode and display notifications are required to indicate scope content is rendered so Experience Edge should share relevant A4T payload with Adobe Analytics. In addition, content interactions need to be reported using click notifications and these may lead to additional A4T data exchange with Adobe Analytics.
 
-For this integration to work, make sure Analytics is enabled in your datastream configuration for the desired environment and Report Suite information is provided.
+<InlineAlert variant="info" slots="text"/>
+
+**Server-side logging**: If Analytics is enabled and configured in your datastream for the desired environment, then it is considered server-side logging. In this case, the Experience Edge handles forwarding any Target A4T payloads to Adobe Analytics, upon tracking method calls, and no Analytics tokens are returned to the client.<br/>**Client-side logging**: If Analytics is disabled in your datastream for the desired environment, then it is considered client-side logging. In this case, Analytics tokens are returned to the client and it is the responsibility of the customer to extract and send the data to Adobe Analytics, if desired.
 
 ## Tracking
 
