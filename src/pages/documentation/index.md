@@ -26,9 +26,9 @@ For more information, check out the [release notes](./release-notes/#february-23
 
 <InlineAlert variant="success" slots="header, text"/>
 
-Good to go for iOS 16 and Android 13
+Good to go for iOS 17
 
-The latest versions of the Adobe Experience Platform SDK for Google Android and Apple iOS (Swift and Objective-C) are tested for compatibility with release verisons of Apple iOS 16 and Google Android 13. See [Current SDK Versions](./current-sdk-versions.md) to find our latest SDK versions or [release notes](./release-notes/index.md) for information on changes and updates.
+The latest versions of the Adobe Experience Platform SDK for Apple iOS (Swift and Objective-C) are tested for compatibility with release verisons of Apple iOS 17. See [Current SDK Versions](./current-sdk-versions.md) to find our latest SDK versions or [release notes](./release-notes/index.md) for information on changes and updates.
 
 ## Bring the Adobe Experience Cloud to your apps
 
