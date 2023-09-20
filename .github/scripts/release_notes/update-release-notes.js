@@ -10,12 +10,18 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const timestamp = require('./timestamp.json')
 const { fetchReleaseInfo } = require('./github-release');
 const { fetchAndroidReleaseInfo } = require('./android-release');
 const { capitalizeFirstLetter, convertIOSDateToRleaseDateFormat, extractReleaseNotes } = require('./utils');
 const lodashTemplate = require('lodash.template');
 const fs = require("fs");
+
+// "": "./src/pages/documentation/adobe-journey-optimizer-decisioning/release-notes.md",
+// "": "./src/pages/documentation/adobe-media-analytics/release-notes.md",
+// "": "./src/pages/documentation/identity-for-edge-network/release-notes.md",
+// "": "./src/pages/documentation/media-for-edge-network/release-notes.md",
+// "": "./src/pages/documentation/adobe-audience-manager/release-notes.md",
+// "": "./src/pages/documentation/adobe-campaign-classic/release-notes.md",
 
 const repoNames = [
     "aepsdk-roku",
@@ -44,16 +50,14 @@ const releaseNoteTemplateGenerator = lodashTemplate(
 
 ### <%= title %>
 
-<%= note %>       
-    `
+<%= note %>`
 )
 
 const releaseNoteWithoutDateTemplateGenerator = lodashTemplate(
     `
 ### <%= title %>
 
-<%= note %>       
-    `
+<%= note %>`
 )
 
 const BOMreleaseNoteTemplateGenerator = lodashTemplate(
@@ -72,8 +76,7 @@ const BOMreleaseNoteTemplateGenerator = lodashTemplate(
 
 </AccordionItem>
 
-</Accordion>
-`
+</Accordion>`
 )
 
 const BOMreleaseNoteWithoutDateTemplateGenerator = lodashTemplate(
@@ -90,14 +93,13 @@ const BOMreleaseNoteWithoutDateTemplateGenerator = lodashTemplate(
 
 </AccordionItem>
 
-</Accordion>
-`
+</Accordion>`
 )
 
 function extractBOMTableContent(releaseNote) {
     let lines = releaseNote.split('\n');
     let newLines = []
-    for (let line of lines) {
+    for (const line of lines) {
         if (line.startsWith('|')) {
             newLines.push(line)
         }
@@ -191,8 +193,9 @@ function updateReleaseNotesPage(filePath, releaseInfoArray) {
     // Find the index of the release notes header.
     let releaseNotesHeader = "# Release notes";
     let releaseNotesHeaderIndex = contentLines.indexOf(releaseNotesHeader);
-    for (let releaseInfo of releaseInfoArray) {
-        let titleLine = `### ${releaseInfo.title}`
+    for (const releaseInfo of releaseInfoArray) {
+        let title = generateReleaseTitle(releaseInfo.platform, releaseInfo.extension, releaseInfo.version)
+        let titleLine = `### ${title}`
         if (hasLineStartWith(titleLine, contentLines)) {
             console.error("already updated")
             continue
@@ -205,12 +208,12 @@ function updateReleaseNotesPage(filePath, releaseInfoArray) {
             // generate the release notes section to array
             let releaseNoteLines = releaseNote.split("\n");
             let dateLineIndex = contentLines.indexOf(dateLine);
-            contentLines = contentLines.splice(dateLineIndex + 1, 0, ...releaseNoteLines)
+            contentLines.splice(dateLineIndex + 1, 0, ...releaseNoteLines)
         } else {
             let releaseNote = generateReleaseNotesSection(releaseInfo)
             // generate the release notes section to array
             let releaseNoteLines = releaseNote.split("\n");
-            contentLines = contentLines.splice(releaseNotesHeaderIndex + 1, 0, ...releaseNoteLines)
+            contentLines.splice(releaseNotesHeaderIndex + 1, 0, ...releaseNoteLines)
         }
     }
 
@@ -221,24 +224,24 @@ function updateReleaseNotesPage(filePath, releaseInfoArray) {
 }
 
 function hasLineStartWith(string, lineArray) {
-    for (let line of lineArray) {
+    for (const line of lineArray) {
         if (line.trim().startsWith(string)) {
             return true
         }
-        return false
     }
+    return false
 }
 
 async function fetchNonAndoirdReleaseInfo(token, timestampInMilliseconds) {
     let releaseInofArray = []
-    for (let i = 0; i < repoNames.length; i++) {
-        var releaseInfo = await fetchReleaseInfo(token, "adobe", repoNames[i])
-        releaseInfo.forEach(element => {
-            let lastTimeStamp = Date.parse(element.published_at)
+    for (const repoName of repoNames) {
+        var releaseInfoList = await fetchReleaseInfo(token, "adobe", repoName)
+        for (const releaseInfo of releaseInfoList) {
+            let lastTimeStamp = Date.parse(releaseInfo.published_at)
             if (timestampInMilliseconds < lastTimeStamp) {
-                releaseInofArray.push(element)
+                releaseInofArray.push(releaseInfo)
             }
-        })
+        }
     }
     return releaseInofArray
 }
@@ -294,7 +297,7 @@ async function fetchAllReleaseInfo(token, timestampInMilliseconds) {
     var releaseInfoArray = []
     let rawInfoArray = await fetchNonAndoirdReleaseInfo(token, timestampInMilliseconds)
 
-    for (let releaseInfo of rawInfoArray) {
+    for (const releaseInfo of rawInfoArray) {
         releaseInfoArray.push(updateNonAndroidReleaseInfo(releaseInfo))
     }
 
