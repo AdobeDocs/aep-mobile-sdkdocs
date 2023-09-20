@@ -12,7 +12,7 @@ governing permissions and limitations under the License.
 const { fetchReleaseInfo, fetchReleaseInfoWithTagName } = require('./github-release');
 const { fetchMavenArtifactInfo, fetchAndroidReleaseInfo } = require('./android-release');
 const { convertIOSDateToRleaseDateFormat, isEarlierThanXHours, releaseFileContainsLineStartWith, saveJsonObjToFile, extractReleaseNotes } = require('./utils')
-const { sortReleaseInfoByDateASC, fetchAllReleaseInfo, generateReleaseNoteSection, generateBOMReleaseNoteSection } = require('./update-release-notes');
+const { updateReleaseNotesPage, filterExistingReleaseInfo, sortReleaseInfoByDateASC, fetchAllReleaseInfo, generateReleaseNoteSection, generateBOMReleaseNoteSection } = require('./update-release-notes');
 
 const template = require('lodash.template');
 
@@ -56,8 +56,9 @@ async function test_fetchAllReleasInfo() {
             var releaseNote = generateReleaseNoteSection(element.published_at, element.platform, element.extension, element.version, element.body)
             console.log(releaseNote)
         }
+    })
 
-    });
+    updateReleaseNotesPage("./src/pages/documentation/release-notes/index.md", list2)
 
 }
 
