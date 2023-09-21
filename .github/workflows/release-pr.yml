@@ -32,7 +32,9 @@ jobs:
        
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+      - name: Yarn install
+        run: yarn install
+        
       - name: Update releases notes (for BOM)
         run: node .github/scripts/release_notes/index.js ${{ secrets.GITHUB_TOKEN }}
      
