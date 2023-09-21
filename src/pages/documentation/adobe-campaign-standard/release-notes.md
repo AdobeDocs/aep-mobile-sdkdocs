@@ -8,6 +8,12 @@ keywords:
 
 # Release Notes
 
+## September 21, 2023
+
+### Android Campaign 2.0.6
+
+* Updated the minimum Core dependency version to 2.3.1 to resolve a local notification display issue.
+
 ## July 12, 2023
 
 ### Android Campaign 2.0.5
