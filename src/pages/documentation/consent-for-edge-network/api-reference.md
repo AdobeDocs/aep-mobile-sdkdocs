@@ -64,3 +64,5 @@ Android
 iOS
 
 <Tabs query="platform=ios&api=update-consents"/>
+
+For additional information about the management of Consent for Edge Network, please refer to [Privacy and GDPR](../resources/privacy-and-gdpr.md#using-experience-platform-sdks-for-edge-network).
