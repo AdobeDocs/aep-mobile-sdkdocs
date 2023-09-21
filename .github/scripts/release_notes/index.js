@@ -38,4 +38,3 @@ async function run() {
     }
     saveJsonObjToFile(jsonObj, `${__dirname}/timestamp.json`)
 }
-

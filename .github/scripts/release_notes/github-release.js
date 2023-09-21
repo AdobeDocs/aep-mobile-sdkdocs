@@ -26,12 +26,12 @@ const https = require('https');
 //     repo,
 // });
 
-async function fetchReleaseInfo(token, owner, repo, count = 5) {
+async function fetchReleaseInfo(token, owner, repo, capacity = 5) {
     var options = {
         host: 'api.github.com',
         port: 443,
         timeout: 2000,
-        path: `/repos/${owner}/${repo}/releases?per_page=${count}`,
+        path: `/repos/${owner}/${repo}/releases?per_page=${capacity}`,
         method: 'GET',
         headers: {
             'Accept': 'application/vnd.github+json',
@@ -58,7 +58,7 @@ async function fetchReleaseInfo(token, owner, repo, count = 5) {
                 var str = new TextDecoder("utf-8").decode(buffer)
                 var responseJson = JSON.parse(str)
                 if (Array.isArray(responseJson) == false) {
-                    throw new Error("responseJson is not an array")
+                    throw new Error("response JSON is not an array")
                 }
                 var array = []
                 responseJson.forEach(element => {
@@ -77,7 +77,6 @@ async function fetchReleaseInfo(token, owner, repo, count = 5) {
         });
         reqGet.end();
     })
-
 }
 
 async function fetchReleaseInfoWithTagName(token, owner, repo, tag) {

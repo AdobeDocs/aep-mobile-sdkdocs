@@ -17,12 +17,13 @@ const { capitalizeFirstLetter } = require('./utils');
 // Maven Search REST API
 // https://central.sonatype.org/search/rest-api-guide/
 
-async function fetchMavenArtifactInfo(groupId, count, timestampInMilliseconds) {
-    var options = {
+// Fetch the latest Android artifacts from Maven Central
+async function fetchMavenArtifactInfo(groupId, capacity, timestampInMilliseconds) {
+    let options = {
         host: 'search.maven.org',
         port: 443,
         timeout: 2000,
-        path: `/solrsearch/select?q=g:${groupId}&core=gav&rows=${count}&wt=json`,
+        path: `/solrsearch/select?q=g:${groupId}&core=gav&rows=${capacity}&wt=json`,
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -33,21 +34,21 @@ async function fetchMavenArtifactInfo(groupId, count, timestampInMilliseconds) {
     console.log(`request options: ${JSON.stringify(options)}`)
 
     return new Promise((resolve) => {
-        var reqGet = https.request(options, function (res) {
+        let reqGet = https.request(options, function (res) {
             if (res.statusCode != 200) {
                 throw new Error(`response statusCode: ${res.statusCode}`)
             }
             console.log(`response statusCode: ${res.statusCode}`)
 
-            var data = [];
+            let data = [];
             res.on('data', function (chunk) {
                 data.push(chunk);
             }).on('end', function () {
-                var buffer = Buffer.concat(data);
-                var str = new TextDecoder("utf-8").decode(buffer)
-                var responseJson = JSON.parse(str)
+                let buffer = Buffer.concat(data);
+                let str = new TextDecoder("utf-8").decode(buffer)
+                let responseJson = JSON.parse(str)
 
-                var array = []
+                let array = []
                 responseJson.response.docs.forEach(element => {
                     if (timestampInMilliseconds < element.timestamp) {
                         array.push(artifactInfo(element.timestamp, element.a, element.v))
@@ -69,35 +70,43 @@ async function fetchMavenArtifactInfo(groupId, count, timestampInMilliseconds) {
 
 }
 
-function artifactInfo(timestamp, artifact, version) {
+function artifactInfo(timestamp, artifactId, version) {
     return {
         "timestamp": timestamp,
-        "artifact": artifact,
+        "artifactId": artifactId,
         "version": version
     }
 }
 
-async function fetchAndroidReleaseInfo(token, groupId, timestampInMilliseconds, count = 10) {
-    var array = await fetchMavenArtifactInfo(groupId, count, timestampInMilliseconds);
+// Fetch the latest Android release info from GitHub
+async function fetchAndroidReleaseInfo(token, groupId, timestampInMilliseconds, capacity = 10) {
+    let array = await fetchMavenArtifactInfo(groupId, capacity, timestampInMilliseconds);
     console.log("fetchMavenArtifactInfo():")
     console.log(array)
-    var releaseInfoArray = []
+    let releaseInfoArray = []
     for (let i = 0; i < array.length; i++) {
-        var artifactId = array[i].artifact
-        var version = array[i].version
-        var info = buildGitHubInfo(artifactId, version)
-        if (info != null) {
-            releaseInfo = await fetchReleaseInfoWithTagName(token, "adobe", info.repoName, info.tagName);
-            // update release info with artifactId, version, and platform
-            releaseInfo.version = version
-            releaseInfo.extension = artifactIdToExtensionName(artifactId)
-            releaseInfo.platform = 'Android'
-            releaseInfoArray.push(releaseInfo)
+        let artifactId = array[i].artifactId
+        let version = array[i].version
+        let extensionName = artifactIdToExtensionName(artifactId)
+        if (extensionName == null) {
+            continue
         }
+        let info = buildGitHubInfo(artifactId, version)
+        if (info == null) {
+            continue
+        }
+        releaseInfo = await fetchReleaseInfoWithTagName(token, "adobe", info.repoName, info.tagName);
+        // update release info with extension, version, and platform
+        releaseInfo.version = version
+        releaseInfo.extension = extensionName
+        releaseInfo.platform = 'Android'
+        releaseInfoArray.push(releaseInfo)
+
     }
     return releaseInfoArray
 }
 
+// Convert artifactId to extension name. The extension name is used to generate the release title.
 function artifactIdToExtensionName(artifactId) {
     switch (artifactId) {
         case "sdk-bom":
@@ -115,20 +124,24 @@ function artifactIdToExtensionName(artifactId) {
         case "places":
         case "media":
         case "target":
-        case "edgeidentity":
         case "analytics":
         case "assurance":
-        case "edgebridge":
-        case "edgeconsent":
-        case "edgemedia":
         case "audience":
         case "campaign":
             return capitalizeFirstLetter(artifactId)
         case "userprofile":
             return "UserProfile"
+        case "edgeconsent":
+            return "EdgeConsent"
+        case "edgeidentity":
+            return "EdgeIdentity"
+        case "edgebridge":
+            return "EdgeBridge"
+        case "edgemedia":
+            return "EdgeMedia"
         default:
             console.log("artifactId not supported: " + artifactId)
-            return ''
+            return null
     }
 }
 
@@ -151,7 +164,7 @@ function buildGitHubInfo(artifactId, artifactVersion) {
 
         case "edge":
         case "optimize":
-        // case "places":
+        case "places":
         case "media":
         case "target":
         case "edgeidentity":

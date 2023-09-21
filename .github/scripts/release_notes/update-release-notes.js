@@ -16,32 +16,26 @@ const { capitalizeFirstLetter, convertIOSDateToRleaseDateFormat, extractReleaseN
 const lodashTemplate = require('lodash.template');
 const fs = require("fs");
 
-// "": "./src/pages/documentation/adobe-journey-optimizer-decisioning/release-notes.md",
-// "": "./src/pages/documentation/adobe-media-analytics/release-notes.md",
-// "": "./src/pages/documentation/identity-for-edge-network/release-notes.md",
-// "": "./src/pages/documentation/media-for-edge-network/release-notes.md",
-// "": "./src/pages/documentation/adobe-audience-manager/release-notes.md",
-// "": "./src/pages/documentation/adobe-campaign-classic/release-notes.md",
-
 const repoNames = [
     "aepsdk-roku",
     "aepsdk-react-native",
     "aepsdk_flutter",
+    "aepsdk-core-ios",
+    "aepsdk-assurance-ios",
+    "aepsdk-userprofile-ios",
     "aepsdk-edge-ios",
     "aepsdk-edgeconsent-ios",
     "aepsdk-edgeidentity-ios",
-    "aepsdk-userprofile-ios",
-    "aepsdk-campaign-ios",
     "aepsdk-edgemedia-ios",
+    "aepsdk-edgebridge-ios",
+    "aepsdk-optimize-ios",
+    "aepsdk-messaging-ios",
+    "aepsdk-campaign-ios",
     "aepsdk-media-ios",
     "aepsdk-audience-ios",
     "aepsdk-analytics-ios",
-    "aepsdk-edgebridge-ios",
     "aepsdk-places-ios",
     "aepsdk-target-ios",
-    "aepsdk-optimize-ios",
-    "aepsdk-core-ios",
-    "aepsdk-messaging-ios",
 ]
 
 const releaseNoteTemplateGenerator = lodashTemplate(
@@ -108,7 +102,7 @@ function extractBOMTableContent(releaseNote) {
 }
 
 function generateReleaseNoteSection(IOSDateString, platform, extension, version, releaseNote) {
-    var array = extractReleaseNotes(releaseNote)
+    let array = extractReleaseNotes(releaseNote)
     let releaseNoteSection = releaseNoteTemplateGenerator({
         date: convertIOSDateToRleaseDateFormat(IOSDateString),
         title: `${platform} ${extension} ${version}`,
@@ -118,7 +112,7 @@ function generateReleaseNoteSection(IOSDateString, platform, extension, version,
 }
 
 function generateReleaseNoteSectionWithoutDateLine(platform, extension, version, releaseNote) {
-    var array = extractReleaseNotes(releaseNote)
+    let array = extractReleaseNotes(releaseNote)
     let releaseNoteSection = releaseNoteWithoutDateTemplateGenerator({
         title: `${platform} ${extension} ${version}`,
         note: array.join('\n')
@@ -127,7 +121,7 @@ function generateReleaseNoteSectionWithoutDateLine(platform, extension, version,
 }
 
 function generateBOMReleaseNoteSection(IOSDateString, platform, extension, version, releaseNote) {
-    var array = extractBOMTableContent(releaseNote)
+    let array = extractBOMTableContent(releaseNote)
     let releaseNoteSection = BOMreleaseNoteTemplateGenerator({
         date: convertIOSDateToRleaseDateFormat(IOSDateString),
         title: generateReleaseTitle(platform, extension, version),
@@ -137,7 +131,7 @@ function generateBOMReleaseNoteSection(IOSDateString, platform, extension, versi
 }
 
 function generateBOMReleaseNoteSectionWithoutDateLine(platform, extension, version, releaseNote) {
-    var array = extractBOMTableContent(releaseNote)
+    let array = extractBOMTableContent(releaseNote)
     let releaseNoteSection = BOMreleaseNoteWithoutDateTemplateGenerator({
         title: generateReleaseTitle(platform, extension, version),
         note: array.join('\n')
@@ -162,8 +156,7 @@ function filterExistingReleaseInfo(releaseInfoArray, lines) {
 }
 
 function generateReleaseNotesSection(releaseInfo) {
-    // Generate the release notes section.
-    var releaseNote = ''
+    let releaseNote = ''
     if (releaseInfo.extension == 'BOM') {
         releaseNote = generateBOMReleaseNoteSection(releaseInfo.published_at, releaseInfo.platform, releaseInfo.extension, releaseInfo.version, releaseInfo.body)
     } else {
@@ -173,18 +166,13 @@ function generateReleaseNotesSection(releaseInfo) {
 }
 
 function generateReleaseNotesSectionWithoutDateLine(releaseInfo) {
-    // Generate the release notes section.
-    var releaseNote = ''
+    let releaseNote = ''
     if (releaseInfo.extension == 'BOM') {
         releaseNote = generateBOMReleaseNoteSectionWithoutDateLine(releaseInfo.platform, releaseInfo.extension, releaseInfo.version, releaseInfo.body)
     } else {
         releaseNote = generateReleaseNoteSectionWithoutDateLine(releaseInfo.platform, releaseInfo.extension, releaseInfo.version, releaseInfo.body)
     }
     return releaseNote
-}
-
-function updateMainReleaseNotesPage(releaseInfoArray) {
-    updateReleaseNotesPage("./src/pages/documentation/release-notes/index.md", releaseInfoArray)
 }
 
 function updateReleaseNotesPage(filePath, releaseInfoArray) {
@@ -218,7 +206,10 @@ function updateReleaseNotesPage(filePath, releaseInfoArray) {
     }
 
     fs.writeFile(filePath, contentLines.join("\n"), function (err) {
-        if (err) return console.log(err);
+        if (err) {
+            console.log(err)
+            throw Error(err);
+        }
     });
 
 }
@@ -250,7 +241,7 @@ function updateNonAndroidReleaseInfo(releaseInfo) {
     switch (releaseInfo.repo_name) {
         case "aepsdk-roku":
             releaseInfo.platform = 'Roku'
-            releaseInfo.version = 'SDK'
+            releaseInfo.extension = 'SDK'
             releaseInfo.version = releaseInfo.tag_name
             break;
         case "aepsdk-react-native":
@@ -268,25 +259,54 @@ function updateNonAndroidReleaseInfo(releaseInfo) {
             releaseInfo.version = array[1]
             break;
         case "aepsdk-edge-ios":
-        case "aepsdk-edgeconsent-ios":
-        case "aepsdk-edgeidentity-ios":
-        case "aepsdk-userprofile-ios":
-        case "aepsdk-campaign-ios":
-        case "aepsdk-edgemedia-ios":
         case "aepsdk-media-ios":
         case "aepsdk-audience-ios":
         case "aepsdk-analytics-ios":
-        case "aepsdk-edgebridge-ios":
         case "aepsdk-places-ios":
         case "aepsdk-target-ios":
         case "aepsdk-optimize-ios":
         case "aepsdk-core-ios":
         case "aepsdk-messaging-ios":
+        case "aepsdk-assurance-ios":
             releaseInfo.platform = 'iOS'
             releaseInfo.extension = capitalizeFirstLetter(releaseInfo.repo_name.replace('aepsdk-', '').replace('-ios', ''))
             releaseInfo.version = releaseInfo.tag_name
             break;
-
+        case "aepsdk-edgeconsent-ios":
+            releaseInfo.platform = 'iOS'
+            releaseInfo.extension = 'EdgeConsent'
+            releaseInfo.version = releaseInfo.tag_name
+            break;
+        case "aepsdk-edgeidentity-ios":
+            releaseInfo.platform = 'iOS'
+            releaseInfo.extension = 'EdgeIdentity'
+            releaseInfo.version = releaseInfo.tag_name
+            break;
+        case "aepsdk-userprofile-ios":
+            releaseInfo.platform = 'iOS'
+            releaseInfo.extension = 'UserProfile'
+            releaseInfo.version = releaseInfo.tag_name
+            break;
+        case "aepsdk-edgebridge-ios":
+            releaseInfo.platform = 'iOS'
+            releaseInfo.extension = 'EdgeBridge'
+            releaseInfo.version = releaseInfo.tag_name
+            break;
+        case "aepsdk-edgemedia-ios":
+            releaseInfo.platform = 'iOS'
+            releaseInfo.extension = 'EdgeMedia'
+            releaseInfo.version = releaseInfo.tag_name
+            break;
+        case "aepsdk-campaignclassic-ios":
+            releaseInfo.platform = 'iOS'
+            releaseInfo.extension = 'Campaign Classic'
+            releaseInfo.version = releaseInfo.tag_name
+            break;
+        case "aepsdk-campaign-ios":
+            releaseInfo.platform = 'iOS'
+            releaseInfo.extension = 'Campaign Standard'
+            releaseInfo.version = releaseInfo.tag_name
+            break;
         default:
             console.log("unsupported repoName: " + releaseInfo.repoName)
     }
