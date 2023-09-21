@@ -7,6 +7,12 @@ Keywords:
 
 # Release notes
 
+## September 21, 2023
+
+### Android Campaign 2.0.6
+
+* Updated the minimum Core dependency version to 2.3.1 to resolve a local notification display issue.
+
 ## September 5, 2023
 
 ### Android BOM  2.4.0
