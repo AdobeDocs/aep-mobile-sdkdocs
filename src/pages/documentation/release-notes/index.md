@@ -9,7 +9,7 @@ Keywords:
 
 ## September 5, 2023
 
-### Android BOM  2.4.0
+### Android BOM 2.4.0
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
@@ -56,7 +56,7 @@ Keywords:
 
 ## August 30, 2023
 
-### Android BOM  2.3.0
+### Android BOM 2.3.0
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
