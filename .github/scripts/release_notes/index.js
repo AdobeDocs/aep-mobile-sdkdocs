@@ -27,7 +27,11 @@ async function run() {
     const list = await fetchAllReleaseInfo(token, timestampObj.ts)
     const sortedList = sortReleaseInfoByDateASC(list)
     updateReleaseNotesPage("./src/pages/documentation/release-notes/index.md", sortedList)
+    const ignoreList = ['AEP React Native', 'Roku', 'AEP Flutter']
     for (const releaseInfo of sortedList) {
+        if (ignoreList.includes(releaseInfo.platform)) {
+            continue
+        }
         let filePath = releaseNoteMap[releaseInfo.extension]
         if (filePath != undefined) {
             updateReleaseNotesPage(filePath, [releaseInfo])
