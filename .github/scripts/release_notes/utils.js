@@ -21,8 +21,8 @@ function isEarlierThanXHours(hours, timestampInMilliseconds) {
 
 function extractReleaseNotes(releaseText) {
     const lines = releaseText.split('\n');
-    var start = -1
-    var end = lines.length
+    let start = -1
+    let end = lines.length
 
     for (let i = 0; i < lines.length; i++) {
         const line = lines[i];

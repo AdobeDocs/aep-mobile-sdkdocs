@@ -37,7 +37,7 @@ async function run() {
             updateReleaseNotesPage(filePath, [releaseInfo])
         }
     }
-    var jsonObj = {
+    let jsonObj = {
         "ts": Date.now()
     }
     saveJsonObjToFile(jsonObj, `${__dirname}/timestamp.json`)

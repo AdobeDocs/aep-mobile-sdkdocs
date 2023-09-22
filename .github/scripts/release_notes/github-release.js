@@ -27,7 +27,7 @@ const https = require('https');
 // });
 
 async function fetchReleaseInfo(token, owner, repo, capacity = 5) {
-    var options = {
+    let options = {
         host: 'api.github.com',
         port: 443,
         timeout: 2000,
@@ -44,23 +44,23 @@ async function fetchReleaseInfo(token, owner, repo, capacity = 5) {
     console.log(`request options: ${JSON.stringify(options)}`)
 
     return new Promise((resolve) => {
-        var reqGet = https.request(options, function (res) {
+        let reqGet = https.request(options, function (res) {
             if (res.statusCode != 200) {
                 throw new Error(`response statusCode: ${res.statusCode}`)
             }
             console.log(`response statusCode: ${res.statusCode}`)
 
-            var data = [];
+            let data = [];
             res.on('data', function (chunk) {
                 data.push(chunk);
             }).on('end', function () {
-                var buffer = Buffer.concat(data);
-                var str = new TextDecoder("utf-8").decode(buffer)
-                var responseJson = JSON.parse(str)
+                let buffer = Buffer.concat(data);
+                let str = new TextDecoder("utf-8").decode(buffer)
+                let responseJson = JSON.parse(str)
                 if (Array.isArray(responseJson) == false) {
                     throw new Error("response JSON is not an array")
                 }
-                var array = []
+                let array = []
                 responseJson.forEach(element => {
                     array.push(releaseInfo(element.published_at, element.body, repo, element.tag_name))
                 });
@@ -80,7 +80,7 @@ async function fetchReleaseInfo(token, owner, repo, capacity = 5) {
 }
 
 async function fetchReleaseInfoWithTagName(token, owner, repo, tag) {
-    var options = {
+    let options = {
         host: 'api.github.com',
         port: 443,
         path: `/repos/${owner}/${repo}/releases/tags/${tag}`,
@@ -96,19 +96,19 @@ async function fetchReleaseInfoWithTagName(token, owner, repo, tag) {
     console.log(`request options: ${JSON.stringify(options)}`)
 
     return new Promise((resolve) => {
-        var reqGet = https.request(options, function (res) {
+        let reqGet = https.request(options, function (res) {
             if (res.statusCode != 200) {
                 throw new Error(`response statusCode: ${res.statusCode}`)
             }
             console.log(`response statusCode: ${res.statusCode}`)
 
-            var data = [];
+            let data = [];
             res.on('data', function (chunk) {
                 data.push(chunk);
             }).on('end', function () {
-                var buffer = Buffer.concat(data);
-                var str = new TextDecoder("utf-8").decode(buffer)
-                var responseJson = JSON.parse(str)
+                let buffer = Buffer.concat(data);
+                let str = new TextDecoder("utf-8").decode(buffer)
+                let responseJson = JSON.parse(str)
                 resolve(releaseInfo(responseJson.published_at, responseJson.body, repo, responseJson.tag_name))
             });
         });

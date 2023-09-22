@@ -233,7 +233,7 @@ function hasLineStartWith(string, lineArray) {
 async function fetchNonAndoirdReleaseInfo(token, timestampInMilliseconds) {
     let releaseInofArray = []
     for (const repoName of repoNames) {
-        var releaseInfoList = await fetchReleaseInfo(token, "adobe", repoName)
+        let releaseInfoList = await fetchReleaseInfo(token, "adobe", repoName)
         for (const releaseInfo of releaseInfoList) {
             let lastTimeStamp = Date.parse(releaseInfo.published_at)
             if (timestampInMilliseconds < lastTimeStamp) {
@@ -253,15 +253,13 @@ function updateNonAndroidReleaseInfo(releaseInfo) {
             break;
         case "aepsdk-react-native":
             releaseInfo.platform = 'AEP React Native'
-            var extensionAndVersion = releaseInfo.tag_name.replace('@adobe/react-native-aep', '')
-            let tmArray = extensionAndVersion.split('@')
+            let tmArray = releaseInfo.tag_name.replace('@adobe/react-native-aep', '').split('@')
             releaseInfo.extension = capitalizeFirstLetter(tmArray[0])
             releaseInfo.version = tmArray[1]
             break;
         case "aepsdk-flutter":
             releaseInfo.platform = 'AEP Flutter'
-            var extensionAndVersion = releaseInfo.tag_name.replace('flutter_aep', '')
-            let array = extensionAndVersion.split('@')
+            let array = releaseInfo.tag_name.replace('flutter_aep', '').split('@')
             releaseInfo.extension = capitalizeFirstLetter(array[0])
             releaseInfo.version = array[1]
             break;
@@ -321,14 +319,14 @@ function updateNonAndroidReleaseInfo(releaseInfo) {
 }
 
 async function fetchAllReleaseInfo(token, timestampInMilliseconds) {
-    var releaseInfoArray = []
+    let releaseInfoArray = []
     let rawInfoArray = await fetchNonAndoirdReleaseInfo(token, timestampInMilliseconds)
 
     for (const releaseInfo of rawInfoArray) {
         releaseInfoArray.push(updateNonAndroidReleaseInfo(releaseInfo))
     }
 
-    var AndroidReleaseInfoArray = await fetchAndroidReleaseInfo(token, "com.adobe.marketing.mobile", timestampInMilliseconds);
+    let AndroidReleaseInfoArray = await fetchAndroidReleaseInfo(token, "com.adobe.marketing.mobile", timestampInMilliseconds);
     return releaseInfoArray.concat(AndroidReleaseInfoArray)
 }
 
