@@ -35,7 +35,7 @@ jobs:
       - name: Yarn install
         run: yarn install
         
-      - name: Update releases notes (for BOM)
+      - name: Update releases notes
         run: node .github/scripts/release_notes/index.js ${{ secrets.GITHUB_TOKEN }}
      
       - name: Check release-notes/index.md
