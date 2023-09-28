@@ -1,3 +1,13 @@
+---
+title: Troubleshooting Adobe Campaign push messaging
+description: A guide that explains tips for troubleshooting Adobe Campaign push messaging.
+keywords:
+- Adobe Campaign
+- Guide
+- Push messaging
+- Troubleshooting
+---
+
 import Tabs from './tabs/push-sync.md'
 
 # Troubleshooting push identifier sync

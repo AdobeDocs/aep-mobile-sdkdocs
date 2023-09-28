@@ -1,3 +1,13 @@
+---
+title: Mobile Core Rules Engine technical details
+description: An overview for the technical details of the Mobile Core Rules Engine.
+keywords:
+- Mobile Core
+- Rules Engine
+- Rules Engine for Mobile Core
+- Technical overview
+---
+
 # Rules Engine technical details
 
 ## Key definitions

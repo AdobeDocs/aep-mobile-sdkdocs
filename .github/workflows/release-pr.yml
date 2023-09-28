@@ -1,0 +1,67 @@
+name: Update release notes
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on: 
+   workflow_dispatch:
+      inputs:
+         time_range_hours:
+           description: 'SDK released within x hours'     
+           required: true
+           default: '24'
+   schedule:
+     - cron: '00 00 * * *'
+     # At 00:00 everyday
+
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  update-bom:
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3.1.0
+        with:
+          ref: main
+          
+      - name: Check existing PRs
+        run: |
+          if gh pr list --repo ${{ github.server_url }}/${{ github.repository }} --json title | grep 'Updating release notes for BOM'; then
+            gh run cancel ${{ github.run_id }}
+            gh run watch ${{ github.run_id }}
+          else
+            echo "Not found existing PRs"
+          fi
+       
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Update releases notes (for BOM)
+        run: node .github/scripts/update-release-notes.js ${{ secrets.GITHUB_TOKEN }} ${{ github.event.inputs.time_range_hours }} debug
+     
+      - name: Check release-notes/index.md
+        run: |
+          if git diff --exit-code ./src/pages/documentation/release-notes/index.md; then
+            gh run cancel ${{ github.run_id }}
+            gh run watch ${{ github.run_id }}
+          else
+            echo "./src/pages/documentation/release-notes/index.md -> no update"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4.2.3
+        with:
+          token: ${{ github.token }}
+          commit-message: Updating release notes for BOM
+          branch: update-release-notes
+          delete-branch: true
+          labels: |
+            release-notes
+            automated pr
+          title: "Updating release notes for BOM"
+          body: This PR is automatically created by [update-release-notes] action.
+            

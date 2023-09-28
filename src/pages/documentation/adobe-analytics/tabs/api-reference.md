@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" api="clear-queue" repeat="8"/>
 
 #### Java

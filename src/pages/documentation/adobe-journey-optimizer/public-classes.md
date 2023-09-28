@@ -1,3 +1,13 @@
+---
+title: Adobe Journey Optimizer public class reference
+description: A public class reference for the Adobe Journey Optimizer (AJO) mobile extension.
+keywords:
+- Adobe Journey Optimizer
+- API reference
+- Messaging
+- Public class
+---
+
 import Tabs from './tabs/public-classes.md'
 
 # iOS Class - Message

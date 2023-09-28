@@ -1,3 +1,10 @@
+---
+title: Privacy and GDPR
+description: A guide that explains how to best handle consent and privacy obligations, such as GDPR, with the Adobe Experience Platform Mobile SDKs.
+keywords:
+- Privacy
+---
+
 import PrivacyTabs from './tabs/privacy-and-gdpr.md'
 
 # Privacy and GDPR

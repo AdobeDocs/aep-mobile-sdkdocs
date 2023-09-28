@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" task="unable-to-open-app" repeat="1"/>
 
 Follow the [Android documention](https://developer.android.com/training/app-links/deep-linking) on information about how to set up a deeplink.

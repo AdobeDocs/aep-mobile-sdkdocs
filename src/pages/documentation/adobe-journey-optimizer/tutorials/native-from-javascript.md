@@ -1,3 +1,15 @@
+---
+title: Native handling of JavaScript events
+description: A guide explaining how you can handle JavaScript events from in-app message interactions natively within your application.
+keywords:
+- Adobe Journey Optimizer
+- Guide
+- JavaScript event
+- Messaging
+- Messaging delegate
+- Tutorial
+---
+
 import Tabs from './tabs/native-from-javascript.md'
 
 # Native handling of JavaScript events

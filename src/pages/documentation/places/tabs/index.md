@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" task="download" repeat="5"/>
 
 1. Add the Mobile Core and Places extensions to your project using the app's Gradle file.

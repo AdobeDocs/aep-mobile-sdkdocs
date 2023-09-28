@@ -1,3 +1,13 @@
+---
+title: Mobile Core configuration extension overview
+description: An overview for the Mobile Core configuration extension.
+keywords:
+- Configuration
+- Configuration for Mobile Core
+- Mobile Core
+- Product overview
+---
+
 import Tabs from './tabs/index.md'
 
 # Configuration

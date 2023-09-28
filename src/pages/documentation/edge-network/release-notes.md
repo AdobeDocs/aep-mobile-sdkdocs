@@ -1,4 +1,22 @@
+---
+title: Adobe Experience Platform Edge Network release notes
+description: The release notes for the Adobe Experience Platform Edge Network mobile extension.
+keywords:
+- Edge Network
+- Release notes
+---
+
 # Release Notes
+
+## September 1, 2023
+
+### iOS Edge 4.2.0
+
+* Added the ability to request a "completion" event when making an experience event request. The `contentComplete` event is dispatched after the request connection is closed.
+
+### Android Edge 2.3.0
+
+* Added the ability to request a "completion" event when making an experience event request. The `contentComplete` event is dispatched after the request connection is closed.
 
 ## July 21, 2023
 

@@ -1,3 +1,11 @@
+---
+title: Adobe Target API reference
+description: An API reference for the Adobe Target mobile extension.
+keywords:
+- Adobe Target
+- API reference
+---
+
 import Tabs from './tabs/api-reference.md'
 
 # Target API reference

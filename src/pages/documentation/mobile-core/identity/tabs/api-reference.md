@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" api="append-to-url" repeat="7"/>
 
 #### Java

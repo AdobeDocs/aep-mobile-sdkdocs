@@ -1,11 +1,19 @@
 ---
 title: Mobile SDK overview
-description: This is the overview page of Mobile SDK
+description: The overview page for the Adobe Experience Platform Mobile SDK documentation.
+keywords:
+- Product overview
 ---
 
 # Mobile SDK documentation
 
 Welcome to the home of Adobe Experience Platform Mobile SDK documentation.
+
+<InlineAlert variant="success" slots="header, text"/>
+
+Good to go for iOS 17
+
+The latest versions of the Adobe Experience Platform SDK for Apple iOS (Swift and Objective-C) are tested for compatibility with the release version of Apple iOS 17. See [Current SDK Versions](./current-sdk-versions.md) to find our latest SDK versions, or [release notes](./release-notes/index.md) for information on changes and updates.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -21,12 +29,6 @@ Mobile Core 2.x for Android and the compatible extensions are here!
 
 A new major version of the Mobile Core SDK for Android has been released along with updates to other extensions to take advantage of the new features and improvements.
 For more information, check out the [release notes](./release-notes/#february-23-2023).
-
-<InlineAlert variant="success" slots="header, text"/>
-
-Good to go for iOS 16 and Android 13
-
-The latest versions of the Adobe Experience Platform SDK for Google Android and Apple iOS (Swift and Objective-C) are tested for compatibility with release verisons of Apple iOS 16 and Google Android 13. See [Current SDK Versions](./current-sdk-versions.md) to find our latest SDK versions or [release notes](./release-notes/index.md) for information on changes and updates.
 
 ## Bring the Adobe Experience Cloud to your apps
 
@@ -50,7 +52,7 @@ The Adobe Experience Platform Mobile SDK supports the following platforms:
 
 * [Getting started](./getting-started/index.md)
 * [Getting the Experience Platform SDKs](./getting-started/get-the-sdk.md)
-* [Frequently asked questions](./faq.md)
+* [Frequently asked questions](./resources/faq.md)
 * [Why use the Adobe Experience Platform Mobile SDKs](https://medium.com/adobetech/accelerate-your-mobile-application-development-with-adobe-experience-platform-mobile-sdk-and-launch-ed023536d611)
 
 ## Get Help

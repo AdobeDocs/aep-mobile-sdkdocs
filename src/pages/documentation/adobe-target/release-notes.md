@@ -1,3 +1,11 @@
+---
+title: Adobe Target release notes
+description: The release notes for the Adobe Target mobile extension.
+keywords:
+- Adobe Target
+- Release notes
+---
+
 # Release Notes
 
 ## July 11, 2023

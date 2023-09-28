@@ -1,4 +1,18 @@
+---
+title: Adobe Campaign Standard release notes
+description: The release notes for the Adobe Campaign Standard mobile extension.
+keywords:
+- Adobe Campaign Standard
+- Release notes
+---
+
 # Release Notes
+
+## September 21, 2023
+
+### Android Campaign 2.0.6
+
+* Updated the minimum Core dependency version to 2.3.1 to resolve a local notification display issue.
 
 ## July 12, 2023
 

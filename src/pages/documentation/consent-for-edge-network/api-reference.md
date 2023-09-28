@@ -1,3 +1,12 @@
+---
+title: Consent for Edge Network API reference
+description: An API reference for the Consent for Edge Network mobile extension.
+keywords:
+- API reference
+- Consent for Edge Network
+- Edge Network
+---
+
 import Tabs from './tabs/api-reference.md'
 
 # API Reference
@@ -55,3 +64,5 @@ Android
 iOS
 
 <Tabs query="platform=ios&api=update-consents"/>
+
+For additional information about the management of consent preferences, please refer to the [Privacy and GDPR documentation](../resources/privacy-and-gdpr.md#using-experience-platform-sdks-for-edge-network).

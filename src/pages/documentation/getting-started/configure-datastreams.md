@@ -1,3 +1,13 @@
+---
+title: Configure datastreams
+description: A guide that explains how to configure datastreams in the Data Collection UI.
+keywords:
+- Datastreams
+- Edge Network
+- Guide
+- Tutorial
+---
+
 # Configure datastreams
 
 After you've created a schema and its associated dataset, you may now configure datastreams (also referred to as Edge configurations or Edge Network configurations).

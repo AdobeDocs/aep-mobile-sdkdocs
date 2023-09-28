@@ -1,6 +1,28 @@
+---
+title: Mobile Core release notes
+description: The release notes for the Mobile Core extensions.
+keywords:
+- Mobile Core
+- Release notes
+---
+
 # Release Notes
 
-## Aug 8, 2023
+## August 30, 2023
+
+### iOS Core 4.1.0
+
+* Fixed a bug where the in-app message was not displayed correctly when there was a change in device orientation.
+* Fixed a bug where the cached appId could overwrite the one set with `MobileCore.configureWithAppId()` before extension registration.
+* Added the `contentComplete` event source constant for Edge workflows.
+
+### Android Core 2.4.0
+
+* Fixed a bug where floating button was not being displayed properly after being dismissed.
+* Fixed a bug where `MobileCore.updateConfiguration()` was not updating configuration key for the correct environment.
+* Added the `contentComplete` event source constant for Edge workflows.
+
+## August 8, 2023
 
 ### Android Core 2.3.1
 

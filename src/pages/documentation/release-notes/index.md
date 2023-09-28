@@ -1,10 +1,160 @@
 ---
-description: Release notes and change logs for the Adobe Experience Platform Mobile SDKs.
+title: Release notes
+description: Release notes and changelogs for the Adobe Experience Platform Mobile SDKs.
+Keywords:
+- Release notes
 ---
 
 # Release notes
 
-## Aug 9, 2023
+## September 26, 2023
+
+### Android BOM  2.4.1
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.4.0) | BOM (2.4.1) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:campaign** | **2.0.5** | **2.0.6**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:assurance | 2.1.1 | 2.1.1 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaignclassic | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:core | 2.4.0 | 2.4.0 |
+| com.adobe.marketing.mobile:edge | 2.3.0 | 2.3.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.1.4 | 2.1.4 |
+| com.adobe.marketing.mobile:optimize | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+## September 21, 2023
+
+### Android Campaign 2.0.6
+
+* Updated the minimum Core dependency version to 2.3.1 to resolve a local notification display issue.
+
+## September 5, 2023
+
+### Android BOM  2.4.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.3.0) | BOM (2.4.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:edge** | **2.2.0** | **2.3.0**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:assurance | 2.1.1 | 2.1.1 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.5 | 2.0.5 |
+| com.adobe.marketing.mobile:campaignclassic | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:core | 2.4.0 | 2.4.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.1.4 | 2.1.4 |
+| com.adobe.marketing.mobile:optimize | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+## September 1, 2023
+
+### iOS Edge 4.2.0
+
+* Added the ability to request a "completion" event when making an experience event request. The `contentComplete` event is dispatched after the request connection is closed.
+
+### Android Edge 2.3.0
+
+* Added the ability to request a "completion" event when making an experience event request. The `contentComplete` event is dispatched after the request connection is closed.
+
+## August 30, 2023
+
+### Android BOM  2.3.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.2.0) | BOM (2.3.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:core** | **2.3.1** | **2.4.0**|
+| **com.adobe.marketing.mobile:optimize** | **2.0.0** | **2.0.1**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:assurance | 2.1.1 | 2.1.1 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.5 | 2.0.5 |
+| com.adobe.marketing.mobile:campaignclassic | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edge | 2.2.0 | 2.2.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.1.4 | 2.1.4 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### iOS Core 4.1.0
+
+* Fixed a bug where the in-app message was not displayed correctly when there was a change in device orientation.
+* Fixed a bug where the cached appId could overwrite the one set with `MobileCore.configureWithAppId()` before extension registration.
+* Added the `contentComplete` event source constant for Edge workflows.
+
+### Android Core 2.4.0
+
+* Fixed a bug where floating button was not being displayed properly after being dismissed.
+* Fixed a bug where `MobileCore.updateConfiguration()` was not updating configuration key for the correct environment.
+* Added the `contentComplete` event source constant for Edge workflows.
+
+### Android Optimize 2.0.1
+
+* Fixed an issue where Optimize SDK extension was not correctly verifying a set configuration state before processing proposition requests.
+
+### iOS Optimize 4.0.1
+
+* Fixed an issue where Optimize SDK extension was not correctly verifying a set configuration state before processing proposition requests.
+
+## August 9, 2023
 
 ### Android BOM 2.2.0
 
@@ -41,13 +191,17 @@ description: Release notes and change logs for the Adobe Experience Platform Mob
 
 </Accordion>
 
-## Aug 8, 2023
+## August 8, 2023
+
+### iOS Places 4.1.0 and Android Places 2.1.0
+
+* Added support for forwarding location entry and exit events to Adobe Experience Platform. For more information, refer to the [Places Service event forwarding to Adobe Experience Platform](/places/places-to-platform.md) guide.
 
 ### Android Core 2.3.1
 
 * Fixed an issue with displaying local notifications.
 
-## Aug 7, 2023
+## August 7, 2023
 
 ### Roku SDK 1.0.0
 
@@ -871,7 +1025,7 @@ Note that all these extensions must be updated together.
 For help on moving to these versions, and information on deprecated APIs please see:
 
 * [Migration guide](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-android)
-* [Migration FAQ](../faq.md#migrating-to-android-mobile-core-2x-and-compatible-extensions)
+* [Migration FAQ](../resources/faq.md#migrating-to-android-mobile-core-2x-and-compatible-extensions)
 
 ## February 17, 2023
 

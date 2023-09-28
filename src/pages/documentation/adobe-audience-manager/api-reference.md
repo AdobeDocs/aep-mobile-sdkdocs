@@ -1,6 +1,14 @@
+---
+title: Adobe Audience Manager API reference
+description: An API reference for the Adobe Audience Manager mobile extension.
+keywords: 
+- Adobe Audience Manager
+- API reference
+---
+
 import Tabs from './tabs/api-reference.md'
 
-# Audience Manager API reference
+# Adobe Audience Manager API reference
 
 ## extensionVersion
 

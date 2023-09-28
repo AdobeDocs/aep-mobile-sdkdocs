@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 <Variant platform="android" task="campaign" repeat="2"/>
 
 #### Set up a server key
@@ -7,7 +11,7 @@
 
    For more information, see [Add Firebase to your Android project](https://firebase.google.com/docs/android/setup#console).
 
-3. Add the generated **“google-service.json”** to the project and set up the project and module level gradle files.
+3. Add the generated **"google-service.json"** to the project and set up the project and module level gradle files.
 
    For more information, see [Add Firebase to your Android project](https://firebase.google.com/docs/android/setup#console).
 
@@ -53,7 +57,7 @@ If SDK privacy status is `optedout`, the push identifier will not be set.
 2. To verify, launch your app connected to an Adobe Experience Platform Assurance session.
 3. In the list of events, verify that you have an event with type _SetPushIdentifier_.
 4. In the details panel on the right, verify the value of the push token for this device. The value in pushIdentifier is the same value that is sent to the ECID service. ![Verify SetPushIdentifier event](../assets/push-notifications/push-token-to-identity.png)
-5. To verify that app’s push token is mapped to the correct Experience Cloud ID (ECID) in the Campaign instance, click **Adobe Campaign &gt; Administrator &gt; Channels &gt; Mobile App (AEP SDK)**.
+5. To verify that app's push token is mapped to the correct Experience Cloud ID (ECID) in the Campaign instance, click **Adobe Campaign &gt; Administrator &gt; Channels &gt; Mobile App (AEP SDK)**.
 6. Select your app, under the mobile application subscribers verify that the Experience Cloud ID and the Registration token for the user is displayed. ![App subscriber list, verify mid and push token](../assets/push-notifications/subscriber-list-android.png)
 7. If you are using Charles, verify that the push token has successfully synced with the ECID service.
 8. Check for the _demdex request_, which is marked with the red line in the screenshot below.  
@@ -86,7 +90,7 @@ If SDK privacy status is `optedout`, the push identifier will not be set.
 
    The value in pushIdentifier is the same value that is sent to the ECID service. ![Verify SetPushIdentifier event](../assets/push-notifications/push-token-to-identity.png)
 
-5. To verify that app’s push token is mapped to the correct Experience Cloud ID (ECID) in the Campaign instance, click **Adobe Campaign &gt; Administrator &gt; Channels &gt; Mobile App (AEP SDK)**.
+5. To verify that app's push token is mapped to the correct Experience Cloud ID (ECID) in the Campaign instance, click **Adobe Campaign &gt; Administrator &gt; Channels &gt; Mobile App (AEP SDK)**.
 6. Select your app, under the mobile application subscribers verify that the Experience Cloud ID and the Registration token for the user is displayed. ![App subscriber list, verify mid and Registration token](../assets/push-notifications/subscriber-list-ios.png)
 7. If you are using Charles, verify that the push token has successfully synced with the ECID service.
 8. Check for the **demdex request**, which is marked with the red line in the screenshot below.  

@@ -1,3 +1,13 @@
+---
+title: Getting started with Adobe Experience Platform
+description: A guide that explains how to use Adobe Experience Platform with the Data Collection UI and Mobile SDK.
+keywords:
+- Adobe Experience Platform
+- Getting started
+- Guide
+---
+
+
 # Getting started with Adobe Experience Platform
 
 This tutorial illustrates how you may send Experience Data Model (XDM) commerce events to Adobe Experience Platform via Experience Edge using the AEP Edge extension in a sample application, provided to you in iOS (Swift) and Android.
