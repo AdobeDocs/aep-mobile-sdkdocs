@@ -29,12 +29,15 @@ async function run() {
     updateReleaseNotesPage("./src/pages/documentation/release-notes/index.md", sortedList)
     const ignoreList = ['AEP React Native', 'Roku', 'AEP Flutter']
     for (const releaseInfo of sortedList) {
+        // We don't have separate release note pages for AEP React Native, Roku, and AEP Flutter
         if (ignoreList.includes(releaseInfo.platform)) {
             continue
         }
         let filePath = releaseNoteMap[releaseInfo.extension]
         if (filePath != undefined) {
             updateReleaseNotesPage(filePath, [releaseInfo])
+        } else {
+            console.error(`Error: no release note page found for ${releaseInfo.extension}`)
         }
     }
     let jsonObj = {

@@ -22,7 +22,7 @@ async function fetchMavenArtifactInfo(groupId, capacity, timestampInMilliseconds
     let options = {
         host: 'search.maven.org',
         port: 443,
-        timeout: 2000,
+        timeout: 5000,
         path: `/solrsearch/select?q=g:${groupId}&core=gav&rows=${capacity}&wt=json`,
         method: 'GET',
         headers: {
@@ -159,7 +159,7 @@ function buildGitHubInfo(artifactId, artifactVersion) {
         case "signal":
             return {
                 repoName: `aepsdk-${artifactId}-android`,
-                tagName: `${artifactVersion}-${artifactId}`
+                tagName: `v${artifactVersion}-${artifactId}`
             }
 
         case "edge":
@@ -179,13 +179,15 @@ function buildGitHubInfo(artifactId, artifactVersion) {
                 repoName: `aepsdk-${artifactId}-android`,
                 tagName: `v${artifactVersion}`
             }
-        case "messaging":
-        case "campaignclassic":
-        case "campaign":
-            return {
-                repoName: `aepsdk-${artifactId}-android`,
-                tagName: artifactVersion
-            }
+
+        // TODO: remove the following code after the tag name is updated
+        // case "messaging":
+        // case "campaignclassic":
+        // case "campaign":
+        //     return {
+        //         repoName: `aepsdk-${artifactId}-android`,
+        //         tagName: artifactVersion
+        //     }
         default:
             console.log("artifactId not supported: " + artifactId)
             return null

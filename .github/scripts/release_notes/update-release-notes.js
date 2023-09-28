@@ -179,13 +179,10 @@ async function updateReleaseNotesPage(filePath, releaseInfoArray) {
     // Read the contents of the markdown file.
     let contentLines = fs.readFileSync(filePath, "utf8").toString().split("\n")
     // Find the index of the release notes header.
-    let releaseNotesHeader = "# Release notes"
+    let releaseNotesHeader = "# Release Notes"
     let releaseNotesHeaderIndex = contentLines.indexOf(releaseNotesHeader)
     if (releaseNotesHeaderIndex == -1) {
-        releaseNotesHeaderIndex = contentLines.indexOf("# Release Notes")
-    }
-    if (releaseNotesHeaderIndex == -1) {
-        console.error("can't find the release notes header")
+        console.error("Error: can't find the release notes header")
         return
     }
     let contentIsChanged = false
@@ -193,7 +190,7 @@ async function updateReleaseNotesPage(filePath, releaseInfoArray) {
         let title = generateReleaseTitle(releaseInfo.platform, releaseInfo.extension, releaseInfo.version)
         let titleLine = `### ${title}`
         if (hasLineStartWith(titleLine, contentLines)) {
-            console.error("already updated")
+            console.error(`Already updated: ${titleLine}`)
             continue
         }
         let dateStr = convertIOSDateToRleaseDateFormat(releaseInfo.published_at)

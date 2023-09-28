@@ -5,7 +5,7 @@ Keywords:
 - Release notes
 ---
 
-# Release notes
+# Release Notes
 
 ## September 26, 2023
 

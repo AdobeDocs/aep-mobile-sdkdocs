@@ -30,7 +30,7 @@ async function fetchReleaseInfo(token, owner, repo, capacity = 5) {
     let options = {
         host: 'api.github.com',
         port: 443,
-        timeout: 2000,
+        timeout: 5000,
         path: `/repos/${owner}/${repo}/releases?per_page=${capacity}`,
         method: 'GET',
         headers: {
@@ -83,6 +83,7 @@ async function fetchReleaseInfoWithTagName(token, owner, repo, tag) {
     let options = {
         host: 'api.github.com',
         port: 443,
+        timeout: 5000,
         path: `/repos/${owner}/${repo}/releases/tags/${tag}`,
         method: 'GET',
         headers: {
@@ -98,7 +99,7 @@ async function fetchReleaseInfoWithTagName(token, owner, repo, tag) {
     return new Promise((resolve) => {
         let reqGet = https.request(options, function (res) {
             if (res.statusCode != 200) {
-                throw new Error(`response statusCode: ${res.statusCode}`)
+                console.error(`Error: response statusCode: ${res.statusCode}, please check if the tag (${tag}) exists in Github repo.`)
             }
             console.log(`response statusCode: ${res.statusCode}`)
 
@@ -115,6 +116,10 @@ async function fetchReleaseInfoWithTagName(token, owner, repo, tag) {
         reqGet.on('error', function (e) {
             console.error(e);
             throw new Error("Got error response.")
+        });
+        reqGet.on('timeout', function () {
+            reqGet.destroy()
+            throw new Error("Request timeout.")
         });
         reqGet.end();
     })
