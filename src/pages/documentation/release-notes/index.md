@@ -9,7 +9,7 @@ Keywords:
 
 ## September 26, 2023
 
-### Android BOM  2.4.1
+### Android BOM 2.4.1
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
