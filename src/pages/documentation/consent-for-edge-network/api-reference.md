@@ -65,4 +65,25 @@ iOS
 
 <Tabs query="platform=ios&api=update-consents"/>
 
+<InlineAlert variant="info" slots="text"/>
+
+The updateConsents API automatically includes the following properties in its request to Edge Network: `standard` with the value `Adobe` and `version` with the value `2.0`. Additionally, the property `metadata` is set to the time at which the API is called.
+
+In the following, you can see an example in a request that set collect consent to `y`:
+```json
+    "consent": [
+        {
+        "standard": "Adobe",
+        "version": "2.0",
+        "value": {
+            "metadata": {
+            "time": "xxxx-xx-xxxxx:xx:xx.xxxx"
+            },
+            "collect": {
+            "val": "y"
+            }
+          }
+        }
+     ]
+```
 For additional information about the management of consent preferences, please refer to the [Privacy and GDPR documentation](../resources/privacy-and-gdpr.md#using-experience-platform-sdks-for-edge-network).
