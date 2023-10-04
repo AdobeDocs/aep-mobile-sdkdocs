@@ -69,7 +69,7 @@ iOS
 
 When `Consent.update` API is called, the Consent extension uses Adobe Standard 2.0 to communicate with the Edge Network.  Additionally, the property `metadata` is set to the time at which the API is called.
 
-Here is an example where `Consent.update` is called to set collect consent to y:
+The following example shows when `Consent.update` is called to set collect consent to `y`:
 
 ```swift
 // Example in iOS (Swift),  updating users collect consent to 'yes'
