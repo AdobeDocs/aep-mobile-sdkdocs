@@ -65,13 +65,11 @@ iOS
 
 <Tabs query="platform=ios&api=update-consents"/>
 
-<InlineAlert variant="info" slots="text"/>
+<InlineAlert variant="info" slots="text1, text2, text3, text4, text5"/>
 
-The Consent extension uses Adobe Standard 2.0 when communicating with the Edge Network, when the updateConsents API is called.  Additionally, the property `metadata` is set to the time at which the API is called.
+When `Consent.update` API is called, the Consent extension uses Adobe Standard 2.0 to communicate with the Edge Network.  Additionally, the property `metadata` is set to the time at which the API is called.
 
-Here is an example where updateConsents is called to set collect consent to y and bellow you can see the snippet of the request payload sent to the Edge Network.
-
-**Set and update Consent**
+Here is an example where `Consent.update` is called to set collect consent to y:
 
 ```swift
 // Example in iOS (Swift),  updating users collect consent to 'yes'
@@ -80,7 +78,7 @@ let currentConsents = ["consents": collectConsent]
 Consent.update(with: currentConsents)
 ```
 
-**Request payload sent to the Edge Network**
+Bellow you can see the snippet of the request payload sent to the Edge Network:
 
 ```json
     "consent": [
