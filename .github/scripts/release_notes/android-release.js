@@ -175,19 +175,14 @@ function buildGitHubInfo(artifactId, artifactVersion) {
         case "edgemedia":
         case "audience":
         case "userprofile":
+        case "messaging":
+        case "campaignclassic":
+        case "campaign":
             return {
                 repoName: `aepsdk-${artifactId}-android`,
                 tagName: `v${artifactVersion}`
             }
 
-        // TODO: remove the following code after the tag name is updated
-        // case "messaging":
-        // case "campaignclassic":
-        // case "campaign":
-        //     return {
-        //         repoName: `aepsdk-${artifactId}-android`,
-        //         tagName: artifactVersion
-        //     }
         default:
             console.log("artifactId not supported: " + artifactId)
             return null

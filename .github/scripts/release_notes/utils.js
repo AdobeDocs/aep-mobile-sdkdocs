@@ -30,14 +30,14 @@ function extractReleaseNotes(releaseText) {
     for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
         if (line.startsWith('##') && line.toLowerCase().includes('release notes')) {
-            start = i
+            start = i + 1
         }
         if (start >= 0 && line.startsWith('##')) {
             end = i
         }
     }
 
-    if (start < 0) {
+    if (start < 0 || end <= start) {
         return lines
     } {
         return lines.slice(start, end)
