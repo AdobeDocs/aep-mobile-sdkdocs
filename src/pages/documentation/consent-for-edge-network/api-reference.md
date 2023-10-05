@@ -72,7 +72,7 @@ When `Consent.update` API is called, the Consent extension uses Adobe Standard 2
 The following example shows when `Consent.update` is called to set collect consent to `y`:
 
 ```swift
-// Example in iOS (Swift),  updating users collect consent to 'yes'
+// Example in iOS (Swift),  updating user's collect consent to 'yes'
 let collectConsent = ["collect": ["val": "y"]]
 let currentConsents = ["consents": collectConsent]
 Consent.update(with: currentConsents)
