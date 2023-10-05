@@ -11,19 +11,17 @@
  */
 module.exports = {
     siteMetadata: {
-        versions: [
-            {
+        versions: [{
                 title: 'Latest version',
                 path: '/client-sdks/documentation/',
                 selected: true
-              },
-              {
+            },
+            {
                 title: 'Previous versions',
                 path: '/client-sdks/previous-versions/'
-              }
-          ],
-        pages: [
-            {
+            }
+        ],
+        pages: [{
                 title: "Resources",
                 path: "/documentation/resources"
             },
@@ -38,9 +36,9 @@ module.exports = {
             {
                 title: "Solution-specific extensions",
                 path: "/documentation/solution-extensions"
-            }],
-        subPages: [
-            {
+            }
+        ],
+        subPages: [{
                 title: "Home",
                 path: "/documentation"
             },
@@ -51,8 +49,7 @@ module.exports = {
             {
                 title: "Release notes",
                 path: "/documentation/resources/release-notes",
-                pages: [
-                    {
+                pages: [{
                         title: "2023",
                         path: "/documentation/resources/release-notes"
                     },
@@ -68,51 +65,48 @@ module.exports = {
             },
             {
                 title: "Getting started",
-                path: "/documentation/getting-started",
-                pages: [
-                    {
+                path: "/documentation/resources/getting-started",
+                pages: [{
                         title: "Overview",
-                        path: "/documentation/getting-started"
+                        path: "/documentation/resources/getting-started"
                     },
                     {
                         title: "Set up schemas and datasets",
-                        path: "/documentation/getting-started/set-up-schemas-and-datasets"
+                        path: "/documentation/resources/getting-started/set-up-schemas-and-datasets"
                     },
                     {
                         title: "Configure datastreams",
-                        path: "/documentation/getting-started/configure-datastreams"
+                        path: "/documentation/resources/getting-started/configure-datastreams"
                     },
                     {
                         title: "Set up a mobile property",
-                        path: "/documentation/getting-started/create-a-mobile-property"
+                        path: "/documentation/resources/getting-started/create-a-mobile-property"
                     },
                     {
                         title: "Get the Experience Platform SDK",
-                        path: "/documentation/getting-started/get-the-sdk"
+                        path: "/documentation/resources/getting-started/get-the-sdk"
                     },
                     {
                         title: "Debugging and lifecycle metrics",
-                        path: "/documentation/getting-started/enable-debug-logging"
+                        path: "/documentation/resources/getting-started/enable-debug-logging"
                     },
                     {
                         title: "Track events",
-                        path: "/documentation/getting-started/track-events"
+                        path: "/documentation/resources/getting-started/track-events"
                     },
                     {
                         title: "Validation and next steps",
-                        path: "/documentation/getting-started/validate"
+                        path: "/documentation/resources/getting-started/validate"
                     }
                 ]
             },
             {
                 title: "Edge extensions",
                 path: "/documentation/edge-extensions",
-                pages: [
-                    {
+                pages: [{
                         title: "Identity for Edge Network",
                         path: "/documentation/edge-extensions/identity-for-edge-network",
-                        pages: [
-                            {
+                        pages: [{
                                 title: "Overview",
                                 path: "/documentation/edge-extensions/identity-for-edge-network"
                             },
@@ -133,8 +127,7 @@ module.exports = {
                     {
                         title: "Adobe Experience Platform Edge Network",
                         path: "/documentation/edge-extensions/edge-network",
-                        pages: [
-                            {
+                        pages: [{
                                 title: "Overview",
                                 path: "/documentation/edge-extensions/edge-network"
                             },
@@ -159,8 +152,7 @@ module.exports = {
                     {
                         title: "Lifecycle for Edge Network",
                         path: "/documentation/edge-extensions/lifecycle-for-edge-network",
-                        pages: [
-                            {
+                        pages: [{
                                 title: "Overview",
                                 path: "/documentation/edge-extensions/lifecycle-for-edge-network"
                             },
@@ -181,8 +173,7 @@ module.exports = {
                     {
                         title: "Consent for Edge Network",
                         path: "/documentation/edge-extensions/consent-for-edge-network",
-                        pages: [
-                            {
+                        pages: [{
                                 title: "Overview",
                                 path: "/documentation/edge-extensions/consent-for-edge-network"
                             },
@@ -199,8 +190,7 @@ module.exports = {
                     {
                         title: "Adobe Journey Optimizer",
                         path: "/documentation/edge-extensions/adobe-journey-optimizer",
-                        pages: [
-                            {
+                        pages: [{
                                 title: "Overview",
                                 path: "/documentation/edge-extensions/adobe-journey-optimizer"
                             },
@@ -219,8 +209,7 @@ module.exports = {
                             {
                                 title: "Tutorials",
                                 path: "documentation/edge-extensions/adobe-journey-optimizer/tutorials",
-                                pages: [
-                                    {
+                                pages: [{
                                         title: "Implement a MessagingDelegate",
                                         path: "/documentation/edge-extensions/adobe-journey-optimizer/tutorials/messaging-delegate"
                                     },
@@ -247,8 +236,7 @@ module.exports = {
                     {
                         title: "Adobe Journey Optimizer Decisioning",
                         path: "/documentation/edge-extensions/adobe-journey-optimizer-decisioning",
-                        pages: [
-                            {
+                        pages: [{
                                 title: "Overview",
                                 path: "/documentation/edge-extensions/adobe-journey-optimizer-decisioning"
                             },
@@ -265,8 +253,7 @@ module.exports = {
                     {
                         title: "Adobe Streaming Media for Edge Network",
                         path: "/documentation/edge-extensions/media-for-edge-network",
-                        pages: [
-                            {
+                        pages: [{
                                 title: "Overview",
                                 path: "/documentation/edge-extensions/media-for-edge-network"
                             },
@@ -285,12 +272,10 @@ module.exports = {
             {
                 title: "Solution specific extensions",
                 path: "/documentation/solution-extensions",
-                pages: [
-                    {
+                pages: [{
                         title: 'Adobe Analytics',
                         path: '/documentation/solution-extensions/adobe-analytics/',
-                        pages: [
-                            {
+                        pages: [{
                                 title: "Overview",
                                 path: "/documentation/solution-extensions/adobe-analytics"
                             },
@@ -327,8 +312,7 @@ module.exports = {
                     {
                         title: "Adobe Campaign Classic",
                         path: "/documentation/solution-extensions/adobe-campaign-classic",
-                        pages: [
-                            {
+                        pages: [{
                                 title: "Overview",
                                 path: "/documentation/solution-extensions/adobe-campaign-classic"
                             },
@@ -349,8 +333,7 @@ module.exports = {
                     {
                         title: "Adobe Campaign Standard",
                         path: "/documentation/solution-extensions/adobe-campaign-standard",
-                        pages: [
-                            {
+                        pages: [{
                                 title: "Overview",
                                 path: "/documentation/solution-extensions/adobe-campaign-standard"
                             },
@@ -375,8 +358,7 @@ module.exports = {
                     {
                         title: "Adobe Audience Manager",
                         path: "/documentation/solution-extensions/adobe-audience-manager/",
-                        pages: [
-                            {
+                        pages: [{
                                 title: "Overview",
                                 path: "/documentation/solution-extensions/adobe-audience-manager/"
                             },
@@ -397,8 +379,7 @@ module.exports = {
                     {
                         title: "Adobe Media Analytics",
                         path: "/documentation/solution-extensions/adobe-media-analytics",
-                        pages: [
-                            {
+                        pages: [{
                                 title: "Overview",
                                 path: "/documentation/solution-extensions/adobe-media-analytics"
                             },
@@ -419,8 +400,7 @@ module.exports = {
                     {
                         title: "Adobe Target",
                         path: "/documentation/solution-extensions/adobe-target",
-                        pages: [
-                            {
+                        pages: [{
                                 title: "Overview",
                                 path: "/documentation/solution-extensions/adobe-target"
                             },
@@ -447,24 +427,21 @@ module.exports = {
             {
                 title: "Base extensions",
                 path: "/documentation/base-extensions",
-                pages: [
-                    {
+                pages: [{
                         title: "Overview",
                         path: "/documentation/base-extensions"
                     },
                     {
                         title: "Mobile Core",
                         path: "/documentation/base-extensions/mobile-core",
-                        pages: [
-                            {
+                        pages: [{
                                 title: "Overview",
                                 path: "/documentation/base-extensions/mobile-core"
                             },
                             {
                                 title: "Configuration",
                                 path: "documentation/base-extensions/mobile-core/configuration",
-                                pages: [
-                                    {
+                                pages: [{
                                         title: "Overview",
                                         path: "documentation/base-extensions/mobile-core/configuration"
                                     },
@@ -477,8 +454,7 @@ module.exports = {
                             {
                                 title: "Identity",
                                 path: "documentation/base-extensions/mobile-core/identity",
-                                pages: [
-                                    {
+                                pages: [{
                                         title: "Overview",
                                         path: "documentation/base-extensions/mobile-core/identity"
                                     },
@@ -495,8 +471,7 @@ module.exports = {
                             {
                                 title: "Lifecycle",
                                 path: "documentation/base-extensions/mobile-core/lifecycle",
-                                pages: [
-                                    {
+                                pages: [{
                                         title: "Overview",
                                         path: "documentation/base-extensions/mobile-core/lifecycle"
                                     },
@@ -525,8 +500,7 @@ module.exports = {
                             {
                                 title: "Platform services",
                                 path: "documentation/base-extensions/mobile-core/platform-services",
-                                pages: [
-                                    {
+                                pages: [{
                                         title: "Overview",
                                         path: "documentation/base-extensions/mobile-core/platform-services"
                                     },
@@ -539,8 +513,7 @@ module.exports = {
                             {
                                 title: "Rules Engine",
                                 path: "documentation/base-extensions/mobile-core/rules-engine",
-                                pages: [
-                                    {
+                                pages: [{
                                         title: "Overview",
                                         path: "documentation/base-extensions/mobile-core/rules-engine"
                                     },
@@ -557,8 +530,7 @@ module.exports = {
                             {
                                 title: "Signal",
                                 path: "documentation/base-extensions/mobile-core/signal",
-                                pages: [
-                                    {
+                                pages: [{
                                         title: "Overview",
                                         path: "documentation/base-extensions/mobile-core/signal"
                                     },
@@ -585,8 +557,7 @@ module.exports = {
                     {
                         title: "Adobe Experience Platform Assurance",
                         path: "/documentation/platform-assurance-sdk",
-                        pages: [
-                            {
+                        pages: [{
                                 title: "Overview",
                                 path: "/documentation/platform-assurance-sdk"
                             },
@@ -606,53 +577,50 @@ module.exports = {
                     },
 
 
-            {
-                title: "Adobe Experience Platform Location Service",
-                path: "/documentation/places",
-                pages: [
                     {
-                        title: "Overview",
-                        path: "/documentation/places"
+                        title: "Adobe Experience Platform Location Service",
+                        path: "/documentation/places",
+                        pages: [{
+                                title: "Overview",
+                                path: "/documentation/places"
+                            },
+                            {
+                                title: "API reference",
+                                path: "documentation/places/api-reference.md"
+                            },
+                            {
+                                title: "Event forwarding to Adobe Experience Platform",
+                                path: "documentation/places/places-to-platform.md"
+                            },
+                            {
+                                title: "Release notes",
+                                path: "documentation/places/release-notes.md"
+                            }
+                        ]
                     },
                     {
-                        title: "API reference",
-                        path: "documentation/places/api-reference.md"
-                    },
-                    {
-                        title: "Event forwarding to Adobe Experience Platform",
-                        path: "documentation/places/places-to-platform.md"
-                    },
-                    {
-                        title: "Release notes",
-                        path: "documentation/places/release-notes.md"
+                        title: "Profile",
+                        path: "/documentation/profile",
+                        pages: [{
+                                title: "Overview",
+                                path: "/documentation/profile"
+                            },
+                            {
+                                title: "API reference",
+                                path: "documentation/profile/api-reference"
+                            },
+                            {
+                                title: "Release notes",
+                                path: "documentation/profile/release-notes"
+                            }
+                        ]
                     }
-                ]
-            },
-            {
-                title: "Profile",
-                path: "/documentation/profile",
-                pages: [
-                    {
-                        title: "Overview",
-                        path: "/documentation/profile"
-                    },
-                    {
-                        title: "API reference",
-                        path: "documentation/profile/api-reference"
-                    },
-                    {
-                        title: "Release notes",
-                        path: "documentation/profile/release-notes"
-                    }
-                ]
-            }
                 ]
             },
             {
                 title: "Resources",
                 path: "/documentation/resources",
-                pages: [
-                    {
+                pages: [{
                         title: "Overview",
                         path: "documentation/resources"
                     },
@@ -683,8 +651,7 @@ module.exports = {
                     {
                         title: "Adobe Mobile Library (v4) end-of-support",
                         path: "documentation/resources/upgrade-platform-sdks",
-                        pages: [
-                            {
+                        pages: [{
                                 title: "Overview",
                                 path: "documentation/resources/upgrade-platform-sdks"
                             },
@@ -719,49 +686,47 @@ module.exports = {
             },
             {
                 title: "User guides",
-                path: "documentation/user-guides",
-                pages: [
-                    {
+                path: "documentation/resources/user-guides",
+                pages: [{
                         title: "Overview",
-                        path: "documentation/user-guides"
+                        path: "documentation/resources/user-guides"
                     },
                     {
                         title: "Getting started with Platform",
-                        path: "documentation/user-guides/getting-started-with-platform/overview",
-                        pages: [
-                            {
+                        path: "documentation/resources/user-guides/resources/getting-started-with-platform/overview",
+                        pages: [{
                                 title: "Overview",
-                                path: "documentation/user-guides/getting-started-with-platform/overview"
+                                path: "documentation/resources/user-guides/resources/getting-started-with-platform/overview"
                             },
                             {
                                 title: "Sample XDM implementation",
-                                path: "documentation/user-guides/getting-started-with-platform/sample-xdm-implementation"
+                                path: "documentation/resources/user-guides/resources/getting-started-with-platform/sample-xdm-implementation"
                             },
                             {
                                 title: "Rules and XDM events",
-                                path: "documentation/user-guides/getting-started-with-platform/rules-and-xdm-events"
+                                path: "documentation/resources/user-guides/resources/getting-started-with-platform/rules-and-xdm-events"
                             }
                         ]
                     },
                     {
                         title: "Attach data to SDK events",
-                        path: "documentation/user-guides/attach-data"
+                        path: "documentation/resources/user-guides/attach-data"
                     },
                     {
                         title: "Modify data in SDK events",
-                        path: "documentation/user-guides/modify-data"
+                        path: "documentation/resources/user-guides/modify-data"
                     },
                     {
                         title: "Tags data elements",
-                        path: "documentation/user-guides/tags-data-elements"
+                        path: "documentation/resources/user-guides/tags-data-elements"
                     },
                     {
                         title: "iOS App Extensions",
-                        path: "documentation/user-guides/app-extension"
+                        path: "documentation/resources/user-guides/app-extension"
                     },
                     {
                         title: "Building mobile extensions",
-                        path: "documentation/user-guides/building-mobile-extensions"
+                        path: "documentation/resources/user-guides/building-mobile-extensions"
                     }
                 ]
             }
