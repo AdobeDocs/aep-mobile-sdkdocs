@@ -11,6 +11,7 @@ keywords:
 ## September 28, 2023
 
 ### Android Core 2.5.0
+
 - Added getter APIs `getLargeIconResourceID` and `getSmallIconResourceID` to MobileCore for retrieving the icon resource IDs set from the application.
 
 ## August 30, 2023
