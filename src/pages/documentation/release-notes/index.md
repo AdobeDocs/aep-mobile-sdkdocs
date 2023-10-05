@@ -7,6 +7,18 @@ Keywords:
 
 # Release notes
 
+## October 5, 2023
+
+### Android Optimize 2.0.2
+
+* Added support for enforcing events' order for `updatePropositions` and `getPropositions` APIs in the extension. A `getPropositions` API invocation will be resolved only after any prior `updatePropositions` API requests are completed irrespective of the async API behavior.
+
+## October 4, 2023
+
+### iOS Optimize 4.0.2
+
+* Added support for enforcing events' order for `updatePropositions` and `getPropositions` APIs in the extension. A `getPropositions` API invocation will be resolved only after any prior `updatePropositions` API requests are completed irrespective of the async API behavior.
+
 ## October 3, 2023
 
 ### Android BOM  2.5.0
