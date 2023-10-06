@@ -21,9 +21,10 @@ module.exports = {
                 path: '/client-sdks/previous-versions/'
             }
         ],
-        pages: [{
-                title: "Resources",
-                path: "/documentation/resources"
+        pages: [
+            {
+                title: "Home",
+                path: "/documentation/home"
             },
             {
                 title: "Base extensions",
@@ -36,67 +37,72 @@ module.exports = {
             {
                 title: "Solution-specific extensions",
                 path: "/documentation/solution-extensions"
+            },
+            {
+                title: "Resources",
+                path: "/documentation/resources"
             }
         ],
-        subPages: [{
+        subPages: [
+            {
                 title: "Home",
-                path: "/documentation"
+                path: "/documentation/home"
             },
             {
                 title: "Current SDK versions",
-                path: "documentation/resources/current-sdk-versions"
+                path: "/documentation/home/current-sdk-versions"
             },
             {
                 title: "Release notes",
-                path: "/documentation/resources/release-notes",
+                path: "/documentation/home/release-notes",
                 pages: [{
                         title: "2023",
-                        path: "/documentation/resources/release-notes"
+                        path: "/documentation/home/release-notes"
                     },
                     {
                         title: "2022",
-                        path: "/documentation/resources/release-notes/2022"
+                        path: "/documentation/home/release-notes/2022"
                     },
                     {
                         title: "2021",
-                        path: "/documentation/resources/release-notes/2021"
+                        path: "/documentation/home/release-notes/2021"
                     }
                 ]
             },
             {
                 title: "Getting started",
-                path: "/documentation/resources/getting-started",
+                path: "/documentation/home/getting-started",
                 pages: [{
                         title: "Overview",
-                        path: "/documentation/resources/getting-started"
+                        path: "/documentation/home/getting-started"
                     },
                     {
                         title: "Set up schemas and datasets",
-                        path: "/documentation/resources/getting-started/set-up-schemas-and-datasets"
+                        path: "/documentation/home/getting-started/set-up-schemas-and-datasets"
                     },
                     {
                         title: "Configure datastreams",
-                        path: "/documentation/resources/getting-started/configure-datastreams"
+                        path: "/documentation/home/getting-started/configure-datastreams"
                     },
                     {
                         title: "Set up a mobile property",
-                        path: "/documentation/resources/getting-started/create-a-mobile-property"
+                        path: "/documentation/home/getting-started/create-a-mobile-property"
                     },
                     {
                         title: "Get the Experience Platform SDK",
-                        path: "/documentation/resources/getting-started/get-the-sdk"
+                        path: "/documentation/home/getting-started/get-the-sdk"
                     },
                     {
                         title: "Debugging and lifecycle metrics",
-                        path: "/documentation/resources/getting-started/enable-debug-logging"
+                        path: "/documentation/home/getting-started/enable-debug-logging"
                     },
                     {
                         title: "Track events",
-                        path: "/documentation/resources/getting-started/track-events"
+                        path: "/documentation/home/getting-started/track-events"
                     },
                     {
                         title: "Validation and next steps",
-                        path: "/documentation/resources/getting-started/validate"
+                        path: "/documentation/home/getting-started/validate"
                     }
                 ]
             },
@@ -693,18 +699,18 @@ module.exports = {
                     },
                     {
                         title: "Getting started with Platform",
-                        path: "documentation/resources/user-guides/resources/getting-started-with-platform/overview",
+                        path: "documentation/resources/user-guides/getting-started-with-platform/overview",
                         pages: [{
                                 title: "Overview",
-                                path: "documentation/resources/user-guides/resources/getting-started-with-platform/overview"
+                                path: "documentation/resources/user-guides/getting-started-with-platform/overview"
                             },
                             {
                                 title: "Sample XDM implementation",
-                                path: "documentation/resources/user-guides/resources/getting-started-with-platform/sample-xdm-implementation"
+                                path: "documentation/resources/user-guides/getting-started-with-platform/sample-xdm-implementation"
                             },
                             {
                                 title: "Rules and XDM events",
-                                path: "documentation/resources/user-guides/resources/getting-started-with-platform/rules-and-xdm-events"
+                                path: "documentation/resources/user-guides/getting-started-with-platform/rules-and-xdm-events"
                             }
                         ]
                     },
