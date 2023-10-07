@@ -17,7 +17,7 @@ The Adobe Experience Platform Mobile SDK supports multiple types of rule consequ
 
 ## Analytics consequence
 
-This rule consequence is currently handled by the [Analytics](../../adobe-analytics/index.md) extension.
+This rule consequence is currently handled by the [Analytics](../../../solution-extensions/adobe-analytics/index.md) extension.
 
 | Friendly name | Key | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
@@ -27,7 +27,7 @@ This rule consequence is currently handled by the [Analytics](../../adobe-analyt
 
 ## In-App message consequence
 
-This rule consequence is currently handled by the [Campaign](../../adobe-campaign-standard/index.md) extension.
+This rule consequence is currently handled by the [Campaign](../../../solution-extensions/adobe-campaign-standard/index.md) extension.
 
 | Friendly name | Key | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
@@ -92,4 +92,4 @@ This rule is currently handled by the [Mobile Core](../index.md) extension.
 
 | Friendly name | Key | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| Event data | `eventdata` | object | Yes | Dictionary of pairs to overlay on the triggering event's EventData. For more information, see the [attach data tutorial](../../user-guides/attach-data.md). |
+| Event data | `eventdata` | object | Yes | Dictionary of pairs to overlay on the triggering event's EventData. For more information, see the [attach data tutorial](../../../resources/user-guides/attach-data.md). |

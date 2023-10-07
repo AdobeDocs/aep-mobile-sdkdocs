@@ -98,7 +98,7 @@ The following example shows how to use the data that is passed to the MobileCore
 
    ![Send Postback action example](./assets/rules-engine-integration/send-postback-action.png)
 
-For more information about `collectPii` and its usage, see `collectPii` in the [Mobile Core API reference](../../api-reference.md#collectpii).
+For more information about `collectPii` and its usage, see `collectPii` in the [Mobile Core API reference](../api-reference.md#collectpii).
 
 ### Using tokens in Open URL rule actions
 

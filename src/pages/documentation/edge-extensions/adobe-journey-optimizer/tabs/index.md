@@ -18,7 +18,7 @@ implementation "com.adobe.marketing.mobile:messaging"
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information.
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
 
 </InlineNestedAlert>
 

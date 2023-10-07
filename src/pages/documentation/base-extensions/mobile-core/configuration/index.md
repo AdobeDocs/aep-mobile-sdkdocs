@@ -46,7 +46,7 @@ Keys that are not found on the current configuration are added when this method 
 
 <InlineAlert variant="warning" slots="text"/>
 
-Do not use this API to update the build.environment or any key with an environment prefix, because it can lead to unexpected behavior. For more information, read [Environment-aware configuration properties](./index.md#environment-aware-configuration-properties).
+Do not use this API to update the build.environment or any key with an environment prefix, because it can lead to unexpected behavior. For more information, read [Environment-aware configuration properties](#environment-aware-configuration-properties).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -74,7 +74,7 @@ For implementation details, please refer to [Configuration API reference](./api-
 
 ## Using a bundled file configuration
 
-You can include a bundled JSON configuration file in your app package to replace or complement the configuration that was downloaded by using the [Configure with App ID per environment](./index.md#configure-with-app-id-per-environment) approach.
+You can include a bundled JSON configuration file in your app package to replace or complement the configuration that was downloaded by using the [Configure with App ID per environment](#configure-with-app-id-per-environment) approach.
 
 To download the JSON configuration file, use the following URL:
 

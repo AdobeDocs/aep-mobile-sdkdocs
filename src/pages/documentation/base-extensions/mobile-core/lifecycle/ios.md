@@ -12,7 +12,7 @@ keywords:
 
 <InlineAlert variant="warning" slots="text"/>
 
-In version 4 of the iOS SDK, this implementation was completed automatically. <br/><br/>When upgrading to the Experience Platform SDK, you must add code to continue collecting Lifecycle metrics. For more information, see [Manual Lifecycle Implementation](../../upgrade-platform-sdks/lifecycle.md).
+In version 4 of the iOS SDK, this implementation was completed automatically. <br/><br/>When upgrading to the Experience Platform SDK, you must add code to continue collecting Lifecycle metrics. For more information, see [Manual Lifecycle Implementation](../../../resources/upgrade-platform-sdks/lifecycle.md).
 
 ## Implementing Lifecycle metrics in iOS
 
@@ -45,7 +45,7 @@ The following scenarios are known to falsely cause a crash to be reported by the
 * If you are debugging using Xcode, re-launching the app while it is running in the foreground will cause a crash.
   * You can avoid a crash in this scenario by backgrounding the app prior to re-launching the app from Xcode.
 * If your app is launched in the background because of an enabled background capability (e.g. - background fetch, location update), then `lifecycleStart` is called and the app never comes to the foreground, the next launch (whether in the background or foreground) will result in a crash.
-* If you programmatically delete Adobe’s pause flag from `NSUserDefaults`, while the app is in the background, the next launch or resume causes a crash.
+* If you programmatically delete Adobe's pause flag from `NSUserDefaults`, while the app is in the background, the next launch or resume causes a crash.
 
 ### How can I prevent false crashes from being reported?
 

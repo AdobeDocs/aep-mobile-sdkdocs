@@ -16,7 +16,7 @@ Programmatic updates made to the configuration can be cleared via the `clearUpda
 
 ## collectMessageInfo
 
-User interactions with local or push notifications can be tracked by invoking the `collectMessageInfo` API. Please refer to [this page](../../documentation/adobe-campaign-standard#tracking-local-and-push-notification-message-interactions) for more information about tracking local and push notification message interactions.
+User interactions with local or push notifications can be tracked by invoking the `collectMessageInfo` API. Please refer to [this page](../../solution-extensions/adobe-campaign-standard/index.md#tracking-local-and-push-notification-message-interactions) for more information about tracking local and push notification message interactions.
 
 ## collectLaunchInfo
 
@@ -128,7 +128,7 @@ iOS
 
 ## getPrivacyStatus
 
-You can use the `getPrivacyStatus` API to retrieve the current privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../resources/privacy-and-gdpr.md#getprivacystatus)
+You can use the `getPrivacyStatus` API to retrieve the current privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../../resources/privacy-and-gdpr.md#getprivacystatus)
 
 ## getSdkIdentities
 
@@ -147,7 +147,7 @@ To retrieve data as a JSON string from the SDKs and send this data to your serve
 
 <InlineAlert variant="warning" slots="text"/>
 
-You must call the API below and retrieve identities stored in the SDK, **before** the user opts out.<br/><br/>This API does **not** include the identities stored in the Edge Identity extension. To retrieve the identities from the Edge Identity extension, use [getIdentities](../identity-for-edge-network/api-reference.md#getidentities).
+You must call the API below and retrieve identities stored in the SDK, **before** the user opts out.<br/><br/>This API does **not** include the identities stored in the Edge Identity extension. To retrieve the identities from the Edge Identity extension, use [getIdentities](../../edge-extensions/identity-for-edge-network/api-reference.md#getidentities).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -332,7 +332,7 @@ Flutter
 
 ## setPrivacyStatus
 
-You can use the `setPrivacyStatus` API to set the privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../resources/privacy-and-gdpr.md#setprivacystatus) API's.
+You can use the `setPrivacyStatus` API to set the privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../../resources/privacy-and-gdpr.md#setprivacystatus) API's.
 
 ## setPushIdentifier
 

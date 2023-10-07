@@ -20,13 +20,13 @@ The following documentation details how to use the extension and required config
 1. Read the tutorial on [getting started with push configuration](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/configuration/push-config/push-gs.html) to learn how to configure push channels in Adobe Journey Optimizer.
 2. [Update your app's Datastream](#update-datastream-with-profile-dataset) in [Adobe Experience Platform Data Collection](https://experience.adobe.com/#/data-collection/)
 3. Integrate with following extensions:
-   * [Mobile Core](../mobile-core/index.md)
-   * [Adobe Experience Platform Edge Network](../edge-network/index.md)
-   * [Identity for Edge Network](../identity-for-edge-network/index.md)
+   * [Mobile Core](../../base-extensions/mobile-core/index.md)
+   * [Adobe Experience Platform Edge Network](../../edge-extensions/edge-network/index.md)
+   * [Identity for Edge Network](../../edge-extensions/identity-for-edge-network/index.md)
 
 ### Update Datastream with a Profile dataset
 
-Navigate to a previously configured Datastream by following the instructions in the [configure datastreams tutorial](../getting-started/configure-datastreams.md) in [Adobe Experience Platform Data Collection](https://experience.adobe.com/#/data-collection/) and select **Add Service**. In the service dropdown select **Adobe Experience Platform**.
+Navigate to a previously configured Datastream by following the instructions in the [configure datastreams tutorial](../../home/getting-started/configure-datastreams.md) in [Adobe Experience Platform Data Collection](https://experience.adobe.com/#/data-collection/) and select **Add Service**. In the service dropdown select **Adobe Experience Platform**.
 
 * In the **Event Dataset** dropdown, select a dataset previously created in the [Adobe Experience Platform](https://experience.adobe.com/#/platform) UI.
 * In the **Profile Dataset** dropdown, select the **AJO Push Profile Dataset**.
@@ -38,7 +38,7 @@ Navigate to a previously configured Datastream by following the instructions in 
 
 ## Set up a mobile property in Adobe Data Collection
 
-To learn how to create the mobile property, please read the tutorial on [creating a mobile property](../getting-started/create-a-mobile-property.md)
+To learn how to create the mobile property, please read the tutorial on [creating a mobile property](../../home/getting-started/create-a-mobile-property.md)
 
 Now that a mobile property is created, we can setup the Adobe Journey Optimizer extension.
 
@@ -51,11 +51,11 @@ Go to the [Experience Platform Data Collection UI](https://experience.adobe.com/
 1. Navigate to the **Catalog** tab, locate the **Adobe Journey Optimizer** extension, and select **Install**
 2. Select the pre-created **AJO Push Tracking Experience Event Dataset** from the **Event Dataset** dropdown.
 3. Select **Save**.
-4. [Follow the publishing process](../getting-started/create-a-mobile-property.md#publish-the-configuration) to update SDK configuration.
+4. [Follow the publishing process](../../home/getting-started/create-a-mobile-property.md#publish-the-configuration) to update SDK configuration.
 
 <InlineAlert variant="info" slots="text"/>
 
-The datasets selected should use a schema that uses the "Push Notification Tracking" XDM field group. The pre-created CJM Push Tracking Dataset contains this XDM field group in its schema definition. For more information, please read the tutorial on [setting up schemas and datasets](../getting-started/set-up-schemas-and-datasets.md).
+The datasets selected should use a schema that uses the "Push Notification Tracking" XDM field group. The pre-created CJM Push Tracking Dataset contains this XDM field group in its schema definition. For more information, please read the tutorial on [setting up schemas and datasets](../../home/getting-started/set-up-schemas-and-datasets.md).
 
 ![](./assets/index/configuration.png)
 

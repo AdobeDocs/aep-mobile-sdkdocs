@@ -585,22 +585,22 @@ module.exports = {
 
                     {
                         title: "Adobe Experience Platform Location Service",
-                        path: "/documentation/places",
+                        path: "/documentation/solution-extensions/places",
                         pages: [{
                                 title: "Overview",
-                                path: "/documentation/places"
+                                path: "/documentation/solution-extensions/places"
                             },
                             {
                                 title: "API reference",
-                                path: "documentation/places/api-reference.md"
+                                path: "documentation/solution-extensions/places/api-reference.md"
                             },
                             {
                                 title: "Event forwarding to Adobe Experience Platform",
-                                path: "documentation/places/places-to-platform.md"
+                                path: "documentation/solution-extensions/places/places-to-platform.md"
                             },
                             {
                                 title: "Release notes",
-                                path: "documentation/places/release-notes.md"
+                                path: "documentation/solution-extensions/places/release-notes.md"
                             }
                         ]
                     },

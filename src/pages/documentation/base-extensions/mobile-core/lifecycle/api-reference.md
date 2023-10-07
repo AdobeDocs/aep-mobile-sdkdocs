@@ -84,7 +84,7 @@ iOS
 
 <InlineAlert variant="warning" slots="text"/>
 
-Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../../api-reference.md#registerextensions) API instead.
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../api-reference.md#registerextensions) API instead.
 
 Registers the Lifecycle extension with the Mobile Core.
 

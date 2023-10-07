@@ -46,7 +46,7 @@ iOS
 
 <InlineAlert variant="warning" slots="text"/>
 
-This API is only available in Android and is deprecated starting in version 2.0.0 of the UserProfile extension. Use [`MobileCore.registerExtensions()`](../api-reference.md#registerextensions) API instead.
+This API is only available in Android and is deprecated starting in version 2.0.0 of the UserProfile extension. Use [`MobileCore.registerExtensions()`](../mobile-core/api-reference.md#registerextensions) API instead.
 
 Registers the Profile extension with the Mobile Core extension.
 
