@@ -87,20 +87,6 @@ iOS
 
 <Tabs query="platform=ios&task=register"/>
 
-#### Sync the user push token with Adobe
-
-If your app will be using AJO powered push notifications, you will need to sync the push token with Adobe Experience Platform by using the `MobileCore.setPushIdentifier` API.
-
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
-
-Android
-
-<Tabs query="platform=android&task=sync"/>
-
-iOS
-
-<Tabs query="platform=ios&task=sync"/>
-
 ## Configuration keys
 
 You can update the SDK configuration, including the Messaging configuration values, programmatically by using the following information.
@@ -110,18 +96,7 @@ You can update the SDK configuration, including the Messaging configuration valu
 | messaging.eventDataset | Yes | Experience Event Dataset ID which can be found from Experience Platform | String | Android/iOS |
 | messaging.useSandbox | No | A variable that lets the `apnsSandbox` environment be used for receiving push notifications. More details can be found in the [messaging documentation](https://github.com/adobe/aepsdk-messaging-ios/blob/main/Documentation/sources/getting-started.md#using-an-apns-sandbox-push-environment) | Boolean | iOS |
 
-## Guides and How-tos
+## Next Steps
 
-* [Track Push Interactions](api-reference.md#addpushtrackingdetails)
-* [Programmatically control the display of in-app messages](./tutorials/messaging-delegate.md)
-* [Call native code from the JavaScript of an in-app message](./tutorials/native-from-javascript.md)
-* [Execute JavaScript code in an in-app message from native code](./tutorials/javascript-from-native.md)
-* [Handle URL clicks from an in-app message](./tutorials/handle-clicks.md)
-
-### Other public classes, methods, and enums
-
-* [Public classes and enums](./public-classes.md)
-
-### Troubleshooting
-
-* [Validate in-app messaging using AEPAssurance SDK extension and the Assurance UI](./tutorials/validate-messages.md)
+* [Push notification implementation guide](./push-notification/index.md)
+* [In-App message implementation guide](./in-app-message/index.md)

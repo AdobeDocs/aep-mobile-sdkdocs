@@ -548,42 +548,108 @@ module.exports = {
                                 path: "/documentation/adobe-journey-optimizer"
                             },
                             {
-                                title: "API reference",
+                                title: "Common API",
                                 path: "documentation/adobe-journey-optimizer/api-reference"
+                            },
+                            {
+                                title: "Push Notification",
+                                path: "documentation/adobe-journey-optimizer/push-notification",
+                                pages: [
+                                    {
+                                        title: "iOS",
+                                        path: "/documentation/adobe-journey-optimizer/push-notification/ios/api-usage",
+                                        pages: [
+                                            {
+                                                title: "API Usage",
+                                                path: "/documentation/adobe-journey-optimizer/push-notification/ios/api-usage"
+                                            },
+                                            {
+                                                title: "Display Rich Notifications",
+                                                path: "/documentation/adobe-journey-optimizer/push-notification/ios/display-rich-notifications"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        title: "Android",
+                                        path: "/documentation/adobe-journey-optimizer/push-notification/android/automatic-display-and-tracking",
+                                        pages: [
+                                            {
+                                                title: "Automatic display and tracking",
+                                                path: "/documentation/adobe-journey-optimizer/push-notification/android/automatic-display-and-tracking"
+                                            },
+                                            {
+                                                title: "Manual display and tracking",
+                                                path: "/documentation/adobe-journey-optimizer/push-notification/android/manual-display-and-tracking"
+                                            }                                            
+                                        ]
+                                    },
+                                    {
+                                        title: "Payload Keys",
+                                        path: "/documentation/adobe-journey-optimizer/push-notification/push-payload"
+                                    }
+                                ]
+                            },
+                            {
+                                title: "In-App Messaging",
+                                path: "documentation/adobe-journey-optimizer/in-app-message",
+                                pages: [
+                                    {
+                                        title: "API Usage",
+                                        path: "/documentation/adobe-journey-optimizer/in-app-message/api-usage"
+                                    },
+                                    {
+                                        title: "Tutorials",
+                                        path: "/documentation/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate",
+                                        pages: [
+                                            {
+                                                title: "Progrmmatically control the display of in-app messages",
+                                                path: "/documentation/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate"
+                                            },
+                                            {
+                                                title: "Call native code from the JavaScript of an in-app message",
+                                                path: "/documentation/adobe-journey-optimizer/in-app-message/tutorials/native-from-javascript"
+                                            },
+                                            {
+                                                title: "Execute Javascript methods from native code",
+                                                path: "/documentation/adobe-journey-optimizer/in-app-message/tutorials/javascript-from-native"
+                                            },
+                                            {
+                                                title: "Handle URL clicks from an in-app message",
+                                                path: "/documentation/adobe-journey-optimizer/in-app-message/tutorials/handle-clicks"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        title: "Validate using Assurance",
+                                        path: "/documentation/adobe-journey-optimizer/in-app-message/validate-messages"
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Public classes and enums",
+                                path: "documentation/adobe-journey-optimizer/public-classes-and-enum",
+                                pages: [
+                                    {
+                                        title: "MessagingPushPayload",
+                                        path: "/documentation/adobe-journey-optimizer/public-classes-and-enum/messaging-push-payload"
+                                    },
+                                    {
+                                        title: "PushTrackingStatus",
+                                        path: "/documentation/adobe-journey-optimizer/public-classes-and-enum/push-tracking-status"
+                                    },
+                                    {
+                                        title: "Message",
+                                        path: "/documentation/adobe-journey-optimizer/public-classes-and-enum/message"
+                                    },
+                                    {
+                                        title: "MessagingEdgeEventType",
+                                        path: "/documentation/adobe-journey-optimizer/public-classes-and-enum/messaging-edge-event-type"
+                                    }
+                                ]
                             },
                             {
                                 title: "Release notes",
                                 path: "documentation/adobe-journey-optimizer/release-notes"
-                            },
-                            {
-                                title: "Public classes and enums",
-                                path: "documentation/adobe-journey-optimizer/public-classes"
-                            },
-                            {
-                                title: "Tutorials",
-                                path: "documentation/adobe-journey-optimizer/tutorials",
-                                pages: [
-                                    {
-                                        title: "Implement a MessagingDelegate",
-                                        path: "/documentation/adobe-journey-optimizer/tutorials/messaging-delegate"
-                                    },
-                                    {
-                                        title: "Call native code from the JavaScript of an in-app message",
-                                        path: "/documentation/adobe-journey-optimizer/tutorials/native-from-javascript"
-                                    },
-                                    {
-                                        title: "Execute Javascript methods from native code",
-                                        path: "/documentation/adobe-journey-optimizer/tutorials/javascript-from-native"
-                                    },
-                                    {
-                                        title: "Handle URL clicks from an in-app message",
-                                        path: "/documentation/adobe-journey-optimizer/tutorials/handle-clicks"
-                                    },
-                                    {
-                                        title: "Validate in-app messaging using Assurance",
-                                        path: "/documentation/adobe-journey-optimizer/tutorials/validate-messages"
-                                    }
-                                ]
                             }
                         ]
                     },
