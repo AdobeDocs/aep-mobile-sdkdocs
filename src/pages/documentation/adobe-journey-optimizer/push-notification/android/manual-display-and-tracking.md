@@ -21,7 +21,6 @@ This document describes how to manually build, display and track push notificati
 
 To retrieve the push token from Firebase Messaging Service, please follow the tutorial within the [Firebase documentation](https://firebase.google.com/docs/cloud-messaging/android/client#retrieve-the-current-registration-token). Then use `setPushIdentifier` API to sync the device's push token with profile in Adobe Experience Platform.
 
-
 <InlineAlert variant="info" slots="text"/>
 
 Although this API is provided in Mobile Core, the use of this API is required and leveraged by the Adobe Journey Optimizer extension to sync provided push tokens with Adobe Experience Platform services.
@@ -79,6 +78,7 @@ public class YourApp extends Application {
 4. Use NotificationManager to create and display the built notification.
 
 Here is a sample code for creating a notification channel and building the notification.
+
 ```java
 public class YourAppFirebaseMessagingService extends FirebaseMessagingService {
 
@@ -124,21 +124,24 @@ After the application is opened by the user by clicking on the push notification
         final String actionId) // actionId of the element which performed the custom action.
 ```
 
-##### Sending push notification interaction feedback when application is opened without any custom action. 
+##### Sending push notification interaction feedback when application is opened without any custom action
+
 Add the following code where you have access to `intent` after the user has interacted with the push notification:
 
 ```java
 Messaging.handleNotificationResponse(intent, true, null);
 ```
 
-##### Sending feedback when application is opened with a custom action. 
+##### Sending feedback when application is opened with a custom action
+
 Similar to the example above, call the `handleNotificationResponse` API but this time with a custom action:
 
 ```java
 Messaging.handleNotificationResponse(intent, true, <actionId>);
 ```
 
-##### Sending feedback when application is not opened but a custom action is performed by the user. 
+##### Sending feedback when application is not opened but a custom action is performed by the user
+
 Add the following code where you have access to `intent` after the user has interacted with the push notification:
 
 ```java

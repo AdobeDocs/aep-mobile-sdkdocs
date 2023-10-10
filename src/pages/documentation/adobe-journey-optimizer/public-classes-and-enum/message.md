@@ -27,7 +27,6 @@ Identifier of the `Message`. This value matches the Message Execution ID assigne
 public var id: String
 ```
 
-
 ### autoTrack
 
 If set to `true` (default), Experience Edge events will automatically be generated when this `Message` is triggered, displayed, and dismissed.
@@ -69,7 +68,6 @@ If `autoTrack` is true, calling this method will result in an `decisioning.propo
 iOS
 
 <Tabs query="platform=ios&function=dismiss"/>
-
 
 ### track(_:withEdgeEventType:)
 
@@ -190,4 +188,3 @@ Returns a reference to the message's  `WebView`  instance, if it exists.
 ```java
 WebView getWebView()
 ```
-

@@ -24,7 +24,6 @@ This document describes how to automatically display and track push notification
 
 To retrieve the push token from Firebase Messaging Service, please follow the tutorial within the [Firebase documentation](https://firebase.google.com/docs/cloud-messaging/android/client#retrieve-the-current-registration-token). Then use `setPushIdentifier` API to sync the device's push token with profile in Adobe Experience Platform.
 
-
 <InlineAlert variant="info" slots="text"/>
 
 Although this API is provided in Mobile Core, the use of this API is required and leveraged by the Adobe Journey Optimizer extension to sync provided push tokens with Adobe Experience Platform services.
@@ -92,6 +91,7 @@ Notification channel was introduced in Android Oreo (API level 26). It allows yo
 
 You must create at least one notification channel to display push notifications on devices running Android Oreo or higher. Follow the [android documentation](https://developer.android.com/develop/ui/views/notifications/channels) to create and manage notification channels. Once a notification channel is created, you can use the channel id while [designing the push notification](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/design-push.html) in Adobe Journey Optimizer.
 
+
 **Default Channel**: If you do not create a notification channel, or if the notification channel specified while designing the push notification does not match with any of the created channels, the Messaging extension will present the push notification through its predefined fallback notification channel, which is named "General Notifications."
 
 ## Configuring Small Icon
@@ -101,6 +101,7 @@ Use MobileCore's API to set the small icon resource id. This icon will be used a
 ```java
 MobileCore.setSmallIconResourceId(R.drawable.ic_notification);
 ```
+
 When no custom small icon is specified, the Messaging extension will automatically utilize the application's launcher icon as the default small icon.
 
 ## Notification Actions
