@@ -10,16 +10,20 @@ keywords:
 # Push Notification Implementation Guide
 
 ## iOS
+
 * [Push Message APIs](./ios/api-usage.md)
 * [Displaying rich push notification](./ios/display-rich-notifications.md)
 
-## Android 
-* [Automatic display and tracking of push notification](./android/automatic-display-and-tracking.md) (Recommended)
+## Android
+
+* [Automatic display and tracking of push notification](./android/automatic-display-and-tracking.md)(Recommended)
 * [Manual display and tracking of push notification](./android/manual-display-and-tracking.md)
 
 ## Public Classes and Enums
+
 * [Class - MessagingPushPayload](../public-classes-and-enum/messaging-push-payload.md) (Android only)
 * [Enum - PushTrackingStatus](../public-classes-and-enum/push-tracking-status.md)
 
 ## More Information
+
 * [Push Notification Payload Keys](./push-payload.md)

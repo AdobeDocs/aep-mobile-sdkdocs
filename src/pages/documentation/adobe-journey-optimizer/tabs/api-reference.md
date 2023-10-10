@@ -63,4 +63,3 @@ public static void registerExtension();
 ```java
 Messaging.registerExtension();
 ```
- 
