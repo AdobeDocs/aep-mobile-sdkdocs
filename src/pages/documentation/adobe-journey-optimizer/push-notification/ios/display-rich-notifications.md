@@ -12,16 +12,13 @@ keywords:
 
 This document details how to handle and display media notification on iOS device for notification generated from Adobe Journey Optimizer.
 
-
 Follow Apple's documentation to [add a notification service app extension to your project](https://developer.apple.com/documentation/usernotifications/modifying_content_in_newly_delivered_notifications#2942063). Then use the service app extension to download images or other media attachments for the notification before displaying it on user's iOS device.
-
 
 ## Notification service extension implementation
 
  Notifications from Adobe Journey Optimizer contain a media attachment URL in the `adb_media` key of the notification payload. Use the service extension to download the media attachment from the URL and attach it to the notification before displaying it on the user's device.
 
  Here is an example implementation:
-
 
 ```swift
 import UserNotifications

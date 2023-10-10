@@ -87,7 +87,7 @@ public class YourAppFirebaseMessagingService extends FirebaseMessagingService {
 
 ## Notification Channel
 
-Notification channel was introduced in Android Oreo (API level 26). It allows you to group notifications and allows users to customize the notification preferences for each channel. 
+Notification channel was introduced in Android Oreo (API level 26). It allows you to group notifications and allows users to customize the notification preferences for each channel.
 
 You must create at least one notification channel to display push notifications on devices running Android Oreo or higher. Follow the [android documentation](https://developer.android.com/develop/ui/views/notifications/channels) to create and manage notification channels. Once a notification channel is created, you can use the channel id while [designing the push notification](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/design-push.html) in Adobe Journey Optimizer.
 
@@ -105,4 +105,5 @@ MobileCore.setSmallIconResourceId(R.drawable.ic_notification);
 When no custom small icon is specified, the Messaging extension will automatically utilize the application's launcher icon as the default small icon.
 
 ## Notification Actions
+
 Messaging extension will automatically handle any click behaviour that is configured while [designing the push notification in Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/design-push.html) or Assurance.
