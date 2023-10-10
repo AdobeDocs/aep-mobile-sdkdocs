@@ -548,7 +548,7 @@ module.exports = {
                                 path: "/documentation/adobe-journey-optimizer"
                             },
                             {
-                                title: "Common API",
+                                title: "Generic API",
                                 path: "documentation/adobe-journey-optimizer/api-reference"
                             },
                             {
@@ -560,7 +560,7 @@ module.exports = {
                                         path: "/documentation/adobe-journey-optimizer/push-notification/ios/api-usage",
                                         pages: [
                                             {
-                                                title: "API Usage",
+                                                title: "Implement Push Message API",
                                                 path: "/documentation/adobe-journey-optimizer/push-notification/ios/api-usage"
                                             },
                                             {

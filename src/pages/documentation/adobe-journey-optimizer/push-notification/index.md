@@ -11,7 +11,7 @@ keywords:
 
 ## iOS
 
-* [Push Message APIs](./ios/api-usage.md)
+* [Implement Push Message API](./ios/api-usage.md)
 * [Displaying rich push notification](./ios/display-rich-notifications.md)
 
 ## Android

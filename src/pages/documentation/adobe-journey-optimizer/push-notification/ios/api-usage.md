@@ -12,7 +12,7 @@ keywords:
 - APNs
 ---
 
-# Push Messaging APIs
+# Push Messaging API
 
 This document details how to use the APIs provided by the AEPMessaging framework for tracking and displaying push notifications.
 
