@@ -14,7 +14,7 @@ This document guides you to integrating in-app messaging in your application.
 
 ## API reference
 
-* [In-App Messaging APIs](./api-usage.md) 
+* [In-App Messaging APIs](./api-usage.md)
 
 ## Tutorials
 
