@@ -8,11 +8,12 @@ keywords:
 - Tutorial
 ---
 
-# In-App Messaging 
+# In-App Messaging
 
 This document guides you to integrating in-app messaging in your application.
 
 ## API reference
+
 * [In-App Messaging APIs](./api-usage.md) 
 
 ## Tutorials
@@ -23,6 +24,7 @@ This document guides you to integrating in-app messaging in your application.
 * [Handle URL clicks from an in-app message](./handle-clicks.md)
 
 ## Public Classes and Enums
+
 * [Class - Message](../public-classes-and-enum/message.md)
 * [Enum - MessagingEdgeEventType](../public-classes-and-enum/messaging-edge-event-type.md)
 
