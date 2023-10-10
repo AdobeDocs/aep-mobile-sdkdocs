@@ -24,7 +24,9 @@ This document details how to use the APIs provided by the AEPMessaging framework
 
 To retrieve the push token in iOS, refer to the [Apple documentation for registering your app with APNs](https://developer.apple.com/documentation/usernotifications/registering_your_app_with_apns). Then add the following code to the `application(_: didRegisterForRemoteNotificationsWithDeviceToken:)` method in the `AppDelegate` to sync the device's push token with profile in Adobe Experience Platform.
 
-##### Swift
+<CodeBlock slots="heading, code" repeat="2" languages="Swift, Objective-C" />
+
+#### Swift
 
 ```swift
 func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
@@ -32,7 +34,7 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 }
 ```
 
-##### Objective-C
+#### Objective-C
 
 ```objc
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
@@ -46,7 +48,9 @@ Use `handleNotificationResponse` API to send push notification interaction data 
 
 In iOS, [UNUserNotificationCenterDelegate](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) is the interface for processing incoming notifications and responding to notification actions. Once the delegate is implemented, handle push notification responses in [userNotificationCenter(_:didReceive:withCompletionHandler:)](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate/1649501-usernotificationcenter) method.
 
-##### Swift
+<CodeBlock slots="heading, code" repeat="2" languages="Swift, Objective-C" />
+
+#### Swift
 
 ```swift
 func userNotificationCenter(_: UNUserNotificationCenter,
@@ -57,7 +61,7 @@ func userNotificationCenter(_: UNUserNotificationCenter,
 }
 ```
 
-##### Objective-C
+#### Objective-C
 
 ```objc
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center
@@ -76,7 +80,9 @@ This API method will automatically handle click behaviour defined for the push n
 
 Implement the callback in `handleNotificationResponse` API to read [PushTrackingStatus](../enum-push-tracking-status.md) enum representing tracking status of the push notification.
 
-##### Swift
+<CodeBlock slots="heading, code" repeat="2" languages="Swift, Objective-C" />
+
+#### Swift
 
 ```swift
     Messaging.handleNotificationResponse(response) { trackingStatus in
@@ -84,7 +90,7 @@ Implement the callback in `handleNotificationResponse` API to read [PushTracking
     }
 ```
 
-##### Objective-C
+#### Objective-C
 
 ```objc
     [AEPMobileMessaging handleNotificationResponse:response closure:^(AEPPushTrackingStatus status){
