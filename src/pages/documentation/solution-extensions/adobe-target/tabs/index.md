@@ -17,7 +17,7 @@ implementation 'com.adobe.marketing.mobile:target'
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information.
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
 
 </InlineNestedAlert>
 
@@ -385,13 +385,13 @@ var targetParameters = new ACPTargetParameters(mboxParameters, profileParameters
 
 <Variant platform="android" task="visual-preview" repeat="2"/>
 
-On Android, when the application is launched as a result of a deep link, the Mobile Core's [collectLaunchInfo](../mobile-core/api-reference.md#collectlaunchinfo) API is internally invoked, and the Target activity and deep link information is extracted from the Intent extras.
+On Android, when the application is launched as a result of a deep link, the Mobile Core's [collectLaunchInfo](../../base-extensions/mobile-core/api-reference.md#collectlaunchinfo) API is internally invoked, and the Target activity and deep link information is extracted from the Intent extras.
 
-The SDK can only collect information from the launching Activity if [setApplication](../mobile-core/api-reference.md#setapplication) has been called. Setting the Application is only necessary on an Activity that is also an entry point for your application. However, setting the Application on each Activity has no negative impact and ensures that the SDK always has the necessary reference to your Application. We recommend that you call `setApplication` API in each of your Activities.
+The SDK can only collect information from the launching Activity if [setApplication](../../base-extensions/mobile-core/api-reference.md#setapplication) has been called. Setting the Application is only necessary on an Activity that is also an entry point for your application. However, setting the Application on each Activity has no negative impact and ensures that the SDK always has the necessary reference to your Application. We recommend that you call `setApplication` API in each of your Activities.
 
 <Variant platform="ios" task="visual-preview" repeat="7"/>
 
-On iOS, the Mobile Core's [collectLaunchInfo](../mobile-core/api-reference.md#collectlaunchinfo) API can be invoked with the Target preview deep link as shown below:
+On iOS, the Mobile Core's [collectLaunchInfo](../../base-extensions/mobile-core/api-reference.md#collectlaunchinfo) API can be invoked with the Target preview deep link as shown below:
 
 #### Swift
 

@@ -13,7 +13,7 @@ The Adobe Experience Platform Edge Network extension is integrated with Adobe Ex
 
 ## SDK Logging
 
-The Adobe Experience Platform Mobile SDKs allow for detailed debugging in debug or test environments when using Verbose or Debug Log level. To enable this and see the log messages in your IDE set the verbose/trace mode for [MobileCore logging](../getting-started/enable-debug-logging.md#debug-logging).
+The Adobe Experience Platform Mobile SDKs allow for detailed debugging in debug or test environments when using Verbose or Debug Log level. To enable this and see the log messages in your IDE set the verbose/trace mode for [MobileCore logging](../../home/getting-started/enable-debug-logging.md#debug-logging).
 
 ## Validate with Assurance
 
@@ -22,8 +22,8 @@ While the log messages can be quite helpful for an application developer, inspec
 ### Get started with Assurance
 
 1. Start by following the instructions for [using Assurance](https://experienceleague.adobe.com/docs/experience-platform/assurance/user-access.html).
-2. [Install and register the Assurance extension](../platform-assurance-sdk/index.md) in your mobile app.
-3. Follow the same document for [connecting to an Assurance session](../platform-assurance-sdk/index.md#connect-to-an-assurance-session).
+2. [Install and register the Assurance extension](../../base-extensions/platform-assurance-sdk/index.md) in your mobile app.
+3. Follow the same document for [connecting to an Assurance session](../../base-extensions/platform-assurance-sdk/index.md#connect-to-an-assurance-session).
 
 ### Use the Event Transactions view
 

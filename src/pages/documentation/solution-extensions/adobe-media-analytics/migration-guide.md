@@ -51,7 +51,7 @@ iOS
 | AEPIdentity |AEPEdgeIdentity |
 | AEPMedia | AEPEdgeMedia |
 
-Refer to the guide on how to [configure and setup Media for Edge Network](../media-for-edge-network/index.md) to learn more.
+Refer to the guide on how to [configure and setup Media for Edge Network](../../edge-extensions/media-for-edge-network/index.md) to learn more.
 
 ## Install extensions
 
@@ -95,7 +95,7 @@ iOS
 
 Media extension allowed for ad content tracking of `1 second` when setting the `MediaConstants.MediaObjectKey.GRANULAR_AD_TRACKING` key in the media object.
 
-Media for Edge Network extension supports customizable ping intervals. `Ad content` tracking interval can be set in the range `[1-10] seconds`, and `main content` tracking interval can be set in the range `[10-50] seconds`. For more details, refer to the [createTrackerWithConfig API](../media-for-edge-network/api-reference.md/#createtrackerwithconfig).
+Media for Edge Network extension supports customizable ping intervals. `Ad content` tracking interval can be set in the range `[1-10] seconds`, and `main content` tracking interval can be set in the range `[10-50] seconds`. For more details, refer to the [createTrackerWithConfig API](../../edge-extensions/media-for-edge-network/api-reference.md/#createtrackerwithconfig).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -113,4 +113,4 @@ Media for Edge Network extension currently does not support the downloaded conte
 
 ## API reference
 
-The Media for Edge Network extension offers APIs that are similar to those provided by the Media Analytics extension. To explore the Media for Edge Network extension APIs and understand their usage, please refer to the [API reference docs](../media-for-edge-network/api-reference.md).
+The Media for Edge Network extension offers APIs that are similar to those provided by the Media Analytics extension. To explore the Media for Edge Network extension APIs and understand their usage, please refer to the [API reference docs](../../edge-extensions/media-for-edge-network/api-reference.md).

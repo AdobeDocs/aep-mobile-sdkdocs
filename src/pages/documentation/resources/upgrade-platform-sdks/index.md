@@ -34,14 +34,14 @@ The Experience Platform SDKs contain breaking changes from the version 4 SDKs.<b
 
 Review the following checklist to understand some of the changes and what is required to upgrade:
 
-* The Experience Platform SDKs introduce the [Mobile Core](../../mobile-core/index.md) and constituent extensions.<br/>Mobile Core contains core SDK functionality that is required for all implementations that require Adobe and/or third-party extensions.
+* The Experience Platform SDKs introduce the [Mobile Core](../../base-extensions/mobile-core/index.md) and constituent extensions.<br/>Mobile Core contains core SDK functionality that is required for all implementations that require Adobe and/or third-party extensions.
 * The Mobile Core and other extensions are configured in the Data Collection UI in a mobile property.<br/>When published, the Data Collection UI hosts this property configuration and makes it for your SDK implementation.
 * You decide which SDK extensions to add, configure, and ultimately include in your app project.<br/>This provides the flexibility to customize your implementations.<br/>**Important:** Some extensions depend on others for proper functioning, and these are documented where applicable.
 * We recommend that you ease your build process by use supported dependency managers, such as Gradle for Android and Cocoapods for iOS. The Data Collection UI provides inline instructions and specs to help you with this process.
 
 ### Get started with the upgrade
 
-1. Begin with the [Getting Started](../getting-started/create-a-mobile-property.md) section and ensure that you are appropriately provisioned for tags.
+1. Begin with the [Getting Started](../../home/getting-started/create-a-mobile-property.md) section and ensure that you are appropriately provisioned for tags.
 2. Ensure all of the required SDK APIs that you currently use are available in the new SDK.<br/>For more information, see [Experience Platform SDKs vs. the 4x SDKs](comparison.md).<br/>**Tip:** The Experience Platform SDK supports iOS versions 10+, Android 4.4+ (API 19+).
 3. If you are implementing Analytics, see [Processing rules overview](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html) to map the variables and rules.
 4. In the Experience Platform SDK, you need to manually implement your Lifecycle calls. For more information, see [Manual Lifecycle Implementation](lifecycle.md).

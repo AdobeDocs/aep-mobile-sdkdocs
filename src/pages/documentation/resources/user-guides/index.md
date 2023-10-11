@@ -17,4 +17,4 @@ This sections provides a starting point for mobile application developers who wa
 
 ## Building mobile extensions
 
-To learn how to extend Mobile SDK to support customer-specific features, and allow for the greatest flexibility, please read the guide on [building mobile extensions](building-mobile-extensions.md).
+To learn how to extend Mobile SDK to support customer-specific features, and allow for the greatest flexibility, please read the guide on [building mobile extensions](./building-mobile-extensions.md).

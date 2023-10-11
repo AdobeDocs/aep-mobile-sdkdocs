@@ -90,7 +90,7 @@ iOS
 
 ## processGeofence
 
-When a device crosses one of your app’s pre-defined Places Service region boundaries, the region and event type are passed to the SDK for processing.
+When a device crosses one of your app's pre-defined Places Service region boundaries, the region and event type are passed to the SDK for processing.
 
 Process a Geofence region event for the provided transitionType.
 
@@ -128,7 +128,7 @@ iOS
 
 <InlineAlert variant="warning" slots="text"/>
 
-Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../../base-extensions/mobile-core/api-reference.md#registerextensions) API instead.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

@@ -15,7 +15,7 @@ The **Edge Bridge extension** offers a drop in solution for migrating existing A
 
 <InlineAlert variant="info" slots="text"/>
 
-Edge Bridge only supports the Analytics drop-in migration case. If you are looking to migrate your Adobe Target implementation, please refer to the [Adobe Journey Optimizer Decisioning documentation](../adobe-journey-optimizer-decisioning/index.md) for more details.
+Edge Bridge only supports the Analytics drop-in migration case. If you are looking to migrate your Adobe Target implementation, please refer to the [Adobe Journey Optimizer Decisioning documentation](../../edge-extensions/adobe-journey-optimizer-decisioning/index.md) for more details.
 
 ## Extensions comparison
 
@@ -27,7 +27,7 @@ Edge Bridge only supports the Analytics drop-in migration case. If you are looki
 
 <InlineAlert variant="info" slots="text"/>
 
-Other foundational extensions include the [Consent for Edge Network extension](../consent-for-edge-network/index.md) which enables consent preferences collection from your mobile app, and the [Assurance extension](../platform-assurance-sdk/index.md) for validating your app implementation.
+Other foundational extensions include the [Consent for Edge Network extension](../../edge-extensions/consent-for-edge-network/index.md) which enables consent preferences collection from your mobile app, and the [Assurance extension](../../base-extensions/platform-assurance-sdk/index.md) for validating your app implementation.
 
 ### Workflow comparison
 
@@ -86,4 +86,4 @@ If you need further assistance, please contact [Adobe Experience Cloud customer 
 
 ## Next steps
 
-To learn more about latest versions available for the Edge Network and Edge Bridge extensions, see the [Current SDK versions page](../current-sdk-versions.md).
+To learn more about latest versions available for the Edge Network and Edge Bridge extensions, see the [Current SDK versions page](../../home/current-sdk-versions.md).

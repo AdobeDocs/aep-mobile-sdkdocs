@@ -22,7 +22,7 @@ You can use data elements during rule creation to consolidate the definition of 
 
 As a best practice, you should reuse data elements.
 
-Data elements are building blocks for rules and allow you create a data dictionary of commonly used data in the Experience Platform Mobile SDK, regardless of where they originate (shared state, event data) or which extension creates them. Data elements are populated with data when they are processed in the [Rules Engine](../mobile-core/rules-engine/index.md).
+Data elements are building blocks for rules and allow you create a data dictionary of commonly used data in the Experience Platform Mobile SDK, regardless of where they originate (shared state, event data) or which extension creates them. Data elements are populated with data when they are processed in the [Rules Engine](../../base-extensions/mobile-core/rules-engine/index.md).
 
 To use data elements at a high level, complete the following steps:
 
@@ -75,16 +75,16 @@ In the following example, a rule is created to send a postback that contains the
 
 ## Publish the configuration
 
-After the property is published, this new rule is made available for download by the applications that are configured for this property. For more information, please read the [publish the configuration tutorial](../getting-started/create-a-mobile-property.md#publish-configuration) and the [configure the SDK with an Environment ID tutorial](../getting-started/track-events.md#configure-the-sdk-with-an-environment-id). When the application launches, this rule is triggered, and if the ECID exists in the SDK, a postback is sent to the URL with the ECID value.
+After the property is published, this new rule is made available for download by the applications that are configured for this property. For more information, please read the [publish the configuration tutorial](../../home/getting-started/create-a-mobile-property.md#publish-configuration) and the [configure the SDK with an Environment ID tutorial](../../home/getting-started/track-events.md#configure-the-sdk-with-an-environment-id). When the application launches, this rule is triggered, and if the ECID exists in the SDK, a postback is sent to the URL with the ECID value.
 
 ## Additional information
 
 Here is some additional information about the Rules Engine and the Signal extension:
 
-* [Rules Engine](../mobile-core/rules-engine/index.md)
+* [Rules Engine](../../base-extensions/mobile-core/rules-engine/index.md)
 
   An overview and technical details of the Experience Platform Mobile SDK Rules Engine.
 
-* [Signal extension and Rules Engine integration](../mobile-core/signal/rules-engine-integration.md)
+* [Signal extension and Rules Engine integration](../../base-extensions/mobile-core/signal/rules-engine-integration.md)
 
   This section provides an example of how to create rules to trigger actions in the Signals extension.

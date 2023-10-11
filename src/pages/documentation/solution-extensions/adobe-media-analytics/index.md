@@ -13,7 +13,7 @@ import Tabs from './tabs/index.md'
 <InlineAlert variant="success" slots="header, text"/>
 Adobe Streaming Media for Edge Network extension is now available!
 
-Refer to the [Migrating to Media for Edge Network Guide](migration-guide.md) and [Media for Edge Network extension](../media-for-edge-network/index.md) documentation to learn more about implementing Streaming Media using Adobe Experience Edge Network.
+Refer to the [Migrating to Media for Edge Network Guide](migration-guide.md) and [Media for Edge Network extension](../../edge-extensions/media-for-edge-network/index.md) documentation to learn more about implementing Streaming Media using Adobe Experience Edge Network.
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -89,7 +89,7 @@ iOS
 
 ## Configuration keys
 
-To update your SDK configuration programmatically, use the following information to change your Media configuration values. For more information, see [Configuration API reference](../mobile-core/configuration/api-reference.md).
+To update your SDK configuration programmatically, use the following information to change your Media configuration values. For more information, see [Configuration API reference](../../base-extensions/mobile-core/configuration/api-reference.md).
 
 | Key | Required | Description | Data Type |
 | :--- | :--- | :--- | :--- |

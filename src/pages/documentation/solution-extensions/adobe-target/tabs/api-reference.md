@@ -1387,17 +1387,17 @@ Target.setTntId("f741a5d5-09c0-4931-bf53-b9e568c5f782.35_0")
 
 <Variant platform="android" api="visual-preview" repeat="2"/>
 
-On Android, when the application is launched as a result of a deep link, the Mobile Core's [collectLaunchInfo](../../mobile-core/api-reference.md#collectlaunchinfo) API is internally invoked, and the Target activity and deep link information is extracted from the Intent extras.
+On Android, when the application is launched as a result of a deep link, the Mobile Core's [collectLaunchInfo](../../base-extensions/mobile-core/api-reference.md#collectlaunchinfo) API is internally invoked, and the Target activity and deep link information is extracted from the Intent extras.
 
 <InlineNestedAlert variant="info" header="false" iconPosition="left">
 
-The SDK can only collect information from the launching Activity if [`setApplication`](../../mobile-core/api-reference.md#setapplication) API has been called. Setting the Application is only necessary on an Activity that is also an entry point for your application. However, setting the Application on each Activity has no negative impact and ensures that the SDK always has the necessary reference to your Application. We recommend that you call `setApplication` API in each of your Activities.
+The SDK can only collect information from the launching Activity if [`setApplication`](../../base-extensions/mobile-core/api-reference.md#setapplication) API has been called. Setting the Application is only necessary on an Activity that is also an entry point for your application. However, setting the Application on each Activity has no negative impact and ensures that the SDK always has the necessary reference to your Application. We recommend that you call `setApplication` API in each of your Activities.
 
 </InlineNestedAlert>
 
 <Variant platform="ios" api="visual-preview" repeat="7"/>
 
-To enter the visual preview mode, use the Mobile Core's [collectLaunchInfo](../../mobile-core/api-reference.md#collectlaunchinfo) API to enable the mode, and select the red floating button that appears on the app screen.
+To enter the visual preview mode, use the Mobile Core's [collectLaunchInfo](../../base-extensions/mobile-core/api-reference.md#collectlaunchinfo) API to enable the mode, and select the red floating button that appears on the app screen.
 
 #### Swift
 
@@ -1762,7 +1762,7 @@ public class TargetParameters: NSObject, Codable {
 }
 ```
 
-Examples for creating instances of TargetParameters can be seen in the [Target overview](../index.md#target-parameters).
+Examples for creating instances of TargetParameters can be seen in the [Target overview](./index.md#target-parameters).
 
 <!--- <Variant platform="react-native" api="target-parameters" repeat="5"/>
 

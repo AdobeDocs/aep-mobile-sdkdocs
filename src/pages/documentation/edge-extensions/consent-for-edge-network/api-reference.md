@@ -43,7 +43,7 @@ iOS
 
 <InlineAlert variant="warning" slots="text"/>
 
-Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../../base-extensions/mobile-core/api-reference.md#registerextensions) API instead.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
@@ -97,4 +97,4 @@ Bellow you can see the snippet of the request payload sent to the Edge Network:
      ]
 ```
 
-For additional information about the management of consent preferences, please refer to the [Privacy and GDPR documentation](../resources/privacy-and-gdpr.md#using-experience-platform-sdks-for-edge-network).
+For additional information about the management of consent preferences, please refer to the [Privacy and GDPR documentation](../../resources/privacy-and-gdpr.md#using-experience-platform-sdks-for-edge-network).

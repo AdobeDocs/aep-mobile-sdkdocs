@@ -14,7 +14,7 @@ import Tabs from './tabs/index.md'
 
 1. In the Data Collection UI, select the **Extensions** tab.
 2. On the **Catalog** tab, locate the **Adobe Analytics** extension, and select **Install**.
-3. Type the extension settings. For more information, please read the [configure the Analytics Extension section](./#configure-the-analytics-extension).
+3. Type the extension settings. For more information, please read the [configure the Analytics Extension section](#configure-the-analytics-extension).
 4. Click **Save**.
 5. Follow the publishing process to update SDK configuration.
 
@@ -70,7 +70,7 @@ If you currently send Mobile SDK data to a report suite that also collects data 
 
 <InlineAlert variant="info" slots="text"/>
 
-For more information about Analytics server-side forwarding to Audience Manager, see the documentation on [Analytics sever-side forwarding](./#server-side-forwarding-with-audience-manager).
+For more information about Analytics server-side forwarding to Audience Manager, see the documentation on [Analytics sever-side forwarding](#server-side-forwarding-with-audience-manager).
 
 If you set up Analytics server-side forwarding to Audience Manager in your Analytics report suite, select the **Audience Manager Forwarding** checkbox. When this checkbox is selected, all SDK requests to Analytics servers are sent with an expected response code of **10**. This step ensures that client-side Analytics response traffic is forwarded to the Audience Manager SDK so that the User Profile is correctly updated.
 
@@ -100,7 +100,7 @@ The default value for this setting is 0, which means that hit batching is disabl
 
 #### Launch hit delay
 
-The number of seconds to wait before Analytics launch hits are sent from the SDK. Ensure that this setting is set at 5 seconds or greater when using acquisition functionality from the [Mobile Services](../adobe-analytics-mobile-services/) extension.
+The number of seconds to wait before Analytics launch hits are sent from the SDK. Ensure that this setting is set at 5 seconds or greater when using acquisition functionality from the [Mobile Services](https://developer.adobe.com/client-sdks/previous-versions/documentation/adobe-analytics-mobile-services/) extension.
 
 ## Add Analytics to your application
 
@@ -128,15 +128,15 @@ iOS
 
 ## Send Lifecycle metrics to Analytics
 
-To automatically report on the application lifecycle details in Analytics, ensure that you properly configure the lifecycle data collection. For more information, see the documentation on [Lifecycle metrics](../mobile-core/lifecycle/metrics.md).
+To automatically report on the application lifecycle details in Analytics, ensure that you properly configure the lifecycle data collection. For more information, see the documentation on [Lifecycle metrics](../../base-extensions/mobile-core/lifecycle/metrics.md).
 
 ## Send app states and actions to Analytics
 
-To track mobile app states and actions in Adobe Analytics, implement the [trackAction](../mobile-core/api-reference.md#trackaction) and [trackState](../mobile-core/api-reference.md#trackstate) APIs from the Mobile Core extension. For more information, see the [track app actions](../mobile-core/api-reference.md#track-app-actions) and [track app states](../mobile-core/api-reference.md#track-app-states-and-views) tutorials.
+To track mobile app states and actions in Adobe Analytics, implement the [trackAction](../../base-extensions/mobile-core/api-reference.md#trackaction) and [trackState](../../base-extensions/mobile-core/api-reference.md#trackstate) APIs from the Mobile Core extension. For more information, see the [track app actions](../../base-extensions/mobile-core/api-reference.md#track-app-actions) and [track app states](../../base-extensions/mobile-core/api-reference.md#track-app-states-and-views) tutorials.
 
 <InlineAlert variant="info" slots="text"/>
 
-[trackState](../mobile-core/api-reference.md#trackstate) reports the view state as the **Page Name**, and state views are reported as **Page View** in Analytics. The value is sent to Analytics by using the page name variable (`pagename=value`).<br/><br/> [trackAction](../mobile-core/api-reference.md#trackaction) reports the Action as an **event** and does not increment your page views in Analytics. The value is sent to Analytics by using the action variable (`action=value`).
+[trackState](../../base-extensions/mobile-core/api-reference.md#trackstate) reports the view state as the **Page Name**, and state views are reported as **Page View** in Analytics. The value is sent to Analytics by using the page name variable (`pagename=value`).<br/><br/> [trackAction](../../base-extensions/mobile-core/api-reference.md#trackaction) reports the Action as an **event** and does not increment your page views in Analytics. The value is sent to Analytics by using the action variable (`action=value`).
 
 ## Integrations with Adobe Experience Platform solutions and services
 
@@ -193,4 +193,4 @@ iOS
 
 <Tabs query="platform=ios&task=update"/>
 
-For more information, see the [configuration API reference](../mobile-core/configuration/api-reference.md).
+For more information, see the [configuration API reference](../../base-extensions/mobile-core/configuration/api-reference.md).

@@ -166,15 +166,15 @@ The customer profile can be viewed in [Adobe Experience Platform](https://experi
 
 To learn more about the Adobe Customer Profile, see the [Identity Service overview](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html) and the [Identity namespace overview](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html).
 
-## Extra credit: Create segment based on Identity Authentication State
+## Extra credit: Create audience based on Identity Authentication State
 
-Create a segment in [Adobe Experience Platform](https://experience.adobe.com/platform) for the customer profiles where the `Authenticated State = Ambiguous`.
+Create an audience in [Adobe Experience Platform](https://experience.adobe.com/platform) for the customer profiles where the `Authenticated State = Ambiguous`.
 
-1. Select **Segments** from the left panel, followed by **Create segment**.
+1. Select **Audiences** from the left panel, followed by **Create audience** and **Build rule**.
 2. Select **Events**, followed by **XDM Experience Event** and **Identity Map** and add the **Authenticated State** element in the **Start building segment** section.
 3. Select **Include Identity Map** within email where `Authenticated State` equals `Ambiguous`.
-4. Set the name for this segment, for example "Users with email and authenticated state ambiguous".
+4. Set the name for this audience, for example "Users with email and authenticated state ambiguous".
 5. Select **Save**.
-6. Once the segment is computed, you can see how many users qualify for this segment.
+6. Once the audience is computed, you can see how many users qualify for this audience.
 
 For more details about segmentation in Adobe Experience Platform, see the [Segment Builder user guide](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-builder.html).

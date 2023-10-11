@@ -17,11 +17,11 @@ The latest versions of the Adobe Experience Platform SDK for Apple iOS (Swift an
 
 <InlineAlert variant="info" slots="text"/>
 
-Effective August 31, 2023: ACP iOS SDKs, Flutter for ACP, React Native for ACP, Cordova, and Xamarin SDKs will no longer be supported. Refer to [ACP SDKs end-of-support](./resources/acp-end-of-support.md) for more information.
+Effective August 31, 2023: ACP iOS SDKs, Flutter for ACP, React Native for ACP, Cordova, and Xamarin SDKs will no longer be supported. Refer to [ACP SDKs end-of-support](../resources/acp-end-of-support.md) for more information.
 
 <InlineAlert variant="info" slots="text"/>
 
-Check out our page discussing how we will [align major SDK versions](./resources/major-version-alignment.md) for future releases of the Adobe Experience Platform Mobile SDKs and wrappers.
+Check out our page discussing how we will [align major SDK versions](../resources/major-version-alignment.md) for future releases of the Adobe Experience Platform Mobile SDKs and wrappers.
 
 <InlineAlert variant="success" slots="header, text"/>
 
@@ -52,7 +52,7 @@ The Adobe Experience Platform Mobile SDK supports the following platforms:
 
 * [Getting started](./getting-started/index.md)
 * [Getting the Experience Platform SDKs](./getting-started/get-the-sdk.md)
-* [Frequently asked questions](./resources/faq.md)
+* [Frequently asked questions](../resources/faq.md)
 * [Why use the Adobe Experience Platform Mobile SDKs](https://medium.com/adobetech/accelerate-your-mobile-application-development-with-adobe-experience-platform-mobile-sdk-and-launch-ed023536d611)
 
 ## Get Help

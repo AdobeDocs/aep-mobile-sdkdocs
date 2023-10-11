@@ -12,7 +12,7 @@ import Tabs from './tabs/index.md'
 
 <InlineAlert variant="info" slots="text"/>
 
-**Before** you install or configure the Campaign Standard extension, please read the [getting started guide](../getting-started/create-a-mobile-property.md) and the [configuring a mobile application using Adobe Experience Platform SDKs guide](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-channels/configuring-a-mobile-application.html).
+**Before** you install or configure the Campaign Standard extension, please read the [getting started guide](../../home/getting-started/create-a-mobile-property.md) and the [configuring a mobile application using Adobe Experience Platform SDKs guide](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-channels/configuring-a-mobile-application.html).
 
 ## Configure the Campaign Standard extension in the Data Collection UI
 
@@ -62,10 +62,10 @@ Remember the following information when you add the Campaign extension to your a
 
 | Extension | Information |
 | :--- | :--- |
-| Campaign Standard | The Campaign Standard extension requires the [Mobile Core](../mobile-core/index.md), [Profile](../profile/index.md), [Lifecycle](../mobile-core/lifecycle/index.md), and [Signal](../mobile-core/signal/index.md) extensions. You should always ensure that you get the latest version of the extensions. |
+| Campaign Standard | The Campaign Standard extension requires the [Mobile Core](../../base-extensions/mobile-core/index.md), [Profile](../profile/index.md), [Lifecycle](../../base-extensions/mobile-core/lifecycle/index.md), and [Signal](../../base-extensions/mobile-core/signal/index.md) extensions. You should always ensure that you get the latest version of the extensions. |
 | Profile | The Profile extension is required for in-app trigger frequencies to work accurately. For more information, see [Profile](../profile/index.md). |
-| Signal | The Signal extension is required for all postback rules to work. For more information, see [Signal](../mobile-core/signal/index.md). |
-| Lifecycle | The Lifecycle extension is required for a profile to be registered in Campaign. In order to do this, you will need to implement the Lifecycle APIs. For more information, please read either the [Lifecycle API (Android)](../mobile-core/lifecycle/android.md) or the [Lifecycle API (iOS)](../mobile-core/lifecycle/ios.md) documentation. |
+| Signal | The Signal extension is required for all postback rules to work. For more information, see [Signal](../../base-extensions/mobile-core/signal/index.md). |
+| Lifecycle | The Lifecycle extension is required for a profile to be registered in Campaign. In order to do this, you will need to implement the Lifecycle APIs. For more information, please read either the [Lifecycle API (Android)](../../base-extensions/mobile-core/lifecycle/android.md) or the [Lifecycle API (iOS)](../../base-extensions/mobile-core/lifecycle/ios.md) documentation. |
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -95,7 +95,7 @@ iOS
 
 ### Initialize the SDK and set up tracking
 
-To initialize the SDK and set up tracking, see the [initialize the SDK and set up tracking tutorial](../getting-started/track-events.md).
+To initialize the SDK and set up tracking, see the [initialize the SDK and set up tracking tutorial](../../home/getting-started/track-events.md).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -109,7 +109,7 @@ iOS
 
 ### Set up push messaging
 
-To enable push messaging with Adobe Campaign, call `setPushIdentifer` to send the push identifier that is received from the Apple Push Notification Service (APNS) or Firebase Cloud Messaging Platform (FCM) to the Adobe Identity service. For more information about the `setPushIdentifer` API, see the [setPushIdentifier section of the Adobe Identity API guide](../mobile-core/identity/api-reference.md#setpushidentifier).
+To enable push messaging with Adobe Campaign, call `setPushIdentifer` to send the push identifier that is received from the Apple Push Notification Service (APNS) or Firebase Cloud Messaging Platform (FCM) to the Adobe Identity service. For more information about the `setPushIdentifer` API, see the [setPushIdentifier section of the Adobe Identity API guide](../../base-extensions/mobile-core/identity/api-reference.md#setpushidentifier).
 
 For more information about setting up your iOS app to connect to APNS and retrieve a device token that will be used as a push identifier, see the tutorial on [registering your app with APNs](https://developer.apple.com/documentation/usernotifications/registering_your_app_with_apns?language=objc). For more information about setting up your Android app to connect to FCM and retrieve a device registration token that will be used as a push identifier, see the tutorial on [setting up a Firebase Cloud Messaging client app on Android](https://firebase.google.com/docs/cloud-messaging/android/client).
 
@@ -219,7 +219,7 @@ iOS
 
 ## Configuration keys
 
-To update SDK configuration programmatically, use the following information to change your Campaign Standard configuration values. For more information, see the [Configuration API reference](../mobile-core/configuration/api-reference.md).
+To update SDK configuration programmatically, use the following information to change your Campaign Standard configuration values. For more information, see the [Configuration API reference](../../base-extensions/mobile-core/configuration/api-reference.md).
 
 | Key | Required | Description | Data Type |
 | :--- | :--- | :--- | :--- |

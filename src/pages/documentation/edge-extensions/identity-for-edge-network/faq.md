@@ -101,7 +101,7 @@ Each identity extension has its own API to retrieve their respective ECIDs as we
 
 A: Use both `getSdkIdentities` and `getIdentities`
 
-To get the identifiers used by the Adobe Solutions extensions, call [getSdkIdentities](../mobile-core/api-reference.md#getsdkidentities).
+To get the identifiers used by the Adobe Solutions extensions, call [getSdkIdentities](../../base-extensions/mobile-core/api-reference.md#getsdkidentities).
 
 To get the identifiers used by the Edge extensions, call [getIdentities](./api-reference.md#getidentities).
 
@@ -109,9 +109,9 @@ To get the identifiers used by the Edge extensions, call [getIdentities](./api-r
 
 A: Set privacy status to `optedOut` and call `resetIdentities`
 
-To clear the identifiers used by the Adobe Solutions extensions, call [setPrivacyStatus](../resources/privacy-and-gdpr.md#set-and-get-privacy-status) and set the privacy status to `optedOut`.
+To clear the identifiers used by the Adobe Solutions extensions, call [setPrivacyStatus](../../resources/privacy-and-gdpr.md#set-and-get-privacy-status) and set the privacy status to `optedOut`.
 
-To clear the identifiers used by the Edge extensions, call [resetIdentities](../mobile-core/api-reference.md#resetidentities)
+To clear the identifiers used by the Edge extensions, call [resetIdentities](../../base-extensions/mobile-core/api-reference.md#resetidentities)
 
 ## Q: What steps are needed to generate a new Experience Cloud ID (ECID) for a user when using both Edge extensions and Adobe Solutions extensions?
 
@@ -121,10 +121,10 @@ When using Real-time Customer Profile and Identity Service, the ECIDs from both 
 
 Perform the following API calls to regenerate the ECIDs in sequence:
 
-1. Set [privacy status](../resources/privacy-and-gdpr.md#set-and-get-privacy-status) to `optedOut` to clear the ECID from the Identity direct service extension.
+1. Set [privacy status](../../resources/privacy-and-gdpr.md#set-and-get-privacy-status) to `optedOut` to clear the ECID from the Identity direct service extension.
 2. Call [resetIdentities](./api-reference.md#resetidentities) to regenerate a new ECID in the Identity for Edge Network extension.
 3. Call [getExperienceCloudId](./api-reference.md#getexperiencecloudid) on the Identity for Edge Network extension. This ensures the new ECID is generated before continuing.
-4. Set [privacy status](../privacy-and-gdpr.md#set-and-get-privacy-status) to `optedIn` to generate a new ECID in the Identity direct service extension.
+4. Set [privacy status](../../resources/privacy-and-gdpr.md#set-and-get-privacy-status) to `optedIn` to generate a new ECID in the Identity direct service extension.
 
 After completing the above steps, each identity extension will have its own, different, ECID. The new ECIDs will get linked under a new Identity Graph for the customer.
 
@@ -140,7 +140,7 @@ iOS
 
 ## Q: Can I safely remove the Identity for Experience Cloud ID Service extension in an app if I am using the Edge Network extension?
 
-If no other extension relies on the Identity for Experience Cloud ID Service extension, you can safely remove it. Please refer to the [Identity consideration document](../adobe-analytics/migrate-to-edge-network.md#identity-consideration-for-the-migration) for more information.
+If no other extension relies on the Identity for Experience Cloud ID Service extension, you can safely remove it. Please refer to the [Identity consideration document](../../solution-extensions/adobe-analytics/migrate-to-edge-network.md#identity-consideration-for-the-migration) for more information.
 
 ## Q: I am passing the ECID from to the WebView using `getUrlVariables` API, but the web interactions get a new ECID assigned, how do I fix this?
 

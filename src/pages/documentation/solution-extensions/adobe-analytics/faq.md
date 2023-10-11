@@ -27,12 +27,12 @@ If you see SDK identifiers unexpectedly change, try the following fixes to addre
 The metric `Crashes` is computed based on the Lifecycle start and pause API calls implemented in your mobile application. How can you verify if the implementation is correct:
 
 * Ensure that the Lifecycle extension is registered.
-* Verify that both MobileCore APIs `lifecycleStart` and `lifecyclePause` are implemented in the application based on the recommended settings for each platform. See the [guide for registering Lifecycle with MobileCore and adding appropriate start/pause calls](../mobile-core/lifecycle/index.md#register-lifecycle-with-mobile-core-and-add-appropriate-startpause-calls).
-* For more details, see also [Tracking app crashes in iOS](../mobile-core/lifecycle/ios.md#tracking-app-crashes-in-ios) and [Android](../mobile-core/lifecycle/android.md#tracking-app-crashes-in-android).
+* Verify that both MobileCore APIs `lifecycleStart` and `lifecyclePause` are implemented in the application based on the recommended settings for each platform. See the [guide for registering Lifecycle with MobileCore and adding appropriate start/pause calls](../../base-extensions/mobile-core/lifecycle/index.md#register-lifecycle-with-mobile-core-and-add-appropriate-startpause-calls).
+* For more details, see also [Tracking app crashes in iOS](../../base-extensions/mobile-core/lifecycle/ios.md#tracking-app-crashes-in-ios) and [Android](../../base-extensions/mobile-core/lifecycle/android.md#tracking-app-crashes-in-android).
 
 ## How are mobile visits different from launches?
 
-A launch is measured by the SDK when a user opens the app for the first time or returns to the app after having been out of the app for longer than the specified timeout value. The typical timeout is 5 minutes (300 seconds) in the [lifecycleTimeout](../mobile-core/lifecycle/index.md#device-information) configuration setting.
+A launch is measured by the SDK when a user opens the app for the first time or returns to the app after having been out of the app for longer than the specified timeout value. The typical timeout is 5 minutes (300 seconds) in the [lifecycleTimeout](../../base-extensions/mobile-core/lifecycle/index.md#device-information) configuration setting.
 
 A visit is a server-side calculation by Adobe Analytics and is based on the first and last data hits that are sent by the SDK without exceeding a visit timeout. Typically, session timeouts are set at 30 minutes for a report suite. Although visits come from traditional web analytics, these hits still provide valuable insights into how users enter and exit from your app.
 
@@ -46,7 +46,7 @@ If you have followed the documentation and are unable to see reporting data in y
 
 ### Verify that the Analytics extension is registered
 
-The [Analytics extension](./index.md) and its dependent [Identity extension](../mobile-core/identity/index.md) should be registered and configured correctly for the SDK to start processing trackAction/trackState requests.
+The [Analytics extension](./index.md) and its dependent [Identity extension](../../base-extensions/mobile-core/identity/index.md) should be registered and configured correctly for the SDK to start processing trackAction/trackState requests.
 
 ### Verify that network requests are sent to Adobe Analytics <a id="verify-that-network-requests-are-sent-to-adobe-analytics"></a>
 
@@ -71,4 +71,4 @@ If you are unable to resolve your concerns through resources provided here, plea
 
 ## How do I send data to Adobe Analytics in React Native and Flutter?
 
-In the latest SDK version (AEP-prefixed) for React Native and Flutter, you can send data to Analytics via the Edge Network using the Edge Network extension and `sendEvent` API. If you want a drop-in migration solution for an existing `trackAction` / `trackState` implementation, you can do this with the help of the Edge Bridge extension. You can learn more about these options in the [migration guide](../adobe-analytics/migrate-to-edge-network.md).
+In the latest SDK version (AEP-prefixed) for React Native and Flutter, you can send data to Analytics via the Edge Network using the Edge Network extension and `sendEvent` API. If you want a drop-in migration solution for an existing `trackAction` / `trackState` implementation, you can do this with the help of the Edge Bridge extension. You can learn more about these options in the [migration guide](./migrate-to-edge-network.md).

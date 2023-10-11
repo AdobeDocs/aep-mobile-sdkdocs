@@ -9,11 +9,11 @@ keywords:
 
 # iOS App Extension implementation
 
-You can use supported Adobe Experience Platform mobile extensions in your App Extensions to collect usage data. The supported Platform mobile extensions are listed [here](../current-sdk-versions.md#ios).
+You can use supported Adobe Experience Platform mobile extensions in your App Extensions to collect usage data. The supported Platform mobile extensions are listed [here](../../home/current-sdk-versions.md#ios).
 
 ## Prerequisites
 
-* This tutorial assumes a basic understanding of how to use the iOS AEP Mobile SDK in applications. For more details see [Getting Started](../getting-started/index.md).
+* This tutorial assumes a basic understanding of how to use the iOS AEP Mobile SDK in applications. For more details see [Getting Started](../../home/getting-started/index.md).
 * You should have CocoaPods installed.
 
 ## Adding the AEP mobile extensions

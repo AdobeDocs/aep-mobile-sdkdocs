@@ -17,13 +17,13 @@ implementation 'com.adobe.marketing.mobile:campaignclassic'
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../resources/manage-gradle-dependencies.md) for more information.
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
 
 </InlineNestedAlert>
 
 <Variant platform="ios" task="add" repeat="4"/>
 
-Add the Campaign Classic and [Mobile Core](../mobile-core/index.md) libraries to your project.
+Add the Campaign Classic and [Mobile Core](../../base-extensions/mobile-core/index.md) libraries to your project.
 
 You can add the following pods to your `Podfile`:
 

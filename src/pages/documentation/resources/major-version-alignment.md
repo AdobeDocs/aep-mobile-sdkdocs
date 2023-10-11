@@ -34,7 +34,7 @@ Unlike our previous major version updates, this is not a major rewrite nor does 
 
 While we don't have plans for another major rewrite any time soon, if a need for one comes up, we will be sure to let you know with plenty of lead time.
 
-Outside of major version updates, all of our extensions will continue to follow semantic versioning ([semver](https://semver.org/)) for minor and patch releases on an as-needed basis. We recommend using the [latest version](./../current-sdk-versions.md) of each extension, which will contain the most current optimizations and bug fixes.
+Outside of major version updates, all of our extensions will continue to follow semantic versioning ([semver](https://semver.org/)) for minor and patch releases on an as-needed basis. We recommend using the [latest version](../home/current-sdk-versions.md) of each extension, which will contain the most current optimizations and bug fixes.
 
 ## How does this impact the SDK going forward?
 

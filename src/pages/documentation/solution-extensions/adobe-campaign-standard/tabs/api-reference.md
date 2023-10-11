@@ -64,7 +64,7 @@ NSString *campaignVersion = [AEPMobileCampaign extensionVersion];
 
 <Variant platform="android" api="register-extension" repeat="1"/>
 
-This API has been deprecated as of version 2.0.0. Please use the [Mobile Core registerExtension API](../../mobile-core/api-reference.md) instead.
+This API has been deprecated as of version 2.0.0. Please use the [Mobile Core registerExtension API](../../base-extensions/mobile-core/api-reference.md) instead.
 
 <Variant platform="ios" api="register-extension" repeat="1"/>
 

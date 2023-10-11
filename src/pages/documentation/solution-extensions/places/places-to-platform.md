@@ -55,7 +55,7 @@ select confirm. Your schema's **placeContext** field-group should look like:
 ## Datastream Configuration
 
 * In the browser, navigate to the [Data Collection UI](https://experience.adobe.com/#/data-collection).
-* From the left panel, select **Datastreams** and from the list select the datastream that is configured for your application. For more details about configuring datastream, please read [this section](../getting-started/configure-datastreams.md).
+* From the left panel, select **Datastreams** and from the list select the datastream that is configured for your application. For more details about configuring datastream, please read [this section](../../home/getting-started/configure-datastreams.md).
 * Find **Adobe Experience Platform** service, select `...` and choose **Edit**.
 
 ![Choose Platform Service](./assets/index/datastream-choose-platform-services.png)

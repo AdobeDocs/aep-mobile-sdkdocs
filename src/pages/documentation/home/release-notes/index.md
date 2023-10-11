@@ -262,7 +262,7 @@ Keywords:
 
 ### iOS Places 4.1.0 and Android Places 2.1.0
 
-* Added support for forwarding location entry and exit events to Adobe Experience Platform. For more information, refer to the [Places Service event forwarding to Adobe Experience Platform](/places/places-to-platform.md) guide.
+* Added support for forwarding location entry and exit events to Adobe Experience Platform. For more information, refer to the [Places Service event forwarding to Adobe Experience Platform](../../solution-extensions/places/places-to-platform.md) guide.
 
 ### Android Core 2.3.1
 
@@ -454,7 +454,7 @@ The following React Native libraries have been upgraded to use the version 4 of 
 
 ### Android BOM 2.0.0
 
-* Align the major version to match the current major version of the MobileCore extension for Android. Please refer to the [major version alignment document](../resources/major-version-alignment.md).
+* Align the major version to match the current major version of the MobileCore extension for Android. Please refer to the [major version alignment document](../../resources/major-version-alignment.md).
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom/2.0.0)) release includes changes to the following Android extensions.
 
 <Accordion>
@@ -583,21 +583,21 @@ Note that all these extensions must be updated together.
 
 ### iOS Target 4.0.0
 
-Major version update for [Adobe Target](../adobe-target/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+Major version update for [Adobe Target](../../solution-extensions/adobe-target/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 
 ### iOS Audience 4.0.0
 
- Major version update for [Adobe Audience Manager](../adobe-audience-manager/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+ Major version update for [Adobe Audience Manager](../../solution-extensions/adobe-audience-manager/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 
 ### iOS Media 4.0.0
 
-Major version update for [Adobe Analytics - Media Analytics workflows](../adobe-media-analytics/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+Major version update for [Adobe Analytics - Media Analytics workflows](../../solution-extensions/adobe-media-analytics/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
@@ -607,22 +607,22 @@ Major version update for [Adobe Analytics - Media Analytics workflows](../adobe-
 
 ### Android Edge Media 2.0.0
 
-Initial release of the [Adobe Streaming Media for Edge Network](../media-for-edge-network/index.md) extension for Android which sends data about audio and video consumption on your streaming applications to the Adobe Experience Platform Edge Network. This enables capabilities for measurement, analysis, and activation with media data across the Adobe Experience Cloud solutions.
+Initial release of the [Adobe Streaming Media for Edge Network](../../edge-extensions/media-for-edge-network/index.md) extension for Android which sends data about audio and video consumption on your streaming applications to the Adobe Experience Platform Edge Network. This enables capabilities for measurement, analysis, and activation with media data across the Adobe Experience Cloud solutions.
 
 ### iOS Edge Media 4.0.0
 
-Initial release of the [Adobe Streaming Media for Edge Network](../media-for-edge-network/index.md) extension for iOS which sends data about audio and video consumption on your streaming applications to the Adobe Experience Platform Edge Network. This enables capabilities for measurement, analysis, and activation with media data across the Adobe Experience Cloud solutions.
+Initial release of the [Adobe Streaming Media for Edge Network](../../edge-extensions/media-for-edge-network/index.md) extension for iOS which sends data about audio and video consumption on your streaming applications to the Adobe Experience Platform Edge Network. This enables capabilities for measurement, analysis, and activation with media data across the Adobe Experience Cloud solutions.
 
 ### iOS Places 4.0.0
 
-Major version update for [Adobe Experience Platform Location Service](../places/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+Major version update for [Adobe Experience Platform Location Service](../../solution-extensions/places/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 
 ### iOS Analytics 4.0.0
 
-Major version update for [Adobe Analytics](../adobe-analytics/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+Major version update for [Adobe Analytics](../../solution-extensions/adobe-analytics/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
@@ -633,7 +633,7 @@ Major version update for [Adobe Analytics](../adobe-analytics/index.md) for Adob
 
 ### iOS Campaign Classic 4.0.0
 
-Major version update for [Adobe Campaign Classic workflows](../adobe-campaign-classic/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+Major version update for [Adobe Campaign Classic workflows](../../solution-extensions/adobe-campaign-classic/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
@@ -641,14 +641,14 @@ Major version update for [Adobe Campaign Classic workflows](../adobe-campaign-cl
 
 ### iOS Campaign Standard 4.0.0
 
-Major version update for [Adobe Campaign Standard workflows](../adobe-campaign-standard/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+Major version update for [Adobe Campaign Standard workflows](../../solution-extensions/adobe-campaign-standard/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 
 ### iOS UserProfile 4.0.0
 
-Major version update for [User Profile](../profile/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+Major version update for [User Profile](../../base-extensions/profile/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
@@ -664,14 +664,14 @@ Major version update for Edge Bridge for Adobe Experience Platform Mobile SDKs o
 
 ### iOS Messaging 4.0.0
 
-Major version update for [Adobe Journey Optimizer](../adobe-journey-optimizer/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+Major version update for [Adobe Journey Optimizer](../../edge-extensions/adobe-journey-optimizer/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 
 ### iOS Optimize 4.0.0
 
-Major version update for [Adobe Journey Optimizer - Decisioning](../adobe-journey-optimizer-decisioning/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+Major version update for [Adobe Journey Optimizer - Decisioning](../../edge-extensions/adobe-journey-optimizer-decisioning/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
@@ -681,21 +681,21 @@ Major version update for [Adobe Journey Optimizer - Decisioning](../adobe-journe
 
 ### iOS Consent 4.0.0
 
-Major version update for [Consent for Edge Network](../consent-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+Major version update for [Consent for Edge Network](../../edge-extensions/consent-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 
 ### iOS EdgeIdentity 4.0.0
 
-Major version update for [Identity for Edge Network](../identity-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+Major version update for [Identity for Edge Network](../../edge-extensions/identity-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
 
 ### iOS Edge 4.0.0
 
-Major version update for [Edge Network](../edge-network/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+Major version update for [Edge Network](../../edge-extensions/edge-network/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
@@ -704,7 +704,7 @@ Major version update for [Edge Network](../edge-network/index.md) for Adobe Expe
 
 ### iOS Assurance 4.0.0
 
-Major version update for [Adobe Experience Platform Assurance](../platform-assurance-sdk/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+Major version update for [Adobe Experience Platform Assurance](../../base-extensions/platform-assurance-sdk/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
@@ -1145,7 +1145,7 @@ For help on moving to these versions, and information on deprecated APIs please 
 
 ### Android Target 2.0.0
 
-* Major version update for [Adobe Target](../adobe-target/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-target-android).
+* Major version update for [Adobe Target](../../solution-extensions/adobe-target/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-target-android).
 
 Please note that the following improvements have been made in the current release:
 
@@ -1174,23 +1174,23 @@ import com.adobe.marketing.mobile.target.TargetParameters;
 
 ### Android Analytics 2.0.0
 
-* Major version update for [Adobe Analytics](../adobe-analytics/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-analytics-android/).
+* Major version update for [Adobe Analytics](../../solution-extensions/adobe-analytics/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-analytics-android/).
 
 ### Android Audience 2.0.0
 
-* Major version update for [Adobe Audience Manager](../adobe-audience-manager/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-audience-android).
+* Major version update for [Adobe Audience Manager](../../solution-extensions/adobe-audience-manager/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-audience-android).
 
 ### Android Media 3.0.0
 
-* Major version update for [Adobe Analytics - Media Analytics workflows](../adobe-media-analytics/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-media-android).
+* Major version update for [Adobe Analytics - Media Analytics workflows](../../solution-extensions/adobe-media-analytics/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-media-android).
 
 ### Android Messaging 2.0.0
 
-* Major version update for [Adobe Journey Optimizer](../adobe-journey-optimizer/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-messaging-android).
+* Major version update for [Adobe Journey Optimizer](../../edge-extensions/adobe-journey-optimizer/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-messaging-android).
 
 ### Android Places 2.0.0
 
-* Major version update for [Adobe Experience Platform Location Service](../places/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-places-android).
+* Major version update for [Adobe Experience Platform Location Service](../../solution-extensions/places/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-places-android).
 
 Please note that the following improvements have been made in the current release:
 
@@ -1215,11 +1215,11 @@ import com.adobe.marketing.mobile.places.PlacesRequestError;
 
 ### Android Optimize 2.0.0
 
-* Major version update for [Adobe Journey Optimizer - Decisioning](../adobe-journey-optimizer-decisioning/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This extension library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-optimize-android/).
+* Major version update for [Adobe Journey Optimizer - Decisioning](../../edge-extensions/adobe-journey-optimizer-decisioning/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This extension library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-optimize-android/).
 
 ### Android Campaign Standard 2.0.0
 
-* Major version update for [Adobe Campaign Standard workflows](../adobe-campaign-standard/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaign-android).
+* Major version update for [Adobe Campaign Standard workflows](../../solution-extensions/adobe-campaign-standard/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaign-android).
 
 ## February 1, 2023
 
@@ -1231,33 +1231,33 @@ import com.adobe.marketing.mobile.places.PlacesRequestError;
 
 ### Android Assurance 2.0.0
 
-* Major version update for [Adobe Experience Platform Assurance](../platform-assurance-sdk/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-assurance-android).
+* Major version update for [Adobe Experience Platform Assurance](../../base-extensions/platform-assurance-sdk/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-assurance-android).
 
 ### Android Campaign Classic 2.0.0
 
-* Major version update for [Adobe Campaign Classic workflows](../adobe-campaign-classic/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaignclassic-android).
+* Major version update for [Adobe Campaign Classic workflows](../../solution-extensions/adobe-campaign-classic/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaignclassic-android).
 
 Please note that the `registerDevice` API, similar to iOS, no longer provides a callback method for registration status since a `false` value cannot be accurately used as a signal to retry requests.
 
 ### Android Consent 2.0.0
 
-* Major version update for [Consent for Edge Network](../consent-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgeconsent-android).
+* Major version update for [Consent for Edge Network](../../edge-extensions/consent-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgeconsent-android).
 
 ### Android Edge 2.0.0
 
-* Major version update for [Edge Network](../edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edge-android).
+* Major version update for [Edge Network](../../edge-extensions/edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edge-android).
 
 ### Android EdgeIdentity 2.0.0
 
-* Major version update for [Identity for Edge Network](../identity-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgeidentity-android).
+* Major version update for [Identity for Edge Network](../../edge-extensions/identity-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgeidentity-android).
 
 ### Android UserProfile 2.0.0
 
-* Major version update for [User Profile](../profile/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-userprofile-android).
+* Major version update for [User Profile](../../base-extensions/profile/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-userprofile-android).
 * The following APIs have been deprecated and will be removed in a future release:
 
-  | Deprecated API                      | Recommended Alternative              |
-  | ----------------------------------- | ------------------------------------ |
+  | Deprecated API | Recommended Alternative |
+  | -------------- | ----------------------- |
   | `UserProfile.updateUserAttribute()` | `UserProfile.updateUserAttributes()` |
   | `UserProfile.removeUserAttribute()` | `UserProfile.removeUserAttributes()` |
 

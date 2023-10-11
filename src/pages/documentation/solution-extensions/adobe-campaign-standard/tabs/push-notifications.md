@@ -47,7 +47,7 @@ noIndex: true
 2. Generate a push token for the app using FireBase Instance ID class.
 3. In the `onComplete` function of `OnCompleteListener`, set the Push identifier by calling the API `MobileCore.setPushIdentifier`.
 
-   For more information, see [setPushIdentifier](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-analytics-mobile-services#set-up-push-messaging).
+   For more information, see [setPushIdentifier](https://developer.adobe.com/client-sdks/previous-versions/documentation/adobe-analytics-mobile-services/#set-up-push-messaging).
 
 #### Verify that the push token has successfully synced with the Experience Cloud ID service
 
@@ -77,7 +77,7 @@ If SDK privacy status is `optedout`, the push identifier will not be set.
 
 2. In `application:didRegisterForRemoteNotificationsWithDeviceToken:`, call `setPushIdentifier` to set the Push identifier.
 
-    For more information, see [setPushIdentifier](../mobile-core/api-reference.md#setpushidentifier).
+    For more information, see [setPushIdentifier](../../base-extensions/mobile-core/api-reference.md#setpushidentifier).
 
 #### Verify that the push token has successfully synced with the Experience Cloud ID service
 
@@ -88,7 +88,7 @@ If SDK privacy status is `optedout`, the push identifier will not be set.
 3. In the list of events, verify that you have an event with type _SetPushIdentifier_.
 4. In the details panel on the right, verify the value of the push token for this device.
 
-   The value in pushIdentifier is the same value that is sent to the ECID service. ![Verify SetPushIdentifier event](../assets/push-notifications/push-token-to-identity.png)
+   The value in pushIdentifier is the same value that is sent to the ECID service. ![Verify SetPushIdentifier event](.../assets/push-notifications/push-token-to-identity.png)
 
 5. To verify that app's push token is mapped to the correct Experience Cloud ID (ECID) in the Campaign instance, click **Adobe Campaign &gt; Administrator &gt; Channels &gt; Mobile App (AEP SDK)**.
 6. Select your app, under the mobile application subscribers verify that the Experience Cloud ID and the Registration token for the user is displayed. ![App subscriber list, verify mid and Registration token](../assets/push-notifications/subscriber-list-ios.png)
@@ -96,4 +96,4 @@ If SDK privacy status is `optedout`, the push identifier will not be set.
 8. Check for the **demdex request**, which is marked with the red line in the screenshot below.  
 9. Verify the successful response (200) for this network call.
 
-   ![ECID network request for push token sync](../assets/push-notifications/charles-demdex-call-ios.png)
+   ![ECID network request for push token sync](.../assets/push-notifications/charles-demdex-call-ios.png)
