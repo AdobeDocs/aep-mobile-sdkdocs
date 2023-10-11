@@ -111,7 +111,7 @@ For more information, see the [Audience Manager Extension API reference](../../s
 | 4x SDK | Notes |
 | ------ | ----- |
 | audienceSetDpid:dpuuid: | Replaced - See [Link](​https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/cid.html) |
-| audienceDpid: | Replaced - See [Link](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/cid.html) | 
+| audienceDpid: | Replaced - See [Link](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/cid.html) |
 | audienceDpuuid: | Replaced - See [Link](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/cid.html) |
 
 ​## Adobe Target extension APIs
