@@ -60,7 +60,7 @@ See [MobileCore.resetIdentities](../mobile-core/api-reference.md#resetidentities
 
 Sends an Experience event to Adobe Experience Platform Edge Network.
 
-<InlineAlert variant=info slots="test"/>
+<InlineAlert variant="info" slots="test"/>
 
 Starting with `Edge` Android extension version **2.4.0** and `AEPEdge` iOS extension version **4.3.0** onwards, the `sendEvent` API supports optional Datastream overrides. This allows you to adjust your datastreams without the need for new ones or modifications to existing settings. The process involves two steps:
 
