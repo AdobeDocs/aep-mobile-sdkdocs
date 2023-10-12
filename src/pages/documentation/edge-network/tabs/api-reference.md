@@ -254,10 +254,12 @@ ExperienceEvent experienceEvent = new ExperienceEvent.Builder()
   .setDatastreamIdOverride("SampleDatastreamId")
   .build();
 ```
+
 ```java
 // Example 1 - send the experience event without handling the Edge Network response
 Edge.sendEvent(experienceEvent, null);
 ```
+
 ```java
 // Example 2 - send the experience event and handle the Edge Network response onComplete
 Edge.sendEvent(experienceEvent, new EdgeCallback() {
@@ -357,10 +359,12 @@ val experienceEvent = ExperienceEvent.Builder()
   .setDatastreamIdOverride("SampleDatastreamId")
   .build()
 ```
+
 ```kotlin
 // Example 1 - send the experience event without handling the Edge Network response
 Edge.sendEvent(experienceEvent, null)
 ```
+
 ```kotlin
 // Example 2 - send the experience event and handle the Edge Network response onComplete
 Edge.sendEvent(experienceEvent) {
@@ -399,10 +403,12 @@ val experienceEvent = ExperienceEvent.Builder()
   .setDatastreamConfigOverride(configOverrides)
   .build()
 ```
+
 ```kotlin
 // Example 1 - send the experience event without handling the Edge Network response
 Edge.sendEvent(experienceEvent, null)
 ```
+
 ```kotlin
 // Example 2 - send the experience event and handle the Edge Network response onComplete
 Edge.sendEvent(experienceEvent) {
@@ -451,10 +457,12 @@ var xdmData : [String: Any] = ["eventType" : "SampleXDMEvent",
                               "sample": "data"]
 let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamIdOverride: "SampleDatastreamId")
 ```
+
 ```swift
 // Example 1 - send the Experience event without handling the Edge Network response
 Edge.sendEvent(experienceEvent: experienceEvent)
 ```
+
 ```swift
 // Example 2 - send the Experience event and handle the Edge Network response onComplete
 Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
@@ -496,10 +504,12 @@ var xdmData : [String: Any] = ["eventType" : "SampleXDMEvent",
 
 let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamConfigOverride: configOverrides)
 ```
+
 ```swift
 // Example 1 - send the Experience event without handling the Edge Network response
 Edge.sendEvent(experienceEvent: experienceEvent)
 ```
+
 ```swift
 // Example 2 - send the Experience event and handle the Edge Network response onComplete
 Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
@@ -537,10 +547,12 @@ NSDictionary *data = @{ @"sample" : @"data"};
 
 AEPExperienceEvent* event = [[AEPExperienceEvent alloc]initWithXdm:xdmData data:data];
 ```
+
 ```objectivec
 // Example 1 - send the Experience event without handling the Edge Network response
 [AEPMobileEdge sendExperienceEvent:event completion:nil];
 ```
+
 ```objectivec
 // Example 2 - send the Experience event and handle the Edge Network response onComplete
 [AEPMobileEdge sendExperienceEvent:event completion:^(NSArray<AEPEdgeEventHandle *> * _Nonnull handles) {
@@ -554,17 +566,18 @@ NSDictionary *xdmData = @{ @"eventType" : @"SampleXDMEvent"};
 NSDictionary *data = @{ @"sample" : @"data"};
 AEPExperienceEvent* event = [[AEPExperienceEvent alloc]initWithXdm:xdmData data:data datastreamIdOverride: @"SampleDatastreamIdOverride"];
 ```
+
 ```objectivec
 // Example 1 - send the Experience event without handling the Edge Network response
 [AEPMobileEdge sendExperienceEvent:event completion:nil];
 ```
+
 ```objectivec
 // Example 2 - send the Experience event and handle the Edge Network response onComplete
 [AEPMobileEdge sendExperienceEvent:event completion:^(NSArray<AEPEdgeEventHandle *> * _Nonnull handles) {
   // Handle the Edge Network response
 }];
 ```
-
 
 ##### Example with Datastream config override
 ```objectivec
@@ -1079,7 +1092,6 @@ let configOverrides: [String: Any] = [
                                         ]
                                       ]
 let experienceEvent = ExperienceEvent(xdm: xdmData, data: ["free": "form", "data": "example"], datastreamIdOverride: "SampleDatastreamId", datastreamConfigOverride: configOverrides)
-
 ```
 
 ```swift
