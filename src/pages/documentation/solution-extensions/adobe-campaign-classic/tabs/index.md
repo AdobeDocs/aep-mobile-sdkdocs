@@ -23,7 +23,7 @@ Using dynamic dependency versions is **not** recommended for production apps. Pl
 
 <Variant platform="ios" task="add" repeat="4"/>
 
-Add the Campaign Classic and [Mobile Core](../../base-extensions/mobile-core/index.md) libraries to your project.
+Add the Campaign Classic and [Mobile Core](../../home/base-extensions/mobile-core/index.md) libraries to your project.
 
 You can add the following pods to your `Podfile`:
 

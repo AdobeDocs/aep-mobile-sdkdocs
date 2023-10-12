@@ -22,7 +22,7 @@ Using dynamic dependency versions is **not** recommended for production apps. Pl
 
 </InlineNestedAlert>
 
-2. Import the Campaign Standard, [Mobile Core](../../base-extensions/mobile-core/index.md), [Profile](../../base-extensions/profile/index.md), [Lifecycle](../../base-extensions/mobile-core/lifecycle/index.md), and [Signal](../../base-extensions/mobile-core/signals/index.md) extensions in your application's main activity.
+2. Import the Campaign Standard, [Mobile Core](../../home/base-extensions/mobile-core/index.md), [Profile](../../home/base-extensions/profile/index.md), [Lifecycle](../../home/base-extensions/mobile-core/lifecycle/index.md), and [Signal](../../home/base-extensions/mobile-core/signals/index.md) extensions in your application's main activity.
 
 ```java
 import com.adobe.marketing.mobile.Campaign;
@@ -35,7 +35,7 @@ import com.adobe.marketing.mobile.UserProfile;
 
 <Variant platform="ios" task="add" repeat="7"/>
 
-1. Add the Campaign Standard, [Mobile Core](../../base-extensions/mobile-core/index.md), and [Profile](../../base-extensions/profile/index.md) extensions to your project using Cocoapods.
+1. Add the Campaign Standard, [Mobile Core](../../home/base-extensions/mobile-core/index.md), and [Profile](../../home/base-extensions/profile/index.md) extensions to your project using Cocoapods.
 
 ![](../assets/index/aep-cocoapods.png)
 
@@ -115,7 +115,7 @@ class MyApp : Application() {
 }
 ```
 
-For more information about starting Lifecycle, see the [Lifecycle extension in Android guide](../../base-extensions/mobile-core/lifecycle/android.md).
+For more information about starting Lifecycle, see the [Lifecycle extension in Android guide](../../home/base-extensions/mobile-core/lifecycle/android.md).
 
 <Variant platform="ios" task="register" repeat="6"/>
 
@@ -183,7 +183,7 @@ To set up local notifications in Android, update the AndroidManifest.xml file:
 <receiver android:name="com.adobe.marketing.mobile.LocalNotificationHandler"/>
 ```
 
-To configure the notification icons that the local notification will use, see the [configuring notification icons section](../../base-extensions/mobile-core/api-reference.md#setsmalliconresourceid--setlargeiconresourceid) within the Mobile Core.
+To configure the notification icons that the local notification will use, see the [configuring notification icons section](../../home/base-extensions/mobile-core/api-reference.md#setsmalliconresourceid--setlargeiconresourceid) within the Mobile Core.
 
 <Variant platform="ios" task="initialize" repeat="1"/>
 

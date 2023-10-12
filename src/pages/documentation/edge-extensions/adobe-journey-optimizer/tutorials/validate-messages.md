@@ -127,7 +127,7 @@ Using the IAM plugin you can do the following for each message downloaded by the
 
 ### Q: What do I do when one of the required extensions is missing?
 
-**A:** Ensure that each required extension is linked to your project and registered by `MobileCore`. For more information, please read the [Mobile Core API reference](../../../base-extensions/mobile-core/api-reference.md#registerextensions).
+**A:** Ensure that each required extension is linked to your project and registered by `MobileCore`. For more information, please read the [Mobile Core API reference](../../../home/base-extensions/mobile-core/api-reference.md#registerextensions).
 
 ### Q: Why can't I find an event named `Retrieve message definitions`?
 

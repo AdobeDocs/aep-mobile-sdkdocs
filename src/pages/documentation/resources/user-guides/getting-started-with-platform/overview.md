@@ -72,7 +72,7 @@ To create a configuration identifier use the following steps:
 
 As a prerequisite, the Adobe Experience Platform Edge extension requires the successful implementation of the Adobe Experience Platform Mobile SDK - [Mobile Core](../../mobile-core/index.md).
 
-Experience Edge extension relies on the [Mobile Core](../../../base-extensions/mobile-core/index.md) for the transmission of events, managing identity (ECID), and triggering client-side rules based on XDM.
+Experience Edge extension relies on the [Mobile Core](../../../home/base-extensions/mobile-core/index.md) for the transmission of events, managing identity (ECID), and triggering client-side rules based on XDM.
 
 1. First, follow the steps in the [set up a mobile property tutorial](../../../home/getting-started/create-a-mobile-property.md) in the Data Collection UI.
 2. Install the `Adobe Experience Platform Edge` extension from the Catalog.

@@ -91,6 +91,6 @@ After you complete your configuration, verify that your rule looks like the foll
 
 ## Add the Lifecycle extension to your app
 
-For implementation details, please reference the Lifecycle documentation to learn how to [add Lifecycle to your app](../../base-extensions/mobile-core/lifecycle/index.md#add-lifecycle-to-your-app). as well as [register Lifecycle with Mobile Core and add appropriate the Start/Pause calls](../../base-extensions/mobile-core/lifecycle/index.md#register-lifecycle-with-mobile-core-and-add-appropriate-start-pause-calls).
+For implementation details, please reference the Lifecycle documentation to learn how to [add Lifecycle to your app](../../home/base-extensions/mobile-core/lifecycle/index.md#add-lifecycle-to-your-app). as well as [register Lifecycle with Mobile Core and add appropriate the Start/Pause calls](../../home/base-extensions/mobile-core/lifecycle/index.md#register-lifecycle-with-mobile-core-and-add-appropriate-start-pause-calls).
 
 In addition, use the following steps to [add the Edge Network extension to your app](../edge-network/index.md#add-the-edge-network-extension-to-your-app).

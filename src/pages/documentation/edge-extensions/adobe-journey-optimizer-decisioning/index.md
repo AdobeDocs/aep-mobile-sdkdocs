@@ -48,7 +48,7 @@ On [Experience Platform Data Collection](https://experience.adobe.com/#/data-col
 
 <InlineAlert variant="warning" slots="text"/>
 
-For the AEPOptimize APIs to work properly, you need to integrate Mobile Core and Edge extensions in your mobile app. For more details see, documentation on [Mobile Core](../../base-extensions/mobile-core/index.md) and [Adobe Experience Platform Edge Network](../../edge-extensions/edge-network/index.md).
+For the AEPOptimize APIs to work properly, you need to integrate Mobile Core and Edge extensions in your mobile app. For more details see, documentation on [Mobile Core](../../home/base-extensions/mobile-core/index.md) and [Adobe Experience Platform Edge Network](../../edge-extensions/edge-network/index.md).
 
 ### Install the Experience Platform Mobile SDK
 
@@ -297,7 +297,7 @@ iOS
 
 ## Configuration keys
 
-To update the SDK configuration programmatically, use the following information to change the Optimize extension configuration values. For more information, see the [programmatic updates to Configuration guide](../../base-extensions/mobile-core/configuration/api-reference.md#updateconfiguration).
+To update the SDK configuration programmatically, use the following information to change the Optimize extension configuration values. For more information, see the [programmatic updates to Configuration guide](../../home/base-extensions/mobile-core/configuration/api-reference.md#updateconfiguration).
 
 | Key | Required | Description | Data Type |
 | :--- | :--- | :--- | :--- |

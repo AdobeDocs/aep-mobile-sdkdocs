@@ -39,7 +39,7 @@ import com.adobe.marketing.mobile.Audience
 
 <Variant platform="ios" task="add" repeat="6"/>
 
-1. Add the [Mobile Core](../../base-extensions/mobile-core/index.md) and Audience extensions to your project using Cocoapods.
+1. Add the [Mobile Core](../../home/base-extensions/mobile-core/index.md) and Audience extensions to your project using Cocoapods.
 2. Add the following pods in your `Podfile`:
 
    ```ruby

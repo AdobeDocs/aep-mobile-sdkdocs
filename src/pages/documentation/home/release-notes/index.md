@@ -648,7 +648,7 @@ Major version update for [Adobe Campaign Standard workflows](../../solution-exte
 
 ### iOS UserProfile 4.0.0
 
-Major version update for [User Profile](../../base-extensions/profile/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+Major version update for [User Profile](../base-extensions/profile/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
@@ -704,7 +704,7 @@ Major version update for [Edge Network](../../edge-extensions/edge-network/index
 
 ### iOS Assurance 4.0.0
 
-Major version update for [Adobe Experience Platform Assurance](../../base-extensions/platform-assurance-sdk/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+Major version update for [Adobe Experience Platform Assurance](../base-extensions/assurance/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
@@ -1231,7 +1231,7 @@ import com.adobe.marketing.mobile.places.PlacesRequestError;
 
 ### Android Assurance 2.0.0
 
-* Major version update for [Adobe Experience Platform Assurance](../../base-extensions/platform-assurance-sdk/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-assurance-android).
+* Major version update for [Adobe Experience Platform Assurance](../base-extensions/assurance/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-assurance-android).
 
 ### Android Campaign Classic 2.0.0
 
@@ -1253,7 +1253,7 @@ Please note that the `registerDevice` API, similar to iOS, no longer provides a 
 
 ### Android UserProfile 2.0.0
 
-* Major version update for [User Profile](../../base-extensions/profile/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-userprofile-android).
+* Major version update for [User Profile](../base-extensions/profile/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-userprofile-android).
 * The following APIs have been deprecated and will be removed in a future release:
 
   | Deprecated API | Recommended Alternative |

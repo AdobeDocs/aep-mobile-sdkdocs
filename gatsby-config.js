@@ -27,10 +27,6 @@ module.exports = {
                 path: "/documentation/home"
             },
             {
-                title: "Base extensions",
-                path: "/documentation/base-extensions"
-            },
-            {
                 title: 'Edge Network extensions',
                 path: '/documentation/edge-extensions',
             },
@@ -107,29 +103,9 @@ module.exports = {
                 ]
             },
             {
-                title: "Edge extensions",
+                title: "Edge Network extensions",
                 path: "/documentation/edge-extensions",
-                pages: [{
-                        title: "Identity for Edge Network",
-                        path: "/documentation/edge-extensions/identity-for-edge-network",
-                        pages: [{
-                                title: "Overview",
-                                path: "/documentation/edge-extensions/identity-for-edge-network"
-                            },
-                            {
-                                title: "API reference",
-                                path: "documentation/edge-extensions/identity-for-edge-network/api-reference"
-                            },
-                            {
-                                title: "Frequently asked questions",
-                                path: "documentation/edge-extensions/identity-for-edge-network/faq"
-                            },
-                            {
-                                title: "Release notes",
-                                path: "documentation/edge-extensions/identity-for-edge-network/release-notes"
-                            }
-                        ]
-                    },
+                pages: [
                     {
                         title: "Adobe Experience Platform Edge Network",
                         path: "/documentation/edge-extensions/edge-network",
@@ -152,44 +128,6 @@ module.exports = {
                             {
                                 title: "Release notes",
                                 path: "/documentation/edge-extensions/edge-network/release-notes"
-                            }
-                        ]
-                    },
-                    {
-                        title: "Lifecycle for Edge Network",
-                        path: "/documentation/edge-extensions/lifecycle-for-edge-network",
-                        pages: [{
-                                title: "Overview",
-                                path: "/documentation/edge-extensions/lifecycle-for-edge-network"
-                            },
-                            {
-                                title: "API reference",
-                                path: "documentation/edge-extensions/lifecycle-for-edge-network/api-reference"
-                            },
-                            {
-                                title: "Event reference",
-                                path: "documentation/edge-extensions/lifecycle-for-edge-network/event-reference"
-                            },
-                            {
-                                title: "Metrics",
-                                path: "documentation/edge-extensions/lifecycle-for-edge-network/metrics"
-                            }
-                        ]
-                    },
-                    {
-                        title: "Consent for Edge Network",
-                        path: "/documentation/edge-extensions/consent-for-edge-network",
-                        pages: [{
-                                title: "Overview",
-                                path: "/documentation/edge-extensions/consent-for-edge-network"
-                            },
-                            {
-                                title: "API reference",
-                                path: "documentation/edge-extensions/consent-for-edge-network/api-reference"
-                            },
-                            {
-                                title: "Release notes",
-                                path: "documentation/edge-extensions/consent-for-edge-network/release-notes"
                             }
                         ]
                     },
@@ -272,7 +210,68 @@ module.exports = {
                                 path: '/documentation/edge-extensions/media-for-edge-network/release-notes'
                             }
                         ]
+                    },
+                    {
+                        title: "Consent for Edge Network",
+                        path: "/documentation/edge-extensions/consent-for-edge-network",
+                        pages: [{
+                                title: "Overview",
+                                path: "/documentation/edge-extensions/consent-for-edge-network"
+                            },
+                            {
+                                title: "API reference",
+                                path: "documentation/edge-extensions/consent-for-edge-network/api-reference"
+                            },
+                            {
+                                title: "Release notes",
+                                path: "documentation/edge-extensions/consent-for-edge-network/release-notes"
+                            }
+                        ]
+                    },
+                    {
+                        title: "Identity for Edge Network",
+                        path: "/documentation/edge-extensions/identity-for-edge-network",
+                        pages: [{
+                                title: "Overview",
+                                path: "/documentation/edge-extensions/identity-for-edge-network"
+                            },
+                            {
+                                title: "API reference",
+                                path: "documentation/edge-extensions/identity-for-edge-network/api-reference"
+                            },
+                            {
+                                title: "Frequently asked questions",
+                                path: "documentation/edge-extensions/identity-for-edge-network/faq"
+                            },
+                            {
+                                title: "Release notes",
+                                path: "documentation/edge-extensions/identity-for-edge-network/release-notes"
+                            }
+                        ]
+                    },
+
+                    {
+                        title: "Lifecycle for Edge Network",
+                        path: "/documentation/edge-extensions/lifecycle-for-edge-network",
+                        pages: [{
+                                title: "Overview",
+                                path: "/documentation/edge-extensions/lifecycle-for-edge-network"
+                            },
+                            {
+                                title: "API reference",
+                                path: "documentation/edge-extensions/lifecycle-for-edge-network/api-reference"
+                            },
+                            {
+                                title: "Event reference",
+                                path: "documentation/edge-extensions/lifecycle-for-edge-network/event-reference"
+                            },
+                            {
+                                title: "Metrics",
+                                path: "documentation/edge-extensions/lifecycle-for-edge-network/metrics"
+                            }
+                        ]
                     }
+
                 ]
             },
             {
@@ -312,6 +311,27 @@ module.exports = {
                             {
                                 title: 'Release notes',
                                 path: '/documentation/solution-extensions/adobe-analytics/release-notes'
+                            }
+                        ]
+                    },
+                    {
+                        title: "Adobe Audience Manager",
+                        path: "/documentation/solution-extensions/adobe-audience-manager/",
+                        pages: [{
+                                title: "Overview",
+                                path: "/documentation/solution-extensions/adobe-audience-manager/"
+                            },
+                            {
+                                title: "API reference",
+                                path: "documentation/solution-extensions/adobe-audience-manager/api-reference"
+                            },
+                            {
+                                title: "Event reference",
+                                path: "documentation/solution-extensions/adobe-audience-manager/event-reference"
+                            },
+                            {
+                                title: "Release notes",
+                                path: "/documentation/solution-extensions/adobe-audience-manager/release-notes"
                             }
                         ]
                     },
@@ -361,27 +381,7 @@ module.exports = {
                             }
                         ]
                     },
-                    {
-                        title: "Adobe Audience Manager",
-                        path: "/documentation/solution-extensions/adobe-audience-manager/",
-                        pages: [{
-                                title: "Overview",
-                                path: "/documentation/solution-extensions/adobe-audience-manager/"
-                            },
-                            {
-                                title: "API reference",
-                                path: "documentation/solution-extensions/adobe-audience-manager/api-reference"
-                            },
-                            {
-                                title: "Event reference",
-                                path: "documentation/solution-extensions/adobe-audience-manager/event-reference"
-                            },
-                            {
-                                title: "Release notes",
-                                path: "/documentation/solution-extensions/adobe-audience-manager/release-notes"
-                            }
-                        ]
-                    },
+
                     {
                         title: "Adobe Media Analytics",
                         path: "/documentation/solution-extensions/adobe-media-analytics",
@@ -427,162 +427,7 @@ module.exports = {
                                 path: "documentation/solution-extensions/adobe-target/release-notes"
                             }
                         ]
-                    }
-                ]
-            },
-            {
-                title: "Base extensions",
-                path: "/documentation/base-extensions",
-                pages: [{
-                        title: "Overview",
-                        path: "/documentation/base-extensions"
                     },
-                    {
-                        title: "Mobile Core",
-                        path: "/documentation/base-extensions/mobile-core",
-                        pages: [{
-                                title: "Overview",
-                                path: "/documentation/base-extensions/mobile-core"
-                            },
-                            {
-                                title: "Configuration",
-                                path: "documentation/base-extensions/mobile-core/configuration",
-                                pages: [{
-                                        title: "Overview",
-                                        path: "documentation/base-extensions/mobile-core/configuration"
-                                    },
-                                    {
-                                        title: "API reference",
-                                        path: "documentation/base-extensions/mobile-core/configuration/api-reference"
-                                    }
-                                ]
-                            },
-                            {
-                                title: "Identity",
-                                path: "documentation/base-extensions/mobile-core/identity",
-                                pages: [{
-                                        title: "Overview",
-                                        path: "documentation/base-extensions/mobile-core/identity"
-                                    },
-                                    {
-                                        title: "API reference",
-                                        path: "documentation/base-extensions/mobile-core/identity/api-reference"
-                                    },
-                                    {
-                                        title: "Push identifier sync",
-                                        path: "documentation/base-extensions/mobile-core/identity/push-sync"
-                                    }
-                                ]
-                            },
-                            {
-                                title: "Lifecycle",
-                                path: "documentation/base-extensions/mobile-core/lifecycle",
-                                pages: [{
-                                        title: "Overview",
-                                        path: "documentation/base-extensions/mobile-core/lifecycle"
-                                    },
-                                    {
-                                        title: "Lifecycle extension in Android",
-                                        path: "documentation/base-extensions/mobile-core/lifecycle/android"
-                                    },
-                                    {
-                                        title: "Lifecycle extension in iOS",
-                                        path: "documentation/base-extensions/mobile-core/lifecycle/ios"
-                                    },
-                                    {
-                                        title: "API reference",
-                                        path: "documentation/base-extensions/mobile-core/lifecycle/api-reference"
-                                    },
-                                    {
-                                        title: "Metrics",
-                                        path: "documentation/base-extensions/mobile-core/lifecycle/metrics"
-                                    },
-                                    {
-                                        title: "Configuration keys",
-                                        path: "documentation/base-extensions/mobile-core/lifecycle/configuration-keys"
-                                    }
-                                ]
-                            },
-                            {
-                                title: "Platform services",
-                                path: "documentation/base-extensions/mobile-core/platform-services",
-                                pages: [{
-                                        title: "Overview",
-                                        path: "documentation/base-extensions/mobile-core/platform-services"
-                                    },
-                                    {
-                                        title: "Network service",
-                                        path: "documentation/base-extensions/mobile-core/platform-services/network-service"
-                                    }
-                                ]
-                            },
-                            {
-                                title: "Rules Engine",
-                                path: "documentation/base-extensions/mobile-core/rules-engine",
-                                pages: [{
-                                        title: "Overview",
-                                        path: "documentation/base-extensions/mobile-core/rules-engine"
-                                    },
-                                    {
-                                        title: "Technical details",
-                                        path: "documentation/base-extensions/mobile-core/rules-engine/technical-details"
-                                    },
-                                    {
-                                        title: "Consequence details",
-                                        path: "documentation/base-extensions/mobile-core/rules-engine/consequence-details"
-                                    }
-                                ]
-                            },
-                            {
-                                title: "Signal",
-                                path: "documentation/base-extensions/mobile-core/signal",
-                                pages: [{
-                                        title: "Overview",
-                                        path: "documentation/base-extensions/mobile-core/signal"
-                                    },
-                                    {
-                                        title: "API reference",
-                                        path: "documentation/base-extensions/mobile-core/signal/api-reference"
-                                    },
-                                    {
-                                        title: "Signal and Rules Engine integration",
-                                        path: "documentation/base-extensions/mobile-core/signal/rules-engine-integration.md"
-                                    }
-                                ]
-                            },
-                            {
-                                title: "API reference",
-                                path: "documentation/base-extensions/mobile-core/api-reference"
-                            },
-                            {
-                                title: "Release notes",
-                                path: "documentation/base-extensions/mobile-core/release-notes"
-                            }
-                        ]
-                    },
-                    {
-                        title: "Adobe Experience Platform Assurance",
-                        path: "/documentation/platform-assurance-sdk",
-                        pages: [{
-                                title: "Overview",
-                                path: "/documentation/platform-assurance-sdk"
-                            },
-                            {
-                                title: "API reference",
-                                path: "/documentation/platform-assurance-sdk/api-reference"
-                            },
-                            {
-                                title: "Resolving common issues",
-                                path: "/documentation/platform-assurance-sdk/common-issues/"
-                            },
-                            {
-                                title: "Release notes",
-                                path: "/documentation/platform-assurance-sdk/release-notes"
-                            }
-                        ]
-                    },
-
-
                     {
                         title: "Adobe Experience Platform Location Service",
                         path: "/documentation/solution-extensions/places",
@@ -603,21 +448,175 @@ module.exports = {
                                 path: "documentation/solution-extensions/places/release-notes.md"
                             }
                         ]
+                    }
+                ]
+            },
+            {
+                title: "Base extensions",
+                path: "/documentation/home/base-extensions",
+                pages: [{
+                        title: "Overview",
+                        path: "/documentation/home/base-extensions"
                     },
                     {
-                        title: "Profile",
-                        path: "/documentation/profile",
+                        title: "Mobile Core",
+                        path: "/documentation/home/base-extensions/mobile-core",
                         pages: [{
                                 title: "Overview",
-                                path: "/documentation/profile"
+                                path: "/documentation/home/base-extensions/mobile-core"
+                            },
+                            {
+                                title: "Configuration",
+                                path: "documentation/home/base-extensions/mobile-core/configuration",
+                                pages: [{
+                                        title: "Overview",
+                                        path: "documentation/home/base-extensions/mobile-core/configuration"
+                                    },
+                                    {
+                                        title: "API reference",
+                                        path: "documentation/home/base-extensions/mobile-core/configuration/api-reference"
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Identity",
+                                path: "documentation/home/base-extensions/mobile-core/identity",
+                                pages: [{
+                                        title: "Overview",
+                                        path: "documentation/home/base-extensions/mobile-core/identity"
+                                    },
+                                    {
+                                        title: "API reference",
+                                        path: "documentation/home/base-extensions/mobile-core/identity/api-reference"
+                                    },
+                                    {
+                                        title: "Push identifier sync",
+                                        path: "documentation/home/base-extensions/mobile-core/identity/push-sync"
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Lifecycle",
+                                path: "documentation/home/base-extensions/mobile-core/lifecycle",
+                                pages: [{
+                                        title: "Overview",
+                                        path: "documentation/home/base-extensions/mobile-core/lifecycle"
+                                    },
+                                    {
+                                        title: "Lifecycle extension in Android",
+                                        path: "documentation/home/base-extensions/mobile-core/lifecycle/android"
+                                    },
+                                    {
+                                        title: "Lifecycle extension in iOS",
+                                        path: "documentation/home/base-extensions/mobile-core/lifecycle/ios"
+                                    },
+                                    {
+                                        title: "API reference",
+                                        path: "documentation/home/base-extensions/mobile-core/lifecycle/api-reference"
+                                    },
+                                    {
+                                        title: "Metrics",
+                                        path: "documentation/home/base-extensions/mobile-core/lifecycle/metrics"
+                                    },
+                                    {
+                                        title: "Configuration keys",
+                                        path: "documentation/home/base-extensions/mobile-core/lifecycle/configuration-keys"
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Platform services",
+                                path: "documentation/home/base-extensions/mobile-core/platform-services",
+                                pages: [{
+                                        title: "Overview",
+                                        path: "documentation/home/base-extensions/mobile-core/platform-services"
+                                    },
+                                    {
+                                        title: "Network service",
+                                        path: "documentation/home/base-extensions/mobile-core/platform-services/network-service"
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Rules Engine",
+                                path: "documentation/home/base-extensions/mobile-core/rules-engine",
+                                pages: [{
+                                        title: "Overview",
+                                        path: "documentation/home/base-extensions/mobile-core/rules-engine"
+                                    },
+                                    {
+                                        title: "Technical details",
+                                        path: "documentation/home/base-extensions/mobile-core/rules-engine/technical-details"
+                                    },
+                                    {
+                                        title: "Consequence details",
+                                        path: "documentation/home/base-extensions/mobile-core/rules-engine/consequence-details"
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Signal",
+                                path: "documentation/home/base-extensions/mobile-core/signal",
+                                pages: [{
+                                        title: "Overview",
+                                        path: "documentation/home/base-extensions/mobile-core/signal"
+                                    },
+                                    {
+                                        title: "API reference",
+                                        path: "documentation/home/base-extensions/mobile-core/signal/api-reference"
+                                    },
+                                    {
+                                        title: "Signal and Rules Engine integration",
+                                        path: "documentation/home/base-extensions/mobile-core/signal/rules-engine-integration.md"
+                                    }
+                                ]
                             },
                             {
                                 title: "API reference",
-                                path: "documentation/profile/api-reference"
+                                path: "documentation/home/base-extensions/mobile-core/api-reference"
                             },
                             {
                                 title: "Release notes",
-                                path: "documentation/profile/release-notes"
+                                path: "documentation/home/base-extensions/mobile-core/release-notes"
+                            }
+                        ]
+                    },
+                    {
+                        title: "Adobe Experience Platform Assurance",
+                        path: "/documentation/home/base-extensions/assurance",
+                        pages: [{
+                                title: "Overview",
+                                path: "/documentation/home/base-extensions/assurance"
+                            },
+                            {
+                                title: "API reference",
+                                path: "/documentation/home/base-extensions/assurance/api-reference"
+                            },
+                            {
+                                title: "Resolving common issues",
+                                path: "/documentation/home/base-extensions/assurance/common-issues/"
+                            },
+                            {
+                                title: "Release notes",
+                                path: "/documentation/home/base-extensions/assurance/release-notes"
+                            }
+                        ]
+                    },
+
+                    {
+                        title: "Profile",
+                        path: "/documentation/home/base-extensions/profile",
+                        pages: [{
+                                title: "Overview",
+                                path: "/documentation/home/base-extensions/profile"
+                            },
+                            {
+                                title: "API reference",
+                                path: "documentation/home/base-extensions/profile/api-reference"
+                            },
+                            {
+                                title: "Release notes",
+                                path: "documentation/home/base-extensions/profile/release-notes"
                             }
                         ]
                     }

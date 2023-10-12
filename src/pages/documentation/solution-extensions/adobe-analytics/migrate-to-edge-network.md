@@ -27,7 +27,7 @@ Edge Bridge only supports the Analytics drop-in migration case. If you are looki
 
 <InlineAlert variant="info" slots="text"/>
 
-Other foundational extensions include the [Consent for Edge Network extension](../../edge-extensions/consent-for-edge-network/index.md) which enables consent preferences collection from your mobile app, and the [Assurance extension](../../base-extensions/platform-assurance-sdk/index.md) for validating your app implementation.
+Other foundational extensions include the [Consent for Edge Network extension](../../edge-extensions/consent-for-edge-network/index.md) which enables consent preferences collection from your mobile app, and the [Assurance extension](../../home/base-extensions/assurance/index.md) for validating your app implementation.
 
 ### Workflow comparison
 

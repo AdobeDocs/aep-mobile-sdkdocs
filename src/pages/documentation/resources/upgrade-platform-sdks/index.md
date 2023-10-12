@@ -34,7 +34,7 @@ The Experience Platform SDKs contain breaking changes from the version 4 SDKs.<b
 
 Review the following checklist to understand some of the changes and what is required to upgrade:
 
-* The Experience Platform SDKs introduce the [Mobile Core](../../base-extensions/mobile-core/index.md) and constituent extensions.<br/>Mobile Core contains core SDK functionality that is required for all implementations that require Adobe and/or third-party extensions.
+* The Experience Platform SDKs introduce the [Mobile Core](../../home/base-extensions/mobile-core/index.md) and constituent extensions.<br/>Mobile Core contains core SDK functionality that is required for all implementations that require Adobe and/or third-party extensions.
 * The Mobile Core and other extensions are configured in the Data Collection UI in a mobile property.<br/>When published, the Data Collection UI hosts this property configuration and makes it for your SDK implementation.
 * You decide which SDK extensions to add, configure, and ultimately include in your app project.<br/>This provides the flexibility to customize your implementations.<br/>**Important:** Some extensions depend on others for proper functioning, and these are documented where applicable.
 * We recommend that you ease your build process by use supported dependency managers, such as Gradle for Android and Cocoapods for iOS. The Data Collection UI provides inline instructions and specs to help you with this process.

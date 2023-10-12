@@ -14,9 +14,9 @@ import AttachingDataTarget from './tabs/attach-data/attaching-data/target.md'
 
 # Attach data to SDK events
 
-The attach data_rule action is supported in [Mobile Core](../../base-extensions/mobile-core/index.md) starting from version 2.1.8 (Launch), 2.3.5 (iOS), and 1.4.5 (Android). This action is powerful, complex, and enables advanced use cases.
+The attach data_rule action is supported in [Mobile Core](../../home/base-extensions/mobile-core/index.md) starting from version 2.1.8 (Launch), 2.3.5 (iOS), and 1.4.5 (Android). This action is powerful, complex, and enables advanced use cases.
 
-To use this action, you need to learn how events flow in the Adobe Experience Platform Mobile SDK and how they interact with the [rules engine](../../base-extensions/mobile-core/rules-engine/index.md).
+To use this action, you need to learn how events flow in the Adobe Experience Platform Mobile SDK and how they interact with the [rules engine](../../home/base-extensions/mobile-core/rules-engine/index.md).
 
 ## Context
 
@@ -30,7 +30,7 @@ In the Experience Platform Mobile SDK, events hold all the data that is required
 | Source | Indicates the cause or the directionality of the event. For example, a request or a response. |
 | Event data | The data required to define the event. For example, context data on an Analytics event. |
 
-Extensions that register with [Mobile Core](../../base-extensions/mobile-core/index.md) will also register event listeners. A listener is defined by a combination of event type and source. When the SDK event hub processes an event, it notifies all listeners that match the provided combination.
+Extensions that register with [Mobile Core](../../home/base-extensions/mobile-core/index.md) will also register event listeners. A listener is defined by a combination of event type and source. When the SDK event hub processes an event, it notifies all listeners that match the provided combination.
 
 ### How are events created in the SDK?
 

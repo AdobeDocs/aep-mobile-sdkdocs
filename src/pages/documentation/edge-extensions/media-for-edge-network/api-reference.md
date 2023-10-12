@@ -31,7 +31,7 @@ iOS
 
 Immediately aborts all the active tracking sessions and clears all the MediaTracker instances.
 
-See [MobileCore.resetIdentities](../../base-extensions/mobile-core/api-reference.md#resetidentities) for more details.
+See [MobileCore.resetIdentities](../../home/base-extensions/mobile-core/api-reference.md#resetidentities) for more details.
 
 ### createTracker
 

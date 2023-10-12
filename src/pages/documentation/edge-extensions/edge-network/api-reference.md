@@ -42,7 +42,7 @@ iOS
 
 <InlineAlert variant="warning" slots="text"/>
 
-Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../../base-extensions/mobile-core/api-reference.md#registerextensions) API instead.
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../../home/base-extensions/mobile-core/api-reference.md#registerextensions) API instead.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
@@ -54,7 +54,7 @@ Android
 
 Resets current state of the AEP Edge extension and clears previously cached content related to current identity, if any.
 
-See [MobileCore.resetIdentities](../../base-extensions/mobile-core/api-reference.md#resetidentities) for more details.
+See [MobileCore.resetIdentities](../../home/base-extensions/mobile-core/api-reference.md#resetidentities) for more details.
 
 ## sendEvent
 

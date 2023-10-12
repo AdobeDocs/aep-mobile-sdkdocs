@@ -109,7 +109,7 @@ Add a new rule in the Data Collection UI or update the one created in the previo
 
 ### Next steps
 
-Find more details about the Adobe Experience Platform Mobile SDK Rules Engine and the supported rule types, please read the [Rules Engine documentation](../../../base-extensions/mobile-core/rules-engine/index.md) and the [Rules Engine GitHub](https://github.com/adobe/aepsdk-rulesengine-ios).
+Find more details about the Adobe Experience Platform Mobile SDK Rules Engine and the supported rule types, please read the [Rules Engine documentation](../../../home/base-extensions/mobile-core/rules-engine/index.md) and the [Rules Engine GitHub](https://github.com/adobe/aepsdk-rulesengine-ios).
 
 For more rules examples in the Data Collection UI, see the following links:
 

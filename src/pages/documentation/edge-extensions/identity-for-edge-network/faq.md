@@ -101,7 +101,7 @@ Each identity extension has its own API to retrieve their respective ECIDs as we
 
 A: Use both `getSdkIdentities` and `getIdentities`
 
-To get the identifiers used by the Adobe Solutions extensions, call [getSdkIdentities](../../base-extensions/mobile-core/api-reference.md#getsdkidentities).
+To get the identifiers used by the Adobe Solutions extensions, call [getSdkIdentities](../../home/base-extensions/mobile-core/api-reference.md#getsdkidentities).
 
 To get the identifiers used by the Edge extensions, call [getIdentities](./api-reference.md#getidentities).
 
@@ -111,7 +111,7 @@ A: Set privacy status to `optedOut` and call `resetIdentities`
 
 To clear the identifiers used by the Adobe Solutions extensions, call [setPrivacyStatus](../../resources/privacy-and-gdpr.md#set-and-get-privacy-status) and set the privacy status to `optedOut`.
 
-To clear the identifiers used by the Edge extensions, call [resetIdentities](../../base-extensions/mobile-core/api-reference.md#resetidentities)
+To clear the identifiers used by the Edge extensions, call [resetIdentities](../../home/base-extensions/mobile-core/api-reference.md#resetidentities)
 
 ## Q: What steps are needed to generate a new Experience Cloud ID (ECID) for a user when using both Edge extensions and Adobe Solutions extensions?
 

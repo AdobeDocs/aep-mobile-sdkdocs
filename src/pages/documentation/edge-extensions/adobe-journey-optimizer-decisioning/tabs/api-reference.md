@@ -105,7 +105,7 @@ public static void getPropositions(final List<DecisionScope> decisionScopes, fin
 ```
 
 * _decisionScopes_ is a list of decision scopes for which propositions are requested.
-* _callback_ `call` method is invoked with propositions map of type `Map<DecisionScope, Proposition>`. If the callback is an instance of [AdobeCallbackWithError](../../base-extensions/mobile-core/api-reference.md#adobecallbackwitherror), and if the operation times out or an error occurs in retrieving propositions, the `fail` method is invoked with the appropriate [AdobeError](../../base-extensions/mobile-core/api-reference.md#adobeerror).
+* _callback_ `call` method is invoked with propositions map of type `Map<DecisionScope, Proposition>`. If the callback is an instance of [AdobeCallbackWithError](../../home/base-extensions/mobile-core/api-reference.md#adobecallbackwitherror), and if the operation times out or an error occurs in retrieving propositions, the `fail` method is invoked with the appropriate [AdobeError](../../home/base-extensions/mobile-core/api-reference.md#adobeerror).
 
 #### Example
 

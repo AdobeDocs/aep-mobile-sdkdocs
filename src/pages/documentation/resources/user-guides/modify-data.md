@@ -10,9 +10,9 @@ keywords:
 
 # Modify data in SDK events
 
-The modify data rule action is supported in [Mobile Core](../../base-extensions/mobile-core/index.md) starting from version 2.1.14 (Launch), version 2.7.0 (iOS), and 1.5.5 (Android). This action is powerful, complex, and enables advanced use cases.
+The modify data rule action is supported in [Mobile Core](../../home/base-extensions/mobile-core/index.md) starting from version 2.1.14 (Launch), version 2.7.0 (iOS), and 1.5.5 (Android). This action is powerful, complex, and enables advanced use cases.
 
-To use this action, you need to learn how events flow in the Adobe Experience Platform Mobile SDK and how they interact with the [rules engine](../../base-extensions/mobile-core/rules-engine/index.md).
+To use this action, you need to learn how events flow in the Adobe Experience Platform Mobile SDK and how they interact with the [rules engine](../../home/base-extensions/mobile-core/rules-engine/index.md).
 
 ## Context
 
@@ -26,7 +26,7 @@ In the Experience Platform Mobile SDK, events hold all the data that is required
 | Source | Indicates the cause of or directionality of the event. For example, a request or a response. |
 | Event data | Additional data is required to define the event. For example, context data on an Analytics event. |
 
-Extensions that register with [Mobile Core](../../base-extensions/mobile-core/index.md) will also register event listeners. A listener is defined by a combination of event type and source. When the SDK event hub processes an event, it notifies all listeners that match the provided combination.
+Extensions that register with [Mobile Core](../../home/base-extensions/mobile-core/index.md) will also register event listeners. A listener is defined by a combination of event type and source. When the SDK event hub processes an event, it notifies all listeners that match the provided combination.
 
 ### How are events created in the SDK?
 

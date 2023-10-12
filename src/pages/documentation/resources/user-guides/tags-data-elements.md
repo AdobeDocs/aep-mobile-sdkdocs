@@ -22,7 +22,7 @@ You can use data elements during rule creation to consolidate the definition of 
 
 As a best practice, you should reuse data elements.
 
-Data elements are building blocks for rules and allow you create a data dictionary of commonly used data in the Experience Platform Mobile SDK, regardless of where they originate (shared state, event data) or which extension creates them. Data elements are populated with data when they are processed in the [Rules Engine](../../base-extensions/mobile-core/rules-engine/index.md).
+Data elements are building blocks for rules and allow you create a data dictionary of commonly used data in the Experience Platform Mobile SDK, regardless of where they originate (shared state, event data) or which extension creates them. Data elements are populated with data when they are processed in the [Rules Engine](../../home/base-extensions/mobile-core/rules-engine/index.md).
 
 To use data elements at a high level, complete the following steps:
 
@@ -81,10 +81,10 @@ After the property is published, this new rule is made available for download by
 
 Here is some additional information about the Rules Engine and the Signal extension:
 
-* [Rules Engine](../../base-extensions/mobile-core/rules-engine/index.md)
+* [Rules Engine](../../home/base-extensions/mobile-core/rules-engine/index.md)
 
   An overview and technical details of the Experience Platform Mobile SDK Rules Engine.
 
-* [Signal extension and Rules Engine integration](../../base-extensions/mobile-core/signal/rules-engine-integration.md)
+* [Signal extension and Rules Engine integration](../../home/base-extensions/mobile-core/signal/rules-engine-integration.md)
 
   This section provides an example of how to create rules to trigger actions in the Signals extension.

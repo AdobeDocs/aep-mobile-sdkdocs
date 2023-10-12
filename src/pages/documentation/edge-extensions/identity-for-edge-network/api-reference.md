@@ -81,7 +81,7 @@ iOS
 
 <InlineAlert variant="warning" slots="text"/>
 
-Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../../base-extensions/mobile-core/api-reference.md#registerextensions) API instead.
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../../home/base-extensions/mobile-core/api-reference.md#registerextensions) API instead.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
@@ -126,13 +126,13 @@ This API is **not** recommended for:
 
 * Resetting a user's consent and privacy settings; see [Privacy and GDPR](../../resources/privacy-and-gdpr.md).
 * Removing existing custom identifiers; use the [`removeIdentity`](#removeidentity) API instead.
-* Removing a previously synced advertising identifier after the advertising tracking settings were changed by the user; use the [`setAdvertisingIdentifier`](../../base-extensions/mobile-core/identity/api-reference.md#setadvertisingidentifier) API instead.
+* Removing a previously synced advertising identifier after the advertising tracking settings were changed by the user; use the [`setAdvertisingIdentifier`](../../home/base-extensions/mobile-core/identity/api-reference.md#setadvertisingidentifier) API instead.
 
 <InlineAlert variant="warning" slots="text"/>
 
 The Identity for Edge Network extension does not read the Mobile SDK's privacy status, and therefore setting the SDK's privacy status to opt-out will not automatically clear the identities from the Identity for Edge Network extension.
 
-See [`MobileCore.resetIdentities`](../../base-extensions/mobile-core/api-reference.md#resetidentities) for more details.
+See [`MobileCore.resetIdentities`](../../home/base-extensions/mobile-core/api-reference.md#resetidentities) for more details.
 
 ## setAdvertisingIdentifier
 

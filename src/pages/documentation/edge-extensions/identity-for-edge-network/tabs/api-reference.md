@@ -60,7 +60,7 @@ NSString *extensionVersion = [AEPMobileEdgeIdentity extensionVersion];
 
 <InlineNestedAlert variant="info" header="false" iconPosition="left">
 
-The ECID value is returned via the [AdobeCallback](../../base-extensions/mobile-core/api-reference.md#public-classes). When [AdobeCallbackWithError](../../base-extensions/mobile-core/api-reference.md#public-classes) is provided to this API, the timeout value is 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate [AdobeError](../../base-extensions/mobile-core/api-reference.md#public-classes).
+The ECID value is returned via the [AdobeCallback](../../home/base-extensions/mobile-core/api-reference.md#public-classes). When [AdobeCallbackWithError](../../home/base-extensions/mobile-core/api-reference.md#public-classes) is provided to this API, the timeout value is 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate [AdobeError](../../home/base-extensions/mobile-core/api-reference.md#public-classes).
 
 </InlineNestedAlert>
 
@@ -139,7 +139,7 @@ Identity.getExperienceCloudId { (ecid, error) in
 
 <InlineNestedAlert variant="info" header="false" iconPosition="left">
 
-When [AdobeCallbackWithError](../../base-extensions/mobile-core/api-reference.md#public-classes) is provided, and you are fetching the identities from the Mobile SDK, the timeout value is 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate [AdobeError](../../base-extensions/mobile-core/api-reference.md#public-classes).
+When [AdobeCallbackWithError](../../home/base-extensions/mobile-core/api-reference.md#public-classes) is provided, and you are fetching the identities from the Mobile SDK, the timeout value is 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate [AdobeError](../../home/base-extensions/mobile-core/api-reference.md#public-classes).
 
 </InlineNestedAlert>
 
@@ -270,7 +270,7 @@ Identity.getUrlVariables { urlVariablesString ->
 static func getUrlVariables(completion: @escaping (String?, Error?) -> Void)
 ```
 
-* `completion` is invoked with `urlVariables` containing the visitor identifiers as a query string, or with `error` if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../../base-extensions/mobile-core/api-reference.md#public-classes) code of the specific error. The default timeout is 1000ms.
+* `completion` is invoked with `urlVariables` containing the visitor identifiers as a query string, or with `error` if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../../home/base-extensions/mobile-core/api-reference.md#public-classes) code of the specific error. The default timeout is 1000ms.
 
 **Example**
 

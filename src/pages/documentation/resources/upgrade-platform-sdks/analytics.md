@@ -7,7 +7,7 @@ import Tabs from './tabs/analytics.md'
 The Adobe Experience Platform Analytics extension uses [tags](https://experience.adobe.com/#/data-collection/) to configure the Experience Platform SDKs. This replaces the ADBMobileConfig.json which the Mobile Services SDK used for configuration. To get started with the AEP SDKs:
 
 1. Create a mobile property on tags. <br/>See [Set up a mobile property](../../home/getting-started/create-a-mobile-property.md) for more information.
-2. Configure your mobile app with the create mobile property.<br/>The AEP Mobile Core extension provides general functionality required by all the Adobe AEP extensions. The Configuration extension is built into the Mobile Core and contains the configureWithAppId API. This API is used to link the tag mobile property with your mobile app. The documentation for this API can be seen at the [Configuration API Reference](../../base-extensions/mobile-core/configuration/api-reference.md#configurewithappid) page. A code sample showing the usage of this API is provided below.
+2. Configure your mobile app with the create mobile property.<br/>The AEP Mobile Core extension provides general functionality required by all the Adobe AEP extensions. The Configuration extension is built into the Mobile Core and contains the configureWithAppId API. This API is used to link the tag mobile property with your mobile app. The documentation for this API can be seen at the [Configuration API Reference](../../home/base-extensions/mobile-core/configuration/api-reference.md#configurewithappid) page. A code sample showing the usage of this API is provided below.
 3. Once all the Platform extensions are imported and configured correctly, remove the v4 Mobile SDK dependency. <br/>This step is mandatory and a mix of v4 and AEP API calls is not supported.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
@@ -32,11 +32,11 @@ For an overview of the API mapping between the Mobile Services SDK and Adobe Exp
 | trackLocation:data: | This functionality is available in the [Places extension](../../solution-extensions/places/index.md). |
 | trackBeacon:Data: | Support modified. [See guide](../../solution-extensions/adobe-analytics/track-beacon.md). |
 | trackingClearCurrentBeacon | Support modified. [See guide](../../solution-extensions/adobe-analytics/track-beacon.md). |
-| trackLifetimeValueIncrease:data: | This functionality can be recreated using the [Analytics](../../solution-extensions/adobe-analytics/index.md) and [User Profile](../../base-extensions/profile/index.md) extensions. |
-| trackTimedActionStart: | This functionality can be recreated using the [Analytics](../../solution-extensions/adobe-analytics/index.md) and [User Profile](../../base-extensions/profile/index.md) extensions. |
-| trackTimedActionUpdate: | This functionality can be recreated using the [Analytics](../../solution-extensions/adobe-analytics/index.md) and [User Profile](../../base-extensions/profile/index.md) extensions. |
-| trackTimedActionEnd: | This functionality can be recreated using the [Analytics](../../solution-extensions/adobe-analytics/index.md) and [User Profile](../../base-extensions/profile/index.md) extensions. |
-| trackTimedActionExists: | This functionality can be recreated using the [Analytics](../../solution-extensions/adobe-analytics/index.md) and [User Profile](../../base-extensions/profile/index.md) extensions. |
+| trackLifetimeValueIncrease:data: | This functionality can be recreated using the [Analytics](../../solution-extensions/adobe-analytics/index.md) and [User Profile](../../home/base-extensions/profile/index.md) extensions. |
+| trackTimedActionStart: | This functionality can be recreated using the [Analytics](../../solution-extensions/adobe-analytics/index.md) and [User Profile](../../home/base-extensions/profile/index.md) extensions. |
+| trackTimedActionUpdate: | This functionality can be recreated using the [Analytics](../../solution-extensions/adobe-analytics/index.md) and [User Profile](../../home/base-extensions/profile/index.md) extensions. |
+| trackTimedActionEnd: | This functionality can be recreated using the [Analytics](../../solution-extensions/adobe-analytics/index.md) and [User Profile](../../home/base-extensions/profile/index.md) extensions. |
+| trackTimedActionExists: | This functionality can be recreated using the [Analytics](../../solution-extensions/adobe-analytics/index.md) and [User Profile](../../home/base-extensions/profile/index.md) extensions. |
 
 ## Experience Platform extensions installation and setup
 

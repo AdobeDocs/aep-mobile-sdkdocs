@@ -80,7 +80,7 @@ The following events are handled by the Adobe Analytics extension:
 
 ### Generic track content request
 
-This event is a request to complete processing on the Analytics hits queue. The event will be created when either of the [`trackAction`](../../base-extensions/mobile-core/api-reference.md#trackaction) or [`trackState`](../../base-extensions/mobile-core/api-reference.md#trackstate) APIs is called.
+This event is a request to complete processing on the Analytics hits queue. The event will be created when either of the [`trackAction`](../../home/base-extensions/mobile-core/api-reference.md#trackaction) or [`trackState`](../../home/base-extensions/mobile-core/api-reference.md#trackstate) APIs is called.
 
 The Analytics extension receives and processes the following keys in a generic track content request event:
 
@@ -309,7 +309,7 @@ Note that the data may contain other custom key-value pairs that are **not** def
 
 ### Lifecycle request content
 
-This event represents a request to the Lifecycle extension to start or stop collecting data and is generated when [lifecycleStart](../../base-extensions/mobile-core/lifecycle/api-reference.md#lifecyclestart) and [lifecyclePause()](../../base-extensions/mobile-core/lifecycle/api-reference.md#lifecyclepause) are used.
+This event represents a request to the Lifecycle extension to start or stop collecting data and is generated when [lifecycleStart](../../home/base-extensions/mobile-core/lifecycle/api-reference.md#lifecyclestart) and [lifecyclePause()](../../home/base-extensions/mobile-core/lifecycle/api-reference.md#lifecyclepause) are used.
 
 The Analytics extension only listens for the Lifecycle start event, and the Analytics database queue should be paused for up to 1000 milliseconds, which is the default value for `DEFAULT_LIFECYCLE_RESPONSE_WAIT_TIMEOUT`.
 

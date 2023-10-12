@@ -4,7 +4,7 @@ noIndex: true
 
 <Variant platform="android" task="add" repeat="8"/>
 
-1. Add the [Mobile Core](../../base-extensions/mobile-core/index.md) and Analytics extensions to your project using the app's Gradle file.
+1. Add the [Mobile Core](../../home/base-extensions/mobile-core/index.md) and Analytics extensions to your project using the app's Gradle file.
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
@@ -39,7 +39,7 @@ import com.adobe.marketing.mobile.Analytics
 
 <Variant platform="ios" task="add" repeat="7"/>
 
-1. Add the [Mobile Core](../../base-extensions/mobile-core/index.md) and Analytics extensions to your project using Cocoapods.
+1. Add the [Mobile Core](../../home/base-extensions/mobile-core/index.md) and Analytics extensions to your project using Cocoapods.
 2. Add the following pods in your `Podfile`:
 
 ```ruby

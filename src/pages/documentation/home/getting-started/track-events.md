@@ -134,7 +134,7 @@ Xamarin
 
 <Tabs query="platform=xamarin&task=track-state"/> -->
 
-For more information, see the [Mobile Core API Reference](../../base-extensions/mobile-core/api-reference.md).
+For more information, see the [Mobile Core API Reference](../base-extensions/mobile-core/api-reference.md).
 
 ## Get help
 

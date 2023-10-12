@@ -19,5 +19,5 @@ The base extensions are extensions that are required to use Mobile SDK.
   * [Platform Services](./mobile-core/platform-services/index.md)
   * [Rules Engine](./mobile-core/rules-engine/index.md)
   * [Signal](./mobile-core/signal/index.md)
-* [Adobe Experience Platform Assurance](./platform-assurance-sdk/index.md)
+* [Adobe Experience Platform Assurance](./assurance/index.md)
 * [Profile](./profile/index.md)

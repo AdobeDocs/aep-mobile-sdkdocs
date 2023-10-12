@@ -70,7 +70,7 @@ iOS
 
 <InlineAlert variant="warning" slots="text"/>
 
-Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../../base-extensions/mobile-core/api-reference.md#registerextensions) API instead.
+Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../../home/base-extensions/mobile-core/api-reference.md#registerextensions) API instead.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
@@ -85,7 +85,7 @@ Android
 This API call can lead to unintended SDK behavior, e.g. resetting of Experience Cloud ID (ECID). So it should be sparingly used and caution should be followed!
 
 This `MobileCore` API is a request to each extension to reset its identities. Every extension responds to this request in its own unique manner. For example, Optimize extension uses this API call to clear out its client-side in-memory propositions cache.
-For details on syntax, usage and availability, refer to [Mobile Core - Reset identities](../../base-extensions/mobile-core/api-reference.md#resetidentities).
+For details on syntax, usage and availability, refer to [Mobile Core - Reset identities](../../home/base-extensions/mobile-core/api-reference.md#resetidentities).
 
 ## updatePropositions
 

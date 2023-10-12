@@ -128,15 +128,15 @@ iOS
 
 ## Send Lifecycle metrics to Analytics
 
-To automatically report on the application lifecycle details in Analytics, ensure that you properly configure the lifecycle data collection. For more information, see the documentation on [Lifecycle metrics](../../base-extensions/mobile-core/lifecycle/metrics.md).
+To automatically report on the application lifecycle details in Analytics, ensure that you properly configure the lifecycle data collection. For more information, see the documentation on [Lifecycle metrics](../../home/base-extensions/mobile-core/lifecycle/metrics.md).
 
 ## Send app states and actions to Analytics
 
-To track mobile app states and actions in Adobe Analytics, implement the [trackAction](../../base-extensions/mobile-core/api-reference.md#trackaction) and [trackState](../../base-extensions/mobile-core/api-reference.md#trackstate) APIs from the Mobile Core extension. For more information, see the [track app actions](../../base-extensions/mobile-core/api-reference.md#track-app-actions) and [track app states](../../base-extensions/mobile-core/api-reference.md#track-app-states-and-views) tutorials.
+To track mobile app states and actions in Adobe Analytics, implement the [trackAction](../../home/base-extensions/mobile-core/api-reference.md#trackaction) and [trackState](../../home/base-extensions/mobile-core/api-reference.md#trackstate) APIs from the Mobile Core extension. For more information, see the [track app actions](../../home/base-extensions/mobile-core/api-reference.md#track-app-actions) and [track app states](../../home/base-extensions/mobile-core/api-reference.md#track-app-states-and-views) tutorials.
 
 <InlineAlert variant="info" slots="text"/>
 
-[trackState](../../base-extensions/mobile-core/api-reference.md#trackstate) reports the view state as the **Page Name**, and state views are reported as **Page View** in Analytics. The value is sent to Analytics by using the page name variable (`pagename=value`).<br/><br/> [trackAction](../../base-extensions/mobile-core/api-reference.md#trackaction) reports the Action as an **event** and does not increment your page views in Analytics. The value is sent to Analytics by using the action variable (`action=value`).
+[trackState](../../home/base-extensions/mobile-core/api-reference.md#trackstate) reports the view state as the **Page Name**, and state views are reported as **Page View** in Analytics. The value is sent to Analytics by using the page name variable (`pagename=value`).<br/><br/> [trackAction](../../home/base-extensions/mobile-core/api-reference.md#trackaction) reports the Action as an **event** and does not increment your page views in Analytics. The value is sent to Analytics by using the action variable (`action=value`).
 
 ## Integrations with Adobe Experience Platform solutions and services
 
@@ -193,4 +193,4 @@ iOS
 
 <Tabs query="platform=ios&task=update"/>
 
-For more information, see the [configuration API reference](../../base-extensions/mobile-core/configuration/api-reference.md).
+For more information, see the [configuration API reference](../../home/base-extensions/mobile-core/configuration/api-reference.md).

@@ -9,4 +9,4 @@ keywords:
 
 # API Reference
 
-For API details, please reference [Lifecycle API Reference](../../base-extensions/mobile-core/lifecycle/api-reference.md).
+For API details, please reference [Lifecycle API Reference](../../home/base-extensions/mobile-core/lifecycle/api-reference.md).

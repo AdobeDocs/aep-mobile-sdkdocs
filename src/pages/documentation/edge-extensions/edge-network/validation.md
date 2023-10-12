@@ -22,8 +22,8 @@ While the log messages can be quite helpful for an application developer, inspec
 ### Get started with Assurance
 
 1. Start by following the instructions for [using Assurance](https://experienceleague.adobe.com/docs/experience-platform/assurance/user-access.html).
-2. [Install and register the Assurance extension](../../base-extensions/platform-assurance-sdk/index.md) in your mobile app.
-3. Follow the same document for [connecting to an Assurance session](../../base-extensions/platform-assurance-sdk/index.md#connect-to-an-assurance-session).
+2. [Install and register the Assurance extension](../../home/base-extensions/assurance/index.md) in your mobile app.
+3. Follow the same document for [connecting to an Assurance session](../../home/base-extensions/assurance/index.md#connect-to-an-assurance-session).
 
 ### Use the Event Transactions view
 
