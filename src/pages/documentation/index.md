@@ -13,7 +13,11 @@ Welcome to the home of Adobe Experience Platform Mobile SDK documentation.
 
 Good to go for iOS 17 and Android 14
 
-The latest versions of the Adobe Experience Platform SDK for Google Android and Apple iOS (Swift and Objective-C) are tested for compatibility with the release versions of Google Android 14 and Apple iOS 17. See [Current SDK Versions](./current-sdk-versions.md) to find our latest SDK versions, or [release notes](./release-notes/index.md) for information on changes and updates.
+The latest versions of the Adobe Experience Platform SDK for Android and iOS (Swift and Objective-C) are tested for compatibility with the release versions of Google Android 14 and Apple iOS 17. See [Current SDK Versions](./current-sdk-versions.md) to find our latest SDK versions, or [release notes](./release-notes/index.md) for information on changes and updates.
+
+<InlineAlert variant="info" slots="text"/>
+
+At WWDC23, Apple announced several new privacy features impacting applications and SDKs. The announcement included an upcoming requirement for developers to provide the reason for using certain APIs — including APIs currently used by the AEP Mobile SDK — in the privacy manifest. Apple plans to start enforcing this requirement in the spring of 2024. Adobe is currently working with Apple to better understand the impact of this change. We anticipate that we will be able to provide further information regarding how this change will impact iOS applications that use the AEP Mobile SDK in the coming months.
 
 <InlineAlert variant="info" slots="text"/>
 
