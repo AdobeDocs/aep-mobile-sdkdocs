@@ -7,6 +7,18 @@ Keywords:
 
 # Release notes
 
+## October 5, 2023
+
+### Android Optimize 2.0.2
+
+* Added support for enforcing events' order for `updatePropositions` and `getPropositions` APIs in the extension. A `getPropositions` API invocation will be resolved only after any prior `updatePropositions` API requests are completed irrespective of the async API behavior.
+
+## October 4, 2023
+
+### iOS Optimize 4.0.2
+
+* Added support for enforcing events' order for `updatePropositions` and `getPropositions` APIs in the extension. A `getPropositions` API invocation will be resolved only after any prior `updatePropositions` API requests are completed irrespective of the async API behavior.
+
 ## October 3, 2023
 
 ### Android BOM  2.5.0
@@ -43,6 +55,24 @@ Keywords:
 </AccordionItem>
 
 </Accordion>
+
+## September 28, 2023
+
+### Android Core 2.5.0
+
+* Added getter APIs `getLargeIconResourceID` and `getSmallIconResourceID` to MobileCore for retrieving the icon resource IDs set from the application.
+
+### iOS Messaging 4.1.0
+
+* Added new notification tracking API `handleNotificationResponse` with parameters `UNNotificationResponse` and an optional callback the returns `PushTrackingStatus` enum.
+  * This API will automatically handle the click behaviour (OPENAPP, WEBURL, DEEPLINK) defined for the notification.
+* Deprecated the notification tracking API `handleNotificationResponse` with parameters `UNNotificationResponse`, `applicationOpened`, and `customActionId`.
+*  Fixed a bug on notification tracking API `handleNotificationResponse` to stop sending tracking hits to edge servers when the notification does not contain tracking information.
+
+### Android Messaging 2.2.0
+
+* Introduced `MessagingServices` class to automatically build, display, track, and handle defined click behaviour on notifications from Adobe Journey Optimizer.
+* Fixed a bug on notification tracking API `handleNotificationResponse` to stop sending tracking hits to edge servers when the notification does not contain tracking information.
 
 ## September 26, 2023
 
