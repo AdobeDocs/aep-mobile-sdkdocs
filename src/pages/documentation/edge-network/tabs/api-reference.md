@@ -601,10 +601,12 @@ NSDictionary *configOverrides = @{ @"com_adobe_experience_platform" : @{
 
 AEPExperienceEvent* event = [[AEPExperienceEvent alloc]initWithXdm:xdmData data:data datastreamConfigOverride: configOverrides];
 ```
+
 ```objectivec
 // Example 1 - send the Experience event without handling the Edge Network response
 [AEPMobileEdge sendExperienceEvent:event completion:nil];
 ```
+
 ```objectivec
 // Example 2 - send the Experience event and handle the Edge Network response onComplete
 [AEPMobileEdge sendExperienceEvent:event completion:^(NSArray<AEPEdgeEventHandle *> * _Nonnull handles) {
