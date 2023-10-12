@@ -17,7 +17,7 @@ The latest versions of the Adobe Experience Platform SDK for Android and iOS (Sw
 
 <InlineAlert variant="info" slots="text"/>
 
-At WWDC23, Apple announced several new privacy features impacting applications and SDKs. The announcement included an upcoming requirement for developers to provide the reason for using certain APIs — including APIs currently used by the AEP Mobile SDK — in the privacy manifest. Apple plans to start enforcing this requirement in the spring of 2024. Adobe is currently working with Apple to better understand the impact of this change. We anticipate that we will be able to provide further information regarding how this change will impact iOS applications that use the AEP Mobile SDK in the coming months.
+At WWDC23, Apple announced several new privacy features impacting applications and SDKs. The announcement included an upcoming requirement for developers to provide the reason for using certain APIs — including APIs currently used by the Adobe Experience Platform Mobile SDK — in the privacy manifest. Apple plans to start enforcing this requirement in the spring of 2024. Adobe is currently working with Apple to better understand the impact of this change. We anticipate that we will be able to provide further information regarding how this change will impact iOS applications that use the Experience Platform Mobile SDK in the coming months.
 
 <InlineAlert variant="info" slots="text"/>
 
