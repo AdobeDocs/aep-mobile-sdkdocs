@@ -7,6 +7,12 @@ Keywords:
 
 # Release notes
 
+## October 12, 2023
+
+### iOS Target 4.0.2
+
+* Access to containers in `TargetState` is now synchronized in order to prevent possible runtime exceptions.
+
 ## October 5, 2023
 
 ### Android Optimize 2.0.2
