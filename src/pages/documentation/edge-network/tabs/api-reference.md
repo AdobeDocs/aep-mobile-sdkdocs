@@ -451,6 +451,7 @@ Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) 
 ```
 
 ##### Example with Datastream ID override
+
 ```swift
 // Create Experience event from dictionary
 var xdmData : [String: Any] = ["eventType" : "SampleXDMEvent",
@@ -471,6 +472,7 @@ Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) 
 ```
 
 ##### Example with Datastream config override
+
 ```swift
 // Create Experience event from dictionary
 var xdmData : [String: Any] = ["eventType" : "SampleXDMEvent",
@@ -560,6 +562,7 @@ AEPExperienceEvent* event = [[AEPExperienceEvent alloc]initWithXdm:xdmData data:
 }];
 ```
 ##### Example with Datastream ID override
+
 ```objectivec
 // Create Experience event from dictionary:
 NSDictionary *xdmData = @{ @"eventType" : @"SampleXDMEvent"};
@@ -580,6 +583,7 @@ AEPExperienceEvent* event = [[AEPExperienceEvent alloc]initWithXdm:xdmData data:
 ```
 
 ##### Example with Datastream config override
+
 ```objectivec
 // Create Experience event from dictionary:
 NSDictionary *xdmData = @{ @"eventType" : @"SampleXDMEvent"};
