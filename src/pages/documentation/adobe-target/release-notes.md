@@ -8,6 +8,12 @@ keywords:
 
 # Release Notes
 
+## October 12, 2023
+
+### iOS Target 4.0.2
+
+* Access to containers in `TargetState` is now synchronized in order to prevent possible runtime exceptions.
+
 ## July 11, 2023
 
 ### iOS Target 4.0.1 and Android Target 2.0.1
