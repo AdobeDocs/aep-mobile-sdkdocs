@@ -109,7 +109,7 @@ var reqGet = https.request(options, function(res) {
                         // Find the index of the release notes header.
                         const releaseNotesHeaderIndex = contentArray.indexOf(releaseNotesHeader);
 
-                        if (releaseFileContainsLineStartWith(`### Android BOM  ${version}`) == true) {
+                        if (releaseFileContainsLineStartWith(`### Android BOM ${version}`) == true) {
                             console.error("already updated")
                             return
                         }
