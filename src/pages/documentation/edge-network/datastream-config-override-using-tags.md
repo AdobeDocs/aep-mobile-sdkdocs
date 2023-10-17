@@ -10,21 +10,21 @@ keywords:
 
 # Overriding Datastream ID and Configuration for Edge Network Requests Using Tags Rules
 
-<InlineAlert variant="info" slots="test"/>
+<InlineAlert variant="info" slots="text"/>
 
 Starting with version **2.4.0** of the `Edge` Android extension and version **4.3.0** of the `AEPEdge` iOS extension, the `sendEvent` API now supports optional Datastream overrides. For detailed information, please refer to the [sendEvent API reference](./api-reference.md#sendEvent).
 
-## Utilizing Tags Rules for Datastream Configuration Overrides in Edge-based Extensions
+## Using Datacollection Tags Rules for datastream configuration overrides in Edge based extensions
 
-Suppose you are working with an Edge-based extension like "Streaming Media for Edge" and you need to override datastream ID and datastream configuration for Media requests passing through the Edge Network. Follow these steps to achieve that:
+Suppose you are working with an Edge based extension like **Streaming Media for Edge** and you need to override `datastream ID` and `datastream configuration` for Media requests passing through the Edge Network. Follow these steps to achieve that:
 
-1. Navigate to the DataCollection UI and select your mobile property.
+1. Navigate to the **DataCollection UI** and go to **Tags** select your mobile property.
 
 2. Add a new rule for your mobile property:
 
     a. Provide a descriptive name for your Rule.
 
-    b. Under the "If" section in the "Events" category, add a new Event.
+    b. Under the **If** section in the **Events** category, add a new Event.
 
     c. In the Event configuration view, set the **Extension** to "Adobe Experience Platform Edge Network" and the **Event Type** to "AEP Request Event." Then, click the plus button to "Add XDM Event Type." For all media requests, set the condition to contain "media" since all media events have types prefixed with "media."
 
@@ -32,11 +32,11 @@ Suppose you are working with an Edge-based extension like "Streaming Media for E
 
     d. Save the event configuration and return to the Rule Editor UI.
 
-    e. In the "Then" section under "Actions," add a new Action.
+    e. In the **Then** section under **Actions** add a new Action.
 
     f. In the Action configuration view, set the **Extension** to "Mobile Core" and the **Action Type** to "Attach Data."
 
-    g. Now, add the JSON payload for your datastream ID override and datastream config override in the following format:
+    g. Now, add the JSON payload for your `datastream ID override` and `datastream config override` in the following format:
 
     **Payload Format:**
 
@@ -72,8 +72,8 @@ Suppose you are working with an Edge-based extension like "Streaming Media for E
 
     ![Rules Action configuration](./assets/configOverrides/rule-action-attach-configOverride-payload.png)
 
-    h. Save the Action configuration and return to the Rule Editor UI. Your rule should look like this:
+    h. **Save** the Action configuration and return to the Rule Editor UI. Your rule should look like this:
 
     ![File Rules configuration](./assets/configOverrides/final-rule-datastreamConfigOverride.png)
 
-    i. Save this Rule, publish the new Tags library with all the changes, and your rule will be set and ready. Now, all Media Edge Requests will be sent with the overridden datastream ID and Datastream Config Overrides.
+    i. **Save** this Rule, **publish** the new Tags library with all the changes, and your rule will be set and ready. Now, all Media Edge Requests will be sent with the overridden datastream ID and Datastream Config Overrides.

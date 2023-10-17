@@ -250,8 +250,8 @@ module.exports = {
                                 path: "/documentation/edge-network/validation"
                             },
                             {
-                                title: "Datastream Config Override for Edge Based Extensions using Tags",
-                                path: "/documentation/edge-network/datastram-config-override-using-tags"
+                                title: "Config Override for Edge Based Extensions using Tags",
+                                path: "/documentation/edge-network/datastream-config-override-using-tags"
                             },
                             {
                                 title: "Release notes",
