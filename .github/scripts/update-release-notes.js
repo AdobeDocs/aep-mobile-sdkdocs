@@ -118,9 +118,9 @@ var reqGet = https.request(options, function(res) {
                         
                         if (releaseFileContainsLineStartWith(dateLine) == true) {
                             const existingDateLine = contentArray.indexOf(dateLine);
-                            contentArray.splice(existingDateLine + 1,0,"",`### Android BOM  ${version}`, "",updateBOMReleaseNotesForAdobeIO(releaseNotes));
+                            contentArray.splice(existingDateLine + 1,0,"",`### Android BOM ${version}`, "",updateBOMReleaseNotesForAdobeIO(releaseNotes));
                         } else {
-                            contentArray.splice(releaseNotesHeaderIndex + 1,0,"",dateLine,"",`### Android BOM  ${version}`, "",updateBOMReleaseNotesForAdobeIO(releaseNotes));
+                            contentArray.splice(releaseNotesHeaderIndex + 1,0,"",dateLine,"",`### Android BOM ${version}`, "",updateBOMReleaseNotesForAdobeIO(releaseNotes));
                         }
                         
                         fs.writeFile(releaseMdPath, contentArray.join("\n"), function (err) {
