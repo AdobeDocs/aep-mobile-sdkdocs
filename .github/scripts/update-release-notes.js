@@ -101,7 +101,7 @@ var reqGet = https.request(options, function(res) {
                         const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October","November","December"]
                         const fullMonth = monthNames[month]
 
-                        const releaseMdPath = "./src/pages/documentation/release-notes/index.md";
+                        const releaseMdPath = "./src/pages/home/release-notes/index.md";
 
                         const releaseNotesHeader = "# Release notes";
                         // Read the contents of the markdown file.
@@ -166,7 +166,7 @@ function updateBOMReleaseNotesForAdobeIO(releaseNotesString) {
 
 function releaseFileContainsLineStartWith(lineStartWithString){
     try {
-        execSync(`grep -E "^${lineStartWithString}" ./src/pages/documentation/release-notes/index.md`, { stdio: 'ignore' });
+        execSync(`grep -E "^${lineStartWithString}" ./src/pages/home/release-notes/index.md`, { stdio: 'ignore' });
         return true;
       } catch (e) {
         return false;
