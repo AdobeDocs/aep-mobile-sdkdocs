@@ -548,7 +548,7 @@ module.exports = {
                                 path: "/documentation/adobe-journey-optimizer"
                             },
                             {
-                                title: "Generic API",
+                                title: "API References",
                                 path: "documentation/adobe-journey-optimizer/api-reference"
                             },
                             {
