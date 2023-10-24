@@ -143,37 +143,104 @@ module.exports = {
                                 path: "/edge/adobe-journey-optimizer/api-reference"
                             },
                             {
-                                title: "Release notes",
-                                path: "/edge/adobe-journey-optimizer/release-notes"
+                                title: "Push Notification",
+                                path: "/edge/adobe-journey-optimizer/push-notification",
+                                pages: [
+                                    {
+                                        title: "iOS",
+                                        path: "/edge/adobe-journey-optimizer/push-notification/ios/api-reference",
+                                        pages: [
+                                            {
+                                                title: "API reference",
+                                                path: "/edge/adobe-journey-optimizer/push-notification/ios/api-reference"
+                                            },
+                                            {
+                                                title: "Display Rich Notifications",
+                                                path: "/edge/adobe-journey-optimizer/push-notification/ios/display-rich-notifications"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        title: "Android",
+                                        path: "/edge/adobe-journey-optimizer/push-notification/android/automatic-display-and-tracking",
+                                        pages: [
+                                            {
+                                                title: "Automatic display and tracking",
+                                                path: "/edge/adobe-journey-optimizer/push-notification/android/automatic-display-and-tracking"
+                                            },
+                                            {
+                                                title: "Manual display and tracking",
+                                                path: "/edge/adobe-journey-optimizer/push-notification/android/manual-display-and-tracking"
+                                            }                                            
+                                        ]
+                                    },
+                                    {
+                                        title: "Payload Keys",
+                                        path: "/edge/adobe-journey-optimizer/push-notification/push-payload"
+                                    }
+                                ]
+                            },
+                            {
+                                title: "In-App Messaging",
+                                path: "/edge/adobe-journey-optimizer/in-app-message",
+                                pages: [
+                                    {
+                                        title: "API reference",
+                                        path: "/edge/adobe-journey-optimizer/in-app-message/api-reference"
+                                    },
+                                    {
+                                        title: "Tutorials",
+                                        path: "/edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate",
+                                        pages: [
+                                            {
+                                                title: "Progrmmatically control the display of in-app messages",
+                                                path: "/edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate"
+                                            },
+                                            {
+                                                title: "Call native code from the JavaScript of an in-app message",
+                                                path: "/edge/adobe-journey-optimizer/in-app-message/tutorials/native-from-javascript"
+                                            },
+                                            {
+                                                title: "Execute Javascript methods from native code",
+                                                path: "/edge/adobe-journey-optimizer/in-app-message/tutorials/javascript-from-native"
+                                            },
+                                            {
+                                                title: "Handle URL clicks from an in-app message",
+                                                path: "/edge/adobe-journey-optimizer/in-app-message/tutorials/handle-clicks"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        title: "Validate using Assurance",
+                                        path: "/edge/adobe-journey-optimizer/in-app-message/validate-messages"
+                                    }
+                                ]
                             },
                             {
                                 title: "Public classes and enums",
-                                path: "/edge/adobe-journey-optimizer/public-classes"
-                            },
-                            {
-                                title: "Tutorials",
-                                path: "/edge/adobe-journey-optimizer/tutorials",
-                                pages: [{
-                                        title: "Implement a MessagingDelegate",
-                                        path: "/edge/adobe-journey-optimizer/tutorials/messaging-delegate"
+                                path: "/edge/adobe-journey-optimizer/public-classes-and-enum",
+                                pages: [
+                                    {
+                                        title: "MessagingPushPayload",
+                                        path: "/edge/adobe-journey-optimizer/public-classes-and-enum/messaging-push-payload"
                                     },
                                     {
-                                        title: "Call native code from the JavaScript of an in-app message",
-                                        path: "/edge/adobe-journey-optimizer/tutorials/native-from-javascript"
+                                        title: "PushTrackingStatus",
+                                        path: "/edge/adobe-journey-optimizer/public-classes-and-enum/push-tracking-status"
                                     },
                                     {
-                                        title: "Execute Javascript methods from native code",
-                                        path: "/edge/adobe-journey-optimizer/tutorials/javascript-from-native"
+                                        title: "Message",
+                                        path: "/edge/adobe-journey-optimizer/public-classes-and-enum/message"
                                     },
                                     {
-                                        title: "Handle URL clicks from an in-app message",
-                                        path: "/edge/adobe-journey-optimizer/tutorials/handle-clicks"
-                                    },
-                                    {
-                                        title: "Validate in-app messaging using Assurance",
-                                        path: "/edge/adobe-journey-optimizer/tutorials/validate-messages"
+                                        title: "MessagingEdgeEventType",
+                                        path: "/edge/adobe-journey-optimizer/public-classes-and-enum/messaging-edge-event-type"
                                     }
                                 ]
+                            },
+                            {
+                                title: "Release notes",
+                                path: "/edge/adobe-journey-optimizer/release-notes"
                             }
                         ]
                     },
