@@ -7,6 +7,13 @@ Keywords:
 
 # Release notes
 
+## October 19, 2023
+
+### iOS Assurance 4.1.0
+
+* Fixed a mismatch in the client and sessionID keys
+* Added stitching support for chunked AssuranceEvents
+
 ## October 13, 2023
 
 ### Android BOM 2.5.1
