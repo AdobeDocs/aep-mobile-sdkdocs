@@ -15,7 +15,12 @@ Release notes and change logs for the Adobe Experience Platform Assurance extens
 ### iOS Assurance 4.1.0
 
 * Fixed a mismatch in the client and sessionID keys
-* Added stitching support for chunked AssuranceEvents
+* Added support for receiving large `AssuranceEvents`.
+
+### Android Assurance 2.2.0
+
+* Added support for receiving large `AssuranceEvents`.
+* Fixed an issue that caused incorrect manifest contents being sent in the clientInfo event.
 
 ## July 20, 2023
 
