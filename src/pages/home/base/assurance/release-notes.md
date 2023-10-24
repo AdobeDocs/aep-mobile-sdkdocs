@@ -10,6 +10,13 @@ keywords:
 
 Release notes and change logs for the Adobe Experience Platform Assurance extension
 
+## October 19, 2023
+
+### iOS Assurance 4.1.0
+
+* Fixed a mismatch in the client and sessionID keys
+* Added stitching support for chunked AssuranceEvents
+
 ## July 20, 2023
 
 ### Android Assurance 2.1.1
