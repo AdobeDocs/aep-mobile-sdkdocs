@@ -64,7 +64,7 @@ The Android BOM (Bill of Materials) artifact has been released to Maven Central.
 
 <InlineAlert variant="info" slots="text"/>
 
-**Migrate to latest Mobile SDKs for iOS**<br/>If you are currently using the Objective-C (ACP-prefix) libraries, please see the [Migrating to latest Mobile SDKs for iOS](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-swift/) guide for next steps.<br/>The latest Mobile SDK for iOS supports iOS 11 or later; requires Swift 5.1 or newer and Xcode 14.1 or newer. In addition to **CocoaPods**, **Swift Package Manager (SPM)**, and XCFramework installation option is supported with the latest iOS Swift SDKs! Find more details at the GitHub links below.
+**Migrate to latest Mobile SDKs for iOS**<br/>If you are currently using the Objective-C (ACP-prefix) libraries, please see the [Migrating to latest Mobile SDKs for iOS](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-swift/) guide for next steps.<br/>The latest Mobile SDK for iOS supports iOS 11 or later; requires Swift 5.1 or newer and Xcode 14.1 or newer. In addition to **CocoaPods**, **Swift Package Manager (SPM)**, and XCFramework installation options are supported with the latest iOS Swift SDKs! Find more details at the GitHub links below.
 
 | Extension | tvOS | App Extension | CocoaPods | GitHub |
 |---|---|---|---|---|
