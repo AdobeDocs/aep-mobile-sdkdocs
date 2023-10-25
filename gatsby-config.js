@@ -126,8 +126,14 @@ module.exports = {
                                 path: "/edge/edge-network/validation"
                             },
                             {
-                                title: "Config Override for Edge Based Extensions using Tags",
-                                path: "/edge/edge-network/datastream-config-override-using-tags"
+                                title: "Tutorials",
+                                path: "/edge/edge-network/tutorials",
+                                pages: [
+                                    {
+                                        title: "Datastream config overrides using rules",
+                                        path: "/edge/edge-network/tutorials/datastream-config-override-rules"
+                                    }
+                                ]
                             },
                             {
                                 title: "Release notes",

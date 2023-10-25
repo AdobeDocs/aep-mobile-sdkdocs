@@ -199,7 +199,7 @@ Use the AEPMobileCore API to register the Edge extension.
 
 ```
 
-<Variant platform="android" api="send-event" repeat="13"/>
+<Variant platform="android" api="send-event" repeat="21"/>
 
 #### Java
 
@@ -253,15 +253,7 @@ ExperienceEvent experienceEvent = new ExperienceEvent.Builder()
   .setXdmSchema(xdmData)
   .setDatastreamIdOverride("SampleDatastreamId")
   .build();
-```
 
-```java
-// Example 1 - send the experience event without handling the Edge Network response
-Edge.sendEvent(experienceEvent, null);
-```
-
-```java
-// Example 2 - send the experience event and handle the Edge Network response onComplete
 Edge.sendEvent(experienceEvent, new EdgeCallback() {
   @Override
   public void onComplete(final List<EdgeEventHandle> handles) {
@@ -317,6 +309,13 @@ ExperienceEvent experienceEvent = new ExperienceEvent.Builder()
   .setXdmSchema(xdmData)
   .setDatastreamConfigOverride(configOverrides)
   .build();
+
+Edge.sendEvent(experienceEvent, new EdgeCallback() {
+  @Override
+  public void onComplete(final List<EdgeEventHandle> handles) {
+    // Handle the Edge Network response
+  }
+});
 ```
 
 #### Kotlin
@@ -339,7 +338,7 @@ val experienceEvent = ExperienceEvent.Builder()
 Edge.sendEvent(experienceEvent, null)
 ```
 
-```java
+```kotlin
 // Example 2 - send the Experience Event and handle the Edge Network response onComplete
 Edge.sendEvent(experienceEvent) {
   // Handle the Edge Network response
@@ -358,15 +357,7 @@ val experienceEvent = ExperienceEvent.Builder()
   .setXdmSchema(xdmData)
   .setDatastreamIdOverride("SampleDatastreamId")
   .build()
-```
 
-```kotlin
-// Example 1 - send the experience event without handling the Edge Network response
-Edge.sendEvent(experienceEvent, null)
-```
-
-```kotlin
-// Example 2 - send the experience event and handle the Edge Network response onComplete
 Edge.sendEvent(experienceEvent) {
   // Handle the Edge Network response
 }
@@ -402,21 +393,13 @@ val experienceEvent = ExperienceEvent.Builder()
   .setXdmSchema(xdmData)
   .setDatastreamConfigOverride(configOverrides)
   .build()
-```
 
-```kotlin
-// Example 1 - send the experience event without handling the Edge Network response
-Edge.sendEvent(experienceEvent, null)
-```
-
-```kotlin
-// Example 2 - send the experience event and handle the Edge Network response onComplete
 Edge.sendEvent(experienceEvent) {
   // Handle the Edge Network response
 }
 ```
 
-<Variant platform="ios" api="send-event" repeat="15"/>
+<Variant platform="ios" api="send-event" repeat="25"/>
 
 #### Swift
 
@@ -457,15 +440,7 @@ Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) 
 var xdmData : [String: Any] = ["eventType" : "SampleXDMEvent",
                               "sample": "data"]
 let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamIdOverride: "SampleDatastreamId")
-```
 
-```swift
-// Example 1 - send the Experience event without handling the Edge Network response
-Edge.sendEvent(experienceEvent: experienceEvent)
-```
-
-```swift
-// Example 2 - send the Experience event and handle the Edge Network response onComplete
 Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
   // Handle the Edge Network response
 }
@@ -505,15 +480,7 @@ var xdmData : [String: Any] = ["eventType" : "SampleXDMEvent",
                                       ]
 
 let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamConfigOverride: configOverrides)
-```
 
-```swift
-// Example 1 - send the Experience event without handling the Edge Network response
-Edge.sendEvent(experienceEvent: experienceEvent)
-```
-
-```swift
-// Example 2 - send the Experience event and handle the Edge Network response onComplete
 Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
   // Handle the Edge Network response
 }
@@ -557,12 +524,6 @@ AEPExperienceEvent* event = [[AEPExperienceEvent alloc]initWithXdm:xdmData data:
 ```
 
 ```objectivec
-// Example 1 - send the Experience event without handling the Edge Network response
-[AEPMobileEdge sendExperienceEvent:event completion:nil];
-```
-
-```objectivec
-// Example 2 - send the Experience event and handle the Edge Network response onComplete
 [AEPMobileEdge sendExperienceEvent:event completion:^(NSArray<AEPEdgeEventHandle *> * _Nonnull handles) {
   // Handle the Edge Network response
 }];
@@ -603,12 +564,6 @@ AEPExperienceEvent* event = [[AEPExperienceEvent alloc]initWithXdm:xdmData data:
 ```
 
 ```objectivec
-// Example 1 - send the Experience event without handling the Edge Network response
-[AEPMobileEdge sendExperienceEvent:event completion:nil];
-```
-
-```objectivec
-// Example 2 - send the Experience event and handle the Edge Network response onComplete
 [AEPMobileEdge sendExperienceEvent:event completion:^(NSArray<AEPEdgeEventHandle *> * _Nonnull handles) {
   // Handle the Edge Network response
 }];
@@ -854,8 +809,7 @@ public final class ExperienceEvent {
     public Builder setDatastreamIdOverride(final String datastreamIdOverride) {...}
 
     /**
-    * Override the default datastream configuration to trigger different datastream behaviors than the
-    * default ones for this event.
+    * Override the default datastream configuration settings for individual services for this event.
     *
     * When using {@link Edge#sendEvent}, this event is sent to the Experience Platform along with the
     * datastream overrides defined in {@code datastreamConfigOverride}.
@@ -898,47 +852,9 @@ Map<String, Object> data = new HashMap<>();
 data.put("free", "form");
 data.put("data", "example");
 
-// ----------------- Datastream config overrides map start -----------------
-Map<String, Object> configOverrides = new HashMap<>();
-
-// com_adobe_experience_platform
-Map<String, Object> experiencePlatform = new HashMap<>();
-Map<String, Object> datasets = new HashMap<>();
-
-Map<String, Object> eventDataset = new HashMap<>();
-eventDataset.put("datasetId", "SampleEventDatasetIdOverride");
-
-Map<String, Object> profileDataset = new HashMap<>();
-profileDataset.put("datasetId", "SampleProfileDatasetIdOverride");
-
-datasets.put("event", eventDataset);
-datasets.put("profile", profileDataset);
-
-experiencePlatform.put("datasets", datasets);
-configOverrides.put("com_adobe_experience_platform", experiencePlatform);
-
-// com_adobe_analytics
-Map<String, Object> analytics = new HashMap<>();
-analytics.put("reportSuites", new String[]{"rsid1", "rsid2", "rsid3"});
-configOverrides.put("com_adobe_analytics", analytics);
-
-// com_adobe_identity
-Map<String, Object> identity = new HashMap<>();
-identity.put("idSyncContainerId", "1234567");
-configOverrides.put("com_adobe_identity", identity);
-
-// com_adobe_target
-Map<String, Object> target = new HashMap<>();
-target.put("propertyToken", "SamplePropertyToken");
-configOverrides.put("com_adobe_target", target);
-// ----------------- Datastream config overrides map end -----------------
-
-
 ExperienceEvent experienceEvent = new ExperienceEvent.Builder()
   .setXdmSchema(xdmData)
   .setData(data)
-  .setDatastreamConfigOverride(configOverrides)
-  .setDatastreamIdOverride("SampleDatastreamID")
   .build();
 ```
 
@@ -974,8 +890,6 @@ xdmData.setOtherField("OtherFieldValue");
 
 ExperienceEvent experienceEvent = new ExperienceEvent.Builder()
   .setXdmSchema(xdmData)
-  .setDatastreamConfigOverride(configOverrides)
-  .setDatastreamIdOverride("SampleDatastreamID")
   .build();
 ```
 
@@ -1058,32 +972,8 @@ public class ExperienceEvent: NSObject {
 // Create Experience Event with both XDM and freeform data using dictionaries
 var xdmData : [String: Any] = ["eventType" : "SampleXDMEvent",
                               "sample": "data"]
-let configOverrides: [String: Any] = [
-                                        "com_adobe_experience_platform": [
-                                          "datasets": [
-                                            "event": [
-                                              "datasetId": "SampleEventDatasetIdOverride"
-                                            ],
-                                            "profile": [
-                                              "datasetId": "SampleProfileDatasetIdOverride"
-                                            ]
-                                          ]
-                                        ],
-                                        "com_adobe_analytics": [
-                                          "reportSuites": [
-                                            "rsid1",
-                                            "rsid2",
-                                            "rsid3"
-                                            ]
-                                        ],
-                                        "com_adobe_identity": [
-                                          "idSyncContainerId": "1234567"
-                                        ],
-                                        "com_adobe_target": [
-                                          "propertyToken": "SamplePropertyToken"
-                                        ]
-                                      ]
-let experienceEvent = ExperienceEvent(xdm: xdmData, data: ["free": "form", "data": "example"], datastreamIdOverride: "SampleDatastreamId", datastreamConfigOverride: configOverrides)
+
+let experienceEvent = ExperienceEvent(xdm: xdmData, data: ["free": "form", "data": "example"])
 ```
 
 ```swift
@@ -1141,32 +1031,8 @@ let experienceEvent = ExperienceEvent(xdm: xdmData, datasetIdentifier: "datasetI
 // Create Experience Event with both XDM and freeform data using dictionaries
 NSDictionary *xdmData = @{ @"eventType" : @"SampleXDMEvent"};
 NSDictionary *data = @{ @"sample" : @"data"};
-NSDictionary *configOverrides = @{ @"com_adobe_experience_platform" : @{
-                                    @"datasets" : @{
-                                        @"event" : @{
-                                          @"datasetId": @"SampleEventDatasetIdOverride"
-                                        },
-                                        @"profile" : @{
-                                          @"datasetId": @"SampleProfileDatasetIdOverride"
-                                        }
-                                      }
-                                    },
-                                    @"com_adobe_analytics" : @{
-                                      @"reportSuites" : @[
-                                        @"rsid1",
-                                        @"rsid2",
-                                        @"rsid3",
-                                      ]
-                                    },
-                                    @"com_adobe_identity" : @{
-                                      @"idSyncContainerId": @"1234567"
-                                    },
-                                    @"com_adobe_target" : @{
-                                      @"propertyToken": @"SamplePropertyToken"
-                                    }
-                                  }
 
-AEPExperienceEvent* event = [[AEPExperienceEvent alloc]initWithXdm:xdmData data:data datastreamIdOverride: @"SampleDatastreamId" datastreamConfigOverride: configOverrides];
+AEPExperienceEvent* event = [[AEPExperienceEvent alloc]initWithXdm:xdmData data:data];
 ```
 
 ```objectivec
