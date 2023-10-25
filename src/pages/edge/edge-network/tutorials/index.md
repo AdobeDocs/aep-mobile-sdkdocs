@@ -10,4 +10,3 @@ keywords:
 # Adobe Experience Platform Edge Network - Tutorials
 
 * [Datastream config overrides using rules](./datastream-config-override-rules.md)
-
