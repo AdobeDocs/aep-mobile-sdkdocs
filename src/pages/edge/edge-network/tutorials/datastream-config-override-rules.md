@@ -8,15 +8,15 @@ keywords:
 - Guide
 ---
 
-# Overriding Datastream ID and Configuration for Edge Network Requests Using Tags Rules
+# Overriding datastream ID and configuration for Edge network requests using Tags rules
 
 By default, all Edge requests are sent to the datastream configuration specified in the Adobe Experience Platform Edge Network extension configuration settings. This tutorial will offer examples demonstrating how to customize this configuration on a per-event basis
 
 <InlineAlert variant="info" slots="text"/>
 
-Starting with `Edge` extension version **2.4.0** (Android) and **4.3.0** (iOS), the `sendEvent` API supports optional Datastream overrides. For detailed information, please refer to the [sendEvent API reference](./api-reference.md#sendEvent).
+Starting with `Edge` extension version **2.4.0** (Android) and **4.3.0** (iOS), the `sendEvent` API supports optional datastream overrides. For detailed information, please refer to the [sendEvent API reference](./api-reference.md#sendEvent).
 
-## Datastream configuration overrides in Edge based extensions using Rules
+## Datastream configuration overrides in Edge based extensions using rules
 
 Let's consider a situation where you are working with **Lifecycle For Edge Network** and you want to override the datastream ID and datastream configuration for Lifecycle events routed through the Edge Network. Follow these steps to achieve that:
 
@@ -27,17 +27,16 @@ Let's consider a situation where you are working with **Lifecycle For Edge Netwo
     a. Provide a descriptive name for your Rule.
 
     b. Under the **If** section in the **Events** category, add 2 Events.
-    b. In the Events section under If, add two events.
 
     c. Configure the first event as Lifecycle start event. Set the `Extension` to **"Adobe Experience Platform Edge Network"** and the `Event Type` to **"AEP Request Event"**. Click the plus button `Add XDM Event Type` and set the condition to **equals** with value **"application.launch"**.
 
     ![Add XDM Event Type](../assets/configOverrides/add-xdm-event-type.png)
 
-    ![Sample Event configuration for Rule](../assets/configOverrides/if-event-application-launch.png)
+    ![Sample rule configuration application.launch event](../assets/configOverrides/if-event-application-launch.png)
 
     d. For the second event, configure Lifecycle pause event in a similar manner. Set the `Extension` to **"Adobe Experience Platform Edge Network"** and the `Event Type` to **"AEP Request Event"**. Click the plus button to `Add XDM Event Type` and set the condition to **equals** with value **"application.close"**.
 
-    ![Sample Event configuration for Rule](../assets/configOverrides/if-event-application-close.png)
+    ![Sample rule configuration application.close event](../assets/configOverrides/if-event-application-close.png)
 
     d. Save the event configuration and return to the Rule Editor UI.
 
@@ -66,6 +65,8 @@ Let's consider a situation where you are working with **Lifecycle For Edge Netwo
         }
     }
     ```
+
+    ![Action configuration - Datastream ID override payload ](../assets/configOverrides/datastream-id-override-payload.png)
 
     **Payload Format for datastream config overrides:**
 
@@ -96,8 +97,7 @@ Let's consider a situation where you are working with **Lifecycle For Edge Netwo
         }
     }
     ```
-
-    ![Rules Action configuration](../assets/configOverrides/rule-action-attach-configOverride-payload.png)
+    ![Action configuration - Datastream ID override payload ](../assets/configOverrides/datastream-config-override-payload.png)
 
     h. **Save** the Action configuration and return to the Rule Editor UI. Your rule should look like this:
 
