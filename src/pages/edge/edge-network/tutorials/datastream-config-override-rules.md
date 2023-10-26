@@ -97,6 +97,7 @@ Let's consider a situation where you are working with **Lifecycle For Edge Netwo
         }
     }
     ```
+
     ![Action configuration - Datastream ID override payload ](../assets/configOverrides/datastream-config-override-payload.png)
 
     h. **Save** the Action configuration and return to the Rule Editor UI. Your rule should look like this:
