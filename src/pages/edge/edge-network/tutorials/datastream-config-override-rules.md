@@ -31,7 +31,7 @@ In this example, the rule is named "Attach datastream config overrides Data to L
 
 Now we need to add two Lifecycle Edge events one of type **application.launch** and other of type **application.close**.
 
-#### 2.a Configure Lifecycle Edge event of type application.launch
+#### Configure Lifecycle Edge event of type application.launch
 
 1. Under the **Events** section, select **Add**.
 2. From the **Extension** dropdown list, select **Adobe Experience Platform Edge Network**.
@@ -41,7 +41,7 @@ Now we need to add two Lifecycle Edge events one of type **application.launch** 
 
 ![Sample rule configuration application.launch event](../assets/configOverrides/if-event-application-launch.png)
 
-#### 2.b Configure Lifecycle Edge event of type application.close
+#### Configure Lifecycle Edge event of type application.close
 
 1. Under the **Events** section, select **Add**.
 2. From the **Extension** dropdown list, select **Adobe Experience Platform Edge Network**.
@@ -57,7 +57,9 @@ Save the event configuration and return to the Rule Editor UI.
 
 ### 3. Configure Attach Data Action
 
-#### 3.a Configure the action to attach datastream ID override payload
+Based on the use case you can **either** attach payload for the **datastream ID override** or for the **datastream config overrides**
+
+#### (Option 1) Configure the action to attach datastream ID override payload
 
 1. Under the **Actions** section, select **Add**.
 1. From the **Extension** dropdown list, select **Mobile Core**.
@@ -79,7 +81,9 @@ Save the event configuration and return to the Rule Editor UI.
 4. Select **Keep Changes**.
 5. Return to the Rule Editor UI.
 
-#### 3.a Configure the action to attach datastream config override payload
+**OR**
+
+#### (Option 2) Configure the action to attach datastream config override payload
 
 1. Under the **Actions** section, select **Add**.
 1. From the **Extension** dropdown list, select **Mobile Core**.
