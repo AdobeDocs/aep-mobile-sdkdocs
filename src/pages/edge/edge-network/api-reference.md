@@ -62,7 +62,7 @@ Sends an Experience event to Adobe Experience Platform Edge Network.
 
 <InlineAlert variant="info" slots="text"/>
 
-Starting with `Edge` extension version **2.4.0** (Android) and `AEPEdge` extension version **4.3.0** (iOS) onwards, the `sendEvent` API supports optional Datastream overrides. This allows you to adjust your datastreams without the need for new ones or modifications to existing settings.
+Starting with `Edge` extension version **2.4.0** (Android) and **4.3.0** (iOS), the `sendEvent` API supports optional datastream overrides. This allows you to adjust your datastreams without the need for new ones or modifications to existing settings.
 
 The process involves two steps:
 
