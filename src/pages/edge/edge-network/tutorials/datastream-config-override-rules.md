@@ -12,9 +12,11 @@ keywords:
 
 By default, all **Edge Experience events** are sent to the datastream specified in the **Adobe Experience Platform Edge Network** extension configuration settings. This tutorial offers examples on how to customize this configuration on a per-event basis
 
-<InlineAlert variant="info" slots="text"/>
+## Prerequisites
 
-Starting with `Edge` extension version **2.4.0** (Android) and **4.3.0** (iOS), the `sendEvent` API supports optional datastream overrides. For detailed information, please refer to the [sendEvent API reference](./api-reference.md#sendEvent).
+* [Edge](../../index.md) extension version >= **2.4.0** (Android) and >= **4.3.0** (iOS).
+* [Configure datastreams](../../../home/getting-started/configure-datastreams.md)
+* [Define overrides in your datastream configuration](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en)
 
 ## Steps to add datastream config overrides for Lifecycle Edge events using rules
 
