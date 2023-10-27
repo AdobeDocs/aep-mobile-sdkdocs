@@ -10,7 +10,7 @@ keywords:
 
 # Datastream config override for Edge events using Rules
 
-By default, all **Edge Experience events** are sent to the datastream specified in the **Adobe Experience Platform Edge Network** extension configuration settings. This tutorial offers examples on demonstrating how to customize this configuration on a per-event basis
+By default, all **Edge Experience events** are sent to the datastream specified in the **Adobe Experience Platform Edge Network** extension configuration settings. This tutorial offers examples on how to customize this configuration on a per-event basis
 
 <InlineAlert variant="info" slots="text"/>
 

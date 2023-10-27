@@ -399,7 +399,7 @@ Edge.sendEvent(experienceEvent) {
 }
 ```
 
-<Variant platform="ios" api="send-event" repeat="25"/>
+<Variant platform="ios" api="send-event" repeat="23"/>
 
 #### Swift
 
@@ -429,8 +429,8 @@ Edge.sendEvent(experienceEvent: experienceEvent)
 ```swift
 // Example 2 - send the Experience Event and handle the Edge Network response onComplete
 Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
-            // Handle the Edge Network response
-        }
+  // Handle the Edge Network response
+}
 ```
 
 ##### Example with Datastream ID override
@@ -453,7 +453,7 @@ Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) 
 var xdmData : [String: Any] = ["eventType" : "SampleXDMEvent",
                               "sample": "data"]
 
- let configOverrides: [String: Any] = [
+let configOverrides: [String: Any] = [
                                         "com_adobe_experience_platform": [
                                           "datasets": [
                                             "event": [
@@ -559,9 +559,7 @@ NSDictionary *configOverrides = @{ @"com_adobe_experience_platform" : @{
                                   }
 
 AEPExperienceEvent* event = [[AEPExperienceEvent alloc]initWithXdm:xdmData data:data datastreamConfigOverride: configOverrides];
-```
 
-```objectivec
 [AEPMobileEdge sendExperienceEvent:event completion:^(NSArray<AEPEdgeEventHandle *> * _Nonnull handles) {
   // Handle the Edge Network response
 }];
