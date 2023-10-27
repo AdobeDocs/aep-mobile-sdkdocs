@@ -20,12 +20,12 @@ Starting with `Edge` extension version **2.4.0** (Android) and **4.3.0** (iOS), 
 
 Let's add **datastream ID override** or **datastream config overrides** for `Lifecycle Edge` events of type **application.launch** and **application.close** by following the next steps.
 
-### 1. Add a new rule for your mobile property
+### Add a new rule for your mobile property
 
 Give your rule an easily recognizable name in your list of rules.
 In this example, the rule is named "Attach datastream config overrides Data to Lifecycle Edge events".
 
-### 2. Configure Lifecycle Edge Events
+### Configure Lifecycle Edge Events
 
 Now we need to add two Lifecycle Edge events one of type **application.launch** and other of type **application.close**.
 
@@ -51,11 +51,11 @@ Now we need to add two Lifecycle Edge events one of type **application.launch** 
 
 Save the event configuration and return to the Rule Editor UI.
 
-### 3. Configure Attach Data Action
+### Configure Attach Data Action
 
-Based on the use case you can **either** attach payload for the **datastream ID override** or for the **datastream config overrides**
+Based on the use case you can **either** attach payload for the **datastream ID override** or for the **datastream config overrides**:
 
-#### (Option 1) Configure the action to attach datastream ID override payload
+#### Configure the action to attach datastream ID override payload
 
 1. Under the **Actions** section, select **Add**.
 2. From the **Extension** dropdown list, select **Mobile Core**.
@@ -77,9 +77,7 @@ Based on the use case you can **either** attach payload for the **datastream ID 
 5. Select **Keep Changes**.
 6. Return to the Rule Editor UI.
 
-**OR**
-
-#### (Option 2) Configure the action to attach datastream config override payload
+#### Configure the action to attach datastream config override payload
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -113,9 +111,9 @@ In order to use this feature, configuration overrides in this case event dataset
 5. Select **Keep Changes**.
 6. Return to the Rule Editor UI.
 
-### 4. Save the Rule and publish the updated library
+### Save the Rule and publish the updated library
 
-Final Rule should look like this:
+The final rule should appear as follows:
 ![File Rules configuration](../assets/tutorial/configOverrides/final-rule-configoverrides.png)
 
 **Save** this Rule, **publish** the new Tags library with all the changes, and your rule will be set and ready. Now, Lifecycle Edge events of type **application.launch** and **application.close** will be sent with the overridden datastream ID or datastream config overrides payload.
