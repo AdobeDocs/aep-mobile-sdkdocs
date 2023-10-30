@@ -34,8 +34,8 @@ Add the AEPLifecycle extension and its dependency, the [Mobile Core](../index.md
 Add the following pods in your `Podfile`:
 
 ```pod
-pod 'AEPCore','~>3.0'
-pod 'AEPLifecycle','~>3.0'
+pod 'AEPCore'
+pod 'AEPLifecycle'
 ```
 
 Import the Lifecycle library:
@@ -98,8 +98,8 @@ super.onCreate();
 2. In the `onResume` function, start the lifecycle data collection:
 
 ```java
-    @Override  
-    public void onResume() {  
+    @Override
+    public void onResume() {
         MobileCore.setApplication(getApplication());
         MobileCore.lifecycleStart(null);
     }
@@ -138,7 +138,7 @@ If your iOS application supports background capabilities, your `application:didF
 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    let appState = application.applicationState            
+    let appState = application.applicationState
     MobileCore.registerExtensions([Lifecycle.self, ...], {
         if appState != .background {
         // only start lifecycle if the application is not in the background
@@ -151,7 +151,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 3. When launched, if your app is resuming from a backgrounded state, iOS might call your `applicationWillEnterForeground:` delegate method. You also need to call `lifecycleStart:`, but this time you do not need all of the supporting code that you used in `application:didFinishLaunchingWithOptions:`:
 
 ```swift
-func applicationWillEnterForeground(_ application: UIApplication) {    
+func applicationWillEnterForeground(_ application: UIApplication) {
     MobileCore.lifecycleStart(additionalContextData: nil)
 }
 ```
@@ -169,7 +169,7 @@ For more information on handling foregrounding applications with Scenes, refer t
 4. When the app enters the background, pause Lifecycle data collection from your app's `applicationDidEnterBackground:` delegate method:
 
 ```swift
-func applicationDidEnterBackground(_ application: UIApplication) {    
+func applicationDidEnterBackground(_ application: UIApplication) {
     MobileCore.lifecyclePause()
 }
 ```

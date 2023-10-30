@@ -126,6 +126,16 @@ module.exports = {
                                 path: "/edge/edge-network/validation"
                             },
                             {
+                                title: "Tutorials",
+                                path: "/edge/edge-network/tutorials",
+                                pages: [
+                                    {
+                                        title: "Datastream config overrides using rules",
+                                        path: "/edge/edge-network/tutorials/datastream-config-override-rules"
+                                    }
+                                ]
+                            },
+                            {
                                 title: "Release notes",
                                 path: "/edge/edge-network/release-notes"
                             }
