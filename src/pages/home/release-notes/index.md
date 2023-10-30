@@ -7,6 +7,18 @@ Keywords:
 
 # Release notes
 
+## October 27, 2023
+
+### iOS Edge 4.3.0
+
+* Added support to customize datastream configurations on a per-event basis using the sendEvent API.
+* Improved logging on connection failure.
+
+### Android Edge 2.4.0
+
+* Added support to customize datastream configurations on a per-event basis using the sendEvent API.
+* Improved logging on connection failure.
+
 ## October 24, 2023
 
 ### Android BOM 2.6.0
@@ -830,27 +842,27 @@ Please note that the current release includes the following changes:
 
 <AccordionItem header="Expand">
 
-| Extension artifact | BOM (1.0.0-beta1) | BOM (1.0.0) |  
-|-----|-----|-----|  
-| **com.adobe.marketing.mobile:core** | **2.1.1** | **2.2.0**|  
-| **com.adobe.marketing.mobile:lifecycle** | **2.0.1** | **2.0.2**|  
-| **com.adobe.marketing.mobile:campaign** | **2.0.2** | **2.0.4**|  
-| **com.adobe.marketing.mobile:assurance** | **2.0.1** | **2.1.0**|  
-| **com.adobe.marketing.mobile:edge** | **2.0.0** | **2.1.0**|  
-| **com.adobe.marketing.mobile:messaging** | **2.1.1** | **2.1.4**|  
-| com.adobe.marketing.mobile:identity | 2.0.2 | 2.0.2 |  
-| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |  
-| com.adobe.marketing.mobile:userprofile | 2.0.0 | 2.0.0 |  
-| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |  
-| com.adobe.marketing.mobile:optimize | 2.0.0 | 2.0.0 |  
-| com.adobe.marketing.mobile:edgeidentity | 2.0.0 | 2.0.0 |  
-| com.adobe.marketing.mobile:edgebridge | 2.0.0 | 2.0.0 |  
-| com.adobe.marketing.mobile:places | 2.0.0 | 2.0.0 |  
-| com.adobe.marketing.mobile:analytics | 2.0.2 | 2.0.2 |  
-| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |  
-| com.adobe.marketing.mobile:target | 2.0.0 | 2.0.0 |  
-| com.adobe.marketing.mobile:campaignclassic | 2.0.0 | 2.0.0 |  
-| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |  
+| Extension artifact | BOM (1.0.0-beta1) | BOM (1.0.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:core** | **2.1.1** | **2.2.0**|
+| **com.adobe.marketing.mobile:lifecycle** | **2.0.1** | **2.0.2**|
+| **com.adobe.marketing.mobile:campaign** | **2.0.2** | **2.0.4**|
+| **com.adobe.marketing.mobile:assurance** | **2.0.1** | **2.1.0**|
+| **com.adobe.marketing.mobile:edge** | **2.0.0** | **2.1.0**|
+| **com.adobe.marketing.mobile:messaging** | **2.1.1** | **2.1.4**|
+| com.adobe.marketing.mobile:identity | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:userprofile | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:optimize | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:places | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:analytics | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:target | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaignclassic | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
 
 </AccordionItem>
 
@@ -1444,7 +1456,7 @@ For an end-to-end guide on how to use the extension, see the [Edge Bridge tutori
 
 ### Adobe Journey Optimizer - Decisioning extension 1.0.0
 
-`Adobe Journey Optimizer - Decisioning` extension is now available in the extensions catalog on the Data Collection UI for mobile Tag Properties. No configuration is necessary for this extension.  
+`Adobe Journey Optimizer - Decisioning` extension is now available in the extensions catalog on the Data Collection UI for mobile Tag Properties. No configuration is necessary for this extension.
 
 ## June 9, 2022
 
