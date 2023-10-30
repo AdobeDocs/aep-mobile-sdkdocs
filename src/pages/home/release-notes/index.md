@@ -7,6 +7,13 @@ Keywords:
 
 # Release notes
 
+## October 30, 2023
+
+### Android Core 2.5.1
+
+* Fixed a resource leak in `StreamUtils`.
+* Fixed a crash when displaying in-app messages.
+
 ## October 27, 2023
 
 ### iOS Edge 4.3.0
