@@ -9,6 +9,19 @@ Keywords:
 
 ## October 30, 2023
 
+### Android BOM 2.7.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+
+</AccordionItem>
+
+</Accordion>
+
 ### Android Core 2.5.1
 
 * Fixed a resource leak in `StreamUtils`.
