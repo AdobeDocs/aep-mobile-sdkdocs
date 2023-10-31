@@ -101,7 +101,7 @@ var reqGet = https.request(options, function(res) {
                         const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October","November","December"]
                         const fullMonth = monthNames[month]
 
-                        const releaseMdPath = "./src/pages/documentation/release-notes/index.md";
+                        const releaseMdPath = "./src/pages/home/release-notes/index.md";
 
                         const releaseNotesHeader = "# Release notes";
                         // Read the contents of the markdown file.
@@ -109,7 +109,7 @@ var reqGet = https.request(options, function(res) {
                         // Find the index of the release notes header.
                         const releaseNotesHeaderIndex = contentArray.indexOf(releaseNotesHeader);
 
-                        if (releaseFileContainsLineStartWith(`### Android BOM  ${version}`) == true) {
+                        if (releaseFileContainsLineStartWith(`### Android BOM ${version}`) == true) {
                             console.error("already updated")
                             return
                         }
@@ -118,9 +118,9 @@ var reqGet = https.request(options, function(res) {
                         
                         if (releaseFileContainsLineStartWith(dateLine) == true) {
                             const existingDateLine = contentArray.indexOf(dateLine);
-                            contentArray.splice(existingDateLine + 1,0,"",`### Android BOM  ${version}`, "",updateBOMReleaseNotesForAdobeIO(releaseNotes));
+                            contentArray.splice(existingDateLine + 1,0,"",`### Android BOM ${version}`, "",updateBOMReleaseNotesForAdobeIO(releaseNotes));
                         } else {
-                            contentArray.splice(releaseNotesHeaderIndex + 1,0,"",dateLine,"",`### Android BOM  ${version}`, "",updateBOMReleaseNotesForAdobeIO(releaseNotes));
+                            contentArray.splice(releaseNotesHeaderIndex + 1,0,"",dateLine,"",`### Android BOM ${version}`, "",updateBOMReleaseNotesForAdobeIO(releaseNotes));
                         }
                         
                         fs.writeFile(releaseMdPath, contentArray.join("\n"), function (err) {
@@ -166,7 +166,7 @@ function updateBOMReleaseNotesForAdobeIO(releaseNotesString) {
 
 function releaseFileContainsLineStartWith(lineStartWithString){
     try {
-        execSync(`grep -E "^${lineStartWithString}" ./src/pages/documentation/release-notes/index.md`, { stdio: 'ignore' });
+        execSync(`grep -E "^${lineStartWithString}" ./src/pages/home/release-notes/index.md`, { stdio: 'ignore' });
         return true;
       } catch (e) {
         return false;
