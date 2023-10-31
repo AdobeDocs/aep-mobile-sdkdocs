@@ -15,6 +15,7 @@ keywords:
 * Migrates storage from UserDefaults to iOS file system.
 
 <InlineAlert variant="info" slots="text"/>
+
 Downgrading from this version of Core is unsupported, as it will cause undefined behavior.
 
 ## October 30, 2023
