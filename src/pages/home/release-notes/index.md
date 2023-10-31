@@ -7,6 +7,12 @@ Keywords:
 
 # Release notes
 
+## October 31, 2023
+
+### iOS Core 4.2.0
+
+* Migrates storage from UserDefaults to iOS file system.
+
 ## October 30, 2023
 
 ### Android BOM 2.7.0
