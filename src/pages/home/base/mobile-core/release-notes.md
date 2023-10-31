@@ -6,7 +6,14 @@ keywords:
 - Release notes
 ---
 
-# Release Notes
+# Release notes
+
+## October 30, 2023
+
+### Android Core 2.5.1
+
+* Fixed a resource leak in `StreamUtils`.
+* Fixed a crash when displaying in-app messages.
 
 ## September 28, 2023
 

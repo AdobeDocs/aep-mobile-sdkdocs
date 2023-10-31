@@ -1,12 +1,12 @@
 ---
-title: Adobe Analytics Release Notes
+title: Adobe Analytics release notes
 description: The release notes for the Adobe Analytics mobile extension.
 keywords:
 - Adobe Analytics
 - Release notes
 ---
 
-# Release Notes
+# Release notes
 
 ## July 26, 2023
 

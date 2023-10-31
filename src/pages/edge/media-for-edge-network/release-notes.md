@@ -7,7 +7,7 @@ keywords:
 - Media for Edge Network
 ---
 
-# Release Notes
+# Release notes
 
 ## June 6, 2023
 
