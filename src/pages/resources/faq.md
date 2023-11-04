@@ -52,6 +52,12 @@ To delete a mobile property in the Data Collection UI, please read the [delete a
 
 If you delete a mobile property, you cannot undo this action!
 
+## Can I safely upgrade extensions within a mobile property in the Data Collection UI for published apps?
+
+Yes, you can safely upgrade extensions within the mobile property. All changes are designed to be backward compatible and will only take effect in your app after you [republish](../home/getting-started/create-a-mobile-property.md#publish-the-configuration) the mobile property.
+
+Additionally, the installation instructions in the mobile property will be refreshed to include the latest versions of mobile platform extensions. These instructions are primarily necessary during the development phase and will be updated even before the property is published.
+
 ## General implementation and migration
 
 ### Where can I download the SDK?
