@@ -27,7 +27,8 @@ module.exports = {
                 menu: [
                     {
                         title: "Latest version",
-                        path: "/home"
+                        path: "/home",
+                        selected: true
                     },
                     {
                         title: "Previous versions",
