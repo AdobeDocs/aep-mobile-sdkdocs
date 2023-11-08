@@ -11,16 +11,6 @@
  */
 module.exports = {
     siteMetadata: {
-        // versions: [{
-        //         title: 'Latest version',
-        //         path: '/client-sdks/',
-        //         selected: true
-        //     },
-        //     {
-        //         title: 'Previous versions',
-        //         path: '/client-sdks/previous-versions/'
-        //     }
-        // ],
         pages: [
             {
                 title: "Versions",
