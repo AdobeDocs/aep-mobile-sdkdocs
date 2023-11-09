@@ -35,7 +35,8 @@ The Mobile SDK for iOS now supports a minimum iOS version of 11.0 and a tvOS ver
 ## Migrate from Adobe Experience Platform 3.x SDK libraries
 
 If you have implemented Adobe Experience Platform 3.x SDK libraries, then this guide will help you understand the steps required to migrate your implementation to the Experience Platform 4.x SDK libraries. In summary, you'll need to:
-1. [Update dependencies](#switch-imported-libraries)
+
+1. [Update dependencies](#update-dependencies)
 2. [Update outdated API references](#update-outdated-api-references)
 
 ### Update dependencies

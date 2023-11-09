@@ -270,4 +270,3 @@ import com.adobe.marketing.mobile.places.PlacesAuthorizationStatus;
 import com.adobe.marketing.mobile.places.PlacesPOI;
 import com.adobe.marketing.mobile.places.PlacesRequestError;
 ```
-

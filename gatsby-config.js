@@ -635,7 +635,7 @@ module.exports = {
                         ]
                     }
                 ]
-            },            
+            },
             {
                 title: "Resources",
                 path: "/resources",
