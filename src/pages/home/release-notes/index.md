@@ -1247,8 +1247,8 @@ Note that all these extensions must be updated together.
 
 For help on moving to these versions, and information on deprecated APIs please see:
 
-* [Migration guide](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-android)
-* [Migration FAQ](../resources/faq.md#migrating-to-android-mobile-core-2x-and-compatible-extensions)
+* [Migration guide](../../resources/migration/android/migrate-to-2x.md)
+* [Migration FAQ](../../resources/migration/android/migrate-to-2x.md#frequently-asked-questions)
 
 ## February 17, 2023
 

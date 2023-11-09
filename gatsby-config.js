@@ -709,8 +709,8 @@ module.exports = {
                         title: "Android",
                         path: "/resources/migration/android",
                         pages: [{
-                                title: "Migrate to Android 2.x SDKs",
-                                path: "/resources/migration/android/migrate-to-android-2x"
+                                title: "Migrate to 2.x SDKs",
+                                path: "/resources/migration/android/migrate-to-2x"
                             }
                         ]
                     },
@@ -718,12 +718,12 @@ module.exports = {
                         title: "iOS",
                         path: "/resources/migration/ios",
                         pages: [{
-                                title: "Migrate to iOS 3.x SDKs",
-                                path: "/resources/migration/ios/migrate-to-ios-3x"
+                                title: "Migrate to 3.x SDKs",
+                                path: "/resources/migration/ios/migrate-to-3x"
                             },
                             {
-                                title: "Migrate to iOS 4.x SDKs",
-                                path: "/resources/migration/ios/migrate-to-ios-4x"
+                                title: "Migrate to 4.x SDKs",
+                                path: "/resources/migration/ios/migrate-to-4x"
                             }
                         ]
                     }

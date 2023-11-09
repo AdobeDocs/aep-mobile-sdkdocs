@@ -1,4 +1,4 @@
-import Tabs from './tabs/migrate-to-ios-4x.md'
+import Tabs from './tabs/migrate-to-4x.md'
 
 # Migrate to Adobe Experience Platform Mobile 4.x SDKs for iOS
 
@@ -32,9 +32,9 @@ The Mobile SDK for iOS now supports a minimum iOS version of 11.0 and a tvOS ver
 | [Adobe Campaign Classic](../../../solution/adobe-campaign-classic/index.md) | ![Version](https://img.shields.io/github/v/release/adobe/aepsdk-campaignclassic-ios.svg?label=AEPCampaignClassic&logo=apple&logoColor=white&color=orange&sort=semver&filter=4*) |
 | [Adobe Audience Manager](../../../solution/adobe-audience-manager/index.md) | ![Version](https://img.shields.io/github/v/release/adobe/aepsdk-audience-ios.svg?label=AEPAudience&logo=apple&logoColor=white&color=orange&sort=semver&filter=4*) |
 
-## Migrate from Adobe Experience Platform 3.x SDK libraries
+## Migrate from Adobe Experience Platform 3.x SDKs for iOS
 
-If you have implemented Adobe Experience Platform 3.x SDK libraries, then this guide will help you understand the steps required to migrate your implementation to the Experience Platform 4.x SDK libraries. In summary, you'll need to:
+If you have implemented Adobe Experience Platform 3.x SDKs for iOS, then this guide will help you understand the steps required to migrate your implementation to the Experience Platform 4.x SDKs. In summary, you'll need to:
 
 1. [Update dependencies](#update-dependencies)
 2. [Update outdated API references](#update-outdated-api-references)

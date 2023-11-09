@@ -1,4 +1,4 @@
-<Variant platform="java" repeat="1"/>
+<Variant lang="java" repeat="1"/>
 
 ```java
 public class MainApp extends Application {
@@ -24,7 +24,7 @@ public class MainApp extends Application {
 
 ```
 
-<Variant platform="kotlin" repeat="1"/>
+<Variant lang="kotlin" repeat="1"/>
 
 ```kotlin
 class MyApp : Application() {

@@ -1,4 +1,4 @@
-<Variant platform="obj-c" repeat="1"/>
+<Variant lang="obj-c" repeat="1"/>
 
 ```objc
 @import AEPCore;
@@ -25,7 +25,7 @@
 }
 ```
 
-<Variant platform="swift" repeat="1"/>
+<Variant lang="swift" repeat="1"/>
 
 ```swift
 // AppDelegate.swift

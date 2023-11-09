@@ -1,4 +1,4 @@
-import Tabs from './tabs/migrate-to-ios-3x.md'
+import Tabs from './tabs/migrate-to-3x.md'
 
 # Migrate to Adobe Experience Platform 3.x Mobile SDKs for iOS
 
@@ -31,7 +31,7 @@ The Mobile SDK for iOS now supports a minimum iOS version of 10.0 and a tvOS ver
 | [Adobe Campaign Classic](../../../solution/adobe-campaign-classic/index.md) | ![Version](https://img.shields.io/github/v/release/adobe/aepsdk-campaignclassic-ios.svg?label=AEPCampaignClassic&logo=apple&logoColor=white&color=orange&sort=semver&filter=3*) |
 | [Adobe Audience Manager](../../../solution/adobe-audience-manager/index.md) | ![Version](https://img.shields.io/github/v/release/adobe/aepsdk-audience-ios.svg?label=AEPAudience&logo=apple&logoColor=white&color=orange&sort=semver&filter=3*) |
 
-## Migrate from ACP-prefixed SDK libraries
+## Migrate from ACP-prefixed SDKs for iOS
 
 If you have implemented Objective-C versions (ACP-prefixed SDK libraries, 2.x or lower), then this guide will help you understand the steps required to migrate your implementation to the Swift versions (AEP-prefixed 3.x SDK libraries). In summary, you'll need to:
 
@@ -99,11 +99,11 @@ The following code snippets show the new and correct initialization code require
 
 Objective-C
 
-<Tabs query="platform=obj-c"/>
+<Tabs query="lang=obj-c"/>
 
 Swift
 
-<Tabs query="platform=swift"/>
+<Tabs query="lang=swift"/>
 
 ## Update outdated API references
 

@@ -1,4 +1,4 @@
-import Tabs from './tabs/migrate-to-android-2x.md'
+import Tabs from './tabs/migrate-to-2x.md'
 
 # Migrate to Adobe Experience Platform Mobile 2.x SDKs for Android
 
@@ -45,9 +45,9 @@ Mobile SDK for Android now supports a minimum API level of 19.
 | [Adobe Campaign Classic](../../../solution/adobe-campaign-classic/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/campaignclassic.svg?logo=android&logoColor=white&label=campaignclassic&style=flat-square&versionPrefix=2)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/campaignclassic) |
 | [Adobe Audience Manager](../../../solution/adobe-audience-manager/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/audience.svg?logo=android&logoColor=white&label=audience&style=flat-square&versionPrefix=2)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/audience) |
 
-## Migrate from Adobe Experience Platform 1.x SDK libraries
+## Migrate from Adobe Experience Platform 1.x SDKs for Android
 
-If you have implemented Adobe Experience Platform 1.x SDK libraries, then this guide will help you understand the steps required to migrate your implementation to the Experience Platform 2.x SDK libraries. In summary, you'll need to:
+If you have implemented Adobe Experience Platform 1.x SDKs for Android, then this guide will help you understand the steps required to migrate your implementation to the Experience Platform 2.x SDKs. In summary, you'll need to:
 
 1. [Update dependencies](#update-dependencies)
 2. [Update SDK initialization](#update-sdk-initialization)
@@ -98,11 +98,11 @@ The following code snippets show the recommended initialization code for the 2.x
 
 Java
 
-<Tabs query="platform=java"/>
+<Tabs query="lang=java"/>
 
 Kotlin
 
-<Tabs query="platform=kotlin"/>
+<Tabs query="lang=kotlin"/>
 
 ## Update outdated API references
 
