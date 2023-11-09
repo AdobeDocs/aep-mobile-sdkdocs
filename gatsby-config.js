@@ -22,7 +22,7 @@ module.exports = {
                     },
                     {
                         title: "Previous versions",
-                        path: '/client-sdks/previous-versions/'
+                        path: '/previous-versions/'
                     }
                 ]
             },
