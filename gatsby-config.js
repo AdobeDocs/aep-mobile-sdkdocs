@@ -631,7 +631,7 @@ module.exports = {
                         ]
                     }
                 ]
-            },
+            },            
             {
                 title: "Resources",
                 path: "/resources",
@@ -697,6 +697,32 @@ module.exports = {
                         path: "/resources/privacy-announcement"
                     }
 
+                ]
+            },{
+                title: "Migration",
+                path: "/resources/migration",
+                pages: [{
+                        title: "Android",
+                        path: "/resources/migration/android",
+                        pages: [{
+                                title: "Migrate to Android 2.x SDKs",
+                                path: "/resources/migration/android/migrate-to-android-2x"
+                            }
+                        ]
+                    },
+                    {
+                        title: "iOS",
+                        path: "/resources/migration/ios",
+                        pages: [{
+                                title: "Migrate to iOS 3.x SDKs",
+                                path: "/resources/migration/ios/migrate-to-ios-3x"
+                            },
+                            {
+                                title: "Migrate to iOS 4.x SDKs",
+                                path: "/resources/migration/ios/migrate-to-ios-4x"
+                            }
+                        ]
+                    }
                 ]
             },
             {
