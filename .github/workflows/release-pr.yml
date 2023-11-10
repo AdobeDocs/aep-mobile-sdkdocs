@@ -40,11 +40,11 @@ jobs:
      
       - name: Check release-notes/index.md
         run: |
-          if git diff --exit-code ./src/pages/documentation/release-notes/index.md; then
+          if git diff --exit-code ./src/pages/home/release-notes/index.md; then
             gh run cancel ${{ github.run_id }}
             gh run watch ${{ github.run_id }}
           else
-            echo "./src/pages/documentation/release-notes/index.md -> no update"
+            echo "./src/pages/home/release-notes/index.md -> no update"
           fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

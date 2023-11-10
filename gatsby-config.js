@@ -11,577 +11,181 @@
  */
 module.exports = {
     siteMetadata: {
-        versions: [
+        pages: [
             {
-                title: 'Latest version',
-                path: '/client-sdks/documentation/',
-                selected: true
-              },
-              {
-                title: 'Previous versions',
-                path: '/client-sdks/previous-versions/'
-              }
-          ],
-        pages: [{
-            title: 'Documentation',
-            path: '/documentation',
-        }],
+                title: "Versions",
+                menu: [
+                    {
+                        title: "Latest version",
+                        path: "/home",
+                        selected: true
+                    },
+                    {
+                        title: "Previous versions",
+                        path: '/previous-versions/'
+                    }
+                ]
+            },
+            {
+                title: "Home",
+                path: "/home"
+            },
+            {
+                title: 'Edge Network extensions',
+                path: '/edge',
+            },
+            {
+                title: "Solution-specific extensions",
+                path: "/solution"
+            },
+            {
+                title: "Resources",
+                path: "/resources"
+            }
+        ],
         subPages: [
             {
                 title: "Home",
-                path: "/documentation"
+                path: "/home"
             },
             {
                 title: "Current SDK versions",
-                path: "documentation/current-sdk-versions"
+                path: "/home/current-sdk-versions"
             },
             {
                 title: "Release notes",
-                path: "/documentation/release-notes",
-                pages: [
-                    {
+                path: "/home/release-notes",
+                pages: [{
                         title: "2023",
-                        path: "/documentation/release-notes"
+                        path: "/home/release-notes"
                     },
                     {
                         title: "2022",
-                        path: "/documentation/release-notes/2022"
+                        path: "/home/release-notes/2022"
                     },
                     {
                         title: "2021",
-                        path: "/documentation/release-notes/2021"
+                        path: "/home/release-notes/2021"
                     }
                 ]
             },
             {
                 title: "Getting started",
-                path: "/documentation/getting-started",
-                pages: [
-                    {
+                path: "/home/getting-started",
+                pages: [{
                         title: "Overview",
-                        path: "/documentation/getting-started"
+                        path: "/home/getting-started"
                     },
                     {
                         title: "Set up schemas and datasets",
-                        path: "/documentation/getting-started/set-up-schemas-and-datasets"
+                        path: "/home/getting-started/set-up-schemas-and-datasets"
                     },
                     {
                         title: "Configure datastreams",
-                        path: "/documentation/getting-started/configure-datastreams"
+                        path: "/home/getting-started/configure-datastreams"
                     },
                     {
                         title: "Set up a mobile property",
-                        path: "/documentation/getting-started/create-a-mobile-property"
+                        path: "/home/getting-started/create-a-mobile-property"
                     },
                     {
                         title: "Get the Experience Platform SDK",
-                        path: "/documentation/getting-started/get-the-sdk"
+                        path: "/home/getting-started/get-the-sdk"
                     },
                     {
                         title: "Debugging and lifecycle metrics",
-                        path: "/documentation/getting-started/enable-debug-logging"
+                        path: "/home/getting-started/enable-debug-logging"
                     },
                     {
                         title: "Track events",
-                        path: "/documentation/getting-started/track-events"
+                        path: "/home/getting-started/track-events"
                     },
                     {
                         title: "Validation and next steps",
-                        path: "/documentation/getting-started/validate"
+                        path: "/home/getting-started/validate"
                     }
                 ]
             },
             {
-                title: "Mobile Foundation extensions",
-                path: "/documentation/mobile-foundation-extensions",
+                title: "Edge Network extensions",
+                path: "/edge",
                 pages: [
                     {
-                        title: "Overview",
-                        path: "/documentation/mobile-foundation-extensions"
-                    },
-                    {
-                        title: "Mobile Core",
-                        path: "/documentation/mobile-core",
-                        pages: [
-                            {
-                                title: "Overview",
-                                path: "/documentation/mobile-core"
-                            },
-                            {
-                                title: "Configuration",
-                                path: "documentation/mobile-core/configuration",
-                                pages: [
-                                    {
-                                        title: "Overview",
-                                        path: "documentation/mobile-core/configuration"
-                                    },
-                                    {
-                                        title: "API reference",
-                                        path: "documentation/mobile-core/configuration/api-reference"
-                                    }
-                                ]
-                            },
-                            {
-                                title: "Identity",
-                                path: "documentation/mobile-core/identity",
-                                pages: [
-                                    {
-                                        title: "Overview",
-                                        path: "documentation/mobile-core/identity"
-                                    },
-                                    {
-                                        title: "API reference",
-                                        path: "documentation/mobile-core/identity/api-reference"
-                                    },
-                                    {
-                                        title: "Push identifier sync",
-                                        path: "documentation/mobile-core/identity/push-sync"
-                                    }
-                                ]
-                            },
-                            {
-                                title: "Lifecycle",
-                                path: "documentation/mobile-core/lifecycle",
-                                pages: [
-                                    {
-                                        title: "Overview",
-                                        path: "documentation/mobile-core/lifecycle"
-                                    },
-                                    {
-                                        title: "Lifecycle extension in Android",
-                                        path: "documentation/mobile-core/lifecycle/android"
-                                    },
-                                    {
-                                        title: "Lifecycle extension in iOS",
-                                        path: "documentation/mobile-core/lifecycle/ios"
-                                    },
-                                    {
-                                        title: "API reference",
-                                        path: "documentation/mobile-core/lifecycle/api-reference"
-                                    },
-                                    {
-                                        title: "Metrics",
-                                        path: "documentation/mobile-core/lifecycle/metrics"
-                                    },
-                                    {
-                                        title: "Configuration keys",
-                                        path: "documentation/mobile-core/lifecycle/configuration-keys"
-                                    }
-                                ]
-                            },
-                            {
-                                title: "Platform services",
-                                path: "documentation/mobile-core/platform-services",
-                                pages: [
-                                    {
-                                        title: "Overview",
-                                        path: "documentation/mobile-core/platform-services"
-                                    },
-                                    {
-                                        title: "Network service",
-                                        path: "documentation/mobile-core/platform-services/network-service"
-                                    }
-                                ]
-                            },
-                            {
-                                title: "Rules Engine",
-                                path: "documentation/mobile-core/rules-engine",
-                                pages: [
-                                    {
-                                        title: "Overview",
-                                        path: "documentation/mobile-core/rules-engine"
-                                    },
-                                    {
-                                        title: "Technical details",
-                                        path: "documentation/mobile-core/rules-engine/technical-details"
-                                    },
-                                    {
-                                        title: "Consequence details",
-                                        path: "documentation/mobile-core/rules-engine/consequence-details"
-                                    }
-                                ]
-                            },
-                            {
-                                title: "Signal",
-                                path: "documentation/mobile-core/signal",
-                                pages: [
-                                    {
-                                        title: "Overview",
-                                        path: "documentation/mobile-core/signal"
-                                    },
-                                    {
-                                        title: "API reference",
-                                        path: "documentation/mobile-core/signal/api-reference"
-                                    },
-                                    {
-                                        title: "Signal and Rules Engine integration",
-                                        path: "documentation/mobile-core/signal/rules-engine-integration.md"
-                                    }
-                                ]
-                            },
-                            {
-                                title: "API reference",
-                                path: "documentation/mobile-core/api-reference"
-                            },
-                            {
-                                title: "Release notes",
-                                path: "documentation/mobile-core/release-notes"
-                            }
-                        ]
-                    },
-                    {
                         title: "Adobe Experience Platform Edge Network",
-                        path: "/documentation/edge-network",
-                        pages: [
-                            {
+                        path: "/edge/edge-network",
+                        pages: [{
                                 title: "Overview",
-                                path: "/documentation/edge-network"
+                                path: "/edge/edge-network"
                             },
                             {
                                 title: "API reference",
-                                path: "/documentation/edge-network/api-reference"
+                                path: "/edge/edge-network/api-reference"
                             },
                             {
                                 title: "XDM Experience Events",
-                                path: "/documentation/edge-network/xdm-experience-events"
+                                path: "/edge/edge-network/xdm-experience-events"
                             },
                             {
                                 title: "Validation",
-                                path: "/documentation/edge-network/validation"
+                                path: "/edge/edge-network/validation"
+                            },
+                            {
+                                title: "Tutorials",
+                                path: "/edge/edge-network/tutorials",
+                                pages: [
+                                    {
+                                        title: "Datastream config overrides using rules",
+                                        path: "/edge/edge-network/tutorials/datastream-config-override-rules"
+                                    }
+                                ]
                             },
                             {
                                 title: "Release notes",
-                                path: "/documentation/edge-network/release-notes"
-                            }
-                        ]
-                    },
-                    {
-                        title: "Consent for Edge Network",
-                        path: "/documentation/consent-for-edge-network",
-                        pages: [
-                            {
-                                title: "Overview",
-                                path: "/documentation/consent-for-edge-network"
-                            },
-                            {
-                                title: "API reference",
-                                path: "documentation/consent-for-edge-network/api-reference"
-                            },
-                            {
-                                title: "Release notes",
-                                path: "documentation/consent-for-edge-network/release-notes"
-                            }
-                        ]
-                    },
-                    {
-                        title: "Identity for Edge Network",
-                        path: "/documentation/identity-for-edge-network",
-                        pages: [
-                            {
-                                title: "Overview",
-                                path: "/documentation/identity-for-edge-network"
-                            },
-                            {
-                                title: "API reference",
-                                path: "documentation/identity-for-edge-network/api-reference"
-                            },
-                            {
-                                title: "Frequently asked questions",
-                                path: "documentation/identity-for-edge-network/faq"
-                            },
-                            {
-                                title: "Release notes",
-                                path: "documentation/identity-for-edge-network/release-notes"
-                            }
-                        ]
-                    },
-                    {
-                        title: "Lifecycle for Edge Network",
-                        path: "/documentation/lifecycle-for-edge-network",
-                        pages: [
-                            {
-                                title: "Overview",
-                                path: "/documentation/lifecycle-for-edge-network"
-                            },
-                            {
-                                title: "API reference",
-                                path: "documentation/lifecycle-for-edge-network/api-reference"
-                            },
-                            {
-                                title: "Event reference",
-                                path: "documentation/lifecycle-for-edge-network/event-reference"
-                            },
-                            {
-                                title: "Metrics",
-                                path: "documentation/lifecycle-for-edge-network/metrics"
-                            }
-                        ]
-                    },
-                    {
-                        title: "Adobe Experience Platform Assurance",
-                        path: "/documentation/platform-assurance-sdk",
-                        pages: [
-                            {
-                                title: "Overview",
-                                path: "/documentation/platform-assurance-sdk"
-                            },
-                            {
-                                title: "API reference",
-                                path: "/documentation/platform-assurance-sdk/api-reference"
-                            },
-                            {
-                                title: "Resolving common issues",
-                                path: "/documentation/platform-assurance-sdk/common-issues/"
-                            },
-                            {
-                                title: "Release notes",
-                                path: "/documentation/platform-assurance-sdk/release-notes"
-                            }
-                        ]
-                    },
-
-
-            {
-                title: "Adobe Experience Platform Location Service",
-                path: "/documentation/places",
-                pages: [
-                    {
-                        title: "Overview",
-                        path: "/documentation/places"
-                    },
-                    {
-                        title: "API reference",
-                        path: "documentation/places/api-reference.md"
-                    },
-                    {
-                        title: "Event forwarding to Adobe Experience Platform",
-                        path: "documentation/places/places-to-platform.md"
-                    },
-                    {
-                        title: "Release notes",
-                        path: "documentation/places/release-notes.md"
-                    }
-                ]
-            },
-            {
-                title: "Profile",
-                path: "/documentation/profile",
-                pages: [
-                    {
-                        title: "Overview",
-                        path: "/documentation/profile"
-                    },
-                    {
-                        title: "API reference",
-                        path: "documentation/profile/api-reference"
-                    },
-                    {
-                        title: "Release notes",
-                        path: "documentation/profile/release-notes"
-                    }
-                ]
-            }
-                ]
-            },
-            {
-                title: "Experience Cloud extensions",
-                path: "/documentation/experience-cloud-extensions",
-                pages: [
-                    {
-                        title: "Overview",
-                        path: "/documentation/experience-cloud-extensions"
-                    },
-                    {
-                        title: 'Adobe Analytics',
-                        path: '/documentation/adobe-analytics/',
-                        pages: [
-                            {
-                                title: "Overview",
-                                path: "/documentation/adobe-analytics"
-                            },
-                            {
-                                title: 'Migrate to Edge Network',
-                                path: '/documentation/adobe-analytics/migrate-to-edge-network'
-                            },
-                            {
-                                title: "API reference",
-                                path: "/documentation/adobe-analytics/api-reference"
-                            },
-                            {
-                                title: 'Event reference',
-                                path: '/documentation/adobe-analytics/event-reference'
-                            },
-                            {
-                                title: "Product variable",
-                                path: "/documentation/adobe-analytics/product-variable"
-                            },
-                            {
-                                title: "Tracking beacons",
-                                path: "/documentation/adobe-analytics/track-beacon"
-                            },
-                            {
-                                title: "Frequently asked questions",
-                                path: "/documentation/adobe-analytics/faq"
-                            },
-                            {
-                                title: 'Release notes',
-                                path: '/documentation/adobe-analytics/release-notes'
-                            }
-                        ]
-                    },
-                    {
-                        title: "Adobe Streaming Media for Edge Network",
-                        path: "/documentation/media-for-edge-network",
-                        pages: [
-                            {
-                                title: "Overview",
-                                path: "/documentation/media-for-edge-network"
-                            },
-                            {
-                                title: "API reference",
-                                path: "documentation/media-for-edge-network/api-reference"
-                            },
-                            {
-                                title: 'Release notes',
-                                path: '/documentation/media-for-edge-network/release-notes'
-                            }
-                        ]
-                    },
-                    {
-                        title: "Adobe Media Analytics",
-                        path: "/documentation/adobe-media-analytics",
-                        pages: [
-                            {
-                                title: "Overview",
-                                path: "/documentation/adobe-media-analytics"
-                            },
-                            {
-                                title: "API reference",
-                                path: "documentation/adobe-media-analytics/api-reference"
-                            },
-                            {
-                                title: "Release notes",
-                                path: "documentation/adobe-media-analytics/release-notes"
-                            },
-                            {
-                                title: "Migration Guide",
-                                path: "/documentation/adobe-media-analytics/migration-guide"
-                            },
-                        ]
-                    },
-                    {
-                        title: "Adobe Audience Manager",
-                        path: "/documentation/adobe-audience-manager/",
-                        pages: [
-                            {
-                                title: "Overview",
-                                path: "/documentation/adobe-audience-manager/"
-                            },
-                            {
-                                title: "API reference",
-                                path: "documentation/adobe-audience-manager/api-reference"
-                            },
-                            {
-                                title: "Event reference",
-                                path: "documentation/adobe-audience-manager/event-reference"
-                            },
-                            {
-                                title: "Release notes",
-                                path: "/documentation/adobe-audience-manager/release-notes"
-                            }
-                        ]
-                    },
-                    {
-                        title: "Adobe Campaign Classic",
-                        path: "/documentation/adobe-campaign-classic",
-                        pages: [
-                            {
-                                title: "Overview",
-                                path: "/documentation/adobe-campaign-classic"
-                            },
-                            {
-                                title: "API reference",
-                                path: "documentation/adobe-campaign-classic/api-reference"
-                            },
-                            {
-                                title: "Event reference",
-                                path: "documentation/adobe-campaign-classic/event-reference"
-                            },
-                            {
-                                title: "Release notes",
-                                path: "documentation/adobe-campaign-classic/release-notes"
-                            }
-                        ]
-                    },
-                    {
-                        title: "Adobe Campaign Standard",
-                        path: "/documentation/adobe-campaign-standard",
-                        pages: [
-                            {
-                                title: "Overview",
-                                path: "/documentation/adobe-campaign-standard"
-                            },
-                            {
-                                title: "API reference",
-                                path: "documentation/adobe-campaign-standard/api-reference"
-                            },
-                            {
-                                title: "Event reference",
-                                path: "documentation/adobe-campaign-standard/event-reference"
-                            },
-                            {
-                                title: "Campaign push notifications",
-                                path: "documentation/adobe-campaign-standard/push-notifications"
-                            },
-                            {
-                                title: "Release notes",
-                                path: "documentation/adobe-campaign-standard/release-notes"
+                                path: "/edge/edge-network/release-notes"
                             }
                         ]
                     },
                     {
                         title: "Adobe Journey Optimizer",
-                        path: "/documentation/adobe-journey-optimizer",
-                        pages: [
-                            {
+                        path: "/edge/adobe-journey-optimizer",
+                        pages: [{
                                 title: "Overview",
-                                path: "/documentation/adobe-journey-optimizer"
+                                path: "/edge/adobe-journey-optimizer"
                             },
                             {
                                 title: "API reference",
-                                path: "documentation/adobe-journey-optimizer/api-reference"
+                                path: "/edge/adobe-journey-optimizer/api-reference"
                             },
                             {
                                 title: "Release notes",
-                                path: "documentation/adobe-journey-optimizer/release-notes"
+                                path: "/edge/adobe-journey-optimizer/release-notes"
                             },
                             {
                                 title: "Public classes and enums",
-                                path: "documentation/adobe-journey-optimizer/public-classes"
+                                path: "/edge/adobe-journey-optimizer/public-classes"
                             },
                             {
                                 title: "Tutorials",
-                                path: "documentation/adobe-journey-optimizer/tutorials",
-                                pages: [
-                                    {
+                                path: "/edge/adobe-journey-optimizer/tutorials",
+                                pages: [{
                                         title: "Implement a MessagingDelegate",
-                                        path: "/documentation/adobe-journey-optimizer/tutorials/messaging-delegate"
+                                        path: "/edge/adobe-journey-optimizer/tutorials/messaging-delegate"
                                     },
                                     {
                                         title: "Call native code from the JavaScript of an in-app message",
-                                        path: "/documentation/adobe-journey-optimizer/tutorials/native-from-javascript"
+                                        path: "/edge/adobe-journey-optimizer/tutorials/native-from-javascript"
                                     },
                                     {
                                         title: "Execute Javascript methods from native code",
-                                        path: "/documentation/adobe-journey-optimizer/tutorials/javascript-from-native"
+                                        path: "/edge/adobe-journey-optimizer/tutorials/javascript-from-native"
                                     },
                                     {
                                         title: "Handle URL clicks from an in-app message",
-                                        path: "/documentation/adobe-journey-optimizer/tutorials/handle-clicks"
+                                        path: "/edge/adobe-journey-optimizer/tutorials/handle-clicks"
                                     },
                                     {
                                         title: "Validate in-app messaging using Assurance",
-                                        path: "/documentation/adobe-journey-optimizer/tutorials/validate-messages"
+                                        path: "/edge/adobe-journey-optimizer/tutorials/validate-messages"
                                     }
                                 ]
                             }
@@ -589,45 +193,444 @@ module.exports = {
                     },
                     {
                         title: "Adobe Journey Optimizer Decisioning",
-                        path: "/documentation/adobe-journey-optimizer-decisioning",
-                        pages: [
-                            {
+                        path: "/edge/adobe-journey-optimizer-decisioning",
+                        pages: [{
                                 title: "Overview",
-                                path: "/documentation/adobe-journey-optimizer-decisioning"
+                                path: "/edge/adobe-journey-optimizer-decisioning"
                             },
                             {
                                 title: "API reference",
-                                path: "documentation/adobe-journey-optimizer-decisioning/api-reference"
+                                path: "/edge/adobe-journey-optimizer-decisioning/api-reference"
                             },
                             {
                                 title: "Release notes",
-                                path: "documentation/adobe-journey-optimizer-decisioning/release-notes"
+                                path: "/edge/adobe-journey-optimizer-decisioning/release-notes"
                             }
                         ]
                     },
                     {
-                        title: "Adobe Target",
-                        path: "/documentation/adobe-target",
-                        pages: [
-                            {
+                        title: "Adobe Streaming Media for Edge Network",
+                        path: "/edge/media-for-edge-network",
+                        pages: [{
                                 title: "Overview",
-                                path: "/documentation/adobe-target"
+                                path: "/edge/media-for-edge-network"
                             },
                             {
                                 title: "API reference",
-                                path: "documentation/adobe-target/api-reference"
+                                path: "/edge/media-for-edge-network/api-reference"
                             },
                             {
-                                title: "Raw API reference",
-                                path: "documentation/adobe-target/raw-api-reference"
+                                title: 'Release notes',
+                                path: '/edge/media-for-edge-network/release-notes'
+                            }
+                        ]
+                    },
+                    {
+                        title: "Consent for Edge Network",
+                        path: "/edge/consent-for-edge-network",
+                        pages: [{
+                                title: "Overview",
+                                path: "/edge/consent-for-edge-network"
                             },
                             {
-                                title: "Event reference",
-                                path: "documentation/adobe-target/event-reference"
+                                title: "API reference",
+                                path: "/edge/consent-for-edge-network/api-reference"
                             },
                             {
                                 title: "Release notes",
-                                path: "documentation/adobe-target/release-notes"
+                                path: "/edge/consent-for-edge-network/release-notes"
+                            }
+                        ]
+                    },
+                    {
+                        title: "Identity for Edge Network",
+                        path: "/edge/identity-for-edge-network",
+                        pages: [{
+                                title: "Overview",
+                                path: "/edge/identity-for-edge-network"
+                            },
+                            {
+                                title: "API reference",
+                                path: "/edge/identity-for-edge-network/api-reference"
+                            },
+                            {
+                                title: "Frequently asked questions",
+                                path: "/edge/identity-for-edge-network/faq"
+                            },
+                            {
+                                title: "Release notes",
+                                path: "/edge/identity-for-edge-network/release-notes"
+                            }
+                        ]
+                    },
+
+                    {
+                        title: "Lifecycle for Edge Network",
+                        path: "/edge/lifecycle-for-edge-network",
+                        pages: [{
+                                title: "Overview",
+                                path: "/edge/lifecycle-for-edge-network"
+                            },
+                            {
+                                title: "API reference",
+                                path: "/edge/lifecycle-for-edge-network/api-reference"
+                            },
+                            {
+                                title: "Event reference",
+                                path: "/edge/lifecycle-for-edge-network/event-reference"
+                            },
+                            {
+                                title: "Metrics",
+                                path: "/edge/lifecycle-for-edge-network/metrics"
+                            }
+                        ]
+                    }
+
+                ]
+            },
+            {
+                title: "Solution specific extensions",
+                path: "/solution",
+                pages: [{
+                        title: 'Adobe Analytics',
+                        path: '/solution/adobe-analytics/',
+                        pages: [{
+                                title: "Overview",
+                                path: "/solution/adobe-analytics"
+                            },
+                            {
+                                title: 'Migrate to Edge Network',
+                                path: '/solution/adobe-analytics/migrate-to-edge-network'
+                            },
+                            {
+                                title: "API reference",
+                                path: "/solution/adobe-analytics/api-reference"
+                            },
+                            {
+                                title: 'Event reference',
+                                path: '/solution/adobe-analytics/event-reference'
+                            },
+                            {
+                                title: "Product variable",
+                                path: "/solution/adobe-analytics/product-variable"
+                            },
+                            {
+                                title: "Tracking beacons",
+                                path: "/solution/adobe-analytics/track-beacon"
+                            },
+                            {
+                                title: "Frequently asked questions",
+                                path: "/solution/adobe-analytics/faq"
+                            },
+                            {
+                                title: 'Release notes',
+                                path: '/solution/adobe-analytics/release-notes'
+                            }
+                        ]
+                    },
+                    {
+                        title: "Adobe Audience Manager",
+                        path: "/solution/adobe-audience-manager/",
+                        pages: [{
+                                title: "Overview",
+                                path: "/solution/adobe-audience-manager/"
+                            },
+                            {
+                                title: "API reference",
+                                path: "/solution/adobe-audience-manager/api-reference"
+                            },
+                            {
+                                title: "Event reference",
+                                path: "/solution/adobe-audience-manager/event-reference"
+                            },
+                            {
+                                title: "Release notes",
+                                path: "/solution/adobe-audience-manager/release-notes"
+                            }
+                        ]
+                    },
+                    {
+                        title: "Adobe Campaign Classic",
+                        path: "/solution/adobe-campaign-classic",
+                        pages: [{
+                                title: "Overview",
+                                path: "/solution/adobe-campaign-classic"
+                            },
+                            {
+                                title: "API reference",
+                                path: "/solution/adobe-campaign-classic/api-reference"
+                            },
+                            {
+                                title: "Event reference",
+                                path: "/solution/adobe-campaign-classic/event-reference"
+                            },
+                            {
+                                title: "Release notes",
+                                path: "/solution/adobe-campaign-classic/release-notes"
+                            }
+                        ]
+                    },
+                    {
+                        title: "Adobe Campaign Standard",
+                        path: "/solution/adobe-campaign-standard",
+                        pages: [{
+                                title: "Overview",
+                                path: "/solution/adobe-campaign-standard"
+                            },
+                            {
+                                title: "API reference",
+                                path: "/solution/adobe-campaign-standard/api-reference"
+                            },
+                            {
+                                title: "Event reference",
+                                path: "/solution/adobe-campaign-standard/event-reference"
+                            },
+                            {
+                                title: "Campaign push notifications",
+                                path: "/solution/adobe-campaign-standard/push-notifications"
+                            },
+                            {
+                                title: "Release notes",
+                                path: "/solution/adobe-campaign-standard/release-notes"
+                            }
+                        ]
+                    },
+
+                    {
+                        title: "Adobe Media Analytics",
+                        path: "/solution/adobe-media-analytics",
+                        pages: [{
+                                title: "Overview",
+                                path: "/solution/adobe-media-analytics"
+                            },
+                            {
+                                title: "API reference",
+                                path: "/solution/adobe-media-analytics/api-reference"
+                            },
+                            {
+                                title: "Release notes",
+                                path: "/solution/adobe-media-analytics/release-notes"
+                            },
+                            {
+                                title: "Migration Guide",
+                                path: "/solution/adobe-media-analytics/migration-guide"
+                            },
+                        ]
+                    },
+                    {
+                        title: "Adobe Target",
+                        path: "/solution/adobe-target",
+                        pages: [{
+                                title: "Overview",
+                                path: "/solution/adobe-target"
+                            },
+                            {
+                                title: "API reference",
+                                path: "/solution/adobe-target/api-reference"
+                            },
+                            {
+                                title: "Raw API reference",
+                                path: "/solution/adobe-target/raw-api-reference"
+                            },
+                            {
+                                title: "Event reference",
+                                path: "/solution/adobe-target/event-reference"
+                            },
+                            {
+                                title: "Release notes",
+                                path: "/solution/adobe-target/release-notes"
+                            }
+                        ]
+                    },
+                    {
+                        title: "Adobe Experience Platform Location Service",
+                        path: "/solution/places",
+                        pages: [{
+                                title: "Overview",
+                                path: "/solution/places"
+                            },
+                            {
+                                title: "API reference",
+                                path: "/solution/places/api-reference.md"
+                            },
+                            {
+                                title: "Event forwarding to Adobe Experience Platform",
+                                path: "/solution/places/places-to-platform.md"
+                            },
+                            {
+                                title: "Release notes",
+                                path: "/solution/places/release-notes.md"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                title: "Base extensions",
+                path: "/home/base",
+                pages: [{
+                        title: "Overview",
+                        path: "/home/base"
+                    },
+                    {
+                        title: "Mobile Core",
+                        path: "/home/base/mobile-core",
+                        pages: [{
+                                title: "Overview",
+                                path: "/home/base/mobile-core"
+                            },
+                            {
+                                title: "Configuration",
+                                path: "/home/base/mobile-core/configuration",
+                                pages: [{
+                                        title: "Overview",
+                                        path: "/home/base/mobile-core/configuration"
+                                    },
+                                    {
+                                        title: "API reference",
+                                        path: "/home/base/mobile-core/configuration/api-reference"
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Identity",
+                                path: "/home/base/mobile-core/identity",
+                                pages: [{
+                                        title: "Overview",
+                                        path: "/home/base/mobile-core/identity"
+                                    },
+                                    {
+                                        title: "API reference",
+                                        path: "/home/base/mobile-core/identity/api-reference"
+                                    },
+                                    {
+                                        title: "Push identifier sync",
+                                        path: "/home/base/mobile-core/identity/push-sync"
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Lifecycle",
+                                path: "/home/base/mobile-core/lifecycle",
+                                pages: [{
+                                        title: "Overview",
+                                        path: "/home/base/mobile-core/lifecycle"
+                                    },
+                                    {
+                                        title: "Lifecycle extension in Android",
+                                        path: "/home/base/mobile-core/lifecycle/android"
+                                    },
+                                    {
+                                        title: "Lifecycle extension in iOS",
+                                        path: "/home/base/mobile-core/lifecycle/ios"
+                                    },
+                                    {
+                                        title: "API reference",
+                                        path: "/home/base/mobile-core/lifecycle/api-reference"
+                                    },
+                                    {
+                                        title: "Metrics",
+                                        path: "/home/base/mobile-core/lifecycle/metrics"
+                                    },
+                                    {
+                                        title: "Configuration keys",
+                                        path: "/home/base/mobile-core/lifecycle/configuration-keys"
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Platform services",
+                                path: "/home/base/mobile-core/platform-services",
+                                pages: [{
+                                        title: "Overview",
+                                        path: "/home/base/mobile-core/platform-services"
+                                    },
+                                    {
+                                        title: "Network service",
+                                        path: "/home/base/mobile-core/platform-services/network-service"
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Rules Engine",
+                                path: "/home/base/mobile-core/rules-engine",
+                                pages: [{
+                                        title: "Overview",
+                                        path: "/home/base/mobile-core/rules-engine"
+                                    },
+                                    {
+                                        title: "Technical details",
+                                        path: "/home/base/mobile-core/rules-engine/technical-details"
+                                    },
+                                    {
+                                        title: "Consequence details",
+                                        path: "/home/base/mobile-core/rules-engine/consequence-details"
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Signal",
+                                path: "/home/base/mobile-core/signal",
+                                pages: [{
+                                        title: "Overview",
+                                        path: "/home/base/mobile-core/signal"
+                                    },
+                                    {
+                                        title: "API reference",
+                                        path: "/home/base/mobile-core/signal/api-reference"
+                                    },
+                                    {
+                                        title: "Signal and Rules Engine integration",
+                                        path: "/home/base/mobile-core/signal/rules-engine-integration.md"
+                                    }
+                                ]
+                            },
+                            {
+                                title: "API reference",
+                                path: "/home/base/mobile-core/api-reference"
+                            },
+                            {
+                                title: "Release notes",
+                                path: "/home/base/mobile-core/release-notes"
+                            }
+                        ]
+                    },
+                    {
+                        title: "Adobe Experience Platform Assurance",
+                        path: "/home/base/assurance",
+                        pages: [{
+                                title: "Overview",
+                                path: "/home/base/assurance"
+                            },
+                            {
+                                title: "API reference",
+                                path: "/home/base/assurance/api-reference"
+                            },
+                            {
+                                title: "Resolving common issues",
+                                path: "/home/base/assurance/common-issues/"
+                            },
+                            {
+                                title: "Release notes",
+                                path: "/home/base/assurance/release-notes"
+                            }
+                        ]
+                    },
+
+                    {
+                        title: "Profile",
+                        path: "/home/base/profile",
+                        pages: [{
+                                title: "Overview",
+                                path: "/home/base/profile"
+                            },
+                            {
+                                title: "API reference",
+                                path: "/home/base/profile/api-reference"
+                            },
+                            {
+                                title: "Release notes",
+                                path: "/home/base/profile/release-notes"
                             }
                         ]
                     }
@@ -635,118 +638,114 @@ module.exports = {
             },
             {
                 title: "Resources",
-                path: "/documentation/resources",
-                pages: [
-                    {
+                path: "/resources",
+                pages: [{
                         title: "Overview",
-                        path: "documentation/resources"
+                        path: "/resources"
                     },
                     {
                         title: "Aligning major SDK versions",
-                        path: "documentation/resources/major-version-alignment"
+                        path: "/resources/major-version-alignment"
                     },
                     {
                         title: "Manage Gradle dependencies",
-                        path: "documentation/resources/manage-gradle-dependencies"
+                        path: "/resources/manage-gradle-dependencies"
                     },
                     {
                         title: "Manage SPM dependencies",
-                        path: "documentation/resources/manage-spm-dependencies"
+                        path: "/resources/manage-spm-dependencies"
                     },
                     {
                         title: "Privacy and GDPR",
-                        path: "documentation/resources/privacy-and-gdpr"
+                        path: "/resources/privacy-and-gdpr"
                     },
                     {
                         title: "Frequently asked questions",
-                        path: "documentation/resources/faq"
+                        path: "/resources/faq"
                     },
                     {
                         title: "ACP SDKs end-of-support",
-                        path: "/documentation/resources/acp-end-of-support"
+                        path: "/resources/acp-end-of-support"
                     },
                     {
                         title: "Adobe Mobile Library (v4) end-of-support",
-                        path: "documentation/resources/upgrade-platform-sdks",
-                        pages: [
-                            {
+                        path: "/resources/upgrade-platform-sdks",
+                        pages: [{
                                 title: "Overview",
-                                path: "documentation/resources/upgrade-platform-sdks"
+                                path: "/resources/upgrade-platform-sdks"
                             },
                             {
                                 title: "v4 SDK comparison",
-                                path: "documentation/resources/upgrade-platform-sdks/comparison"
+                                path: "/resources/upgrade-platform-sdks/comparison"
                             },
                             {
                                 title: "v4 API changelog",
-                                path: "documentation/resources/upgrade-platform-sdks/api-changelog.md"
+                                path: "/resources/upgrade-platform-sdks/api-changelog.md"
                             },
                             {
                                 title: "Manual Lifecycle implementation",
-                                path: "documentation/resources/upgrade-platform-sdks/lifecycle"
+                                path: "/resources/upgrade-platform-sdks/lifecycle"
                             },
                             {
                                 title: "Analytics migration",
-                                path: "documentation/resources/upgrade-platform-sdks/analytics.md"
+                                path: "/resources/upgrade-platform-sdks/analytics.md"
                             },
                             {
                                 title: "Frequently asked questions",
-                                path: "documentation/resources/upgrade-platform-sdks/v4-faq"
+                                path: "/resources/upgrade-platform-sdks/v4-faq"
                             }
                         ]
                     },
                     {
                         title: "Adobe Experience Cloud & Apple's IDFA, Privacy announcement",
-                        path: "documentation/resources/privacy-announcement"
+                        path: "/resources/privacy-announcement"
                     }
 
                 ]
             },
             {
                 title: "User guides",
-                path: "documentation/user-guides",
-                pages: [
-                    {
+                path: "/resources/user-guides",
+                pages: [{
                         title: "Overview",
-                        path: "documentation/user-guides"
+                        path: "/resources/user-guides"
                     },
                     {
                         title: "Getting started with Platform",
-                        path: "documentation/user-guides/getting-started-with-platform/overview",
-                        pages: [
-                            {
+                        path: "/resources/user-guides/getting-started-with-platform/overview",
+                        pages: [{
                                 title: "Overview",
-                                path: "documentation/user-guides/getting-started-with-platform/overview"
+                                path: "/resources/user-guides/getting-started-with-platform/overview"
                             },
                             {
                                 title: "Sample XDM implementation",
-                                path: "documentation/user-guides/getting-started-with-platform/sample-xdm-implementation"
+                                path: "/resources/user-guides/getting-started-with-platform/sample-xdm-implementation"
                             },
                             {
                                 title: "Rules and XDM events",
-                                path: "documentation/user-guides/getting-started-with-platform/rules-and-xdm-events"
+                                path: "/resources/user-guides/getting-started-with-platform/rules-and-xdm-events"
                             }
                         ]
                     },
                     {
                         title: "Attach data to SDK events",
-                        path: "documentation/user-guides/attach-data"
+                        path: "/resources/user-guides/attach-data"
                     },
                     {
                         title: "Modify data in SDK events",
-                        path: "documentation/user-guides/modify-data"
+                        path: "/resources/user-guides/modify-data"
                     },
                     {
                         title: "Tags data elements",
-                        path: "documentation/user-guides/tags-data-elements"
+                        path: "/resources/user-guides/tags-data-elements"
                     },
                     {
                         title: "iOS App Extensions",
-                        path: "documentation/user-guides/app-extension"
+                        path: "/resources/user-guides/app-extension"
                     },
                     {
                         title: "Building mobile extensions",
-                        path: "documentation/user-guides/building-mobile-extensions"
+                        path: "/resources/user-guides/building-mobile-extensions"
                     }
                 ]
             }
