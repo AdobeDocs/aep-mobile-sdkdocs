@@ -273,6 +273,12 @@ Downgrading from this version of Core is unsupported, as it will cause undefined
 
 * Updated the minimum Core dependency version to 2.3.1 to resolve a local notification display issue.
 
+## September 14, 2023
+
+### AEP React Native Core 5.0.1
+
+* Updated the docs to call out trackAction/trackState are supported through Edge Network or Edge Bridge extensions.
+
 ## September 5, 2023
 
 ### Android BOM 2.4.0

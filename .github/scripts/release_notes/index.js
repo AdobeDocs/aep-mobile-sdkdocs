@@ -26,7 +26,7 @@ run()
 async function run() {
     const list = await fetchAllReleaseInfo(token, timestampObj.ts)
     const sortedList = sortReleaseInfoByDateASC(list)
-    updateReleaseNotesPage("./src/pages/documentation/release-notes/index.md", sortedList)
+    updateReleaseNotesPage("./src/pages/home/release-notes/index.md", sortedList)
     const ignoreList = ['AEP React Native', 'Roku', 'AEP Flutter']
     for (const releaseInfo of sortedList) {
         // We don't have separate release note pages for AEP React Native, Roku, and AEP Flutter
