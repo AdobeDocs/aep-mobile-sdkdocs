@@ -179,7 +179,7 @@ async function updateReleaseNotesPage(filePath, releaseInfoArray) {
     // Read the contents of the markdown file.
     let contentLines = fs.readFileSync(filePath, "utf8").toString().split("\n")
     // Find the index of the release notes header.
-    let releaseNotesHeader = "# Release Notes"
+    let releaseNotesHeader = "# Release notes"
     let releaseNotesHeaderIndex = contentLines.indexOf(releaseNotesHeader)
     if (releaseNotesHeaderIndex == -1) {
         console.error("Error: can't find the release notes header")
@@ -228,7 +228,7 @@ function hasLineStartWith(string, lineArray) {
     return false
 }
 
-async function fetchNonAndoirdReleaseInfo(token, timestampInMilliseconds) {
+async function fetchNonAndroidReleaseInfo(token, timestampInMilliseconds) {
     let releaseInofArray = []
     for (const repoName of repoNames) {
         let releaseInfoList = await fetchReleaseInfo(token, "adobe", repoName)
@@ -318,7 +318,7 @@ function updateNonAndroidReleaseInfo(releaseInfo) {
 
 async function fetchAllReleaseInfo(token, timestampInMilliseconds) {
     let releaseInfoArray = []
-    let rawInfoArray = await fetchNonAndoirdReleaseInfo(token, timestampInMilliseconds)
+    let rawInfoArray = await fetchNonAndroidReleaseInfo(token, timestampInMilliseconds)
 
     for (const releaseInfo of rawInfoArray) {
         releaseInfoArray.push(updateNonAndroidReleaseInfo(releaseInfo))

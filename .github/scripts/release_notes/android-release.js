@@ -33,6 +33,7 @@ async function fetchMavenArtifactInfo(groupId, capacity, timestampInMilliseconds
 
     console.log(`request options: ${JSON.stringify(options)}`)
 
+    // TODO: condiser refactoring the code blow with libraries like axios.
     return new Promise((resolve) => {
         let reqGet = https.request(options, function (res) {
             if (res.statusCode != 200) {
@@ -84,6 +85,7 @@ async function fetchAndroidReleaseInfo(token, groupId, timestampInMilliseconds, 
     console.log("fetchMavenArtifactInfo():")
     console.log(array)
     let releaseInfoArray = []
+    // TODO: refactoring the code below with Array.prototype.map()
     for (let i = 0; i < array.length; i++) {
         let artifactId = array[i].artifactId
         let version = array[i].version

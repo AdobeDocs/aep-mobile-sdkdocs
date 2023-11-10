@@ -63,6 +63,7 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+// TODO: consider using dayjs to handle date format
 function convertIOSDateToRleaseDateFormat(ios1086DateStr) {
     const date = new Date(ios1086DateStr)
     const month = date.getMonth()
