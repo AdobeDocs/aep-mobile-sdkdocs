@@ -275,11 +275,7 @@ Map<String, Object> datasets = new HashMap<>();
 Map<String, Object> eventDataset = new HashMap<>();
 eventDataset.put("datasetId", "SampleEventDatasetIdOverride");
 
-Map<String, Object> profileDataset = new HashMap<>();
-profileDataset.put("datasetId", "SampleProfileDatasetIdOverride");
-
 datasets.put("event", eventDataset);
-datasets.put("profile", profileDataset);
 
 experiencePlatform.put("datasets", datasets);
 configOverrides.put("com_adobe_experience_platform", experiencePlatform);
@@ -374,8 +370,7 @@ xdmData["sample"] = "data"
 val configOverrides = mapOf(
                 "com_adobe_experience_platform" to mapOf(
                     "datasets" to mapOf(
-                        "event" to mapOf("datasetId" to "SampleEventDatasetIdOverride"),
-                        "profile" to mapOf("datasetId" to "SampleProfileDatasetIdOverride")
+                        "event" to mapOf("datasetId" to "SampleEventDatasetIdOverride")
                     )
                 ),
                 "com_adobe_analytics" to mapOf(
@@ -458,9 +453,6 @@ let configOverrides: [String: Any] = [
                                           "datasets": [
                                             "event": [
                                               "datasetId": "SampleEventDatasetIdOverride"
-                                            ],
-                                            "profile": [
-                                              "datasetId": "SampleProfileDatasetIdOverride"
                                             ]
                                           ]
                                         ],
@@ -537,9 +529,6 @@ NSDictionary *configOverrides = @{ @"com_adobe_experience_platform" : @{
                                     @"datasets" : @{
                                         @"event" : @{
                                           @"datasetId": @"SampleEventDatasetIdOverride"
-                                        },
-                                        @"profile" : @{
-                                          @"datasetId": @"SampleProfileDatasetIdOverride"
                                         }
                                       }
                                     },
