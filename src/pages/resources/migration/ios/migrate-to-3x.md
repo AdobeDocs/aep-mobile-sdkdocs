@@ -4,7 +4,7 @@ import Tabs from './tabs/migrate-to-3x.md'
 
 <InlineAlert variant="info" slots="text"/>
 
-The Mobile SDK for iOS now supports a minimum iOS version of 10.0 and a tvOS version of 10.0.
+This Mobile SDK version for iOS supports a minimum iOS version of 10.0 and a tvOS version of 10.0.
 
 ## SDK versions
 

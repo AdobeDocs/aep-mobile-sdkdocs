@@ -4,7 +4,7 @@ import Tabs from './tabs/migrate-to-2x.md'
 
 <InlineAlert variant="info" slots="text"/>
 
-Mobile SDK for Android now supports a minimum API level of 19.
+This Mobile SDK version for Android now supports a minimum API level of 19.
 
 ## SDK versions
 

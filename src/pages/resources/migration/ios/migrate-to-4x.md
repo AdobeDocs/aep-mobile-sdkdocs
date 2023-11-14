@@ -4,7 +4,7 @@ import Tabs from './tabs/migrate-to-4x.md'
 
 <InlineAlert variant="info" slots="text"/>
 
-The Mobile SDK for iOS now supports a minimum iOS version of 11.0 and a tvOS version of 11.0. The XCFrameworks included in the GitHub release are built using Xcode 14.1.
+This Mobile SDK version for iOS now supports a minimum iOS version of 11.0 and a tvOS version of 11.0. The XCFrameworks included in the GitHub release are built using Xcode 14.1.
 
 ## SDK versions
 
