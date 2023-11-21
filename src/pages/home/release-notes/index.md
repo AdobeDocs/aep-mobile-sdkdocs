@@ -46,7 +46,7 @@ Keywords:
 
 ### Android Core 2.6.0
 
-* Fixed the UI Takeover behavior for in-app messages.
+* Fixed the UI takeover behavior for in-app messages.
 
 ## October 31, 2023
 
