@@ -7,7 +7,7 @@ Keywords:
 
 # Release notes
 
-## November 16, 2023
+## November 15, 2023
 
 ### Android BOM 2.8.0
 
@@ -43,6 +43,10 @@ Keywords:
 </AccordionItem>
 
 </Accordion>
+
+### Android Core 2.6.0
+
+* Fixed the UI Takeover behavior for in-app messages.
 
 ## October 31, 2023
 
