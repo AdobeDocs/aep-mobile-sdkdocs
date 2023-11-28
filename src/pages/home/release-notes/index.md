@@ -7,7 +7,7 @@ Keywords:
 
 # Release notes
 
-## November 16, 2023
+## November 15, 2023
 
 ### Android BOM 2.8.0
 
@@ -43,6 +43,10 @@ Keywords:
 </AccordionItem>
 
 </Accordion>
+
+### Android Core 2.6.0
+
+* Fixed the UI takeover behavior for in-app messages. When UI takeover is disabled, taps outside the in-app webview no longer dismiss the message.
 
 ## October 31, 2023
 

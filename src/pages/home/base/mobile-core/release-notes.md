@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## November 15, 2023
+
+### Android Core 2.6.0
+
+* Fixed the UI takeover behavior for in-app messages. When UI takeover is disabled, taps outside the in-app webview no longer dismiss the message.
+
 ## October 31, 2023
 
 ### iOS Core 4.2.0
