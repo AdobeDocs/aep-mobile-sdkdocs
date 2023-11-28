@@ -244,7 +244,7 @@ The brand new Adobe Experience Platform Core Android SDKs are live! It is [open 
 
 <InlineAlert variant="info" slots="text"/>
 
-The `registerExtension` API for each extension is deprecated in the latest version of the mobile SDK. You can call the `MobileCore.registerExtensions` API instead of registering the extensions separately. See the [Migration Guide](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-android) for more details.
+The `registerExtension` API for each extension is deprecated in the latest version of the mobile SDK. You can call the `MobileCore.registerExtensions` API instead of registering the extensions separately. See the [Migration Guide](../../../resources/migration/android/migrate-to-2x.md) for more details.
 
 ## January 5, 2023
 

@@ -702,6 +702,32 @@ module.exports = {
                     }
 
                 ]
+            },{
+                title: "Migration",
+                path: "/resources/migration",
+                pages: [{
+                        title: "Android",
+                        path: "/resources/migration/android",
+                        pages: [{
+                                title: "Migrate to 2.x SDKs",
+                                path: "/resources/migration/android/migrate-to-2x"
+                            }
+                        ]
+                    },
+                    {
+                        title: "iOS",
+                        path: "/resources/migration/ios",
+                        pages: [{
+                                title: "Migrate to 4.x SDKs",
+                                path: "/resources/migration/ios/migrate-to-4x"
+                            },
+                            {
+                                title: "Migrate to 3.x SDKs",
+                                path: "/resources/migration/ios/migrate-to-3x"
+                            },                            
+                        ]
+                    }
+                ]
             },
             {
                 title: "User guides",
