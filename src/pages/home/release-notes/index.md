@@ -46,7 +46,7 @@ Keywords:
 
 ### Android Core 2.6.0
 
-* Fixed the UI takeover behavior for in-app messages.
+* Fixed the UI takeover behavior for in-app messages. When UI takeover is disabled, taps outside the in-app webview no longer dismiss the message.
 
 ## October 31, 2023
 
