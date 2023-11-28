@@ -120,4 +120,4 @@ The time that your app spends in the background is not included in the session l
 
 | Key | Description |
 | :---  | :-------- |
-| `lifecycle.sessionTimeout` | Time, in seconds, that must elapse between the time the app is launched and before the launch is considered to be a new session. This timeout also applies when your application is sent to the background and reactivated.<br/><br/> The default value is 300 seconds (5 minutes). |
+| `lifecycle.sessionTimeout` | Time, in seconds, that must elapse between the time the app is sent to the background and before the next launch is considered to be a new session.<br/><br/> The default value is 300 seconds (5 minutes). |
