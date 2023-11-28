@@ -1,6 +1,6 @@
 import Tabs from './tabs/migrate-to-3x.md'
 
-# Migrate to Adobe Experience Platform 3.x Mobile SDKs for iOS
+# Migrate to Adobe Experience Platform 3.x SDKs for iOS
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -69,7 +69,7 @@ If you are manually importing SDK libraries, ensure you identify all currently u
 If you are using CocoaPods to manage your Adobe Experience Platform Mobile SDK dependencies, the following example shows you how to switch ACP-prefix libraries to AEP-prefix libraries in your `Podfile`.
 
 ```ruby
-# replace ACPCore with AEPCore/AEPLifecycle/AEPIdentity/AEPSignal
+# replace ACPCore with AEPCore, AEPLifecycle, AEPIdentity and AEPSignal
 # pod 'ACPCore'
   pod 'AEPCore', '~> 3.0'
   pod 'AEPLifecycle', '~> 3.0'
@@ -97,13 +97,13 @@ The following code snippets show the new and correct initialization code require
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-Objective-C
-
-<Tabs query="lang=obj-c"/>
-
 Swift
 
 <Tabs query="lang=swift"/>
+
+Objective-C
+
+<Tabs query="lang=obj-c"/>
 
 ## Update outdated API references
 

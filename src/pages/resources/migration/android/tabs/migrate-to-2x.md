@@ -2,7 +2,7 @@
 
 ```java
 public class MainApp extends Application {
-    private static final String ENVIRONMENT_FILE_ID = "ENVIRONMENT_FILE_ID";
+    private static final String ENVIRONMENT_FILE_ID = "<your_environment_file_id>";
 
     @Override
     public void onCreate() {
@@ -16,7 +16,7 @@ public class MainApp extends Application {
         extensions.add(Assurance.EXTENSION);
         extensions.add(Identity.EXTENSION);
         MobileCore.registerExtensions(extensions, o -> {
-            Log.d(LOG_TAG, "AEP Mobile SDK is initialized");
+            Log.d(LOG_TAG, "Adobe Experience Platform Mobile SDK is initialized");
         });
 }
 }
@@ -28,7 +28,7 @@ public class MainApp extends Application {
 
 ```kotlin
 class MyApp : Application() {
-    val ENVIRONMENT_FILE_ID = "ENVIRONMENT_FILE_ID"
+    val ENVIRONMENT_FILE_ID = "<your_environment_file_id>"
 
     override fun onCreate() {
         super.onCreate()
@@ -42,7 +42,7 @@ class MyApp : Application() {
             Assurance.EXTENSION
             )
         MobileCore.registerExtensions(extensions) {
-            Log.d(LOG_TAG, "AEP Mobile SDK is initialized")
+            Log.d(LOG_TAG, "Adobe Experience Platform Mobile SDK is initialized")
         }
     }
 }

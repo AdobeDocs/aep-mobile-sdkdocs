@@ -148,7 +148,7 @@ Implementing push notification tracking and measurement with the SDK depends on 
 
 ## Migrating to Android Mobile Core 2.x and compatible extensions
 
-See the frequently asked questions for migration [here](../resources/migration/android/migrate-to-2x.md#frequently-asked-questions)
+See the frequently asked questions for migration [here](../resources/migration/android/migrate-to-2x.md#frequently-asked-questions).
 
 ## Lifecycle
 

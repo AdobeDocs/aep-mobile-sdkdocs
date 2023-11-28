@@ -1,6 +1,6 @@
 import Tabs from './tabs/migrate-to-2x.md'
 
-# Migrate to Adobe Experience Platform Mobile 2.x SDKs for Android
+# Migrate to Adobe Experience Platform 2.x SDKs for Android
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -82,7 +82,7 @@ dependencies {
 }
 ```
 
-Save the `build.gradle` file and select `Sync Project with Gradle Files` in Android Studio to download the 2.x SDKs
+Save the `build.gradle` file and select `Sync Project with Gradle Files` in Android Studio to download the 2.x SDKs.
 
 #### Manual library import
 
@@ -106,7 +106,7 @@ Kotlin
 
 ## Update outdated API references
 
-Some of the APIs available in previous major versions of the Mobile SDK for Android are now deprecated or removed. You can choose to replace the obsolete APIs in your code with the alternative APIs in the 2.x version, as described below:
+Some of the APIs available in previous major versions of the Mobile SDK for Android are now deprecated or removed. You can choose to replace the obsolete APIs in your code with the alternative APIs in the 2.x version, as described below.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -135,7 +135,7 @@ The `registerExtension` API for each extension is deprecated in the 2.x version 
 
 | Removed API | Alternative API |
 | :------------- | :-------------- |
-| CampaignClassic.registerDevice | The [CampaignClassic.registerDevice](../../../solution/adobe-campaign-classic/api-reference.md) API, no longer provides a callback method for registration status since a `false` value cannot be accurately used as a signal to retry requests. |
+| CampaignClassic.registerDevice | The [CampaignClassic.registerDevice](../../../solution/adobe-campaign-classic/api-reference.md) API no longer provides a callback method for registration status since a `false` value cannot be accurately used as a signal to retry requests. |
 
 ### Places Service
 

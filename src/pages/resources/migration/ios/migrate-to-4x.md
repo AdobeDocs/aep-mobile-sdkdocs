@@ -1,6 +1,6 @@
 import Tabs from './tabs/migrate-to-4x.md'
 
-# Migrate to Adobe Experience Platform Mobile 4.x SDKs for iOS
+# Migrate to Adobe Experience Platform 4.x SDKs for iOS
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -84,10 +84,10 @@ The following APIs have been removed:
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-AEP 3.x
+iOS 3.x
 
 <Tabs query="platform=ios&extension=edge&version=3"/>
 
-AEP 4.x
+iOS 4.x
 
 <Tabs query="platform=ios&extension=edge&version=4"/>
