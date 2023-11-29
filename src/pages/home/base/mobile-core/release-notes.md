@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## November 15, 2023
+
+### Android Core 2.6.0
+
+* Fixed the UI takeover behavior for in-app messages. When UI takeover is disabled, taps outside the in-app webview no longer dismiss the message.
+
 ## October 31, 2023
 
 ### iOS Core 4.2.0
@@ -238,7 +244,7 @@ The brand new Adobe Experience Platform Core Android SDKs are live! It is [open 
 
 <InlineAlert variant="info" slots="text"/>
 
-The `registerExtension` API for each extension is deprecated in the latest version of the mobile SDK. You can call the `MobileCore.registerExtensions` API instead of registering the extensions separately. See the [Migration Guide](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-android) for more details.
+The `registerExtension` API for each extension is deprecated in the latest version of the mobile SDK. You can call the `MobileCore.registerExtensions` API instead of registering the extensions separately. See the [Migration Guide](../../../resources/migration/android/migrate-to-2x.md) for more details.
 
 ## January 5, 2023
 
