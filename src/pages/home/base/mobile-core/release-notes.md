@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## December 13, 2023
+
+### Android Core 2.6.1
+
+* Fixed an issue where failure to create a webview for displaying an in-app message would cause the UI to be blocked.
+
 ## November 15, 2023
 
 ### Android Core 2.6.0
