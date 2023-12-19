@@ -40,7 +40,7 @@ A visit is a server-side calculation by Adobe Analytics and is based on the firs
 
 Yes. To capture data in multiple report suites, please read the [report suites guide](./index.md#report-suites).
 
-## I don't see data in my Adobe Analytics report suite - what can I do? 
+## I don't see data in my Adobe Analytics report suite - what can I do?
 
 If you have followed the documentation and are unable to see reporting data in your Adobe Analytics dashboard, please consider the following next steps:
 
