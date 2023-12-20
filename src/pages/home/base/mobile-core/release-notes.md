@@ -20,16 +20,6 @@ keywords:
 
 * Fixed the UI takeover behavior for in-app messages. When UI takeover is disabled, taps outside the in-app webview no longer dismiss the message.
 
-## October 31, 2023
-
-### iOS Core 4.2.0
-
-* Migrates storage from UserDefaults to iOS file system.
-
-<InlineAlert variant="info" slots="text"/>
-
-Downgrading from this version of Core is unsupported, as it will cause undefined behavior.
-
 ## October 30, 2023
 
 ### Android Core 2.5.1
