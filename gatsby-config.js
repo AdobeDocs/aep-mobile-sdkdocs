@@ -134,8 +134,12 @@ module.exports = {
                                 path: "/edge/edge-network/tutorials",
                                 pages: [
                                     {
-                                        title: "Datastream config overrides using rules",
+                                        title: "Datastream configuration overrides using rules",
                                         path: "/edge/edge-network/tutorials/datastream-config-override-rules"
+                                    },
+                                    {
+                                        title: "Send datastream configuration overrides",
+                                        path: "/edge/edge-network/tutorials/send-datastream-overrides"
                                     }
                                 ]
                             },

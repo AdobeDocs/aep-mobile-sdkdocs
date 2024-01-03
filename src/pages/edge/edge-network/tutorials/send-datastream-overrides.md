@@ -22,7 +22,7 @@ Before continuing with this tutorial, read the following guides:
 
 ## Datastream ID override
 
-After configuring the datastream overrides, you can now send these overrides to the Edge Network through Mobile SDK. Sending the overrides using the `sendEvent` API is the final step of activating the datastream configuration overrides. 
+After configuring the datastream overrides, you can now send these overrides to the Edge Network through Mobile SDK. Sending the overrides using the `sendEvent` API is the final step of activating the datastream configuration overrides.
 
 The following examples demonstrate what a datastream ID override looks like in a Mobile SDK integration:
 
