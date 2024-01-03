@@ -12,7 +12,7 @@ keywords:
 
 <InlineAlert variant="info" slots="text"/>
 
-**Migrate to latest Mobile SDKs for Android**<br/>If you are currently using the Mobile Core 1.x and the compatible libraries, please see the [Migrating to latest Mobile SDKs for Android](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-android/) guide for next steps.<br/>The latest Mobile SDKs for Android support Google Android API 19 (KitKat) or later.
+**Migrate to latest Mobile SDKs for Android**<br/>If you are currently using older SDK versions, please see the [Migrating to latest Mobile SDKs for Android](../resources/migration/android/index.md) guide for next steps.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -64,7 +64,7 @@ The Android BOM (Bill of Materials) artifact has been released to Maven Central.
 
 <InlineAlert variant="info" slots="text"/>
 
-**Migrate to latest Mobile SDKs for iOS**<br/>If you are currently using the Objective-C (ACP-prefix) libraries, please see the [Migrating to latest Mobile SDKs for iOS](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-swift/) guide for next steps.<br/>The latest Mobile SDK for iOS supports iOS 11 or later; requires Swift 5.1 or newer and Xcode 14.1 or newer. In addition to **CocoaPods**, **Swift Package Manager (SPM)**, and XCFramework installation options are supported with the latest iOS Swift SDKs! Find more details at the GitHub links below.
+**Migrate to latest Mobile SDKs for iOS**<br/>If you are currently using older SDK versions, please see the [Migrating to latest Mobile SDKs for iOS](../resources/migration/ios/index.md) guide for next steps.
 
 | Extension | tvOS | App Extension | CocoaPods | GitHub | Test app |
 |---|---|---|---|---|---|
