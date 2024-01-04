@@ -12,7 +12,7 @@ keywords:
 
 ### iOS Core 4.2.1
 
-* Reverts storage for tvOS back to UserDefaults. 
+* Reverts storage for tvOS back to UserDefaults.
 
 ## December 13, 2023
 
@@ -38,7 +38,7 @@ Downgrading from this version of Core is unsupported, as it will cause undefined
 
 <InlineAlert variant="warning" slots="text"/>
 
-Please do not use this release for tvOS. Instead use 4.2.1 release. 
+Please do not use this release for tvOS. Instead use 4.2.1 release.
 
 ## October 30, 2023
 
