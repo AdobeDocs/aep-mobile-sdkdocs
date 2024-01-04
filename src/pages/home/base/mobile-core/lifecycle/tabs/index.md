@@ -100,12 +100,13 @@ super.onCreate();
 ```java
     @Override
     public void onResume() {
-        MobileCore.setApplication(getApplication());
+        MobileCore.setApplication(this.getApplication());
         MobileCore.lifecycleStart(null);
     }
 ```
 
-Setting the application is only necessary on activities that are entry points for your application. However, setting the application on each Activity has no negative impact and ensures that the SDK always has the necessary reference to your application. We recommend that you call `setApplication`in each of your activities.
+Setting the application is only necessary on activities that are entry points for your application. However, setting the application on each Activity has no negative impact and ensures that the SDK always has the necessary reference to your application. We recommend that you call `setApplication`in each of your activities. </br>
+See also the [Activity#getApplication()](https://developer.android.com/reference/android/app/Activity#getApplication()) Android API documentation.
 
 3. In the `onPause` function, pause the lifecycle data collection:
 
