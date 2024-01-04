@@ -64,7 +64,7 @@ protected void onCreate(Bundle savedInstanceState) {
     getApplication().registerActivityLifecycleCallbacks(new Application.ActivityLifecycleCallbacks() {        
     @Override        
     public void onActivityResumed(Activity activity) {
-        MobileCore.setApplication(getApplication());
+        MobileCore.setApplication(activity.getApplication());
         MobileCore.lifecycleStart(null);        
         }        
         @Override        
