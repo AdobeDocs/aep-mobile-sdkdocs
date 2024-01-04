@@ -84,27 +84,24 @@ async function fetchAndroidReleaseInfo(token, groupId, timestampInMilliseconds, 
     let array = await fetchMavenArtifactInfo(groupId, capacity, timestampInMilliseconds);
     console.log("fetchMavenArtifactInfo():")
     console.log(array)
-    let releaseInfoArray = []
-    // TODO: refactoring the code below with Array.prototype.map()
-    for (let i = 0; i < array.length; i++) {
-        let artifactId = array[i].artifactId
-        let version = array[i].version
-        let extensionName = artifactIdToExtensionName(artifactId)
+    let releaseInfoArray = await Promise.all(array.map(async (item) => {
+        let artifactId = item.artifactId;
+        let version = item.version;
+        let extensionName = artifactIdToExtensionName(artifactId);
         if (extensionName == null) {
-            continue
+            return null;
         }
-        let info = buildGitHubInfo(artifactId, version)
+        let info = buildGitHubInfo(artifactId, version);
         if (info == null) {
-            continue
+            return null;
         }
-        releaseInfo = await fetchReleaseInfoWithTagName(token, "adobe", info.repoName, info.tagName);
+        let releaseInfo = await fetchReleaseInfoWithTagName(token, "adobe", info.repoName, info.tagName);
         // update release info with extension, version, and platform
-        releaseInfo.version = version
-        releaseInfo.extension = extensionName
-        releaseInfo.platform = 'Android'
-        releaseInfoArray.push(releaseInfo)
-
-    }
+        releaseInfo.version = version;
+        releaseInfo.extension = extensionName;
+        releaseInfo.platform = 'Android';
+        return releaseInfo;
+    }));
     return releaseInfoArray
 }
 

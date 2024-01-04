@@ -26,15 +26,17 @@ run()
 async function run() {
     const list = await fetchAllReleaseInfo(token, timestampObj.ts)
     const sortedList = sortReleaseInfoByDateASC(list)
+    // 1. Update the main release page
     updateReleaseNotesPage("./src/pages/home/release-notes/index.md", sortedList)
     const ignoreList = ['AEP React Native', 'Roku', 'AEP Flutter']
     for (const releaseInfo of sortedList) {
         // We don't have separate release note pages for AEP React Native, Roku, and AEP Flutter
-        if (ignoreList.includes(releaseInfo.platform)) {
+        if (ignoreList.includes(releaseInfo.platform) || releaseInfo.extension == "BOM") {
             continue
         }
         let filePath = releaseNoteMap[releaseInfo.extension]
         if (filePath != undefined) {
+            // 2. Update the extension's release note page
             updateReleaseNotesPage(filePath, [releaseInfo])
         } else {
             console.error(`Error: no release note page found for ${releaseInfo.extension}`)
