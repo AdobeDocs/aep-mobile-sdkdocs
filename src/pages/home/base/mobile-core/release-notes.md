@@ -38,7 +38,7 @@ Downgrading from this version of Core is unsupported, as it will cause undefined
 
 <InlineAlert variant="warning" slots="text"/>
 
-Please do not use this release for tvOS. Instead use 4.2.1 release.
+Please do not use this release for tvOS. Use the 4.2.1 release instead.
 
 ## October 30, 2023
 
