@@ -21,11 +21,11 @@ At WWDC23, Apple announced several new privacy features impacting applications a
 
 <InlineAlert variant="info" slots="text"/>
 
-Effective June 30, 2024: Adobe Experience Platform 1.x SDKs for Android will no longer be supported. Refer to the [end of support](../resources/acp-end-of-support.md) page for more information.
+Effective June 30, 2024: Adobe Experience Platform 1.x SDKs for Android will no longer be supported. Refer to the [end-of-support](../resources/sdks-end-of-support.md) page for more information.
 
 <InlineAlert variant="info" slots="text"/>
 
-Effective August 31, 2023: ACP iOS SDKs, Flutter for ACP, React Native for ACP, Cordova, and Xamarin SDKs will no longer be supported. Refer to [ACP SDKs end-of-support](../resources/acp-end-of-support.md) for more information.
+Effective August 31, 2023: ACP iOS SDKs, Flutter for ACP, React Native for ACP, Cordova, and Xamarin SDKs will no longer be supported. Refer to the [end-of-support](../resources/sdks-end-of-support.md) page for more information.
 
 <InlineAlert variant="info" slots="text"/>
 

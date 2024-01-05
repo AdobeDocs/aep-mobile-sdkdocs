@@ -1,6 +1,8 @@
-# ACP SDKs end-of-support
+# SDKs end-of-support announcements
 
 ## End of support for Adobe Experience Platform 1.x SDKs for Android
+
+**Published On: January 5, 2024**
 
 As of June 30, 2024, Adobe will officially deprecate support for the Adobe Experience Platform 1.x SDKs for Android. While the SDK will continue to function post-deprecation, it is crucial to be aware of the following changes:
 
