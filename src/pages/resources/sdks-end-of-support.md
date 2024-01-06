@@ -1,4 +1,22 @@
-# ACP SDKs end-of-support
+# SDKs end-of-support announcements
+
+## End of support for Adobe Experience Platform 1.x SDKs for Android
+
+**Published On: January 5, 2024**
+
+As of June 30, 2024, Adobe will officially deprecate support for the Adobe Experience Platform 1.x SDKs for Android. While the SDK will continue to function post-deprecation, it is crucial to be aware of the following changes:
+
+### Limited Support
+
+After the deprecation date, Adobe will no longer provide bug fixes or introduce new features for the Adobe Experience Platform 1.x SDKs on Android.
+
+### Continued Support for Adobe Experience Platform 2.x SDKs
+
+Adobe will continue to support Adobe Experience Platform 2.x SDKs for Android. Users on these SDK versions will continue to receive ongoing support, including bug fixes and access to new features until the release of the 3.x SDKs. We encourage users to upgrade to the latest 2.x version to stay current and benefit from Adobe’s best-in-class capabilities. To facilitate a smooth transition, comprehensive documentation outlining the upgrade process is available [here](https://developer.adobe.com/client-sdks/resources/migration/android/migrate-to-2x/).
+
+### Upcoming Release: Adobe Experience Platform 3.x SDKs in 2024
+
+In our commitment to innovation, Adobe is planning to release Adobe Experience Platform 3.x SDKs for Android later in 2024. This release will bring further advancements, performance improvements, and new features to elevate your development experience.
 
 ## End of support for ACP iOS SDKs and Wrappers
 
