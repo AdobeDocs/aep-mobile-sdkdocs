@@ -7,6 +7,12 @@ Keywords:
 
 # Release notes
 
+## January 8, 2024
+
+### iOS Media 4.0.1
+
+* Fixes configuration handling where Collection API Server with first-party domain and /va path was not accepted.
+
 ## January 4, 2024
 
 ### iOS Core 4.2.1
