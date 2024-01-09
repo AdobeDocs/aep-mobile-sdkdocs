@@ -11,7 +11,7 @@ Keywords:
 
 ### iOS Media 4.0.1
 
-* Fixes configuration handling where Collection API Server with first-party domain and /va path was not accepted.
+* Fixes configuration handling where the Collection API Server with first-party domain and /va path was not accepted.
 
 ## January 4, 2024
 
