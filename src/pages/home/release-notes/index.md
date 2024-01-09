@@ -7,6 +7,156 @@ Keywords:
 
 # Release notes
 
+## January 8, 2024
+
+### iOS Media 4.0.1
+
+* Fixes configuration handling where the Collection API Server with first-party domain and /va path was not accepted.
+
+## January 4, 2024
+
+### iOS Core 4.2.1
+
+* Reverts storage for tvOS back to UserDefaults.
+
+## December 13, 2023
+
+### Android BOM 2.8.1
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.8.0) | BOM (2.8.1) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:core** | **2.6.0** | **2.6.1**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:assurance | 2.2.0 | 2.2.0 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.6 | 2.0.6 |
+| com.adobe.marketing.mobile:campaignclassic | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edge | 2.4.0 | 2.4.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.2.0 | 2.2.0 |
+| com.adobe.marketing.mobile:optimize | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Core 2.6.1
+
+* Fixed an issue where failure to create a webview for displaying an in-app message would cause the UI to be blocked.
+
+## November 15, 2023
+
+### Android BOM 2.8.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.7.0) | BOM (2.8.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:core** | **2.5.1** | **2.6.0**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:assurance | 2.2.0 | 2.2.0 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.6 | 2.0.6 |
+| com.adobe.marketing.mobile:campaignclassic | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edge | 2.4.0 | 2.4.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.2.0 | 2.2.0 |
+| com.adobe.marketing.mobile:optimize | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Core 2.6.0
+
+* Fixed the UI takeover behavior for in-app messages. When UI takeover is disabled, taps outside the in-app webview no longer dismiss the message.
+
+## October 31, 2023
+
+### iOS Core 4.2.0
+
+* Migrates storage from UserDefaults to iOS file system.
+
+<InlineAlert variant="info" slots="text"/>
+
+Downgrading from this version of Core is unsupported, as it will cause undefined behavior.
+
+<InlineAlert variant="warning" slots="text"/>
+
+Please do not use this release for tvOS. Use the 4.2.1 release instead.
+
+## October 30, 2023
+
+### Android BOM 2.7.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.6.0) | BOM (2.7.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:core** | **2.5.0** | **2.5.1**|
+| **com.adobe.marketing.mobile:edge** | **2.3.0** | **2.4.0**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:assurance | 2.2.0 | 2.2.0 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.6 | 2.0.6 |
+| com.adobe.marketing.mobile:campaignclassic | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.2.0 | 2.2.0 |
+| com.adobe.marketing.mobile:optimize | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Core 2.5.1
+
+* Fixed a resource leak in `StreamUtils`.
+* Fixed a crash when displaying in-app messages.
+
 ## October 27, 2023
 
 ### iOS Edge 4.3.0
@@ -1195,8 +1345,8 @@ Note that all these extensions must be updated together.
 
 For help on moving to these versions, and information on deprecated APIs please see:
 
-* [Migration guide](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-android)
-* [Migration FAQ](../resources/faq.md#migrating-to-android-mobile-core-2x-and-compatible-extensions)
+* [Migration guide](../../resources/migration/android/migrate-to-2x.md)
+* [Migration FAQ](../../resources/migration/android/migrate-to-2x.md#frequently-asked-questions)
 
 ## February 17, 2023
 
@@ -1378,7 +1528,7 @@ The brand new Adobe Experience Platform Core Android SDKs are live! It is [open 
 
 <InlineAlert variant="info" slots="text"/>
 
-The `registerExtension` API for each extension is deprecated in the latest version of the mobile SDK. You can call the `MobileCore.registerExtensions` API instead of registering the extensions separately. See the [Migration Guide](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-android) for more details.
+The `registerExtension` API for each extension is deprecated in the latest version of the mobile SDK. You can call the `MobileCore.registerExtensions` API instead of registering the extensions separately. See the [Migration Guide](../../resources/migration/android/migrate-to-2x.md) for more details.
 
 ## January 5, 2023
 

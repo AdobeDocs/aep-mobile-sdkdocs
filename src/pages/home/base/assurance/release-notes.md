@@ -6,7 +6,7 @@ keywords:
 - Release notes
 ---
 
-# Release Notes
+# Release notes
 
 Release notes and change logs for the Adobe Experience Platform Assurance extension
 
