@@ -6,7 +6,19 @@ keywords:
 - Release notes
 ---
 
-# Release Notes
+# Release notes
+
+## October 27, 2023
+
+### iOS Edge 4.3.0
+
+* Added support to customize datastream configurations on a per-event basis using the sendEvent API.
+* Improved logging on connection failure.
+
+### Android Edge 2.4.0
+
+* Added support to customize datastream configurations on a per-event basis using the sendEvent API.
+* Improved logging on connection failure.
 
 ## September 1, 2023
 

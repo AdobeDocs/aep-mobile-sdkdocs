@@ -11,17 +11,21 @@
  */
 module.exports = {
     siteMetadata: {
-        versions: [{
-                title: 'Latest version',
-                path: '/client-sdks/',
-                selected: true
-            },
-            {
-                title: 'Previous versions',
-                path: '/client-sdks/previous-versions/'
-            }
-        ],
         pages: [
+            {
+                title: "Versions",
+                menu: [
+                    {
+                        title: "Latest version",
+                        path: "/home",
+                        selected: true
+                    },
+                    {
+                        title: "Previous versions",
+                        path: '/previous-versions/'
+                    }
+                ]
+            },
             {
                 title: "Home",
                 path: "/home"
@@ -124,6 +128,16 @@ module.exports = {
                             {
                                 title: "Validation",
                                 path: "/edge/edge-network/validation"
+                            },
+                            {
+                                title: "Tutorials",
+                                path: "/edge/edge-network/tutorials",
+                                pages: [
+                                    {
+                                        title: "Datastream config overrides using rules",
+                                        path: "/edge/edge-network/tutorials/datastream-config-override-rules"
+                                    }
+                                ]
                             },
                             {
                                 title: "Release notes",
@@ -717,8 +731,8 @@ module.exports = {
                         path: "/resources/faq"
                     },
                     {
-                        title: "ACP SDKs end-of-support",
-                        path: "/resources/acp-end-of-support"
+                        title: "SDKs end-of-support announcements",
+                        path: "/resources/sdks-end-of-support"
                     },
                     {
                         title: "Adobe Mobile Library (v4) end-of-support",
@@ -754,6 +768,32 @@ module.exports = {
                         path: "/resources/privacy-announcement"
                     }
 
+                ]
+            },{
+                title: "Migration",
+                path: "/resources/migration",
+                pages: [{
+                        title: "Android",
+                        path: "/resources/migration/android",
+                        pages: [{
+                                title: "Migrate to 2.x SDKs",
+                                path: "/resources/migration/android/migrate-to-2x"
+                            }
+                        ]
+                    },
+                    {
+                        title: "iOS",
+                        path: "/resources/migration/ios",
+                        pages: [{
+                                title: "Migrate to 4.x SDKs",
+                                path: "/resources/migration/ios/migrate-to-4x"
+                            },
+                            {
+                                title: "Migrate to 3.x SDKs",
+                                path: "/resources/migration/ios/migrate-to-3x"
+                            },                            
+                        ]
+                    }
                 ]
             },
             {

@@ -25,9 +25,3 @@ To find answers to the most frequently asked questions about Mobile SDK, please 
 ## Adobe Mobile Library (v4) end-of-support
 
 You can learn about upgrading from Adobe Mobile Library (v4) to the Experience Platform SDKs by following the instructions in the [upgrading to Experience Platform SDKs overview](./upgrade-platform-sdks/index.md).
-
-## Migrating to Swift
-
-You can migrate your Objective-C-based version of the SDK to the Swift-based version of the SDK.
-
-To learn how to migrate your Mobile SDK implementation to Swift, please read the guide on [migrating to Swift](https://developer.adobe.com/client-sdks/previous-versions/documentation/migrate-to-swift/).
