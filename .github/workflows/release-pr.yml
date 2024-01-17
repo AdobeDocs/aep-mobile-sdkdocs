@@ -4,11 +4,6 @@ name: Update release notes
 # or API.
 on: 
    workflow_dispatch:
-      inputs:
-         time_range_hours:
-           description: 'SDK released within x hours'     
-           required: true
-           default: '24'
    schedule:
      - cron: '00 00 * * *'
      # At 00:00 everyday
@@ -37,9 +32,11 @@ jobs:
        
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
-      - name: Update releases notes (for BOM)
-        run: node .github/scripts/update-release-notes.js ${{ secrets.GITHUB_TOKEN }} ${{ github.event.inputs.time_range_hours }} debug
+      - name: Yarn install
+        run: yarn install
+        
+      - name: Update releases notes
+        run: node .github/scripts/release_notes/index.js ${{ secrets.GITHUB_TOKEN }}
      
       - name: Check release-notes/index.md
         run: |
