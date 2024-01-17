@@ -7,6 +7,18 @@ Keywords:
 
 # Release notes
 
+## January 8, 2024
+
+### iOS Media 4.0.1
+
+* Fixes configuration handling where the Collection API Server with first-party domain and /va path was not accepted.
+
+## January 4, 2024
+
+### iOS Core 4.2.1
+
+* Reverts storage for tvOS back to UserDefaults.
+
 ## December 13, 2023
 
 ### Android BOM 2.8.1
@@ -98,6 +110,10 @@ Keywords:
 <InlineAlert variant="info" slots="text"/>
 
 Downgrading from this version of Core is unsupported, as it will cause undefined behavior.
+
+<InlineAlert variant="warning" slots="text"/>
+
+Please do not use this release for tvOS. Use the 4.2.1 release instead.
 
 ## October 30, 2023
 

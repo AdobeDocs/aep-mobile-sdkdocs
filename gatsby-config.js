@@ -664,8 +664,8 @@ module.exports = {
                         path: "/resources/faq"
                     },
                     {
-                        title: "ACP SDKs end-of-support",
-                        path: "/resources/acp-end-of-support"
+                        title: "SDKs end-of-support announcements",
+                        path: "/resources/sdks-end-of-support"
                     },
                     {
                         title: "Adobe Mobile Library (v4) end-of-support",

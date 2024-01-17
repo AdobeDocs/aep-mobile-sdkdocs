@@ -21,18 +21,15 @@ At WWDC23, Apple announced several new privacy features impacting applications a
 
 <InlineAlert variant="info" slots="text"/>
 
-Effective August 31, 2023: ACP iOS SDKs, Flutter for ACP, React Native for ACP, Cordova, and Xamarin SDKs will no longer be supported. Refer to [ACP SDKs end-of-support](../resources/acp-end-of-support.md) for more information.
+Effective June 30, 2024: Adobe Experience Platform 1.x SDKs for Android will no longer be supported. Refer to the [end-of-support](../resources/sdks-end-of-support.md) page for more information.
+
+<InlineAlert variant="info" slots="text"/>
+
+Effective August 31, 2023: ACP iOS SDKs, Flutter for ACP, React Native for ACP, Cordova, and Xamarin SDKs will no longer be supported. Refer to the [end-of-support](../resources/sdks-end-of-support.md) page for more information.
 
 <InlineAlert variant="info" slots="text"/>
 
 Check out our page discussing how we will [align major SDK versions](../resources/major-version-alignment.md) for future releases of the Adobe Experience Platform Mobile SDKs and wrappers.
-
-<InlineAlert variant="success" slots="header, text"/>
-
-Mobile Core 2.x for Android and the compatible extensions are here!
-
-A new major version of the Mobile Core SDK for Android has been released along with updates to other extensions to take advantage of the new features and improvements.
-For more information, check out the [release notes](./release-notes/#february-23-2023).
 
 ## Bring the Adobe Experience Cloud to your apps
 

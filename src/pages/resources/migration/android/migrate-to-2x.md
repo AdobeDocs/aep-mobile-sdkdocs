@@ -108,9 +108,9 @@ Kotlin
 
 Some of the APIs available in previous major versions of the Mobile SDK for Android are now deprecated or removed. You can choose to replace the obsolete APIs in your code with the alternative APIs in the 2.x version, as described below.
 
-<InlineAlert variant="info" slots="text"/>
+<InlineAlert variant="warning" slots="text"/>
 
-The `registerExtension` API for each extension is deprecated in the 2.x version of the mobile SDK. You don't need to register extensions separately, now you can call `MobileCore.registerExtensions` API instead. See the [Update SDK initialization](#update-sdk-initialization) section for more details.
+The `registerExtension` API for each extension is deprecated in the 2.x version of the mobile SDK and will be removed in the 3.x version of the mobile SDK. You don't need to register extensions separately, now you can call `MobileCore.registerExtensions` API instead. See the [Update SDK initialization](#update-sdk-initialization) section for more details.
 
 ### Profile
 
