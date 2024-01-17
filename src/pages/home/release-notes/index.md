@@ -7,87 +7,6 @@ Keywords:
 
 # Release notes
 
-## November 30, 2023
-
-### Roku SDK 1.1.0-alpha
-
-## 🚀 What's New
-
-🆕 **Streaming Media for Edge Support**
----
-
-Alpha release of the Adobe Streaming Media for Edge Network which sends data about audio and video consumption on your streaming applications to the Adobe Experience Platform Edge Network. This enables capabilities for measurement, analysis, and activation with media data across the Adobe Experience Cloud solutions.
-
-- **Added new APIs and configuration for tracking media.**
-
-- **Customizable Ping Interval:** Define custom ping intervals for both main and ad content to suit your tracking preferences.
-
-- **Detailed Migration Guide:** A comprehensive [migration guide](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/media-migration.md) to transition from [Adobe Media SDK](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/roku) to [Adobe Experience Platform Roku SDK](https://github.com/adobe/aepsdk-roku).
-
-
-➕ **Edge**
----
-- Added support to create multiple instances of the SDK.
-
-📓 **Documentation & Sample Channel:**
----
-- [Getting Started](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/getting-started.md)
-- [API Reference](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/api-reference.md)
-- [Migration Guide for Media](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/media-migration.md)
-- [Sample App](https://github.com/adobe/aepsdk-roku/blob/main/sample/simple-videoplayer-channel/README.md)
-<details>
-
-<summary>Click to view the full changelog</summary>
-
-* Staging -> Main [ v1.1.0-alpha Release ] (#131) @addb
-* Get latest changes from dev -> staging (#133) @addb
-* Update Migration guide sample for custom metadata and sample app fixes to stop timer on video complete (#132) @addb
-* Dev -> Staging [v1.1.0-alpha Release] - Media Support (#129) @addb
-* Cleanup Sample app (#130) @addb
-* [New Capability] Streaming Media for Edge Network (#126) @addb
-* Update SDK names in the documentation (#128) @addb
-* Log improvements and minor refactoring. (#125) @addb
-* [Migration Guide] Add tables with required fields in the schema + Minor Refactor (#124) @addb
-* Add Migration Guide for Media (#123) @addb
-* Log improvements + code cleanup + fixes (#122) @addb
-* Update version to 1.1.0-alpha (#119) @yangyansong-adbe
-* Update API doc with media supported configuration keys (#121) @yangyansong-adbe
-* Small update for the sample app (#120) @yangyansong-adbe
-* Add integration tests for media tracking APIs (#115) @yangyansong-adbe
-* Update getting-started document (#116) @yangyansong-adbe
-* Handle events from inactive sessions (#117) @yangyansong-adbe
-* Handle session-level configuration (#113) @yangyansong-adbe
-* Add Media Unit tests - Part 2 (#114) @addb
-* Add unit tests for Media module (#110) @addb
-* Update API references for media tracking APIs (#111) @yangyansong-adbe
-* Implement session Manager - Initial Structure, Setup and Usage (#106) @addb
-* Update sample app (for media tracking APIs) (#109) @yangyansong-adbe
-* Refactoring the (dev) app code for clarity (#108) @yangyansong-adbe
-* Cleanup for the media tracking PR (#105) @yangyansong-adbe
-* Support creating multiple API instances (#102) @yangyansong-adbe
-* Media tracking APIs (#101) @yangyansong-adbe
-* Update configuration module to support media keys (#91) @yangyansong-adbe
-* Support path overwrite in Edge requests (#90) @yangyansong-adbe
-* Add a doc for SDK development (#88) @yangyansong-adbe
-* Add badges to the main README (#87) @yangyansong-adbe
-
-</details>
-
-
-## November 22, 2023
-
-### AEP React Native  adobe/react-native-messaging
-
-## What's Changed
-* Update migration doc for Analytics workflow
-* Adds support for code based propositions to messaging extension
-
-## October 20, 2023
-
-### Android Target 2.0.2
-
-* Added support for X-EXC-SDK and X-EXC-SDK-Version headers containing SDK info and version details to help determine requests' source when using Adobe Target Splunk queries.
-
 ## January 8, 2024
 
 ### iOS Media 4.0.1
@@ -286,6 +205,12 @@ Please do not use this release for tvOS. Use the 4.2.1 release instead.
 </AccordionItem>
 
 </Accordion>
+
+## October 20, 2023
+
+### Android Target 2.0.2
+
+* Added support for X-EXC-SDK and X-EXC-SDK-Version headers containing SDK info and version details to help determine requests' source when using Adobe Target Splunk queries.
 
 ## October 19, 2023
 
