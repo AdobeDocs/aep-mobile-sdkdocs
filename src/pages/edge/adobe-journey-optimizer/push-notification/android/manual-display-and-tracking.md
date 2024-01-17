@@ -1,6 +1,6 @@
 ---
 title: Manual display and tracking of push notification
-description: This document describes how to manually build, display and track push notifications from Adobe Journey Optimizer using the AEPMessaging extension. We highly recommend to use the automatic display and tracking method unless you have a specific requirement to manually display and track push notifications.
+description: This document describes how to manually build, display and track push notifications from Adobe Journey Optimizer using the AEPMessaging extension. We highly recommend to use the automatic display and tracking method unless you have a specific requirement to manually build, display, and track push notifications.
 keywords:
 - Adobe Journey Optimizer
 - Messaging
@@ -11,11 +11,11 @@ keywords:
 
 # Manual display and tracking of push notification
 
-This document describes how to manually build, display and track push notifications from Adobe Journey Optimizer using the AEPMessaging extension. We highly recommend to use the [automatic display and tracking](./automatic-handling-and-tracking.md) method unless you have a specific requirement to manually display and track push notifications.
+This document describes how to manually build, display and track push notifications from Adobe Journey Optimizer using the AEPMessaging extension. We highly recommend to use the [automatic display and tracking](./automatic-handling-and-tracking.md) method unless you have a specific requirement to manually build, display, and track push notifications.
 
 ## Pre-requisites
 
-[Integrate and register Messaging extension](../../../index.md#implement-extension-in-mobile-app) in your app.
+[Integrate and register the Messaging extension](../../../index.md#implement-extension-in-mobile-app) in your app.
 
 ## Sync the push token
 
@@ -53,7 +53,7 @@ public class YourApp extends Application {
     MessagingPushPayload payload = new MessagingPushPayload(remoteMessage);
     ```
 
-2. Use the [Public API's](../enum-public-classes/messaging-push-payload.md) of MessagingPushPayload to get the attributes required for creating the push notification.
+2. Use the [Public APIs](../enum-public-classes/messaging-push-payload.md) of MessagingPushPayload to get the attributes required for creating the push notification.
 
     ```java
     // Following are a few examples of using the public APIs of MessagingPushPayload
@@ -124,7 +124,7 @@ After the application is opened by the user by clicking on the push notification
         final String actionId) // actionId of the element which performed the custom action.
 ```
 
-##### Sending push notification interaction feedback when application is opened without any custom action
+**Sending push notification interaction feedback when application is opened without any custom action**
 
 Add the following code where you have access to `intent` after the user has interacted with the push notification:
 
@@ -132,7 +132,7 @@ Add the following code where you have access to `intent` after the user has inte
 Messaging.handleNotificationResponse(intent, true, null);
 ```
 
-##### Sending feedback when application is opened with a custom action
+**Sending feedback when application is opened with a custom action**
 
 Similar to the example above, call the `handleNotificationResponse` API but this time with a custom action:
 
@@ -140,7 +140,7 @@ Similar to the example above, call the `handleNotificationResponse` API but this
 Messaging.handleNotificationResponse(intent, true, <actionId>);
 ```
 
-##### Sending feedback when application is not opened but a custom action is performed by the user
+**Sending feedback when application is not opened but a custom action is performed by the user**
 
 Add the following code where you have access to `intent` after the user has interacted with the push notification:
 

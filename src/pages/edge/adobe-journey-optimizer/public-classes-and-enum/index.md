@@ -1,5 +1,5 @@
 ---
-title: Public Classes and Enums
+title: Public classes and enums
 description: This documents lists all details about the public classes and enums available in Messaging extension.
 keywords:
 - Adobe Journey Optimizer
@@ -8,19 +8,19 @@ keywords:
 - Public Classes
 - Enum
 - Enumeration
-- In-App Message
+- In-app message
 ---
 
-# Public Classes and Enums
+# Public classes and enums
 
 This documents lists all details about the public classes and enums available in Messaging extension.
 
-## Push Notification
+## Push notification
 
 * [Class - MessagingPushPayload](./messaging-push-payload.md)
 * [Enum - PushTrackingStatus](./push-tracking-status.md)
 
-## In-App Message
+## In-app message
 
 * [Class - Message](./message.md)
 * [Enum - MessagingEdgeEventType](./messaging-edge-event-type.md)

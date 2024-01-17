@@ -85,17 +85,17 @@ public class YourAppFirebaseMessagingService extends FirebaseMessagingService {
 }
 ```
 
-## Notification Channel
+## Notification channel
 
-Notification channel was introduced in Android Oreo (API level 26). It allows you to group notifications and allows users to customize the notification preferences for each channel.
+Notification channels were introduced in Android Oreo (API level 26). They allow you to group notifications and allows users to customize the notification preferences for each channel.
 
-You must create at least one notification channel to display push notifications on devices running Android Oreo or higher. Follow the [android documentation](https://developer.android.com/develop/ui/views/notifications/channels) to create and manage notification channels. Once a notification channel is created, you can use the channel id while [designing the push notification](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/design-push.html) in Adobe Journey Optimizer.
+You must create at least one notification channel to display push notifications on devices running Android Oreo or higher. Follow the [Android documentation](https://developer.android.com/develop/ui/views/notifications/channels) to create and manage notification channels. Once a notification channel is created, you can use the channel ID while [designing the push notification](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/design-push.html) in Adobe Journey Optimizer.
 
-**Default Channel**: If you do not create a notification channel, or if the notification channel specified while designing the push notification does not match with any of the created channels, the Messaging extension will present the push notification through its predefined fallback notification channel, which is named "General Notifications."
+**Default channel**: If you do not create a notification channel, or if the notification channel specified while designing the push notification does not match with any of the created channels, the Messaging extension will present the push notification through its predefined fallback notification channel, which is named "General Notifications."
 
-## Configuring Small Icon
+## Configuring small icon
 
-Use MobileCore's API to set the small icon resource id. This icon will be used as the small icon for all the incoming push notification from Adobe Journey Optimizer.
+Use MobileCore's API to set the small icon resource ID. This icon will be used as the small icon for all the incoming push notification from Adobe Journey Optimizer.
 
 ```java
 MobileCore.setSmallIconResourceId(R.drawable.ic_notification);
@@ -103,6 +103,6 @@ MobileCore.setSmallIconResourceId(R.drawable.ic_notification);
 
 When no custom small icon is specified, the Messaging extension will automatically utilize the application's launcher icon as the default small icon.
 
-## Notification Actions
+## Notification actions
 
 Messaging extension will automatically handle any click behaviour that is configured while [designing the push notification in Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/design-push.html) or Assurance.

@@ -96,7 +96,7 @@ Complete the following steps to validate a response containing in-app messages:
 
 Once all of the above validation sections are complete, you can use the **In-App Messaging** plugin view in the Assurance UI to further debug your app.
 
-#### Install the In-App Messaging plugin
+### Install the In-App Messaging plugin
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -110,7 +110,7 @@ If you have already installed the **In-App Messaging** plugin in your Assurance 
 
 ![Install the In-App Messaging plugin](./assets/validate-messages/install-iam-plugin.png)
 
-#### Inspecting a downloaded message
+### Inspecting a downloaded message
 
 Using the IAM plugin you can do the following for each message downloaded by the client:
 
@@ -125,27 +125,27 @@ Using the IAM plugin you can do the following for each message downloaded by the
 
 ## FAQs
 
-### Q: What do I do when one of the required extensions is missing?
+### What do I do when one of the required extensions is missing?
 
-**A:** Ensure that each required extension is linked to your project and registered by `MobileCore`. For more information, please read the [Mobile Core API reference](../../mobile-core/api-reference.md#registerextensions).
+Ensure that each required extension is linked to your project and registered by `MobileCore`. For more information, please read the [Mobile Core API reference](../../mobile-core/api-reference.md#registerextensions).
 
-### Q: Why can't I find an event named `Retrieve message definitions`?
+### Why can't I find an event named `Retrieve message definitions`?
 
-**A:** Ensure that each of the required extensions is at the minimum required version.
+Ensure that each of the required extensions is at the minimum required version.
 
-### Q: I see an `AEP Error Response` event, is that a problem?
+### I see an `AEP Error Response` event, is that a problem?
 
-**A:** If you open the EventData and the `detail` key has a value of "The Decisioning Package was not found.", this likely means the Messaging extension was unable to find the messages for your app. Check the below items to try and resolve the issue:
+If you open the EventData and the `detail` key has a value of "The Decisioning Package was not found.", this likely means the Messaging extension was unable to find the messages for your app. Check the below items to try and resolve the issue:
 
 * Make sure that messages have been published in the AJO Campaigns UI for your app surface
 * Make sure that the bundle identifier (iOS) or package name (Android) matches the value used for your app surface
 * Make sure that the **environment** and **sandbox** being used in AJO matches those being used to configure the app
 * Make sure that your Adobe organization is provisioned for Offers on Edge (this may require contacting your account manager)
 
-### Q: Why don't I see any messages in my `AEP Response Event Handle` event?
+### Why don't I see any messages in my `AEP Response Event Handle` event?
 
-**A:** In the [Adobe Journey Optimizer UI](https://experience.adobe.com/#/@/journey-optimizer/home), make sure that there are in-app messages with a **Live** status for your application.
+In the [Adobe Journey Optimizer UI](https://experience.adobe.com/#/@/journey-optimizer/home), make sure that there are in-app messages with a **Live** status for your application.
 
-### Q: Why aren't there any messages to select in the `In-App Messaging` Assurance UI plugin?
+### Why aren't there any messages to select in the `In-App Messaging` Assurance UI plugin?
 
-**A:** The `In-App Messaging` plugin view will only be populated when there are messages returned in the `AEP Response Event Handle` event.
+The `In-App Messaging` plugin view will only be populated when there are messages returned in the `AEP Response Event Handle` event.

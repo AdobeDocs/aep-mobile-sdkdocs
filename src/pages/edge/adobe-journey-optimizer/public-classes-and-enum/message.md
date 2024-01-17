@@ -1,11 +1,15 @@
 ---
-title: <title>
-description: <description>
+title: Message
+description: The `Message` class contains the definition of an in-app message and controls its tracking via Experience Edge events.
 keywords:
 - Adobe Journey Optimizer
 - Messaging
-- Push Notification
+- Message
+- Interface
+- Android
 - iOS
+- Javascript
+- In-app message
 ---
 import Tabs from './tabs/message.md'
 
@@ -63,7 +67,7 @@ Signals to the UIService that the message should be removed from the UI.
 
 If `autoTrack` is true, calling this method will result in an `decisioning.propositionDismiss` Edge Event being dispatched.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="0"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 iOS
 
@@ -133,7 +137,7 @@ Android
 
 ### setAutoTrack
 
-Sets the `Message's` auto tracking preference.
+Sets the `Message`'s auto tracking preference.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
@@ -143,7 +147,7 @@ Android
 
 ### evaluateJavascript
 
-Evaluates the passed in `String` content containing javascript code using the `Message's` webview. `handleJavascriptMessage` must be called with a valid callback before calling `evaluateJavascript` as the body of the message passed from the javascript code execution will be returned in the `AdobeCallback` .
+Evaluates the passed in `String` content containing JavaScript code using the `Message`'s webview. `handleJavascriptMessage` must be called with a valid callback before calling `evaluateJavascript` as the body of the message passed from the JavaScript code execution will be returned in the `AdobeCallback` .
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
@@ -155,7 +159,7 @@ Android
 
 Adds a handler for named JavaScript messages sent from the message's `WebView`.
 
-The  `AdobeCallback` will contain the body of the message passed from the `WebView`'s JavaScript.
+The `AdobeCallback` will contain the body of the message passed from the `WebView`'s JavaScript.
 
 For a full guide on how to use `handleJavascriptMessage`, read [Call native code from the Javascript of an in-app message](./how-to-call-native-from-javascript.md).
 
@@ -183,7 +187,7 @@ Object getParent()
 
 ### getWebView
 
-Returns a reference to the message's  `WebView`  instance, if it exists.
+Returns a reference to the message's `WebView` instance, if it exists.
 
 ```java
 WebView getWebView()

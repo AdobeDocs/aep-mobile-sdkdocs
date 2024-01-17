@@ -1,6 +1,6 @@
 ---
 title: MessagingPushPayload
-description: This document explains how to use MessagingPushPayload class for getting the notification attributes like title, body, actions etc for creating a push notification from a received AJO push payload.
+description: This document explains how to use MessagingPushPayload class for getting the notification attributes like title, body and actions for creating a push notification from a received AJO push payload.
 keywords:
 - Adobe Journey Optimizer
 - Messaging
@@ -18,9 +18,9 @@ MessagePushPayload is an Android only helper class for extracting the data paylo
 
 ## Creating the MessagingPushPayload object
 
-Use the below constructors in the FirebaseMessagingService class's onMessageReceived method:
+Use the following constructors in the FirebaseMessagingService class's `onMessageReceived` method:
 
-#### Syntax
+**Syntax**
 
 ```java
     // Using the remote message
@@ -30,7 +30,7 @@ Use the below constructors in the FirebaseMessagingService class's onMessageRece
     public MessagingPushPayload(Map<String, String> data)
 ```
 
-#### Example
+**Example**
 
 ```java
 // Using the remote message
@@ -46,7 +46,7 @@ public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {
 }
 ```
 
-## Public API's
+## Public APIs
 
 Public APIs are used to get attributes from the push payload, which are used while creating the push notification.
 

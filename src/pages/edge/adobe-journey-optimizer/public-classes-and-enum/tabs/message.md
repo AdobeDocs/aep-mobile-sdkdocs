@@ -98,4 +98,4 @@ void evaluateJavascript(final String content)
 
 ##### Parameters
 
-* *content* - a string containing the javascript code to be executed
+* *content* - a string containing the JavaScript code to be executed

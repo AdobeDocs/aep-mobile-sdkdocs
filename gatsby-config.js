@@ -155,7 +155,7 @@ module.exports = {
                                                 path: "/edge/adobe-journey-optimizer/push-notification/ios/api-reference"
                                             },
                                             {
-                                                title: "Display Rich Notifications",
+                                                title: "Display rich notifications",
                                                 path: "/edge/adobe-journey-optimizer/push-notification/ios/display-rich-notifications"
                                             }
                                         ]
@@ -175,7 +175,7 @@ module.exports = {
                                         ]
                                     },
                                     {
-                                        title: "Payload Keys",
+                                        title: "Payload keys",
                                         path: "/edge/adobe-journey-optimizer/push-notification/push-payload"
                                     }
                                 ]
