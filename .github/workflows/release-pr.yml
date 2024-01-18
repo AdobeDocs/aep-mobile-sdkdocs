@@ -23,7 +23,7 @@ jobs:
           
       - name: Check existing PRs
         run: |
-          if gh pr list --repo ${{ github.server_url }}/${{ github.repository }} --json title | grep 'Updating release notes for BOM'; then
+          if gh pr list --repo ${{ github.server_url }}/${{ github.repository }} --json title | grep 'Updating release notes'; then
             gh run cancel ${{ github.run_id }}
             gh run watch ${{ github.run_id }}
           else
@@ -53,12 +53,12 @@ jobs:
         uses: peter-evans/create-pull-request@v4.2.3
         with:
           token: ${{ github.token }}
-          commit-message: Updating release notes for BOM
+          commit-message: Updating release notes
           branch: update-release-notes
           delete-branch: true
           labels: |
             release-notes
             automated pr
-          title: "Updating release notes for BOM"
+          title: "Updating release notes"
           body: This PR is automatically created by [update-release-notes] action.
             
