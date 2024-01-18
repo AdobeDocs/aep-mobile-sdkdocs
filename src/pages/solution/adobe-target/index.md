@@ -194,7 +194,7 @@ For more information, see [Programmatic updates to Configuration](../../home/bas
 
 | Key | Description | Data Type |
 | :--- | :--- | :--- |
-| target.clientcode | Client code for your account. | String |
+| target.clientCode | Client code for your account. | String |
 | target.timeout | Time, in seconds, to wait for a response from Target servers before timing out. | Integer |
 | target.environmentId | Environment ID you want to use. If the value is left blank, the default production environment will be used. | Integer |
 | target.propertyToken | `at_property` token value, which is generated from the Target UI. If this value is left blank, no token is sent in the Target network calls. | String |
