@@ -8,8 +8,6 @@ keywords:
 
 # Release notes
 
-Release notes and change logs for the Adobe Experience Platform Assurance extension
-
 ## October 19, 2023
 
 ### iOS Assurance 4.1.0
