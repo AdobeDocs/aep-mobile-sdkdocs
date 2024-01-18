@@ -7,6 +7,16 @@ Keywords:
 
 # Release notes
 
+## January 19, 2024
+
+### Android Campaign Classic 2.1.0
+
+* Added support for out-of-the-box push notifications:
+  * Basic notifications, including remind me later and call-to-action functionality
+  * Manual and automatic image carousels of two to five items
+
+See a full description of the new [push template payloads](./../../solution/adobe-campaign-classic/push-payloads.md).
+
 ## January 8, 2024
 
 ### iOS Media 4.0.1

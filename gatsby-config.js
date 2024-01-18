@@ -365,6 +365,10 @@ module.exports = {
                                 path: "/solution/adobe-campaign-classic/event-reference"
                             },
                             {
+                                title: "Push Payloads",
+                                path: "/solution/adobe-campaign-classic/push-payloads"
+                            },
+                            {
                                 title: "Release notes",
                                 path: "/solution/adobe-campaign-classic/release-notes"
                             }

@@ -54,6 +54,10 @@ Android
 
 The `trackNotificationReceive` API sends the received push notification's tracking information to the configured Adobe Campaign Classic server.
 
+<InlineAlert variant="success" slots="text"/>
+
+If you are using the `AEPMessagingService.handleRemoteMessage` API, you should not call `CampaignClassic.trackNotificationReceive`.
+
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
@@ -77,3 +81,29 @@ Android
 iOS
 
 <Tabs query="platform=ios&api=track-notification-click"/>
+
+## Other public classes
+
+### AEPMessagingService
+
+#### handleRemoteMessage
+
+Allows the Adobe Campaign Classic extension to automatically create and dispatch a `Notification` based on the template included in the provided `RemoteMessage` object.
+
+<InlineAlert variant="success" slots="text" />
+
+If you are using the `AEPMessagingService.handleRemoteMessage` API, you should not call `CampaignClassic.trackNotificationReceive`.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+
+Android
+
+<Tabs query="platform=android&api=handle-remote-message" />
+
+### AEPPushTemplateBroadcastReceiver
+
+This class is required to be public, but has no APIs that need to be called by the app developer.
+
+### CampaignPushTrackerActivity
+
+This class is required to be public, but has no APIs that need to be called by the app developer.
