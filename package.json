@@ -40,6 +40,7 @@
   },
   "packageManager": "yarn@3.2.1",
   "devDependencies": {
+    "lodash.template": "^4.5.0",
     "remark-cli": "^11.0.0",
     "remark-validate-links": "^12.1.0"
   }

@@ -17,6 +17,12 @@ Keywords:
 
 See a full description of the new [push template payloads](./../../solution/adobe-campaign-classic/push-payloads.md).
 
+## January 17, 2024
+
+### iOS Assurance 4.1.1
+
+* Fixed a race condition which could happen when the Assurance session is terminated.
+
 ## January 8, 2024
 
 ### iOS Media 4.0.1
@@ -380,6 +386,12 @@ Please do not use this release for tvOS. Use the 4.2.1 release instead.
 ### Android Campaign 2.0.6
 
 * Updated the minimum Core dependency version to 2.3.1 to resolve a local notification display issue.
+
+## September 14, 2023
+
+### AEP React Native Core 5.0.1
+
+* Updated the docs to call out trackAction/trackState are supported through Edge Network or Edge Bridge extensions.
 
 ## September 5, 2023
 
