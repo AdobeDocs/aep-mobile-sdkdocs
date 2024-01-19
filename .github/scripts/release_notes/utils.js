@@ -29,11 +29,12 @@ function extractReleaseNotes(releaseText) {
 
     for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
-        if (line.startsWith('##') && line.toLowerCase().includes('release notes')) {
+        if (start < 0 && line.startsWith('##') && line.toLowerCase().includes('release notes')) {
             start = i + 1
         }
-        if (start >= 0 && line.startsWith('##')) {
+        if (start >= 0 && start != i + 1 && line.startsWith('##')) {
             end = i
+            break
         }
     }
 
