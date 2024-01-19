@@ -70,19 +70,21 @@ public static void registerDevice(@NonNull final String token, final String user
 public void onNewToken(String token) {
     Log.d("TestApp", "Refreshed token: " + token);
 
-  // If you want to send messages to this application instance or
-  // manage this app's subscriptions on the server side, send the
-  // Instance ID token to your app server.
-  if (token != null) {
-    Log.d("TestApp", "FCM SDK registration token received : " + token);
-    // Create a map of additional parameters
-    Map<String, Object> additionalParams = new HashMap<String, Object>();
-    additionalParams.put("name", "John");
-    additionalParams.put("serial", 12345);
-    additionalParams.put("premium", true);
-    // Send the registration info
-    CampaignClassic.registerDevice(token, "john@example.com", additionalParams);
-  }
+    // If you want to send messages to this application instance or
+    // manage this app's subscriptions on the server side, send the
+    // Instance ID token to your app server.
+    if (token != null) {
+        Log.d("TestApp", "FCM SDK registration token received : " + token);
+        
+        // Create a map of additional parameters
+        Map<String, Object> additionalParams = new HashMap<String, Object>();
+        additionalParams.put("name", "John");
+        additionalParams.put("serial", 12345);
+        additionalParams.put("premium", true);
+    
+        // Send the registration info
+        CampaignClassic.registerDevice(token, "john@example.com", additionalParams);
+    }
 }
 ```
 
@@ -104,12 +106,13 @@ static func registerDevice(token: Data, userKey: String?, additionalParameters: 
 
 ```swift
 func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-  let params: [String: Any] = [
-    "name": "John",
-    "serial": 12345,
-    "premium": true
-  ]
-  CampaignClassic.registerDevice(token: deviceToken, userKey: "johnDoe@example.com", additionalParameters: params)
+    let params: [String: Any] = [
+        "name": "John",
+        "serial": 12345,
+        "premium": true
+    ]
+
+    CampaignClassic.registerDevice(token: deviceToken, userKey: "johnDoe@example.com", additionalParameters: params)
 }
 ```
 
@@ -125,11 +128,11 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 
 ```objectivec
 - (void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-  NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithObjectsAndKeys:  @"John", @"name", nil];
-  [params setObject: [NSNumber numberWithInt:12345] forKey: @"serial"];
-  [params setObject: [NSNumber numberWithBool:YES]  forKey: @"premium"];
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] initWithObjectsAndKeys:  @"John", @"name", nil];
+    [params setObject: [NSNumber numberWithInt:12345] forKey: @"serial"];
+    [params setObject: [NSNumber numberWithBool:YES]  forKey: @"premium"];
 
-[AEPMobileCampaignClassic registerDeviceWithToken:deviceToken userKey:@"john@example.com" additionalParameters:params];
+    [AEPMobileCampaignClassic registerDeviceWithToken:deviceToken userKey:@"john@example.com" additionalParameters:params];
 }
 ```
 
@@ -146,7 +149,7 @@ public static void registerExtension()
 #### Example
 
 ```java
-Optimize.registerExtension();
+CampaignClassic.registerExtension();
 ```
 
 <Variant platform="android" api="track-notification-click" repeat="6"/>
@@ -166,26 +169,26 @@ public static void trackNotificationClick(@NonNull final Map<String, String> tra
 ```java
 @Override
 public void onResume() {
-  super.onResume();
-  // Perform any other app related tasks
-  // The messageId (_mId) and deliveryId (_dId) can be passed in the intent extras.
-  // This is assuming you extract the messageId and deliveryId from the
-  // received push message and are including it in the intent (intent.putExtra())
-  // of the displayed notification.
+    super.onResume();
+    
+    // The messageId (_mId) and deliveryId (_dId) can be passed in the intent extras.
+    // This is assuming you extract the messageId and deliveryId from the
+    // received push message and are including it in the intent (intent.putExtra())
+    // of the displayed notification.
 
-  Bundle extras = getIntent().getExtras();
-  if (extras != null) {
-    String deliveryId = extras.getString("_dId");
-    String messageId = extras.getString("_mId");
-    if (deliveryId != null && messageId != null) {
-      Map<String,String> trackInfo = new HashMap<>();
-      trackInfo.put("_mId", messageId);
-      trackInfo.put("_dId", deliveryId);
+    Bundle extras = getIntent().getExtras();
+    if (extras != null) {
+        String deliveryId = extras.getString("_dId");
+        String messageId = extras.getString("_mId");
+        if (deliveryId != null && messageId != null) {
+            Map<String,String> trackInfo = new HashMap<>();
+            trackInfo.put("_mId", messageId);
+            trackInfo.put("_dId", deliveryId);
 
-      // Send the tracking information for message opening
-      CampaignClassic.trackNotificationClick(trackInfo);
+            // Send the tracking information for message opening
+            CampaignClassic.trackNotificationClick(trackInfo);
+        }
     }
-  }
 }
 ```
 
@@ -204,9 +207,9 @@ static func trackNotificationClick(withUserInfo userInfo: [AnyHashable: Any])
 **Example**
 
 ```swift
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        CampaignClassic.trackNotificationClick(withUserInfo: response.notification.request.content.userInfo)
-    }
+func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+    CampaignClassic.trackNotificationClick(withUserInfo: response.notification.request.content.userInfo)
+}
 ```
 
 #### Objective-C
@@ -220,7 +223,7 @@ static func trackNotificationClick(withUserInfo userInfo: [AnyHashable: Any])
 **Example**
 
 ```objectivec
--(void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)(void))completionHandler{
+- (void) userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)(void))completionHandler{
     NSDictionary *userInfo = response.notification.request.content.userInfo;
     [AEPMobileCampaignClassic trackNotificationClickWithUserInfo:userInfo];
     completionHandler();
@@ -243,21 +246,21 @@ public static void trackNotificationReceive(@NonNull final Map<String, String> t
 
 ```java
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
-  @Override
-  public void onMessageReceived(RemoteMessage remoteMessage) {
-    Log.d("TestApp", "Receive message from: " + remoteMessage.getFrom());
-    Map<String,String> payloadData = message.getData();
+    @Override
+    public void onMessageReceived(RemoteMessage remoteMessage) {
+        Log.d("TestApp", "Receive message from: " + remoteMessage.getFrom());
+        Map<String,String> payloadData = message.getData();
 
-    // Check if message contains data payload.
-    if (payloadData.size() > 0) {
-      Map<String,String> trackInfo = new HashMap<>();
-      trackInfo.put("_mId", payloadData.get("_mId"));
-      trackInfo.put("_dId", payloadData.get("_dId"));
+        // Check if message contains data payload.
+        if (payloadData.size() > 0) {
+            Map<String,String> trackInfo = new HashMap<>();
+            trackInfo.put("_mId", payloadData.get("_mId"));
+            trackInfo.put("_dId", payloadData.get("_dId"));
 
-      // Send the tracking information for message received
-      CampaignClassic.trackNotificationReceive(trackInfo);
+            // Send the tracking information for message received
+            CampaignClassic.trackNotificationReceive(trackInfo);
+        }
     }
-  }
 }
 ```
 
@@ -277,16 +280,15 @@ static func trackNotificationReceive(withUserInfo userInfo: [AnyHashable: Any])
 
 ```swift
 func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-
-  guard let aps = userInfo["aps"] as? [String: Any] else {
-    completionHandler(.failed)
-    return
-  }
-  if aps["content-available"] as? Int == 1 {
-    // Track silent push notification receive
-    CampaignClassic.trackNotificationReceive(withUserInfo: userInfo)
-    completionHandler(.noData)
-  }
+    guard let aps = userInfo["aps"] as? [String: Any] else {
+        completionHandler(.failed)
+        return
+    }
+    if aps["content-available"] as? Int == 1 {
+        // Track silent push notification receive
+        CampaignClassic.trackNotificationReceive(withUserInfo: userInfo)
+        completionHandler(.noData)
+    }
 }
 ```
 
@@ -301,14 +303,43 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
 **Example**
 
 ```objectivec
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)launchOptions fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+- (void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)launchOptions fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
-  if ( launchOptions) NSLog(@"launchOptions: %@", [launchOptions description]);
-  // Tracking silent push notification receive
-  if ( [launchOptions[@"aps"][@"content-available"] intValue] == 1 ) {
-    NSLog(@"Silent Push Notification");
-    [AEPMobileCampaignClassic trackNotificationReceiveWithUserInfo:userInfo];
-    completionHandler(UIBackgroundFetchResultNoData);
-  }
+    if ( launchOptions) NSLog(@"launchOptions: %@", [launchOptions description]);
+    // Tracking silent push notification receive
+    if ( [launchOptions[@"aps"][@"content-available"] intValue] == 1 ) {
+        NSLog(@"Silent Push Notification");
+        [AEPMobileCampaignClassic trackNotificationReceiveWithUserInfo:userInfo];
+        completionHandler(UIBackgroundFetchResultNoData);
+    }
+}
+```
+
+<Variant platform="android" api="handle-remote-message" repeat="7"/>
+
+## _**Requires extension version v2.1.0+**_
+
+Builds an `AEPPushPayload` with data extracted from a `RemoteMessage`'s payload. The built `AEPPushPayload` is then used to construct a `Notification`.
+
+#### Java
+
+**Syntax**
+
+```java
+@NonNull 
+public static boolean handleRemoteMessage(@NonNull final Context context, @NonNull final RemoteMessage remoteMessage);
+```
+
+**Example**
+
+```java
+@Override
+public void onMessageReceived(RemoteMessage remoteMessage) {
+    Log.d(LOG_TAG, "From: " + remoteMessage.getFrom());
+		if (AEPMessagingService.handleRemoteMessage(this, remoteMessage)) {
+			// Campaign extension has handled the notification
+		} else {
+			// Handle notification from other sources
+		}
 }
 ```
