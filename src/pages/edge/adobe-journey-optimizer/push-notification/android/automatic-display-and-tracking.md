@@ -1,6 +1,6 @@
 ---
 title: Automatically display and track push notification
-description: This document describes how to automatically display and track push notifications using the AEPMessaging extension. We highly recommend to use this method unless you have a specific requirement to manually display and track push notifications.
+description: This document describes how to automatically display and track push notifications using the AEPMessaging extension. You should to use this method unless you have a specific requirement to manually display and track push notifications.
 keywords:
 - Adobe Journey Optimizer
 - Messaging
@@ -14,7 +14,7 @@ keywords:
 
 # Automatically display and track push notification
 
-This document describes how to automatically display and track push notifications using the AEPMessaging extension. We highly recommend to use this method unless you have a specific requirement to manually display and track push notifications.
+This document describes how to automatically display and track push notifications using the AEPMessaging extension. You should use this method unless you have a specific requirement to manually display and track push notifications.
 
 ## Pre-requisites
 

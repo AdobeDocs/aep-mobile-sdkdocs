@@ -30,21 +30,21 @@ public enum PushTrackingStatus: Int {
 
 <Variant platform="android" function="string-values" repeat="1"/>
 
-| Enum                    | Description                       |
-| ----------------------- | --------------------------------- |
-| TRACKING_INITIATED          | This status is returned when all the required data for tracking is available and tracking is initiated.  |
-| NO_DATASET_CONFIGURED         | This status is returned when tracking is not initiated because no tracking dataset is configured. |
-| NO_TRACKING_DATA          | This status is returned when tracking is not initiated because the intent does not contain tracking data.|
-| INVALID_INTENT          | This status is returned when tracking is not initiated because the intent is invalid.  |
+| Enum | Description |
+|----------------------- |--------------------------------- |
+| TRACKING_INITIATED | This status is returned when all the required data for tracking is available and tracking is initiated. |
+| NO_DATASET_CONFIGURED | This status is returned when tracking is not initiated because no tracking dataset is configured. |
+| NO_TRACKING_DATA | This status is returned when tracking is not initiated because the intent does not contain tracking data. |
+| INVALID_INTENT | This status is returned when tracking is not initiated because the intent is invalid.|
 | INVALID_MESSAGE_ID | This status is returned when tracking is not initiated because the message ID is invalid.  |
-| UNKNOWN_ERROR      | This status is returned when tracking is not initiated because of an unknown error.      |
+| UNKNOWN_ERROR | This status is returned when tracking is not initiated because of an unknown error.|
 
 <Variant platform="ios" function="string-values" repeat="1"/>
 
-| Enum                    | Description                       |
-| ----------------------- | --------------------------------- |
-| trackingInitiated          | This status is returned when all the required data for tracking is available and tracking is initiated.  |
-| noDatasetConfigured         | This status is returned when tracking is not initiated because no tracking dataset is configured. |
-| noTrackingData          | This status is returned when tracking is not initiated because the intent does not contain tracking data.|
-| invalidMessageId | This status is returned when tracking is not initiated because the message ID is invalid.  |
-| unknownError      | This status is returned when tracking is not initiated because of an unknown error.      |
+| Enum| Description |
+| ----------------------- |--------------------------------- |
+| trackingInitiated | This status is returned when all the required data for tracking is available and tracking is initiated. |
+| noDatasetConfigured | This status is returned when tracking is not initiated because no tracking dataset is configured. |
+| noTrackingData | This status is returned when tracking is not initiated because the intent does not contain tracking data. |
+| invalidMessageId | This status is returned when tracking is not initiated because the message ID is invalid. |
+| unknownError | This status is returned when tracking is not initiated because of an unknown error. |

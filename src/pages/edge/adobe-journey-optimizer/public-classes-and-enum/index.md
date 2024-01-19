@@ -13,7 +13,7 @@ keywords:
 
 # Public classes and enums
 
-This documents lists all details about the public classes and enums available in Messaging extension.
+This documents lists details about the public classes and enums available in Messaging extension.
 
 ## Push notification
 

@@ -24,18 +24,7 @@ noIndex: true
             "adb_image": "www.imageUrl.com",           
             "adb_a_type": "DEEPLINK/WEBURL/OPENAPP",
             "adb_uri" : "deeplinkurl/weburl",
-            "adb_act": [
-                {
-                    "label" : "deeplink",
-                    "uri" : "notificationapp://",
-                    "type" : "DEEPLINK"
-                },
-                {
-                    "label" : "weburl",
-                    "uri" : "https://www.yahoo.com",
-                    "type" : "WEBURL"
-                }
-            ],          
+            "adb_act": "[{\"label\":\"deeplink\",\"uri\":\"notificationapp://\",\"type\":\"DEEPLINK\"},{\"label\":\"weburl\",\"uri\":\"https://www.yahoo.com\",\"type\":\"WEBURL\"}]",          
             "some_custom_data_key": "some data"
          }
       }
@@ -45,20 +34,20 @@ noIndex: true
 
 | **Key** | **Type** | **Description** |
 | :------ | :------- | :-------------- |
-| `adb_title` | String | The push notification's title |
-| `adb_body` | String | The push notification's body |
-| `adb_sound` | String | The push notification's sound |
-| `adb_n_count` | String | The push notification badge count |
+| `adb_title` | String | The push notification's title. |
+| `adb_body` | String | The push notification's body. |
+| `adb_sound` | String | The push notification's sound. |
+| `adb_n_count` | String | The push notification badge count. |
 | `adb_n_priority` | String | The push notification's priority. For more information, please read the [Firebase documentation](https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#notificationpriority) |
-| `adb_channel_id` | String | The push notification's channel ID |
-| `adb_icon` | String | The push notification's icon resource name |
-| `adb_image` | String | The URL of the image to be displayed on the notification |
+| `adb_channel_id` | String | The push notification's channel ID. |
+| `adb_icon` | String | The push notification's icon resource name. |
+| `adb_image` | String | The URL of the image to be displayed on the notification. |
 | `adb_a_type` | enum | An enum that determines what type of action will be performed when the notification is clicked. It can be one of the following values: `DEEPLINK`, `WEBURL`, or `OPENAPP`. |
 | `adb_uri` | String | The URI used for deeplinking. The deeplink is used to open the appropriate webpage or app screen when the notification is clicked. |
 | `adb_act` | Array | An array that contains the action object(s). |
-| `adb_act.label` | String | The label for custom action button |
-| `adb_act.uri` | String | The URI for custom action button |
-| `adb_act.type` | enum | The action type for custom action button. It can be one of the following values: `DEEPLINK`, `WEBURL`, `OPENAPP` |
+| `adb_act.label` | String | The label for custom action button. |
+| `adb_act.uri` | String | The URI for custom action button. |
+| `adb_act.type` | enum | The action type for custom action button. It can be one of the following values: `DEEPLINK`, `WEBURL`, `OPENAPP`. |
 
 <Variant platform="ios" api="payload-keys" repeat="2"/>
 
@@ -90,5 +79,5 @@ noIndex: true
 | `adb_a_type` | enum | An enum that determines what type of action will be performed when the notification is selected. It can be one of the following string values: `DEEPLINK`, `WEBURL`, `OPENAPP`. |
 | `adb_act` | Array | An array that contains the action object(s). |
 | `adb_act.aid` | String | The ID for the action object. |
-| `adb_act.label` | String | The name for the action object |
-| `adb_act.type` | String | The type for the action object. It can be one of the following string values: `DEEPLINK`, `WEBURL`, `DISMISS` |
+| `adb_act.label` | String | The name for the action object. |
+| `adb_act.type` | String | The type for the action object. It can be one of the following string values: `DEEPLINK`, `WEBURL`, `OPENAPP`. |

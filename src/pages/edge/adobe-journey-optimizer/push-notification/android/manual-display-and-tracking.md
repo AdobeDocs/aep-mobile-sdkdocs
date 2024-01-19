@@ -11,7 +11,7 @@ keywords:
 
 # Manual display and tracking of push notification
 
-This document describes how to manually build, display and track push notifications from Adobe Journey Optimizer using the AEPMessaging extension. We highly recommend to use the [automatic display and tracking](./automatic-handling-and-tracking.md) method unless you have a specific requirement to manually build, display, and track push notifications.
+This document describes how to manually build, display and track push notifications from Adobe Journey Optimizer using the AEPMessaging extension. You should use the [automatic display and tracking](./automatic-handling-and-tracking.md) method unless you have a specific requirement to manually build, display, and track push notifications.
 
 ## Pre-requisites
 
@@ -115,7 +115,7 @@ public class YourAppFirebaseMessagingService extends FirebaseMessagingService {
 
 ## Tracking push notification interactions
 
-After the application is opened by the user by clicking on the push notification, use the `handleNotificationResponse` API to send the push notification interactions feedback to platform.
+After the application is opened by the user by clicking on the push notification, use the `handleNotificationResponse` API to send the push notification interactions feedback to Platform.
 
 ```java
     Messaging.handleNotificationResponse(
@@ -148,7 +148,7 @@ Add the following code where you have access to `intent` after the user has inte
 Messaging.handleNotificationResponse(intent, false, <actionId>);
 ```
 
-Here is a sample code for sending push notification interactions feedback to platform.
+Here is a sample code for sending push notification interactions feedback to Platform.
 
 ```java
 
