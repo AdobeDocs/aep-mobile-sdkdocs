@@ -25,8 +25,8 @@ This document guides you to integrating in-app messaging in your application.
 
 ## Public Classes and Enums
 
-* [Class - Message](../public-classes-and-enum/message.md)
-* [Enum - MessagingEdgeEventType](../public-classes-and-enum/messaging-edge-event-type.md)
+* [Class - Message](../public-classes/message.md)
+* [Enum - MessagingEdgeEventType](../public-classes/messaging-edge-event-type.md)
 
 ## Validation
 

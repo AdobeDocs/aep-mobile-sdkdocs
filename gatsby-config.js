@@ -232,23 +232,23 @@ module.exports = {
                             },
                             {
                                 title: "Public classes and enums",
-                                path: "/edge/adobe-journey-optimizer/public-classes-and-enum",
+                                path: "/edge/adobe-journey-optimizer/public-classes",
                                 pages: [
                                     {
                                         title: "MessagingPushPayload",
-                                        path: "/edge/adobe-journey-optimizer/public-classes-and-enum/messaging-push-payload"
+                                        path: "/edge/adobe-journey-optimizer/public-classes/messaging-push-payload"
                                     },
                                     {
                                         title: "PushTrackingStatus",
-                                        path: "/edge/adobe-journey-optimizer/public-classes-and-enum/push-tracking-status"
+                                        path: "/edge/adobe-journey-optimizer/public-classes/push-tracking-status"
                                     },
                                     {
                                         title: "Message",
-                                        path: "/edge/adobe-journey-optimizer/public-classes-and-enum/message"
+                                        path: "/edge/adobe-journey-optimizer/public-classes/message"
                                     },
                                     {
                                         title: "MessagingEdgeEventType",
-                                        path: "/edge/adobe-journey-optimizer/public-classes-and-enum/messaging-edge-event-type"
+                                        path: "/edge/adobe-journey-optimizer/public-classes/messaging-edge-event-type"
                                     }
                                 ]
                             },

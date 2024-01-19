@@ -21,8 +21,8 @@ keywords:
 
 ## Public classes and enums
 
-* [Class - MessagingPushPayload](../public-classes-and-enum/messaging-push-payload.md) (Android only)
-* [Enum - PushTrackingStatus](../public-classes-and-enum/push-tracking-status.md)
+* [Class - MessagingPushPayload](../public-classes/messaging-push-payload.md) (Android only)
+* [Enum - PushTrackingStatus](../public-classes/push-tracking-status.md)
 
 ## More information
 
