@@ -317,9 +317,9 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
 
 <Variant platform="android" api="handle-remote-message" repeat="7"/>
 
-_**Requires extension version v2.1.0+**_
+## _**Requires extension version v2.1.0+**_
 
-Builds an `AEPPushPayload` then constructs a `Notification` using the `RemoteMessage`'s payload. The notification is then passed to the `NotificationManagerCompat` to be displayed. If any exceptions are thrown when building the `AEPPushPayload` or `Notification`, this method will return `false` to signal that the remote message was not handled by the `AEPMessagingService`.
+Builds an `AEPPushPayload` with data extracted from a `RemoteMessage`'s payload. The built `AEPPushPayload` is then used to construct a `Notification`.
 
 #### Java
 

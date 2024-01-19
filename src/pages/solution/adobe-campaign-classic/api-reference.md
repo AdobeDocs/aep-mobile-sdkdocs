@@ -56,7 +56,7 @@ The `trackNotificationReceive` API sends the received push notification's tracki
 
 <InlineAlert variant="success" slots="text"/>
 
-If you are using the `AEPMessagingService.handleRemoteMessage` API, you should not call `CampaignClassic.trackNotificationReceive`.
+If you are using the `AEPMessagingService.handleRemoteMessage` API, you should not call `CampaignClassic.trackNotificationReceive` or `CampaignClassic.trackNotificationClick`.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -92,7 +92,7 @@ Allows the Adobe Campaign Classic extension to automatically create and dispatch
 
 <InlineAlert variant="success" slots="text" />
 
-If you are using the `AEPMessagingService.handleRemoteMessage` API, you should not call `CampaignClassic.trackNotificationReceive`.
+If you are using the `AEPMessagingService.handleRemoteMessage` API, you should not call `CampaignClassic.trackNotificationReceive` or `CampaignClassic.trackNotificationClick`.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 

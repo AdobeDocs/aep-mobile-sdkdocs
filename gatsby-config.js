@@ -55,9 +55,14 @@ module.exports = {
             {
                 title: "Release notes",
                 path: "/home/release-notes",
-                pages: [{
-                        title: "2023",
+                pages: [
+                    {
+                        title: "2024",
                         path: "/home/release-notes"
+                    },
+                    {
+                        title: "2023",
+                        path: "/home/release-notes/2023"
                     },
                     {
                         title: "2022",
@@ -365,8 +370,18 @@ module.exports = {
                                 path: "/solution/adobe-campaign-classic/event-reference"
                             },
                             {
-                                title: "Push Payloads",
-                                path: "/solution/adobe-campaign-classic/push-payloads"
+                                title: "Push payload templates",
+                                path: "/solution/adobe-campaign-classic/push-templates",
+                                pages: [
+                                    {
+                                        title: "Basic",
+                                        path: "/solution/adobe-campaign-classic/push-templates/basic"
+                                    },
+                                    {
+                                        title: "Carousel",
+                                        path: "/solution/adobe-campaign-classic/push-templates/carousel"
+                                    }
+                                ]
                             },
                             {
                                 title: "Release notes",
