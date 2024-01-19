@@ -6,7 +6,7 @@ noIndex: true
 
 ### Configuration
 
-If using "remind later" functionality in a basic notification, it is required that you declare use of the `USE_EXACT_ALARM` permission in your `AndroidManifest.xml`:
+If using "remind later" functionality in a basic notification, you **must** declare use of the `USE_EXACT_ALARM` permission in your `AndroidManifest.xml`:
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
