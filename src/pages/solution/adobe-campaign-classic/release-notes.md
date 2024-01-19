@@ -8,6 +8,14 @@ keywords:
 
 # Release notes
 
+## January 19, 2024
+
+* Added support for out-of-the-box push notifications:
+  * Basic notifications, including remind me later and call-to-action functionality
+  * Manual and automatic image carousels of three to five items
+
+See a full description of the new [push template payloads](./push-templates).
+
 ## June 5, 2023
 
 ### iOS Campaign Classic 4.0.0
