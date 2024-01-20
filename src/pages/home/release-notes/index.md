@@ -9,6 +9,30 @@ Keywords:
 
 ## January 19, 2024
 
+### Roku SDK 1.1.0-beta
+
+* Support non-xdm data in `SendEvent` API 
+
+## Breaking change
+Please review the breaking change below and make the necessary changes to make your code be compatible with the AEP Roku SDK 1.1.0-beta.
+- The XDM data passed to the `sendEvent` API should be wrapped in a root object.
+
+```diff
+xdmData = {
+    "eventType": "commerce.orderPlaced",
+    "commerce": {
+      .....
+    }
+}
+
+- m.aepSdk.sendEvent(xdmData)
+
++ m.aepSdk.sendEvent({
++    "xdm": xdmData
++ })
+```
+For more information, please see the [API reference](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/api-reference.md#sendEvent).
+
 ### Android Campaign Classic 2.1.0
 
 * Added support for out-of-the-box push notifications:
