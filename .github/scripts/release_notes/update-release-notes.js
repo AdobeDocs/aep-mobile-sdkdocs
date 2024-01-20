@@ -103,6 +103,8 @@ function extractBOMTableContent(releaseNote) {
 
 function generateReleaseNoteSection(IOSDateString, platform, extension, version, releaseNote) {
     let array = extractReleaseNotes(releaseNote)
+    // remove the empty lines
+    array = array.filter(line => line.trim() != '')
     let releaseNoteSection = releaseNoteTemplateGenerator({
         date: convertIOSDateToRleaseDateFormat(IOSDateString),
         title: `${platform} ${extension} ${version}`,
