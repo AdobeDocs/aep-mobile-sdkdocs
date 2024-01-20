@@ -1,5 +1,5 @@
 ---
-title: Sending datastream overrides to Edge Network
+title: Sending configuration overrides using sendEvent
 description: Learn how to 
 keywords:
 - Edge Network
@@ -8,15 +8,18 @@ keywords:
 - Guide
 ---
 
-# Sending datastream overrides to Edge Network
+# Sending configuration overrides using sendEvent
 
-Datastream overrides let you define additional configuration for your datastreams, allowing you to trigger different datastream behaviors without either creating a new datastream or modifying your existing settings.
+Datastream overrides let you define additional configuration settings for your datastreams, allowing you to trigger different datastream behaviors on a per event basis.
 
 ## Prerequisites
 
-Before continuing with this tutorial, read the following guides:
+Before continuing with this tutorial, please ensure that the Edge extension version meets the minimum requirements:
 
 * [Edge](../../index.md) extension version >= **2.4.0** (Android) and >= **4.3.0** (iOS).
+
+Additionally, please read the following tutorials:
+
 * [Configure datastreams](../../../home/getting-started/configure-datastreams.md)
 * [Define overrides in your datastream configuration](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en)
 
@@ -157,7 +160,7 @@ Edge.sendEvent(experienceEvent) {
 
 ## Payload example
 
-The following example shows a sample payload after overriding the datastream configurations.
+The following example shows a sample payload after overriding the datastream configurations:
 
 ```json
 {

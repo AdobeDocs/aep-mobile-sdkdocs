@@ -1,5 +1,5 @@
 ---
-title: Datastream configuration override for Edge events using Rules.
+title: Sending configuration overrides using Rules
 description: This guide provides instructions on overriding datastream ID and datastream configuration for Edge Network Requests that are not initiated by the sendEvent API, all accomplished through Tags Rules.
 keywords:
 - Edge Network
@@ -8,19 +8,24 @@ keywords:
 - Guide
 ---
 
-# Datastream configuration override for Edge events using Rules
+# Sending configuration overrides using Rules
 
 By default, all **Edge Experience events** are sent to the datastream specified in the **Adobe Experience Platform Edge Network** extension configuration settings. This tutorial offers examples on how to customize this configuration on a per-event basis
 
 ## Prerequisites
 
+Before continuing with this tutorial, please ensure that the Edge extension version meets the minimum requirements:
+
 * [Edge](../../index.md) extension version >= **2.4.0** (Android) and >= **4.3.0** (iOS).
+
+Additionally, please read the following tutorials:
+
 * [Configure datastreams](../../../home/getting-started/configure-datastreams.md)
 * [Define overrides in your datastream configuration](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en)
 
 ## Add datastream configuration overrides for Lifecycle Edge events using rules
 
-Add a **datastream ID override** or a **datastream config overrides** for `Lifecycle Edge` events of type **application.launch** and **application.close** by following the next steps.
+Add a **datastream ID override** (or **datastream config overrides**) for `Lifecycle Edge` events of type **application.launch** and **application.close** by following the next steps.
 
 ### Add a new rule for your mobile property
 
