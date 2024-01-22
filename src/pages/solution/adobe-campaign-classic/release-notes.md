@@ -8,7 +8,15 @@ keywords:
 
 # Release notes
 
+## January 22, 2024
+
+### Android Campaign Classic 2.1.1
+
+* Fixed a bug with manual carousel buttons
+
 ## January 19, 2024
+
+### Android Campaign Classic 2.1.0
 
 * Added support for out-of-the-box push notifications:
   * Basic notifications, including remind me later and call-to-action functionality
