@@ -7,6 +7,12 @@ Keywords:
 
 # Release notes
 
+## January 22, 2024
+
+### Android Campaign Classic 2.1.1
+
+* Fixed a bug with manual carousel buttons
+
 ## January 19, 2024
 
 ### Android Campaign Classic 2.1.0
