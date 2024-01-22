@@ -18,7 +18,7 @@ Before continuing with this tutorial, please ensure that the Edge extension vers
 
 * [Edge](../../index.md) extension version >= **2.4.0** (Android) and >= **4.3.0** (iOS).
 
-Additionally, please read the following tutorials:
+Additionally, please complete the following tutorials:
 
 * [Configure datastreams](../../../home/getting-started/configure-datastreams.md)
 * [Define overrides in your datastream configuration](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en)
