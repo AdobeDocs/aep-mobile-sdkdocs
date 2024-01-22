@@ -55,9 +55,14 @@ module.exports = {
             {
                 title: "Release notes",
                 path: "/home/release-notes",
-                pages: [{
-                        title: "2023",
+                pages: [
+                    {
+                        title: "2024",
                         path: "/home/release-notes"
+                    },
+                    {
+                        title: "2023",
+                        path: "/home/release-notes/2023"
                     },
                     {
                         title: "2022",
@@ -134,8 +139,12 @@ module.exports = {
                                 path: "/edge/edge-network/tutorials",
                                 pages: [
                                     {
-                                        title: "Datastream config overrides using rules",
-                                        path: "/edge/edge-network/tutorials/datastream-config-override-rules"
+                                        title: "Sending configuration overrides using sendEvent",
+                                        path: "/edge/edge-network/tutorials/send-overrides-sendevent"
+                                    },
+                                    {
+                                        title: "Sending configuration overrides using Rules",
+                                        path: "/edge/edge-network/tutorials/send-overrides-rules"
                                     }
                                 ]
                             },
@@ -430,6 +439,20 @@ module.exports = {
                             {
                                 title: "Event reference",
                                 path: "/solution/adobe-campaign-classic/event-reference"
+                            },
+                            {
+                                title: "Push payload templates",
+                                path: "/solution/adobe-campaign-classic/push-templates",
+                                pages: [
+                                    {
+                                        title: "Basic",
+                                        path: "/solution/adobe-campaign-classic/push-templates/basic"
+                                    },
+                                    {
+                                        title: "Carousel",
+                                        path: "/solution/adobe-campaign-classic/push-templates/carousel"
+                                    }
+                                ]
                             },
                             {
                                 title: "Release notes",
