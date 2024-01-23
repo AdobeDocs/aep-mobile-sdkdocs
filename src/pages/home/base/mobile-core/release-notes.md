@@ -8,6 +8,13 @@ keywords:
 
 # Release notes
 
+## January 22, 2024
+
+### iOS Core 4.2.2
+
+* Add array support for token replacement in the launch rules engine.
+* Fixed a caching issue that could cause display problems when two or more in-app messages were being triggered by identical conditions.
+
 ## January 4, 2024
 
 ### iOS Core 4.2.1
