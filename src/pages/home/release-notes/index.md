@@ -21,11 +21,6 @@ Keywords:
 
 ## January 19, 2024
 
-### Roku SDK 1.1.0-beta
-
-* Support non-xdm data in `SendEvent` API 
-
-
 ### Android Campaign Classic 2.1.0
 
 * Added support for out-of-the-box push notifications:
