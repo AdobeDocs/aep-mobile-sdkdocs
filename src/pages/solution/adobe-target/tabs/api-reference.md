@@ -920,8 +920,8 @@ TargetRequest request2 = new TargetRequest("mboxName2", parameters2, "defaultCon
                                                     // and click metric analytics payload, if available
                                                     if (data != null && !data.isEmpty()) {
 
-                                                        Map<String, String> responseTokens = data.containsKey("responseTokens") ? 
-                                                                                            (Map<String, String>) data.get("responseTokens") : 
+                                                        Map<String, Object> responseTokens = data.containsKey("responseTokens") ? 
+                                                                                            (Map<String, Object>) data.get("responseTokens") : 
                                                                                             null;
 
                                                         Map<String, String> analyticsPayload = data.containsKey("analytics.payload") ? 
@@ -1006,7 +1006,7 @@ let request2 = TargetRequest(mboxName: "logo", defaultContent: "red", targetPara
 
     // Read the data dictionary containing one or more of response tokens, analytics payload and click-tracking analytics payload, if available.
     if let data = data {
-        let responseTokens = data["responseTokens"] as? [String: String] ?? [:]
+        let responseTokens = data["responseTokens"] as? [String: Any] ?? [:]
 
         let analyticsPayload = data["analytics.payload"] as? [String: String] ?? [:]
 
