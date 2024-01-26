@@ -9,7 +9,7 @@ Keywords:
 
 ## January 25, 2024
 
-### AEP React Native Edge 5.1.0
+### React Native Edge library 5.1.0
 
 * Added support to customize datastream configurations on a per-event basis using the sendEvent API.
 This release updates dependencies on native Edge Network SDK to minimum v4.3.0 (iOS) and v2.4.0 (Android).
