@@ -8,6 +8,13 @@ keywords:
 
 # Release notes
 
+## January 26, 2024
+
+### Android Core 2.6.2
+
+* Add array support for token replacement in the launch rules engine.
+* The code used to fix issues on Android 8/8.1 has been restricted from execution on other Android OS versions.
+
 ## January 22, 2024
 
 ### iOS Core 4.2.2
