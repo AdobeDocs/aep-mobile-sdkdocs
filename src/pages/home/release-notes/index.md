@@ -7,6 +7,18 @@ Keywords:
 
 # Release notes
 
+## January 30, 2024
+
+### Android Assurance 2.2.1
+
+* Fixed an issue that caused large Assurance events to be sent with malformed payload.
+
+## January 29, 2024
+
+### Android Campaign Classic 2.1.2
+
+- Fix notification sticky behavior
+
 ## January 26, 2024
 
 ### Android BOM 2.9.1
