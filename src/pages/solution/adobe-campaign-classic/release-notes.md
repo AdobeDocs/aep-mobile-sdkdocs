@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## undefined NaN, NaN
+
+### Android Campaign Classic 2.1.2
+
+
+
 ## January 22, 2024
 
 ### Android Campaign Classic 2.1.1

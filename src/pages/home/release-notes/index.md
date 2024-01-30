@@ -7,6 +7,18 @@ Keywords:
 
 # Release notes
 
+## undefined NaN, NaN
+
+### Android Campaign Classic 2.1.2
+
+
+
+## January 30, 2024
+
+### Android Assurance 2.2.1
+
+* Fixed an issue that caused large Assurance events to be sent with malformed payload.
+
 ## January 26, 2024
 
 ### Android BOM 2.9.1
