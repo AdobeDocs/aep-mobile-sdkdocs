@@ -332,7 +332,7 @@ Flutter
 
 ## setPrivacyStatus
 
-You can use the `setPrivacyStatus` API to set the privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../../resources/privacy-and-gdpr.md#setprivacystatus) API's.
+You can use the `setPrivacyStatus` API to set the privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../../../resources/privacy-and-gdpr.md#setprivacystatus) API's.
 
 ## setPushIdentifier
 
