@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## January 30, 2024
+
+### Android Assurance 2.2.1
+
+* Fixed an issue that caused large Assurance events to be sent with malformed payload.
+
 ## January 17, 2024
 
 ### iOS Assurance 4.1.1

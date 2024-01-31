@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## January 29, 2024
+
+### Android Campaign Classic 2.1.2
+
+* Fix notification sticky behavior
+
 ## January 22, 2024
 
 ### Android Campaign Classic 2.1.1
