@@ -7,6 +7,12 @@ Keywords:
 
 # Release notes
 
+## February 2, 2024
+
+### Android Campaign Classic 2.1.3
+
+* Fix key value pair extraction from a push notification data payload. Push data payload values are preferred over push notification payload values.
+
 ## February 1, 2024
 
 ### Android BOM 2.9.2
