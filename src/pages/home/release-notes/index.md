@@ -7,6 +7,13 @@ Keywords:
 
 # Release notes
 
+## February 15, 2024
+
+### iOS Core 4.2.3
+
+* Fix podspec dependencies not being restricted to current major version
+* Fixed an issue that was allowing in-app messages without content to be displayed.
+
 ## February 6, 2024
 
 ### Android BOM 2.9.3
