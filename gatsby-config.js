@@ -279,6 +279,10 @@ module.exports = {
                                 path: "/edge/adobe-journey-optimizer-decisioning/api-reference"
                             },
                             {
+                                title: "Validating Optimize Setup",
+                                path: "/edge/adobe-journey-optimizer-decisioning/optimize-configuration-view.md"
+                            },
+                            {
                                 title: "Release notes",
                                 path: "/edge/adobe-journey-optimizer-decisioning/release-notes"
                             }
