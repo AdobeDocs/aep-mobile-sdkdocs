@@ -18,6 +18,10 @@ To learn how to manage SPM dependencies of Mobile SDKs, please read the guide on
 
 To learn how to manage consent and privacy obligations with Mobile SDK, please read the guide on [privacy and GDPR](privacy-and-gdpr.md).
 
+## iOS Privacy Manifest and related changes
+
+To learn how Apple's privacy related announcements made in WWDC of 2023 affect the Mobile SDK, please read the guide on [iOS privacy manifest and related changes](privacy-manifest.md).
+
 ## Frequently asked questions
 
 To find answers to the most frequently asked questions about Mobile SDK, please read the document on [frequently asked questions](faq.md).
