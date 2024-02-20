@@ -25,7 +25,7 @@ Starting with version 5 of the AEP Mobile SDKs for Apple, Adobe will provide sig
 
 **Tracking Domains**
 
-Apple is introducing NSPrivacyTrackingDomains in iOS 17's Privacy Manifests. This array lists the URLs that apps connect to for tracking purposes. If users haven't granted tracking permission via the App Tracking Transparency framework, requests to these domains will fail, resulting in errors for the app. 
+Apple is introducing NSPrivacyTrackingDomains in iOS 17's Privacy Manifests. This array lists the URLs that apps connect to for tracking purposes. If users haven't granted tracking permission via the App Tracking Transparency framework, requests to these domains will fail, resulting in errors for the app.
 
 The following Adobe URLs are used to interact with the Adobe solutions:
 | URL|
