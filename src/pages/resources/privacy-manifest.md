@@ -37,4 +37,4 @@ Please note, that any domains that are added, will be blocked if the user does n
 
 <InlineAlert variant="info" slots="text"/>
 
-If you choose to use DNS CNAMES for your data collection, they should be listed as well.
+If you choose to use DNS CNAMEs for your data collection, you may choose to add those CNAMEs to the Tracking Domains instead of the domain names listed above.
