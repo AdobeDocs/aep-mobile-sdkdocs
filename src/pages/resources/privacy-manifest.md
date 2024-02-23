@@ -25,11 +25,12 @@ Starting with version 5 of the AEP Mobile SDKs for Apple, Adobe will provide sig
 
 **Tracking Domains**
 
-Apple is introducing NSPrivacyTrackingDomains in iOS 17's Privacy Manifests. This array lists the URLs that apps connect to for tracking purposes. If users haven't granted tracking permission via the App Tracking Transparency framework, requests to these domains will fail, resulting in errors for the app.
+These are the domains Adobe uses to send data which you choose to collect. If you use Adobe products in a way Apple defines as "[tracking](https://developer.apple.com/app-store/user-privacy-and-data-use/)", you may need to add these domains to your Privacy Manifest's NSPrivacyTrackingDomains list. 
 
-The following Adobe URLs are used to interact with the Adobe solutions:
+<InlineAlert variant="warningΩ" slots="text"/>
 
-* adobedtm.com
+Please note, that any domains that are added, will be blocked if the user does not grant permissions through the App Tracking Transparency framework which will significantly impact the functionality of the SDK.
+
 * omtrdc.net
 * adobedc.net
 * demdex.net
