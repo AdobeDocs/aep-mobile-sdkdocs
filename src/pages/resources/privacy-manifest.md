@@ -25,7 +25,7 @@ Starting with version 5 of the AEP Mobile SDKs for Apple, Adobe will provide sig
 
 **Tracking Domains**
 
-These are the domains Adobe uses to send data which you choose to collect. If you use Adobe products in a way Apple defines as "[tracking](https://developer.apple.com/app-store/user-privacy-and-data-use/)", you may need to add these domains to your Privacy Manifest's NSPrivacyTrackingDomains list. 
+These are the domains Adobe uses to send data which you choose to collect. If you use Adobe products in a way Apple defines as "[tracking](https://developer.apple.com/app-store/user-privacy-and-data-use/)", you may need to add these domains to your Privacy Manifest's NSPrivacyTrackingDomains list.
 
 <InlineAlert variant="warningΩ" slots="text"/>
 
