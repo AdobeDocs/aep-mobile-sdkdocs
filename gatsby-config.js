@@ -789,6 +789,10 @@ module.exports = {
                     {
                         title: "Adobe Experience Cloud & Apple's IDFA, Privacy announcement",
                         path: "/resources/privacy-announcement"
+                    },
+                    {
+                        title: "iOS 17 & Privacy Manifests",
+                        path: "/resources/privacy-manifest.md"
                     }
 
                 ]
