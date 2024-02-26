@@ -791,7 +791,7 @@ module.exports = {
                         path: "/resources/privacy-announcement"
                     },
                     {
-                        title: "iOS 17 & Privacy Manifests",
+                        title: "iOS 17 Privacy Manifest Requirements",
                         path: "/resources/privacy-manifest.md"
                     }
 
