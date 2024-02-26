@@ -37,7 +37,7 @@ Starting with version 5 of the Mobile SDKs for Apple, Adobe will provide signed 
 
 These are the domains Adobe uses to send data which you choose to collect. If you use Adobe products in a way Apple defines as "[tracking](https://developer.apple.com/app-store/user-privacy-and-data-use/)", you may need to add these domains to your Privacy Manifest's NSPrivacyTrackingDomains list.
 
-<InlineAlert variant="warningΩ" slots="text"/>
+<InlineAlert variant="warning" slots="text"/>
 
 Please note, that any domains that are added, will be blocked if the user does not grant permissions through the App Tracking Transparency framework which will significantly impact the functionality of the SDK.
 
