@@ -141,7 +141,6 @@ Keywords:
 * Add array support for token replacement in the launch rules engine.
 * The code used to fix issues on Android 8/8.1 has been restricted from execution on other Android OS versions.
 
-
 ### iOS Target 4.0.3
 
 * Fixed an issue where Target response tokens were not returned in `TargetRequest`'s `contentWithDataCallback` callback when using `retrieveLocationContent` API.
