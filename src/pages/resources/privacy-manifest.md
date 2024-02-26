@@ -1,4 +1,12 @@
-# iOS 17 & Privacy Manifests
+---
+title: iOS 17 Privacy Manifest Requirements
+description: The requirements for Apple's new privacy manifests
+keywords:
+- Privacy manifest
+- iOS 17
+---
+
+# iOS 17 Privacy Manifest Requirements
 
 Starting in Spring 2024, Apple will require developers to implement new privacy features to receive approval for apps submitted to the App Store. Some features are already in use, like Privacy Nutrition Labels. These labels help end-users understand the data collected by apps as well as third-party SDKs like those provided by Adobe. To facilitate this, Apple is requiring that app developers provide details in the Privacy Manifest regarding the data their apps (and included third-party SDKs) track.
 
