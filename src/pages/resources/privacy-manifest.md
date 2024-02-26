@@ -10,7 +10,7 @@ keywords:
 
 Starting in Spring 2024, Apple will require developers to implement new privacy features to receive approval for apps submitted to the App Store. Some features are already in use, like Privacy Nutrition Labels. These labels help end-users understand the data collected by apps as well as third-party SDKs like those provided by Adobe. To facilitate this, Apple is requiring that app developers provide details in the Privacy Manifest regarding the data their apps (and included third-party SDKs) track.
 
-## Required Reasons API 
+## Required Reasons API
 
 To address concerns regarding fingerprinting, Apple will require developers to declare the reasons for using specific APIs. One of these APIs is the UserDefaults API, which Adobe currently uses to store user identifiers and lifecycle data. The Adobe Experience Platform Mobile SDK needs to store this data on the device in order to function, however, that data does not need to be stored in UserDefaults. Adobe has started using device storage rather than UserDefaults. In December, we released version 4.2.1 of the iOS Core extension that includes logic to migrate data stored by the Mobile SDK away from UserDefaults to local storage for iOS and iPadOS.
 
