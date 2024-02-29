@@ -23,7 +23,8 @@ The properties below are used to define the payload sent to FCM:
 | Carousel Items | ✅ | `adb_items` | string | **The value is an encoded JSON string.**<br />Three to five items in the carousel of the notification.<br />When decoded, the string contains an array of the following objects:<br /><ul><li>`img` (required) - URI to an image to be shown for the carousel item</li><li>`txt` - Optional caption to show when the carousel item is visible.</li><li>`uri` - Optional URI to be handled when the carousel item is touched by the user. If no `uri` is provided for the item, `adb_uri` will be handled instead.</li></ul> |
 | Carousel Layout | ⛔️ | `adb_car_layout` | string | Determines whether the carousel should use the default layout or filmstrip variant.<br />Valid values are "default" or "filmstrip". |
 | Carousel Mode | ⛔️ | `adb_car_mode` | string | Determines how the carousel will be operated.<br />Valid values are "auto" or "manual". |
-| Icon | ⛔️ | `adb_icon` | string | URI or name for Large icon used in notification. |
+| Small Icon | ⛔️ | `adb_small_icon` | string | Name of a small icon to use in the notification. The app's drawable resources are checked for an image file with the provided name. |
+| Large Icon | ⛔️ | `adb_large_icon` | string | URI or name for a large icon to use in the notification. If a name is provided, the app's drawable resources are checked for an image file with the same name. |
 | Channel ID | ⛔️ | `adb_channel_id` | string | The [notification's channel id](https://developer.android.com/guide/topics/ui/notifiers/notifications#ManageChannels) (new in Android O). The app must create a channel with this channel ID before any notification with this channel ID is received. If you don't send this channel ID in the request, or if the channel ID provided has not yet been created by the app, FCM uses the channel ID specified in the app manifest.<br />If not provided in payload, SDK uses a "default" channel ID of value "CampaignPushChannel".<br />If < API 26 (Android O), this value is ignored. |
 | Badge Count | ⛔️ | `adb_n_count` | string | Value to be used on app's badge. |
 | Priority | ⛔️ | `adb_n_priority` | string | Designates the notification priority for Android - [importance](https://developer.android.com/reference/android/app/NotificationChannel#setImportance(int)) for API >= 26 (Android 8.0) or [priority](https://developer.android.com/reference/androidx/core/app/NotificationCompat.Builder#setPriority(int)) for API < 26 |
@@ -49,6 +50,8 @@ Below is a sample of what a payload might look like for a carousel notification:
 				"adb_title": "Check out the new line of shoes!",
 				"adb_body": "Hot deals on new releases!",
 				"adb_sound": "sneakerSqueaker",
+				"adb_small_icon": "chat_bubble",
+				"adb_large_icon": "https://sneakerland.com/logo.png",
 				"adb_uri": "https://sneakerland.com/newReleases",
 				"adb_a_type": "WEBURL",
 				"adb_body_ex": "We have some new inventory we think you'll like.",

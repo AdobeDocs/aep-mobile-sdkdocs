@@ -35,7 +35,8 @@ The properties below are used to define the payload sent to FCM:
 | Link URI | ⛔️ | `adb_uri` | string | URI to be handled when user clicks the notification. |
 | Link Type | ⛔️ | `adb_a_type` | string | Type of link represented in `adb_uri` - one of "WEBURL", "DEEPLINK", or "OPENAPP".<br />Required if `adb_uri` is specified. |
 | Button(s) | ⛔️ | `adb_act` | string | **The value is an encoded JSON string.**<br />One to three buttons to create for the notification. If using "remind later" functionality, only two buttons may be used in this field.<br />When decoded, the string contains an array of the following objects:<br /><ul><li>`label` - text shown on the button's label</li><li>`uri` - URI to be handled when user clicks the button</li><li>`type` - Type of link represented in `uri` - one of "WEBURL", "DEEPLINK", or "OPENAPP".</li></ul> |
-| Icon | ⛔️ | `adb_icon` | string | URI or name for Large icon used in notification. |
+| Small Icon | ⛔️ | `adb_small_icon` | string | Name of a small icon to use in the notification. The app's drawable resources are checked for an image file with the provided name. |
+| Large Icon | ⛔️ | `adb_large_icon` | string | URI or name for a large icon to use in the notification. If a name is provided, the app's drawable resources are checked for an image file with the same name. |
 | Remind Later Text | ⛔️ | `adb_rem_txt` | string | If present, show a "remind later" button using the value provided as its label.<br />**Note** - both `remTxt` and `remTs` must be present in order to support "remind me later" functionality. |
 | Remind Later Date | ⛔️ | `adb_rem_ts` | string | If present, schedule this notification to be re-delivered at this epoch timestamp (in seconds) provided.<br />**Note** - both `remTxt` and `remTs` must be present in order to support "remind me later" functionality. |
 | Channel ID | ⛔️ | `adb_channel_id` | string | The [notification's channel id](https://developer.android.com/guide/topics/ui/notifiers/notifications#ManageChannels) (new in Android O). The app must create a channel with this channel ID before any notification with this channel ID is received. If you don't send this channel ID in the request, or if the channel ID provided has not yet been created by the app, FCM uses the channel ID specified in the app manifest.<br />If not provided in payload, SDK uses a "default" channel ID of value "CampaignPushChannel".<br />If < API 26 (Android O), this value is ignored. |
@@ -63,7 +64,8 @@ Below is a sample of what a payload might look like for a basic notification:
                 "adb_title": "game request",
 				"adb_body": "shall we play a game?",
 				"adb_sound": "bingBong",
-				"adb_icon": "ic_knight",
+				"adb_small_icon": "ic_knight",
+				"adb_large_icon": "https://pictureofchess.com/logo.png",
 				"adb_n_count": "1",
 				"adb_n_priority": "PRIORITY_LOW",
 				"adb_channel_id": "a3b80ef",
