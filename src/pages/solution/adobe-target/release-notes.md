@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## February 28, 2024
+
+### iOS Target 4.0.4
+
+- Added max versions to Platform dependencies in podspec
+
 ## January 26, 2024
 
 ### iOS Target 4.0.3
