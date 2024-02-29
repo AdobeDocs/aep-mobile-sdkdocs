@@ -8,7 +8,27 @@ keywords:
 
 # Release notes
 
+## February 2, 2024
+
+### Android Campaign Classic 2.1.3
+
+* Fix key value pair extraction from a push notification data payload. Push data payload values are preferred over push notification payload values.
+
+## January 29, 2024
+
+### Android Campaign Classic 2.1.2
+
+* Fix notification sticky behavior
+
+## January 22, 2024
+
+### Android Campaign Classic 2.1.1
+
+* Fixed a bug with manual carousel buttons
+
 ## January 19, 2024
+
+### Android Campaign Classic 2.1.0
 
 * Added support for out-of-the-box push notifications:
   * Basic notifications, including remind me later and call-to-action functionality

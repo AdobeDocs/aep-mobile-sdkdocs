@@ -33,9 +33,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/gatsby-theme-aio@npm:^4.10.7":
-  version: 4.10.7
-  resolution: "@adobe/gatsby-theme-aio@npm:4.10.7"
+"@adobe/gatsby-theme-aio@npm:^4.11.3":
+  version: 4.11.3
+  resolution: "@adobe/gatsby-theme-aio@npm:4.11.3"
   dependencies:
     "@adobe/focus-ring-polyfill": ^0.1.5
     "@adobe/gatsby-source-github-file-contributors": ^0.3.1
@@ -118,7 +118,7 @@ __metadata:
     rehype-slug-custom-id: ^1.1.0
     request: ^2.88.2
     resize-observer-polyfill: ^1.5.1
-    sharp: ^0.31.0
+    sharp: 0.33.0
     stream-http: ^3.2.0
     styled-components: ^5.3.5
     swiper: ^8.3.2
@@ -131,7 +131,7 @@ __metadata:
     gatsby: ^4.22.0
     react: ^17.0.2
     react-dom: ^17.0.2
-  checksum: 4109990eebf2dd16ec36f87ba71a0635b6705277b6afab641b665c8ebef2bb1e0073877e3946b1784ad5511c8d3ec88c780c282a8f02bc121f7fdf4cec107f48
+  checksum: 36b7256aba793747b6da40b867b8ad4ecd32835c1ea5bc76ee3fef5cd73d7aa14ba9734ef3c5a7db6866d806fc61afd02bf44053a1ffdd93ec8016cf130f84b7
   languageName: node
   linkType: hard
 
@@ -7951,7 +7951,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "dev-site-documentation-template@workspace:."
   dependencies:
-    "@adobe/gatsby-theme-aio": ^4.10.7
+    "@adobe/gatsby-theme-aio": ^4.11.3
     gatsby: 4.22.0
     lodash.template: ^4.5.0
     react: ^18.2.0

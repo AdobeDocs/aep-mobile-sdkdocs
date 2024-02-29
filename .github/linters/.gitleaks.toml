@@ -1,0 +1,11 @@
+title = "gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowList]
+description = "Allowlisted files"
+regexTarget = "match"
+regexes = [
+    '''63a46bbc-26cb-7cc3-def0-9ae1b51b6c62'''
+]

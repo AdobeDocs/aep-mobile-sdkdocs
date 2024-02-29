@@ -1,5 +1,5 @@
 ---
-title: Datastream config override for Edge events using Rules.
+title: Sending configuration overrides using Rules
 description: This guide provides instructions on overriding datastream ID and datastream configuration for Edge Network Requests that are not initiated by the sendEvent API, all accomplished through Tags Rules.
 keywords:
 - Edge Network
@@ -8,19 +8,24 @@ keywords:
 - Guide
 ---
 
-# Datastream config override for Edge events using Rules
+# Sending configuration overrides using Rules
 
 By default, all **Edge Experience events** are sent to the datastream specified in the **Adobe Experience Platform Edge Network** extension configuration settings. This tutorial offers examples on how to customize this configuration on a per-event basis
 
 ## Prerequisites
 
+Before continuing with this tutorial, please ensure that the Edge extension version meets the minimum requirements:
+
 * [Edge](../../index.md) extension version >= **2.4.0** (Android) and >= **4.3.0** (iOS).
+
+Additionally, please complete the following tutorials:
+
 * [Configure datastreams](../../../home/getting-started/configure-datastreams.md)
 * [Define overrides in your datastream configuration](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en)
 
-## Steps to add datastream config overrides for Lifecycle Edge events using rules
+## Add datastream configuration overrides for Lifecycle Edge events using rules
 
-Let's add **datastream ID override** or **datastream config overrides** for `Lifecycle Edge` events of type **application.launch** and **application.close** by following the next steps.
+Add a **datastream ID override** (or **datastream config overrides**) for `Lifecycle Edge` events of type **application.launch** and **application.close** by following the next steps.
 
 ### Add a new rule for your mobile property
 
@@ -29,7 +34,7 @@ In this example, the rule is named "Attach datastream config overrides Data to L
 
 ### Configure Lifecycle Edge Events
 
-Now we need to add two Lifecycle Edge events one of type **application.launch** and other of type **application.close**.
+Now, add two Lifecycle Edge events: one of type **application.launch** and other of type **application.close**.
 
 #### Configure Lifecycle Edge event of type application.launch
 
@@ -55,7 +60,7 @@ Save the event configuration and return to the Rule Editor UI.
 
 ### Configure Attach Data Action
 
-Based on the use case you can **either** attach payload for the **datastream ID override** or for the **datastream config overrides**:
+Based on the use case, you can **either** attach payload for the **datastream ID override** or for the **datastream config overrides**:
 
 #### Configure the action to attach datastream ID override payload
 
@@ -79,11 +84,11 @@ Based on the use case you can **either** attach payload for the **datastream ID 
 5. Select **Keep Changes**.
 6. Return to the Rule Editor UI.
 
-#### Configure the action to attach datastream config override payload
+#### Configure the action to attach datastream configuration override payload
 
 <InlineAlert variant="info" slots="text"/>
 
-In order to use this feature, configuration overrides in this case event dataset override must be preset in the datastream configuration. Learn more about this [here](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overrides.html?lang=en#event-dataset-overrides)
+In order to use this feature, configuration overrides in this case event dataset override must be preset in the datastream configuration. Learn more about this configuration in the [configuring datastream overrides guide](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overrides.html?lang=en#event-dataset-overrides).
 
 1. Under the **Actions** section, select **Add**.
 2. From the **Extension** dropdown list, select **Mobile Core**.
@@ -113,7 +118,7 @@ In order to use this feature, configuration overrides in this case event dataset
 5. Select **Keep Changes**.
 6. Return to the Rule Editor UI.
 
-### Save the Rule and publish the updated library
+### Save the rule and publish the updated library
 
 The final rule should appear as follows:
 ![File Rules configuration](../assets/tutorial/configOverrides/final-rule-configoverrides.png)

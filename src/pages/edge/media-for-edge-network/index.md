@@ -11,7 +11,7 @@ import Tabs from './tabs/index.md'
 
 # Adobe Streaming Media for Edge Network
 
-The Media for Edge Nework extension enables tracking user's engagement and consumption of audio and video content on mobile devices.
+The Media for Edge Network extension enables tracking user's engagement and consumption of audio and video content on mobile devices.
 
 ## Before starting
 
@@ -26,7 +26,7 @@ Follow the full guide for setting up [Adobe Streaming Media for Edge Network wit
 
 ### Configure and Install Dependencies
 
-Media for Edge Network requires Edge and Edge Identity extensions. Make sure to [configure the Edge extension in Data Collection UI](https://developer.adobe.com/client-sdks/edge-network/#configure-the-edge-network-extension-in-data-collection-ui) and [configure the Edge Identity extension in Data Collection UI](https://developer.adobe.com/client-sdks/identity-for-edge-network/#configure-the-identity-extension-in-the-data-collection-ui) before proceeding.
+Media for Edge Network requires Edge and Edge Identity extensions. Make sure to [configure the Edge extension in Data Collection UI](../edge-network/index.md#configure-the-edge-network-extension-in-data-collection-ui) and [configure the Edge Identity extension in Data Collection UI](../identity-for-edge-network/index.md#configure-the-identity-extension-in-the-data-collection-ui) before proceeding.
 
 ## Configure Media for Edge Network extension in the Data Collection Tags
 

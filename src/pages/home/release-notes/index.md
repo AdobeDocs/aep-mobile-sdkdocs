@@ -7,6 +7,215 @@ Keywords:
 
 # Release notes
 
+## February 15, 2024
+
+### iOS Core 4.2.3
+
+* Fix podspec dependencies not being restricted to current major version
+* Fixed an issue that was allowing in-app messages without content to be displayed.
+
+## February 6, 2024
+
+### Android BOM 2.9.3
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.9.2) | BOM (2.9.3) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:campaignclassic** | **2.1.2** | **2.1.3**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:assurance | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.6 | 2.0.6 |
+| com.adobe.marketing.mobile:core | 2.6.2 | 2.6.2 |
+| com.adobe.marketing.mobile:edge | 2.4.0 | 2.4.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.2.0 | 2.2.0 |
+| com.adobe.marketing.mobile:optimize | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+## February 2, 2024
+
+### Android Campaign Classic 2.1.3
+
+* Fix key value pair extraction from a push notification data payload. Push data payload values are preferred over push notification payload values.
+
+## February 1, 2024
+
+### Android BOM 2.9.2
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.9.1) | BOM (2.9.2) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:assurance** | **2.2.0** | **2.2.1**|
+| **com.adobe.marketing.mobile:campaignclassic** | **2.1.1** | **2.1.2**|
+| **com.adobe.marketing.mobile:target** | **2.0.2** | **2.0.3**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.6 | 2.0.6 |
+| com.adobe.marketing.mobile:core | 2.6.2 | 2.6.2 |
+| com.adobe.marketing.mobile:edge | 2.4.0 | 2.4.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.2.0 | 2.2.0 |
+| com.adobe.marketing.mobile:optimize | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+## January 30, 2024
+
+### Android Assurance 2.2.1
+
+* Fixed an issue that caused large Assurance events to be sent with malformed payload.
+
+## January 29, 2024
+
+### Android Campaign Classic 2.1.2
+
+* Fix notification sticky behavior
+
+## January 26, 2024
+
+### Android BOM 2.9.1
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.9.0) | BOM (2.9.1) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:core** | **2.6.1** | **2.6.2**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:assurance | 2.2.0 | 2.2.0 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.6 | 2.0.6 |
+| com.adobe.marketing.mobile:campaignclassic | 2.1.1 | 2.1.1 |
+| com.adobe.marketing.mobile:edge | 2.4.0 | 2.4.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.2.0 | 2.2.0 |
+| com.adobe.marketing.mobile:optimize | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Core 2.6.2
+
+* Add array support for token replacement in the launch rules engine.
+* The code used to fix issues on Android 8/8.1 has been restricted from execution on other Android OS versions.
+
+### iOS Target 4.0.3
+
+* Fixed an issue where Target response tokens were not returned in `TargetRequest`'s `contentWithDataCallback` callback when using `retrieveLocationContent` API.
+
+The response tokens should be parsed as `[String: Any]`. For details, see usage example for [retrieveLocationContent](../../solution/adobe-target/api-reference.md#retrievelocationcontent) API.
+
+### Android Target 2.0.3
+
+* Fixed an issue where Target response tokens were not returned in `TargetRequest`'s `AdobeTargetDetailedCallback` callback when using `retrieveLocationContent` API.
+
+The response tokens should be parsed as `Map<String: Object>`. For details, see usage example for [retrieveLocationContent](../../solution/adobe-target/api-reference.md#retrievelocationcontent) API.
+
+## January 25, 2024
+
+### React Native Edge library 5.1.0
+
+* Added support to customize datastream configurations on a per-event basis using the sendEvent API.
+This release updates dependencies on native Edge Network SDK to minimum v4.3.0 (iOS) and v2.4.0 (Android).
+Refer to API doc [here](https://github.com/adobe/aepsdk-react-native/tree/main/packages/edge#sendevent).
+
+## January 23, 2024
+
+### Android BOM 2.9.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.8.1) | BOM (2.9.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:campaignclassic** | **2.0.1** | **2.1.1**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:assurance | 2.2.0 | 2.2.0 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.6 | 2.0.6 |
+| com.adobe.marketing.mobile:core | 2.6.1 | 2.6.1 |
+| com.adobe.marketing.mobile:edge | 2.4.0 | 2.4.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.2.0 | 2.2.0 |
+| com.adobe.marketing.mobile:optimize | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+## January 22, 2024
+
+### iOS Core 4.2.2
+
+* Add array support for token replacement in the launch rules engine.
+* Fixed a caching issue that could cause display problems when two or more in-app messages were being triggered by identical conditions.
+
+### Android Campaign Classic 2.1.1
+
+* Fixed a bug with manual carousel buttons
+
 ## January 19, 2024
 
 ### Android Campaign Classic 2.1.0

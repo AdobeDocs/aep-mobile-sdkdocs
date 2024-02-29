@@ -40,7 +40,7 @@ A visit is a server-side calculation by Adobe Analytics and is based on the firs
 
 Yes. To capture data in multiple report suites, please read the [report suites guide](./index.md#report-suites).
 
-## I don't see data in my Adobe Analytics report suite - what can I do? <a id="i-dont-see-data-in-my-adobe-analytics-report-suite-what-can-i-do"></a>
+## I don't see data in my Adobe Analytics report suite - what can I do?
 
 If you have followed the documentation and are unable to see reporting data in your Adobe Analytics dashboard, please consider the following next steps:
 
@@ -48,11 +48,11 @@ If you have followed the documentation and are unable to see reporting data in y
 
 The [Analytics extension](./index.md) and its dependent [Identity extension](../../home/base/mobile-core/identity/index.md) should be registered and configured correctly for the SDK to start processing trackAction/trackState requests.
 
-### Verify that network requests are sent to Adobe Analytics <a id="verify-that-network-requests-are-sent-to-adobe-analytics"></a>
+### Verify that network requests are sent to Adobe Analytics
 
 You can use [Adobe Experience Platform Assurance](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html) to verify events are being sent to Adobe Analytics.
 
-### Ensure appropriate timestamp configuration <a id="ensure-appropriate-time-stamp-configuration"></a>
+### Ensure appropriate timestamp configuration
 
 Ensure that your SDK timestamp configuration is aligned with the report suite's timestamp settings. That is, `analytics.offlineEnabled` in the SDK configuration block for the tags mobile property is aligned with the setting of Timestamp Configuration in your report suite. You may find Timestamp at Analytics &gt; Admin &gt; Report Suites &gt; General &gt; Timestamp Configuration.
 
@@ -65,7 +65,7 @@ The following settings explain how settings between the SDK and your report suit
 
 In the mobile property (tag) in the Data Collection UI, select the property from the list, then select **Configure**. If the "Privacy" setting is "Opted Out" the request is dropped by the SDK. If the setting is "Unknown" the request is queued on the device until the status changes to "Opted In" or "Opted Out". If these settings are managed in your app, navigate to the screen where the Privacy settings are updated with the SDK.
 
-### Contact Adobe Customer Care <a id="contact-adobe-customer-care"></a>
+### Contact Adobe Customer Care
 
 If you are unable to resolve your concerns through resources provided here, please contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support) for immediate assistance.
 

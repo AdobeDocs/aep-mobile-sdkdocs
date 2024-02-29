@@ -8,6 +8,20 @@ keywords:
 
 # Release notes
 
+## January 26, 2024
+
+### iOS Target 4.0.3
+
+* Fixed an issue where Target response tokens were not returned in `TargetRequest`'s `contentWithDataCallback` callback when using `retrieveLocationContent` API.
+
+The response tokens should be parsed as `[String: Any]`. For details, see usage example for [retrieveLocationContent](./api-reference.md#retrievelocationcontent) API.
+
+### Android Target 2.0.3
+
+* Fixed an issue where Target response tokens were not returned in `TargetRequest`'s `AdobeTargetDetailedCallback` callback when using `retrieveLocationContent` API.
+
+The response tokens should be parsed as `Map<String: Object>`. For details, see usage example for [retrieveLocationContent](./api-reference.md#retrievelocationcontent) API.
+
 ## October 12, 2023
 
 ### iOS Target 4.0.2
