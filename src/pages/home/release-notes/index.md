@@ -7,6 +7,31 @@ Keywords:
 
 # Release notes
 
+## February 28, 2024
+
+### iOS Messaging 4.1.1
+
+- Added max versions to AEP dependencies in podspec
+
+
+### iOS Campaign Standard 4.0.1
+
+- Added max versions to AEP dependencies in podspec
+
+### iOS Optimize 4.0.3
+
+- Added max versions to AEP dependencies in podspec
+
+### iOS Target 4.0.4
+
+- Added max versions to AEP dependencies in podspec
+
+## February 27, 2024
+
+### iOS Places 4.1.1
+
+* Added max versions to AEP dependencies in podspec
+
 ## February 15, 2024
 
 ### iOS Core 4.2.3
