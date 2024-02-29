@@ -116,6 +116,8 @@ function generateReleaseNoteSection(IOSDateString, platform, extension, version,
 
 function generateReleaseNoteSectionWithoutDateLine(platform, extension, version, releaseNote) {
     let array = extractReleaseNotes(releaseNote)
+    // remove the empty lines
+    array = array.filter(line => line.trim() != '')
     let releaseNoteSection = releaseNoteWithoutDateTemplateGenerator({
         title: `${platform} ${extension} ${version}`,
         note: array.join('\n')
