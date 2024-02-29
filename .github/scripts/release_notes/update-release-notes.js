@@ -31,6 +31,7 @@ const repoNames = [
     "aepsdk-optimize-ios",
     "aepsdk-messaging-ios",
     "aepsdk-campaign-ios",
+    "aepsdk-campaignclassic-ios",
     "aepsdk-media-ios",
     "aepsdk-audience-ios",
     "aepsdk-analytics-ios",
@@ -252,13 +253,13 @@ function updateNonAndroidReleaseInfo(releaseInfo) {
             releaseInfo.version = releaseInfo.tag_name
             break;
         case "aepsdk-react-native":
-            releaseInfo.platform = 'AEP React Native'
+            releaseInfo.platform = 'React Native'
             let tmArray = releaseInfo.tag_name.replace('@adobe/react-native-aep', '').split('@')
             releaseInfo.extension = capitalizeFirstLetter(tmArray[0])
             releaseInfo.version = tmArray[1]
             break;
         case "aepsdk-flutter":
-            releaseInfo.platform = 'AEP Flutter'
+            releaseInfo.platform = 'Flutter'
             let array = releaseInfo.tag_name.replace('flutter_aep', '').split('@')
             releaseInfo.extension = capitalizeFirstLetter(array[0])
             releaseInfo.version = array[1]
