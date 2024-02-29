@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## February 28, 2024
+
+### iOS Optimize 4.0.3
+
+- Added max versions to Platform dependencies in podspec
+
 ## October 5, 2023
 
 ### Android Optimize 2.0.2

@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## February 28, 2024
+
+### iOS Campaign Standard 4.0.1
+
+- Added max versions to Platform dependencies in podspec
+
 ## September 21, 2023
 
 ### Android Campaign 2.0.6
