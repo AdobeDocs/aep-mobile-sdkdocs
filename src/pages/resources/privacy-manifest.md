@@ -12,11 +12,15 @@ Starting in Spring 2024, Apple will require developers to implement new privacy 
 
 ## Required Reasons API
 
-To address concerns regarding fingerprinting, Apple will require developers to declare the reasons for using specific APIs. One of these APIs is the UserDefaults API, which Adobe currently uses to store user identifiers and lifecycle data. The Adobe Experience Platform Mobile SDK needs to store this data on the device in order to function, however, that data does not need to be stored in UserDefaults. Adobe has started using device storage rather than UserDefaults. In December, we released version 4.2.1 of the iOS Core extension that includes logic to migrate data stored by the Mobile SDK away from UserDefaults to local storage for iOS and iPadOS.
+To address concerns regarding fingerprinting, Apple will require developers to declare the reasons for using specific APIs. One of these APIs is the UserDefaults API, which Adobe currently uses to store user identifiers and lifecycle data. The Adobe Experience Platform Mobile SDK needs to store this data on the device in order to function, however, that data does not need to be stored in UserDefaults. Adobe has started using device storage rather than UserDefaults. In December, we released version 4.2.1 of the iOS Core extension that includes logic to migrate data stored by the Mobile SDK away from UserDefaults to local storage for iOS and iPadOS. Starting with version 5 of the Adobe Experience Platform Mobile SDK for iOS/iPadOS, Adobe will include a Privacy Manifest. **Adobe recommends that all customers upgrade to version 5**. 
 
 <InlineAlert variant="info" slots="text"/>
 
 tvOS does not allow local storage for applications, so until further notice, the Mobile SDK will continue to store User Identifiers and Lifecycle Data in UserDefaults.
+
+<InlineAlert variant="info" slots="text"/>
+
+Some customers may choose not to update to version 5 of the AEP Mobile SDK and may still want to submit applications to the App Store. Customers who choose to do this should update their application to include version 4.2.1 or greater of the iOS AEP Mobile SDK Core extension and include their own Privacy Manifest in the application that includes reason 1C8F.1 as the reason for accessing User Defaults.
 
 ## Specific Values to be included in the Privacy Manifest
 
