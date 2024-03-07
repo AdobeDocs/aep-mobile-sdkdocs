@@ -7,6 +7,40 @@ Keywords:
 
 # Release notes
 
+## February 28, 2024
+
+### iOS Messaging 4.1.1
+
+- Added max versions to Platform dependencies in podspec
+
+### iOS Campaign Standard 4.0.1
+
+- Added max versions to Platform dependencies in podspec
+
+### iOS Optimize 4.0.3
+
+- Added max versions to Platform dependencies in podspec
+
+### iOS Campaign Classic 4.0.1
+
+- Added max versions to Platform dependencies in podspec
+
+### iOS Target 4.0.4
+
+- Added max versions to Platform dependencies in podspec
+
+### Android Campaign Classic 2.1.4
+
+* Add support for setting a large notification icon from a bundled drawable or a remote image url.
+* Use the defined Push Template action URI for carousel items that do not have an action URI.
+* Fix a NPE seen when a tag string was not provided for a basic template notification.
+
+## February 27, 2024
+
+### iOS Places 4.1.1
+
+* Added max versions to Platform dependencies in podspec
+
 ## February 15, 2024
 
 ### iOS Core 4.2.3
