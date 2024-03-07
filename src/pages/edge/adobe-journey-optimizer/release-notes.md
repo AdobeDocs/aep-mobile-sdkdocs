@@ -9,6 +9,12 @@ keywords:
 
 # Release notes
 
+## February 28, 2024
+
+### iOS Messaging 4.1.1
+
+- Added max versions to Platform dependencies in podspec
+
 ## September 28, 2023
 
 ### iOS Messaging 4.1.0

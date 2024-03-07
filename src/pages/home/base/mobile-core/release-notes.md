@@ -8,6 +8,20 @@ keywords:
 
 # Release notes
 
+## February 15, 2024
+
+### iOS Core 4.2.3
+
+* Fix podspec dependencies not being restricted to current major version
+* Fixed an issue that was allowing in-app messages without content to be displayed.
+
+## January 26, 2024
+
+### Android Core 2.6.2
+
+* Add array support for token replacement in the launch rules engine.
+* The code used to fix issues on Android 8/8.1 has been restricted from execution on other Android OS versions.
+
 ## January 22, 2024
 
 ### iOS Core 4.2.2

@@ -16,7 +16,7 @@ Programmatic updates made to the configuration can be cleared via the `clearUpda
 
 ## collectMessageInfo
 
-User interactions with local or push notifications can be tracked by invoking the `collectMessageInfo` API. Please refer to [this page](../../solution/adobe-campaign-standard/index.md#tracking-local-and-push-notification-message-interactions) for more information about tracking local and push notification message interactions.
+User interactions with local or push notifications can be tracked by invoking the `collectMessageInfo` API. Please refer to [this page](../../../solution/adobe-campaign-standard/index.md#tracking-local-and-push-notification-message-interactions) for more information about tracking local and push notification message interactions.
 
 ## collectLaunchInfo
 
@@ -332,7 +332,7 @@ Flutter
 
 ## setPrivacyStatus
 
-You can use the `setPrivacyStatus` API to set the privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../../resources/privacy-and-gdpr.md#setprivacystatus) API's.
+You can use the `setPrivacyStatus` API to set the privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../../../resources/privacy-and-gdpr.md#setprivacystatus) API's.
 
 ## setPushIdentifier
 
