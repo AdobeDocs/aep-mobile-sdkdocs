@@ -127,6 +127,7 @@ function artifactIdToExtensionName(artifactId) {
         case "assurance":
         case "audience":
         case "campaign":
+        case "messaging":
             return capitalizeFirstLetter(artifactId)
         case "userprofile":
             return "UserProfile"
