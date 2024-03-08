@@ -8,6 +8,18 @@ keywords:
 
 # Release notes
 
+## February 28, 2024
+
+### iOS Campaign Classic 4.0.1
+
+- Added max versions to Platform dependencies in podspec
+
+### Android Campaign Classic 2.1.4
+
+* Add support for setting a large notification icon from a bundled drawable or a remote image url.
+* Use the defined Push Template action URI for carousel items that do not have an action URI.
+* Fix a NPE seen when a tag string was not provided for a basic template notification.
+
 ## February 2, 2024
 
 ### Android Campaign Classic 2.1.3

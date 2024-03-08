@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## February 27, 2024
+
+### iOS Places 4.1.1
+
+* Added max versions to Platform dependencies in podspec
+
 ## Aug 8, 2023
 
 ### iOS Places 4.1.0 and Android Places 2.1.0
