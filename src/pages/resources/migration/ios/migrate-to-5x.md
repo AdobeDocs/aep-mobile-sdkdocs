@@ -102,7 +102,7 @@ Previously, when accessing an action, the action name lived under `data.action`.
         }
     },
     "key2": "value2"
- },
+ }
 ```
 
 Please note that the action name now lives under **linkName**.
@@ -128,4 +128,3 @@ Previously, when accessing a page name, the page name lived under the `data.stat
     }
  }
 ```
-
