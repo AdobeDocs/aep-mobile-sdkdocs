@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## March 7, 2024
+
+### iOS Analytics 4.0.1
+
+- Added max versions to Platform dependencies in podspec.
+
 ## July 26, 2023
 
 ### Android Analytics 2.0.3

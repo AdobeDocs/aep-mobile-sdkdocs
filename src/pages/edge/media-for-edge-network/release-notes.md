@@ -9,6 +9,12 @@ keywords:
 
 # Release notes
 
+## March 6, 2024
+
+### iOS EdgeMedia 4.0.1
+
+- Added max versions to Platform dependencies in podspec.
+
 ## June 6, 2023
 
 ### iOS Edge Media 4.0.0
