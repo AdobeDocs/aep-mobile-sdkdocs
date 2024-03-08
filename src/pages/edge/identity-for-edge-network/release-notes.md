@@ -9,6 +9,12 @@ keywords:
 
 # Release notes
 
+## March 6, 2024
+
+### iOS EdgeIdentity 4.0.1
+
+- Added max versions to Platform dependencies in podspec.
+
 ## July 25, 2023
 
 ### Android EdgeIdentity 2.0.1

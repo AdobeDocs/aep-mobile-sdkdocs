@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## March 7, 2024
+
+### iOS Assurance 4.1.2
+
+* Fix an issue where dependency versions did not have an upper bound restriction.
+
 ## January 30, 2024
 
 ### Android Assurance 2.2.1
