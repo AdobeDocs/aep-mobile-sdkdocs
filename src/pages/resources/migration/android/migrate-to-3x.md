@@ -97,3 +97,56 @@ Some of the APIs available in previous major versions of the Mobile SDK for Andr
 <InlineAlert variant="warning" slots="text"/>
 
 The `registerExtension` API for each extension that was deprecated in the 2.x version of the mobile SDK has been removed in the 3.x version of the mobile SDK. See the [Update SDK initialization](#update-sdk-initialization) section for more details.
+
+### Edge Bridge
+
+If you are using Edge Bridge, please note the following changes to the Edge Bridge API:
+
+**Action name syntax** 
+
+Previously, when accessing an action, the action name lived under `data.action`. Under the new syntax, the action now lives within the `data.__adobe.analytics` object as follows:
+
+```json
+{
+ "data":{
+    "__adobe": {
+        "analytics": {
+          "events": "event1,event2,event3,event4,event12,event13",
+            "products":
+";product1;1;5.99;event12=5.99;evar5=merchEvar5,;product2;2;10.99;event13=6;eVar6=mercheVar6",
+            "c1": "propValue1",
+            "currencyCode": "USD"
+            "contextData":{
+                "key1": "value1"
+            },
+            "linkName": "action name",
+            "linkType": "lnk_o"
+        }
+    },
+    "key2": "value2"
+ },
+```
+
+Please note that the action name now lives under **linkName**.
+
+**Page name syntax**
+
+Previously, when accessing a page name, the page name lived under the `data.state` object. Under the new syntax, the page name now lives within the `data.__adobe.analytics` object as follows:
+
+```json
+{
+ "data":{
+    "__adobe": {
+        "analytics": {
+          "events": "event1,event2,event3,event4,event12,event13",
+            "products":
+";product1;1;5.99;event12=5.99;evar5=merchEvar5,;product2;2;10.99;event13=6;eVar6=mercheVar6",
+            "prop1": "propValue1",
+            "contextData":{
+                "key1": "value1"
+            },
+            "pageName": "view name"
+        }
+    }
+ }
+```

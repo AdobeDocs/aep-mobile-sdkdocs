@@ -39,6 +39,8 @@ If you have implemented Adobe Experience Platform 4.x SDKs for iOS, then this gu
 
 ### Update dependencies
 
+When updating to the Experience Platform 5.x SDKs, please take note of the following aspects:
+
 #### Manual library import
 
 If you are importing SDK libraries manually, make sure to update your libraries by downloading the most recent 5.x binaries from their respective Github repositories.
@@ -69,3 +71,61 @@ Once the previous command is complete, run `pod install` or `pod update` to upda
 #### Swift Package Manager
 
 If you are using Swift Package Manger (SPM) for managing your app dependencies, you can now include the Experience Platform 5.x SDKs either through Xcode UI, or by declaring them as dependencies in the Package.swift project file. For more details, follow the guide for [managing dependencies using Swift Package Manager](../../manage-spm-dependencies.md).
+
+### Updating outdated API references
+
+When updating to the Experience Platform 5.x SDKs, please take note of the following aspects:
+
+#### Edge Bridge
+
+If you are using Edge Bridge, please note the following changes to the Edge Bridge API:
+
+**Action name syntax** 
+
+Previously, when accessing an action, the action name lived under `data.action`. Under the new syntax, the action now lives within the `data.__adobe.analytics` object as follows:
+
+```json
+{
+ "data":{
+    "__adobe": {
+        "analytics": {
+          "events": "event1,event2,event3,event4,event12,event13",
+            "products":
+";product1;1;5.99;event12=5.99;evar5=merchEvar5,;product2;2;10.99;event13=6;eVar6=mercheVar6",
+            "c1": "propValue1",
+            "currencyCode": "USD"
+            "contextData":{
+                "key1": "value1"
+            },
+            "linkName": "action name",
+            "linkType": "lnk_o"
+        }
+    },
+    "key2": "value2"
+ },
+```
+
+Please note that the action name now lives under **linkName**.
+
+**Page name syntax**
+
+Previously, when accessing a page name, the page name lived under the `data.state` object. Under the new syntax, the page name now lives within the `data.__adobe.analytics` object as follows:
+
+```json
+{
+ "data":{
+    "__adobe": {
+        "analytics": {
+          "events": "event1,event2,event3,event4,event12,event13",
+            "products":
+";product1;1;5.99;event12=5.99;evar5=merchEvar5,;product2;2;10.99;event13=6;eVar6=mercheVar6",
+            "prop1": "propValue1",
+            "contextData":{
+                "key1": "value1"
+            },
+            "pageName": "view name"
+        }
+    }
+ }
+```
+
