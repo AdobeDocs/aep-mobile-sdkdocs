@@ -128,4 +128,3 @@ Previously, when accessing a page name, the page name lived under the `data.stat
     }
  }
 ```
-
