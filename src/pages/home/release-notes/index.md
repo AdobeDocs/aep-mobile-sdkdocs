@@ -7,6 +7,12 @@ Keywords:
 
 # Release notes
 
+## March 8, 2024
+
+### iOS UserProfile 4.0.1
+
+* Fix an issue where dependency versions did not have an upper bound restriction.
+
 ## March 7, 2024
 
 ### Roku SDK 1.1.0
