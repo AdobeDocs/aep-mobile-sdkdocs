@@ -35,6 +35,7 @@ The properties below are used to define the payload sent to FCM:
 | Link URI | ⛔️ | `adb_uri` | string | URI to be handled when user clicks the notification. |
 | Link Type | ⛔️ | `adb_a_type` | string | Type of link represented in `adb_uri` - one of "WEBURL", "DEEPLINK", or "OPENAPP".<br />Required if `adb_uri` is specified. |
 | Button(s) | ⛔️ | `adb_act` | string | **The value is an encoded JSON string.**<br />One to three buttons to create for the notification. If using "remind later" functionality, only two buttons may be used in this field.<br />When decoded, the string contains an array of the following objects:<br /><ul><li>`label` - text shown on the button's label</li><li>`uri` - URI to be handled when user clicks the button</li><li>`type` - Type of link represented in `uri` - one of "WEBURL", "DEEPLINK", or "OPENAPP".</li></ul> |
+| Icon | ⛔️ | `adb_icon` | string | Name of a small icon to use in the notification. <br />**Note** - The value referenced by this key is not used if a valid `adb_small_icon` key value pair is present in the payload. |
 | Small Icon | ⛔️ | `adb_small_icon` | string | Name of a small icon to use in the notification. The app's drawable resources are checked for an image file with the provided name. |
 | Large Icon | ⛔️ | `adb_large_icon` | string | URI or name for a large icon to use in the notification. If the URI is valid, the remote image is downloaded and cached on the device to be used as the large icon. If a name is provided, the app's drawable resources are checked for an image file with the same name. If no valid URI or name is provided then no large icon is set on the notification. |
 | Remind Later Text | ⛔️ | `adb_rem_txt` | string | If present, show a "remind later" button using the value provided as its label.<br />**Note** - both `remTxt` and `remTs` must be present in order to support "remind me later" functionality. |
@@ -64,6 +65,7 @@ Below is a sample of what a payload might look like for a basic notification:
                 "adb_title": "game request",
 				"adb_body": "shall we play a game?",
 				"adb_sound": "bingBong",
+				"adb_icon": "ic_knight",
 				"adb_small_icon": "ic_knight",
 				"adb_large_icon": "https://pictureofchess.com/logo.png",
 				"adb_n_count": "1",
