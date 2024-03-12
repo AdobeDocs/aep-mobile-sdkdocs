@@ -51,7 +51,6 @@ Below is a sample of what a payload might look like for a carousel notification:
 				"adb_title": "Check out the new line of shoes!",
 				"adb_body": "Hot deals on new releases!",
 				"adb_sound": "sneakerSqueaker",
-				"adb_icon": "chat_bubble",
 				"adb_small_icon": "chat_bubble",
 				"adb_large_icon": "https://sneakerland.com/logo.png",
 				"adb_uri": "https://sneakerland.com/newReleases",

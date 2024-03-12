@@ -65,7 +65,6 @@ Below is a sample of what a payload might look like for a basic notification:
                 "adb_title": "game request",
 				"adb_body": "shall we play a game?",
 				"adb_sound": "bingBong",
-				"adb_icon": "ic_knight",
 				"adb_small_icon": "ic_knight",
 				"adb_large_icon": "https://pictureofchess.com/logo.png",
 				"adb_n_count": "1",
