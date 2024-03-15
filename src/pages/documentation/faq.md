@@ -10,7 +10,7 @@ There are several new features and benefits of using the Experience Platform Mob
 | :--- | :--- | :--- |
 | Server-side, dynamic configuration | ✔️ |  |
 | Programmatic configuration | ✔️ | ✔️ |
-| Configuration UI | [Data Collection UI](https://experience.adobe.com/#/data-collection/) | [Mobile Services](https://mobilemarketing.adobe.com) |
+| Configuration UI | [Data Collection UI](https://experience.adobe.com/#/data-collection/) | [Mobile Services (deprecated)](https://experienceleague.adobe.com/docs/mobile-services/using/eol.html) |
 | Partner SDK extensions | ✔️ |  |
 | Lifecycle metrics | ✔️ | ✔️ |
 | GET/POST postbacks | ✔️ | ✔️ |
@@ -20,7 +20,6 @@ There are several new features and benefits of using the Experience Platform Mob
 | :--- | :--- | :--- |
 | Adobe Analytics | ✔️ | ✔️ |
 | Adobe Analytics - Media Analytics | ✔️ | ✔️ |
-| Adobe Analytics - Mobile Services | Messaging and Marketing Links | ✔️ |
 | Adobe Audience Manager | ✔️ | ✔️ |
 | Adobe Campaign Classic | ✔️ |  |
 | Adobe Campaign Standard | Push and in-app messaging | Push only |
