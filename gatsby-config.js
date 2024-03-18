@@ -268,6 +268,18 @@ module.exports = {
                                     {
                                         title: "MessagingEdgeEventType",
                                         path: "/edge/adobe-journey-optimizer/public-classes/messaging-edge-event-type"
+                                    },
+                                    {
+                                        title: "Proposition",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/proposition"
+                                    },
+                                    {
+                                        title: "PropositionItem",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/proposition-item"
+                                    },
+                                    {
+                                        title: "Surface",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/surface"
                                     }
                                 ]
                             },

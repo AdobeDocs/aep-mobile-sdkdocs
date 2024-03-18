@@ -68,16 +68,6 @@ Android
 
 <Tabs query="platform=android&function=get-scope"/>
 
-### getScopeDetails
-
-Returns this proposition's unique identifier as a string.
-
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
-
-Android
-
-<Tabs query="platform=android&function=get-scope-details"/>
-
 ### getUniqueId
 
 Returns this proposition's unique identifier as a string.
