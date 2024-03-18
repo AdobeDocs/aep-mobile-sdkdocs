@@ -7,6 +7,55 @@ Keywords:
 
 # Release notes
 
+## March 12, 2024
+
+### Android BOM 2.9.6
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.9.5) | BOM (2.9.6) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:campaignclassic** | **2.1.4** | **2.1.5**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:assurance | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.6 | 2.0.6 |
+| com.adobe.marketing.mobile:core | 2.6.2 | 2.6.2 |
+| com.adobe.marketing.mobile:edge | 2.4.0 | 2.4.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:optimize | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+## March 11, 2024
+
+### Android Campaign Classic 2.1.5
+
+* Re-add parsing of the `adb_icon` key value pair from the push template payload. The value will be used to locate and then set a notification small icon from the app's bundle if the `adb_small_icon` key value pair is not present in the push payload.
+
+## March 8, 2024
+
+### iOS UserProfile 4.0.1
+
+* Fix an issue where dependency versions did not have an upper bound restriction.
+
 ## March 7, 2024
 
 ### Roku SDK 1.1.0
