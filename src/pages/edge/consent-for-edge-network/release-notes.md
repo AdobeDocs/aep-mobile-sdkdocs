@@ -9,6 +9,12 @@ keywords:
 
 # Release notes
 
+## March 7, 2024
+
+### iOS EdgeConsent 4.0.1
+
+- Added max versions to Platform dependencies in podspec.
+
 ## June 1, 2023
 
 ### iOS Consent 4.0.0

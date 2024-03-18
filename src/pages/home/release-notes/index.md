@@ -7,6 +7,61 @@ Keywords:
 
 # Release notes
 
+## March 7, 2024
+
+### Roku SDK 1.1.0
+
+- Streaming Media for Edge Network
+    - Added new APIs and configuration for tracking media.
+    - Customizable ping interval.
+- Added support to create multiple instances of the SDK.
+- Support non-xdm data in `SendEvent` API
+- A comprehensive [migration guide](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/media-migration.md) to transition from [Adobe Media SDK](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/roku) to [Adobe Experience Platform Roku SDK](https://github.com/adobe/aepsdk-roku).
+
+### iOS Assurance 4.1.2
+
+* Fix an issue where dependency versions did not have an upper bound restriction.
+
+### iOS Analytics 4.0.1
+
+- Added max versions to Platform dependencies in podspec.
+
+### iOS EdgeConsent 4.0.1
+
+- Added max versions to Platform dependencies in podspec.
+
+## March 6, 2024
+
+### iOS EdgeMedia 4.0.1
+
+- Added max versions to Platform dependencies in podspec.
+
+### iOS EdgeIdentity 4.0.1
+
+- Added max versions to Platform dependencies in podspec.
+
+### iOS Edge 4.3.1
+
+- Added max versions to Platform dependencies in podspec.
+
+### iOS EdgeBridge 4.1.1
+
+- Added max versions to Platform dependencies in podspec.
+
+### iOS Media 4.0.2
+
+- Added max versions to Platform dependencies in podspec.
+
+### iOS Audience 4.0.1
+
+- Added max versions to Platform dependencies in podspec.
+
+## March 5, 2024
+
+### Android Messaging 2.2.1
+
+* Handle a null network connection exception which was causing the Messaging extension to fail to be registered.
+
 ## February 28, 2024
 
 ### iOS Messaging 4.1.1

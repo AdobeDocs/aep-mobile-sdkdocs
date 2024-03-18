@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## March 6, 2024
+
+### iOS Edge 4.3.1
+
+- Added max versions to Platform dependencies in podspec.
+
 ## October 27, 2023
 
 ### iOS Edge 4.3.0
