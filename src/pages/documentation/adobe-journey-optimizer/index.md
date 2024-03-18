@@ -66,6 +66,7 @@ iOS
 
 <Tabs query="platform=ios&task=import"/>
 
+
 #### Register the extension with Mobile Core
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>

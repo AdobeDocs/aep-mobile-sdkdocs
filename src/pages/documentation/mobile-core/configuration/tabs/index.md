@@ -97,7 +97,7 @@ NSDictionary *updatedConfig = @{@"global.privacy":@"optedout"};
 [AEPMobileCore updateConfiguration:updatedConfig];
 ```
 
-<!--- <Variant platform="react-native" task="update" repeat="5"/>
+<!-- <Variant platform="react-native" task="update" repeat="5"/>
 
 #### JavaScript
 
@@ -127,7 +127,7 @@ static Future<void> updateConfiguration(Map<String, Object> configMap);
 
 ```dart
 FlutterACPCore.updateConfiguration({"global.privacy":"optedout"});
-``` --->
+``` -->
 
 <Variant platform="android" task="bundle" repeat="5"/>
 

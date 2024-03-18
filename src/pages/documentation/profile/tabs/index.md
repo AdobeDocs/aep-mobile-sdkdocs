@@ -48,6 +48,24 @@ end
    @import AEPUserProfile;
 ```
 
+<Variant platform="react-native" task="add" repeat="4"/>
+
+1. Install the `@adobe/react-native-aepuserprofile` package:
+
+```bash
+# NPM
+npm install @adobe/react-native-aepuserprofile
+
+# Yarn
+yarn add @adobe/react-native-aepuserprofile
+```
+
+2. Import the UserProfile library:
+
+```typescript
+import {UserProfile} from '@adobe/react-native-aepuserprofile';
+```
+
 <Variant platform="android" task="register" repeat="5"/>
 
 
@@ -116,3 +134,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
   return YES;
 }
 ```
+
+<Variant platform="react-native" task="register" repeat="1"/>
+
+Please refer to the native code tabs to learn how to register the Profile extension.

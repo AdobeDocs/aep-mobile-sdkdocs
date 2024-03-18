@@ -58,6 +58,21 @@ import AEPEdgeConsent
 @import AEPEdgeConsent;
 ```
 
+<Variant platform="react-native" task="download" repeat="4"/>
+
+1. Install the `@adobe/react-native-aepedgeconsent` package.
+
+```bash
+cd MyReactApp
+npm install @adobe/react-native-aepedgeconsent
+```
+
+2. Import the Consent for Edge library. 
+
+```typescript
+import {Consent} from '@adobe/react-native-aepedgeconsent';
+```
+
 <Variant platform="android" task="register" repeat="4"/>
 
 #### Java
@@ -127,3 +142,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
   ...
 }
 ```
+
+<Variant platform="react-native" task="register" repeat="1"/>
+
+Please refer to the native code tabs to learn how to register the Consent extension.

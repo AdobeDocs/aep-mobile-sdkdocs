@@ -35,13 +35,13 @@ iOS
 
 <Tabs query="platform=ios&task=import-library"/>
 
-<!--- React Native
+React Native
 
 <Tabs query="platform=react-native&task=import-library"/>
 
-Flutter
+<!-- Flutter
 
-<Tabs query="platform=flutter&task=import-library"/> --->
+<Tabs query="platform=flutter&task=import-library"/> -->
 
 ### Register AEPAssurance with Mobile Core
 
@@ -57,13 +57,13 @@ iOS
 
 <Tabs query="platform=ios&task=register-assurance"/>
 
-<!--- React Native
+React Native
 
 <Tabs query="platform=react-native&task=register-assurance"/>
 
-Flutter
+<!-- Flutter
 
-<Tabs query="platform=flutter&task=register-assurance"/> --->
+<Tabs query="platform=flutter&task=register-assurance"/> -->
 
 ### Connect to an Assurance session
 

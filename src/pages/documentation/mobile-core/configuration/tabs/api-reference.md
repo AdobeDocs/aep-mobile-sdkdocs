@@ -44,6 +44,20 @@ MobileCore.clearUpdatedConfiguration()
 [AEPMobileCore clearUpdatedConfiguration];
 ```
 
+<Variant platform="react-native" api="clear-updated-configuration" repeat="4"/>
+
+**Syntax**
+
+```typescript
+clearUpdatedConfiguration()
+```
+
+**Example**
+
+```typescript
+MobileCore.clearUpdatedConfiguration();
+```
+
 <Variant platform="android" api="configure-with-app-id" repeat="5"/>
 
 #### Java
@@ -176,21 +190,27 @@ let version = MobileCore.extensionVersion
 NSString *version = [AEPMobileCore extensionVersion];
 ```
 
-<!--- <Variant platform="react-native" api="extension-version" repeat="2"/>
+<Variant platform="react-native" api="extension-version" repeat="4"/>
 
-#### JavaScript
+**Syntax**
 
-```jsx
-ACPCore.extensionVersion().then(coreExtensionVersion => console.log("AdobeExperienceSDK: ACPCore version: " + coreExtensionVersion));
+```typescript
+extensionVersion(): Promise<string>
 ```
 
-<Variant platform="flutter" api="extension-version" repeat="2"/>
+**Example**
+
+```typescript
+MobileCore.extensionVersion().then(version => console.log("AdobeExperienceSDK: MobileCore version: " + version));
+```
+
+<!--  <Variant platform="flutter" api="extension-version" repeat="2"/>
 
 #### Dart
 
 ```dart
 String coreExtensionVersion = await FlutterACPCore.extensionVersion;
-``` --->
+``` -->
 
 <Variant platform="android" api="update-configuration" repeat="5"/>
 
@@ -243,23 +263,21 @@ static func updateConfigurationWith(configDict: [String: Any])
  [AEPMobileCore updateConfiguration:updatedConfig];
 ```
 
-<!--- <Variant platform="react-native" api="update-configuration" repeat="5"/>
-
-#### JavaScript
+<Variant platform="react-native" api="update-configuration" repeat="4"/>
 
 **Syntax**
 
-```javascript
-updateConfiguration(configMap?: { string: any })
+```typescript
+updateConfiguration(configMap?: Record<string, any>)
 ```
 
 **Example**
 
-```jsx
-ACPCore.updateConfiguration({"global.privacy":"optedout"});
+```typescript
+MobileCore.updateConfiguration({"yourConfigKey": "yourConfigValue"});
 ```
 
-<Variant platform="flutter" api="update-configuration" repeat="5"/>
+<!--  <Variant platform="flutter" api="update-configuration" repeat="5"/>
 
 #### Dart
 
@@ -273,4 +291,4 @@ static Future<void> updateConfiguration(Map<String, Object> configMap);
 
 ```dart
 FlutterACPCore.updateConfiguration({"global.privacy":"optedout"});
-``` --->
+``` -->

@@ -12,7 +12,7 @@ This page only contains information about the 3.x `AEPPlaces` extension.<br/><br
 
 Clears out the client-side data for Places in shared state, local storage, and in-memory.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -22,11 +22,15 @@ iOS
 
 <Tabs query="platform=ios&api=clear"/>
 
+React Native
+
+<Tabs query="platform=react-native&api=clear"/>
+
 ## extensionVersion
 
 Returns the running version of the AEPPlaces extension.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -36,11 +40,15 @@ iOS
 
 <Tabs query="platform=ios&api=extension-version"/>
 
+React Native
+
+<Tabs query="platform=react-native&api=extension-version"/>
+
 ## getCurrentPointsOfInterest
 
 Returns all points of interest (POI) of which the device is currently known to be within.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -50,13 +58,17 @@ iOS
 
 <Tabs query="platform=ios&api=get-current-points-of-interest"/>
 
+React Native
+
+<Tabs query="platform=react-native&api=get-current-points-of-interest"/>
+
 ## getLastKnownLocation
 
 Returns the last latitude and longitude provided to the AEPPlaces Extension.
 
 If the Places Extension does not have a valid last known location for the user, the parameter passed in the closure will be `nil`. The `CLLocation` object returned by this method will only contain a valid coordinate. Other properties on the `CLLocation` object should not be considered valid.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -66,11 +78,15 @@ iOS
 
 <Tabs query="platform=ios&api=get-last-known-location"/>
 
+React Native
+
+<Tabs query="platform=react-native&api=get-last-known-location"/>
+
 ## getNearbyPointsOfInterest
 
 Requests a list of nearby Points of Interest (POI) and returns them in a closure.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -79,6 +95,10 @@ Android
 iOS
 
 <Tabs query="platform=ios&api=get-nearby-points-of-interest"/>
+
+React Native
+
+<Tabs query="platform=react-native&api=get-nearby-points-of-interest"/>
 
 ## processGeofence 
 
@@ -110,11 +130,15 @@ Passes a `CLRegion` and a `PlacesRegionEvent` to be processed by the Places exte
 
 Calling this method will result in an `Event` being dispatched to the SDK's `EventHub`. This enables rule processing based on the triggering region event.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 iOS
 
 <Tabs query="platform=ios&api=process-region-event"/>
+
+React Native
+
+<Tabs query="platform=react-native&api=process-region-event"/>
 
 ## registerExtension
 
@@ -122,7 +146,7 @@ iOS
 
 Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../mobile-core/api-reference.md#registerextensions) API instead.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -132,17 +156,25 @@ iOS
 
 <Tabs query="platform=ios&api=register-extension"/>
 
+React Native
+
+<Tabs query="platform=react-native&api=register-extension"/>
+
 ## setAccuracyAuthorization
 
 Sets the accuracy authorization status in the Places extension.
 
 The value provided is stored in the Places shared state, and is for reference only. Calling this method does not impact the actual location accuracy authorization for this device.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 iOS
 
 <Tabs query="platform=ios&api=set-accuracy-authorization"/>
+
+React Native
+
+<Tabs query="platform=react-native&api=set-accuracy-authorization"/>
 
 ## setAuthorizationStatus
 
@@ -154,7 +186,7 @@ The status provided is stored in the Places shared state, and is for reference o
 
 This method should only be called from the `CLLocationManagerDelegate` protocol method [locationManagerDidChangeAuthorization(\_:)](https://developer.apple.com/documentation/corelocation/cllocationmanagerdelegate/3563956-locationmanagerdidchangeauthoriz).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -163,6 +195,10 @@ Android
 iOS
 
 <Tabs query="platform=ios&api=set-authorization-status"/>
+
+React Native
+
+<Tabs query="platform=react-native&api=set-authorization-status"/>
 
 ## Additional classes and enums
 

@@ -44,7 +44,7 @@ For the AEPOptimize APIs to work properly, you need to integrate Mobile Core and
 
 ### Install the Experience Platform Mobile SDK
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -54,9 +54,13 @@ iOS
 
 <Tabs query="platform=ios&task=install"/>
 
+React Native
+
+<Tabs query="platform=react-native&task=install"/>
+
 ### Register the extensions with Mobile Core
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -66,13 +70,17 @@ iOS
 
 <Tabs query="platform=ios&task=register"/>
 
+React Native
+
+<Tabs query="platform=react-native&task=register"/>
+
 ## Adobe Journey Optimizer - Offer Decisioning
 
 ### DecisionScope
 
 The `DecisionScope` public class provides a constructor to create a scope object using the activityId, placementId, and optional itemCount. The decision scope activity and placement information can be obtained from the decision on the Experience Platform UI. 
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -81,6 +89,10 @@ Android
 iOS
 
 <Tabs query="platform=ios&task=decisionscope"/>
+
+React Native
+
+<Tabs query="platform=react-native&task=decisionscope"/>
 
 Alternately, another of the class's constructor can be used to create a scope object using the encoded decision scope. The encoded scope can also be read directly from the decision on the Experience Platform UI.
 

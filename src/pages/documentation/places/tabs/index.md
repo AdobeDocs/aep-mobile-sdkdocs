@@ -50,6 +50,31 @@ import AEPPlaces
 @import AEPPlaces;
 ```
 
+<Variant platform="react-native" task="download" repeat="4"/>
+
+1. Install the `@adobe/react-native-aepplaces` package:
+
+```bash
+# NPM
+npm install @adobe/react-native-aepplaces
+
+# Yarn
+yarn add @adobe/react-native-aepplaces
+```
+
+2. Import the Places libraries. 
+
+```typescript
+import { 
+  Places,
+  PlacesAuthStatus,
+  PlacesGeofence,
+  PlacesGeofenceTransitionType,
+  PlacesLocation,
+  PlacesPOI
+} from '@adobe/react-native-aepplaces';
+```
+
 <Variant platform="android" task="register" repeat="4"/>
 
 #### Java
@@ -120,3 +145,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     ...
 }
 ```
+
+<Variant platform="react-native" task="register" repeat="1"/>
+
+Please refer to the native code tabs to learn how to register the Places extension.

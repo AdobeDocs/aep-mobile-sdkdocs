@@ -26,7 +26,7 @@ The following instructions are for configuring an application using Adobe Experi
 
 When using the [`setAdvertisingIdentifier`](./api-reference.md#setadvertisingidentifier) API, see the setup guide for [Consent for Edge Network](../consent-for-edge-network/index.md) for instructions on setting up the extension and profile schema for proper usage.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -36,9 +36,13 @@ iOS
 
 <Tabs query="platform=ios&task=download"/>
 
+React Native
+
+<Tabs query="platform=react-native&task=download"/>
+
 ### Register the Identity extension with Mobile Core
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -47,6 +51,10 @@ Android
 iOS
 
 <Tabs query="platform=ios&task=register"/>
+
+React Native
+
+<Tabs query="platform=react-native&task=register"/>
 
 ## Advertising identifier
 

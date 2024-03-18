@@ -46,6 +46,18 @@ Places.clear()
 [AEPMobilePlaces clear];
 ```
 
+<Variant platform="react-native" api="clear" repeat="4"/>
+
+**Syntax**
+
+```typescript
+clear(): void
+```
+
+**Example**
+
+```typescript
+Places.clear();
 <Variant platform="android" api="extension-version" repeat="6"/>
 
 #### Java
@@ -94,6 +106,19 @@ let placesVersion = Places.extensionVersion
 NSString *placesVersion = [AEPMobilePlaces extensionVersion];
 ```
 
+<Variant platform="react-native" api="extension-version" repeat="4"/>
+
+**Syntax**
+
+```typescript
+extensionVersion(): Promise<string>
+```
+
+**Example**
+
+```typescript
+const version = await Places.extensionVersion();
+console.log(`AdobeExperienceSDK: Places version: ${version}`);
 <Variant platform="android" api="get-current-points-of-interest" repeat="6"/>
 
 #### Java
@@ -155,6 +180,20 @@ Places.getCurrentPointsOfInterest() { currentPois in
 }];
 ```
 
+<Variant platform="react-native" api="get-current-points-of-interest" repeat="4"/>
+
+**Syntax**
+
+```typescript
+getCurrentPointsOfInterest(): Promise<Array<PlacesPOI>>
+```
+
+**Example**
+
+```typescript
+const pois = await Places.getCurrentPointsOfInterest();
+console.log('AdobeExperienceSDK: Places pois: ' + pois);
+);
 <Variant platform="android" api="get-last-known-location" repeat="6"/>
 
 #### Java
@@ -218,6 +257,22 @@ Places.getLastKnownLocation() { location in
         NSLog(@"location returned from closure: (%f, %f)", location.coordinate.latitude, location.coordinate.longitude);
     }    
 }];
+```
+
+<Variant platform="react-native" api="get-last-known-location" repeat="4"/>
+
+**Syntax**
+
+```typescript
+getLastKnownLocation(): Promise<PlacesLocation>
+```
+
+**Example**
+
+```typescript
+const location = await Places.getLastKnownLocation();
+console.log('AdobeExperienceSDK: Places location: ' + location)
+);
 ```
 
 <Variant platform="android" api="get-nearby-points-of-interest" repeat="8"/>
@@ -311,6 +366,27 @@ CLLocation *location = [[CLLocation alloc] initWithLatitude:40.4350229 longitude
 }];
 ```
 
+<Variant platform="react-native" api="get-nearby-points-of-interest" repeat="4"/>
+
+**Syntax**
+
+```typescript
+getNearbyPointsOfInterest(location, <limit>): Promise<Array<PlacesPOI>>
+```
+
+**Example**
+
+```typescript
+let location = new PlacesLocation(<latitude>, <longitude>, <optional altitude>, <optional speed>, <optional accuracy>);
+
+try {
+  const pois = await Places.getNearbyPointsOfInterest(location, <limit>);
+  console.log(`AdobeExperienceSDK: Places pois: ${pois}`)
+} catch(error) {
+  console.log(`AdobeExperienceSDK: Places error: ${error}`
+}
+```
+
 <Variant platform="android" api="process-geofence" repeat="8"/>
 
 #### Java
@@ -356,45 +432,6 @@ fun onHandleIntent(intent: Intent) {
     if (!geofences.isEmpty()) {
         Places.processGeofence(geofences.first(), geofencingEvent.getGeofenceTransition())
     }
-}
-```
-
-<Variant platform="android" api="process-geofence-event" repeat="8"/>
-
-#### Java
-
-**Syntax**
-
-```java
-public static void processGeofenceEvent(@NonNull final GeofencingEvent geofencingEvent);
-```
-
-**Example**
-
-```java
-public class GeofenceTransitionsIntentService extends IntentService {
-
-    public GeofenceTransitionsIntentService() {
-        super("GeofenceTransitionsIntentService");
-    }
-
-    protected void onHandleIntent(Intent intent) {
-        GeofencingEvent geofencingEvent = GeofencingEvent.fromIntent(intent);
-        // Call the Places API to process information
-        Places.processGeofenceEvent(geofencingEvent);
-    }
-}
-```
-
-#### Kotlin
-
-**Example**
-
-```java
-fun onHandleIntent(intent: Intent) {
-    val geofencingEvent = GeofencingEvent.fromIntent(intent)
-    // Call the Places API to process information
-    Places.processGeofenceEvent(geofencingEvent)
 }
 ```
 
@@ -473,6 +510,10 @@ MobileCore.registerExtensions([Places.self])
 ```objc
 [AEPMobileCore registerExtensions:@[AEPMobilePlaces.class] completion:nil];
 ```
+
+<Variant platform="react-native" api="register-extension" repeat="1"/>
+
+Please refer to the native code tabs to learn how to register the Places extension.
 
 <Variant platform="ios" api="set-accuracy-authorization" repeat="10"/>
 
@@ -564,4 +605,22 @@ func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
 - (void)locationManagerDidChangeAuthorization:(CLLocationManager *)manager {
     [AEPMobilePlaces setAuthorizationStatus:manager.authorizationStatus];
 }
+```
+
+<Variant platform="react-native" api="set-authorization-status" repeat="4"/>
+
+**Syntax**
+
+```typescript
+setAuthorizationStatus(authStatus?: PlacesAuthStatus): void;
+```
+
+**Example**
+
+```typescript
+Places.setAuthorizationStatus(PlacesAuthStatus.ALWAYS);
+Places.setAuthorizationStatus(PlacesAuthStatus.DENIED);
+Places.setAuthorizationStatus(PlacesAuthStatus.RESTRICTED);
+Places.setAuthorizationStatus(PlacesAuthStatus.WHEN_IN_USE);
+Places.setAuthorizationStatus(PlacesAuthStatus.UNKNOWN);
 ```

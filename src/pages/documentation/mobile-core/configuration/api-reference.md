@@ -18,7 +18,7 @@ You can clear any programmatic updates made to the configuration via the `clearU
 
 * `configureWithAppId(appId)`(Android)/`configureWith(appId:)`(iOS) or `configureWithFileInPath(filePath)`(Android)/ `configureWith(filePath:)`(iOS) or `configureWithFileInAssets(fileName)`(Android) -> `setPrivacyStatus(privacyStatus)`(Android)/ `setPrivacyStatus(_ status:)`(iOS) -> `clearUpdatedConfiguration()`: In this example, the configuration will have the initial `MobilePrivacyStatus`(Android)/ `PrivacyStatus`(iOS) set via `configureWithAppId(appId)`(Android)/`configureWith(appId:)`(iOS) or `configureWithFileInPath(filePath)`(Android)/ `configureWith(filePath:)`(iOS) or `configureWithFileInAssets(fileName)`(Android).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android 
 
@@ -27,6 +27,10 @@ Android
 iOS
 
 <Tabs query="platform=ios&api=clear-updated-configuration"/>
+
+React Native
+
+<Tabs query="platform=react-native&api=clear-updated-configuration"/>
 
 ## configureWithAppID
 
@@ -78,7 +82,7 @@ The `extensionVersion()` API returns the version of the Configuration extension.
 
 To get the version of the Configuration extension, use the following code sample:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -88,13 +92,13 @@ iOS
 
 <Tabs query="platform=ios&api=extension-version"/>
 
-<!--- React Native
+React Native
 
 <Tabs query="platform=react-native&api=extension-version"/>
 
-Flutter
+<!--  Flutter
 
-<Tabs query="platform=flutter&api=extension-version"/> --->
+<Tabs query="platform=flutter&api=extension-version"/> -->
 
 ## updateConfiguration
 
@@ -108,7 +112,7 @@ Keys that are not found on the current configuration are added when this method 
 
 Do not use this API to update the `build.environment` key or any key with an environment prefix, because it can lead to unexpected behaviors. For more information, read [Environment-aware configuration properties](./index.md#environment-aware-configuration-properties).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -118,10 +122,10 @@ iOS
 
 <Tabs query="platform=ios&api=update-configuration"/>
 
-<!--- React Native
+React Native
 
 <Tabs query="platform=react-native&api=update-configuration"/>
 
-Flutter
+<!--  Flutter
 
-<Tabs query="platform=flutter&api=update-configuration"/> --->
+<Tabs query="platform=flutter&api=update-configuration"/> -->

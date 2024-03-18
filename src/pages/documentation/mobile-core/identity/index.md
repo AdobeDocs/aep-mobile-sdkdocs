@@ -21,7 +21,7 @@ To get started with Identity, complete the following steps:
 
 ## Add the Identity extension to your app
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -31,10 +31,13 @@ iOS
 
 <Tabs query="platform=ios&task=add"/>
 
-<!--- React Native
+React Native
+
 <Tabs query="platform=react-native&task=add"/>
-Flutter
-<Tabs query="platform=flutter&task=add"/> --->
+
+<!-- Flutter
+
+<Tabs query="platform=flutter&task=add"/> -->
 
 ## Register the Identity extension
 
@@ -42,7 +45,7 @@ The `MobileCore.registerExtensions()` API can be used to register the Identity e
 
 To register the Identity extension, use the following code sample:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -52,10 +55,13 @@ iOS
 
 <Tabs query="platform=ios&task=register"/>
 
-<!--- React Native
+React Native
+
 <Tabs query="platform=react-native&task=register"/>
-Flutter
-<Tabs query="platform=flutter&task=register"/> --->
+
+<!-- Flutter
+
+<Tabs query="platform=flutter&task=register"/> -->
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -87,7 +93,7 @@ To use the same visitor ID in the app and mobile web and pass the visitor ID to 
 
 ### Implementing visitor tracking between an app and the mobile web
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -97,12 +103,12 @@ iOS
 
 <Tabs query="platform=ios&task=implement"/>
 
-<!--- React Native
+React Native
 
 <Tabs query="platform=react-native&task=implement"/>
 
-Flutter
+<!-- Flutter
 
-<Tabs query="platform=flutter&task=implement"/> --->
+<Tabs query="platform=flutter&task=implement"/> -->
 
 The ID service code on the destination domain extracts the ECID from the URL instead of sending a request to Adobe for a new ID. The ID service code on the destination page uses this ECID to track the visitor. On hits from the mobile web content, verify that the `mid` parameter exists on each hit, and that this value matches the `mid`value that is being sent by the app code.

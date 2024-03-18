@@ -56,6 +56,21 @@ import AEPEdgeConsent
 @import AEPEdgeConsent;
 ```
 
+<Variant platform="react-native" task="register" repeat="4"/>
+
+1. Install the `@adobe/react-native-aepedgeidentity` package:
+
+```bash
+cd MyReactApp
+npm install @adobe/react-native-aepedgeidentity
+```
+
+2. Import the Identity for Edge library.
+
+```typescript
+import {Identity} from '@adobe/react-native-aepedgeidentity';
+```
+
 <Variant platform="android" task="register" repeat="2"/>
 
 #### Java
@@ -126,3 +141,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
   ...
 }
 ```
+
+<Variant platform="react-native" task="register" repeat="1"/>
+
+Please refer to the native code tabs to learn how to register the Identity extension.

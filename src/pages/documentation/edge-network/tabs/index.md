@@ -54,6 +54,21 @@ import AEPEdgeIdentity
 @import AEPEdgeIdentity;
 ```
 
+<Variant platform="react-native" task="add" repeat="4"/>
+
+1. Install the `@adobe/react-native-aepedge` package:
+
+```bash
+cd MyReactApp
+npm install @adobe/react-native-aepedge
+```
+
+2. Import the Edge library:
+   
+```typescript
+import {Edge, ExperienceEvent} from '@adobe/react-native-aepedge';
+```
+
 <Variant platform="android" task="register" repeat="4"/>
 
 #### Java
@@ -127,3 +142,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
   ...
 }
 ```
+
+<Variant platform="react-native" task="register" repeat="1"/>
+
+Please refer to the native code tabs to learn how to register the Edge extension.

@@ -106,35 +106,21 @@ MobileCore.collectPii(["key1" : "value1","key2" : "value2"]);
                             }];
 ```
 
-<!--- <Variant platform="react-native" api="collect-pii" repeat="10"/>
+<Variant platform="react-native" api="collect-pii" repeat="5"/>
 
-#### Javascript
+The `collectPii` function lets the SDK to collect sensitive or personally identifiable information (PII).
 
 **Syntax**
 
-```jsx
-ACPCore.collectPii(data: [String : String])
+```typescript
+collectPii(data: Record<string, string>)
 ```
 
 **Example**
 
-```jsx
-ACPCore.collectPii({"myPii": "data"});
+```typescript
+MobileCore.collectPii({"myPii": "data"});
 ```
-
-#### Swift
-
-**Syntax**
-
-```swift
-ACPCore.collectPii(data: [String : String])
-```
-
-**Example**
-
-```objectivec
-MobileCore.collectPii(["key1" : "value1","key2" : "value2"]);
-``` --->
 
 <Variant platform="android" api="dispatch-event" repeat="5"/>
 
@@ -254,7 +240,6 @@ AEPEvent *event = [[AEPEvent alloc] initWithName:@"My Event" type:AEPEventType.c
 }];
 ```
 
-
 <Variant platform="android" api="get-application" repeat="6"/>
 
 #### Java
@@ -328,15 +313,21 @@ var logLevel = Log.logFilter
 AEPLogLevel logLevel = [AEPLog logFilter];
 ```
 
-<!--- <Variant platform="react-native" api="get-log-level" repeat="3"/>
+<Variant platform="react-native" api="get-log-level" repeat="5"/>
 
-#### Javascript
+This function gets the current log level being used in the SDK.
+
+**Syntax**
+
+```typescript
+getLogLevel(): Promise<LogLevel>
+```
 
 **Example**
 
-```jsx
-ACPCore.getLogLevel().then(level => console.log("AdobeExperienceSDK: Log Level = " + level));
-``` --->
+```typescript
+MobileCore.getLogLevel().then(level => console.log("AdobeExperienceSDK: Log Level = " + level));
+```
 
 <Variant platform="android" api="get-sdk-identities" repeat="6"/>
 
@@ -404,6 +395,22 @@ static func getSdkIdentities(completion: @escaping (String?, Error?) -> Void)
        // handle the retrieved identities
      }
  }];
+```
+
+<Variant platform="react-native" api="get-sdk-identities" repeat="5"/>
+
+This function gets all of the user's identities known by the SDK.
+
+**Syntax**
+
+```typescript
+getSdkIdentities(): Promise<string>
+```
+
+**Example**
+
+```typescript
+MobileCore.getSdkIdentities().then(identities => console.log("AdobeExperienceSDK: Identities = " + identities));
 ```
 
 <Variant platform="android" api="log" repeat="11"/>
@@ -492,26 +499,23 @@ public static func error(label: String, _ message: String)
 [AEPLog errorWithLabel:@"testLabel" message:@"testMessage"];
 ```
 
-<!--- <Variant platform="react-native" api="log" repeat="6"/>
+<Variant platform="react-native" api="log" repeat="5"/>
 
-#### JavaScript
+This is the API used to log from the SDK.
 
-The log messages from the Adobe Experience SDK are printed to the Log facility and use a common format that contains the tag `ACPMobileLogLevel`.
+**Syntax**
+
+```typescript
+log(logLevel: LogLevel, tag: string, message: string)
+```
 
 **Example**
 
-```jsx
-ACPCore.log(ACPMobileLogLevel.ERROR, "React Native Tag", "React Native Message");
+```typescript
+import {LogLevel} from '@adobe/react-native-aepcore';
+
+MobileCore.log(LogLevel.ERROR, "React Native Tag", "React Native Message");
 ```
-
-Note: `ACPMobileLogLevel` contains the following getters:
-
-```jsx
-const ERROR = "ACP_LOG_LEVEL_ERROR";
-const WARNING = "ACP_LOG_LEVEL_WARNING";
-const DEBUG = "ACP_LOG_LEVEL_DEBUG";
-const VERBOSE = "ACP_LOG_LEVEL_VERBOSE";
-``` --->
 
 <Variant platform="android" api="register-event-listener" repeat="5"/>
 
@@ -717,83 +721,11 @@ public static func registerExtensions(_ extensions: [NSObject.Type], _ completio
 }
 ```
 
-<!--- <Variant platform="react-native" api="register-extension" repeat="5"/>
+<Variant platform="react-native" api="register-extension" repeat="1"/>
 
-For React Native apps, initialize the SDK using native code in your `AppDelegate` (iOS) and `MainApplication` (Android).
+Please refer to the native code tabs to learn how to register the Core extensions.
 
-#### iOS
-
-```objectivec
-#import "ACPCore.h"
-#import "ACPUserProfile.h"
-#import "ACPIdentity.h"
-#import "ACPLifecycle.h"
-#import "ACPSignal.h"
-...
-@implementation AppDelegate
--(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [ACPCore setLogLevel:ACPMobileLogLevelDebug];
-    [ACPCore configureWithAppId:@"<your_environment_id_from_Launch>"];
-    [ACPUserProfile registerExtension];
-    [ACPIdentity registerExtension];
-    [ACPLifecycle registerExtension];
-    [ACPSignal registerExtension];
-
-    const UIApplicationState appState = application.applicationState;
-    [ACPCore start:^{
-      // only start lifecycle if the application is not in the background
-      if (appState != UIApplicationStateBackground) {
-        [ACPCore lifecycleStart:nil];
-      }
-    }];
-    ...
-  return YES;
-}
-
-@end
-```
-
-#### Android
-
-```java
-import com.adobe.marketing.mobile.AdobeCallback;
-import com.adobe.marketing.mobile.Identity;
-import com.adobe.marketing.mobile.InvalidInitException;
-import com.adobe.marketing.mobile.Lifecycle;
-import com.adobe.marketing.mobile.LoggingMode;
-import com.adobe.marketing.mobile.MobileCore;
-import com.adobe.marketing.mobile.Signal;
-import com.adobe.marketing.mobile.UserProfile;
-...
-import android.app.Application;
-...
-public class MainApplication extends Application implements ReactApplication {
-  ...
-  @Override
-  public void on Create(){
-    super.onCreate();
-    ...
-    MobileCore.setApplication(this);
-    MobileCore.setLogLevel(LoggingMode.DEBUG);
-    MobileCore.setWrapperType(WrapperType.REACT_NATIVE);
-
-    try {
-      UserProfile.registerExtension();
-      Identity.registerExtension();
-      Lifecycle.registerExtension();
-      Signal.registerExtension();
-      MobileCore.start(new AdobeCallback () {
-          @Override
-          public void call(Object o) {
-            MobileCore.configureWithAppID("<your_environment_id_from_Launch>");
-         }
-      });
-    } catch (InvalidInitException e) {
-      ...
-    }
-  }
-}
-```
+<!--
 
 <Variant platform="flutter" api="register-extension" repeat="3"/>
 
@@ -801,7 +733,7 @@ public class MainApplication extends Application implements ReactApplication {
 
 For Flutter apps, initialize the SDK using native code in your `AppDelegate` and `MainApplication` in iOS and Android, respectively.
 
-The initialization code is located in the [Flutter ACPCore Github README](https://github.com/adobe/flutter_acpcore). --->
+The initialization code is located in the [Flutter ACPCore Github README](https://github.com/adobe/flutter_acpcore). -->
 
 <Variant platform="android" api="reset-identities" repeat="5"/>
 
@@ -848,6 +780,22 @@ static func resetIdentities()
 
 ```objectivec
 [AEPMobileCore resetIdentities];
+```
+
+<Variant platform="react-native" api="reset-identities" repeat="5"/>
+
+The `resetIdentities` method requests that each extension resets the identities it owns and each extension responds to this request uniquely.
+
+**Syntax**
+
+```typescript
+resetIdentities()
+```
+
+**Example**
+
+```typescript
+MobileCore.resetIdentities();
 ```
 
 <Variant platform="ios" api="set-app-group" repeat="10"/>
@@ -966,24 +914,25 @@ import AEPServices
  [AEPMobileCore setLogLevel: AEPLogLevelTrace];
 ```
 
-<!--- <Variant platform="react-native" api="set-log-level" repeat="5"/>
+<Variant platform="react-native" api="set-log-level" repeat="5"/>
 
-#### Javascript
+Set the logging level of the SDK
 
 **Syntax**
 
-```jsx
-(void) setLogLevel: (ACPMobileLogLevel) logLevel;
+```typescript
+setLogLevel(mode: LogLevel)
 ```
 
 **Example**
 
-```jsx
-import {ACPMobileLogLevel} from '@adobe/react-native-acpcore';
-ACPCore.setLogLevel(ACPMobileLogLevel.VERBOSE);
+```typescript
+import {LogLevel} from '@adobe/react-native-aepcore';
+
+MobileCore.setLogLevel(LogLevel.VERBOSE);
 ```
 
-<Variant platform="flutter" api="set-log-level" repeat="5"/>
+<!-- <Variant platform="flutter" api="set-log-level" repeat="5"/>
 
 #### Dart
 
@@ -998,7 +947,7 @@ ACPCore.setLogLevel(ACPMobileLogLevel.VERBOSE);
 ```dart
 import 'package:flutter_acpcore/src/acpmobile_logging_level.dart';
 FlutterACPCore.setLogLevel(ACPLoggingLevel.VERBOSE);
-``` --->
+``` -->
 
 <Variant platform="android" api="set-push-identifier" repeat="6"/>
 
@@ -1048,6 +997,22 @@ MobileCore.setPushIdentifier(deviceToken)
 
 ```objectivec
  [AEPMobileCore setPushIdentifier:deviceToken];
+```
+
+<Variant platform="react-native" api="set-push-identifier" repeat="5"/>
+
+Submits a generic event containing the provided push token with event type `generic.identity`.
+
+**Syntax**
+
+```typescript
+setPushIdentifier(pushIdentifier?: string) 
+```
+
+**Example**
+
+```typescript
+MobileCore.setPushIdentifier("pushIdentifier");
 ```
 
 <Variant platform="android" api="set-icon-resource-id" repeat="11"/>
@@ -1234,7 +1199,7 @@ MobileCore.trackAction("loginClicked", additionalContextData);
   [AEPMobileCore trackAction:@"action name" data:@{@"key":@"value"}];
 ```
 
-<!--- <Variant platform="react-native" api="track-action" repeat="6"/>
+<!-- <Variant platform="react-native" api="track-action" repeat="6"/>
 
 #### Javascript
 
@@ -1270,7 +1235,7 @@ Future<void> trackAction (String action, {Map<String, String> contextData});
 
 ```dart
 FlutterACPCore.trackAction("action name",  data: {"key": "value"});
-``` --->
+``` -->
 
 <Variant platform="android" api="track-state" repeat="7"/>
 
@@ -1332,7 +1297,7 @@ MobileCore.trackState("homePage", additionalContextData);
   [AEPMobileCore trackState:@"state name" data:@{@"key":@"value"}];
 ```
 
-<!--- <Variant platform="react-native" api="track-state" repeat="6"/>
+<!-- <Variant platform="react-native" api="track-state" repeat="6"/>
 
 #### Javascript
 
@@ -1368,7 +1333,7 @@ Future<void> trackState (String state, {Map<String, String> contextData});
 
 ```dart
 FlutterACPCore.trackState("state name",  data: {"key1: "value"})
-``` --->
+``` -->
 
 <Variant platform="android" api="public-classes" repeat="13"/>
 

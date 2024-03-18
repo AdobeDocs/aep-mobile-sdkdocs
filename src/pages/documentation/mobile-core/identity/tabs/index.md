@@ -26,16 +26,20 @@ import AEPIdentity
 @import AEPIdentity;
 ```
 
-<!--- <Variant platform="react-native" task="add" repeat="2"/>
+<Variant platform="react-native" task="add" repeat="2"/>
+
 #### JavaScript
-```jsx
-import {ACPIdentity} from '@adobe/react-native-acpcore';
+
+```ts
+import {Identity} from '@adobe/react-native-aepcore';
 ```
-<Variant platform="flutter" task="add" repeat="2"/>
+
+<!-- <Variant platform="flutter" task="add" repeat="2"/>
+
 #### Dart
 ```dart
 import 'package:flutter_acpcore/flutter_acpidentity.dart';
-``` --->
+``` -->
 
 <Variant platform="android" task="register" repeat="3"/>
 
@@ -84,13 +88,13 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-<!--- <Variant platform="react-native" task="register" repeat="1"/>
+<Variant platform="react-native" task="register" repeat="1"/>
 
-When using React Native, registering Identity with Mobile Core should be done in native code, which is shown under the Android and iOS tabs.
+Please refer to the native code tabs to learn how to register the Identity extension.
 
-<Variant platform="flutter" task="register" repeat="1"/>
+<!--  <Variant platform="flutter" task="register" repeat="1"/>
 
-When using Flutter, registering Identity with Mobile Core should be done in native code, which is shown under the Android and iOS tabs. --->
+When using Flutter, registering Identity with Mobile Core should be done in native code, which is shown under the Android and iOS tabs. -->
 
 <Variant platform="android" task="implement" repeat="5"/>
 
@@ -193,23 +197,24 @@ Identity.getUrlVariables { urlVariables, error in
 }];
 ```
 
-<!--- <Variant platform="react-native" task="implement" repeat="5"/>
+<Variant platform="react-native" task="implement" repeat="5"/>
 
 #### JavaScript
 
 To append visitor information to the URL that is being used to open the web view, call [appendVisitorInfoForUrl](api-reference.md#appendtourl-appendvisitorinfoforurl):
 
 ```jsx
-ACPIdentity.appendVisitorInfoForURL("www.example.com").then(urlWithVistorData => console.log("Url with Visitor Data = " + urlWithVisitorData));
+Identity.appendVisitorInfoForURL("test.com").then(urlWithVisitorData => console.log("AdobeExperienceSDK: VisitorData = " + urlWithVisitorData));
+
 ```
 
-Alternately, starting with SDK version 1.0.5, you can call [getUrlVariables](api-reference.md#geturlvariables) and build your own URL:
+Alternately, you can call [getUrlVariables](api-reference.md#geturlvariables) and build your own URL:
 
-```jsx
-ACPIdentity.getUrlVariables().then(urlVariables => console.log("query params = " + urlVariables));
+```typescript
+Identity.getUrlVariables().then(urlVariables => console.log("AdobeExperienceSDK: UrlVariables = " + urlVariables));
 ```
 
-<Variant platform="flutter" task="implement" repeat="5"/>
+<!-- <Variant platform="flutter" task="implement" repeat="5"/>
 
 #### Dart
 
@@ -235,4 +240,4 @@ try {
 } on PlatformException {
   log("Failed to get url variables");
 }
-``` --->
+``` -->

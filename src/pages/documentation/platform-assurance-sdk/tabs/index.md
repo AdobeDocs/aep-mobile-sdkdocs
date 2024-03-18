@@ -45,9 +45,9 @@ import AEPAssurance
 @import AEPAssurance;
 ```
 
-<!--- <Variant platform="react-native" task="import-library" repeat="13"/>
+<Variant platform="react-native" task="import-library" repeat="13"/>
 
-1. Install the AEP Assurance package.
+1. Install the AEP Assurance package. Please note that the `@adobe/react-native-aepcore` package **also** needs to be installed as a codependency.
 
 ```bash
 npm install @adobe/react-native-aepassurance
@@ -83,7 +83,7 @@ import {AEPAssurance} from '@adobe/react-native-aepassurance';
 AEPAssurance.extensionVersion().then(version => console.log("AdobeExperienceSDK: AEPAssurance version: " + version));
 ```
 
-<Variant platform="flutter" task="import-library" repeat="7"/>
+<!-- <Variant platform="flutter" task="import-library" repeat="7"/>
 
 #### JavaScript
 
@@ -101,7 +101,7 @@ import 'package:flutter_assurance/flutter_assurance.dart';
 
 ```dart
 String version = await FlutterAEPAssurance.extensionVersion;
-``` --->
+``` -->
 
 <Variant platform="android" task="register-assurance" repeat="4"/>
 
@@ -182,17 +182,17 @@ To start using the extension library, you must first register the extension with
 }
 ```
 
-<!--- <Variant platform="react-native" task="register-assurance" repeat="2"/>
+<Variant platform="react-native" task="register-assurance" repeat="2"/>
 
 #### JavaScript
 
 When using React Native, register AEP Assurance with Mobile Core in native code as shown on the Android and iOS tabs.
 
-<Variant platform="flutter" task="register-assurance" repeat="2"/>
+<!-- <Variant platform="flutter" task="register-assurance" repeat="2"/>
 
 #### Dart
 
-When using Flutter, register AEP Assurance with Mobile Core in native code as shown on the Android and iOS tabs. --->
+When using Flutter, register AEP Assurance with Mobile Core in native code as shown on the Android and iOS tabs. -->
 
 
 <Variant platform="android" task="implement-assurance" repeat="1"/>

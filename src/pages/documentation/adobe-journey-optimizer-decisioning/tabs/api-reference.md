@@ -44,6 +44,20 @@ Optimize.clearCachedPropositions()
 [AEPMobileOptimize clearCachedPropositions];
 ```
 
+<Variant platform="react-native" api="clear-propositions" repeat="4"/>
+
+**Syntax**
+
+```typescript
+clearCachedPropositions()
+```
+
+**Example**
+
+```typescript
+Optimize.clearCachedPropositions();
+```
+
 <Variant platform="android" api="extension-version" repeat="5"/>
 
 #### Java
@@ -88,6 +102,20 @@ let extensionVersion = Optimize.extensionVersion
 
 ```objc
 NSString *extensionVersion = [AEPMobileOptimize extensionVersion];
+```
+
+<Variant platform="react-native" api="extension-version" repeat="4"/>
+
+**Syntax**
+
+```typescript
+extensionVersion(): Promise<string>
+```
+
+**Example**
+
+```typescript
+Optimize.extensionVersion().then(newVersion => console.log("AdobeExperienceSDK: Optimize version: " + newVersion);
 ```
 
 <Variant platform="android" api="get-propositions" repeat="6"/>
@@ -214,6 +242,30 @@ AEPDecisionScope* decisionScope2 = [[AEPDecisionScope alloc] initWithName: @"myS
 }];
 ```
 
+<Variant platform="react-native" api="get-propositions" repeat="4"/>
+
+**Syntax**
+
+```typescript
+getPropositions(decisionScopes: Array<DecisionScope>): Promise<Map<string, Proposition>>
+```
+
+**Example**
+
+```typescript
+const decisionScopeText = new DecisionScope("{DecisionScope name}");
+const decisionScopeImage = new DecisionScope("{DecisionScope name}");
+const decisionScopeHtml = new DecisionScope("{DecisionScope name{");
+const decisionScopeJson = new DecisionScope("{DecisionScope name}");
+const decisionScopes = [ decisionScopeText, decisionScopeImage, decisionScopeHtml, decisionScopeJson ];
+
+Optimize.getPropositions(decisionScopes).then(
+   (propositions: Map<string, typeof Proposition>) => {
+      //Your app logic using the propositions
+});
+```
+
+
 <Variant platform="android" api="on-propositions-update" repeat="6"/>
 
 #### Java
@@ -284,6 +336,24 @@ Optimize.onPropositionsUpdate { propositionsDict in
 }];
 ```
 
+<Variant platform="react-native" api="on-propositions-update" repeat="4"/>
+
+**Syntax**
+
+```typescript
+onPropositionUpdate(adobeCallback: AdobeCallback)
+```
+
+**Example**
+
+```typescript
+Optimize.onPropositionUpdate({
+  call(proposition: Map<String, typeof Proposition>) {
+    //App logic using the updated proposition
+  }
+});        
+```
+
 <Variant platform="android" api="register-extension" repeat="5"/>
 
 #### Java
@@ -299,6 +369,11 @@ public static void registerExtension()
 ```java
 Optimize.registerExtension();
 ```
+
+<Variant platform="react-native" api="register-extension" repeat="1"/>
+
+Please refer to the native code tabs to learn how to register the Optimize extension.
+
 
 <Variant platform="android" api="update-propositions" repeat="6"/>
 
@@ -393,6 +468,26 @@ AEPDecisionScope* decisionScope2 = [[AEPDecisionScope alloc] initWithName: @"myS
                               andData: @{@"dataKey": @"dataValue"}];
 ```
 
+<Variant platform="react-native" api="update-propositions" repeat="4"/>
+
+**Syntax**
+
+```typescript
+updatePropositions(decisionScopes: Array<DecisionScope>, xdm?: Map<string, any>, data?: Map<string, any>)
+```
+
+**Example**
+
+```typescript
+const decisionScopeText = new DecisionScope("{DecisionScope name}");
+const decisionScopeImage = new DecisionScope("{DecisionScope name}");
+const decisionScopeHtml = new DecisionScope("{DecisionScope name{");
+const decisionScopeJson = new DecisionScope("{DecisionScope name}");
+const decisionScopes = [ decisionScopeText, decisionScopeImage, decisionScopeHtml, decisionScopeJson ];
+
+Optimize.updatePropositions(decisionScopes, null, null);
+```
+
 <Variant platform="android" api="decisionscope" repeat="2"/>
 
 ##### Java
@@ -471,6 +566,37 @@ public class DecisionScope: NSObject, Codable {
     @objc
     public convenience init(activityId: String, placementId: String, itemCount: UInt = 1) {...}
 }
+```
+
+<Variant platform="react-native" api="decisionscope" repeat="1"/>
+
+```typescript
+/**
+* class represents a decision scope used to fetch personalized offers from the Experience Edge network.
+*/
+module.exports = class DecisionScope {
+    name: string;        
+
+    constructor(name?: string, activityId?: string, placementId?: string, itemCount?: number) {                
+        if(name && name.trim()) {
+            this.name = name;
+        } else {            
+            const decisionScopeObject = {};
+            decisionScopeObject['activityId'] = activityId;            
+            decisionScopeObject['placementId'] = placementId;    
+            decisionScopeObject['itemCount'] = itemCount;   
+            this.name = Buffer.from(JSON.stringify(decisionScopeObject)).toString("base64");            
+        }                
+    }
+
+    /**
+    * Gets the name of this scope
+    * @return {string} - The name of the scope
+    */
+    getName(): string {
+       return this.name; 
+    }
+};
 ```
 
 <Variant platform="android" api="proposition" repeat="2"/>
@@ -565,6 +691,37 @@ public extension Proposition {
     /// - Note: The returned XDM data does not contain an `eventType` for the Experience Event.
     /// - Returns A dictionary containing XDM data for the propositon reference.
     func generateReferenceXdm() -> [String: Any] {...}
+}
+```
+
+<Variant platform="react-native" api="proposition" repeat="1"/>
+
+```typescript
+module.exports = class Proposition {
+    id: string;
+    items: Array<Offer>;
+    scope: string;
+    scopeDetails: Map<string, any>;
+
+    constructor(eventData: PropositionEventData) {
+        this.id = eventData['id'];
+        this.scope = eventData['scope'];
+        this.scopeDetails = eventData['scopeDetails'];
+        if(eventData['items']) {
+            this.items = eventData['items'].map(offer => new Offer(offer));                
+        }                
+    }    
+        
+    /**
+    * Generates a map containing XDM formatted data for {Experience Event - Proposition Reference} field group from proposition arguement.
+    * The returned XDM data does not contain eventType for the Experience Event.     
+    * @return {Promise<Map<string, any>>} a promise that resolves to xdm data map
+    */
+    generateReferenceXdm(): Promise<Map<string, any>> {
+        const entries = Object.entries(this).filter(([key, value]) => typeof(value) !== "function");
+        const proposition = Object.fromEntries(entries);    
+        return Promise.resolve(RCTAEPOptimize.generateReferenceXdm(proposition));
+    };
 }
 ```
 
@@ -880,4 +1037,91 @@ public enum OfferType: Int, Codable {
     /// - Parameter format: Offer format string
     init(from format: String) {...}
 }
+```
+
+<Variant platform="react-native" api="offer" repeat="1"/>
+
+```typescript
+module.exports = class Offer {
+    id: string;
+    etag: string;
+    schema: string;
+    data: Record<string, any>;    
+    meta?: Record<string, any>;    
+
+    get content(): string {
+        return this.data["content"];
+    }
+
+    get format(): string {
+        return this.data["format"];
+    }
+
+    get language(): Array<string> {
+        return this.data["language"];
+    }
+
+    get characteristics(): Map<string, any> {
+        return this.data["characteristics"];
+    }    
+
+    constructor(eventData: OfferEventData) {
+        this.id = eventData['id'];
+        this.etag = eventData['etag'];
+        this.schema = eventData['schema'];        
+        this.data = eventData['data'];
+        this.meta = eventData['meta']
+    }
+
+    /**
+    * Dispatches an event for the Edge network extension to send an Experience Event to the Edge network with the display interaction data for the
+    * given Proposition offer.
+    * @param {Proposition} proposition - the proposition this Offer belongs to
+    */
+    displayed(proposition: Proposition): void {
+        const entries = Object.entries(proposition).filter(([key, value]) => typeof(value) !== "function");        
+        const cleanedProposition = Object.fromEntries(entries);        
+        RCTAEPOptimize.offerDisplayed(this.id, cleanedProposition);
+    };
+
+    /**
+    * Dispatches an event for the Edge network extension to send an Experience Event to the Edge network with the tap interaction data for the
+    * given Proposition offer.
+    * @param {Proposition} proposition - the proposition this Offer belongs to
+    */
+    tapped(proposition: Proposition): void {                
+        console.log("Offer is tapped");
+        const entries = Object.entries(proposition).filter(([key, value]) => typeof(value) !== "function");
+        const cleanedProposition = Object.fromEntries(entries);        
+        RCTAEPOptimize.offerTapped(this.id, cleanedProposition);
+    };
+
+    /**
+    * Generates a map containing XDM formatted data for {Experience Event - Proposition Interactions} field group from proposition arguement.
+    * The returned XDM data does contain the eventType for the Experience Event with value decisioning.propositionDisplay.    
+    * Note: The Edge sendEvent API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, and override
+    * dataset identifier.
+    * @param {Proposition} proposition - the proposition this Offer belongs to
+    * @return {Promise<Map<string, any>>} - a promise that resolves to xdm map
+    */
+    generateDisplayInteractionXdm(proposition: Proposition): Promise<Map<string, any>> {        
+        const entries = Object.entries(proposition).filter(([key, value]) => typeof(value) !== "function");
+        const cleanedProposition = Object.fromEntries(entries);
+        return Promise.resolve(RCTAEPOptimize.generateDisplayInteractionXdm(this.id, cleanedProposition));        
+    };   
+
+    /**
+    * Generates a map containing XDM formatted data for {Experience Event - Proposition Interactions} field group from this proposition arguement.    
+    * The returned XDM data contains the eventType for the Experience Event with value decisioning.propositionInteract.    
+    * Note: The Edge sendEvent API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, and override
+    * dataset identifier.    
+    * @param {Proposition} proposition - proposition this Offer belongs to
+    * @return {Promise<Map<string, any>>} a promise that resolves to xdm map
+    */
+    generateTapInteractionXdm(proposition: Proposition): Promise<Map<string, any>> {
+        const entries = Object.entries(proposition).filter(([key, value]) => typeof(value) !== "function");
+        const cleanedProposition = Object.fromEntries(entries);
+        return Promise.resolve(RCTAEPOptimize.generateTapInteractionXdm(this.id, cleanedProposition));
+    };   
+};
 ```

@@ -22,7 +22,7 @@ The SDK extension listens for events that contain GPS coordinates and geofence r
 
 ### Download and import the Places extension
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -32,9 +32,13 @@ iOS
 
 <Tabs query="platform=ios&task=download"/>
 
+React Native
+
+<Tabs query="platform=react-native&task=download"/>
+
 ### Register the Places extension with Mobile Core
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -43,6 +47,10 @@ Android
 iOS
 
 <Tabs query="platform=ios&task=register"/>
+
+React Native
+
+<Tabs query="platform=react-native&task=register"/>
 
 ## Additional Location Service resources
 

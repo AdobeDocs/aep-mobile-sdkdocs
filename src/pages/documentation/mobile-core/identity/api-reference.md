@@ -47,7 +47,7 @@ adobe_mc = TS=XXXXXX|MCMID=XXXXXX|MCAID=XXXXXX|MCORGID=XXXXXX@AdobeOrg
 
 If your application uses more complicated URLs, such as Angular URLs, you should use [getUrlVariables](#geturlvariables).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -57,13 +57,13 @@ iOS
 
 <Tabs query="platform=ios&api=append-to-url"/>
 
-<!--- React Native
+React Native
 
 <Tabs query="platform=react-native&api=append-to-url"/>
 
-Flutter
+<!--  Flutter
 
-<Tabs query="platform=flutter&api=append-to-url"/> --->
+<Tabs query="platform=flutter&api=append-to-url"/> -->
 
 ## extensionVersion
 
@@ -71,7 +71,7 @@ The `extensionVersion()` API returns the version of the Identity extension that 
 
 To get the version of the Identity extension, use the following code sample:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -81,13 +81,13 @@ iOS
 
 <Tabs query="platform=ios&api=extension-version"/>
 
-<!--- React Native
+React Native
 
 <Tabs query="platform=react-native&api=extension-version"/>
 
-Flutter
+<!-- Flutter
 
-<Tabs query="platform=flutter&api=extension-version"/> --->
+<Tabs query="platform=flutter&api=extension-version"/> -->
 
 ## getExperienceCloudId
 
@@ -95,7 +95,7 @@ This API retrieves the Adobe Experience Cloud ID (ECID) that was generated when 
 
 This ID is preserved between app upgrades, is saved and restored during the standard application backup process, and is removed at uninstall.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -105,19 +105,19 @@ iOS
 
 <Tabs query="platform=ios&api=get-experience-cloud-id"/>
 
-<!--- React Native
+React Native
 
 <Tabs query="platform=react-native&api=get-experience-cloud-id"/>
 
-Flutter
+<!--  Flutter
 
-<Tabs query="platform=flutter&api=get-experience-cloud-id"/> --->
+<Tabs query="platform=flutter&api=get-experience-cloud-id"/> -->
 
 ## getIdentifiers
 
 This API returns all customer identifiers that were previously synced with the Adobe Experience Cloud Identity Service.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -127,13 +127,13 @@ iOS
 
 <Tabs query="platform=ios&api=get-identifiers"/>
 
-<!--- React Native
+React Native
 
 <Tabs query="platform=react-native&api=get-identifiers"/>
 
-Flutter
+<!--  Flutter
 
-<Tabs query="platform=flutter&api=get-identifiers"/> --->
+<Tabs query="platform=flutter&api=get-identifiers"/> -->
 
 ## getUrlVariables
 
@@ -148,7 +148,7 @@ If an error occurs while retrieving the URL string, the callback handler will be
   - `TS` - A timestamp taken when this request was made
 - The optional `adobe_aa_vid` attribute is the URL-encoded Analytics Custom Visitor ID (VID), if previously set in the [Analytics extension](../../adobe-analytics/index.md).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -158,13 +158,13 @@ iOS
 
 <Tabs query="platform=ios&api=get-url-variables"/>
 
-<!--- React Native
+React Native
 
 <Tabs query="platform=react-native&api=get-url-variables"/>
 
-Flutter
+<!--  Flutter
 
-<Tabs query="platform=flutter&api=get-url-variables"/> --->
+<Tabs query="platform=flutter&api=get-url-variables"/> -->
 
 ## registerExtension
 
@@ -174,11 +174,19 @@ This API is only available in Android and is deprecated starting in version 2.0.
 
 The `registerExtension()` API registers the Identity extension with the Mobile Core extension. This API allows the extension to send and receive events to and from the Mobile SDK.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&api=register-extension"/>
+
+React Native
+
+<Tabs query="platform=react-native&api=register-extension"/>
+
+<!--  Flutter
+
+<Tabs query="platform=flutter&api=register-extension"/> -->
 
 ## setAdvertisingIdentifier
 
@@ -188,7 +196,7 @@ The advertising ID is preserved between app upgrades, is saved and restored duri
 
 If the current SDK privacy status is `optedout`, the advertising identifier is not set or stored.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -198,13 +206,13 @@ iOS
 
 <Tabs query="platform=ios&api=set-advertising-identifier"/>
 
-<!--- React Native
+React Native
 
 <Tabs query="platform=react-native&api=set-advertising-identifier"/>
 
-Flutter
+<!-- Flutter
 
-<Tabs query="platform=flutter&api=set-advertising-identifier"/> --->
+<Tabs query="platform=flutter&api=set-advertising-identifier"/> -->
 
 ## setPushIdentifier
 
@@ -214,7 +222,7 @@ This API sets the device token for push notifications in the SDK. If the current
 
 You should call `setPushIdentifier` on each application launch to ensure the most up-to-date device token is set to the SDK. If no device token is available, `null`/`nil` should be passed.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -224,9 +232,9 @@ iOS
 
 <Tabs query="platform=ios&api=set-push-identifier"/>
 
-<!--- React Native
+React Native
 
-<Tabs query="platform=react-native&api=set-push-identifier"/> --->
+<Tabs query="platform=react-native&api=set-push-identifier"/>
 
 ## syncIdentifier
 
@@ -242,7 +250,7 @@ If the current SDK privacy status is `MobilePrivacyStatus.OPT_OUT`, calling this
 
 This API updates or appends the provided customer identifier type key and value with the given authentication state to the Experience Cloud Identity Service. If the specified customer ID type exists in the service, the ID is updated with the new ID and authentication state. Otherwise a new customer ID is added.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -252,19 +260,19 @@ iOS
 
 <Tabs query="platform=ios&api=sync-identifier"/>
 
-<!--- React Native
+React Native
 
 <Tabs query="platform=react-native&api=sync-identifier"/>
 
-Flutter
+<!--  Flutter
 
-<Tabs query="platform=flutter&api=sync-identifier"/> --->
+<Tabs query="platform=flutter&api=sync-identifier"/> -->
 
 ## syncIdentifiers
 
 This API is an overloaded version, which does not include the parameter for the authentication state and it assumes a default value of `VisitorID.AuthenticationState.UNKNOWN`.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -274,13 +282,13 @@ iOS
 
 <Tabs query="platform=ios&api=sync-identifiers"/>
 
-<!--- React Native
+React Native
 
 <Tabs query="platform=react-native&api=sync-identifiers"/>
 
-Flutter
+<!--  Flutter
 
-<Tabs query="platform=flutter&api=sync-identifiers"/> --->
+<Tabs query="platform=flutter&api=sync-identifiers"/> -->
 
 ## syncIdentifiers (overloaded)
 
@@ -288,7 +296,7 @@ The function of this API is the same as the `syncIdentifier` API. This API passe
 
 Starting with _ACPIdentity v2.1.3 (iOS)_ and _Identity v1.1.2 (Android)_ if the new `identifier` value is null or empty, this ID type is removed from the local storage, Identity shared state and not synced with the Adobe Experience Cloud Identity Service.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -298,17 +306,17 @@ iOS
 
 <Tabs query="platform=ios&api=sync-identifiers-overloaded"/>
 
-<!--- React Native
+React Native
 
 <Tabs query="platform=react-native&api=sync-identifiers-overloaded"/>
 
-Flutter
+<!-- Flutter
 
-<Tabs query="platform=flutter&api=sync-identifiers-overloaded"/> --->
+<Tabs query="platform=flutter&api=sync-identifiers-overloaded"/> -->
 
 ## Public classes
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -318,10 +326,11 @@ iOS
 
 <Tabs query="platform=ios&api=public-classes"/>
 
-<!--- React Native
+React Native
 
 <Tabs query="platform=react-native&api=public-classes"/>
 
-Flutter
+<!-- Flutter
 
-<Tabs query="platform=flutter&api=public-classes"/> --->
+<Tabs query="platform=flutter&api=public-classes"/> -->
+

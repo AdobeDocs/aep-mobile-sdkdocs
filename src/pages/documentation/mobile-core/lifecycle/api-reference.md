@@ -8,7 +8,7 @@ The `extensionVersion()` API returns the version of the Lifecycle extension that
 
 To get the version of the Lifecycle extension, use the following code sample:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -18,13 +18,13 @@ iOS
 
 <Tabs query="platform=ios&api=extension-version"/>
 
-<!--- React Native
+React Native
 
 <Tabs query="platform=react-native&api=extension-version"/>
 
-Flutter
+<!--  Flutter
 
-<Tabs query="platform=flutter&api=extension-version"/> --->
+<Tabs query="platform=flutter&api=extension-version"/> -->
 
 ## lifecycleStart
 
@@ -44,9 +44,9 @@ iOS
 
 <Tabs query="platform=ios&api=lifecycle-start"/>
 
-<!--- React Native
+<!-- React Native
 
-<Tabs query="platform=react-native&api=lifecycle-start"/> --->
+<Tabs query="platform=react-native&api=lifecycle-start"/> -->
 
 ## lifecyclePause
 
@@ -66,7 +66,7 @@ iOS
 
 <Tabs query="platform=ios&api=lifecycle-pause"/>
 
-<!--- React Native
+<!-- React Native
 
 <Tabs query="platform=react-native&api=lifecycle-pause"/> --->
 

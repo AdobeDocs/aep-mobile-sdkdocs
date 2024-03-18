@@ -52,6 +52,20 @@ let extensionVersion = Consent.extensionVersion
 NSString *extensionVersion = [AEPMobileEdgeConsent extensionVersion];
 ```
 
+<Variant platform="react-native" api="extension-version" repeat="4"/>
+
+**Syntax**
+
+```typescript
+extensionVersion(): Promise<string>
+```
+
+**Example**
+
+```typescript
+Consent.extensionVersion().then(version => console.log("Consent.extensionVersion: " + version));
+```
+
 <Variant platform="android" api="get-consents" repeat="9"/>
 
 #### Java
@@ -121,6 +135,24 @@ Consent.getConsents { currentConsents, error in
 }];
 ```
 
+<Variant platform="react-native" api="get-consents" repeat="4"/>
+
+**Syntax**
+
+```typescript
+getConsents(): Promise<Record<string, any>>
+```
+
+**Example**
+
+```typescript
+Consent.getConsents().then(consents => {
+  console.log("AEPConsent.getConsents returned current consent preferences:  " + JSON.stringify(consents));
+}).catch((error) => {
+  console.warn("AEPConsent.getConsents returned error: ", error.message);
+});
+```
+
 <Variant platform="android" api="register-extension" repeat="5"/>
 
 #### Java
@@ -178,6 +210,10 @@ Use the AEPMobileCore API to register the Edge Consent extension.
 ...
 [AEPMobileCore registerExtensions:@[AEPMobileEdgeConsent.class] completion:nil];
 ```
+
+<Variant platform="react-native" api="register-extension" repeat="1"/>
+
+Please refer to the native code tabs to learn how to register the Consent extension.
 
 <Variant platform="android" api="update-consents" repeat="9"/>
 
@@ -289,4 +325,19 @@ NSDictionary *collectConsent = @{ @"collect": @{@"val": @"y"};
 // Example 2, updating users collect consent to 'no'
 NSDictionary *collectConsent = @{ @"collect": @{@"val": @"n"};
 [AEPMobileEdgeConsent updateWithConsents:@{@"consents": collectConsent}];
+```
+
+<Variant platform="react-native" api="update-consents" repeat="4"/>
+
+**Syntax**
+
+```typescript
+update(consents: Record<string, any>) 
+```
+
+**Example**
+
+```typescript
+var consents: {[keys: string]: any} = {"consents" : {"collect" : {"val": "y"}}};
+Consent.update(consents);
 ```

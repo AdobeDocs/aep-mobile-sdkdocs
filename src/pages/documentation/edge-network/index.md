@@ -47,7 +47,7 @@ If you have a first-party domain mapped to the Adobe-provisioned Edge Network do
 
 ### Download and import the Edge extension
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -57,9 +57,13 @@ iOS
 
 <Tabs query="platform=ios&task=add"/>
 
+React Native
+
+<Tabs query="platform=react-native&task=add"/>
+
 ### Register Edge with Mobile Core
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -68,6 +72,10 @@ Android
 iOS
 
 <Tabs query="platform=ios&task=register"/>
+
+React Native
+
+<Tabs query="platform=react-native&task=register"/>
 
 ## Next steps
 

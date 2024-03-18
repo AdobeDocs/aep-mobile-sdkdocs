@@ -6,7 +6,7 @@ Sessions contain information about the app's current lifecycle, such as the devi
 
 ## Add Lifecycle to your app
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -16,17 +16,17 @@ iOS
 
 <Tabs query="platform=ios&task=add"/>
 
-<!--- React Native
+React Native
 
 <Tabs query="platform=react-native&task=add"/>
 
-Flutter
+<!--  Flutter
 
-<Tabs query="platform=flutter&task=add"/> --->
+<Tabs query="platform=flutter&task=add"/> -->
 
 ## Register Lifecycle with Mobile Core and add appropriate Start/Pause calls
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -36,9 +36,9 @@ iOS
 
 <Tabs query="platform=ios&task=register"/>
 
-<!--- React Native
+React Native
 
-<Tabs query="platform=react-native&task=register"/> --->
+<Tabs query="platform=react-native&task=register"/>
 
 ## Lifecycle metrics
 

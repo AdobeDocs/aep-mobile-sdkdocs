@@ -52,6 +52,20 @@ let extensionVersion = UserProfile.extensionVersion
 NSString *extensionVersion = [AEPMobileUserProfile extensionVersion];
 ```
 
+<Variant platform="react-native" api="extension-version" repeat="4"/>
+
+**Syntax**
+
+```typescript
+extensionVersion(): Promise<string>
+```
+
+**Example**
+
+```typescript
+UserProfile.extensionVersion().then(version => console.log("AdobeExperienceSDK: UserProfile version: " + version));
+```
+
 <Variant platform="android" api="get-user-attributes" repeat="13"/>
 
 #### Java
@@ -146,6 +160,21 @@ NSArray *attributes = @[@"itemsAddedToCart"];
 }];
 ```
 
+<Variant platform="react-native" api="get-user-attributes" repeat="4"/>
+
+**Syntax**
+
+```typescript
+getUserAttributes(attributeNames: Array<string>): Promise<Record<string, any>>
+```
+
+**Example**
+
+```typescript
+UserProfile.getUserAttributes(["mapKey", "mapKey1"]).then(map => console.log("AdobeExperienceSDK: UserProfile getUserAttributes: " + map));
+```
+
+
 <Variant platform="android" api="register-extension" repeat="5"/>
 
 #### Java
@@ -214,6 +243,10 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
   return YES;
 }
 ```
+
+<Variant platform="react-native" api="register-extension" repeat="1"/>
+
+Please refer to the native code tabs to learn how to register the Profile extension.
 
 <Variant platform="android" api="remove-user-attribute" repeat="6"/>
 
@@ -292,6 +325,20 @@ UserProfile.removeUserAttributes(Arrays.asList("username", "usertype"));
 
 ```objectivec
 [AEPMobileUserProfile removeUserAttributesWithAttributeNames:@[@"username", @"usertype"]]
+```
+
+<Variant platform="react-native" api="remove-user-attributes" repeat="4"/>
+
+**Syntax**
+
+```typescript
+removeUserAttributes(attributeNames: Array<string>)
+```
+
+**Example**
+
+```typescript
+UserProfile.removeUserAttributes(["mapKey1"]);
 ```
 
 <Variant platform="android" api="update-user-attribute" repeat="6"/>
@@ -384,4 +431,19 @@ NSMutableDictionary *profileMap = [NSMutableDictionary dictionary];
 [profileMap setObject:@"username" forKey:@"will_smith"];
 [profileMap setObject:@"usertype" forKey:@"Actor"];
 [AEPMobileUserProfile updateUserAttributesWithAttributeDict:profileMap];
+```
+
+<Variant platform="react-native" api="update-user-attributes" repeat="4"/>
+
+**Syntax**
+
+```typescript
+updateUserAttributes(attributeMap: Record<string, any>)
+```
+
+**Example**
+
+```typescript
+let attrMap = {"mapKey": "mapValue", "mapKey1": "mapValue1"};
+UserProfile.updateUserAttributes(attrMap);
 ```

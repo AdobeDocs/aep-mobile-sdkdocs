@@ -6,7 +6,7 @@ import Tabs from './tabs/api-reference.md'
 
 The `extensionVersion()` API returns the version of the Profile extension.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -16,15 +16,15 @@ iOS
 
 <Tabs query="platform=ios&api=extension-version"/>
 
-<!--- React Native
+React Native
 
-<Tabs query="platform=react-native&api=extension-version"/> --->
+<Tabs query="platform=react-native&api=extension-version"/>
 
 ## getUserAttributes
 
 The `getUserAttributes()` API gets the user profile attributes with the given keys.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -34,6 +34,10 @@ iOS
 
 <Tabs query="platform=ios&api=get-user-attributes"/>
 
+React Native
+
+<Tabs query="platform=react-native&api=get-user-attributes"/>
+
 ## registerExtension
 
 <InlineAlert variant="warning" slots="text"/>
@@ -42,11 +46,15 @@ This API is only available in Android and is deprecated starting in version 2.0.
 
 Registers the Profile extension with the Mobile Core extension.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
 <Tabs query="platform=android&api=register-extension"/>
+
+React Native
+
+<Tabs query="platform=react-native&api=register-extension"/>
 
 ## removeUserAttribute
 
@@ -66,7 +74,7 @@ Android
 
 Removes the user profile attributes for the given keys.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -75,6 +83,10 @@ Android
 iOS
 
 <Tabs query="platform=ios&api=remove-user-attributes"/>
+
+React Native
+
+<Tabs query="platform=android&api=remove-user-attributes"/>
 
 ## updateUserAttribute
 
@@ -108,7 +120,7 @@ Allows you to create/update a batch of user profile attributes:
 - If the attribute already exists, the value is updated.
 - A null attribute value will remove the attribute.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
 Android
 
@@ -117,3 +129,7 @@ Android
 iOS
 
 <Tabs query="platform=ios&api=update-user-attributes"/>
+
+React Native
+
+<Tabs query="platform=react-native&api=update-user-attributes"/>
