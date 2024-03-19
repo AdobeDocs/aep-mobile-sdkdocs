@@ -18,7 +18,7 @@ keywords:
 
 ### iOS Campaign Classic 4.0.1
 
-- Added max versions to Platform dependencies in podspec
+* Added max versions to Platform dependencies in podspec
 
 ### Android Campaign Classic 2.1.4
 
