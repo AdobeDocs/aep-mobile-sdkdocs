@@ -60,12 +60,12 @@ Keywords:
 
 ### Roku SDK 1.1.0
 
-- Streaming Media for Edge Network
-    - Added new APIs and configuration for tracking media.
-    - Customizable ping interval.
-- Added support to create multiple instances of the SDK.
-- Support non-xdm data in `SendEvent` API
-- A comprehensive [migration guide](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/media-migration.md) to transition from [Adobe Media SDK](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/roku) to [Adobe Experience Platform Roku SDK](https://github.com/adobe/aepsdk-roku).
+* Streaming Media for Edge Network
+  * Added new APIs and configuration for tracking media.
+  * Customizable ping interval.
+* Added support to create multiple instances of the SDK.
+* Support non-xdm data in `SendEvent` API
+* A comprehensive [migration guide](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/media-migration.md) to transition from [Adobe Media SDK](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/roku) to [Adobe Experience Platform Roku SDK](https://github.com/adobe/aepsdk-roku).
 
 ### iOS Assurance 4.1.2
 
@@ -73,37 +73,37 @@ Keywords:
 
 ### iOS Analytics 4.0.1
 
-- Added max versions to Platform dependencies in podspec.
+* Added max versions to Platform dependencies in podspec.
 
 ### iOS EdgeConsent 4.0.1
 
-- Added max versions to Platform dependencies in podspec.
+* Added max versions to Platform dependencies in podspec.
 
 ## March 6, 2024
 
 ### iOS EdgeMedia 4.0.1
 
-- Added max versions to Platform dependencies in podspec.
+* Added max versions to Platform dependencies in podspec.
 
 ### iOS EdgeIdentity 4.0.1
 
-- Added max versions to Platform dependencies in podspec.
+* Added max versions to Platform dependencies in podspec.
 
 ### iOS Edge 4.3.1
 
-- Added max versions to Platform dependencies in podspec.
+* Added max versions to Platform dependencies in podspec.
 
 ### iOS EdgeBridge 4.1.1
 
-- Added max versions to Platform dependencies in podspec.
+* Added max versions to Platform dependencies in podspec.
 
 ### iOS Media 4.0.2
 
-- Added max versions to Platform dependencies in podspec.
+* Added max versions to Platform dependencies in podspec.
 
 ### iOS Audience 4.0.1
 
-- Added max versions to Platform dependencies in podspec.
+* Added max versions to Platform dependencies in podspec.
 
 ## March 5, 2024
 
@@ -115,23 +115,23 @@ Keywords:
 
 ### iOS Messaging 4.1.1
 
-- Added max versions to Platform dependencies in podspec
+* Added max versions to Platform dependencies in podspec
 
 ### iOS Campaign Standard 4.0.1
 
-- Added max versions to Platform dependencies in podspec
+* Added max versions to Platform dependencies in podspec
 
 ### iOS Optimize 4.0.3
 
-- Added max versions to Platform dependencies in podspec
+* Added max versions to Platform dependencies in podspec
 
 ### iOS Campaign Classic 4.0.1
 
-- Added max versions to Platform dependencies in podspec
+* Added max versions to Platform dependencies in podspec
 
 ### iOS Target 4.0.4
 
-- Added max versions to Platform dependencies in podspec
+* Added max versions to Platform dependencies in podspec
 
 ### Android Campaign Classic 2.1.4
 
@@ -684,7 +684,7 @@ Please do not use this release for tvOS. Use the 4.2.1 release instead.
 * Added new notification tracking API `handleNotificationResponse` with parameters `UNNotificationResponse` and an optional callback the returns `PushTrackingStatus` enum.
   * This API will automatically handle the click behaviour (OPENAPP, WEBURL, DEEPLINK) defined for the notification.
 * Deprecated the notification tracking API `handleNotificationResponse` with parameters `UNNotificationResponse`, `applicationOpened`, and `customActionId`.
-*  Fixed a bug on notification tracking API `handleNotificationResponse` to stop sending tracking hits to edge servers when the notification does not contain tracking information.
+* Fixed a bug on notification tracking API `handleNotificationResponse` to stop sending tracking hits to edge servers when the notification does not contain tracking information.
 
 ### Android Messaging 2.2.0
 
