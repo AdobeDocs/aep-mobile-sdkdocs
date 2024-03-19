@@ -27,7 +27,7 @@ process.env.TZ = "America/Los_Angeles"
 const offset = new Date().getTimezoneOffset()
 
 if (offset != 420) {
-    throw new Error("The default time zone is not set to the Central Time")
+    throw new Error("The default time zone is not set to PST")
 }
 
 run()
