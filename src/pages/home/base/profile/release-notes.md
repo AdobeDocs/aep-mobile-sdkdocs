@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## March 8, 2024
+
+### iOS UserProfile 4.0.1
+
+* Fix an issue where dependency versions did not have an upper bound restriction.
+
 ## July 26, 2023
 
 ### Android UserProfile 2.0.1
