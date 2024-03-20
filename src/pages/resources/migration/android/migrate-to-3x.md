@@ -53,6 +53,8 @@ If you have implemented Adobe Experience Platform 2.x SDKs for Android, then thi
 
 ### Update dependencies
 
+When updating to the Experience Platform 3.x SDKs, be sure to review the following updates regarding dependencies.
+
 #### Gradle
 
 The Adobe SDK BOM artifact enables managing all compatible versions of Adobe Experience Platform Android extensions by specifying a single BOM version. This is now the recommended way to manage Android SDKs. If you are using Gradle to manage your app dependencies, the following example shows how to start using BOM in the `build.gradle` file.
@@ -90,7 +92,7 @@ If you are importing SDK libraries manually, make sure to update your libraries 
 
 The `MobileCore.start()` API and the `registerExtension` API for each extension, which were deprecated in the 2.x version of the mobile SDK, have been removed in the 3.x version. If you're still using these APIs, refer [here](./migrate-to-2x.md#update-sdk-initialization) to initialize the SDK and register the extensions using the `MobileCore.registerExtensions()` API.
 
-## Update outdated API references
+### Update outdated API references
 
 Some of the APIs available in previous major versions of the Mobile SDK for Android are now deprecated or removed. You can choose to replace the obsolete APIs in your code with the alternative APIs in the 3.x version, as described below.
 
