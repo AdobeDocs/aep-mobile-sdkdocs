@@ -65,8 +65,8 @@ function capitalizeFirstLetter(string) {
 }
 
 // TODO: consider using dayjs to handle date format
-function convertIOSDateToRleaseDateFormat(ios1086DateStr) {
-    const date = new Date(ios1086DateStr)
+function convertISODateToRleaseDateFormat(iso8601DateStr) {
+    const date = new Date(iso8601DateStr)
     const month = date.getMonth()
     const day = date.getDate()
     const year = date.getFullYear()
@@ -80,6 +80,6 @@ module.exports = {
     releaseFileContainsLineStartWith,
     saveJsonObjToFile,
     extractReleaseNotes,
-    convertIOSDateToRleaseDateFormat,
+    convertISODateToRleaseDateFormat,
     capitalizeFirstLetter
 }

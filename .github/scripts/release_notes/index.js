@@ -21,6 +21,15 @@ if (token == undefined) {
     throw new Error("token is undefined")
 }
 
+//before running the script, make sure the default time zone is set to PST in the GitHub action
+process.env.TZ = "America/Los_Angeles"
+
+const offset = new Date().getTimezoneOffset()
+
+if (offset != 420) {
+    throw new Error("The default time zone is not set to PST")
+}
+
 run()
 
 async function run() {

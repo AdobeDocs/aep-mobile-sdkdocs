@@ -9,6 +9,12 @@ keywords:
 
 # Release notes
 
+## March 6, 2024
+
+### iOS Media 4.0.2
+
+- Added max versions to Platform dependencies in podspec.
+
 ## January 8, 2024
 
 ### iOS Media 4.0.1

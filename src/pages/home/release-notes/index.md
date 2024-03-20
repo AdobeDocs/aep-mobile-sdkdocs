@@ -7,27 +7,203 @@ Keywords:
 
 # Release notes
 
+## March 12, 2024
+
+### Android BOM 2.9.6
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.9.5) | BOM (2.9.6) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:campaignclassic** | **2.1.4** | **2.1.5**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:assurance | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.6 | 2.0.6 |
+| com.adobe.marketing.mobile:core | 2.6.2 | 2.6.2 |
+| com.adobe.marketing.mobile:edge | 2.4.0 | 2.4.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:optimize | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+## March 11, 2024
+
+### Android Campaign Classic 2.1.5
+
+* Re-add parsing of the `adb_icon` key value pair from the push template payload. The value will be used to locate and then set a notification small icon from the app's bundle if the `adb_small_icon` key value pair is not present in the push payload.
+
+## March 8, 2024
+
+### iOS UserProfile 4.0.1
+
+* Fix an issue where dependency versions did not have an upper bound restriction.
+
+## March 7, 2024
+
+### Roku SDK 1.1.0
+
+* Streaming Media for Edge Network
+  * Added new APIs and configuration for tracking media.
+  * Customizable ping interval.
+* Added support to create multiple instances of the SDK.
+* Support non-xdm data in `SendEvent` API
+* A comprehensive [migration guide](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/media-migration.md) to transition from [Adobe Media SDK](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/roku) to [Adobe Experience Platform Roku SDK](https://github.com/adobe/aepsdk-roku).
+
+### iOS Assurance 4.1.2
+
+* Fix an issue where dependency versions did not have an upper bound restriction.
+
+### iOS Analytics 4.0.1
+
+* Added max versions to Platform dependencies in podspec.
+
+### iOS EdgeConsent 4.0.1
+
+* Added max versions to Platform dependencies in podspec.
+
+## March 6, 2024
+
+### iOS EdgeMedia 4.0.1
+
+* Added max versions to Platform dependencies in podspec.
+
+### iOS EdgeIdentity 4.0.1
+
+* Added max versions to Platform dependencies in podspec.
+
+### iOS Edge 4.3.1
+
+* Added max versions to Platform dependencies in podspec.
+
+### iOS EdgeBridge 4.1.1
+
+* Added max versions to Platform dependencies in podspec.
+
+### iOS Media 4.0.2
+
+* Added max versions to Platform dependencies in podspec.
+
+### iOS Audience 4.0.1
+
+* Added max versions to Platform dependencies in podspec.
+
+### Android BOM 2.9.5
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.9.4) | BOM (2.9.5) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:messaging** | **2.2.0** | **2.2.1**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:assurance | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.6 | 2.0.6 |
+| com.adobe.marketing.mobile:campaignclassic | 2.1.4 | 2.1.4 |
+| com.adobe.marketing.mobile:core | 2.6.2 | 2.6.2 |
+| com.adobe.marketing.mobile:edge | 2.4.0 | 2.4.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:optimize | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+## March 5, 2024
+
+### Android Messaging 2.2.1
+
+* Handle a null network connection exception which was causing the Messaging extension to fail to be registered.
+
+## February 29, 2024
+
+### Android BOM 2.9.4
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.9.3) | BOM (2.9.4) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:campaignclassic** | **2.1.3** | **2.1.4**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:assurance | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.6 | 2.0.6 |
+| com.adobe.marketing.mobile:core | 2.6.2 | 2.6.2 |
+| com.adobe.marketing.mobile:edge | 2.4.0 | 2.4.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.2.0 | 2.2.0 |
+| com.adobe.marketing.mobile:optimize | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
 ## February 28, 2024
 
 ### iOS Messaging 4.1.1
 
-- Added max versions to Platform dependencies in podspec
+* Added max versions to Platform dependencies in podspec
 
 ### iOS Campaign Standard 4.0.1
 
-- Added max versions to Platform dependencies in podspec
+* Added max versions to Platform dependencies in podspec
 
 ### iOS Optimize 4.0.3
 
-- Added max versions to Platform dependencies in podspec
+* Added max versions to Platform dependencies in podspec
 
 ### iOS Campaign Classic 4.0.1
 
-- Added max versions to Platform dependencies in podspec
+* Added max versions to Platform dependencies in podspec
 
 ### iOS Target 4.0.4
 
-- Added max versions to Platform dependencies in podspec
+* Added max versions to Platform dependencies in podspec
 
 ### Android Campaign Classic 2.1.4
 
@@ -580,7 +756,7 @@ Please do not use this release for tvOS. Use the 4.2.1 release instead.
 * Added new notification tracking API `handleNotificationResponse` with parameters `UNNotificationResponse` and an optional callback the returns `PushTrackingStatus` enum.
   * This API will automatically handle the click behaviour (OPENAPP, WEBURL, DEEPLINK) defined for the notification.
 * Deprecated the notification tracking API `handleNotificationResponse` with parameters `UNNotificationResponse`, `applicationOpened`, and `customActionId`.
-*  Fixed a bug on notification tracking API `handleNotificationResponse` to stop sending tracking hits to edge servers when the notification does not contain tracking information.
+* Fixed a bug on notification tracking API `handleNotificationResponse` to stop sending tracking hits to edge servers when the notification does not contain tracking information.
 
 ### Android Messaging 2.2.0
 

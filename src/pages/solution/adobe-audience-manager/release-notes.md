@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## March 6, 2024
+
+### iOS Audience 4.0.1
+
+- Added max versions to Platform dependencies in podspec.
+
 ## June 7, 2023
 
 ### iOS Audience 4.0.0

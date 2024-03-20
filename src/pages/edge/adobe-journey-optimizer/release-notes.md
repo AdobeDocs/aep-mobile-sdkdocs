@@ -9,6 +9,12 @@ keywords:
 
 # Release notes
 
+## March 5, 2024
+
+### Android Messaging 2.2.1
+
+* Handle a null network connection exception which was causing the Messaging extension to fail to be registered.
+
 ## February 28, 2024
 
 ### iOS Messaging 4.1.1
