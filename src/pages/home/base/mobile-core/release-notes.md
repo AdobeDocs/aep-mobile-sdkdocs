@@ -8,6 +8,13 @@ keywords:
 
 # Release notes
 
+## March 19, 2024
+
+### iOS Core 5.0.0
+
+* Include a privacy manifest for AEPCore and AEPServices
+* Bump min deployment version to iOS 12 and tvOS 12
+
 ## February 15, 2024
 
 ### iOS Core 4.2.3

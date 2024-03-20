@@ -7,6 +7,13 @@ Keywords:
 
 # Release notes
 
+## March 19, 2024
+
+### iOS Core 5.0.0
+
+* Include a privacy manifest for AEPCore and AEPServices
+* Bump min deployment version to iOS 12 and tvOS 12
+
 ## March 12, 2024
 
 ### Android BOM 2.9.6
