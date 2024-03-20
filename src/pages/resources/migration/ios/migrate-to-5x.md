@@ -83,7 +83,7 @@ As of version 5.0.0 of AEP Edge Bridge for iOS, the following table lists the ma
 | action | `data.action` | `data.__adobe.analytics.linkName` | As of v5, the field `data.__adobe.analytics.linkType` with value `lnk_o` is automatically included as well. |
 | state | `data.state` | `data.__adobe.analytics.pageName` | |
 | context data | `data.contextdata` | `data.__adobe.analytics.contextData` | Context data is a map which includes the custom keys and values specified in the `trackAction` and `trackState` API calls. |
-| && prefixed context data | `data.contextdata`| `data.__adobe.analytics` | Before v5 there was no special handling of context data prefixed with "&&".  <br> <br>As of v5, context data keys prefixed with `&&` must be known to Analytics and are case sensitive. When mapped to the event, the key's name does not include the "&&" prefix. For example, "&&products" is sent as `data.__adobe.analytics.products`.|
+| && prefixed context data | `data.contextdata`| `data.__adobe.analytics` | Before v5 there was no special handling of context data prefixed with "&&".  <br/> <br/> As of v5, context data keys prefixed with `&&` must be known to Analytics and are case sensitive. When mapped to the event, the key's name does not include the "&&" prefix. For example, "&&products" is sent as `data.__adobe.analytics.products`.|
 | app identifier | not included | `data.__adobe.analytics.contextData.a.AppID` | As of v5, the application identifier is automatically added to every tracking event. Note the key name is "a.AppID".|
 | customer perspective | not included|  `data.__adobe.analytics.cp` | As of v5, the customer perspective is automatically added to every tracking event. The values are either "foreground" or "background". |
 
