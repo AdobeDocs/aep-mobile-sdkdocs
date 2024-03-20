@@ -8,6 +8,18 @@ keywords:
 
 # Release notes
 
+## March 20, 2024
+
+### iOS Assurance 5.0.0
+
+## What’s Changed
+* Staging to main for 5.0.0 release (#143) @cdhoffmann
+* fix staging issues (#144) @cdhoffmann
+* update archive for CI and dependencies (#142) @cdhoffmann
+* add vision case (#140) @cdhoffmann
+* Dev v5.0.0 to Staging (#139) @cdhoffmann
+* Point to staging for 5.x (#138) @cdhoffmann
+
 ## March 7, 2024
 
 ### iOS Assurance 4.1.2

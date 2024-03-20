@@ -7,6 +7,101 @@ Keywords:
 
 # Release notes
 
+## March 20, 2024
+
+### iOS Assurance 5.0.0
+
+## What’s Changed
+* Staging to main for 5.0.0 release (#143) @cdhoffmann
+* fix staging issues (#144) @cdhoffmann
+* update archive for CI and dependencies (#142) @cdhoffmann
+* add vision case (#140) @cdhoffmann
+* Dev v5.0.0 to Staging (#139) @cdhoffmann
+* Point to staging for 5.x (#138) @cdhoffmann
+
+### iOS Target 5.0.0
+
+## What’s Changed
+* Staging to main for 5.0.0 release (#168) @sbenedicadb
+* -fix circle config (#167) @sbenedicadb
+* Dev v5.0.0 to staging (#166) @sbenedicadb
+* Dev v5.0.0 to staging (#165) @sbenedicadb
+* point to staging branches and merge main in (#164) @sbenedicadb
+* -remove codecov from dev-v5.0.0 circle script (#163) @sbenedicadb
+* Fix for MOB-20343 (#159) @spoorthipujariadobe
+
+### iOS Places 5.0.0
+
+## What’s Changed
+* Staging to main for 5.0.0 release (#60) @sbenedicadb
+* final script updates for release (#59) @sbenedicadb
+* dev to staging for v5.0.0 (#58) @sbenedicadb
+* 🐛 fix for get nearby pois api, testing against core 5.x staging (#57) @sbenedicadb
+* -update xcode version and disable codecov for circle (#56) @sbenedicadb
+
+### iOS EdgeMedia 5.0.0
+
+Major version update for [Adobe Streaming Media for Edge Network](https://developer.adobe.com/client-sdks/edge/media-for-edge-network/) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+- Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+- Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS EdgeBridge 5.0.0
+
+Major version update for Edge Bridge for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+- Updated the minimum supported version to iOS 12.0.
+- Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+- Updated data format for enhanced support for the migration flow to Adobe Analytics service via Edge Network and reduce the steps required for data mapping to XDM. 
+
+### iOS Media 5.0.0
+
+Major version update for [Adobe Analytics - Media Analytics workflows](https://developer.adobe.com/client-sdks/solution/adobe-media-analytics/) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+- Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+- Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS EdgeConsent 5.0.0
+
+Major version update for [Consent for Edge Network](https://developer.adobe.com/client-sdks/edge/consent-for-edge-network/) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+- Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+- Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS Analytics 5.0.0
+
+Major version update for [Adobe Analytics](https://developer.adobe.com/client-sdks/solution/adobe-analytics/) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+- Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+- Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS Audience 5.0.0
+
+Major version update for [Adobe Audience Manager](https://developer.adobe.com/client-sdks/solution/adobe-audience-manager/) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+- Updated the minimum supported version to iOS 12.0.
+- Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+## March 19, 2024
+
+### iOS Edge 5.0.0
+
+Major version update for [Edge Network](https://developer.adobe.com/client-sdks/edge/edge-network/) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+- Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+- Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS EdgeIdentity 5.0.0
+
+Major version update for [Identity for Edge Network](https://developer.adobe.com/client-sdks/edge/identity-for-edge-network/) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+- Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+- Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS Core 5.0.0
+
+Major version update of Adobe Experience Platform Core iOS SDKs are live! It contains the following extensions:	
+* Core 5.0.0
+* Identity 5.0.0
+* Signal 5.0.0
+* Lifecycle 5.0.0
+Please note that the current release includes the following changes:
+* Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+* Include a privacy manifest for AEPCore and AEPServices
+
 ## March 12, 2024
 
 ### Android BOM 2.9.6

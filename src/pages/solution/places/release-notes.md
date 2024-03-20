@@ -8,6 +8,17 @@ keywords:
 
 # Release notes
 
+## March 20, 2024
+
+### iOS Places 5.0.0
+
+## What’s Changed
+* Staging to main for 5.0.0 release (#60) @sbenedicadb
+* final script updates for release (#59) @sbenedicadb
+* dev to staging for v5.0.0 (#58) @sbenedicadb
+* 🐛 fix for get nearby pois api, testing against core 5.x staging (#57) @sbenedicadb
+* -update xcode version and disable codecov for circle (#56) @sbenedicadb
+
 ## February 27, 2024
 
 ### iOS Places 4.1.1

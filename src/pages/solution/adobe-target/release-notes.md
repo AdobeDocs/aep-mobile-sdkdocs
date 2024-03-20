@@ -8,6 +8,19 @@ keywords:
 
 # Release notes
 
+## March 20, 2024
+
+### iOS Target 5.0.0
+
+## What’s Changed
+* Staging to main for 5.0.0 release (#168) @sbenedicadb
+* -fix circle config (#167) @sbenedicadb
+* Dev v5.0.0 to staging (#166) @sbenedicadb
+* Dev v5.0.0 to staging (#165) @sbenedicadb
+* point to staging branches and merge main in (#164) @sbenedicadb
+* -remove codecov from dev-v5.0.0 circle script (#163) @sbenedicadb
+* Fix for MOB-20343 (#159) @spoorthipujariadobe
+
 ## February 28, 2024
 
 ### iOS Target 4.0.4
