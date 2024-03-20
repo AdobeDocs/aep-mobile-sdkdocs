@@ -803,6 +803,9 @@ module.exports = {
                         title: "Android",
                         path: "/resources/migration/android",
                         pages: [{
+                                title: "Migrate to 3.x SDKs",
+                                path: "/resources/migration/android/migrate-to-3x"
+                            },{
                                 title: "Migrate to 2.x SDKs",
                                 path: "/resources/migration/android/migrate-to-2x"
                             }
