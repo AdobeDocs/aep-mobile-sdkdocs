@@ -89,11 +89,12 @@ As of version 5.0.0 of AEP Edge Bridge for iOS, the following table lists the ma
 
 **Track Action Example**
 
-Given the track action call: 
+Given the track action call:
 
 ```swift
 MobileCore.track(action: "action name", data: ["key": "value", "&&products": ";Running Shoes;1;69.95;event1|event2=55.99;eVar1=12345"])
 ```
+
 The resulting Experience Event has the following payload:
 
 ```json
@@ -121,7 +122,7 @@ Given the track state call:
 ```swift
 MobileCore.track(state: "view name", data: ["&&events": "event5,event2=2"])
 ```
- 
+
  The resulting Experience Event has the following payload:
 
 ```json
