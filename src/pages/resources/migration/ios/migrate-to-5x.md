@@ -76,15 +76,15 @@ When updating to the Experience Platform 5.x SDKs, please take note of the follo
 
 #### Edge Bridge
 
-As of version 5.0.0 of AEP Edge Bridge for iOS, the following table lists the mapping of the `trackAction` and `trackState` parameters to the "data" node of the Experience Event sent to the Edge Network. Adobe Experience Platform Edge Network automatically maps these data variables into Adobe Analytics without additional server-side configuration. If you are currently using Edge Bridge version 4.x and you are mapping data to XDM in your datastream, adjustments will be necessary when adopting version 5.0.0.
+As of version 5.0.0 of the Adobe Experience Platform Edge Bridge for iOS, the table below shows how the `trackAction` and `trackState` parameters map to the `data` node of the Experience Event sent to the Experience Platform Edge Network. Edge Network automatically maps these data variables to Adobe Analytics without additional server-side configuration. If you are using Edge Bridge version 4.x and mapping data to XDM in your datastream, adjustments are required for version 5.0.0.
 
 | Data | Key path in the network request (v4.x) | Key path in the network request (v5+) | Description |
 | --- | --- | --- | --- |
-| Action | `data.action` | `data.__adobe.analytics.linkName` | As of v5, the field `data.__adobe.analytics.linkType` with value `lnk_o` is also automatically included. |
-| State | `data.state` | `data.__adobe.analytics.pageName` | |
+| Action | `data.action` | `data.__adobe.analytics.linkName` | As of v5, set as the custom link name in the Analytics hit. The field `data.__adobe.analytics.linkType` with value `lnk_o` is also automatically included. |
+| State | `data.state` | `data.__adobe.analytics.pageName` | As of v5, set as the page name in the Analytics hit. |
 | Context data | `data.contextdata` | `data.__adobe.analytics.contextData` | Context data is a map which includes the custom keys and values specified in the `trackAction` and `trackState` API calls. |
-| Context data prefixed with "&&" | `data.contextdata`| `data.__adobe.analytics` | Before v5, there was no special handling of context data prefixed with "&&".  <br/> <br/> As of v5, context data keys prefixed with `&&` **must** be known to Analytics and are case sensitive. When mapped to the event, the key's name does **not** include the "&&" prefix. For example, "&&products" is sent as `data.__adobe.analytics.products`.|
-| App identifier | Not included | `data.__adobe.analytics.contextData.a.AppID` | As of v5, the application identifier is automatically added to every tracking event. **Note:** the key name is "a.AppID".|
+| Context data prefixed with "&&" | `data.contextdata`| `data.__adobe.analytics` | Before v5, there was no special handling of context data prefixed with "&&".  <br/> <br/>  As of v5, context data keys prefixed with "&&" are automatically mapped to Analytics variables and no longer include the "&&" prefix. For example, the key `&&products` is sent as `data.__adobe.analytics.products`. Please note that these keys must be known to Analytics and are case sensitive. Find the full list of supported Analytics variables [here](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping). |
+| App identifier | Not included | `data.__adobe.analytics.contextData.a.AppID` | As of v5, the application identifier is automatically added to every tracking event. **Note:** the key name is `a.AppID`.|
 | Customer perspective | Not included|  `data.__adobe.analytics.cp` | As of v5, the customer perspective is automatically added to every tracking event. The values are either `foreground` or `background`. |
 
 **Track Action Example**
