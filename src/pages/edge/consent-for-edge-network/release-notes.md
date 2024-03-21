@@ -13,15 +13,16 @@ keywords:
 
 ### iOS EdgeConsent 5.0.0
 
-Major version update for [Consent for Edge Network](https://developer.adobe.com/client-sdks/edge/consent-for-edge-network/) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
-- Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
-- Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+Major version update for [Consent for Edge Network](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
 
 ## March 7, 2024
 
 ### iOS EdgeConsent 4.0.1
 
-- Added max versions to Platform dependencies in podspec.
+* Added max versions to Platform dependencies in podspec.
 
 ## June 1, 2023
 

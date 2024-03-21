@@ -21,7 +21,7 @@ Major version update for [Adobe Analytics](./index.md) for Adobe Experience Plat
 
 ### iOS Analytics 4.0.1
 
-- Added max versions to Platform dependencies in podspec.
+* Added max versions to Platform dependencies in podspec.
 
 ## July 26, 2023
 

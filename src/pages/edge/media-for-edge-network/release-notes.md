@@ -22,7 +22,7 @@ Major version update for [Adobe Streaming Media for Edge Network](./index.md) fo
 
 ### iOS EdgeMedia 4.0.1
 
-- Added max versions to Platform dependencies in podspec.
+* Added max versions to Platform dependencies in podspec.
 
 ## June 6, 2023
 

@@ -21,7 +21,7 @@ Major version update for [Adobe Audience Manager](./index.md) for Adobe Experien
 
 ### iOS Audience 4.0.1
 
-- Added max versions to Platform dependencies in podspec.
+* Added max versions to Platform dependencies in podspec.
 
 ## June 7, 2023
 

@@ -22,7 +22,7 @@ Major version update for [Target](./index.md) for Adobe Experience Platform Mobi
 
 ### iOS Target 4.0.4
 
-- Added max versions to Platform dependencies in podspec
+* Added max versions to Platform dependencies in podspec
 
 ## January 26, 2024
 

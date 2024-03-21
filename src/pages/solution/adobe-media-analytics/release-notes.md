@@ -22,7 +22,7 @@ Major version update for [Adobe Analytics - Media Analytics workflows](./index.m
 
 ### iOS Media 4.0.2
 
-- Added max versions to Platform dependencies in podspec.
+* Added max versions to Platform dependencies in podspec.
 
 ## January 8, 2024
 

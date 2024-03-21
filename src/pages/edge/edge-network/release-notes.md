@@ -21,7 +21,7 @@ Major version update for [Edge Network](./index.md) for Adobe Experience Platfor
 
 ### iOS Edge 4.3.1
 
-- Added max versions to Platform dependencies in podspec.
+* Added max versions to Platform dependencies in podspec.
 
 ## October 27, 2023
 

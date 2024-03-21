@@ -22,7 +22,7 @@ Major version update for [Identity for Edge Network](./index.md) for Adobe Exper
 
 ### iOS EdgeIdentity 4.0.1
 
-- Added max versions to Platform dependencies in podspec.
+* Added max versions to Platform dependencies in podspec.
 
 ## July 25, 2023
 
