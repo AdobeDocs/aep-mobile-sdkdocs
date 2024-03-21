@@ -9,6 +9,14 @@ keywords:
 
 # Release notes
 
+## March 19, 2024
+
+### iOS EdgeIdentity 5.0.0
+
+Major version update for [Identity for Edge Network](https://developer.adobe.com/client-sdks/edge/identity-for-edge-network/) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+- Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+- Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
 ## March 6, 2024
 
 ### iOS EdgeIdentity 4.0.1
