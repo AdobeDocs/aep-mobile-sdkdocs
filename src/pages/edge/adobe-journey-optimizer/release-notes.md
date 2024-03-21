@@ -9,6 +9,20 @@ keywords:
 
 # Release notes
 
+## March 20, 2024
+
+### iOS Messaging 5.0.0
+
+Major version update for [Adobe Journey Optimizer](https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer/) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+- Updated the minimum supported version to iOS 12.0.
+- Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+- Added `handleNotificationResponse(_:urlHandler:closure:)` API to provide more control over URL handling from `UNNotificationResponse` objects. 
+  - Removed deprecated public API `Messaging.handleNotificationResponse(_:applicationOpened:withCustomActionId:)`.
+  - Removed public API `Messaging.handleNotificationResponse(_:closure:)` API.
+- Added support for [Code Based Experiences](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based).
+  - Added public API `Messaging.updatePropositionsForSurfaces(_)`.
+  - Added public API `Messaging.getPropositionsForSurfaces(_:completion:)`.
+
 ## March 5, 2024
 
 ### Android Messaging 2.2.1
