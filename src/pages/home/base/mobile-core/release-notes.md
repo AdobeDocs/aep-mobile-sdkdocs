@@ -12,21 +12,24 @@ keywords:
 
 ### iOS Core 5.0.0
 
-Major version update of Adobe Experience Platform Core iOS SDKs are live! It contains the following extensions:	
+Major version update of Adobe Experience Platform Core iOS SDKs are live! It contains the following extensions:
+
 * Core 5.0.0
 * Identity 5.0.0
 * Signal 5.0.0
 * Lifecycle 5.0.0
+
 Please note that the current release includes the following changes:
+
 * Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
 * Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
-* Include a privacy manifest for AEPCore and AEPServices
+* Include a privacy manifest for AEPCore and AEPServices.
 
 ## February 15, 2024
 
 ### iOS Core 4.2.3
 
-* Fix podspec dependencies not being restricted to current major version
+* Fix podspec dependencies not being restricted to current major version.
 * Fixed an issue that was allowing in-app messages without content to be displayed.
 
 ## January 26, 2024
