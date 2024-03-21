@@ -72,7 +72,7 @@ If you are using Swift Package Manger (SPM) for managing your app dependencies, 
 
 ## Update outdated API references
 
-When updating to the Experience Platform 5.x SDKs, please take note of the following aspects:
+When updating to the Experience Platform 5.x SDKs, please take note of the following updates for API references.
 
 #### Edge Bridge
 
@@ -80,12 +80,12 @@ As of version 5.0.0 of AEP Edge Bridge for iOS, the following table lists the ma
 
 | Data | Key path in the network request (v4.x) | Key path in the network request (v5+) | Description |
 | --- | --- | --- | --- |
-| action | `data.action` | `data.__adobe.analytics.linkName` | As of v5, the field `data.__adobe.analytics.linkType` with value `lnk_o` is automatically included as well. |
-| state | `data.state` | `data.__adobe.analytics.pageName` | |
-| context data | `data.contextdata` | `data.__adobe.analytics.contextData` | Context data is a map which includes the custom keys and values specified in the `trackAction` and `trackState` API calls. |
-| && prefixed context data | `data.contextdata`| `data.__adobe.analytics` | Before v5 there was no special handling of context data prefixed with "&&".  <br/> <br/> As of v5, context data keys prefixed with `&&` must be known to Analytics and are case sensitive. When mapped to the event, the key's name does not include the "&&" prefix. For example, "&&products" is sent as `data.__adobe.analytics.products`.|
-| app identifier | not included | `data.__adobe.analytics.contextData.a.AppID` | As of v5, the application identifier is automatically added to every tracking event. Note the key name is "a.AppID".|
-| customer perspective | not included|  `data.__adobe.analytics.cp` | As of v5, the customer perspective is automatically added to every tracking event. The values are either "foreground" or "background". |
+| Action | `data.action` | `data.__adobe.analytics.linkName` | As of v5, the field `data.__adobe.analytics.linkType` with value `lnk_o` is also automatically included. |
+| State | `data.state` | `data.__adobe.analytics.pageName` | |
+| Context data | `data.contextdata` | `data.__adobe.analytics.contextData` | Context data is a map which includes the custom keys and values specified in the `trackAction` and `trackState` API calls. |
+| Context data prefixed with "&&" | `data.contextdata`| `data.__adobe.analytics` | Before v5, there was no special handling of context data prefixed with "&&".  <br/> <br/> As of v5, context data keys prefixed with `&&` **must** be known to Analytics and are case sensitive. When mapped to the event, the key's name does **not** include the "&&" prefix. For example, "&&products" is sent as `data.__adobe.analytics.products`.|
+| App identifier | Not included | `data.__adobe.analytics.contextData.a.AppID` | As of v5, the application identifier is automatically added to every tracking event. **Note:** the key name is "a.AppID".|
+| Customer perspective | Not included|  `data.__adobe.analytics.cp` | As of v5, the customer perspective is automatically added to every tracking event. The values are either `foreground` or `background`. |
 
 **Track Action Example**
 
@@ -99,20 +99,21 @@ The resulting Experience Event has the following payload:
 
 ```json
 {
- "data":{
+  "data":{
     "__adobe": {
-        "analytics": {
-            "linkName": "action name",
-            "linkType": "lnk_o",
-            "cp": "foreground",
-            "products": ";Running Shoes;1;69.95;event1|event2=55.99;eVar1=12345",
-            "contextData":{
-                "a.AppID": "myApp 1.0 (1)",
-                "key": "value"
-            }
+      "analytics": {
+        "linkName": "action name",
+        "linkType": "lnk_o",
+        "cp": "foreground",
+        "products": ";Running Shoes;1;69.95;event1|event2=55.99;eVar1=12345",
+        "contextData":{
+          "a.AppID": "myApp 1.0 (1)",
+          "key": "value"
         }
+      }
     }
- }
+  }
+}
 ```
 
 **Track State Example**
@@ -127,16 +128,17 @@ MobileCore.track(state: "view name", data: ["&&events": "event5,event2=2"])
 
 ```json
 {
- "data":{
+  "data":{
     "__adobe": {
-        "analytics": {
-            "pageName": "view name",
-            "cp": "foreground",
-            "events": "event5,event2=2",
-            "contextData":{
-                "a.AppID": "myApp 1.0 (1)",
-            }
+      "analytics": {
+        "pageName": "view name",
+        "cp": "foreground",
+        "events": "event5,event2=2",
+        "contextData":{
+          "a.AppID": "myApp 1.0 (1)",
         }
+      }
     }
- }
+  }
+}
 ```
