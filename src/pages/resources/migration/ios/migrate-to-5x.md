@@ -135,7 +135,7 @@ MobileCore.track(state: "view name", data: ["&&events": "event5,event2=2"])
         "cp": "foreground",
         "events": "event5,event2=2",
         "contextData":{
-          "a.AppID": "myApp 1.0 (1)",
+          "a.AppID": "myApp 1.0 (1)"
         }
       }
     }
