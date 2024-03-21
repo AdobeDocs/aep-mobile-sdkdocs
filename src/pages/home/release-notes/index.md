@@ -40,6 +40,12 @@ Note that all these extensions must be updated together.
 * iOS Adobe Target 5.0.0
 * iOS Places Service 5.0.0
 
+To learn how Apple's privacy related announcements made in WWDC of 2023 affect the Mobile SDK, please read the guide on [iOS privacy manifest and related changes](../../resources/privacy-manifest.md).
+
+For help on moving to these versions, and information on deprecated APIs please see:
+
+* [Migration guide](../../resources/migration/ios/index.md)
+
 ### iOS UserProfile 5.0.0
 
 Major version update for [User Profile](../base/profile/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
