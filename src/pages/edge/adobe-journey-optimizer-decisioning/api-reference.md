@@ -123,7 +123,7 @@ iOS
 
 <Tabs query="platform=ios&api=decisionscope"/>
 
-### Proposition
+### Proposition/OptimizeProposition
 
 This class represents the decision propositions received from the decisioning services, upon a personalization query request to the Experience Edge network.
 

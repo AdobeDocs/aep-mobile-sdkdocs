@@ -46,6 +46,10 @@ public lazy var items: [PropositionItem]
 
 ## Android Interface - Proposition
 
+### Coming soon
+
+<!--
+
 ## Public functions
 
 ### getItems
@@ -78,4 +82,5 @@ Android
 
 <Tabs query="platform=android&function=get-unique-id"/>
 
+-->
 

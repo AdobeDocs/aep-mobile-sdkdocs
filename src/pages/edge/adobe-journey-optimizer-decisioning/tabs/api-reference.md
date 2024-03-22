@@ -538,9 +538,9 @@ public class Proposition {
 #### Swift
 
 ```swift
-/// `Proposition` class
-@objc(AEPProposition)
-public class Proposition: NSObject, Codable {
+/// `OptimizeProposition` class
+@objc(AEPOptimizeProposition)
+public class OptimizeProposition: NSObject, Codable {
 
     /// Unique proposition identifier
     @objc public let id: String
@@ -556,18 +556,18 @@ public class Proposition: NSObject, Codable {
 }
 ```
 
-The `Proposition` class extension provides a method for generating XDM data for Proposition Reference field group which can be used for proposition tracking.
+The `OptimizeProposition` class extension provides a method for generating XDM data for Proposition Reference field group which can be used for proposition tracking.
 
 ```swift
-/// `Proposition` extension
+/// `OptimizeProposition` extension
 @objc
-public extension Proposition {
+public extension OptimizeProposition {
     /// Creates a dictionary containing XDM formatted data for `Experience Event - Proposition Reference` field group from the given proposition.
     ///
     /// The Edge `sendEvent(experienceEvent:_:)` API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, or override dataset identifier.
     ///
     /// - Note: The returned XDM data does not contain an `eventType` for the Experience Event.
-    /// - Returns A dictionary containing XDM data for the propositon reference.
+    /// - Returns A dictionary containing XDM data for the proposition reference.
     func generateReferenceXdm() -> [String: Any] {...}
 }
 ```

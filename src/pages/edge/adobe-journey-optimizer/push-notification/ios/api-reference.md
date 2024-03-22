@@ -44,7 +44,7 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 
 ## Track push notification interactions
 
-Use `handleNotificationResponse` API to send push notification interaction data to Adobe Experience Platform.
+Use [`handleNotificationResponse`](./../../api-reference/#handlenotificationresponse) API to send push notification interaction data to Adobe Experience Platform.
 
 In iOS, [UNUserNotificationCenterDelegate](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) is the interface for processing incoming notifications and responding to notification actions. Once the delegate is implemented, handle push notification responses in [userNotificationCenter(_:didReceive:withCompletionHandler:)](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate/1649501-usernotificationcenter) method.
 
@@ -55,8 +55,20 @@ In iOS, [UNUserNotificationCenterDelegate](https://developer.apple.com/documenta
 ```swift
 func userNotificationCenter(_: UNUserNotificationCenter,
                             didReceive response: UNNotificationResponse,
-                            withCompletionHandler completionHandler: @escaping () -> Void) {                                
-    Messaging.handleNotificationResponse(response)
+                            withCompletionHandler completionHandler: @escaping () -> Void) {
+
+    Messaging.handleNotificationResponse(response, urlHandler: { url in
+        /// return `true` if the app is handling the url or `false` if the Adobe SDK should handle it
+        let appHandlesUrl = false
+        return appHandlesUrl
+    }, closure: { pushTrackingStatus in
+        if pushTrackingStatus == .trackingInitiated {
+            // tracking was successful
+        } else {
+            // tracking failed, view the status for more information
+        }
+    })
+
     completionHandler()
 }
 ```
@@ -64,11 +76,21 @@ func userNotificationCenter(_: UNUserNotificationCenter,
 #### Objective-C
 
 ```objc
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center
-didReceiveNotificationResponse:(UNNotificationResponse *)response
-         withCompletionHandler:(void (^)(void))completionHandler {
+- (void) userNotificationCenter:(UNUserNotificationCenter *) center
+ didReceiveNotificationResponse:(UNNotificationResponse *) response
+         withCompletionHandler:(void (^)(void)) completionHandler {
 
-    [AEPMobileMessaging handleNotificationResponse:response closure:nil];
+    [AEPMobileMessaging handleNotificationResponse:response urlHandler: ^(NSURL *url) {
+        /// return `true` if the app is handling the url or `false` if the Adobe SDK should handle it
+        bool appHandlesUrl = false;
+        return appHandlesUrl;
+    } closure:^(AEPPushTrackingStatus status) {
+        if (status == AEPPushTrackingStatusTrackingInitiated) {
+            // tracking was successful
+        } else {
+            // tracking failed, view the status for more information
+        }
+    }];
 }
 ```
 
@@ -85,17 +107,17 @@ Implement the callback in `handleNotificationResponse` API to read [PushTracking
 #### Swift
 
 ```swift
-    Messaging.handleNotificationResponse(response) { trackingStatus in
-        // handle the different values of trackingStatus
-    }
+Messaging.handleNotificationResponse(response) { trackingStatus in
+    // handle the different values of trackingStatus
+}
 ```
 
 #### Objective-C
 
 ```objc
-    [AEPMobileMessaging handleNotificationResponse:response closure:^(AEPPushTrackingStatus status){
-        if (status == AEPPushTrackingStatusTrackingInitiated) {
-            NSLog(@"Successfully started push notification tracking");
-        }
-    }];
+[AEPMobileMessaging handleNotificationResponse:response urlHandler:nil closure:^(AEPPushTrackingStatus status) {
+    if (status == AEPPushTrackingStatusTrackingInitiated) {
+        NSLog(@"Successfully started push notification tracking");
+    }
+}];
 ```

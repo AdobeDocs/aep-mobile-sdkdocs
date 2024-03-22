@@ -92,6 +92,10 @@ iOS
 
 ## Android Interface - PropositionItem
 
+### Coming soon
+
+<!--
+
 ## Public functions
 
 ### getItemId
@@ -194,4 +198,4 @@ Android
 
 <Tabs query="platform=android&function=track-with-tokens"/>
 
-
+-->

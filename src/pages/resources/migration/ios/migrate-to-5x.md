@@ -143,10 +143,19 @@ MobileCore.track(state: "view name", data: ["&&events": "event5,event2=2"])
 }
 ```
 
-#### Messaging
+### Messaging
 
-Change usages of `Messaging.handleNotificationResponse(_:applicationOpened:withCustomActionId:)` and `Messaging.handleNotificationResponse(_:closure:)` to `Messaging.handleNotificationResponse(_:urlHandler:closure:)`
+#### Push tracking
+
+In order to provide more control over URL handling from `UNNotificationResponse` objects, two old APIs were removed and a new one was added.
+
+| Old API (4.x) | New API (5.x) |
+| ------------- | ------------- |
+| `handleNotificationResponse(_:applicationOpened:withCustomActionId:)` | `handleNotificationResponse(_:urlHandler:closure:)` |
+| `handleNotificationResponse(_:closure:)` | `handleNotificationResponse(_:urlHandler:closure:)` |
+
+For examples see [handleNotificationResponse](./../../../edge/adobe-journey-optimizer/api-reference#handlenotificationresponse).
 
 #### Optimize
 
-Change all references from class `Proposition` to `OptimizeProposition`.
+The `Proposition` class has been renamed to [`OptimizeProposition`](./../../../edge/adobe-journey-optimizer-decisioning/api-reference/#propositionoptimizeproposition).  All references should be updated accordingly.
