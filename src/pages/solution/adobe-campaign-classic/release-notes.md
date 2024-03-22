@@ -8,11 +8,26 @@ keywords:
 
 # Release notes
 
+## March 20, 2024
+
+### iOS Campaign Classic 5.0.0
+
+Major version update for [Campaign Classic](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+## March 11, 2024
+
+### Android Campaign Classic 2.1.5
+
+* Re-add parsing of the `adb_icon` key value pair from the push template payload. The value will be used to locate and then set a notification small icon from the app's bundle if the `adb_small_icon` key value pair is not present in the push payload.
+
 ## February 28, 2024
 
 ### iOS Campaign Classic 4.0.1
 
-- Added max versions to Platform dependencies in podspec
+* Added max versions to Platform dependencies in podspec
 
 ### Android Campaign Classic 2.1.4
 

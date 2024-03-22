@@ -822,6 +822,9 @@ module.exports = {
                         title: "iOS",
                         path: "/resources/migration/ios",
                         pages: [{
+                                title: "Migrate to 5.x SDKs",
+                                path: "/resources/migration/ios/migrate-to-5x"
+                            },{
                                 title: "Migrate to 4.x SDKs",
                                 path: "/resources/migration/ios/migrate-to-4x"
                             },

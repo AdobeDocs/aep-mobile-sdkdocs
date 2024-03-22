@@ -7,16 +7,244 @@ Keywords:
 
 # Release notes
 
+## March 20, 2024
+
+### iOS Mobile Core 5.x and compatible extensions
+
+New major version of the Mobile Core SDK for iOS has been released along with updates to other extensions. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0 and tvOS 12.0 (for extensions which support tvOS).
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+* Include a privacy manifest for AEPCore and AEPServices.
+
+Note that all these extensions must be updated together.
+
+* iOS Mobile Core 5.0.0
+* iOS Signal 5.0.0
+* iOS Lifecycle 5.0.0
+* iOS Identity 5.0.0
+* iOS Profile 5.0.0
+* iOS Adobe Experience Platform Assurance 5.0.0
+* iOS Adobe Experience Platform Edge Network 5.0.0
+* iOS Adobe Journey Optimizer 5.0.0
+* iOS Adobe Journey Optimizer - Decisioning 5.0.0
+* iOS Consent for Edge Network 5.0.0
+* iOS Identity for Edge Network 5.0.0
+* iOS Media for Edge Network 5.0.0
+* iOS Edge Bridge 5.0.0
+* iOS Adobe Analytics 5.0.0
+* iOS Adobe Analytics - Media Analytics for Audio & Video 5.0.0
+* iOS Adobe Audience Manager 5.0.0
+* iOS Adobe Campaign Standard 5.0.0
+* iOS Adobe Campaign Classic 5.0.0
+* iOS Adobe Target 5.0.0
+* iOS Places Service 5.0.0
+
+To learn how Apple's privacy related announcements made in WWDC of 2023 affect the Mobile SDK, please read the guide on [iOS privacy manifest and related changes](../../resources/privacy-manifest.md).
+
+For help on moving to these versions, and information on deprecated APIs please see:
+
+* [Migration guide](../../resources/migration/ios/index.md)
+
+### iOS UserProfile 5.0.0
+
+Major version update for [User Profile](../base/profile/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS Assurance 5.0.0
+
+Major version update for [Adobe Experience Platform Assurance](../base/assurance/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS Messaging 5.0.0
+
+Major version update for [Adobe Journey Optimizer](../../edge/adobe-journey-optimizer/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+* Added `handleNotificationResponse(_:urlHandler:closure:)` API to provide more control over URL handling from `UNNotificationResponse` objects.
+  * Removed deprecated public API `Messaging.handleNotificationResponse(_:applicationOpened:withCustomActionId:)`.
+  * Removed public API `Messaging.handleNotificationResponse(_:closure:)` API.
+* Added support for [Code Based Experiences](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based).
+  * Added public API `Messaging.updatePropositionsForSurfaces(_)`.
+  * Added public API `Messaging.getPropositionsForSurfaces(_:completion:)`.
+
+### iOS Optimize 5.0.0
+
+Major version update for [Adobe Journey Optimizer - Decisioning Extension](../../edge/adobe-journey-optimizer-decisioning/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+* Renamed class `Proposition` to `OptimizeProposition`.
+
+### iOS EdgeConsent 5.0.0
+
+Major version update for [Consent for Edge Network](../../edge/consent-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS EdgeMedia 5.0.0
+
+Major version update for [Adobe Streaming Media for Edge Network](../../edge/media-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS EdgeBridge 5.0.0
+
+Major version update for [Edge Bridge](../../solution/adobe-analytics/migrate-to-edge-network.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+* Updated Edge Bridge data format to enhance support for migrating to sending data via Edge Network to Adobe Analytics and reduce the effort required for mapping data to XDM.
+* If you are currently using Edge Bridge version 4.0.0 and you are mapping data to XDM in your datastream, adjustments will be necessary when adopting version 5.0.0. For more details, please review the [migration](../../resources/migration/ios/migrate-to-5x.md) documentation.
+
+### iOS Analytics 5.0.0
+
+Major version update for [Adobe Analytics](../../solution/adobe-analytics/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS Media 5.0.0
+
+Major version update for [Adobe Analytics - Media Analytics workflows](../../solution/adobe-media-analytics/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS Audience 5.0.0
+
+Major version update for [Adobe Audience Manager](../../solution/adobe-audience-manager/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS Campaign Classic 5.0.0
+
+Major version update for [Campaign Classic](../../solution/adobe-campaign-classic/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS Campaign Standard 5.0.0
+
+Major version update for [Campaign Standard](../../solution/adobe-campaign-standard/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS Target 5.0.0
+
+Major version update for [Target](../../solution/adobe-target/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+* Fixed a bug when using Target Preview on device that caused the floating button to remain visible when a preview selection was active.
+
+### iOS Places 5.0.0
+
+Major version update for [Places](../../solution/places/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+* Fixes a bug where limit was not being respected in calls to `getNearbyPointsOfInterest`.
+
+## March 19, 2024
+
+### iOS Core 5.0.0
+
+Major version update of Adobe Experience Platform Core iOS SDKs are live! It contains the following extensions:
+
+* Core 5.0.0
+* Identity 5.0.0
+* Signal 5.0.0
+* Lifecycle 5.0.0
+
+Please note that the current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+* Include a privacy manifest for AEPCore and AEPServices.
+
+### iOS Edge 5.0.0
+
+Major version update for [Edge Network](../../edge/edge-network/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS EdgeIdentity 5.0.0
+
+Major version update for [Identity for Edge Network](../../edge/identity-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+## March 12, 2024
+
+### Android BOM 2.9.6
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.9.5) | BOM (2.9.6) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:campaignclassic** | **2.1.4** | **2.1.5**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:assurance | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.6 | 2.0.6 |
+| com.adobe.marketing.mobile:core | 2.6.2 | 2.6.2 |
+| com.adobe.marketing.mobile:edge | 2.4.0 | 2.4.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:optimize | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+## March 11, 2024
+
+### Android Campaign Classic 2.1.5
+
+* Re-add parsing of the `adb_icon` key value pair from the push template payload. The value will be used to locate and then set a notification small icon from the app's bundle if the `adb_small_icon` key value pair is not present in the push payload.
+
+## March 8, 2024
+
+### iOS UserProfile 4.0.1
+
+* Fix an issue where dependency versions did not have an upper bound restriction.
+
 ## March 7, 2024
 
 ### Roku SDK 1.1.0
 
-- Streaming Media for Edge Network
-    - Added new APIs and configuration for tracking media.
-    - Customizable ping interval.
-- Added support to create multiple instances of the SDK.
-- Support non-xdm data in `SendEvent` API
-- A comprehensive [migration guide](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/media-migration.md) to transition from [Adobe Media SDK](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/roku) to [Adobe Experience Platform Roku SDK](https://github.com/adobe/aepsdk-roku).
+* Streaming Media for Edge Network
+  * Added new APIs and configuration for tracking media.
+  * Customizable ping interval.
+* Added support to create multiple instances of the SDK.
+* Support non-xdm data in `SendEvent` API
+* A comprehensive [migration guide](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/media-migration.md) to transition from [Adobe Media SDK](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/roku) to [Adobe Experience Platform Roku SDK](https://github.com/adobe/aepsdk-roku).
 
 ### iOS Assurance 4.1.2
 
@@ -24,37 +252,72 @@ Keywords:
 
 ### iOS Analytics 4.0.1
 
-- Added max versions to Platform dependencies in podspec.
+* Added max versions to Platform dependencies in podspec.
 
 ### iOS EdgeConsent 4.0.1
 
-- Added max versions to Platform dependencies in podspec.
+* Added max versions to Platform dependencies in podspec.
 
 ## March 6, 2024
 
 ### iOS EdgeMedia 4.0.1
 
-- Added max versions to Platform dependencies in podspec.
+* Added max versions to Platform dependencies in podspec.
 
 ### iOS EdgeIdentity 4.0.1
 
-- Added max versions to Platform dependencies in podspec.
+* Added max versions to Platform dependencies in podspec.
 
 ### iOS Edge 4.3.1
 
-- Added max versions to Platform dependencies in podspec.
+* Added max versions to Platform dependencies in podspec.
 
 ### iOS EdgeBridge 4.1.1
 
-- Added max versions to Platform dependencies in podspec.
+* Added max versions to Platform dependencies in podspec.
 
 ### iOS Media 4.0.2
 
-- Added max versions to Platform dependencies in podspec.
+* Added max versions to Platform dependencies in podspec.
 
 ### iOS Audience 4.0.1
 
-- Added max versions to Platform dependencies in podspec.
+* Added max versions to Platform dependencies in podspec.
+
+### Android BOM 2.9.5
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.9.4) | BOM (2.9.5) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:messaging** | **2.2.0** | **2.2.1**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:assurance | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.6 | 2.0.6 |
+| com.adobe.marketing.mobile:campaignclassic | 2.1.4 | 2.1.4 |
+| com.adobe.marketing.mobile:core | 2.6.2 | 2.6.2 |
+| com.adobe.marketing.mobile:edge | 2.4.0 | 2.4.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:optimize | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
 
 ## March 5, 2024
 
@@ -62,27 +325,64 @@ Keywords:
 
 * Handle a null network connection exception which was causing the Messaging extension to fail to be registered.
 
+## February 29, 2024
+
+### Android BOM 2.9.4
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.9.3) | BOM (2.9.4) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:campaignclassic** | **2.1.3** | **2.1.4**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:assurance | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.6 | 2.0.6 |
+| com.adobe.marketing.mobile:core | 2.6.2 | 2.6.2 |
+| com.adobe.marketing.mobile:edge | 2.4.0 | 2.4.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.2.0 | 2.2.0 |
+| com.adobe.marketing.mobile:optimize | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
 ## February 28, 2024
 
 ### iOS Messaging 4.1.1
 
-- Added max versions to Platform dependencies in podspec
+* Added max versions to Platform dependencies in podspec
 
 ### iOS Campaign Standard 4.0.1
 
-- Added max versions to Platform dependencies in podspec
+* Added max versions to Platform dependencies in podspec
 
 ### iOS Optimize 4.0.3
 
-- Added max versions to Platform dependencies in podspec
+* Added max versions to Platform dependencies in podspec
 
 ### iOS Campaign Classic 4.0.1
 
-- Added max versions to Platform dependencies in podspec
+* Added max versions to Platform dependencies in podspec
 
 ### iOS Target 4.0.4
 
-- Added max versions to Platform dependencies in podspec
+* Added max versions to Platform dependencies in podspec
 
 ### Android Campaign Classic 2.1.4
 
@@ -100,7 +400,7 @@ Keywords:
 
 ### iOS Core 4.2.3
 
-* Fix podspec dependencies not being restricted to current major version
+* Fix podspec dependencies not being restricted to current major version.
 * Fixed an issue that was allowing in-app messages without content to be displayed.
 
 ## February 6, 2024
@@ -635,7 +935,7 @@ Please do not use this release for tvOS. Use the 4.2.1 release instead.
 * Added new notification tracking API `handleNotificationResponse` with parameters `UNNotificationResponse` and an optional callback the returns `PushTrackingStatus` enum.
   * This API will automatically handle the click behaviour (OPENAPP, WEBURL, DEEPLINK) defined for the notification.
 * Deprecated the notification tracking API `handleNotificationResponse` with parameters `UNNotificationResponse`, `applicationOpened`, and `customActionId`.
-*  Fixed a bug on notification tracking API `handleNotificationResponse` to stop sending tracking hits to edge servers when the notification does not contain tracking information.
+* Fixed a bug on notification tracking API `handleNotificationResponse` to stop sending tracking hits to edge servers when the notification does not contain tracking information.
 
 ### Android Messaging 2.2.0
 
