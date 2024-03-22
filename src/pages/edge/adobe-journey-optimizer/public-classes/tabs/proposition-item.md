@@ -2,11 +2,11 @@
 noIndex: true
 ---
 
-<Variant platform="ios" api="generate-interaction-xdm" repeat="4"/>
+<Variant platform="ios" function="generate-interaction-xdm" repeat="4"/>
 
 #### Swift
 
-#### Syntax
+**Syntax**
 
 ```swift
 func generateInteractionXdm(_ interaction: String? = nil, withEdgeEventType eventType: MessagingEdgeEventType, forTokens tokens: [String]? = nil) -> [String: Any]?
@@ -16,11 +16,11 @@ func generateInteractionXdm(_ interaction: String? = nil, withEdgeEventType even
 * _eventType_ is an enum specifying event type for the interaction.
 * _tokens_ is an array containing the decision item tokens for recording interaction.
 
-<Variant platform="ios" api="track" repeat="4"/>
+<Variant platform="ios" function="track" repeat="4"/>
 
 #### Swift
 
-#### Syntax
+**Syntax**
 
 ```swift
 func track(_ interaction: String? = nil, withEdgeEventType eventType: MessagingEdgeEventType, forTokens tokens: [String]? = nil)
@@ -30,71 +30,71 @@ func track(_ interaction: String? = nil, withEdgeEventType eventType: MessagingE
 * _eventType_ is an enum specifying event type for the interaction.
 * _tokens_ is an array containing the decision item tokens for recording interaction.
 
-<Variant platform="android" api="get-item-id" repeat="3"/>
+<Variant platform="android" function="get-item-id" repeat="3"/>
 
 #### Java
 
-#### Syntax
+**Syntax**
 
 ```java
 public String getItemId()
 ```
 
-<Variant platform="android" api="get-item-data" repeat="3"/>
+<Variant platform="android" function="get-item-data" repeat="3"/>
 
 #### Java
 
-#### Syntax
+**Syntax**
 
 ```java
-public Map<String, Object> getData()
+public Map<String, Object> getItemData()
 ```
 
-<Variant platform="android" api="get-schema" repeat="3"/>
+<Variant platform="android" function="get-schema" repeat="3"/>
 
 #### Java
 
-#### Syntax
+**Syntax**
 
 ```java
 public SchemaType getSchema()
 ```
 
-<Variant platform="android" api="get-html-content" repeat="3"/>
+<Variant platform="android" function="get-html-content" repeat="3"/>
 
 #### Java
 
-#### Syntax
+**Syntax**
 
 ```java
 public String getHtmlContent()
 ```
 
-<Variant platform="android" api="get-json-content-map" repeat="3"/>
+<Variant platform="android" function="get-json-content-map" repeat="3"/>
 
 #### Java
 
-#### Syntax
+**Syntax**
 
 ```java
 public Map<String, Object> getJsonContentMap()
 ```
 
-<Variant platform="android" api="get-json-content-array-list" repeat="3"/>
+<Variant platform="android" function="get-json-content-array-list" repeat="3"/>
 
 #### Java
 
-#### Syntax
+**Syntax**
 
 ```java
 public List<Map<String, Object>> getJsonArrayList()
 ```
 
-<Variant platform="android" api="generate-interaction-xdm" repeat="4"/>
+<Variant platform="android" function="generate-interaction-xdm" repeat="4"/>
 
 #### Java
 
-#### Syntax
+**Syntax**
 
 ```java
 public Map<String, Object> generateInteractionXdm(@NonNull final MessagingEdgeEventType eventType)
@@ -102,11 +102,11 @@ public Map<String, Object> generateInteractionXdm(@NonNull final MessagingEdgeEv
 
 * _eventType_ is an enum specifying event type for the interaction.
 
-<Variant platform="android" api="generate-interaction-xdm-with-tokens" repeat="4"/>
+<Variant platform="android" function="generate-interaction-xdm-with-tokens" repeat="4"/>
 
 #### Java
 
-#### Syntax
+**Syntax**
 
 ```java
 public Map<String, Object> generateInteractionXdm(final String interaction, @NonNull final MessagingEdgeEventType eventType, final List<String> tokens)
@@ -116,11 +116,11 @@ public Map<String, Object> generateInteractionXdm(final String interaction, @Non
 * _eventType_ is an enum specifying event type for the interaction.
 * _tokens_ is a list containing the decision item tokens for recording interaction.
 
-<Variant platform="android" api="track" repeat="4"/>
+<Variant platform="android" function="track" repeat="4"/>
 
 #### Java
 
-#### Syntax
+**Syntax**
 
 ```java
 public void track(@NonNull final MessagingEdgeEventType eventType)
@@ -128,11 +128,11 @@ public void track(@NonNull final MessagingEdgeEventType eventType)
 
 * _eventType_ is an enum specifying event type for the interaction.
 
-<Variant platform="android" api="track-with-tokens" repeat="4"/>
+<Variant platform="android" function="track-with-tokens" repeat="4"/>
 
 #### Java
 
-#### Syntax
+**Syntax**
 
 ```java
 public void track(final String interaction, @NonNull final MessagingEdgeEventType eventType, final List<String> tokens)

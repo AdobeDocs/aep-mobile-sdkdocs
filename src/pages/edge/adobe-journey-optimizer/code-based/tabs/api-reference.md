@@ -6,7 +6,7 @@ noIndex: true
 
 #### Java
 
-#### Syntax
+**Syntax**
 
 ```java
 public static void getPropositionsForSurfaces(@NonNull final List<Surface> surfaces, @NonNull final AdobeCallback<Map<Surface, List<Proposition>>> callback)
@@ -15,7 +15,7 @@ public static void getPropositionsForSurfaces(@NonNull final List<Surface> surfa
 * _surfaces_ is a list of surfaces for which propositions are requested.
 * _callback_ `call` method is invoked with propositions map of type `Map<Surface, List<Proposition>>`. If the callback is an instance of [AdobeCallbackWithError](../../../../home/base/mobile-core/api-reference.md#adobecallbackwitherror), and if the operation times out or an error occurs in retrieving propositions, the `fail` method is invoked with the appropriate [AdobeError](../../../../home/base/mobile-core/api-reference.md#adobeerror).
 
-#### Example
+**Syntax**
 
 ```java
 final Surface surface1 = new Surface("myActivity#button");
@@ -52,7 +52,7 @@ Messaging.getPropositionsForSurfaces(surfaces, new AdobeCallbackWithError<Map<Su
 
 #### Swift
 
-#### Syntax
+**Syntax**
 
 ```swift
 static func getPropositionsForSurfaces(_ surfacePaths: [Surface], _ completion: @escaping ([Surface: [Proposition]]?, Error?) -> Void)
@@ -61,7 +61,7 @@ static func getPropositionsForSurfaces(_ surfacePaths: [Surface], _ completion: 
 * _surfaces_ is an array of surfaces for which propositions are requested.
 * _completion_ is invoked with propositions dictionary of type `[Surface: [Proposition]]`. An `Error` is returned if SDK fails to retrieve the propositions.
 
-#### Example
+**Syntax**
 
 ```swift
 let surface1 = Surface(path: "myView#button")
@@ -91,7 +91,7 @@ Messaging.getPropositionsForSurfaces([surface1, surface2]) { propositionsDict, e
 
 #### Objective-C
 
-#### Syntax
+**Syntax**
 
 ```objc
 + (void) getPropositionsForSurfaces: (NSArray<AEPSurface*>* _Nonnull) surfaces 
@@ -101,7 +101,7 @@ Messaging.getPropositionsForSurfaces([surface1, surface2]) { propositionsDict, e
 * _surfaces_ is an array of surfaces for which propositions are requested.
 * _completion_ is invoked with propositions dictionary of type `NSDictionary<AEPSurface*, NSArray<AEPProposition*>*>`. An `NSError` is returned if SDK fails to retrieve the propositions.
 
-#### Example
+**Syntax**
 
 ```objc
 AEPSurface* surface1 = [[AEPSurface alloc] initWithPath: @"myView#button"];
@@ -126,7 +126,7 @@ AEPSurface* surface2 = [[AEPSurface alloc] initWithPath: @"myView#button"];
 
 #### Java
 
-#### Syntax
+**Syntax**
 
 ```java
 public static void updatePropositionsForSurfaces(@NonNull final List<Surface> surfaces)
@@ -134,7 +134,7 @@ public static void updatePropositionsForSurfaces(@NonNull final List<Surface> su
 
 * _surfaces_ is a list of surfaces for which propositions need updating.
 
-#### Example
+**Syntax**
 
 ```java
 final Surface surface1 = new Surface("myActivity#button");
@@ -151,7 +151,7 @@ Messaging.updatePropositionsForSurfaces(surfaces)
 
 #### Swift
 
-#### Syntax
+**Syntax**
 
 ```swift
 static func updatePropositionsForSurfaces(_ surfaces: [Surface])
@@ -159,7 +159,7 @@ static func updatePropositionsForSurfaces(_ surfaces: [Surface])
 
 * _surfaces_ is an array of surfaces for which propositions need updating.
 
-#### Example
+**Syntax**
 
 ```swift
 let surface1 = Surface(path: "myView#button")
@@ -170,7 +170,7 @@ Messaging.updatePropositionsForSurfaces([surface1, surface2])
 
 #### Objective-C
 
-#### Syntax
+**Syntax**
 
 ```objc
 + (void) updatePropositionsForSurfaces: (NSArray<AEPSurface*>* _Nonnull) surfaces;
@@ -178,7 +178,7 @@ Messaging.updatePropositionsForSurfaces([surface1, surface2])
 
 * _surfaces_ is an array of surfaces for which propositions need updating.
 
-#### Example
+**Syntax**
 
 ```objc
 AEPSurface* surface1 = [[AEPSurface alloc] initWithPath: @"myView#button"];
