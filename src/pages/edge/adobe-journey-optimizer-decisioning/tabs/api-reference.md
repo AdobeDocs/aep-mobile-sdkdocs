@@ -148,11 +148,11 @@ Optimize.getPropositions(scopes, new AdobeCallbackWithError<Map<DecisionScope, P
 
 ```swift
 static func getPropositions(for decisionScopes: [DecisionScope], 
-                            _ completion: @escaping ([DecisionScope: Proposition]?, Error?) -> Void)
+                            _ completion: @escaping ([DecisionScope: OptimizeProposition]?, Error?) -> Void)
 ```
 
 * _decisionScopes_ is an array of decision scopes for which propositions are requested.
-* _completion_ is invoked with propositions dictionary of type `[DecisionScope: Proposition]`. An `Error` is returned if SDK fails to retrieve the propositions.
+* _completion_ is invoked with propositions dictionary of type `[DecisionScope: OptimizeProposition]`. An `Error` is returned if SDK fails to retrieve the propositions.
 
 #### Example
 
@@ -189,11 +189,11 @@ Optimize.getPropositions(for: [decisionScope1, decisionScope2]) { propositionsDi
 
 ```objc
 + (void) getPropositions: (NSArray<AEPDecisionScope*>* _Nonnull) decisionScopes 
-              completion: (void (^ _Nonnull)(NSDictionary<AEPDecisionScope*, AEPProposition*>* _Nullable propositionsDict, NSError* _Nullable error)) completion;
+              completion: (void (^ _Nonnull)(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* _Nullable propositionsDict, NSError* _Nullable error)) completion;
 ```
 
 * _decisionScopes_ is an array of decision scopes for which propositions are requested.
-* _completion_ is invoked with propositions dictionary of type `NSDictionary<AEPDecisionScope*, AEPProposition*>`. An `NSError` is returned if SDK fails to retrieve the propositions.
+* _completion_ is invoked with propositions dictionary of type `NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>`. An `NSError` is returned if SDK fails to retrieve the propositions.
 
 #### Example
 
@@ -204,16 +204,16 @@ AEPDecisionScope* decisionScope1 = [[AEPDecisionScope alloc] initWithActivityId:
 AEPDecisionScope* decisionScope2 = [[AEPDecisionScope alloc] initWithName: @"myScope"];
 
 [AEPMobileOptimize getPropositions: @[decisionScope1, decisionScope2] 
-                        completion: ^(NSDictionary<AEPDecisionScope*, AEPProposition*>* propositionsDict, NSError* error) {
+                        completion: ^(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* propositionsDict, NSError* error) {
   if (error != nil) {
     // handle error   
     return;
   }
 
-  AEPProposition* proposition1 = propositionsDict[decisionScope1];
+  AEPOptimizeProposition* proposition1 = propositionsDict[decisionScope1];
   // read proposition1 offers
 
-  AEPProposition* proposition2 = propositionsDict[decisionScope2];
+  AEPOptimizeProposition* proposition2 = propositionsDict[decisionScope2];
   // read proposition2 offers
 }];
 ```
@@ -255,10 +255,10 @@ Optimize.onPropositionsUpdate(new AdobeCallbackWithError<Map<DecisionScope, Prop
 #### Syntax
 
 ```swift
-static func onPropositionsUpdate(perform action: @escaping ([DecisionScope: Proposition]?) -> Void)
+static func onPropositionsUpdate(perform action: @escaping ([DecisionScope: OptimizeProposition]?) -> Void)
 ```
 
-* _action_ is invoked with propositions dictionary of type `[DecisionScope: Proposition]`.
+* _action_ is invoked with propositions dictionary of type `[DecisionScope: OptimizeProposition]`.
 
 #### Example
 
@@ -275,15 +275,15 @@ Optimize.onPropositionsUpdate { propositionsDict in
 #### Syntax
 
 ```objc
-+ (void) onPropositionsUpdate: (void (^ _Nonnull)(NSDictionary<AEPDecisionScope*, AEPProposition*>* _Nullable)) action;
++ (void) onPropositionsUpdate: (void (^ _Nonnull)(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* _Nullable)) action;
 ```
 
-* _action_ is invoked with propositions dictionary of type `NSDictionary<AEPDecisionScope*, AEPProposition*>`.
+* _action_ is invoked with propositions dictionary of type `NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>`.
 
 #### Example
 
 ```objc
-[AEPMobileOptimize onPropositionsUpdate: ^(NSDictionary<AEPDecisionScope*, AEPProposition*>* propositionsDict) {
+[AEPMobileOptimize onPropositionsUpdate: ^(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* propositionsDict) {
   // handle propositions
 }];
 ```
@@ -816,7 +816,7 @@ public extension Offer {
     /// If the proposition reference within the option is released and no longer valid, the method returns `nil`.
     ///
     /// - Note: The returned XDM data also contains the `eventType` for the Experience Event with value `decisioning.propositionDisplay`.
-    /// - Returns A dictionary containing XDM data for the propositon interactions.
+    /// - Returns A dictionary containing XDM data for the proposition interactions.
     func generateDisplayInteractionXdm() -> [String: Any]? {...}
 
     /// Creates a dictionary containing XDM formatted data for `Experience Event - Proposition Interactions` field group from the given proposition option.
@@ -825,7 +825,7 @@ public extension Offer {
     /// If the proposition reference within the option is released and no longer valid, the method returns `nil`.
     ///
     /// - Note: The returned XDM data also contains the `eventType` for the Experience Event with value `decisioning.propositionInteract`.
-    /// - Returns A dictionary containing XDM data for the propositon interactions.
+    /// - Returns A dictionary containing XDM data for the proposition interactions.
     func generateTapInteractionXdm() -> [String: Any]? {...}
 
     /// Dispatches an event for the Edge extension to send an Experience Event to the Edge network with the display interaction data for the given proposition item.

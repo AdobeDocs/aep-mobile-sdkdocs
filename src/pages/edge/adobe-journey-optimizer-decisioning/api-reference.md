@@ -103,10 +103,10 @@ iOS
 
 ## Public classes
 
-| Type | Android | (AEP 3.x) Swift | (AEP 3.x) Objective-C |
+| Type | Android | (AEP 5.x) Swift | (AEP 5.x) Objective-C |
 | :--- | :--- | :--- | :--- |
 | class | `DecisionScope` | `DecisionScope` | `AEPDecisionScope` |
-| class | `Proposition` | `Proposition` | `AEPProposition` |
+| class | `Proposition` | `OptimizeProposition` | `AEPOptimizeProposition` |
 | class | `Offer` | `Offer` | `AEPOffer` |
 
 ### DecisionScope
