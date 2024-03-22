@@ -21,6 +21,7 @@ public List<PropositionItem> getItems()
 ```java
 public String getScope()
 ```
+
 <Variant platform="android" function="get-unique-id" repeat="3"/>
 
 #### Java
