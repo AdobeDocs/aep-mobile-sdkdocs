@@ -20,7 +20,7 @@ The `Proposition` class represents the decision propositions received from the r
 
 ## Public variables
 
-### uri
+### uniqueId
 
 Unique proposition identifier.
 

@@ -47,7 +47,7 @@ public String getItemId()
 **Syntax**
 
 ```java
-public Map<String, Object> getData()
+public Map<String, Object> getItemData()
 ```
 
 <Variant platform="android" function="get-schema" repeat="3"/>
