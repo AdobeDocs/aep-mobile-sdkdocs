@@ -72,6 +72,77 @@ If you are using Swift Package Manger (SPM) for managing your app dependencies, 
 
 ## Update outdated API references
 
+When updating to the Experience Platform 5.x SDKs, please take note of the following updates for API references.
+
+### Edge Bridge
+
+As of version 5.0.0 of the Adobe Experience Platform Edge Bridge for iOS, the table below shows how the `trackAction` and `trackState` parameters map to the `data` node of the Experience Event sent to the Experience Platform Edge Network. Edge Network automatically maps these data variables to Adobe Analytics without additional server-side configuration. If you are using Edge Bridge version 4.x and mapping data to XDM in your datastream, adjustments are required for version 5.0.0.
+
+| Data | Key path in v4.x | Key path in v5.+ | Description |
+| --- | --- | --- | --- |
+| Action | `data.action` | `data.__adobe.analytics.linkName` | As of v5, set as the custom link name in the Analytics hit. The field `data.__adobe.analytics.linkType` with value `lnk_o` is also automatically included. |
+| State | `data.state` | `data.__adobe.analytics.pageName` | As of v5, set as the page name in the Analytics hit. |
+| Context data | `data.contextdata` | `data.__adobe.analytics.contextData` | Context data is a map which includes the custom keys and values specified in the `trackAction` and `trackState` API calls. |
+| Context data prefixed with "&&" | `data.contextdata`| `data.__adobe.analytics` | Before v5, there was no special handling of context data prefixed with "&&".  <br/> <br/>  As of v5, context data keys prefixed with "&&" are automatically mapped to Analytics variables and no longer include the "&&" prefix. For example, the key `&&products` is sent as `data.__adobe.analytics.products`. Please note that these keys must be known to Analytics and are case sensitive. Find the full list of supported Analytics variables [here](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping). |
+| App identifier | Not included | `data.__adobe.analytics.contextData.a.AppID` | As of v5, the application identifier is automatically added to every tracking event under the key name `a.AppID`.|
+| Customer perspective | Not included|  `data.__adobe.analytics.cp` | As of v5, the customer perspective is automatically added to every tracking event. The values are either `foreground` or `background`. |
+
+#### Track action example
+
+Given the track action call:
+
+```swift
+MobileCore.track(action: "action name", data: ["key": "value", "&&products": ";Running Shoes;1;69.95;event1|event2=55.99;eVar1=12345"])
+```
+
+The resulting Experience Event has the following payload:
+
+```json
+{
+  "data":{
+    "__adobe": {
+      "analytics": {
+        "linkName": "action name",
+        "linkType": "lnk_o",
+        "cp": "foreground",
+        "products": ";Running Shoes;1;69.95;event1|event2=55.99;eVar1=12345",
+        "contextData":{
+          "a.AppID": "myApp 1.0 (1)",
+          "key": "value"
+        }
+      }
+    }
+  }
+}
+```
+
+#### Track state example
+
+Given the track state call:
+
+```swift
+MobileCore.track(state: "view name", data: ["&&events": "event5,event2=2"])
+```
+
+ The resulting Experience Event has the following payload:
+
+```json
+{
+  "data":{
+    "__adobe": {
+      "analytics": {
+        "pageName": "view name",
+        "cp": "foreground",
+        "events": "event5,event2=2",
+        "contextData":{
+          "a.AppID": "myApp 1.0 (1)"
+        }
+      }
+    }
+  }
+}
+```
+
 #### Messaging
 
 Change usages of `Messaging.handleNotificationResponse(_:applicationOpened:withCustomActionId:)` and `Messaging.handleNotificationResponse(_:closure:)` to `Messaging.handleNotificationResponse(_:urlHandler:closure:)`
