@@ -8,11 +8,20 @@ keywords:
 
 # Release notes
 
+## March 20, 2024
+
+### iOS Campaign Standard 5.0.0
+
+Major version update for [Campaign Standard](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
 ## February 28, 2024
 
 ### iOS Campaign Standard 4.0.1
 
-- Added max versions to Platform dependencies in podspec
+* Added max versions to Platform dependencies in podspec
 
 ## September 21, 2023
 
