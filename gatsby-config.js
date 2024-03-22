@@ -240,6 +240,16 @@ module.exports = {
                                 ]
                             },
                             {
+                                title: "Code-based Experiences",
+                                path: "/edge/adobe-journey-optimizer/code-based",
+                                pages: [
+                                    {
+                                        title: "API reference",
+                                        path: "/edge/adobe-journey-optimizer/code-based/api-reference"
+                                    }
+                                ]
+                            },
+                            {
                                 title: "Public classes and enums",
                                 path: "/edge/adobe-journey-optimizer/public-classes",
                                 pages: [

@@ -100,3 +100,4 @@ You can update the SDK configuration, including the Messaging configuration valu
 
 * [Push notification implementation guide](./push-notification/index.md)
 * [In-App message implementation guide](./in-app-message/index.md)
+* [Code-based experiences implementation guide](./code-based/index.md)
