@@ -457,7 +457,7 @@ public extension Offer {
   /// The Edge `sendEvent(experienceEvent:_:)` API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, or override dataset identifier.
   ///
   /// - Note: The returned XDM data also contains the `eventType` for the Experience Event with value `decisioning.propositionDisplay`.
-  /// - Returns A dictionary containing XDM data for the propositon interactions.
+  /// - Returns A dictionary containing XDM data for the proposition interactions.
   func generateDisplayInteractionXdm() -> [String: Any] {...}
 
   /// Creates a dictionary containing XDM formatted data for `Experience Event - Proposition Interactions` field group from the given proposition option.
@@ -465,19 +465,19 @@ public extension Offer {
   /// The Edge `sendEvent(experienceEvent:_:)` API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, or override dataset identifier.
   ///
   /// - Note: The returned XDM data also contains the `eventType` for the Experience Event with value `decisioning.propositionInteract`.
-  /// - Returns A dictionary containing XDM data for the propositon interactions.
+  /// - Returns A dictionary containing XDM data for the proposition interactions.
   func generateTapInteractionXdm() -> [String: Any] {...}
 }
 ```
 
 ```swift
-public extension Proposition {
+public extension OptimizeProposition {
   /// Creates a dictionary containing XDM formatted data for `Experience Event - Proposition Reference` field group from the given proposition.
   ///
   /// The Edge `sendEvent(experienceEvent:_:)` API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, or override dataset identifier.
   ///
   /// - Note: The returned XDM data does not contain an `eventType` for the Experience Event.
-  /// - Returns A dictionary containing XDM data for the propositon reference.
+  /// - Returns A dictionary containing XDM data for the proposition reference.
   func generateReferenceXdm() -> [String: Any] {...}
 }
 ```

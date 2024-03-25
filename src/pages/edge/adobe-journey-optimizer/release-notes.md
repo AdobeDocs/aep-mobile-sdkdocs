@@ -15,12 +15,12 @@ Major version update for [Adobe Journey Optimizer](./index.md) for Adobe Experie
 
 * Updated the minimum supported version to iOS 12.0.
 * Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
-* Added `handleNotificationResponse(_:urlHandler:closure:)` API to provide more control over URL handling from `UNNotificationResponse` objects.
+* Added [`handleNotificationResponse(_:urlHandler:closure:)`](./api-reference/#handlenotificationresponse) API to provide more control over URL handling from `UNNotificationResponse` objects.
   * Removed deprecated public API `Messaging.handleNotificationResponse(_:applicationOpened:withCustomActionId:)`.
   * Removed public API `Messaging.handleNotificationResponse(_:closure:)` API.
 * Added support for [Code Based Experiences](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based).
-  * Added public API `Messaging.updatePropositionsForSurfaces(_)`.
-  * Added public API `Messaging.getPropositionsForSurfaces(_:completion:)`.
+  * Added public API [`Messaging.updatePropositionsForSurfaces(_)`](./code-based/api-reference/#updatepropositionsforsurfaces).
+  * Added public API [`Messaging.getPropositionsForSurfaces(_:completion:)`](./code-based/api-reference/#getpropositionsforsurfaces).
 
 ## March 5, 2024
 
