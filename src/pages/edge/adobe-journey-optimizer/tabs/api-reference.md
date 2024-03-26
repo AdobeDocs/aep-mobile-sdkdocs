@@ -74,8 +74,8 @@ public static void handleNotificationResponse(final Intent intent,
 
 ```swift
 static func handleNotificationResponse(_ response: UNNotificationResponse,
-                                        applicationOpened: Bool,
-                                        customActionId: String?)
+                                       urlHandler: ((URL) -> Bool)? = nil,
+                                          closure: ((PushTrackingStatus) -> Void)? = nil)
 ```
 
 #### Objective-C
@@ -83,16 +83,16 @@ static func handleNotificationResponse(_ response: UNNotificationResponse,
 **Syntax**
 
 ```objc
-+ (void)handleNotificationResponse:(UNNotificationResponse *)response
-                            applicationOpened: (BOOL)applicationOpened
-                            customActionId: (NSString *)customActionId;
++ (void) handleNotificationResponse: (UNNotificationResponse *) response
+                         urlHandler: (BOOL (^)(NSURL *url)) handler 
+                            closure: (void (^)(PushTrackingStatus status)) closure;
 ```
 
 | **Parameter** | **Type** | **Description** |
 | :----------- | :------- | :-------------- |
-| `response` | UNNotificationResponse | An object containing information about the push notification details. |
-| `applicationOpened` | Boolean | Shows whether the application has been opened or not. |
-| `customActionId` | String | The ID of the custom action. |
+| `response` | `UNNotificationResponse` | An object containing information about the push notification details. |
+| `urlHandler` | `((URL) -> Bool)?` | An optional method to handle the actionable URL from the push notification. |
+| `closure` | `((PushTrackingStatus) -> Void)?` | An optional callback with `PushTrackingStatus` representing the tracking status of the interacted notification. |
 
 <Variant platform="android" api="register-extension" repeat="5"/>
 
