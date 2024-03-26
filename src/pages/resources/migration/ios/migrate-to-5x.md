@@ -80,7 +80,7 @@ As of version 5.0.0 of the Adobe Experience Platform Edge Bridge for iOS, the ta
 
 | Data | Key path in v4.x | Key path in v5.+ | Description |
 | --- | --- | --- | --- |
-| Action | `data.action` | `data.__adobe.analytics.linkName` | As of v5, set as the custom link name in the Analytics hit. The field `data.__adobe.analytics.linkType` with value `lnk_o` is also automatically included. |
+| Action | `data.action` | `data.__adobe.analytics.linkName` | As of v5, set as the custom link name in the Analytics hit. The field `data.__adobe.analytics.linkType` with value `other` is also automatically included. |
 | State | `data.state` | `data.__adobe.analytics.pageName` | As of v5, set as the page name in the Analytics hit. |
 | Context data | `data.contextdata` | `data.__adobe.analytics.contextData` | Context data is a map which includes the custom keys and values specified in the `trackAction` and `trackState` API calls. |
 | Context data prefixed with "&&" | `data.contextdata`| `data.__adobe.analytics` | Before v5, there was no special handling of context data prefixed with "&&".  <br/> <br/>  As of v5, context data keys prefixed with "&&" are automatically mapped to Analytics variables and no longer include the "&&" prefix. For example, the key `&&products` is sent as `data.__adobe.analytics.products`. Please note that these keys must be known to Analytics and are case sensitive. Find the full list of supported Analytics variables [here](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping). |
@@ -103,7 +103,7 @@ The resulting Experience Event has the following payload:
     "__adobe": {
       "analytics": {
         "linkName": "action name",
-        "linkType": "lnk_o",
+        "linkType": "other",
         "cp": "foreground",
         "products": ";Running Shoes;1;69.95;event1|event2=55.99;eVar1=12345",
         "contextData":{
