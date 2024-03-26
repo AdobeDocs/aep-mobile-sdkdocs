@@ -240,6 +240,16 @@ module.exports = {
                                 ]
                             },
                             {
+                                title: "Code-based Experiences",
+                                path: "/edge/adobe-journey-optimizer/code-based",
+                                pages: [
+                                    {
+                                        title: "API reference",
+                                        path: "/edge/adobe-journey-optimizer/code-based/api-reference"
+                                    }
+                                ]
+                            },
+                            {
                                 title: "Public classes and enums",
                                 path: "/edge/adobe-journey-optimizer/public-classes",
                                 pages: [
@@ -258,6 +268,18 @@ module.exports = {
                                     {
                                         title: "MessagingEdgeEventType",
                                         path: "/edge/adobe-journey-optimizer/public-classes/messaging-edge-event-type"
+                                    },
+                                    {
+                                        title: "Proposition",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/proposition"
+                                    },
+                                    {
+                                        title: "PropositionItem",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/proposition-item"
+                                    },
+                                    {
+                                        title: "Surface",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/surface"
                                     }
                                 ]
                             },
