@@ -99,3 +99,72 @@ Some of the APIs available in previous major versions of the Mobile SDK for Andr
 <InlineAlert variant="warning" slots="text"/>
 
 The `registerExtension` API for each extension that was deprecated in the 2.x version of the mobile SDK has been removed in the 3.x version of the mobile SDK. See the [Update SDK initialization](#update-sdk-initialization) section for more details.
+
+#### Edge Bridge
+
+As of version 3.0.0 of the Adobe Experience Platform Edge Bridge for Android, the table below shows how the `trackAction` and `trackState` parameters map to the `data` node of the Experience Event sent to the Experience Platform Edge Network. Edge Network automatically maps these data variables to Adobe Analytics without additional server-side configuration. If you are using Edge Bridge version 2.x and mapping data to XDM in your datastream, adjustments are required for version 3.0.0.
+
+| Data | Key path in v2.x | Key path in v3.+ | Description |
+| --- | --- | --- | --- |
+| Action | `data.action` | `data.__adobe.analytics.linkName` | As of v3, set as the custom link name in the Analytics hit. The field `data.__adobe.analytics.linkType` with value `other` is also automatically included. |
+| State | `data.state` | `data.__adobe.analytics.pageName` | As of v3, set as the page name in the Analytics hit. |
+| Context data | `data.contextdata` | `data.__adobe.analytics.contextData` | Context data is a map which includes the custom keys and values specified in the `trackAction` and `trackState` API calls. |
+| Context data prefixed with "&&" | `data.contextdata`| `data.__adobe.analytics` | Before v3, there was no special handling of context data prefixed with "&&".  <br/> <br/>  As of v3, context data keys prefixed with "&&" are automatically mapped to Analytics variables and no longer include the "&&" prefix. For example, the key `&&products` is sent as `data.__adobe.analytics.products`. Please note that these keys must be known to Analytics and are case sensitive. Find the full list of supported Analytics variables [here](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping). |
+| App identifier | Not included | `data.__adobe.analytics.contextData.a.AppID` | As of v3, the application identifier is automatically added to every tracking event under the key name `a.AppID`.|
+| Customer perspective | Not included|  `data.__adobe.analytics.cp` | As of v3, the customer perspective is automatically added to every tracking event. The values are either `foreground` or `background`. |
+
+##### Track action example
+
+Given the track action call:
+
+```kotlin
+MobileCore.trackAction("action name", mapOf("key" to "value", "&&products" to ";Running Shoes;1;69.95;event1|event2=55.99;eVar1=12345"))
+```
+
+The resulting Experience Event has the following payload:
+
+```json
+{
+  "data":{
+    "__adobe": {
+      "analytics": {
+        "linkName": "action name",
+        "linkType": "other",
+        "cp": "foreground",
+        "products": ";Running Shoes;1;69.95;event1|event2=55.99;eVar1=12345",
+        "contextData":{
+          "a.AppID": "myApp 1.0 (1)",
+          "key": "value"
+        }
+      }
+    }
+  }
+}
+```
+
+##### Track state example
+
+Given the track state call:
+
+```kotlin
+MobileCore.trackState("view name", mapOf("&&events" to "event5,event2=2"))
+```
+
+ The resulting Experience Event has the following payload:
+
+```json
+{
+  "data":{
+    "__adobe": {
+      "analytics": {
+        "pageName": "view name",
+        "cp": "foreground",
+        "events": "event5,event2=2",
+        "contextData":{
+          "a.AppID": "myApp 1.0 (1)"
+        }
+      }
+    }
+  }
+}
+```
