@@ -11,7 +11,7 @@ This guide outlines the available options for migrating to Edge Network and Anal
 
 The **Edge Network extension** and its `sendEvent` API is the recommended implementation path for sending data to Analytics through Edge Network. It sends Experience Data Model (XDM) formatted data directly to Edge Network, which is well understood by Experience Platform and upstream services. That means the same XDM events can be used in Analytics and other powerful solutions within Experience Platform, such as Journey Optimizer, Journey Orchestration, and Server-Side Forwarding.
 
-The **Edge Bridge extension** offers a drop in solution for migrating existing Analytics extension implementations using the `MobileCore.trackAction` / `MobileCore.trackState` APIs. Edge Bridge automatically routes those API calls to the Edge Network. However, the data from these events must be mapped to an XDM schema using Data Prep for Data Collection before the Experience Platform and upstream services can use it.
+The **Edge Bridge extension** offers a drop in solution for migrating existing Analytics extension implementations using the `MobileCore.trackAction` / `MobileCore.trackState` APIs. Edge Bridge automatically routes those API calls to the Edge Network and the Adobe Analytics upstream service when enabled in the datastream configuration.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -22,7 +22,7 @@ Edge Bridge only supports the Analytics drop-in migration case. If you are looki
 |       |  API for sending data | Extensions| XDM transform location |  Platform support with latest Mobile SDKs | Can send to other services (configurable in Datastreams)  |
 | ----------- | ----------- |-----------|-----------|-----------|-----------|
 | **Edge Network extension** | Edge.sendEvent | 1. Edge Network extension <br/> 2. Identity for Edge Network extension | Client-side| iOS, Android, tvOS, Flutter, React Native | Yes |
-| **Edge Bridge extension** | MobileCore.trackAction <br/> MobileCore.trackState | 1. Edge Bridge extension <br/> 2. Edge Network extension <br/> 3. Identity for Edge Network extension| Server-side through Data Prep mapping| iOS, Android, tvOS, Flutter, React Native | Yes |
+| **Edge Bridge extension** | MobileCore.trackAction <br/> MobileCore.trackState | 1. Edge Bridge extension <br/> 2. Edge Network extension <br/> 3. Identity for Edge Network extension| Not required for Analytics. <br/> Server-side Data Prep mapping to XDM in datastream if data is needed for other services. | iOS, Android, Flutter, React Native | Yes |
 | **Analytics extension** | MobileCore.trackAction <br/>  MobileCore.trackState | 1. Analytics extension <br/> 2. Identity for Experience Cloud ID Service extension | N/A| iOS, Android, tvOS <br/> (Not supported on Flutter, React Native)| N/A |
 
 <InlineAlert variant="info" slots="text"/>
@@ -46,7 +46,7 @@ Other foundational extensions include the [Consent for Edge Network extension](.
 | 6. **Remove the Analytics extension** dependency and extension registration from your mobile app code. <br/> **NOTE:** You should still keep the Analytics extension installed in the mobile property (tag) to ensure published versions of your app (pre-migration) continue to work seamlessly. |  ✅ | ✅ |
 | 7 .**Use Edge.sendEvent API** to send data in XDM format to Edge Network based on the schema you have defined. |  ✅ |  |
 | 8. **Keep existing MobileCore.trackAction / MobileCore.trackState API calls** to send data in context data format to Experience Platform.|  | ✅ |
-| 9. **Map your context data to XDM** in Data Prep for Data Collection.|  | ✅ |
+| 9. **(Optional) Map your context data to XDM** in Data Prep for Data Collection if required for other services. Not required for Analytics.| | ✅ |
 
 ### Implement the Edge Network extension
 
