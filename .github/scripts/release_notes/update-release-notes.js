@@ -12,7 +12,7 @@ governing permissions and limitations under the License.
 
 const { fetchReleaseInfo } = require('./github-release');
 const { fetchAndroidReleaseInfo } = require('./android-release');
-const { capitalizeFirstLetter, convertIOSDateToRleaseDateFormat, extractReleaseNotes } = require('./utils');
+const { capitalizeFirstLetter, convertISODateToRleaseDateFormat, extractReleaseNotes } = require('./utils');
 const lodashTemplate = require('lodash.template');
 const fs = require("fs");
 
@@ -102,12 +102,12 @@ function extractBOMTableContent(releaseNote) {
     return newLines
 }
 
-function generateReleaseNoteSection(IOSDateString, platform, extension, version, releaseNote) {
+function generateReleaseNoteSection(ISODateString, platform, extension, version, releaseNote) {
     let array = extractReleaseNotes(releaseNote)
     // remove the empty lines
     array = array.filter(line => line.trim() != '')
     let releaseNoteSection = releaseNoteTemplateGenerator({
-        date: convertIOSDateToRleaseDateFormat(IOSDateString),
+        date: convertISODateToRleaseDateFormat(ISODateString),
         title: `${platform} ${extension} ${version}`,
         note: array.join('\n')
     })
@@ -125,10 +125,10 @@ function generateReleaseNoteSectionWithoutDateLine(platform, extension, version,
     return releaseNoteSection
 }
 
-function generateBOMReleaseNoteSection(IOSDateString, platform, extension, version, releaseNote) {
+function generateBOMReleaseNoteSection(ISODateString, platform, extension, version, releaseNote) {
     let array = extractBOMTableContent(releaseNote)
     let releaseNoteSection = BOMreleaseNoteTemplateGenerator({
-        date: convertIOSDateToRleaseDateFormat(IOSDateString),
+        date: convertISODateToRleaseDateFormat(ISODateString),
         title: generateReleaseTitle(platform, extension, version),
         note: array.join('\n')
     })
@@ -199,7 +199,7 @@ async function updateReleaseNotesPage(filePath, releaseInfoArray) {
             console.error(`Already updated: ${titleLine}`)
             continue
         }
-        let dateStr = convertIOSDateToRleaseDateFormat(releaseInfo.published_at)
+        let dateStr = convertISODateToRleaseDateFormat(releaseInfo.published_at)
         let dateLine = `## ${dateStr}`
         // If the date line exists in the file, find the index of the date line and add the release notes after it.
         if (hasLineStartWith(dateLine, contentLines)) {

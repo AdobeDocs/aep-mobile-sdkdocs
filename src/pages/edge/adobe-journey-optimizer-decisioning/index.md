@@ -271,7 +271,7 @@ iOS
 
 ### Proposition tracking using Edge extension API
 
-For more advanced tracking use cases, additional public methods are available in the `Offer` and `Proposition` classes. These methods can be used to generate XDM formatted data for `Experience Event - Proposition Interactions` and `Experience Event - Proposition Reference` field groups.
+For more advanced tracking use cases, additional public methods are available in the `Offer` and `Proposition`/`OptimizeProposition` classes. These methods can be used to generate XDM formatted data for `Experience Event - Proposition Interactions` and `Experience Event - Proposition Reference` field groups.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
