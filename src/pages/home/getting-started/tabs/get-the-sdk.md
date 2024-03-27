@@ -41,7 +41,7 @@ For the latest Flutter installation instructions, see the package [install tab](
 Add the dependencies to `build.gradle` for each extension.
 
 ```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
 implementation 'com.adobe.marketing.mobile:userprofile'
 implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:identity'
