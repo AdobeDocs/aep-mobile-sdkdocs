@@ -20,7 +20,7 @@ This document describes how to fetch, display and track code-based experiences  
 
 ## Fetch and cache the code-based content
 
-To fetch the content for the surfaces configured in Adobe Journey Optimizer campaigns, call the [updatePropositionsForSurfaces](../api-reference.md#updatepropositionsforsurfaces) API . It is encouraged to batch requesting multiple [Surface](../public-classes/surface.md) URIs in a single API call when possible. The returned code-based experiences are cached in-memory by the Messaging extension and persists through the lifecycle of the app (i.e as long as the app is running). An example of the call is shown below.
+To fetch the content for the surfaces configured in Adobe Journey Optimizer campaigns, call the [updatePropositionsForSurfaces](../api-reference.md#updatepropositionsforsurfaces) API . You should batch requesting multiple [Surface](../public-classes/surface.md) URIs in a single API call when possible. The returned code-based experiences are cached in-memory by the Messaging extension and persists through the lifecycle of the app (i.e as long as the app is running). An example of the call is shown below:
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -34,7 +34,7 @@ iOS
 
 ## Retrieve cached propositions
 
-To retrieve the previously fetched content from the in-memory cache, call [getPropositionsForSurfaces](../api-reference.md#getpropositionsforsurfaces)  API with a list of required surface URIs and a completion handler. The completion handler will be invoked with a list of [Proposition](../public-classes/proposition.md) objects corresponding to the requested surfaces, or AEPError object if an error occurs. If a requested surface was not previously cached prior to calling `getPropositionsForSurfaces` (using the `updatePropositionsForSurfaces` API), no propositions will be returned for that surface. The below example shows how to retrieve the content for the previously cached surfaces.
+To retrieve the previously fetched content from the in-memory cache, call the [getPropositionsForSurfaces](../api-reference.md#getpropositionsforsurfaces)  API with a list of required surface URIs and a completion handler. The completion handler will be invoked with a list of [Proposition](../public-classes/proposition.md) objects corresponding to the requested surfaces, or AEPError object if an error occurs. If a requested surface was not previously cached prior to calling `getPropositionsForSurfaces` (using the `updatePropositionsForSurfaces` API), no propositions will be returned for that surface. The below example shows how to retrieve the content for the previously cached surfaces.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -48,9 +48,9 @@ iOS
 
 ## Using the retrieved propositions
 
-The [Proposition](../public-classes/proposition.md) object returned in the completion handler encapsulates the content specified for the corresponding surface, as well as information needed for tracking interactions with the content. Multiple Proposition  objects can be returned for a single surface based on the number of campaigns configured for it in Adobe Journey Optimizer. Each Proposition  object in turn can contain multiple items, represented by the [PropositionItem](../public-classes/proposition-item.md) class, based on how the campaign's content is defined. To access the content, iterate through the list of PropositionItem  present in the returned list of Propositions. The SchemaType of the PropositionItem indicates the type of content it contains and can be used to determine how to render or interpret the returned content. The PropositionItem  class contains helper functions to access the different types of supported content.
+The [Proposition](../public-classes/proposition.md) object returned in the completion handler encapsulates the content specified for the corresponding surface, as well as information needed for tracking interactions with the content. Multiple Proposition objects can be returned for a single surface based on the number of campaigns configured for it in Adobe Journey Optimizer. Each Proposition object in turn can contain multiple items, represented by the [PropositionItem](../public-classes/proposition-item.md) class, based on how the campaign's content is defined. To access the content, iterate through the list of PropositionItem present in the returned list of Propositions. The SchemaType of the PropositionItem indicates the type of content it contains and can be used to determine how to render or interpret the returned content. The PropositionItem class contains helper functions to access the different types of supported content.
 
-The below example shows how to iterate through the propositions returned earlier and display content of type HTML in a WebView. The code is solely for demonstrating the functionality offered by the SDK and should not be considered as the only way to use the returned propositions. Please adapt the solution to suit the needs of your application.
+The following example shows how to iterate through the propositions returned earlier and display content of type HTML in a WebView. The code is solely for demonstrating the functionality offered by the SDK and should not be considered as the only way to use the returned propositions. Please adapt the solution to suit the needs of your application.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -64,7 +64,7 @@ iOS
 
 ## Tracking interactions with code-based experiences
 
-Since the onus of rendering the code-based experience lies with the app developer, it is your responsibility to monitor the desired end user interactions and call the appropriate tracking APIs. To record an interaction with the code-based content, call the [track](../public-classes/proposition-item.md#track) API provided in the `PropositionItem` class. The below code shows two examples of tracking: when the content is displayed to the user and when the user clicks on the content. These examples are for illustrating how to call track  API and not a recommendation on where it should be called. Please examine your app workflow to find the appropriate way to perform tracking.
+Since the onus of rendering the code-based experience lies with the app developer, you must monitor the desired end user interactions and call the appropriate tracking APIs. To record an interaction with the code-based content, call the [track](../public-classes/proposition-item.md#track) API provided in the `PropositionItem` class. The below code shows two examples of tracking: when the content is displayed to the user and when the user clicks on the content. These examples are for illustrating how to call the track  API and not a recommendation on where it should be called. Please examine your app workflow to find the appropriate way to perform tracking.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
