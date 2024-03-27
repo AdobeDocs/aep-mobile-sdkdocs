@@ -70,7 +70,7 @@ Once the previous command is complete, run `pod install` or `pod update` to upda
 
 If you are using Swift Package Manger (SPM) for managing your app dependencies, you can now include the Experience Platform 5.x SDKs either through Xcode UI, or by declaring them as dependencies in the Package.swift project file. For more details, follow the guide for [managing dependencies using Swift Package Manager](../../manage-spm-dependencies.md).
 
-## Update outdated API references
+## API migration and breaking changes
 
 When updating to the Experience Platform 5.x SDKs, please take note of the following updates for API references.
 
