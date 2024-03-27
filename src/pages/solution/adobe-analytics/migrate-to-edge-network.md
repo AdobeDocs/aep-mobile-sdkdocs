@@ -37,7 +37,7 @@ Other foundational extensions include the [Consent for Edge Network extension](.
 
 | Steps  |  Edge Network extension | Edge Bridge extension |
 | ----------- | ----------- | ----------- |
-| 1. [Set up an XDM schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html). Experience Data Model (XDM) is the open and publicly documented data model standard created by Adobe to standardize data collection, and is used across applications that leverage Experience Platform. <br/> **NOTE:** Take advantage of [automatic Analytics variable mapping](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html) of XDM fields to Analytics dimensions by using the Adobe managed XDM schemas for Lifecycle, Media, Commerce, and more.| ✅  | ✅ |
+| 1. [Set up an XDM schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html). Experience Data Model (XDM) is the open and publicly documented data model standard created by Adobe to standardize data collection, and is used across applications that leverage Experience Platform. <br/> **NOTE:** Take advantage of [automatic Analytics variable mapping](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html) of XDM fields to Analytics dimensions by using the Adobe managed XDM schemas for Lifecycle, Media, Commerce, and more.| ✅  |  |
 | 2. [Configure a datastream](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/overview.html). A datastream is the server-side configuration used when implementing the Experience Platform Mobile SDK. | ✅  | ✅ |
 | 3. **Add the Adobe Analytics service** to your datastream. The datastream controls both whether and how data is sent to Adobe Analytics. You will need your Analytics report suite ID (RSID) for this step.  | ✅ | ✅ |
 | 4. **Install the *Edge Network* and *Identity for Edge Network extensions*** in the mobile property (tag) in Data Collection UI, and set the datastream in the Edge Network extension configuration. |  ✅ | ✅ |
@@ -46,7 +46,7 @@ Other foundational extensions include the [Consent for Edge Network extension](.
 | 6. **Remove the Analytics extension** dependency and extension registration from your mobile app code. <br/> **NOTE:** You should still keep the Analytics extension installed in the mobile property (tag) to ensure published versions of your app (pre-migration) continue to work seamlessly. |  ✅ | ✅ |
 | 7 .**Use Edge.sendEvent API** to send data in XDM format to Edge Network based on the schema you have defined. |  ✅ |  |
 | 8. **Keep existing MobileCore.trackAction / MobileCore.trackState API calls** to send data in context data format to Experience Platform.|  | ✅ |
-| 9. **(Optional) Map your context data to XDM** in Data Prep for Data Collection if required for other services. Not required for Analytics.| | ✅ |
+| 9. **(Optional) Map your context data to XDM** in Data Prep for Data Collection if required for other services. Not required for Analytics. <br/> **Note:** Mapping using Data Prep for Data Collection requires an [XDM schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) to be configured for your datastream.| | ✅ |
 
 ### Implement the Edge Network extension
 
