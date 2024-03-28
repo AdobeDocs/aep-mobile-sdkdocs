@@ -246,6 +246,10 @@ module.exports = {
                                     {
                                         title: "API reference",
                                         path: "/edge/adobe-journey-optimizer/code-based/api-reference"
+                                    },
+                                    {
+                                        title: "Tutorial",
+                                        path: "/edge/adobe-journey-optimizer/code-based/tutorial"
                                     }
                                 ]
                             },
