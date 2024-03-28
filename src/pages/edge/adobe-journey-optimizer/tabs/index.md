@@ -9,7 +9,7 @@ noIndex: true
 1. Add the Mobile Core, Edge, Edge Identity, and Messaging extensions to your project using the app's Gradle file.
 
 ```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
 implementation "com.adobe.marketing.mobile:core"
 implementation "com.adobe.marketing.mobile:edgeidentity"
 implementation "com.adobe.marketing.mobile:edge"

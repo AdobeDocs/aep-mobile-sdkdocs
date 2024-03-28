@@ -7,7 +7,7 @@ noIndex: true
 Add the Mobile Core, Edge, Identity for Edge Network and Optimize dependencies in your app's gradle file.
 
 ```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
 implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:edge'
 implementation 'com.adobe.marketing.mobile:edgeidentity'
