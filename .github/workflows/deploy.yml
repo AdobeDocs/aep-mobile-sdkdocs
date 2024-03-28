@@ -270,7 +270,7 @@ jobs:
           fastly-url: '${{ secrets.AIO_FASTLY_PROD_URL }}${{ needs.set-state.outputs.path_prefix }}'
       - name: Get current date for release tag
         id: date
-        run: echo "TAG_DATE="$(TZ=\"America/Los_Angeles\" date +\'%Y-%m-%d\')"" >> $GITHUB_ENV
+        run: echo "TAG_DATE=$(TZ="America/Los_Angeles" date +'%Y-%m-%d')" >> "$GITHUB_ENV"
       - name: Create GitHub release tag
         id: create_release
         uses: release-drafter/release-drafter@v5
