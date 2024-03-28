@@ -43,12 +43,20 @@ Messaging.getPropositionsForSurfaces(surfaces, new AdobeCallbackWithError<Map<Su
     public void fail(final AdobeError adobeError) {
         // handle error
     }
- 
+
     @Override
     public void call(Map<Surface, List<Proposition>> propositionsMap) {
-        if (propositionsMap != null && !propositionsMap.isEmpty()) {
-           // get the content for the given surfaces
+        // get the content for the given surfaces
+        if (propositionsMap == null || propositionsMap.isEmpty()) {
+            // bail early if no propositions are found
+            return;
         }
+
+        // read surface1 propositions
+        List<Proposition> propositionsForSurface1 = propositionsMap.get(surface1);
+
+        // read surface2 propositions
+        List<Proposition> propositionsForSurface2 = propositionsMap.get(surface2);
     }
 });
 ```
@@ -67,8 +75,8 @@ Messaging.getPropositionsForSurfaces([surface1, surface2]) { propositionsDict, e
         return
     }
  
-    guard let propositionsDict = propositionsDict else {
-        /// bail early if no propositions
+    guard let propositionsDict = propositionsDict, !propositionsDict.isEmpty else {
+        /// bail early if no propositions are found
         return
     }
      
@@ -89,15 +97,16 @@ Messaging.getPropositionsForSurfaces([surface1, surface2]) { propositionsDict, e
 
 ```java
 // get the propositions for surface1
-if (propositionsMap.contains(surface1)) {
-    // read propositions for surface1
-    final List<Proposition> propositionsForSurface1 = propositionsMap.get(surface1)
-    // iterate through items in proposition
-    for (final PropositionItem propositionItem: propositionsForSurface1.get(0).getItems()) {
-        if (propositionItem.getSchema() == SchemaType.HTML_CONTENT) {
-            final String htmlContent = propositionItem.getHtmlContent();
-            webView.loadData(htmlContent, "text/html", "UTF-8");
-        }
+if (propositionsForSurface1 == null || propositionsForSurface1.isEmpty()) {
+    // bail early if no propositions are found for surface1
+    return;
+}
+
+// iterate through items in proposition
+for (final PropositionItem propositionItem: propositionsForSurface1.get(0).getItems()) {
+    if (propositionItem.getSchema() == SchemaType.HTML_CONTENT) {
+        final String htmlContent = propositionItem.getHtmlContent();
+        webView.loadData(htmlContent, "text/html", "UTF-8");
     }
 }
 ```
@@ -112,7 +121,7 @@ if let codePropositions: [Proposition] = propositionsDict?[surface1], !codePropo
     /// iterate through items in proposition
     ForEach(codePropositions.first?.items as? [PropositionItem] ?? [], id:\.itemId) { propositionItem in
         if propositionItem.schema == .htmlContent {
-            CustomHtmlView(htmlString: propositionItem.htmlContent)
+            let webView = WebView(htmlString: propositionItem.htmlContent)
         }
     }
 }
@@ -127,6 +136,7 @@ if let codePropositions: [Proposition] = propositionsDict?[surface1], !codePropo
 webView.setWebViewClient(new WebViewClient() {
     @Override
     public void onPageFinished(WebView view, String url) {
+        // use the same propositionItem object that was used to get the content for the webview in the previous section
         propositionItem.track(MessagingEdgeEventType.DISPLAY);
     }
 });
@@ -134,6 +144,7 @@ webView.setWebViewClient(new WebViewClient() {
 // Tracking interaction with PropositionItem
 webView.setOnTouchListener((v, event) -> {
     if(event.getAction() == MotionEvent.ACTION_UP) {
+        // use the same propositionItem object that was used to get the content for the webview in the previous section
         propositionItem.track("click", MessagingEdgeEventType.INTERACT, null);
     }
     return false;
@@ -145,12 +156,14 @@ webView.setOnTouchListener((v, event) -> {
 #### Swift
 
 ```swift
-CustomHtmlView.onAppear {
+webView.onAppear {
         /// Tracking display of PropositionItem
+        /// use the same propositionItem object that was used to get the content for the webview in the previous section
         propositionItem.track(withEdgeEventType: MessagingEdgeEventType.display)
     }
     .onTapGesture {
-        /// Tracking interaction with PropositionItem
+        /// Tracking interaction with PropositionItem        
+        /// use the same propositionItem object that was used to get the content for the webview in the previous section
         propositionItem.track("tap", withEdgeEventType: MessagingEdgeEventType.display)
     }
 ```
@@ -175,5 +188,5 @@ propositionItem.track("click", MessagingEdgeEventType.INTERACT, tokenList);
 ```swift
 /// Tracking interaction with PropositionItem with tokens
 /// Extract the tokens from the PropositionItem item data
-propositionItem.track("click", withEdgeEventType: MessagingEdgeEventType.interact, forTokens: [dataItemToken1, dataItemToken1])
+propositionItem.track("click", withEdgeEventType: .interact, forTokens: [dataItemToken1, dataItemToken2])
 ```
