@@ -99,3 +99,26 @@ Some of the APIs available in previous major versions of the Mobile SDK for Andr
 <InlineAlert variant="warning" slots="text"/>
 
 The `registerExtension` API for each extension that was deprecated in the 2.x version of the mobile SDK has been removed in the 3.x version of the mobile SDK. See the [Update SDK initialization](#update-sdk-initialization) section for more details.
+
+#### MobileCore
+
+| Removed API | Alternative API |
+| :------------- | :-------------- |
+|MobileCore.registerExtension| [MobileCore.registerExtensions](../../../home/base/mobile-core/api-reference.md#registerextensions) |
+| MobileCore.start| [MobileCore.registerExtensions](../../../home/base/mobile-core/api-reference.md#registerextensions) registers extensions and starts event processing by default |
+| MobileCore.dispatchEvent(Event, ExtensionErrorCallback)| [MobileCore.dispatch(Event)](../../../home/base/mobile-core/api-reference.md#registerextensions#dispatch--dispatchevent) , [MobileCore.dispatchEventWithResponseCallback(Event, long, AdobeCallbackWithError)](../../../home/base/mobile-core/api-reference.md#registerextensions#dispatch--dispatcheventwithresponsecallback) |
+| MobileCore.dispatchEvent(Event, AdobeCallback, ExtensionErrorCallback)| [MobileCore.dispatchEventWithResponseCallback(Event, long, AdobeCallbackWithError)](../../../home/base/mobile-core/api-reference.md#registerextensions#dispatch--dispatcheventwithresponsecallback) |
+| MobileCore.dispatchResponseEvent | Use **Event.Builder.inResponseToEvent(Event)** to create a response event |
+| MobileCore.dispatchEventWithResponseCallback(Event, AdobeCallbackWithError)| Use [MobileCore.dispatchEventWithResponseCallback(Event, long, AdobeCallbackWithError)](../../../home/base/mobile-core/api-reference.md#registerextensions#dispatch--dispatcheventwithresponsecallback) to explicitly specify a timeout |
+| MobileCore.log | Use logging methods exposed via **com.adobe.marketing.mobile.services.Log** |
+| MobileCore.setMessagingDelegate | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelgate** and use **ServiceProvider.getUIService().setPresentationDelegate** |
+| MobileCore.getMessagingDelegate | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelgate**. API to retrieve currently set PresentationDelegate is unavailable. |
+| ServiceProvider.setMessagingDelegate | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelgate** and use **ServiceProvider.getUIService().setPresentationDelegate** |
+| ServiceProvider.getMessagingDelegate | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelgate**. API to retrieve currently set PresentationDelegate is unavailable. |
+| ServiceProvider.setURIHandler | Use **ServiceProvider.getUriService().setUriHandler** |
+
+## Frequently asked questions
+
+### Why do I see 'unresolved reference' errors related to `MessagingDelegate` when upgrading to 3.x SDK?
+
+The Mobile Core 3.x SDK for Android includes changes to SDK presentation management that break compatiblity with earlier versions of the SDK. `com.adobe.marketing.mobile.services.MessagingDelegate` and its usage has been removed in favor of `com.adobe.marketing.mobile.services.ui.PresentationDelegate`. If your application uses `MessagingDelegate` for granular control of in-app messages, refer to this [page](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate/) for more details on using `PresentationDelegate`.
