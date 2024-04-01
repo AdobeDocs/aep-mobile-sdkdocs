@@ -15,6 +15,7 @@ const { fetchAndroidReleaseInfo } = require('./android-release');
 const { capitalizeFirstLetter, convertISODateToRleaseDateFormat, extractReleaseNotes } = require('./utils');
 const lodashTemplate = require('lodash.template');
 const fs = require("fs");
+const _ = require('lodash');
 
 const repoNames = [
     "aepsdk-roku",
@@ -102,10 +103,27 @@ function extractBOMTableContent(releaseNote) {
     return newLines
 }
 
+function trimEmptyItem(items) {
+    // Find the index of the first non-empty item
+    const firstNonEmptyIndex = _.findIndex(items, item => item.trim() !== '');
+
+    // Find the index of the last non-empty item
+    const lastNonEmptyIndex = _.findLastIndex(items, item => item.trim() !== '');
+
+    // If no non-empty items are found, return an empty array
+    if (firstNonEmptyIndex === -1 || lastNonEmptyIndex === -1) {
+        return [];
+    }
+
+    // Return the array sliced from the first to the last non-empty item
+    return items.slice(firstNonEmptyIndex, lastNonEmptyIndex + 1);
+}
+
 function generateReleaseNoteSection(ISODateString, platform, extension, version, releaseNote) {
     let array = extractReleaseNotes(releaseNote)
     // remove the empty lines
-    array = array.filter(line => line.trim() != '')
+    // array = array.filter(line => line.trim() != '')
+    array = trimEmptyItem(array)
     let releaseNoteSection = releaseNoteTemplateGenerator({
         date: convertISODateToRleaseDateFormat(ISODateString),
         title: `${platform} ${extension} ${version}`,
@@ -117,7 +135,8 @@ function generateReleaseNoteSection(ISODateString, platform, extension, version,
 function generateReleaseNoteSectionWithoutDateLine(platform, extension, version, releaseNote) {
     let array = extractReleaseNotes(releaseNote)
     // remove the empty lines
-    array = array.filter(line => line.trim() != '')
+    // array = array.filter(line => line.trim() != '')
+    array = trimEmptyItem(array)
     let releaseNoteSection = releaseNoteWithoutDateTemplateGenerator({
         title: `${platform} ${extension} ${version}`,
         note: array.join('\n')
