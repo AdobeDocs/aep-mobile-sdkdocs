@@ -103,7 +103,7 @@ function extractBOMTableContent(releaseNote) {
     return newLines
 }
 
-function trimEmptyItem(items) {
+function cleanupReleaseContent(items) {
     // Find the index of the first non-empty item
     const firstNonEmptyIndex = _.findIndex(items, item => item.trim() !== '');
 
@@ -116,14 +116,14 @@ function trimEmptyItem(items) {
     }
 
     // Return the array sliced from the first to the last non-empty item
-    return items.slice(firstNonEmptyIndex, lastNonEmptyIndex + 1);
+    const trimmedItems = items.slice(firstNonEmptyIndex, lastNonEmptyIndex + 1);
+    // If the first non-empty item is "-", replace it with "*"
+    return trimmedItems.map(item => item.replace(/^\s*-/, '*'))
 }
 
 function generateReleaseNoteSection(ISODateString, platform, extension, version, releaseNote) {
     let array = extractReleaseNotes(releaseNote)
-    // remove the empty lines
-    // array = array.filter(line => line.trim() != '')
-    array = trimEmptyItem(array)
+    array = cleanupReleaseContent(array)
     let releaseNoteSection = releaseNoteTemplateGenerator({
         date: convertISODateToRleaseDateFormat(ISODateString),
         title: `${platform} ${extension} ${version}`,
@@ -134,9 +134,7 @@ function generateReleaseNoteSection(ISODateString, platform, extension, version,
 
 function generateReleaseNoteSectionWithoutDateLine(platform, extension, version, releaseNote) {
     let array = extractReleaseNotes(releaseNote)
-    // remove the empty lines
-    // array = array.filter(line => line.trim() != '')
-    array = trimEmptyItem(array)
+    array = cleanupReleaseContent(array)
     let releaseNoteSection = releaseNoteWithoutDateTemplateGenerator({
         title: `${platform} ${extension} ${version}`,
         note: array.join('\n')
