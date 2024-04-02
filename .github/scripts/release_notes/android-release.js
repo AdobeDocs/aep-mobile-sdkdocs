@@ -158,7 +158,7 @@ function buildGitHubInfo(artifactId, artifactVersion) {
         case "identity":
         case "signal":
             return {
-                repoName: `aepsdk-${artifactId}-android`,
+                repoName: `aepsdk-core-android`,
                 tagName: `v${artifactVersion}-${artifactId}`
             }
 
