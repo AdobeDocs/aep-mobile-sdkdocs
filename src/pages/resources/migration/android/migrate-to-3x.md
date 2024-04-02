@@ -111,11 +111,18 @@ The `registerExtension` API for each extension that was deprecated in the 2.x ve
 | MobileCore.dispatchResponseEvent | Use **Event.Builder.inResponseToEvent(Event)** to create a response event |
 | MobileCore.dispatchEventWithResponseCallback(Event, AdobeCallbackWithError)| Use [MobileCore.dispatchEventWithResponseCallback(Event, long, AdobeCallbackWithError)](../../../home/base/mobile-core/api-reference.md#registerextensions#dispatch--dispatcheventwithresponsecallback) to explicitly specify a timeout |
 | MobileCore.log | Use logging methods exposed via **com.adobe.marketing.mobile.services.Log** |
-| MobileCore.setMessagingDelegate | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelgate** and use **ServiceProvider.getUIService().setPresentationDelegate** |
-| MobileCore.getMessagingDelegate | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelgate**. API to retrieve currently set PresentationDelegate is unavailable. |
-| ServiceProvider.setMessagingDelegate | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelgate** and use **ServiceProvider.getUIService().setPresentationDelegate** |
-| ServiceProvider.getMessagingDelegate | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelgate**. API to retrieve currently set PresentationDelegate is unavailable. |
+| MobileCore.setMessagingDelegate | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **ServiceProvider.getUIService().setPresentationDelegate** |
+| MobileCore.getMessagingDelegate | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate**. API to retrieve currently set PresentationDelegate is unavailable. |
+| ServiceProvider.setMessagingDelegate | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **ServiceProvider.getUIService().setPresentationDelegate** |
+| ServiceProvider.getMessagingDelegate | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate**. API to retrieve currently set PresentationDelegate is unavailable. |
 | ServiceProvider.setURIHandler | Use **ServiceProvider.getUriService().setUriHandler** |
+
+#### UserProfile
+
+| Removed API | Alternative API |
+| :------------- | :-------------- |
+| UserProfile.updateUserAttribute | [UserProfile.updateUserAttributes](../../../home/base/profile/api-reference.md#updateuserattributes) |
+| UserProfile.removeUserAttribute | [UserProfile.removeUserAttributes](../../../home/base/profile/api-reference.md#removeuserattributes) |
 
 #### Edge Bridge
 
