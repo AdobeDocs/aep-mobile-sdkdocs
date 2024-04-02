@@ -8,6 +8,17 @@ keywords:
 
 # Release notes
 
+## April 1, 2024
+
+### Android Assurance 3.0.0
+
+Major version update for Adobe Experience Platform Mobile Assurance SDK on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* The SDK is now compatible with Kotlin 1.5 and higher.
+* Removed deprecated `registerExtension` API. Use the `MobileCore.registerExtensions()` API for registering extensions and initializing the SDK instead.
+* Migrated SDK UI components to Jetpack Compose.
+
 ## March 20, 2024
 
 ### iOS Assurance 5.0.0
