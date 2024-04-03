@@ -176,4 +176,4 @@ MobileCore.trackState("view name", mapOf("&&events" to "event5,event2=2"))
 | com.adobe.marketing.mobile:media:3.0.0 | com.adobe.marketing.mobile:core:2.+ | com.adobe.marketing.mobile:sdk-bom:2.+ |
 | com.adobe.marketing.mobile:media:3.1.0 | com.adobe.marketing.mobile:core:3.+ | com.adobe.marketing.mobile:sdk-bom:3.+ |
 
-Please note that the increment to 3.1.0 was preferred for this release in order to synchronize all extensions to same major version. For more details, see [Aligning major version releases for Adobe Experience Platform Mobile SDKs](https://developer.adobe.com/client-sdks/resources/major-version-alignment/).
+Please note that the increment to 3.1.0 was preferred for this release in order to synchronize all extensions to same major version. For more details, see this article on [aligning major version releases for Adobe Experience Platform Mobile SDKs](https://developer.adobe.com/client-sdks/resources/major-version-alignment/).
