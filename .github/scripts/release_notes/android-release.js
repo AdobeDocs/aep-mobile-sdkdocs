@@ -80,7 +80,7 @@ function artifactInfo(timestamp, artifactId, version) {
 }
 
 // Fetch the latest Android release info from GitHub
-async function fetchAndroidReleaseInfo(token, groupId, timestampInMilliseconds, capacity = 10) {
+async function fetchAndroidReleaseInfo(token, groupId, timestampInMilliseconds, capacity = 25) {
     let array = await fetchMavenArtifactInfo(groupId, capacity, timestampInMilliseconds);
     console.log("fetchMavenArtifactInfo():")
     console.log(array)
@@ -158,7 +158,7 @@ function buildGitHubInfo(artifactId, artifactVersion) {
         case "identity":
         case "signal":
             return {
-                repoName: `aepsdk-${artifactId}-android`,
+                repoName: `aepsdk-core-android`,
                 tagName: `v${artifactVersion}-${artifactId}`
             }
 
