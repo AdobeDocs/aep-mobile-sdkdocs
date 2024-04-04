@@ -95,11 +95,10 @@ async function fetchReleaseInfoWithTagName(token, owner, repo, tag) {
     };
 
     console.log(`request options: ${JSON.stringify(options)}`)
-
     return new Promise((resolve) => {
         let reqGet = https.request(options, function (res) {
             if (res.statusCode != 200) {
-                console.error(`Error: response statusCode: ${res.statusCode}, please check if the tag (${tag}) exists in Github repo.`)
+                throw Error(`Error: response statusCode: ${res.statusCode}, please check if the tag (${tag}) exists in Github repo.`)
             }
             console.log(`response statusCode: ${res.statusCode}`)
 

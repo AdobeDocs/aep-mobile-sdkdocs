@@ -52,23 +52,23 @@ public enum MessagingEdgeEventType {
 
 ```swift
 @objc(AEPMessagingEdgeEventType)
-public enum MessagingEdgeEventType: Int {
-    case inappDismiss = 0
-    case inappInteract = 1
-    case inappTrigger = 2
-    case inappDisplay = 3
+public enum MessagingEdgeEventType: Int {    
     case pushApplicationOpened = 4
     case pushCustomAction = 5
+    case dismiss = 6
+    case interact = 7
+    case trigger = 8
+    case display = 9
 
     public func toString() -> String {
         switch self {
-        case .inappDismiss:
+        case .dismiss:
             return MessagingConstants.XDM.IAM.EventType.DISMISS
-        case .inappTrigger:
+        case .trigger:
             return MessagingConstants.XDM.IAM.EventType.TRIGGER
-        case .inappInteract:
+        case .interact:
             return MessagingConstants.XDM.IAM.EventType.INTERACT
-        case .inappDisplay:
+        case .display:
             return MessagingConstants.XDM.IAM.EventType.DISPLAY
         case .pushCustomAction:
             return MessagingConstants.XDM.Push.EventType.CUSTOM_ACTION
@@ -94,9 +94,9 @@ public enum MessagingEdgeEventType: Int {
 
 | Case | String value |
 | ---- | ------------ |
-| inappDismiss | `decisioning.propositionDismiss` |
-| inappInteract | `decisioning.propositionInteract` |
-| inappTrigger | `decisioning.propositionTrigger` |
-| inappDisplay | `decisioning.propositionDisplay` |
+| dismiss | `decisioning.propositionDismiss` |
+| interact | `decisioning.propositionInteract` |
+| trigger | `decisioning.propositionTrigger` |
+| display | `decisioning.propositionDisplay` |
 | pushApplicationOpened | `pushTracking.applicationOpened` |
 | pushCustomAction | `pushTracking.customAction` |
