@@ -104,18 +104,36 @@ The `registerExtension` API for each extension that was deprecated in the 2.x ve
 
 | Removed API | Alternative API |
 | :------------- | :-------------- |
-|MobileCore.registerExtension| [MobileCore.registerExtensions](../../../home/base/mobile-core/api-reference.md#registerextensions) |
-| MobileCore.start| [MobileCore.registerExtensions](../../../home/base/mobile-core/api-reference.md#registerextensions) registers extensions and starts event processing by default |
+| MobileCore.registerExtension(Class, ExtensionErrorCallback) | [MobileCore.registerExtensions](../../../home/base/mobile-core/api-reference.md#registerextensions) |
+| MobileCore.start(AdobeCallback)| [MobileCore.registerExtensions](../../../home/base/mobile-core/api-reference.md#registerextensions) registers extensions and starts event processing by default |
 | MobileCore.dispatchEvent(Event, ExtensionErrorCallback)| [MobileCore.dispatch(Event)](../../../home/base/mobile-core/api-reference.md#dispatch--dispatchevent) , [MobileCore.dispatchEventWithResponseCallback(Event, long, AdobeCallbackWithError)](../../../home/base/mobile-core/api-reference.md#dispatch--dispatcheventwithresponsecallback) |
 | MobileCore.dispatchEvent(Event, AdobeCallback, ExtensionErrorCallback)| [MobileCore.dispatchEventWithResponseCallback(Event, long, AdobeCallbackWithError)](../../../home/base/mobile-core/api-reference.md#dispatch--dispatcheventwithresponsecallback) |
-| MobileCore.dispatchResponseEvent | Use **Event.Builder.inResponseToEvent(Event)** to create a response event |
+| MobileCore.dispatchResponseEvent(Event, Event, ExtensionErrorCallback) | Use **Event.Builder.inResponseToEvent(Event)** to create a response event |
 | MobileCore.dispatchEventWithResponseCallback(Event, AdobeCallbackWithError)| Use [MobileCore.dispatchEventWithResponseCallback(Event, long, AdobeCallbackWithError)](../../../home/base/mobile-core/api-reference.md#dispatch--dispatcheventwithresponsecallback) to explicitly specify a timeout |
-| MobileCore.log | Use logging methods exposed via **com.adobe.marketing.mobile.services.Log** |
-| MobileCore.setMessagingDelegate | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **ServiceProvider.getUIService().setPresentationDelegate** |
-| MobileCore.getMessagingDelegate | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate**. API to retrieve currently set PresentationDelegate is unavailable. |
-| ServiceProvider.setMessagingDelegate | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **ServiceProvider.getUIService().setPresentationDelegate** |
-| ServiceProvider.getMessagingDelegate | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate**. API to retrieve currently set PresentationDelegate is unavailable. |
-| ServiceProvider.setURIHandler | Use **ServiceProvider.getUriService().setUriHandler** |
+| MessagingDelegate | Refer to this [page](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate/) to migrate to PresentationDelegate |
+| InvalidInitException| This exception is no longer thrown by the SDK |
+
+##### Extension Development
+
+Core 3.0.0 is not binary compatible with extensions built using earlier versions. Third-party extension developers are required to recompile their extensions with this version of Core.
+
+| Removed API | Alternative API |
+| :------------- | :-------------- |
+| MobileCore.log(LoggingMode, String, String) | Use logging methods exposed via [com.adobe.marketing.mobile.services.Log](https://github.com/adobe/aepsdk-core-android/blob/v3.0.0-core/code/core/src/phone/java/com/adobe/marketing/mobile/services/Log.java) |
+| Event.copy() | Use [Event.Builder()](https://github.com/adobe/aepsdk-core-android/blob/v3.0.0-core/Documentation/EventHub/BuildingExtensions.md#creating-an-event) to create a new Event |
+| Extension.onUnexpectedError(ExtensionUnexpectedError) | This API is no longer supported by the SDK |
+| ExtensionApi.setSharedEventState(Map, Event, ExtensionErrorCallback)| [ExtensionApi.createSharedState(Map, Event)](https://github.com/adobe/aepsdk-core-android/blob/v3.0.0-core/Documentation/EventHub/BuildingExtensions.md#updating-shared-state), [ExtensionApi.createPendingSharedState(Event)](https://github.com/adobe/aepsdk-core-android/blob/v3.0.0-core/Documentation/EventHub/BuildingExtensions.md#creating-and-updating-a-pending-shared-state)  |
+| ExtensionApi.setXDMSharedEventState(Map, Event, ExtensionErrorCallback)| [ExtensionApi.createXDMSharedState(Map, Event)](https://github.com/adobe/aepsdk-core-android/blob/v3.0.0-core/Documentation/EventHub/BuildingExtensions.md#updating-xdm-shared-state), [ExtensionApi.createXDMPendingSharedState(Event)](https://github.com/adobe/aepsdk-core-android/blob/v3.0.0-core/Documentation/EventHub/BuildingExtensions.md#creating-and-updating-a-pending-xdm-shared-state) |
+| ExtensionApi.getSharedEventState(String, ExtensionErrorCallback)| [ExtensionApi.getSharedState(String, Event, boolean, SharedStateResolution)](https://github.com/adobe/aepsdk-core-android/blob/v3.0.0-core/Documentation/EventHub/BuildingExtensions.md#reading-shared-state-from-another-extension) |
+| ExtensionApi.getXDMSharedEventState(String, Event, ExtensionErrorCallback)| [ExtensionApi.getXDMSharedState(String, Event, boolean, SharedStateResolution)](https://github.com/adobe/aepsdk-core-android/blob/v3.0.0-core/Documentation/EventHub/BuildingExtensions.md#reading-xdm-shared-state-from-another-extension) |
+| ExtensionApi.clearSharedEventStates(ExtensionErrorCallback)| Use [ExtensionApi.createSharedState(Map, Event)](https://github.com/adobe/aepsdk-core-android/blob/v3.0.0-core/Documentation/EventHub/BuildingExtensions.md#updating-shared-state) with an empty state |
+| ExtensionApi.clearXDMSharedEventStates(ExtensionErrorCallback)| Use [ExtensionApi.createXDMSharedState(Map, Event)](https://github.com/adobe/aepsdk-core-android/blob/v3.0.0-core/Documentation/EventHub/BuildingExtensions.md#updating-xdm-shared-state) with an empty state |
+| ExtensionApi.registerEventListener(String, String, Class, ExtensionErrorCallback)| [ExtensionApi.registerEventListener(String, String,ExtensionEventListener)](https://github.com/adobe/aepsdk-core-android/blob/v3.0.0-core/Documentation/EventHub/BuildingExtensions.md#listener-example)|
+| ExtensionApi.registerWildcardEventListener(Class, ExtensionErrorCallback) | [ExtensionApi.registerEventListener(String, String, ExtensionEventListener)]() |
+| LaunchRulesEngine(ExtensionApi) | Use LaunchRulesEngine(String,ExtensionApi) to specify the name of the engine |
+| LaunchRulesEngine.process(Event) | LaunchRulesEngine.evaluateEvent(Event) |
+
+`ExtensionListener`, `ExtensionError`, `ExtensionUnexpectedError`, `ExtensionErrorCallback` classes have been removed as they are no longer referenced after above API changes.
 
 #### UserProfile
 
@@ -198,3 +216,25 @@ MobileCore.trackState("view name", mapOf("&&events" to "event5,event2=2"))
 ### Why do I see 'unresolved reference' errors related to `MessagingDelegate` when upgrading to 3.x SDK?
 
 The Mobile Core 3.x SDK for Android includes changes to SDK presentation management that break compatiblity with earlier versions of the SDK. `com.adobe.marketing.mobile.services.MessagingDelegate` and its usage has been removed in favor of `com.adobe.marketing.mobile.services.ui.PresentationDelegate`. If your application uses `MessagingDelegate` for granular control of in-app messages, refer to this [page](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate/) for more details on using `PresentationDelegate`.
+
+### Why do I see 'java.lang.NoSuchMethodError' after upgrading to the 3.x version of Mobile SDK for Android?
+
+The Mobile Core 3.x SDK for Android includes changes that break compatiblity with solution SDKs developed for earlier verisons of the Mobile Core SDK.
+
+If you attempt to use 3.x Mobile Core SDK with solution SDKs that were built for previous versions of Mobile Core in your app, you may encounter the following errors:
+
+```text
+2024-04-03 17:45:02.501 XXXXX-XXXX/XXXX E/AndroidRuntime: FATAL EXCEPTION: main
+    Process: XXX, PID: XXXXXX
+    java.lang.NoSuchMethodError: No static method getCore()Lcom/adobe/marketing/mobile/Core; in class Lcom/adobe/marketing/mobile/MobileCore; or its super classes (declaration of 'com.adobe.marketing.mobile.MobileCore' appears in XXX
+
+2024-04-03 17:45:02.501 XXXXX-XXXX/XXXX E/AndroidRuntime: FATAL EXCEPTION: main
+    Process: XXX, PID: XXXXX
+    java.lang.NoClassDefFoundError: Failed resolution of: Lcom/adobe/marketing/mobile/ExtensionErrorCallback;
+```
+
+To resolve these errors, upgrade all your solution SDKs to the [most recent versions](#update-dependencies) using Adobe SDK BOM.
+
+### Why do I see installation instructions related to older SDK versions on Data Collection UI?
+
+Upgrade the extensions within the mobile property in the Data Collection UI to see latest installation instructions for the mobile platform extensions.
