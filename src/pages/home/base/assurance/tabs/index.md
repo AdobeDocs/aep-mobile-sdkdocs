@@ -6,7 +6,7 @@ noIndex: true
 
 1. Add the following libraries to your project using the app's Gradle file.
 
-#### Kotlin 
+#### Kotlin
 
 ```java
 implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
