@@ -9,6 +9,10 @@ keywords:
 
 # Adobe Campaign Classic - push templates
 
+<InlineAlert variant="warning" slots="text"/>
+
+Push template functionality is only available in Adobe Campaign Classic Android SDK version 2.1.0 through the next major version release.
+
 This document outlines out of the box push templates supported in Adobe Campaign Classic extension.
 
 | **Template Name** | **Availability** | **Description** |

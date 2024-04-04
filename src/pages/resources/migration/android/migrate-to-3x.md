@@ -193,6 +193,32 @@ MobileCore.trackState("view name", mapOf("&&events" to "event5,event2=2"))
 }
 ```
 
+#### Messaging
+
+| Removed API | Alternative API |
+| :------------- | :-------------- |
+| Message.dismiss(boolean suppressAutoTrack) | [Message.dismiss()](../../../edge/adobe-journey-optimizer/public-classes/message.md#dismiss)|
+| Message.evaluateJavascript(String) | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **com.adobe.marketing.mobile.services.ui.message.InAppMessageEventHandler.evaluateJavascript(String, AdobeCallback)**. Refer to this [tutorial](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/javascript-from-native/) for more details |
+| Message.handleJavascriptMessage(String, AdobeCallback) | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **com.adobe.marketing.mobile.services.ui.message.InAppMessageEventHandler.handleJavascriptMessage(String, AdobeCallback)**. Refer to this [tutorial](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/native-from-javascript/) for more details |
+| Message.getParent() | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **com.adobe.marketing.mobile.messaging.MessagingUtils.getMessageForPresentable(Presentable)**. Refer to this [tutorial](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate/) for more details |
+| Message.getWebView() | This functionality is no longer supported |
+| MessagingDelegate.shouldShowMessage(FullscreenMessage) | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **PresentationDelegate.canShow(Presentable)**. Refer to this [tutorial](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate/) for more details|
+| MessagingDelegate.onShow(FullscreenMessage) | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **PresentationDelegate.onShow(Presentable)**. Refer to this [tutorial](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate/) for more details|
+| MessagingDelegate.onDismiss(FullscreenMessage) | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **PresentationDelegate.onDismiss(Presentable)**. Refer to this [tutorial](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate/) for more details|
+| MessagingDelegate.urlLoaded(String, FullscreenMessage) | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **PresentationDelegate.onContentLoaded(Presentable, PresentationListener.PresentationContent)**. Refer to this [tutorial](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate/) for more details|
+
+#### Optimize
+
+| Removed API | Alternative API |
+| :------------- | :-------------- |
+| com.adobe.marketing.mobile.optimize.Proposition | [com.adobe.marketing.mobile.optimize.OptimizeProposition](../../../edge/adobe-journey-optimizer-decisioning/api-reference/#propositionoptimizeproposition) |
+
+#### Adobe Campaign Classic
+
+| Removed API | Alternative API |
+| :------------- | :-------------- |
+| AEPMessagingService.handleRemoteMessage(Context, RemoteMessage) | Coming soon |
+
 ## Frequently asked questions
 
 ### Why do I see 'unresolved reference' errors related to `MessagingDelegate` when upgrading to 3.x SDK?

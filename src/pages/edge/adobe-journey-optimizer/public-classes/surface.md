@@ -44,9 +44,6 @@ iOS
 
 ## Android Interface - Surface
 
-### Coming soon
-
-<!-- 
 `Surface` class is used to create surface objects for requesting propositions in personalization query requests.
 
 ## Public functions
@@ -80,4 +77,3 @@ Returns this surface's URI as a string.
 Android
 
 <Tabs query="platform=android&function=get-uri"/>
--->

@@ -11,6 +11,10 @@ import Tabs from './tabs/basic.md'
 
 # Push template - basic
 
+<InlineAlert variant="warning" slots="text"/>
+
+Push template functionality is only available in Adobe Campaign Classic Android SDK version 2.1.0 through the next major version release.
+
 Templates below show all available properties in their respective payloads for FCM (Android) and APNS (iOS).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>

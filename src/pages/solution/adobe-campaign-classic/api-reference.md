@@ -88,6 +88,10 @@ iOS
 
 ## Other public classes
 
+<InlineAlert variant="warning" slots="text"/>
+
+Push template functionality and the following public classes are only available in Adobe Campaign Classic Android SDK version from 2.1.0 through the next major version release.
+
 ### AEPMessagingService
 
 #### handleRemoteMessage

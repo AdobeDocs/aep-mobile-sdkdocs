@@ -123,9 +123,13 @@ iOS
 
 <Tabs query="platform=ios&api=decisionscope"/>
 
-### Proposition/OptimizeProposition
+### OptimizeProposition
 
 This class represents the decision propositions received from the decisioning services, upon a personalization query request to the Experience Edge network.
+
+<InlineAlert variant="warning" slots="text"/>
+
+In SDK versions lower than Android 3.0.0 and iOS 5.0.0, this class was named `Proposition`
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
