@@ -8,6 +8,18 @@ keywords:
 
 # Release notes
 
+## April 2, 2024
+
+### Android Campaign Standard 3.0.0
+
+Major version update for [Campaign](https://developer.adobe.com/client-sdks/solution/adobe-campaign-standard/) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* The SDK is now compatible with Kotlin 1.5 and higher. 
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Migrated Campaign SDK to use Jetpack Compose based UI Services from MobileCore 3.0.0
+* Moved code to create and track local notifications from Mobile Core to Campaign.
+
 ## March 20, 2024
 
 ### iOS Campaign Standard 5.0.0

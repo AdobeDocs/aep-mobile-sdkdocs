@@ -8,6 +8,16 @@ keywords:
 
 # Release notes
 
+## April 2, 2024
+
+### Android Campaign Classic 3.0.0
+
+Major version update for Adobe Experience Platform Mobile Campaign Classic SDK on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* The SDK is now compatible with Kotlin 1.5 and higher.
+* Removed the out-of-the-box push template handling code. This functionality will be available in a future Core 3.x release.
+
 ## March 20, 2024
 
 ### iOS Campaign Classic 5.0.0

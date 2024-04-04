@@ -8,6 +8,16 @@ keywords:
 
 # Release notes
 
+## April 2, 2024
+
+### Android Analytics 3.0.0
+
+Major version update for [Adobe Analytics](https://developer.adobe.com/client-sdks/solution/adobe-analytics/) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Added an enhancement to prevent network retries when the device's network is offline.
+
 ## March 20, 2024
 
 ### iOS Analytics 5.0.0

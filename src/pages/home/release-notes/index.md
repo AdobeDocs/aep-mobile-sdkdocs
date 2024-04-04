@@ -7,6 +7,163 @@ Keywords:
 
 # Release notes
 
+## April 2, 2024
+
+### Android EdgeMedia 3.0.0
+
+Major version update for [Adobe Streaming Media for Edge Network](https://developer.adobe.com/client-sdks/edge/media-for-edge-network/) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+* Updated the minimum supported Android API level to 21.
+
+### Android EdgeBridge 3.0.0
+
+Major version update for Edge Bridge for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Updated Edge Bridge data format to enhance support for migrating to sending data via Edge Network to Adobe Analytics and reduce the effort required for mapping data to XDM.
+* If you are currently using Edge Bridge version 2.x and you are mapping data to XDM in your datastream, adjustments will be necessary when adopting version 3.0.0. For more details, please review the [migration](https://developer.adobe.com/client-sdks/resources/migration/android/migrate-to-3x/) documentation.
+
+### Android Campaign Standard 3.0.0
+
+Major version update for [Campaign](https://developer.adobe.com/client-sdks/solution/adobe-campaign-standard/) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* The SDK is now compatible with Kotlin 1.5 and higher. 
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Migrated Campaign SDK to use Jetpack Compose based UI Services from MobileCore 3.0.0
+* Moved code to create and track local notifications from Mobile Core to Campaign.
+
+### Android Target 3.0.0
+
+Major version update for [Target](https://developer.adobe.com/client-sdks/solution/adobe-target/) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Migrated Target Preview to use Jetpack Compose based UI Services from MobileCore 3.0.0
+
+### Android Campaign Classic 3.0.0
+
+Major version update for Adobe Experience Platform Mobile Campaign Classic SDK on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* The SDK is now compatible with Kotlin 1.5 and higher.
+* Removed the out-of-the-box push template handling code. This functionality will be available in a future Core 3.x release.
+
+### Android Places 3.0.0
+
+Major version update for [Places](https://developer.adobe.com/client-sdks/solution/places/) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+
+### Android EdgeConsent 3.0.0
+
+Major version update for [Consent for Edge Network](https://developer.adobe.com/client-sdks/edge/consent-for-edge-network/) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+
+### Android Media 3.1.0
+
+Version update to 3.1.0 for [Adobe Analytics - Media Analytics workflows](https://developer.adobe.com/client-sdks/solution/adobe-media-analytics/) Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Added an enhancement to prevent network retries when the device's network is offline and improved logging. 
+
+Please note that the version 3.0.0 of the Adobe Analytics - Media Analytics extension is compatible with Mobile Core 2.x. The increment to 3.1.0 was preferred for this release in order to synchronize all extensions to same major version.
+
+### Android Edge 3.0.0
+
+Major version update for [Edge Network](https://developer.adobe.com/client-sdks/edge/edge-network/) Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Removed deprecated function `Formatters.dateToISO8601String()`, replaced by `TimeUtils.getISO8601UTCDateWithMilliseconds()` in MobileCore.
+* Removed deprecated function `Formatters.dateToShortDateString()`, replaced by `TimeUtils.getISO8601FullDate()` in MobileCore.
+* Added an enhancement to prevent network retries when the device's network is offline.
+
+### Android Audience 3.0.0
+
+Major version update for [Adobe Audience Manager](https://developer.adobe.com/client-sdks/solution/adobe-audience-manager/) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Added an enhancement to prevent network retries when the device's network is offline.
+
+### Android Analytics 3.0.0
+
+Major version update for [Adobe Analytics](https://developer.adobe.com/client-sdks/solution/adobe-analytics/) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Added an enhancement to prevent network retries when the device's network is offline.
+
+### Android EdgeIdentity 3.0.0
+
+Major version update for [Identity for Edge Network](https://developer.adobe.com/client-sdks/edge/identity-for-edge-network/) Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+
+## April 1, 2024
+
+### Android Assurance 3.0.0
+
+Major version update for Adobe Experience Platform Mobile Assurance SDK on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* The SDK is now compatible with Kotlin 1.5 and higher.
+* Removed deprecated `registerExtension` API. Use the `MobileCore.registerExtensions()` API for registering extensions and initializing the SDK instead.
+* Migrated SDK UI components to Jetpack Compose.
+
+### Android UserProfile 3.0.0
+
+Major version update for Adobe Experience Platform Mobile User Profile SDK on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the `MobileCore.registerExtensions()` API for registering extensions and initializing the SDK instead.
+* Removed deprecated `UserProfile.updateUserAttribute` API. Use the `UserProfile.updateUserAttributes` API instead.
+* Removed deprecated `UserProfile.removeUserAttribute` API. Use the `UserProfile.removeUserAttributes` API instead.
+
+### Android Signal 3.0.0
+
+Major version update for [Signal](https://developer.adobe.com/client-sdks/home/base/mobile-core/signal/) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* The SDK is now compatible with Kotlin 1.5 and higher.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Added an enhancement to prevent network retries when the device's network is offline.
+
+### Android Lifecycle 3.0.0
+
+Major version update for [Lifecycle](https://developer.adobe.com/client-sdks/home/base/mobile-core/lifecycle/) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+
+### Android Identity 3.0.0
+
+Major version update for [Identity](https://developer.adobe.com/client-sdks/home/base/mobile-core/identity/) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Added an enhancement to prevent network retries when the device's network is offline.
+
+### Android Core 3.0.0
+
+Major version update of Adobe Experience Platform Core Android SDK is live!
+
+Please note that the current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* The SDK is now compatible with Kotlin 1.5 and higher. 
+* Migrated UI service to use Jetpack Compose.
+* Removed deprecated `MobileCore.registerExtension(...)` and `MobileCore.start()` APIs. Use the `MobileCore.registerExtensions(...)` API for registering extensions and initializing the SDK instead.
+* Removed `MobileCore.setMessagingDelegate`, `MobileCore.getMessagingDelegate` APIs which were used to control the display of in-app messages. Migrate to `com.adobe.marketing.mobile.services.ui.PresentationDelegate` and use `ServiceProvider.getUIService().setPresentationDelegate` API instead.
+* Removed other APIs related to extension development which were deprecated in 2.0.0.
+* Added an enhancement to prevent network retries when the device's network is offline.
+
 ## March 20, 2024
 
 ### iOS Mobile Core 5.x and compatible extensions
