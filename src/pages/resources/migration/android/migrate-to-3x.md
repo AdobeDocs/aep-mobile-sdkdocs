@@ -104,11 +104,7 @@ The `registerExtension` API for each extension that was deprecated in the 2.x ve
 
 | Removed API | Alternative API |
 | :------------- | :-------------- |
-| MobileCore.registerExtension(Class, ExtensionErrorCallback) | [MobileCore.registerExtensions](../../../home/base/mobile-core/api-reference.md#registerextensions) |
 | MobileCore.start(AdobeCallback)| [MobileCore.registerExtensions](../../../home/base/mobile-core/api-reference.md#registerextensions) registers extensions and starts event processing by default |
-| MobileCore.dispatchEvent(Event, ExtensionErrorCallback)| [MobileCore.dispatch(Event)](../../../home/base/mobile-core/api-reference.md#dispatch--dispatchevent) , [MobileCore.dispatchEventWithResponseCallback(Event, long, AdobeCallbackWithError)](../../../home/base/mobile-core/api-reference.md#dispatch--dispatcheventwithresponsecallback) |
-| MobileCore.dispatchEvent(Event, AdobeCallback, ExtensionErrorCallback)| [MobileCore.dispatchEventWithResponseCallback(Event, long, AdobeCallbackWithError)](../../../home/base/mobile-core/api-reference.md#dispatch--dispatcheventwithresponsecallback) |
-| MobileCore.dispatchResponseEvent(Event, Event, ExtensionErrorCallback) | Use **Event.Builder.inResponseToEvent(Event)** to create a response event |
 | MobileCore.dispatchEventWithResponseCallback(Event, AdobeCallbackWithError)| Use [MobileCore.dispatchEventWithResponseCallback(Event, long, AdobeCallbackWithError)](../../../home/base/mobile-core/api-reference.md#dispatch--dispatcheventwithresponsecallback) to explicitly specify a timeout |
 | MessagingDelegate | Refer to this [page](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate/) to migrate to PresentationDelegate |
 | InvalidInitException| This exception is no longer thrown by the SDK |
@@ -120,6 +116,10 @@ Core 3.0.0 is not binary compatible with extensions built using earlier versions
 | Removed API | Alternative API |
 | :------------- | :-------------- |
 | MobileCore.log(LoggingMode, String, String) | Use logging methods exposed via [com.adobe.marketing.mobile.services.Log](https://github.com/adobe/aepsdk-core-android/blob/v3.0.0-core/code/core/src/phone/java/com/adobe/marketing/mobile/services/Log.java) |
+| MobileCore.registerExtension(Class, ExtensionErrorCallback) | [MobileCore.registerExtensions](../../../home/base/mobile-core/api-reference.md#registerextensions) |
+| MobileCore.dispatchEvent(Event, ExtensionErrorCallback)| [MobileCore.dispatch(Event)](../../../home/base/mobile-core/api-reference.md#dispatch--dispatchevent) , [MobileCore.dispatchEventWithResponseCallback(Event, long, AdobeCallbackWithError)](../../../home/base/mobile-core/api-reference.md#dispatch--dispatcheventwithresponsecallback) |
+| MobileCore.dispatchEvent(Event, AdobeCallback, ExtensionErrorCallback)| [MobileCore.dispatchEventWithResponseCallback(Event, long, AdobeCallbackWithError)](../../../home/base/mobile-core/api-reference.md#dispatch--dispatcheventwithresponsecallback) |
+| MobileCore.dispatchResponseEvent(Event, Event, ExtensionErrorCallback) | Use **Event.Builder.inResponseToEvent(Event)** to create a response event |
 | Event.copy() | Use [Event.Builder()](https://github.com/adobe/aepsdk-core-android/blob/v3.0.0-core/Documentation/EventHub/BuildingExtensions.md#creating-an-event) to create a new Event |
 | Extension.onUnexpectedError(ExtensionUnexpectedError) | This API is no longer supported by the SDK |
 | ExtensionApi.setSharedEventState(Map, Event, ExtensionErrorCallback)| [ExtensionApi.createSharedState(Map, Event)](https://github.com/adobe/aepsdk-core-android/blob/v3.0.0-core/Documentation/EventHub/BuildingExtensions.md#updating-shared-state), [ExtensionApi.createPendingSharedState(Event)](https://github.com/adobe/aepsdk-core-android/blob/v3.0.0-core/Documentation/EventHub/BuildingExtensions.md#creating-and-updating-a-pending-shared-state)  |
