@@ -129,7 +129,7 @@ Core 3.0.0 is not binary compatible with extensions built using earlier versions
 | ExtensionApi.clearSharedEventStates(ExtensionErrorCallback)| Use [ExtensionApi.createSharedState(Map, Event)](https://github.com/adobe/aepsdk-core-android/blob/v3.0.0-core/Documentation/EventHub/BuildingExtensions.md#updating-shared-state) with an empty state |
 | ExtensionApi.clearXDMSharedEventStates(ExtensionErrorCallback)| Use [ExtensionApi.createXDMSharedState(Map, Event)](https://github.com/adobe/aepsdk-core-android/blob/v3.0.0-core/Documentation/EventHub/BuildingExtensions.md#updating-xdm-shared-state) with an empty state |
 | ExtensionApi.registerEventListener(String, String, Class, ExtensionErrorCallback)| [ExtensionApi.registerEventListener(String, String,ExtensionEventListener)](https://github.com/adobe/aepsdk-core-android/blob/v3.0.0-core/Documentation/EventHub/BuildingExtensions.md#listener-example)|
-| ExtensionApi.registerWildcardEventListener(Class, ExtensionErrorCallback) | [ExtensionApi.registerEventListener(String, String, ExtensionEventListener)]() |
+| ExtensionApi.registerWildcardEventListener(Class, ExtensionErrorCallback) | [ExtensionApi.registerEventListener(String, String, ExtensionEventListener)](https://github.com/adobe/aepsdk-core-android/blob/v3.0.0-core/Documentation/EventHub/BuildingExtensions.md#wildcard-listeners) |
 | LaunchRulesEngine(ExtensionApi) | Use LaunchRulesEngine(String,ExtensionApi) to specify the name of the engine |
 | LaunchRulesEngine.process(Event) | LaunchRulesEngine.evaluateEvent(Event) |
 
@@ -210,6 +210,15 @@ MobileCore.trackState("view name", mapOf("&&events" to "event5,event2=2"))
   }
 }
 ```
+
+#### Adobe Analytics - Media Analytics for Audio & Video
+
+| Extension | Mobile Core compatibility | BOM version |
+|---|---|---|
+| com.adobe.marketing.mobile:media:3.0.0 | com.adobe.marketing.mobile:core:2.+ | com.adobe.marketing.mobile:sdk-bom:2.+ |
+| com.adobe.marketing.mobile:media:3.1.0 | com.adobe.marketing.mobile:core:3.+ | com.adobe.marketing.mobile:sdk-bom:3.+ |
+
+Please note that the increment to 3.1.0 was preferred for this release in order to synchronize all extensions to same major version. For more details, see this article on [aligning major version releases for Adobe Experience Platform Mobile SDKs](https://developer.adobe.com/client-sdks/resources/major-version-alignment/).
 
 ## Frequently asked questions
 
