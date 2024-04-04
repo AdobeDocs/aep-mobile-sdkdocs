@@ -4,7 +4,7 @@ noIndex: true
 
 <Variant platform="android" task="import-library" repeat="6"/>
 
-1. Add the following libraries in your project's `build.gradle` file:
+1. Add the following libraries to your project using the app's Gradle file.
 
 #### Kotlin 
 
@@ -17,7 +17,7 @@ implementation("com.adobe.marketing.mobile:assurance")
 #### Groovy
 
 ```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
 implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:assurance'
 ```

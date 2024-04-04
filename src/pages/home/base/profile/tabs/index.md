@@ -17,7 +17,7 @@ implementation("com.adobe.marketing.mobile:userprofile")
 #### Groovy
 
 ```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
 implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:userprofile'
 ```
