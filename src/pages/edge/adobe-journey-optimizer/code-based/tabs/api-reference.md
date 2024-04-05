@@ -2,11 +2,6 @@
 noIndex: true
 ---
 
-<Variant platform="android" api="get-propositions-for-surfaces" repeat="1"/>
-
-### Coming soon
-
-<!-- 
 <Variant platform="android" api="get-propositions-for-surfaces" repeat="6"/>
 
 #### Java
@@ -52,7 +47,6 @@ Messaging.getPropositionsForSurfaces(surfaces, new AdobeCallbackWithError<Map<Su
     }
 });
 ```
--->
 
 <Variant platform="ios" api="get-propositions-for-surfaces" repeat="12"/>
 
@@ -128,11 +122,6 @@ AEPSurface* surface2 = [[AEPSurface alloc] initWithPath: @"myView#button"];
 }];
 ```
 
-<Variant platform="android" api="update-propositions-for-surfaces" repeat="1"/>
-
-### Coming soon
-
-<!--
 <Variant platform="android" api="update-propositions-for-surfaces" repeat="6"/>
 
 #### Java
@@ -157,7 +146,6 @@ surfaces.add(surface2);
 
 Messaging.updatePropositionsForSurfaces(surfaces)
 ```
--->
 
 <Variant platform="ios" api="update-propositions-for-surfaces" repeat="12"/>
 

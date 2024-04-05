@@ -432,7 +432,7 @@ public void onCreate(Bundle savedInstanceState) {
     // add url string to Intent object mappings
     // e.g. urlToIntentMap.put("https://validUrl.com", new Intent());
     if (data != null) {
-      ServiceProvider.getInstance().setURIHandler(new URIHandler() {
+      ServiceProvider.getInstance().getUriService().setUriHandler(new URIHandler() {
         @Override
         public Intent getURIDestination(String uri) {
           return urlToIntentMap.get(uri);
