@@ -105,8 +105,10 @@ if (propositionsForSurface1 == null || propositionsForSurface1.isEmpty()) {
 // iterate through items in proposition
 for (final PropositionItem propositionItem: propositionsForSurface1.get(0).getItems()) {
     if (propositionItem.getSchema() == SchemaType.HTML_CONTENT) {
+        // retrieve the HTML content
         final String htmlContent = propositionItem.getHtmlContent();
-        webView.loadData(htmlContent, "text/html", "UTF-8");
+
+        // use retrieved html content
     }
 }
 ```
@@ -121,7 +123,10 @@ if let codePropositions: [Proposition] = propositionsDict?[surface1], !codePropo
     /// iterate through items in proposition
     ForEach(codePropositions.first?.items as? [PropositionItem] ?? [], id:\.itemId) { propositionItem in
         if propositionItem.schema == .htmlContent {
-            let webView = WebView(htmlString: propositionItem.htmlContent)
+            // retrieve the HTML content
+            let htmlContent = propositionItem.htmlContent
+
+            // use retrieved html content
         }
     }
 }
@@ -133,22 +138,12 @@ if let codePropositions: [Proposition] = propositionsDict?[surface1], !codePropo
 
 ```java
 // Tracking display of PropositionItem          
-webView.setWebViewClient(new WebViewClient() {
-    @Override
-    public void onPageFinished(WebView view, String url) {
-        // use the same propositionItem object that was used to get the content for the webview in the previous section
-        propositionItem.track(MessagingEdgeEventType.DISPLAY);
-    }
-});
+// use the same propositionItem object that was used to get the content in the previous section
+propositionItem.track(MessagingEdgeEventType.DISPLAY);
  
 // Tracking interaction with PropositionItem
-webView.setOnTouchListener((v, event) -> {
-    if(event.getAction() == MotionEvent.ACTION_UP) {
-        // use the same propositionItem object that was used to get the content for the webview in the previous section
-        propositionItem.track("click", MessagingEdgeEventType.INTERACT, null);
-    }
-    return false;
-});
+// use the same propositionItem object that was used to get the content in the previous section
+propositionItem.track("click", MessagingEdgeEventType.INTERACT, null);
 ```
 
 <Variant platform="ios" function="track" repeat="2"/>
@@ -156,16 +151,13 @@ webView.setOnTouchListener((v, event) -> {
 #### Swift
 
 ```swift
-webView.onAppear {
-        /// Tracking display of PropositionItem
-        /// use the same propositionItem object that was used to get the content for the webview in the previous section
-        propositionItem.track(withEdgeEventType: MessagingEdgeEventType.display)
-    }
-    .onTapGesture {
-        /// Tracking interaction with PropositionItem        
-        /// use the same propositionItem object that was used to get the content for the webview in the previous section
-        propositionItem.track("tap", withEdgeEventType: MessagingEdgeEventType.display)
-    }
+/// Tracking display of PropositionItem
+/// use the same propositionItem object that was used to get the content in the previous section
+propositionItem.track(withEdgeEventType: MessagingEdgeEventType.display)
+
+/// Tracking interaction with PropositionItem        
+/// use the same propositionItem object that was used to get the content in the previous section
+propositionItem.track("click", withEdgeEventType: MessagingEdgeEventType.display)
 ```
 
 <Variant platform="android" function="track-with-tokens" repeat="2"/>
