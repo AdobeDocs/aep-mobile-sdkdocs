@@ -28,7 +28,6 @@ implementation 'com.adobe.marketing.mobile:analytics'
 
 <Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>now works
 
-
 2. Import the Analytics extension in your application's main activity.
 
 #### Java
