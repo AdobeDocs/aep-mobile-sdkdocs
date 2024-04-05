@@ -1,4 +1,40 @@
-<Variant platform="android" task="obtain" repeat="3"/>
+<Variant platform="android3x" task="obtain" repeat="5"/>
+
+In the `onShow` function of the `PresentationDelegate`, obtain a reference to the `InAppMessageEventHandler` for use in Javascript interactions.
+
+#### Kotlin
+
+```kotlin
+var eventHandler: InAppMessageEventHandler? = null
+var currentMessagePresentable: Presentable<InAppMessage>? = null
+
+override fun onShow(presentable: Presentable<*>) {
+  if (presentable.getPresentation() !is InAppMessage) {
+    return
+  }
+  currentMessagePresentable = presentable as Presentable<InAppMessage>
+  eventHandler = currentMessagePresentable?.getPresentation()?.eventHandler
+
+}
+```
+
+#### Java
+
+```java
+InAppMessageEventHandler eventHandler = null;
+Presentable<InAppMessage> currentMessagePresentable = null;
+
+@Override
+public void onShow(Presentable<?> presentable) {
+    if (!(presentable.getPresentation() instanceof InAppMessage)) {
+      return;
+    }
+    currentMessagePresentable = (Presentable<InAppMessage>) presentable;
+    eventHandler = currentMessagePresentable.getPresentation().getEventHandler();
+}
+```
+
+<Variant platform="android2x" task="obtain" repeat="3"/>
 
 On Android, the web view is represented as `WebView`.  
 
@@ -34,7 +70,52 @@ func shouldShowMessage(message: Showable) -> Bool {
 }
 ```
 
-<Variant platform="android" task="call" repeat="4"/>
+<Variant platform="android3x" task="call" repeat="6"/>
+
+With a reference to the `InAppMessageEventHandler`, the instance method `evaluateJavascript(String, AdobeCallback<String>)` can now be leveraged to call a JavaScript method.
+
+Further details of this API are explained in the [Android](https://developer.android.com/reference/android/webkit/WebView#evaluateJavascript(java.lang.String,%20android.webkit.ValueCallback%3Cjava.lang.String%3E)) documentation - the example below is provided for the purpose of demonstration:
+
+#### Kotlin
+
+```kotlin
+var eventHandler: InAppMessageEventHandler? = null
+var currentMessagePresentable: Presentable<InAppMessage>? = null
+
+override fun onShow(presentable: Presentable<*>) {
+  if (presentable.getPresentation() !is InAppMessage) {
+    return
+  }
+  currentMessagePresentable = presentable as Presentable<InAppMessage>
+  eventHandler = currentMessagePresentable?.getPresentation()?.eventHandler
+  eventHandler?.evaluateJavascript("startTimer()") { content ->
+    // do something with the content
+  }
+}
+```
+
+#### Java
+
+```java
+InAppMessageEventHandler eventHandler = null;
+Presentable<InAppMessage> currentMessagePresentable = null;
+
+@Override
+public void onShow(Presentable<?> presentable) {
+  if (!(presentable.getPresentation() instanceof InAppMessage)) {
+    return;
+  }
+  currentMessagePresentable = (Presentable<InAppMessage>) presentable;
+  eventHandler = currentMessagePresentable.getPresentation().getEventHandler();
+  if (eventHandler != null) {
+    eventHandler.evaluateJavascript("startTimer()", s -> {
+    // do something with the content
+    });
+  }
+}
+```
+
+<Variant platform="android2x" task="call" repeat="4"/>
 
 With a reference to the `WebView`, the instance method `public void evaluateJavascript(@NonNull String script, @Nullable ValueCallback<String> resultCallback)` can now be leveraged to call a JavaScript method.
 

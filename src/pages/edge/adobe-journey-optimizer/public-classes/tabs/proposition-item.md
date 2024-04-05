@@ -87,7 +87,7 @@ public Map<String, Object> getJsonContentMap()
 **Syntax**
 
 ```java
-public List<Map<String, Object>> getJsonArrayList()
+public List<Map<String, Object>> getJsonContentArrayList()
 ```
 
 <Variant platform="android" function="generate-interaction-xdm" repeat="4"/>

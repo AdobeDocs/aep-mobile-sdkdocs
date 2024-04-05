@@ -216,7 +216,7 @@ module.exports = {
                                         path: "/edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate",
                                         pages: [
                                             {
-                                                title: "Progrmmatically control the display of in-app messages",
+                                                title: "Programmatically control the display of in-app messages",
                                                 path: "/edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate"
                                             },
                                             {

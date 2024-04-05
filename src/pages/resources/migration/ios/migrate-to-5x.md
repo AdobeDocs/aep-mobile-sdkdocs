@@ -158,4 +158,4 @@ For examples see [handleNotificationResponse](./../../../edge/adobe-journey-opti
 
 #### Optimize
 
-The `Proposition` class has been renamed to [`OptimizeProposition`](./../../../edge/adobe-journey-optimizer-decisioning/api-reference/#propositionoptimizeproposition).  All references should be updated accordingly.
+The `Proposition` class has been renamed to [`OptimizeProposition`](./../../../edge/adobe-journey-optimizer-decisioning/api-reference#optimizeproposition).  All references should be updated accordingly.

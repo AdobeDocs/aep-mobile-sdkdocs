@@ -7,6 +7,7 @@ keywords:
 - JavaScript event
 - Messaging
 - Messaging delegate
+- PresentationDelegate
 - Tutorial
 ---
 
@@ -16,23 +17,27 @@ import Tabs from './tabs/native-from-javascript.md'
 
 You can handle events from in-app message interactions natively within your application by completing the following steps:
 
-* [Implement and assign a `MessagingDelegate`](#implement-and-assign-a-messagingdelegate)
+* [Implement and assign a `PresentationDelegate`/`MessagingDelegate`](#implement-and-assign-a-presentationdelegate-messagingdelegate)
 * [Register a JavaScript handler for your In-App Message](#register-a-javascript-handler-for-your-in-app-message)
 * [Post the JavaScript message from your In-App Message](#post-the-javascript-message-from-your-in-app-message)
 
-## Implement and assign a `MessagingDelegate`
+## Implement and assign a `PresentationDelegate`/ `MessagingDelegate`
 
-To register a JavaScript event handler with a `Message` object, you will first need to implement and set a `MessagingDelegate`.
+To register a JavaScript event handler with a `Message` object, you will first need to implement and set a `PresentationDelegate` or `MessagingDelegate` (for older Android SDK versions and iOS SDK).
 
-For more detailed instructions on implementing and using a MessagingDelegate, please read the [tutorial on using MessagingDelegate](./messaging-delegate.md).
+Please read the [tutorial](./messaging-delegate.md) for more detailed instructions on implementing and using a PresentationDelegate/ MessagingDelegate (for older Android SDK versions and iOS SDK).
 
 ## Register a JavaScript handler for your In-App Message
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-Android
+Android 3.x
 
-<Tabs query="platform=android&function=register"/>
+<Tabs query="platform=android3x&function=register"/>
+
+Android 2.x (Older version)
+
+<Tabs query="platform=android2x&function=register"/>
 
 iOS
 
@@ -80,4 +85,4 @@ The test apps in this repository demonstrate calling native code from JavaScript
 
 * [Swift](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoApp)
 * [Objective-C](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoAppObjC)
-* [Java](https://github.com/adobe/aepsdk-messaging-android/tree/main/code/app)
+* [Kotlin](https://github.com/adobe/aepsdk-messaging-android/tree/main/code/testapp)
