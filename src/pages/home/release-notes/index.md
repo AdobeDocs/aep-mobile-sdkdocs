@@ -14,7 +14,7 @@ Keywords:
 New major version of the Mobile Core SDK for Android has been released along with updates to other extensions. The current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
-* The SDK is now compatible with Kotlin 1.5 and higher. 
+* The SDK is now compatible with Kotlin 1.5 and higher.
 * Added an enhancement to prevent network retries when the device's network is offline.
 * Migrated UI service to use Jetpack Compose.
 
@@ -41,7 +41,7 @@ Note that all these extensions must be updated together.
 * Android Adobe Target 3.0.0
 * Android Places Service 3.0.0
 
-**Android BOM 3.0.0** has been released and is the recommended way to manage these dependencies. 
+**Android BOM 3.0.0** has been released and is the recommended way to manage these dependencies.
 
 For help on moving to these versions, and information on deprecated APIs please see:
 
@@ -155,7 +155,7 @@ Version update to 3.1.0 for [Adobe Analytics - Media Analytics workflows](../../
 
 * Updated the minimum supported Android API level to 21.
 * Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
-* Added an enhancement to prevent network retries when the device's network is offline and improved logging. 
+* Added an enhancement to prevent network retries when the device's network is offline and improved logging.
 
 Please note that the version 3.0.0 of the Adobe Analytics - Media Analytics extension is compatible with Mobile Core 2.x. The increment to 3.1.0 was preferred for this release in order to synchronize all extensions to same major version.
 
@@ -180,7 +180,7 @@ Major version update for [Campaign Classic](../../solution/adobe-campaign-classi
 Major version update for [Campaign Standard](../../solution/adobe-campaign-standard/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
-* The SDK is now compatible with Kotlin 1.5 and higher. 
+* The SDK is now compatible with Kotlin 1.5 and higher.
 * Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
 * Migrated Campaign SDK to use Jetpack Compose based UI Services from MobileCore 3.0.0
 * Moved code to create and track local notifications from Mobile Core to Campaign.
@@ -209,7 +209,7 @@ Major version update of Adobe Experience Platform Core Android SDK is live!
 Please note that the current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
-* The SDK is now compatible with Kotlin 1.5 and higher. 
+* The SDK is now compatible with Kotlin 1.5 and higher.
 * Migrated UI service to use Jetpack Compose.
 * Removed deprecated `MobileCore.registerExtension(...)` and `MobileCore.start()` APIs. Use the `MobileCore.registerExtensions(...)` API for registering extensions and initializing the SDK instead.
 * Removed `MobileCore.setMessagingDelegate`, `MobileCore.getMessagingDelegate` APIs which were used to control the display of in-app messages. Migrate to `com.adobe.marketing.mobile.services.ui.PresentationDelegate` and use `ServiceProvider.getUIService().setPresentationDelegate` API instead.

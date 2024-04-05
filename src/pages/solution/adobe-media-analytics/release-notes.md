@@ -17,7 +17,7 @@ Version update to 3.1.0 for [Adobe Analytics - Media Analytics workflows](./inde
 
 * Updated the minimum supported Android API level to 21.
 * Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
-* Added an enhancement to prevent network retries when the device's network is offline and improved logging. 
+* Added an enhancement to prevent network retries when the device's network is offline and improved logging.
 
 Please note that the version 3.0.0 of the Adobe Analytics - Media Analytics extension is compatible with Mobile Core 2.x. The increment to 3.1.0 was preferred for this release in order to synchronize all extensions to same major version.
 
