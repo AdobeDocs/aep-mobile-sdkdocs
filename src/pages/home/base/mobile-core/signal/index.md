@@ -34,10 +34,6 @@ For more information about creating and configuring a rule in the Data Collectio
 
 ## Add the Signal extension to your app
 
-<InlineAlert variant="warning" slots="text"/>
-
-Using dynamic dependency versions is not recommended for production apps. Refer to this [page](../../../resources/manage-gradle-dependencies.md) for managing gradle dependencies.
-
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android

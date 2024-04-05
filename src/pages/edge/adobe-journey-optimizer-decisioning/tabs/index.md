@@ -2,38 +2,77 @@
 noIndex: true
 ---
 
-<Variant platform="android" task="install" repeat="3"/>
+import Alerts from '/src/pages/resources/alerts.md'
 
-Add the Mobile Core, Edge, Identity for Edge Network and Optimize dependencies in your app's gradle file.
+<Variant platform="android" task="install" repeat="8"/>
+
+1. Add the Mobile Core, Edge, Identity for Edge Network and Optimize dependencies in your app's gradle file.
+
+#### Kotlin
+
+```kotlin
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation("com.adobe.marketing.mobile:core")
+implementation("com.adobe.marketing.mobile:edgeidentity")
+implementation("com.adobe.marketing.mobile:edge")
+implementation("com.adobe.marketing.mobile:optimize")
+```
+
+#### Groovy
 
 ```java
 implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
 implementation 'com.adobe.marketing.mobile:core'
-implementation 'com.adobe.marketing.mobile:edge'
 implementation 'com.adobe.marketing.mobile:edgeidentity'
+implementation 'com.adobe.marketing.mobile:edge'
 implementation 'com.adobe.marketing.mobile:optimize'
 ```
 
-<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
+2. Import the Mobile Core, Edge, Edge Identity, and Optimize extensions in your application class.
 
-</InlineNestedAlert>
+```java
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Edge;
+import com.adobe.marketing.mobile.edge.identity.Identity;
+import com.adobe.marketing.mobile.Optimize;
+```
 
-<Variant platform="ios" task="install" repeat="2"/>
+<Variant platform="ios" task="install" repeat="7"/>
 
-Configure your app target to fetch Mobile Core, Edge, Identity for Edge Network and Optimize from Cocoapods by specifying the following pod dependencies in your `Podfile`.
+1. Configure your app target to fetch Mobile Core, Edge, Identity for Edge Network and Optimize from Cocoapods by specifying the following pod dependencies in your `Podfile`.
 
 ```swift
-platform :ios, '10.0'
-
 use_frameworks!
 target 'YourAppTarget' do
-    pod 'AEPCore'
-    pod 'AEPEdge'
-    pod 'AEPEdgeIdentity'
-    pod 'AEPOptimize'
+    pod 'AEPCore', '~> 5.0'
+    pod 'AEPEdge', '~> 5.0'
+    pod 'AEPEdgeIdentity', '~> 5.0'
+    pod 'AEPOptimize', '~> 5.0'
 end
+```
+
+2. Import the Mobile Core, Edge, Edge Identity, and Optimize libraries.
+
+#### Swift
+
+```swift
+// AppDelegate.swift
+import AEPCore
+import AEPEdge
+import AEPEdgeIdentity
+import AEPOptimize
+```
+
+#### Objective-C
+
+```objc
+// AppDelegate.h
+@import AEPCore;
+@import AEPEdge;
+@import AEPEdgeIdentity;
+@import AEPOptimize;
 ```
 
 <Variant platform="android" task="register" repeat="4"/>
