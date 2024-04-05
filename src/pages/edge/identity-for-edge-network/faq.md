@@ -147,5 +147,6 @@ If no other extension relies on the Identity for Experience Cloud ID Service ext
 1. Ensure that the output from the `getUrlVariables` API includes accurate **ECID** and **Experience Cloud orgID** values. Please note that the orgID set up for the Mobile SDK must match the orgID configured in the Web SDK.
 2. Make sure the timestamp (TS) included in the `getUrlVariables` result did not expire (that is, it is not older than 5 minutes since the time it was retrieved). For this reason, it is recommended that the result from `getUrlVariables` is not cached and reused in the app, but retrieved on demand before loading the WebView.
 3. The query string returned by the `getUrlVariables` API is already encoded, so please ensure that you do not re-encode the generated query string.
+4. If you are using Visitor ID and AppMeasurement, please make sure that you have the latest versions.
 
 For further information, refer to the documentation on [mobile-to-web and cross-domain ID sharing](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/id-sharing.html?lang=en) and [handling WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html?lang=en#implementation).

@@ -2,7 +2,33 @@
 noIndex: true
 ---
 
-<Variant platform="android" task="add" repeat="3"/>
+<Variant platform="android" task="add" repeat="10"/>
+
+1. Add the `Identity` library to your project using the app's gradle file.
+
+#### Kotlin
+
+```kotlin
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation("com.adobe.marketing.mobile:core")
+implementation("com.adobe.marketing.mobile:identity")
+```
+
+#### Groovy
+
+```java
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
+implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:identity'
+```
+
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
+
+</InlineNestedAlert>
+
+2. Import the Identity and MobileCore extensions in your application's main activity.
 
 #### Java
 
@@ -11,10 +37,21 @@ Import the library:
 ```java
 import com.adobe.marketing.mobile.MobileCore;
 import com.adobe.marketing.mobile.Identity;
-import com.adobe.marketing.mobile.Extension;
 ```
 
-<Variant platform="ios" task="add" repeat="4"/>
+<Variant platform="ios" task="add" repeat="7"/>
+
+1. Add the Mobile Core and Identity extensions to your project using Cocoapods. Add following pods in your `Podfile`:
+
+```ruby
+use_frameworks!
+target 'YourTargetApp' do
+    pod 'AEPCore', '~> 5.0'
+    pod 'AEPIdentity', '~> 5.0'
+end
+```
+
+2. Import the Identity library.
 
 #### Swift
 
@@ -48,7 +85,7 @@ After calling the `setApplication()` method in the `onCreate()` method, register
 #### Java
 
 ```java
-public class MobiletApp extends Application {
+public class MobileApp extends Application {
 @Override
 public void onCreate() {
 super.onCreate();
