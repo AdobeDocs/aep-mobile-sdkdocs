@@ -50,7 +50,7 @@ On [Experience Platform Data Collection](https://experience.adobe.com/#/data-col
 
 For the AEPOptimize APIs to work properly, you need to integrate Mobile Core and Edge extensions in your mobile app. For more details see, documentation on [Mobile Core](../../home/base/mobile-core/index.md) and [Adobe Experience Platform Edge Network](../../edge/edge-network/index.md).
 
-### Install the Experience Platform Mobile SDK
+#### Download and import the Optimize extension
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

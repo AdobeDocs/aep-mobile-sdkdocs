@@ -2,24 +2,31 @@
 noIndex: true
 ---
 
-<Variant platform="android" task="add" repeat="4"/>
+import Alerts from '/src/pages/resources/alerts.md'
 
-#### Java
+<Variant platform="android" task="add" repeat="6"/>
 
 Add the Mobile Core, Lifecycle and Campaign Classic dependencies in your app's Gradle file.
 
-```gradle
-implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+#### Kotlin
+
+```kotlin
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation("com.adobe.marketing.mobile:core")
+implementation("com.adobe.marketing.mobile:lifecycle")
+implementation("com.adobe.marketing.mobile:campaignclassic")
+```
+
+#### Groovy
+
+```java
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
 implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:lifecycle'
 implementation 'com.adobe.marketing.mobile:campaignclassic'
 ```
 
-<InlineNestedAlert variant="warning" header="false" iconPosition="left">
-
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
-
-</InlineNestedAlert>
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
 <Variant platform="ios" task="add" repeat="4"/>
 
@@ -28,8 +35,8 @@ Add the Campaign Classic and [Mobile Core](../../home/base/mobile-core/index.md)
 You can add the following pods to your `Podfile`:
 
 ```ruby
-pod 'AEPCore'
-pod 'AEPCampaignClassic'
+pod 'AEPCore', '~> 5.0'
+pod 'AEPCampaignClassic', '~> 5.0'
 ```
 
 or you can manually include the XCFrameworks by following this GitHub [documentation](https://github.com/adobe/aepsdk-campaignclassic-ios/#binaries).
