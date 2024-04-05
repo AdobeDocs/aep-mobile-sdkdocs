@@ -35,7 +35,7 @@ This Mobile SDK version for iOS now supports a minimum iOS version of 12.0 and a
 If you have implemented Adobe Experience Platform 4.x SDKs for iOS, then this guide will help you understand the steps required to migrate your implementation to the Experience Platform 5.x SDKs. In summary, you'll need to:
 
 1. [Update dependencies](#update-dependencies)
-2. [Update outdated API references](#update-outdated-api-references)
+2. [Handle API migration and breaking changes](#handle-api-migration-and-breaking-changes)
 
 ### Update dependencies
 
@@ -70,7 +70,7 @@ Once the previous command is complete, run `pod install` or `pod update` to upda
 
 If you are using Swift Package Manger (SPM) for managing your app dependencies, you can now include the Experience Platform 5.x SDKs either through Xcode UI, or by declaring them as dependencies in the Package.swift project file. For more details, follow the guide for [managing dependencies using Swift Package Manager](../../manage-spm-dependencies.md).
 
-## Update outdated API references
+## Handle API migration and breaking changes
 
 When updating to the Experience Platform 5.x SDKs, please take note of the following updates for API references.
 
@@ -80,7 +80,7 @@ As of version 5.0.0 of the Adobe Experience Platform Edge Bridge for iOS, the ta
 
 | Data | Key path in v4.x | Key path in v5.+ | Description |
 | --- | --- | --- | --- |
-| Action | `data.action` | `data.__adobe.analytics.linkName` | As of v5, set as the custom link name in the Analytics hit. The field `data.__adobe.analytics.linkType` with value `lnk_o` is also automatically included. |
+| Action | `data.action` | `data.__adobe.analytics.linkName` | As of v5, set as the custom link name in the Analytics hit. The field `data.__adobe.analytics.linkType` with value `other` is also automatically included. |
 | State | `data.state` | `data.__adobe.analytics.pageName` | As of v5, set as the page name in the Analytics hit. |
 | Context data | `data.contextdata` | `data.__adobe.analytics.contextData` | Context data is a map which includes the custom keys and values specified in the `trackAction` and `trackState` API calls. |
 | Context data prefixed with "&&" | `data.contextdata`| `data.__adobe.analytics` | Before v5, there was no special handling of context data prefixed with "&&".  <br/> <br/>  As of v5, context data keys prefixed with "&&" are automatically mapped to Analytics variables and no longer include the "&&" prefix. For example, the key `&&products` is sent as `data.__adobe.analytics.products`. Please note that these keys must be known to Analytics and are case sensitive. Find the full list of supported Analytics variables [here](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping). |
@@ -103,7 +103,7 @@ The resulting Experience Event has the following payload:
     "__adobe": {
       "analytics": {
         "linkName": "action name",
-        "linkType": "lnk_o",
+        "linkType": "other",
         "cp": "foreground",
         "products": ";Running Shoes;1;69.95;event1|event2=55.99;eVar1=12345",
         "contextData":{
@@ -158,4 +158,4 @@ For examples see [handleNotificationResponse](./../../../edge/adobe-journey-opti
 
 #### Optimize
 
-The `Proposition` class has been renamed to [`OptimizeProposition`](./../../../edge/adobe-journey-optimizer-decisioning/api-reference/#propositionoptimizeproposition).  All references should be updated accordingly.
+The `Proposition` class has been renamed to [`OptimizeProposition`](./../../../edge/adobe-journey-optimizer-decisioning/api-reference#optimizeproposition).  All references should be updated accordingly.

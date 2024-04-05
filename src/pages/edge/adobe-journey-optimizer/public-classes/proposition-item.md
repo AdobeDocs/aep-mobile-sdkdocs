@@ -92,10 +92,6 @@ iOS
 
 ## Android Interface - PropositionItem
 
-### Coming soon
-
-<!--
-
 ## Public functions
 
 ### getItemId
@@ -197,5 +193,3 @@ Tracks interaction with the given proposition item for the provided decision ite
 Android
 
 <Tabs query="platform=android&function=track-with-tokens"/>
-
--->
