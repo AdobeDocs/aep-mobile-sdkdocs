@@ -127,7 +127,7 @@ interface PresentationListener {
 }
 ```
 
-#### PresentationDelegate interface
+#### PresentationLever interface
 
 **Kotlin**
 

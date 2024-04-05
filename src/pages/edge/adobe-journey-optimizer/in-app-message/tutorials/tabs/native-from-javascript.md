@@ -37,7 +37,7 @@ Presentable<InAppMessage> currentMessagePresentable = null;
 
 @Override
 public void onShow(Presentable<?> presentable) {
-    if (presentable.getPresentation() !is InAppMessage) {
+    if (!(presentable.getPresentation() instanceof InAppMessage)) {
       return;
     }
     currentMessagePresentable = (Presentable<InAppMessage>) presentable;

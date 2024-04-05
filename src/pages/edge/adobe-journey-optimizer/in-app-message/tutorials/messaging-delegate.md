@@ -13,7 +13,7 @@ import Tabs from './tabs/messaging-delegate.md'
 
 # Programmatically control the display of in-app messages
 
-You can now implement a `PresentationDelegate` or `MessagingDelegate` in order to be alerted when specific events occur during the lifecycle of an in-app message.
+You can now implement a `PresentationDelegate` or `MessagingDelegate`(for older Android SDK versions and iOS SDK) in order to be alerted when specific events occur during the lifecycle of an in-app message.
 
 ## Register the delegate
 

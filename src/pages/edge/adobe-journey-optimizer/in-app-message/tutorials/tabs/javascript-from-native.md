@@ -1,6 +1,6 @@
 <Variant platform="android3x" task="obtain" repeat="5"/>
 
-In the `onShow` function of the `PresentationDelegate`, get a reference to the `InAppEventHandler` which can be used for Javascript interactions.
+In the `onShow` function of the `PresentationDelegate`, obtain a reference to the `InAppMessageEventHandler` for use in Javascript interactions.
 
 #### Kotlin
 
@@ -26,7 +26,7 @@ Presentable<InAppMessage> currentMessagePresentable = null;
 
 @Override
 public void onShow(Presentable<?> presentable) {
-    if (presentable.getPresentation() !is InAppMessage) {
+    if (!(presentable.getPresentation() instanceof InAppMessage)) {
       return;
     }
     currentMessagePresentable = (Presentable<InAppMessage>) presentable;
@@ -72,7 +72,7 @@ func shouldShowMessage(message: Showable) -> Bool {
 
 <Variant platform="android3x" task="call" repeat="6"/>
 
-With a reference to the `InAppEventHandler`, the instance method `evaluateJavascript(String, AdobeCallback<String>)` can now be leveraged to call a JavaScript method.
+With a reference to the `InAppMessageEventHandler`, the instance method `evaluateJavascript(String, AdobeCallback<String>)` can now be leveraged to call a JavaScript method.
 
 Further details of this API are explained in the [Android](https://developer.android.com/reference/android/webkit/WebView#evaluateJavascript(java.lang.String,%20android.webkit.ValueCallback%3Cjava.lang.String%3E)) documentation - the example below is provided for the purpose of demonstration:
 
@@ -102,7 +102,7 @@ Presentable<InAppMessage> currentMessagePresentable = null;
 
 @Override
 public void onShow(Presentable<?> presentable) {
-  if (presentable.getPresentation() !is InAppMessage) {
+  if (!(presentable.getPresentation() instanceof InAppMessage)) {
     return;
   }
   currentMessagePresentable = (Presentable<InAppMessage>) presentable;

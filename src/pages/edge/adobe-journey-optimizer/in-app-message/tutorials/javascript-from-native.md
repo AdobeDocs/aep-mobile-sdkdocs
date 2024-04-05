@@ -23,11 +23,11 @@ You can execute JavaScript in an in-app message from native code by completing t
 
 ## Implement and assign a `PresentationDelegate`/ `MessagingDelegate`
 
-To register a JavaScript event handler with a `Message` object, you will first need to implement and set a `PresentationDelegate` or `MessagingDelegate`, based on which SDK you are using.
+To register a JavaScript event handler with a `Message` object, you will first need to implement and set a `PresentationDelegate` or `MessagingDelegate` (for older Android SDK versions and iOS SDK) you are using.
 
-For more detailed instructions on implementing and using a PresentationDelegate or MessagingDelegate, please read the [tutorial on using MessagingDelegate](./messaging-delegate.md).
+Please read the [tutorial](./messaging-delegate.md) for more detailed instructions on implementing and using a PresentationDelegate/MessagingDelegate.
 
-## Obtain a reference to the `InAppEventHandler`/ web view
+## Obtain a reference to the `InAppMessageEventHandler`/ web view
 
 In the `shouldShowMessage` function of the `MessagingDelegate`, get a reference to the web view used by the message.
 
