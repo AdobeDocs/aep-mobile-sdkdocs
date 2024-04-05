@@ -2,25 +2,33 @@
 noIndex: true
 ---
 
-<Variant platform="android" task="import" repeat="6"/>
+import Alerts from '/src/pages/resources/alerts.md'
 
-#### Java
+<Variant platform="android" task="import" repeat="8"/>
 
 1. Add the Mobile Core, Edge, Edge Identity, and Messaging extensions to your project using the app's Gradle file.
 
-```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
-implementation "com.adobe.marketing.mobile:core"
-implementation "com.adobe.marketing.mobile:edgeidentity"
-implementation "com.adobe.marketing.mobile:edge"
-implementation "com.adobe.marketing.mobile:messaging"
+#### Kotlin
+
+```kotlin
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation("com.adobe.marketing.mobile:core")
+implementation("com.adobe.marketing.mobile:edgeidentity")
+implementation("com.adobe.marketing.mobile:edge")
+implementation("com.adobe.marketing.mobile:messaging")
 ```
 
-<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+#### Groovy
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
+```java
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
+implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:edgeidentity'
+implementation 'com.adobe.marketing.mobile:edge'
+implementation 'com.adobe.marketing.mobile:messaging'
+```
 
-</InlineNestedAlert>
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
 2. Import the Mobile Core, Edge, Edge Identity, and Messaging extensions in your application class.
 
@@ -38,10 +46,10 @@ import com.adobe.marketing.mobile.Messaging;
 ```swift
 use_frameworks!
 target 'YourTargetApp' do
-    pod 'AEPCore'
-    pod 'AEPEdge'
-    pod 'AEPEdgeIdentity'
-    pod 'AEPMessaging'
+    pod 'AEPCore', '~> 5.0'
+    pod 'AEPEdge', '~> 5.0'
+    pod 'AEPEdgeIdentity', '~> 5.0'
+    pod 'AEPMessaging', '~> 5.0'
 end
 ```
 
