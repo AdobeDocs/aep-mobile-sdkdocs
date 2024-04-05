@@ -178,9 +178,11 @@ Flutter
 
 ## registerExtension
 
-<InlineAlert variant="warning" slots="text"/>
+<InlineAlert variant="warning" slots="header, text1"/>
 
-This API is only available in Android and is deprecated starting in version 2.0.0 of the Identity extension. Use [`MobileCore.registerExtensions()`](../api-reference.md#registerextensions) instead.
+This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the Android mobile extension.
+
+Use [`MobileCore.registerExtensions()`](../api-reference.md#registerextensions) API instead.
 
 The `registerExtension()` API registers the Identity extension with the Mobile Core extension. This API allows the extension to send and receive events to and from the Mobile SDK.
 
