@@ -211,6 +211,13 @@ MobileCore.trackState("view name", mapOf("&&events" to "event5,event2=2"))
 }
 ```
 
+#### Edge
+
+| Removed API | Alternative API |
+| :------------- | :-------------- |
+| Formatters.dateToISO8601String | Use TimeUtils.getISO8601UTCDateWithMilliseconds from MobileCore |
+| Formatters.dateToShortDateString | Use TimeUtils.getISO8601FullDate from MobileCore |
+
 #### Adobe Analytics - Media Analytics for Audio & Video
 
 | Extension | Mobile Core compatibility | BOM version |
