@@ -238,7 +238,7 @@ Please note that the increment to 3.1.0 was preferred for this release in order 
 
 | Removed API | Alternative API |
 | :------------- | :-------------- |
-| com.adobe.marketing.mobile.optimize.Proposition | [com.adobe.marketing.mobile.optimize.OptimizeProposition](../../../edge/adobe-journey-optimizer-decisioning/api-reference/#propositionoptimizeproposition) |
+| com.adobe.marketing.mobile.optimize.Proposition | [com.adobe.marketing.mobile.optimize.OptimizeProposition](../../../edge/adobe-journey-optimizer-decisioning/api-reference#optimizeproposition) |
 
 #### Adobe Campaign Classic
 
