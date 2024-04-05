@@ -13,7 +13,7 @@ keywords:
 
 ### Android EdgeMedia 3.0.0
 
-Major version update for [Adobe Streaming Media for Edge Network](https://developer.adobe.com/client-sdks/edge/media-for-edge-network/) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+Major version update for [Adobe Streaming Media for Edge Network](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
 * Updated the minimum supported Android API level to 21.
 
 ## March 20, 2024

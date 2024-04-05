@@ -12,7 +12,7 @@ keywords:
 
 ### Android Campaign Standard 3.0.0
 
-Major version update for [Campaign](https://developer.adobe.com/client-sdks/solution/adobe-campaign-standard/) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+Major version update for [Campaign Standard](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
 * The SDK is now compatible with Kotlin 1.5 and higher. 

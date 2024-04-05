@@ -12,7 +12,7 @@ keywords:
 
 ### Android Assurance 3.0.0
 
-Major version update for Adobe Experience Platform Mobile Assurance SDK on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+Major version update for [Adobe Experience Platform Assurance](./index.md) on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
 * The SDK is now compatible with Kotlin 1.5 and higher.

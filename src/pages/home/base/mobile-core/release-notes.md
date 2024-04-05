@@ -12,7 +12,7 @@ keywords:
 
 ### Android Signal 3.0.0
 
-Major version update for [Signal](https://developer.adobe.com/client-sdks/home/base/mobile-core/signal/) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+Major version update for [Signal](./signal/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
 * The SDK is now compatible with Kotlin 1.5 and higher.
@@ -21,14 +21,14 @@ Major version update for [Signal](https://developer.adobe.com/client-sdks/home/b
 
 ### Android Lifecycle 3.0.0
 
-Major version update for [Lifecycle](https://developer.adobe.com/client-sdks/home/base/mobile-core/lifecycle/) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+Major version update for [Lifecycle](./lifecycle/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
 * Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
 
 ### Android Identity 3.0.0
 
-Major version update for [Identity](https://developer.adobe.com/client-sdks/home/base/mobile-core/identity/) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+Major version update for [Identity](./identity/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
 * Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.

@@ -12,7 +12,7 @@ keywords:
 
 ### Android Audience 3.0.0
 
-Major version update for [Adobe Audience Manager](https://developer.adobe.com/client-sdks/solution/adobe-audience-manager/) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+Major version update for [Adobe Audience Manager](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
 * Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
