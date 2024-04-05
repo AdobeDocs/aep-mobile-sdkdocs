@@ -2,12 +2,22 @@
 noIndex: true
 ---
 
-<Variant platform="android" task="import-library" repeat="5"/>
+<Variant platform="android" task="import-library" repeat="6"/>
 
-1. Add the following libraries in your project's `build.gradle` file:
+1. Add the following libraries to your project using the app's Gradle file.
+
+#### Kotlin
 
 ```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation("com.adobe.marketing.mobile:core")
+implementation("com.adobe.marketing.mobile:assurance")
+```
+
+#### Groovy
+
+```java
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
 implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:assurance'
 ```
@@ -30,8 +40,8 @@ import com.adobe.marketing.mobile.MobileCore;
 Add the library to your project via your [Cocoapods](https://cocoapods.org/pods/AEPAssurance) `Podfile`:
 
 ```pod
-pod 'AEPCore','~> 3.0'
-pod 'AEPAssurance','~> 3.0'
+pod 'AEPCore','~> 5.0'
+pod 'AEPAssurance','~> 5.0'
 ```
 
 Import the Assurance extension along with the other Adobe Mobile SDK extensions:

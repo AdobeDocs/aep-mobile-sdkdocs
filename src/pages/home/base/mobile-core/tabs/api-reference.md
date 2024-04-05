@@ -572,7 +572,15 @@ public static func registerEventListener(type: String, source: String, listener:
 }];
 ```
 
-<Variant platform="android" api="register-extension" repeat="5"/>
+<Variant platform="android" api="register-extension" repeat="6"/>
+
+<InlineNestedAlert variant="warning" header="true" iconPosition="left">
+
+This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of Mobile Core extension.
+
+Use [registerExtensions](#registerextensions) to register desired extensions and boot up the SDK for event processing. Calling `MobileCore.start()` API is no longer required when using `MobileCore.registerExtensions()`.
+
+</InlineNestedAlert>
 
 #### Java
 

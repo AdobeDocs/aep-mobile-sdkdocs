@@ -2,12 +2,22 @@
 noIndex: true
 ---
 
-<Variant platform="android" task="add" repeat="5"/>
+<Variant platform="android" task="add" repeat="8"/>
 
 1. Add the `UserProfile` library to your project using the app's gradle file.
 
+#### Kotlin
+
+```kotlin
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation("com.adobe.marketing.mobile:core")
+implementation("com.adobe.marketing.mobile:userprofile")
+```
+
+#### Groovy
+
 ```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
 implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:userprofile'
 ```
@@ -32,8 +42,8 @@ import com.adobe.marketing.mobile.UserProfile;
 ```ruby
 use_frameworks!
 target 'YourTargetApp' do
-    pod 'AEPCore', '~> 3.0'
-    pod 'AEPUserProfile', '~> 3.0'
+    pod 'AEPCore', '~> 5.0'
+    pod 'AEPUserProfile', '~> 5.0'
 end
 ```
 
@@ -53,7 +63,7 @@ end
    @import AEPUserProfile;
 ```
 
-<Variant platform="android" task="register" repeat="5"/>
+<Variant platform="android" task="register" repeat="6"/>
 
 After calling the `setApplication()` method in the `onCreate()` method, register the UserProfile extension.
 
@@ -95,7 +105,7 @@ class MyApp : Application() {
 }
 ```
 
-<Variant platform="ios" task="register" repeat="1"/>
+<Variant platform="ios" task="register" repeat="4"/>
 
 #### Swift
 
