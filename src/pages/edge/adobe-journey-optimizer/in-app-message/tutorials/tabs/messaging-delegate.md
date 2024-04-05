@@ -11,7 +11,7 @@ interface UIService {
 }
 ```
 
-On Android 3.x, the custom implementation of `PresentationDelegate` is registered with the `UIService` by accessing it using the `ServiceProvider`. 
+On Android 3.x, the custom implementation of `PresentationDelegate` is registered with the `UIService` by accessing it using the `ServiceProvider`.
 
 #### Kotlin
 
@@ -260,7 +260,7 @@ override fun onShow(presentable: Presentable<*>) {
  }
  ```
 
- #### Java
+#### Java
 
  ```java
 Presentable<InAppMessage> currentMessagePresentable = null;
@@ -313,7 +313,7 @@ func onShow(message: Showable) {
 
 <Variant platform="android3x" function="controlling-message" repeat="6"/>
 
-If a custom `PresentationDelegate` implementation has been set in the `UIService`, the delegate's `canShow` method will be called prior to displaying an in-app message for which the end user has qualified. You are responsible for returning `true` if the message should be shown, or `false` if the message should be suppressed. If you returned `false` in the `canShow` method, you can store a reference to the Message object, and call the show() method on it at a later time. 
+If a custom `PresentationDelegate` implementation has been set in the `UIService`, the delegate's `canShow` method will be called prior to displaying an in-app message for which the end user has qualified. You are responsible for returning `true` if the message should be shown, or `false` if the message should be suppressed. If you returned `false` in the `canShow` method, you can store a reference to the Message object, and call the show() method on it at a later time.
 
 An example of when you may choose to suppress an in-app message due to the status of some other workflow within the app and show it at a later time upon completion of the other workflow can be seen below:
 

@@ -121,8 +121,6 @@ This API has been changed in v3.0.0 of Adobe Journey Optimizer extension.
 
 In earlier versions, this API accepted a parameter `suppressAutoTrack`: If set to `true`, the `decisioning.propositionDismiss` Edge Event will not be sent regardless of the `autoTrack` setting.
 
-
-
 Signals to the UIService that the message should be removed from the UI.
 
 If `autoTrack` is true, calling this method will result in an "decisioning.propositionDismiss" Edge Event being dispatched.
