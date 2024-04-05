@@ -17,8 +17,8 @@ import Tabs from './tabs/javascript-from-native.md'
 
 You can execute JavaScript in an in-app message from native code by completing the following steps:
 
-* [Implement and assign a `PresentationDelegate`/ `MessagingDelegate`](#implement-and-assign-a-messagingdelegate)
-* [Obtain a reference to the web view](#obtain-a-reference-to-the-web-view)
+* [Implement and assign a `PresentationDelegate`/ `MessagingDelegate`](#implement-and-assign-a-presentationdelegate-messagingdelegate)
+* [Obtain a reference to the web view](#obtain-a-reference-to-the-inappmessageeventhandler-web-view)
 * [Call the JavaScript method](#call-the-javascript-method)
 
 ## Implement and assign a `PresentationDelegate`/ `MessagingDelegate`

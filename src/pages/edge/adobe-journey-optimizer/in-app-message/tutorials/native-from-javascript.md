@@ -17,7 +17,7 @@ import Tabs from './tabs/native-from-javascript.md'
 
 You can handle events from in-app message interactions natively within your application by completing the following steps:
 
-* [Implement and assign a `PresentationDelegate`/`MessagingDelegate`](#implement-and-assign-a-messagingdelegate)
+* [Implement and assign a `PresentationDelegate`/`MessagingDelegate`](#implement-and-assign-a-presentationdelegate-messagingdelegate)
 * [Register a JavaScript handler for your In-App Message](#register-a-javascript-handler-for-your-in-app-message)
 * [Post the JavaScript message from your In-App Message](#post-the-javascript-message-from-your-in-app-message)
 
