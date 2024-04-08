@@ -24,3 +24,10 @@ This documents lists details about the public classes and enums available in Mes
 
 * [Class - Message](./message.md)
 * [Enum - MessagingEdgeEventType](./messaging-edge-event-type.md)
+
+## Code-based experiences
+
+* [Class - Proposition](./proposition.md)
+* [Class - PropositionItem](./proposition-item.md)
+* [Class - Surface](./surface.md)
+* [Enum - MessagingEdgeEventType](./messaging-edge-event-type.md)

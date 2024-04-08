@@ -2,21 +2,29 @@
 noIndex: true
 ---
 
-<Variant platform="android" task="download" repeat="5"/>
+import Alerts from '/src/pages/resources/alerts.md'
+
+<Variant platform="android" task="download" repeat="8"/>
 
 1. Add the Mobile Core and Places extensions to your project using the app's Gradle file.
 
+#### Kotlin
+
+```kotlin
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation("com.adobe.marketing.mobile:core")
+implementation("com.adobe.marketing.mobile:places")
+```
+
+#### Groovy
+
 ```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
 implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:places'
 ```
 
-<InlineNestedAlert variant="warning" header="false" iconPosition="left">
-
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
-
-</InlineNestedAlert>
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
 2. Import the Mobile Core and Places extensions in your Application class.
 
@@ -32,8 +40,8 @@ import com.adobe.marketing.mobile.Places;
 ```swift
 use_frameworks!
 target 'YourTargetApp' do
-   pod 'AEPCore'
-   pod 'AEPPlaces'       
+   pod 'AEPCore', '~> 5.0'
+   pod 'AEPPlaces', '~> 5.0'
 end
 ```
 
