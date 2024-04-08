@@ -14,7 +14,7 @@ To upgrade to the Experience Platform SDKs, see [Upgrade to the Experience Platf
 
 ## Will Mobile Services functionality still work?
 
-No! Adobe Mobile Service's end-of-life date is [December 31, 2022](https://experienceleague.adobe.com/docs/mobile-services/using/eol.html).
+No. Adobe Mobile Service's end-of-life date is [December 31, 2022](https://experienceleague.adobe.com/docs/mobile-services/using/eol.html).
 
 ## Can I still download and use the version 4 SDKs?
 
