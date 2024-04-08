@@ -2,38 +2,77 @@
 noIndex: true
 ---
 
-<Variant platform="android" task="install" repeat="3"/>
+import Alerts from '/src/pages/resources/alerts.md'
 
-Add the Mobile Core, Edge, Identity for Edge Network and Optimize dependencies in your app's gradle file.
+<Variant platform="android" task="install" repeat="8"/>
+
+1. Add the Mobile Core, Edge, Identity for Edge Network and Optimize dependencies in your app's gradle file.
+
+#### Kotlin
+
+```kotlin
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation("com.adobe.marketing.mobile:core")
+implementation("com.adobe.marketing.mobile:edgeidentity")
+implementation("com.adobe.marketing.mobile:edge")
+implementation("com.adobe.marketing.mobile:optimize")
+```
+
+#### Groovy
 
 ```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
 implementation 'com.adobe.marketing.mobile:core'
-implementation 'com.adobe.marketing.mobile:edge'
 implementation 'com.adobe.marketing.mobile:edgeidentity'
+implementation 'com.adobe.marketing.mobile:edge'
 implementation 'com.adobe.marketing.mobile:optimize'
 ```
 
-<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
+2. Import the Mobile Core, Edge, Edge Identity, and Optimize extensions in your application class.
 
-</InlineNestedAlert>
+```java
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Edge;
+import com.adobe.marketing.mobile.edge.identity.Identity;
+import com.adobe.marketing.mobile.Optimize;
+```
 
-<Variant platform="ios" task="install" repeat="2"/>
+<Variant platform="ios" task="install" repeat="7"/>
 
-Configure your app target to fetch Mobile Core, Edge, Identity for Edge Network and Optimize from Cocoapods by specifying the following pod dependencies in your `Podfile`.
+1. Configure your app target to fetch Mobile Core, Edge, Identity for Edge Network and Optimize from Cocoapods by specifying the following pod dependencies in your `Podfile`.
 
 ```swift
-platform :ios, '10.0'
-
 use_frameworks!
 target 'YourAppTarget' do
-    pod 'AEPCore'
-    pod 'AEPEdge'
-    pod 'AEPEdgeIdentity'
-    pod 'AEPOptimize'
+    pod 'AEPCore', '~> 5.0'
+    pod 'AEPEdge', '~> 5.0'
+    pod 'AEPEdgeIdentity', '~> 5.0'
+    pod 'AEPOptimize', '~> 5.0'
 end
+```
+
+2. Import the Mobile Core, Edge, Edge Identity, and Optimize libraries.
+
+#### Swift
+
+```swift
+// AppDelegate.swift
+import AEPCore
+import AEPEdge
+import AEPEdgeIdentity
+import AEPOptimize
+```
+
+#### Objective-C
+
+```objc
+// AppDelegate.h
+@import AEPCore;
+@import AEPEdge;
+@import AEPEdgeIdentity;
+@import AEPOptimize;
 ```
 
 <Variant platform="android" task="register" repeat="4"/>
@@ -457,7 +496,7 @@ public extension Offer {
   /// The Edge `sendEvent(experienceEvent:_:)` API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, or override dataset identifier.
   ///
   /// - Note: The returned XDM data also contains the `eventType` for the Experience Event with value `decisioning.propositionDisplay`.
-  /// - Returns A dictionary containing XDM data for the propositon interactions.
+  /// - Returns A dictionary containing XDM data for the proposition interactions.
   func generateDisplayInteractionXdm() -> [String: Any] {...}
 
   /// Creates a dictionary containing XDM formatted data for `Experience Event - Proposition Interactions` field group from the given proposition option.
@@ -465,19 +504,19 @@ public extension Offer {
   /// The Edge `sendEvent(experienceEvent:_:)` API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, or override dataset identifier.
   ///
   /// - Note: The returned XDM data also contains the `eventType` for the Experience Event with value `decisioning.propositionInteract`.
-  /// - Returns A dictionary containing XDM data for the propositon interactions.
+  /// - Returns A dictionary containing XDM data for the proposition interactions.
   func generateTapInteractionXdm() -> [String: Any] {...}
 }
 ```
 
 ```swift
-public extension Proposition {
+public extension OptimizeProposition {
   /// Creates a dictionary containing XDM formatted data for `Experience Event - Proposition Reference` field group from the given proposition.
   ///
   /// The Edge `sendEvent(experienceEvent:_:)` API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, or override dataset identifier.
   ///
   /// - Note: The returned XDM data does not contain an `eventType` for the Experience Event.
-  /// - Returns A dictionary containing XDM data for the propositon reference.
+  /// - Returns A dictionary containing XDM data for the proposition reference.
   func generateReferenceXdm() -> [String: Any] {...}
 }
 ```

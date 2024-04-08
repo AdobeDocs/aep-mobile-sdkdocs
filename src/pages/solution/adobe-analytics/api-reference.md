@@ -6,6 +6,7 @@ keywords:
 - API reference
 ---
 
+import Alerts from '/src/pages/resources/alerts.md'
 import Tabs from './tabs/api-reference.md'
 
 # Analytics API reference
@@ -138,11 +139,9 @@ iOS
 
 ## registerExtension
 
+<Alerts query="platform=android-register-extension&componentClass=InlineNestedAlert"/>
+
 Registers the Analytics extension with the Mobile Core SDK.
-
-<InlineAlert variant="warning" slots="text"/>
-
-Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../../home/base/mobile-core/api-reference.md#registerextensions) API instead.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 

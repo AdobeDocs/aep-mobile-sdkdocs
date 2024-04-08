@@ -8,11 +8,31 @@ keywords:
 
 # Release notes
 
+## April 3, 2024
+
+### Android Optimize 3.0.0
+
+Major version update for [Adobe Journey Optimizer - Decisioning Extension](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Renamed class `Proposition` to `OptimizeProposition`.
+
+## March 20, 2024
+
+### iOS Optimize 5.0.0
+
+Major version update for [Adobe Journey Optimizer - Decisioning Extension](../../edge/adobe-journey-optimizer-decisioning/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+* Renamed class `Proposition` to `OptimizeProposition`.
+
 ## February 28, 2024
 
 ### iOS Optimize 4.0.3
 
-- Added max versions to Platform dependencies in podspec
+* Added max versions to Platform dependencies in podspec
 
 ## October 5, 2023
 

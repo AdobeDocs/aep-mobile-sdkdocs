@@ -2,12 +2,28 @@
 noIndex: true
 ---
 
-<Variant platform="android" task="add" repeat="5"/>
+import Alerts from '/src/pages/resources/alerts.md'
+
+<Variant platform="android" task="add" repeat="8"/>
 
 1. Add the Campaign Standard, [Mobile Core](../mobile-core/index.md) and [Profile](../profile/index.md) extensions to your project using the app's Gradle file.
 
+#### Kotlin
+
+```kotlin
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation("com.adobe.marketing.mobile:campaign")
+implementation("com.adobe.marketing.mobile:core")
+implementation("com.adobe.marketing.mobile:identity")
+implementation("com.adobe.marketing.mobile:lifecycle")
+implementation("com.adobe.marketing.mobile:signal")
+implementation("com.adobe.marketing.mobile:userprofile")
+```
+
+#### Groovy
+
 ```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
 implementation 'com.adobe.marketing.mobile:campaign'
 implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:identity'
@@ -16,11 +32,7 @@ implementation 'com.adobe.marketing.mobile:signal'
 implementation 'com.adobe.marketing.mobile:userprofile'
 ```
 
-<InlineNestedAlert variant="warning" header="false" iconPosition="left">
-
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
-
-</InlineNestedAlert>
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
 2. Import the Campaign Standard, [Mobile Core](../../home/base/mobile-core/index.md), [Profile](../../home/base/profile/index.md), [Lifecycle](../../home/base/mobile-core/lifecycle/index.md), and [Signal](../../home/base/mobile-core/signals/index.md) extensions in your application's main activity.
 
@@ -37,7 +49,17 @@ import com.adobe.marketing.mobile.UserProfile;
 
 1. Add the Campaign Standard, [Mobile Core](../../home/base/mobile-core/index.md), and [Profile](../../home/base/profile/index.md) extensions to your project using Cocoapods.
 
-![](../assets/index/aep-cocoapods.png)
+```swift
+use_frameworks!
+target 'YourTargetApp' do
+  pod 'AEPCampaign', '~> 5.0'
+  pod 'AEPCore', '~> 5.0'
+  pod 'AEPIdentity', '~> 5.0'
+  pod 'AEPLifecycle', '~> 5.0'
+  pod 'AEPSignal', '~> 5.0'
+  pod 'AEPUserProfile', '~> 5.0'
+end
+```
 
 2. In Xcode, import the Mobile Core, Campaign Standard, Profile, Lifecycle, Identity, Signal, and Services extensions:
 
@@ -410,7 +432,7 @@ public void onCreate(Bundle savedInstanceState) {
     // add url string to Intent object mappings
     // e.g. urlToIntentMap.put("https://validUrl.com", new Intent());
     if (data != null) {
-      ServiceProvider.getInstance().setURIHandler(new URIHandler() {
+      ServiceProvider.getInstance().getUriService().setUriHandler(new URIHandler() {
         @Override
         public Intent getURIDestination(String uri) {
           return urlToIntentMap.get(uri);

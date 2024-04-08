@@ -2,11 +2,25 @@
 noIndex: true
 ---
 
-<Variant platform="android" task="add" repeat="6"/>
+<Variant platform="android" task="add" repeat="8"/>
 
-#### Java
+1. Add the Lifecycle extension and its dependency, the [Mobile Core](../index.md) extension to your project using the app's Gradle file.
 
-Add the Lifecycle extension and its dependency, the [Mobile Core](../index.md) extension to your project using the app's Gradle file.
+#### Kotlin
+
+```kotlin
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation("com.adobe.marketing.mobile:core")
+implementation("com.adobe.marketing.mobile:lifecycle")
+```
+
+#### Groovy
+
+```java
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
+implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:lifecycle'
+```
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
@@ -14,13 +28,7 @@ Using dynamic dependency versions is **not** recommended for production apps. Pl
 
 </InlineNestedAlert>
 
-```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
-implementation 'com.adobe.marketing.mobile:core'
-implementation 'com.adobe.marketing.mobile:lifecycle'
-```
-
-Import the Lifecycle and MobileCore extensions in your application's main activity.
+2. Import the Lifecycle and MobileCore extensions in your application's main activity.
 
 ```java
 import com.adobe.marketing.mobile.MobileCore;
@@ -29,16 +37,16 @@ import com.adobe.marketing.mobile.Lifecycle;
 
 <Variant platform="ios" task="add" repeat="8"/>
 
-Add the AEPLifecycle extension and its dependency, the [Mobile Core](../index.md) extension, to your project using Cocoapods.
+1. Add the AEPLifecycle extension and its dependency, the [Mobile Core](../index.md) extension, to your project using Cocoapods.
 
 Add the following pods in your `Podfile`:
 
 ```pod
-pod 'AEPCore'
-pod 'AEPLifecycle'
+pod 'AEPCore', '~> 5.0'
+pod 'AEPLifecycle', '~> 5.0'
 ```
 
-Import the Lifecycle library:
+2. Import the Lifecycle library:
 
 #### Swift
 

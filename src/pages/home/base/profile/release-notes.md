@@ -8,6 +8,26 @@ keywords:
 
 # Release notes
 
+## April 1, 2024
+
+### Android UserProfile 3.0.0
+
+Major version update for [User Profile](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the `MobileCore.registerExtensions()` API for registering extensions and initializing the SDK instead.
+* Removed deprecated `UserProfile.updateUserAttribute` API. Use the `UserProfile.updateUserAttributes` API instead.
+* Removed deprecated `UserProfile.removeUserAttribute` API. Use the `UserProfile.removeUserAttributes` API instead.
+
+## March 20, 2024
+
+### iOS UserProfile 5.0.0
+
+Major version update for [User Profile](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
 ## March 8, 2024
 
 ### iOS UserProfile 4.0.1

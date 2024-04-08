@@ -44,9 +44,11 @@ iOS
 
 ## registerExtension
 
-<InlineAlert variant="warning" slots="text"/>
+<InlineAlert variant="warning" slots="header, text1"/>
 
-This API is only available in Android and is deprecated starting in version 2.0.0 of the UserProfile extension. Use [`MobileCore.registerExtensions()`](../mobile-core/api-reference.md#registerextensions) API instead.
+This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the Android mobile extension.
+
+Use [`MobileCore.registerExtensions()`](../mobile-core/api-reference.md#registerextensions) API instead.
 
 Registers the Profile extension with the Mobile Core extension.
 
@@ -58,9 +60,11 @@ Android
 
 ## removeUserAttribute
 
-<InlineAlert variant="warning" slots="text"/>
+<InlineAlert variant="warning" slots="header, text1"/>
 
-This API is only available in Android and is deprecated starting in version 2.0.0 of the UserProfile extension. Use [`removeUserAttributes`](#removeuserattributes) API instead.
+This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the Android mobile extension.
+
+Use [`removeUserAttributes`](#removeuserattributes) API instead.
 
 Deprecated as of 2.0.0. Please use the [removeUserAttributes](#removeuserattributes) API instead.
 
@@ -86,9 +90,11 @@ iOS
 
 ## updateUserAttribute
 
-<InlineAlert variant="warning" slots="text"/>
+<InlineAlert variant="warning" slots="header, text1"/>
 
-This API is only available in Android and is deprecated starting in version 2.0.0 of the UserProfile extension. Use [`updateUserAttributes`](#updateuserattributes) API instead.
+This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the Android mobile extension.
+
+Use [`updateUserAttributes`](#updateuserattributes) API instead.
 
 Sets the user profile attributes key and value and allows you to create or update a user profile attribute.
 

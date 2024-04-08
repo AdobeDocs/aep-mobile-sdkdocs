@@ -8,11 +8,68 @@ keywords:
 
 # Release notes
 
+## April 1, 2024
+
+### Android Signal 3.0.0
+
+Major version update for [Signal](./signal/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* The SDK is now compatible with Kotlin 1.5 and higher.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Added an enhancement to prevent network retries when the device's network is offline.
+
+### Android Lifecycle 3.0.0
+
+Major version update for [Lifecycle](./lifecycle/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+
+### Android Identity 3.0.0
+
+Major version update for [Identity](./identity/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Added an enhancement to prevent network retries when the device's network is offline.
+
+### Android Core 3.0.0
+
+Major version update of Adobe Experience Platform Core Android SDK is live!
+
+Please note that the current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* The SDK is now compatible with Kotlin 1.5 and higher.
+* Migrated UI service to use Jetpack Compose.
+* Removed deprecated `MobileCore.registerExtension(...)` and `MobileCore.start()` APIs. Use the `MobileCore.registerExtensions(...)` API for registering extensions and initializing the SDK instead.
+* Removed `MobileCore.setMessagingDelegate`, `MobileCore.getMessagingDelegate` APIs which were used to control the display of in-app messages. Migrate to `com.adobe.marketing.mobile.services.ui.PresentationDelegate` and use `ServiceProvider.getUIService().setPresentationDelegate` API instead.
+* Removed other APIs related to extension development which were deprecated in 2.0.0.
+* Added an enhancement to prevent network retries when the device's network is offline.
+
+## March 19, 2024
+
+### iOS Core 5.0.0
+
+Major version update of Adobe Experience Platform Core iOS SDKs are live! It contains the following extensions:
+
+* Core 5.0.0
+* Identity 5.0.0
+* Signal 5.0.0
+* Lifecycle 5.0.0
+
+Please note that the current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+* Include a privacy manifest for AEPCore and AEPServices.
+
 ## February 15, 2024
 
 ### iOS Core 4.2.3
 
-* Fix podspec dependencies not being restricted to current major version
+* Fix podspec dependencies not being restricted to current major version.
 * Fixed an issue that was allowing in-app messages without content to be displayed.
 
 ## January 26, 2024

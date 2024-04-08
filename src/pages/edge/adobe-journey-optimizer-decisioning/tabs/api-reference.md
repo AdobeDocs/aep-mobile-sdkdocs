@@ -101,11 +101,11 @@ NSString *extensionVersion = [AEPMobileOptimize extensionVersion];
 #### Syntax
 
 ```java
-public static void getPropositions(final List<DecisionScope> decisionScopes, final AdobeCallback<Map<DecisionScope, Proposition>> callback)
+public static void getPropositions(final List<DecisionScope> decisionScopes, final AdobeCallback<Map<DecisionScope, OptimizeProposition>> callback)
 ```
 
 * _decisionScopes_ is a list of decision scopes for which propositions are requested.
-* _callback_ `call` method is invoked with propositions map of type `Map<DecisionScope, Proposition>`. If the callback is an instance of [AdobeCallbackWithError](../../home/base/mobile-core/api-reference.md#adobecallbackwitherror), and if the operation times out or an error occurs in retrieving propositions, the `fail` method is invoked with the appropriate [AdobeError](../../home/base/mobile-core/api-reference.md#adobeerror).
+* _callback_ `call` method is invoked with propositions map of type `Map<DecisionScope, OptimizeProposition>`. If the callback is an instance of [AdobeCallbackWithError](../../home/base/mobile-core/api-reference.md#adobecallbackwitherror), and if the operation times out or an error occurs in retrieving propositions, the `fail` method is invoked with the appropriate [AdobeError](../../home/base/mobile-core/api-reference.md#adobeerror).
 
 #### Example
 
@@ -117,22 +117,22 @@ final List<DecisionScope> decisionScopes = new ArrayList<>();
 decisionScopes.add(decisionScope1);
 decisionScopes.add(decisionScope2);
 
-Optimize.getPropositions(scopes, new AdobeCallbackWithError<Map<DecisionScope, Proposition>>() {
+Optimize.getPropositions(scopes, new AdobeCallbackWithError<Map<DecisionScope, OptimizeProposition>>() {
     @Override
     public void fail(final AdobeError adobeError) {
         // handle error
     }
 
     @Override
-    public void call(Map<DecisionScope, Proposition> propositionsMap) {
+    public void call(Map<DecisionScope, OptimizeProposition> propositionsMap) {
         if (propositionsMap != null && !propositionsMap.isEmpty()) {
             // get the propositions for the given decision scopes
             if (propositionsMap.contains(decisionScope1)) {
-                final Proposition proposition1 = propsMap.get(decisionScope1)
+                final OptimizeProposition proposition1 = propsMap.get(decisionScope1)
                 // read proposition1 offers
             }
             if (propositionsMap.contains(decisionScope2)) {
-                final Proposition proposition2 = propsMap.get(decisionScope2)
+                final OptimizeProposition proposition2 = propsMap.get(decisionScope2)
                 // read proposition2 offers
             }
         }
@@ -148,11 +148,11 @@ Optimize.getPropositions(scopes, new AdobeCallbackWithError<Map<DecisionScope, P
 
 ```swift
 static func getPropositions(for decisionScopes: [DecisionScope], 
-                            _ completion: @escaping ([DecisionScope: Proposition]?, Error?) -> Void)
+                            _ completion: @escaping ([DecisionScope: OptimizeProposition]?, Error?) -> Void)
 ```
 
 * _decisionScopes_ is an array of decision scopes for which propositions are requested.
-* _completion_ is invoked with propositions dictionary of type `[DecisionScope: Proposition]`. An `Error` is returned if SDK fails to retrieve the propositions.
+* _completion_ is invoked with propositions dictionary of type `[DecisionScope: OptimizeProposition]`. An `Error` is returned if SDK fails to retrieve the propositions.
 
 #### Example
 
@@ -189,11 +189,11 @@ Optimize.getPropositions(for: [decisionScope1, decisionScope2]) { propositionsDi
 
 ```objc
 + (void) getPropositions: (NSArray<AEPDecisionScope*>* _Nonnull) decisionScopes 
-              completion: (void (^ _Nonnull)(NSDictionary<AEPDecisionScope*, AEPProposition*>* _Nullable propositionsDict, NSError* _Nullable error)) completion;
+              completion: (void (^ _Nonnull)(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* _Nullable propositionsDict, NSError* _Nullable error)) completion;
 ```
 
 * _decisionScopes_ is an array of decision scopes for which propositions are requested.
-* _completion_ is invoked with propositions dictionary of type `NSDictionary<AEPDecisionScope*, AEPProposition*>`. An `NSError` is returned if SDK fails to retrieve the propositions.
+* _completion_ is invoked with propositions dictionary of type `NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>`. An `NSError` is returned if SDK fails to retrieve the propositions.
 
 #### Example
 
@@ -204,16 +204,16 @@ AEPDecisionScope* decisionScope1 = [[AEPDecisionScope alloc] initWithActivityId:
 AEPDecisionScope* decisionScope2 = [[AEPDecisionScope alloc] initWithName: @"myScope"];
 
 [AEPMobileOptimize getPropositions: @[decisionScope1, decisionScope2] 
-                        completion: ^(NSDictionary<AEPDecisionScope*, AEPProposition*>* propositionsDict, NSError* error) {
+                        completion: ^(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* propositionsDict, NSError* error) {
   if (error != nil) {
     // handle error   
     return;
   }
 
-  AEPProposition* proposition1 = propositionsDict[decisionScope1];
+  AEPOptimizeProposition* proposition1 = propositionsDict[decisionScope1];
   // read proposition1 offers
 
-  AEPProposition* proposition2 = propositionsDict[decisionScope2];
+  AEPOptimizeProposition* proposition2 = propositionsDict[decisionScope2];
   // read proposition2 offers
 }];
 ```
@@ -225,22 +225,22 @@ AEPDecisionScope* decisionScope2 = [[AEPDecisionScope alloc] initWithName: @"myS
 #### Syntax
 
 ```java
-public static void onPropositionsUpdate(final AdobeCallback<Map<DecisionScope, Proposition>> callback)
+public static void onPropositionsUpdate(final AdobeCallback<Map<DecisionScope, OptimizeProposition>> callback)
 ```
 
-* _callback_ `call` method is invoked with propositions map of type `Map<DecisionScope, Proposition>`. If the callback is an instance of `AdobeCallbackWithError`, and if the operation times out or an error occurs in retrieving propositions, the `fail` method is invoked with the appropriate `AdobeError`.
+* _callback_ `call` method is invoked with propositions map of type `Map<DecisionScope, OptimizeProposition>`. If the callback is an instance of `AdobeCallbackWithError`, and if the operation times out or an error occurs in retrieving propositions, the `fail` method is invoked with the appropriate `AdobeError`.
 
 #### Example
 
 ```java
-Optimize.onPropositionsUpdate(new AdobeCallbackWithError<Map<DecisionScope, Proposition>>() {
+Optimize.onPropositionsUpdate(new AdobeCallbackWithError<Map<DecisionScope, OptimizeProposition>>() {
     @Override
     public void fail(final AdobeError adobeError) {
         // handle error
     }
 
     @Override
-    public void call(final Map<DecisionScope, Proposition> propositionsMap) {
+    public void call(final Map<DecisionScope, OptimizeProposition> propositionsMap) {
         if (propositionsMap != null && !propositionsMap.isEmpty()) {
             // handle propositions
         }
@@ -255,10 +255,10 @@ Optimize.onPropositionsUpdate(new AdobeCallbackWithError<Map<DecisionScope, Prop
 #### Syntax
 
 ```swift
-static func onPropositionsUpdate(perform action: @escaping ([DecisionScope: Proposition]?) -> Void)
+static func onPropositionsUpdate(perform action: @escaping ([DecisionScope: OptimizeProposition]?) -> Void)
 ```
 
-* _action_ is invoked with propositions dictionary of type `[DecisionScope: Proposition]`.
+* _action_ is invoked with propositions dictionary of type `[DecisionScope: OptimizeProposition]`.
 
 #### Example
 
@@ -275,15 +275,15 @@ Optimize.onPropositionsUpdate { propositionsDict in
 #### Syntax
 
 ```objc
-+ (void) onPropositionsUpdate: (void (^ _Nonnull)(NSDictionary<AEPDecisionScope*, AEPProposition*>* _Nullable)) action;
++ (void) onPropositionsUpdate: (void (^ _Nonnull)(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* _Nullable)) action;
 ```
 
-* _action_ is invoked with propositions dictionary of type `NSDictionary<AEPDecisionScope*, AEPProposition*>`.
+* _action_ is invoked with propositions dictionary of type `NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>`.
 
 #### Example
 
 ```objc
-[AEPMobileOptimize onPropositionsUpdate: ^(NSDictionary<AEPDecisionScope*, AEPProposition*>* propositionsDict) {
+[AEPMobileOptimize onPropositionsUpdate: ^(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* propositionsDict) {
   // handle propositions
 }];
 ```
@@ -482,52 +482,52 @@ public class DecisionScope: NSObject, Codable {
 #### Java
 
 ```java
-public class Proposition {
+public class OptimizeProposition {
 
     /**
-     * Constructor creates a {@code Proposition} using the provided propostion {@code id}, {@code offers}, {@code scope} and {@code scopeDetails}.
+     * Constructor creates a {@code OptimizeProposition} using the provided propostion {@code id}, {@code offers}, {@code scope} and {@code scopeDetails}.
      *
      * @param id {@link String} containing proposition identifier.
      * @param offers {@code List<Offer>} containing proposition items.
      * @param scope {@code String} containing encoded scope.
      * @param scopeDetails {@code Map<String, Object>} containing scope details.
      */
-    Proposition(final String id, final List<Offer> offers, final String scope, final Map<String, Object> scopeDetails) {...}
+    OptimizeProposition(final String id, final List<Offer> offers, final String scope, final Map<String, Object> scopeDetails) {...}
 
     /**
-     * Gets the {@code Proposition} identifier.
+     * Gets the {@code OptimizeProposition} identifier.
      *
-     * @return {@link String} containing the {@link Proposition} identifier.
+     * @return {@link String} containing the {@link OptimizeProposition} identifier.
      */
     public String getId() {...}
 
      /**
-     * Gets the {@code Proposition} items.
+     * Gets the {@code OptimizeProposition} items.
      *
-     * @return {@code List<Offer>} containing the {@link Proposition} items.
+     * @return {@code List<Offer>} containing the {@link OptimizeProposition} items.
      */
     public List<Offer> getOffers() {...}
 
     /**
-     * Gets the {@code Proposition} scope.
+     * Gets the {@code OptimizeProposition} scope.
      *
-     * @return {@link String} containing the encoded {@link Proposition} scope.
+     * @return {@link String} containing the encoded {@link OptimizeProposition} scope.
      */
     public String getScope() {...}
 
     /**
-     * Gets the {@code Proposition} scope details.
+     * Gets the {@code OptimizeProposition} scope details.
      *
-     * @return {@code Map<String, Object>} containing the {@link Proposition} scope details.
+     * @return {@code Map<String, Object>} containing the {@link OptimizeProposition} scope details.
      */
     public Map<String, Object> getScopeDetails() {...}
 
     /**
-     * Generates a map containing XDM formatted data for {@code Experience Event - Proposition Reference} field group from this {@code Proposition}.
+     * Generates a map containing XDM formatted data for {@code Experience Event - OptimizeProposition Reference} field group from this {@code OptimizeProposition}.
      *
      * The returned XDM data does not contain {@code eventType} for the Experience Event.
      *
-     * @return {@code Map<String, Object>} containing the XDM data for the proposition reference.
+     * @return {@code Map<String, Object>} containing the XDM data for the OptimizeProposition reference.
      */
     public Map<String, Object> generateReferenceXdm() {...}
 }
@@ -538,9 +538,9 @@ public class Proposition {
 #### Swift
 
 ```swift
-/// `Proposition` class
-@objc(AEPProposition)
-public class Proposition: NSObject, Codable {
+/// `OptimizeProposition` class
+@objc(AEPOptimizeProposition)
+public class OptimizeProposition: NSObject, Codable {
 
     /// Unique proposition identifier
     @objc public let id: String
@@ -556,18 +556,18 @@ public class Proposition: NSObject, Codable {
 }
 ```
 
-The `Proposition` class extension provides a method for generating XDM data for Proposition Reference field group which can be used for proposition tracking.
+The `OptimizeProposition` class extension provides a method for generating XDM data for Proposition Reference field group which can be used for proposition tracking.
 
 ```swift
-/// `Proposition` extension
+/// `OptimizeProposition` extension
 @objc
-public extension Proposition {
+public extension OptimizeProposition {
     /// Creates a dictionary containing XDM formatted data for `Experience Event - Proposition Reference` field group from the given proposition.
     ///
     /// The Edge `sendEvent(experienceEvent:_:)` API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, or override dataset identifier.
     ///
     /// - Note: The returned XDM data does not contain an `eventType` for the Experience Event.
-    /// - Returns A dictionary containing XDM data for the propositon reference.
+    /// - Returns A dictionary containing XDM data for the proposition reference.
     func generateReferenceXdm() -> [String: Any] {...}
 }
 ```
@@ -722,26 +722,26 @@ public class Offer {
     public Map<String, String> getCharacteristics() {...}
 
     /**
-     * Gets the containing {@code Proposition} for this {@code Offer}.
+     * Gets the containing {@code OptimizeProposition} for this {@code Offer}.
      *
-     * @return {@link Proposition} instance.
+     * @return {@link OptimizeProposition} instance.
      */
-    public Proposition getProposition() {...}
+    public OptimizeProposition getProposition() {...}
 
     /**
      * Dispatches an event for the Edge network extension to send an Experience Event to the Edge network with the display interaction data for the
-     * given {@code Proposition} offer.
+     * given {@code OptimizeProposition} offer.
      */
     public void displayed() {...}
 
     /**
      * Dispatches an event for the Edge network extension to send an Experience Event to the Edge network with the tap interaction data for the
-     * given {@code Proposition} offer.
+     * given {@code OptimizeProposition} offer.
      */
     public void tapped() {...}
 
     /**
-     * Generates a map containing XDM formatted data for {@code Experience Event - Proposition Interactions} field group from this {@code Proposition} item.
+     * Generates a map containing XDM formatted data for {@code Experience Event - Proposition Interactions} field group from this {@code OptimizeProposition} item.
      *
      * The returned XDM data does contain the {@code eventType} for the Experience Event with value {@code decisioning.propositionDisplay}.
      *
@@ -753,7 +753,7 @@ public class Offer {
     public Map<String, Object> generateDisplayInteractionXdm() {...}
 
     /**
-     * Generates a map containing XDM formatted data for {@code Experience Event - Proposition Interactions} field group from this {@code Proposition} offer.
+     * Generates a map containing XDM formatted data for {@code Experience Event - Proposition Interactions} field group from this {@code OptimizeProposition} offer.
      *
      * The returned XDM data contains the {@code eventType} for the Experience Event with value {@code decisioning.propositionInteract}.
      *
@@ -816,7 +816,7 @@ public extension Offer {
     /// If the proposition reference within the option is released and no longer valid, the method returns `nil`.
     ///
     /// - Note: The returned XDM data also contains the `eventType` for the Experience Event with value `decisioning.propositionDisplay`.
-    /// - Returns A dictionary containing XDM data for the propositon interactions.
+    /// - Returns A dictionary containing XDM data for the proposition interactions.
     func generateDisplayInteractionXdm() -> [String: Any]? {...}
 
     /// Creates a dictionary containing XDM formatted data for `Experience Event - Proposition Interactions` field group from the given proposition option.
@@ -825,7 +825,7 @@ public extension Offer {
     /// If the proposition reference within the option is released and no longer valid, the method returns `nil`.
     ///
     /// - Note: The returned XDM data also contains the `eventType` for the Experience Event with value `decisioning.propositionInteract`.
-    /// - Returns A dictionary containing XDM data for the propositon interactions.
+    /// - Returns A dictionary containing XDM data for the proposition interactions.
     func generateTapInteractionXdm() -> [String: Any]? {...}
 
     /// Dispatches an event for the Edge extension to send an Experience Event to the Edge network with the display interaction data for the given proposition item.

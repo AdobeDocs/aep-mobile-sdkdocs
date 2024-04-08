@@ -7,6 +7,436 @@ Keywords:
 
 # Release notes
 
+## April 3, 2024
+
+### Android Mobile Core 3.x and compatible extensions
+
+New major version of the Mobile Core SDK for Android has been released along with updates to other extensions. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* The SDK is now compatible with Kotlin 1.5 and higher.
+* Added an enhancement to prevent network retries when the device's network is offline.
+* Migrated UI service to use Jetpack Compose.
+
+Note that all these extensions must be updated together.
+
+* Android Mobile Core 3.0.0
+* Android Signal 3.0.0
+* Android Lifecycle 3.0.0
+* Android Identity 3.0.0
+* Android Profile 3.0.0
+* Android Adobe Experience Platform Assurance 3.0.0
+* Android Adobe Experience Platform Edge Network 3.0.0
+* Android Adobe Journey Optimizer 3.0.0
+* Android Adobe Journey Optimizer - Decisioning 3.0.0
+* Android Consent for Edge Network 3.0.0
+* Android Identity for Edge Network 3.0.0
+* Android Media for Edge Network 3.0.0
+* Android Edge Bridge 3.0.0
+* Android Adobe Analytics 3.0.0
+* Android Adobe Analytics - Media Analytics for Audio & Video 3.1.0
+* Android Adobe Audience Manager 3.0.0
+* Android Adobe Campaign Standard 3.0.0
+* Android Adobe Campaign Classic 3.0.0
+* Android Adobe Target 3.0.0
+* Android Places Service 3.0.0
+
+**Android BOM 3.0.0** has been released and is the recommended way to manage these dependencies.
+
+For help on moving to these versions, and information on deprecated APIs please see:
+
+* [Migration guide](../../resources/migration/android/migrate-to-3x.md)
+* [Migration FAQ](../../resources/migration/android/migrate-to-3x.md#frequently-asked-questions)
+
+### Android BOM 3.0.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.9.6) | BOM (3.0.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:analytics** | **2.0.3** | **3.0.0**|
+| **com.adobe.marketing.mobile:assurance** | **2.2.1** | **3.0.0**|
+| **com.adobe.marketing.mobile:audience** | **2.0.0** | **3.0.0**|
+| **com.adobe.marketing.mobile:campaign** | **2.0.6** | **3.0.0**|
+| **com.adobe.marketing.mobile:campaignclassic** | **2.1.5** | **3.0.0**|
+| **com.adobe.marketing.mobile:core** | **2.6.2** | **3.0.0**|
+| **com.adobe.marketing.mobile:edge** | **2.4.0** | **3.0.0**|
+| **com.adobe.marketing.mobile:edgebridge** | **2.1.0** | **3.0.0**|
+| **com.adobe.marketing.mobile:edgeconsent** | **2.0.0** | **3.0.0**|
+| **com.adobe.marketing.mobile:edgeidentity** | **2.0.1** | **3.0.0**|
+| **com.adobe.marketing.mobile:edgemedia** | **2.0.0** | **3.0.0**|
+| **com.adobe.marketing.mobile:identity** | **2.0.3** | **3.0.0**|
+| **com.adobe.marketing.mobile:lifecycle** | **2.0.4** | **3.0.0**|
+| **com.adobe.marketing.mobile:media** | **3.0.0** | **3.1.0**|
+| **com.adobe.marketing.mobile:messaging** | **2.2.1** | **3.0.0**|
+| **com.adobe.marketing.mobile:optimize** | **2.0.2** | **3.0.0**|
+| **com.adobe.marketing.mobile:places** | **2.1.0** | **3.0.0**|
+| **com.adobe.marketing.mobile:signal** | **2.0.1** | **3.0.0**|
+| **com.adobe.marketing.mobile:target** | **2.0.3** | **3.0.0**|
+| **com.adobe.marketing.mobile:userprofile** | **2.0.1** | **3.0.0**|
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Messaging 3.0.0
+
+Major version update for [Adobe Journey Optimizer](../../edge/adobe-journey-optimizer/index.md) for Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Migrated the in-app message feature to use Jetpack Compose based UI Services from MobileCore 3.0.0.
+* Adds support for code-based experiences.
+* Fixed a bug that caused Activity restarts when processing push notification click URIs.
+
+### Android Optimize 3.0.0
+
+Major version update for [Adobe Journey Optimizer - Decisioning Extension](../../edge/adobe-journey-optimizer-decisioning/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Renamed class `Proposition` to `OptimizeProposition`.
+
+## April 2, 2024
+
+### Android Edge 3.0.0
+
+Major version update for [Edge Network](../../edge/edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Removed deprecated function `Formatters.dateToISO8601String()`, replaced by `TimeUtils.getISO8601UTCDateWithMilliseconds()` in MobileCore.
+* Removed deprecated function `Formatters.dateToShortDateString()`, replaced by `TimeUtils.getISO8601FullDate()` in MobileCore.
+* Added an enhancement to prevent network retries when the device's network is offline.
+
+### Android EdgeConsent 3.0.0
+
+Major version update for [Consent for Edge Network](../../edge/consent-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+
+### Android EdgeIdentity 3.0.0
+
+Major version update for [Identity for Edge Network](../../edge/identity-for-edge-network/index.md) Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+
+### Android EdgeMedia 3.0.0
+
+Major version update for [Adobe Streaming Media for Edge Network](../../edge/media-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+
+### Android EdgeBridge 3.0.0
+
+Major version update for Edge Bridge for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Updated Edge Bridge data format to enhance support for migrating to sending data via Edge Network to Adobe Analytics and reduce the effort required for mapping data to XDM.
+* If you are currently using Edge Bridge version 2.x and you are mapping data to XDM in your datastream, adjustments will be necessary when adopting version 3.0.0. For more details, please review the [migration](../../resources/migration/android/migrate-to-3x.md) documentation.
+
+### Android Analytics 3.0.0
+
+Major version update for [Adobe Analytics](../../solution/adobe-analytics/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Added an enhancement to prevent network retries when the device's network is offline.
+
+### Android Media 3.1.0
+
+Version update to 3.1.0 for [Adobe Analytics - Media Analytics workflows](../../solution/adobe-media-analytics/index.md) Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Added an enhancement to prevent network retries when the device's network is offline and improved logging.
+
+Please note that the version 3.0.0 of the Adobe Analytics - Media Analytics extension is compatible with Mobile Core 2.x. The increment to 3.1.0 was preferred for this release in order to synchronize all extensions to same major version.
+
+### Android Audience 3.0.0
+
+Major version update for [Adobe Audience Manager](../../solution/adobe-audience-manager/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Added an enhancement to prevent network retries when the device's network is offline.
+
+### Android Campaign Classic 3.0.0
+
+Major version update for [Campaign Classic](../../solution/adobe-campaign-classic/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* The SDK is now compatible with Kotlin 1.5 and higher.
+* Removed the out-of-the-box push template handling code. This functionality will be available in a future Core 3.x release.
+
+### Android Campaign Standard 3.0.0
+
+Major version update for [Campaign Standard](../../solution/adobe-campaign-standard/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* The SDK is now compatible with Kotlin 1.5 and higher.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Migrated Campaign SDK to use Jetpack Compose based UI Services from MobileCore 3.0.0
+* Moved code to create and track local notifications from Mobile Core to Campaign.
+
+### Android Target 3.0.0
+
+Major version update for [Target](../../solution/adobe-target/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Migrated Target Preview to use Jetpack Compose based UI Services from MobileCore 3.0.0
+
+### Android Places 3.0.0
+
+Major version update for [Places](../../solution/places/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+
+## April 1, 2024
+
+### Android Core 3.0.0
+
+Major version update of Adobe Experience Platform Core Android SDK is live!
+
+Please note that the current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* The SDK is now compatible with Kotlin 1.5 and higher.
+* Migrated UI service to use Jetpack Compose.
+* Removed deprecated `MobileCore.registerExtension(...)` and `MobileCore.start()` APIs. Use the `MobileCore.registerExtensions(...)` API for registering extensions and initializing the SDK instead.
+* Removed `MobileCore.setMessagingDelegate`, `MobileCore.getMessagingDelegate` APIs which were used to control the display of in-app messages. Migrate to `com.adobe.marketing.mobile.services.ui.PresentationDelegate` and use `ServiceProvider.getUIService().setPresentationDelegate` API instead.
+* Removed other APIs related to extension development which were deprecated in 2.0.0.
+* Added an enhancement to prevent network retries when the device's network is offline.
+
+### Android Signal 3.0.0
+
+Major version update for [Signal](../base/mobile-core/signal/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* The SDK is now compatible with Kotlin 1.5 and higher.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Added an enhancement to prevent network retries when the device's network is offline.
+
+### Android Lifecycle 3.0.0
+
+Major version update for [Lifecycle](../base/mobile-core/lifecycle/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+
+### Android Identity 3.0.0
+
+Major version update for [Identity](../base/mobile-core/identity/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Added an enhancement to prevent network retries when the device's network is offline.
+
+### Android UserProfile 3.0.0
+
+Major version update for [User Profile](../base/profile/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the `MobileCore.registerExtensions()` API for registering extensions and initializing the SDK instead.
+* Removed deprecated `UserProfile.updateUserAttribute` API. Use the `UserProfile.updateUserAttributes` API instead.
+* Removed deprecated `UserProfile.removeUserAttribute` API. Use the `UserProfile.removeUserAttributes` API instead.
+
+### Android Assurance 3.0.0
+
+Major version update for [Adobe Experience Platform Assurance](../base/assurance/index.md) on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* The SDK is now compatible with Kotlin 1.5 and higher.
+* Removed deprecated `registerExtension` API. Use the `MobileCore.registerExtensions()` API for registering extensions and initializing the SDK instead.
+* Migrated SDK UI components to Jetpack Compose.
+
+## March 20, 2024
+
+### iOS Mobile Core 5.x and compatible extensions
+
+New major version of the Mobile Core SDK for iOS has been released along with updates to other extensions. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0 and tvOS 12.0 (for extensions which support tvOS).
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+* Include a privacy manifest for AEPCore and AEPServices.
+
+Note that all these extensions must be updated together.
+
+* iOS Mobile Core 5.0.0
+* iOS Signal 5.0.0
+* iOS Lifecycle 5.0.0
+* iOS Identity 5.0.0
+* iOS Profile 5.0.0
+* iOS Adobe Experience Platform Assurance 5.0.0
+* iOS Adobe Experience Platform Edge Network 5.0.0
+* iOS Adobe Journey Optimizer 5.0.0
+* iOS Adobe Journey Optimizer - Decisioning 5.0.0
+* iOS Consent for Edge Network 5.0.0
+* iOS Identity for Edge Network 5.0.0
+* iOS Media for Edge Network 5.0.0
+* iOS Edge Bridge 5.0.0
+* iOS Adobe Analytics 5.0.0
+* iOS Adobe Analytics - Media Analytics for Audio & Video 5.0.0
+* iOS Adobe Audience Manager 5.0.0
+* iOS Adobe Campaign Standard 5.0.0
+* iOS Adobe Campaign Classic 5.0.0
+* iOS Adobe Target 5.0.0
+* iOS Places Service 5.0.0
+
+To learn how Apple's privacy related announcements made in WWDC of 2023 affect the Mobile SDK, please read the guide on [iOS privacy manifest and related changes](../../resources/privacy-manifest.md).
+
+For help on moving to these versions, and information on deprecated APIs please see:
+
+* [Migration guide](../../resources/migration/ios/index.md)
+
+### iOS UserProfile 5.0.0
+
+Major version update for [User Profile](../base/profile/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS Assurance 5.0.0
+
+Major version update for [Adobe Experience Platform Assurance](../base/assurance/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS Messaging 5.0.0
+
+Major version update for [Adobe Journey Optimizer](../../edge/adobe-journey-optimizer/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+* Added [`handleNotificationResponse(_:urlHandler:closure:)`](./../../edge/adobe-journey-optimizer/api-reference/#handlenotificationresponse) API to provide more control over URL handling from `UNNotificationResponse` objects.
+  * Removed deprecated public API `Messaging.handleNotificationResponse(_:applicationOpened:withCustomActionId:)`.
+  * Removed public API `Messaging.handleNotificationResponse(_:closure:)` API.
+* Added support for [Code Based Experiences](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based).
+  * Added public API [`Messaging.updatePropositionsForSurfaces(_)`](./../../edge/adobe-journey-optimizer/code-based/api-reference/#updatepropositionsforsurfaces).
+  * Added public API [`Messaging.getPropositionsForSurfaces(_:completion:)`](./../../edge/adobe-journey-optimizer/code-based/api-reference/#getpropositionsforsurfaces).
+
+### iOS Optimize 5.0.0
+
+Major version update for [Adobe Journey Optimizer - Decisioning Extension](../../edge/adobe-journey-optimizer-decisioning/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+* Renamed class `Proposition` to `OptimizeProposition`.
+
+### iOS EdgeConsent 5.0.0
+
+Major version update for [Consent for Edge Network](../../edge/consent-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS EdgeMedia 5.0.0
+
+Major version update for [Adobe Streaming Media for Edge Network](../../edge/media-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS EdgeBridge 5.0.0
+
+Major version update for [Edge Bridge](../../solution/adobe-analytics/migrate-to-edge-network.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+* Updated Edge Bridge data format to enhance support for migrating to sending data via Edge Network to Adobe Analytics and reduce the effort required for mapping data to XDM.
+* If you are currently using Edge Bridge version 4.0.0 and you are mapping data to XDM in your datastream, adjustments will be necessary when adopting version 5.0.0. For more details, please review the [migration](../../resources/migration/ios/migrate-to-5x.md) documentation.
+
+### iOS Analytics 5.0.0
+
+Major version update for [Adobe Analytics](../../solution/adobe-analytics/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS Media 5.0.0
+
+Major version update for [Adobe Analytics - Media Analytics workflows](../../solution/adobe-media-analytics/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS Audience 5.0.0
+
+Major version update for [Adobe Audience Manager](../../solution/adobe-audience-manager/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS Campaign Classic 5.0.0
+
+Major version update for [Campaign Classic](../../solution/adobe-campaign-classic/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS Campaign Standard 5.0.0
+
+Major version update for [Campaign Standard](../../solution/adobe-campaign-standard/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS Target 5.0.0
+
+Major version update for [Target](../../solution/adobe-target/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+* Fixed a bug when using Target Preview on device that caused the floating button to remain visible when a preview selection was active.
+
+### iOS Places 5.0.0
+
+Major version update for [Places](../../solution/places/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+* Fixes a bug where limit was not being respected in calls to `getNearbyPointsOfInterest`.
+
+## March 19, 2024
+
+### iOS Core 5.0.0
+
+Major version update of Adobe Experience Platform Core iOS SDKs are live! It contains the following extensions:
+
+* Core 5.0.0
+* Identity 5.0.0
+* Signal 5.0.0
+* Lifecycle 5.0.0
+
+Please note that the current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+* Include a privacy manifest for AEPCore and AEPServices.
+
+### iOS Edge 5.0.0
+
+Major version update for [Edge Network](../../edge/edge-network/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+### iOS EdgeIdentity 5.0.0
+
+Major version update for [Identity for Edge Network](../../edge/identity-for-edge-network/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
 ## March 12, 2024
 
 ### Android BOM 2.9.6
@@ -221,7 +651,7 @@ Keywords:
 
 ### iOS Core 4.2.3
 
-* Fix podspec dependencies not being restricted to current major version
+* Fix podspec dependencies not being restricted to current major version.
 * Fixed an issue that was allowing in-app messages without content to be displayed.
 
 ## February 6, 2024

@@ -8,6 +8,25 @@ keywords:
 
 # Release notes
 
+## April 2, 2024
+
+### Android Places 3.0.0
+
+Major version update for [Places](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+
+## March 20, 2024
+
+### iOS Places 5.0.0
+
+Major version update for [Places](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+* Fixes a bug where limit was not being respected in calls to `getNearbyPointsOfInterest`.
+
 ## February 27, 2024
 
 ### iOS Places 4.1.1
