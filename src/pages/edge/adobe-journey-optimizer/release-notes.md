@@ -9,6 +9,17 @@ keywords:
 
 # Release notes
 
+## April 3, 2024
+
+### Android Messaging 3.0.0
+
+Major version update for [Adobe Journey Optimizer](./index.md) for Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Migrated the in-app message feature to use Jetpack Compose based UI Services from MobileCore 3.0.0.
+* Adds support for code-based experiences.
+* Fixed a bug that caused Activity restarts when processing push notification click URIs.
+
 ## March 20, 2024
 
 Major version update for [Adobe Journey Optimizer](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:

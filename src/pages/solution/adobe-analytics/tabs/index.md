@@ -2,22 +2,31 @@
 noIndex: true
 ---
 
-<Variant platform="android" task="add" repeat="8"/>
+import Alerts from '/src/pages/resources/alerts.md'
+
+<Variant platform="android" task="add" repeat="11"/>
 
 1. Add the [Mobile Core](../../home/base/mobile-core/index.md) and Analytics extensions to your project using the app's Gradle file.
 
-<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+#### Kotlin
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
+```kotlin
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation("com.adobe.marketing.mobile:core")
+implementation("com.adobe.marketing.mobile:identity")
+implementation("com.adobe.marketing.mobile:analytics")
+```
 
-</InlineNestedAlert>
+#### Groovy
 
 ```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
 implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:identity'
 implementation 'com.adobe.marketing.mobile:analytics'
 ```
+
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>now works
 
 2. Import the Analytics extension in your application's main activity.
 
@@ -43,9 +52,9 @@ import com.adobe.marketing.mobile.Analytics
 2. Add the following pods in your `Podfile`:
 
 ```ruby
-pod 'AEPCore'
-pod 'AEPAnalytics'
-pod 'AEPIdentity'
+pod 'AEPCore', '~> 5.0'
+pod 'AEPAnalytics', '~> 5.0'
+pod 'AEPIdentity', '~> 5.0'
 ```
 
 3. Import the Analytics and Identity libraries:

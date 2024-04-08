@@ -6,6 +6,7 @@ keywords:
 - API reference
 ---
 
+import Alerts from '/src/pages/resources/alerts.md'
 import Tabs from './tabs/api-reference.md'
 
 # Adobe Audience Manager API reference
@@ -42,11 +43,9 @@ iOS
 
 ## registerExtension
 
-This API registers an extension class that was derived from with a unique name.
+<Alerts query="platform=android-register-extension&componentClass=InlineNestedAlert"/>
 
-<InlineAlert variant="warning" slots="text"/>
-
-Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../../home/base/mobile-core/api-reference.md#registerextensions) API instead.
+Registers the Audience Manager extension with the Mobile Core SDK.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 

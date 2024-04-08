@@ -4,11 +4,11 @@ noIndex: true
 
 <Variant platform="android" task="get" repeat="1"/>
 
-Latest version of the Adobe Experience Platform SDKs for Android supports Android 4.4 (API 19) or later.
+Latest version of the Adobe Experience Platform SDKs for Android supports Android 5.0 (API 21) or later.
 
 <Variant platform="ios" task="get" repeat="2"/>
 
-Adobe Experience Platform SDKs for iOS support **iOS 11 or later**; **requires** Swift 5.1 or newer; **and** Xcode 14.1 or newer.
+Adobe Experience Platform SDKs for iOS support **iOS 12 or later**; **requires** Swift 5.1 or newer; **and** Xcode 15.0 or newer.
 
 In order to support the new Apple M1 architecture while maintaining support for existing Intel architecture, the Adobe Experience Platform SDKs are now distributed using XCFrameworks. Please see the [current SDK versions](../current-sdk-versions.md) for more information on the latest extension versions.
 
@@ -41,7 +41,7 @@ For the latest Flutter installation instructions, see the package [install tab](
 Add the dependencies to `build.gradle` for each extension.
 
 ```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
 implementation 'com.adobe.marketing.mobile:userprofile'
 implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:identity'
@@ -67,15 +67,15 @@ Add the dependencies to your `Podfile` for each extension.
 
 ```pod
 use_frameworks!
-pod 'AEPEdgeConsent', '~> 4.0'
-pod 'AEPAssurance', '~> 4.0'
-pod 'AEPEdgeIdentity', '~> 4.0'
-pod 'AEPEdge', '~> 4.0'
-pod 'AEPUserProfile', '~> 4.0'
-pod 'AEPCore', '~> 4.0'
-pod 'AEPIdentity', '~> 4.0'
-pod 'AEPSignal', '~>4.0'
-pod 'AEPLifecycle', '~>4.0'
+pod 'AEPEdgeConsent', '~> 5.0'
+pod 'AEPAssurance', '~> 5.0'
+pod 'AEPEdgeIdentity', '~> 5.0'
+pod 'AEPEdge', '~> 5.0'
+pod 'AEPUserProfile', '~> 5.0'
+pod 'AEPCore', '~> 5.0'
+pod 'AEPIdentity', '~> 5.0'
+pod 'AEPSignal', '~> 5.0'
+pod 'AEPLifecycle', '~> 5.0'
 ```
 
 If Cocoapods cannot not find the dependencies, you may need to run this command:

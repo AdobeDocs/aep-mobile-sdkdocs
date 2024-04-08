@@ -63,7 +63,7 @@ The datasets selected should use a schema that uses the "Push Notification Track
 
 Follow these steps to integrate the Adobe Journey Optimizer extension.
 
-#### Import the extension
+#### Download and import the Messaging extension
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

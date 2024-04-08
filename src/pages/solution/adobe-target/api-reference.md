@@ -6,6 +6,7 @@ keywords:
 - API reference
 ---
 
+import Alerts from '/src/pages/resources/alerts.md'
 import Tabs from './tabs/api-reference.md'
 
 # Target API reference
@@ -157,9 +158,7 @@ iOS
 
 ## registerExtension
 
-<InlineAlert variant="warning" slots="text"/>
-
-Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../../home/base/mobile-core/api-reference.md#registerextensions) API instead.
+<Alerts query="platform=android-register-extension&componentClass=InlineNestedAlert"/>
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 

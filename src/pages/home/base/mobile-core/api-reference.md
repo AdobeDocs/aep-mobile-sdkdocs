@@ -193,11 +193,6 @@ iOS
 
 ## registerExtension
 
-<InlineAlert variant="warning" slots="text"/>
-
-This API has been deprecated starting in v2.0.0 version of Mobile Core extension.
-Use [registerExtensions](#registerextensions) to register desired extensions and boot up the SDK for event processing. Calling `MobileCore.start()` API is no longer required when using `MobileCore.registerExtensions()`.
-
 Extensions can be incrementally registered with Mobile Core using the `registerExtension` API.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>

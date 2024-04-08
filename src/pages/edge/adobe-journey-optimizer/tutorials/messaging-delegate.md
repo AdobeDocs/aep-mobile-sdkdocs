@@ -81,7 +81,7 @@ The test apps in this repository demonstrate using a `MessagingDelegate`:
 
 * [Swift](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoApp)
 * [Objective-C](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoAppObjC)
-* [Java](https://github.com/adobe/aepsdk-messaging-android/tree/main/code/app)
+* [Kotlin](https://github.com/adobe/aepsdk-messaging-android/tree/main/code/testapp)
 
 #### Further reading
 
