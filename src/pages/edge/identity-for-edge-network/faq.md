@@ -116,6 +116,7 @@ To clear the identifiers used by the Edge extensions, call [resetIdentities](../
 ## Q: In what cases is the Experience Cloud ID (ECID) reset or cleared?
 
 A: The ECID is reset or cleared in the following cases:
+
 * Cleared when the app is uninstalled.
 * Reset using the [`resetIdentities`](../../home/base/mobile-core/api-reference.md#resetidentities) API.
 * Reset when the app's local persistence cleared (by the app developer, other SDKs, etc.).
