@@ -113,6 +113,16 @@ To clear the identifiers used by the Adobe Solutions extensions, call [setPrivac
 
 To clear the identifiers used by the Edge extensions, call [resetIdentities](../../home/base/mobile-core/api-reference.md#resetidentities)
 
+## Q: In what cases is the Experience Cloud ID (ECID) reset or cleared?
+
+A: The ECID is reset or cleared in the following cases:
+* Cleared when the app is uninstalled.
+* Reset using the [`resetIdentities`](../../home/base/mobile-core/api-reference.md#resetidentities) API.
+* Reset when the app's local persistence cleared (by the app developer, other SDKs, etc.).
+   * `UserDefaults` in Core iOS < v4.2.0, file system (Library directory) in [v4.2.0 and newer](../../../pages/home/release-notes/2023.md#ios-core-420).
+     * However, tvOS continues to use `UserDefaults` due to constraints on that platform in using the file system for persisted SDK data.
+   * `SharedPreferences` in Android.
+
 ## Q: What steps are needed to generate a new Experience Cloud ID (ECID) for a user when using both Edge extensions and Adobe Solutions extensions?
 
 A: Both identity extensions' ECID must be regenerated in sequence to avoid linking the old and new ECIDs in Adobe Experience Platform.
