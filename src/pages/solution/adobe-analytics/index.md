@@ -100,7 +100,7 @@ The default value for this setting is 0, which means that hit batching is disabl
 
 #### Launch hit delay
 
-The number of seconds to wait before Analytics launch hits are sent from the SDK. Ensure that this setting is set at 5 seconds or greater when using acquisition functionality from the [Mobile Services](https://developer.adobe.com/client-sdks/previous-versions/documentation/adobe-analytics-mobile-services/) extension.
+The number of seconds to wait before Analytics launch hits are sent from the SDK.
 
 ## Add Analytics to your application
 
