@@ -8,7 +8,7 @@ keywords:
 - Product overview
 ---
 
-import Tabs from './tabs/visitor-tracking.md'
+import Tabs from '../tabs/visitor-tracking.md'
 
 # Visitor tracking between an app and the mobile web
 

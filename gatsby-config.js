@@ -620,8 +620,18 @@ module.exports = {
                                         path: "/home/base/mobile-core/identity/api-reference"
                                     },
                                     {
-                                        title: "Push identifier sync",
-                                        path: "/home/base/mobile-core/identity/push-sync"
+                                        title: "Tutorials",
+                                        path: "/home/base/mobile-core/identity/tutorials",
+                                        pages: [
+                                            {
+                                                title: "Push identifier sync",
+                                                path: "/home/base/mobile-core/identity/tutorials/push-sync"
+                                            },
+                                            {
+                                                title: "Visitor tracking",
+                                                path: "/home/base/mobile-core/identity/tutorials/visitor-tracking"
+                                            }
+                                        ]
                                     }
                                 ]
                             },
