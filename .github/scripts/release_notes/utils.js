@@ -10,8 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const execSync = require('child_process').execSync;
 const fs = require("fs");
+const { PST_TIMEZONE, PST_TIMEZONE_OFFSET } = require('./constants')
 
 function isEarlierThanXHours(hours, timestampInMilliseconds) {
     const timestamp = new Date(timestampInMilliseconds);
@@ -45,18 +45,12 @@ function extractReleaseNotes(releaseText) {
     }
 }
 
-function releaseFileContainsLineStartWith(lineStartWithString) {
-    try {
-        execSync(`grep -E "^${lineStartWithString}" ./src/pages/documentation/release-notes/index.md`, { stdio: 'ignore' });
-        return true;
-    } catch (e) {
-        return false;
-    }
-}
-
 function saveJsonObjToFile(jsonObj, filePath) {
     fs.writeFile(filePath, JSON.stringify(jsonObj), err => {
-        if (err) console.log("Failed to write json object to file:", err);
+        if (err) {
+            console.error("Failed to write json object to file.");
+            throw err;
+        }
     });
 }
 
@@ -76,11 +70,9 @@ function convertISODateToRleaseDateFormat(iso8601DateStr) {
 }
 
 function setTimeZoneToPST() {
-    process.env.TZ = "America/Los_Angeles"
-
+    process.env.TZ = PST_TIMEZONE
     const offset = new Date().getTimezoneOffset()
-
-    return (offset == 420)
+    return (offset == PST_TIMEZONE_OFFSET)
 }
 
 function convertToDateTime(timestamp) {
@@ -90,11 +82,10 @@ function convertToDateTime(timestamp) {
 
 module.exports = {
     isEarlierThanXHours,
-    releaseFileContainsLineStartWith,
     saveJsonObjToFile,
     extractReleaseNotes,
     convertISODateToRleaseDateFormat,
     capitalizeFirstLetter,
     setTimeZoneToPST,
-    convertToDateTime
+    convertToDateTime,
 }

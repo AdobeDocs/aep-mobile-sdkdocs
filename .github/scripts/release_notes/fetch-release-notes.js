@@ -10,51 +10,31 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const repoNames = require('./repository-names');
 const { fetchReleaseInfo, GithubReleaseInfo } = require('./github-release');
 const { capitalizeFirstLetter } = require('./utils');
 
-async function fetchReleaseInfoFromGitHub(token, timestampInMilliseconds) {
-    let releaseInofArray = []
-    let releaseInfoPromises = repoNames.map(repoName => fetchReleaseInfo(token, "adobe", repoName));
+async function fetchReleaseInfoFromGitHub(repoNames, org, token, timestampInMilliseconds) {
+    let releaseInfoPromises = repoNames.map(repoName => fetchReleaseInfo(token, org, repoName));
     let releaseInfoLists = await Promise.all(releaseInfoPromises);
-    for (const releaseInfoList of releaseInfoLists) {
-        for (const releaseInfo of releaseInfoList) {
-            let lastTimeStamp = Date.parse(releaseInfo.published_at)
-            if (timestampInMilliseconds < lastTimeStamp) {
-                if (releaseInfo instanceof GithubReleaseInfo) {
-                    let sdkReleaseInfo = convertToSDKReleaseInfo(releaseInfo)
-                    if (sdkReleaseInfo != null) {
-                        releaseInofArray.push(sdkReleaseInfo)
-                    }
-                }
+    return releaseInfoLists.flat().flatMap(releaseInfo => {
+        let lastTimeStamp = Date.parse(releaseInfo.published_at)
+        if (timestampInMilliseconds < lastTimeStamp) {
+            let sdkReleaseInfo = convertToSDKReleaseInfo(releaseInfo)
+            if (sdkReleaseInfo != null) {
+                return [sdkReleaseInfo]
             }
         }
-    }
-    return releaseInofArray
-}
-
-function sortReleaseInfoByDateASC(releaseInfoArray) {
-    releaseInfoArray.sort((a, b) => {
-        let dateA = new Date(a.published_at)
-        let dateB = new Date(b.published_at)
-        if (dateA < dateB) {
-            return -1;
-        }
-        if (dateA > dateB) {
-            return 1;
-        }
-        return 0;
+        return []
     })
-    return releaseInfoArray
 }
 
 function convertToSDKReleaseInfo(releaseInfo) {
     if (!(releaseInfo instanceof GithubReleaseInfo)) {
-        throw Error("Input is not a GithubReleaseInfo object.")
+        throw Error("Input is not a [GithubReleaseInfo] object.")
     }
     switch (releaseInfo.repo_name) {
         case "aepsdk-commons":
+            // aepsdk-commons is also used to release othe artifacts, only keep the release notes for BOM.
             if (releaseInfo.tag_name.startsWith('bom-'))
                 return new SDKReleaseInfo(releaseInfo, 'Android', 'BOM', releaseInfo.tag_name.replace('bom-', ''))
             else
@@ -118,7 +98,7 @@ function convertToSDKReleaseInfo(releaseInfo) {
         case "aepsdk-campaign-android":
             return new SDKReleaseInfo(releaseInfo, 'Android', 'Campaign Standard', releaseInfo.tag_name.replace('v', ''))
         default:
-            throw Error("unsupported repoName: " + releaseInfo.repoName)
+            throw Error("unsupported repoName: " + releaseInfo.repo_name)
     }
 }
 
@@ -136,4 +116,19 @@ class SDKReleaseInfo {
     }
 }
 
-module.exports = { fetchReleaseInfoFromGitHub, sortReleaseInfoByDateASC };
+function sortReleaseInfoByDateASC(releaseInfoArray) {
+    releaseInfoArray.sort((a, b) => {
+        let dateA = new Date(a.published_at)
+        let dateB = new Date(b.published_at)
+        if (dateA < dateB) {
+            return -1;
+        }
+        if (dateA > dateB) {
+            return 1;
+        }
+        return 0;
+    })
+    return releaseInfoArray
+}
+
+module.exports = { fetchReleaseInfoFromGitHub, sortReleaseInfoByDateASC, SDKReleaseInfo };

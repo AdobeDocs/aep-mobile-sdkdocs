@@ -11,29 +11,29 @@ governing permissions and limitations under the License.
 */
 
 const timestampObj = require('./timestamp.json')
-const releaseNoteMap = require('./releaseNoteMap.json')
+const { repoNames, releaseNotesLocation, MAIN_RELEASE_NOTES_LOCATION } = require('./constants')
 const { saveJsonObjToFile, setTimeZoneToPST, convertToDateTime } = require('./utils')
 const { updateReleaseNotesPage } = require('./update-release-notes');
 const { fetchReleaseInfoFromGitHub, sortReleaseInfoByDateASC } = require('./fetch-release-notes');
 
-// node .github/scripts/release_notes/index.js <GITHUB_TOKEN> [--dry-run]
+// Run the script on the root directory of the project: node .github/scripts/release_notes/index.js <GITHUB_TOKEN> [--dry-run]
 const GITHUB_TOKEN = process.argv[2];
 
 if (GITHUB_TOKEN == undefined) {
     throw new Error("token is undefined")
 }
 
-// before running the script, make sure the default time zone is set to PST in the GitHub action
+const DRY_RUN = process.argv.includes("--dry-run")
+
+// Before running the script, make sure the default time zone is set to PST in the GitHub action
 if (!setTimeZoneToPST()) {
     throw new Error("The default time zone is not set to PST")
 }
 
-console.log(`Start to fetch release info from GitHub created after [${convertToDateTime(timestampObj.ts)}]`)
+console.log(`Start to fetch release info from GitHub created after [${convertToDateTime(timestampObj.ts)}]`);
 
-run(process.argv.includes("--dry-run"))
-
-async function run(dryRun) {
-    const list = await fetchReleaseInfoFromGitHub(GITHUB_TOKEN, timestampObj.ts)
+(async function (dryRun) {
+    const list = await fetchReleaseInfoFromGitHub(repoNames, "adobe", GITHUB_TOKEN, timestampObj.ts)
     const sortedList = sortReleaseInfoByDateASC(list)
     if (dryRun) {
         console.log("[Dry run mode] The following release notes need to be updated:")
@@ -41,23 +41,30 @@ async function run(dryRun) {
         return
     }
     // 1. Update the main release page
-    updateReleaseNotesPage("./src/pages/home/release-notes/index.md", sortedList)
-    const ignoreList = ['AEP React Native', 'Roku', 'AEP Flutter']
+    updateReleaseNotesPage(MAIN_RELEASE_NOTES_LOCATION, sortedList)
+    const ignoreList = ['React Native', 'Roku', 'Flutter']
     for (const releaseInfo of sortedList) {
-        // We don't have separate release note pages for AEP React Native, Roku, and AEP Flutter
+        // We don't have separate release-notes pages for React Native, Roku, Flutter, and BOM artifacts.
         if (ignoreList.includes(releaseInfo.platform) || releaseInfo.extension == "BOM") {
             continue
         }
-        let filePath = releaseNoteMap[releaseInfo.extension]
+
+        // 2. Update the extension's release note page
+        let filePath = releaseNotesLocation[releaseInfo.extension]
         if (filePath != undefined) {
-            // 2. Update the extension's release note page
             updateReleaseNotesPage(filePath, [releaseInfo])
         } else {
-            console.error(`Error: no release note page found for ${releaseInfo.extension}`)
+            throw Error(`Not found the release note page for ${releaseInfo.extension}`)
         }
     }
+
+    // 3. Save the timestamp to the file
     let jsonObj = {
         "ts": Date.now()
     }
     saveJsonObjToFile(jsonObj, `${__dirname}/timestamp.json`)
-}
+})(DRY_RUN).then(
+    () => console.log("Finished updating release notes")
+).catch(
+    (error) => console.error(error)
+);
