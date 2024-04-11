@@ -13,6 +13,16 @@ governing permissions and limitations under the License.
 const { Octokit, App } = require("octokit");
 const { DEFAULT_TIMEZONE } = require('./utils');
 
+/**
+ * Fetches release information from GitHub.
+ *
+ * @param {string} token - The GitHub authentication token.
+ * @param {string} owner - The owner of the repository.
+ * @param {string} repo - The name of the repository.
+ * @param {number} [capacity=5] - The maximum number of releases to fetch.
+ * @returns {Promise<Array<GithubReleaseInfo>>} - A promise that resolves to an array of GithubReleaseInfo objects.
+ * @throws {Error} - Throw an error if failed to fetch the release info from GitHub.
+ */
 async function fetchReleaseInfo(token, owner, repo, capacity = 5) {
     const octokit = new Octokit({
         auth: token,
@@ -33,12 +43,24 @@ async function fetchReleaseInfo(token, owner, repo, capacity = 5) {
     }
 }
 
+
+/**
+ * Represents information about a GitHub release.
+ * @class
+ */
 class GithubReleaseInfo {
+    /**
+     * Creates a new instance of the GithubReleaseInfo class.
+     * @param {string} published_at - The date and time when the release was published.
+     * @param {string} body - The body content of the release.
+     * @param {string} repo_name - The name of the repository.
+     * @param {string} tag_name - The tag name of the release.
+     */
     constructor(published_at, body, repo_name, tag_name) {
-        this.published_at = published_at
-        this.body = body
-        this.repo_name = repo_name
-        this.tag_name = tag_name
+        this.published_at = published_at;
+        this.body = body;
+        this.repo_name = repo_name;
+        this.tag_name = tag_name;
     }
 }
 

@@ -13,12 +13,27 @@ governing permissions and limitations under the License.
 const fs = require("fs");
 const { PST_TIMEZONE, PST_TIMEZONE_OFFSET } = require('./constants')
 
+
+/**
+ * Checks if a given timestamp is earlier than a specified number of hours from the current time.
+ *
+ * @param {number} hours - The number of hours to compare against.
+ * @param {number} timestampInMilliseconds - The timestamp to compare.
+ * @returns {boolean} Returns true if the timestamp is earlier than the specified number of hours from the current time, otherwise false.
+ */
 function isEarlierThanXHours(hours, timestampInMilliseconds) {
     const timestamp = new Date(timestampInMilliseconds);
     const now = new Date();
     return timestamp < now - (hours * 60 * 60 * 1000);
 }
 
+
+/**
+ * Extracts the release notes from the given release text.
+ *
+ * @param {string} releaseText - The release text to extract the release notes from.
+ * @returns {string[]} - An array of release notes.
+ */
 function extractReleaseNotes(releaseText) {
     if (!releaseText) {
         return []
@@ -45,6 +60,13 @@ function extractReleaseNotes(releaseText) {
     }
 }
 
+/**
+ * Saves a JSON object to a file.
+ *
+ * @param {Object} jsonObj - The JSON object to be saved.
+ * @param {string} filePath - The path of the file to save the JSON object to.
+ * @throws {Error} If there is an error writing the JSON object to the file.
+ */
 function saveJsonObjToFile(jsonObj, filePath) {
     fs.writeFile(filePath, JSON.stringify(jsonObj), err => {
         if (err) {
@@ -54,10 +76,22 @@ function saveJsonObjToFile(jsonObj, filePath) {
     });
 }
 
+/**
+ * Capitalizes the first letter of a string.
+ *  
+ * @param {string} string - The string to capitalize.
+ * @returns {string} - The string with the first letter capitalized.
+ */
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+/**
+ * Converts an ISO 8601 date string to a release date format.
+ *
+ * @param {string} iso8601DateStr - The ISO 8601 date string to convert.
+ * @returns {string} - The release date format.
+ */
 // TODO: consider using dayjs to handle date format
 function convertISODateToRleaseDateFormat(iso8601DateStr) {
     const date = new Date(iso8601DateStr)

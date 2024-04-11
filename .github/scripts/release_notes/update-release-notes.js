@@ -132,7 +132,7 @@ async function updateReleaseNotesPage(filePath, releaseInfoArray) {
     }
     let contentIsChanged = false
     for (const releaseInfo of releaseInfoArray) {
-        console.log("Updating release notes with:", releaseInfo)
+        // console.log("Updating release notes with:", releaseInfo)
         let title = generateReleaseTitle(releaseInfo.platform, releaseInfo.extension, releaseInfo.version)
         let titleLine = `### ${title}`
         if (hasLineStartWith(titleLine, contentLines)) {
@@ -174,8 +174,5 @@ function hasLineStartWith(string, lineArray) {
 }
 
 module.exports = {
-    generateReleaseNoteSection,
-    generateBOMReleaseNoteSection,
-    filterExistingReleaseInfo,
     updateReleaseNotesPage
 }

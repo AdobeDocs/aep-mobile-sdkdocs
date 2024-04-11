@@ -13,6 +13,15 @@ governing permissions and limitations under the License.
 const { fetchReleaseInfo, GithubReleaseInfo } = require('./github-release');
 const { capitalizeFirstLetter } = require('./utils');
 
+/**
+ * Fetches release information from GitHub for the specified repositories.
+ *
+ * @param {string[]} repoNames - An array of repository names.
+ * @param {string} org - The organization name.
+ * @param {string} token - The GitHub access token.
+ * @param {number} timestampInMilliseconds - The timestamp in milliseconds.
+ * @returns {Promise<SDKReleaseInfo[]>} - A promise that resolves to an array of SDK release information objects.
+ */
 async function fetchReleaseInfoFromGitHub(repoNames, org, token, timestampInMilliseconds) {
     let releaseInfoPromises = repoNames.map(repoName => fetchReleaseInfo(token, org, repoName));
     let releaseInfoLists = await Promise.all(releaseInfoPromises);
@@ -28,6 +37,13 @@ async function fetchReleaseInfoFromGitHub(repoNames, org, token, timestampInMill
     })
 }
 
+/**
+ * Converts a [GithubReleaseInfo] object to an [SDKReleaseInfo] object.
+ * 
+ * @param {GithubReleaseInfo} releaseInfo - The GithubReleaseInfo object to convert.
+ * @returns {SDKReleaseInfo|null} - The converted SDKReleaseInfo object or null if the repo_name is not supported.
+ * @throws {Error} - If the input is not a [GithubReleaseInfo] object.
+ */
 function convertToSDKReleaseInfo(releaseInfo) {
     if (!(releaseInfo instanceof GithubReleaseInfo)) {
         throw Error("Input is not a [GithubReleaseInfo] object.")
@@ -102,33 +118,40 @@ function convertToSDKReleaseInfo(releaseInfo) {
     }
 }
 
+/**
+ * @class Represents information about an SDK release.
+ */
 class SDKReleaseInfo {
+    /**
+     * Creates a new SDKReleaseInfo object.
+     * 
+     * @param {GithubReleaseInfo} githubReleaseInfo - The [GithubReleaseInfo] object containing release information.
+     * @param {string} platform - The platform of the SDK release.
+     * @param {string} extension - The file extension of the SDK release.
+     * @param {string} version - The version of the SDK release.
+     * @throws {Error} Throws an error if the provided githubReleaseInfo is not an instance of [GithubReleaseInfo].
+     */
     constructor(githubReleaseInfo, platform, extension, version) {
         if (githubReleaseInfo instanceof GithubReleaseInfo) {
-            this.published_at = githubReleaseInfo.published_at
-            this.body = githubReleaseInfo.body
-            this.platform = platform
-            this.extension = extension
-            this.version = version
+            this.published_at = githubReleaseInfo.published_at;
+            this.body = githubReleaseInfo.body;
+            this.platform = platform;
+            this.extension = extension;
+            this.version = version;
         } else {
-            throw Error("Invalid GithubReleaseInfo object.")
+            throw Error("Invalid GithubReleaseInfo object.");
         }
     }
 }
 
+/**
+ * Sorts an array of release information objects by date in ascending order.
+ *
+ * @param {Array} releaseInfoArray - The array of release information objects to be sorted.
+ * @returns {Array} - The sorted array of release information objects.
+ */
 function sortReleaseInfoByDateASC(releaseInfoArray) {
-    releaseInfoArray.sort((a, b) => {
-        let dateA = new Date(a.published_at)
-        let dateB = new Date(b.published_at)
-        if (dateA < dateB) {
-            return -1;
-        }
-        if (dateA > dateB) {
-            return 1;
-        }
-        return 0;
-    })
-    return releaseInfoArray
+    return releaseInfoArray.sort((a, b) => (new Date(a.published_at) < new Date(b.published_at)) ? -1 : 1);
 }
 
 module.exports = { fetchReleaseInfoFromGitHub, sortReleaseInfoByDateASC, SDKReleaseInfo };
