@@ -62,7 +62,7 @@ async function fetchReleaseInfo(token, owner, repo, capacity = 5) {
                 }
                 let array = []
                 responseJson.forEach(element => {
-                    array.push(releaseInfo(element.published_at, element.body, repo, element.tag_name))
+                    array.push(new GithubReleaseInfo(element.published_at, element.body, repo, element.tag_name))
                 });
                 resolve(array)
             });
@@ -79,62 +79,16 @@ async function fetchReleaseInfo(token, owner, repo, capacity = 5) {
     })
 }
 
-async function fetchReleaseInfoWithTagName(token, owner, repo, tag) {
-    let options = {
-        host: 'api.github.com',
-        port: 443,
-        timeout: 5000,
-        path: `/repos/${owner}/${repo}/releases/tags/${tag}`,
-        method: 'GET',
-        headers: {
-            'Accept': 'application/vnd.github+json',
-            'User-Agent': 'server-side',
-            'X-GitHub-Api-Version': '2022-11-28',
-            'Authorization': `Bearer ${token}`,
-        }
-    };
-
-    console.log(`request options: ${JSON.stringify(options)}`)
-    return new Promise((resolve) => {
-        let reqGet = https.request(options, function (res) {
-            if (res.statusCode != 200) {
-                throw Error(`Error: response statusCode: ${res.statusCode}, please check if the tag (${tag}) exists in Github repo.`)
-            }
-            console.log(`response statusCode: ${res.statusCode}`)
-
-            let data = [];
-            res.on('data', function (chunk) {
-                data.push(chunk);
-            }).on('end', function () {
-                let buffer = Buffer.concat(data);
-                let str = new TextDecoder("utf-8").decode(buffer)
-                let responseJson = JSON.parse(str)
-                resolve(releaseInfo(responseJson.published_at, responseJson.body, repo, responseJson.tag_name))
-            });
-        });
-        reqGet.on('error', function (e) {
-            console.error(e);
-            throw new Error("Got error response.")
-        });
-        reqGet.on('timeout', function () {
-            reqGet.destroy()
-            throw new Error("Request timeout.")
-        });
-        reqGet.end();
-    })
-
-}
-
-function releaseInfo(published_at, body, repo_name, tag_name) {
-    return {
-        "published_at": published_at,
-        "body": body,
-        "repo_name": repo_name,
-        "tag_name": tag_name
+class GithubReleaseInfo {
+    constructor(published_at, body, repo_name, tag_name) {
+        this.published_at = published_at
+        this.body = body
+        this.repo_name = repo_name
+        this.tag_name = tag_name
     }
 }
 
 module.exports = {
     fetchReleaseInfo,
-    fetchReleaseInfoWithTagName
+    GithubReleaseInfo
 }

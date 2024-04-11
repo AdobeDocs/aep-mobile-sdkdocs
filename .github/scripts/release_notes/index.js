@@ -12,29 +12,34 @@ governing permissions and limitations under the License.
 
 const timestampObj = require('./timestamp.json')
 const releaseNoteMap = require('./releaseNoteMap.json')
-const { saveJsonObjToFile } = require('./utils')
-const { updateReleaseNotesPage, fetchAllReleaseInfo, sortReleaseInfoByDateASC } = require('./update-release-notes');
+const { saveJsonObjToFile, setTimeZoneToPST, convertToDateTime } = require('./utils')
+const { updateReleaseNotesPage } = require('./update-release-notes');
+const { fetchReleaseInfoFromGitHub, sortReleaseInfoByDateASC } = require('./fetch-release-notes');
 
-const token = process.argv[2];
+// node .github/scripts/release_notes/index.js <GITHUB_TOKEN> [--dry-run]
+const GITHUB_TOKEN = process.argv[2];
 
-if (token == undefined) {
+if (GITHUB_TOKEN == undefined) {
     throw new Error("token is undefined")
 }
 
-//before running the script, make sure the default time zone is set to PST in the GitHub action
-process.env.TZ = "America/Los_Angeles"
-
-const offset = new Date().getTimezoneOffset()
-
-if (offset != 420) {
+// before running the script, make sure the default time zone is set to PST in the GitHub action
+if (!setTimeZoneToPST()) {
     throw new Error("The default time zone is not set to PST")
 }
 
-run()
+console.log(`Start to fetch release info from GitHub created after [${convertToDateTime(timestampObj.ts)}]`)
 
-async function run() {
-    const list = await fetchAllReleaseInfo(token, timestampObj.ts)
+run(process.argv.includes("--dry-run"))
+
+async function run(dryRun) {
+    const list = await fetchReleaseInfoFromGitHub(GITHUB_TOKEN, timestampObj.ts)
     const sortedList = sortReleaseInfoByDateASC(list)
+    if (dryRun) {
+        console.log("[Dry run mode] The following release notes need to be updated:")
+        console.dir(sortedList)
+        return
+    }
     // 1. Update the main release page
     updateReleaseNotesPage("./src/pages/home/release-notes/index.md", sortedList)
     const ignoreList = ['AEP React Native', 'Roku', 'AEP Flutter']

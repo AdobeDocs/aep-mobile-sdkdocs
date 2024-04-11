@@ -75,11 +75,26 @@ function convertISODateToRleaseDateFormat(iso8601DateStr) {
     return `${fullMonth} ${day}, ${year}`
 }
 
+function setTimeZoneToPST() {
+    process.env.TZ = "America/Los_Angeles"
+
+    const offset = new Date().getTimezoneOffset()
+
+    return (offset == 420)
+}
+
+function convertToDateTime(timestamp) {
+    const date = new Date(timestamp);
+    return date.toLocaleString();
+}
+
 module.exports = {
     isEarlierThanXHours,
     releaseFileContainsLineStartWith,
     saveJsonObjToFile,
     extractReleaseNotes,
     convertISODateToRleaseDateFormat,
-    capitalizeFirstLetter
+    capitalizeFirstLetter,
+    setTimeZoneToPST,
+    convertToDateTime
 }
