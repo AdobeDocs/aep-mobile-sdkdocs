@@ -45,7 +45,7 @@ console.log(`Start to fetch release info from GitHub created after [${convertToD
     const ignoreList = ['React Native', 'Roku', 'Flutter']
     for (const releaseInfo of sortedList) {
         // We don't have separate release-notes pages for React Native, Roku, Flutter, and BOM artifacts.
-        if (ignoreList.includes(releaseInfo.platform) || releaseInfo.extension == "BOM") {
+        if (ignoreList.includes(releaseInfo.platform) || releaseInfo.extension == "BOM" || releaseInfo.extension == "EdgeBridge") {
             continue
         }
 
