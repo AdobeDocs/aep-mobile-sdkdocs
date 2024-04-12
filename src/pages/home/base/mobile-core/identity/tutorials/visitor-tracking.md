@@ -53,3 +53,17 @@ Flutter
 <Tabs query="platform=flutter&task=implement"/> --->
 
 The ID service code on the destination domain extracts the ECID from the URL instead of sending a request to Adobe for a new ID. The ID service code on the destination page uses this ECID to track the visitor. On hits from the mobile web content, verify that the `mid` parameter exists on each hit, and that this value matches the `mid`value that is being sent by the app code.
+
+## Troubleshooting
+
+To ensure that the visitor tracking was properly implemented, please verify the following conditions:
+
+- Ensure that the output from the [`appendToUrl`](../api-reference.md#appendtourl--appendvisitorinfoforurl) or [`getUrlVariables`](../api-reference.md#geturlvariables) API includes accurate ECID and Experience Cloud orgID values. Please note that the orgID set up for the Mobile SDK **must** match the orgID configured in the web application.
+- Ensure the timestamp (`TS`) included in the [`appendToUrl`](../api-reference.md#appendtourl--appendvisitorinfoforurl) or [`getUrlVariables`](../api-reference.md#geturlvariables) result did **not** expire. Since the results expire five minutes after retrieval, you should **not** cache and re-use the results in your application. Instead, please retrieve the result on demand before loading the WebView.
+- Ensure you do **not** re-encode the generated query string. The query string returned by the [`getUrlVariables`](../api-reference.md#geturlvariables) API is already URL encoded.
+  
+Once you've confirmed the mobile setup, check your web implementation.
+
+If you're using the Adobe Experience Platform Web SDK, ensure that you're using the latest version of Web SDK. For further information, please read the guide on [mobile-to-web cross-domain ID sharing](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/identity/id-sharing) in Web SDK.
+
+If you're using the AppMeasurement.js library, ensure that you're using the latest version of the Visitor ID and the AppMeasurement libraries. For further information, please read the guide on the [overwriteCrossDomainMCIDAndAID API](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/configurations/overwrite-visitor-id) in Identity Service.
