@@ -7,6 +7,26 @@ Keywords:
 
 # Release notes
 
+## April 12, 2024
+
+### React Native Assurance 6.0.0
+
+Major version update for Assurance for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs
+
+### React Native Core 6.0.0
+
+Major version update for Adobe Experience Platform React Native libraries. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs, which include the `privacy manifest`.
+* Deprecated `MobileCore.log `API to align with the native platforms.
+* Updated `MobileCore.dispatchEventWithResponseCallback` API with a timeout parameter.
+
+To learn how Apple's privacy related announcements made in WWDC of 2023 affect the Mobile SDK, please read the guide on [iOS privacy manifest and related changes](https://developer.adobe.com/client-sdks/resources/privacy-manifest).
+
 ## April 3, 2024
 
 ### Android Mobile Core 3.x and compatible extensions
