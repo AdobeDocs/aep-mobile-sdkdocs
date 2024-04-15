@@ -13,7 +13,6 @@ governing permissions and limitations under the License.
 const fs = require("fs");
 const { PST_TIMEZONE, PST_TIMEZONE_OFFSET } = require('./constants')
 
-
 /**
  * Checks if a given timestamp is earlier than a specified number of hours from the current time.
  *
@@ -27,12 +26,11 @@ function isEarlierThanXHours(hours, timestampInMilliseconds) {
     return timestamp < now - (hours * 60 * 60 * 1000);
 }
 
-
 /**
  * Extracts the release notes from the given release text.
  *
  * @param {string} releaseText - The release text to extract the release notes from.
- * @returns {string[]} - An array of release notes.
+ * @returns {string[]} - An array of release notes lines.
  */
 function extractReleaseNotes(releaseText) {
     if (!releaseText) {
@@ -92,17 +90,17 @@ function capitalizeFirstLetter(string) {
  * @param {string} iso8601DateStr - The ISO 8601 date string to convert.
  * @returns {string} - The release date format.
  */
-// TODO: consider using dayjs to handle date format
 function convertISODateToRleaseDateFormat(iso8601DateStr) {
     const date = new Date(iso8601DateStr)
-    const month = date.getMonth()
-    const day = date.getDate()
-    const year = date.getFullYear()
     const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-    const fullMonth = monthNames[month]
-    return `${fullMonth} ${day}, ${year}`
+    return `${monthNames[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`
 }
 
+/**
+ * Sets the time zone of the NodeJS runtime to PST (Pacific Standard Time).
+ * 
+ * @returns {boolean} Returns true if the time zone is successfully set to PST, false otherwise.
+ */
 function setTimeZoneToPST() {
     process.env.TZ = PST_TIMEZONE
     const offset = new Date().getTimezoneOffset()

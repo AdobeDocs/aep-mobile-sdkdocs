@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const { fetchReleaseInfo, GithubReleaseInfo } = require('./github-release');
+const { fetchReleaseInfo, GithubReleaseInfo } = require('./githubRelease');
 const { capitalizeFirstLetter } = require('./utils');
 
 /**
@@ -81,10 +81,12 @@ function convertToSDKReleaseInfo(releaseInfo) {
         case "aepsdk-places-android":
         case "aepsdk-target-android":
         case "aepsdk-optimize-android":
-        case "aepsdk-core-android":
         case "aepsdk-messaging-android":
         case "aepsdk-assurance-android":
             return new SDKReleaseInfo(releaseInfo, 'Android', capitalizeFirstLetter(releaseInfo.repo_name.replace('aepsdk-', '').replace('-android', '')), releaseInfo.tag_name.replace('v', ''))
+        case "aepsdk-core-android":
+            let array3 = releaseInfo.tag_name.replace('v', '').split('-')
+            return new SDKReleaseInfo(releaseInfo, 'Android', capitalizeFirstLetter(array3[1]), array3[0])
         case "aepsdk-edgeconsent-ios":
             return new SDKReleaseInfo(releaseInfo, 'iOS', 'EdgeConsent', releaseInfo.tag_name)
         case "aepsdk-edgeconsent-android":

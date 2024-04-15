@@ -13,8 +13,8 @@ governing permissions and limitations under the License.
 const timestampObj = require('./timestamp.json')
 const { repoNames, releaseNotesLocation, MAIN_RELEASE_NOTES_LOCATION } = require('./constants')
 const { saveJsonObjToFile, setTimeZoneToPST, convertToDateTime } = require('./utils')
-const { updateReleaseNotesPage } = require('./update-release-notes');
-const { fetchReleaseInfoFromGitHub, sortReleaseInfoByDateASC } = require('./fetch-release-notes');
+const { updateReleaseNotesPage } = require('./updateReleaseNotes');
+const { fetchReleaseInfoFromGitHub, sortReleaseInfoByDateASC } = require('./fetchReleaseNotes');
 
 // Run the script on the root directory of the project: node .github/scripts/release_notes/index.js <GITHUB_TOKEN> [--dry-run]
 const GITHUB_TOKEN = process.argv[2];
