@@ -14,15 +14,15 @@ keywords:
 
 # Lifecycle behavior reference
 
-The Lifecycle extension relies solely on the Lifecycle events dispatched by the `lifecycleStart` and `lifecyclePause` calls to determine the start of new sessions and to calculate lifecycle metrics.
+The Lifecycle extension relies solely on the Lifecycle events dispatched by the `lifecycleStart` and `lifecyclePause` calls to determine the start of new sessions and to calculate lifecycle data.
 
 ## General behavior
 
-All events that are **not** Lifecycle start or Lifecycle pause **do not** affect lifecycle state or metrics. The starting of MobileCore via `registerExtensions` also **does not** start a Lifecycle session nor affect lifecycle metrics.
+All events that are **not** Lifecycle start or Lifecycle pause **do not** affect lifecycle state or data. The starting of MobileCore via `registerExtensions` also **does not** start a Lifecycle session nor affect lifecycle data.
 
 ## Correct call patterns
 
-There are generally three main flows for a correct implementation.
+The following flows are examples of correct implementations.
 
 **On app first launch after fresh install**
 
@@ -61,8 +61,8 @@ There are generally three main flows for a correct implementation.
 
 Start-after-start causes the Lifecycle extension's shared state version to be updated, but crucially, the start time in persistence **is not** changed. Start-after-start means that:
 
-1. No new session detection logic will be run nor will lifecycle metrics will be incremented.
-2. All lifecycle metrics calculated in the shared state dispatched as a consequence reflect the original start time, not any start-after-start timestamps.
+1. No new session detection logic will be run nor will lifecycle data will be incremented.
+2. All lifecycle data calculated in the shared state dispatched as a consequence reflect the original start time, not any start-after-start timestamps.
 
 This behavior is only ungated after a pause is seen, and the next start will handle session timeout and other lifecycle logic as normal.
 
@@ -83,7 +83,7 @@ Pause-after-pause causes the Lifecycle extension's pause timestamp in persistenc
 1. ...
 2. Start
 3. *App backgrounded* (missing pause) + optionally: *Session timeout window passes*
-4. Start <- **Not** a crash nor a new session, treated as a start after start - emits lifecycle metrics and does not update the start timestamp in persistence
+4. Start <- **Not** a crash nor a new session, treated as a start after start - emits lifecycle data and does not update the start timestamp in persistence
 
 **Missing start** - extended session length error
 
