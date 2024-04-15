@@ -57,7 +57,7 @@ The Android BOM (Bill of Materials) artifact has been released to Maven Central.
 | [Adobe Campaign Standard](../solution/adobe-campaign-standard/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/campaign.svg?logo=android&logoColor=white&label=campaign&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/campaign) | [GitHub](https://github.com/adobe/aepsdk-campaign-android) | [Test app](https://github.com/adobe/aepsdk-campaign-android/tree/main/code/testapps) |
 | [Adobe Campaign Classic](../solution/adobe-campaign-classic/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/campaignclassic.svg?logo=android&logoColor=white&label=campaignclassic&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/campaignclassic) | [GitHub](https://github.com/adobe/aepsdk-campaignclassic-android) | [Test app](https://github.com/adobe/aepsdk-campaignclassic-android/tree/main/code/testapp) |
 | [Adobe Audience Manager](../solution/adobe-audience-manager/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/audience.svg?logo=android&logoColor=white&label=audience&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/audience) | [GitHub](https://github.com/adobe/aepsdk-audience-android) | [Test app](https://github.com/adobe/aepsdk-audience-android/tree/main/code/app) |
-| Adobe Analytics - Mobile Services | Deprecated | | |
+| Adobe Analytics - Mobile Services | Not supported | | |
 | Places Monitor | Deprecated | | |
 
 ## iOS
@@ -89,7 +89,7 @@ The Android BOM (Bill of Materials) artifact has been released to Maven Central.
 | [Adobe Campaign Standard](../solution/adobe-campaign-standard/index.md) |   |   | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-campaign-ios.svg?label=AEPCampaign&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPCampaign) | [GitHub](https://github.com/adobe/aepsdk-campaign-ios) | [Test app](https://github.com/adobe/aepsdk-campaign-ios/tree/main/CampaignTester) |
 | [Adobe Campaign Classic](../solution/adobe-campaign-classic/index.md) |   |   | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-campaignclassic-ios.svg?label=AEPCampaignClassic&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPCampaignClassic) | [GitHub](https://github.com/adobe/aepsdk-campaignclassic-ios) | [Test app](https://github.com/adobe/aepsdk-campaignclassic-ios/tree/main/TestApp) |
 | [Adobe Audience Manager](../solution/adobe-audience-manager/index.md) |   |   | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-audience-ios.svg?label=AEPAudience&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPAudience) | [GitHub](https://github.com/adobe/aepsdk-audience-ios) | [Test app](https://github.com/adobe/aepsdk-audience-ios/tree/main/AudienceSampleApp) |
-| Adobe Analytics - Mobile Services | | Deprecated | | | |
+| Adobe Analytics - Mobile Services | | Not supported | | | |
 | Places Monitor | | Deprecated | | | |
 
 ## React Native
