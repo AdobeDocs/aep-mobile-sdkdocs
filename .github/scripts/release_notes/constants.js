@@ -115,6 +115,12 @@ const PST_TIMEZONE_OFFSET = 420
 
 const MAIN_RELEASE_NOTES_LOCATION = "./src/pages/home/release-notes/index.md"
 
+const BOM_RELEASE_TAG_PREFIX = "bom-" // BOM release tag prefix
+
+const REACT_NATIVE_RELEASE_TAG_PREFIX = "@adobe/react-native-aep" // React Native release tag prefix
+
+const FLUTTER_RELEASE_TAG_PREFIX = "flutter_aep" // Flutter release tag prefix
+
 module.exports = {
     repoNames,
     releaseNotesLocation,
@@ -122,5 +128,8 @@ module.exports = {
     PST_TIMEZONE_OFFSET,
     MAIN_RELEASE_NOTES_LOCATION,
     EXTENSION_ENUM,
-    PLATFORM_ENUM
+    PLATFORM_ENUM,
+    BOM_RELEASE_TAG_PREFIX,
+    REACT_NATIVE_RELEASE_TAG_PREFIX,
+    FLUTTER_RELEASE_TAG_PREFIX
 }

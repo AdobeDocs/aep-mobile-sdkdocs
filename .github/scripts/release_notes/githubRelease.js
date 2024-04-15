@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const { Octokit, App } = require("octokit");
+const { Octokit } = require("octokit");
 const { DEFAULT_TIMEZONE } = require('./utils');
 
 /**
