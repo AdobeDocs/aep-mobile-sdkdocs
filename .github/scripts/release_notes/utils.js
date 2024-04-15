@@ -75,16 +75,6 @@ function saveJsonObjToFile(jsonObj, filePath) {
 }
 
 /**
- * Capitalizes the first letter of a string.
- *  
- * @param {string} string - The string to capitalize.
- * @returns {string} - The string with the first letter capitalized.
- */
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-/**
  * Converts an ISO 8601 date string to a release date format.
  *
  * @param {string} iso8601DateStr - The ISO 8601 date string to convert.
@@ -104,7 +94,7 @@ function convertISODateToRleaseDateFormat(iso8601DateStr) {
 function setTimeZoneToPST() {
     process.env.TZ = PST_TIMEZONE
     const offset = new Date().getTimezoneOffset()
-    return (offset == PST_TIMEZONE_OFFSET)
+    return (offset === PST_TIMEZONE_OFFSET)
 }
 
 function convertToDateTime(timestamp) {
@@ -117,7 +107,6 @@ module.exports = {
     saveJsonObjToFile,
     extractReleaseNotes,
     convertISODateToRleaseDateFormat,
-    capitalizeFirstLetter,
     setTimeZoneToPST,
     convertToDateTime,
 }

@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 const timestampObj = require('./timestamp.json')
-const { repoNames, releaseNotesLocation, MAIN_RELEASE_NOTES_LOCATION } = require('./constants')
+const { repoNames, releaseNotesLocation, MAIN_RELEASE_NOTES_LOCATION, PLATFORM_ENUM, EXTENSION_ENUM } = require('./constants')
 const { saveJsonObjToFile, setTimeZoneToPST, convertToDateTime } = require('./utils')
 const { updateReleaseNotesPage } = require('./updateReleaseNotes');
 const { fetchReleaseInfoFromGitHub, sortReleaseInfoByDateASC } = require('./fetchReleaseNotes');
@@ -19,7 +19,7 @@ const { fetchReleaseInfoFromGitHub, sortReleaseInfoByDateASC } = require('./fetc
 // Run the script on the root directory of the project: node .github/scripts/release_notes/index.js <GITHUB_TOKEN> [--dry-run]
 const GITHUB_TOKEN = process.argv[2];
 
-if (GITHUB_TOKEN == undefined) {
+if (GITHUB_TOKEN === undefined) {
     throw new Error("token is undefined")
 }
 
@@ -42,10 +42,13 @@ console.log(`Start to fetch release info from GitHub created after [${convertToD
     }
     // 1. Update the main release page
     updateReleaseNotesPage(MAIN_RELEASE_NOTES_LOCATION, sortedList)
-    const ignoreList = ['React Native', 'Roku', 'Flutter']
     for (const releaseInfo of sortedList) {
         // We don't have separate release-notes pages for React Native, Roku, Flutter, and BOM artifacts.
-        if (ignoreList.includes(releaseInfo.platform) || releaseInfo.extension == "BOM" || releaseInfo.extension == "EdgeBridge") {
+        if (releaseInfo.platform === PLATFORM_ENUM.REACT_NATIVE ||
+            releaseInfo.platform === PLATFORM_ENUM.ROKU ||
+            releaseInfo.platform === PLATFORM_ENUM.FLUTTER ||
+            releaseInfo.extension === EXTENSION_ENUM.BOM ||
+            releaseInfo.extension === EXTENSION_ENUM.EDGE_BRIDGE) {
             continue
         }
 

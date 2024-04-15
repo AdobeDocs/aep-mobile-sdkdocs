@@ -51,27 +51,63 @@ const repoNames = [
     "aepsdk-target-android",
 ]
 
-const releaseNotesLocation = {
-    "Core": "./src/pages/home/base/mobile-core/release-notes.md",
-    "Lifecycle": "./src/pages/home/base/mobile-core/release-notes.md",
-    "Identity": "./src/pages/home/base/mobile-core/release-notes.md",
-    "Signal": "./src/pages/home/base/mobile-core/release-notes.md",
-    "Assurance": "./src/pages/home/base/assurance/release-notes.md",
-    "UserProfile": "./src/pages/home/base/profile/release-notes.md",
-    "EdgeConsent": "./src/pages/edge/consent-for-edge-network/release-notes.md",
-    "Edge": "./src/pages/edge/edge-network/release-notes.md",
-    "EdgeIdentity": "./src/pages/edge/identity-for-edge-network/release-notes.md",
-    "EdgeMedia": "./src/pages/edge/media-for-edge-network/release-notes.md",
-    "Messaging": "./src/pages/edge/adobe-journey-optimizer/release-notes.md",
-    "Optimize": "./src/pages/edge/adobe-journey-optimizer-decisioning/release-notes.md",
-    "Analytics": "./src/pages/solution/adobe-analytics/release-notes.md",
-    "Target": "./src/pages/solution/adobe-target/release-notes.md",
-    "Places": "./src/pages/solution/places/release-notes.md",
-    "Media": "./src/pages/solution/adobe-media-analytics/release-notes.md",
-    "Audience": "./src/pages/solution/adobe-audience-manager/release-notes.md",
-    "Campaign Standard": "./src/pages/solution/adobe-campaign-standard/release-notes.md",
-    "Campaign Classic": "./src/pages/solution/adobe-campaign-classic/release-notes.md"
-}
+const EXTENSION_ENUM = Object.freeze({
+    SDK: "SDK",
+    BOM: "BOM",
+    CORE: "Core",
+    LIFECYCLE: "Lifecycle",
+    IDENTITY: "Identity",
+    SIGNAL: "Signal",
+    ASSURANCE: "Assurance",
+    USERPROFILE: "UserProfile",
+    EDGE_CONSENT: "EdgeConsent",
+    EDGE: "Edge",
+    EDGE_IDENTITY: "EdgeIdentity",
+    EDGE_MEDIA: "EdgeMedia",
+    EDGE_BRIDGE: "EdgeBridge",
+    MESSAGING: "Messaging",
+    OPTIMIZE: "Optimize",
+    ANALYTICS: "Analytics",
+    TARGET: "Target",
+    PLACES: "Places",
+    MEDIA: "Media",
+    AUDIENCE: "Audience",
+    CAMPAIGN_STANDARD: "Campaign Standard",
+    CAMPAIGN_CLASSIC: "Campaign Classic"
+})
+
+const PLATFORM_ENUM = Object.freeze({
+    IOS: "iOS",
+    ANDROID: "Android",
+    FLUTTER: "Flutter",
+    ROKU: "Roku",
+    REACT_NATIVE: "React Native"
+})
+
+const releaseNotesLocation = (() => {
+    const obj = {}
+    obj[EXTENSION_ENUM.CORE] = "./src/pages/home/base/mobile-core/release-notes.md"
+    obj[EXTENSION_ENUM.LIFECYCLE] = "./src/pages/home/base/mobile-core/release-notes.md"
+    obj[EXTENSION_ENUM.IDENTITY] = "./src/pages/home/base/mobile-core/release-notes.md"
+    obj[EXTENSION_ENUM.SIGNAL] = "./src/pages/home/base/mobile-core/release-notes.md"
+    obj[EXTENSION_ENUM.ASSURANCE] = "./src/pages/home/base/assurance/release-notes.md"
+    obj[EXTENSION_ENUM.USERPROFILE] = "./src/pages/home/base/profile/release-notes.md"
+    obj[EXTENSION_ENUM.EDGE_CONSENT] = "./src/pages/edge/consent-for-edge-network/release-notes.md"
+    obj[EXTENSION_ENUM.EDGE] = "./src/pages/edge/edge-network/release-notes.md"
+    obj[EXTENSION_ENUM.EDGE_IDENTITY] = "./src/pages/edge/identity-for-edge-network/release-notes.md"
+    obj[EXTENSION_ENUM.EDGE_MEDIA] = "./src/pages/edge/media-for-edge-network/release-notes.md"
+    obj[EXTENSION_ENUM.MESSAGING] = "./src/pages/edge/adobe-journey-optimizer/release-notes.md"
+    obj[EXTENSION_ENUM.OPTIMIZE] = "./src/pages/edge/adobe-journey-optimizer-decisioning/release-notes.md"
+    obj[EXTENSION_ENUM.ANALYTICS] = "./src/pages/solution/adobe-analytics/release-notes.md"
+    obj[EXTENSION_ENUM.TARGET] = "./src/pages/solution/adobe-target/release-notes.md"
+    obj[EXTENSION_ENUM.PLACES] = "./src/pages/solution/places/release-notes.md"
+    obj[EXTENSION_ENUM.MEDIA] = "./src/pages/solution/adobe-media-analytics/release-notes.md"
+    obj[EXTENSION_ENUM.AUDIENCE] = "./src/pages/solution/adobe-audience-manager/release-notes.md"
+    obj[EXTENSION_ENUM.CAMPAIGN_STANDARD] = "./src/pages/solution/adobe-campaign-standard/release-notes.md"
+    obj[EXTENSION_ENUM.CAMPAIGN_CLASSIC] = "./src/pages/solution/adobe-campaign-classic/release-notes.md"
+
+    return obj
+})()
 
 const PST_TIMEZONE = "America/Los_Angeles"
 
@@ -84,5 +120,7 @@ module.exports = {
     releaseNotesLocation,
     PST_TIMEZONE,
     PST_TIMEZONE_OFFSET,
-    MAIN_RELEASE_NOTES_LOCATION
+    MAIN_RELEASE_NOTES_LOCATION,
+    EXTENSION_ENUM,
+    PLATFORM_ENUM
 }

@@ -102,7 +102,7 @@ function filterExistingReleaseInfo(releaseInfoArray, lines) {
 
 function generateReleaseNotesSection(releaseInfo) {
     let releaseNote = ''
-    if (releaseInfo.extension == 'BOM') {
+    if (releaseInfo.extension === 'BOM') {
         releaseNote = generateBOMReleaseNoteSection(releaseInfo.published_at, releaseInfo.platform, releaseInfo.extension, releaseInfo.version, releaseInfo.body)
     } else {
         releaseNote = generateReleaseNoteSection(releaseInfo.published_at, releaseInfo.platform, releaseInfo.extension, releaseInfo.version, releaseInfo.body)
@@ -112,7 +112,7 @@ function generateReleaseNotesSection(releaseInfo) {
 
 function generateReleaseNotesSectionWithoutDateLine(releaseInfo) {
     let releaseNote = ''
-    if (releaseInfo.extension == 'BOM') {
+    if (releaseInfo.extension === 'BOM') {
         releaseNote = generateBOMReleaseNoteSectionWithoutDateLine(releaseInfo.platform, releaseInfo.extension, releaseInfo.version, releaseInfo.body)
     } else {
         releaseNote = generateReleaseNoteSectionWithoutDateLine(releaseInfo.platform, releaseInfo.extension, releaseInfo.version, releaseInfo.body)
@@ -126,7 +126,7 @@ async function updateReleaseNotesPage(filePath, releaseInfoArray) {
     // Find the index of the release notes header.
     let releaseNotesHeader = "# Release notes"
     let releaseNotesHeaderIndex = contentLines.indexOf(releaseNotesHeader)
-    if (releaseNotesHeaderIndex == -1) {
+    if (releaseNotesHeaderIndex === -1) {
         console.error("Error: can't find the release notes header")
         return
     }
