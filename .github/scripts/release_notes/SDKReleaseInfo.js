@@ -57,38 +57,38 @@ function convertToSDKReleaseInfo(releaseInfo) {
     }
 
     const repoName = releaseInfo.repo_name
-    const tageName = releaseInfo.tag_name
+    const tagName = releaseInfo.tag_name
     switch (true) {
         case isBOMRelease(repoName):
             // aepsdk-commons is also used to release othe artifacts, only keep the release notes for BOM.
-            if (tageName.startsWith(BOM_RELEASE_TAG_PREFIX))
-                return new SDKReleaseInfo(releaseInfo, PLATFORM_ENUM.ANDROID, EXTENSION_ENUM.BOM, tageName.replace(BOM_RELEASE_TAG_PREFIX, ''))
+            if (tagName.startsWith(BOM_RELEASE_TAG_PREFIX))
+                return new SDKReleaseInfo(releaseInfo, PLATFORM_ENUM.ANDROID, EXTENSION_ENUM.BOM, tagName.replace(BOM_RELEASE_TAG_PREFIX, ''))
             else
                 return null
         case isRokuRelease(repoName):
-            return new SDKReleaseInfo(releaseInfo, PLATFORM_ENUM.ROKU, EXTENSION_ENUM.SDK, tageName)
+            return new SDKReleaseInfo(releaseInfo, PLATFORM_ENUM.ROKU, EXTENSION_ENUM.SDK, tagName)
         case isReactNativeRelease(repoName):
             // example: @adobe/react-native-aepuserprofile@6.0.0
-            let arry1 = tageName.replace(REACT_NATIVE_RELEASE_TAG_PREFIX, '').split('@')
+            let array1 = tagName.replace(REACT_NATIVE_RELEASE_TAG_PREFIX, '').split('@')
             // puserprofile@6.0.0
-            verifyArray(arry1, 2)
-            return new SDKReleaseInfo(releaseInfo, PLATFORM_ENUM.REACT_NATIVE, standardizeExtensionName(arry1[0]), arry1[1])
+            verifyArray(array1, 2)
+            return new SDKReleaseInfo(releaseInfo, PLATFORM_ENUM.REACT_NATIVE, standardizeExtensionName(array1[0]), array1[1])
         case isFlutterRelease(repoName):
             // example: flutter_aepuserprofile@3.0.0
-            let array2 = tageName.replace(FLUTTER_RELEASE_TAG_PREFIX, '').split('@')
+            let array2 = tagName.replace(FLUTTER_RELEASE_TAG_PREFIX, '').split('@')
             // userprofile@3.0.0
             verifyArray(array2, 2)
             return new SDKReleaseInfo(releaseInfo, PLATFORM_ENUM.FLUTTER, standardizeExtensionName(array2[0]), array2[1])
         case isIOSRelease(repoName):
-            return new SDKReleaseInfo(releaseInfo, PLATFORM_ENUM.IOS, extractIOSExtensionName(repoName), tageName)
+            return new SDKReleaseInfo(releaseInfo, PLATFORM_ENUM.IOS, extractIOSExtensionName(repoName), tagName)
         case isAndroidRelease(repoName):
             if (isAndroidCoreRelease(repoName)) {
                 // Example: https://github.com/adobe/aepsdk-core-android/releases/tag/v3.0.0-signal
-                let arry3 = tageName.split('-')
-                verifyArray(arry3, 2)
-                return new SDKReleaseInfo(releaseInfo, PLATFORM_ENUM.ANDROID, standardizeExtensionName(arry3[1]), extractAndroidVersion(arry3[0]))
+                let array3 = tagName.split('-')
+                verifyArray(array3, 2)
+                return new SDKReleaseInfo(releaseInfo, PLATFORM_ENUM.ANDROID, standardizeExtensionName(array3[1]), extractAndroidVersion(array3[0]))
             }
-            return new SDKReleaseInfo(releaseInfo, PLATFORM_ENUM.ANDROID, extractAndroidExtensionName(repoName), extractAndroidVersion(tageName))
+            return new SDKReleaseInfo(releaseInfo, PLATFORM_ENUM.ANDROID, extractAndroidExtensionName(repoName), extractAndroidVersion(tagName))
         default:
             throw Error("unsupported repoName: " + repoName)
     }
