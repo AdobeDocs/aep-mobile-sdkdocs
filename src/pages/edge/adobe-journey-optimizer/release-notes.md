@@ -9,6 +9,15 @@ keywords:
 
 # Release notes
 
+## April 12, 2024
+
+### React Native Messaging 6.0.0
+
+Major version update for [Adobe Journey Optimizer](https://github.com/adobe/aepsdk-react-native/tree/main/packages/messaging) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs
+
 ## April 3, 2024
 
 ### Android Messaging 3.0.0
