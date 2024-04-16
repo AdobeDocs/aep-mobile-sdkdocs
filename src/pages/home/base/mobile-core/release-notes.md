@@ -10,15 +10,17 @@ keywords:
 
 ## April 12, 2024
 
-### React Native Core 6.0.0
+### React Native Core 6.x and compatible libraries
 
 A new major version of the [Adobe Experience Platform Core React Native library](https://github.com/adobe/aepsdk-react-native/tree/main/packages/core) has been released along with updates to other libraries. The current release includes the following changes:
+
 * Updated to use Experience Platform Android `3.x` SDKs.
 * Updated to use Experience Platform iOS `5.x` SDKs, which include the `privacy manifest`.
-* Deprecated `MobileCore.log `API to align with the native platforms.
+* Deprecated `MobileCore.log`API to align with the native platforms.
 * Updated `MobileCore.dispatchEventWithResponseCallback` API with a timeout parameter.
 
 Note that all these libraries must be updated together.
+
 * @adobe/react-native-aepcore:6.0.0
 * @adobe/react-native-aepuserprofile:6.0.0
 * @adobe/react-native-aepedge:6.0.0
