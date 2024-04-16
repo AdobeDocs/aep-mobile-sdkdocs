@@ -10,14 +10,16 @@ keywords:
 
 ## April 16, 2024
 
-### Flutter Core 4.0.0
+### Flutter Core 4.x and compatible plugins
 
 A new major version of the [Adobe Experience Platform Core Flutter Plugin](https://github.com/adobe/aepsdk-react-native/tree/main/packages/core) has been released along with updates to other plugins. The current release includes the following changes:
+
 * Updated to use Experience Platform Android `3.x` SDKs.
 * Updated to use Experience Platform iOS `5.x` SDKs, which include the `privacy manifest`.
 * Updated `MobileCore.dispatchEventWithResponseCallback` API with a timeout parameter.
 
 Note that all these plugins must be updated together.
+
 * flutter_aepcore@4.0.0
 * flutter_aepuserprofile:4.0.0
 * flutter_aepassurance:4.0.0
