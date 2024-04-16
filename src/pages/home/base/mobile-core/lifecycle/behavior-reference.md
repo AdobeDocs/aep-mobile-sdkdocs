@@ -33,7 +33,7 @@ The following flows are examples of correct implementations.
 5. `lifecyclePause`
 6. *App backgrounded*
 
-**On app subsequent launches**
+**On subsequent app launches**
 
 1. *App launched*
 2. `lifecycleStart`
@@ -56,6 +56,8 @@ The following flows are examples of correct implementations.
 6. `lifecycleStart` <- Crash detected
 
 ## Incorrect call patterns
+
+The following flows are examples of incorrect implementations that can lead to unexpected lifecycle data.
 
 ### Start-after-start
 
