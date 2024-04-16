@@ -9,6 +9,27 @@ Keywords:
 
 ## April 16, 2024
 
+### Flutter Core 4.x and compatible plugins
+
+A new major version of the [Adobe Experience Platform Core Flutter Plugin](https://github.com/adobe/aepsdk-react-native/tree/main/packages/core) has been released along with updates to other plugins. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs, which include the `privacy manifest`.
+* Updated `MobileCore.dispatchEventWithResponseCallback` API with a timeout parameter.
+
+Note that all these plugins must be updated together.
+
+* flutter_aepcore:4.0.0
+* flutter_aepuserprofile:4.0.0
+* flutter_aepassurance:4.0.0
+* flutter_aepedge:4.0.0
+* flutter_aepedgeidentity:4.0.0
+* flutter-aepedgeconsent:4.0.0
+* flutter-aepedgebridge:4.0.0
+* flutter-aepmessaging:4.0.0
+
+To learn how Apple's privacy related announcements made in WWDC of 2023 affect the Mobile SDK, please read the guide on [iOS privacy manifest requirements](https://developer.adobe.com/client-sdks/resources/privacy-manifest).
+
 ### Flutter EdgeBridge 4.0.0
 
 Major version update for [Edge Bridge](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepedgebridge) for Adobe Experience Platform Flutter Plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
@@ -61,27 +82,6 @@ Major version update for [Assurance](https://github.com/adobe/aepsdk_flutter/tre
 
 * Updated to use Experience Platform Android `3.x` SDKs.
 * Updated to use Experience Platform iOS `5.x` SDKs.
-
-### Flutter Core 4.x and compatible plugins
-
-A new major version of the [Adobe Experience Platform Core Flutter Plugin](https://github.com/adobe/aepsdk-react-native/tree/main/packages/core) has been released along with updates to other plugins. The current release includes the following changes:
-
-* Updated to use Experience Platform Android `3.x` SDKs.
-* Updated to use Experience Platform iOS `5.x` SDKs, which include the `privacy manifest`.
-* Updated `MobileCore.dispatchEventWithResponseCallback` API with a timeout parameter.
-
-Note that all these plugins must be updated together.
-
-* flutter_aepcore@4.0.0
-* flutter_aepuserprofile:4.0.0
-* flutter_aepassurance:4.0.0
-* flutter_aepedge:4.0.0
-* flutter_aepedgeidentity:4.0.0
-* flutter-aepedgeconsent:4.0.0
-* flutter-aepedgebridge:4.0.0
-* flutter-aepmessaging:4.0.0
-
-To learn how Apple's privacy related announcements made in WWDC of 2023 affect the Mobile SDK, please read the guide on [iOS privacy manifest requirements](https://developer.adobe.com/client-sdks/resources/privacy-manifest).
 
 ## April 12, 2024
 
