@@ -8,6 +8,15 @@ keywords:
 
 # Release notes
 
+## April 12, 2024
+
+### React Native Edge 6.0.0
+
+Major version update for [Edge Network](https://github.com/adobe/aepsdk-react-native/tree/main/packages/edge) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs
+
 ## April 2, 2024
 
 ### Android Edge 3.0.0

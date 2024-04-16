@@ -8,6 +8,32 @@ keywords:
 
 # Release notes
 
+## April 12, 2024
+
+### React Native Core 6.0.0
+
+A new major version of the [Adobe Experience Platform Core React Native library](https://github.com/adobe/aepsdk-react-native/tree/main/packages/core) has been released along with updates to other libraries. The current release includes the following changes:
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs, which include the `privacy manifest`.
+* Deprecated `MobileCore.log `API to align with the native platforms.
+* Updated `MobileCore.dispatchEventWithResponseCallback` API with a timeout parameter.
+
+Note that all these libraries must be updated together.
+* @adobe/react-native-aepcore:6.0.0
+* @adobe/react-native-aepuserprofile:6.0.0
+* @adobe/react-native-aepedge:6.0.0
+* @adobe/react-native-aeedgeidentity:6.0.0
+* @adobe/react-native-aepedgeconsent:6.0.0
+* @adobe/react-native-aepedgebridge:6.0.0
+* @adobe/react-native-aepmessaging:6.0.0
+* @adobe/react-native-aepassurance:6.0.0
+* @adobe/react-native-aepoptimize:6.0.0
+* @adobe/react-native-aepplaces:6.0.0
+* @adobe/react-native-aeptarget:6.0.0
+* @adobe/react-native-aepcampaignclassic:6.0.0
+
+To learn how Apple's privacy related announcements made in WWDC of 2023 affect the Mobile SDK, please read the guide on [iOS privacy manifest requirements](https://developer.adobe.com/client-sdks/resources/privacy-manifest).
+
 ## April 1, 2024
 
 ### Android Signal 3.0.0
