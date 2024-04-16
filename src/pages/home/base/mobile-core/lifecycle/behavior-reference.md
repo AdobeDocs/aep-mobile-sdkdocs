@@ -18,42 +18,42 @@ The Lifecycle extension relies solely on the Lifecycle events dispatched by the 
 
 ## General behavior
 
-All events that are **not** Lifecycle start or Lifecycle pause **do not** affect lifecycle state or data. The starting of MobileCore via `registerExtensions` also **does not** start a Lifecycle session nor affect lifecycle data.
+All events that are not Lifecycle start or Lifecycle pause do not affect lifecycle state or data. The starting of MobileCore via `registerExtensions` also does not trigger changes in lifecycle data.
 
 ## Correct call patterns
 
 The following flows are examples of correct implementations.
 
-**On app first launch after fresh install**
+**On app first launch after installation**
 
 1. *App launched*
-2. Start <- Start of new session
-3. Pause
-4. Start
-5. Pause
+2. `lifecycleStart` <- Start of new session
+3. `lifecyclePause`
+4. `lifecycleStart`
+5. `lifecyclePause`
 6. *App backgrounded*
 
 **On app subsequent launches**
 
 1. *App launched*
-2. Start
-3. Pause
+2. `lifecycleStart`
+3. `lifecyclePause`
 4. *App backgrounded*
 5. *Session timeout window passes*
 6. *App launched*
-7. Start <- Start of new session
+7. `lifecycleStart` <- Start of new session
 8. ...
 
 **On app crash or force close**
 
 1. *App launched*
-2. Start
+2. `lifecycleStart`
 3. App crashed/force closed - consequences:
    1. Causes missing pause call
    2. App removed from device memory
 4. *Session timeout window passes*
 5. *App launched*
-6. Start <- Crash detected
+6. `lifecycleStart` <- Crash detected
 
 ## Incorrect call patterns
 
@@ -73,22 +73,22 @@ Pause-after-pause causes the Lifecycle extension's pause timestamp in persistenc
 **Missing pause, app terminated** (looks the same as a standard crash, but the reason for the missing pause is different)
 
 1. ...
-2. Start
+2. `lifecycleStart`
 3. *App backgrounded* (missing pause)
 4. *App removed from device memory* (user or device initated)
-5. Start <- Crash
+5. `lifecycleStart` <- Crash
 
 **Missing pause, app still in memory**
 
 1. ...
-2. Start
+2. `lifecycleStart`
 3. *App backgrounded* (missing pause) + optionally: *Session timeout window passes*
-4. Start <- **Not** a crash nor a new session, treated as a start after start - emits lifecycle data and does not update the start timestamp in persistence
+4. `lifecycleStart` <- **Not** a crash nor a new session, treated as a start after start - emits lifecycle data and does not update the start timestamp in persistence
 
 **Missing start** - extended session length error
 
 1. ...
-2. Pause
+2. `lifecyclePause`
 3. *App backgrounded*
 4. *Session timeout window passes* + optionally: *Session timeout window passes*
-5. Pause (missing start) <- Moves the pause timestamp to here, effectively stitching together inactive time since the last background, AND not detecting a new session start
+5. `lifecyclePause` (missing start) <- Moves the pause timestamp to here, effectively stitching together inactive time since the last background, AND not detecting a new session start
