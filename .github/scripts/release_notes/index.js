@@ -44,9 +44,7 @@ console.log(`Start to fetch release info from GitHub created after [${convertToD
     updateReleaseNotesPage(MAIN_RELEASE_NOTES_LOCATION, sortedList)
     for (const releaseInfo of sortedList) {
         // We don't have separate release-notes pages for React Native, Roku, Flutter, and BOM artifacts.
-        if (releaseInfo.platform === PLATFORM_ENUM.REACT_NATIVE ||
-            releaseInfo.platform === PLATFORM_ENUM.ROKU ||
-            releaseInfo.platform === PLATFORM_ENUM.FLUTTER ||
+        if (releaseInfo.platform === PLATFORM_ENUM.ROKU ||
             releaseInfo.extension === EXTENSION_ENUM.BOM ||
             releaseInfo.extension === EXTENSION_ENUM.EDGE_BRIDGE) {
             continue
