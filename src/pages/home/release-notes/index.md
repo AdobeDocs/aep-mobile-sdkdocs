@@ -7,6 +7,80 @@ Keywords:
 
 # Release notes
 
+## April 16, 2024
+
+### Flutter EdgeBridge 4.0.0
+
+Major version update for [Edge Bridge](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepedgebridge) for Adobe Experience Platform Flutter Plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+* Updated Edge Bridge data format to enhance support for migrating to sending data via Edge Network to Adobe Analytics and reduce the effort required for mapping data to XDM.
+* If you are currently using Flutter Edge Bridge version 3.x  and you are mapping data to XDM in your datastream, adjustments will be necessary when adopting version 4.0.0.
+
+### Flutter Messaging 4.0.0
+
+Major version update for [Adobe Journey Optimizer](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepmessaging) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+* Adds `onContentLoaded` to `MessagingDelegate` (Android Only).
+* Updated `urlLoaded` from `MessagingDelegate` to iOS Only.
+
+### Flutter EdgeIdentity 4.0.0
+
+Major version update for [Identity for Edge Network](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepedgeidentity) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+### Flutter EdgeConsent 4.0.0
+
+Major version update for [Consent for Edge Network](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepedgeconsent) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+### Flutter Edge 4.0.0
+
+Major version update for [Edge Network](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepedge) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+### Flutter UserProfile 4.0.0
+
+Major version update for [User Profile](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepuserprofile) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+### Flutter Assurance 4.0.0
+
+Major version update for [Assurance](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepassurance) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+### Flutter Core 4.0.0
+
+A new major version of the [Adobe Experience Platform Core Flutter Plugin](https://github.com/adobe/aepsdk-react-native/tree/main/packages/core) has been released along with updates to other plugins. The current release includes the following changes:
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs, which include the `privacy manifest`.
+* Updated `MobileCore.dispatchEventWithResponseCallback` API with a timeout parameter.
+
+Note that all these plugins must be updated together.
+* flutter_aepcore@4.0.0
+* flutter_aepuserprofile:4.0.0
+* flutter_aepassurance:4.0.0
+* flutter_aepedge:4.0.0
+* flutter_aepedgeidentity:4.0.0
+* flutter-aepedgeconsent:4.0.0
+* flutter-aepedgebridge:4.0.0
+* flutter-aepmessaging:4.0.0
+
+To learn how Apple's privacy related announcements made in WWDC of 2023 affect the Mobile SDK, please read the guide on [iOS privacy manifest requirements](https://developer.adobe.com/client-sdks/resources/privacy-manifest).
+
 ## April 12, 2024
 
 ### React Native Core 6.x and compatible libraries

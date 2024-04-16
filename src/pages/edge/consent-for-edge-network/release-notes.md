@@ -9,6 +9,15 @@ keywords:
 
 # Release notes
 
+## April 16, 2024
+
+### Flutter EdgeConsent 4.0.0
+
+Major version update for [Consent for Edge Network](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepedgeconsent) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
 ## April 12, 2024
 
 ### React Native EdgeConsent 6.0.0
