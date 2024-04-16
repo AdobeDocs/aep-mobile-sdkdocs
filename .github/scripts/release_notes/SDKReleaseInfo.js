@@ -152,7 +152,7 @@ function isReactNativeRelease(repoName) {
     return repoName === "aepsdk-react-native"
 }
 function isFlutterRelease(repoName) {
-    return repoName === "aepsdk-flutter"
+    return repoName === "aepsdk_flutter"
 }
 function isIOSRelease(repoName) {
     return repoName.endsWith("-ios")
