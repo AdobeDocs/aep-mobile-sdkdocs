@@ -166,7 +166,7 @@ module.exports = {
                                 path: "/edge/adobe-journey-optimizer/api-reference"
                             },
                             {
-                                title: "Push Notification",
+                                title: "Push Notifications",
                                 path: "/edge/adobe-journey-optimizer/push-notification",
                                 pages: [
                                     {
@@ -200,7 +200,11 @@ module.exports = {
                                     {
                                         title: "Payload keys",
                                         path: "/edge/adobe-journey-optimizer/push-notification/push-payload"
-                                    }
+                                    },
+                                    // {
+                                    //     title: "Push templates",
+                                    //     path: "/resources/reference/push-notifications"
+                                    // }
                                 ]
                             },
                             {
@@ -467,18 +471,8 @@ module.exports = {
                                 path: "/solution/adobe-campaign-classic/event-reference"
                             },
                             {
-                                title: "Push payload templates",
-                                path: "/solution/adobe-campaign-classic/push-templates",
-                                pages: [
-                                    {
-                                        title: "Basic",
-                                        path: "/solution/adobe-campaign-classic/push-templates/basic"
-                                    },
-                                    {
-                                        title: "Carousel",
-                                        path: "/solution/adobe-campaign-classic/push-templates/carousel"
-                                    }
-                                ]
+                                title: "Push templates",
+                                path: "/solution/adobe-campaign-classic/push-templates"
                             },
                             {
                                 title: "Release notes",
@@ -786,7 +780,8 @@ module.exports = {
                     {
                         title: "Adobe Mobile Library (v4) end-of-support",
                         path: "/resources/upgrade-platform-sdks",
-                        pages: [{
+                        pages: [
+                            {
                                 title: "Overview",
                                 path: "/resources/upgrade-platform-sdks"
                             },
@@ -820,9 +815,9 @@ module.exports = {
                         title: "iOS 17 Privacy Manifest Requirements",
                         path: "/resources/privacy-manifest.md"
                     }
-
                 ]
-            },{
+            },
+            {
                 title: "Migration",
                 path: "/resources/migration",
                 pages: [{
@@ -898,6 +893,64 @@ module.exports = {
                     {
                         title: "Building mobile extensions",
                         path: "/resources/user-guides/building-mobile-extensions"
+                    }
+                ]
+            },
+            {
+                title: "Reference",
+                path: "/resources/reference/push-notifications",
+                pages: [
+                    {
+                        title: "Push notification templates",
+                        path: "/resources/reference/push-notifications",
+                        pages: [
+                            {
+                                title: "Android",
+                                path: "/resources/reference/push-notifications/android",
+                                pages: [
+                                    {
+                                        title: "Setup",
+                                        path: "/resources/reference/push-notifications/android",
+                                    }
+                                ]
+                            },
+                            {
+                                title: "iOS",
+                                path: "/resources/reference/push-notifications/ios",
+                                pages: [
+                                    {
+                                        title: "Setup",
+                                        path: "/resources/reference/push-notifications/ios"
+                                    },
+                                    {
+                                        title: "Create a notification content extension",
+                                        path: "/resources/reference/push-notifications/ios/create-extension"
+                                    },
+                                    {
+                                        title: "Configure app and notification content extension",
+                                        path: "/resources/reference/push-notifications/ios/configure-extension"
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Templates",
+                                path: "/resources/reference/push-notifications/templates",
+                                pages: [
+                                    {
+                                        title: "Basic",
+                                        path: "/resources/reference/push-notifications/templates/basic"
+                                    },
+                                    {
+                                        title: "Carousel",
+                                        path: "/resources/reference/push-notifications/templates/carousel"
+                                    },
+                                    {
+                                        title: "Timer",
+                                        path: "/resources/reference/push-notifications/templates/timer"
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             }
