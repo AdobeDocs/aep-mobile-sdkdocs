@@ -639,6 +639,10 @@ module.exports = {
                                         path: "/home/base/mobile-core/lifecycle/api-reference"
                                     },
                                     {
+                                        title: "Event reference",
+                                        path: "/home/base/mobile-core/lifecycle/event-reference"
+                                    },
+                                    {
                                         title: "Metrics",
                                         path: "/home/base/mobile-core/lifecycle/metrics"
                                     },
