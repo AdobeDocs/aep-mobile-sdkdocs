@@ -101,7 +101,7 @@ This scenario shows an example of [consecutive `lifecyclePause` API calls](#cons
 5. *App launched*
 6. `lifecyclePause` (missing start)
 
-<img src="./assets/android/lifecycle-missing-start.svg" width="400">
+<img src="./assets/android/lifecycle-missing-start.svg" width="400"/>
 
 In this scenario, the last `lifecyclePause` call (6) is effectively a [consecutive `lifecyclePause` API call](#consecutive-lifecyclepause-api-calls), with the consequences of:
 
