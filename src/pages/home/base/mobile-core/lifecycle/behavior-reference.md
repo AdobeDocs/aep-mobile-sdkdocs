@@ -14,11 +14,13 @@ keywords:
 
 # Lifecycle behavior reference
 
-The Lifecycle extension relies solely on the Lifecycle events dispatched by the `lifecycleStart` and `lifecyclePause` calls to determine the start of new sessions and to calculate lifecycle data.
+The Lifecycle extension relies solely on the Lifecycle events dispatched by the [`lifecycleStart`](api-reference.md#lifecyclestart) and [`lifecyclePause`](api-reference.md#lifecyclepause) calls to determine the start of new sessions and to calculate lifecycle data.
 
 ## General behavior
 
-All events that are not Lifecycle start or Lifecycle pause do not affect lifecycle state or data. The starting of MobileCore via `registerExtensions` also does not trigger changes in lifecycle data.
+A Lifecycle session is the time between a `lifecycleStart` call and a `lifecyclePause` call. A new session is detected when `lifecycleStart` is called after a `lifecyclePause` and the [Lifecycle session timeout](configuration-keys.md#lifecyclesessiontimeout) has elapsed.
+
+All events that are not Lifecycle start or Lifecycle pause do not affect Lifecycle state or data. The starting of MobileCore via `registerExtensions` does not automatically start a Lifecycle session nor does it affect Lifecycle data.
 
 ## Correct call patterns
 
