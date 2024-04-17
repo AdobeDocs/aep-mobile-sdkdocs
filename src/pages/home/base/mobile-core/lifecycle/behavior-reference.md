@@ -59,20 +59,19 @@ The following flows are examples of correct implementations.
 
 The following flows are examples of incorrect implementations that can lead to unexpected lifecycle data.
 
-### Start-after-start
+### Consecutive `lifecycleStart` API calls
 
-Start-after-start causes the Lifecycle extension's shared state version to be updated, but crucially, the start time in persistence **is not** changed. Start-after-start means that:
+1. Consecutive `lifecycleStart` calls are ignored.
+2. A consecutive `lifecycleStart` call will trigger a new shared state event. However, the Lifecycle data is not updated from the initial `lifecycleStart` call, and the session start timestamp is also unchanged.
 
-1. No new session detection logic will be run nor will lifecycle data will be incremented.
-2. All lifecycle data calculated in the shared state dispatched as a consequence reflect the original start time, not any start-after-start timestamps.
+### Consecutive `lifecyclePause` API calls
 
-This behavior is only ungated after a pause is seen, and the next start will handle session timeout and other lifecycle logic as normal.
+Consecutive `lifecyclePause` calls will update the persisted pause timestamp. On the next `lifecycleStart` API call, the last pause timestamp is used to determine if the previous session has timed out and a new session is started.
 
-### Pause-after-pause
+### Scenario troubleshooting
 
-Pause-after-pause causes the Lifecycle extension's pause timestamp in persistence to be updated to the most recent pause seen. There is no gating behavior like in the start-after-start case. The largest consequence of an unintended pause-after-pause is usually stitching together distinct sessions.
-
-**Missing pause, app terminated** (looks the same as a standard crash, but the reason for the missing pause is different)
+**Missing pause, app terminated**  
+This scenario looks the same as a standard crash, but the underlying reason is an app implementation that causes a missing `lifecyclePause` call.
 
 1. ...
 2. `lifecycleStart`
@@ -80,17 +79,29 @@ Pause-after-pause causes the Lifecycle extension's pause timestamp in persistenc
 4. *App removed from device memory* (user or device initated)
 5. `lifecycleStart` <- Crash
 
-**Missing pause, app still in memory**
+**Missing pause, app still in memory**  
+This scenario shows an example of [consecutive `lifecycleStart` API calls](#consecutive-lifecyclestart-api-calls).
 
 1. ...
 2. `lifecycleStart`
 3. *App backgrounded* (missing pause) + optionally: *Session timeout window passes*
-4. `lifecycleStart` <- **Not** a crash nor a new session, treated as a start after start - emits lifecycle data and does not update the start timestamp in persistence
+4. `lifecycleStart`
 
-**Missing start** - extended session length error
+In this scenario, the `lifecycleStart` call (4) is not detected as a new session nor a crash. It will have the consequences of a [consecutive `lifecycleStart` API call](#consecutive-lifecyclestart-api-calls).
+
+**Missing start**  
+This scenario shows an example of [consecutive `lifecyclePause` API calls](#consecutive-lifecyclepause-api-calls).
 
 1. ...
 2. `lifecyclePause`
 3. *App backgrounded*
-4. *Session timeout window passes* + optionally: *Session timeout window passes*
-5. `lifecyclePause` (missing start) <- Moves the pause timestamp to here, effectively stitching together inactive time since the last background, AND not detecting a new session start
+4. Optionally: *Session timeout window passes*
+5. *App launched*
+6. `lifecyclePause` (missing start)
+
+<img src="./assets/android/lifecycle-missing-start.svg" width="400">
+
+In this scenario, the last `lifecyclePause` call (6) is effectively a [consecutive `lifecyclePause` API call](#consecutive-lifecyclepause-api-calls), with the consequences of:
+
+1. Actual app background time - the time between `lifecyclePause` calls (2) and (6) - to be included in Lifecycle data calculations.
+2. Potentially affecting detection of a new session start.
