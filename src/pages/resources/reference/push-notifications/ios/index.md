@@ -31,7 +31,7 @@ end
 
 Replace `YOUR_NOTIFICATION_CONTENT_EXTENSION_NAME` and then, in the `Podfile` directory, run:
 
-```
+```ruby
 $ pod install
 ```
 
@@ -69,7 +69,7 @@ targets: [
 
 To generate `AEPNotificationContent.xcframework`, run the following command from the root directory:
 
-```
+```ruby
 make archive
 ```
 

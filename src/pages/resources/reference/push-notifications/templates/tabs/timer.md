@@ -109,7 +109,6 @@ The properties below define the payload sent to APNS:
 | Color - Background | ⛔️ | `adb_clr_bg` | string | Color for notification's background. Represented as six character hex, e.g. `00FF00`<br /><br />If no value is provided, the system [systemBackground color](https://developer.apple.com/documentation/uikit/uicolor/3173140-systembackground) will be used. |
 | Color - Timer | ⛔️ | `adb_clr_tmr` | string | Color for the text of the timer overlay. Represented as six character hex, e.g. `00FF00`<br /><br />If no value is provided, the system [label color](https://developer.apple.com/documentation/uikit/uicolor/3173131-label) will be used. |
 
-
 ## Example
 
 Below is a sample of what a payload might look like for a notification using the timer template:
