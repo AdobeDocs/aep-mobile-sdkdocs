@@ -67,7 +67,7 @@ graph LR
 
 1. Expected Lifecycle event(s)
 2. `lifecyclePause`
-3. *App closed by user* 
+3. *App closed by user*
 4. *App launched* (Session timeout window did <b>not</b> pass)
 5. `lifecycleStart` (Continue current session)
 
@@ -121,7 +121,6 @@ graph LR
     class A,F regularPill;
     class B,C,D,E regularBox;
 -->
-
 
 **Subsequent app launches, new session**
 
