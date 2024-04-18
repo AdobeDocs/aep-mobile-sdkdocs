@@ -9,5 +9,5 @@ keywords:
 
 # Adobe Experience Platform Edge Network - Tutorials
 
-* [Sending configuration overrides using sendEvent](./send-overrides-sendevent)
-* [Sending configuration overrides using Rules](./send-overrides-rules)
+* [Sending configuration overrides using sendEvent](./send-overrides-sendevent.md)
+* [Sending configuration overrides using Rules](./send-overrides-rules.md)
