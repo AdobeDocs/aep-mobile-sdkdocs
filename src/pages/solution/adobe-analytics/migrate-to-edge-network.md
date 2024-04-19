@@ -84,6 +84,16 @@ The previous Identity for Experience Cloud ID Service extension can be safely re
 
 If you need further assistance, please contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support).
 
+### Lifecycle for Edge Network
+
+Lifecycle for Edge Network is part of the existing Lifecycle extension but formats the Lifecycle data in XDM to send to the Edge Network.  It uses the same APIs so there are no additional client-side changes required. There are a few important differences from Lifecycle used with Analytics, however.
+
+Lifecycle for Edge Network dispatches an [Application Foreground](../../home/base/mobile-core/lifecycle/event-reference.md#lifecycle-application-foreground) event on every app launch and an [Application Background](../../home/base/mobile-core/lifecycle/event-reference.md#lifecycle-application-background) event on every app close. With every foreground and background being its own event, customers can define user sessions at reporting time instead of needing to change a client-side configuration to determine when sessions start and end.
+
+The Analytics extension includes additional data with every hit sent, such as some Lifecycle data. The Edge Network extension is a general purpose extension handling a variety of use cases. Certain data included in all Analytics hits are no longer supported in the Edge Network. The Lifecycle for Edge Network data is only sent during Lifecycle events.
+
+For more details, please refer to the [Lifecycle for Edge Network extension documentation](../../edge/lifecycle-for-edge-network/index.md).
+
 ## Next steps
 
 To learn more about latest versions available for the Edge Network and Edge Bridge extensions, see the [Current SDK versions page](../../home/current-sdk-versions.md).

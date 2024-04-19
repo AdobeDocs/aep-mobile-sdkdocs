@@ -1,6 +1,6 @@
 ---
-title: Mobile Core Lifecycle extension metrics
-description: A guide explaining the Mobile Core Lifecycle extension's metrics.
+title: Mobile Core Lifecycle extension metrics and dimensions
+description: A guide explaining the Mobile Core Lifecycle extension's metrics and dimensions.
 keywords:
 - Lifecycle
 - Lifecycle for Mobile Core
@@ -8,11 +8,17 @@ keywords:
 - Mobile Core
 ---
 
-# Lifecycle metrics
+# Lifecycle metrics and dimensions
 
-## Lifecycle data content response metrics
+When used with the [Analytics extension](../../../../solution/adobe-analytics/index.md), this data is collected and sent to Analytics on every session start. Sessions are determined by the [sessionTimeout](./configuration-keys.md#lifecyclesessiontimeout) configuration.
 
-The following metrics are collected on each [Lifecycle data content response](./event-reference.md#lifecycle-data-content-response) event.
+<InlineAlert variant="warning" slots="text"/>
+
+This data is not used with Lifecycle for Edge Network. Instead, view the [Lifecycle for Edge Network metrics](../../../../edge/lifecycle-for-edge-network/metrics.md) guide.
+
+## Lifecycle data content response metrics and dimensions
+
+The following data is collected on each [Lifecycle data content response](./event-reference.md#lifecycle-data-content-response) event.
 
 ### Install
 
@@ -61,52 +67,3 @@ The following metrics are collected on each [Lifecycle data content response](./
 | Resolution | `a.Resolution` | The width x height in pixels. |
 | Locale | `a.locale` | The locale set for the application. For example, `en-US`. |
 | System Locale | `a.systemLocale` | The locale set for this device. For example, `en-US`. |
-
-## Lifecycle Application Foreground metrics
-
-The following metrics are collected on each [Lifecycle Application Foreground](./event-reference.md#lifecycle-application-foreground) event. The structure of these metrics is defined in the Experience Data Model (XDM) field group [AEP Mobile Lifecycle Details](https://github.com/adobe/xdm/blob/master/docs/reference/adobe/experience/aep-mobile-lifecycle-details.schema.md).
-
-### Application
-
-| **Property** | **Type** | **Description** |
-| :--- | :--- | :--- |
-| xdm:id | String | Identifier of the application. |
-| xdm:name | String | Name of the application. |
-| xdm:version | String | Version of the application. |
-| xdm:isLaunch | boolean | Launch of an application. Every application foreground event sets `isLaunch` to `true`. |
-| xdm:isInstall | boolean | Install of an application. If `true`, signifies the first launch of the application. The Experience Event's timestamp property can be used as the application's install date. |
-| xdm:isUpgrade | boolean | Upgrade of an application. If `true`, signifies the first launch of the application after an upgrade. |
-| dc:language | String | The language of the application to represent the user's linguistic, geographical, or cultural preferences for data presentation. |
-
-### Device
-
-| **Property** | **Type** | **Description** |
-| :--- | :--- | :--- |
-| xdm:type | String | Type of device being tracked. |
-| xdm:manufacturer | String | The name of the organization who owns the design and creation of the device. |
-| xdm:model | String | The name of the model for the device. |
-| xdm:modelNumber | String | The unique model number designation assigned by the manufacturer for this device. |
-| xdm:screenHeight | integer | The number of vertical pixels of the device's active display in the default orientation. |
-| xdm:screenWidth | integer | The number of horizontal pixels of the device's active display in the default orientation. |
-
-### Environment
-
-| **Property** | **Type** | **Description** |
-| :--- | :--- | :--- |
-| xdm:type | String | The type of the application environment. |
-| xdm:carrier | String | A mobile network carrier or MNO, also known as a wireless service provider, wireless carrier, cellular company, or mobile network carrier. |
-| xdm:operatingSystem | String | The name of the operating system used when the observation was made. |
-| xdm:operatingSystemVersion | String | The full version identifier for the operating system used when the observation was made. |
-| dc:language | String | The language of the environment to represent the user's linguistic, geographical, or cultural preferences for data presentation. |
-
-## Lifecycle Application Background metrics
-
-The following metrics are collected on each [Lifecycle Application Background](./event-reference.md#lifecycle-application-background) event. The structure of these metrics is defined in the Experience Data Model (XDM) field group [AEP Mobile Lifecycle Details](https://github.com/adobe/xdm/blob/master/docs/reference/adobe/experience/aep-mobile-lifecycle-details.schema.md).
-
-### Application
-
-| **Property** | **Type** | **Description** |
-| :--- | :--- | :--- |
-| xdm:isClose | boolean | Close of an application. Every application background event sets `isClose` to `true`. |
-| xdm:closeType | String | Type of application close, sent on application isClose. Type is "close" on graceful termination of an application, or "unknown" when application termination source is unknown. |
-| xdm:sessionLength | integer | Length of the application session in seconds. Usually referred as the time the application was in foreground. Will not be less than zero. |

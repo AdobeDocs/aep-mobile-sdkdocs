@@ -110,7 +110,7 @@ In Android, there is a 500 millisecond timeout between consecutive `lifecycleSta
 
 #### Data payload
 
-The Lifecycle application foreground data payload is defined by the Platform Mobile Lifecycle Details XDM field group, and includes information about the application, device, and environment when the event occurred. Please refer to [Lifecycle Application Foreground metrics](./metrics.md#lifecycle-application-foreground-metrics) for a list of metrics included with this event.
+The Lifecycle application foreground data payload is defined by the Platform Mobile Lifecycle Details XDM field group, and includes information about the application, device, and environment when the event occurred. Please refer to [Lifecycle Application Foreground metrics](../../../../edge/lifecycle-for-edge-network/metrics.md#lifecycle-application-foreground-metrics) for a list of metrics included with this event.
 
 ### Lifecycle application background
 
@@ -137,4 +137,4 @@ In Android, there is a 500 millisecond timeout between consecutive `lifecycleSta
 
 #### Data payload
 
-The Lifecycle Application Background data payload is defined by the Platform Mobile Lifecycle Details XDM field group, and includes information about the application close type and previous session length. Please refer to [Lifecycle Application Background metrics](./metrics.md#lifecycle-application-background-metrics) for a list of metrics included with this event.
+The Lifecycle Application Background data payload is defined by the Platform Mobile Lifecycle Details XDM field group, and includes information about the application close type and previous session length. Please refer to [Lifecycle Application Background metrics](../../../../edge/lifecycle-for-edge-network/metrics.md#lifecycle-application-background-metrics) for a list of metrics included with this event.
