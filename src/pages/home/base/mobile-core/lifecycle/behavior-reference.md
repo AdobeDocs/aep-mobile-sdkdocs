@@ -180,7 +180,7 @@ graph LR
 
 ## Troubleshooting unexpected Lifecycle scenarios
 
-The following Lifecycle workflows show examples of the unexpected ordering of Lifecycle events that can impact Lifecycle data and can indicate an incorrect implementation of the Lifecycle APIs.
+The following Lifecycle workflows show examples of the unexpected ordering of Lifecycle events that can impact Lifecycle data and can indicate an incorrect implementation of the Lifecycle APIs. To address the following scenarios, refer to the [implementation guide for Lifecycle](index.md#register-lifecycle-with-mobile-core-and-add-appropriate-startpause-calls).
 
 **Missing pause, app terminated**  
 This scenario looks the same as a standard crash, but the underlying reason is an incorrect implementation where `lifecyclePause` is not called before the app is terminated.
