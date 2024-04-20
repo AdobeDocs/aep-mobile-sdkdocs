@@ -7,6 +7,189 @@ Keywords:
 
 # Release notes
 
+## April 16, 2024
+
+### Flutter Core 4.x and compatible plugins
+
+A new major version of the [Adobe Experience Platform Core Flutter Plugin](https://github.com/adobe/aepsdk-react-native/tree/main/packages/core) has been released along with updates to other plugins. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs, which include the `privacy manifest`.
+* Updated `MobileCore.dispatchEventWithResponseCallback` API with a timeout parameter.
+
+Note that all these plugins must be updated together.
+
+* flutter_aepcore:4.0.0
+* flutter_aepuserprofile:4.0.0
+* flutter_aepassurance:4.0.0
+* flutter_aepedge:4.0.0
+* flutter_aepedgeidentity:4.0.0
+* flutter-aepedgeconsent:4.0.0
+* flutter-aepedgebridge:4.0.0
+* flutter-aepmessaging:4.0.0
+
+To learn how Apple's privacy related announcements made in WWDC of 2023 affect the Mobile SDK, please read the guide on [iOS privacy manifest requirements](https://developer.adobe.com/client-sdks/resources/privacy-manifest).
+
+### Flutter EdgeBridge 4.0.0
+
+Major version update for [Edge Bridge](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepedgebridge) for Adobe Experience Platform Flutter Plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+* Updated Edge Bridge data format to enhance support for migrating to sending data via Edge Network to Adobe Analytics and reduce the effort required for mapping data to XDM.
+* If you are currently using Flutter Edge Bridge version 3.x  and you are mapping data to XDM in your datastream, adjustments will be necessary when adopting version 4.0.0.
+
+### Flutter Messaging 4.0.0
+
+Major version update for [Adobe Journey Optimizer](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepmessaging) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+* Adds `onContentLoaded` to `MessagingDelegate` (Android Only).
+* Updated `urlLoaded` from `MessagingDelegate` to iOS Only.
+
+### Flutter EdgeIdentity 4.0.0
+
+Major version update for [Identity for Edge Network](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepedgeidentity) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+### Flutter EdgeConsent 4.0.0
+
+Major version update for [Consent for Edge Network](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepedgeconsent) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+### Flutter Edge 4.0.0
+
+Major version update for [Edge Network](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepedge) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+### Flutter UserProfile 4.0.0
+
+Major version update for [User Profile](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepuserprofile) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+### Flutter Assurance 4.0.0
+
+Major version update for [Assurance](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepassurance) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+## April 12, 2024
+
+### React Native Core 6.x and compatible libraries
+
+A new major version of the [Adobe Experience Platform Core React Native library](https://github.com/adobe/aepsdk-react-native/tree/main/packages/core) has been released along with updates to other libraries. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs, which include the `privacy manifest`.
+* Deprecated `MobileCore.log`API to align with the native platforms.
+* Updated `MobileCore.dispatchEventWithResponseCallback` API with a timeout parameter.
+
+Note that all these libraries must be updated together.
+
+* @adobe/react-native-aepcore:6.0.0
+* @adobe/react-native-aepuserprofile:6.0.0
+* @adobe/react-native-aepedge:6.0.0
+* @adobe/react-native-aeedgeidentity:6.0.0
+* @adobe/react-native-aepedgeconsent:6.0.0
+* @adobe/react-native-aepedgebridge:6.0.0
+* @adobe/react-native-aepmessaging:6.0.0
+* @adobe/react-native-aepassurance:6.0.0
+* @adobe/react-native-aepoptimize:6.0.0
+* @adobe/react-native-aepplaces:6.0.0
+* @adobe/react-native-aeptarget:6.0.0
+* @adobe/react-native-aepcampaignclassic:6.0.0
+
+To learn how Apple's privacy related announcements made in WWDC of 2023 affect the Mobile SDK, please read the guide on [iOS privacy manifest requirements](https://developer.adobe.com/client-sdks/resources/privacy-manifest).
+
+### React Native EdgeBridge 6.0.0
+
+Major version update for [Edge Bridge](https://github.com/adobe/aepsdk-react-native/tree/main/packages/edgebridge) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+* Updated Edge Bridge data format to enhance support for migrating to sending data via Edge Network to Adobe Analytics and reduce the effort required for mapping data to XDM.
+* If you are currently using React Native Edge Bridge version 5.x  and you are mapping data to XDM in your datastream, adjustments will be necessary when adopting version 6.0.0.
+
+### React Native Campaign Standard 6.0.0
+
+Major version update for [Campaign Classic](https://github.com/adobe/aepsdk-react-native/tree/main/packages/campaignclassic) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+### React Native Target 6.0.0
+
+Major version update for [Target](https://github.com/adobe/aepsdk-react-native/tree/main/packages/target) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+### React Native Places 6.0.0
+
+Major version update for [Places](https://github.com/adobe/aepsdk-react-native/tree/main/packages/places) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+### React Native Optimize 6.0.0
+
+Major version update for [Adobe Journey Optimizer - Decisioning Extension](https://github.com/adobe/aepsdk-react-native/tree/main/packages/optimize) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+### React Native Messaging 6.0.0
+
+Major version update for [Adobe Journey Optimizer](https://github.com/adobe/aepsdk-react-native/tree/main/packages/messaging) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+### React Native EdgeConsent 6.0.0
+
+Major version update for [Consent](https://github.com/adobe/aepsdk-react-native/tree/main/packages/edgeconsent) for Edge Network for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+### React Native EdgeIdentity 6.0.0
+
+Major version update for [Identity for Edge Network](https://github.com/adobe/aepsdk-react-native/tree/main/packages/edgeidentity) Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+### React Native Edge 6.0.0
+
+Major version update for [Edge Network](https://github.com/adobe/aepsdk-react-native/tree/main/packages/edge) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+### React Native UserProfile 6.0.0
+
+Major version update for [User Profile](https://github.com/adobe/aepsdk-react-native/tree/main/packages/userprofile) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+### React Native Assurance 6.0.0
+
+Major version update for [Assurance](https://github.com/adobe/aepsdk-react-native/tree/main/packages/assurance) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
 ## April 3, 2024
 
 ### Android Mobile Core 3.x and compatible extensions
