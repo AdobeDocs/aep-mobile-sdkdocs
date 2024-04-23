@@ -94,7 +94,7 @@ The Android BOM (Bill of Materials) artifact has been released to Maven Central.
 
 ## React Native
 
-Adobe Experience Platform Mobile SDK plugin for React Native supports React Native **version (0.60.0 - 0.72.x)**. For the latest installation instructions, see the README file in the [`aepsdk-react-native`](https://github.com/adobe/aepsdk-react-native#installation) repository.
+Adobe Experience Platform Mobile SDK plugin for React Native supports React Native **version 0.60.0 or later**. For the latest installation instructions, see the README file in the [`aepsdk-react-native`](https://github.com/adobe/aepsdk-react-native#installation) repository.
 
 <InlineAlert variant="info" slots="text"/>
 
