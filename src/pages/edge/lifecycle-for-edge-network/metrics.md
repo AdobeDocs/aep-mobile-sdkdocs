@@ -8,7 +8,7 @@ keywords:
 - Dimensions
 ---
 
-# Lifecycle for Edge Network metrics and dimensions
+# Lifecycle for Edge Network metrics and dimensions reference
 
 When used with the [Edge Network extension](../edge-network/index.md), the following data is collected and sent to Platform on every application launch. An additional [rule in the mobile property](index.md#configure-a-rule-to-forward-lifecycle-metrics-to-platform) is required to send Lifecycle data to the Edge Network extension.
 
@@ -29,16 +29,16 @@ The following data is collected on each [Lifecycle Application Foreground](../..
 | xdm:id | String | Identifier of the application. |
 | xdm:name | String | Name of the application. |
 | xdm:version | String | Version of the application. |
-| xdm:isLaunch | boolean | Launch of an application. Every application foreground event sets `isLaunch` to `true`. |
-| xdm:isInstall | boolean | Install of an application. If `true`, signifies the first launch of the application. The Experience Event's timestamp property can be used as the application's install date. |
-| xdm:isUpgrade | boolean | Upgrade of an application. If `true`, signifies the first launch of the application after an upgrade. |
+| xdm:isLaunch | boolean | Indicates the application has launched. Every application foreground event sets `isLaunch` to `true`. |
+| xdm:isInstall | boolean | Indicates the application was installed. If `true`, signifies the first launch of the application. The Experience Event's timestamp property can be used as the application's install date. |
+| xdm:isUpgrade | boolean | Indicates the application was upgraded. If `true`, signifies the first launch of the application after an upgrade. |
 | dc:language | String | The language of the application to represent the user's linguistic, geographical, or cultural preferences for data presentation. |
 
 ### Device
 
 | **Property** | **Type** | **Description** |
 | :--- | :--- | :--- |
-| xdm:type | String | Type of device being tracked. |
+| xdm:type | String | The type of device being tracked. |
 | xdm:manufacturer | String | The name of the organization who owns the design and creation of the device. |
 | xdm:model | String | The name of the model for the device. |
 | xdm:modelNumber | String | The unique model number designation assigned by the manufacturer for this device. |
@@ -63,6 +63,6 @@ The following data is collected on each [Lifecycle Application Background](../..
 
 | **Property** | **Type** | **Description** |
 | :--- | :--- | :--- |
-| xdm:isClose | boolean | Close of an application. Every application background event sets `isClose` to `true`. |
-| xdm:closeType | String | Type of application close, sent on application isClose. Type is "close" on graceful termination of an application, or "unknown" when application termination source is unknown. |
+| xdm:isClose | boolean | Indicates the application was closed. Every application background event sets `isClose` to `true`. |
+| xdm:closeType | String | Type of application close, sent on application isClose. Type is `close` on graceful termination of an application, or `unknown` when application termination source is unknown. |
 | xdm:sessionLength | integer | Length of the application session in seconds. Usually referred as the time the application was in foreground. Will not be less than zero. |

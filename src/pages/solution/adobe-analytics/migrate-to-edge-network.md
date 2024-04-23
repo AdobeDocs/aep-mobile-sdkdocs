@@ -86,7 +86,7 @@ If you need further assistance, please contact [Adobe Experience Cloud customer 
 
 ### Lifecycle for Edge Network
 
-Lifecycle for Edge Network is part of the existing Lifecycle extension but formats the Lifecycle data in XDM to send to the Edge Network.  It uses the same APIs so there are no additional client-side changes required. There are a few important differences from Lifecycle used with Analytics, however.
+Lifecycle for Edge Network is part of the existing Lifecycle extension but formats the Lifecycle data in XDM to send to the Edge Network. It uses the same APIs so there are no additional client-side changes required. However, there are a few important differences from Lifecycle used with Analytics.
 
 Lifecycle for Edge Network dispatches an [Application Foreground](../../home/base/mobile-core/lifecycle/event-reference.md#lifecycle-application-foreground) event on every app launch and an [Application Background](../../home/base/mobile-core/lifecycle/event-reference.md#lifecycle-application-background) event on every app close. With every foreground and background being its own event, customers can define user sessions at reporting time instead of needing to change a client-side configuration to determine when sessions start and end.
 
