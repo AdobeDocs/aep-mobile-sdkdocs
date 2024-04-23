@@ -9,6 +9,15 @@ keywords:
 
 # Release notes
 
+## April 16, 2024
+
+### Flutter EdgeIdentity 4.0.0
+
+Major version update for [Identity for Edge Network](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepedgeidentity) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
 ## April 12, 2024
 
 ### React Native EdgeIdentity 6.0.0
@@ -16,7 +25,7 @@ keywords:
 Major version update for [Identity for Edge Network](https://github.com/adobe/aepsdk-react-native/tree/main/packages/edgeidentity) Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
 
 * Updated to use Experience Platform Android `3.x` SDKs.
-* Updated to use Experience Platform iOS `5.x` SDKs
+* Updated to use Experience Platform iOS `5.x` SDKs.
 
 ## April 2, 2024
 
