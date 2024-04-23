@@ -10,87 +10,10 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const { fetchReleaseInfo } = require('./github-release');
-const { fetchAndroidReleaseInfo } = require('./android-release');
-const { capitalizeFirstLetter, convertISODateToRleaseDateFormat, extractReleaseNotes } = require('./utils');
-const lodashTemplate = require('lodash.template');
+const { convertISODateToRleaseDateFormat, extractReleaseNotes } = require('./utils');
+const { releaseNoteTemplateGenerator, releaseNoteWithoutDateTemplateGenerator, BOMreleaseNoteTemplateGenerator, BOMreleaseNoteWithoutDateTemplateGenerator } = require('./releaseNotesTemplates');
 const fs = require("fs");
 const _ = require('lodash');
-
-const repoNames = [
-    "aepsdk-roku",
-    "aepsdk-react-native",
-    "aepsdk_flutter",
-    "aepsdk-core-ios",
-    "aepsdk-assurance-ios",
-    "aepsdk-userprofile-ios",
-    "aepsdk-edge-ios",
-    "aepsdk-edgeconsent-ios",
-    "aepsdk-edgeidentity-ios",
-    "aepsdk-edgemedia-ios",
-    "aepsdk-edgebridge-ios",
-    "aepsdk-optimize-ios",
-    "aepsdk-messaging-ios",
-    "aepsdk-campaign-ios",
-    "aepsdk-campaignclassic-ios",
-    "aepsdk-media-ios",
-    "aepsdk-audience-ios",
-    "aepsdk-analytics-ios",
-    "aepsdk-places-ios",
-    "aepsdk-target-ios",
-]
-
-const releaseNoteTemplateGenerator = lodashTemplate(
-    `
-## <%= date %>
-
-### <%= title %>
-
-<%= note %>`
-)
-
-const releaseNoteWithoutDateTemplateGenerator = lodashTemplate(
-    `
-### <%= title %>
-
-<%= note %>`
-)
-
-const BOMreleaseNoteTemplateGenerator = lodashTemplate(
-    `
-## <%= date %>
-
-### <%= title %>
-
-* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
-
-<Accordion>
-
-<AccordionItem header='Expand'>
-
-<%= note %>
-
-</AccordionItem>
-
-</Accordion>`
-)
-
-const BOMreleaseNoteWithoutDateTemplateGenerator = lodashTemplate(
-    `
-### <%= title %>
-
-* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
-
-<Accordion>
-
-<AccordionItem header='Expand'>
-
-<%= note %>
-
-</AccordionItem>
-
-</Accordion>`
-)
 
 function extractBOMTableContent(releaseNote) {
     let lines = releaseNote.split('\n');
@@ -179,7 +102,7 @@ function filterExistingReleaseInfo(releaseInfoArray, lines) {
 
 function generateReleaseNotesSection(releaseInfo) {
     let releaseNote = ''
-    if (releaseInfo.extension == 'BOM') {
+    if (releaseInfo.extension === 'BOM') {
         releaseNote = generateBOMReleaseNoteSection(releaseInfo.published_at, releaseInfo.platform, releaseInfo.extension, releaseInfo.version, releaseInfo.body)
     } else {
         releaseNote = generateReleaseNoteSection(releaseInfo.published_at, releaseInfo.platform, releaseInfo.extension, releaseInfo.version, releaseInfo.body)
@@ -189,7 +112,7 @@ function generateReleaseNotesSection(releaseInfo) {
 
 function generateReleaseNotesSectionWithoutDateLine(releaseInfo) {
     let releaseNote = ''
-    if (releaseInfo.extension == 'BOM') {
+    if (releaseInfo.extension === 'BOM') {
         releaseNote = generateBOMReleaseNoteSectionWithoutDateLine(releaseInfo.platform, releaseInfo.extension, releaseInfo.version, releaseInfo.body)
     } else {
         releaseNote = generateReleaseNoteSectionWithoutDateLine(releaseInfo.platform, releaseInfo.extension, releaseInfo.version, releaseInfo.body)
@@ -203,13 +126,13 @@ async function updateReleaseNotesPage(filePath, releaseInfoArray) {
     // Find the index of the release notes header.
     let releaseNotesHeader = "# Release notes"
     let releaseNotesHeaderIndex = contentLines.indexOf(releaseNotesHeader)
-    if (releaseNotesHeaderIndex == -1) {
+    if (releaseNotesHeaderIndex === -1) {
         console.error("Error: can't find the release notes header")
         return
     }
     let contentIsChanged = false
     for (const releaseInfo of releaseInfoArray) {
-        console.log("Updating release notes with:", releaseInfo)
+        // console.log("Updating release notes with:", releaseInfo)
         let title = generateReleaseTitle(releaseInfo.platform, releaseInfo.extension, releaseInfo.version)
         let titleLine = `### ${title}`
         if (hasLineStartWith(titleLine, contentLines)) {
@@ -250,126 +173,6 @@ function hasLineStartWith(string, lineArray) {
     return false
 }
 
-async function fetchNonAndroidReleaseInfo(token, timestampInMilliseconds) {
-    let releaseInofArray = []
-    for (const repoName of repoNames) {
-        let releaseInfoList = await fetchReleaseInfo(token, "adobe", repoName)
-        for (const releaseInfo of releaseInfoList) {
-            let lastTimeStamp = Date.parse(releaseInfo.published_at)
-            if (timestampInMilliseconds < lastTimeStamp) {
-                releaseInofArray.push(releaseInfo)
-            }
-        }
-    }
-    return releaseInofArray
-}
-
-function updateNonAndroidReleaseInfo(releaseInfo) {
-    switch (releaseInfo.repo_name) {
-        case "aepsdk-roku":
-            releaseInfo.platform = 'Roku'
-            releaseInfo.extension = 'SDK'
-            releaseInfo.version = releaseInfo.tag_name
-            break;
-        case "aepsdk-react-native":
-            releaseInfo.platform = 'React Native'
-            let tmArray = releaseInfo.tag_name.replace('@adobe/react-native-aep', '').split('@')
-            releaseInfo.extension = capitalizeFirstLetter(tmArray[0])
-            releaseInfo.version = tmArray[1]
-            break;
-        case "aepsdk-flutter":
-            releaseInfo.platform = 'Flutter'
-            let array = releaseInfo.tag_name.replace('flutter_aep', '').split('@')
-            releaseInfo.extension = capitalizeFirstLetter(array[0])
-            releaseInfo.version = array[1]
-            break;
-        case "aepsdk-edge-ios":
-        case "aepsdk-media-ios":
-        case "aepsdk-audience-ios":
-        case "aepsdk-analytics-ios":
-        case "aepsdk-places-ios":
-        case "aepsdk-target-ios":
-        case "aepsdk-optimize-ios":
-        case "aepsdk-core-ios":
-        case "aepsdk-messaging-ios":
-        case "aepsdk-assurance-ios":
-            releaseInfo.platform = 'iOS'
-            releaseInfo.extension = capitalizeFirstLetter(releaseInfo.repo_name.replace('aepsdk-', '').replace('-ios', ''))
-            releaseInfo.version = releaseInfo.tag_name
-            break;
-        case "aepsdk-edgeconsent-ios":
-            releaseInfo.platform = 'iOS'
-            releaseInfo.extension = 'EdgeConsent'
-            releaseInfo.version = releaseInfo.tag_name
-            break;
-        case "aepsdk-edgeidentity-ios":
-            releaseInfo.platform = 'iOS'
-            releaseInfo.extension = 'EdgeIdentity'
-            releaseInfo.version = releaseInfo.tag_name
-            break;
-        case "aepsdk-userprofile-ios":
-            releaseInfo.platform = 'iOS'
-            releaseInfo.extension = 'UserProfile'
-            releaseInfo.version = releaseInfo.tag_name
-            break;
-        case "aepsdk-edgebridge-ios":
-            releaseInfo.platform = 'iOS'
-            releaseInfo.extension = 'EdgeBridge'
-            releaseInfo.version = releaseInfo.tag_name
-            break;
-        case "aepsdk-edgemedia-ios":
-            releaseInfo.platform = 'iOS'
-            releaseInfo.extension = 'EdgeMedia'
-            releaseInfo.version = releaseInfo.tag_name
-            break;
-        case "aepsdk-campaignclassic-ios":
-            releaseInfo.platform = 'iOS'
-            releaseInfo.extension = 'Campaign Classic'
-            releaseInfo.version = releaseInfo.tag_name
-            break;
-        case "aepsdk-campaign-ios":
-            releaseInfo.platform = 'iOS'
-            releaseInfo.extension = 'Campaign Standard'
-            releaseInfo.version = releaseInfo.tag_name
-            break;
-        default:
-            console.log("unsupported repoName: " + releaseInfo.repoName)
-    }
-    return releaseInfo
-}
-
-async function fetchAllReleaseInfo(token, timestampInMilliseconds) {
-    let releaseInfoArray = []
-    let rawInfoArray = await fetchNonAndroidReleaseInfo(token, timestampInMilliseconds)
-
-    for (const releaseInfo of rawInfoArray) {
-        releaseInfoArray.push(updateNonAndroidReleaseInfo(releaseInfo))
-    }
-
-    let AndroidReleaseInfoArray = await fetchAndroidReleaseInfo(token, "com.adobe.marketing.mobile", timestampInMilliseconds);
-    return releaseInfoArray.concat(AndroidReleaseInfoArray)
-}
-
-function sortReleaseInfoByDateASC(releaseInfoArray) {
-    releaseInfoArray.sort((a, b) => {
-        let dateA = new Date(a.published_at)
-        let dateB = new Date(b.published_at)
-        if (dateA < dateB) {
-            return -1;
-        }
-        if (dateA > dateB) {
-            return 1;
-        }
-        return 0;
-    })
-    return releaseInfoArray
-}
-
 module.exports = {
-    fetchAllReleaseInfo,
-    sortReleaseInfoByDateASC,
-    generateReleaseNoteSection,
-    generateBOMReleaseNoteSection,
-    filterExistingReleaseInfo,
     updateReleaseNotesPage
 }
