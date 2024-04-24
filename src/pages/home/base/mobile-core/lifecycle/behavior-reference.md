@@ -227,7 +227,7 @@ graph LR
     class G incorrectBox;
 -->
 
-In this scenario, the last `lifecyclePause` call (6) is effectively a [consecutive `lifecyclePause` API call](#consecutive-lifecyclepause-api-calls), with the consequences of:
+In this scenario, the last `lifecyclePause` call (7) is effectively a [consecutive `lifecyclePause` API call](#consecutive-lifecyclepause-api-calls), with the consequences of:
 
-1. Actual app background time - the time between `lifecyclePause` calls (2) and (6) - to be included in Lifecycle data calculations.
+1. Actual app background time - the time between `lifecyclePause` calls (3) and (7) - to be included in Lifecycle data calculations.
 2. Potentially affecting detection of a new session start.
