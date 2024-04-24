@@ -9,6 +9,10 @@ Keywords:
 
 ## April 24, 2024
 
+### React Native Core 6.0.1
+
+* Added namespace support to the Android module.
+
 ### React Native Optimize 6.0.1
 
 * Added namespace support to the Android module.
@@ -84,10 +88,6 @@ Keywords:
 * Added namespace support to the Android module.
 
 ### Flutter Assurance 4.0.1
-
-* Added namespace support to the Android module.
-
-### React Native Core 6.0.1
 
 * Added namespace support to the Android module.
 
