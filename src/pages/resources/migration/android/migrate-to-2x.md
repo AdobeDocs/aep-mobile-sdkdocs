@@ -73,7 +73,7 @@ dependencies {
     //implementation 'com.adobe.marketing.mobile:userprofile:1.+'
 
     // Use Adobe SDK BOM artifact to manage all compatible versions of Adobe Experience Platform Android extensions.
-    implementation 'com.adobe.marketing.mobile:sdk-bom:2.+'
+    implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
     implementation 'com.adobe.marketing.mobile:core'
     implementation 'com.adobe.marketing.mobile:identity'
     implementation 'com.adobe.marketing.mobile:signal'
