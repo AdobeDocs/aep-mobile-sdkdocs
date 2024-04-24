@@ -65,7 +65,7 @@ Using dynamic dependency versions is not recommended for production apps. Refer 
 
 ```java
 dependencies {
-    // implementation 'com.adobe.marketing.mobile:sdk-bom:2.+'
+    // implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
     // implementation 'com.adobe.marketing.mobile:core'
     // implementation 'com.adobe.marketing.mobile:identity'
     // implementation 'com.adobe.marketing.mobile:signal'
@@ -73,7 +73,7 @@ dependencies {
     // implementation 'com.adobe.marketing.mobile:userprofile'
 
     // Update Adobe SDK BOM artifact to the latest 3.x.x version.
-    implementation 'com.adobe.marketing.mobile:sdk-bom:3.+'
+    implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
     implementation 'com.adobe.marketing.mobile:core'
     implementation 'com.adobe.marketing.mobile:identity'
     implementation 'com.adobe.marketing.mobile:signal'
