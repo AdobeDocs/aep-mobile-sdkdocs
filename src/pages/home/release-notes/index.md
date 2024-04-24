@@ -7,6 +7,44 @@ Keywords:
 
 # Release notes
 
+## April 23, 2024
+
+### Flutter Core 4.0.1
+
+* Added namespace support to Android module.
+
+### Flutter EdgeIdentity 4.0.1
+
+* Added namespace support to Android module.
+
+### Flutter EdgeConsent 4.0.1
+
+* Added namespace support to Android module.
+
+### Flutter EdgeBridge 4.0.1
+
+* Added namespace support to Android module.
+
+### Flutter Edge 4.0.1
+
+* Added namespace support to Android module.
+
+### Flutter Messaging 4.0.1
+
+* Added namespace support to Android module.
+
+### Flutter UserProfile 4.0.1
+
+* Added namespace support to Android module.
+
+### Flutter Assurance 4.0.1
+
+* Added namespace support to Android module.
+
+### React Native Core 6.0.1
+
+* Added a namespace to the Android module.
+
 ## April 16, 2024
 
 ### Flutter Core 4.x and compatible plugins
