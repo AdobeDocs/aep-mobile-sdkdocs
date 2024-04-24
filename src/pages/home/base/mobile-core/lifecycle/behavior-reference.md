@@ -40,11 +40,6 @@ The following Lifecycle workflows show examples of the expected ordering of Life
 
 **App first launch after installation**
 
-1. *App launched*
-2. `lifecycleStart` (Start of new session)
-3. `lifecyclePause`
-4. *App closed by user*
-
 ![](./assets/android/lifecycle-first-launch.svg)
 
 <!-- mermaid.js diagram definition
@@ -65,46 +60,34 @@ graph LR
 
 **Subsequent app launches, continue session with app close**
 
-1. Expected Lifecycle event(s)
-2. `lifecyclePause`
-3. *App closed by user*
-4. *App launched* (Session timeout window did <b>not</b> pass)
-5. `lifecycleStart` (Continue current session)
-
 ![](./assets/android/lifecycle-continue-session.svg)
 
 <!-- mermaid.js diagram definition
 graph LR
-    A("1.<br/>Expected Lifecycle event(s)")
-    A ==> B(2.<br/><code>lifecyclePause</code>)
-    B ==> C(["3.<br/>App closed by user"])
-    C ==> D(["4.<br/>App launched<br>(Session timeout window<br>did <b>not</b> pass)"])
-    D ==> E("5.<br/><code>lifecycleStart</code><br>(Continue current session)")
+    A(["1.<br/>App launched"])
+    A ==> B("2.<br/><code>lifecycleStart</code>")
+    B ==> C(3.<br/><code>lifecyclePause</code>)
+    C ==> D(["4.<br/>App closed by user"])
+    D ==> E(["5.<br/>App launched<br>(Session timeout window<br>did <b>not</b> pass)"])
+    E ==> F("6.<br/><code>lifecycleStart</code><br>(Continue current session)")
 
     classDef dashedPill fill:#d3d3d3,stroke:#000,stroke-dasharray: 5 5,color:#000;
     classDef regularPill fill:#3273de,stroke:#3273de,color:#fff;
     classDef regularBox fill:#009c3b,stroke:#009c3b,color:#fff;
     classDef incorrectBox fill:#EB1000,stroke:#EB1000,color:#fff;
 
-    class A,B,E regularBox;
-    class C,D regularPill;
+    class A,D,E regularPill;
+    class B,C,F regularBox;
 -->
 
 **Subsequent app launches, continue session without app close**
-
-1. *App launched*
-2. `lifecycleStart` (Start of new session)
-3. `lifecyclePause`
-4. `lifecycleStart` (Continue current session)
-5. `lifecyclePause`
-5. *App closed by user*
 
 ![](./assets/android/lifecycle-continue-without-close.svg)
 
 <!-- mermaid.js diagram definition
 graph LR
     A(["1.<br/>App launched"])
-    A ==> B("2.<br/><code>lifecycleStart</code><br>(Start of new session)")
+    A ==> B("2.<br/><code>lifecycleStart</code>")
     B ==> C(3.<br/><code>lifecyclePause</code>)
     C ==> D("4.<br/><code>lifecycleStart</code><br>(Continue current session)")
     D ==> E(5.<br/><code>lifecyclePause</code>)
@@ -124,40 +107,28 @@ graph LR
 
 **Subsequent app launches, new session**
 
-1. Expected Lifecycle event(s)
-2. `lifecyclePause`
-3. *App closed by user*
-4. *Session timeout window passed*
-5. *App launched*
-6. `lifecycleStart` (Start of new session)
-
 ![](./assets/android/lifecycle-subsequent-new-session.svg)
 
 <!-- mermaid.js diagram definition
 graph LR
-    A("1.<br/>Expected Lifecycle event(s)")
-    A ==> B(2.<br/><code>lifecyclePause</code>)
-    B ==> C(["3.<br/>App closed by user"])
-    C ==> D(["4.<br/>Session timeout<br>window passed"])
-    D ==> E(["5.<br/>App launched"])
-    E ==> F("6.<br/><code>lifecycleStart</code><br>(Start of new session)")
+    A(["1.<br/>App launched"])
+    A ==> B("2.<br/><code>lifecycleStart</code>")
+    B ==> C("3.<br/><code>lifecyclePause</code>")
+    C ==> D(["4.<br/>App closed by user"])
+    D ==> E(["5.<br/>Session timeout<br>window passed"])
+    E ==> F(["6.<br/>App launched"])
+    F ==> G("7.<br/><code>lifecycleStart</code><br/>(Start of new session)")
 
     classDef dashedPill fill:#d3d3d3,stroke:#000,stroke-dasharray: 5 5,color:#000;
     classDef regularPill fill:#3273de,stroke:#3273de,color:#fff;
     classDef regularBox fill:#009c3b,stroke:#009c3b,color:#fff;
     classDef incorrectBox fill:#EB1000,stroke:#EB1000,color:#fff;
 
-    class A,B,F regularBox;
-    class C,D,E regularPill;
+    class A,,D,E,F regularPill;
+    class B,C,G regularBox;
 -->
 
 **On app crash or force close**
-
-1. *App launched*
-2. `lifecycleStart`
-3. *App crashed/force closed (unable to call `lifecyclePause`)*
-4. *App launched*
-5. `lifecycleStart` (Crash reported)
 
 ![](./assets/android/lifecycle-crash.svg)
 
@@ -185,39 +156,46 @@ The following Lifecycle workflows show examples of the unexpected ordering of Li
 **Missing pause, app terminated**  
 This scenario looks the same as a standard crash, but the underlying reason is an incorrect implementation where `lifecyclePause` is not called before the app is terminated.
 
-1. Expected Lifecycle event(s)
-2. `lifecycleStart`
-3. *App closed by user (missing `lifecyclePause` call)*
-4. *App terminated*
-5. `lifecycleStart` (Crash reported)
-
 ![](./assets/android/lifecycle-missing-pause-terminated.svg)
 
-**Missing pause, app still in memory**  
-This scenarios shows an example of [consecutive `lifecycleStart` API calls](#consecutive-lifecyclestart-api-calls). The app close is not detected because `lifecyclePause` is not called. As the app is not removed from memory, the current session continues.
+<!-- mermaid.js diagram definition
+graph LR
+    A(["1.<br/>App launched"])
+    A ==> B("2.<br/><code>lifecycleStart</code>")
+    B ==> C(["3.<br/>App closed by user<br>(missing <code>lifecyclePause</code> call)"])
+    C ==> D(["4.<br/>App terminated"])
+    D ==> E("5.<br/><code>lifecycleStart</code><br>(Crash reported)")
 
-1. Expected Lifecycle event(s)
-2. `lifecycleStart`
-3. *App closed by user* (missing `lifecyclePause` call)
-4. *App launched*
-5. `lifecycleStart` (Session continues)
+    classDef dashedPill fill:#d3d3d3,stroke:#000,stroke-dasharray: 5 5,color:#000;
+    classDef regularPill fill:#3273de,stroke:#3273de,color:#fff;
+    classDef regularBox fill:#009c3b,stroke:#009c3b,color:#fff;
+    classDef incorrectBox fill:#EB1000,stroke:#EB1000,color:#fff;
+
+    class A,D regularPill;
+    class B,E regularBox;
+    class C incorrectBox;
+-->
+
+**Missing pause, app still in memory**  
+This scenario shows an example of [consecutive `lifecycleStart` API calls](#consecutive-lifecyclestart-api-calls). The app close is not detected because `lifecyclePause` is not called. As the app is not removed from memory, the current session continues.
 
 ![](./assets/android/lifecycle-missing-pause-not-terminated.svg)
 
 <!-- mermaid.js diagram definition
 graph LR
-    A("1.<br/>Expected Lifecycle event(s)")
-    A ==> B(2.<br/><code>lifecycleStart</code>)
+    A(["1.<br/><code>App launched</code>"])
+    A ==> B("2.<br/><code>lifecycleStart</code>")
     B ==> C(["3.<br/>App closed by user<br>(Missing <code>lifecyclePause</code> call)"])
-    C ==> D(["4.<br/>App launched"])
-    D ==> E(5.<br/><code>lifecycleStart</code>)
+    C ==> D(["4.<br/><code>App launched</code>"])
+    D ==> E("5.<br/><code>lifecycleStart</code><br>(Session continues)")
 
+    classDef dashedPill fill:#d3d3d3,stroke:#000,stroke-dasharray: 5 5,color:#000;
     classDef regularPill fill:#3273de,stroke:#3273de,color:#fff;
     classDef regularBox fill:#009c3b,stroke:#009c3b,color:#fff;
     classDef incorrectBox fill:#EB1000,stroke:#EB1000,color:#fff;
 
-    class A,B,E regularBox;
-    class D regularPill;
+    class A,D,E regularPill;
+    class B,E regularBox;
     class C incorrectBox;
 -->
 
@@ -226,33 +204,27 @@ In this scenario, the `lifecycleStart` call (5) is not detected as a new session
 **Missing start**  
 This scenario shows an example of [consecutive `lifecyclePause` API calls](#consecutive-lifecyclepause-api-calls). The new session is not detected because `lifecycleStart` is not called.
 
-1. Expected Lifecycle event(s)
-2. `lifecyclePause`
-3. *App closed by user*
-4. Optionally: *Session timeout window passed*
-5. *App launched*
-6. `lifecyclePause` (missing `lifecycleStart` call)
-
 ![](./assets/android/lifecycle-missing-start.svg)
 
 <!-- mermaid.js diagram definition
 graph LR
-    A("1.<br/>Expected Lifecycle event(s)")
-    A ==> B(2.<br/><code>lifecyclePause</code>)
-    B ==> C(["3.<br/>App closed by user"])
-    C ==> D(["4.<br/>(Optionally)<br>Session timeout window passed"])
-    D ==> E(["5.<br/>App launched"])
-    E ==> F("6.<br/><code>lifecyclePause</code><br>(Missing <code>lifecycleStart</code> call)")
+    A(["1.<br/><code>App launched</code>"])
+    A ==> B("2.<br/><code>lifecycleStart</code>")
+    B ==> C("3.<br/><code>lifecyclePause</code>")
+    C ==> D(["4.<br/>App closed by user"])
+    D ==> E(["5.<br/>(Optionally)<br>Session timeout window passed"])
+    E ==> F(["6.<br/><code>App launched</code>"])
+    F ==> G("7.<br/><code>lifecyclePause</code><br>(Missing <code>lifecycleStart</code> call)")
 
     classDef dashedPill fill:#d3d3d3,stroke:#000,stroke-dasharray: 5 5,color:#000;
     classDef regularPill fill:#3273de,stroke:#3273de,color:#fff;
     classDef regularBox fill:#009c3b,stroke:#009c3b,color:#fff;
     classDef incorrectBox fill:#EB1000,stroke:#EB1000,color:#fff;
 
-    class A,B regularBox;
-    class C,E regularPill;
-    class D dashedPill;
-    class F incorrectBox;
+    class A,D,F regularPill;
+    class B,C regularBox;
+    class E dashedPill;
+    class G incorrectBox;
 -->
 
 In this scenario, the last `lifecyclePause` call (6) is effectively a [consecutive `lifecyclePause` API call](#consecutive-lifecyclepause-api-calls), with the consequences of:
