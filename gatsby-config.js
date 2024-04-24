@@ -624,12 +624,12 @@ module.exports = {
                                         path: "/home/base/mobile-core/identity/tutorials",
                                         pages: [
                                             {
-                                                title: "Push identifier sync",
-                                                path: "/home/base/mobile-core/identity/tutorials/push-sync"
+                                                title: "Mobile to web identity sharing",
+                                                path: "/home/base/mobile-core/identity/tutorials/id-sharing"
                                             },
                                             {
-                                                title: "Visitor tracking",
-                                                path: "/home/base/mobile-core/identity/tutorials/visitor-tracking"
+                                                title: "Push identifier sync",
+                                                path: "/home/base/mobile-core/identity/tutorials/push-sync"
                                             }
                                         ]
                                     }

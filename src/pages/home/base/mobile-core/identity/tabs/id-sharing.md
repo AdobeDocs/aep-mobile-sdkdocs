@@ -6,7 +6,7 @@ noIndex: true
 
 #### Java
 
-To append visitor information to the URL that is being used to open the web view, call [appendVisitorInfoForUrl](#appendtourl-appendvisitorinfoforurl):
+To append visitor information to the URL that is being used to open the web view, call [appendVisitorInfoForUrl](../api-reference.md#appendtourl-appendvisitorinfoforurl):
 
 ```java
 Identity.appendVisitorInfoForURL("https://example.com", new AdobeCallback<String>() {
@@ -22,7 +22,7 @@ Identity.appendVisitorInfoForURL("https://example.com", new AdobeCallback<String
 });
 ```
 
-Alternately, starting in SDK version 1.4.0 (Identity version 1.1.0), you can call [getUrlVariables](#geturlvariables) and build your own URL:
+Alternately, starting in SDK version 1.4.0 (Identity version 1.1.0), you can call [getUrlVariables](../api-reference.md#geturlvariables) and build your own URL:
 
 ```java
 Identity.getUrlVariables(new AdobeCallback<String>() {
@@ -40,7 +40,7 @@ Identity.getUrlVariables(new AdobeCallback<String>() {
 
 <Variant platform="ios" task="implement" repeat="10"/>
 
-To append visitor information to the URL that is being used to open the web view, call [appendToUrl](./api-reference.md#appendtourl-appendvisitorinfoforurl):
+To append visitor information to the URL that is being used to open the web view, call [appendToUrl](../api-reference.md#appendtourl-appendvisitorinfoforurl):
 
 #### Swift
 
@@ -68,7 +68,7 @@ NSURL *sampleUrl = [NSURL URLWithString:@"https://example.com"];
 }];
 ```
 
-Alternately, you can call [getUrlVariables](api-reference.md#geturlvariables) and build your own URL:
+Alternately, you can call [getUrlVariables](../api-reference.md#geturlvariables) and build your own URL:
 
 #### Swift
 
@@ -107,13 +107,13 @@ Identity.getUrlVariables { urlVariables, error in
 
 #### JavaScript
 
-To append visitor information to the URL that is being used to open the web view, call [appendVisitorInfoForUrl](api-reference.md#appendtourl-appendvisitorinfoforurl):
+To append visitor information to the URL that is being used to open the web view, call [appendVisitorInfoForUrl](../api-reference.md#appendtourl-appendvisitorinfoforurl):
 
 ```jsx
 ACPIdentity.appendVisitorInfoForURL("www.example.com").then(urlWithVistorData => console.log("Url with Visitor Data = " + urlWithVisitorData));
 ```
 
-Alternately, starting with SDK version 1.0.5, you can call [getUrlVariables](api-reference.md#geturlvariables) and build your own URL:
+Alternately, starting with SDK version 1.0.5, you can call [getUrlVariables](../api-reference.md#geturlvariables) and build your own URL:
 
 ```jsx
 ACPIdentity.getUrlVariables().then(urlVariables => console.log("query params = " + urlVariables));
@@ -123,7 +123,7 @@ ACPIdentity.getUrlVariables().then(urlVariables => console.log("query params = "
 
 #### Dart
 
-To append visitor information to the URL that is being used to open the web view, call [appendVisitorInfoForUrl](api-reference.md#appendtourl-appendvisitorinfoforurl):
+To append visitor information to the URL that is being used to open the web view, call [appendVisitorInfoForUrl](../api-reference.md#appendtourl-appendvisitorinfoforurl):
 
 ```dart
 String result = "";
@@ -135,7 +135,7 @@ try {
 }
 ```
 
-Alternately, starting with SDK version 1.0.0-beta.1, you can call [getUrlVariables](api-reference.md#geturlvariables) and build your own URL:
+Alternately, starting with SDK version 1.0.0-beta.1, you can call [getUrlVariables](../api-reference.md#geturlvariables) and build your own URL:
 
 ```dart
 String result = "";

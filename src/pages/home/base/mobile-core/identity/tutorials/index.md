@@ -4,6 +4,10 @@ description: An overview that shows the available tutorials for the Mobile Core 
 keywords:
 - Guides
 - Tutorials
+- Identity
+- Identity for Mobile Core
+- Mobile Core
+- Troubleshooting
 ---
 
 # Tutorials
@@ -11,4 +15,4 @@ keywords:
 This page provides a list of available tutorials for the Identity extension in Mobile Core.
 
 * [Troubleshooting push identifier sync](./push-sync.md)
-* [Visitor tracking between an app and the mobile web](./visitor-tracking.md)
+* [Visitor tracking between an app and the mobile web](./id-sharing.md)
