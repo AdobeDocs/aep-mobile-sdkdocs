@@ -9,6 +9,18 @@ keywords:
 
 # Release notes
 
+## April 24, 2024
+
+### React Native EdgeIdentity 6.0.1
+
+* Added namespace support to the Android module.
+
+## April 23, 2024
+
+### Flutter EdgeIdentity 4.0.1
+
+* Added namespace support to Android module.
+
 ## April 16, 2024
 
 ### Flutter EdgeIdentity 4.0.0

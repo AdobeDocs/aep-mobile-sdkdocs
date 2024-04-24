@@ -7,6 +7,90 @@ Keywords:
 
 # Release notes
 
+## April 24, 2024
+
+### React Native Optimize 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native Places 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native Target 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native UserProfile 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native Messaging 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native EdgeIdentity 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native Edge 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native EdgeBridge 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native EdgeConsent 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native Campaign Standard 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native Assurance 6.0.1
+
+* Added namespace support to the Android module.
+
+## April 23, 2024
+
+### Flutter Core 4.0.1
+
+* Added namespace support to Android module.
+
+### Flutter EdgeIdentity 4.0.1
+
+* Added namespace support to Android module.
+
+### Flutter EdgeConsent 4.0.1
+
+* Added namespace support to Android module.
+
+### Flutter EdgeBridge 4.0.1
+
+* Added namespace support to Android module.
+
+### Flutter Edge 4.0.1
+
+* Added namespace support to Android module.
+
+### Flutter Messaging 4.0.1
+
+* Added namespace support to Android module.
+
+### Flutter UserProfile 4.0.1
+
+* Added namespace support to Android module.
+
+### Flutter Assurance 4.0.1
+
+* Added namespace support to Android module.
+
+### React Native Core 6.0.1
+
+* Added namespace support to the Android module.
+
 ## April 16, 2024
 
 ### Flutter Core 4.x and compatible plugins
