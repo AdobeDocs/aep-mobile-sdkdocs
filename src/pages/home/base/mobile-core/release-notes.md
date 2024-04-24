@@ -8,6 +8,16 @@ keywords:
 
 # Release notes
 
+## April 23, 2024
+
+### Flutter Core 4.0.1
+
+* Added namespace support to the Android module.
+
+### React Native Core 6.0.1
+
+* Added namespace support to the Android module.
+
 ## April 16, 2024
 
 ### Flutter Core 4.x and compatible plugins

@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## April 24, 2024
+
+### React Native Optimize 6.0.1
+
+* Added namespace support to the Android module.
+
 ## April 12, 2024
 
 ### React Native Optimize 6.0.0
