@@ -45,7 +45,7 @@ In addition, use the following steps to [Configure the Edge Network extension](.
 
 ## Configure a Rule to forward Lifecycle data to Platform
 
-The Lifecycle for Edge Network extension dispatches application foreground and background events to the Mobile SDK. Create a rule to forward these events to the Adobe Experience Platform Edge Network.
+The Lifecycle for Edge Network extension dispatches application launch (foreground) and application close (background) events to the Mobile SDK. Create a rule to forward these events to the Adobe Experience Platform Edge Network.
 
 ### Create a rule
 
