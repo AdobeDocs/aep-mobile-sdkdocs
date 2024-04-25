@@ -614,8 +614,18 @@ module.exports = {
                                         path: "/home/base/mobile-core/identity/api-reference"
                                     },
                                     {
-                                        title: "Push identifier sync",
-                                        path: "/home/base/mobile-core/identity/push-sync"
+                                        title: "Tutorials",
+                                        path: "/home/base/mobile-core/identity/tutorials",
+                                        pages: [
+                                            {
+                                                title: "Mobile to web identity sharing",
+                                                path: "/home/base/mobile-core/identity/tutorials/id-sharing"
+                                            },
+                                            {
+                                                title: "Push identifier sync",
+                                                path: "/home/base/mobile-core/identity/tutorials/push-sync"
+                                            }
+                                        ]
                                     }
                                 ]
                             },
