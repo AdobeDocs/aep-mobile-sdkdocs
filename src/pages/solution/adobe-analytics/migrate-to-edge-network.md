@@ -86,9 +86,9 @@ If you need further assistance, please contact [Adobe Experience Cloud customer 
 
 ### Lifecycle for Edge Network
 
-Lifecycle for Edge Network is part of the existing Lifecycle extension but formats the Lifecycle data in XDM to send to the Edge Network. It uses the same APIs so there are no additional client-side changes required. However, there are a few important differences from Lifecycle used with Analytics.
+Lifecycle for Edge Network is part of the existing Lifecycle extension but formats the Lifecycle data in XDM to send to the Edge Network. It uses the same `MobileCore.lifecycleStart`/`MobileCore.lifecyclePause` APIs so there are no additional client-side changes required if you already have these APIs implemented in your application. However, there are a few important differences from Lifecycle used with Analytics.
 
-Lifecycle for Edge Network dispatches an [Application Foreground](../../home/base/mobile-core/lifecycle/event-reference.md#lifecycle-application-foreground) event on every app launch and an [Application Background](../../home/base/mobile-core/lifecycle/event-reference.md#lifecycle-application-background) event on every app close. With every foreground and background being its own event, customers can define user sessions at reporting time instead of needing to change a client-side configuration to determine when sessions start and end.
+Lifecycle for Edge Network dispatches an [Application Launch (Foreground)](../../home/base/mobile-core/lifecycle/event-reference.md#lifecycle-application-foreground) event on every app launch and an [Application Close (Background)](../../home/base/mobile-core/lifecycle/event-reference.md#lifecycle-application-background) event on every app close. With every foreground and background being its own event, customers can define user sessions at reporting time instead of needing to change a client-side configuration to determine when sessions start and end.
 
 The Analytics extension includes additional data with every hit sent, such as some Lifecycle data. The Edge Network extension is a general purpose extension handling a variety of use cases. Certain data included in all Analytics hits are no longer supported in the Edge Network. The Lifecycle for Edge Network data is only sent during Lifecycle events.
 

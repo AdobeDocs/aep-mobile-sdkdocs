@@ -1,24 +1,23 @@
 ---
-title: Lifecycle for Edge Network metrics and dimensions reference
-description: A guide explaining the available metrics and dimensions for the Lifecycle for Edge Network mobile extension.
+title: Lifecycle for Edge Network data
+description: A guide explaining the data for the Lifecycle for Edge Network mobile extension.
 keywords:
 - Edge Network
 - Lifecycle for Edge Network
-- Metrics
-- Dimensions
+- Data
 ---
 
-# Lifecycle for Edge Network metrics and dimensions reference
+# Lifecycle for Edge Network data
 
-When used with the [Edge Network extension](../edge-network/index.md), the following data is collected and sent to Platform on every application launch. An additional [rule in the mobile property](index.md#configure-a-rule-to-forward-lifecycle-metrics-to-platform) is required to send Lifecycle data to the Edge Network extension.
+When used with the [Edge Network extension](../edge-network/index.md), the following data is collected and sent to Platform on every application launch. An additional [rule in the mobile property](index.md#configure-a-rule-to-forward-lifecycle-data-to-platform) is required to send Lifecycle data to the Edge Network extension.
 
 When the Analytics service is enabled in the datastream configuration, the XDM Lifecycle data is automatically mapped to Analytics. See the [XDM object variable mapping to Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/xdm-var-mapping) documentation for more information.
 
 <InlineAlert variant="warning" slots="text"/>
 
-This data is not used with Lifecycle for Analytics. Instead, view the [Lifecycle metrics and dimensions](../../home/base/mobile-core/lifecycle/metrics.md) guide.
+This data is not used with Lifecycle for Analytics. Instead, view the [Lifecycle data](../../home/base/mobile-core/lifecycle/data-reference.md) reference.
 
-## Lifecycle Application Foreground metrics and dimensions
+## Lifecycle Application Foreground data
 
 The following data is collected on each [Lifecycle Application Foreground](../../home/base/mobile-core/lifecycle/event-reference.md#lifecycle-application-foreground) event. The structure of this data is defined in the Experience Data Model (XDM) field group [AEP Mobile Lifecycle Details](https://github.com/adobe/xdm/blob/master/docs/reference/adobe/experience/aep-mobile-lifecycle-details.schema.md).
 
@@ -55,7 +54,7 @@ The following data is collected on each [Lifecycle Application Foreground](../..
 | xdm:operatingSystemVersion | String | The full version identifier for the operating system used when the observation was made. |
 | dc:language | String | The language of the environment to represent the user's linguistic, geographical, or cultural preferences for data presentation. |
 
-## Lifecycle Application Background metrics and dimensions
+## Lifecycle Application Background data
 
 The following data is collected on each [Lifecycle Application Background](../../home/base/mobile-core/lifecycle/event-reference.md#lifecycle-application-background) event. The structure of this data is defined in the Experience Data Model (XDM) field group [AEP Mobile Lifecycle Details](https://github.com/adobe/xdm/blob/master/docs/reference/adobe/experience/aep-mobile-lifecycle-details.schema.md).
 
