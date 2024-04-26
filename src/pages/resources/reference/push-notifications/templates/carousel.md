@@ -1,9 +1,8 @@
 ---
 title: AEP SDK carousel push template
-description: Carousel push template supported by Adobe Journey Optimizer and Adobe Campaign Classic mobile extensions.
+description: Carousel push template supported by Adobe Campaign Classic mobile extension.
 keywords:
 - Adobe Campaign Classic
-- Adobe Journey Optimizer
 - Push
 - Push Template
 - Carousel

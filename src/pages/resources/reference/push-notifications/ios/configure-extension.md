@@ -1,3 +1,14 @@
+---
+title: Configure a Notification Content extension
+description: Instructions on how to configure the AEPNotificationContent extension
+keywords:
+- Notification Content Extensions
+- AEPNotificationContent
+- Push
+- Push Template
+- Push Templates
+---
+
 # Configure the Notification Content extension
 
 With the AEPNotificationContent package now available after following the [installation steps](./index.md), the app must now be configured to use the Adobe SDK when the Notification Content extension is called.
@@ -35,33 +46,14 @@ center.requestAuthorization(options: [.badge, .sound, .alert]) { [weak self] gra
 
 ## Notification Content extension configuration
 
-1. In your `NotificationViewController` (or other `UIViewController` implementing the `UNNotificationContentExtension` protocol for your Notification Content extension), import the `AEPNotificationContent` package:
+Update the `Info.plist` for your Notification Content extension with the following values:
 
-    ```swift
-    import AEPNotificationContent
-    ```
+| Key | Type | Value |
+| --- | --- | --- |
+| `NSExtension.NSExtensionPrincipalClass` | `String` | `AEPNotificationContent.AEPNotificationViewController` |
+| `NSExtension.NSExtensionAttributes.UNNotificationExtensionUserInteractionEnabled` | `Boolean` | `YES` |
+| `NSExtension.NSExtensionAttributes.UNNotificationExtensionDefaultContentHidden` | `Boolean` | `YES` |
+| `NSExtension.NSExtensionAttributes.UNNotificationExtensionCategory` | `String` | `AEPNotification` |
+| `NSExtension.NSExtensionAttributes.UNNotificationExtensionInitialContentSizeRatio` | `Number` | `0.2` |
 
-1. Update your view controller to inherit from `AEPNotificationViewController`:
-
-    ```swift
-    import UIKit
-    import UserNotifications
-    import UserNotificationsUI
-    import AEPNotificationContent
-
-    class NotificationViewController: AEPNotificationViewController {
-        
-    }
-    ```
-
-1. Update the `Info.plist` for your Notification Content extension with the following values:
-
-    | Key | Type | Value |
-    | --- | --- | --- |
-    | `NSExtension.NSExtensionPrincipalClass` | `String` | `$(PRODUCT_MODULE_NAME).NotificationViewController` |
-    | `NSExtension.NSExtensionAttributes.UNNotificationExtensionUserInteractionEnabled` | `Boolean` | `YES` |
-    | `NSExtension.NSExtensionAttributes.UNNotificationExtensionDefaultContentHidden` | `Boolean` | `YES` |
-    | `NSExtension.NSExtensionAttributes.UNNotificationExtensionCategory` | `String` | `AEPNotification` |
-    | `NSExtension.NSExtensionAttributes.UNNotificationExtensionInitialContentSizeRatio` | `Number` | `0.2` |
-
-    <img src="./assets/configurePlist.png" />
+<img src="./assets/configurePlist.png" />

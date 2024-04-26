@@ -1,3 +1,14 @@
+---
+title: Create a Notification Content extension
+description: Instructions on how to create a notification content extension
+keywords:
+- Notification Content Extensions
+- AEPNotificationContent
+- Push
+- Push Template
+- Push Templates
+---
+
 # Create a Notification Content extension
 
 In order to use the AEPNotificationContent push templates, your app needs to have a Notification Content app extension

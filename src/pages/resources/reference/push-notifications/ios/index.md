@@ -1,9 +1,8 @@
 ---
 title: AEP SDK push templates
-description: OOTB push templates supported by the Adobe Journey Optimizer and Adobe Campaign Classic mobile SDK extensions.
+description: OOTB push templates supported by the Adobe Campaign Classic mobile SDK extension.
 keywords:
 - Adobe Campaign Classic
-- Adobe Journey Optimizer
 - Push
 - Push Template
 - Push Templates
@@ -25,7 +24,7 @@ use_frameworks!
 
 # for app development, include all the following pods
 target 'YOUR_NOTIFICATION_CONTENT_EXTENSION_NAME' do
-      pod 'AEPNotificationContent', :git => 'https://github.com/adobe/aepsdk-notificationcontent-ios.git', :branch => 'dev-v5.0.0'
+      pod 'AEPNotificationContent'
 end
 ```
 

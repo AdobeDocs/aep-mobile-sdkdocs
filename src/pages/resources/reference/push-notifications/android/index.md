@@ -1,9 +1,8 @@
 ---
 title: AEP SDK push templates
-description: OOTB push templates supported by the Adobe Journey Optimizer and Adobe Campaign Classic mobile SDK extensions.
+description: OOTB push templates supported by the Adobe Campaign Classic mobile SDK extension.
 keywords:
 - Adobe Campaign Classic
-- Adobe Journey Optimizer
 - Push
 - Push Template
 - Push Templates
