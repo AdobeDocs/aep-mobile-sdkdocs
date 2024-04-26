@@ -15,7 +15,7 @@ When used with the [Analytics extension](../../../../solution/adobe-analytics/in
 
 <InlineAlert variant="warning" slots="text"/>
 
-This data is not used with Lifecycle for Edge Network. Instead, view the [Lifecycle for Edge Network data](../../../../edge/lifecycle-for-edge-network/data-reference.md) reference.
+This data is not used with Lifecycle for Edge Network. Instead, view the [Lifecycle for Edge Network data](../../../../edge/lifecycle-for-edge-network/metrics.md) reference.
 
 ## Lifecycle data content response data
 

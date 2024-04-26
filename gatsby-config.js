@@ -383,7 +383,7 @@ module.exports = {
                             },
                             {
                                 title: "Data reference",
-                                path: "/edge/lifecycle-for-edge-network/data-reference"
+                                path: "/edge/lifecycle-for-edge-network/metrics"
                             }
                         ]
                     }
@@ -660,7 +660,7 @@ module.exports = {
                                     },
                                     {
                                         title: "Data reference",
-                                        path: "/home/base/mobile-core/lifecycle/data-reference"
+                                        path: "/home/base/mobile-core/lifecycle/metrics"
                                     },
                                     {
                                         title: "Configuration keys",
