@@ -98,7 +98,7 @@ module.exports = {
                         path: "/home/getting-started/get-the-sdk"
                     },
                     {
-                        title: "Debugging and lifecycle metrics",
+                        title: "Debugging and lifecycle data",
                         path: "/home/getting-started/enable-debug-logging"
                     },
                     {
@@ -386,7 +386,7 @@ module.exports = {
                                 path: "/edge/lifecycle-for-edge-network/event-reference"
                             },
                             {
-                                title: "Metrics",
+                                title: "Data reference",
                                 path: "/edge/lifecycle-for-edge-network/metrics"
                             }
                         ]
@@ -653,7 +653,7 @@ module.exports = {
                                         path: "/home/base/mobile-core/lifecycle/event-reference"
                                     },
                                     {
-                                        title: "Metrics",
+                                        title: "Data reference",
                                         path: "/home/base/mobile-core/lifecycle/metrics"
                                     },
                                     {

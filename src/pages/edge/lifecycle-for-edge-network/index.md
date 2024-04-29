@@ -9,11 +9,11 @@ keywords:
 
 # Lifecycle for Edge Network
 
-The Adobe Experience Platform Mobile SDK Lifecycle extension enables application lifecycle data collection from your mobile app when using the Adobe Experience Platform Mobile SDK and the [Edge Network extension](../edge-network/index.md). Use the following steps to set up an application to forward Lifecycle extension metrics to the Adobe Experience Platform.
+The Adobe Experience Platform Mobile SDK Lifecycle extension enables application lifecycle data collection from your mobile app when using the Adobe Experience Platform Mobile SDK and the [Edge Network extension](../edge-network/index.md). Use the following steps to set up an application to forward Lifecycle extension data to the Adobe Experience Platform.
 
 ## Add AEP Mobile Lifecycle Details field group to your XDM Schema in Adobe Experience Platform
 
-Include the "AEP Mobile Lifecycle Details" field group to the schema defined in your Edge configuration data stream. This field group defines all the metrics auto-collected by the Lifecycle for Edge Network extension.
+Include the "AEP Mobile Lifecycle Details" field group to the schema defined in your Edge configuration data stream. This field group defines all the data auto-collected by the Lifecycle for Edge Network extension.
 
 1. In Adobe Experience Platform, log in to your organization.
 2. Under **Schemas** section, select the **Browse** tab and search for the schema used in the application's Edge configuration.
@@ -43,9 +43,9 @@ In addition, use the following steps to [Configure the Edge Network extension](.
 
 ![Mobile Core extension configuration](./assets/index/configuration.png)
 
-## Configure a Rule to forward Lifecycle metrics to Platform
+## Configure a Rule to forward Lifecycle data to Platform
 
-The Lifecycle for Edge Network extension dispatches application foreground and background events to the Mobile SDK. Create a rule to forward these events to the Adobe Experience Platform Edge Network.
+The Lifecycle for Edge Network extension dispatches application launch (foreground) and application close (background) events to the Mobile SDK. Create a rule to forward these events to the Adobe Experience Platform Edge Network.
 
 ### Create a rule
 
