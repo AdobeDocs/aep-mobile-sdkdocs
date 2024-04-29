@@ -15,7 +15,7 @@ When the Analytics service is enabled in the datastream configuration, the XDM L
 
 <InlineAlert variant="warning" slots="text"/>
 
-This data is not used with Lifecycle for Analytics. Instead, view the [Lifecycle data](../../home/base/mobile-core/lifecycle/data-reference.md) reference.
+This data is not used with Lifecycle for Analytics. Instead, view the [Lifecycle data](../../home/base/mobile-core/lifecycle/metrics.md) reference.
 
 ## Lifecycle Application Foreground data
 
