@@ -20,7 +20,7 @@ The Lifecycle extension relies solely on the Lifecycle events dispatched by the 
 
 A Lifecycle session is the time between a `lifecycleStart` call and a `lifecyclePause` call. A new session is detected when `lifecycleStart` is called after a `lifecyclePause` and the [Lifecycle session timeout](configuration-keys.md#lifecyclesessiontimeout) has elapsed.
 
-All events that are not Lifecycle start or Lifecycle pause do not affect Lifecycle state or data. The starting of MobileCore via `registerExtensions` does not automatically start a Lifecycle session nor does it affect Lifecycle data.
+All events that are not Lifecycle start or Lifecycle pause do not affect Lifecycle state or data. Starting MobileCore using `registerExtensions` does not automatically start a Lifecycle session nor does it affect Lifecycle data.
 
 ### Consecutive `lifecycleStart` API calls
 
@@ -154,6 +154,7 @@ graph LR
 The following Lifecycle workflows show examples of the unexpected ordering of Lifecycle events that can impact Lifecycle data and can indicate an incorrect implementation of the Lifecycle APIs. To address the following scenarios, refer to the [implementation guide for Lifecycle](index.md#register-lifecycle-with-mobile-core-and-add-appropriate-startpause-calls).
 
 **Missing pause, app terminated**  
+
 This scenario looks the same as a standard crash, but the underlying reason is an incorrect implementation where `lifecyclePause` is not called before the app is terminated.
 
 ![](./assets/android/lifecycle-missing-pause-terminated.svg)
@@ -177,6 +178,7 @@ graph LR
 -->
 
 **Missing pause, app still in memory**  
+
 This scenario shows an example of [consecutive `lifecycleStart` API calls](#consecutive-lifecyclestart-api-calls). The app close is not detected because `lifecyclePause` is not called. As the app is not removed from memory, the current session continues.
 
 ![](./assets/android/lifecycle-missing-pause-not-terminated.svg)
@@ -202,6 +204,7 @@ graph LR
 In this scenario, the `lifecycleStart` call (5) is not detected as a new session nor a crash. It will have the consequences of a [consecutive `lifecycleStart` API call](#consecutive-lifecyclestart-api-calls).
 
 **Missing start**  
+
 This scenario shows an example of [consecutive `lifecyclePause` API calls](#consecutive-lifecyclepause-api-calls). The new session is not detected because `lifecycleStart` is not called.
 
 ![](./assets/android/lifecycle-missing-start.svg)
