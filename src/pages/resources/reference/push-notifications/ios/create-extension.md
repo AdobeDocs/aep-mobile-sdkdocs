@@ -27,4 +27,4 @@ To add a Notification Content app extension to your iOS app, open it in Xcode an
 
 1. Click `Finish`
 
-For more information about Notification Content app extensions, visit the [Apple documentation](https://developer.apple.com/documentation/usernotificationsui/customizing-the-appearance-of-notifications?language=objc).
+For more information about Notification Content app extensions, visit the [Apple documentation](https://developer.apple.com/documentation/usernotificationsui/customizing-the-appearance-of-notifications).

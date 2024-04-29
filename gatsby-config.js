@@ -200,11 +200,7 @@ module.exports = {
                                     {
                                         title: "Payload keys",
                                         path: "/edge/adobe-journey-optimizer/push-notification/push-payload"
-                                    },
-                                    // {
-                                    //     title: "Push templates",
-                                    //     path: "/resources/reference/push-notifications"
-                                    // }
+                                    }
                                 ]
                             },
                             {
@@ -943,6 +939,10 @@ module.exports = {
                                     {
                                         title: "Configure app and notification content extension",
                                         path: "/resources/reference/push-notifications/ios/configure-extension"
+                                    },
+                                    {
+                                        title: "Validate NotificationContent extension integration",
+                                        path: "/resources/reference/push-notifications/ios/validate-integration"
                                     }
                                 ]
                             },

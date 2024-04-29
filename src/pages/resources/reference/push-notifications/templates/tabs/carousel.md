@@ -2,7 +2,7 @@
 noIndex: true
 ---
 
-<Variant platform="fcm" template="carousel" repeat="6"/>
+<Variant platform="fcm" template="carousel" repeat="12"/>
 
 ## Properties
 
@@ -69,6 +69,23 @@ Below is a sample of what a payload might look like for a carousel notification:
 	}
 }
 ```
+
+## Usage recommendations
+
+The tables below contain guidelines for your push notification content. **These recommendations help your text display reliably across multiple devices.** These values are guidelines only - it is still recommended to test a notification prior to sending it.
+
+### Image specifications
+
+| **Aspect ratios** | **Image size range** | **Supported file types** |
+| :-------- | -----------: | ------: |
+| 1:1, 3:2, 5:4, 4:3 | < 1 MB | PNG, JPG, WebP |
+
+### Text guidelines
+
+| **Type** |**Recommended max<br /># of characters** | **Supports multiple<br />lines?** |
+| :-------- | ------: | -------: |
+| Title | 35 | No |
+| Description | 250 | Yes |
 
 <Variant platform="apns" template="carousel" repeat="16"/>
 
@@ -156,7 +173,7 @@ The tables below contain guidelines for your push notification content. **These 
 
 ### Text guidelines
 
-| **Type** | **Characters per line** | **Recommended max<br /># of characters** | **Supports multiple<br />lines?** |
-| :-------- | -----------: | ------: | -------: |
-| Title | 35-40 | 35 | No |
-| Description | 50-60 | 250 (~5 lines) | Yes |
+| **Type** |**Recommended max<br /># of characters** | **Supports multiple<br />lines?** |
+| :-------- | ------: | -------: |
+| Title | 70 | Yes (2 lines max) |
+| Description | 600 | Yes |
