@@ -659,6 +659,10 @@ module.exports = {
                                         path: "/home/base/mobile-core/lifecycle/event-reference"
                                     },
                                     {
+                                        title: "Behavior reference",
+                                        path: "/home/base/mobile-core/lifecycle/behavior-reference"
+                                    },
+                                    {
                                         title: "Data reference",
                                         path: "/home/base/mobile-core/lifecycle/metrics"
                                     },
