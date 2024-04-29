@@ -14,7 +14,7 @@ This document outlines each supported out of the box push template.
 
 <InlineAlert variant="info" slots="text"/>
 
-Out of the box push template functionality is currently only available for use with the **Adobe Campaign Classic** extension. <br /><br />Push templates functionality requires **Android SDK version >= 2.1.0 && < 3.0.0** or **iOS SDK version 5.1.0+**.
+Out of the box push template functionality is currently only available for use with the **Adobe Campaign Classic** extension. <br /><br />Push templates functionality requires **Android SDK version >= 2.1.0 && < 3.0.0** or **iOS SDK version 5.0.0+**.
 
 | Template Name | Compatibility | Description | Sample |
 | :------------ | :------------ | :---------- | :----- |
