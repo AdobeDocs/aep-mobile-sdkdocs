@@ -7,6 +7,20 @@ Keywords:
 
 # Release notes
 
+## April 29, 2024
+
+### iOS Notification Content Extension 5.0.0
+
+Initial release of `AEPNotificationContent` extension for Adobe Experience Platform Mobile SDKs on iOS.  The `AEPNotificationContent` extension is used in conjunction with `AEPCampaignClassic` to deliver templated push notifications.  
+
+The first release includes the following templates:
+
+* [Basic](https://github.com/adobe/aepsdk-notificationcontent-ios/blob/main/Documentation/Sources/templates/basic.md)
+* [Carousel](https://github.com/adobe/aepsdk-notificationcontent-ios/blob/main/Documentation/Sources/templates/carousel.md)
+* [Timer](https://github.com/adobe/aepsdk-notificationcontent-ios/blob/main/Documentation/Sources/templates/timer.md)
+
+See the [documentation](https://github.com/adobe/aepsdk-notificationcontent-ios/tree/main/Documentation) for more information.
+
 ## April 24, 2024
 
 ### React Native Core 6.0.1
