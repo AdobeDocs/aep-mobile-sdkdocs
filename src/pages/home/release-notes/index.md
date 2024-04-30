@@ -15,11 +15,11 @@ Initial release of `AEPNotificationContent` extension for Adobe Experience Platf
 
 The first release includes the following templates:
 
-* [Basic](https://github.com/adobe/aepsdk-notificationcontent-ios/blob/main/Documentation/Sources/templates/basic.md)
-* [Carousel](https://github.com/adobe/aepsdk-notificationcontent-ios/blob/main/Documentation/Sources/templates/carousel.md)
-* [Timer](https://github.com/adobe/aepsdk-notificationcontent-ios/blob/main/Documentation/Sources/templates/timer.md)
+* [Basic](../../resources/reference/push-notifications/templates/basic.md)
+* [Carousel](../../resources/reference/push-notifications/templates/carousel.md)
+* [Timer](../../resources/reference/push-notifications/templates/timer.md)
 
-See the [documentation](https://github.com/adobe/aepsdk-notificationcontent-ios/tree/main/Documentation) for more information.
+See the [documentation](../../resources/reference/push-notifications/index.md) for more information.
 
 ## April 24, 2024
 
