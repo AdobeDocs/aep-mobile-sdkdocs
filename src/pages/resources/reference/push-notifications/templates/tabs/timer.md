@@ -87,7 +87,7 @@ The tables below contain guidelines for your push notification content. **These 
 
 ### Text guidelines
 
-| **Type** |**Recommended max<br /># of characters** | **Supports multiple<br />lines?** |
+| **Type** |**Recommended max # of characters** | **Supports multiple lines?** |
 | :-------- | ------: | -------: |
 | Title | 50 | Yes (2 lines max) |
 | Description | 450 | Yes |

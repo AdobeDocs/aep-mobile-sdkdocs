@@ -82,10 +82,10 @@ The tables below contain guidelines for your push notification content. **These 
 
 ### Text guidelines
 
-| **Type** |**Recommended max<br /># of characters** | **Supports multiple<br />lines?** |
+| **Type** |**Recommended max # of characters** | **Supports multiple lines?** |
 | :-------- | ------: | -------: |
-| Title | 35 | No |
-| Description | 250 | Yes |
+| Title | ~35 (depends on screen size and device font setting) | No |
+| Description | ~110 (depends on screen size and device font setting) | Yes |
 
 <Variant platform="apns" template="carousel" repeat="16"/>
 
@@ -173,7 +173,7 @@ The tables below contain guidelines for your push notification content. **These 
 
 ### Text guidelines
 
-| **Type** |**Recommended max<br /># of characters** | **Supports multiple<br />lines?** |
+| **Type** |**Recommended max # of characters** | **Supports multiple lines?** |
 | :-------- | ------: | -------: |
 | Title | 70 | Yes (2 lines max) |
 | Description | 600 | Yes |

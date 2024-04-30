@@ -34,7 +34,7 @@ After you've completed the steps to integrate the AEPNotificationContent extensi
     }
     ```
 
-1. Replace the text `[MY_BUNDLE_IDENTIFIER]` with the bundle identifier for your app. For example, `com.my.awesomeApp`
+1. Replace the text `[MY_BUNDLE_IDENTIFIER]` with the bundle identifier for your app. For example, `com.my.awesomeApp`.
 
 1. Launch your application in the iOS Simulator then background your app.
 

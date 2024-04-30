@@ -1,6 +1,6 @@
 ---
-title: AEP SDK push templates
-description: OOTB push templates supported by the Adobe Campaign Classic mobile SDK extension.
+title: Adobe Experience Platform SDK push templates
+description: Learn about the push templates provided and supported by the Adobe Campaign Classic Mobile SDK extension.
 keywords:
 - Adobe Campaign Classic
 - Push
@@ -10,7 +10,7 @@ keywords:
 
 # Push templates setup - iOS
 
-Installing the AEPNotificationContent package
+Learn how to install the AEPNotificationContent package by following the instructions below.
 
 ## Prerequisites
 

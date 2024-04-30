@@ -1,6 +1,6 @@
 ---
-title: AEP SDK push templates
-description: OOTB push templates supported by the Adobe Campaign Classic mobile SDK extension.
+title: Adobe Experience Platform SDK push templates
+description: Learn about the push templates provided and supported by the Adobe Campaign Classic Mobile SDK extension.
 keywords:
 - Adobe Campaign Classic
 - Push
@@ -12,7 +12,7 @@ keywords:
 
 <InlineAlert variant="info" slots="text"/>
 
-Out of the box push template functionality is currently only available for use with the **Adobe Campaign Classic** extension. <br /><br />Push templates functionality requires **Android SDK version >= 2.1.0 && < 3.0.0** or **iOS SDK version 5.0.0+**.
+Default push template functionality is available for use with the **Adobe Campaign Classic** extension. <br /><br />Supported versions are **Android SDK version >= 2.1.0 && < 3.0.0** and **iOS SDK version 5.0.0+**.
 
 ## Setup
 

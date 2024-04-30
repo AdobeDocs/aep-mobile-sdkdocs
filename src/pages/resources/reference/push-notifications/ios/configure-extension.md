@@ -11,7 +11,7 @@ keywords:
 
 # Configure the Notification Content extension
 
-With the AEPNotificationContent package now available after following the [installation steps](./index.md), the app must now be configured to use the Adobe SDK when the Notification Content extension is called.
+With the `AEPNotificationContent` package now available after following the [installation steps](./index.md), the app and notification content extension must be configured to use it.
 
 ## App configuration
 
@@ -65,7 +65,7 @@ Update the `Info.plist` for your Notification Content extension with the followi
 | `NSExtension.NSExtensionAttributes.UNNotificationExtensionCategory` | `String` | `AEPNotification` |
 | `NSExtension.NSExtensionAttributes.UNNotificationExtensionInitialContentSizeRatio` | `Number` | `0.2` |
 
-<img src="./assets/configurePlist.png" />
+![configure notification content extension plist](./assets/configurePlist.png)
 
 ## Next steps
 
