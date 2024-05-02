@@ -7,6 +7,12 @@ Keywords:
 
 # Release notes
 
+## May 2, 2024
+
+### iOS Edge 5.0.1
+
+* Edge requests now retrieve the configuration state at the time the requests are queued, instead of at the time the requests are sent.
+
 ## April 29, 2024
 
 ### iOS Notification Content Extension 5.0.0
