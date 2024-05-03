@@ -212,10 +212,10 @@ function standardizeExtensionName(extensionName) {
             return EXTENSION_ENUM.MEDIA;
         case extensionName === "audience":
             return EXTENSION_ENUM.AUDIENCE;
-        case extensionName.includes("campaign"):
-            return EXTENSION_ENUM.CAMPAIGN_STANDARD;
         case extensionName.includes("campaign") && extensionName.includes("classic"):
             return EXTENSION_ENUM.CAMPAIGN_CLASSIC;
+        case extensionName.includes("campaign"):
+            return EXTENSION_ENUM.CAMPAIGN_STANDARD;
         case extensionName === "notificationcontent":
             return EXTENSION_ENUM.NOTIFICATION_CONTENT;
         default:
