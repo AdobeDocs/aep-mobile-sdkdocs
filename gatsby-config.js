@@ -98,7 +98,7 @@ module.exports = {
                         path: "/home/getting-started/get-the-sdk"
                     },
                     {
-                        title: "Debugging and lifecycle metrics",
+                        title: "Debugging and lifecycle data",
                         path: "/home/getting-started/enable-debug-logging"
                     },
                     {
@@ -166,7 +166,7 @@ module.exports = {
                                 path: "/edge/adobe-journey-optimizer/api-reference"
                             },
                             {
-                                title: "Push Notification",
+                                title: "Push Notifications",
                                 path: "/edge/adobe-journey-optimizer/push-notification",
                                 pages: [
                                     {
@@ -382,7 +382,7 @@ module.exports = {
                                 path: "/edge/lifecycle-for-edge-network/event-reference"
                             },
                             {
-                                title: "Metrics",
+                                title: "Data reference",
                                 path: "/edge/lifecycle-for-edge-network/metrics"
                             }
                         ]
@@ -467,18 +467,8 @@ module.exports = {
                                 path: "/solution/adobe-campaign-classic/event-reference"
                             },
                             {
-                                title: "Push payload templates",
-                                path: "/solution/adobe-campaign-classic/push-templates",
-                                pages: [
-                                    {
-                                        title: "Basic",
-                                        path: "/solution/adobe-campaign-classic/push-templates/basic"
-                                    },
-                                    {
-                                        title: "Carousel",
-                                        path: "/solution/adobe-campaign-classic/push-templates/carousel"
-                                    }
-                                ]
+                                title: "Push templates",
+                                path: "/solution/adobe-campaign-classic/push-templates"
                             },
                             {
                                 title: "Release notes",
@@ -620,8 +610,18 @@ module.exports = {
                                         path: "/home/base/mobile-core/identity/api-reference"
                                     },
                                     {
-                                        title: "Push identifier sync",
-                                        path: "/home/base/mobile-core/identity/push-sync"
+                                        title: "Tutorials",
+                                        path: "/home/base/mobile-core/identity/tutorials",
+                                        pages: [
+                                            {
+                                                title: "Mobile to web identity sharing",
+                                                path: "/home/base/mobile-core/identity/tutorials/id-sharing"
+                                            },
+                                            {
+                                                title: "Push identifier sync",
+                                                path: "/home/base/mobile-core/identity/tutorials/push-sync"
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -649,7 +649,11 @@ module.exports = {
                                         path: "/home/base/mobile-core/lifecycle/event-reference"
                                     },
                                     {
-                                        title: "Metrics",
+                                        title: "Behavior reference",
+                                        path: "/home/base/mobile-core/lifecycle/behavior-reference"
+                                    },
+                                    {
+                                        title: "Data reference",
                                         path: "/home/base/mobile-core/lifecycle/metrics"
                                     },
                                     {
@@ -790,7 +794,8 @@ module.exports = {
                     {
                         title: "Adobe Mobile Library (v4) end-of-support",
                         path: "/resources/upgrade-platform-sdks",
-                        pages: [{
+                        pages: [
+                            {
                                 title: "Overview",
                                 path: "/resources/upgrade-platform-sdks"
                             },
@@ -824,9 +829,9 @@ module.exports = {
                         title: "iOS 17 Privacy Manifest Requirements",
                         path: "/resources/privacy-manifest.md"
                     }
-
                 ]
-            },{
+            },
+            {
                 title: "Migration",
                 path: "/resources/migration",
                 pages: [{
@@ -902,6 +907,68 @@ module.exports = {
                     {
                         title: "Building mobile extensions",
                         path: "/resources/user-guides/building-mobile-extensions"
+                    }
+                ]
+            },
+            {
+                title: "Reference",
+                path: "/resources/reference/push-notifications",
+                pages: [
+                    {
+                        title: "Push notification templates",
+                        path: "/resources/reference/push-notifications",
+                        pages: [
+                            {
+                                title: "Android",
+                                path: "/resources/reference/push-notifications/android",
+                                pages: [
+                                    {
+                                        title: "Setup",
+                                        path: "/resources/reference/push-notifications/android",
+                                    }
+                                ]
+                            },
+                            {
+                                title: "iOS",
+                                path: "/resources/reference/push-notifications/ios",
+                                pages: [
+                                    {
+                                        title: "Setup",
+                                        path: "/resources/reference/push-notifications/ios"
+                                    },
+                                    {
+                                        title: "Create a notification content extension",
+                                        path: "/resources/reference/push-notifications/ios/create-extension"
+                                    },
+                                    {
+                                        title: "Configure app and notification content extension",
+                                        path: "/resources/reference/push-notifications/ios/configure-extension"
+                                    },
+                                    {
+                                        title: "Validate NotificationContent extension integration",
+                                        path: "/resources/reference/push-notifications/ios/validate-integration"
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Templates",
+                                path: "/resources/reference/push-notifications/templates",
+                                pages: [
+                                    {
+                                        title: "Basic",
+                                        path: "/resources/reference/push-notifications/templates/basic"
+                                    },
+                                    {
+                                        title: "Carousel",
+                                        path: "/resources/reference/push-notifications/templates/carousel"
+                                    },
+                                    {
+                                        title: "Timer",
+                                        path: "/resources/reference/push-notifications/templates/timer"
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             }

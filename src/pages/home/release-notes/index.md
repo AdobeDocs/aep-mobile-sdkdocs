@@ -7,6 +7,152 @@ Keywords:
 
 # Release notes
 
+## May 2, 2024
+
+### iOS Edge 5.0.1
+
+* Edge requests now retrieve the configuration state at the time the requests are queued, instead of at the time the requests are sent.
+
+## April 30, 2024
+
+### Android BOM 2.9.7
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.9.6) | BOM (2.9.7) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:campaignclassic** | **2.1.5** | **2.1.6**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:assurance | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.6 | 2.0.6 |
+| com.adobe.marketing.mobile:core | 2.6.2 | 2.6.2 |
+| com.adobe.marketing.mobile:edge | 2.4.0 | 2.4.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:optimize | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+## April 29, 2024
+
+### Android Campaign Standard 2.1.6
+
+* Fixed a bug that caused Activity to restart when processing push notification click URIs.
+* Fixed a bug to prevent images from being cropped in carousel push template.
+
+### iOS Notification Content Extension 5.0.0
+
+Initial release of `AEPNotificationContent` extension for Adobe Experience Platform Mobile SDKs on iOS.  The `AEPNotificationContent` extension is used in conjunction with `AEPCampaignClassic` to deliver templated push notifications.  
+
+The first release includes the following templates:
+
+* [Basic](../../resources/reference/push-notifications/templates/basic.md)
+* [Carousel](../../resources/reference/push-notifications/templates/carousel.md)
+* [Timer](../../resources/reference/push-notifications/templates/timer.md)
+
+See the [documentation](../../resources/reference/push-notifications/index.md) for more information.
+
+## April 24, 2024
+
+### React Native Core 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native Optimize 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native Places 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native Target 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native UserProfile 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native Messaging 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native EdgeIdentity 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native Edge 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native EdgeBridge 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native EdgeConsent 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native Campaign Standard 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native Assurance 6.0.1
+
+* Added namespace support to the Android module.
+
+## April 23, 2024
+
+### Flutter Core 4.0.1
+
+* Added namespace support to the Android module.
+
+### Flutter EdgeIdentity 4.0.1
+
+* Added namespace support to the Android module.
+
+### Flutter EdgeConsent 4.0.1
+
+* Added namespace support to the Android module.
+
+### Flutter EdgeBridge 4.0.1
+
+* Added namespace support to the Android module.
+
+### Flutter Edge 4.0.1
+
+* Added namespace support to the Android module.
+
+### Flutter Messaging 4.0.1
+
+* Added namespace support to the Android module.
+
+### Flutter UserProfile 4.0.1
+
+* Added namespace support to the Android module.
+
+### Flutter Assurance 4.0.1
+
+* Added namespace support to the Android module.
+
 ## April 16, 2024
 
 ### Flutter Core 4.x and compatible plugins

@@ -8,6 +8,24 @@ keywords:
 
 # Release notes
 
+## May 2, 2024
+
+### iOS Edge 5.0.1
+
+* Edge requests now retrieve the configuration state at the time the requests are queued, instead of at the time the requests are sent.
+
+## April 24, 2024
+
+### React Native Edge 6.0.1
+
+* Added namespace support to the Android module.
+
+## April 23, 2024
+
+### Flutter Edge 4.0.1
+
+* Added namespace support to the Android module.
+
 ## April 16, 2024
 
 ### Flutter Edge 4.0.0
