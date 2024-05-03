@@ -8,6 +8,13 @@ keywords:
 
 # Release notes
 
+## April 29, 2024
+
+### Android Campaign Standard 2.1.6
+
+* Fixed a bug that caused Activity to restart when processing push notification click URIs.
+* Fixed a bug to prevent images from being cropped in carousel push template.
+
 ## April 2, 2024
 
 ### Android Campaign Classic 3.0.0
