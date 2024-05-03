@@ -7,6 +7,13 @@ Keywords:
 
 # Release notes
 
+## May 3, 2024
+
+### Roku SDK 1.2.0
+
+* Added support for Datastream overrides, allowing for more flexibility in configuring the Datastream.
+* Added `getExperienceCloudId()` API, which enables developers to retrieve the Experience Cloud ID (ECID) from the SDK.
+
 ## May 2, 2024
 
 ### iOS Edge 5.0.1
