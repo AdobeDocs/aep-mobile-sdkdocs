@@ -31,7 +31,7 @@ Mobile SDK customers are responsible for updating and maintaining their app’s 
 
 ## Signed XCFrameworks
 
-Adobe is working on providing signed XCFrameworks that customers can include in their application. More information on dates will be provided when available.
+As of May 7, 2024 all of our iOS repos have been updated with signed XCFrameworks for their latest releases.
 
 ## Tracking Domains
 
