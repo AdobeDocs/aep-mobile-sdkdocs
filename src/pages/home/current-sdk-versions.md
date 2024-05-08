@@ -66,6 +66,10 @@ The Android BOM (Bill of Materials) artifact has been released to Maven Central.
 
 **Migrate to latest Mobile SDKs for iOS**<br/>If you are currently using older SDK versions, please see the [Migrating to latest Mobile SDKs for iOS](../resources/migration/ios/index.md) guide for next steps.
 
+<InlineAlert variant="info" slots="text"/>
+
+Starting May 7th, 2024, our iOS releases will include signed XCFrameworks. Additionally, we've updated all our 5.0.0 releases with signed XCFrameworks.
+
 | Extension | tvOS | App Extension | CocoaPods | GitHub | Test app |
 |---|---|---|---|---|---|
 | [Mobile Core](./base/mobile-core/index.md) | ✔️ | ✔️ | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-core-ios.svg?label=AEPCore&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPCore) | [GitHub](https://github.com/adobe/aepsdk-core-ios) | [Test app](https://github.com/adobe/aepsdk-core-ios/tree/main/TestApps) |
