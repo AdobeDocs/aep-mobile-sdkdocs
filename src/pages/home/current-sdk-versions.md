@@ -68,7 +68,7 @@ The Android BOM (Bill of Materials) artifact has been released to Maven Central.
 
 <InlineAlert variant="info" slots="text"/>
 
-Starting May 7th, 2024, our iOS releases will include signed XCFrameworks. Additionally, we've updated all our 5.0.0 releases with signed XCFrameworks as well.
+Starting May 7th, 2024, our iOS releases will include signed XCFrameworks. Additionally, we've updated all our 5.0.0 releases with signed XCFrameworks.
 
 | Extension | tvOS | App Extension | CocoaPods | GitHub | Test app |
 |---|---|---|---|---|---|

@@ -31,7 +31,7 @@ Mobile SDK customers are responsible for updating and maintaining their app’s 
 
 ## Signed XCFrameworks
 
-Starting May 7th, 2024, our iOS releases will include signed XCFrameworks. Additionally, we've updated all our 5.0.0 releases with signed XCFrameworks as well.
+Starting May 7th, 2024, our iOS releases will include signed XCFrameworks. Additionally, we've updated all our 5.0.0 releases with signed XCFrameworks.
 
 ## Tracking Domains
 
