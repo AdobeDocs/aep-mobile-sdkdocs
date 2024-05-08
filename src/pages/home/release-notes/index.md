@@ -598,6 +598,8 @@ Major version update for [Adobe Experience Platform Assurance](../base/assurance
 
 ### iOS Mobile Core 5.x and compatible extensions
 
+Starting May 7th, 2024, our iOS releases will include signed XCFrameworks. Additionally, we've updated all our 5.0.0 releases with signed XCFrameworks as well.
+
 New major version of the Mobile Core SDK for iOS has been released along with updates to other extensions. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 12.0 and tvOS 12.0 (for extensions which support tvOS).
