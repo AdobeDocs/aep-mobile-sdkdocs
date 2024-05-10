@@ -7,6 +7,13 @@ Keywords:
 
 # Release notes
 
+## May 3, 2024
+
+### Roku SDK 1.2.0
+
+* Added support for Datastream overrides, allowing for more flexibility in configuring the Datastream.
+* Added `getExperienceCloudId()` API, which enables developers to retrieve the Experience Cloud ID (ECID) from the SDK.
+
 ## May 2, 2024
 
 ### iOS Edge 5.0.1
@@ -52,7 +59,7 @@ Keywords:
 
 ## April 29, 2024
 
-### Android Campaign Standard 2.1.6
+### Android Campaign Classic 2.1.6
 
 * Fixed a bug that caused Activity to restart when processing push notification click URIs.
 * Fixed a bug to prevent images from being cropped in carousel push template.
@@ -590,6 +597,8 @@ Major version update for [Adobe Experience Platform Assurance](../base/assurance
 ## March 20, 2024
 
 ### iOS Mobile Core 5.x and compatible extensions
+
+Starting May 7th, 2024, our iOS releases will include signed XCFrameworks. Additionally, we've updated all our 5.0.0 releases with signed XCFrameworks.
 
 New major version of the Mobile Core SDK for iOS has been released along with updates to other extensions. The current release includes the following changes:
 
