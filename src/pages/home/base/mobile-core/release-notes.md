@@ -10,6 +10,10 @@ keywords:
 
 ## May 13, 2024
 
+### Flutter Core 4.0.2
+
+* Update environment dependencies in pubspec.
+
 ### Android Core 2.6.3
 
 * Enhanced error handling in the `collectLaunchInfo` API to catch exceptions when retrieving bundled data from an Activity.
