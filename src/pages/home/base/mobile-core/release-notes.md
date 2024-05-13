@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## May 13, 2024
+
+### Android Core 2.6.3
+
+* Enhanced error handling in the `collectLaunchInfo` API to catch exceptions when retrieving bundled data from an Activity.
+
 ## April 24, 2024
 
 ### React Native Core 6.0.1
