@@ -9,6 +9,12 @@ keywords:
 
 # Release notes
 
+## May 13, 2024
+
+### Flutter EdgeConsent 4.0.2
+
+* Update environment dependencies in pubspec.
+
 ## April 24, 2024
 
 ### React Native EdgeConsent 6.0.1

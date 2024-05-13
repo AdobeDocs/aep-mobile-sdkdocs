@@ -9,6 +9,12 @@ keywords:
 
 # Release notes
 
+## May 13, 2024
+
+### Flutter EdgeIdentity 4.0.2
+
+* Update environment dependencies in pubspec.
+
 ## April 24, 2024
 
 ### React Native EdgeIdentity 6.0.1

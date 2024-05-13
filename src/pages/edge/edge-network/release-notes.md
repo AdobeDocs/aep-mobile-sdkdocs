@@ -8,6 +8,13 @@ keywords:
 
 # Release notes
 
+## May 13, 2024
+
+### Flutter Edge 4.1.0
+
+* Added support to customize datastream configurations on a per-event basis using the sendEvent API.
+* Update environment dependencies in pubspec.
+
 ## May 2, 2024
 
 ### iOS Edge 5.0.1

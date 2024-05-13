@@ -9,6 +9,39 @@ Keywords:
 
 ## May 13, 2024
 
+### Flutter Edge 4.1.0
+
+* Added support to customize datastream configurations on a per-event basis using the sendEvent API.
+* Update environment dependencies in pubspec.
+
+### Flutter UserProfile 4.0.2
+
+* Update environment dependencies in pubspec.
+
+### Flutter Messaging 4.0.2
+
+* Update environment dependencies in pubspec.
+
+### Flutter EdgeIdentity 4.0.2
+
+* Update environment dependencies in pubspec.
+
+### Flutter EdgeConsent 4.0.2
+
+* Update environment dependencies in pubspec.
+
+### Flutter EdgeBridge 4.0.2
+
+* Update environment dependencies in pubspec.
+
+### Flutter Assurance 4.0.2
+
+* Update environment dependencies in pubspec.
+
+### Flutter Core 4.0.2
+
+* Update environment dependencies in pubspec.
+
 ### Android BOM 2.9.8
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
