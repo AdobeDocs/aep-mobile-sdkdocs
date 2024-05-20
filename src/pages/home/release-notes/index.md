@@ -7,6 +7,17 @@ Keywords:
 
 # Release notes
 
+## May 18, 2024
+
+### iOS Optimize 4.0.4
+
+## What’s Changed
+
+* update schema in test-podspec script (#104) @PravinPK
+* Update the release script (#103) @PravinPK
+* Update xcode version for the release (#102) @PravinPK
+* v4.0.4 - Using threadsafe dictionaries to avoid race condition accessing udpat… (#101) @PravinPK
+
 ## May 13, 2024
 
 ### Flutter Edge 4.1.0

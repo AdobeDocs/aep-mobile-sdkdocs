@@ -8,6 +8,17 @@ keywords:
 
 # Release notes
 
+## May 18, 2024
+
+### iOS Optimize 4.0.4
+
+## What’s Changed
+
+* update schema in test-podspec script (#104) @PravinPK
+* Update the release script (#103) @PravinPK
+* Update xcode version for the release (#102) @PravinPK
+* v4.0.4 - Using threadsafe dictionaries to avoid race condition accessing udpat… (#101) @PravinPK
+
 ## April 24, 2024
 
 ### React Native Optimize 6.0.1
