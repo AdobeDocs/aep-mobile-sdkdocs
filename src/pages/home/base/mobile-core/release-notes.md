@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## May 20, 2024
+
+### iOS Core 4.2.4
+
+* Fixed a race condition when accessing sharedStateName inside ExtensionContainer. 
+
 ## May 13, 2024
 
 ### Flutter Core 4.0.2
