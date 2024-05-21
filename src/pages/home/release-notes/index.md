@@ -7,6 +7,18 @@ Keywords:
 
 # Release notes
 
+## May 20, 2024
+
+### iOS Core 4.2.4
+
+* Fixed a race condition when accessing sharedStateName inside ExtensionContainer. 
+
+## May 18, 2024
+
+### iOS Optimize 4.0.4
+
+* Fixed a crash that happens when `updateProposition` API was called repeatedly. 
+
 ## May 13, 2024
 
 ### Flutter Edge 4.1.0

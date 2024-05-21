@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## May 18, 2024
+
+### iOS Optimize 4.0.4
+
+* Fixed a crash that happens when `updateProposition` API was called repeatedly. 
+
 ## April 24, 2024
 
 ### React Native Optimize 6.0.1
