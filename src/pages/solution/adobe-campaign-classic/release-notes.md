@@ -8,6 +8,13 @@ keywords:
 
 # Release notes
 
+## May 22, 2024
+
+### Android Campaign Classic 2.1.7
+
+* Add support for dark mode with out of the box push template notifications. Dark mode is supported on API29+ only and any custom color modifications made to the push payload will override the dark/light mode colors.
+* Removed the SCHEDULE_EXACT_ALARM permission from the Campaign Classic extension. This permission must be added to the app manifest if exact scheduling is needed for remind later notifications. If an API less than S / 31 is in use, or the exact alarm permission wasn't granted to the app, then an inexact alarm is used instead. Inexact scheduling will display the scheduled notification within a 1 hour window starting with the given timestamp.
+
 ## April 29, 2024
 
 ### Android Campaign Classic 2.1.6

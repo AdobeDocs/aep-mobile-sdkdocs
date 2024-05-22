@@ -7,6 +7,66 @@ Keywords:
 
 # Release notes
 
+## May 22, 2024
+
+### Android Campaign Classic 2.1.7
+
+* Add support for dark mode with out of the box push template notifications. Dark mode is supported on API29+ only and any custom color modifications made to the push payload will override the dark/light mode colors.
+* Removed the SCHEDULE_EXACT_ALARM permission from the Campaign Classic extension. This permission must be added to the app manifest if exact scheduling is needed for remind later notifications. If an API less than S / 31 is in use, or the exact alarm permission wasn't granted to the app, then an inexact alarm is used instead. Inexact scheduling will display the scheduled notification within a 1 hour window starting with the given timestamp.
+
+### iOS Core 5.1.0
+
+* Added a new constant and a utility method to AEPServices to detect if `URLError` is recoverable.
+* Lifecycle extension now computes the `xdm:isUpgrade` metric in the `application.launch` event when either CFBundleShortVersionString or CFBundleVersion changes.
+* Fixed an issue in the Signal and Identity extensions that caused the hit processor to drop queued hits when the device's network was offline.
+* Fixed an edge case where `a.push.optin=false` event may be sent to Analytics even when `MobileCore.setPushIdentifier()` API is not used.
+* Fixed data races in ExtensionContainer, ApplicationSystemInfoService, DiskCacheService, and FileSystemNamedCollection.
+
+## May 21, 2024
+
+### Android BOM 3.0.1
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.0.0) | BOM (3.0.1) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:optimize** | **3.0.0** | **3.0.1**|
+| com.adobe.marketing.mobile:analytics | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:assurance | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:audience | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaign | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaignclassic | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:core | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:identity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:media | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:messaging | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:places | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:signal | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:target | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:userprofile | 3.0.0 | 3.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+### iOS Optimize 5.0.1
+
+* Fixed a crash that happens when `updateProposition` API was called repeatedly. 
+
+### Android Optimize 3.0.1
+
+* Fixed a bug where Optimize SDK was considering Target mbox decision scope strings as invalid and not including them in personalization requests.
+
 ## May 20, 2024
 
 ### iOS Core 4.2.4

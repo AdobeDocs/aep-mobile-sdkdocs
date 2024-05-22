@@ -8,6 +8,16 @@ keywords:
 
 # Release notes
 
+## May 22, 2024
+
+### iOS Core 5.1.0
+
+* Added a new constant and a utility method to AEPServices to detect if `URLError` is recoverable.
+* Lifecycle extension now computes the `xdm:isUpgrade` metric in the `application.launch` event when either CFBundleShortVersionString or CFBundleVersion changes.
+* Fixed an issue in the Signal and Identity extensions that caused the hit processor to drop queued hits when the device's network was offline.
+* Fixed an edge case where `a.push.optin=false` event may be sent to Analytics even when `MobileCore.setPushIdentifier()` API is not used.
+* Fixed data races in ExtensionContainer, ApplicationSystemInfoService, DiskCacheService, and FileSystemNamedCollection.
+
 ## May 20, 2024
 
 ### iOS Core 4.2.4
