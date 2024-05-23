@@ -8,6 +8,22 @@ keywords:
 
 # Release notes
 
+## May 21, 2024
+
+### iOS Optimize 5.0.1
+
+* Fixed a crash that happens when `updateProposition` API was called repeatedly. 
+
+### Android Optimize 3.0.1
+
+* Fixed a bug where Optimize SDK was considering Target mbox decision scope strings as invalid and not including them in personalization requests.
+
+## May 18, 2024
+
+### iOS Optimize 4.0.4
+
+* Fixed a crash that happens when `updateProposition` API was called repeatedly. 
+
 ## April 24, 2024
 
 ### React Native Optimize 6.0.1
