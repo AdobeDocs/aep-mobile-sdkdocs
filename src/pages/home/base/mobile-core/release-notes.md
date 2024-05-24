@@ -8,6 +8,24 @@ keywords:
 
 # Release notes
 
+## May 23, 2024
+
+### Android Lifecycle 3.0.1
+
+* Lifecycle extension now computes the `xdm:isUpgrade` metric in the `application.launch` event when either versionName or versionCode changes.
+
+### Android Identity 3.0.1
+
+* Fixed an edge case where `a.push.optin=false` event may be sent to Analytics even when `MobileCore.setPushIdentifier()` API is not used.
+
+### Android Core 3.0.1
+
+* Fixed an issue with scrollability in in-app messages with overflowing content.
+* Fixed an issue where the PresentationDelegate was not notified of all URLs opened by an in-app message. 
+* Fixed an issue where UI components were not adapting to orientation changes when the activity hosting the composable restricts configuration change.
+* Enhanced error handling in the collectLaunchInfo API to catch exceptions when retrieving bundled data from an Activity.
+* Simplified coroutine scope management in UI services.
+
 ## May 22, 2024
 
 ### iOS Core 5.1.0
