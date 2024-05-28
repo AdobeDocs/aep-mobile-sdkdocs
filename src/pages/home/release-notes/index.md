@@ -11,7 +11,7 @@ Keywords:
 
 ### iOS Analytics 5.0.1
 
-* Fixed an issue in Analytics hit processor and now it retries hits on recoverable URLErrors shared by Mobile Core
+* Fixed an issue in Analytics hit processor and now it retries hits on recoverable URLErrors shared by Mobile Core.
 
 ### iOS Edge 5.0.2
 
