@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## May 28, 2024
+
+### iOS Analytics 5.0.1
+
+* Fixed an issue in Analytics hit processor and now it retries hits on recoverable URLErrors shared by Mobile Core.
+
 ## April 2, 2024
 
 ### Android Analytics 3.0.0

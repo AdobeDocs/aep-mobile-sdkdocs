@@ -7,6 +7,16 @@ Keywords:
 
 # Release notes
 
+## May 28, 2024
+
+### iOS Analytics 5.0.1
+
+* Fixed an issue in Analytics hit processor and now it retries hits on recoverable URLErrors shared by Mobile Core.
+
+### iOS Edge 5.0.2
+
+* Fixed an issue in Edge hit processor and now it retries hits on recoverable URLErrors shared by Mobile Core.
+
 ## May 23, 2024
 
 ### Android BOM 3.0.2

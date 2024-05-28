@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## May 28, 2024
+
+### iOS Edge 5.0.2
+
+* Fixed an issue in Edge hit processor and now it retries hits on recoverable URLErrors shared by Mobile Core.
+
 ## May 13, 2024
 
 ### Flutter Edge 4.1.0
