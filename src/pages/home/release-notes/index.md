@@ -7,6 +7,20 @@ Keywords:
 
 # Release notes
 
+## May 31, 2024
+
+### Android Campaign Classic 2.1.8
+
+* Fix clipped carousel captions which was occurring on smaller devices.
+
+### iOS Media 5.0.1
+
+* Fixed an issue in Media hit processor and now it retries hits on recoverable URLErrors shared by Mobile Core.
+
+### iOS Audience 5.0.1
+
+* Fixed an issue in Audience hit processor and now it retries hits on recoverable URLErrors shared by Mobile Core.
+
 ## May 28, 2024
 
 ### iOS Analytics 5.0.1
