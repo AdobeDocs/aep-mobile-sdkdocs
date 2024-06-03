@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## May 31, 2024
+
+### Android Campaign Classic 2.1.8
+
+* Fix clipped carousel captions which was occurring on smaller devices.
+
 ## May 22, 2024
 
 ### Android Campaign Classic 2.1.7
