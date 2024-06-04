@@ -74,7 +74,7 @@ For implementation details, please refer to [Configuration API reference](./api-
 
 ## Using a bundled file configuration
 
-Applications which need to get data from the SDK early in the application lifecycle should use a bundled file configuration. This will allow the SDK to not be at the mercy of the network connection for downloading the remote configuration, and will prioritize the bundled configuration in early, app launch scenarios. If you are going to use a bundled file configuration to help with early app processing, it is strongly recommended that you also use [bundled rules](../rules-engine/index.md#using-bundled-rules). 
+Applications which need to get data from the SDK early in the application lifecycle should use a bundled file configuration. This will allow the SDK to not be at the mercy of the network connection for downloading the remote configuration, and will prioritize the bundled configuration in early, app launch scenarios. If you are going to use a bundled file configuration to help with early app processing, it is strongly recommended that you also use [bundled rules](../rules-engine/index.md#using-bundled-rules).
 
 <InlineAlert variant="info" slots="text"/>
 Please note that the configuration that is downloaded by using the [Configure with App ID per environment](#configure-with-app-id-per-environment) approach, will overwrite the bundled configuration once it is downloaded, allowing you to always keep a more up-to-date configuration remotely, without needing an app update.
