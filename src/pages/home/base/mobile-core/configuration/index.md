@@ -74,17 +74,18 @@ For implementation details, please refer to [Configuration API reference](./api-
 
 ## Using a bundled file configuration
 
-Applications which need to get data from the SDK early in the application lifecycle should use a bundled file configuration. This will allow the SDK to not be at the mercy of the network connection for downloading the remote configuration, and will prioritize the bundled configuration in early, app launch scenarios. If you are going to use a bundled file configuration to help with early app processing, it is strongly recommended that you also use [bundled rules](../rules-engine/index.md#using-bundled-rules).
+Applications which need to get data from the SDK early in the application lifecycle should use a bundled file configuration. This will allow the SDK to properly process events before a remote configuration is downloaded, using the bundled configuration in early, app launch scenarios. If you are going to use a bundled file configuration to help with early app processing, it is strongly recommended that you also use [bundled rules](../rules-engine/index.md#using-bundled-rules).
 
 <InlineAlert variant="info" slots="text"/>
+
 Please note that the configuration that is downloaded by using the [Configure with App ID per environment](#configure-with-app-id-per-environment) approach, will overwrite the bundled configuration once it is downloaded, allowing you to always keep a more up-to-date configuration remotely, without needing an app update.
 
 To use a bundled configuration, follow the steps below:
 
 1. Download your JSON configuration file from the following URL: https://assets.adobedtm.com/PASTE-ENVIRONMENT-ID.json, replacing PASTE-ENVIRONMENT-ID with your mobile property environment ID.
-2. Rename the JSON file to “ADBMobileConfig.json” and:
-3. iOS: Place the file anywhere that it is accessible in your app bundle
-   Android: Place the file in the assets folder
+2. Rename the JSON file to “ADBMobileConfig.json”.
+3. iOS: Place the file anywhere that it is accessible in your app bundle.
+   Android: Place the file in the assets folder.
 
 You can also load a different `ADBMobileConfig.json` file by using the `ConfigureWithFileInPath` method. The Adobe Experience Platform SDKs will attempt to load the file from the given path and parse its JSON contents. Previous programmatic configuration changes that were set by using the `UpdateConfiguration` method are applied on the bundled file's configuration before setting the new configuration to the Adobe Experience Platform SDKs. If a file-read error or JSON parsing error occurs, no configuration changes are made.
 
