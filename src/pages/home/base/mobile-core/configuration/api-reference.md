@@ -21,22 +21,26 @@ Here are some scenarios based on the order of calls:
 1. [configureWithAppId](#configurewithappid)
 2. [updateConfiguration](#updateConfiguration)
 3. clearUpdatedConfiguration
-Result: You end up with the initial configuration set via `configureWithAppId`
+
+Result: You end up with the initial configuration set via `configureWithAppId`.
 
 1. [configureWithFileInPath](#configurewithfileinpath)
 2. [updateConfiguration](#updateConfiguration)
 3. clearUpdatedConfiguration
-Result: You end up with the initial configuration set via `configureWithFileInPath`
+
+Result: You end up with the initial configuration set via `configureWithFileInPath`.
 
 1. [configureWithAppId](#configurewithappid) or [configureWithFileInPath](#configurewithfileinpath) or [configureWithFileInAssets](#configurewithfileinassets)
 2. [updateConfiguration](#updateConfiguration)
 3. clearUpdatedConfiguration
 4. [updateConfiguration](#updateConfiguration)
+
 Result: In this example, the configuration will be the most recently updated configuration and will not have any keys from the first update unless they are included in the most recent update.
 
 1. [configureWithAppId](#configurewithappid) or [configureWithFileInPath](#configurewithfileinpath) or [configureWithFileInAssets](#configurewithfileinassets)
 2. [setPrivacyStatus](../../../../resources/privacy-and-gdpr.md/#setprivacystatus)
 3. clearUpdatedConfiguration
+
 Result: In this example, the configuration will have the initial `MobilePrivacyStatus`(Android)/ `PrivacyStatus`(iOS) set via [configureWithAppId](#configurewithappid) or [configureWithFileInPath](#configurewithfileinpath) or [configureWithFileInAssets](#configurewithfileinassets).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
