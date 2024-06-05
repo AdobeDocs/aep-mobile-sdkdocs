@@ -20,6 +20,8 @@ The properties below define the payload sent to FCM:
 
 ## Example
 
+<img src="./../assets/multi_icon.gif" width="50%" height="50%"/>
+
 Below is a sample of what a payload might look like for a five icon notification:
 
 ```json
@@ -42,7 +44,7 @@ Below is a sample of what a payload might look like for a five icon notification
 
 ## Usage recommendations
 
-The tables below contain guidelines for your push notification content. These values are guidelines only - it is still recommended to test a notification prior to sending it.
+The tables below contain guidelines for your push notification content. **These recommendations help your images display reliably across multiple devices.** These values are guidelines only - it is still recommended to test a notification prior to sending it.
 
 ### Image specifications
 
