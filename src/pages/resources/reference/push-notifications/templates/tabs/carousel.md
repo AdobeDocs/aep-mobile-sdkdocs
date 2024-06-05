@@ -39,17 +39,17 @@ The properties below define the payload sent to FCM:
 
 Default Manual Carousel:
 
-<img src="./../assets/android_manual_carousel.gif" width=50% height=50%/>
+<img src="./../assets/android_manual_carousel.gif" width="50%" height="50%"/>
 
 Filmstrip Manual Carousel:
 
-<img src="./../assets/android_filmstrip_carousel.gif" width=50% height=50%/>
+<img src="./../assets/android_filmstrip_carousel.gif" width="50%" height="50%"/>
 
 Automatic Carousel:
 
-<img src="./../assets/android_auto_carousel.gif" width=50% height=50%/>
+<img src="./../assets/android_auto_carousel.gif" width="50%" height="50%"/>
 
-Below is a sample of what a payload might look like for a carousel template notification:
+Below is a sample of what a payload might look like for a carousel notification:
 
 ```json
 {

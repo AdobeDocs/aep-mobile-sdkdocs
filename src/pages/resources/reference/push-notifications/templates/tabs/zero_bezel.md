@@ -32,13 +32,13 @@ The properties below define the payload sent to FCM:
 | Ticker | ⛔️ | `adb_ticker` | string | Sets the "ticker" text, which is sent to accessibility services. Prior to API level 21 (Lollipop), sets the text that is displayed in the status bar when the notification first arrives. |
 | Color - Small Icon | ⛔️ | `adb_clr_icon` | string | Color for the notification's small icon.<br />Represented as six character hex, e.g. `00FF00` |
 | Color - Background | ⛔️ | `adb_clr_bg` | string | Color for notification's background.<br />Represented as six character hex, e.g. `00FF00` |
-| Collapsed notification style | ⛔️ | `adb_col_style` | string | Determines whether the collapsed message should show a zero-bevel image, or text only. |
+| Collapsed notification style | ⛔️ | `adb_col_style` | string | Determines whether the collapsed message should show a zero-bezel image, or text only. |
 
 ## Example
 
 <img src="./../assets/zero_bezel.gif" width="50%" height="50%"/>
 
-Below is a sample of what a payload might look like for a zero bezel template notification:
+Below is a sample of what a payload might look like for a zero bezel notification:
 
 ```json
 {

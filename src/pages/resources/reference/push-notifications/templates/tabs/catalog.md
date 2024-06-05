@@ -42,13 +42,13 @@ The properties below define the payload sent to FCM:
 ## Example
 Vertical Product Catalog:
 
-<img src="./../assets/vertical_catalog.gif" width=50% height=50%/>
+<img src="./../assets/vertical_catalog.gif" width="50%" height="50%"/>
 
 Horizontal Product Catalog:
 
-<img src="./../assets/horizontal_catalog.gif" width=50% height=50%/>
+<img src="./../assets/horizontal_catalog.gif" width="50%" height="50%"/>
 
-Below is a sample of what a payload might look like for a product catalog template notification:
+Below is a sample of what a payload might look like for a product catalog notification:
 
 ```json
 {

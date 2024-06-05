@@ -44,7 +44,7 @@ The properties below define the payload sent to FCM:
 
 <img src="./../assets/android_timer.gif" width="50%" height="50%"/>
 
-Below is a sample of what a payload might look like for a timer template notification:
+Below is a sample of what a payload might look like for a timer notification:
 
 ```json
 {

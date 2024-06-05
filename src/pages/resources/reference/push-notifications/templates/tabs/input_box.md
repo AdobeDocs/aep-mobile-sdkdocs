@@ -42,7 +42,7 @@ The properties below define the payload sent to FCM:
 
 <img src="./../assets/input_box.gif" width="50%" height="50%"/>
 
-Below is a sample of what a payload might look like for an input box template notification:
+Below is a sample of what a payload might look like for an input box notification:
 
 ```json
 {

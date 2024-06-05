@@ -40,7 +40,7 @@ The properties below define the payload sent to FCM:
 
 <img src="./../assets/rating.gif" width="50%" height="50%"/>
 
-Below is a sample of what a payload might look like for a product rating template notification:
+Below is a sample of what a payload might look like for a product rating notification:
 
 ```json
 {

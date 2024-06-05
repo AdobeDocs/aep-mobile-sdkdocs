@@ -20,7 +20,7 @@ The properties below define the payload sent to FCM:
 
 ## Example
 
-Below is a sample of what a payload might look like for a five icon template notification:
+Below is a sample of what a payload might look like for a five icon notification:
 
 ```json
 {

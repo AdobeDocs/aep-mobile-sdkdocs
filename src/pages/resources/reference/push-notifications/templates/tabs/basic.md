@@ -51,9 +51,9 @@ The properties below define the payload sent to FCM:
 
 ## Example
 
-<img src="./../assets/android_basic.gif" width=50% height=50%/>
+<img src="./../assets/android_basic.gif" width="50%" height="50%"/>
 
-Below is a sample of what a payload might look like for a basic template notification:
+Below is a sample of what a payload might look like for a basic notification:
 
 ```json
 {
