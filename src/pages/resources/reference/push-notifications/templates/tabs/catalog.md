@@ -42,21 +42,22 @@ The properties below define the payload sent to FCM:
 ## Example
 Vertical Product Catalog:
 
-<img src="./../assets/vertical_catalog.gif" width="375" height="775"/>
+<img src="./../assets/vertical_catalog.gif" width=50% height=50%/>
 
 Horizontal Product Catalog:
 
-<img src="./../assets/horizontal_catalog.gif" width="375" height="775"/>
+<img src="./../assets/horizontal_catalog.gif" width=50% height=50%/>
 
-Below is a sample of what a payload might look like for a catalog notification:
+Below is a sample of what a payload might look like for a product catalog template notification:
 
 ```json
 {
   "message": {
+    "token": "FCM_TOKEN",
     "android": {
-      "collapse_key": "new_message",
-      "priority": "HIGH",
-      "data": {
+      "collapse_key": "new message"
+    },    
+    "data": {
         "adb_version": "1",
         "adb_title": "Buy some shoes",
         "adb_body": "Click a shoe to learn more",
@@ -76,7 +77,6 @@ Below is a sample of what a payload might look like for a catalog notification:
         "adb_cta_txt_clr": "00EE00",
         "adb_cta_uri": "https://sneakerland.com/cart&addItem=shoe1",
         "adb_items": "[{\"title\":\"Cool Shoe\",\"body\":\"Shoe 1 by Cool Sneaker Brand\",\"img\":\"https://sneakerland.com/products/shoe1/shoe1.png\",\"price\":\"49.97\",\"uri\":\"https://sneakerland.com/products/shoe1\"},{\"title\":\"Lame Shoe\",\"body\":\"Shoe 2 by Lame Sneaker Brand\",\"img\":\"https://sneakerland.com/products/shoe2/shoe2.png\",\"price\":\"99.99\",\"uri\":\"https://sneakerland.com/products/shoe2\"}]"
-      }
     }
   }
 }

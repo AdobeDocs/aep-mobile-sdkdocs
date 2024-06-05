@@ -51,45 +51,44 @@ The properties below define the payload sent to FCM:
 
 ## Example
 
-<img src="./../assets/android_basic.gif" width="375" height="775"/>
+<img src="./../assets/android_basic.gif" width=50% height=50%/>
 
-Below is a sample of what a payload might look like for a basic notification:
+Below is a sample of what a payload might look like for a basic template notification:
 
 ```json
 {
-	"message": {
-		"android": {
-			"collapse_key": "new_message",
-			"priority": "HIGH",
-			"data": {
-				"adb_version": "1",
-                "adb_template_type": "basic",
-                "adb_title": "game request",
-				"adb_body": "shall we play a game?",
-				"adb_sound": "bingBong",
-				"adb_small_icon": "ic_knight",
-				"adb_large_icon": "https://pictureofchess.com/logo.png",
-				"adb_n_count": "1",
-				"adb_n_priority": "PRIORITY_LOW",
-				"adb_channel_id": "a3b80ef",
-				"adb_image": "https://pictureofchess.com/board.png",
-				"adb_uri": "https://chess.com/games",
-				"adb_a_type": "WEBURL",
-				"adb_act": "[{\"label\":\"accept\",\"uri\":\"https://chess.com/games/552\",\"type\":\"DEEPLINK\"},{\"label\":\"decline\",\"uri\":\"\",\"type\":\"OPENAPP\"}]",
-				"adb_tag": "24",
-				"adb_sticky": "true",
-				"adb_ticker": "Play a game?",
-				"adb_body_ex": "Bob wants to play a game of chess with you. Click 'accept' to start!",
-				"adb_clr_body": "00EE00",
-				"adb_clr_title": "AABBCC",
-				"adb_clr_icon": "123456",
-				"adb_clr_bg": "000000",
-				"adb_rem_txt": "Remind me",
-				"adb_rem_ts": "1703462400",
-				"customKey": "custom data"
-            }
-		}
-	}
+  "message": {
+    "token": "FCM_TOKEN",
+    "android": {
+      "collapse_key": "new message"
+    },    
+    "data": {
+      "adb_version": "1",
+      "adb_template_type": "basic",
+      "adb_title": "game request",
+			"adb_body": "shall we play a game?",
+			"adb_sound": "bingBong",
+			"adb_small_icon": "ic_knight",
+			"adb_large_icon": "https://pictureofchess.com/logo.png",
+			"adb_n_count": "1",
+			"adb_n_priority": "PRIORITY_LOW",
+			"adb_channel_id": "a3b80ef",
+			"adb_image": "https://pictureofchess.com/board.png",
+      "adb_uri": "https://chess.com/games",
+			"adb_a_type": "WEBURL",
+			"adb_act": "[{\"label\":\"accept\",\"uri\":\"https://chess.com/games/552\",\"type\":\"DEEPLINK\"{\"label\":\"decline\",\"uri\":\"\",\"type\":\"OPENAPP\"}]",
+			"adb_tag": "24",
+			"adb_sticky": "true",
+			"adb_ticker": "Play a game?",
+			"adb_body_ex": "Bob wants to play a game of chess with you. Click 'accept' to start!",
+			"adb_clr_body": "00EE00",
+			"adb_clr_title": "AABBCC",
+			"adb_clr_icon": "123456",
+			"adb_clr_bg": "000000",
+			"adb_rem_txt": "Remind me",
+			"adb_rem_ts": "1703462400"
+    }
+  }
 }
 ```
 

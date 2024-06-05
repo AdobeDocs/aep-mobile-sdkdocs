@@ -20,14 +20,14 @@ The properties below define the payload sent to FCM:
 
 ## Example
 
-Below is a sample of what a payload might look like for a five icon notification:
+Below is a sample of what a payload might look like for a five icon template notification:
 
 ```json
 {
   "message": {
     "token": "FCM_TOKEN",
     "android": {
-      "collapse_key": "9001"
+      "collapse_key": "new message"
     },
     "data": {
       "adb_version": "1",

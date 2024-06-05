@@ -37,17 +37,28 @@ The properties below define the payload sent to FCM:
 
 ## Example
 
-<img src="./../assets/android_manual_carousel.gif" width="375" height="775"/>
+Default Manual Carousel:
 
-Below is a sample of what a payload might look like for a carousel notification:
+<img src="./../assets/android_manual_carousel.gif" width=50% height=50%/>
+
+Filmstrip Manual Carousel:
+
+<img src="./../assets/android_filmstrip_carousel.gif" width=50% height=50%/>
+
+Automatic Carousel:
+
+<img src="./../assets/android_auto_carousel.gif" width=50% height=50%/>
+
+Below is a sample of what a payload might look like for a carousel template notification:
 
 ```json
 {
-	"message": {
-		"android": {
-			"collapse_key": "new_message",
-			"priority": "HIGH",
-			"data": {
+  "message": {
+    "token": "FCM_TOKEN",
+    "android": {
+      "collapse_key": "new message"
+    },    
+    "data": {
 				"adb_version": "1",
 				"adb_template_type": "car",
 				"adb_title": "Check out the new line of shoes!",
@@ -64,11 +75,9 @@ Below is a sample of what a payload might look like for a carousel notification:
 				"adb_clr_bg": "000000",
 				"adb_car_mode": "auto",
 				"adb_car_layout": "default",
-				"adb_items": "[{\"img\":\"https://sneakerland.com/products/shoe1/shoe1.png\",\"txt\":\"Shoe 1 by Cool Sneaker Brand\",\"uri\":\"https://sneakerland.com/products/shoe1\"},{\"img\":\"https://sneakerland.com/products/shoe2/shoe2.png\",\"txt\":\"Shoe 2 by Lame Sneaker Brand\",\"uri\":\"https://sneakerland.com/products/shoe2\"},{\"img\":\"https://sneakerland.com/products/shoe3/shoe3.png\",\"txt\":\"Shoe 3 by Average Sneaker Brand\",\"uri\":\"https://sneakerland.com/products/shoe3\"}]",
-				"customKey": "custom data"
-			}
-		}
-	}
+				"adb_items": "[{\"img\":\"https://sneakerland.com/products/shoe1/shoe1.png\",\"txt\":\"Shoe 1 by Cool Sneaker Brand\",\"uri\":\"https://sneakerland.com/products/shoe1\"},{\"img\":\"https://sneakerland.com/products/shoe2/shoe2.png\",\"txt\":\"Shoe 2 by Lame Sneaker Brand\",\"uri\":\"https://sneakerland.com/products/shoe2\"},{\"img\":\"https://sneakerland.com/products/shoe3/shoe3.png\",\"txt\":\"Shoe 3 by Average Sneaker Brand\",\"uri\":\"https://sneakerland.com/products/shoe3\"}]"
+    }
+  }
 }
 ```
 
