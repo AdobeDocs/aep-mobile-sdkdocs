@@ -12,7 +12,7 @@ import Tabs from './tabs/timer.md'
 
 # Push template - rating
 
-A notification that allows displaying a title, text, and image, along with 3-5 image buttons that allow the user to provide "rating" feedback.</br>
+A notification that allows displaying a title, text, and image, along with 3-5 image buttons that allow the user to provide "rating" feedback.<br />
 
 After a rating is selected in the notification, an intent containing the rating is dispatched to the app.
 
