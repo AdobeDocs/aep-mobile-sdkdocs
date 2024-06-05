@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## June 4, 2024
+
+### Android Core 3.0.2
+
+* Fixed strict mode violations that happened during SDK initialization.
+
 ## May 23, 2024
 
 ### Android Lifecycle 3.0.1
