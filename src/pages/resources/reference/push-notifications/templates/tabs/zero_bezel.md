@@ -2,7 +2,7 @@
 noIndex: true
 ---
 
-<Variant platform="fcm" template="zero-bezel" repeat="15" />
+<Variant platform="fcm" template="zero_bezel" repeat="15" />
 
 ## Properties
 

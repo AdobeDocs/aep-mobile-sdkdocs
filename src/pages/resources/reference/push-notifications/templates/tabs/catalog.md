@@ -2,7 +2,7 @@
 noIndex: true
 ---
 
-<Variant platform="fcm" template="catalog" repeat="15" />
+<Variant platform="fcm" template="catalog" repeat="18" />
 
 ## Properties
 
@@ -58,25 +58,25 @@ Below is a sample of what a payload might look like for a product catalog notifi
       "collapse_key": "new message"
     },    
     "data": {
-        "adb_version": "1",
-        "adb_title": "Buy some shoes",
-        "adb_body": "Click a shoe to learn more",
-        "adb_sound": "squeek",
-        "adb_uri": "https://sneakerland.com/products/shoe1",
-        "adb_a_type": "WEBURL",
-        "adb_icon": "ic_shoe",
-        "adb_n_count": "1",
-        "adb_n_priority": "PRIORITY_LOW",
-        "adb_template_type": "cat",
-        "adb_clr_body": "00EE00",
-        "adb_clr_title": "AABBCC",
-        "adb_clr_icon": "123456",
-        "adb_clr_bg": "000000",
-        "adb_display": "vertical",
-        "adb_cta_txt": "Buy Now",
-        "adb_cta_txt_clr": "00EE00",
-        "adb_cta_uri": "https://sneakerland.com/cart&addItem=shoe1",
-        "adb_items": "[{\"title\":\"Cool Shoe\",\"body\":\"Shoe 1 by Cool Sneaker Brand\",\"img\":\"https://sneakerland.com/products/shoe1/shoe1.png\",\"price\":\"49.97\",\"uri\":\"https://sneakerland.com/products/shoe1\"},{\"title\":\"Lame Shoe\",\"body\":\"Shoe 2 by Lame Sneaker Brand\",\"img\":\"https://sneakerland.com/products/shoe2/shoe2.png\",\"price\":\"99.99\",\"uri\":\"https://sneakerland.com/products/shoe2\"}]"
+      "adb_version": "1",
+      "adb_title": "Buy some shoes",
+      "adb_body": "Click a shoe to learn more",
+      "adb_sound": "squeek",
+      "adb_uri": "https://sneakerland.com/products/shoe1",
+      "adb_a_type": "WEBURL",
+      "adb_icon": "ic_shoe",
+      "adb_n_count": "1",
+      "adb_n_priority": "PRIORITY_LOW",
+      "adb_template_type": "cat",
+      "adb_clr_body": "00EE00",
+      "adb_clr_title": "AABBCC",
+      "adb_clr_icon": "123456",
+      "adb_clr_bg": "000000",
+      "adb_display": "vertical",
+      "adb_cta_txt": "Buy Now",
+      "adb_cta_txt_clr": "00EE00",
+      "adb_cta_uri": "https://sneakerland.com/cart&addItem=shoe1",
+      "adb_items": "[{\"title\":\"Cool Shoe\",\"body\":\"Shoe 1 by Cool Sneaker Brand\",\"img\":\"https://sneakerland.com/products/shoe1/shoe1.png\",\"price\":\"49.97\",\"uri\":\"https://sneakerland.com/products/shoe1\"},{\"title\":\"Lame Shoe\",\"body\":\"Shoe 2 by Lame Sneaker Brand\",\"img\":\"https://sneakerland.com/products/shoe2/shoe2.png\",\"price\":\"99.99\",\"uri\":\"https://sneakerland.com/products/shoe2\"}]"
     }
   }
 }

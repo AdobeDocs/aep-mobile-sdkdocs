@@ -2,7 +2,7 @@
 noIndex: true
 ---
 
-<Variant platform="fcm" template="carousel" repeat="12"/>
+<Variant platform="fcm" template="carousel" repeat="20"/>
 
 ## Properties
 
@@ -59,23 +59,23 @@ Below is a sample of what a payload might look like for a carousel notification:
       "collapse_key": "new message"
     },    
     "data": {
-				"adb_version": "1",
-				"adb_template_type": "car",
-				"adb_title": "Check out the new line of shoes!",
-				"adb_body": "Hot deals on new releases!",
-				"adb_sound": "sneakerSqueaker",
-				"adb_small_icon": "chat_bubble",
-				"adb_large_icon": "https://sneakerland.com/logo.png",
-				"adb_uri": "https://sneakerland.com/newReleases",
-				"adb_a_type": "WEBURL",
-				"adb_body_ex": "We have some new inventory we think you'll like.",
-				"adb_clr_body": "00EE00",
-				"adb_clr_title": "AABBCC",
-				"adb_clr_icon": "123456",
-				"adb_clr_bg": "000000",
-				"adb_car_mode": "auto",
-				"adb_car_layout": "default",
-				"adb_items": "[{\"img\":\"https://sneakerland.com/products/shoe1/shoe1.png\",\"txt\":\"Shoe 1 by Cool Sneaker Brand\",\"uri\":\"https://sneakerland.com/products/shoe1\"},{\"img\":\"https://sneakerland.com/products/shoe2/shoe2.png\",\"txt\":\"Shoe 2 by Lame Sneaker Brand\",\"uri\":\"https://sneakerland.com/products/shoe2\"},{\"img\":\"https://sneakerland.com/products/shoe3/shoe3.png\",\"txt\":\"Shoe 3 by Average Sneaker Brand\",\"uri\":\"https://sneakerland.com/products/shoe3\"}]"
+      "adb_version": "1",
+			"adb_template_type": "car",
+			"adb_title": "Check out the new line of shoes!",
+			"adb_body": "Hot deals on new releases!",
+			"adb_sound": "sneakerSqueaker",
+			"adb_small_icon": "chat_bubble",
+			"adb_large_icon": "https://sneakerland.com/logo.png",
+			"adb_uri": "https://sneakerland.com/newReleases",
+			"adb_a_type": "WEBURL",
+			"adb_body_ex": "We have some new inventory we think you'll like.",
+			"adb_clr_body": "00EE00",
+			"adb_clr_title": "AABBCC",
+			"adb_clr_icon": "123456",
+			"adb_clr_bg": "000000",
+			"adb_car_mode": "auto",
+			"adb_car_layout": "default",
+			"adb_items": "[{\"img\":\"https://sneakerland.com/products/shoe1/shoe1.png\",\"txt\":\"Shoe 1 by Cool Sneaker Brand\",\"uri\":\"https://sneakerland.com/products/shoe1\"},{\"img\":\"https://sneakerland.com/products/shoe2/shoe2.png\",\"txt\":\"Shoe 2 by Lame Sneaker Brand\",\"uri\":\"https://sneakerland.com/products/shoe2\"},{\"img\":\"https://sneakerland.com/products/shoe3/shoe3.png\",\"txt\":\"Shoe 3 by Average Sneaker Brand\",\"uri\":\"https://sneakerland.com/products/shoe3\"}]"
     }
   }
 }

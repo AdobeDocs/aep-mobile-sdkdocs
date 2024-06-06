@@ -2,7 +2,7 @@
 noIndex: true
 ---
 
-<Variant platform="fcm" template="basic" repeat="15" />
+<Variant platform="fcm" template="basic" repeat="18" />
 
 ## Configuration
 
@@ -104,7 +104,7 @@ Custom sound files must be placed within the app's bundle in the  `res/raw` dire
 
 | **Aspect ratios** | **Image size range** | **Supported file types** |
 | :-------- | -----------: | ------: |
-| 1:1, 3:2, 5:4, 4:3 | < 1 MB | PNG, JPG, WebP |
+| 1:1, 3:2, 5:4, 4:3, 2:1, 16:9 | < 1 MB | PNG, JPG, WebP |
 
 ### Text guidelines
 

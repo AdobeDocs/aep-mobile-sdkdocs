@@ -2,7 +2,7 @@
 noIndex: true
 ---
 
-<Variant platform="fcm" template="five-icon" repeat="15" />
+<Variant platform="fcm" template="multi_icon" repeat="13" />
 
 ## Properties
 
@@ -22,7 +22,7 @@ The properties below define the payload sent to FCM:
 
 <img src="./../assets/multi_icon.gif" width="50%" height="50%"/>
 
-Below is a sample of what a payload might look like for a five icon notification:
+Below is a sample of what a payload might look like for a multi icon notification:
 
 ```json
 {
@@ -45,6 +45,10 @@ Below is a sample of what a payload might look like for a five icon notification
 ## Usage recommendations
 
 The tables below contain guidelines for your push notification content. **These recommendations help your images display reliably across multiple devices.** These values are guidelines only - it is still recommended to test a notification prior to sending it.
+
+### Audio specifications
+
+Custom sound files must be placed within the app's bundle in the  `res/raw` directory. Supported formats are `mp3`, `wav`, or `ogg`.
 
 ### Image specifications
 

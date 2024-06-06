@@ -5,10 +5,10 @@ keywords:
 - Adobe Campaign Classic
 - Push
 - Push Template
-- Basic
+- Product Catalog
 ---
 
-import Tabs from './tabs/basic.md'
+import Tabs from './tabs/catalog.md'
 
 # Push template - product catalog
 
@@ -22,8 +22,8 @@ The table below shows all available properties in the respective payload for FCM
 
 <br />
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 FCM
 
-<Tabs query="platform=fcm&template=basic"/>
+<Tabs query="platform=fcm&template=catalog"/>

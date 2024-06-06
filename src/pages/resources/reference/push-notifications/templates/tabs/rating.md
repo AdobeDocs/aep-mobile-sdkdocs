@@ -61,14 +61,14 @@ Below is a sample of what a payload might look like for a product rating notific
       "adb_n_count": "1",
       "adb_n_priority": "PRIORITY_LOW",
       "adb_template_type": "rate",
-      "adb_body_ex": "We hope you are enjoying your new shoes. Please click on a rating below to help us cater to your future footware needs!"
-            "adb_clr_body": "00EE00",
-            "adb_clr_title": "AABBCC",
-            "adb_clr_icon": "123456",
-            "adb_clr_bg": "000000",
-            "adb_rate_unselected_icon":"https://cdn-icons-png.freepik.com/256/1077/1077035.png?semt=ais_hybrid",
-            "adb_rate_selected_icon":"https://cdn-icons-png.freepik.com/256/833/833472.png?semt=ais_hybrid",
-            "adb_rate_act": "[{\"uri\":\"https://www.adobe.com\", \"type\":\"WEBURL\"},{\"type\":\"OPENAPP\"},{\"type\":\"DISMISS\"},{\"uri\": \"https://www.adobe.com\", \"type\":\"WEBURL\"},{\"uri\":\"instabiz://opensecond\", \"type\":\"DEEPLINK\"}]"
+      "adb_body_ex": "We hope you are enjoying your new shoes. Please click on a rating below to help us cater to your future footware needs!",
+      "adb_clr_body": "00EE00",
+      "adb_clr_title": "AABBCC",
+      "adb_clr_icon": "123456",
+      "adb_clr_bg": "000000",
+      "adb_rate_unselected_icon":"https://cdn-icons-png.freepik.com/256/1077/1077035.png?semt=ais_hybrid",
+      "adb_rate_selected_icon":"https://cdn-icons-png.freepik.com/256/833/833472.png?semt=ais_hybrid",
+      "adb_rate_act": "[{\"uri\":\"https://www.adobe.com\", \"type\":\"WEBURL\"},{\"type\":\"OPENAPP\"},{\"type\":\"DISMISS\"},{\"uri\": \"https://www.adobe.com\", \"type\":\"WEBURL\"},{\"uri\":\"instabiz://opensecond\", \"type\":\"DEEPLINK\"}]"
     }
   }
 }
@@ -86,7 +86,7 @@ Custom sound files must be placed within the app's bundle in the  `res/raw` dire
 
 | **Aspect ratios** | **Image size range** | **Supported file types** |
 | :-------- | -----------: | ------: |
-| 1:1, 3:2, 5:4, 4:3 | < 1 MB | PNG, JPG, WebP |
+| main notification image: 1:1, 3:2, 5:4, 4:3, 2:1, 16:9<br />images for rating icons: 1:1, 3:2, 5:4, 4:3 | < 1 MB | PNG, JPG, WebP |
 
 ### Text guidelines
 

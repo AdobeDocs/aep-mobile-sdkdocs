@@ -5,10 +5,10 @@ keywords:
 - Adobe Campaign Classic
 - Push
 - Push Template
-- Timer
+- Rating
 ---
 
-import Tabs from './tabs/timer.md'
+import Tabs from './tabs/rating.md'
 
 # Push template - rating
 
@@ -18,8 +18,8 @@ After a rating is selected in the notification, an intent containing the rating 
 
 The table below shows all available properties in the respective payload for FCM (Android).
 <br />
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 FCM
 
-<Tabs query="platform=fcm&template=timer"/>
+<Tabs query="platform=fcm&template=rating"/>

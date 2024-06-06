@@ -5,10 +5,10 @@ keywords:
 - Adobe Campaign Classic
 - Push
 - Push Template
-- Carousel
+- Zero Bezel
 ---
 
-import Tabs from './tabs/carousel.md'
+import Tabs from './tabs/zero_bezel.md'
 
 # Push template - zero bezel
 
@@ -16,8 +16,8 @@ A notification including a title, subtitle, message body, and an edge to edge ba
 
 The table below shows all available properties in the respective payload for FCM (Android).
 <br />
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 FCM
 
-<Tabs query="platform=fcm&template=carousel"/>
+<Tabs query="platform=fcm&template=zero_bezel"/>
