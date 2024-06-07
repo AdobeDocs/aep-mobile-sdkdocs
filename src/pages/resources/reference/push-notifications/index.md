@@ -34,12 +34,12 @@ The tables below contain guidelines for your push notification content. **These 
 |             adb_image              | 1:1, 3:2, 5:4, 4:3, 2:1, 16:9 |   < 1 MB   |    PNG, JPG, WebP    | Remote URI                           |
 |           adb_small_icon           |              1:1              |   < 1 MB   |    PNG, JPG, WebP    | Bundled Drawable Asset               |
 |           adb_large_icon           |              1:1              |   < 1 MB   |    PNG, JPG, WebP    | Remote URI or Bundled Drawable Asset |
-|         multi icon images          |              1:1              |   < 1 MB   |    PNG, JPG, WebP    | Remote URI or Bundled Drawable Asset |
-|         rating icon images         |              1:1              |   < 1 MB   |    PNG, JPG, WebP    | Remote URI or Bundled Drawable Asset |
-|          carousel images           | 1:1, 3:2, 5:4, 4:3, 2:1, 16:9 |   < 1 MB   |    PNG, JPG, WebP    | Remote URI                           |
-|     filmstrip carousel images      |      1:1, 3:2, 5:4, 4:3       |   < 1 MB   |    PNG, JPG, WebP    | Remote URI                           |
-| horizontal product catalog images  |           2:1, 16:9           |   < 1 MB   |    PNG, JPG, WebP    | Remote URI                           |
-|  vertical product catalog images   |      1:1, 3:2, 5:4, 4:3       |   < 1 MB   |    PNG, JPG, WebP    | Remote URI                           |
+|         Multi-icon images          |              1:1              |   < 1 MB   |    PNG, JPG, WebP    | Remote URI or Bundled Drawable Asset |
+|         Rating icon images         |              1:1              |   < 1 MB   |    PNG, JPG, WebP    | Remote URI or Bundled Drawable Asset |
+|          Carousel images           | 1:1, 3:2, 5:4, 4:3, 2:1, 16:9 |   < 1 MB   |    PNG, JPG, WebP    | Remote URI                           |
+|     Filmstrip carousel images      |      1:1, 3:2, 5:4, 4:3       |   < 1 MB   |    PNG, JPG, WebP    | Remote URI                           |
+| Horizontal product catalog images  |           2:1, 16:9           |   < 1 MB   |    PNG, JPG, WebP    | Remote URI                           |
+|  Vertical product catalog images   |      1:1, 3:2, 5:4, 4:3       |   < 1 MB   |    PNG, JPG, WebP    | Remote URI                           |
 
 `adb_image` is used as the main image in basic, input box, remind later, timer, and zero bezel notifications.
 
@@ -48,6 +48,6 @@ The tables below contain guidelines for your push notification content. **These 
 | Image type in notification payload | Aspect Ratios |  Image Size   | Supported File Types | File Source |
 | :--------------------------------: | :-----------: | :-----------: | :------------------: | ----------- |
 |             adb_media              |      2:1      | 50 KB to 1 MB |    PNG, JPG, WebP    | Remote URI  |
-|          carousel images           |      2:1      | 50 KB to 1 MB |    PNG, JPG, WebP    | Remote URI  |
+|          Carousel images           |      2:1      | 50 KB to 1 MB |    PNG, JPG, WebP    | Remote URI  |
 
  `adb_media` is used as the main image in basic and timer notifications
