@@ -8,6 +8,14 @@ keywords:
 
 # Release notes
 
+## June 4, 2024
+
+### Android Assurance 3.0.1
+
+* Fixed an issue where the Assurance floating button was not immediately shown in a reconnection scenario.
+* Fixed an issue where the QuickConnect device registration status check job was not terminated when the connection attempt is cancelled.
+* Disabled content and file access from `WebView`.
+
 ## May 13, 2024
 
 ### Flutter Assurance 4.0.2
