@@ -40,6 +40,7 @@ The properties below define the payload sent to FCM:
 | Catalog Items | ✅ | `adb_items` | string | Three entries describing the items in the product catalog.<br />**The value is an encoded JSON string.**<br />When decoded, the string contains an array of the following objects:<br /><ul><li>`title` (required) - Text to use in the title if this product is selected</li><li>`body `(required) - Text to use in the body if this product is selected</li><li>`img` (required) - URI to an image to use in notification when this product is selected.</li><li>`price` (required) - Price of this product to display when the notification is selected.</li><li>`uri` (required) - URI to be handled when the user clicks the large image of the selected item.</li></ul> |
 
 ## Example
+
 Vertical Product Catalog:
 
 <img src="./../assets/vertical_catalog.gif" width="50%" height="50%"/>
@@ -84,11 +85,11 @@ Below is a sample of what a payload might look like for a product catalog notifi
 
 ## Usage recommendations
 
-The tables below contain guidelines for your push notification content. **These recommendations help your text and images display reliably across multiple devices.** These values are guidelines only - it is still recommended to test a notification prior to sending it.
+The tables below contain guidelines for your push notification content. **These recommendations help your text and images display reliably across multiple devices.** These values are guidelines only - you should still test a notification prior to sending it.
 
 ### Audio specifications
 
-Custom sound files must be placed within the app's bundle in the  `res/raw` directory. Supported formats are `mp3`, `wav`, or `ogg`.
+Custom sound files must be placed within the app's bundle in the `res/raw` directory. Supported formats are `mp3`, `wav`, or `ogg`.
 
 ### Image specifications
 

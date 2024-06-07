@@ -74,7 +74,7 @@ Below is a sample of what a payload might look like for a basic notification:
 			"adb_n_priority": "PRIORITY_LOW",
 			"adb_channel_id": "a3b80ef",
 			"adb_image": "https://pictureofchess.com/board.png",
-      "adb_uri": "https://chess.com/games",
+			"adb_uri": "https://chess.com/games",
 			"adb_a_type": "WEBURL",
 			"adb_act": "[{\"label\":\"accept\",\"uri\":\"https://chess.com/games/552\",\"type\":\"DEEPLINK\"{\"label\":\"decline\",\"uri\":\"\",\"type\":\"OPENAPP\"}]",
 			"adb_tag": "24",
@@ -94,11 +94,11 @@ Below is a sample of what a payload might look like for a basic notification:
 
 ## Usage recommendations
 
-The tables below contain guidelines for your push notification content. **These recommendations help your text and images display reliably across multiple devices.** These values are guidelines only - it is still recommended to test a notification prior to sending it.
+The tables below contain guidelines for your push notification content. **These recommendations help your text and images display reliably across multiple devices.** These values are guidelines only - you should still test a notification prior to sending it.
 
 ### Audio specifications
 
-Custom sound files must be placed within the app's bundle in the  `res/raw` directory. Supported formats are `mp3`, `wav`, or `ogg`.
+Custom sound files must be placed within the app's bundle in the `res/raw` directory. Supported formats are `mp3`, `wav`, or `ogg`.
 
 ### Image specifications
 
@@ -173,7 +173,7 @@ Below is a sample of what a payload might look like for a notification using a b
 
 ## Usage recommendations
 
-The tables below contain guidelines for your push notification content. **These recommendations help your text and images display reliably across multiple devices.** These values are guidelines only - it is still recommended to test a notification prior to sending it.
+The tables below contain guidelines for your push notification content. **These recommendations help your text and images display reliably across multiple devices.** These values are guidelines only - you should still test a notification prior to sending it.
 
 ### Image specifications
 

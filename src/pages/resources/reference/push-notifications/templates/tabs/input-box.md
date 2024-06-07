@@ -2,7 +2,7 @@
 noIndex: true
 ---
 
-<Variant platform="fcm" template="input_box" repeat="15" />
+<Variant platform="fcm" template="input-box" repeat="15" />
 
 ## Properties
 
@@ -77,11 +77,11 @@ Below is a sample of what a payload might look like for an input box notificatio
 
 ## Usage recommendations
 
-The tables below contain guidelines for your push notification content. **These recommendations help your text and images display reliably across multiple devices.** These values are guidelines only - it is still recommended to test a notification prior to sending it.
+The tables below contain guidelines for your push notification content. **These recommendations help your text and images display reliably across multiple devices.** These values are guidelines only - you should still test a notification prior to sending it.
 
 ### Audio specifications
 
-Custom sound files must be placed within the app's bundle in the  `res/raw` directory. Supported formats are `mp3`, `wav`, or `ogg`.
+Custom sound files must be placed within the app's bundle in the `res/raw` directory. Supported formats are `mp3`, `wav`, or `ogg`.
 
 ### Image specifications
 

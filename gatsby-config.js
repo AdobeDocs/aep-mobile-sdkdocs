@@ -964,11 +964,11 @@ module.exports = {
                                     },
                                     {
                                         title: "Input Box",
-                                        path: "/resources/reference/push-notifications/templates/input_box"
+                                        path: "/resources/reference/push-notifications/templates/input-box"
                                     },
                                     {
                                         title: "Multi Icon",
-                                        path: "/resources/reference/push-notifications/templates/multi_icon"
+                                        path: "/resources/reference/push-notifications/templates/multi-icon"
                                     },
                                     {
                                         title: "Product Catalog",
@@ -984,7 +984,7 @@ module.exports = {
                                     },
                                     {
                                         title: "Zero Bezel",
-                                        path: "/resources/reference/push-notifications/templates/zero_bezel"
+                                        path: "/resources/reference/push-notifications/templates/zero-bezel"
                                     }
                                 ]
                             }

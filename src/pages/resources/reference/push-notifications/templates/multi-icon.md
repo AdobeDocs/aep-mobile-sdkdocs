@@ -8,16 +8,16 @@ keywords:
 - Multi Icon
 ---
 
-import Tabs from './tabs/multi_icon.md'
+import Tabs from './tabs/multi-icon.md'
 
 # Push template - multi icon
 
-Notification that displays three to five (3-5) image buttons with no text. Each button contains a URI to follow if the user interacts with it.<br />
+Notification that displays three to five (3-5) image buttons with no text. Each button contains a URI to follow if the user interacts with it.
 
 The table below shows all available properties in the respective payload for FCM (Android).
-<br />
+
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
 FCM
 
-<Tabs query="platform=fcm&template=multi_icon"/>
+<Tabs query="platform=fcm&template=multi-icon"/>

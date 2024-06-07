@@ -12,15 +12,13 @@ import Tabs from './tabs/catalog.md'
 
 # Push template - product catalog
 
-A notification containing a central image which can show one of three products.<br />
+A notification containing a central image which can show one of three products.
 
-The user can select a product thumbnail to highlight it in the main image, causing the title, body, image, and product price to update in the notification.<br />
+The user can select a product thumbnail to highlight it in the main image, causing the title, body, image, and product price to update in the notification.
 
-A call-to-action is provided to specify an action to take when the user interacts with a product.<br />
+A call-to-action (CTA) button is provided to specify an action to take when the user interacts with a product.
 
 The table below shows all available properties in the respective payload for FCM (Android).
-
-<br />
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
