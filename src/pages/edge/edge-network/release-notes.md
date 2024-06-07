@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## June 6, 2024
+
+### React Native Edge 6.0.2
+
+* Updated typescript files to support strict null checks.
+
 ## May 28, 2024
 
 ### iOS Edge 5.0.2
