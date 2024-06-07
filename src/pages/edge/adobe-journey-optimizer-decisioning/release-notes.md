@@ -8,6 +8,34 @@ keywords:
 
 # Release notes
 
+## June 6, 2024
+
+### React Native Optimize 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+## May 21, 2024
+
+### iOS Optimize 5.0.1
+
+* Fixed a crash that happens when `updateProposition` API was called repeatedly. 
+
+### Android Optimize 3.0.1
+
+* Fixed a bug where Optimize SDK was considering Target mbox decision scope strings as invalid and not including them in personalization requests.
+
+## May 18, 2024
+
+### iOS Optimize 4.0.4
+
+* Fixed a crash that happens when `updateProposition` API was called repeatedly. 
+
+## April 24, 2024
+
+### React Native Optimize 6.0.1
+
+* Added namespace support to the Android module.
+
 ## April 12, 2024
 
 ### React Native Optimize 6.0.0
@@ -15,7 +43,7 @@ keywords:
 Major version update for [Adobe Journey Optimizer - Decisioning Extension](https://github.com/adobe/aepsdk-react-native/tree/main/packages/optimize) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
 
 * Updated to use Experience Platform Android `3.x` SDKs.
-* Updated to use Experience Platform iOS `5.x` SDKs
+* Updated to use Experience Platform iOS `5.x` SDKs.
 
 ## April 3, 2024
 

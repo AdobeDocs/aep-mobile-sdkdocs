@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## April 24, 2024
+
+### React Native Campaign Standard 6.0.1
+
+* Added namespace support to the Android module.
+
 ## April 12, 2024
 
 ### React Native Campaign Standard 6.0.0
@@ -15,7 +21,7 @@ keywords:
 Major version update for [Campaign Classic](https://github.com/adobe/aepsdk-react-native/tree/main/packages/campaignclassic) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
 
 * Updated to use Experience Platform Android `3.x` SDKs.
-* Updated to use Experience Platform iOS `5.x` SDKs
+* Updated to use Experience Platform iOS `5.x` SDKs.
 
 ## April 2, 2024
 

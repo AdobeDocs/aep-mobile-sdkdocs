@@ -7,6 +7,555 @@ Keywords:
 
 # Release notes
 
+## June 6, 2024
+
+### React Native EdgeConsent 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native UserProfile 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Target 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Places 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Optimize 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Messaging 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native EdgeIdentity 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native EdgeBridge 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Edge 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Campaign Classic 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Assurance 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Core 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+## June 4, 2024
+
+### Android BOM 3.0.3
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.0.2) | BOM (3.0.3) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:assurance** | **3.0.0** | **3.0.1**|
+| **com.adobe.marketing.mobile:core** | **3.0.1** | **3.0.2**|
+| com.adobe.marketing.mobile:analytics | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:audience | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaign | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaignclassic | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:identity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:media | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:messaging | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:optimize | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:places | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:signal | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:target | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:userprofile | 3.0.0 | 3.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Core 3.0.2
+
+* Fixed strict mode violations that happened during SDK initialization.
+
+### Android Assurance 3.0.1
+
+* Fixed an issue where the Assurance floating button was not immediately shown in a reconnection scenario.
+* Fixed an issue where the QuickConnect device registration status check job was not terminated when the connection attempt is cancelled.
+* Disabled content and file access from `WebView`.
+
+## May 31, 2024
+
+### Android Campaign Classic 2.1.8
+
+* Fix clipped carousel captions which was occurring on smaller devices.
+
+### iOS Media 5.0.1
+
+* Fixed an issue in Media hit processor and now it retries hits on recoverable URLErrors shared by Mobile Core.
+
+### iOS Audience 5.0.1
+
+* Fixed an issue in Audience hit processor and now it retries hits on recoverable URLErrors shared by Mobile Core.
+
+## May 28, 2024
+
+### iOS Analytics 5.0.1
+
+* Fixed an issue in Analytics hit processor and now it retries hits on recoverable URLErrors shared by Mobile Core.
+
+### iOS Edge 5.0.2
+
+* Fixed an issue in Edge hit processor and now it retries hits on recoverable URLErrors shared by Mobile Core.
+
+## May 23, 2024
+
+### Android BOM 3.0.2
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.0.1) | BOM (3.0.2) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:core** | **3.0.0** | **3.0.1**|
+| **com.adobe.marketing.mobile:identity** | **3.0.0** | **3.0.1**|
+| **com.adobe.marketing.mobile:lifecycle** | **3.0.0** | **3.0.1**|
+| com.adobe.marketing.mobile:analytics | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:assurance | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:audience | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaign | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaignclassic | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:media | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:messaging | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:optimize | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:places | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:signal | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:target | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:userprofile | 3.0.0 | 3.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Lifecycle 3.0.1
+
+* Lifecycle extension now computes the `xdm:isUpgrade` metric in the `application.launch` event when either versionName or versionCode changes.
+
+### Android Identity 3.0.1
+
+* Fixed an edge case where `a.push.optin=false` event may be sent to Analytics even when `MobileCore.setPushIdentifier()` API is not used.
+
+### Android Core 3.0.1
+
+* Fixed an issue with scrollability in in-app messages with overflowing content.
+* Fixed an issue where the PresentationDelegate was not notified of all URLs opened by an in-app message. 
+* Fixed an issue where UI components were not adapting to orientation changes when the activity hosting the composable restricts configuration change.
+* Enhanced error handling in the collectLaunchInfo API to catch exceptions when retrieving bundled data from an Activity.
+* Simplified coroutine scope management in UI services.
+
+## May 22, 2024
+
+### Android Campaign Classic 2.1.7
+
+* Add support for dark mode with out of the box push template notifications. Dark mode is supported on API29+ only and any custom color modifications made to the push payload will override the dark/light mode colors.
+* Removed the SCHEDULE_EXACT_ALARM permission from the Campaign Classic extension. This permission must be added to the app manifest if exact scheduling is needed for remind later notifications. If an API less than S / 31 is in use, or the exact alarm permission wasn't granted to the app, then an inexact alarm is used instead. Inexact scheduling will display the scheduled notification within a 1 hour window starting with the given timestamp.
+
+### iOS Core 5.1.0
+
+* Added a new constant and a utility method to AEPServices to detect if `URLError` is recoverable.
+* Lifecycle extension now computes the `xdm:isUpgrade` metric in the `application.launch` event when either CFBundleShortVersionString or CFBundleVersion changes.
+* Fixed an issue in the Signal and Identity extensions that caused the hit processor to drop queued hits when the device's network was offline.
+* Fixed an edge case where `a.push.optin=false` event may be sent to Analytics even when `MobileCore.setPushIdentifier()` API is not used.
+* Fixed data races in ExtensionContainer, ApplicationSystemInfoService, DiskCacheService, and FileSystemNamedCollection.
+
+## May 21, 2024
+
+### Android BOM 3.0.1
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.0.0) | BOM (3.0.1) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:optimize** | **3.0.0** | **3.0.1**|
+| com.adobe.marketing.mobile:analytics | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:assurance | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:audience | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaign | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaignclassic | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:core | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:identity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:media | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:messaging | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:places | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:signal | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:target | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:userprofile | 3.0.0 | 3.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+### iOS Optimize 5.0.1
+
+* Fixed a crash that happens when `updateProposition` API was called repeatedly. 
+
+### Android Optimize 3.0.1
+
+* Fixed a bug where Optimize SDK was considering Target mbox decision scope strings as invalid and not including them in personalization requests.
+
+## May 20, 2024
+
+### iOS Core 4.2.4
+
+* Fixed a race condition when accessing sharedStateName inside ExtensionContainer. 
+
+## May 18, 2024
+
+### iOS Optimize 4.0.4
+
+* Fixed a crash that happens when `updateProposition` API was called repeatedly. 
+
+## May 13, 2024
+
+### Flutter Edge 4.1.0
+
+* Added support to customize datastream configurations on a per-event basis using the sendEvent API.
+* Update environment dependencies in pubspec.
+
+### Flutter UserProfile 4.0.2
+
+* Update environment dependencies in pubspec.
+
+### Flutter Messaging 4.0.2
+
+* Update environment dependencies in pubspec.
+
+### Flutter EdgeIdentity 4.0.2
+
+* Update environment dependencies in pubspec.
+
+### Flutter EdgeConsent 4.0.2
+
+* Update environment dependencies in pubspec.
+
+### Flutter EdgeBridge 4.0.2
+
+* Update environment dependencies in pubspec.
+
+### Flutter Assurance 4.0.2
+
+* Update environment dependencies in pubspec.
+
+### Flutter Core 4.0.2
+
+* Update environment dependencies in pubspec.
+
+### Android BOM 2.9.8
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.9.7) | BOM (2.9.8) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:core** | **2.6.2** | **2.6.3**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:assurance | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.6 | 2.0.6 |
+| com.adobe.marketing.mobile:campaignclassic | 2.1.6 | 2.1.6 |
+| com.adobe.marketing.mobile:edge | 2.4.0 | 2.4.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:optimize | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Core 2.6.3
+
+* Enhanced error handling in the `collectLaunchInfo` API to catch exceptions when retrieving bundled data from an Activity.
+
+## May 3, 2024
+
+### Roku SDK 1.2.0
+
+* Added support for Datastream overrides, allowing for more flexibility in configuring the Datastream.
+* Added `getExperienceCloudId()` API, which enables developers to retrieve the Experience Cloud ID (ECID) from the SDK.
+
+## May 2, 2024
+
+### iOS Edge 5.0.1
+
+* Edge requests now retrieve the configuration state at the time the requests are queued, instead of at the time the requests are sent.
+
+## April 30, 2024
+
+### Android BOM 2.9.7
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.9.6) | BOM (2.9.7) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:campaignclassic** | **2.1.5** | **2.1.6**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:assurance | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.6 | 2.0.6 |
+| com.adobe.marketing.mobile:core | 2.6.2 | 2.6.2 |
+| com.adobe.marketing.mobile:edge | 2.4.0 | 2.4.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:optimize | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+## April 29, 2024
+
+### Android Campaign Classic 2.1.6
+
+* Fixed a bug that caused Activity to restart when processing push notification click URIs.
+* Fixed a bug to prevent images from being cropped in carousel push template.
+
+### iOS Notification Content Extension 5.0.0
+
+Initial release of `AEPNotificationContent` extension for Adobe Experience Platform Mobile SDKs on iOS.  The `AEPNotificationContent` extension is used in conjunction with `AEPCampaignClassic` to deliver templated push notifications.  
+
+The first release includes the following templates:
+
+* [Basic](../../resources/reference/push-notifications/templates/basic.md)
+* [Carousel](../../resources/reference/push-notifications/templates/carousel.md)
+* [Timer](../../resources/reference/push-notifications/templates/timer.md)
+
+See the [documentation](../../resources/reference/push-notifications/index.md) for more information.
+
+## April 24, 2024
+
+### React Native Core 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native Optimize 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native Places 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native Target 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native UserProfile 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native Messaging 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native EdgeIdentity 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native Edge 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native EdgeBridge 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native EdgeConsent 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native Campaign Standard 6.0.1
+
+* Added namespace support to the Android module.
+
+### React Native Assurance 6.0.1
+
+* Added namespace support to the Android module.
+
+## April 23, 2024
+
+### Flutter Core 4.0.1
+
+* Added namespace support to the Android module.
+
+### Flutter EdgeIdentity 4.0.1
+
+* Added namespace support to the Android module.
+
+### Flutter EdgeConsent 4.0.1
+
+* Added namespace support to the Android module.
+
+### Flutter EdgeBridge 4.0.1
+
+* Added namespace support to the Android module.
+
+### Flutter Edge 4.0.1
+
+* Added namespace support to the Android module.
+
+### Flutter Messaging 4.0.1
+
+* Added namespace support to the Android module.
+
+### Flutter UserProfile 4.0.1
+
+* Added namespace support to the Android module.
+
+### Flutter Assurance 4.0.1
+
+* Added namespace support to the Android module.
+
+## April 16, 2024
+
+### Flutter Core 4.x and compatible plugins
+
+A new major version of the [Adobe Experience Platform Core Flutter Plugin](https://github.com/adobe/aepsdk-react-native/tree/main/packages/core) has been released along with updates to other plugins. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs, which include the `privacy manifest`.
+* Updated `MobileCore.dispatchEventWithResponseCallback` API with a timeout parameter.
+
+Note that all these plugins must be updated together.
+
+* flutter_aepcore:4.0.0
+* flutter_aepuserprofile:4.0.0
+* flutter_aepassurance:4.0.0
+* flutter_aepedge:4.0.0
+* flutter_aepedgeidentity:4.0.0
+* flutter-aepedgeconsent:4.0.0
+* flutter-aepedgebridge:4.0.0
+* flutter-aepmessaging:4.0.0
+
+To learn how Apple's privacy related announcements made in WWDC of 2023 affect the Mobile SDK, please read the guide on [iOS privacy manifest requirements](https://developer.adobe.com/client-sdks/resources/privacy-manifest).
+
+### Flutter EdgeBridge 4.0.0
+
+Major version update for [Edge Bridge](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepedgebridge) for Adobe Experience Platform Flutter Plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+* Updated Edge Bridge data format to enhance support for migrating to sending data via Edge Network to Adobe Analytics and reduce the effort required for mapping data to XDM.
+* If you are currently using Flutter Edge Bridge version 3.x  and you are mapping data to XDM in your datastream, adjustments will be necessary when adopting version 4.0.0.
+
+### Flutter Messaging 4.0.0
+
+Major version update for [Adobe Journey Optimizer](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepmessaging) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+* Adds `onContentLoaded` to `MessagingDelegate` (Android Only).
+* Updated `urlLoaded` from `MessagingDelegate` to iOS Only.
+
+### Flutter EdgeIdentity 4.0.0
+
+Major version update for [Identity for Edge Network](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepedgeidentity) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+### Flutter EdgeConsent 4.0.0
+
+Major version update for [Consent for Edge Network](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepedgeconsent) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+### Flutter Edge 4.0.0
+
+Major version update for [Edge Network](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepedge) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+### Flutter UserProfile 4.0.0
+
+Major version update for [User Profile](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepuserprofile) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+### Flutter Assurance 4.0.0
+
+Major version update for [Assurance](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepassurance) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
 ## April 12, 2024
 
 ### React Native Core 6.x and compatible libraries
@@ -40,7 +589,7 @@ To learn how Apple's privacy related announcements made in WWDC of 2023 affect t
 Major version update for [Edge Bridge](https://github.com/adobe/aepsdk-react-native/tree/main/packages/edgebridge) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
 
 * Updated to use Experience Platform Android `3.x` SDKs.
-* Updated to use Experience Platform iOS `5.x` SDKs
+* Updated to use Experience Platform iOS `5.x` SDKs.
 * Updated Edge Bridge data format to enhance support for migrating to sending data via Edge Network to Adobe Analytics and reduce the effort required for mapping data to XDM.
 * If you are currently using React Native Edge Bridge version 5.x  and you are mapping data to XDM in your datastream, adjustments will be necessary when adopting version 6.0.0.
 
@@ -49,28 +598,28 @@ Major version update for [Edge Bridge](https://github.com/adobe/aepsdk-react-nat
 Major version update for [Campaign Classic](https://github.com/adobe/aepsdk-react-native/tree/main/packages/campaignclassic) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
 
 * Updated to use Experience Platform Android `3.x` SDKs.
-* Updated to use Experience Platform iOS `5.x` SDKs
+* Updated to use Experience Platform iOS `5.x` SDKs.
 
 ### React Native Target 6.0.0
 
 Major version update for [Target](https://github.com/adobe/aepsdk-react-native/tree/main/packages/target) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
 
 * Updated to use Experience Platform Android `3.x` SDKs.
-* Updated to use Experience Platform iOS `5.x` SDKs
+* Updated to use Experience Platform iOS `5.x` SDKs.
 
 ### React Native Places 6.0.0
 
 Major version update for [Places](https://github.com/adobe/aepsdk-react-native/tree/main/packages/places) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
 
 * Updated to use Experience Platform Android `3.x` SDKs.
-* Updated to use Experience Platform iOS `5.x` SDKs
+* Updated to use Experience Platform iOS `5.x` SDKs.
 
 ### React Native Optimize 6.0.0
 
 Major version update for [Adobe Journey Optimizer - Decisioning Extension](https://github.com/adobe/aepsdk-react-native/tree/main/packages/optimize) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
 
 * Updated to use Experience Platform Android `3.x` SDKs.
-* Updated to use Experience Platform iOS `5.x` SDKs
+* Updated to use Experience Platform iOS `5.x` SDKs.
 
 ### React Native Messaging 6.0.0
 
@@ -86,35 +635,35 @@ Major version update for [Adobe Journey Optimizer](https://github.com/adobe/aeps
 Major version update for [Consent](https://github.com/adobe/aepsdk-react-native/tree/main/packages/edgeconsent) for Edge Network for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
 
 * Updated to use Experience Platform Android `3.x` SDKs.
-* Updated to use Experience Platform iOS `5.x` SDKs
+* Updated to use Experience Platform iOS `5.x` SDKs.
 
 ### React Native EdgeIdentity 6.0.0
 
 Major version update for [Identity for Edge Network](https://github.com/adobe/aepsdk-react-native/tree/main/packages/edgeidentity) Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
 
 * Updated to use Experience Platform Android `3.x` SDKs.
-* Updated to use Experience Platform iOS `5.x` SDKs
+* Updated to use Experience Platform iOS `5.x` SDKs.
 
 ### React Native Edge 6.0.0
 
 Major version update for [Edge Network](https://github.com/adobe/aepsdk-react-native/tree/main/packages/edge) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
 
 * Updated to use Experience Platform Android `3.x` SDKs.
-* Updated to use Experience Platform iOS `5.x` SDKs
+* Updated to use Experience Platform iOS `5.x` SDKs.
 
 ### React Native UserProfile 6.0.0
 
 Major version update for [User Profile](https://github.com/adobe/aepsdk-react-native/tree/main/packages/userprofile) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
 
 * Updated to use Experience Platform Android `3.x` SDKs.
-* Updated to use Experience Platform iOS `5.x` SDKs
+* Updated to use Experience Platform iOS `5.x` SDKs.
 
 ### React Native Assurance 6.0.0
 
 Major version update for [Assurance](https://github.com/adobe/aepsdk-react-native/tree/main/packages/assurance) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
 
 * Updated to use Experience Platform Android `3.x` SDKs.
-* Updated to use Experience Platform iOS `5.x` SDKs
+* Updated to use Experience Platform iOS `5.x` SDKs.
 
 ## April 3, 2024
 
@@ -370,6 +919,8 @@ Major version update for [Adobe Experience Platform Assurance](../base/assurance
 ## March 20, 2024
 
 ### iOS Mobile Core 5.x and compatible extensions
+
+Starting May 7th, 2024, our iOS releases will include signed XCFrameworks. Additionally, we've updated all our 5.0.0 releases with signed XCFrameworks.
 
 New major version of the Mobile Core SDK for iOS has been released along with updates to other extensions. The current release includes the following changes:
 

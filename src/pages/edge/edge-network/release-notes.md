@@ -8,6 +8,52 @@ keywords:
 
 # Release notes
 
+## June 6, 2024
+
+### React Native Edge 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+## May 28, 2024
+
+### iOS Edge 5.0.2
+
+* Fixed an issue in Edge hit processor and now it retries hits on recoverable URLErrors shared by Mobile Core.
+
+## May 13, 2024
+
+### Flutter Edge 4.1.0
+
+* Added support to customize datastream configurations on a per-event basis using the sendEvent API.
+* Update environment dependencies in pubspec.
+
+## May 2, 2024
+
+### iOS Edge 5.0.1
+
+* Edge requests now retrieve the configuration state at the time the requests are queued, instead of at the time the requests are sent.
+
+## April 24, 2024
+
+### React Native Edge 6.0.1
+
+* Added namespace support to the Android module.
+
+## April 23, 2024
+
+### Flutter Edge 4.0.1
+
+* Added namespace support to the Android module.
+
+## April 16, 2024
+
+### Flutter Edge 4.0.0
+
+Major version update for [Edge Network](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepedge) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
 ## April 12, 2024
 
 ### React Native Edge 6.0.0
@@ -15,7 +61,7 @@ keywords:
 Major version update for [Edge Network](https://github.com/adobe/aepsdk-react-native/tree/main/packages/edge) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
 
 * Updated to use Experience Platform Android `3.x` SDKs.
-* Updated to use Experience Platform iOS `5.x` SDKs
+* Updated to use Experience Platform iOS `5.x` SDKs.
 
 ## April 2, 2024
 

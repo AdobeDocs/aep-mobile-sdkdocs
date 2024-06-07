@@ -46,7 +46,8 @@ console.log(`Start to fetch release info from GitHub created after [${convertToD
         // We don't have separate release-notes pages for React Native, Roku, Flutter, and BOM artifacts.
         if (releaseInfo.platform === PLATFORM_ENUM.ROKU ||
             releaseInfo.extension === EXTENSION_ENUM.BOM ||
-            releaseInfo.extension === EXTENSION_ENUM.EDGE_BRIDGE) {
+            releaseInfo.extension === EXTENSION_ENUM.EDGE_BRIDGE ||
+            releaseInfo.extension === EXTENSION_ENUM.NOTIFICATION_CONTENT) {
             continue
         }
 

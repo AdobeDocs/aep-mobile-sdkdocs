@@ -8,6 +8,97 @@ keywords:
 
 # Release notes
 
+## June 6, 2024
+
+### React Native Core 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+## June 4, 2024
+
+### Android Core 3.0.2
+
+* Fixed strict mode violations that happened during SDK initialization.
+
+## May 23, 2024
+
+### Android Lifecycle 3.0.1
+
+* Lifecycle extension now computes the `xdm:isUpgrade` metric in the `application.launch` event when either versionName or versionCode changes.
+
+### Android Identity 3.0.1
+
+* Fixed an edge case where `a.push.optin=false` event may be sent to Analytics even when `MobileCore.setPushIdentifier()` API is not used.
+
+### Android Core 3.0.1
+
+* Fixed an issue with scrollability in in-app messages with overflowing content.
+* Fixed an issue where the PresentationDelegate was not notified of all URLs opened by an in-app message. 
+* Fixed an issue where UI components were not adapting to orientation changes when the activity hosting the composable restricts configuration change.
+* Enhanced error handling in the collectLaunchInfo API to catch exceptions when retrieving bundled data from an Activity.
+* Simplified coroutine scope management in UI services.
+
+## May 22, 2024
+
+### iOS Core 5.1.0
+
+* Added a new constant and a utility method to AEPServices to detect if `URLError` is recoverable.
+* Lifecycle extension now computes the `xdm:isUpgrade` metric in the `application.launch` event when either CFBundleShortVersionString or CFBundleVersion changes.
+* Fixed an issue in the Signal and Identity extensions that caused the hit processor to drop queued hits when the device's network was offline.
+* Fixed an edge case where `a.push.optin=false` event may be sent to Analytics even when `MobileCore.setPushIdentifier()` API is not used.
+* Fixed data races in ExtensionContainer, ApplicationSystemInfoService, DiskCacheService, and FileSystemNamedCollection.
+
+## May 20, 2024
+
+### iOS Core 4.2.4
+
+* Fixed a race condition when accessing sharedStateName inside ExtensionContainer. 
+
+## May 13, 2024
+
+### Flutter Core 4.0.2
+
+* Update environment dependencies in pubspec.
+
+### Android Core 2.6.3
+
+* Enhanced error handling in the `collectLaunchInfo` API to catch exceptions when retrieving bundled data from an Activity.
+
+## April 24, 2024
+
+### React Native Core 6.0.1
+
+* Added namespace support to the Android module.
+
+## April 23, 2024
+
+### Flutter Core 4.0.1
+
+* Added namespace support to the Android module.
+
+## April 16, 2024
+
+### Flutter Core 4.x and compatible plugins
+
+A new major version of the [Adobe Experience Platform Core Flutter Plugin](https://github.com/adobe/aepsdk-react-native/tree/main/packages/core) has been released along with updates to other plugins. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs, which include the `privacy manifest`.
+* Updated `MobileCore.dispatchEventWithResponseCallback` API with a timeout parameter.
+
+Note that all these plugins must be updated together.
+
+* flutter_aepcore@4.0.0
+* flutter_aepuserprofile:4.0.0
+* flutter_aepassurance:4.0.0
+* flutter_aepedge:4.0.0
+* flutter_aepedgeidentity:4.0.0
+* flutter-aepedgeconsent:4.0.0
+* flutter-aepedgebridge:4.0.0
+* flutter-aepmessaging:4.0.0
+
+To learn how Apple's privacy related announcements made in WWDC of 2023 affect the Mobile SDK, please read the guide on [iOS privacy manifest requirements](https://developer.adobe.com/client-sdks/resources/privacy-manifest).
+
 ## April 12, 2024
 
 ### React Native Core 6.x and compatible libraries

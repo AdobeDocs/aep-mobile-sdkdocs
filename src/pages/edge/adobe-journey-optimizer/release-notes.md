@@ -9,6 +9,41 @@ keywords:
 
 # Release notes
 
+## June 6, 2024
+
+### React Native Messaging 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+## May 13, 2024
+
+### Flutter Messaging 4.0.2
+
+* Update environment dependencies in pubspec.
+
+## April 24, 2024
+
+### React Native Messaging 6.0.1
+
+* Added namespace support to the Android module.
+
+## April 23, 2024
+
+### Flutter Messaging 4.0.1
+
+* Added namespace support to the Android module.
+
+## April 16, 2024
+
+### Flutter Messaging 4.0.0
+
+Major version update for [Adobe Journey Optimizer](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepmessaging) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+* Adds `onContentLoaded` to `MessagingDelegate` (Android Only).
+* Updated `urlLoaded` from `MessagingDelegate` to iOS Only.
+
 ## April 12, 2024
 
 ### React Native Messaging 6.0.0
@@ -61,9 +96,9 @@ Major version update for [Adobe Journey Optimizer](./index.md) for Adobe Experie
 ### iOS Messaging 4.1.0
 
 * Added new notification tracking API `handleNotificationResponse` with parameters `UNNotificationResponse` and an optional callback the returns `PushTrackingStatus` enum.
-    * This API will automatically handle the click behaviour (OPENAPP, WEBURL, DEEPLINK) defined for the notification.
+  * This API will automatically handle the click behaviour (OPENAPP, WEBURL, DEEPLINK) defined for the notification.
 * Deprecated the notification tracking API `handleNotificationResponse` with parameters `UNNotificationResponse`, `applicationOpened`, and `customActionId`.
-*  Fixed a bug on notification tracking API `handleNotificationResponse` to stop sending tracking hits to edge servers when the notification does not contain tracking information.
+* Fixed a bug on notification tracking API `handleNotificationResponse` to stop sending tracking hits to edge servers when the notification does not contain tracking information.
 
 ### Android Messaging 2.2.0
 

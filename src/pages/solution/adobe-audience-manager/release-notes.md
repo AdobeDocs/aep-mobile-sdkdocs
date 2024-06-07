@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## May 31, 2024
+
+### iOS Audience 5.0.1
+
+* Fixed an issue in Audience hit processor and now it retries hits on recoverable URLErrors shared by Mobile Core.
+
 ## April 2, 2024
 
 ### Android Audience 3.0.0
