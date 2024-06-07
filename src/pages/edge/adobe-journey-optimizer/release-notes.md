@@ -9,6 +9,12 @@ keywords:
 
 # Release notes
 
+## June 6, 2024
+
+### React Native Messaging 6.0.2
+
+* Updated typescript files to support strict null checks.
+
 ## May 13, 2024
 
 ### Flutter Messaging 4.0.2

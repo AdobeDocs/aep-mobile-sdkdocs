@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## June 6, 2024
+
+### React Native Optimize 6.0.2
+
+* Updated typescript files to support strict null checks.
+
 ## May 21, 2024
 
 ### iOS Optimize 5.0.1

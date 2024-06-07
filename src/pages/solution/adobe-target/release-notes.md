@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## June 6, 2024
+
+### React Native Target 6.0.2
+
+* Updated typescript files to support strict null checks.
+
 ## April 24, 2024
 
 ### React Native Target 6.0.1

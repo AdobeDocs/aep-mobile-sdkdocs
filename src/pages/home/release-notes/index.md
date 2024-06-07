@@ -7,6 +7,56 @@ Keywords:
 
 # Release notes
 
+## June 6, 2024
+
+### React Native EdgeConsent 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native UserProfile 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Target 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Places 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Optimize 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Messaging 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native EdgeIdentity 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native EdgeBridge 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Edge 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Campaign Classic 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Assurance 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Core 6.0.2
+
+* Updated typescript files to support strict null checks.
+
 ## June 4, 2024
 
 ### Android BOM 3.0.3
