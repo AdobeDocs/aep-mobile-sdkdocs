@@ -52,6 +52,8 @@ Major version update for [Adobe Journey Optimizer](https://github.com/adobe/aeps
 
 * Updated to use Experience Platform Android `3.x` SDKs.
 * Updated to use Experience Platform iOS `5.x` SDKs.
+* Adds `onContentLoaded` to `MessagingDelegate` (Android Only).
+* Updated `urlLoaded` from `MessagingDelegate` to iOS Only.
 
 ## April 3, 2024
 

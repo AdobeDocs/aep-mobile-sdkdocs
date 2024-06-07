@@ -176,7 +176,7 @@ Keywords:
 ### Android Core 3.0.1
 
 * Fixed an issue with scrollability in in-app messages with overflowing content.
-* Fixed an issue where the PresentationDelegate was not notified of all URLs opened by an in-app message. 
+* Fixed an issue where the PresentationDelegate was not notified of all URLs opened by an in-app message.
 * Fixed an issue where UI components were not adapting to orientation changes when the activity hosting the composable restricts configuration change.
 * Enhanced error handling in the collectLaunchInfo API to catch exceptions when retrieving bundled data from an Activity.
 * Simplified coroutine scope management in UI services.
@@ -235,7 +235,7 @@ Keywords:
 
 ### iOS Optimize 5.0.1
 
-* Fixed a crash that happens when `updateProposition` API was called repeatedly. 
+* Fixed a crash that happens when `updateProposition` API was called repeatedly.
 
 ### Android Optimize 3.0.1
 
@@ -245,13 +245,13 @@ Keywords:
 
 ### iOS Core 4.2.4
 
-* Fixed a race condition when accessing sharedStateName inside ExtensionContainer. 
+* Fixed a race condition when accessing sharedStateName inside ExtensionContainer.
 
 ## May 18, 2024
 
 ### iOS Optimize 4.0.4
 
-* Fixed a crash that happens when `updateProposition` API was called repeatedly. 
+* Fixed a crash that happens when `updateProposition` API was called repeatedly.
 
 ## May 13, 2024
 
@@ -627,6 +627,8 @@ Major version update for [Adobe Journey Optimizer](https://github.com/adobe/aeps
 
 * Updated to use Experience Platform Android `3.x` SDKs.
 * Updated to use Experience Platform iOS `5.x` SDKs.
+* Adds `onContentLoaded` to `MessagingDelegate` (Android Only).
+* Updated `urlLoaded` from `MessagingDelegate` to iOS Only.
 
 ### React Native EdgeConsent 6.0.0
 
