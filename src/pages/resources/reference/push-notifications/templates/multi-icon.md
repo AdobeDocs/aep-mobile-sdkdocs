@@ -1,6 +1,6 @@
 ---
 title: Adobe Experience Platform SDK timer push template
-description: Timer push template supported by Adobe Campaign Classic mobile extension.
+description: Multi icon push template supported by Adobe Campaign Classic mobile extension.
 keywords:
 - Adobe Campaign Classic
 - Push

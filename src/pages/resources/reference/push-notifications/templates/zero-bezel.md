@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform SDK carousel push template
-description: Carousel push template supported by Adobe Campaign Classic mobile extension.
+title: Adobe Experience Platform SDK zero bezel push template
+description: Zero bezel push template supported by Adobe Campaign Classic mobile extension.
 keywords:
 - Adobe Campaign Classic
 - Push

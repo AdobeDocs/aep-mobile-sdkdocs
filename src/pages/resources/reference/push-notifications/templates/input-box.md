@@ -1,6 +1,6 @@
 ---
-title: Adobe Experience Platform SDK basic push template
-description: Basic push template supported by Adobe Campaign Classic mobile extension.
+title: Adobe Experience Platform SDK input box push template
+description: Input box push template supported by Adobe Campaign Classic mobile extension.
 keywords:
 - Adobe Campaign Classic
 - Push
@@ -14,7 +14,7 @@ import Tabs from './tabs/input-box.md'
 
 A notification including a title, message body, optional image, and a user input text field.
 
-After receiving text input, an intent containing the input is dispatched to the app and a feedback received notification can be displayed if a feedback message or image is provided in the push payload.
+After receiving text input, an `Intent` containing the input is dispatched to the app and a feedback received notification can be displayed if a feedback message or image is provided in the push payload.
 
 The table below shows all available properties in the respective payload for FCM (Android).
 
