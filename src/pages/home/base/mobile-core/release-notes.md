@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## June 6, 2024
+
+### React Native Core 6.0.2
+
+* Updated typescript files to support strict null checks.
+
 ## June 4, 2024
 
 ### Android Core 3.0.2

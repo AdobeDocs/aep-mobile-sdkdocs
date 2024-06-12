@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## June 6, 2024
+
+### React Native Campaign Classic 6.0.2
+
+* Updated typescript files to support strict null checks.
+
 ## May 31, 2024
 
 ### Android Campaign Classic 2.1.8
