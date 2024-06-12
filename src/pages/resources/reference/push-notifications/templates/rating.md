@@ -22,4 +22,3 @@ The table below shows all available properties in the respective payload for FCM
 FCM
 
 <Tabs query="platform=fcm&template=rating"/>
-
