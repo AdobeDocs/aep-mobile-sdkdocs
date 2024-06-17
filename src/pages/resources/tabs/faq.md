@@ -24,9 +24,13 @@ On tvOS, the SDK uses `NSUserDefaults` using the prefix `adobe.*`.
 
 <Variant platform="ios" task="configuration-download-error" repeat="1"/>
 
-`[AEP SDK ERROR - <ConfigurationDownloader>] Loading config from URL https://assets.adobedtm.com/<APP_ID>.json failed with response code: Optional(404)`
+```bash
+[AEP SDK ERROR - <ConfigurationDownloader>] Loading config from URL https://assets.adobedtm.com/<APP_ID>.json failed with response code: Optional(404)
+```
 
 <Variant platform="android" task="configuration-download-error" repeat="1"/>
 
-`D/AdobeExperienceSDK: HttpConnectionHandler - Connecting to URL https://assets.adobedtm.com/<APP_ID>.json (GET)
-W/AdobeExperienceSDK: RemoteDownloader - File could not be downloaded from URL (https://assets.adobedtm.com/<APP_ID>.json) Response: (-1) Message: (null)`
+```bash
+D/AdobeExperienceSDK: HttpConnectionHandler - Connecting to URL https://assets.adobedtm.com/<APP_ID>.json (GET)
+W/AdobeExperienceSDK: RemoteDownloader - File could not be downloaded from URL (https://assets.adobedtm.com/<APP_ID>.json) Response: (-1) Message: (null)
+```
