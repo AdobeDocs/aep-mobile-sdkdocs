@@ -147,7 +147,7 @@ Implementing push notification tracking and measurement with the SDK depends on 
 
 ### Why am I not getting a valid configuration from Data Collection UI?
 
-If you are getting the following errors from the SDK logged in your console, then you have not correctly published the mobile property in Data Collection UI. To correctly publish the mobile property follow the [docs here.](https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview)
+If you are getting the following errors from the SDK logged in your console, then you have not correctly published the mobile property in Data Collection UI. To correctly publish the mobile property follow the [docs here](https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
