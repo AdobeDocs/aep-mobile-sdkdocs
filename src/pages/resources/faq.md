@@ -86,11 +86,11 @@ For a complete list of supported platforms, please read the [latest SDK versions
 
 Android
 
-<FAQ query="platform=android"/>
+<FAQ query="platform=android&task=storage-locations"/>
 
 iOS
 
-<FAQ query="platform=ios"/>
+<FAQ query="platform=ios&task=storage-locations"/>
 
 ### What is the size of the SDK?
 
