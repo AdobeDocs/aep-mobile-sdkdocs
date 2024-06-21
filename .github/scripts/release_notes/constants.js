@@ -50,6 +50,7 @@ const repoNames = [
     "aepsdk-target-ios",
     "aepsdk-target-android",
     "aepsdk-notificationcontent-ios",
+    "aepsdk-ui-android",
 ]
 
 const EXTENSION_ENUM = Object.freeze({
@@ -75,7 +76,8 @@ const EXTENSION_ENUM = Object.freeze({
     AUDIENCE: "Audience",
     CAMPAIGN_STANDARD: "Campaign Standard",
     CAMPAIGN_CLASSIC: "Campaign Classic",
-    NOTIFICATION_CONTENT: "Notification Content Extension"
+    NOTIFICATION_CONTENT: "Notification Content Extension",
+    UI: "UI"
 })
 
 const PLATFORM_ENUM = Object.freeze({
