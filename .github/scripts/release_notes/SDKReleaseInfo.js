@@ -218,8 +218,8 @@ function standardizeExtensionName(extensionName) {
             return EXTENSION_ENUM.CAMPAIGN_STANDARD;
         case extensionName === "notificationcontent":
             return EXTENSION_ENUM.NOTIFICATION_CONTENT;
-        case extensionName === "ui":
-            return EXTENSION_ENUM.UI;
+        case extensionName === "notificationbuilder":
+            return EXTENSION_ENUM.NOTIFICATION_BUILDER;
         default:
             throw Error("unsupported extension name : " + extensionName)
     }

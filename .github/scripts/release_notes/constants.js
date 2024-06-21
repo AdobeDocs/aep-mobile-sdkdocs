@@ -77,7 +77,7 @@ const EXTENSION_ENUM = Object.freeze({
     CAMPAIGN_STANDARD: "Campaign Standard",
     CAMPAIGN_CLASSIC: "Campaign Classic",
     NOTIFICATION_CONTENT: "Notification Content Extension",
-    UI: "UI"
+    NOTIFICATION_BUILDER: "Notification Builder"
 })
 
 const PLATFORM_ENUM = Object.freeze({

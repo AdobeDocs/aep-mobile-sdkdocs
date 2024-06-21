@@ -48,7 +48,7 @@ console.log(`Start to fetch release info from GitHub created after [${convertToD
             releaseInfo.extension === EXTENSION_ENUM.BOM ||
             releaseInfo.extension === EXTENSION_ENUM.EDGE_BRIDGE ||
             releaseInfo.extension === EXTENSION_ENUM.NOTIFICATION_CONTENT ||
-            releaseInfo.extension === EXTENSION_ENUM.UI) {
+            releaseInfo.extension === EXTENSION_ENUM.NOTIFICATION_BUILDER) {
             continue
         }
 
