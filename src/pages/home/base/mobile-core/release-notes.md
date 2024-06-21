@@ -8,6 +8,15 @@ keywords:
 
 # Release notes
 
+## June 20, 2024
+
+### Android Core 3.1.0
+
+* Added support for in-app message HTML content to control its background transparency.
+* Enhanced Presentable re-attachment workflow for new Activity launch scenarios.
+* Added a new EventSource constant (`com.adobe.eventSource.debug`) and utility methods.
+* Added checks to prevent SDK initialization when device is in direct boot mode.
+
 ## June 6, 2024
 
 ### React Native Core 6.0.2
