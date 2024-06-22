@@ -82,7 +82,7 @@ function convertToSDKReleaseInfo(releaseInfo) {
         case isIOSRelease(repoName):
             return new SDKReleaseInfo(releaseInfo, PLATFORM_ENUM.IOS, extractIOSExtensionName(repoName), tagName)
         case isAndroidRelease(repoName):
-            if (isAndroidCoreRelease(repoName)) {
+            if (isAndroidCoreRelease(repoName) || isAndroidUIRelease(repoName)) {
                 // Example: https://github.com/adobe/aepsdk-core-android/releases/tag/v3.0.0-signal
                 let array3 = tagName.split('-')
                 verifyArray(array3, 2)
@@ -164,6 +164,10 @@ function isAndroidRelease(repoName) {
 
 function isAndroidCoreRelease(repoName) {
     return repoName === "aepsdk-core-android"
+}
+
+function isAndroidUIRelease(repoName) {
+    return repoName === "aepsdk-ui-android"
 }
 
 /**
