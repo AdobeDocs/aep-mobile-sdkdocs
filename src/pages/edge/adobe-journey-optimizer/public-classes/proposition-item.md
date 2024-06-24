@@ -22,7 +22,7 @@ The `PropositionItem` class represents the decision proposition item received fr
 
 ### contentCardSchemaData
 
-Decodes and returns item data content as an [ContentCardSchemaData](./content-card-schema-data.md) object. 
+Decodes and returns item data content as an [ContentCardSchemaData](./content-card-schema-data.md) object.
 
 Returns `nil` if decoding fails or if the proposition item schema is not `.contentCard`.
 
@@ -40,7 +40,7 @@ var htmlContent: String?
 
 ### inappSchemaData
 
-Decodes and returns item data content as an [InAppSchemaData](./inapp-schema-data.md) object. 
+Decodes and returns item data content as an [InAppSchemaData](./inapp-schema-data.md) object.
 
 Returns `nil` if decoding fails or if the proposition item schema is not `.inApp`.
 
