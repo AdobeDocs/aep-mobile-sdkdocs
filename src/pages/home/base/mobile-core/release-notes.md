@@ -8,6 +8,13 @@ keywords:
 
 # Release notes
 
+## June 24, 2024
+
+### Android Core 2.6.4
+
+* Fixed strict mode violations that happened during SDK initialization.
+* Added checks to prevent SDK initialization when the device is in direct boot mode.
+
 ## June 21, 2024
 
 ### iOS Core 5.2.0
