@@ -7,6 +7,127 @@ Keywords:
 
 # Release notes
 
+## June 24, 2024
+
+### Android Core 2.6.4
+
+* Fixed strict mode violations that happened during SDK initialization.
+* Added checks to prevent SDK initialization when the device is in direct boot mode.
+
+### Android BOM 2.9.9
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.9.8) | BOM (2.9.9) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:campaignclassic** | **2.1.6** | **2.1.8**|
+| **com.adobe.marketing.mobile:core** | **2.6.3** | **2.6.4**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:assurance | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.6 | 2.0.6 |
+| com.adobe.marketing.mobile:edge | 2.4.0 | 2.4.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:optimize | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+## June 21, 2024
+
+### Android BOM 3.1.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.0.3) | BOM (3.1.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:notificationbuilder** |  | **3.0.0** |
+| **com.adobe.marketing.mobile:campaignclassic** | **3.0.0** | **3.1.0**|
+| **com.adobe.marketing.mobile:core** | **3.0.2** | **3.1.0**|
+| com.adobe.marketing.mobile:analytics | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:assurance | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:audience | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaign | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:identity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:media | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:messaging | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:optimize | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:places | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:signal | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:target | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:userprofile | 3.0.0 | 3.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Campaign Classic 3.1.0
+
+Add support for out-of-the-box push notifications:
+
+* Basic
+* Carousel
+* Product Catalog
+* Product Rating
+* Input Box
+* Multi Icon
+* Zero Bezel
+* Timer
+
+### Android Notification Builder 3.0.0
+
+This is the initial release of AEP Notification Builder. Added support for out-of-the-box push notifications:
+
+* Basic
+* Carousel
+* Product Catalog
+* Product Rating
+* Input Box
+* Multi Icon
+* Zero Bezel
+* Timer
+
+### iOS Core 5.2.0
+
+* Added a new EventSource constant (`com.adobe.eventSource.debug`) and utility methods.
+* Added support for in-app message HTML content to control its background transparency.
+* Fixed data races in EventHub and Services and implemented additional stability fixes.
+
+## June 20, 2024
+
+### Android Core 3.1.0
+
+* Added support for in-app message HTML content to control its background transparency.
+* Enhanced Presentable re-attachment workflow for new Activity launch scenarios.
+* Added a new EventSource constant (`com.adobe.eventSource.debug`) and utility methods.
+* Added checks to prevent SDK initialization when device is in direct boot mode.
+
 ## June 6, 2024
 
 ### React Native EdgeConsent 6.0.2

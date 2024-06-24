@@ -983,8 +983,28 @@ module.exports = {
                                         path: "/resources/reference/push-notifications/templates/carousel"
                                     },
                                     {
+                                        title: "Input Box",
+                                        path: "/resources/reference/push-notifications/templates/input-box"
+                                    },
+                                    {
+                                        title: "Multi Icon",
+                                        path: "/resources/reference/push-notifications/templates/multi-icon"
+                                    },
+                                    {
+                                        title: "Product Catalog",
+                                        path: "/resources/reference/push-notifications/templates/catalog"
+                                    },
+                                    {
+                                        title: "Rating",
+                                        path: "/resources/reference/push-notifications/templates/rating"
+                                    },
+                                    {
                                         title: "Timer",
                                         path: "/resources/reference/push-notifications/templates/timer"
+                                    },
+                                    {
+                                        title: "Zero Bezel",
+                                        path: "/resources/reference/push-notifications/templates/zero-bezel"
                                     }
                                 ]
                             }
