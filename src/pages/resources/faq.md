@@ -86,11 +86,11 @@ For a complete list of supported platforms, please read the [latest SDK versions
 
 Android
 
-<FAQ query="platform=android"/>
+<FAQ query="platform=android&task=storage-locations"/>
 
 iOS
 
-<FAQ query="platform=ios"/>
+<FAQ query="platform=ios&task=storage-locations"/>
 
 ### What is the size of the SDK?
 
@@ -144,6 +144,20 @@ Implementing push notification tracking and measurement with the SDK depends on 
 
 * For the Adobe Campaign Standard extension, please read the [Adobe Campaign standard push tracking tutorial](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-mobile/push-tracking.html).
 * For the Adobe Campaign Classic extension, please read the [Adobe Campaign Classic push notifications tracking tutorial](../solution/adobe-campaign-classic/api-reference.md#tracknotification-api).
+
+### Why am I not getting a valid configuration from Data Collection UI?
+
+If you are getting the following errors from the SDK logged in your console, then you have not correctly published the mobile property in Data Collection UI. To correctly publish the mobile property follow the [docs here](https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview).
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<FAQ query="platform=android&task=configuration-download-error"/>
+
+iOS
+
+<FAQ query="platform=ios&task=configuration-download-error"/>
 
 ## Migrating to Android Mobile Core 2.x and compatible extensions
 
