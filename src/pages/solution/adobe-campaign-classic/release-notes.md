@@ -23,8 +23,6 @@ Add support for out-of-the-box push notifications:
 * Zero Bezel
 * Timer
 
-**Full Changelog**: https://github.com/adobe/aepsdk-campaignclassic-android/compare/v3.0.0...v3.1.0
-
 ## June 6, 2024
 
 ### React Native Campaign Classic 6.0.2
