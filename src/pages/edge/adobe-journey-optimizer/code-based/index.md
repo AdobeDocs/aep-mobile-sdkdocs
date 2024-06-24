@@ -17,7 +17,12 @@ This document guides you to integrating code-based experiences in your applicati
 
 ## Public Classes and Enums
 
-* [Class - Proposition](../public-classes/proposition.md)
-* [Class - PropositionItem](../public-classes/proposition-item.md)
-* [Enum - MessagingEdgeEventType](../public-classes/messaging-edge-event-type.md)
-* [Class - Surface](../public-classes/surface.md)
+* [Class - ContentCard](./../public-classes/content-card.md)
+* [Class - Proposition](./../public-classes/proposition.md)
+* [Class - PropositionItem](./../public-classes/proposition-item.md)
+* [Class - Surface](./../public-classes/surface.md)
+* [Enum - MessagingEdgeEventType](./../public-classes/messaging-edge-event-type.md)
+* [Schema Class - ContentCardSchemaData](./../public-classes/content-card-schema-data.md)
+* [Schema Class - HtmlContentSchemaData](./../public-classes/html-content-schema-data.md)
+* [Schema Class - InAppSchemaData](./../public-classes/inapp-schema-data.md)
+* [Schema Class - JsonContentSchemaData](./../public-classes/json-content-schema-data.md)
