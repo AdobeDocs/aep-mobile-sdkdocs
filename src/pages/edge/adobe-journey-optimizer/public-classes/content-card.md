@@ -133,8 +133,8 @@ public void track(final String interaction, final MessagingEdgeEventType eventTy
 ContentCard contentCard;
 
 // tracking a display
-contentCardSchemaData.track(null, MessagingEdgeEventType.display);
+contentCard.track(null, MessagingEdgeEventType.display);
 
 // tracking a user interaction
-contentCardSchemaData.track("itemSelected", MessagingEdgeEventType.interact);
+contentCard.track("itemSelected", MessagingEdgeEventType.interact);
 ```

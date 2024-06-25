@@ -266,6 +266,10 @@ module.exports = {
                                         path: "/edge/adobe-journey-optimizer/public-classes/content-card-schema-data"
                                     },
                                     {
+                                        title: "ContentType",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/content-type"
+                                    },
+                                    {
                                         title: "HtmlContentSchemaData",
                                         path: "/edge/adobe-journey-optimizer/public-classes/html-content-schema-data"
                                     },

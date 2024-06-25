@@ -31,6 +31,7 @@ This documents lists details about the public classes and enums available in Mes
 * [Class - Proposition](./proposition.md)
 * [Class - PropositionItem](./proposition-item.md)
 * [Class - Surface](./surface.md)
+* [Enum - ContentType](./content-type.md)
 * [Enum - MessagingEdgeEventType](./messaging-edge-event-type.md)
 * [Schema Class - ContentCardSchemaData](./content-card-schema-data.md)
 * [Schema Class - HtmlContentSchemaData](./html-content-schema-data.md)
