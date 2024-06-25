@@ -17,7 +17,7 @@ keywords:
 
 An object representing the default content card created in the Adobe Journey Optimizer UI.
 
-Content cards must be rendered by the app developer.  Tracking a content card is done via calls to the [`track(_:withEdgeEventType:)`](#track_withedgeeventtype) API.
+Content cards must be rendered by the app developer. Tracking a content card is done via calls to the [`track(_:withEdgeEventType:)`](#track_withedgeeventtype) API.
 
 ## iOS Interface
 
