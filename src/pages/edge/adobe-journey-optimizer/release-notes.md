@@ -9,6 +9,20 @@ keywords:
 
 # Release notes
 
+## June 26, 2024
+
+### Android Messaging 3.1.0
+
+* Added support for [Content Cards](https://github.com/adobe/aepsdk-messaging-android/blob/main/Documentation/sources/propositions/content-card.md).
+* Fixed a bug causing modified code-based experiences to be appended to the proposition offering, rather than being replaced.
+* Added listener for debug event to support future Assurance workflows.
+
+### iOS Messaging 5.1.0
+
+* Added support for [Content Cards](https://github.com/adobe/aepsdk-messaging-ios/blob/main/Documentation/sources/propositions/developer-documentation/classes/content-card.md).
+* Fixed a bug causing modified code-based experiences to be appended to the proposition offering, rather than being replaced.
+* Added listener for debug event to support future Assurance workflows.
+
 ## June 6, 2024
 
 ### React Native Messaging 6.0.2
