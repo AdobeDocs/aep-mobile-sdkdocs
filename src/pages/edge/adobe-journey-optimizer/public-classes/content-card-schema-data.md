@@ -137,7 +137,7 @@ public class ContentCardSchemaData implements SchemaData {
 
 Tries to convert the `content` of this `ContentCardSchemaData` into a [`ContentCard`](./content-card.md) object.
 
-Returns `nil` if the `contentType` is not equal to `.applicationJson` or the data in `content` is not decodable into a `ContentCard`.
+Returns `null` if the `contentType` is not equal to `ContentType.APPLICATION_JSON` or the data in `content` is not decodable into a `ContentCard`.
 
 #### Syntax
 
@@ -147,14 +147,25 @@ Returns `nil` if the `contentType` is not equal to `.applicationJson` or the dat
 
 #### Example
 
+#### Kotlin
+
+```kotlin
+val propisitionItem: PropositionItem
+val contentCardData = item?.contentCardSchemaData
+val contentCard = contentCardData?.contentCard
+contentCard?.let {
+  // do something with the ContentCard object
+}
+```
+
+#### Java
+
 ```java
 PropositionItem propositionItem;
 ContentCardSchemaData contentCardSchemaData = propositionItem.getContentCardSchemaData();
-if (contentCardSchemaData != null) {
-    ContentCard contentCard = contentCardSchemaData.getContentCard();
-    if (contentCard != null) {
-        // do something with the ContentCard object
-    }
+ContentCard contentCard = contentCardSchemaData.getContentCard();
+if (contentCard != null) {
+  // do something with the ContentCard object
 }
 ```
 
@@ -175,12 +186,26 @@ public void track(final String interaction, final MessagingEdgeEventType eventTy
 
 #### Example
 
+#### Kotlin
+
+```kotlin
+val contentCardSchemaData = item?.contentCardSchemaData
+
+// tracking a display
+contentCardSchemaData?.track(null, MessagingEdgeEventType.DISPLAY)
+
+// tracking a user interaction
+contentCardSchemaData?.track("itemSelected", MessagingEdgeEventType.INTERACT)
+```
+
+#### Java
+
 ```java
 ContentCardSchemaData contentCardSchemaData;
 
 // tracking a display
-contentCardSchemaData.track(null, MessagingEdgeEventType.display);
+contentCardSchemaData.track(null, MessagingEdgeEventType.DISPLAY);
 
 // tracking a user interaction
-contentCardSchemaData.track("itemSelected", MessagingEdgeEventType.interact);
+contentCardSchemaData.track("itemSelected", MessagingEdgeEventType.INTERACT);
 ```

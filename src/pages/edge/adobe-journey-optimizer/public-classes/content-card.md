@@ -129,12 +129,30 @@ public void track(final String interaction, final MessagingEdgeEventType eventTy
 
 #### Example
 
-```java
-ContentCard contentCard;
+#### Kotlin
+
+```kotlin
+// Get content card schema data from a PropositionItem object
+val contentCardData = item?.contentCardSchemaData
+val contentCard = contentCardData?.contentCard
 
 // tracking a display
-contentCard.track(null, MessagingEdgeEventType.display);
+contentCard?.track(null, MessagingEdgeEventType.DISPLAY)
 
 // tracking a user interaction
-contentCard.track("itemSelected", MessagingEdgeEventType.interact);
+contentCard?.track("itemSelected", MessagingEdgeEventType.INTERACT)
+```
+
+#### Java
+
+```java
+// Get content card schema data from a PropositionItem object
+ContentCardSchemaData contentCardData = item.getContentCardSchemaData();
+ContentCard contentCard = contentCardData.getContentCard();
+
+// tracking a display
+contentCard.track(null, MessagingEdgeEventType.DISPLAY);
+
+// tracking a user interaction
+contentCard.track("itemSelected", MessagingEdgeEventType.INTERACT);
 ```
