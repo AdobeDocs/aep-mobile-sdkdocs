@@ -240,7 +240,7 @@ module.exports = {
                                 ]
                             },
                             {
-                                title: "Code-based Experiences",
+                                title: "Code-based Experiences & Content Cards",
                                 path: "/edge/adobe-journey-optimizer/code-based",
                                 pages: [
                                     {
@@ -248,7 +248,7 @@ module.exports = {
                                         path: "/edge/adobe-journey-optimizer/code-based/api-reference"
                                     },
                                     {
-                                        title: "Tutorial",
+                                        title: "Code-based Tutorial",
                                         path: "/edge/adobe-journey-optimizer/code-based/tutorial"
                                     }
                                 ]
@@ -258,12 +258,28 @@ module.exports = {
                                 path: "/edge/adobe-journey-optimizer/public-classes",
                                 pages: [
                                     {
-                                        title: "MessagingPushPayload",
-                                        path: "/edge/adobe-journey-optimizer/public-classes/messaging-push-payload"
+                                        title: "ContentCard",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/content-card"
                                     },
                                     {
-                                        title: "PushTrackingStatus",
-                                        path: "/edge/adobe-journey-optimizer/public-classes/push-tracking-status"
+                                        title: "ContentCardSchemaData",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/content-card-schema-data"
+                                    },
+                                    {
+                                        title: "ContentType",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/content-type"
+                                    },
+                                    {
+                                        title: "HtmlContentSchemaData",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/html-content-schema-data"
+                                    },
+                                    {
+                                        title: "InAppSchemaData",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/inapp-schema-data"
+                                    },
+                                    {
+                                        title: "JsonContentSchemaData",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/json-content-schema-data"
                                     },
                                     {
                                         title: "Message",
@@ -274,12 +290,20 @@ module.exports = {
                                         path: "/edge/adobe-journey-optimizer/public-classes/messaging-edge-event-type"
                                     },
                                     {
+                                        title: "MessagingPushPayload",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/messaging-push-payload"
+                                    },
+                                    {
                                         title: "Proposition",
                                         path: "/edge/adobe-journey-optimizer/public-classes/proposition"
                                     },
                                     {
                                         title: "PropositionItem",
                                         path: "/edge/adobe-journey-optimizer/public-classes/proposition-item"
+                                    },
+                                    {
+                                        title: "PushTrackingStatus",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/push-tracking-status"
                                     },
                                     {
                                         title: "Surface",

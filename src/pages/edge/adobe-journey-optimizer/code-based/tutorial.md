@@ -16,7 +16,7 @@ This document describes how to fetch, display and track code-based experiences u
 
 ## Pre-requisites
 
-[Integrate and register Messaging extension](../index.md#implement-extension-in-mobile-app) in your app.
+[Integrate and register Messaging extension](../../index.md#implement-extension-in-mobile-app) in your app.
 
 ## Fetch and cache the code-based content
 
