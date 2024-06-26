@@ -26,16 +26,16 @@ val surfaces = listOf(surface1, surface2)
 
 Messaging.getPropositionsForSurfaces(surfaces) {
   it?.let { propositionsMap ->
-           if (propositionsMap.isNotEmpty()) {
-             // get the propositions for the given surfaces
-             propositionsMap[surface1]?.let {
-               // read surface1 propositions
-             }
-             propositionsMap[surface2]?.let {
-               // read surface2 propositions
-             }
-           }
-          }
+    if (propositionsMap.isNotEmpty()) {
+      // get the propositions for the given surfaces
+      propositionsMap[surface1]?.let {
+        // read surface1 propositions
+      }
+      propositionsMap[surface2]?.let {
+        // read surface2 propositions
+      }
+    }
+  }
 }
 ```
 
