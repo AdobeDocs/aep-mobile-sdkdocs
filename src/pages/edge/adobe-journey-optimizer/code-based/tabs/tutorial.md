@@ -1,4 +1,15 @@
-<Variant platform="android" function="updatepropositionsforsurfaces" repeat="2"/>
+<Variant platform="android" function="updatepropositionsforsurfaces" repeat="4"/>
+
+#### Kotlin
+
+```kotlin
+val surface1 = Surface("mainActivity#banner")
+val surface2 = Surface("secondActivity#promotions")
+val surfaces = listOf(surface1, surface2)
+
+// fetch propositions from server and cache in-memory
+Messaging.updatePropositionsForSurfaces(surfaces)
+```
 
 #### Java
 
@@ -26,7 +37,29 @@ let surface2 = Surface("secondActivity#promotions")
 Messaging.updatePropositionsForSurfaces([surface1, surface2])
 ```
 
-<Variant platform="android" function="getpropositionsforsurfaces" repeat="2"/>
+<Variant platform="android" function="getpropositionsforsurfaces" repeat="4"/>
+
+#### Kotlin
+
+```kotlin
+val surface1 = Surface("mainActivity#banner")
+val surface2 = Surface("secondActivity#promotions")
+val surfaces = listOf(surface1, surface2)
+
+Messaging.getPropositionsForSurfaces(surfaces) {
+  it?.let { propositionsMap ->
+           if (propositionsMap.isNotEmpty()) {
+             // get the propositions for the given surfaces
+             propositionsMap[surface1]?.let {
+               // read surface1 propositions
+             }
+             propositionsMap[surface2]?.let {
+               // read surface2 propositions
+             }
+           }
+          }
+}
+```
 
 #### Java
 
@@ -91,7 +124,25 @@ Messaging.getPropositionsForSurfaces([surface1, surface2]) { propositionsDict, e
 }
 ```
 
-<Variant platform="android" function="using-propositions" repeat="2"/>
+<Variant platform="android" function="using-propositions" repeat="4"/>
+
+#### Kotlin
+
+```kotlin
+// get the propositions for surface1
+// bail early if no propositions are found for surface1
+if (propositionsForSurface1 == null || propositionsForSurface1.isEmpty()) return
+
+// iterate through items in proposition
+for (propositionItem in propositionsForSurface1.first()::items) {
+  if (propositionItem.schema == SchemaType.HTML_CONTENT) {
+    // retrieve the HTML content
+    val htmlContent = propositionItem.htmlContent
+
+    // use retrieved html content
+  }
+}
+```
 
 #### Java
 
@@ -132,7 +183,19 @@ if let codePropositions: [Proposition] = propositionsDict?[surface1], !codePropo
 }
 ```
 
-<Variant platform="android" function="track" repeat="2"/>
+<Variant platform="android" function="track" repeat="4"/>
+
+#### Kotlin
+
+```kotlin
+// Tracking display of PropositionItem          
+// use the same propositionItem object that was used to get the content in the previous section
+propositionItem.track(MessagingEdgeEventType.DISPLAY)
+ 
+// Tracking interaction with PropositionItem
+// use the same propositionItem object that was used to get the content in the previous section
+propositionItem.track("click", MessagingEdgeEventType.INTERACT, null)
+```
 
 #### Java
 
@@ -160,7 +223,18 @@ propositionItem.track(withEdgeEventType: MessagingEdgeEventType.display)
 propositionItem.track("click", withEdgeEventType: MessagingEdgeEventType.display)
 ```
 
-<Variant platform="android" function="track-with-tokens" repeat="2"/>
+<Variant platform="android" function="track-with-tokens" repeat="4"/>
+
+#### Kotlin
+
+```kotlin
+// Tracking interaction with PropositionItem with tokens
+// Extract the tokens from the PropositionItem item data
+val tokenList = mutableListOf<String>()
+tokenList += dataItemToken1
+tokenList += dataItemToken2
+propositionItem.track("click", MessagingEdgeEventType.INTERACT, tokenList)
+```
 
 #### Java
 
