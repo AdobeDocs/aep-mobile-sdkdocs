@@ -57,6 +57,16 @@ Yes, you can safely upgrade extensions within the mobile property. All changes a
 
 Additionally, the installation instructions in the mobile property will be refreshed to include the latest versions of mobile platform extensions. These instructions are primarily necessary during the development phase and will be updated even before the property is published.
 
+## How often should I upgrade extensions in the Data Collection UI for published mobile apps?
+
+You should always update to the latest version to access new features and show installation instructions for the latest major releases. You can upgrade extensions within the mobile property safely, as updates are backward compatible and won't affect apps already using the published configuration.
+
+## How often should I upgrade Adobe Experience Platform SDKs in the mobile apps?
+
+You should promptly update to the latest major version of Adobe Experience Platform SDKs upon their release. Once you're on the latest version, maintaining a regular update cadence for patch versions ensures your app stays current with the latest enhancements and fixes.
+
+We release major versions of Adobe Experience Platform SDKs when significant updates are needed for underlying platforms, such as increasing the minimum deployment target in iOS or the minimum API level in Android. Minor and patch updates focus on critical bug fixes and enhancements without introducing breaking changes. All Adobe-provided Mobile SDK extensions within the same major version are fully compatible with each other.
+
 ## General implementation and migration
 
 ### Where can I download the SDK?
