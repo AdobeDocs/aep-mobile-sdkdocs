@@ -7,6 +7,16 @@ Keywords:
 
 # Release notes
 
+## June 27, 2024
+
+### iOS Analytics 5.0.2
+
+* Fixed a bug where Places region ID and name were not included in the Analytics request if the Places data contained non-string values.
+
+### Android Analytics 3.0.1
+
+* Fixed a bug where Places region ID and name were not included in the Analytics request if the Places data contained non-string values.
+
 ## June 26, 2024
 
 ### Android BOM 3.2.0
