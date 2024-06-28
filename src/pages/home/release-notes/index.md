@@ -7,6 +7,26 @@ Keywords:
 
 # Release notes
 
+## June 27, 2024
+
+### iOS Analytics 5.0.2
+
+## What’s Changed
+
+* Merge to Main for 5.0.2 release (#130) @kevinlind
+* Merge to Staging for 5.0.2 release (#129) @kevinlind
+* Updating version to 5.0.2 (#128) @github-actions
+* Fix bug in Places parsing where only String types are assumed (#127) @kevinlind
+
+### Android Analytics 3.0.1
+
+## What’s Changed
+
+* Merge to Main for 3.0.1 release (#92) @kevinlind
+* Merge to Staging for 3.0.1 release (#91) @kevinlind
+* Updating version to 3.0.1 (#90) @github-actions
+* Fix bug in Places parsing where only String types are assumed (#89) @kevinlind
+
 ## June 26, 2024
 
 ### Android BOM 3.2.0
