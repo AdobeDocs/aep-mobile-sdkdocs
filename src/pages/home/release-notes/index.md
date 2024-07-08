@@ -7,6 +7,104 @@ Keywords:
 
 # Release notes
 
+## June 28, 2024
+
+### Android BOM 3.2.1
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.2.0) | BOM (3.2.1) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:analytics** | **3.0.0** | **3.0.1**|
+| com.adobe.marketing.mobile:assurance | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:audience | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaign | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:core | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:edge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:identity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:media | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:messaging | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:optimize | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:places | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:signal | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:target | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:userprofile | 3.0.0 | 3.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+## June 27, 2024
+
+### iOS Analytics 5.0.2
+
+* Fixed a bug where Places region ID and name were not included in the Analytics request if the Places data contained non-string values.
+
+### Android Analytics 3.0.1
+
+* Fixed a bug where Places region ID and name were not included in the Analytics request if the Places data contained non-string values.
+
+## June 26, 2024
+
+### Android BOM 3.2.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.1.0) | BOM (3.2.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:messaging** | **3.0.0** | **3.1.0**|
+| com.adobe.marketing.mobile:analytics | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:assurance | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:audience | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaign | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:core | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:edge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:identity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:media | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:optimize | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:places | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:signal | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:target | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:userprofile | 3.0.0 | 3.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Messaging 3.1.0
+
+* Added support for [Content Cards](https://github.com/adobe/aepsdk-messaging-android/blob/main/Documentation/sources/propositions/content-card.md).
+* Fixed a bug causing modified code-based experiences to be appended to the proposition offering, rather than being replaced.
+* Added listener for debug event to support future Assurance workflows.
+
+### iOS Messaging 5.1.0
+
+* Added support for [Content Cards](https://github.com/adobe/aepsdk-messaging-ios/blob/main/Documentation/sources/propositions/developer-documentation/classes/content-card.md).
+* Fixed a bug causing modified code-based experiences to be appended to the proposition offering, rather than being replaced.
+* Added listener for debug event to support future Assurance workflows.
+
 ## June 24, 2024
 
 ### Android Core 2.6.4
