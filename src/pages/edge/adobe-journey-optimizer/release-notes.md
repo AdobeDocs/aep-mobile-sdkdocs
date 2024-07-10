@@ -9,6 +9,12 @@ keywords:
 
 # Release notes
 
+## July 9, 2024
+
+### iOS Messaging 5.1.1
+
+* Fixed a regression introduced in 5.0.0 that was preventing cached in-app messages from displaying on launch.
+
 ## June 26, 2024
 
 ### Android Messaging 3.1.0
