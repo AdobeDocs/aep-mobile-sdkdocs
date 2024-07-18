@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       env:
-        description: 'Deploy to (stage|prod)'
+        description: "Deploy to (stage|prod)"
         required: true
-        default: 'stage'
+        default: "stage"
       clean:
         description: "Clean cache (yes|no)"
         required: true
@@ -63,7 +63,7 @@ jobs:
       - run: echo "Path prefix - ${{ needs.set-state.outputs.path_prefix }}"
       - run: echo "Exclude subfolder - ${{ needs.set-state.outputs.exclude_subfolder }}"
 
-  pre-build-dev:
+  pre-build-stage:
     needs: [set-state]
     runs-on: ubuntu-latest
     if: needs.set-state.outputs.deploy_stage == 'true'
@@ -76,7 +76,7 @@ jobs:
         env:
           AIO_AZURE_DEV_CONNECTION_STRING: ${{ secrets.AIO_AZURE_DEV_CONNECTION_STRING }}
 
-  build-dev:
+  build-stage:
     defaults:
       run:
         shell: bash
@@ -272,3 +272,16 @@ jobs:
         with:
           fastly-token: ${{ secrets.AIO_FASTLY_TOKEN }}
           fastly-url: "${{ secrets.AIO_FASTLY_PROD_URL }}${{ needs.set-state.outputs.path_prefix }}"
+      - name: Get current date for release tag
+        id: date
+        run: echo "TAG_DATE=$(TZ="America/Los_Angeles" date +'%Y-%m-%d')" >> "$GITHUB_ENV"
+      - name: Create GitHub release tag
+        id: create_release
+        uses: release-drafter/release-drafter@v5
+        with:
+          name: ${{ env.TAG_DATE }} - Deployment ${{ github.run_id }}
+          tag: ${{ env.TAG_DATE }}-${{ github.run_id }}
+          version: ${{ github.run_id }}
+          publish: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
