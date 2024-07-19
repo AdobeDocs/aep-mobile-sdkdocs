@@ -165,6 +165,7 @@ This scenario shows the standard Lifecycle workflow when the application crashes
 ![](./assets/index/lifecycle-crash.svg)
 
 <!-- mermaid.js diagram definition
+```
 %%{
   init: {
     'themeVariables': {
@@ -198,6 +199,7 @@ graph LR
     class A,D,E regularPill;
     class B,C,F,G,H regularBox;
     class graph1,graph2 transparentSubgraph;
+```
 -->
 
 ### Rapid successive lifecyclePause and lifecycleStart calls
