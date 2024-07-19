@@ -139,7 +139,7 @@ graph LR
 
     subgraph graph1 [" "]
         direction TB
-        B("2a.<br/><code>lifecycleStart</code><br>(Start of new session)") ==> C("2b.<br/>Application Launch (Foreground)")
+        B("2a.<br/><code>lifecycleStart</code><br/>(Start of new session)") ==> C("2b.<br/>Application Launch (Foreground)")
     end
 
     subgraph graph2 [" "]
@@ -165,7 +165,6 @@ This scenario shows the standard Lifecycle workflow when the application crashes
 ![](./assets/index/lifecycle-crash.svg)
 
 <!-- mermaid.js diagram definition
-```
 %%{
   init: {
     'themeVariables': {
@@ -175,18 +174,18 @@ This scenario shows the standard Lifecycle workflow when the application crashes
 }%%
 graph LR
     A(["1.<br/>App launched"]) ==> graph1
-    graph1 ==> D(["3.<br/>App crashed/force closed<br>(Unable to call <code>lifecyclePause</code>)"])
+    graph1 ==> D(["3.<br/>App crashed/force closed<br/>(Unable to call <code>lifecyclePause</code>)"])
     D ==> E(["4.<br/>App launched"])
     E ==> graph2
 
     subgraph graph1 [" "]
         direction TB
-        B("2a.<br/><code>lifecycleStart</code><br>") ==> C("2b.<br/>Application Launch (Foreground)")
+        B("2a.<br/><code>lifecycleStart</code><br/>") ==> C("2b.<br/>Application Launch (Foreground)")
     end
 
     subgraph graph2 [" "]
         direction TB
-        F("5a.<br/><code>lifecycleStart</code><br>") ==> G("5b.<br/>Application Close (Background)<br>(Close type unknown)")
+        F("5a.<br/><code>lifecycleStart</code><br/>") ==> G("5b.<br/>Application Close (Background)<br/>(Close type unknown)")
         G ==> H("5c.<br/>Application Launch (Foreground)")
     end
 
@@ -199,7 +198,6 @@ graph LR
     class A,D,E regularPill;
     class B,C,F,G,H regularBox;
     class graph1,graph2 transparentSubgraph;
-```
 -->
 
 ### Rapid successive lifecyclePause and lifecycleStart calls
@@ -216,24 +214,24 @@ This scenario shows the handling of rapid successive calls to `lifecyclePause` f
   }
 }%%
 graph LR
-    A(["1.<br/>App launched<br>(ex: Activity A)"]) ==> graph1
-    graph1 ==> D(["3.<br/>Activity B launched<br>(Activity A closing)"])
+    A(["1.<br/>App launched<br/>(ex: Activity A)"]) ==> graph1
+    graph1 ==> D(["3.<br/>Activity B launched<br/>(Activity A closing)"])
     D ==> graph2
     graph2 == < 0.5 sec ==> graph3
 
     subgraph graph1 [" "]
         direction TB
-        B("2a.<br/><code>lifecycleStart</code><br>(Activity A)") ==> C("2b.<br/>Application Launch (Foreground)")
+        B("2a.<br/><code>lifecycleStart</code><br/>(Activity A)") ==> C("2b.<br/>Application Launch (Foreground)")
     end
 
     subgraph graph2 [" "]
         direction TB
-        E("4a.<br/><code>lifecyclePause</code><br>(Activity A)") ==> F("4b.<br/>Pause task queued")
+        E("4a.<br/><code>lifecyclePause</code><br/>(Activity A)") ==> F("4b.<br/>Pause task queued")
     end
 
     subgraph graph3 [" "]
         direction TB
-        G("5a.<br/><code>lifecycleStart</code><br>(Activity B)") ==> H("5b.<br/>1. Cancels pause task (4b)<br>2. No Application Launch event<br>3. No Lifecycle data changes")
+        G("5a.<br/><code>lifecycleStart</code><br/>(Activity B)") ==> H("5b.<br/>1. Cancels pause task (4b)<br/>2. No Application Launch event<br/>3. No Lifecycle data changes")
     end
 
     classDef dashedPill fill:#d3d3d3,stroke:#000,stroke-dasharray: 5 5,color:#000;
@@ -267,19 +265,19 @@ This scenario looks the same as a standard crash, but the underlying reason is a
 }%%
 graph LR
     A(["1.<br/>App launched"]) ==> graph1
-    graph1 ==> D(["3.<br/>App closed normally<br>(Incorrect implementation:<br>Missing <code>lifecyclePause</code>)"])
-    D ==> E(["4.<br/>App removed<br>from memory"])
+    graph1 ==> D(["3.<br/>App closed normally<br/>(Incorrect implementation:<br/>Missing <code>lifecyclePause</code>)"])
+    D ==> E(["4.<br/>App removed<br/>from memory"])
     E ==> F(["5.<br/>App launched"])
     F ==> graph2
 
     subgraph graph1 [" "]
         direction TB
-        B("2a.<br/><code>lifecycleStart</code><br>") ==> C("2b.<br/>Application Launch (Foreground)")
+        B("2a.<br/><code>lifecycleStart</code><br/>") ==> C("2b.<br/>Application Launch (Foreground)")
     end
 
     subgraph graph2 [" "]
         direction TB
-        G("6a.<br/><code>lifecycleStart</code><br>") ==> H("6b.<br/>Application Close (Background)<br>(Close type unknown)")
+        G("6a.<br/><code>lifecycleStart</code><br/>") ==> H("6b.<br/>Application Close (Background)<br/>(Close type unknown)")
         H ==> I("6c.<br/>Application Launch (Foreground)")
     end
 
@@ -311,18 +309,18 @@ This scenario shows an example of [consecutive `lifecycleStart` API calls](#cons
 }%%
 graph LR
     A(["1.<br/>App launched"]) ==> graph1
-    graph1 ==> D(["3.<br/>App closed normally<br>(Incorrect implementation:<br>Missing <code>lifecyclePause</code>)"])
-    D ==> E(["4.<br/>App launched<br>(Still in memory)"])
+    graph1 ==> D(["3.<br/>App closed normally<br/>(Incorrect implementation:<br/>Missing <code>lifecyclePause</code>)"])
+    D ==> E(["4.<br/>App launched<br/>(Still in memory)"])
     E ==> graph2
 
     subgraph graph1 [" "]
         direction TB
-        B("2a.<br/><code>lifecycleStart</code><br>") ==> C("2b.<br/>Application Launch (Foreground)")
+        B("2a.<br/><code>lifecycleStart</code><br/>") ==> C("2b.<br/>Application Launch (Foreground)")
     end
 
     subgraph graph2 [" "]
         direction TB
-        F("5a.<br/><code>lifecycleStart</code><br>(Consecutive start)") ==> G("5b.<br/>Call ignored, no event dispatched")
+        F("5a.<br/><code>lifecycleStart</code><br/>(Consecutive start)") ==> G("5b.<br/>Call ignored, no event dispatched")
     end
 
     classDef dashedPill fill:#d3d3d3,stroke:#000,stroke-dasharray: 5 5,color:#000;
@@ -354,7 +352,7 @@ This scenario shows an example of a missing `lifecycleStart` call (1). The new s
   }
 }%%
 graph LR
-    A(["1.<br/>App launched<br>(Incorrect implementation:<br>Missing <code>lifecycleStart</code>)"]) ==> B(["2.<br/>App closed normally"])
+    A(["1.<br/>App launched<br/>(Incorrect implementation:<br/>Missing <code>lifecycleStart</code>)"]) ==> B(["2.<br/>App closed normally"])
     B ==> graph1
 
     subgraph graph1 [" "]
