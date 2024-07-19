@@ -8,6 +8,14 @@ keywords:
 
 # Release notes
 
+## July 19, 2024
+
+### Android Core 3.1.1
+
+* Fixed an issue causing in-app messages to cast a shadow.
+* Fixed an issue causing in-app messages to be slightly transparent by default.
+* Improved in-app message handling in immersive mode.
+
 ## June 24, 2024
 
 ### Android Core 2.6.4
