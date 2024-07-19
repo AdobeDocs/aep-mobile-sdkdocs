@@ -205,8 +205,9 @@ graph LR
 This scenario shows the handling of rapid successive calls to `lifecyclePause` followed by `lifecycleStart`. This is designed to accommodate use cases such as in Android, where Lifecycle APIs are linked to the Android Activity lifecycle callback methods. When users transition between activities within the same app, this logic prevents these transitions from being tracked as individual sessions.
 
 ![](./assets/index/lifecycle-rapid-successive-calls.svg)
- <!-- 
- %%{
+
+<!-- 
+%%{
   init: {
     'themeVariables': {
       'lineColor': '#7a7a7a'
