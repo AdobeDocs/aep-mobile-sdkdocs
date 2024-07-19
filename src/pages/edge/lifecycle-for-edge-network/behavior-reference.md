@@ -124,7 +124,7 @@ This scenario shows the standard Lifecycle workflow, with expected Lifecycle API
 
 ![](./assets/index/lifecycle-app-launch-and-close.svg)
 
-<!-- mermaid.js diagram definition
+<!-- 
 %%{
   init: {
     'themeVariables': {
