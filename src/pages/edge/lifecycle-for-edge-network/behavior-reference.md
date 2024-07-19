@@ -114,7 +114,6 @@ graph LR
     class E incorrectBox;
  -->
 
-
 ## Expected Lifecycle scenarios
 
 The following Lifecycle workflows show examples of the expected ordering of Lifecycle events.
@@ -245,7 +244,6 @@ graph LR
     class B,C,E,F,G,H regularBox;
     class graph1,graph2,graph3 transparentSubgraph;
   -->
-
 
 ## Troubleshooting unexpected Lifecycle scenarios
 
