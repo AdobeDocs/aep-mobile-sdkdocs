@@ -54,7 +54,7 @@ networkService.connectAsync(networkRequest: networkRequest) { httpConnection in
 
 #### Java
 
-1. Create a custom implementation of `HttpConnecting` that represents a response to a network request. And, create natoher implementation of `HttpConnecting` that represents the error response. This will be used to handle network completion when overriding the network stack in place of internal network connection implementation.
+1. Create a custom implementation of `HttpConnecting` that represents a response to a network request. Also, create antoher implementation of `HttpConnecting` that represents the error response. They will be used to handle network completion when overriding the network stack in place of internal network connection implementation.
 
 - MyCustomResponse
 
