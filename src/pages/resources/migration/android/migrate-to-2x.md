@@ -152,9 +152,9 @@ The helper classes mentioned below for overriding the network service have been 
 
 #### Removed classes
 
-- `AndroidNetworkServiceOverrider`
-- `AndroidNetworkServiceOverrider.HTTPConnectionPerformer`
-- `AndroidNetworkServiceOverrider.Connecting`
+* `AndroidNetworkServiceOverrider`
+* `AndroidNetworkServiceOverrider.HTTPConnectionPerformer`
+* `AndroidNetworkServiceOverrider.Connecting`
 
 ## Frequently asked questions
 
