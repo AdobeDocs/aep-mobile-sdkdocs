@@ -148,13 +148,13 @@ The `registerExtension` API for each extension is deprecated in the 2.x version 
 
 ### Network Override
 
-The helper classes for overriding the network service mentioned above have been removed in the 2.x version of the mobile SDK. If you had implemented code to override network services, you will need to update it refering to the guidance provided in this [documentation](https://developer.adobe.com/client-sdks/home/base/mobile-core/platform-services/network-service/).
+The helper classes mentioned below for overriding the network service have been removed starting in the 2.x version of the mobile SDK. If you have implemented code to override network services, you will need to update it according to the guidance provided in this [documentation](https://developer.adobe.com/client-sdks/home/base/mobile-core/platform-services/network-service/).
 
-| Removed classes |
-| :------------- |
-| `AndroidNetworkServiceOverrider` |
-| `AndroidNetworkServiceOverrider.HTTPConnectionPerformer` |
-| `AndroidNetworkServiceOverrider.Connecting` |
+#### Removed classes
+
+- `AndroidNetworkServiceOverrider`
+- `AndroidNetworkServiceOverrider.HTTPConnectionPerformer`
+- `AndroidNetworkServiceOverrider.Connecting`
 
 ## Frequently asked questions
 
