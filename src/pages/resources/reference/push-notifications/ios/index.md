@@ -44,7 +44,7 @@ To add the AEPNotificationContent Package to your application, from the Xcode me
 
 The menu options may vary depending on the version of Xcode being used.
 
-Enter the URL for the AEPUI repository: `https://github.com/adobe/aepsdk-ui-ios.git`.
+Enter the URL for the AEP UI repository: `https://github.com/adobe/aepsdk-ui-ios.git`.
 
 For `Dependency Rule`, select `Up to Next Major Version`.
 
