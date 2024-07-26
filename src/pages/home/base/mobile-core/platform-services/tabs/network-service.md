@@ -175,7 +175,7 @@ class MyCustomNetworkService implements Networking {
     private final ExecutorService executorService = //
 
     /**
-     * Perfmoring an asynchronous network request.
+     * Initiate an asynchronous network request.
      *
      * @param request {@link NetworkRequest} used for network connection
      * @param callback {@link NetworkCallback} that will receive the {@link HttpConnecting} instance asynchronously.
@@ -187,22 +187,20 @@ class MyCustomNetworkService implements Networking {
         executorService.submit(
             () -> {
                 try {
-                // 1. If the network is down, for example the device is under airplane mode, callback should be invoked immediately with a null connection.
+                    // 1. If the network is down, for example, if the device is in airplane mode, the callback should be invoked immediately with a null connection. When the null connection is passed to the callback, the SDK will treat it as a recoverable failure and handle it accordingly.
                     
                     // callback.call(null);
-                    
-                    // When the null connection is passed to the callback, the SDK will retry the same request at a later time.
 
                     // 2. If the network is available, the SDK should send out the request and invoke the callback with the corresponding connection.
                     final HttpConnecting connection = doConnection(request);
 
-                if (callback != null) {
-                    // If a callback was provided, invoke the callback with the connection
-                    callback.call(connection);
-                } else {
-                    // If no callback is passed by the client, close the connection.
-                    connection.close();
-                }
+                    if (callback != null) {
+                      // If a callback was provided, invoke the callback with the connection
+                      callback.call(connection);
+                    } else {
+                      // If no callback is passed by the client, close the connection.
+                      connection.close();
+                    }
                 } catch (Exception e) {
                     // 3. The connectAsync method should never throw exceptions. Catch any exceptions and invoke the callback with an error response.
                     if (callback != null) {
