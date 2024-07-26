@@ -49,7 +49,7 @@ const repoNames = [
     "aepsdk-places-android",
     "aepsdk-target-ios",
     "aepsdk-target-android",
-    "aepsdk-notificationcontent-ios",
+    "aepsdk-ui-ios",
     "aepsdk-ui-android",
 ]
 
