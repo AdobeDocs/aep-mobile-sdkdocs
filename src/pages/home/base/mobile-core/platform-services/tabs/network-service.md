@@ -56,7 +56,7 @@ networkService.connectAsync(networkRequest: networkRequest) { httpConnection in
 
 1. Create a custom implementation of `HttpConnecting` that represents a response to a network request. Also, create antoher implementation of `HttpConnecting` that represents the error response. They will be used to handle network completion when overriding the network stack in place of internal network connection implementation.
 
-- MyCustomResponse
+* MyCustomResponse
 
 ```java
 class MyCustomResponse implements HttpConnecting {
@@ -129,7 +129,7 @@ class MyCustomResponse implements HttpConnecting {
 }
 ```
 
-- ErrorResponse
+* ErrorResponse
 
 ```java
 class ErrorResponse implements HttpConnecting {
@@ -191,7 +191,7 @@ class MyCustomNetworkService implements Networking {
                     
                     // callback.call(null);
                     
-                    // When the null connection is passed to the callback, the SDK drops the current request and not retry.
+                    // When the null connection is passed to the callback, the SDK will retry the same request at a later time.
 
                     // 2. If the network is available, the SDK should send out the request and invoke the callback with the corresponding connection.
                     final HttpConnecting connection = doConnection(request);
