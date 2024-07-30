@@ -15,7 +15,7 @@ keywords:
 
 # Lifecycle for Edge Network behavior reference
 
-The Lifecycle for Edge Network extension introduces a new way of collecting Lifecycle data and tracking sessions. Unlike the previous Lifecycle extension, which used a configurable timeout window for session tracking, this extension emits Application Launch and Close events, treating each pair as an independent session.
+The Lifecycle for Edge Network extension introduces a new way of collecting Lifecycle data and tracking sessions. Unlike the previous Lifecycle extension, which used a configurable timeout window for session tracking, this extension emits Application Launch and Close events, treating each pair as an independent session. As a result of not relying on a session timeout window to identify new sessions, the potential Lifecycle states are simplified.
 
 ## General behavior
 
@@ -37,82 +37,6 @@ For full event details, please read the [Lifecycle event reference](../../home/b
 #### Data payloads
 
 The Lifecycle for Edge Network event payloads are defined by the Platform Mobile Lifecycle Details XDM field group, and include information about the application, device, and environment when the event occurred. Please refer to [Lifecycle for Edge Network data](metrics.md) for the data included with these events.
-
-As a consequence of this shift in not relying on a session timeout window to consider new sessions, the potential Lifecycle states are greatly simplified:
-
-### Consecutive Lifecycle API calls
-
-Consecutive `lifecycleStart` and consecutive `lifecyclePause` API calls will not update their respective timestamps stored in persistence, and Lifecycle data is not changed.
-
-#### Consecutive `lifecycleStart` API calls
-
-![](./assets/index/lifecycle-start-after-start.svg)
-
-<!-- 
-%%{
-  init: {
-    'themeVariables': {
-      'lineColor': '#7a7a7a'
-    }
-  }
-}%%
-graph LR
-    graph1 ==> graph2
-
-    subgraph graph1 [" "]
-        direction TB
-        B(1a.<br/><code>lifecycleStart</code>) ==> C("1b.<br/>Application Launch (Foreground)")
-        class graph1 transparentSubgraph;
-    end
-
-    subgraph graph2 [" "]
-        direction TB
-        E(2a.<br/><code>lifecycleStart</code>) ==> F("2b.<br/>Call ignored, no event dispatched")
-        class graph2 transparentSubgraph;
-    end
-
-    classDef regularBox fill:#009c3b,stroke:#009c3b,color:#fff;
-    classDef incorrectBox fill:#EB1000,stroke:#EB1000,color:#fff;
-    classDef transparentSubgraph fill:transparent,stroke:#7a7a7a;
-
-    class B,C,F regularBox;
-    class E incorrectBox;
- -->
-
-#### Consecutive `lifecyclePause` API calls
-
-![](./assets/index/lifecycle-pause-after-pause.svg)
-
-<!-- 
-%%{
-  init: {
-    'themeVariables': {
-      'lineColor': '#7a7a7a'
-    }
-  }
-}%%
-graph LR
-    graph1 ==> graph2
-
-    subgraph graph1 [" "]
-        direction TB
-        B(1a.<br/><code>lifecyclePause</code>) ==> C("1b.<br/>Application Close (Background)")
-        class graph1 transparentSubgraph;
-    end
-
-    subgraph graph2 [" "]
-        direction TB
-        E(2a.<br/><code>lifecyclePause</code>) ==> F("2b.<br/>Call ignored, no event dispatched")
-        class graph2 transparentSubgraph;
-    end
-
-    classDef regularBox fill:#009c3b,stroke:#009c3b,color:#fff;
-    classDef incorrectBox fill:#EB1000,stroke:#EB1000,color:#fff;
-    classDef transparentSubgraph fill:transparent,stroke:#7a7a7a;
-
-    class B,C,F regularBox;
-    class E incorrectBox;
- -->
 
 ## Expected Lifecycle scenarios
 
@@ -144,7 +68,7 @@ graph LR
 
     subgraph graph2 [" "]
         direction TB
-        E(4a.<br/><code>lifecyclePause</code>) ==> F("4b.<br/>Application Close (Background)")
+        E(4a.<br/><code>lifecyclePause</code>) ==> F("4b.<br/>Application Close (Background)<br/>(Close type: close)")
     end
 
     classDef dashedPill fill:#d3d3d3,stroke:#000,stroke-dasharray: 5 5,color:#000;
@@ -185,7 +109,7 @@ graph LR
 
     subgraph graph2 [" "]
         direction TB
-        F("5a.<br/><code>lifecycleStart</code><br/>") ==> G("5b.<br/>Application Close (Background)<br/>(Close type unknown)")
+        F("5a.<br/><code>lifecycleStart</code><br/>") ==> G("5b.<br/>Application Close (Background)<br/>(Close type: unknown)")
         G ==> H("5c.<br/>Application Launch (Foreground)")
     end
 
@@ -249,6 +173,80 @@ graph LR
 ## Troubleshooting unexpected Lifecycle scenarios
 
 The following Lifecycle workflows show examples of the unexpected ordering of Lifecycle events that can impact Lifecycle data and can indicate an incorrect implementation of the Lifecycle APIs. To address the following scenarios, refer to the [implementation guide for Lifecycle](../../home/base/mobile-core/lifecycle/index.md#register-lifecycle-with-mobile-core-and-add-appropriate-startpause-calls).
+
+### Consecutive Lifecycle API calls
+
+Consecutive `lifecycleStart` and consecutive `lifecyclePause` API calls will not update their respective timestamps stored in persistence, and Lifecycle data is not changed.
+
+#### Consecutive `lifecycleStart` API calls
+
+![](./assets/index/lifecycle-start-after-start.svg)
+
+<!-- 
+%%{
+  init: {
+    'themeVariables': {
+      'lineColor': '#7a7a7a'
+    }
+  }
+}%%
+graph LR
+    graph1 == "1. App still in memory<br>2. <code>lifecyclePause</code> not called" ==> graph2
+
+    subgraph graph1 [" "]
+        direction TB
+        B(1a.<br/><code>lifecycleStart</code>) ==> C("1b.<br/>Application Launch (Foreground)")
+        class graph1 transparentSubgraph;
+    end
+
+    subgraph graph2 [" "]
+        direction TB
+        E(2a.<br/><code>lifecycleStart</code>) ==> F("2b.<br/>Call ignored, no event dispatched")
+        class graph2 transparentSubgraph;
+    end
+
+    classDef regularBox fill:#009c3b,stroke:#009c3b,color:#fff;
+    classDef incorrectBox fill:#EB1000,stroke:#EB1000,color:#fff;
+    classDef transparentSubgraph fill:transparent,stroke:#7a7a7a;
+
+    class B,C,F regularBox;
+    class E incorrectBox;
+ -->
+
+#### Consecutive `lifecyclePause` API calls
+
+![](./assets/index/lifecycle-pause-after-pause.svg)
+
+<!-- 
+%%{
+  init: {
+    'themeVariables': {
+      'lineColor': '#7a7a7a'
+    }
+  }
+}%%
+graph LR
+    graph1 == "1. App still in memory<br>2. <code>lifecycleStart</code> not called" ==> graph2
+
+    subgraph graph1 [" "]
+        direction TB
+        B(1a.<br/><code>lifecyclePause</code>) ==> C("1b.<br/>Application Close (Background)")
+        class graph1 transparentSubgraph;
+    end
+
+    subgraph graph2 [" "]
+        direction TB
+        E(2a.<br/><code>lifecyclePause</code>) ==> F("2b.<br/>Call ignored, no event dispatched")
+        class graph2 transparentSubgraph;
+    end
+
+    classDef regularBox fill:#009c3b,stroke:#009c3b,color:#fff;
+    classDef incorrectBox fill:#EB1000,stroke:#EB1000,color:#fff;
+    classDef transparentSubgraph fill:transparent,stroke:#7a7a7a;
+
+    class B,C,F regularBox;
+    class E incorrectBox;
+ -->
 
 ### Missing pause, app terminated
 
