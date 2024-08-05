@@ -1,19 +1,20 @@
 ---
-title: Code-based Experiences 
-description: This document guides you to integrating code-based experiences in your application.
+title: Code-based Experiences & Content Cards
+description: This document guides you to integrating code-based experiences and content cards in your application.
 keywords:
 - Adobe Journey Optimizer
 - Guide
 - Code-based experiences
+- Content Cards
 ---
 
-# Code-based Experiences
+# Code-based Experiences & Content Cards
 
-This document guides you to integrating code-based experiences in your application.
+This document guides you through integrating code-based experiences and content cards in your application.
 
 ## API reference
 
-* [Code-based Experiences APIs](./api-reference.md)
+* [Code-based Experiences & Content Cards APIs](./api-reference.md)
 
 ## Public Classes and Enums
 
