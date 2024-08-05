@@ -406,6 +406,10 @@ module.exports = {
                                 path: "/edge/lifecycle-for-edge-network/event-reference"
                             },
                             {
+                                title: "Behavior reference",
+                                path: "/edge/lifecycle-for-edge-network/behavior-reference"
+                            },
+                            {
                                 title: "Data reference",
                                 path: "/edge/lifecycle-for-edge-network/metrics"
                             }
