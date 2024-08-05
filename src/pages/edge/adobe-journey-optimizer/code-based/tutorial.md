@@ -71,7 +71,7 @@ iOS
 
 ## Tracking interactions with code-based experiences
 
-Since the onus of rendering the code-based experience lies with the app developer, you must monitor the desired end user interactions and call the appropriate tracking APIs. To record an interaction with the code-based experience, call the [track](../public-classes/proposition-item.md#track) API provided in the `PropositionItem` class. The following code shows two examples of tracking: when the content is displayed to the user and when the user clicks on the content. These examples are for illustrating how to call the track API and not a recommendation on where it should be called. Please examine your app workflow to find the appropriate way to perform tracking.
+Since it's up to the app developer to render the content card UI, you must monitor the desired end user interactions and call the appropriate tracking APIs. To record an interaction with the code-based experience, call the [track](../public-classes/proposition-item.md#track) API provided in the `PropositionItem` class. The following code shows two examples of tracking: when the content is displayed to the user and when the user clicks on the content. These examples are for illustrating how to call the track API and not a recommendation on where it should be called. Please examine your app workflow to find the appropriate way to perform tracking.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -122,7 +122,7 @@ iOS
 
 ## Tracking interactions with content cards
 
-Since the onus of rendering the content card lies with the app developer, you must monitor the display and desired end user interactions and call the appropriate tracking APIs. To record a display or interaction with the content card, call the [track](../public-classes/content-card.md#track) API provided in the `ContentCard` class. The following code shows two examples of tracking: when the content card is displayed to the user and when the user clicks on the content card. These examples are for illustrating how to call the track API and not a recommendation on where it should be called. Please examine your app workflow to find the appropriate way to perform tracking.
+Since it's up to the app developer to render the content card UI, you must monitor the display and desired end user interactions and call the appropriate tracking APIs. To record a display or interaction with the content card, call the [track](../public-classes/content-card.md#track) API provided in the `ContentCard` class. The following code shows two examples of tracking: when the content card is displayed to the user and when the user clicks on the content card. These examples are for illustrating how to call the track API and not a recommendation on where it should be called. Please examine your app workflow to find the appropriate way to perform tracking.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
