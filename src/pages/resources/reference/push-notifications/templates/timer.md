@@ -18,7 +18,7 @@ Alternate title, body, and image can be configured to be shown upon expiry of th
 
 <InlineAlert variant="info" slots="text"/>
 
-Timer push notifications are supported on Android API 24 or newer. <br />
+Timer push notifications are supported on Android API 24 or newer.
 
 Templates below show all available properties in their respective payloads for FCM (Android) and APNS (iOS).
 

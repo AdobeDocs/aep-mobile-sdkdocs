@@ -18,7 +18,7 @@ After receiving text input, an `Intent` containing the input is dispatched to th
 
 <InlineAlert variant="info" slots="text"/>
 
-Input box push notifications are supported on Android API 24 or newer. <br />
+Input box push notifications are supported on Android API 24 or newer.
 
 The table below shows all available properties in the respective payload for FCM (Android).
 
