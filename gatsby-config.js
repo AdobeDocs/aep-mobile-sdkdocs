@@ -248,7 +248,7 @@ module.exports = {
                                         path: "/edge/adobe-journey-optimizer/code-based/api-reference"
                                     },
                                     {
-                                        title: "Code-based Tutorial",
+                                        title: "Code-based experiences & Content Cards tutorial",
                                         path: "/edge/adobe-journey-optimizer/code-based/tutorial"
                                     }
                                 ]
