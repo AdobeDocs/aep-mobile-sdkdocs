@@ -8,6 +8,16 @@ keywords:
 
 # Release notes
 
+## August 12, 2024
+
+### Android Assurance 3.0.2
+
+* Added localization support.
+
+### iOS Assurance 5.0.1
+
+* Add localization support.
+
 ## June 6, 2024
 
 ### React Native Assurance 6.0.2

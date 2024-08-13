@@ -7,6 +7,16 @@ Keywords:
 
 # Release notes
 
+## August 12, 2024
+
+### Android Assurance 3.0.2
+
+* Added localization support.
+
+### iOS Assurance 5.0.1
+
+* Add localization support.
+
 ## July 19, 2024
 
 ### Android BOM 3.2.2
