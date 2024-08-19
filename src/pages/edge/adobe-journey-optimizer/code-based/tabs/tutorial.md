@@ -180,9 +180,10 @@ if (propositionsForSurface2 == null || propositionsForSurface2.isEmpty()) {
 final PropositionItem propositionItem2 = propositionsForSurface2.get(0).getItems().get(0);
 if (propositionItem2.getSchema() == SchemaType.CONTENT_CARD) {
     // retrieve the content card
-    final ContentCard contentCard = propositionItem2.getContentCardSchemaData().getContentCard();
-
-    // use retrieved content card
+    final ContentCardSchemaData contentCard = propositionItem2.getContentCardSchemaData();
+    if (contentCard != null) {
+        // use content from retrieved content card
+    }
 }
 ```
 
@@ -199,7 +200,6 @@ if let propositionsForSurface1: [Proposition] = propositionsDict?[surface1], !pr
         let htmlContent = propositionItem1.htmlContent
 
         // use retrieved html content
-
     }
 }
 
@@ -208,10 +208,9 @@ if let propositionsForSurface2: [Proposition] = propositionsDict?[surface2], !pr
     let propositionItem2 = propositionsForSurface2.first?.items.first {
     if propositionItem2.schema == .contentCard {
         // retrieve the content card
-        let contentCard = propositionItem2.contentCardSchemaData?.getContentCard()
-
-        // use retrieved content card
-
+        if let contentCardSchemaData = propositionItem2.contentCardSchemaData {
+            // use the content from the content card
+        }
     }
 }
 ```
