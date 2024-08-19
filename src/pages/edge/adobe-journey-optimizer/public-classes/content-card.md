@@ -13,7 +13,13 @@ keywords:
 - Content Card
 ---
 
-# ContentCard
+# ContentCard - DEPRECATED
+
+<InlineAlert variant="warning" slots="header, text" />
+
+Notice of deprecation
+
+`ContentCard` classes are deprecated as of `v5.2.0` (iOS) and `v3.2.0` (Android). They will be removed in the next major release of the Messaging extension.
 
 An object representing the default content card created in the Adobe Journey Optimizer UI.
 
