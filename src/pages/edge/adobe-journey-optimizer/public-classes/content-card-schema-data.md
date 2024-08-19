@@ -45,7 +45,13 @@ public class ContentCardSchemaData: NSObject, Codable {
 
 ---
 
-### getContentCard
+### getContentCard - DEPRECATED
+
+<InlineAlert variant="warning" slots="header, text" />
+
+Notice of deprecation
+
+`ContentCard` class is deprecated as of `v5.2.0` (iOS) and will be removed in the next major release of the Messaging extension.
 
 Tries to convert the `content` of this `ContentCardSchemaData` into a [`ContentCard`](./content-card.md) object.
 
@@ -133,7 +139,13 @@ public class ContentCardSchemaData implements SchemaData {
 
 ---
 
-### getContentCard
+### getContentCard - DEPRECATED
+
+<InlineAlert variant="warning" slots="header, text" />
+
+Notice of deprecation
+
+`ContentCard` class is deprecated as of `v3.2.0` (Android) and will be removed in the next major release of the Messaging extension.
 
 Tries to convert the `content` of this `ContentCardSchemaData` into a [`ContentCard`](./content-card.md) object.
 

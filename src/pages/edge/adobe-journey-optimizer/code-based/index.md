@@ -18,7 +18,7 @@ This document guides you through integrating code-based experiences and content 
 
 ## Public Classes and Enums
 
-* [Class - ContentCard](./../public-classes/content-card.md)
+* [Class - ContentCard - DEPRECATED](./../public-classes/content-card.md)
 * [Class - Proposition](./../public-classes/proposition.md)
 * [Class - PropositionItem](./../public-classes/proposition-item.md)
 * [Class - Surface](./../public-classes/surface.md)
