@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## August 19, 2024
+
+### Android Places 3.0.1
+
+* Removed `string.xml` file with reserved resource key `app_name` which could cause app name to be changed
+
 ## June 6, 2024
 
 ### React Native Places 6.0.2
