@@ -54,7 +54,7 @@ Keywords:
 ### Android Campaign Standard 3.0.1
 
 * Removed unused `app_name` string resource to prevent conflicts with resources defined by the app.
-* Fixed an ACPCampaign datastore migration issue.
+* Fixed an Android Campaign Standard 2.x datastore migration issue.
 
 ### Android Optimize 3.0.2
 
