@@ -9,6 +9,17 @@ keywords:
 
 # Release notes
 
+## August 19, 2024
+
+### Android Messaging 3.2.0
+
+* Deprecated `ContentCard` class and its related APIs.
+
+### iOS Messaging 5.2.0
+
+* Updated some logging around push message tracking to be more useful.
+* Deprecated `ContentCard` class and its related APIs.
+
 ## July 9, 2024
 
 ### iOS Messaging 5.1.1

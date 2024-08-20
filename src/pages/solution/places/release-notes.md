@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## August 19, 2024
+
+### Android Places 3.0.1
+
+* Removed unused `app_name` string resource to prevent conflicts with resources defined by the app.
+
 ## June 6, 2024
 
 ### React Native Places 6.0.2

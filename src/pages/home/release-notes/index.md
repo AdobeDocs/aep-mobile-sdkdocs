@@ -7,6 +7,27 @@ Keywords:
 
 # Release notes
 
+## August 19, 2024
+
+### Android Places 3.0.1
+
+* Removed unused `app_name` string resource to prevent conflicts with resources defined by the app.
+
+### Android Messaging 3.2.0
+
+* Deprecated `ContentCard` class and its related APIs.
+
+### iOS Messaging 5.2.0
+
+* Updated some logging around push message tracking to be more useful.
+* Deprecated `ContentCard` class and its related APIs.
+
+## August 16, 2024
+
+### Android Assurance 3.0.3
+
+* Removed `app_name` string resource to prevent conflicts with resources defined by the app. 
+
 ## August 12, 2024
 
 ### Android Assurance 3.0.2
