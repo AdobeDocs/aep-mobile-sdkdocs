@@ -8,6 +8,14 @@ keywords:
 
 # Release notes
 
+## August 20, 2024
+
+### Android Campaign Classic 3.1.1
+
+* Removed unused `app_name` string resource to prevent conflicts with resources defined by the app.
+* Add support for 64-bit broadlog id.
+* Update notification builder dependency to 3.0.1 to resolve issues with out-of-the-box push templates.
+
 ## June 21, 2024
 
 ### Android Campaign Classic 3.1.0

@@ -7,6 +7,66 @@ Keywords:
 
 # Release notes
 
+## August 20, 2024
+
+### Android BOM 3.3.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.2.2) | BOM (3.3.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:assurance** | **3.0.1** | **3.0.3**|
+| **com.adobe.marketing.mobile:campaign** | **3.0.0** | **3.0.1**|
+| **com.adobe.marketing.mobile:campaignclassic** | **3.1.0** | **3.1.1**|
+| **com.adobe.marketing.mobile:messaging** | **3.1.0** | **3.2.0**|
+| **com.adobe.marketing.mobile:notificationbuilder** | **3.0.0** | **3.0.1**|
+| **com.adobe.marketing.mobile:optimize** | **3.0.1** | **3.0.2**|
+| **com.adobe.marketing.mobile:places** | **3.0.0** | **3.0.1**|
+| com.adobe.marketing.mobile:analytics | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:audience | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:core | 3.1.1 | 3.1.1 |
+| com.adobe.marketing.mobile:edge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:identity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:media | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:signal | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:target | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:userprofile | 3.0.0 | 3.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Campaign Classic 3.1.1
+
+* Removed unused `app_name` string resource to prevent conflicts with resources defined by the app.
+* Add support for 64-bit broadlog id.
+* Update notification builder dependency to 3.0.1 to resolve issues with out-of-the-box push templates.
+
+### Android Campaign Standard 3.0.1
+
+* Removed unused `app_name` string resource to prevent conflicts with resources defined by the app.
+* Fixed an Android Campaign Standard 2.x datastore migration issue.
+
+### Android Optimize 3.0.2
+
+* Fixed thread safety for map updates that happen when `updatePropositions` API was called repeatedly.
+* Fixed issue where `Offer` could not be created for default content item when `getPropostions` API was called.
+
+### Android Notification Builder 3.0.1
+
+* Fixed timer notification background color.
+* Updated optional fields within the multi-icon push template.
+* Fixed issues seen with lower level Android API. See https://github.com/adobe/aepsdk-ui-android/pull/64 for details.
+
 ## August 19, 2024
 
 ### Android Places 3.0.1

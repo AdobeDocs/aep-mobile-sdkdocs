@@ -8,6 +8,13 @@ keywords:
 
 # Release notes
 
+## August 20, 2024
+
+### Android Optimize 3.0.2
+
+* Fixed thread safety for map updates that happen when `updatePropositions` API was called repeatedly.
+* Fixed issue where `Offer` could not be created for default content item when `getPropostions` API was called.
+
 ## June 6, 2024
 
 ### React Native Optimize 6.0.2
