@@ -55,7 +55,7 @@ iOS
 
 ## onPropositionsUpdate
 
-This API registers a permanent callback which is invoked whenever the Edge extension dispatches a response event received from the Experience Edge Network upon a personalization query. Additionally, the callback is invoked only if the response event payload has at least one proposition with valid, non-empty offers. The personalization query requests can be triggered by the `updatePropositions` API.
+This API registers a permanent callback which is invoked whenever the Edge extension dispatches a response event received from the Experience Edge Network upon a personalization query. Additionally, the callback is only invoked if the response event payload has at least one proposition with valid, non-empty offers. The personalization query requests can be triggered by the `updatePropositions` API.
 
 <InlineAlert variant="warning" slots="text"/>
 
