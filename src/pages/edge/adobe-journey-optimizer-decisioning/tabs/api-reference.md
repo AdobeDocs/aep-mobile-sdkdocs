@@ -253,7 +253,7 @@ Optimize.onPropositionsUpdate(new AdobeCallback<Map<DecisionScope, OptimizePropo
 static func onPropositionsUpdate(perform action: @escaping ([DecisionScope: OptimizeProposition]?) -> Void)
 ```
 
-* _action_ is invoked with propositions dictionary of type `[DecisionScope: OptimizeProposition]`. Errors and empty response for personalization queries are **not** passed back in _action_.
+* _action_ is invoked with propositions dictionary of type `[DecisionScope: OptimizeProposition]`. Errors and empty responses for personalization queries are **not** passed back in _action_.
 
 #### Example
 
@@ -273,7 +273,7 @@ Optimize.onPropositionsUpdate { propositionsDict in
 + (void) onPropositionsUpdate: (void (^ _Nonnull)(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* _Nullable)) action;
 ```
 
-* _action_ is invoked with propositions dictionary of type `NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>`. Errors and empty response for personalization queries are **not** passed back in _action_.
+* _action_ is invoked with propositions dictionary of type `NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>`. Errors and empty responses for personalization queries are **not** passed back in _action_.
 
 #### Example
 
