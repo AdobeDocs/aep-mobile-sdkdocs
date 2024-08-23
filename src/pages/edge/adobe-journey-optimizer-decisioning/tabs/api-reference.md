@@ -228,17 +228,12 @@ AEPDecisionScope* decisionScope2 = [[AEPDecisionScope alloc] initWithName: @"myS
 public static void onPropositionsUpdate(final AdobeCallback<Map<DecisionScope, OptimizeProposition>> callback)
 ```
 
-* _callback_ `call` method is invoked with propositions map of type `Map<DecisionScope, OptimizeProposition>`. If the callback is an instance of `AdobeCallbackWithError`, and if the operation times out or an error occurs in retrieving propositions, the `fail` method is invoked with the appropriate `AdobeError`.
+* _callback_ `call` method is invoked with propositions map of type `Map<DecisionScope, OptimizeProposition>`. Errors and empty response for a personalization query are **not** passed back in the `call` method.
 
 #### Example
 
 ```java
-Optimize.onPropositionsUpdate(new AdobeCallbackWithError<Map<DecisionScope, OptimizeProposition>>() {
-    @Override
-    public void fail(final AdobeError adobeError) {
-        // handle error
-    }
-
+Optimize.onPropositionsUpdate(new AdobeCallback<Map<DecisionScope, OptimizeProposition>>() {
     @Override
     public void call(final Map<DecisionScope, OptimizeProposition> propositionsMap) {
         if (propositionsMap != null && !propositionsMap.isEmpty()) {
@@ -258,7 +253,7 @@ Optimize.onPropositionsUpdate(new AdobeCallbackWithError<Map<DecisionScope, Opti
 static func onPropositionsUpdate(perform action: @escaping ([DecisionScope: OptimizeProposition]?) -> Void)
 ```
 
-* _action_ is invoked with propositions dictionary of type `[DecisionScope: OptimizeProposition]`.
+* _action_ is invoked with propositions dictionary of type `[DecisionScope: OptimizeProposition]`. Errors and empty response for a personalization query are **not** passed back in _action_.
 
 #### Example
 
@@ -278,7 +273,7 @@ Optimize.onPropositionsUpdate { propositionsDict in
 + (void) onPropositionsUpdate: (void (^ _Nonnull)(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* _Nullable)) action;
 ```
 
-* _action_ is invoked with propositions dictionary of type `NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>`.
+* _action_ is invoked with propositions dictionary of type `NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>`. Errors and empty response for a personalization query are **not** passed back in _action_.
 
 #### Example
 
