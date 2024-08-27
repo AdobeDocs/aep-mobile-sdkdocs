@@ -27,10 +27,12 @@ In the Assurance interface, users can customize the plugin views they frequently
 To add a view in the Assurance UI, follow these steps:
 
 1. From the left navigation menu, select **Configure** at the bottom left of the window.
+
+![show configure button in the view](../assets/validation/configure-button.png)
+
 2. Add the desired view.
 3. Select **Save** to apply the changes.
 
-![show configure button in the view](../assets/validation/configure-button.png)
 ![show save button in the view](../assets/validation/save-button.png)
 
 ## Review the Configuration Viewer
