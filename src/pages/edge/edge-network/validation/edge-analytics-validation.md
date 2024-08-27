@@ -89,18 +89,3 @@ Moreover, you can use the **Copy Data** button available in each detailed event 
 
 ## Additional Debugging Steps
 If the above debugging steps do not resolve the issue, consider checking the [datastream setup](https://github.com/adobe/aepsdk-edge-ios/blob/main/Documentation/Tutorials/edge-send-event-tutorial.md#2-create-a-datastream) in the Data Collection UI.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
