@@ -14,7 +14,7 @@ This document outlines the push templates that are supported by default.
 
 <InlineAlert variant="info" slots="text"/>
 
-This functionality is supported starting Campaign v8.7. Default push template functionality is available for use with the **Adobe Campaign Classic** extension. 
+This functionality is supported starting Campaign v8. Default push template functionality is available for use with the **Adobe Campaign Classic** extension. 
 
 This is supported by **Android SDK version 3.1.0+** and **iOS SDK version 5.0.0+**.
 
