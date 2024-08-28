@@ -92,8 +92,8 @@ public class MobileApp extends Application {
       MobileCore.registerExtensions(
          Arrays.asList(
             Edge.EXTENSION, 
-            com.adobe.marketing.mobile.Identity.EXTENSION,
-            com.adobe.marketing.mobile.edge.identity.Identity.EXTENSION
+            com.adobe.marketing.mobile.edge.identity.Identity.EXTENSION,
+            com.adobe.marketing.mobile.Identity.EXTENSION
             ),
          o -> Log.debug("MobileApp", "MobileApp", "Adobe Experience Platform Mobile SDK initialized.")
        );
