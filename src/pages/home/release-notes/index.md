@@ -7,6 +7,12 @@ Keywords:
 
 # Release notes
 
+## August 28, 2024
+
+### iOS Messaging 5.3.0-beta
+
+* Multiple updates made to support the release of out-of-the-box Content Card templates - coming soon via the new `AEPSwiftUI` library.
+
 ## August 20, 2024
 
 ### Android BOM 3.3.0
