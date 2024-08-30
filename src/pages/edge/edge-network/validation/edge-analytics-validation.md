@@ -41,7 +41,7 @@ Add the **Configuration Viewer** to the left navigation menu in Assurance. This 
 
 ![Configuration viewer in the Assurance interface](../assets/validation/configuration-view.png)
 
-### Inspect the Extension Versions view
+## Inspect the Extension Versions view
 
 Add the **Extension Versions** view to the left navigation menu in Assurance. This view allows you to check which Mobile SDK extensions are in use and their respective version numbers. Verify that all extensions are up-to-date or at the desired versions. 
 
@@ -93,6 +93,6 @@ Use the **Copy Data** button in each detailed event view to copy data in JSON fo
 
 ![Validation view in the Assurance interface](../assets/validation/analytics-event-validations.png)
 
-### Additional debugging steps
+## Additional debugging steps
 
 If the previous steps do not resolve the issue, review the [datastream setup](https://github.com/adobe/aepsdk-edge-ios/blob/main/Documentation/Tutorials/edge-send-event-tutorial.md#2-create-a-datastream) in the Data Collection UI.
