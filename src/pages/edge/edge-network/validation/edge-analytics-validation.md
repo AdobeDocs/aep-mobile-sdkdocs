@@ -1,98 +1,98 @@
 ---
-title: Adobe Experience Platform Edge Network Analytics Troubleshooting Guide
-description: A troubleshooting guide for debugging Analytics event with Edge Network
+title: Adobe Experience Platform Edge Network Analytics Validation Guide
+description: A guide for validating Analytics events with Edge Network
 keywords:
 - Edge Network
-- Guide
+- Troubleshooting Validation Guide
 - Analytics
 - Assurance
 ---
 
-# Troubleshooting Analytics Data with Adobe Experience Platform Edge Network and Assurance
+# Validating the Adobe Experience Platform Edge Network to Analytics workflow with Assurance
 
-Ensuring that analytics data is correctly sent and received is important for working with the Adobe Experience Platform Edge Network extension. This document will guide you through common process of using Adobe Assurance to troubleshoot and verify your analytics data.
+This guide outlines the steps for using Adobe Experience Platform Assurance to validate the data flow from Edge Network to Analytics.
 
-## Get started with Assurance
+## Getting started with Assurance
 
-If you haven't installed Assurance yet, an advanced tool for inspecting and validating your mobile app data, follow these steps:
+Assurance is an advanced tool for inspecting and validating mobile app data. To get started, follow these steps:
 
-1. Begin by following the instructions for [using Assurance](https://experienceleague.adobe.com/docs/experience-platform/assurance/user-access.html).
+1. Follow the instructions for [user access to Assurance](https://experienceleague.adobe.com/docs/experience-platform/assurance/user-access.html).
 2. [Install and register the Assurance extension](../../home/base/assurance/index.md) in your mobile app.
-3. Follow the same document for [connecting to an Assurance session](../../home/base/assurance/index.md#connect-to-an-assurance-session).
+3. Refer to the same document for [connecting to an Assurance session](../../home/base/assurance/index.md#connect-to-an-assurance-session).
 
 ## Assurance plugin views
 
-In the Assurance interface, users can customize the plugin views they frequently use by enabling them in the left navigation menu. This allows for a tailored experience, ensuring that the most relevant tools are readily accessible during sessions.
+In the Assurance interface, users can customize the plugin views they frequently use by enabling them in the left navigation menu. This allows for a personalized experience, making the most relevant tools easily accessible during sessions.
 
 To add a view in the Assurance UI, follow these steps:
 
-1. From the left navigation menu, select **Configure** at the bottom left of the window.
+1. In the left navigation menu, select **Configure** at the bottom left corner of the window.
 
-![show configure button in the view](../assets/validation/configure-button.png)
+![Configure button in the view](../assets/validation/configure-button.png)
 
-2. Add the desired view.
+2. Add the desired view from the available options.
 3. Select **Save** to apply the changes.
 
-![show save button in the view](../assets/validation/save-button.png)
+![Save button in the view](../assets/validation/save-button.png)
 
 ## Review the Configuration Viewer
 
-Add the **Configuration Viewer** to the left navigate menu in the Assurance. This view displays the **Tag property** settings configured in the Data Collection UI for the app. For an Edge Network session, ensure that the **edge.configId** is pointing to the correct datastream ID and that the **edge.domain** value is properly set, along with other expected configuration settings.
+Add the **Configuration Viewer** to the left navigation menu in Assurance. This view displays the **Tag property** settings configured in Data Collection UI for the app. For an Edge Network session, verify that the **edge.configId** is pointing to the correct datastream ID and that the **edge.domain** value is set correctly, along with other expected configuration settings.
 
 ![Configuration viewer in the Assurance interface](../assets/validation/configuration-view.png)
 
-## Inspect the Extension Versions View
+## Inspect the Extension Versions view
 
-Add the **Extension Versions** View to the left navigation menu in Assurance. This view allows you to verify which Mobile SDK extensions are being used and their respective version numbers. Ensure that all extensions are up-to-date or at the desired versions.
+Add the **Extension Versions** view to the left navigation menu in Assurance. This view allows you to check which Mobile SDK extensions are in use and their respective version numbers. Verify that all extensions are up-to-date or at the desired versions. 
 
-If you see a missing extension or the wrong version of an extension, you need to check your Mobile SDK registration implementation in the client app.
+If an extension is missing or has an incorrect version, review your Mobile SDK registration implementation in the client app.
 
 ![Extension view in the Assurance interface](../assets/validation/extension-view.png)
 
-Depending on the method you are using to send analytics data through the Edge Network, please verify the following extensions:
+Depending on the method you are using to send Analytics data through Edge Network, verify the presence of the following extensions:
 
-1. If using Edge.sendEvent:
+1. **If using `Edge.sendEvent`:**
 
-* Check for: Edge Extension, Edge Identity Extension, Mobile Core Extension
-* Optional: Consent Extension, Lifecycle Extension
+   * Required: Core Extension, Edge Extension, Edge Identity Extension
+   * Optional: Consent Extension, Lifecycle Extension
 
-2. If using MobileCore.trackAction or MobileCore.trackState:
+2. **If using `MobileCore.trackAction` or `MobileCore.trackState`:**
 
-* Check for: Edge Bridge Extension, Edge Extension, Edge Identity Extension, Mobile Extension
-* Optional: Consent Extension, Lifecycle Extension
+   * Required: Core Extension, Edge Bridge Extension, Edge Extension, Edge Identity Extension
+   * Optional: Consent Extension, Lifecycle Extension
 
-Refer to this [documentation](https://developer.adobe.com/client-sdks/solution/adobe-analytics/migrate-to-edge-network/) for more information on which extension should be used.
+For more details on which extensions to use, refer to the [Adobe Analytics documentation](https://developer.adobe.com/client-sdks/solution/adobe-analytics/migrate-to-edge-network/).
 
-## Validate events with the Analytics Event view
+## Validate events with the Analytics Events view
 
-The [**Analytics Events**](https://experienceleague.adobe.com/en/docs/experience-platform/assurance/view/adobe-analytics-edge) View offers an in-depth look at SDK events, assisting users in debugging and validating their events. It features a detailed panel that explains how each event was processed, from the client SDK to the Analytics Service.
+The [**Analytics Events**](https://experienceleague.adobe.com/en/docs/experience-platform/assurance/view/adobe-analytics-edge) view provides an in-depth look at SDK events, helping users debug and validate their events. It includes a detailed panel that shows how each event was processed, from the client SDK to the Analytics service.
 
-//TO DO Add screenshot when the new Analytics Event is released.
+//TODO: Add screenshot when the new Analytics Event view is released.
 
-Let’s walk through an example of how you can use this view to debug an event.
+Review the example below to learn how to debug an event using this view.
 
-1. **Locate the Event**: Find the event in question within the list of SDK events.
-2. **Open the Details Panel**: Click on the event to open the detailed panel.
-3. **Check Post-Processed Data**: Look at the last event in the chain of events, labeled “POST-PROCESSED DATA.” If the assigned data is present there, it confirms that the data has been correctly passed to Analytics.
+1. **Locate the event**: Identify the event within the list of SDK events.
+2. **Open the details panel**: Select the event to open the detailed information panel.
+3. **Check post-processed data**: Review the final event in the event chain, labeled "POST-PROCESSED DATA." Presence of the assigned data confirms that the data was correctly passed to Analytics.
 
-![The screenshow shows the context data sends to Post-processed data succcessfully](../assets/validation/edge-bridge-success.png)
+![Context data is successfully sent to post-processed data](../assets/validation/edge-bridge-success.png)
 
-4. **Review the chain of events**: If the “POST-PROCESSED DATA” event is missing or the expected data isn’t there, examine the chain of the events to understand how the events were processed. Debug the issue by following the events from the client SDK to the Analytics platform.
+4. **Review the chain of events**: If the "POST-PROCESSED DATA" event is missing or the expected data is not present, analyze the chain of events to understand the processing flow. Debug issues by tracing the events from the client SDK to the Analytics platform.
 
-![The screenshow shows Edge Bridge Event has wrong data format](../assets/validation/edge-bridge-fail.png)
+![Edge Bridge event contains incorrect data format](../assets/validation/edge-bridge-fail.png)
 
-In this Edge Bridge Example, when checking the Edge Bridge Request event, the contextdata does not match the proper format as specified in the latest Edge Bridge Extension version. This mismatch could be the main reason causing the data not show to the Post-processed data event.
+In this Edge Bridge example, inspection of the Edge Bridge Request event reveals that the `contextdata` does not match the format expected in the latest Edge Bridge Extension version. This mismatch may be the primary cause of data not appearing in the post-processed data event.
 
-For learning the proper Edge Bridge Event format, please refer to the [Edge Bridge data format documentation](https://github.com/adobe/aepsdk-edgebridge-ios/blob/main/Documentation/data-format.md#examples).
+For details on the correct Edge Bridge event format, refer to the [Edge Bridge data format documentation](https://github.com/adobe/aepsdk-edgebridge-ios/blob/main/Documentation/data-format.md#examples).
 
-Moreover, you can use the **Copy Data** button available in each detailed event view to copy the data in JSON format for further review. For example, with the **Analytics Hit** event, it is easier to view its **kvdata** in this format.
+Use the **Copy Data** button in each detailed event view to copy data in JSON format for further review. For instance, in the **Analytics Hit** event, this feature provides a view of **kvdata** in JSON format.
 
-![Screenshot to show the Analytics hits event Copy Data button location](../assets/validation/analytics-hit-copy-data.png)
+![Analytics Hit event Copy Data button location](../assets/validation/analytics-hit-copy-data.png)
 
-5. **Verify using the Analytics validation view**: Click the **Validations** tab to discover for any errors.
+5. **Verify using the Analytics validation view**: Select the **Validations** tab to identify any errors.
 
-![Extension view in the Assurance interface](../assets/validation/analytices-event-validations.png)
+![Validation view in the Assurance interface](../assets/validation/analytics-event-validations.png)
 
-## Additional Debugging Steps
+## Additional debugging steps
 
-If the above debugging steps do not resolve the issue, consider checking the [datastream setup](https://github.com/adobe/aepsdk-edge-ios/blob/main/Documentation/Tutorials/edge-send-event-tutorial.md#2-create-a-datastream) in the Data Collection UI.
+If the previous steps do not resolve the issue, review the [datastream setup](https://github.com/adobe/aepsdk-edge-ios/blob/main/Documentation/Tutorials/edge-send-event-tutorial.md#2-create-a-datastream) in the Data Collection UI.
