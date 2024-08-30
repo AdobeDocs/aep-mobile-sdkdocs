@@ -44,6 +44,7 @@ Add the **Configuration Viewer** to the left navigate menu in the Assurance. Thi
 ## Inspect the Extension Versions View
 
 Add the **Extension Versions** View to the left navigation menu in Assurance. This view allows you to verify which Mobile SDK extensions are being used and their respective version numbers. Ensure that all extensions are up-to-date or at the desired versions.
+
 If you see a missing extension or the wrong version of an extension, you need to check your Mobile SDK registration implementation in the client app.
 
 ![Extension view in the Assurance interface](../assets/validation/extension-view.png)
@@ -60,7 +61,7 @@ Depending on the method you are using to send analytics data through the Edge Ne
 * Check for: Edge Bridge Extension, Edge Extension, Edge Identity Extension, Mobile Extension
 * Optional: Consent Extension, Lifecycle Extension
 
-Refer to this [documentation](https://developer.adobe.com/client-sdks/solution/adobe-analytics/migrate-to-edge-network/) to learn more about which extension should be used.
+Refer to this [documentation](https://developer.adobe.com/client-sdks/solution/adobe-analytics/migrate-to-edge-network/) for more information on which extension should be used.
 
 ## Validate events with the Analytics Event view
 
@@ -80,9 +81,9 @@ Let’s walk through an example of how you can use this view to debug an event.
 
 ![The screenshow shows Edge Bridge Event has wrong data format](../assets/validation/edge-bridge-fail.png)
 
-In this Edge Bridge Example, when checking the Edge Bridge Request event, the contextdata does not match the proper format as specified in the latest Edge Bridge Extension version. We suspect this mismatch could be the main reason causing the data not show to the Post-processed data event.
+In this Edge Bridge Example, when checking the Edge Bridge Request event, the contextdata does not match the proper format as specified in the latest Edge Bridge Extension version. This mismatch could be the main reason causing the data not show to the Post-processed data event.
 
-For learning the proper Edge Bridge Event format , please refer to the [Edge Bridge data format documentation](https://github.com/adobe/aepsdk-edgebridge-ios/blob/main/Documentation/data-format.md#examples).
+For learning the proper Edge Bridge Event format, please refer to the [Edge Bridge data format documentation](https://github.com/adobe/aepsdk-edgebridge-ios/blob/main/Documentation/data-format.md#examples).
 
 Moreover, you can use the **Copy Data** button available in each detailed event view to copy the data in JSON format for further review. For example, with the **Analytics Hit** event, it is easier to view its **kvdata** in this format.
 
