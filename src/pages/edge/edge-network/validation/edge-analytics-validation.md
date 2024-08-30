@@ -14,7 +14,7 @@ This guide outlines the steps for using Adobe Experience Platform Assurance to v
 
 ## Getting started with Assurance
 
-If you haven't installed Assurance, an advanced tool for inspecting and validating your mobile app data, follow the steps below:
+Assurance is an advanced tool for inspecting and validating mobile app data. To get started, follow these steps:
 
 1. Follow the instructions for [user access to Assurance](https://experienceleague.adobe.com/docs/experience-platform/assurance/user-access.html).
 2. [Install and register the Assurance extension](../../home/base/assurance/index.md) in your mobile app.
@@ -41,7 +41,7 @@ Add the **Configuration Viewer** to the left navigation menu in Assurance. This 
 
 ![Configuration viewer in the Assurance interface](../assets/validation/configuration-view.png)
 
-### Inspect the extension versions view
+### Inspect the Extension Versions view
 
 Add the **Extension Versions** view to the left navigation menu in Assurance. This view allows you to check which Mobile SDK extensions are in use and their respective version numbers. Verify that all extensions are up-to-date or at the desired versions. 
 
