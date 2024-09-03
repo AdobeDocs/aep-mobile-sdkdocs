@@ -8,6 +8,8 @@ keywords:
 - Assurance
 ---
 
+import Tabs from './tabs/edge-analytics-validation.md'
+
 # Validating the Adobe Experience Platform Edge Network to Analytics workflow with Assurance
 
 This guide outlines the steps for using Adobe Experience Platform Assurance to validate the data flow from Edge Network to Analytics.
@@ -43,7 +45,7 @@ Add the **Configuration Viewer** to the left navigation menu in Assurance. This 
 
 ## Inspect the Extension Versions view
 
-Add the **Extension Versions** view to the left navigation menu in Assurance. This view allows you to check which Mobile SDK extensions are in use and their respective version numbers. Verify that all extensions are up-to-date or at the desired versions. 
+Add the **Extension Versions** view to the left navigation menu in Assurance. This view allows you to check which Mobile SDK extensions are in use and their respective version numbers. Verify that all extensions are up-to-date or at the desired versions.
 
 If an extension is missing or has an incorrect version, review your Mobile SDK registration implementation in the client app.
 
@@ -51,21 +53,21 @@ If an extension is missing or has an incorrect version, review your Mobile SDK r
 
 Depending on the method you are using to send Analytics data through Edge Network, verify the presence of the following extensions:
 
-1. **If using `Edge.sendEvent`:**
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-   * Required: Core Extension, Edge Extension, Edge Identity Extension
-   * Optional: Consent Extension, Lifecycle Extension
+Edge.sendEvent
 
-2. **If using `MobileCore.trackAction` or `MobileCore.trackState`:**
+<Tabs query="api=sendevent&task=extension-validation"/>
 
-   * Required: Core Extension, Edge Bridge Extension, Edge Extension, Edge Identity Extension
-   * Optional: Consent Extension, Lifecycle Extension
+MobileCore.trackAction/trackState
+
+<Tabs query="api=trackapi&task=extension-validation"/>
 
 For more details on which extensions to use, refer to the [Adobe Analytics documentation](https://developer.adobe.com/client-sdks/solution/adobe-analytics/migrate-to-edge-network/).
 
 ## Validate events with the Analytics Events view
 
-The [**Analytics Events**](https://experienceleague.adobe.com/en/docs/experience-platform/assurance/view/adobe-analytics-edge) view provides an in-depth look at SDK events, helping users debug and validate their events. It includes a detailed panel that shows how each event was processed, from the client SDK to the Analytics service.
+The [**Analytics Events**](https://experienceleague.adobe.com/en/docs/experience-platform/assurance/view/adobe-analytics) view provides an in-depth look at SDK events, helping users debug and validate their events. It includes a detailed panel that shows how each event was processed, from the client SDK to the Analytics service.
 
 //TODO: Add screenshot when the new Analytics Event view is released.
 
