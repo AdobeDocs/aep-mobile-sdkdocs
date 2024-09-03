@@ -21,4 +21,3 @@ Core Extension, Edge Extension, Edge Identity Extension, Edge Bridge Extension
 #### Optional Extensions
 
 Consent Extension, Lifecycle Extension
-
