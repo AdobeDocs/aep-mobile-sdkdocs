@@ -9,6 +9,12 @@ keywords:
 
 # Release notes
 
+## August 28, 2024
+
+### iOS Messaging 5.3.0-beta
+
+
+
 ## August 19, 2024
 
 ### Android Messaging 3.2.0
