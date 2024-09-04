@@ -9,6 +9,14 @@ keywords:
 
 # Release notes
 
+## September 3, 2024
+
+### iOS Messaging 5.3.0
+
+* Two updates made to support out-of-the-box Content Card templates, coming soon via the new `AEPSwiftUI` library:
+  * Writes a disqualify event to event history when a content card is dismissed
+  * Removes dismissed content card from in-memory container holding qualified content cards
+
 ## August 19, 2024
 
 ### Android Messaging 3.2.0
