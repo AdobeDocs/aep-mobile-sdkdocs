@@ -9,7 +9,7 @@ Keywords:
 
 ## September 4, 2024
 
-### iOS Notification Content Extension 5.1.0-beta
+### AEPSwiftUI 5.1.0-beta
 
 Initial release of `AEPSwiftUI` framework for Adobe Experience Platform Mobile SDKs on iOS. The `AEPSwiftUI` framework provides out-of-the-box UI components for use with Adobe Journey Optimizer content cards.
 
@@ -146,7 +146,7 @@ The first release includes a single template - [SmallImageTemplate](https://gith
 
 ### Android Assurance 3.0.3
 
-* Removed `app_name` string resource to prevent conflicts with resources defined by the app. 
+* Removed `app_name` string resource to prevent conflicts with resources defined by the app.
 
 ## August 12, 2024
 
