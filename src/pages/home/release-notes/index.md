@@ -146,7 +146,7 @@ The first release includes a single template - [SmallImageTemplate](https://gith
 
 ### Android Assurance 3.0.3
 
-* Removed `app_name` string resource to prevent conflicts with resources defined by the app. 
+* Removed `app_name` string resource to prevent conflicts with resources defined by the app.
 
 ## August 12, 2024
 
