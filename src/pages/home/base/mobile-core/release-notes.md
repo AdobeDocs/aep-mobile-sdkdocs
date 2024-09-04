@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## September 3, 2024
+
+### Android Core 3.1.2
+
+* Added screen reader support for in-app messages.
+
 ## July 19, 2024
 
 ### Android Core 3.1.1
