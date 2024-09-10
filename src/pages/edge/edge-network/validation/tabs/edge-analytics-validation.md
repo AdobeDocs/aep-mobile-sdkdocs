@@ -10,7 +10,7 @@ Core Extension, Edge Extension, Edge Identity Extension
 
 #### Optional Extensions
 
-Consent Extension, Lifecycle Extensio
+Consent Extension, Lifecycle Extension
 
 <Variant api="trackapi" task="extension-validation" repeat="4"/>
 

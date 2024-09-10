@@ -3,7 +3,7 @@ title: Adobe Experience Platform Edge Network Analytics Validation Guide
 description: A guide for validating Analytics events with Edge Network
 keywords:
 - Edge Network
-- Troubleshooting Validation Guide
+- Validation Guide
 - Analytics
 - Assurance
 ---
@@ -19,8 +19,8 @@ This guide outlines the steps for using Adobe Experience Platform Assurance to v
 Assurance is an advanced tool for inspecting and validating mobile app data. To get started, follow these steps:
 
 1. Follow the instructions for [user access to Assurance](https://experienceleague.adobe.com/docs/experience-platform/assurance/user-access.html).
-2. [Install and register the Assurance extension](../../home/base/assurance/index.md) in your mobile app.
-3. Refer to the same document for [connecting to an Assurance session](../../home/base/assurance/index.md#connect-to-an-assurance-session).
+2. [Install and register the Assurance extension](../../../home/base/assurance/index.md) in your mobile app.
+3. Refer to the same document for [connecting to an Assurance session](../../../home/base/assurance/index.md#connect-to-an-assurance-session).
 
 ## Assurance plugin views
 
@@ -69,7 +69,7 @@ For more details on which extensions to use, refer to the [Adobe Analytics docum
 
 The [**Analytics Events**](https://experienceleague.adobe.com/en/docs/experience-platform/assurance/view/adobe-analytics) view provides an in-depth look at SDK events, helping users debug and validate their events. It includes a detailed panel that shows how each event was processed, from the client SDK to the Analytics service.
 
-//TODO: Add screenshot when the new Analytics Event view is released.
+![event datailed panel view](../assets/validation/detailed-panel.png)
 
 Review the example below to learn how to debug an event using this view.
 
@@ -81,9 +81,15 @@ Review the example below to learn how to debug an event using this view.
 
 4. **Review the chain of events**: If the "POST-PROCESSED DATA" event is missing or the expected data is not present, analyze the chain of events to understand the processing flow. Debug issues by tracing the events from the client SDK to the Analytics platform.
 
-![Edge Bridge event contains incorrect data format](../assets/validation/edge-bridge-fail.png)
-
 In this Edge Bridge example, inspection of the Edge Bridge Request event reveals that the `contextdata` does not match the format expected in the latest Edge Bridge Extension version. This mismatch may be the primary cause of data not appearing in the post-processed data event.
+
+**Older version Edge Bridge Reqest format**
+
+![Edge Bridge event contains incorrect data format](../assets/validation/invalid-edge-bridge-format.png)
+
+**Latest version Edge Bridge Reqest format**
+
+![Edge Bridge event contains correct data format](../assets/validation/valid-edge-bridge-format.png)
 
 For details on the correct Edge Bridge event format, refer to the [Edge Bridge data format documentation](https://github.com/adobe/aepsdk-edgebridge-ios/blob/main/Documentation/data-format.md#examples).
 

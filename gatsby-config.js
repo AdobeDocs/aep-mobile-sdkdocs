@@ -139,7 +139,7 @@ module.exports = {
                                         path: "/edge/edge-network/validation/validation"
                                     },
                                     {
-                                        title: "Troubleshooting Analytics Data",
+                                        title: "Analytics data validation",
                                         path: "/edge/edge-network/validation/edge-analytics-validation"
                                     }
                                 ]
