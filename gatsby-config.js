@@ -132,7 +132,18 @@ module.exports = {
                             },
                             {
                                 title: "Validation",
-                                path: "/edge/edge-network/validation"
+                                path: "/edge/edge-network/validation",
+                                pages: [
+                                    {
+                                        title: "Validation",
+                                        path: "/edge/edge-network/validation/validation"
+                                    },
+                                    {
+                                        title: "Analytics data validation",
+                                        path: "/edge/edge-network/validation/edge-analytics-validation"
+                                    }
+                                ]
+
                             },
                             {
                                 title: "Tutorials",
