@@ -220,7 +220,7 @@ function standardizeExtensionName(extensionName) {
             return EXTENSION_ENUM.CAMPAIGN_CLASSIC;
         case extensionName.includes("campaign"):
             return EXTENSION_ENUM.CAMPAIGN_STANDARD;
-        case extensionName === "notificationcontent":
+        case extensionName === "ui":
             return EXTENSION_ENUM.NOTIFICATION_CONTENT;
         case extensionName === "notificationbuilder":
             return EXTENSION_ENUM.NOTIFICATION_BUILDER;
