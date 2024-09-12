@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## September 10, 2024
+
+### Android Campaign Classic 3.1.2
+
+* Update notification builder dependency to 3.0.2 to resolve an issue with push template dismiss actions.
+
 ## August 20, 2024
 
 ### Android Campaign Classic 3.1.1

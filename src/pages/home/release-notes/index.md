@@ -7,6 +7,17 @@ Keywords:
 
 # Release notes
 
+## September 10, 2024
+
+### Android Campaign Classic 3.1.2
+
+* Update notification builder dependency to 3.0.2 to resolve an issue with push template dismiss actions.
+
+### Android Notification Builder 3.0.2
+
+* Add `aep` prefix to notification builder string resources to prevent conflicts with resources defined by the app.
+*  Fix intent actions to allow tracker activities to correctly handle received intents.
+
 ## September 4, 2024
 
 ### AEPSwiftUI 5.1.0-beta
