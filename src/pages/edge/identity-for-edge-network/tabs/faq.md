@@ -4,7 +4,7 @@ noIndex: true
 
 import Alerts from '/src/pages/resources/alerts.md'
 
-<Variant platform="android" task="download" repeat="5"/>
+<Variant platform="android" task="download" repeat="8"/>
 
 1. Add the Mobile Core and Edge extensions to your project using the app's Gradle file.
 
