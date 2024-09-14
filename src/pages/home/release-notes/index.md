@@ -7,6 +7,12 @@ Keywords:
 
 # Release notes
 
+## September 13, 2024
+
+### Roku SDK 1.3.0
+
+
+
 ## September 12, 2024
 
 ### Android BOM 3.3.2
