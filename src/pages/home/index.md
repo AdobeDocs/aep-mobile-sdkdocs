@@ -13,7 +13,7 @@ Welcome to the home of Adobe Experience Platform Mobile SDK documentation.
 
 Good to go for iOS 18
 
-The latest versions of the Adobe Experience Platform SDK for iOS (Swift and Objective-C) are tested for compatibility with the release version Apple iOS 18. See [Current SDK Versions](./current-sdk-versions.md) to find our latest SDK versions, or [release notes](./release-notes/index.md) for information on changes and updates.
+The latest versions of the Adobe Experience Platform SDK for iOS (Swift and Objective-C) are tested for compatibility with the release version of Apple iOS 18. See [Current SDK Versions](./current-sdk-versions.md) to find our latest SDK versions, or [release notes](./release-notes/index.md) for information on changes and updates.
 
 <InlineAlert variant="info" slots="text"/>
 
