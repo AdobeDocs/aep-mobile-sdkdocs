@@ -12,11 +12,13 @@ Keywords:
 ### Roku SDK 1.3.0
 
 #### Consent Support
-- The SDK now allows [configuring default consent](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/api-reference.md#configure-default-consent).
-- Added a [setConsent](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/api-reference.md#setconsent) API for collecting user consent preferences.
+
+* The SDK now allows [configuring default consent](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/api-reference.md#configure-default-consent).
+* Added a [setConsent](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/api-reference.md#setconsent) API for collecting user consent preferences.
 
 #### Other Changes
-- Adds support for persisting the `locationHint` and other states returned by the Edge Network, using them to enhance the user experience by ensuring more consistent routing and improved session continuity.
+
+* Adds support for persisting the `locationHint` and other states returned by the Edge Network, using them to enhance the user experience by ensuring more consistent routing and improved session continuity.
 
 ## September 12, 2024
 
