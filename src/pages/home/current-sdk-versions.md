@@ -58,7 +58,7 @@ The Android BOM (Bill of Materials) artifact has been released to Maven Central.
 | [Adobe Campaign Classic](../solution/adobe-campaign-classic/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/campaignclassic.svg?logo=android&logoColor=white&label=campaignclassic&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/campaignclassic) | [GitHub](https://github.com/adobe/aepsdk-campaignclassic-android) | [Test app](https://github.com/adobe/aepsdk-campaignclassic-android/tree/main/code/testapp) |
 | [Adobe Audience Manager](../solution/adobe-audience-manager/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/audience.svg?logo=android&logoColor=white&label=audience&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/audience) | [GitHub](https://github.com/adobe/aepsdk-audience-android) | [Test app](https://github.com/adobe/aepsdk-audience-android/tree/main/code/app) |
 | Adobe Analytics - Mobile Services | Not supported | | |
-| Places Monitor | Deprecated | | |
+| Places Monitor | Not supported | | |
 
 ## iOS
 
@@ -94,7 +94,7 @@ Starting May 7th, 2024, our iOS releases will include signed XCFrameworks. Addit
 | [Adobe Campaign Classic](../solution/adobe-campaign-classic/index.md) |   |   | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-campaignclassic-ios.svg?label=AEPCampaignClassic&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPCampaignClassic) | [GitHub](https://github.com/adobe/aepsdk-campaignclassic-ios) | [Test app](https://github.com/adobe/aepsdk-campaignclassic-ios/tree/main/TestApp) |
 | [Adobe Audience Manager](../solution/adobe-audience-manager/index.md) |   |   | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-audience-ios.svg?label=AEPAudience&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPAudience) | [GitHub](https://github.com/adobe/aepsdk-audience-ios) | [Test app](https://github.com/adobe/aepsdk-audience-ios/tree/main/AudienceSampleApp) |
 | Adobe Analytics - Mobile Services | | Not supported | | | |
-| Places Monitor | | Deprecated | | | |
+| Places Monitor | | Not supported | | | |
 
 ## React Native
 
@@ -126,11 +126,8 @@ If you are currently using the ACP-prefixed React Native libraries, please see [
 | [Places Service](../solution/places/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepplaces.svg?color=green&label=%40adobe%2Freact-native-aepplaces&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepplaces) |
 | [Adobe Target](../solution/adobe-target/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aeptarget.svg?color=green&label=%40adobe%2Freact-native-aeptarget&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aeptarget) |
 | [Adobe Campaign Classic](../solution/adobe-campaign-classic/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepcampaignclassic.svg?color=green&label=%40adobe%2Freact-native-aepcampaignclassic&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepcampaignclassic) |
-| Adobe Analytics| Not Supported - Analytics workflows supported through Edge or Edge Bridge extensions, see [guide to migrate to Edge Network](../solution/adobe-analytics/migrate-to-edge-network.md). |
-| Adobe Analytics - Media Analytics for Audio & Video| Not Supported  |
-| Adobe Audience Manager| Not Supported  |
-| Adobe Campaign Standard| Not Supported  |
-| Place Monitor| Deprecated |
+
+Please note that the Adobe Analytics extension is not supported in AEP-prefixed React Native libraries, the Analytics workflows are now supported through Edge or Edge Bridge extensions, see the [guide to migrate to Edge Network](../solution/adobe-analytics/migrate-to-edge-network.md).
 
 ## Flutter
 
@@ -154,9 +151,8 @@ If you are currently using the ACP-prefixed Flutter libraries, please see [the g
 | [Consent for Edge Network](../edge/consent-for-edge-network/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgeconsent.svg?label=flutter_aepedgeconsent)](https://pub.dartlang.org/packages/flutter_aepedgeconsent) |
 | [Edge Bridge](../solution/adobe-analytics/migrate-to-edge-network.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgebridge.svg?label=flutter_aepedgebridge)](https://pub.dartlang.org/packages/flutter_aepedgebridge) |
 | [Adobe Journey Optimizer](../edge/adobe-journey-optimizer/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepmessaging.svg?label=flutter_aepmessaging)](https://pub.dev/packages/flutter_aepmessaging) |
-| Adobe Analytics| Not Supported - Analytics workflows supported through Edge or Edge Bridge extensions, see [guide to migrate to Edge Network](../solution/adobe-analytics/migrate-to-edge-network.md). |
-| Place Service | Not Supported  |
-| Place Monitor| Deprecated |
+
+Please note that the Adobe Analytics extension is not supported in AEP-prefixed Flutter libraries, the Analytics workflows are now supported through Edge or Edge Bridge extensions, see the [guide to migrate to Edge Network](../solution/adobe-analytics/migrate-to-edge-network.md).
 
 ## Roku
 
