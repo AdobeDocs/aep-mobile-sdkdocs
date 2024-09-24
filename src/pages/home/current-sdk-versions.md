@@ -146,14 +146,14 @@ If you are currently using the ACP-prefixed Flutter libraries, please see [the g
 
 | Extension | pub.dev |
 |---|---|
-| [Mobile Core](./base/mobile-core/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepcore.svg)](https://pub.dartlang.org/packages/flutter_aepcore) |
-| [Profile](./base/profile/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepuserprofile.svg)](https://pub.dartlang.org/packages/flutter_aepuserprofile) |
-| [Adobe Experience Platform Assurance](./base/assurance/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepassurance.svg)](https://pub.dartlang.org/packages/flutter_aepassurance) |
-| [Adobe Experience Platform Edge Network](../edge/edge-network/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedge.svg)](https://pub.dartlang.org/packages/flutter_aepedge) |
-| [Identity for Edge Network](../edge/identity-for-edge-network/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgeidentity.svg)](https://pub.dartlang.org/packages/flutter_aepedgeidentity) |
-| [Consent for Edge Network](../edge/consent-for-edge-network/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgeconsent.svg)](https://pub.dartlang.org/packages/flutter_aepedgeconsent) |
-| [Edge Bridge](../solution/adobe-analytics/migrate-to-edge-network.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgebridge.svg)](https://pub.dartlang.org/packages/flutter_aepedgebridge) |
-| [Adobe Journey Optimizer](../edge/adobe-journey-optimizer/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepmessaging.svg)](https://pub.dev/packages/flutter_aepmessaging) |
+| [Mobile Core](./base/mobile-core/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepcore.svg?label=flutter_aepcore)](https://pub.dartlang.org/packages/flutter_aepcore) |
+| [Profile](./base/profile/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepuserprofile.svg?label=flutter_aepuserprofile)](https://pub.dartlang.org/packages/flutter_aepuserprofile) |
+| [Adobe Experience Platform Assurance](./base/assurance/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepassurance.svg?label=flutter_aepassurance)](https://pub.dartlang.org/packages/flutter_aepassurance) |
+| [Adobe Experience Platform Edge Network](../edge/edge-network/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedge.svg?label=flutter_aepedge)](https://pub.dartlang.org/packages/flutter_aepedge) |
+| [Identity for Edge Network](../edge/identity-for-edge-network/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgeidentity.svg?label=flutter_aepedgeidentity)](https://pub.dartlang.org/packages/flutter_aepedgeidentity) |
+| [Consent for Edge Network](../edge/consent-for-edge-network/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgeconsent.svg?label=flutter_aepedgeconsent)](https://pub.dartlang.org/packages/flutter_aepedgeconsent) |
+| [Edge Bridge](../solution/adobe-analytics/migrate-to-edge-network.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgebridge.svg?label=flutter_aepedgebridge)](https://pub.dartlang.org/packages/flutter_aepedgebridge) |
+| [Adobe Journey Optimizer](../edge/adobe-journey-optimizer/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepmessaging.svg?label=flutter_aepmessaging)](https://pub.dev/packages/flutter_aepmessaging) |
 | Adobe Analytics| Not Supported - Analytics workflows supported through Edge or Edge Bridge extensions, see [guide to migrate to Edge Network](../solution/adobe-analytics/migrate-to-edge-network.md). |
 | Place Service | Not Supported  |
 | Place Monitor| Deprecated |
