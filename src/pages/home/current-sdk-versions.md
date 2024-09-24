@@ -58,7 +58,7 @@ The Android BOM (Bill of Materials) artifact has been released to Maven Central.
 | [Adobe Campaign Classic](../solution/adobe-campaign-classic/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/campaignclassic.svg?logo=android&logoColor=white&label=campaignclassic&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/campaignclassic) | [GitHub](https://github.com/adobe/aepsdk-campaignclassic-android) | [Test app](https://github.com/adobe/aepsdk-campaignclassic-android/tree/main/code/testapp) |
 | [Adobe Audience Manager](../solution/adobe-audience-manager/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/audience.svg?logo=android&logoColor=white&label=audience&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/audience) | [GitHub](https://github.com/adobe/aepsdk-audience-android) | [Test app](https://github.com/adobe/aepsdk-audience-android/tree/main/code/app) |
 | Adobe Analytics - Mobile Services | Not supported | | |
-| Places Monitor | Deprecated | | |
+| Places Monitor | Not supported | | |
 
 ## iOS
 
@@ -94,7 +94,7 @@ Starting May 7th, 2024, our iOS releases will include signed XCFrameworks. Addit
 | [Adobe Campaign Classic](../solution/adobe-campaign-classic/index.md) |   |   | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-campaignclassic-ios.svg?label=AEPCampaignClassic&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPCampaignClassic) | [GitHub](https://github.com/adobe/aepsdk-campaignclassic-ios) | [Test app](https://github.com/adobe/aepsdk-campaignclassic-ios/tree/main/TestApp) |
 | [Adobe Audience Manager](../solution/adobe-audience-manager/index.md) |   |   | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-audience-ios.svg?label=AEPAudience&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPAudience) | [GitHub](https://github.com/adobe/aepsdk-audience-ios) | [Test app](https://github.com/adobe/aepsdk-audience-ios/tree/main/AudienceSampleApp) |
 | Adobe Analytics - Mobile Services | | Not supported | | | |
-| Places Monitor | | Deprecated | | | |
+| Places Monitor | | Not supported | | | |
 
 ## React Native
 
@@ -116,21 +116,18 @@ If you are currently using the ACP-prefixed React Native libraries, please see [
 |---|---|
 | [Mobile Core](./base/mobile-core/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepcore.svg?color=green&label=%40adobe%2Freact-native-aepcore&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepcore) |
 | [Profile](./base/profile/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepuserprofile.svg?color=green&label=%40adobe%2Freact-native-aepuserprofile&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepuserprofile) |
-| [Assurance](./base/assurance/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepassurance.svg?color=green&label=%40adobe%2Freact-native-aepassurance&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepassurance) |
-| [Edge](../edge/edge-network/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepedge.svg?color=green&label=%40adobe%2Freact-native-aepedge&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepedge) |
-| [EdgeIdentity](../edge/identity-for-edge-network/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepedgeidentity.svg?color=green&label=%40adobe%2Freact-native-aepedgeidentity&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepedgeidentity) |
-| [EdgeConsent](../edge/consent-for-edge-network/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepedgeconsent.svg?color=green&label=%40adobe%2Freact-native-aepedgeconsent&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepedgeconsent) |
+| [Adobe Experience Platform Assurance](./base/assurance/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepassurance.svg?color=green&label=%40adobe%2Freact-native-aepassurance&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepassurance) |
+| [Adobe Experience Platform Edge Network](../edge/edge-network/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepedge.svg?color=green&label=%40adobe%2Freact-native-aepedge&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepedge) |
+| [Identity for Edge Network](../edge/identity-for-edge-network/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepedgeidentity.svg?color=green&label=%40adobe%2Freact-native-aepedgeidentity&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepedgeidentity) |
+| [Consent for Edge Network](../edge/consent-for-edge-network/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepedgeconsent.svg?color=green&label=%40adobe%2Freact-native-aepedgeconsent&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepedgeconsent) |
 | [Edge Bridge](../solution/adobe-analytics/migrate-to-edge-network.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepedgebridge.svg?color=green&label=%40adobe%2Freact-native-aepedgebridge&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepedgebridge) |
-| [Messaging](../edge/adobe-journey-optimizer/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepmessaging.svg?color=green&label=%40adobe%2Freact-native-aepmessaging&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepmessaging) |
-| [Optimize](../edge/adobe-journey-optimizer-decisioning/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepoptimize.svg?color=green&label=%40adobe%2Freact-native-aepoptimize&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepoptimize) |
-| [Places](../solution/places/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepplaces.svg?color=green&label=%40adobe%2Freact-native-aepplaces&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepplaces) |
-| [Target](../solution/adobe-target/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aeptarget.svg?color=green&label=%40adobe%2Freact-native-aeptarget&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aeptarget) |
-| [Campaign Classic](../solution/adobe-campaign-classic/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepcampaignclassic.svg?color=green&label=%40adobe%2Freact-native-aepcampaignclassic&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepcampaignclassic) |
-| Adobe Analytics| Not Supported - Analytics workflows supported through Edge or Edge Bridge extensions, see [guide to migrate to Edge Network](../solution/adobe-analytics/migrate-to-edge-network.md). |
-| Adobe Media Analytics| Not Supported  |
-| Adobe Audience| Not Supported  |
-| Adobe Campaign Standard| Not Supported  |
-| Place Monitor| Deprecated |
+| [Adobe Journey Optimizer](../edge/adobe-journey-optimizer/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepmessaging.svg?color=green&label=%40adobe%2Freact-native-aepmessaging&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepmessaging) |
+| [Adobe Journey Optimizer - Decisioning](../edge/adobe-journey-optimizer-decisioning/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepoptimize.svg?color=green&label=%40adobe%2Freact-native-aepoptimize&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepoptimize) |
+| [Places Service](../solution/places/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepplaces.svg?color=green&label=%40adobe%2Freact-native-aepplaces&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepplaces) |
+| [Adobe Target](../solution/adobe-target/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aeptarget.svg?color=green&label=%40adobe%2Freact-native-aeptarget&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aeptarget) |
+| [Adobe Campaign Classic](../solution/adobe-campaign-classic/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepcampaignclassic.svg?color=green&label=%40adobe%2Freact-native-aepcampaignclassic&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepcampaignclassic) |
+
+Please note that the Adobe Analytics extension is not supported in AEP-prefixed React Native libraries, the Analytics workflows are now supported through Edge or Edge Bridge extensions, see the [guide to migrate to Edge Network](../solution/adobe-analytics/migrate-to-edge-network.md).
 
 ## Flutter
 
@@ -146,17 +143,16 @@ If you are currently using the ACP-prefixed Flutter libraries, please see [the g
 
 | Extension | pub.dev |
 |---|---|
-| [Mobile Core](./base/mobile-core/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepcore.svg)](https://pub.dartlang.org/packages/flutter_aepcore) |
-| [UserProfile](./base/profile/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepuserprofile.svg)](https://pub.dartlang.org/packages/flutter_aepuserprofile) |
-| [Assurance](./base/assurance/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepassurance.svg)](https://pub.dartlang.org/packages/flutter_aepassurance) |
-| [Edge](../edge/edge-network/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedge.svg)](https://pub.dartlang.org/packages/flutter_aepedge) |
-| [EdgeIdentity](../edge/identity-for-edge-network/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgeidentity.svg)](https://pub.dartlang.org/packages/flutter_aepedgeidentity) |
-| [EdgeConsent](../edge/consent-for-edge-network/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgeconsent.svg)](https://pub.dartlang.org/packages/flutter_aepedgeconsent) |
-| [Edge Bridge](../solution/adobe-analytics/migrate-to-edge-network.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgebridge.svg)](https://pub.dartlang.org/packages/flutter_aepedgebridge) |
-| [Messaging](../edge/adobe-journey-optimizer/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepmessaging.svg)](https://pub.dev/packages/flutter_aepmessaging) |
-| Adobe Analytics| Not Supported - Analytics workflows supported through Edge or Edge Bridge extensions, see [guide to migrate to Edge Network](../solution/adobe-analytics/migrate-to-edge-network.md). |
-| Place Service | Not Supported  |
-| Place Monitor| Deprecated |
+| [Mobile Core](./base/mobile-core/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepcore.svg?label=flutter_aepcore)](https://pub.dartlang.org/packages/flutter_aepcore) |
+| [Profile](./base/profile/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepuserprofile.svg?label=flutter_aepuserprofile)](https://pub.dartlang.org/packages/flutter_aepuserprofile) |
+| [Adobe Experience Platform Assurance](./base/assurance/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepassurance.svg?label=flutter_aepassurance)](https://pub.dartlang.org/packages/flutter_aepassurance) |
+| [Adobe Experience Platform Edge Network](../edge/edge-network/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedge.svg?label=flutter_aepedge)](https://pub.dartlang.org/packages/flutter_aepedge) |
+| [Identity for Edge Network](../edge/identity-for-edge-network/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgeidentity.svg?label=flutter_aepedgeidentity)](https://pub.dartlang.org/packages/flutter_aepedgeidentity) |
+| [Consent for Edge Network](../edge/consent-for-edge-network/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgeconsent.svg?label=flutter_aepedgeconsent)](https://pub.dartlang.org/packages/flutter_aepedgeconsent) |
+| [Edge Bridge](../solution/adobe-analytics/migrate-to-edge-network.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgebridge.svg?label=flutter_aepedgebridge)](https://pub.dartlang.org/packages/flutter_aepedgebridge) |
+| [Adobe Journey Optimizer](../edge/adobe-journey-optimizer/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepmessaging.svg?label=flutter_aepmessaging)](https://pub.dev/packages/flutter_aepmessaging) |
+
+Please note that the Adobe Analytics extension is not supported in AEP-prefixed Flutter libraries, the Analytics workflows are now supported through Edge or Edge Bridge extensions, see the [guide to migrate to Edge Network](../solution/adobe-analytics/migrate-to-edge-network.md).
 
 ## Roku
 
