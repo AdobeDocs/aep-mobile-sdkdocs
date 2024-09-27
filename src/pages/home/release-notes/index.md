@@ -7,6 +7,12 @@ Keywords:
 
 # Release notes
 
+## September 27, 2024
+
+### iOS Core 5.3.0
+
+* Added an `onError` method to the `FullscreenMessageDelegate` to notify of the reason when an in-app message fails to display.
+
 ## September 13, 2024
 
 ### Roku SDK 1.3.0
