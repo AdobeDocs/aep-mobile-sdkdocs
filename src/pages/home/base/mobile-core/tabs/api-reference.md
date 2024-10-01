@@ -1398,8 +1398,7 @@ public interface AdobeCallback<T> {
 
 The `AdobeCallbackWithError` class provides the interface to receive results or an error when the asynchronous APIs perform the requested action.
 
-When using this class, if the request cannot be completed within the default timeout or an unexpected error occurs, the request is stopped and the fail method is called with the corresponding`
-`.
+When using this class, if the request cannot be completed within the default timeout or an unexpected error occurs, the request is stopped and the fail method is called with the corresponding `AdobeError`.
 
 ```java
 public interface AdobeCallbackWithError<T> extends AdobeCallback<T> {
