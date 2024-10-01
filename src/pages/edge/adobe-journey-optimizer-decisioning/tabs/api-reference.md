@@ -973,9 +973,9 @@ public enum OfferType: Int, Codable {
 #### Swift
 
 Error details received from Edge response along with [AEPError](../../../home/base/mobile-core/tabs/api-reference/#aeperror) object returned with values:
-* AEPError.callbackTimeout - returned when request timeout without any response
-* AEPError.serverErrors - returned for HTTP Status 500
-* AEPError.invalidRequest - returned for HTTP Status 400 - 499 (except 408 and 429)
+* _AEPError.callbackTimeout_ is returned when request timeout without any response.
+* _AEPError.serverErrors_ is returned for HTTP Status 500.
+* _AEPError.invalidRequest_ is returned for HTTP Status 400 - 499 (except 408 and 429).
 
 ```swift
 
@@ -1009,9 +1009,9 @@ public class AEPOptimizeError: NSObject, Error {
 #### Kotlin
 
 Error details received from Edge response along with [AdobeError](../../../home/base/mobile-core/tabs/api-reference/#adobeerror) object returned with values:
-* AdobeError.CALLBACK_TIMEOUT - returned when request timeout without any response
-* AdobeError.SERVER_ERROR - returned for HTTP Status 500
-* AdobeError.INVALID_REQUEST - returned for HTTP Status 400 - 499 (except 408 and 429)
+* _AdobeError.CALLBACK_TIMEOUT_ is returned when request timeout without any response.
+* _AdobeError.SERVER_ERROR_ is returned for HTTP Status 500.
+* _AdobeError.INVALID_REQUEST_ is returned for HTTP Status 400 - 499 (except 408 and 429).
 
 ```kotlin
 class AEPOptimizeError(val type: String? = "",
