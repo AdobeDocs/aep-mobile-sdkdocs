@@ -7,6 +7,13 @@ Keywords:
 
 # Release notes
 
+## October 1, 2024
+
+### Android Core 3.2.0
+
+* Added new constants to `AEPError`.
+* Added the `SuppressedByAppDeveloper` constant to indicate that the in-app message was not displayed because it was rejected by the app developer via the `PresentationDelegate`.
+
 ## September 30, 2024
 
 ### iOS Messaging 5.4.0
