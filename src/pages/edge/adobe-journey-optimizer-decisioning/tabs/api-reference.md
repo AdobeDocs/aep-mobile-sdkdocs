@@ -906,7 +906,7 @@ public class Offer: NSObject, Codable {
     @objc public let etag: String
 
     /// Offer priority score
-    @objc public let score: Int
+    @objc public let score: Double
 
     /// Offer schema string
     @objc public let schema: String
