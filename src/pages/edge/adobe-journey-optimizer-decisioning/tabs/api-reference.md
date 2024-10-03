@@ -444,7 +444,7 @@ AEPDecisionScope* decisionScope2 = [[AEPDecisionScope alloc] initWithName: @"myS
                               andData: @{@"dataKey": @"dataValue"}];
 ```
 
-<Variant platform="ios" api="update-propositions-withError" repeat="6"/>
+<Variant platform="ios" api="update-propositions-withError" repeat="12"/>
 
 #### Swift
 
@@ -477,6 +477,47 @@ Optimize.updatePropositions(for: [decisionScope1, decisionScope2]
                 // handle error
             }
         }
+```
+
+#### Objective-C
+
+#### Syntax
+
+```objc
++ (void) updatePropositions: (NSArray<AEPDecisionScope*>* _Nonnull) decisionScopes
+                    withXdm: (NSDictionary<NSString*, id>* _Nullable) xdm
+                    andData: (NSDictionary<NSString*, id>* _Nullable) data
+                 completion: (void (^ _Nonnull)(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* _Nullable propositionsDict, NSError* _Nullable error)) completion;
+```
+* _decisionScopes_ is an array of decision scopes for which propositions are requested.
+* _xdm_ is a dictionary containing additional xdm formatted data to be attached to the Experience Event.
+* _data_ is a dictionary containing additional freeform data to be attached to the Experience Event.
+* _completion_ is invoked with propositions dictionary of type `NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>`. An `NSError` is returned if SDK fails to retrieve the propositions.
+
+#### Example
+
+```objc
+
+AEPDecisionScope* decisionScope1 = [[AEPDecisionScope alloc] initWithActivityId: @"xcore:offer-activity:1111111111111111"
+                                                                   placementId: @"xcore:offer-placement:1111111111111111"
+                                                                     itemCount: 2];
+AEPDecisionScope* decisionScope2 = [[AEPDecisionScope alloc] initWithName: @"myScope"];
+
+[AEPMobileOptimize updatePropositions: @[decisionScope1, decisionScope2]
+                              withXdm: @{@"xdmKey": @"xdmValue"}
+                              andData: @{@"dataKey": @"dataValue"}]
+                           completion: ^(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* propositionsDict, NSError* error) {
+  if (error != nil) {
+    // handle error
+    return;
+  }
+
+  AEPOptimizeProposition* proposition1 = propositionsDict[decisionScope1];
+  // read proposition1 offers
+
+  AEPOptimizeProposition* proposition2 = propositionsDict[decisionScope2];
+  // read proposition2 offers
+}];
 ```
 
 <Variant platform="android" api="decisionscope" repeat="2"/>
