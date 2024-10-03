@@ -8,6 +8,14 @@ keywords:
 
 # Release notes
 
+## October 3, 2024
+
+### iOS Optimize 5.1.0
+
+* Added a new `updatePropositions` API to support completion callback with retrieved propositions and errors (if any).
+* Updated `getPropositions` API to return cached propositions immediately if there are no pending `updatePropositions` calls for the requested list of decision scopes.
+* Changed `Offer.score` data type from Integer to Double to fix a bug where offers having decimal score were being dropped.
+
 ## August 20, 2024
 
 ### Android Optimize 3.0.2
