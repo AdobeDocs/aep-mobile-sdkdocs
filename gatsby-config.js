@@ -177,6 +177,10 @@ module.exports = {
                                 path: "/edge/adobe-journey-optimizer/api-reference"
                             },
                             {
+                                title: "AJO edge events for propositions",
+                                path: "/edge/adobe-journey-optimizer/proposition-edge-events"
+                            },
+                            {
                                 title: "Push Notifications",
                                 path: "/edge/adobe-journey-optimizer/push-notification",
                                 pages: [
