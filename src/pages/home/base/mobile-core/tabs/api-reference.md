@@ -1414,6 +1414,10 @@ The `AdobeError` class shows the errors that can be passed to an `AdobeCallbackW
 * `CALLBACK_TIMEOUT` - The timeout was met.
 * `CALLBACK_NULL` - The provided callback function is null.
 * `EXTENSION_NOT_INITIALIZED` - The extension is not initialized.
+* `SERVER_ERROR` - There was a server error.
+* `NETWORK_ERROR` - There was a network error.
+* `INVALID_REQUEST` - There was an invalid request.
+* `INVALID_RESPONSE` - There was an invalid response.
 
 **Example**
 
@@ -1429,6 +1433,14 @@ MobileCore.getPrivacyStatus(new AdobeCallbackWithError<MobilePrivacyStatus>() {
       // handle null callback error
     } else if (error == AdobeError.EXTENSION_NOT_INITIALIZED) {
       // handle extension not initialized error
+    } else if (error == AdobeError.SERVER_ERROR) {
+      // handle server error
+    } else if (error == AdobeError.NETWORK_ERROR) {
+      // handle network error
+    } else if (error == AdobeError.INVALID_REQUEST) {
+      // handle invalid request error
+    } else if (error == AdobeError.INVALID_RESPONSE) {
+      // handle invalid response error
     }
   }
 

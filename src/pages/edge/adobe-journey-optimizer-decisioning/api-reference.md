@@ -104,13 +104,32 @@ iOS
 
 <Tabs query="platform=ios&api=update-propositions"/>
 
+## updatePropositionsWithCompletionHandler
+
+This API dispatches an event for the Edge network extension to fetch decision propositions, for the provided decision scopes array, from the decisioning services enabled in the Experience Edge. The returned decision propositions are cached in-memory in the Optimize SDK extension and can be retrieved using `getPropositions` API.
+
+<InlineAlert variant="help" slots="text"/>
+
+Completion callback passed to `updatePropositions` supports network timeout and fatal errors returned by edge network along with fetched propositions data. The SDK's internal retry mechanism handles the recoverable HTTP errors. As a result, recoverable HTTP errors are not returned through this callback.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+Coming Soon
+
+iOS
+
+<Tabs query="platform=ios&api=update-propositions-withError"/>
+
 ## Public classes
 
-| Type | Android | (AEP 5.x) Swift | (AEP 5.x) Objective-C |
-| :--- | :--- | :--- | :--- |
+| Type | Android         | (AEP 5.x) Swift | (AEP 5.x) Objective-C |
+| :--- |:----------------| :--- | :--- |
 | class | `DecisionScope` | `DecisionScope` | `AEPDecisionScope` |
-| class | `Proposition` | `OptimizeProposition` | `AEPOptimizeProposition` |
-| class | `Offer` | `Offer` | `AEPOffer` |
+| class | `Proposition`   | `OptimizeProposition` | `AEPOptimizeProposition` |
+| class | `Offer`         | `Offer` | `AEPOffer` |
+| class | Coming Soon     | `AEPOptimizeError` | `AEPOptimizeError` |
 
 ### DecisionScope
 
@@ -171,3 +190,17 @@ Android
 iOS
 
 <Tabs query="platform=ios&api=offertype"/>
+
+###  AEPOptimizeError
+
+This class represents the error details returned by the Edge Network while fetching propositions.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+**Coming Soon**
+
+iOS
+
+<Tabs query="platform=ios&api=optimizeerror"/>

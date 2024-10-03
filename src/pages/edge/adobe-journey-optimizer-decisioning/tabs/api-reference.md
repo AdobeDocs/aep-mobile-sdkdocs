@@ -336,6 +336,58 @@ Optimize.updatePropositions(decisionScopes,
                             });
 ```
 
+<Variant platform="android" api="update-propositions-withError" repeat="6"/>
+
+#### Java
+
+#### Syntax
+
+```java
+public static void updatePropositions(final List<DecisionScope> decisionScopes, 
+                                      final Map<String, Object> xdm,
+                                      final Map<String, Object> data,
+                                      final AdobeCallback<Map<DecisionScope, OptimizeProposition>> callback)
+```
+
+* _decisionScopes_ is a list of decision scopes for which propositions need updating.
+* _xdm_ is a map containing additional xdm formatted data to be attached to the Experience Event.
+* _data_ is a map containing additional freeform data to be attached to the Experience Event.
+* _callback_ is a optional completion handler invoked at the completion of the edge request with map of successful decision scopes to propositions and errors, if any.
+
+#### Example
+
+```java
+final DecisionScope decisionScope1 = DecisionScope("xcore:offer-activity:1111111111111111", "xcore:offer-placement:1111111111111111", 2);
+final DecisionScope decisionScope2 = new DecisionScope("myScope");
+
+final List<DecisionScope> decisionScopes = new ArrayList<>();
+decisionScopes.add(decisionScope1);
+decisionScopes.add(decisionScope2);
+
+Optimize.updatePropositions(decisionScopes,
+                            new HashMap<String, Object>() {
+                                {
+                                    put("xdmKey", "xdmValue");
+                                }
+                            },
+                            new HashMap<String, Object>() {
+                                {
+                                    put("dataKey", "dataValue");
+                                }
+                            },
+                            new AdobeCallbackWithOptimizeError<Map<DecisionScope, OptimizeProposition>>() {
+                                @Override
+                                public void fail(AEPOptimizeError optimizeError) {
+                                    responseError = optimizeError;
+                                }
+
+                                @Override
+                                public void call(Map<DecisionScope, OptimizeProposition> propositionsMap) {
+                                    responseMap = propositionsMap;
+                                }
+                            });
+```
+
 <Variant platform="ios" api="update-propositions" repeat="12"/>
 
 #### Swift
@@ -390,6 +442,83 @@ AEPDecisionScope* decisionScope2 = [[AEPDecisionScope alloc] initWithName: @"myS
 [AEPMobileOptimize updatePropositions: @[decisionScope1, decisionScope2] 
                               withXdm: @{@"xdmKey": @"xdmValue"} 
                               andData: @{@"dataKey": @"dataValue"}];
+```
+
+<Variant platform="ios" api="update-propositions-withError" repeat="12"/>
+
+#### Swift
+
+#### Syntax
+
+```swift
+static func updatePropositions(for decisionScopes: [DecisionScope],
+                               withXdm xdm: [String: Any]?,
+                               andData data: [String: Any]? = nil,
+                               _completion: (([DecisionScope: OptimizeProposition]?, Error?) -> Void)? = nil)
+```
+
+* _decisionScopes_ is an array of decision scopes for which propositions need updating.
+* _xdm_ is a dictionary containing additional xdm formatted data to be attached to the Experience Event.
+* _data_ is a dictionary containing additional freeform data to be attached to the Experience Event.
+* _completion_ is a optional completion handler invoked at the completion of the edge request with map of successful decision scopes to propositions and errors, if any.
+
+#### Example
+
+```swift
+let decisionScope1 = DecisionScope(activityId: "xcore:offer-activity:1111111111111111",
+                                   placementId: "xcore:offer-placement:1111111111111111"
+                                   itemCount: 2)
+let decisionScope2 = DecisionScope(name: "myScope")
+
+Optimize.updatePropositions(for: [decisionScope1, decisionScope2]
+                            withXdm: ["xdmKey": "xdmValue"]
+                            andData: ["dataKey": "dataValue"]) { data, error in
+            if let error = error as? AEPOptimizeError {
+                // handle error
+            }
+        }
+```
+
+#### Objective-C
+
+#### Syntax
+
+```objc
++ (void) updatePropositions: (NSArray<AEPDecisionScope*>* _Nonnull) decisionScopes
+                    withXdm: (NSDictionary<NSString*, id>* _Nullable) xdm
+                    andData: (NSDictionary<NSString*, id>* _Nullable) data
+                 completion: (void (^ _Nonnull)(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* _Nullable propositionsDict, NSError* _Nullable error)) completion;
+```
+
+* _decisionScopes_ is an array of decision scopes for which propositions are requested.
+* _xdm_ is a dictionary containing additional xdm formatted data to be attached to the Experience Event.
+* _data_ is a dictionary containing additional freeform data to be attached to the Experience Event.
+* _completion_ is invoked with propositions dictionary of type `NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>`. An `NSError` is returned if SDK fails to retrieve the propositions.
+
+#### Example
+
+```objc
+
+AEPDecisionScope* decisionScope1 = [[AEPDecisionScope alloc] initWithActivityId: @"xcore:offer-activity:1111111111111111"
+                                                                   placementId: @"xcore:offer-placement:1111111111111111"
+                                                                     itemCount: 2];
+AEPDecisionScope* decisionScope2 = [[AEPDecisionScope alloc] initWithName: @"myScope"];
+
+[AEPMobileOptimize updatePropositions: @[decisionScope1, decisionScope2]
+                              withXdm: @{@"xdmKey": @"xdmValue"}
+                              andData: @{@"dataKey": @"dataValue"}]
+                           completion: ^(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* propositionsDict, NSError* error) {
+  if (error != nil) {
+    // handle error
+    return;
+  }
+
+  AEPOptimizeProposition* proposition1 = propositionsDict[decisionScope1];
+  // read proposition1 offers
+
+  AEPOptimizeProposition* proposition2 = propositionsDict[decisionScope2];
+  // read proposition2 offers
+}];
 ```
 
 <Variant platform="android" api="decisionscope" repeat="2"/>
@@ -777,7 +906,7 @@ public class Offer: NSObject, Codable {
     @objc public let etag: String
 
     /// Offer priority score
-    @objc public let score: Int
+    @objc public let score: Double
 
     /// Offer schema string
     @objc public let schema: String
@@ -879,4 +1008,59 @@ public enum OfferType: Int, Codable {
     /// - Parameter format: Offer format string
     init(from format: String) {...}
 }
+```
+
+<Variant platform="ios" api="optimizeerror" repeat="4"/>
+
+#### Swift
+
+Error details received from Edge response along with [AEPError](../../../home/base/mobile-core/tabs/api-reference/#aeperror) object returned with values:
+
+* _AEPError.callbackTimeout_ is returned when request timeout without any response.
+* _AEPError.serverErrors_ is returned for HTTP Status 500.
+* _AEPError.invalidRequest_ is returned for HTTP Status 400 - 499 (except 408 and 429).
+
+```swift
+@objc(AEPOptimizeError)
+public class AEPOptimizeError: NSObject, Error {
+    // This is a URI reference (RFC3986) that identifies the problem type  
+    public let type: String?
+
+    // This is the HTTP status code generated by the server for this occurrence of the problem.
+    public let status: Int?
+
+    // This is a short, human-readable summary of the problem type.
+    public let title: String?
+
+    // This is human-readable description of the problem type.
+    public let detail: String?
+
+    // This is a map of additional properties that aid in debugging such as the request ID or the org ID. In some cases, it might contain data specific to the error at hand, such as a list of validation errors.
+    public let report: [String: Any]?
+
+    // This ia a mandatory AEPError representing the high level error status
+    public var aepError = AEPError.unexpected
+
+    // Initializer for AEPOptimizeError based based on the Error details returned by Edge respose
+    public init(type: String?, status: Int?, title: String?, detail: String?, aepError: AEPError? = nil) {...}
+}
+```
+
+<Variant platform="android" api="optimizeerror" repeat="4"/>
+
+#### Kotlin
+
+Error details received from Edge response along with [AdobeError](../../../home/base/mobile-core/tabs/api-reference/#adobeerror) object returned with values:
+
+* _AdobeError.CALLBACK_TIMEOUT_ is returned when request timeout without any response.
+* _AdobeError.SERVER_ERROR_ is returned for HTTP Status 500.
+* _AdobeError.INVALID_REQUEST_ is returned for HTTP Status 400 - 499 (except 408 and 429).
+
+```kotlin
+class AEPOptimizeError(val type: String? = "",
+                       val status: Int? = 0,
+                       val title: String? = "", 
+                       val detail: String? = "", 
+                       var report: Map<String, Any>?, 
+                       var adobeError: AdobeError?) {...}
 ```
