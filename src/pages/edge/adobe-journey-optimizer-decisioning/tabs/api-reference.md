@@ -489,6 +489,7 @@ Optimize.updatePropositions(for: [decisionScope1, decisionScope2]
                     andData: (NSDictionary<NSString*, id>* _Nullable) data
                  completion: (void (^ _Nonnull)(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* _Nullable propositionsDict, NSError* _Nullable error)) completion;
 ```
+
 * _decisionScopes_ is an array of decision scopes for which propositions are requested.
 * _xdm_ is a dictionary containing additional xdm formatted data to be attached to the Experience Event.
 * _data_ is a dictionary containing additional freeform data to be attached to the Experience Event.
