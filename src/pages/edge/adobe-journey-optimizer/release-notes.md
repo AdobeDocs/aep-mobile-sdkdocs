@@ -9,6 +9,14 @@ keywords:
 
 # Release notes
 
+## October 2, 2024
+
+### Android Messaging 3.2.1
+
+* SDK updated to support conflict resolution for in-app messaging:
+  * In-app messages are loaded in priority order
+  * When a message display is suppressed due to a priority conflict or due to app developer decision it is recorded as an edge event
+
 ## September 30, 2024
 
 ### iOS Messaging 5.4.0
