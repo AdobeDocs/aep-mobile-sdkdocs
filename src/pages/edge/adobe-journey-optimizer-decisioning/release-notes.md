@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## October 8, 2024
+
+### Android Optimize 3.1.0
+
+* Added a new `updatePropositions` API to support completion callback with retrieved propositions and errors (if any).
+
 ## October 3, 2024
 
 ### iOS Optimize 5.1.0
