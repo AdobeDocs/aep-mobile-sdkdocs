@@ -352,7 +352,7 @@ public static void updatePropositions(final List<DecisionScope> decisionScopes,
 * _decisionScopes_ is a list of decision scopes for which propositions need updating.
 * _xdm_ is a map containing additional xdm formatted data to be attached to the Experience Event.
 * _data_ is a map containing additional freeform data to be attached to the Experience Event.
-* _callback_ is a optional completion handler invoked at the completion of the edge request with map of successful decision scopes to propositions and errors, if any.
+* _callback_ is an optional completion handler that is invoked at the completion of the edge request. This handler receives a map of successful decision scopes to propositions, and any errors that occurred during the request. In certain cases, both the success and failure callbacks may be triggered. To handle these cases, ensure that your implementation checks for both successful propositions and errors within the callback, as both may be present simultaneously.
 
 #### Example
 
