@@ -7,6 +7,12 @@ Keywords:
 
 # Release notes
 
+## October 15, 2024
+
+### iOS Notification Content Extension ui-5.1.0
+
+UI library to for building content cards in AJO
+
 ## October 8, 2024
 
 ### Android BOM 3.5.0
