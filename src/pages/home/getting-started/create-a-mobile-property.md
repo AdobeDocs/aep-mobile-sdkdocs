@@ -99,16 +99,9 @@ Testing can be done using the configuration in the Development environment. The 
 
 Now that you published your configuration, get the Adobe Experience Platform SDK for your application. For more information, see tutorial on [getting the Experience Platform SDKs](./get-the-sdk.md).
 
-## Watch the video
-
-<Media slots="video"/>
-
-<https://youtu.be/xBWYFUKAoyo>
-
 ## Additional information
 
 * To learn more about getting access to the Data Collection UI, see the [user permissions](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/manage-permissions.html) document.
-* To learn more publishing workflows in the Data Collection UI, watch this [video](https://www.youtube.com/embed/Pe-YSn26_xI).
 
 ## Get help
 
