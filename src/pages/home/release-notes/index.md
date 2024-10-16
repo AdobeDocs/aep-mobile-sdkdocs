@@ -7,6 +7,23 @@ Keywords:
 
 # Release notes
 
+## October 16, 2024
+
+### iOS Edge 5.0.3
+
+* Adds 507 as recoverable error code and applies valid retry-after timeout values on next retry if provided on the response, otherwise applies default timeout.
+* This release depends on minimum AEPCore v5.3.1.
+
+### iOS Core 5.3.1
+
+* Updated `responseHttpHeader(forKey:)` in `HttpConnection` struct to ensure case-insensitive header field lookups.
+
+## October 15, 2024
+
+### iOS Notification Content Extension ui-5.1.0
+
+UI library to for building content cards in AJO
+
 ## October 8, 2024
 
 ### Android BOM 3.5.0

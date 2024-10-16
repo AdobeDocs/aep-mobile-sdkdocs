@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## October 16, 2024
+
+### iOS Core 5.3.1
+
+* Updated `responseHttpHeader(forKey:)` in `HttpConnection` struct to ensure case-insensitive header field lookups.
+
 ## October 1, 2024
 
 ### Android Core 3.2.0
