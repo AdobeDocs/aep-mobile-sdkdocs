@@ -12,7 +12,6 @@ Keywords:
 ### iOS Edge 5.0.3
 
 * Adds 507 as recoverable error code and applies valid retry-after timeout values on next retry if provided on the response, otherwise applies default timeout.
-* This release depends on minimum AEPCore v5.3.1.
 
 ### iOS Core 5.3.1
 
