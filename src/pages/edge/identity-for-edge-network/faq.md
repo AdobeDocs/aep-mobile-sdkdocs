@@ -119,7 +119,7 @@ A: The Identity for the Edge Network extension does not automatically reset or c
 
 * Cleared when the app is uninstalled.
 * Reset using the [`resetIdentities`](../../home/base/mobile-core/api-reference.md#resetidentities) API.
-* Reset when the app local persistence is cleared for any reason in the app implementation. To learn more, see where the [Mobile SDK stores identity data](../../../pages/resources/faq.md#where-does-the-sdk-store-identities-and-preferences-on-the-app).
+* Reset when the app local persistence is cleared for any reason in the app implementation. To learn more, see where the [Mobile SDK stores identity data](../../../resources/faq.md#where-does-the-sdk-store-identities-and-preferences-on-the-app).
 
 ## Q: What steps are needed to generate a new Experience Cloud ID (ECID) for a user when using both Edge extensions and Adobe Solutions extensions?
 
