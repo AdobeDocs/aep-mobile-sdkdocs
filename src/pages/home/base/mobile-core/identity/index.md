@@ -22,9 +22,9 @@ Include the Identity extension in your application when using any of the followi
    * [Adobe Media Analytics](../../../../solution/adobe-media-analytics/index.md)
    * [Adobe Target](../../../../solution/adobe-target/index.md)
 
-When using 3rd party extensions, check with the extension developer to understand if the Identity extension is a required dependency.
-
 If your application uses the [Edge Network extension](../../../../edge/edge-network/index.md), then it must include the [Identity for Edge Network extension](../../../../edge/identity-for-edge-network/index.md). The Identity for Edge Network extension does not replace the Identity for Experience Cloud ID Service extension and both may be required in an application. See the [FAQ](../../../../edge/identity-for-edge-network/faq.md) for more information.
+
+When using 3rd party extensions, check with the extension developer to understand if the Identity extension is a required dependency.
 
 <InlineAlert variant="warning" slots="text"/>
 
