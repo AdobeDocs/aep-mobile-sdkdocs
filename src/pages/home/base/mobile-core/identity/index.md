@@ -14,6 +14,17 @@ import Tabs from './tabs/index.md'
 
 The Identity extension enables your app with the Experience Cloud ID (ECID). This service helps with the synchronization of Adobe and other customer identifiers.
 
+Include the Identity extension in your application when using any of the following Adobe Solution extensions:
+   * [Adobe Analytics](../../../../solution/adobe-analytics/index.md)
+   * [Adobe Audience Manager](../../../../solution/adobe-audience-manager/index.md)
+   * [Adobe Campaign Standard](../../../../solution/adobe-campaign-standard/index.md)
+   * [Adobe Media Analytics](../../../../solution/adobe-media-analytics/index.md)
+   * [Adobe Target](../../../../solution/adobe-target/index.md)
+
+When using 3rd party extensions, check with the extension developer to understand if the Identity extension is a required dependency.
+
+If your application uses the [Edge Network extension](../../../../edge/edge-network/index.md), then it must include the [Identity for Edge Network extension](../../../../edge/identity-for-edge-network/index.md). The Identity for Edge Network extension does not replace the Identity for Experience Cloud ID Service extension and both may be required in an application. See the [FAQ](../../../../edge/identity-for-edge-network/faq.md) for more information.
+
 <InlineAlert variant="warning" slots="text"/>
 
 On web or other platforms, there might situations where this extension might not be required, and the implementation of this SDK extension on mobile apps is required.
