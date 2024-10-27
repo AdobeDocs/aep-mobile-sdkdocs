@@ -255,6 +255,98 @@ module.exports = {
                                 ]
                             },
                             {
+                                title: "Content cards with UI",
+                                path: "/edge/adobe-journey-optimizer/content-card-ui/iOS",
+                                pages: [
+                                    {
+                                        title: "iOS",
+                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS",
+                                        pages: [
+                                            {
+                                                title: "API Reference",
+                                                path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/api-usage.md"
+                                            },
+                                            {
+                                                title: "Public Classes and Protocol",
+                                                path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/public-classes/contentcardui",
+                                                pages: [
+                                                    {
+                                                        title: "ContentCardUI",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/public-classes/contentcardui",
+                                                    },
+                                                    {
+                                                        title: "ContenCardCustomizing",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/public-classes/contentcardcustomizing",
+                                                    },
+                                                    {
+                                                        title: "ContentCardUIEventListening",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/public-classes/contentcarduieventlistening",
+                                                    },
+                                                    {
+                                                        title: "ContentCardTemplateType",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/public-classes/contentcardtemplatetype",
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "Templates",
+                                                path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/templates/smallimage-template",
+                                                pages: [
+                                                    {
+                                                        title: "Small Image",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/templates/smallimage-template",
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "UIElements",
+                                                path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/",
+                                                pages: [
+                                                    {
+                                                        title: "AEPText",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/aeptext"
+                                                    },
+                                                    {
+                                                        title: "AEPButton",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/aepbutton"
+                                                    },
+                                                    {
+                                                        title: "AEPImage",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/aepimage"
+                                                    },
+                                                    {
+                                                        title: "AEPStack",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/aepstack"
+                                                    },
+                                                    {
+                                                        title: "AEPDismissButton",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/aepdismissbutton"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "Tutorials",
+                                                path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/tutorial/displaying-content-cards",
+                                                pages: [
+                                                    {
+                                                        title: "Fetch and Display Content Cards",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/tutorial/displaying-content-cards",
+                                                    },
+                                                    {
+                                                        title: "Customizing Content Cards",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/tutorial/customizing-content-card-templates",
+                                                    },
+                                                    {
+                                                        title: "Listening to Content Card Events",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/tutorial/listening-content-card-events",
+                                                    }
+                                                ]
+                                            }
+                                        ]                                        
+                                    }
+                                ]
+                            },
+                            {
                                 title: "Code-based Experiences & Content Cards",
                                 path: "/edge/adobe-journey-optimizer/code-based",
                                 pages: [
