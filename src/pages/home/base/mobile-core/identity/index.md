@@ -12,7 +12,7 @@ import Tabs from './tabs/index.md'
 
 # Identity
 
-The Identity extension enables your app with the Experience Cloud ID (ECID). This service helps with the synchronization of Adobe and other customer identifiers.
+The Identity for Experience Cloud ID Service extension enables your app with the Experience Cloud ID (ECID). This service helps with the synchronization of Adobe and other customer identifiers.
 
 Include the Identity extension in your application when using any of the following Adobe Solution extensions:
 
