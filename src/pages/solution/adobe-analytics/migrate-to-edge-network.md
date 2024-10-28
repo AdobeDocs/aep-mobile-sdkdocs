@@ -80,7 +80,7 @@ For more details, please refer to the [Consent for Edge Network extension docume
 
 When using Identity for Edge Network extension, the Mobile SDK automatically migrates an existing ECID (previously known as MID) to the new XDM IdentityMap format out of the box. If you are using custom identities with the `syncIdentifier` / `syncIdentifiers` APIs, you should consider migrating your IDs to the XDM format.
 
-The previous Identity for Experience Cloud ID Service extension can be safely removed from the SDK registration process if there are no other extensions which rely on it, such as Target, Campaign and others.
+The previous Identity for Experience Cloud ID Service extension can be safely removed from the SDK registration process if there are no other extensions which depend on it. A list of dependent extensions may be found on the [Identity overview page](../../home/base/mobile-core/identity/index.md).
 
 If you need further assistance, please contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support).
 
