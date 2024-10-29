@@ -8,6 +8,16 @@ keywords:
 
 # Release notes
 
+## October 29, 2024
+
+### Android Assurance 3.0.4
+
+* Fixed an issue causing incorrect application details to be sent in the `client` event.
+
+### Android Assurance 2.2.2
+
+* Fixed an issue causing incorrect application details to be sent in the `client` event.
+
 ## August 16, 2024
 
 ### Android Assurance 3.0.3
