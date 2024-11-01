@@ -21,13 +21,13 @@ keywords:
 ---
 
 # SmallImageTemplate
+
+ This class represents a SmallImage templated content card authored in Adobe Journey Optimizer.
  
- This class represents a SmallImage templated content card authored in Adobe Journey Optimizer. 
- 
- A small image template content card includes a title, body, image, and a maximum of three buttons. The image is displayed in line with the text content.  An optional dismiss button can be added to dismiss the content card. 
- 
- Use the SmallImageTemplate class to customize the appearance of the small image templated content cards. 
- 
+ A small image template content card includes a title, body, image, and a maximum of three buttons. The image is displayed in line with the text content.  An optional dismiss button can be added to dismiss the content card.
+
+ Use the SmallImageTemplate class to customize the appearance of the small image templated content cards.
+
  SmallImageTemplate conforms to `ObservableObject`, allowing it to be used reactively in SwiftUI views.
 
 ## Layout

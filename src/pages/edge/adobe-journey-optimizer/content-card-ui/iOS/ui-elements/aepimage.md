@@ -17,19 +17,19 @@ keywords:
 
 The AEPImage class is a fundamental UI component used to display images for content cards.
 
-Images can be displayed from various sources (URL, bundle, or SF Symbols) and their appearance can be customized. 
+Images can be displayed from various sources (URL, bundle, or SF Symbols) and their appearance can be customized.
 
 AEPImage conforms to `ObservableObject`, allowing it to be used reactively in SwiftUI views.
 
 ## Image Sources
 
-The AEPImage class supports multiple sources for displaying images, with built-in support for both light and dark mode variants. 
+The AEPImage class supports multiple sources for displaying images, with built-in support for both light and dark mode variants.
 
 Image sources are prioritized in the following order:
 
-- URL images
-- Bundled resource images
-- SF Symbol icons
+* URL images
+* Bundled resource images
+* SF Symbol icons
 
 ## Public properties
 

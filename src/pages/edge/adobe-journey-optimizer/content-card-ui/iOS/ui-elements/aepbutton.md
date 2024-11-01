@@ -17,7 +17,7 @@ keywords:
 
 The AEPButton class is a fundamental UI component used to create interactive buttons for content cards.
 
-Customization of the button's properties can be achieved with a custom view modifier. 
+Customization of the button's properties can be achieved with a custom view modifier.
 
 AEPButton conforms to `ObservableObject`, allowing it to be used reactively in SwiftUI views.
 

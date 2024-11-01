@@ -37,7 +37,7 @@ Called when the content card appears on the screen. Implementation of this metho
 
 #### Parameters
 
-- _card_ - The [ContentCardUI](./contentcardui.md) that is displayed.
+* _card_ - The [ContentCardUI](./contentcardui.md) that is displayed.
 
 #### Syntax
 
@@ -55,7 +55,7 @@ Called when the content card is dismissed. Implementation of this method is opti
 
 #### Parameters
 
-- _card_ - The [ContentCardUI](./contentcardui.md) that is dismissed.
+* _card_ - The [ContentCardUI](./contentcardui.md) that is dismissed.
 
 #### Syntax
 
@@ -73,9 +73,9 @@ Called when the user interacts with the content card. Implementation of this met
 
 #### Parameters
 
-- _card_ - The [ContentCardUI](./contentcardui.md) that is interacted with.
-- _interactionId_ - A string identifier for the interaction event.
-- _actionURL_ - The optional URL associated with the interaction.
+* _card_ - The [ContentCardUI](./contentcardui.md) that is interacted with.
+* _interactionId_ - A string identifier for the interaction event.
+* _actionURL_ - The optional URL associated with the interaction.
 
 #### Returns
 

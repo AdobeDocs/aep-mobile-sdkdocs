@@ -23,9 +23,9 @@ This tutorial explains how to listen to content card events in your application.
 
 The Messaging extension provides a way to listen to events from content cards displayed in your application. The following functions can be implemented in conformance with the [ContentCardUIEventListening](../public-classes/contentcarduieventlistening.md) protocol:
 
-- `onDisplay`
-- `onDismiss`
-- `onInteract`
+* `onDisplay`
+* `onDismiss`
+* `onInteract`
 
 ## Implement ContentCardEventListening
 
@@ -85,9 +85,9 @@ struct HomePage: View, ContentCardUIEventListening {
 
 The `onInteract` method provides an optional `actionURL` parameter associated with the interaction event. The return value of this method determines how the URL is handled.
 
-- Return `true` if your application has successfully handled the URL. This indicates to the SDK that no further action is needed.
+* Return `true` if your application has successfully handled the URL. This indicates to the SDK that no further action is needed.
 
-- Return `false` to allow the SDK to process the URL.
+* Return `false` to allow the SDK to process the URL.
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 
@@ -98,7 +98,7 @@ func onInteract(_ card: ContentCardUI, _ interactionId: String, actionURL: URL?)
     guard let url = actionURL else { return false }
     
     // Your application handles the actionable URL here
-    
+
     // Return true to indicate that the SDK need not process the URL
     return true
 }

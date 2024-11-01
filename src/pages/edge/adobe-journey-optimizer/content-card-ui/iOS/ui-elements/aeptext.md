@@ -18,10 +18,9 @@ keywords:
 
 The AEPText class is a fundamental UI component used to display text for content cards.
 
-This class allows you to customize the text element with properties like font, color, and modifier. 
+This class allows you to customize the text element with properties like font, color, and modifier.
 
 AEPText class conforms to `ObservableObject`, allowing it to be used reactively in SwiftUI views.
-
 
 ## Properties
 

@@ -22,16 +22,16 @@ The `getContentCardsUI` method retrieves an array of [ContentCardUI](./public-cl
 
 #### Parameters:
 
-- _surface_ - The [Surface](../../public-classes/surface.md) for which the content cards should be retrieved.
-- _customizer_ - An optional [ContentCardCustomizing](./public-classes/contentcardcustomizing.md) object to customize the appearance of the content card template. If you do not need to customize the appearance of the content card template, this parameter can be omitted.
-- _listener_ - An optional [ContentCardUIEventListening](./public-classes/contentcarduieventlistening.md) object to listen to UI events from the content card. If you do not need to listen to UI events from the content card, this parameter can be omitted.
-- _completion_ - A completion handler that is called with a `Result` containing either:
-    - _success_ - An array of [ContentCardUI](./public-classes/contentcardui.md) objects representing the content cards to be displayed.
-    - _failure_ - An `Error` object indicating the reason for the failure, if any.
+* _surface_ - The [Surface](../../public-classes/surface.md) for which the content cards should be retrieved.
+* _customizer_ - An optional [ContentCardCustomizing](./public-classes/contentcardcustomizing.md) object to customize the appearance of the content card template. If you do not need to customize the appearance of the content card template, this parameter can be omitted.
+* _listener_ - An optional [ContentCardUIEventListening](./public-classes/contentcarduieventlistening.md) object to listen to UI events from the content card. If you do not need to listen to UI events from the content card, this parameter can be omitted.
+* _completion_ - A completion handler that is called with a `Result` containing either:
+    * _success_ - An array of [ContentCardUI](./public-classes/contentcardui.md) objects representing the content cards to be displayed.
+    * _failure_ - An `Error` object indicating the reason for the failure, if any.
 
 <InlineAlert variant="info" slots="text"/>
 
-Calling this API will not download content cards from Adobe Journey Optimizer; it will only retrieve the content cards that are already downloaded and cached by the Messaging extension. You **must** call [`updatePropositionsForSurfaces`](../../code-based/api-reference.md#updatepropositionsforsurfaces) API with the desired surfaces prior to calling this API. 
+Calling this API will not download content cards from Adobe Journey Optimizer; it will only retrieve the content cards that are already downloaded and cached by the Messaging extension. You **must** call [`updatePropositionsForSurfaces`](../../code-based/api-reference.md#updatepropositionsforsurfaces) API with the desired surfaces prior to calling this API.
 
 #### Syntax
 
@@ -58,7 +58,7 @@ let homePageSurface = Surface(path: "homepage")
 Messaging.updatePropositionsForSurfaces([homePageSurface])
 
 // Get the content card UI for the homepage surface
-Messaging.getContentCardsUI(for: acrobatCardsSurface) { result in
+Messaging.getContentCardsUI(for: homePageSurface) { result in
     switch result {
     case .success(let contentCards):
         // Use the contentCards array to display UI for templated content cards in your application
