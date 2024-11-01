@@ -29,8 +29,8 @@ Messaging extension provides a way to customize content cards based on the templ
 
 Perform the following steps to customize content card templates:
 
-1. Conform to the [ContentCardCustomizing](../public-classes/contentcardcustomizing.md) protocol in your class or struct.
-2. Implement the desired methods of the [ContentCardCustomizing](../public-classes/contentcardcustomizing.md) protocol.
+1. Conform to the ContentCardCustomizing protocol in your class or struct.
+2. Implement the desired methods of the ContentCardCustomizing protocol.
 
 Below is an example implementation of `ContentCardCustomizing`. In this example, the `HomePageCardCustomizer` class conforms to the `ContentCardCustomizing` protocol and customizes the `SmallImageTemplate` content card template:
 

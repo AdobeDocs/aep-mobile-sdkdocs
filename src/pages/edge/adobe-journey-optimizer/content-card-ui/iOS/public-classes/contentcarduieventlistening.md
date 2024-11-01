@@ -39,6 +39,8 @@ Called when the content card appears on the screen. Implementation of this metho
 
 - _card_ - The [ContentCardUI](./contentcardui.md) that is displayed.
 
+#### Syntax
+
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 
 #### Swift
@@ -54,6 +56,8 @@ Called when the content card is dismissed. Implementation of this method is opti
 #### Parameters
 
 - _card_ - The [ContentCardUI](./contentcardui.md) that is dismissed.
+
+#### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 
@@ -76,6 +80,8 @@ Called when the user interacts with the content card. Implementation of this met
 #### Returns
 
 A boolean value indicating whether the interaction event was handled. Return `true` if the client app has handled the `actionURL` associated with the interaction. Return `false` if the SDK should handle the `actionURL`.
+
+#### Syntax
 
 <CodeBlock slots="heading, code, content" repeat="1" languages="Swift" />
 
