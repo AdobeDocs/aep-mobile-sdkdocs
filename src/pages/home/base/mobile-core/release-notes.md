@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## October 16, 2024
+
+### iOS Core 5.3.1
+
+* Updated `responseHttpHeader(forKey:)` in `HttpConnection` struct to ensure case-insensitive header field lookups.
+
 ## October 1, 2024
 
 ### Android Core 3.2.0
@@ -84,7 +90,7 @@ keywords:
 ### Android Core 3.0.1
 
 * Fixed an issue with scrollability in in-app messages with overflowing content.
-* Fixed an issue where the PresentationDelegate was not notified of all URLs opened by an in-app message. 
+* Fixed an issue where the PresentationDelegate was not notified of all URLs opened by an in-app message.
 * Fixed an issue where UI components were not adapting to orientation changes when the activity hosting the composable restricts configuration change.
 * Enhanced error handling in the collectLaunchInfo API to catch exceptions when retrieving bundled data from an Activity.
 * Simplified coroutine scope management in UI services.
@@ -103,7 +109,7 @@ keywords:
 
 ### iOS Core 4.2.4
 
-* Fixed a race condition when accessing sharedStateName inside ExtensionContainer. 
+* Fixed a race condition when accessing sharedStateName inside ExtensionContainer.
 
 ## May 13, 2024
 

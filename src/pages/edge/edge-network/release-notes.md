@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## October 16, 2024
+
+### iOS Edge 5.0.3
+
+* Adds 507 as recoverable error code and applies valid retry-after timeout values on next retry if provided on the response, otherwise applies default timeout.
+
 ## June 6, 2024
 
 ### React Native Edge 6.0.2
