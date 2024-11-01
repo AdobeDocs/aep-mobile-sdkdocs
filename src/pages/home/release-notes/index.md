@@ -7,6 +7,13 @@ Keywords:
 
 # Release notes
 
+## November 1, 2024
+
+### iOS Messaging 5.5.0
+
+* Introduced the `getContentCardUI` API to create and display the UI for templated content cards, supported on iOS 15 and above.
+* Added new property "priority" to "Proposition" class which represents the priority entered in the AJO UI for the corresponding campaign.
+
 ## October 29, 2024
 
 ### Android BOM 3.5.1
