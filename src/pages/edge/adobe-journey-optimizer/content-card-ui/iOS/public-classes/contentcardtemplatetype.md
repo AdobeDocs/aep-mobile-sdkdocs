@@ -21,5 +21,5 @@ Each case corresponds to a specific template type, identified by its JSON string
 
 | Case         | Raw Value      | Description                                                                 |
 | ------------ | -------------- | --------------------------------------------------------------------------- |
-| smallImage   | `SmallImage`   | Represents [SmallImageTemplate](../PublicClasses/Template/smallimage-template.md).                            |
-| unknown      | `Unknown`      | Represents an unknown template type, used as a fallback when a string does not match any known template types. |
+| smallImage   | `SmallImage`   | Represents the [SmallImageTemplate](../PublicClasses/Template/smallimage-template.md).                            |
+| unknown      | `Unknown`      | Represents an unknown template type. This is used as a fallback when a string does not match any known template types. |

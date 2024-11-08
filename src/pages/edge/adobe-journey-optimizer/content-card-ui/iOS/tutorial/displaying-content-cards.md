@@ -21,11 +21,11 @@ This tutorial explains how to fetch and display content cards in your applicatio
 
 ## Pre-requisites
 
-[Integrate and register AEPMessaging extension](../../../index.md#implement-extension-in-mobile-app) in your app.
+[Integrate and register the AEPMessaging extension](../../../index.md#implement-extension-in-mobile-app) in your app.
 
 ## Fetch Content Cards
 
-To fetch the content cards for the surfaces configured in [Adobe Journey Optimizer](https://business.adobe.com/products/journey-optimizer/adobe-journey-optimizer.html) campaigns, call the [updatePropositionsForSurfaces](https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer/code-based/api-reference/#updatepropositionsforsurfaces) API. It's recommended to batch requests for multiple surfaces in a single API call when possible. The returned content cards are cached in-memory by the Messaging extension and persist through the application's lifecycle.
+To fetch the content cards for the surfaces configured in [Adobe Journey Optimizer](https://business.adobe.com/products/journey-optimizer/adobe-journey-optimizer.html) campaigns, call the [updatePropositionsForSurfaces](https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer/code-based/api-reference/#updatepropositionsforsurfaces) API. You should batch requests for multiple surfaces in a single API call when possible. The returned content cards are cached in-memory by the Messaging extension and persist through the application's lifecycle.
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 
@@ -60,7 +60,7 @@ Messaging.getContentCardsUI(surface: homePageSurface) { result in
 
 <InlineAlert variant="info" slots="text"/>
 
-Note - Only content cards for which the user has qualified are returned by the getContentCardUI API. User Qualification is determined by the delivery rules configured in the Adobe Journey Optimizer.
+Note - Only content cards for which the user has qualified are returned by the getContentCardUI API. User qualification is determined by the delivery rules configured in Adobe Journey Optimizer.
 
 ## Display Content Cards
 
@@ -179,4 +179,4 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 }
 ```
 
-Refer to this [TestApp](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoAppObjC) for a complete example of how to display, customize and listen to UI events from content cards in a UIKit application.
+Refer to this [TestApp](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoAppObjC) for a complete example of how to display, customize, and listen to UI events from content cards in a UIKit application.

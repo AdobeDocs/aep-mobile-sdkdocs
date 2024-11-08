@@ -29,7 +29,7 @@ The Messaging extension provides a way to listen to events from content cards di
 
 ## Implement ContentCardEventListening
 
-Complete the following steps to hear content card events:
+Complete the following steps to listen to content card events:
 
 1. Conform to the [ContentCardUIEventListening](../public-classes/contentcarduieventlistening.md) protocol in your class or struct and implement the desired methods.
 1. Pass the listener to the [getContentCardsUI](../api-usage.md#getcontentcardsui) API.
@@ -110,7 +110,7 @@ func onInteract(_ card: ContentCardUI, _ interactionId: String, actionURL: URL?)
 
 Removing a dismissed content card from the UI is the responsibility of the app developer.
 
-To remove a content card from the UI when the user dismisses it, implement the onDismiss method:
+To remove a content card from the UI when the user dismisses it, implement the `onDismiss` method:
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 
