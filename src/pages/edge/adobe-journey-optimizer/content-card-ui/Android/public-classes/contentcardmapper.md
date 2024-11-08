@@ -1,0 +1,57 @@
+---
+title: ContentCardMapper
+description: This document contains information regarding the usage of the Content Card Mapper.
+keywords:
+- Adobe Journey Optimizer
+- Guide
+- Content Card
+- Messaging
+- Customizing UI
+- Card Templates
+- Content Card Templates
+- Small Image Template
+- Android
+---
+
+# ContentCardMapper
+
+Singleton class used to store a mapping between valid [ContentCardSchemaData](../../../public-classes/content-card-schema-data.md) and unique proposition id's. The schema data is used when sending proposition track requests to AJO.
+
+## Class Definition
+
+<CodeBlock slots="code" repeat="1" languages="Kotlin" />
+
+```kotlin
+class ContentCardMapper private constructor() {
+    private val contentCardSchemaDataMap: MutableMap<String, ContentCardSchemaData> = HashMap()
+
+    companion object {
+        @JvmStatic
+        val instance: ContentCardMapper by lazy { ContentCardMapper() }
+    }
+}
+```
+
+## Methods
+
+### getContentCardSchemaData
+
+Returns a `ContentCardSchemaData` object for the given proposition id.
+
+#### Parameters
+
+- _propositionId_ - the proposition id to use as a key in the `ContentCardSchemaData` map.
+
+#### Returns
+
+The `ContentCardSchemaData` for the given proposition id, or null if not found
+
+#### Syntax
+
+<CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
+
+#### Kotlin
+
+```kotlin
+fun getContentCardSchemaData(propositionId: String): ContentCardSchemaData?
+```
