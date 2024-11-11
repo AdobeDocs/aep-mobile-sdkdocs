@@ -1,4 +1,19 @@
-# Data Class - AepImage
+---
+title: AepImage
+description: This document contains information on the AepImage ui model.
+keywords:
+- Adobe Journey Optimizer
+- Guide
+- Content Card
+- Messaging
+- Customizing UI
+- Card Templates
+- Content Card Templates
+- Small Image Template
+- Android
+---
+
+# AepImage
 
 Data class representing an image element in the UI.
 

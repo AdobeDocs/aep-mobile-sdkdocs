@@ -1,4 +1,19 @@
-# Class - ContentCardEventObserver
+---
+title: ContentCardEventObserver
+description: This document contains information on the ContentCardEventObserver class.
+keywords:
+- Adobe Journey Optimizer
+- Guide
+- Content Card
+- Messaging
+- Customizing UI
+- Card Templates
+- Content Card Templates
+- Small Image Template
+- Android
+---
+
+# ContentCardEventObserver
 
 Messaging implementation of [AepUIEventObserver](./aepuieventobserver.md) for handling content card events.
 
@@ -13,6 +28,10 @@ Messaging implementation of [AepUIEventObserver](./aepuieventobserver.md) for ha
 Called when an event related to a Content Card UI template occurs.
 
 #### Syntax
+
+<CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
+
+#### Kotlin
 
 ```kotlin
 override fun onEvent(event: UIEvent<*, *>)

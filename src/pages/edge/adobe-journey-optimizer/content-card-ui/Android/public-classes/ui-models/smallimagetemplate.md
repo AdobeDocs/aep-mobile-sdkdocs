@@ -1,6 +1,21 @@
-# Data Class - SmallImageTemplate
+---
+title: SmallImageTemplate
+description: This document contains information on the SmallImageTemplate class.
+keywords:
+- Adobe Journey Optimizer
+- Guide
+- Content Card
+- Messaging
+- Customizing UI
+- Card Templates
+- Content Card Templates
+- Small Image Template
+- Android
+---
 
-Class representing a small image template, which implements the [AepUITemplate](aepuitemplate.md) interface.
+# SmallImageTemplate
+
+Class which implements [AepUITemplateType](./aepuitemplatetype) and represents a small Image template.
 
 ## Public Properties
 
@@ -18,9 +33,13 @@ Class representing a small image template, which implements the [AepUITemplate](
 
 ### getType 
 
-Returns the type of this template, which is [AepUITemplateType](aepuitemplatetype.md).SMALL_IMAGE.
+Returns the type of this template, which is `AepUITemplateType.SMALL_IMAGE`.
 
 #### Syntax
+
+<CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
+
+#### Kotlin
 
 ``` kotlin
 override fun getType() = AepUITemplateType.SMALL_IMAGE

@@ -1,4 +1,19 @@
-# Class - AepIconStyle
+---
+title: AepIconStyle
+description: This document contains information on the AepIconStyle class.
+keywords:
+- Adobe Journey Optimizer
+- Guide
+- Content Card
+- Messaging
+- Customizing UI
+- Card Templates
+- Content Card Templates
+- Small Image Template
+- Android
+---
+
+# AepIconStyle
 
 Class representing the style for an AepIcon composable.
 

@@ -21,7 +21,9 @@ The `AepUI` interface represents a UI component that can be rendered using the A
 
 ## Interface Definition
 
-<CodeBlock slots="code" repeat="1" languages="Kotlin" />
+<CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
+
+#### Kotlin
 
 ```kotlin
 sealed interface AepUI<T : AepUITemplate, S : AepCardUIState> {
@@ -91,11 +93,13 @@ fun updateState(newState: S)
 
 ## SmallImageUI
 
-Implementation of the [AepUI](./aepui.md#Sealed Interface - AepUI) interface used in rendering a UI for a [SmallImageTemplate](./UIModels/smallimagetemplate.md).
+Implementation of the [AepUI](#AepUI) interface used in rendering a UI for a [SmallImageTemplate](./ui-models/smallimagetemplate.md).
 
 ## Class Definition
 
-<CodeBlock slots="code" repeat="1" languages="Kotlin" />
+<CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
+
+#### Kotlin
 
 ```kotlin
 class SmallImageUI(

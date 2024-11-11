@@ -69,7 +69,9 @@ class AepContentCardViewModel(private val contentCardUIProvider: ContentCardUIPr
 }
 ```
 
-> Note - only content cards for which the user has qualified are returned by the getContentCardUI API. Client-side rules are defined in the Adobe Journey Optimizer campaign.
+<InlineAlert variant="info" slots="text"/>
+
+Note - only content cards for which the user has qualified are returned by the getContentCardUI API. Client-side rules are defined in the Adobe Journey Optimizer campaign.
 
 ## Display Content Cards
 
@@ -109,7 +111,7 @@ private fun AepContentCardList(viewModel: AepContentCardViewModel) {
 }    
 ```
 
-Refer to this [TestApp](../../../../code/testapp/) for a complete example of how to display, customize and listen to UI events from content cards in a Compose UI application.
+Refer to this [TestApp](https://github.com/adobe/aepsdk-messaging-android/tree/feature/content-cards/code/testapp) for a complete example of how to display, customize and listen to UI events from content cards in a Compose UI application.
 
 #### Retrieve ContentCardSchemaData from the Messaging extension
 

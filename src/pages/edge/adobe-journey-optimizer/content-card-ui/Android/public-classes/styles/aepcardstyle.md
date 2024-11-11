@@ -1,4 +1,19 @@
-# Class - AepCardStyle
+---
+title: AepCardStyle
+description: This document contains information on the AepCardStyle class.
+keywords:
+- Adobe Journey Optimizer
+- Guide
+- Content Card
+- Messaging
+- Customizing UI
+- Card Templates
+- Content Card Templates
+- Small Image Template
+- Android
+---
+
+# AepCardStyle
 
 Class representing the style for a Card Composable.
 

@@ -1,4 +1,19 @@
-# Class - SmallImageUIStyle
+---
+title: SmallImageUIStyle
+description: This document contains information on the SmallImageUIStyle class.
+keywords:
+- Adobe Journey Optimizer
+- Guide
+- Content Card
+- Messaging
+- Customizing UI
+- Card Templates
+- Content Card Templates
+- Small Image Template
+- Android
+---
+
+# SmallImageUIStyle
 
 Class representing the style for a small image AEP UI.
 
@@ -10,7 +25,7 @@ Class representing the style for a small image AEP UI.
 | ---------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | cardStyle              | [AepCardStyle](./aepcardstyle.md)                            | The style for the card.                                      |
 | rootRowStyle           | [AepRowStyle](./aeprowstyle.md)                              | The style for the root row.                                  |
-| imageStyle             | [AepImageStyle](./aepimagestyle,md)                          | The style for the image.                                     |
+| imageStyle             | [AepImageStyle](./aepimagestyle.md)                          | The style for the image.                                     |
 | textColumnStyle        | [AepColumnStyle](./aepcolumnstyle.md)                        | The style for the column containing the title, body and buttons. |
 | titleTextStyle         | [AepTextStyle](./aeptextstyle.md)                            | The text style for the title.                                |
 | bodyTextStyle          | [AepTextStyle](./aeptextstyle.md)                            | The text style for the body.                                 |
@@ -23,9 +38,11 @@ Class representing the style for a small image AEP UI.
 
 The `SmallImageUIStyle` is created using a builder. Here's an example:
 
+<CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
+
+#### Kotlin
+
 ```kotlin
-// Displaying content cards in a Row
-// create a custom style for the small image card in row
 val smallImageCardStyleRow = SmallImageUIStyle.Builder()
             .cardStyle(AepCardStyle(modifier = Modifier.width(400.dp).height(200.dp)))
             .rootRowStyle(

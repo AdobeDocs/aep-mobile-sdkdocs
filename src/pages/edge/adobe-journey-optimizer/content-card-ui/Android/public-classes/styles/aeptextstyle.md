@@ -1,4 +1,19 @@
-# Class - AepTextStyle
+---
+title: AepTextStyle
+description: This document contains information on the AepTextStyle class.
+keywords:
+- Adobe Journey Optimizer
+- Guide
+- Content Card
+- Messaging
+- Customizing UI
+- Card Templates
+- Content Card Templates
+- Small Image Template
+- Android
+---
+
+# AepTextStyle
 
 Class representing the style of an AEPText Composable.
 

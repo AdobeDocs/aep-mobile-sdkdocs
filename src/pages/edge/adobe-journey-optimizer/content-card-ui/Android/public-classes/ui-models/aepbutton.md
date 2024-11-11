@@ -1,4 +1,19 @@
-# Data Class - AepButton
+---
+title: AepButton
+description: This document contains information on the AepButton ui model.
+keywords:
+- Adobe Journey Optimizer
+- Guide
+- Content Card
+- Messaging
+- Customizing UI
+- Card Templates
+- Content Card Templates
+- Small Image Template
+- Android
+---
+
+# AepButton
 
 Data class representing a button element in the UI.
 

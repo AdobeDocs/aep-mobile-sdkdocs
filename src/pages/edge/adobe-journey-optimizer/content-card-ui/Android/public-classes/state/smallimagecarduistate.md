@@ -1,7 +1,26 @@
-# Data Class - SmallImageCardUIState
+---
+title: SmallImageCardUIState
+description: This document contains information on the SmallImageCardUIState.
+keywords:
+- Adobe Journey Optimizer
+- Guide
+- Content Card
+- Messaging
+- Customizing UI
+- Card Templates
+- Content Card Templates
+- Small Image Template
+- Android
+---
 
-Class representing the UI state of a Small Image template card.
+# SmallImageCardUIState
+
+Class which implements [AepCardUIState](./aepcarduistate.md) and represents the UI state of a Small Image template card.
 ## Class Definition
+
+<CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
+
+#### Kotlin
 
 ```kotlin
 data class SmallImageCardUIState(

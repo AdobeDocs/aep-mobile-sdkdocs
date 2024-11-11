@@ -397,12 +397,12 @@ module.exports = {
                                                 path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/observers/aepuieventobserver",
                                                 pages: [
                                                     {
-                                                        title: "AepUIContentProvider",
+                                                        title: "AepUIEventObserver",
                                                         path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/observers/aepuieventobserver",
                                                     },
                                                     {
-                                                        title: "ContentCardUIProvider",
-                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/observers/aepuieventobserver",
+                                                        title: "ContentCardEventObserver",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/observers/contentcardeventobserver",
                                                     }
                                                 ]
                                             },
@@ -456,7 +456,7 @@ module.exports = {
                                             },
                                             {
                                                 title: "UI Models",
-                                                path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/",
+                                                path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepbutton",
                                                 pages: [
                                                     {
                                                         title: "AEPButton",
@@ -475,12 +475,12 @@ module.exports = {
                                                         path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aeptext"
                                                     },
                                                     {
-                                                        title: "AEPTemplate",
-                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aeptemplate"
+                                                        title: "AEPUITemplate",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepuitemplate"
                                                     },
                                                     {
-                                                        title: "AEPTemplateType",
-                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aeptemplatetype"
+                                                        title: "AEPUITemplateType",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepuitemplatetype"
                                                     },
                                                     {
                                                         title: "SmallImageTemplate",

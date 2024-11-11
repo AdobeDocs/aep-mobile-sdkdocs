@@ -1,6 +1,21 @@
-# Class - AepButtonStyle
+---
+title: AepButtonStyle
+description: This document contains information on the AepButtonStyle class.
+keywords:
+- Adobe Journey Optimizer
+- Guide
+- Content Card
+- Messaging
+- Customizing UI
+- Card Templates
+- Content Card Templates
+- Small Image Template
+- Android
+---
 
-Class representing the style of an AEPButton Composable.
+# AepButtonStyle
+
+Class representing the style of an AepButton Composable.
 
 ## Public Properties
 

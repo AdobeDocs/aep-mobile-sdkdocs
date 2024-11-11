@@ -1,6 +1,21 @@
-# Class - AepColumnStyle
+---
+title: AepColumnStyle
+description: This document contains information on the AepColumnStyle class.
+keywords:
+- Adobe Journey Optimizer
+- Guide
+- Content Card
+- Messaging
+- Customizing UI
+- Card Templates
+- Content Card Templates
+- Small Image Template
+- Android
+---
 
-Class representing the style for a column AEP UI.
+# AepColumnStyle
+
+Class representing the style for a column within an AEP UI composable.
 
 ## Public Properties
 

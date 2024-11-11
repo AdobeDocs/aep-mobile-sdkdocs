@@ -1,6 +1,21 @@
-# Class - AepRowStyle
+---
+title: AepRowStyle
+description: This document contains information on the AepRowStyle class.
+keywords:
+- Adobe Journey Optimizer
+- Guide
+- Content Card
+- Messaging
+- Customizing UI
+- Card Templates
+- Content Card Templates
+- Small Image Template
+- Android
+---
 
-Class representing the style for a row AEP UI.
+# AepRowStyle
+
+Class representing the style for a row within an AEP UI composable.
 
 ## Public Properties
 

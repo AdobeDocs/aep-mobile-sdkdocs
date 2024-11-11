@@ -1,6 +1,6 @@
 ---
 title: ContentCardUIEventListener
-description: This document contains information regarding the ContentCardUIEventListener and its callback functions.
+description: This document contains information on implementing the ContentCardUIEventListener.
 keywords:
 - Adobe Journey Optimizer
 - Guide
@@ -19,7 +19,9 @@ Interface to handle different callback events which can occur for a displayed co
 
 ## Interface Definition
 
-<CodeBlock slots="code" repeat="1" languages="Kotlin" />
+<CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
+
+#### Kotlin
 
 ```kotlin
 interface ContentCardUIEventListener {

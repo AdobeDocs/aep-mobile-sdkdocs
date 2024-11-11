@@ -55,7 +55,7 @@ class ContentCardCallback: ContentCardUIEventListener {
 }
 ```
 
-2. Pass the listener to the [ContentCardEventObservers](../public-classes/Observers/contentcardeventobserver.md) class when retrieving the card composable.
+2. Pass the listener to the [ContentCardEventObservers](../public-classes/observers/contentcardeventobserver.md) class when retrieving the card composable.
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 

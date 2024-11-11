@@ -27,7 +27,7 @@ Represents an action that can be performed on a UI component.
 sealed class UIAction
 ```
 
-## Data Class - Click
+## Click
 
 Represents a click UIAction that can be performed on a UI component.
 

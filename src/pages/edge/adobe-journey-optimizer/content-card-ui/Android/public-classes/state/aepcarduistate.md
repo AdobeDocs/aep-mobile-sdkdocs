@@ -1,7 +1,26 @@
-# Open Class - AepCardUIState
+---
+title: AepCardUIState
+description: This document contains information on the AepCardUIState.
+keywords:
+- Adobe Journey Optimizer
+- Guide
+- Content Card
+- Messaging
+- Customizing UI
+- Card Templates
+- Content Card Templates
+- Small Image Template
+- Android
+---
 
-Class representing the state of an AEP card. This class includes the common properties `dismissed` and `displayed` which are common across different card states.
+# AepCardUIState
+
+Class representing the state of an AEP card. This class includes the properties `dismissed` and `displayed` which are common across different card states.
 ## Class Definition
+
+<CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
+
+#### Kotlin
 
 ```kotlin
 open class AepCardUIState(

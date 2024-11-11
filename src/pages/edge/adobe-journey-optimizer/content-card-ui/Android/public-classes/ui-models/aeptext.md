@@ -1,4 +1,19 @@
-# Data Class - AepText
+---
+title: AepText
+description: This document contains information on the AepText ui model.
+keywords:
+- Adobe Journey Optimizer
+- Guide
+- Content Card
+- Messaging
+- Customizing UI
+- Card Templates
+- Content Card Templates
+- Small Image Template
+- Android
+---
+
+# AepText
 
 Data class representing a text element in the UI.
 
