@@ -76,6 +76,7 @@ Note - only content cards for which the user has qualified are returned by the g
 ## Display Content Cards
 
 The Content Card user interface is implemented using Jetpack Compose, which is the recommended toolkit for Android development. To display content cards in your app, pass the `AepUI` objects returned by the `getContentCardUI` API to the appropriate Content Card composable. The currently supported composables are:
+
 1. SmallImageCard composable for SmallImageUI
 
 ### Display Content Cards in Compose UI application

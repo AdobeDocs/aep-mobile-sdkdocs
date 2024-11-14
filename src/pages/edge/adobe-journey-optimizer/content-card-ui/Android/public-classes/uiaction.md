@@ -47,4 +47,3 @@ Represents a click UIAction that can be performed on a UI component.
 ``` kotlin
 data class Click(val id: String, val actionUrl: String?) : UIAction()
 ```
-

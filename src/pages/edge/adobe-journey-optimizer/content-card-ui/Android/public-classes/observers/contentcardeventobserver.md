@@ -19,7 +19,7 @@ Messaging implementation of [AepUIEventObserver](./aepuieventobserver.md) for ha
 
 #### Class Parameters
 
-- _callback_ - An optional [ContentCardUIEventListener](../contentcarduieventlistener.md) to invoke when a content card event occurs.
+* _callback_ - An optional [ContentCardUIEventListener](../contentcarduieventlistener.md) to invoke when a content card event occurs.
 
 ## Methods
 

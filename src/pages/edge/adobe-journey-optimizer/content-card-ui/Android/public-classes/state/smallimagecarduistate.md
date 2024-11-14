@@ -16,6 +16,7 @@ keywords:
 # SmallImageCardUIState
 
 Class which implements [AepCardUIState](./aepcarduistate.md) and represents the UI state of a Small Image template card.
+
 ## Class Definition
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />

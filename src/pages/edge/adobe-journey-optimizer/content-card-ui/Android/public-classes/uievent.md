@@ -16,6 +16,7 @@ keywords:
 # UIEvent
 
 Represents different types of UI events that can be triggered by the user interaction on the UI templates.
+
 #### Class Parameters
 
 | Parameter | Type                                          | Description                                                  |

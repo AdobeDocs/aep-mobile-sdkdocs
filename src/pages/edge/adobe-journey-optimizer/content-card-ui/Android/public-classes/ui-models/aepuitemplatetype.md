@@ -15,7 +15,7 @@ keywords:
 
 # AepUITemplateType
 
-An enumeration of the different types of content card templates supported by the Messaging framework. 
+An enumeration of the different types of content card templates supported by the Messaging framework.
 
 Each case corresponds to a specific template type, identified by its JSON string value.
 

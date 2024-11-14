@@ -39,7 +39,7 @@ Callback to invoke when a content card is displayed.
 
 #### Parameters
 
-- _aepUI_ - The [AepUI](./aepui.md) instance that was displayed.
+* _aepUI_ - The [AepUI](./aepui.md) instance that was displayed.
 
 #### Syntax
 
@@ -57,7 +57,7 @@ Callback to invoke when a content card is dismissed.
 
 #### Parameters
 
-- _aepUI_ - The [AepUI](./aepui.md) instance that was dismissed.
+* _aepUI_ - The [AepUI](./aepui.md) instance that was dismissed.
 
 #### Syntax
 
@@ -75,9 +75,9 @@ Callback to invoke when a content card is interacted with.
 
 #### Parameters
 
-- _aepUI_ - The [AepUI](./aepui.md) instance that was interacted with.
-- _interactionId_ - An optional string identifier for the interaction event.
-- _actionUrl_ - An optional URL associated with the interaction.
+* _aepUI_ - The [AepUI](./aepui.md) instance that was interacted with.
+* _interactionId_ - An optional string identifier for the interaction event.
+* _actionUrl_ - An optional URL associated with the interaction.
 
 #### Returns
 

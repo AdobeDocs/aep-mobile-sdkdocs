@@ -19,7 +19,7 @@ Interface representing a generic UI template in AEP.
 
 ## Methods
 
-### getType 
+### getType
 
 Gets the type of the UI template.
 

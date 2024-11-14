@@ -68,4 +68,3 @@ Updates the flow returned by [getContent](#getContent) with the latest cached co
 ```kotlin
 override suspend fun refreshContent()
 ```
-

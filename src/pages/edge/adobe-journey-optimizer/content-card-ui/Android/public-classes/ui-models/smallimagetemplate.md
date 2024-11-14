@@ -31,7 +31,7 @@ Class which implements [AepUITemplateType](./aepuitemplatetype) and represents a
 
 ## Methods
 
-### getType 
+### getType
 
 Returns the type of this template, which is `AepUITemplateType.SMALL_IMAGE`.
 

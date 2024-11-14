@@ -16,6 +16,7 @@ keywords:
 # AepCardUIState
 
 Class representing the state of an AEP card. This class includes the properties `dismissed` and `displayed` which are common across different card states.
+
 ## Class Definition
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />

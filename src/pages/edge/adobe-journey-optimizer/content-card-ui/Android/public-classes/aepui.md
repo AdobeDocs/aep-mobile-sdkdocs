@@ -17,7 +17,7 @@ keywords:
 
 The `AepUI` interface represents a UI component that can be rendered using the AEP compose UI library. The AEP compose UI currently supports rendering the following UI templates:
 
-1. `SmallImageUI` which renders `Small Image template` 
+1. `SmallImageUI` which renders `Small Image template`
 
 ## Interface Definition
 
@@ -35,7 +35,7 @@ sealed interface AepUI<T : AepUITemplate, S : AepCardUIState> {
 
 ## Methods
 
-### getTemplate 
+### getTemplate
 
 Retrieves the template associated with this UI component.
 
@@ -53,7 +53,7 @@ A template of type `T` which is an implementation of the  `AepUITemplate` interf
 fun getTemplate(): T
 ```
 
-### getState 
+### getState
 
 Retrieves the current state of the UI component.
 
@@ -71,13 +71,13 @@ A state of type `S` which is a subclass of the  `AepCardUIState` class.
 fun getState(): S
 ```
 
-### updateState 
+### updateState
 
 Updates the state of the UI component with a new state.
 
 #### Parameters
 
-- _newState_ - The new state of type `S` to update within the UI component.
+* _newState_ - The new state of type `S` to update within the UI component.
 
 #### Syntax
 
@@ -110,7 +110,7 @@ class SmallImageUI(
 
 ## Methods
 
-### getTemplate 
+### getTemplate
 
 Retrieves the template associated with the small image UI.
 
@@ -128,7 +128,7 @@ The small image template.
 override fun getTemplate(): SmallImageTemplate
 ```
 
-### getState 
+### getState
 
 Retrieves the current state of the small image UI.
 
@@ -146,13 +146,13 @@ The current SmallImageCardUIState.
 override fun getState(): SmallImageCardUIState
 ```
 
-### updateState 
+### updateState
 
 Updates the current state of the small image UI.
 
 #### Parameters
 
-- _newState_ - The new state of type `SmallImageCardUIState` to update within the UI component.
+* _newState_ - The new state of type `SmallImageCardUIState` to update within the UI component.
 
 #### Syntax
 

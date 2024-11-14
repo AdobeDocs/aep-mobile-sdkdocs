@@ -42,7 +42,7 @@ Returns a `ContentCardSchemaData` object for the given proposition id.
 
 #### Parameters
 
-- _propositionId_ - the proposition id to use as a key in the `ContentCardSchemaData` map.
+* _propositionId_ - the proposition id to use as a key in the `ContentCardSchemaData` map.
 
 #### Returns
 

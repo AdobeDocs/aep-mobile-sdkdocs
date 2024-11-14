@@ -15,7 +15,7 @@ keywords:
 
 # AepUIContentProvider
 
-Responsible for retrieving and refreshing data as required by the UI. 
+Responsible for retrieving and refreshing data as required by the UI.
 
 Classes implementing this interface will define a strategy to provide content for rendering the UI.
 
