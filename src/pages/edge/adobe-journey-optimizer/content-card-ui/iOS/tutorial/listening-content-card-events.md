@@ -85,9 +85,9 @@ struct HomePage: View, ContentCardUIEventListening {
 
 The `onInteract` method provides an optional `actionURL` parameter associated with the interaction event. The return value of this method determines how the URL is handled.
 
-* Return `true` if your application has successfully handled the URL. This indicates to the SDK that no further action is needed.
+* Returns `true` if your application has successfully handled the URL. This indicates to the SDK that no further action is needed.
 
-* Return `false` to allow the SDK to process the URL.
+* Returns `false` to allow the SDK to process the URL.
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 
