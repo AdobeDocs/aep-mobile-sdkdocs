@@ -1,6 +1,6 @@
 ---
 title: Content Card UI 
-description: This document guides you to integrating content card.
+description: This guide guides you to integrating content cards with UI in your iOS application using the Messaging extension APIs.
 keywords:
 - Adobe Journey Optimizer
 - Guide
@@ -20,7 +20,7 @@ keywords:
 
 ## API Reference
 
-* [Content Card API's](./api-usage.md)
+* [Content Card APIs](./api-usage.md)
 
 ## Public Classes, Enums, and Protocols
 
