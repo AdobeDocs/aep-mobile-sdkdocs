@@ -23,7 +23,7 @@ Classes implementing this interface will define a strategy to provide content fo
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 interface AepUIContentProvider {
@@ -38,15 +38,15 @@ interface AepUIContentProvider {
 
 Retrieves the content for the UI.
 
-#### Returns
+### Returns
 
 The content for the UI as a flow of [AepUITemplate](../ui-models/aepuitemplate.md)s.
 
-#### Syntax
+### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 suspend fun getContent(): Flow<List<AepUITemplate>>
@@ -56,11 +56,11 @@ suspend fun getContent(): Flow<List<AepUITemplate>>
 
 Refreshes the content for the UI. Implementations should update the data into the flow returned by [getContent](#getContent).
 
-#### Syntax
+### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 suspend fun refreshContent()

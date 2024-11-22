@@ -15,13 +15,13 @@ keywords:
 
 # AepCardUIState
 
-Class representing the state of an AEP card. This class includes the properties `dismissed` and `displayed` which are common across different card states.
+Class representing the state of an Adobe Experience Platform card. This class includes the properties `dismissed` and `displayed` which are common across different card states.
 
 ## Class Definition
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 open class AepCardUIState(
@@ -32,7 +32,7 @@ open class AepCardUIState(
 
 ## Public Properties
 
-| Property  | Type    | Description                                    |
-| --------- | ------- | ---------------------------------------------- |
-| dismissed | Boolean | Indicates whether the card has been dismissed. |
-| displayed | Boolean | Indicates whether the card has been displayed. |
+| Property    | Type    | Description                                    |
+| ----------- | ------- | ---------------------------------------------- |
+| `dismissed` | Boolean | Indicates whether the card has been dismissed. |
+| `displayed` | Boolean | Indicates whether the card has been displayed. |

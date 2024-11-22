@@ -17,7 +17,7 @@ keywords:
 
 This document provides information on how to use the Messaging APIs to receive content card views in your application.
 
-### getContentCardUI
+## getContentCardUI
 
 The `getContentCardUI` method retrieves a flow of [AepUI](./public-classes/aepui.md) objects for the provided surface. These `AepUI` objects represent templated content cards whose UI can be rendered using provided card composables.
 
@@ -25,21 +25,21 @@ The `getContentCardUI` method retrieves a flow of [AepUI](./public-classes/aepui
 
 Calling this API will not download content cards from Adobe Journey Optimizer; it will only retrieve the content cards that are already downloaded and cached by the Messaging extension. You **must** call [`updatePropositionsForSurfaces`](../../code-based/api-reference.md#updatePropositionsForSurfaces) API from the AEPMessaging extension with the desired surfaces prior to calling this API.
 
-#### Syntax
+### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 suspend fun getContentCardUI(): Flow<List<AepUI<*, *>>>
 ```
 
-#### Example
+### Example
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 // Download the content cards for homepage surface using Messaging extension

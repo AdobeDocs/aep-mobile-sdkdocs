@@ -1,6 +1,6 @@
 ---
 title: AepButton
-description: This document contains information on the AepButton ui model.
+description: This document contains information on the AepButton UI model.
 keywords:
 - Adobe Journey Optimizer
 - Guide
@@ -21,6 +21,6 @@ Data class representing a button element in the UI.
 
 | Property |	Type |	Description |
 | --- | --- | --- |
-| Id | String |	The unique ID for the button. |
-| actionUrl |	String |	The URL to be opened when the button is clicked. |
-| text |	[AepText](./aeptext.md) |	The text to be displayed on the button, represented by an AepText object. |
+| `id` | String |	The unique ID for the button. |
+| `actionUrl` |	String |	The URL to be opened when the button is clicked. |
+| `text` |	[AepText](./aeptext.md) |	The text to be displayed on the button, represented by an AepText object. |

@@ -25,7 +25,7 @@ To fetch the content cards for the surfaces configured in [Adobe Journey Optimiz
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 val surfaces = mutableListOf<Surface>()
@@ -41,7 +41,7 @@ To retrieve the content cards for a specific surface, call `getContentCardsUI`. 
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 // create a view model or reuse existing one to hold the aepUIList
@@ -77,7 +77,7 @@ Note - only content cards for which the user has qualified are returned by the g
 
 The Content Card user interface is implemented using Jetpack Compose, which is the recommended toolkit for Android development. To display content cards in your app, pass the `AepUI` objects returned by the `getContentCardUI` API to the appropriate Content Card composable. The currently supported composables are:
 
-1. SmallImageCard composable for SmallImageUI
+1. `SmallImageCard` composable for `SmallImageUI`
 
 ### Display Content Cards in Compose UI application
 
@@ -85,7 +85,7 @@ Below is an example of how to display content cards in a Compose UI application:
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 @Composable
@@ -112,15 +112,15 @@ private fun AepContentCardList(viewModel: AepContentCardViewModel) {
 }    
 ```
 
-Refer to this [TestApp](https://github.com/adobe/aepsdk-messaging-android/tree/feature/content-cards/code/testapp) for a complete example of how to display, customize and listen to UI events from content cards in a Compose UI application.
+Refer to this [TestApp](https://github.com/adobe/aepsdk-messaging-android/tree/feature/content-cards/code/testapp) for a complete example of how to display, customize, and listen to UI events from content cards in a Compose UI application.
 
-#### Retrieve ContentCardSchemaData from the Messaging extension
+### Retrieve ContentCardSchemaData from the Messaging extension
 
-You may retrieve the `ContentCardSchemaData` for a Content Card using the template id using the [ContentCardMapper](../public-classes/contentcardmapper.md):
+You may retrieve the `ContentCardSchemaData` for a Content Card with the template ID using the [ContentCardMapper](../public-classes/contentcardmapper.md):
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 private fun AepContentCardList(viewModel: AepContentCardViewModel) {

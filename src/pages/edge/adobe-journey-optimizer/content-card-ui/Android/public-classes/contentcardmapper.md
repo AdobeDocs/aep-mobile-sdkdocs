@@ -15,13 +15,13 @@ keywords:
 
 # ContentCardMapper
 
-Singleton class used to store a mapping between valid [ContentCardSchemaData](../../../public-classes/content-card-schema-data.md#android-interface) and unique proposition id's. The schema data is used when sending proposition track requests to AJO.
+Singleton class used to store a mapping between valid [ContentCardSchemaData](../../../public-classes/content-card-schema-data.md#android-interface) and unique proposition IDs. The schema data is used when sending proposition track requests to AJO.
 
 ## Class Definition
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 class ContentCardMapper private constructor() {
@@ -38,21 +38,21 @@ class ContentCardMapper private constructor() {
 
 ### getContentCardSchemaData
 
-Returns a `ContentCardSchemaData` object for the given proposition id.
+Returns a `ContentCardSchemaData` object for the given proposition ID.
 
-#### Parameters
+### Parameters
 
-* _propositionId_ - the proposition id to use as a key in the `ContentCardSchemaData` map.
+* _propositionId_ - the proposition ID to use as a key in the `ContentCardSchemaData` map.
 
-#### Returns
+### Returns
 
-The `ContentCardSchemaData` for the given proposition id, or null if not found
+The `ContentCardSchemaData` for the given proposition ID, or null if not found.
 
-#### Syntax
+### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 fun getContentCardSchemaData(propositionId: String): ContentCardSchemaData?

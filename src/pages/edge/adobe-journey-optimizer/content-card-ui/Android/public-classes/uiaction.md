@@ -1,6 +1,6 @@
 ---
 title: UIAction
-description: This document contains information regarding UIActio and it's action types.
+description: This document contains information regarding UIAction and its action types.
 keywords:
 - Adobe Journey Optimizer
 - Guide
@@ -17,11 +17,11 @@ keywords:
 
 Represents an action that can be performed on a UI component.
 
-#### Syntax
+## Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ``` kotlin
 sealed class UIAction
@@ -29,20 +29,20 @@ sealed class UIAction
 
 ## Click
 
-Represents a click UIAction that can be performed on a UI component.
+Represents a click `UIAction` that can be performed on a UI component.
 
-#### Public Properties
+### Public Properties
 
-| Property  | Type    | Description                                                |
-| --------- | ------- | ---------------------------------------------------------- |
-| id        | String  | unique identifier of the UI component                      |
-| actionUrl | String? | optional URL to be opened when the UI component is clicked |
+| Property    | Type    | Description                                                  |
+| ----------- | ------- | ------------------------------------------------------------ |
+| `id`        | String  | The unique identifier of the UI component.                   |
+| `actionUrl` | String? | An optional URL to be opened when the UI component is clicked. |
 
-#### Syntax
+### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ``` kotlin
 data class Click(val id: String, val actionUrl: String?) : UIAction()

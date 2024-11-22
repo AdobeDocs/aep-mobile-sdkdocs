@@ -21,7 +21,7 @@ Class which implements [AepCardUIState](./aepcarduistate.md) and represents the 
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 data class SmallImageCardUIState(
@@ -32,7 +32,7 @@ data class SmallImageCardUIState(
 
 ## Public Properties
 
-| Property  | Type    | Description                                    |
-| --------- | ------- | ---------------------------------------------- |
-| dismissed | Boolean | Indicates whether the card has been dismissed. |
-| displayed | Boolean | Indicates whether the card has been displayed. |
+| Property    | Type    | Description                                    |
+| ----------- | ------- | ---------------------------------------------- |
+| `dismissed` | Boolean | Indicates whether the card has been dismissed. |
+| `displayed` | Boolean | Indicates whether the card has been displayed. |

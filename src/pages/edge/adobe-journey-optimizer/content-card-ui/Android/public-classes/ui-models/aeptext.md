@@ -1,6 +1,6 @@
 ---
 title: AepText
-description: This document contains information on the AepText ui model.
+description: This document contains information on the AepText UI model.
 keywords:
 - Adobe Journey Optimizer
 - Guide
@@ -21,4 +21,4 @@ Data class representing a text element in the UI.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| content | String | The content of the text. |
+| `content` | String | The content of the text. |

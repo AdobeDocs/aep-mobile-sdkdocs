@@ -1,6 +1,6 @@
 ---
 title: AepImage
-description: This document contains information on the AepImage ui model.
+description: This document contains information on the AepImage UI model.
 keywords:
 - Adobe Journey Optimizer
 - Guide
@@ -21,5 +21,5 @@ Data class representing an image element in the UI.
 
 | Property | Type | Description |
 | --- | --- | --- |
-| url | String? | The URL of the image. |
-| darkUrl | String? | The URL of the image for dark mode. |
+| `url` | String? | The URL of the image. |
+| `darkUrl` | String? | The URL of the image for dark mode. |

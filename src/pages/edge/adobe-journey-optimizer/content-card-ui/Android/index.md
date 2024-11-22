@@ -1,6 +1,6 @@
 ---
 title: Content Card UI 
-description: These documents guide you to integrating a content card ui message with an Android app.
+description: These documents guide you to integrating a Content Card UI message with an Android app.
 keywords:
 - Adobe Journey Optimizer
 - Guide

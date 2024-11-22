@@ -1,6 +1,6 @@
 ---
 title: AepIcon
-description: This document contains information on the AepIcon ui model.
+description: This document contains information on the AepIcon UI model.
 keywords:
 - Adobe Journey Optimizer
 - Guide
@@ -21,4 +21,4 @@ Data class representing an icon element in the UI.
 
 | Property |	Type |	Description |
 | --- | --- | --- |
-| drawableId | Int |	The drawable resource ID for the icon. |
+| `drawableId` | Int |	The drawable resource ID for the icon. |

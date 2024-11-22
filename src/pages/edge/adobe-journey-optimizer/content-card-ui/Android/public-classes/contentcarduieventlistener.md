@@ -21,7 +21,7 @@ Interface to handle different callback events which can occur for a displayed co
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 interface ContentCardUIEventListener {
@@ -37,15 +37,15 @@ interface ContentCardUIEventListener {
 
 Callback to invoke when a content card is displayed.
 
-#### Parameters
+### Parameters
 
 * _aepUI_ - The [AepUI](./aepui.md) instance that was displayed.
 
-#### Syntax
+### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 fun onDisplay(aepUI: AepUI<*, *>,)
@@ -55,15 +55,15 @@ fun onDisplay(aepUI: AepUI<*, *>,)
 
 Callback to invoke when a content card is dismissed.
 
-#### Parameters
+### Parameters
 
 * _aepUI_ - The [AepUI](./aepui.md) instance that was dismissed.
 
-#### Syntax
+### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 fun onDismiss(aepUI: AepUI<*, *>,)
@@ -73,21 +73,21 @@ fun onDismiss(aepUI: AepUI<*, *>,)
 
 Callback to invoke when a content card is interacted with.
 
-#### Parameters
+### Parameters
 
 * _aepUI_ - The [AepUI](./aepui.md) instance that was interacted with.
 * _interactionId_ - An optional string identifier for the interaction event.
 * _actionUrl_ - An optional URL associated with the interaction.
 
-#### Returns
+### Returns
 
-A boolean value indicating whether the interaction event was handled. Return `true` if the client app has handled the `actionUrl` associated with the interaction. Return `false` if the SDK should handle the `actionUrl`.
+A boolean value indicating whether the interaction event was handled. Returns `true` if the client app has handled the `actionUrl` associated with the interaction. Returns `false` if the SDK should handle the `actionUrl`.
 
-#### Syntax
+### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 fun onInteract(aepUI: AepUI<*, *>, interactionId: String?, actionUrl: String?): Boolean

@@ -31,7 +31,7 @@ Complete the following steps to hear content card events:
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 class ContentCardCallback: ContentCardUIEventListener {
@@ -59,7 +59,7 @@ class ContentCardCallback: ContentCardUIEventListener {
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 @Composable
@@ -90,17 +90,17 @@ private fun AepContentCardList(viewModel: AepContentCardViewModel) {
 }    
 ```
 
-### Handling actionable URLs
+## Handling actionable URLs
 
 The `onInteract` method provides an optional `actionURL` parameter associated with the interaction event. The return value of this method determines how the URL is handled.
 
-* Return `true` if your application has successfully handled the URL. This indicates to the SDK that no further action is needed.
+* Returns `true` if your application has successfully handled the URL. This indicates to the SDK that no further action is needed.
 
-* Return `false` to allow the SDK to process the URL.
+* Returns `false` to allow the SDK to process the URL.
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 override fun onInteract(

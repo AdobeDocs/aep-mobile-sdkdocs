@@ -19,15 +19,15 @@ Class which implements [AepUITemplateType](./aepuitemplatetype) and represents a
 
 ## Public Properties
 
-| Property   | Type                               | Description                                                  |
-| ---------- | ---------------------------------- | ------------------------------------------------------------ |
-| id         | String                             | The unique identifier for this template.                     |
-| title      | [AepText](./aeptext.md)            | The title text and display settings.                         |
-| body       | [AepText](./aeptext.md)?           | The body text and display settings.                          |
-| image      | [AepImage](./aepimage.md)?         | The details of the image to be displayed.                    |
-| actionUrl  | String?                            | The URL to be opened when the the small image card is clicked. |
-| buttons    | List<[AepButton](./aepbutton.md)>? | The details for the small image template buttons.            |
-| dismissBtn | [AepIcon](./aepicon.md)?           | The details for the small image template dismiss button.     |
+| Property     | Type                               | Description                                                  |
+| ------------ | ---------------------------------- | ------------------------------------------------------------ |
+| `id`         | String                             | The unique identifier for this template.                     |
+| `title`      | [AepText](./aeptext.md)            | The title text and display settings.                         |
+| `body`       | [AepText](./aeptext.md)?           | The body text and display settings.                          |
+| `image`      | [AepImage](./aepimage.md)?         | The details of the image to be displayed.                    |
+| `actionUrl`  | String?                            | The URL to be opened when the the small image card is clicked. |
+| `buttons`    | List<[AepButton](./aepbutton.md)>? | The details for the small image template buttons.            |
+| `dismissBtn` | [AepIcon](./aepicon.md)?           | The details for the small image template dismiss button.     |
 
 ## Methods
 
@@ -35,11 +35,11 @@ Class which implements [AepUITemplateType](./aepuitemplatetype) and represents a
 
 Returns the type of this template, which is `AepUITemplateType.SMALL_IMAGE`.
 
-#### Syntax
+### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ``` kotlin
 override fun getType() = AepUITemplateType.SMALL_IMAGE

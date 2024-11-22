@@ -15,7 +15,7 @@ keywords:
 
 # AepUITemplate
 
-Interface representing a generic UI template in AEP.
+Interface representing a generic UI template from the Adobe Experience Platform.
 
 ## Methods
 
@@ -23,11 +23,11 @@ Interface representing a generic UI template in AEP.
 
 Gets the type of the UI template.
 
-#### Syntax
+### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ``` kotlin
 fun getType(): AepUITemplateType
