@@ -138,7 +138,7 @@ iOS
 
 <Tabs query="platform=ios&api=update-propositions-withCallback"/>
 
-## updatePropositionsWithCompletionHandlerWithCompletionTimeout
+## updatePropositionsWithCompletionHandlerAndTimeout
 
 This API dispatches an event for the Edge network extension to fetch decision propositions for the provided decision scopes array from the decisioning services enabled in the Experience Edge. Similar to `updatePropositionsWithCompletionHandler`, the returned decision propositions are cached in-memory within the Optimize SDK extension and can be retrieved using the `getPropositions` API. 
 
