@@ -108,6 +108,12 @@ For details on syntax, usage and availability, refer to [Mobile Core - Reset ide
 
 ## updatePropositions
 
+<InlineAlert variant="warning" slots="header, text1"/>
+
+This API has been deprecated starting in v3.2.2 and removed in v3.3.0 of the Android mobile extension.
+
+Use [`Optimize.updatePropositions`](../api-reference.md#updatepropositionswithcompletionhandler) or  [`Optimize.updatePropositions`](../api-reference.md#updatepropositionswithcompletionhandlerandtimeout) APIs instead.
+
 This API dispatches an Event for the Edge network extension to fetch decision propositions, for the provided decision scopes array, from the decisioning services enabled in the Experience Edge. The returned decision propositions are cached in-memory in the Optimize SDK extension and can be retrieved using `getPropositions` API.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
