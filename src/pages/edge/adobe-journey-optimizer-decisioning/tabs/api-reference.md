@@ -147,11 +147,11 @@ Optimize.getPropositions(scopes, new AdobeCallbackWithError<Map<DecisionScope, O
 #### Syntax
 
 ```java
-public static void getPropositions(final List<DecisionScope> decisionScopes, final long timeoutMillis, final AdobeCallback<Map<DecisionScope, OptimizeProposition>> callback)
+public static void getPropositions(final List<DecisionScope> decisionScopes, final double timeoutSeconds, final AdobeCallback<Map<DecisionScope, OptimizeProposition>> callback)
 ```
 
 * _decisionScopes_ is a list of decision scopes for which propositions are requested.
-* _timeoutMillis_ is a duration in milliseconds specifying the maximum time `getProposition` will wait for completion before returning [AdobeError](../../home/base/mobile-core/api-reference.md#adobeerror).
+* _timeoutSeconds_ is a duration in seconds specifying the maximum time `getProposition` will wait for completion before returning [AdobeError](../../home/base/mobile-core/api-reference.md#adobeerror).
 * _callback_ `call` method is invoked with propositions map of type `Map<DecisionScope, OptimizeProposition>`. If the callback is an instance of [AdobeCallbackWithError](../../home/base/mobile-core/api-reference.md#adobecallbackwitherror), and if the operation times out or an error occurs in retrieving propositions, the `fail` method is invoked with the appropriate [AdobeError](../../home/base/mobile-core/api-reference.md#adobeerror).
 
 #### Example
@@ -164,7 +164,7 @@ final List<DecisionScope> decisionScopes = new ArrayList<>();
 decisionScopes.add(decisionScope1);
 decisionScopes.add(decisionScope2);
 
-Optimize.getPropositions(scopes, 10000L, new AdobeCallbackWithError<Map<DecisionScope, OptimizeProposition>>() {
+Optimize.getPropositions(scopes, 10.0, new AdobeCallbackWithError<Map<DecisionScope, OptimizeProposition>>() {
     @Override
     public void fail(final AdobeError adobeError) {
         // handle error
@@ -531,14 +531,14 @@ Optimize.updatePropositions(decisionScopes,
 public static void updatePropositions(final List<DecisionScope> decisionScopes, 
                                       final Map<String, Object> xdm,
                                       final Map<String, Object> data,
-                                      final long timeoutMillis, 
+                                      final double timeoutSeconds, 
                                       final AdobeCallback<Map<DecisionScope, OptimizeProposition>> callback)
 ```
 
 * _decisionScopes_ is a list of decision scopes for which propositions need updating.
 * _xdm_ is a map containing additional XDM formatted data to be attached to the Experience Event.
 * _data_ is a map containing additional freeform data to be attached to the Experience Event.
-* _timeoutMillis_ is a duration in milliseconds specifying the maximum time `updateProposition` will wait for completion before returning [AEPOptimizeError](../api-reference.md#aepoptimizeerror) which contains [AdobeError.CALLBACK_TIMEOUT](../../home/base/mobile-core/api-reference.md#adobeerror).
+* _timeoutSeconds_ is a duration in seconds specifying the maximum time `updateProposition` will wait for completion before returning [AEPOptimizeError](../api-reference.md#aepoptimizeerror) which contains [AdobeError.CALLBACK_TIMEOUT](../../home/base/mobile-core/api-reference.md#adobeerror).
 * _callback_ is an optional completion handler that is invoked at the completion of the edge request. The `call` method is invoked with propositions map of type `Map<DecisionScope, OptimizeProposition>`. If the callback is an instance of `AdobeCallbackWithOptimizeError`, and if the operation times out or an error occurs in retrieving propositions, the `fail` method is invoked with the appropriate [AEPOptimizeError](../api-reference.md#aepoptimizeerror). _Note:_ In certain cases, both the success and failure callbacks may be triggered. To handle these cases, ensure that your implementation checks for both successful propositions and errors within the callback, as both may be present simultaneously.
 
 #### Example
@@ -562,7 +562,7 @@ Optimize.updatePropositions(decisionScopes,
                                     put("dataKey", "dataValue");
                                 }
                             },
-                            10000L,
+                            10.0,
                             new AdobeCallbackWithOptimizeError<Map<DecisionScope, OptimizeProposition>>() {
                                 @Override
                                 public void fail(AEPOptimizeError optimizeError) {
