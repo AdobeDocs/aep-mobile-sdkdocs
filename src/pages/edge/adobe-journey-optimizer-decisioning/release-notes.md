@@ -8,6 +8,19 @@ keywords:
 
 # Release notes
 
+## December 6, 2024
+
+### Android Optimize 3.2.2
+
+* Added timeout (in seconds) parameter to updatePropositions and getPropositions APIs to enable timeout configuration in both the apis. Ensuring that the operation either completes within the given time frame or returns an error indicating a timeout.
+* Updated getPropositions API to return cached propositions immediately if there are no pending updatePropositions calls for the requested list of decision scopes.
+* getPropositions and onPropositionsUpdate enabled to receive Simulated events from Assurance.
+
+### iOS Optimize 5.2.0
+
+* Added timeout (in seconds) parameter to updatePropositions and getPropositions APIs to enable timeout configuration in both the apis. Ensuring that the operation either completes within the given time frame or returns an error indicating a timeout.
+* getPropositions and onPropositionsUpdate enabled to receive Simulated events from Assurance.
+
 ## October 8, 2024
 
 ### Android Optimize 3.1.0
