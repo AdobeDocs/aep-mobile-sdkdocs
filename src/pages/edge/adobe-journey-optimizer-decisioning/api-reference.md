@@ -110,7 +110,7 @@ For details on syntax, usage and availability, refer to [Mobile Core - Reset ide
 
 <InlineAlert variant="warning" slots="header, text1"/>
 
-This API has been deprecated starting in v3.2.2 and removed in v3.3.0 of the Android mobile extension.
+This API has been deprecated. They will be removed in the next major release of the Optimize SDK.
 
 Use [`Optimize.updatePropositions`](../api-reference.md#updatepropositionswithcompletionhandler) or  [`Optimize.updatePropositions`](../api-reference.md#updatepropositionswithcompletionhandlerandtimeout) APIs instead.
 
