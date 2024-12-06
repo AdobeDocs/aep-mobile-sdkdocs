@@ -8,6 +8,31 @@ keywords:
 
 # Release notes
 
+## October 16, 2024
+
+### iOS Edge 5.0.3
+
+* Adds 507 as recoverable error code and applies valid retry-after timeout values on next retry if provided on the response, otherwise applies default timeout.
+
+## June 6, 2024
+
+### React Native Edge 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+## May 28, 2024
+
+### iOS Edge 5.0.2
+
+* Fixed an issue in Edge hit processor and now it retries hits on recoverable URLErrors shared by Mobile Core.
+
+## May 13, 2024
+
+### Flutter Edge 4.1.0
+
+* Added support to customize datastream configurations on a per-event basis using the sendEvent API.
+* Update environment dependencies in pubspec.
+
 ## May 2, 2024
 
 ### iOS Edge 5.0.1

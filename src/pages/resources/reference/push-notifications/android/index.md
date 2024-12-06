@@ -14,7 +14,7 @@ This document outlines the steps required to configure your app to use default p
 
 <InlineAlert variant="info" slots="text"/>
 
-Default push template functionality is available for use with the **Adobe Campaign Classic** extension. <br /><br />Supported versions are **Android SDK version >= 2.1.0 && < 3.0.0** and **iOS SDK version 5.0.0+**.
+Default push template functionality is available for use with the **Adobe Campaign Classic** extension. <br /><br />This is supported by **Android SDK version 3.1.0+**.
 
 ## Setup
 

@@ -108,12 +108,6 @@ To enable these permissions, add the following lines to your `AndroidManifest.xm
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-## Watch the Video
-
-<Media slots="video"/>
-
-<https://www.youtube.com/watch?v=K99NwR6Y08E>
-
 ## Additional information
 
 * [How to use Gradle for Android](https://docs.gradle.org/current/userguide/userguide.html)

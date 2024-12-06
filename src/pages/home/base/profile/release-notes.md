@@ -8,6 +8,18 @@ keywords:
 
 # Release notes
 
+## June 6, 2024
+
+### React Native UserProfile 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+## May 13, 2024
+
+### Flutter UserProfile 4.0.2
+
+* Update environment dependencies in pubspec.
+
 ## April 24, 2024
 
 ### React Native UserProfile 6.0.1

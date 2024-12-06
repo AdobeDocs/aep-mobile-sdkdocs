@@ -57,6 +57,16 @@ Yes, you can safely upgrade extensions within the mobile property. All changes a
 
 Additionally, the installation instructions in the mobile property will be refreshed to include the latest versions of mobile platform extensions. These instructions are primarily necessary during the development phase and will be updated even before the property is published.
 
+## How often should I upgrade extensions in the Data Collection UI for published mobile apps?
+
+You should always update to the latest version to access new features and show installation instructions for the latest major releases. You can upgrade extensions within the mobile property safely, as updates are backward compatible and won't affect apps already using the published configuration.
+
+## How often should I upgrade Adobe Experience Platform SDKs in the mobile apps?
+
+You should promptly update to the latest major version of Adobe Experience Platform SDKs upon their release. Once you're on the latest version, maintaining a regular update cadence for patch versions ensures your app stays current with the latest enhancements and fixes.
+
+We release major versions of Adobe Experience Platform SDKs when significant updates are needed for underlying platforms, such as increasing the minimum deployment target in iOS or the minimum API level in Android. Minor and patch updates focus on critical bug fixes and enhancements without introducing breaking changes. All Adobe-provided Mobile SDK extensions within the same major version are fully compatible with each other.
+
 ## General implementation and migration
 
 ### Where can I download the SDK?
@@ -86,11 +96,11 @@ For a complete list of supported platforms, please read the [latest SDK versions
 
 Android
 
-<FAQ query="platform=android"/>
+<FAQ query="platform=android&task=storage-locations"/>
 
 iOS
 
-<FAQ query="platform=ios"/>
+<FAQ query="platform=ios&task=storage-locations"/>
 
 ### What is the size of the SDK?
 
@@ -144,6 +154,20 @@ Implementing push notification tracking and measurement with the SDK depends on 
 
 * For the Adobe Campaign Standard extension, please read the [Adobe Campaign standard push tracking tutorial](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-mobile/push-tracking.html).
 * For the Adobe Campaign Classic extension, please read the [Adobe Campaign Classic push notifications tracking tutorial](../solution/adobe-campaign-classic/api-reference.md#tracknotification-api).
+
+### Why am I not getting a valid configuration from Data Collection UI?
+
+If you are getting the following errors from the SDK logged in your console, then you have not correctly published the mobile property in Data Collection UI. To correctly publish the mobile property follow the [docs here](https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview).
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<FAQ query="platform=android&task=configuration-download-error"/>
+
+iOS
+
+<FAQ query="platform=ios&task=configuration-download-error"/>
 
 ## Migrating to Android Mobile Core 2.x and compatible extensions
 

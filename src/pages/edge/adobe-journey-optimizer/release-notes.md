@@ -9,6 +9,80 @@ keywords:
 
 # Release notes
 
+## November 1, 2024
+
+### iOS Messaging 5.5.0
+
+* Introduced the `getContentCardUI` API to create and display the UI for templated content cards, supported on iOS 15 and above.
+* Added new property "priority" to "Proposition" class which represents the priority entered in the AJO UI for the corresponding campaign.
+
+## October 2, 2024
+
+### Android Messaging 3.2.1
+
+* SDK updated to support conflict resolution for in-app messaging:
+  * In-app messages are loaded in priority order
+  * When a message display is suppressed due to a priority conflict or due to app developer decision it is recorded as an edge event
+
+## September 30, 2024
+
+### iOS Messaging 5.4.0
+
+* SDK updated to support conflict resolution for in-app messaging:
+  * In-app messages are loaded in priority order
+  * When a message display is suppressed due to a priority conflict or due to app developer decision it is recorded as an edge event
+
+## September 3, 2024
+
+### iOS Messaging 5.3.0
+
+* Two updates made to support out-of-the-box Content Card templates, coming soon via the new `AEPSwiftUI` library:
+  * Writes a disqualify event to event history when a content card is dismissed
+  * Removes dismissed content card from in-memory container holding qualified content cards
+
+## August 19, 2024
+
+### Android Messaging 3.2.0
+
+* Deprecated `ContentCard` class and its related APIs.
+
+### iOS Messaging 5.2.0
+
+* Updated some logging around push message tracking to be more useful.
+* Deprecated `ContentCard` class and its related APIs.
+
+## July 9, 2024
+
+### iOS Messaging 5.1.1
+
+* Fixed a regression introduced in 5.0.0 that was preventing cached in-app messages from displaying on launch.
+
+## June 26, 2024
+
+### Android Messaging 3.1.0
+
+* Added support for [Content Cards](https://github.com/adobe/aepsdk-messaging-android/blob/main/Documentation/sources/propositions/content-card.md).
+* Fixed a bug causing modified code-based experiences to be appended to the proposition offering, rather than being replaced.
+* Added listener for debug event to support future Assurance workflows.
+
+### iOS Messaging 5.1.0
+
+* Added support for [Content Cards](https://github.com/adobe/aepsdk-messaging-ios/blob/main/Documentation/sources/propositions/developer-documentation/classes/content-card.md).
+* Fixed a bug causing modified code-based experiences to be appended to the proposition offering, rather than being replaced.
+* Added listener for debug event to support future Assurance workflows.
+
+## June 6, 2024
+
+### React Native Messaging 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+## May 13, 2024
+
+### Flutter Messaging 4.0.2
+
+* Update environment dependencies in pubspec.
+
 ## April 24, 2024
 
 ### React Native Messaging 6.0.1
@@ -40,6 +114,8 @@ Major version update for [Adobe Journey Optimizer](https://github.com/adobe/aeps
 
 * Updated to use Experience Platform Android `3.x` SDKs.
 * Updated to use Experience Platform iOS `5.x` SDKs.
+* Adds `onContentLoaded` to `MessagingDelegate` (Android Only).
+* Updated `urlLoaded` from `MessagingDelegate` to iOS Only.
 
 ## April 3, 2024
 

@@ -55,7 +55,11 @@ iOS
 
 ## onPropositionsUpdate
 
-This API registers a permanent callback which is invoked whenever the Edge extension dispatches a response Event received from the Experience Edge Network upon a personalization query. The personalization query requests can be triggered by the `updatePropositions` API, Edge extension `sendEvent` API or launch consequence rules.
+This API registers a permanent callback which is invoked whenever the Edge extension dispatches a response event with an `eventType` of `personalization.response`. Additionally, the callback is only invoked if the response event contains at least one valid offer. The personalization response can be triggered by the `updatePropositions` API.
+
+<InlineAlert variant="warning" slots="text"/>
+
+The callback passed to `onPropositionsUpdate` will not be invoked if the Experience Edge Network returns an error for the personalization query, or if the response event payload is empty or has invalid proposition data. This API should not be used for handling errors that might occur when `updatePropositions` is called.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -100,13 +104,32 @@ iOS
 
 <Tabs query="platform=ios&api=update-propositions"/>
 
+## updatePropositionsWithCompletionHandler
+
+This API dispatches an event for the Edge network extension to fetch decision propositions, for the provided decision scopes array, from the decisioning services enabled in the Experience Edge. The returned decision propositions are cached in-memory in the Optimize SDK extension and can be retrieved using `getPropositions` API.
+
+<InlineAlert variant="help" slots="text"/>
+
+Completion callback passed to `updatePropositions` supports network timeout and fatal errors returned by edge network along with fetched propositions data. The SDK's internal retry mechanism handles the recoverable HTTP errors. As a result, recoverable HTTP errors are not returned through this callback.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<Tabs query="platform=android&api=update-propositions-withError"/>
+
+iOS
+
+<Tabs query="platform=ios&api=update-propositions-withError"/>
+
 ## Public classes
 
-| Type | Android | (AEP 5.x) Swift | (AEP 5.x) Objective-C |
-| :--- | :--- | :--- | :--- |
-| class | `DecisionScope` | `DecisionScope` | `AEPDecisionScope` |
-| class | `Proposition` | `OptimizeProposition` | `AEPOptimizeProposition` |
-| class | `Offer` | `Offer` | `AEPOffer` |
+| Type | Android              | (AEP 5.x) Swift | (AEP 5.x) Objective-C |
+| :--- |:---------------------| :--- | :--- |
+| class | `DecisionScope`      | `DecisionScope` | `AEPDecisionScope` |
+| class | `Proposition`        | `OptimizeProposition` | `AEPOptimizeProposition` |
+| class | `Offer`              | `Offer` | `AEPOffer` |
+| class | `AEPOptimizeError`   | `AEPOptimizeError` | `AEPOptimizeError` |
 
 ### DecisionScope
 
@@ -167,3 +190,17 @@ Android
 iOS
 
 <Tabs query="platform=ios&api=offertype"/>
+
+###  AEPOptimizeError
+
+This class represents the error details returned by the Edge Network while fetching propositions.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<Tabs query="platform=android&api=optimizeerror"/>
+
+iOS
+
+<Tabs query="platform=ios&api=optimizeerror"/>

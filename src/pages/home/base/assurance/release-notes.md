@@ -8,6 +8,52 @@ keywords:
 
 # Release notes
 
+## October 29, 2024
+
+### Android Assurance 3.0.4
+
+* Fixed an issue causing incorrect application details to be sent in the `client` event.
+
+### Android Assurance 2.2.2
+
+* Fixed an issue causing incorrect application details to be sent in the `client` event.
+
+## August 16, 2024
+
+### Android Assurance 3.0.3
+
+* Removed `app_name` string resource to prevent conflicts with resources defined by the app. 
+
+## August 12, 2024
+
+### Android Assurance 3.0.2
+
+* Added localization support.
+
+### iOS Assurance 5.0.1
+
+* Add localization support.
+
+## June 6, 2024
+
+### React Native Assurance 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+## June 4, 2024
+
+### Android Assurance 3.0.1
+
+* Fixed an issue where the Assurance floating button was not immediately shown in a reconnection scenario.
+* Fixed an issue where the QuickConnect device registration status check job was not terminated when the connection attempt is cancelled.
+* Disabled content and file access from `WebView`.
+
+## May 13, 2024
+
+### Flutter Assurance 4.0.2
+
+* Update environment dependencies in pubspec.
+
 ## April 24, 2024
 
 ### React Native Assurance 6.0.1

@@ -21,7 +21,9 @@ public enum MessagingEdgeEventType {
     DISMISS(6),
     INTERACT(7),
     TRIGGER(8),
-    DISPLAY(9);
+    DISPLAY(9),
+    DISQUALIFY(10),
+    SUPPRESS_DISPLAY(11);
 
     MessagingEdgeEventType(final int value) {
         this.value = value;
@@ -45,6 +47,10 @@ public enum MessagingEdgeEventType {
                 return PROPOSITION_EVENT_TYPE_TRIGGER;
             case DISPLAY:
                 return PROPOSITION_EVENT_TYPE_DISPLAY;
+            case DISQUALIFY:
+                return PROPOSITION_EVENT_TYPE_DISQUALIFY;
+            case SUPPRESS_DISPLAY:
+                return PROPOSITION_EVENT_TYPE_SUPPRESS_DISPLAY;
             default:
                 return "";
         }
@@ -61,6 +67,10 @@ public enum MessagingEdgeEventType {
                 return PROPOSITION_EVENT_TYPE_TRIGGER_STRING;
             case DISPLAY:
                 return PROPOSITION_EVENT_TYPE_DISPLAY_STRING;
+            case DISQUALIFY:
+                return PROPOSITION_EVENT_TYPE_DISQUALIFY_STRING;
+            case SUPPRESS_DISPLAY:
+                return PROPOSITION_EVENT_TYPE_SUPPRESS_DISPLAY_STRING;
             case PUSH_APPLICATION_OPENED:
                 return PUSH_NOTIFICATION_EVENT_TYPE_STRING_OPENED;
             case PUSH_CUSTOM_ACTION:
@@ -86,24 +96,30 @@ Please use newly added  values `dismiss`, `interact`, `trigger`, `display` in pl
 
 ```swift
 @objc(AEPMessagingEdgeEventType)
-public enum MessagingEdgeEventType: Int {    
+public enum MessagingEdgeEventType: Int {
     case pushApplicationOpened = 4
     case pushCustomAction = 5
     case dismiss = 6
     case interact = 7
     case trigger = 8
     case display = 9
+    case disqualify = 10
+    case suppressDisplay = 11
 
     public func toString() -> String {
         switch self {
         case .dismiss:
-            return MessagingConstants.XDM.IAM.EventType.DISMISS
+            return MessagingConstants.XDM.Inbound.EventType.DISMISS
         case .trigger:
-            return MessagingConstants.XDM.IAM.EventType.TRIGGER
+            return MessagingConstants.XDM.Inbound.EventType.TRIGGER
         case .interact:
-            return MessagingConstants.XDM.IAM.EventType.INTERACT
+            return MessagingConstants.XDM.Inbound.EventType.INTERACT
         case .display:
-            return MessagingConstants.XDM.IAM.EventType.DISPLAY
+            return MessagingConstants.XDM.Inbound.EventType.DISPLAY
+        case .disqualify:
+            return MessagingConstants.XDM.Inbound.EventType.DISQUALIFY
+        case .suppressDisplay:
+            return MessagingConstants.XDM.Inbound.EventType.SUPPRESSED_DISPLAY
         case .pushCustomAction:
             return MessagingConstants.XDM.Push.EventType.CUSTOM_ACTION
         case .pushApplicationOpened:
@@ -121,6 +137,8 @@ public enum MessagingEdgeEventType: Int {
 | INTERACT | `decisioning.propositionInteract` |
 | TRIGGER | `decisioning.propositionTrigger` |
 | DISPLAY | `decisioning.propositionDisplay` |
+| DISQUALIFY | `decisioning.propositionDisqualify` |
+| SUPPRESS_DISPLAY | `decisioning.propositionSuppressDisplay` |
 | PUSH_APPLICATION_OPENED | `pushTracking.applicationOpened` |
 | PUSH_CUSTOM_ACTION | `pushTracking.customAction` |
 
@@ -132,5 +150,7 @@ public enum MessagingEdgeEventType: Int {
 | interact | `decisioning.propositionInteract` |
 | trigger | `decisioning.propositionTrigger` |
 | display | `decisioning.propositionDisplay` |
+| disqualify | `decisioning.propositionDisqualify` |
+| suppressDisplay | `decisioning.propositionSuppressDisplay` |
 | pushApplicationOpened | `pushTracking.applicationOpened` |
 | pushCustomAction | `pushTracking.customAction` |

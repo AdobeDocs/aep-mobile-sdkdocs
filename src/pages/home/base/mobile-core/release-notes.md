@@ -8,6 +8,119 @@ keywords:
 
 # Release notes
 
+## October 16, 2024
+
+### iOS Core 5.3.1
+
+* Updated `responseHttpHeader(forKey:)` in `HttpConnection` struct to ensure case-insensitive header field lookups.
+
+## October 1, 2024
+
+### Android Core 3.2.0
+
+* Added new constants to `AEPError`.
+* Added the `SuppressedByAppDeveloper` constant to indicate that the in-app message was not displayed because it was rejected by the app developer via the `PresentationDelegate`.
+
+## September 27, 2024
+
+### iOS Core 5.3.0
+
+* Added an `onError` method to the `FullscreenMessageDelegate` to notify of the reason when an in-app message fails to display.
+
+## September 3, 2024
+
+### Android Core 3.1.2
+
+* Added screen reader support for in-app messages.
+
+## July 19, 2024
+
+### Android Core 3.1.1
+
+* Fixed an issue causing in-app messages to cast a shadow.
+* Fixed an issue causing in-app messages to be slightly transparent by default.
+* Improved in-app message handling in immersive mode.
+
+## June 24, 2024
+
+### Android Core 2.6.4
+
+* Fixed strict mode violations that happened during SDK initialization.
+* Added checks to prevent SDK initialization when the device is in direct boot mode.
+
+## June 21, 2024
+
+### iOS Core 5.2.0
+
+* Added a new EventSource constant (`com.adobe.eventSource.debug`) and utility methods.
+* Added support for in-app message HTML content to control its background transparency.
+* Fixed data races in EventHub and Services and implemented additional stability fixes.
+
+## June 20, 2024
+
+### Android Core 3.1.0
+
+* Added support for in-app message HTML content to control its background transparency.
+* Enhanced Presentable re-attachment workflow for new Activity launch scenarios.
+* Added a new EventSource constant (`com.adobe.eventSource.debug`) and utility methods.
+* Added checks to prevent SDK initialization when device is in direct boot mode.
+
+## June 6, 2024
+
+### React Native Core 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+## June 4, 2024
+
+### Android Core 3.0.2
+
+* Fixed strict mode violations that happened during SDK initialization.
+
+## May 23, 2024
+
+### Android Lifecycle 3.0.1
+
+* Lifecycle extension now computes the `xdm:isUpgrade` metric in the `application.launch` event when either versionName or versionCode changes.
+
+### Android Identity 3.0.1
+
+* Fixed an edge case where `a.push.optin=false` event may be sent to Analytics even when `MobileCore.setPushIdentifier()` API is not used.
+
+### Android Core 3.0.1
+
+* Fixed an issue with scrollability in in-app messages with overflowing content.
+* Fixed an issue where the PresentationDelegate was not notified of all URLs opened by an in-app message.
+* Fixed an issue where UI components were not adapting to orientation changes when the activity hosting the composable restricts configuration change.
+* Enhanced error handling in the collectLaunchInfo API to catch exceptions when retrieving bundled data from an Activity.
+* Simplified coroutine scope management in UI services.
+
+## May 22, 2024
+
+### iOS Core 5.1.0
+
+* Added a new constant and a utility method to AEPServices to detect if `URLError` is recoverable.
+* Lifecycle extension now computes the `xdm:isUpgrade` metric in the `application.launch` event when either CFBundleShortVersionString or CFBundleVersion changes.
+* Fixed an issue in the Signal and Identity extensions that caused the hit processor to drop queued hits when the device's network was offline.
+* Fixed an edge case where `a.push.optin=false` event may be sent to Analytics even when `MobileCore.setPushIdentifier()` API is not used.
+* Fixed data races in ExtensionContainer, ApplicationSystemInfoService, DiskCacheService, and FileSystemNamedCollection.
+
+## May 20, 2024
+
+### iOS Core 4.2.4
+
+* Fixed a race condition when accessing sharedStateName inside ExtensionContainer.
+
+## May 13, 2024
+
+### Flutter Core 4.0.2
+
+* Update environment dependencies in pubspec.
+
+### Android Core 2.6.3
+
+* Enhanced error handling in the `collectLaunchInfo` API to catch exceptions when retrieving bundled data from an Activity.
+
 ## April 24, 2024
 
 ### React Native Core 6.0.1

@@ -2,7 +2,7 @@
 noIndex: true
 ---
 
-<Variant platform="android" api="extension-version" repeat="5"/>
+<Variant platform="android" api="extension-version" repeat="8"/>
 
 #### Java
 
@@ -13,6 +13,14 @@ public static String extensionVersion();
 ```
 
 **Example**
+
+#### Kotlin
+
+```kotlin
+Messaging.extensionVersion()
+```
+
+#### Java
 
 ```java
 Messaging.extensionVersion();
@@ -94,7 +102,7 @@ static func handleNotificationResponse(_ response: UNNotificationResponse,
 | `urlHandler` | `((URL) -> Bool)?` | An optional method to handle the actionable URL from the push notification. |
 | `closure` | `((PushTrackingStatus) -> Void)?` | An optional callback with `PushTrackingStatus` representing the tracking status of the interacted notification. |
 
-<Variant platform="android" api="register-extension" repeat="5"/>
+<Variant platform="android" api="register-extension" repeat="8"/>
 
 #### Java
 
@@ -105,6 +113,14 @@ public static void registerExtension();
 ```
 
 **Example**
+
+#### Kotlin
+
+```kotlin
+Messaging.registerExtension()
+```
+
+#### Java
 
 ```java
 Messaging.registerExtension();

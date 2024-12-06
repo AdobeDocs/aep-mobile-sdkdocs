@@ -75,9 +75,3 @@ In addition to the remote configuration, you can also include a rules zip file i
    * Android: Place the zip file in the assets folder.
 
 For more information about the technical details of the Rules Engine, please read the [technical details guide](./technical-details).
-
-## Watch the video
-
-<Media slots="video"/>
-
-<https://www.youtube.com/watch?v=BwBeYNu5Crg>

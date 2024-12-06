@@ -21,7 +21,7 @@ public init(path: String)
 let surface = Surface(path: "homeView#banner")
 ```
 
-<Variant platform="android" function="constructor-parameterized" repeat="6"/>
+<Variant platform="android" function="constructor-parameterized" repeat="9"/>
 
 #### Java
 
@@ -35,12 +35,21 @@ public Surface(final String path)
 
 **Example**
 
+#### Kotlin
+
+```kotlin
+// Creates a surface instance representing a banner view within homeActivity in my mobile application.
+val surface = Surface("homeActivity#banner")
+```
+
+#### Java
+
 ```java
 // Creates a surface instance representing a banner view within homeActivity in my mobile application.
 final Surface surface = new Surface("homeActivity#banner")
 ```
 
-<Variant platform="android" function="constructor-default" repeat="5"/>
+<Variant platform="android" function="constructor-default" repeat="8"/>
 
 #### Java
 
@@ -52,12 +61,21 @@ public Surface()
 
 **Example**
 
+#### Kotlin
+
+```kotlin
+// Creates a new base surface by appending application package name to the mobile app surface prefix mobileapp://
+val surface = Surface()
+```
+
+#### Java
+
 ```java
 // Creates a new base surface by appending application package name to the mobile app surface prefix mobileapp://
 final Surface surface = new Surface()
 ```
 
-<Variant platform="android" function="get-uri" repeat="5"/>
+<Variant platform="android" function="get-uri" repeat="8"/>
 
 #### Java
 
@@ -68,6 +86,15 @@ public String getUri()
 ```
 
 **Example**
+
+#### Kotlin
+
+```kotlin
+val surface = Surface("homeActivity#banner")
+val uri = surface.uri
+```
+
+#### Java
 
 ```java
 final Surface surface = new Surface("homeActivity#banner")

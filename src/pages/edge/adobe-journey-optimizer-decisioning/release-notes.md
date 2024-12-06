@@ -8,6 +8,49 @@ keywords:
 
 # Release notes
 
+## October 8, 2024
+
+### Android Optimize 3.1.0
+
+* Added a new `updatePropositions` API to support completion callback with retrieved propositions and errors (if any).
+
+## October 3, 2024
+
+### iOS Optimize 5.1.0
+
+* Added a new `updatePropositions` API to support completion callback with retrieved propositions and errors (if any).
+* Updated `getPropositions` API to return cached propositions immediately if there are no pending `updatePropositions` calls for the requested list of decision scopes.
+* Changed `Offer.score` data type from Integer to Double to fix a bug where offers having decimal score were being dropped.
+
+## August 20, 2024
+
+### Android Optimize 3.0.2
+
+* Fixed thread safety for map updates that happen when `updatePropositions` API was called repeatedly.
+* Fixed issue where `Offer` could not be created for default content item when `getPropostions` API was called.
+
+## June 6, 2024
+
+### React Native Optimize 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+## May 21, 2024
+
+### iOS Optimize 5.0.1
+
+* Fixed a crash that happens when `updateProposition` API was called repeatedly. 
+
+### Android Optimize 3.0.1
+
+* Fixed a bug where Optimize SDK was considering Target mbox decision scope strings as invalid and not including them in personalization requests.
+
+## May 18, 2024
+
+### iOS Optimize 4.0.4
+
+* Fixed a crash that happens when `updateProposition` API was called repeatedly. 
+
 ## April 24, 2024
 
 ### React Native Optimize 6.0.1

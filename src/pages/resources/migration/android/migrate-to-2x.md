@@ -146,6 +146,16 @@ The `registerExtension` API for each extension is deprecated in the 2.x version 
 | com.adobe.marketing.mobile.PlacesPOI | Moved into **places** subpackage. Update import statements to reference **com.adobe.marketing.mobile.places.PlacesPOI** |
 | com.adobe.marketing.mobile.PlacesRequestError | Moved into **places** subpackage. Update import statements to reference **com.adobe.marketing.mobile.places.PlacesRequestError** |
 
+### Network Override
+
+The helper classes mentioned below for overriding the network service have been removed starting in the 2.x version of the mobile SDK. If you have implemented code to override network services, you will need to update it according to the guidance provided in this [documentation](https://developer.adobe.com/client-sdks/home/base/mobile-core/platform-services/network-service/).
+
+#### Removed classes
+
+* `AndroidNetworkServiceOverrider`
+* `AndroidNetworkServiceOverrider.HTTPConnectionPerformer`
+* `AndroidNetworkServiceOverrider.Connecting`
+
 ## Frequently asked questions
 
 ### Is there a change in minimum API level supported by Mobile SDK for Android?

@@ -9,6 +9,12 @@ keywords:
 
 # Release notes
 
+## May 31, 2024
+
+### iOS Media 5.0.1
+
+* Fixed an issue in Media hit processor and now it retries hits on recoverable URLErrors shared by Mobile Core.
+
 ## April 2, 2024
 
 ### Android Media 3.1.0

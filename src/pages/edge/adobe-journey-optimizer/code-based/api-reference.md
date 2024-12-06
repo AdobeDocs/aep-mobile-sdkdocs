@@ -1,18 +1,19 @@
 ---
-title: Code-based Experiences - API Reference
-description: This document lists the public APIs available in the Messaging extension for implementing code-based experiences.
+title: Code-based Experiences & Content Cards - API Reference
+description: This document lists the public APIs available in the Messaging extension for implementing code-based experiences and content cards.
 keywords:
 - Adobe Journey Optimizer
 - API reference
 - Messaging
 - Code-based Experiences
+- Content Cards
 ---
 
 import Tabs from './tabs/api-reference.md'
 
-# Code-based Experiences - API reference
+# Code-based Experiences & Content Cards - API reference
 
-This document lists the public APIs available in the Messaging extension for implementing code-based experiences.
+This document lists the public APIs available in the Messaging extension for implementing code-based experiences and content cards.
 
 ## getPropositionsForSurfaces
 

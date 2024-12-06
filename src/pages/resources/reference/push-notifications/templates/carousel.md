@@ -12,10 +12,11 @@ import Tabs from './tabs/carousel.md'
 
 # Push template - carousel
 
-A notification that shows a series of three to five images that scroll on/off the sides of the notification. <br />If operating in `automatic` mode, images will rotate every five (5) seconds.  If operating in manual mode, the user is required to push a button to advance forwards or backwards through the carousel.
+A notification that shows a series of three to five images that scroll on/off the sides of the notification.
+
+If operating in automatic mode, images will rotate every five (5) seconds. If operating in manual mode, the user is required to push a button to advance forwards or backwards through the carousel.
 
 Templates below show all available properties in their respective payloads for FCM (Android) and APNS (iOS).
-<br />
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 FCM

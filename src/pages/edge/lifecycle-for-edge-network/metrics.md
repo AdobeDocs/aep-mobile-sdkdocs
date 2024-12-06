@@ -33,6 +33,18 @@ The following data is collected on each [Lifecycle Application Foreground](../..
 | xdm:isUpgrade | boolean | Indicates the application was upgraded. If `true`, signifies the first launch of the application after an upgrade. |
 | dc:language | String | The language of the application to represent the user's linguistic, geographical, or cultural preferences for data presentation. |
 
+<InlineAlert variant="info" slots="text1, text2, text3, text4"/>
+
+For the [Edge Network extension](../edge-network/index.md), the `xdm:isUpgrade` property, which identifies app upgrades, is collected within the [Lifecycle extension](../../home/base/mobile-core/lifecycle/) by comparing version information at each app launch. Starting with Lifecycle extension for Android version 3.0.1 and Lifecycle extension for iOS version 5.1.0, there is an enhancement to the method of calculating this property.
+
+**xdm:isUpgrade (Previous Method)**
+In Lifecycle extension for Android version (2.0.0 - 3.0.0) and Lifecycle extension for iOS version (4.0.0 - 5.0.0), the app upgrade event is detected by comparing the `build number`s on iOS and the `version name`s on Android.
+
+**xdm:isUpgrade (New Method)**
+Starting with Lifecycle extension for Android version 3.0.1 and Lifecycle extension for iOS version 5.1.0, the app upgrade event is detected through comparisions of the `xdm:version` properties which has the format  `versionName (versionCode)` on Android and `Version (Build)` on iOS.
+
+This change now more accurately detects when an application upgrade occurs. Applications which only change the build number on iOS or the version name on Android when upgrading, may see an increase in Lifecycle upgrade events. Other applications, however, should not see a change to Lifecycle upgrade events.
+
 ### Device
 
 | **Property** | **Type** | **Description** |

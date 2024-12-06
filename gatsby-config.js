@@ -132,7 +132,18 @@ module.exports = {
                             },
                             {
                                 title: "Validation",
-                                path: "/edge/edge-network/validation"
+                                path: "/edge/edge-network/validation",
+                                pages: [
+                                    {
+                                        title: "Validation",
+                                        path: "/edge/edge-network/validation/validation"
+                                    },
+                                    {
+                                        title: "Analytics data validation",
+                                        path: "/edge/edge-network/validation/edge-analytics-validation"
+                                    }
+                                ]
+
                             },
                             {
                                 title: "Tutorials",
@@ -164,6 +175,10 @@ module.exports = {
                             {
                                 title: "API reference",
                                 path: "/edge/adobe-journey-optimizer/api-reference"
+                            },
+                            {
+                                title: "AJO edge events for propositions",
+                                path: "/edge/adobe-journey-optimizer/proposition-edge-events"
                             },
                             {
                                 title: "Push Notifications",
@@ -240,7 +255,99 @@ module.exports = {
                                 ]
                             },
                             {
-                                title: "Code-based Experiences",
+                                title: "Content cards with UI",
+                                path: "/edge/adobe-journey-optimizer/content-card-ui/iOS",
+                                pages: [
+                                    {
+                                        title: "iOS",
+                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS",
+                                        pages: [
+                                            {
+                                                title: "API Reference",
+                                                path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/api-usage.md"
+                                            },
+                                            {
+                                                title: "Public Classes and Protocol",
+                                                path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/public-classes/contentcardui",
+                                                pages: [
+                                                    {
+                                                        title: "ContentCardUI",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/public-classes/contentcardui",
+                                                    },
+                                                    {
+                                                        title: "ContenCardCustomizing",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/public-classes/contentcardcustomizing",
+                                                    },
+                                                    {
+                                                        title: "ContentCardUIEventListening",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/public-classes/contentcarduieventlistening",
+                                                    },
+                                                    {
+                                                        title: "ContentCardTemplateType",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/public-classes/contentcardtemplatetype",
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "Templates",
+                                                path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/templates/smallimage-template",
+                                                pages: [
+                                                    {
+                                                        title: "Small Image",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/templates/smallimage-template",
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "UIElements",
+                                                path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/",
+                                                pages: [
+                                                    {
+                                                        title: "AEPText",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/aeptext"
+                                                    },
+                                                    {
+                                                        title: "AEPButton",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/aepbutton"
+                                                    },
+                                                    {
+                                                        title: "AEPImage",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/aepimage"
+                                                    },
+                                                    {
+                                                        title: "AEPStack",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/aepstack"
+                                                    },
+                                                    {
+                                                        title: "AEPDismissButton",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/aepdismissbutton"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "Tutorials",
+                                                path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/tutorial/displaying-content-cards",
+                                                pages: [
+                                                    {
+                                                        title: "Fetch and Display Content Cards",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/tutorial/displaying-content-cards",
+                                                    },
+                                                    {
+                                                        title: "Customizing Content Cards",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/tutorial/customizing-content-card-templates",
+                                                    },
+                                                    {
+                                                        title: "Listening to Content Card Events",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/tutorial/listening-content-card-events",
+                                                    }
+                                                ]
+                                            }
+                                        ]                                        
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Code-based Experiences & Content Cards",
                                 path: "/edge/adobe-journey-optimizer/code-based",
                                 pages: [
                                     {
@@ -248,7 +355,7 @@ module.exports = {
                                         path: "/edge/adobe-journey-optimizer/code-based/api-reference"
                                     },
                                     {
-                                        title: "Tutorial",
+                                        title: "Code-based experiences & Content Cards tutorial",
                                         path: "/edge/adobe-journey-optimizer/code-based/tutorial"
                                     }
                                 ]
@@ -258,12 +365,28 @@ module.exports = {
                                 path: "/edge/adobe-journey-optimizer/public-classes",
                                 pages: [
                                     {
-                                        title: "MessagingPushPayload",
-                                        path: "/edge/adobe-journey-optimizer/public-classes/messaging-push-payload"
+                                        title: "ContentCard",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/content-card"
                                     },
                                     {
-                                        title: "PushTrackingStatus",
-                                        path: "/edge/adobe-journey-optimizer/public-classes/push-tracking-status"
+                                        title: "ContentCardSchemaData",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/content-card-schema-data"
+                                    },
+                                    {
+                                        title: "ContentType",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/content-type"
+                                    },
+                                    {
+                                        title: "HtmlContentSchemaData",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/html-content-schema-data"
+                                    },
+                                    {
+                                        title: "InAppSchemaData",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/inapp-schema-data"
+                                    },
+                                    {
+                                        title: "JsonContentSchemaData",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/json-content-schema-data"
                                     },
                                     {
                                         title: "Message",
@@ -274,12 +397,20 @@ module.exports = {
                                         path: "/edge/adobe-journey-optimizer/public-classes/messaging-edge-event-type"
                                     },
                                     {
+                                        title: "MessagingPushPayload",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/messaging-push-payload"
+                                    },
+                                    {
                                         title: "Proposition",
                                         path: "/edge/adobe-journey-optimizer/public-classes/proposition"
                                     },
                                     {
                                         title: "PropositionItem",
                                         path: "/edge/adobe-journey-optimizer/public-classes/proposition-item"
+                                    },
+                                    {
+                                        title: "PushTrackingStatus",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/push-tracking-status"
                                     },
                                     {
                                         title: "Surface",
@@ -380,6 +511,10 @@ module.exports = {
                             {
                                 title: "Event reference",
                                 path: "/edge/lifecycle-for-edge-network/event-reference"
+                            },
+                            {
+                                title: "Behavior reference",
+                                path: "/edge/lifecycle-for-edge-network/behavior-reference"
                             },
                             {
                                 title: "Data reference",
@@ -963,8 +1098,28 @@ module.exports = {
                                         path: "/resources/reference/push-notifications/templates/carousel"
                                     },
                                     {
+                                        title: "Input Box",
+                                        path: "/resources/reference/push-notifications/templates/input-box"
+                                    },
+                                    {
+                                        title: "Multi Icon",
+                                        path: "/resources/reference/push-notifications/templates/multi-icon"
+                                    },
+                                    {
+                                        title: "Product Catalog",
+                                        path: "/resources/reference/push-notifications/templates/catalog"
+                                    },
+                                    {
+                                        title: "Rating",
+                                        path: "/resources/reference/push-notifications/templates/rating"
+                                    },
+                                    {
                                         title: "Timer",
                                         path: "/resources/reference/push-notifications/templates/timer"
+                                    },
+                                    {
+                                        title: "Zero Bezel",
+                                        path: "/resources/reference/push-notifications/templates/zero-bezel"
                                     }
                                 ]
                             }

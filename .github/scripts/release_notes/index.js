@@ -47,7 +47,8 @@ console.log(`Start to fetch release info from GitHub created after [${convertToD
         if (releaseInfo.platform === PLATFORM_ENUM.ROKU ||
             releaseInfo.extension === EXTENSION_ENUM.BOM ||
             releaseInfo.extension === EXTENSION_ENUM.EDGE_BRIDGE ||
-            releaseInfo.extension === EXTENSION_ENUM.NOTIFICATION_CONTENT) {
+            releaseInfo.extension === EXTENSION_ENUM.NOTIFICATION_CONTENT ||
+            releaseInfo.extension === EXTENSION_ENUM.NOTIFICATION_BUILDER) {
             continue
         }
 

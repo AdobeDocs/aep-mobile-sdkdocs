@@ -30,6 +30,26 @@ func track(_ interaction: String? = nil, withEdgeEventType eventType: MessagingE
 * _eventType_ is an enum specifying event type for the interaction.
 * _tokens_ is an array containing the decision item tokens for recording interaction.
 
+<Variant platform="android" function="get-content-card-schema-data" repeat="3"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public ContentCardSchemaData getContentCardSchemaData()
+```
+
+<Variant platform="android" function="get-inapp-schema-data" repeat="3"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public InAppSchemaData getInAppSchemaData()
+```
+
 <Variant platform="android" function="get-item-id" repeat="3"/>
 
 #### Java

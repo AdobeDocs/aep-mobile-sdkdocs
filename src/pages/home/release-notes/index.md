@@ -7,6 +7,1021 @@ Keywords:
 
 # Release notes
 
+## November 1, 2024
+
+### iOS Messaging 5.5.0
+
+* Introduced the `getContentCardUI` API to create and display the UI for templated content cards, supported on iOS 15 and above.
+* Added new property "priority" to "Proposition" class which represents the priority entered in the AJO UI for the corresponding campaign.
+
+## October 29, 2024
+
+### Android BOM 3.5.1
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.5.0) | BOM (3.5.1) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:assurance** | **3.0.3** | **3.0.4**|
+| com.adobe.marketing.mobile:analytics | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:audience | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaign | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:core | 3.2.0 | 3.2.0 |
+| com.adobe.marketing.mobile:edge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:identity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:media | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:messaging | 3.2.1 | 3.2.1 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:optimize | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:places | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:signal | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:target | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:userprofile | 3.0.0 | 3.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android BOM 2.9.10
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.9.9) | BOM (2.9.10) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:assurance** | **2.2.1** | **2.2.2**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.6 | 2.0.6 |
+| com.adobe.marketing.mobile:campaignclassic | 2.1.8 | 2.1.8 |
+| com.adobe.marketing.mobile:core | 2.6.4 | 2.6.4 |
+| com.adobe.marketing.mobile:edge | 2.4.0 | 2.4.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:optimize | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Assurance 3.0.4
+
+* Fixed an issue causing incorrect application details to be sent in the `client` event.
+
+### Android Assurance 2.2.2
+
+* Fixed an issue causing incorrect application details to be sent in the `client` event.
+
+## October 16, 2024
+
+### iOS Edge 5.0.3
+
+* Adds 507 as recoverable error code and applies valid retry-after timeout values on next retry if provided on the response, otherwise applies default timeout.
+
+### iOS Core 5.3.1
+
+* Updated `responseHttpHeader(forKey:)` in `HttpConnection` struct to ensure case-insensitive header field lookups.
+
+## October 8, 2024
+
+### Android BOM 3.5.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.4.0) | BOM (3.5.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:optimize** | **3.0.2** | **3.1.0**|
+| com.adobe.marketing.mobile:analytics | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:assurance | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:audience | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaign | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:core | 3.2.0 | 3.2.0 |
+| com.adobe.marketing.mobile:edge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:identity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:media | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:messaging | 3.2.1 | 3.2.1 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:places | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:signal | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:target | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:userprofile | 3.0.0 | 3.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Optimize 3.1.0
+
+* Added a new `updatePropositions` API to support completion callback with retrieved propositions and errors (if any).
+
+## October 3, 2024
+
+### Android BOM 3.4.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.3.2) | BOM (3.4.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:core** | **3.1.2** | **3.2.0**|
+| **com.adobe.marketing.mobile:messaging** | **3.2.0** | **3.2.1**|
+| com.adobe.marketing.mobile:analytics | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:assurance | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:audience | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaign | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:edge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:identity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:media | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:optimize | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:places | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:signal | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:target | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:userprofile | 3.0.0 | 3.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+### iOS Optimize 5.1.0
+
+* Added a new `updatePropositions` API to support completion callback with retrieved propositions and errors (if any).
+* Updated `getPropositions` API to return cached propositions immediately if there are no pending `updatePropositions` calls for the requested list of decision scopes.
+* Changed `Offer.score` data type from Integer to Double to fix a bug where offers having decimal score were being dropped.
+
+## October 2, 2024
+
+### Android Messaging 3.2.1
+
+* SDK updated to support conflict resolution for in-app messaging:
+  * In-app messages are loaded in priority order
+  * When a message display is suppressed due to a priority conflict or due to app developer decision it is recorded as an edge event
+
+## October 1, 2024
+
+### Android Core 3.2.0
+
+* Added new constants to `AEPError`.
+* Added the `SuppressedByAppDeveloper` constant to indicate that the in-app message was not displayed because it was rejected by the app developer via the `PresentationDelegate`.
+
+## September 30, 2024
+
+### iOS Messaging 5.4.0
+
+* SDK updated to support conflict resolution for in-app messaging:
+  * In-app messages are loaded in priority order
+  * When a message display is suppressed due to a priority conflict or due to app developer decision it is recorded as an edge event
+
+## September 27, 2024
+
+### iOS Core 5.3.0
+
+* Added an `onError` method to the `FullscreenMessageDelegate` to notify of the reason when an in-app message fails to display.
+
+## September 13, 2024
+
+### Roku SDK 1.3.0
+
+#### Consent Support
+
+* The SDK now allows [configuring default consent](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/api-reference.md#configure-default-consent).
+* Added a [setConsent](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/api-reference.md#setconsent) API for collecting user consent preferences.
+
+#### Other Changes
+
+* Adds support for persisting the `locationHint` and other states returned by the Edge Network, using them to enhance the user experience by ensuring more consistent routing and improved session continuity.
+
+## September 12, 2024
+
+### Android BOM 3.3.2
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.3.1) | BOM (3.3.2) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:campaignclassic** | **3.1.1** | **3.1.2**|
+| **com.adobe.marketing.mobile:notificationbuilder** | **3.0.1** | **3.0.2**|
+| com.adobe.marketing.mobile:analytics | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:assurance | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:audience | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaign | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:core | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:edge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:identity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:media | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:messaging | 3.2.0 | 3.2.0 |
+| com.adobe.marketing.mobile:optimize | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:places | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:signal | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:target | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:userprofile | 3.0.0 | 3.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+## September 10, 2024
+
+### Android Campaign Classic 3.1.2
+
+* Update notification builder dependency to 3.0.2 to resolve an issue with push template dismiss actions.
+
+### Android Notification Builder 3.0.2
+
+* Add `aep` prefix to notification builder string resources to prevent conflicts with resources defined by the app.
+*  Fix intent actions to allow tracker activities to correctly handle received intents.
+
+## September 4, 2024
+
+### AEPSwiftUI 5.1.0-beta
+
+Initial release of `AEPSwiftUI` framework for Adobe Experience Platform Mobile SDKs on iOS. The `AEPSwiftUI` framework provides out-of-the-box UI components for use with Adobe Journey Optimizer content cards.
+
+The first release includes a single template - [SmallImageTemplate](https://github.com/adobe/aepsdk-ui-ios/tree/v5.1.0-beta/Frameworks/AEPSwiftUI/Documentation)
+
+## September 3, 2024
+
+### iOS Notification Content Extension 5.0.1
+
+* Removed left and right scroll buttons on auto carousel notifications.
+
+### Android BOM 3.3.1
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.3.0) | BOM (3.3.1) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:core** | **3.1.1** | **3.1.2**|
+| com.adobe.marketing.mobile:analytics | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:assurance | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:audience | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaign | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.1 | 3.1.1 |
+| com.adobe.marketing.mobile:edge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:identity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:media | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:messaging | 3.2.0 | 3.2.0 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:optimize | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:places | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:signal | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:target | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:userprofile | 3.0.0 | 3.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Core 3.1.2
+
+* Added screen reader support for in-app messages.
+
+### iOS Messaging 5.3.0
+
+* Two updates made to support out-of-the-box Content Card templates, coming soon via the new `AEPSwiftUI` library:
+  * Writes a disqualify event to event history when a content card is dismissed
+  * Removes dismissed content card from in-memory container holding qualified content cards
+
+## August 20, 2024
+
+### Android BOM 3.3.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.2.2) | BOM (3.3.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:assurance** | **3.0.1** | **3.0.3**|
+| **com.adobe.marketing.mobile:campaign** | **3.0.0** | **3.0.1**|
+| **com.adobe.marketing.mobile:campaignclassic** | **3.1.0** | **3.1.1**|
+| **com.adobe.marketing.mobile:messaging** | **3.1.0** | **3.2.0**|
+| **com.adobe.marketing.mobile:notificationbuilder** | **3.0.0** | **3.0.1**|
+| **com.adobe.marketing.mobile:optimize** | **3.0.1** | **3.0.2**|
+| **com.adobe.marketing.mobile:places** | **3.0.0** | **3.0.1**|
+| com.adobe.marketing.mobile:analytics | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:audience | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:core | 3.1.1 | 3.1.1 |
+| com.adobe.marketing.mobile:edge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:identity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:media | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:signal | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:target | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:userprofile | 3.0.0 | 3.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Campaign Classic 3.1.1
+
+* Removed unused `app_name` string resource to prevent conflicts with resources defined by the app.
+* Add support for 64-bit broadlog id.
+* Update notification builder dependency to 3.0.1 to resolve issues with out-of-the-box push templates.
+
+### Android Campaign Standard 3.0.1
+
+* Removed unused `app_name` string resource to prevent conflicts with resources defined by the app.
+* Fixed an Android Campaign Standard 2.x datastore migration issue.
+
+### Android Optimize 3.0.2
+
+* Fixed thread safety for map updates that happen when `updatePropositions` API was called repeatedly.
+* Fixed issue where `Offer` could not be created for default content item when `getPropostions` API was called.
+
+### Android Notification Builder 3.0.1
+
+* Fixed timer notification background color.
+* Updated optional fields within the multi-icon push template.
+* Fixed issues seen with lower level Android API. See https://github.com/adobe/aepsdk-ui-android/pull/64 for details.
+
+## August 19, 2024
+
+### Android Places 3.0.1
+
+* Removed unused `app_name` string resource to prevent conflicts with resources defined by the app.
+
+### Android Messaging 3.2.0
+
+* Deprecated `ContentCard` class and its related APIs.
+
+### iOS Messaging 5.2.0
+
+* Updated some logging around push message tracking to be more useful.
+* Deprecated `ContentCard` class and its related APIs.
+
+## August 16, 2024
+
+### Android Assurance 3.0.3
+
+* Removed `app_name` string resource to prevent conflicts with resources defined by the app.
+
+## August 12, 2024
+
+### Android Assurance 3.0.2
+
+* Added localization support.
+
+### iOS Assurance 5.0.1
+
+* Add localization support.
+
+## July 19, 2024
+
+### Android BOM 3.2.2
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.2.1) | BOM (3.2.2) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:core** | **3.1.0** | **3.1.1**|
+| com.adobe.marketing.mobile:analytics | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:assurance | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:audience | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaign | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:edge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:identity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:media | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:messaging | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:optimize | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:places | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:signal | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:target | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:userprofile | 3.0.0 | 3.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Core 3.1.1
+
+* Fixed an issue causing in-app messages to cast a shadow.
+* Fixed an issue causing in-app messages to be slightly transparent by default.
+* Improved in-app message handling in immersive mode.
+
+## July 9, 2024
+
+### iOS Messaging 5.1.1
+
+* Fixed a regression introduced in 5.0.0 that was preventing cached in-app messages from displaying on launch.
+
+## June 28, 2024
+
+### Android BOM 3.2.1
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.2.0) | BOM (3.2.1) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:analytics** | **3.0.0** | **3.0.1**|
+| com.adobe.marketing.mobile:assurance | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:audience | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaign | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:core | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:edge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:identity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:media | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:messaging | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:optimize | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:places | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:signal | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:target | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:userprofile | 3.0.0 | 3.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+## June 27, 2024
+
+### iOS Analytics 5.0.2
+
+* Fixed a bug where Places region ID and name were not included in the Analytics request if the Places data contained non-string values.
+
+### Android Analytics 3.0.1
+
+* Fixed a bug where Places region ID and name were not included in the Analytics request if the Places data contained non-string values.
+
+## June 26, 2024
+
+### Android BOM 3.2.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.1.0) | BOM (3.2.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:messaging** | **3.0.0** | **3.1.0**|
+| com.adobe.marketing.mobile:analytics | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:assurance | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:audience | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaign | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:core | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:edge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:identity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:media | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:optimize | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:places | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:signal | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:target | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:userprofile | 3.0.0 | 3.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Messaging 3.1.0
+
+* Added support for [Content Cards](https://github.com/adobe/aepsdk-messaging-android/blob/main/Documentation/sources/propositions/content-card.md).
+* Fixed a bug causing modified code-based experiences to be appended to the proposition offering, rather than being replaced.
+* Added listener for debug event to support future Assurance workflows.
+
+### iOS Messaging 5.1.0
+
+* Added support for [Content Cards](https://github.com/adobe/aepsdk-messaging-ios/blob/main/Documentation/sources/propositions/developer-documentation/classes/content-card.md).
+* Fixed a bug causing modified code-based experiences to be appended to the proposition offering, rather than being replaced.
+* Added listener for debug event to support future Assurance workflows.
+
+## June 24, 2024
+
+### Android Core 2.6.4
+
+* Fixed strict mode violations that happened during SDK initialization.
+* Added checks to prevent SDK initialization when the device is in direct boot mode.
+
+### Android BOM 2.9.9
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.9.8) | BOM (2.9.9) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:campaignclassic** | **2.1.6** | **2.1.8**|
+| **com.adobe.marketing.mobile:core** | **2.6.3** | **2.6.4**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:assurance | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.6 | 2.0.6 |
+| com.adobe.marketing.mobile:edge | 2.4.0 | 2.4.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:optimize | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+## June 21, 2024
+
+### Android BOM 3.1.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.0.3) | BOM (3.1.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:notificationbuilder** |  | **3.0.0** |
+| **com.adobe.marketing.mobile:campaignclassic** | **3.0.0** | **3.1.0**|
+| **com.adobe.marketing.mobile:core** | **3.0.2** | **3.1.0**|
+| com.adobe.marketing.mobile:analytics | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:assurance | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:audience | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaign | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:identity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:media | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:messaging | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:optimize | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:places | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:signal | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:target | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:userprofile | 3.0.0 | 3.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Campaign Classic 3.1.0
+
+Add support for out-of-the-box push notifications:
+
+* Basic
+* Carousel
+* Product Catalog
+* Product Rating
+* Input Box
+* Multi Icon
+* Zero Bezel
+* Timer
+
+### Android Notification Builder 3.0.0
+
+This is the initial release of AEP Notification Builder. Added support for out-of-the-box push notifications:
+
+* Basic
+* Carousel
+* Product Catalog
+* Product Rating
+* Input Box
+* Multi Icon
+* Zero Bezel
+* Timer
+
+### iOS Core 5.2.0
+
+* Added a new EventSource constant (`com.adobe.eventSource.debug`) and utility methods.
+* Added support for in-app message HTML content to control its background transparency.
+* Fixed data races in EventHub and Services and implemented additional stability fixes.
+
+## June 20, 2024
+
+### Android Core 3.1.0
+
+* Added support for in-app message HTML content to control its background transparency.
+* Enhanced Presentable re-attachment workflow for new Activity launch scenarios.
+* Added a new EventSource constant (`com.adobe.eventSource.debug`) and utility methods.
+* Added checks to prevent SDK initialization when device is in direct boot mode.
+
+## June 6, 2024
+
+### React Native EdgeConsent 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native UserProfile 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Target 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Places 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Optimize 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Messaging 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native EdgeIdentity 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native EdgeBridge 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Edge 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Campaign Classic 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Assurance 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+### React Native Core 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+## June 4, 2024
+
+### Android BOM 3.0.3
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.0.2) | BOM (3.0.3) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:assurance** | **3.0.0** | **3.0.1**|
+| **com.adobe.marketing.mobile:core** | **3.0.1** | **3.0.2**|
+| com.adobe.marketing.mobile:analytics | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:audience | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaign | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaignclassic | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:identity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:media | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:messaging | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:optimize | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:places | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:signal | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:target | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:userprofile | 3.0.0 | 3.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Core 3.0.2
+
+* Fixed strict mode violations that happened during SDK initialization.
+
+### Android Assurance 3.0.1
+
+* Fixed an issue where the Assurance floating button was not immediately shown in a reconnection scenario.
+* Fixed an issue where the QuickConnect device registration status check job was not terminated when the connection attempt is cancelled.
+* Disabled content and file access from `WebView`.
+
+## May 31, 2024
+
+### Android Campaign Classic 2.1.8
+
+* Fix clipped carousel captions which was occurring on smaller devices.
+
+### iOS Media 5.0.1
+
+* Fixed an issue in Media hit processor and now it retries hits on recoverable URLErrors shared by Mobile Core.
+
+### iOS Audience 5.0.1
+
+* Fixed an issue in Audience hit processor and now it retries hits on recoverable URLErrors shared by Mobile Core.
+
+## May 28, 2024
+
+### iOS Analytics 5.0.1
+
+* Fixed an issue in Analytics hit processor and now it retries hits on recoverable URLErrors shared by Mobile Core.
+
+### iOS Edge 5.0.2
+
+* Fixed an issue in Edge hit processor and now it retries hits on recoverable URLErrors shared by Mobile Core.
+
+## May 23, 2024
+
+### Android BOM 3.0.2
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.0.1) | BOM (3.0.2) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:core** | **3.0.0** | **3.0.1**|
+| **com.adobe.marketing.mobile:identity** | **3.0.0** | **3.0.1**|
+| **com.adobe.marketing.mobile:lifecycle** | **3.0.0** | **3.0.1**|
+| com.adobe.marketing.mobile:analytics | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:assurance | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:audience | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaign | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaignclassic | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:media | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:messaging | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:optimize | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:places | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:signal | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:target | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:userprofile | 3.0.0 | 3.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Lifecycle 3.0.1
+
+* Lifecycle extension now computes the `xdm:isUpgrade` metric in the `application.launch` event when either versionName or versionCode changes.
+
+### Android Identity 3.0.1
+
+* Fixed an edge case where `a.push.optin=false` event may be sent to Analytics even when `MobileCore.setPushIdentifier()` API is not used.
+
+### Android Core 3.0.1
+
+* Fixed an issue with scrollability in in-app messages with overflowing content.
+* Fixed an issue where the PresentationDelegate was not notified of all URLs opened by an in-app message.
+* Fixed an issue where UI components were not adapting to orientation changes when the activity hosting the composable restricts configuration change.
+* Enhanced error handling in the collectLaunchInfo API to catch exceptions when retrieving bundled data from an Activity.
+* Simplified coroutine scope management in UI services.
+
+## May 22, 2024
+
+### Android Campaign Classic 2.1.7
+
+* Add support for dark mode with out of the box push template notifications. Dark mode is supported on API29+ only and any custom color modifications made to the push payload will override the dark/light mode colors.
+* Removed the SCHEDULE_EXACT_ALARM permission from the Campaign Classic extension. This permission must be added to the app manifest if exact scheduling is needed for remind later notifications. If an API less than S / 31 is in use, or the exact alarm permission wasn't granted to the app, then an inexact alarm is used instead. Inexact scheduling will display the scheduled notification within a 1 hour window starting with the given timestamp.
+
+### iOS Core 5.1.0
+
+* Added a new constant and a utility method to AEPServices to detect if `URLError` is recoverable.
+* Lifecycle extension now computes the `xdm:isUpgrade` metric in the `application.launch` event when either CFBundleShortVersionString or CFBundleVersion changes.
+* Fixed an issue in the Signal and Identity extensions that caused the hit processor to drop queued hits when the device's network was offline.
+* Fixed an edge case where `a.push.optin=false` event may be sent to Analytics even when `MobileCore.setPushIdentifier()` API is not used.
+* Fixed data races in ExtensionContainer, ApplicationSystemInfoService, DiskCacheService, and FileSystemNamedCollection.
+
+## May 21, 2024
+
+### Android BOM 3.0.1
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.0.0) | BOM (3.0.1) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:optimize** | **3.0.0** | **3.0.1**|
+| com.adobe.marketing.mobile:analytics | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:assurance | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:audience | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaign | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaignclassic | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:core | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:identity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:media | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:messaging | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:places | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:signal | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:target | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:userprofile | 3.0.0 | 3.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+### iOS Optimize 5.0.1
+
+* Fixed a crash that happens when `updateProposition` API was called repeatedly.
+
+### Android Optimize 3.0.1
+
+* Fixed a bug where Optimize SDK was considering Target mbox decision scope strings as invalid and not including them in personalization requests.
+
+## May 20, 2024
+
+### iOS Core 4.2.4
+
+* Fixed a race condition when accessing sharedStateName inside ExtensionContainer.
+
+## May 18, 2024
+
+### iOS Optimize 4.0.4
+
+* Fixed a crash that happens when `updateProposition` API was called repeatedly.
+
+## May 13, 2024
+
+### Flutter Edge 4.1.0
+
+* Added support to customize datastream configurations on a per-event basis using the sendEvent API.
+* Update environment dependencies in pubspec.
+
+### Flutter UserProfile 4.0.2
+
+* Update environment dependencies in pubspec.
+
+### Flutter Messaging 4.0.2
+
+* Update environment dependencies in pubspec.
+
+### Flutter EdgeIdentity 4.0.2
+
+* Update environment dependencies in pubspec.
+
+### Flutter EdgeConsent 4.0.2
+
+* Update environment dependencies in pubspec.
+
+### Flutter EdgeBridge 4.0.2
+
+* Update environment dependencies in pubspec.
+
+### Flutter Assurance 4.0.2
+
+* Update environment dependencies in pubspec.
+
+### Flutter Core 4.0.2
+
+* Update environment dependencies in pubspec.
+
+### Android BOM 2.9.8
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (2.9.7) | BOM (2.9.8) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:core** | **2.6.2** | **2.6.3**|
+| com.adobe.marketing.mobile:analytics | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:assurance | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:audience | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:campaign | 2.0.6 | 2.0.6 |
+| com.adobe.marketing.mobile:campaignclassic | 2.1.6 | 2.1.6 |
+| com.adobe.marketing.mobile:edge | 2.4.0 | 2.4.0 |
+| com.adobe.marketing.mobile:edgebridge | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:edgeconsent | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 2.0.0 | 2.0.0 |
+| com.adobe.marketing.mobile:identity | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:lifecycle | 2.0.4 | 2.0.4 |
+| com.adobe.marketing.mobile:media | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:messaging | 2.2.1 | 2.2.1 |
+| com.adobe.marketing.mobile:optimize | 2.0.2 | 2.0.2 |
+| com.adobe.marketing.mobile:places | 2.1.0 | 2.1.0 |
+| com.adobe.marketing.mobile:signal | 2.0.1 | 2.0.1 |
+| com.adobe.marketing.mobile:target | 2.0.3 | 2.0.3 |
+| com.adobe.marketing.mobile:userprofile | 2.0.1 | 2.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Core 2.6.3
+
+* Enhanced error handling in the `collectLaunchInfo` API to catch exceptions when retrieving bundled data from an Activity.
+
 ## May 3, 2024
 
 ### Roku SDK 1.2.0
@@ -307,6 +1322,8 @@ Major version update for [Adobe Journey Optimizer](https://github.com/adobe/aeps
 
 * Updated to use Experience Platform Android `3.x` SDKs.
 * Updated to use Experience Platform iOS `5.x` SDKs.
+* Adds `onContentLoaded` to `MessagingDelegate` (Android Only).
+* Updated `urlLoaded` from `MessagingDelegate` to iOS Only.
 
 ### React Native EdgeConsent 6.0.0
 
