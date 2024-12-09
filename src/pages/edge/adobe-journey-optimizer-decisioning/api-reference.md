@@ -55,7 +55,7 @@ iOS
 
 ## getPropositionsWithTimeout
 
-This API retrieves the previously fetched propositions for the provided decision scopes from the in-memory extension propositions cache, similar to `getPropositions`. The completion callback is invoked with the decision propositions corresponding to the given decision scopes. If a certain decision scope has not been fetched prior to this API call, it will not be included in the returned propositions. 
+This API retrieves the previously fetched propositions for the provided decision scopes from the in-memory extension propositions cache, similar to `getPropositions`. The completion callback is invoked with the decision propositions corresponding to the given decision scopes. If a certain decision scope has not been fetched prior to this API call, it will not be included in the returned propositions.
 
 Additionally, this API allows specifying a timeout for the operation. If the propositions retrieval does not complete within the given timeout, an error is returned, providing improved control over handling delays and ensuring timely application responses.
 
@@ -146,7 +146,7 @@ iOS
 
 ## updatePropositionsWithCompletionHandlerAndTimeout
 
-This API dispatches an event for the Edge network extension to fetch decision propositions for the provided decision scopes array from the decisioning services enabled in the Experience Edge. Similar to `updatePropositionsWithCompletionHandler`, the returned decision propositions are cached in-memory within the Optimize SDK extension and can be retrieved using the `getPropositions` API. 
+This API dispatches an event for the Edge network extension to fetch decision propositions for the provided decision scopes array from the decisioning services enabled in the Experience Edge. Similar to `updatePropositionsWithCompletionHandler`, the returned decision propositions are cached in-memory within the Optimize SDK extension and can be retrieved using the `getPropositions` API.
 
 Additionally, this API allows specifying a completion timeout, ensuring that the operation either completes within the given time frame or returns an error indicating a timeout. This feature provides better control over the responsiveness of the application when interacting with decisioning services.
 

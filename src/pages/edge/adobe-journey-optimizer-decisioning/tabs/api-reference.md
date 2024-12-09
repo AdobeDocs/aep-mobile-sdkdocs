@@ -321,7 +321,6 @@ Optimize.getPropositions(for: [decisionScope1, decisionScope2], timeout: 1.0) { 
               
 ```
 
-
 * _decisionScopes_ is an array of decision scopes for which propositions are requested.
 * _timeout_ is a duration in seconds specifying the maximum time `getProposition` will wait for completion before returning `NSError`.
 * _completion_ is invoked with propositions dictionary of type `NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>`. An `NSError` is returned if SDK fails to retrieve the propositions.
@@ -349,7 +348,6 @@ AEPDecisionScope* decisionScope2 = [[AEPDecisionScope alloc] initWithName: @"myS
   // read proposition2 offers
 }];
 ```
-
 
 <Variant platform="android" api="on-propositions-update" repeat="6"/>
 
@@ -791,7 +789,6 @@ AEPDecisionScope* decisionScope2 = [[AEPDecisionScope alloc] initWithName: @"myS
   // read proposition2 offers
 }];
 ```
-
 
 <Variant platform="android" api="decisionscope" repeat="2"/>
 
