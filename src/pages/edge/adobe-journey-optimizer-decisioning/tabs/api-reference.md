@@ -140,6 +140,53 @@ Optimize.getPropositions(scopes, new AdobeCallbackWithError<Map<DecisionScope, O
 });
 ```
 
+<Variant platform="android" api="get-propositions-withTimeout" repeat="6"/>
+
+#### Java
+
+#### Syntax
+
+```java
+public static void getPropositions(final List<DecisionScope> decisionScopes, final double timeoutSeconds, final AdobeCallback<Map<DecisionScope, OptimizeProposition>> callback)
+```
+
+* _decisionScopes_ is a list of decision scopes for which propositions are requested.
+* _timeoutSeconds_ is a duration in seconds specifying the maximum time `getProposition` will wait for completion before returning [AdobeError](../../home/base/mobile-core/api-reference.md#adobeerror).
+* _callback_ `call` method is invoked with propositions map of type `Map<DecisionScope, OptimizeProposition>`. If the callback is an instance of [AdobeCallbackWithError](../../home/base/mobile-core/api-reference.md#adobecallbackwitherror), and if the operation times out or an error occurs in retrieving propositions, the `fail` method is invoked with the appropriate [AdobeError](../../home/base/mobile-core/api-reference.md#adobeerror).
+
+#### Example
+
+```java
+final DecisionScope decisionScope1 = DecisionScope("xcore:offer-activity:1111111111111111", "xcore:offer-placement:1111111111111111", 2);
+final DecisionScope decisionScope2 = new DecisionScope("myScope");
+
+final List<DecisionScope> decisionScopes = new ArrayList<>();
+decisionScopes.add(decisionScope1);
+decisionScopes.add(decisionScope2);
+
+Optimize.getPropositions(scopes, 10.0, new AdobeCallbackWithError<Map<DecisionScope, OptimizeProposition>>() {
+    @Override
+    public void fail(final AdobeError adobeError) {
+        // handle error
+    }
+
+    @Override
+    public void call(Map<DecisionScope, OptimizeProposition> propositionsMap) {
+        if (propositionsMap != null && !propositionsMap.isEmpty()) {
+            // get the propositions for the given decision scopes
+            if (propositionsMap.contains(decisionScope1)) {
+                final OptimizeProposition proposition1 = propsMap.get(decisionScope1)
+                // read proposition1 offers
+            }
+            if (propositionsMap.contains(decisionScope2)) {
+                final OptimizeProposition proposition2 = propsMap.get(decisionScope2)
+                // read proposition2 offers
+            }
+        }
+    }
+});
+```
+
 <Variant platform="ios" api="get-propositions" repeat="12"/>
 
 #### Swift
@@ -158,7 +205,7 @@ static func getPropositions(for decisionScopes: [DecisionScope],
 
 ```swift
 let decisionScope1 = DecisionScope(activityId: "xcore:offer-activity:1111111111111111", 
-                                   placementId: "xcore:offer-placement:1111111111111111" 
+                                   placementId: "xcore:offer-placement:1111111111111111",
                                    itemCount: 2)
 let decisionScope2 = DecisionScope(name: "myScope")
 
@@ -204,6 +251,90 @@ AEPDecisionScope* decisionScope1 = [[AEPDecisionScope alloc] initWithActivityId:
 AEPDecisionScope* decisionScope2 = [[AEPDecisionScope alloc] initWithName: @"myScope"];
 
 [AEPMobileOptimize getPropositions: @[decisionScope1, decisionScope2] 
+                        completion: ^(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* propositionsDict, NSError* error) {
+  if (error != nil) {
+    // handle error   
+    return;
+  }
+
+  AEPOptimizeProposition* proposition1 = propositionsDict[decisionScope1];
+  // read proposition1 offers
+
+  AEPOptimizeProposition* proposition2 = propositionsDict[decisionScope2];
+  // read proposition2 offers
+}];
+```
+
+<Variant platform="ios" api="get-propositions-withTimeout" repeat="12"/>
+
+#### Swift
+
+#### Syntax
+
+```swift
+static func getPropositions(for decisionScopes: [DecisionScope], 
+                            timeout: TimeInterval,
+                            _ completion: @escaping ([DecisionScope: OptimizeProposition]?, Error?) -> Void)
+```
+
+* _decisionScopes_ is an array of decision scopes for which propositions are requested.
+* _timeout_ is a duration in seconds specifying the maximum time `getProposition` will wait for completion before returning `Error`.
+* _completion_ is invoked with propositions dictionary of type `[DecisionScope: OptimizeProposition]`. An `Error` is returned if SDK fails to retrieve the propositions.
+
+#### Example
+
+```swift
+let decisionScope1 = DecisionScope(activityId: "xcore:offer-activity:1111111111111111", 
+                                   placementId: "xcore:offer-placement:1111111111111111",
+                                   itemCount: 2)
+let decisionScope2 = DecisionScope(name: "myScope")
+
+Optimize.getPropositions(for: [decisionScope1, decisionScope2], timeout: 1.0) { propositionsDict, error in
+
+    if let error = error {
+        // handle error
+        return
+    }
+
+    if let propositionsDict = propositionsDict {
+        // get the propositions for the given decision scopes
+
+        if let proposition1 = propositionsDict[decisionScope1] {
+            // read proposition1 offers
+        }
+
+        if let proposition2 = propositionsDict[decisionScope2] {
+            // read proposition2 offers
+        }
+    }
+}
+```
+
+#### Objective-C
+
+#### Syntax
+
+```objc
++ (void)getPropositions:(NSArray<AEPDecisionScope *> *_Nonnull) decisionScopes
+                timeout:(NSTimeInterval) timeout
+             completion:(void (^_Nonnull)(NSDictionary<AEPDecisionScope *, AEPOptimizeProposition *> *_Nullable propositionsDict, NSError *_Nullable error)) completion;
+              
+```
+
+* _decisionScopes_ is an array of decision scopes for which propositions are requested.
+* _timeout_ is a duration in seconds specifying the maximum time `getProposition` will wait for completion before returning `NSError`.
+* _completion_ is invoked with propositions dictionary of type `NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>`. An `NSError` is returned if SDK fails to retrieve the propositions.
+
+#### Example
+
+```objc
+AEPDecisionScope* decisionScope1 = [[AEPDecisionScope alloc] initWithActivityId: @"xcore:offer-activity:1111111111111111" 
+                                                                   placementId: @"xcore:offer-placement:1111111111111111" 
+                                                                     itemCount: 2];
+AEPDecisionScope* decisionScope2 = [[AEPDecisionScope alloc] initWithName: @"myScope"];
+
+[AEPMobileOptimize getPropositions: @[decisionScope1, decisionScope2] 
+                        timeout:1.0
                         completion: ^(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* propositionsDict, NSError* error) {
   if (error != nil) {
     // handle error   
@@ -310,7 +441,7 @@ public static void updatePropositions(final List<DecisionScope> decisionScopes, 
 ```
 
 * _decisionScopes_ is a list of decision scopes for which propositions need updating.
-* _xdm_ is a map containing additional xdm formatted data to be attached to the Experience Event.
+* _xdm_ is a map containing additional XDM formatted data to be attached to the Experience Event.
 * _data_ is a map containing additional freeform data to be attached to the Experience Event.
 
 #### Example
@@ -336,7 +467,7 @@ Optimize.updatePropositions(decisionScopes,
                             });
 ```
 
-<Variant platform="android" api="update-propositions-withError" repeat="6"/>
+<Variant platform="android" api="update-propositions-withCallback" repeat="6"/>
 
 #### Java
 
@@ -350,9 +481,9 @@ public static void updatePropositions(final List<DecisionScope> decisionScopes,
 ```
 
 * _decisionScopes_ is a list of decision scopes for which propositions need updating.
-* _xdm_ is a map containing additional xdm formatted data to be attached to the Experience Event.
+* _xdm_ is a map containing additional XDM formatted data to be attached to the Experience Event.
 * _data_ is a map containing additional freeform data to be attached to the Experience Event.
-* _callback_ is an optional completion handler that is invoked at the completion of the edge request. `call` method is invoked with propositions map of type `Map<DecisionScope, OptimizeProposition>`. If the callback is an instance of `AdobeCallbackWithOptimizeError`, and if the operation times out or an error occurs in retrieving propositions, the `fail` method is invoked with the appropriate [AEPOptimizeError](../api-reference.md#aepoptimizeerror). _Note:_ In certain cases, both the success and failure callbacks may be triggered. To handle these cases, ensure that your implementation checks for both successful propositions and errors within the callback, as both may be present simultaneously.
+* _callback_ is an optional completion handler that is invoked at the completion of the edge request. The `call` method is invoked with propositions map of type `Map<DecisionScope, OptimizeProposition>`. If the callback is an instance of `AdobeCallbackWithOptimizeError`, and if the operation times out or an error occurs in retrieving propositions, the `fail` method is invoked with the appropriate [AEPOptimizeError](../api-reference.md#aepoptimizeerror). _Note:_ In certain cases, both the success and failure callbacks may be triggered. To handle these cases, ensure that your implementation checks for both successful propositions and errors within the callback, as both may be present simultaneously.
 
 #### Example
 
@@ -388,6 +519,61 @@ Optimize.updatePropositions(decisionScopes,
                             });
 ```
 
+<Variant platform="android" api="update-propositions-withCallback-withTimeout" repeat="6"/>
+
+#### Java
+
+#### Syntax
+
+```java
+public static void updatePropositions(final List<DecisionScope> decisionScopes, 
+                                      final Map<String, Object> xdm,
+                                      final Map<String, Object> data,
+                                      final double timeoutSeconds, 
+                                      final AdobeCallback<Map<DecisionScope, OptimizeProposition>> callback)
+```
+
+* _decisionScopes_ is a list of decision scopes for which propositions need updating.
+* _xdm_ is a map containing additional XDM formatted data to be attached to the Experience Event.
+* _data_ is a map containing additional freeform data to be attached to the Experience Event.
+* _timeoutSeconds_ is a duration in seconds specifying the maximum time `updateProposition` will wait for completion before returning [AEPOptimizeError](../api-reference.md#aepoptimizeerror) which contains [AdobeError.CALLBACK_TIMEOUT](../../home/base/mobile-core/api-reference.md#adobeerror).
+* _callback_ is an optional completion handler that is invoked at the completion of the edge request. The `call` method is invoked with propositions map of type `Map<DecisionScope, OptimizeProposition>`. If the callback is an instance of `AdobeCallbackWithOptimizeError`, and if the operation times out or an error occurs in retrieving propositions, the `fail` method is invoked with the appropriate [AEPOptimizeError](../api-reference.md#aepoptimizeerror). _Note:_ In certain cases, both the success and failure callbacks may be triggered. To handle these cases, ensure that your implementation checks for both successful propositions and errors within the callback, as both may be present simultaneously.
+
+#### Example
+
+```java
+final DecisionScope decisionScope1 = DecisionScope("xcore:offer-activity:1111111111111111", "xcore:offer-placement:1111111111111111", 2);
+final DecisionScope decisionScope2 = new DecisionScope("myScope");
+
+final List<DecisionScope> decisionScopes = new ArrayList<>();
+decisionScopes.add(decisionScope1);
+decisionScopes.add(decisionScope2);
+
+Optimize.updatePropositions(decisionScopes,
+                            new HashMap<String, Object>() {
+                                {
+                                    put("xdmKey", "xdmValue");
+                                }
+                            },
+                            new HashMap<String, Object>() {
+                                {
+                                    put("dataKey", "dataValue");
+                                }
+                            },
+                            10.0,
+                            new AdobeCallbackWithOptimizeError<Map<DecisionScope, OptimizeProposition>>() {
+                                @Override
+                                public void fail(AEPOptimizeError optimizeError) {
+                                    responseError = optimizeError;
+                                }
+
+                                @Override
+                                public void call(Map<DecisionScope, OptimizeProposition> propositionsMap) {
+                                    responseMap = propositionsMap;
+                                }
+                            });
+```
+
 <Variant platform="ios" api="update-propositions" repeat="12"/>
 
 #### Swift
@@ -401,14 +587,14 @@ static func updatePropositions(for decisionScopes: [DecisionScope],
 ```
 
 * _decisionScopes_ is an array of decision scopes for which propositions need updating.
-* _xdm_ is a dictionary containing additional xdm formatted data to be attached to the Experience Event.
+* _xdm_ is a dictionary containing additional XDM formatted data to be attached to the Experience Event.
 * _data_ is a dictionary containing additional freeform data to be attached to the Experience Event.
 
 #### Example
 
 ```swift
 let decisionScope1 = DecisionScope(activityId: "xcore:offer-activity:1111111111111111", 
-                                   placementId: "xcore:offer-placement:1111111111111111" 
+                                   placementId: "xcore:offer-placement:1111111111111111",
                                    itemCount: 2)
 let decisionScope2 = DecisionScope(name: "myScope")
 
@@ -428,7 +614,7 @@ Optimize.updatePropositions(for: [decisionScope1, decisionScope2]
 ```
 
 * _decisionScopes_ is an array of decision scopes for which propositions need updating.
-* _xdm_ is a dictionary containing additional xdm formatted data to be attached to the Experience Event.
+* _xdm_ is a dictionary containing additional XDM formatted data to be attached to the Experience Event.
 * _data_ is a dictionary containing additional freeform data to be attached to the Experience Event.
 
 #### Example
@@ -444,7 +630,7 @@ AEPDecisionScope* decisionScope2 = [[AEPDecisionScope alloc] initWithName: @"myS
                               andData: @{@"dataKey": @"dataValue"}];
 ```
 
-<Variant platform="ios" api="update-propositions-withError" repeat="12"/>
+<Variant platform="ios" api="update-propositions-withCallback" repeat="12"/>
 
 #### Swift
 
@@ -458,7 +644,7 @@ static func updatePropositions(for decisionScopes: [DecisionScope],
 ```
 
 * _decisionScopes_ is an array of decision scopes for which propositions need updating.
-* _xdm_ is a dictionary containing additional xdm formatted data to be attached to the Experience Event.
+* _xdm_ is a dictionary containing additional XDM formatted data to be attached to the Experience Event.
 * _data_ is a dictionary containing additional freeform data to be attached to the Experience Event.
 * _completion_ is a optional completion handler invoked at the completion of the edge request with map of successful decision scopes to propositions and errors, if any.
 
@@ -466,7 +652,7 @@ static func updatePropositions(for decisionScopes: [DecisionScope],
 
 ```swift
 let decisionScope1 = DecisionScope(activityId: "xcore:offer-activity:1111111111111111",
-                                   placementId: "xcore:offer-placement:1111111111111111"
+                                   placementId: "xcore:offer-placement:1111111111111111",
                                    itemCount: 2)
 let decisionScope2 = DecisionScope(name: "myScope")
 
@@ -491,7 +677,7 @@ Optimize.updatePropositions(for: [decisionScope1, decisionScope2]
 ```
 
 * _decisionScopes_ is an array of decision scopes for which propositions are requested.
-* _xdm_ is a dictionary containing additional xdm formatted data to be attached to the Experience Event.
+* _xdm_ is a dictionary containing additional XDM formatted data to be attached to the Experience Event.
 * _data_ is a dictionary containing additional freeform data to be attached to the Experience Event.
 * _completion_ is invoked with propositions dictionary of type `NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>`. An `NSError` is returned if SDK fails to retrieve the propositions.
 
@@ -508,6 +694,89 @@ AEPDecisionScope* decisionScope2 = [[AEPDecisionScope alloc] initWithName: @"myS
                               withXdm: @{@"xdmKey": @"xdmValue"}
                               andData: @{@"dataKey": @"dataValue"}]
                            completion: ^(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* propositionsDict, NSError* error) {
+  if (error != nil) {
+    // handle error
+    return;
+  }
+
+  AEPOptimizeProposition* proposition1 = propositionsDict[decisionScope1];
+  // read proposition1 offers
+
+  AEPOptimizeProposition* proposition2 = propositionsDict[decisionScope2];
+  // read proposition2 offers
+}];
+```
+
+<Variant platform="ios" api="update-propositions-withCallback-withTimeout" repeat="12"/>
+
+#### Swift
+
+#### Syntax
+
+```swift
+static func updatePropositions(for decisionScopes: [DecisionScope],
+                               withXdm xdm: [String: Any]?,
+                               andData data: [String: Any]? = nil,
+                               timeout: TimeInterval,
+                               _completion: (([DecisionScope: OptimizeProposition]?, Error?) -> Void)? = nil)
+```
+
+* _decisionScopes_ is an array of decision scopes for which propositions need updating.
+* _xdm_ is a dictionary containing additional XDM formatted data to be attached to the Experience Event.
+* _data_ is a dictionary containing additional freeform data to be attached to the Experience Event.
+* _timeout_ is a duration in seconds specifying the maximum time `updateProposition` will wait for completion before returning `AEPOptimizeError`.
+* _completion_ is a optional completion handler invoked at the completion of the edge request with map of successful decision scopes to propositions and `AEPOptimizeError`, if any.
+
+#### Example
+
+```swift
+let decisionScope1 = DecisionScope(activityId: "xcore:offer-activity:1111111111111111",
+                                   placementId: "xcore:offer-placement:1111111111111111",
+                                   itemCount: 2)
+let decisionScope2 = DecisionScope(name: "myScope")
+
+Optimize.updatePropositions(for: [decisionScope1, decisionScope2],
+                            withXdm: ["xdmKey": "xdmValue"],
+                            andData: ["dataKey": "dataValue"],
+                            timeout: 1.0) { data, error in
+            if let error = error as? AEPOptimizeError {
+                // handle error
+            }
+        }
+```
+
+#### Objective-C
+
+#### Syntax
+
+```objc
++ (void) updatePropositions: (NSArray<AEPDecisionScope*>* _Nonnull) decisionScopes
+                    withXdm: (NSDictionary<NSString*, id>* _Nullable) xdm
+                    andData: (NSDictionary<NSString*, id>* _Nullable) data
+                    timeout:(NSTimeInterval) timeout
+                 completion: (void (^ _Nonnull)(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* _Nullable propositionsDict, NSError* _Nullable error)) completion;
+```
+
+* _decisionScopes_ is an array of decision scopes for which propositions are requested.
+* _xdm_ is a dictionary containing additional XDM formatted data to be attached to the Experience Event.
+* _data_ is a dictionary containing additional freeform data to be attached to the Experience Event.
+* _timeout_ is a duration in seconds specifying the maximum time `updateProposition` will wait for completion before returning `NSError`.
+* _completion_ is invoked with propositions dictionary of type `NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>`. An `NSError` is returned if SDK fails to retrieve the propositions.
+
+#### Example
+
+```objc
+
+AEPDecisionScope* decisionScope1 = [[AEPDecisionScope alloc] initWithActivityId: @"xcore:offer-activity:1111111111111111"
+                                                                   placementId: @"xcore:offer-placement:1111111111111111"
+                                                                     itemCount: 2];
+AEPDecisionScope* decisionScope2 = [[AEPDecisionScope alloc] initWithName: @"myScope"];
+
+[AEPMobileOptimize updatePropositions: @[decisionScope1, decisionScope2]
+                              withXdm: @{@"xdmKey": @"xdmValue"}
+                              andData: @{@"dataKey": @"dataValue"}]
+                              timeout:1.0
+                              completion: ^(NSDictionary<AEPDecisionScope* AEPOptimizeProposition*>* propositionsDict, NSError* error) {
   if (error != nil) {
     // handle error
     return;
