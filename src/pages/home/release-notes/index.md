@@ -7,6 +7,12 @@ Keywords:
 
 # Release notes
 
+## December 19, 2024
+
+### React Native Messaging 6.0.5
+
+* Fixed an issue with in-app messages not being displayed when a MessagingDelegate is set.
+
 ## December 6, 2024
 
 ### Android Optimize 3.2.2
