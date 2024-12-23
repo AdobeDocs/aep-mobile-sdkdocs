@@ -177,7 +177,7 @@ See the frequently asked questions for migration [here](../resources/migration/a
 
 ### What are Lifecycle metrics?
 
-Lifecycle metrics are out-of-the-box metrics that are automatically collected when the SDK is first implemented in your app. For more information, please read the [documentation on Lifecycle metrics](../home/mobile-core/lifecycle/index.md).
+Lifecycle metrics are out-of-the-box metrics that are automatically collected when the SDK is first implemented in your app. For more information, please read the [documentation on Lifecycle metrics](../home/base/mobile-core/lifecycle/index.md).
 
 ## Adobe Analytics
 
