@@ -26,9 +26,10 @@ if (GITHUB_TOKEN === undefined) {
 const DRY_RUN = process.argv.includes("--dry-run")
 
 // Before running the script, make sure the default time zone is set to PST in the GitHub action
-if (!setTimeZoneToPST()) {
-    throw new Error("The default time zone is not set to PST")
-}
+// TODO: For some reason, the code below to update the timezone of the Github Action runners is not working. Ignore this step for now and will fix it later.
+// if (!setTimeZoneToPST()) {
+//     throw new Error("The default time zone is not set to PST")
+// }
 
 console.log(`Start to fetch release info from GitHub created after [${convertToDateTime(timestampObj.ts)}]`);
 

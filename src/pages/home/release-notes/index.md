@@ -7,6 +7,37 @@ Keywords:
 
 # Release notes
 
+## December 19, 2024
+
+### React Native Messaging 6.0.5
+
+* Fixed an issue with in-app messages not being displayed when a MessagingDelegate is set.
+
+## December 6, 2024
+
+### Android Optimize 3.2.2
+
+* Added timeout (in seconds) parameter to updatePropositions and getPropositions APIs to enable timeout configuration in both the apis ensuring that the operation either completes within the given time frame or returns an error indicating a timeout.
+* Updated getPropositions API to return cached propositions immediately if there are no pending updatePropositions calls for the requested list of decision scopes.
+* Added support for debug events and enabled getPropositions and onPropositionsUpdate to receive Simulated events from Assurance.
+
+### iOS Optimize 5.2.0
+
+* Added timeout (in seconds) parameter to updatePropositions and getPropositions APIs to enable timeout configuration in both the apis ensuring that the operation either completes within the given time frame or returns an error indicating a timeout.
+* Added support for debug events and enabled getPropositions and onPropositionsUpdate to receive Simulated events from Assurance.
+
+## November 21, 2024
+
+### iOS Notification Content Extension ui-5.1.2
+
+* Fixed a bug that caused dark/light image to be switched when the app enters background.
+
+## November 5, 2024
+
+### iOS Notification Content Extension ui-5.1.1
+
+* Implemented image caching for Content Card images, resolving the issue where images fail to load when reappearing after the app is relaunched from the background.
+
 ## November 1, 2024
 
 ### iOS Messaging 5.5.0
