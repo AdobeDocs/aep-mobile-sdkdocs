@@ -27,9 +27,9 @@ const DRY_RUN = process.argv.includes("--dry-run")
 
 
 const offset = new Date().getTimezoneOffset()
-console.log(`Timezone offset is: ${offset}`);
+console.log(`Time zone offset is: ${offset}`);
 const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-console.log(`Timezone is: ${timezone}`);
+console.log(`Time zone is: ${timezone}`);
 
 console.log(`Start to fetch release info from GitHub created after [${convertToDateTime(timestampObj.ts)}]`);
 
