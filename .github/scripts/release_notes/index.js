@@ -12,7 +12,7 @@ governing permissions and limitations under the License.
 
 const timestampObj = require('./timestamp.json')
 const { repoNames, releaseNotesLocation, MAIN_RELEASE_NOTES_LOCATION, PLATFORM_ENUM, EXTENSION_ENUM } = require('./constants')
-const { saveJsonObjToFile, setTimeZoneToPST, convertToDateTime } = require('./utils')
+const { saveJsonObjToFile, convertToDateTime } = require('./utils')
 const { updateReleaseNotesPage } = require('./updateReleaseNotes');
 const { fetchReleaseInfoFromGitHub, sortReleaseInfoByDateASC } = require('./fetchReleaseNotes');
 
@@ -25,11 +25,11 @@ if (GITHUB_TOKEN === undefined) {
 
 const DRY_RUN = process.argv.includes("--dry-run")
 
-// Before running the script, make sure the default time zone is set to PST in the GitHub action
-// TODO: For some reason, the code below to update the timezone of the Github Action runners is not working. Ignore this step for now and will fix it later.
-// if (!setTimeZoneToPST()) {
-//     throw new Error("The default time zone is not set to PST")
-// }
+
+const offset = new Date().getTimezoneOffset()
+console.log(`Timezone offset is: ${offset}`);
+const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+console.log(`Timezone is: ${timezone}`);
 
 console.log(`Start to fetch release info from GitHub created after [${convertToDateTime(timestampObj.ts)}]`);
 
