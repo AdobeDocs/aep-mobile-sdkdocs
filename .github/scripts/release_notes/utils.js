@@ -96,6 +96,5 @@ module.exports = {
     saveJsonObjToFile,
     extractReleaseNotes,
     convertISODateToRleaseDateFormat,
-    setTimeZoneToPST,
     convertToDateTime,
 }
