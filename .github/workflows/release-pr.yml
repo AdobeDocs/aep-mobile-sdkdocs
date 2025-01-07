@@ -32,6 +32,13 @@ jobs:
        
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Set timezone
+        uses: szenius/set-timezone@v2.0
+        with:
+          timezoneLinux: "America/Los_Angeles"
+          timezoneMacos: "America/Los_Angeles"
+      
       - name: Yarn install
         run: yarn install
         
