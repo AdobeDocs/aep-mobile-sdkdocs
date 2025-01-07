@@ -57,8 +57,12 @@ module.exports = {
                 path: "/home/release-notes",
                 pages: [
                     {
-                        title: "2024",
+                        title: "2025",
                         path: "/home/release-notes"
+                    },
+                    {
+                        title: "2024",
+                        path: "/home/release-notes/2024"
                     },
                     {
                         title: "2023",
