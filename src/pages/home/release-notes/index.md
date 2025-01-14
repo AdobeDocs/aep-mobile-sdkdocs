@@ -7,6 +7,12 @@ Keywords:
 
 # Release notes
 
+## January 14, 2025
+
+### React Native Places 6.0.3
+
+* Updated Places module name for compatibility with the new architecture.
+
 ## January 7, 2025
 
 ### Android BOM 3.6.0
