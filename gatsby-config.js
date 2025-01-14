@@ -523,6 +523,10 @@ module.exports = {
                             {
                                 title: "Data reference",
                                 path: "/edge/lifecycle-for-edge-network/metrics"
+                            },
+                            {
+                                title: "Migration reference",
+                                path: "/edge/lifecycle-for-edge-network/migration-reference"
                             }
                         ]
                     }
