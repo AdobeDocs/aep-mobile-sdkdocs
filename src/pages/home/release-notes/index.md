@@ -21,6 +21,20 @@ Keywords:
 
 ## January 14, 2025
 
+### React Native New Architecture Support
+
+- **Updated Places Module Name:**  
+  Updated the `@adobe/react-native-aepplaces` module name for compatibility with the new architecture in React Native.
+
+- **New Sample App with New Architecture Enabled:**  
+  Introduced a new sample app with the new architecture enabled.  
+  **Link:** [AEPSampleAppNewArchEnabled](https://github.com/adobe/aepsdk-react-native/tree/main/apps/AEPSampleAppNewArchEnabled)
+
+- **Interop Layer Compatibility Testing:**  
+  Successfully tested all Adobe AEP extensions with the interop layer for compatibility with the new React Native architecture.
+
+## January 14, 2025
+
 ### React Native Places 6.0.3
 
 * Updated Places module name for compatibility with the new architecture.
