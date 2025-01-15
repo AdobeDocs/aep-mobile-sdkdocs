@@ -85,8 +85,8 @@ For a complete list of supported platforms, please read the [latest SDK versions
 
 ### What OS and platform versions are supported?
 
-* Android versions 4.4 or later (API levels 19 or later)
-* iOS versions 10 or later
+* Android versions 5 or later (API levels 21 or later)
+* iOS versions 12 or later
 * React Native versions 0.60.0 or later
 * Flutter versions 2.0.0 or later
 
