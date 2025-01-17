@@ -13,7 +13,7 @@ The Adobe Experience Platform Mobile SDK Lifecycle extension enables application
 
 ## Migrating from Analytics to Lifecycle for Edge Network
 
-If you are an existing Mobile Analytics customer and are migrating to the Edge Network, or would like more information on how Lifecycle for Edge Network works, please read the [Lifecycle for Edge Network migration reference](./migration-reference.md). Here you will find important information about the differences of how Lifecycle works when using Edge Network versus Analytics.
+If you are an existing Mobile Analytics customer and are migrating to the Edge Network or would like more information on how Lifecycle for Edge Network works, please read the [Lifecycle for Edge Network migration reference](./migration-reference.md). Here you will find important information about the differences of how Lifecycle works when using Edge Network versus Analytics.
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -27,7 +27,7 @@ Include the "AEP Mobile Lifecycle Details" field group to the schema defined in 
 
 <InlineAlert variant="info" slots="text"/>
 
-If your workflow does not require the creation of an XDM schema, such as when only using the Adobe Analytics service, then this step is optional.
+Creating an XDM schema is optional if your workflow does not require one. An XDM schema is required for some services, such as Adobe Experience Platform and Data Prep for mapping XDM fields on the server. However, if the datastream only enables the Analytics service, for example, then an XDM schema is not strictly required.
 
 1. In Adobe Experience Platform, log in to your organization.
 2. Under **Schemas** section, select the **Browse** tab and search for the schema used in the application's Edge configuration.
@@ -105,10 +105,12 @@ After you complete your configuration, verify that your rule looks like the foll
 
 ### Add the Lifecycle extension to your app
 
-Installing Lifecycle for Edge Network is the same as installing Lifecycle for Analytics as there is only a single mobile SDK Lifecycle extension. The Lifecycle APIs for lifecycleStart and lifecyclePause are the same for both Lifecycle workflows. If your application already includes the Lifecycle extension then you are already setup for Lifecycle for Edge Network.
+Installing Lifecycle for Edge Network is the same as installing Lifecycle for Analytics as there is only a single mobile SDK Lifecycle extension. The Lifecycle APIs for `lifecycleStart` and `lifecyclePause` are the same for both Lifecycle workflows. If your application already includes the Lifecycle extension then you are already setup for Lifecycle for Edge Network.
 
 For implementation details, please reference the Lifecycle documentation to learn how to [add Lifecycle to your app](../../home/base/mobile-core/lifecycle/index.md#add-lifecycle-to-your-app) and [register Lifecycle with Mobile Core and add appropriate the Start/Pause calls](../../home/base/mobile-core/lifecycle/index.md#register-lifecycle-with-mobile-core-and-add-appropriate-start-pause-calls).
 
 ### Add Edge Network extension to your app
 
 Use the following steps to [add the Edge Network extension to your app](../edge-network/index.md#add-the-edge-network-extension-to-your-app).
+
+Optionally, if you are using configuration overrides with your Edge implementation, follow the tutorial [Sending configuration overrides using Rules](../edge-network/tutorials/send-overrides-rules.md) to override the destination for the Lifecycle events.
