@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## January 16, 2025
+
+### iOS Core 5.3.2
+
+* Fixed an issue where in-app message was not reframed in split screen mode.
+
 ## October 16, 2024
 
 ### iOS Core 5.3.1
