@@ -21,21 +21,21 @@ Keywords:
 
 ## January 14, 2025
 
-### React Native New Architecture Support
+### React Native new architecture Support
 
 * **Updated Places Module Name**  
-  Added compatibility for the New Architecture in the Places React Native module.  
-* **New Sample App with New Architecture Enabled**  
-  Enabled the New Architecture in the Sample App.  
-  **Link:** [AEPSampleAppNewArchEnabled](https://github.com/adobe/aepsdk-react-native/tree/main/apps/AEPSampleAppNewArchEnabled)  
-* **New Architecture Compatibility Testing**  
-  Tested New Architecture enabled sample app with Adobe Experience Platform Mobile React Native modules via interop layer (New Architecture not supported for Adobe Campaign Classic).
+  Added compatibility for the new architecture in the Places React Native module.  
 
-## January 14, 2025
+* **New sample app with new architecture enabled**  
+  Enabled the new architecture in the Sample App.  
+  **Link:** [AEPSampleAppNewArchEnabled](https://github.com/adobe/aepsdk-react-native/tree/main/apps/AEPSampleAppNewArchEnabled)  
+
+* **New architecture Compatibility Testing**  
+  Tested new architecture enabled sample app with Adobe Experience Platform Mobile React Native modules via interop layer (new architecture not supported for Adobe Campaign Classic).
 
 ### React Native Places 6.0.3
 
-* Added New Architecture compatibility to the Places React Native module..
+* Added new architecture compatibility to the Places React Native module.
 
 ## January 7, 2025
 
