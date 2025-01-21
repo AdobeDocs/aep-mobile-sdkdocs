@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## January 16, 2025
+
+### iOS Core 5.3.2
+
+* Fixed an issue where in-app message was not reframed in split screen mode.
+
 ## October 16, 2024
 
 ### iOS Core 5.3.1
@@ -191,7 +197,7 @@ To learn how Apple's privacy related announcements made in WWDC of 2023 affect t
 Major version update for [Signal](./signal/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
-* The SDK is now compatible with Kotlin 1.5 and higher.
+* The SDK is now compatible with Kotlin 1.8 and higher.
 * Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
 * Added an enhancement to prevent network retries when the device's network is offline.
 
@@ -217,7 +223,7 @@ Major version update of Adobe Experience Platform Core Android SDK is live!
 Please note that the current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
-* The SDK is now compatible with Kotlin 1.5 and higher.
+* The SDK is now compatible with Kotlin 1.8 and higher.
 * Migrated UI service to use Jetpack Compose.
 * Removed deprecated `MobileCore.registerExtension(...)` and `MobileCore.start()` APIs. Use the `MobileCore.registerExtensions(...)` API for registering extensions and initializing the SDK instead.
 * Removed `MobileCore.setMessagingDelegate`, `MobileCore.getMessagingDelegate` APIs which were used to control the display of in-app messages. Migrate to `com.adobe.marketing.mobile.services.ui.PresentationDelegate` and use `ServiceProvider.getUIService().setPresentationDelegate` API instead.

@@ -70,7 +70,7 @@ Add support for out-of-the-box push notifications:
 Major version update for [Campaign Classic](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
-* The SDK is now compatible with Kotlin 1.5 and higher.
+* The SDK is now compatible with Kotlin 1.8 and higher.
 * Removed the out-of-the-box push template handling code. This functionality will be available in a future Core 3.x release.
 
 ## March 20, 2024
