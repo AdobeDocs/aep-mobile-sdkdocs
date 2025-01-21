@@ -79,10 +79,6 @@ Implementing the two SDKs in your app is not supported.
 
 The Experience Platform SDK migrates the locally stored user contexts from the 4x SDKs. Using both SDKs will cause severe data quality issues. For more information, please read the [upgrade to the Experience Platform SDKs tutorial](./upgrade-platform-sdks/index.md).
 
-### What platforms are supported?
-
-For a complete list of supported platforms, please read the [latest SDK versions document](../home/current-sdk-versions.md#supported-platforms).
-
 ### What OS and platform versions are supported?
 
 For a complete list of supported platforms, please read the [latest SDK versions document](../home/current-sdk-versions.md#supported-platforms).
