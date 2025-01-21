@@ -81,14 +81,11 @@ The Experience Platform SDK migrates the locally stored user contexts from the 4
 
 ### What platforms are supported?
 
-For a complete list of supported platforms, please read the [latest SDK versions document](../home/current-sdk-versions.md).
+For a complete list of supported platforms, please read the [latest SDK versions document](../home/current-sdk-versions.md#supported-platforms).
 
 ### What OS and platform versions are supported?
 
-* Android versions 5 or later (API levels 21 or later)
-* iOS versions 12 or later
-* React Native versions 0.60.0 or later
-* Flutter versions 2.0.0 or later
+For a complete list of supported platforms, please read the [latest SDK versions document](../home/current-sdk-versions.md#supported-platforms).
 
 ### Where does the SDK store identities and preferences on the app?
 
