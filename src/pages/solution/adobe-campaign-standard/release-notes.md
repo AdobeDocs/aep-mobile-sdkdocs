@@ -37,7 +37,7 @@ Major version update for [Campaign Classic](https://github.com/adobe/aepsdk-reac
 Major version update for [Campaign Standard](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
-* The SDK is now compatible with Kotlin 1.5 and higher.
+* The SDK is now compatible with Kotlin 1.8 and higher.
 * Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
 * Migrated Campaign SDK to use Jetpack Compose based UI Services from MobileCore 3.0.0
 * Moved code to create and track local notifications from Mobile Core to Campaign.
