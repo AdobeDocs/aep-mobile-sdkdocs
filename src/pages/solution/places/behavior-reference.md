@@ -26,8 +26,8 @@ In a tags mobile property, rules can define Places conditions based on the follo
 When multiple POIs are entered simultaneously, they are evaluated in the following order of precedence:
 
 1. Library rank, where the lower the rank, the higher the priority.  
-2. Radius, where the POI with the smaller radius takes priority. 
-3. The POI for which the entry was signaled (that is, the most recently entered POI). 
+2. Radius, where the POI with the smaller radius takes priority.  
+3. The POI for which the entry was signaled (that is, the most recently entered POI).  
 
 ### Current POI
 
@@ -46,13 +46,11 @@ POIs remain in the entered state across app sessions until one of the following 
 
 ### Last entered POI
 
-This refers to the most recently entered POI.  
-- There is no expiration time for this value. It remains unchanged across app sessions until an entry event updates it.
+This refers to the most recently entered POI. There is no expiration time for this value. It remains unchanged across app sessions until an entry event updates it.
 
 ### Last exited POI
 
-This refers to the most recently exited POI.  
-- There is no expiration time for this value. It remains unchanged across app sessions until an exit event updates it.
+This refers to the most recently exited POI. There is no expiration time for this value. It remains unchanged across app sessions until an exit event updates it.
 
 ## Scenarios
 
@@ -69,9 +67,10 @@ The app starts in a clean state with no previous Places events or persistent sto
 #### Enter POI A
 
 The user has entered the radius for POI A:  
-- **Current POI** is set to POI A.  
-- **Last Entered POI** is set to POI A.  
-- **Last Exited POI** remains unchanged as none.  
+
+* **Current POI** is set to POI A.  
+* **Last Entered POI** is set to POI A.  
+* **Last Exited POI** remains unchanged as none.  
 
 <!-- 
 Note for diagram maintainers:
@@ -86,18 +85,20 @@ The original draw.io source files are also included with the assets to easily mo
 #### Exit POI A
 
 The user has exited the radius for POI A:  
-- **Current POI** is set to none.  
-- **Last Entered POI** remains unchanged as POI A.  
-- **Last Exited POI** is set to POI A.  
+
+* **Current POI** is set to none.  
+* **Last Entered POI** remains unchanged as POI A.  
+* **Last Exited POI** is set to POI A.  
 
 ![](/src/pages/solution/places/assets/behavior-reference/non-intersecting-exit-A.svg)
 
 #### Enter POI B
 
 The user has entered the radius for POI B:  
-- **Current POI** is set to POI B.  
-- **Last Entered POI** is set to POI B.  
-- **Last Exited POI** remains unchanged as POI A.  
+
+* **Current POI** is set to POI B.  
+* **Last Entered POI** is set to POI B.  
+* **Last Exited POI** remains unchanged as POI A.  
 
 ![](/src/pages/solution/places/assets/behavior-reference/non-intersecting-enter-B.svg)
 
@@ -106,27 +107,30 @@ The user has entered the radius for POI B:
 #### Enter POI A
 
 The user has entered the radius for POI A:  
-- **Current POI** is set to POI A.  
-- **Last Entered POI** is set to POI A.  
-- **Last Exited POI** remains unchanged as none.  
+
+* **Current POI** is set to POI A.  
+* **Last Entered POI** is set to POI A.  
+* **Last Exited POI** remains unchanged as none.  
 
 ![](/src/pages/solution/places/assets/behavior-reference/intersecting-enter-A.svg)
 
 #### Enter POI B
 
 The user has entered the radius for POI B:  
-- **Current POI** remains unchanged as POI A.  
-  - This demonstrates how library rankings determine the Current POI when multiple POIs are entered. Although POI B was most recently entered, POI A remains the Current POI due to its higher library ranking.  
-- **Last Entered POI** is set to POI B.  
-- **Last Exited POI** remains unchanged as none.  
+
+* **Current POI** remains unchanged as POI A.  
+  * This demonstrates how library rankings determine the Current POI when multiple POIs are entered. Although POI B was most recently entered, POI A remains the Current POI due to its higher library ranking.  
+* **Last Entered POI** is set to POI B.  
+* **Last Exited POI** remains unchanged as none.  
 
 ![](/src/pages/solution/places/assets/behavior-reference/intersecting-enter-B.svg)
 
 #### Exit POI A
 
 The user has exited the radius for POI A:  
-- **Current POI** is set to POI B.  
-- **Last Entered POI** remains unchanged as POI B.  
-- **Last Exited POI** is set to POI A.  
+
+* **Current POI** is set to POI B.  
+* **Last Entered POI** remains unchanged as POI B.  
+* **Last Exited POI** is set to POI A.  
 
 ![](/src/pages/solution/places/assets/behavior-reference/intersecting-exit-A.svg)
