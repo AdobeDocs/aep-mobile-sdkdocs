@@ -24,7 +24,7 @@ keywords:
 
 ## API Reference
 
-* [Content Card API's](./api-usage.md)
+* [Content Card APIs](./api-usage.md)
 
 ## Public Classes, Enums, and Interfaces
 

@@ -1,6 +1,6 @@
 ---
 title: Customizing Content Card Templates style
-description: This document contains a tutorial on how to customize content card templates style.
+description: This document contains a tutorial on how to customize content card template's style.
 keywords:
 - Adobe Journey Optimizer
 - Guide

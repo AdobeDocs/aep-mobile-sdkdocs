@@ -15,7 +15,7 @@ keywords:
 
 # AepUI
 
-The `AepUI` interface represents a UI component that can be rendered using the Adobe Experience Platform (AEP) compose UI library. The AEP compose UI library currently supports rendering the following UI template:
+The `AepUI` interface represents a UI component that can be rendered using the Adobe Experience Platform compose UI library. The Experience Platform compose UI library currently supports rendering the following UI template:
 
 `SmallImageUI` which renders `Small Image template`
 

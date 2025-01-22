@@ -15,7 +15,7 @@ keywords:
 
 # ContentCardMapper
 
-Singleton class used to store a mapping between valid [ContentCardSchemaData](../../../public-classes/content-card-schema-data.md#android-interface) and unique proposition IDs. The schema data is used when sending proposition track requests to AJO.
+Singleton class used to store a mapping between valid [ContentCardSchemaData](../../../public-classes/content-card-schema-data.md#android-interface) and unique proposition IDs. The schema data is used when sending proposition track requests to Adobe Journey Optimizer.
 
 ## Class Definition
 
