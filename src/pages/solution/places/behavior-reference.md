@@ -23,14 +23,6 @@ In a tags mobile property, rules can define Places conditions based on the follo
 
 ### Current POI
 
-When multiple POIs are entered simultaneously, they are evaluated in the following order of precedence:
-
-1. Library rank, where the lower the rank, the higher the priority.  
-2. Radius, where the POI with the smaller radius takes priority.  
-3. The POI for which the entry was signaled (that is, the most recently entered POI).  
-
-### Current POI
-
 When multiple POIs are simultaneously in the entered state, they are evaluated in the following order of precedence:
 
 1. Library rank: Lower rank values represent higher priority.  
