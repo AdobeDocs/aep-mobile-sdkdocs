@@ -703,6 +703,10 @@ module.exports = {
                                 path: "/solution/places/places-to-platform.md"
                             },
                             {
+                                title: "Behavior reference",
+                                path: "/solution/places/behavior-reference.md"
+                            },
+                            {
                                 title: "Release notes",
                                 path: "/solution/places/release-notes.md"
                             }
