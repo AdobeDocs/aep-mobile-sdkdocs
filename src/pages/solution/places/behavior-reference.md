@@ -17,7 +17,7 @@ For definitions of key terms, see [Places Terminology](https://experienceleague.
 
 #### Library rank
 
-A **library rank**, also referred to as **weight**, is the priority assigned to a library when multiple libraries are in use. A smaller rank value (for example, 1) indicates a higher priority, while a larger rank value (for example, 4) indicates a lower priority. This ranking helps determine which library’s points of interest (POIs) take precedence when overlaps occur.
+A **library rank**, also referred to as **weight**, is the priority assigned to a library when multiple libraries are in use. A smaller rank value (for example, 1) indicates a higher priority, while a larger rank value (for example, 4) indicates a lower priority. This ranking is one of the factors used to determine which library’s points of interest (POIs) take precedence when overlaps occur.
 
 #### Membership time to live
 
