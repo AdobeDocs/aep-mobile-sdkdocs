@@ -47,7 +47,7 @@ POIs remain in the entered state across app sessions until one of the following 
 
 1. An exit signal is sent for the POI using the [`processRegionEvent`](/src/pages/solution/places/api-reference.md#processregionevent) API on iOS or the [`processGeofence`](/src/pages/solution/places/api-reference.md#processgeofence) and [`processGeofenceEvent`](/src/pages/solution/places/api-reference.md#processgeofenceevent) APIs on Android.  
 2. The membership time to live value expires.  
-3. The entered state is recalculated for all POIs using the lat/lon provided when calling the [`getNearbyPointsOfInterest`](/src/pages/solution/places/api-reference.md#getnearbypointsofinterest) API.  
+3. The entered state is recalculated for all received POIs using the lat/lon provided when calling the [`getNearbyPointsOfInterest`](/src/pages/solution/places/api-reference.md#getnearbypointsofinterest) API.  
 
 ### Last entered POI
 
@@ -79,11 +79,11 @@ The user has entered the radius for POI A:
 
 <!-- 
 Note for diagram maintainers:
-The original draw.io source files are also included with the assets to easily modify as needed and export in the desired format. 
+The original draw.io source file which contains all diagram pages is also included with the assets to easily modify as needed and export in the desired format. 
 - Exported as SVG with options:
 - Size: Diagram
 - Transparent background
-- Appearance: Light
+- Appearance: Light (Dark mode is not currently supported, so dynamically switching SVGs perform worse.)
  -->
 ![](/src/pages/solution/places/assets/behavior-reference/non-intersecting-enter-A.svg)
 
@@ -124,7 +124,7 @@ The user has entered the radius for POI A:
 The user has entered the radius for POI B:  
 
 * **Current POI** remains unchanged as POI A.  
-  * This demonstrates how library rankings determine the Current POI when multiple POIs are entered. Although POI B was most recently entered, POI A remains the Current POI due to its higher library ranking.  
+  * This illustrates how library rankings influence the Current POI when multiple POIs are entered. Although POI B was most recently entered, POI A remains the Current POI due to its higher library ranking.  
 * **Last Entered POI** is set to POI B.  
 * **Last Exited POI** remains unchanged as none.  
 
@@ -135,7 +135,8 @@ The user has entered the radius for POI B:
 The user has exited the radius for POI A:  
 
 * **Current POI** is set to POI B.  
-* **Last Entered POI** remains unchanged as POI B.  
-* **Last Exited POI** is set to POI A.  
+  * POI A is removed from the entered POIs list, while POI B remains. Notice that Current POI updates to POI B upon receiving an exit signal.  
+* **Last entered POI** remains unchanged and is set to POI B.  
+* **Last exited POI** is set to POI A.  
 
 ![](/src/pages/solution/places/assets/behavior-reference/intersecting-exit-A.svg)
