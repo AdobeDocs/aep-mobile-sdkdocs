@@ -49,6 +49,8 @@ POIs remain in the entered state across app sessions until one of the following 
 2. The membership time to live value expires.  
 3. The entered state is recalculated for all received POIs using the lat/lon provided when calling the [`getNearbyPointsOfInterest`](/src/pages/solution/places/api-reference.md#getnearbypointsofinterest) API.  
 
+Even with a correct geofence and Places API implementation, device operating systems may not provide geofence exit signals for various reasons, which can impact the final Places state.
+
 ### Last entered POI
 
 The last entered POI represents the POI that was most recently entered, which is identified by receiving an entry signal. The expiration time for this value is determined by the [membership time to live](#membership-time-to-live).  
@@ -124,7 +126,7 @@ The user has entered the radius for POI A:
 The user has entered the radius for POI B:  
 
 * **Current POI** remains unchanged as POI A.  
-  * This illustrates how library rankings influence the Current POI when multiple POIs are entered. Although POI B was most recently entered, POI A remains the Current POI due to its higher library ranking.  
+  * This illustrates how library rankings influence the Current POI when multiple POIs are entered. Although POI B was most recently entered, POI A remains the Current POI due to its higher library ranking. Refer to [Current POI](#current-poi) for the complete list of criteria.  
 * **Last Entered POI** is set to POI B.  
 * **Last Exited POI** remains unchanged as none.  
 
