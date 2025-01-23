@@ -54,7 +54,7 @@ iOS
 
 ## Configuration keys
 
-To update SDK configuration programmatically, use the following information to modify Places configuration values. For additional details, refer to the [Configuration API reference](/src/pages/home/base/mobile-core/configuration/api-reference.md). 
+To update SDK configuration programmatically, use the following information to modify Places configuration values. For additional details, refer to the [Configuration API reference](/src/pages/home/base/mobile-core/configuration/api-reference.md).  
 
 | Key | Required | Description | Data Type |
 | :--- | :--- | :--- | :--- |

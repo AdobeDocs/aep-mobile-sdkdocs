@@ -38,7 +38,9 @@ When multiple POIs are simultaneously in the entered state, they are evaluated i
 
 1. Library rank: Lower rank values represent higher priority.  
 2. Radius: The POI with the smaller radius is prioritized.  
-3. Entry signal: The POI associated with the most recent entry signal takes priority.  
+3. Most recent entry signal or closest POI: The evaluation depends on the API used:  
+   * For [`processRegionEvent`](/src/pages/solution/places/api-reference.md#processregionevent), [`processGeofence`](/src/pages/solution/places/api-reference.md#processgeofence), and [`processGeofenceEvent`](/src/pages/solution/places/api-reference.md#processgeofenceevent), the POI associated with the most recent entry signal takes priority.  
+   * For [`getNearbyPointsOfInterest`](/src/pages/solution/places/api-reference.md#getnearbypointsofinterest), the POI closest to the provided latitude and longitude takes priority.  
 
 ### Entered state
 
