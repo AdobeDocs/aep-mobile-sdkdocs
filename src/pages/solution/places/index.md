@@ -52,6 +52,14 @@ iOS
 
 <Tabs query="platform=ios&task=register"/>
 
+## Configuration keys
+
+To update SDK configuration programmatically, use the following information to modify Places configuration values. For additional details, refer to the [Configuration API reference](/src/pages/home/base/mobile-core/configuration/api-reference.md). 
+
+| Key | Required | Description | Data Type |
+| :--- | :--- | :--- | :--- |
+| `places.membershipttl` | No | Sets the duration, in seconds, that POI states remain valid. The default value is one hour. | Double |
+
 ## Additional Location Service resources
 
 For more information about implementing and using Adobe Experience Platform Location Service, please see the following documentation links:

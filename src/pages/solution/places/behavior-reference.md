@@ -9,13 +9,24 @@ keywords:
 
 # Places behavior reference
 
-The Places extension provides three different point of interest (POI) states that can be interacted with using rules. This document explains what states are available and how they change through different scenarios.
+The Places extension provides three different point of interest (POI) states that can be interacted with using rules. This document explains general Places behavior, what states are available, and how states change through different scenarios.
 
 ## Terms
 
 For definitions of key terms, see [Places Terminology](https://experienceleague.adobe.com/en/docs/places/using/home#terminology).
 
-A library **rank** (also sometimes known as **weight**) is the priority assigned to a library when multiple libraries are used. A lower rank value (ex: 1) represents higher priority, while a higher rank value (ex: 4) represents lower priority. This ranking determines which library’s POIs take precedence in cases of overlap.
+#### Library rank
+
+A **library rank**, also referred to as **weight**, is the priority assigned to a library when multiple libraries are in use. A smaller rank value (for example, 1) indicates a higher priority, while a larger rank value (for example, 4) indicates a lower priority. This ranking helps determine which library’s points of interest (POIs) take precedence when overlaps occur.
+
+#### Membership time to live
+
+**Membership time to live** specifies how long POI states (Current POI, Last Entered POI, Last Exited POI) remain valid. This duration applies globally to all POIs and has a default value of one hour. The duration is refreshed in the following cases:
+
+* On every POI entry or exit event.
+* When calling [`getNearbyPointsOfInterest`](/src/pages/solution/places/api-reference.md#getnearbypointsofinterest).
+
+To modify this value, use the `places.membershipttl` key. For additional details, see [Places configuration](/src/pages/solution/places/index.md#configuration-keys).
 
 ## Places rules conditions
 
@@ -31,10 +42,12 @@ When multiple POIs are simultaneously in the entered state, they are evaluated i
 
 ### Entered state
 
+A POI is in the entered state when an entry signal is sent using the [`processRegionEvent`](/src/pages/solution/places/api-reference.md#processregionevent) API on iOS or the [`processGeofence`](/src/pages/solution/places/api-reference.md#processgeofence) and [`processGeofenceEvent`](/src/pages/solution/places/api-reference.md#processgeofenceevent) APIs on Android.
 POIs remain in the entered state across app sessions until one of the following occurs:
 
 1. An exit signal is sent for the POI using the [`processRegionEvent`](/src/pages/solution/places/api-reference.md#processregionevent) API on iOS or the [`processGeofence`](/src/pages/solution/places/api-reference.md#processgeofence) and [`processGeofenceEvent`](/src/pages/solution/places/api-reference.md#processgeofenceevent) APIs on Android.  
-2. The entered state is recalculated for all POIs by calling the [`getNearbyPointsOfInterest`](/src/pages/solution/places/api-reference.md#getnearbypointsofinterest) API.
+2. The membership time to live value expires.  
+3. The entered state is recalculated for all POIs using the lat/lon provided when calling the [`getNearbyPointsOfInterest`](/src/pages/solution/places/api-reference.md#getnearbypointsofinterest) API.  
 
 ### Last entered POI
 
@@ -46,7 +59,7 @@ This refers to the most recently exited POI. There is no expiration time for thi
 
 ## Scenarios
 
-These scenarios assume that Places has been implemented to receive geofence entry and exit events from the operating system. In all cases, a Places event and a Places XDM Edge event are dispatched for the signal and POI provided to the [`processRegionEvent`](/src/pages/solution/places/api-reference.md#processregionevent) API on iOS or the [`processGeofence`](/src/pages/solution/places/api-reference.md#processgeofence) and [`processGeofenceEvent`](/src/pages/solution/places/api-reference.md#processgeofenceevent) APIs on Android.
+These scenarios assume that Places has been implemented to receive geofence entry and exit events from the mobile device operating system. In all cases, a Places event and a Places XDM Edge event are dispatched for the signal and POI provided to the [`processRegionEvent`](/src/pages/solution/places/api-reference.md#processregionevent) API on iOS or the [`processGeofence`](/src/pages/solution/places/api-reference.md#processgeofence) and [`processGeofenceEvent`](/src/pages/solution/places/api-reference.md#processgeofenceevent) APIs on Android.
 
 The bolded POIs under each state indicate when a state is updated due to the location event at each step.
 
