@@ -28,9 +28,9 @@ A **library rank**, also referred to as **weight**, is the priority assigned to 
 
 To modify this value, use the `places.membershipttl` key. For additional details, see [Places configuration](/src/pages/solution/places/index.md#configuration-keys).
 
-## Places rules conditions
+## Places states
 
-In a tags mobile property, rules can define Places conditions based on the following states: Current POI, Last Entered POI, and Last Exited POI. Scenarios illustrating how these states change are provided in the [Scenarios](#scenarios) section.
+There are three primary Places states: Current POI, Last Entered POI, and Last Exited POI. These states are also stored in device persistence and carry across app sessions. In a tags mobile property, rules can define Places conditions based on these states. Scenarios illustrating how these states change are provided in the [Scenarios](#scenarios) section.
 
 ### Current POI
 
@@ -51,11 +51,11 @@ POIs remain in the entered state across app sessions until one of the following 
 
 ### Last entered POI
 
-This refers to the most recently entered POI. There is no expiration time for this value. It remains unchanged across app sessions until an entry event updates it.
+The last entered POI represents the POI that was most recently entered, which is identified by receiving an entry signal. The expiration time for this value is determined by the [membership time to live](#membership-time-to-live).  
 
 ### Last exited POI
 
-This refers to the most recently exited POI. There is no expiration time for this value. It remains unchanged across app sessions until an exit event updates it.
+The last exited POI represents the POI that was most recently exited, which is identified by receiving an exit signal. The expiration time for this value is determined by the [membership time to live](#membership-time-to-live).  
 
 ## Scenarios
 
