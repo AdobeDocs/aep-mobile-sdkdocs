@@ -7,11 +7,35 @@ Keywords:
 
 # Release notes
 
+## January 16, 2025
+
+### iOS Messaging 5.6.0
+
+* Fixed a bug that caused dark/light image to be switched when the app enters background.
+* The schemaData property, representing the associated `ContentCardSchemaData` of `ContentCardUI`, is now publicly accessible.
+* Added API `updatePropositionsForSurfaces(_:completion:)` to fetch propositions for the provided surfaces with an optional completion handler that provides a boolean status.
+
+### iOS Core 5.3.2
+
+* Fixed an issue where in-app message was not reframed in split screen mode.
+
 ## January 14, 2025
+
+### React Native new architecture Support
+
+* **Updated Places Module Name**  
+  Added compatibility for the new architecture in the Places React Native module.  
+
+* **New sample app with new architecture enabled**  
+  Enabled the new architecture in the Sample App.  
+  **Link:** [AEPSampleAppNewArchEnabled](https://github.com/adobe/aepsdk-react-native/tree/main/apps/AEPSampleAppNewArchEnabled)  
+
+* **New architecture Compatibility Testing**  
+  Tested new architecture enabled sample app with Adobe Experience Platform Mobile React Native modules via interop layer (new architecture not supported for Adobe Campaign Classic).
 
 ### React Native Places 6.0.3
 
-* Updated Places module name for compatibility with the new architecture.
+* Added new architecture compatibility to the Places React Native module.
 
 ## January 7, 2025
 

@@ -79,16 +79,9 @@ Implementing the two SDKs in your app is not supported.
 
 The Experience Platform SDK migrates the locally stored user contexts from the 4x SDKs. Using both SDKs will cause severe data quality issues. For more information, please read the [upgrade to the Experience Platform SDKs tutorial](./upgrade-platform-sdks/index.md).
 
-### What platforms are supported?
-
-For a complete list of supported platforms, please read the [latest SDK versions document](../home/current-sdk-versions.md).
-
 ### What OS and platform versions are supported?
 
-* Android versions 4.4 or later (API levels 19 or later)
-* iOS versions 10 or later
-* React Native versions 0.60.0 or later
-* Flutter versions 2.0.0 or later
+For a complete list of supported platforms, please read the [latest SDK versions document](../home/current-sdk-versions.md#supported-platforms).
 
 ### Where does the SDK store identities and preferences on the app?
 
