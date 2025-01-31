@@ -7,6 +7,12 @@ Keywords:
 
 # Release notes
 
+## January 31, 2025
+
+### Android Media 3.1.1
+
+* Fixed database access-related resource leaks.
+
 ## January 16, 2025
 
 ### iOS Messaging 5.6.0
