@@ -131,7 +131,7 @@ Keys that are not found on the current configuration are added when this method 
 
 <InlineAlert variant="warning" slots="text"/>
 
-Do not use this API to update the `build.environment` key or any key with an environment prefix, because it can lead to unexpected behaviors. For more information, read [Environment-aware configuration properties](./index.md#environment-aware-configuration-properties).
+Do not use this API to update the `build.environment` key or any key with an environment prefix, because it can lead to unexpected behaviors. For more information, read [Environment-aware configuration properties](/src/pages/home/base/mobile-core/configuration/index.md#environment-aware-configuration-properties).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
