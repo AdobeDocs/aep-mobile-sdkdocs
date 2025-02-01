@@ -149,9 +149,7 @@ return YES;
 }
 ```
 
-<Variant platform="ios" task="start-lifecycle-didfinishlaunch" repeat="4"/>
-
-#### Swift
+<Variant platform="ios-swift" task="start-lifecycle-didfinishlaunch" repeat="1"/>
 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -165,7 +163,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-#### Objective-C
+<Variant platform="ios-objc" task="start-lifecycle-didfinishlaunch" repeat="1"/>
 
 ```objectivec
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -179,9 +177,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-<Variant platform="ios" task="willenterforeground" repeat="5"/>
-
-#### Swift
+<Variant platform="ios-swift" task="willenterforeground" repeat="4"/>
 
 In iOS 13 and later, for a scene-based application, use the `UISceneDelegate`'s `sceneWillEnterForeground(_:)` method as follows:
 
@@ -199,9 +195,25 @@ func applicationWillEnterForeground(_ application: UIApplication) {
 }
 ```
 
-<Variant platform="ios" task="didenterbackground" repeat="6"/>
+<Variant platform="ios-objc" task="willenterforeground" repeat="4"/>
 
-#### Swift
+In iOS 13 and later, for a scene-based application, use the `UISceneDelegate`'s `sceneWillEnterForeground:` method as follows:
+
+```objectivec
+- (void) sceneWillEnterForeground:(UIScene *)scene {
+    [AEPMobileCore lifecycleStart:nil];
+}
+```
+
+In iOS 12 and earlier, use the `UIApplicationDelegate`'s `applicationWillEnterForeground:` method as follows:
+
+```objectivec
+- (void) applicationWillEnterForeground:(UIApplication *)application {
+    [AEPMobileCore lifecycleStart:nil];
+}
+```
+
+<Variant platform="ios-swift" task="didenterbackground" repeat="4"/>
 
 In iOS 13 and later, for a scene-based application, use the `UISceneDelegate`'s `sceneDidEnterBackground(_:)` method as follows:
 
@@ -216,6 +228,24 @@ In iOS 12 and earlier, use the `UIApplicationDelegate`'s `applicationDidEnterBac
 ```swift
 func applicationDidEnterBackground(_ application: UIApplication) {
     MobileCore.lifecyclePause()
+}
+```
+
+<Variant platform="ios-objc" task="didenterbackground" repeat="4"/>
+
+In iOS 13 and later, for a scene-based application, use the `UISceneDelegate`'s `sceneDidEnterBackground:` method as follows:
+
+```objectivec
+- (void) sceneDidEnterBackground:(UIScene *)scene {
+    [AEPMobileCore lifecyclePause];
+}
+```
+
+In iOS 12 and earlier, use the `UIApplicationDelegate`'s `applicationDidEnterBackground:` method as follows:
+
+```objectivec
+- (void) applicationDidEnterBackground:(UIApplication *)application {
+    [AEPMobileCore lifecyclePause];
 }
 ```
 
