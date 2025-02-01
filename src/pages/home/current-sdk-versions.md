@@ -166,7 +166,7 @@ Please note that the Adobe Analytics extension is not supported in AEP-prefixed 
 
 The Adobe Experience Platform SDK for Roku supports Roku OS 11.0 or later. The project is open sourced in GitHub. For more information, refer to the [aepsdk-roku](https://github.com/adobe/aepsdk-roku) repository.
 
-# Supported Platforms
+## Supported Platforms
 
 | Platform | Supported Version |
 |---|---|
