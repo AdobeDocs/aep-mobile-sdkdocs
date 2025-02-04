@@ -9,7 +9,7 @@ keywords:
 
 # Lifecycle for Edge Network data
 
-When used with the [Edge Network extension](../edge-network/index.md), the following data is collected and sent to Platform on every application launch. An additional [rule in the mobile property](./index.md#configure-a-rule-to-forward-lifecycle-data-to-platform) is required to send Lifecycle data to the Edge Network extension.
+When used with the [Edge Network extension](../edge-network/index.md), the following data is collected and sent to Platform on every application launch. An additional [rule in the mobile property](/src/pages/edge/lifecycle-for-edge-network/index.md#configure-a-rule-to-forward-lifecycle-data-to-platform) is required to send Lifecycle data to the Edge Network extension.
 
 When the Analytics service is enabled in the datastream configuration, the XDM Lifecycle data is automatically mapped to Analytics. See the [XDM object variable mapping to Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/xdm-var-mapping) documentation for more information.
 
@@ -41,7 +41,7 @@ For the [Edge Network extension](../edge-network/index.md), the `xdm:isUpgrade` 
 In Lifecycle extension for Android version (2.0.0 - 3.0.0) and Lifecycle extension for iOS version (4.0.0 - 5.0.0), the app upgrade event is detected by comparing the `build number`s on iOS and the `version name`s on Android.
 
 **xdm:isUpgrade (New Method)**
-Starting with Lifecycle extension for Android version 3.0.1 and Lifecycle extension for iOS version 5.1.0, the app upgrade event is detected through comparisions of the `xdm:version` properties which has the format  `versionName (versionCode)` on Android and `Version (Build)` on iOS.
+Starting with Lifecycle extension for Android version 3.0.1 and Lifecycle extension for iOS version 5.1.0, the app upgrade event is detected through comparisons of the `xdm:version` properties which has the format  `versionName (versionCode)` on Android and `Version (Build)` on iOS.
 
 This change now more accurately detects when an application upgrade occurs. Applications which only change the build number on iOS or the version name on Android when upgrading, may see an increase in Lifecycle upgrade events. Other applications, however, should not see a change to Lifecycle upgrade events.
 
@@ -75,5 +75,5 @@ The following data is collected on each [Lifecycle Application Background](../..
 | **Property** | **Type** | **Description** |
 | :--- | :--- | :--- |
 | xdm:isClose | boolean | Indicates the application was closed. Every application background event sets `isClose` to `true`. |
-| xdm:closeType | String | Type of application close, sent on application isClose. Type is `close` on graceful termination of an application, or `unknown` when application termination source is unknown. |
+| xdm:closeType | String | Type of application close, sent on application isClose. Type is `close` on graceful termination of an application, or `unknown` when application termination source is unknown, such as a forced close or application crash. |
 | xdm:sessionLength | integer | Length of the application session in seconds. Usually referred as the time the application was in foreground. Will not be less than zero. |
