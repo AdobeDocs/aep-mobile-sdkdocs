@@ -23,7 +23,7 @@ The `getContentCardUI` method retrieves a flow of [AepUI](./public-classes/aepui
 
 <InlineAlert variant="info" slots="text"/>
 
-Calling this API will not download content cards from Adobe Journey Optimizer; it will only retrieve the content cards that are already downloaded and cached by the Messaging extension. You **must** call [`updatePropositionsForSurfaces`](../../code-based/api-reference.md#updatePropositionsForSurfaces) API from the AEPMessaging extension with the desired surfaces prior to calling this API.
+Calling this API will only retrieve the content cards are already downloaded and cached by the Messaging extension. This API will not download content cards from Adobe Journey Optimizer. You must call [`updatePropositionsForSurfaces`](../../code-based/api-reference.md#updatePropositionsForSurfaces) API from the AEPMessaging extension with the desired surfaces prior to calling this API.
 
 ### Syntax
 
