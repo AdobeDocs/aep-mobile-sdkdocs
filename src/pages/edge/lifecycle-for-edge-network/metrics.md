@@ -9,7 +9,7 @@ keywords:
 
 # Lifecycle for Edge Network data
 
-When used with the [Edge Network extension](../edge-network/index.md), the following data is collected and sent to Platform on every application launch. An additional [rule in the mobile property](https://developer.adobe.com/client-sdks/edge/lifecycle-for-edge-network/index.md#configure-a-rule-to-forward-lifecycle-data-to-platform) is required to send Lifecycle data to the Edge Network extension.
+When used with the [Edge Network extension](../edge-network/index.md), the following data is collected and sent to Platform on every application launch. An additional [rule in the mobile property](/src/pages/edge/lifecycle-for-edge-network/index.md#configure-a-rule-to-forward-lifecycle-data-to-platform) is required to send Lifecycle data to the Edge Network extension.
 
 When the Analytics service is enabled in the datastream configuration, the XDM Lifecycle data is automatically mapped to Analytics. See the [XDM object variable mapping to Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/xdm-var-mapping) documentation for more information.
 
