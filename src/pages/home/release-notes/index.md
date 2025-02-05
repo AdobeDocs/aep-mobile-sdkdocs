@@ -11,9 +11,10 @@ Keywords:
 
 ### Adobe Journey Optimizer - Decisioning extension 1.1.0
 
-Added configuration capability to the Adobe Journey Optimizer - Decisioning extension in the Launch UI for mobile Tag Properties. 
+Added configuration capability to the Adobe Journey Optimizer - Decisioning extension in the Launch UI for mobile Tag Properties.
 
 Users can now configure:
+
 * Request timeout - Set the amount of time (in seconds) to wait for a response from the decisioning services before timing out.
 
 ## January 31, 2025
@@ -1999,8 +2000,8 @@ Major version update for [Identity for Edge Network](../../edge/identity-for-edg
   * Added new APIs and configuration for tracking media.
   * Customizable ping interval.
 * Added support to create multiple instances of the SDK.
-* Support non-xdm data in `SendEvent` API
-* A comprehensive [migration guide](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/media-migration.md) to transition from [Adobe Media SDK](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/roku) to [Adobe Experience Platform Roku SDK](https://github.com/adobe/aepsdk-roku).
+* Support non-xdm data in `SendEvent` API
+* A comprehensive [migration guide](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/media-migration.md) to transition from [Adobe Media SDK](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/roku) to [Adobe Experience Platform Roku SDK](https://github.com/adobe/aepsdk-roku).
 
 ### iOS Assurance 4.1.2
 
