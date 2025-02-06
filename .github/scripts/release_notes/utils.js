@@ -86,17 +86,6 @@ function convertISODateToRleaseDateFormat(iso8601DateStr) {
     return `${monthNames[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`
 }
 
-/**
- * Sets the time zone of the NodeJS runtime to PST (Pacific Standard Time).
- * 
- * @returns {boolean} Returns true if the time zone is successfully set to PST, false otherwise.
- */
-function setTimeZoneToPST() {
-    process.env.TZ = PST_TIMEZONE
-    const offset = new Date().getTimezoneOffset()
-    return (offset === PST_TIMEZONE_OFFSET)
-}
-
 function convertToDateTime(timestamp) {
     const date = new Date(timestamp);
     return date.toLocaleString();
@@ -107,6 +96,5 @@ module.exports = {
     saveJsonObjToFile,
     extractReleaseNotes,
     convertISODateToRleaseDateFormat,
-    setTimeZoneToPST,
     convertToDateTime,
 }

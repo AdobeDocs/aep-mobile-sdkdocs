@@ -9,6 +9,20 @@ keywords:
 
 # Release notes
 
+## January 16, 2025
+
+### iOS Messaging 5.6.0
+
+* Fixed a bug that caused dark/light image to be switched when the app enters background.
+* The schemaData property, representing the associated `ContentCardSchemaData` of `ContentCardUI`, is now publicly accessible.
+* Added API `updatePropositionsForSurfaces(_:completion:)` to fetch propositions for the provided surfaces with an optional completion handler that provides a boolean status.
+
+## December 19, 2024
+
+### React Native Messaging 6.0.5
+
+* Fixed an issue with in-app messages not being displayed when a MessagingDelegate is set.
+
 ## November 1, 2024
 
 ### iOS Messaging 5.5.0

@@ -9,6 +9,12 @@ keywords:
 
 # Release notes
 
+## January 31, 2025
+
+### Android Media 3.1.1
+
+* Fixed database access-related resource leaks.
+
 ## May 31, 2024
 
 ### iOS Media 5.0.1
