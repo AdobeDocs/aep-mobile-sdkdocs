@@ -199,6 +199,10 @@ module.exports = {
                                             {
                                                 title: "Display rich notifications",
                                                 path: "/edge/adobe-journey-optimizer/push-notification/ios/display-rich-notifications"
+                                            },
+                                            {
+                                                title: "Display IAM on push notification interaction",
+                                                path: "/edge/adobe-journey-optimizer/push-notification/ios/push-to-iam.md"
                                             }
                                         ]
                                     },
@@ -213,6 +217,10 @@ module.exports = {
                                             {
                                                 title: "Manual display and tracking",
                                                 path: "/edge/adobe-journey-optimizer/push-notification/android/manual-display-and-tracking"
+                                            },
+                                            {
+                                                title: "Display IAM on push notification interaction",
+                                                path: "/edge/adobe-journey-optimizer/push-notification/android/push-to-iam.md"
                                             }                                            
                                         ]
                                     },

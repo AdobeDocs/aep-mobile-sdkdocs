@@ -46,3 +46,21 @@ Android
 iOS
 
 <Tabs query="platform=ios&api=update-propositions-for-surfaces"/>
+
+## updatePropositionsForSurfacesWithCompletionHandler
+
+The `updatePropositionsForSurfaces` API dispatches an event for the Edge network extension to fetch personalization decisions from the AJO campaigns for the provided surfaces array. The returned decision propositions are cached in-memory by the Messaging extension.
+
+If provided, `completion` will be called on the Messaging extension's background thread once the response has been fully processed. `true` will be passed to the `completion` method if a network response was returned and successfully processed.
+
+To retrieve previously cached decision propositions, use `getPropositionsForSurfaces` API.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<Tabs query="platform=android&api=update-propositions-for-surfaces-with-completion-handler"/>
+
+iOS
+
+<Tabs query="platform=ios&api=update-propositions-for-surfaces-with-completion-handler"/>
