@@ -8,13 +8,23 @@ keywords:
 
 # Release notes
 
+## February 6, 2025
+
+### Adobe Journey Optimizer - Decisioning extension 1.1.0
+
+Added configuration capability to the Adobe Journey Optimizer - Decisioning extension in the Tags UI for mobile Tag Properties.
+
+Users can now configure:
+
+* Request timeout - Set the amount of time (in seconds) to wait for a response from the decisioning services before timing out.
+
 ## December 6, 2024
 
 ### Android Optimize 3.2.2
 
-* Added timeout (in seconds) parameter to updatePropositions and getPropositions APIs to enable timeout configuration in both the apis ensuring that the operation either completes within the given time frame or returns an error indicating a timeout.
+* Added timeout (in seconds) parameter to updatePropositions and getPropositions APIs to enable timeout configuration in both the APIs ensuring that the operation either completes within the given time frame or returns an error indicating a timeout.
 * Updated getPropositions API to return cached propositions immediately if there are no pending updatePropositions calls for the requested list of decision scopes.
-* Added support for debug events and enabled getPropositions and onPropositionsUpdate to receive Simulated events from Assurance.
+* Added support for debug events and enabled getPropositions and onPropositionsUpdate to receive simulated events from Assurance.
 
 ### iOS Optimize 5.2.0
 
@@ -52,7 +62,7 @@ keywords:
 
 ### iOS Optimize 5.0.1
 
-* Fixed a crash that happens when `updateProposition` API was called repeatedly. 
+* Fixed a crash that happens when `updateProposition` API was called repeatedly.
 
 ### Android Optimize 3.0.1
 
@@ -62,7 +72,7 @@ keywords:
 
 ### iOS Optimize 4.0.4
 
-* Fixed a crash that happens when `updateProposition` API was called repeatedly. 
+* Fixed a crash that happens when `updateProposition` API was called repeatedly.
 
 ## April 24, 2024
 
@@ -135,7 +145,7 @@ Major version update for [Adobe Journey Optimizer - Decisioning](./index.md) for
 
 * Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
-* Added support for using the Optimize SDK extension in [App Extensions](https://developer.apple.com/app-extensions/).
+* Added support for using the Optimize SDK extension in [App Extensions](https://developer.apple.com/app-extensions/).
 
 ## February 2, 2023
 
