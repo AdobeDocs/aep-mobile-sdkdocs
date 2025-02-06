@@ -24,7 +24,7 @@ This document describes the steps that allow a designated in-app message to be s
 ## Add a trigger in the in-app message campaign
 
 1. In the Journey Optimizer UI, select the Campaign for the in-app message that needs to be shown when a push notification is interacted with.
-2. Under the **Triggers** section, click on the **Edit triggers** button. Click on **Add Condition** and select the **Manual trigger** from the event dropdown. Click on **Add Condition** again and select **Custom trait** from the trait menu. Enter `adb_iam_id` as the key for the custom trait and an id that uniquely identifies the in-app message as the value. Make a note of this id as it will be used in the next section.
+2. Under the **Triggers** section, click on the **Edit triggers** button. Click on **Add Condition** and select the **Manual trigger** from the event dropdown. Click on **Add Condition** again and select **Custom trait** from the trait menu. Enter `adb_iam_id` as the key for the custom trait and an ID that uniquely identifies the in-app message as the value. Make a note of this ID as it will be used in the next section.
 
 <InlineAlert variant="info" slots="text"/>
 

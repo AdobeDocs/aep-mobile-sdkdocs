@@ -24,7 +24,7 @@ This document describes the steps that allow a designated in-app message to be s
 ## Add a trigger in the in-app message campaign
 
 1. In the Journey Optimizer UI, select the Campaign for the in-app message that needs to be shown when a push notification is interacted with.
-2. Under the **Triggers** section, click on the **Edit triggers** button. Click on **Add Condition** and select the **Manual trigger** from the event dropdown. Click on **Add Condition** again and select **Custom trait** from the trait menu. Enter `adb_iam_id` as the key for the custom trait and an id that uniquely identifies the in-app message as the value. Make a note of this id as it will be used in the next section.
+2. Under the **Triggers** section, click on the **Edit triggers** button. Click on **Add Condition** and select the **Manual trigger** from the event dropdown. Click on **Add Condition** again and select **Custom trait** from the trait menu. Enter `adb_iam_id` as the key for the custom trait and an ID that uniquely identifies the in-app message as the value. Make a note of this ID as it will be used in the next section.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -32,7 +32,7 @@ The above rule to show the in-app message when the app is opened from a push not
 
 ![In-app campaign trigger for Push-to-inapp](./../../assets/push-notification/iam-trigger-p2i.png)
 
-3. Click on **Done** to save the rule and review the changes by clicking on **Review to activate**
+3. Click on **Done** to save the rule and review the changes by clicking on **Review to activate**.
 
 4. Click on **Request approval** to activate the campaign.
 
@@ -51,7 +51,7 @@ The above rule to show the in-app message when the app is opened from a push not
 
 <InlineAlert variant="info" slots="text"/>
 
-This step can be skipped if your app is [automatically displaying and tracking push notification using AEPMessaging extension](./automatic-display-and-tracking.md)
+This step can be skipped if your app is [automatically displaying and tracking push notification using AEPMessaging extension](./automatic-display-and-tracking.md).
 
 Call the [MessagingPushPayload.putDataInExtras(intent)](./../../public-classes/messaging-push-payload.md#public-apis) method to add the push notification data to the intent sent when the notification is clicked or cleared, depending on which action leads to the app to open and display of the in-app message. The following example shows how to add the `MessagingPushPayload` data to the push notification open and delete intents in a custom implementation of `FirebaseMessagingService`.
 
@@ -97,6 +97,6 @@ public class CustomNotificationService extends FirebaseMessagingService {
 
 <InlineAlert variant="info" slots="text"/>
 
-This step can be skipped if your app is [automatically displaying and tracking push notification using AEPMessaging extension](./automatic-display-and-tracking.md)
+This step can be skipped if your app is [automatically displaying and tracking push notification using AEPMessaging extension](./automatic-display-and-tracking.md).
 
 After the application is opened by the user by clicking on the push notification, verify push notification interaction is being tracked using [handleNotificationResponse](./manual-display-and-tracking.md#tracking-push-notification-interactions) API.
