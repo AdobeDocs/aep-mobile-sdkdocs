@@ -119,33 +119,3 @@ public static void registerExtension();
 ```kotlin
 Messaging.registerExtension()
 ```
-
-#### Java
-
-```java
-Messaging.registerExtension();
-```
-
-<Variant platform="android" api="add-push-tracking-details" repeat="5"/>
-
-#### Java
-
-**Syntax**
-
-```java
-public static boolean addPushTrackingDetails(final Intent intent,
-                                            final String messageId,
-                                            final Map<String, String> data)
-```
-
-| **Parameter** | **Type** | **Description** |
-| :----------- | :------- | :-------------- |
-| `intent` | `Intent` | The pending intent that needs to be updated so it can be used when the user interacts with the notification. |
-| `messageId` | `String` | The message ID for the push notification. |
-| `data` | `Map<String, String>` | The data of the remoteMessage. |
-
-This API returns a boolean, indicating whether the intent was updated with necessary information (messageId and Customer Journey data).
-
-<Variant platform="iOS" api="add-push-tracking-details" repeat="1"/>
-
-This API is not applicable for iOS.
