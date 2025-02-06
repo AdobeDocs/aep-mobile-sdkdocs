@@ -99,6 +99,3 @@ public class CustomNotificationService extends FirebaseMessagingService {
 This step can be skipped if your app is [automatically displaying and tracking push notification using AEPMessaging extension](./automatic-display-and-tracking.md)
 
 After the application is opened by the user by clicking on the push notification, verify push notification interaction is being tracked using [handleNotificationResponse](./manual-display-and-tracking.md#tracking-push-notification-interactions) API.
-
-
-
