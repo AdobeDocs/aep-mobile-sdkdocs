@@ -12,7 +12,7 @@ keywords:
 
 ### Adobe Journey Optimizer - Decisioning extension 1.1.0
 
-Added configuration capability to the Adobe Journey Optimizer - Decisioning extension in the Launch UI for mobile Tag Properties.
+Added configuration capability to the Adobe Journey Optimizer - Decisioning extension in the Tags UI for mobile Tag Properties.
 
 Users can now configure:
 
@@ -22,9 +22,9 @@ Users can now configure:
 
 ### Android Optimize 3.2.2
 
-* Added timeout (in seconds) parameter to updatePropositions and getPropositions APIs to enable timeout configuration in both the apis ensuring that the operation either completes within the given time frame or returns an error indicating a timeout.
+* Added timeout (in seconds) parameter to updatePropositions and getPropositions APIs to enable timeout configuration in both the APIs ensuring that the operation either completes within the given time frame or returns an error indicating a timeout.
 * Updated getPropositions API to return cached propositions immediately if there are no pending updatePropositions calls for the requested list of decision scopes.
-* Added support for debug events and enabled getPropositions and onPropositionsUpdate to receive Simulated events from Assurance.
+* Added support for debug events and enabled getPropositions and onPropositionsUpdate to receive simulated events from Assurance.
 
 ### iOS Optimize 5.2.0
 
