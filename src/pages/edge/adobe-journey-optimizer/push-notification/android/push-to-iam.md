@@ -14,6 +14,7 @@ keywords:
 # Display an in-message on push notification interaction
 
 ## Overview
+
 This document describes the steps that allow a designated in-app message to be shown to an end user when they interact with a push notification to open the app.
 
 ## Pre-requisites
@@ -52,7 +53,7 @@ The above rule to show the in-app message when the app is opened from a push not
 
 This step can be skipped if your app is [automatically displaying and tracking push notification using AEPMessaging extension](./automatic-display-and-tracking.md)
 
-Call the [MessagingPushPayload.putDataInExtras(intent)](./../../public-classes/messaging-push-payload.md#public-apis) method to add the push notification data to the intent sent when the notification is clicked or cleared, depending on which action leads to the app to open and display of the in-app message. The following example shows 
+Call the [MessagingPushPayload.putDataInExtras(intent)](./../../public-classes/messaging-push-payload.md#public-apis) method to add the push notification data to the intent sent when the notification is clicked or cleared, depending on which action leads to the app to open and display of the in-app message. The following example shows how to add the `MessagingPushPayload` data to the push notification open and delete intents in a custom implementation of `FirebaseMessagingService`.
 
 ```java
 public class CustomNotificationService extends FirebaseMessagingService {

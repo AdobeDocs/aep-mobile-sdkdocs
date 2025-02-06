@@ -14,6 +14,7 @@ keywords:
 # Display an in-message on push notification interaction
 
 ## Overview
+
 This document describes the steps that allow a designated in-app message to be shown to an end user when they interact with a push notification to open the app.
 
 ## Pre-requisites
