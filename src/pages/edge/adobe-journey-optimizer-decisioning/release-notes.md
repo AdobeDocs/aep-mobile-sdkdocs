@@ -8,6 +8,34 @@ keywords:
 
 # Release notes
 
+## February 6, 2025
+
+### Android Optimize 3.2.3
+
+## Release
+
+* Added support for the Array type in the JSON structure of Offer Content.
+
+## What's Changed
+* Update A4T instructions in documentation by @spoorthipujariadobe in https://github.com/adobe/aepsdk-optimize-android/pull/121
+* Test App Refactor | Logic separation by @sagar-sharma-adobe in https://github.com/adobe/aepsdk-optimize-android/pull/126
+* Adding support for List type Json in Offer Content by @sagar-sharma-adobe in https://github.com/adobe/aepsdk-optimize-android/pull/129
+* [MOB-22735] Logger functionality for Optimize Test App by @sagar-sharma-adobe in https://github.com/adobe/aepsdk-optimize-android/pull/130
+* Adding support for Json Arrays in Offer Content by @sagar-sharma-adobe in https://github.com/adobe/aepsdk-optimize-android/pull/132
+* Migrate to GitHub Actions reusable workflows by @timkimadobe in https://github.com/adobe/aepsdk-optimize-android/pull/131
+* Updating version to 3.2.3 by @github-actions in https://github.com/adobe/aepsdk-optimize-android/pull/136
+* Dev v3.2.3 to Staging by @siddique-adobe in https://github.com/adobe/aepsdk-optimize-android/pull/137
+* Dev to Staging and conflicts resolved by @siddique-adobe in https://github.com/adobe/aepsdk-optimize-android/pull/139
+* Resolving Merge conflicts with Main branch by @sagar-sharma-adobe in https://github.com/adobe/aepsdk-optimize-android/pull/140
+* Removing logs by @sagar-sharma-adobe in https://github.com/adobe/aepsdk-optimize-android/pull/141
+* Staging to Main by @siddique-adobe in https://github.com/adobe/aepsdk-optimize-android/pull/138
+
+## New Contributors
+* @sagar-sharma-adobe made their first contribution in https://github.com/adobe/aepsdk-optimize-android/pull/126
+* @timkimadobe made their first contribution in https://github.com/adobe/aepsdk-optimize-android/pull/131
+
+**Full Changelog**: https://github.com/adobe/aepsdk-optimize-android/compare/v3.2.2...v3.2.3
+
 ## December 6, 2024
 
 ### Android Optimize 3.2.2
