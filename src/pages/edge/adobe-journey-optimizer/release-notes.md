@@ -9,6 +9,13 @@ keywords:
 
 # Release notes
 
+## February 6, 2025
+
+### Android Messaging 3.3.0
+
+* Introduced support for out-of-the-box content card UI rendering using the new `ContentCardUIProvider.getContentCardUI()` API to create and display the views for templated content cards.
+* Added support to display an in-app message when the app is opened by a push notification interaction. To support this workflow, new `updatePropositionsForSurfaces(List<Surface> surfaces, AdobeCallback<Boolean> callback)`API has been added to fetch propositions for the provided surfaces with an optional completion handler that provides a boolean status.
+
 ## January 16, 2025
 
 ### iOS Messaging 5.6.0
