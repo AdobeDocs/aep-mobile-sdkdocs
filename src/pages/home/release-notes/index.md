@@ -7,6 +7,53 @@ Keywords:
 
 # Release notes
 
+## February 6, 2025
+
+### Android BOM 3.7.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.6.1) | BOM (3.7.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:messaging** | **3.2.1** | **3.3.0**|
+| **com.adobe.marketing.mobile:optimize** | **3.2.2** | **3.2.3**|
+| com.adobe.marketing.mobile:analytics | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:assurance | 3.0.4 | 3.0.4 |
+| com.adobe.marketing.mobile:audience | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:campaign | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:core | 3.2.0 | 3.2.0 |
+| com.adobe.marketing.mobile:edge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:identity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:media | 3.1.1 | 3.1.1 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:places | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:signal | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:target | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:userprofile | 3.0.0 | 3.0.0 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Messaging 3.3.0
+
+* Introduced support for out-of-the-box content card UI rendering using the new `ContentCardUIProvider.getContentCardUI()` API to create and display the views for templated content cards.
+* Added support to display an in-app message when the app is opened by a push notification interaction. To support this workflow, new `updatePropositionsForSurfaces(List<Surface> surfaces, AdobeCallback<Boolean> callback)`API has been added to fetch propositions for the provided surfaces with an optional completion handler that provides a boolean status.
+
+### Android Optimize 3.2.3
+
+* Added support for the Array type in the JSON structure of Offer Content.
+
 ## January 31, 2025
 
 ### Android BOM 3.6.1
