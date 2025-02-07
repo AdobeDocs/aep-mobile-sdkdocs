@@ -7,6 +7,16 @@ Keywords:
 
 # Release notes
 
+## February 6, 2025
+
+### Android Messaging 3.3.0
+
+
+
+### Android Optimize 3.2.3
+
+* Added support for the Array type in the JSON structure of Offer Content.
+
 ## January 31, 2025
 
 ### Android BOM 3.6.1
