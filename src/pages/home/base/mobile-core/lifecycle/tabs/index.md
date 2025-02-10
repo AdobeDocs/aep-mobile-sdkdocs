@@ -59,7 +59,31 @@ Import the Lifecycle extension
 import 'package:flutter_acpcore/flutter_acplifecycle.dart';
 ``` --->
 
-<Variant platform="android" task="register" repeat="4"/>
+<Variant platform="android" task="register" repeat="8"/>
+
+#### Kotlin
+
+Register the Lifecycle extension in your app's Application class:
+
+```kotlin
+import com.adobe.marketing.mobile.MobileCore
+import com.adobe.marketing.mobile.Lifecycle
+...
+```
+
+```kotlin
+class MobileApp : Application() {
+
+override fun onCreate() {
+    super.onCreate()
+    MobileCore.setApplication(this);
+    val extensions = listOf(Lifecycle.EXTENSION, ...)
+    MobileCore.registerExtensions(extensions) {
+        // Any post registration processing
+    }
+  }
+}
+```
 
 #### Java
 
@@ -75,17 +99,17 @@ import com.adobe.marketing.mobile.Lifecycle;
 public class MobileApp extends Application {
 @Override
 public void onCreate() {
-super.onCreate();
-     MobileCore.setApplication(this);
-     List<Class<? extends Extension>> extensions = Arrays.asList(Lifecycle.EXTENSION, ...);
-     MobileCore.registerExtensions(extensions, o -> {
+    super.onCreate();
+    MobileCore.setApplication(this);
+    List<Class<? extends Extension>> extensions = Arrays.asList(Lifecycle.EXTENSION, ...);
+    MobileCore.registerExtensions(extensions, o -> {
         // Any post registration processing
     });
   }
 }
 ```
 
-<Variant platform="android" task="activity-start-pause" repeat="5"/>
+<Variant platform="android-java" task="activity-start-pause" repeat="5"/>
 
 #### Java
 
@@ -110,6 +134,126 @@ import com.adobe.marketing.mobile.Lifecycle;
     public void onPause() {
         MobileCore.lifecyclePause();
     }
+```
+
+<Variant platform="android-kotlin" task="activity-start-pause" repeat="5"/>
+
+#### Kotlin
+
+Add the following to each Android Activity class.
+
+```kotlin
+import com.adobe.marketing.mobile.MobileCore
+import com.adobe.marketing.mobile.Lifecycle
+...
+```
+
+```kotlin
+    override fun onResume() {
+        MobileCore.setApplication(this.application)
+        MobileCore.lifecycleStart(null)
+    }
+```
+
+```kotlin
+    override fun onPause() {
+        MobileCore.lifecyclePause()
+    }
+```
+
+<Variant platform="android-java" task="context-data" repeat="1"/>
+
+```java
+HashMap<String, Object> additionalContextData = new HashMap<String, Object>();
+contextData.put("myapp.category", "Game");
+MobileCore.lifecycleStart(additionalContextData);
+```
+
+<Variant platform="android-kotlin" task="context-data" repeat="1"/>
+
+```kotlin
+val additionalContextData = mapOf("myapp.category" to "Game")
+MobileCore.lifecycleStart(additionalContextData)
+```
+
+<Variant platform="android-java" task="global-lifecycle" repeat="1"/>
+
+```java
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Lifecycle;
+
+public class MobileApp extends Application {
+
+@Override
+protected void onCreate() {
+    super.onCreate();
+
+    registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
+        @Override
+        public void onActivityResumed(Activity activity) {
+            MobileCore.setApplication(activity.getApplication());
+            MobileCore.lifecycleStart(null);
+        }
+
+        @Override
+        public void onActivityPaused(Activity activity) {
+            MobileCore.lifecyclePause();
+        }
+
+        // the following methods aren't needed for our lifecycle purposes, but are
+        // required to be implemented by the ActivityLifecycleCallbacks object
+        @Override
+        public void onActivityCreated(Activity activity, Bundle savedInstanceState) {}
+        @Override
+        public void onActivityStarted(Activity activity) {}
+        @Override
+        public void onActivityStopped(Activity activity) {}
+        @Override
+        public void onActivitySaveInstanceState(Activity activity, Bundle outState) {}
+        @Override
+        public void onActivityDestroyed(Activity activity) {}
+    });
+
+    ...
+}
+ ...
+}
+```
+
+<Variant platform="android-kotlin" task="global-lifecycle" repeat="1"/>
+
+```kotlin
+import com.adobe.marketing.mobile.MobileCore
+import com.adobe.marketing.mobile.Lifecycle
+
+class MobileApp : Application() {
+
+override fun onCreate() {
+    super.onCreate()
+
+    registerActivityLifecycleCallbacks(object: ActivityLifecycleCallbacks {
+        override fun onActivityResumed(activity: Activity) {
+            MobileCore.setApplication(activity.application)
+            MobileCore.lifecycleStart(null)
+        }
+
+        override fun onActivityPaused(activity: Activity) {
+            MobileCore.lifecyclePause()
+        }
+
+        // the following methods aren't needed for our lifecycle purposes, but are
+        // required to be implemented by the ActivityLifecycleCallbacks object
+        override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {}
+        override fun onActivityStarted(activity: Activity) {}
+        override fun onActivityStopped(activity: Activity) {}
+        override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
+        override fun onActivityDestroyed(activity: Activity) {}
+    })
+
+    ...
+}
+ ...
+}
 ```
 
 <Variant platform="ios" task="register" repeat="7"/>
@@ -248,80 +392,6 @@ In iOS 12 and earlier, use the `UIApplicationDelegate`'s `applicationDidEnterBac
     [AEPMobileCore lifecyclePause];
 }
 ```
-
-<!--
-<Variant platform="ios" task="blah" repeat="32"/>
-
-#### Objective-C
-
-1. Register the Lifecycle extension with the SDK Core by adding the following to your app's `application:didFinishLaunchingWithOptions:` delegate method. This will register the extension with Core and begin Lifecycle event processing:
-
-```objectivec
-@import AEPCore;
-@import AEPLifecycle;
-...
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // register the lifecycle extension
-[AEPMobileCore registerExtensions:@[AEPMobileLifecycle.class, ...] completion:^{
-    ...
-}];
-return YES;
-}
-```
-
-2. Start Lifecycle data collection by calling `lifecycleStart:` from within the callback of the `AEPMobileCore::registerExtensions:` method in your app's `application:didFinishLaunchingWithOptions:` delegate method.
-
-If your iOS application supports background capabilities, your `application:didFinishLaunchingWithOptions:` method might be called when iOS launches your app in the background. If you do not want background launches to count towards your lifecycle metrics, then `lifecycleStart:` should only be called when the application state is not equal to `UIApplicationStateBackground`.
-
-```objectivec
-- (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // register the lifecycle extension, and begin event processing with Core
-    const UIApplicationState appState = application.applicationState;
-    [AEPMobileCore registerExtensions:@[AEPMobileLifecycle.class, ...] completion:^{
-    // only start lifecycle if the application is not in the background
-    if (appState != UIApplicationStateBackground) {
-        [AEPMobileCore lifecycleStart:nil];
-    }
-    }];
-}
-```
-
-3. When launched, if your app is resuming from a backgrounded state, iOS might call your `applicationWillEnterForeground:` delegate method. You also need to call `lifecycleStart:`, but this time you do not need all of the supporting code that you used in `application:didFinishLaunchingWithOptions:`:
-
-```objectivec
-- (void) applicationWillEnterForeground:(UIApplication *)application {
-    [AEPMobileCore lifecycleStart:nil];
-}
-```
-
-In iOS 13 and later, for a scene-based application, use the `UISceneDelegate`'s `sceneWillEnterForeground` method as follows:
-
-```objectivec
-- (void) sceneWillEnterForeground:(UIScene *)scene {
-    [AEPMobileCore lifecycleStart:nil];
-}
-```
-
-For more information on handling foregrounding applications with Scenes, refer to Apple's documentation [here](https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_foreground)
-
-4. When the app enters the background, pause Lifecycle data collection from your app's `applicationDidEnterBackground:` delegate method:
-
-```objectivec
-- (void) applicationDidEnterBackground:(UIApplication *)application {
-    [AEPMobileCore lifecyclePause];
-}
-```
-
-In iOS 13 and later, for a scene-based application, use the `UISceneDelegate`'s `sceneDidEnterBackground` method as follows:
-
-```objectivec
-- (void) sceneDidEnterBackground:(UIScene *)scene {
-    [AEPMobileCore lifecyclePause];
-}
-```
-
-For more information on handling backgrounding applications with Scenes, refer to Apple's documentation [here](https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_background)
 
 <!--- <Variant platform="react-native" task="register" repeat="2"/>
 

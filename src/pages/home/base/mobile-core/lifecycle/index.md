@@ -36,8 +36,6 @@ Flutter
 
 ## Register Lifecycle with Mobile Core
 
-(TBD fix link "and add appropriate Start/Pause calls")
-
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
@@ -171,11 +169,15 @@ For more information, read the full blog post [Implement Adobe Experience Cloud 
 
 To ensure accurate session and crash reporting, the Lifecycle APIs must be implemented in every Activity of the Android Application. 
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-Android
+Kotlin
 
-<Tabs query="platform=android&task=activity-start-pause"/>
+<Tabs query="platform=android-kotlin&task=activity-start-pause"/>
+
+Java
+
+<Tabs query="platform=android-java&task=activity-start-pause"/>
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -187,55 +189,29 @@ Starting with API Level 14, Android allows global lifecycle callbacks for activi
 
 You can use these callbacks to ensure that all of your activities correctly call the Lifecycle APIs without needing to update each individual Activity class. Add code to register an instance of [ActivityLifecycleCallbacks](https://developer.android.com/reference/android/app/Application.ActivityLifecycleCallbacks) in your Application class, just before [registering your extensions](#register-lifecycle-with-mobile-core) with MobileCore.
 
-```java
-import com.adobe.marketing.mobile.MobileCore;
-import com.adobe.marketing.mobile.Lifecycle;
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-public class MobileApp extends Application {
+Kotlin
 
-@Override
-protected void onCreate() {
-    super.onCreate();
+<Tabs query="platform=android-kotlin&task=global-lifecycle"/>
 
-    registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
-        @Override
-        public void onActivityResumed(Activity activity) {
-            MobileCore.setApplication(activity.getApplication());
-            MobileCore.lifecycleStart(null);
-        }
+Java
 
-        @Override
-        public void onActivityPaused(Activity activity) {
-            MobileCore.lifecyclePause();
-        }
-
-        // the following methods aren't needed for our lifecycle purposes, but are
-        // required to be implemented by the ActivityLifecycleCallbacks object
-        @Override
-        public void onActivityCreated(Activity activity, Bundle savedInstanceState) {}
-        @Override
-        public void onActivityStarted(Activity activity) {}
-        @Override
-        public void onActivityStopped(Activity activity) {}
-        @Override
-        public void onActivitySaveInstanceState(Activity activity, Bundle outState) {}
-        @Override
-        public void onActivityDestroyed(Activity activity) {}
-    });
-}
- ...
-}
-```
+<Tabs query="platform=android-java&task=global-lifecycle"/>
 
 #### Include additional context data
 
-To include additional data with lifecycle metric calls, pass an additional parameter to `lifecycleStart(Map)` that contains context data:
+To include additional data with lifecycle tracking calls, pass an additional parameter to `lifecycleStart(Map)` that contains context data:
 
-```java
-HashMap<String, Object> additionalContextData = new HashMap<String, Object>();
-contextData.put("myapp.category", "Game");
-MobileCore.lifecycleStart(additionalContextData);
-```
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Kotlin
+
+<Tabs query="platform=android-kotlin&task=context-data"/>
+
+Java
+
+<Tabs query="platform=android-java&task=context-data"/>
 
 <InlineAlert variant="info" slots="text"/>
 
