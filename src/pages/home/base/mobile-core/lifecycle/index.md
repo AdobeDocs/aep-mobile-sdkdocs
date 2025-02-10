@@ -48,7 +48,11 @@ iOS
 
 ## Add Lifecycle start and pause calls
 
-### Lifecycle in iOS
+You can start collecting Lifecycle information at any time in your app, but we recommend that you start as soon as your app enters the foreground. This allows Lifecycle metrics to be correctly attributed to all of your users' activities for their current session.
+
+You should pause Lifecycle collection when the user stops using your app. The best time to do this is usually when your app has entered the background.
+
+### Lifecycle on iOS
 
 #### Start Lifecycle data collection on launch
 
@@ -163,11 +167,11 @@ struct TestSwiftUIApp: App {
 For more information, read the full blog post [Implement Adobe Experience Cloud Mobile Lifecycle Tracking in SwiftUI](https://blog.developer.adobe.com/implement-adobe-experience-cloud-mobile-lifecycle-tracking-in-swiftui-41a8373a55fb).
 
 
-### Lifecycle in Android
+### Lifecycle on Android
 
 #### Start and Pause Lifecycle data collection from Android Activity
 
-To ensure accurate session and crash reporting, the Lifecycle APIs must be implemented in every Activity of the Android Application. 
+To ensure accurate session and crash reporting, the Lifecycle APIs must be implemented in every Activity of the Android Application. Do not start or stop Lifecycle in a Fragment.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
