@@ -16,7 +16,7 @@ In version 4 of the iOS SDK, this implementation was completed automatically. <b
 
 ## Implementing Lifecycle metrics in iOS
 
-For implementation details, please reference the guide on [registering Lifecycle with Mobile Core and adding the appropriate start/pause calls](../index.md#register-lifecycle-with-mobile-core-and-add-appropriate-start-pause-calls).
+For implementation details, please reference the [implementation guide for Lifecycle](/src/pages/home/base/mobile-core/lifecycle/index.md).
 
 ## Tracking app crashes in iOS
 

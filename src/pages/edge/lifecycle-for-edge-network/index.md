@@ -107,7 +107,7 @@ After you complete your configuration, verify that your rule looks like the foll
 
 Installing Lifecycle for Edge Network is the same as installing Lifecycle for Analytics as there is only a single mobile SDK Lifecycle extension. The Lifecycle APIs for `lifecycleStart` and `lifecyclePause` are the same for both Lifecycle workflows. If your application already includes the Lifecycle extension then you are already setup for Lifecycle for Edge Network.
 
-For implementation details, please reference the Lifecycle documentation to learn how to [add Lifecycle to your app](../../home/base/mobile-core/lifecycle/index.md#add-lifecycle-to-your-app) and [register Lifecycle with Mobile Core and add appropriate the Start/Pause calls](../../home/base/mobile-core/lifecycle/index.md#register-lifecycle-with-mobile-core-and-add-appropriate-start-pause-calls).
+For implementation details, please reference the [implementation guide for Lifecycle](/src/pages/home/base/mobile-core/lifecycle/index.md).
 
 ### Add Edge Network extension to your app
 
