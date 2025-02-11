@@ -7,6 +7,94 @@ Keywords:
 
 # Release notes
 
+## February 10, 2025
+
+### Android Optimize 3.2.4
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+### Android Campaign Classic 3.1.3
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+* Updated the Notification Builder dependency to version 3.0.3 to resolve an issue that occurred when no image was provided in an input box push template notification.
+
+### Android EdgeMedia 3.0.1
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+### Android EdgeConsent 3.0.1
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+### Android Messaging 3.3.1
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+### Android Target 3.0.1
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+### Android UserProfile 3.0.1
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+### Android Analytics 3.0.2
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+### Android Campaign Standard 3.0.2
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+### Android Media 3.1.2
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+### Android Edge 3.0.1
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+### Android Places 3.0.2
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+### Android Audience 3.0.1
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+### Android EdgeBridge 3.0.1
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+### Android Assurance 3.0.5
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+### Android EdgeIdentity 3.0.1
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+### Android Notification Builder 3.0.3
+
+* Fixed a display issue that occurs when no image is provided in an input box push template notification.
+
+### Android Signal 3.0.1
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+### Android Lifecycle 3.0.2
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+### Android Identity 3.0.2
+
+* Added support for the new MobileCore.initialize API introduced in Core.
+
+### Android Core 3.3.0
+
+* Added new `MobileCore.initialize` APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
+* Fixed an issue where certain HTTP request timeouts were incorrectly configured.
+
 ## February 6, 2025
 
 ### Android BOM 3.7.0

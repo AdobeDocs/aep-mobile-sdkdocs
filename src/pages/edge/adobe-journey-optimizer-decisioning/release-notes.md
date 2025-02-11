@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## February 10, 2025
+
+### Android Optimize 3.2.4
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
 ## February 6, 2025
 
 ### Android Optimize 3.2.3
