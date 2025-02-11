@@ -9,6 +9,12 @@ keywords:
 
 # Release notes
 
+## February 10, 2025
+
+### Android Media 3.1.2
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
 ## January 31, 2025
 
 ### Android Media 3.1.1

@@ -8,6 +8,13 @@ keywords:
 
 # Release notes
 
+## February 10, 2025
+
+### Android Campaign Classic 3.1.3
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+* Updated the Notification Builder dependency to version 3.0.3 to resolve an issue that occurred when no image was provided in an input box push template notification.
+
 ## September 10, 2024
 
 ### Android Campaign Classic 3.1.2

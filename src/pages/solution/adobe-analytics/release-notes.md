@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## February 10, 2025
+
+### Android Analytics 3.0.2
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
 ## June 27, 2024
 
 ### iOS Analytics 5.0.2

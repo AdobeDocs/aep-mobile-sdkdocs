@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## February 10, 2025
+
+### Android Assurance 3.0.5
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
 ## October 29, 2024
 
 ### Android Assurance 3.0.4

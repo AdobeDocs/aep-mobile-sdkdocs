@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## February 10, 2025
+
+### Android Places 3.0.2
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
 ## January 14, 2025
 
 ### React Native Places 6.0.3

@@ -8,6 +8,25 @@ keywords:
 
 # Release notes
 
+## February 10, 2025
+
+### Android Signal 3.0.1
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+### Android Lifecycle 3.0.2
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+### Android Identity 3.0.2
+
+* Added support for the new MobileCore.initialize API introduced in Core.
+
+### Android Core 3.3.0
+
+* Added new `MobileCore.initialize` APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
+* Fixed an issue where certain HTTP request timeouts were incorrectly configured.
+
 ## January 16, 2025
 
 ### iOS Core 5.3.2

@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## February 10, 2025
+
+### Android Audience 3.0.1
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
 ## May 31, 2024
 
 ### iOS Audience 5.0.1
