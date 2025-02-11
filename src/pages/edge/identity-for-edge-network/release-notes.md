@@ -9,6 +9,12 @@ keywords:
 
 # Release notes
 
+## February 10, 2025
+
+### Android EdgeIdentity 3.0.1
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
 ## June 6, 2024
 
 ### React Native EdgeIdentity 6.0.2

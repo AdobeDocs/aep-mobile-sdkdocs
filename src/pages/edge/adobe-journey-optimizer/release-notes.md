@@ -9,6 +9,12 @@ keywords:
 
 # Release notes
 
+## February 10, 2025
+
+### Android Messaging 3.3.1
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
 ## February 6, 2025
 
 ### Android Messaging 3.3.0

@@ -9,6 +9,12 @@ keywords:
 
 # Release notes
 
+## February 10, 2025
+
+### Android EdgeMedia 3.0.1
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
 ## April 2, 2024
 
 ### Android EdgeMedia 3.0.0
