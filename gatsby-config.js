@@ -279,8 +279,22 @@ module.exports = {
                                 path: "/edge/adobe-journey-optimizer-decisioning/api-reference"
                             },
                             {
-                                title: "Validating Optimize Setup",
-                                path: "/edge/adobe-journey-optimizer-decisioning/optimize-configuration-view.md"
+                                title: "Assurance",
+                                path: "/edge/adobe-journey-optimizer-decisioning/assurance-for-decisioning.md",
+                                pages: [
+                                    {
+                                        title: "Setup",
+                                        path: "/edge/adobe-journey-optimizer-decisioning/assurance-setup.md"
+                                    },
+                                    {
+                                        title: "Validating optimize setup",
+                                        path: "/edge/adobe-journey-optimizer-decisioning/optimize-configuration-view.md"
+                                    },
+                                    {
+                                        title: "Review & Simulate",
+                                        path: "/edge/adobe-journey-optimizer-decisioning/review-simulate.md"
+                                    }
+                                ]
                             },
                             {
                                 title: "Release notes",

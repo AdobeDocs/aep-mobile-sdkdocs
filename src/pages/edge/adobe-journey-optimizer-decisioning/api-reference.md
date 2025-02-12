@@ -42,6 +42,8 @@ iOS
 
 This API retrieves the previously fetched propositions, for the provided decision scopes, from the in-memory extension propositions cache. The completion callback is invoked with the decision propositions corresponding to the given decision scopes. If a certain decision scope has not already been fetched prior to this API call, it will not be contained in the returned propositions.
 
+In case of [**result simlation**](./review-simulate.md#simulate-different-results) this method will return simulated results.
+
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
@@ -55,6 +57,8 @@ iOS
 ## onPropositionsUpdate
 
 This API registers a permanent callback which is invoked whenever the Edge extension dispatches a response Event received from the Experience Edge Network upon a personalization query. The personalization query requests can be triggered by the `updatePropositions` API, Edge extension `sendEvent` API or launch consequence rules.
+
+In case of [**result simlation**](./review-simulate.md#simulate-different-results) this callback will get triggered automatically.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -90,6 +94,8 @@ For details on syntax, usage and availability, refer to [Mobile Core - Reset ide
 ## updatePropositions
 
 This API dispatches an Event for the Edge network extension to fetch decision propositions, for the provided decision scopes array, from the decisioning services enabled in the Experience Edge. The returned decision propositions are cached in-memory in the Optimize SDK extension and can be retrieved using `getPropositions` API.
+
+In case of [**result simlation**](./review-simulate.md#simulate-different-results) this method will **override** the simulated results. Thus removing any simulaterd results.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
