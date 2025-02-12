@@ -8,6 +8,114 @@ keywords:
 
 # Release notes
 
+## February 10, 2025
+
+### Android Assurance 3.0.5
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+## October 29, 2024
+
+### Android Assurance 3.0.4
+
+* Fixed an issue causing incorrect application details to be sent in the `client` event.
+
+### Android Assurance 2.2.2
+
+* Fixed an issue causing incorrect application details to be sent in the `client` event.
+
+## August 16, 2024
+
+### Android Assurance 3.0.3
+
+* Removed `app_name` string resource to prevent conflicts with resources defined by the app.
+
+## August 12, 2024
+
+### Android Assurance 3.0.2
+
+* Added localization support.
+
+### iOS Assurance 5.0.1
+
+* Add localization support.
+
+## June 6, 2024
+
+### React Native Assurance 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+## June 4, 2024
+
+### Android Assurance 3.0.1
+
+* Fixed an issue where the Assurance floating button was not immediately shown in a reconnection scenario.
+* Fixed an issue where the QuickConnect device registration status check job was not terminated when the connection attempt is cancelled.
+* Disabled content and file access from `WebView`.
+
+## May 13, 2024
+
+### Flutter Assurance 4.0.2
+
+* Update environment dependencies in pubspec.
+
+## April 24, 2024
+
+### React Native Assurance 6.0.1
+
+* Added namespace support to the Android module.
+
+## April 23, 2024
+
+### Flutter Assurance 4.0.1
+
+* Added namespace support to the Android module.
+
+## April 16, 2024
+
+### Flutter Assurance 4.0.0
+
+Major version update for [Assurance](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepassurance) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+## April 12, 2024
+
+### React Native Assurance 6.0.0
+
+Major version update for [Assurance](https://github.com/adobe/aepsdk-react-native/tree/main/packages/assurance) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+## April 1, 2024
+
+### Android Assurance 3.0.0
+
+Major version update for [Adobe Experience Platform Assurance](./index.md) on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* The SDK is now compatible with Kotlin 1.8 and higher.
+* Removed deprecated `registerExtension` API. Use the `MobileCore.registerExtensions()` API for registering extensions and initializing the SDK instead.
+* Migrated SDK UI components to Jetpack Compose.
+
+## March 20, 2024
+
+### iOS Assurance 5.0.0
+
+Major version update for [Adobe Experience Platform Assurance](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+## March 7, 2024
+
+### iOS Assurance 4.1.2
+
+* Fix an issue where dependency versions did not have an upper bound restriction.
+
 ## January 30, 2024
 
 ### Android Assurance 2.2.1

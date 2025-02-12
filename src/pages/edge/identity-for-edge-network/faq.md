@@ -113,6 +113,14 @@ To clear the identifiers used by the Adobe Solutions extensions, call [setPrivac
 
 To clear the identifiers used by the Edge extensions, call [resetIdentities](../../home/base/mobile-core/api-reference.md#resetidentities)
 
+## Q: In what cases is the Experience Cloud ID (ECID) reset or cleared?
+
+A: The Identity for the Edge Network extension does not automatically reset or clear the ECID. If you observe the ECID being reset, identify if it falls into one of the following cases:
+
+* Cleared when the app is uninstalled.
+* Reset using the [`resetIdentities`](../../home/base/mobile-core/api-reference.md#resetidentities) API.
+* Reset when the app local persistence is cleared for any reason in the app implementation. To learn more, see where the [Mobile SDK stores identity data](../../../resources/faq.md#where-does-the-sdk-store-identities-and-preferences-on-the-app).
+
 ## Q: What steps are needed to generate a new Experience Cloud ID (ECID) for a user when using both Edge extensions and Adobe Solutions extensions?
 
 A: Both identity extensions' ECID must be regenerated in sequence to avoid linking the old and new ECIDs in Adobe Experience Platform.
@@ -147,5 +155,6 @@ If no other extension relies on the Identity for Experience Cloud ID Service ext
 1. Ensure that the output from the `getUrlVariables` API includes accurate **ECID** and **Experience Cloud orgID** values. Please note that the orgID set up for the Mobile SDK must match the orgID configured in the Web SDK.
 2. Make sure the timestamp (TS) included in the `getUrlVariables` result did not expire (that is, it is not older than 5 minutes since the time it was retrieved). For this reason, it is recommended that the result from `getUrlVariables` is not cached and reused in the app, but retrieved on demand before loading the WebView.
 3. The query string returned by the `getUrlVariables` API is already encoded, so please ensure that you do not re-encode the generated query string.
+4. If you are using Visitor ID and AppMeasurement, please make sure that you have the latest versions.
 
 For further information, refer to the documentation on [mobile-to-web and cross-domain ID sharing](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/id-sharing.html?lang=en) and [handling WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html?lang=en#implementation).

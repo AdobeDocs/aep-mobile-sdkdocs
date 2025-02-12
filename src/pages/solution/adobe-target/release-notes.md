@@ -8,6 +8,59 @@ keywords:
 
 # Release notes
 
+## February 10, 2025
+
+### Android Target 3.0.1
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+## June 6, 2024
+
+### React Native Target 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+## April 24, 2024
+
+### React Native Target 6.0.1
+
+* Added namespace support to the Android module.
+
+## April 12, 2024
+
+### React Native Target 6.0.0
+
+Major version update for [Target](https://github.com/adobe/aepsdk-react-native/tree/main/packages/target) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+## April 2, 2024
+
+### Android Target 3.0.0
+
+Major version update for [Target](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Migrated Target Preview to use Jetpack Compose based UI Services from MobileCore 3.0.0
+
+## March 20, 2024
+
+### iOS Target 5.0.0
+
+Major version update for [Target](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+* Fixed a bug when using Target Preview on device that caused the floating button to remain visible when a preview selection was active.
+
+## February 28, 2024
+
+### iOS Target 4.0.4
+
+* Added max versions to Platform dependencies in podspec
+
 ## January 26, 2024
 
 ### iOS Target 4.0.3

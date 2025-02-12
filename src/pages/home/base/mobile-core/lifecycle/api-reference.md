@@ -82,9 +82,11 @@ iOS
 
 ## registerExtension
 
-<InlineAlert variant="warning" slots="text"/>
+<InlineAlert variant="warning" slots="header, text1"/>
 
-Deprecated as of 2.0.0. Please use the [MobileCore.registerExtensions](../api-reference.md#registerextensions) API instead.
+This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the Android mobile extension.
+
+Use [`MobileCore.registerExtensions()`](../api-reference.md#registerextensions) API instead.
 
 Registers the Lifecycle extension with the Mobile Core.
 

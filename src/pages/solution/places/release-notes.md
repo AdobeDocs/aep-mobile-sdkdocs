@@ -8,6 +8,70 @@ keywords:
 
 # Release notes
 
+## February 10, 2025
+
+### Android Places 3.0.2
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+## January 14, 2025
+
+### React Native Places 6.0.3
+
+* Updated Places module name for compatibility with the new architecture.
+
+## August 19, 2024
+
+### Android Places 3.0.1
+
+* Removed unused `app_name` string resource to prevent conflicts with resources defined by the app.
+
+## June 6, 2024
+
+### React Native Places 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+## April 24, 2024
+
+### React Native Places 6.0.1
+
+* Added namespace support to the Android module.
+
+## April 12, 2024
+
+### React Native Places 6.0.0
+
+Major version update for [Places](https://github.com/adobe/aepsdk-react-native/tree/main/packages/places) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+## April 2, 2024
+
+### Android Places 3.0.0
+
+Major version update for [Places](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+
+## March 20, 2024
+
+### iOS Places 5.0.0
+
+Major version update for [Places](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+* Fixes a bug where limit was not being respected in calls to `getNearbyPointsOfInterest`.
+
+## February 27, 2024
+
+### iOS Places 4.1.1
+
+* Added max versions to Platform dependencies in podspec
+
 ## Aug 8, 2023
 
 ### iOS Places 4.1.0 and Android Places 2.1.0

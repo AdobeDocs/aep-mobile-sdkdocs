@@ -2,23 +2,33 @@
 noIndex: true
 ---
 
-<Variant platform="android" task="add" repeat="8"/>
+import Alerts from '/src/pages/resources/alerts.md'
+
+<Variant platform="android" task="add" repeat="11"/>
 
 1. Add the Media extension and its dependencies to your project using the app's Gradle file.
 
-<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+#### Kotlin
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
+```kotlin
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation("com.adobe.marketing.mobile:core")
+implementation("com.adobe.marketing.mobile:identity")
+implementation("com.adobe.marketing.mobile:analytics")
+implementation("com.adobe.marketing.mobile:media")
+```
 
-</InlineNestedAlert>
+#### Groovy
 
 ```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
 implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:identity'
 implementation 'com.adobe.marketing.mobile:analytics'
 implementation 'com.adobe.marketing.mobile:media'
 ```
+
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
 2. Import the libraries in your application's main activity.
 
@@ -45,9 +55,9 @@ import com.adobe.marketing.mobile.Media
 1. To add the Media library and its dependencies to your project, add the following pods to your `Podfile`:
 
 ```ruby
-pod 'AEPCore'
-pod 'AEPAnalytics'
-pod 'AEPMedia'
+pod 'AEPCore', '~> 5.0'
+pod 'AEPAnalytics', '~> 5.0'
+pod 'AEPMedia', '~> 5.0'
 ```
 
 2. In Xcode project, import the Media extension:

@@ -2,23 +2,33 @@
 noIndex: true
 ---
 
-<Variant platform="android" task="add" repeat="8"/>
+import Alerts from '/src/pages/resources/alerts.md'
+
+<Variant platform="android" task="add" repeat="11"/>
 
 1. Add the Media for Edge Network extension and its dependencies to your project using the app's Gradle file.
 
+#### Kotlin
+
+```kotlin
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation("com.adobe.marketing.mobile:core")
+implementation("com.adobe.marketing.mobile:edge")
+implementation("com.adobe.marketing.mobile:edgeidentity")
+implementation("com.adobe.marketing.mobile:edgemedia")
+```
+
+#### Groovy
+
 ```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
 implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:edge'
 implementation 'com.adobe.marketing.mobile:edgeidentity'
 implementation 'com.adobe.marketing.mobile:edgemedia'
 ```
 
-<InlineNestedAlert variant="warning" header="false" iconPosition="left">
-
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
-
-</InlineNestedAlert>
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
 2. Import the libraries in your application's main activity.
 
@@ -45,10 +55,10 @@ import com.adobe.marketing.mobile.edge.media.Media
 1. To add the Media for Edge Network extension and its dependencies to your project, add the following pods to your `Podfile`:
 
 ```ruby
-pod 'AEPCore'
-pod 'AEPEdge'
-pod 'AEPEdgeIdentity'
-pod 'AEPEdgeMedia'
+pod 'AEPCore', '~> 5.0'
+pod 'AEPEdge', '~> 5.0'
+pod 'AEPEdgeIdentity', '~> 5.0'
+pod 'AEPEdgeMedia', '~> 5.0'
 ```
 
 2. In Xcode project, import the Media extension:

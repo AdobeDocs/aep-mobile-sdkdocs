@@ -8,6 +8,115 @@ keywords:
 
 # Release notes
 
+## February 10, 2025
+
+### Android Optimize 3.2.4
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+## February 6, 2025
+
+### Android Optimize 3.2.3
+
+* Added support for the Array type in the JSON structure of Offer Content.
+
+## December 6, 2024
+
+### Android Optimize 3.2.2
+
+* Added timeout (in seconds) parameter to updatePropositions and getPropositions APIs to enable timeout configuration in both the apis ensuring that the operation either completes within the given time frame or returns an error indicating a timeout.
+* Updated getPropositions API to return cached propositions immediately if there are no pending updatePropositions calls for the requested list of decision scopes.
+* Added support for debug events and enabled getPropositions and onPropositionsUpdate to receive Simulated events from Assurance.
+
+### iOS Optimize 5.2.0
+
+* Added timeout (in seconds) parameter to updatePropositions and getPropositions APIs to enable timeout configuration in both the apis ensuring that the operation either completes within the given time frame or returns an error indicating a timeout.
+* Added support for debug events and enabled getPropositions and onPropositionsUpdate to receive Simulated events from Assurance.
+
+## October 8, 2024
+
+### Android Optimize 3.1.0
+
+* Added a new `updatePropositions` API to support completion callback with retrieved propositions and errors (if any).
+
+## October 3, 2024
+
+### iOS Optimize 5.1.0
+
+* Added a new `updatePropositions` API to support completion callback with retrieved propositions and errors (if any).
+* Updated `getPropositions` API to return cached propositions immediately if there are no pending `updatePropositions` calls for the requested list of decision scopes.
+* Changed `Offer.score` data type from Integer to Double to fix a bug where offers having decimal score were being dropped.
+
+## August 20, 2024
+
+### Android Optimize 3.0.2
+
+* Fixed thread safety for map updates that happen when `updatePropositions` API was called repeatedly.
+* Fixed issue where `Offer` could not be created for default content item when `getPropostions` API was called.
+
+## June 6, 2024
+
+### React Native Optimize 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+## May 21, 2024
+
+### iOS Optimize 5.0.1
+
+* Fixed a crash that happens when `updateProposition` API was called repeatedly. 
+
+### Android Optimize 3.0.1
+
+* Fixed a bug where Optimize SDK was considering Target mbox decision scope strings as invalid and not including them in personalization requests.
+
+## May 18, 2024
+
+### iOS Optimize 4.0.4
+
+* Fixed a crash that happens when `updateProposition` API was called repeatedly. 
+
+## April 24, 2024
+
+### React Native Optimize 6.0.1
+
+* Added namespace support to the Android module.
+
+## April 12, 2024
+
+### React Native Optimize 6.0.0
+
+Major version update for [Adobe Journey Optimizer - Decisioning Extension](https://github.com/adobe/aepsdk-react-native/tree/main/packages/optimize) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+## April 3, 2024
+
+### Android Optimize 3.0.0
+
+Major version update for [Adobe Journey Optimizer - Decisioning Extension](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Renamed class `Proposition` to `OptimizeProposition`.
+
+## March 20, 2024
+
+### iOS Optimize 5.0.0
+
+Major version update for [Adobe Journey Optimizer - Decisioning Extension](../../edge/adobe-journey-optimizer-decisioning/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+* Renamed class `Proposition` to `OptimizeProposition`.
+
+## February 28, 2024
+
+### iOS Optimize 4.0.3
+
+* Added max versions to Platform dependencies in podspec
+
 ## October 5, 2023
 
 ### Android Optimize 2.0.2

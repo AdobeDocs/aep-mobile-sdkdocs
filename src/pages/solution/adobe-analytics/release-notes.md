@@ -8,6 +8,53 @@ keywords:
 
 # Release notes
 
+## February 10, 2025
+
+### Android Analytics 3.0.2
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+## June 27, 2024
+
+### iOS Analytics 5.0.2
+
+* Fixed a bug where Places region ID and name were not included in the Analytics request if the Places data contained non-string values.
+
+### Android Analytics 3.0.1
+
+* Fixed a bug where Places region ID and name were not included in the Analytics request if the Places data contained non-string values.
+
+## May 28, 2024
+
+### iOS Analytics 5.0.1
+
+* Fixed an issue in Analytics hit processor and now it retries hits on recoverable URLErrors shared by Mobile Core.
+
+## April 2, 2024
+
+### Android Analytics 3.0.0
+
+Major version update for [Adobe Analytics](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Added an enhancement to prevent network retries when the device's network is offline.
+
+## March 20, 2024
+
+### iOS Analytics 5.0.0
+
+Major version update for [Adobe Analytics](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+
+* Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
+* Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
+
+## March 7, 2024
+
+### iOS Analytics 4.0.1
+
+* Added max versions to Platform dependencies in podspec.
+
 ## July 26, 2023
 
 ### Android Analytics 2.0.3

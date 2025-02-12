@@ -9,4 +9,5 @@ keywords:
 
 # Adobe Experience Platform Edge Network - Tutorials
 
-* [Datastream config overrides using rules](./datastream-config-override-rules.md)
+* [Sending configuration overrides using sendEvent](./send-overrides-sendevent.md)
+* [Sending configuration overrides using Rules](./send-overrides-rules.md)

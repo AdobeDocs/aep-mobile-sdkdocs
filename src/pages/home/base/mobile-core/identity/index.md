@@ -12,7 +12,19 @@ import Tabs from './tabs/index.md'
 
 # Identity
 
-The Identity extension enables your app with the Experience Cloud ID (ECID). This service helps with the synchronization of Adobe and other customer identifiers.
+The Identity for Experience Cloud ID Service extension enables your app with the Experience Cloud ID (ECID). This service helps with the synchronization of Adobe and other customer identifiers.
+
+Include the Identity extension in your application when using any of the following Adobe Solution extensions:
+
+   * [Adobe Analytics](../../../../solution/adobe-analytics/index.md)
+   * [Adobe Audience Manager](../../../../solution/adobe-audience-manager/index.md)
+   * [Adobe Campaign Standard](../../../../solution/adobe-campaign-standard/index.md)
+   * [Adobe Media Analytics](../../../../solution/adobe-media-analytics/index.md)
+   * [Adobe Target](../../../../solution/adobe-target/index.md)
+
+If your application uses the [Edge Network extension](../../../../edge/edge-network/index.md), then it must include the [Identity for Edge Network extension](../../../../edge/identity-for-edge-network/index.md). The Identity for Edge Network extension does not replace the Identity for Experience Cloud ID Service extension and both may be required in an application. See the [FAQ](../../../../edge/identity-for-edge-network/faq.md) for more information.
+
+When using third party extensions, check with the extension developer to understand if the Identity extension is a required dependency.
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -72,47 +84,3 @@ Flutter
 Previously known as MCID/MID/MCMID, the Experience Cloud ID (ECID) is a 38 character ID that uniquely identifies each visitor in the Adobe Experience Platform.
 
 After the configuration is complete, an ECID is generated and, where applicable, is included on all Analytics and Audience Manager hits. Other IDs, such as custom and automatically-generated IDs, continue to be sent with each hit.
-
-## Visitor tracking between an app and the mobile web
-
-If your app opens mobile web content, you need to ensure that visitors are not identified separately as they move between the native and mobile web.
-
-### Visitor IDs in apps
-
-The Mobile SDK generates a unique visitor ID when the app is installed. This ECID is stored in persistent memory on the mobile device and is sent with every hit. The ECID is removed when the user uninstalls the app or when the user sets the Mobile SDK global privacy status to `optedout`.
-
-<InlineAlert variant="info" slots="text"/>
-
-When the Mobile SDK privacy status is set to `optedout`, and the ECID is removed, a new unique visitor ID (ECID) is generated when the user sets the global privacy status to `optedin`.
-
-<InlineAlert variant="info" slots="text"/>
-
-App visitor IDs persist through upgrades.
-
-### Visitor IDs in the mobile web
-
-Typical mobile web implementations use the same standard analytics `s_code.js` or `AppMeasurement.js` that is used in desktop sites. The JavaScript libraries have their own methods of generating unique visitor IDs, which causes a different visitor ID to be generated when you open mobile web content from your app.
-
-To use the same visitor ID in the app and mobile web and pass the visitor ID to the mobile web in the URL, complete the following steps:
-
-### Implementing visitor tracking between an app and the mobile web
-
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
-
-Android
-
-<Tabs query="platform=android&task=implement"/>
-
-iOS
-
-<Tabs query="platform=ios&task=implement"/>
-
-<!--- React Native
-
-<Tabs query="platform=react-native&task=implement"/>
-
-Flutter
-
-<Tabs query="platform=flutter&task=implement"/> --->
-
-The ID service code on the destination domain extracts the ECID from the URL instead of sending a request to Adobe for a new ID. The ID service code on the destination page uses this ECID to track the visitor. On hits from the mobile web content, verify that the `mid` parameter exists on each hit, and that this value matches the `mid`value that is being sent by the app code.

@@ -26,17 +26,7 @@ To get started with Signal extension, complete the following steps:
 
 For more information about creating and configuring a rule in the Data Collection UI, see [Rules](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html).
 
-## Watch the video
-
-<Media slots="video"/>
-
-<https://www.youtube.com/watch?v=r-z9ivQjzOY>
-
 ## Add the Signal extension to your app
-
-<InlineAlert variant="warning" slots="text"/>
-
-Using dynamic dependency versions is not recommended for production apps. Refer to this [page](../../../resources/manage-gradle-dependencies.md) for managing gradle dependencies.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

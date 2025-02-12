@@ -2,33 +2,40 @@
 noIndex: true
 ---
 
-<Variant platform="android" task="add" repeat="4"/>
+import Alerts from '/src/pages/resources/alerts.md'
 
-#### Java
+<Variant platform="android" task="add" repeat="6"/>
 
 1. Add the Mobile Core, Identity and Target extensions to your project using the app's Gradle file.
 
+#### Kotlin
+
+```kotlin
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation("com.adobe.marketing.mobile:core")
+implementation("com.adobe.marketing.mobile:identity")
+implementation("com.adobe.marketing.mobile:target")
+```
+
+#### Groovy
+
 ```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
 implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:identity'
 implementation 'com.adobe.marketing.mobile:target'
 ```
 
-<InlineNestedAlert variant="warning" header="false" iconPosition="left">
-
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
-
-</InlineNestedAlert>
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
 <Variant platform="ios" task="add" repeat="7"/>
 
 1. Add the AEPCore, AEPIdentity, and AEPTarget CocoaPods to your project via your `Podfile`.
 
 ```ruby
-pod 'AEPCore','~>3.0'    
-pod 'AEPIdentity','~>3.0'
-pod 'AEPTarget','~>3.0'
+pod 'AEPCore','~>5.0'    
+pod 'AEPIdentity','~>5.0'
+pod 'AEPTarget','~>5.0'
 ```
 
 2. Import the Target and Identity libraries.

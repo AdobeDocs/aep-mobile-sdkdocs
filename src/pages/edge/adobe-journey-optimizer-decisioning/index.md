@@ -50,7 +50,7 @@ On [Experience Platform Data Collection](https://experience.adobe.com/#/data-col
 
 For the AEPOptimize APIs to work properly, you need to integrate Mobile Core and Edge extensions in your mobile app. For more details see, documentation on [Mobile Core](../../home/base/mobile-core/index.md) and [Adobe Experience Platform Edge Network](../../edge/edge-network/index.md).
 
-### Install the Experience Platform Mobile SDK
+#### Download and import the Optimize extension
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -271,7 +271,7 @@ iOS
 
 ### Proposition tracking using Edge extension API
 
-For more advanced tracking use cases, additional public methods are available in the `Offer` and `Proposition` classes. These methods can be used to generate XDM formatted data for `Experience Event - Proposition Interactions` and `Experience Event - Proposition Reference` field groups.
+For more advanced tracking use cases, additional public methods are available in the `Offer` and `Proposition`/`OptimizeProposition` classes. These methods can be used to generate XDM formatted data for `Experience Event - Proposition Interactions` and `Experience Event - Proposition Reference` field groups.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

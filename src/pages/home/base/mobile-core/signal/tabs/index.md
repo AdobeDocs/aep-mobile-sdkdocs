@@ -2,25 +2,33 @@
 noIndex: true
 ---
 
-<Variant platform="android" task="add" repeat="6"/>
+<Variant platform="android" task="add" repeat="8"/>
 
-#### Java
+1. Add the Signal extension and its dependency, the [Mobile Core](../index.md) extension to your project using the app's Gradle file.
 
-Add the Signal extension and its dependency, the [Mobile Core](../index.md) extension to your project using the app's Gradle file.
+#### Kotlin
 
-<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+```kotlin
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation("com.adobe.marketing.mobile:core")
+implementation("com.adobe.marketing.mobile:signal")
+```
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../../resources/manage-gradle-dependencies.md) for more information.
-
-</InlineNestedAlert>
+#### Groovy
 
 ```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
 implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:signal'
 ```
 
-Import the Signal and MobileCore extensions in your application's main activity.
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
+
+</InlineNestedAlert>
+
+2. Import the Signal and MobileCore extensions in your application's main activity.
 
 ```java
 import com.adobe.marketing.mobile.MobileCore;
@@ -29,16 +37,14 @@ import com.adobe.marketing.mobile.Signal;
 
 <Variant platform="ios" task="add" repeat="8"/>
 
-​Add the AEPSignal extension and it's dependency, the [Mobile Core](../index.md) extension to your project using Cocoapods.
-
-Add following pods in your `Podfile`:
+1. ​Add the AEPSignal extension and it's dependency, the [Mobile Core](../index.md) extension to your project using Cocoapods. Add following pods in your `Podfile`:
 
 ```pod
-pod 'AEPCore','~> 3.0'
-pod 'AEPSignal','~> 3.0'
+pod 'AEPCore','~> 5.0'
+pod 'AEPSignal','~> 5.0'
 ```
 
-Import the Signal libraries:
+2. Import the Signal libraries:
 
 #### Swift
 

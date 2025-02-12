@@ -317,7 +317,7 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
 
 <Variant platform="android" api="handle-remote-message" repeat="7"/>
 
-## _**Requires extension version v2.1.0+**_
+## _**Requires extension version v2.1.0 through the next major version release **_
 
 Builds an `AEPPushPayload` with data extracted from a `RemoteMessage`'s payload. The built `AEPPushPayload` is then used to construct a `Notification`.
 

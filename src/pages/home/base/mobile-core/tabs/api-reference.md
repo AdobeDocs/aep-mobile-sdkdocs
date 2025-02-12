@@ -572,7 +572,15 @@ public static func registerEventListener(type: String, source: String, listener:
 }];
 ```
 
-<Variant platform="android" api="register-extension" repeat="5"/>
+<Variant platform="android" api="register-extension" repeat="6"/>
+
+<InlineNestedAlert variant="warning" header="true" iconPosition="left">
+
+This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of Mobile Core extension.
+
+Use [registerExtensions](#registerextensions) to register desired extensions and boot up the SDK for event processing. Calling `MobileCore.start()` API is no longer required when using `MobileCore.registerExtensions()`.
+
+</InlineNestedAlert>
 
 #### Java
 
@@ -1406,6 +1414,10 @@ The `AdobeError` class shows the errors that can be passed to an `AdobeCallbackW
 * `CALLBACK_TIMEOUT` - The timeout was met.
 * `CALLBACK_NULL` - The provided callback function is null.
 * `EXTENSION_NOT_INITIALIZED` - The extension is not initialized.
+* `SERVER_ERROR` - There was a server error.
+* `NETWORK_ERROR` - There was a network error.
+* `INVALID_REQUEST` - There was an invalid request.
+* `INVALID_RESPONSE` - There was an invalid response.
 
 **Example**
 
@@ -1421,6 +1433,14 @@ MobileCore.getPrivacyStatus(new AdobeCallbackWithError<MobilePrivacyStatus>() {
       // handle null callback error
     } else if (error == AdobeError.EXTENSION_NOT_INITIALIZED) {
       // handle extension not initialized error
+    } else if (error == AdobeError.SERVER_ERROR) {
+      // handle server error
+    } else if (error == AdobeError.NETWORK_ERROR) {
+      // handle network error
+    } else if (error == AdobeError.INVALID_REQUEST) {
+      // handle invalid request error
+    } else if (error == AdobeError.INVALID_RESPONSE) {
+      // handle invalid response error
     }
   }
 

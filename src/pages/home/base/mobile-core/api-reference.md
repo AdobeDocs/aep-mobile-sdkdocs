@@ -16,7 +16,7 @@ Programmatic updates made to the configuration can be cleared via the `clearUpda
 
 ## collectMessageInfo
 
-User interactions with local or push notifications can be tracked by invoking the `collectMessageInfo` API. Please refer to [this page](../../solution/adobe-campaign-standard/index.md#tracking-local-and-push-notification-message-interactions) for more information about tracking local and push notification message interactions.
+User interactions with local or push notifications can be tracked by invoking the `collectMessageInfo` API. Please refer to [this page](../../../solution/adobe-campaign-standard/index.md#tracking-local-and-push-notification-message-interactions) for more information about tracking local and push notification message interactions.
 
 ## collectLaunchInfo
 
@@ -192,11 +192,6 @@ iOS
 <Tabs query="platform=ios&api=register-event-listener"/>
 
 ## registerExtension
-
-<InlineAlert variant="warning" slots="text"/>
-
-This API has been deprecated starting in v2.0.0 version of Mobile Core extension.
-Use [registerExtensions](#registerextensions) to register desired extensions and boot up the SDK for event processing. Calling `MobileCore.start()` API is no longer required when using `MobileCore.registerExtensions()`.
 
 Extensions can be incrementally registered with Mobile Core using the `registerExtension` API.
 
