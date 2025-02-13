@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## February 10, 2025
+
+### Android Edge 3.0.1
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
 ## October 16, 2024
 
 ### iOS Edge 5.0.3

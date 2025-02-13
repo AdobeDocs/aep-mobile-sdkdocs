@@ -92,9 +92,9 @@ To enable Lifecycle for Edge Network, a rule must be created in the application'
 
 Lifecycle for Edge Network dispatches an [Application Launch (Foreground)](../../home/base/mobile-core/lifecycle/event-reference.md#lifecycle-application-foreground) event on every app launch and an [Application Close (Background)](../../home/base/mobile-core/lifecycle/event-reference.md#lifecycle-application-background) event on every app close. With every app launch and app close being its own event, customers can define user sessions at reporting time instead of needing to change a client-side configuration to determine when sessions start and end.
 
-The Analytics extension includes additional data with every hit sent, such as some Lifecycle data. The Edge Network extension is a general purpose extension handling a variety of use cases. Certain data included in all Analytics hits are no longer supported in the Edge Network. The Lifecycle for Edge Network data is only sent during Lifecycle events.
+The Analytics extension includes additional data with every hit sent, such as some Lifecycle data. The Edge Network extension is a general purpose extension handling a variety of use cases including Messaging, Optimize, and Consent. Certain data included in all Analytics hits are no longer supported in the Edge Network. The Lifecycle for Edge Network data is only sent during Lifecycle events.
 
-For more details, please refer to the [Lifecycle for Edge Network extension documentation](../../edge/lifecycle-for-edge-network/index.md).
+For more details, please refer to the [Lifecycle for Edge Network migration reference](../../edge/lifecycle-for-edge-network/migration-reference.md) and the [Lifecycle for Edge Network extension documentation](../../edge/lifecycle-for-edge-network/index.md).
 
 ## Next steps
 
