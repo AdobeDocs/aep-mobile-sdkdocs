@@ -1,6 +1,6 @@
 ---
 title: Setting up Decisioning plugins in Assurance
-description: This document shows user how to setup Assurance for the document features to be used.
+description: This document shows user how to setup Assurance for Mobile SDK.
 keywords:
 - Assurance
 - Decisioning
@@ -8,7 +8,7 @@ keywords:
 
 # Setting up Decisioning plugins in Assurance
 
-This document shows user how to setup Assurance for the document features to be used.
+This document shows user how to setup Assurance for Mobile SDK.
 
 ## Setup
 
