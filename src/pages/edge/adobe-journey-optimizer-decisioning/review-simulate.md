@@ -1,12 +1,12 @@
 ---
-title: Adobe Experience Platform Assurance Review & Simulate
+title: Decisioning Review & Simulate
 description: This is a feature of the Adobe Experience Platform Assurance which allows the users to review the content sent to devices for each request and simulate different experiences on the same devices in real time.
 keywords:
 - Adobe Experience Platform Assurance
 - Review & Simulate Feature Introduction
 ---
 
-# Adobe Experience Platform Assurance Review & Simulate
+# Decisioning Review & Simulate
 
 This is a feature of the Adobe Experience Platform Assurance which allows the users to review the content sent to devices for each request and simulate different experiences on the same devices in real time.
 
@@ -20,25 +20,25 @@ This is a feature of the Adobe Experience Platform Assurance which allows the us
 
    ![](./assets/review-simulate/assurance-review-tab.png)
 
-4. Select any request to see more information about it in the expanded right panel. To see the preview the result, click the ‘Returned Content’ button available in the right panel. 
+4. Select any request to see more information about it in the expanded right panel. To see the preview the result, click the ‘Show Returned Content’ button available in the right panel. 
 
    ![](./assets/review-simulate/assurance-result-preview.png)
 
 
 ## Simulate Different Results
 
-The result of each personalization request is customized for each user based on several deciding factors as configured. A unique experience is served for each user. Simulate allows the user to view all available experiences on the device in real time.  
+The result of each personalization request is customized for each user based on several deciding factors as configured. A unique experience is served for each user. Simulate allows the user to view a different experience then the one they currently serviced.
 
-To simulate specific experiences served against a scope follow the following steps:
+You can simulate specific experiences served against a scope by following the steps below::
 
-1. Move to ‘Simulate’ tab in ‘Review & Simulate’ section.
+1. Move to the ‘Simulate’ tab in ‘Review & Simulate’ section.
 
    ![](./assets/review-simulate/assurance-simulate-tab.png)
 
 2. There are two ways to select activities that user wants to simulate:
    * Locations requested during Session - These are scopes/locations that were requested during the current session. 
-      * Select the scope you want to customize from the drop-down menu. 
-      * Upon Selection a list of all available experiences related to the selected scope will be shown. 
+      * Select the scope you want to customize from the dropdown menu. 
+      * Upon Selection, a list of all available experiences related to the selected scope will be shown. 
       
    ![](./assets/review-simulate/assurance-simulate-options.png)
 
@@ -46,7 +46,7 @@ To simulate specific experiences served against a scope follow the following ste
       * Click on **Select specific target activities**
       * A list of available activities will be shown, you may select appropriate workspace and search through the list.
       * Select Activities that you want to simulate and click continue. 
-      * Upon Selection a list of all available experiences related to the selected scopes will be shown.
+      * Upon Selection, a list of all available experiences related to the selected scopes will be shown.
    
    ![](./assets/review-simulate/assurance-simulate-specific.png)
 

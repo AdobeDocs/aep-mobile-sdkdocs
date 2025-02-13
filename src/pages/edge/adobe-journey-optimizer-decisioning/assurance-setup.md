@@ -1,11 +1,12 @@
 ---
-title: Assurance setup
+title: Setting up Decisioning plugins in Assurance
 description: This document shows user how to setup Assurance for the document features to be used.
 keywords:
-- Assurance setup
+- Assurance
+- Decisioning
 ---
 
-# Assurance setup
+# Setting up Decisioning plugins in Assurance
 
 This document shows user how to setup Assurance for the document features to be used.
 
@@ -23,7 +24,9 @@ This document shows user how to setup Assurance for the document features to be 
 
    ![](./assets/assurance-setup/assurance-connected.png)
 
-3. If you do not see any option in the **Assurance sessoin home panel**, make sure that the options are properly configured in the panel **Configure** menu.
-   * Click on **+** icon to add the option to the panel and **-** to remove.
+3. If you do not see any plugin in the **Assurance sessoin home panel**, make sure that they are properly configured in the panel **Configure** menu.
+   * Click on the **Configure** button at the bottom of the panel to edit.
+   * Click on **+** icon to show and **-** to hide the plugin from panel.
+   * Note that hidden plugins move to the bottom of the list.
 
    ![](./assets/assurance-setup/assurance-configure.png)

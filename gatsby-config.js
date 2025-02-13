@@ -612,19 +612,19 @@ module.exports = {
                                 path: "/edge/adobe-journey-optimizer-decisioning/api-reference"
                             },
                             {
-                                title: "Assurance",
+                                title: "Validation and Preview using Assurance",
                                 path: "/edge/adobe-journey-optimizer-decisioning/assurance-for-decisioning.md",
                                 pages: [
                                     {
-                                        title: "Setup",
+                                        title: "Setting up Decisioning plugins in Assurance",
                                         path: "/edge/adobe-journey-optimizer-decisioning/assurance-setup.md"
                                     },
                                     {
-                                        title: "Validating optimize setup",
+                                        title: "Decisioning Validation view",
                                         path: "/edge/adobe-journey-optimizer-decisioning/optimize-configuration-view.md"
                                     },
                                     {
-                                        title: "Review & Simulate",
+                                        title: "Decisioning Review & Simulate",
                                         path: "/edge/adobe-journey-optimizer-decisioning/review-simulate.md"
                                     }
                                 ]

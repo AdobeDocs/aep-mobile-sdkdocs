@@ -43,7 +43,7 @@ iOS
 
 This API retrieves the previously fetched propositions, for the provided decision scopes, from the in-memory extension propositions cache. The completion callback is invoked with the decision propositions corresponding to the given decision scopes. If a certain decision scope has not already been fetched prior to this API call, it will not be contained in the returned propositions.
 
-In case of [**result simlation**](./review-simulate.md#simulate-different-results) this method will return simulated results.
+When connected to Assurance for previewing content, this method will return [**simulated results**](./review-simulate.md#simulate-different-results).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -60,6 +60,8 @@ iOS
 This API retrieves the previously fetched propositions for the provided decision scopes from the in-memory extension propositions cache, similar to `getPropositions`. The completion callback is invoked with the decision propositions corresponding to the given decision scopes. If a certain decision scope has not been fetched prior to this API call, it will not be included in the returned propositions.
 
 Additionally, this API allows specifying a timeout for the operation. If the propositions retrieval does not complete within the given timeout, an error is returned, providing improved control over handling delays and ensuring timely application responses.
+
+When connected to Assurance for previewing content, this method will return [**simulated results**](./review-simulate.md#simulate-different-results).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -79,7 +81,7 @@ This API registers a permanent callback which is invoked whenever the Edge exten
 
 The callback passed to `onPropositionsUpdate` will not be invoked if the Experience Edge Network returns an error for the personalization query, or if the response event payload is empty or has invalid proposition data. This API should not be used for handling errors that might occur when `updatePropositions` is called.
 
-In case of [**result simlation**](./review-simulate.md#simulate-different-results) this callback will get triggered automatically.
+When connected to Assurance for previewing content, this method will return [**simulated results**](./review-simulate.md#simulate-different-results).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -120,7 +122,7 @@ Use [`Optimize.updatePropositions`](../api-reference.md#updatepropositionswithco
 
 This API dispatches an Event for the Edge network extension to fetch decision propositions, for the provided decision scopes array, from the decisioning services enabled in the Experience Edge. The returned decision propositions are cached in-memory in the Optimize SDK extension and can be retrieved using `getPropositions` API.
 
-In case of [**result simlation**](./review-simulate.md#simulate-different-results) this method will **override** the simulated results. Thus removing any simulaterd results.
+When connected to Assurance for previewing content, this method will **override** the [**simulated results**](./review-simulate.md#simulate-different-results). It will remove all simluated results and serve the actual data.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
