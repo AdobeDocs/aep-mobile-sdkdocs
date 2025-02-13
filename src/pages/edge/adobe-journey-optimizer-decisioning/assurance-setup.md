@@ -13,10 +13,6 @@ This document shows user how to setup Assurance for Mobile SDK.
 ## Setup
 
 1. To get started you will need Adobe Experience Platform Assurance Extension to be enabled and set up in the application. Follow the instruction provided in [**Assurance Overview**](../../home/base/assurance/index.md) for setup.
-
-   If enabled, you would see Assurance Segment in the left panel of Data Collection App.
-
-   ![](./assets/assurance-setup/assurance-enabled.png)
    
 2. Next, you will need to create an Assurance session and connect to it. You can follow instructions provided in this link to do so - [**Connecting to Assurance**](https://experienceleague.adobe.com/en/docs/experience-platform/assurance/tutorials/using-assurance)
 
