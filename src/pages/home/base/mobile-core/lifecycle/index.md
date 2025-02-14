@@ -16,35 +16,39 @@ Sessions contain information about the app's current lifecycle, such as the devi
 
 ## Add Lifecycle to your app
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-Android
+Kotlin<br/>(Android)
 
-<Tabs query="platform=android&task=add"/>
+<Tabs query="platform=android-kotlin&task=add"/>
 
-iOS
+Groovy<br/>(Android)
 
-<Tabs query="platform=ios&task=add"/>
+<Tabs query="platform=android-groovy&task=add"/>
 
-<!--- React Native
+CocoaPods<br/>(iOS)
 
-<Tabs query="platform=react-native&task=add"/>
-
-Flutter
-
-<Tabs query="platform=flutter&task=add"/> --->
+<Tabs query="platform=ios-pods&task=add"/>
 
 ## Register Lifecycle with Mobile Core
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
-Android
+Kotlin<br/>(Android)
 
-<Tabs query="platform=android&task=register"/>
+<Tabs query="platform=android-kotlin&task=register"/>
 
-iOS
+Java<br/>(Android)
 
-<Tabs query="platform=ios&task=register"/>
+<Tabs query="platform=android-java&task=register"/>
+
+Swift<br/>(iOS)
+
+<Tabs query="platform=ios-swift&task=register"/>
+
+Objective-C<br/>(iOS)
+
+<Tabs query="platform=ios-objc&task=register"/>
 
 ## Add Lifecycle start and pause calls
 

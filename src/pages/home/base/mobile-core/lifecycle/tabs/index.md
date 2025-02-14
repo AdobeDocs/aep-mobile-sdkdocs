@@ -2,11 +2,11 @@
 noIndex: true
 ---
 
-<Variant platform="android" task="add" repeat="6"/>
+<!-- ////////////  Add Dependencies ////////// -->
 
-Add the Lifecycle extension and its dependency, the [Mobile Core](../index.md) extension to your project using the app's Gradle file.
+<Variant platform="android-kotlin" task="add" repeat="3"/>
 
-#### Kotlin
+Add the Lifecycle extension and its dependency, the [Mobile Core](/src/pages/home/base/mobile-core/index.md) extension to your project using the app's Gradle file.
 
 ```kotlin
 implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
@@ -14,7 +14,15 @@ implementation("com.adobe.marketing.mobile:core")
 implementation("com.adobe.marketing.mobile:lifecycle")
 ```
 
-#### Groovy
+<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](/src/pages/resources/manage-gradle-dependencies.md) for more information.
+
+</InlineNestedAlert>
+
+<Variant platform="android-groovy" task="add" repeat="3"/>
+
+Add the Lifecycle extension and its dependency, the [Mobile Core](/src/pages/home/base/mobile-core/index.md) extension to your project using the app's Gradle file.
 
 ```java
 implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
@@ -24,13 +32,13 @@ implementation 'com.adobe.marketing.mobile:lifecycle'
 
 <InlineNestedAlert variant="warning" header="false" iconPosition="left">
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../../resources/manage-gradle-dependencies.md) for more information.
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](/src/pages/resources/manage-gradle-dependencies.md) for more information.
 
 </InlineNestedAlert>
 
-<Variant platform="ios" task="add" repeat="3"/>
+<Variant platform="ios-pods" task="add" repeat="3"/>
 
-Add the AEPLifecycle extension and its dependency, the [Mobile Core](../index.md) extension, to your project using Cocoapods.
+Add the AEPLifecycle extension and its dependency, [AEPCore](/src/pages/home/base/mobile-core/index.md) extension, to your project using CocoaPods.
 
 Add the following pods in your `Podfile`:
 
@@ -39,31 +47,13 @@ pod 'AEPCore', '~> 5.0'
 pod 'AEPLifecycle', '~> 5.0'
 ```
 
-<!--- <Variant platform="react-native" task="add" repeat="3"/>
+<!-- /////////// Register Extensions ////////// -->
 
-#### JavaScript
-
-Import the Lifecycle extension
-
-```jsx
-import {ACPLifecycle} from '@adobe/react-native-acpcore';
-```
-
-<Variant platform="flutter" task="add" repeat="3"/>
-
-#### Dart
-
-Import the Lifecycle extension
-
-```dart
-import 'package:flutter_acpcore/flutter_acplifecycle.dart';
-``` --->
-
-<Variant platform="android" task="register" repeat="8"/>
+<Variant platform="android-kotlin" task="register" repeat="4"/>
 
 #### Kotlin
 
-Register the Lifecycle extension in your app's Application class:
+Register the Lifecycle extension in your app's `Application` class:
 
 ```kotlin
 import com.adobe.marketing.mobile.MobileCore
@@ -85,9 +75,11 @@ override fun onCreate() {
 }
 ```
 
+<Variant platform="android-java" task="register" repeat="4"/>
+
 #### Java
 
-Register the Lifecycle extension in your app's Application class:
+Register the Lifecycle extension in your app's `Application` class:
 
 ```java
 import com.adobe.marketing.mobile.MobileCore;
@@ -108,6 +100,45 @@ public void onCreate() {
   }
 }
 ```
+
+<Variant platform="ios-swift" task="register" repeat="3"/>
+
+Register the Lifecycle extension in the app delegate object's `application(_:didFinishLaunchingWithOptions:)` method:
+
+```swift
+import AEPCore
+import AEPLifecycle
+...
+```
+
+```swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    MobileCore.registerExtensions([Lifecycle.self, ...], {
+        // Any post registration processing
+    }
+}
+```
+
+<Variant platform="ios-objc" task="register" repeat="3"/>
+
+Register the Lifecycle extension in the app delegate object's `application:didFinishLaunchingWithOptions:` method:
+
+```objectivec
+@import AEPCore;
+@import AEPLifecycle;
+...
+```
+
+```objectivec
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+[AEPMobileCore registerExtensions:@[AEPMobileLifecycle.class, ...] completion:^{
+    // Any post registration processing
+}];
+return YES;
+}
+```
+
+<!-- ////////////  Android Start Pause Lifecycle /////////// -->
 
 <Variant platform="android-java" task="activity-start-pause" repeat="5"/>
 
@@ -161,6 +192,8 @@ import com.adobe.marketing.mobile.Lifecycle
     }
 ```
 
+<!-- ///////////// Additional Context Data ////////// -->
+
 <Variant platform="android-java" task="context-data" repeat="1"/>
 
 ```java
@@ -186,6 +219,8 @@ MobileCore.lifecycleStart(additionalContextData: ["myapp.category": "Game"])
 ```objectivec
 [AEPMobileCore lifecycleStart:@{@"myapp.category": @"Game"}];      
 ```
+
+<!-- ///////////  Android Global Lifecycle //////////// -->
 
 <Variant platform="android-java" task="global-lifecycle" repeat="1"/>
 
@@ -267,42 +302,7 @@ override fun onCreate() {
 }
 ```
 
-<Variant platform="ios" task="register" repeat="7"/>
-
-Register the Lifecycle extension in the app delegate object's `application(_:didFinishLaunchingWithOptions:)` method:
-
-#### Swift
-
-```swift
-import AEPCore
-import AEPLifecycle
-...
-```
-
-```swift
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    MobileCore.registerExtensions([Lifecycle.self, ...], {
-        // Any post registration processing
-    }
-}
-```
-
-#### Objective-C
-
-```objectivec
-@import AEPCore;
-@import AEPLifecycle;
-...
-```
-
-```objectivec
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-[AEPMobileCore registerExtensions:@[AEPMobileLifecycle.class, ...] completion:^{
-    // Any post registration processing
-}];
-return YES;
-}
-```
+<!-- ////////////  iOS Start on Launch /////////// -->
 
 <Variant platform="ios-swift" task="start-lifecycle-didfinishlaunch" repeat="1"/>
 
@@ -331,6 +331,8 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     }];
 }
 ```
+
+<!-- ////////////  iOS Start Pause Lifecycle /////////// -->
 
 <Variant platform="ios-swift" task="start-pause" repeat="6"/>
 
@@ -391,9 +393,3 @@ In iOS 12 and earlier, use the `UIApplicationDelegate` as follows:
     [AEPMobileCore lifecyclePause];
 }
 ```
-
-<!--- <Variant platform="react-native" task="register" repeat="2"/>
-
-**Registering the extension with Core**
-
-When using React Native, registering Lifecycle with Mobile Core should be done in native code which is shown under the Android and iOS (ACP 2.x) tabs. --->
