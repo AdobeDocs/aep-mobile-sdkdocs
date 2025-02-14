@@ -74,8 +74,7 @@ Objective-C
 
 <Tabs query="platform=ios-objc&task=start-lifecycle-didfinishlaunch"/>
 
-
-#### Start and Pause Lifecycle data collection from iOS lifecycle delegate 
+#### Start and Pause Lifecycle data collection from iOS lifecycle delegate
 
 When your app is resuming from the background state, call `lifecycleStart(_:)` from the appropriate delegate object's "will enter foreground" method. When your app enters the background state, call `lifecyclePause()` from the appropriate delegate object's "did enter background" method.
 
@@ -213,4 +212,3 @@ Java
 <InlineAlert variant="info" slots="text"/>
 
 You only need to add this code in your main Activity and any other Activity in which your app may be launched.
-
