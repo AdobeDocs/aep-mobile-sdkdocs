@@ -10,10 +10,6 @@ keywords:
 
 # Lifecycle extension in iOS
 
-<InlineAlert variant="warning" slots="text"/>
-
-In version 4 of the iOS SDK, this implementation was completed automatically.<br/><br/>When upgrading to the Experience Platform SDK, you must add code to continue collecting Lifecycle metrics. For more information, see [Manual Lifecycle Implementation](/src/pages/resources/upgrade-platform-sdks/lifecycle.md).
-
 ## Implementing Lifecycle data collection in iOS
 
 For implementation details, please reference the [implementation guide for Lifecycle](/src/pages/home/base/mobile-core/lifecycle/index.md).
