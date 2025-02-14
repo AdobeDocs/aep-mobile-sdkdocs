@@ -71,53 +71,29 @@ Objective-C
 <Tabs query="platform=ios-objc&task=start-lifecycle-didfinishlaunch"/>
 
 
-#### Start Lifecycle data collection when application enters foreground
+#### Start and Pause Lifecycle data collection from iOS lifecycle delegate 
 
-When your app is resuming from the background state, call `lifecycleStart(_:)` from the appropriate delegate object's "will enter foreground" method.
+When your app is resuming from the background state, call `lifecycleStart(_:)` from the appropriate delegate object's "will enter foreground" method. When your app enters the background state, call `lifecyclePause()` from the appropriate delegate object's "did enter background" method.
 
-* For a scene-based UI, call `lifecycleStart(_:)` from the _UISceneDelegate_'s `sceneWillEnterForeground(_:)` method.
+* For a scene-based UI, call the Lifecycle APIs from the _UISceneDelegate_'s `sceneWillEnterForeground(_:)` and `sceneDidEnterBackground(_:)` methods.
 
-* For all other apps, call `lifecycleStart(_:)` from the _UIApplicationDelegate_'s `applicationWillEnterForeground(_:)` method.
+* For all other apps, call the Lifecycle APIs from the _UIApplicationDelegate_'s `applicationWillEnterForeground(_:)` and `applicationDidEnterBackground(_:)` methods.
 
-* If your application supports both a scene delegate and an app delegate, call `lifecycleStart(_:)` from both delegate objects.
-
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
-
-Swift
-
-<Tabs query="platform=ios-swift&task=willenterforeground"/>
-
-Objective-C
-
-<Tabs query="platform=ios-objc&task=willenterforeground"/>
-
-<InlineAlert variant="info" slots="text"/>
-
-For more information on handling foregrounding applications with Scenes, refer to Apple's documentation [here](https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_foreground)
-
-#### Pause Lifecycle data collection when application enters background
-
-When your app enters the background state, call `lifecyclePause()` from the appropriate delegate object's "did enter background" method.
-
-* For a scene-based UI, call `lifecyclePause()` from the _UISceneDelegate_'s `sceneDidEnterBackground(_:)` method.
-
-* For all other apps, call `lifecyclePause()` from the _UIApplicationDelegate_'s `applicationDidEnterBackground(_:)` method.
-
-* If your application supports both a scene delegate and an app delegate, call `lifecycleStart(_:)` from both delegate objects.
+* If your application supports both a scene delegate and an app delegate, implement the Lifecycle APIs in both delegate objects.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Swift
 
-<Tabs query="platform=ios-swift&task=didenterbackground"/>
+<Tabs query="platform=ios-swift&task=start-pause"/>
 
 Objective-C
 
-<Tabs query="platform=ios-objc&task=didenterbackground"/>
+<Tabs query="platform=ios-objc&task=start-pause"/>
 
 <InlineAlert variant="info" slots="text"/>
 
-For more information on handling applications in the background state with Scenes, refer to Apple's documentation [here](https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_background)
+For more information on handling foreground and background states in applications with Scenes, refer to Apple's documentation on preparing your UI to run in the [foreground](https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_foreground) and [background](https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_background)
 
 #### Start and Pause Lifecycle data collection in SwiftUI
 
