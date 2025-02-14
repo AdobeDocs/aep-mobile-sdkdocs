@@ -100,13 +100,13 @@ For more information on handling foreground and background states in application
 
 #### Start and Pause Lifecycle data collection in SwiftUI
 
-If your pure SwiftUI application does not use an app delegate or scene delegate, you may still use the Lifecycle extension by listening for _scenePhase_ changes.
+If your pure SwiftUI application does not use an app delegate or scene delegate, you may still use the Lifecycle extension by listening for `scenePhase` changes.
 
-1. Register the Lifecycle extension and configure the Mobile SDK from the _App_ class's _init()_ function.
+1. Register the Lifecycle extension and configure the Mobile SDK from the `App` class's `init()` function.
 
-2. Set the _@Environment_ property wrapper to observe the _scenePhase_ variable to read the application's current phase.
+2. Set the `@Environment` property wrapper to observe the `scenePhase` variable to read the application's current phase.
 
-3. Use the _scenePhase_ property in conjunction with `.onChange(of:)` to trigger the Lifecycle APIs when the phase changes between _active_ and _background_.
+3. Use the `scenePhase` property in conjunction with `.onChange(of:)` to trigger the Lifecycle APIs when the phase changes between `.active` and `.background`.
 
 ```swift
 import SwiftUI
