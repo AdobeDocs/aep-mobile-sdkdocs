@@ -26,7 +26,7 @@ The variable is controlled by calls to [lifecyclePause](/src/pages/home/base/mob
 
 <InlineAlert variant="info" slots="text"/>
 
-To ensure accurate session and crash reporting, we recommend calling `MobileCore.lifecycleStart()` in the **onResume()** method of each activity, and `MobileCore.lifecyclePause()` in the **onPause()** method of each activity.<br/><br/>You should not call Lifecycle start and pause APIs from fragments.
+To ensure accurate session and crash reporting, you should call `MobileCore.lifecycleStart()` in the **onResume()** method of each activity, and `MobileCore.lifecyclePause()` in the **onPause()** method of each activity.<br/><br/>You should not call Lifecycle start and pause APIs from fragments.
 
 To understand why this is essential, here is an illustration of the Android activity lifecycle:![](./assets/android/android-crash.png)
 
@@ -42,7 +42,7 @@ This Android lifecycle illustration was created and shared by the [Android Open 
 
 ### How should Fragments be handled?
 
-Fragments have application lifecycle events that are similar to Activities. However, a Fragment cannot be active without being attached to an Activity. It is therefore recommended to implement the Lifecycle APIs from Activities.
+Fragments have application lifecycle events that are similar to Activities. However, a Fragment cannot be active without being attached to an Activity. Therefore, you should implement the Lifecycle APIs from Activities.
 
 ## Further reading
 

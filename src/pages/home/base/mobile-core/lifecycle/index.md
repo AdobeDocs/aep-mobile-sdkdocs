@@ -52,7 +52,7 @@ Objective-C<br/>(iOS)
 
 ## Add Lifecycle start and pause calls
 
-You can start collecting Lifecycle information at any time in your app, but we recommend that you start as soon as your app enters the foreground. This allows Lifecycle metrics to be correctly attributed to all of your users' activities for their current session.
+You can start collecting Lifecycle information at any time in your app, but you should start as soon as your app enters the foreground. This allows Lifecycle metrics to be correctly attributed to all of your users' activities for their current session.
 
 You should pause Lifecycle collection when the user stops using your app. The best time to do this is usually when your app has entered the background.
 
@@ -177,7 +177,7 @@ Java
 
 <InlineAlert variant="info" slots="text"/>
 
-Calling `setApplication(Application)` is only necessary on activities that are entry points for your application. However, setting the application on each Activity has no negative impact and ensures that the SDK always has the necessary reference to your application. We recommend that you call `setApplication(Application)` in each of your activities.
+Calling `setApplication(Application)` is only necessary on activities that are entry points for your application. However, setting the application on each Activity has no negative impact and ensures that the SDK always has the necessary reference to your application. You should call `setApplication(Application)` in each of your activities.
 
 #### Implementing global lifecycle callbacks
 
