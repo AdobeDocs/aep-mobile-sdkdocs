@@ -172,8 +172,19 @@ MobileCore.lifecycleStart(additionalContextData);
 <Variant platform="android-kotlin" task="context-data" repeat="1"/>
 
 ```kotlin
-val additionalContextData = mapOf("myapp.category" to "Game")
-MobileCore.lifecycleStart(additionalContextData)
+MobileCore.lifecycleStart(mapOf("myapp.category" to "Game"))
+```
+
+<Variant platform="ios-swift" task="context-data" repeat="1"/>
+
+```swift
+MobileCore.lifecycleStart(additionalContextData: ["myapp.category": "Game"])
+```
+
+<Variant platform="ios-objc" task="context-data" repeat="1"/>
+
+```objectivec
+[AEPMobileCore lifecycleStart:@{@"myapp.category": @"Game"}];      
 ```
 
 <Variant platform="android-java" task="global-lifecycle" repeat="1"/>

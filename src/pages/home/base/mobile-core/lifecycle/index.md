@@ -166,6 +166,19 @@ struct TestSwiftUIApp: App {
 
 For more information, read the full blog post [Implement Adobe Experience Cloud Mobile Lifecycle Tracking in SwiftUI](https://blog.developer.adobe.com/implement-adobe-experience-cloud-mobile-lifecycle-tracking-in-swiftui-41a8373a55fb).
 
+#### Include additional context data
+
+To include additional data with lifecycle tracking calls, pass an additional parameter to `lifecycleStart(additionalContextData:)` that contains context data:
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Swift
+
+<Tabs query="platform=ios-swift&task=context-data"/>
+
+Objective-C
+
+<Tabs query="platform=ios-objc&task=context-data"/>
 
 ### Lifecycle on Android
 
