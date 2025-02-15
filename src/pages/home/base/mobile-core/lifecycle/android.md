@@ -20,9 +20,9 @@ This information helps you understand how crashes are tracked and the best pract
 
 ### How does crash reporting work?
 
-When Lifecycle data collection is implemented in an application, pausing Lifecycle data collection sets a variable which is persisted in the application. When the application is launched again and Lifecycle data collection is started, if the flag is **not** set then a crash event is reported.
+When Lifecycle data collection is implemented in an application, pausing Lifecycle data collection sets a flag which is persisted in the application. When the application is launched again and Lifecycle data collection is started, if the flag is **not** set then a crash event is reported.
 
-The variable is controlled by calls to [lifecyclePause](/src/pages/home/base/mobile-core/lifecycle/api-reference.md#lifecyclepause) (which sets the flag) and [lifecycleStart](/src/pages/home/base/mobile-core/lifecycle/api-reference.md#lifecyclestart) (which clears the flag).
+The flag is controlled by calls to [lifecyclePause](/src/pages/home/base/mobile-core/lifecycle/api-reference.md#lifecyclepause) (which sets the flag) and [lifecycleStart](/src/pages/home/base/mobile-core/lifecycle/api-reference.md#lifecyclestart) (which clears the flag).
 
 <InlineAlert variant="info" slots="text"/>
 
