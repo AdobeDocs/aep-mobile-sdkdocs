@@ -7,6 +7,14 @@ Keywords:
 
 # Release notes
 
+## February 14, 2025
+
+### iOS Core 5.4.0
+
+* Added new `MobileCore.initialize` APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
+* Fixed issue where in-app message scrolling was disabled when gestures were nil or empty.
+* Allow disabling callback timeout when using `MobileCore.dispatch` API.
+
 ## February 11, 2025
 
 ### iOS Optimize 5.2.1
