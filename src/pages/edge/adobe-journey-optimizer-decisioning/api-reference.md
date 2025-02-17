@@ -53,6 +53,22 @@ iOS
 
 <Tabs query="platform=ios&api=get-propositions"/>
 
+## getPropositionsWithTimeout
+
+This API retrieves the previously fetched propositions for the provided decision scopes from the in-memory extension propositions cache, similar to `getPropositions`. The completion callback is invoked with the decision propositions corresponding to the given decision scopes. If a certain decision scope has not been fetched prior to this API call, it will not be included in the returned propositions.
+
+Additionally, this API allows specifying a timeout for the operation. If the propositions retrieval does not complete within the given timeout, an error is returned, providing improved control over handling delays and ensuring timely application responses.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<Tabs query="platform=android&api=get-propositions-withTimeout"/>
+
+iOS
+
+<Tabs query="platform=ios&api=get-propositions-withTimeout"/>
+
 ## onPropositionsUpdate
 
 This API registers a permanent callback which is invoked whenever the Edge extension dispatches a response event with an `eventType` of `personalization.response`. Additionally, the callback is only invoked if the response event contains at least one valid offer. The personalization response can be triggered by the `updatePropositions` API.
@@ -92,6 +108,12 @@ For details on syntax, usage and availability, refer to [Mobile Core - Reset ide
 
 ## updatePropositions
 
+<InlineAlert variant="warning" slots="header, text1"/>
+
+This API has been deprecated starting in v3.2.2(Android) and v5.2.0(iOS). They will be removed in the next major release of the Optimize SDK.
+
+Use [`Optimize.updatePropositions`](../api-reference.md#updatepropositionswithcompletionhandler) or  [`Optimize.updatePropositions`](../api-reference.md#updatepropositionswithcompletionhandlerandtimeout) APIs instead.
+
 This API dispatches an Event for the Edge network extension to fetch decision propositions, for the provided decision scopes array, from the decisioning services enabled in the Experience Edge. The returned decision propositions are cached in-memory in the Optimize SDK extension and can be retrieved using `getPropositions` API.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
@@ -116,11 +138,31 @@ Completion callback passed to `updatePropositions` supports network timeout and 
 
 Android
 
-<Tabs query="platform=android&api=update-propositions-withError"/>
+<Tabs query="platform=android&api=update-propositions-withCallback"/>
 
 iOS
 
-<Tabs query="platform=ios&api=update-propositions-withError"/>
+<Tabs query="platform=ios&api=update-propositions-withCallback"/>
+
+## updatePropositionsWithCompletionHandlerAndTimeout
+
+This API dispatches an event for the Edge network extension to fetch decision propositions for the provided decision scopes array from the decisioning services enabled in the Experience Edge. Similar to `updatePropositionsWithCompletionHandler`, the returned decision propositions are cached in-memory within the Optimize SDK extension and can be retrieved using the `getPropositions` API.
+
+Additionally, this API allows specifying a completion timeout, ensuring that the operation either completes within the given time frame or returns an error indicating a timeout. This feature provides better control over the responsiveness of the application when interacting with decisioning services.
+
+<InlineAlert variant="help" slots="text"/>
+
+Completion callback passed to `updatePropositions` supports network timeout and fatal errors returned by edge network along with fetched propositions data. The SDK's internal retry mechanism handles the recoverable HTTP errors. As a result, recoverable HTTP errors are not returned through this callback.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<Tabs query="platform=android&api=update-propositions-withCallback-withTimeout"/>
+
+iOS
+
+<Tabs query="platform=ios&api=update-propositions-withCallback-withTimeout"/>
 
 ## Public classes
 

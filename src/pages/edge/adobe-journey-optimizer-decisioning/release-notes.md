@@ -8,6 +8,38 @@ keywords:
 
 # Release notes
 
+## February 11, 2025
+
+### iOS Optimize 5.2.1
+
+* Fixed a bug where JSON object array without key was not getting parsed in Offer class.
+* Added support of checking debug object's eventType and eventSource while processing debug events.
+
+## February 10, 2025
+
+### Android Optimize 3.2.4
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+## February 6, 2025
+
+### Android Optimize 3.2.3
+
+* Added support for the Array type in the JSON structure of Offer Content.
+
+## December 6, 2024
+
+### Android Optimize 3.2.2
+
+* Added timeout (in seconds) parameter to updatePropositions and getPropositions APIs to enable timeout configuration in both the apis ensuring that the operation either completes within the given time frame or returns an error indicating a timeout.
+* Updated getPropositions API to return cached propositions immediately if there are no pending updatePropositions calls for the requested list of decision scopes.
+* Added support for debug events and enabled getPropositions and onPropositionsUpdate to receive Simulated events from Assurance.
+
+### iOS Optimize 5.2.0
+
+* Added timeout (in seconds) parameter to updatePropositions and getPropositions APIs to enable timeout configuration in both the apis ensuring that the operation either completes within the given time frame or returns an error indicating a timeout.
+* Added support for debug events and enabled getPropositions and onPropositionsUpdate to receive Simulated events from Assurance.
+
 ## October 8, 2024
 
 ### Android Optimize 3.1.0

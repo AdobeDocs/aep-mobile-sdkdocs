@@ -8,11 +8,27 @@ keywords:
 
 # Release notes
 
+## February 10, 2025
+
+### Android Assurance 3.0.5
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+## October 29, 2024
+
+### Android Assurance 3.0.4
+
+* Fixed an issue causing incorrect application details to be sent in the `client` event.
+
+### Android Assurance 2.2.2
+
+* Fixed an issue causing incorrect application details to be sent in the `client` event.
+
 ## August 16, 2024
 
 ### Android Assurance 3.0.3
 
-* Removed `app_name` string resource to prevent conflicts with resources defined by the app. 
+* Removed `app_name` string resource to prevent conflicts with resources defined by the app.
 
 ## August 12, 2024
 
@@ -81,7 +97,7 @@ Major version update for [Assurance](https://github.com/adobe/aepsdk-react-nativ
 Major version update for [Adobe Experience Platform Assurance](./index.md) on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
-* The SDK is now compatible with Kotlin 1.5 and higher.
+* The SDK is now compatible with Kotlin 1.8 and higher.
 * Removed deprecated `registerExtension` API. Use the `MobileCore.registerExtensions()` API for registering extensions and initializing the SDK instead.
 * Migrated SDK UI components to Jetpack Compose.
 

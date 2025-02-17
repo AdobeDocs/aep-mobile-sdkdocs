@@ -102,10 +102,6 @@ Adobe Experience Platform Mobile SDK plugin for React Native supports React Nati
 
 <InlineAlert variant="info" slots="text"/>
 
-React Native 0.7x introduced support for a new architecture. We don't yet support the new architecture.
-
-<InlineAlert variant="info" slots="text"/>
-
 Adobe Experience Platform Mobile SDK plugins for React Native are compatible with the [Android](#android) and [iOS](#ios) native libraries. Please refer to the test app for an implementation example [here](https://github.com/adobe/aepsdk-react-native/tree/main/apps).
 
 <InlineAlert variant="warning" slots="text"/>
@@ -126,6 +122,10 @@ If you are currently using the ACP-prefixed React Native libraries, please see [
 | [Places Service](../solution/places/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepplaces.svg?color=green&label=%40adobe%2Freact-native-aepplaces&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepplaces) |
 | [Adobe Target](../solution/adobe-target/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aeptarget.svg?color=green&label=%40adobe%2Freact-native-aeptarget&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aeptarget) |
 | [Adobe Campaign Classic](../solution/adobe-campaign-classic/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepcampaignclassic.svg?color=green&label=%40adobe%2Freact-native-aepcampaignclassic&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepcampaignclassic) |
+
+<InlineAlert variant="info" slots="text"/>
+
+React Native 0.7x introduced support for the new architecture. All SDKs listed above are compatible with the new architecture through the interop layer, except for Adobe Campaign Classic.
 
 Please note that the Adobe Analytics extension is not supported in AEP-prefixed React Native libraries, the Analytics workflows are now supported through Edge or Edge Bridge extensions, see the [guide to migrate to Edge Network](../solution/adobe-analytics/migrate-to-edge-network.md).
 
@@ -165,3 +165,13 @@ Please note that the Adobe Analytics extension is not supported in AEP-prefixed 
 </div>
 
 The Adobe Experience Platform SDK for Roku supports Roku OS 11.0 or later. The project is open sourced in GitHub. For more information, refer to the [aepsdk-roku](https://github.com/adobe/aepsdk-roku) repository.
+
+## Supported Platforms
+
+| Platform | Supported Version |
+|---|---|
+| Android | 5 or later (API levels 21 or later) |
+| iOS | 12 or later |
+| React Native | 0.60.0 or later |
+| Flutter | 2.0.0 or later |
+| Roku | 11.0 or later |

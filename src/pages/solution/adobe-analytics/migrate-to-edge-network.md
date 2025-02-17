@@ -80,7 +80,7 @@ For more details, please refer to the [Consent for Edge Network extension docume
 
 When using Identity for Edge Network extension, the Mobile SDK automatically migrates an existing ECID (previously known as MID) to the new XDM IdentityMap format out of the box. If you are using custom identities with the `syncIdentifier` / `syncIdentifiers` APIs, you should consider migrating your IDs to the XDM format.
 
-The previous Identity for Experience Cloud ID Service extension can be safely removed from the SDK registration process if there are no other extensions which rely on it, such as Target, Campaign and others.
+The previous Identity for Experience Cloud ID Service extension can be safely removed from the SDK registration process if there are no other extensions which depend on it. A list of dependent extensions may be found on the [Identity overview page](../../home/base/mobile-core/identity/index.md).
 
 If you need further assistance, please contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support).
 
@@ -92,9 +92,9 @@ To enable Lifecycle for Edge Network, a rule must be created in the application'
 
 Lifecycle for Edge Network dispatches an [Application Launch (Foreground)](../../home/base/mobile-core/lifecycle/event-reference.md#lifecycle-application-foreground) event on every app launch and an [Application Close (Background)](../../home/base/mobile-core/lifecycle/event-reference.md#lifecycle-application-background) event on every app close. With every app launch and app close being its own event, customers can define user sessions at reporting time instead of needing to change a client-side configuration to determine when sessions start and end.
 
-The Analytics extension includes additional data with every hit sent, such as some Lifecycle data. The Edge Network extension is a general purpose extension handling a variety of use cases. Certain data included in all Analytics hits are no longer supported in the Edge Network. The Lifecycle for Edge Network data is only sent during Lifecycle events.
+The Analytics extension includes additional data with every hit sent, such as some Lifecycle data. The Edge Network extension is a general purpose extension handling a variety of use cases including Messaging, Optimize, and Consent. Certain data included in all Analytics hits are no longer supported in the Edge Network. The Lifecycle for Edge Network data is only sent during Lifecycle events.
 
-For more details, please refer to the [Lifecycle for Edge Network extension documentation](../../edge/lifecycle-for-edge-network/index.md).
+For more details, please refer to the [Lifecycle for Edge Network migration reference](../../edge/lifecycle-for-edge-network/migration-reference.md) and the [Lifecycle for Edge Network extension documentation](../../edge/lifecycle-for-edge-network/index.md).
 
 ## Next steps
 

@@ -8,6 +8,45 @@ keywords:
 
 # Release notes
 
+## February 14, 2025
+
+### iOS Core 5.4.0
+
+* Added new `MobileCore.initialize` APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
+* Fixed issue where in-app message scrolling was disabled when gestures were nil or empty.
+* Allow disabling callback timeout when using `MobileCore.dispatch` API.
+
+## February 10, 2025
+
+### Android Signal 3.0.1
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+### Android Lifecycle 3.0.2
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+### Android Identity 3.0.2
+
+* Added support for the new MobileCore.initialize API introduced in Core.
+
+### Android Core 3.3.0
+
+* Added new `MobileCore.initialize` APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
+* Fixed an issue where certain HTTP request timeouts were incorrectly configured.
+
+## January 16, 2025
+
+### iOS Core 5.3.2
+
+* Fixed an issue where in-app message was not reframed in split screen mode.
+
+## October 16, 2024
+
+### iOS Core 5.3.1
+
+* Updated `responseHttpHeader(forKey:)` in `HttpConnection` struct to ensure case-insensitive header field lookups.
+
 ## October 1, 2024
 
 ### Android Core 3.2.0
@@ -84,7 +123,7 @@ keywords:
 ### Android Core 3.0.1
 
 * Fixed an issue with scrollability in in-app messages with overflowing content.
-* Fixed an issue where the PresentationDelegate was not notified of all URLs opened by an in-app message. 
+* Fixed an issue where the PresentationDelegate was not notified of all URLs opened by an in-app message.
 * Fixed an issue where UI components were not adapting to orientation changes when the activity hosting the composable restricts configuration change.
 * Enhanced error handling in the collectLaunchInfo API to catch exceptions when retrieving bundled data from an Activity.
 * Simplified coroutine scope management in UI services.
@@ -103,7 +142,7 @@ keywords:
 
 ### iOS Core 4.2.4
 
-* Fixed a race condition when accessing sharedStateName inside ExtensionContainer. 
+* Fixed a race condition when accessing sharedStateName inside ExtensionContainer.
 
 ## May 13, 2024
 
@@ -185,7 +224,7 @@ To learn how Apple's privacy related announcements made in WWDC of 2023 affect t
 Major version update for [Signal](./signal/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
-* The SDK is now compatible with Kotlin 1.5 and higher.
+* The SDK is now compatible with Kotlin 1.8 and higher.
 * Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
 * Added an enhancement to prevent network retries when the device's network is offline.
 
@@ -211,7 +250,7 @@ Major version update of Adobe Experience Platform Core Android SDK is live!
 Please note that the current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
-* The SDK is now compatible with Kotlin 1.5 and higher.
+* The SDK is now compatible with Kotlin 1.8 and higher.
 * Migrated UI service to use Jetpack Compose.
 * Removed deprecated `MobileCore.registerExtension(...)` and `MobileCore.start()` APIs. Use the `MobileCore.registerExtensions(...)` API for registering extensions and initializing the SDK instead.
 * Removed `MobileCore.setMessagingDelegate`, `MobileCore.getMessagingDelegate` APIs which were used to control the display of in-app messages. Migrate to `com.adobe.marketing.mobile.services.ui.PresentationDelegate` and use `ServiceProvider.getUIService().setPresentationDelegate` API instead.

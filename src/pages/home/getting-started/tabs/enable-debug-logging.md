@@ -32,6 +32,7 @@ MobileCore.setLogLevel(.debug)
 // [AEPMobileCore setLogLevel:AEPLogLevelWarning];
 // [AEPMobileCore setLogLevel:AEPLogLevelError];
 ```
+
 <!-- 
 <Variant platform="react-native" task="enable" repeat="2"/>
 
@@ -104,7 +105,7 @@ To ensure accurate session and crash reporting, this call must be added to every
    }
 ```
 
-<Variant platform="ios" task="metrics" repeat="16"/>
+<Variant platform="ios" task="metrics" repeat="32"/>
 
 #### Swift
 
