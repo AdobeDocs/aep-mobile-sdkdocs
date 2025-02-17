@@ -14,7 +14,7 @@ This is a feature of the Adobe Experience Platform Assurance which allows the us
 
 1. [Setup and connect](./assurance-for-decisioning.md) ot an Assurance session.
 2. To review the personlization requests and results navigate to ‘Review & Simulate’ tab.
-   Make sure that at least one decision scope has been set up in the mobile application to be able review them. 
+   Make sure that at least one decision scope has been set up in the mobile application and an update request made to be able review them. 
 
 3. In the review tab you can see all personalization requests in the session. If you do not see any request, trigger an update request from the application.
 
@@ -32,7 +32,7 @@ The result of each personalization request is customized for each user based on 
 You can simulate specific experiences served against a scope by following the steps below::
 
 1. Move to the 'Simulate' tab in 'Review & Simulate' section.
-
+   Make sure that at least one decision scope has been set up in the mobile application and an update request made to be able review them. 
    ![](./assets/review-simulate/assurance-simulate-tab.png)
 
 2. There are two ways to select activities that user wants to simulate:
