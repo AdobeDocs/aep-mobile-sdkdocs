@@ -1000,11 +1000,11 @@ public class Offer {
         /**
          * Sets the score for this {@code Offer}.
          *
-         * @param score {@code int} containing {@link Offer} score.
+         * @param score {@code double} containing {@link Offer} score.
          * @return this Offer {@link Builder}
          * @throws UnsupportedOperationException if this method is invoked after {@link Builder#build()}.
          */
-        public Builder setScore(final int score) {...}
+        public Builder setScore(final double score) {...}
 
         /**
         * Sets the schema for this {@code Offer}.
@@ -1068,9 +1068,9 @@ public class Offer {
     /**
      * Gets the {@code Offer} score.
      *
-     * @return {@code int} containing the {@link Offer} score.
+     * @return {@code double} containing the {@link Offer} score.
      */
-    public int getScore() {...}
+    public double getScore() {...}
 
     /**
      * Gets the {@code Offer} schema.
