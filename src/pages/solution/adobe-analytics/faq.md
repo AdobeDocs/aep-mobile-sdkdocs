@@ -27,7 +27,7 @@ If you see SDK identifiers unexpectedly change, try the following fixes to addre
 The metric `Crashes` is computed based on the Lifecycle start and pause API calls implemented in your mobile application. How can you verify if the implementation is correct:
 
 * Ensure that the Lifecycle extension is registered.
-* Verify that both MobileCore APIs `lifecycleStart` and `lifecyclePause` are implemented in the application based on the recommended settings for each platform. See the [guide for registering Lifecycle with MobileCore and adding appropriate start/pause calls](../../home/base/mobile-core/lifecycle/index.md#register-lifecycle-with-mobile-core-and-add-appropriate-startpause-calls).
+* Verify that both MobileCore APIs `lifecycleStart` and `lifecyclePause` are implemented in the application based on the recommended settings for each platform. See the [Lifecycle guide for adding appropriate start/pause calls](/src/pages/home/base/mobile-core/lifecycle/index.md#add-lifecycle-start-and-pause-calls).
 * For more details, see also [Tracking app crashes in iOS](../../home/base/mobile-core/lifecycle/ios.md#tracking-app-crashes-in-ios) and [Android](../../home/base/mobile-core/lifecycle/android.md#tracking-app-crashes-in-android).
 
 ## How are mobile visits different from launches?
