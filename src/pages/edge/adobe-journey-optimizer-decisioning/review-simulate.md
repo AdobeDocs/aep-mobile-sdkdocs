@@ -14,31 +14,31 @@ This is a feature of the Adobe Experience Platform Assurance which allows the us
 
 1. [Setup and connect](./assurance-for-decisioning.md) ot an Assurance session.
 2. To review the personlization requests and results navigate to ‘Review & Simulate’ tab.
-   Make sure that at least one decision scope has been set up in the application to be able review them. 
+   Make sure that at least one decision scope has been set up in the mobile application to be able review them. 
 
 3. In the review tab you can see all personalization requests in the session. If you do not see any request, trigger an update request from the application.
 
    ![](./assets/review-simulate/assurance-review-tab.png)
 
-4. Select any request to see more information about it in the expanded right panel. To see the preview the result, click the ‘Show Returned Content’ button available in the right panel. 
+4. Select any request to see more information about it in the expanded right panel. To see the upstream response, click the ‘Show Returned Content’ button available in the right panel. 
 
    ![](./assets/review-simulate/assurance-result-preview.png)
 
 
 ## Simulate Different Results
 
-The result of each personalization request is customized for each user based on several deciding factors as configured. A unique experience is served for each user. Simulate allows the user to view a different experience then the one they currently serviced.
+The result of each personalization request is customized for each user based on several deciding factors as configured. A unique experience is served for each user. Simulate allows the user to view a different experience then the one they currently served.
 
 You can simulate specific experiences served against a scope by following the steps below::
 
-1. Move to the ‘Simulate’ tab in ‘Review & Simulate’ section.
+1. Move to the 'Simulate' tab in 'Review & Simulate' section.
 
    ![](./assets/review-simulate/assurance-simulate-tab.png)
 
 2. There are two ways to select activities that user wants to simulate:
-   * Locations requested during Session - These are scopes/locations that were requested during the current session. 
-      * Select the scope you want to customize from the dropdown menu. 
-      * Upon Selection, a list of all available experiences related to the selected scope will be shown. 
+   * Locations requested during the session - These are scopes/locations that were requested during the current session. 
+      * Select the scope you want to preview from the dropdown menu. 
+      * Upon selection, a list of all available experiences for the selected scope will be shown. 
       
    ![](./assets/review-simulate/assurance-simulate-options.png)
 
@@ -46,7 +46,7 @@ You can simulate specific experiences served against a scope by following the st
       * Click on **Select specific target activities**
       * A list of available activities will be shown, you may select appropriate workspace and search through the list.
       * Select Activities that you want to simulate and click continue. 
-      * Upon Selection, a list of all available experiences related to the selected scopes will be shown.
+      * Upon Selection, a list of all available experiences for the selected scopes will be shown.
    
    ![](./assets/review-simulate/assurance-simulate-specific.png)
 

@@ -8,11 +8,11 @@ keywords:
 
 # Setting up Decisioning plugins in Assurance
 
-This document shows user how to setup Assurance for Mobile SDK.
+This document shows users how to setup Decisioning plugins in Assurance.
 
 ## Setup
 
-1. To get started you will need Adobe Experience Platform Assurance Extension to be enabled and set up in the application. Follow the instruction provided in [**Assurance Overview**](../../home/base/assurance/index.md) for setup.
+1. To get started you will need Adobe Experience Platform Assurance extension to be installed in your mobile application.. Follow the instruction provided in [**Assurance Overview**](../../home/base/assurance/index.md) for setup.
    
 2. Next, you will need to create an Assurance session and connect to it. You can follow instructions provided in this link to do so - [**Connecting to Assurance**](https://experienceleague.adobe.com/en/docs/experience-platform/assurance/tutorials/using-assurance)
 
@@ -20,7 +20,7 @@ This document shows user how to setup Assurance for Mobile SDK.
 
    ![](./assets/assurance-setup/assurance-connected.png)
 
-3. If you do not see any plugin in the **Assurance sessoin home panel**, make sure that they are properly configured in the panel **Configure** menu.
+3. If you do not see Decisioning plugins in the **Assurance plugins section**, on the left side of the page. Make sure that they are properly configured using the panel **Configure** menu, available at the bottom of the panel.
    * Click on the **Configure** button at the bottom of the panel to edit.
    * Click on **+** icon to show and **-** to hide the plugin from panel.
    * Note that hidden plugins move to the bottom of the list.
