@@ -8,6 +8,21 @@ keywords:
 
 # Release notes
 
+## February 17, 2025
+
+### React Native Optimize 6.1.0
+
+**Bug Fix**
+* **[Breaking Change]** Updated Offer Score data type of  from `Integer` to `Double` .
+
+### Android Optimize 3.3.0
+
+**Bug Fix**
+* **[Breaking Change]** Updated Offer Score data type of  from `Integer` to `Double` .
+
+**Enhancement**
+* Optimize SDK only listens to preview events if it contains `debug` object with `eventType` as `com.adobe.eventType.edge` and `eventSource` as `personalization:decisions`.
+
 ## February 11, 2025
 
 ### iOS Optimize 5.2.1
