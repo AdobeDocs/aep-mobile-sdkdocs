@@ -8,6 +8,18 @@ keywords:
 
 # Release notes
 
+## February 17, 2025
+
+### React Native Optimize 6.1.0
+
+###    Breaking Changes
+* **Offer Score**: Updated data type from `integer` to `double`.
+
+### Android Optimize 3.3.0
+
+* Updated Offer Score data type of  from integer to Double (Breaking Change).
+* Added checks so Optimize SDK only processes the personalisation decision debug events instead of all debug events.
+
 ## February 11, 2025
 
 ### iOS Optimize 5.2.1
