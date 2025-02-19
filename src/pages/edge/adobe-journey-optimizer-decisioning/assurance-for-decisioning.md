@@ -16,6 +16,7 @@ This document shows how to use Assurance to validate decisioning setup, review r
 * [Adobe Experience Platform Assurance extension](../../home/base/assurance/api-reference.md)
 
 ## Tutorials
+
 * [**Setting up Decisioning plugins in Assurance**](./assurance-setup.md)
 * [**Decisioning Validation view**](./optimize-configuration-view.md)
 * [**Decisioning Review & Simulate**](./review-simulate.md)
