@@ -12,15 +12,12 @@ keywords:
 
 ### React Native Optimize 6.1.0
 
-**Bug Fix**
-* **[Breaking Change]** Updated Offer Score data type of  from `Integer` to `Double` .
+* **[Breaking Change]** Updated Offer Score data type of from `Integer` to `Double`.
 
 ### Android Optimize 3.3.0
 
-**Bug Fix**
-* **[Breaking Change]** Updated Offer Score data type of  from `Integer` to `Double` .
+* **[Breaking Change]** Updated Offer Score data type of from `Integer` to `Double`.
 
-**Enhancement**
 * Optimize SDK only listens to preview events if it contains `debug` object with `eventType` as `com.adobe.eventType.edge` and `eventSource` as `personalization:decisions`.
 
 ## February 11, 2025
@@ -86,7 +83,7 @@ keywords:
 
 ### iOS Optimize 5.0.1
 
-* Fixed a crash that happens when `updateProposition` API was called repeatedly. 
+* Fixed a crash that happens when `updateProposition` API was called repeatedly.
 
 ### Android Optimize 3.0.1
 
@@ -96,7 +93,7 @@ keywords:
 
 ### iOS Optimize 4.0.4
 
-* Fixed a crash that happens when `updateProposition` API was called repeatedly. 
+* Fixed a crash that happens when `updateProposition` API was called repeatedly.
 
 ## April 24, 2024
 
