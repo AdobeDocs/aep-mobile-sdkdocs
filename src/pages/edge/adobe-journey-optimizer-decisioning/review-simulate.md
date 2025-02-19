@@ -1,6 +1,6 @@
 ---
 title: Decisioning Review & Simulate
-description: This is a feature of the Adobe Experience Platform Assurance which allows the users to review the content sent to devices for each request and simulate different experiences on the same devices in real time.
+description: This is a feature of Adobe Experience Platform Assurance which allows the users to review the content sent to devices for each request and simulate different experiences on the same devices in real time.
 keywords:
 - Adobe Experience Platform Assurance
 - Review & Simulate Feature Introduction
@@ -8,15 +8,15 @@ keywords:
 
 # Decisioning Review & Simulate
 
-This is a feature of the Adobe Experience Platform Assurance which allows the users to review the content sent to devices for each request and simulate different experiences on the same devices in real time.
+This is a feature of Adobe Experience Platform Assurance which allows the users to review the content sent to devices for each request and simulate different experiences on the same devices in real time.
 
 ## Review Requests and Results
 
-1. [Setup and connect](./assurance-for-decisioning.md) ot an Assurance session.
-2. To review the personlization requests and results navigate to ‘Review & Simulate’ tab.
+1. [Set up and connect](./assurance-for-decisioning.md) to an Assurance session.
+2. Review the personalization requests and results by navigating to the Review and Simulate section.
    Make sure that at least one decision scope has been set up in the mobile application and an update request made to be able review them.
 
-3. In the review tab you can see all personalization requests in the session. If you do not see any request, trigger an update request from the application.
+3. In the Requests tab you can see all personalization requests in the session. If you do not see any requests, call the updatePropositions API from the mobile application.
 
    ![](./assets/review-simulate/assurance-review-tab.png)
 

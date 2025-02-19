@@ -16,7 +16,7 @@ You can use the Decisioning Validation view to check if your mobile application 
 
 To use this view, follow the steps outlined below:
 
-1. [Setup](./assurance-setup.md) an Assurance session
+1. [Set up](./assurance-setup.md) an Assurance session
 2. In the **Assurance Plugin Section**, on left side, select **Validate Setup**
 
 ![Validate Setup](./assets/optimize-configuration-view/optimize-setup-view.png)
