@@ -8,7 +8,7 @@ keywords:
 
 # Setting up Decisioning plugins in Assurance
 
-This document shows users how to set up Assurance to be used with Decisioning Mobile SDK.
+This document shows users how to set up Assurance to be used with Optimize Mobile SDK.
 
 ## Setup
 
@@ -20,7 +20,7 @@ This document shows users how to set up Assurance to be used with Decisioning Mo
 
    ![](./assets/assurance-setup/assurance-connected.png)
 
-3. If you do not see Decisioning plugins in the **Assurance plugins section**, on the left side of the page. Ensure that they are properly configured using the panel **Configure** menu, available at the bottom of the panel.
+3. If you do not see Decisioning plugins in the **Assurance plugins section**, on the left side of the page, Ensure that they are properly configured using the **Configure** button available at the bottom of the panel.
    * Click on the **Configure** button at the bottom of the panel to edit.
    * Click on **+** icon to show and **-** to hide the plugin from panel.
    * Note that hidden plugins move to the bottom of the list.

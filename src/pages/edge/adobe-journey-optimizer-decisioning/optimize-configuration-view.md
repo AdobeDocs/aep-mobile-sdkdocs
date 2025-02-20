@@ -23,7 +23,7 @@ To use this view, follow the steps outlined below:
 
 ## Datastream setup validation
 
-At the top of the Decisioning Validation view, Assurance inspects your current application's datastream to see if Target or Offer Decisioning has been enabled. In order to use optimize, at least one of extensions needs to be enabled inside your datastream.
+At the top of the Decisioning Validation view, Assurance inspects your current application's datastream to see if Target or Offer Decisioning has been enabled. In order to use Optimize SDK, at least one of extensions needs to be enabled inside your datastream.
 
 ![Validate Datastream Section](./assets/optimize-configuration-view/datastream-validation.png)
 
