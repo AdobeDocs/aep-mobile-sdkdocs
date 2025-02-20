@@ -11,7 +11,7 @@ Keywords:
 
 ### iOS Core 5.4.0
 
-* Added new `MobileCore.initialize` APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
+* Added new [`MobileCore.initialize`](../base/mobile-core/api-reference.md#initialize) APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
 * Fixed issue where in-app message scrolling was disabled when gestures were nil or empty.
 * Allow disabling callback timeout when using `MobileCore.dispatch` API.
 
@@ -26,6 +26,7 @@ Keywords:
 
 ### Android BOM 3.8.0
 
+* Starting with this BOM version, AEP SDKs offer simplified initialization. For more information, refer to the [`MobileCore.initialize`](../base/mobile-core/api-reference.md#initialize) API.
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
 <Accordion>
@@ -143,7 +144,7 @@ Keywords:
 
 ### Android Core 3.3.0
 
-* Added new `MobileCore.initialize` APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
+* Added new [`MobileCore.initialize`](../base/mobile-core/api-reference.md#initialize) APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
 * Fixed an issue where certain HTTP request timeouts were incorrectly configured.
 
 ## February 6, 2025
