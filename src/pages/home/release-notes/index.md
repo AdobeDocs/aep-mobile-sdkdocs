@@ -12,6 +12,7 @@ Keywords:
 ### React Native Optimize 6.1.0
 
 * **[Breaking Change]** Updated Offer Score data type from `Integer` to `Double`.
+* To prevent build issues in **6.0.x**, upgrade `@adobe/react-native-aepoptimize` to **6.1.0 or later**.
 
 ### Android BOM 3.9.0
 
