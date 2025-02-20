@@ -12,7 +12,7 @@ keywords:
 
 ### iOS Core 5.4.0
 
-* Added new `MobileCore.initialize` APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
+* Added new [`MobileCore.initialize`](../mobile-core/api-reference.md#initialize) APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
 * Fixed issue where in-app message scrolling was disabled when gestures were nil or empty.
 * Allow disabling callback timeout when using `MobileCore.dispatch` API.
 
@@ -32,7 +32,7 @@ keywords:
 
 ### Android Core 3.3.0
 
-* Added new `MobileCore.initialize` APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
+* Added new [`MobileCore.initialize`](../mobile-core/api-reference.md#initialize) APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
 * Fixed an issue where certain HTTP request timeouts were incorrectly configured.
 
 ## January 16, 2025
