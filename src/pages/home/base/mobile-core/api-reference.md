@@ -169,20 +169,31 @@ This API initializes AEP SDKs by automatically registering all extensions bundle
 
 Two versions of this API are available, which accept **app ID** or **InitOptions**:
 
-- __app ID__: Configures the SDK with the provided mobile property environment ID configured from the Data Collection UI.
-- __InitOptions__: Allow customization of the default initialization behavior. Refer [InitOptions](#initoptions).
-
-This API eliminates the need to register extensions manually using [registerExtensions](#registerextensions) and manage lifecycle tracking with [lifecycleStart](lifecycle/api-reference.md#lifecyclestart) and [lifecyclePause](lifecycle/api-reference.md#lifecyclepause) APIs. 
+* __app ID__: Configures the SDK with the provided mobile property environment ID configured from the Data Collection UI.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
-<Tabs query="platform=android&api=initialize"/>
+<Tabs query="platform=android&api=initialize-appid"/>
 
 iOS
 
-<Tabs query="platform=ios&api=initialize"/>
+<Tabs query="platform=ios&api=initialize-appid"/>
+
+* __InitOptions__: Allow customization of the default initialization behavior. Refer [InitOptions](#initoptions).
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<Tabs query="platform=android&api=initialize-initoptions"/>
+
+iOS
+
+<Tabs query="platform=ios&api=initialize-initoptions"/>
+
+This API eliminates the need to register extensions manually using [registerExtensions](#registerextensions) and manage lifecycle tracking with [lifecycleStart](lifecycle/api-reference.md#lifecyclestart) and [lifecyclePause](lifecycle/api-reference.md#lifecyclepause) APIs.
 
 ## log
 
@@ -526,7 +537,7 @@ The `AEPError` enum shows the errors that can be passed to a completion handler 
 * `case invalidResponse` - There was an invalid response.
 * `case errorExtensionNotInitialized` - The extension is not initialized.
 
-### InitOptions 
+### InitOptions
 
 The InitOptions class defines the options for initializing the AEP SDK. It currently supports the following options:
 

@@ -409,11 +409,9 @@ static func getSdkIdentities(completion: @escaping (String?, Error?) -> Void)
  }];
 ```
 
-<Variant platform="android" api="initialize" repeat="14"/>
+<Variant platform="android" api="initialize-appid" repeat="6"/>
 
-#### Initialize with App ID
-
-##### Java
+#### Java
 
 **Syntax**
 
@@ -423,6 +421,7 @@ static func getSdkIdentities(completion: @escaping (String?, Error?) -> Void)
             @NonNull final String appId,
             @Nullable final AdobeCallback<?> completionCallback) 
 ```
+
 * _application_ The Android Application instance.
 * _appID_ The mobile property environment ID configured from the Data Collection UI.
 * _completionCallback_ An Optional [AdobeCallback](#adobecallback) triggered once initialization is complete.
@@ -441,51 +440,16 @@ public class CoreApp extends Application {
 }
 ```
 
-#### Initialize with InitOptions 
+<Variant platform="ios" api="initialize-appid" repeat="12"/>
 
-##### Java
-
-**Syntax**
-
-```java
-public static void initialize(
-            @NonNull final Application application,
-            @NonNull final InitOptions initOptions,
-            @Nullable final AdobeCallback<?> completionCallback)
-```
-* _application_ The Android Application instance.
-* _initOptions_ The [InitOptions](#initoptions) to configure the SDK.
-* _completionCallback_ An Optional [AdobeCallback](#adobecallback) triggered once initialization is complete.
-
-**Example**
-
-```java
-public class CoreApp extends Application {
-   @Override
-   public void onCreate() {
-      super.onCreate();
-
-      // Use InitOptions to disable automatic lifecycle tracking.
-      InitOptions initOptions = InitOptions.configureWithAppID("ENVIRONMENT_ID")
-      initOptions.lifecycleAutomaticTrackingEnabled = false
-      MobileCore.initialize(this, initOptions, o -> {
-          Log.d(LOG_TAG, "AEP Mobile SDK is initialized");
-      });
-   }
-}
-```
-
-<Variant platform="ios" api="initialize" repeat="26"/>
-
-#### **Initialize with App ID**
-
-##### Swift 
+#### Swift 
 
 **Syntax**
 
 ```swift
 public static func initialize(appId: String, _ completion: (() -> Void)? = nil)
 ```
+
 * _appId_ The mobile property environment ID configured from the Data Collection UI.
 * _completion_ An Optional callback triggered once initialization is complete.
 
@@ -509,6 +473,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 @objc(initializeWithAppId:completion:)
 public static func initialize(appId: String, _ completion: (() -> Void)? = nil) 
 ```
+
 * _appId_ The mobile property environment ID configured from the Data Collection UI.
 * _completion_ An Optional callback triggered once initialization is complete.
 
@@ -524,15 +489,51 @@ public static func initialize(appId: String, _ completion: (() -> Void)? = nil)
 }
 ```
 
-#### Initialize with InitOptions
+<Variant platform="android" api="initialize-initoptions" repeat="6"/>
 
-##### Swift 
+#### Java
+
+**Syntax**
+
+```java
+public static void initialize(
+            @NonNull final Application application,
+            @NonNull final InitOptions initOptions,
+            @Nullable final AdobeCallback<?> completionCallback)
+```
+
+* _application_ The Android Application instance.
+* _initOptions_ The [InitOptions](#initoptions) to configure the SDK.
+* _completionCallback_ An Optional [AdobeCallback](#adobecallback) triggered once initialization is complete.
+
+**Example**
+
+```java
+public class CoreApp extends Application {
+   @Override
+   public void onCreate() {
+      super.onCreate();
+
+      // Use InitOptions to disable automatic lifecycle tracking.
+      InitOptions initOptions = InitOptions.configureWithAppID("ENVIRONMENT_ID")
+      initOptions.lifecycleAutomaticTrackingEnabled = false
+      MobileCore.initialize(this, initOptions, o -> {
+          Log.d(LOG_TAG, "AEP Mobile SDK is initialized");
+      });
+   }
+}
+```
+
+<Variant platform="ios" api="initialize-initoptions" repeat="12"/>
+
+#### Swift 
 
 **Syntax**
 
 ```swift
 public static func initialize(options: InitOptions, _ completion: (() -> Void)? = nil)
 ```
+
 * _options_ The [InitOptions](#initoptions) to configure the SDK.
 * _completion_ An Optional callback triggered once initialization is complete.
 
@@ -560,6 +561,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 @objc(initializeWithOptions:completion:)
 public static func initialize(options: InitOptions, _ completion: (() -> Void)? = nil)        
 ```
+
 * _options_ The [InitOptions](#initoptions) to configure the SDK.
 * _completion_ An Optional callback triggered once initialization is complete.
 
