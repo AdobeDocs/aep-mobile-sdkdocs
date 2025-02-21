@@ -165,6 +165,10 @@ iOS
 
 This API is available starting from Android version 3.3.0 and iOS version 5.4.0. To enable automatic extension registration on Android, use BOM version 3.8.0 or later.
 
+<InlineAlert variant="info" slots="text" />
+
+This API eliminates the need to register extensions manually using [registerExtensions](#registerextensions) and manage lifecycle tracking with [lifecycleStart](lifecycle/api-reference.md#lifecyclestart) and [lifecyclePause](lifecycle/api-reference.md#lifecyclepause) APIs.
+
 This API initializes AEP SDKs by automatically registering all extensions bundled with the application and enabling automatic lifecycle tracking by default. The completion callback is triggered once the SDK is fully initialized, allowing event processing to begin.
 
 Two versions of this API are available, which accept **app ID** or **InitOptions**:
@@ -192,8 +196,6 @@ Android
 iOS
 
 <Tabs query="platform=ios&api=initialize-initoptions"/>
-
-This API eliminates the need to register extensions manually using [registerExtensions](#registerextensions) and manage lifecycle tracking with [lifecycleStart](lifecycle/api-reference.md#lifecyclestart) and [lifecyclePause](lifecycle/api-reference.md#lifecyclepause) APIs.
 
 ## log
 
