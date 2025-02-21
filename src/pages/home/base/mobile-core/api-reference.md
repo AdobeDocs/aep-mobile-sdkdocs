@@ -169,7 +169,7 @@ This API initializes AEP SDKs by automatically registering all extensions bundle
 
 Two versions of this API are available, which accept **app ID** or **InitOptions**:
 
-* __app ID__: Configures the SDK with the provided mobile property environment ID configured from the Data Collection UI.
+* **app ID**: Configures the SDK with the provided mobile property environment ID configured from the Data Collection UI.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -181,7 +181,7 @@ iOS
 
 <Tabs query="platform=ios&api=initialize-appid"/>
 
-* __InitOptions__: Allow customization of the default initialization behavior. Refer [InitOptions](#initoptions).
+* **InitOptions**: Allow customization of the default initialization behavior. Refer [InitOptions](#initoptions).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -486,7 +486,7 @@ You can update the configuration programmatically by passing configuration keys 
 
 ### AdobeCallback
 
-The `AdobeCallback` class provides the interface to receive results when the asynchronous APIs perform the requested action.
+The `AdobeCallback` class (Android) provides the interface to receive results when the asynchronous APIs perform the requested action.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
@@ -512,7 +512,7 @@ iOS
 
 ### AdobeError
 
-The `AdobeError` class shows the errors that can be passed to an `AdobeCallbackWithError`:
+The `AdobeError` class (Android) shows the errors that can be passed to an `AdobeCallbackWithError`:
 
 * `UNEXPECTED_ERROR` - An unexpected error occurred.
 * `CALLBACK_TIMEOUT` - The timeout was met.
@@ -525,7 +525,7 @@ The `AdobeError` class shows the errors that can be passed to an `AdobeCallbackW
 
 ### AEPError
 
-The `AEPError` enum shows the errors that can be passed to a completion handler callback from any API which uses one:
+The `AEPError` enum (iOS) shows the errors that can be passed to a completion handler callback from any API which uses one:
 
 * `case unexpected` - An unexpected error occured.
 * `case callbackTimeout` - The timeout was met.

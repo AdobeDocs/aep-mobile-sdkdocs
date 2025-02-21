@@ -442,7 +442,7 @@ public class CoreApp extends Application {
 
 <Variant platform="ios" api="initialize-appid" repeat="12"/>
 
-#### Swift 
+#### Swift
 
 **Syntax**
 
@@ -526,7 +526,7 @@ public class CoreApp extends Application {
 
 <Variant platform="ios" api="initialize-initoptions" repeat="12"/>
 
-#### Swift 
+#### Swift
 
 **Syntax**
 
