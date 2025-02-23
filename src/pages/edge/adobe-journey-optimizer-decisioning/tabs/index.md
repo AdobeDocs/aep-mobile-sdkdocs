@@ -99,7 +99,7 @@ public class MainApp extends Application {
 
         MobileCore.registerExtensions(
             Arrays.asList(Edge.EXTENSION, Identity.EXTENSION, Optimize.EXTENSION),
-            o -> Log.d("MainApp", "Adobe Journey Optimizer - Decisioning Mobile SDK was initialized.")
+            o -> Log.d("MainApp", "Adobe Journey Optimizer - Optimize Mobile SDK was initialized.")
         );
     }
 }
