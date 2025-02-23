@@ -409,6 +409,178 @@ static func getSdkIdentities(completion: @escaping (String?, Error?) -> Void)
  }];
 ```
 
+<Variant platform="android" api="initialize-appid" repeat="6"/>
+
+#### Java
+
+**Syntax**
+
+```java
+ public static void initialize(
+            @NonNull final Application application,
+            @NonNull final String appId,
+            @Nullable final AdobeCallback<?> completionCallback) 
+```
+
+* _application_ The Android Application instance.
+* _appID_ The mobile property environment ID configured from the Data Collection UI.
+* _completionCallback_ An Optional [AdobeCallback](#adobecallback) triggered once initialization is complete.
+
+**Example**
+
+```java
+public class CoreApp extends Application {
+   @Override
+   public void onCreate() {
+      super.onCreate();
+      MobileCore.initialize(this, "ENVIRONMENT_ID", o -> {
+          Log.d(LOG_TAG, "AEP Mobile SDK is initialized");
+      });
+   }
+}
+```
+
+<Variant platform="ios" api="initialize-appid" repeat="12"/>
+
+#### Swift
+
+**Syntax**
+
+```swift
+public static func initialize(appId: String, _ completion: (() -> Void)? = nil)
+```
+
+* _appId_ The mobile property environment ID configured from the Data Collection UI.
+* _completion_ An Optional callback triggered once initialization is complete.
+
+**Example**
+
+```swift
+// AppDelegate.swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+  MobileCore.initialize(appId: "ENVIRONMENT_ID") {
+      print("AEP Mobile SDK is initialized")
+  }
+  ...
+}
+```
+
+#### Objective-C
+
+**Syntax**
+
+```objc
+@objc(initializeWithAppId:completion:)
+public static func initialize(appId: String, _ completion: (() -> Void)? = nil) 
+```
+
+* _appId_ The mobile property environment ID configured from the Data Collection UI.
+* _completion_ An Optional callback triggered once initialization is complete.
+
+**Example**
+
+```objc
+// AppDelegate.m
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  [AEPMobileCore initializeWithAppId:@"ENVIRONMENT_ID" completion:^{
+      NSLog(@"AEP Mobile SDK is initialized");
+  }];
+  ...
+}
+```
+
+<Variant platform="android" api="initialize-initoptions" repeat="6"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void initialize(
+            @NonNull final Application application,
+            @NonNull final InitOptions initOptions,
+            @Nullable final AdobeCallback<?> completionCallback)
+```
+
+* _application_ The Android Application instance.
+* _initOptions_ The [InitOptions](#initoptions) to configure the SDK.
+* _completionCallback_ An Optional [AdobeCallback](#adobecallback) triggered once initialization is complete.
+
+**Example**
+
+```java
+public class CoreApp extends Application {
+   @Override
+   public void onCreate() {
+      super.onCreate();
+
+      // Use InitOptions to disable automatic lifecycle tracking.
+      InitOptions initOptions = InitOptions.configureWithAppID("ENVIRONMENT_ID")
+      initOptions.lifecycleAutomaticTrackingEnabled = false
+      MobileCore.initialize(this, initOptions, o -> {
+          Log.d(LOG_TAG, "AEP Mobile SDK is initialized");
+      });
+   }
+}
+```
+
+<Variant platform="ios" api="initialize-initoptions" repeat="12"/>
+
+#### Swift
+
+**Syntax**
+
+```swift
+public static func initialize(options: InitOptions, _ completion: (() -> Void)? = nil)
+```
+
+* _options_ The [InitOptions](#initoptions) to configure the SDK.
+* _completion_ An Optional callback triggered once initialization is complete.
+
+**Example**
+
+```swift
+// AppDelegate.swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+  // Use InitOptions to disable automatic lifecycle tracking.
+  let options = InitOptions(appId: "ENVIRONMENT_ID")
+  options.lifecycleAutomaticTrackingEnabled = false
+
+  MobileCore.initialize(options: options) {
+      print("AEP Mobile SDK is initialized")
+  }
+  ...
+}
+```
+
+#### Objective-C
+
+**Syntax**
+
+```objc
+@objc(initializeWithOptions:completion:)
+public static func initialize(options: InitOptions, _ completion: (() -> Void)? = nil)        
+```
+
+* _options_ The [InitOptions](#initoptions) to configure the SDK.
+* _completion_ An Optional callback triggered once initialization is complete.
+
+**Example**
+
+```objc
+// AppDelegate.m
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Use InitOptions to disable automatic lifecycle tracking.
+    AEPInitOptions *options = [[AEPInitOptions alloc] initWithAppId:@"ENVIRONMENT_ID"];
+    options.lifecycleAutomaticTrackingEnabled = NO;
+
+    [AEPMobileCore initializeWithOptions:options completion:^{
+        NSLog(@"AEP Mobile SDK is initialized");
+    }];
+    ...
+}
+```
+
 <Variant platform="android" api="log" repeat="11"/>
 
 This API was deprecated in v2.0.0 of the Mobile Core extension. Use the `com.adobe.marketing.mobile.services.Log` instead.
@@ -1380,13 +1552,9 @@ Future<void> trackState (String state, {Map<String, String> contextData});
 FlutterACPCore.trackState("state name",  data: {"key1: "value"})
 ``` --->
 
-<Variant platform="android" api="public-classes" repeat="13"/>
+<Variant platform="android" api="adobe-callback" repeat="2"/>
 
 #### Java
-
-#### AdobeCallback
-
-The `AdobeCallback` class provides the interface to receive results when the asynchronous APIs perform the requested action.
 
 ```java
 public interface AdobeCallback<T> {    
@@ -1394,82 +1562,11 @@ public interface AdobeCallback<T> {
 }
 ```
 
-#### AdobeCallbackWithError
+<Variant platform="ios" api="adobe-callback-with-error" repeat="6"/>
 
-The `AdobeCallbackWithError` class provides the interface to receive results or an error when the asynchronous APIs perform the requested action.
-
-When using this class, if the request cannot be completed within the default timeout or an unexpected error occurs, the request is stopped and the fail method is called with the corresponding `AdobeError`.
-
-```java
-public interface AdobeCallbackWithError<T> extends AdobeCallback<T> {
-    void fail(final AdobeError error);
-}
-```
-
-#### AdobeError
-
-The `AdobeError` class shows the errors that can be passed to an `AdobeCallbackWithError`:
-
-* `UNEXPECTED_ERROR` - An unexpected error occurred.
-* `CALLBACK_TIMEOUT` - The timeout was met.
-* `CALLBACK_NULL` - The provided callback function is null.
-* `EXTENSION_NOT_INITIALIZED` - The extension is not initialized.
-* `SERVER_ERROR` - There was a server error.
-* `NETWORK_ERROR` - There was a network error.
-* `INVALID_REQUEST` - There was an invalid request.
-* `INVALID_RESPONSE` - There was an invalid response.
+#### Swift
 
 **Example**
-
-```java
-MobileCore.getPrivacyStatus(new AdobeCallbackWithError<MobilePrivacyStatus>() {
-  @Override
-  public void fail(final AdobeError error) {
-    if (error == AdobeError.UNEXPECTED_ERROR) {
-      // handle unexpected error
-    } else if (error == AdobeError.CALLBACK_TIMEOUT) {
-      // handle timeout error
-    } else if (error == AdobeError.CALLBACK_NULL) {
-      // handle null callback error
-    } else if (error == AdobeError.EXTENSION_NOT_INITIALIZED) {
-      // handle extension not initialized error
-    } else if (error == AdobeError.SERVER_ERROR) {
-      // handle server error
-    } else if (error == AdobeError.NETWORK_ERROR) {
-      // handle network error
-    } else if (error == AdobeError.INVALID_REQUEST) {
-      // handle invalid request error
-    } else if (error == AdobeError.INVALID_RESPONSE) {
-      // handle invalid response error
-    }
-  }
-
-  @Override
-  public void call(final MobilePrivacyStatus value) {
-    // use MobilePrivacyStatus value
-  }
-});
-```
-
-<Variant platform="ios" api="public-classes" repeat="8"/>
-
-#### AEPError
-
-The `AEPError` enum shows the errors that can be passed to a completion handler callback from any API which uses one:
-
-* `case unexpected` - An unexpected error occured.
-* `case callbackTimeout` - The timeout was met.
-* `case callbackNil` -  The provided callback function is nil.
-* `case none` -  There was no error, used when an error return type is required but there was no error.
-* `case serverError` - There was a server error.
-* `case networkError` - There was a network error.
-* `case invalidRequest` - There was an invalid request.
-* `case invalidResponse` - There was an invalid response.
-* `case errorExtensionNotInitialized` - The extension is not initialized.
-
-**Example**
-
-**Swift**
 
 ```swift
 MobileCore.getSdkIdentities { (content, error) in
@@ -1501,7 +1598,9 @@ MobileCore.getSdkIdentities { (content, error) in
 }
 ```
 
-**Objective-C**
+#### Objective-C
+
+**Example**
 
 ```objectivec
 [AEPMobileCore getSdkIdentities:^(NSString * _Nullable content, NSError * _Nullable error) {
@@ -1526,7 +1625,50 @@ MobileCore.getSdkIdentities { (content, error) in
           // handle extension not intialized error  
         }
     }
-
     ...
 }];
+```
+
+<Variant platform="android" api="adobe-callback-with-error" repeat="6"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public interface AdobeCallbackWithError<T> extends AdobeCallback<T> {
+    void fail(final AdobeError error);
+}
+```
+
+**Example**
+
+```java
+MobileCore.getPrivacyStatus(new AdobeCallbackWithError<MobilePrivacyStatus>() {
+  @Override
+  public void fail(final AdobeError error) {
+    if (error == AdobeError.UNEXPECTED_ERROR) {
+      // handle unexpected error
+    } else if (error == AdobeError.CALLBACK_TIMEOUT) {
+      // handle timeout error
+    } else if (error == AdobeError.CALLBACK_NULL) {
+      // handle null callback error
+    } else if (error == AdobeError.EXTENSION_NOT_INITIALIZED) {
+      // handle extension not initialized error
+    } else if (error == AdobeError.SERVER_ERROR) {
+      // handle server error
+    } else if (error == AdobeError.NETWORK_ERROR) {
+      // handle network error
+    } else if (error == AdobeError.INVALID_REQUEST) {
+      // handle invalid request error
+    } else if (error == AdobeError.INVALID_RESPONSE) {
+      // handle invalid response error
+    }
+  }
+
+  @Override
+  public void call(final MobilePrivacyStatus value) {
+    // use MobilePrivacyStatus value
+  }
+});
 ```
