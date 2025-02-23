@@ -8,7 +8,7 @@ keywords:
 
 # Setting up Decisioning plugins in Assurance
 
-This document shows users how to set up Assurance to be used with Optimize Mobile SDK.
+This document shows users how to set up Assurance to be used with the Optimize Mobile SDK.
 
 ## Setup
 

@@ -9,7 +9,7 @@ keywords:
 
 # Validation and Preview using Assurance
 
-This document shows how to use Assurance to validate decisioning setup, review requests and results, and simulate different results.
+This document shows you how to use Assurance to validate decisioning setup, review requests and results, and simulate different results.
 
 ## Assurance Reference
 
