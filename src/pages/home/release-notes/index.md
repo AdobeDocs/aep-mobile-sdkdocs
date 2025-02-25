@@ -7,6 +7,15 @@ Keywords:
 
 # Release notes
 
+## February 24, 2025
+
+### iOS Notification Content Extension 5.0.2
+
+## What's Changed
+
+* Version 5.0.2 to main (#81) @PravinPK
+* v5.0.2 - Dev -  Expose click handling to classes subclassing AEPNotificationViewController (#80) @PravinPK
+
 ## February 17, 2025
 
 ### React Native Optimize 6.1.0
