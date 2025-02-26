@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## February 25, 2025
+
+### Android Assurance 3.0.6
+
+* Fixed an issue that prevented a connection error message from being displayed.
+
 ## February 10, 2025
 
 ### Android Assurance 3.0.5
