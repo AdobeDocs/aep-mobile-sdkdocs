@@ -45,6 +45,7 @@ When multiple POIs are simultaneously in the entered state, they are evaluated i
 ### Entered state
 
 A POI is in the entered state when either:
+
 * An entry signal is sent using the [`processRegionEvent`](/src/pages/solution/places/api-reference.md#processregionevent) API on iOS or the [`processGeofence`](/src/pages/solution/places/api-reference.md#processgeofence) and [`processGeofenceEvent`](/src/pages/solution/places/api-reference.md#processgeofenceevent) APIs on Android.  
 * The [`getNearbyPointsOfInterest`](/src/pages/solution/places/api-reference.md#getnearbypointsofinterest) API is called, and the entered state flag is set for the POI in the response from the Places API.  
 
