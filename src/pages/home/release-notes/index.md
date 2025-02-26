@@ -7,6 +7,71 @@ Keywords:
 
 # Release notes
 
+## February 25, 2025
+
+### Android BOM 3.9.1
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.9.0) | BOM (3.9.1) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:assurance** | **3.0.5** | **3.0.6**|
+| **com.adobe.marketing.mobile:campaign** | **3.0.2** | **3.0.3**|
+| **com.adobe.marketing.mobile:core** | **3.3.0** | **3.3.1**|
+| **com.adobe.marketing.mobile:edge** | **3.0.1** | **3.0.2**|
+| **com.adobe.marketing.mobile:target** | **3.0.1** | **3.0.2**|
+| com.adobe.marketing.mobile:analytics | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:audience | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.3 | 3.1.3 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:identity | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:media | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:messaging | 3.3.1 | 3.3.1 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:optimize | 3.3.0 | 3.3.0 |
+| com.adobe.marketing.mobile:places | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Edge 3.0.2
+
+* Added support for recoverable error codes from Edge Network.
+
+### Android Core 3.3.1
+
+* Allow disabling callback timeout when using `MobileCore.dispatch` API.
+* Restrict override `FloatingButton` presentable with app theme.
+
+### Android Target 3.0.2
+
+* Added null checks to prevent crashes caused by unhandled exceptions in user callbacks.
+
+### Android Campaign Standard 3.0.3
+
+* Added null checks to prevent crashes on extension registration.
+
+### Android Assurance 3.0.6
+
+* Fixed an issue that prevented a connection error message from being displayed.
+
+## February 24, 2025
+
+### iOS Notification Content Extension 5.0.2
+
+* Added support for custom URL handling for click interactions in notification templates.
+
 ## February 17, 2025
 
 ### React Native Optimize 6.1.0
