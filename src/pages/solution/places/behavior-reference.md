@@ -30,7 +30,7 @@ To modify this value, use the `places.membershipttl` key. For additional details
 
 ## Places states
 
-There are three primary Places states: Current POI, Last Entered POI, and Last Exited POI. These states are also stored in device persistence and carry across app sessions. In a tags mobile property, rules can define Places conditions based on these states. Scenarios illustrating how these states change are provided in the [Scenarios](#scenarios) section.
+There are three primary Places states: Current POI, Last Entered POI, and Last Exited POI. These states are also stored in device persistence and carry across app sessions. In an Adobe Data Collection tags mobile property, rules can define Places conditions based on these states. Scenarios illustrating how these states change are provided in the [Scenarios](#scenarios) section.
 
 ### Current POI
 
@@ -44,12 +44,15 @@ When multiple POIs are simultaneously in the entered state, they are evaluated i
 
 ### Entered state
 
-A POI is in the entered state when an entry signal is sent using the [`processRegionEvent`](/src/pages/solution/places/api-reference.md#processregionevent) API on iOS or the [`processGeofence`](/src/pages/solution/places/api-reference.md#processgeofence) and [`processGeofenceEvent`](/src/pages/solution/places/api-reference.md#processgeofenceevent) APIs on Android.
+A POI is in the entered state when either:
+* An entry signal is sent using the [`processRegionEvent`](/src/pages/solution/places/api-reference.md#processregionevent) API on iOS or the [`processGeofence`](/src/pages/solution/places/api-reference.md#processgeofence) and [`processGeofenceEvent`](/src/pages/solution/places/api-reference.md#processgeofenceevent) APIs on Android.  
+* The [`getNearbyPointsOfInterest`](/src/pages/solution/places/api-reference.md#getnearbypointsofinterest) API is called, and the entered state flag is set for the POI in the response from the Places API.  
+
 POIs remain in the entered state across app sessions until one of the following occurs:
 
-1. An exit signal is sent for the POI using the [`processRegionEvent`](/src/pages/solution/places/api-reference.md#processregionevent) API on iOS or the [`processGeofence`](/src/pages/solution/places/api-reference.md#processgeofence) and [`processGeofenceEvent`](/src/pages/solution/places/api-reference.md#processgeofenceevent) APIs on Android.  
-2. The membership time to live value expires.  
-3. The entered state is recalculated for all received POIs using the lat/lon provided when calling the [`getNearbyPointsOfInterest`](/src/pages/solution/places/api-reference.md#getnearbypointsofinterest) API.  
+* An exit signal is sent for the POI using the [`processRegionEvent`](/src/pages/solution/places/api-reference.md#processregionevent) API on iOS or the [`processGeofence`](/src/pages/solution/places/api-reference.md#processgeofence) and [`processGeofenceEvent`](/src/pages/solution/places/api-reference.md#processgeofenceevent) APIs on Android.  
+* The membership time to live value expires.  
+* The POI does not have the entered state flag set when calling the [`getNearbyPointsOfInterest`](/src/pages/solution/places/api-reference.md#getnearbypointsofinterest) API.  
 
 Even with a correct geofence and Places API implementation, device operating systems may not provide geofence exit signals for various reasons, which can impact the final Places state.
 
