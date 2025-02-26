@@ -8,6 +8,21 @@ keywords:
 
 # Release notes
 
+## February 25, 2025
+
+### Android Core 3.3.1
+
+* Allow disabling callback timeout when using `MobileCore.dispatch` API.
+* Restrict override `FloatingButton` presentable with app theme.
+
+## February 14, 2025
+
+### iOS Core 5.4.0
+
+* Added new [`MobileCore.initialize`](../mobile-core/api-reference.md#initialize) APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
+* Fixed issue where in-app message scrolling was disabled when gestures were nil or empty.
+* Allow disabling callback timeout when using `MobileCore.dispatch` API.
+
 ## February 10, 2025
 
 ### Android Signal 3.0.1
@@ -24,7 +39,7 @@ keywords:
 
 ### Android Core 3.3.0
 
-* Added new `MobileCore.initialize` APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
+* Added new [`MobileCore.initialize`](../mobile-core/api-reference.md#initialize) APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
 * Fixed an issue where certain HTTP request timeouts were incorrectly configured.
 
 ## January 16, 2025
