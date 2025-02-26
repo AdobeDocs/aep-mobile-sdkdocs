@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## February 25, 2025
+
+### Android Edge 3.0.2
+
+* Added support for recoverable error codes from Edge Network.
+
 ## February 10, 2025
 
 ### Android Edge 3.0.1
