@@ -61,11 +61,30 @@ Additionally, the installation instructions in the mobile property will be refre
 
 You should always update to the latest version to access new features and show installation instructions for the latest major releases. You can upgrade extensions within the mobile property safely, as updates are backward compatible and won't affect apps already using the published configuration.
 
-## How often should I upgrade Adobe Experience Platform SDKs in the mobile apps?
+## How often should I upgrade Adobe Experience Platform SDKs in mobile apps?  
 
-You should promptly update to the latest major version of Adobe Experience Platform SDKs upon their release. Once you're on the latest version, maintaining a regular update cadence for patch versions ensures your app stays current with the latest enhancements and fixes.
+You should promptly update to the latest major version of Adobe Experience Platform SDKs upon their release. Once you're on the latest version, maintaining a regular update cadence for patch versions ensures your app stays current with the latest enhancements and fixes.  
 
-We release major versions of Adobe Experience Platform SDKs when significant updates are needed for underlying platforms, such as increasing the minimum deployment target in iOS or the minimum API level in Android. Minor and patch updates focus on critical bug fixes and enhancements without introducing breaking changes. All Adobe-provided Mobile SDK extensions within the same major version are fully compatible with each other.
+We release major versions of Adobe Experience Platform SDKs when significant updates are needed for underlying platforms, such as increasing the minimum deployment target in iOS or the minimum API level in Android. Minor and patch updates focus on critical bug fixes and enhancements without introducing breaking changes. All Adobe-provided Mobile SDK extensions within the same major version are fully compatible with each other.  
+
+## Are you facing an Android build error in the React Native Optimize wrapper?  
+
+If you have started facing the following error in your  `@adobe/react-native-aepoptimize` package  
+
+> **Error:**  
+>  
+> ```plaintext
+> TestReactNativeApp/node_modules/@adobe/react-native-aepoptimize/android/src/main/java/com/adobe/marketing/mobile/reactnative/optimize/RCTAEPOptimizeUtil.java:75: error: incompatible types: possible lossy conversion from double to int
+>     offerWritableMap.putInt("score", offer.getScore());
+> ```  
+
+To resolve this issue, upgrade your `@adobe/react-native-aepoptimize` wrapper to **version 6.1.0 or later** to address the double to int lossy conversion. This issue arises due to a **breaking change** in the Android `optimize` package.
+
+For more details, refer to:  
+
+* [Adobe SDK Release Notes](https://developer.adobe.com/client-sdks/home/release-notes/)  
+* [Android Optimize Release Notes](https://github.com/adobe/aepsdk-optimize-android/releases/tag/v3.3.0)  
+* [React Native Optimize Release Notes](https://github.com/adobe/aepsdk-react-native/releases/tag/%40adobe%2Freact-native-aepoptimize%406.1.0)  
 
 ## General implementation and migration
 
