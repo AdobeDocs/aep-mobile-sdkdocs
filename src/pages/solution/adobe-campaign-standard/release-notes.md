@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## February 25, 2025
+
+### Android Campaign Standard 3.0.3
+
+* Added null checks to prevent crashes on extension registration.
+
 ## February 10, 2025
 
 ### Android Campaign Standard 3.0.2
