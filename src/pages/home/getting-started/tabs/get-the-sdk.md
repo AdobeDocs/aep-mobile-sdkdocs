@@ -90,9 +90,90 @@ Save the `Podfile` and run install:
 pod install
 ```
 
-<Variant platform="android" task="add-initialization" repeat="5"/>
+<Variant platform="android-java" task="add-simplified-initialization" repeat="2"/>
 
-After you register the extensions, call the `start` API in Mobile Core to initialize the SDK as shown below. This step is required to boot up the SDK for event processing. The following code snippet is provided as a sample reference.
+#### Java
+
+```java
+import com.adobe.marketing.mobile.LoggingMode;
+import com.adobe.marketing.mobile.MobileCore;
+...
+import android.app.Application;
+...
+public class MainApp extends Application {
+  ...
+  @Override
+  public void on Create(){
+    super.onCreate();
+    MobileCore.setLogLevel(LoggingMode.DEBUG);
+    MobileCore.initialize(this, "<your_environment_file_id>")
+  }
+}
+```
+
+<Variant platform="android-kotlin" task="add-simplified-initialization" repeat="2"/>
+
+#### Kotlin
+
+```kotlin
+import com.adobe.marketing.mobile.LoggingMode
+import com.adobe.marketing.mobile.MobileCore
+...
+import android.app.Application
+...
+
+class MainApp : Application() {
+  ...
+  override fun onCreate() {
+    super.onCreate()
+    MobileCore.setLogLevel(LoggingMode.DEBUG)
+    MobileCore.initialize(this, "<your_environment_file_id>")
+  }
+}
+```
+
+<Variant platform="ios-swift" task="add-simplified-initialization" repeat="2"/>
+
+#### Swift
+
+```swift
+// AppDelegate.swift
+import AEPCore
+import AEPServices
+
+final class AppDelegate: NSObject, UIApplicationDelegate {
+  func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+    MobileCore.setLogLevel(.debug)
+    MobileCore.initialize(appId: "ENVIRONMENT_ID")
+    ...
+  }
+}
+```
+
+<Variant platform="ios-objc" task="add-simplified-initialization" repeat="2"/>
+
+#### Objective-C
+
+```objectivec
+// AppDelegate.m
+#import "AppDelegate.h"
+@import AEPCore;
+@import AEPServices;
+...
+@implementation AppDelegate
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  ...
+  [AEPMobileCore setLogLevel: AEPLogLevelDebug];  
+  [AEPMobileCore initializeWithAppId:@"ENVIRONMENT_ID" completion:^{
+      NSLog(@"AEP Mobile SDK is initialized");
+  }];
+  ...
+  return YES;
+}
+@end
+```
+
+<Variant platform="android-java" task="add-initialization" repeat="2"/>
 
 #### Java
 
@@ -143,62 +224,53 @@ public class MainApp extends Application {
 }
 ```
 
-#### Java (Direct Boot enabled)
+<Variant platform="android-kotlin" task="add-initialization" repeat="2"/>
 
-```java
-import com.adobe.marketing.mobile.AdobeCallback;
-import com.adobe.marketing.mobile.Assurance;
-import com.adobe.marketing.mobile.Edge;
-import com.adobe.marketing.mobile.Extension;
-import com.adobe.marketing.mobile.Identity;
-import com.adobe.marketing.mobile.Lifecycle;
-import com.adobe.marketing.mobile.LoggingMode;
-import com.adobe.marketing.mobile.MobileCore;
-import com.adobe.marketing.mobile.Signal;
-import com.adobe.marketing.mobile.UserProfile;
-import com.adobe.marketing.mobile.edge.consent.Consent;
-import com.adobe.marketing.mobile.edge.identity.Identity;
-import java.util.Arrays;
-import java.util.List;
+#### Kotlin
+
+```kotlin
+import com.adobe.marketing.mobile.AdobeCallback
+import com.adobe.marketing.mobile.Assurance
+import com.adobe.marketing.mobile.Edge
+import com.adobe.marketing.mobile.Extension
+import com.adobe.marketing.mobile.Identity
+import com.adobe.marketing.mobile.Lifecycle
+import com.adobe.marketing.mobile.LoggingMode
+import com.adobe.marketing.mobile.MobileCore
+import com.adobe.marketing.mobile.Signal
+import com.adobe.marketing.mobile.UserProfile
+import com.adobe.marketing.mobile.edge.consent.Consent
+import com.adobe.marketing.mobile.edge.identity.Identity as EdgeIdentity
 ...
-import android.app.Application;
-import androidx.core.os.UserManagerCompat; // Access features in android UserManager in backwards compatible manner 
+import android.app.Application
 ...
 
-public class MainApp extends Application {
+class MainApp : Application() {
   ...
-  @Override
-  public void on Create(){
-    super.onCreate();
-    if(UserManagerCompat.isUserUnlocked(this.getApplicationContext())) {
-      MobileCore.setApplication(this);
-      MobileCore.setLogLevel(LoggingMode.DEBUG);
-      ...
-      List<Class<? extends Extension>> extensions = Arrays.asList(
-        Consent.EXTENSION,
-        Assurance.EXTENSION,
-        com.adobe.marketing.mobile.edge.identity.Identity.EXTENSION,
-        com.adobe.marketing.mobile.Identity.EXTENSION,
-        Edge.EXTENSION,
-        UserProfile.EXTENSION,
-        Lifecycle.EXTENSION,
-        Signal.EXTENSION
-      );
+  override fun onCreate() {
+    super.onCreate()
+    MobileCore.setApplication(this)
+    MobileCore.setLogLevel(LoggingMode.DEBUG)
+    ...
+    val extensions: List<Class<out Extension>> = listOf(
+      Consent.EXTENSION,
+      Assurance.EXTENSION,
+      EdgeIdentity.EXTENSION,
+      Identity.EXTENSION,
+      Edge.EXTENSION,
+      UserProfile.EXTENSION,
+      Lifecycle.EXTENSION,
+      Signal.EXTENSION
+    )
 
-      MobileCore.registerExtensions(extensions, new AdobeCallback () {
-          @Override
-          public void call(Object o) {
-              MobileCore.configureWithAppID("<your_environment_file_id>");
-          }
-      });
-    } 
+    MobileCore.registerExtensions(extensions) { 
+      MobileCore.configureWithAppID("<your_environment_file_id>")
+    }
   }
 }
 ```
 
-<Variant platform="ios" task="add-initialization" repeat="5"/>
-
-For iOS Swift libraries, registration is changed to a single API call (as shown in the snippets below). Calling the`MobileCore.start` API is no longer required.
+<Variant platform="ios-swift" task="add-initialization" repeat="2"/>
 
 #### Swift
 
@@ -241,6 +313,8 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
   }
 }
 ```
+
+<Variant platform="ios-objc" task="add-initialization" repeat="2"/>
 
 #### Objective-C
 
