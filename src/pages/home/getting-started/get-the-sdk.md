@@ -105,7 +105,7 @@ Objective-C<br/>(iOS)
 
 <Tabs query="platform=ios-objc&task=add-simplified-initialization"/>
 
-#### b. Manual Extension Registration using MobileCore.registerExtensions API
+#### b) Manual Extension Registration using MobileCore.registerExtensions API
 
 In older SDK versions, solution extensions must be manually imported and registered with MobileCore using the `MobileCore.registerExtensions` API.
 

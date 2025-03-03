@@ -90,9 +90,7 @@ Save the `Podfile` and run install:
 pod install
 ```
 
-<Variant platform="android-java" task="add-simplified-initialization" repeat="2"/>
-
-#### Java
+<Variant platform="android-java" task="add-simplified-initialization" repeat="1"/>
 
 ```java
 import com.adobe.marketing.mobile.LoggingMode;
@@ -101,19 +99,16 @@ import com.adobe.marketing.mobile.MobileCore;
 import android.app.Application;
 ...
 public class MainApp extends Application {
-  ...
   @Override
   public void on Create(){
     super.onCreate();
     MobileCore.setLogLevel(LoggingMode.DEBUG);
-    MobileCore.initialize(this, "<your_environment_file_id>")
+    MobileCore.initialize(this, "<your_environment_file_id>");
   }
 }
 ```
 
-<Variant platform="android-kotlin" task="add-simplified-initialization" repeat="2"/>
-
-#### Kotlin
+<Variant platform="android-kotlin" task="add-simplified-initialization" repeat="1"/>
 
 ```kotlin
 import com.adobe.marketing.mobile.LoggingMode
@@ -123,7 +118,6 @@ import android.app.Application
 ...
 
 class MainApp : Application() {
-  ...
   override fun onCreate() {
     super.onCreate()
     MobileCore.setLogLevel(LoggingMode.DEBUG)
@@ -132,14 +126,13 @@ class MainApp : Application() {
 }
 ```
 
-<Variant platform="ios-swift" task="add-simplified-initialization" repeat="2"/>
-
-#### Swift
+<Variant platform="ios-swift" task="add-simplified-initialization" repeat="1"/>
 
 ```swift
 // AppDelegate.swift
 import AEPCore
 import AEPServices
+...
 
 final class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
@@ -150,9 +143,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
 }
 ```
 
-<Variant platform="ios-objc" task="add-simplified-initialization" repeat="2"/>
-
-#### Objective-C
+<Variant platform="ios-objc" task="add-simplified-initialization" repeat="1"/>
 
 ```objectivec
 // AppDelegate.m
@@ -162,7 +153,6 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
 ...
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  ...
   [AEPMobileCore setLogLevel: AEPLogLevelDebug];  
   [AEPMobileCore initializeWithAppId:@"ENVIRONMENT_ID" completion:^{
       NSLog(@"AEP Mobile SDK is initialized");
@@ -173,9 +163,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
 @end
 ```
 
-<Variant platform="android-java" task="add-initialization" repeat="2"/>
-
-#### Java
+<Variant platform="android-java" task="add-initialization" repeat="1"/>
 
 ```java
 import com.adobe.marketing.mobile.AdobeCallback;
@@ -196,13 +184,11 @@ import java.util.List;
 import android.app.Application;
 ...
 public class MainApp extends Application {
-  ...
   @Override
   public void on Create(){
     super.onCreate();
     MobileCore.setApplication(this);
     MobileCore.setLogLevel(LoggingMode.DEBUG);
-    ...
     List<Class<? extends Extension>> extensions = Arrays.asList(
       Consent.EXTENSION,
       Assurance.EXTENSION,
@@ -224,9 +210,7 @@ public class MainApp extends Application {
 }
 ```
 
-<Variant platform="android-kotlin" task="add-initialization" repeat="2"/>
-
-#### Kotlin
+<Variant platform="android-kotlin" task="add-initialization" repeat="1"/>
 
 ```kotlin
 import com.adobe.marketing.mobile.AdobeCallback
@@ -246,12 +230,10 @@ import android.app.Application
 ...
 
 class MainApp : Application() {
-  ...
   override fun onCreate() {
     super.onCreate()
     MobileCore.setApplication(this)
     MobileCore.setLogLevel(LoggingMode.DEBUG)
-    ...
     val extensions: List<Class<out Extension>> = listOf(
       Consent.EXTENSION,
       Assurance.EXTENSION,
@@ -262,7 +244,6 @@ class MainApp : Application() {
       Lifecycle.EXTENSION,
       Signal.EXTENSION
     )
-
     MobileCore.registerExtensions(extensions) { 
       MobileCore.configureWithAppID("<your_environment_file_id>")
     }
@@ -270,9 +251,7 @@ class MainApp : Application() {
 }
 ```
 
-<Variant platform="ios-swift" task="add-initialization" repeat="2"/>
-
-#### Swift
+<Variant platform="ios-swift" task="add-initialization" repeat="1"/>
 
 ```swift
 // AppDelegate.swift
@@ -287,12 +266,10 @@ import AEPLifecycle
 import AEPSignal
 import AEPServices
 
-
 final class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
     MobileCore.setLogLevel(.debug)
     let appState = application.applicationState
-    ...
     let extensions = [
                   Consent.self,
                   Assurance.self,
@@ -314,9 +291,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
 }
 ```
 
-<Variant platform="ios-objc" task="add-initialization" repeat="2"/>
-
-#### Objective-C
+<Variant platform="ios-objc" task="add-initialization" repeat="1"/>
 
 ```objectivec
 // AppDelegate.m
@@ -335,7 +310,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   [AEPMobileCore setLogLevel: AEPLogLevelDebug];
-  ...
+  const UIApplicationState appState = application.applicationState;
   NSArray *extensionsToRegister = @[
                                 AEPMobileEdgeConsent.class,
                                 AEPMobileAssurance.class,
@@ -347,7 +322,10 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
                                 AEPMobileSignal.class
                               ];
   [AEPMobileCore registerExtensions:extensionsToRegister completion:^{
-      [AEPMobileCore lifecycleStart:@{@"contextDataKey": @"contextDataVal"}];
+      // only start lifecycle if the application is not in the background
+      if (appState != UIApplicationStateBackground) {
+          [AEPMobileCore lifecycleStart:@{@"contextDataKey": @"contextDataVal"}];
+      }
   }];
   [AEPMobileCore configureWithAppId: @"<your_environment_file_id>"];
   ...
