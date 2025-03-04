@@ -8,6 +8,13 @@ keywords:
 
 # Release notes
 
+## February 25, 2025
+
+### Android Core 3.3.1
+
+* Allow disabling callback timeout when using `MobileCore.dispatch` API.
+* Restrict override `FloatingButton` presentable with app theme.
+
 ## February 14, 2025
 
 ### iOS Core 5.4.0

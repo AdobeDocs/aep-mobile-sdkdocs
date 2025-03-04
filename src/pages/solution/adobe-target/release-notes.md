@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## February 25, 2025
+
+### Android Target 3.0.2
+
+* Added checks to prevent crashes caused by unhandled exceptions in user callbacks.
+
 ## February 10, 2025
 
 ### Android Target 3.0.1
