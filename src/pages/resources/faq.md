@@ -67,7 +67,7 @@ You should promptly update to the latest major version of Adobe Experience Platf
 
 We release major versions of Adobe Experience Platform SDKs when significant updates are needed for underlying platforms, such as increasing the minimum deployment target in iOS or the minimum API level in Android. Minor and patch updates focus on critical bug fixes and enhancements without introducing breaking changes. All Adobe-provided Mobile SDK extensions within the same major version are fully compatible with each other.  
 
-## Are you facing an Android build error in the React Native Optimize wrapper?  
+## How can I resolve the Android build error in the React Native Optimize wrapper?  
 
 If you have started facing the following error in your  `@adobe/react-native-aepoptimize` package  
 
@@ -78,7 +78,7 @@ If you have started facing the following error in your  `@adobe/react-native-aep
 >     offerWritableMap.putInt("score", offer.getScore());
 > ```  
 
-To resolve this issue, upgrade your `@adobe/react-native-aepoptimize` wrapper to **version 6.1.0 or later** to address the double to int lossy conversion. This issue arises due to a **breaking change** in the Android `optimize` package.
+To resolve this issue, address the double-to-int lossy conversion by upgrading your `@adobe/react-native-aepoptimize` wrapper to **version 6.1.0 or later**. This issue arises due to a **breaking change** in the Android `optimize` package.
 
 For more details, refer to:  
 
