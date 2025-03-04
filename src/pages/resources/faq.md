@@ -78,7 +78,7 @@ If you have started facing the following error in your  `@adobe/react-native-aep
 >     offerWritableMap.putInt("score", offer.getScore());
 > ```  
 
-To resolve this issue, address the double-to-int lossy conversion by upgrading your `@adobe/react-native-aepoptimize` wrapper to **version 6.1.0 or later**. This issue arises due to a **breaking change** in the Android `optimize` package.
+You can resolve this issue by upgrading by upgrading your `@adobe/react-native-aepoptimize` wrapper to **version 6.1.0 or later**. This issue arises due to a **breaking change** in the Android `optimize` package.
 
 For more details, refer to:  
 
