@@ -7,6 +7,50 @@ Keywords:
 
 # Release notes
 
+## March 4, 2025
+
+### Flutter Core 5.0.0
+
+* Add `MobileCore.initializeWithAppId` and `MobileCore.initialize` APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
+* Update to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Add Error handling for NSError.
+* Update tests to handle the deprecation warning for `setMockMethodCallHandler`.
+
+### Flutter EdgeConsent 5.0.0
+
+* Update to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Update tests to handle the deprecation warning for `setMockMethodCallHandler`.
+
+### Flutter EdgeIdentity 5.0.0
+
+* Update to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Update tests to handle the deprecation warning for `setMockMethodCallHandler`.
+
+### Flutter EdgeBridge 5.0.0
+
+* Update to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Update tests to handle the deprecation warning for `setMockMethodCallHandler`.
+
+### Flutter Edge 5.0.0
+
+* Update to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Update tests to handle the deprecation warning for `setMockMethodCallHandler`.
+
+### Flutter Messaging 5.0.0
+
+* Update to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Update tests to handle the deprecation warning for `setMockMethodCallHandler`.
+
+### Flutter Assurance 5.0.0
+
+* Update to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Update tests to handle the deprecation warning for `setMockMethodCallHandler`.
+
+### Flutter UserProfile 5.0.0
+
+* Update to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Update tests to handle the deprecation warning for `setMockMethodCallHandler`.
+
 ## February 25, 2025
 
 ### Android BOM 3.9.1
