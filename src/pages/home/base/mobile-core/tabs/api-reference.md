@@ -952,7 +952,7 @@ import android.app.Application;
 public class MainApplication extends Application implements ReactApplication {
   ...
   @Override
-  public void on Create(){
+  public void onCreate(){
     super.onCreate();
     ...
     MobileCore.setApplication(this);
@@ -1340,7 +1340,7 @@ import android.app.Application;
 public class MyApp extends Application {
   ...
   @Override
-  public void on Create(){
+  public void onCreate(){
     super.onCreate();
 
     MobileCore.setApplication(this);
