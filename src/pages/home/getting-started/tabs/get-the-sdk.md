@@ -100,7 +100,7 @@ import android.app.Application;
 ...
 public class MainApp extends Application {
   @Override
-  public void on Create(){
+  public void onCreate(){
     super.onCreate();
     MobileCore.setLogLevel(LoggingMode.DEBUG);
     MobileCore.initialize(this, "<your_environment_file_id>");
@@ -185,7 +185,7 @@ import android.app.Application;
 ...
 public class MainApp extends Application {
   @Override
-  public void on Create(){
+  public void onCreate(){
     super.onCreate();
     MobileCore.setApplication(this);
     MobileCore.setLogLevel(LoggingMode.DEBUG);
@@ -387,7 +387,7 @@ import android.app.Application;
 public class MainApplication extends Application implements ReactApplication {
   ...
   @Override
-  public void on Create(){
+  public void onCreate(){
     super.onCreate();
     ...
     MobileCore.setApplication(this);
