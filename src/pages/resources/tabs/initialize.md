@@ -2,50 +2,22 @@
 noIndex: true
 ---
 
-import Alerts from '/src/pages/resources/alerts.md'
-
-<Variant platform="android-kotlin" task="add" repeat="4"/>
-
-Add the required dependencies to your project by including them in the app's Gradle file.
-
-#### Kotlin
-
-```kotlin
-implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
-implementation("com.adobe.marketing.mobile:core")
-implementation("com.adobe.marketing.mobile:edge")
-implementation("com.adobe.marketing.mobile:edgeidentity")
-```
-
-<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
-
-<Variant platform="android-groovy" task="add" repeat="4"/>
-
-Add the required dependencies to your project by including them in the app's Gradle file.
-
-#### Groovy
+<Variant platform="android-java" task="add-simplified-initialization" repeat="1"/>
 
 ```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
-implementation 'com.adobe.marketing.mobile:core'
-implementation 'com.adobe.marketing.mobile:edge'
-implementation 'com.adobe.marketing.mobile:edgeidentity'
-```
-
-<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
-
-<Variant platform="ios-pods" task="add" repeat="2"/>
-
-Add required dependencies to your project using CocoaPods. Add following pods in your `Podfile`:
-
-```swift
-use_frameworks!
-
-target 'YourTargetApp' do
-  pod 'AEPCore', '~> 5.0'
-  pod 'AEPEdge', '~> 5.0'
-  pod 'AEPEdgeIdentity', '~> 5.0'
-end
+import com.adobe.marketing.mobile.LoggingMode;
+import com.adobe.marketing.mobile.MobileCore;
+...
+import android.app.Application;
+...
+public class MainApp extends Application {
+  @Override
+  public void onCreate(){
+    super.onCreate();
+    MobileCore.setLogLevel(LoggingMode.DEBUG);
+    MobileCore.initialize(this, "ENVIRONMENT_ID");
+  }
+}
 ```
 
 <Variant platform="android-kotlin" task="add-simplified-initialization" repeat="1"/>
@@ -61,7 +33,7 @@ class MainApp : Application() {
   override fun onCreate() {
     super.onCreate()
     MobileCore.setLogLevel(LoggingMode.DEBUG)
-    MobileCore.initialize(this, "<your_environment_file_id>")
+    MobileCore.initialize(this, "ENVIRONMENT_ID")
   }
 }
 ```
