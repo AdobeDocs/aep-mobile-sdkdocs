@@ -4,9 +4,9 @@ noIndex: true
 
 import Alerts from '/src/pages/resources/alerts.md'
 
-<Variant platform="android" task="add" repeat="8"/>
+<Variant platform="android" task="add" repeat="6"/>
 
-1. Add the Mobile Core and Edge extensions to your project using the app's Gradle file.
+Add the Mobile Core and Edge extensions to your project using the app's Gradle file.
 
 #### Kotlin
 
@@ -28,42 +28,16 @@ implementation 'com.adobe.marketing.mobile:edgeidentity'
 
 <Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
-2. Import the Mobile Core and Edge extensions in your application class.
+<Variant platform="ios" task="add" repeat="2"/>
 
-```java
-import com.adobe.marketing.mobile.MobileCore;
-import com.adobe.marketing.mobile.Edge;
-```
-
-<Variant platform="ios" task="add" repeat="7"/>
-
-1. Add the Mobile Core and Edge extensions to your project using CocoaPods. Add following pods in your `Podfile`:
+Add the Mobile Core and Edge extensions to your project using CocoaPods. Add following pods in your `Podfile`:
 
 ```swift
 use_frameworks!
+
 target 'YourTargetApp' do
-pod 'AEPCore', '~> 5.0'
-pod 'AEPEdge', '~> 5.0'
-pod 'AEPEdgeIdentity', '~> 5.0'
+  pod 'AEPCore', '~> 5.0'
+  pod 'AEPEdge', '~> 5.0'
+  pod 'AEPEdgeIdentity', '~> 5.0'
 end
-```
-
-2. Import the Mobile Core and Edge libraries:
-
-#### Swift
-
-```swift
-// AppDelegate.swift
-import AEPCore
-import AEPEdge
-import AEPEdgeIdentity
-```
-
-#### Objective-C
-
-```objectivec
-// AppDelegate.h
-@import AEPCore;
-@import AEPEdge;
-@import AEPEdgeIdentity;
 ```

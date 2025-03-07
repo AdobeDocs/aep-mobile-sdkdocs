@@ -53,7 +53,7 @@ If you have a first-party domain mapped to the Adobe-provisioned Edge Network do
 
 ## Add the Edge Network extension to your app
 
-### Download and import the Edge extension
+### Download the Edge extension
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -65,10 +65,9 @@ iOS
 
 <Tabs query="platform=ios&task=add"/>
 
-### Add SDK Initialization code 
+### Initializing Adobe Experience Platform Edge Network with Mobile Core
 
 You'll need to initialize the SDK by registering the solution extensions as the dependencies in your project with Mobile Core. Refer to the initialization implementation [here](https://developer.adobe.com/client-sdks/home/getting-started/get-the-sdk/#2-add-initialization-code).
-
 
 ## Next steps
 
