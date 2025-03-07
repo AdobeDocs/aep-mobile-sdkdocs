@@ -8,6 +8,17 @@ keywords:
 
 # Release notes
 
+## March 6, 2025
+
+### Android Optimize 3.4.0
+
+* Added capability to configure timeout value for the Update Proposition API via launch tag.
+* Added timeout configs card in test app preferences for switching between update propositions config and custom timeout.
+
+### iOS Optimize 5.3.0
+
+* Added capability to configure timeout value for the `updateProposition` API via launch tag.
+
 ## February 17, 2025
 
 ### React Native Optimize 6.1.0
