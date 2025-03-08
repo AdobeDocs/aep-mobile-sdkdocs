@@ -17,6 +17,3 @@ Swift<br/>(iOS)
 Objective-C<br/>(iOS)
 
 <Tabs query="platform=ios-objc&task=add-simplified-initialization"/>
-
-
-

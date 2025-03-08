@@ -57,7 +57,7 @@ If you have a first-party domain mapped to the Adobe-provisioned Edge Network do
 
 ### Include Edge Network as an app dependency
 
-Add MobileCore, Edge and EdgeIdentity extensions as dependencies to your projct.
+Add MobileCore, Edge and EdgeIdentity extensions as dependencies to your project.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
@@ -77,11 +77,11 @@ CocoaPods<br/>(iOS)
 
 Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](https://developer.adobe.com/client-sdks/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
 
-Using the `MobileCore.initialize` API to initialize the AEP SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
+Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
 
 <Alerts query="platform=initialize-api-version&componentClass=InlineNestedAlert"/>
 
-<Init query="platform=android-ios&componentClass=TabsBlock"/>
+<Init query="componentClass=TabsBlock"/>
 
 ## Next steps
 

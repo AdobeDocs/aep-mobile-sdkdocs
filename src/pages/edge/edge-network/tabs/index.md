@@ -36,7 +36,7 @@ implementation 'com.adobe.marketing.mobile:edgeidentity'
 
 <Variant platform="ios-pods" task="add" repeat="2"/>
 
-Add required dependencies to your project using CocoaPods. Add following pods in your `Podfile`:
+Add the required dependencies to your project using CocoaPods. Add following pods in your `Podfile`:
 
 ```swift
 use_frameworks!
