@@ -32,7 +32,7 @@ Other foundational extensions include the [Consent for Edge Network extension](.
 ### Workflow comparison
 
 ![compare workflows](./assets/index/compareWorkflows.png)
- 
+
 ## Get started with the migration
 
 | Steps  |  Edge Network extension | Edge Bridge extension |
@@ -59,7 +59,7 @@ To learn about the end to end Edge Network extension implementation process, fol
 
 To learn about the end to end Edge Bridge extension implementation process, follow the tutorials below:
 
-* [iOS tutorial](https://github.com/adobe/aepsdk-edgebridge-ios/tree/main/Documentation/tutorials) 
+* [iOS tutorial](https://github.com/adobe/aepsdk-edgebridge-ios/tree/main/Documentation/tutorials)
 * [Android tutorial](https://github.com/adobe/aepsdk-edgebridge-android/tree/main/Documentation/tutorials)
   
 ## Other migration considerations
