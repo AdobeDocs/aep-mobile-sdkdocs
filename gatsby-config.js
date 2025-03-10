@@ -612,6 +612,24 @@ module.exports = {
                                 path: "/edge/adobe-journey-optimizer-decisioning/api-reference"
                             },
                             {
+                                title: "Validation and Preview using Assurance",
+                                path: "/edge/adobe-journey-optimizer-decisioning/assurance-for-decisioning.md",
+                                pages: [
+                                    {
+                                        title: "Setting up Decisioning plugins in Assurance",
+                                        path: "/edge/adobe-journey-optimizer-decisioning/assurance-setup.md"
+                                    },
+                                    {
+                                        title: "Decisioning Validation view",
+                                        path: "/edge/adobe-journey-optimizer-decisioning/optimize-configuration-view.md"
+                                    },
+                                    {
+                                        title: "Decisioning Review & Simulate",
+                                        path: "/edge/adobe-journey-optimizer-decisioning/review-simulate.md"
+                                    }
+                                ]
+                            },
+                            {
                                 title: "Release notes",
                                 path: "/edge/adobe-journey-optimizer-decisioning/release-notes"
                             }
@@ -877,6 +895,10 @@ module.exports = {
                             {
                                 title: "Event forwarding to Adobe Experience Platform",
                                 path: "/solution/places/places-to-platform.md"
+                            },
+                            {
+                                title: "Behavior reference",
+                                path: "/solution/places/behavior-reference.md"
                             },
                             {
                                 title: "Release notes",

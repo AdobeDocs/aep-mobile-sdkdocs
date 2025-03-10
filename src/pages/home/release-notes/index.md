@@ -7,11 +7,168 @@ Keywords:
 
 # Release notes
 
+## March 4, 2025
+
+### Flutter Core 5.0.0
+
+* Add `MobileCore.initializeWithAppId` and `MobileCore.initialize` APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
+* Update to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Add Error handling for NSError.
+* Update tests to handle the deprecation warning for `setMockMethodCallHandler`.
+
+### Flutter EdgeConsent 5.0.0
+
+* Update to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Update tests to handle the deprecation warning for `setMockMethodCallHandler`.
+
+### Flutter EdgeIdentity 5.0.0
+
+* Update to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Update tests to handle the deprecation warning for `setMockMethodCallHandler`.
+
+### Flutter EdgeBridge 5.0.0
+
+* Update to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Update tests to handle the deprecation warning for `setMockMethodCallHandler`.
+
+### Flutter Edge 5.0.0
+
+* Update to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Update tests to handle the deprecation warning for `setMockMethodCallHandler`.
+
+### Flutter Messaging 5.0.0
+
+* Update to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Update tests to handle the deprecation warning for `setMockMethodCallHandler`.
+
+### Flutter Assurance 5.0.0
+
+* Update to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Update tests to handle the deprecation warning for `setMockMethodCallHandler`.
+
+### Flutter UserProfile 5.0.0
+
+* Update to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Update tests to handle the deprecation warning for `setMockMethodCallHandler`.
+
+## February 25, 2025
+
+### Android BOM 3.9.1
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.9.0) | BOM (3.9.1) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:assurance** | **3.0.5** | **3.0.6**|
+| **com.adobe.marketing.mobile:campaign** | **3.0.2** | **3.0.3**|
+| **com.adobe.marketing.mobile:core** | **3.3.0** | **3.3.1**|
+| **com.adobe.marketing.mobile:edge** | **3.0.1** | **3.0.2**|
+| **com.adobe.marketing.mobile:target** | **3.0.1** | **3.0.2**|
+| com.adobe.marketing.mobile:analytics | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:audience | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.3 | 3.1.3 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:identity | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:media | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:messaging | 3.3.1 | 3.3.1 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:optimize | 3.3.0 | 3.3.0 |
+| com.adobe.marketing.mobile:places | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Edge 3.0.2
+
+* Added support for recoverable error codes from Edge Network.
+
+### Android Core 3.3.1
+
+* Allow disabling callback timeout when using `MobileCore.dispatch` API.
+* Restrict override `FloatingButton` presentable with app theme.
+
+### Android Target 3.0.2
+
+* Added checks to prevent crashes caused by unhandled exceptions in user callbacks.
+
+### Android Campaign Standard 3.0.3
+
+* Added null checks to prevent crashes on extension registration.
+
+### Android Assurance 3.0.6
+
+* Fixed an issue that prevented a connection error message from being displayed.
+
+## February 24, 2025
+
+### iOS Notification Content Extension 5.0.2
+
+* Added support for custom URL handling for click interactions in notification templates.
+
+## February 17, 2025
+
+### React Native Optimize 6.1.0
+
+* **[Breaking Change]** Updated Offer Score data type of  from `Integer` to `Double` .
+* To prevent build issues in **6.0.x**, upgrade `@adobe/react-native-aepoptimize` to **6.1.0 or later**.
+
+### Android BOM 3.9.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.8.0) | BOM (3.9.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:optimize** | **3.2.4** | **3.3.0**|
+| com.adobe.marketing.mobile:analytics | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:assurance | 3.0.5 | 3.0.5 |
+| com.adobe.marketing.mobile:audience | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaign | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.3 | 3.1.3 |
+| com.adobe.marketing.mobile:core | 3.3.0 | 3.3.0 |
+| com.adobe.marketing.mobile:edge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:identity | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:media | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:messaging | 3.3.1 | 3.3.1 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:places | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:target | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Optimize 3.3.0
+
+* **[Breaking Change]** Updated Offer Score data type of from `Integer` to `Double`.
+* Optimize SDK only listens to preview events if it contains `debug` object with `eventType` as `com.adobe.eventType.edge` and `eventSource` as `personalization:decisions`.
+
 ## February 14, 2025
 
 ### iOS Core 5.4.0
 
-* Added new `MobileCore.initialize` APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
+* Added new [`MobileCore.initialize`](../base/mobile-core/api-reference.md#initialize) APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
 * Fixed issue where in-app message scrolling was disabled when gestures were nil or empty.
 * Allow disabling callback timeout when using `MobileCore.dispatch` API.
 
@@ -26,6 +183,7 @@ Keywords:
 
 ### Android BOM 3.8.0
 
+* Starting with this BOM version, AEP SDKs offer simplified initialization. For more information, refer to the [`MobileCore.initialize`](../base/mobile-core/api-reference.md#initialize) API.
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
 <Accordion>
@@ -143,7 +301,7 @@ Keywords:
 
 ### Android Core 3.3.0
 
-* Added new `MobileCore.initialize` APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
+* Added new [`MobileCore.initialize`](../base/mobile-core/api-reference.md#initialize) APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
 * Fixed an issue where certain HTTP request timeouts were incorrectly configured.
 
 ## February 6, 2025

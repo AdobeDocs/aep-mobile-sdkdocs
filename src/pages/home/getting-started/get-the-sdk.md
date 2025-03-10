@@ -67,7 +67,7 @@ iOS
 
 ### 2. Add initialization code
 
-Next you'll need to import SDK libraries into your project and register them for initialization. Extensions are registered with Mobile Core so that they can dispatch and listen for events.
+Next, you'll need to initialize the SDK by registering all the solution extensions added as dependencies to your project with Mobile Core.
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -77,17 +77,57 @@ Extension registration is **mandatory**. Attempting to make extension-specific A
 
 Currently, the Adobe Experience Platform SDKs do not support running under [Direct Boot](https://developer.android.com/training/articles/direct-boot) mode on Android devices. For Android applications configured to be run during Direct Boot mode, verify if the user has unlocked the devices by calling [UserManager.isUserUnlocked()](https://developer.android.com/reference/android/os/UserManager#isUserUnlocked()) before initializing the SDK.
 
-The following code snippets demonstrate how you can import and register the Mobile Core and Profile extensions. You can also see, for reference, how Identity, Lifecycle, Signal, Profile, and other extensions are imported and registered.
+There are two ways to achieve this:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### a) Using MobileCore.initialize API (Recommended)
 
-Android
+<InlineAlert variant="warning" slots="text" />
 
-<Tabs query="platform=android&task=add-initialization"/>
+This API is available starting from **Android BOM version 3.8.0** and **iOS version 5.4.0**.
 
-iOS
+The `MobileCore.initialize` API provides a simple way to initialize AEP SDK. It automatically registers solution extensions and enables lifecycle tracking, eliminating the need for manual setup. Refer to the [API documentation](../base/mobile-core/api-reference.md#initialize) for additional configuration options.
 
-<Tabs query="platform=ios&task=add-initialization"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
+
+Kotlin<br/>(Android)
+
+<Tabs query="platform=android-kotlin&task=add-simplified-initialization"/>
+
+Java<br/>(Android)
+
+<Tabs query="platform=android-java&task=add-simplified-initialization"/>
+
+Swift<br/>(iOS)
+
+<Tabs query="platform=ios-swift&task=add-simplified-initialization"/>
+
+Objective-C<br/>(iOS)
+
+<Tabs query="platform=ios-objc&task=add-simplified-initialization"/>
+
+#### b) Manual Extension Registration using MobileCore.registerExtensions API
+
+In older SDK versions, solution extensions must be manually imported and registered with MobileCore using the `MobileCore.registerExtensions` API.
+
+The following code snippets show how to import and register the Mobile Core and Profile extensions, along with Identity, Lifecycle, Signal, and other extensions for reference.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
+
+Kotlin<br/>(Android)
+
+<Tabs query="platform=android-kotlin&task=add-initialization"/>
+
+Java<br/>(Android)
+
+<Tabs query="platform=android-java&task=add-initialization"/>
+
+Swift<br/>(iOS)
+
+<Tabs query="platform=ios-swift&task=add-initialization"/>
+
+Objective-C<br/>(iOS)
+
+<Tabs query="platform=ios-objc&task=add-initialization"/>
 
 <!-- React Native
 

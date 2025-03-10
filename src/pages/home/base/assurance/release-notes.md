@@ -8,6 +8,19 @@ keywords:
 
 # Release notes
 
+## March 4, 2025
+
+### Flutter Assurance 5.0.0
+
+* Update to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Update tests to handle the deprecation warning for `setMockMethodCallHandler`.
+
+## February 25, 2025
+
+### Android Assurance 3.0.6
+
+* Fixed an issue that prevented a connection error message from being displayed.
+
 ## February 10, 2025
 
 ### Android Assurance 3.0.5

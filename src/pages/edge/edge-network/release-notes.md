@@ -8,6 +8,19 @@ keywords:
 
 # Release notes
 
+## March 4, 2025
+
+### Flutter Edge 5.0.0
+
+* Update to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Update tests to handle the deprecation warning for `setMockMethodCallHandler`.
+
+## February 25, 2025
+
+### Android Edge 3.0.2
+
+* Added support for recoverable error codes from Edge Network.
+
 ## February 10, 2025
 
 ### Android Edge 3.0.1
