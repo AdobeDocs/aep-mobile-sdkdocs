@@ -8,6 +8,7 @@ keywords:
 ---
 
 import Tabs from './tabs/index.md'
+import InitializeSDK from '/src/pages/resources/initialize.md'
 
 # Adobe Streaming Media for Edge Network
 
@@ -58,31 +59,35 @@ Type the version of the media player application/SDK.
 
 ## Add Media for Edge Network to your app
 
+### Include Media for Edge Network as an app dependency
+
+Add MobileCore, Edge and Media extensions as dependencies to your project.
+
 <InlineAlert variant="info" slots="text"/>
 
 This extension requires the [Edge Network extension](../edge-network/index.md) and [Identity for Edge Network extension](../identity-for-edge-network/index.md). You must add the `Adobe Experience Platform Edge Network` and `Identity` extensions to your mobile property in the `Data collection UI` and make sure they are correctly configured.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-Android
+Kotlin<br/>(Android)
 
-<Tabs query="platform=android&task=add"/>
+<Tabs query="platform=android-kotlin&task=add"/>
 
-iOS
+Groovy<br/>(Android)
 
-<Tabs query="platform=ios&task=add"/>
+<Tabs query="platform=android-groovy&task=add"/>
 
-## Register Media with Mobile Core
+CocoaPods<br/>(iOS)
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<Tabs query="platform=ios-pods&task=add"/>
 
-Android
+### Initialize Adobe Experience Platform SDK with Media for Edge Network Extension
 
-<Tabs query="platform=android&task=register"/>
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
 
-iOS
+Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
 
-<Tabs query="platform=ios&task=register"/>
+<InitializeSDK query="componentClass=TabsBlock"/>
 
 ## Configuration keys
 

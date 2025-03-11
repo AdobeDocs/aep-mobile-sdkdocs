@@ -7,6 +7,7 @@ keywords:
 ---
 
 import Tabs from './tabs/index.md'
+import InitializeSDK from '/src/pages/resources/initialize.md'
 
 # Adobe Journey Optimizer - Decisioning Extension
 
@@ -44,37 +45,37 @@ On [Experience Platform Data Collection](https://experience.adobe.com/#/data-col
 
 ![Adobe Journey Optimizer - Decisioning extension configuration](./assets/index/configuration.png)
 
-## Integrate Experience Platform Optimize SDK in your mobile application
+## Add the Experience Platform Optimize SDK to your app
 
 <InlineAlert variant="warning" slots="text"/>
 
 For the AEPOptimize APIs to work properly, you need to integrate Mobile Core and Edge extensions in your mobile app. For more details see, documentation on [Mobile Core](../../home/base/mobile-core/index.md) and [Adobe Experience Platform Edge Network](../../edge/edge-network/index.md).
 
-#### Download and import the Optimize extension
+### Include the Optimize as an app dependency
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+Add MobileCore, Edge and Optimize extensions as dependencies to your project.
 
-Android
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-<Tabs query="platform=android&task=install"/>
+Kotlin<br/>(Android)
 
-iOS
+<Tabs query="platform=android-kotlin&task=add"/>
 
-<Tabs query="platform=ios&task=install"/>
+Groovy<br/>(Android)
 
-### Register the extensions with Mobile Core
+<Tabs query="platform=android-groovy&task=add"/>
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+CocoaPods<br/>(iOS)
 
-Android
+<Tabs query="platform=ios-pods&task=add"/>
 
-<Tabs query="platform=android&task=register"/>
+### Initialize Adobe Experience Platform SDK with Edge Network Extension
 
-iOS
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
 
-<Tabs query="platform=ios&task=register"/>
+Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
 
-## Adobe Journey Optimizer - Offer Decisioning
+<InitializeSDK query="componentClass=TabsBlock"/>
 
 ### DecisionScope
 
