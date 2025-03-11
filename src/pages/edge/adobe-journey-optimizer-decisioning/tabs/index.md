@@ -75,6 +75,113 @@ import AEPOptimize
 @import AEPOptimize;
 ```
 
+<Variant platform="android" task="register" repeat="4"/>
+
+#### Java
+
+```java
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Edge;
+import com.adobe.marketing.mobile.edge.identity.Identity;
+import com.adobe.marketing.mobile.optimize.Optimize;
+import com.adobe.marketing.mobile.AdobeCallback;
+
+public class MainApp extends Application {
+
+  private final String ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID";
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        MobileCore.setApplication(this);
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
+
+        MobileCore.registerExtensions(
+            Arrays.asList(Edge.EXTENSION, Identity.EXTENSION, Optimize.EXTENSION),
+            o -> Log.d("MainApp", "Adobe Journey Optimizer - Optimize Mobile SDK was initialized.")
+        );
+    }
+}
+```
+
+#### Kotlin
+
+```java
+import com.adobe.marketing.mobile.MobileCore
+import com.adobe.marketing.mobile.Edge
+import com.adobe.marketing.mobile.edge.identity.Identity
+import com.adobe.marketing.mobile.optimize.Optimize
+import com.adobe.marketing.mobile.AdobeCallback
+
+class MainApp : Application() {
+
+  private var ENVIRONMENT_FILE_ID: String = "YOUR_APP_ENVIRONMENT_ID"
+
+    override fun onCreate() {
+        super.onCreate()
+
+        MobileCore.setApplication(this)
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
+
+        MobileCore.registerExtensions(
+          listOf(Edge.EXTENSION, Identity.EXTENSION, Optimize.EXTENSION)
+        ) {
+          Log.d("MainApp", "Adobe Experience Platform Mobile SDK was initialized")
+        }
+    }
+
+}
+```
+
+<Variant platform="ios" task="register" repeat="4"/>
+
+#### Swift
+
+```swift
+// AppDelegate.swift
+
+import AEPCore
+import AEPEdge
+import AEPEdgeIdentity
+import AEPOptimize
+
+@UIApplicationMain
+final class AppDelegate: UIResponder, UIApplicationDelegate {
+  var window: UIWindow?
+
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+
+      // register the extensions
+      MobileCore.registerExtensions([Edge.self, AEPEdgeIdentity.Identity.self, Optimize.self]) {
+        MobileCore.configureWith(appId: <YOUR_ENVIRONMENT_FILE_ID>) // Replace <YOUR_ENVIRONMENT_FILE_ID> with a String containing your own ID.
+      }
+
+      return true
+  }
+}
+```
+
+#### Objective-C
+
+```objc
+// AppDelegate.m
+
+@import AEPCore;
+@import AEPEdge;
+@import AEPEdgeIdentity;
+@import AEPOptimize;
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    // register the extensions
+    [AEPMobileCore registerExtensions:@[AEPMobileEdge.class, AEPMobileEdgeIdentity.class, , AEPMobileOptimize.class] completion:^{
+      [AEPMobileCore configureWithAppId: <YOUR_ENVIRONMENT_FILE_ID>]; // Replace <YOUR_ENVIRONMENT_FILE_ID> with a String containing your own ID.
+  }];
+  ...
+}
+```
+
 <Variant platform="android" task="decisionscope" repeat="2"/>
 
 #### Java

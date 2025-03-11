@@ -62,9 +62,19 @@ iOS
 
 <Tabs query="platform=ios&task=install"/>
 
-#### Add SDK Initialization code 
+### Register the extensions with Mobile Core
 
-You'll need to initialize the SDK by registering the solution extensions as the dependencies in your project with Mobile Core. Refer to the initialization implementation [here](https://developer.adobe.com/client-sdks/home/getting-started/get-the-sdk/#2-add-initialization-code).
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<Tabs query="platform=android&task=register"/>
+
+iOS
+
+<Tabs query="platform=ios&task=register"/>
+
+## Adobe Journey Optimizer - Offer Decisioning
 
 ### DecisionScope
 

@@ -71,3 +71,74 @@ import AEPEdgeConsent
 @import AEPEdgeIdentity;
 @import AEPEdgeConsent;
 ```
+
+<Variant platform="android" task="register" repeat="4"/>
+
+#### Java
+
+```java
+public class MobileApp extends Application {
+    // Set up the preferred Environment File ID from your mobile property configured in Data Collection UI
+    private final String ENVIRONMENT_FILE_ID = "";
+
+    @Override
+    public void onCreate() {
+      super.onCreate();
+      MobileCore.setApplication(this);
+      MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
+
+      // Register Adobe Experience Platform SDK extensions
+      MobileCore.registerExtensions(
+         Arrays.asList(Edge.EXTENSION, Identity.EXTENSION),
+         o -> Log.debug("MobileApp", "MobileApp", "Adobe Experience Platform Mobile SDK initialized.")
+       );
+    }
+}
+```
+
+#### Kotlin
+
+```java
+class MobileApp : Application() {
+    // Set up the preferred Environment File ID from your mobile property configured in Data Collection UI
+    private var ENVIRONMENT_FILE_ID: String = ""
+    override fun onCreate() {
+        super.onCreate()
+        MobileCore.setApplication(this)
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
+        // Register Adobe Experience Platform SDK extensions
+        MobileCore.registerExtensions(
+            listOf(Edge.EXTENSION, Identity.EXTENSION)
+        ) {
+            Log.debug("MobileApp", "MobileApp", "Adobe Experience Platform Mobile SDK initialized.")
+        }
+    }
+}
+```
+
+<Variant platform="ios" task="register" repeat="4"/>
+
+**Swift**
+
+```swift
+// AppDelegate.swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    MobileCore.registerExtensions([Identity.self, Consent.self, Edge.self], {
+    MobileCore.configureWith(appId: "yourAppId")
+  })
+  ...
+}
+```
+
+**Objective-C**
+
+```objectivec
+// AppDelegate.m
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [AEPMobileCore registerExtensions:@[AEPMobileEdgeIdentity.class, AEPMobileEdgeConsent.class, AEPMobileEdge.class] completion:^{
+    ...
+  }];
+  [AEPMobileCore configureWithAppId: @"yourAppId"];
+  ...
+}
+```
