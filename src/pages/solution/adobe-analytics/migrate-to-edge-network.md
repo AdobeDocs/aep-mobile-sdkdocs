@@ -22,7 +22,7 @@ Edge Bridge only supports the Analytics drop-in migration case. If you are looki
 |       |  API for sending data | Extensions| XDM transform location |  Platform support with latest Mobile SDKs | Can send to other services (configurable in Datastreams)  |
 | ----------- | ----------- |-----------|-----------|-----------|-----------|
 | **Edge Network extension** | Edge.sendEvent | 1. Edge Network extension <br/> 2. Identity for Edge Network extension | Client-side| iOS, Android, tvOS, Flutter, React Native | Yes |
-| **Edge Bridge extension** | MobileCore.trackAction <br/> MobileCore.trackState | 1. Edge Bridge extension <br/> 2. Edge Network extension <br/> 3. Identity for Edge Network extension| Not required for Analytics. <br/> Server-side Data Prep mapping to XDM in datastream if data is needed for other services. | iOS, Android, Flutter, React Native | Yes |
+| **Edge Bridge extension** | MobileCore.trackAction <br/> MobileCore.trackState | 1. Edge Bridge extension <br/> 2. Edge Network extension <br/> 3. Identity for Edge Network extension| Not required for Analytics. <br/> Server-side Data Prep mapping to XDM in datastream if data is needed for other services. | iOS, Android, tvOS, Flutter, React Native | Yes |
 | **Analytics extension** | MobileCore.trackAction <br/>  MobileCore.trackState | 1. Analytics extension <br/> 2. Identity for Experience Cloud ID Service extension | N/A| iOS, Android, tvOS <br/> (Not supported on Flutter, React Native)| N/A |
 
 <InlineAlert variant="info" slots="text"/>
@@ -32,7 +32,7 @@ Other foundational extensions include the [Consent for Edge Network extension](.
 ### Workflow comparison
 
 ![compare workflows](./assets/index/compareWorkflows.png)
-  
+
 ## Get started with the migration
 
 | Steps  |  Edge Network extension | Edge Bridge extension |
@@ -59,7 +59,7 @@ To learn about the end to end Edge Network extension implementation process, fol
 
 To learn about the end to end Edge Bridge extension implementation process, follow the tutorials below:
 
-* [iOS tutorial](https://github.com/adobe/aepsdk-edgebridge-ios/tree/main/Documentation/tutorials)  
+* [iOS tutorial](https://github.com/adobe/aepsdk-edgebridge-ios/tree/main/Documentation/tutorials)
 * [Android tutorial](https://github.com/adobe/aepsdk-edgebridge-android/tree/main/Documentation/tutorials)
   
 ## Other migration considerations
@@ -92,9 +92,9 @@ To enable Lifecycle for Edge Network, a rule must be created in the application'
 
 Lifecycle for Edge Network dispatches an [Application Launch (Foreground)](../../home/base/mobile-core/lifecycle/event-reference.md#lifecycle-application-foreground) event on every app launch and an [Application Close (Background)](../../home/base/mobile-core/lifecycle/event-reference.md#lifecycle-application-background) event on every app close. With every app launch and app close being its own event, customers can define user sessions at reporting time instead of needing to change a client-side configuration to determine when sessions start and end.
 
-The Analytics extension includes additional data with every hit sent, such as some Lifecycle data. The Edge Network extension is a general purpose extension handling a variety of use cases. Certain data included in all Analytics hits are no longer supported in the Edge Network. The Lifecycle for Edge Network data is only sent during Lifecycle events.
+The Analytics extension includes additional data with every hit sent, such as some Lifecycle data. The Edge Network extension is a general purpose extension handling a variety of use cases including Messaging, Optimize, and Consent. Certain data included in all Analytics hits are no longer supported in the Edge Network. The Lifecycle for Edge Network data is only sent during Lifecycle events.
 
-For more details, please refer to the [Lifecycle for Edge Network extension documentation](../../edge/lifecycle-for-edge-network/index.md).
+For more details, please refer to the [Lifecycle for Edge Network migration reference](../../edge/lifecycle-for-edge-network/migration-reference.md) and the [Lifecycle for Edge Network extension documentation](../../edge/lifecycle-for-edge-network/index.md).
 
 ## Next steps
 

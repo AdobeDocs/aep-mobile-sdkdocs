@@ -199,6 +199,10 @@ module.exports = {
                                             {
                                                 title: "Display rich notifications",
                                                 path: "/edge/adobe-journey-optimizer/push-notification/ios/display-rich-notifications"
+                                            },
+                                            {
+                                                title: "Display IAM on push notification interaction",
+                                                path: "/edge/adobe-journey-optimizer/push-notification/ios/push-to-iam.md"
                                             }
                                         ]
                                     },
@@ -213,6 +217,10 @@ module.exports = {
                                             {
                                                 title: "Manual display and tracking",
                                                 path: "/edge/adobe-journey-optimizer/push-notification/android/manual-display-and-tracking"
+                                            },
+                                            {
+                                                title: "Display IAM on push notification interaction",
+                                                path: "/edge/adobe-journey-optimizer/push-notification/android/push-to-iam.md"
                                             }                                            
                                         ]
                                     },
@@ -347,6 +355,170 @@ module.exports = {
                                                 ]
                                             }
                                         ]                                        
+                                    },
+                                    {
+                                        title: "Android",
+                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android",
+                                        pages: [
+                                            {
+                                                title: "API Reference",
+                                                path: "/edge/adobe-journey-optimizer/content-card-ui/Android/api-usage.md"
+                                            },
+                                            {
+                                                title: "Public Classes and Interfaces",
+                                                path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/aepui",
+                                                pages: [
+                                                    {
+                                                        title: "AepUI",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/aepui",
+                                                    },
+                                                    {
+                                                        title: "ContentCardMapper",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/contentcardmapper",
+                                                    },
+                                                    {
+                                                        title: "ContentCardUIEventListener",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/contentcarduieventlistener",
+                                                    },
+                                                    {
+                                                        title: "UIAction",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/uiaction",
+                                                    },
+                                                    {
+                                                        title: "UIEvent",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/uievent",
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "Content Provider",
+                                                path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/content-provider/aepuicontentprovider",
+                                                pages: [
+                                                    {
+                                                        title: "AepUIContentProvider",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/content-provider/aepuicontentprovider",
+                                                    },
+                                                    {
+                                                        title: "ContentCardUIProvider",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/content-provider/contentcarduiprovider",
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "Observers",
+                                                path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/observers/aepuieventobserver",
+                                                pages: [
+                                                    {
+                                                        title: "AepUIEventObserver",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/observers/aepuieventobserver",
+                                                    },
+                                                    {
+                                                        title: "ContentCardEventObserver",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/observers/contentcardeventobserver",
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "State",
+                                                path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/state/aepcarduistate",
+                                                pages: [
+                                                    {
+                                                        title: "AepCardUIState",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/state/aepcarduistate",
+                                                    },
+                                                    {
+                                                        title: "SmallImageCardUIState",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/state/smallimagecarduistate",
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "Styles",
+                                                path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aepbuttonstyle",
+                                                pages: [
+                                                    {
+                                                        title: "AepButtonStyle",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aepbuttonstyle",
+                                                    },
+                                                    {
+                                                        title: "AepCardStyle",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aepcardstyle",
+                                                    },
+                                                    {
+                                                        title: "AepColumnStyle",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aepcolumnstyle",
+                                                    },
+                                                    {
+                                                        title: "AepIconStyle",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aepiconstyle",
+                                                    },
+                                                    {
+                                                        title: "AepImageStyle",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aepimagestyle",
+                                                    },
+                                                    {
+                                                        title: "AepRowStyle",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aeprowstyle",
+                                                    },
+                                                    {
+                                                        title: "SmallImageUIStyle",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/smallimageuistyle",
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "UI Models",
+                                                path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepbutton",
+                                                pages: [
+                                                    {
+                                                        title: "AEPButton",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepbutton"
+                                                    },
+                                                    {
+                                                        title: "AEPIcon",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepicon"
+                                                    },
+                                                    {
+                                                        title: "AEPImage",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepimage"
+                                                    },
+                                                    {
+                                                        title: "AEPText",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aeptext"
+                                                    },
+                                                    {
+                                                        title: "AEPUITemplate",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepuitemplate"
+                                                    },
+                                                    {
+                                                        title: "AEPUITemplateType",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepuitemplatetype"
+                                                    },
+                                                    {
+                                                        title: "SmallImageTemplate",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/smallimagetemplate"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "Tutorials",
+                                                path: "/edge/adobe-journey-optimizer/content-card-ui/Android/tutorial/displaying-content-cards",
+                                                pages: [
+                                                    {
+                                                        title: "Fetch and Display Content Cards",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/tutorial/displaying-content-cards",
+                                                    },
+                                                    {
+                                                        title: "Customizing Content Cards",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/tutorial/customizing-content-card-templates",
+                                                    },
+                                                    {
+                                                        title: "Listening to Content Card Events",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/tutorial/listening-content-card-events",
+                                                    }
+                                                ]
+                                            }
+                                        ]                                        
                                     }
                                 ]
                             },
@@ -440,6 +612,24 @@ module.exports = {
                                 path: "/edge/adobe-journey-optimizer-decisioning/api-reference"
                             },
                             {
+                                title: "Validation and Preview using Assurance",
+                                path: "/edge/adobe-journey-optimizer-decisioning/assurance-for-decisioning.md",
+                                pages: [
+                                    {
+                                        title: "Setting up Decisioning plugins in Assurance",
+                                        path: "/edge/adobe-journey-optimizer-decisioning/assurance-setup.md"
+                                    },
+                                    {
+                                        title: "Decisioning Validation view",
+                                        path: "/edge/adobe-journey-optimizer-decisioning/optimize-configuration-view.md"
+                                    },
+                                    {
+                                        title: "Decisioning Review & Simulate",
+                                        path: "/edge/adobe-journey-optimizer-decisioning/review-simulate.md"
+                                    }
+                                ]
+                            },
+                            {
                                 title: "Release notes",
                                 path: "/edge/adobe-journey-optimizer-decisioning/release-notes"
                             }
@@ -523,6 +713,10 @@ module.exports = {
                             {
                                 title: "Data reference",
                                 path: "/edge/lifecycle-for-edge-network/metrics"
+                            },
+                            {
+                                title: "Migration reference",
+                                path: "/edge/lifecycle-for-edge-network/migration-reference"
                             }
                         ]
                     }
@@ -701,6 +895,10 @@ module.exports = {
                             {
                                 title: "Event forwarding to Adobe Experience Platform",
                                 path: "/solution/places/places-to-platform.md"
+                            },
+                            {
+                                title: "Behavior reference",
+                                path: "/solution/places/behavior-reference.md"
                             },
                             {
                                 title: "Release notes",

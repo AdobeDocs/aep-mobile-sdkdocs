@@ -10,23 +10,23 @@ keywords:
 
 # Lifecycle extension in Android
 
-## Implementing Lifecycle Metrics in Android
+## Implementing Lifecycle data collection in Android
 
-For implementation details, please reference the guide on [registering Lifecycle with Mobile Core and adding the appropriate start/pause calls](../index.md#register-lifecycle-with-mobile-core-and-add-appropriate-startpause-calls).
+For implementation details, please reference the [implementation guide for Lifecycle](/src/pages/home/base/mobile-core/lifecycle/index.md).
 
 ## Tracking app crashes in Android
 
 This information helps you understand how crashes are tracked and the best practices to handle false crashes.
 
+### How does crash reporting work?
+
+When Lifecycle data collection is implemented in an application, pausing Lifecycle data collection sets a flag which is persisted in the application. When the application is launched again and Lifecycle data collection is started, if the flag is **not** set then a crash event is reported.
+
+The flag is controlled by calls to [lifecyclePause](/src/pages/home/base/mobile-core/lifecycle/api-reference.md#lifecyclepause) (which sets the flag) and [lifecycleStart](/src/pages/home/base/mobile-core/lifecycle/api-reference.md#lifecyclestart) (which clears the flag).
+
 <InlineAlert variant="info" slots="text"/>
 
-App crashes are tracked as part of lifecycle metrics. Before you can track crashes, add the library to your project.
-
-When lifecycle metrics are implemented, a call is made to `MobileCore.lifecycleStart(additionalContextData)` in the `OnResume` method of each activity. In the `onPause` method, a call is made to `MobileCore.lifecyclePause()`. In the `MobileCore.lifecyclePause()` method, a flag is set to indicate a graceful exit. When the app is launched again or resumed, `MobileCore.lifecycleStart(additionalContextData)` checks this flag. If the app did not exit successfully as determined by the flag status, an `a.CrashEvent` context data is sent with the next call, and a crash event is reported.
-
-<InlineAlert variant="info" slots="text"/>
-
-To ensure accurate crash reporting, you must call `lifecyclePause()` in the `onPause` method of each activity.
+To ensure accurate session and crash reporting, you should call `MobileCore.lifecycleStart()` in the **onResume()** method of each activity, and `MobileCore.lifecyclePause()` in the **onPause()** method of each activity.<br/><br/>You should not call Lifecycle start and pause APIs from fragments.
 
 To understand why this is essential, here is an illustration of the Android activity lifecycle:![](./assets/android/android-crash.png)
 
@@ -42,64 +42,11 @@ This Android lifecycle illustration was created and shared by the [Android Open 
 
 ### How should Fragments be handled?
 
-Fragments have application lifecycle events that are similar to Activities. However, a Fragment cannot be active without being attached to an Activity.
+Fragments have application lifecycle events that are similar to Activities. However, a Fragment cannot be active without being attached to an Activity. Therefore, you should implement the Lifecycle APIs from Activities.
 
-## Implementing global lifecycle callbacks
+## Further reading
 
-Starting with API Level 14, Android allows global lifecycle callbacks for activities. For more information, please read the [Android developer guide](https://developer.android.com/reference/android/app/Application#registerActivityLifecycleCallbacks%28android.app.Application.ActivityLifecycleCallbacks).
+The following guides further illustrate the expected Lifecycle scenarios along with example unexpected scenarios and how to correct them.
 
-You can use these callbacks to ensure that all of your `Activities` correctly call `AdobeMobileMarketing.lifecycleStart()`, and do not need to implement the code for each of the Activity.
-
-```java
-import com.adobe.marketing.mobile.MobileCore;
-import com.adobe.marketing.mobile.Lifecycle;
-
-public class MainActivity extends Activity {    
-
-@Override    
-protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);        
-    setContentView(R.layout.activity_main);        
-
-    getApplication().registerActivityLifecycleCallbacks(new Application.ActivityLifecycleCallbacks() {        
-    @Override        
-    public void onActivityResumed(Activity activity) {
-        MobileCore.setApplication(getApplication());
-        MobileCore.lifecycleStart(null);        
-        }        
-        @Override        
-        public void onActivityPaused(Activity activity) { 
-            MobileCore.lifecyclePause();        
-        }        
-        // the following methods aren't needed for our lifecycle purposes, but are        
-        // required to be implemented by the ActivityLifecycleCallbacks object        
-        @Override        
-        public void onActivityCreated(Activity activity, Bundle savedInstanceState) {}        
-        @Override        
-        public void onActivityStarted(Activity activity) {}        
-        @Override        
-        public void onActivityStopped(Activity activity) {}        
-        @Override        
-        public void onActivitySaveInstanceState(Activity activity, Bundle outState) {}        
-        @Override        
-        public void onActivityDestroyed(Activity activity) {}        
-        });    
-    }
- ...
-}
-```
-
-To include additional data with lifecycle metric calls, pass an additional parameter to `lifecycleStart` that contains context data:
-
-```java
-@Override
-public void onResume() {    
-  HashMap<String, Object> additionalContextData = new HashMap<String, Object>();    
-  contextData.put("myapp.category", "Game");    
-  MobileCore.lifecycleStart(additionalContextData);
-}
-```
-
-<InlineAlert variant="info" slots="text"/>
-
-You only need to add this code in your main Activity and any other Activity in which your app may be launched.
+* [Lifecycle behavior reference](/src/pages/home/base/mobile-core/lifecycle/behavior-reference.md) when sending Lifecycle events to Analytics.
+* [Lifecycle behavior reference](/src/pages/edge/lifecycle-for-edge-network/behavior-reference.md) when sending Lifecycle events to Edge Network.

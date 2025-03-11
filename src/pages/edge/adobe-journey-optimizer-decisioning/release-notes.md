@@ -8,15 +8,36 @@ keywords:
 
 # Release notes
 
+## February 17, 2025
+
+### React Native Optimize 6.1.0
+
+* **[Breaking Change]** Updated Offer Score data type of  from `Integer` to `Double` .
+* To prevent build issues in **6.0.x**, upgrade `@adobe/react-native-aepoptimize` to **6.1.0 or later**.
+
+### Android Optimize 3.3.0
+
+* **[Breaking Change]** Updated Offer Score data type of from `Integer` to `Double`.
+* Optimize SDK only listens to preview events if it contains `debug` object with `eventType` as `com.adobe.eventType.edge` and `eventSource` as `personalization:decisions`.
+
+## February 11, 2025
+
+### iOS Optimize 5.2.1
+
+* Fixed a bug where JSON object array without key was not getting parsed in Offer class.
+* Added support of checking debug object's eventType and eventSource while processing debug events.
+
+## February 10, 2025
+
+### Android Optimize 3.2.4
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
 ## February 6, 2025
 
-### Adobe Journey Optimizer - Decisioning extension 1.1.0
+### Android Optimize 3.2.3
 
-Added configuration capability to the Adobe Journey Optimizer - Decisioning extension in the Tags UI for mobile Tag Properties.
-
-Users can now configure:
-
-* Request timeout - Set the amount of time (in seconds) to wait for a response from the decisioning services before timing out.
+* Added support for the Array type in the JSON structure of Offer Content.
 
 ## December 6, 2024
 

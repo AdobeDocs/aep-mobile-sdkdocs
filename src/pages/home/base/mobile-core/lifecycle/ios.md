@@ -10,27 +10,19 @@ keywords:
 
 # Lifecycle extension in iOS
 
-<InlineAlert variant="warning" slots="text"/>
+## Implementing Lifecycle data collection in iOS
 
-In version 4 of the iOS SDK, this implementation was completed automatically. <br/><br/>When upgrading to the Experience Platform SDK, you must add code to continue collecting Lifecycle metrics. For more information, see [Manual Lifecycle Implementation](./../../../../resources/upgrade-platform-sdks/lifecycle.md).
-
-## Implementing Lifecycle metrics in iOS
-
-For implementation details, please reference the guide on [registering Lifecycle with Mobile Core and adding the appropriate start/pause calls](../index.md#register-lifecycle-with-mobile-core-and-add-appropriate-start-pause-calls).
+For implementation details, please reference the [implementation guide for Lifecycle](/src/pages/home/base/mobile-core/lifecycle/index.md).
 
 ## Tracking app crashes in iOS
 
 This information helps you understand how crashes are tracked and the best practices to handle false crashes.
 
-<InlineAlert variant="info" slots="text"/>
-
-You should upgrade to Adobe Experience Platform SDKs, which contains critical changes that prevent false crashes from being reported.
-
 ### How does crash reporting work?
 
-When creating a new lifecycle session, the SDK looks for a variable it maintains in `NSUserDefaults` that indicates the previous session was paused. If the flag is not set, then the ensuing launch will also be treated as a crash.
+When Lifecycle data collection is implemented in an application, pausing Lifecycle data collection sets a flag which is persisted in the application. When the application is launched again and Lifecycle data collection is started, if the flag is **not** set then a crash event is reported.
 
-The variable is controlled by calls to `lifecyclePause` (which sets the flag) and `lifecycleStart` (which clears the flag).
+The flag is controlled by calls to [lifecyclePause](/src/pages/home/base/mobile-core/lifecycle/api-reference.md#lifecyclepause) (which sets the flag) and [lifecycleStart](/src/pages/home/base/mobile-core/lifecycle/api-reference.md#lifecyclestart) (which clears the flag).
 
 ### Why does Adobe measure crashes this way?
 
@@ -55,24 +47,9 @@ The following practices can help prevent false crashes from being reported:
 * If your app has background capabilities, ensure that you are checking that the app is not in the background prior to calling `lifecycleStart`.
 * Do not delete or modify any values that the Experience Platform SDKs puts in `NSUserDefaults`. If these values are modified outside the SDK, the data reported will be invalid.
 
-## Collecting additional data with Lifecycle
+## Further reading
 
-When calling `lifecycleStart:`, you can optionally pass a dictionary of additional data that will be attached to the lifecycle event.
+The following guides further illustrate the expected Lifecycle scenarios along with example unexpected scenarios and how to correct them.
 
-<InlineAlert variant="info" slots="text"/>
-
-You can pass additional data to lifecycle on app launch, app resume, both, or neither.
-
-```swift
-// Swift
-func applicationWillEnterForeground(_ application: UIApplication) {      
-     MobileCore.lifecycleStart(additionalContextData: ["contextDataKey": "contextDataVal"])
-}
-```
-
-```objectivec
-// Objective-C
-- (void) applicationWillEnterForeground:(UIApplication *)application {      
-     [AEPMobileCore lifecycleStart:@{@"contextDataKey": @"contextDataVal"}];      
-}
-```
+* [Lifecycle behavior reference](/src/pages/home/base/mobile-core/lifecycle/behavior-reference.md) when sending Lifecycle events to Analytics.
+* [Lifecycle behavior reference](/src/pages/edge/lifecycle-for-edge-network/behavior-reference.md) when sending Lifecycle events to Edge Network.

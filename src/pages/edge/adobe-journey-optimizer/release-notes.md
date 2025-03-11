@@ -9,6 +9,26 @@ keywords:
 
 # Release notes
 
+## March 4, 2025
+
+### Flutter Messaging 5.0.0
+
+* Update to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Update tests to handle the deprecation warning for `setMockMethodCallHandler`.
+
+## February 10, 2025
+
+### Android Messaging 3.3.1
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+## February 6, 2025
+
+### Android Messaging 3.3.0
+
+* Introduced support for out-of-the-box content card UI rendering using the new `ContentCardUIProvider.getContentCardUI()` API to create and display the views for templated content cards.
+* Added support to display an in-app message when the app is opened by a push notification interaction. To support this workflow, new `updatePropositionsForSurfaces(List<Surface> surfaces, AdobeCallback<Boolean> callback)`API has been added to fetch propositions for the provided surfaces with an optional completion handler that provides a boolean status.
+
 ## January 16, 2025
 
 ### iOS Messaging 5.6.0
