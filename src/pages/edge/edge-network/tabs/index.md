@@ -43,4 +43,3 @@ target 'YourTargetApp' do
   pod 'AEPEdgeIdentity', '~> 5.0'
 end
 ```
-
