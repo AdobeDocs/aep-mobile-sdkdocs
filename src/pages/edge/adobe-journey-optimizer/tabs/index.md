@@ -75,67 +75,6 @@ import AEPMessaging
 @import AEPMessaging;
 ```
 
-<Variant platform="android" task="register" repeat="4"/>
-
-#### Java
-
-```java
-public class MainApp extends Application {
-
-  private final String ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID";
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
-
-        MobileCore.setApplication(this);
-        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
-
-        MobileCore.registerExtensions(
-            Arrays.asList(Edge.EXTENSION, Identity.EXTENSION, Messaging.EXTENSION),
-            o -> Log.d("MainApp", "Adobe Experience Platform Mobile SDK was initialized.")
-        );
-    }
-}
-```
-
-#### Kotlin
-
-```java
-class MainApp : Application() {
-
-  private var ENVIRONMENT_FILE_ID: String = "YOUR_APP_ENVIRONMENT_ID"
-
-    override fun onCreate() {
-        super.onCreate()
-
-        MobileCore.setApplication(this)
-        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
-
-        MobileCore.registerExtensions(
-          listOf(Edge.EXTENSION, Identity.EXTENSION, Messaging.EXTENSION)
-        ) {
-          Log.d("MainApp", "Adobe Experience Platform Mobile SDK was initialized.")
-        }
-    }
-
-}
-```
-
-<Variant platform="ios" task="register" repeat="4"/>
-
-#### Swift
-
-```swift
-// AppDelegate.swift
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    MobileCore.registerExtensions([Identity.self, Edge.self, Messaging.self], {
-        MobileCore.configureWith(appId: <ENVIRONMENT_FILE_ID>) // Replace <ENVIRONMENT_FILE_ID> with a String containing your own ID.
-    })
-  ...
-}
-```
-
 #### Objective-C
 
 ```objc

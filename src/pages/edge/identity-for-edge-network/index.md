@@ -47,17 +47,10 @@ iOS
 
 <Tabs query="platform=ios&task=download"/>
 
-### Register the Identity extension with Mobile Core
+### Add SDK Initialization code 
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+You'll need to initialize the SDK by registering the solution extensions as the dependencies in your project with Mobile Core. Refer to the initialization implementation [here](https://developer.adobe.com/client-sdks/home/getting-started/get-the-sdk/#2-add-initialization-code).
 
-Android
-
-<Tabs query="platform=android&task=register"/>
-
-iOS
-
-<Tabs query="platform=ios&task=register"/>
 
 ## Advertising identifier
 

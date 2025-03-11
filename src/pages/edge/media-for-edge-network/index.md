@@ -58,6 +58,8 @@ Type the version of the media player application/SDK.
 
 ## Add Media for Edge Network to your app
 
+### Download and import the Identity extension
+
 <InlineAlert variant="info" slots="text"/>
 
 This extension requires the [Edge Network extension](../edge-network/index.md) and [Identity for Edge Network extension](../identity-for-edge-network/index.md). You must add the `Adobe Experience Platform Edge Network` and `Identity` extensions to your mobile property in the `Data collection UI` and make sure they are correctly configured.
@@ -72,17 +74,9 @@ iOS
 
 <Tabs query="platform=ios&task=add"/>
 
-## Register Media with Mobile Core
+### Add SDK Initialization code 
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
-
-Android
-
-<Tabs query="platform=android&task=register"/>
-
-iOS
-
-<Tabs query="platform=ios&task=register"/>
+You'll need to initialize the SDK by registering the solution extensions as the dependencies in your project with Mobile Core. Refer to the initialization implementation [here](https://developer.adobe.com/client-sdks/home/getting-started/get-the-sdk/#2-add-initialization-code).
 
 ## Configuration keys
 
