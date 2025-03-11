@@ -6,6 +6,8 @@ import Alerts from '/src/pages/resources/alerts.md'
 
 <Variant platform="android-java" task="add-simplified-initialization" repeat="2"/>
 
+<Alerts query="platform=initialize-android-version&componentClass=InlineNestedAlert"/>
+
 ```java
 import com.adobe.marketing.mobile.LoggingMode;
 import com.adobe.marketing.mobile.MobileCore;
@@ -22,9 +24,9 @@ public class MainApp extends Application {
 }
 ```
 
-<Alerts query="platform=initialize-api-version&componentClass=InlineNestedAlert"/>
-
 <Variant platform="android-kotlin" task="add-simplified-initialization" repeat="2"/>
+
+<Alerts query="platform=initialize-android-version&componentClass=InlineNestedAlert"/>
 
 ```kotlin
 import com.adobe.marketing.mobile.LoggingMode
@@ -41,9 +43,10 @@ class MainApp : Application() {
   }
 }
 ```
-<Alerts query="platform=initialize-api-version&componentClass=InlineNestedAlert"/>
 
 <Variant platform="ios-swift" task="add-simplified-initialization" repeat="2"/>
+
+<Alerts query="platform=initialize-ios-version&componentClass=InlineNestedAlert"/>
 
 ```swift
 // AppDelegate.swift
@@ -60,9 +63,9 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
 }
 ```
 
-<Alerts query="platform=initialize-api-version&componentClass=InlineNestedAlert"/>
-
 <Variant platform="ios-objc" task="add-simplified-initialization" repeat="2"/>
+
+<Alerts query="platform=initialize-ios-version&componentClass=InlineNestedAlert"/>
 
 ```objectivec
 // AppDelegate.m
@@ -81,4 +84,4 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
 }
 @end
 ```
-<Alerts query="platform=initialize-api-version&componentClass=InlineNestedAlert"/>
+

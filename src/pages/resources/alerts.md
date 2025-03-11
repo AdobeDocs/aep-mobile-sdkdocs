@@ -19,11 +19,20 @@ Use [`MobileCore.registerExtensions()`](../../home/base/mobile-core/api-referenc
 
 </InlineNestedAlert>
 
-<!-- InlineNestedAlert - Alert for initialize API's available versions -->
-<Variant platform="initialize-api-version" componentClass="InlineNestedAlert" repeat="1"/>
+<!-- InlineNestedAlert - Alert for initialize API's available android versions -->
+<Variant platform="initialize-android-version" componentClass="InlineNestedAlert" repeat="1"/>
 
 <InlineNestedAlert variant="warning" header="true" iconPosition="left">
 
-This API is available starting from **Android BOM version 3.8.0** and **iOS version 5.4.0**.
+This API is available starting from **Android BOM version 3.8.0**.
+
+</InlineNestedAlert>
+
+<!-- InlineNestedAlert - Alert for initialize API's available ios versions -->
+<Variant platform="initialize-ios-version" componentClass="InlineNestedAlert" repeat="1"/>
+
+<InlineNestedAlert variant="warning" header="true" iconPosition="left">
+
+This API is available starting from **iOS version 5.4.0**.
 
 </InlineNestedAlert>
