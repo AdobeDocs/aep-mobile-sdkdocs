@@ -62,7 +62,6 @@ Using the `MobileCore.initialize` API to initialize the Adobe Experience Platfor
 
 <InitializeSDK query="componentClass=TabsBlock"/>
 
-
 ## Advertising identifier
 
 The Identity for Edge Network extension compares the previously stored advertising identifier value with the new value received from the [`setAdvertisingIdentifier`](./api-reference.md#setadvertisingidentifier) API and handles the following scenarios:

@@ -42,4 +42,3 @@ Add the required dependencies to your project using CocoaPods. Add following pod
     pod 'AEPEdgeIdentity', '~> 5.0'
     pod 'AEPEdgeMedia', '~> 5.0'
 ```
-

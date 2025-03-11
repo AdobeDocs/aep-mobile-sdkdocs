@@ -14,6 +14,7 @@ implementation("com.adobe.marketing.mobile:core")
 implementation("com.adobe.marketing.mobile:edge")
 implementation("com.adobe.marketing.mobile:edgeidentity")
 ```
+
 <Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
 <Variant platform="android-groovy" task="add" repeat="3"/>
