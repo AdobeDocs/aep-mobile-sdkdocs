@@ -22,7 +22,7 @@ Edge Bridge only supports the Analytics drop-in migration case. If you are looki
 |       |  API for sending data | Extensions| XDM transform location |  Platform support with latest Mobile SDKs | Can send to other services (configurable in Datastreams)  |
 | ----------- | ----------- |-----------|-----------|-----------|-----------|
 | **Edge Network extension** | Edge.sendEvent | 1. Edge Network extension <br/> 2. Identity for Edge Network extension | Client-side| iOS, Android, tvOS, Flutter, React Native | Yes |
-| **Edge Bridge extension** | MobileCore.trackAction <br/> MobileCore.trackState | 1. Edge Bridge extension <br/> 2. Edge Network extension <br/> 3. Identity for Edge Network extension| Not required for Analytics. <br/> Server-side Data Prep mapping to XDM in datastream if data is needed for other services. | iOS, Android, Flutter, React Native | Yes |
+| **Edge Bridge extension** | MobileCore.trackAction <br/> MobileCore.trackState | 1. Edge Bridge extension <br/> 2. Edge Network extension <br/> 3. Identity for Edge Network extension| Not required for Analytics. <br/> Server-side Data Prep mapping to XDM in datastream if data is needed for other services. | iOS, Android, tvOS, Flutter, React Native | Yes |
 | **Analytics extension** | MobileCore.trackAction <br/>  MobileCore.trackState | 1. Analytics extension <br/> 2. Identity for Experience Cloud ID Service extension | N/A| iOS, Android, tvOS <br/> (Not supported on Flutter, React Native)| N/A |
 
 <InlineAlert variant="info" slots="text"/>
@@ -32,7 +32,7 @@ Other foundational extensions include the [Consent for Edge Network extension](.
 ### Workflow comparison
 
 ![compare workflows](./assets/index/compareWorkflows.png)
-  
+
 ## Get started with the migration
 
 | Steps  |  Edge Network extension | Edge Bridge extension |
@@ -59,7 +59,7 @@ To learn about the end to end Edge Network extension implementation process, fol
 
 To learn about the end to end Edge Bridge extension implementation process, follow the tutorials below:
 
-* [iOS tutorial](https://github.com/adobe/aepsdk-edgebridge-ios/tree/main/Documentation/tutorials)  
+* [iOS tutorial](https://github.com/adobe/aepsdk-edgebridge-ios/tree/main/Documentation/tutorials)
 * [Android tutorial](https://github.com/adobe/aepsdk-edgebridge-android/tree/main/Documentation/tutorials)
   
 ## Other migration considerations
