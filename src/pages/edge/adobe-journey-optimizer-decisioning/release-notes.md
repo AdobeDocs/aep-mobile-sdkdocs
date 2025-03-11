@@ -18,7 +18,7 @@ Users can now configure:
 
 * Request timeout - Set the amount of time (in seconds) to wait for a response from the decisioning services before timing out.
 
-### Android Optimize 3.3.0
+### Android Optimize 3.3.1
 
 * Added support for respecting and handling the request timeout configuration set in the Adobe Journey Optimizer - Decisioning extension within the Tags UI.
 
