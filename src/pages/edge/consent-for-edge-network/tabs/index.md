@@ -45,4 +45,3 @@ target 'YourTargetApp' do
     pod 'AEPEdgeConsent', '~> 5.0'
 end
 ```
-
