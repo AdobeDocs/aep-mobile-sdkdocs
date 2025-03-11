@@ -64,7 +64,7 @@ The datasets selected should use a schema that uses the "Push Notification Track
 
 ### Include Messaging as an app dependency
 
-Add MobileCore Edge and Messaging extensions as dependencies to your project.
+Add MobileCore, Edge and Messaging extensions as dependencies to your project.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
