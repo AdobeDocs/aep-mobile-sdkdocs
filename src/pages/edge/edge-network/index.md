@@ -7,8 +7,7 @@ keywords:
 ---
 
 import Tabs from './tabs/index.md'
-import Alerts from '/src/pages/resources/alerts.md'
-import Init from '/src/pages/resources/initialize.md'
+import InitializeSDK from '/src/pages/resources/initialize.md'
 
 # Adobe Experience Platform Edge Network
 
@@ -79,9 +78,7 @@ Next, initialize the SDK by registering all the solution extensions that have be
 
 Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
 
-<Alerts query="platform=initialize-api-version&componentClass=InlineNestedAlert"/>
-
-<Init query="componentClass=TabsBlock"/>
+<InitializeSDK query="componentClass=TabsBlock"/>
 
 ## Next steps
 
