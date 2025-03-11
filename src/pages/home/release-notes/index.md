@@ -7,6 +7,24 @@ Keywords:
 
 # Release notes
 
+## March 11, 2025
+
+### Adobe Journey Optimizer - Decisioning extension 1.1.0
+
+Added configuration capability to the Adobe Journey Optimizer - Decisioning extension in the Tags UI for mobile Tag Properties.
+
+Users can now configure:
+
+* Request timeout - Set the amount of time (in seconds) to wait for a response from the decisioning services before timing out.
+
+### Android Optimize 3.3.0
+
+* Added support for respecting and handling the request timeout configuration set in the Adobe Journey Optimizer - Decisioning extension within the Tags UI.
+
+### iOS Optimize 5.3.0
+
+* Added support for respecting and handling the request timeout configuration set in the Adobe Journey Optimizer - Decisioning extension within the Tags UI.
+
 ## March 4, 2025
 
 ### Flutter Core 5.0.0
