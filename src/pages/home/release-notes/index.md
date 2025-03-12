@@ -7,6 +7,24 @@ Keywords:
 
 # Release notes
 
+## March 11, 2025
+
+### Adobe Journey Optimizer - Decisioning extension 1.1.0
+
+Added configuration capability to the Adobe Journey Optimizer - Decisioning extension in the Tags UI for mobile Tag Properties.
+
+Users can now configure:
+
+* Request timeout - Set the amount of time (in seconds) to wait for a response from the decisioning services before timing out.
+
+### Android Optimize 3.3.1
+
+* Added support for respecting and handling the request timeout configuration set in the Adobe Journey Optimizer - Decisioning extension within the Tags UI.
+
+### iOS Optimize 5.3.0
+
+* Added support for respecting and handling the request timeout configuration set in the Adobe Journey Optimizer - Decisioning extension within the Tags UI.
+
 ## March 4, 2025
 
 ### Flutter Core 5.0.0
@@ -161,7 +179,7 @@ Keywords:
 
 ### Android Optimize 3.3.0
 
-* **[Breaking Change]** Updated Offer Score data type of from `Integer` to `Double`.
+* **[Breaking Change]** Updated Offer Score data type from `Integer` to `Double`.
 * Optimize SDK only listens to preview events if it contains `debug` object with `eventType` as `com.adobe.eventType.edge` and `eventSource` as `personalization:decisions`.
 
 ## February 14, 2025
@@ -471,9 +489,9 @@ Keywords:
 
 ### Android Optimize 3.2.2
 
-* Added timeout (in seconds) parameter to updatePropositions and getPropositions APIs to enable timeout configuration in both the apis ensuring that the operation either completes within the given time frame or returns an error indicating a timeout.
+* Added timeout (in seconds) parameter to updatePropositions and getPropositions APIs to enable timeout configuration in both the APIs ensuring that the operation either completes within the given time frame or returns an error indicating a timeout.
 * Updated getPropositions API to return cached propositions immediately if there are no pending updatePropositions calls for the requested list of decision scopes.
-* Added support for debug events and enabled getPropositions and onPropositionsUpdate to receive Simulated events from Assurance.
+* Added support for debug events and enabled getPropositions and onPropositionsUpdate to receive simulated events from Assurance.
 
 ### iOS Optimize 5.2.0
 
@@ -2334,8 +2352,8 @@ Major version update for [Identity for Edge Network](../../edge/identity-for-edg
   * Added new APIs and configuration for tracking media.
   * Customizable ping interval.
 * Added support to create multiple instances of the SDK.
-* Support non-xdm data in `SendEvent` API
-* A comprehensive [migration guide](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/media-migration.md) to transition from [Adobe Media SDK](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/roku) to [Adobe Experience Platform Roku SDK](https://github.com/adobe/aepsdk-roku).
+* Support non-xdm data in `SendEvent` API
+* A comprehensive [migration guide](https://github.com/adobe/aepsdk-roku/blob/main/Documentation/media-migration.md) to transition from [Adobe Media SDK](https://github.com/Adobe-Marketing-Cloud/media-sdks/tree/master/sdks/roku) to [Adobe Experience Platform Roku SDK](https://github.com/adobe/aepsdk-roku).
 
 ### iOS Assurance 4.1.2
 
