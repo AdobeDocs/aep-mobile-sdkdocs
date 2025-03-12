@@ -26,7 +26,7 @@ Use the Identity for Edge Network extension when including the Edge Network exte
 
 ![Identity for Edge Network extension configuration](./assets/index/configuration.png)
 
-## Add the Identity extension to your app
+## Add the Identity For Edge Network extension to your app
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -38,7 +38,7 @@ When using the [`setAdvertisingIdentifier`](./api-reference.md#setadvertisingide
 
 ### Include Identity extension as an app dependency
 
-Add MobileCore, Edge extensions as dependencies to your project.
+Add MobileCore, Edge, EdgeIdentity extensions as dependencies to your project.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
@@ -54,7 +54,7 @@ CocoaPods<br/>(iOS)
 
 <Tabs query="platform=ios-pods&task=add"/>
 
-### Initialize Adobe Experience Platform SDK with Edge Identity Extension
+### Initialize Adobe Experience Platform SDK with Identity for Edge Network Extension
 
 Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
 

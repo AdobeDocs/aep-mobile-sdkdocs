@@ -62,7 +62,7 @@ The datasets selected should use a schema that uses the "Push Notification Track
 
 ## Add the Adobe Journey Optimizer extension to your app
 
-### Include Messaging as an app dependency
+### Include Messaging extension as an app dependency
 
 Add MobileCore, Edge and Messaging extensions as dependencies to your project.
 
@@ -80,7 +80,7 @@ CocoaPods<br/>(iOS)
 
 <Tabs query="platform=ios-pods&task=add"/>
 
-### Initialize Adobe Experience Platform SDK with Edge Network Extension
+### Initialize Adobe Experience Platform SDK with Messaging Extension
 
 Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
 

@@ -45,7 +45,7 @@ On [Experience Platform Data Collection](https://experience.adobe.com/#/data-col
 
 ![Adobe Journey Optimizer - Decisioning extension configuration](./assets/index/configuration.png)
 
-## Add the Experience Platform Optimize SDK to your app
+## Add the Adobe Journey Optimizer- Decisioning extension to your app
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -69,7 +69,7 @@ CocoaPods<br/>(iOS)
 
 <Tabs query="platform=ios-pods&task=add"/>
 
-### Initialize Adobe Experience Platform SDK with Edge Network Extension
+### Initialize Adobe Experience Platform SDK with Optimize Extension
 
 Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
 
@@ -77,7 +77,7 @@ Using the `MobileCore.initialize` API to initialize the Adobe Experience Platfor
 
 <InitializeSDK query="componentClass=TabsBlock"/>
 
-## Adobe Journay Optimzer - Offer Decisioning
+## Adobe Journay Optimizer - Offer Decisioning
 
 ### DecisionScope
 
