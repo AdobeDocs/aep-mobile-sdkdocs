@@ -54,7 +54,7 @@ If you have a first-party domain mapped to the Adobe-provisioned Edge Network do
 
 ## Add the Edge Network extension to your app
 
-### Include Edge Network as an app dependency
+### Include Edge Network extension as an app dependency
 
 Add MobileCore, Edge and EdgeIdentity extensions as dependencies to your project.
 
