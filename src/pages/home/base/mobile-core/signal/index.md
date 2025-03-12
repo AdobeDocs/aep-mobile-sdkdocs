@@ -9,6 +9,7 @@ keywords:
 ---
 
 import Tabs from './tabs/index.md'
+import InitializeSDK from '/src/pages/resources/initialize.md'
 
 # Signal
 
@@ -28,47 +29,31 @@ For more information about creating and configuring a rule in the Data Collectio
 
 ## Add the Signal extension to your app
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Include Signal extension as an app dependency
 
-Android
+Add MobileCore, Signal extensions as dependencies to your project.
 
-<Tabs query="platform=android&task=add"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-iOS
+Kotlin<br/>(Android)
 
-<Tabs query="platform=ios&task=add"/>
+<Tabs query="platform=android-kotlin&task=add"/>
 
-<!--- React Native
+Groovy<br/>(Android)
 
-<Tabs query="platform=react-native&task=add"/>
+<Tabs query="platform=android-groovy&task=add"/>
 
-Flutter
+CocoaPods<br/>(iOS)
 
-<Tabs query="platform=flutter&task=add"/> --->
+<Tabs query="platform=ios-pods&task=add"/>
 
-## Register the Signal extension
+### Initialize Adobe Experience Platform SDK with Signal Extension
 
-The `MobileCore.registerExtensions()` API can be used to register the Signal extension with the Mobile Core extension. This API allows the extension to send and receive events to and from the Mobile SDK.
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
 
-To register the Signal extension, use the following code sample:
+Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
-
-Android
-
-<Tabs query="platform=android&task=register"/>
-
-iOS
-
-<Tabs query="platform=ios&task=register"/>
-
-<!--- React Native
-
-<Tabs query="platform=react-native&task=register"/>
-
-Flutter
-
-<Tabs query="platform=flutter&task=register"/> --->
+<InitializeSDK query="componentClass=TabsBlock"/>
 
 ## Implement the Mobile SDK to send PII data to external destinations
 

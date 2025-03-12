@@ -9,6 +9,7 @@ keywords:
 ---
 
 import Tabs from './tabs/index.md'
+import InitializeSDK from '/src/pages/resources/initialize.md'
 
 # Identity
 
@@ -43,41 +44,29 @@ To get started with Identity, complete the following steps:
 
 ## Add the Identity extension to your app
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Include Identity extension as an app dependency
 
-Android
+Add Identity extensions as dependencies to your project.
 
-<Tabs query="platform=android&task=add"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-iOS
+Kotlin<br/>(Android)
 
-<Tabs query="platform=ios&task=add"/>
+<Tabs query="platform=android-kotlin&task=add"/>
 
-<!--- React Native
-<Tabs query="platform=react-native&task=add"/>
-Flutter
-<Tabs query="platform=flutter&task=add"/> --->
+Groovy<br/>(Android)
 
-## Register the Identity extension
+<Tabs query="platform=android-groovy&task=add"/>
 
-The `MobileCore.registerExtensions()` API can be used to register the Identity extension with the Mobile Core extension. This API allows the extension to send and receive events to and from the Mobile SDK.
+CocoaPods<br/>(iOS)
 
-To register the Identity extension, use the following code sample:
+<Tabs query="platform=ios-pods&task=add"/>
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Initialize Adobe Experience Platform SDK with Identity Extension
 
-Android
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
 
-<Tabs query="platform=android&task=register"/>
-
-iOS
-
-<Tabs query="platform=ios&task=register"/>
-
-<!--- React Native
-<Tabs query="platform=react-native&task=register"/>
-Flutter
-<Tabs query="platform=flutter&task=register"/> --->
+Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
 
 <InlineAlert variant="info" slots="text"/>
 

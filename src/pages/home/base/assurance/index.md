@@ -29,58 +29,30 @@ Go to the [Experience Platform Data Collection UI](https://experience.adobe.com/
 
 ![](./assets/index/assurance-extension.png)
 
-## Add the AEP Assurance extension to your app
+## Add the Assurance extension to your app
 
-### Import the library to your app code
+### Include Assurance extension as an app dependency
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+Add MobileCore and Assurance extensions as dependencies to your project.
 
-Android
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-<Tabs query="platform=android&task=import-library"/>
+Kotlin<br/>(Android)
 
-iOS
+<Tabs query="platform=android-kotlin&task=add"/>
 
-<Tabs query="platform=ios&task=import-library"/>
+Groovy<br/>(Android)
 
-<!--- React Native
+<Tabs query="platform=android-groovy&task=add"/>
 
-<Tabs query="platform=react-native&task=import-library"/>
+CocoaPods<br/>(iOS)
 
-Flutter
+<Tabs query="platform=ios-pods&task=add"/>
 
-<Tabs query="platform=flutter&task=import-library"/> --->
+### Initialize Adobe Experience Platform SDK with Assurance Extension
 
-### Register AEPAssurance with Mobile Core
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
 
-The `MobileCore.registerExtensions()` API can be used to register the Assurance extension with the Mobile Core extension. This API allows the extension to send and receive events to and from the Mobile SDK.
+Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
-
-Android
-
-<Tabs query="platform=android&task=register-assurance"/>
-
-iOS
-
-<Tabs query="platform=ios&task=register-assurance"/>
-
-<!--- React Native
-
-<Tabs query="platform=react-native&task=register-assurance"/>
-
-Flutter
-
-<Tabs query="platform=flutter&task=register-assurance"/> --->
-
-### Connect to an Assurance session
-
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
-
-Android
-
-<Tabs query="platform=android&task=implement-assurance"/>
-
-iOS
-
-<Tabs query="platform=ios&task=implement-assurance"/>
+<InitializeSDK query="componentClass=TabsBlock"/>

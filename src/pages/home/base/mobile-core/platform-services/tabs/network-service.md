@@ -282,10 +282,7 @@ public class MyApp extends Application {
 
         MobileCore.setApplication(this);
 
-        List<Class<? extends Extension>> extensions = Arrays.asList(...);
-        MobileCore.registerExtensions(extensions, o -> {
-            // Any other post registration processing
-        });
+        MobileCore.initialize(this, "ENVIRONMENT_ID");
     }
 }
 ```

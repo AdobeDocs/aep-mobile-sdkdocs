@@ -7,6 +7,7 @@ keywords:
 ---
 
 import Tabs from './tabs/index.md'
+import InitializeSDK from '/src/pages/resources/initialize.md'
 
 # Adobe Analytics - Media Analytics for Audio and Video
 
@@ -61,31 +62,35 @@ If you are using Media Extension v1.x, then go to Legacy settings section 1. Ena
 
 ## Add Media Analytics to your app
 
+### Include Media Analytics extension as an app dependency
+
 <InlineAlert variant="info" slots="text"/>
 
 This extension requires the [Adobe Analytics extension](../adobe-analytics/index.md). You must add the Analytics extension to your mobile property and make sure the extension is correctly configured.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+Add Media Analytics extensions as dependencies to your project.
 
-Android
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-<Tabs query="platform=android&task=add"/>
+Kotlin<br/>(Android)
 
-iOS
+<Tabs query="platform=android-kotlin&task=add"/>
 
-<Tabs query="platform=ios&task=add"/>
+Groovy<br/>(Android)
 
-## Register Media with Mobile Core
+<Tabs query="platform=android-groovy&task=add"/>
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+CocoaPods<br/>(iOS)
 
-Android
+<Tabs query="platform=ios-pods&task=add"/>
 
-<Tabs query="platform=android&task=register"/>
+### Initialize Adobe Experience Platform SDK with Media Analytics Extension
 
-iOS
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
 
-<Tabs query="platform=ios&task=register"/>
+Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
+
+<InitializeSDK query="componentClass=TabsBlock"/>
 
 ## Configuration keys
 

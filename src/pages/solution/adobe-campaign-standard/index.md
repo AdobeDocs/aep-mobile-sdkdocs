@@ -7,6 +7,7 @@ keywords:
 ---
 
 import Tabs from './tabs/index.md'
+import InitializeSDK from '/src/pages/resources/initialize.md'
 
 # Adobe Campaign Standard
 
@@ -57,6 +58,33 @@ The request timeout is the time in seconds to wait for a response from the in-ap
 The request timeout value must be a non-zero number.
 
 ### Add the Campaign Standard extension to your app
+
+Add Campaign Standard, Mobile Core and Profile extensions as dependencies to your project.
+
+#### Include Campaign Standard extension as an app dependency
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+
+Kotlin<br/>(Android)
+
+<Tabs query="platform=android-kotlin&task=add"/>
+
+Groovy<br/>(Android)
+
+<Tabs query="platform=android-groovy&task=add"/>
+
+CocoaPods<br/>(iOS)
+
+<Tabs query="platform=ios-pods&task=add"/>
+
+### Initialize Adobe Experience Platform SDK with Campaign Standard Extension
+
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
+
+Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
+
+<InitializeSDK query="componentClass=TabsBlock"/>
+
 
 Remember the following information when you add the Campaign extension to your app:
 

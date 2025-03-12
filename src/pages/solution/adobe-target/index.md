@@ -35,41 +35,33 @@ To get started with Target, follow these steps:
 7. Select **Save**.
 8. Follow the publishing process to update SDK configuration.
 
-## Add Target to your app
+## Add the Target extension to your app
 
-To add the Target extension to your app:
+### Include Target extension as an app dependency
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+Add the Mobile Core, Identity and Target extensions to your project using the app's Gradle file.
 
-Android
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-<Tabs query="platform=android&task=add"/>
+Kotlin<br/>(Android)
 
-iOS
+<Tabs query="platform=android-kotlin&task=add"/>
 
-<Tabs query="platform=ios&task=add"/>
+Groovy<br/>(Android)
 
-<!--- React Native
+<Tabs query="platform=android-groovy&task=add"/>
 
-<Tabs query="platform=react-native&task=add"/> --->
+CocoaPods<br/>(iOS)
 
-## Register Target with Mobile Core
+<Tabs query="platform=ios-pods&task=add"/>
 
-To register the Target extension with Mobile Core:
+### Initialize Adobe Experience Platform SDK with Target Extension
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
 
-Android
+Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
 
-<Tabs query="platform=android&task=register"/>
-
-iOS
-
-<Tabs query="platform=ios&task=register"/>
-
-<!--- React Native
-
-<Tabs query="platform=react-native&task=register"/> --->
+<InitializeSDK query="componentClass=TabsBlock"/>
 
 ## Parameters in a Target request
 
