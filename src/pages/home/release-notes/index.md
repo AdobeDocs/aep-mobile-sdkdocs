@@ -179,7 +179,7 @@ Users can now configure:
 
 ### Android Optimize 3.3.0
 
-* **[Breaking Change]** Updated Offer Score data type of from `Integer` to `Double`.
+* **[Breaking Change]** Updated Offer Score data type from `Integer` to `Double`.
 * Optimize SDK only listens to preview events if it contains `debug` object with `eventType` as `com.adobe.eventType.edge` and `eventSource` as `personalization:decisions`.
 
 ## February 14, 2025
