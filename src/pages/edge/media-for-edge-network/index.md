@@ -59,7 +59,7 @@ Type the version of the media player application/SDK.
 
 ## Add Media for Edge Network to your app
 
-### Include Media for Edge Network as an app dependency
+### Include Media for Edge Network extension as an app dependency
 
 Add MobileCore, Edge, EdgeIdentity and EdgeMedia extensions as dependencies to your project.
 

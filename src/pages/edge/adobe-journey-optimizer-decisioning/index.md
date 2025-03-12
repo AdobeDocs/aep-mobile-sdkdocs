@@ -51,7 +51,7 @@ On [Experience Platform Data Collection](https://experience.adobe.com/#/data-col
 
 For the AEPOptimize APIs to work properly, you need to integrate Mobile Core and Edge extensions in your mobile app. For more details see, documentation on [Mobile Core](../../home/base/mobile-core/index.md) and [Adobe Experience Platform Edge Network](../../edge/edge-network/index.md).
 
-### Include the Optimize as an app dependency
+### Include the Optimize extension as an app dependency
 
 Add MobileCore, Edge and Optimize extensions as dependencies to your project.
 
