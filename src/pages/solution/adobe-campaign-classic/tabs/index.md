@@ -42,4 +42,3 @@ target 'YourTargetApp' do
   pod 'AEPCampaignClassic', '~> 5.0'
 end
 ```
-

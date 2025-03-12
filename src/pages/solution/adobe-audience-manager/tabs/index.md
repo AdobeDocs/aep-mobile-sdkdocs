@@ -28,7 +28,6 @@ implementation 'com.adobe.marketing.mobile:audience'
 
 <Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
-
 <Variant platform="ios-pods" task="add" repeat="2"/>
 
 Add the required dependencies to your project using CocoaPods. Add following pods in your `Podfile`:

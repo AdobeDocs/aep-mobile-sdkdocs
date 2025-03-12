@@ -45,5 +45,3 @@ target 'YourTargetApp' do
   pod 'AEPMedia', '~> 5.0'
 end
 ```
-
-

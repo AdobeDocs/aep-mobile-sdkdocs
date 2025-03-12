@@ -85,7 +85,6 @@ Using the `MobileCore.initialize` API to initialize the Adobe Experience Platfor
 
 <InitializeSDK query="componentClass=TabsBlock"/>
 
-
 Remember the following information when you add the Campaign extension to your app:
 
 | Extension | Information |
