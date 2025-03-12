@@ -45,7 +45,7 @@ On [Experience Platform Data Collection](https://experience.adobe.com/#/data-col
 
 ![Adobe Journey Optimizer - Decisioning extension configuration](./assets/index/configuration.png)
 
-## Add the Adobe Journey Optimizer- Decisioning extension to your app
+## Add the Adobe Journey Optimizer - Decisioning extension to your app
 
 <InlineAlert variant="warning" slots="text"/>
 

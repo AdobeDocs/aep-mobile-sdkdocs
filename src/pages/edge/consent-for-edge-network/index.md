@@ -40,7 +40,7 @@ The use of this extension is currently limited to the setting (and enforcement) 
 
 ### Include Consent extension as an app dependency
 
-Add MobileCore, Edge and Consent extensions as dependencies to your project.
+Add MobileCore, Edge and EdgeConsent extensions as dependencies to your project.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
