@@ -41,7 +41,7 @@ To get started with the Profile extension:
 
 ### Include Profile extension as an app dependency
 
-Add Profile extensions as dependencies to your project.
+Add MobileCore and Profile extensions as dependencies to your project.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
