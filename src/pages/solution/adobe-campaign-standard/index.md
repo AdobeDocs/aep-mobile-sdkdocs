@@ -59,7 +59,20 @@ The request timeout value must be a non-zero number.
 
 ### Add the Campaign Standard extension to your app
 
-Add Campaign Standard, Mobile Core and Profile extensions as dependencies to your project.
+Remember the following information when you add the Campaign extension to your app:
+
+| Extension | Information |
+| :--- | :--- |
+| Campaign Standard | The Campaign Standard extension requires the [Mobile Core](../../home/base/mobile-core/index.md), [Profile](../profile/index.md), [Lifecycle](../../home/base/mobile-core/lifecycle/index.md), and [Signal](../../home/base/mobile-core/signal/index.md) extensions. You should always ensure that you get the latest version of the extensions. |
+| Profile | The Profile extension is required for in-app trigger frequencies to work accurately. For more information, see [Profile](../profile/index.md). |
+| Signal | The Signal extension is required for all postback rules to work. For more information, see [Signal](../../home/base/mobile-core/signal/index.md). |
+| Lifecycle | The Lifecycle extension is required for a profile to be registered in Campaign. In order to do this, you will need to implement the Lifecycle APIs. For more information, please read either the [Lifecycle API (Android)](../../home/base/mobile-core/lifecycle/android.md) or the [Lifecycle API (iOS)](../../home/base/mobile-core/lifecycle/ios.md) documentation. |
+
+<InlineAlert variant="info" slots="text"/>
+
+The instructions to add these extensions to your mobile app are also available in the Data Collection UI. To access the installation dialog box, open your mobile property, select the **Environments** tab, followed by **Install**.
+
+Add MobileCore, Campaign Standard, Profile extensions as dependencies to your project.
 
 #### Include Campaign Standard extension as an app dependency
 
@@ -85,19 +98,6 @@ Using the `MobileCore.initialize` API to initialize the Adobe Experience Platfor
 
 <InitializeSDK query="componentClass=TabsBlock"/>
 
-Remember the following information when you add the Campaign extension to your app:
-
-| Extension | Information |
-| :--- | :--- |
-| Campaign Standard | The Campaign Standard extension requires the [Mobile Core](../../home/base/mobile-core/index.md), [Profile](../profile/index.md), [Lifecycle](../../home/base/mobile-core/lifecycle/index.md), and [Signal](../../home/base/mobile-core/signal/index.md) extensions. You should always ensure that you get the latest version of the extensions. |
-| Profile | The Profile extension is required for in-app trigger frequencies to work accurately. For more information, see [Profile](../profile/index.md). |
-| Signal | The Signal extension is required for all postback rules to work. For more information, see [Signal](../../home/base/mobile-core/signal/index.md). |
-| Lifecycle | The Lifecycle extension is required for a profile to be registered in Campaign. In order to do this, you will need to implement the Lifecycle APIs. For more information, please read either the [Lifecycle API (Android)](../../home/base/mobile-core/lifecycle/android.md) or the [Lifecycle API (iOS)](../../home/base/mobile-core/lifecycle/ios.md) documentation. |
-
-<InlineAlert variant="info" slots="text"/>
-
-The instructions to add these extensions to your mobile app are also available in the Data Collection UI. To access the installation dialog box, open your mobile property, select the **Environments** tab, followed by **Install**.
-
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
@@ -108,19 +108,7 @@ iOS
 
 <Tabs query="platform=ios&task=add"/>
 
-### Register the Campaign Standard extension with Mobile Core
-
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
-
-Android
-
-<Tabs query="platform=android&task=register"/>
-
-iOS
-
-<Tabs query="platform=ios&task=register"/>
-
-### Initialize the SDK and set up tracking
+### Set up tracking
 
 To initialize the SDK and set up tracking, see the [initialize the SDK and set up tracking tutorial](../../home/getting-started/track-events.md).
 

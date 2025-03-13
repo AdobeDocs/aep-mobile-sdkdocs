@@ -68,7 +68,7 @@ If you are using Media Extension v1.x, then go to Legacy settings section 1. Ena
 
 This extension requires the [Adobe Analytics extension](../adobe-analytics/index.md). You must add the Analytics extension to your mobile property and make sure the extension is correctly configured.
 
-Add Media Analytics extensions as dependencies to your project.
+Add MobileCore, Analytics, Media Analytics extensions as dependencies to your project.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 

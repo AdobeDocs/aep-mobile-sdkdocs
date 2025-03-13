@@ -7,6 +7,7 @@ keywords:
 ---
 
 import Tabs from './tabs/index.md'
+import InitializeSDK from '/src/pages/resources/initialize.md'
 
 # Adobe Target
 
@@ -39,7 +40,7 @@ To get started with Target, follow these steps:
 
 ### Include Target extension as an app dependency
 
-Add the Mobile Core, Identity and Target extensions to your project using the app's Gradle file.
+Add the MobileCore, Identity and Target extensions to your project using the app's Gradle file.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 

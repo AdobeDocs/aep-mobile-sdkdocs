@@ -52,6 +52,8 @@ target 'YourTargetApp' do
 end
 ```
 
+<Variant platform="android" task="initialize" repeat="6"/>
+
 #### Set up in-app messaging
 
 To learn how to create an in-app message using Adobe Campaign, see the [tutorial on preparing and sending an in-app message](https://experienceleague.adobe.com/docs/campaign-standard/using/communication-channels/in-app-messaging/preparing-and-sending-an-in-app-message.html).

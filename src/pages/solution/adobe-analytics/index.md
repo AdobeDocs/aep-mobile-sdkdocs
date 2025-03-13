@@ -103,7 +103,7 @@ The default value for this setting is 0, which means that hit batching is disabl
 
 The number of seconds to wait before Analytics launch hits are sent from the SDK.
 
-## Add the Analytics extensionto your app
+## Add the Analytics extension to your app
 
 ### Include Analytics extension as an app dependency
 

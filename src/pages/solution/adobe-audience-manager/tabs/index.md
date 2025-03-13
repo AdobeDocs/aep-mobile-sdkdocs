@@ -19,6 +19,8 @@ implementation("com.adobe.marketing.mobile:audience")
 
 <Variant platform="android-groovy" task="add" repeat="3"/>
 
+Add the required dependencies to your project by including them in the app's Gradle file.
+
 ```java
 implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
 implementation 'com.adobe.marketing.mobile:core'

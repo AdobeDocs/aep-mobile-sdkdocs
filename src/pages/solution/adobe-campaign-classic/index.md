@@ -7,6 +7,7 @@ keywords:
 ---
 
 import Tabs from './tabs/index.md'
+import InitializeSDK from '/src/pages/resources/initialize.md'
 
 # Adobe Campaign Classic
 
@@ -60,7 +61,7 @@ The request timeout is the amount of time, in seconds, to wait for a response fr
 
 ### Include Campaign Classic extension as an app dependency
 
-Add the Mobile Core, Lifecycle and Campaign Classic dependencies in your app's Gradle file.
+Add the MobileCore and Campaign Classic dependencies in your app's Gradle file.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 

@@ -25,7 +25,7 @@ Adobe Audience Manager is a versatile audience data management platform. With th
 5. Select **Save**.
 6. Follow the publishing process to update the SDK configuration.
 
-## Add Audience Manager to your app
+## Add Audience Manager extension to your app
 
 ### Include Audience Manager extension as an app dependency
 
