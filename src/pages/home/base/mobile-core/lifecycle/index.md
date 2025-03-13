@@ -43,11 +43,11 @@ Using the `MobileCore.initialize` API to initialize the Adobe Experience Platfor
 
 <InitializeSDK query="componentClass=TabsBlock"/>
 
+## Add Lifecycle start and pause calls
+
 <InlineAlert variant="info" slots="text"/>
 
-Lifecycle is automatically enabled with the `MobileCore.initialize` API. The following `lifecycleStart` and `lifecyclePause` instructions apply only to [manual extension registration](/src/pages/home/getting-started/get-the-sdk/#b-manual-extension-registration-using-mobilecoreregisterextensions-api).
-
-## Add Lifecycle start and pause calls
+Lifecycle tracking is enabled by default when the `MobileCore.initialize` API is used and lifecycle extension is included as an app dependency. The following instructions only apply when using [manual extension registration](/src/pages/home/getting-started/get-the-sdk/#b-manual-extension-registration-using-mobilecoreregisterextensions-api) to register Lifecycle extension.
 
 You can start collecting Lifecycle information at any time in your app, but you should start as soon as your app enters the foreground. This allows Lifecycle metrics to be correctly attributed to all of your users' activities for their current session.
 

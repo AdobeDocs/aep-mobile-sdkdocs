@@ -60,9 +60,9 @@ Legacy settings should not be configured for Media Extension v2.x and higher. Th
 
 If you are using Media Extension v1.x, then go to Legacy settings section 1. Enable the `Use Tracking Server` checkbox. 2. In **Tracking Server**, Type the name of the tracking server to which all media tracking data should be sent.
 
-## Add Media Analytics to your app
+## Add Media extension to your app
 
-### Include Media Analytics extension as an app dependency
+### Include Media extension as an app dependency
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -84,7 +84,7 @@ CocoaPods<br/>(iOS)
 
 <Tabs query="platform=ios-pods&task=add"/>
 
-### Initialize Adobe Experience Platform SDK with Media Analytics Extension
+### Initialize Adobe Experience Platform SDK with Media Extension
 
 Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
 
