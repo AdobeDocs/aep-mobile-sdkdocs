@@ -7,6 +7,24 @@ Keywords:
 
 # Release notes
 
+## March 11, 2025
+
+### Android Optimize 3.3.1
+
+* Added capability to configure timeout value for the Update Proposition API via launch tag.
+
+## March 7, 2025
+
+### iOS EdgeBridge 5.1.0
+
+* Added tvOS support
+
+## March 6, 2025
+
+### iOS Optimize 5.3.0
+
+* Added capability to configure timeout value for the `updateProposition` API via launch tag.
+
 ## March 4, 2025
 
 ### Flutter Core 5.0.0
