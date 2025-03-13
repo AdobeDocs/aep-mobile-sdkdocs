@@ -68,6 +68,8 @@ Next, initialize the SDK by registering all the solution extensions that have be
 
 Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
 
+<InitializeSDK query="componentClass=TabsBlock"/>
+
 <InlineAlert variant="info" slots="text"/>
 
 Previously known as MCID/MID/MCMID, the Experience Cloud ID (ECID) is a 38 character ID that uniquely identifies each visitor in the Adobe Experience Platform.

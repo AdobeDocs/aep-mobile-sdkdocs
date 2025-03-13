@@ -15,11 +15,11 @@ import InitializeSDK from '/src/pages/resources/initialize.md'
 
 Sessions contain information about the app's current lifecycle, such as the device information, the application install or upgrade information, the session start and pause times, the number of application launches, and additional context data that is provided by the developer through the `lifecycleStart` API. Session data is persisted, so it is available across application launches.
 
-## Add Lifecycle to your app
+## Add Lifecycle extension to your app
 
-### Include Lifecycle as an app dependency
+### Include Lifecycle extension as an app dependency
 
-Add Lifecycle and MobileCore extensions as dependencies to your project.
+Add MobileCore and Lifecycle extensions as dependencies to your project.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
