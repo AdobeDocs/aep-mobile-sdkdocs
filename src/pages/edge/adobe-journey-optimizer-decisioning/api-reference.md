@@ -217,6 +217,10 @@ iOS
 
 This class represents the proposition option received from the decisioning services, upon a personalization query to the Experience Edge network.
 
+<InlineAlert variant="warning" slots="text"/>
+
+In SDK versions lower than Android 3.3.0 and iOS 5.2.1, the datatype for `Offer Score` was `int`. It is now changed to `double`
+
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
