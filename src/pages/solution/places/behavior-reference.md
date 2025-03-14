@@ -93,7 +93,7 @@ The original draw.io source file which contains all diagram pages is also includ
 - Transparent background
 - Appearance: Light (Dark mode is not currently supported, so dynamically switching SVGs perform worse.)
  -->
-![](/src/pages/solution/places/assets/behavior-reference/non-intersecting-enter-A.svg)
+![](./assets/behavior-reference/non-intersecting-enter-A.svg)
 
 #### Exit POI A
 
@@ -103,7 +103,7 @@ The user has exited the radius for POI A:
 * **Last Entered POI** remains unchanged as POI A.  
 * **Last Exited POI** is set to POI A.  
 
-![](/src/pages/solution/places/assets/behavior-reference/non-intersecting-exit-A.svg)
+![](./assets/behavior-reference/non-intersecting-exit-A.svg)
 
 #### Enter POI B
 
@@ -113,7 +113,7 @@ The user has entered the radius for POI B:
 * **Last Entered POI** is set to POI B.  
 * **Last Exited POI** remains unchanged as POI A.  
 
-![](/src/pages/solution/places/assets/behavior-reference/non-intersecting-enter-B.svg)
+![](./assets/behavior-reference/non-intersecting-enter-B.svg)
 
 ### Scenario: Intersecting points
 
@@ -125,7 +125,7 @@ The user has entered the radius for POI A:
 * **Last Entered POI** is set to POI A.  
 * **Last Exited POI** remains unchanged as none.  
 
-![](/src/pages/solution/places/assets/behavior-reference/intersecting-enter-A.svg)
+![](./assets/behavior-reference/intersecting-enter-A.svg)
 
 #### Enter POI B
 
@@ -136,7 +136,7 @@ The user has entered the radius for POI B:
 * **Last Entered POI** is set to POI B.  
 * **Last Exited POI** remains unchanged as none.  
 
-![](/src/pages/solution/places/assets/behavior-reference/intersecting-enter-B.svg)
+![](./assets/behavior-reference/intersecting-enter-B.svg)
 
 #### Exit POI A
 
@@ -147,4 +147,4 @@ The user has exited the radius for POI A:
 * **Last entered POI** remains unchanged and is set to POI B.  
 * **Last exited POI** is set to POI A.  
 
-![](/src/pages/solution/places/assets/behavior-reference/intersecting-exit-A.svg)
+![](./assets/behavior-reference/intersecting-exit-A.svg)
