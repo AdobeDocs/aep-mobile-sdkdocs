@@ -8,7 +8,7 @@ import Alerts from '/src/pages/resources/alerts.md'
 
 Add the required dependencies to your project by including them in the app's Gradle file.
 
-```java
+```kotlin
 implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
 implementation("com.adobe.marketing.mobile:core")
 implementation("com.adobe.marketing.mobile:assurance")
