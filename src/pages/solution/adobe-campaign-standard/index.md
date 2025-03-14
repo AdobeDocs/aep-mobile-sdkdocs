@@ -7,6 +7,7 @@ keywords:
 ---
 
 import Tabs from './tabs/index.md'
+import InitializeSDK from '/src/pages/resources/initialize.md'
 
 # Adobe Campaign Standard
 
@@ -71,6 +72,32 @@ Remember the following information when you add the Campaign extension to your a
 
 The instructions to add these extensions to your mobile app are also available in the Data Collection UI. To access the installation dialog box, open your mobile property, select the **Environments** tab, followed by **Install**.
 
+Add MobileCore, Campaign Standard and Profile extensions as dependencies to your project.
+
+#### Include Campaign Standard extension as an app dependency
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+
+Kotlin<br/>(Android)
+
+<Tabs query="platform=android-kotlin&task=add"/>
+
+Groovy<br/>(Android)
+
+<Tabs query="platform=android-groovy&task=add"/>
+
+CocoaPods<br/>(iOS)
+
+<Tabs query="platform=ios-pods&task=add"/>
+
+### Initialize Adobe Experience Platform SDK with Campaign Standard Extension
+
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
+
+Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
+
+<InitializeSDK query="componentClass=TabsBlock"/>
+
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
@@ -81,19 +108,7 @@ iOS
 
 <Tabs query="platform=ios&task=add"/>
 
-### Register the Campaign Standard extension with Mobile Core
-
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
-
-Android
-
-<Tabs query="platform=android&task=register"/>
-
-iOS
-
-<Tabs query="platform=ios&task=register"/>
-
-### Initialize the SDK and set up tracking
+### Set up tracking
 
 To initialize the SDK and set up tracking, see the [initialize the SDK and set up tracking tutorial](../../home/getting-started/track-events.md).
 

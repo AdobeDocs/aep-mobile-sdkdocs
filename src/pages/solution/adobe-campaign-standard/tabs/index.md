@@ -4,11 +4,9 @@ noIndex: true
 
 import Alerts from '/src/pages/resources/alerts.md'
 
-<Variant platform="android" task="add" repeat="8"/>
+<Variant platform="android-kotlin" task="add" repeat="3"/>
 
-1. Add the Campaign Standard, [Mobile Core](../mobile-core/index.md) and [Profile](../profile/index.md) extensions to your project using the app's Gradle file.
-
-#### Kotlin
+Add the required dependencies to your project by including them in the app's Gradle file.
 
 ```kotlin
 implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
@@ -20,7 +18,11 @@ implementation("com.adobe.marketing.mobile:signal")
 implementation("com.adobe.marketing.mobile:userprofile")
 ```
 
-#### Groovy
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
+
+<Variant platform="android-groovy" task="add" repeat="3"/>
+
+Add the required dependencies to your project by including them in the app's Gradle file.
 
 ```java
 implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
@@ -34,20 +36,9 @@ implementation 'com.adobe.marketing.mobile:userprofile'
 
 <Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
-2. Import the Campaign Standard, [Mobile Core](../../home/base/mobile-core/index.md), [Profile](../../home/base/profile/index.md), [Lifecycle](../../home/base/mobile-core/lifecycle/index.md), and [Signal](../../home/base/mobile-core/signals/index.md) extensions in your application's main activity.
+<Variant platform="ios-pods" task="add" repeat="2"/>
 
-```java
-import com.adobe.marketing.mobile.Campaign;
-import com.adobe.marketing.mobile.Identity;
-import com.adobe.marketing.mobile.Lifecycle;
-import com.adobe.marketing.mobile.MobileCore;
-import com.adobe.marketing.mobile.Signal;
-import com.adobe.marketing.mobile.UserProfile;
-```
-
-<Variant platform="ios" task="add" repeat="7"/>
-
-1. Add the Campaign Standard, [Mobile Core](../../home/base/mobile-core/index.md), and [Profile](../../home/base/profile/index.md) extensions to your project using Cocoapods.
+Add the required dependencies to your project using CocoaPods. Add following pods in your `Podfile`:
 
 ```swift
 use_frameworks!
@@ -60,136 +51,6 @@ target 'YourTargetApp' do
   pod 'AEPUserProfile', '~> 5.0'
 end
 ```
-
-2. In Xcode, import the Mobile Core, Campaign Standard, Profile, Lifecycle, Identity, Signal, and Services extensions:
-
-**Swift**
-
-```swift
-import AEPCore
-import AEPCampaign
-import AEPUserProfile
-import AEPIdentity
-import AEPLifecycle
-import AEPSignal
-import AEPServices
-```
-
-**Objective-C**
-
-```objective-c
-@import AEPCore;
-@import AEPCampaign;
-@import AEPUserProfile;
-@import AEPIdentity;
-@import AEPLifecycle;
-@import AEPSignal;
-@import AEPServices;
-```
-
-<Variant platform="android" task="register" repeat="6"/>
-
-In your app's `OnCreate` method, call the `setApplication` method.
-
-#### Java
-
-```java
-public class MainApp extends Application {
-    private static final String APP_ID = "YOUR_APP_ID";
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
-
-        MobileCore.setApplication(this);
-        MobileCore.configureWithAppID(APP_ID);
-
-        List<Class<? extends Extension>> extensions = new ArrayList<>();
-        extensions.add(Campaign.EXTENSION);
-        extensions.add(Identity.EXTENSION);
-        extensions.add(Lifecycle.EXTENSION);
-        extensions.add(Signal.EXTENSION);
-        extensions.add(UserProfile.EXTENSION);
-        MobileCore.registerExtensions(extensions, o -> {
-            Log.d(LOG_TAG, "AEP Mobile SDK is initialized");
-        });
-    }
-
-}
-```
-
-#### Kotlin
-
-```java
-class MyApp : Application() {
-
-    override fun onCreate() {
-        super.onCreate()
-        MobileCore.setApplication(this)
-        MobileCore.configureWithAppID("YOUR_APP_ID")
-
-        val extensions = listOf(Campaign.EXTENSION, Identity.EXTENSION, Lifecycle.EXTENSION, Signal.EXTENSION, UserProfile.EXTENSION)
-        MobileCore.registerExtensions(extensions) {
-            Log.d(LOG_TAG, "AEP Mobile SDK is initialized")
-        }
-    }
-
-}
-```
-
-For more information about starting Lifecycle, see the [Lifecycle extension in Android guide](../../home/base/mobile-core/lifecycle/android.md).
-
-<Variant platform="ios" task="register" repeat="6"/>
-
-In your app's `application:didFinishLaunchingWithOptions:` method, register the Campaign, Identity, Signal, and Lifecycle extensions:
-
-#### Swift
-
-```swift
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-  MobileCore.setLogLevel(.debug)
-  let appState = application.applicationState
-  let extensions = [
-    Campaign.self,
-    UserProfile.self,
-    Identity.self,
-    Lifecycle.self,
-    Signal.self
-  ]
-  MobileCore.registerExtensions(extensions, {
-    MobileCore.configureWith(appId: "APP-ID")
-    if appState != .background {
-      MobileCore.lifecycleStart(additionalContextData: ["contextDataKey": "contextDataVal"])
-    }
-  })
-
-  return true;
-}
-```
-
-#### Objective-C
-
-```objective-c
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-  [AEPMobileCore setLogLevel: AEPLogLevelDebug];
-  NSArray *extensionsToRegister = @[
-    AEPMobileCampaign.class,
-    AEPMobileUserProfile.class,
-    AEPMobileIdentity.class,
-    AEPMobileLifecycle.class,
-    AEPMobileSignal.class
-  ];
-  [AEPMobileCore registerExtensions:extensionsToRegister completion:^{
-  [AEPMobileCore lifecycleStart:@{@"contextDataKey": @"contextDataVal"}];
-  }];
-  [AEPMobileCore configureWithAppId: @"APP-ID"];
-  // Override point for customization after application launch.
-  return YES;
-}
-```
-
-For more information about starting Lifecycle, see the [Lifecycle extension in iOS guide](../mobile-core/lifecycle/ios.md).
 
 <Variant platform="android" task="initialize" repeat="6"/>
 
