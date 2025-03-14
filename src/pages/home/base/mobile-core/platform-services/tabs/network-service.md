@@ -280,8 +280,6 @@ public class MyApp extends Application {
         // Set the network override prior to making any other calls to the SDK
         ServiceProvider.getInstance().setNetworkService(new MyCustomNetworkService());
 
-        MobileCore.setApplication(this);
-
         MobileCore.initialize(this, "ENVIRONMENT_ID");
     }
 }

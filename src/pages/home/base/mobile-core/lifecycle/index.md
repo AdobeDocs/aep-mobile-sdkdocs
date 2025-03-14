@@ -47,7 +47,7 @@ Using the `MobileCore.initialize` API to initialize the Adobe Experience Platfor
 
 <InlineAlert variant="info" slots="text"/>
 
-Lifecycle tracking is enabled by default when the `MobileCore.initialize` API is used and lifecycle extension is included as an app dependency. The following instructions only apply when using [manual extension registration](/src/pages/home/getting-started/get-the-sdk/#b-manual-extension-registration-using-mobilecoreregisterextensions-api) to register Lifecycle extension.
+Lifecycle tracking is enabled by default when the `MobileCore.initialize` API is used and Lifecycle extension is included as an app dependency. The following instructions only apply if [lifecycleAutomaticTrackingEnabled](https://developer.adobe.com/client-sdks/home/base/mobile-core/api-reference/#initoptions) is false or when using [manual extension registration](/src/pages/home/getting-started/get-the-sdk/#b-manual-extension-registration-using-mobilecoreregisterextensions-api) to register Lifecycle extension.
 
 You can start collecting Lifecycle information at any time in your app, but you should start as soon as your app enters the foreground. This allows Lifecycle metrics to be correctly attributed to all of your users' activities for their current session.
 

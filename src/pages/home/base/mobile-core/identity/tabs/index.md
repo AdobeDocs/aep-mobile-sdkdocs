@@ -30,6 +30,8 @@ implementation 'com.adobe.marketing.mobile:identity'
 
 <Variant platform="ios-pods" task="add" repeat="2"/>
 
+Add the required dependencies to your project using CocoaPods. Add following pods in your `Podfile`:
+
 ```swift
 use_frameworks!
 target 'YourTargetApp' do

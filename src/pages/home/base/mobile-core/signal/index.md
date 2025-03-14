@@ -31,7 +31,7 @@ For more information about creating and configuring a rule in the Data Collectio
 
 ### Include Signal extension as an app dependency
 
-Add MobileCore, Signal extensions as dependencies to your project.
+Add MobileCore and Signal extensions as dependencies to your project.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
