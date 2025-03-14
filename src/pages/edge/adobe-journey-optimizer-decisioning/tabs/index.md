@@ -4,11 +4,9 @@ noIndex: true
 
 import Alerts from '/src/pages/resources/alerts.md'
 
-<Variant platform="android" task="install" repeat="8"/>
+<Variant platform="android-kotlin" task="add" repeat="3"/>
 
-1. Add the Mobile Core, Edge, Identity for Edge Network and Optimize dependencies in your app's gradle file.
-
-#### Kotlin
+Add the required dependencies to your project by including them in the app's Gradle file.
 
 ```kotlin
 implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
@@ -18,7 +16,11 @@ implementation("com.adobe.marketing.mobile:edge")
 implementation("com.adobe.marketing.mobile:optimize")
 ```
 
-#### Groovy
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
+
+<Variant platform="android-groovy" task="add" repeat="3"/>
+
+Add the required dependencies to your project by including them in the app's Gradle file.
 
 ```java
 implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
@@ -30,18 +32,9 @@ implementation 'com.adobe.marketing.mobile:optimize'
 
 <Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
-2. Import the Mobile Core, Edge, Edge Identity, and Optimize extensions in your application class.
+<Variant platform="ios-pods" task="add" repeat="2"/>
 
-```java
-import com.adobe.marketing.mobile.MobileCore;
-import com.adobe.marketing.mobile.Edge;
-import com.adobe.marketing.mobile.edge.identity.Identity;
-import com.adobe.marketing.mobile.Optimize;
-```
-
-<Variant platform="ios" task="install" repeat="7"/>
-
-1. Configure your app target to fetch Mobile Core, Edge, Identity for Edge Network and Optimize from Cocoapods by specifying the following pod dependencies in your `Podfile`.
+Add the required dependencies to your project using CocoaPods. Add following pods in your `Podfile`:
 
 ```swift
 use_frameworks!
@@ -51,135 +44,6 @@ target 'YourAppTarget' do
     pod 'AEPEdgeIdentity', '~> 5.0'
     pod 'AEPOptimize', '~> 5.0'
 end
-```
-
-2. Import the Mobile Core, Edge, Edge Identity, and Optimize libraries.
-
-#### Swift
-
-```swift
-// AppDelegate.swift
-import AEPCore
-import AEPEdge
-import AEPEdgeIdentity
-import AEPOptimize
-```
-
-#### Objective-C
-
-```objc
-// AppDelegate.h
-@import AEPCore;
-@import AEPEdge;
-@import AEPEdgeIdentity;
-@import AEPOptimize;
-```
-
-<Variant platform="android" task="register" repeat="4"/>
-
-#### Java
-
-```java
-import com.adobe.marketing.mobile.MobileCore;
-import com.adobe.marketing.mobile.Edge;
-import com.adobe.marketing.mobile.edge.identity.Identity;
-import com.adobe.marketing.mobile.optimize.Optimize;
-import com.adobe.marketing.mobile.AdobeCallback;
-
-public class MainApp extends Application {
-
-  private final String ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID";
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
-
-        MobileCore.setApplication(this);
-        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
-
-        MobileCore.registerExtensions(
-            Arrays.asList(Edge.EXTENSION, Identity.EXTENSION, Optimize.EXTENSION),
-            o -> Log.d("MainApp", "Adobe Journey Optimizer - Optimize Mobile SDK was initialized.")
-        );
-    }
-}
-```
-
-#### Kotlin
-
-```java
-import com.adobe.marketing.mobile.MobileCore
-import com.adobe.marketing.mobile.Edge
-import com.adobe.marketing.mobile.edge.identity.Identity
-import com.adobe.marketing.mobile.optimize.Optimize
-import com.adobe.marketing.mobile.AdobeCallback
-
-class MainApp : Application() {
-
-  private var ENVIRONMENT_FILE_ID: String = "YOUR_APP_ENVIRONMENT_ID"
-
-    override fun onCreate() {
-        super.onCreate()
-
-        MobileCore.setApplication(this)
-        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
-
-        MobileCore.registerExtensions(
-          listOf(Edge.EXTENSION, Identity.EXTENSION, Optimize.EXTENSION)
-        ) {
-          Log.d("MainApp", "Adobe Experience Platform Mobile SDK was initialized")
-        }
-    }
-
-}
-```
-
-<Variant platform="ios" task="register" repeat="4"/>
-
-#### Swift
-
-```swift
-// AppDelegate.swift
-
-import AEPCore
-import AEPEdge
-import AEPEdgeIdentity
-import AEPOptimize
-
-@UIApplicationMain
-final class AppDelegate: UIResponder, UIApplicationDelegate {
-  var window: UIWindow?
-
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
-
-      // register the extensions
-      MobileCore.registerExtensions([Edge.self, AEPEdgeIdentity.Identity.self, Optimize.self]) {
-        MobileCore.configureWith(appId: <YOUR_ENVIRONMENT_FILE_ID>) // Replace <YOUR_ENVIRONMENT_FILE_ID> with a String containing your own ID.
-      }
-
-      return true
-  }
-}
-```
-
-#### Objective-C
-
-```objc
-// AppDelegate.m
-
-@import AEPCore;
-@import AEPEdge;
-@import AEPEdgeIdentity;
-@import AEPOptimize;
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-    // register the extensions
-    [AEPMobileCore registerExtensions:@[AEPMobileEdge.class, AEPMobileEdgeIdentity.class, , AEPMobileOptimize.class] completion:^{
-      [AEPMobileCore configureWithAppId: <YOUR_ENVIRONMENT_FILE_ID>]; // Replace <YOUR_ENVIRONMENT_FILE_ID> with a String containing your own ID.
-  }];
-  ...
-}
 ```
 
 <Variant platform="android" task="decisionscope" repeat="2"/>

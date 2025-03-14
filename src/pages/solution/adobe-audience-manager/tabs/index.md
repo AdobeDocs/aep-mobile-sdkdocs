@@ -4,11 +4,9 @@ noIndex: true
 
 import Alerts from '/src/pages/resources/alerts.md'
 
-<Variant platform="android" task="add" repeat="11"/>
+<Variant platform="android-kotlin" task="add" repeat="3"/>
 
-1. Add the library to your project.
-
-#### Kotlin
+Add the required dependencies to your project by including them in the app's Gradle file.
 
 ```kotlin
 implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
@@ -17,7 +15,11 @@ implementation("com.adobe.marketing.mobile:identity")
 implementation("com.adobe.marketing.mobile:audience")
 ```
 
-#### Groovy
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
+
+<Variant platform="android-groovy" task="add" repeat="3"/>
+
+Add the required dependencies to your project by including them in the app's Gradle file.
 
 ```java
 implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
@@ -28,121 +30,16 @@ implementation 'com.adobe.marketing.mobile:audience'
 
 <Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
-2. Import the library.
+<Variant platform="ios-pods" task="add" repeat="2"/>
 
-#### Java
-
-```java
-import com.adobe.marketing.mobile.MobileCore;
-import com.adobe.marketing.mobile.Identity;
-import com.adobe.marketing.mobile.Audience;
-```
-
-#### Kotlin
-
-```java
-import com.adobe.marketing.mobile.MobileCore
-import com.adobe.marketing.mobile.Identity
-import com.adobe.marketing.mobile.Audience
-```
-
-<Variant platform="ios" task="add" repeat="6"/>
-
-1. Add the [Mobile Core](../../home/base/mobile-core/index.md) and Audience extensions to your project using Cocoapods.
-2. Add the following pods in your `Podfile`:
-
-   ```ruby
-    pod 'AEPCore', '~> 5.0'
-    pod 'AEPAudience', '~> 5.0'
-    pod 'AEPIdentity', '~> 5.0'
-   ```
-
-Please note that the Audience Manager extension depends on the Identity extension.
-
-#### Swift
+Add the required dependencies to your project using CocoaPods. Add following pods in your `Podfile`:
 
 ```swift
-   import AEPCore
-   import AEPAudience
-   import AEPIdentity
-```
+use_frameworks!
 
-#### Objective-C
-
-```objectivec
-   @import AEPCore;
-   @import AEPAudience;
-   @import AEPIdentity;
-```
-
-<Variant platform="android" task="register" repeat="4"/>
-
-#### Java
-
-```java
-public class MainApp extends Application {
-     private final String ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID";
-
-     @Override
-     public void onCreate() {
-         super.onCreate();
-
-         MobileCore.setApplication(this);
-         MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
-
-         List<Class<? extends Extension>> extensions = new ArrayList<>();
-         extensions.add(Audience.EXTENSION);        
-         extensions.add(Identity.EXTENSION);        
-         MobileCore.registerExtensions(extensions, o -> {
-            Log.d(LOG_TAG, "AEP Mobile SDK is initialized");
-        });
-   }
-}
-```
-
-#### Kotlin
-
-```java
-class MyApp : Application() {
-    val ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID"
-
-    override fun onCreate() {
-        super.onCreate()
-        MobileCore.setApplication(this)
-        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
-
-        val extensions = listOf(Audience.EXTENSION, Identity.EXTENSION)
-        MobileCore.registerExtensions(extensions) {
-            Log.d(LOG_TAG, "AEP Mobile SDK is initialized")
-        }
-    }
-}
-```
-
-<Variant platform="ios" task="register" repeat="6"/>
-
-#### Swift
-
-In your app's `_:didFinishLaunchingWithOptions` function, register the Audience Manager extension with the Mobile Core:
-
-```swift
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {  
-  MobileCore.registerExtensions([Audience.self, Identity.self], {
-  MobileCore.configureWith(appId: "yourAppId")
- })  
- ...
-}
-```
-
-#### Objective-C
-
-In your app's `application:didFinishLaunchingWithOptions` function, register the Audience Manager extension with the Mobile Core:
-
-```objectivec
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-   [AEPMobileCore registerExtensions:@[AEPMobileAudience.class, AEPMobileIdentity.class] completion:^{
-   [AEPMobileCore configureWithAppId: @"yourAppId"];
-  }];
-  ...
-}
+target 'YourTargetApp' do
+  pod 'AEPCore', '~> 5.0'
+  pod 'AEPAudience', '~> 5.0'
+  pod 'AEPIdentity', '~> 5.0'
+end
 ```

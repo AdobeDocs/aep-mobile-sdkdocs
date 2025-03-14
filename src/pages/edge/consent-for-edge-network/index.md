@@ -8,6 +8,7 @@ keywords:
 ---
 
 import Tabs from './tabs/index.md'
+import InitializeSDK from '/src/pages/resources/initialize.md'
 
 # Consent for Edge Network
 
@@ -35,31 +36,33 @@ The Consent extension uses Adobe Standard 2.0 when communicating with the Edge N
 
 The use of this extension is currently limited to the setting (and enforcement) of client-side, macro consent flags. While SDK APIs allow for granular and global consent preference collection, flags are not consistently enforced with upstream applications and therefore will not accommodate use cases that rely on global/granular consent preferences.
 
-## Add the AEP Consent extension to your app
+## Add the Consent extension to your app
 
-### Download and import the Consent extension
+### Include Consent extension as an app dependency
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+Add MobileCore, Edge and EdgeConsent extensions as dependencies to your project.
 
-Android
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-<Tabs query="platform=android&task=download"/>
+Kotlin<br/>(Android)
 
-iOS
+<Tabs query="platform=android-kotlin&task=add"/>
 
-<Tabs query="platform=ios&task=download"/>
+Groovy<br/>(Android)
 
-### Register Edge extensions with Mobile Core
+<Tabs query="platform=android-groovy&task=add"/>
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+CocoaPods<br/>(iOS)
 
-Android
+<Tabs query="platform=ios-pods&task=add"/>
 
-<Tabs query="platform=android&task=register"/>
+### Initialize Adobe Experience Platform SDK with Consent Extension
 
-iOS
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
 
-<Tabs query="platform=ios&task=register"/>
+Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
+
+<InitializeSDK query="componentClass=TabsBlock"/>
 
 ## Configuration keys
 

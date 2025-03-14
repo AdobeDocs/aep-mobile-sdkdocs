@@ -280,12 +280,7 @@ public class MyApp extends Application {
         // Set the network override prior to making any other calls to the SDK
         ServiceProvider.getInstance().setNetworkService(new MyCustomNetworkService());
 
-        MobileCore.setApplication(this);
-
-        List<Class<? extends Extension>> extensions = Arrays.asList(...);
-        MobileCore.registerExtensions(extensions, o -> {
-            // Any other post registration processing
-        });
+        MobileCore.initialize(this, "ENVIRONMENT_ID");
     }
 }
 ```

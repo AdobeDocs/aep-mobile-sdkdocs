@@ -8,6 +8,7 @@ keywords:
 ---
 
 import Tabs from './tabs/index.md'
+import InitializeSDK from '/src/pages/resources/initialize.md'
 
 # Identity for Edge Network
 
@@ -25,9 +26,7 @@ Use the Identity for Edge Network extension when including the Edge Network exte
 
 ![Identity for Edge Network extension configuration](./assets/index/configuration.png)
 
-## Add the Identity extension to your app
-
-### Download and import the Identity extension
+## Add the Identity For Edge Network extension to your app
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -37,27 +36,31 @@ The following instructions are for configuring an application using Adobe Experi
 
 When using the [`setAdvertisingIdentifier`](./api-reference.md#setadvertisingidentifier) API, see the setup guide for [Consent for Edge Network](../consent-for-edge-network/index.md) for instructions on setting up the extension and profile schema for proper usage.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Include Identity extension as an app dependency
 
-Android
+Add MobileCore, Edge, EdgeIdentity extensions as dependencies to your project.
 
-<Tabs query="platform=android&task=download"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-iOS
+Kotlin<br/>(Android)
 
-<Tabs query="platform=ios&task=download"/>
+<Tabs query="platform=android-kotlin&task=add"/>
 
-### Register the Identity extension with Mobile Core
+Groovy<br/>(Android)
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<Tabs query="platform=android-groovy&task=add"/>
 
-Android
+CocoaPods<br/>(iOS)
 
-<Tabs query="platform=android&task=register"/>
+<Tabs query="platform=ios-pods&task=add"/>
 
-iOS
+### Initialize Adobe Experience Platform SDK with Identity for Edge Network Extension
 
-<Tabs query="platform=ios&task=register"/>
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
+
+Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
+
+<InitializeSDK query="componentClass=TabsBlock"/>
 
 ## Advertising identifier
 

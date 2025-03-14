@@ -8,6 +8,7 @@ keywords:
 ---
 
 import Tabs from './tabs/get-the-sdk.md'
+import InitializeSDK from '/src/pages/resources/initialize.md'
 
 # Get the Adobe Experience Platform Mobile SDK
 
@@ -81,29 +82,9 @@ There are two ways to achieve this:
 
 #### a) Using MobileCore.initialize API (Recommended)
 
-<InlineAlert variant="warning" slots="text" />
-
-This API is available starting from **Android BOM version 3.8.0** and **iOS version 5.4.0**.
-
 The `MobileCore.initialize` API provides a simple way to initialize AEP SDK. It automatically registers solution extensions and enables lifecycle tracking, eliminating the need for manual setup. Refer to the [API documentation](../base/mobile-core/api-reference.md#initialize) for additional configuration options.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
-
-Kotlin<br/>(Android)
-
-<Tabs query="platform=android-kotlin&task=add-simplified-initialization"/>
-
-Java<br/>(Android)
-
-<Tabs query="platform=android-java&task=add-simplified-initialization"/>
-
-Swift<br/>(iOS)
-
-<Tabs query="platform=ios-swift&task=add-simplified-initialization"/>
-
-Objective-C<br/>(iOS)
-
-<Tabs query="platform=ios-objc&task=add-simplified-initialization"/>
+<InitializeSDK query="componentClass=TabsBlock"/>
 
 #### b) Manual Extension Registration using MobileCore.registerExtensions API
 

@@ -8,6 +8,7 @@ keywords:
 ---
 
 import Tabs from './tabs/index.md'
+import InitializeSDK from '/src/pages/resources/initialize.md'
 
 # Adobe Journey Optimizer
 
@@ -59,33 +60,33 @@ The datasets selected should use a schema that uses the "Push Notification Track
 
 ![](./assets/index/configuration.png)
 
-### Implement extension in mobile app
+## Add the Adobe Journey Optimizer extension to your app
 
-Follow these steps to integrate the Adobe Journey Optimizer extension.
+### Include Messaging extension as an app dependency
 
-#### Download and import the Messaging extension
+Add MobileCore, Edge and Messaging extensions as dependencies to your project.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-Android
+Kotlin<br/>(Android)
 
-<Tabs query="platform=android&task=import"/>
+<Tabs query="platform=android-kotlin&task=add"/>
 
-iOS
+Groovy<br/>(Android)
 
-<Tabs query="platform=ios&task=import"/>
+<Tabs query="platform=android-groovy&task=add"/>
 
-#### Register the extension with Mobile Core
+CocoaPods<br/>(iOS)
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<Tabs query="platform=ios-pods&task=add"/>
 
-Android
+### Initialize Adobe Experience Platform SDK with Messaging Extension
 
-<Tabs query="platform=android&task=register"/>
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
 
-iOS
+Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
 
-<Tabs query="platform=ios&task=register"/>
+<InitializeSDK query="componentClass=TabsBlock"/>
 
 ## Configuration keys
 

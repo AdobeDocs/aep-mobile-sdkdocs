@@ -7,6 +7,7 @@ keywords:
 ---
 
 import Tabs from './tabs/index.md'
+import InitializeSDK from '/src/pages/resources/initialize.md'
 
 # Profile
 
@@ -34,34 +35,32 @@ To get started with the Profile extension:
 4. Select **Save**.
 5. Follow the publishing process to update SDK configuration.
 
-![AEP Profile extension configuration](./assets/index/configuration.png)
+![Profile extension configuration](./assets/index/configuration.png)
 
 ## Add the Profile extension to your app
 
-To add the Profile extension to your app:
+### Include Profile extension as an app dependency
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+Add MobileCore and Profile extensions as dependencies to your project.
 
-Android
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-<Tabs query="platform=android&task=add"/>
+Kotlin<br/>(Android)
 
-iOS
+<Tabs query="platform=android-kotlin&task=add"/>
 
-<Tabs query="platform=ios&task=add"/>
+Groovy<br/>(Android)
 
-## Register the extension
+<Tabs query="platform=android-groovy&task=add"/>
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+CocoaPods<br/>(iOS)
 
-Android
+<Tabs query="platform=ios-pods&task=add"/>
 
-<Tabs query="platform=android&task=register"/>
+### Initialize Adobe Experience Platform SDK with Profile Extension
 
-iOS
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
 
-<Tabs query="platform=ios&task=register"/>
+Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
 
-<!--- React Native
-<Tabs query="platform=react-native&task=register"/>
---->
+<InitializeSDK query="componentClass=TabsBlock"/>

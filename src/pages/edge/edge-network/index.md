@@ -7,6 +7,7 @@ keywords:
 ---
 
 import Tabs from './tabs/index.md'
+import InitializeSDK from '/src/pages/resources/initialize.md'
 
 # Adobe Experience Platform Edge Network
 
@@ -53,29 +54,31 @@ If you have a first-party domain mapped to the Adobe-provisioned Edge Network do
 
 ## Add the Edge Network extension to your app
 
-### Download and import the Edge extension
+### Include Edge Network extension as an app dependency
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+Add MobileCore, Edge and EdgeIdentity extensions as dependencies to your project.
 
-Android
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-<Tabs query="platform=android&task=add"/>
+Kotlin<br/>(Android)
 
-iOS
+<Tabs query="platform=android-kotlin&task=add"/>
 
-<Tabs query="platform=ios&task=add"/>
+Groovy<br/>(Android)
 
-### Register Edge with Mobile Core
+<Tabs query="platform=android-groovy&task=add"/>
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+CocoaPods<br/>(iOS)
 
-Android
+<Tabs query="platform=ios-pods&task=add"/>
 
-<Tabs query="platform=android&task=register"/>
+### Initialize Adobe Experience Platform SDK with Edge Network Extension
 
-iOS
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
 
-<Tabs query="platform=ios&task=register"/>
+Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
+
+<InitializeSDK query="componentClass=TabsBlock"/>
 
 ## Next steps
 
