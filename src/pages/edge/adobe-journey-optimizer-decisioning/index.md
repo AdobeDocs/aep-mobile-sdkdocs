@@ -77,7 +77,7 @@ Using the `MobileCore.initialize` API to initialize the Adobe Experience Platfor
 
 <InitializeSDK query="componentClass=TabsBlock"/>
 
-## Adobe Journay Optimizer - Offer Decisioning
+## Adobe Journey Optimizer - Offer Decisioning
 
 ### DecisionScope
 
