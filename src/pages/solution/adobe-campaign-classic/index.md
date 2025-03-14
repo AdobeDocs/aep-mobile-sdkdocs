@@ -57,7 +57,7 @@ You can specify up to three unique Android integration keys for your development
 
 The request timeout is the amount of time, in seconds, to wait for a response from the registration or tracking endpoint before timing out. The SDK default timeout value is 30 seconds.
 
-## Add Campaign Classic extension to your app
+## Add the Campaign Classic extension to your app
 
 ### Include Campaign Classic extension as an app dependency
 

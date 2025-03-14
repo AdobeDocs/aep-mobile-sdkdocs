@@ -72,7 +72,7 @@ Remember the following information when you add the Campaign extension to your a
 
 The instructions to add these extensions to your mobile app are also available in the Data Collection UI. To access the installation dialog box, open your mobile property, select the **Environments** tab, followed by **Install**.
 
-Add MobileCore, Campaign Standard, Profile extensions as dependencies to your project.
+Add MobileCore, Campaign Standard and Profile extensions as dependencies to your project.
 
 #### Include Campaign Standard extension as an app dependency
 
