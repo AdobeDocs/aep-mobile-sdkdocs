@@ -18,3 +18,21 @@ This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the And
 Use [`MobileCore.registerExtensions()`](../../home/base/mobile-core/api-reference.md#registerextensions) API instead.
 
 </InlineNestedAlert>
+
+<!-- InlineNestedAlert - Alert for initialize API's available android versions -->
+<Variant platform="initialize-android-version" componentClass="InlineNestedAlert" repeat="1"/>
+
+<InlineNestedAlert variant="warning" header="true" iconPosition="left">
+
+This API is available starting from **Android BOM version 3.8.0**.
+
+</InlineNestedAlert>
+
+<!-- InlineNestedAlert - Alert for initialize API's available ios versions -->
+<Variant platform="initialize-ios-version" componentClass="InlineNestedAlert" repeat="1"/>
+
+<InlineNestedAlert variant="warning" header="true" iconPosition="left">
+
+This API is available starting from **iOS version 5.4.0**.
+
+</InlineNestedAlert>

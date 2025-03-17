@@ -4,11 +4,9 @@ noIndex: true
 
 import Alerts from '/src/pages/resources/alerts.md'
 
-<Variant platform="android" task="download" repeat="8"/>
+<Variant platform="android-kotlin" task="add" repeat="3"/>
 
-1. Add the Mobile Core and Places extensions to your project using the app's Gradle file.
-
-#### Kotlin
+Add the required dependencies to your project by including them in the app's Gradle file.
 
 ```kotlin
 implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
@@ -16,7 +14,11 @@ implementation("com.adobe.marketing.mobile:core")
 implementation("com.adobe.marketing.mobile:places")
 ```
 
-#### Groovy
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
+
+<Variant platform="android-groovy" task="add" repeat="3"/>
+
+Add the required dependencies to your project by including them in the app's Gradle file.
 
 ```java
 implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
@@ -26,16 +28,9 @@ implementation 'com.adobe.marketing.mobile:places'
 
 <Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
-2. Import the Mobile Core and Places extensions in your Application class.
+<Variant platform="ios-pods" task="add" repeat="2"/>
 
-```java
-import com.adobe.marketing.mobile.MobileCore;
-import com.adobe.marketing.mobile.Places;
-```
-
-<Variant platform="ios" task="download" repeat="7"/>
-
-1. Add the Mobile Core and Places extensions to your project using CocoaPods. Add the following pods in your `Podfile`:
+Add the required dependencies to your project using CocoaPods. Add following pods in your `Podfile`:
 
 ```swift
 use_frameworks!
@@ -43,93 +38,4 @@ target 'YourTargetApp' do
    pod 'AEPCore', '~> 5.0'
    pod 'AEPPlaces', '~> 5.0'
 end
-```
-
-2. Import the Mobile Core and Places modules:
-
-**Swift**
-
-```swift
-// AppDelegate.swift
-import AEPCore
-import AEPPlaces
-```
-
-**Objective-C**
-
-```objectivec
-// AppDelegate.h
-@import AEPCore;
-@import AEPPlaces;
-```
-
-<Variant platform="android" task="register" repeat="4"/>
-
-#### Java
-
-```java
-public class MainApp extends Application {
-    private static final String APP_ID = "YOUR_APP_ID";
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
-
-        MobileCore.setApplication(this);
-        MobileCore.configureWithAppID(APP_ID);
-
-        List<Class<? extends Extension>> extensions = new ArrayList<>();
-        extensions.add(Places.EXTENSION);
-        MobileCore.registerExtensions(extensions, o -> {
-            Log.d(LOG_TAG, "AEP Mobile SDK is initialized");
-        });
-    }
-
-}
-```
-
-#### Kotlin
-
-```java
-class MyApp : Application() {
-
-    override fun onCreate() {
-        super.onCreate()
-        MobileCore.setApplication(this)
-        MobileCore.configureWithAppID("YOUR_APP_ID")
-
-        val extensions = listOf(Places.EXTENSION)
-        MobileCore.registerExtensions(extensions) {
-            Log.d(LOG_TAG, "AEP Mobile SDK is initialized")
-        }
-    }
-
-}
-```
-
-<Variant platform="ios" task="register" repeat="4"/>
-
-**Swift**
-
-```swift
-// AppDelegate.swift
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    MobileCore.registerExtensions([Places.self], {
-        MobileCore.configureWith(appId: "yourAppId")
-    })
-    ...
-}
-```
-
-**Objective-C**
-
-```objectivec
-// AppDelegate.m
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [AEPMobileCore registerExtensions:@[AEPMobilePlaces.class] completion:^{
-        ...
-    }];
-    [AEPMobileCore configureWithAppId: @"yourAppId"];
-    ...
-}
 ```

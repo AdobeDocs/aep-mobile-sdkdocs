@@ -2,11 +2,11 @@
 noIndex: true
 ---
 
-<Variant platform="android" task="add" repeat="8"/>
+import Alerts from '/src/pages/resources/alerts.md'
 
-1. Add the `UserProfile` library to your project using the app's gradle file.
+<Variant platform="android-kotlin" task="add" repeat="3"/>
 
-#### Kotlin
+Add the required dependencies to your project by including them in the app's Gradle file.
 
 ```kotlin
 implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
@@ -14,7 +14,11 @@ implementation("com.adobe.marketing.mobile:core")
 implementation("com.adobe.marketing.mobile:userprofile")
 ```
 
-#### Groovy
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
+
+<Variant platform="android-groovy" task="add" repeat="3"/>
+
+Add the required dependencies to your project by including them in the app's Gradle file.
 
 ```java
 implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
@@ -22,111 +26,17 @@ implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:userprofile'
 ```
 
-<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
+<Variant platform="ios-pods" task="add" repeat="2"/>
 
-</InlineNestedAlert>
+Add the required dependencies to your project using CocoaPods. Add following pods in your `Podfile`:
 
-2. Import the `UserProfile` library and any other SDK library in your application's main activity.
-
-```java
-import com.adobe.marketing.mobile.MobileCore;
-import com.adobe.marketing.mobile.UserProfile;
-```
-
-<Variant platform="ios" task="add" repeat="7"/>
-
-1. Add the Mobile Core and Profile extensions to your project using Cocoapods. Add following pods in your `Podfile`:
-
-```ruby
+```swift
 use_frameworks!
+
 target 'YourTargetApp' do
-    pod 'AEPCore', '~> 5.0'
-    pod 'AEPUserProfile', '~> 5.0'
+   pod 'AEPCore', '~> 5.0'
+   pod 'AEPUserProfile', '~> 5.0'
 end
-```
-
-2. Import the UserProfile library.
-
-#### Swift
-
-```swift
-   import AEPCore
-   import AEPUserProfile
-```
-
-#### Objective-C
-
-```objectivec
-   @import AEPCore;
-   @import AEPUserProfile;
-```
-
-<Variant platform="android" task="register" repeat="6"/>
-
-After calling the `setApplication()` method in the `onCreate()` method, register the UserProfile extension.
-
-1. The `UserProfile` extension must be registered with Mobile Core before calling an `UserProfile` API.
-
-#### Java
-
-```java
-   public class MobileApp extends Application {
-
-       @Override
-       public void onCreate() {
-            super.onCreate();
-            MobileCore.setApplication(this);
-            List<Class<? extends Extension>> extensions = Arrays.asList(UserProfile.EXTENSION, ...);
-            MobileCore.registerExtensions(extensions, o -> {
-                // Any other post registration processing
-            });
-       }
-   }
-```
-
-#### Kotlin
-
-```java
-class MyApp : Application() {
-
-    override fun onCreate() {
-        super.onCreate()
-        MobileCore.setApplication(this)
-        MobileCore.setLogLevel(LoggingMode.VERBOSE)
-        MobileCore.configureWithAppID("YOUR_APP_ID")
-
-        val extensions = listOf(UserProfile.EXTENSION, ...)
-        MobileCore.registerExtensions(extensions) {
-            Log.d(LOG_TAG, "AEP Mobile SDK is initialized")
-        }
-    }
-}
-```
-
-<Variant platform="ios" task="register" repeat="4"/>
-
-#### Swift
-
-```swift
-// AppDelegate.swift
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    MobileCore.registerExtensions([UserProfile.self], {
-  })
-  ...
-}
-```
-
-#### Objective-C
-
-```objectivec
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [AEPMobileCore registerExtensions:@AEPMobileUserProfile.class] completion:^{
-    ...
-  }];
-  ...
-  // Override point for customization after application launch.
-  return YES;
-}
 ```

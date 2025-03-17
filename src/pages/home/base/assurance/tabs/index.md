@@ -2,19 +2,23 @@
 noIndex: true
 ---
 
-<Variant platform="android" task="import-library" repeat="6"/>
+import Alerts from '/src/pages/resources/alerts.md'
 
-1. Add the following libraries to your project using the app's Gradle file.
+<Variant platform="android-kotlin" task="add" repeat="3"/>
 
-#### Kotlin
+Add the required dependencies to your project by including them in the app's Gradle file.
 
-```java
+```kotlin
 implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
 implementation("com.adobe.marketing.mobile:core")
 implementation("com.adobe.marketing.mobile:assurance")
 ```
 
-#### Groovy
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
+
+<Variant platform="android-groovy" task="add" repeat="3"/>
+
+Add the required dependencies to your project by including them in the app's Gradle file.
 
 ```java
 implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
@@ -22,192 +26,20 @@ implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:assurance'
 ```
 
-<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
+<Variant platform="ios-pods" task="add" repeat="2"/>
 
-</InlineNestedAlert>
-
-2. Import the Assurance library along with the other Mobile SDK libraries:
-
-```java
-import com.adobe.marketing.mobile.Assurance;
-import com.adobe.marketing.mobile.MobileCore;
-```
-
-<Variant platform="ios" task="import-library" repeat="7"/>
-
-Add the library to your project via your [Cocoapods](https://cocoapods.org/pods/AEPAssurance) `Podfile`:
-
-```pod
-pod 'AEPCore','~> 5.0'
-pod 'AEPAssurance','~> 5.0'
-```
-
-Import the Assurance extension along with the other Adobe Mobile SDK extensions:
-
-#### Swift
+Add the required dependencies to your project using CocoaPods. Add following pods in your `Podfile`:
 
 ```swift
-import AEPCore
-import AEPAssurance
+use_frameworks!
+
+target 'YourTargetApp' do
+  pod 'AEPCore','~> 5.0'
+  pod 'AEPAssurance','~> 5.0'
+end
 ```
-
-#### Objective-C
-
-```objectivec
-@import AEPCore;
-@import AEPAssurance;
-```
-
-<!--- <Variant platform="react-native" task="import-library" repeat="13"/>
-
-1. Install the AEP Assurance package.
-
-```bash
-npm install @adobe/react-native-aepassurance
-```
-
-2. Link the module.
-
-**React Native 0.60+**
-
-[CLI autolink feature](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md) links the module while building the app.
-
-**React Native &lt;= 0.59**
-
-```bash
-react-native link @adobe/react-native-aepassurance
-```
-
-**Note** For `iOS` using `cocoapods`, run:
-
-```bash
-cd ios/ && pod install
-```
-
-3. Import the extension.
-
-```jsx
-import {AEPAssurance} from '@adobe/react-native-aepassurance';
-```
-
-4. Get the extension version.
-
-```jsx
-AEPAssurance.extensionVersion().then(version => console.log("AdobeExperienceSDK: AEPAssurance version: " + version));
-```
-
-<Variant platform="flutter" task="import-library" repeat="7"/>
-
-#### JavaScript
-
-1. Install the AEP Assurance package.
-
-Installation instructions can be found in the [Flutter documentation](https://pub.dev/packages/flutter_assurance/install).
-
-2. Import the extension.
-
-```dart
-import 'package:flutter_assurance/flutter_assurance.dart';
-```
-
-3. Get the extension version.
-
-```dart
-String version = await FlutterAEPAssurance.extensionVersion;
-``` --->
-
-<Variant platform="android" task="register-assurance" repeat="4"/>
-
-#### Java
-
-```java
-public class MainApp extends Application {
-    private final String ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID";
-
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
-
-        MobileCore.setApplication(this);
-        MobileCore.setLogLevel(LoggingMode.VERBOSE);
-        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
-
-        List<Class<? extends Extension>> extensions = Arrays.asList(
-                Assurance.EXTENSION,...);
-        MobileCore.registerExtensions(extensions, o -> {
-            Log.d(LOG_TAG, "AEP Mobile SDK is initialized");
-        });
-    }
-}
-```
-
-#### Kotlin
-
-```java
-class MyApp : Application() {
-
-    override fun onCreate() {
-        super.onCreate()
-        MobileCore.setApplication(this)
-        MobileCore.setLogLevel(LoggingMode.VERBOSE)
-        MobileCore.configureWithAppID("YOUR_APP_ENVIRONMENT_ID")
-
-        val extensions = listOf(Assurance.EXTENSION, ...)
-        MobileCore.registerExtensions(extensions) {
-            Log.d(LOG_TAG, "AEP Mobile SDK is initialized")
-        }
-    }
-}
-```
-
-<Variant platform="ios" task="register-assurance" repeat="5"/>
-
-To start using the extension library, you must first register the extension with the [Mobile Core](../mobile-core/index.md) extension.
-
-#### Swift
-
-```swift
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-        let extensions = [Assurance.self, ...]
-        MobileCore.registerExtensions(extensions, {
-            // set app id from the Data Collection UI    
-                MobileCore.configureWith(appId: "yourAppId")  
-        })
-
-        return true
-    }
-```
-
-#### Objective-C
-
-```objectivec
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-    NSArray *extensionsToRegister = @[AEPMobileAssurance.class, ...];
-    [AEPMobileCore registerExtensions:extensionsToRegister completion:^{
-        // set app id from the Data Collection UI
-        [AEPMobileCore configureWithAppId: @"yourAppId"];
-    }];
-
-    return YES;
-}
-```
-
-<!--- <Variant platform="react-native" task="register-assurance" repeat="2"/>
-
-#### JavaScript
-
-When using React Native, register AEP Assurance with Mobile Core in native code as shown on the Android and iOS tabs.
-
-<Variant platform="flutter" task="register-assurance" repeat="2"/>
-
-#### Dart
-
-When using Flutter, register AEP Assurance with Mobile Core in native code as shown on the Android and iOS tabs. --->
 
 <Variant platform="android" task="implement-assurance" repeat="1"/>
 
