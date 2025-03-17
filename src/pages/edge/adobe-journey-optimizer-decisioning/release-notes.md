@@ -103,7 +103,7 @@ Users can now configure:
 
 ### iOS Optimize 5.0.1
 
-* Fixed a crash that happens when `updateProposition` API was called repeatedly. 
+* Fixed a crash that happens when `updateProposition` API was called repeatedly.
 
 ### Android Optimize 3.0.1
 
@@ -113,7 +113,7 @@ Users can now configure:
 
 ### iOS Optimize 4.0.4
 
-* Fixed a crash that happens when `updateProposition` API was called repeatedly. 
+* Fixed a crash that happens when `updateProposition` API was called repeatedly.
 
 ## April 24, 2024
 
