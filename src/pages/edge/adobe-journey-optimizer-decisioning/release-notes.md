@@ -32,7 +32,7 @@ Users can now configure:
 
 ### React Native Optimize 6.1.0
 
-* **[Breaking Change]** Updated Offer Score data type of  from `Integer` to `Double` .
+* **[Breaking Change]** Updated Offer Score data type of from `Integer` to `Double`.
 * To prevent build issues in **6.0.x**, upgrade `@adobe/react-native-aepoptimize` to **6.1.0 or later**.
 
 ### Android Optimize 3.3.0
@@ -186,7 +186,7 @@ Major version update for [Adobe Journey Optimizer - Decisioning](./index.md) for
 
 * Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
-* Added support for using the Optimize SDK extension in [App Extensions](https://developer.apple.com/app-extensions/).
+* Added support for using the Optimize SDK extension in [App Extensions](https://developer.apple.com/app-extensions/).
 
 ## February 2, 2023
 
