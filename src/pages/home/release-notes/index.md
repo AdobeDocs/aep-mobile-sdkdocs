@@ -63,6 +63,14 @@ Keywords:
 
 * Added capability to configure timeout value for the Update Proposition API via Adobe Journey Optimizer - Decisioning card in Mobile Tags property.
 
+### Adobe Journey Optimizer - Decisioning extension 1.1.0
+
+Added configuration capability to the Adobe Journey Optimizer - Decisioning extension in the Tags UI for mobile Tag Properties.
+
+Users can now configure:
+
+* Request timeout - Set the amount of time (in seconds) to wait for a response from the decisioning services before timing out.
+
 ## March 4, 2025
 
 ### Flutter Core 5.0.0

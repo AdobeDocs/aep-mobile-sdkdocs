@@ -20,6 +20,14 @@ keywords:
 
 * Added capability to configure timeout value for the Update Proposition API via Adobe Journey Optimizer - Decisioning card in Mobile Tags property.
 
+### Adobe Journey Optimizer - Decisioning extension 1.1.0
+
+Added configuration capability to the Adobe Journey Optimizer - Decisioning extension in the Tags UI for mobile Tag Properties.
+
+Users can now configure:
+
+* Request timeout - Set the amount of time (in seconds) to wait for a response from the decisioning services before timing out.
+
 ## February 17, 2025
 
 ### React Native Optimize 6.1.0
