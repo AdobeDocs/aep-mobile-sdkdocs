@@ -20,11 +20,19 @@ keywords:
 
 * Added capability to configure timeout value for the Update Proposition API via Adobe Journey Optimizer - Decisioning card in Mobile Tags property.
 
+### Adobe Journey Optimizer - Decisioning extension 1.1.0
+
+Added configuration capability to the Adobe Journey Optimizer - Decisioning extension in the Tags UI for mobile Tag Properties.
+
+Users can now configure:
+
+* Request timeout - Set the amount of time (in seconds) to wait for a response from the decisioning services before timing out.
+
 ## February 17, 2025
 
 ### React Native Optimize 6.1.0
 
-* **[Breaking Change]** Updated Offer Score data type of  from `Integer` to `Double` .
+* **[Breaking Change]** Updated Offer Score data type of from `Integer` to `Double`.
 * To prevent build issues in **6.0.x**, upgrade `@adobe/react-native-aepoptimize` to **6.1.0 or later**.
 
 ### Android Optimize 3.3.0
@@ -95,7 +103,7 @@ keywords:
 
 ### iOS Optimize 5.0.1
 
-* Fixed a crash that happens when `updateProposition` API was called repeatedly. 
+* Fixed a crash that happens when `updateProposition` API was called repeatedly.
 
 ### Android Optimize 3.0.1
 
@@ -105,7 +113,7 @@ keywords:
 
 ### iOS Optimize 4.0.4
 
-* Fixed a crash that happens when `updateProposition` API was called repeatedly. 
+* Fixed a crash that happens when `updateProposition` API was called repeatedly.
 
 ## April 24, 2024
 
@@ -178,7 +186,7 @@ Major version update for [Adobe Journey Optimizer - Decisioning](./index.md) for
 
 * Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
-* Added support for using the Optimize SDK extension in [App Extensions](https://developer.apple.com/app-extensions/).
+* Added support for using the Optimize SDK extension in [App Extensions](https://developer.apple.com/app-extensions/).
 
 ## February 2, 2023
 
