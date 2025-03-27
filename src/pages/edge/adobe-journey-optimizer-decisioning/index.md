@@ -40,7 +40,7 @@ On [Experience Platform Data Collection](https://experience.adobe.com/#/data-col
 
 1. In your mobile property, navigate to **Extensions** in the left navigation panel and click on the **Catalog** tab.
 2. In the extensions Catalog, search or locate the **Adobe Journey Optimizer - Decisioning** extension, and click **Install**.
-3. Optionally, specify a timeout value in seconds. Default is 10 seconds.
+3. Optionally, specify a timeout value in seconds. The default value is 10 seconds.
 4. Click **Save**.
 5. Follow the publishing process to update SDK configuration. For more details, see the [publish the configuration guide](../../home/getting-started/create-a-mobile-property.md#publish-the-configuration).
 
