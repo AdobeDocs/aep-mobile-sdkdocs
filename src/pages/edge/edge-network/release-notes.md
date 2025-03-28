@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## March 28, 2025
+
+### React Native Edge 7.0.0
+
+* Updated to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+
 ## March 4, 2025
 
 ### Flutter Edge 5.0.0
