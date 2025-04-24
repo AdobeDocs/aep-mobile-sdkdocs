@@ -302,7 +302,7 @@ offer.displayed() // Sends an Offer display notification to Edge network
 [offer displayed]; // Sends an Offer display notification to Edge network
 ```
 
-<Variant platform="android" task="proposition-tracking-edge" repeat="3"/>
+<Variant platform="android" task="proposition-tracking-edge" repeat="2"/>
 
 #### Java
 
@@ -335,21 +335,7 @@ public class Offer {
 }
 ```
 
-```java
-public class Proposition {
-  ...
-  /**
-    * Generates a map containing XDM formatted data for {@code Experience Event - Proposition Reference} field group from this {@code Proposition}.
-    *
-    * The returned XDM data does not contain {@code eventType} for the Experience Event.
-    *
-    * @return {@code Map<String, Object>} containing the XDM data for the proposition reference.
-    */
-  public Map<String, Object> generateReferenceXdm() {...}
-}
-```
-
-<Variant platform="ios" task="proposition-tracking-edge" repeat="3"/>
+<Variant platform="ios" task="proposition-tracking-edge" repeat="2"/>
 
 #### Swift
 
@@ -370,18 +356,6 @@ public extension Offer {
   /// - Note: The returned XDM data also contains the `eventType` for the Experience Event with value `decisioning.propositionInteract`.
   /// - Returns A dictionary containing XDM data for the proposition interactions.
   func generateTapInteractionXdm() -> [String: Any] {...}
-}
-```
-
-```swift
-public extension OptimizeProposition {
-  /// Creates a dictionary containing XDM formatted data for `Experience Event - Proposition Reference` field group from the given proposition.
-  ///
-  /// The Edge `sendEvent(experienceEvent:_:)` API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, or override dataset identifier.
-  ///
-  /// - Note: The returned XDM data does not contain an `eventType` for the Experience Event.
-  /// - Returns A dictionary containing XDM data for the proposition reference.
-  func generateReferenceXdm() -> [String: Any] {...}
 }
 ```
 
@@ -427,4 +401,89 @@ NSDictionary* additionalData = @{@"someDataKey": @"someDataValue"};
 
 AEPExperienceEvent* experienceEvent = [[AEPExperienceEvent alloc] initWithXdm:displayInteractionXdm data:additionalData datasetIdentifier:nil];
 [AEPMobileEdge sendExperienceEvent:event completion:nil];
+```
+
+<Variant platform="android" task="proposition-tracking-batch" repeat="11"/>
+
+### Java
+
+#### Syntax
+
+```java
+public static void display(final List<Offer> offers)
+```
+
+* _offers_ is a list of offers to be displayed. These offers can be from different propositions.
+
+#### Example
+
+```java
+// Create a list of offers from different propositions
+final List<Offer> offersToDisplay = new ArrayList<>();
+offersToDisplay.add(proposition1.getOffers().get(0));
+offersToDisplay.add(proposition2.getOffers().get(0));
+// Send list of offers to multiple offers display track public API
+OfferUtils.display(offersToDisplay);
+```
+
+### Kotlin
+
+#### Syntax
+
+```kotlin
+fun List<Offer>.displayed()
+```
+
+#### Example
+
+```kotlin
+// Create a list of offers from different propositions
+val offersToDisplay = listOf(
+    proposition1.offers[0],
+    proposition2.offers[0]
+)
+// Send list of offers to multiple offers display track public API
+offersToDisplay.display()
+```
+
+<Variant platform="ios" task="proposition-tracking-batch" repeat="11"/>
+
+### Swift
+
+#### Syntax
+
+```swift
+static func display(_ offers: [Offer])
+```
+
+#### Example
+
+```swift
+// Create an array of offers from different propositions
+let offersToDisplay = [
+    proposition1.offers[0],
+    proposition2.offers[0]
+]
+// Send array of offers to multiple offers display track public API
+Optimize.display(offersToDisplay)
+```
+
+### Objective-C
+
+#### Syntax
+
+```objc
++ (void)display:(NSArray<AEPOffer *> *)offers;
+```
+
+#### Example
+
+```objc
+// Create an array of offers from different propositions
+NSArray<AEPOffer *> *offersToDisplay = @[
+    proposition1.offers[0],
+    proposition2.offers[0]
+];
+// Send array of offers to multiple offers display track public API
+[AEPOfferUtils display:offersToDisplay];
 ```
