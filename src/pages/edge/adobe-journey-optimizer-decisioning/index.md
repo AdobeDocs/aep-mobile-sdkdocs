@@ -273,6 +273,20 @@ iOS
 
 <Tabs query="platform=ios&task=send-event-offer"/>
 
+### Batch Proposition Tracking
+
+For tracking multiple propositions at once, you can use the batch tracking methods. This is useful when you need to track interactions with multiple offers from different propositions in a single call.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<Tabs query="platform=android&task=proposition-tracking-batch"/>
+
+iOS
+
+<Tabs query="platform=ios&task=proposition-tracking-batch"/>
+
 ### Proposition tracking using Edge extension API
 
 For more advanced tracking use cases, additional public methods are available in the `Offer` and `Proposition`/`OptimizeProposition` classes. These methods can be used to generate XDM formatted data for `Experience Event - Proposition Interactions` and `Experience Event - Proposition Reference` field groups.

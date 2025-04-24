@@ -176,10 +176,12 @@ iOS
 
 | Type | Android              | (AEP 5.x) Swift | (AEP 5.x) Objective-C |
 | :--- |:---------------------| :--- | :--- |
-| class | `DecisionScope`      | `DecisionScope` | `AEPDecisionScope` |
+| class | `DecisionScope`      | `DecisionScope`       | `AEPDecisionScope` |
 | class | `Proposition`        | `OptimizeProposition` | `AEPOptimizeProposition` |
-| class | `Offer`              | `Offer` | `AEPOffer` |
-| class | `AEPOptimizeError`   | `AEPOptimizeError` | `AEPOptimizeError` |
+| class | `Offer`              | `Offer`               | `AEPOffer`  |
+| class | `OfferUtils`         | `_____`               | `_____`     |
+| class | `Optimize`           | `Optimize`            | `Optimize` |
+| class | `AEPOptimizeError`   | `AEPOptimizeError`    | `AEPOptimizeError` |
 
 ### DecisionScope
 
@@ -230,6 +232,110 @@ Android
 iOS
 
 <Tabs query="platform=ios&api=offer"/>
+
+### OfferUtils (Android Only)
+
+Starting from Android SDK version 3.4.0, the Optimize SDK provides enhanced support for batching multiple display propositions track events. The following methods are available in `OfferUtils` public classes.
+
+<Variant platform="android" api="offerutils" repeat="2"/>
+
+#### Kotlin
+
+```kotlin
+object OfferUtils {
+    /**
+     * Dispatches an event for the Edge network extension to send an Experience Event to the Edge
+     * network with the display interaction data for the given list of [Offer]s.
+     *
+     * This function extracts unique [OptimizeProposition]s from the list of offers based on their
+     * proposition ID and dispatches an event with multiple propositions.
+     *
+     * @see XDMUtils.trackWithData
+     */
+    fun List<Offer>.displayed() {
+        if (isEmpty()) return
+        val offerIds = mapTo(mutableSetOf()) { it.id }
+        val uniquePropositions = map { it.proposition }
+            .distinctBy { it.id }
+            .mapNotNull { proposition ->
+                val displayedOffers = proposition.offers.filter {
+                    it.id in offerIds
+                }.distinctBy { it.id }
+                if (displayedOffers.isNotEmpty()) {
+                    OptimizeProposition(
+                        proposition.id,
+                        displayedOffers,
+                        proposition.scope,
+                        proposition.scopeDetails
+                    )
+                } else null
+            }
+        if (uniquePropositions.isEmpty()) return
+        XDMUtils.trackWithData(
+            XDMUtils.generateInteractionXdm(
+                OptimizeConstants.JsonValues.EE_EVENT_TYPE_PROPOSITION_DISPLAY, uniquePropositions
+            )
+        )
+    }
+}
+```
+
+### Optimize (IOS Only)
+
+Starting from Android SDK version 5.4.0, the Optimize SDK provides enhanced support for batching multiple display propositions track events. The following methods are available in `Optimize` public classes.
+
+<Variant platform="ios" api="optimize" repeat="2"/>
+
+#### Swift
+
+```swift
+@objc
+public extension Optimize {
+    /// This API dispatches an event for the Edge extension to send an Experience Event to the Edge network with the display interaction data for list of offers passed.
+    ///
+    /// - Parameter offers: An array of offer.
+    @objc(displayed:)
+    static func displayed(for offers: [Offer]) {
+        guard !offers.isEmpty else { return }
+        // Get unique propositions from offers
+        let uniquePropositions = Set(offers.compactMap { $0.proposition })
+        // For each unique proposition, create a new proposition with only the relevant offers
+        let filteredPropositions = uniquePropositions.compactMap { proposition -> OptimizeProposition? in
+            // Filter offers to only include those from the original input
+            let relevantOffers = proposition.offers.filter { offer in
+                offers.contains { $0.id == offer.id }
+            }
+            // Dictionary representation of the proposition with clean offer data
+            let propositionData: [String: Any] = [
+                "id": proposition.id,
+                "scope": proposition.scope,
+                "scopeDetails": proposition.scopeDetails,
+                "items": relevantOffers.map { offer in
+                    [
+                        "id": offer.id,
+                        "schema": offer.schema,
+                        "data": [
+                            "id": offer.id,
+                            "type": offer.type.rawValue,
+                            "content": offer.content,
+                            "language": offer.language,
+                            "characteristics": offer.characteristics
+                        ]
+                    ]
+                }
+            ]
+            return OptimizeProposition.initFromData(propositionData)
+        }
+        guard !filteredPropositions.isEmpty else { return }
+        // Generate XDM data and track
+        if let xdmData = OptimizeTrackingUtils.generateInteractionXdm(
+            for: filteredPropositions,
+            for: OptimizeConstants.JsonValues.EE_EVENT_TYPE_PROPOSITION_DISPLAY
+        ) {
+            OptimizeTrackingUtils.trackWithData(xdmData)
+        }
+    }
+```
 
 ### OfferType
 
