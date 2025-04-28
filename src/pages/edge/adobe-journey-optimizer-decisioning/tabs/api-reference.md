@@ -1339,7 +1339,7 @@ class AEPOptimizeError(val type: String? = "",
 #### Swift
 
 ```swift
-object OfferUtils {
+object Optimize {
     /**
      * Dispatches an event for the Edge network extension to send an Experience Event to the Edge
      * network with the display interaction data for the given list of [Offer]s.

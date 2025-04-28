@@ -282,7 +282,7 @@ object OfferUtils {
 
 ### Optimize (IOS Only)
 
-Starting from Android SDK version 5.4.0, the Optimize SDK provides enhanced support for batching multiple display propositions track events. The following methods are available in `Optimize` public classes.
+Starting from IOS SDK version 5.4.0, the Optimize SDK provides enhanced support for batching multiple display propositions track events. The following methods are available in `Optimize` public classes.
 
 <Variant platform="ios" api="optimize" repeat="2"/>
 
