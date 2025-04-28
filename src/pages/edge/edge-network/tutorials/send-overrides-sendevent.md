@@ -98,7 +98,7 @@ let configOverrides: [String: Any] = [
     "idSyncContainerId": "1234567"
   ],
   "com_adobe_target": [
-    "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+    "propertyToken": "<YOUR_PROPERTY_TOKEN>"
  ],
 ]
 
@@ -144,7 +144,7 @@ val configOverrides = mapOf(
     "com_adobe_target"
     to mapOf(
         "propertyToken"
-        to "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+        to "<YOUR_PROPERTY_TOKEN>"
     )
 )
 
@@ -184,7 +184,7 @@ The following example shows a sample payload after overriding the datastream con
         "idSyncContainerId": "1234567"
       },
       "com_adobe_target": {
-        "propertyToken": "63a46bbc-26cb-7cc3-def0-9ae1b51b6c62"
+        "propertyToken": "<YOUR_PROPERTY_TOKEN>"
       }
     },
     "state": {  }
