@@ -403,11 +403,9 @@ AEPExperienceEvent* experienceEvent = [[AEPExperienceEvent alloc] initWithXdm:di
 [AEPMobileEdge sendExperienceEvent:event completion:nil];
 ```
 
-<Variant platform="android" task="proposition-tracking-batch" repeat="11"/>
+<Variant platform="android-java" task="proposition-tracking-batch" repeat="5"/>
 
-### Java
-
-#### Syntax
+### Syntax
 
 ```java
 public static void display(final List<Offer> offers)
@@ -426,13 +424,15 @@ offersToDisplay.add(proposition2.getOffers().get(0));
 OfferUtils.display(offersToDisplay);
 ```
 
-### Kotlin
+<Variant platform="android-kotlin" task="proposition-tracking-batch" repeat="5"/>
 
-#### Syntax
+### Syntax
 
 ```kotlin
 fun List<Offer>.displayed()
 ```
+
+* `List<Offer>` is a list of offers to be displayed. These offers can be from different propositions.
 
 #### Example
 
@@ -446,15 +446,15 @@ val offersToDisplay = listOf(
 offersToDisplay.display()
 ```
 
-<Variant platform="ios" task="proposition-tracking-batch" repeat="11"/>
+<Variant platform="ios-swift" task="proposition-tracking-batch" repeat="5"/>
 
-### Swift
-
-#### Syntax
+### Syntax
 
 ```swift
 static func display(_ offers: [Offer])
 ```
+
+* _offers_ is a list of offers to be displayed. These offers can be from different propositions.
 
 #### Example
 
@@ -468,13 +468,15 @@ let offersToDisplay = [
 Optimize.display(offersToDisplay)
 ```
 
-### Objective-C
+<Variant platform="ios-objectivec" task="proposition-tracking-batch" repeat="5"/>
 
-#### Syntax
+### Syntax
 
 ```objc
 + (void)display:(NSArray<AEPOffer *> *)offers;
 ```
+
+* _offers_ is a list of offers to be displayed. These offers can be from different propositions.
 
 #### Example
 
