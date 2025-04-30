@@ -1294,7 +1294,21 @@ object OfferUtils {
      *
      * @see XDMUtils.trackWithData
      */
+    @JvmStatic
     fun List<Offer>.displayed() {...}
+
+    /**
+     * Generates a map containing XDM formatted data for `Experience Event - OptimizeProposition
+     * Interactions` field group from the given list of [Offer]s.
+     *
+     * This function extracts unique [OptimizeProposition]s from the list of offers based on their
+     * proposition ID and generates XDM data for the interaction.
+     *
+     * @return [Map] containing the XDM data for the proposition interaction, or null if the list is empty
+     * or no valid propositions are found
+     */
+    @JvmStatic
+    fun List<Offer>.generateDisplayInteractionXdm(): Map<String, Any>? {...}
 }
 ```
 
