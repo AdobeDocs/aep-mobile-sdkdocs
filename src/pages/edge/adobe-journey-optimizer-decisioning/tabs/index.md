@@ -280,23 +280,25 @@ public extension Offer {
 }
 ```
 
-<Variant platform="android" task="send-event-offer" repeat="2"/>
-
-#### Java
+<Variant platform="android-java" task="send-event-offer" repeat="1"/>
 
 ```java
 offer.displayed(); // Sends an Offer display notification to Edge network
 ```
 
-<Variant platform="ios" task="send-event-offer" repeat="4"/>
+<Variant platform="android-kotlin" task="send-event-offer" repeat="1"/>
 
-#### Swift
+```kotlin
+offer.displayed() // Sends an Offer display notification to Edge network
+```
+
+<Variant platform="ios-swift" task="send-event-offer" repeat="1"/>
 
 ```swift
 offer.displayed() // Sends an Offer display notification to Edge network
 ```
 
-#### Objective-C
+<Variant platform="ios-objectivec" task="send-event-offer" repeat="1"/>
 
 ```objc
 [offer displayed]; // Sends an Offer display notification to Edge network
@@ -359,9 +361,23 @@ public extension Offer {
 }
 ```
 
-<Variant platform="android" task="send-event-edge" repeat="2"/>
+<Variant platform="android-kotlin" task="send-event-edge" repeat="1"/>
 
-#### Java
+```kotlin
+// When a proposition is retrieved using getPropositions API or onUpdatePropositions API callback 
+// and the corresponding offer is displayed, invoke method on Offer object to get the XDM data.
+
+val displayInteractionXdm = offer.generateDisplayInteractionXdm() // Offer display tracking XDM
+val additionalData = mapOf("someDataKey" to "someDataValue")
+
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(displayInteractionXdm)
+    .setData(additionalData)
+    .build()
+Edge.sendEvent(experienceEvent, null)
+```
+
+<Variant platform="android-java" task="send-event-edge" repeat="1"/>
 
 ```java
 // When a proposition is retrieved using getPropositions API or onUpdatePropositions API callback 
@@ -372,12 +388,10 @@ final Map<String, Object> additionalData = new HashMap<>();
 additionalData.put("someDataKey", "someDataValue");
 
 final ExperienceEvent experienceEvent = new ExperienceEvent.Builder().setXdmSchema(displayInteractionXdm).setData(additionalData).build();
-Edge.sendEvent(experienceEvent, null)
+Edge.sendEvent(experienceEvent, null) 
 ```
 
-<Variant platform="ios" task="send-event-edge" repeat="4"/>
-
-#### Swift
+<Variant platform="ios-swift" task="send-event-edge" repeat="1"/>
 
 ```swift
 // When a proposition is retrieved using getPropositions API or onUpdatePropositions API callback 
@@ -390,7 +404,7 @@ let experienceEvent = ExperienceEvent(xdm: displayInteractionXdm, data: addition
 Edge.sendEvent(experienceEvent)
 ```
 
-#### Objective-C
+<Variant platform="ios-objectivec" task="send-event-edge" repeat="1"/>
 
 ```objc
 // When a proposition is retrieved using getPropositions API or onUpdatePropositions API callback 
@@ -403,17 +417,7 @@ AEPExperienceEvent* experienceEvent = [[AEPExperienceEvent alloc] initWithXdm:di
 [AEPMobileEdge sendExperienceEvent:event completion:nil];
 ```
 
-<Variant platform="android-java" task="proposition-tracking-batch" repeat="5"/>
-
-### Syntax
-
-```java
-public static void display(final List<Offer> offers)
-```
-
-* _offers_ is a list of offers to be displayed. These offers can be from different propositions.
-
-#### Example
+<Variant platform="android-java" task="proposition-tracking-batch" repeat="1"/>
 
 ```java
 // Create a list of offers from different propositions
@@ -424,17 +428,7 @@ offersToDisplay.add(proposition2.getOffers().get(0));
 OfferUtils.display(offersToDisplay);
 ```
 
-<Variant platform="android-kotlin" task="proposition-tracking-batch" repeat="5"/>
-
-### Syntax
-
-```kotlin
-fun List<Offer>.displayed()
-```
-
-* `List<Offer>` is a list of offers to be displayed. These offers can be from different propositions.
-
-#### Example
+<Variant platform="android-kotlin" task="proposition-tracking-batch" repeat="1"/>
 
 ```kotlin
 // Create a list of offers from different propositions
@@ -446,17 +440,7 @@ val offersToDisplay = listOf(
 offersToDisplay.display()
 ```
 
-<Variant platform="ios-swift" task="proposition-tracking-batch" repeat="5"/>
-
-### Syntax
-
-```swift
-static func display(_ offers: [Offer])
-```
-
-* _offers_ is a list of offers to be displayed. These offers can be from different propositions.
-
-#### Example
+<Variant platform="ios-swift" task="proposition-tracking-batch" repeat="1"/>
 
 ```swift
 // Create an array of offers from different propositions
@@ -468,17 +452,7 @@ let offersToDisplay = [
 Optimize.display(offersToDisplay)
 ```
 
-<Variant platform="ios-objectivec" task="proposition-tracking-batch" repeat="5"/>
-
-### Syntax
-
-```objc
-+ (void)display:(NSArray<AEPOffer *> *)offers;
-```
-
-* _offers_ is a list of offers to be displayed. These offers can be from different propositions.
-
-#### Example
+<Variant platform="ios-objectivec" task="proposition-tracking-batch" repeat="1"/>
 
 ```objc
 // Create an array of offers from different propositions
@@ -488,4 +462,145 @@ NSArray<AEPOffer *> *offersToDisplay = @[
 ];
 // Send array of offers to multiple offers display track public API
 [AEPOfferUtils display:offersToDisplay];
+```
+
+<Variant platform="android-java" task="send-multiple-display-interaction-event-edge" repeat="3"/>
+
+```java
+// When propositions are retrieved using getPropositions API or onUpdatePropositions API callback 
+// and the corresponding offers are displayed, invoke method on List<Offer> to get the XDM data.
+
+final Map<String, Object> displayInteractionXdm = offers.generateDisplayInteractionXdm() // Offers display tracking XDM
+final Map<String, Object> additionalData = new HashMap<>();
+additionalData.put("someDataKey", "someDataValue");
+
+final ExperienceEvent experienceEvent = new ExperienceEvent.Builder().setXdmSchema(displayInteractionXdm).setData(additionalData).build();
+Edge.sendEvent(experienceEvent, null)
+```
+
+### Parameters
+
+* _offers_ - A `List<Offer>` that may or may not belong to the same proposition. The associated proposition(s) need to be tracked.
+
+<Variant platform="android-kotlin" task="send-multiple-display-interaction-event-edge" repeat="3"/>
+
+```kotlin
+// When propositions are retrieved using getPropositions API or onUpdatePropositions API callback 
+// and the corresponding offers are displayed, invoke method on List<Offer> to get the XDM data.
+
+val displayInteractionXdm = offers.generateDisplayInteractionXdm() // Offers display tracking XDM
+val additionalData = mapOf("someDataKey" to "someDataValue")
+
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(displayInteractionXdm)
+    .setData(additionalData)
+    .build()
+Edge.sendEvent(experienceEvent, null)
+```
+
+### Parameters
+
+* _offers_ - A `List<Offer>` that may or may not belong to the same proposition. The associated proposition(s) need to be tracked.
+
+<Variant platform="ios-swift" task="send-multiple-display-interaction-event-edge" repeat="3"/>
+
+```swift
+// When propositions are retrieved using getPropositions API or onUpdatePropositions API callback 
+// and the corresponding offers are displayed, invoke method on [Offer] to get the XDM data.
+
+let displayInteractionXdm = offers.generateDisplayInteractionXdm() // Offers display tracking XDM
+let additionalData: [String: Any] = ["someDataKey": "someDataValue"]
+
+let experienceEvent = ExperienceEvent(xdm: displayInteractionXdm, data: additionalData)
+Edge.sendEvent(experienceEvent)
+```
+
+### Parameters
+
+* _offers_ - A `List<Offer>` that may or may not belong to the same proposition. The associated proposition(s) need to be tracked.
+
+<Variant platform="ios-objectivec" task="send-multiple-display-interaction-event-edge" repeat="3"/>
+
+```objc
+// When propositions are retrieved using getPropositions API or onUpdatePropositions API callback 
+// and the corresponding offers are displayed, invoke method on NSArray<AEPOffer *> to get the XDM data.
+
+NSDictionary* displayInteractionXdm = [offers generateDisplayInteractionXdm];
+NSDictionary* additionalData = @{@"someDataKey": @"someDataValue"};
+
+AEPExperienceEvent* experienceEvent = [[AEPExperienceEvent alloc] initWithXdm:displayInteractionXdm data:additionalData datasetIdentifier:nil];
+[AEPMobileEdge sendExperienceEvent:event completion:nil];
+```
+
+### Parameters
+
+* _offers_ - A `List<Offer>` that may or may not belong to the same proposition. The associated proposition(s) need to be tracked.
+
+<Variant platform="android" task="offerutils" repeat="2"/>
+
+#### Kotlin
+
+```kotlin
+object OfferUtils {
+    /**
+     * Dispatches an event for the Edge network extension to send an Experience Event to the Edge
+     * network with the display interaction data for the given list of [Offer]s.
+     *
+     * This function extracts unique [OptimizeProposition]s from the list of offers based on their
+     * proposition ID and dispatches an event with multiple propositions.
+     *
+     * @see XDMUtils.trackWithData
+     */
+    @JvmStatic
+    fun List<Offer>.displayed() {...}
+}
+```
+
+<Variant platform="ios" task="optimize" repeat="2"/>
+
+#### Swift
+
+```swift
+@objc
+public extension Optimize {
+    /// This API dispatches an event for the Edge extension to send an Experience Event to the Edge network with the display interaction data for list of offers passed.
+    ///
+    /// - Parameter offers: An array of offer.
+    @objc(displayed:)
+    static func displayed(for offers: [Offer]) {...}
+```
+
+<Variant platform="android" task="multiple-display-propositions-tracking-edge" repeat="2"/>
+
+#### Kotlin
+
+```kotlin
+object OfferUtils {
+    /**
+     * Generates a map containing XDM formatted data for `Experience Event - OptimizeProposition
+     * Interactions` field group from the given list of [Offer]s.
+     *
+     * This function extracts unique [OptimizeProposition]s from the list of offers based on their
+     * proposition ID and generates XDM data for the interaction.
+     *
+     * @return [Map] containing the XDM data for the proposition interaction, or null if the list is empty
+     * or no valid propositions are found
+     */
+    @JvmStatic
+    fun List<Offer>.generateDisplayInteractionXdm(): Map<String, Any>? {...}
+}
+```
+
+<Variant platform="ios" task="multiple-display-propositions-tracking-edge" repeat="2"/>
+
+#### Swift
+
+```swift
+@objc
+public extension Optimize {
+    /// This API dispatches an event for the Edge extension to send an Experience Event to the Edge network with the display interaction data for list of offers passed.
+    ///
+    /// - Parameter offers: An array of offer.
+    @objc(generateDisplayInteractionXdm:)
+    static func generateDisplayInteractionXdm(for offers: [Offer]) {...}
 ```

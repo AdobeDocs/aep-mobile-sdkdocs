@@ -247,7 +247,7 @@ When using server-side logging, [tracking methods](#proposition-tracking-using-d
 
 ## Tracking
 
-### Proposition tracking using direct Offer class methods
+### Single offer interations events tracking
 
 User interactions with the decision propositions can be tracked using the following public methods in the `Offer` class.
 
@@ -263,29 +263,53 @@ iOS
 
 Upon calling these `Offer` methods, an Experience Event is sent to the Edge network with the proposition interaction data for the given offer.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
-
-Android
-
-<Tabs query="platform=android&task=send-event-offer"/>
-
-iOS
-
-<Tabs query="platform=ios&task=send-event-offer"/>
-
-### Batch Proposition Tracking
-
-For tracking multiple propositions at once, you can use the batch tracking methods. This is useful when you need to track interactions with multiple offers from different propositions in a single call.
-
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
 Java<br/>(Android)
 
-<Tabs query="platform=android-java&task=proposition-tracking-batch"/>
+<Tabs query="platform=android-java&task=send-event-offer"/>
+
+Kotlin<br/>(Android)
+
+<Tabs query="platform=android-kotlin&task=send-event-offer"/>
+
+Swift<br/>(iOS)
+
+<Tabs query="platform=ios-swift&task=send-event-offer"/>
+
+Objective-C<br/>(iOS)
+
+<Tabs query="platform=ios-objectivec&task=send-event-offer"/>
+
+### Multiple offers display interaction events tracking
+
+To track display interactions involving multiple offers from different propositions, you can now batch them into a single XDM payload and send a consolidated tracking event. This is particularly useful when multiple offers from various propositions are displayed together within a single activity or screen.
+
+<InlineAlert variant="info" slots="text"/>
+
+Currently, batching multiple offer interactions is supported only for display interaction events. Tap interactions must still be tracked individually.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<Tabs query="platform=android&task=offerutils"/>
+
+iOS
+
+<Tabs query="platform=ios&task=optimize"/>
+
+Upon calling this `OfferUtils` | `Optimize` methods of android or iOS respectively, an Experience Event is sent to the Edge network with the display proposition interaction data for the given list of offers.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
 Kotlin<br/>(Android)
 
 <Tabs query="platform=android-kotlin&task=proposition-tracking-batch"/>
+
+Java<br/>(Android)
+
+<Tabs query="platform=android-java&task=proposition-tracking-batch"/>
 
 Swift<br/>(iOS)
 
@@ -295,7 +319,7 @@ Objective-C<br/>(iOS)
 
 <Tabs query="platform=ios-objectivec&task=proposition-tracking-batch"/>
 
-### Proposition tracking using Edge extension API
+### Single offer interations events tracking using Edge extension API
 
 For more advanced tracking use cases, additional public methods are available in the `Offer` class. These methods can be used to generate XDM formatted data for `Experience Event - Proposition Interactions` field groups.
 
@@ -311,15 +335,83 @@ iOS
 
 The Edge `sendEvent` API can then be used to send this tracking XDM data along with any additional XDM and freeform data to the Experience Edge network. Additionally, an override dataset can also be specified for tracking data. For more details, see [Edge - sendEvent API](../../edge/edge-network/api-reference.md#sendevent).
 
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
+
+Kotlin<br/>(Android)
+
+<Tabs query="platform=android-kotlin&task=send-event-edge"/>
+
+Java<br/>(Android)
+
+<Tabs query="platform=android-java&task=send-event-edge"/>
+
+Swift<br/>(iOS)
+
+<Tabs query="platform=ios-swift&task=send-event-edge"/>
+
+Objective-C<br/>(iOS)
+
+<Tabs query="platform=ios-objectivec&task=send-event-edge"/>
+
+### Multiple offer display interations events tracking using Edge extension API
+
+For more advanced batched display interaction events tracking use cases, additional public method is available in the `OfferUtils` class. This method can be used as an extension upon the `List<Offer>` to generate XDM formatted data for `Experience Event - Display Proposition Interactions` field groups.
+
+<InlineAlert variant="info" slots="text"/>
+
+Currently, generating XDM with batched multiple offer interactions is supported only for display interaction events. generating XDM with batched offer tap interactions events must still be tracked individually.
+
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
-<Tabs query="platform=android&task=send-event-edge"/>
+<Tabs query="platform=android&task=multiple-display-propositions-tracking-edge"/>
 
 iOS
 
-<Tabs query="platform=ios&task=send-event-edge"/>
+<Tabs query="platform=ios&task=multiple-display-propositions-tracking-edge"/>
+
+The Edge `sendEvent` API can then be used to send this tracking XDM data along with any additional XDM and freeform data to the Experience Edge network. Additionally, an override dataset can also be specified for tracking data. For more details, see [Edge - sendEvent API](../../edge/edge-network/api-reference.md#sendevent).
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
+
+Kotlin<br/>(Android)
+
+<Tabs query="platform=android-kotlin&task=send-multiple-display-interaction-event-edge"/>
+
+Java<br/>(Android)
+
+<Tabs query="platform=android-java&task=send-multiple-display-interaction-event-edge"/>
+
+Swift<br/>(iOS)
+
+<Tabs query="platform=ios-swift&task=send-multiple-display-interaction-event-edge"/>
+
+Objective-C<br/>(iOS)
+
+<Tabs query="platform=ios-objectivec&task=send-multiple-display-interaction-event-edge"/>
+
+<InlineAlert variant="info" slots="text"/>
+
+Make sure that the size of the generated XDM map should not be greater than 64 KB. Use the below code to check the same in your test app
+
+<CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
+
+### Kotlin
+
+```kotlin
+import com.google.gson.Gson
+import java.nio.charset.StandardCharsets
+
+fun calculateJsonSizeInKB(jsonMap: Map<String, Any>) {
+    val gson = Gson()
+    val jsonString = gson.toJson(jsonMap)
+    val byteArray = jsonString.toByteArray(StandardCharsets.UTF_8)
+    val sizeInKB = byteArray.size / 1024.0 
+    println("JSON size: %.2f KB".format(sizeInKB))
+}
+```
+
 
 ## Configuration keys
 
