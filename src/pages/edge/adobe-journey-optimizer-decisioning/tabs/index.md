@@ -604,3 +604,34 @@ public extension Optimize {
     @objc(generateDisplayInteractionXdm:)
     static func generateDisplayInteractionXdm(for offers: [Offer]) {...}
 ```
+
+<Variant platform="android" task="calculate-json-size" repeat="1"/>
+
+```kotlin
+import com.google.gson.Gson
+import java.nio.charset.StandardCharsets
+
+fun calculateJsonSizeInKB(jsonMap: Map<String, Any>) {
+    val gson = Gson()
+    val jsonString = gson.toJson(jsonMap)
+    val byteArray = jsonString.toByteArray(StandardCharsets.UTF_8)
+    val sizeInKB = byteArray.size / 1024.0 
+    println("JSON size: %.2f KB".format(sizeInKB))
+}
+```
+
+<Variant platform="ios" task="calculate-json-size" repeat="1" />
+
+```swift
+import Foundation
+
+func calculateJsonSizeInKB(jsonMap: [String: Any]) {
+    do {
+        let jsonData = try JSONSerialization.data(withJSONObject: jsonMap)
+        let sizeInKB = Double(jsonData.count) / 1024.0
+        print(String(format: "JSON size: %.2f KB", sizeInKB))
+    } catch {
+        print("Error calculating JSON size: \(error)")
+    }
+}
+```
