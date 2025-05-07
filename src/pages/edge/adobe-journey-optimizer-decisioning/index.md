@@ -355,7 +355,7 @@ Objective-C<br/>(iOS)
 
 ### Multiple offer display interations events tracking using Edge extension API
 
-For more advanced batched display interaction events tracking use cases, additional public method is available in the `OfferUtils` class. This method can be used as an extension upon the `List<Offer>` to generate XDM formatted data for `Experience Event - Display Proposition Interactions` field groups.
+Starting with Optimize SDK version 3.5.0 for Android and 5.5.0 for iOS, you can handle more advanced use cases by generating XDM data for multiple display propositions and send display interaction tracking events through the Edge Extension API. The `OfferUtils` class provides a public method that extends `List<Offer>` to generate XDM formatted data for the `Experience Event - Proposition Interactions` field group.
 
 <InlineAlert variant="info" slots="text"/>
 
