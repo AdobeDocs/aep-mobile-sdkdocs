@@ -18,7 +18,7 @@ This document details how to use the APIs provided by the AEPMessaging framework
 
 ## Pre-requisites
 
-[Integrate and register AEPMessaging extension](../../index.md#implement-extension-in-mobile-app) in your app.
+[Integrate and register AEPMessaging extension](../../../index.md#implement-extension-in-mobile-app) in your app.
 
 ## Sync the push token
 
@@ -100,7 +100,7 @@ This API method will automatically handle click behaviour defined for the push n
 
 #### Reading push tracking status
 
-Implement the callback in `handleNotificationResponse` API to read [PushTrackingStatus](../enum-push-tracking-status.md) enum representing tracking status of the push notification.
+Implement the callback in `handleNotificationResponse` API to read [PushTrackingStatus](../../public-classes/push-tracking-status.md) enum representing tracking status of the push notification.
 
 <CodeBlock slots="heading, code" repeat="2" languages="Swift, Objective-C" />
 
