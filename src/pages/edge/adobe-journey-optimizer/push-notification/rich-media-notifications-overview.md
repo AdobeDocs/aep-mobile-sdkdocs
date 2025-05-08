@@ -34,7 +34,7 @@ These aspect ratio recommendations help your images or videos display reliably a
 1. **Images**
    - Maximum image file size: 10MB
    - Supported formats: PNG, JPEG, GIF
-   - Recommended aspect ratio: 3:2 or 1:1
+   - Recommended aspect ratios: 4:3, 3:2, 2:1, or 1:1
 2. **Video**
    - Maximum video file size: 50MB
    - Supported formats: MPEG, MPEG2 Video, MPEG4, AVI
@@ -67,11 +67,9 @@ See the documentation on [displaying iOS rich push notifications.](./ios/display
 The maximum image size recommendations are provided to ensure that images are delivered in a timely manner regardless of network conditions. The aspect ratio recommendations help your images display reliably across multiple devices. These recommendations are guidelines only - you should still test a notification prior to sending it.
 
 1. **Images **
-   - Support for both static images and animated GIFs
    - Recommended maximum image size: 5MB
    - Supported formats: PNG, JPEG, WebP, GIF
-   - Recommended aspect ratios: 4:3, 2:1, 16:9. A [1:1 square aspect ratio image](../assets/push-notification/square-image.png) can be used but the image will be [slightly stretched horizontally](../assets/push-notification/square-image-android-push.png) when displayed within a push notification as notification images are displayed in a standard 4:3 aspect ratio.
-   
+   - Recommended aspect ratios: 4:3, 3:2, 2:1, or 16:9. A [1:1 square aspect ratio image](../assets/push-notification/square-image.png) can be used but the image will be [slightly stretched horizontally](../assets/push-notification/square-image-android-push.png) when displayed within a push notification as notification images are displayed in a standard 4:3 aspect ratio.
 
 Unsupported rich media content will not be presented and the notification will be displayed with the text content only.
 
@@ -86,3 +84,4 @@ See the documentation on [using the Messaging extension's implementation of the 
 - [Adobe Journey Optimizer Documentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/design-push.html)
 - [iOS Push Notification Guidelines](https://developer.apple.com/documentation/usernotifications)
 - [Android Notification Guidelines](https://developer.android.com/guide/topics/ui/notifiers/notifications) 
+- [Adobe Express Aspect Ratio Guide](https://www.adobe.com/express/discover/sizes/photo-aspect-ratio)
