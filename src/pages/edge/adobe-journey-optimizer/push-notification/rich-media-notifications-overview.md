@@ -27,7 +27,7 @@ Rich media push notifications allow you to deliver push notifications with text 
 
 <InlineAlert variant="info" slots="text"/>
 
-The following aspect ratio recommendations help your images or videos display reliably across multiple devices. These recommendations are guidelines only as  - you should still test a notification prior to sending it.
+The following aspect ratio recommendations help your images or videos display reliably across multiple devices. **These recommendations are guidelines only**  - you should still test a notification prior to sending it.
 
 1. **Images**
    * Maximum image file size: 10MB
@@ -62,7 +62,7 @@ See the documentation on [displaying iOS rich push notifications.](./ios/display
 
 <InlineAlert variant="info" slots="text"/>
 
-The maximum image size recommendations are provided to ensure that images are delivered in a timely manner regardless of network conditions. The aspect ratio recommendations help your images display reliably across multiple devices. These recommendations are guidelines only - you should still test a notification prior to sending it.
+The maximum image size recommendations are provided to ensure that images are delivered in a timely manner regardless of network conditions. The aspect ratio recommendations help your images display reliably across multiple devices. **These recommendations are guidelines only** - you should still test a notification prior to sending it.
 
 1. **Images**
    * Recommended maximum image size: 5MB
