@@ -16,7 +16,7 @@ const fs = require("fs");
 const _ = require('lodash');
 
 function extractBOMTableContent(releaseNote) {
-    let lines = releaseNote.split('\n');
+    let lines = releaseNote.split(/\r?\n/);
     let newLines = []
     for (const line of lines) {
         if (line.startsWith('|')) {
@@ -122,7 +122,7 @@ function generateReleaseNotesSectionWithoutDateLine(releaseInfo) {
 
 async function updateReleaseNotesPage(filePath, releaseInfoArray) {
     // Read the contents of the markdown file.
-    let contentLines = fs.readFileSync(filePath, "utf8").toString().split("\n")
+    let contentLines = fs.readFileSync(filePath, "utf8").toString().split(/\r?\n/)
     // Find the index of the release notes header.
     let releaseNotesHeader = "# Release notes"
     let releaseNotesHeaderIndex = contentLines.indexOf(releaseNotesHeader)
@@ -145,14 +145,14 @@ async function updateReleaseNotesPage(filePath, releaseInfoArray) {
         if (hasLineStartWith(dateLine, contentLines)) {
             let releaseNote = generateReleaseNotesSectionWithoutDateLine(releaseInfo)
             // generate the release notes section to array
-            let releaseNoteLines = releaseNote.split("\n");
+            let releaseNoteLines = releaseNote.split(/\r?\n/);
             let dateLineIndex = contentLines.indexOf(dateLine);
             contentLines.splice(dateLineIndex + 1, 0, ...releaseNoteLines)
             contentIsChanged = true
         } else {
             let releaseNote = generateReleaseNotesSection(releaseInfo)
             // generate the release notes section to array
-            let releaseNoteLines = releaseNote.split("\n");
+            let releaseNoteLines = releaseNote.split(/\r?\n/);
             contentLines.splice(releaseNotesHeaderIndex + 1, 0, ...releaseNoteLines)
             contentIsChanged = true
         }
