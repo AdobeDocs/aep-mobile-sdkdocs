@@ -247,7 +247,7 @@ When using server-side logging, [tracking methods](#proposition-tracking-using-d
 
 ## Tracking
 
-### Single offer interations events tracking
+### Single offer interactions events tracking
 
 User interactions with the decision propositions can be tracked using the following public methods in the `Offer` class.
 
@@ -281,7 +281,7 @@ Objective-C<br/>(iOS)
 
 <Tabs query="platform=ios-objectivec&task=send-event-offer"/>
 
-### Multiple offers display interaction events tracking
+### Multiple offers display interactions events tracking
 
 To track display interactions involving multiple offers from different propositions, you can now batch them into a single XDM payload and send a consolidated tracking event. This is particularly useful when multiple offers from various propositions are displayed together within a single activity or screen.
 
@@ -319,7 +319,7 @@ Objective-C<br/>(iOS)
 
 <Tabs query="platform=ios-objectivec&task=proposition-tracking-batch"/>
 
-### Single offer interations events tracking using Edge extension API
+### Single offer interactions events tracking using Edge extension API
 
 For more advanced tracking use cases, additional public methods are available in the `Offer` class. These methods can be used to generate XDM formatted data for `Experience Event - Proposition Interactions` field groups.
 
@@ -353,9 +353,9 @@ Objective-C<br/>(iOS)
 
 <Tabs query="platform=ios-objectivec&task=send-event-edge"/>
 
-### Multiple offer display interations events tracking using Edge extension API
+### Multiple offer display interactions events tracking using Edge extension API
 
-Starting with Optimize SDK version 3.5.0 for Android and 5.5.0 for iOS, you can handle more advanced use cases by generating XDM data for multiple display propositions and send display interaction tracking events through the Edge Extension API. The `OfferUtils` class provides a public method that extends `List<Offer>` to generate XDM formatted data for the `Experience Event - Proposition Interactions` field group.
+Starting with Optimize SDK version 3.5.0 for Android and 5.5.0 for iOS, you can handle more advanced use cases by generating XDM data for multiple display propositions and send display interaction tracking events through the Edge Extension API. The `OfferUtils` class provides a public method that extends `List<Offer> | Optimize` to generate XDM formatted data for the `Experience Event - Proposition Interactions` field group for a list of offers.
 
 <InlineAlert variant="info" slots="text"/>
 
