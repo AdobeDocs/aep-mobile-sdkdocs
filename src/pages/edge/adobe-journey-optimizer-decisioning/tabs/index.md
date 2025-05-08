@@ -425,7 +425,7 @@ final List<Offer> offersToDisplay = new ArrayList<>();
 offersToDisplay.add(proposition1.getOffers().get(0));
 offersToDisplay.add(proposition2.getOffers().get(0));
 // Send list of offers to multiple offers display track public API
-OfferUtils.display(offersToDisplay);
+OfferUtils.displayed(offersToDisplay);
 ```
 
 <Variant platform="android-kotlin" task="proposition-tracking-batch" repeat="1"/>
@@ -437,7 +437,7 @@ val offersToDisplay = listOf(
     proposition2.offers[0]
 )
 // Send list of offers to multiple offers display track public API
-offersToDisplay.display()
+offersToDisplay.displayed()
 ```
 
 <Variant platform="ios-swift" task="proposition-tracking-batch" repeat="1"/>
@@ -449,7 +449,7 @@ let offersToDisplay = [
     proposition2.offers[0]
 ]
 // Send array of offers to multiple offers display track public API
-Optimize.display(offersToDisplay)
+Optimize.displayed(offersToDisplay)
 ```
 
 <Variant platform="ios-objectivec" task="proposition-tracking-batch" repeat="1"/>
@@ -461,7 +461,7 @@ NSArray<AEPOffer *> *offersToDisplay = @[
     proposition2.offers[0]
 ];
 // Send array of offers to multiple offers display track public API
-[AEPOfferUtils display:offersToDisplay];
+[AEPMobileOptimize displayed: offersToDisplay];
 ```
 
 <Variant platform="android-java" task="send-multiple-display-interaction-event-edge" repeat="3"/>
@@ -500,7 +500,7 @@ Edge.sendEvent(experienceEvent, null)
 
 ### Parameters
 
-* _offers_ - A `List<Offer>` that may or may not belong to the same proposition. The associated proposition(s) need to be tracked.
+* _offers_ - A `[Offer]` that may or may not belong to the same proposition. The associated proposition(s) need to be tracked.
 
 <Variant platform="ios-swift" task="send-multiple-display-interaction-event-edge" repeat="3"/>
 
@@ -517,7 +517,7 @@ Edge.sendEvent(experienceEvent)
 
 ### Parameters
 
-* _offers_ - A `List<Offer>` that may or may not belong to the same proposition. The associated proposition(s) need to be tracked.
+* _offers_ - A `[Offer]` that may or may not belong to the same proposition. The associated proposition(s) need to be tracked.
 
 <Variant platform="ios-objectivec" task="send-multiple-display-interaction-event-edge" repeat="3"/>
 
@@ -568,6 +568,7 @@ public extension Optimize {
     /// - Parameter offers: An array of offer.
     @objc(displayed:)
     static func displayed(for offers: [Offer]) {...}
+}
 ```
 
 <Variant platform="android" task="multiple-display-propositions-tracking-edge" repeat="2"/>
@@ -598,11 +599,17 @@ object OfferUtils {
 ```swift
 @objc
 public extension Optimize {
-    /// This API dispatches an event for the Edge extension to send an Experience Event to the Edge network with the display interaction data for list of offers passed.
+    /// This API returns a dictionary containing XDM formatted data for Experience Event - Proposition Interactions field group for the list of offers
+    ///
+    /// The Edge sendEvent(experienceEvent:_:) API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, or override dataset identifier.
     ///
     /// - Parameter offers: An array of offer.
+    /// - Note: The returned XDM data also contains the eventType for the Experience Event with value decisioning.propositionInteract.
+    /// - Returns A dictionary containing XDM data for the propositon interactions.
+    /// - SeeAlso: interactionXdm(for:)
     @objc(generateDisplayInteractionXdm:)
-    static func generateDisplayInteractionXdm(for offers: [Offer]) {...}
+    static func generateDisplayInteractionXdm(for offers: [Offer]) -> [String: Any]?{...}
+}
 ```
 
 <Variant platform="android" task="calculate-json-size" repeat="1"/>
