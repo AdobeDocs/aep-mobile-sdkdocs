@@ -83,3 +83,4 @@ See the documentation on [using the Messaging extension's implementation of the 
 * [iOS Push Notification Guidelines](https://developer.apple.com/documentation/usernotifications)
 * [Android Notification Guidelines](https://developer.android.com/guide/topics/ui/notifiers/notifications)
 * [Adobe Express Aspect Ratio Guide](https://www.adobe.com/express/discover/sizes/photo-aspect-ratio)
+
