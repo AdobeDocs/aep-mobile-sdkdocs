@@ -36,7 +36,7 @@ function extractReleaseNotes(releaseText) {
     if (!releaseText) {
         return []
     }
-    const lines = releaseText.split('\n');
+    const lines = releaseText.split(/\r?\n/);
     let start = -1
     let end = lines.length
 

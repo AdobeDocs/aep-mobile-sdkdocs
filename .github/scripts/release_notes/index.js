@@ -18,6 +18,7 @@ const { fetchReleaseInfoFromGitHub, sortReleaseInfoByDateASC } = require('./fetc
 
 // Run the script on the root directory of the project: node .github/scripts/release_notes/index.js <GITHUB_TOKEN> [--dry-run]
 const GITHUB_TOKEN = process.argv[2];
+// const DEBUG_MODE = (process.argv[3] === "--debug")
 
 if (GITHUB_TOKEN === undefined) {
     throw new Error("token is undefined")
