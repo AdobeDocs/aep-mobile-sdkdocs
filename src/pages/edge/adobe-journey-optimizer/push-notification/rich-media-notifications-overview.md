@@ -25,11 +25,9 @@ Rich media push notifications allow you to deliver push notifications with text 
 
 **Minimum supported OS version**: iOS 10.
 
-iOS supports rich media push notification attachments with the following media types:
-
 <InlineAlert variant="info" slots="text"/>
 
-These aspect ratio recommendations help your images or videos display reliably across multiple devices. These recommendations are guidelines only as  - you should still test a notification prior to sending it.
+The following aspect ratio recommendations help your images or videos display reliably across multiple devices. These recommendations are guidelines only as  - you should still test a notification prior to sending it.
 
 1. **Images**
    - Maximum image file size: 10MB
