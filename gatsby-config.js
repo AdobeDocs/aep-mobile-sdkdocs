@@ -225,6 +225,24 @@ module.exports = {
                                         ]
                                     },
                                     {
+                                        title: "Rich Media Push Notification Support",
+                                        path: "/edge/adobe-journey-optimizer/push-notification/rich-media-notifications-overview"
+                                    },
+                                    {
+                                        title: "Public classes and enums",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/#push-notification",
+                                        pages: [
+                                            {
+                                                title: "Class - MessagingPushPayload (Android only)",
+                                                path: "/edge/adobe-journey-optimizer/public-classes/messaging-push-payload"
+                                            },
+                                            {
+                                                title: "Enum - PushTrackingStatus",
+                                                path: "/edge/adobe-journey-optimizer/public-classes/push-tracking-status"
+                                            }                                          
+                                        ]
+                                    },
+                                    {
                                         title: "Payload keys",
                                         path: "/edge/adobe-journey-optimizer/push-notification/push-payload"
                                     }
