@@ -280,29 +280,31 @@ public extension Offer {
 }
 ```
 
-<Variant platform="android" task="send-event-offer" repeat="2"/>
-
-#### Java
+<Variant platform="android-java" task="send-event-offer" repeat="1"/>
 
 ```java
 offer.displayed(); // Sends an Offer display notification to Edge network
 ```
 
-<Variant platform="ios" task="send-event-offer" repeat="4"/>
+<Variant platform="android-kotlin" task="send-event-offer" repeat="1"/>
 
-#### Swift
+```kotlin
+offer.displayed() // Sends an Offer display notification to Edge network
+```
+
+<Variant platform="ios-swift" task="send-event-offer" repeat="1"/>
 
 ```swift
 offer.displayed() // Sends an Offer display notification to Edge network
 ```
 
-#### Objective-C
+<Variant platform="ios-objectivec" task="send-event-offer" repeat="1"/>
 
 ```objc
 [offer displayed]; // Sends an Offer display notification to Edge network
 ```
 
-<Variant platform="android" task="proposition-tracking-edge" repeat="3"/>
+<Variant platform="android" task="proposition-tracking-edge" repeat="2"/>
 
 #### Java
 
@@ -335,21 +337,7 @@ public class Offer {
 }
 ```
 
-```java
-public class Proposition {
-  ...
-  /**
-    * Generates a map containing XDM formatted data for {@code Experience Event - Proposition Reference} field group from this {@code Proposition}.
-    *
-    * The returned XDM data does not contain {@code eventType} for the Experience Event.
-    *
-    * @return {@code Map<String, Object>} containing the XDM data for the proposition reference.
-    */
-  public Map<String, Object> generateReferenceXdm() {...}
-}
-```
-
-<Variant platform="ios" task="proposition-tracking-edge" repeat="3"/>
+<Variant platform="ios" task="proposition-tracking-edge" repeat="2"/>
 
 #### Swift
 
@@ -373,21 +361,23 @@ public extension Offer {
 }
 ```
 
-```swift
-public extension OptimizeProposition {
-  /// Creates a dictionary containing XDM formatted data for `Experience Event - Proposition Reference` field group from the given proposition.
-  ///
-  /// The Edge `sendEvent(experienceEvent:_:)` API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, or override dataset identifier.
-  ///
-  /// - Note: The returned XDM data does not contain an `eventType` for the Experience Event.
-  /// - Returns A dictionary containing XDM data for the proposition reference.
-  func generateReferenceXdm() -> [String: Any] {...}
-}
+<Variant platform="android-kotlin" task="send-event-edge" repeat="1"/>
+
+```kotlin
+// When a proposition is retrieved using getPropositions API or onUpdatePropositions API callback 
+// and the corresponding offer is displayed, invoke method on Offer object to get the XDM data.
+
+val displayInteractionXdm = offer.generateDisplayInteractionXdm() // Offer display tracking XDM
+val additionalData = mapOf("someDataKey" to "someDataValue")
+
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(displayInteractionXdm)
+    .setData(additionalData)
+    .build()
+Edge.sendEvent(experienceEvent, null)
 ```
 
-<Variant platform="android" task="send-event-edge" repeat="2"/>
-
-#### Java
+<Variant platform="android-java" task="send-event-edge" repeat="1"/>
 
 ```java
 // When a proposition is retrieved using getPropositions API or onUpdatePropositions API callback 
@@ -398,12 +388,10 @@ final Map<String, Object> additionalData = new HashMap<>();
 additionalData.put("someDataKey", "someDataValue");
 
 final ExperienceEvent experienceEvent = new ExperienceEvent.Builder().setXdmSchema(displayInteractionXdm).setData(additionalData).build();
-Edge.sendEvent(experienceEvent, null)
+Edge.sendEvent(experienceEvent, null) 
 ```
 
-<Variant platform="ios" task="send-event-edge" repeat="4"/>
-
-#### Swift
+<Variant platform="ios-swift" task="send-event-edge" repeat="1"/>
 
 ```swift
 // When a proposition is retrieved using getPropositions API or onUpdatePropositions API callback 
@@ -416,7 +404,7 @@ let experienceEvent = ExperienceEvent(xdm: displayInteractionXdm, data: addition
 Edge.sendEvent(experienceEvent)
 ```
 
-#### Objective-C
+<Variant platform="ios-objectivec" task="send-event-edge" repeat="1"/>
 
 ```objc
 // When a proposition is retrieved using getPropositions API or onUpdatePropositions API callback 
@@ -427,4 +415,230 @@ NSDictionary* additionalData = @{@"someDataKey": @"someDataValue"};
 
 AEPExperienceEvent* experienceEvent = [[AEPExperienceEvent alloc] initWithXdm:displayInteractionXdm data:additionalData datasetIdentifier:nil];
 [AEPMobileEdge sendExperienceEvent:event completion:nil];
+```
+
+<Variant platform="android-java" task="proposition-tracking-batch" repeat="1"/>
+
+```java
+// Create a list of offers from different propositions
+final List<Offer> offersToDisplay = new ArrayList<>();
+offersToDisplay.add(proposition1.getOffers().get(0));
+offersToDisplay.add(proposition2.getOffers().get(0));
+// Send list of offers to multiple offers display track public API
+OfferUtils.displayed(offersToDisplay);
+```
+
+<Variant platform="android-kotlin" task="proposition-tracking-batch" repeat="1"/>
+
+```kotlin
+// Create a list of offers from different propositions
+val offersToDisplay = listOf(
+    proposition1.offers[0],
+    proposition2.offers[0]
+)
+// Send list of offers to multiple offers display track public API
+offersToDisplay.displayed()
+```
+
+<Variant platform="ios-swift" task="proposition-tracking-batch" repeat="1"/>
+
+```swift
+// Create an array of offers from different propositions
+let offersToDisplay = [
+    proposition1.offers[0],
+    proposition2.offers[0]
+]
+// Send array of offers to multiple offers display track public API
+Optimize.displayed(offersToDisplay)
+```
+
+<Variant platform="ios-objectivec" task="proposition-tracking-batch" repeat="1"/>
+
+```objc
+// Create an array of offers from different propositions
+NSArray<AEPOffer *> *offersToDisplay = @[
+    proposition1.offers[0],
+    proposition2.offers[0]
+];
+// Send array of offers to multiple offers display track public API
+[AEPMobileOptimize displayed: offersToDisplay];
+```
+
+<Variant platform="android-java" task="send-multiple-display-interaction-event-edge" repeat="3"/>
+
+```java
+// When propositions are retrieved using getPropositions API or onUpdatePropositions API callback 
+// and the corresponding offers are displayed, invoke method on List<Offer> to get the XDM data.
+
+final Map<String, Object> displayInteractionXdm = offers.generateDisplayInteractionXdm() // Offers display tracking XDM
+final Map<String, Object> additionalData = new HashMap<>();
+additionalData.put("someDataKey", "someDataValue");
+
+final ExperienceEvent experienceEvent = new ExperienceEvent.Builder().setXdmSchema(displayInteractionXdm).setData(additionalData).build();
+Edge.sendEvent(experienceEvent, null)
+```
+
+### Parameters
+
+* _offers_ - A `List<Offer>` that may or may not belong to the same proposition. The associated proposition(s) need to be tracked.
+
+<Variant platform="android-kotlin" task="send-multiple-display-interaction-event-edge" repeat="3"/>
+
+```kotlin
+// When propositions are retrieved using getPropositions API or onUpdatePropositions API callback 
+// and the corresponding offers are displayed, invoke method on List<Offer> to get the XDM data.
+
+val displayInteractionXdm = offers.generateDisplayInteractionXdm() // Offers display tracking XDM
+val additionalData = mapOf("someDataKey" to "someDataValue")
+
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(displayInteractionXdm)
+    .setData(additionalData)
+    .build()
+Edge.sendEvent(experienceEvent, null)
+```
+
+### Parameters
+
+* _offers_ - A `[Offer]` that may or may not belong to the same proposition. The associated proposition(s) need to be tracked.
+
+<Variant platform="ios-swift" task="send-multiple-display-interaction-event-edge" repeat="3"/>
+
+```swift
+// When propositions are retrieved using getPropositions API or onUpdatePropositions API callback 
+// and the corresponding offers are displayed, invoke method on [Offer] to get the XDM data.
+
+let displayInteractionXdm = offers.generateDisplayInteractionXdm() // Offers display tracking XDM
+let additionalData: [String: Any] = ["someDataKey": "someDataValue"]
+
+let experienceEvent = ExperienceEvent(xdm: displayInteractionXdm, data: additionalData)
+Edge.sendEvent(experienceEvent)
+```
+
+### Parameters
+
+* _offers_ - A `[Offer]` that may or may not belong to the same proposition. The associated proposition(s) need to be tracked.
+
+<Variant platform="ios-objectivec" task="send-multiple-display-interaction-event-edge" repeat="3"/>
+
+```objc
+// When propositions are retrieved using getPropositions API or onUpdatePropositions API callback 
+// and the corresponding offers are displayed, invoke method on NSArray<AEPOffer *> to get the XDM data.
+
+NSDictionary* displayInteractionXdm = [offers generateDisplayInteractionXdm];
+NSDictionary* additionalData = @{@"someDataKey": @"someDataValue"};
+
+AEPExperienceEvent* experienceEvent = [[AEPExperienceEvent alloc] initWithXdm:displayInteractionXdm data:additionalData datasetIdentifier:nil];
+[AEPMobileEdge sendExperienceEvent:event completion:nil];
+```
+
+### Parameters
+
+* _offers_ - A `List<Offer>` that may or may not belong to the same proposition. The associated proposition(s) need to be tracked.
+
+<Variant platform="android" task="offerutils" repeat="2"/>
+
+#### Kotlin
+
+```kotlin
+object OfferUtils {
+    /**
+     * Dispatches an event for the Edge network extension to send an Experience Event to the Edge
+     * network with the display interaction data for the given list of [Offer]s.
+     *
+     * This function extracts unique [OptimizeProposition]s from the list of offers based on their
+     * proposition ID and dispatches an event with multiple propositions.
+     *
+     * @see XDMUtils.trackWithData
+     */
+    @JvmStatic
+    fun List<Offer>.displayed() {...}
+}
+```
+
+<Variant platform="ios" task="optimize" repeat="2"/>
+
+#### Swift
+
+```swift
+@objc
+public extension Optimize {
+    /// This API dispatches an event for the Edge extension to send an Experience Event to the Edge network with the display interaction data for list of offers passed.
+    ///
+    /// - Parameter offers: An array of offer.
+    @objc(displayed:)
+    static func displayed(for offers: [Offer]) {...}
+}
+```
+
+<Variant platform="android" task="multiple-display-propositions-tracking-edge" repeat="2"/>
+
+#### Kotlin
+
+```kotlin
+object OfferUtils {
+    /**
+     * Generates a map containing XDM formatted data for `Experience Event - OptimizeProposition
+     * Interactions` field group from the given list of [Offer]s.
+     *
+     * This function extracts unique [OptimizeProposition]s from the list of offers based on their
+     * proposition ID and generates XDM data for the interaction.
+     *
+     * @return [Map] containing the XDM data for the proposition interaction, or null if the list is empty
+     * or no valid propositions are found
+     */
+    @JvmStatic
+    fun List<Offer>.generateDisplayInteractionXdm(): Map<String, Any>? {...}
+}
+```
+
+<Variant platform="ios" task="multiple-display-propositions-tracking-edge" repeat="2"/>
+
+#### Swift
+
+```swift
+@objc
+public extension Optimize {
+    /// This API returns a dictionary containing XDM formatted data for Experience Event - Proposition Interactions field group for the list of offers
+    ///
+    /// The Edge sendEvent(experienceEvent:_:) API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, or override dataset identifier.
+    ///
+    /// - Parameter offers: An array of offer.
+    /// - Note: The returned XDM data also contains the eventType for the Experience Event with value decisioning.propositionInteract.
+    /// - Returns A dictionary containing XDM data for the propositon interactions.
+    /// - SeeAlso: interactionXdm(for:)
+    @objc(generateDisplayInteractionXdm:)
+    static func generateDisplayInteractionXdm(for offers: [Offer]) -> [String: Any]?{...}
+}
+```
+
+<Variant platform="android" task="calculate-json-size" repeat="1"/>
+
+```kotlin
+import com.google.gson.Gson
+import java.nio.charset.StandardCharsets
+
+fun calculateJsonSizeInKB(jsonMap: Map<String, Any>) {
+    val gson = Gson()
+    val jsonString = gson.toJson(jsonMap)
+    val byteArray = jsonString.toByteArray(StandardCharsets.UTF_8)
+    val sizeInKB = byteArray.size / 1024.0 
+    println("JSON size: %.2f KB".format(sizeInKB))
+}
+```
+
+<Variant platform="ios" task="calculate-json-size" repeat="1" />
+
+```swift
+import Foundation
+
+func calculateJsonSizeInKB(jsonMap: [String: Any]) {
+    do {
+        let jsonData = try JSONSerialization.data(withJSONObject: jsonMap)
+        let sizeInKB = Double(jsonData.count) / 1024.0
+        print(String(format: "JSON size: %.2f KB", sizeInKB))
+    } catch {
+        print("Error calculating JSON size: \(error)")
+    }
+}
 ```
