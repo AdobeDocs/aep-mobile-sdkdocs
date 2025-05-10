@@ -29,6 +29,7 @@ Keywords:
 ### React Native Campaign Classic 7.0.0
 
 * Updated to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Added support for the React Native New Architecture via interop layer
 
 ### React Native EdgeIdentity 7.0.0
 
