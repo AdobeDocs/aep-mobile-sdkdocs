@@ -359,7 +359,7 @@ Starting with Optimize SDK version 3.5.0 for Android and 5.5.0 for iOS, you can 
 
 <InlineAlert variant="info" slots="text"/>
 
-Currently, generating XDM with batched multiple offer interactions is supported only for display interaction events. generating XDM with batched offer tap interactions events must still be tracked individually.
+Currently, generating XDM with batched multiple offer interactions is supported only for display interaction events. Generating XDM with batched offer tap interactions events must still be tracked individually.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

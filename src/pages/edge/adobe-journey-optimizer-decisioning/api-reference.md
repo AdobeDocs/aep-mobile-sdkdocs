@@ -235,7 +235,7 @@ iOS
 
 ### OfferUtils | Optimize
 
-Starting from Android SDK version 3.4.0 and iOS SDK version 5.4.0 the Optimize SDK provides enhanced support for batching multiple display propositions track events. The following methods are available in `OfferUtils.kt` and `Optimize.swift` public classes respectively.
+Starting from Android SDK version 3.4.0 and iOS SDK version 5.4.0, the Optimize SDK provides enhanced support for batching multiple display propositions track events. The following methods are available in the `OfferUtils.kt` and `Optimize.swift` public classes respectively.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
