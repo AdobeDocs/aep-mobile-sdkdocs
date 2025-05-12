@@ -7,6 +7,109 @@ Keywords:
 
 # Release notes
 
+## May 8, 2025
+
+### iOS Optimize 5.5.0
+
+* Added generateDisplayInteractionXdm public API for a list of offers.
+* Added and unwrapped weak self in Optimize's onRegistered to avoid crash.
+
+## May 7, 2025
+
+### Android BOM 3.11.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.10.0) | BOM (3.11.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:optimize** | **3.4.0** | **3.5.0**|
+| com.adobe.marketing.mobile:analytics | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:assurance | 3.0.6 | 3.0.6 |
+| com.adobe.marketing.mobile:audience | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaign | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.3 | 3.1.3 |
+| com.adobe.marketing.mobile:core | 3.3.1 | 3.3.1 |
+| com.adobe.marketing.mobile:edge | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:identity | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:media | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:messaging | 3.3.1 | 3.3.1 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:places | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Optimize 3.5.0
+
+* New API Available: Introduced `[List<Offer>. generateDisplayInteractionXdm()]` to generate the XDM with batched list of display proposition that can be used in events tracking using Edge extension API (i.e, `sendEvent()`).
+
+## May 6, 2025
+
+### React Native EdgeBridge 7.0.1
+
+* Added support for tvOS.
+
+## April 28, 2025
+
+### Android BOM 3.10.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.9.2) | BOM (3.10.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:optimize** | **3.3.1** | **3.4.0**|
+| com.adobe.marketing.mobile:analytics | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:assurance | 3.0.6 | 3.0.6 |
+| com.adobe.marketing.mobile:audience | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaign | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.3 | 3.1.3 |
+| com.adobe.marketing.mobile:core | 3.3.1 | 3.3.1 |
+| com.adobe.marketing.mobile:edge | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:identity | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:media | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:messaging | 3.3.1 | 3.3.1 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:places | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Optimize 3.4.0
+
+* Enhanced error handling: Added support for managing invalid requests gracefully.
+* New API Available: Introduced `[List<Offer>.display()]` to track batched display proposition events for multiple offers displayed simultaneously on a screen.
+
+### iOS Optimize 5.4.0
+
+* Added processing of listeners asynchronously inside serial queue to solve race condition issue.
+* Added a new API to support display tracking of multiple offers.
+
 ## March 28, 2025
 
 ### React Native Core 7.0.0
