@@ -9,6 +9,14 @@ keywords:
 
 # Release notes
 
+## May 13, 2025
+
+### Android Messaging 3.3.2
+
+* Added support for "fit to content" and "max width" in in-app messaging.
+* Added gif support for push notifications on Android OS 14+ when using the Messaging extension to display push notifications.
+* Fixed a logging error within the ContentCardUIProvider.
+
 ## March 28, 2025
 
 ### React Native Messaging 7.0.0
