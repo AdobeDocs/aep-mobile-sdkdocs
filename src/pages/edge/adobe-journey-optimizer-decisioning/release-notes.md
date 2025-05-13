@@ -8,6 +8,31 @@ keywords:
 
 # Release notes
 
+## May 8, 2025
+
+### iOS Optimize 5.5.0
+
+* Added generateDisplayInteractionXdm public API for a list of offers.
+* Added and unwrapped weak self in Optimize's onRegistered to avoid crash.
+
+## May 7, 2025
+
+### Android Optimize 3.5.0
+
+* New API Available: Introduced `[List<Offer>. generateDisplayInteractionXdm()]` to generate the XDM with batched list of display proposition that can be used in events tracking using Edge extension API (i.e, `sendEvent()`).
+
+## April 28, 2025
+
+### Android Optimize 3.4.0
+
+* Enhanced error handling: Added support for managing invalid requests gracefully.
+* New API Available: Introduced `[List<Offer>.display()]` to track batched display proposition events for multiple offers displayed simultaneously on a screen.
+
+### iOS Optimize 5.4.0
+
+* Added processing of listeners asynchronously inside serial queue to solve race condition issue.
+* Added a new API to support display tracking of multiple offers.
+
 ## March 28, 2025
 
 ### React Native Optimize 7.0.0
