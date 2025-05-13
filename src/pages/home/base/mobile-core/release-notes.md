@@ -8,6 +8,19 @@ keywords:
 
 # Release notes
 
+## May 12, 2025
+
+### Android Core 3.4.0
+
+* Added support of "Max width" and "Fit to content" for in-app messages via`InAppMessageSettings`.
+
+### iOS Core 5.5.0
+
+* Fixed issue where `MobileCore.initialize` registered multiple Analytics extensions.
+* Removed call to `CTCarrier` API for iOS 16+ as Apple deprecated it without replacement. Calling `SystemInfoService.getMobileCarrierName` on iOS 16 and above will now always return nil.
+* Added support for "Fit to content" in `FullscreenMessage`.
+* Added support of "Max width" and "Fit to content" for in-app messages via `MessageSettings`.
+
 ## March 28, 2025
 
 ### React Native Core 7.0.0
