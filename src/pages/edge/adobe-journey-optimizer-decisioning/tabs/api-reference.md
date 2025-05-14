@@ -1197,7 +1197,7 @@ public class Offer: NSObject, Codable {
 }
 ```
 
-The `Offer` class extension provides methods for generating XDM data for Proposition Interactions field group which can be used for proposition tracking. It also contains direct methods for tracking proposition display and tap interactions.
+The `Offer` class extension provides methods for generating XDM data for Proposition Interactions field group which can be used for proposition tracking.
 
 ```swift
 /// `Offer` extension
@@ -1277,6 +1277,62 @@ public enum OfferType: Int, Codable {
     /// - Parameter format: Offer format string
     init(from format: String) {...}
 }
+```
+
+<Variant platform="android" api="offerutils" repeat="2"/>
+
+#### Kotlin
+
+```kotlin
+object OfferUtils {
+    /**
+     * Dispatches an event for the Edge network extension to send an Experience Event to the Edge
+     * network with the display interaction data for the given list of [Offer]s.
+     *
+     * This function extracts unique [OptimizeProposition]s from the list of offers based on their
+     * proposition ID and dispatches an event with multiple propositions.
+     *
+     * @see XDMUtils.trackWithData
+     */
+    @JvmStatic
+    fun List<Offer>.displayed() {...}
+
+    /**
+     * Generates a map containing XDM formatted data for `Experience Event - OptimizeProposition
+     * Interactions` field group from the given list of [Offer]s.
+     *
+     * This function extracts unique [OptimizeProposition]s from the list of offers based on their
+     * proposition ID and generates XDM data for the interaction.
+     *
+     * @return [Map] containing the XDM data for the proposition interaction, or null if the list is empty
+     * or no valid propositions are found
+     */
+    @JvmStatic
+    fun List<Offer>.generateDisplayInteractionXdm(): Map<String, Any>? {...}
+}
+```
+
+<Variant platform="ios" api="optimize" repeat="2"/>
+
+#### Swift
+
+```swift
+/// This API dispatches an event for the Edge extension to send an Experience Event to the Edge network with the display interaction data for list of offers passed.
+///
+/// - Parameter offers: An array of offer.
+@objc(displayed:)
+static func displayed(for offers: [Offer]){...}
+
+/// This API returns a dictionary containing XDM formatted data for `Experience Event - Proposition Interactions` field group for the list of offers
+///
+/// The Edge `sendEvent(experienceEvent:_:)` API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, or override dataset identifier.
+///
+/// - Parameter offers: An array of offer.
+/// - Note: The returned XDM data also contains the `eventType` for the Experience Event with value `decisioning.propositionInteract`.
+/// - Returns A dictionary containing XDM data for the propositon interactions.
+/// - SeeAlso: `interactionXdm(for:)`
+@objc(generateDisplayInteractionXdm:)
+static func generateDisplayInteractionXdm(for offers: [Offer]) -> [String: Any]?{...}
 ```
 
 <Variant platform="ios" api="optimizeerror" repeat="4"/>

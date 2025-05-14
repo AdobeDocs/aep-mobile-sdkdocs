@@ -176,10 +176,12 @@ iOS
 
 | Type | Android              | (AEP 5.x) Swift | (AEP 5.x) Objective-C |
 | :--- |:---------------------| :--- | :--- |
-| class | `DecisionScope`      | `DecisionScope` | `AEPDecisionScope` |
+| class | `DecisionScope`      | `DecisionScope`       | `AEPDecisionScope` |
 | class | `Proposition`        | `OptimizeProposition` | `AEPOptimizeProposition` |
-| class | `Offer`              | `Offer` | `AEPOffer` |
-| class | `AEPOptimizeError`   | `AEPOptimizeError` | `AEPOptimizeError` |
+| class | `Offer`              | `Offer`               | `AEPOffer`  |
+| class | `OfferUtils`         | `_____`               | `_____`     |
+| class | `Optimize`           | `Optimize`            | `Optimize` |
+| class | `AEPOptimizeError`   | `AEPOptimizeError`    | `AEPOptimizeError` |
 
 ### DecisionScope
 
@@ -230,6 +232,20 @@ Android
 iOS
 
 <Tabs query="platform=ios&api=offer"/>
+
+### OfferUtils | Optimize
+
+Starting from Android SDK version 3.4.0 and iOS SDK version 5.4.0, the Optimize SDK provides enhanced support for batching multiple display propositions track events. The following methods are available in the `OfferUtils.kt` and `Optimize.swift` public classes respectively.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<Tabs query="platform=android&api=offerutils"/>
+
+iOS
+
+<Tabs query="platform=ios&api=optimize"/>
 
 ### OfferType
 

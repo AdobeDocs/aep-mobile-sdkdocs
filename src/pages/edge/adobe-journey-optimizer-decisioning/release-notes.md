@@ -26,7 +26,7 @@ keywords:
 ### Android Optimize 3.4.0
 
 * Enhanced error handling: Added support for managing invalid requests gracefully.
-* New API Available: Introduced `[List<Offer>.display()]` to track batched display proposition events for multiple offers displayed simultaneously on a screen.
+* New API Available: Introduced `[List<Offer>.displayed()]` to track batched display proposition events for multiple offers displayed simultaneously on a screen.
 
 ### iOS Optimize 5.4.0
 
