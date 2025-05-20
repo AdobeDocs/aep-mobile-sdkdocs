@@ -49,6 +49,7 @@ If we have a more complex map named `userDetails` nested within another map name
    		"someOtherId": "e374aed66f6a3fda58aacb2d5e2cae5ce8d6ad1bbea2fedfd2640ac0d5be8d2e"
    }
 },
+
 ```
 We can setup a rule trigger on the AJO UI which uses a dot notation to access the nested map's key value pairs:
 
