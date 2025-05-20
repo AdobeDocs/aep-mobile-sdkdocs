@@ -50,7 +50,6 @@ iOS
 
 Triggering with a value within an array is **not** currently supported, e.g. the Experience event contains:
 
-
 ```json
 "xdm": {
      "productlistitems": [
