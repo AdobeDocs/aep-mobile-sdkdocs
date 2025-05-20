@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## May 19, 2025
+
+### React Native Places 7.0.1
+
+* Updated `com.google.android.gms:play-services-location` from 16.0.0 to 21.2.0
+
 ## March 28, 2025
 
 ### React Native Places 7.0.0
