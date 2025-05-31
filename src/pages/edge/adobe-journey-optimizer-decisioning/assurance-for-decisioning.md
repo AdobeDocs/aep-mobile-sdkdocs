@@ -1,6 +1,6 @@
 ---
 title: Validation and Preview using Assurance
-description: An introduction to Assurance features with Adobe Journey Optimizer Decisioning.
+description: An introduction to Assurance features with Offer Decisioning and Target.
 keywords:
 - Assurance
 - Validate setup
