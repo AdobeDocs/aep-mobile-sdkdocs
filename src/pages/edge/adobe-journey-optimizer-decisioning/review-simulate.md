@@ -1,12 +1,12 @@
 ---
-title: Decisioning Review & Simulate
+title: Offer Decisioning and Target Review & Simulate
 description: This is a feature of Adobe Experience Platform Assurance which allows the users to review the content sent to devices for each request and simulate different experiences on the same devices in real time.
 keywords:
 - Adobe Experience Platform Assurance
 - Review & Simulate Feature Introduction
 ---
 
-# Decisioning Review & Simulate
+# Offer Decisioning and Target Review & Simulate
 
 This is a feature of Adobe Experience Platform Assurance which allows the users to review the content sent to devices for each request and simulate different experiences on the same devices in real time.
 
