@@ -1102,7 +1102,7 @@ Users can now configure:
 
 ### iOS Messaging 5.3.0
 
-* Two updates made to support out-of-the-box Content Card templates, coming soon via the new `AEPSwiftUI` library:
+* Two updates made to support out-of-the-box Content Card templates:
   * Writes a disqualify event to event history when a content card is dismissed
   * Removes dismissed content card from in-memory container holding qualified content cards
 
