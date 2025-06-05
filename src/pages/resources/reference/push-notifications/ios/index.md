@@ -44,7 +44,7 @@ To add the AEPNotificationContent Package to your application, from the Xcode me
 
 The menu options may vary depending on the version of Xcode being used.
 
-Enter the URL for the AEP UI repository: `https://github.com/adobe/aepsdk-ui-ios.git`.
+Enter the URL for the AEP Notification Content repository: `https://github.com/adobe/aepsdk-notificationcontent-ios.git`.
 
 For `Dependency Rule`, select `Up to Next Major Version`.
 
@@ -52,7 +52,7 @@ Alternatively, if your project has a `Package.swift` file, you can add the AEPNo
 
 ```swift
 dependencies: [
-    .package(name: "AEPNotificationContent", url: "https://github.com/adobe/aepsdk-ui-ios.git", .upToNextMajor(from: "5.0.0"))
+    .package(name: "AEPNotificationContent", url: "https://github.com/adobe/aepsdk-notificationcontent-ios.git", .upToNextMajor(from: "5.0.0"))
 ],
 targets: [
     .target(

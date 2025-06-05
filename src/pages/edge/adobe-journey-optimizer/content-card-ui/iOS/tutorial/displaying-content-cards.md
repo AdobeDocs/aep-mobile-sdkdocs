@@ -92,7 +92,7 @@ struct HomePage: View {
         .onAppear() {
             // Retrieve the content cards for the homepage surface
             let homePageSurface = Surface(path: "homepage")
-            AEPSwiftUI.getContentCardsUI(for: homePageSurface) { result in
+            Messaging.getContentCardsUI(for: homePageSurface) { result in
                 switch result {
                 case .success(let cards):
                     savedCards = cards
@@ -129,7 +129,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         // Retrieve the content cards for the homepage surface
         let homePageSurface = Surface(path: "homepage")
-        AEPSwiftUI.getContentCardsUI(for: homePageSurface) { result in
+        Messaging.getContentCardsUI(for: homePageSurface) { result in
             switch result {
             case .success(let cards):
                 self.savedCards = cards

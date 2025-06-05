@@ -7,6 +7,13 @@ Keywords:
 
 # Release notes
 
+## May 19, 2025
+
+### React Native Places 7.0.1
+
+* Updated `com.google.android.gms:play-services-location` from 16.0.0 to 21.2.0
+* Added support for continuous native code generation in Expo
+
 ## May 13, 2025
 
 ### iOS Messaging 5.6.1
@@ -1047,14 +1054,6 @@ Users can now configure:
 * Add `aep` prefix to notification builder string resources to prevent conflicts with resources defined by the app.
 *  Fix intent actions to allow tracker activities to correctly handle received intents.
 
-## September 4, 2024
-
-### AEPSwiftUI 5.1.0-beta
-
-Initial release of `AEPSwiftUI` framework for Adobe Experience Platform Mobile SDKs on iOS. The `AEPSwiftUI` framework provides out-of-the-box UI components for use with Adobe Journey Optimizer content cards.
-
-The first release includes a single template - [SmallImageTemplate](https://github.com/adobe/aepsdk-ui-ios/tree/v5.1.0-beta/Frameworks/AEPSwiftUI/Documentation)
-
 ## September 3, 2024
 
 ### iOS Notification Content Extension 5.0.1
@@ -1103,7 +1102,7 @@ The first release includes a single template - [SmallImageTemplate](https://gith
 
 ### iOS Messaging 5.3.0
 
-* Two updates made to support out-of-the-box Content Card templates, coming soon via the new `AEPSwiftUI` library:
+* Two updates made to support out-of-the-box Content Card templates:
   * Writes a disqualify event to event history when a content card is dismissed
   * Removes dismissed content card from in-memory container holding qualified content cards
 
