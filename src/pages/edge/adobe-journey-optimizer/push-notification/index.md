@@ -31,8 +31,10 @@ keywords:
 ## More information
 
 * [Push notification payload keys](./push-payload.md)
+* [Push token sync improvements](./push-token-sync-improvements.md)
 
 <!--
+
 ## Push templates
 
 * [Reference - Out of the box push templates](./../../../resources/reference/push-notifications)
