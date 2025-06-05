@@ -22,7 +22,7 @@ This document guides you to integrating in-app messaging in your application.
 * [Call native code from the JavaScript of an in-app message](./tutorials/native-from-javascript.md)
 * [Execute JavaScript code in an in-app message from native code](./tutorials/javascript-from-native.md)
 * [Handle URL clicks from an in-app message](./tutorials/handle-clicks.md)
-* [Trigger Adobe Journey Optimizer campaigns using the send data to platform event](./tutorials/trigger-campaign.md)
+* [Trigger Adobe Journey Optimizer campaigns using the send data to Experience Platform events](./tutorials/trigger-campaign.md)
 
 ## Public Classes and Enums
 

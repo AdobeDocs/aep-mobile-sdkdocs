@@ -277,7 +277,7 @@ module.exports = {
                                                 path: "/edge/adobe-journey-optimizer/in-app-message/tutorials/handle-clicks"
                                             },
                                             {
-                                                title: "Trigger Adobe Journey Optimizer campaigns using the send data to platform event",
+                                                title: "Trigger Adobe Journey Optimizer campaigns",
                                                 path: "/edge/adobe-journey-optimizer/in-app-message/tutorials/trigger-campaign"
                                             }
                                         ]

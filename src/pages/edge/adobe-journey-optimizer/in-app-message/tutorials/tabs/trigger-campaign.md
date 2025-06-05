@@ -1,6 +1,6 @@
 ---
-title: Trigger Adobe Journey Optimizer campaigns using send data to platform events
-description: A guide explaining how to trigger Adobe Journey Optimizer campaigns by using send data to platform events.
+title: Trigger Adobe Journey Optimizer campaigns using send data to Experience Platform events
+description: A guide explaining how to trigger Adobe Journey Optimizer campaigns by using send data to Experience Platform events.
 keywords:
 - Adobe Journey Optimizer
 - Guide
@@ -55,7 +55,7 @@ We can setup a rule trigger on the AJO UI which uses a dot notation to access th
 
 ![send-data-event-define-nested-rule](../../assets/trigger-campaign/send-data-event-define-nested-rule.png)
 
-We can then trigger the campaign using xdm data containing nested maps:
+We can then trigger the campaign using XDM data containing nested maps:
 
 ```kotlin
 // Create an Experience Event

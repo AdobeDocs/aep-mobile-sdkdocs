@@ -1,6 +1,6 @@
 ---
-title: Trigger Adobe Journey Optimizer campaigns using send data to platform events
-description: A guide explaining how to trigger Adobe Journey Optimizer campaigns by using send data to platform events.
+title: Trigger Adobe Journey Optimizer campaigns using send data to Experience Platform events
+description: A guide explaining how to trigger Adobe Journey Optimizer campaigns by using send data to Experience Platform events.
 keywords:
 - Adobe Journey Optimizer
 - Guide
@@ -14,7 +14,7 @@ import Tabs from './tabs/trigger-campaign.md'
 
 # Trigger Adobe Journey Optimizer campaigns using the send data to platform event
 
-This guide explains how to setup then trigger Adobe Journey Optimizer campaigns by using the `send data to platform event` trigger available on the Adobe Journey Optimizer UI.
+This guide explains how to set up, then trigger Adobe Journey Optimizer campaigns by using the `send data to platform event` trigger available in the Adobe Journey Optimizer UI.
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ This guide explains how to setup then trigger Adobe Journey Optimizer campaigns 
 
 1. Create a scheduled campaign containing an in-app message action.
    ![send-data-event-in-app-action](../assets/trigger-campaign/send-data-event-in-app-action.png)
-2. In-app campaigns (as well as content cards) support rule based triggers. For this example, we will create a campaign containing an in-app message action which we will be triggered using the *"Send data to platform event"*. Click *"Edit Triggers"* and setup a *"Send data to Platform"* event trigger with a condition of *"XDM value"*. The created condition will be satisfied by a defined key value pair. The key value pair must be present within an Experience event request sent by your app. For this example, we will use a key of "status" and a value of "signedIn" to show our in-app message when a user has signed in to our app
+2. In-app campaigns (as well as content cards) support rule based triggers. For this example, we will create a campaign containing an in-app message action which we will be triggered using the *"Send data to platform event"*. Click *"Edit Triggers"* and setup a *"Send data to Platform"* event trigger with a condition of *"XDM value"*. The created condition will be satisfied by a defined key value pair. The key value pair must be present within an Experience event request sent by your app. For this example, we will use a key of "status" and a value of "signedIn" to show our in-app message when a user has signed in to our app.
    ![send-data-event-define-rule](../assets/trigger-campaign/send-data-event-define-rule.png)
 3. The completed in-app campaign with the *"Send data to platform event"* trigger setup will look like:
    ![send-data-event-trigger-setup](../assets/trigger-campaign/send-data-event-trigger-setup.png)
@@ -34,7 +34,7 @@ This guide explains how to setup then trigger Adobe Journey Optimizer campaigns 
 
 ## Trigger the campaign using the send data to platform event
 
-To trigger an Adobe Journey Optimizer campaign, you need to send an Experience event to the Experience Platform. This event should contain the data that matches your campaign's trigger conditions.
+To trigger an Adobe Journey Optimizer campaign, you need to send an Experience event to Experience Platform. This event should contain the data that matches your campaign's trigger conditions.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -48,7 +48,7 @@ iOS
 
 ## Limitations
 
-Triggering with a value within an array is **not** currently supported, e.g. the Experience event contains:
+Triggering with a value within an array is **not** currently supported. For example, you cannot have an Experience Event as follows:
 
 ```json
 "xdm": {
@@ -63,7 +63,7 @@ Triggering with a value within an array is **not** currently supported, e.g. the
 },
 ```
 
-The values within the maps / dictionaries in the list **cannot** be used in a trigger.
+The values within the maps or dictionaries in the list **cannot** be used in a trigger.
 
 ```text
 (Sent data to Platform event happens) AND (XDM value productlistitems.0.sku = 1234)
