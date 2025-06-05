@@ -9,6 +9,20 @@ keywords:
 
 # Release notes
 
+## February 10, 2025
+
+### Android EdgeMedia 3.0.1
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+## April 2, 2024
+
+### Android EdgeMedia 3.0.0
+
+Major version update for [Adobe Streaming Media for Edge Network](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+
 ## March 20, 2024
 
 ### iOS EdgeMedia 5.0.0

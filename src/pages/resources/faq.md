@@ -18,7 +18,7 @@ There are several new features and benefits of using the Experience Platform Mob
 | :--- | :--- | :--- |
 | Server-side, dynamic configuration | ✔️ |  |
 | Programmatic configuration | ✔️ | ✔️ |
-| Configuration UI | [Data Collection UI](https://experience.adobe.com/#/data-collection/) | [Mobile Services](https://mobilemarketing.adobe.com) |
+| Configuration UI | [Data Collection UI](https://experience.adobe.com/#/data-collection/) | [Mobile Services (deprecated)](https://experienceleague.adobe.com/docs/mobile-services/using/eol.html) |
 | Partner SDK extensions | ✔️ |  |
 | Lifecycle metrics | ✔️ | ✔️ |
 | GET/POST postbacks | ✔️ | ✔️ |
@@ -28,7 +28,6 @@ There are several new features and benefits of using the Experience Platform Mob
 | :--- | :--- | :--- |
 | Adobe Analytics | ✔️ | ✔️ |
 | Adobe Analytics - Media Analytics | ✔️ | ✔️ |
-| Adobe Analytics - Mobile Services | Messaging and Marketing Links | ✔️ |
 | Adobe Audience Manager | ✔️ | ✔️ |
 | Adobe Campaign Classic | ✔️ |  |
 | Adobe Campaign Standard | Push and in-app messaging | Push only |
@@ -58,6 +57,35 @@ Yes, you can safely upgrade extensions within the mobile property. All changes a
 
 Additionally, the installation instructions in the mobile property will be refreshed to include the latest versions of mobile platform extensions. These instructions are primarily necessary during the development phase and will be updated even before the property is published.
 
+## How often should I upgrade extensions in the Data Collection UI for published mobile apps?
+
+You should always update to the latest version to access new features and show installation instructions for the latest major releases. You can upgrade extensions within the mobile property safely, as updates are backward compatible and won't affect apps already using the published configuration.
+
+## How often should I upgrade Adobe Experience Platform SDKs in mobile apps?  
+
+You should promptly update to the latest major version of Adobe Experience Platform SDKs upon their release. Once you're on the latest version, maintaining a regular update cadence for patch versions ensures your app stays current with the latest enhancements and fixes.  
+
+We release major versions of Adobe Experience Platform SDKs when significant updates are needed for underlying platforms, such as increasing the minimum deployment target in iOS or the minimum API level in Android. Minor and patch updates focus on critical bug fixes and enhancements without introducing breaking changes. All Adobe-provided Mobile SDK extensions within the same major version are fully compatible with each other.  
+
+## How can I resolve the Android build error in the React Native Optimize wrapper?  
+
+If you have started facing the following error in your  `@adobe/react-native-aepoptimize` package  
+
+> **Error:**  
+>  
+> ```plaintext
+> TestReactNativeApp/node_modules/@adobe/react-native-aepoptimize/android/src/main/java/com/adobe/marketing/mobile/reactnative/optimize/RCTAEPOptimizeUtil.java:75: error: incompatible types: possible lossy conversion from double to int
+>     offerWritableMap.putInt("score", offer.getScore());
+> ```  
+
+You can resolve this issue by upgrading by upgrading your `@adobe/react-native-aepoptimize` wrapper to **version 6.1.0 or later**. This issue arises due to a **breaking change** in the Android `optimize` package.
+
+For more details, refer to:  
+
+* [Adobe SDK Release Notes](https://developer.adobe.com/client-sdks/home/release-notes/)  
+* [Android Optimize Release Notes](https://github.com/adobe/aepsdk-optimize-android/releases/tag/v3.3.0)  
+* [React Native Optimize Release Notes](https://github.com/adobe/aepsdk-react-native/releases/tag/%40adobe%2Freact-native-aepoptimize%406.1.0)  
+
 ## General implementation and migration
 
 ### Where can I download the SDK?
@@ -70,16 +98,9 @@ Implementing the two SDKs in your app is not supported.
 
 The Experience Platform SDK migrates the locally stored user contexts from the 4x SDKs. Using both SDKs will cause severe data quality issues. For more information, please read the [upgrade to the Experience Platform SDKs tutorial](./upgrade-platform-sdks/index.md).
 
-### What platforms are supported?
-
-For a complete list of supported platforms, please read the [latest SDK versions document](../home/current-sdk-versions.md).
-
 ### What OS and platform versions are supported?
 
-* Android versions 4.4 or later (API levels 19 or later)
-* iOS versions 10 or later
-* React Native versions 0.60.0 or later
-* Flutter versions 2.0.0 or later
+For a complete list of supported platforms, please read the [latest SDK versions document](../home/current-sdk-versions.md#supported-platforms).
 
 ### Where does the SDK store identities and preferences on the app?
 
@@ -87,11 +108,11 @@ For a complete list of supported platforms, please read the [latest SDK versions
 
 Android
 
-<FAQ query="platform=android"/>
+<FAQ query="platform=android&task=storage-locations"/>
 
 iOS
 
-<FAQ query="platform=ios"/>
+<FAQ query="platform=ios&task=storage-locations"/>
 
 ### What is the size of the SDK?
 
@@ -146,6 +167,20 @@ Implementing push notification tracking and measurement with the SDK depends on 
 * For the Adobe Campaign Standard extension, please read the [Adobe Campaign standard push tracking tutorial](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-mobile/push-tracking.html).
 * For the Adobe Campaign Classic extension, please read the [Adobe Campaign Classic push notifications tracking tutorial](../solution/adobe-campaign-classic/api-reference.md#tracknotification-api).
 
+### Why am I not getting a valid configuration from Data Collection UI?
+
+If you are getting the following errors from the SDK logged in your console, then you have not correctly published the mobile property in Data Collection UI. To correctly publish the mobile property follow the [docs here](https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview).
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<FAQ query="platform=android&task=configuration-download-error"/>
+
+iOS
+
+<FAQ query="platform=ios&task=configuration-download-error"/>
+
 ## Migrating to Android Mobile Core 2.x and compatible extensions
 
 See the frequently asked questions for migration [here](../resources/migration/android/migrate-to-2x.md#frequently-asked-questions).
@@ -154,7 +189,7 @@ See the frequently asked questions for migration [here](../resources/migration/a
 
 ### What are Lifecycle metrics?
 
-Lifecycle metrics are out-of-the-box metrics that are automatically collected when the SDK is first implemented in your app. For more information, please read the [documentation on Lifecycle metrics](../home/mobile-core/lifecycle/index.md).
+Lifecycle metrics are out-of-the-box metrics that are automatically collected when the SDK is first implemented in your app. For more information, please read the [documentation on Lifecycle metrics](../home/base/mobile-core/lifecycle/index.md).
 
 ## Adobe Analytics
 

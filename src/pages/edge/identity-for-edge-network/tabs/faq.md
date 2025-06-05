@@ -4,25 +4,37 @@ noIndex: true
 
 import Alerts from '/src/pages/resources/alerts.md'
 
-<Variant platform="android" task="download" repeat="5"/>
+<Variant platform="android" task="download" repeat="8"/>
 
 1. Add the Mobile Core and Edge extensions to your project using the app's Gradle file.
 
+**Kotlin**
+
+```kotlin
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation("com.adobe.marketing.mobile:core")
+implementation("com.adobe.marketing.mobile:identity")
+implementation("com.adobe.marketing.mobile:edge")
+implementation("com.adobe.marketing.mobile:edgeidentity")
+```
+
+**Groovy**
+
 ```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
 implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:identity'
 implementation 'com.adobe.marketing.mobile:edge'
 implementation 'com.adobe.marketing.mobile:edgeidentity'
 ```
 
 <Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
-2. Import the Mobile Core and Edge extensions in your application class.
+2. Import the Mobile Core and Edge extensions in your application class but do not include the Identity or Identity for Edge Network extensions. Instead, use their fully qualified names during registration and when calling their APIs.
 
 ```java
 import com.adobe.marketing.mobile.MobileCore;
 import com.adobe.marketing.mobile.Edge;
-import com.adobe.marketing.mobile.edge.identity.Identity;
 ```
 
 <Variant platform="ios" task="download" repeat="7"/>
@@ -78,7 +90,11 @@ public class MobileApp extends Application {
 
       // Register Adobe Experience Platform SDK extensions
       MobileCore.registerExtensions(
-         Arrays.asList(Edge.EXTENSION, Identity.EXTENSION),
+         Arrays.asList(
+            Edge.EXTENSION, 
+            com.adobe.marketing.mobile.edge.identity.Identity.EXTENSION,
+            com.adobe.marketing.mobile.Identity.EXTENSION
+            ),
          o -> Log.debug("MobileApp", "MobileApp", "Adobe Experience Platform Mobile SDK initialized.")
        );
     }
@@ -97,7 +113,11 @@ class MobileApp : Application() {
         MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
         // Register Adobe Experience Platform SDK extensions
         MobileCore.registerExtensions(
-            listOf(Edge.EXTENSION, Identity.EXTENSION)
+            listOf(
+                Edge.EXTENSION, 
+                com.adobe.marketing.mobile.edge.identity.Identity.EXTENSION,
+                com.adobe.marketing.mobile.Identity.EXTENSION
+                )
         ) {
             Log.debug("MobileApp", "MobileApp", "Adobe Experience Platform Mobile SDK initialized.")
         }

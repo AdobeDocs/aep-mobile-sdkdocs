@@ -73,7 +73,7 @@ dependencies {
     //implementation 'com.adobe.marketing.mobile:userprofile:1.+'
 
     // Use Adobe SDK BOM artifact to manage all compatible versions of Adobe Experience Platform Android extensions.
-    implementation 'com.adobe.marketing.mobile:sdk-bom:2.+'
+    implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
     implementation 'com.adobe.marketing.mobile:core'
     implementation 'com.adobe.marketing.mobile:identity'
     implementation 'com.adobe.marketing.mobile:signal'
@@ -145,6 +145,16 @@ The `registerExtension` API for each extension is deprecated in the 2.x version 
 | com.adobe.marketing.mobile.PlacesAuthorizationStatus | Moved into **places** subpackage. Update import statements to reference **com.adobe.marketing.mobile.places.PlacesAuthorizationStatus** |
 | com.adobe.marketing.mobile.PlacesPOI | Moved into **places** subpackage. Update import statements to reference **com.adobe.marketing.mobile.places.PlacesPOI** |
 | com.adobe.marketing.mobile.PlacesRequestError | Moved into **places** subpackage. Update import statements to reference **com.adobe.marketing.mobile.places.PlacesRequestError** |
+
+### Network Override
+
+The helper classes mentioned below for overriding the network service have been removed starting in the 2.x version of the mobile SDK. If you have implemented code to override network services, you will need to update it according to the guidance provided in this [documentation](https://developer.adobe.com/client-sdks/home/base/mobile-core/platform-services/network-service/).
+
+#### Removed classes
+
+* `AndroidNetworkServiceOverrider`
+* `AndroidNetworkServiceOverrider.HTTPConnectionPerformer`
+* `AndroidNetworkServiceOverrider.Connecting`
 
 ## Frequently asked questions
 

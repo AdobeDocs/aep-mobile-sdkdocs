@@ -317,7 +317,7 @@ You want to update `username` of a user obtained in the log in page:
 UserProfile.updateUserAttribute("username", "Will Smith");
 ```
 
-<Variant platform="android" api="update-user-attributes" repeat="6"/>
+<Variant platform="android" api="update-user-attributes" repeat="10"/>
 
 #### Java
 

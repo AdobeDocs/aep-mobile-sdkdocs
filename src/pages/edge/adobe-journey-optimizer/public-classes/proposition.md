@@ -46,10 +46,6 @@ public lazy var items: [PropositionItem]
 
 ## Android Interface - Proposition
 
-### Coming soon
-
-<!--
-
 ## Public functions
 
 ### getItems
@@ -81,5 +77,3 @@ Returns this proposition's unique identifier as a string.
 Android
 
 <Tabs query="platform=android&function=get-unique-id"/>
-
--->

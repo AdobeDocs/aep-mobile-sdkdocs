@@ -158,12 +158,6 @@ To update the SDK configuration, programmatically, use the following information
 | :--- | :--- |
 | `global.privacy` | Setting to control privacy opt status; values may include `optedin`, `optedout`, `optunknown` |
 
-## Video
-
-<Media slots="video"/>
-
-<https://www.youtube.com/watch?v=kgUJNFQp3PI>
-
 ## Additional information
 
 * For more information about GDPR, see [GDPR and Your Business](https://www.adobe.com/privacy/general-data-protection-regulation.html)

@@ -19,6 +19,10 @@ keywords:
 * [Automatic display and tracking of push notification](./android/automatic-display-and-tracking.md) (Recommended)
 * [Manual display and tracking of push notification](./android/manual-display-and-tracking.md)
 
+## Rich Media Push Notification Support
+
+* [Rich Media Push Notifications Overview](./rich-media-notifications-overview.md)
+
 ## Public classes and enums
 
 * [Class - MessagingPushPayload](../public-classes/messaging-push-payload.md) (Android only)
@@ -27,3 +31,9 @@ keywords:
 ## More information
 
 * [Push notification payload keys](./push-payload.md)
+
+<!--
+## Push templates
+
+* [Reference - Out of the box push templates](./../../../resources/reference/push-notifications)
+-->

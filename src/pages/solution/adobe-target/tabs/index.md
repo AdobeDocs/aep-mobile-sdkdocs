@@ -2,175 +2,47 @@
 noIndex: true
 ---
 
-<Variant platform="android" task="add" repeat="4"/>
+import Alerts from '/src/pages/resources/alerts.md'
 
-#### Java
+<Variant platform="android-kotlin" task="add" repeat="3"/>
 
-1. Add the Mobile Core, Identity and Target extensions to your project using the app's Gradle file.
+Add the required dependencies to your project by including them in the app's Gradle file.
+
+```kotlin
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation("com.adobe.marketing.mobile:core")
+implementation("com.adobe.marketing.mobile:identity")
+implementation("com.adobe.marketing.mobile:target")
+```
+
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
+
+<Variant platform="android-groovy" task="add" repeat="3"/>
+
+Add the required dependencies to your project by including them in the app's Gradle file.
 
 ```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
 implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:identity'
 implementation 'com.adobe.marketing.mobile:target'
 ```
 
-<InlineNestedAlert variant="warning" header="false" iconPosition="left">
+<Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
+<Variant platform="ios-pods" task="add" repeat="2"/>
 
-</InlineNestedAlert>
-
-<Variant platform="ios" task="add" repeat="7"/>
-
-1. Add the AEPCore, AEPIdentity, and AEPTarget CocoaPods to your project via your `Podfile`.
-
-```ruby
-pod 'AEPCore','~>3.0'    
-pod 'AEPIdentity','~>3.0'
-pod 'AEPTarget','~>3.0'
-```
-
-2. Import the Target and Identity libraries.
-
-**Swift**
+Add the required dependencies to your project using CocoaPods. Add following pods in your `Podfile`:
 
 ```swift
-    import AEPCore
-    import AEPTarget
-    import AEPIdentity
+use_frameworks!
+
+target 'YourTargetApp' do
+  pod 'AEPCore','~>5.0'    
+  pod 'AEPIdentity','~>5.0'
+  pod 'AEPTarget','~>5.0'
+end
 ```
-
-**Objective-C**
-
-```objectivec
-    @import AEPCore
-    @import AEPTarget
-    @import AEPIdentity
-```
-
-<!--- <Variant platform="react-native" task="add" repeat="7"/>
-
-#### JavaScript
-
-1. Install Target.
-
-```javascript
-npm install @adobe/react-native-acptarget
-react-native link @adobe/react-native-acptarget
-```
-
-2. Import the extension and related libraries.
-
-```javascript
-import {ACPTarget, ACPTargetPrefetchObject, ACPTargetRequestObject, ACPTargetOrder, ACPTargetProduct, ACPTargetParameters} from '@adobe/react-native-acptarget';
-```
-
-3. Get the extension version.
-
-```javascript
-ACPTarget.extensionVersion().then(version => console.log("AdobeExperienceSDK: ACPTarget version: " + version));
-``` --->
-
-<Variant platform="android" task="register" repeat="5"/>
-
-#### Java
-
-In your Application's `onCreate()` method, after calling the `setApplication()` method, register Target with Mobile Core.
-
-```java
-import com.adobe.marketing.mobile.MobileCore;
-import com.adobe.marketing.mobile.Target;
-import com.adobe.marketing.mobile.Identity;
-import com.adobe.marketing.mobile.AdobeCallback;
-
-public class MainApp extends Application {
-
-  private final String ENVIRONMENT_FILE_ID = "YOUR_APP_ENVIRONMENT_ID";
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
-
-        MobileCore.setApplication(this);
-        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
-
-        MobileCore.registerExtensions(
-            Arrays.asList(Target.EXTENSION, Identity.EXTENSION),
-            o -> Log.d("MainApp", "Adobe Target Mobile SDK was initialized.")
-        );
-    }
-}
-```
-
-#### Kotlin
-
-```java
-import com.adobe.marketing.mobile.MobileCore
-import com.adobe.marketing.mobile.Target
-import com.adobe.marketing.mobile.Identity
-import com.adobe.marketing.mobile.AdobeCallback
-
-class MainApp : Application() {
-
-  private var ENVIRONMENT_FILE_ID: String = "YOUR_APP_ENVIRONMENT_ID"
-
-    override fun onCreate() {
-        super.onCreate()
-
-        MobileCore.setApplication(this)
-        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
-
-        MobileCore.registerExtensions(
-          listOf(Target.EXTENSION, Identity.EXTENSION)
-        ) {
-          Log.d("MainApp", "Adobe Target Mobile SDK was initialized")
-        }
-    }
-
-}
-```
-
-<Variant platform="ios" task="register" repeat="5"/>
-
-#### Swift
-
-```swift
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {    
-  MobileCore.registerExtensions([Target.self, Identity.self]) {
-       //Completion callback
-       // Use the App id assigned to this application via Adobe Data Collection UI
-       MobileCore.configureWith(appId: "yourAppId")
-  }
-  return true
-}
-```
-
-#### Objective-C
-
-In your app's `didFinishLaunchingWithOptions` function, register the Target extension with Mobile Core:
-
-```objectivec
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [AEPMobileCore registerExtensions: @[AEPMobileTarget.class, AEPMobileIdentity.class] completion:^{
-        //Completion callback
-        // Use the app ID assigned to this application via Data Collection UI
-        [AEPMobileCore configureWithAppId: @"yourAppId"];
-    }];
-
-    return YES;
-}
-```
-
-<!--- <Variant platform="react-native" task="register" repeat="3"/>
-
-To register the Target extension with the Mobile Core extension, use the following API:
-
-#### JavaScript
-
-```javascript
-ACPTarget.registerExtension();
-``` --->
 
 <Variant platform="android" task="target-order" repeat="5"/>
 

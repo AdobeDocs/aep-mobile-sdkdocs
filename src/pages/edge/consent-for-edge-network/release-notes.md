@@ -9,6 +9,76 @@ keywords:
 
 # Release notes
 
+## March 28, 2025
+
+### React Native EdgeConsent 7.0.0
+
+* Updated to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+
+## March 4, 2025
+
+### Flutter EdgeConsent 5.0.0
+
+* Update to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Update tests to handle the deprecation warning for `setMockMethodCallHandler`.
+
+## February 10, 2025
+
+### Android EdgeConsent 3.0.1
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+## June 6, 2024
+
+### React Native EdgeConsent 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+## May 13, 2024
+
+### Flutter EdgeConsent 4.0.2
+
+* Update environment dependencies in pubspec.
+
+## April 24, 2024
+
+### React Native EdgeConsent 6.0.1
+
+* Added namespace support to the Android module.
+
+## April 23, 2024
+
+### Flutter EdgeConsent 4.0.1
+
+* Added namespace support to the Android module.
+
+## April 16, 2024
+
+### Flutter EdgeConsent 4.0.0
+
+Major version update for [Consent for Edge Network](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepedgeconsent) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+## April 12, 2024
+
+### React Native EdgeConsent 6.0.0
+
+Major version update for [Consent](https://github.com/adobe/aepsdk-react-native/tree/main/packages/edgeconsent) for Edge Network for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+## April 2, 2024
+
+### Android EdgeConsent 3.0.0
+
+Major version update for [Consent for Edge Network](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+
 ## March 20, 2024
 
 ### iOS EdgeConsent 5.0.0

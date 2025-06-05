@@ -9,6 +9,7 @@ keywords:
 ---
 
 import Tabs from './tabs/index.md'
+import InitializeSDK from '/src/pages/resources/initialize.md'
 
 # Signal
 
@@ -26,59 +27,33 @@ To get started with Signal extension, complete the following steps:
 
 For more information about creating and configuring a rule in the Data Collection UI, see [Rules](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html).
 
-## Watch the video
-
-<Media slots="video"/>
-
-<https://www.youtube.com/watch?v=r-z9ivQjzOY>
-
 ## Add the Signal extension to your app
 
-<InlineAlert variant="warning" slots="text"/>
+### Include Signal extension as an app dependency
 
-Using dynamic dependency versions is not recommended for production apps. Refer to this [page](../../../resources/manage-gradle-dependencies.md) for managing gradle dependencies.
+Add MobileCore and Signal extensions as dependencies to your project.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-Android
+Kotlin<br/>(Android)
 
-<Tabs query="platform=android&task=add"/>
+<Tabs query="platform=android-kotlin&task=add"/>
 
-iOS
+Groovy<br/>(Android)
 
-<Tabs query="platform=ios&task=add"/>
+<Tabs query="platform=android-groovy&task=add"/>
 
-<!--- React Native
+CocoaPods<br/>(iOS)
 
-<Tabs query="platform=react-native&task=add"/>
+<Tabs query="platform=ios-pods&task=add"/>
 
-Flutter
+### Initialize Adobe Experience Platform SDK with Signal Extension
 
-<Tabs query="platform=flutter&task=add"/> --->
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
 
-## Register the Signal extension
+Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
 
-The `MobileCore.registerExtensions()` API can be used to register the Signal extension with the Mobile Core extension. This API allows the extension to send and receive events to and from the Mobile SDK.
-
-To register the Signal extension, use the following code sample:
-
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
-
-Android
-
-<Tabs query="platform=android&task=register"/>
-
-iOS
-
-<Tabs query="platform=ios&task=register"/>
-
-<!--- React Native
-
-<Tabs query="platform=react-native&task=register"/>
-
-Flutter
-
-<Tabs query="platform=flutter&task=register"/> --->
+<InitializeSDK query="componentClass=TabsBlock"/>
 
 ## Implement the Mobile SDK to send PII data to external destinations
 

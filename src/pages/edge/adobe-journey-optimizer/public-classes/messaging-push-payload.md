@@ -90,6 +90,9 @@ public String getActionUri()
 
 // Returns a list of ActionButtons. More information about the ActionButtons class definition can be found in the ActionButtons section below.
 public List<ActionButton> getActionButtons()
+
+// Adds all key-value pairs in data to the extras of the provided intent.
+public void putDataInExtras(final Intent intent)
 ```
 
 ### Internal classes and enums

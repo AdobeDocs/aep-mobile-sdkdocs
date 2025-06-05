@@ -8,7 +8,7 @@ keywords:
 
 # iOS 17 Privacy Manifest Requirements
 
-Starting on May 1, 2024, Apple will require developers to implement new privacy features to receive approval for apps submitted to the App Store. Some features are already in use, like Privacy Nutrition Labels. These labels help end-users understand the data collected by apps as well as third-party SDKs like those provided by Adobe. To facilitate this, Apple is requiring that app developers provide details in the Privacy Manifest regarding the data their apps (and included third-party SDKs) track.
+Starting on May 1, 2024, Apple will require developers to implement new privacy features to receive approval for apps submitted to the App Store. Some features are already in use, like Privacy Nutrition Labels. These labels help end-users understand the data collected by apps as well as third-party SDKs like those provided by Adobe. To facilitate this, Apple is requiring that app developers provide details in the Privacy Manifest (PrivacyInfo.xcprivacy file) regarding the data their apps (and included third-party SDKs) track.
 
 ## Required Reasons API
 
@@ -18,24 +18,20 @@ To address concerns regarding fingerprinting, Apple will require developers to d
 
 tvOS does not allow local storage for applications, so until further notice, the Mobile SDK will continue to store User Identifiers and Lifecycle Data in UserDefaults.
 
-<InlineAlert variant="info" slots="text"/>
-
-Some customers may choose not to update to version 5 of the Mobile SDK and may still want to submit applications to the App Store. Customers who choose to do this should update their application to include version 4.2.1 or greater of the iOS Mobile SDK Core extension and include their own Privacy Manifest in the application that includes reason 1C8F.1 as the reason for accessing User Defaults.
-
-## Specific Values to be included in the Privacy Manifest
+## Specific Values to be included in the app's Privacy Manifest
 
 Mobile SDK customers are responsible for updating and maintaining their app’s Privacy Manifest. Which extensions customers use, and the specific actions performed using the Mobile SDK, may affect what customers should include in the Privacy Manifest Data Use section. The below chart is intended to help guide customers’ understanding of how Mobile SDK data can be used:
 
 | **Mobile SDK Extension** | **Data** | [**Linked to User**](https://developer.apple.com/app-store/app-privacy-details/#linked-data) | [**Used For Tracking**](https://developer.apple.com/app-store/app-privacy-details/#user-tracking) | **Reason for Collection** |
 | --- | --- | --- | --- | --- |
-| <ul><li>Analytics</li><li>Core</li><li>Identity</li><li>Edge Identity</li></ul> | User ID | **No –** when the customer is not capturing authenticated identities in the Identity Map<br/><br/>**Yes** **–** when the customer is capturing authenticated identities in the Identity Map | **No –** when the customer is not capturing authenticated identities in the Identity Map<br/><br/>**Yes** **–** when the customer is capturing authenticated identities in the Identity Map | <ul><li>Developer’s Advertising or Marketing</li></ul> |
-| <ul><li>Analytics</li><li>Edge</li><li>Edge Bridge</li><li>Edge Media</li><li>Media Analytics</li></ul> | Product interaction | **No –** when the customer is not capturing authenticated identities in the Identity Map<br/><br/>**Yes** **–** when the customer is capturing authenticated identities in the Identity Map | **No –** when the customer is not capturing authenticated identities in the Identity Map<br/><br/>**Yes** **–** when the customer is capturing authenticated identities in the Identity Map | <ul><li>Developer’s Advertising or Marketing</li><li>Analytics</li><li>Product Personalization</li></ul> |
-| <ul><li>Lifecycle</li></ul> | Other Data Types | **No –** when the customer is not capturing authenticated identities in the Identity Map<br/><br/>**Yes** **–** when the customer is capturing authenticated identities in the Identity Map | **No –** when the customer is not capturing authenticated identities in the Identity Map<br/><br/>**Yes** **–** when the customer is capturing authenticated identities in the Identity Map | <ul><li>Developer’s Advertising or Marketing</li><li>Analytics</li><li>Product Personalization</li></ul> |
-| <ul><li>Messaging</li><li>Optimize</li></ul> | Other Data Types | **No –** when the customer is not capturing authenticated identities in the Identity Map<br/><br/>**Yes** **–** when the customer is capturing authenticated identities in the Identity Map | **No –** when the customer is not capturing authenticated identities in the Identity Map<br/><br/>**Yes** **–** when the customer is capturing authenticated identities in the Identity Map | <ul><li>Developer’s Advertising or Marketing</li><li>Product Personalization</li></ul> |
+| <ul><li>Analytics</li><li>Core</li><li>Identity</li><li>Edge Identity</li></ul> | User ID | **No –** when the customer is not capturing authenticated identities<br/><br/>**Yes** **–** when the customer is capturing authenticated identities | **No –** when the customer is not capturing authenticated identities<br/><br/>**Yes** **–** when the customer is capturing authenticated identities | <ul><li>Developer’s Advertising or Marketing</li></ul> |
+| <ul><li>Analytics</li><li>Edge</li><li>Edge Bridge</li><li>Edge Media</li><li>Media Analytics</li></ul> | Product interaction | **No –** when the customer is not capturing authenticated identities<br/><br/>**Yes** **–** when the customer is capturing authenticated identities | **No –** when the customer is not capturing authenticated identities<br/><br/>**Yes** **–** when the customer is capturing authenticated identities | <ul><li>Developer’s Advertising or Marketing</li><li>Analytics</li><li>Product Personalization</li></ul> |
+| <ul><li>Lifecycle</li></ul> | Other Data Types | **No –** when the customer is not capturing authenticated identities<br/><br/>**Yes** **–** when the customer is capturing authenticated identities | **No –** when the customer is not capturing authenticated identities<br/><br/>**Yes** **–** when the customer is capturing authenticated identities | <ul><li>Developer’s Advertising or Marketing</li><li>Analytics</li><li>Product Personalization</li></ul> |
+| <ul><li>Messaging</li><li>Optimize</li></ul> | Other Data Types | **No –** when the customer is not capturing authenticated identities<br/><br/>**Yes** **–** when the customer is capturing authenticated identities | **No –** when the customer is not capturing authenticated identities<br/><br/>**Yes** **–** when the customer is capturing authenticated identities | <ul><li>Developer’s Advertising or Marketing</li><li>Product Personalization</li></ul> |
 
 ## Signed XCFrameworks
 
-Adobe is working on providing signed XCFrameworks that customers can include in their application. More information on dates will be provided when available.
+Starting May 7th, 2024, our iOS releases will include signed XCFrameworks. Additionally, we've updated all our 5.0.0 releases with signed XCFrameworks.
 
 ## Tracking Domains
 

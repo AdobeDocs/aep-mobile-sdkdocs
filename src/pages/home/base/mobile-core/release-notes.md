@@ -8,6 +8,291 @@ keywords:
 
 # Release notes
 
+## May 12, 2025
+
+### Android Core 3.4.0
+
+* Added support of "Max width" and "Fit to content" for in-app messages via`InAppMessageSettings`.
+
+### iOS Core 5.5.0
+
+* Fixed issue where `MobileCore.initialize` registered multiple Analytics extensions.
+* Removed call to `CTCarrier` API for iOS 16+ as Apple deprecated it without replacement. Calling `SystemInfoService.getMobileCarrierName` on iOS 16 and above will now always return nil.
+* Added support for "Fit to content" in `FullscreenMessage`.
+* Added support of "Max width" and "Fit to content" for in-app messages via `MessageSettings`.
+
+## March 28, 2025
+
+### React Native Core 7.0.0
+
+* Added `MobileCore.initializeWithAppId` and `MobileCore.initialize` APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
+* Updated to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+
+## March 4, 2025
+
+### Flutter Core 5.0.0
+
+* Add `MobileCore.initializeWithAppId` and `MobileCore.initialize` APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
+* Update to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Add Error handling for NSError.
+* Update tests to handle the deprecation warning for `setMockMethodCallHandler`.
+
+## February 25, 2025
+
+### Android Core 3.3.1
+
+* Allow disabling callback timeout when using `MobileCore.dispatch` API.
+* Restrict override `FloatingButton` presentable with app theme.
+
+## February 14, 2025
+
+### iOS Core 5.4.0
+
+* Added new [`MobileCore.initialize`](../mobile-core/api-reference.md#initialize) APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
+* Fixed issue where in-app message scrolling was disabled when gestures were nil or empty.
+* Allow disabling callback timeout when using `MobileCore.dispatch` API.
+
+## February 10, 2025
+
+### Android Signal 3.0.1
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+### Android Lifecycle 3.0.2
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+### Android Identity 3.0.2
+
+* Added support for the new MobileCore.initialize API introduced in Core.
+
+### Android Core 3.3.0
+
+* Added new [`MobileCore.initialize`](../mobile-core/api-reference.md#initialize) APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
+* Fixed an issue where certain HTTP request timeouts were incorrectly configured.
+
+## January 16, 2025
+
+### iOS Core 5.3.2
+
+* Fixed an issue where in-app message was not reframed in split screen mode.
+
+## October 16, 2024
+
+### iOS Core 5.3.1
+
+* Updated `responseHttpHeader(forKey:)` in `HttpConnection` struct to ensure case-insensitive header field lookups.
+
+## October 1, 2024
+
+### Android Core 3.2.0
+
+* Added new constants to `AEPError`.
+* Added the `SuppressedByAppDeveloper` constant to indicate that the in-app message was not displayed because it was rejected by the app developer via the `PresentationDelegate`.
+
+## September 27, 2024
+
+### iOS Core 5.3.0
+
+* Added an `onError` method to the `FullscreenMessageDelegate` to notify of the reason when an in-app message fails to display.
+
+## September 3, 2024
+
+### Android Core 3.1.2
+
+* Added screen reader support for in-app messages.
+
+## July 19, 2024
+
+### Android Core 3.1.1
+
+* Fixed an issue causing in-app messages to cast a shadow.
+* Fixed an issue causing in-app messages to be slightly transparent by default.
+* Improved in-app message handling in immersive mode.
+
+## June 24, 2024
+
+### Android Core 2.6.4
+
+* Fixed strict mode violations that happened during SDK initialization.
+* Added checks to prevent SDK initialization when the device is in direct boot mode.
+
+## June 21, 2024
+
+### iOS Core 5.2.0
+
+* Added a new EventSource constant (`com.adobe.eventSource.debug`) and utility methods.
+* Added support for in-app message HTML content to control its background transparency.
+* Fixed data races in EventHub and Services and implemented additional stability fixes.
+
+## June 20, 2024
+
+### Android Core 3.1.0
+
+* Added support for in-app message HTML content to control its background transparency.
+* Enhanced Presentable re-attachment workflow for new Activity launch scenarios.
+* Added a new EventSource constant (`com.adobe.eventSource.debug`) and utility methods.
+* Added checks to prevent SDK initialization when device is in direct boot mode.
+
+## June 6, 2024
+
+### React Native Core 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+## June 4, 2024
+
+### Android Core 3.0.2
+
+* Fixed strict mode violations that happened during SDK initialization.
+
+## May 23, 2024
+
+### Android Lifecycle 3.0.1
+
+* Lifecycle extension now computes the `xdm:isUpgrade` metric in the `application.launch` event when either versionName or versionCode changes.
+
+### Android Identity 3.0.1
+
+* Fixed an edge case where `a.push.optin=false` event may be sent to Analytics even when `MobileCore.setPushIdentifier()` API is not used.
+
+### Android Core 3.0.1
+
+* Fixed an issue with scrollability in in-app messages with overflowing content.
+* Fixed an issue where the PresentationDelegate was not notified of all URLs opened by an in-app message.
+* Fixed an issue where UI components were not adapting to orientation changes when the activity hosting the composable restricts configuration change.
+* Enhanced error handling in the collectLaunchInfo API to catch exceptions when retrieving bundled data from an Activity.
+* Simplified coroutine scope management in UI services.
+
+## May 22, 2024
+
+### iOS Core 5.1.0
+
+* Added a new constant and a utility method to AEPServices to detect if `URLError` is recoverable.
+* Lifecycle extension now computes the `xdm:isUpgrade` metric in the `application.launch` event when either CFBundleShortVersionString or CFBundleVersion changes.
+* Fixed an issue in the Signal and Identity extensions that caused the hit processor to drop queued hits when the device's network was offline.
+* Fixed an edge case where `a.push.optin=false` event may be sent to Analytics even when `MobileCore.setPushIdentifier()` API is not used.
+* Fixed data races in ExtensionContainer, ApplicationSystemInfoService, DiskCacheService, and FileSystemNamedCollection.
+
+## May 20, 2024
+
+### iOS Core 4.2.4
+
+* Fixed a race condition when accessing sharedStateName inside ExtensionContainer.
+
+## May 13, 2024
+
+### Flutter Core 4.0.2
+
+* Update environment dependencies in pubspec.
+
+### Android Core 2.6.3
+
+* Enhanced error handling in the `collectLaunchInfo` API to catch exceptions when retrieving bundled data from an Activity.
+
+## April 24, 2024
+
+### React Native Core 6.0.1
+
+* Added namespace support to the Android module.
+
+## April 23, 2024
+
+### Flutter Core 4.0.1
+
+* Added namespace support to the Android module.
+
+## April 16, 2024
+
+### Flutter Core 4.x and compatible plugins
+
+A new major version of the [Adobe Experience Platform Core Flutter Plugin](https://github.com/adobe/aepsdk-react-native/tree/main/packages/core) has been released along with updates to other plugins. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs, which include the `privacy manifest`.
+* Updated `MobileCore.dispatchEventWithResponseCallback` API with a timeout parameter.
+
+Note that all these plugins must be updated together.
+
+* flutter_aepcore@4.0.0
+* flutter_aepuserprofile:4.0.0
+* flutter_aepassurance:4.0.0
+* flutter_aepedge:4.0.0
+* flutter_aepedgeidentity:4.0.0
+* flutter-aepedgeconsent:4.0.0
+* flutter-aepedgebridge:4.0.0
+* flutter-aepmessaging:4.0.0
+
+To learn how Apple's privacy related announcements made in WWDC of 2023 affect the Mobile SDK, please read the guide on [iOS privacy manifest requirements](https://developer.adobe.com/client-sdks/resources/privacy-manifest).
+
+## April 12, 2024
+
+### React Native Core 6.x and compatible libraries
+
+A new major version of the [Adobe Experience Platform Core React Native library](https://github.com/adobe/aepsdk-react-native/tree/main/packages/core) has been released along with updates to other libraries. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs, which include the `privacy manifest`.
+* Deprecated `MobileCore.log`API to align with the native platforms.
+* Updated `MobileCore.dispatchEventWithResponseCallback` API with a timeout parameter.
+
+Note that all these libraries must be updated together.
+
+* @adobe/react-native-aepcore:6.0.0
+* @adobe/react-native-aepuserprofile:6.0.0
+* @adobe/react-native-aepedge:6.0.0
+* @adobe/react-native-aeedgeidentity:6.0.0
+* @adobe/react-native-aepedgeconsent:6.0.0
+* @adobe/react-native-aepedgebridge:6.0.0
+* @adobe/react-native-aepmessaging:6.0.0
+* @adobe/react-native-aepassurance:6.0.0
+* @adobe/react-native-aepoptimize:6.0.0
+* @adobe/react-native-aepplaces:6.0.0
+* @adobe/react-native-aeptarget:6.0.0
+* @adobe/react-native-aepcampaignclassic:6.0.0
+
+To learn how Apple's privacy related announcements made in WWDC of 2023 affect the Mobile SDK, please read the guide on [iOS privacy manifest requirements](https://developer.adobe.com/client-sdks/resources/privacy-manifest).
+
+## April 1, 2024
+
+### Android Signal 3.0.0
+
+Major version update for [Signal](./signal/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* The SDK is now compatible with Kotlin 1.8 and higher.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Added an enhancement to prevent network retries when the device's network is offline.
+
+### Android Lifecycle 3.0.0
+
+Major version update for [Lifecycle](./lifecycle/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+
+### Android Identity 3.0.0
+
+Major version update for [Identity](./identity/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Added an enhancement to prevent network retries when the device's network is offline.
+
+### Android Core 3.0.0
+
+Major version update of Adobe Experience Platform Core Android SDK is live!
+
+Please note that the current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* The SDK is now compatible with Kotlin 1.8 and higher.
+* Migrated UI service to use Jetpack Compose.
+* Removed deprecated `MobileCore.registerExtension(...)` and `MobileCore.start()` APIs. Use the `MobileCore.registerExtensions(...)` API for registering extensions and initializing the SDK instead.
+* Removed `MobileCore.setMessagingDelegate`, `MobileCore.getMessagingDelegate` APIs which were used to control the display of in-app messages. Migrate to `com.adobe.marketing.mobile.services.ui.PresentationDelegate` and use `ServiceProvider.getUIService().setPresentationDelegate` API instead.
+* Removed other APIs related to extension development which were deprecated in 2.0.0.
+* Added an enhancement to prevent network retries when the device's network is offline.
+
 ## March 19, 2024
 
 ### iOS Core 5.0.0

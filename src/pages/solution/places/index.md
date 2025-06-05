@@ -7,14 +7,13 @@ keywords:
 ---
 
 import Tabs from './tabs/index.md'
+import InitializeSDK from '/src/pages/resources/initialize.md'
 
 # Adobe Experience Platform Location Service
 
-Adobe Experience Platform Location Service provides an SDK extension which allows you to act based on the location of your users. This extension is the interface to the [Location Service Web Services APIs](https://experienceleague.adobe.com/docs/places/using/web-service-api/places-web-services.html).
+Places is the Adobe Experience Platform Mobile SDK extension that enables actions based on user location. It serves as the interface to the [Location Service Web Services APIs](https://experienceleague.adobe.com/docs/places/using/web-service-api/places-web-services.html).  
 
-The SDK extension listens for events that contain GPS coordinates and geofence region events, and dispatches new events that are processed by the Rules Engine. The SDK extension also retrieves and delivers a list of the nearest POI for the app data that retrieves from the APIs. The regions returned by the APIs are stored in cache and persistence, which allows limited offline processing.
-
-`Places` is the mobile SDK supporting the Location Service.
+Places listens for events that contain GPS coordinates and geofence region events, then dispatches new events processed by the Rules Engine. It retrieves and delivers a list of the nearest points of interest (POI) based on app data obtained from the APIs. The regions returned by the APIs are stored in cache and persistence, allowing limited offline processing.  
 
 ## Configure the Places extension in Data Collection UI
 
@@ -26,39 +25,48 @@ The SDK extension listens for events that contain GPS coordinates and geofence r
 
 ![Places extension configuration](./assets/index/config.png)
 
-## Add the AEP Places extension to your app
+## Add the Places extension to your app
 
-### Download and import the Places extension
+### Include Places extension as an app dependency
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+Add the Mobile Core and Places extensions to your project using the app's Gradle file.
 
-Android
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-<Tabs query="platform=android&task=download"/>
+Kotlin<br/>(Android)
 
-iOS
+<Tabs query="platform=android-kotlin&task=add"/>
 
-<Tabs query="platform=ios&task=download"/>
+Groovy<br/>(Android)
 
-### Register the Places extension with Mobile Core
+<Tabs query="platform=android-groovy&task=add"/>
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+CocoaPods<br/>(iOS)
 
-Android
+<Tabs query="platform=ios-pods&task=add"/>
 
-<Tabs query="platform=android&task=register"/>
+### Initialize Adobe Experience Platform SDK with Places Extension
 
-iOS
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
 
-<Tabs query="platform=ios&task=register"/>
+Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
+
+<InitializeSDK query="componentClass=TabsBlock"/>
+
+## Configuration keys
+
+To update SDK configuration programmatically, use the following information to modify Places configuration values. For additional details, refer to the [Configuration API reference](/src/pages/home/base/mobile-core/configuration/api-reference.md).  
+
+| Key | Required | Description | Data Type |
+| :--- | :--- | :--- | :--- |
+| `places.endpoint` | Yes | Defines the endpoint used by the Places extension to retrieve POI data. The default value is `"query.places.adobe.com"`. | String |
+| `places.libraries` | Yes | Defines the Places libraries that supply POI data. The default value is configured through the Data Collection tags mobile property settings for the Places extension. Example format: `[{"id": "123e4567-e89b-12d3-a456-426614174000"}]` | Array of objects |
+| `places.membershipttl` | No | Specifies the duration, in seconds, that POI states remain valid. The default value is one hour (`3600`). | Double |
 
 ## Additional Location Service resources
 
-For more information about implementing and using Adobe Experience Platform Location Service, please see the following documentation links:
+For more information about implementing and using Adobe Experience Platform Location Service, refer to the following documentation links:
 
-* [Release notes](https://experienceleague.adobe.com/docs/places/using/release-notes.html)
 * [Overview](https://experienceleague.adobe.com/docs/places/using/home.html)
-* [Places SDK implementation](https://experienceleague.adobe.com/docs/places/using/places-ext-aep-sdks/places-extension/places-extension.html)
-* [Cordova Places SDK GitHub readme](https://github.com/adobe/cordova-acpplaces/blob/master/README.md)
-* [React Native Places SDK GitHub readme](https://github.com/adobe/react-native-acpplaces/blob/master/README.md)
-* [Xamarin Places SDK GitHub readme](https://github.com/adobe/xamarin-acpplaces/blob/master/README.md)
+* [Places SDK implementation](https://experienceleague.adobe.com/en/docs/platform-learn/implement-mobile-sdk/app-implementation/places)
+* [React Native Places SDK](https://github.com/adobe/aepsdk-react-native/tree/main/packages/places)

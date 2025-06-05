@@ -9,6 +9,36 @@ keywords:
 
 # Release notes
 
+## February 10, 2025
+
+### Android Media 3.1.2
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+## January 31, 2025
+
+### Android Media 3.1.1
+
+* Fixed database access-related resource leaks.
+
+## May 31, 2024
+
+### iOS Media 5.0.1
+
+* Fixed an issue in Media hit processor and now it retries hits on recoverable URLErrors shared by Mobile Core.
+
+## April 2, 2024
+
+### Android Media 3.1.0
+
+Version update to 3.1.0 for [Adobe Analytics - Media Analytics workflows](./index.md) Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Added an enhancement to prevent network retries when the device's network is offline and improved logging.
+
+Please note that the version 3.0.0 of the Adobe Analytics - Media Analytics extension is compatible with Mobile Core 2.x. The increment to 3.1.0 was preferred for this release in order to synchronize all extensions to same major version.
+
 ## March 20, 2024
 
 ### iOS Media 5.0.0

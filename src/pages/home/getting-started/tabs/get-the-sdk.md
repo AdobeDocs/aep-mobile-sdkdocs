@@ -4,11 +4,11 @@ noIndex: true
 
 <Variant platform="android" task="get" repeat="1"/>
 
-Latest version of the Adobe Experience Platform SDKs for Android supports Android 4.4 (API 19) or later.
+Latest version of the Adobe Experience Platform SDKs for Android supports Android 5.0 (API 21) or later.
 
 <Variant platform="ios" task="get" repeat="2"/>
 
-Adobe Experience Platform SDKs for iOS support **iOS 11 or later**; **requires** Swift 5.1 or newer; **and** Xcode 14.1 or newer.
+Adobe Experience Platform SDKs for iOS support **iOS 12 or later**; **requires** Swift 5.1 or newer; **and** Xcode 15.0 or newer.
 
 In order to support the new Apple M1 architecture while maintaining support for existing Intel architecture, the Adobe Experience Platform SDKs are now distributed using XCFrameworks. Please see the [current SDK versions](../current-sdk-versions.md) for more information on the latest extension versions.
 
@@ -41,7 +41,7 @@ For the latest Flutter installation instructions, see the package [install tab](
 Add the dependencies to `build.gradle` for each extension.
 
 ```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:2.+')
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
 implementation 'com.adobe.marketing.mobile:userprofile'
 implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:identity'
@@ -67,15 +67,15 @@ Add the dependencies to your `Podfile` for each extension.
 
 ```pod
 use_frameworks!
-pod 'AEPEdgeConsent', '~> 4.0'
-pod 'AEPAssurance', '~> 4.0'
-pod 'AEPEdgeIdentity', '~> 4.0'
-pod 'AEPEdge', '~> 4.0'
-pod 'AEPUserProfile', '~> 4.0'
-pod 'AEPCore', '~> 4.0'
-pod 'AEPIdentity', '~> 4.0'
-pod 'AEPSignal', '~>4.0'
-pod 'AEPLifecycle', '~>4.0'
+pod 'AEPEdgeConsent', '~> 5.0'
+pod 'AEPAssurance', '~> 5.0'
+pod 'AEPEdgeIdentity', '~> 5.0'
+pod 'AEPEdge', '~> 5.0'
+pod 'AEPUserProfile', '~> 5.0'
+pod 'AEPCore', '~> 5.0'
+pod 'AEPIdentity', '~> 5.0'
+pod 'AEPSignal', '~> 5.0'
+pod 'AEPLifecycle', '~> 5.0'
 ```
 
 If Cocoapods cannot not find the dependencies, you may need to run this command:
@@ -90,11 +90,7 @@ Save the `Podfile` and run install:
 pod install
 ```
 
-<Variant platform="android" task="add-initialization" repeat="5"/>
-
-After you register the extensions, call the `start` API in Mobile Core to initialize the SDK as shown below. This step is required to boot up the SDK for event processing. The following code snippet is provided as a sample reference.
-
-#### Java
+<Variant platform="android-java" task="add-initialization" repeat="1"/>
 
 ```java
 import com.adobe.marketing.mobile.AdobeCallback;
@@ -115,13 +111,11 @@ import java.util.List;
 import android.app.Application;
 ...
 public class MainApp extends Application {
-  ...
   @Override
-  public void on Create(){
+  public void onCreate(){
     super.onCreate();
     MobileCore.setApplication(this);
     MobileCore.setLogLevel(LoggingMode.DEBUG);
-    ...
     List<Class<? extends Extension>> extensions = Arrays.asList(
       Consent.EXTENSION,
       Assurance.EXTENSION,
@@ -143,64 +137,48 @@ public class MainApp extends Application {
 }
 ```
 
-#### Java (Direct Boot enabled)
+<Variant platform="android-kotlin" task="add-initialization" repeat="1"/>
 
-```java
-import com.adobe.marketing.mobile.AdobeCallback;
-import com.adobe.marketing.mobile.Assurance;
-import com.adobe.marketing.mobile.Edge;
-import com.adobe.marketing.mobile.Extension;
-import com.adobe.marketing.mobile.Identity;
-import com.adobe.marketing.mobile.Lifecycle;
-import com.adobe.marketing.mobile.LoggingMode;
-import com.adobe.marketing.mobile.MobileCore;
-import com.adobe.marketing.mobile.Signal;
-import com.adobe.marketing.mobile.UserProfile;
-import com.adobe.marketing.mobile.edge.consent.Consent;
-import com.adobe.marketing.mobile.edge.identity.Identity;
-import java.util.Arrays;
-import java.util.List;
+```kotlin
+import com.adobe.marketing.mobile.AdobeCallback
+import com.adobe.marketing.mobile.Assurance
+import com.adobe.marketing.mobile.Edge
+import com.adobe.marketing.mobile.Extension
+import com.adobe.marketing.mobile.Identity
+import com.adobe.marketing.mobile.Lifecycle
+import com.adobe.marketing.mobile.LoggingMode
+import com.adobe.marketing.mobile.MobileCore
+import com.adobe.marketing.mobile.Signal
+import com.adobe.marketing.mobile.UserProfile
+import com.adobe.marketing.mobile.edge.consent.Consent
+import com.adobe.marketing.mobile.edge.identity.Identity as EdgeIdentity
 ...
-import android.app.Application;
-import androidx.core.os.UserManagerCompat; // Access features in android UserManager in backwards compatible manner 
+import android.app.Application
 ...
 
-public class MainApp extends Application {
-  ...
-  @Override
-  public void on Create(){
-    super.onCreate();
-    if(UserManagerCompat.isUserUnlocked(this.getApplicationContext())) {
-      MobileCore.setApplication(this);
-      MobileCore.setLogLevel(LoggingMode.DEBUG);
-      ...
-      List<Class<? extends Extension>> extensions = Arrays.asList(
-        Consent.EXTENSION,
-        Assurance.EXTENSION,
-        com.adobe.marketing.mobile.edge.identity.Identity.EXTENSION,
-        com.adobe.marketing.mobile.Identity.EXTENSION,
-        Edge.EXTENSION,
-        UserProfile.EXTENSION,
-        Lifecycle.EXTENSION,
-        Signal.EXTENSION
-      );
-
-      MobileCore.registerExtensions(extensions, new AdobeCallback () {
-          @Override
-          public void call(Object o) {
-              MobileCore.configureWithAppID("<your_environment_file_id>");
-          }
-      });
-    } 
+class MainApp : Application() {
+  override fun onCreate() {
+    super.onCreate()
+    MobileCore.setApplication(this)
+    MobileCore.setLogLevel(LoggingMode.DEBUG)
+    val extensions: List<Class<out Extension>> = listOf(
+      Consent.EXTENSION,
+      Assurance.EXTENSION,
+      EdgeIdentity.EXTENSION,
+      Identity.EXTENSION,
+      Edge.EXTENSION,
+      UserProfile.EXTENSION,
+      Lifecycle.EXTENSION,
+      Signal.EXTENSION
+    )
+    MobileCore.registerExtensions(extensions) { 
+      MobileCore.configureWithAppID("<your_environment_file_id>")
+    }
   }
 }
 ```
 
-<Variant platform="ios" task="add-initialization" repeat="5"/>
-
-For iOS Swift libraries, registration is changed to a single API call (as shown in the snippets below). Calling the`MobileCore.start` API is no longer required.
-
-#### Swift
+<Variant platform="ios-swift" task="add-initialization" repeat="1"/>
 
 ```swift
 // AppDelegate.swift
@@ -215,12 +193,10 @@ import AEPLifecycle
 import AEPSignal
 import AEPServices
 
-
 final class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
     MobileCore.setLogLevel(.debug)
     let appState = application.applicationState
-    ...
     let extensions = [
                   Consent.self,
                   Assurance.self,
@@ -242,7 +218,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
 }
 ```
 
-#### Objective-C
+<Variant platform="ios-objc" task="add-initialization" repeat="1"/>
 
 ```objectivec
 // AppDelegate.m
@@ -261,7 +237,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
 @implementation AppDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   [AEPMobileCore setLogLevel: AEPLogLevelDebug];
-  ...
+  const UIApplicationState appState = application.applicationState;
   NSArray *extensionsToRegister = @[
                                 AEPMobileEdgeConsent.class,
                                 AEPMobileAssurance.class,
@@ -273,7 +249,10 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
                                 AEPMobileSignal.class
                               ];
   [AEPMobileCore registerExtensions:extensionsToRegister completion:^{
-      [AEPMobileCore lifecycleStart:@{@"contextDataKey": @"contextDataVal"}];
+      // only start lifecycle if the application is not in the background
+      if (appState != UIApplicationStateBackground) {
+          [AEPMobileCore lifecycleStart:@{@"contextDataKey": @"contextDataVal"}];
+      }
   }];
   [AEPMobileCore configureWithAppId: @"<your_environment_file_id>"];
   ...
@@ -335,7 +314,7 @@ import android.app.Application;
 public class MainApplication extends Application implements ReactApplication {
   ...
   @Override
-  public void on Create(){
+  public void onCreate(){
     super.onCreate();
     ...
     MobileCore.setApplication(this);

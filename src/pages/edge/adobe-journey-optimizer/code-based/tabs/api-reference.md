@@ -2,12 +2,7 @@
 noIndex: true
 ---
 
-<Variant platform="android" api="get-propositions-for-surfaces" repeat="1"/>
-
-### Coming soon
-
-<!-- 
-<Variant platform="android" api="get-propositions-for-surfaces" repeat="6"/>
+<Variant platform="android" api="get-propositions-for-surfaces" repeat="9"/>
 
 #### Java
 
@@ -20,7 +15,31 @@ public static void getPropositionsForSurfaces(@NonNull final List<Surface> surfa
 * _surfaces_ is a list of surfaces for which propositions are requested.
 * _callback_ `call` method is invoked with propositions map of type `Map<Surface, List<Proposition>>`. If the callback is an instance of [AdobeCallbackWithError](../../../../home/base/mobile-core/api-reference.md#adobecallbackwitherror), and if the operation times out or an error occurs in retrieving propositions, the `fail` method is invoked with the appropriate [AdobeError](../../../../home/base/mobile-core/api-reference.md#adobeerror).
 
-**Syntax**
+**Example**
+
+#### Kotlin
+
+```kotlin
+val surface1 = Surface("myActivity#button")
+val surface2 = Surface("myActivityAttributes")
+val surfaces = listOf(surface1, surface2)
+
+Messaging.getPropositionsForSurfaces(surfaces) {
+  it?.let { propositionsMap ->
+    if (propositionsMap.isNotEmpty()) {
+      // get the propositions for the given surfaces
+      propositionsMap[surface1]?.let {
+        // read surface1 propositions
+      }
+      propositionsMap[surface2]?.let {
+        // read surface2 propositions
+      }
+    }
+  }
+}
+```
+
+#### Java
 
 ```java
 final Surface surface1 = new Surface("myActivity#button");
@@ -52,7 +71,6 @@ Messaging.getPropositionsForSurfaces(surfaces, new AdobeCallbackWithError<Map<Su
     }
 });
 ```
--->
 
 <Variant platform="ios" api="get-propositions-for-surfaces" repeat="12"/>
 
@@ -67,7 +85,7 @@ static func getPropositionsForSurfaces(_ surfacePaths: [Surface], _ completion: 
 * _surfaces_ is an array of surfaces for which propositions are requested.
 * _completion_ is invoked with propositions dictionary of type `[Surface: [Proposition]]`. An `Error` is returned if SDK fails to retrieve the propositions.
 
-**Syntax**
+**Example**
 
 ```swift
 let surface1 = Surface(path: "myView#button")
@@ -107,7 +125,7 @@ Messaging.getPropositionsForSurfaces([surface1, surface2]) { propositionsDict, e
 * _surfaces_ is an array of surfaces for which propositions are requested.
 * _completion_ is invoked with propositions dictionary of type `NSDictionary<AEPSurface*, NSArray<AEPProposition*>*>`. An `NSError` is returned if SDK fails to retrieve the propositions.
 
-**Syntax**
+**Example**
 
 ```objc
 AEPSurface* surface1 = [[AEPSurface alloc] initWithPath: @"myView#button"];
@@ -128,12 +146,7 @@ AEPSurface* surface2 = [[AEPSurface alloc] initWithPath: @"myView#button"];
 }];
 ```
 
-<Variant platform="android" api="update-propositions-for-surfaces" repeat="1"/>
-
-### Coming soon
-
-<!--
-<Variant platform="android" api="update-propositions-for-surfaces" repeat="6"/>
+<Variant platform="android" api="update-propositions-for-surfaces" repeat="9"/>
 
 #### Java
 
@@ -145,7 +158,19 @@ public static void updatePropositionsForSurfaces(@NonNull final List<Surface> su
 
 * _surfaces_ is a list of surfaces for which propositions need updating.
 
-**Syntax**
+**Example**
+
+#### Kotlin
+
+```kotlin
+val surface1 = Surface("myActivity#button")
+val surface2 = Surface("myActivityAttributes")
+val surfaces = listOf(surface1, surface2)
+
+Messaging.updatePropositionsForSurfaces(surfaces)
+```
+
+#### Java
 
 ```java
 final Surface surface1 = new Surface("myActivity#button");
@@ -157,7 +182,6 @@ surfaces.add(surface2);
 
 Messaging.updatePropositionsForSurfaces(surfaces)
 ```
--->
 
 <Variant platform="ios" api="update-propositions-for-surfaces" repeat="12"/>
 
@@ -171,7 +195,7 @@ static func updatePropositionsForSurfaces(_ surfaces: [Surface])
 
 * _surfaces_ is an array of surfaces for which propositions need updating.
 
-**Syntax**
+**Example**
 
 ```swift
 let surface1 = Surface(path: "myView#button")
@@ -190,11 +214,116 @@ Messaging.updatePropositionsForSurfaces([surface1, surface2])
 
 * _surfaces_ is an array of surfaces for which propositions need updating.
 
-**Syntax**
+**Example**
 
 ```objc
 AEPSurface* surface1 = [[AEPSurface alloc] initWithPath: @"myView#button"];
 AEPSurface* surface2 = [[AEPSurface alloc] initWithPath: @"myView#button"];
 
 [AEPMobileMessaging updatePropositionsForSurfaces: @[surface1, surface2]]; 
+```
+
+<Variant platform="android" api="update-propositions-for-surfaces-with-completion-handler" repeat="9"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void updatePropositionsForSurfaces(@NonNull final List<Surface> surfaces, @Nullable final AdobeCallback<Boolean> callback)
+```
+
+* _surfaces_ is a list of surfaces for which propositions need updating.
+* _callback_ `call` method is invoked with `true` if a network response was returned and successfully processed, `false` otherwise
+
+**Example**
+
+#### Kotlin
+
+```kotlin
+val surface1 = Surface("myActivity#button")
+val surface2 = Surface("myActivityAttributes")
+val surfaces = listOf(surface1, surface2)
+
+Messaging.updatePropositionsForSurfaces(surfaces) { success ->
+    if (success) {
+        // handle success scenario
+    } else {
+        // handle error scenario
+    }
+}
+```
+
+#### Java
+
+```java
+final Surface surface1 = new Surface("myActivity#button");
+final Surface surface2 = new Surface("myActivityAttributes");
+
+final List<Surface> surfaces = new ArrayList<>();
+surfaces.add(surface1);
+surfaces.add(surface2);
+
+Messaging.updatePropositionsForSurfaces(surfaces, success -> {
+    if (success) {
+        // handle success scenario
+    } else {
+        // handle error scenario
+    }
+});
+```
+
+<Variant platform="ios" api="update-propositions-for-surfaces-with-completion-handler" repeat="12"/>
+
+#### Swift
+
+**Syntax**
+
+```swift
+static func updatePropositionsForSurfaces(_ surfaces: [Surface], _ completion: ((Bool) -> Void)? = nil)
+```
+
+* _surfaces_ is an array of surfaces for which propositions need updating.
+* _completion_ is invoked with `true` if a network response was returned and successfully processed, `false` otherwise
+
+**Example**
+
+```swift
+let surface1 = Surface(path: "myView#button")
+let surface2 = Surface(path: "myViewAttributes")
+
+Messaging.updatePropositionsForSurfaces([surface1, surface2]) { success in
+    if success {
+        // handle success scenario
+    } else {
+        // handle error scenario
+    }
+}
+```
+
+#### Objective-C
+
+**Syntax**
+
+```objc
++ (void) updatePropositionsForSurfaces: (NSArray<AEPSurface*>* _Nonnull) surfaces
+                            completion: (void (^)(BOOL)) completion;
+```
+
+* _surfaces_ is an array of surfaces for which propositions need updating.
+* _completion_ is invoked with `true` if a network response was returned and successfully processed, `false` otherwise
+
+**Example**
+
+```objc
+AEPSurface* surface1 = [[AEPSurface alloc] initWithPath: @"myView#button"];
+AEPSurface* surface2 = [[AEPSurface alloc] initWithPath: @"myViewAttributes"];
+
+[AEPMobileMessaging updatePropositionsForSurfaces:@[surface1, surface2] completion:^(BOOL success) {
+    if (success) {
+        // handle success scenario
+    } else {
+        // handle error scenario
+    }
+}];
 ```

@@ -8,6 +8,104 @@ keywords:
 
 # Release notes
 
+## March 28, 2025
+
+### React Native Edge 7.0.0
+
+* Updated to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+
+## March 4, 2025
+
+### Flutter Edge 5.0.0
+
+* Update to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Update tests to handle the deprecation warning for `setMockMethodCallHandler`.
+
+## February 25, 2025
+
+### Android Edge 3.0.2
+
+* Added support for recoverable error codes from Edge Network.
+
+## February 10, 2025
+
+### Android Edge 3.0.1
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+## October 16, 2024
+
+### iOS Edge 5.0.3
+
+* Adds 507 as recoverable error code and applies valid retry-after timeout values on next retry if provided on the response, otherwise applies default timeout.
+
+## June 6, 2024
+
+### React Native Edge 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+## May 28, 2024
+
+### iOS Edge 5.0.2
+
+* Fixed an issue in Edge hit processor and now it retries hits on recoverable URLErrors shared by Mobile Core.
+
+## May 13, 2024
+
+### Flutter Edge 4.1.0
+
+* Added support to customize datastream configurations on a per-event basis using the sendEvent API.
+* Update environment dependencies in pubspec.
+
+## May 2, 2024
+
+### iOS Edge 5.0.1
+
+* Edge requests now retrieve the configuration state at the time the requests are queued, instead of at the time the requests are sent.
+
+## April 24, 2024
+
+### React Native Edge 6.0.1
+
+* Added namespace support to the Android module.
+
+## April 23, 2024
+
+### Flutter Edge 4.0.1
+
+* Added namespace support to the Android module.
+
+## April 16, 2024
+
+### Flutter Edge 4.0.0
+
+Major version update for [Edge Network](https://github.com/adobe/aepsdk_flutter/tree/main/plugins/flutter_aepedge) for Adobe Experience Platform Flutter plugin compatible with Flutter Core 4.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+## April 12, 2024
+
+### React Native Edge 6.0.0
+
+Major version update for [Edge Network](https://github.com/adobe/aepsdk-react-native/tree/main/packages/edge) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+## April 2, 2024
+
+### Android Edge 3.0.0
+
+Major version update for [Edge Network](./index.md) Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+* Removed deprecated function `Formatters.dateToISO8601String()`, replaced by `TimeUtils.getISO8601UTCDateWithMilliseconds()` in MobileCore.
+* Removed deprecated function `Formatters.dateToShortDateString()`, replaced by `TimeUtils.getISO8601FullDate()` in MobileCore.
+* Added an enhancement to prevent network retries when the device's network is offline.
+
 ## March 19, 2024
 
 ### iOS Edge 5.0.0

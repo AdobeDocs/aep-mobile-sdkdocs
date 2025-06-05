@@ -17,6 +17,9 @@ yarn
 yarn dev
 ```
 
+> [!NOTE]
+> You may need to switch to Node.js version 20.11.1 for running the Yarn commands.
+
 For the documentation developer, please read these sections on how to:
 
 * [Arrange the structure content of your docs](https://github.com/adobe/aio-theme#content-structure)

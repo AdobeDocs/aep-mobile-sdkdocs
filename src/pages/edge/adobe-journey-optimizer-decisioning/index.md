@@ -7,6 +7,7 @@ keywords:
 ---
 
 import Tabs from './tabs/index.md'
+import InitializeSDK from '/src/pages/resources/initialize.md'
 
 # Adobe Journey Optimizer - Decisioning Extension
 
@@ -39,40 +40,43 @@ On [Experience Platform Data Collection](https://experience.adobe.com/#/data-col
 
 1. In your mobile property, navigate to **Extensions** in the left navigation panel and click on the **Catalog** tab.
 2. In the extensions Catalog, search or locate the **Adobe Journey Optimizer - Decisioning** extension, and click **Install**.
-3. Since an extension configuration is not necessary, click **Save**.
-4. Follow the publishing process to update SDK configuration. For more details, see the [publish the configuration guide](../../home/getting-started/create-a-mobile-property.md#publish-the-configuration).
+3. Optionally, specify a timeout value in seconds. The default value is 10 seconds.
+4. Click **Save**.
+5. Follow the publishing process to update SDK configuration. For more details, see the [publish the configuration guide](../../home/getting-started/create-a-mobile-property.md#publish-the-configuration).
 
 ![Adobe Journey Optimizer - Decisioning extension configuration](./assets/index/configuration.png)
 
-## Integrate Experience Platform Optimize SDK in your mobile application
+## Add the Adobe Journey Optimizer - Decisioning extension to your app
 
 <InlineAlert variant="warning" slots="text"/>
 
 For the AEPOptimize APIs to work properly, you need to integrate Mobile Core and Edge extensions in your mobile app. For more details see, documentation on [Mobile Core](../../home/base/mobile-core/index.md) and [Adobe Experience Platform Edge Network](../../edge/edge-network/index.md).
 
-### Install the Experience Platform Mobile SDK
+### Include the Optimize extension as an app dependency
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+Add MobileCore, Edge and Optimize extensions as dependencies to your project.
 
-Android
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-<Tabs query="platform=android&task=install"/>
+Kotlin<br/>(Android)
 
-iOS
+<Tabs query="platform=android-kotlin&task=add"/>
 
-<Tabs query="platform=ios&task=install"/>
+Groovy<br/>(Android)
 
-### Register the extensions with Mobile Core
+<Tabs query="platform=android-groovy&task=add"/>
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+CocoaPods<br/>(iOS)
 
-Android
+<Tabs query="platform=ios-pods&task=add"/>
 
-<Tabs query="platform=android&task=register"/>
+### Initialize Adobe Experience Platform SDK with Optimize Extension
 
-iOS
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
 
-<Tabs query="platform=ios&task=register"/>
+Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
+
+<InitializeSDK query="componentClass=TabsBlock"/>
 
 ## Adobe Journey Optimizer - Offer Decisioning
 
@@ -235,7 +239,7 @@ Set up the Analytics for Target (A4T) cross-solution integration by enabling the
 
 Once Analytics is listed as the reporting source for an activity on Target UI, based on server-side or client-side logging appropriate actions need to be taken in the customer mobile apps to register impressions, visits/visitors and possibly conversions with Adobe Analytics.
 
-When using server-side logging, [tracking methods](#proposition-tracking-using-direct-offer-class-methods) need to be implemented in the customer mobile apps for server-side data exchange to happen with Adobe Analytics. This is because Optimize mobile SDK operates in prefetch mode and display notifications are required to indicate scope content is rendered so Experience Edge should share relevant A4T payload with Adobe Analytics. In addition, content interactions need to be reported using click notifications and these may lead to additional A4T data exchange with Adobe Analytics.
+When using server-side logging, [tracking methods](#proposition-tracking-using-direct-offer-class-methods) need to be implemented in the customer mobile apps for server-side data exchange to happen with Adobe Analytics. This is because Optimize mobile SDK operates in prefetch mode and display notifications are required to indicate scope content is rendered so Experience Edge should share relevant A4T payloads with Adobe Analytics. In addition, content interactions need to be reported using click notifications and these may lead to additional A4T data exchange with Adobe Analytics.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -243,7 +247,7 @@ When using server-side logging, [tracking methods](#proposition-tracking-using-d
 
 ## Tracking
 
-### Proposition tracking using direct Offer class methods
+### Single offer interactions events tracking
 
 User interactions with the decision propositions can be tracked using the following public methods in the `Offer` class.
 
@@ -259,19 +263,65 @@ iOS
 
 Upon calling these `Offer` methods, an Experience Event is sent to the Edge network with the proposition interaction data for the given offer.
 
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
+
+Java<br/>(Android)
+
+<Tabs query="platform=android-java&task=send-event-offer"/>
+
+Kotlin<br/>(Android)
+
+<Tabs query="platform=android-kotlin&task=send-event-offer"/>
+
+Swift<br/>(iOS)
+
+<Tabs query="platform=ios-swift&task=send-event-offer"/>
+
+Objective-C<br/>(iOS)
+
+<Tabs query="platform=ios-objectivec&task=send-event-offer"/>
+
+### Multiple offers display interactions events tracking
+
+To track display interactions involving multiple offers from different propositions, you can now batch them into a single XDM payload and send a consolidated tracking event. This is particularly useful when multiple offers from various propositions are displayed together within a single activity or screen.
+
+<InlineAlert variant="info" slots="text"/>
+
+Currently, batching multiple offer interactions is supported only for display interaction events. Tap interactions must still be tracked individually.
+
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
-<Tabs query="platform=android&task=send-event-offer"/>
+<Tabs query="platform=android&task=offerutils"/>
 
 iOS
 
-<Tabs query="platform=ios&task=send-event-offer"/>
+<Tabs query="platform=ios&task=optimize"/>
 
-### Proposition tracking using Edge extension API
+Upon calling this `OfferUtils` | `Optimize` methods of android or iOS respectively, an Experience Event is sent to the Edge network with the display proposition interaction data for the given list of offers.
 
-For more advanced tracking use cases, additional public methods are available in the `Offer` and `Proposition`/`OptimizeProposition` classes. These methods can be used to generate XDM formatted data for `Experience Event - Proposition Interactions` and `Experience Event - Proposition Reference` field groups.
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
+
+Kotlin<br/>(Android)
+
+<Tabs query="platform=android-kotlin&task=proposition-tracking-batch"/>
+
+Java<br/>(Android)
+
+<Tabs query="platform=android-java&task=proposition-tracking-batch"/>
+
+Swift<br/>(iOS)
+
+<Tabs query="platform=ios-swift&task=proposition-tracking-batch"/>
+
+Objective-C<br/>(iOS)
+
+<Tabs query="platform=ios-objectivec&task=proposition-tracking-batch"/>
+
+### Single offer interactions events tracking using Edge extension API
+
+For more advanced tracking use cases, additional public methods are available in the `Offer` class. These methods can be used to generate XDM formatted data for `Experience Event - Proposition Interactions` field groups.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -285,15 +335,75 @@ iOS
 
 The Edge `sendEvent` API can then be used to send this tracking XDM data along with any additional XDM and freeform data to the Experience Edge network. Additionally, an override dataset can also be specified for tracking data. For more details, see [Edge - sendEvent API](../../edge/edge-network/api-reference.md#sendevent).
 
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
+
+Kotlin<br/>(Android)
+
+<Tabs query="platform=android-kotlin&task=send-event-edge"/>
+
+Java<br/>(Android)
+
+<Tabs query="platform=android-java&task=send-event-edge"/>
+
+Swift<br/>(iOS)
+
+<Tabs query="platform=ios-swift&task=send-event-edge"/>
+
+Objective-C<br/>(iOS)
+
+<Tabs query="platform=ios-objectivec&task=send-event-edge"/>
+
+### Multiple offer display interactions events tracking using Edge extension API
+
+Starting with Optimize SDK version 3.5.0 for Android and 5.5.0 for iOS, you can handle more advanced use cases by generating XDM data for multiple display propositions and send display interaction tracking events through the Edge Extension API. The `OfferUtils` class provides a public method that extends `List<Offer> | Optimize` to generate XDM formatted data for the `Experience Event - Proposition Interactions` field group for a list of offers.
+
+<InlineAlert variant="info" slots="text"/>
+
+Currently, generating XDM with batched multiple offer interactions is supported only for display interaction events. Generating XDM with batched offer tap interactions events must still be tracked individually.
+
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
-<Tabs query="platform=android&task=send-event-edge"/>
+<Tabs query="platform=android&task=multiple-display-propositions-tracking-edge"/>
 
 iOS
 
-<Tabs query="platform=ios&task=send-event-edge"/>
+<Tabs query="platform=ios&task=multiple-display-propositions-tracking-edge"/>
+
+The Edge `sendEvent` API can then be used to send this tracking XDM data along with any additional XDM and freeform data to the Experience Edge network. Additionally, an override dataset can also be specified for tracking data. For more details, see [Edge - sendEvent API](../../edge/edge-network/api-reference.md#sendevent).
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
+
+Kotlin<br/>(Android)
+
+<Tabs query="platform=android-kotlin&task=send-multiple-display-interaction-event-edge"/>
+
+Java<br/>(Android)
+
+<Tabs query="platform=android-java&task=send-multiple-display-interaction-event-edge"/>
+
+Swift<br/>(iOS)
+
+<Tabs query="platform=ios-swift&task=send-multiple-display-interaction-event-edge"/>
+
+Objective-C<br/>(iOS)
+
+<Tabs query="platform=ios-objectivec&task=send-multiple-display-interaction-event-edge"/>
+
+<InlineAlert variant="info" slots="text"/>
+
+Make sure that the size of the map generated by [generateDisplayInteractionXdm()](../../edge/adobe-journey-optimizer-decisioning/api-reference.md#offerutils--optimize) - whether called directly or through the [display()](../../edge/adobe-journey-optimizer-decisioning/api-reference.md#offerutils--optimize) methods - should not be greater than 64 KB. This size limit applies to both individual calls and batched display interactions. Use the below code to check the size in your test app before deploying to production.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Kotlin
+
+<Tabs query="platform=android&task=calculate-json-size"/>
+
+Swift
+
+<Tabs query="platform=ios&task=calculate-json-size"/>
 
 ## Configuration keys
 

@@ -8,6 +8,67 @@ keywords:
 
 # Release notes
 
+## May 19, 2025
+
+### React Native Places 7.0.1
+
+* Updated `com.google.android.gms:play-services-location` from 16.0.0 to 21.2.0
+* Added support for continuous native code generation in Expo
+
+## March 28, 2025
+
+### React Native Places 7.0.0
+
+* Updated to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+
+## February 10, 2025
+
+### Android Places 3.0.2
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+
+## January 14, 2025
+
+### React Native Places 6.0.3
+
+* Updated Places module name for compatibility with the new architecture.
+
+## August 19, 2024
+
+### Android Places 3.0.1
+
+* Removed unused `app_name` string resource to prevent conflicts with resources defined by the app.
+
+## June 6, 2024
+
+### React Native Places 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+## April 24, 2024
+
+### React Native Places 6.0.1
+
+* Added namespace support to the Android module.
+
+## April 12, 2024
+
+### React Native Places 6.0.0
+
+Major version update for [Places](https://github.com/adobe/aepsdk-react-native/tree/main/packages/places) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
+
+* Updated to use Experience Platform Android `3.x` SDKs.
+* Updated to use Experience Platform iOS `5.x` SDKs.
+
+## April 2, 2024
+
+### Android Places 3.0.0
+
+Major version update for [Places](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
+
 ## March 20, 2024
 
 ### iOS Places 5.0.0

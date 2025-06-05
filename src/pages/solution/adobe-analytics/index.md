@@ -7,6 +7,7 @@ keywords:
 ---
 
 import Tabs from './tabs/index.md'
+import InitializeSDK from '/src/pages/resources/initialize.md'
 
 # Adobe Analytics
 
@@ -100,31 +101,35 @@ The default value for this setting is 0, which means that hit batching is disabl
 
 #### Launch hit delay
 
-The number of seconds to wait before Analytics launch hits are sent from the SDK. Ensure that this setting is set at 5 seconds or greater when using acquisition functionality from the [Mobile Services](https://developer.adobe.com/client-sdks/previous-versions/documentation/adobe-analytics-mobile-services/) extension.
+The number of seconds to wait before Analytics launch hits are sent from the SDK.
 
-## Add Analytics to your application
+## Add the Analytics extension to your app
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Include Analytics extension as an app dependency
 
-Android
+Add MobileCore, Identity, and Analytics extensions as dependencies to your project.
 
-<Tabs query="platform=android&task=add"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-iOS
+Kotlin<br/>(Android)
 
-<Tabs query="platform=ios&task=add"/>
+<Tabs query="platform=android-kotlin&task=add"/>
 
-## Register Analytics with Mobile Core
+Groovy<br/>(Android)
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<Tabs query="platform=android-groovy&task=add"/>
 
-Android
+CocoaPods<br/>(iOS)
 
-<Tabs query="platform=android&task=register"/>
+<Tabs query="platform=ios-pods&task=add"/>
 
-iOS
+### Initialize Adobe Experience Platform SDK with Analytics Extension
 
-<Tabs query="platform=ios&task=register"/>
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
+
+Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
+
+<InitializeSDK query="componentClass=TabsBlock"/>
 
 ## Send Lifecycle metrics to Analytics
 

@@ -54,7 +54,9 @@ networkService.connectAsync(networkRequest: networkRequest) { httpConnection in
 
 #### Java
 
-1. Create a custom implementation of `HttpConnecting` that represents a response to a network request. This will be used to handle network completion when overriding the network stack in place of internal network connection implementation.
+1. Create a custom implementation of `HttpConnecting` that represents a response to a network request. Also, create antoher implementation of `HttpConnecting` that represents the error response. They will be used to handle network completion when overriding the network stack in place of internal network connection implementation.
+
+* MyCustomResponse
 
 ```java
 class MyCustomResponse implements HttpConnecting {
@@ -127,6 +129,41 @@ class MyCustomResponse implements HttpConnecting {
 }
 ```
 
+* ErrorResponse
+
+```java
+class ErrorResponse implements HttpConnecting {
+
+    @Override
+    public InputStream getInputStream() {
+        return null;
+    }
+
+    @Override
+    public InputStream getErrorStream() {
+        return null;
+    }
+
+    @Override
+    public int getResponseCode() {
+        return -1;
+    }
+
+    @Override
+    public String getResponseMessage() {
+        return "";
+    }
+
+    @Override
+    public String getResponsePropertyValue(String responsePropertyKey) {
+        return "";
+    }
+
+    @Override
+    public void close() { }
+}
+```
+
 2. Create a custom implementation of `Networking` interface and, implement the `connectAsync` method. The implementation of `connectAsync` should handle the connection establishment with the details provided in the `NetworkRequest` and, notify the caller of a response using the `NetworkCallback` parameter.
 
 ```java
@@ -137,22 +174,40 @@ class MyCustomNetworkService implements Networking {
 
     private final ExecutorService executorService = //
 
+    /**
+     * Initiate an asynchronous network request.
+     *
+     * @param request {@link NetworkRequest} used for network connection
+     * @param callback {@link NetworkCallback} that will receive the {@link HttpConnecting} instance asynchronously.
+     *
+     */
     @Override
     public void connectAsync(final NetworkRequest request, final NetworkCallback callback) {
         // Use an executor service for initiating the network request and dispatching the response.
         executorService.submit(
-                () -> {
+            () -> {
+                try {
+                    // 1. If the network is down, for example, if the device is in airplane mode, the callback should be invoked immediately with a null connection. When the null connection is passed to the callback, the SDK will treat it as a recoverable failure and handle it accordingly.
                     
+                    // callback.call(null);
+
+                    // 2. If the network is available, the SDK should send out the request and invoke the callback with the corresponding connection.
                     final HttpConnecting connection = doConnection(request);
 
                     if (callback != null) {
-                        // If a callback was provided, invoke the callback with the connection
-                        callback.call(connection);
+                      // If a callback was provided, invoke the callback with the connection
+                      callback.call(connection);
                     } else {
-                        // If no callback is passed by the client, close the connection.
-                        connection.close();
+                      // If no callback is passed by the client, close the connection.
+                      connection.close();
                     }
-                });
+                } catch (Exception e) {
+                    // 3. The connectAsync method should never throw exceptions. Catch any exceptions and invoke the callback with an error response.
+                    if (callback != null) {
+                        callback.call(new ErrorResponse());
+                    }
+                }
+        });
     }
 
     /**
@@ -225,12 +280,7 @@ public class MyApp extends Application {
         // Set the network override prior to making any other calls to the SDK
         ServiceProvider.getInstance().setNetworkService(new MyCustomNetworkService());
 
-        MobileCore.setApplication(this);
-
-        List<Class<? extends Extension>> extensions = Arrays.asList(...);
-        MobileCore.registerExtensions(extensions, o -> {
-            // Any other post registration processing
-        });
+        MobileCore.initialize(this, "ENVIRONMENT_ID");
     }
 }
 ```

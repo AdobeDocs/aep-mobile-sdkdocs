@@ -159,6 +159,44 @@ iOS
 
 <Tabs query="platform=ios&api=get-sdk-identities"/>
 
+## initialize
+
+<InlineAlert variant="info" slots="text" />
+
+This API is available starting from Android version 3.3.0 and iOS version 5.4.0. To enable automatic extension registration on Android, use BOM version 3.8.0 or later.
+
+<InlineAlert variant="info" slots="text" />
+
+This API eliminates the need to register extensions manually using [registerExtensions](#registerextensions) and manage lifecycle tracking with [lifecycleStart](lifecycle/api-reference.md#lifecyclestart) and [lifecyclePause](lifecycle/api-reference.md#lifecyclepause) APIs.
+
+This API initializes AEP SDKs by automatically registering all extensions bundled with the application and enabling automatic lifecycle tracking by default. The completion callback is triggered once the SDK is fully initialized, allowing event processing to begin.
+
+Two versions of this API are available, which accept **app ID** or **InitOptions**:
+
+* **app ID**: Configures the SDK with the provided mobile property environment ID configured from the Data Collection UI.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<Tabs query="platform=android&api=initialize-appid"/>
+
+iOS
+
+<Tabs query="platform=ios&api=initialize-appid"/>
+
+* **InitOptions**: Allow customization of the default initialization behavior. Refer [InitOptions](#initoptions).
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<Tabs query="platform=android&api=initialize-initoptions"/>
+
+iOS
+
+<Tabs query="platform=ios&api=initialize-initoptions"/>
+
 ## log
 
 This is the API used to log from the SDK.
@@ -192,11 +230,6 @@ iOS
 <Tabs query="platform=ios&api=register-event-listener"/>
 
 ## registerExtension
-
-<InlineAlert variant="warning" slots="text"/>
-
-This API has been deprecated starting in v2.0.0 version of Mobile Core extension.
-Use [registerExtensions](#registerextensions) to register desired extensions and boot up the SDK for event processing. Calling `MobileCore.start()` API is no longer required when using `MobileCore.registerExtensions()`.
 
 Extensions can be incrementally registered with Mobile Core using the `registerExtension` API.
 
@@ -279,7 +312,7 @@ When building Android applications, the `android.app.Application` reference must
 
 <InlineAlert variant="warning" slots="text"/>
 
-Android applications must call `MobileCore.setApplication()` before calling any other Mobile SDK API.
+Android applications must call `MobileCore.setApplication()` before calling any other Mobile SDK API. This can be skipped if you are using simplified initialization with the [initialize](#initialize) API.
 
 You can use the `setApplication` method to pass the Android `Application` instance to Mobile SDK. Please note that this method is **only** supported on Android versions of Mobile Core.
 
@@ -453,15 +486,70 @@ You can update the configuration programmatically by passing configuration keys 
 
 ## Public classes
 
+### AdobeCallback
+
+The `AdobeCallback` class (Android) provides the interface to receive results when the asynchronous APIs perform the requested action.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+
+Android
+
+<Tabs query="platform=android&api=adobe-callback"/>
+
+### AdobeCallbackWithError
+
+The `AdobeCallbackWithError` class provides the interface to receive results or an error when the asynchronous APIs perform the requested action.
+
+When using this class, if the request cannot be completed within the default timeout or an unexpected error occurs, the request is stopped and the fail method is called with the corresponding `AdobeError` or `AEPError`.
+
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
 
-<Tabs query="platform=android&api=public-classes"/>
+<Tabs query="platform=android&api=adobe-callback-with-error"/>
 
 iOS
 
-<Tabs query="platform=ios&api=public-classes"/>
+<Tabs query="platform=ios&api=adobe-callback-with-error"/>
+
+### AdobeError
+
+The `AdobeError` class (Android) shows the errors that can be passed to an `AdobeCallbackWithError`:
+
+* `UNEXPECTED_ERROR` - An unexpected error occurred.
+* `CALLBACK_TIMEOUT` - The timeout was met.
+* `CALLBACK_NULL` - The provided callback function is null.
+* `EXTENSION_NOT_INITIALIZED` - The extension is not initialized.
+* `SERVER_ERROR` - There was a server error.
+* `NETWORK_ERROR` - There was a network error.
+* `INVALID_REQUEST` - There was an invalid request.
+* `INVALID_RESPONSE` - There was an invalid response.
+
+### AEPError
+
+The `AEPError` enum (iOS) shows the errors that can be passed to a completion handler callback from any API which uses one:
+
+* `case unexpected` - An unexpected error occured.
+* `case callbackTimeout` - The timeout was met.
+* `case callbackNil` -  The provided callback function is nil.
+* `case none` -  There was no error, used when an error return type is required but there was no error.
+* `case serverError` - There was a server error.
+* `case networkError` - There was a network error.
+* `case invalidRequest` - There was an invalid request.
+* `case invalidResponse` - There was an invalid response.
+* `case errorExtensionNotInitialized` - The extension is not initialized.
+
+### InitOptions
+
+The InitOptions class defines the options for initializing the AEP SDK. It currently supports the following options:
+
+* `appID` – The App ID used to retrieve remote configurations from Adobe servers.
+* `filePath` – The location of a configuration file, either stored locally or within the application’s assets.
+* `lifecycleAutomaticTrackingEnabled` – A boolean flag to enable or disable automatic lifecycle tracking (default: true).
+* `lifecycleAdditionalContextData` – A map containing extra context data to be sent with the lifecycle start event.
+* `appGroup` (iOS only) – A string representing the App Group identifier for sharing data between app extensions and the main application.
+
+For usage details, refer to the InitOptions class on GitHub for [Android](https://github.com/adobe/aepsdk-core-android/blob/main/code/core/src/main/java/com/adobe/marketing/mobile/InitOptions.kt) and [iOS](https://github.com/adobe/aepsdk-core-ios/blob/main/AEPCore/Sources/core/InitOptions.swift).
 
 ## Additional information
 

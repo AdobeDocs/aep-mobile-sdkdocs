@@ -46,9 +46,9 @@ The following tables provide information about the differences between the new E
 | Postbacks - Get/POST URL requests | Yes | Yes - [Signals](../../home/base/mobile-core/signal/index.md) extension |
 | Postbacks - PII Get/POST URL requests | Yes | Yes - [Signals](../../home/base/mobile-core/signal/index.md) extension |
 | Postbacks - Open app deeplink | Yes | Yes - [Signals](../../home/base/mobile-core/signal/index.md) extension |
-| Push Messaging | Yes | Yes - [Mobile Services](https://developer.adobe.com/client-sdks/previous-versions/documentation/adobe-analytics-mobile-services/) extension (deprecated) |
-| In-app Messaging | Yes | Yes - [Mobile Services](https://developer.adobe.com/client-sdks/previous-versions/documentation/adobe-analytics-mobile-services/) extension (deprecated) |
-| Marketing/Acquisition Links | Yes | Yes - [Mobile Services](https://developer.adobe.com/client-sdks/previous-versions/documentation/adobe-analytics-mobile-services/) extension (deprecated)|
+| Push Messaging | Yes | Yes - [Adobe Journey Optimizer](https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer/) extension |
+| In-app Messaging | Yes | Yes - [Adobe Journey Optimizer](https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer/) extension |
+| Marketing/Acquisition Links | Yes | _Not supported_ |
 | Geo location and beacon tracking | Yes | Yes - [Places extension](../../solution/places/index.md) |
 | Geo points-of-interest management | Yes | Yes - [Places extension](../../solution/places/index.md) |
 

@@ -13,15 +13,19 @@ import Tabs from './tabs/messaging-delegate.md'
 
 # Programmatically control the display of in-app messages
 
-You can now implement a `MessagingDelegate` in order to be alerted when specific events occur during the lifecycle of an in-app message.
+You can now implement a `PresentationDelegate` or `MessagingDelegate`(for older Android SDK versions and iOS SDK) in order to be alerted when specific events occur during the lifecycle of an in-app message.
 
 ## Register the delegate
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-Android
+Android 3.x
 
-<Tabs query="platform=android&function=register"/>
+<Tabs query="platform=android3x&function=register"/>
+
+Android 2.x (Older version)
+
+<Tabs query="platform=android2x&function=register"/>
 
 iOS
 
@@ -29,11 +33,15 @@ iOS
 
 ## MessagingDelegate definition
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-Android
+Android 3.x
 
-<Tabs query="platform=android&function=messaging-delegate"/>
+<Tabs query="platform=android3x&function=messaging-delegate"/>
+
+Android 2.x (Older version)
+
+<Tabs query="platform=android2x&function=messaging-delegate"/>
 
 iOS
 
@@ -41,11 +49,15 @@ iOS
 
 ## Retrieve the `Message` object
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-Android
+Android 3.x
 
-<Tabs query="platform=android&function=using-object"/>
+<Tabs query="platform=android3x&function=using-object"/>
+
+Android 2.x (Older version)
+
+<Tabs query="platform=android2x&function=using-object"/>
 
 iOS
 
@@ -53,27 +65,19 @@ iOS
 
 ## Controlling when a message should be shown to the end user
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
 
-Android
+Android 3.x
 
-<Tabs query="platform=android&function=controlling-message"/>
+<Tabs query="platform=android3x&function=controlling-message"/>
+
+Android 2.x (Older version)
+
+<Tabs query="platform=android2x&function=controlling-message"/>
 
 iOS
 
 <Tabs query="platform=ios&function=controlling-message"/>
-
-### Integrating the message into an existing UI
-
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
-
-Android
-
-<Tabs query="platform=android&function=integrate-message"/>
-
-iOS
-
-<Tabs query="platform=ios&function=integrate-message"/>
 
 ## Examples
 
@@ -81,7 +85,7 @@ The test apps in this repository demonstrate using a `MessagingDelegate`:
 
 * [Swift](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoApp)
 * [Objective-C](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoAppObjC)
-* [Java](https://github.com/adobe/aepsdk-messaging-android/tree/main/code/app)
+* [Kotlin](https://github.com/adobe/aepsdk-messaging-android/tree/main/code/testapp)
 
 #### Further reading
 

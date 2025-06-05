@@ -8,6 +8,85 @@ keywords:
 
 # Release notes
 
+## March 28, 2025
+
+### React Native Campaign Classic 7.0.0
+
+* Updated to use BOM [(Bill of Materials)](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom) for Android SDK dependencies.
+* Added support for the React Native New Architecture via interop layer
+
+## February 10, 2025
+
+### Android Campaign Classic 3.1.3
+
+* Added support for the new `MobileCore.initialize` API introduced in Core.
+* Updated the Notification Builder dependency to version 3.0.3 to resolve an issue that occurred when no image was provided in an input box push template notification.
+
+## September 10, 2024
+
+### Android Campaign Classic 3.1.2
+
+* Update notification builder dependency to 3.0.2 to resolve an issue with push template dismiss actions.
+
+## August 20, 2024
+
+### Android Campaign Classic 3.1.1
+
+* Removed unused `app_name` string resource to prevent conflicts with resources defined by the app.
+* Add support for 64-bit broadlog id.
+* Update notification builder dependency to 3.0.1 to resolve issues with out-of-the-box push templates.
+
+## June 21, 2024
+
+### Android Campaign Classic 3.1.0
+
+Add support for out-of-the-box push notifications:
+
+* Basic
+* Carousel
+* Product Catalog
+* Product Rating
+* Input Box
+* Multi Icon
+* Zero Bezel
+* Timer
+
+## June 6, 2024
+
+### React Native Campaign Classic 6.0.2
+
+* Updated typescript files to support strict null checks.
+
+## May 31, 2024
+
+### Android Campaign Classic 2.1.8
+
+* Fix clipped carousel captions which was occurring on smaller devices.
+
+## May 22, 2024
+
+### Android Campaign Classic 2.1.7
+
+* Add support for dark mode with out of the box push template notifications. Dark mode is supported on API29+ only and any custom color modifications made to the push payload will override the dark/light mode colors.
+* Removed the SCHEDULE_EXACT_ALARM permission from the Campaign Classic extension. This permission must be added to the app manifest if exact scheduling is needed for remind later notifications. If an API less than S / 31 is in use, or the exact alarm permission wasn't granted to the app, then an inexact alarm is used instead. Inexact scheduling will display the scheduled notification within a 1 hour window starting with the given timestamp.
+
+## April 29, 2024
+
+### Android Campaign Classic 2.1.6
+
+* Fixed a bug that caused Activity to restart when processing push notification click URIs.
+* Fixed a bug to prevent images from being cropped in carousel push template.
+
+## April 2, 2024
+
+### Android Campaign Classic 3.0.0
+
+Major version update for [Campaign Classic](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+
+* Updated the minimum supported Android API level to 21.
+* The SDK is now compatible with Kotlin 1.8 and higher.
+* Removed the out-of-the-box push template handling code. This functionality will be available in a future Core 3.x release.
+
 ## March 20, 2024
 
 ### iOS Campaign Classic 5.0.0

@@ -9,115 +9,203 @@ keywords:
 ---
 
 import Tabs from './tabs/index.md'
+import InitializeSDK from '/src/pages/resources/initialize.md'
 
 # Lifecycle
 
-Sessions contain information about the app's current lifecycle, such as the device information, the application install or upgrade information, the session start and pause times, the number of application launches, and additional context data that is provided by the developer through the `LifecycleStart` API. Session data is persisted, so it is available across application launches.
+Sessions contain information about the app's current lifecycle, such as the device information, the application install or upgrade information, the session start and pause times, the number of application launches, and additional context data that is provided by the developer through the `lifecycleStart` API. Session data is persisted, so it is available across application launches.
 
-## Add Lifecycle to your app
+## Add the Lifecycle extension to your app
+
+### Include Lifecycle extension as an app dependency
+
+Add MobileCore and Lifecycle extensions as dependencies to your project.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+
+Kotlin<br/>(Android)
+
+<Tabs query="platform=android-kotlin&task=add"/>
+
+Groovy<br/>(Android)
+
+<Tabs query="platform=android-groovy&task=add"/>
+
+CocoaPods<br/>(iOS)
+
+<Tabs query="platform=ios-pods&task=add"/>
+
+### Initialize Adobe Experience Platform SDK with Lifecycle Extension
+
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
+
+Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
+
+<InitializeSDK query="componentClass=TabsBlock"/>
+
+## Add Lifecycle start and pause calls
+
+<InlineAlert variant="info" slots="text"/>
+
+Lifecycle tracking is enabled by default when the `MobileCore.initialize` API is used and Lifecycle extension is included as an app dependency. The following instructions only apply if [lifecycleAutomaticTrackingEnabled](/src/pages/home/base/mobile-core/api-reference/#initoptions) is false or when using [manual extension registration](/src/pages/home/getting-started/get-the-sdk/#b-manual-extension-registration-using-mobilecoreregisterextensions-api) to register Lifecycle extension.
+
+You can start collecting Lifecycle information at any time in your app, but you should start as soon as your app enters the foreground. This allows Lifecycle metrics to be correctly attributed to all of your users' activities for their current session.
+
+You should pause Lifecycle collection when the user stops using your app. The best time to do this is usually when your app has entered the background.
+
+### Lifecycle on iOS
+
+#### Start Lifecycle data collection on launch
+
+Start Lifecycle data collection by calling `lifecycleStart(_:)` from within the callback of the `MobileCore.registerExtensions(_:)` method in your app's `application(_:didFinishLaunchingWithOptions:)` delegate method.
+
+If your iOS application supports background capabilities, your `application(_:didFinishLaunchingWithOptions:)` method might be called when iOS launches your app in the background. If you do not want background launches to count towards your lifecycle metrics, then `lifecycleStart(_:)` should only be called when the application state is not equal to `UIApplicationStateBackground`.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-Android
+Swift
 
-<Tabs query="platform=android&task=add"/>
+<Tabs query="platform=ios-swift&task=start-lifecycle-didfinishlaunch"/>
 
-iOS
+Objective-C
 
-<Tabs query="platform=ios&task=add"/>
+<Tabs query="platform=ios-objc&task=start-lifecycle-didfinishlaunch"/>
 
-<!--- React Native
+#### Start and Pause Lifecycle data collection from iOS lifecycle delegate
 
-<Tabs query="platform=react-native&task=add"/>
+When your app is resuming from the background state, call `lifecycleStart(_:)` from the appropriate delegate object's "will enter foreground" method. When your app enters the background state, call `lifecyclePause()` from the appropriate delegate object's "did enter background" method.
 
-Flutter
+* For a scene-based UI, call the Lifecycle APIs from the _UISceneDelegate_'s `sceneWillEnterForeground(_:)` and `sceneDidEnterBackground(_:)` methods.
 
-<Tabs query="platform=flutter&task=add"/> --->
+* For all other apps, call the Lifecycle APIs from the _UIApplicationDelegate_'s `applicationWillEnterForeground(_:)` and `applicationDidEnterBackground(_:)` methods.
 
-## Register Lifecycle with Mobile Core and add appropriate Start/Pause calls
+* If your application supports both a scene delegate and an app delegate, implement the Lifecycle APIs in both delegate objects.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-Android
+Swift
 
-<Tabs query="platform=android&task=register"/>
+<Tabs query="platform=ios-swift&task=start-pause"/>
 
-iOS
+Objective-C
 
-<Tabs query="platform=ios&task=register"/>
+<Tabs query="platform=ios-objc&task=start-pause"/>
 
-<!--- React Native
+<InlineAlert variant="info" slots="text"/>
 
-<Tabs query="platform=react-native&task=register"/> --->
+For more information on handling foreground and background states in applications with Scenes, refer to Apple's documentation on preparing your UI to run in the [foreground](https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_foreground) and [background](https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_background)
 
-## Lifecycle metrics
+#### Start and Pause Lifecycle data collection in SwiftUI
 
-The following is a complete list of all of the metrics provided on your user's app lifecycle.
+If your pure SwiftUI application does not use an app delegate or scene delegate, you may still use the Lifecycle extension by listening for `scenePhase` changes.
 
-### Application Context
+1. Register the Lifecycle extension and configure the Mobile SDK from the `App` class's `init()` function.
 
-| Metric | Key | Description |
-| :----- | :--- | :--------- |
-| App ID | `a.AppID` | Stores the application name and version in the following format: `AppName BundleVersion (app version code)`. An example of this format is `MyAppName 1.1(1)`. |
-| Device name | `a.DeviceName` | Stores the device name. |
-| Operating system version | `a.OSVersion` | Stores the operating system name and version. |
-| Carrier name | `a.carrierName` | Stores the name of the mobile service provider as provided by the device. <br/><br/> This metric is **not** automatically stored in an Analytics variable. You must create a processing rule to copy this value to an Analytics variable for reporting. |
-| Resolution | `a.Resolution` | The width x height in pixels. |
-| Locale | `a.Locale` | The locale set for this device. For example, this value can be `en-US`. |
+2. Set the `@Environment` property wrapper to observe the `scenePhase` variable to read the application's current phase.
 
-### Install
+3. Use the `scenePhase` property in conjunction with `.onChange(of:)` to trigger the Lifecycle APIs when the phase changes between `.active` and `.background`.
 
-| Metric | Key | Description |
-| :--- | :--- | :--- |
-| First Launches | `a.InstallEvent` | Triggered at the first run after installation or re-installation. |
-| Install Date | `a.InstallDate` | Date of first launch after installation. The format is `M/d/yyyy`, and an example is `5/3/2017`. |
+```swift
+import SwiftUI
+import AEPCore
+import AEPLifecycle
 
-### Upgrade
+@main
+struct TestSwiftUIApp: App {
 
-| Metric | Key | Description |
-| :--- | :--- | :--- |
-| Upgrades | `a.UpgradeEvent` | Triggered at the first run after upgrade or when the version number changes. |
-| Launches since last upgrade | `a.LaunchesSinceUpgrade` | Number of days since the application version number changed. |
-| Days since last upgrade | `a.DaysSinceLastUpgrade` | Number of launches since the application version number changed. |
+    @Environment(\.scenePhase) private var scenePhase
 
-### Launch
+    init() {
+        MobileCore.registerExtensions([Lifecycle.self]) {
+            // Post registration tasks, such as configureWith(appId:)
+        }
+    }
 
-| Metric | Key | Description |
-| :--- | :--- | :--- |
-| Daily Engaged Users | `a.DailyEngUserEvent` | Triggered when the application is used on a particular day. Important: This metric is not automatically stored in an Analytics metric. You must create a processing rule that sets a custom event to capture this metric. |
-| Monthly Engaged Users | `a.MonthlyEngUserEvent` | Triggered when the application is used during a particular month. Important: This metric is not automatically stored in an Analytics metric. You must create a processing rule that sets a custom event to capture this metric. |
-| Launches | `a.LaunchEvent` | Triggered on every run, including crashes and installs. Also triggered when the app is resumed from the background after the lifecycle session timeout is exceeded. |
-| Previous Session Length | `a.PrevSessionLength` | Reports the number of seconds that a previous application session lasted based on how long the application was open and in the foreground. |
-| Ignored Session Length | `a.ignoredSessionLength` | If the last session is set to last longer than `lifecycle.sessionTimeout`, that session length is ignored and recorded here. |
-| Launch Number | `a.Launches` | Number of times the application was launched or brought out of the background. |
-| Days since first use | `a.DaysSinceFirstUse` | Number of days since first run. |
-| Days since last use | `a.DaysSinceLastUse` | Number of days since last use. |
-| Hour of Day | `a.HourOfDay` | Measures the hour the app was launched and uses the 24-hour numerical format. Used for time parting to determine peak usage times. |
-| Day of Week | `a.DayOfWeek` | Measures the day of the week the app was launched. |
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }.onChange(of: scenePhase) { phase in
+            switch phase {
+                case .active:
+                    MobileCore.lifecycleStart(additionalContextData: nil)
+                case .background:
+                    MobileCore.lifecyclePause()
+                case .inactive:
+                    print("Inactive scene phase")
+                @unknown default:
+                    print("unknown scene phase has been added to scenePhase enum")
+            }
+        }
+    }
+}
+```
 
-### Crash
+For more information, read the full blog post [Implement Adobe Experience Cloud Mobile Lifecycle Tracking in SwiftUI](https://blog.developer.adobe.com/implement-adobe-experience-cloud-mobile-lifecycle-tracking-in-swiftui-41a8373a55fb).
 
-| Metric | Key | Description |
-| :--- | :--- | :--- |
-| Crashes | `a.CrashEvent` | Triggered when the application crashed before closing. The event is sent when the application is started again after the crash. |
+#### Include additional context data
 
-### Device information
+To include additional data with lifecycle tracking calls, pass an additional parameter to `lifecycleStart(additionalContextData:)` that contains context data:
 
-| Metric | Key | Description |
-| :----- | :--- | :--------- |
-| App ID | `a.AppId` | Stores the application name and version in the `AppName BundleVersion (app version code)` format. <br/><br/> An example of this format is `MyAppName 1.1(1)`. |
-| Device name | `a.DeviceName` | Stores the device name. |
-| Operating system version | `a.OSVersion` | Stores the operating system name and version. |
-| Carrier name | `a.CarrierName` | Stores the name of the mobile service provider as provided by the devices.<br/><br/>This metric is **not** automatically saved in an Analytics variable. For reporting, you must create a processing rule to copy this value to an Analytics variable. |
-| Resolution | `a.Resolution` | The width x height in pixels. |
-| Locale | `a.Locale` | The locale set for this device. For example, this can be `en-US`. |
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
-If you need to programmatically update your SDK configuration, use the following information to change your Lifecycle configuration values:
+Swift
 
-<InlineAlert variant="warning" slots="text"/>
+<Tabs query="platform=ios-swift&task=context-data"/>
 
-The time that your app spends in the background is not included in the session length.
+Objective-C
 
-| Key | Description |
-| :---  | :-------- |
-| `lifecycle.sessionTimeout` | Number of seconds that must elapse between the app entering the background and subsequently re-entering the foreground in order for the SDK to create a new session.<br/><br/> The default value is 300 seconds (5 minutes). |
+<Tabs query="platform=ios-objc&task=context-data"/>
+
+### Lifecycle on Android
+
+#### Start and Pause Lifecycle data collection from Android Activity
+
+To ensure accurate session and crash reporting, the Lifecycle APIs must be implemented in every Activity of the Android Application. Do not start or stop Lifecycle in a Fragment.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Kotlin
+
+<Tabs query="platform=android-kotlin&task=activity-start-pause"/>
+
+Java
+
+<Tabs query="platform=android-java&task=activity-start-pause"/>
+
+<InlineAlert variant="info" slots="text"/>
+
+Calling `setApplication(Application)` is only necessary on activities that are entry points for your application. However, setting the application on each Activity has no negative impact and ensures that the SDK always has the necessary reference to your application. You should call `setApplication(Application)` in each of your activities.
+
+#### Implementing global lifecycle callbacks
+
+Starting with API Level 14, Android allows global lifecycle callbacks for activities. For more information, please read the [Android developer guide](https://developer.android.com/reference/android/app/Application#registerActivityLifecycleCallbacks(android.app.Application.ActivityLifecycleCallbacks)).
+
+You can use these callbacks to ensure that all of your activities correctly call the Lifecycle APIs without needing to update each individual Activity class. Add code to register an instance of [ActivityLifecycleCallbacks](https://developer.android.com/reference/android/app/Application.ActivityLifecycleCallbacks) in your Application class, just before [registering your extensions](#register-lifecycle-with-mobile-core) with MobileCore.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Kotlin
+
+<Tabs query="platform=android-kotlin&task=global-lifecycle"/>
+
+Java
+
+<Tabs query="platform=android-java&task=global-lifecycle"/>
+
+#### Include additional context data
+
+To include additional data with lifecycle tracking calls, pass an additional parameter to `lifecycleStart(Map)` that contains context data:
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Kotlin
+
+<Tabs query="platform=android-kotlin&task=context-data"/>
+
+Java
+
+<Tabs query="platform=android-java&task=context-data"/>
+
+<InlineAlert variant="info" slots="text"/>
+
+You only need to add this code in your main Activity and any other Activity in which your app may be launched.
