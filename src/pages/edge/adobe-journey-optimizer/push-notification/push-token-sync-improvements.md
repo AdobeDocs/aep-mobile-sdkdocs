@@ -28,8 +28,8 @@ The `messaging.pushForceSync` configuration key allows you to control the push t
 ## Force Sync Behavior
 
 When `messaging.pushForceSync` is set to `true`:
-- The push token will be synced with Adobe Journey Optimizer every time `setPushIdentifier` is called
-- There is a one second timeout between succesful sync requests. This timeout ensures that mutiple sync requests made at the same time do not result in redundant network requests.
+* The push token will be synced with Adobe Journey Optimizer every time `setPushIdentifier` is called
+* There is a one second timeout between succesful sync requests. This timeout ensures that mutiple sync requests made at the same time do not result in redundant network requests.
 
 ## Usage Example
 
