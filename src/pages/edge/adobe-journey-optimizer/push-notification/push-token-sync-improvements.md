@@ -15,7 +15,7 @@ import Tabs from './tabs/push-token-sync-improvements.md'
 
 ## Overview
 
-The AEPMessaging extension SDK prevents unnecessary network requests from being sent when syncing push tokens. By default, the push token sync optimization will only send a network request if the token has changed since the last succesful sync request. This will reduce unnecessary network traffic which can help improve app performance.
+The AEPMessaging extension SDK prevents unnecessary network requests from being sent when syncing push tokens. By default, the push token sync optimization will only send a network request if the token has changed since the last succesful sync request. This reduces unnecessary network traffic which can help improve app performance.
 
 ## Configuration
 
