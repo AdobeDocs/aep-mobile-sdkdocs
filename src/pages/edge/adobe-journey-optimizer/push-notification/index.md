@@ -30,6 +30,7 @@ keywords:
 
 ## More information
 
+* [Reset Messaging extension identities](./resetidentities-api.md)
 * [Push notification payload keys](./push-payload.md)
 * [Push token sync improvements](./push-token-sync-improvements.md)
 

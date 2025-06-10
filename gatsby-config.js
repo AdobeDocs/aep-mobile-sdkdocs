@@ -243,6 +243,10 @@ module.exports = {
                                         ]
                                     },
                                     {
+                                        title: "Reset Messaging extension identities",
+                                        path: "/edge/adobe-journey-optimizer/push-notification/resetidentities-api"
+                                    },
+                                    {
                                         title: "Payload keys",
                                         path: "/edge/adobe-journey-optimizer/push-notification/push-payload"
                                     },
