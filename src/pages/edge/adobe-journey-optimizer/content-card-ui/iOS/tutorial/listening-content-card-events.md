@@ -52,7 +52,7 @@ struct HomePage: View, ContentCardUIEventListening {
         .onAppear() {
             let homePageSurface = Surface(path: "homepage")
             // 2. Pass the listener to the getContentCardsUI API
-            AEPSwiftUI.getContentCardsUI(for: homePageSurface,
+            Messaging.getContentCardsUI(for: homePageSurface,
                                          listener: self) { result in
                 switch result {
                 case .success(let cards):
