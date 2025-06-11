@@ -8,6 +8,14 @@ keywords:
 
 # Release notes
 
+## June 11, 2025
+
+### Android Optimize 3.6.0
+
+* Exposed `Activity` and `Placement` objects in `updateProposition()` response callback for all propositions belongs to ODE
+* Now all the generated XDMs (i.e, for `displayed()` or `tapped()` APIs) will also contain these objects as a part of each proposition that belongs to ODE
+* Renamed `Adobe Journey Optimizer Decisioning` extension to `Offer Decisioning and Target` extension.
+
 ## May 8, 2025
 
 ### iOS Optimize 5.5.0

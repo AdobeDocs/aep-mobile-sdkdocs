@@ -7,6 +7,36 @@ Keywords:
 
 # Release notes
 
+## June 11, 2025
+
+### Android Optimize 3.6.0
+
+* Exposed `Activity` and `Placement` objects in `updateProposition()` response callback for all propositions belongs to ODE
+* Now all the generated XDMs (i.e, for `displayed()` or `tapped()` APIs) will also contain these objects as a part of each proposition that belongs to ODE
+* Renamed `Adobe Journey Optimizer Decisioning` extension to `Offer Decisioning and Target` extension.
+
+## June 9, 2025
+
+### React Native Messaging 7.1.0
+
+## Add support for tracking interactions with content cards
+
+### trackContentCardDisplay
+Tracks a Display interaction with the given ContentCard
+
+Syntax
+```
+Messaging.trackContentCardDisplay(proposition, contentCard);
+```
+
+### trackContentCardInteraction
+Tracks a Click interaction with the given ContentCard
+
+Syntax
+```
+Messaging.trackContentCardInteraction(proposition, contentCard);
+```
+
 ## May 19, 2025
 
 ### React Native Places 7.0.1
