@@ -961,7 +961,11 @@ public class OptimizeProposition {
 #### Swift
 
 ```swift
-/// `OptimizeProposition` class
+/// `OptimizeProposition` class represents a proposition containing personalized offers from the Experience Edge network.
+/// This class supports both Target and ODE (Offer Decisioning Engine) propositions.
+/// 
+/// Note: Activity and placement object support for ODE offers is available from SDK version 5.6.0 onwards.
+/// For versions below 5.6.0, these objects will be nil for ODE offers.
 @objc(AEPOptimizeProposition)
 public class OptimizeProposition: NSObject, Codable {
 
@@ -975,7 +979,13 @@ public class OptimizeProposition: NSObject, Codable {
     @objc public let scope: String
 
     /// Scope details dictionary
-    @objc public var scopeDetails: [String: Any]
+    @objc public var scopeDetails: [String: Any]?
+
+    /// Activity details dictionary for ODE offers
+    @objc public var activity: [String: Any]?
+
+    /// Placement details dictionary for ODE offers
+    @objc public var placement: [String: Any]?
 }
 ```
 
