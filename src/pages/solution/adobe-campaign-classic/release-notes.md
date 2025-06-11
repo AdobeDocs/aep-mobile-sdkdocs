@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## June 11, 2025
+
+### Android Campaign Classic 3.1.4
+
+* Fixed the handling of negative 32-bit broadlog id's.
+
 ## March 28, 2025
 
 ### React Native Campaign Classic 7.0.0

@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## June 11, 2025
+
+### Android Optimize 3.6.0
+
+* The `OptimizeProposition` class now exposes `activity` and `placement` objects for all propositions that belongs to Offer Decisioning.
+
 ## May 8, 2025
 
 ### iOS Optimize 5.5.0
