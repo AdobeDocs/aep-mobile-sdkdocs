@@ -147,4 +147,3 @@ MobileCore.resetIdentities()
 ```objc
 [AEPMobileCore resetIdentities];
 ```
-
