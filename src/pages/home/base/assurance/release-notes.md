@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## June 11, 2025
+
+### Android Assurance 3.0.7
+
+* Removed device orientation restrictions for Assurance screens.
+
 ## March 28, 2025
 
 ### React Native Assurance 7.0.0

@@ -9,6 +9,28 @@ keywords:
 
 # Release notes
 
+## June 9, 2025
+
+### React Native Messaging 7.1.0
+
+## Add support for tracking interactions with content cards
+
+### trackContentCardDisplay
+* Tracks a Display interaction with the given ContentCard
+
+#### Syntax
+```
+Messaging.trackContentCardDisplay(proposition, contentCard);
+```
+
+### trackContentCardInteraction
+* Tracks a Click interaction with the given ContentCard
+
+#### Syntax
+```
+Messaging.trackContentCardInteraction(proposition, contentCard);
+```
+
 ## May 13, 2025
 
 ### iOS Messaging 5.6.1
