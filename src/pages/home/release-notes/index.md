@@ -7,6 +7,92 @@ Keywords:
 
 # Release notes
 
+## June 12, 2025
+
+### iOS Optimize 5.6.0
+
+* Added activity and placement object fields to OptimizeProposition class.
+* Fixed event data in Optimize Response Event sent to update proposition api callback to properly display proposition and error data in Assurance.
+
+## June 11, 2025
+
+### Android BOM 3.13.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.12.0) | BOM (3.13.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:assurance** | **3.0.6** | **3.0.7**|
+| **com.adobe.marketing.mobile:campaignclassic** | **3.1.3** | **3.1.4**|
+| **com.adobe.marketing.mobile:core** | **3.4.0** | **3.4.1**|
+| **com.adobe.marketing.mobile:optimize** | **3.5.0** | **3.6.0**|
+| com.adobe.marketing.mobile:analytics | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:audience | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaign | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:edge | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:identity | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:media | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:messaging | 3.3.2 | 3.3.2 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:places | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Core 3.4.1
+
+* Added edge-to-edge support for in-app messages when enforced by the device OS.
+* Fixed an issue causing incorrect rule evaluation of `notContains` and `notEquals` conditions with multiple operands.
+* Disabled WebSQL for in-app message web views.
+* Improved stability when processing Activity intent extras.
+
+### Android Campaign Classic 3.1.4
+
+* Fixed the handling of negative 32-bit broadlog id's.
+
+### Android Assurance 3.0.7
+
+* Removed device orientation restrictions for Assurance screens.
+
+### Android Optimize 3.6.0
+
+* The `OptimizeProposition` class now exposes `activity` and `placement` objects for all propositions that belongs to Offer Decisioning.
+
+## June 9, 2025
+
+### React Native Messaging 7.1.0
+
+## Add support for tracking interactions with content cards
+
+### trackContentCardDisplay
+Tracks a Display interaction with the given ContentCard
+
+Syntax
+```
+Messaging.trackContentCardDisplay(proposition, contentCard);
+```
+
+### trackContentCardInteraction
+Tracks a Click interaction with the given ContentCard
+
+Syntax
+```
+Messaging.trackContentCardInteraction(proposition, contentCard);
+```
+
 ## May 19, 2025
 
 ### React Native Places 7.0.1
