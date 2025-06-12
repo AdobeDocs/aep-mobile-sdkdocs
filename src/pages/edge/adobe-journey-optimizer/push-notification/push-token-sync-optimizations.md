@@ -1,5 +1,5 @@
 ---
-title: Push Token Sync Improvements
+title: Push Token Sync Optimizations
 description: This guide provides information regarding push token sync optimizations made to prevent unnecessary network requests from being sent from your app.
 keywords:
 - Adobe Journey Optimizer
@@ -9,13 +9,13 @@ keywords:
 - Android
 
 ---
-import Tabs from './tabs/push-token-sync-improvements.md'
+import Tabs from './tabs/push-token-sync-optimizations.md'
 
-# Push Token Sync Improvements
+# Push Token Sync Optimizations
 
 ## Overview
 
-Starting with the 3.3.3 release, the AEPMessaging extension SDK prevents unnecessary network requests from being sent when syncing push tokens. By default, the push token sync optimization will only send a network request if the token has changed since the last succesful sync request. This reduces unnecessary network traffic which can help improve app performance.
+Starting with release 3.3.3 on Android and 5.6.3 on iOS, the AEPMessaging extension SDK prevents unnecessary network requests from being sent when syncing push tokens. By default, the push token sync optimization will only send a network request if the token has changed since the last succesful sync request. This reduces unnecessary network traffic which can help improve app performance.
 
 ## Configuration
 

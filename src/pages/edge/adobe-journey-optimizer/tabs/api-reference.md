@@ -102,7 +102,7 @@ static func handleNotificationResponse(_ response: UNNotificationResponse,
 | `urlHandler` | `((URL) -> Bool)?` | An optional method to handle the actionable URL from the push notification. |
 | `closure` | `((PushTrackingStatus) -> Void)?` | An optional callback with `PushTrackingStatus` representing the tracking status of the interacted notification. |
 
-<Variant platform="android" api="register-extension" repeat="8"/>
+<Variant platform="android" api="register-extension" repeat="6"/>
 
 #### Java
 
@@ -119,3 +119,32 @@ public static void registerExtension();
 ```kotlin
 Messaging.registerExtension()
 ```
+
+<Variant platform="android" api="reset-identities" repeat="4"/>
+
+#### Java
+
+```java
+MobileCore.resetIdentities();
+```
+
+#### Kotlin
+
+```kotlin
+MobileCore.resetIdentities()
+```
+
+<Variant platform="ios" api="reset-identities" repeat="4"/>
+
+#### Swift
+
+```swift
+MobileCore.resetIdentities()
+```
+
+#### Objective-C
+
+```objc
+[AEPMobileCore resetIdentities];
+```
+
