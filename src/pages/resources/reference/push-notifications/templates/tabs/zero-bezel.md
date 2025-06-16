@@ -90,8 +90,6 @@ Custom sound files must be placed within the app's bundle in the `res/raw` direc
 
 ### Background Color Specifications
 
-#### Android
-
 * The background color can be customized for Android versions below 11
 * For Android 11 and above, the background color will be white by default and cannot be customized
 * The color should be specified in hex format (e.g., `#FF0000`)
