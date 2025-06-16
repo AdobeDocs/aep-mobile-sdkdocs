@@ -9,6 +9,12 @@ keywords:
 
 # Release notes
 
+## June 9, 2025
+
+### React Native Messaging 7.1.0
+
+* Added support for tracking interactions with content cards.
+
 ## May 13, 2025
 
 ### iOS Messaging 5.6.1

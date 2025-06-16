@@ -8,6 +8,19 @@ keywords:
 
 # Release notes
 
+## June 12, 2025
+
+### iOS Optimize 5.6.0
+
+* Added activity and placement object fields to OptimizeProposition class.
+* Fixed event data in Optimize Response Event sent to update proposition api callback to properly display proposition and error data in Assurance.
+
+## June 11, 2025
+
+### Android Optimize 3.6.0
+
+* The `OptimizeProposition` class now exposes `activity` and `placement` objects for all propositions that belongs to Offer Decisioning.
+
 ## May 8, 2025
 
 ### iOS Optimize 5.5.0
