@@ -29,7 +29,7 @@ The `messaging.optimizePushSync` configuration key allows you to control the pus
 
 When `messaging.optimizePushSync` is set to `true`:
 
-- A new push token will be synced with Adobe Journey Optimizer when `setPushIdentifier` is called.
+* A new push token will be synced with Adobe Journey Optimizer when `setPushIdentifier` is called.
 
 When `messaging.optimizePushSync` is set to `false`:
 
