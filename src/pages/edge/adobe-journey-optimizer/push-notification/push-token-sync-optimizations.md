@@ -19,22 +19,26 @@ Starting with release 3.3.3 on Android and 5.6.3 on iOS, the AEPMessaging extens
 
 ## Configuration
 
-The `messaging.pushForceSync` configuration key allows you to control the push token synchronization behavior:
+The `messaging.optimizePushSync` configuration key allows you to control the push token synchronization behavior:
 
 | Key | Required | Description | Data Type | Operating System |
 | :--- | :--- | :--- | :--- | :--- |
-| messaging.pushForceSync | No | Controls whether the push token should be synced with Adobe Journey Optimizer every time the `setPushIdentifier` API is called. Default value is `false`. | Boolean | Android/iOS |
+| messaging.optimizePushSync | No | If `false`, allows the push identifier to be synced every time the `setPushIdentifier` API is called. Default value is `true`. | Boolean | Android/iOS |
 
-## Force Sync Behavior
+## Push Sync Optimization Behavior
 
-When `messaging.pushForceSync` is set to `true`:
+When `messaging.optimizePushSync` is set to `true`:
 
-* The push token will be synced with Adobe Journey Optimizer every time `setPushIdentifier` is called
-* There is a one second timeout between succesful sync requests. This timeout ensures that multiple sync requests made at the same time which do not change the push token value will not result in redundant network requests. If the push token value in the request is different than the current token value, the timeout does not apply.
+- A new push token will be synced with Adobe Journey Optimizer when `setPushIdentifier` is called.
+
+When `messaging.optimizePushSync` is set to `false`:
+
+* The push token will be synced with Adobe Journey Optimizer every time `setPushIdentifier` is called.
+* There is a one second timeout between succesful sync requests. This timeout ensures that multiple sync requests made at the same time, which do not change the push token value, will not result in redundant network requests. The timeout does not apply If the push token value in the request is different than the current token value.
 
 ## Usage Scenarios
 
-The AEPMessaging extension SDK will sync new push tokens when the `setPushIdentifier` API is called. While the usage of the `messaging.pushForceSync` configuration key should not be needed in normal app usage scenarios, it would be useful in some special scenarios such as:
+The AEPMessaging extension SDK will always sync new push tokens when the `setPushIdentifier` API is called. While the usage of the `messaging.optimizePushSync` configuration key to disable the push sync optimization behavior should not be needed in normal app usage scenarios, it would be useful in some special cases such as:
 
 * When datastream overrides are used to send push tokens to multiple datasets or datastreams.
 * When changing the Edge configuration via the `edge.configId` configuration key to send push tokens to different datastreams.
