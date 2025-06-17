@@ -8,6 +8,15 @@ keywords:
 
 # Release notes
 
+## June 11, 2025
+
+### Android Core 3.4.1
+
+* Added edge-to-edge support for in-app messages when enforced by the device OS.
+* Fixed an issue causing incorrect rule evaluation of `notContains` and `notEquals` conditions with multiple operands.
+* Disabled WebSQL for in-app message web views.
+* Improved stability when processing Activity intent extras.
+
 ## May 12, 2025
 
 ### Android Core 3.4.0
