@@ -693,7 +693,7 @@ AEPDecisionScope* decisionScope2 = [[AEPDecisionScope alloc] initWithName: @"myS
 [AEPMobileOptimize updatePropositions: @[decisionScope1, decisionScope2]
                               withXdm: @{@"xdmKey": @"xdmValue"}
                               andData: @{@"dataKey": @"dataValue"}]
-                           completion: ^(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* propositionsDict, NSError* error) {
+                           completion: ^(NSDictionary<AEPDecisionScope* AEPOptimizeProposition*>* propositionsDict, NSError* error) {
   if (error != nil) {
     // handle error
     return;
@@ -875,17 +875,33 @@ public class DecisionScope: NSObject, Codable {
 #### Java
 
 ```java
+/**
+ * {@code OptimizeProposition} class represents a proposition containing personalized offers from the Experience Edge network.
+ * This class supports both Target and ODE (Offer Decisioning Engine) propositions.
+ * 
+ * Note: Activity and placement object support for ODE offers is available from SDK version 3.6.0 onwards.
+ * For versions below 3.6.0, these objects will be null for ODE offers.
+ */
 public class OptimizeProposition {
 
     /**
-     * Constructor creates a {@code OptimizeProposition} using the provided propostion {@code id}, {@code offers}, {@code scope} and {@code scopeDetails}.
+     * Constructor creates a {@code OptimizeProposition} using the provided proposition details.
      *
      * @param id {@link String} containing proposition identifier.
      * @param offers {@code List<Offer>} containing proposition items.
      * @param scope {@code String} containing encoded scope.
      * @param scopeDetails {@code Map<String, Object>} containing scope details.
+     * @param activity {@code Map<String, Object>} containing activity details for ODE offers.
+     * @param placement {@code Map<String, Object>} containing placement details for ODE offers.
      */
-    OptimizeProposition(final String id, final List<Offer> offers, final String scope, final Map<String, Object> scopeDetails) {...}
+    OptimizeProposition(
+        final String id, 
+        final List<Offer> offers, 
+        final String scope, 
+        final Map<String, Object> scopeDetails, 
+        final Map<String, Object> activity, 
+        final Map<String, Object> placement
+    ) {...}
 
     /**
      * Gets the {@code OptimizeProposition} identifier.
@@ -894,7 +910,7 @@ public class OptimizeProposition {
      */
     public String getId() {...}
 
-     /**
+    /**
      * Gets the {@code OptimizeProposition} items.
      *
      * @return {@code List<Offer>} containing the {@link OptimizeProposition} items.
@@ -911,9 +927,23 @@ public class OptimizeProposition {
     /**
      * Gets the {@code OptimizeProposition} scope details.
      *
-     * @return {@code Map<String, Object>} containing the {@link OptimizeProposition} scope details.
+     * @return {@code Map<String, Object>} or {@code null} containing the {@link OptimizeProposition} scope details.
      */
-    public Map<String, Object> getScopeDetails() {...}
+    @Nullable public Map<String, Object> getScopeDetails() {...}
+
+    /**
+     * Gets the {@code OptimizeProposition} activity details for ODE offers.
+     *
+     * @return {@code Map<String, Object>} or {@code null} containing the activity details.
+     */
+    @Nullable public Map<String, Object> getActivity() {...}
+
+    /**
+     * Gets the {@code OptimizeProposition} placement details for ODE offers.
+     *
+     * @return {@code Map<String, Object>} or {@code null} containing the placement details.
+     */
+    @Nullable public Map<String, Object> getPlacement() {...}
 
     /**
      * Generates a map containing XDM formatted data for {@code Experience Event - OptimizeProposition Reference} field group from this {@code OptimizeProposition}.
@@ -931,7 +961,11 @@ public class OptimizeProposition {
 #### Swift
 
 ```swift
-/// `OptimizeProposition` class
+/// `OptimizeProposition` class represents a proposition containing personalized offers from the Experience Edge network.
+/// This class supports both Target and ODE (Offer Decisioning Engine) propositions.
+/// 
+/// Note: Activity and placement object support for ODE offers is available from SDK version 5.6.0 onwards.
+/// For versions below 5.6.0, these objects will be nil for ODE offers.
 @objc(AEPOptimizeProposition)
 public class OptimizeProposition: NSObject, Codable {
 
@@ -945,7 +979,13 @@ public class OptimizeProposition: NSObject, Codable {
     @objc public let scope: String
 
     /// Scope details dictionary
-    @objc public var scopeDetails: [String: Any]
+    @objc public var scopeDetails: [String: Any]?
+
+    /// Activity details dictionary for ODE offers
+    @objc public var activity: [String: Any]?
+
+    /// Placement details dictionary for ODE offers
+    @objc public var placement: [String: Any]?
 }
 ```
 
