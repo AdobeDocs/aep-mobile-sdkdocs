@@ -15,7 +15,7 @@ The properties below define the payload sent to FCM:
 | Title | ✅ | `adb_title` | string | Text shown in the notification's title. |
 | Color - Title | ⛔️ | `adb_clr_title` | string | Text color for `adb_title`.<br />Represented as six character hex, e.g. `00FF00`. |
 | Body | ✅ | `adb_body` | string | Text shown in message body when notification is collapsed. |
-| Expanded Body | ⛔️ | `adb_body_ex` | string | Body of the message when the message is expanded. Note that the expanded body text is subject to the maximum permissible size of notifications as defined by the operating system (Android/iOS). |
+| Expanded Body | ⛔️ | `adb_body_ex` | string | Body of the message when the message is expanded. Note that the expanded body text is subject to the maximum permissible size of notifications as defined by the operating system (Android). |
 | Color - Body | ⛔️ | `adb_clr_body` | string | Text color for `adb_body`, `adb_body_ex`.<br />Represented as six character hex, e.g. `00FF00`. |
 | Sound | ⛔️ | `adb_sound` | string | Sound played when notification is delivered.<br />Value should be the name of the sound file without its extension.<br />Sound file should be located in the `assets/raw` directory of your app. |
 | Link URI | ⛔️ | `adb_uri` | string | URI to be handled when user clicks the notification. |
