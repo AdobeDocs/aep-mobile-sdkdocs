@@ -8,6 +8,13 @@ keywords:
 
 # Release notes
 
+## June 17, 2025
+
+### iOS Core 5.5.1
+
+* Fixed an issue causing incorrect rule evaluation of `notContains` and `notEquals` conditions with multiple operands.
+* Exposing Decodable.fromDictionary helper method in AEPServices
+
 ## June 11, 2025
 
 ### Android Core 3.4.1
