@@ -15,7 +15,7 @@ The **Edge Bridge extension** offers a drop in solution for migrating existing A
 
 <InlineAlert variant="info" slots="text"/>
 
-Edge Bridge only supports the Analytics drop-in migration case. If you are looking to migrate your Adobe Target implementation, please refer to the [Adobe Journey Optimizer Decisioning documentation](../../edge/adobe-journey-optimizer-decisioning/index.md) for more details.
+Edge Bridge only supports the Analytics drop-in migration case. If you are looking to migrate your Adobe Target implementation, please refer to the [Offer Decisioning and Target documentation](../../edge/adobe-journey-optimizer-decisioning/index.md) for more details.
 
 ## Extensions comparison
 

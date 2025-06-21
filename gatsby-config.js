@@ -619,7 +619,7 @@ module.exports = {
                         ]
                     },
                     {
-                        title: "Adobe Journey Optimizer Decisioning",
+                        title: "Offer Decisioning and Target",
                         path: "/edge/adobe-journey-optimizer-decisioning",
                         pages: [{
                                 title: "Overview",
