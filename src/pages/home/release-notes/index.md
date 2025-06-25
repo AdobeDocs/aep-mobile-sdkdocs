@@ -7,6 +7,12 @@ Keywords:
 
 # Release notes
 
+## June 24, 2025
+
+### iOS Core 5.5.2
+
+* Fix an issue where FullScreenMessage's onDismiss is called before dismissal.
+
 ## June 17, 2025
 
 ### iOS Core 5.5.1
