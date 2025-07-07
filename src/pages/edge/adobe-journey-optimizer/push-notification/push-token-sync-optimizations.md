@@ -19,7 +19,13 @@ Starting with release 3.3.3 on Android and 5.6.3 on iOS, the AEPMessaging extens
 
 ## Configuration
 
-The `messaging.optimizePushSync` configuration key allows you to control the push token synchronization behavior:
+### Tags mobile property
+
+The push identifier sync optimization is configurable from a Tags mobile property using the Adobe Journey Optimizer extension version 1.0.1 or greater. Use the **Optimize Push Identifier Updates** checkbox to enable or disable the optimization. The configuration is enabled by default.
+
+### Mobile SDK Configuration APIs
+
+The push identifier sync optimization may be configured directly from the Mobile SDK using the [MobileCore.updateConfiguration](../../home/base/mobile-core/configuration/api-reference.md#updateConfiguration) API. Use the `messaging.optimizePushSync` configuration key to control the push token synchronization behavior:
 
 | Key | Required | Description | Data Type | Operating System |
 | :--- | :--- | :--- | :--- | :--- |
@@ -29,11 +35,11 @@ The `messaging.optimizePushSync` configuration key allows you to control the pus
 
 When `messaging.optimizePushSync` is set to `true`:
 
-* A new push token will be synced with Adobe Journey Optimizer when `setPushIdentifier` is called.
+* A new push token is synced with Adobe Journey Optimizer when `setPushIdentifier` is called. If the provided push token is the same as the current push token, the API call is ignored and no network request is made to Adobe Experience Platform.
 
 When `messaging.optimizePushSync` is set to `false`:
 
-* The push token will be synced with Adobe Journey Optimizer every time `setPushIdentifier` is called.
+* The push token is synced with Adobe Journey Optimizer every time `setPushIdentifier` is called.
 * There is a one second timeout between succesful sync requests. This timeout ensures that multiple sync requests made at the same time, which do not change the push token value, will not result in redundant network requests. The timeout does not apply If the push token value in the request is different than the current token value.
 
 ## Usage Scenarios

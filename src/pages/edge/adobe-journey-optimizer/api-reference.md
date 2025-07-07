@@ -38,7 +38,7 @@ Android
 
 ## resetIdentities
 
-The `MobileCore.resetIdentities` API is used to inform extensions to clear any identities that it owns. Starting with release 3.3.3 on Android and 5.6.3 on iOS, the Messaging extension handles the [MobileCore.resetIdentities](../../home/base/mobile-core/api-reference.md#resetidentities) API by clearing the push identifier from the Messaging extension. Using this API does not remove the push identifier from the server-side User Profile Graph.
+The [MobileCore.resetIdentities](../../home/base/mobile-core/api-reference.md#resetidentities) API is used to inform extensions to clear any identities that it owns. Starting with release 3.3.3 on Android and 5.6.3 on iOS, the Messaging extension handles the `MobileCore.resetIdentities` API by clearing the push identifier from the Messaging extension. Using this API does not remove the push identifier from the server-side User Profile Graph.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
