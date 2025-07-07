@@ -125,7 +125,7 @@ If you are currently using the ACP-prefixed React Native libraries, please see [
 
 <InlineAlert variant="info" slots="text"/>
 
-React Native 0.7x introduced support for the new architecture. All SDKs listed above are compatible with the new architecture through the interop layer, except for Adobe Campaign Classic.
+React Native 0.7x introduced support for the new architecture. All SDKs listed above are compatible with the new architecture through the interop layer.
 
 Please note that the Adobe Analytics extension is not supported in AEP-prefixed React Native libraries, the Analytics workflows are now supported through Edge or Edge Bridge extensions, see the [guide to migrate to Edge Network](../solution/adobe-analytics/migrate-to-edge-network.md).
 
