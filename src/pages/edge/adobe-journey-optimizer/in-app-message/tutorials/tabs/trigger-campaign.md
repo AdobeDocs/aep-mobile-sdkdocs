@@ -114,7 +114,7 @@ We can setup a rule trigger on the AJO UI which uses a dot notation to access th
 
 ![send-data-event-define-nested-rule](../../assets/trigger-campaign/send-data-event-define-nested-rule.png)
 
-We can then trigger the campaign using xdm data containing nested dictionaries:
+We can then trigger the campaign using XDM data containing nested dictionaries:
 
 ```swift
 // Create an Experience Event
