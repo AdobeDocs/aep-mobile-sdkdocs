@@ -7,6 +7,13 @@ Keywords:
 
 # Release notes
 
+## June 17, 2025
+
+### iOS Core 5.5.1
+
+* Fixed an issue causing incorrect rule evaluation of `notContains` and `notEquals` conditions when checking against multiple values.
+* Exposed `Decodable.fromDictionary` helper method in AEPServices.
+
 ## June 12, 2025
 
 ### iOS Optimize 5.6.0
@@ -55,7 +62,7 @@ Keywords:
 ### Android Core 3.4.1
 
 * Added edge-to-edge support for in-app messages when enforced by the device OS.
-* Fixed an issue causing incorrect rule evaluation of `notContains` and `notEquals` conditions with multiple operands.
+* Fixed an issue causing incorrect rule evaluation of `notContains` and `notEquals` conditions when checking against multiple values.
 * Disabled WebSQL for in-app message web views.
 * Improved stability when processing Activity intent extras.
 
