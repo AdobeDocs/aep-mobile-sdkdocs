@@ -25,7 +25,7 @@ The push identifier sync optimization is configurable from a Tags mobile propert
 
 ### Mobile SDK Configuration APIs
 
-The push identifier sync optimization may be configured directly from the Mobile SDK using the [MobileCore.updateConfiguration](../../home/base/mobile-core/configuration/api-reference.md#updateConfiguration) API. Use the `messaging.optimizePushSync` configuration key to control the push token synchronization behavior:
+The push identifier sync optimization may be configured directly from the Mobile SDK using the [MobileCore.updateConfiguration](../../../home/base/mobile-core/configuration/api-reference.md/#updateconfiguration) API. Use the `messaging.optimizePushSync` configuration key to control the push token synchronization behavior:
 
 | Key | Required | Description | Data Type | Operating System |
 | :--- | :--- | :--- | :--- | :--- |
