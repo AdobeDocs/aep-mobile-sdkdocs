@@ -96,7 +96,7 @@ You can update the SDK configuration, including the Messaging configuration valu
 | :--- | :--- | :--- | :--- | :--- |
 | messaging.eventDataset | Yes | Experience Event Dataset ID which can be found from Experience Platform | String | Android/iOS |
 | messaging.optimizePushSync | No | If `false`, allows the push identifier to be synced every time the `setPushIdentifier` API is called. More details can be found in the [push token sync optimizations documentation](./push-notification/push-token-sync-optimizations.md) | Boolean | Android/iOS |
-| messaging.useSandbox | No | A variable that lets the `apnsSandbox` environment be used for receiving push notifications. More details can be found in the [messaging documentation](https://github.com/adobe/aepsdk-messaging-ios/blob/main/Documentation/sources/getting-started.md#using-an-apns-sandbox-push-environment) | Boolean | iOS |
+| messaging.useSandbox | No | A variable that lets the `apnsSandbox` environment be used for receiving push notifications. Read more about [using an APNS sandbox push environment here](https://github.com/adobe/aepsdk-messaging-ios/blob/main/Documentation/sources/installation/getting-started.md) | Boolean | iOS |
 
 ## Next Steps
 
