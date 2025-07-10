@@ -7,6 +7,14 @@ Keywords:
 
 # Release notes
 
+## July 10, 2025
+
+### Roku SDK 1.3.1
+
+* **Case-sensitive XDM keys:** Resolved an issue where`identityMap` keys were incorrectly lowercased, which caused each Edge event to be assigned a new ECID. The Roku SDK now ensures proper case preservation, ensuring consistent ECID handling.
+* **Integer overflow in cookie expiration:** Fixed an edge case that caused 32-bit integer overflow when calculating cookie expiration by switching to 64-bit LongInteger.
+* **Improved sendMediaEvent validation:** Added error logging for invalid playhead values and updated documentation and sample app to clarify expected input behavior.
+
 ## June 24, 2025
 
 ### iOS Core 5.5.2
