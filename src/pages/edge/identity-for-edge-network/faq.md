@@ -56,9 +56,9 @@ Note, however, if the Mobile SDK's privacy status was set to `optedOut` at the t
 
 ## Q: Why is the ECID 'primary' field set to 'false'?
 
-A: The ECID is automatically the primary identifier if no identifier in the identity map is set as primary.
+A: The ECID starts as non-primary to allow other identifiers to take precedence, but Adobe Experience Platform automatically promotes it to primary when needed.
 
-The ECID is set as the primary identifier server-side if no other identifier is set as primary in the identity map. When Experience Events are received by the Adobe Experience Platform, if the identity map does not contain any identifier with "primary" set to "true", server-side logic sets the first ECID's "primary" field to "true" before processing the event.
+On the client, the ECID is sent with "primary" set to false to allow your app to designate other identifiers as primary. On the server, if no identifier has "primary" set to true, Adobe Experience Platform automatically sets the first ECID to "primary" value of true. This design Gives you control over which identifier is most important for your business and ensures every event has a primary identifier, even if none is explicitly set.
 
 ## Q: What is the Experience Cloud ID (ECID) used by the SDK when using both AEP Edge extensions and Adobe Solutions extensions?
 
