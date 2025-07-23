@@ -18,11 +18,11 @@ This document shows users how to set up Assurance to be used with the Optimize M
 
    Once your mobile application is connected to assurance, you should see the Assurance Session Bubble on the devices connected to the session and the number of connected devices in the Assurance portal.
 
-   ![](./assets/assurance-setup/assurance-connected.png)
+   ![](../../../../src/pages/edge/adobe-journey-optimizer-decisioning/assets/assurance-setup/assurance-connected.png)
 
 3. If you do not see Offer Decisioning and Target plugins in the **Assurance plugins section**, on the left side of the page, Ensure that they are properly configured using the **Configure** button available at the bottom of the panel.
    * Click on the **Configure** button at the bottom of the panel to edit.
    * Click on **+** icon to show and **-** to hide the plugin from panel.
    * Note that hidden plugins move to the bottom of the list.
 
-   ![](./assets/assurance-setup/assurance-configure.png)
+   ![](../../../../src/pages/edge/adobe-journey-optimizer-decisioning/assets/assurance-setup/assurance-configure.png)

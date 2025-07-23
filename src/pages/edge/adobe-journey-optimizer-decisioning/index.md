@@ -44,7 +44,7 @@ On [Experience Platform Data Collection](https://experience.adobe.com/#/data-col
 4. Click **Save**.
 5. Follow the publishing process to update SDK configuration. For more details, see the [publish the configuration guide](../../home/getting-started/create-a-mobile-property.md#publish-the-configuration).
 
-![Offer Decisioning and Target extension configuration](./assets/index/configuration.png)
+![Offer Decisioning and Target extension configuration](../../../../src/pages/edge/adobe-journey-optimizer-decisioning/assets/index/configuration.png)
 
 ## Add the Offer Decisioning and Target extension to your app
 
