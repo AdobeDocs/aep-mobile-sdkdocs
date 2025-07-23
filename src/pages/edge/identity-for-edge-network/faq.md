@@ -54,6 +54,12 @@ If the application previously installed the Identity for Experience Cloud ID Ser
 
 Note, however, if the Mobile SDK's privacy status was set to `optedOut` at the time the application is upgraded, the Identity for Experience Cloud ID Service extension will not have an ECID, as it was cleared. In this case, the Identity for Edge Network extension will generate a new ECID.
 
+## Q: Why is the ECID 'primary' field set to 'false'?
+
+A: The ECID starts as non-primary to allow other identifiers to take precedence, but Adobe Experience Platform automatically promotes it to primary when needed.
+
+On the client, the ECID is sent with "primary" set to false to allow your app to designate other identifiers as primary. On the server, if no identifier has "primary" set to true, Adobe Experience Platform automatically sets the first ECID to "primary" value of true. This design gives you control over which identifier is most important for your business and ensures every event has a primary identifier, even if none is explicitly set.
+
 ## Q: What is the Experience Cloud ID (ECID) used by the SDK when using both AEP Edge extensions and Adobe Solutions extensions?
 
 A: The Identity for Edge Network extension and the Identity for Experience Cloud ID Service extension each manage their own ECID. However, the two ECIDs are synced as part of the XDM IdentityMap.

@@ -71,7 +71,7 @@ Or ensuring internet connectivity on the device/simulator.
 If you see an Invalid Mobile SDK Configuration error (see screenshot below), verify the following:
 
 1. Mobile Core is [configured](../mobile-core/configuration/api-reference.md)
-2. Configuration in the Data Collection UI is [published](../../home/getting-started/create-a-mobile-property.md#publish-the-configuration)
+2. Configuration in the Data Collection UI is [published](../../../home/getting-started/create-a-mobile-property.md#publish-the-configuration)
 3. Ensure the device/simulator has internet connectivity
 
 ![Invalid Mobile SDK configuration](./assets/common-issues/assurance-invalid-configuration-error.png)

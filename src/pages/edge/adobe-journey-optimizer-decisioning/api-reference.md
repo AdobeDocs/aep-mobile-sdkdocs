@@ -203,7 +203,8 @@ This class represents the decision propositions received from the decisioning se
 
 <InlineAlert variant="warning" slots="text"/>
 
-In SDK versions lower than Android 3.0.0 and iOS 5.0.0, this class was named `Proposition`
+* In SDK versions lower than Android 3.0.0 and iOS 5.0.0, this class was named `Proposition`
+* OptimizeProposition for ODE offers do not support the `activity` and `placement` objects in SDK versions prior to Android 3.6.0 and iOS 5.6.0
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
