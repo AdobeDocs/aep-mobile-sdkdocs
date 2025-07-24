@@ -7,6 +7,48 @@ Keywords:
 
 # Release notes
 
+## July 23, 2025
+
+### Android Core 3.5.0
+
+## What's Changed
+* Fix ordered search type lookup in event history by @spoorthipujariadobe in https://github.com/adobe/aepsdk-core-android/pull/750
+* Added handling for insert and insertIfNotExists rule consequence by @spoorthipujariadobe in https://github.com/adobe/aepsdk-core-android/pull/749
+* [MOB-22892] Code changes computing webView in accordance with content by @siddique-adobe in https://github.com/adobe/aepsdk-core-android/pull/748
+* Updating Core  version to 3.4.0 by @github-actions[bot] in https://github.com/adobe/aepsdk-core-android/pull/761
+* [MOB-22892] Code changes computing webView in accordance with content… by @spoorthipujariadobe in https://github.com/adobe/aepsdk-core-android/pull/760
+* Stop migrating Mobile Services datastore from v4 SDK by @yangyansong-adbe in https://github.com/adobe/aepsdk-core-android/pull/754
+* Change ExtensionApi getHistoricalEvents API to be on par with Core iOS by @spoorthipujariadobe in https://github.com/adobe/aepsdk-core-android/pull/759
+* Do not enable WebSQL for InAppMessage presentables by @prudrabhat in https://github.com/adobe/aepsdk-core-android/pull/757
+* Catch runtime exceptions when retrieving the extended data from the intent (MOB-23377) by @yangyansong-adbe in https://github.com/adobe/aepsdk-core-android/pull/758
+* Merging main to feature/disqualification branch by @spoorthipujariadobe in https://github.com/adobe/aepsdk-core-android/pull/763
+* Added implementation of mostRecent search type for historical lookup by @spoorthipujariadobe in https://github.com/adobe/aepsdk-core-android/pull/764
+* Reverse merge `main` into `dev` by @prudrabhat in https://github.com/adobe/aepsdk-core-android/pull/768
+* IAM dialog fix for Android 16 and MOB-23069 by @spoorthipujariadobe in https://github.com/adobe/aepsdk-core-android/pull/765
+* Updating Core  version to 3.4.1 by @github-actions[bot] in https://github.com/adobe/aepsdk-core-android/pull/770
+* Reverse merge `main` (3.4.0) into `staging`  by @prudrabhat in https://github.com/adobe/aepsdk-core-android/pull/772
+* Guard against PackageManager.NameNotFoundException for IAM by @prudrabhat in https://github.com/adobe/aepsdk-core-android/pull/774
+* Merge `dev` into `staging` for Core 3.4.1 by @prudrabhat in https://github.com/adobe/aepsdk-core-android/pull/773
+* Rules : Fix logical operation for negative matchers with multiple values #1147 by @PravinPK in https://github.com/adobe/aepsdk-core-android/pull/767
+* Merge `dev` to `staging` to pick up #767 for Core 3.4.1 by @prudrabhat in https://github.com/adobe/aepsdk-core-android/pull/776
+* Update `RuleConsequence` `detail` to be non-optional by @timkimadobe in https://github.com/adobe/aepsdk-core-android/pull/769
+* Dispatch consequence in an rules consequence event if schema type is not eventHistory by @spoorthipujariadobe in https://github.com/adobe/aepsdk-core-android/pull/766
+* Add support for nested lists to map flattening logic by @spoorthipujariadobe in https://github.com/adobe/aepsdk-core-android/pull/777
+* Fix message inset calculation for InAppMessages by @prudrabhat in https://github.com/adobe/aepsdk-core-android/pull/778
+* Migrate to CentralSonatype publishing by @prudrabhat in https://github.com/adobe/aepsdk-core-android/pull/779
+* Early escape from insert/insertIfNotExists if event hash is 0 by @spoorthipujariadobe in https://github.com/adobe/aepsdk-core-android/pull/781
+* Feature/disqualification -> dev by @spoorthipujariadobe in https://github.com/adobe/aepsdk-core-android/pull/780
+* Updating Core  version to 3.5.0 by @github-actions[bot] in https://github.com/adobe/aepsdk-core-android/pull/782
+* Merge dev into staging for Core 3.5.0 by @spoorthipujariadobe in https://github.com/adobe/aepsdk-core-android/pull/783
+* change event history insert log level by @spoorthipujariadobe in https://github.com/adobe/aepsdk-core-android/pull/785
+* Merge `dev` into `staging` to incorporate #785 by @prudrabhat in https://github.com/adobe/aepsdk-core-android/pull/786
+* Merge `staging` into `main` for Core 3.5.0 by @prudrabhat in https://github.com/adobe/aepsdk-core-android/pull/784
+
+## New Contributors
+* @siddique-adobe made their first contribution in https://github.com/adobe/aepsdk-core-android/pull/748
+
+**Full Changelog**: https://github.com/adobe/aepsdk-core-android/compare/v3.4.1-core...v3.5.0-core
+
 ## July 10, 2025
 
 ### Roku SDK 1.3.1
