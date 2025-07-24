@@ -26,6 +26,7 @@ You can add and retrieve custom metadata in an in-app message payload by complet
 Available since
 
 The ability to retrieve custom metadata from an in-app message was first added in:
+
 * Mobile SDK Messaging extension for iOS version **5.7.0**
 * Mobile SDK Messaging extension for Android version **3.4.0**
 
@@ -58,4 +59,3 @@ Android 2.x (Older version)
 iOS
 
 <Tabs query="platform=ios&function=metadata"/>
-
