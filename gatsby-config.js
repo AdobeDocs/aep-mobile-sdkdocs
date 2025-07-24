@@ -265,6 +265,10 @@ module.exports = {
                                                 path: "/edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate"
                                             },
                                             {
+                                                title: "Use custom metadata with In-app Messages",
+                                                path: "/edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-metadata"
+                                            },
+                                            {
                                                 title: "Call native code from the JavaScript of an in-app message",
                                                 path: "/edge/adobe-journey-optimizer/in-app-message/tutorials/native-from-javascript"
                                             },
