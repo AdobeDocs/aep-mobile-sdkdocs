@@ -1,6 +1,6 @@
 ---
 title: Validation and Preview using Assurance
-description: An introduction to Assurance features with Adobe Journey Optimizer Decisioning.
+description: An introduction to Assurance features with Offer Decisioning and Target.
 keywords:
 - Assurance
 - Validate setup
@@ -9,7 +9,7 @@ keywords:
 
 # Validation and Preview using Assurance
 
-This document shows you how to use Assurance to validate decisioning setup, review requests and results, and simulate different results.
+This document shows you how to use Assurance to validate Offer Decisioning and Target setup, review requests and results, and simulate different results.
 
 ## Assurance Reference
 
@@ -17,6 +17,6 @@ This document shows you how to use Assurance to validate decisioning setup, revi
 
 ## Tutorials
 
-* [**Setting up Decisioning plugins in Assurance**](./assurance-setup.md)
-* [**Decisioning Validation view**](./optimize-configuration-view.md)
-* [**Decisioning Review & Simulate**](./review-simulate.md)
+* [**Setting up Offer Decisioning and Target plugins in Assurance**](./assurance-setup.md)
+* [**Offer Decisioning and Target Validation view**](./optimize-configuration-view.md)
+* [**Offer Decisioning and Target Review & Simulate**](./review-simulate.md)
