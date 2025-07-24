@@ -92,4 +92,12 @@ This rule is currently handled by the [Mobile Core](../index.md) extension.
 
 | Friendly name | Key | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| Event data | `eventdata` | object | Yes | Dictionary of pairs to overlay on the triggering event's EventData. For more information, see the [attach data tutorial](../../../resources/user-guides/attach-data.md). |
+| Event data | `eventdata` | object | Yes | Dictionary of pairs to overlay on the triggering event's EventData. For more information, see the [attach data tutorial](../../../../resources/user-guides/attach-data.md). |
+
+## Modify data consequence
+
+This rule is currently handled by the [Mobile Core](../index.md) extension.
+
+| Friendly name | Key | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| Event data | `eventdata` | object | Yes | Dictionary of key-value pairs to overlay on the triggering Event's EventData. For more information, see the [modify data tutorial](../../../../resources/user-guides/modify-data.md). |
