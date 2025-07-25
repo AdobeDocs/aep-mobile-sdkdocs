@@ -43,6 +43,7 @@ Rules are delivered as a standard ZIP archive, which contains a `rules.json` fil
 | :--- | :--- | :--- | :--- | :--- |
 | Condition | `condition` | object |  Yes | Holds the definition for the base Condition object for this rule. Each Condition object can be a Group or a Matcher condition type. Group conditions contain a logic type and an array of condition objects. Matcher conditions contain a key, value, and a matcher type.   There is one root-level condition for a rule, and this condition can have any number of nested conditions by using the group construct. For more information, please read the [condition object definition](#consequence-object-definition). |
 | Action | `consequences` | array | Yes | Array of consequence objects, where each object contains the details for the associated consequence that are executed when the associated condition evaluates to `true`. For more information, please read the [consequence object definition](#consequence-object-definition). |
+| Meta data | `meta` | object | No | A free-form object that may contain additional data about the rule. |
 
 ## Condition object definition
 
@@ -63,6 +64,7 @@ A Group condition contains an array of conditions, which makes the conditions in
 | :--- | :--- | :--- |
 | Group | `group` | This condition is a container that holds additional conditions and the logical evaluator that is used to process those conditions. |
 | Matcher | `matcher` | This condition holds the key, matcher type, and value that should be evaluated. |
+| Historical Search	 | `historical` | This condition holds an array of events that might have occurred on the device.  A historical condition will evaluate based on data found in the device's event history. |
 
 ### Definition object
 
@@ -84,6 +86,25 @@ The keys that are used here are different than those used for In-App message mat
 | Key | `key` | `string` | `"key":"key1"` | Key to get the value from the dictionary that is passed as a parameter to the rules processor. |
 | Matches | `matcher` | `string` | `"matcher":"eq"` | Matcher type that determines the kind of evaluation to use between the two values. |
 | Values | `values` | `array` | `"values":["value0", "value1"]` | List of values that are compared (using OR) against the value in the parameter dictionary for the `"key"` key. |
+
+#### Historical condition type
+
+| **Friendly name** | **Key** | **Type** | **Description** |
+| :--- | :--- | :--- | :--- | :--- |
+| Events | `events` | `array` | An array of anonymous objects containing key-value pairs with primitive values (string, numeric, boolean).  The count of matching events found in history will be used as the left-hand side of the operand during evaluation. When more than one event object is specified, the value of `searchType` determines whether we are looking for events in order, or just an aggregate sum of event counts. When only a single event object exists, the `searchType` of "any" is implied.|
+| From | `from` | `number` | Number of milliseconds since the Epoch that represents the lower bounds of the date range when looking for the Event. If not provided, this Event will be looked up from the beginning of Event history on the device. |
+| To | `to` | `number` | Number of milliseconds since the Epoch that represents the upper bounds of the date range when looking for the Event. If not provided, the search will consider all events up to current on the device. |
+| Search Type | `searchType` | `string` | Search type, determines how events will be queried and their results interpreted when the count of events is more than one. |
+| Matches | `matcher` | `string` | Matcher type, determines how to evaluate the count of matching historical events found. |
+| Value | `value` | `number` | Number of occurrences of an event to evaluate against. |
+
+### Search Types
+
+| **Name** | **Value** | **Description** |
+| :--- | :--- | :--- |
+| Any | `any` | The return type for this search is integer.  It represents the sum of record counts for each event provided. All events provided will be queried against event history using the from and to timestamps provided.  The return value will be used as the integer value for the left-hand side of the matcher comparison. |
+| Ordered | `ordered` | The return type for this search is integer, representing boolean (0 == false, 1 == true).  It indicates whether the provided events occurred in the same sequence as indicated by the `events` array. Each provided event will be queried in order. As long as the count of an event is greater than one, the subsequent event will be queried for using the oldest timestamp of the previous event.  If the end of the events array is reached and each event has been found, the evaluation returns one (1). If the count for any event is ever zero (it does not exist in the event history), the evaluation will shortcut out and return zero (0). |
+| Most recent | `mostRecent` | The return type for this search is an integer. It represents the 0-based index of the most recent event, or -1 if none of the events are present in the event history. For example, given three distinct events in the `events` parameter: A, B, and C: `events: [A, B, C]`. The system searches for all three events in the event history and checks which event is the most recent. For example, if B is the most recent event, the return value is 1. If A is the most recent event, the return value is 0. |
 
 ### Logic types
 
@@ -222,6 +243,8 @@ The consequences section of a rule lists the file names of each consequence obje
 | Open URL | `url` | Passes the provided URL to be opened by the platform that is most commonly used for app deep linking. | [Open URL consequence detail definition](./consequence-details.md#open-url-consequence) |
 | Client Side Profile | `csp` | Create or delete operations against the client-side profile. | [Profile consequence detail definition](./consequence-details.md#profile-consequence) |
 | Attach Data | `add` | Attaches key-value pairs to the EventData of an existing Event | [Attach data consequence detail definition](./consequence-details.md#attach-data-consequence) |
+| Modify Data | `mod` | Modifies data in the triggering event | [Modify data consequence detail definition](./consequence-details.md#modify-data-consequence) |
+| Schema | `schema` | Schema-based actions for easy parsing by AEP Mobile SDKs | |
 
 ## rules.json examples
 
