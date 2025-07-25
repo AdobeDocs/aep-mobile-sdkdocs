@@ -14,12 +14,12 @@ keywords:
 
 # ImageOnlyTemplate
  
-This class represents an ImageOnly templated content card authored in Adobe Journey Optimizer. 
- 
-An image only template content card includes only an image that can be tapped like a button. An optional dismiss button can be added to dismiss the content card. 
- 
-Use the ImageOnlyTemplate class to customize the appearance of the image only templated content cards. 
- 
+This class represents an ImageOnly templated content card authored in Adobe Journey Optimizer.
+
+An image only template content card includes only an image that can be tapped like a button. An optional dismiss button can be added to dismiss the content card.
+
+Use the ImageOnlyTemplate class to customize the appearance of the image only templated content cards.
+
 ImageOnlyTemplate conforms to `ObservableObject`, allowing it to be used reactively in SwiftUI views.
 
 ## Layout
