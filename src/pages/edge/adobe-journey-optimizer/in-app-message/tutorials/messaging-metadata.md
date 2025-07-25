@@ -38,7 +38,7 @@ When authoring an in-app message in AJO, from the **Content** tab, under **Messa
 
 ## Implement and assign a `PresentationDelegate`/`MessagingDelegate`
 
-To retrieve custom metadata from a `Message` object, you will first need to implement and set a `PresentationDelegate` (for newer Android SDK versions) or `MessagingDelegate` (for iOS SDK and older Android SDK versions).
+To retrieve custom metadata from a `Message` object, you will first need to implement and set a `PresentationDelegate` (for Android SDK) or `MessagingDelegate` (for iOS SDK).
 
 Please read the [tutorial](./messaging-delegate.md) for more detailed instructions on implementing and using a PresentationDelegate/MessagingDelegate.
 
@@ -46,15 +46,11 @@ Please read the [tutorial](./messaging-delegate.md) for more detailed instructio
 
 From within the `PresentationDelegate` or `MessagingDelegate`, call `Message.getMetadata()` or `Message.metadata` after getting an instance of the `Message` object.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android 3.x
 
 <Tabs query="platform=android3x&function=metadata"/>
-
-Android 2.x (Older version)
-
-<Tabs query="platform=android2x&function=metadata"/>
 
 iOS
 

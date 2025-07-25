@@ -42,24 +42,6 @@ public void canShow(Presentable<?> presentable) {
 }
 ```
 
-<Variant platform="android2x" function="metadata" repeat="3"/>
-
-The following example shows retrieving custom metadata using the `Message.getMetadata()` API. The example uses the `shouldShowMessage` method of the `MessagingDelegate`, however you may retrieve the custom metadata anywhere within the delegate where the `Message` object is available.
-
-#### Java
-
-```java
-@Override
-public boolean shouldShowMessage(FullscreenMessage fullscreenMessage) {
-  Message message = (Message) fullscreenMessage.getParent();
-  
-  // Retrieve the custom metadata
-  if (message != null) {
-    Map<String, Object> metadata = message.getMetadata();
-  }
-}
-```
-
 <Variant platform="ios" function="metadata" repeat="3"/>
 
 The following example shows retrieving custom metadata using the `Message.metadata` API. The example uses the `shouldShowMessage` method of the `MessagingDelegate`, however you may retrieve the custom metadata anywhere within the delegate where the `Message` object is available.
