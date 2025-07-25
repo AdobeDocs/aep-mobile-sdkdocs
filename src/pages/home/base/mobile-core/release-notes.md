@@ -8,6 +8,25 @@ keywords:
 
 # Release notes
 
+## July 24, 2025
+
+### iOS Core 5.6.0
+
+* Adds rules engine support for the new event history operations `insert` and `insertIfNotExists`.
+    * `insert` unconditionally records consequence content as an event history entry.
+    * `insertIfNotExists` records the entry only when no existing record shares the same hash.
+* Adds support for the new `mostRecent` historical condition type, which allows rules engine to evaluate the most recently occurring event from a list of events.
+
+## July 23, 2025
+
+### Android Core 3.5.0
+
+* Fixed an issue causing incorrect inset calculation for in-app messages.
+* Adds rules engine support for the new event history operations `insert` and `insertIfNotExists`.
+* `insert` unconditionally records consequence content as an event history entry.
+* `insertIfNotExists` records the entry only when no existing record shares the same hash.
+* Adds support for the new `mostRecent` historical condition type, which allows rules engine to evaluate the most recently occurring event from a list of events.
+
 ## June 24, 2025
 
 ### iOS Core 5.5.2

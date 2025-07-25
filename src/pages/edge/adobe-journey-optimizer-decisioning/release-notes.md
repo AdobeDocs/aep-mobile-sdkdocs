@@ -8,6 +8,28 @@ keywords:
 
 # Release notes
 
+## July 24, 2025
+
+### Android Optimize 3.6.1
+
+* Fixed callback conflict where error was not delivered when both success and error were triggered.
+* Upgraded `aepsdk-commons` to `3.4.1`, `aepsdk-core-android` to `3.5.0` and `aepsdk-edge-android` to `3.0.2`.
+
+* ## What's Changed
+* [Back Merge] Main to Staging by @siddique-adobe in https://github.com/adobe/aepsdk-optimize-android/pull/191
+* MOB-23669 : Removing return statements for error while parsing callback event by @sagar-sharma-adobe in https://github.com/adobe/aepsdk-optimize-android/pull/192
+* [MOB-23615] Enabling gradle task to generate verification.properties file for Optimize SDK for Play console verification by @siddique-adobe in https://github.com/adobe/aepsdk-optimize-android/pull/193
+* Updating version to 3.6.1 by @github-actions[bot] in https://github.com/adobe/aepsdk-optimize-android/pull/194
+* Dev v3.6.1 to Staging by @siddique-adobe in https://github.com/adobe/aepsdk-optimize-android/pull/195
+* [MOB-23821] Migrating repo release workflows to adapt sonatype migration by @siddique-adobe in https://github.com/adobe/aepsdk-optimize-android/pull/196
+* Dev v3.6.1 to Staging by @siddique-adobe in https://github.com/adobe/aepsdk-optimize-android/pull/197
+* [MOB-23615] Updating gradle task to generate verification.properties file for Optimize SDK  by @siddique-adobe in https://github.com/adobe/aepsdk-optimize-android/pull/198
+* Dev v3.6.1 to Staging by @siddique-adobe in https://github.com/adobe/aepsdk-optimize-android/pull/199
+* Staging to Main by @siddique-adobe in https://github.com/adobe/aepsdk-optimize-android/pull/200
+
+
+**Full Changelog**: https://github.com/adobe/aepsdk-optimize-android/compare/v3.6.0...v3.6.1
+
 ## June 12, 2025
 
 ### iOS Optimize 5.6.0
