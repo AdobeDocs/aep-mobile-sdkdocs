@@ -1,8 +1,8 @@
 ---
-title: Adobe Journey Optimizer Decisioning API reference
-description: An API reference for the Adobe Journey Optimizer Decisioning mobile extension.
+title: Offer Decisioning and Target API reference
+description: An API reference for the Offer Decisioning and Target mobile extension.
 keywords:
-- Adobe Journey Optimizer Decisioning
+- Offer Decisioning and Target
 - API reference
 ---
 

@@ -363,7 +363,7 @@ Keywords:
 
 ### Android Optimize 3.3.1
 
-* Added capability to configure timeout value for the Update Proposition API via Adobe Journey Optimizer - Decisioning card in Mobile Tags property.
+* Added capability to configure timeout value for the Update Proposition API via Offer Decisioning and Target card in Mobile Tags property.
 
 ## March 7, 2025
 
@@ -375,11 +375,11 @@ Keywords:
 
 ### iOS Optimize 5.3.0
 
-* Added capability to configure timeout value for the Update Proposition API via Adobe Journey Optimizer - Decisioning card in Mobile Tags property.
+* Added capability to configure timeout value for the Update Proposition API via Offer Decisioning and Target card in Mobile Tags property.
 
-### Adobe Journey Optimizer - Decisioning extension 1.1.0
+### Offer Decisioning and Target extension 1.1.0
 
-Added configuration capability to the Adobe Journey Optimizer - Decisioning extension in the Tags UI for mobile Tag Properties.
+Added configuration capability to the Offer Decisioning and Target extension in the Tags UI for mobile Tag Properties.
 
 Users can now configure:
 
@@ -2166,7 +2166,7 @@ Major version update for [Places](https://github.com/adobe/aepsdk-react-native/t
 
 ### React Native Optimize 6.0.0
 
-Major version update for [Adobe Journey Optimizer - Decisioning Extension](https://github.com/adobe/aepsdk-react-native/tree/main/packages/optimize) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
+Major version update for [Offer Decisioning and Target Extension](https://github.com/adobe/aepsdk-react-native/tree/main/packages/optimize) for Adobe Experience Platform React Native Library compatible with React Native Core 6.0.0. The current release includes the following changes:
 
 * Updated to use Experience Platform Android `3.x` SDKs.
 * Updated to use Experience Platform iOS `5.x` SDKs.
@@ -2236,7 +2236,7 @@ Note that all these extensions must be updated together.
 * Android Adobe Experience Platform Assurance 3.0.0
 * Android Adobe Experience Platform Edge Network 3.0.0
 * Android Adobe Journey Optimizer 3.0.0
-* Android Adobe Journey Optimizer - Decisioning 3.0.0
+* Android Offer Decisioning and Target 3.0.0
 * Android Consent for Edge Network 3.0.0
 * Android Identity for Edge Network 3.0.0
 * Android Media for Edge Network 3.0.0
@@ -2302,7 +2302,7 @@ Major version update for [Adobe Journey Optimizer](../../edge/adobe-journey-opti
 
 ### Android Optimize 3.0.0
 
-Major version update for [Adobe Journey Optimizer - Decisioning Extension](../../edge/adobe-journey-optimizer-decisioning/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+Major version update for [Offer Decisioning and Target Extension](../../edge/adobe-journey-optimizer-decisioning/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
 * Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
@@ -2488,7 +2488,7 @@ Note that all these extensions must be updated together.
 * iOS Adobe Experience Platform Assurance 5.0.0
 * iOS Adobe Experience Platform Edge Network 5.0.0
 * iOS Adobe Journey Optimizer 5.0.0
-* iOS Adobe Journey Optimizer - Decisioning 5.0.0
+* iOS Offer Decisioning and Target 5.0.0
 * iOS Consent for Edge Network 5.0.0
 * iOS Identity for Edge Network 5.0.0
 * iOS Media for Edge Network 5.0.0
@@ -2536,7 +2536,7 @@ Major version update for [Adobe Journey Optimizer](../../edge/adobe-journey-opti
 
 ### iOS Optimize 5.0.0
 
-Major version update for [Adobe Journey Optimizer - Decisioning Extension](../../edge/adobe-journey-optimizer-decisioning/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+Major version update for [Offer Decisioning and Target Extension](../../edge/adobe-journey-optimizer-decisioning/index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 12.0.
 * Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
