@@ -44,7 +44,7 @@ public void canShow(Presentable<?> presentable) {
 
 <Variant platform="android2x" function="metadata" repeat="3"/>
 
-The following example shows retrieving custom metadata using the `Message.getMetadata()` API. The example uses the `shouldShowMessage` method of the `PresentationDelegate`, however you may retrieve the custom metadata anywhere within the delegate where the `Message` object is available.
+The following example shows retrieving custom metadata using the `Message.getMetadata()` API. The example uses the `shouldShowMessage` method of the `MessagingDelegate`, however you may retrieve the custom metadata anywhere within the delegate where the `Message` object is available.
 
 #### Java
 
@@ -62,7 +62,7 @@ public boolean shouldShowMessage(FullscreenMessage fullscreenMessage) {
 
 <Variant platform="ios" function="metadata" repeat="3"/>
 
-The following example shows retrieving custom metadata using the `Message.metadata` API. The example uses the `shouldShowMessage` method of the `MessageDelegate`, however you may retrieve the custom metadata anywhere within the delegate where the `Message` object is available.
+The following example shows retrieving custom metadata using the `Message.metadata` API. The example uses the `shouldShowMessage` method of the `MessagingDelegate`, however you may retrieve the custom metadata anywhere within the delegate where the `Message` object is available.
 
 #### Swift
 
@@ -72,7 +72,7 @@ func shouldShowMessage(message: Showable) -> Bool {
     let message = fullscreenMessage?.parent
 
     // Retrieve the custom metadata
-    let metadata = message.metadata
+    let metadata = message?.metadata
 
     return true
 }

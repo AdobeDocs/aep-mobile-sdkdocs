@@ -1,5 +1,5 @@
 ---
-title: Use custom metadata with In-app Messages
+title: Use custom metadata with in-app messages
 description: A guide that explains how to add and retrieve custom metadata for in-app messages.
 keywords:
 - Adobe Journey Optimizer
@@ -13,7 +13,7 @@ keywords:
 
 import Tabs from './tabs/messaging-metadata.md'
 
-# Use custom metadata with In-app Messages
+# Use custom metadata with in-app messages
 
 You can add and retrieve custom metadata in an in-app message payload by completing the following steps:
 
@@ -36,11 +36,11 @@ When authoring an in-app message in AJO, from the **Content** tab, under **Messa
 
 ![ajo-inapp-kvp-data](../assets/messaging-metadata/ajo-inapp-kvp-data.png)
 
-## Implement and assign a `PresentationDelegate`/ `MessagingDelegate`
+## Implement and assign a `PresentationDelegate`/`MessagingDelegate`
 
-To retrieve custom metadata from a `Message` object, you will first need to implement and set a `PresentationDelegate` or `MessagingDelegate` (for older Android SDK versions and iOS SDK).
+To retrieve custom metadata from a `Message` object, you will first need to implement and set a `PresentationDelegate` (for newer Android SDK versions) or `MessagingDelegate` (for iOS SDK and older Android SDK versions).
 
-Please read the [tutorial](./messaging-delegate.md) for more detailed instructions on implementing and using a PresentationDelegate/ MessagingDelegate (for older Android SDK versions and iOS SDK).
+Please read the [tutorial](./messaging-delegate.md) for more detailed instructions on implementing and using a PresentationDelegate/MessagingDelegate.
 
 ## Retrieve custom metadata from the Message object
 
