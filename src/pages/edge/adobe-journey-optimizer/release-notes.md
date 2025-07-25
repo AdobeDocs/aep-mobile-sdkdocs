@@ -9,6 +9,20 @@ keywords:
 
 # Release notes
 
+## July 24, 2025
+
+### Android Messaging 3.4.0
+
+* Adds support for retrieving custom key/value pairs from in-app messages using the `Message.metadata` API.
+* Adds support for content card qualification, dismiss, and disqualification using event history operation rules.
+* Fixed a bug preventing the on-device caches from being properly updated when the requested surface contains no eligible messages.
+
+### iOS Messaging 5.7.0
+
+* Adds support for retrieving custom key/value pairs from in-app messages using the `Message.metadata` API.
+* Adds support for content card qualification, dismiss, and disqualification using event history operation rules.
+* Fixed a bug preventing the on-device caches from being properly updated when the requested surface contains no eligible messages.
+
 ## June 9, 2025
 
 ### React Native Messaging 7.1.0

@@ -8,6 +8,13 @@ keywords:
 
 # Release notes
 
+## July 24, 2025
+
+### Android Optimize 3.6.1
+
+* Fixed callback conflict where error was not delivered when both success and error were triggered.
+* Upgraded `aepsdk-commons` to `3.4.1`, `aepsdk-core-android` to `3.5.0` and `aepsdk-edge-android` to `3.0.2`.
+
 ## June 12, 2025
 
 ### iOS Optimize 5.6.0
