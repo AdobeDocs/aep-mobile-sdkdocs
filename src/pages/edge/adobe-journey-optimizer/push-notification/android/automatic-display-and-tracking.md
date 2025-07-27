@@ -48,6 +48,10 @@ public class YourApp extends Application {
 }
 ```
 
+<InlineAlert variant="info" slots="text"/>
+
+Calling [resetIdentities](../../api-reference/#resetidentities) will clear the push token from the Mobile SDK. After calling resetIdentities, the push token must be re-synced using [setPushIdentifier](../../../../home/base/mobile-core/api-reference.md#setpushidentifier).
+
 ## Display and track push notification
 
 ### Register Messaging extension's FirebaseMessagingService

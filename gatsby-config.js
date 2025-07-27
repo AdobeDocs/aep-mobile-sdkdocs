@@ -245,6 +245,10 @@ module.exports = {
                                     {
                                         title: "Payload keys",
                                         path: "/edge/adobe-journey-optimizer/push-notification/push-payload"
+                                    },
+                                    {
+                                        title: "Push token sync optimizations",
+                                        path: "/edge/adobe-journey-optimizer/push-notification/push-token-sync-optimizations"
                                     }
                                 ]
                             },
