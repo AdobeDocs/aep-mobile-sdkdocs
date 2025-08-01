@@ -7,6 +7,20 @@ Keywords:
 
 # Release notes
 
+## July 31, 2025
+
+### Android Optimize 3.6.2
+
+* Integrated and enabled the flag for Google Play Console Verification gradle task to generated `verification.properties` file for claiming Optimize SDK on google play console
+* Upgraded `aepsdk-gradle-plugin` to `3.4.3` and workflows version to `gha-android-3.4.3`
+
+## July 30, 2025
+
+### iOS Optimize 5.6.1
+
+* Improved AEPOptimizeError Swift/Objective-C interoperability.
+* Renamed Adobe Journey Optimizer Decisioning extension to Offer Decisioning and Target extension in docs.
+
 ## July 24, 2025
 
 ### Android BOM 3.14.0
