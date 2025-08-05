@@ -128,7 +128,7 @@ iOS
 
 ## getPrivacyStatus
 
-You can use the `getPrivacyStatus` API to retrieve the current privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../../resources/privacy-and-gdpr.md#getprivacystatus)
+You can use the `getPrivacyStatus` API to retrieve the current privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../../../resources/privacy-and-gdpr.md#getprivacystatus)
 
 ## getSdkIdentities
 
