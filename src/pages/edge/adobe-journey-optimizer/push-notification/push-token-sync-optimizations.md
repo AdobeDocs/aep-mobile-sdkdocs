@@ -21,7 +21,7 @@ Starting with release 3.3.3 on Android and 5.6.3 on iOS, the AEPMessaging extens
 
 ### Tags mobile property
 
-The push identifier sync optimization is configurable from a Tags mobile property using the Adobe Journey Optimizer extension version 1.0.1 or greater. Use the **Optimize Push Identifier Updates** checkbox to enable or disable the optimization. The configuration is enabled by default.
+The push identifier sync optimization is configurable from a Tags mobile property using the Adobe Journey Optimizer extension version 1.0.2 or greater. Use the **Optimize Push Identifier Updates** checkbox to enable or disable the optimization. The configuration is enabled by default.
 
 ### Mobile SDK Configuration APIs
 
