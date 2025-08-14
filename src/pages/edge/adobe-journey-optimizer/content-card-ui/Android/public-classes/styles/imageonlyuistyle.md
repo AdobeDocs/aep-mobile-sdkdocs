@@ -42,5 +42,3 @@ val imageOnlyStyle = ImageOnlyUIStyle.Builder()
     .imageStyle(AepImageStyle(contentScale = ContentScale.Fit))
     .build()
 ```
-
-

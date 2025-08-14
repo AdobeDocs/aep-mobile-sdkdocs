@@ -17,9 +17,9 @@ keywords:
 
 The `AepUI` interface represents a UI component that can be rendered using the Adobe Experience Platform compose UI library. The Experience Platform compose UI library currently supports rendering the following UI template:
 
-- `SmallImageUI` which renders `Small Image template`
-- `LargeImageUI` which renders `Large Image template`
-- `ImageOnlyUI` which renders `Image Only template`
+* `SmallImageUI` which renders `Small Image template`
+* `LargeImageUI` which renders `Large Image template`
+* `ImageOnlyUI` which renders `Image Only template`
 
 ## Interface Definition
 
@@ -81,7 +81,7 @@ Updates the state of the UI component with a new state.
 
 * _newState_ - The new state of type `S` to update within the UI component.
 
-#### Syntax
+##### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 

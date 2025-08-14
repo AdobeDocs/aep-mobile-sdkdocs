@@ -51,5 +51,3 @@ val largeImageStyle = LargeImageUIStyle.Builder()
     .buttonRowStyle(AepRowStyle())
     .build()
 ```
-
-

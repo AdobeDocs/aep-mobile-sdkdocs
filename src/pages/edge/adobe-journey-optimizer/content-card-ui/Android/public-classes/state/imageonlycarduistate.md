@@ -36,5 +36,3 @@ data class ImageOnlyCardUIState(
 | ----------- | ------- | ---------------------------------------------- |
 | `dismissed` | Boolean | Indicates whether the card has been dismissed. |
 | `displayed` | Boolean | Indicates whether the card has been displayed. |
-
-

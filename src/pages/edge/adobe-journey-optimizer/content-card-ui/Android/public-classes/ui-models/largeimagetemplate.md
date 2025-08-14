@@ -44,5 +44,3 @@ Returns the type of this template, which is `AepUITemplateType.LARGE_IMAGE`.
 ``` kotlin
 override fun getType() = AepUITemplateType.LARGE_IMAGE
 ```
-
-

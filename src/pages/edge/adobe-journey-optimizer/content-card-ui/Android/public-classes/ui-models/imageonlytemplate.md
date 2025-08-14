@@ -41,5 +41,3 @@ Returns the type of this template, which is `AepUITemplateType.IMAGE_ONLY`.
 ``` kotlin
 override fun getType() = AepUITemplateType.IMAGE_ONLY
 ```
-
-
