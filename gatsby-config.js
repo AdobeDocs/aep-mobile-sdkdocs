@@ -269,6 +269,10 @@ module.exports = {
                                                 path: "/edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate"
                                             },
                                             {
+                                                title: "Use custom metadata with in-app messages",
+                                                path: "/edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-metadata"
+                                            },
+                                            {
                                                 title: "Call native code from the JavaScript of an in-app message",
                                                 path: "/edge/adobe-journey-optimizer/in-app-message/tutorials/native-from-javascript"
                                             },
@@ -627,7 +631,7 @@ module.exports = {
                         ]
                     },
                     {
-                        title: "Adobe Journey Optimizer Decisioning",
+                        title: "Offer Decisioning and Target",
                         path: "/edge/adobe-journey-optimizer-decisioning",
                         pages: [{
                                 title: "Overview",

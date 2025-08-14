@@ -19,7 +19,7 @@ To use this view, follow the steps outlined below:
 1. [Set up](./assurance-setup.md) an Assurance session
 2. In the **Assurance Plugin Section**, on left side, select **Validate Setup**
 
-![Validate Setup](./assets/optimize-configuration-view/optimize-setup-view.png)
+![Validate Setup](../../../../src/pages/edge/adobe-journey-optimizer-decisioning/assets/optimize-configuration-view/optimize-setup-view.png)
 
 ## Datastream setup validation
 
