@@ -31,4 +31,4 @@ ImageOnlyTemplate conforms to `ObservableObject`, allowing it to be used reactiv
 | Property      | Type                                           | Description                                                  |
 | ------------- | ---------------------------------------------- | ------------------------------------------------------------ |
 | image         | [AEPImage](../UIElements/aepimage.md)          | The image to be shown on the content card.                   |
-| dismissButton | [AEPDismissButton](../UIElements/aepdismissbutton.md) | *Optional*<br>The dismiss button for the content card.       |
+| dismissButton | [AEPDismissButton](../UIElements/aepdismissbutton.md) | *Optional*<br/>The dismiss button for the content card.       |
