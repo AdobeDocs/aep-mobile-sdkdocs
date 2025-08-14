@@ -15,7 +15,7 @@ keywords:
 
 # ImageOnlyCardUIState
 
-Class which implements [AepCardUIState](./aepcarduistate.md) and represents the UI state of an Image Only template card.
+Class which implements [AepCardUIState](./aepcarduistate.md) and represents the UI state of an image-only template card.
 
 ## Class Definition
 

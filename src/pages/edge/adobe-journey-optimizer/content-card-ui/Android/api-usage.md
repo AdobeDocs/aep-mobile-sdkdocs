@@ -19,7 +19,7 @@ This document provides information on how to use the Messaging APIs to receive c
 
 ## getContentCardUI
 
-The `getContentCardUI` method retrieves a flow of Result containing a list [AepUI](./public-classes/aepui.md) objects for the provided surface. These `AepUI` objects represent templated content cards whose UI can be rendered using provided card composables.
+The `getContentCardUI` method retrieves a [Flow](https://developer.android.com/kotlin/flow) of [Result](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/) which contains a list [AepUI](./public-classes/aepui.md) objects for the provided surface. These `AepUI` objects represent templated content cards whose UI can be rendered using provided card composables.
 
 <InlineAlert variant="info" slots="text"/>
 

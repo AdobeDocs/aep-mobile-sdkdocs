@@ -39,7 +39,7 @@ override suspend fun getContent(): Flow<Result<List<AepUITemplate>>>
 
 ### getContentCardUI
 
-Retrieves a flow of AepUI instances for the given surface. This function initiates the content fetch using [getContent](#getcontent) and then returns a flow of AepUI instances that represent the UI templates. The flow emits updates whenever new content is fetched or any changes occur.
+Retrieves a [Flow](https://developer.android.com/kotlin/flow) of [Result](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/) which contains a list of AepUI instances for the given surface. This function initiates the content fetch using [getContent](#getcontent) and then returns a flow of AepUI instances that represent the UI templates. The flow emits updates whenever new content is fetched or any changes occur.
 
 #### Returns
 
