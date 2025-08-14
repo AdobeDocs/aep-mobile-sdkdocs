@@ -21,7 +21,7 @@ Class which implements [AepCardUIState](./aepcarduistate.md) and represents the 
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ```kotlin
 data class SmallImageCardUIState(

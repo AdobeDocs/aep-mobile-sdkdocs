@@ -17,13 +17,15 @@ keywords:
 
 The `AepUI` interface represents a UI component that can be rendered using the Adobe Experience Platform compose UI library. The Experience Platform compose UI library currently supports rendering the following UI template:
 
-`SmallImageUI` which renders `Small Image template`
+- `SmallImageUI` which renders `Small Image template`
+- `LargeImageUI` which renders `Large Image template`
+- `ImageOnlyUI` which renders `Image Only template`
 
 ## Interface Definition
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ```kotlin
 sealed interface AepUI<T : AepUITemplate, S : AepCardUIState> {
@@ -39,15 +41,15 @@ sealed interface AepUI<T : AepUITemplate, S : AepCardUIState> {
 
 Retrieves the template associated with this UI component.
 
-### Returns
+#### Returns
 
 A template of type `T` which is an implementation of the  `AepUITemplate` interface.
 
-### Syntax
+#### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ``` kotlin
 fun getTemplate(): T
@@ -57,15 +59,15 @@ fun getTemplate(): T
 
 Retrieves the current state of the UI component.
 
-### Returns
+#### Returns
 
 A state of type `S` which is a subclass of the  `AepCardUIState` class.
 
-### Syntax
+#### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ``` kotlin
 fun getState(): S
@@ -75,15 +77,15 @@ fun getState(): S
 
 Updates the state of the UI component with a new state.
 
-### Parameters
+#### Parameters
 
 * _newState_ - The new state of type `S` to update within the UI component.
 
-### Syntax
+#### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ``` kotlin
 fun updateState(newState: S)
@@ -91,75 +93,53 @@ fun updateState(newState: S)
 
 ## Implementing Classes
 
-## SmallImageUI
+### ImageOnlyUI
 
-Implementation of the [AepUI](#AepUI) interface used in rendering a UI for a [SmallImageTemplate](./ui-models/smallimagetemplate.md).
+Implementation of the [AepUI](#AepUI) interface used in rendering a UI for a [ImageOnlyTemplate](./ui-models/imageonlytemplate.md).
 
-## Class Definition
+**Class Definition**
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
+
+```kotlin
+class ImageOnlyUI(
+    private val template: ImageOnlyTemplate,
+    state: ImageOnlyCardUIState
+) : AepUI<ImageOnlyTemplate, ImageOnlyCardUIState>
+```
+
+### LargeImageUI
+
+Implementation of the [AepUI](#AepUI) interface used in rendering a UI for a [LargeImageTemplate](./ui-models/largeimagetemplate.md).
+
+**Class Definition**
+
+<CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
+
+#### Kotlin
+
+```kotlin
+class LargeImageUI(
+    private val template: LargeImageTemplate,
+    state: LargeImageCardUIState
+) : AepUI<LargeImageTemplate, LargeImageCardUIState>
+```
+
+### SmallImageUI
+
+Implementation of the [AepUI](#AepUI) interface used in rendering a UI for a [SmallImageTemplate](./ui-models/smallimagetemplate.md).
+
+#### Class Definition
+
+<CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
+
+#### Kotlin
 
 ```kotlin
 class SmallImageUI(
     private val template: SmallImageTemplate,
     state: SmallImageCardUIState
 ) : AepUI<SmallImageTemplate, SmallImageCardUIState>
-```
-
-## Methods
-
-### getTemplate
-
-Retrieves the template associated with the small image UI.
-
-### Returns
-
-The small image template.
-
-### Syntax
-
-<CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
-
-### Kotlin
-
-``` kotlin
-override fun getTemplate(): SmallImageTemplate
-```
-
-### getState
-
-Retrieves the current state of the small image UI.
-
-### Returns
-
-The current `SmallImageCardUIState`.
-
-### Syntax
-
-<CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
-
-### Kotlin
-
-``` kotlin
-override fun getState(): SmallImageCardUIState
-```
-
-### updateState
-
-Updates the current state of the `SmallImageUI`.
-
-### Parameters
-
-* _newState_ - The new state of type `SmallImageCardUIState` to update within the UI component.
-
-### Syntax
-
-<CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
-
-### Kotlin
-
-``` kotlin
-override fun updateState(newState: SmallImageCardUIState)
 ```

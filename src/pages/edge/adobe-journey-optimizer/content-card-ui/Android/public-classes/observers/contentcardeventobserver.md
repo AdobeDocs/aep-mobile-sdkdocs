@@ -27,11 +27,11 @@ Messaging implementation of [AepUIEventObserver](./aepuieventobserver.md) for ha
 
 Called when an event related to a Content Card UI template occurs.
 
-### Syntax
+#### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ```kotlin
 override fun onEvent(event: UIEvent<*, *>)

@@ -31,7 +31,7 @@ Complete the following steps to hear content card events:
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ```kotlin
 class ContentCardCallback: ContentCardUIEventListener {
@@ -59,7 +59,7 @@ class ContentCardCallback: ContentCardUIEventListener {
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ```kotlin
 @Composable
@@ -72,20 +72,39 @@ private fun AepContentCardList(viewModel: AepContentCardViewModel) {
   // Create row with composables from AepUI instances
   LazyRow {
     items(aepUiList) { aepUI ->
-                               when (aepUI) {
-                                 is SmallImageUI -> {
-                                   val state = aepUI.getState()
-                                   if (!state.dismissed) {
-                                     SmallImageCard(
-                                       ui = aepUI,
-                                       style = smallImageCardStyleRow,
-                                       // provide the ContentCardUIEventListener as a parameter to the 				  																	 // ContentCardEventObserver
-                                       observer = ContentCardEventObserver(contentCardCallback)
-                                     )
-                                   }
-                                 }
-                               }
-                              }
+      when (aepUI) {
+        is SmallImageUI -> {
+          val state = aepUI.getState()
+          if (!state.dismissed) {
+            SmallImageCard(
+                ui = aepUI,
+                style = SmallImageUIStyle.Builder().build(),
+                observer = ContentCardEventObserver(contentCardCallback)
+            )
+          }
+        }
+        is LargeImageUI -> {
+          val state = aepUI.getState()
+          if (!state.dismissed) {
+            LargeImageCard(
+                ui = aepUI,
+                style = LargeImageUIStyle.Builder().build(),
+                observer = ContentCardEventObserver(contentCardCallback)
+            )
+          }
+        }
+        is ImageOnlyUI -> {
+          val state = aepUI.getState()
+          if (!state.dismissed) {
+            ImageOnlyCard(
+                ui = aepUI,
+                style = ImageOnlyUIStyle.Builder().build(),
+                observer = ContentCardEventObserver(contentCardCallback)
+            )
+          }
+        }
+      }
+    }
   }
 }    
 ```
@@ -100,7 +119,7 @@ The `onInteract` method provides an optional `actionURL` parameter associated wi
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ```kotlin
 override fun onInteract(

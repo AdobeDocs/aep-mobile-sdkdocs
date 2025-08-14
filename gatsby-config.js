@@ -453,6 +453,14 @@ module.exports = {
                                                         path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/state/aepcarduistate",
                                                     },
                                                     {
+                                                        title: "ImageOnlyCardUIState",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/state/imageonlycarduistate",
+                                                    },
+                                                    {
+                                                        title: "LargeImageCardUIState",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/state/largeimagecarduistate",
+                                                    },
+                                                    {
                                                         title: "SmallImageCardUIState",
                                                         path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/state/smallimagecarduistate",
                                                     }
@@ -487,6 +495,18 @@ module.exports = {
                                                         path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aeprowstyle",
                                                     },
                                                     {
+                                                        title: "AepTextStyle",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aeptextstyle",
+                                                    },
+                                                    {
+                                                        title: "ImageOnlyUIStyle",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/imageonlyuistyle",
+                                                    },
+                                                    {
+                                                        title: "LargeImageUIStyle",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/largeimageuistyle",
+                                                    },
+                                                    {
                                                         title: "SmallImageUIStyle",
                                                         path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/smallimageuistyle",
                                                     }
@@ -519,6 +539,14 @@ module.exports = {
                                                     {
                                                         title: "AEPUITemplateType",
                                                         path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepuitemplatetype"
+                                                    },
+                                                    {
+                                                        title: "ImageOnlyTemplate",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/imageonlytemplate"
+                                                    },
+                                                    {
+                                                        title: "LargeImageTemplate",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/largeimagetemplate"
                                                     },
                                                     {
                                                         title: "SmallImageTemplate",
