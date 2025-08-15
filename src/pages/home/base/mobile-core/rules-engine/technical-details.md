@@ -222,6 +222,96 @@ Here is the example:
     }
 ```
 
+## Event data processing
+
+When an event is evaluated against rules, its data is normalized into a single level key-value map so that conditions can reference values using predictable key paths. This normalization is called flattening.
+
+Nested objects and arrays are flattened, and the key path format uses dot-separated segments that form the path from the root to each leaf value. Leaf values are kept as-is.
+
+### Key collisions and special characters
+
+If two different inputs produce the same flattened key, the last value written wins. The resolution order for collisions is undefined and may change; do not rely on it.
+
+Keys are not escaped during flattening. If original object keys contain dots, those dots become part of the flattened key path. Create rule keys with this in mind and prefer unambiguous event data structures to avoid collisions.
+
+With this model, conditions can reference any value in the event using a single, dot separated key.
+
+### Event data key flattening
+* Object key-value pairs use their key name as the path segment.
+
+Original event data:
+```json
+{ "user": { "address": { "city": "San José" } } }
+```
+
+Flattened event data:
+```json
+{ "user.address.city": "San José" }
+```
+
+Special case: dots in keys are not escaped
+
+Original event data:
+```json
+{ "user.address": { "city": "San José" } }
+```
+
+Flattened event data:
+```json
+{ "user.address.city": "San José" }
+```
+
+Special case: different inputs produce the same flattened key (last write wins, order undefined)
+
+Original event data:
+```json
+{ "user": { "address": { "city": "nested" } }, "user.address.city": "flat" }
+```
+
+Flattened event data:
+```json
+{ "user.address.city": "flat" }
+```
+
+or
+
+```json
+{ "user.address.city": "nested" }
+```
+
+### Array flattening
+* Array items use their zero-based numeric index as the path segment.
+
+Original event data:
+```json
+{ "items": [1, 2] }
+```
+
+Flattened event data:
+```json
+{ "items.0": 1, "items.1": 2 }
+```
+
+Original event data:
+```json
+{ "list": [ { "name": "a" }, { "name": "b" } ] }
+```
+
+Flattened event data:
+```json
+{ "list.0.name": "a", "list.1.name": "b" }
+```
+
+Original event data:
+```json
+{ "matrix": [[10, 20], [30]] }
+```
+
+Flattened event data:
+```json
+{ "matrix.0.0": 10, "matrix.0.1": 20, "matrix.1.0": 30 }
+```
+
 ## Consequence object definition
 
 The consequences section of a rule lists the file names of each consequence object that should be performed when all of the conditions for that rule evaluate to `true`.
