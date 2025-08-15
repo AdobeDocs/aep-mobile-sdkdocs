@@ -14,13 +14,13 @@ keywords:
 ### Android Messaging 3.5.0
 
 * Added support for large image and image only content card templates
-* Optimizes push identifier updates by only syncing updates with the server when push identifier changes. Optimization may be disabled by configuring `messaging.optimizePushSync` to false.
+* Optimizes push identifier updates by only syncing updates with the server if the push identifier changes. Optimization may be disabled by setting configuration `messaging.optimizePushSync` to false.
 * Adds support for `MobileCore.resetIdentities()` API which will clear the stored push identifier.
 
 ### iOS Messaging 5.8.0
 
 * Added support for large image and image only content card templates
-* Optimizes push identifier updates by only syncing updates with the server when push identifier changes. Optimization may be disabled by configuring `messaging.optimizePushSync` to false.
+* Optimizes push identifier updates by only syncing updates with the server if the push identifier changes. Optimization may be disabled by setting configuration `messaging.optimizePushSync` to false.
 * Adds support for `MobileCore.resetIdentities()` API which will clear the stored push identifier.
 
 ## August 1, 2025
