@@ -34,7 +34,6 @@ Objective-C<br/>(iOS)
 
 <Tabs query="platform=objc&api=extension-version"/>
 
-
 ## getConsents
 
 Retrieves the current consent preferences stored in the Consent extension.
