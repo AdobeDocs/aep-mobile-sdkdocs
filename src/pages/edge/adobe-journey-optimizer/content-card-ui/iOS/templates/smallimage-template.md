@@ -22,6 +22,10 @@ keywords:
 
 # SmallImageTemplate
 
+<InlineAlert variant="info" slots="text"/>
+
+SmallImageTemplate is only available in AEP Messaging iOS SDK version 5.3.0+
+
  This class represents a SmallImage templated content card authored in Adobe Journey Optimizer.
 
  A small image template content card includes a title, body, image, and a maximum of three buttons. The image is displayed in line with the text content. An optional dismiss button can be added to dismiss the content card.
