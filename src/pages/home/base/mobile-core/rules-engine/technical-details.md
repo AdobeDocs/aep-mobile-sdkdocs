@@ -102,8 +102,8 @@ The keys that are used here are different than those used for In-App message mat
 
 | **Name** | **Value** | **Return type**| **Return data**| **Description** |
 | :--- | :--- | :--- | :--- | :--- |
-| Any | `any` | number | Sum of event occurance count | Each event object is queried independently within the provided date range. The returned value is a sum of number of occurances of each event. |
-| Ordered | `ordered` | number | `0` or `1` | Checks whether the event objects occurred in the provided order. They are queried in the same order as they are provided in the request `events` array, with the oldest timestamp of the event at the previous index becoming the `from` bound for looking up the current event. Returns `1` if all appear in order, `0` if they do not appear in the specified order and `-1` if an error occured during the lookup of any event. With a single event object the result is identical to `any`. |
+| Any | `any` | number | Sum of all occurrences of the event(s) | Each event object is queried independently within the provided date range. TThe returned value is the sum of the number of occurrences of each event. |
+| Ordered | `ordered` | number | `0` or `1` | Checks whether the event objects occurred in the provided order. They are queried in the same order as they are provided in the request `events` array, with the timestamp of the first matched occurrence of the event at the previous index used as the `from` bound when searching for the current event. Returns `1` if all appear in order,`0` if they do not appear in the specified order, and `-1` if an error occurred during the lookup of any event. For a single event object, the result is `1` if at least one matching event is found and `0` otherwise. |
 | Most recent | `mostRecent` | number | Index of event in the request array | Queries all event objects and returns the zero-based index of the one that occurred most recently, or `-1` if none are found. Example: for `[A, B, C]`, if B is most recent the result is `1`. |
 
 ### Logic types
