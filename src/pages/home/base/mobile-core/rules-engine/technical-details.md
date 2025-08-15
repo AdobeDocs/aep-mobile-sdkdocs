@@ -237,14 +237,17 @@ Keys are not escaped during flattening. If original object keys contain dots, th
 With this model, conditions can reference any value in the event using a single, dot separated key.
 
 ### Event data key flattening
+
 * Object key-value pairs use their key name as the path segment.
 
 Original event data:
+
 ```json
 { "user": { "address": { "city": "San José" } } }
 ```
 
 Flattened event data:
+
 ```json
 { "user.address.city": "San José" }
 ```
@@ -252,11 +255,13 @@ Flattened event data:
 Special case: dots in keys are not escaped
 
 Original event data:
+
 ```json
 { "user.address": { "city": "San José" } }
 ```
 
 Flattened event data:
+
 ```json
 { "user.address.city": "San José" }
 ```
@@ -264,11 +269,13 @@ Flattened event data:
 Special case: different inputs produce the same flattened key (last write wins, order undefined)
 
 Original event data:
+
 ```json
 { "user": { "address": { "city": "nested" } }, "user.address.city": "flat" }
 ```
 
 Flattened event data:
+
 ```json
 { "user.address.city": "flat" }
 ```
@@ -280,34 +287,41 @@ or
 ```
 
 ### Array flattening
+
 * Array items use their zero-based numeric index as the path segment.
 
 Original event data:
+
 ```json
 { "items": [1, 2] }
 ```
 
 Flattened event data:
+
 ```json
 { "items.0": 1, "items.1": 2 }
 ```
 
 Original event data:
+
 ```json
 { "list": [ { "name": "a" }, { "name": "b" } ] }
 ```
 
 Flattened event data:
+
 ```json
 { "list.0.name": "a", "list.1.name": "b" }
 ```
 
 Original event data:
+
 ```json
 { "matrix": [[10, 20], [30]] }
 ```
 
 Flattened event data:
+
 ```json
 { "matrix.0.0": 10, "matrix.0.1": 20, "matrix.1.0": 30 }
 ```

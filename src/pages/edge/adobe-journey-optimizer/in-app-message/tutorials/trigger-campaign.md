@@ -46,9 +46,11 @@ iOS
 
 <Tabs query="platform=ios&function=send-event"/>
 
-## Triggers using values within arrays
+## Triggers using values within arrays in event data
 
-You can use a value within an array in the trigger by specifying its index in the array. For example, to trigger an in-app message when an event is send to platform and when the event has the key-value pair `"sku": "1234"` in the `productlistitems` array :
+You can use a key-value pair within an array in the event data by specifying its full path along with its index in the array. Please see the [Event data key flattening](../../../../home/base/mobile-core/rules-engine/technical-details.md#event-data-key-flattening) section for more information.
+
+For example, you can trigger an in-app message when an event sent to Experience Platform has the key-value pair `"sku": "1234"` in the `productlistitems` array in its event data.
 
 ```json
 "xdm": {
@@ -63,7 +65,7 @@ You can use a value within an array in the trigger by specifying its index in th
 },
 ```
 
-You can specify the condition as
+In this case, the condition can be specified as:
 
 ```text
 (Sent data to Platform event happens) AND (XDM value productlistitems.0.sku = 1234)
