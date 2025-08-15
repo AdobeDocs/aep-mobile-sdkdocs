@@ -16,29 +16,46 @@ import Tabs from './tabs/api-reference.md'
 
 The extensionVersion() API returns the version of the client-side Consent extension.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
-Android
+Kotlin<br/>(Android)
 
-<Tabs query="platform=android&api=extension-version"/>
+<Tabs query="platform=kotlin&api=extension-version"/>
 
-iOS
+Java<br/>(Android)
 
-<Tabs query="platform=ios&api=extension-version"/>
+<Tabs query="platform=java&api=extension-version"/>
+
+Swift<br/>(iOS)
+
+<Tabs query="platform=swift&api=extension-version"/>
+
+Objective-C<br/>(iOS)
+
+<Tabs query="platform=objc&api=extension-version"/>
+
 
 ## getConsents
 
 Retrieves the current consent preferences stored in the Consent extension.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
-Android
+Kotlin<br/>(Android)
 
-<Tabs query="platform=android&api=get-consents"/>
+<Tabs query="platform=kotlin&api=get-consents"/>
 
-iOS
+Java<br/>(Android)
 
-<Tabs query="platform=ios&api=get-consents"/>
+<Tabs query="platform=java&api=get-consents"/>
+
+Swift<br/>(iOS)
+
+<Tabs query="platform=swift&api=get-consents"/>
+
+Objective-C<br/>(iOS)
+
+<Tabs query="platform=objc&api=get-consents"/>
 
 ## registerExtension
 
@@ -46,23 +63,35 @@ iOS
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-Android
+Java<br/>(Android)
 
-<Tabs query="platform=android&api=register-extension"/>
+<Tabs query="platform=java&api=register-extension"/>
 
 ## updateConsents
 
 Merges the existing consents with the given consents. Duplicate keys will take the value of those passed in the API.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
-Android
+Kotlin<br/>(Android)
 
-<Tabs query="platform=android&api=update-consents"/>
+<Tabs query="platform=kotlin&api=update-consents"/>
 
-iOS
+Java<br/>(Android)
 
-<Tabs query="platform=ios&api=update-consents"/>
+<Tabs query="platform=java&api=update-consents"/>
+
+Swift<br/>(iOS)
+
+<Tabs query="platform=swift&api=update-consents"/>
+
+Objective-C<br/>(iOS)
+
+<Tabs query="platform=objc&api=update-consents"/>
+
+<InlineAlert variant="info" slots="text1"/>
+
+Since Android version 3.0.2 and iOS version 5.0.1, `Consent.update` requests are optimized to ignore repeated updates which do not change the existing consent preferences. This optimization only applies if the update request does not change the current consent preferences and is received within one second of the previous update request.
 
 <InlineAlert variant="info" slots="text1, text2, text3, text4, text5"/>
 

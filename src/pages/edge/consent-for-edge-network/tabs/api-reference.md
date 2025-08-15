@@ -2,9 +2,7 @@
 noIndex: true
 ---
 
-<Variant platform="android" api="extension-version" repeat="8"/>
-
-#### Java
+<Variant platform="java" api="extension-version" repeat="4"/>
 
 **Syntax**
 
@@ -18,17 +16,21 @@ public static String extensionVersion();
 String extensionVersion = Consent.extensionVersion();
 ```
 
-#### Kotlin
+<Variant platform="kotlin" api="extension-version" repeat="4"/>
+
+**Syntax**
+
+```kotlin
+fun extensionVersion(): String
+```
 
 **Example**
 
-```java
+```kotlin
 val extensionVersion = Consent.extensionVersion()
 ```
 
-<Variant platform="ios" api="extension-version" repeat="10"/>
-
-#### Swift
+<Variant platform="swift" api="extension-version" repeat="4"/>
 
 **Syntax**
 
@@ -42,7 +44,7 @@ static var extensionVersion: String
 let extensionVersion = Consent.extensionVersion
 ```
 
-#### Objective-C
+<Variant platform="objc" api="extension-version" repeat="4"/>
 
 **Syntax**
 
@@ -56,9 +58,7 @@ let extensionVersion = Consent.extensionVersion
 NSString *extensionVersion = [AEPMobileEdgeConsent extensionVersion];
 ```
 
-<Variant platform="android" api="get-consents" repeat="9"/>
-
-#### Java
+<Variant platform="java" api="get-consents" repeat="5"/>
 
 **Syntax**
 
@@ -79,19 +79,25 @@ Consent.getConsents(new AdobeCallback<Map<String, Object>>() {
 });
 ```
 
-#### Kotlin
+<Variant platform="kotlin" api="get-consents" repeat="5"/>
+
+**Syntax**
+
+```kotlin
+fun getConsents(callback: AdobeCallback<Map<String, Any>>)
+```
+
+* _callback_ - callback invoked with the current consents of the extension. If an `AdobeCallbackWithError` is provided, an `AdobeError`, can be returned in the eventuality of any error that occurred while getting the user consents. The callback may be invoked on a different thread.
 
 **Example**
 
-```java
+```kotlin
 Consent.getConsents { currentConsents ->
     // Handle currentConsents
 }
 ```
 
-<Variant platform="ios" api="get-consents" repeat="11"/>
-
-#### Swift
+<Variant platform="swift" api="get-consents" repeat="5"/>
 
 **Syntax**
 
@@ -109,13 +115,15 @@ Consent.getConsents { currentConsents, error in
 }
 ```
 
-#### Objective-C
+<Variant platform="objc" api="get-consents" repeat="5"/>
 
 **Syntax**
 
 ```objectivec
 + (void) getConsents:^ (NSDictionary<NSString *,id> * _Nullable, NSError * _Nullable)
 ```
+
+* _completion_ - Invoked with the current consent preferences or an `AEPError` if an unexpected error occurs or the request timed out. It may be invoked on a different thread.
 
 **Example**
 
@@ -125,9 +133,7 @@ Consent.getConsents { currentConsents, error in
 }];
 ```
 
-<Variant platform="android" api="register-extension" repeat="5"/>
-
-#### Java
+<Variant platform="java" api="register-extension" repeat="4"/>
 
 **Syntax**
 
@@ -141,9 +147,7 @@ public static void registerExtension();
 Consent.registerExtension();
 ```
 
-<Variant platform="ios" api="register-extension" repeat="12"/>
-
-#### Swift
+<Variant platform="swift" api="register-extension" repeat="5"/>
 
 Use the MobileCore API to register the Edge Consent extension.
 
@@ -163,7 +167,7 @@ import AEPEdgeConsent
 MobileCore.registerExtensions([Consent.self])
 ```
 
-#### Objective-C
+<Variant platform="objc" api="register-extension" repeat="5"/>
 
 Use the AEPMobileCore API to register the Edge Consent extension.
 
@@ -183,9 +187,7 @@ Use the AEPMobileCore API to register the Edge Consent extension.
 [AEPMobileCore registerExtensions:@[AEPMobileEdgeConsent.class] completion:nil];
 ```
 
-<Variant platform="android" api="update-consents" repeat="9"/>
-
-#### Java
+<Variant platform="java" api="update-consents" repeat="5"/>
 
 **Syntax**
 
@@ -225,11 +227,19 @@ consents.put("consents", collectConsents);
 Consent.update(consents);
 ```
 
-#### Kotlin
+<Variant platform="kotlin" api="update-consents" repeat="5"/>
+
+**Syntax**
+
+```kotlin
+fun update(consents: Map<String, Any>)
+```
+
+* _consents_ - A `Map` of consents defined based on [Privacy/Personalization/Marketing Preferences \(Consents\) XDM Schema](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-consents.schema.md).
 
 **Example**
 
-```java
+```kotlin
 // Example 1, updating users collect consent to 'yes'
 val collectConsents = mutableMapOf<String, Any>()
 collectConsents["collect"] = mutableMapOf("val" to "y")
@@ -249,9 +259,7 @@ consents["consents"] = collectConsents
 Consent.update(consents)
 ```
 
-<Variant platform="ios" api="update-consents" repeat="11"/>
-
-#### Swift
+<Variant platform="swift" api="update-consents" repeat="5"/>
 
 **Syntax**
 
@@ -275,13 +283,15 @@ let currentConsents = ["consents": collectConsent]
 Consent.update(with: currentConsents)
 ```
 
-#### Objective-C
+<Variant platform="objc" api="update-consents" repeat="5"/>
 
 **Syntax**
 
 ```objectivec
 + (void) updateWithConsents:(NSDictionary<NSString *,id> * _Nonnull)
 ```
+
+* _consents_ - A `[String: Any]` of consents defined based on [Privacy/Personalization/Marketing Preferences \(Consents\) XDM Schema](https://github.com/adobe/xdm/blob/master/docs/reference/mixins/profile/profile-consents.schema.md).
 
 **Example**
 
