@@ -9,6 +9,18 @@ keywords:
 
 # Release notes
 
+## August 14, 2025
+
+### iOS EdgeConsent 5.0.1
+
+* Optimized Consent by suppressing repeated `Consent.update()` calls received within on second if the consent preferences do not change.
+* Fix issue where consent preferences were not merged correctly on the device when using deeply nested consents structure.
+
+### Android EdgeConsent 3.0.2
+
+* Optimized Consent by suppressing repeated `Consent.update()` calls received within on second if the consent preferences do not change.
+* Fix issue where consent preferences were not merged correctly on the device when using deeply nested consents structure.
+
 ## March 28, 2025
 
 ### React Native EdgeConsent 7.0.0
