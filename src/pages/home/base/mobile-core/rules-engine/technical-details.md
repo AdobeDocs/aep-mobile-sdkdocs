@@ -236,7 +236,7 @@ Keys are not escaped during flattening. If original object keys contain dots, th
 
 With this model, conditions can reference any value in the event using a single, dot separated key.
 
-### Object flattening
+### Event data key flattening
 * Object key-value pairs use their key name as the path segment.
 
 Original event data:
