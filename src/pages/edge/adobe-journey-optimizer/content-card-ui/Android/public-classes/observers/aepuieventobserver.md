@@ -21,7 +21,7 @@ Interface for observing events related to Adobe Experience Platform UI component
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ```kotlin
 interface AepUIEventObserver {
@@ -35,15 +35,15 @@ interface AepUIEventObserver {
 
 Called when an event related to a UI template occurs.
 
-### Parameters
+#### Parameters
 
 * _event_ - The event to handle. Implementers can provide specific logic based on the type of UIEvent.
 
-### Syntax
+#### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ```kotlin
 fun onEvent(event: UIEvent<*, *>)

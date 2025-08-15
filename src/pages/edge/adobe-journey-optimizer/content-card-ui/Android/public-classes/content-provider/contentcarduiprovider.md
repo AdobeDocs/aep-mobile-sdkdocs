@@ -23,47 +23,47 @@ Messaging extension implementation of [AepUIContentProvider](./aepuicontentprovi
 
 Retrieves a flow of AepUITemplate lists for the given surface. The flow emits updates whenever new content is fetched.
 
-### Returns
+#### Returns
 
-A flow that emits lists of [AepUITemplate](../ui-models/aepuitemplate.md)s.
+A [Flow](https://developer.android.com/kotlin/flow) of [Result](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/) containing lists of [AepUITemplate](../ui-models/aepuitemplate.md)s.
 
-### Syntax
+#### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ```kotlin
-override suspend fun getContent(): Flow<List<AepUITemplate>>
+override suspend fun getContent(): Flow<Result<List<AepUITemplate>>>
 ```
 
 ### getContentCardUI
 
-Retrieves a flow of AepUI instances for the given surface. This function initiates the content fetch using [getContent](#getcontent) and then returns a flow of AepUI instances that represent the UI templates. The flow emits updates whenever new content is fetched or any changes occur.
+Retrieves a [Flow](https://developer.android.com/kotlin/flow) of [Result](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/) which contains a list of AepUI instances for the given surface. This function initiates the content fetch using [getContent](#getcontent) and then returns a flow of AepUI instances that represent the UI templates. The flow emits updates whenever new content is fetched or any changes occur.
 
-### Returns
+#### Returns
 
-A [Flow](https://developer.android.com/kotlin/flow) that emits a list of AepUI instances.
+A [Flow](https://developer.android.com/kotlin/flow) of [Result](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/) that emits a list of AepUI instances.
 
-### Syntax
+#### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ```kotlin
-suspend fun getContentCardUI(): Flow<List<AepUI<*, *>>>
+suspend fun getContentCardUI(): Flow<Result<List<AepUI<*, *>>>>
 ```
 
 ### refreshContent
 
 Updates the flow returned by [getContent](#getContent) with the latest cached content cards for the given surface.
 
-### Syntax
+#### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ```kotlin
 override suspend fun refreshContent()

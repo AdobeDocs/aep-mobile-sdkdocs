@@ -1,6 +1,6 @@
 ---
-title: AepCardUIState
-description: This document contains information on the AepCardUIState.
+title: ImageOnlyCardUIState
+description: This document contains information on the ImageOnlyCardUIState.
 keywords:
 - Adobe Journey Optimizer
 - Guide
@@ -9,13 +9,17 @@ keywords:
 - Customizing UI
 - Card Templates
 - Content Card Templates
-- Small Image Template
+- Image Only Template
 - Android
 ---
 
-# AepCardUIState
+# ImageOnlyCardUIState
 
-Class representing the state of an Adobe Experience Platform card. This class includes the properties `dismissed` and `displayed` which are common across different card states.
+<InlineAlert variant="info" slots="text"/>
+
+ImageOnlyCardUIState is only available in AEP SDK BOM version 3.15.0+.
+
+Class which implements [AepCardUIState](./aepcarduistate.md) and represents the UI state of an image-only template card.
 
 ## Class Definition
 
@@ -24,10 +28,10 @@ Class representing the state of an Adobe Experience Platform card. This class in
 #### Kotlin
 
 ```kotlin
-open class AepCardUIState(
-    open val dismissed: Boolean = false,
-    open val displayed: Boolean = false
-)
+data class ImageOnlyCardUIState(
+    override val dismissed: Boolean = false,
+    override val displayed: Boolean = false
+) : AepCardUIState()
 ```
 
 ## Public Properties
