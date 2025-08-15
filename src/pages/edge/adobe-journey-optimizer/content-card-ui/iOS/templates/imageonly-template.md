@@ -14,6 +14,10 @@ keywords:
 
 # ImageOnlyTemplate
 
+<InlineAlert variant="info" slots="text"/>
+
+ImageOnlyTemplate is only available in AEP Messaging iOS version 5.8.0+
+
 This class represents an ImageOnly templated content card authored in Adobe Journey Optimizer.
 
 An image only template content card includes only an image that can be tapped like a button. An optional dismiss button can be added to dismiss the content card.
