@@ -24,11 +24,11 @@ Represents different types of UI events that can be triggered by the user intera
 | `T`       | [AepUITemplate](./ui-models/aepuitemplate.md) | Represents a UI template model which backs the composable on which the event has occurred. |
 | `S`       | [AepCardUIState](./state/aepcarduistate.md)   | Represents the state of the Adobe Experience Platform card composable on which the event has occurred. |
 
-### Syntax
+#### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ``` kotlin
 sealed class UIEvent<T : AepUITemplate, S : AepCardUIState>(open val aepUi: AepUI<T, S>)
@@ -44,11 +44,11 @@ sealed class UIEvent<T : AepUITemplate, S : AepCardUIState>(open val aepUi: AepU
 
 Event that represents the display of a UI element.
 
-### Syntax
+#### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ``` kotlin
 data class Display<T : AepUITemplate, S : AepCardUIState>(override val aepUi: AepUI<T, S>) :
@@ -65,11 +65,11 @@ Event that represents a user interaction with a UI element. The `Interact` event
 | -------- | ------------------------- | --------------------------- |
 | `action` | [UIAction](./uiaction.md) | The UIAction that occurred. |
 
-### Syntax
+#### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ``` kotlin
 data class Interact<T : AepUITemplate, S : AepCardUIState>(
@@ -78,11 +78,11 @@ data class Interact<T : AepUITemplate, S : AepCardUIState>(
     ) : UIEvent<T, S>(aepUi)
 ```
 
-### Example
+#### Example
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ```kotlin
 observer?.onEvent(AepUiEvent.Interact(ui, UIAction.Click(id = "purchaseID", actionUrl = "https://www.adobe.com"))
@@ -92,11 +92,11 @@ observer?.onEvent(AepUiEvent.Interact(ui, UIAction.Click(id = "purchaseID", acti
 
 Event that represents the dismissal of a UI element.
 
-### Syntax
+#### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ``` kotlin
 data class Dismiss<T : AepUITemplate, S : AepCardUIState>(override val aepUi: AepUI<T, S>) :

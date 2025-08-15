@@ -21,7 +21,7 @@ Represents an action that can be performed on a UI component.
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ``` kotlin
 sealed class UIAction
@@ -38,11 +38,11 @@ Represents a click `UIAction` that can be performed on a UI component.
 | `id`        | String  | The unique identifier of the UI component.                   |
 | `actionUrl` | String? | An optional URL to be opened when the UI component is clicked. |
 
-### Syntax
+#### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ``` kotlin
 data class Click(val id: String, val actionUrl: String?) : UIAction()
