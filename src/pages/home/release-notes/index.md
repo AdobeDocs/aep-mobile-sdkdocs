@@ -47,25 +47,25 @@ Keywords:
 
 ### iOS EdgeConsent 5.0.1
 
-* Optimize Consent by suppressing repeated `Consent.update()` calls received within on second if the consent preferences do not change.
+* Optimized Consent by suppressing repeated `Consent.update()` calls received within on second if the consent preferences do not change.
 * Fix issue where consent preferences were not merged correctly on the device when using deeply nested consents structure.
 
 ### Android EdgeConsent 3.0.2
 
-* Optimize Consent by suppressing repeated `Consent.update()` calls received within on second if the consent preferences do not change.
+* Optimized Consent by suppressing repeated `Consent.update()` calls received within on second if the consent preferences do not change.
 * Fix issue where consent preferences were not merged correctly on the device when using deeply nested consents structure.
 
 ### Android Messaging 3.5.0
 
 * Added support for large image and image only content card templates
-* Optimizes push identifier updates by only syncing updates with the server if the push identifier changes. Optimization may be disabled by setting configuration `messaging.optimizePushSync` to false.
-* Adds support for `MobileCore.resetIdentities()` API which will clear the stored push identifier.
+* Optimized push identifier updates to only sync updates with the server if the push identifier changes. Optimization may be disabled by setting configuration `messaging.optimizePushSync` to false.
+* Added support for `MobileCore.resetIdentities()` API which will clear the stored push identifier.
 
 ### iOS Messaging 5.8.0
 
 * Added support for large image and image only content card templates
-* Optimizes push identifier updates by only syncing updates with the server if the push identifier changes. Optimization may be disabled by setting configuration `messaging.optimizePushSync` to false.
-* Adds support for `MobileCore.resetIdentities()` API which will clear the stored push identifier.
+* Optimized push identifier updates to only sync updates with the server if the push identifier changes. Optimization may be disabled by setting configuration `messaging.optimizePushSync` to false.
+* Added support for `MobileCore.resetIdentities()` API which will clear the stored push identifier.
 
 ## August 5, 2025
 
