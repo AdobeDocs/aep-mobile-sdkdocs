@@ -9,6 +9,40 @@ keywords:
 
 # Release notes
 
+## August 14, 2025
+
+### Android Messaging 3.5.0
+
+* Added support for large image and image only content card templates
+* Optimized push identifier updates to only sync updates with the server if the push identifier changes. Optimization may be disabled by setting configuration `messaging.optimizePushSync` to false.
+* Added support for `MobileCore.resetIdentities()` API which will clear the stored push identifier.
+
+### iOS Messaging 5.8.0
+
+* Added support for large image and image only content card templates
+* Optimized push identifier updates to only sync updates with the server if the push identifier changes. Optimization may be disabled by setting configuration `messaging.optimizePushSync` to false.
+* Added support for `MobileCore.resetIdentities()` API which will clear the stored push identifier.
+
+## August 1, 2025
+
+### Android Messaging 3.4.1
+
+* Specify the adobe cache path used within the paths.xml file to prevent cache issues with other app libraries.
+
+## July 24, 2025
+
+### Android Messaging 3.4.0
+
+* Adds support for retrieving custom key/value pairs from in-app messages using the `Message.metadata` API.
+* Adds support for content card qualification, dismiss, and disqualification using event history operation rules.
+* Fixed a bug preventing the on-device caches from being properly updated when the requested surface contains no eligible messages.
+
+### iOS Messaging 5.7.0
+
+* Adds support for retrieving custom key/value pairs from in-app messages using the `Message.metadata` API.
+* Adds support for content card qualification, dismiss, and disqualification using event history operation rules.
+* Fixed a bug preventing the on-device caches from being properly updated when the requested surface contains no eligible messages.
+
 ## June 9, 2025
 
 ### React Native Messaging 7.1.0

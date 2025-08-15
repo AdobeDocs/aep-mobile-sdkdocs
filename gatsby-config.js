@@ -245,6 +245,10 @@ module.exports = {
                                     {
                                         title: "Payload keys",
                                         path: "/edge/adobe-journey-optimizer/push-notification/push-payload"
+                                    },
+                                    {
+                                        title: "Push token sync optimizations",
+                                        path: "/edge/adobe-journey-optimizer/push-notification/push-token-sync-optimizations"
                                     }
                                 ]
                             },
@@ -263,6 +267,10 @@ module.exports = {
                                             {
                                                 title: "Programmatically control the display of in-app messages",
                                                 path: "/edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate"
+                                            },
+                                            {
+                                                title: "Use custom metadata with in-app messages",
+                                                path: "/edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-metadata"
                                             },
                                             {
                                                 title: "Call native code from the JavaScript of an in-app message",

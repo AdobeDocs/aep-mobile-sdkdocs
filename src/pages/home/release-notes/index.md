@@ -7,6 +7,195 @@ Keywords:
 
 # Release notes
 
+## August 14, 2025
+
+### Android BOM 3.15.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.14.1) | BOM (3.15.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:edgeconsent** | **3.0.1** | **3.0.2**|
+| **com.adobe.marketing.mobile:messaging** | **3.4.1** | **3.5.0**|
+| com.adobe.marketing.mobile:analytics | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:assurance | 3.0.7 | 3.0.7 |
+| com.adobe.marketing.mobile:audience | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaign | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.4 | 3.1.4 |
+| com.adobe.marketing.mobile:core | 3.5.0 | 3.5.0 |
+| com.adobe.marketing.mobile:edge | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:identity | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:media | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:optimize | 3.6.2 | 3.6.2 |
+| com.adobe.marketing.mobile:places | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### iOS EdgeConsent 5.0.1
+
+* Optimized Consent by suppressing repeated `Consent.update()` calls received within on second if the consent preferences do not change.
+* Fix issue where consent preferences were not merged correctly on the device when using deeply nested consents structure.
+
+### Android EdgeConsent 3.0.2
+
+* Optimized Consent by suppressing repeated `Consent.update()` calls received within on second if the consent preferences do not change.
+* Fix issue where consent preferences were not merged correctly on the device when using deeply nested consents structure.
+
+### Android Messaging 3.5.0
+
+* Added support for large image and image only content card templates
+* Optimized push identifier updates to only sync updates with the server if the push identifier changes. Optimization may be disabled by setting configuration `messaging.optimizePushSync` to false.
+* Added support for `MobileCore.resetIdentities()` API which will clear the stored push identifier.
+
+### iOS Messaging 5.8.0
+
+* Added support for large image and image only content card templates
+* Optimized push identifier updates to only sync updates with the server if the push identifier changes. Optimization may be disabled by setting configuration `messaging.optimizePushSync` to false.
+* Added support for `MobileCore.resetIdentities()` API which will clear the stored push identifier.
+
+## August 5, 2025
+
+### Android BOM 3.14.1
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.14.0) | BOM (3.14.1) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:messaging** | **3.4.0** | **3.4.1**|
+| **com.adobe.marketing.mobile:optimize** | **3.6.1** | **3.6.2**|
+| com.adobe.marketing.mobile:analytics | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:assurance | 3.0.7 | 3.0.7 |
+| com.adobe.marketing.mobile:audience | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaign | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.4 | 3.1.4 |
+| com.adobe.marketing.mobile:core | 3.5.0 | 3.5.0 |
+| com.adobe.marketing.mobile:edge | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:identity | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:media | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:places | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+## August 1, 2025
+
+### Android Messaging 3.4.1
+
+* Specify the adobe cache path used within the paths.xml file to prevent cache issues with other app libraries.
+
+## July 31, 2025
+
+### Android Optimize 3.6.2
+
+* Added internal build improvements.
+
+## July 30, 2025
+
+### iOS Optimize 5.6.1
+
+* Improved AEPOptimizeError Swift/Objective-C interoperability.
+* Renamed Adobe Journey Optimizer Decisioning extension to Offer Decisioning and Target extension in docs.
+
+## July 24, 2025
+
+### Android BOM 3.14.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.13.0) | BOM (3.14.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:core** | **3.4.1** | **3.5.0**|
+| **com.adobe.marketing.mobile:messaging** | **3.3.2** | **3.4.0**|
+| **com.adobe.marketing.mobile:optimize** | **3.6.0** | **3.6.1**|
+| com.adobe.marketing.mobile:analytics | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:assurance | 3.0.7 | 3.0.7 |
+| com.adobe.marketing.mobile:audience | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaign | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.4 | 3.1.4 |
+| com.adobe.marketing.mobile:edge | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:identity | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:media | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:places | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Messaging 3.4.0
+
+* Adds support for retrieving custom key/value pairs from in-app messages using the `Message.metadata` API.
+* Adds support for content card qualification, dismiss, and disqualification using event history operation rules.
+* Fixed a bug preventing the on-device caches from being properly updated when the requested surface contains no eligible messages.
+
+### iOS Messaging 5.7.0
+
+* Adds support for retrieving custom key/value pairs from in-app messages using the `Message.metadata` API.
+* Adds support for content card qualification, dismiss, and disqualification using event history operation rules.
+* Fixed a bug preventing the on-device caches from being properly updated when the requested surface contains no eligible messages.
+
+### iOS Core 5.6.0
+
+* Adds rules engine support for the new event history operations `insert` and `insertIfNotExists`.
+    * `insert` unconditionally records consequence content as an event history entry.
+    * `insertIfNotExists` records the entry only when no existing record shares the same hash.
+* Adds support for the new `mostRecent` historical condition type, which allows rules engine to evaluate the most recently occurring event from a list of events.
+
+### Android Optimize 3.6.1
+
+* Fixed callback conflict where error was not delivered when both success and error were triggered.
+* Upgraded `aepsdk-commons` to `3.4.1`, `aepsdk-core-android` to `3.5.0` and `aepsdk-edge-android` to `3.0.2`.
+
+## July 23, 2025
+
+### Android Core 3.5.0
+
+* Fixed an issue causing incorrect inset calculation for in-app messages.
+* Adds rules engine support for the new event history operations `insert` and `insertIfNotExists`.
+    * `insert` unconditionally records consequence content as an event history entry.
+    * `insertIfNotExists` records the entry only when no existing record shares the same hash.
+* Adds support for the new `mostRecent` historical condition type, which allows rules engine to evaluate the most recently occurring event from a list of events.
+
 ## July 10, 2025
 
 ### Roku SDK 1.3.1
