@@ -90,7 +90,7 @@ Objective-C<br/>(iOS)
 
 <InlineAlert variant="info" slots="text1"/>
 
-Since Android version 3.0.2 and iOS version 5.0.1, `Consent.update` requests are optimized to ignore repeated updates which do not change the existing consent preferences. This optimization only applies if the update request does not change the current consent preferences and is received within one second of the previous update request.
+Since Android 3.0.2 and iOS 5.0.1, `Consent.update` requests ignore repeated updates that match current consent preferences when received within one second of the previous request.
 
 <InlineAlert variant="info" slots="text1, text2, text3, text4, text5"/>
 

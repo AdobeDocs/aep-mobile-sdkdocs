@@ -66,7 +66,7 @@ NSString *extensionVersion = [AEPMobileEdgeConsent extensionVersion];
 public static void getConsents(final AdobeCallback<Map<String, Object>> callback);
 ```
 
-* _callback_ - callback invoked with the current consents of the extension. If an `AdobeCallbackWithError` is provided, an `AdobeError`, can be returned in the eventuality of any error that occurred while getting the user consents. The callback may be invoked on a different thread.
+* _callback_ - Invoked with the current consent preferences. If an `AdobeCallbackWithError` is provided, an `AdobeError` is returned if any error occurs while retrieving the user consents. The callback may be invoked on a different thread.
 
 **Example**
 
@@ -87,7 +87,7 @@ Consent.getConsents(new AdobeCallback<Map<String, Object>>() {
 fun getConsents(callback: AdobeCallback<Map<String, Any>>)
 ```
 
-* _callback_ - callback invoked with the current consents of the extension. If an `AdobeCallbackWithError` is provided, an `AdobeError`, can be returned in the eventuality of any error that occurred while getting the user consents. The callback may be invoked on a different thread.
+* _callback_ - Invoked with the current consent preferences. If an `AdobeCallbackWithError` is provided, an `AdobeError` is returned if any error occurs while retrieving the user consents. The callback may be invoked on a different thread.
 
 **Example**
 
@@ -105,7 +105,7 @@ Consent.getConsents { currentConsents ->
 static func getConsents(completion: @escaping ([String: Any]?, Error?) -> Void)
 ```
 
-* _completion_ - Invoked with the current consent preferences or an `AEPError` if an unexpected error occurs or the request timed out. It may be invoked on a different thread.
+* _completion_ - Invoked with the current consent preferences or an `AEPError` if an error occurs or the request times out. The completion may be invoked on a different thread.
 
 **Example**
 
@@ -123,7 +123,7 @@ Consent.getConsents { currentConsents, error in
 + (void) getConsents:^ (NSDictionary<NSString *,id> * _Nullable, NSError * _Nullable)
 ```
 
-* _completion_ - Invoked with the current consent preferences or an `AEPError` if an unexpected error occurs or the request timed out. It may be invoked on a different thread.
+* _completion_ - Invoked with the current consent preferences or an `AEPError` if an error occurs or the request times out. The completion may be invoked on a different thread.
 
 **Example**
 
