@@ -21,7 +21,7 @@ Singleton class used to store a mapping between valid [ContentCardSchemaData](..
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ```kotlin
 class ContentCardMapper private constructor() {
@@ -40,19 +40,19 @@ class ContentCardMapper private constructor() {
 
 Returns a `ContentCardSchemaData` object for the given proposition ID.
 
-### Parameters
+#### Parameters
 
 * _propositionId_ - the proposition ID to use as a key in the `ContentCardSchemaData` map.
 
-### Returns
+#### Returns
 
 The `ContentCardSchemaData` for the given proposition ID, or null if not found.
 
-### Syntax
+#### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ```kotlin
 fun getContentCardSchemaData(propositionId: String): ContentCardSchemaData?

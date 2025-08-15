@@ -1,6 +1,6 @@
 ---
-title: AepCardUIState
-description: This document contains information on the AepCardUIState.
+title: LargeImageCardUIState
+description: This document contains information on the LargeImageCardUIState.
 keywords:
 - Adobe Journey Optimizer
 - Guide
@@ -9,13 +9,17 @@ keywords:
 - Customizing UI
 - Card Templates
 - Content Card Templates
-- Small Image Template
+- Large Image Template
 - Android
 ---
 
-# AepCardUIState
+# LargeImageCardUIState
 
-Class representing the state of an Adobe Experience Platform card. This class includes the properties `dismissed` and `displayed` which are common across different card states.
+<InlineAlert variant="info" slots="text"/>
+
+LargeImageCardUIState is only available in AEP SDK BOM version 3.15.0+.
+
+Class which implements [AepCardUIState](./aepcarduistate.md) and represents the UI state of a Large Image template card.
 
 ## Class Definition
 
@@ -24,10 +28,10 @@ Class representing the state of an Adobe Experience Platform card. This class in
 #### Kotlin
 
 ```kotlin
-open class AepCardUIState(
-    open val dismissed: Boolean = false,
-    open val displayed: Boolean = false
-)
+data class LargeImageCardUIState(
+    override val dismissed: Boolean = false,
+    override val displayed: Boolean = false
+) : AepCardUIState()
 ```
 
 ## Public Properties
