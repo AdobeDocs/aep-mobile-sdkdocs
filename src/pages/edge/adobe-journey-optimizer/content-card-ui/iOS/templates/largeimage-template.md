@@ -22,6 +22,10 @@ keywords:
 
 # LargeImageTemplate
 
+<InlineAlert variant="info" slots="text"/>
+
+LargeImageTemplate is only available in AEP Messaging iOS version 5.8.0+
+
  This class represents a LargeImage templated content card authored in Adobe Journey Optimizer.
 
  A large image template content card includes a title, body, image, and a maximum of three buttons. The image is displayed prominently above the text content in a vertical layout. An optional dismiss button can be added to dismiss the content card.
