@@ -15,6 +15,10 @@ keywords:
 
 # LargeImageTemplate
 
+<InlineAlert variant="info" slots="text"/>
+
+LargeImageTemplate is only available in AEP SDK BOM version 3.15.0+.
+
 Class which implements [AepUITemplateType](./aepuitemplatetype.md) and represents a large image template.
 
 ## Public Properties

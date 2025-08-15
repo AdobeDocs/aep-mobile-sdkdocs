@@ -15,6 +15,10 @@ keywords:
 
 # LargeImageUIStyle
 
+<InlineAlert variant="info" slots="text"/>
+
+LargeImageUIStyle is only available in AEP SDK BOM version 3.15.0+.
+
 Class representing the style for a large image Adobe Experience Platform UI.
 
 ![Large Image Card Composeable Layout](<../../../assets/Android/large-image-card-layout.png>)

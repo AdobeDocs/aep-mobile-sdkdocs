@@ -15,6 +15,10 @@ keywords:
 
 # ImageOnlyCardUIState
 
+<InlineAlert variant="info" slots="text"/>
+
+ImageOnlyCardUIState is only available in AEP SDK BOM version 3.15.0+.
+
 Class which implements [AepCardUIState](./aepcarduistate.md) and represents the UI state of an image-only template card.
 
 ## Class Definition

@@ -15,6 +15,10 @@ keywords:
 
 # SmallImageUIStyle
 
+<InlineAlert variant="info" slots="text"/>
+
+SmallImageUIStyle is only available in AEP SDK BOM version 3.7.0+.
+
 Class representing the style for a small image Adobe Experience Platform UI.
 
 ![Small Image Card Composeable Layout](<../../../assets/Android/SmallImageCard composable layout.png>)

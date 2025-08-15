@@ -15,6 +15,10 @@ keywords:
 
 # SmallImageCardUIState
 
+<InlineAlert variant="info" slots="text"/>
+
+SmallImageCardUIState is only available in AEP SDK BOM version 3.7.0+.
+
 Class which implements [AepCardUIState](./aepcarduistate.md) and represents the UI state of a Small Image template card.
 
 ## Class Definition

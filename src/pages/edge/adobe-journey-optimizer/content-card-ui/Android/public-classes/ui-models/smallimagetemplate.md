@@ -15,6 +15,10 @@ keywords:
 
 # SmallImageTemplate
 
+<InlineAlert variant="info" slots="text"/>
+
+SmallImageTemplate is only available in AEP SDK BOM version 3.7.0+.
+
 Class which implements [AepUITemplateType](./aepuitemplatetype) and represents a small Image template.
 
 ## Public Properties

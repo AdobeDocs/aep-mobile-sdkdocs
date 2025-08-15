@@ -15,6 +15,10 @@ keywords:
 
 # ImageOnlyTemplate
 
+<InlineAlert variant="info" slots="text"/>
+
+ImageOnlyTemplate is only available in AEP SDK BOM version 3.15.0+.
+
 Class which implements [AepUITemplateType](./aepuitemplatetype.md) and represents an image-only template.
 
 ## Public Properties

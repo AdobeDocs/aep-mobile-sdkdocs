@@ -15,6 +15,10 @@ keywords:
 
 # ImageOnlyUIStyle
 
+<InlineAlert variant="info" slots="text"/>
+
+ImageOnlyUIStyle is only available in AEP SDK BOM version 3.15.0+.
+
 Class representing the style for an image-only Adobe Experience Platform UI.
 
 ![Image Only Card Composeable Layout](<../../../assets/Android/image-only-card-layout.png>)
