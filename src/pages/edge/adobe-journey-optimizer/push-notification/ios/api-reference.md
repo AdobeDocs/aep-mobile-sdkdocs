@@ -42,6 +42,10 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 }
 ```
 
+<InlineAlert variant="info" slots="text"/>
+
+Calling [resetIdentities](../../api-reference/#resetidentities) will clear the push token from the Mobile SDK. After calling resetIdentities, the push token must be re-synced using [setPushIdentifier](../../../../home/base/mobile-core/api-reference.md#setpushidentifier).
+
 ## Track push notification interactions
 
 Use [`handleNotificationResponse`](./../../api-reference/#handlenotificationresponse) API to send push notification interaction data to Adobe Experience Platform.

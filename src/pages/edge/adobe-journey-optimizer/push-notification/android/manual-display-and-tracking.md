@@ -45,6 +45,10 @@ public class YourApp extends Application {
 }
 ```
 
+<InlineAlert variant="info" slots="text"/>
+
+Calling [resetIdentities](../../api-reference/#resetidentities) will clear the push token from the Mobile SDK. After calling resetIdentities, the push token must be re-synced using [setPushIdentifier](../../../../home/base/mobile-core/api-reference.md#setpushidentifier).
+
 ## Building and displaying notification
 
 1. In `onMessageReceived` method of `YourAppFirebaseMessagingService` class, create a `MessagingPushPayload` object from the remoteMessage. `MessagingPushPayload` will unpack the remoteMessage and provide APIs for getting attributes used for creating the push notification.
