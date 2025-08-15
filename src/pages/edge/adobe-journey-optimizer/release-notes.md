@@ -9,6 +9,26 @@ keywords:
 
 # Release notes
 
+## August 14, 2025
+
+### Android Messaging 3.5.0
+
+* Added support for large image and image only content card templates
+* Optimizes push identifier updates by only syncing updates with the server when push identifier changes. Optimization may be disabled by configuring `messaging.optimizePushSync` to false.
+* Adds support for `MobileCore.resetIdentities()` API which will clear the stored push identifier.
+
+### iOS Messaging 5.8.0
+
+* Added support for large image and image only content card templates
+* Optimizes push identifier updates by only syncing updates with the server when push identifier changes. Optimization may be disabled by configuring `messaging.optimizePushSync` to false.
+* Adds support for `MobileCore.resetIdentities()` API which will clear the stored push identifier.
+
+## August 1, 2025
+
+### Android Messaging 3.4.1
+
+* Specify the adobe cache path used within the paths.xml file to prevent cache issues with other app libraries.
+
 ## July 24, 2025
 
 ### Android Messaging 3.4.0

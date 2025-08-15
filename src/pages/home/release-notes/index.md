@@ -7,6 +7,123 @@ Keywords:
 
 # Release notes
 
+## August 14, 2025
+
+### Android BOM 3.15.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.14.1) | BOM (3.15.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:edgeconsent** | **3.0.1** | **3.0.2**|
+| **com.adobe.marketing.mobile:messaging** | **3.4.1** | **3.5.0**|
+| com.adobe.marketing.mobile:analytics | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:assurance | 3.0.7 | 3.0.7 |
+| com.adobe.marketing.mobile:audience | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaign | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.4 | 3.1.4 |
+| com.adobe.marketing.mobile:core | 3.5.0 | 3.5.0 |
+| com.adobe.marketing.mobile:edge | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:identity | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:media | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:optimize | 3.6.2 | 3.6.2 |
+| com.adobe.marketing.mobile:places | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### iOS EdgeConsent 5.0.1
+
+* Optimize Consent by suppressing repeated `Consent.update()` calls received within on second if the consent preferences do not change.
+* Fix issue where consent preferences were not merged correctly on the device when using deeply nested consents structure.
+
+### Android EdgeConsent 3.0.2
+
+* Optimize Consent by suppressing repeated `Consent.update()` calls received within on second if the consent preferences do not change.
+* Fix issue where consent preferences were not merged correctly on the device when using deeply nested consents structure.
+
+### Android Messaging 3.5.0
+
+* Added support for large image and image only content card templates
+* Optimizes push identifier updates by only syncing updates with the server when push identifier changes. Optimization may be disabled by configuring `messaging.optimizePushSync` to false.
+* Adds support for `MobileCore.resetIdentities()` API which will clear the stored push identifier.
+
+### iOS Messaging 5.8.0
+
+* Added support for large image and image only content card templates
+* Optimizes push identifier updates by only syncing updates with the server when push identifier changes. Optimization may be disabled by configuring `messaging.optimizePushSync` to false.
+* Adds support for `MobileCore.resetIdentities()` API which will clear the stored push identifier.
+
+## August 5, 2025
+
+### Android BOM 3.14.1
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.14.0) | BOM (3.14.1) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:messaging** | **3.4.0** | **3.4.1**|
+| **com.adobe.marketing.mobile:optimize** | **3.6.1** | **3.6.2**|
+| com.adobe.marketing.mobile:analytics | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:assurance | 3.0.7 | 3.0.7 |
+| com.adobe.marketing.mobile:audience | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaign | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.4 | 3.1.4 |
+| com.adobe.marketing.mobile:core | 3.5.0 | 3.5.0 |
+| com.adobe.marketing.mobile:edge | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:identity | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:media | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:places | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+## August 1, 2025
+
+### Android Messaging 3.4.1
+
+* Specify the adobe cache path used within the paths.xml file to prevent cache issues with other app libraries.
+
+## July 31, 2025
+
+### Android Optimize 3.6.2
+
+* Added internal build improvements.
+
+## July 30, 2025
+
+### iOS Optimize 5.6.1
+
+* Improved AEPOptimizeError Swift/Objective-C interoperability.
+* Renamed Adobe Journey Optimizer Decisioning extension to Offer Decisioning and Target extension in docs.
+
 ## July 24, 2025
 
 ### Android BOM 3.14.0
