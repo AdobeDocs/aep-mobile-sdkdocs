@@ -8,6 +8,19 @@ keywords:
 
 # Release notes
 
+## July 31, 2025
+
+### Android Optimize 3.6.2
+
+* Added internal build improvements.
+
+## July 30, 2025
+
+### iOS Optimize 5.6.1
+
+* Improved AEPOptimizeError Swift/Objective-C interoperability.
+* Renamed Adobe Journey Optimizer Decisioning extension to Offer Decisioning and Target extension in docs.
+
 ## July 24, 2025
 
 ### Android Optimize 3.6.1
