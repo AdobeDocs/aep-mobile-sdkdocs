@@ -46,9 +46,9 @@ iOS
 
 <Tabs query="platform=ios&function=send-event"/>
 
-## Limitations
+## Triggers using values within arrays
 
-Triggering with a value within an array is **not** currently supported. For example, you cannot have an Experience Event as follows:
+You can use a value within an array in the trigger by specifying its index in the array. For example, to trigger an in-app message when an event is send to platform and when the event has the key-value pair `"sku": "1234"` in the `productlistitems` array :
 
 ```json
 "xdm": {
@@ -63,7 +63,7 @@ Triggering with a value within an array is **not** currently supported. For exam
 },
 ```
 
-The values within the maps or dictionaries in the list **cannot** be used in a trigger.
+You can specify the condition as
 
 ```text
 (Sent data to Platform event happens) AND (XDM value productlistitems.0.sku = 1234)

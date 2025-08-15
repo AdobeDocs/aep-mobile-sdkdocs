@@ -43,7 +43,7 @@ Rules are delivered as a standard ZIP archive, which contains a `rules.json` fil
 | :--- | :--- | :--- | :--- | :--- |
 | Condition | `condition` | object |  Yes | Holds the definition for the base Condition object for this rule. Each Condition object can be a Group or a Matcher condition type. Group conditions contain a logic type and an array of condition objects. Matcher conditions contain a key, value, and a matcher type.   There is one root-level condition for a rule, and this condition can have any number of nested conditions by using the group construct. For more information, please read the [condition object definition](#consequence-object-definition). |
 | Action | `consequences` | array | Yes | Array of consequence objects, where each object contains the details for the associated consequence that are executed when the associated condition evaluates to `true`. For more information, please read the [consequence object definition](#consequence-object-definition). |
-| Meta data | `meta` | object | No | A free-form object that may contain additional data about the rule. |
+| Metadata | `meta` | object | No | A free-form object that may contain additional data about the rule. |
 
 ## Condition object definition
 
@@ -89,22 +89,22 @@ The keys that are used here are different than those used for In-App message mat
 
 #### Historical condition type
 
-| **Friendly name** | **Key** | **Type** | **Description** |
+| **Friendly name** | **Key** | **Type** | **Required** | **Description** |
 | :--- | :--- | :--- | :--- | :--- |
-| Events | `events` | `array` | An array of anonymous objects containing key-value pairs with primitive values (string, numeric, boolean).  The count of matching events found in history will be used as the left-hand side of the operand during evaluation. When more than one event object is specified, the value of `searchType` determines whether we are looking for events in order, or just an aggregate sum of event counts. When only a single event object exists, the `searchType` of "any" is implied.|
-| From | `from` | `number` | Number of milliseconds since the Epoch that represents the lower bounds of the date range when looking for the Event. If not provided, this Event will be looked up from the beginning of Event history on the device. |
-| To | `to` | `number` | Number of milliseconds since the Epoch that represents the upper bounds of the date range when looking for the Event. If not provided, the search will consider all events up to current on the device. |
-| Search Type | `searchType` | `string` | Search type, determines how events will be queried and their results interpreted when the count of events is more than one. |
-| Matches | `matcher` | `string` | Matcher type, determines how to evaluate the count of matching historical events found. |
-| Value | `value` | `number` | Number of occurrences of an event to evaluate against. |
+| Events | `events` | `array` | Yes | An array of anonymous objects containing key-value pairs with primitive values (string, numeric, boolean).  These objects are hashed and used to look up matching records in the device's event history. |
+| From | `from` | `number` | No | Milliseconds since the Unix epoch that mark the lower bound of the query window. If omitted, no lower bound is applied and the search effectively begins with the first entry in the device’s event history. |
+| To | `to` | `number` | No | Milliseconds since the Unix epoch that mark the upper bound of the query window. If omitted, the upper bound defaults to the device’s current time. |
+| Search Type | `searchType` | `string` | No | Controls how objects in the `events` array are interpreted. The result produced by this search becomes the left-hand operand for the matcher. Accepted values are described in the table below. If omitted, the engine uses any. |
+| Matches | `matcher` | `string` | Yes | Matcher comparison operator (eq, lt, gt, etc.) applied between the search type result and the specified value. |
+| Value | `value` | `number` | Yes | Right-hand operand for the matcher. |
 
 ### Search Types
 
-| **Name** | **Value** | **Description** |
-| :--- | :--- | :--- |
-| Any | `any` | The return type for this search is integer.  It represents the sum of record counts for each event provided. All events provided will be queried against event history using the from and to timestamps provided.  The return value will be used as the integer value for the left-hand side of the matcher comparison. |
-| Ordered | `ordered` | The return type for this search is integer, representing boolean (0 == false, 1 == true).  It indicates whether the provided events occurred in the same sequence as indicated by the `events` array. Each provided event will be queried in order. As long as the count of an event is greater than one, the subsequent event will be queried for using the oldest timestamp of the previous event.  If the end of the events array is reached and each event has been found, the evaluation returns one (1). If the count for any event is ever zero (it does not exist in the event history), the evaluation will shortcut out and return zero (0). |
-| Most recent | `mostRecent` | The return type for this search is an integer. It represents the 0-based index of the most recent event, or -1 if none of the events are present in the event history. For example, given three distinct events in the `events` parameter: A, B, and C: `events: [A, B, C]`. The system searches for all three events in the event history and checks which event is the most recent. For example, if B is the most recent event, the return value is 1. If A is the most recent event, the return value is 0. |
+| **Name** | **Value** | **Return type**| **Return data**| **Description** |
+| :--- | :--- | :--- | :--- | :--- |
+| Any | `any` | number | Sum of event occurance count | Each event object is queried independently within the provided date range. The returned value is a sum of number of occurances of each event. |
+| Ordered | `ordered` | number | `0` or `1` | Checks whether the event objects occurred in the provided order. They are queried in the same order as they are provided in the request `events` array, with the oldest timestamp of the event at the previous index becoming the `from` bound for looking up the current event. Returns `1` if all appear in order, `0` if they do not appear in the specified order and `-1` if an error occured during the lookup of any event. With a single event object the result is identical to `any`. |
+| Most recent | `mostRecent` | number | Index of event in the request array | Queries all event objects and returns the zero-based index of the one that occurred most recently, or `-1` if none are found. Example: for `[A, B, C]`, if B is most recent the result is `1`. |
 
 ### Logic types
 

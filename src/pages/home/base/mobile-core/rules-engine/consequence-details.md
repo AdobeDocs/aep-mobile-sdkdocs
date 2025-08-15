@@ -92,7 +92,7 @@ This rule is currently handled by the [Mobile Core](../index.md) extension.
 
 | Friendly name | Key | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| Event data | `eventdata` | object | Yes | Dictionary of pairs to overlay on the triggering event's EventData. For more information, see the [attach data tutorial](../../../../resources/user-guides/attach-data.md). |
+| Event data | `eventdata` | object | Yes | Dictionary of key-value pairs to add to the triggering event's EventData. If a key appears in both the original event data and the payload specified in the consequence, the value from the original event is retained. For more information, see the [attach data tutorial](../../../../resources/user-guides/attach-data.md). |
 
 ## Modify data consequence
 
@@ -100,4 +100,4 @@ This rule is currently handled by the [Mobile Core](../index.md) extension.
 
 | Friendly name | Key | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| Event data | `eventdata` | object | Yes | Dictionary of key-value pairs to overlay on the triggering Event's EventData. For more information, see the [modify data tutorial](../../../../resources/user-guides/modify-data.md). |
+| Event data | `eventdata` | object | Yes | Dictionary of key-value pairs to add to or replace in the triggering event's EventData. If a key appears in both the original event data and the payload specified in the consequence, the value from the consequence overrides the original. If a key is provided in the detail object with a value of null, that key will be removed from the triggering event. For more information, see the [modify data tutorial](../../../../resources/user-guides/modify-data.md). |
