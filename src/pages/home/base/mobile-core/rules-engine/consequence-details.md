@@ -53,13 +53,13 @@ This rule is currently handled by the [Signal](../signal/index.md) extension.
 | Friendly name | Key | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | Description URL | `templateurl` | String | Yes | Destination URL to which the postback signal will be sent. |
-| Request body | `templatebody` | String | No | A string that contains the POST body that will be sent. If this value exists, the postback is sent as a POST instead of as a GET request.  You must ensure that the string is appropriately json escaped. |
+| Request body | `templatebody` | String | No | A string that contains the POST body that will be sent. If this value exists, the postback is sent as a POST instead of as a GET request. You must ensure that the string is appropriately json escaped. |
 | Content type | `contenttype` | String | No | Used to set the Content-Type header for POST requests. If the header is not supplied, and a request body is found, the default is `application/x-www-form-urlencoded`. |
 | Connection timeout | `timeout` | Number | No | The timeout value for the network connection in seconds. The default value is 2 seconds. |
 
 ## Sync PII consequence
 
-This rule is currently handled by the [Signal](..//signal/index.md) extension.
+This rule is currently handled by the [Signal](../signal/index.md) extension.
 
 | Friendly name | Key | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
@@ -70,7 +70,7 @@ This rule is currently handled by the [Signal](..//signal/index.md) extension.
 
 ## Open URL consequence
 
-This rule is currently handled by the [Signal](..//signal/index.md) extension.
+This rule is currently handled by the [Signal](../signal/index.md) extension.
 
 | Friendly name | Key | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
@@ -82,8 +82,8 @@ This rule is currently handled by the [Profile](../../profile/index.md) extensio
 
 | Friendly name | Key | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| Operation to perform | `operation` | String | Yes | Determines the type of operation to be performed on the profile. The following operations are supported:  <ul><li> `write`: Saves the `value` in the given `key` in the shared state and the local profile. If an associated value for the key already exists, the existing value will be overwritten.</li><li> `delete`: Removes `key` from the profile's shared state and the local profile.</li></ul> |
-| Device-side profile key | key | String | Yes | Key in the device-side profile on which the requested operation will be performed.  **Note**: This key will be accessible later through the shared state from the Profile extension. For more details, please read the [user profile shared state](../../profile/event-reference#shared-state). |
+| Operation to perform | `operation` | String | Yes | Determines the type of operation to be performed on the profile. The following operations are supported: <ul><li> `write`: Saves the `value` in the given `key` in the shared state and the local profile. If an associated value for the key already exists, the existing value will be overwritten.</li><li> `delete`: Removes `key` from the profile's shared state and the local profile.</li></ul> |
+| Device-side profile key | key | String | Yes | Key in the device-side profile on which the requested operation will be performed. **Note**: This key will be accessible later through the shared state from the Profile extension. For more details, please read the [user profile shared state](../../profile/event-reference#shared-state). |
 | Device-side profile value | value | String or Number | Yes, for write operations | New value to write to the key. |
 
 ## Attach data consequence

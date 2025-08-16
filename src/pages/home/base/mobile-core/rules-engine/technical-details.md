@@ -41,7 +41,7 @@ Rules are delivered as a standard ZIP archive, which contains a `rules.json` fil
 
 | **Friendly name** | **Key** | **Type** | **Required** | **Description** |
 | :--- | :--- | :--- | :--- | :--- |
-| Condition | `condition` | object |  Yes | Holds the definition for the base Condition object for this rule. Each Condition object can be a Group or a Matcher condition type. Group conditions contain a logic type and an array of condition objects. Matcher conditions contain a key, value, and a matcher type.   There is one root-level condition for a rule, and this condition can have any number of nested conditions by using the group construct. For more information, please read the [condition object definition](#consequence-object-definition). |
+| Condition | `condition` | object | Yes | Holds the definition for the base Condition object for this rule. Each Condition object can be a Group or a Matcher condition type. Group conditions contain a logic type and an array of condition objects. Matcher conditions contain a key, value, and a matcher type. There is one root-level condition for a rule, and this condition can have any number of nested conditions by using the group construct. For more information, please read the [condition object definition](#consequence-object-definition). |
 | Action | `consequences` | array | Yes | Array of consequence objects, where each object contains the details for the associated consequence that are executed when the associated condition evaluates to `true`. For more information, please read the [consequence object definition](#consequence-object-definition). |
 | Metadata | `meta` | object | No | A free-form object that may contain additional data about the rule. |
 
@@ -64,7 +64,7 @@ A Group condition contains an array of conditions, which makes the conditions in
 | :--- | :--- | :--- |
 | Group | `group` | This condition is a container that holds additional conditions and the logical evaluator that is used to process those conditions. |
 | Matcher | `matcher` | This condition holds the key, matcher type, and value that should be evaluated. |
-| Historical Search	 | `historical` | This condition holds an array of events that might have occurred on the device. A historical condition will evaluate based on data found in the device's event history. |
+| Historical Search | `historical` | This condition holds an array of events that might have occurred on the device. A historical condition will evaluate based on data found in the device's event history. |
 
 ### Definition object
 
@@ -91,7 +91,7 @@ The keys that are used here are different than those used for In-App message mat
 
 | **Friendly name** | **Key** | **Type** | **Required** | **Description** |
 | :--- | :--- | :--- | :--- | :--- |
-| Events | `events` | array | Yes | An array of anonymous objects containing key-value pairs with primitive values (string, numeric, boolean).  These objects are hashed and used to look up matching records in the device's event history. |
+| Events | `events` | array | Yes | An array of anonymous objects containing key-value pairs with primitive values (string, numeric, boolean). These objects are hashed and used to look up matching records in the device's event history. |
 | From | `from` | number | No | Milliseconds since the Unix epoch that mark the lower bound of the query window. If omitted, no lower bound is applied and the search effectively begins with the first entry in the device’s event history. |
 | To | `to` | number | No | Milliseconds since the Unix epoch that mark the upper bound of the query window. If omitted, the upper bound defaults to the device’s current time. |
 | Search Type | `searchType` | string | No | Controls how objects in the `events` array are interpreted. The result produced by this search becomes the left-hand operand for the matcher. Accepted values are described in the table below. If omitted, the engine uses any. |
@@ -104,7 +104,7 @@ The keys that are used here are different than those used for In-App message mat
 | :--- | :--- | :--- | :--- | :--- |
 | Any | `any` | number | Sum of all occurrences of the event(s) | Each event object is queried independently within the provided date range. The returned value is the sum of the number of occurrences of each event. |
 | Ordered | `ordered` | number | `0` or `1` | Checks whether the event objects occurred in the provided order. They are queried in the same order as they are provided in the request `events` array, with the timestamp of the first matched occurrence of the event at the previous index used as the `from` bound when searching for the current event. Returns `1` if all appear in order,`0` if they do not appear in the specified order, and `-1` if an error occurred during the lookup of any event. For a single event object, the result is `1` if at least one matching event is found and `0` otherwise. |
-| Most recent | `mostRecent` | number | Index of event in the request array | Queries all event objects and returns the zero-based index of the most recently occuring event in the request `events` array, or `-1` if none of the events are found or an error occured during the look of any event. Example: for `[A, B, C]`, if B is most recent the result is `1`. |
+| Most recent | `mostRecent` | number | Index of event in the request array | Queries all event objects and returns the zero-based index of the most recently occuring event in the request `events` array, or `-1` if none of the events are found or an error occured during the lookup of any event. Example: for `[A, B, C]`, if B is most recent the result is `1`. |
 
 ### Logic types
 
@@ -332,7 +332,7 @@ The consequences section of a rule lists the file names of each consequence obje
 
 | **Friendly name** | **Key** | **Type** | **Required** | **Description** |
 | :--- | :--- | :--- | :--- | :--- |
-| Identifier | `id` | string | Yes | String that contains a unique identifier for this consequence.  `sha1`, or another guaranteed random value with a near-impossible chance of collisions, is recommended. |
+| Identifier | `id` | string | Yes | String that contains a unique identifier for this consequence. `sha1`, or another guaranteed random value with a near-impossible chance of collisions, is recommended. |
 | Consequence type | `type` | string | Yes | A Consequence Type from the [consequences type](#consequence-types) table. |
 | Consequence details | `detail` | object | Yes | JSON object that contains the details that are necessary to perform a consequence of the given type. |
 
