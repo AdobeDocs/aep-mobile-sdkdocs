@@ -1,6 +1,6 @@
 ---
-title: SmallImageTemplate
-description: This class represents a SmallImage templated content card authored in Adobe Journey Optimizer.
+title: LargeImageTemplate
+description: This class represents a LargeImage templated content card authored in Adobe Journey Optimizer.
 keywords:
 - Adobe Journey Optimizer
 - Guide
@@ -16,27 +16,27 @@ keywords:
 - AEPButton
 - AEPImage
 - ButtonHStack
-- RootHStack
+- RootVStack
 - TextVStack
 ---
 
-# SmallImageTemplate
+# LargeImageTemplate
 
 <InlineAlert variant="info" slots="text"/>
 
-SmallImageTemplate is only available in AEP Messaging iOS SDK version 5.3.0+
+LargeImageTemplate is only available in AEP Messaging iOS version 5.8.0+
 
- This class represents a SmallImage templated content card authored in Adobe Journey Optimizer.
+ This class represents a LargeImage templated content card authored in Adobe Journey Optimizer.
 
- A small image template content card includes a title, body, image, and a maximum of three buttons. The image is displayed in line with the text content. An optional dismiss button can be added to dismiss the content card.
+ A large image template content card includes a title, body, image, and a maximum of three buttons. The image is displayed prominently above the text content in a vertical layout. An optional dismiss button can be added to dismiss the content card.
 
- Use the SmallImageTemplate class to customize the appearance of the small image templated content cards.
+ Use the LargeImageTemplate class to customize the appearance of the large image templated content cards.
 
- SmallImageTemplate conforms to `ObservableObject`, allowing it to be used reactively in SwiftUI views.
+ LargeImageTemplate conforms to `ObservableObject`, allowing it to be used reactively in SwiftUI views.
 
 ## Layout
 
-<img src="../../assets/iOS/smallimagetemplate-layout.png" width="500"/>
+<img src="../../assets/iOS/largeimagetemplate-layout.png" width="500"/>
 
 ## Public properties
 
@@ -48,5 +48,5 @@ SmallImageTemplate is only available in AEP Messaging iOS SDK version 5.3.0+
 | buttons       | [[AEPButton](../ui-elements/aepbutton.md)]      | *Optional*<br/>The list of buttons on the content card.       |
 | buttonHStack  | [AEPHStack](../ui-elements/aepstack.md#aephstack)         | A horizontal stack for arranging buttons.                    |
 | textVStack    | [AEPVStack](../ui-elements/aepstack.md#aepvstack)         | A vertical stack for arranging the title, body, and buttons. |
-| rootHStack    | [AEPHStack](../ui-elements/aepstack.md#aephstack)         | A horizontal stack for arranging the image and text stack.   |
+| rootVStack    | [AEPVStack](../ui-elements/aepstack.md#aepvstack)         | A vertical stack for arranging the image and text stack.   |
 | dismissButton | [AEPDismissButton](../ui-elements/aepdismissbutton.md) | *Optional*<br/>The dismiss button for the content card.       |
