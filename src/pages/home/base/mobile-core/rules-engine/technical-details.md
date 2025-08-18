@@ -41,8 +41,9 @@ Rules are delivered as a standard ZIP archive, which contains a `rules.json` fil
 
 | **Friendly name** | **Key** | **Type** | **Required** | **Description** |
 | :--- | :--- | :--- | :--- | :--- |
-| Condition | `condition` | object |  Yes | Holds the definition for the base Condition object for this rule. Each Condition object can be a Group or a Matcher condition type. Group conditions contain a logic type and an array of condition objects. Matcher conditions contain a key, value, and a matcher type.   There is one root-level condition for a rule, and this condition can have any number of nested conditions by using the group construct. For more information, please read the [condition object definition](#consequence-object-definition). |
+| Condition | `condition` | object | Yes | Holds the definition for the base Condition object for this rule. Each Condition object can be a Group or a Matcher condition type. Group conditions contain a logic type and an array of condition objects. Matcher conditions contain a key, value, and a matcher type. There is one root-level condition for a rule, and this condition can have any number of nested conditions by using the group construct. For more information, please read the [condition object definition](#consequence-object-definition). |
 | Action | `consequences` | array | Yes | Array of consequence objects, where each object contains the details for the associated consequence that are executed when the associated condition evaluates to `true`. For more information, please read the [consequence object definition](#consequence-object-definition). |
+| Metadata | `meta` | object | No | A free-form object that may contain additional data about the rule. |
 
 ## Condition object definition
 
@@ -63,6 +64,7 @@ A Group condition contains an array of conditions, which makes the conditions in
 | :--- | :--- | :--- |
 | Group | `group` | This condition is a container that holds additional conditions and the logical evaluator that is used to process those conditions. |
 | Matcher | `matcher` | This condition holds the key, matcher type, and value that should be evaluated. |
+| Historical Search | `historical` | This condition holds an array of events that might have occurred on the device. A historical condition will evaluate based on data found in the device's event history. |
 
 ### Definition object
 
@@ -84,6 +86,25 @@ The keys that are used here are different than those used for In-App message mat
 | Key | `key` | `string` | `"key":"key1"` | Key to get the value from the dictionary that is passed as a parameter to the rules processor. |
 | Matches | `matcher` | `string` | `"matcher":"eq"` | Matcher type that determines the kind of evaluation to use between the two values. |
 | Values | `values` | `array` | `"values":["value0", "value1"]` | List of values that are compared (using OR) against the value in the parameter dictionary for the `"key"` key. |
+
+#### Historical condition type
+
+| **Friendly name** | **Key** | **Type** | **Required** | **Description** |
+| :--- | :--- | :--- | :--- | :--- |
+| Events | `events` | array | Yes | An array of anonymous objects containing key-value pairs with primitive values (string, numeric, boolean). These objects are hashed and used to look up matching records in the device's event history. |
+| From | `from` | number | No | Milliseconds since the Unix epoch that mark the lower bound of the query window. If omitted, no lower bound is applied and the search effectively begins with the first entry in the device’s event history. |
+| To | `to` | number | No | Milliseconds since the Unix epoch that mark the upper bound of the query window. If omitted, the upper bound defaults to the device’s current time. |
+| Search Type | `searchType` | string | No | Controls how objects in the `events` array are interpreted. The result produced by this search becomes the left-hand operand for the matcher. Accepted values are described in the table below. If omitted, the engine uses any. |
+| Matches | `matcher` | string | Yes | [Matcher comparison operator](#matcher-types) applied between the search type result and the specified value. |
+| Value | `value` | number | Yes | Right-hand operand for the matcher. |
+
+### Search Types
+
+| **Name** | **Value** | **Return type**| **Return data**| **Description** |
+| :--- | :--- | :--- | :--- | :--- |
+| Any | `any` | number | Sum of all occurrences of the event(s) | Each event object is queried independently within the provided date range. The returned value is the sum of the number of occurrences of each event. |
+| Ordered | `ordered` | number | `0` or `1` | Checks whether the event objects occurred in the provided order. They are queried in the same order as they are provided in the request `events` array, with the timestamp of the first matched occurrence of the event at the previous index used as the `from` bound when searching for the current event. Returns `1` if all appear in order,`0` if they do not appear in the specified order, and `-1` if an error occurred during the lookup of any event. For a single event object, the result is `1` if at least one matching event is found and `0` otherwise. |
+| Most recent | `mostRecent` | number | Index of event in the request array | Queries all event objects and returns the zero-based index of the most recently occuring event in the request `events` array, or `-1` if none of the events are found or an error occured during the lookup of any event. Example: for `[A, B, C]`, if B is most recent the result is `1`. |
 
 ### Logic types
 
@@ -201,13 +222,117 @@ Here is the example:
     }
 ```
 
+## Event data processing
+
+When an event is evaluated against rules, its data is normalized into a single level key-value map so that conditions can reference values using predictable key paths. This normalization is called flattening.
+
+Nested objects and arrays are flattened, and the key path format uses dot-separated segments that form the path from the root to each leaf value. Leaf values are kept as-is.
+
+### Key collisions and special characters
+
+If two different inputs produce the same flattened key, the last value written wins. The resolution order for collisions is undefined and may change; do not rely on it.
+
+Keys are not escaped during flattening. If original object keys contain dots, those dots become part of the flattened key path. Create rule keys with this in mind and prefer unambiguous event data structures to avoid collisions.
+
+With this model, conditions can reference any value in the event using a single, dot separated key.
+
+### Event data key flattening
+
+* Object key-value pairs use their key name as the path segment.
+
+Original event data:
+
+```json
+{ "user": { "address": { "city": "San José" } } }
+```
+
+Flattened event data:
+
+```json
+{ "user.address.city": "San José" }
+```
+
+Special case: dots in keys are not escaped
+
+Original event data:
+
+```json
+{ "user.address": { "city": "San José" } }
+```
+
+Flattened event data:
+
+```json
+{ "user.address.city": "San José" }
+```
+
+Special case: different inputs produce the same flattened key (last write wins, order undefined)
+
+Original event data:
+
+```json
+{ "user": { "address": { "city": "nested" } }, "user.address.city": "flat" }
+```
+
+Flattened event data:
+
+```json
+{ "user.address.city": "flat" }
+```
+
+or
+
+```json
+{ "user.address.city": "nested" }
+```
+
+### Array flattening
+
+* Array items use their zero-based numeric index as the path segment.
+
+Original event data:
+
+```json
+{ "items": [1, 2] }
+```
+
+Flattened event data:
+
+```json
+{ "items.0": 1, "items.1": 2 }
+```
+
+Original event data:
+
+```json
+{ "list": [ { "name": "a" }, { "name": "b" } ] }
+```
+
+Flattened event data:
+
+```json
+{ "list.0.name": "a", "list.1.name": "b" }
+```
+
+Original event data:
+
+```json
+{ "matrix": [[10, 20], [30]] }
+```
+
+Flattened event data:
+
+```json
+{ "matrix.0.0": 10, "matrix.0.1": 20, "matrix.1.0": 30 }
+```
+
 ## Consequence object definition
 
 The consequences section of a rule lists the file names of each consequence object that should be performed when all of the conditions for that rule evaluate to `true`.
 
 | **Friendly name** | **Key** | **Type** | **Required** | **Description** |
 | :--- | :--- | :--- | :--- | :--- |
-| Identifier | `id` | string | Yes | String that contains a unique identifier for this consequence.  `sha1`, or another guaranteed random value with a near-impossible chance of collisions, is recommended. |
+| Identifier | `id` | string | Yes | String that contains a unique identifier for this consequence. `sha1`, or another guaranteed random value with a near-impossible chance of collisions, is recommended. |
 | Consequence type | `type` | string | Yes | A Consequence Type from the [consequences type](#consequence-types) table. |
 | Consequence details | `detail` | object | Yes | JSON object that contains the details that are necessary to perform a consequence of the given type. |
 
@@ -222,6 +347,8 @@ The consequences section of a rule lists the file names of each consequence obje
 | Open URL | `url` | Passes the provided URL to be opened by the platform that is most commonly used for app deep linking. | [Open URL consequence detail definition](./consequence-details.md#open-url-consequence) |
 | Client Side Profile | `csp` | Create or delete operations against the client-side profile. | [Profile consequence detail definition](./consequence-details.md#profile-consequence) |
 | Attach Data | `add` | Attaches key-value pairs to the EventData of an existing Event | [Attach data consequence detail definition](./consequence-details.md#attach-data-consequence) |
+| Modify Data | `mod` | Modifies data in the triggering event | [Modify data consequence detail definition](./consequence-details.md#modify-data-consequence) |
+| Schema | `schema` | Schema-based actions for easy parsing by AEP Mobile SDKs | |
 
 ## rules.json examples
 

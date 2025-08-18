@@ -25,7 +25,7 @@ To fetch the content cards for the surfaces configured in [Adobe Journey Optimiz
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+##### Kotlin
 
 ```kotlin
 val surfaces = mutableListOf<Surface>()
@@ -35,13 +35,13 @@ Messaging.updatePropositionsForSurfaces(surfaces)
 
 ## Retrieve Content Cards
 
-To retrieve the content cards for a specific surface, call `getContentCardsUI`. This API returns a [flow](https://developer.android.com/kotlin/flow) of [AepUI](../public-classes/aepui.md) objects representing content cards for which the user is qualified.
+To retrieve the content cards for a specific surface, call `getContentCardsUI`. This API returns a [flow](https://developer.android.com/kotlin/flow) of [Result](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/) containing [AepUI](../public-classes/aepui.md) objects representing content cards for which the user is qualified.
 
-`AepUI` objects are created only for content cards with templates recognized by the Messaging extension. The flow of `AepUI` objects may contain multiple content card template types.
+`AepUI` objects are created only for content cards with templates recognized by the Messaging extension. The flow of `AepUI` objects may contain multiple content card template types: SmallImageUI, LargeImageUI, and ImageOnlyUI.
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ```kotlin
 // create a view model or reuse existing one to hold the aepUIList
@@ -54,8 +54,13 @@ class AepContentCardViewModel(private val contentCardUIProvider: ContentCardUIPr
         // Launch a coroutine to fetch the aepUIList from the ContentCardUIProvider
         // when the ViewModel is created
         viewModelScope.launch {
-            contentCardUIProvider.getContentCardUI().collect { aepUi ->
-                _aepUIList.value = aepUi
+            contentCardUIProvider.getContentCardUI().collect { result ->
+                result.onSuccess { aepUi ->
+                    _aepUIList.value = aepUi
+                }
+                aepUiResult.onFailure { throwable ->
+                // handle onFailure if needed
+                }
             }
         }
     }
@@ -78,6 +83,8 @@ Only content cards for which the user has qualified are returned by the getConte
 The Content Card user interface is implemented using Jetpack Compose, which is the recommended toolkit for Android development. To display content cards in your app, pass the `AepUI` objects returned by the `getContentCardUI` API to the appropriate Content Card composable. The currently supported composables are:
 
 1. `SmallImageCard` composable for `SmallImageUI`
+2. `LargeImageCard` composable for `LargeImageUI`
+3. `ImageOnlyCard` composable for `ImageOnlyUI`
 
 ### Display Content Cards in Compose UI application
 
@@ -85,7 +92,7 @@ Below is an example of how to display content cards in a Compose UI application:
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ```kotlin
 @Composable
@@ -99,11 +106,32 @@ private fun AepContentCardList(viewModel: AepContentCardViewModel) {
       when (aepUI) {
         is SmallImageUI -> {
           val state = aepUI.getState()
-          if (!state.dismissed) 
-          {
-            SmallImageCard(ui = aepUI, 
-                         style = smallImageCardStyleRow,
-                         observer = ContentCardEventObserver(contentCardCallback))
+          if (!state.dismissed) {
+            SmallImageCard(
+                ui = aepUI,
+                style = SmallImageUIStyle.Builder().build(),
+                observer = ContentCardEventObserver(contentCardCallback)
+            )
+          }
+        }
+        is LargeImageUI -> {
+          val state = aepUI.getState()
+          if (!state.dismissed) {
+            LargeImageCard(
+                ui = aepUI,
+                style = LargeImageUIStyle.Builder().build(),
+                observer = ContentCardEventObserver(contentCardCallback)
+            )
+          }
+        }
+        is ImageOnlyUI -> {
+          val state = aepUI.getState()
+          if (!state.dismissed) {
+            ImageOnlyCard(
+                ui = aepUI,
+                style = ImageOnlyUIStyle.Builder().build(),
+                observer = ContentCardEventObserver(contentCardCallback)
+            )
           }
         }
       }
@@ -120,7 +148,7 @@ You may retrieve the `ContentCardSchemaData` for a Content Card with the templat
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-### Kotlin
+#### Kotlin
 
 ```kotlin
 private fun AepContentCardList(viewModel: AepContentCardViewModel) {

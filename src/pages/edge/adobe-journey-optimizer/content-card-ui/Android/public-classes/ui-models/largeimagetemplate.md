@@ -1,6 +1,6 @@
 ---
-title: SmallImageTemplate
-description: This document contains information on the SmallImageTemplate class.
+title: LargeImageTemplate
+description: This document contains information on the LargeImageTemplate class.
 keywords:
 - Adobe Journey Optimizer
 - Guide
@@ -13,13 +13,13 @@ keywords:
 - Android
 ---
 
-# SmallImageTemplate
+# LargeImageTemplate
 
 <InlineAlert variant="info" slots="text"/>
 
-SmallImageTemplate is only available in AEP SDK BOM version 3.7.0+.
+LargeImageTemplate is only available in AEP SDK BOM version 3.15.0+.
 
-Class which implements [AepUITemplateType](./aepuitemplatetype) and represents a small Image template.
+Class which implements [AepUITemplateType](./aepuitemplatetype.md) and represents a large image template.
 
 ## Public Properties
 
@@ -29,15 +29,15 @@ Class which implements [AepUITemplateType](./aepuitemplatetype) and represents a
 | `title`      | [AepText](./aeptext.md)            | The title text and display settings.                         |
 | `body`       | [AepText](./aeptext.md)?           | The body text and display settings.                          |
 | `image`      | [AepImage](./aepimage.md)?         | The details of the image to be displayed.                    |
-| `actionUrl`  | String?                            | The URL to be opened when the the small image card is clicked. |
-| `buttons`    | List<[AepButton](./aepbutton.md)>? | The details for the small image template buttons.            |
-| `dismissBtn` | [AepIcon](./aepicon.md)?           | The details for the small image template dismiss button.     |
+| `actionUrl`  | String?                            | The URL to be opened when the large image card is clicked.   |
+| `buttons`    | List<[AepButton](./aepbutton.md)>? | The details for the large image template buttons.            |
+| `dismissBtn` | [AepIcon](./aepicon.md)?           | The details for the large image template dismiss button.     |
 
 ## Methods
 
 ### getType
 
-Returns the type of this template, which is `AepUITemplateType.SMALL_IMAGE`.
+Returns the type of this template, which is `AepUITemplateType.LARGE_IMAGE`.
 
 #### Syntax
 
@@ -46,5 +46,5 @@ Returns the type of this template, which is `AepUITemplateType.SMALL_IMAGE`.
 #### Kotlin
 
 ``` kotlin
-override fun getType() = AepUITemplateType.SMALL_IMAGE
+override fun getType() = AepUITemplateType.LARGE_IMAGE
 ```
