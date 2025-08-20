@@ -8,6 +8,13 @@ keywords:
 
 # Release notes
 
+## August 20, 2025
+
+### iOS Core 5.6.1
+
+* Improved the logic for discovering extensions during simplified initialization.
+* Fixed an issue where the configuration extension was not correctly resolving pending shared state.
+
 ## July 24, 2025
 
 ### iOS Core 5.6.0

@@ -7,6 +7,19 @@ Keywords:
 
 # Release notes
 
+## August 20, 2025
+
+### iOS Core 5.6.1
+
+* Improved the logic for discovering extensions during simplified initialization.
+* Fixed an issue where the configuration extension was not correctly resolving pending shared state.
+
+## August 19, 2025
+
+### iOS Assurance 5.0.2
+
+* Fixes an issue where the WebView suspends tasks, causing the Assurance connection to not complete.
+
 ## August 14, 2025
 
 ### Android BOM 3.15.0
