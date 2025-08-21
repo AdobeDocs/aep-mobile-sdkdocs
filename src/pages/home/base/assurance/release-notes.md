@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## August 19, 2025
+
+### iOS Assurance 5.0.2
+
+* Fixes an issue where the WebView suspends tasks, causing the Assurance connection to not complete.
+
 ## June 11, 2025
 
 ### Android Assurance 3.0.7
