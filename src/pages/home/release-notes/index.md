@@ -9,6 +9,12 @@ Keywords:
 
 ## August 20, 2025
 
+### React Native Optimize 7.1.0
+
+* Enhanced update proposition public api with callback support
+* Added support for display tracking of multiple offers
+* Added generateDisplayInteractionXdm API for a list of offers
+
 ### iOS Core 5.6.1
 
 * Improved the logic for discovering extensions during simplified initialization.

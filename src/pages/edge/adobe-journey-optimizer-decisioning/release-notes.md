@@ -8,6 +8,14 @@ keywords:
 
 # Release notes
 
+## August 20, 2025
+
+### React Native Optimize 7.1.0
+
+* Enhanced update proposition public api with callback support
+* Added support for display tracking of multiple offers
+* Added generateDisplayInteractionXdm API for a list of offers
+
 ## July 31, 2025
 
 ### Android Optimize 3.6.2
