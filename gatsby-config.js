@@ -337,6 +337,14 @@ module.exports = {
                                                     {
                                                         title: "Small Image",
                                                         path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/templates/smallimage-template",
+                                                    },
+                                                    {
+                                                        title: "Large Image",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/templates/largeimage-template",
+                                                    },
+                                                    {
+                                                        title: "Image Only",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/templates/imageonly-template",
                                                     }
                                                 ]
                                             },
