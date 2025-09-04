@@ -19,21 +19,21 @@ You can clear any programmatic updates made to the configuration via the `clearU
 Here are some scenarios based on the order of calls:
 
 1. [configureWithAppId](#configurewithappid)
-2. [updateConfiguration](#updateConfiguration)
+2. [updateConfiguration](#updateconfiguration)
 3. clearUpdatedConfiguration
 
 Result: You end up with the initial configuration set via `configureWithAppId`.
 
 1. [configureWithFileInPath](#configurewithfileinpath)
-2. [updateConfiguration](#updateConfiguration)
+2. [updateConfiguration](#updateconfiguration)
 3. clearUpdatedConfiguration
 
 Result: You end up with the initial configuration set via `configureWithFileInPath`.
 
 1. [configureWithAppId](#configurewithappid) or [configureWithFileInPath](#configurewithfileinpath) or [configureWithFileInAssets](#configurewithfileinassets)
-2. [updateConfiguration](#updateConfiguration)
+2. [updateConfiguration](#updateconfiguration)
 3. clearUpdatedConfiguration
-4. [updateConfiguration](#updateConfiguration)
+4. [updateConfiguration](#updateconfiguration)
 
 Result: In this example, the configuration will be the most recently updated configuration and will not have any keys from the first update unless they are included in the most recent update.
 
@@ -55,7 +55,19 @@ iOS
 
 ## configureWithAppID
 
-This API causes the SDK to download the configuration for the provided app ID and apply the configuration to the current session.
+You can use this API to download and apply the remote configuration for the provided app ID to the current session. Once downloaded, the configuration is stored in the local cache to prevent unnecessary downloads. The configuration is fetched only if remote changes are detected.
+
+<InlineAlert variant="info" slots="text"/>
+
+The SDK attempts to refresh the configuration on every cold launch to ensure it stays up to date with the remote configuration.
+
+When you configure a mobile property, a unique environment ID is generated that the SDK uses to retrieve your configuration. The remote configuration is available when an app configuration is created and published to a given environment.
+
+<InlineAlert variant="success" slots="text"/>
+
+As best practice, you should configure a mobile property in the Data Collection UI and use environment IDs to configure your application. Follow the steps in the tutorial on [setting up a mobile property](../../../getting-started/create-a-mobile-property.md) if you need to create a new Experience Platform App.
+
+
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -73,7 +85,11 @@ iOS
 
 This API is only available in Android.
 
-You can bundle a JSON configuration file in the app's Assets folder to replace or complement the configuration that was downloaded by using the [Configure with App ID per environment](./index.md#configure-with-app-id-per-environment) approach.
+You can use this API to load the configuration from the JSON configuration file in the app's Assets folder.
+
+<InlineAlert variant="warning" slots="text"/>
+
+This will replace any configuration previously loaded during app launch or with the [configureWithAppID](#configurewithappid) API.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
@@ -83,7 +99,11 @@ Android
 
 ## configureWithFileInPath
 
-You can include a bundled JSON configuration file in your app package to replace or complement the configuration that was downloaded by using the [Configure with App ID per environment](./index.md#configure-with-app-id-per-environment) approach.
+You can use this API to load the configuration from the bundled JSON configuration file in your app package.
+
+<InlineAlert variant="warning" slots="text"/>
+
+This will replace any configuration previously loaded during app launch or with the [configureWithAppID](#configurewithappid) API.
 
 To pass in a bundled path and file name:
 

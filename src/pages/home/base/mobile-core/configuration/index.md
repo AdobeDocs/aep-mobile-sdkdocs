@@ -14,71 +14,50 @@ import Tabs from './tabs/index.md'
 
 The Configuration extension is built into the Mobile Core extension. It provides several different APIs for you to setup the configuration either remotely in the Data Collection UI or locally.
 
-## Configure with App ID per environment
+## How Configuration Works 
 
-When you configure a mobile property, a unique environment ID is generated that the SDK uses to retrieve your configuration. This ID is generated when an app configuration is created and published to a given environment. The app is first launched and then the SDK retrieves and uses this Adobe-hosted configuration.
+The Configuration extension manages two types of configuration values: **base configuration** and **programmatic configuration**. The final configuration is created by merging the programmatic configuration over the base configuration and then resolving [environment-aware properties](#environment-aware-configuration-properties). The Configuration extension then publishes the final configuration for use by all other extensions.
 
-<InlineAlert variant="success" slots="text"/>
+### Base Configuration:
 
-As best practice, you should configure a mobile property in the Data Collection UI and use environment IDs to configure your application. Follow the steps in the tutorial on [setting up a mobile property](../../getting-started/create-a-mobile-property.md) if you need to create a new Experience Platform App.
+The base configuration is loaded when the app launches, either from the [cache](./api-reference.md#configurewithappid) or a [bundled configuraton](#using-a-bundled-file-configuration-for-first-launch-scenarios), if available. It can also be updated at any time using the following APIs:
+- [configureWithAppID](./api-reference.md#configurewithappid)
+- [configureWithFilePath](./api-reference.md#configurewithfileinpath)
+- [configureWithFileInAssets](./api-reference.md#configurewithfileinassets)
 
-After the configuration is retrieved when the app is initially launched, the configuration is stored in local cache. The SDK tries to refresh the configuration every cold launch or when a new session is detected. If there is no change or a network request error occurs while downloading the configuration file, the cached configuration will be used.
+### Programmatic Configuration:
 
-The unique environment ID from the Data Collection UI can be configured with the SDK using the following:
+Programmatic configuration consists of overrides applied on top of the base configuration. This is persisted separately and managed through the following APIs:
+- [updateConfiguration](./api-reference.md#updateconfiguration)
+- [clearUpdatedConfiguration](./api-reference.md#clearupdatedconfiguration)
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+This is how the Configuration extension handles the following scenarios.
 
-Android
+### App Launch:
 
-<Tabs query="platform=android&task=configure"/>
+1) On app launch, the extension loads the base configuration as follows:
+  - First, the extension checks for and loads a cached configuration if available. This is typically cached from previous app launches. Refer [configureWithAppID](./api-reference.md#configurewithappid).
+  - If no cached configuration is found, it looks for a [bundled configuration](#using-a-bundled-file-configuration-for-first-launch-scenarios).
 
-iOS
+2) If no base configuration is found, it will not publish a configuration and will wait for configuration APIs to be called by the app. This will cause the SDK to hold event processing.
 
-<Tabs query="platform=ios&task=configure"/>
+3) If a base configuration is loaded, it will publish the final configuration by merging it with any persisted programmatic configuration and resolving environment-aware properties.
 
-## Programmatic updates to configuration
+![Initial configuration after App Launch](./assets/app-launch.png)
 
-You can also update the configuration programmatically by passing configuration keys and values to override the existing configuration.
+### Configuration APIs:
 
-<InlineAlert variant="info" slots="text"/>
+The extension updates either the base configuration or the programmatic configuration, depending on the corresponding API call. Once the update is processed, it publishes the final configuration by merging programmatic configuration over base configuration and resolving environment-aware properties.
 
-Keys that are not found on the current configuration are added when this method is followed. Null values are allowed and replace existing configuration values.
+![Updated configuration after API Call](./assets/api-call.png)
 
-<InlineAlert variant="warning" slots="text"/>
+## Using a bundled file configuration for first launch scenarios
 
-Do not use this API to update the build.environment or any key with an environment prefix, because it can lead to unexpected behavior. For more information, read [Environment-aware configuration properties](#environment-aware-configuration-properties).
+When configuring the SDK using the [Configure with App ID](./api-reference.md#configurewithappid) approach, the SDK downloads the Adobe hosted configuration and caches it for future launches. On subsequent app launches, the SDK uses this cached configuration during initialization and will only re-download it if any changes are detected.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+However, on the initial launch after app installation, the SDK does not have a cached configuration available. In this case, SDK processing is deferred until the configuration is successfully retrieved from the remote server. This introduces a timing gap during which essential SDK features depend on a network connection to fetch the configuration data.
 
-Android
-
-<Tabs query="platform=android&task=update"/>
-
-iOS
-
-<Tabs query="platform=ios&task=update"/>
-
-<!--- React Native
-
-<Tabs query="platform=react-native&task=update"/>
-
-Flutter
-
-<Tabs query="platform=flutter&task=update"/> --->
-
-## Clearing programmatic updates to the configuration
-
-You can clear any programmatic updates made to the configuration via the `clearUpdatedConfiguration` API. This will clear programmatic updates to configuration made via the `updateConfiguration(configMap)`(Android)/ `updateConfigurationWith(configDict:)`(iOS) API. It will also clear any updates to the `MobilePrivacyStatus`(Android)/ `PrivacyStatus`(iOS)  made via `setPrivacyStatus(privacyStatus)`(Android)/ `setPrivacyStatus(_ status:)`(iOS).
-
-For implementation details, please refer to [Configuration API reference](./api-reference.md#clearUpdatedConfiguration).
-
-## Using a bundled file configuration
-
-Applications which need to get data from the SDK early in the application lifecycle should use a bundled file configuration. This will allow the SDK to properly process events before a remote configuration is downloaded, using the bundled configuration in early, app launch scenarios. If you are going to use a bundled file configuration to help with early app processing, it is strongly recommended that you also use [bundled rules](../rules-engine/index.md#using-bundled-rules).
-
-<InlineAlert variant="info" slots="text"/>
-
-Please note that the configuration that is downloaded by using the [Configure with App ID per environment](#configure-with-app-id-per-environment) approach, will overwrite the bundled configuration once it is downloaded, allowing you to always keep a more up-to-date configuration remotely, without needing an app update.
+Applications which need to get data from the SDK early in the application lifecycle should use a bundled file configuration. This will allow the SDK to properly process events before a remote configuration is downloaded, using the bundled configuration. Without a bundled configuration, events triggered early after app launch will wait for the remote configuration to download and may not function as expected.
 
 To use a bundled configuration, follow the steps below:
 
@@ -87,19 +66,9 @@ To use a bundled configuration, follow the steps below:
 3. iOS: Place the file anywhere that it is accessible in your app bundle.
    Android: Place the file in the assets folder.
 
-You can also load a different `ADBMobileConfig.json` file by using the `ConfigureWithFileInPath` method. The Adobe Experience Platform SDKs will attempt to load the file from the given path and parse its JSON contents. Previous programmatic configuration changes that were set by using the `UpdateConfiguration` method are applied on the bundled file's configuration before setting the new configuration to the Adobe Experience Platform SDKs. If a file-read error or JSON parsing error occurs, no configuration changes are made.
+<InlineAlert variant="info" slots="text"/>
 
-To pass in a bundled path and file name:
-
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
-
-Android
-
-<Tabs query="platform=android&task=bundle"/>
-
-iOS
-
-<Tabs query="platform=ios&task=bundle"/>
+Please note that the configuration that is downloaded by using the [Configure with App ID](./api-reference.md#configuration-api-reference) approach, will overwrite the bundled configuration once it is downloaded, allowing you to always keep a more up-to-date configuration remotely, without needing an app update.
 
 ## Environment-aware configuration properties
 
@@ -137,7 +106,7 @@ Here is the resulting shared state from the Configuration extension:
 }
 ```
 
-### Sample configuration
+## Sample configuration
 
 Here's a sample JSON file for the SDK:
 
