@@ -14,30 +14,33 @@ import Tabs from './tabs/index.md'
 
 The Configuration extension is built into the Mobile Core extension. It provides several different APIs for you to setup the configuration either remotely in the Data Collection UI or locally.
 
-## How Configuration Works 
+## How Configuration Works
 
 The Configuration extension manages two types of configuration values: **base configuration** and **programmatic configuration**. The final configuration is created by merging the programmatic configuration over the base configuration and then resolving [environment-aware properties](#environment-aware-configuration-properties). The Configuration extension then publishes the final configuration for use by all other extensions.
 
 ### Base Configuration:
 
 The base configuration is loaded when the app launches, either from the [cache](./api-reference.md#configurewithappid) or a [bundled configuraton](#using-a-bundled-file-configuration-for-first-launch-scenarios), if available. It can also be updated at any time using the following APIs:
-- [configureWithAppID](./api-reference.md#configurewithappid)
-- [configureWithFilePath](./api-reference.md#configurewithfileinpath)
-- [configureWithFileInAssets](./api-reference.md#configurewithfileinassets)
+
+* [configureWithAppID](./api-reference.md#configurewithappid)
+* [configureWithFilePath](./api-reference.md#configurewithfileinpath)
+* [configureWithFileInAssets](./api-reference.md#configurewithfileinassets)
 
 ### Programmatic Configuration:
 
 Programmatic configuration consists of overrides applied on top of the base configuration. This is persisted separately and managed through the following APIs:
-- [updateConfiguration](./api-reference.md#updateconfiguration)
-- [clearUpdatedConfiguration](./api-reference.md#clearupdatedconfiguration)
+
+* [updateConfiguration](./api-reference.md#updateconfiguration)
+* [clearUpdatedConfiguration](./api-reference.md#clearupdatedconfiguration)
 
 This is how the Configuration extension handles the following scenarios.
 
 ### App Launch:
 
 1) On app launch, the extension loads the base configuration as follows:
-  - First, the extension checks for and loads a cached configuration if available. This is typically cached from previous app launches. Refer [configureWithAppID](./api-reference.md#configurewithappid).
-  - If no cached configuration is found, it looks for a [bundled configuration](#using-a-bundled-file-configuration-for-first-launch-scenarios).
+
+  * First, the extension checks for and loads a cached configuration if available. This is typically cached from previous app launches. Refer [configureWithAppID](./api-reference.md#configurewithappid).
+  * If no cached configuration is found, it looks for a [bundled configuration](#using-a-bundled-file-configuration-for-first-launch-scenarios).
 
 2) If no base configuration is found, it will not publish a configuration and will wait for configuration APIs to be called by the app. This will cause the SDK to hold event processing.
 
