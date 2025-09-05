@@ -67,8 +67,6 @@ When you configure a mobile property, a unique environment ID is generated that 
 
 As best practice, you should configure a mobile property in the Data Collection UI and use environment IDs to configure your application. Follow the steps in the tutorial on [setting up a mobile property](../../../getting-started/create-a-mobile-property.md) if you need to create a new Experience Platform App.
 
-
-
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android
