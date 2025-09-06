@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## September 5, 2025
+
+### iOS Core 5.6.2
+
+* Improved stability by removing calls to `objc_copyClassList` used for extension discovery during simplified initialization.
+
 ## August 20, 2025
 
 ### iOS Core 5.6.1

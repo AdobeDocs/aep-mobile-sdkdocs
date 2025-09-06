@@ -9,6 +9,19 @@ keywords:
 
 # Release notes
 
+## September 3, 2025
+
+### React Native Messaging 7.2.0
+
+* Have added Unified proposition track for content card and code based experiences.
+* Added support for native handling of JavaScript events via `handleJavascriptMessage` API.
+
+## August 27, 2025
+
+### React Native Messaging 7.1.1
+
+* Fixed an issue where setting the messaging delegate, stopped the Assurance pin code screen from displaying.
+
 ## August 14, 2025
 
 ### Android Messaging 3.5.0
