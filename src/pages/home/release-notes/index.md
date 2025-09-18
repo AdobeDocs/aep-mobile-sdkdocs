@@ -7,7 +7,32 @@ Keywords:
 
 # Release notes
 
+## September 5, 2025
+
+### iOS Core 5.6.2
+
+* Improved stability by removing calls to `objc_copyClassList` used for extension discovery during simplified initialization.
+
+## September 3, 2025
+
+### React Native Messaging 7.2.0
+
+* Have added Unified proposition track for content card and code based experiences.
+* Added support for native handling of JavaScript events via `handleJavascriptMessage` API.
+
+## August 27, 2025
+
+### React Native Messaging 7.1.1
+
+* Fixed an issue where setting the messaging delegate, stopped the Assurance pin code screen from displaying.
+
 ## August 20, 2025
+
+### React Native Optimize 7.1.0
+
+* Enhanced update proposition public api with callback support.
+* Added support for display tracking of multiple offers.
+* Added `generateDisplayInteractionXdm` API for a list of offers.
 
 ### iOS Core 5.6.1
 
