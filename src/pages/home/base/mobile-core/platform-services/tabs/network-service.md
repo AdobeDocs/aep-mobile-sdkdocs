@@ -50,7 +50,7 @@ networkService.connectAsync(networkRequest: networkRequest) { httpConnection in
 }
 ```
 
-<Variant platform="android" task="override" repeat="7"/>
+<Variant platform="android" task="override" repeat="10"/>
 
 #### Java
 
