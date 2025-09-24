@@ -7,6 +7,14 @@ Keywords:
 
 # Release notes
 
+## September 22, 2025
+
+### iOS Core 5.7.0
+
+* Migrates EventHistory database from `Caches` directory to `Application Support` directory.
+  * **NOTE:** - if you use the Messaging extension, it is strongly recommended that you upgrade to this version of the Core/Services SDK.
+* EventHistory initialization now happens on the Event Hub's queue.
+
 ## September 5, 2025
 
 ### iOS Core 5.6.2
