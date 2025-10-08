@@ -9,6 +9,13 @@ keywords:
 
 # Release notes
 
+## October 7, 2025
+
+### iOS Messaging 5.8.1
+
+* Fixes a bug where if the user is being returned a holdout treatment for a content card, an OOM crash could occur
+* Updates dependency version of Core to 5.7.0 which moves the event history database to Application Support directory
+
 ## September 3, 2025
 
 ### React Native Messaging 7.2.0
