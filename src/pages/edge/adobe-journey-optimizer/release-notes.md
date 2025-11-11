@@ -9,6 +9,12 @@ keywords:
 
 # Release notes
 
+## November 10, 2025
+
+### Android Messaging 3.5.1
+
+* Add a Messaging extension specific FileProvider to resolve a manifest merge issue.
+
 ## October 7, 2025
 
 ### iOS Messaging 5.8.1
