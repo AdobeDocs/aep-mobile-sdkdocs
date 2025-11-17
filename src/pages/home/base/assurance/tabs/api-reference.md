@@ -190,3 +190,57 @@ public static void registerExtension()
 ```java
 Assurance.registerExtension();
 ```
+
+<Variant platform="android" api="start-session-quickconnect" repeat="8"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public static void startSession()
+```
+
+**Example**
+
+```java
+Assurance.startSession();
+```
+
+#### Kotlin
+
+**Example**
+
+```kotlin
+Assurance.startSession()
+```
+
+<Variant platform="ios" api="start-session-quickconnect" repeat="10"/>
+
+#### Swift
+
+**Syntax**
+
+```swift
+static func startSession()
+```
+
+**Example**
+
+```swift
+AEPAssurance.startSession()
+```
+
+#### Objective-C
+
+**Syntax**
+
+```objectivec
++ (void) startSession;
+```
+
+**Example**
+
+```objectivec
+[AEPAssurance startSession];
+```

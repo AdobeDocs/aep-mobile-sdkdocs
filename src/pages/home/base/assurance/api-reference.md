@@ -73,3 +73,21 @@ iOS
 Flutter
 
 <Tabs query="platform=flutter&api=start-session"/> --->
+
+## startSession (Quick Connect)
+
+Displays a Quick Connect authorization overlay to begin an AEP Assurance session.
+
+<InlineAlert variant="info" slots="text"/>
+
+This API is only supported on debug builds. Calling this method on a non-debuggable build will result in a no-op.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+
+Android
+
+<Tabs query="platform=android&api=start-session-quickconnect"/>
+
+iOS
+
+<Tabs query="platform=ios&api=start-session-quickconnect"/>
