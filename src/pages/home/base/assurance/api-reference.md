@@ -76,7 +76,7 @@ Flutter
 
 ## startSession (Quick Connect)
 
-Displays a Quick Connect authorization overlay to begin an AEP Assurance session.
+Displays a Quick Connect authorization overlay to begin an Experience Platform Assurance session.
 
 <InlineAlert variant="info" slots="text"/>
 
