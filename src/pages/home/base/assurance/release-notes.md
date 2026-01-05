@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## January 5, 2026
+
+### iOS Assurance 5.0.3
+
+* Fixed an issue in Assurance Event encoding resulting in socket disconnection.
+
 ## August 19, 2025
 
 ### iOS Assurance 5.0.2
