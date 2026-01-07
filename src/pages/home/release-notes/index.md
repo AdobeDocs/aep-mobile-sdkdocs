@@ -7,6 +7,17 @@ Keywords:
 
 # Release notes
 
+## January 7, 2026
+
+### React Native Optimize 7.1.1
+
+* Fixes runtime error caused when calling `.get()` on the response object from the `onSuccess` callback of `updatePropositions`.
+
+### React Native Messaging 7.2.1
+
+* Fixed typecasting of Messaging Proposition for `getPropositionsForSurfaces` API.
+* Fixed issues with methods of Message class.
+
 ## January 5, 2026
 
 ### iOS Assurance 5.0.3
