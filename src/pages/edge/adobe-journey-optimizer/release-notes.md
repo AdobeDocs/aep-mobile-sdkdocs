@@ -9,6 +9,13 @@ keywords:
 
 # Release notes
 
+## January 7, 2026
+
+### React Native Messaging 7.2.1
+
+* Fixed typecasting of Messaging Proposition for `getPropositionsForSurfaces` API.
+* Fixed issues with methods of Message class.
+
 ## November 10, 2025
 
 ### Android Messaging 3.5.1
