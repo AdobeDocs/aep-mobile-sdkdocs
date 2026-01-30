@@ -9,6 +9,48 @@ keywords:
 
 # Release notes
 
+## January 29, 2026
+
+### Android Messaging 3.6.0
+
+## What's Changed
+* add retry logic when waiting for rule consequence events by @rymorale in https://github.com/adobe/aepsdk-messaging-android/pull/389
+* fix format issues by @rymorale in https://github.com/adobe/aepsdk-messaging-android/pull/390
+* MOB-23986 : Adding Notification Delete Listener by @sagar-sharma-adobe in https://github.com/adobe/aepsdk-messaging-android/pull/391
+* Update how-to-call-native-from-javascript.md by @rymorale in https://github.com/adobe/aepsdk-messaging-android/pull/395
+* E2E automation and doc updates by @rymorale in https://github.com/adobe/aepsdk-messaging-android/pull/400
+* exd support for push message by @navratan-soni in https://github.com/adobe/aepsdk-messaging-android/pull/402
+* Merging main branch into staging by @navratan-soni in https://github.com/adobe/aepsdk-messaging-android/pull/404
+* exd support in Push by @navratan-soni in https://github.com/adobe/aepsdk-messaging-android/pull/406
+* Merge Staging into Dev-v3.5.2 by @sagar-sharma-adobe in https://github.com/adobe/aepsdk-messaging-android/pull/408
+* Merging dev-v3.5.2 to Staging by @sagar-sharma-adobe in https://github.com/adobe/aepsdk-messaging-android/pull/409
+* Merge Staging to Main by @sagar-sharma-adobe in https://github.com/adobe/aepsdk-messaging-android/pull/410
+* Updated dependency versions in gradle.properties by @navratan-soni in https://github.com/adobe/aepsdk-messaging-android/pull/413
+* Updating version to 3.6.0 by @github-actions[bot] in https://github.com/adobe/aepsdk-messaging-android/pull/412
+
+## New Contributors
+* @sagar-sharma-adobe made their first contribution in https://github.com/adobe/aepsdk-messaging-android/pull/391
+
+**Full Changelog**: https://github.com/adobe/aepsdk-messaging-android/compare/v3.5.1...v3.6.0
+
+### iOS Messaging 5.9.0
+
+## What's Changed
+* -circle updates to xcode 16.4 by @sbenedicadb in https://github.com/adobe/aepsdk-messaging-ios/pull/425
+* Update Release GitHub action to use the one in `aepsdk-commons` by @sbenedicadb in https://github.com/adobe/aepsdk-messaging-ios/pull/426
+* update macos runner and xcode version to match the latest xcode 16 CI updates by @rymorale in https://github.com/adobe/aepsdk-messaging-ios/pull/431
+* staging sync  by @namArora3112 in https://github.com/adobe/aepsdk-messaging-ios/pull/439
+* added push notification tracking exdm events along with test cases by @namArora3112 in https://github.com/adobe/aepsdk-messaging-ios/pull/435
+* [MOB-24448] - Fixed bug in queryParaMap func by @akhiljain1907 in https://github.com/adobe/aepsdk-messaging-ios/pull/443
+* Updating version to 5.9.0 by @github-actions[bot] in https://github.com/adobe/aepsdk-messaging-ios/pull/445
+* added guard instead of let by @namArora3112 in https://github.com/adobe/aepsdk-messaging-ios/pull/447
+* Staging to Main for 5.9.0 release by @akhiljain1907 in https://github.com/adobe/aepsdk-messaging-ios/pull/446
+
+## New Contributors
+* @namArora3112 made their first contribution in https://github.com/adobe/aepsdk-messaging-ios/pull/439
+
+**Full Changelog**: https://github.com/adobe/aepsdk-messaging-ios/compare/5.8.1...5.9.0
+
 ## January 14, 2026
 
 ### React Native Messaging 7.3.0
