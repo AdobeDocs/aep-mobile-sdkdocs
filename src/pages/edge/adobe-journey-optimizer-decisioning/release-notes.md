@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## January 7, 2026
+
+### React Native Optimize 7.1.1
+
+* Fixes runtime error caused when calling `.get()` on the response object from the `onSuccess` callback of `updatePropositions`.
+
 ## August 20, 2025
 
 ### React Native Optimize 7.1.0

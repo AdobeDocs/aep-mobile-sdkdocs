@@ -9,6 +9,32 @@ keywords:
 
 # Release notes
 
+## January 29, 2026
+
+### Android Messaging 3.6.0
+
+* Added AJO decisioning support in Push notification.
+* Fixed Push Notification Dismiss Interaction tracking when app is in killed state.
+
+### iOS Messaging 5.9.0
+
+* Added AJO decisioning support in Push notification
+* Fixed a bug in queryParamMap() function where key value pairs were not returning correctly for query components in an URL
+
+## January 14, 2026
+
+### React Native Messaging 7.3.0
+
+* Added `evaluteJavascript` API
+* Added support for React Native 0.81 and higher
+
+## January 7, 2026
+
+### React Native Messaging 7.2.1
+
+* Fixed typecasting of Messaging Proposition for `getPropositionsForSurfaces` API.
+* Fixed issues with methods of Message class.
+
 ## November 10, 2025
 
 ### Android Messaging 3.5.1
