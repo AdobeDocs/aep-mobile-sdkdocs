@@ -10,9 +10,7 @@ keywords:
 - Tutorial
 ---
 
-<Variant platform="android" function="interceptor" repeat="6"/>
-
-Implement the `RuleReevaluationInterceptor` interface to intercept re-evaluation events.
+<Variant platform="android" function="interceptor" repeat="3"/>
 
 #### Interface
 
@@ -26,39 +24,23 @@ interface RuleReevaluationInterceptor {
 }
 ```
 
-#### Implementation
+#### Messaging extension implementation
 
 ```kotlin
-import com.adobe.marketing.mobile.Event
-import com.adobe.marketing.mobile.LaunchRule
-import com.adobe.marketing.mobile.Messaging
-import com.adobe.marketing.mobile.RuleReevaluationInterceptor
-
-class MyReevaluationInterceptor : RuleReevaluationInterceptor {
-
-    override fun onReevaluationTriggered(
-        event: Event,
-        reevaluableRules: List<LaunchRule>,
-        completion: () -> Unit
-    ) {
-        // Refresh campaigns from server
-        Messaging.refreshInAppMessages()
-        
-        // Call completion to trigger re-evaluation with updated rules
-        completion()
-    }
+override fun onReevaluationTriggered(
+    event: Event,
+    reevaluableRules: List<LaunchRule>,
+    completion: () -> Unit
+) {
+    // Refresh campaigns from server
+    Messaging.refreshInAppMessages()
+    
+    // Call completion to trigger re-evaluation with updated rules
+    completion()
 }
 ```
 
-#### Registration
-
-```kotlin
-Messaging.setReevaluationInterceptor(MyReevaluationInterceptor())
-```
-
-<Variant platform="ios" function="interceptor" repeat="6"/>
-
-Implement the `RuleReevaluationInterceptor` protocol to intercept re-evaluation events.
+<Variant platform="ios" function="interceptor" repeat="3"/>
 
 #### Protocol
 
@@ -72,30 +54,18 @@ public protocol RuleReevaluationInterceptor: AnyObject {
 }
 ```
 
-#### Implementation
+#### Messaging extension implementation
 
 ```swift
-import AEPCore
-import AEPMessaging
-
-class MyReevaluationInterceptor: RuleReevaluationInterceptor {
-
-    func onReevaluationTriggered(
-        event: Event,
-        reevaluableRules: [LaunchRule],
-        completion: @escaping () -> Void
-    ) {
-        // Refresh campaigns from server
-        Messaging.refreshInAppMessages()
-        
-        // Call completion to trigger re-evaluation with updated rules
-        completion()
-    }
+func onReevaluationTriggered(
+    event: Event,
+    reevaluableRules: [LaunchRule],
+    completion: @escaping () -> Void
+) {
+    // Refresh campaigns from server
+    Messaging.refreshInAppMessages()
+    
+    // Call completion to trigger re-evaluation with updated rules
+    completion()
 }
-```
-
-#### Registration
-
-```swift
-Messaging.setReevaluationInterceptor(MyReevaluationInterceptor())
 ```

@@ -78,16 +78,13 @@ When re-evaluation is enabled for a campaign, the rule includes a `meta` object 
 When a rule with `reEvaluate: true` matches an event:
 
 1. The SDK identifies the rule as reevaluable from the `meta` property
-2. If a `RuleReevaluationInterceptor` is registered, it is invoked with the triggering event and matched rules
-3. The interceptor calls `completion()` after refreshing campaigns
-4. The SDK re-evaluates rules with the updated campaign data
-5. The message is displayed only if the rule still matches
+2. The SDK refreshes campaign data from the server
+3. Rules are re-evaluated with the updated campaign data
+4. The message is displayed only if the rule still matches
 
-### Implementing RuleReevaluationInterceptor (Optional)
+### Code reference
 
-For most implementations, no code is required - the SDK handles re-evaluation automatically.
-
-For advanced use cases requiring custom control over the re-evaluation flow, implement the `RuleReevaluationInterceptor`:
+The Messaging extension implements `RuleReevaluationInterceptor` internally. When a reevaluable rule is triggered, the Messaging extension refreshes campaigns from the server and calls the completion handler to trigger re-evaluation with the updated data.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
