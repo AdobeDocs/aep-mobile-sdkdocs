@@ -289,8 +289,8 @@ module.exports = {
                                                 path: "/edge/adobe-journey-optimizer/in-app-message/tutorials/trigger-campaign"
                                             },
                                             {
-                                                title: "Re-evaluate in-app messages before display",
-                                                path: "/edge/adobe-journey-optimizer/in-app-message/tutorials/implement-in-app-messaging"
+                                                title: "Implement in-app messaging (step-by-step)",
+                                                path: "/edge/adobe-journey-optimizer/in-app-message/tutorials/re-evaluate"
                                             }
                                         ]
                                     },
