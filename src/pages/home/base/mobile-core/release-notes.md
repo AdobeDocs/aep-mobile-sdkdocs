@@ -8,6 +8,13 @@ keywords:
 
 # Release notes
 
+## February 18, 2026
+
+### iOS Core 5.8.0
+
+* Added support for Re-Evaluation of rules in rules engine to be used for schema type consequences
+*  Ensured that the message requesting a fullscreen dismiss is the same message currently being shown
+
 ## September 22, 2025
 
 ### iOS Core 5.7.0
