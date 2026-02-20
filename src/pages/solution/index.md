@@ -18,3 +18,4 @@ Solution extensions are extensions that directly connect with Experience Cloud s
 * [Adobe Media Analytics](./adobe-media-analytics/index.md)
 * [Adobe Target](./adobe-target/index.md)
 * [Places](./places/index.md)
+* [Content Analytics](./adobe-content-analytics/index.md)
