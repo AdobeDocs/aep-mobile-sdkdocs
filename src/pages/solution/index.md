@@ -13,6 +13,7 @@ Solution extensions are extensions that directly connect with Experience Cloud s
 
 * [Adobe Analytics](./adobe-analytics/index.md)
 * [Adobe Audience Manager](./adobe-audience-manager/index.md)
+* [Adobe Brand Concierge](./adobe-brand-concierge/index.md)
 * [Adobe Campaign Classic](./adobe-campaign-classic/index.md)
 * [Adobe Campaign Standard](./adobe-campaign-standard/index.md)
 * [Adobe Media Analytics](./adobe-media-analytics/index.md)

@@ -851,6 +851,35 @@ module.exports = {
                         ]
                     },
                     {
+                        title: 'Adobe Brand Concierge',
+                        path: '/solution/adobe-brand-concierge/',
+                        pages: [{
+                                title: "Overview",
+                                path: "/solution/adobe-brand-concierge/"
+                            },
+                            {
+                                title: "Implementation guide",
+                                path: "/solution/adobe-brand-concierge/implementation-guide"
+                            },
+                            {
+                                title: "Style guide",
+                                path: "/solution/adobe-brand-concierge/style-guide"
+                            },
+                            {
+                                title: "Style guide (Android)",
+                                path: "/solution/adobe-brand-concierge/android/style-guide"
+                            },
+                            {
+                                title: "Style guide (iOS)",
+                                path: "/solution/adobe-brand-concierge/ios/style-guide"
+                            },
+                            {
+                                title: "Release notes",
+                                path: "/solution/adobe-brand-concierge/release-notes"
+                            }
+                        ]
+                    },
+                    {
                         title: "Adobe Campaign Classic",
                         path: "/solution/adobe-campaign-classic",
                         pages: [{
