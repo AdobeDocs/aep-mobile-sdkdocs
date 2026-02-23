@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## February 23, 2025
+
+### Android Brand Concierge 3.0.2
+
+* Update the default Consent value to `in` for apps which do not have the Consent extension installed.
+
 ## February 19, 2025
 
 ### Android Brand Concierge 3.0.1
