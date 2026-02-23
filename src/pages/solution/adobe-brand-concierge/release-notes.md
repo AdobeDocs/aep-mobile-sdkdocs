@@ -8,19 +8,19 @@ keywords:
 
 # Release notes
 
-## February 23, 2025
+## February 23, 2026
 
 ### Android Brand Concierge 3.0.2
 
 * Update the default Consent value to `in` for apps which do not have the Consent extension installed.
 
-## February 19, 2025
+## February 19, 2026
 
 ### Android Brand Concierge 3.0.1
 
 * Fix the Consent payload sent in Concierge requests.
 
-## February 18, 2025
+## February 18, 2026
 
 ### Android Brand Concierge 3.0.0
 
@@ -28,7 +28,7 @@ keywords:
   * Transform your digital properties into interactive, conversational experiences that guide discovery, anticipate customer needs, and build trust with Brand Concierge — powered by AI. 
   * [Official documentation](https://business.adobe.com/products/brand-concierge.html)
 
-## February 17, 2025
+## February 17, 2026
 
 ### iOS Brand Concierge 5.0.0
 
