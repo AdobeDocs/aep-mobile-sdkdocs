@@ -1,11 +1,18 @@
 ---
-noIndex: true
+title: Brand Concierge implementation guide (Android)
+description: Integrate and customize the Brand Concierge extension in your Android app.
+keywords:
+- Brand Concierge
+- Android
+- Implementation
 ---
 
-The Brand Concierge UI is presented through two integration approaches:
+# Brand Concierge Implementation Guide (Android)
 
-* **Managed Integration**: Provide a drop-in entry point to the chat interface and let the Brand Concierge extension automatically manage it.
-* **Custom Integration**: Embed and manage the chat UI directly into your app's view hierarchy for dedicated chat screens or custom layouts.
+The Brand Concierge UI has two integration approaches:
+
+* **Managed Integration**: Provides a drop-in entry point to the chat interface and lets the Brand Concierge extension automatically manage it.
+* **Custom Integration**: Embeds and manages the chat UI directly into your app's view hierarchy for dedicated chat screens or custom layouts.
 
 Both approaches are available for Compose and XML/Views-based apps.
 
@@ -15,7 +22,7 @@ Both approaches are available for Compose and XML/Views-based apps.
 
 ### Required SDK modules
 
-Your app needs these AEP SDK's available and registered:
+Your app needs the following Experience Platform SDKs to be available and registered:
 
 * [Mobile Core](https://github.com/adobe/aepsdk-core-android)
 * [Edge](https://github.com/adobe/aepsdk-edge-android)
@@ -26,9 +33,9 @@ Your app needs these AEP SDK's available and registered:
 
 * Minimum Android API level 24 (Android 7.0) or higher
 
-### Permissions (for speech input)
+### Permissions for speech to text (optional)
 
-Speech to text uses Android Speech Recognition API + microphone API's for voice input functionality. Add this permission to your app `AndroidManifest.xml`:
+Speech to text uses Android Speech Recognition APIs and microphone APIs for voice input functionality. Add this permission to your app `AndroidManifest.xml`:
 
 ```xml
 <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -53,22 +60,22 @@ The required extensions are:
 
 ### Step 2: Validate the Brand Concierge configuration keys exist
 
-If you set the Mobile SDK log level to trace:
+If you set the Adobe Experience Platform SDK log level to trace:
 
 ```kotlin
 MobileCore.setLogLevel(LoggingMode.VERBOSE)
 ```
 
- after which you can inspect the app logs to confirm that extension shared states are being set with the expected values.
+you can then inspect the app logs to confirm that extension shared states are being set with the expected values.
 
 Brand Concierge expects the following keys to be present in the Configuration shared state:
 
 * **`concierge.server`**: String (server host or base domain used by Brand Concierge requests)
-* **`concierge.configId`**: String (datastream id)
+* **`concierge.configId`**: String (datastream ID)
 
-ECID is read from Edge Identity shared state.
+The ECID is read from the Edge Identity shared state.
 
-Another option for validation is to use Adobe Assurance. Refer to the [Mobile SDK validation guide](/src/pages/home/getting-started/validate/).
+Another option for validation is to use Adobe Assurance. Refer to the [Mobile SDK validation guide](/src/pages/home/getting-started/validate/) for more information.
 
 ---
 
@@ -80,7 +87,7 @@ Use this when you want to provide a drop-in entry point to the chat interface an
 
 This mode:
 
-* Shows the configured trigger when the Brand Concierge extension is ready (ECID + concierge configuration available)
+* Shows the configured trigger when the Brand Concierge extension is ready (ECID and Concierge configuration available)
 * Opens chat as a full-screen dialog when the trigger is invoked
 * Handles dismissal (back press, close button, gestures) automatically
 
@@ -230,7 +237,7 @@ class XmlActivity : AppCompatActivity() {
 
 ### Theme Customization
 
-Concierge chat interface can be customized by loading the theme file from `assets` directory of your app by using `ConciergeThemeLoader`.
+The Brand Concierge chat interface can be customized by loading the theme file from the `assets` directory of your app using `ConciergeThemeLoader`.
 
 ```kotlin
 @Composable
@@ -248,6 +255,8 @@ fun MyScreen() {
 }
 ```
 
+More information regarding theme customization can be found in the [Style guide (Android)](/edge/adobe-brand-concierge/android/style-guide/).
+
 ## Next steps
 
-* [Style guide (Android)](/solution/adobe-brand-concierge/android/style-guide/) — Theme JSON reference and implementation status for Android.
+* [Style guide (Android)](/edge/adobe-brand-concierge/android/style-guide/) — Theme JSON reference and implementation status for Android.

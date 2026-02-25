@@ -16,28 +16,13 @@ This document provides a comprehensive reference for all styling properties supp
 
 **Implementation Status**: While the theme system parses all CSS variables for web compatibility, not all properties are currently used in the Android UI. See the [Implementation Status](#implementation-status) section for detailed information on which properties are actively rendered versus defined but unused.
 
-## Table of Contents
-
-* [Overview](#overview)
-* [JSON Structure](#json-structure)
-* [Value Formats](#value-formats)
-* [Metadata](#metadata)
-* [Behavior](#behavior)
-* [Disclaimer](#disclaimer)
-* [Text (Copy)](#text-copy)
-* [Arrays](#arrays)
-* [Assets](#assets)
-* [Theme Tokens](#theme-tokens)
-* [Complete Example](#complete-example)
-* [Implementation Status](#implementation-status)
-
 ---
 
 ## Overview
 
 The theme configuration is loaded from a JSON file using `ConciergeThemeLoader.load(context, filename)`. The framework supports CSS-like variable names (prefixed with `--`) that are automatically mapped to native Kotlin properties.
 
-### Loading a Theme
+### Loading a theme
 
 ```kotlin
 // Load from app assets
@@ -47,7 +32,7 @@ val theme = ConciergeThemeLoader.load(context, "theme-default")
 val defaultTheme = ConciergeThemeLoader.default()
 ```
 
-### Applying a Theme
+### Applying a theme
 
 Apply the theme using the `ConciergeTheme` composable:
 
@@ -85,7 +70,7 @@ fun MyApp() {
 }
 ```
 
-### Applying a Theme in XML/Views
+### Applying a theme in XML/Views
 
 For XML-based apps using `ConciergeChatView`, pass the theme when binding:
 
@@ -102,14 +87,14 @@ chatView.bind(
 
 **Important:** The `ConciergeTheme` composable provides theme tokens to all child composables through CompositionLocal.
 
-### Default Theming
+### Default theming
 
 * **When no theme is loaded** (`theme = null`): The SDK uses built-in light or dark colors based on the device's light/dark setting.
 * **When a theme is loaded**: The theme JSON always takes precedence.
 
 ---
 
-## JSON Structure
+## JSON structure
 
 The theme JSON file contains these top-level keys:
 
@@ -125,15 +110,15 @@ The theme JSON file contains these top-level keys:
 
 ---
 
-## Value Formats
+## Value formats
 
 ### Colors
 
-Colors are specified as hex strings. Supported formats: `#RRGGBB` (6 digit hex), `#RRGGBBAA` (8 digit hex with alpha).
+Colors are specified as hex strings. Supported formats: `#RRGGBB` (6 digit hex) and `#RRGGBBAA` (8 digit hex with alpha).
 
 ### Dimensions
 
-Dimensions use CSS pixel units (e.g. `"52px"`, `"100%"`).
+Dimensions use CSS pixel units (e.g. `"52px"` and `"100%"`).
 
 ### Padding
 
@@ -273,9 +258,15 @@ To hide the disclaimer, omit the `disclaimer` key or set `disclaimer.text` to an
 
 ## Text (Copy)
 
-Localized UI strings using dot-notation keys. Key groups: **Welcome Screen** (`welcome.heading`, `welcome.subheading`), **Input** (`input.placeholder`, `input.messageInput.aria`, `input.send.aria`, etc.), **Cards & Carousel** (`card.aria.select`, `carousel.prev.aria`, `carousel.next.aria`), **System Messages** (`scroll.bottom.aria`, `error.network`, `loading.message`), **Feedback Dialog** (`feedback.dialog.title.positive`, `feedback.dialog.question.positive`, etc.).
+Localized UI strings use dot-notation keys. Key groups:
 
-It is strongly recommended to test text values on target devices before deployment.
+* **Welcome Screen:** `welcome.heading`, `welcome.subheading`
+* **Input:** `input.placeholder`, `input.messageInput.aria`, `input.send.aria`, `input.aiChatIcon.tooltip`, `input.mic.aria`
+* **Cards & Carousel:** `card.aria.select`, `carousel.prev.aria`, `carousel.next.aria`
+* **System Messages:** `scroll.bottom.aria`, `error.network`, `loading.message`
+* **Feedback Dialog:** `feedback.dialog.title.positive`, `feedback.dialog.title.negative`, `feedback.dialog.question.positive`, `feedback.dialog.question.negative`, `feedback.dialog.notes`, `feedback.dialog.submit`, `feedback.dialog.cancel`, `feedback.dialog.notes.placeholder`, `feedback.toast.success`, `feedback.thumbsUp.aria`, `feedback.thumbsDown.aria`
+
+You should test text values on target devices before deployment.
 
 ### Example
 
@@ -294,7 +285,7 @@ It is strongly recommended to test text values on target devices before deployme
 
 ## Arrays
 
-It is recommended to have no more than four items in welcome examples and no more than five options each for feedback. Test values on device to ensure the UI looks as desired.
+You should have no more than four items in welcome examples and no more than five options each for feedback. Test values on target devices to ensure the UI looks as desired.
 
 ### Example
 
@@ -384,7 +375,7 @@ For the full list of theme tokens and Kotlin property mappings, see the [Brand C
 
 ## Complete Example
 
-Place the theme file in your app's `assets` directory (e.g. `assets/my-theme.json`) and load it with `ConciergeThemeLoader.load(context, filename)` as shown in [Overview](#overview). For XML/Views, pass the loaded theme into `ConciergeChatView.bind(...)`.
+Place the theme file in your app's `assets` directory (e.g. `assets/my-theme.json`) and load it with `ConciergeThemeLoader.load(context, filename)` as shown in the [overview](#overview). For XML/Views, pass the loaded theme into `ConciergeChatView.bind(...)`.
 
 ```json
 {
@@ -531,13 +522,19 @@ This section documents which properties are fully implemented, partially impleme
 ### Implementation Summary
 
 **Overall:**
-- **Colors**: ~70% implemented (most core colors used; hover states not applicable on Android)
-- **Typography**: ~60% implemented (`fontFamily` not yet supported)
-- **Layout**: ~15% implemented (only outline widths and font sizes currently used)
-- **Behavior**: ~10% implemented (only `enableVoiceInput` functional)
-- **Text/Copy**: ~50% implemented (main strings used; accessibility labels not yet wired)
 
-**Key differences from web/iOS:** Hover states are parsed but not applicable. Box shadows are parsed but not rendered. Most layout dimensions are hardcoded. Accessibility (aria) labels are parsed but not yet connected to content descriptions.
+* **Colors:** ~70% implemented (most core colors used; hover states not applicable on Android)
+* **Typography:** ~60% implemented (`fontFamily` not yet supported)
+* **Layout:** ~15% implemented (only outline widths and font sizes currently used)
+* **Behavior:** ~10% implemented (only `enableVoiceInput` functional)
+* **Text/Copy:** ~50% implemented (main strings used; accessibility labels not yet wired)
+
+**Key differences from web/iOS:**
+
+* Hover states are parsed but not applicable on Android
+* Box shadows are parsed but not rendered
+* Most layout dimensions are hardcoded
+* Accessibility (aria) labels are parsed but not yet connected to content descriptions
 
 ### Metadata
 
@@ -717,6 +714,18 @@ The following colors from `LightConciergeColors` / `DarkConciergeColors` are har
 
 ### Recommendations for theme authors
 
-**Focus on:** `--color-primary`, `--color-text`, `--main-container-background`, `--main-container-bottom-background`, message colors, button colors, `--input-background`, `--input-text-color`, `--input-outline-color`, `--input-focus-outline-color`, disclaimer and citation colors, `--feedback-icon-btn-background`, and the essential text keys (`welcome.heading`, `welcome.subheading`, `input.placeholder`, `loading.message`, all `feedback.dialog.*`). Set `behavior.input.enableVoiceInput` to control the mic button. Use `--input-outline-width`, `--input-focus-outline-width`, `--input-font-size`, `--disclaimer-font-size`, `--citations-desktop-button-font-size`, and `--line-height-body` for layout/typography.
+**Focus on:**
 
-**Can be skipped:** Hover and box-shadow properties, most layout dimensions, disabled states, accessibility labels, welcome ordering, and `--font-family` (not implemented).
+* **Colors:** `--color-primary`, `--color-text`, `--main-container-background`, `--main-container-bottom-background`, message colors, button colors, `--input-background`, `--input-text-color`, `--input-outline-color`, `--input-focus-outline-color`, disclaimer and citation colors, `--feedback-icon-btn-background`
+* **Text keys:** `welcome.heading`, `welcome.subheading`, `input.placeholder`, `loading.message`, and all `feedback.dialog.*`
+* **Behavior:** `behavior.input.enableVoiceInput` to control the mic button
+* **Layout/typography:** `--input-outline-width`, `--input-focus-outline-width`, `--input-font-size`, `--disclaimer-font-size`, `--citations-desktop-button-font-size`, `--line-height-body`
+
+**Can be skipped:**
+
+* Hover and box-shadow properties
+* Most layout dimensions (currently hardcoded)
+* Disabled states
+* Accessibility labels (not yet wired)
+* Welcome ordering (`--welcome-input-order`, `--welcome-cards-order`)
+* `--font-family` (not implemented)

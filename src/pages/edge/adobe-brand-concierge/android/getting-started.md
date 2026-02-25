@@ -1,6 +1,13 @@
 ---
-noIndex: true
+title: Brand Concierge getting started (Android)
+description: Install and register the Brand Concierge extension in your Android app.
+keywords:
+- Brand Concierge
+- Android
+- Getting started
 ---
+
+# Brand Concierge Getting Started (Android)
 
 ## Gradle
 
@@ -45,3 +52,8 @@ class MainApp : Application() {
 ```
 
 Replace `MY_APP_ID` with your mobile property App ID from Adobe Data Collection (formerly Adobe Launch). If you use other AEP extensions (e.g. Lifecycle, Identity, Assurance), add them to the `extensions` list and follow the [Adobe Experience Platform Mobile SDK getting started guide](/src/pages/home/getting-started/) for full setup.
+
+## Next steps
+
+* [Implementation guide (Android)](/edge/adobe-brand-concierge/android/implementation-guide/) — Integrate the chat UI (managed or custom, Compose or XML/Views).
+* [Style guide (Android)](/edge/adobe-brand-concierge/android/style-guide/) — Theme JSON reference and implementation status.

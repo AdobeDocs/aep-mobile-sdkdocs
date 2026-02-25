@@ -191,7 +191,15 @@ The theme JSON file contains these top-level keys:
 
 ## Text (Copy)
 
-Localized UI strings use dot-notation keys. Key groups include: **Welcome Screen** (`welcome.heading`, `welcome.subheading`), **Input** (`input.placeholder`, `input.messageInput.aria`, `input.send.aria`, etc.), **Cards & Carousel** (`card.aria.select`, `carousel.prev.aria`, `carousel.next.aria`), **System Messages** (`scroll.bottom.aria`, `error.network`, `loading.message`), **Feedback Dialog** (e.g. `feedback.dialog.title.positive`, `feedback.dialog.submit`, `feedback.dialog.cancel`).
+Localized UI strings use dot-notation keys. Key groups:
+
+* **Welcome Screen:** `welcome.heading`, `welcome.subheading`
+* **Input:** `input.placeholder`, `input.messageInput.aria`, `input.send.aria`, `input.aiChatIcon.tooltip`, `input.mic.aria`
+* **Cards & Carousel:** `card.aria.select`, `carousel.prev.aria`, `carousel.next.aria`
+* **System Messages:** `scroll.bottom.aria`, `error.network`, `loading.message`
+* **Feedback Dialog:** `feedback.dialog.title.positive`, `feedback.dialog.title.negative`, `feedback.dialog.question.positive`, `feedback.dialog.question.negative`, `feedback.dialog.notes`, `feedback.dialog.submit`, `feedback.dialog.cancel`, `feedback.dialog.notes.placeholder`, `feedback.toast.success`, `feedback.thumbsUp.aria`, `feedback.thumbsDown.aria`
+
+Test text values on target devices before deployment.
 
 ### Example
 

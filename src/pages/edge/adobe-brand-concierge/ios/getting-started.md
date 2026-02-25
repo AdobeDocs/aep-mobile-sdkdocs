@@ -1,6 +1,13 @@
 ---
-noIndex: true
+title: Brand Concierge getting started (iOS)
+description: Install and register the Brand Concierge extension in your iOS app.
+keywords:
+- Brand Concierge
+- iOS
+- Getting started
 ---
+
+# Brand Concierge Getting Started (iOS)
 
 ## CocoaPods
 
@@ -89,3 +96,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ```
 
 Replace `MY_APP_ID` with your mobile property App ID from Data Collection.
+
+## Next steps
+
+* [Implementation guide (iOS)](/edge/adobe-brand-concierge/ios/implementation-guide/) — Integrate the chat UI (SwiftUI or UIKit).
+* [Style guide (iOS)](/edge/adobe-brand-concierge/ios/style-guide/) — Theme JSON reference and implementation status.
