@@ -22,7 +22,7 @@ When the re-evaluate option is enabled on a campaign trigger, the SDK fetches th
 
 <InlineAlert variant="warning" slots="text"/>
 
-**Cost and latency:** Re-evaluate triggers an API call to update rules before display. This adds latency and uses the user's network bandwidth. Use re-evaluate only when you need the device to reflect the latest campaign state (for example, time-sensitive content or campaigns that may be updated or paused). For campaigns that do not require this, leave re-evaluate disabled.
+**Cost and latency:** Re-evaluate triggers an API call to update rules before display. This adds latency and uses the user's network bandwidth. Only use re-evaluate only when you need the device to reflect the latest campaign state (for example, time-sensitive content or campaigns that may be updated or paused). For campaigns that do not require the latest campaign data, leave re-evaluate disabled.
 
 ## Supported SDK versions
 
@@ -55,6 +55,8 @@ Use the following steps to verify that re-evaluate is working:
 1. Run your application and trigger the re-evaluable in-app message campaign, so that the message is displayed. Note the content shown.
 2. In the Adobe Journey Optimizer UI, update the content of the same campaign (for example, change the message text or creative). Ensure the campaign remains active and save or publish the changes. Wait until the campaign's state is updated and the new content is active.
 3. In the app, trigger the campaign again (for example, send the same Experience event that matches the trigger, or perform the action that triggers it). The SDK will fetch the updated rules and re-evaluate; the in-app message should now show the new content without restarting the application.
+
+Re-evaluation takes into account complete state of the campaign not just the content. Any change like stopping a campaign, changing trigger rule or behaviour of the in-app message are updated before final evaluation.
 
 ## Next steps
 
