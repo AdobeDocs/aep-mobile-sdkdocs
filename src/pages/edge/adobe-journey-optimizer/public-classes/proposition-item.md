@@ -164,6 +164,16 @@ Android
 
 <Tabs query="platform=android&function=get-inapp-schema-data"/>
 
+### getInboxSchemaData
+
+Decodes and returns this proposition item's content schema as an [InboxContentSchemaData](./inbox-content-schema-data.md) if the schema for this proposition item is `SchemaType.INBOX`, `null` otherwise.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+
+Android
+
+<Tabs query="platform=android&function=get-inbox-schema-data"/>
+
 ### getItemData
 
 Returns this proposition's unique identifier as a string.

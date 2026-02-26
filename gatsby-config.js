@@ -589,6 +589,112 @@ module.exports = {
                                 ]
                             },
                             {
+                                title: "Inbox UI",
+                                path: "/edge/adobe-journey-optimizer/inbox-ui/Android",
+                                pages: [
+                                    {
+                                        title: "Android",
+                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android",
+                                        pages: [
+                                            {
+                                                title: "API Reference",
+                                                path: "/edge/adobe-journey-optimizer/inbox-ui/Android/api-usage.md"
+                                            },
+                                            {
+                                                title: "Public Classes and Interfaces",
+                                                path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/aepinbox",
+                                                pages: [
+                                                    {
+                                                        title: "AepInbox",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/aepinbox",
+                                                    },
+                                                    {
+                                                        title: "InboxTemplate",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/inboxtemplate",
+                                                    },
+                                                    {
+                                                        title: "InboxUIState",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/inboxuistate",
+                                                    },
+                                                    {
+                                                        title: "AepUIStyle",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/aepuistyle",
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "Content Provider",
+                                                path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/content-provider/aepinboxcontentprovider",
+                                                pages: [
+                                                    {
+                                                        title: "AepInboxContentProvider",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/content-provider/aepinboxcontentprovider",
+                                                    },
+                                                    {
+                                                        title: "MessagingInboxProvider",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/content-provider/messaginginboxprovider",
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "Observers",
+                                                path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/observers/aepinboxeventobserver",
+                                                pages: [
+                                                    {
+                                                        title: "AepInboxEventObserver",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/observers/aepinboxeventobserver",
+                                                    },
+                                                    {
+                                                        title: "InboxEvent",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/observers/inboxevent",
+                                                    },
+                                                    {
+                                                        title: "InboxEventObserver",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/observers/inboxeventobserver",
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "Styles",
+                                                path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/styles/inboxuistyle",
+                                                pages: [
+                                                    {
+                                                        title: "InboxUIStyle",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/styles/inboxuistyle",
+                                                    },
+                                                    {
+                                                        title: "AepLazyColumnStyle",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/styles/aeplazycolumnstyle",
+                                                    },
+                                                    {
+                                                        title: "AepLazyRowStyle",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/styles/aeplazyrowstyle",
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "Tutorials",
+                                                path: "/edge/adobe-journey-optimizer/inbox-ui/Android/tutorial/displaying-inbox",
+                                                pages: [
+                                                    {
+                                                        title: "Fetch and Display Inbox",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/tutorial/displaying-inbox",
+                                                    },
+                                                    {
+                                                        title: "Customizing Inbox",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/tutorial/customizing-inbox",
+                                                    },
+                                                    {
+                                                        title: "Listening to Inbox Events",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/tutorial/listening-inbox-events",
+                                                    }
+                                                ]
+                                            }
+                                        ]                                        
+                                    }
+                                ]
+                            },
+                            {
                                 title: "Code-based Experiences & Content Cards",
                                 path: "/edge/adobe-journey-optimizer/code-based",
                                 pages: [
@@ -625,6 +731,10 @@ module.exports = {
                                     {
                                         title: "InAppSchemaData",
                                         path: "/edge/adobe-journey-optimizer/public-classes/inapp-schema-data"
+                                    },
+                                    {
+                                        title: "InboxContentSchemaData",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/inbox-content-schema-data"
                                     },
                                     {
                                         title: "JsonContentSchemaData",
