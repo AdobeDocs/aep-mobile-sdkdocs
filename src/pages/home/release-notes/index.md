@@ -24,7 +24,7 @@ Keywords:
 ### Android Brand Concierge 3.0.0
 
 * Initial release of Adobe Brand Concierge Android SDK
-  * Transform your digital properties into interactive, conversational experiences that guide discovery, anticipate customer needs, and build trust with Brand Concierge — powered by AI. 
+  * Transform your digital properties into interactive, conversational experiences that guide discovery, anticipate customer needs, and build trust with Brand Concierge — powered by AI.
   * [Official documentation](https://business.adobe.com/products/brand-concierge.html)
 
 ## February 17, 2026
@@ -32,7 +32,7 @@ Keywords:
 ### iOS Brand Concierge 5.0.0
 
 * Initial release of Adobe Brand Concierge iOS SDK
-  * Transform your digital properties into interactive, conversational experiences that guide discovery, anticipate customer needs, and build trust with Brand Concierge — powered by AI. 
+  * Transform your digital properties into interactive, conversational experiences that guide discovery, anticipate customer needs, and build trust with Brand Concierge — powered by AI.
   * [Official documentation](https://business.adobe.com/products/brand-concierge.html)
 
 ## January 29, 2026

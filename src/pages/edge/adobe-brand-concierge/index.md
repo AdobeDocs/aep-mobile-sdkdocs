@@ -35,8 +35,8 @@ Integrate the Chat UI via managed or drop-in integration.
 
 Theming and customization (theme JSON, tokens, implementation status).
 
-* **[Style guide (Android)](/edge/adobe-brand-concierge/android/style-guide/)** 
-* **[Style guide (iOS)](/edge/adobe-brand-concierge/ios/style-guide/)** 
+* **[Style guide (Android)](/edge/adobe-brand-concierge/android/style-guide/)**
+* **[Style guide (iOS)](/edge/adobe-brand-concierge/ios/style-guide/)**
 
 ## Version History
 
