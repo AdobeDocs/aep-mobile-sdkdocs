@@ -44,7 +44,7 @@ Use this when creating Live Activities targeted at a specific user.
 
 ### origin
 
-Defines whether the Live Activity was started locally by the app or remotely via a push-to-start notification.
+Defines whether the Live Activity was started locally by the app or remotely via a push-to-start notification (iOS 17.2+).
 
 ```swift
 public let origin: LiveActivityOrigin?
@@ -62,7 +62,7 @@ Initializes a `LiveActivityData` instance for broadcast Live Activities.
 public init(channelID: String)
 ```
 
-Use this initializer for Live Activities that are broadcast to subscribers of a channel.
+Use this initializer for Live Activities that are broadcast to subscribers of a channel (iOS 18+).
 
 **Example**
 

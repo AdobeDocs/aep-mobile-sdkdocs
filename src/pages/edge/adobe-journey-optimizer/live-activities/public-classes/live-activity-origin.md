@@ -46,7 +46,7 @@ Indicates that the Live Activity was started remotely via a push-to-start notifi
 case remote
 ```
 
-This value is set when Adobe Journey Optimizer sends a push-to-start notification that creates the Live Activity.
+This value is set when Adobe Journey Optimizer sends a push-to-start notification (iOS 17.2+) that creates the Live Activity.
 
 ## Usage
 

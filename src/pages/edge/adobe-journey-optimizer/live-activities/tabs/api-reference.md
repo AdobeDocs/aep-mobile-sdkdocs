@@ -12,7 +12,7 @@ noIndex: true
 static func registerLiveActivities(_ activityTypes: [any LiveActivityAttributes.Type])
 ```
 
-* _activityTypes_ is an array of types conforming to the `LiveActivityAttributes` protocol. Each type represents a Live Activity that will be monitored for push-to-start tokens and lifecycle events.
+* _activityTypes_ is an array of types conforming to the `LiveActivityAttributes` protocol. Each type represents a Live Activity that will be monitored for push-to-start tokens (iOS 17.2+), activity update tokens, and lifecycle events.
 
 **Example**
 

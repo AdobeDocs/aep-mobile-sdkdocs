@@ -17,15 +17,17 @@ Live Activities display up-to-date information from your app on the Lock Screen 
 
 <InlineAlert variant="info" slots="text"/>
 
-Live Activities are supported on iOS 16.1 and above. Push-to-start support requires iOS 17.2 or newer, and broadcast channels require iOS 18 or newer.
+Live Activities are supported on iOS 16.1 and above. Push-to-start support requires iOS 17.2 or newer, and broadcast push support requires iOS 18 or newer.
 
 ## Prerequisites
 
-* iOS 16.1 or later for basic Live Activity functionality
-* iOS 17.2+ for push-to-start support
-* iOS 18+ for broadcast channel support
-* Xcode 14.0 or later
-* Swift 5.7 or later
+| Feature | iOS version | Xcode version | Description |
+| --- | --- | --- | --- |
+| Live Activities (local start) | iOS 16.1+ | Xcode 14.1+ | App starts a Live Activity locally |
+| Push token updates | iOS 16.1+ | Xcode 14.1+ | Server can update an existing Live Activity |
+| Push-to-start tokens | iOS 17.2+ | Xcode 15.2+ | Server can start a Live Activity remotely |
+| Broadcast push support | iOS 18.0+ | Xcode 16.0+ | One push updates multiple Live Activities |
+
 * Dependencies: AEPCore, AEPMessaging, AEPMessagingLiveActivity, ActivityKit
 
 ## API reference
