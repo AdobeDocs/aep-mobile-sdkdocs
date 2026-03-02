@@ -59,7 +59,7 @@ Keywords:
 
 ### React Native Messaging 7.3.0
 
-* Added `evaluteJavascript` API
+* Added `evaluateJavascript` API
 * Added support for React Native 0.81 and higher
 
 ## January 7, 2026
