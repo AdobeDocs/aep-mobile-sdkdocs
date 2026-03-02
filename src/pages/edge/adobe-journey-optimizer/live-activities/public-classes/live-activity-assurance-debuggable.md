@@ -33,6 +33,7 @@ static func getDebugInfo() -> (attributes: Self, state: Self.ContentState)
 ```
 
 This method should return a tuple containing:
+
 * **attributes**: A sample instance of your `LiveActivityAttributes` type
 * **state**: A sample instance of your `ContentState` type
 
