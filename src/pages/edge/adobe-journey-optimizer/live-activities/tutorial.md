@@ -208,8 +208,11 @@ Include `"dismissal-date"` (a Unix timestamp) to control exactly when the ended 
 
 ## Best practices
 
-* **Register early**: Call `registerLiveActivities` during app initialization, after registering the Messaging extension.
-* **Register all types**: Register all `ActivityAttributes` types that you want Adobe Journey Optimizer to manage.
-* **Handle token updates**: The Messaging extension automatically monitors and sends push-to-start tokens to Adobe Experience Platform. No additional code is required.
+* **Register early**: Call `registerLiveActivities` during app initialization, after the Messaging extension has been registered with `MobileCore`. This ensures tokens are collected as soon as possible.
+* **Register all types**: If your app has multiple Live Activity types (e.g., delivery tracking, game scores, flight status), each type must be passed to `registerLiveActivities`. The SDK only collects and forwards tokens for registered types - any unregistered type will be ignored.
+* **Use unique identifiers**: Ensure each Live Activity uses a unique `liveActivityID`. This allows Adobe Journey Optimizer to target the correct activity when sending updates or end events.
+* **Configure channelID for the correct environment**: When using `channelID` for broadcast Live Activities (iOS 18+), ensure the channel ID matches your Apple Push Notification service (APNs) environment (Production or Sandbox). Using the wrong environment's channel ID will result in updates not being delivered.
+* **Keep timestamps increasing**: Each push payload's `timestamp` must be strictly greater than the previous one. The system silently drops payloads with stale or equal timestamps.
 * **Test on device or simulator**: Live Activities can be tested on a physical device or in the iOS Simulator. Push-to-start token support requires iOS 17.2+.
-* **Monitor token lifecycle**: Push-to-start tokens are available before a Live Activity begins and enable starting activities via push notification. Activity update tokens are generated when a Live Activity starts and become invalid when the activity ends.
+* **Token lifecycle**: Push-to-start tokens are available before a Live Activity begins and enable starting activities remotely via push notification (iOS 17.2+). Activity update tokens are generated when a Live Activity starts and become invalid when the activity ends. The Messaging extension handles token collection and forwarding automatically - no additional code is required.
+* **Handle activity expiration**: Live Activities have a maximum duration of 8 hours. Plan your update and end flows accordingly to avoid stale activities on the user's device.
