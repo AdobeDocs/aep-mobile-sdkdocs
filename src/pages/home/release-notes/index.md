@@ -7,6 +7,78 @@ Keywords:
 
 # Release notes
 
+## February 20, 2026
+
+### iOS Messaging 5.11.0
+
+* Simple registration API - Register Live Activity types with a single call to `Messaging.registerLiveActivities([...])` at app launch. The SDK automatically manages token collection and lifecycle.
+* Managed push-to-start tokens - Adobe Experience Platform automatically observes and collects push-to-start tokens (iOS 17.2+) for registered Live Activity types and syncs them to AEP for remote activity creation.
+* Managed update tokens - Update tokens are automatically collected for active Live Activities and synced to Edge for remote updates via Adobe Journey Optimizer.
+* Transactional Live Activities - Supports one-to-one use cases (e.g., order tracking) using a unique liveActivityID, enabling targeted pushes per user.
+* Broadcast Live Activities - Supports one-to-many use cases (e.g., sports scores) using a channelID, allowing multiple users to receive shared real-time updates.
+
+### iOS Messaging 5.10.0
+
+* Added ReEvaluation Interceptor in Messaging to perform ReEvaluation of rules
+* Provided completion in case of failure or timeout for refresh and update calls
+* Added RefreshInAppHandler for deduplication of multiple Refresh calls with thread safety
+*  Added public API to Message.swift that records a display event in the device's event history
+
+## February 19, 2026
+
+### Android BOM 3.17.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.16.0) | BOM (3.17.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:core** | **3.5.0** | **3.6.0**|
+| **com.adobe.marketing.mobile:messaging** | **3.6.0** | **3.7.0**|
+| com.adobe.marketing.mobile:analytics | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:assurance | 3.0.7 | 3.0.7 |
+| com.adobe.marketing.mobile:audience | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaign | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.4 | 3.1.4 |
+| com.adobe.marketing.mobile:edge | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:identity | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:media | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:optimize | 3.6.2 | 3.6.2 |
+| com.adobe.marketing.mobile:places | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Messaging 3.7.0
+
+* Reevaluation Changes to support validation of IAM before display
+* Patch for returning callback for updateProposition in case of API failure
+* Added public API to Message.java that records a display event in the device's event history. Patch for allowing message suppression
+
+### Android Core 3.6.0
+
+* Added ReEvaluation support in Launch Rules Engine
+
+## February 18, 2026
+
+### iOS Core 5.8.0
+
+* Added support for Re-Evaluation of rules in rules engine to be used for schema type consequences
+*  Ensured that the message requesting a fullscreen dismiss is the same message currently being shown
+
 ## January 29, 2026
 
 ### Android BOM 3.16.0
