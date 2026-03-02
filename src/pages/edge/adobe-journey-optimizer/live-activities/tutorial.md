@@ -25,12 +25,14 @@ This document describes how to register and manage Live Activities using the Ado
 
 Define an attribute type that conforms to the [`LiveActivityAttributes`](./public-classes/live-activity-attributes.md) protocol. This protocol extends Apple's `ActivityAttributes` and adds a required [`liveActivityData`](./public-classes/live-activity-data.md) property for Adobe Experience Platform integration.
 
-* Use `LiveActivityData(liveActivityID:)` for individual Live Activities
-* Use `LiveActivityData(channelID:)` for broadcast Live Activities (iOS 18+)
+Live Activities support two delivery models:
+
+* **Transactional** - Targets a single Live Activity on a specific device. Use `LiveActivityData(liveActivityID:)` to assign a unique identifier.
+* **Broadcast** (iOS 18+) - Targets all Live Activities subscribed to a channel with a single push. Use `LiveActivityData(channelID:)` to assign a shared channel identifier.
 
 <InlineAlert variant="info" slots="text"/>
 
-The `liveActivityData` property is mandatory - it is required by the [`LiveActivityAttributes`](./public-classes/live-activity-attributes.md) protocol. It must include a `liveActivityID` (or `channelID` for broadcast) and is used by the SDK to track and manage the Live Activity through Adobe Experience Platform.
+The `liveActivityData` property is mandatory - it is required by the [`LiveActivityAttributes`](./public-classes/live-activity-attributes.md) protocol. For transactional activities, provide a `liveActivityID`. For broadcast activities, provide a `channelID`. The SDK uses this data to track and manage the Live Activity through Adobe Experience Platform.
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 
@@ -79,7 +81,28 @@ if #available(iOS 16.1, *) {
 
 ## Step 3: Start a Live Activity
 
-Start a Live Activity using Apple's ActivityKit APIs. Once started, the Messaging extension automatically collects the activity update token and sends it to Adobe Experience Platform.
+There are two ways to start a Live Activity:
+
+* **Locally** (iOS 16.1+) - The app calls `Activity.request()` while in the foreground.
+* **Remotely via push-to-start** (iOS 17.2+) - A server sends a push notification to a push-to-start token, which starts the activity even when the app is in the background or terminated.
+
+Regardless of how the activity is started, the Messaging extension automatically collects the activity update token and forwards it to Adobe Experience Platform.
+
+### Local start vs. remote start
+
+| | Local start | Remote start via push-to-start |
+| --- | --- | --- |
+| **Minimum iOS** | iOS 16.1+ | iOS 17.2+ |
+| **How it starts** | App calls `Activity.request()` directly | Server sends a push notification with `"event": "start"` to a push-to-start token |
+| **App state** | App must be in the foreground | App can be in the background or terminated |
+| **Attributes** | Passed directly in Swift code | Included in the push payload under `attributes` |
+| **Initial content** | Passed as `contentState` parameter | Included in the push payload under `content-state` |
+| **Token used** | Activity update token (generated after start) | Push-to-start token (available before any activity starts) |
+| **Use case** | User-initiated actions | Server-initiated events |
+
+### Local start
+
+Start a Live Activity from your app using Apple's ActivityKit APIs.
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 
@@ -115,9 +138,90 @@ if #available(iOS 16.1, *) {
 }
 ```
 
+### Remote start via push-to-start (iOS 17.2+)
+
+Use `"event": "start"` with a push-to-start token to remotely start a Live Activity without any app interaction. The payload must include `attributes-type` (the fully qualified name of your `ActivityAttributes` struct), all static `attributes`, and the initial `content-state`.
+
+#### Transactional
+
+<CodeBlock slots="heading, code" repeat="1" languages="JSON" />
+
+#### JSON
+
+```json
+{
+  "aps": {
+    "timestamp": 1234567890,
+    "event": "start",
+    "attributes-type": "FoodDeliveryLiveActivityAttributes",
+    "attributes": {
+      "liveActivityData": {
+        "liveActivityID": "order-12345",
+        "origin": "remote"
+      },
+      "restaurantName": "Pizza Palace",
+      "orderNumber": "12345"
+    },
+    "content-state": {
+      "driverName": "John Doe",
+      "deliveryTime": "15 minutes",
+      "orderStatus": "Preparing"
+    },
+    "alert": {
+      "title": "Order Started",
+      "body": "Your order from Pizza Palace is being prepared!"
+    }
+  }
+}
+```
+
+#### Broadcast (iOS 18+)
+
+For broadcast, use `channelID` in `liveActivityData` and include the matching `input-push-channel` key inside `aps`.
+
+<CodeBlock slots="heading, code" repeat="1" languages="JSON" />
+
+#### JSON
+
+```json
+{
+  "aps": {
+    "timestamp": 1234567890,
+    "event": "start",
+    "input-push-channel": "34zeQRIvEfEAAArq/RXKSw==",
+    "attributes-type": "FoodDeliveryLiveActivityAttributes",
+    "attributes": {
+      "liveActivityData": {
+        "channelID": "34zeQRIvEfEAAArq/RXKSw==",
+        "origin": "remote"
+      },
+      "restaurantName": "Pizza Palace",
+      "orderNumber": "12345"
+    },
+    "content-state": {
+      "driverName": "John Doe",
+      "deliveryTime": "15 minutes",
+      "orderStatus": "Preparing"
+    },
+    "alert": {
+      "title": "Order Started",
+      "body": "Your order from Pizza Palace is being prepared!"
+    }
+  }
+}
+```
+
+<InlineAlert variant="info" slots="text"/>
+
+After a Live Activity is started remotely via push-to-start, it behaves identically to a locally started activity. You can update or end it using the same payloads shown in Step 4.
+
 ## Step 4: Update and end Live Activities via push
 
-Once a Live Activity is started and its activity update token has been forwarded to Adobe Experience Platform, Adobe Journey Optimizer can remotely update or end the Live Activity by sending push notifications.
+Once a Live Activity is running (whether started locally or remotely), Adobe Journey Optimizer can update or end it by sending push notifications to the activity update token.
+
+<InlineAlert variant="info" slots="text"/>
+
+The `liveActivityData` object must be included inside `attributes` in every update and end payload. Use `liveActivityID` for transactional payloads or `channelID` (with a matching `input-push-channel` in `aps`) for broadcast payloads. This is required for the SDK to identify and route the payload to the correct Live Activity.
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -126,6 +230,8 @@ The `timestamp` field in the payload must always be greater than the timestamp o
 ### Update payload
 
 Use `"event": "update"` to update the Live Activity content. The `content-state` must match your `ContentState` struct. An optional `alert` triggers a visible notification on the Lock Screen.
+
+#### Transactional
 
 <CodeBlock slots="heading, code" repeat="1" languages="JSON" />
 
@@ -136,6 +242,12 @@ Use `"event": "update"` to update the Live Activity content. The `content-state`
   "aps": {
     "timestamp": 1234567890,
     "event": "update",
+    "attributes": {
+      "liveActivityData": {
+        "liveActivityID": "order-12345",
+        "origin": "remote"
+      }
+    },
     "content-state": {
       "driverName": "John Doe",
       "deliveryTime": "5 minutes",
@@ -145,17 +257,46 @@ Use `"event": "update"` to update the Live Activity content. The `content-state`
       "title": "Delivery Update",
       "body": "Your order is out for delivery!"
     }
-  },
-  "liveActivityData": {
-    "liveActivityID": "order-12345",
-    "origin": "remote"
+  }
+}
+```
+
+#### Broadcast (iOS 18+)
+
+<CodeBlock slots="heading, code" repeat="1" languages="JSON" />
+
+#### JSON
+
+```json
+{
+  "aps": {
+    "timestamp": 1234567890,
+    "event": "update",
+    "input-push-channel": "34zeQRIvEfEAAArq/RXKSw==",
+    "attributes": {
+      "liveActivityData": {
+        "channelID": "34zeQRIvEfEAAArq/RXKSw==",
+        "origin": "remote"
+      }
+    },
+    "content-state": {
+      "driverName": "John Doe",
+      "deliveryTime": "5 minutes",
+      "orderStatus": "Out for delivery"
+    },
+    "alert": {
+      "title": "Delivery Update",
+      "body": "Your order is out for delivery!"
+    }
   }
 }
 ```
 
 ### End payload
 
-Use `"event": "end"` to end the Live Activity. The activity is dismissed from the Lock Screen according to the system default.
+Use `"event": "end"` to end the Live Activity. The activity is dismissed from the Lock Screen according to the system default (up to 4 hours).
+
+#### Transactional
 
 <CodeBlock slots="heading, code" repeat="1" languages="JSON" />
 
@@ -166,15 +307,44 @@ Use `"event": "end"` to end the Live Activity. The activity is dismissed from th
   "aps": {
     "timestamp": 1234567890,
     "event": "end",
+    "attributes": {
+      "liveActivityData": {
+        "liveActivityID": "order-12345",
+        "origin": "remote"
+      }
+    },
     "content-state": {
       "driverName": "John Doe",
       "deliveryTime": "Delivered",
       "orderStatus": "Completed"
     }
-  },
-  "liveActivityData": {
-    "liveActivityID": "order-12345",
-    "origin": "remote"
+  }
+}
+```
+
+#### Broadcast (iOS 18+)
+
+<CodeBlock slots="heading, code" repeat="1" languages="JSON" />
+
+#### JSON
+
+```json
+{
+  "aps": {
+    "timestamp": 1234567890,
+    "event": "end",
+    "input-push-channel": "34zeQRIvEfEAAArq/RXKSw==",
+    "attributes": {
+      "liveActivityData": {
+        "channelID": "34zeQRIvEfEAAArq/RXKSw==",
+        "origin": "remote"
+      }
+    },
+    "content-state": {
+      "driverName": "John Doe",
+      "deliveryTime": "Delivered",
+      "orderStatus": "Completed"
+    }
   }
 }
 ```
@@ -182,6 +352,8 @@ Use `"event": "end"` to end the Live Activity. The activity is dismissed from th
 ### End payload with dismissal date
 
 Include `"dismissal-date"` (a Unix timestamp) to control exactly when the ended activity is removed from the Lock Screen. This is useful when you want the final state to remain visible for a specific duration after the activity ends.
+
+#### Transactional
 
 <CodeBlock slots="heading, code" repeat="1" languages="JSON" />
 
@@ -193,15 +365,45 @@ Include `"dismissal-date"` (a Unix timestamp) to control exactly when the ended 
     "timestamp": 1234567890,
     "event": "end",
     "dismissal-date": 1234575490,
+    "attributes": {
+      "liveActivityData": {
+        "liveActivityID": "order-12345",
+        "origin": "remote"
+      }
+    },
     "content-state": {
       "driverName": "John Doe",
       "deliveryTime": "Delivered",
       "orderStatus": "Completed"
     }
-  },
-  "liveActivityData": {
-    "liveActivityID": "order-12345",
-    "origin": "remote"
+  }
+}
+```
+
+#### Broadcast (iOS 18+)
+
+<CodeBlock slots="heading, code" repeat="1" languages="JSON" />
+
+#### JSON
+
+```json
+{
+  "aps": {
+    "timestamp": 1234567890,
+    "event": "end",
+    "dismissal-date": 1234575490,
+    "input-push-channel": "34zeQRIvEfEAAArq/RXKSw==",
+    "attributes": {
+      "liveActivityData": {
+        "channelID": "34zeQRIvEfEAAArq/RXKSw==",
+        "origin": "remote"
+      }
+    },
+    "content-state": {
+      "driverName": "John Doe",
+      "deliveryTime": "Delivered",
+      "orderStatus": "Completed"
+    }
   }
 }
 ```
@@ -210,8 +412,8 @@ Include `"dismissal-date"` (a Unix timestamp) to control exactly when the ended 
 
 * **Register early**: Call `registerLiveActivities` during app initialization, after the Messaging extension has been registered with `MobileCore`. This ensures tokens are collected as soon as possible.
 * **Register all types**: If your app has multiple Live Activity types (e.g., delivery tracking, game scores, flight status), each type must be passed to `registerLiveActivities`. The SDK only collects and forwards tokens for registered types - any unregistered type will be ignored.
-* **Use unique identifiers**: Ensure each Live Activity uses a unique `liveActivityID`. This allows Adobe Journey Optimizer to target the correct activity when sending updates or end events.
-* **Configure channelID for the correct environment**: When using `channelID` for broadcast Live Activities (iOS 18+), ensure the channel ID matches your Apple Push Notification service (APNs) environment (Production or Sandbox). Using the wrong environment's channel ID will result in updates not being delivered.
+* **Use unique identifiers**: For transactional Live Activities, ensure each activity uses a unique `liveActivityID`. This allows Adobe Journey Optimizer to target the correct activity when sending updates or end events.
+* **Configure channelID for the correct environment**: For broadcast Live Activities (iOS 18+), the `channelID` in `liveActivityData` and `input-push-channel` in `aps` must use the same value and must match your Apple Push Notification service (APNs) environment (Production or Sandbox). Using the wrong environment's channel ID will result in updates not being delivered.
 * **Keep timestamps increasing**: Each push payload's `timestamp` must be strictly greater than the previous one. The system silently drops payloads with stale or equal timestamps.
 * **Test on device or simulator**: Live Activities can be tested on a physical device or in the iOS Simulator. Push-to-start token support requires iOS 17.2+.
 * **Token lifecycle**: Push-to-start tokens are available before a Live Activity begins and enable starting activities remotely via push notification (iOS 17.2+). Activity update tokens are generated when a Live Activity starts and become invalid when the activity ends. The Messaging extension handles token collection and forwarding automatically - no additional code is required.
