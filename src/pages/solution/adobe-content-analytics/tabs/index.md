@@ -16,7 +16,6 @@ implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
 // Adobe Mobile SDK dependencies (versions managed by BOM)
 implementation("com.adobe.marketing.mobile:core")
 implementation("com.adobe.marketing.mobile:edge")
-implementation("com.adobe.marketing.mobile:edgeidentity")
     
 // Content Analytics (not yet in BOM - specify version explicitly)
 implementation("com.adobe.marketing.mobile:contentanalytics:1.0.0")
@@ -37,7 +36,6 @@ implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
 // Adobe Mobile SDK dependencies (versions managed by BOM)
 implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:edge'
-implementation 'com.adobe.marketing.mobile:edgidentity'
 
 // Content Analytics (not yet in BOM - specify version explicitly)
 implementation 'com.adobe.marketing.mobile:contentanalytics:1.0.0"
@@ -55,7 +53,7 @@ use_frameworks!
 
 target 'YourTargetApp' do
   pod 'AEPCore', '~> 5.0'
-  pod 'AEPAnalytics', '~> 5.0'
+  pod 'AEPEdge', '~> 5.0'
   pod 'AEPContentAnalytics', '~> 5.0'
 end
 ```

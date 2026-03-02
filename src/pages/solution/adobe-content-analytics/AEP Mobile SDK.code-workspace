@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../../.."
+		},
+		{
+			"path": "../../../../../../Development/work/aca-mobile-sdk/aca-mobile-sdk-ios-extension"
+		},
+		{
+			"path": "../../../../../../Development/work/aca-mobile-sdk/aca-mobile-sdk-android-extension"
+		}
+	],
+	"settings": {}
+}
