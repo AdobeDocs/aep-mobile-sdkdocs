@@ -14,25 +14,25 @@ import InitializeSDK from '/src/pages/resources/initialize.md'
 
 1. In the Data Collection UI, select the **Extensions** tab.
 1. On the **Catalog** tab, locate the **Adobe Content Analytics** extension, and select **Install**.
-1. Configure the extension settings. For more information, see [Configure Media Analytics Extension](#configure-media-analytics-extension).
+1. Configure the extension settings. For more information, see [Configure the Content Analytics extension](#configure-the-content-analytics-extension).
 1. Select **Save**.
 1. Follow the publishing process to update your SDK configuration.
 
 
 ## Configure the Content Analytics extension
 
-![Content Analytics Extension Configuration](./assets/index/configuration.png)
-
 To configue the Content Analytics extension, complete the following steps:
+
+![Content Analytics Extension Configuration](./assets/index/configuration.png)
 
 ### Sandbox
 
-Select a Sandbox to use for Content Analytics.
+Select a **Sandbox** to use for Content Analytics.
 
 
 ### Datastreams
 
-Select the datastream to use for Content Analytics for the Production (required), Staging, and Development environment.
+Select the **Datastream** to use for Content Analytics for the **Production** (required), **Staging**, and **Development** environment.
 
 
 ### General Settings
@@ -62,11 +62,13 @@ Specify exclusions for asset URLs, assets locations, and experience locations.
 
 ## Add Content Analytics extension to your app
 
+To add the Content Analytics extension to your app, follow the steps below based on the platform and package manager you use.
+
 ### Include Content Analytics extension as an app depencency.
 
 Add MobileCore, Edge, EdgeIdentity, and Content Analytics as dependencies to your project.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
 
 Kotlin<br/>(Android)
 
@@ -76,6 +78,11 @@ Groovy<br/>(Android)
 
 <Tabs query="platform=android-groovy&task=add"/>
 
+SPM<br/>(iOS)
+
+<Tabs query="platform=ios-spm&task=add"/>
+
 CocoaPods<br/>(iOS)
 
 <Tabs query="platform=ios-pods&task=add"/>
+

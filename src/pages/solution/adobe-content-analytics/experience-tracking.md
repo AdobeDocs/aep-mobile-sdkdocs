@@ -57,7 +57,7 @@ iOS
 
 ### Track interactions
 
-Then trackthe experience.
+Then track the experience.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -107,7 +107,7 @@ For most apps, 100 definitions is sufficient. If you're registering more unique 
 
 ## Implementation patterns
 
-Some below examples of implementation patterns.
+See below for examples of implementation patterns.
 
 ### Single screen
 
@@ -123,9 +123,9 @@ iOS
 
 <Tabs query="platform=ios&task=implementation-single-screen"/>
 
-### Collection / Feed
+### Collection or feed
 
-Implementation of experience tracking for collection or feed.
+Implementation of experience tracking fora collection or a feed.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -227,11 +227,11 @@ iOS
 
 <Tabs query="platform=ios&task=asset-attribution"/>
 
-When the analytics backend receives `trackAssetView` for `hero.jpg`, it can attribute that view to the "Summer Sale" experience because the asset URL was registered.
+When the analytics backend receives `trackAssetView` for `hero.jpg`, the backend attributes that view to the `Summer Sale` experience because the asset URL was registered.
 
 ### Without attribution
 
-If you track an asset without registering the experience first, like below.
+You can track an asset without registering the experience first.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -243,7 +243,7 @@ iOS
 
 <Tabs query="platform=ios&task=implementation-collection-feed"/>
 
-The asset view is still recorded, but it's not linked to any experience. You lose:
+The asset view is still recorded, but the asset view is not linked to any experience. As a result, you lose:
 
 * Which experience contained this asset.
 * Performance metrics per experience.
@@ -255,7 +255,7 @@ The `experienceLocation` and `assetLocation` parameters control how metrics are 
 
 ### With location - Metrics per placement
 
-Track same experience at different locations.
+Track the same experience at different locations.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -267,19 +267,19 @@ iOS
 
 <Tabs query="platform=ios&task=with-location-metrics-per-placement"/>
 
-Customer Journey Analytics report will look like:
+A sample Customer Journey Analytics report for this scenario will look like:
 
 | Experience | Location | Views | Clicks | CTR |
 |---|---|--:|--:|--:|
-| Summer Sale | `homepage.hero` | 10,000 | 500 | 5% |
-| Summer Sale | `product.sidebar` | 3,000 | 90 | 3% |
-| Summer Sale | `checkout.upsell` | 1,000 | 150 | 15% |
+| Summer Sale | `homepage.`<br/>`hero` | 10,000 | 500 | 5% |
+| Summer Sale | `product.`<br/>`sidebar` | 3,000 | 90 | 3% |
+| Summer Sale | `checkout.`<br/>`upsell` | 1,000 | 150 | 15% |
 
-This lets you answer: *"Where does this experience perform best?"*
+You can use this report to answer questions like *"Where does this experience perform best?"*
 
 ### Without location - global metrics
 
-Track without location to get aggregate metrics.
+Track experiences without location details to get aggregate metrics.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -291,11 +291,13 @@ iOS
 
 <Tabs query="platform=ios&task=without-location-global-metrics"/>
 
-Customer Journey Analytics report will look like:
+A sample Customer Journey Analytics report for this scenario will look like:
 
 | Experience | Views | Clicks | CTR |
 |---|---|--:|--:|
 | Summer Sale | 14,000 | 740 | 5.3% |
+
+You can use this report to answer questions like *How is this experience performing overall?*
 
 ### Same asset - different locations
 
@@ -316,12 +318,13 @@ Customer Journey Analytics report will look like:
 | Experience | Location | Views | Clicks |
 |---|---|--:|--:|
 | Summer Sale | `homepage` | 50,000 | 2,500 |
-| Summer Sale | `category.electronics` | 8,000 | 320 |
-| Summer Sale | `search.results` | 3,000 | 45 |
+| Summer Sale | `category.`<br/>`electronics` | 8,000 | 320 |
+| Summer Sale | `search.`<br/>`results` | 3,000 | 45 |
+
 
 ## Location naming convention
 
-Use a consistent hierarchy for easier filtering in Customer Journey Analytics
+Use a consistent location naming hierarchy to filter on locations easily in Customer Journey Analytics.
 
 ```text
 screen.section.subsection
@@ -335,7 +338,9 @@ Examples are:
 * `cart.upsell`
 * `search.results.sponsored`
 
-When to use a location:
+### When to use a location
+
+See the following goals and whether you should consider to use locations or not.
 
 
 | Goal | Location |
@@ -348,7 +353,7 @@ When to use a location:
 
 ## Machine learning powered analytics
 
-When you register experiences, the featurization service analyzes the content and extracts ML attributes like persuasion strategy, emotional tone, content category, etc. These attributes are then available in Customer Journey Analytics for advanced analysis.
+When you register experiences, the featurization service analyzes the content and extracts machine learning (ML) attributes like persuasion strategy, emotional tone, content category, and more. These attributes are then available in Customer Journey Analytics for advanced analysis.
 
 ### Performance by persuasion strategy
 
@@ -358,11 +363,11 @@ Customer Journey Analytics report - persuasion strategy by location:
 
 | Location | Persuasion strategy | Views | Click | CTR |
 |---|---|--:|--:|--:|
-| `homepage.hero` |   Urgency  |  10,000  |  800 |   8% |
-| `homepage.hero` |   Social Proof  |  10,000  |  650  |  6.5% |
-| `homepage.hero` |   Scarcity |   10,000  |  720 |   7.2% |
-| `checkout.upsell` |   Urgency  |  2,000  |  300  |  15% |
-| `checkout.upsell` |   Social Proof  |  2,000 |   180  |   9% |
+| `homepage.`<br/>`hero` |   Urgency  |  10,000  |  800 |   8% |
+| `homepage.`<br/>`hero` |   Social Proof  |  10,000  |  650  |  6.5% |
+| `homepage.`<br/>`hero` |   Scarcity |   10,000  |  720 |   7.2% |
+| `checkout.`<br/>`upsell` |   Urgency  |  2,000  |  300  |  15% |
+| `checkout.`<br/>`upsell` |   Social Proof  |  2,000 |   180  |   9% |
 
 Insight: **Urgency** messaging performs best at checkout (+15% CTR), while **Social Proof** works better on homepage.
 

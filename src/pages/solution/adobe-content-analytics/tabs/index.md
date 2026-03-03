@@ -57,3 +57,19 @@ target 'YourTargetApp' do
   pod 'AEPContentAnalytics', '~> 5.0'
 end
 ```
+
+<Variant platform="ios-spm" task="add" repeat="6"/>
+
+Add the required dependencies to your project using Swift Package Manager. For Content Analytics, use the following instructions.
+
+1. In Xcode, select **File** > **Add Package Dependencies**.
+   
+1. Enter the package URL:
+
+   ```text
+   https://github.com/adobe/aca-mobile-sdk-ios-extension
+   ```
+
+1. Select version `5.0.0` or later.
+   
+1. Select **Add Package**.
