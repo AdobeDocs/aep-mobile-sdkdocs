@@ -9,6 +9,31 @@ keywords:
 
 # Release notes
 
+## February 20, 2026
+
+### iOS Messaging 5.11.0
+
+* Simple registration API - Register Live Activity types with a single call to `Messaging.registerLiveActivities([...])` at app launch. The SDK automatically manages token collection and lifecycle.
+* Managed push-to-start tokens - Adobe Experience Platform automatically observes and collects push-to-start tokens (iOS 17.2+) for registered Live Activity types and syncs them to AEP for remote activity creation.
+* Managed update tokens - Update tokens are automatically collected for active Live Activities and synced to Edge for remote updates via Adobe Journey Optimizer.
+* Transactional Live Activities - Supports one-to-one use cases (e.g., order tracking) using a unique liveActivityID, enabling targeted pushes per user.
+* Broadcast Live Activities - Supports one-to-many use cases (e.g., sports scores) using a channelID, allowing multiple users to receive shared real-time updates.
+
+### iOS Messaging 5.10.0
+
+* Added ReEvaluation Interceptor in Messaging to perform ReEvaluation of rules
+* Provided completion in case of failure or timeout for refresh and update calls
+* Added RefreshInAppHandler for deduplication of multiple Refresh calls with thread safety
+* Added public API to Message.swift that records a display event in the device's event history
+
+## February 19, 2026
+
+### Android Messaging 3.7.0
+
+* Reevaluation Changes to support validation of IAM before display
+* Patch for returning callback for updateProposition in case of API failure
+* Added public API to Message.java that records a display event in the device's event history. Patch for allowing message suppression
+
 ## January 29, 2026
 
 ### Android Messaging 3.6.0
@@ -25,7 +50,7 @@ keywords:
 
 ### React Native Messaging 7.3.0
 
-* Added `evaluteJavascript` API
+* Added `evaluateJavascript` API
 * Added support for React Native 0.81 and higher
 
 ## January 7, 2026

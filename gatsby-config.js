@@ -648,6 +648,42 @@ module.exports = {
                                 ]
                             },
                             {
+                                title: "Live Activities",
+                                path: "/edge/adobe-journey-optimizer/live-activities",
+                                pages: [
+                                    {
+                                        title: "API reference",
+                                        path: "/edge/adobe-journey-optimizer/live-activities/api-reference"
+                                    },
+                                    {
+                                        title: "Live Activities tutorial",
+                                        path: "/edge/adobe-journey-optimizer/live-activities/tutorial"
+                                    },
+                                    {
+                                        title: "Public classes and protocols",
+                                        path: "/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-attributes",
+                                        pages: [
+                                            {
+                                                title: "LiveActivityAttributes",
+                                                path: "/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-attributes"
+                                            },
+                                            {
+                                                title: "LiveActivityData",
+                                                path: "/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-data"
+                                            },
+                                            {
+                                                title: "LiveActivityOrigin",
+                                                path: "/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-origin"
+                                            },
+                                            {
+                                                title: "LiveActivityAssuranceDebuggable",
+                                                path: "/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-assurance-debuggable"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
                                 title: "Public classes and enums",
                                 path: "/edge/adobe-journey-optimizer/public-classes",
                                 pages: [
