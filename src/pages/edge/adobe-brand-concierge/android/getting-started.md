@@ -51,7 +51,7 @@ class MainApp : Application() {
 }
 ```
 
-Replace `MY_APP_ID` with your mobile property App ID from Adobe Data Collection (formerly Adobe Launch). If you use other AEP extensions (e.g. Lifecycle, Identity, Assurance), add them to the `extensions` list and follow the [Adobe Experience Platform Mobile SDK getting started guide](/src/pages/home/getting-started/) for full setup.
+Replace `MY_APP_ID` with your mobile property App ID from Adobe Data Collection (formerly Adobe Launch). If you use other Experience Platform extensions (e.g. Lifecycle, Identity, Assurance), add them to the `extensions` list and follow the [Adobe Experience Platform Mobile SDK getting started guide](/src/pages/home/getting-started/) for full setup.
 
 ## Next steps
 
