@@ -20,7 +20,7 @@ import InitializeSDK from '/src/pages/resources/initialize.md'
 
 ## Configure the Content Analytics extension
 
-To configue the Content Analytics extension, complete the following steps:
+To configure the Content Analytics extension, complete the following steps:
 
 ![Content Analytics Extension Configuration](./assets/index/configuration.png)
 
