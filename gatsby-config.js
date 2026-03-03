@@ -287,6 +287,10 @@ module.exports = {
                                             {
                                                 title: "Trigger Adobe Journey Optimizer campaigns",
                                                 path: "/edge/adobe-journey-optimizer/in-app-message/tutorials/trigger-campaign"
+                                            },
+                                            {
+                                                title: "Re-evaluate in-app messages before display",
+                                                path: "/edge/adobe-journey-optimizer/in-app-message/tutorials/re-evaluate"
                                             }
                                         ]
                                     },
@@ -599,6 +603,42 @@ module.exports = {
                                     {
                                         title: "Code-based experiences & Content Cards tutorial",
                                         path: "/edge/adobe-journey-optimizer/code-based/tutorial"
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Live Activities",
+                                path: "/edge/adobe-journey-optimizer/live-activities",
+                                pages: [
+                                    {
+                                        title: "API reference",
+                                        path: "/edge/adobe-journey-optimizer/live-activities/api-reference"
+                                    },
+                                    {
+                                        title: "Live Activities tutorial",
+                                        path: "/edge/adobe-journey-optimizer/live-activities/tutorial"
+                                    },
+                                    {
+                                        title: "Public classes and protocols",
+                                        path: "/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-attributes",
+                                        pages: [
+                                            {
+                                                title: "LiveActivityAttributes",
+                                                path: "/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-attributes"
+                                            },
+                                            {
+                                                title: "LiveActivityData",
+                                                path: "/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-data"
+                                            },
+                                            {
+                                                title: "LiveActivityOrigin",
+                                                path: "/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-origin"
+                                            },
+                                            {
+                                                title: "LiveActivityAssuranceDebuggable",
+                                                path: "/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-assurance-debuggable"
+                                            }
+                                        ]
                                     }
                                 ]
                             },
