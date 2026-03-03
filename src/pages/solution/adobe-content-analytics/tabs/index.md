@@ -41,7 +41,6 @@ implementation 'com.adobe.marketing.mobile:contentanalytics:1.0.0"
 
 <Alerts query="platform=android-gradle&componentClass=InlineNestedAlert"/>
 
-
 <Variant platform="ios-pods" task="add" repeat="2"/>
 
 Add the required dependencies to your project using CocoaPods. Add following pods in your `Podfile`:
@@ -61,7 +60,7 @@ end
 Add the required dependencies to your project using Swift Package Manager. For Content Analytics, use the following instructions.
 
 1. In Xcode, select **File** > **Add Package Dependencies**.
-   
+
 1. Enter the package URL:
 
    ```text
@@ -69,5 +68,5 @@ Add the required dependencies to your project using Swift Package Manager. For C
    ```
 
 1. Select version `5.0.0` or later.
-   
+
 1. Select **Add Package**.
