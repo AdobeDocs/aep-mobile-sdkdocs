@@ -32,7 +32,6 @@ func performFlush()
       └─> Edge guarantees delivery from here
 ```
 
-
 <Variant platform="android" task="direct-hit-processor" repeat="1"/>
 
 ```java
@@ -50,7 +49,6 @@ func processHit(entity: DataEntity, completion: (Bool) -> Void)
   ├─> Accumulate in memory (if not already present)
   └─> completion(true) → clear from disk (event now in memory)
 ```
-
 
 <Variant platform="android" task="metrics-calculation" repeat="1"/>
 
@@ -100,4 +98,3 @@ private val mutex = Mutex()
 
 // All state mutations wrapped in mutex.withLock { }
 ```
-

@@ -18,7 +18,6 @@ import InitializeSDK from '/src/pages/resources/initialize.md'
 1. Select **Save**.
 1. Follow the publishing process to update your SDK configuration.
 
-
 ## Configure the Content Analytics extension
 
 To configue the Content Analytics extension, complete the following steps:
@@ -29,18 +28,15 @@ To configue the Content Analytics extension, complete the following steps:
 
 Select a **Sandbox** to use for Content Analytics.
 
-
 ### Datastreams
 
 Select the **Datastream** to use for Content Analytics for the **Production** (required), **Staging**, and **Development** environment.
-
 
 ### General Settings
 
 Enable or disable **Track Experiences** to track experiences in Content Analytics or not. Default is enabled (true).
 
 Select **Enable Debug Logging** to enable verbose debug logging for Content Analytics. Default is disabled (false).
-
 
 ### Batching Settings
 
@@ -50,7 +46,6 @@ Enter a value in **Max Batch Size** to define the maximum batch size. Default is
 
 Enter a value in **Batch Flush Interval (ms)** to define a time in miliseconds to wait before flusing batched events. Default is `2000` (2 seconds).
 
-
 ### Exclusions
 
 Specify exclusions for asset URLs, assets locations, and experience locations.
@@ -58,7 +53,6 @@ Specify exclusions for asset URLs, assets locations, and experience locations.
 * Enter an **Asset URL Pattern** to specify a regular expression to filter which asset URLs should be excluded when collecting data for Content Analytics. For example: `.*\\.gif$|.*\\.svg$` to exclude GIF or SVG files.<br/>Use **Test Regex** to open the **Regular Expression Tester** where you can validate your regular expression. An example regular expression
 * Enter an **Asset Location Pattern** to specify a regular expression to filter which asset locations should be excluded when collecting data for Content Analytics. For example: `^(debug|test).*` to exclude asset location that contain `debug` or `test`. <br/>Use **Test Regex** to open the **Regular Expression Tester** where you can validate your regular expression.
 * Enter an **Experience Location Pattern** to specify a regular expression to filter which experience locations should be excluded when collecting data for Content Analytics. For example: `^test\\..*|^dev\\..*` to exclude any experience location that contains `test.` or `dev.` <br/>Use **Test Regex** to open the **Regular Expression Tester** where you can validate your regular expression.
-
 
 ## Add Content Analytics extension to your app
 

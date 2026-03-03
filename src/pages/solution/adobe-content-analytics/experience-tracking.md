@@ -423,7 +423,6 @@ iOS
 
 <Tabs query="platform=ios&task=asset-view-duration"/>
 
-
 ### Experience engagement metrics
 
 To get experience engagement metrics, see this example.
@@ -625,7 +624,7 @@ Test cross-session: register, force quit, relaunch, track same ID. No warning sh
 * **Experience definition not found** warning: Register the experience before tracking it.
 * Assets not attributed. Same issue - register with `assetURLs` before tracking.
 * Duplicate registrations: Check if already registered before calling `registerExperience()`:
-    
+
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
 Android

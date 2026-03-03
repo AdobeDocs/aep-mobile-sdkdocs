@@ -133,7 +133,7 @@ Result: ✅ ZERO DATA LOSS
 
 ### Scenario 2: Crash During Flush
 
-```
+```text
 Status: Events being processed
 Crash:  ⚡ App terminated mid-dispatch
         └─> Memory lost ✗

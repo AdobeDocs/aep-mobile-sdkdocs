@@ -141,7 +141,6 @@ iOS
 
 <Tabs query="platform=ios&task=edge-consent-legacy"/>
 
-
 ### Data Deletion
 
 To delete data, use resetIdentities() to reset identities, clear cache and queue.
@@ -155,7 +154,6 @@ Android
 iOS
 
 <Tabs query="platform=ios&task=data-deletion"/>
-
 
 ## Featurization
 
@@ -175,7 +173,6 @@ See below for an example of the payload to send.
 }
 ```
 
-
 ## Tuning Batch Settings
 
 The default settings (`maxBatchSize: 10`, `batchFlushInterval: 2000` ms) should work well for most apps. Adjust these settings based on your event volume:
@@ -187,8 +184,6 @@ The default settings (`maxBatchSize: 10`, `batchFlushInterval: 2000` ms) should 
 | > 50 | 25-50 | 5000 | High-volume optimization |
 
 **Trade-off:** Larger batches reduce network overhead but increase latency before data appears in reporting.
-
----
 
 ## Debugging
 
@@ -203,7 +198,6 @@ Android
 iOS
 
 <Tabs query="platform=ios&task=debugging"/>
-
 
 Log entries are tagged. See below for the various tags.
 

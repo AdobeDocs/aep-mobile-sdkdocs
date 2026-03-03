@@ -27,7 +27,6 @@ iOS
 
 <Tabs query="platform=ios&api=register-experience"/>
 
-
 ## trackAsset
 
 Track an assets with an explicit defined interaction type.
@@ -42,7 +41,6 @@ iOS
 
 <Tabs query="platform=ios&api=track-asset"/>
 
-
 ## trackAssetClick
 
 Convenience method for tracking asset clicks.
@@ -56,7 +54,6 @@ Android
 iOS
 
 <Tabs query="platform=ios&api=track-asset-click"/>
-
 
 ## trackAssetCollection
 
@@ -87,8 +84,6 @@ iOS
 
 <Tabs query="platform=ios&api=track-asset-view"/>
 
-
-
 ## trackExperienceClick
 
 Track when an experience is clicked.
@@ -106,7 +101,6 @@ Android
 iOS
 
 <Tabs query="platform=ios&api=track-experience-click"/>
-
 
 ## trackExperienceView
 
@@ -156,7 +150,6 @@ Android
 iOS
 
 <Tabs query="platform=ios&api=interaction-type"/>
-
 
 ## Configuration
 

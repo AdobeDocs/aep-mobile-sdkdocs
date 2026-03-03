@@ -191,7 +191,6 @@ ContentAnalytics.trackAsset(
 static void trackAssetClick(String assetURL)
 static void trackAssetClick(String assetURL, String assetLocation)
 static void trackAssetClick(String assetURL, String assetLocation, Map<String, Object> additionalData)
-
 ```
 
 **Example**
@@ -357,9 +356,6 @@ ContentAnalytics.trackAssetCollection(
                                        interactionType:AEPInteractionTypeView
                                          assetLocation:@"home"];
 ```
-
-
-
 
 <Variant platform="android" api="register-experience" repeat="10"/>
 
@@ -570,7 +566,6 @@ ContentAnalytics.trackExperienceView(
                       experienceLocation:@"homepage.hero"
                           additionalData:@{@"viewDuration": @5.2}];
 ```
-
 
 <Variant platform="android" api="track-experience-click" repeat="10"/>
 
