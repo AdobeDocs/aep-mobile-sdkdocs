@@ -7,6 +7,12 @@ Keywords:
 
 # Release notes
 
+## March 3, 2026
+
+### Android Brand Concierge 3.0.3
+
+* Resolved an issue with parsing multimodal elements in Concierge responses.
+
 ## February 23, 2026
 
 ### Android Brand Concierge 3.0.2
