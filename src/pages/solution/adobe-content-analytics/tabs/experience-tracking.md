@@ -83,14 +83,12 @@ ContentAnalytics.trackExperienceView(experienceId: experienceId, experienceLocat
 ContentAnalytics.trackExperienceClick(experienceId: experienceId, experienceLocation: "product.detail")
 ```
 
-
 <Variant platform="android" task="track-experience" repeat="1"/>
 
 ```java
 ContentAnalytics.trackExperienceView(experienceId, "product.detail")
 ContentAnalytics.trackExperienceClick(experienceId, "product.detail")
 ```
-
 
 <Variant platform="ios" task="session-lifecycle" repeat="1"/>
 
@@ -281,7 +279,6 @@ val expId = ContentAnalytics.registerExperience(
 )
 ContentAnalytics.trackExperienceView(expId, "home")
 ```
-
 
 <Variant platform="ios" task="asset-attribution" repeat="1"/>
 
@@ -606,7 +603,6 @@ import com.adobe.marketing.mobile.Assurance
 Assurance.startSession(assuranceDeepLink)
 ```
 
-
 <Variant platform="ios" task="testing" repeat="1"/>
 
 ```swift
@@ -618,7 +614,6 @@ MobileCore.setLogLevel(.trace)
 ```java
 MobileCore.setLogLevel(LoggingMode.VERBOSE)
 ```
-
 
 <Variant platform="ios" task="troubleshooting" repeat="1"/>
 

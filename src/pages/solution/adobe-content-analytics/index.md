@@ -79,4 +79,3 @@ SPM<br/>(iOS)
 CocoaPods<br/>(iOS)
 
 <Tabs query="platform=ios-pods&task=add"/>
-

@@ -83,7 +83,6 @@ To disable flushes for immediate sends:
 
 Batching only affects network delivery. Features like asset attribution, experience tracking, and featurization work the same whether batching is enabled or disabled.
 
-
 ## Filtering
 
 You filter content analytics events through regular expressions.

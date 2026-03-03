@@ -69,7 +69,6 @@ iOS
 
 <Tabs query="platform=ios&api=track-asset-collection"/>
 
-
 ## trackAssetView
 
 Convenience method for tracking asset views.
@@ -135,7 +134,6 @@ Android
 iOS
 
 <Tabs query="platform=ios&api=content-item"/>
-
 
 ### interactionType
 
