@@ -104,6 +104,8 @@ Regardless of how the activity is started, the Messaging extension automatically
 
 Start a Live Activity from your app using Apple's ActivityKit APIs.
 
+#### Transactional
+
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 
 #### Swift
@@ -132,6 +134,44 @@ if #available(iOS 16.1, *) {
         )
         
         print("Live Activity started with ID: \(activity.id)")
+    } catch {
+        print("Error starting Live Activity: \(error.localizedDescription)")
+    }
+}
+```
+
+#### Broadcast (iOS 18+)
+
+<CodeBlock slots="heading, code" repeat="1" languages="Swift" />
+
+#### Swift
+
+```swift
+import ActivityKit
+
+if #available(iOS 18.0, *) {
+    let channelID = "34zeQRIvEfEAAArq/RXKSw=="
+    
+    let attributes = GameScoreLiveActivityAttributes(
+        liveActivityData: LiveActivityData(channelID: channelID),
+        homeTeam: "Chiefs",
+        awayTeam: "Eagles"
+    )
+    
+    let initialContentState = GameScoreLiveActivityAttributes.ContentState(
+        homeScore: 0,
+        awayScore: 0,
+        quarter: "1st"
+    )
+    
+    do {
+        let activity = try Activity<GameScoreLiveActivityAttributes>.request(
+            attributes: attributes,
+            contentState: initialContentState,
+            pushType: .channel(channelID)
+        )
+        
+        print("Broadcast Live Activity started with ID: \(activity.id)")
     } catch {
         print("Error starting Live Activity: \(error.localizedDescription)")
     }
