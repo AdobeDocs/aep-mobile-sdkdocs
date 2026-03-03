@@ -57,7 +57,6 @@ let experienceId = ContentAnalytics.registerExperience(
 )
 ```
 
-
 <Variant platform="android" task="basic-usage" repeat="1"/>
 
 ```java
@@ -114,7 +113,6 @@ val expId = ContentAnalytics.registerExperience(
 )
 ContentAnalytics.trackExperienceView(expId, "home")
 ```
-
 
 <Variant platform="ios" task="implementation-single-screen" repeat="1"/>
 
@@ -185,7 +183,6 @@ class ProductDetailActivity : AppCompatActivity() {
 }
 ```
 
-
 <Variant platform="ios" task="implementation-collection-feed" repeat="1"/>
 
 ```swift
@@ -234,7 +231,6 @@ class FeedFragment : Fragment() {
 }
 ```
 
-
 <Variant platform="ios" task="experience-id-generation" repeat="1"/>
 
 ```swift
@@ -260,7 +256,6 @@ fun computeExperienceId(texts: List<String>, assets: List<String>, ctas: List<St
     return "mobile-${hash.take(12)}"
 }
 ```
-
 
 <Variant platform="ios" task="missing-registration-warning" repeat="1"/>
 
@@ -340,8 +335,6 @@ ContentAnalytics.trackAssetView(assetURL: "https://example.com/hero.jpg")
 ContentAnalytics.trackAssetView("https://example.com/hero.jpg")
 ```
 
-
-
 <Variant platform="ios" task="with-location-metrics-per-placement" repeat="1"/>
 
 ```swift
@@ -359,9 +352,6 @@ ContentAnalytics.trackExperienceView(expId, "homepage.hero")
 ContentAnalytics.trackExperienceView(expId, "product.sidebar")
 ContentAnalytics.trackExperienceView(expId, "checkout.upsell")
 ```
-
-
-
 
 <Variant platform="ios" task="without-location-global-metrics" repeat="1"/>
 
@@ -431,7 +421,6 @@ val expId = ContentAnalytics.registerExperience(
 ContentAnalytics.trackExperienceView(expId, "product.detail")
 ```
 
-
 <Variant platform="ios" task="asset-performance-metrics" repeat="1"/>
 
 ```swift
@@ -469,7 +458,6 @@ ContentAnalytics.trackAssetView(
     )
 )
 ```
-
 
 <Variant platform="ios" task="asset-view-duration" repeat="1"/>
 
@@ -525,7 +513,6 @@ class ImageFragment : Fragment() {
     }
 }
 ```
-
 
 <Variant platform="ios" task="experience-engagement-metrics" repeat="1"/>
 
@@ -598,7 +585,6 @@ fun ProductCard(product: Product) {
     }
 }
 ```
-
 
 <Variant platform="ios" task="debugging-with-assurance" repeat="1"/>
 
@@ -679,7 +665,6 @@ class CarouselView: UIView {
 }
 ```
 
-
 <Variant platform="android" task="carousel-banner" repeat="1"/>
 
 ```java
@@ -711,7 +696,6 @@ class CarouselAdapter : RecyclerView.Adapter<CarouselViewHolder>() {
     }
 }
 ```
-
 
 <Variant platform="ios" task="product-grid" repeat="1"/>
 
@@ -749,7 +733,6 @@ struct ProductCard: View {
 }
 ```
 
-
 <Variant platform="android" task="product-grid" repeat="1"/>
 
 ```java
@@ -783,7 +766,6 @@ fun ProductCard(product: Product) {
     }
 }
 ```
-
 
 <Variant platform="ios" task="reusable-tracking-component" repeat="1"/>
 
@@ -836,7 +818,6 @@ TrackedExperience(
 }
 ```
 
-
 <Variant platform="android" task="reusable-tracking-component" repeat="1"/>
 
 ```java
@@ -874,7 +855,3 @@ TrackedExperience(
     ProductCardView(product)
 }
 ```
-
-
-
-

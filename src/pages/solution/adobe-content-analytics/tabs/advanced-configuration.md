@@ -87,4 +87,3 @@ MobileCore.setLogLevel(LoggingMode.VERBOSE)
 ```swift
 MobileCore.setLogLevel(.debug)
 ```
-

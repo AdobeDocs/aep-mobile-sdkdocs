@@ -8,7 +8,6 @@ keywords:
 import Tabs from './tabs/experience-tracking.md'
 import InitializeSDK from '/src/pages/resources/initialize.md'
 
-
 # Experience tracking
 
 Experience tracking measures how users interact with complete experiences (combinations of images, text, and CTAs) in your app.
@@ -26,7 +25,6 @@ Android
 iOS
 
 <Tabs query="platform=ios&task=quick-start"/>
-
 
 ## Registration required
 
@@ -54,7 +52,6 @@ iOS
 
 <Tabs query="platform=ios&task=basic-usage"/>
 
-
 ### Track interactions
 
 Then track the experience.
@@ -68,7 +65,6 @@ Android
 iOS
 
 <Tabs query="platform=ios&task=track-experience"/>
-
 
 ## Session lifecycle
 
@@ -104,7 +100,6 @@ The benefits are:
 
 For most apps, 100 definitions is sufficient. If you're registering more unique experiences per session, consider reusing experience IDs where content is identical (same content = same ID).
 
-
 ## Implementation patterns
 
 See below for examples of implementation patterns.
@@ -136,7 +131,6 @@ Android
 iOS
 
 <Tabs query="platform=ios&task=implementation-collection-feed"/>
-
 
 ### Experience ID generation
 
@@ -176,11 +170,9 @@ iOS
 
 <Tabs query="platform=ios&task=experience-id-generation"/>
 
-
 ## Missing registration warning
 
 If you track without registering, you will see this warning.
-
 
 <InlineAlert variant="error" slots="text"/>
 
@@ -203,7 +195,6 @@ Android
 iOS
 
 <Tabs query="platform=ios&task=missing-registration-warning"/>
-
 
 ## Asset attribution
 
@@ -321,7 +312,6 @@ Customer Journey Analytics report will look like:
 | Summer Sale | `category.`<br/>`electronics` | 8,000 | 320 |
 | Summer Sale | `search.`<br/>`results` | 3,000 | 45 |
 
-
 ## Location naming convention
 
 Use a consistent location naming hierarchy to filter on locations easily in Customer Journey Analytics.
@@ -342,14 +332,12 @@ Examples are:
 
 See the following goals and whether you should consider to use locations or not.
 
-
 | Goal | Location |
 |---|---|
 | Compare same content across placements | ✅ Set location |
 | A/B test content in a specific spot | ✅ Set location|
 | Track overall content performance | ❌ Omit location |
 | Simple asset tracking (no placement analysis) | ❌ Omit location |
-
 
 ## Machine learning powered analytics
 
@@ -402,7 +390,6 @@ iOS
 <Tabs query="platform=ios&task=performance-by-content-category"/>
 
 In Customer Journey Analytics, you can then filter or group by persuasion strategy to see what messaging resonates in each location.
-
 
 ## Custom metrics with `additionalData`
 
@@ -477,7 +464,6 @@ For example average load time by asset location.
 
 Insight: Gallery images load slower but get 8x more viewing time.
 
-
 ## Debugging with Assurance
 
 Adobe Assurance (Project Griffon) lets you inspect tracking events in real-time. Connect your app to an Assurance session to see exactly what payloads are being sent.
@@ -502,7 +488,7 @@ iOS
 
     When you call trackAssetView() or trackAssetClick(), you'll see:
 
-    ```
+    ```json
     Event: Track Asset
     Type: com.adobe.eventType.contentAnalytics
     Source: com.adobe.eventSource.requestContent
@@ -580,7 +566,6 @@ iOS
     }
     ```
 
-
 ### Debugging checklist
 
 | What to Check  |  Where in Assurance |
@@ -590,7 +575,6 @@ iOS
 | Batching working |   Multiple events → single Edge request. |
 | Edge delivery  |  Look for Edge Request after batch flush. |
 | Consent status |   Check Edge Consent events. |
-
 
 ### Common Issues in Assurance
 
@@ -608,7 +592,6 @@ Missing experienceId in track events:
 
 * Ensure registerExperience() was called first
 * Check the returned ID is being passed to track methods
-
 
 ## Testing
 
@@ -672,7 +655,6 @@ Android
 iOS
 
 <Tabs query="platform=ios&task=carousel-banner"/>
-
 
 ### Product Grid
 

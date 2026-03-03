@@ -36,11 +36,11 @@ User tracks event
 
 **Responsibilities:**
 
-- Manages batching logic (count threshold + time-based flush)
-- Writes incoming events to disk immediately via `PersistentHitQueue`
-- Maintains in-memory event counters
-- Triggers flush when threshold reached (10 events or 5 seconds)
-- Coordinates between `DirectHitProcessor` and `ContentAnalyticsOrchestrator`
+* Manages batching logic (count threshold + time-based flush)
+* Writes incoming events to disk immediately via `PersistentHitQueue`
+* Maintains in-memory event counters
+* Triggers flush when threshold reached (10 events or 5 seconds)
+* Coordinates between `DirectHitProcessor` and `ContentAnalyticsOrchestrator`
 
 **Key Methods:**
 
@@ -58,9 +58,9 @@ iOS
 
 **Responsibilities:**
 
-- Implements `HitProcessing` protocol for `PersistentHitQueue` integration
-- Accumulates events in memory for fast batching
-- On recovery: loads events from disk into memory, then clears disk (no data loss)
+* Implements `HitProcessing` protocol for `PersistentHitQueue` integration
+* Accumulates events in memory for fast batching
+* On recovery: loads events from disk into memory, then clears disk (no data loss)
 
 **Event Lifecycle:**
 
@@ -78,20 +78,20 @@ iOS
 
 **Provides:**
 
-- Two separate queues: `asset.events` and `experience.events`
-- SQLite-backed persistence (survives crashes, force-quit, background termination)
-- Automatic processing via `beginProcessing()`
-- Thread-safe operations
+* Two separate queues: `asset.events` and `experience.events`
+* SQLite-backed persistence (survives crashes, force-quit, background termination)
+* Automatic processing via `beginProcessing()`
+* Thread-safe operations
 
 **Storage:**
 
-- Events encoded as JSON via `Event: Codable`
-- Each event wrapped with type metadata (`asset` or `experience`)
-- Unique identifier: `event.id.uuidString`
+* Events encoded as JSON via `Event: Codable`
+* Each event wrapped with type metadata (`asset` or `experience`)
+* Unique identifier: `event.id.uuidString`
 
 ## Detailed Timeline Example
 
-```
+```text
 Time   │ Event                                │ Memory │ Disk │ Safe?
 ───────┼──────────────────────────────────────┼────────┼──────┼───────
 00.00s │ User views Asset A                   │ ✓      │ ✓    │ ✅ YES
@@ -116,7 +116,7 @@ Events stay on disk during the entire batching window. Once we hand off to Edge,
 
 ### Scenario 1: Crash During Batching (0-5s window)
 
-```
+```text
 Status: Events in memory + disk
 Crash:  ⚡ App terminated
         └─> Memory lost ✗
@@ -148,7 +148,7 @@ Result: ✅ ZERO DATA LOSS (possible duplicate if crash after Edge dispatch)
 
 ### Scenario 3: Crash After Edge Dispatch
 
-```
+```text
 Status: Events dispatched to Edge
 Crash:  ⚡ App terminated
         └─> Disk already cleared during processHit()
@@ -161,7 +161,7 @@ Result: ✅ ZERO DATA LOSS - Edge guarantees delivery
 
 Once we dispatch to Edge extension:
 
-```
+```text
 ContentAnalytics → runtime.dispatch(event) → Event Hub → Edge Extension
                                                            └─> Edge.PersistentHitQueue
                                                                └─> Network retries
@@ -186,7 +186,7 @@ iOS
 
 <Tabs query="platform=ios&task=metrics-calculation"/>
 
-This avoids state sync issues - we just count events on flush. If the app crashes, the restored events give us the same metrics.
+This avoids state sync issues * we just count events on flush. If the app crashes, the restored events give us the same metrics.
 
 ## Configuration
 
@@ -200,9 +200,9 @@ This avoids state sync issues - we just count events on flush. If the app crashe
 
 **Parameters:**
 
-- `maxBatchSize`: Event count threshold (default: 10)
-- `batchFlushInterval`: Timer interval for periodic flush in milliseconds (default: 2000 ms = 2s). Max wait time is derived from this (2.5× = 5000 ms).
-- `batchingEnabled`: Set to `false` for immediate dispatch (no batching)
+* `maxBatchSize`: Event count threshold (default: 10)
+* `batchFlushInterval`: Timer interval for periodic flush in milliseconds (default: 2000 ms = 2s). Max wait time is derived from this (2.5× = 5000 ms).
+* `batchingEnabled`: Set to `false` for immediate dispatch (no batching)
 
 ## Performance Characteristics
 
@@ -228,7 +228,6 @@ Android
 
 <Tabs query="platform=android&task=thread-safety"/>
 
-
 ## Testing Crash Recovery
 
 ### Test 1: Crash During Batching
@@ -241,9 +240,7 @@ Android
 6. Wait 2 seconds for flush
 7. Verify: 1 Edge event with 10 aggregated interactions
 
-
 ### Test 2: Crash During Flush
-
 
 1. Track 10 asset events (triggers immediate flush)
 2. Set breakpoint in `sendToEdge()`
@@ -264,20 +261,20 @@ Android
 
 ### Key Files
 
-- `BatchCoordinator.swift` - Batching logic and persistence coordination
-- `DirectHitProcessor.swift` - Crash recovery and event accumulation
-- `ContentAnalyticsOrchestrator.swift` - Metrics calculation and Edge dispatch
-- `PersistentHitQueue` (AEPServices) - SQLite-backed queue
+* `BatchCoordinator.swift` - Batching logic and persistence coordination
+* `DirectHitProcessor.swift` - Crash recovery and event accumulation
+* `ContentAnalyticsOrchestrator.swift` - Metrics calculation and Edge dispatch
+* `PersistentHitQueue` (AEPServices) - SQLite-backed queue
 
 ### Thread Safety
 
-- All operations use serial dispatch queues
-- `batchQueue` (BatchCoordinator) - batch operations
-- `queue` (DirectHitProcessor) - hit processing
+* All operations use serial dispatch queues
+* `batchQueue` (BatchCoordinator) - batch operations
+* `queue` (DirectHitProcessor) - hit processing
 
 ### Data Flow
 
-```
+```text
 Event tracked
   └─> BatchCoordinator.addAssetEvent()
       ├─> DirectHitProcessor.accumulateEvent()  [memory]
@@ -293,7 +290,7 @@ Event tracked
 
 The SDK uses a callback chain to decouple components while maintaining type safety:
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                           INITIALIZATION PHASE                              │
 ├─────────────────────────────────────────────────────────────────────────────┤
@@ -369,7 +366,7 @@ Log.setLogLevel(.trace)
 
 Look for:
 
-```
+```text
 [BATCH_PROCESSOR] Accumulated ASSET event | ID: <uuid>
 [BATCH_PROCESSOR] Recovered event from disk | Type: asset | ID: <uuid>
 [BATCH_PROCESSOR] Processing 5 asset events
@@ -392,4 +389,3 @@ Content Analytics batches events for 0-5 seconds before dispatch. Without disk p
 1. **No dispatch confirmation:** Extensions cannot receive callbacks from Edge to confirm receipt
 2. **Possible duplicates:** Crash during Edge dispatch may cause duplicate events (Edge deduplication handles this)
 3. **Memory overhead:** Events held in memory + disk during batching (minimal: ~40KB)
-

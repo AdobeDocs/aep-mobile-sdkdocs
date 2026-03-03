@@ -42,7 +42,6 @@ iOS
 
 <Tabs query="platform=ios&task=launch"/>
 
-
 ## Datastream
 
 You can stream data from content analytics through a separate datastream.
@@ -58,14 +57,13 @@ To route Content Analytics to a different datastream:
 
 If `contentanalytics.configId` is not set, the default `edge.configId` is used.
 
-
 ## Batching
 
 You can use the following flush triggers:
 
-- Batch reaches `maxBatchSize`.
-- Timer reaches `batchFlushInterval` (ms).
-- App backgrounds.
+* Batch reaches `maxBatchSize`.
+* Timer reaches `batchFlushInterval` (ms).
+* App backgrounds.
 
 ```json
 {
@@ -106,8 +104,6 @@ An example of a regex that filers our asset and experience locations.
 { "contentanalytics.excludedAssetLocationsRegexp": "^(debug|test).*" }
 { "contentanalytics.excludedExperienceLocationsRegexp": "^admin\\..*" }
 ```
-
----
 
 ## Privacy
 
@@ -211,6 +207,6 @@ iOS
 
 Log entries are tagged. See below for the various tags.
 
-- `[ContentAnalytics]` - main
-- `[ContentAnalytics.Batch]` - batching
-- `[ContentAnalytics.Featurization]` - ML service
+* `[ContentAnalytics]` - main
+* `[ContentAnalytics.Batch]` - batching
+* `[ContentAnalytics.Featurization]` - ML service
