@@ -57,8 +57,12 @@ module.exports = {
                 path: "/home/release-notes",
                 pages: [
                     {
-                        title: "2025",
+                        title: "2026",
                         path: "/home/release-notes"
+                    },
+                    {
+                        title: "2025",
+                        path: "/home/release-notes/2025"
                     },
                     {
                         title: "2024",
@@ -119,6 +123,43 @@ module.exports = {
                 title: "Edge Network extensions",
                 path: "/edge",
                 pages: [
+                     {
+                        title: 'Adobe Brand Concierge',
+                        path: '/edge/adobe-brand-concierge/',
+                        pages: [{
+                                title: "Overview",
+                                path: "/edge/adobe-brand-concierge/"
+                            },
+                            {
+                                title: "Getting started (Android)",
+                                path: "/edge/adobe-brand-concierge/android/getting-started"
+                            },
+                            {
+                                title: "Getting started (iOS)",
+                                path: "/edge/adobe-brand-concierge/ios/getting-started"
+                            },
+                            {
+                                title: "Implementation guide (Android)",
+                                path: "/edge/adobe-brand-concierge/android/implementation-guide"
+                            },
+                            {
+                                title: "Implementation guide (iOS)",
+                                path: "/edge/adobe-brand-concierge/ios/implementation-guide"
+                            },
+                            {
+                                title: "Style guide (Android)",
+                                path: "/edge/adobe-brand-concierge/android/style-guide"
+                            },
+                            {
+                                title: "Style guide (iOS)",
+                                path: "/edge/adobe-brand-concierge/ios/style-guide"
+                            },
+                            {
+                                title: "Release notes",
+                                path: "/edge/adobe-brand-concierge/release-notes"
+                            }
+                        ]
+                    },
                     {
                         title: "Adobe Experience Platform Edge Network",
                         path: "/edge/edge-network",
