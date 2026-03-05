@@ -12,6 +12,7 @@ Keywords:
 ### Android Brand Concierge 3.0.3
 
 * Resolved an issue with parsing multimodal elements in Concierge responses.
+* Replaced experimental Jetpack components to improve stability and compatibility.
 
 ## February 23, 2026
 
