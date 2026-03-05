@@ -623,7 +623,7 @@ This section documents which properties are fully implemented, partially impleme
 
 | CSS Variable | Status | Notes | Used In |
 |--------------|--------|-------|---------|
-| `--color-primary` | ✅ | Primary brand color | Product buttons, feedback submit, mic icon, thinking animation, webview close |
+| `--color-primary` | ✅ | Primary brand color | Product buttons, feedback submit, mic icon, thinking animation |
 | `--color-text` | ✅ | Primary text color | `ChatHeader`, `WelcomeCard`, prompt suggestions |
 | `--main-container-background` | ✅ | Main chat and welcome background | `ChatScreen`, `WelcomeCard` |
 | `--main-container-bottom-background` | ✅ | Bottom container background | Input area, voice panel |
