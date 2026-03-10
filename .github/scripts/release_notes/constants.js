@@ -51,6 +51,8 @@ const repoNames = [
     "aepsdk-target-android",
     "aepsdk-ui-ios",
     "aepsdk-ui-android",
+    "aepsdk-concierge-android",
+    "aepsdk-concierge-ios",
 ]
 
 const EXTENSION_ENUM = Object.freeze({
@@ -77,7 +79,8 @@ const EXTENSION_ENUM = Object.freeze({
     CAMPAIGN_STANDARD: "Campaign Standard",
     CAMPAIGN_CLASSIC: "Campaign Classic",
     NOTIFICATION_CONTENT: "Notification Content Extension",
-    NOTIFICATION_BUILDER: "Notification Builder"
+    NOTIFICATION_BUILDER: "Notification Builder",
+    CONCIERGE: "Brand Concierge"
 })
 
 const PLATFORM_ENUM = Object.freeze({
@@ -109,6 +112,7 @@ const releaseNotesLocation = (() => {
     obj[EXTENSION_ENUM.AUDIENCE] = "./src/pages/solution/adobe-audience-manager/release-notes.md"
     obj[EXTENSION_ENUM.CAMPAIGN_STANDARD] = "./src/pages/solution/adobe-campaign-standard/release-notes.md"
     obj[EXTENSION_ENUM.CAMPAIGN_CLASSIC] = "./src/pages/solution/adobe-campaign-classic/release-notes.md"
+    obj[EXTENSION_ENUM.CONCIERGE] = "./src/pages/edge/adobe-brand-concierge/release-notes.md"
 
     return obj
 })()
