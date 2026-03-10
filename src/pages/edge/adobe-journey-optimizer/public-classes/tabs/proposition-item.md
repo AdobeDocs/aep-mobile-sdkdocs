@@ -50,6 +50,16 @@ public ContentCardSchemaData getContentCardSchemaData()
 public InAppSchemaData getInAppSchemaData()
 ```
 
+<Variant platform="android" function="get-inbox-schema-data" repeat="3"/>
+
+#### Java
+
+**Syntax**
+
+```java
+public InboxContentSchemaData getInboxSchemaData()
+```
+
 <Variant platform="android" function="get-item-id" repeat="3"/>
 
 #### Java
