@@ -177,6 +177,7 @@ Shadows use CSS box-shadow syntax: `offsetX offsetY blurRadius spreadRadius colo
 | JSON Key | Type | Default | Description |
 |----------|------|---------|-------------|
 | `behavior.multimodalCarousel.cardClickAction` | String | `"openLink"` | Action when carousel card is tapped. Currently "openLink" is the only option. |
+| `behavior.multimodalCarousel.carouselStyle` | String | `"paged"` | Carousel scroll style. `"paged"` snaps to one item at a time with prev/next buttons and page indicator dots. `"scroll"` provides continuous horizontal scrolling. |
 
 ### Input
 
@@ -193,6 +194,12 @@ Shadows use CSS box-shadow syntax: `offsetX offsetY blurRadius spreadRadius colo
 | `behavior.chat.messageAlignment` | String | `"left"` | Message alignment (`"left"`, `"center"`, `"right"`) |
 | `behavior.chat.messageWidth` | String | `"100%"` | Max message width |
 
+### Product Card
+
+| JSON Key | Type | Default | Description |
+|----------|------|---------|-------------|
+| `behavior.productCard.cardStyle` | String | `"actionButton"` | Rendering style for product cards. `"actionButton"` shows an image, description text, and primary/secondary action buttons. `"productDetail"` shows an image, optional badge, title, subtitle, and price — the entire card is tappable. |
+
 ### Privacy Notice
 
 | JSON Key | Type | Default | Description |
@@ -206,7 +213,8 @@ Shadows use CSS box-shadow syntax: `offsetX offsetY blurRadius spreadRadius colo
 {
   "behavior": {
     "multimodalCarousel": {
-      "cardClickAction": "openLink"
+      "cardClickAction": "openLink",
+      "carouselStyle": "paged"
     },
     "input": {
       "enableVoiceInput": true,
@@ -216,6 +224,9 @@ Shadows use CSS box-shadow syntax: `offsetX offsetY blurRadius spreadRadius colo
     "chat": {
       "messageAlignment": "left",
       "messageWidth": "100%"
+    },
+    "productCard": {
+      "cardStyle": "productDetail"
     },
     "privacyNotice": {
       "title": "Privacy Notice",
@@ -355,6 +366,7 @@ Visual styling uses CSS-like variable names under the `theme` object (`--propert
 * **Input**: `--input-background`, `--input-text-color`, `--input-outline-color`, `--input-focus-outline-color`
 * **Citations**: `--citations-background-color`, `--citations-text-color`
 * **Feedback**: `--feedback-icon-btn-background`, `--feedback-icon-btn-hover-background`
+* **Product Card**: `--product-card-background-color`, `--product-card-title-color`, `--product-card-subtitle-color`, `--product-card-price-color`, `--product-card-was-price-color`, `--product-card-badge-text-color`, `--product-card-badge-background-color`, `--product-card-outline-color`
 * **Disclaimer**: `--disclaimer-color`
 
 ### Layout (summary)
@@ -368,6 +380,7 @@ Visual styling uses CSS-like variable names under the `theme` object (`--propert
 * **Citations**: `--citations-text-font-weight`, `--citations-desktop-button-font-size`
 * **Disclaimer**: `--disclaimer-font-size`, `--disclaimer-font-weight`
 * **Welcome order**: `--welcome-input-order`, `--welcome-cards-order`
+* **Product Cards**: `--product-card-width`, `--product-card-height`, `--product-card-border-radius`, `--product-card-title-font-size`, `--product-card-title-font-weight`, `--product-card-subtitle-font-size`, `--product-card-subtitle-font-weight`, `--product-card-price-font-size`, `--product-card-price-font-weight`, `--product-card-badge-font-size`, `--product-card-badge-font-weight`, `--product-card-was-price-text-prefix`, `--product-card-was-price-font-size`, `--product-card-was-price-font-weight`, `--product-card-text-spacing`, `--product-card-text-top-padding`, `--product-card-text-bottom-padding`, `--product-card-text-horizontal-padding`, `--product-card-carousel-spacing`, `--product-card-carousel-horizontal-padding`
 
 For the full list of theme tokens and Kotlin property mappings, see the [Brand Concierge Android Documentation](https://github.com/adobe/aepsdk-concierge-android/tree/dev/Documentation) repository.
 
@@ -376,6 +389,8 @@ For the full list of theme tokens and Kotlin property mappings, see the [Brand C
 ## Complete Example
 
 Place the theme file in your app's `assets` directory (e.g. `assets/my-theme.json`) and load it with `ConciergeThemeLoader.load(context, filename)` as shown in the [overview](#overview). For XML/Views, pass the loaded theme into `ConciergeChatView.bind(...)`.
+
+The example below includes all available theme tokens. When `behavior.productCard.cardStyle` is set to `"productDetail"`, the `--product-card-*` variables take effect.
 
 ```json
 {
@@ -387,7 +402,8 @@ Place the theme file in your app's `assets` directory (e.g. `assets/my-theme.jso
   },
   "behavior": {
     "multimodalCarousel": {
-      "cardClickAction": "openLink"
+      "cardClickAction": "openLink",
+      "carouselStyle": "paged"
     },
     "input": {
       "enableVoiceInput": true,
@@ -397,6 +413,9 @@ Place the theme file in your app's `assets` directory (e.g. `assets/my-theme.jso
     "chat": {
       "messageAlignment": "left",
       "messageWidth": "100%"
+    },
+    "productCard": {
+      "cardStyle": "productDetail"
     },
     "privacyNotice": {
       "title": "Privacy Notice",
@@ -500,7 +519,35 @@ Place the theme file in your app's `assets` directory (e.g. `assets/my-theme.jso
     "--feedback-icon-btn-background": "#FFFFFF",
     "--feedback-icon-btn-size-desktop": "32px",
     "--citations-text-font-weight": "700",
-    "--citations-desktop-button-font-size": "12px"
+    "--citations-desktop-button-font-size": "12px",
+    "--product-card-background-color": "#FFFFFF",
+    "--product-card-title-color": "#292929",
+    "--product-card-title-font-size": "14px",
+    "--product-card-title-font-weight": "700",
+    "--product-card-subtitle-color": "#292929",
+    "--product-card-subtitle-font-size": "12px",
+    "--product-card-subtitle-font-weight": "400",
+    "--product-card-price-color": "#292929",
+    "--product-card-price-font-size": "16px",
+    "--product-card-price-font-weight": "300",
+    "--product-card-was-price-color": "#6E6E6E",
+    "--product-card-was-price-text-prefix": "was ",
+    "--product-card-was-price-font-size": "12px",
+    "--product-card-was-price-font-weight": "400",
+    "--product-card-badge-text-color": "#FFFFFF",
+    "--product-card-badge-background-color": "#000000",
+    "--product-card-badge-font-size": "12px",
+    "--product-card-badge-font-weight": "600",
+    "--product-card-outline-color": "#00000000",
+    "--product-card-width": "200px",
+    "--product-card-height": "300px",
+    "--product-card-border-radius": "8px",
+    "--product-card-text-spacing": "8px",
+    "--product-card-text-top-padding": "20px",
+    "--product-card-text-bottom-padding": "12px",
+    "--product-card-text-horizontal-padding": "12px",
+    "--product-card-carousel-spacing": "12px",
+    "--product-card-carousel-horizontal-padding": "4px"
   }
 }
 ```
@@ -526,7 +573,7 @@ This section documents which properties are fully implemented, partially impleme
 * **Colors:** ~70% implemented (most core colors used; hover states not applicable on Android)
 * **Typography:** ~60% implemented (`fontFamily` not yet supported)
 * **Layout:** ~15% implemented (only outline widths and font sizes currently used)
-* **Behavior:** ~10% implemented (only `enableVoiceInput` functional)
+* **Behavior:** ~10% implemented (only `enableVoiceInput`, `carouselStyle`, and `cardStyle` functional)
 * **Text/Copy:** ~50% implemented (main strings used; accessibility labels not yet wired)
 
 **Key differences from web/iOS:**
@@ -550,6 +597,8 @@ This section documents which properties are fully implemented, partially impleme
 | Property | Status | Notes | Used In |
 |----------|--------|-------|---------|
 | `behavior.multimodalCarousel.cardClickAction` | ⚠️ | Parsed but not implemented in carousel | — |
+| `behavior.multimodalCarousel.carouselStyle` | ✅ | Controls carousel scroll style (`"paged"` or `"scroll"`) | `ProductCarousel` |
+| `behavior.productCard.cardStyle` | ✅ | Selects product card rendering (`"actionButton"` vs `"productDetail"`) | `ChatMessageItem` |
 | `behavior.input.enableVoiceInput` | ✅ | Controls mic button visibility | `InputActionButtons` |
 | `behavior.input.disableMultiline` | ⚠️ | Parsed but not implemented | — |
 | `behavior.input.showAiChatIcon` | ⚠️ | Parsed but not implemented | — |
@@ -655,6 +704,19 @@ This section documents which properties are fully implemented, partially impleme
 | `--feedback-icon-btn-hover-background` | ⚠️ | Parsed; no hover on Android | — |
 | `--disclaimer-color` | ✅ | Disclaimer text color | `ConciergeDisclaimer` |
 
+### Theme Tokens — Colors (Product Card)
+
+| CSS Variable | Status | Notes | Used In |
+|--------------|--------|-------|---------|
+| `--product-card-background-color` | ✅ | Card background | `ExtendedProductCard` |
+| `--product-card-title-color` | ✅ | Product title text color | `ExtendedProductCard` |
+| `--product-card-subtitle-color` | ✅ | Product subtitle text color | `ExtendedProductCard` |
+| `--product-card-price-color` | ✅ | Product price text color | `ExtendedProductCard` |
+| `--product-card-was-price-color` | ✅ | Strikethrough "was" price color | `ExtendedProductCard` |
+| `--product-card-badge-text-color` | ✅ | Badge label text color | `ExtendedProductCard` |
+| `--product-card-badge-background-color` | ✅ | Badge background color | `ExtendedProductCard` |
+| `--product-card-outline-color` | ✅ | Card border/outline color | `ExtendedProductCard` |
+
 ### Theme Tokens — Layout
 
 | CSS Variable | Status | Notes | Used In |
@@ -688,6 +750,31 @@ This section documents which properties are fully implemented, partially impleme
 | `--welcome-input-order` | ⚠️ | Parsed; welcome layout not customizable | — |
 | `--welcome-cards-order` | ⚠️ | Parsed; welcome layout not customizable | — |
 
+### Theme Tokens — Layout (Product Card)
+
+| CSS Variable | Status | Notes | Used In |
+|--------------|--------|-------|---------|
+| `--product-card-width` | ✅ | Card width | `ExtendedProductCard`, `ProductCarousel` |
+| `--product-card-height` | ✅ | Card height | `ExtendedProductCard`, `ProductCarousel` |
+| `--product-card-border-radius` | ✅ | Card corner radius | `ExtendedProductCard` |
+| `--product-card-title-font-size` | ✅ | Title font size | `ExtendedProductCard` |
+| `--product-card-title-font-weight` | ✅ | Title font weight | `ExtendedProductCard` |
+| `--product-card-subtitle-font-size` | ✅ | Subtitle font size | `ExtendedProductCard` |
+| `--product-card-subtitle-font-weight` | ✅ | Subtitle font weight | `ExtendedProductCard` |
+| `--product-card-price-font-size` | ✅ | Price font size | `ExtendedProductCard` |
+| `--product-card-price-font-weight` | ✅ | Price font weight | `ExtendedProductCard` |
+| `--product-card-badge-font-size` | ✅ | Badge font size | `ExtendedProductCard` |
+| `--product-card-badge-font-weight` | ✅ | Badge font weight | `ExtendedProductCard` |
+| `--product-card-was-price-text-prefix` | ✅ | Text prefix before strikethrough "was" price | `ExtendedProductCard` |
+| `--product-card-was-price-font-size` | ✅ | "Was" price font size | `ExtendedProductCard` |
+| `--product-card-was-price-font-weight` | ✅ | "Was" price font weight | `ExtendedProductCard` |
+| `--product-card-text-spacing` | ✅ | Vertical spacing between text elements | `ExtendedProductCard` |
+| `--product-card-text-top-padding` | ✅ | Top padding above text section | `ExtendedProductCard` |
+| `--product-card-text-bottom-padding` | ✅ | Bottom padding below text section | `ExtendedProductCard` |
+| `--product-card-text-horizontal-padding` | ✅ | Horizontal padding on text area | `ExtendedProductCard` |
+| `--product-card-carousel-spacing` | ✅ | Spacing between cards in carousel | `ProductCarousel` |
+| `--product-card-carousel-horizontal-padding` | ✅ | Horizontal padding for carousel container | `ProductCarousel` |
+
 ### Unsupported CSS Variables
 
 These web theme variables are **not supported** on Android:
@@ -718,8 +805,9 @@ The following colors from `LightConciergeColors` / `DarkConciergeColors` are har
 
 * **Colors:** `--color-primary`, `--color-text`, `--main-container-background`, `--main-container-bottom-background`, message colors, button colors, `--input-background`, `--input-text-color`, `--input-outline-color`, `--input-focus-outline-color`, disclaimer and citation colors, `--feedback-icon-btn-background`
 * **Text keys:** `welcome.heading`, `welcome.subheading`, `input.placeholder`, `loading.message`, and all `feedback.dialog.*`
-* **Behavior:** `behavior.input.enableVoiceInput` to control the mic button
+* **Behavior:** `behavior.input.enableVoiceInput` to control the mic button; `behavior.multimodalCarousel.carouselStyle` for carousel scroll style; `behavior.productCard.cardStyle` to enable extended product detail cards
 * **Layout/typography:** `--input-outline-width`, `--input-focus-outline-width`, `--input-font-size`, `--disclaimer-font-size`, `--citations-desktop-button-font-size`, `--line-height-body`
+* **Product cards (when `cardStyle` is `"productDetail"`):** all `--product-card-*` color and layout variables
 
 **Can be skipped:**
 

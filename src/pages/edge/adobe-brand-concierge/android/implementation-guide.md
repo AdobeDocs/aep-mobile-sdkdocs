@@ -235,6 +235,93 @@ class XmlActivity : AppCompatActivity() {
 }
 ```
 
+### Deep Links and App Links
+
+#### Required manifest entries
+
+**1. Register your app as an App Link handler**
+
+Add an `<intent-filter>` with `android:autoVerify="true"` to the activity in your `AndroidManifest.xml` that should handle your domain's URLs. This triggers Android's domain verification against your domain's `assetlinks.json` file. Without this, the Concierge extension's App Link check will always fall back to the in-app WebView.
+
+```xml
+<activity android:name=".YourActivity" ...>
+    <intent-filter android:autoVerify="true" android:exported="true">
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="https" android:host="yourdomain.com" />
+    </intent-filter>
+</activity>
+```
+
+**2. Package visibility (Android 11 and higher)**
+
+Add the following `<queries>` block to your `AndroidManifest.xml`. Without it, the Concierge extension cannot use `PackageManager.resolveActivity()` to detect the App Link handler on API 30 or higher, and App Links will silently fall back to the in-app WebView.
+
+```xml
+<!-- Required for PackageManager.resolveActivity() on Android 11+ -->
+<queries>
+    <intent>
+        <action android:name="android.intent.action.VIEW" />
+        <data android:scheme="https" />
+    </intent>
+    <intent>
+        <action android:name="android.intent.action.VIEW" />
+        <data android:scheme="http" />
+    </intent>
+</queries>
+```
+
+#### Link handling
+
+The Concierge extension automatically opens links when your app is the verified handler for the URL's domain. If your app is not the handler, the link opens in an in-app WebView overlay.
+
+**Default link handling flow:** `handleLink` callback (if provided) → App Link check → WebView overlay.
+
+To customize this behavior, provide a `handleLink` callback. Return `true` if your app handled the link; return `false` to fall back to the default behavior (App Link check, then WebView overlay).
+
+**Compose (ConciergeChat):**
+
+```kotlin
+val context = LocalContext.current
+ConciergeChat(
+    viewModel = viewModel,
+    onClose = { finish() },
+    handleLink = { url ->
+        try {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            context.startActivity(intent)
+            true  // Handled
+        } catch (e: ActivityNotFoundException) {
+            false  // Fall back to WebView overlay
+        }
+    }
+)
+```
+
+**XML (ConciergeChatView):**
+
+```kotlin
+chatView.bind(
+    lifecycleOwner = this,
+    viewModelStoreOwner = this,
+    surfaces = surfaces,
+    theme = theme,
+    handleLink = { url ->
+        try {
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(intent)
+            true
+        } catch (e: ActivityNotFoundException) {
+            false
+        }
+    },
+    onClose = { finish() }
+)
+```
+
+---
+
 ### Theme Customization
 
 The Brand Concierge chat interface can be customized by loading the theme file from the `assets` directory of your app using `ConciergeThemeLoader`.
