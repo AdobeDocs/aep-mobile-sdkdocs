@@ -8,6 +8,20 @@ keywords:
 
 # Release notes
 
+## March 12, 2026
+
+### Android Brand Concierge 3.1.0
+
+* Added a new `productDetail` carousel card style featuring a large image, badge overlay, product name, subtitle, current price, and "was" price.
+* Added a new `carouselStyle` behavior property (`"scroll"` or `"paged"`) and supporting theme CSS variables for product card styling.
+* Added an optional `handleLink` callback to `ConciergeChat` giving host apps control over link resolution, with automatic fallback to Android App Link verification and in-app WebView.
+
+### iOS Brand Concierge 5.1.0
+
+* Added a new `productDetail` carousel card style featuring a large image, badge overlay, product name, subtitle, current price, and "was" price.
+* Added a new `carouselStyle` behavior property (`"scroll"` or `"paged"`) and supporting theme CSS variables for product card styling.
+* Added universal link routing support for http/https URLs in `ConciergeLinkHandler`.
+
 ## March 3, 2026
 
 ### Android Brand Concierge 3.0.3
