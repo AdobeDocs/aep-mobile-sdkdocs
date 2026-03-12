@@ -390,7 +390,7 @@ For the full list of theme tokens and Kotlin property mappings, see the [Brand C
 
 Place the theme file in your app's `assets` directory (e.g. `assets/my-theme.json`) and load it with `ConciergeThemeLoader.load(context, filename)` as shown in the [overview](#overview). For XML/Views, pass the loaded theme into `ConciergeChatView.bind(...)`.
 
-The example below includes all commonly used theme tokens. When `behavior.productCard.cardStyle` is set to `"productDetail"`, the `--product-card-*` variables take effect.
+The example below includes all available theme tokens. When `behavior.productCard.cardStyle` is set to `"productDetail"`, the `--product-card-*` variables take effect.
 
 ```json
 {

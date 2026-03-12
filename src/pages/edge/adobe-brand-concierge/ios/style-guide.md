@@ -318,7 +318,7 @@ For the full list of theme tokens and Swift property mappings, see the [AEPBrand
 
 Place the theme file in your app bundle (e.g. add `my-theme.json` to the project) and load it with `ConciergeThemeLoader.load(from:in:)` as shown in [Overview](#overview).
 
-The example below includes all commonly used theme tokens. When `behavior.productCard.cardStyle` is set to `"productDetail"`, the `--product-card-*` variables take effect.
+The example below includes all available theme tokens. When `behavior.productCard.cardStyle` is set to `"productDetail"`, the `--product-card-*` variables take effect.
 
 ```json
 {
@@ -635,7 +635,7 @@ This section documents which properties are fully implemented, partially impleme
 | `--message-padding` | ✅ | Used in ChatMessageView |
 | `--message-max-width` | ✅ | Used in ChatMessageView |
 | `--chat-interface-max-width` | ✅ | Used in ChatView |
-| `--chat-history-padding` | ✅ | Applied per-message in `MessageListView`; also used as fallback for `--product-card-carousel-horizontal-padding` when not set |
+| `--chat-history-padding` | ✅ | Horizontal padding applied to chat messages in the message list. Also used as the default value for `--product-card-carousel-horizontal-padding` when that property is not set. |
 | `--chat-history-padding-top-expanded` | ✅ | Used in MessageListView |
 | `--chat-history-bottom-padding` | ✅ | Used in MessageListView |
 | `--message-blocker-height` | ✅ | Used in MessageListView |
