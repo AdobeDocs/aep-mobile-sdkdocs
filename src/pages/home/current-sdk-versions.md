@@ -166,6 +166,10 @@ Please note that the Adobe Analytics extension is not supported in AEP-prefixed 
 
 The Adobe Experience Platform SDK for Roku supports Roku OS 11.0 or later. The project is open sourced in GitHub. For more information, refer to the [aepsdk-roku](https://github.com/adobe/aepsdk-roku) repository.
 
+## Vega OS
+
+The Adobe Experience Platform SDK for Vega OS supports [Vega OS](https://developer.amazon.com/) — the operating system designed for Fire TV streaming media players. SDK release information will be available in a future update.
+
 ## Supported Platforms
 
 | Platform | Supported Version |
@@ -175,3 +179,4 @@ The Adobe Experience Platform SDK for Roku supports Roku OS 11.0 or later. The p
 | React Native | 0.60.0 or later |
 | Flutter | 2.0.0 or later |
 | Roku | 11.0 or later |
+| Vega OS | TBD |
