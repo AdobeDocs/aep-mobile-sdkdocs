@@ -8,6 +8,15 @@ keywords:
 
 # Release notes
 
+## April 6, 2026
+
+### Campaign Classic extension 4.0.0
+
+* Added support for configuring tracking endpoint mappings for development, stage, and production environments.
+* Updated endpoint validation so registration and tracking endpoint values must be entered as hostnames without protocol prefixes.
+* Updated extension validation so registration and default tracking endpoints are required for development, stage, and production before the configuration can be saved.
+* Updated the request timeout configuration to default to 10 seconds and support values from 0 to 10 seconds.
+
 ## June 11, 2025
 
 ### Android Campaign Classic 3.1.4
