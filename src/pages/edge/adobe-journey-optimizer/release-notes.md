@@ -9,6 +9,13 @@ keywords:
 
 # Release notes
 
+## April 7, 2026
+
+### iOS Messaging 5.12.0
+
+* Added AEPMessagingNotification framework for rich push media support
+* Added support for message inbox for content cards.
+
 ## April 3, 2026
 
 ### Android Messaging 3.8.0

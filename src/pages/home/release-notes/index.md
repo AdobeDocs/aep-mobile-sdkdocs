@@ -7,6 +7,17 @@ Keywords:
 
 # Release notes
 
+## April 7, 2026
+
+### iOS Target 5.1.0
+
+* Added timeout parameter to the prefetchContent API.
+
+### iOS Messaging 5.12.0
+
+* Added AEPMessagingNotification framework for rich push media support
+* Added support for message inbox for content cards.
+
 ## April 3, 2026
 
 ### Android BOM 3.18.0
@@ -57,16 +68,12 @@ Keywords:
 * Added CTA button support and enhanced user input/feedback experience
 * Improved parsing and rendering of multimodal content and lists
 
-**Full Changelog**: https://github.com/adobe/aepsdk-concierge-ios/compare/5.2.0...5.3.0
-
 ### Android Brand Concierge 3.2.0
 
 * Improved UI consistency, theming, and product card presentation
 * Added CTA button support and enhanced user input/feedback experience
 * Improved parsing and rendering of multimodal content and lists
 * Added test coverage for parsing and theming components
-
-**Full Changelog**: https://github.com/adobe/aepsdk-concierge-android/compare/v3.1.0...v3.2.0
 
 ## March 18, 2026
 

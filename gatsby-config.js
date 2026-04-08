@@ -739,7 +739,99 @@ module.exports = {
                                                     }
                                                 ]
                                             }
-                                        ]                                        
+                                        ]
+                                    },
+                                    {
+                                        title: "iOS",
+                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS",
+                                        pages: [
+                                            {
+                                                title: "API Reference",
+                                                path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/api-usage",
+                                            },
+                                            {
+                                                title: "Public Classes and Protocols",
+                                                path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inboxui",
+                                                pages: [
+                                                    {
+                                                        title: "InboxUI",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inboxui",
+                                                    },
+                                                    {
+                                                        title: "InboxEventListening",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inboxeventlistening",
+                                                    },
+                                                    {
+                                                        title: "InboxError",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inboxerror",
+                                                    },
+                                                    {
+                                                        title: "InboxState",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inboxstate",
+                                                    },
+                                                    {
+                                                        title: "InboxSchemaData",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inboxschemadata",
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "Inbox Settings",
+                                                path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/inboxsettings",
+                                                pages: [
+                                                    {
+                                                        title: "InboxSettings",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/inboxsettings",
+                                                    },
+                                                    {
+                                                        title: "EmptyStateSettings",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/emptystatessettings",
+                                                    },
+                                                    {
+                                                        title: "LayoutSettings",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/layoutsettings",
+                                                    },
+                                                    {
+                                                        title: "InboxOrientation",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/inboxorientation",
+                                                    },
+                                                    {
+                                                        title: "UnreadIndicatorSettings",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/unreadindicatorsettings",
+                                                    },
+                                                    {
+                                                        title: "UnreadBackgroundSettings",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/unreadbackgroundsettings",
+                                                    },
+                                                    {
+                                                        title: "UnreadIconSettings",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/unreadiconsettings",
+                                                    },
+                                                    {
+                                                        title: "IconPlacement",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/iconplacement",
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "Tutorials",
+                                                path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/tutorial/displaying-inbox",
+                                                pages: [
+                                                    {
+                                                        title: "Fetch and Display Inbox",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/tutorial/displaying-inbox",
+                                                    },
+                                                    {
+                                                        title: "Customizing Inbox",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/tutorial/customizing-inbox",
+                                                    },
+                                                    {
+                                                        title: "Listening to Inbox Events",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/tutorial/listening-inbox-events",
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },

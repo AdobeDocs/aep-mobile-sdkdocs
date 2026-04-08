@@ -16,16 +16,12 @@ keywords:
 * Added CTA button support and enhanced user input/feedback experience
 * Improved parsing and rendering of multimodal content and lists
 
-**Full Changelog**: https://github.com/adobe/aepsdk-concierge-ios/compare/5.2.0...5.3.0
-
 ### Android Brand Concierge 3.2.0
 
 * Improved UI consistency, theming, and product card presentation
 * Added CTA button support and enhanced user input/feedback experience
 * Improved parsing and rendering of multimodal content and lists
 * Added test coverage for parsing and theming components
-
-**Full Changelog**: https://github.com/adobe/aepsdk-concierge-android/compare/v3.1.0...v3.2.0
 
 ## March 18, 2026
 
