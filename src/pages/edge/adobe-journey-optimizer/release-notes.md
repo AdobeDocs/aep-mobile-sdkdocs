@@ -9,6 +9,16 @@ keywords:
 
 # Release notes
 
+## April 9, 2026
+
+### iOS Messaging 5.13.0
+
+* Fixed Content Card caching issue stale content card cleared.
+
+### Android Messaging 3.9.0
+
+* Fixed Content card caching issue, stale content cards cleaned.
+
 ## April 7, 2026
 
 ### iOS Messaging 5.12.0
