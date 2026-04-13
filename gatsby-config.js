@@ -794,6 +794,10 @@ module.exports = {
                                 path: "/edge/media-for-edge-network/api-reference"
                             },
                             {
+                                title: "Tutorial",
+                                path: "/edge/media-for-edge-network/tutorial"
+                            },
+                            {
                                 title: 'Release notes',
                                 path: '/edge/media-for-edge-network/release-notes'
                             }
