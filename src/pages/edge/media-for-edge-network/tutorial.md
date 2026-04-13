@@ -33,8 +33,8 @@ The Vega SDK is distributed as npm packages. Install the required core and media
 npm install @adobe/vega-aepcore @adobe/vega-aepmedia
 ```
 
-- [**@adobe/vega-aepcore**](https://www.npmjs.com/package/@adobe/vega-aepcore) provides the foundational APIs for configuration, identity, consent, and sending Experience events to the Edge Network.
-- [**@adobe/vega-aepmedia**](https://www.npmjs.com/package/@adobe/vega-aepmedia) provides media-specific tracking APIs (session creation and media event tracking) built on top of the core package.
+* [**@adobe/vega-aepcore**](https://www.npmjs.com/package/@adobe/vega-aepcore) provides the foundational APIs for configuration, identity, consent, and sending Experience events to the Edge Network.
+* [**@adobe/vega-aepmedia**](https://www.npmjs.com/package/@adobe/vega-aepmedia) provides media-specific tracking APIs (session creation and media event tracking) built on top of the core package.
 
 ## Initialize the SDK
 
