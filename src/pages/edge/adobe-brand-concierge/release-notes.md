@@ -8,6 +8,21 @@ keywords:
 
 # Release notes
 
+## March 27, 2026
+
+### iOS Brand Concierge 5.3.0
+
+* Improved UI consistency, theming, and product card presentation
+* Added CTA button support and enhanced user input/feedback experience
+* Improved parsing and rendering of multimodal content and lists
+
+### Android Brand Concierge 3.2.0
+
+* Improved UI consistency, theming, and product card presentation
+* Added CTA button support and enhanced user input/feedback experience
+* Improved parsing and rendering of multimodal content and lists
+* Added test coverage for parsing and theming components
+
 ## March 18, 2026
 
 ### iOS Brand Concierge 5.2.0

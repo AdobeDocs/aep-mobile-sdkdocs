@@ -578,6 +578,10 @@ module.exports = {
                                                         path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepbutton"
                                                     },
                                                     {
+                                                        title: "AEPColor",
+                                                        path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepcolor"
+                                                    },
+                                                    {
                                                         title: "AEPIcon",
                                                         path: "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepicon"
                                                     },
@@ -630,6 +634,204 @@ module.exports = {
                                                 ]
                                             }
                                         ]                                        
+                                    }
+                                ]
+                            },
+                            {
+                                title: "Inbox UI",
+                                path: "/edge/adobe-journey-optimizer/inbox-ui/Android",
+                                pages: [
+                                    {
+                                        title: "Android",
+                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android",
+                                        pages: [
+                                            {
+                                                title: "API Reference",
+                                                path: "/edge/adobe-journey-optimizer/inbox-ui/Android/api-usage.md"
+                                            },
+                                            {
+                                                title: "Public Classes and Interfaces",
+                                                path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/aepinbox",
+                                                pages: [
+                                                    {
+                                                        title: "AepInbox",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/aepinbox",
+                                                    },
+                                                    {
+                                                        title: "InboxTemplate",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/inboxtemplate",
+                                                    },
+                                                    {
+                                                        title: "InboxUIState",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/inboxuistate",
+                                                    },
+                                                    {
+                                                        title: "AepUIStyle",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/aepuistyle",
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "Content Provider",
+                                                path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/content-provider/aepinboxcontentprovider",
+                                                pages: [
+                                                    {
+                                                        title: "AepInboxContentProvider",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/content-provider/aepinboxcontentprovider",
+                                                    },
+                                                    {
+                                                        title: "MessagingInboxProvider",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/content-provider/messaginginboxprovider",
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "Observers",
+                                                path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/observers/aepinboxeventobserver",
+                                                pages: [
+                                                    {
+                                                        title: "AepInboxEventObserver",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/observers/aepinboxeventobserver",
+                                                    },
+                                                    {
+                                                        title: "InboxEvent",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/observers/inboxevent",
+                                                    },
+                                                    {
+                                                        title: "InboxEventObserver",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/observers/inboxeventobserver",
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "Styles",
+                                                path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/styles/inboxuistyle",
+                                                pages: [
+                                                    {
+                                                        title: "InboxUIStyle",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/styles/inboxuistyle",
+                                                    },
+                                                    {
+                                                        title: "AepLazyColumnStyle",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/styles/aeplazycolumnstyle",
+                                                    },
+                                                    {
+                                                        title: "AepLazyRowStyle",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/styles/aeplazyrowstyle",
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "Tutorials",
+                                                path: "/edge/adobe-journey-optimizer/inbox-ui/Android/tutorial/displaying-inbox",
+                                                pages: [
+                                                    {
+                                                        title: "Fetch and Display Inbox",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/tutorial/displaying-inbox",
+                                                    },
+                                                    {
+                                                        title: "Customizing Inbox",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/tutorial/customizing-inbox",
+                                                    },
+                                                    {
+                                                        title: "Listening to Inbox Events",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/Android/tutorial/listening-inbox-events",
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        title: "iOS",
+                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS",
+                                        pages: [
+                                            {
+                                                title: "API Reference",
+                                                path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/api-usage",
+                                            },
+                                            {
+                                                title: "Public Classes and Protocols",
+                                                path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inboxui",
+                                                pages: [
+                                                    {
+                                                        title: "InboxUI",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inboxui",
+                                                    },
+                                                    {
+                                                        title: "InboxEventListening",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inboxeventlistening",
+                                                    },
+                                                    {
+                                                        title: "InboxError",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inboxerror",
+                                                    },
+                                                    {
+                                                        title: "InboxState",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inboxstate",
+                                                    },
+                                                    {
+                                                        title: "InboxSchemaData",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inboxschemadata",
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "Inbox Settings",
+                                                path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/inboxsettings",
+                                                pages: [
+                                                    {
+                                                        title: "InboxSettings",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/inboxsettings",
+                                                    },
+                                                    {
+                                                        title: "EmptyStateSettings",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/emptystatessettings",
+                                                    },
+                                                    {
+                                                        title: "LayoutSettings",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/layoutsettings",
+                                                    },
+                                                    {
+                                                        title: "InboxOrientation",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/inboxorientation",
+                                                    },
+                                                    {
+                                                        title: "UnreadIndicatorSettings",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/unreadindicatorsettings",
+                                                    },
+                                                    {
+                                                        title: "UnreadBackgroundSettings",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/unreadbackgroundsettings",
+                                                    },
+                                                    {
+                                                        title: "UnreadIconSettings",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/unreadiconsettings",
+                                                    },
+                                                    {
+                                                        title: "IconPlacement",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/iconplacement",
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                title: "Tutorials",
+                                                path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/tutorial/displaying-inbox",
+                                                pages: [
+                                                    {
+                                                        title: "Fetch and Display Inbox",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/tutorial/displaying-inbox",
+                                                    },
+                                                    {
+                                                        title: "Customizing Inbox",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/tutorial/customizing-inbox",
+                                                    },
+                                                    {
+                                                        title: "Listening to Inbox Events",
+                                                        path: "/edge/adobe-journey-optimizer/inbox-ui/iOS/tutorial/listening-inbox-events",
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -706,6 +908,10 @@ module.exports = {
                                     {
                                         title: "InAppSchemaData",
                                         path: "/edge/adobe-journey-optimizer/public-classes/inapp-schema-data"
+                                    },
+                                    {
+                                        title: "InboxContentSchemaData",
+                                        path: "/edge/adobe-journey-optimizer/public-classes/inbox-content-schema-data"
                                     },
                                     {
                                         title: "JsonContentSchemaData",

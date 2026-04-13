@@ -15,15 +15,15 @@ keywords:
 
 # API Reference
 
-This document provides information on how to use the Messaging APIs to receive content card views in your application.
+This document provides information on how to use the Messaging APIs to receive and display content card views in your application.
 
-## getContentCardUI
+### getContentCardUIFlow
 
-The `getContentCardUI` method retrieves a [Flow](https://developer.android.com/kotlin/flow) of [Result](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/) which contains a list [AepUI](./public-classes/aepui.md) objects for the provided surface. These `AepUI` objects represent templated content cards whose UI can be rendered using provided card composables.
+The `getContentCardUIFlow` method returns a cold [Flow](https://developer.android.com/kotlin/flow) of [AepUI](./public-classes/aepui.md) objects for the provided surface. These `AepUI` objects represent templated content cards whose UI can be rendered using provided card composables. Content is fetched lazily when the flow is collected.
 
 <InlineAlert variant="info" slots="text"/>
 
-Calling this API will only retrieve the content cards are already downloaded and cached by the Messaging extension. This API will not download content cards from Adobe Journey Optimizer. You must call [`updatePropositionsForSurfaces`](../../code-based/api-reference.md#updatePropositionsForSurfaces) API from the AEPMessaging extension with the desired surfaces prior to calling this API.
+Calling this API will not download content cards from Adobe Journey Optimizer; it will only retrieve the content cards that are already downloaded and cached by the Messaging extension. You **must** call [`updatePropositionsForSurfaces`](../../code-based/api-reference.md#updatepropositionsforsurfaces) API from the AEPMessaging extension with the desired surfaces prior to calling this API.
 
 #### Syntax
 
@@ -32,7 +32,7 @@ Calling this API will only retrieve the content cards are already downloaded and
 #### Kotlin
 
 ```kotlin
-suspend fun getContentCardUI(): Flow<Result<List<AepUI<*, *>>>>
+fun getContentCardUIFlow(): Flow<Result<List<AepUI<*, *>>>>
 ```
 
 #### Example
@@ -52,21 +52,39 @@ Messaging.updatePropositionsForSurfaces(surfaces)
 val contentCardUIProvider = ContentCardUIProvider(surface)
 
 // get the content cards within a view model
-class MyScreenViewModel : ViewModel {
-  private val contentCardUIProvider = MessagingContentCardProvider(...)
+class MyScreenViewModel : ViewModel() {
+  private val contentCardUIProvider = ContentCardUIProvider(surface)
   private val _aepUIList = MutableStateFlow<List<AepUI<*, *>>>(emptyList())
   val aepUIList: StateFlow<List<AepUI<*, *>>> = _aepUIList.asStateFlow()
 
-  // fetch the list of cards when necessary 
-  viewModelScope.launch {
-      contentCardUIProvider.getContentCardUI().collect { aepUiResult ->
-          aepUiResult.onSuccess { aepUi ->
-              _aepUIList.value = aepUi
-          }
-          aepUiResult.onFailure { throwable ->
-              // handle failure
-          }
+  // Obtain the flow without a coroutine context, then collect it
+  val contentCardFlow = contentCardUIProvider.getContentCardUIFlow()
+
+  init {
+    viewModelScope.launch {
+      contentCardFlow.collect { result ->
+        result.onSuccess { aepUi -> _aepUIList.value = aepUi }
       }
+    }
   }
 }
+```
+
+### getContentCardUI (Deprecated)
+
+<InlineAlert variant="warning" slots="text"/>
+
+**Deprecated** — use [`getContentCardUIFlow`](#getcontentcarduiflow) instead.
+
+The `getContentCardUI` suspend function is retained for binary compatibility with apps built against earlier releases. It eagerly fetches content before returning the flow and requires a coroutine call site to obtain the flow reference.
+
+#### Syntax
+
+<CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
+
+#### Kotlin
+
+```kotlin
+@Deprecated("Use getContentCardUIFlow() instead.")
+suspend fun getContentCardUI(): Flow<Result<List<AepUI<*, *>>>>
 ```
