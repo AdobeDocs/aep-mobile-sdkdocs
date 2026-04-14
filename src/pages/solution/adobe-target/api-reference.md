@@ -156,6 +156,16 @@ iOS
 
 <Tabs query="platform=react-native&api=prefetch-content"/> --->
 
+## prefetchContent (with timeout)
+
+This API is an overloaded version of `prefetchContent` that accepts a `timeout` parameter, which specifies a custom network request timeout (in seconds). When provided, the timeout takes precedence over the `target.timeout` configuration value and the default SDK timeout of 5 seconds.
+
+<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+
+iOS
+
+<Tabs query="platform=ios&api=prefetch-content-with-timeout"/>
+
 ## registerExtension
 
 <Alerts query="platform=android-register-extension&componentClass=InlineNestedAlert"/>
