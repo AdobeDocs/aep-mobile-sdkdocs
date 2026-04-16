@@ -8,6 +8,32 @@ keywords:
 
 # Release notes
 
+## April 14, 2026
+
+### Android Brand Concierge 3.3.1
+
+* Updated link handling logic to route URIs (e.g., custom schemes, app links, intent://, mailto:, etc.) through Android system handlers to ensure correct routing of non-HTTP(S) schemes.
+
+## April 13, 2026
+
+### iOS Brand Concierge 5.4.0
+
+* Added theming and layout support for the thinking/loading animation displayed while the agent processes a response.
+* Added support for displaying a bundled or remote icon next to agent text responses.
+* Added prompt suggestions theming and customization support.
+* Added a speech balloon style option for chat bubbles.
+* Added Chat state persistence. Chat state now persists across hide/show cycles and resets automatically on session TTL expiry.
+* Refactored chat message and carousel padding/layout for more consistent spacing.
+
+### Android Brand Concierge 3.3.0
+
+* Added theming and layout support for the thinking/loading animation displayed while the agent processes a response.
+* Added support for displaying a bundled or remote icon next to agent text responses.
+* Added prompt suggestions theming and customization support.
+* Added a speech balloon style option for chat bubbles.
+* Fixed overlap issues with the software keyboard.
+* Fixed keyboard dismissal. The software keyboard is now automatically dismissed when voice recording starts.
+
 ## March 27, 2026
 
 ### iOS Brand Concierge 5.3.0
