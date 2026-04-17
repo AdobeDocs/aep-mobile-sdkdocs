@@ -167,7 +167,7 @@ This API is an overloaded version of `prefetchContent` that accepts a `timeout` 
 * `timeout`: Network request timeout in seconds. When provided, this takes precedence over the `target.timeout` configuration and the default SDK timeout of 5 seconds.
 * `completion`: A callback that is invoked with a `nil` value if the prefetch is successful, or with an error otherwise.
 
-<CodeBlock slots="heading, code" repeat="2" />
+<CodeBlock slots="heading, code" repeat="2" languages="Swift" />
 
 #### Syntax
 
@@ -217,7 +217,7 @@ Target.prefetchContent([
 * `timeout`: Network request timeout in seconds. When provided, this takes precedence over the `target.timeout` configuration and the default SDK timeout of 5 seconds.
 * `completion`: A callback that is invoked with a `nil` value if the prefetch is successful, or with an error otherwise.
 
-<CodeBlock slots="heading, code" repeat="2" />
+<CodeBlock slots="heading, code" repeat="2" languages="Objective-C" />
 
 #### Syntax
 
