@@ -211,7 +211,7 @@ Feature toggles and interaction configuration.
 
 | JSON Key | Type | Default | Description |
 |----------|------|---------|-------------|
-| `behavior.chat.messageAlignment` | string | `"left"` | Message alignment (`"left"`, `"center"`, `"right"`) |
+| `behavior.chat.messageAlignment` | string | `"left"` | Message alignment. Accepts `"left"` / `"leading"` / `"start"`, `"center"` / `"justify"`, `"right"` / `"trailing"` / `"end"` (case-insensitive). Unknown values fall back to `"left"`. |
 | `behavior.chat.messageWidth` | string | `"100%"` | Max message width (e.g., `"100%"`, `"768px"`) |
 | `behavior.chat.userMessageBubbleStyle` | string | `"default"` | User message bubble shape: `"balloon"` for speech-bubble style (squared-off bottom-right corner); any other value uses fully rounded corners |
 
@@ -245,6 +245,10 @@ Feature toggles and interaction configuration.
 |----------|------|---------|-------------|
 | `behavior.feedback.displayMode` | string | `"modal"` | Feedback dialog display mode. `"modal"` renders inline as a Modal overlay; `"action"` renders as an action sheet-style layout. |
 | `behavior.feedback.thumbsPlacement` | string | `"inline"` | Placement of thumbs up/down buttons. `"inline"` places them beside the sources accordion header. `"below"` places them below the header with a "Was this helpful?" label. |
+| `behavior.feedback.showCloseButton` | boolean\|null | `null` | X close button visibility. `null` = shown for `"action"`, hidden for `"modal"`. |
+| `behavior.feedback.showCancelButton` | boolean\|null | `null` | Cancel button visibility. `null` = shown for `"modal"`, hidden for `"action"`. Both set to `false` is honored — Submit and (in action mode) drag-down still dismiss. |
+
+> **Note:** The notes field is only available in `"modal"` display mode, gated by `components.feedback.positiveNotesEnabled` / `negativeNotesEnabled`.
 
 ### Citations
 
@@ -298,7 +302,9 @@ Feature toggles and interaction configuration.
     },
     "feedback": {
       "displayMode": "modal",
-      "thumbsPlacement": "inline"
+      "thumbsPlacement": "inline",
+      "showCloseButton": null,
+      "showCancelButton": null
     },
     "citations": {
       "showLinkIcon": false
@@ -617,6 +623,17 @@ Visual styling using CSS-like variable names. All properties in the `theme` obje
 | CSS Variable | Swift Property | Type | Default | Description |
 |--------------|----------------|------|---------|-------------|
 | `--feedback-icon-btn-background` | `colors.feedback.iconButtonBackground` | `Color` | `clear` | Feedback button background |
+| `--feedback-sheet-background-color` | `colors.feedback.sheetBackground` | `Color?` | `nil` (falls back to `colors.surface.light`) | Dialog background fill for the sheet/modal card and (in modal mode) notes editor. Set explicitly when using a fixed color so system text tokens resolve correctly. |
+| `--feedback-title-text-color` | `colors.feedback.titleText` | `Color?` | `nil` (falls back to system `.primary`) | Title text color. Set explicitly when `--feedback-sheet-background-color` is pinned — system `.primary` tracks device interface style, not the themed fill. |
+| `--feedback-question-text-color` | `colors.feedback.questionText` | `Color?` | `nil` (falls back to system `.secondary`) | Question text color. |
+| `--feedback-options-text-color` | `colors.feedback.optionsText` | `Color?` | `nil` (falls back to system `.primary`) | Checkbox option label color. Set alongside `--feedback-title-text-color` when `--feedback-sheet-background-color` is pinned. |
+| `--feedback-checkbox-border-color` | `colors.feedback.checkboxBorder` | `Color?` | `nil` (`#FFFFFF47` dark / `#00000059` light) | Checkbox unchecked outline; also applied to the notes editor outline in modal mode. Set explicitly when `--feedback-sheet-background-color` is pinned, as the adaptive fallback tracks device interface style. |
+| `--feedback-drag-handle-color` | `colors.feedback.dragHandle` | `Color?` | `nil` (falls back to `Color.secondary.opacity(0.4)`) | Action sheet drag handle color. Only visible in `action` display mode. Set alongside `--feedback-sheet-background-color` when using a fixed fill. |
+| `--feedback-submit-button-fill-color` | `colors.feedback.submitButtonFill` | `Color?` | `nil` (falls back to `colors.button.primaryBackground`) | Feedback dialog Submit button fill color |
+| `--feedback-submit-button-text-color` | `colors.feedback.submitButtonText` | `Color?` | `nil` (falls back to `colors.button.primaryText`) | Feedback dialog Submit button text color |
+| `--feedback-cancel-button-fill-color` | `colors.feedback.cancelButtonFill` | `Color?` | `nil` (transparent; outline style) | Cancel button fill. `nil` = transparent (outline style); set to a color for a solid fill. Border is always applied — set `feedbackCancelButtonBorderWidth` to `0` to suppress it. Also tints the X close icon. |
+| `--feedback-cancel-button-text-color` | `colors.feedback.cancelButtonText` | `Color?` | `nil` (falls back to `colors.button.secondaryText`) | Feedback dialog Cancel button text color |
+| `--feedback-cancel-button-border-color` | `colors.feedback.cancelButtonBorder` | `Color?` | `nil` (falls back to `colors.button.secondaryBorder`) | Feedback dialog Cancel button border color. Always applied when `feedbackCancelButtonBorderWidth > 0`, regardless of whether `cancelButtonFill` is set. |
 
 ### Colors - Product Card
 
@@ -672,6 +689,8 @@ Visual styling using CSS-like variable names. All properties in the `theme` obje
 | `--message-border-radius` | `layout.messageBorderRadius` | `CGFloat` | `10` | Message bubble corner radius |
 | `--message-padding` | `layout.messagePadding` | `Padding` | `8px 16px` | Message content padding |
 | `--message-max-width` | `layout.messageMaxWidth` | `CGFloat?` | `nil` | Max message width |
+| `--agent-icon-size` | `layout.agentIconSize` | `CGFloat` | `39` | Diameter of the agent icon in points. When set, product cards and prompt suggestion chips are automatically offset to align with the agent message text column. |
+| `--agent-icon-spacing` | `layout.agentIconSpacing` | `CGFloat` | `12` | Horizontal gap in points between the agent icon and the message bubble. Contributes to the text column offset applied to product cards and prompt suggestion chips. |
 
 ### Layout - Chat
 
@@ -702,6 +721,14 @@ Visual styling using CSS-like variable names. All properties in the `theme` obje
 |--------------|----------------|------|---------|-------------|
 | `--feedback-container-gap` | `layout.feedbackContainerGap` | `CGFloat` | `4` | Gap between feedback buttons |
 | `--feedback-icon-btn-size-desktop` | `layout.feedbackIconButtonSize` | `CGFloat` | `44` | Feedback button hit target size |
+| `--feedback-submit-button-border-radius` | `layout.feedbackSubmitButtonBorderRadius` | `CGFloat` | `10` | Feedback dialog Submit button corner radius |
+| `--feedback-submit-button-font-weight` | `layout.feedbackSubmitButtonFontWeight` | `FontWeight` | `semibold` | Feedback dialog Submit button text weight |
+| `--feedback-cancel-button-border-radius` | `layout.feedbackCancelButtonBorderRadius` | `CGFloat` | `10` | Feedback dialog Cancel button corner radius |
+| `--feedback-cancel-button-border-width` | `layout.feedbackCancelButtonBorderWidth` | `CGFloat` | `1` | Feedback dialog Cancel button border width. Honored whether or not `cancelButtonFill` is set; set to `0` to suppress the stroke. |
+| `--feedback-cancel-button-font-weight` | `layout.feedbackCancelButtonFontWeight` | `FontWeight` | `semibold` | Feedback dialog Cancel button text weight |
+| `--feedback-checkbox-border-radius` | `layout.feedbackCheckboxBorderRadius` | `CGFloat` | `6` | Feedback dialog option checkbox corner radius. |
+| `--feedback-title-text-align` | `layout.feedbackTitleTextAlign` | `ConciergeTextAlignment?` | `nil` (`.leading`) | Feedback dialog title alignment. Accepts `"left"` / `"leading"` / `"start"`, `"center"` / `"justify"`, `"right"` / `"trailing"` / `"end"` (case-insensitive). Unknown values fall back to `.leading`. |
+| `--feedback-title-font-size` | `layout.feedbackTitleFontSize` | `CGFloat?` | `nil` (falls back to system `.title2`, ~22pt at default Dynamic Type) | Feedback dialog title font size in points. |
 
 ### Layout - Citations
 
@@ -739,7 +766,7 @@ Visual styling using CSS-like variable names. All properties in the `theme` obje
 | `--product-card-text-bottom-padding` | `layout.productCardTextBottomPadding` | `CGFloat` | `12` | Bottom padding below the text section |
 | `--product-card-text-horizontal-padding` | `layout.productCardTextHorizontalPadding` | `CGFloat` | `12` | Horizontal padding on both sides of the text area (does not apply to badge or image) |
 | `--product-card-carousel-spacing` | `layout.productCardCarouselSpacing` | `CGFloat` | `12` | Horizontal spacing between cards in a scrolling carousel |
-| `--product-card-carousel-horizontal-padding` | `layout.productCardCarouselHorizontalPadding` | `CGFloat?` | `nil` | Horizontal padding for the carousel container. When `nil`, falls back to `chatHistoryPadding`. |
+| `--product-card-carousel-horizontal-padding` | `layout.productCardCarouselHorizontalPadding` | `CGFloat?` | `nil` | Horizontal padding for the carousel container. When set, adds to the column-aligned leading base and overrides the trailing inset; when `nil`, both fall back to `chatHistoryPadding`. Leading cannot go below the column-aligned base. |
 
 ### Layout - CTA Button
 
@@ -835,7 +862,9 @@ Visual styling using CSS-like variable names. All properties in the `theme` obje
     },
     "feedback": {
       "displayMode": "modal",
-      "thumbsPlacement": "inline"
+      "thumbsPlacement": "inline",
+      "showCloseButton": null,
+      "showCancelButton": null
     },
     "citations": {
       "showLinkIcon": false
@@ -946,6 +975,24 @@ Visual styling using CSS-like variable names. All properties in the `theme` obje
     "--feedback-container-gap": "4px",
     "--feedback-icon-btn-background": "#FFFFFF",
     "--feedback-icon-btn-size-desktop": "32px",
+    "--feedback-sheet-background-color": "#FFFFFF",
+    "--feedback-title-text-color": "#131313",
+    "--feedback-question-text-color": "#424242",
+    "--feedback-options-text-color": "#131313",
+    "--feedback-checkbox-border-color": "#131313",
+    "--feedback-drag-handle-color": "#CCCCCC",
+    "--feedback-submit-button-fill-color": "#006554",
+    "--feedback-submit-button-text-color": "#FFFFFF",
+    "--feedback-submit-button-border-radius": "10px",
+    "--feedback-submit-button-font-weight": "600",
+    "--feedback-cancel-button-fill-color": "#006554",
+    "--feedback-cancel-button-text-color": "#006554",
+    "--feedback-cancel-button-border-color": "#006554",
+    "--feedback-cancel-button-border-width": "1px",
+    "--feedback-cancel-button-border-radius": "10px",
+    "--feedback-cancel-button-font-weight": "600",
+    "--feedback-checkbox-border-radius": "6px",
+    "--feedback-title-font-size": "22px",
     "--citations-text-font-weight": "700",
     "--citations-desktop-button-font-size": "12px",
     "--product-card-background-color": "#FFFFFF",
@@ -1055,6 +1102,8 @@ This section documents which properties are fully implemented, partially impleme
 | `behavior.promptSuggestions.alignToMessage` | ✅ | Controls horizontal alignment of chip group in MessageListView |
 | `behavior.feedback.displayMode` | ✅ | Controls feedback presentation: `"modal"` (centered) vs `"action"` (action sheet) in FeedbackOverlayView |
 | `behavior.feedback.thumbsPlacement` | ✅ | Controls thumbs placement (inline vs below) in SourcesListView |
+| `behavior.feedback.showCloseButton` | ✅ | Toggles the top-right X close button in FeedbackOverlayView; defaults by `displayMode` when `null` |
+| `behavior.feedback.showCancelButton` | ✅ | Toggles the Cancel button in FeedbackOverlayView; defaults by `displayMode` when `null` |
 | `behavior.citations.showLinkIcon` | ✅ | Controls external link icon visibility in SourceRowView |
 | `behavior.chat.messageAlignment` | ✅ | Controls message horizontal alignment |
 | `behavior.chat.messageWidth` | ✅ | Controls max message width |
@@ -1156,6 +1205,17 @@ This section documents which properties are fully implemented, partially impleme
 | `--citations-background-color` | ✅ | Used in MarkdownBlockView |
 | `--citations-text-color` | ✅ | Used in MarkdownBlockView |
 | `--feedback-icon-btn-background` | ✅ | Used in SourcesListView |
+| `--feedback-sheet-background-color` | ✅ | Used in FeedbackOverlayView sheet/modal card + notes editor fill |
+| `--feedback-title-text-color` | ✅ | Used in FeedbackOverlayView title text |
+| `--feedback-question-text-color` | ✅ | Used in FeedbackOverlayView question text |
+| `--feedback-options-text-color` | ✅ | Used in FeedbackOverlayView checkbox option labels |
+| `--feedback-checkbox-border-color` | ✅ | Used in FeedbackOverlayView CheckboxRow unchecked outline + (modal) notes editor outline |
+| `--feedback-drag-handle-color` | ✅ | Used in FeedbackOverlayView action-sheet drag handle |
+| `--feedback-submit-button-fill-color` | ✅ | Used in FeedbackOverlayView Submit button |
+| `--feedback-submit-button-text-color` | ✅ | Used in FeedbackOverlayView Submit button |
+| `--feedback-cancel-button-fill-color` | ✅ | Used in FeedbackOverlayView Cancel button + X close icon tint |
+| `--feedback-cancel-button-text-color` | ✅ | Used in FeedbackOverlayView Cancel button |
+| `--feedback-cancel-button-border-color` | ✅ | Used in FeedbackOverlayView Cancel button |
 | `--disclaimer-color` | ✅ | Used in ComposerDisclaimer via components.disclaimer.textColor |
 | `--input-send-icon-color` | ✅ | Used in ComposerSendButtonStyle |
 | `--input-send-arrow-icon-color` | ✅ | Used in ComposerEditingView for arrow-style send button |
@@ -1212,6 +1272,14 @@ This section documents which properties are fully implemented, partially impleme
 | `--button-height-s` | ✅ | Used in ButtonView |
 | `--feedback-container-gap` | ✅ | Used in SourcesListView |
 | `--feedback-icon-btn-size-desktop` | ✅ | Used in SourcesListView |
+| `--feedback-submit-button-border-radius` | ✅ | Used in FeedbackOverlayView Submit button |
+| `--feedback-submit-button-font-weight` | ✅ | Used in FeedbackOverlayView Submit button |
+| `--feedback-cancel-button-border-radius` | ✅ | Used in FeedbackOverlayView Cancel button |
+| `--feedback-cancel-button-border-width` | ✅ | Used in FeedbackOverlayView Cancel button |
+| `--feedback-cancel-button-font-weight` | ✅ | Used in FeedbackOverlayView Cancel button |
+| `--feedback-checkbox-border-radius` | ✅ | Used in FeedbackOverlayView CheckboxRow corner radius |
+| `--feedback-title-text-align` | ✅ | Used in FeedbackOverlayView title alignment |
+| `--feedback-title-font-size` | ✅ | Used in FeedbackOverlayView title font size |
 | `--citations-text-font-weight` | ✅ | Used in ChatMessageView |
 | `--citations-desktop-button-font-size` | ✅ | Used in ChatMessageView |
 | `--disclaimer-font-size` | ✅ | Used in ComposerDisclaimer via components.disclaimer.fontSize |
