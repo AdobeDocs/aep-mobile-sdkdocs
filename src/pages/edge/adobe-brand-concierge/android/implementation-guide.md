@@ -135,6 +135,7 @@ fun MyScreen() {
 For non-Compose apps, the SDK provides `ConciergeChatView` that wraps the Compose chat UI and can be included in XML layouts.
 
 > **Note:** The activity hosting `ConciergeChatView` must have `android:windowSoftInputMode="adjustResize"` added in the app's `AndroidManifest.xml` to ensure the chat input field remains visible when the keyboard is shown:
+>
 > ```xml
 > <activity
 >     android:name=".YourActivity"
@@ -225,6 +226,7 @@ fun YourChatScreen() {
 #### XML/Views
 
 > **Note:** The activity hosting `ConciergeChatView` must have `android:windowSoftInputMode="adjustResize"` added in the app's `AndroidManifest.xml` to ensure the chat input field remains visible when the keyboard is shown:
+>
 > ```xml
 > <activity
 >     android:name=".YourActivity"

@@ -17,7 +17,7 @@ static func wrap<Content: View>(
 ) -> some View
 ```
 
-* _content_ *(required)* - The SwiftUI content to wrap.
+* _content_ _(required)_ - The SwiftUI content to wrap.
 * _surfaces_ - Surface identifiers sent to the Brand Concierge server to resolve the chat configuration. Defaults to `[]`.
 * _title_ - Header title text shown at the top of the chat.
 * _subtitle_ - Header subtitle text shown at the top of the chat.
@@ -55,7 +55,7 @@ static func show(
 )
 ```
 
-* _surfaces_ *(required)* - Surface identifiers sent to the Brand Concierge server to resolve the chat configuration.
+* _surfaces_ _(required)_ - Surface identifiers sent to the Brand Concierge server to resolve the chat configuration.
 * _title_ - Header title text shown at the top of the chat for this session.
 * _subtitle_ - Header subtitle text shown at the top of the chat for this session.
 * _speechCapturer_ - Custom `SpeechCapturing` implementation for voice input. If `nil`, the SDK creates the default speech capturer internally.
@@ -104,8 +104,8 @@ static func present(
 )
 ```
 
-* _on presentingViewController_ *(required)* - The `UIViewController` that will host the chat UI as a child view controller, filling its view.
-* _surfaces_ *(required)* - Surface identifiers sent to the Brand Concierge server to resolve the chat configuration.
+* _on presentingViewController_ _(required)_ - The `UIViewController` that will host the chat UI as a child view controller, filling its view.
+* _surfaces_ _(required)_ - Surface identifiers sent to the Brand Concierge server to resolve the chat configuration.
 * _title_ - Header title text shown at the top of the chat for this session.
 * _subtitle_ - Header subtitle text shown at the top of the chat for this session.
 * _speechCapturer_ - Custom `SpeechCapturing` implementation for voice input. If `nil`, the SDK creates the default speech capturer internally.
@@ -137,7 +137,7 @@ final class MyViewController: UIViewController {
 public static func load(from filename: String, in bundle: Bundle = .main) -> ConciergeTheme?
 ```
 
-* _filename_ *(required)* - The name of the JSON theme file (without the `.json` extension).
+* _filename_ _(required)_ - The name of the JSON theme file (without the `.json` extension).
 * _bundle_ - The bundle to search for the file. Defaults to `.main`.
 
 **Example**

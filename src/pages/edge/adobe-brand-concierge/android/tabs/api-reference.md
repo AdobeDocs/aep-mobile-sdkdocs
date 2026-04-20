@@ -17,11 +17,11 @@ fun ConciergeChat(
 )
 ```
 
-* _viewModel_ *(required)* - A `ConciergeChatViewModel` instance. Obtain via `viewModel<ConciergeChatViewModel>()`.
+* _viewModel_ _(required)_ - A `ConciergeChatViewModel` instance. Obtain via `viewModel<ConciergeChatViewModel>()`.
 * _surfaces_ - Surface identifiers sent to the Brand Concierge server to resolve the chat configuration.
 * _modifier_ - Optional `Modifier` to apply to the composable.
 * _handleLink_ - Optional `LinkHandler` callback invoked when a link is tapped in the chat. Return `true` to claim the URL; return `false` to let the SDK handle it with its default behavior.
-* _content_ *(required)* - A composable lambda that receives a `showChat` function. Call `showChat()` from your trigger UI to open the chat.
+* _content_ _(required)_ - A composable lambda that receives a `showChat` function. Call `showChat()` from your trigger UI to open the chat.
 
 **Example**
 
@@ -54,12 +54,12 @@ fun bind(
 )
 ```
 
-* _lifecycleOwner_ *(required)* - The `LifecycleOwner` (typically your `Activity` or `Fragment`).
-* _viewModelStoreOwner_ *(required)* - The `ViewModelStoreOwner` (typically your `Activity` or `Fragment`).
+* _lifecycleOwner_ _(required)_ - The `LifecycleOwner` (typically your `Activity` or `Fragment`).
+* _viewModelStoreOwner_ _(required)_ - The `ViewModelStoreOwner` (typically your `Activity` or `Fragment`).
 * _surfaces_ - Surface identifiers sent to the Brand Concierge server to resolve the chat configuration.
 * _theme_ - Optional `ConciergeThemeData` to apply to the chat UI.
 * _handleLink_ - Optional callback invoked when a link is tapped in the chat. Return `true` to claim the URL; return `false` to let the SDK handle it with its default behavior.
-* _triggerView_ *(required)* - The `View` that launches the chat when clicked.
+* _triggerView_ _(required)_ - The `View` that launches the chat when clicked.
 
 **Example**
 
@@ -89,8 +89,8 @@ fun ConciergeChat(
 )
 ```
 
-* _viewModel_ *(required)* - A `ConciergeChatViewModel` instance. Obtain via `viewModel<ConciergeChatViewModel>()`.
-* _onClose_ *(required)* - Callback invoked when the user dismisses the chat (back press, close button, or gesture).
+* _viewModel_ _(required)_ - A `ConciergeChatViewModel` instance. Obtain via `viewModel<ConciergeChatViewModel>()`.
+* _onClose_ _(required)_ - Callback invoked when the user dismisses the chat (back press, close button, or gesture).
 * _modifier_ - Optional `Modifier` to apply to the composable.
 * _handleLink_ - Optional `LinkHandler` callback invoked when a link is tapped in the chat. Return `true` to claim the URL; return `false` to let the SDK handle it with its default behavior.
 
@@ -133,12 +133,12 @@ fun bind(
 )
 ```
 
-* _lifecycleOwner_ *(required)* - The `LifecycleOwner` (typically your `Activity` or `Fragment`).
-* _viewModelStoreOwner_ *(required)* - The `ViewModelStoreOwner` (typically your `Activity` or `Fragment`).
+* _lifecycleOwner_ _(required)_ - The `LifecycleOwner` (typically your `Activity` or `Fragment`).
+* _viewModelStoreOwner_ _(required)_ - The `ViewModelStoreOwner` (typically your `Activity` or `Fragment`).
 * _surfaces_ - Surface identifiers sent to the Brand Concierge server to resolve the chat configuration.
 * _theme_ - Optional `ConciergeThemeData` to apply to the chat UI.
 * _handleLink_ - Optional callback invoked when a link is tapped in the chat. Return `true` to claim the URL; return `false` to let the SDK handle it with its default behavior.
-* _onClose_ *(required)* - Callback invoked when the user dismisses the chat.
+* _onClose_ _(required)_ - Callback invoked when the user dismisses the chat.
 
 **Example**
 
@@ -161,8 +161,8 @@ chatView.bind(
 @JvmStatic fun load(context: Context, filename: String): ConciergeThemeData?
 ```
 
-* _context_ *(required)* - An Android `Context` used to access the `assets` directory.
-* _filename_ *(required)* - The filename of the JSON theme file (including the `.json` extension).
+* _context_ _(required)_ - An Android `Context` used to access the `assets` directory.
+* _filename_ _(required)_ - The filename of the JSON theme file (including the `.json` extension).
 
 **Example**
 
