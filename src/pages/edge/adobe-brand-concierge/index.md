@@ -31,6 +31,13 @@ Integrate the Chat UI via managed or drop-in integration.
 * **[Implementation guide (Android)](/edge/adobe-brand-concierge/android/implementation-guide/)**
 * **[Implementation guide (iOS)](/edge/adobe-brand-concierge/ios/implementation-guide/)**
 
+## API reference
+
+Full parameter documentation for all public APIs.
+
+* **[API reference (Android)](/edge/adobe-brand-concierge/android/api-reference/)**
+* **[API reference (iOS)](/edge/adobe-brand-concierge/ios/api-reference/)**
+
 ## Customize the Concierge Chat UI
 
 Theming and customization (theme JSON, tokens, implementation status).

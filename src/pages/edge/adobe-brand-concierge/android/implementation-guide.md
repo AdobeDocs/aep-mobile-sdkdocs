@@ -9,6 +9,8 @@ keywords:
 
 # Brand Concierge Implementation Guide (Android)
 
+The Brand Concierge extension provides an in-app conversational UI (a chat surface) that can be embedded into a host app with minimal UI wiring. The UI is connected to the Adobe Experience Platform by using AEP SDK shared state (Configuration + Edge Identity) to derive the service configuration needed to run a session and enable brand controlled experiences through configuration and theming.
+
 The Brand Concierge UI has two integration approaches:
 
 * **Managed Integration**: Provides a drop-in entry point to the chat interface and lets the Brand Concierge extension automatically manage it.
@@ -42,6 +44,20 @@ Speech to text uses Android Speech Recognition APIs and microphone APIs for voic
 ```
 
 The SDK handles permission requests internally when users interact with the microphone button.
+
+---
+
+## Installation
+
+Add the dependency to your app module's `build.gradle.kts` alongside the other AEP SDK extensions:
+
+```kotlin
+dependencies {
+    implementation("com.adobe.marketing.mobile:concierge:3.+")
+    implementation("com.adobe.marketing.mobile:core:3.5.0")
+    implementation("com.adobe.marketing.mobile:edgeidentity:3.0.0")
+}
+```
 
 ---
 
@@ -117,6 +133,13 @@ fun MyScreen() {
 #### XML/Views
 
 For non-Compose apps, the SDK provides `ConciergeChatView` that wraps the Compose chat UI and can be included in XML layouts.
+
+> **Note:** The activity hosting `ConciergeChatView` must have `android:windowSoftInputMode="adjustResize"` added in the app's `AndroidManifest.xml` to ensure the chat input field remains visible when the keyboard is shown:
+> ```xml
+> <activity
+>     android:name=".YourActivity"
+>     android:windowSoftInputMode="adjustResize" />
+> ```
 
 **Step 1: Add the view to your XML layout**
 
@@ -201,6 +224,13 @@ fun YourChatScreen() {
 
 #### XML/Views
 
+> **Note:** The activity hosting `ConciergeChatView` must have `android:windowSoftInputMode="adjustResize"` added in the app's `AndroidManifest.xml` to ensure the chat input field remains visible when the keyboard is shown:
+> ```xml
+> <activity
+>     android:name=".YourActivity"
+>     android:windowSoftInputMode="adjustResize" />
+> ```
+
 **Step 1: Add the view to your XML layout**
 
 ```xml
@@ -235,13 +265,37 @@ class XmlActivity : AppCompatActivity() {
 }
 ```
 
+### Theme Customization
+
+The Brand Concierge chat interface can be customized by loading the theme file from the `assets` directory of your app using `ConciergeThemeLoader`.
+
+```kotlin
+@Composable
+fun MyScreen() {
+    val context = LocalContext.current
+
+    val theme = remember {
+        ConciergeThemeLoader.load(context, "myTheme.json")
+            ?: ConciergeThemeLoader.default()
+    }
+    
+    ConciergeTheme(theme = theme) {
+        ConciergeChat(/* ... */)
+    }
+}
+```
+
+More information regarding theme customization can be found in the [Style guide (Android)](/edge/adobe-brand-concierge/android/style-guide/).
+
+---
+
 ### Deep Links and App Links
 
 #### Required manifest entries
 
-**1. Register your app as an App Link handler**
+**1. Register your app as an App Link handler (all API levels)**
 
-Add an `<intent-filter>` with `android:autoVerify="true"` to the activity in your `AndroidManifest.xml` that should handle your domain's URLs. This triggers Android's domain verification against your domain's `assetlinks.json` file. Without this, the Concierge extension's App Link check will always fall back to the in-app WebView.
+Add an `<intent-filter>` with `android:autoVerify="true"` to the activity in your `AndroidManifest.xml` that should handle your domain's URLs. This triggers Android's domain verification against your domain's `assetlinks.json` file, which is what makes your app the verified handler. Without this, the Concierge extension's App Link check will always fall back to the in-app WebView.
 
 ```xml
 <activity android:name=".YourActivity" ...>
@@ -259,7 +313,8 @@ Add an `<intent-filter>` with `android:autoVerify="true"` to the activity in you
 Add the following `<queries>` block to your `AndroidManifest.xml`. Without it, the Concierge extension cannot use `PackageManager.resolveActivity()` to detect the App Link handler on API 30 or higher, and App Links will silently fall back to the in-app WebView.
 
 ```xml
-<!-- Required for PackageManager.resolveActivity() on Android 11+ -->
+<!-- Required for PackageManager.resolveActivity() on Android 11+ to detect
+     which app handles VIEW intents for http/https URLs. -->
 <queries>
     <intent>
         <action android:name="android.intent.action.VIEW" />
@@ -320,30 +375,34 @@ chatView.bind(
 )
 ```
 
----
-
-### Theme Customization
-
-The Brand Concierge chat interface can be customized by loading the theme file from the `assets` directory of your app using `ConciergeThemeLoader`.
+To close the chat when a deep link is tapped, call `viewModel.closeConcierge()` inside your `handleLink` callback before returning `true`:
 
 ```kotlin
-@Composable
-fun MyScreen() {
-    val context = LocalContext.current
-
-    val theme = remember {
-        ConciergeThemeLoader.load(context, "myTheme.json")
-            ?: ConciergeThemeLoader.default()
+ConciergeChat(
+    viewModel = viewModel,
+    handleLink = { url ->
+        if (url.startsWith("myapp://")) {
+            viewModel.closeConcierge()
+            // navigate to the deeplink destination
+            true
+        } else {
+            false
+        }
     }
-    
-    ConciergeTheme(theme = theme) {
-        ConciergeChat(/* ... */)
-    }
-}
+) { showChat -> ... }
 ```
 
-More information regarding theme customization can be found in the [Style guide (Android)](/edge/adobe-brand-concierge/android/style-guide/).
+#### In-app WebView overlay link handling
+
+Links clicked inside the in-app WebView overlay (for example, links on a product page) follow their own routing rules, independent of the `handleLink` callback:
+
+* **http/https URLs**: If your app is the verified App Link handler for the domain, the URL is forwarded to your app. Otherwise it loads in the WebView.
+* **Non-web schemes** (for example, `mailto:`, `tel:`, `sms:`, `myapp://`): Forwarded to the system via `Intent.ACTION_VIEW`.
+* **Dangerous schemes** (`javascript:`, `file:`, `content:`, `intent:`, `data:`): Blocked.
+
+No additional configuration is required for this behavior. App Link forwarding within the WebView uses the same domain verification as chat message link handling.
 
 ## Next steps
 
+* [API reference (Android)](/edge/adobe-brand-concierge/android/api-reference/) — Full parameter documentation for all public APIs.
 * [Style guide (Android)](/edge/adobe-brand-concierge/android/style-guide/) — Theme JSON reference and implementation status for Android.

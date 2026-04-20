@@ -40,6 +40,51 @@ Speech to text uses iOS Speech and microphone APIs. Add these to your app `Info.
 * **`NSMicrophoneUsageDescription`**
 * **`NSSpeechRecognitionUsageDescription`**
 
+The SDK handles permission requests internally when the user taps the microphone button; no additional permission-request code is required from the host app.
+
+---
+
+## Installation
+
+Add Brand Concierge alongside the other AEP SDK extensions using either Swift Package Manager or CocoaPods.
+
+### Swift Package Manager
+
+Add the package to the app's `Package.swift`:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/adobe/aepsdk-concierge-ios.git", .upToNextMajor(from: "5.0.0")),
+    .package(url: "https://github.com/adobe/aepsdk-core-ios.git", .upToNextMajor(from: "5.7.0")),
+    .package(url: "https://github.com/adobe/aepsdk-edge-ios.git", .upToNextMajor(from: "5.0.3")),
+    .package(url: "https://github.com/adobe/aepsdk-edgeidentity-ios.git", .upToNextMajor(from: "5.0.0"))
+]
+```
+
+Then add the products to the target's dependencies:
+
+```swift
+.product(name: "AEPBrandConcierge", package: "aepsdk-concierge-ios"),
+.product(name: "AEPCore", package: "aepsdk-core-ios"),
+.product(name: "AEPEdge", package: "aepsdk-edge-ios"),
+.product(name: "AEPEdgeIdentity", package: "aepsdk-edgeidentity-ios"),
+```
+
+Alternatively, add the package in Xcode via **File -> Add Package Dependencies…** using `https://github.com/adobe/aepsdk-concierge-ios.git`.
+
+### CocoaPods
+
+Add the following to the app's `Podfile`:
+
+```ruby
+pod 'AEPBrandConcierge', '~> 5.0'
+pod 'AEPCore', '~> 5.7'
+pod 'AEPEdge', '~> 5.0'
+pod 'AEPEdgeIdentity', '~> 5.0'
+```
+
+Then run `pod install`.
+
 ---
 
 ## Configuration
@@ -70,7 +115,7 @@ Brand Concierge expects the following keys in the Configuration shared state:
 * **`concierge.server`**: String (server host or base domain for Concierge requests)
 * **`concierge.configId`**: String (datastream ID)
 
-The ECID is read from the Edge Identity shared state.
+The ECID is read from the Edge Identity shared state. Surfaces are not a Configuration key; they are supplied per session via the `surfaces:` parameter on `Concierge.wrap(...)`, `Concierge.show(...)`, or `Concierge.present(on:...)`.
 
 Another option for validation is to use Adobe Assurance. Refer to the [Mobile SDK validation guide](/src/pages/home/getting-started/validate/) for more information.
 
@@ -190,7 +235,7 @@ When a user taps a link in the chat, the SDK routes it through `ConciergeLinkHan
 1. **Custom scheme URLs** (e.g. `myapp://`, `mailto:`, `tel:`) — opened immediately via the system (deep link).
 2. **http/https URLs** — the system is first asked to open the URL as a universal link. If the host app has registered the URL's domain via [Associated Domains](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_developer_associated-domains), the app handles the navigation natively. Otherwise, the URL falls back to the in-app WebView overlay.
 
-**Default link handling flow:** `handleLink` callback (if provided) → deep link / universal link check → WebView overlay.
+**Default link handling flow:** `handleLink` callback (if provided) -> deep link / universal link check -> WebView overlay.
 
 ### Custom link handling
 
@@ -250,10 +295,20 @@ Concierge.present(
 )
 ```
 
-When `handleLink` returns `true`, the SDK does not open the WebView overlay or perform any further link routing. When it returns `false` or is not provided, the SDK uses the default flow (deep link check → universal link check → WebView overlay).
+When `handleLink` returns `true`, the SDK does not open the WebView overlay or perform any further link routing. When it returns `false` or is not provided, the SDK uses the default flow (deep link check -> universal link check -> WebView overlay).
+
+### In-app WebView overlay link handling
+
+Links clicked inside the in-app WebView overlay (for example, links on a page that has already loaded in the overlay) follow their own routing rules, independent of the `handleLink` callback:
+
+* **`http` / `https` / `about` URLs**: Loaded within the WebView.
+* **Non-web schemes** (for example, `mailto:`, `tel:`, `sms:`, `myapp://`): The WebView cancels the navigation and forwards the URL to the system via `UIApplication.open`, which routes it to the appropriate handler app (Mail, Phone, Messages, a custom deep-link destination, etc.).
+
+No additional configuration is required for this behavior. Universal-link forwarding for in-chat links (the `handleLink` -> universal link -> WebView fallback described above) applies only to links tapped in chat messages; it is not re-evaluated for links inside an already loaded WebView page.
 
 ---
 
 ## Next steps
 
+* [API reference (iOS)](/edge/adobe-brand-concierge/ios/api-reference/) — Full parameter documentation for all public APIs.
 * [Style guide (iOS)](/edge/adobe-brand-concierge/ios/style-guide/) — Theme JSON reference and implementation status for iOS.

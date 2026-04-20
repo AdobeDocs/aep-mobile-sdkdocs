@@ -499,7 +499,7 @@ List-based configuration for examples and feedback options.
 
 ### Welcome Examples
 
-> You shouldn't have more than four items in your provided welcome examples.
+> It is recommended to have no more than four items in your welcome examples.
 >
 > Always test your values on device to ensure the UI looks as desired.
 
@@ -512,7 +512,7 @@ List-based configuration for examples and feedback options.
 
 ### Feedback Options
 
-> You shouldn't have more than five options available for feedback.
+> It is recommended to have no more than five options available for feedback.
 >
 > Always test your values on device to ensure the UI looks as desired.
 
@@ -563,7 +563,7 @@ Icon and image asset configuration.
 {
   "assets": {
     "icons": {
-      "company": ""
+      "company": "https://example.com/brand-icon.png"
     }
   }
 }
@@ -1494,7 +1494,7 @@ The following colors from `LightConciergeColors` / `DarkConciergeColors` are har
 |-------|---------|---------------------|
 | `secondary` | Secondary accent color (currently unused) | - |
 | `onSurfaceVariant` | Muted text and icons for secondary UI elements | `ChatFooter`, `FeedbackDialog` (unchecked checkboxes) |
-| `container` | Background for cards and container elements | `ProductCard`, `PromptSuggestions`, message bubbles (fallback), `ChatInputPanel` (fallback) |
+| `container` | Background for cards and container elements — configurable via `--color-container` | `ProductCard`, `PromptSuggestions`, message bubbles (fallback), `ChatInputPanel` (fallback) |
 | `outline` | Borders, separators, and outline elements | `ChatFooter` separator, `ProductActionButtons` (secondary button fallback), `FeedbackDialog` text field border, `ProductCarousel` nav buttons |
 | `error` | Error state background | `ErrorOverlay` background |
 | `onError` | Error state text | `ErrorOverlay` message text |
@@ -1546,6 +1546,7 @@ When creating themes for the Android SDK, focus on these **actively used** prope
 * `behavior.input.enableVoiceInput` - Show/hide microphone button
 * `behavior.input.sendButtonStyle` - `"default"` (paper airplane) or `"arrow"` (filled circle with upward arrow)
 * `behavior.productCard.cardStyle` - Use `"productDetail"` for extended product cards (image, badge, name, subtitle, price)
+* `behavior.productCard.cardsAlignment` - Horizontal alignment of product cards: `"start"` (left), `"center"` (default), or `"end"` (right)
 * `behavior.multimodalCarousel.carouselStyle` - Use `"paged"` for prev/next/dots or `"scroll"` for continuous scroll
 * `behavior.welcomeCard.closeButtonAlignment` - Close button position (`"start"` or `"end"`)
 * `behavior.welcomeCard.promptFullWidth` - Full-width cards vs compact pill chips

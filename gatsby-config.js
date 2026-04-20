@@ -147,6 +147,14 @@ module.exports = {
                                 path: "/edge/adobe-brand-concierge/ios/implementation-guide"
                             },
                             {
+                                title: "API reference (Android)",
+                                path: "/edge/adobe-brand-concierge/android/api-reference"
+                            },
+                            {
+                                title: "API reference (iOS)",
+                                path: "/edge/adobe-brand-concierge/ios/api-reference"
+                            },
+                            {
                                 title: "Style guide (Android)",
                                 path: "/edge/adobe-brand-concierge/android/style-guide"
                             },
