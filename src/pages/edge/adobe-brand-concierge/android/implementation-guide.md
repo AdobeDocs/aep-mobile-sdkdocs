@@ -9,7 +9,7 @@ keywords:
 
 # Brand Concierge Implementation Guide (Android)
 
-The Brand Concierge extension provides an in-app conversational UI (a chat surface) that can be embedded into a host app with minimal UI wiring. The UI is connected to the Adobe Experience Platform by using AEP SDK shared state (Configuration + Edge Identity) to derive the service configuration needed to run a session and enable brand controlled experiences through configuration and theming.
+The Brand Concierge extension embeds a conversational chat UI into your host app. It uses AEP SDK shared state from Mobile Core, Edge, and Edge Identity to configure and run a session.
 
 The Brand Concierge UI has two integration approaches:
 
@@ -49,15 +49,14 @@ The SDK handles permission requests internally when users interact with the micr
 
 ## Installation
 
-Add the dependencies to your app module's `build.gradle.kts`. Using the Adobe SDK BOM ensures all modules use compatible, tested versions together:
+Add the dependencies to your app module's `build.gradle.kts`:
 
 ```kotlin
 dependencies {
-    implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
-    implementation("com.adobe.marketing.mobile:core")
-    implementation("com.adobe.marketing.mobile:edge")
-    implementation("com.adobe.marketing.mobile:edgeidentity")
-    implementation("com.adobe.marketing.mobile:concierge")
+    implementation("com.adobe.marketing.mobile:core:3.5.0")
+    implementation("com.adobe.marketing.mobile:edge:3.0.2")
+    implementation("com.adobe.marketing.mobile:edgeidentity:3.0.0")
+    implementation("com.adobe.marketing.mobile:concierge:3.5.0")
 }
 ```
 
