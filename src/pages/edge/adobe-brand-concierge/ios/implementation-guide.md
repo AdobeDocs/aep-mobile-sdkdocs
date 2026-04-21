@@ -25,7 +25,6 @@ Internally, `Concierge.show(...)` dispatches an event in the Adobe Experience Pl
 Your app needs the following Experience Platform SDKs to be available and registered:
 
 * **AEPCore** (MobileCore; Configuration shared state from `configureWith(appId:)`)
-* **AEPEdge**
 * **AEPEdgeIdentity**
 * **AEPBrandConcierge**
 
@@ -58,7 +57,6 @@ To add it via a `Package.swift` file instead, add the package to your dependenci
 dependencies: [
     .package(url: "https://github.com/adobe/aepsdk-concierge-ios.git", .upToNextMajor(from: "5.0.0")),
     .package(url: "https://github.com/adobe/aepsdk-core-ios.git", .upToNextMajor(from: "5.7.0")),
-    .package(url: "https://github.com/adobe/aepsdk-edge-ios.git", .upToNextMajor(from: "5.0.3")),
     .package(url: "https://github.com/adobe/aepsdk-edgeidentity-ios.git", .upToNextMajor(from: "5.0.0"))
 ]
 ```
@@ -68,7 +66,6 @@ Then add the products to the target's dependencies:
 ```swift
 .product(name: "AEPBrandConcierge", package: "aepsdk-concierge-ios"),
 .product(name: "AEPCore", package: "aepsdk-core-ios"),
-.product(name: "AEPEdge", package: "aepsdk-edge-ios"),
 .product(name: "AEPEdgeIdentity", package: "aepsdk-edgeidentity-ios"),
 ```
 
@@ -79,7 +76,6 @@ Add the following to the app's `Podfile`:
 ```ruby
 pod 'AEPBrandConcierge', '~> 5.0'
 pod 'AEPCore', '~> 5.7'
-pod 'AEPEdge', '~> 5.0'
 pod 'AEPEdgeIdentity', '~> 5.0'
 ```
 
@@ -106,7 +102,6 @@ Import the required frameworks and register the extensions in `application(_:did
 ```swift
 import AEPBrandConcierge
 import AEPCore
-import AEPEdge
 import AEPEdgeIdentity
 import UIKit
 
@@ -114,8 +109,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let extensions = [
             Concierge.self,
-            Identity.self,
-            Edge.self
+            Identity.self
         ]
 
         MobileCore.registerExtensions(extensions) {
