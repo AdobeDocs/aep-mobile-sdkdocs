@@ -15,15 +15,7 @@ The SDK manages the chat lifecycle. Provide a trigger UI element — the SDK sho
 
 ### Jetpack Compose
 
-* **_viewModel_** - A `ConciergeChatViewModel` instance. Obtain via `viewModel<ConciergeChatViewModel>()`.
-* _surfaces_ - Surface identifiers sent to the Brand Concierge server to resolve the chat configuration.
-* _modifier_ - Optional `Modifier` to apply to the composable.
-* _handleLink_ - Optional `LinkHandler` callback invoked when a link is tapped in the chat. Return `true` to claim the URL; return `false` to let the SDK handle it with its default behavior.
-* **_content_** - A composable lambda that receives a `showChat` function. Call `showChat()` from your trigger UI to open the chat.
-
-<CodeBlock slots="heading, code" repeat="2" />
-
-### Syntax
+#### Syntax
 
 ```kotlin
 @Composable
@@ -36,7 +28,15 @@ fun ConciergeChat(
 )
 ```
 
-### Example
+#### Parameters
+
+* _viewModel_ **required** - A `ConciergeChatViewModel` instance. Obtain via `viewModel<ConciergeChatViewModel>()`.
+* _surfaces_ - Surface identifiers sent to the Brand Concierge server.
+* _modifier_ - Optional `Modifier` to apply to the composable.
+* _handleLink_ - Optional `LinkHandler` callback. Return `true` to claim the URL; return `false` for default behavior.
+* _content_ **required** - Composable lambda receiving a `showChat` function. Call `showChat()` to open the chat.
+
+#### Example
 
 ```kotlin
 @Composable
@@ -54,16 +54,7 @@ fun MyScreen() {
 
 ### XML/Views
 
-* **_lifecycleOwner_** - The `LifecycleOwner` (typically your `Activity` or `Fragment`).
-* **_viewModelStoreOwner_** - The `ViewModelStoreOwner` (typically your `Activity` or `Fragment`).
-* _surfaces_ - Surface identifiers sent to the Brand Concierge server to resolve the chat configuration.
-* _theme_ - Optional `ConciergeThemeData` to apply to the chat UI.
-* _handleLink_ - Optional callback invoked when a link is tapped in the chat. Return `true` to claim the URL; return `false` to let the SDK handle it with its default behavior.
-* **_triggerView_** - The `View` that launches the chat when clicked.
-
-<CodeBlock slots="heading, code" repeat="2" />
-
-### Syntax
+#### Syntax
 
 ```kotlin
 fun bind(
@@ -76,7 +67,16 @@ fun bind(
 )
 ```
 
-### Example
+#### Parameters
+
+* _lifecycleOwner_ **required** - The `LifecycleOwner` (typically your `Activity` or `Fragment`).
+* _viewModelStoreOwner_ **required** - The `ViewModelStoreOwner` (typically your `Activity` or `Fragment`).
+* _surfaces_ - Surface identifiers sent to the Brand Concierge server.
+* _theme_ - Optional `ConciergeThemeData` to apply to the chat UI.
+* _handleLink_ - Optional callback. Return `true` to claim the URL; return `false` for default behavior.
+* _triggerView_ **required** - The `View` that launches the chat when clicked.
+
+#### Example
 
 ```kotlin
 val chatView = findViewById<ConciergeChatView>(R.id.concierge_chat)
@@ -96,14 +96,7 @@ Embed the chat interface directly into your screen and manage its lifecycle your
 
 ### Jetpack Compose
 
-* **_viewModel_** - A `ConciergeChatViewModel` instance. Obtain via `viewModel<ConciergeChatViewModel>()`.
-* **_onClose_** - Callback invoked when the user dismisses the chat (back press, close button, or gesture).
-* _modifier_ - Optional `Modifier` to apply to the composable.
-* _handleLink_ - Optional `LinkHandler` callback invoked when a link is tapped in the chat. Return `true` to claim the URL; return `false` to let the SDK handle it with its default behavior.
-
-<CodeBlock slots="heading, code" repeat="2" />
-
-### Syntax
+#### Syntax
 
 ```kotlin
 @Composable
@@ -115,7 +108,14 @@ fun ConciergeChat(
 )
 ```
 
-### Example
+#### Parameters
+
+* _viewModel_ **required** - A `ConciergeChatViewModel` instance. Obtain via `viewModel<ConciergeChatViewModel>()`.
+* _onClose_ **required** - Callback invoked when the user dismisses the chat (back press, close button, or gesture).
+* _modifier_ - Optional `Modifier` to apply to the composable.
+* _handleLink_ - Optional `LinkHandler` callback. Return `true` to claim the URL; return `false` for default behavior.
+
+#### Example
 
 ```kotlin
 @Composable
@@ -141,16 +141,7 @@ fun YourChatScreen() {
 
 ### XML/Views
 
-* **_lifecycleOwner_** - The `LifecycleOwner` (typically your `Activity` or `Fragment`).
-* **_viewModelStoreOwner_** - The `ViewModelStoreOwner` (typically your `Activity` or `Fragment`).
-* _surfaces_ - Surface identifiers sent to the Brand Concierge server to resolve the chat configuration.
-* _theme_ - Optional `ConciergeThemeData` to apply to the chat UI.
-* _handleLink_ - Optional callback invoked when a link is tapped in the chat. Return `true` to claim the URL; return `false` to let the SDK handle it with its default behavior.
-* **_onClose_** - Callback invoked when the user dismisses the chat.
-
-<CodeBlock slots="heading, code" repeat="2" />
-
-### Syntax
+#### Syntax
 
 ```kotlin
 fun bind(
@@ -163,7 +154,16 @@ fun bind(
 )
 ```
 
-### Example
+#### Parameters
+
+* _lifecycleOwner_ **required** - The `LifecycleOwner` (typically your `Activity` or `Fragment`).
+* _viewModelStoreOwner_ **required** - The `ViewModelStoreOwner` (typically your `Activity` or `Fragment`).
+* _surfaces_ - Surface identifiers sent to the Brand Concierge server.
+* _theme_ - Optional `ConciergeThemeData` to apply to the chat UI.
+* _handleLink_ - Optional callback. Return `true` to claim the URL; return `false` for default behavior.
+* _onClose_ **required** - Callback invoked when the user dismisses the chat.
+
+#### Example
 
 ```kotlin
 val chatView = findViewById<ConciergeChatView>(R.id.concierge_chat)
@@ -180,20 +180,18 @@ chatView.bind(
 
 Loads a `ConciergeThemeData` from a JSON file in the app's `assets` directory. Returns `null` if the file cannot be found or parsed.
 
-### Kotlin
-
-* **_context_** - An Android `Context` used to access the `assets` directory.
-* **_filename_** - The filename of the JSON theme file (including the `.json` extension).
-
-<CodeBlock slots="heading, code" repeat="2" />
-
-### Syntax
+#### Syntax
 
 ```kotlin
 @JvmStatic fun load(context: Context, filename: String): ConciergeThemeData?
 ```
 
-### Example
+#### Parameters
+
+* _context_ **required** - An Android `Context` used to access the `assets` directory.
+* _filename_ **required** - The filename of the JSON theme file (including the `.json` extension).
+
+#### Example
 
 ```kotlin
 val theme = ConciergeThemeLoader.load(context, "my-theme.json")
@@ -204,17 +202,13 @@ val theme = ConciergeThemeLoader.load(context, "my-theme.json")
 
 Returns the built-in default `ConciergeThemeData`.
 
-### Kotlin
-
-<CodeBlock slots="heading, code" repeat="2" />
-
-### Syntax
+#### Syntax
 
 ```kotlin
 @JvmStatic fun default(): ConciergeThemeData
 ```
 
-### Example
+#### Example
 
 ```kotlin
 val theme = ConciergeThemeLoader.default()
