@@ -46,11 +46,13 @@ The SDK handles permission requests internally when the user taps the microphone
 
 ## Installation
 
-Add Brand Concierge alongside the other AEP SDK extensions using either Swift Package Manager or CocoaPods.
+Add Brand Concierge alongside the other AEP SDK extensions using Swift Package Manager, CocoaPods, or by adding the XCFramework directly.
 
 ### Swift Package Manager
 
-Add the package to the app's `Package.swift`:
+To add the package from Xcode, select **File -> Add Package Dependencies…** and enter `https://github.com/adobe/aepsdk-concierge-ios.git`.
+
+To add it via a `Package.swift` file instead, add the package to your dependencies:
 
 ```swift
 dependencies: [
@@ -70,8 +72,6 @@ Then add the products to the target's dependencies:
 .product(name: "AEPEdgeIdentity", package: "aepsdk-edgeidentity-ios"),
 ```
 
-Alternatively, add the package in Xcode via **File -> Add Package Dependencies…** using `https://github.com/adobe/aepsdk-concierge-ios.git`.
-
 ### CocoaPods
 
 Add the following to the app's `Podfile`:
@@ -85,20 +85,49 @@ pod 'AEPEdgeIdentity', '~> 5.0'
 
 Then run `pod install`.
 
+### Binaries
+
+To add the XCFramework directly, run the following from the repository root:
+
+```bash
+make archive
+```
+
+This generates `AEPBrandConcierge.xcframework` under the `build` folder. Drag and drop it into your app target in Xcode.
+
 ---
 
 ## Configuration
 
-### Step 1: Set up the Adobe Experience Platform Mobile SDK
+### Step 1: Register the Brand Concierge extension
 
-Follow the [Adobe Experience Platform Mobile SDK getting started guide](/src/pages/home/getting-started/) to set up the base SDK integration used by Concierge.
+Import the required frameworks and register the extensions in `application(_:didFinishLaunchingWithOptions:)` in your `AppDelegate`:
 
-The required extensions are:
+```swift
+import AEPBrandConcierge
+import AEPCore
+import AEPEdge
+import AEPEdgeIdentity
+import UIKit
 
-* AEPCore
-* AEPEdge
-* AEPEdgeIdentity
-* AEPBrandConcierge
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let extensions = [
+            Concierge.self,
+            Identity.self,
+            Edge.self
+        ]
+
+        MobileCore.registerExtensions(extensions) {
+            MobileCore.configureWith(appId: "YOUR_APP_ID")
+        }
+
+        return true
+    }
+}
+```
+
+Replace `YOUR_APP_ID` with your mobile property App ID from Adobe Data Collection. For full setup instructions see the [Adobe Experience Platform Mobile SDK getting started guide](/src/pages/home/getting-started/).
 
 ### Step 2: Validate the Brand Concierge configuration keys
 

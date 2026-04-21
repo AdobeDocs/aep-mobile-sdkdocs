@@ -499,7 +499,7 @@ List-based configuration for examples and feedback options.
 
 ### Welcome Examples
 
-> It is recommended to have no more than four items in your welcome examples.
+> You shouldn't have more than four items in your welcome examples.
 >
 > Always test your values on device to ensure the UI looks as desired.
 
@@ -512,7 +512,7 @@ List-based configuration for examples and feedback options.
 
 ### Feedback Options
 
-> It is recommended to have no more than five options available for feedback.
+> You shouldn't have more than five options available for feedback.
 >
 > Always test your values on device to ensure the UI looks as desired.
 
@@ -685,17 +685,17 @@ These tokens style the feedback dialog (modal card and action bottom sheet).
 
 | CSS Variable | Kotlin Property | Type | Default | Description |
 |--------------|-----------------|------|---------|-------------|
-| `--feedback-sheet-background-color` | `colors.feedback.sheetBackground` | `String?` | falls back to `colors.background` | Dialog background fill; also applied to the notes editor. |
-| `--feedback-title-text-color` | `colors.feedback.titleText` | `String?` | falls back to `colors.onBackground` / `colors.primary.text` | Dialog title color. |
-| `--feedback-question-text-color` | `colors.feedback.questionText` | `String?` | falls back to the title color | Dialog question color. |
-| `--feedback-options-text-color` | `colors.feedback.optionsText` | `String?` | falls back to the title color | Checkbox option label color. |
+| `--feedback-sheet-background-color` | `colors.feedback.sheetBackground` | `String?` | Falls back to `colors.background` | Dialog background fill; also applied to the notes editor. |
+| `--feedback-title-text-color` | `colors.feedback.titleText` | `String?` | Falls back to `colors.onBackground` / `colors.primary.text` | Dialog title color. |
+| `--feedback-question-text-color` | `colors.feedback.questionText` | `String?` | Falls back to the title color | Dialog question color. |
+| `--feedback-options-text-color` | `colors.feedback.optionsText` | `String?` | Falls back to the title color | Checkbox option label color. |
 | `--feedback-checkbox-border-color` | `colors.feedback.checkboxBorder` | `String?` | `"#7F7F7F"` (light) / `"#B0B0B0"` (dark) | Checkbox unchecked outline color. Also used for the notes editor outline. |
 | `--feedback-drag-handle-color` | `colors.feedback.dragHandle` | `String?` | `"#CCCCCC"` | Drag handle color. Only visible in action mode. |
-| `--feedback-submit-button-fill-color` | `colors.feedback.submitButtonFill` | `String?` | falls back to `colors.button.primaryBackground` | Submit button fill color. |
-| `--feedback-submit-button-text-color` | `colors.feedback.submitButtonText` | `String?` | falls back to `colors.button.primaryText` | Submit button text color. |
+| `--feedback-submit-button-fill-color` | `colors.feedback.submitButtonFill` | `String?` | Falls back to `colors.button.primaryBackground` | Submit button fill color. |
+| `--feedback-submit-button-text-color` | `colors.feedback.submitButtonText` | `String?` | Falls back to `colors.button.primaryText` | Submit button text color. |
 | `--feedback-cancel-button-fill-color` | `colors.feedback.cancelButtonFill` | `String?` | `null` (transparent; outline style) | Cancel button fill. `null` = transparent (outline style); set to a color for a solid fill. The cancel button border is always applied — set `--feedback-cancel-button-border-width` to `0` to suppress it. Also tints the X close icon. |
-| `--feedback-cancel-button-text-color` | `colors.feedback.cancelButtonText` | `String?` | falls back to `colors.button.secondaryText` | Cancel button label color. |
-| `--feedback-cancel-button-border-color` | `colors.feedback.cancelButtonBorder` | `String?` | falls back to `colors.button.secondaryBorder` | Cancel button outline color. Applied whenever `--feedback-cancel-button-border-width` > `0`, regardless of whether `cancelButtonFill` is set. |
+| `--feedback-cancel-button-text-color` | `colors.feedback.cancelButtonText` | `String?` | Falls back to `colors.button.secondaryText` | Cancel button label color. |
+| `--feedback-cancel-button-border-color` | `colors.feedback.cancelButtonBorder` | `String?` | Falls back to `colors.button.secondaryBorder` | Cancel button outline color. Applied whenever `--feedback-cancel-button-border-width` > `0`, regardless of whether `cancelButtonFill` is set. |
 
 > **Contrast note:** When `--feedback-sheet-background-color` is pinned, also set `--feedback-title-text-color`, `--feedback-question-text-color`, and `--feedback-options-text-color` to maintain text contrast. System defaults track the device palette, not the themed surface.
 
