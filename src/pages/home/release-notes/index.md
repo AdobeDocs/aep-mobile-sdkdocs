@@ -7,6 +7,28 @@ Keywords:
 
 # Release notes
 
+## April 17, 2026
+
+### iOS Brand Concierge 5.5.0
+
+* Added comprehensive theming support for the feedback dialog, including background, text, checkbox, drag handle, and button styling.
+* Added behavior flags to independently control the visibility of the X close and Cancel buttons in the feedback dialog.
+* Extended text alignment tokens to accept additional value aliases.
+* Improved markdown paragraph rendering to correctly preserve paragraph boundaries when paragraphs begin with inline formatting.
+* Fixed citation badge spacing to keep the citation marker adjacent to trailing punctuation.
+* Expanded and corrected implementation guide documentation.
+
+### Android Brand Concierge 3.5.0
+
+* Removed the `showNotes` behavior flag and `--feedback-notes-text-color` CSS token. This is a breaking change for apps referencing these properties.
+
+### Android Brand Concierge 3.4.0
+
+* Added comprehensive theming support for the feedback dialog, including background, text, checkbox, drag handle, and button styling.
+* Added behavior flags to independently control the visibility of the X close and Cancel buttons in the feedback dialog.
+* Extended text alignment tokens to accept additional value aliases.
+* Improved feedback dialog layout consistency between modal card and bottom sheet display modes.
+
 ## April 14, 2026
 
 ### Android Brand Concierge 3.3.1
