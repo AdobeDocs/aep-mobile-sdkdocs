@@ -19,53 +19,23 @@ Keywords:
 
 ### iOS Brand Concierge 5.5.0
 
-## What's Changed
-* back merge main to dev after 5.4.0 release by @rymorale in https://github.com/adobe/aepsdk-concierge-ios/pull/98
-* Use a custom user agent for the Concierge WebView and enhance link handling with UIApplication by @rymorale in https://github.com/adobe/aepsdk-concierge-ios/pull/99
-* Revert "Merge pull request #99 from rymorale/webview+link-handling-fixs by @rymorale in https://github.com/adobe/aepsdk-concierge-ios/pull/101
-* Adjust carousel padding by @rymorale in https://github.com/adobe/aepsdk-concierge-ios/pull/102
-* Fix paragraph identity detection and citation badge spacing by @timkimadobe in https://github.com/adobe/aepsdk-concierge-ios/pull/103
-* Documentation updates by @timkimadobe in https://github.com/adobe/aepsdk-concierge-ios/pull/104
-* Feedback dialog theming tokens and show/hide behavior controls by @timkimadobe in https://github.com/adobe/aepsdk-concierge-ios/pull/105
-* Updating version to `5.5.0` by @github-actions[bot] in https://github.com/adobe/aepsdk-concierge-ios/pull/106
-* Dev -> Main for 5.5.0 release by @timkimadobe in https://github.com/adobe/aepsdk-concierge-ios/pull/107
-
-
-**Full Changelog**: https://github.com/adobe/aepsdk-concierge-ios/compare/5.4.0...5.5.0
+* Added comprehensive theming support for the feedback dialog, including background, text, checkbox, drag handle, and button styling.
+* Added behavior flags to independently control the visibility of the X close and Cancel buttons in the feedback dialog.
+* Extended text alignment tokens to accept additional value aliases.
+* Improved markdown paragraph rendering to correctly preserve paragraph boundaries when paragraphs begin with inline formatting.
+* Fixed citation badge spacing to keep the citation marker adjacent to trailing punctuation.
+* Expanded and corrected implementation guide documentation.
 
 ### Android Brand Concierge 3.5.0
 
-## What's Changed
-* Downmerge Main -> Dev for 3.4.0 by @timkimadobe in https://github.com/adobe/aepsdk-concierge-android/pull/108
-* Remove show notes and text color controls by @timkimadobe in https://github.com/adobe/aepsdk-concierge-android/pull/109
-* Updating version to 3.5.0 by @github-actions[bot] in https://github.com/adobe/aepsdk-concierge-android/pull/110
-* Dev -> Main for 3.5.0 by @timkimadobe in https://github.com/adobe/aepsdk-concierge-android/pull/111
-
-
-**Full Changelog**: https://github.com/adobe/aepsdk-concierge-android/compare/v3.4.0...v3.5.0
+* Removed the `showNotes` behavior flag and `--feedback-notes-text-color` CSS token. This is a breaking change for apps referencing these properties.
 
 ### Android Brand Concierge 3.4.0
 
-## What's Changed
-* dev to main for 3.3.1 release by @rymorale in https://github.com/adobe/aepsdk-concierge-android/pull/104
-* Feedback dialog theming and behavior tokens by @timkimadobe in https://github.com/adobe/aepsdk-concierge-android/pull/105
-* Updating version to 3.4.0 by @github-actions[bot] in https://github.com/adobe/aepsdk-concierge-android/pull/106
-* Dev -> Main for 3.4.0 by @timkimadobe in https://github.com/adobe/aepsdk-concierge-android/pull/107
-
-## New Contributors
-* @github-actions[bot] made their first contribution in https://github.com/adobe/aepsdk-concierge-android/pull/106
-
-**Full Changelog**: https://github.com/adobe/aepsdk-concierge-android/compare/v3.3.1...v3.4.0
-
-## April 9, 2026
-
-### iOS Messaging 5.13.0
-
-* Fixed Content Card caching issue stale content card cleared.
-
-### Android Messaging 3.9.0
-
-* Fixed Content card caching issue, stale content cards cleaned.
+* Added comprehensive theming support for the feedback dialog, including background, text, checkbox, drag handle, and button styling.
+* Added behavior flags to independently control the visibility of the X close and Cancel buttons in the feedback dialog.
+* Extended text alignment tokens to accept additional value aliases.
+* Improved feedback dialog layout consistency between modal card and bottom sheet display modes.
 
 ## April 14, 2026
 
@@ -92,6 +62,16 @@ Keywords:
 * Added a speech balloon style option for chat bubbles.
 * Fixed overlap issues with the software keyboard.
 * Fixed keyboard dismissal. The software keyboard is now automatically dismissed when voice recording starts.
+
+## April 9, 2026
+
+### iOS Messaging 5.13.0
+
+* Fixed Content Card caching issue stale content card cleared.
+
+### Android Messaging 3.9.0
+
+* Fixed Content card caching issue, stale content cards cleaned.
 
 ## April 7, 2026
 
