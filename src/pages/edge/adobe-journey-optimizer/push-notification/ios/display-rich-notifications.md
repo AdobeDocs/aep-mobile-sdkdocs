@@ -20,7 +20,7 @@ Follow Apple's documentation to [add a Notification Service app extension to you
 
 The `AEPMessagingNotification` package is a lightweight, extension-safe library with no dependency on `AEPCore` or `AEPServices`. It is safe to import inside a `UNNotificationServiceExtension` target.
 
-### Install using [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
+### Install using CocoaPods
 
 Add the pod to your Notification Service Extension target in your `Podfile`:
 
@@ -30,7 +30,9 @@ target 'NotificationService' do
 end
 ```
 
-### Install using [Swift Package Manager](https://github.com/apple/swift-package-manager)
+For more information on using CocoaPods, refer to the [using CocoaPods guide](https://guides.cocoapods.org/using/using-cocoapods.html).
+
+### Install using Swift Package Manager
 
 To add the `AEPMessagingNotification` package to your application, from the Xcode menu select:
 
