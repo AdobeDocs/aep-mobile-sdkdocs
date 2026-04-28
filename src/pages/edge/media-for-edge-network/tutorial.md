@@ -15,7 +15,7 @@ import Tabs from './tabs/tutorial.md'
 
 # AEP Vega SDK integration tutorial
 
-This document outlines the integration of Adobe Streaming Media for Edge Network on Amazon Fire OS TV using the AEP Vega SDK. The AEP Vega SDK provides TypeScript packages (`@adobe/vega-aepcore` and `@adobe/vega-aepmedia`) for sending Experience events and tracking media playback through the Adobe Experience Platform Edge Network.
+This document outlines the integration of Adobe Streaming Media for Edge Network on Vega OS-based Amazon Fire TV devices using the AEP Vega SDK. The AEP Vega SDK provides TypeScript packages (`@adobe/vega-aepcore` and `@adobe/vega-aepmedia`) for sending Experience events and tracking media playback through the Adobe Experience Platform Edge Network.
 
 ## Prerequisites
 
