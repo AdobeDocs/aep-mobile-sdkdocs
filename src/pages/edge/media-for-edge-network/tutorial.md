@@ -1,9 +1,10 @@
 ---
-title: Vega SDK integration tutorial
-description: A step-by-step tutorial for integrating the Adobe Streaming Media for Edge Network using the Vega SDK on Kepler OTT platforms.
+title: Integrating AEP Media to Vega OS based apps
+description: A step-by-step tutorial for integrating the Adobe Streaming Media for Edge Network using the AEP Vega SDK on
+  Amazon Fire TV devices.
 keywords:
 - Tutorial
-- Vega SDK
+- AEP Vega SDK
 - Edge Network
 - Media for Edge Network
 - OTT
@@ -12,9 +13,9 @@ keywords:
 
 import Tabs from './tabs/tutorial.md'
 
-# Vega SDK integration tutorial
+# AEP Vega SDK integration tutorial
 
-This document describes how to integrate the Adobe Streaming Media for Edge Network on Kepler OTT platforms using the Vega SDK. The Vega SDK provides TypeScript packages (`@adobe/vega-aepcore` and `@adobe/vega-aepmedia`) for sending Experience events and tracking media playback through the Adobe Experience Platform Edge Network.
+This document outlines the integration of Adobe Streaming Media for Edge Network on Amazon Fire OS TV using the AEP Vega SDK. The AEP Vega SDK provides TypeScript packages (`@adobe/vega-aepcore` and `@adobe/vega-aepmedia`) for sending Experience events and tracking media playback through the Adobe Experience Platform Edge Network.
 
 ## Prerequisites
 
@@ -25,9 +26,9 @@ Before starting, ensure the following:
 3. [Configure Media for Edge Network extension in Data Collection Tags](/edge/media-for-edge-network#configure-media-for-edge-network-extension-in-the-data-collection-tags).
 4. Have a working Vega React Native application where you will integrate the SDK.
 
-## Install the Vega SDK packages
+## Install the AEP Vega SDK packages
 
-The Vega SDK is distributed as npm packages. Install the required core and media packages:
+The AEP Vega SDK is distributed as npm packages. Install the required core and media packages:
 
 ```bash
 npm install @adobe/vega-aepcore @adobe/vega-aepmedia
@@ -38,11 +39,11 @@ npm install @adobe/vega-aepcore @adobe/vega-aepmedia
 
 ## Initialize the SDK
 
-Initialize the Vega SDK using `AEPSDK.initialize()` with your Edge datastream ID and the Media extension registered.
+Initialize the AEP Vega SDK using `AEPSDK.initialize()` with your Edge datastream ID and the Media extension registered.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-Vega SDK
+AEP Vega SDK
 
 <Tabs query="platform=vega&task=initialize"/>
 
@@ -64,7 +65,7 @@ Use `AEPSDK.updateConfiguration()` to update SDK configuration after initializat
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-Vega SDK
+AEP Vega SDK
 
 <Tabs query="platform=vega&task=update-configuration"/>
 
@@ -74,7 +75,7 @@ Use the `AEPSDK.setLogLevel()` API with the `LogLevel` enum to control the verbo
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-Vega SDK
+AEP Vega SDK
 
 <Tabs query="platform=vega&task=set-log-level"/>
 
@@ -93,7 +94,7 @@ The SDK automatically generates and manages the Experience Cloud ID (ECID) for d
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-Vega SDK
+AEP Vega SDK
 
 <Tabs query="platform=vega&task=get-ecid"/>
 
@@ -103,7 +104,7 @@ Use the `AEPSDK.setConsent()` API to send user consent preferences to the Edge N
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-Vega SDK
+AEP Vega SDK
 
 <Tabs query="platform=vega&task=set-consent"/>
 
@@ -115,7 +116,7 @@ For cases where you need the Edge Network response, use `AEPSDK.sendEventWithRes
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-Vega SDK
+AEP Vega SDK
 
 <Tabs query="platform=vega&task=send-event"/>
 
@@ -131,7 +132,7 @@ Only one media session can be active at a time. You must end the current session
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-Vega SDK
+AEP Vega SDK
 
 <Tabs query="platform=vega&task=create-media-session"/>
 
@@ -154,7 +155,7 @@ Once a media session is created, use `Media.sendMediaEvent()` to track media pla
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-Vega SDK
+AEP Vega SDK
 
 <Tabs query="platform=vega&task=send-media-event"/>
 
@@ -190,6 +191,6 @@ The following example demonstrates a complete media tracking workflow, from SDK 
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
 
-Vega SDK
+AEP Vega SDK
 
 <Tabs query="platform=vega&task=full-example"/>

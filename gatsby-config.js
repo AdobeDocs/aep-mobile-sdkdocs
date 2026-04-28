@@ -1013,7 +1013,7 @@ module.exports = {
                                 path: "/edge/media-for-edge-network/api-reference"
                             },
                             {
-                                title: "Tutorial",
+                                title: "Integrating AEP Media to Vega OS based apps",
                                 path: "/edge/media-for-edge-network/tutorial"
                             },
                             {

@@ -168,7 +168,14 @@ The Adobe Experience Platform SDK for Roku supports Roku OS 11.0 or later. The p
 
 ## Vega OS
 
-The Adobe Experience Platform SDK for Vega OS supports [Vega OS](https://developer.amazon.com/) — the operating system designed for Fire TV streaming media players. SDK release information will be available in a future update.
+<div style="height:20px; width:120px;"></div>
+
+| Extension | npmjs |
+|---|---|
+| [Mobile Core](./base/mobile-core/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/vega-aepcore.svg?color=green&label=%40adobe%2Fvega-aepcore&logo=npm&style=flat-square)](https://www.npmjs.com/package/@adobe/vega-aepcore) |
+| [Media for Edge Network](../edge/media-for-edge-network/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/vega-aepmedia.svg?color=green&label=%40adobe%2Fvega-aepmedia&logo=npm&style=flat-square)](https://www.npmjs.com/package/@adobe/vega-aepmedia) |
+
+The Adobe Experience Platform SDK for Vega OS supports [Vega OS](https://developer.amazon.com/docs/vega/vega.html) — the operating system designed for Fire TV streaming media players. For information about changes and updates, refer to the [release notes](./release-notes/#vega-os-core-101).
 
 ## Supported Platforms
 
@@ -176,7 +183,7 @@ The Adobe Experience Platform SDK for Vega OS supports [Vega OS](https://develop
 |---|---|
 | Android | 5 or later (API levels 21 or later) |
 | iOS | 12 or later |
-| React Native | 0.60.0 or later |
+| React Native | 0.83.0 or later |
 | Flutter | 2.0.0 or later |
 | Roku | 11.0 or later |
-| Vega OS | TBD |
+| Vega OS | 1.1 or later |
