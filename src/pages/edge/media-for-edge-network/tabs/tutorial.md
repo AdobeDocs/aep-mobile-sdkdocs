@@ -70,7 +70,7 @@ AEPSDK.setConsent({
 });
 ```
 
-<Variant platform="vega" task="send-event" repeat="2"/>
+<Variant platform="vega" task="send-event" repeat="4"/>
 
 **`sendEvent`** sends an event without waiting for a response:
 
