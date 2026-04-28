@@ -19,17 +19,17 @@ For more information, see the [official documentation](https://business.adobe.co
 
 ## Getting started
 
-Install the required Adobe Experience Platform mobile extensions and register them with the SDK for your platform:
-
-* **[Getting started (Android)](/edge/adobe-brand-concierge/android/getting-started/)**
-* **[Getting started (iOS)](/edge/adobe-brand-concierge/ios/getting-started/)**
-
-## Integrate the Brand Concierge Chat UI in your app
-
-Integrate the Chat UI via managed or drop-in integration.
+Install, register, and integrate the Brand Concierge chat UI in your app:
 
 * **[Implementation guide (Android)](/edge/adobe-brand-concierge/android/implementation-guide/)**
 * **[Implementation guide (iOS)](/edge/adobe-brand-concierge/ios/implementation-guide/)**
+
+## API reference
+
+Full parameter documentation for all public APIs.
+
+* **[API reference (Android)](/edge/adobe-brand-concierge/android/api-reference/)**
+* **[API reference (iOS)](/edge/adobe-brand-concierge/ios/api-reference/)**
 
 ## Customize the Concierge Chat UI
 

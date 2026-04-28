@@ -133,6 +133,7 @@ Colors are specified as hex strings:
 ```json
 "--color-primary": "#EB1000"
 "--message-user-background": "#EBEEFF"
+"--input-box-shadow": "0 2px 8px 0 #00000014"
 ```
 
 Supported formats:
@@ -147,6 +148,7 @@ Dimensions use CSS pixel units:
 ```json
 "--input-height-mobile": "52px"
 "--input-border-radius-mobile": "12px"
+"--message-max-width": "100%"
 ```
 
 ### Padding
@@ -170,6 +172,7 @@ Shadows use CSS box-shadow syntax:
 
 ```json
 "--input-box-shadow": "0 2px 8px 0 #00000014"
+"--multimodal-card-box-shadow": "none"
 ```
 
 Format: `offsetX offsetY blurRadius spreadRadius color`
@@ -237,12 +240,6 @@ Feature toggles and interaction configuration.
 | `behavior.multimodalCarousel.cardClickAction` | string | `"openLink"` | Action when carousel card is tapped. Currently "openLink" is the only option available. |
 | `behavior.multimodalCarousel.carouselStyle` | string | `"paged"` | Carousel navigation style. `"paged"` = snap to item with prev/next buttons and page dots; `"scroll"` = continuous horizontal scroll with no paging controls. |
 
-### Product Card
-
-| JSON Key | Type | Default | Description |
-|----------|------|---------|-------------|
-| `behavior.productCard.cardStyle` | string | `"actionButton"` | Product card layout. `"actionButton"` = image overlay with primary/secondary action buttons; `"productDetail"` = extended card with image, badge, name, subtitle, and price. |
-
 ### Input
 
 | JSON Key | Type | Default | Description |
@@ -256,28 +253,16 @@ Feature toggles and interaction configuration.
 
 | JSON Key | Type | Default | Description |
 |----------|------|---------|-------------|
-| `behavior.chat.messageAlignment` | string | `"left"` | Message alignment (`"left"`, `"center"`, `"right"`) |
+| `behavior.chat.messageAlignment` | `ConciergeTextAlignment` | `"start"` | Agent message alignment. Accepts `"start"` / `"leading"` / `"left"`, `"center"` / `"justify"`, or `"end"` / `"trailing"` / `"right"`. Case-insensitive; unknown values fall back to `"start"`. |
 | `behavior.chat.messageWidth` | string | `"100%"` | Max message width (e.g., `"100%"`, `"768px"`) |
+| `behavior.chat.userMessageBubbleStyle` | string | `"default"` | User message bubble shape. `"default"` = all corners rounded; `"balloon"` = rounded except bottom-right corner is square (speech balloon style). Corner radius is controlled by `--message-border-radius` (default `12dp`). |
 
-### Privacy Notice
-
-| JSON Key | Type | Default | Description |
-|----------|------|---------|-------------|
-| `behavior.privacyNotice.title` | string | `"Privacy Notice"` | Privacy dialog title |
-| `behavior.privacyNotice.text` | string | `"Privacy notice text."` | Privacy notice content |
-
-### Feedback
+### Product Card
 
 | JSON Key | Type | Default | Description |
 |----------|------|---------|-------------|
-| `behavior.feedback.displayMode` | string | `"modal"` | Feedback dialog display mode. `"modal"` renders inline as a Modal overlay; `"action"` renders as an action sheet-style layout. |
-| `behavior.feedback.thumbsPlacement` | string | `"inline"` | Thumbs up/down placement. `"inline"` places thumbs beside the sources label; `"below"` places them below the sources accordion with an optional label. |
-
-### Citations
-
-| JSON Key | Type | Default | Description |
-|----------|------|---------|-------------|
-| `behavior.citations.showLinkIcon` | boolean | `false` | Show an external link icon next to citation URLs. |
+| `behavior.productCard.cardStyle` | string | `"actionButton"` | Product card layout. `"actionButton"` = image overlay with primary/secondary action buttons; `"productDetail"` = extended card with image, badge, name, subtitle, and price. |
+| `behavior.productCard.cardsAlignment` | string | `"center"` | Horizontal alignment of product cards within their display area. `"start"` = left-aligned; `"center"` = centered; `"end"` = right-aligned. |
 
 ### Welcome Card
 
@@ -288,7 +273,34 @@ Feature toggles and interaction configuration.
 | `behavior.welcomeCard.promptMaxLines` | number | `—` | Max lines for prompt text. When omitted, the Android SDK applies no limit. Set to `1` for uniform pill heights with ellipsis. |
 | `behavior.welcomeCard.contentAlignment` | string | `"top"` | Welcome card vertical position: `"top"` (anchored to top) or `"center"` (vertically centered) |
 
-> **Tip:** To hide the header subtitle, set `text["header.subtitle"]` to `""`. The subtitle is automatically hidden when its text is blank.
+### Prompt Suggestions
+
+| JSON Key | Type | Default | Description |
+|----------|------|---------|-------------|
+| `behavior.promptSuggestions.itemMaxLines` | number | `1` | Max lines for suggestion chip text before ellipsis. |
+| `behavior.promptSuggestions.showHeader` | boolean | `false` | Show a "Suggestions" header label above the chips. Label text is configurable via `text["suggestions.header"]`. |
+
+### Feedback
+
+| JSON Key | Type | Default | Description |
+|----------|------|---------|-------------|
+| `behavior.feedback.displayMode` | string | `"modal"` | Feedback dialog display mode. `"modal"` renders a centered modal card; `"action"` renders a ModalBottomSheet. |
+| `behavior.feedback.thumbsPlacement` | string | `"inline"` | Thumbs up/down placement. `"inline"` places thumbs beside the sources accordion header; `"below"` places them below the accordion with a "Was this helpful?" label. |
+| `behavior.feedback.showCloseButton` | boolean \| null | `null` | X close button visibility. `null` = shown for `"action"`, hidden for `"modal"`. |
+| `behavior.feedback.showCancelButton` | boolean \| null | `null` | Cancel button visibility. `null` = shown for `"modal"`, hidden for `"action"`. Both set to `false` is honored: Submit and (in action mode) drag-down still dismiss. |
+
+### Citations
+
+| JSON Key | Type | Default | Description |
+|----------|------|---------|-------------|
+| `behavior.citations.showLinkIcon` | boolean | `false` | Show an external link icon next to citation URLs. |
+
+### Privacy Notice
+
+| JSON Key | Type | Default | Description |
+|----------|------|---------|-------------|
+| `behavior.privacyNotice.title` | string | `"Privacy Notice"` | Privacy dialog title |
+| `behavior.privacyNotice.text` | string | `"Privacy notice text."` | Privacy notice content |
 
 ### Example
 
@@ -300,7 +312,8 @@ Feature toggles and interaction configuration.
       "carouselStyle": "scroll"
     },
     "productCard": {
-      "cardStyle": "productDetail"
+      "cardStyle": "productDetail",
+      "cardsAlignment": "center"
     },
     "input": {
       "enableVoiceInput": true,
@@ -310,7 +323,8 @@ Feature toggles and interaction configuration.
     },
     "chat": {
       "messageAlignment": "left",
-      "messageWidth": "100%"
+      "messageWidth": "100%",
+      "userMessageBubbleStyle": "balloon"
     },
     "privacyNotice": {
       "title": "Privacy Notice",
@@ -318,7 +332,9 @@ Feature toggles and interaction configuration.
     },
     "feedback": {
       "displayMode": "action",
-      "thumbsPlacement": "below"
+      "thumbsPlacement": "below",
+      "showCloseButton": true,
+      "showCancelButton": false
     },
     "citations": {
       "showLinkIcon": true
@@ -328,6 +344,10 @@ Feature toggles and interaction configuration.
       "promptFullWidth": false,
       "promptMaxLines": 1,
       "contentAlignment": "top"
+    },
+    "promptSuggestions": {
+      "itemMaxLines": 1,
+      "showHeader": true
     }
   }
 }
@@ -380,6 +400,8 @@ While there are no strict requirements for character limits in many of these tex
 |----------|---------|-------------|
 | `text["header.title"]` | `"Concierge"` | Header title text |
 | `text["header.subtitle"]` | `"Powered by Adobe"` | Header subtitle text |
+
+> **Tip:** To hide the header subtitle, set `text["header.subtitle"]` to `""`. The subtitle is automatically hidden when its text is blank.
 
 ### Welcome Screen
 
@@ -437,6 +459,12 @@ While there are no strict requirements for character limits in many of these tex
 | `text["sourcesLabel"]` | `"Sources"` | Accordion label for the sources/feedback section |
 | `text["feedbackHelpfulLabel"]` | `"Was this helpful?"` | Label shown above feedback thumbs when `behavior.feedback.thumbsPlacement` is `"below"`. Set to `""` to hide. |
 
+### Prompt Suggestions
+
+| JSON Key | Default | Description |
+|----------|---------|-------------|
+| `text["suggestions.header"]` | `"Suggestions"` | Header label shown above prompt suggestion chips when `behavior.promptSuggestions.showHeader` is `true`. |
+
 ### Example
 
 ```json
@@ -449,6 +477,7 @@ While there are no strict requirements for character limits in many of these tex
     "loading.message": "Generating response from our knowledge base...",
     "feedbackHelpfulLabel": "Was this helpful?",
     "sourcesLabel": "Sources & Feedback",
+    "suggestions.header": "Suggestions",
     "feedback.dialog.title.positive": "Your feedback is appreciated",
     "feedback.dialog.title.negative": "Your feedback is appreciated",
     "feedback.dialog.question.positive": "What went well? Select all that apply.",
@@ -470,7 +499,7 @@ List-based configuration for examples and feedback options.
 
 ### Welcome Examples
 
-> You shouldn't have more than four items in your provided welcome examples.
+> You shouldn't have more than four items in your welcome examples.
 >
 > Always test your values on device to ensure the UI looks as desired.
 
@@ -526,7 +555,7 @@ Icon and image asset configuration.
 
 | JSON Key | Type | Default | Description |
 |----------|------|---------|-------------|
-| `assets.icons.company` | string | `""` | Company logo (SVG string or URL) |
+| `assets.icons.company` | string | `""` | Company icon displayed to the left of agent text message bubbles. When set, **all** agent response elements — message text, product cards, and prompt suggestion chips — are automatically aligned to the icon column (flush with the right edge of the icon). Accepts a remote URL (`http://` or `https://`) or a local asset name (without extension) resolved from the app's `assets/icons/` folder. Supported local formats: `.png`, `.webp`, `.jpg`, `.jpeg`. Leave empty to show no icon. |
 
 ### Example
 
@@ -534,7 +563,19 @@ Icon and image asset configuration.
 {
   "assets": {
     "icons": {
-      "company": ""
+      "company": "https://example.com/brand-icon.png"
+    }
+  }
+}
+```
+
+To use a local asset instead, place the image file in your app's `assets/icons/` directory and set the value to the filename without its extension:
+
+```json
+{
+  "assets": {
+    "icons": {
+      "company": "company-logo"
     }
   }
 }
@@ -559,6 +600,7 @@ Visual styling using CSS-like variable names. All properties in the `theme` obje
 |--------------|-----------------|------|---------|-------------|
 | `--color-primary` | `colors.primaryColors.primary` | `String` | `"#1976D2"` | Primary brand color (hex) |
 | `--color-text` | `colors.primaryColors.text` | `String` | `"#000000"` | Primary text color (hex) |
+| `--color-container` | `colors.container` | `String?` | `null` (falls back to hardcoded light/dark value) | Background for cards and container elements — prompt suggestion chips, product cards, message bubble fallback (hex) |
 
 ### Colors - Surface
 
@@ -594,9 +636,6 @@ Visual styling using CSS-like variable names. All properties in the `theme` obje
 | `--color-button-submit` | `colors.button.submitText` | `String` | `"#1976D2"` | Submit button icon/text color (hex) |
 | `--color-button-submit-hover` | `colors.button.submitTextHover` | `String` | `"#1565C0"` | Submit button hover color (hex) |
 | `--button-disabled-background` | `colors.button.disabledBackground` | `String` | `"#E0E0E0"` | Disabled button background (hex) |
-| `--cta-button-background-color` | `colors.ctaButton.background` | `String` | `"systemGray6"` | CTA button background color (hex) |
-| `--cta-button-text-color` | `colors.ctaButton.text` | `String` | `"primary"` | CTA button label text color (hex) |
-| `--cta-button-icon-color` | `colors.ctaButton.iconColor` | `String` | `"primary"` | CTA button icon color (hex) |
 
 ### Colors - Input
 
@@ -619,6 +658,13 @@ Visual styling using CSS-like variable names. All properties in the `theme` obje
 | `--welcome-prompt-background-color` | `colors.welcomePrompt.backgroundColor` | `String?` | `null` (falls back to surface) | Prompt pill background color (hex). Only applied if a per-prompt `backgroundColor` is not defined in the prompt configuration. |
 | `--welcome-prompt-text-color` | `colors.welcomePrompt.textColor` | `String?` | `null` (falls back to `onSurface`) | Prompt pill text color (hex) |
 
+### Colors - Prompt Suggestions
+
+| CSS Variable | Kotlin Property | Type | Default | Description |
+|--------------|-----------------|------|---------|-------------|
+| `--suggestion-background-color` | `colors.promptSuggestion.backgroundColor` | `String?` | `null` (falls back to `--color-container` then hardcoded light/dark value) | Prompt suggestion chip background color (hex) |
+| `--suggestion-text-color` | `colors.promptSuggestion.textColor` | `String?` | `null` (falls back to `--message-concierge-text` then `onSurface`) | Prompt suggestion chip text and icon color (hex) |
+
 ### Colors - Circular Citations
 
 | CSS Variable | Kotlin Property | Type | Default | Description |
@@ -633,11 +679,37 @@ Visual styling using CSS-like variable names. All properties in the `theme` obje
 | `--feedback-icon-btn-background` | `colors.feedback.iconButtonBackground` | `String` | `"#FFFFFF"` | Feedback button background (hex) |
 | `--feedback-icon-btn-hover-background` | `colors.feedback.iconButtonHoverBackground` | `String` | `"#F5F5F5"` | Feedback button hover background (hex) |
 
+#### Feedback Dialog Colors
+
+These tokens style the feedback dialog (modal card and action bottom sheet).
+
+| CSS Variable | Kotlin Property | Type | Default | Description |
+|--------------|-----------------|------|---------|-------------|
+| `--feedback-sheet-background-color` | `colors.feedback.sheetBackground` | `String?` | Falls back to `colors.background` | Dialog background fill; also applied to the notes editor. |
+| `--feedback-title-text-color` | `colors.feedback.titleText` | `String?` | Falls back to `colors.onBackground` / `colors.primary.text` | Dialog title color. |
+| `--feedback-question-text-color` | `colors.feedback.questionText` | `String?` | Falls back to the title color | Dialog question color. |
+| `--feedback-options-text-color` | `colors.feedback.optionsText` | `String?` | Falls back to the title color | Checkbox option label color. |
+| `--feedback-checkbox-border-color` | `colors.feedback.checkboxBorder` | `String?` | `"#7F7F7F"` (light) / `"#B0B0B0"` (dark) | Checkbox unchecked outline color. Also used for the notes editor outline. |
+| `--feedback-drag-handle-color` | `colors.feedback.dragHandle` | `String?` | `"#CCCCCC"` | Drag handle color. Only visible in action mode. |
+| `--feedback-submit-button-fill-color` | `colors.feedback.submitButtonFill` | `String?` | Falls back to `colors.button.primaryBackground` | Submit button fill color. |
+| `--feedback-submit-button-text-color` | `colors.feedback.submitButtonText` | `String?` | Falls back to `colors.button.primaryText` | Submit button text color. |
+| `--feedback-cancel-button-fill-color` | `colors.feedback.cancelButtonFill` | `String?` | `null` (transparent; outline style) | Cancel button fill. `null` = transparent (outline style); set to a color for a solid fill. The cancel button border is always applied — set `--feedback-cancel-button-border-width` to `0` to suppress it. Also tints the X close icon. |
+| `--feedback-cancel-button-text-color` | `colors.feedback.cancelButtonText` | `String?` | Falls back to `colors.button.secondaryText` | Cancel button label color. |
+| `--feedback-cancel-button-border-color` | `colors.feedback.cancelButtonBorder` | `String?` | Falls back to `colors.button.secondaryBorder` | Cancel button outline color. Applied whenever `--feedback-cancel-button-border-width` > `0`, regardless of whether `cancelButtonFill` is set. |
+
+> **Contrast note:** When `--feedback-sheet-background-color` is pinned, also set `--feedback-title-text-color`, `--feedback-question-text-color`, and `--feedback-options-text-color` to maintain text contrast. System defaults track the device palette, not the themed surface.
+
 ### Colors - Disclaimer
 
 | CSS Variable | Kotlin Property | Type | Default | Description |
 |--------------|-----------------|------|---------|-------------|
 | `--disclaimer-color` | `colors.disclaimer` | `String` | `"#757575"` | Disclaimer text color (hex) |
+
+### Colors - Thinking Animation
+
+| CSS Variable | Kotlin Property | Type | Default | Description |
+|--------------|-----------------|------|---------|-------------|
+| `--thinking-dot-color` | `colors.thinking.dotColor` | `String?` | `null` (falls back to `--color-primary` at 70% opacity) | Color of the thinking indicator dots (hex) |
 
 ### Colors - Extended Product Cards
 
@@ -653,6 +725,14 @@ Used when `behavior.productCard.cardStyle` is `"productDetail"`.
 | `--product-card-badge-text-color` | `cssLayout.productCardBadgeTextColor` | `String` | `"#FFFFFF"` | Badge text color (hex) |
 | `--product-card-badge-background-color` | `cssLayout.productCardBadgeBackgroundColor` | `String` | primary color | Badge background (hex) |
 | `--product-card-was-price-color` | `cssLayout.productCardWasPriceColor` | `String` | `"#6E6E6E"` | "Was" price text color (hex) |
+
+### Colors - CTA Button
+
+| CSS Variable | Kotlin Property | Type | Default | Description |
+|--------------|-----------------|------|---------|-------------|
+|| `--cta-button-background-color` | `colors.ctaButton.background` | `String` | `"#EDEDED"` | CTA button background color (hex) |
+|| `--cta-button-text-color` | `colors.ctaButton.text` | `String` | `"#191F1C"` | CTA button label text color (hex) |
+|| `--cta-button-icon-color` | `colors.ctaButton.iconColor` | `String` | `"#161313"` | CTA button icon color (hex) |
 
 ### Layout - Input
 
@@ -675,6 +755,8 @@ Used when `behavior.productCard.cardStyle` is `"productDetail"`.
 | `--message-border-radius` | `cssLayout.messageBorderRadius` | `Double` | `10.0` | Message bubble corner radius (dp) |
 | `--message-padding` | `cssLayout.messagePadding` | `List<Double>` | `[8, 16]` | Message content padding (dp) |
 | `--message-max-width` | `cssLayout.messageMaxWidth` | `Double?` | `null` | Max message width (dp or %) |
+| `--agent-icon-size` | `cssLayout.agentIconSize` | `Double?` | `39.0` | Size (dp) of the agent icon shown to the left of agent messages. Also determines the start offset applied to product cards and prompt suggestion chips so they align with the message text column. |
+| `--agent-icon-spacing` | `cssLayout.agentIconSpacing` | `Double?` | `12.0` | Horizontal gap (dp) between the agent icon and the message card. Also contributes to the start offset of product cards and prompt suggestion chips. |
 
 ### Layout - Chat
 
@@ -717,7 +799,7 @@ When `behavior.productCard.cardStyle` is `"productDetail"`, product recommendati
 | `--product-card-text-top-padding` | `cssLayout.productCardTextTopPadding` | `Double` | `24.0` | Top padding for card text content (dp) |
 | `--product-card-text-bottom-padding` | `cssLayout.productCardTextBottomPadding` | `Double` | `16.0` | Bottom padding for card text content (dp) |
 | `--product-card-text-spacing` | `cssLayout.productCardTextSpacing` | `Double` | `8.0` | Gap between title and subtitle (dp) |
-| `--product-card-carousel-horizontal-padding` | `cssLayout.productCardCarouselHorizontalPadding` | `Double` | `4.0` | Carousel horizontal padding (dp) |
+| `--product-card-carousel-horizontal-padding` | `cssLayout.productCardCarouselHorizontalPadding` | `Double` | `4.0` | Horizontal padding (dp) applied to both edges of the product card carousel container. When not set, falls back to `chatHistoryPadding`. |
 | `--product-card-carousel-spacing` | `cssLayout.productCardCarouselSpacing` | `Double` | `12.0` | Spacing between carousel cards (dp) |
 
 ### Layout - Buttons
@@ -738,6 +820,33 @@ When `behavior.productCard.cardStyle` is `"productDetail"`, product recommendati
 |--------------|-----------------|------|---------|-------------|
 | `--feedback-container-gap` | `cssLayout.feedbackContainerGap` | `Double` | `4.0` | Gap between feedback buttons (dp) |
 | `--feedback-icon-btn-size-desktop` | `components.feedback.iconButtonSizeDesktop` | `Double` | `32.0` | Feedback button hit target size (dp) |
+
+#### Feedback Dialog Layout
+
+These tokens style the feedback dialog layout (modal card and action bottom sheet).
+
+| CSS Variable | Kotlin Property | Type | Default | Description |
+|--------------|-----------------|------|---------|-------------|
+| `--feedback-submit-button-border-radius` | `cssLayout.feedbackSubmitButtonBorderRadius` | `Double?` | `10.0` | Submit button corner radius (dp). |
+| `--feedback-cancel-button-border-radius` | `cssLayout.feedbackCancelButtonBorderRadius` | `Double?` | `10.0` | Cancel button corner radius (dp). |
+| `--feedback-cancel-button-border-width` | `cssLayout.feedbackCancelButtonBorderWidth` | `Double?` | `1.0` | Cancel button outline width (dp). |
+| `--feedback-submit-button-font-weight` | `cssLayout.feedbackSubmitButtonFontWeight` | `Int?` | `600` | Submit button label font weight. |
+| `--feedback-cancel-button-font-weight` | `cssLayout.feedbackCancelButtonFontWeight` | `Int?` | `600` | Cancel button label font weight. |
+| `--feedback-checkbox-border-radius` | `cssLayout.feedbackCheckboxBorderRadius` | `Double?` | `6.0` | Checkbox corner radius (dp). Also used for the notes editor corner radius. |
+| `--feedback-title-text-align` | `cssLayout.feedbackTitleTextAlign` | `ConciergeTextAlignment?` | `null` (`START`) | Feedback dialog title alignment. Accepts `"start"` / `"leading"` / `"left"`, `"center"` / `"justify"`, or `"end"` / `"trailing"` / `"right"`. Case-insensitive; unknown values fall back to `START`. |
+| `--feedback-title-font-size` | `cssLayout.feedbackTitleFontSize` | `Double?` | `22.0` | Title font size (sp). |
+
+### Components - Feedback
+
+Non-CSS `components.feedback` overrides for the feedback dialog.
+
+| JSON Key | Type | Default | Description |
+|----------|------|---------|-------------|
+| `components.feedback.iconButtonSizeDesktop` | number | `32` | Feedback icon button hit target size (dp). Mirrors `--feedback-icon-btn-size-desktop`. |
+| `components.feedback.positiveNotesEnabled` | boolean | `true` | Notes field visibility for positive-sentiment modal. Not applied in action mode. |
+| `components.feedback.negativeNotesEnabled` | boolean | `true` | Notes field visibility for negative-sentiment modal. Not applied in action mode. |
+
+> **Note:** The notes field is only available in `"modal"` display mode, gated by `components.feedback.positiveNotesEnabled` / `negativeNotesEnabled`.
 
 ### Layout - Citations
 
@@ -769,6 +878,18 @@ When `behavior.productCard.cardStyle` is `"productDetail"`, product recommendati
 | `--welcome-prompts-top-spacing` | `cssLayout.welcomePromptsTopSpacing` | `Double` | `8.0` | Spacing above prompt list (dp) |
 | `--welcome-prompt-padding` | `cssLayout.welcomePromptPadding` | `Double` | `0.0` | Inner padding for prompt pills (dp) |
 | `--welcome-prompt-corner-radius` | `cssLayout.welcomePromptCornerRadius` | `Double` | `8.0` | Prompt pill corner radius (dp) |
+| `--suggestion-item-border-radius` | `cssLayout.suggestionItemBorderRadius` | `Double` | `10.0` | Prompt suggestion chip corner radius (dp) |
+
+### Layout - Thinking Animation
+
+| CSS Variable | Kotlin Property | Type | Default | Description |
+|--------------|-----------------|------|---------|-------------|
+| `--thinking-dot-size` | `cssLayout.thinkingDotSize` | `Double` | `8.0` | Diameter of each thinking indicator dot (dp) |
+| `--thinking-dot-spacing` | `cssLayout.thinkingDotSpacing` | `Double` | `8.0` | Space between thinking indicator dots (dp) |
+| `--thinking-bubble-border-radius` | `cssLayout.thinkingBubbleBorderRadius` | `Double` | `8.0` | Corner radius of the thinking bubble (dp) |
+| `--thinking-bubble-padding-horizontal` | `cssLayout.thinkingBubblePaddingHorizontal` | `Double` | `16.0` | Horizontal inner padding of the thinking bubble (dp) |
+| `--thinking-bubble-padding-vertical` | `cssLayout.thinkingBubblePaddingVertical` | `Double` | `8.0` | Vertical inner padding of the thinking bubble (dp) |
+| `--thinking-dot-vertical-alignment` | `cssLayout.thinkingDotVerticalAlignment` | `String` | `"center"` | Vertical alignment of the thinking dots row: `"top"`, `"center"`, or `"bottom"` |
 
 ---
 
@@ -788,7 +909,8 @@ When `behavior.productCard.cardStyle` is `"productDetail"`, product recommendati
       "carouselStyle": "paged"
     },
     "productCard": {
-      "cardStyle": "actionButton"
+      "cardStyle": "actionButton",
+      "cardsAlignment": "center"
     },
     "input": {
       "enableVoiceInput": true,
@@ -798,7 +920,8 @@ When `behavior.productCard.cardStyle` is `"productDetail"`, product recommendati
     },
     "chat": {
       "messageAlignment": "left",
-      "messageWidth": "100%"
+      "messageWidth": "100%",
+      "userMessageBubbleStyle": "balloon"
     },
     "privacyNotice": {
       "title": "Privacy Notice",
@@ -908,11 +1031,22 @@ When `behavior.productCard.cardStyle` is `"productDetail"`, product recommendati
     "--welcome-prompt-background-color": "#F5F5F5",
     "--welcome-prompt-text-color": "#000000",
     "--welcome-prompt-spacing": "8px",
+    "--suggestion-background-color": "#F0F0F0",
+    "--suggestion-text-color": "#131313",
+    "--suggestion-item-border-radius": "10px",
+    "--thinking-dot-color": "#1B6B58",
+    "--thinking-dot-size": "8px",
+    "--thinking-dot-spacing": "8px",
+    "--thinking-bubble-border-radius": "8px",
+    "--thinking-bubble-padding-horizontal": "16px",
+    "--thinking-bubble-padding-vertical": "8px",
+    "--thinking-dot-vertical-alignment": "center",
     "--welcome-title-bottom-spacing": "6px",
     "--welcome-prompts-top-spacing": "12px",
     "--font-family": "",
     "--color-primary": "#EB1000",
     "--color-text": "#131313",
+    "--color-container": "#F0F0F0",
     "--line-height-body": "1.75",
     "--main-container-background": "#FFFFFF",
     "--main-container-bottom-background": "#FFFFFF",
@@ -929,6 +1063,8 @@ When `behavior.productCard.cardStyle` is `"productDetail"`, product recommendati
     "--message-max-width": "100%",
     "--message-border-radius": "10px",
     "--message-padding": "8px 16px",
+    "--agent-icon-size": "39px",
+    "--agent-icon-spacing": "12px",
 
     "--chat-interface-max-width": "768px",
     "--chat-history-padding": "16px",
@@ -978,8 +1114,28 @@ When `behavior.productCard.cardStyle` is `"productDetail"`, product recommendati
     "--citations-text-color": "#000000",
 
     "--feedback-icon-btn-background": "#FFFFFF",
+    "--feedback-icon-btn-hover-background": "#F5F5F5",
     "--feedback-icon-btn-size-desktop": "32px",
     "--feedback-container-gap": "4px",
+    "--feedback-sheet-background-color": "#FFFFFF",
+    "--feedback-title-text-color": "#131313",
+    "--feedback-question-text-color": "#424242",
+    "--feedback-options-text-color": "#131313",
+    "--feedback-checkbox-border-color": "#131313",
+    "--feedback-drag-handle-color": "#CCCCCC",
+    "--feedback-submit-button-fill-color": "#006554",
+    "--feedback-submit-button-text-color": "#FFFFFF",
+    "--feedback-submit-button-border-radius": "10px",
+    "--feedback-submit-button-font-weight": "600",
+    "--feedback-cancel-button-fill-color": "#006554",
+    "--feedback-cancel-button-text-color": "#006554",
+    "--feedback-cancel-button-border-color": "#006554",
+    "--feedback-cancel-button-border-width": "1px",
+    "--feedback-cancel-button-border-radius": "10px",
+    "--feedback-cancel-button-font-weight": "600",
+    "--feedback-checkbox-border-radius": "6px",
+    "--feedback-title-text-align": "start",
+    "--feedback-title-font-size": "22px",
 
     "--multimodal-card-box-shadow": "none",
     "--border-radius-card": "16px",
@@ -1065,12 +1221,14 @@ This section documents which properties are fully implemented, partially impleme
 | `behavior.multimodalCarousel.cardClickAction` | ⚠️ | Parsed but not implemented in carousel composables | - |
 | `behavior.multimodalCarousel.carouselStyle` | ✅ | Switches between paged (prev/next/dots) and continuous scroll | `ProductCarousel` |
 | `behavior.productCard.cardStyle` | ✅ | Switches between action-button cards and extended product-detail cards | `RecommendationCards`, `ProductCarousel` |
+| `behavior.productCard.cardsAlignment` | ✅ | Controls horizontal alignment of product cards (`"start"`, `"center"`, `"end"`) | `RecommendationCards` |
 | `behavior.input.enableVoiceInput` | ✅ | Controls mic button visibility | `InputActionButtons` |
 | `behavior.input.sendButtonStyle` | ✅ | `"default"` (paper airplane) or `"arrow"` (filled circle with upward arrow) | `SendButton` |
 | `behavior.input.disableMultiline` | ✅ | Restricts input to a single line when `true` | `ChatTextField` |
 | `behavior.input.showAiChatIcon` | ⚠️ | Parsed but not implemented | - |
-| `behavior.chat.messageAlignment` | ⚠️ | Parsed but not implemented | - |
+| `behavior.chat.messageAlignment` | ✅ | `"start"` (default, full-width), `"center"`, or `"end"` alignment for agent message bubbles | `ChatMessageItem` |
 | `behavior.chat.messageWidth` | ⚠️ | Parsed but not implemented | - |
+| `behavior.chat.userMessageBubbleStyle` | ✅ | `"default"` (all corners rounded) or `"balloon"` (square bottom-right corner) | `ChatMessageItem` |
 | `behavior.privacyNotice.title` | ⚠️ | Parsed but not implemented | - |
 | `behavior.privacyNotice.text` | ⚠️ | Parsed but not implemented | - |
 | `behavior.welcomeCard.closeButtonAlignment` | ✅ | `"start"` or `"end"` close button position | `ChatHeader` |
@@ -1124,6 +1282,8 @@ This section documents which properties are fully implemented, partially impleme
 |----------|--------|-------|---------|
 | `behavior.feedback.displayMode` | ✅ | Modal (default) or ActionSheet feedback dialog | `FeedbackDialog` |
 | `behavior.feedback.thumbsPlacement` | ✅ | Inline (default) or below sources accordion | `ChatFooter` |
+| `behavior.feedback.showCloseButton` | ✅ | Toggles the top-right X close button; defaults by `displayMode` when `null` | `FeedbackDialog` |
+| `behavior.feedback.showCancelButton` | ✅ | Toggles the Cancel button; defaults by `displayMode` when `null` | `FeedbackDialog` |
 | `behavior.citations.showLinkIcon` | ✅ | External link icon next to citation URLs | `ExpandedCitations` → `CitationItem` |
 
 ### Arrays
@@ -1138,7 +1298,7 @@ This section documents which properties are fully implemented, partially impleme
 
 | Property | Status | Notes | Used In |
 |----------|--------|-------|---------|
-| `assets.icons.company` | ⚠️ | Parsed but not rendered in any composable | - |
+| `assets.icons.company` | ✅ | Company icon displayed to the left of agent text message bubbles. When set, product cards and prompt suggestion chips are automatically offset to align with the agent text column. | `ChatMessageItem` (`RenderTextMessageWithIcon`, `RenderMixedMessage`) |
 
 ### Theme Tokens - Typography
 
@@ -1152,21 +1312,24 @@ This section documents which properties are fully implemented, partially impleme
 
 ### Theme Tokens - Colors
 
-**Note**: The following base colors are **not configurable via JSON themes**. They are hardcoded in `LightConciergeColors` / `DarkConciergeColors` and serve as fallback colors throughout the UI:
-
-* `secondary`
-* `onSurfaceVariant`
-* `container`
-* `outline`
-* `error`
-* `onError`
+**Note**: The following base colors are **not configurable via JSON themes**. They are hardcoded in `LightConciergeColors` / `DarkConciergeColors` and serve as fallback colors throughout the UI: `secondary`, `onSurfaceVariant`, `outline`, `error`, `onError`
 
 These colors are used internally by composables but cannot be customized in theme JSON files. See "Fallback Colors" section at the end.
 
+> **Note**: `container` (card/chip background) is now configurable via `--color-container`.
+
 | CSS Variable | Status | Notes | Used In |
 |--------------|--------|-------|---------|
-| `--color-primary` | ✅ | Primary brand color | Product buttons, feedback dialog submit button, feedback checkbox (checked fill), mic button icon, thinking animation |
+| `--thinking-dot-color` | ✅ | Thinking indicator dot color | `ConciergeThinking` |
+| `--thinking-dot-size` | ✅ | Thinking indicator dot size | `ConciergeThinking` |
+| `--thinking-dot-spacing` | ✅ | Spacing between thinking dots | `ConciergeThinking` |
+| `--thinking-bubble-border-radius` | ✅ | Thinking bubble corner radius | `ChatMessageItem` |
+| `--thinking-bubble-padding-horizontal` | ✅ | Thinking bubble horizontal padding | `ChatMessageItem` |
+| `--thinking-bubble-padding-vertical` | ✅ | Thinking bubble vertical padding | `ChatMessageItem` |
+| `--thinking-dot-vertical-alignment` | ✅ | Vertical alignment of the thinking dots row | `ConciergeThinking` |
+| `--color-primary` | ✅ | Primary brand color | Product buttons, feedback dialog submit button, feedback checkbox (checked fill), mic button icon, thinking animation (fallback when `--thinking-dot-color` not set) |
 | `--color-text` | ✅ | Primary text color; used for body text on main background and for `micButtonColor` in parsed theme (mic icon uses `--color-primary` in UI) | `ChatHeader`, `WelcomeCard`, prompt suggestions (when theme loaded) |
+| `--color-container` | ✅ | Background for cards and container elements; fallback for prompt suggestion chips when `--suggestion-background-color` is not set | `ProductCard`, `PromptSuggestions`, `ChatInputPanel` (fallback) |
 | `--main-container-background` | ✅ | Main chat screen, welcome card, and feedback dialog background | `ChatScreen`, `WelcomeCard`, `FeedbackDialog` |
 | `--main-container-bottom-background` | ✅ | Bottom container/surface background | Input area, voice recording panel |
 | `--message-blocker-background` | ⚠️ | Parsed but not used in UI | - |
@@ -1198,10 +1361,23 @@ These colors are used internally by composables but cannot be customized in them
 | `--input-mic-recording-icon-color` | ✅ | Waveform animation color during recording | `MicButton`, `AnimatedAudioWave` |
 | `--welcome-prompt-background-color` | ✅ | Welcome prompt pill background | `SuggestedPromptItem` |
 | `--welcome-prompt-text-color` | ✅ | Welcome prompt pill text | `SuggestedPromptItem` |
+| `--suggestion-background-color` | ✅ | Prompt suggestion chip background | `PromptSuggestions` |
+| `--suggestion-text-color` | ✅ | Prompt suggestion chip text and icon color | `PromptSuggestions` |
 | `--citations-background-color` | ✅ | Citation pill background | `CircularCitation` |
 | `--citations-text-color` | ✅ | Citation pill (badge) text | `CircularCitation` |
 | `--feedback-icon-btn-background` | ✅ | Thumbs up/down button background | `FeedbackComponents` |
 | `--feedback-icon-btn-hover-background` | ⚠️ | Parsed but no hover states on Android | - |
+| `--feedback-sheet-background-color` | ✅ | Feedback dialog sheet/modal card background + notes editor fill | `FeedbackDialog` |
+| `--feedback-title-text-color` | ✅ | Feedback dialog title text | `FeedbackDialog` |
+| `--feedback-question-text-color` | ✅ | Feedback dialog question text | `FeedbackDialog` |
+| `--feedback-options-text-color` | ✅ | Feedback checkbox option labels | `FeedbackDialog` |
+| `--feedback-checkbox-border-color` | ✅ | Checkbox unchecked outline + notes editor outline | `FeedbackDialog` |
+| `--feedback-drag-handle-color` | ✅ | Action-sheet drag handle | `FeedbackDialog` |
+| `--feedback-submit-button-fill-color` | ✅ | Submit button fill | `FeedbackDialog` |
+| `--feedback-submit-button-text-color` | ✅ | Submit button text | `FeedbackDialog` |
+| `--feedback-cancel-button-fill-color` | ✅ | Cancel button fill + X close icon tint | `FeedbackDialog` |
+| `--feedback-cancel-button-text-color` | ✅ | Cancel button text | `FeedbackDialog` |
+| `--feedback-cancel-button-border-color` | ✅ | Cancel button outline | `FeedbackDialog` |
 | `--disclaimer-color` | ✅ | Disclaimer text color | `ConciergeDisclaimer` (DisclaimerStyle) |
 | `--cta-button-background-color` | ✅ | CTA button background color | `CtaButton` |
 | `--cta-button-text-color` | ✅ | CTA button label text color | `CtaButton` |
@@ -1230,9 +1406,11 @@ Note: The feedback dialog checkbox uses `--color-primary` for the check box fill
 | `--input-button-width` | ⚠️ | Parsed but not used in composables | - |
 | `--input-button-border-radius` | ⚠️ | Parsed but not used in composables | - |
 | `--input-box-shadow` | ⚠️ | Parsed but shadows not rendered | - |
-| `--message-border-radius` | ⚠️ | Parsed but not used in composables | - |
+| `--message-border-radius` | ✅ | Corner radius for all message bubbles; applies to both user and agent bubbles | `ChatMessageItem` |
 | `--message-padding` | ⚠️ | Parsed but not used in composables | - |
 | `--message-max-width` | ⚠️ | Parsed but not used in composables | - |
+| `--agent-icon-size` | ✅ | Size of agent icon next to agent messages | `ChatMessageItem` (`RenderTextMessageWithIcon`) |
+| `--agent-icon-spacing` | ✅ | Gap between agent icon and message card | `ChatMessageItem` (`RenderTextMessageWithIcon`) |
 | `--chat-interface-max-width` | ⚠️ | Parsed but not used in composables | - |
 | `--chat-history-padding` | ⚠️ | Parsed but not used in composables | - |
 | `--chat-history-padding-top-expanded` | ⚠️ | Parsed but not used in composables | - |
@@ -1258,7 +1436,7 @@ Note: The feedback dialog checkbox uses `--color-primary` for the check box fill
 | `--product-card-text-top-padding` | ✅ | Extended product card text top padding | `ExtendedProductCard` |
 | `--product-card-text-bottom-padding` | ✅ | Extended product card text bottom padding | `ExtendedProductCard` |
 | `--product-card-text-spacing` | ✅ | Gap between title and subtitle | `ExtendedProductCard` |
-| `--product-card-carousel-horizontal-padding` | ✅ | Carousel horizontal padding | `ProductCarousel` |
+| `--product-card-carousel-horizontal-padding` | ✅ | Horizontal padding applied to carousel container edges; falls back to `chatHistoryPadding` when not set | `ProductCarousel` |
 | `--product-card-carousel-spacing` | ✅ | Spacing between carousel cards | `ProductCarousel` |
 | `--button-height-s` | ⚠️ | Parsed but not used in composables | - |
 | `--cta-button-border-radius` | ✅ | CTA button corner radius | `CtaButton` |
@@ -1269,6 +1447,14 @@ Note: The feedback dialog checkbox uses `--color-primary` for the check box fill
 | `--cta-button-icon-size` | ✅ | CTA button icon size | `CtaButton` |
 | `--feedback-container-gap` | ⚠️ | Parsed but not used in composables | - |
 | `--feedback-icon-btn-size-desktop` | ⚠️ | Parsed but not used in composables | - |
+| `--feedback-submit-button-border-radius` | ✅ | Submit button corner radius | `FeedbackDialog` |
+| `--feedback-submit-button-font-weight` | ✅ | Submit button label weight | `FeedbackDialog` |
+| `--feedback-cancel-button-border-radius` | ✅ | Cancel button corner radius | `FeedbackDialog` |
+| `--feedback-cancel-button-border-width` | ✅ | Cancel button outline width | `FeedbackDialog` |
+| `--feedback-cancel-button-font-weight` | ✅ | Cancel button label weight | `FeedbackDialog` |
+| `--feedback-checkbox-border-radius` | ✅ | Checkbox + notes editor corner radius | `FeedbackDialog` |
+| `--feedback-title-text-align` | ✅ | Feedback dialog title alignment | `FeedbackDialog` |
+| `--feedback-title-font-size` | ✅ | Feedback dialog title size | `FeedbackDialog` |
 | `--citations-text-font-weight` | ⚠️ | Parsed but not used in composables | - |
 | `--citations-desktop-button-font-size` | ✅ | Citation pill text size | `CircularCitation` |
 | `--disclaimer-font-size` | ✅ | Disclaimer text size (sp) | `ConciergeDisclaimer` (DisclaimerStyle) |
@@ -1285,6 +1471,7 @@ Note: The feedback dialog checkbox uses `--color-primary` for the check box fill
 | `--welcome-prompts-top-spacing` | ✅ | Spacing above prompt list | `WelcomeCard` |
 | `--welcome-prompt-padding` | ✅ | Inner padding for prompt pills | `SuggestedPromptItem` |
 | `--welcome-prompt-corner-radius` | ✅ | Prompt pill corner radius | `SuggestedPromptItem` |
+| `--suggestion-item-border-radius` | ✅ | Prompt suggestion chip corner radius | `PromptSuggestions` |
 
 ### Unsupported CSS Variables
 
@@ -1307,7 +1494,7 @@ The following colors from `LightConciergeColors` / `DarkConciergeColors` are har
 |-------|---------|---------------------|
 | `secondary` | Secondary accent color (currently unused) | - |
 | `onSurfaceVariant` | Muted text and icons for secondary UI elements | `ChatFooter`, `FeedbackDialog` (unchecked checkboxes) |
-| `container` | Background for cards and container elements | `ProductCard`, `PromptSuggestions`, message bubbles (fallback), `ChatInputPanel` (fallback) |
+| `container` | Background for cards and container elements — configurable via `--color-container` | `ProductCard`, `PromptSuggestions`, message bubbles (fallback), `ChatInputPanel` (fallback) |
 | `outline` | Borders, separators, and outline elements | `ChatFooter` separator, `ProductActionButtons` (secondary button fallback), `FeedbackDialog` text field border, `ProductCarousel` nav buttons |
 | `error` | Error state background | `ErrorOverlay` background |
 | `onError` | Error state text | `ErrorOverlay` message text |
@@ -1359,6 +1546,7 @@ When creating themes for the Android SDK, focus on these **actively used** prope
 * `behavior.input.enableVoiceInput` - Show/hide microphone button
 * `behavior.input.sendButtonStyle` - `"default"` (paper airplane) or `"arrow"` (filled circle with upward arrow)
 * `behavior.productCard.cardStyle` - Use `"productDetail"` for extended product cards (image, badge, name, subtitle, price)
+* `behavior.productCard.cardsAlignment` - Horizontal alignment of product cards: `"start"` (left), `"center"` (default), or `"end"` (right)
 * `behavior.multimodalCarousel.carouselStyle` - Use `"paged"` for prev/next/dots or `"scroll"` for continuous scroll
 * `behavior.welcomeCard.closeButtonAlignment` - Close button position (`"start"` or `"end"`)
 * `behavior.welcomeCard.promptFullWidth` - Full-width cards vs compact pill chips

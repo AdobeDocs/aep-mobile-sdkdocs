@@ -126,33 +126,46 @@ module.exports = {
                      {
                         title: 'Adobe Brand Concierge',
                         path: '/edge/adobe-brand-concierge/',
-                        pages: [{
+                        pages: [
+                            {
                                 title: "Overview",
                                 path: "/edge/adobe-brand-concierge/"
                             },
                             {
-                                title: "Getting started (Android)",
-                                path: "/edge/adobe-brand-concierge/android/getting-started"
+                                title: "Android",
+                                path: "/edge/adobe-brand-concierge/android/implementation-guide",
+                                pages: [
+                                    {
+                                        title: "Implementation guide",
+                                        path: "/edge/adobe-brand-concierge/android/implementation-guide"
+                                    },
+                                    {
+                                        title: "API reference",
+                                        path: "/edge/adobe-brand-concierge/android/api-reference"
+                                    },
+                                    {
+                                        title: "Style guide",
+                                        path: "/edge/adobe-brand-concierge/android/style-guide"
+                                    }
+                                ]
                             },
                             {
-                                title: "Getting started (iOS)",
-                                path: "/edge/adobe-brand-concierge/ios/getting-started"
-                            },
-                            {
-                                title: "Implementation guide (Android)",
-                                path: "/edge/adobe-brand-concierge/android/implementation-guide"
-                            },
-                            {
-                                title: "Implementation guide (iOS)",
-                                path: "/edge/adobe-brand-concierge/ios/implementation-guide"
-                            },
-                            {
-                                title: "Style guide (Android)",
-                                path: "/edge/adobe-brand-concierge/android/style-guide"
-                            },
-                            {
-                                title: "Style guide (iOS)",
-                                path: "/edge/adobe-brand-concierge/ios/style-guide"
+                                title: "iOS",
+                                path: "/edge/adobe-brand-concierge/ios/implementation-guide",
+                                pages: [
+                                    {
+                                        title: "Implementation guide",
+                                        path: "/edge/adobe-brand-concierge/ios/implementation-guide"
+                                    },
+                                    {
+                                        title: "API reference",
+                                        path: "/edge/adobe-brand-concierge/ios/api-reference"
+                                    },
+                                    {
+                                        title: "Style guide",
+                                        path: "/edge/adobe-brand-concierge/ios/style-guide"
+                                    }
+                                ]
                             },
                             {
                                 title: "Release notes",

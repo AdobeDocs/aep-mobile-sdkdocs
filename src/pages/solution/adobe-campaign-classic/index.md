@@ -31,19 +31,25 @@ You can retrieve your Campaign Classic registration or tracking endpoint URLs in
 
 #### Registration endpoints
 
-Type the registration endpoint URL(s) for your Campaign Classic instances. You can specify up to three unique endpoints for your development, staging, and production environments.
+Type the registration endpoint URL(s) for your Campaign Classic instances. You can specify up to three unique endpoints for your development, staging, and production environments. Registration endpoints are **required** for all three environments before the configuration can be saved.
 
 <InlineAlert variant="warning" slots="text"/>
 
-For this extension, the registration endpoint URLs should be entered **without** a prefixing `https://.`
+For this extension, the registration endpoint URLs must be entered as **hostnames without protocol prefixes** (for example, use `mkt.campaign.adobe.com` instead of `https://mkt.campaign.adobe.com`).
 
-#### Tracking endpoints
+#### Default tracking endpoints
 
-Type the tracking endpoint URL(s) for your Campaign Classic instances. Like the registration URLs, you can specify up to three unique endpoints for your development, staging, and production environments.
+Type the default tracking endpoint URL(s) for your Campaign Classic instances. Like the registration URLs, you can specify up to three unique endpoints for your development, staging, and production environments. Default tracking endpoints are **required** for all three environments before the configuration can be saved.
 
 <InlineAlert variant="warning" slots="text"/>
 
-For this extension, the tracking endpoint URLs should be entered **without** a prefixing `https://.`
+For this extension, the tracking endpoint URLs must be entered as **hostnames without protocol prefixes** (for example, use `mkt.campaign.adobe.com` instead of `https://mkt.campaign.adobe.com`).
+
+#### Tracking Endpoints Mapping
+
+Each environment (development, staging, and production) supports an optional list of tracking endpoint mappings. Each mapping consists of an **identifier** and an **endpoint**, where the endpoint must be a hostname without a protocol prefix. Use tracking endpoint mappings to route tracking requests to different servers based on a given identifier.
+
+To add a mapping, enter an identifier and endpoint in the input row and select the **+** button. Saved mappings appear below the input row and can be removed individually. The mappings are stored as a JSON array of `{identifier, endpoint}` pairs.
 
 #### Integration key (iOS)
 
@@ -55,7 +61,7 @@ You can specify up to three unique Android integration keys for your development
 
 #### Request timeout
 
-The request timeout is the amount of time, in seconds, to wait for a response from the registration or tracking endpoint before timing out. The SDK default timeout value is 30 seconds.
+The request timeout is the amount of time, in seconds, to wait for a response from the registration or tracking endpoint before timing out. The SDK default timeout value is 30 seconds. Valid values range from 0 to 30.
 
 ## Add the Campaign Classic extension to your app
 
@@ -92,8 +98,9 @@ To update SDK configuration programmatically, use the following information to c
 | Key | Required | Description | Data Type |
 | :--- | :--- | :--- | :--- |
 | `build.environment` | Yes | Specifies which environment to use (prod, dev, or staging) when sending registration and tracking information. It is also used to specify which mobile app integration key to use. | String |
-| `campaignclassic.timeout` | No | Specifies the amount of time to wait for a response from the Campaign Classic registration or tracking server. | Integer |
-| `campaignclassic.marketingServer` | Yes | Sets the marketing server, which receives registration requests. | String |
-| `campaignclassic.trackingServer` | Yes | Sets the tracking server, which receives tracking requests. | String |
+| `campaignclassic.timeout` | No | Specifies the amount of time to wait for a response from the Campaign Classic registration or tracking server. Default is 30 seconds, with a valid range of 0 to 30. | Integer |
+| `campaignclassic.marketingServer` | Yes | Sets the marketing server, which receives registration requests. Must be a hostname without a protocol prefix. | String |
+| `campaignclassic.trackingServer` | Yes | Sets the tracking server, which receives tracking requests. Must be a hostname without a protocol prefix. | String |
+| `campaignclassic.trackingEndpointsMapping` | No | A JSON array string of tracking endpoint mappings. Each entry is an object with `identifier` and `endpoint` fields, where the endpoint must be a hostname without a protocol prefix. Default is `[]`. | String |
 | `campaignclassic.ios.integrationKey` | Yes | Sets the iOS mobile app integration key, which links the app to an iOS application campaign in Campaign Classic. | String |
 | `campaignclassic.android.integrationKey` | Yes | Sets the Android mobile app integration key, which links the app to an Android application campaign in Campaign Classic. | String |
