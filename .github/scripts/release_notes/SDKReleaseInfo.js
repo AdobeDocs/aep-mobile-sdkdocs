@@ -224,6 +224,8 @@ function standardizeExtensionName(extensionName) {
             return EXTENSION_ENUM.NOTIFICATION_CONTENT;
         case extensionName === "notificationbuilder":
             return EXTENSION_ENUM.NOTIFICATION_BUILDER;
+        case extensionName === "concierge":
+            return EXTENSION_ENUM.CONCIERGE;
         default:
             throw Error("unsupported extension name : " + extensionName)
     }

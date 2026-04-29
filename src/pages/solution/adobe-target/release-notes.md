@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## April 7, 2026
+
+### iOS Target 5.1.0
+
+* Added timeout parameter to the prefetchContent API.
+
 ## March 28, 2025
 
 ### React Native Target 7.0.0

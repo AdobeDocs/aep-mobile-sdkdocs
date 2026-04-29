@@ -36,4 +36,5 @@ This documents lists details about the public classes and enums available in Mes
 * [Schema Class - ContentCardSchemaData](./content-card-schema-data.md)
 * [Schema Class - HtmlContentSchemaData](./html-content-schema-data.md)
 * [Schema Class - InAppSchemaData](./inapp-schema-data.md)
+* [Schema Class - InboxContentSchemaData](./inbox-content-schema-data.md)
 * [Schema Class - JsonContentSchemaData](./json-content-schema-data.md)

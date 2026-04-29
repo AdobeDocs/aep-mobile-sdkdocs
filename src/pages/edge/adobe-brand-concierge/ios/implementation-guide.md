@@ -25,7 +25,6 @@ Internally, `Concierge.show(...)` dispatches an event in the Adobe Experience Pl
 Your app needs the following Experience Platform SDKs to be available and registered:
 
 * **AEPCore** (MobileCore; Configuration shared state from `configureWith(appId:)`)
-* **AEPEdge**
 * **AEPEdgeIdentity**
 * **AEPBrandConcierge**
 
@@ -40,20 +39,89 @@ Speech to text uses iOS Speech and microphone APIs. Add these to your app `Info.
 * **`NSMicrophoneUsageDescription`**
 * **`NSSpeechRecognitionUsageDescription`**
 
+The SDK handles permission requests internally when the user taps the microphone button; no additional permission-request code is required from the host app.
+
+---
+
+## Installation
+
+Add Brand Concierge alongside the other AEP SDK extensions using Swift Package Manager, CocoaPods, or by adding the XCFramework directly.
+
+### Swift Package Manager
+
+To add the package from Xcode, select **File -> Add Package Dependencies…** and enter `https://github.com/adobe/aepsdk-concierge-ios.git`.
+
+To add it via a `Package.swift` file instead, add the package to your dependencies:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/adobe/aepsdk-concierge-ios.git", .upToNextMajor(from: "5.0.0")),
+    .package(url: "https://github.com/adobe/aepsdk-core-ios.git", .upToNextMajor(from: "5.7.0")),
+    .package(url: "https://github.com/adobe/aepsdk-edgeidentity-ios.git", .upToNextMajor(from: "5.0.0"))
+]
+```
+
+Then add the products to the target's dependencies:
+
+```swift
+.product(name: "AEPBrandConcierge", package: "aepsdk-concierge-ios"),
+.product(name: "AEPCore", package: "aepsdk-core-ios"),
+.product(name: "AEPEdgeIdentity", package: "aepsdk-edgeidentity-ios"),
+```
+
+### CocoaPods
+
+Add the following to the app's `Podfile`:
+
+```ruby
+pod 'AEPBrandConcierge', '~> 5.0'
+pod 'AEPCore', '~> 5.7'
+pod 'AEPEdgeIdentity', '~> 5.0'
+```
+
+Then run `pod install`.
+
+### Binaries
+
+To add the XCFramework directly, run the following from the repository root:
+
+```bash
+make archive
+```
+
+This generates `AEPBrandConcierge.xcframework` under the `build` folder. Drag and drop it into your app target in Xcode.
+
 ---
 
 ## Configuration
 
-### Step 1: Set up the Adobe Experience Platform Mobile SDK
+### Step 1: Register the Brand Concierge extension
 
-Follow the [Adobe Experience Platform Mobile SDK getting started guide](/src/pages/home/getting-started/) to set up the base SDK integration used by Concierge.
+Import the required frameworks and register the extensions in `application(_:didFinishLaunchingWithOptions:)` in your `AppDelegate`:
 
-The required extensions are:
+```swift
+import AEPBrandConcierge
+import AEPCore
+import AEPEdgeIdentity
+import UIKit
 
-* AEPCore
-* AEPEdge
-* AEPEdgeIdentity
-* AEPBrandConcierge
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        let extensions = [
+            Concierge.self,
+            Identity.self
+        ]
+
+        MobileCore.registerExtensions(extensions) {
+            MobileCore.configureWith(appId: "YOUR_APP_ID")
+        }
+
+        return true
+    }
+}
+```
+
+Replace `YOUR_APP_ID` with your mobile property App ID from Adobe Data Collection. For full setup instructions see the [Adobe Experience Platform Mobile SDK getting started guide](/src/pages/home/getting-started/).
 
 ### Step 2: Validate the Brand Concierge configuration keys
 
@@ -70,7 +138,7 @@ Brand Concierge expects the following keys in the Configuration shared state:
 * **`concierge.server`**: String (server host or base domain for Concierge requests)
 * **`concierge.configId`**: String (datastream ID)
 
-The ECID is read from the Edge Identity shared state.
+The ECID is read from the Edge Identity shared state. Surfaces are not a Configuration key; they are supplied per session via the `surfaces:` parameter on `Concierge.wrap(...)`, `Concierge.show(...)`, or `Concierge.present(on:...)`.
 
 Another option for validation is to use Adobe Assurance. Refer to the [Mobile SDK validation guide](/src/pages/home/getting-started/validate/) for more information.
 
@@ -115,7 +183,11 @@ Button("Chat") {
 }
 ```
 
-Optional: provide **speech capture** (default is created internally if not passed) and **text to speech** by passing a `TextSpeaking` implementation (text to speech is off by default unless you supply one).
+`Concierge.show()` also accepts optional parameters:
+
+* `speechCapturer`: A `SpeechCapturing` implementation for voice input (a default is created internally if not passed).
+* `textSpeaker`: A `TextSpeaking` implementation for text-to-speech (off by default unless you supply one).
+* `handleLink`: A callback invoked when a link is tapped in the chat. See [Link Handling](#link-handling) for details.
 
 ### Option B — Floating button (built-in)
 
@@ -126,6 +198,12 @@ Concierge.wrap(AppRootView(), surfaces: ["my-surface"]) // hideButton defaults t
 ```
 
 This shows a floating button in the bottom trailing corner; tapping it calls `Concierge.show(surfaces:)`.
+
+`Concierge.wrap()` also accepts optional parameters:
+
+* `title`: Title shown in the chat header.
+* `subtitle`: Subtitle shown under the title.
+* `handleLink`: A callback invoked when a link is tapped in the chat. See [Link Handling](#link-handling) for details.
 
 ### Closing the UI
 
@@ -165,6 +243,95 @@ Concierge.hide()
 
 ---
 
+## Link Handling
+
+### Universal Links
+
+To have the SDK open http/https URLs natively in your app instead of the in-app WebView, configure [Associated Domains](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_developer_associated-domains) for your app and host an `apple-app-site-association` file on your domain. When the domain is verified, tapping a link for that domain in the chat will navigate within your app instead of the WebView.
+
+Alternatively, use the `handleLink` callback to intercept specific domains and handle them with custom navigation logic without requiring domain verification.
+
+### Default behavior
+
+When a user taps a link in the chat, the SDK routes it through `ConciergeLinkHandler` using the following flow:
+
+1. **Custom scheme URLs** (e.g. `myapp://`, `mailto:`, `tel:`) — opened immediately via the system (deep link).
+2. **http/https URLs** — the system is first asked to open the URL as a universal link. If the host app has registered the URL's domain via [Associated Domains](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_developer_associated-domains), the app handles the navigation natively. Otherwise, the URL falls back to the in-app WebView overlay.
+
+**Default link handling flow:** `handleLink` callback (if provided) -> deep link / universal link check -> WebView overlay.
+
+### Custom link handling
+
+All three public APIs accept an optional `handleLink` closure that is called before the SDK's default routing. Return `true` to claim the URL (the SDK takes no further action). Return `false` to let the SDK handle it normally.
+
+**SwiftUI — `Concierge.wrap()`:**
+
+```swift
+Concierge.wrap(
+    AppRootView(),
+    surfaces: ["my-surface"],
+    hideButton: true,
+    handleLink: { url in
+        if url.scheme == "myapp" {
+            Concierge.hide()
+            // Navigate to in-app destination
+            return true
+        }
+        return false
+    }
+)
+```
+
+**SwiftUI — `Concierge.show()`:**
+
+```swift
+Concierge.show(
+    surfaces: ["my-surface"],
+    title: "Concierge",
+    subtitle: "Powered by Adobe",
+    handleLink: { url in
+        if url.host == "myapp.example.com" {
+            Concierge.hide()
+            return true
+        }
+        return false
+    }
+)
+```
+
+**UIKit — `Concierge.present(on:)`:**
+
+```swift
+Concierge.present(
+    on: self,
+    surfaces: ["my-surface"],
+    title: "Concierge",
+    subtitle: "Powered by Adobe",
+    handleLink: { url in
+        if url.scheme == "myapp" {
+            Concierge.hide()
+            // Navigate using UIKit navigation
+            return true
+        }
+        return false
+    }
+)
+```
+
+When `handleLink` returns `true`, the SDK does not open the WebView overlay or perform any further link routing. When it returns `false` or is not provided, the SDK uses the default flow (deep link check -> universal link check -> WebView overlay).
+
+### In-app WebView overlay link handling
+
+Links clicked inside the in-app WebView overlay (for example, links on a page that has already loaded in the overlay) follow their own routing rules, independent of the `handleLink` callback:
+
+* **`http` / `https` / `about` URLs**: Loaded within the WebView.
+* **Non-web schemes** (for example, `mailto:`, `tel:`, `sms:`, `myapp://`): The WebView cancels the navigation and forwards the URL to the system via `UIApplication.open`, which routes it to the appropriate handler app (Mail, Phone, Messages, a custom deep-link destination, etc.).
+
+No additional configuration is required for this behavior. Universal-link forwarding for in-chat links (the `handleLink` -> universal link -> WebView fallback described above) applies only to links tapped in chat messages; it is not re-evaluated for links inside an already loaded WebView page.
+
+---
+
 ## Next steps
 
+* [API reference (iOS)](/edge/adobe-brand-concierge/ios/api-reference/) — Full parameter documentation for all public APIs.
 * [Style guide (iOS)](/edge/adobe-brand-concierge/ios/style-guide/) — Theme JSON reference and implementation status for iOS.

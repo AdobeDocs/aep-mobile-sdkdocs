@@ -7,6 +7,161 @@ Keywords:
 
 # Release notes
 
+## April 21, 2026
+
+### React Native Messaging 7.4.0
+
+* Added UI components for Journey Optimizer Inbox.
+* Added UI components for Content Cards.
+* Updated Messaging APIs to load inbox and content card data for use with the new UI.
+
+## April 17, 2026
+
+### iOS Brand Concierge 5.5.0
+
+* Added comprehensive theming support for the feedback dialog, including background, text, checkbox, drag handle, and button styling.
+* Added behavior flags to independently control the visibility of the X close and Cancel buttons in the feedback dialog.
+* Extended text alignment tokens to accept additional value aliases.
+* Improved markdown paragraph rendering to correctly preserve paragraph boundaries when paragraphs begin with inline formatting.
+* Fixed citation badge spacing to keep the citation marker adjacent to trailing punctuation.
+* Expanded and corrected implementation guide documentation.
+
+### Android Brand Concierge 3.5.0
+
+* Removed the `showNotes` behavior flag and `--feedback-notes-text-color` CSS token. This is a breaking change for apps referencing these properties.
+
+### Android Brand Concierge 3.4.0
+
+* Added comprehensive theming support for the feedback dialog, including background, text, checkbox, drag handle, and button styling.
+* Added behavior flags to independently control the visibility of the X close and Cancel buttons in the feedback dialog.
+* Extended text alignment tokens to accept additional value aliases.
+* Improved feedback dialog layout consistency between modal card and bottom sheet display modes.
+
+## April 14, 2026
+
+### Android Brand Concierge 3.3.1
+
+* Updated link handling logic to route URIs (e.g., custom schemes, app links, intent://, mailto:, etc.) through Android system handlers to ensure correct routing of non-HTTP(S) schemes.
+
+## April 13, 2026
+
+### iOS Brand Concierge 5.4.0
+
+* Added theming and layout support for the thinking/loading animation displayed while the agent processes a response.
+* Added support for displaying a bundled or remote icon next to agent text responses.
+* Added prompt suggestions theming and customization support.
+* Added a speech balloon style option for chat bubbles.
+* Added Chat state persistence. Chat state now persists across hide/show cycles and resets automatically on session TTL expiry.
+* Refactored chat message and carousel padding/layout for more consistent spacing.
+
+### Android Brand Concierge 3.3.0
+
+* Added theming and layout support for the thinking/loading animation displayed while the agent processes a response.
+* Added support for displaying a bundled or remote icon next to agent text responses.
+* Added prompt suggestions theming and customization support.
+* Added a speech balloon style option for chat bubbles.
+* Fixed overlap issues with the software keyboard.
+* Fixed keyboard dismissal. The software keyboard is now automatically dismissed when voice recording starts.
+
+## April 9, 2026
+
+### iOS Messaging 5.13.0
+
+* Fixed Content Card caching issue stale content card cleared.
+
+### Android Messaging 3.9.0
+
+* Fixed Content card caching issue, stale content cards cleaned.
+
+## April 7, 2026
+
+### iOS Target 5.1.0
+
+* Added timeout parameter to the prefetchContent API.
+
+### iOS Messaging 5.12.0
+
+* Added AEPMessagingNotification framework for rich push media support
+* Added support for message inbox for content cards.
+
+## April 3, 2026
+
+### Android BOM 3.18.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.17.0) | BOM (3.18.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:messaging** | **3.7.0** | **3.8.0**|
+| com.adobe.marketing.mobile:analytics | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:assurance | 3.0.7 | 3.0.7 |
+| com.adobe.marketing.mobile:audience | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaign | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.4 | 3.1.4 |
+| com.adobe.marketing.mobile:core | 3.6.0 | 3.6.0 |
+| com.adobe.marketing.mobile:edge | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:identity | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:media | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:optimize | 3.6.2 | 3.6.2 |
+| com.adobe.marketing.mobile:places | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android Messaging 3.8.0
+
+* Added support for message inbox for content cards.
+
+## March 27, 2026
+
+### iOS Brand Concierge 5.3.0
+
+* Improved UI consistency, theming, and product card presentation
+* Added CTA button support and enhanced user input/feedback experience
+* Improved parsing and rendering of multimodal content and lists
+
+### Android Brand Concierge 3.2.0
+
+* Improved UI consistency, theming, and product card presentation
+* Added CTA button support and enhanced user input/feedback experience
+* Improved parsing and rendering of multimodal content and lists
+* Added test coverage for parsing and theming components
+
+## March 18, 2026
+
+### iOS Brand Concierge 5.2.0
+
+* Added an optional `handleLink` callback to `Concierge.show()`, `Concierge.wrap()`, and `Concierge.present(on:)` giving host apps control over link resolution, with automatic fallback to universal link verification and in-app WebView.
+* Fixed an issue where in-app WebView page navigation could reload the original URL instead of allowing normal page transitions.
+
+## March 12, 2026
+
+### Android Brand Concierge 3.1.0
+
+* Added a new `productDetail` carousel card style featuring a large image, badge overlay, product name, subtitle, current price, and "was" price. Can be displayed as a standalone card or within a carousel.
+* Added a new `carouselStyle` behavior property (`"scroll"` or `"paged"`) and supporting theme CSS variables for product card styling.
+* Added an optional `handleLink` callback to `ConciergeChat` giving host apps control over link resolution, with automatic fallback to Android App Link verification and in-app WebView.
+
+### iOS Brand Concierge 5.1.0
+
+* Added a new `productDetail` carousel card style featuring a large image, badge overlay, product name, subtitle, current price, and "was" price. Can be displayed as a standalone card or within a carousel.
+* Added a new `carouselStyle` behavior property (`"scroll"` or `"paged"`) and supporting theme CSS variables for product card styling.
+* Added universal link routing support for http/https URLs in `ConciergeLinkHandler`.
+
 ## March 3, 2026
 
 ### Android Brand Concierge 3.0.3

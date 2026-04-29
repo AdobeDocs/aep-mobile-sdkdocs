@@ -48,6 +48,8 @@ keywords:
 
 * [AepCardUIState](./public-classes/state/aepcarduistate.md)
 * [SmallImageCardUIState](./public-classes/state/smallimagecarduistate.md)
+* [LargeImageCardUIState](./public-classes/state/largeimagecarduistate.md)
+* [ImageOnlyCardUIState](./public-classes/state/imageonlycarduistate.md)
 
 ## Styles
 
@@ -59,16 +61,21 @@ keywords:
 * [AepRowStyle](./public-classes/styles/aeprowstyle.md)
 * [AepTextStyle](./public-classes/styles/aeptextstyle.md)
 * [SmallImageUIStyle](./public-classes/styles/smallimageuistyle.md)
+* [LargeImageUIStyle](./public-classes/styles/largeimageuistyle.md)
+* [ImageOnlyUIStyle](./public-classes/styles/imageonlyuistyle.md)
 
 ## UI Models
 
 * [AepButton](./public-classes/ui-models/aepbutton.md)
+* [AepColor](./public-classes/ui-models/aepcolor.md)
 * [AepIcon](./public-classes/ui-models/aepicon.md)
 * [AepImage](./public-classes/ui-models/aepimage.md)
 * [AepText](./public-classes/ui-models/aeptext.md)
 * [AepUITemplate](./public-classes/ui-models/aepuitemplate.md)
 * [AepUITemplateType](./public-classes/ui-models/aepuitemplatetype.md)
 * [SmallImageTemplate](./public-classes/ui-models/smallimagetemplate.md)
+* [LargeImageTemplate](./public-classes/ui-models/largeimagetemplate.md)
+* [ImageOnlyTemplate](./public-classes/ui-models/imageonlytemplate.md)
 
 ## Tutorials
 
