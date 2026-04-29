@@ -110,7 +110,7 @@ Legend:
 ✗ = Not present
 ```
 
-Events stay on disk during the entire batching window. Once we hand off to Edge, their persistence takes over.
+Events stay on disk during the entire batching window. Once events are handed off to Edge, their persistence takes over.
 
 ## Crash Scenarios
 
@@ -159,7 +159,7 @@ Result: ✅ ZERO DATA LOSS - Edge guarantees delivery
 
 ## Edge Network Handoff
 
-Once we dispatch to Edge extension:
+Once events are dispatched to Edge extension:
 
 ```text
 ContentAnalytics → runtime.dispatch(event) → Event Hub → Edge Extension
@@ -186,7 +186,7 @@ iOS
 
 <Tabs query="platform=ios&task=metrics-calculation"/>
 
-This avoids state sync issues * we just count events on flush. If the app crashes, the restored events give us the same metrics.
+This avoids state sync issues. Just events are counted on flush. If the app crashes, the restored events give the same metrics.
 
 ## Configuration
 
@@ -354,7 +354,7 @@ The SDK uses a callback chain to decouple components while maintaining type safe
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-Callbacks avoid circular dependencies - BatchCoordinator doesn't need to import Orchestrator. Also makes testing easier since we can inject mocks.
+Callbacks avoid circular dependencies - BatchCoordinator doesn't need to import Orchestrator. Also this makes testing easier since you can inject mocks.
 
 ### Logging
 

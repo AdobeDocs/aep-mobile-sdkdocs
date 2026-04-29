@@ -14,7 +14,7 @@ Experience tracking measures how users interact with complete experiences (combi
 
 ## Quick start
 
-You first register the experience. Then you can track the view of the experience, when the experience becomes visible. Or you can track the click on the experience, when the experience gets tapped.
+You first register the experience. Then you can track the view of the experience, when the experience becomes visible. Or you can track the interaction on the experience, when the experience gets clicked (tapped).
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -120,7 +120,7 @@ iOS
 
 ### Collection or feed
 
-Implementation of experience tracking fora collection or a feed.
+Implementation of experience tracking for a collection or a feed.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -139,7 +139,7 @@ Experience IDs are deterministic - the same content always produces the same ID.
 1. Sort text values alphabetically.
 1. Sort asset URLs alphabetically.
 1. Sort CTA values alphabetically.
-1. Join all with | separator (texts, then assets, then CTAs).
+1. Join all with `|` separator (texts, then assets, then CTAs).
 1. SHA-1 hash the combined string.
 1. Take first 12 hex characters.
 1. Prefix with `mobile-`.
@@ -347,7 +347,7 @@ When you register experiences, the featurization service analyzes the content an
 
 After featurization, Customer Journey Analytics can show which persuasion strategies work best in each location.
 
-Customer Journey Analytics report - persuasion strategy by location:
+Sample Customer Journey Analytics report - persuasion strategy by location:
 
 | Location | Persuasion strategy | Views | Click | CTR |
 |---|---|--:|--:|--:|
@@ -361,7 +361,7 @@ Insight: **Urgency** messaging performs best at checkout (+15% CTR), while **Soc
 
 ### Performance by content category
 
-Customer Journey Analytics report - asset category performance:
+Sample Customer Journey Analytics report - asset category performance:
 
 | Asset Category |   Location |   Views   | Engagement |
 |---|---|--:|--:|
@@ -376,8 +376,8 @@ Insight: **Lifestyle** imagery works on homepage, but **Product-focused** images
 
 1. You track: `registerExperience()` sends content to the featurization service.
 1. ML analyzes: service extracts persuasion strategy, tone, category, and more.
-1. Attributes stored: machine learning attributes are linked to the experience/asset.
-1. Customer Journey Analytics queries: Reports can segment by any machine learning attribute and location.
+1. Attributes are stored: machine learning attributes are linked to the experience/asset.
+1. Customer Journey Analytics queries: reports can segment by any machine learning attribute and location.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -393,7 +393,7 @@ In Customer Journey Analytics, you can then filter or group by persuasion strate
 
 ## Custom metrics with `additionalData`
 
-The `additionalData` parameter lets you attach custom metrics to tracking events. These appear in Customer Journey Analytics as additional dimensions or metrics.
+The `additionalData` parameter lets you attach custom metrics to tracking events. These custom metrics appear in Customer Journey Analytics as additional dimensions or metrics.
 
 ### Asset performance metrics
 
@@ -451,9 +451,9 @@ iOS
 | `experimentVariant`  |  String  |  A/B test variant ID.|
 | `deviceOrientation` |   String  |  `portrait` / `landscape`. |
 
-#### Customer Journey Analytics report with custom metric.
+#### Customer Journey Analytics report with custom metric
 
-For example average load time by asset location.
+For example, reporting on average load time by asset location.
 
 | Location |   Avg Load Time  |  Avg View Duration |
 |---|--:|--:|
@@ -461,7 +461,7 @@ For example average load time by asset location.
 | `product.gallery` |   85ms  |  8.5s |
 | `search.results` |   45ms  |  1.1s |
 
-Insight: Gallery images load slower but get 8x more viewing time.
+Insight: Gallery images load **slower** but get **eight times more viewing time.**
 
 ## Debugging with Assurance
 
@@ -485,7 +485,7 @@ iOS
 
 1. Track Asset Events
 
-    When you call trackAssetView() or trackAssetClick(), you'll see:
+    When you call `trackAssetView()` or `trackAssetClick()`, you'll see:
 
     ```json
     Event: Track Asset
@@ -526,7 +526,7 @@ iOS
         }
         ```
 
-    * When you call trackExperienceView() or trackExperienceClick():
+    * When you call `trackExperienceView()` or `trackExperienceClick()`:
 
         ```json
         Event: Track Experience

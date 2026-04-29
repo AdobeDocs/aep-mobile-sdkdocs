@@ -1130,6 +1130,31 @@ module.exports = {
                         ]
                     },
                     {
+                        title: "Adobe Content Analytics",
+                        path: "/solution/adobe-content-analytics/",
+                        pages: [{
+                                title: "Overview",
+                                path: "/solution/adobe-content-analytics/"
+                            },
+                            {
+                                title: "API reference",
+                                path: "/solution/adobe-content-analytics/api-reference"
+                            },
+                            {
+                                title: "Experience tracking",
+                                path: "/solution/adobe-content-analytics/experience-tracking"
+                            },
+                            {
+                                title: "Advanced configuration",
+                                path: "/solution/adobe-content-analytics/advanced-configuration"
+                            },
+                            {
+                                title: "Crash recovery",
+                                path: "/solution/adobe-content-analytics/crash-recovery"
+                            }
+                        ]
+                    },
+                    {
                         title: "Adobe Audience Manager",
                         path: "/solution/adobe-audience-manager/",
                         pages: [{
@@ -1197,31 +1222,6 @@ module.exports = {
                             {
                                 title: "Release notes",
                                 path: "/solution/adobe-campaign-standard/release-notes"
-                            }
-                        ]
-                    },
-                    {
-                        title: "Adobe Content Analytics",
-                        path: "/solution/adobe-content-analytics/",
-                        pages: [{
-                                title: "Overview",
-                                path: "/solution/adobe-content-analytics/"
-                            },
-                            {
-                                title: "API reference",
-                                path: "/solution/adobe-content-analytics/api-reference"
-                            },
-                            {
-                                title: "Experience tracking",
-                                path: "/solution/adobe-content-analytics/experience-tracking"
-                            },
-                            {
-                                title: "Advanced configuration",
-                                path: "/solution/adobe-content-analytics/advanced-configuration"
-                            },
-                            {
-                                title: "Crash recovery",
-                                path: "/solution/adobe-content-analytics/crash-recovery"
                             }
                         ]
                     },

@@ -15,7 +15,7 @@ This section details the publicly available API's for Content Analytics.
 
 ## registerExperience
 
-Registers an experience and returns an ID to track the experience.
+Registers an experience and return an ID to track the experience.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -29,7 +29,7 @@ iOS
 
 ## trackAsset
 
-Track an assets with an explicit defined interaction type.
+Tracks an asset with an explicit defined interaction type.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
@@ -85,7 +85,7 @@ iOS
 
 ## trackExperienceClick
 
-Track when an experience is clicked.
+Tracks when an experience is clicked.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -103,7 +103,7 @@ iOS
 
 ## trackExperienceView
 
-Track when an experience is viewed.
+Tracks when an experience is viewed.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -158,7 +158,7 @@ The following config settings are available. These settings can also be managed 
 | `configId` | String | N/A | [Custom datastream for Content Analytics events](/src/pages/solution/adobe-content-analytics/index.md#datastreams) (overrides edge.configId) |
 | `batchingEnabled` | Boolean | true | [Enable batching](/src/pages/solution/adobe-content-analytics/index.md#batching-settings) |
 | `maxBatchSize` | Integer | 10 | [Maximum events per batch](/src/pages/solution/adobe-content-analytics/index.md#batching-settings). |
-| `flushInterval` | Integer | 2000 | [Flush interval (in milliseconds)](/src/pages/solution/adobe-content-analytics/index.md#batching-settings) |
+| `flushInterval` | Integer | 2000 | [Flush interval (in milliseconds)](/src/pages/solution/adobe-content-analytics/index.md#batching-settings). |
 | `trackExperiences` | Boolean | true | [Enable experience tracking](/src/pages/solution/adobe-content-analytics/index.md#general-settings). |
 | `excludedAssetLocationsRegexp` | String | - | [Asset location regex pattern](/src/pages/solution/adobe-content-analytics/index.md#exclusions). |
 | `excludedAssetUrlsRegexp` | String | - | [Asset URL regex pattern](/src/pages/solution/adobe-content-analytics/index.md#exclusions). |

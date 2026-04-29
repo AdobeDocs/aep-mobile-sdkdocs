@@ -142,7 +142,7 @@ iOS
 
 ### Data Deletion
 
-To delete data, use resetIdentities() to reset identities, clear cache and queue.
+To delete data, use `resetIdentities()` to reset identities, clear cache and queue.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 
