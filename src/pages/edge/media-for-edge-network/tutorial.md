@@ -11,8 +11,6 @@ keywords:
 - Kepler
 ---
 
-import Tabs from './tabs/tutorial.md'
-
 # AEP Vega SDK integration tutorial
 
 This document outlines the integration of Adobe Streaming Media for Edge Network on Vega OS-based Amazon Fire TV devices using the AEP Vega SDK. The AEP Vega SDK provides TypeScript packages (`@adobe/vega-aepcore` and `@adobe/vega-aepmedia`) for sending Experience events and tracking media playback through the Adobe Experience Platform Edge Network.
@@ -41,11 +39,23 @@ npm install @adobe/vega-aepcore @adobe/vega-aepmedia
 
 Initialize the AEP Vega SDK using `AEPSDK.initialize()` with your Edge datastream ID and the Media extension registered.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+<CodeBlock slots="heading, code" repeat="1" languages="TypeScript" />
 
-AEP Vega SDK
+### Example
 
-<Tabs query="platform=vega&task=initialize"/>
+```typescript
+import { AEPSDK, LogLevel } from '@adobe/vega-aepcore';
+import { Media } from '@adobe/vega-aepmedia';
+
+// Initialize the SDK with configuration and media extension
+AEPSDK.initialize({
+    config: {
+        "edge.configId": "<YOUR_DATASTREAM_ID>"
+    },
+    logLevel: LogLevel.DEBUG,
+    extensions: [Media.EXTENSION]
+});
+```
 
 ### Configuration keys
 
@@ -63,21 +73,33 @@ The `edge.configId` (datastream ID) must be provided in the `config` object duri
 
 Use `AEPSDK.updateConfiguration()` to update SDK configuration after initialization.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+<CodeBlock slots="heading, code" repeat="1" languages="TypeScript" />
 
-AEP Vega SDK
+### Example
 
-<Tabs query="platform=vega&task=update-configuration"/>
+```typescript
+AEPSDK.updateConfiguration({
+    "edge.domain": "your-company.data.adobedc.net"
+});
+```
 
 ## Set log level
 
 Use the `AEPSDK.setLogLevel()` API with the `LogLevel` enum to control the verbosity of SDK logs during development and debugging.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+<CodeBlock slots="heading, code" repeat="1" languages="TypeScript" />
 
-AEP Vega SDK
+### Example
 
-<Tabs query="platform=vega&task=set-log-level"/>
+```typescript
+import { AEPSDK, LogLevel } from '@adobe/vega-aepcore';
+
+// Set log level to VERBOSE for development
+AEPSDK.setLogLevel(LogLevel.VERBOSE);
+
+// Set log level to ERROR for production
+// AEPSDK.setLogLevel(LogLevel.ERROR);
+```
 
 ### Supported log levels
 
@@ -92,21 +114,45 @@ AEP Vega SDK
 
 The SDK automatically generates and manages the Experience Cloud ID (ECID) for device identification. Use `AEPSDK.getExperienceCloudId()` to retrieve the current ECID. This API returns a `Promise` that resolves to the ECID string, or `null` if not yet available.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+<CodeBlock slots="heading, code" repeat="1" languages="TypeScript" />
 
-AEP Vega SDK
+### Example
 
-<Tabs query="platform=vega&task=get-ecid"/>
+```typescript
+// Using async/await
+const ecid = await AEPSDK.getExperienceCloudId();
+if (ecid) {
+    console.log("Experience Cloud ID: " + ecid);
+}
+
+// Using Promise
+AEPSDK.getExperienceCloudId().then((ecid) => {
+    if (ecid) {
+        console.log("Experience Cloud ID: " + ecid);
+    }
+});
+```
 
 ## Set consent preferences
 
 Use the `AEPSDK.setConsent()` API to send user consent preferences to the Edge Network following the Adobe 2.0 consent standard.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+<CodeBlock slots="heading, code" repeat="1" languages="TypeScript" />
 
-AEP Vega SDK
+### Example
 
-<Tabs query="platform=vega&task=set-consent"/>
+```typescript
+AEPSDK.setConsent({
+    consent: [{
+        standard: "Adobe",
+        version: "2.0",
+        value: {
+            collect: { val: "y" },
+            metadata: { time: new Date().toISOString() }
+        }
+    }]
+});
+```
 
 ## Send Experience events
 
@@ -114,11 +160,40 @@ Use the `AEPSDK.sendEvent()` API to send custom Experience events (non-media) to
 
 For cases where you need the Edge Network response, use `AEPSDK.sendEventWithResponse()` which returns a `Promise`.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+<CodeBlock slots="heading, code" repeat="2" languages="TypeScript, TypeScript" />
 
-AEP Vega SDK
+### sendEvent
 
-<Tabs query="platform=vega&task=send-event"/>
+```typescript
+AEPSDK.sendEvent({
+    xdm: {
+        eventType: "page.view",
+        someXdmKey: "someXdmValue"
+    },
+    data: {
+        customKey: "customValue"
+    }
+});
+```
+
+### sendEventWithResponse
+
+```typescript
+try {
+    const response = await AEPSDK.sendEventWithResponse({
+        xdm: {
+            eventType: "page.view",
+            someXdmKey: "someXdmValue"
+        },
+        data: {
+            customKey: "customValue"
+        }
+    });
+    console.log("Response: " + JSON.stringify(response));
+} catch (error) {
+    console.error("SendEvent Error: " + error);
+}
+```
 
 ## Track media playback
 
@@ -130,11 +205,31 @@ Before tracking media playback events, create a media session using `Media.creat
 
 Only one media session can be active at a time. You must end the current session (using `media.sessionComplete` or `media.sessionEnd`) before creating a new one.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+<CodeBlock slots="heading, code" repeat="1" languages="TypeScript" />
 
-AEP Vega SDK
+### Example
 
-<Tabs query="platform=vega&task=create-media-session"/>
+```typescript
+import { Media } from '@adobe/vega-aepmedia';
+
+Media.createMediaSession({
+    xdm: {
+        eventType: "media.sessionStart",
+        mediaCollection: {
+            playhead: 0,
+            sessionDetails: {
+                streamType: "video",
+                friendlyName: "Episode 1 - Pilot",
+                name: "episode-1",
+                length: 3600,
+                contentType: "vod",
+                channel: "My App Channel",
+                playerName: "Custom OTT Player"
+            }
+        }
+    }
+});
+```
 
 ### Media session details fields
 
@@ -153,11 +248,54 @@ AEP Vega SDK
 
 Once a media session is created, use `Media.sendMediaEvent()` to track media playback interactions. Each event requires an `eventType` and a `mediaCollection` object with the current `playhead` value.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+<CodeBlock slots="heading, code" repeat="1" languages="TypeScript" />
 
-AEP Vega SDK
+### Example
 
-<Tabs query="platform=vega&task=send-media-event"/>
+```typescript
+import { Media } from '@adobe/vega-aepmedia';
+
+// Signal that playback has started
+Media.sendMediaEvent({
+    xdm: {
+        eventType: "media.play",
+        mediaCollection: {
+            playhead: 0
+        }
+    }
+});
+
+// Send periodic playhead updates (ping events) during playback
+// These must be sent at least once per second
+Media.sendMediaEvent({
+    xdm: {
+        eventType: "media.ping",
+        mediaCollection: {
+            playhead: 15
+        }
+    }
+});
+
+// Signal that playback has been paused
+Media.sendMediaEvent({
+    xdm: {
+        eventType: "media.pauseStart",
+        mediaCollection: {
+            playhead: 30
+        }
+    }
+});
+
+// End the session when content finishes
+Media.sendMediaEvent({
+    xdm: {
+        eventType: "media.sessionComplete",
+        mediaCollection: {
+            playhead: 3600
+        }
+    }
+});
+```
 
 ### Supported media event types
 
@@ -189,8 +327,156 @@ During active playback, media ping events (`media.ping`) must be sent at least o
 
 The following example demonstrates a complete media tracking workflow, from SDK initialization through a media playback session.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+<CodeBlock slots="heading, code" repeat="1" languages="TypeScript" />
 
-AEP Vega SDK
+### Example
 
-<Tabs query="platform=vega&task=full-example"/>
+```typescript
+import { AEPSDK, LogLevel } from '@adobe/vega-aepcore';
+import { Media } from '@adobe/vega-aepmedia';
+
+// 1. Initialize and configure the SDK
+AEPSDK.initialize({
+    config: {
+        "edge.configId": "<YOUR_DATASTREAM_ID>"
+    },
+    logLevel: LogLevel.DEBUG,
+    extensions: [Media.EXTENSION]
+});
+
+// 2. Set user consent
+AEPSDK.setConsent({
+    consent: [{
+        standard: "Adobe",
+        version: "2.0",
+        value: {
+            collect: { val: "y" },
+            metadata: { time: new Date().toISOString() }
+        }
+    }]
+});
+
+// 3. Create a media session
+Media.createMediaSession({
+    xdm: {
+        eventType: "media.sessionStart",
+        mediaCollection: {
+            playhead: 0,
+            sessionDetails: {
+                streamType: "video",
+                friendlyName: "Episode 1 - Pilot",
+                name: "episode-1",
+                hasResume: false,
+                length: 3600,
+                contentType: "vod",
+                channel: "My App Channel",
+                playerName: "Custom OTT Player"
+            }
+        }
+    }
+});
+
+// 4. Signal playback has started
+Media.sendMediaEvent({
+    xdm: {
+        eventType: "media.play",
+        mediaCollection: {
+            playhead: 0
+        }
+    }
+});
+
+// 5. Track an ad break
+Media.sendMediaEvent({
+    xdm: {
+        eventType: "media.adBreakStart",
+        mediaCollection: {
+            playhead: 30,
+            advertisingPodDetails: {
+                friendlyName: "Pre-roll Ads",
+                index: 0,
+                offset: 0
+            }
+        }
+    }
+});
+
+Media.sendMediaEvent({
+    xdm: {
+        eventType: "media.adStart",
+        mediaCollection: {
+            playhead: 30,
+            advertisingDetails: {
+                friendlyName: "Ad 1",
+                name: "ad-001",
+                length: 15,
+                podPosition: 1
+            }
+        }
+    }
+});
+
+Media.sendMediaEvent({
+    xdm: {
+        eventType: "media.adComplete",
+        mediaCollection: {
+            playhead: 30
+        }
+    }
+});
+
+Media.sendMediaEvent({
+    xdm: {
+        eventType: "media.adBreakComplete",
+        mediaCollection: {
+            playhead: 30
+        }
+    }
+});
+
+// 6. Track a chapter
+Media.sendMediaEvent({
+    xdm: {
+        eventType: "media.chapterStart",
+        mediaCollection: {
+            playhead: 30,
+            chapterDetails: {
+                friendlyName: "Chapter 1",
+                index: 1,
+                length: 600,
+                offset: 30
+            }
+        }
+    }
+});
+
+// 7. Continue sending playhead updates during playback
+//    (must be sent at least once per second)
+Media.sendMediaEvent({
+    xdm: {
+        eventType: "media.ping",
+        mediaCollection: {
+            playhead: 120
+        }
+    }
+});
+
+Media.sendMediaEvent({
+    xdm: {
+        eventType: "media.chapterComplete",
+        mediaCollection: {
+            playhead: 630
+        }
+    }
+});
+
+// 8. Complete the session when content finishes
+Media.sendMediaEvent({
+    xdm: {
+        eventType: "media.sessionComplete",
+        mediaCollection: {
+            playhead: 3600
+        }
+    }
+});
+```
