@@ -84,6 +84,40 @@ Keywords:
 * Added AEPMessagingNotification framework for rich push media support
 * Added support for message inbox for content cards.
 
+### Vega OS Core 1.0.1
+
+This is the first stable release of the AEP Vega SDK Core, which exposes APIs to help developers integrate the Adobe Experience Platform solutions into Vega OS apps.
+
+Features:
+
+* **Adobe Experience Platform Edge Network integration:** Seamlessly send XDM Experience events to the Edge Network, and get greater control over data interactions by optionally registering a callback for Edge response handles.
+
+* **Automated ECID management:** Experience more efficient tracking and integration as the Experience Cloud ID (ECID) is automatically generated, persisted, and attached to every XDM Experience Event request.
+
+* **Consent management:** Personalize user experiences responsibly by sending user consent preferences to the Edge Network following the Adobe 2.0 consent standard.
+
+* **Runtime configuration and logging:** Initialize the SDK, update configuration on the fly, and control log verbosity to streamline development and debugging.
+
+For more information, refer to the documentation below:
+
+* [`@adobe/vega-aepcore`](https://www.npmjs.com/package/@adobe/vega-aepcore)
+* [Integration tutorial](../../edge/media-for-edge-network/tutorial.md)
+
+### Vega OS Media for Edge Network 1.0.1
+
+This is the first stable release of the AEP Vega SDK Media for Edge Network extension, which exposes APIs to help developers track media playback through the Adobe Experience Platform Edge Network on Vega OS.
+
+Features:
+
+* **Media session tracking:** Establish a media tracking session on the Edge Network using `Media.createMediaSession()`, with full session detail support including stream type, content type, channel, and player metadata.
+
+* **Comprehensive media event tracking:** Send playback interactions through `Media.sendMediaEvent()` — including play, pause, buffer, bitrate change, ad and chapter milestones, player state updates, errors, and session completion.
+
+For more information, refer to the documentation below:
+
+* [`@adobe/vega-aepmedia`](https://www.npmjs.com/package/@adobe/vega-aepmedia)
+* [Integration tutorial](../../edge/media-for-edge-network/tutorial.md)
+
 ## April 3, 2026
 
 ### Android BOM 3.18.0
