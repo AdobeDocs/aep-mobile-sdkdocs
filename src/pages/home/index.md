@@ -48,6 +48,7 @@ The Adobe Experience Platform Mobile SDK supports the following platforms:
 * [React Native](./current-sdk-versions.md#react-native)
 * [Flutter](./current-sdk-versions.md#flutter)
 * [Roku](./current-sdk-versions.md#roku)
+* [Vega OS](./current-sdk-versions.md#vega-os)
 
 ## Resources
 
