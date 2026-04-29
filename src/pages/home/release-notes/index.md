@@ -7,6 +7,72 @@ Keywords:
 
 # Release notes
 
+## April 21, 2026
+
+### React Native Messaging 7.4.0
+
+* Added UI components for Journey Optimizer Inbox.
+* Added UI components for Content Cards.
+* Updated Messaging APIs to load inbox and content card data for use with the new UI.
+
+## April 17, 2026
+
+### iOS Brand Concierge 5.5.0
+
+* Added comprehensive theming support for the feedback dialog, including background, text, checkbox, drag handle, and button styling.
+* Added behavior flags to independently control the visibility of the X close and Cancel buttons in the feedback dialog.
+* Extended text alignment tokens to accept additional value aliases.
+* Improved markdown paragraph rendering to correctly preserve paragraph boundaries when paragraphs begin with inline formatting.
+* Fixed citation badge spacing to keep the citation marker adjacent to trailing punctuation.
+* Expanded and corrected implementation guide documentation.
+
+### Android Brand Concierge 3.5.0
+
+* Removed the `showNotes` behavior flag and `--feedback-notes-text-color` CSS token. This is a breaking change for apps referencing these properties.
+
+### Android Brand Concierge 3.4.0
+
+* Added comprehensive theming support for the feedback dialog, including background, text, checkbox, drag handle, and button styling.
+* Added behavior flags to independently control the visibility of the X close and Cancel buttons in the feedback dialog.
+* Extended text alignment tokens to accept additional value aliases.
+* Improved feedback dialog layout consistency between modal card and bottom sheet display modes.
+
+## April 14, 2026
+
+### Android Brand Concierge 3.3.1
+
+* Updated link handling logic to route URIs (e.g., custom schemes, app links, intent://, mailto:, etc.) through Android system handlers to ensure correct routing of non-HTTP(S) schemes.
+
+## April 13, 2026
+
+### iOS Brand Concierge 5.4.0
+
+* Added theming and layout support for the thinking/loading animation displayed while the agent processes a response.
+* Added support for displaying a bundled or remote icon next to agent text responses.
+* Added prompt suggestions theming and customization support.
+* Added a speech balloon style option for chat bubbles.
+* Added Chat state persistence. Chat state now persists across hide/show cycles and resets automatically on session TTL expiry.
+* Refactored chat message and carousel padding/layout for more consistent spacing.
+
+### Android Brand Concierge 3.3.0
+
+* Added theming and layout support for the thinking/loading animation displayed while the agent processes a response.
+* Added support for displaying a bundled or remote icon next to agent text responses.
+* Added prompt suggestions theming and customization support.
+* Added a speech balloon style option for chat bubbles.
+* Fixed overlap issues with the software keyboard.
+* Fixed keyboard dismissal. The software keyboard is now automatically dismissed when voice recording starts.
+
+## April 9, 2026
+
+### iOS Messaging 5.13.0
+
+* Fixed Content Card caching issue stale content card cleared.
+
+### Android Messaging 3.9.0
+
+* Fixed Content card caching issue, stale content cards cleaned.
+
 ## April 7, 2026
 
 ### iOS Target 5.1.0
@@ -17,6 +83,40 @@ Keywords:
 
 * Added AEPMessagingNotification framework for rich push media support
 * Added support for message inbox for content cards.
+
+### Vega OS Core 1.0.1
+
+This is the first stable release of the AEP Vega SDK Core, which exposes APIs to help developers integrate the Adobe Experience Platform solutions into Vega OS apps.
+
+Features:
+
+* **Adobe Experience Platform Edge Network integration:** Seamlessly send XDM Experience events to the Edge Network, and get greater control over data interactions by optionally registering a callback for Edge response handles.
+
+* **Automated ECID management:** Experience more efficient tracking and integration as the Experience Cloud ID (ECID) is automatically generated, persisted, and attached to every XDM Experience Event request.
+
+* **Consent management:** Personalize user experiences responsibly by sending user consent preferences to the Edge Network following the Adobe 2.0 consent standard.
+
+* **Runtime configuration and logging:** Initialize the SDK, update configuration on the fly, and control log verbosity to streamline development and debugging.
+
+For more information, refer to the documentation below:
+
+* [`@adobe/vega-aepcore`](https://www.npmjs.com/package/@adobe/vega-aepcore)
+* [Integration tutorial](../../edge/media-for-edge-network/tutorial.md)
+
+### Vega OS Media for Edge Network 1.0.1
+
+This is the first stable release of the AEP Vega SDK Media for Edge Network extension, which exposes APIs to help developers track media playback through the Adobe Experience Platform Edge Network on Vega OS.
+
+Features:
+
+* **Media session tracking:** Establish a media tracking session on the Edge Network using `Media.createMediaSession()`, with full session detail support including stream type, content type, channel, and player metadata.
+
+* **Comprehensive media event tracking:** Send playback interactions through `Media.sendMediaEvent()` — including play, pause, buffer, bitrate change, ad and chapter milestones, player state updates, errors, and session completion.
+
+For more information, refer to the documentation below:
+
+* [`@adobe/vega-aepmedia`](https://www.npmjs.com/package/@adobe/vega-aepmedia)
+* [Integration tutorial](../../edge/media-for-edge-network/tutorial.md)
 
 ## April 3, 2026
 
