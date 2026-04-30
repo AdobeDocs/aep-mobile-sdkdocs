@@ -1,5 +1,5 @@
 ---
-title: Display Rich Notifications using AEPMessagingNotification
+title: Display Rich Notifications Using AEPMessagingNotification
 description: This document details how to display rich media push notifications on iOS using the AEPMessagingNotification framework for notifications generated from Adobe Journey Optimizer.
 keywords:
 - Adobe Journey Optimizer
@@ -10,7 +10,7 @@ keywords:
 - AEPMessagingNotification
 ---
 
-# Display Rich Notifications using AEPMessagingNotification
+# Display rich notifications using AEPMessagingNotification
 
 You must use a Notification Service app extension to download images or other media attachments for the notification before displaying it on user's iOS device.
 

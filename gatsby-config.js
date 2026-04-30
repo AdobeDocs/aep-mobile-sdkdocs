@@ -255,7 +255,7 @@ module.exports = {
                                                 path: "/edge/adobe-journey-optimizer/push-notification/ios/display-rich-notifications"
                                             },
                                             {
-                                                title: "Display rich notifications using AEPMessagingNotifi\u00ADcation",
+                                                title: "Display rich notifications using AEPMessagingNotification",
                                                 path: "/edge/adobe-journey-optimizer/push-notification/ios/display-rich-notifications-aep"
                                             },
                                             {
