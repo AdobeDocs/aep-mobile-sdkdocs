@@ -107,7 +107,7 @@ Tracks when an experience is viewed.
 
 <InlineAlert variant="info" slots="text"/>
 
-You must call [`registerExperience()`](#registerexperience) before you can track experience views. See the Experience Tracking Guide for detailed usage patterns.
+You must call [`registerExperience()`](#registerexperience) before you can track experience views. See the [Experience Tracking Guide](./experience-tracking.md) for detailed usage patterns.
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
 

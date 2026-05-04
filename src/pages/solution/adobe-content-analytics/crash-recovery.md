@@ -36,7 +36,7 @@ User tracks event
 
 **Responsibilities:**
 
-* Manages batching logic (count threshold + time-based flush)
+* Manages batching logic (count threshold and time-based flush)
 * Writes incoming events to disk immediately via `PersistentHitQueue`
 * Maintains in-memory event counters
 * Triggers flush when threshold reached (10 events or 5 seconds)
