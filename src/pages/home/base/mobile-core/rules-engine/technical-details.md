@@ -340,14 +340,14 @@ The consequences section of a rule lists the file names of each consequence obje
 
 | **Name** | **Value** | **Description** | **Payload Definition** |
 | :--- | :--- | :--- | :--- |
-| Analytics | `an` | Sends data to Analytics | [Analytics consequence detail definition](./consequence-details.md#analytics-consequence) |
-| In-App Message | `iam` | In-App Message | [In-App consequence detail definition](./consequence-details.md#in-app-message-consequence) |
-| Postback | `pb` | Send Postback(s) to a third-party URL | [Postback consequence detail definition](./consequence-details.md#postback-consequence) |
-| PII | `pii` | Sync PII with an https URL | [Sync PII consequence detail definition](./consequence-details.md#sync-pii-consequence) |
-| Open URL | `url` | Passes the provided URL to be opened by the platform that is most commonly used for app deep linking. | [Open URL consequence detail definition](./consequence-details.md#open-url-consequence) |
-| Client Side Profile | `csp` | Create or delete operations against the client-side profile. | [Profile consequence detail definition](./consequence-details.md#profile-consequence) |
-| Attach Data | `add` | Attaches key-value pairs to the EventData of an existing Event | [Attach data consequence detail definition](./consequence-details.md#attach-data-consequence) |
-| Modify Data | `mod` | Modifies data in the triggering event | [Modify data consequence detail definition](./consequence-details.md#modify-data-consequence) |
+| Analytics | `an` | Sends data to Analytics | [Analytics consequence detail definition](consequence-details.md#analytics-consequence) |
+| In-App Message | `iam` | In-App Message | [In-App consequence detail definition](consequence-details.md#in-app-message-consequence) |
+| Postback | `pb` | Send Postback(s) to a third-party URL | [Postback consequence detail definition](consequence-details.md#postback-consequence) |
+| PII | `pii` | Sync PII with an https URL | [Sync PII consequence detail definition](consequence-details.md#sync-pii-consequence) |
+| Open URL | `url` | Passes the provided URL to be opened by the platform that is most commonly used for app deep linking. | [Open URL consequence detail definition](consequence-details.md#open-url-consequence) |
+| Client Side Profile | `csp` | Create or delete operations against the client-side profile. | [Profile consequence detail definition](consequence-details.md#profile-consequence) |
+| Attach Data | `add` | Attaches key-value pairs to the EventData of an existing Event | [Attach data consequence detail definition](consequence-details.md#attach-data-consequence) |
+| Modify Data | `mod` | Modifies data in the triggering event | [Modify data consequence detail definition](consequence-details.md#modify-data-consequence) |
 | Schema | `schema` | Schema-based actions for easy parsing by AEP Mobile SDKs | |
 
 ## rules.json examples

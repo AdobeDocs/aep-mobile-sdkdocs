@@ -14,7 +14,7 @@ keywords:
 
 <InlineAlert variant="warning" slots="text"/>
 
-This configuration setting is only used in the Analytics use case, when using the [Lifecycle data content response](./event-reference.md#lifecycle-data-content-response) event to determine session length. <br/><br/> In the Platform use case, events are dispatched based on [Lifecycle Application Foreground](./event-reference.md#lifecycle-application-foreground) and [Lifecycle Application Background](./event-reference.md#lifecycle-application-background) and not on a set session timeout.
+This configuration setting is only used in the Analytics use case, when using the [Lifecycle data content response](event-reference.md#lifecycle-data-content-response) event to determine session length. <br/><br/> In the Platform use case, events are dispatched based on [Lifecycle Application Foreground](event-reference.md#lifecycle-application-foreground) and [Lifecycle Application Background](event-reference.md#lifecycle-application-background) and not on a set session timeout.
 
 Number of seconds that must elapse between the app entering the background and subsequently re-entering the foreground in order for the SDK to create a new session.
 

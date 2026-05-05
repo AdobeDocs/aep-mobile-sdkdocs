@@ -58,7 +58,7 @@ CocoaPods<br/>(iOS)
 
 ### Initialize Adobe Experience Platform SDK with Target Extension
 
-Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](../../home/getting-started/get-the-sdk.md#2-add-initialization-code) section of the getting started page.
 
 Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
 
@@ -132,13 +132,13 @@ When merging, the new keys in the mbox parameters or the profile parameters are 
 
 The Target extension supports persistent sessions. When a Target request is received, if a session ID does not exist, a new ID is generated and is sent in the request. This ID, with the Edge Host that is returned from Target, is kept in persistent storage for the configured `target.sessionTimeout` period. If the timeout value is not configured, the default value is 30 minutes.
 
-If no Target request is received during the configured `target.sessionTimeout` or if the [resetExperience](./api-reference.md#resetexperience) API is called, these variables are reset and removed from persistent storage.
+If no Target request is received during the configured `target.sessionTimeout` or if the [resetExperience](api-reference.md#resetexperience) API is called, these variables are reset and removed from persistent storage.
 
 ## Visual preview
 
 The visual preview mode allows you to easily perform end-to-end QA activities by enrolling and previewing these activities on your device. This mode does not require a specialized testing set up. To get started, set up a URL scheme and generate the preview links. For more information about setting up Target visual preview, see [Target mobile preview](https://experienceleague.adobe.com/docs/target/using/implement-target/mobile-apps/target-mobile-preview.html). For more information about setting URL schemes for iOS, see [Defining a Custom URL Scheme for Your App](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app). For more information about setting URL schemes for Android, see [Create Deep Links to App Content](https://developer.android.com/training/app-links/deep-linking).
 
-You can also set an application deep link that can be triggered when selections are made in the preview mode by using the [setPreviewRestartDeeplink](./api-reference.md#setpreviewrestartdeeplink) API.
+You can also set an application deep link that can be triggered when selections are made in the preview mode by using the [setPreviewRestartDeeplink](api-reference.md#setpreviewrestartdeeplink) API.
 
 To enter the preview visual mode, use the `collectLaunchInfo` API to enable the mode and select the red floating button that appears on the app screen. For more information, see [collectLaunchInfo](../../home/base/mobile-core/api-reference.md#collectlaunchinfo).
 
@@ -154,11 +154,11 @@ iOS
 
 ## Offer Prefetch
 
-The SDK can minimize the number of times it reaches out to Target servers to fetch offers by caching server responses. With a successful prefetch call for mbox locations, offer content is retrieved and cached in the SDK. This content is retrieved from the cache for all future [retrieveLocationContent](./api-reference.md#retrievelocationcontent) API calls for the specified mbox names. This prefetch process reduces the offer load time and network calls that were made to the Target servers, and the process allows Target to be notified which mbox was visited by the mobile app user.
+The SDK can minimize the number of times it reaches out to Target servers to fetch offers by caching server responses. With a successful prefetch call for mbox locations, offer content is retrieved and cached in the SDK. This content is retrieved from the cache for all future [retrieveLocationContent](api-reference.md#retrievelocationcontent) API calls for the specified mbox names. This prefetch process reduces the offer load time and network calls that were made to the Target servers, and the process allows Target to be notified which mbox was visited by the mobile app user.
 
 <InlineAlert variant="warning" slots="text"/>
 
-Prefetched offer content does not persist across application launches. The prefetch content is cached as long as the application lives in memory or until the API to clear the cache is called. For more information, see [clearPrefetchCache](./api-reference.md#clearprefetchcache).
+Prefetched offer content does not persist across application launches. The prefetch content is cached as long as the application lives in memory or until the API to clear the cache is called. For more information, see [clearPrefetchCache](api-reference.md#clearprefetchcache).
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -172,8 +172,8 @@ Once Analytics is listed as the reporting source for an activity on Target UI, A
 
 The A4T payload returned from Target servers is sent to Adobe Analytics in the following cases:
 
-* When one or more locations are retrieved using [retrieveLocationContent](../adobe-target/api-reference.md#retrievelocationcontent) API call.
-* When one or more prefetched locations are loaded and a subsequent [locationsDisplayed](./api-reference.md#displayedlocations) API call is made for the location(s).
+* When one or more locations are retrieved using [retrieveLocationContent](api-reference.md#retrievelocationcontent) API call.
+* When one or more prefetched locations are loaded and a subsequent [locationsDisplayed](api-reference.md#displayedlocations) API call is made for the location(s).
 
 <InlineAlert variant="warning" slots="text"/>
 

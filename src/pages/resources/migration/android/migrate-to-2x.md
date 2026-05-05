@@ -61,7 +61,7 @@ The Adobe SDK BOM artifact enables managing all compatible versions of Adobe Exp
 
 <InlineAlert variant="warning" slots="text"/>
 
-Using dynamic dependency versions is not recommended for production apps. Refer to this [page](../../../resources/manage-gradle-dependencies.md) for managing Gradle dependencies.
+Using dynamic dependency versions is not recommended for production apps. Refer to this [page](../../manage-gradle-dependencies.md) for managing Gradle dependencies.
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -123,8 +123,8 @@ The `registerExtension` API for each extension is deprecated in the 2.x version 
 
 | Removed API | Alternative API |
 | :------------- | :-------------- |
-| Target.locationsDisplayed | [Target.displayedLocations](../../../solution/adobe-target//api-reference.md) |
-| Target.locationClicked | [Target.clickedLocation](../../../solution/adobe-target//api-reference.md) |
+| Target.locationsDisplayed | [Target.displayedLocations](../../../solution/adobe-target/api-reference.md) |
+| Target.locationClicked | [Target.clickedLocation](../../../solution/adobe-target/api-reference.md) |
 | com.adobe.marketing.mobile.TargetRequest | Moved into **target** subpackage. Update import statements to reference **com.adobe.marketing.mobile.target.TargetRequest** |
 | com.adobe.marketing.mobile.TargetPrefetch | Moved into **target** subpackage. Update import statements to reference **com.adobe.marketing.mobile.target.TargetPrefetch** |
 | com.adobe.marketing.mobile.TargetOrder | Moved into **target** subpackage. Update import statements to reference **com.adobe.marketing.mobile.target.TargetOrder** |

@@ -47,7 +47,7 @@ Deep linking is the best way to connnect to an Assurance session when using the 
 
 <Variant platform="ios" task="implement-assurance" repeat="13"/>
 
-The [startSession](./api-reference.md#startsession) API needs to be called to begin an Adobe Experience Platform Assurance session. You should call this API when the app launches with a URL (see code snippet below for sample usage). When called, SDK displays a PIN authentication overlay to begin a session.
+The [startSession](api-reference.md#startsession) API needs to be called to begin an Adobe Experience Platform Assurance session. You should call this API when the app launches with a URL (see code snippet below for sample usage). When called, SDK displays a PIN authentication overlay to begin a session.
 
 #### Swift
 

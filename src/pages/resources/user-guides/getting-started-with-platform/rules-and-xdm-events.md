@@ -13,7 +13,7 @@ keywords:
 
 ## Prerequisites for this tutorial
 
-Before starting this tutorial, please read and follow the steps in the [sample XDM implementation tutorial](./sample-xdm-implementation.md), including downloading the sample application and setting up the required fields.
+Before starting this tutorial, please read and follow the steps in the [sample XDM implementation tutorial](sample-xdm-implementation.md), including downloading the sample application and setting up the required fields.
 
 ## Attach data to XDM events
 
@@ -98,7 +98,7 @@ Run the Sample app in a simulator or a device and generate product review XDM ev
 
 ### Validate the event data with AEP Assurance
 
-Connect to an Assurance Session to inspect that the Adobe Experience Platform Request Event has the correct data. To set up an Assurance session with the Sample app, follow the steps in the [using Adobe Experience Platform Assurance guide](./overview.md#using-aep-assurance).
+Connect to an Assurance Session to inspect that the Adobe Experience Platform Request Event has the correct data. To set up an Assurance session with the Sample app, follow the steps in the [using Adobe Experience Platform Assurance guide](overview.md#using-aep-assurance).
 
 * Once connected to Assurance, search for the Adobe Experience Platform Request Event in your session.
 * Check that the XDM data for the `product.review` event is correctly updated with the two new fields  `ratingDate` and `ratingSource`.

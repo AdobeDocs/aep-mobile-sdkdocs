@@ -154,8 +154,8 @@ In order to provide more control over URL handling from `UNNotificationResponse`
 | `handleNotificationResponse(_:applicationOpened:withCustomActionId:)` | `handleNotificationResponse(_:urlHandler:closure:)` |
 | `handleNotificationResponse(_:closure:)` | `handleNotificationResponse(_:urlHandler:closure:)` |
 
-For examples see [handleNotificationResponse](./../../../edge/adobe-journey-optimizer/api-reference#handlenotificationresponse).
+For examples see [handleNotificationResponse](../../../edge/adobe-journey-optimizer/api-reference.md#handlenotificationresponse).
 
 #### Optimize
 
-The `Proposition` class has been renamed to [`OptimizeProposition`](./../../../edge/adobe-journey-optimizer-decisioning/api-reference#optimizeproposition).  All references should be updated accordingly.
+The `Proposition` class has been renamed to [`OptimizeProposition`](../../../edge/adobe-journey-optimizer-decisioning/api-reference.md#optimizeproposition).  All references should be updated accordingly.

@@ -13,7 +13,7 @@ Welcome to the home of Adobe Experience Platform Mobile SDK documentation.
 
 Good to go for iOS 18 and Android 16
 
-The latest versions of the Adobe Experience Platform SDK for Android and iOS (Swift and Objective-C) have been tested for compatibility with the release versions of Google Android 16 and Apple iOS 18. See [Current SDK Versions](./current-sdk-versions.md) to find our latest SDK versions, or [release notes](./release-notes/index.md) for information on changes and updates.
+The latest versions of the Adobe Experience Platform SDK for Android and iOS (Swift and Objective-C) have been tested for compatibility with the release versions of Google Android 16 and Apple iOS 18. See [Current SDK Versions](current-sdk-versions.md) to find our latest SDK versions, or [release notes](release-notes/index.md) for information on changes and updates.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -43,16 +43,16 @@ Experience Platform Mobile SDKs are available for Android, iOS, and a [variety](
 
 The Adobe Experience Platform Mobile SDK supports the following platforms:
 
-* [Android](./current-sdk-versions.md#android)
-* [iOS](./current-sdk-versions.md#ios)
-* [React Native](./current-sdk-versions.md#react-native)
-* [Flutter](./current-sdk-versions.md#flutter)
-* [Roku](./current-sdk-versions.md#roku)
+* [Android](current-sdk-versions.md#android)
+* [iOS](current-sdk-versions.md#ios)
+* [React Native](current-sdk-versions.md#react-native)
+* [Flutter](current-sdk-versions.md#flutter)
+* [Roku](current-sdk-versions.md#roku)
 
 ## Resources
 
-* [Getting started](./getting-started/index.md)
-* [Getting the Experience Platform SDKs](./getting-started/get-the-sdk.md)
+* [Getting started](getting-started/index.md)
+* [Getting the Experience Platform SDKs](getting-started/get-the-sdk.md)
 * [Frequently asked questions](../resources/faq.md)
 * [Why use the Adobe Experience Platform Mobile SDKs](https://medium.com/adobetech/accelerate-your-mobile-application-development-with-adobe-experience-platform-mobile-sdk-and-launch-ed023536d611)
 

@@ -22,12 +22,12 @@ The following information outlines the steps you'll need to follow to get starte
 
 ### Steps to get started
 
-1. [Set up schemas and datasets](./set-up-schemas-and-datasets.md)
-2. [Configure datastreams](./configure-datastreams.md)
-3. [Set up mobile property](./create-a-mobile-property.md)
-4. [Get the Experience Platform Mobile SDK](./get-the-sdk.md)
-5. [Debugging and implementing basic events](./enable-debug-logging.md)
-6. [Validation and next steps](./validate.md)
+1. [Set up schemas and datasets](set-up-schemas-and-datasets.md)
+2. [Configure datastreams](configure-datastreams.md)
+3. [Set up mobile property](create-a-mobile-property.md)
+4. [Get the Experience Platform Mobile SDK](get-the-sdk.md)
+5. [Debugging and implementing basic events](enable-debug-logging.md)
+6. [Validation and next steps](validate.md)
 
 ## Integration via solutions-specific endpoints
 
@@ -36,10 +36,10 @@ The following information outlines the steps you'll need to follow to get starte
 ### Steps to getting started
 
 1. Configure solutions
-2. [Set up mobile property](./create-a-mobile-property.md)
-3. [Get the Experience Platform Mobile SDK](./get-the-sdk.md)
-4. [Debugging and implementing basic events](./enable-debug-logging.md)
-5. [Validation and next steps](./validate.md)
+2. [Set up mobile property](create-a-mobile-property.md)
+3. [Get the Experience Platform Mobile SDK](get-the-sdk.md)
+4. [Debugging and implementing basic events](enable-debug-logging.md)
+5. [Validation and next steps](validate.md)
 
 ## Reference
 

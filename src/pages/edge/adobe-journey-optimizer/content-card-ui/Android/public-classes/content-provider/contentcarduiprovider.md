@@ -15,7 +15,7 @@ keywords:
 
 # ContentCardUIProvider
 
-Messaging extension implementation of [AepUIContentProvider](./aepuicontentprovider.md). `ContentCardUIProvider` is responsible for fetching and managing the content for a given surface. It uses Adobe Messaging APIs to retrieve propositions and transform them into UI templates for display.
+Messaging extension implementation of [AepUIContentProvider](../../../android/public-classes/content-provider/aepuicontentprovider.md). `ContentCardUIProvider` is responsible for fetching and managing the content for a given surface. It uses Adobe Messaging APIs to retrieve propositions and transform them into UI templates for display.
 
 ## Methods
 
@@ -25,7 +25,7 @@ Retrieves a flow of AepUITemplate lists for the given surface. The flow emits up
 
 #### Returns
 
-A [Flow](https://developer.android.com/kotlin/flow) of [Result](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/) containing lists of [AepUITemplate](../ui-models/aepuitemplate.md)s.
+A [Flow](https://developer.android.com/kotlin/flow) of [Result](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/) containing lists of [AepUITemplate](../../../android/public-classes/ui-models/aepuitemplate.md)s.
 
 #### Syntax
 

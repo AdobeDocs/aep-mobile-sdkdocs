@@ -12,7 +12,7 @@ keywords:
 
 ## Implementing Lifecycle data collection in Android
 
-For implementation details, please reference the [implementation guide for Lifecycle](/src/pages/home/base/mobile-core/lifecycle/index.md).
+For implementation details, please reference the [implementation guide for Lifecycle](index.md).
 
 ## Tracking app crashes in Android
 
@@ -22,7 +22,7 @@ This information helps you understand how crashes are tracked and the best pract
 
 When Lifecycle data collection is implemented in an application, pausing Lifecycle data collection sets a flag which is persisted in the application. When the application is launched again and Lifecycle data collection is started, if the flag is **not** set then a crash event is reported.
 
-The flag is controlled by calls to [lifecyclePause](/src/pages/home/base/mobile-core/lifecycle/api-reference.md#lifecyclepause) (which sets the flag) and [lifecycleStart](/src/pages/home/base/mobile-core/lifecycle/api-reference.md#lifecyclestart) (which clears the flag).
+The flag is controlled by calls to [lifecyclePause](api-reference.md#lifecyclepause) (which sets the flag) and [lifecycleStart](api-reference.md#lifecyclestart) (which clears the flag).
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -48,5 +48,5 @@ Fragments have application lifecycle events that are similar to Activities. Howe
 
 The following guides further illustrate the expected Lifecycle scenarios along with example unexpected scenarios and how to correct them.
 
-* [Lifecycle behavior reference](/src/pages/home/base/mobile-core/lifecycle/behavior-reference.md) when sending Lifecycle events to Analytics.
-* [Lifecycle behavior reference](/src/pages/edge/lifecycle-for-edge-network/behavior-reference.md) when sending Lifecycle events to Edge Network.
+* [Lifecycle behavior reference](behavior-reference.md) when sending Lifecycle events to Analytics.
+* [Lifecycle behavior reference](../../../../edge/lifecycle-for-edge-network/behavior-reference.md) when sending Lifecycle events to Edge Network.

@@ -87,7 +87,7 @@ Add support for out-of-the-box push notifications:
 
 ### Android Campaign Classic 3.0.0
 
-Major version update for [Campaign Classic](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+Major version update for [Campaign Classic](index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
 * The SDK is now compatible with Kotlin 1.8 and higher.
@@ -97,7 +97,7 @@ Major version update for [Campaign Classic](./index.md) for Adobe Experience Pla
 
 ### iOS Campaign Classic 5.0.0
 
-Major version update for [Campaign Classic](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+Major version update for [Campaign Classic](index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 12.0.
 * Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
@@ -152,7 +152,7 @@ See a full description of the new [push template payloads](./push-templates).
 
 ### iOS Campaign Classic 4.0.0
 
-Major version update for [Adobe Campaign Classic workflows](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+Major version update for [Adobe Campaign Classic workflows](index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
@@ -168,7 +168,7 @@ Major version update for [Adobe Campaign Classic workflows](./index.md) for Adob
 
 ### Android Campaign Classic 2.0.0
 
-* Major version update for [Adobe Campaign Classic workflows](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaignclassic-android).
+* Major version update for [Adobe Campaign Classic workflows](index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaignclassic-android).
 
 Please note that the `registerDevice` API, similar to iOS, no longer provides a callback method for registration status since a `false` value cannot be accurately used as a signal to retry requests.
 
@@ -176,4 +176,4 @@ Please note that the `registerDevice` API, similar to iOS, no longer provides a 
 
 ### iOS Campaign Classic 3.0.0
 
-* Initial release to support [Adobe Campaign Classic workflows](./index.md) for Adobe Experience Platform Mobile SDKs on iOS in Swift. This extension library is available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaignclassic-ios/).
+* Initial release to support [Adobe Campaign Classic workflows](index.md) for Adobe Experience Platform Mobile SDKs on iOS in Swift. This extension library is available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaignclassic-ios/).

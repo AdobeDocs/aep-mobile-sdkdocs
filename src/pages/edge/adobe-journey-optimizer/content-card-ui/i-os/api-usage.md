@@ -18,15 +18,15 @@ This document lists the public APIs available in the Messaging extension for imp
 
 ## getContentCardsUI
 
-The `getContentCardsUI` method retrieves an array of [ContentCardUI](./public-classes/contentcardui.md) objects for the provided surface. These ContentCardUI objects provide the user interface for templated content cards to your application.
+The `getContentCardsUI` method retrieves an array of [ContentCardUI](../i-os/public-classes/contentcardui.md) objects for the provided surface. These ContentCardUI objects provide the user interface for templated content cards to your application.
 
 #### Parameters:
 
 * _surface_ - The [Surface](../../public-classes/surface.md) for which the content cards should be retrieved.
-* _customizer_ - An optional [ContentCardCustomizing](./public-classes/contentcardcustomizing.md) object to customize the appearance of the content card template. If you do not need to customize the appearance of the content card template, this parameter can be omitted.
-* _listener_ - An optional [ContentCardUIEventListening](./public-classes/contentcarduieventlistening.md) object to listen to UI events from the content card. If you do not need to listen to UI events from the content card, this parameter can be omitted.
+* _customizer_ - An optional [ContentCardCustomizing](../i-os/public-classes/contentcardcustomizing.md) object to customize the appearance of the content card template. If you do not need to customize the appearance of the content card template, this parameter can be omitted.
+* _listener_ - An optional [ContentCardUIEventListening](../i-os/public-classes/contentcarduieventlistening.md) object to listen to UI events from the content card. If you do not need to listen to UI events from the content card, this parameter can be omitted.
 * _completion_ - A completion handler that is called with a `Result` containing either:
-    * _success_ - An array of [ContentCardUI](./public-classes/contentcardui.md) objects representing the content cards to be displayed.
+    * _success_ - An array of [ContentCardUI](../i-os/public-classes/contentcardui.md) objects representing the content cards to be displayed.
     * _failure_ - An `Error` object indicating the reason for the failure, if any.
 
 <InlineAlert variant="info" slots="text"/>

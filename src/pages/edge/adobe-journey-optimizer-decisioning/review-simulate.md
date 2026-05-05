@@ -12,7 +12,7 @@ This is a feature of Adobe Experience Platform Assurance which allows the users 
 
 ## Review Requests and Results
 
-1. [Set up and connect](./assurance-for-decisioning.md) to an Assurance session.
+1. [Set up and connect](assurance-for-decisioning.md) to an Assurance session.
 2. Review the personalization requests and results by navigating to the Review and Simulate section.
    Make sure that at least one decision scope has been set up in the mobile application and an updateProposition request made to be able review them.
 

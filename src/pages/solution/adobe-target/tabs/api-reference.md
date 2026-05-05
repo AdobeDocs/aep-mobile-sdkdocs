@@ -1762,7 +1762,7 @@ public class TargetParameters: NSObject, Codable {
 }
 ```
 
-Examples for creating instances of TargetParameters can be seen in the [Target overview](./index.md#target-parameters).
+Examples for creating instances of TargetParameters can be seen in the [Target overview](index.md#target-parameters).
 
 <!--- <Variant platform="react-native" api="target-parameters" repeat="5"/>
 
@@ -1857,7 +1857,7 @@ public class TargetOrder: NSObject, Codable {
 }
 ```
 
-Examples for creating instances of TargetOrder can be seen in the [Target overview](./index.md#arget-order-class).
+Examples for creating instances of TargetOrder can be seen in the [Target overview](index.md#arget-order-class).
 
 <!--- <Variant platform="react-native" api="target-order" repeat="5"/>
 
@@ -1940,7 +1940,7 @@ public class TargetProduct: NSObject, Codable {
 }
 ```
 
-Examples for creating instances of TargetProduct can be seen in the [Target overview](./index.md#target-product-class)
+Examples for creating instances of TargetProduct can be seen in the [Target overview](index.md#target-product-class)
 
 <!--- <Variant platform="react-native" api="target-product" repeat="5"/>
 

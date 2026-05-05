@@ -1379,7 +1379,7 @@ static func generateDisplayInteractionXdm(for offers: [Offer]) -> [String: Any]?
 
 #### Swift
 
-Error details received from Edge response along with [AEPError](../../../home/base/mobile-core/tabs/api-reference/#aeperror) object returned with values:
+Error details received from Edge response along with [AEPError](../../../home/base/mobile-core/tabs/api-reference.md#aeperror) object returned with values:
 
 * _AEPError.callbackTimeout_ is returned when request timeout without any response.
 * _AEPError.serverErrors_ is returned for HTTP Status 500.
@@ -1415,7 +1415,7 @@ public class AEPOptimizeError: NSObject, Error {
 
 #### Kotlin
 
-Error details received from Edge response along with [AdobeError](../../../home/base/mobile-core/tabs/api-reference/#adobeerror) object returned with values:
+Error details received from Edge response along with [AdobeError](../../../home/base/mobile-core/tabs/api-reference.md#adobeerror) object returned with values:
 
 * _AdobeError.CALLBACK_TIMEOUT_ is returned when request timeout without any response.
 * _AdobeError.SERVER_ERROR_ is returned for HTTP Status 500.

@@ -14,16 +14,16 @@ This document guides you to integrating in-app messaging in your application.
 
 ## API reference
 
-* [In-App Messaging APIs](./api-reference.md)
+* [In-App Messaging APIs](api-reference.md)
 
 ## Tutorials
 
-* [Programmatically control the display of in-app messages](./tutorials/messaging-delegate.md)
-* [Use custom metadata with In-app Messages](./tutorials/messaging-metadata.md)
-* [Call native code from the JavaScript of an in-app message](./tutorials/native-from-javascript.md)
-* [Execute JavaScript code in an in-app message from native code](./tutorials/javascript-from-native.md)
-* [Handle URL clicks from an in-app message](./tutorials/handle-clicks.md)
-* [Trigger Adobe Journey Optimizer campaigns using the send data to Experience Platform events](./tutorials/trigger-campaign.md)
+* [Programmatically control the display of in-app messages](tutorials/messaging-delegate.md)
+* [Use custom metadata with In-app Messages](tutorials/messaging-metadata.md)
+* [Call native code from the JavaScript of an in-app message](tutorials/native-from-javascript.md)
+* [Execute JavaScript code in an in-app message from native code](tutorials/javascript-from-native.md)
+* [Handle URL clicks from an in-app message](tutorials/handle-clicks.md)
+* [Trigger Adobe Journey Optimizer campaigns using the send data to Experience Platform events](tutorials/trigger-campaign.md)
 
 ## Public Classes and Enums
 
@@ -32,4 +32,4 @@ This document guides you to integrating in-app messaging in your application.
 
 ## Validation
 
-* [Validate in-app messaging using Assurance](./validate-messages.md)
+* [Validate in-app messaging using Assurance](validate-messages.md)

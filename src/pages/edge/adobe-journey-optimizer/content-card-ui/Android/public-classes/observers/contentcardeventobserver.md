@@ -15,11 +15,11 @@ keywords:
 
 # ContentCardEventObserver
 
-Messaging implementation of [AepUIEventObserver](./aepuieventobserver.md) for handling content card events.
+Messaging implementation of [AepUIEventObserver](../../../android/public-classes/observers/aepuieventobserver.md) for handling content card events.
 
 ## Class Parameters
 
-* _callback_ - An optional [ContentCardUIEventListener](../contentcarduieventlistener.md) to invoke when a content card event occurs.
+* _callback_ - An optional [ContentCardUIEventListener](../../../android/public-classes/contentcarduieventlistener.md) to invoke when a content card event occurs.
 
 ## Methods
 

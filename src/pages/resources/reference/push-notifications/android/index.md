@@ -20,7 +20,7 @@ Default push template functionality is available for use with the **Adobe Campai
 
 ### Prerequisite
 
-Follow the steps to [configure Adobe Campaign Classic](./../../../../solution/adobe-campaign-classic/) and add it to your app.
+Follow the steps to [configure Adobe Campaign Classic](../../../../solution/adobe-campaign-classic/index.md) and add it to your app.
 
 ### Implementation
 

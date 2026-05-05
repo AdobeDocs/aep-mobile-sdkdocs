@@ -11,7 +11,7 @@ keywords:
 
 # Configure the Notification Content extension
 
-With the `AEPNotificationContent` package now available after following the [installation steps](./index.md), the app and notification content extension must be configured to use it.
+With the `AEPNotificationContent` package now available after following the [installation steps](index.md), the app and notification content extension must be configured to use it.
 
 ## App configuration
 
@@ -69,4 +69,4 @@ Update the `Info.plist` for your Notification Content extension with the followi
 
 ## Next steps
 
-Use a sample payload to generate a notification in your app by completing the steps in [Validate AEPNotificationContent integration](./validate-integration.md).
+Use a sample payload to generate a notification in your app by completing the steps in [Validate AEPNotificationContent integration](validate-integration.md).

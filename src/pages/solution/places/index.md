@@ -47,7 +47,7 @@ CocoaPods<br/>(iOS)
 
 ### Initialize Adobe Experience Platform SDK with Places Extension
 
-Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](../../home/getting-started/get-the-sdk.md#2-add-initialization-code) section of the getting started page.
 
 Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
 
@@ -55,7 +55,7 @@ Using the `MobileCore.initialize` API to initialize the Adobe Experience Platfor
 
 ## Configuration keys
 
-To update SDK configuration programmatically, use the following information to modify Places configuration values. For additional details, refer to the [Configuration API reference](/src/pages/home/base/mobile-core/configuration/api-reference.md).  
+To update SDK configuration programmatically, use the following information to modify Places configuration values. For additional details, refer to the [Configuration API reference](../../home/base/mobile-core/configuration/api-reference.md).  
 
 | Key | Required | Description | Data Type |
 | :--- | :--- | :--- | :--- |

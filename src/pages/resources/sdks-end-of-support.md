@@ -40,7 +40,7 @@ Please refer to the following guides to migrate to the latest SDKs:
 
 | **SDK** | **Migration guide** |
 | :--- | :--- |
-| ACP iOS SDK | [Migrate to AEP iOS SDK](../resources/migration/ios/migrate-to-3x.md) |
+| ACP iOS SDK | [Migrate to AEP iOS SDK](migration/ios/migrate-to-3x.md) |
 | Flutter for ACP | [Migrate to Flutter for AEP](https://github.com/adobe/aepsdk_flutter/blob/main/docs/migration.md) |
 | React Native for ACP | [Migrate to React Native for AEP](https://github.com/adobe/aepsdk-react-native/blob/main/docs/migration.md) |
 | Cordova | Not Supported |

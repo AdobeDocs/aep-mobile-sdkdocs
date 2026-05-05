@@ -24,54 +24,54 @@ keywords:
 
 ## API Reference
 
-* [Content Card APIs](./api-usage.md)
+* [Content Card APIs](../android/api-usage.md)
 
 ## Public Classes, Enums, and Interfaces
 
-* [Interface - AepUI](./public-classes/aepui.md)
-* [Class - ContentCardMapper](./public-classes/contentcardmapper.md)
-* [Interface - ContentCardUIEventListener](./public-classes/contentcarduieventlistener.md)
-* [Class - UIAction](./public-classes/uiaction.md)
-* [Class - UIEvent](./public-classes/uievent.md)
+* [Interface - AepUI](../android/public-classes/aepui.md)
+* [Class - ContentCardMapper](../android/public-classes/contentcardmapper.md)
+* [Interface - ContentCardUIEventListener](../android/public-classes/contentcarduieventlistener.md)
+* [Class - UIAction](../android/public-classes/uiaction.md)
+* [Class - UIEvent](../android/public-classes/uievent.md)
 
 ## Content Provider
 
-* [AepUIContentProvider](./public-classes/content-provider/aepuicontentprovider.md)
-* [ContentCardUIProvider](./public-classes/content-provider/contentcarduiprovider.md)
+* [AepUIContentProvider](../android/public-classes/content-provider/aepuicontentprovider.md)
+* [ContentCardUIProvider](../android/public-classes/content-provider/contentcarduiprovider.md)
 
 ## Observers
 
-* [AepUIEventObserver](./public-classes/observers/aepuieventobserver.md)
-* [ContentCardEventObserver](./public-classes/observers/contentcardeventobserver.md)
+* [AepUIEventObserver](../android/public-classes/observers/aepuieventobserver.md)
+* [ContentCardEventObserver](../android/public-classes/observers/contentcardeventobserver.md)
 
 ## State
 
-* [AepCardUIState](./public-classes/state/aepcarduistate.md)
-* [SmallImageCardUIState](./public-classes/state/smallimagecarduistate.md)
+* [AepCardUIState](../android/public-classes/state/aepcarduistate.md)
+* [SmallImageCardUIState](../android/public-classes/state/smallimagecarduistate.md)
 
 ## Styles
 
-* [AepButtonStyle](./public-classes/styles/aepbuttonstyle.md)
-* [AepCardStyle](./public-classes/styles/aepcardstyle.md)
-* [AepColumnStyle](./public-classes/styles/aepcolumnstyle.md)
-* [AepIconStyle](./public-classes/styles/aepiconstyle.md)
-* [AepImageStyle](./public-classes/styles/aepimagestyle.md)
-* [AepRowStyle](./public-classes/styles/aeprowstyle.md)
-* [AepTextStyle](./public-classes/styles/aeptextstyle.md)
-* [SmallImageUIStyle](./public-classes/styles/smallimageuistyle.md)
+* [AepButtonStyle](../android/public-classes/styles/aepbuttonstyle.md)
+* [AepCardStyle](../android/public-classes/styles/aepcardstyle.md)
+* [AepColumnStyle](../android/public-classes/styles/aepcolumnstyle.md)
+* [AepIconStyle](../android/public-classes/styles/aepiconstyle.md)
+* [AepImageStyle](../android/public-classes/styles/aepimagestyle.md)
+* [AepRowStyle](../android/public-classes/styles/aeprowstyle.md)
+* [AepTextStyle](../android/public-classes/styles/aeptextstyle.md)
+* [SmallImageUIStyle](../android/public-classes/styles/smallimageuistyle.md)
 
 ## UI Models
 
-* [AepButton](./public-classes/ui-models/aepbutton.md)
-* [AepIcon](./public-classes/ui-models/aepicon.md)
-* [AepImage](./public-classes/ui-models/aepimage.md)
-* [AepText](./public-classes/ui-models/aeptext.md)
-* [AepUITemplate](./public-classes/ui-models/aepuitemplate.md)
-* [AepUITemplateType](./public-classes/ui-models/aepuitemplatetype.md)
-* [SmallImageTemplate](./public-classes/ui-models/smallimagetemplate.md)
+* [AepButton](../android/public-classes/ui-models/aepbutton.md)
+* [AepIcon](../android/public-classes/ui-models/aepicon.md)
+* [AepImage](../android/public-classes/ui-models/aepimage.md)
+* [AepText](../android/public-classes/ui-models/aeptext.md)
+* [AepUITemplate](../android/public-classes/ui-models/aepuitemplate.md)
+* [AepUITemplateType](../android/public-classes/ui-models/aepuitemplatetype.md)
+* [SmallImageTemplate](../android/public-classes/ui-models/smallimagetemplate.md)
 
 ## Tutorials
 
-* [Fetch and Display Content Cards](./tutorial/displaying-content-cards.md)
-* [Customizing Content Card Templates](./tutorial/customizing-content-card-templates.md)
-* [Listening to Content Card Events](./tutorial/listening-content-card-events.md)
+* [Fetch and Display Content Cards](../android/tutorial/displaying-content-cards.md)
+* [Customizing Content Card Templates](../android/tutorial/customizing-content-card-templates.md)
+* [Listening to Content Card Events](../android/tutorial/listening-content-card-events.md)

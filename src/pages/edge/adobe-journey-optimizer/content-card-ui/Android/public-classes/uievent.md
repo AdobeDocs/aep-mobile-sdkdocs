@@ -21,8 +21,8 @@ Represents different types of UI events that can be triggered by the user intera
 
 | Parameter | Type                                          | Description                                                  |
 | --------- | --------------------------------------------- | ------------------------------------------------------------ |
-| `T`       | [AepUITemplate](./ui-models/aepuitemplate.md) | Represents a UI template model which backs the composable on which the event has occurred. |
-| `S`       | [AepCardUIState](./state/aepcarduistate.md)   | Represents the state of the Adobe Experience Platform card composable on which the event has occurred. |
+| `T`       | [AepUITemplate](../../android/public-classes/ui-models/aepuitemplate.md) | Represents a UI template model which backs the composable on which the event has occurred. |
+| `S`       | [AepCardUIState](../../android/public-classes/state/aepcarduistate.md)   | Represents the state of the Adobe Experience Platform card composable on which the event has occurred. |
 
 #### Syntax
 
@@ -38,7 +38,7 @@ sealed class UIEvent<T : AepUITemplate, S : AepCardUIState>(open val aepUi: AepU
 
 | Property | Type                | Description                          |
 | -------- | ------------------- | ------------------------------------ |
-| `aepUI`  | [AepUI](./aepui.md) | The AepUI associated with the event. |
+| `aepUI`  | [AepUI](../../android/public-classes/aepui.md) | The AepUI associated with the event. |
 
 ## Display
 
@@ -57,13 +57,13 @@ data class Display<T : AepUITemplate, S : AepCardUIState>(override val aepUi: Ae
 
 ## Interact
 
-Event that represents a user interaction with a UI element. The `Interact` event captures the different types of interactions that a user can have with a UI component. Currently supported interactions types are can be seen in [UIAction](./uiaction.md) documentation.
+Event that represents a user interaction with a UI element. The `Interact` event captures the different types of interactions that a user can have with a UI component. Currently supported interactions types are can be seen in [UIAction](../../android/public-classes/uiaction.md) documentation.
 
 ### Public Properties
 
 | Property | Type                      | Description                 |
 | -------- | ------------------------- | --------------------------- |
-| `action` | [UIAction](./uiaction.md) | The UIAction that occurred. |
+| `action` | [UIAction](../../android/public-classes/uiaction.md) | The UIAction that occurred. |
 
 #### Syntax
 

@@ -42,11 +42,11 @@ LargeImageTemplate is only available in AEP Messaging iOS version 5.8.0+
 
 | Property      | Type                                           | Description                                                  |
 | ------------- | ---------------------------------------------- | ------------------------------------------------------------ |
-| title         | [AEPText](../ui-elements/aeptext.md)            | The title text for the content card.                         |
-| body          | [AEPText](../ui-elements/aeptext.md)            | *Optional*<br/>The body text of the content card                 |
-| image         | [AEPImage](../ui-elements/aepimage.md)          | *Optional*<br/>The image to be shown on the content card.     |
-| buttons       | [[AEPButton](../ui-elements/aepbutton.md)]      | *Optional*<br/>The list of buttons on the content card.       |
-| buttonHStack  | [AEPHStack](../ui-elements/aepstack.md#aephstack)         | A horizontal stack for arranging buttons.                    |
-| textVStack    | [AEPVStack](../ui-elements/aepstack.md#aepvstack)         | A vertical stack for arranging the title, body, and buttons. |
-| rootVStack    | [AEPVStack](../ui-elements/aepstack.md#aepvstack)         | A vertical stack for arranging the image and text stack.   |
-| dismissButton | [AEPDismissButton](../ui-elements/aepdismissbutton.md) | *Optional*<br/>The dismiss button for the content card.       |
+| title         | [AEPText](../../i-os/ui-elements/aeptext.md)            | The title text for the content card.                         |
+| body          | [AEPText](../../i-os/ui-elements/aeptext.md)            | *Optional*<br/>The body text of the content card                 |
+| image         | [AEPImage](../../i-os/ui-elements/aepimage.md)          | *Optional*<br/>The image to be shown on the content card.     |
+| buttons       | [[AEPButton](../../i-os/ui-elements/aepbutton.md)]      | *Optional*<br/>The list of buttons on the content card.       |
+| buttonHStack  | [AEPHStack](../../i-os/ui-elements/aepstack.md#aephstack)         | A horizontal stack for arranging buttons.                    |
+| textVStack    | [AEPVStack](../../i-os/ui-elements/aepstack.md#aepvstack)         | A vertical stack for arranging the title, body, and buttons. |
+| rootVStack    | [AEPVStack](../../i-os/ui-elements/aepstack.md#aepvstack)         | A vertical stack for arranging the image and text stack.   |
+| dismissButton | [AEPDismissButton](../../i-os/ui-elements/aepdismissbutton.md) | *Optional*<br/>The dismiss button for the content card.       |

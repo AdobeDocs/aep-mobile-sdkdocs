@@ -125,7 +125,7 @@ CocoaPods<br/>(iOS)
 
 ### Initialize Adobe Experience Platform SDK with Analytics Extension
 
-Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](../../home/getting-started/get-the-sdk.md#2-add-initialization-code) section of the getting started page.
 
 Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
 
@@ -179,12 +179,12 @@ To update the SDK configuration programmatically, use the following information 
 
 | Key | Required | Description | Data Type |
 | :--- | :--- | :--- | :--- |
-| analytics.server | Yes | See [Tracking Server](./#tracking-server) | String |
-| analytics.rsids | Yes | See [Report Suites](./#report-suites). Multiple report suite IDs can be comma separated with no space in- between. For example: "rsids" : "rsid" "rsids" : "rsid1,rsid2" | String |
-| analytics.batchLimit | No | See [Batch Limit](./#batch-limit) | Integer |
-| analytics.aamForwardingEnabled | No | See [Audience Manager Forwarding](./#audience-manager-forwarding) | Boolean |
-| analytics.offlineEnabled | No | See [Offline Enabled](./#offline-enabled) | Boolean |
-| analytics.backdatePreviousSessionInfo | No | See [Backdate Previous Session Info](./#backdate-previous-session-info). | Boolean |
+| analytics.server | Yes | See [Tracking Server](index.md#tracking-server) | String |
+| analytics.rsids | Yes | See [Report Suites](index.md#report-suites). Multiple report suite IDs can be comma separated with no space in- between. For example: "rsids" : "rsid" "rsids" : "rsid1,rsid2" | String |
+| analytics.batchLimit | No | See [Batch Limit](index.md#batch-limit) | Integer |
+| analytics.aamForwardingEnabled | No | See [Audience Manager Forwarding](index.md#audience-manager-forwarding) | Boolean |
+| analytics.offlineEnabled | No | See [Offline Enabled](index.md#offline-enabled) | Boolean |
+| analytics.backdatePreviousSessionInfo | No | See [Backdate Previous Session Info](index.md#backdate-previous-session-info). | Boolean |
 
 ## Update Analytics configuration
 

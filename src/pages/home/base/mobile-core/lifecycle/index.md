@@ -37,7 +37,7 @@ CocoaPods<br/>(iOS)
 
 ### Initialize Adobe Experience Platform SDK with Lifecycle Extension
 
-Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](../../../getting-started/get-the-sdk.md#2-add-initialization-code) section of the getting started page.
 
 Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
 
@@ -47,7 +47,7 @@ Using the `MobileCore.initialize` API to initialize the Adobe Experience Platfor
 
 <InlineAlert variant="info" slots="text"/>
 
-Lifecycle tracking is enabled by default when the `MobileCore.initialize` API is used and Lifecycle extension is included as an app dependency. The following instructions only apply if [lifecycleAutomaticTrackingEnabled](/src/pages/home/base/mobile-core/api-reference/#initoptions) is false or when using [manual extension registration](/src/pages/home/getting-started/get-the-sdk/#b-manual-extension-registration-using-mobilecoreregisterextensions-api) to register Lifecycle extension.
+Lifecycle tracking is enabled by default when the `MobileCore.initialize` API is used and Lifecycle extension is included as an app dependency. The following instructions only apply if [lifecycleAutomaticTrackingEnabled](../api-reference.md#initoptions) is false or when using [manual extension registration](../../../getting-started/get-the-sdk.md#b-manual-extension-registration-using-mobilecoreregisterextensions-api) to register Lifecycle extension.
 
 You can start collecting Lifecycle information at any time in your app, but you should start as soon as your app enters the foreground. This allows Lifecycle metrics to be correctly attributed to all of your users' activities for their current session.
 

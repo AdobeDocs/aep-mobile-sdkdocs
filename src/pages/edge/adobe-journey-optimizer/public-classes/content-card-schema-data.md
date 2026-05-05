@@ -53,7 +53,7 @@ Notice of deprecation
 
 `ContentCard` class is deprecated as of `v5.2.0` (iOS) and will be removed in the next major release of the Messaging extension.
 
-Tries to convert the `content` of this `ContentCardSchemaData` into a [`ContentCard`](./content-card.md) object.
+Tries to convert the `content` of this `ContentCardSchemaData` into a [`ContentCard`](content-card.md) object.
 
 Returns `nil` if the `contentType` is not equal to `.applicationJson` or the data in `content` is not decodable into a `ContentCard`.
 
@@ -86,7 +86,7 @@ public func track(_ interaction: String? = nil, withEdgeEventType eventType: Mes
 #### Parameters
 
 * _interaction_ - a custom `String` value to be recorded in the interaction
-* _eventType_ - the [`MessagingEdgeEventType`](./messaging-edge-event-type.md) to be used for the ensuing Edge Event
+* _eventType_ - the [`MessagingEdgeEventType`](messaging-edge-event-type.md) to be used for the ensuing Edge Event
 
 #### Example
 
@@ -147,7 +147,7 @@ Notice of deprecation
 
 `ContentCard` class is deprecated as of `v3.2.0` (Android) and will be removed in the next major release of the Messaging extension.
 
-Tries to convert the `content` of this `ContentCardSchemaData` into a [`ContentCard`](./content-card.md) object.
+Tries to convert the `content` of this `ContentCardSchemaData` into a [`ContentCard`](content-card.md) object.
 
 Returns `null` if the `contentType` is not equal to `ContentType.APPLICATION_JSON` or the data in `content` is not decodable into a `ContentCard`.
 
@@ -194,7 +194,7 @@ public void track(final String interaction, final MessagingEdgeEventType eventTy
 #### Parameters
 
 * _interaction_ - a custom `String` value to be recorded in the interaction
-* _eventType_ - the [`MessagingEdgeEventType`](./messaging-edge-event-type.md) to be used for the ensuing Edge Event
+* _eventType_ - the [`MessagingEdgeEventType`](messaging-edge-event-type.md) to be used for the ensuing Edge Event
 
 #### Example
 

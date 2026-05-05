@@ -26,7 +26,7 @@ AEPDismissButton conforms to `ObservableObject`, allowing it to be used reactive
 
 | Property |	Type |	Description |
 | --- | --- | --- |
-| image | [AEPImage](aepimage.md) |	The image model representing the dismiss button's image. |
+| image | [AEPImage](../../i-os/ui-elements/aepimage.md) |	The image model representing the dismiss button's image. |
 | alignment | [Alignment](https://developer.apple.com/documentation/swiftui/alignment) |	The alignment of the dismiss button within the content card. |
 | modifier |	`AEPViewModifier` |	A custom view modifier that can be applied to the dismiss button view for additional styling. |
 

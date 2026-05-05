@@ -11,7 +11,7 @@ keywords:
 
 # Lifecycle data
 
-When used with the [Analytics extension](../../../../solution/adobe-analytics/index.md), this data is collected and sent to Analytics on every session start. Sessions are determined by the [sessionTimeout](./configuration-keys.md#lifecyclesessiontimeout) configuration.
+When used with the [Analytics extension](../../../../solution/adobe-analytics/index.md), this data is collected and sent to Analytics on every session start. Sessions are determined by the [sessionTimeout](configuration-keys.md#lifecyclesessiontimeout) configuration.
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -19,7 +19,7 @@ This data is not used with Lifecycle for Edge Network. Instead, view the [Lifecy
 
 ## Lifecycle data content response data
 
-The following data is collected on each [Lifecycle data content response](./event-reference.md#lifecycle-data-content-response) event.
+The following data is collected on each [Lifecycle data content response](event-reference.md#lifecycle-data-content-response) event.
 
 ### Install
 

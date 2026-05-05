@@ -19,7 +19,7 @@ Rich media push notifications allow you to deliver push notifications with text 
 ### Prerequisites
 
 1. Configure your app for push notifications by following the [iOS push notification setup guide](https://developer.apple.com/documentation/usernotifications/registering-your-app-with-apns).
-2. [Sync the received APNS push identifier](./ios/api-reference.md#sync-the-push-token) with Adobe Journey Optimizer.
+2. [Sync the received APNS push identifier](ios/api-reference.md#sync-the-push-token) with Adobe Journey Optimizer.
 
 ### Rich Media Support
 
@@ -47,14 +47,14 @@ For more information, see [Apple's Notification Attachment documentation](https:
 
 ### Implementation Steps
 
-See the documentation on [displaying iOS rich push notifications.](./ios/display-rich-notifications.md)
+See the documentation on [displaying iOS rich push notifications.](ios/display-rich-notifications.md)
 
 ## Android
 
 ### Prerequisites
 
 1. Android Messaging extension version 3.3.2 or newer.
-2. Configure your app for push notifications following the documentation on [using the Messaging extension's implementation of the FirebaseMessagingService](./android/automatic-display-and-tracking.md#register-messaging-extensions-firebasemessagingservice)
+2. Configure your app for push notifications following the documentation on [using the Messaging extension's implementation of the FirebaseMessagingService](android/automatic-display-and-tracking.md#register-messaging-extensions-firebasemessagingservice)
 
 ### Rich Media Support
 
@@ -75,7 +75,7 @@ For more information, see Google's documentation [on native Android image suppor
 
 ### Implementation Steps
 
-See the documentation on [using the Messaging extension's implementation of the FirebaseMessagingService.](./android/automatic-display-and-tracking.md#register-messaging-extensions-firebasemessagingservice)
+See the documentation on [using the Messaging extension's implementation of the FirebaseMessagingService.](android/automatic-display-and-tracking.md#register-messaging-extensions-firebasemessagingservice)
 
 ## Additional Resources
 

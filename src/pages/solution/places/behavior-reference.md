@@ -24,9 +24,9 @@ A **library rank**, also referred to as **weight**, is the priority assigned to 
 **Membership time to live** specifies how long POI states (Current POI, Last Entered POI, Last Exited POI) remain valid. This duration applies globally to all POIs and has a default value of one hour. The duration is refreshed in the following cases:
 
 * On every POI entry or exit event.
-* When calling [`getNearbyPointsOfInterest`](/src/pages/solution/places/api-reference.md#getnearbypointsofinterest).
+* When calling [`getNearbyPointsOfInterest`](api-reference.md#getnearbypointsofinterest).
 
-To modify this value, use the `places.membershipttl` key. For additional details, see [Places configuration](/src/pages/solution/places/index.md#configuration-keys).
+To modify this value, use the `places.membershipttl` key. For additional details, see [Places configuration](index.md#configuration-keys).
 
 ## Places states
 
@@ -39,21 +39,21 @@ When multiple POIs are simultaneously in the entered state, they are evaluated i
 1. Library rank: Lower rank values represent higher priority.  
 2. Radius: The POI with the smaller radius is prioritized.  
 3. Most recent entry signal or closest POI: The evaluation depends on the API used:  
-   * For [`processRegionEvent`](/src/pages/solution/places/api-reference.md#processregionevent), [`processGeofence`](/src/pages/solution/places/api-reference.md#processgeofence), and [`processGeofenceEvent`](/src/pages/solution/places/api-reference.md#processgeofenceevent), the POI associated with the most recent entry signal takes priority.  
-   * For [`getNearbyPointsOfInterest`](/src/pages/solution/places/api-reference.md#getnearbypointsofinterest), the POI closest to the provided latitude and longitude takes priority.  
+   * For [`processRegionEvent`](api-reference.md#processregionevent), [`processGeofence`](api-reference.md#processgeofence), and [`processGeofenceEvent`](api-reference.md#processgeofenceevent), the POI associated with the most recent entry signal takes priority.  
+   * For [`getNearbyPointsOfInterest`](api-reference.md#getnearbypointsofinterest), the POI closest to the provided latitude and longitude takes priority.  
 
 ### Entered state
 
 A POI is in the entered state when either:
 
-* An entry signal is sent using the [`processRegionEvent`](/src/pages/solution/places/api-reference.md#processregionevent) API on iOS or the [`processGeofence`](/src/pages/solution/places/api-reference.md#processgeofence) and [`processGeofenceEvent`](/src/pages/solution/places/api-reference.md#processgeofenceevent) APIs on Android.  
-* The [`getNearbyPointsOfInterest`](/src/pages/solution/places/api-reference.md#getnearbypointsofinterest) API is called, and the entered state flag is set for the POI in the response from the Places API.  
+* An entry signal is sent using the [`processRegionEvent`](api-reference.md#processregionevent) API on iOS or the [`processGeofence`](api-reference.md#processgeofence) and [`processGeofenceEvent`](api-reference.md#processgeofenceevent) APIs on Android.  
+* The [`getNearbyPointsOfInterest`](api-reference.md#getnearbypointsofinterest) API is called, and the entered state flag is set for the POI in the response from the Places API.  
 
 POIs remain in the entered state across app sessions until one of the following occurs:
 
-* An exit signal is sent for the POI using the [`processRegionEvent`](/src/pages/solution/places/api-reference.md#processregionevent) API on iOS or the [`processGeofence`](/src/pages/solution/places/api-reference.md#processgeofence) and [`processGeofenceEvent`](/src/pages/solution/places/api-reference.md#processgeofenceevent) APIs on Android.  
+* An exit signal is sent for the POI using the [`processRegionEvent`](api-reference.md#processregionevent) API on iOS or the [`processGeofence`](api-reference.md#processgeofence) and [`processGeofenceEvent`](api-reference.md#processgeofenceevent) APIs on Android.  
 * The membership time to live value expires.  
-* The POI does not have the entered state flag set when calling the [`getNearbyPointsOfInterest`](/src/pages/solution/places/api-reference.md#getnearbypointsofinterest) API.  
+* The POI does not have the entered state flag set when calling the [`getNearbyPointsOfInterest`](api-reference.md#getnearbypointsofinterest) API.  
 
 Even with a correct geofence and Places API implementation, device operating systems may not provide geofence exit signals for various reasons, which can impact the final Places state.
 
@@ -67,7 +67,7 @@ The last exited POI represents the POI that was most recently exited, which is i
 
 ## Scenarios
 
-These scenarios assume that Places has been implemented to receive geofence entry and exit events from the mobile device operating system. In all cases, a Places event and a Places XDM Edge event are dispatched for the signal and POI provided to the [`processRegionEvent`](/src/pages/solution/places/api-reference.md#processregionevent) API on iOS or the [`processGeofence`](/src/pages/solution/places/api-reference.md#processgeofence) and [`processGeofenceEvent`](/src/pages/solution/places/api-reference.md#processgeofenceevent) APIs on Android.
+These scenarios assume that Places has been implemented to receive geofence entry and exit events from the mobile device operating system. In all cases, a Places event and a Places XDM Edge event are dispatched for the signal and POI provided to the [`processRegionEvent`](api-reference.md#processregionevent) API on iOS or the [`processGeofence`](api-reference.md#processgeofence) and [`processGeofenceEvent`](api-reference.md#processgeofenceevent) APIs on Android.
 
 The bolded POIs under each state indicate when a state is updated due to the location event at each step.
 

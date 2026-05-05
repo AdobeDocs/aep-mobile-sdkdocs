@@ -40,7 +40,7 @@ When authoring an in-app message in AJO, from the **Content** tab, under **Messa
 
 To retrieve custom metadata from a `Message` object, you will first need to implement and set a `PresentationDelegate` (for Android SDK) or `MessagingDelegate` (for iOS SDK).
 
-Please read the [tutorial](./messaging-delegate.md) for more detailed instructions on implementing and using a PresentationDelegate/MessagingDelegate.
+Please read the [tutorial](messaging-delegate.md) for more detailed instructions on implementing and using a PresentationDelegate/MessagingDelegate.
 
 ## Retrieve custom metadata from the Message object
 

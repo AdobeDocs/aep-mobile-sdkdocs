@@ -44,11 +44,11 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
 
 <InlineAlert variant="info" slots="text"/>
 
-Calling [resetIdentities](../../api-reference/#resetidentities) will clear the push token from the Mobile SDK. After calling resetIdentities, the push token must be re-synced using [setPushIdentifier](../../../../home/base/mobile-core/api-reference.md#setpushidentifier).
+Calling [resetIdentities](../../api-reference.md#resetidentities) will clear the push token from the Mobile SDK. After calling resetIdentities, the push token must be re-synced using [setPushIdentifier](../../../../home/base/mobile-core/api-reference.md#setpushidentifier).
 
 ## Track push notification interactions
 
-Use [`handleNotificationResponse`](./../../api-reference/#handlenotificationresponse) API to send push notification interaction data to Adobe Experience Platform.
+Use [`handleNotificationResponse`](./../../api-reference.md#handlenotificationresponse) API to send push notification interaction data to Adobe Experience Platform.
 
 In iOS, [UNUserNotificationCenterDelegate](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) is the interface for processing incoming notifications and responding to notification actions. Once the delegate is implemented, handle push notification responses in [userNotificationCenter(_:didReceive:withCompletionHandler:)](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate/1649501-usernotificationcenter) method.
 
