@@ -9,7 +9,7 @@ keywords:
 
 Welcome to the home of Adobe Experience Platform Mobile SDK documentation.
 
-<InlineAlert variant="success" slots="header, text"/>
+<InlineAlert variant="success" slots="heading, text"/>
 
 Good to go for iOS 26 and Android 16
 

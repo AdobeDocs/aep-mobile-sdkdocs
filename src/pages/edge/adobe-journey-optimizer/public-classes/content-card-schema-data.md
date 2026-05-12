@@ -47,7 +47,7 @@ public class ContentCardSchemaData: NSObject, Codable {
 
 ### getContentCard - DEPRECATED
 
-<InlineAlert variant="warning" slots="header, text" />
+<InlineAlert variant="warning" slots="heading, text" />
 
 Notice of deprecation
 
@@ -141,7 +141,7 @@ public class ContentCardSchemaData implements SchemaData {
 
 ### getContentCard - DEPRECATED
 
-<InlineAlert variant="warning" slots="header, text" />
+<InlineAlert variant="warning" slots="heading, text" />
 
 Notice of deprecation
 

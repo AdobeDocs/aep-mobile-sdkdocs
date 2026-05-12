@@ -121,7 +121,7 @@ Only content cards for which the user has qualified are returned. Client-side ru
 
 The Inbox user interface is implemented using Jetpack Compose. To display the inbox, use the `AepInbox` composable with the `InboxUIState` from your ViewModel:
 
-<InlineAlert variant="warning" slots="header, text" />
+<InlineAlert variant="warning" slots="heading, text" />
 
 Do not embed AepInbox inside an unbounded container/lazy layout that scrolls in the same direction
 

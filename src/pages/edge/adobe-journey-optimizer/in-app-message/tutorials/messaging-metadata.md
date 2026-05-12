@@ -19,7 +19,7 @@ You can add and retrieve custom metadata in an in-app message payload by complet
 * [Implement and assign a `PresentationDelegate`/`MessagingDelegate`](#implement-and-assign-a-presentationdelegate-messagingdelegate)
 * [Retrieve custom metadata from the Message object](#retrieve-custom-metadata-from-the-message-object)
 
-<InlineAlert variant="info" slots="header, text1, text2"/>
+<InlineAlert variant="info" slots="heading, text1, text2"/>
 
 Available since
 

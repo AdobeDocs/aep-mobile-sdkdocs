@@ -53,7 +53,7 @@ The `AepInbox` composable automatically:
 
 ## Example Usage
 
-<InlineAlert variant="warning" slots="header, text" />
+<InlineAlert variant="warning" slots="heading, text" />
 
 Do not embed AepInbox inside an unbounded container/lazy layout that scrolls in the same direction
 

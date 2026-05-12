@@ -15,7 +15,7 @@ keywords:
 
 # ContentCard - DEPRECATED
 
-<InlineAlert variant="warning" slots="header, text" />
+<InlineAlert variant="warning" slots="heading, text" />
 
 Notice of deprecation
 

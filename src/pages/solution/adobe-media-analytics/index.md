@@ -11,7 +11,7 @@ import InitializeSDK from '/src/pages/resources/initialize.md'
 
 # Adobe Analytics - Media Analytics for Audio and Video
 
-<InlineAlert variant="success" slots="header, text"/>
+<InlineAlert variant="success" slots="heading, text"/>
 Adobe Streaming Media for Edge Network extension is now available!
 
 Refer to the [Migrating to Media for Edge Network Guide](migration-guide.md) and [Media for Edge Network extension](../../edge/media-for-edge-network/index.md) documentation to learn more about implementing Streaming Media using Adobe Experience Edge Network.

@@ -98,7 +98,7 @@ assuranceVersion = await FlutterAssurance.extensionVersion;
 
 ## registerExtension
 
-<InlineAlert variant="warning" slots="header, text1"/>
+<InlineAlert variant="warning" slots="heading, text1"/>
 
 This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the Android mobile extension.
 

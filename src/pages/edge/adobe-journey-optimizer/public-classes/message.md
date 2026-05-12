@@ -127,7 +127,7 @@ void show()
 
 ### dismiss
 
-<InlineAlert variant="warning" slots="header, text"/>
+<InlineAlert variant="warning" slots="heading, text"/>
 
 This API has been changed in v3.0.0 of Adobe Journey Optimizer extension.
 
@@ -184,7 +184,7 @@ boolean getAutoTrack()
 
 ### evaluateJavascript
 
-<InlineAlert variant="warning" slots="header, text"/>
+<InlineAlert variant="warning" slots="heading, text"/>
 
 This API has been removed in v3.0.0 of Adobe Journey Optimizer extension.
 
@@ -206,7 +206,7 @@ void evaluateJavascript(final String content)
 
 ### handleJavascriptMessage
 
-<InlineAlert variant="warning" slots="header, text"/>
+<InlineAlert variant="warning" slots="heading, text"/>
 
 This API has been removed in v3.0.0 of Adobe Journey Optimizer extension.
 
@@ -239,7 +239,7 @@ String getId()
 
 ### getParent
 
-<InlineAlert variant="warning" slots="header, text"/>
+<InlineAlert variant="warning" slots="heading, text"/>
 
 This API has been removed in v3.0.0 of Adobe Journey Optimizer extension.
 
@@ -253,7 +253,7 @@ Object getParent()
 
 ### getWebView
 
-<InlineAlert variant="warning" slots="header, text"/>
+<InlineAlert variant="warning" slots="heading, text"/>
 
 This API has been removed in v3.0.0 of Adobe Journey Optimizer extension.
 
