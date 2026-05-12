@@ -62,7 +62,7 @@ Applications which need to get data from the SDK early in the application lifecy
 
 To use a bundled configuration, follow the steps below:
 
-1. Download your JSON configuration file from the following URL: https://assets.adobedtm.com/PASTE-ENVIRONMENT-ID.json, replacing PASTE-ENVIRONMENT-ID with your mobile property environment ID.
+1. Download your JSON configuration file from the following URL: [https://assets.adobedtm.com/PASTE-ENVIRONMENT-ID.json](https://assets.adobedtm.com/PASTE-ENVIRONMENT-ID.json), replacing PASTE-ENVIRONMENT-ID with your mobile property environment ID.
 2. Rename the JSON file to “ADBMobileConfig.json”.
 3. iOS: Place the file anywhere that it is accessible in your app bundle.
    Android: Place the file in the assets folder.

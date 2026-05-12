@@ -1903,7 +1903,7 @@ Users can now configure:
 
 * Fixed timer notification background color.
 * Updated optional fields within the multi-icon push template.
-* Fixed issues seen with lower level Android API. See https://github.com/adobe/aepsdk-ui-android/pull/64 for details.
+* Fixed issues seen with lower level Android API. See [https://github.com/adobe/aepsdk-ui-android/pull/64](https://github.com/adobe/aepsdk-ui-android/pull/64) for details.
 
 ## August 19, 2024
 

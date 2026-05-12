@@ -17,8 +17,8 @@ This guide explains how to set up, then trigger Adobe Journey Optimizer campaign
 ## Prerequisites
 
 * Intermediate knowledge of AJO in-app message or content card campaign creation. Documentation regarding these two campaign types is available at:
-  * https://experienceleague.adobe.com/en/docs/journey-optimizer/using/channels/in-app/create-in-app
-  * https://experienceleague.adobe.com/en/docs/journey-optimizer/using/channels/content-card/create-content-card
+  * [https://experienceleague.adobe.com/en/docs/journey-optimizer/using/channels/in-app/create-in-app](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/channels/in-app/create-in-app)
+  * [https://experienceleague.adobe.com/en/docs/journey-optimizer/using/channels/content-card/create-content-card](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/channels/content-card/create-content-card)
 
 ## AJO Campaign setup
 
