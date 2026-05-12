@@ -1,4 +1,6 @@
 ---
+title: "Tabs"
+description: "Overview of Tabs"
 noIndex: true
 ---
 

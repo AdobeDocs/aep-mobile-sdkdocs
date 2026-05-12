@@ -1,3 +1,7 @@
+---
+title: "Analytics"
+description: "Overview of Analytics"
+---
 <Variant platform="android" task="config" repeat="4"/>
 
 If using Gradle, remove the v4 Mobile SDK dependency:

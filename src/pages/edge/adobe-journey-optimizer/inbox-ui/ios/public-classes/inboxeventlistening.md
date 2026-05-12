@@ -50,7 +50,7 @@ Called when the inbox begins loading content. Triggered when the `InboxUI` is fi
 func onLoading(_ inbox: InboxUI)
 ```
 
----
+<HorizontalLine />
 
 ### onSuccess
 
@@ -70,7 +70,7 @@ Called when the inbox successfully loads content. Triggered whether the inbox co
 func onSuccess(_ inbox: InboxUI)
 ```
 
----
+<HorizontalLine />
 
 ### onError
 
@@ -111,7 +111,7 @@ Called when a content card is created and configured. This is called once per ca
 func onCardCreated(_ card: ContentCardUI)
 ```
 
----
+<HorizontalLine />
 
 ### onCardDisplayed
 
@@ -131,7 +131,7 @@ Called when a content card appears on screen. Use this to track card impressions
 func onCardDisplayed(_ card: ContentCardUI)
 ```
 
----
+<HorizontalLine />
 
 ### onCardDismissed
 
@@ -151,7 +151,7 @@ Called when a user dismisses a content card. The inbox automatically removes the
 func onCardDismissed(_ card: ContentCardUI)
 ```
 
----
+<HorizontalLine />
 
 ### onCardInteracted
 

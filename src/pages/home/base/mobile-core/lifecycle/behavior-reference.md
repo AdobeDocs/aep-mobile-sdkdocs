@@ -42,7 +42,7 @@ The following Lifecycle workflows show examples of the expected ordering of Life
 
 ![](./assets/android/lifecycle-first-launch.svg)
 
-<!-- mermaid.js diagram definition
+\<!-- mermaid.js diagram definition
 graph LR
     A(["1.<br/>App launched"])
     A ==> B("2.<br/><code>lifecycleStart</code><br>(Start of new session)")
@@ -56,13 +56,13 @@ graph LR
 
     class A,D regularPill;
     class B,C regularBox;
--->
+--\>
 
 **Subsequent app launches, continue session with app close**
 
 ![](./assets/android/lifecycle-continue-session.svg)
 
-<!-- mermaid.js diagram definition
+\<!-- mermaid.js diagram definition
 graph LR
     A(["1.<br/>App launched"])
     A ==> B("2.<br/><code>lifecycleStart</code>")
@@ -78,13 +78,13 @@ graph LR
 
     class A,D,E regularPill;
     class B,C,F regularBox;
--->
+--\>
 
 **Subsequent app launches, continue session without app close**
 
 ![](./assets/android/lifecycle-continue-without-close.svg)
 
-<!-- mermaid.js diagram definition
+\<!-- mermaid.js diagram definition
 graph LR
     A(["1.<br/>App launched"])
     A ==> B("2.<br/><code>lifecycleStart</code>")
@@ -103,13 +103,13 @@ graph LR
 
     class A,F regularPill;
     class B,C,D,E regularBox;
--->
+--\>
 
 **Subsequent app launches, new session**
 
 ![](./assets/android/lifecycle-subsequent-new-session.svg)
 
-<!-- mermaid.js diagram definition
+\<!-- mermaid.js diagram definition
 graph LR
     A(["1.<br/>App launched"])
     A ==> B("2.<br/><code>lifecycleStart</code>")
@@ -126,13 +126,13 @@ graph LR
 
     class A,,D,E,F regularPill;
     class B,C,G regularBox;
--->
+--\>
 
 **On app crash or force close**
 
 ![](./assets/android/lifecycle-crash.svg)
 
-<!-- mermaid.js diagram definition
+\<!-- mermaid.js diagram definition
 graph LR
     A(["1.<br/>App launched"])
     A ==> B(2.<br/><code>lifecycleStart</code>)
@@ -147,7 +147,7 @@ graph LR
 
     class A,C,D regularPill;
     class B,E regularBox;
--->
+--\>
 
 ## Troubleshooting unexpected Lifecycle scenarios
 
@@ -159,7 +159,7 @@ This scenario looks the same as a standard crash, but the underlying reason is a
 
 ![](./assets/android/lifecycle-missing-pause-terminated.svg)
 
-<!-- mermaid.js diagram definition
+\<!-- mermaid.js diagram definition
 graph LR
     A(["1.<br/>App launched"])
     A ==> B("2.<br/><code>lifecycleStart</code>")
@@ -175,7 +175,7 @@ graph LR
     class A,D regularPill;
     class B,E regularBox;
     class C incorrectBox;
--->
+--\>
 
 **Missing pause, app still in memory**  
 
@@ -183,7 +183,7 @@ This scenario shows an example of [consecutive `lifecycleStart` API calls](#cons
 
 ![](./assets/android/lifecycle-missing-pause-not-terminated.svg)
 
-<!-- mermaid.js diagram definition
+\<!-- mermaid.js diagram definition
 graph LR
     A(["1.<br/><code>App launched</code>"])
     A ==> B("2.<br/><code>lifecycleStart</code>")
@@ -199,7 +199,7 @@ graph LR
     class A,D,E regularPill;
     class B,E regularBox;
     class C incorrectBox;
--->
+--\>
 
 In this scenario, the `lifecycleStart` call (5) is not detected as a new session nor a crash. It will have the consequences of a [consecutive `lifecycleStart` API call](#consecutive-lifecyclestart-api-calls).
 
@@ -209,7 +209,7 @@ This scenario shows an example of [consecutive `lifecyclePause` API calls](#cons
 
 ![](./assets/android/lifecycle-missing-start.svg)
 
-<!-- mermaid.js diagram definition
+\<!-- mermaid.js diagram definition
 graph LR
     A(["1.<br/><code>App launched</code>"])
     A ==> B("2.<br/><code>lifecycleStart</code>")
@@ -228,7 +228,7 @@ graph LR
     class B,C regularBox;
     class E dashedPill;
     class G incorrectBox;
--->
+--\>
 
 In this scenario, the last `lifecyclePause` call (7) is effectively a [consecutive `lifecyclePause` API call](#consecutive-lifecyclepause-api-calls), with the consequences of:
 

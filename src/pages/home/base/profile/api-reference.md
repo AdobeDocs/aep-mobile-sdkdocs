@@ -24,9 +24,9 @@ iOS
 
 <Tabs query="platform=ios&api=extension-version"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&api=extension-version"/> --->
+<Tabs query="platform=react-native&api=extension-version"/> ---\>
 
 ## getUserAttributes
 

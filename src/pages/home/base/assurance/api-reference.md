@@ -24,13 +24,13 @@ iOS
 
 <Tabs query="platform=ios&api=extension-version"/>
 
-<!--- React Native
+\<!--- React Native
 
 <Tabs query="platform=react-native&api=extension-version"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=extension-version"/> --->
+<Tabs query="platform=flutter&api=extension-version"/> ---\>
 
 ## registerExtension
 
@@ -66,13 +66,13 @@ iOS
 
 <Tabs query="platform=ios&api=start-session"/>
 
-<!--- React Native
+\<!--- React Native
 
 <Tabs query="platform=react-native&api=start-session"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=start-session"/> --->
+<Tabs query="platform=flutter&api=start-session"/> ---\>
 
 ## startSession (Quick Connect)
 

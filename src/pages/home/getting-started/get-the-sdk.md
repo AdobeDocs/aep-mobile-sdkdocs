@@ -40,13 +40,13 @@ iOS
 
 <Tabs query="platform=ios&task=get"/>
 
-<!--  React Native
+\<!--  React Native
 
-<Tabs query="platform=react-native&task=get"/> -->
+<Tabs query="platform=react-native&task=get"/> --\>
 
-<!-- Flutter
+\<!-- Flutter
 
-<Tabs query="platform=flutter&task=get"/> -->
+<Tabs query="platform=flutter&task=get"/> --\>
 
 ## Installation instructions
 
@@ -110,13 +110,13 @@ Objective-C<br/>(iOS)
 
 <Tabs query="platform=ios-objc&task=add-initialization"/>
 
-<!-- React Native
+\<!-- React Native
 
-<Tabs query="platform=react-native&task=add-initialization"/> -->
+<Tabs query="platform=react-native&task=add-initialization"/> --\>
 
-<!-- Flutter
+\<!-- Flutter
 
-<Tabs query="platform=flutter&task=add-initialization"/> -->
+<Tabs query="platform=flutter&task=add-initialization"/> --\>
 
 ### 3. Ensure app permissions (Android only)
 

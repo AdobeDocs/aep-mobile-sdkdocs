@@ -16,7 +16,7 @@ This document provides a comprehensive reference for all styling properties supp
 
 **Implementation Status**: While the theme system parses all CSS variables for web compatibility, not all properties are currently used in the Android UI. See the [Implementation Status](#implementation-status) section for detailed information on which properties are actively rendered versus defined but unused.
 
----
+<HorizontalLine />
 
 ## Overview
 
@@ -104,7 +104,7 @@ class MainActivity : AppCompatActivity() {
 * **When no theme is loaded** (`theme = null`): The SDK uses built-in light or dark colors (`LightConciergeColors` / `DarkConciergeColors`) based on the device’s light/dark setting.
 * **When a theme is loaded** (`theme = <ConciergeThemeData>`): The theme JSON always takes precedence.
 
----
+<HorizontalLine />
 
 ## JSON structure
 
@@ -120,7 +120,7 @@ The theme JSON file contains these top-level keys:
 | `assets` | Icon and image assets |
 | `theme` | Visual styling tokens (CSS variables) |
 
----
+<HorizontalLine />
 
 ## Value formats
 
@@ -201,7 +201,7 @@ Font weights use CSS numeric or named values:
 | `center` | `TextAlign.Center` |
 | `right` | `TextAlign.End` |
 
----
+<HorizontalLine />
 
 ## Metadata
 
@@ -227,7 +227,7 @@ Theme identification information.
 }
 ```
 
----
+<HorizontalLine />
 
 ## Behavior
 
@@ -353,7 +353,7 @@ Feature toggles and interaction configuration.
 }
 ```
 
----
+<HorizontalLine />
 
 ## Disclaimer
 
@@ -384,7 +384,7 @@ Legal disclaimer text with embedded links.
 
 To hide the disclaimer, omit the `disclaimer` key from the theme or set `disclaimer.text` to an empty string.
 
----
+<HorizontalLine />
 
 ## Text (Copy)
 
@@ -491,7 +491,7 @@ While there are no strict requirements for character limits in many of these tex
 }
 ```
 
----
+<HorizontalLine />
 
 ## Arrays
 
@@ -547,7 +547,7 @@ List-based configuration for examples and feedback options.
 }
 ```
 
----
+<HorizontalLine />
 
 ## Assets
 
@@ -581,7 +581,7 @@ To use a local asset instead, place the image file in your app's `assets/icons/`
 }
 ```
 
----
+<HorizontalLine />
 
 ## Theme Tokens
 
@@ -891,7 +891,7 @@ Non-CSS `components.feedback` overrides for the feedback dialog.
 | `--thinking-bubble-padding-vertical` | `cssLayout.thinkingBubblePaddingVertical` | `Double` | `8.0` | Vertical inner padding of the thinking bubble (dp) |
 | `--thinking-dot-vertical-alignment` | `cssLayout.thinkingDotVerticalAlignment` | `String` | `"center"` | Vertical alignment of the thinking dots row: `"top"`, `"center"`, or `"bottom"` |
 
----
+<HorizontalLine />
 
 ## Complete Example
 
@@ -1172,7 +1172,7 @@ Non-CSS `components.feedback` overrides for the feedback dialog.
 }
 ```
 
----
+<HorizontalLine />
 
 ## Implementation Status
 
@@ -1484,7 +1484,7 @@ The following CSS variables from web themes are **not supported** on Android (de
 | `--message-alignment` | Use `behavior.chat.messageAlignment` instead |
 | `--message-width` | Use `behavior.chat.messageWidth` instead |
 
----
+<HorizontalLine />
 
 ## Fallback Colors (Not Theme-Configurable)
 
@@ -1502,7 +1502,7 @@ The following colors from `LightConciergeColors` / `DarkConciergeColors` are har
 
 **Note**: While these colors provide consistent fallback styling, they cannot be overridden in theme JSON files. If you need custom colors for these UI elements, use the theme-specific CSS variables that map to these elements (e.g., use `--input-outline-color` instead of relying on the `outline` fallback).
 
----
+<HorizontalLine />
 
 ## Recommendations for Theme Authors
 
@@ -1591,4 +1591,4 @@ These properties are parsed but **not currently used** and can be omitted withou
 4. **Test with and without a theme**: With no theme loaded, the welcome card and prompts follow system light/dark (dark background + light text in dark mode). With a theme loaded, welcome example `backgroundColor` and theme colors are applied
 5. **Test light/dark modes**: If supporting both, verify colors work in both contexts
 
----
+<HorizontalLine />

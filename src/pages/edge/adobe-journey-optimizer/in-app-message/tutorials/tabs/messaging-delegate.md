@@ -1,3 +1,7 @@
+---
+title: "Messaging Delegate"
+description: "Overview of Messaging Delegate"
+---
 <Variant platform="android3x" function="register" repeat="8"/>
 
 On Android 3.x, you must implement the `PresentationDelegate` interface to be alerted of in-app message events. The `AEPUIService` class, which implements the `UIService` interface, maintains an optional property that holds reference to the `PresentationDelegate`.

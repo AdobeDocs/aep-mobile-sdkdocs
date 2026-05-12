@@ -1,4 +1,6 @@
 ---
+title: "Crash Recovery"
+description: "Overview of Crash Recovery"
 noIndex: true
 ---
 

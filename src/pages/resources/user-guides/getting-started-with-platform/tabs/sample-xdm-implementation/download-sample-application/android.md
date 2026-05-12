@@ -1,3 +1,7 @@
+---
+title: "Android"
+description: "Overview of Android"
+---
 #### Java
 
 Download the Android Sample application from the [Adobe Experience Platform SDK GitHub](https://github.com/adobe/aepsdk-sample-app-android/archive/beta-assignment-3.zip).

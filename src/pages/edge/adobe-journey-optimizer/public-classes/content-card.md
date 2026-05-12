@@ -52,7 +52,7 @@ public class ContentCard: NSObject, Codable {
 
 ### Public functions
 
----
+<HorizontalLine />
 
 ### track(_:withEdgeEventType:)
 
@@ -116,7 +116,7 @@ public class ContentCard {
 
 ### Public functions
 
----
+<HorizontalLine />
 
 ### track
 

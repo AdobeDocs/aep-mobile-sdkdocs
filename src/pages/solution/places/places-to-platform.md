@@ -1,3 +1,7 @@
+---
+title: "Places Service event forwarding to Adobe Experience Platform"
+description: "1. Enriches Adobe Journey Optimizer's ability to engage with users based on location entry and exit triggers. 2. Allows creating audiences based on points ..."
+---
 # Places Service event forwarding to Adobe Experience Platform
 
 ## Capabilities

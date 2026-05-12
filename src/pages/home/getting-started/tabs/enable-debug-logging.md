@@ -1,4 +1,6 @@
 ---
+title: "Enable Debug Logging"
+description: "Overview of Enable Debug Logging"
 noIndex: true
 ---
 
@@ -33,7 +35,7 @@ MobileCore.setLogLevel(.debug)
 // [AEPMobileCore setLogLevel:AEPLogLevelError];
 ```
 
-<!-- 
+\<!-- 
 <Variant platform="react-native" task="enable" repeat="2"/>
 
 #### Javascript
@@ -45,7 +47,7 @@ ACPCore.setLogLevel(ACPMobileLogLevel.DEBUG);
 //ACPCore.setLogLevel(ACPMobileLogLevel.ERROR);
 ``` -->
 
-<!-- <Variant platform="flutter" task="enable" repeat="2"/>
+\<!-- <Variant platform="flutter" task="enable" repeat="2"/>
 
 #### Dart
 
@@ -56,7 +58,7 @@ FlutterACPCore.setLogLevel(ACPLoggingLevel.DEBUG);
 //FlutterACPCore.setLogLevel(ACPLoggingLevel.ERROR);
 ``` -->
 
-<!-- <Variant platform="cordova" task="enable" repeat="2"/>
+\<!-- <Variant platform="cordova" task="enable" repeat="2"/>
 
 #### Cordova
 
@@ -238,7 +240,7 @@ In iOS 13 and later, for a scene-based application, use the `UISceneDelegate`'s 
 
 For more information on handling backgrounding applications with Scenes, refer to Apple's documentation [here](https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_background)
 
-<!-- <Variant platform="react-native" task="metrics" repeat="6"/>
+\<!-- <Variant platform="react-native" task="metrics" repeat="6"/>
 
 #### JavaScript
 
@@ -256,13 +258,13 @@ ACPCore.lifecycleStart({"lifecycleStart": "myData"});
 ACPCore.lifecyclePause();
 ``` -->
 
-<!-- <Variant platform="flutter" task="metrics" repeat="2"/>
+\<!-- <Variant platform="flutter" task="metrics" repeat="2"/>
 
 #### Flutter
 
-You need to implement Lifecycle in native Android and iOS code. For more information on implementing, please read the [Lifecycle documentation](../lifecycle-for-edge-network/index.md). -->
+You need to implement Lifecycle in native Android and iOS code. For more information on implementing, please read the [Lifecycle documentation](../lifecycle-for-edge-network/index.md). --\>
 
-<!-- <Variant platform="cordova" task="metrics" repeat="4"/>
+\<!-- <Variant platform="cordova" task="metrics" repeat="4"/>
 
 #### Cordova
 

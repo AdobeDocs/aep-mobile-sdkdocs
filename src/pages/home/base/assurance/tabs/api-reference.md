@@ -1,4 +1,6 @@
 ---
+title: "Api Reference"
+description: "Overview of Api Reference"
 noIndex: true
 ---
 
@@ -51,7 +53,7 @@ AEPAssurance.extensionVersion()
 [AEPAssurance extensionVersion];
 ```
 
-<!--- <Variant platform="react-native" api="extension-version" repeat="3"/>
+\<!--- <Variant platform="react-native" api="extension-version" repeat="3"/>
 
 #### JavaScript
 
@@ -149,7 +151,7 @@ For SceneDelegate based applications
 }
 ```
 
-<!--- <Variant platform="react-native" api="start-session" repeat="3"/>
+\<!--- <Variant platform="react-native" api="start-session" repeat="3"/>
 
 #### JavaScript
 

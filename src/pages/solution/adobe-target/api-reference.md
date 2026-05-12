@@ -25,9 +25,9 @@ iOS
 
 <Tabs query="platform=ios&api=clear-prefetch-cache"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&api=clear-prefetch-cache"/> --->
+<Tabs query="platform=react-native&api=clear-prefetch-cache"/> ---\>
 
 ## clickedLocation
 
@@ -46,9 +46,9 @@ iOS
 
 <Tabs query="platform=ios&api=clicked-location"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&api=clicked-location"/> --->
+<Tabs query="platform=react-native&api=clicked-location"/> ---\>
 
 ## displayedLocations
 
@@ -64,9 +64,9 @@ iOS
 
 <Tabs query="platform=ios&api=displayed-locations"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&api=displayed-locations"/> --->
+<Tabs query="platform=react-native&api=displayed-locations"/> ---\>
 
 ## extensionVersion
 
@@ -82,9 +82,9 @@ iOS
 
 <Tabs query="platform=ios&api=extension-version"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&api=extension-version"/> --->
+<Tabs query="platform=react-native&api=extension-version"/> ---\>
 
 ## getSessionId
 
@@ -116,9 +116,9 @@ iOS
 
 <Tabs query="platform=ios&api=get-third-party-id"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&api=get-third-party-id"/> --->
+<Tabs query="platform=react-native&api=get-third-party-id"/> ---\>
 
 ## getTntId
 
@@ -134,9 +134,9 @@ iOS
 
 <Tabs query="platform=ios&api=get-tnt-id"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&api=get-tnt-id"/> --->
+<Tabs query="platform=react-native&api=get-tnt-id"/> ---\>
 
 ## prefetchContent
 
@@ -152,9 +152,9 @@ iOS
 
 <Tabs query="platform=ios&api=prefetch-content"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&api=prefetch-content"/> --->
+<Tabs query="platform=react-native&api=prefetch-content"/> ---\>
 
 ## prefetchContent (with timeout)
 
@@ -277,9 +277,9 @@ Android
 
 <Tabs query="platform=android&api=register-extension"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&api=register-extension"/> --->
+<Tabs query="platform=react-native&api=register-extension"/> ---\>
 
 ## resetExperience
 
@@ -295,9 +295,9 @@ iOS
 
 <Tabs query="platform=ios&api=reset-experience"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&api=reset-experience"/> --->
+<Tabs query="platform=react-native&api=reset-experience"/> ---\>
 
 ## retrieveLocationContent
 
@@ -321,9 +321,9 @@ iOS
 
 <Tabs query="platform=ios&api=retrieve-location-content"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&api=retrieve-location-content"/> --->
+<Tabs query="platform=react-native&api=retrieve-location-content"/> ---\>
 
 ## setPreviewRestartDeepLink
 
@@ -339,9 +339,9 @@ iOS
 
 <Tabs query="platform=ios&api=set-preview-restart-deep-link"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&api=set-preview-restart-deep-link"/> --->
+<Tabs query="platform=react-native&api=set-preview-restart-deep-link"/> ---\>
 
 ## setSessionId
 
@@ -375,9 +375,9 @@ iOS
 
 <Tabs query="platform=ios&api=set-third-party-id"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&api=set-third-party-id"/> --->
+<Tabs query="platform=react-native&api=set-third-party-id"/> ---\>
 
 ## setTntId
 
@@ -427,9 +427,9 @@ iOS
 
 <Tabs query="platform=ios&api=target-request"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&api=target-request"/> --->
+<Tabs query="platform=react-native&api=target-request"/> ---\>
 
 ### Target prefetch
 
@@ -445,9 +445,9 @@ iOS
 
 <Tabs query="platform=ios&api=target-prefetch"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&api=target-prefetch"/> --->
+<Tabs query="platform=react-native&api=target-prefetch"/> ---\>
 
 ### Target parameters
 
@@ -463,9 +463,9 @@ iOS
 
 <Tabs query="platform=ios&api=target-parameters"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&api=target-parameters"/> --->
+<Tabs query="platform=react-native&api=target-parameters"/> ---\>
 
 ### Target order
 
@@ -481,9 +481,9 @@ iOS
 
 <Tabs query="platform=ios&api=target-order"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&api=target-order"/> --->
+<Tabs query="platform=react-native&api=target-order"/> ---\>
 
 ### Target product
 
@@ -499,9 +499,9 @@ iOS
 
 <Tabs query="platform=ios&api=target-product"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&api=target-product"/> --->
+<Tabs query="platform=react-native&api=target-product"/> ---\>
 
 ### Target callback
 

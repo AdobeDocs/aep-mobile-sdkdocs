@@ -1,3 +1,7 @@
+---
+title: "SDKs end-of-support announcements"
+description: "Updated On: July 8, 2024"
+---
 # SDKs end-of-support announcements
 
 ## End of support for Adobe Experience Platform 1.x SDKs for Android

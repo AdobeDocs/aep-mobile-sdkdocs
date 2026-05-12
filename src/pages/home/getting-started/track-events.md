@@ -80,15 +80,15 @@ iOS
 
 <Tabs query="platform=ios&task=track-action"/>
 
-<!-- React Native
+\<!-- React Native
 
-<Tabs query="platform=react-native&task=track-action"/> -->
+<Tabs query="platform=react-native&task=track-action"/> --\>
 
-<!-- Flutter
+\<!-- Flutter
 
-<Tabs query="platform=flutter&task=track-action"/> -->
+<Tabs query="platform=flutter&task=track-action"/> --\>
 
-<!-- Cordova
+\<!-- Cordova
 
 <Tabs query="platform=cordova&task=track-action"/>
 
@@ -98,7 +98,7 @@ Unity
 
 Xamarin
 
-<Tabs query="platform=xamarin&task=track-action"/> -->
+<Tabs query="platform=xamarin&task=track-action"/> --\>
 
 ## Track app states and screens (for Adobe Analytics)
 
@@ -114,15 +114,15 @@ iOS
 
 <Tabs query="platform=ios&task=track-state"/>
 
-<!-- React Native
+\<!-- React Native
 
-<Tabs query="platform=react-native&task=track-state"/> -->
+<Tabs query="platform=react-native&task=track-state"/> --\>
 
-<!-- Flutter
+\<!-- Flutter
 
-<Tabs query="platform=flutter&task=track-state"/> -->
+<Tabs query="platform=flutter&task=track-state"/> --\>
 
-<!-- Cordova
+\<!-- Cordova
 
 <Tabs query="platform=cordova&task=track-state"/>
 
@@ -132,7 +132,7 @@ Unity
 
 Xamarin
 
-<Tabs query="platform=xamarin&task=track-state"/> -->
+<Tabs query="platform=xamarin&task=track-state"/> --\>
 
 For more information, see the [Mobile Core API Reference](../base/mobile-core/api-reference.md).
 

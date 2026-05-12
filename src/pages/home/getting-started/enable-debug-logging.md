@@ -41,21 +41,21 @@ iOS
 
 <Tabs query="platform=ios&task=enable"/>
 
-<!-- React Native
+\<!-- React Native
 
-<Tabs query="platform=react-native&task=enable"/> -->
+<Tabs query="platform=react-native&task=enable"/> --\>
 
-<!-- Flutter
+\<!-- Flutter
 
-<Tabs query="platform=flutter&task=enable"/> -->
+<Tabs query="platform=flutter&task=enable"/> --\>
 
-<!-- Cordova
+\<!-- Cordova
 
 <Tabs query="platform=cordova&task=enable"/>
 
 Unity
 
-<Tabs query="platform=unity&task=enable"/> -->
+<Tabs query="platform=unity&task=enable"/> --\>
 
 ## Lifecycle metrics
 
@@ -81,15 +81,15 @@ iOS
 
 <Tabs query="platform=ios&task=metrics"/>
 
-<!-- React Native
+\<!-- React Native
 
-<Tabs query="platform=react-native&task=metrics"/> -->
+<Tabs query="platform=react-native&task=metrics"/> --\>
 
-<!-- Flutter
+\<!-- Flutter
 
-<Tabs query="platform=flutter&task=metrics"/> -->
+<Tabs query="platform=flutter&task=metrics"/> --\>
 
-<!-- Cordova
+\<!-- Cordova
 
 <Tabs query="platform=cordova&task=metrics"/>
 
@@ -99,6 +99,6 @@ Unity
 
 Xamarin
 
-<Tabs query="platform=xamarin&task=metrics"/> -->
+<Tabs query="platform=xamarin&task=metrics"/> --\>
 
 For more information, see the documentation on [Lifecycle metrics](../base/mobile-core/lifecycle/index.md).

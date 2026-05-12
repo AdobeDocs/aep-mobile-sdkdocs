@@ -1,4 +1,6 @@
 ---
+title: "Content Type"
+description: "Overview of Content Type"
 noIndex: true
 ---
 

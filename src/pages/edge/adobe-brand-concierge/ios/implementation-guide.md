@@ -16,7 +16,7 @@ The Brand Concierge UI is presented in two steps:
 
 Internally, `Concierge.show(...)` dispatches an event in the Adobe Experience Platform Mobile SDK that the Concierge extension handles to build a `ConciergeConfiguration`, then the SwiftUI overlay presents `ChatView`.
 
----
+<HorizontalLine />
 
 ## Prerequisites
 
@@ -41,7 +41,7 @@ Speech to text uses iOS Speech and microphone APIs. Add these to your app `Info.
 
 The SDK handles permission requests internally when the user taps the microphone button; no additional permission-request code is required from the host app.
 
----
+<HorizontalLine />
 
 ## Installation
 
@@ -91,7 +91,7 @@ make archive
 
 This generates `AEPBrandConcierge.xcframework` under the `build` folder. Drag and drop it into your app target in Xcode.
 
----
+<HorizontalLine />
 
 ## Configuration
 
@@ -142,7 +142,7 @@ The ECID is read from the Edge Identity shared state. Surfaces are not a Configu
 
 Another option for validation is to use Adobe Assurance. Refer to the [Mobile SDK validation guide](../../../home/getting-started/validate.md) for more information.
 
----
+<HorizontalLine />
 
 ## Optional styling
 
@@ -161,7 +161,7 @@ var body: some View {
 
 More information regarding theme customization can be found in the [Style guide (iOS)](/edge/adobe-brand-concierge/ios/style-guide/).
 
----
+<HorizontalLine />
 
 ## Basic usage
 
@@ -213,7 +213,7 @@ Dismiss the overlay from code with:
 Concierge.hide()
 ```
 
----
+<HorizontalLine />
 
 ## UIKit usage
 
@@ -241,7 +241,7 @@ To dismiss the presented UI:
 Concierge.hide()
 ```
 
----
+<HorizontalLine />
 
 ## Link Handling
 
@@ -329,7 +329,7 @@ Links clicked inside the in-app WebView overlay (for example, links on a page th
 
 No additional configuration is required for this behavior. Universal-link forwarding for in-chat links (the `handleLink` -> universal link -> WebView fallback described above) applies only to links tapped in chat messages; it is not re-evaluated for links inside an already loaded WebView page.
 
----
+<HorizontalLine />
 
 ## Next steps
 

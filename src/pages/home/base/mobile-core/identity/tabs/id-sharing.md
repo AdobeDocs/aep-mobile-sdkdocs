@@ -1,4 +1,6 @@
 ---
+title: "Id Sharing"
+description: "Overview of Id Sharing"
 noIndex: true
 ---
 
@@ -103,7 +105,7 @@ Identity.getUrlVariables { urlVariables, error in
 }];
 ```
 
-<!--- <Variant platform="react-native" task="implement" repeat="5"/>
+\<!--- <Variant platform="react-native" task="implement" repeat="5"/>
 
 #### JavaScript
 

@@ -1,4 +1,6 @@
 ---
+title: "Analytics"
+description: "Overview of Analytics"
 noIndex: true
 ---
 

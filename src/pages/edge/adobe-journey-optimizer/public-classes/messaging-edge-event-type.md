@@ -1,4 +1,6 @@
 ---
+title: "Enum - MessagingEdgeEventType"
+description: "Provides mapping to XDM EventType strings needed for Experience Event requests."
 noIndex: true
 ---
 

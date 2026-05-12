@@ -1,3 +1,7 @@
+---
+title: "Signal extension and Rules Engine integration"
+description: "The rules that you set up can use the available triggers and conditions, which result in one of the following actions:"
+---
 # Signal extension and Rules Engine integration
 
 The rules that you set up can use the available triggers and conditions, which result in one of the following actions:

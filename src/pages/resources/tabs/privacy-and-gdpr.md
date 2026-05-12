@@ -1,4 +1,6 @@
 ---
+title: "Privacy And Gdpr"
+description: "Overview of Privacy And Gdpr"
 noIndex: true
 ---
 

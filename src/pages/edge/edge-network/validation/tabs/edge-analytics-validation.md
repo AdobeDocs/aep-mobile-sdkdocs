@@ -1,4 +1,6 @@
 ---
+title: "Edge Analytics Validation"
+description: "Overview of Edge Analytics Validation"
 noIndex: true
 ---
 

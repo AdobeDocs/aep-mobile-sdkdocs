@@ -1,3 +1,7 @@
+---
+title: "Adobe Mobile Library (v4) to Experience Platform Analytics migration"
+description: "The Adobe Experience Platform Analytics extension uses [tags](https://experience.adobe.com/#/data-collection/) to configure the Experience Platform SDKs. T..."
+---
 import Tabs from './tabs/analytics.md'
 
 # Adobe Mobile Library (v4) to Experience Platform Analytics migration

@@ -1,4 +1,6 @@
 ---
+title: "Track Events"
+description: "Overview of Track Events"
 noIndex: true
 ---
 
@@ -120,7 +122,7 @@ static func track(action: String?, data: [String: Any]?)
 [AEPMobileCore trackAction:@"action name" data:@{@"key": @"value"}];
 ```
 
-<!-- <Variant platform="react-native" task="track-action" repeat="5"/>
+\<!-- <Variant platform="react-native" task="track-action" repeat="5"/>
 
 #### JavaScript
 
@@ -136,7 +138,7 @@ trackAction(action?: String, contextData?: { string: string });
 ACPCore.trackAction("action", {"mytest": "action"});
 ``` -->
 
-<!-- <Variant platform="flutter" task="track-action" repeat="5"/>
+\<!-- <Variant platform="flutter" task="track-action" repeat="5"/>
 
 #### Dart
 
@@ -152,7 +154,7 @@ Future<void> trackAction(String action, {Map<String, String> data});
 FlutterACPCore.trackAction("mytest",  data: {"mytest": "action"});J
 ``` -->
 
-<!-- <Variant platform="cordova" task="track-action" repeat="2"/>
+\<!-- <Variant platform="cordova" task="track-action" repeat="2"/>
 
 #### Javascript
 
@@ -243,7 +245,7 @@ static func track(state: String?, data: [String: Any]?)
 [AEPMobileCore trackState:@"state name" data:@{@"key": @"value"}];
 ```
 
-<!-- <Variant platform="react-native" task="track-state" repeat="5"/>
+\<!-- <Variant platform="react-native" task="track-state" repeat="5"/>
 
 #### JavaScript
 
@@ -259,7 +261,7 @@ trackState(state?: String, contextData?: { string: string });
 ACPCore.trackState("state", {"mytest": "state"});
 ``` -->
 
-<!-- <Variant platform="flutter" task="track-state" repeat="5"/>
+\<!-- <Variant platform="flutter" task="track-state" repeat="5"/>
 
 #### Dart
 
@@ -275,7 +277,7 @@ Future<void> trackState(String state, {Map<String, String> data});
 FlutterACPCore.trackState("state",  data: {"mytest": "state"});
 ``` -->
 
-<!-- <Variant platform="cordova" task="track-state" repeat="2"/>
+\<!-- <Variant platform="cordova" task="track-state" repeat="2"/>
 
 #### Javascript
 

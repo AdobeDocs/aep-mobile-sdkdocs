@@ -33,9 +33,9 @@ keywords:
 * [Push notification payload keys](push-payload.md)
 * [Push token sync optimizations](push-token-sync-optimizations.md)
 
-<!--
+\<!--
 
 ## Push templates
 
 * [Reference - Out of the box push templates](../../../resources/reference/push-notifications/index.md)
--->
+--\>

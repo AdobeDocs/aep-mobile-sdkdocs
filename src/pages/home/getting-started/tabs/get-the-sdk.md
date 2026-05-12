@@ -1,4 +1,6 @@
 ---
+title: "Get The Sdk"
+description: "Overview of Get The Sdk"
 noIndex: true
 ---
 
@@ -12,7 +14,7 @@ Adobe Experience Platform SDKs for iOS support **iOS 12 or later**; **requires**
 
 In order to support the new Apple M1 architecture while maintaining support for existing Intel architecture, the Adobe Experience Platform SDKs are now distributed using XCFrameworks. Please see the [current SDK versions](../current-sdk-versions.md) for more information on the latest extension versions.
 
-<!-- <Variant platform="react-native" task="get" repeat="7"/>
+\<!-- <Variant platform="react-native" task="get" repeat="7"/>
 
 #### React Native
 
@@ -26,15 +28,15 @@ v2.0.0 and above of the AEP Mobile SDK React Native plugins use [autolinking](ht
 
 To update native dependencies to latest available versions, run the following command:
 
-`cd ios && pod update && cd ..` -->
+`cd ios && pod update && cd ..` --\>
 
-<!-- <Variant platform="flutter" task="get" repeat="3"/>
+\<!-- <Variant platform="flutter" task="get" repeat="3"/>
 
 #### Flutter
 
 Adobe Experience Platform Mobile SDK plugin for Flutter supports Flutter **versions 1.10.0 or later**.
 
-For the latest Flutter installation instructions, see the package [install tab](https://pub.dev/packages/flutter_acpcore#-installing-tab-). -->
+For the latest Flutter installation instructions, see the package [install tab](https://pub.dev/packages/flutter_acpcore#-installing-tab-). --\>
 
 <Variant platform="android" task="add-dependencies" repeat="3"/>
 

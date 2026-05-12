@@ -262,9 +262,9 @@ A sample Customer Journey Analytics report for this scenario will look like:
 
 | Experience | Location | Views | Clicks | CTR |
 |---|---|--:|--:|--:|
-| Summer Sale | `homepage.`<br/>`hero` | 10,000 | 500 | 5% |
-| Summer Sale | `product.`<br/>`sidebar` | 3,000 | 90 | 3% |
-| Summer Sale | `checkout.`<br/>`upsell` | 1,000 | 150 | 15% |
+| Summer Sale | `homepage.`\<br/\>`hero` | 10,000 | 500 | 5% |
+| Summer Sale | `product.`\<br/\>`sidebar` | 3,000 | 90 | 3% |
+| Summer Sale | `checkout.`\<br/\>`upsell` | 1,000 | 150 | 15% |
 
 You can use this report to answer questions like *"Where does this experience perform best?"*
 
@@ -309,8 +309,8 @@ Customer Journey Analytics report will look like:
 | Experience | Location | Views | Clicks |
 |---|---|--:|--:|
 | Summer Sale | `homepage` | 50,000 | 2,500 |
-| Summer Sale | `category.`<br/>`electronics` | 8,000 | 320 |
-| Summer Sale | `search.`<br/>`results` | 3,000 | 45 |
+| Summer Sale | `category.`\<br/\>`electronics` | 8,000 | 320 |
+| Summer Sale | `search.`\<br/\>`results` | 3,000 | 45 |
 
 ## Location naming convention
 
@@ -351,11 +351,11 @@ Sample Customer Journey Analytics report - persuasion strategy by location:
 
 | Location | Persuasion strategy | Views | Click | CTR |
 |---|---|--:|--:|--:|
-| `homepage.`<br/>`hero` |   Urgency  |  10,000  |  800 |   8% |
-| `homepage.`<br/>`hero` |   Social Proof  |  10,000  |  650  |  6.5% |
-| `homepage.`<br/>`hero` |   Scarcity |   10,000  |  720 |   7.2% |
-| `checkout.`<br/>`upsell` |   Urgency  |  2,000  |  300  |  15% |
-| `checkout.`<br/>`upsell` |   Social Proof  |  2,000 |   180  |   9% |
+| `homepage.`\<br/\>`hero` |   Urgency  |  10,000  |  800 |   8% |
+| `homepage.`\<br/\>`hero` |   Social Proof  |  10,000  |  650  |  6.5% |
+| `homepage.`\<br/\>`hero` |   Scarcity |   10,000  |  720 |   7.2% |
+| `checkout.`\<br/\>`upsell` |   Urgency  |  2,000  |  300  |  15% |
+| `checkout.`\<br/\>`upsell` |   Social Proof  |  2,000 |   180  |   9% |
 
 Insight: **Urgency** messaging performs best at checkout (+15% CTR), while **Social Proof** works better on homepage.
 

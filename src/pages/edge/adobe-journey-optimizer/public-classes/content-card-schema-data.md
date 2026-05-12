@@ -43,7 +43,7 @@ public class ContentCardSchemaData: NSObject, Codable {
 
 ### Public functions
 
----
+<HorizontalLine />
 
 ### getContentCard - DEPRECATED
 
@@ -137,7 +137,7 @@ public class ContentCardSchemaData implements SchemaData {
 
 ### Public functions
 
----
+<HorizontalLine />
 
 ### getContentCard - DEPRECATED
 

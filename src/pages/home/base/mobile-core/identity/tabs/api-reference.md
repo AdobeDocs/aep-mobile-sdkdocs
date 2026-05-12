@@ -1,4 +1,6 @@
 ---
+title: "Api Reference"
+description: "Overview of Api Reference"
 noIndex: true
 ---
 
@@ -96,7 +98,7 @@ NSURL* url = [NSURL URLWithString:@"https://example.com"];
 }];
 ```
 
-<!--- <Variant platform="react-native" api="append-to-url" repeat="6"/>
+\<!--- <Variant platform="react-native" api="append-to-url" repeat="6"/>
 
 #### JavaScript
 **Syntax**
@@ -176,7 +178,7 @@ let identityExtensionVersion  = Identity.extensionVersion
 NSString *identityVersion = [AEPMobileIdentity extensionVersion];
 ```
 
-<!--- <Variant platform="react-native" api="extension-version" repeat="2"/>
+\<!--- <Variant platform="react-native" api="extension-version" repeat="2"/>
 #### JavaScript
 ```jsx
 ACPIdentity.extensionVersion().then(identityExtensionVersion => console.log("AdobeExperienceSDK: ACPIdentity version: " + identityExtensionVersion));
@@ -257,7 +259,7 @@ Identity.getExperienceCloudId { ecid, error in
 }];
 ```
 
-<!--- <Variant platform="react-native" api="get-experience-cloud-id" repeat="5"/>
+\<!--- <Variant platform="react-native" api="get-experience-cloud-id" repeat="5"/>
 #### JavaScript
 **Syntax**
 ```jsx
@@ -354,7 +356,7 @@ Identity.getIdentifiers { identifiers, error in
 }];
 ```
 
-<!--- <Variant platform="react-native" api="get-identifiers" repeat="5"/>
+\<!--- <Variant platform="react-native" api="get-identifiers" repeat="5"/>
 #### JavaScript
 **Syntax**
 ```jsx
@@ -476,7 +478,7 @@ Identity.getUrlVariables { (urlVariables, error) in
 }];
 ```
 
-<!--- <Variant platform="react-native" api="get-url-variables" repeat="6"/>
+\<!--- <Variant platform="react-native" api="get-url-variables" repeat="6"/>
 This method was added in react-native-acpcore v1.0.5.
 #### JavaScript
 **Syntax**
@@ -556,7 +558,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-<!--- <Variant platform="react-native" api="register-extension" repeat="2"/>
+\<!--- <Variant platform="react-native" api="register-extension" repeat="2"/>
 
 #### JavaScript
 
@@ -566,7 +568,7 @@ When using React Native, registering Identity with Mobile Core should be done in
 
 #### Dart
 
-When using Flutter, registering Identity with Mobile Core should be done in native code which is shown under the Android and iOS tabs. --->
+When using Flutter, registering Identity with Mobile Core should be done in native code which is shown under the Android and iOS tabs. ---\>
 
 <Variant platform="android" api="set-advertising-identifier" repeat="8"/>
 
@@ -762,7 +764,7 @@ func setAdvertisingIdentiferUsingTrackingManager() {
 }
 ```
 
-<!--- <Variant platform="react-native" api="set-advertising-identifier" repeat="6"/>
+\<!--- <Variant platform="react-native" api="set-advertising-identifier" repeat="6"/>
 #### JavaScript
 **Syntax**
 ```jsx
@@ -839,7 +841,7 @@ MobileCore.setPushIdentifier(deviceToken)
 [AEPMobileCore setPushIdentifier:deviceToken];
 ```
 
-<!--- <Variant platform="react-native" api="set-push-identifier" repeat="6"/>
+\<!--- <Variant platform="react-native" api="set-push-identifier" repeat="6"/>
 #### JavaScript
 **Syntax**
 ```jsx
@@ -917,7 +919,7 @@ Identity.syncIdentifier(identifierType: "idType",
                       authenticationState:AEPMobileVisitorAuthStateUnknown];
 ```
 
-<!--- <Variant platform="react-native" api="sync-identifier" repeat="6"/>
+\<!--- <Variant platform="react-native" api="sync-identifier" repeat="6"/>
 #### JavaScript
 **Syntax**
 ```jsx
@@ -1007,7 +1009,7 @@ NSDictionary *ids = @{@"idType1":@"idValue1",
 [AEPMobileIdentity syncIdentifiers:ids];
 ```
 
-<!--- <Variant platform="react-native" api="sync-identifiers" repeat="6"/>
+\<!--- <Variant platform="react-native" api="sync-identifiers" repeat="6"/>
 #### JavaScript
 **Syntax**
 ```jsx
@@ -1098,7 +1100,7 @@ NSDictionary *ids = @{@"idType1":@"idValue1",
 [AEPMobileIdentity syncIdentifiers:ids authenticationState:AEPMobileVisitorAuthStateAuthenticated];
 ```
 
-<!--- <Variant platform="react-native" api="sync-identifiers-overloaded" repeat="6"/>
+\<!--- <Variant platform="react-native" api="sync-identifiers-overloaded" repeat="6"/>
 #### JavaScript
 **Syntax**
 ```jsx
@@ -1191,7 +1193,7 @@ This is used to indicate the authentication state for the current `Identifiable`
 }
 ```
 
-<!--- <Variant platform="react-native" api="public-classes" repeat="7"/>
+\<!--- <Variant platform="react-native" api="public-classes" repeat="7"/>
 #### JavaScript
 **ACPVisitorID**
 This is an identifier to be used with the Adobe Experience Cloud Identity Service and it contains the origin, the identifier type, the identifier, and the authentication state of the visitor ID.

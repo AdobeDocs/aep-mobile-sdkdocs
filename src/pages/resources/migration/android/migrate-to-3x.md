@@ -1,3 +1,7 @@
+---
+title: "Migrate to Adobe Experience Platform 3.x SDKs for Android"
+description: "This Mobile SDK version for Android now supports a minimum API level of 21."
+---
 # Migrate to Adobe Experience Platform 3.x SDKs for Android
 
 <InlineAlert variant="info" slots="text"/>
@@ -151,7 +155,7 @@ As of version 3.0.0 of the Adobe Experience Platform Edge Bridge for Android, th
 | Action | `data.action` | `data.__adobe.analytics.linkName` | As of v3, set as the custom link name in the Analytics hit. The field `data.__adobe.analytics.linkType` with value `other` is also automatically included. |
 | State | `data.state` | `data.__adobe.analytics.pageName` | As of v3, set as the page name in the Analytics hit. |
 | Context data | `data.contextdata` | `data.__adobe.analytics.contextData` | Context data is a map which includes the custom keys and values specified in the `trackAction` and `trackState` API calls. |
-| Context data prefixed with "&&" | `data.contextdata`| `data.__adobe.analytics` | Before v3, there was no special handling of context data prefixed with "&&".  <br/> <br/>  As of v3, context data keys prefixed with "&&" are automatically mapped to Analytics variables and no longer include the "&&" prefix. For example, the key `&&products` is sent as `data.__adobe.analytics.products`. Please note that these keys must be known to Analytics and are case sensitive. Find the full list of supported Analytics variables [here](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping). |
+| Context data prefixed with "&&" | `data.contextdata`| `data.__adobe.analytics` | Before v3, there was no special handling of context data prefixed with "&&".  \<br/\> \<br/\>  As of v3, context data keys prefixed with "&&" are automatically mapped to Analytics variables and no longer include the "&&" prefix. For example, the key `&&products` is sent as `data.__adobe.analytics.products`. Please note that these keys must be known to Analytics and are case sensitive. Find the full list of supported Analytics variables [here](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping). |
 | App identifier | Not included | `data.__adobe.analytics.contextData.a.AppID` | As of v3, the application identifier is automatically added to every tracking event under the key name `a.AppID`.|
 | Customer perspective | Not included|  `data.__adobe.analytics.cp` | As of v3, the customer perspective is automatically added to every tracking event. The values are either `foreground` or `background`. |
 

@@ -1,4 +1,6 @@
 ---
+title: "Proposition Item"
+description: "Overview of Proposition Item"
 noIndex: true
 ---
 

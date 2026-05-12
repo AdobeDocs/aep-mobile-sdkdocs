@@ -1,4 +1,6 @@
 ---
+title: "Public Classes"
+description: "Overview of Public Classes"
 noIndex: true
 ---
 

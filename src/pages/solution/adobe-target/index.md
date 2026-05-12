@@ -82,9 +82,9 @@ iOS
 
 <Tabs query="platform=ios&task=target-order"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&task=target-order"/> --->
+<Tabs query="platform=react-native&task=target-order"/> ---\>
 
 ### Target Product class
 
@@ -100,9 +100,9 @@ iOS
 
 <Tabs query="platform=ios&task=target-product"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&task=target-product"/> --->
+<Tabs query="platform=react-native&task=target-product"/> ---\>
 
 ### Target Parameters
 
@@ -118,9 +118,9 @@ iOS
 
 <Tabs query="platform=ios&task=target-parameters"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&task=target-parameters"/> --->
+<Tabs query="platform=react-native&task=target-parameters"/> ---\>
 
 ### Merge behavior of Target parameters
 

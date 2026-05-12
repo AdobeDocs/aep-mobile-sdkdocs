@@ -28,13 +28,13 @@ iOS
 
 <Tabs query="platform=ios&api=extension-version"/>
 
-<!--- React Native
+\<!--- React Native
 
 <Tabs query="platform=react-native&api=extension-version"/>
 
 Flutter
 
-<Tabs query="platform=flutter&api=extension-version"/> --->
+<Tabs query="platform=flutter&api=extension-version"/> ---\>
 
 ## lifecycleStart
 
@@ -54,9 +54,9 @@ iOS
 
 <Tabs query="platform=ios&api=lifecycle-start"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&api=lifecycle-start"/> --->
+<Tabs query="platform=react-native&api=lifecycle-start"/> ---\>
 
 ## lifecyclePause
 
@@ -76,9 +76,9 @@ iOS
 
 <Tabs query="platform=ios&api=lifecycle-pause"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&api=lifecycle-pause"/> --->
+<Tabs query="platform=react-native&api=lifecycle-pause"/> ---\>
 
 ## registerExtension
 
@@ -96,6 +96,6 @@ Android
 
 <Tabs query="platform=android&api=register-extension"/>
 
-<!--- React Native
+\<!--- React Native
 
-<Tabs query="platform=react-native&api=register-extension"/> --->
+<Tabs query="platform=react-native&api=register-extension"/> ---\>

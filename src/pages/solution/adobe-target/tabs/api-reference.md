@@ -1,4 +1,6 @@
 ---
+title: "Api Reference"
+description: "Overview of Api Reference"
 noIndex: true
 ---
 
@@ -48,7 +50,7 @@ Target.clearPrefetchCache()
 [AEPMobileTarget clearPrefetchCache];
 ```
 
-<!--- <Variant platform="react-native" api="clear-prefetch-cache" repeat="5"/>
+\<!--- <Variant platform="react-native" api="clear-prefetch-cache" repeat="5"/>
 
 #### React Native
 
@@ -148,7 +150,7 @@ AEPTargetParameters * targetParams = [[AEPTargetParameters alloc] initWithParame
 [AEPMobileTarget clickedLocation:@"aep-loc-1" withTargetParameters:targetParams];
 ```
 
-<!--- <Variant platform="react-native" api="clicked-location" repeat="6"/>
+\<!--- <Variant platform="react-native" api="clicked-location" repeat="6"/>
 
 #### JavaScript
 
@@ -267,7 +269,7 @@ AEPTargetParameters * targetParams = [[AEPTargetParameters alloc] initWithParame
 [AEPMobileTarget displayedLocations:@[@"mboxName1", @"mboxName2"] withTargetParameters:targetParams];
 ```
 
-<!--- <Variant platform="react-native" api="displayed-locations" repeat="6"/>
+\<!--- <Variant platform="react-native" api="displayed-locations" repeat="6"/>
 
 #### JavaScript
 
@@ -336,7 +338,7 @@ let targetVersion = Target.extensionVersion
 NSString *targetVersion = [AEPMobileTarget extensionVersion];
 ```
 
-<!--- <Variant platform="react-native" api="extension-version" repeat="5"/>
+\<!--- <Variant platform="react-native" api="extension-version" repeat="5"/>
 
 #### JavaScript
 
@@ -476,7 +478,7 @@ Target.getThirdPartyId { (id, err) in
 }];
 ```
 
-<!--- <Variant platform="react-native" api="get-third-party-id" repeat="6"/>
+\<!--- <Variant platform="react-native" api="get-third-party-id" repeat="6"/>
 
 #### JavaScript
 
@@ -557,7 +559,7 @@ Target.getTntId({ (id, err) in
 }];
 ```
 
-<!--- <Variant platform="react-native" api="get-tnt-id" repeat="6"/>
+\<!--- <Variant platform="react-native" api="get-tnt-id" repeat="6"/>
 
 #### JavaScript
 
@@ -733,7 +735,7 @@ product:product];
 }];
 ```
 
-<!--- <Variant platform="react-native" api="prefetch-content" repeat="6"/>
+\<!--- <Variant platform="react-native" api="prefetch-content" repeat="6"/>
 
 #### JavaScript
 
@@ -795,9 +797,9 @@ public static void registerExtension()
 Target.registerExtension();
 ```
 
-<!--- <Variant platform="react-native" api="register-extension" repeat="1"/>
+\<!--- <Variant platform="react-native" api="register-extension" repeat="1"/>
 
-When using React Native, register the Target extension with Mobile Core in native code as shown on the Android and iOS tabs. --->
+When using React Native, register the Target extension with Mobile Core in native code as shown on the Android and iOS tabs. ---\>
 
 <Variant platform="android" api="reset-experience" repeat="5"/>
 
@@ -845,7 +847,7 @@ Target.resetExperience()
 [AEPMobileTarget resetExperience];
 ```
 
-<!--- <Variant platform="react-native" api="reset-experience" repeat="5"/>
+\<!--- <Variant platform="react-native" api="reset-experience" repeat="5"/>
 
 #### JavaScript
 
@@ -1083,7 +1085,7 @@ AEPTargetParameters *targetParameters = [[AEPTargetParameters alloc] initWithPar
 [AEPMobileTarget retrieveLocationContent: requestArray withParameters: targetParameters];
 ```
 
-<!--- <Variant platform="react-native" api="retrieve-location-content" repeat="6"/>
+\<!--- <Variant platform="react-native" api="retrieve-location-content" repeat="6"/>
 
 #### JavaScript
 
@@ -1193,7 +1195,7 @@ if let url = URL(string: "myapp://HomePage") {
 [AEPMobileTarget setPreviewRestartDeepLink:@"myapp://HomePage"];
 ```
 
-<!--- <Variant platform="react-native" api="set-preview-restart-deep-link" repeat="6"/>
+\<!--- <Variant platform="react-native" api="set-preview-restart-deep-link" repeat="6"/>
 
 #### JavaScript
 
@@ -1315,7 +1317,7 @@ Target.setThirdPartyId("third-party-id")
 [AEPMobileTarget setThirdPartyId:@"third-party-id"]
 ```
 
-<!--- <Variant platform="react-native" api="set-third-party-id" repeat="6"/>
+\<!--- <Variant platform="react-native" api="set-third-party-id" repeat="6"/>
 
 #### JavaScript
 
@@ -1553,7 +1555,7 @@ AEPTargetRequestObject *request2 = [[AEPTargetRequestObject alloc] initWithMboxN
 }];
 ```
 
-<!--- <Variant platform="react-native" api="target-request" repeat="5"/>
+\<!--- <Variant platform="react-native" api="target-request" repeat="5"/>
 
 #### ACPTargetRequestObject
 
@@ -1634,7 +1636,7 @@ The following example can be used to create an instance of a TargetPrefetch obje
 AEPTargetPrefetchObject *prefetch = [[AEPTargetPrefetchObject alloc] initWithName:@"mboxName" targetParameters:nil];
 ```
 
-<!--- <Variant platform="react-native" api="target-prefetch" repeat="5"/>
+\<!--- <Variant platform="react-native" api="target-prefetch" repeat="5"/>
 
 #### ACPTargetPrefetchObject
 
@@ -1764,7 +1766,7 @@ public class TargetParameters: NSObject, Codable {
 
 Examples for creating instances of TargetParameters can be seen in the [Target overview](index.md#target-parameters).
 
-<!--- <Variant platform="react-native" api="target-parameters" repeat="5"/>
+\<!--- <Variant platform="react-native" api="target-parameters" repeat="5"/>
 
 #### ACPTargetParameters
 
@@ -1859,7 +1861,7 @@ public class TargetOrder: NSObject, Codable {
 
 Examples for creating instances of TargetOrder can be seen in the [Target overview](index.md#arget-order-class).
 
-<!--- <Variant platform="react-native" api="target-order" repeat="5"/>
+\<!--- <Variant platform="react-native" api="target-order" repeat="5"/>
 
 #### ACPTargetOrder
 
@@ -1942,7 +1944,7 @@ public class TargetProduct: NSObject, Codable {
 
 Examples for creating instances of TargetProduct can be seen in the [Target overview](index.md#target-product-class)
 
-<!--- <Variant platform="react-native" api="target-product" repeat="5"/>
+\<!--- <Variant platform="react-native" api="target-product" repeat="5"/>
 
 #### ACPTargetProduct
 

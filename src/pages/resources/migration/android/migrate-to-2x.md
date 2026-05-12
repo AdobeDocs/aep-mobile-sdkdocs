@@ -1,3 +1,7 @@
+---
+title: "Migrate to Adobe Experience Platform 2.x SDKs for Android"
+description: "This Mobile SDK version for Android now supports a minimum API level of 19."
+---
 import Tabs from './tabs/migrate-to-2x.md'
 
 # Migrate to Adobe Experience Platform 2.x SDKs for Android

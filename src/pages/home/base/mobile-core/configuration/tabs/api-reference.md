@@ -1,4 +1,6 @@
 ---
+title: "Api Reference"
+description: "Overview of Api Reference"
 noIndex: true
 ---
 
@@ -180,7 +182,7 @@ let version = MobileCore.extensionVersion
 NSString *version = [AEPMobileCore extensionVersion];
 ```
 
-<!--- <Variant platform="react-native" api="extension-version" repeat="2"/>
+\<!--- <Variant platform="react-native" api="extension-version" repeat="2"/>
 
 #### JavaScript
 
@@ -247,7 +249,7 @@ static func updateConfigurationWith(configDict: [String: Any])
  [AEPMobileCore updateConfiguration:updatedConfig];
 ```
 
-<!--- <Variant platform="react-native" api="update-configuration" repeat="5"/>
+\<!--- <Variant platform="react-native" api="update-configuration" repeat="5"/>
 
 #### JavaScript
 

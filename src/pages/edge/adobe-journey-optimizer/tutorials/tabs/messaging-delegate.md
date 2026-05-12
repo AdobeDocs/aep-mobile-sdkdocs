@@ -1,3 +1,7 @@
+---
+title: "Messaging Delegate"
+description: "Overview of Messaging Delegate"
+---
 <Variant platform="android" function="register" repeat="5"/>
 
 On Android, the delegate is registered with the Adobe Service Provider. The `ServiceProvider` class maintains an optional property that holds reference to the `FullscreenMessaageDelegate`.

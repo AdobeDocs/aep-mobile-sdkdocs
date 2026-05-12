@@ -48,7 +48,7 @@ This scenario shows the standard Lifecycle workflow, with expected Lifecycle API
 
 ![](./assets/index/lifecycle-app-launch-and-close.svg)
 
-<!-- 
+\<!-- 
 %%{
   init: {
     'themeVariables': {
@@ -80,7 +80,7 @@ graph LR
     class A,D regularPill;
     class B,C,E,F regularBox;
     class graph1,graph2 transparentSubgraph;
--->
+--\>
 
 ### On app crash or force close
 
@@ -88,7 +88,7 @@ This scenario shows the standard Lifecycle workflow when the application crashes
 
 ![](./assets/index/lifecycle-crash.svg)
 
-<!-- mermaid.js diagram definition
+\<!-- mermaid.js diagram definition
 %%{
   init: {
     'themeVariables': {
@@ -122,7 +122,7 @@ graph LR
     class A,D,E regularPill;
     class B,C,F,G,H regularBox;
     class graph1,graph2 transparentSubgraph;
--->
+--\>
 
 ### Rapid successive lifecyclePause and lifecycleStart calls
 
@@ -130,7 +130,7 @@ This scenario shows the handling of rapid successive calls to `lifecyclePause` f
 
 ![](./assets/index/lifecycle-rapid-successive-calls.svg)
 
-<!-- 
+\<!-- 
 %%{
   init: {
     'themeVariables': {
@@ -168,7 +168,7 @@ graph LR
     class A,D regularPill;
     class B,C,E,F,G,H regularBox;
     class graph1,graph2,graph3 transparentSubgraph;
-  -->
+  --\>
 
 ## Troubleshooting unexpected Lifecycle scenarios
 
@@ -182,7 +182,7 @@ Consecutive `lifecycleStart` and consecutive `lifecyclePause` API calls will not
 
 ![](./assets/index/lifecycle-start-after-start.svg)
 
-<!-- 
+\<!-- 
 %%{
   init: {
     'themeVariables': {
@@ -211,13 +211,13 @@ graph LR
 
     class B,C,F regularBox;
     class E incorrectBox;
- -->
+ --\>
 
 #### Consecutive `lifecyclePause` API calls
 
 ![](./assets/index/lifecycle-pause-after-pause.svg)
 
-<!-- 
+\<!-- 
 %%{
   init: {
     'themeVariables': {
@@ -246,7 +246,7 @@ graph LR
 
     class B,C,F regularBox;
     class E incorrectBox;
- -->
+ --\>
 
 ### Missing pause, app terminated
 
@@ -254,7 +254,7 @@ This scenario looks the same as a standard crash, but the underlying reason is a
 
 ![](./assets/index/lifecycle-missing-pause-terminated.svg)
 
-<!-- mermaid.js diagram definition
+\<!-- mermaid.js diagram definition
 %%{
   init: {
     'themeVariables': {
@@ -290,7 +290,7 @@ graph LR
     class D incorrectBox;
     class B,C,G,H,I regularBox;
     class graph1,graph2 transparentSubgraph;
--->
+--\>
 
 ### Missing pause, app still in memory
 
@@ -298,7 +298,7 @@ This scenario shows an example of [consecutive `lifecycleStart` API calls](#cons
 
 ![](./assets/index/lifecycle-missing-pause-not-terminated.svg)
 
-<!-- mermaid.js diagram definition
+\<!-- mermaid.js diagram definition
 %%{
   init: {
     'themeVariables': {
@@ -332,7 +332,7 @@ graph LR
     class D incorrectBox;
     class B,C,F,G regularBox;
     class graph1,graph2 transparentSubgraph;
--->
+--\>
 
 In this scenario, the `lifecycleStart` call (5a) is not detected as a new session nor a crash. It will have the consequence of a [consecutive `lifecycleStart` API call](#consecutive-lifecyclestart-api-calls).
 
@@ -342,7 +342,7 @@ This scenario shows an example of a missing `lifecycleStart` call (1). The new s
 
 ![](./assets/index/lifecycle-missing-start.svg)
 
-<!-- mermaid.js diagram definition
+\<!-- mermaid.js diagram definition
 %%{
   init: {
     'themeVariables': {
@@ -369,6 +369,6 @@ graph LR
     class A incorrectBox;
     class C,D regularBox;
     class graph1 transparentSubgraph;
--->
+--\>
 
 In this scenario, the `lifecyclePause` call (3a) will dispatch an Application Close event only if the Lifecycle extension state is not already set to Pause (that is, `lifecyclePause` has not been called before the current call). Otherwise, it is effectively a [consecutive `lifecyclePause` API call](#consecutive-lifecyclepause-api-calls).

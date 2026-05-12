@@ -27,8 +27,8 @@ AEPText class conforms to `ObservableObject`, allowing it to be used reactively 
 | Property | Type | Description | Default Value |
 | --- | --- | --- | --- |
 | content | String | The actual text content to be displayed. | N/A |
-| font | [Font](https://developer.apple.com/documentation/swiftui/font) | The font to be used for the text. |  Depends on the type of text:  <ul><li>**Title**:  <br/>  System font <br/> Size 15 <br/> Medium weight</li><li>**Body** : <br/> System font <br/> Size 13 <br/> Regular weight <br/></li><li>**ButtonText** :  <br/> System font  <br/> Size 13  <br/> Regular weight</li></ul>     |
-| color | [Color](https://developer.apple.com/documentation/swiftui/color) | The color of the text. | Depends on the type of text:    <ul><li>**Title**: [primary](https://developer.apple.com/documentation/swiftui/color/primary)</li>   <li>**Body**: [secondary](https://developer.apple.com/documentation/swiftui/color/primary)</li><li>    **ButtonText**: [blue](https://developer.apple.com/documentation/swiftui/color/blue) </li></ul>|
+| font | [Font](https://developer.apple.com/documentation/swiftui/font) | The font to be used for the text. |  Depends on the type of text:  \<ul\>\<li\>**Title**:  \<br/\>  System font \<br/\> Size 15 \<br/\> Medium weight\</li\>\<li\>**Body** : \<br/\> System font \<br/\> Size 13 \<br/\> Regular weight \<br/\>\</li\>\<li\>**ButtonText** :  \<br/\> System font  \<br/\> Size 13  \<br/\> Regular weight\</li\>\</ul\>     |
+| color | [Color](https://developer.apple.com/documentation/swiftui/color) | The color of the text. | Depends on the type of text:    \<ul\>\<li\>**Title**: [primary](https://developer.apple.com/documentation/swiftui/color/primary)\</li\>   \<li\>**Body**: [secondary](https://developer.apple.com/documentation/swiftui/color/primary)\</li\>\<li\>    **ButtonText**: [blue](https://developer.apple.com/documentation/swiftui/color/blue) \</li\>\</ul\>|
 | modifier | AEPViewModifier | A custom view modifer that can be applied to the text view for additional styling | N/A  |
 
 <InlineAlert variant="info" slots="text"/>

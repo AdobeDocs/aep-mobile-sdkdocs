@@ -87,7 +87,7 @@ public func refresh()
 inboxUI.refresh()
 ```
 
----
+<HorizontalLine />
 
 ### setBackground(\_:)
 
@@ -122,7 +122,7 @@ inboxUI.setBackground(
 )
 ```
 
----
+<HorizontalLine />
 
 ### setLoadingView(\_:)
 
@@ -159,7 +159,7 @@ inboxUI.setLoadingView {
 }
 ```
 
----
+<HorizontalLine />
 
 ### setErrorView(\_:)
 
@@ -198,7 +198,7 @@ inboxUI.setErrorView { error in
 }
 ```
 
----
+<HorizontalLine />
 
 ### setEmptyView(\_:)
 
@@ -238,7 +238,7 @@ inboxUI.setEmptyView { emptyStateSettings in
 }
 ```
 
----
+<HorizontalLine />
 
 ### setHeadingView(\_:)
 

@@ -18,7 +18,7 @@ The Brand Concierge UI has two integration approaches:
 
 Both approaches are available for Compose and XML/Views-based apps.
 
----
+<HorizontalLine />
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ Speech to text uses Android Speech Recognition APIs and microphone APIs for voic
 
 The SDK handles permission requests internally when users interact with the microphone button.
 
----
+<HorizontalLine />
 
 ## Installation
 
@@ -60,7 +60,7 @@ dependencies {
 
 Then sync your project with the Gradle files.
 
----
+<HorizontalLine />
 
 ## Configuration
 
@@ -104,7 +104,7 @@ The ECID is read from the Edge Identity shared state.
 
 Another option for validation is to use Adobe Assurance. Refer to the [Mobile SDK validation guide](../../../home/getting-started/validate.md) for more information.
 
----
+<HorizontalLine />
 
 ## Integration
 
@@ -194,7 +194,7 @@ class XmlActivity : AppCompatActivity() {
 }
 ```
 
----
+<HorizontalLine />
 
 ### Custom Integration
 
@@ -300,7 +300,7 @@ fun MyScreen() {
 
 More information regarding theme customization can be found in the [Style guide (Android)](/edge/adobe-brand-concierge/android/style-guide/).
 
----
+<HorizontalLine />
 
 ### Deep Links and App Links
 

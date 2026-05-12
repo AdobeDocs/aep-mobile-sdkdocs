@@ -1,4 +1,6 @@
 ---
+title: "Migration Guide"
+description: "Overview of Migration Guide"
 noIndex: true
 ---
 

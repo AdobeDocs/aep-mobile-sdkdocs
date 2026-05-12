@@ -1,4 +1,6 @@
 ---
+title: "Tabs"
+description: "Overview of Tabs"
 noIndex: true
 ---
 
@@ -93,7 +95,7 @@ let order = TargetOrder(id: "id1", total: 1.0, purchasedProductIds: ["ppId1"])
 AEPTargetOrder *order = [[AEPTargetOrder alloc] initWithId:@"id1" total:1.0 purchasedProductIds:@[@"ppId1"]];
 ```
 
-<!--- <Variant platform="react-native" task="target-order" repeat="2"/>
+\<!--- <Variant platform="react-native" task="target-order" repeat="2"/>
 
 **JavaScript**
 
@@ -147,7 +149,7 @@ let product = TargetProduct(productId: "pId1", categoryId: "cId1")
 AEPTargetProduct *product =[[AEPTargetProduct alloc] initWithProductId:@"pId1" categoryId:@"cId1"];
 ```
 
-<!--- <Variant platform="react-native" task="target-product" repeat="2"/>
+\<!--- <Variant platform="react-native" task="target-product" repeat="2"/>
 
 **JavaScript**
 
@@ -242,7 +244,7 @@ AEPTargetOrder *order = [[AEPTargetOrder alloc] initWithId:@"id1" total:1.0 purc
 AEPTargetParameters * targetParams = [[AEPTargetParameters alloc] initWithParameters:mboxParameters profileParameters:profileParameters order:order product:product];
 ```
 
-<!--- <Variant platform="react-native" task="target-parameters" repeat="2"/>
+\<!--- <Variant platform="react-native" task="target-parameters" repeat="2"/>
 
 **JavaScript**
 

@@ -1,3 +1,7 @@
+---
+title: "Initialize"
+description: "Overview of Initialize"
+---
 import Tabs from './tabs/initialize.md'
 
 <TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>

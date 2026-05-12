@@ -1,4 +1,6 @@
 ---
+title: "Push Sync"
+description: "Overview of Push Sync"
 noIndex: true
 ---
 
@@ -48,7 +50,7 @@ Void setPushIdentifier(deviceToken: Data?)
 // pass the deviceToken that the APNS has assigned to the device
 ```
 
-<!--- <Variant platform="react-native" task="set-push" repeat="3"/>
+\<!--- <Variant platform="react-native" task="set-push" repeat="3"/>
 
 **JavaScript**
 

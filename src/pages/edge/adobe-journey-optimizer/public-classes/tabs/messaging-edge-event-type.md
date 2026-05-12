@@ -1,4 +1,6 @@
 ---
+title: "Messaging Edge Event Type"
+description: "Overview of Messaging Edge Event Type"
 noIndex: true
 ---
 

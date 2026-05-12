@@ -1,8 +1,10 @@
 ---
+title: "Tabs"
+description: "Overview of Tabs"
 noIndex: true
 ---
 
-<!-- ////////////  Add Dependencies ////////// -->
+\<!-- ////////////  Add Dependencies ////////// --\>
 
 import Alerts from '/src/pages/resources/alerts.md'
 
@@ -43,7 +45,7 @@ target 'YourTargetApp' do
 end
 ```
 
-<!-- ////////////  Android Start Pause Lifecycle /////////// -->
+\<!-- ////////////  Android Start Pause Lifecycle /////////// --\>
 
 <Variant platform="android-java" task="activity-start-pause" repeat="5"/>
 
@@ -97,7 +99,7 @@ import com.adobe.marketing.mobile.Lifecycle
     }
 ```
 
-<!-- ///////////// Additional Context Data ////////// -->
+\<!-- ///////////// Additional Context Data ////////// --\>
 
 <Variant platform="android-java" task="context-data" repeat="1"/>
 
@@ -125,7 +127,7 @@ MobileCore.lifecycleStart(additionalContextData: ["myapp.category": "Game"])
 [AEPMobileCore lifecycleStart:@{@"myapp.category": @"Game"}];      
 ```
 
-<!-- ///////////  Android Global Lifecycle //////////// -->
+\<!-- ///////////  Android Global Lifecycle //////////// --\>
 
 <Variant platform="android-java" task="global-lifecycle" repeat="1"/>
 
@@ -207,7 +209,7 @@ override fun onCreate() {
 }
 ```
 
-<!-- ////////////  iOS Start on Launch /////////// -->
+\<!-- ////////////  iOS Start on Launch /////////// --\>
 
 <Variant platform="ios-swift" task="start-lifecycle-didfinishlaunch" repeat="1"/>
 
@@ -237,7 +239,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 
-<!-- ////////////  iOS Start Pause Lifecycle /////////// -->
+\<!-- ////////////  iOS Start Pause Lifecycle /////////// --\>
 
 <Variant platform="ios-swift" task="start-pause" repeat="6"/>
 

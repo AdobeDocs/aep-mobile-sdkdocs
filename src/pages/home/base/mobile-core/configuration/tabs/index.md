@@ -1,4 +1,6 @@
 ---
+title: "Tabs"
+description: "Overview of Tabs"
 noIndex: true
 ---
 
@@ -101,7 +103,7 @@ NSDictionary *updatedConfig = @{@"global.privacy":@"optedout"};
 [AEPMobileCore updateConfiguration:updatedConfig];
 ```
 
-<!--- <Variant platform="react-native" task="update" repeat="5"/>
+\<!--- <Variant platform="react-native" task="update" repeat="5"/>
 
 #### JavaScript
 

@@ -1,4 +1,6 @@
 ---
+title: "Advanced Configuration"
+description: "Overview of Advanced Configuration"
 noIndex: true
 ---
 

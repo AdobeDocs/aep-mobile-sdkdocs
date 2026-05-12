@@ -1,3 +1,7 @@
+---
+title: "Migrate to Adobe Experience Platform 4.x SDKs for iOS"
+description: "This Mobile SDK version for iOS now supports a minimum iOS version of 11.0 and a tvOS version of 11.0. The XCFrameworks included in the GitHub release are ..."
+---
 import Tabs from './tabs/migrate-to-4x.md'
 
 # Migrate to Adobe Experience Platform 4.x SDKs for iOS

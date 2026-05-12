@@ -48,13 +48,13 @@ iOS
 
 <Tabs query="platform=ios&task=implement"/>
 
-<!--- React Native
+\<!--- React Native
 
 <Tabs query="platform=react-native&task=implement"/>
 
 Flutter
 
-<Tabs query="platform=flutter&task=implement"/> --->
+<Tabs query="platform=flutter&task=implement"/> ---\>
 
 The ID service code on the destination domain extracts the ECID from the URL instead of sending a request to Adobe for a new ID. The ID service code on the destination page uses this ECID to track the visitor. On hits from the mobile web content, verify that the `mid` parameter exists on each hit, and that this value matches the `mid`value that is being sent by the app code.
 

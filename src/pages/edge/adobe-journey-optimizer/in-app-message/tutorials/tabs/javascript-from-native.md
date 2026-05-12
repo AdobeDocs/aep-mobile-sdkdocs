@@ -1,3 +1,7 @@
+---
+title: "Javascript From Native"
+description: "Overview of Javascript From Native"
+---
 <Variant platform="android3x" task="obtain" repeat="5"/>
 
 In the `onShow` function of the `PresentationDelegate`, obtain a reference to the `InAppMessageEventHandler` for use in Javascript interactions.

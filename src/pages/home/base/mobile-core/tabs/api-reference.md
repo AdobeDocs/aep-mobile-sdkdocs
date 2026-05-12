@@ -1,4 +1,6 @@
 ---
+title: "Api Reference"
+description: "Overview of Api Reference"
 noIndex: true
 ---
 
@@ -110,7 +112,7 @@ MobileCore.collectPii(["key1" : "value1","key2" : "value2"]);
                             }];
 ```
 
-<!--- <Variant platform="react-native" api="collect-pii" repeat="10"/>
+\<!--- <Variant platform="react-native" api="collect-pii" repeat="10"/>
 
 #### Javascript
 
@@ -331,7 +333,7 @@ var logLevel = Log.logFilter
 AEPLogLevel logLevel = [AEPLog logFilter];
 ```
 
-<!--- <Variant platform="react-native" api="get-log-level" repeat="3"/>
+\<!--- <Variant platform="react-native" api="get-log-level" repeat="3"/>
 
 #### Javascript
 
@@ -667,7 +669,7 @@ public static func error(label: String, _ message: String)
 [AEPLog errorWithLabel:@"testLabel" message:@"testMessage"];
 ```
 
-<!--- <Variant platform="react-native" api="log" repeat="6"/>
+\<!--- <Variant platform="react-native" api="log" repeat="6"/>
 
 #### JavaScript
 
@@ -899,7 +901,7 @@ public static func registerExtensions(_ extensions: [NSObject.Type], _ completio
 }
 ```
 
-<!--- <Variant platform="react-native" api="register-extension" repeat="5"/>
+\<!--- <Variant platform="react-native" api="register-extension" repeat="5"/>
 
 For React Native apps, initialize the SDK using native code in your `AppDelegate` (iOS) and `MainApplication` (Android).
 
@@ -983,7 +985,7 @@ public class MainApplication extends Application implements ReactApplication {
 
 For Flutter apps, initialize the SDK using native code in your `AppDelegate` and `MainApplication` in iOS and Android, respectively.
 
-The initialization code is located in the [Flutter ACPCore Github README](https://github.com/adobe/flutter_acpcore). --->
+The initialization code is located in the [Flutter ACPCore Github README](https://github.com/adobe/flutter_acpcore). ---\>
 
 <Variant platform="android" api="reset-identities" repeat="5"/>
 
@@ -1148,7 +1150,7 @@ import AEPServices
  [AEPMobileCore setLogLevel: AEPLogLevelTrace];
 ```
 
-<!--- <Variant platform="react-native" api="set-log-level" repeat="5"/>
+\<!--- <Variant platform="react-native" api="set-log-level" repeat="5"/>
 
 #### Javascript
 
@@ -1416,7 +1418,7 @@ MobileCore.trackAction("loginClicked", additionalContextData);
   [AEPMobileCore trackAction:@"action name" data:@{@"key":@"value"}];
 ```
 
-<!--- <Variant platform="react-native" api="track-action" repeat="6"/>
+\<!--- <Variant platform="react-native" api="track-action" repeat="6"/>
 
 #### Javascript
 
@@ -1514,7 +1516,7 @@ MobileCore.trackState("homePage", additionalContextData);
   [AEPMobileCore trackState:@"state name" data:@{@"key":@"value"}];
 ```
 
-<!--- <Variant platform="react-native" api="track-state" repeat="6"/>
+\<!--- <Variant platform="react-native" api="track-state" repeat="6"/>
 
 #### Javascript
 

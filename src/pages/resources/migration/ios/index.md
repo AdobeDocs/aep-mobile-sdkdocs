@@ -1,3 +1,7 @@
+---
+title: "Migration guides for Adobe Experience Platform SDKs for iOS"
+description: "This document provides a collection of resources to help you migrate between various versions of the Adobe Experience Platform iOS SDKs."
+---
 # Migration guides for Adobe Experience Platform SDKs for iOS
 
 This document provides a collection of resources to help you migrate between various versions of the Adobe Experience Platform iOS SDKs.

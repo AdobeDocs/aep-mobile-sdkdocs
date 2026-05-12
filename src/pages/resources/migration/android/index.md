@@ -1,3 +1,7 @@
+---
+title: "Migration guides for Adobe Experience Platform SDKs for Android"
+description: "This document provides a collection of resources to help you migrate between various versions of the Adobe Experience Platform SDKs for Android."
+---
 # Migration guides for Adobe Experience Platform SDKs for Android
 
 This document provides a collection of resources to help you migrate between various versions of the Adobe Experience Platform SDKs for Android.

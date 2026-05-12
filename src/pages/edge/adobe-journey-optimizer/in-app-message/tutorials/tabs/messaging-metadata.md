@@ -1,3 +1,7 @@
+---
+title: "Messaging Metadata"
+description: "Overview of Messaging Metadata"
+---
 <Variant platform="android3x" function="metadata" repeat="5"/>
 
 The following example shows retrieving custom metadata using the `Message.getMetadata()` API. The example uses the `canShow` method of the `PresentationDelegate`, however you may retrieve the custom metadata anywhere within the delegate where the `Message` object is available.
