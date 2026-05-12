@@ -22,7 +22,7 @@ iOS
 
 ## Analytics Migration Overview
 
-For an overview of the API mapping between the Mobile Services SDK and Adobe Experience Platform SDKs, see the [API Change Log](./api-changelog.md). This section describes the Analytics-specific changes made with the AEP Analytics extension.
+For an overview of the API mapping between the Mobile Services SDK and Adobe Experience Platform SDKs, see the [API Change Log](api-changelog.md). This section describes the Analytics-specific changes made with the AEP Analytics extension.
 
 ### Deprecated API
 

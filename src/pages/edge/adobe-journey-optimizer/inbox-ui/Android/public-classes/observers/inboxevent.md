@@ -13,9 +13,9 @@ keywords:
 
 # InboxEvent
 
-Represents different types of inbox-level events triggered by lifecycle changes or user interactions with the inbox container. All inbox events include the current [InboxUIState](../inboxuistate.md) when the event occurred.
+Represents different types of inbox-level events triggered by lifecycle changes or user interactions with the inbox container. All inbox events include the current [InboxUIState](../../../android/public-classes/inboxuistate.md) when the event occurred.
 
-`InboxEvent` represents events on the inbox as a whole, as opposed to [UIEvent](../../../../content-card-ui/Android/public-classes/uievent.md) which represents events on individual cards (display, dismiss, interact).
+`InboxEvent` represents events on the inbox as a whole, as opposed to [UIEvent](../../../../content-card-ui/android/public-classes/uievent.md) which represents events on individual cards (display, dismiss, interact).
 
 ## Class Definition
 
@@ -43,4 +43,4 @@ data class Display(override val inboxUIState: InboxUIState.Success) : InboxEvent
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| inboxUIState | [InboxUIState.Success](../inboxuistate.md) | The success state of the inbox UI when the display event occurred. |
+| inboxUIState | [InboxUIState.Success](../../../android/public-classes/inboxuistate.md) | The success state of the inbox UI when the display event occurred. |

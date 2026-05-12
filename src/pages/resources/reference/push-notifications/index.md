@@ -16,12 +16,12 @@ Default push template functionality is available for use with the **Adobe Campai
 
 ## Setup
 
-* [Android](./android/)
-* [iOS](./ios/)
+* [Android](android/index.md)
+* [iOS](ios/index.md)
 
 ## Templates
 
-View the [list of supported templates](./templates/).
+View the [list of supported templates](templates/index.md).
 
 ## Image specifications
 

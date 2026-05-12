@@ -368,7 +368,7 @@ module.exports = {
                                         pages: [
                                             {
                                                 title: "API Reference",
-                                                path: "/edge/adobe-journey-optimizer/content-card-ui/iOS/api-usage.md"
+                                                path: "/edge/adobe-journey-optimizer/content-card-ui/ios/api-usage.md"
                                             },
                                             {
                                                 title: "Public Classes and Protocol",
@@ -462,7 +462,7 @@ module.exports = {
                                         pages: [
                                             {
                                                 title: "API Reference",
-                                                path: "/edge/adobe-journey-optimizer/content-card-ui/Android/api-usage.md"
+                                                path: "/edge/adobe-journey-optimizer/content-card-ui/android/api-usage.md"
                                             },
                                             {
                                                 title: "Public Classes and Interfaces",
@@ -664,7 +664,7 @@ module.exports = {
                                         pages: [
                                             {
                                                 title: "API Reference",
-                                                path: "/edge/adobe-journey-optimizer/inbox-ui/Android/api-usage.md"
+                                                path: "/edge/adobe-journey-optimizer/inbox-ui/android/api-usage.md"
                                             },
                                             {
                                                 title: "Public Classes and Interfaces",

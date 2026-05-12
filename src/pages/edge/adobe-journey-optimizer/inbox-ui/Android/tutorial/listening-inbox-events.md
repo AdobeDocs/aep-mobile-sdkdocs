@@ -274,7 +274,7 @@ fun InboxScreen(viewModel: InboxViewModel) {
 }
 ```
 
-For detailed information on content card events, implementing `ContentCardUIEventListener`, and handling actionable URLs, see [Listening to Content Card Events](../../../content-card-ui/Android/tutorial/listening-content-card-events.md).
+For detailed information on content card events, implementing `ContentCardUIEventListener`, and handling actionable URLs, see [Listening to Content Card Events](../../../content-card-ui/android/tutorial/listening-content-card-events.md).
 
 ## Best Practices
 

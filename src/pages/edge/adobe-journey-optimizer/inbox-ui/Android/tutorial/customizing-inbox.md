@@ -292,7 +292,7 @@ val inboxStyle = InboxUIStyle.Builder()
     .build()
 ```
 
-For detailed information on all available style classes and their properties, see [InboxUIStyle](../public-classes/styles/inboxuistyle.md).
+For detailed information on all available style classes and their properties, see [InboxUIStyle](../../android/public-classes/styles/inboxuistyle.md).
 
 ## Customizing Content Cards
 
@@ -359,7 +359,7 @@ AepInbox(
 )
 ```
 
-For detailed information on customizing content cards, see [Customizing Content Card Templates](../../../content-card-ui/Android/tutorial/customizing-content-card-templates.md).
+For detailed information on customizing content cards, see [Customizing Content Card Templates](../../../content-card-ui/android/tutorial/customizing-content-card-templates.md).
 
 ## Best Practices
 

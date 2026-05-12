@@ -20,18 +20,18 @@ The Configuration extension manages two types of configuration values: **base co
 
 ### Base Configuration:
 
-The base configuration is loaded when the app launches, either from the [cache](./api-reference.md#configurewithappid) or a [bundled configuraton](#using-a-bundled-file-configuration-for-first-launch-scenarios), if available. It can also be updated at any time using the following APIs:
+The base configuration is loaded when the app launches, either from the [cache](api-reference.md#configurewithappid) or a [bundled configuraton](#using-a-bundled-file-configuration-for-first-launch-scenarios), if available. It can also be updated at any time using the following APIs:
 
-* [configureWithAppID](./api-reference.md#configurewithappid)
-* [configureWithFilePath](./api-reference.md#configurewithfileinpath)
-* [configureWithFileInAssets](./api-reference.md#configurewithfileinassets)
+* [configureWithAppID](api-reference.md#configurewithappid)
+* [configureWithFilePath](api-reference.md#configurewithfileinpath)
+* [configureWithFileInAssets](api-reference.md#configurewithfileinassets)
 
 ### Programmatic Configuration:
 
 Programmatic configuration consists of overrides applied on top of the base configuration. This is persisted separately and managed through the following APIs:
 
-* [updateConfiguration](./api-reference.md#updateconfiguration)
-* [clearUpdatedConfiguration](./api-reference.md#clearupdatedconfiguration)
+* [updateConfiguration](api-reference.md#updateconfiguration)
+* [clearUpdatedConfiguration](api-reference.md#clearupdatedconfiguration)
 
 This is how the Configuration extension handles the following scenarios.
 
@@ -39,7 +39,7 @@ This is how the Configuration extension handles the following scenarios.
 
 1) On app launch, the extension loads the base configuration as follows:
 
-  * First, the extension checks for and loads a cached configuration if available. This is typically cached from previous app launches. Refer [configureWithAppID](./api-reference.md#configurewithappid).
+  * First, the extension checks for and loads a cached configuration if available. This is typically cached from previous app launches. Refer [configureWithAppID](api-reference.md#configurewithappid).
   * If no cached configuration is found, it looks for a [bundled configuration](#using-a-bundled-file-configuration-for-first-launch-scenarios).
 
 2) If no base configuration is found, it will not publish a configuration and will wait for configuration APIs to be called by the app. This will cause the SDK to hold event processing.
@@ -56,7 +56,7 @@ The extension updates either the base configuration or the programmatic configur
 
 ## Using a bundled file configuration for first launch scenarios
 
-When configuring the SDK using the [Configure with App ID](./api-reference.md#configurewithappid) approach, the SDK downloads the Adobe hosted configuration and caches it for future launches. On subsequent app launches, the SDK uses this cached configuration during initialization and will only re-download it if any changes are detected.
+When configuring the SDK using the [Configure with App ID](api-reference.md#configurewithappid) approach, the SDK downloads the Adobe hosted configuration and caches it for future launches. On subsequent app launches, the SDK uses this cached configuration during initialization and will only re-download it if any changes are detected.
 
 However, on the initial launch after app installation, the SDK does not have a cached configuration available. In this case, SDK processing is deferred until the configuration is successfully retrieved from the remote server. This introduces a timing gap during which essential SDK features depend on a network connection to fetch the configuration data.
 
@@ -71,7 +71,7 @@ To use a bundled configuration, follow the steps below:
 
 <InlineAlert variant="info" slots="text"/>
 
-Please note that the configuration that is downloaded by using the [Configure with App ID](./api-reference.md#configuration-api-reference) approach, will overwrite the bundled configuration once it is downloaded, allowing you to always keep a more up-to-date configuration remotely, without needing an app update.
+Please note that the configuration that is downloaded by using the [Configure with App ID](api-reference.md#configuration-api-reference) approach, will overwrite the bundled configuration once it is downloaded, allowing you to always keep a more up-to-date configuration remotely, without needing an app update.
 
 ## Environment-aware configuration properties
 

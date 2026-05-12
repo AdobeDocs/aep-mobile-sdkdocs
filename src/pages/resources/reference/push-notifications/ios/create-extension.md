@@ -19,7 +19,7 @@ To add a Notification Content app extension to your iOS app, open it in Xcode an
 
 1. Choose the `Notification Content Extension` template under the `Application Extension` section of the `iOS` tab:<br /><br />
 
-    ![create a notification content extension](./assets/createNotificationContentExtension.png)
+    ![create a notification content extension](./assets/create-notification-content-extension.png)
 
 1. Click `Next`
 

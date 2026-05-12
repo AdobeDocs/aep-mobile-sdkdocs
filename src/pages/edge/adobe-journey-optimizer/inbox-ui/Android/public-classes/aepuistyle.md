@@ -20,9 +20,9 @@ Class that encapsulates the style configuration for all supported types of Exper
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| smallImageUIStyle | [SmallImageUIStyle](../../../content-card-ui/Android/public-classes/styles/smallimageuistyle.md) | The style configuration for small image content cards. |
-| largeImageUIStyle | [LargeImageUIStyle](../../../content-card-ui/Android/public-classes/styles/largeimageuistyle.md) | The style configuration for large image content cards. |
-| imageOnlyUIStyle | [ImageOnlyUIStyle](../../../content-card-ui/Android/public-classes/styles/imageonlyuistyle.md) | The style configuration for image-only content cards. |
+| smallImageUIStyle | [SmallImageUIStyle](../../../content-card-ui/android/public-classes/styles/smallimageuistyle.md) | The style configuration for small image content cards. |
+| largeImageUIStyle | [LargeImageUIStyle](../../../content-card-ui/android/public-classes/styles/largeimageuistyle.md) | The style configuration for large image content cards. |
+| imageOnlyUIStyle | [ImageOnlyUIStyle](../../../content-card-ui/android/public-classes/styles/imageonlyuistyle.md) | The style configuration for image-only content cards. |
 
 ## Class Definition
 

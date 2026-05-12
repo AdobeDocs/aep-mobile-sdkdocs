@@ -13,7 +13,7 @@ keywords:
 
 # InboxEventObserver
 
-Implementation of [AepInboxEventObserver](./aepinboxeventobserver.md) for handling inbox-level events and delegating item-level events to content card observers.
+Implementation of [AepInboxEventObserver](../../../android/public-classes/observers/aepinboxeventobserver.md) for handling inbox-level events and delegating item-level events to content card observers.
 
 * **Handles inbox events**: Automatically tracks inbox display events and sends them to Adobe Journey Optimizer
 * **Delegates item events**: Forwards content card events (display, interact, dismiss) to the provided observer
@@ -36,8 +36,8 @@ InboxEventObserver(
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-| provider | [MessagingInboxProvider](../content-provider/messaginginboxprovider.md) | The provider that owns the inbox state. The observer will call `provider.updateInboxState()` to update the inbox state after handling events. |
-| itemEventObserver | [AepUIEventObserver](../../../../content-card-ui/Android/public-classes/observers/aepuieventobserver.md)? | An optional observer that handles item-level events. When null, a default `ContentCardEventObserver` with null callback will be used. |
+| provider | [MessagingInboxProvider](../../../android/public-classes/content-provider/messaginginboxprovider.md) | The provider that owns the inbox state. The observer will call `provider.updateInboxState()` to update the inbox state after handling events. |
+| itemEventObserver | [AepUIEventObserver](../../../../content-card-ui/android/public-classes/observers/aepuieventobserver.md)? | An optional observer that handles item-level events. When null, a default `ContentCardEventObserver` with null callback will be used. |
 
 ## Methods
 

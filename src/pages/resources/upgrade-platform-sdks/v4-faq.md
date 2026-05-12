@@ -10,7 +10,7 @@ Solutions such as [Places Service](https://experienceleague.adobe.com/docs/place
 
 ## Where do I learn more about upgrading/migrating to the Experience Platform Mobile SDKs?
 
-To upgrade to the Experience Platform SDKs, see [Upgrade to the Experience Platform SDKs](..).
+To upgrade to the Experience Platform SDKs, see [Upgrade to the Experience Platform SDKs](../index.md).
 
 ## Will Mobile Services functionality still work?
 
@@ -18,7 +18,7 @@ No. Adobe Mobile Service's end-of-life date is [December 31, 2022](https://exper
 
 ## Can I still download and use the version 4 SDKs?
 
-You can continue to use the version 4 SDKs after the end-of-support dates. However, as mentioned in the [end-of-support considerations section](./index.md#end-of-support-considerations), no support will be provided.
+You can continue to use the version 4 SDKs after the end-of-support dates. However, as mentioned in the [end-of-support considerations section](index.md#end-of-support-considerations), no support will be provided.
 
 <InlineAlert variant="warning" slots="text"/>
 

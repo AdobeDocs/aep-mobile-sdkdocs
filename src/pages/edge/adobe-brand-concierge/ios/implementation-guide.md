@@ -140,7 +140,7 @@ Brand Concierge expects the following keys in the Configuration shared state:
 
 The ECID is read from the Edge Identity shared state. Surfaces are not a Configuration key; they are supplied per session via the `surfaces:` parameter on `Concierge.wrap(...)`, `Concierge.show(...)`, or `Concierge.present(on:...)`.
 
-Another option for validation is to use Adobe Assurance. Refer to the [Mobile SDK validation guide](/src/pages/home/getting-started/validate/) for more information.
+Another option for validation is to use Adobe Assurance. Refer to the [Mobile SDK validation guide](../../../home/getting-started/validate.md) for more information.
 
 ---
 

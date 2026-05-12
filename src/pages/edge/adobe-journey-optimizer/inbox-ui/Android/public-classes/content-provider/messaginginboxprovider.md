@@ -14,7 +14,7 @@ keywords:
 
 # MessagingInboxProvider
 
-Messaging extension implementation of [AepInboxContentProvider](./aepinboxcontentprovider.md). `MessagingInboxProvider` is responsible for fetching the Inbox content for a given surface and managing the Inbox state through reactive updates when the content needs to be refreshed.
+Messaging extension implementation of [AepInboxContentProvider](../../../android/public-classes/content-provider/aepinboxcontentprovider.md). `MessagingInboxProvider` is responsible for fetching the Inbox content for a given surface and managing the Inbox state through reactive updates when the content needs to be refreshed.
 
 ## Constructor
 
@@ -40,7 +40,7 @@ Retrieves the Inbox content and updates the state as a flow. This method automat
 
 #### Returns
 
-A [Flow](https://developer.android.com/kotlin/flow) of [InboxUIState](../inboxuistate.md) representing the current state of the inbox.
+A [Flow](https://developer.android.com/kotlin/flow) of [InboxUIState](../../../android/public-classes/inboxuistate.md) representing the current state of the inbox.
 
 #### Syntax
 

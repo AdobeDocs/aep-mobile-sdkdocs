@@ -74,4 +74,4 @@ In addition to the remote configuration, you can also include a rules zip file i
    * iOS: Place the zip anywhere that it is accessible in your app bundle.
    * Android: Place the zip file in the assets folder.
 
-For more information about the technical details of the Rules Engine, please read the [technical details guide](./technical-details).
+For more information about the technical details of the Rules Engine, please read the [technical details guide](technical-details.md).

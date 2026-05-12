@@ -39,7 +39,7 @@ Retrieves the Inbox content and updates the state as a flow.
 
 #### Returns
 
-The content for the Inbox as a [Flow](https://developer.android.com/kotlin/flow) of [InboxUIState](../inboxuistate.md).
+The content for the Inbox as a [Flow](https://developer.android.com/kotlin/flow) of [InboxUIState](../../../android/public-classes/inboxuistate.md).
 
 #### Syntax
 

@@ -44,7 +44,7 @@ Now, add two Lifecycle Edge events: one of type **application.launch** and other
 4. On the right pane, click the plus button **Add XDM Event Type** and set the condition to **equals** with value **application.launch**.
 5. Select **Keep Changes**.
 
-![Sample rule configuration application.launch event](../assets/tutorial/configOverrides/if-event-application-launch.png)
+![Sample rule configuration application.launch event](../assets/tutorial/config-overrides/if-event-application-launch.png)
 
 #### Configure Lifecycle Edge event of type application.close
 
@@ -54,7 +54,7 @@ Now, add two Lifecycle Edge events: one of type **application.launch** and other
 4. On the right pane, click the plus button **Add XDM Event Type** and set the condition to **equals** with value **application.close**.
 5. Select **Keep Changes**.
 
-![Sample rule configuration application.close event](../assets/tutorial/configOverrides/if-event-application-close.png)
+![Sample rule configuration application.close event](../assets/tutorial/config-overrides/if-event-application-close.png)
 
 Save the event configuration and return to the Rule Editor UI.
 
@@ -79,7 +79,7 @@ Based on the use case, you can **either** attach payload for the **datastream ID
     }
     ```
 
-    ![Action configuration - Datastream ID override payload ](../assets/tutorial/configOverrides/datastream-id-override-payload.png)
+    ![Action configuration - Datastream ID override payload ](../assets/tutorial/config-overrides/datastream-id-override-payload.png)
 
 5. Select **Keep Changes**.
 6. Return to the Rule Editor UI.
@@ -113,7 +113,7 @@ In order to use this feature, configuration overrides in this case event dataset
     }
     ```
 
-   ![Action configuration - Datastream ID override payload ](../assets/tutorial/configOverrides/datastream-config-override-payload.png)
+   ![Action configuration - Datastream ID override payload ](../assets/tutorial/config-overrides/datastream-config-override-payload.png)
 
 5. Select **Keep Changes**.
 6. Return to the Rule Editor UI.
@@ -121,6 +121,6 @@ In order to use this feature, configuration overrides in this case event dataset
 ### Save the rule and publish the updated library
 
 The final rule should appear as follows:
-![File Rules configuration](../assets/tutorial/configOverrides/final-rule-configoverrides.png)
+![File Rules configuration](../assets/tutorial/config-overrides/final-rule-configoverrides.png)
 
 **Save** this Rule, **publish** the new Tags library with all the changes, and your rule will be set and ready. Now, Lifecycle Edge events of type **application.launch** and **application.close** will be sent with the overridden datastream ID or datastream config overrides payload.

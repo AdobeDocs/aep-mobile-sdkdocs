@@ -61,7 +61,7 @@ The Adobe SDK BOM artifact enables managing all compatible versions of Adobe Exp
 
 <InlineAlert variant="warning" slots="text"/>
 
-Using dynamic dependency versions is not recommended for production apps. Refer to this [page](../../../resources/manage-gradle-dependencies.md) for managing Gradle dependencies.
+Using dynamic dependency versions is not recommended for production apps. Refer to this [page](../../manage-gradle-dependencies.md) for managing Gradle dependencies.
 
 ```java
 dependencies {
@@ -90,7 +90,7 @@ If you are importing SDK libraries manually, make sure to update your libraries 
 
 ### Update SDK initialization
 
-The `MobileCore.start()` API and the `registerExtension` API for each extension, which were deprecated in the 2.x version of the mobile SDK, have been removed in the 3.x version. If you're still using these APIs, refer [here](./migrate-to-2x.md#update-sdk-initialization) to initialize the SDK and register the extensions using the `MobileCore.registerExtensions()` API.
+The `MobileCore.start()` API and the `registerExtension` API for each extension, which were deprecated in the 2.x version of the mobile SDK, have been removed in the 3.x version. If you're still using these APIs, refer [here](migrate-to-2x.md#update-sdk-initialization) to initialize the SDK and register the extensions using the `MobileCore.registerExtensions()` API.
 
 ### Handle API migration and breaking changes
 
@@ -106,7 +106,7 @@ The `registerExtension` API for each extension that was deprecated in the 2.x ve
 | :------------- | :-------------- |
 | MobileCore.start(AdobeCallback)| [MobileCore.registerExtensions](../../../home/base/mobile-core/api-reference.md#registerextensions) registers extensions and starts event processing by default |
 | MobileCore.dispatchEventWithResponseCallback(Event, AdobeCallbackWithError)| Use [MobileCore.dispatchEventWithResponseCallback(Event, long, AdobeCallbackWithError)](../../../home/base/mobile-core/api-reference.md#dispatch--dispatcheventwithresponsecallback) to explicitly specify a timeout |
-| MessagingDelegate | Refer to this [page](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate/) to migrate to PresentationDelegate |
+| MessagingDelegate | Refer to this [page](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate.md) to migrate to PresentationDelegate |
 | InvalidInitException| This exception is no longer thrown by the SDK |
 
 ##### Extension Development
@@ -232,20 +232,20 @@ Please note that the increment to 3.1.0 was preferred for this release in order 
 | Removed API | Alternative API |
 | :------------- | :-------------- |
 | Message.dismiss(boolean suppressAutoTrack) | [Message.dismiss()](../../../edge/adobe-journey-optimizer/public-classes/message.md#dismiss)|
-| Message.evaluateJavascript(String) | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **com.adobe.marketing.mobile.services.ui.message.InAppMessageEventHandler.evaluateJavascript(String, AdobeCallback)**. Refer to this [tutorial](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/javascript-from-native/) for more details |
-| Message.handleJavascriptMessage(String, AdobeCallback) | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **com.adobe.marketing.mobile.services.ui.message.InAppMessageEventHandler.handleJavascriptMessage(String, AdobeCallback)**. Refer to this [tutorial](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/native-from-javascript/) for more details |
-| Message.getParent() | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **com.adobe.marketing.mobile.messaging.MessagingUtils.getMessageForPresentable(Presentable)**. Refer to this [tutorial](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate/) for more details |
+| Message.evaluateJavascript(String) | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **com.adobe.marketing.mobile.services.ui.message.InAppMessageEventHandler.evaluateJavascript(String, AdobeCallback)**. Refer to this [tutorial](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/javascript-from-native.md) for more details |
+| Message.handleJavascriptMessage(String, AdobeCallback) | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **com.adobe.marketing.mobile.services.ui.message.InAppMessageEventHandler.handleJavascriptMessage(String, AdobeCallback)**. Refer to this [tutorial](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/native-from-javascript.md) for more details |
+| Message.getParent() | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **com.adobe.marketing.mobile.messaging.MessagingUtils.getMessageForPresentable(Presentable)**. Refer to this [tutorial](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate.md) for more details |
 | Message.getWebView() | This functionality is no longer supported |
-| MessagingDelegate.shouldShowMessage(FullscreenMessage) | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **PresentationDelegate.canShow(Presentable)**. Refer to this [tutorial](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate/) for more details|
-| MessagingDelegate.onShow(FullscreenMessage) | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **PresentationDelegate.onShow(Presentable)**. Refer to this [tutorial](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate/) for more details|
-| MessagingDelegate.onDismiss(FullscreenMessage) | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **PresentationDelegate.onDismiss(Presentable)**. Refer to this [tutorial](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate/) for more details|
-| MessagingDelegate.urlLoaded(String, FullscreenMessage) | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **PresentationDelegate.onContentLoaded(Presentable, PresentationListener.PresentationContent)**. Refer to this [tutorial](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate/) for more details|
+| MessagingDelegate.shouldShowMessage(FullscreenMessage) | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **PresentationDelegate.canShow(Presentable)**. Refer to this [tutorial](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate.md) for more details|
+| MessagingDelegate.onShow(FullscreenMessage) | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **PresentationDelegate.onShow(Presentable)**. Refer to this [tutorial](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate.md) for more details|
+| MessagingDelegate.onDismiss(FullscreenMessage) | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **PresentationDelegate.onDismiss(Presentable)**. Refer to this [tutorial](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate.md) for more details|
+| MessagingDelegate.urlLoaded(String, FullscreenMessage) | Migrate to **com.adobe.marketing.mobile.services.ui.PresentationDelegate** and use **PresentationDelegate.onContentLoaded(Presentable, PresentationListener.PresentationContent)**. Refer to this [tutorial](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate.md) for more details|
 
 #### Optimize
 
 | Removed API | Alternative API |
 | :------------- | :-------------- |
-| com.adobe.marketing.mobile.optimize.Proposition | [com.adobe.marketing.mobile.optimize.OptimizeProposition](../../../edge/adobe-journey-optimizer-decisioning/api-reference#optimizeproposition) |
+| com.adobe.marketing.mobile.optimize.Proposition | [com.adobe.marketing.mobile.optimize.OptimizeProposition](../../../edge/adobe-journey-optimizer-decisioning/api-reference.md#optimizeproposition) |
 
 #### Adobe Campaign Classic
 
@@ -257,7 +257,7 @@ Please note that the increment to 3.1.0 was preferred for this release in order 
 
 ### Why do I see 'unresolved reference' errors related to `MessagingDelegate` when upgrading to 3.x SDK?
 
-The Mobile Core 3.x SDK for Android includes changes to SDK presentation management that break compatiblity with earlier versions of the SDK. `com.adobe.marketing.mobile.services.MessagingDelegate` and its usage has been removed in favor of `com.adobe.marketing.mobile.services.ui.PresentationDelegate`. If your application uses `MessagingDelegate` for granular control of in-app messages, refer to this [page](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate/) for more details on using `PresentationDelegate`.
+The Mobile Core 3.x SDK for Android includes changes to SDK presentation management that break compatiblity with earlier versions of the SDK. `com.adobe.marketing.mobile.services.MessagingDelegate` and its usage has been removed in favor of `com.adobe.marketing.mobile.services.ui.PresentationDelegate`. If your application uses `MessagingDelegate` for granular control of in-app messages, refer to this [page](../../../edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate.md) for more details on using `PresentationDelegate`.
 
 ### Why do I see 'java.lang.NoSuchMethodError' after upgrading to the 3.x version of Mobile SDK for Android?
 

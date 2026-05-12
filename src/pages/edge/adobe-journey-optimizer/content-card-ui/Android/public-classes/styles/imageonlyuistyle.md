@@ -27,9 +27,9 @@ Class representing the style for an image-only Adobe Experience Platform UI.
 
 | Property                 | Type                                                         | Description                                                  |
 | ------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `cardStyle`              | [AepCardStyle](./aepcardstyle.md)                            | The style for the card.                                      |
-| `imageStyle`             | [AepImageStyle](./aepimagestyle.md)                          | The style for the image.                                     |
-| `dismissButtonStyle`     | [AepIconStyle](./aepiconstyle.md)                            | The style for the dismiss button.                            |
+| `cardStyle`              | [AepCardStyle](../../../android/public-classes/styles/aepcardstyle.md)                            | The style for the card.                                      |
+| `imageStyle`             | [AepImageStyle](../../../android/public-classes/styles/aepimagestyle.md)                          | The style for the image.                                     |
+| `dismissButtonStyle`     | [AepIconStyle](../../../android/public-classes/styles/aepiconstyle.md)                            | The style for the dismiss button.                            |
 | `dismissButtonAlignment` | [Alignment](https://developer.android.com/reference/kotlin/androidx/compose/ui/Alignment) | The alignment for the dismiss button.                        |
 
 ## Customization

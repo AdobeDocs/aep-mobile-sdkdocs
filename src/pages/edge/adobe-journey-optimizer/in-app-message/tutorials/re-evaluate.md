@@ -46,7 +46,7 @@ iOS
 
 ![Re-evaluate before display toggle](../assets/reevaluate/reevaluate-toggle.png)
 
-To trigger the campaign from your app, send an Experience event that matches the campaign's trigger conditions. For details, see [Trigger Adobe Journey Optimizer campaigns using the send data to Experience Platform events](./trigger-campaign.md).
+To trigger the campaign from your app, send an Experience event that matches the campaign's trigger conditions. For details, see [Trigger Adobe Journey Optimizer campaigns using the send data to Experience Platform events](trigger-campaign.md).
 
 ## Test that re-evaluate works
 
@@ -60,7 +60,7 @@ Re-evaluation takes into account complete state of the campaign not just the con
 
 ## Next steps
 
-* [Trigger Adobe Journey Optimizer campaigns using the send data to Experience Platform events](./trigger-campaign.md)
+* [Trigger Adobe Journey Optimizer campaigns using the send data to Experience Platform events](trigger-campaign.md)
 * [In-App Messaging APIs](../api-reference.md)
 * [Validate in-app messaging using Assurance](../validate-messages.md)
 * [Rules Engine](../../../../home/base/mobile-core/rules-engine/index.md)

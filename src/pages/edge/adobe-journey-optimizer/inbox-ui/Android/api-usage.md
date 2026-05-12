@@ -18,7 +18,7 @@ This document provides information on how to use the Messaging APIs to retrieve 
 
 ## getInboxUI
 
-The `getInboxUI` method retrieves a flow of [InboxUIState](./public-classes/inboxuistate.md) for the provided surface. The `InboxUIState` represents the current state of the inbox (Loading, Success, or Error) and includes the inbox template and content cards to be rendered using the [AepInbox](./public-classes/aepinbox.md) composable.
+The `getInboxUI` method retrieves a flow of [InboxUIState](../android/public-classes/inboxuistate.md) for the provided surface. The `InboxUIState` represents the current state of the inbox (Loading, Success, or Error) and includes the inbox template and content cards to be rendered using the [AepInbox](../android/public-classes/aepinbox.md) composable.
 
 <InlineAlert variant="info" slots="text"/>
 

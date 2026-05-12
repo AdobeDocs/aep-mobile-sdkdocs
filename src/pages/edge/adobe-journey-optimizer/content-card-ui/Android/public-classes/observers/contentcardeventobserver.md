@@ -15,7 +15,7 @@ keywords:
 
 # ContentCardEventObserver
 
-Messaging implementation of [AepUIEventObserver](./aepuieventobserver.md) for handling content card events.
+Messaging implementation of [AepUIEventObserver](../../../android/public-classes/observers/aepuieventobserver.md) for handling content card events.
 
 ### Parameters
 
@@ -23,8 +23,8 @@ The primary constructor takes two optional parameters.
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-| callback | [ContentCardUIEventListener](../contentcarduieventlistener.md)? | Optional listener for display, dismiss, and interact callbacks. |
-| provider | [ContentCardUIProvider](../content-provider/contentcarduiprovider.md)? | Optional provider for the same surface as your card list. When non-null, the Messaging SDK updates the provider-backed flow after callback handling so collectors of [getContentCardUIFlow](../content-provider/contentcarduiprovider.md#getcontentcarduiflow) see changes such as dismiss without calling `refreshContent`. Use the **same** instance you pass to `getContentCardUIFlow()`. |
+| callback | [ContentCardUIEventListener](../../../android/public-classes/contentcarduieventlistener.md)? | Optional listener for display, dismiss, and interact callbacks. |
+| provider | [ContentCardUIProvider](../../../android/public-classes/content-provider/contentcarduiprovider.md)? | Optional provider for the same surface as your card list. When non-null, the Messaging SDK updates the provider-backed flow after callback handling so collectors of [getContentCardUIFlow](../../../android/public-classes/content-provider/contentcarduiprovider.md#getcontentcarduiflow) see changes such as dismiss without calling `refreshContent`. Use the **same** instance you pass to `getContentCardUIFlow()`. |
 
 ## Behavior
 

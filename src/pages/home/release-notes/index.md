@@ -3175,12 +3175,12 @@ Major version update for [Adobe Journey Optimizer](../../edge/adobe-journey-opti
 
 * Updated the minimum supported version to iOS 12.0.
 * Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
-* Added [`handleNotificationResponse(_:urlHandler:closure:)`](./../../edge/adobe-journey-optimizer/api-reference/#handlenotificationresponse) API to provide more control over URL handling from `UNNotificationResponse` objects.
+* Added [`handleNotificationResponse(_:urlHandler:closure:)`](../../edge/adobe-journey-optimizer/api-reference.md#handlenotificationresponse) API to provide more control over URL handling from `UNNotificationResponse` objects.
   * Removed deprecated public API `Messaging.handleNotificationResponse(_:applicationOpened:withCustomActionId:)`.
   * Removed public API `Messaging.handleNotificationResponse(_:closure:)` API.
 * Added support for [Code Based Experiences](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based).
-  * Added public API [`Messaging.updatePropositionsForSurfaces(_)`](./../../edge/adobe-journey-optimizer/code-based/api-reference/#updatepropositionsforsurfaces).
-  * Added public API [`Messaging.getPropositionsForSurfaces(_:completion:)`](./../../edge/adobe-journey-optimizer/code-based/api-reference/#getpropositionsforsurfaces).
+  * Added public API [`Messaging.updatePropositionsForSurfaces(_)`](../../edge/adobe-journey-optimizer/code-based/api-reference.md#updatepropositionsforsurfaces).
+  * Added public API [`Messaging.getPropositionsForSurfaces(_:completion:)`](../../edge/adobe-journey-optimizer/code-based/api-reference.md#getpropositionsforsurfaces).
 
 ### iOS Optimize 5.0.0
 
@@ -3722,7 +3722,7 @@ The response tokens should be parsed as `Map<String: Object>`. For details, see 
   * Basic notifications, including remind me later and call-to-action functionality
   * Manual and automatic image carousels of three to five items
 
-See a full description of the new [push template payloads](./../../solution/adobe-campaign-classic/push-templates).
+See a full description of the new [push template payloads](../../solution/adobe-campaign-classic/push-templates/index.md).
 
 ## January 17, 2024
 

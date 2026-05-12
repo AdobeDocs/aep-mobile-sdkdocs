@@ -20,14 +20,14 @@ Data class containing the properties for rendering the inbox container, as confi
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| heading | [AepText](../../../content-card-ui/Android/public-classes/ui-models/aeptext.md) | The heading text displayed at the top of the inbox. |
+| heading | [AepText](../../../content-card-ui/android/public-classes/ui-models/aeptext.md) | The heading text displayed at the top of the inbox. |
 | layout | [AepInboxLayout](#aepinboxlayout) | The layout orientation of the inbox (`VERTICAL` or `HORIZONTAL`). |
 | capacity | Int | The maximum number of content cards to display in the inbox. |
-| emptyMessage | [AepText](../../../content-card-ui/Android/public-classes/ui-models/aeptext.md)? | The message to display when the inbox is empty. |
-| emptyImage | [AepImage](../../../content-card-ui/Android/public-classes/ui-models/aepimage.md)? | The image to display when the inbox is empty. |
+| emptyMessage | [AepText](../../../content-card-ui/android/public-classes/ui-models/aeptext.md)? | The message to display when the inbox is empty. |
+| emptyImage | [AepImage](../../../content-card-ui/android/public-classes/ui-models/aepimage.md)? | The image to display when the inbox is empty. |
 | isUnreadEnabled | Boolean | Whether unread indicators are enabled for content cards. |
-| unreadBgColor | [AepColor](../../../content-card-ui/Android/public-classes/ui-models/aepcolor.md)? | The background color for unread cards with light and dark theme support. |
-| unreadIcon | [AepImage](../../../content-card-ui/Android/public-classes/ui-models/aepimage.md)? | The icon to display as the unread indicator. |
+| unreadBgColor | [AepColor](../../../content-card-ui/android/public-classes/ui-models/aepcolor.md)? | The background color for unread cards with light and dark theme support. |
+| unreadIcon | [AepImage](../../../content-card-ui/android/public-classes/ui-models/aepimage.md)? | The icon to display as the unread indicator. |
 | unreadIconAlignment | [Alignment](https://developer.android.com/reference/kotlin/androidx/compose/ui/Alignment)? | The alignment position of the unread icon on cards. |
 
 ## Class Definition

@@ -45,7 +45,7 @@ Upgrade the Mobile SDK to the following Places extension version
 
 Also mask the **devices** and **environment** fields if they are not relevant to your application.
 
-![Manage Places Context Text Fields](./assets/index/mask-everything-except-poiId.png)
+![Manage Places Context Text Fields](./assets/index/mask-everything-except-poi-id.png)
 
 * Save your schema and
 select confirm. Your schema's **placeContext** field-group should look like:

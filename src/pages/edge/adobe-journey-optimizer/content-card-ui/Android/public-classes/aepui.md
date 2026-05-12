@@ -95,7 +95,7 @@ fun updateState(newState: S)
 
 ### ImageOnlyUI
 
-Implementation of the [AepUI](#AepUI) interface used in rendering a UI for a [ImageOnlyTemplate](./ui-models/imageonlytemplate.md).
+Implementation of the [AepUI](#AepUI) interface used in rendering a UI for a [ImageOnlyTemplate](../../android/public-classes/ui-models/imageonlytemplate.md).
 
 **Class Definition**
 
@@ -112,7 +112,7 @@ class ImageOnlyUI(
 
 ### LargeImageUI
 
-Implementation of the [AepUI](#AepUI) interface used in rendering a UI for a [LargeImageTemplate](./ui-models/largeimagetemplate.md).
+Implementation of the [AepUI](#AepUI) interface used in rendering a UI for a [LargeImageTemplate](../../android/public-classes/ui-models/largeimagetemplate.md).
 
 **Class Definition**
 
@@ -129,7 +129,7 @@ class LargeImageUI(
 
 ### SmallImageUI
 
-Implementation of the [AepUI](#AepUI) interface used in rendering a UI for a [SmallImageTemplate](./ui-models/smallimagetemplate.md).
+Implementation of the [AepUI](#AepUI) interface used in rendering a UI for a [SmallImageTemplate](../../android/public-classes/ui-models/smallimagetemplate.md).
 
 #### Class Definition
 

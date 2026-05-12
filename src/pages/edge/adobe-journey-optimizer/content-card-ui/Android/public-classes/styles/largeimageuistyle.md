@@ -27,15 +27,15 @@ Class representing the style for a large image Adobe Experience Platform UI.
 
 | Property                 | Type                                                         | Description                                                  |
 | ------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `cardStyle`              | [AepCardStyle](./aepcardstyle.md)                            | The style for the card.                                      |
-| `rootColumnStyle`        | [AepColumnStyle](./aepcolumnstyle.md)                        | The style for the root column.                               |
-| `imageStyle`             | [AepImageStyle](./aepimagestyle.md)                          | The style for the image.                                     |
-| `textColumnStyle`        | [AepColumnStyle](./aepcolumnstyle.md)                        | The style for the column containing the title, body and buttons. |
-| `titleTextStyle`         | [AepTextStyle](./aeptextstyle.md)                            | The text style for the title.                                |
-| `bodyTextStyle`          | [AepTextStyle](./aeptextstyle.md)                            | The text style for the body.                                 |
-| `buttonRowStyle`         | [AepRowStyle](./aeprowstyle.md)                              | The style for the row containing the buttons.                |
-| `buttonStyle`            | Array<[AepButtonStyle](./aepbuttonstyle.md)>                 | The style for the buttons.                                   |
-| `dismissButtonStyle`     | [AepIconStyle](./aepiconstyle.md)                            | The style for the dismiss button.                            |
+| `cardStyle`              | [AepCardStyle](../../../android/public-classes/styles/aepcardstyle.md)                            | The style for the card.                                      |
+| `rootColumnStyle`        | [AepColumnStyle](../../../android/public-classes/styles/aepcolumnstyle.md)                        | The style for the root column.                               |
+| `imageStyle`             | [AepImageStyle](../../../android/public-classes/styles/aepimagestyle.md)                          | The style for the image.                                     |
+| `textColumnStyle`        | [AepColumnStyle](../../../android/public-classes/styles/aepcolumnstyle.md)                        | The style for the column containing the title, body and buttons. |
+| `titleTextStyle`         | [AepTextStyle](../../../android/public-classes/styles/aeptextstyle.md)                            | The text style for the title.                                |
+| `bodyTextStyle`          | [AepTextStyle](../../../android/public-classes/styles/aeptextstyle.md)                            | The text style for the body.                                 |
+| `buttonRowStyle`         | [AepRowStyle](../../../android/public-classes/styles/aeprowstyle.md)                              | The style for the row containing the buttons.                |
+| `buttonStyle`            | Array<[AepButtonStyle](../../../android/public-classes/styles/aepbuttonstyle.md)>                 | The style for the buttons.                                   |
+| `dismissButtonStyle`     | [AepIconStyle](../../../android/public-classes/styles/aepiconstyle.md)                            | The style for the dismiss button.                            |
 | `dismissButtonAlignment` | [Alignment](https://developer.android.com/reference/kotlin/androidx/compose/ui/Alignment) | The alignment for the dismiss button.                        |
 
 ## Customization

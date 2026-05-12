@@ -233,8 +233,8 @@ To learn more about Experience Data Model (XDM), schemas, datasets, and field gr
 
 ### Sample XDM implementation
 
-To see a sample XDM implementation, please read the [sample XDM Implementation tutorial](./sample-xdm-implementation.md).
+To see a sample XDM implementation, please read the [sample XDM Implementation tutorial](sample-xdm-implementation.md).
 
 ### Rules and XDM events
 
-To learn more about the rules used for XDM events, please read the [rules and XDM events tutorial](./rules-and-xdm-events.md).
+To learn more about the rules used for XDM events, please read the [rules and XDM events tutorial](rules-and-xdm-events.md).

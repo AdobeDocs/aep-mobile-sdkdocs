@@ -8,7 +8,7 @@ import Tabs from './tabs/messaging-edge-event-type.md'
 
 Provides mapping to XDM EventType strings needed for Experience Event requests.
 
-This enum is used in conjunction with the [`track(_:withEdgeEventType:)`](./message.md#track_withedgeeventtype) method of a `Message` object.
+This enum is used in conjunction with the [`track(_:withEdgeEventType:)`](message.md#track_withedgeeventtype) method of a `Message` object.
 
 ## Definition
 

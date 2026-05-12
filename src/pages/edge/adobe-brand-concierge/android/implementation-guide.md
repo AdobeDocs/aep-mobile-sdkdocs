@@ -102,7 +102,7 @@ Brand Concierge expects the following keys to be present in the Configuration sh
 
 The ECID is read from the Edge Identity shared state.
 
-Another option for validation is to use Adobe Assurance. Refer to the [Mobile SDK validation guide](/src/pages/home/getting-started/validate/) for more information.
+Another option for validation is to use Adobe Assurance. Refer to the [Mobile SDK validation guide](../../../home/getting-started/validate.md) for more information.
 
 ---
 

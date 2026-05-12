@@ -21,13 +21,13 @@ Class representing the style for the Inbox composable. Use the `Builder` class t
 | Method | Parameter Type | Description |
 | ------ | -------------- | ----------- |
 | headingStyle | [AepTextStyle](../../../content-card-ui/Android/public-classes/styles/aeptextstyle.md) | Style for the inbox heading text. |
-| lazyColumnStyle | [AepLazyColumnStyle](./aeplazycolumnstyle.md) | Style for vertical layout (LazyColumn). |
-| lazyRowStyle | [AepLazyRowStyle](./aeplazyrowstyle.md) | Style for horizontal layout (LazyRow). |
+| lazyColumnStyle | [AepLazyColumnStyle](../../../android/public-classes/styles/aeplazycolumnstyle.md) | Style for vertical layout (LazyColumn). |
+| lazyRowStyle | [AepLazyRowStyle](../../../android/public-classes/styles/aeplazyrowstyle.md) | Style for horizontal layout (LazyRow). |
 | emptyMessageStyle | [AepTextStyle](../../../content-card-ui/Android/public-classes/styles/aeptextstyle.md) | Style for empty state message text. |
 | emptyImageStyle | [AepImageStyle](../../../content-card-ui/Android/public-classes/styles/aepimagestyle.md) | Style for empty state image. |
 | unreadIconStyle | [AepImageStyle](../../../content-card-ui/Android/public-classes/styles/aepimagestyle.md) | Style for unread indicator icon. |
 | unreadIconAlignment | [Alignment](https://developer.android.com/reference/kotlin/androidx/compose/ui/Alignment) | Position of unread indicator on cards. |
-| unreadBgColor | [AepColor](../../../../content-card-ui/Android/public-classes/ui-models/aepcolor.md) | Background color for unread cards with light and dark theme support. |
+| unreadBgColor | [AepColor](../../../../content-card-ui/android/public-classes/ui-models/aepcolor.md) | Background color for unread cards with light and dark theme support. |
 | loadingView | @Composable () -> Unit | Custom loading view composable. |
 | errorView | @Composable () -> Unit | Custom error view composable. |
 

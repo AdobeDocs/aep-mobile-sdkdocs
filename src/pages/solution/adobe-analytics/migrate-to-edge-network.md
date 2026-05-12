@@ -31,7 +31,7 @@ Other foundational extensions include the [Consent for Edge Network extension](.
 
 ### Workflow comparison
 
-![compare workflows](./assets/index/compareWorkflows.png)
+![compare workflows](./assets/index/compare-workflows.png)
 
 ## Get started with the migration
 

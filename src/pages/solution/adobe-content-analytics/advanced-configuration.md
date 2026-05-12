@@ -14,19 +14,19 @@ import InitializeSDK from '/src/pages/resources/initialize.md'
 
 This section details how to programmatically configure the Content Analytics extension.
 
-The following config settings are available. These settings can also be managed within the [Adobe Content Analytics extension](/src/pages/solution/adobe-content-analytics/index.md#configure-the-content-analytics-extension).
+The following config settings are available. These settings can also be managed within the [Adobe Content Analytics extension](index.md#configure-the-content-analytics-extension).
 
 | Setting | Type | Default | Description |
 |---|---|---|---|
-| `configId` | String | N/A | [Custom datastream for Content Analytics events](/src/pages/solution/adobe-content-analytics/index.md#datastreams) (overrides edge.configId) |
-| `batchingEnabled` | Boolean | true | [Enable batching](/src/pages/solution/adobe-content-analytics/index.md#batching-settings) |
-| `maxBatchSize` | Integer | 10 | [Maximum events per batch](/src/pages/solution/adobe-content-analytics/index.md#batching-settings). |
-| `flushInterval` | Integer | 2000 | [Flush interval (in milliseconds)](/src/pages/solution/adobe-content-analytics/index.md#batching-settings) |
-| `trackExperiences` | Boolean | true | [Enable experience tracking](/src/pages/solution/adobe-content-analytics/index.md#general-settings). |
-| `excludedAssetLocationsRegexp` | String | - | [Asset location regex pattern](/src/pages/solution/adobe-content-analytics/index.md#exclusions). |
-| `excludedAssetUrlsRegexp` | String | - | [Asset URL regex pattern](/src/pages/solution/adobe-content-analytics/index.md#exclusions). |
-| `excludedExperienceLocationsRegexp` | String | - | [Experience location regex pattern](/src/pages/solution/adobe-content-analytics/index.md#exclusions). |
-| `debugLogging` | Boolean | false | [Verbose logging](/src/pages/solution/adobe-content-analytics/index.md#general-settings). |
+| `configId` | String | N/A | [Custom datastream for Content Analytics events](index.md#datastreams) (overrides edge.configId) |
+| `batchingEnabled` | Boolean | true | [Enable batching](index.md#batching-settings) |
+| `maxBatchSize` | Integer | 10 | [Maximum events per batch](index.md#batching-settings). |
+| `flushInterval` | Integer | 2000 | [Flush interval (in milliseconds)](index.md#batching-settings) |
+| `trackExperiences` | Boolean | true | [Enable experience tracking](index.md#general-settings). |
+| `excludedAssetLocationsRegexp` | String | - | [Asset location regex pattern](index.md#exclusions). |
+| `excludedAssetUrlsRegexp` | String | - | [Asset URL regex pattern](index.md#exclusions). |
+| `excludedExperienceLocationsRegexp` | String | - | [Experience location regex pattern](index.md#exclusions). |
+| `debugLogging` | Boolean | false | [Verbose logging](index.md#general-settings). |
 
 All keys are prepended with `contentanalytics.`.
 

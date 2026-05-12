@@ -24,7 +24,7 @@ You can handle events from in-app message interactions natively within your appl
 
 To register a JavaScript event handler with a `Message` object, you will first need to implement and set a `MessagingDelegate`.
 
-For more detailed instructions on implementing and using a MessagingDelegate, please read the [tutorial on using MessagingDelegate](./messaging-delegate.md).
+For more detailed instructions on implementing and using a MessagingDelegate, please read the [tutorial on using MessagingDelegate](messaging-delegate.md).
 
 ## Register a JavaScript handler for your In-App Message
 
