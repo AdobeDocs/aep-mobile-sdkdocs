@@ -9,8 +9,6 @@ keywords:
 - Android
 
 ---
-import Tabs from './tabs/push-token-sync-optimizations.md'
-
 # Push Token Sync Optimizations
 
 ## Overview
@@ -52,12 +50,17 @@ The AEPMessaging extension SDK will always sync new push tokens when the `setPus
 
 ## Usage Example
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```kotlin
+val config = mapOf("messaging.optimizePushSync" to false)
+MobileCore.updateConfiguration(config)
+```
 
-<Tabs query="platform=android&task=usage-example"/>
+### iOS
 
-iOS
+```swift
+let config = ["messaging.optimizePushSync": false]
+MobileCore.updateConfigurationWith(configDict: config)
+```
 
-<Tabs query="platform=ios&task=usage-example"/>

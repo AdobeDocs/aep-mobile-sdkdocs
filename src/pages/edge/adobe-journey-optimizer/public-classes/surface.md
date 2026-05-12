@@ -10,8 +10,6 @@ keywords:
 - iOS
 - Code-based Experiences
 ---
-import Tabs from './tabs/surface.md'
-
 # Surface
 
 The `Surface` class represents an entity for user or system interaction. It is identified by a self-describing URI which is used to fetch the decision propositions from the AJO campaigns. For example, all mobile application surface URIs start with `mobileapp://`, followed by app bundle identifier and an optional path.
@@ -36,11 +34,24 @@ public let uri: String
 
 Creates a new surface by appending the given surface `path` to the mobile app surface prefix.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### iOS Swift
 
-iOS
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=ios&function=init"/>
+### Syntax
+
+```swift
+public init(path: String)
+```
+
+* _path_ is a string representation for the surface path.
+
+### Example
+
+```swift
+// Creates a surface instance representing a banner within homeView view in my mobile application.
+let surface = Surface(path: "homeView#banner")
+```
 
 ## Android Interface - Surface
 
@@ -52,28 +63,91 @@ iOS
 
 Creates a new surface by appending the given surface `path` to the mobile app surface prefix.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=constructor-parameterized"/>
+### Syntax
+
+```java
+public Surface(final String path)
+```
+
+* _path_ is a string containing the surface path.
+
+### Example
+
+### Android Kotlin
+
+```kotlin
+// Creates a surface instance representing a banner view within homeActivity in my mobile application.
+val surface = Surface("homeActivity#banner")
+```
+
+### Android Java
+
+```java
+// Creates a surface instance representing a banner view within homeActivity in my mobile application.
+final Surface surface = new Surface("homeActivity#banner")
+```
 
 ### Default Constructor
 
 Creates a new base surface by appending application package name to the mobile app surface prefix `mobileapp://`.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=constructor-default"/>
+### Syntax
+
+```java
+public Surface()
+```
+
+### Example
+
+### Android Kotlin
+
+```kotlin
+// Creates a new base surface by appending application package name to the mobile app surface prefix mobileapp://
+val surface = Surface()
+```
+
+### Android Java
+
+```java
+// Creates a new base surface by appending application package name to the mobile app surface prefix mobileapp://
+final Surface surface = new Surface()
+```
 
 ### getUri
 
 Returns this surface's URI as a string.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=get-uri"/>
+### Syntax
+
+```java
+public String getUri()
+```
+
+### Example
+
+### Android Kotlin
+
+```kotlin
+val surface = Surface("homeActivity#banner")
+val uri = surface.uri
+```
+
+### Android Java
+
+```java
+final Surface surface = new Surface("homeActivity#banner")
+final String uri = surface.getUri()
+```
+

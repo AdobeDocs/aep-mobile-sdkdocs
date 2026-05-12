@@ -6,9 +6,6 @@ keywords:
 - Product overview
 ---
 
-import Tabs from './tabs/crash-recovery.md'
-import InitializeSDK from '/src/pages/resources/initialize.md'
-
 # Crash recovery architecture
 
 ## Overview
@@ -44,15 +41,33 @@ User tracks event
 
 **Key Methods:**
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+fun addAssetEvent(event: Event)
+  ├─> assetHitProcessor.accumulateEvent(event)      // Add to memory
+  ├─> persistEventImmediately(event, queue)         // Write to disk
+  └─> checkAndFlushIfNeeded()                       // Check thresholds
 
-<Tabs query="platform=android&task=batch-coordinator"/>
+suspend fun performFlush()
+  ├─> val events = assetHitProcessor.processAccumulatedEvents()
+  └─> [Orchestrator processes events → dispatches to Edge]
+      └─> Edge guarantees delivery from here
+```
 
-iOS
+### iOS
 
-<Tabs query="platform=ios&task=batch-coordinator"/>
+```swift
+func addAssetEvent(_ event: Event)
+  ├─> assetHitProcessor.accumulateEvent(event)      // Add to memory
+  ├─> persistEventImmediately(event, to: queue)    // Write to disk
+  └─> checkAndFlushIfNeeded()                       // Check thresholds
+
+func performFlush()
+  ├─> let events = assetHitProcessor.processAccumulatedEvents()
+  └─> [Orchestrator processes events → dispatches to Edge]
+      └─> Edge guarantees delivery from here
+```
 
 ### DirectHitProcessor
 
@@ -64,15 +79,23 @@ iOS
 
 **Event Lifecycle:**
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+override suspend fun processHit(entity: DataEntity): Boolean
+  ├─> Decode event from disk
+  ├─> Accumulate in memory (if not already present)
+  └─> return true → clear from disk (event now in memory)
+```
 
-<Tabs query="platform=android&task=direct-hit-processor"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=direct-hit-processor"/>
+```swift
+func processHit(entity: DataEntity, completion: (Bool) -> Void)
+  ├─> Decode event from disk
+  ├─> Accumulate in memory (if not already present)
+  └─> completion(true) → clear from disk (event now in memory)
+```
 
 ### PersistentHitQueue (AEPServices)
 
@@ -176,15 +199,41 @@ ContentAnalytics → runtime.dispatch(event) → Event Hub → Edge Extension
 
 Metrics are **derived from events**, not stored separately:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+// On flush (ContentAnalyticsOrchestrator.kt)
+private fun buildAssetMetricsCollection(events: List<Event>): AssetMetricsCollection {
+    val groupedEvents = events.groupBy { it.assetKey ?: "" }
+    val metricsMap = mutableMapOf<String, AssetMetrics>()
+    
+    for ((key, events) in groupedEvents) {
+        val views = events.count { it.interactionType == InteractionType.VIEW }
+        val clicks = events.count { it.interactionType == InteractionType.CLICK }
+        metricsMap[key] = AssetMetrics(viewCount = views, clickCount = clicks, ...)
+    }
+    
+    return AssetMetricsCollection(metricsMap)
+}
+```
 
-<Tabs query="platform=android&task=metrics-calculation"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=metrics-calculation"/>
+```swift
+// On flush (ContentAnalyticsOrchestrator.swift)
+func buildAssetMetricsCollection(from events: [Event]) -> AssetMetricsCollection {
+    let groupedEvents = Dictionary(grouping: events) { $0.assetKey ?? "" }
+    var metricsMap: [String: AssetMetrics] = [:]
+    
+    for (key, events) in groupedEvents {
+        let views = events.filter { $0.interactionType == .view }.count
+        let clicks = events.filter { $0.interactionType == .click }.count
+        metricsMap[key] = AssetMetrics(viewCount: views, clickCount: clicks, ...)
+    }
+    
+    return AssetMetricsCollection(metrics: metricsMap)
+}
+```
 
 This avoids state sync issues. Just events are counted on flush. If the app crashes, the restored events give the same metrics.
 
@@ -222,11 +271,18 @@ This avoids state sync issues. Just events are counted on flush. If the app cras
 
 All operations use Kotlin coroutines with `Mutex` for thread-safe access:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android
 
-Android
+```java
+// BatchCoordinator
+private val scope = CoroutineScope(Dispatchers.IO + SupervisorJob())
+private val stateMutex = kotlinx.coroutines.sync.Mutex()
 
-<Tabs query="platform=android&task=thread-safety"/>
+// DirectHitProcessor
+private val mutex = Mutex()
+
+// All state mutations wrapped in mutex.withLock { }
+```
 
 ## Testing Crash Recovery
 

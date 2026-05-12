@@ -7,8 +7,6 @@ keywords:
 - Tutorial
 ---
 
-import Tabs from './tabs/track-events.md'
-
 # Track events
 
 The SDK provides three event tracking APIs to log events for reporting, segmentation, and various other data collection use cases:
@@ -36,29 +34,70 @@ Additionally, you'll need to add the `Environment Details` field group and creat
 
 ### Create an Experience Event
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+```java
+Map<String, Object> reviewXdmData = new HashMap<>();
+reviewXdmData.put("productSku", "demo123");
+reviewXdmData.put("rating", 5);
+reviewXdmData.put("reviewText", "I love this demo!");
+reviewXdmData.put("reviewerId", "Anonymous user");
 
-<Tabs query="platform=android&task=create"/>
+Map<String, Object> xdmData = new HashMap<>();
+xdmData.put("eventType", "MyFirstXDMExperienceEvent");
+xdmData.put(_yourTenantId, reviewXdmData);
 
-iOS
+ExperienceEvent experienceEvent = new ExperienceEvent.Builder()
+                .setXdmSchema(xdmData)
+                .build();
+```
 
-<Tabs query="platform=ios&task=create"/>
+### iOS Swift
+
+```swift
+var xdmData : [String: Any] = [:]
+xdmData["eventType"] = "MyFirstXDMExperienceEvent"
+xdmData[_yourTenantId] = ["productSku": "demo123",
+                          "rating": 5,
+                          "reviewText": "I love this demo!",
+                          "reviewerId": "Anonymous user"]
+let experienceEvent = ExperienceEvent(xdm: xdmData)
+```
+
+### iOS Objective-C
+
+```objc
+NSDictionary<NSString*, NSObject*>* xdmData;
+[xdmData setValue:@"MyFirstXDMExperienceEvent" forKey:@"eventType"];
+[xdmData setValue:@{@"productSku": @"demo123",
+                    @"rating": @5,
+                    @"reviewText": @"I love this demo!",
+                    @"reviewerId": @"Anonymous user"}
+                      forKey:_yourTenantId];
+AEPExperienceEvent *experienceEvent = [[AEPExperienceEvent alloc] initWithXdm:xdmData data:nil datasetIdentifier:nil];
+```
 
 ### Send the Experience Event to Edge Network
 
 Use the Adobe Experience Platform Edge Mobile Extension to send the Experience Event created in the previous step.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+```java
+Edge.sendEvent(experienceEvent, null);
+```
 
-<Tabs query="platform=android&task=send"/>
+### iOS Swift
 
-iOS
+```swift
+Edge.sendEvent(experienceEvent: experienceEvent)
+```
 
-<Tabs query="platform=ios&task=send"/>
+### iOS Objective-C
+
+```objc
+[AEPMobileEdge sendExperienceEvent:event completion:nil];
+```
 
 ## Track user actions (for Adobe Analytics)
 
@@ -70,15 +109,96 @@ Actions are events that occur in your app. Use this API to track and measure an 
 
 You must call this API when an event that you want to track occurs. In addition to the action name, you can send additional context data with each track action call.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&task=track-action"/>
+### Syntax
 
-iOS
+```java
+public static void trackAction(final String action, final Map<String, String> contextData)
+```
 
-<Tabs query="platform=ios&task=track-action"/>
+### Example
+
+```java
+Map<String, String> additionalContextData = new HashMap<String, String>();
+additionalContextData.put("customKey", "value");
+MobileCore.trackAction("loginClicked", additionalContextData);
+```
+
+### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+### Syntax
+
+```swift
+static func track(action: String?, data: [String: Any]?)
+```
+
+### Example
+
+```swift
+MobileCore.track(action: "actionName", data: ["key": "value"])
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="6" />
+
+### Syntax
+
+```swift
+@objc(trackAction:data:)
+static func track(action: String?, data: [String: Any]?)
+```
+
+### Example
+
+```objectivec
+[AEPMobileCore trackAction:@"action name" data:@{@"key": @"value"}];
+```
+
+\<!-- <Variant platform="react-native" task="track-action" repeat="5"/>
+
+#### JavaScript
+
+### Syntax
+
+```jsx
+trackAction(action?: String, contextData?: { string: string });
+```
+
+### Example
+
+```jsx
+ACPCore.trackAction("action", {"mytest": "action"});
+``` -->
+
+\<!-- <Variant platform="flutter" task="track-action" repeat="5"/>
+
+#### Dart
+
+### Syntax
+
+```dart
+Future<void> trackAction(String action, {Map<String, String> data});
+```
+
+### Example
+
+```dart
+FlutterACPCore.trackAction("mytest",  data: {"mytest": "action"});J
+``` -->
+
+\<!-- <Variant platform="cordova" task="track-action" repeat="2"/>
+
+#### Javascript
+
+```javascript
+ACPCore.trackAction("cordovaAction", {"cordovaKey":"cordovaValue"}, successCallback, errorCallback);
+```
 
 \<!-- React Native
 
@@ -92,27 +212,134 @@ iOS
 
 <Tabs query="platform=cordova&task=track-action"/>
 
-Unity
+### Unity
 
-<Tabs query="platform=unity&task=track-action"/>
+#### C#
 
-Xamarin
+```csharp
+var contextData = new Dictionary<string, string>();
+contextData.Add("key", "value");
+ACPCore.TrackAction("action name", contextData);
+```
 
-<Tabs query="platform=xamarin&task=track-action"/> --\>
+### Xamarin
+
+#### C#
+
+**iOS**
+
+```csharp
+var data = new NSMutableDictionary<NSString, NSString>
+{
+  ["key"] = new NSString("value")
+};
+ACPCore.TrackAction("action", data);
+```
+
+**Android**
+
+```csharp
+var data = new Dictionary<string, string>();
+data.Add("key", "value");
+ACPCore.TrackAction("action", data);
+``` -->
+ --\>
 
 ## Track app states and screens (for Adobe Analytics)
 
 States represent screens or views in your app. The `trackState` method is called every time a new state is displayed in your application. For example, this method would be called when a user navigates from the home page to the news feed. This method also sends an Adobe Analytics state-tracking hit with optional context data.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+On Android, `trackState` is typically called each time a new activity is loaded.
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&task=track-state"/>
+### Syntax
 
-iOS
+```java
+public static void trackState(final String state, final Map<String, String> contextData)
+```
 
-<Tabs query="platform=ios&task=track-state"/>
+### Example
+
+```java
+Map<String, String> additionalContextData = new HashMap<String, String>();         
+additionalContextData.put("customKey", "value");         
+MobileCore.trackState("homePage", additionalContextData);
+```
+
+### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+### Syntax
+
+```swift
+static func track(state: String?, data: [String: Any]?) 
+```
+
+### Example
+
+```swift
+MobileCore.track(state: "state name", data: ["key": "value"])
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="6" />
+
+### Syntax
+
+```swift
+@objc(trackState:data:)
+static func track(state: String?, data: [String: Any]?) 
+```
+
+### Example
+
+```objectivec
+[AEPMobileCore trackState:@"state name" data:@{@"key": @"value"}];
+```
+
+\<!-- <Variant platform="react-native" task="track-state" repeat="5"/>
+
+#### JavaScript
+
+### Syntax
+
+```jsx
+trackState(state?: String, contextData?: { string: string });
+```
+
+### Example
+
+```jsx
+ACPCore.trackState("state", {"mytest": "state"});
+``` -->
+
+\<!-- <Variant platform="flutter" task="track-state" repeat="5"/>
+
+#### Dart
+
+### Syntax
+
+```dart
+Future<void> trackState(String state, {Map<String, String> data});
+```
+
+### Example
+
+```dart
+FlutterACPCore.trackState("state",  data: {"mytest": "state"});
+``` -->
+
+\<!-- <Variant platform="cordova" task="track-state" repeat="2"/>
+
+#### Javascript
+
+```javascript
+ACPCore.trackState("cordovaState", {"cordovaKey":"cordovaValue"}, successCallback, errorCallback);
+```
 
 \<!-- React Native
 
@@ -126,13 +353,38 @@ iOS
 
 <Tabs query="platform=cordova&task=track-state"/>
 
-Unity
+### Unity
 
-<Tabs query="platform=unity&task=track-state"/>
+#### C#
 
-Xamarin
+```csharp
+var dict = new Dictionary<string, string>();
+dict.Add("key", "state value");
+ACPCore.TrackState("state", dict);
+```
 
-<Tabs query="platform=xamarin&task=track-state"/> --\>
+### Xamarin
+
+#### C#
+
+**iOS**
+
+```csharp
+var data = new NSMutableDictionary<NSString, NSString>
+{
+  ["key"] = new NSString("value")
+};
+ACPCore.TrackState("state", data);
+```
+
+**Android**
+
+```csharp
+var data = new Dictionary<string, string>();
+data.Add("key", "value");
+ACPCore.TrackState("state", data);
+``` -->
+ --\>
 
 For more information, see the [Mobile Core API Reference](../base/mobile-core/api-reference.md).
 

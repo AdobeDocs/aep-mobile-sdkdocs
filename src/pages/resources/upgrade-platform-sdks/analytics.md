@@ -2,8 +2,6 @@
 title: "Adobe Mobile Library (v4) to Experience Platform Analytics migration"
 description: "The Adobe Experience Platform Analytics extension uses [tags](https://experience.adobe.com/#/data-collection/) to configure the Experience Platform SDKs. T..."
 ---
-import Tabs from './tabs/analytics.md'
-
 # Adobe Mobile Library (v4) to Experience Platform Analytics migration
 
 ## Configuration
@@ -14,15 +12,33 @@ The Adobe Experience Platform Analytics extension uses [tags](https://experience
 2. Configure your mobile app with the create mobile property.<br/>The AEP Mobile Core extension provides general functionality required by all the Adobe AEP extensions. The Configuration extension is built into the Mobile Core and contains the configureWithAppId API. This API is used to link the tag mobile property with your mobile app. The documentation for this API can be seen at the [Configuration API Reference](../../home/base/mobile-core/configuration/api-reference.md#configurewithappid) page. A code sample showing the usage of this API is provided below.
 3. Once all the Platform extensions are imported and configured correctly, remove the v4 Mobile SDK dependency. <br/>This step is mandatory and a mix of v4 and AEP API calls is not supported.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+If using Gradle, remove the v4 Mobile SDK dependency:
 
-<Tabs query="platform=android&task=config"/>
+#### Gradle
 
-iOS
+```bash
+dependencies {
+  implementation 'com.adobe.mobile:adobeMobileLibrary:4.18.2'
+  ...
+}
+```
 
-<Tabs query="platform=ios&task=config"/>
+Alternatively, if the v4 Mobile SDK library is linked as a jar, search for `adobeMobileLibrary` in your project and remove the jar file.
+
+### iOS
+
+If using Cocoapods, remove the v4 Mobile SDK dependency from the Podfile:
+
+```bash
+target 'YourTarget' do
+    pod 'AdobeMobileSDK'
+    ...
+end
+```
+
+Alternatively, if the v4 Mobile SDK library is linked in Xcode, select the application target and go to `Build Phases`, then `Link Binary With Libraries` and remove `AdobeMobileLibrary.a`.
 
 ## Analytics Migration Overview
 
@@ -48,15 +64,63 @@ For an overview of the API mapping between the Mobile Services SDK and Adobe Exp
 
 In your app's Application class add the mobile extension registration and configuration code:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+```java
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Analytics;
+import com.adobe.marketing.mobile.Identity;
 
-<Tabs query="platform=android&task=aep-install"/>
+@Override
+public void onCreate(Bundle savedInstanceState) {
+  super.onCreate(savedInstanceState);
+  setContentView(R.layout.main);
 
-iOS
+  MobileCore.setApplication(getApplication());
 
-<Tabs query="platform=ios&task=aep-install"/>
+  MobileCore.registerExtensions(Arrays.asList(
+     Analytics.EXTENSION,
+     Identity.EXTENSION
+    ), value -> {
+   // add your Environment file ID from Environments tab in Data Collection tags.
+   MobileCore.configureWithAppID("your-environment-file-id");
+ });
+}
+```
+
+### iOS Swift
+
+```swift
+import AEPCore
+import AEPIdentity
+import AEPAnalytics
+
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+  MobileCore.registerExtensions([Analytics.self, Identity.self], {
+      // Use the environment file id assigned to this application in Data Collection UI
+      MobileCore.configureWith(appId: "your-environment-file-id")
+  })
+  return true
+}
+```
+
+### iOS Objective-C
+
+```objectivec
+// AppDelegate.h
+@import AEPCore;
+@import AEPIdentity;
+@import AEPAnalytics;
+
+// AppDelegate.m
+- (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  [AEPMobileCore registerExtensions:@[AEPMobileAnalytics.class, AEPMobileIdentity.class] completion:^{
+      // Use the environment file id assigned to this application in Data Collection UI
+      [AEPMobileCore configureWithAppId: @"your-environment-file-id"];
+  }];
+  return YES;
+}
+```
 
 For more details, see [Add Analytics to your application](../../solution/adobe-analytics/index.md#add-analytics-to-your-application).
 
@@ -66,27 +130,101 @@ For more details, see [Add Analytics to your application](../../solution/adobe-a
 
 #### Adobe Mobile Library (v4)
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+The Adobe Mobile Library (v4) syntax and usage examples for these API are:
 
-<Tabs query="platform=android&task=api-changes-v4"/>
+```java
+// syntax
+public static void trackState(final String state, final Map<String, Object> contextData)
 
-iOS
+// usage
+Analytics.trackState("MainPage", new HashMap<String, Object>() {{
+  put("firstVisit", true);
+}});
+```
 
-<Tabs query="platform=ios&task=api-changes-v4"/>
+```java
+// syntax
+public static void trackAction(final String action, final Map<String, Object> contextData)
+
+// usage
+Analytics.trackAction("linkClicked", new HashMap<String, Object>() {{
+  put("url", "https://www.adobe.com");
+}});
+```
+
+### iOS Objective-C
+
+The Adobe Mobile Library (v4) syntax and usage examples for these API are:
+
+```objectivec
+// syntax
++ (void) trackState:(NSString *)state data:(NSDictionary *)data;
+
+// usage
+[ADBMobile trackState:@"MainPage" data:@{@"firstVisit":@true}];
+```
+
+```objectivec
+// syntax
++ (void) trackAction:(NSString *)action data:(NSDictionary *)data;
+
+// usage
+[ADBMobile trackAction:@"linkClicked" data:@{@"url":@"https://www.adobe.com"}];
+```
 
 #### Experience Platform Mobile SDKs
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+The Mobile SDKs have moved the `trackAction` and `trackState` APIs to the MobileCore extension. In addition, the context data Map has been changed from `<String, Object>` to `<String, String>`. The syntax is:
+### Android Java
 
-Android
+```java
+// syntax
+public static void trackState(final String state, final Map<String, String> contextData)
 
-<Tabs query="platform=android&task=api-changes-aep"/>
+// usage
+MobileCore.trackState("MainPage", new HashMap<String, String>() {{
+  put("firstVisit", "true");
+}});
+```
 
-iOS
+```java
+// syntax
+public static void trackAction(final String action, final Map<String, String> contextData)
 
-<Tabs query="platform=ios&task=api-changes-aep"/>
+// usage
+MobileCore.trackAction("linkClicked", new HashMap<String, String>() {{
+  put("url", "https://www.adobe.com");
+}});
+```
+
+The Mobile SDKs have moved the `trackAction` and `trackState` APIs to the MobileCore extension. The syntax is:
+
+```objectivec
+ @objc(trackAction:data:)
+ static func track(action: String?, data: [String: Any]?)
+```
+
+```objectivec
+ @objc(trackState:data:)
+ static func track(state: String?, data: [String: Any]?)
+```
+
+The usage examples are:
+### iOS Swift
+
+```swift
+MobileCore.track(state: "MainPage", data: ["firstVisit": "true"])
+MobileCore.track(action: "linkClicked", data: ["url": "https://www.adobe.com"])
+```
+
+### iOS Objective-C
+
+```objectivec
+[AEPMobileCore trackState:@"MainPage" data:@{@"firstVisit":@"true"}];
+[AEPMobileCore trackAction:@"linkClicked" data:@{@"url":@"https://www.adobe.com"}];
+```
 
 ## Privacy status changes in the Experience Platform SDK
 
@@ -98,12 +236,52 @@ The privacy APIs `setPrivacyStatus` and `getPrivacyStatus` can be found in the M
 
 ### Experience Platform Mobile SDKs
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+The usage example for the `setPrivacyStatus` API is:
 
-<Tabs query="platform=android&task=privacy-changes-aep"/>
+```java
+MobileCore.setPrivacyStatus(MobilePrivacyStatus.OPT_IN);
+MobileCore.setPrivacyStatus(MobilePrivacyStatus.OPT_OUT);
+MobileCore.setPrivacyStatus(MobilePrivacyStatus.UNKNOWN);
+```
 
-iOS
+The usage example for the `getPrivacyStatus` API is:
 
-<Tabs query="platform=ios&task=privacy-changes-aep"/>
+```java
+MobileCore.getPrivacyStatus(new AdobeCallback<MobilePrivacyStatus>() {
+    @Override
+    public void call(MobilePrivacyStatus status) {
+        // handle current privacy status
+    }
+});
+```
+
+The usage example for `getPrivacyStatus` is:
+### iOS Swift
+
+```swift
+MobileCore.getPrivacyStatus(completion: ({ status in
+  // handle current privacy status
+   switch status {
+     case PrivacyStatus.optedIn: print("Privacy Status: Opt-In")
+     case PrivacyStatus.optedOut: print("Privacy Status: Opt-Out")
+     case PrivacyStatus.unknown: print("Privacy Status: Unknown")
+     default: break
+   }
+})
+```
+
+### iOS Objective-C
+
+```objectivec
+[AEPMobileCore getPrivacyStatus:^(AEPPrivacyStatus status) {
+    switch (status) {
+    case AEPPrivacyStatusOptedIn: NSLog(@"Privacy Status: Opt-In");
+    case AEPPrivacyStatusOptedOut: NSLog(@"Privacy Status: Opt-Out");
+    case AEPPrivacyStatusUnknown: NSLog(@"Privacy Status: Unknown");
+    default: break;
+  }
+}];
+```
+

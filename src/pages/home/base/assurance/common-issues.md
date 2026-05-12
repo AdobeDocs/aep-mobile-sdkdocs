@@ -8,8 +8,6 @@ keywords:
 - Troubleshooting
 ---
 
-import Tabs from './tabs/common-issues.md'
-
 # Resolving common issues
 
 ## Unable to open app with QR code or generated link
@@ -18,15 +16,13 @@ If scanning the QR code or opening the deep link in Adobe Experience Platform As
 
 Please follow OS developer documentation to learn more on setting up deep linking.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+Follow the [Android documention](https://developer.android.com/training/app-links/deep-linking) on information about how to set up a deeplink.
 
-<Tabs query="platform=android&task=unable-to-open-app"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=unable-to-open-app"/>
+Follow the [Apple developer](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app) documentation to set a custom URL scheme for your application.
 
 ## PIN screen does not appear
 
@@ -42,15 +38,17 @@ Please refer to the [Assurance overview](../index.md#register-aepassurance-with-
 
 The PIN screen may not show if the link or QR code is incorrect (or doesn't contain the query parameter `adb_validation_sessionid`). You may detect this error by seeing console logs with the following strings:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```text
+AdobeExperienceSDK: Assurance - Not a valid Assurance deeplink, Ignoring start session API call. URL :  <deeplink URL>
+```
 
-<Tabs query="platform=android&task=copy-link"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=copy-link"/>
+```text
+AdobeExperienceSDK: Assurance - Not a valid Assurance deeplink, Ignoring start session API call. URL :  <deeplink URL>
+```
 
 This issue may be resolved by scanning the right QR code or correctly copying the link generated in Assurance.
 
@@ -78,15 +76,17 @@ If you see an Invalid Mobile SDK Configuration error (see screenshot below), ver
 
 #### Sample logs
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```text
+W/AdobeExperienceSDK: Assurance - Assurance connection closed. Reason: Invalid Configuration, Description: The Experience Cloud organization identifier is unavailable from the SDK. Ensure SDK configuration is setup correctly. See documentation for more detail.
+```
 
-<Tabs query="platform=android&task=invalid-configuration-sample-logs"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=invalid-configuration-sample-logs"/>
+```text
+[AdobeExperienceSDK ERROR <AEPAssurance>]: Invalid Configuration, Description: The Experience Cloud organization identifier is unavailable from the SDK. Ensure SDK configuration is setup correctly. See documentation for more detail.
+```
 
 ## Unauthorized access
 
@@ -96,15 +96,17 @@ This error may happen when you have access to multiple organizations in your Ado
 
 #### Sample logs
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```text
+W/AdobeExperienceSDK: Assurance - Assurance connection closed. Reason: Unauthorized Access, Description: The Experience Cloud organization identifier does not match with that of the Assurance session. Ensure the right Experience Cloud organization is being used. See documentation for more detail.
+```
 
-<Tabs query="platform=android&task=unauthorized-access-sample-logs"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=unauthorized-access-sample-logs"/>
+```text
+[AdobeExperienceSDK ERROR <AEPAssurance>]: Assurance connection closed. Reason: Unauthorized Access, Description: The Experience Cloud organization identifier does not match with that of the Assurance session. Ensure the right Experience Cloud organization is being used. See documentation for more detail.
+```
 
 ## Timeout
 
@@ -112,15 +114,17 @@ This SDK log message is not an error and is displayed during the routine course 
 
 #### Sample logs
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```text
+D/AdobeExperienceSDK: Assurance - Timeout - Assurance did not receive deeplink to start Assurance session within 5 seconds. Shutting down Assurance extension
+```
 
-<Tabs query="platform=android&task=timeout-sample-logs"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=timeout-sample-logs"/>
+```text
+[AdobeExperienceSDK DEBUG <AEPAssurance>]: Timeout - Assurance extension did not receive session url. Shutting down from processing any further events.
+```
 
 ## Failed to show fullscreen takeover
 

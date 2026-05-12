@@ -11,8 +11,6 @@ keywords:
 - Javascript
 - In-app message
 ---
-import Tabs from './tabs/message.md'
-
 # Message
 
 The `Message` class contains the definition of an in-app message and controls its tracking via Experience Edge events.
@@ -67,21 +65,30 @@ Signals to the UIService that the message should be removed from the UI.
 
 If `autoTrack` is true, calling this method will result in an `decisioning.propositionDismiss` Edge Event being dispatched.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### iOS
 
-iOS
+```swift
+public func dismiss(suppressAutoTrack: Bool? = false)
+```
 
-<Tabs query="platform=ios&function=dismiss"/>
+###### Parameters
+
+* *suppressAutoTrack*: If set to `true`, the `decisioning.propositionDismiss` Edge Event will not be sent regardless of the `autoTrack` setting.
 
 ### track(_:withEdgeEventType:)
 
 Generates and dispatches an Edge Event for the provided `interaction` and `eventType`.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### iOS Swift
 
-iOS
+```swift
+public func track(_ interaction: String?, withEdgeEventType eventType: MessagingEdgeEventType)
+```
 
-<Tabs query="platform=ios&function=track"/>
+###### Parameters
+
+* *interaction*: A custom `String` value to be recorded in the interaction
+* *eventType*: The [`MessagingEdgeEventType`](#enum-messagingedgeeventtype) to be used for the ensuing Edge Event
 
 ### handleJavascriptMessage(_:withHandler:)
 
@@ -91,11 +98,16 @@ The parameter passed to `handler` will contain the body of the message passed fr
 
 For a full guide on how to use `handleJavascriptMessage`, read [Call native code from the Javascript of an in-app message](./tutorials/native-from-javascript.md).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### iOS Swift
 
-iOS
+```swift
+public func handleJavascriptMessage(_ name: String, withHandler handler: @escaping (Any?) -> Void)
+```
 
-<Tabs query="platform=ios&function=handle-javascript-message"/>
+##### Parameters
+
+* *name*: The name of the message that should be handled by `handler`
+* *handler*: The method or closure to be called with the body of the message created in the Message's JavaScript
 
 ## Android Interface - Message
 
@@ -125,41 +137,50 @@ Signals to the UIService that the message should be removed from the UI.
 
 If `autoTrack` is true, calling this method will result in an "decisioning.propositionDismiss" Edge Event being dispatched.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
-
-<Tabs query="platform=android&function=dismiss"/>
+```java
+void dismiss()
+```
 
 ### track
 
 Generates and dispatches an Edge Event for the provided `interaction` and `eventType`.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+```java
+void track(final String interaction, final MessagingEdgeEventType eventType)
+```
 
-<Tabs query="platform=android&function=track"/>
+##### Parameters
+
+* *interaction*: A custom `String` value to be recorded in the interaction
+* *eventType*: The [`MessagingEdgeEventType`](../messaging-edge-event-type.md) to be used for the ensuing Edge Event
 
 ### setAutoTrack
 
 Sets the `Message`'s auto tracking preference.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+```java
+void setAutoTrack(boolean enabled)
+```
 
-<Tabs query="platform=android&function=set-auto-track"/>
+##### Parameters
+
+* *enabled*: If true, Experience Edge events will automatically be generated when this `Message` is triggered, displayed, or dismissed.
 
 ### getAutoTrack
 
 Returns the `Message`'s auto tracking preference.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
-
-<Tabs query="platform=android&function=get-auto-track"/>
+```java
+boolean getAutoTrack()
+```
 
 ### evaluateJavascript
 
@@ -173,11 +194,15 @@ Evaluates the passed in `String` content containing JavaScript code using the `M
 
 For a full guide on how to use `handleJavascriptMessage`, read the guide on [executing JavaScript methods from native code](../in-app-message/tutorials/javascript-from-native.md).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+```java
+void evaluateJavascript(final String content)
+```
 
-<Tabs query="platform=android&function=evaluate-javascript"/>
+##### Parameters
+
+* *content*: A string containing the JavaScript code to be executed
 
 ### handleJavascriptMessage
 
@@ -193,11 +218,16 @@ The `AdobeCallback` will contain the body of the message passed from the `WebVie
 
 For a full guide on how to use `handleJavascriptMessage`, read the guide on [calling native code from the Javascript of an in-app message](../in-app-message/tutorials/native-from-javascript.md).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+```java
+void handleJavascriptMessage(final String name, final AdobeCallback<String> callback)
+```
 
-<Tabs query="platform=android&function=handle-javascript-message"/>
+##### Parameters
+
+* *name*: The name of the message that should be handled by the `callback`
+* *callback*: A callback which will be called with the body of the message created in the Message's JavaScript
 
 ### getId
 

@@ -5,9 +5,6 @@ keywords:
 - Adobe Analytics
 - Product overview
 ---
-import Tabs from './tabs/advanced-configuration.md'
-import InitializeSDK from '/src/pages/resources/initialize.md'
-
 # Advanced Configuration
 
 ## Configuration Keys
@@ -32,15 +29,23 @@ All keys are prepended with `contentanalytics.`.
 
 You can configure the extension through the Data Collection Content Analytics extension UI, or programmatically.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+MobileCore.updateConfiguration(mapOf(
+    "contentanalytics.maxBatchSize" to 20,
+    "contentanalytics.batchFlushInterval" to 5000
+))
+```
 
-<Tabs query="platform=android&task=launch"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=launch"/>
+```swift
+MobileCore.updateConfigurationWith(configDict: [
+    "contentanalytics.maxBatchSize": 20,
+    "contentanalytics.batchFlushInterval": 5000
+])
+```
 
 ## Datastream
 
@@ -110,15 +115,31 @@ To manage privacy, use the consent API's.
 
 ### Edge Consent
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+// Opt in
+Consent.update(mapOf("consents" to mapOf("collect" to mapOf("val" to "y"))))
 
-<Tabs query="platform=android&task=edge-consent"/>
+// Opt out
+Consent.update(mapOf("consents" to mapOf("collect" to mapOf("val" to "n"))))
 
-iOS
+// Pending
+Consent.update(mapOf("consents" to mapOf("collect" to mapOf("val" to "p"))))
+```
 
-<Tabs query="platform=ios&task=edge-consent"/>
+### iOS
+
+```swift
+// Opt in
+Consent.update(with: ["consents": ["collect": ["val": "y"]]])
+
+// Opt out
+Consent.update(with: ["consents": ["collect": ["val": "n"]]])
+
+// Pending
+Consent.update(with: ["consents": ["collect": ["val": "p"]]])
+```
 
 | Value | Result |
 |-------|--------|
@@ -130,29 +151,37 @@ iOS
 
 The legacy privacy APIs also should work.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+MobileCore.setPrivacyStatus(MobilePrivacyStatus.OPT_IN)   // send
+MobileCore.setPrivacyStatus(MobilePrivacyStatus.OPT_OUT)  // drop + clear
+MobileCore.setPrivacyStatus(MobilePrivacyStatus.UNKNOWN)  // queue
+```
 
-<Tabs query="platform=android&task=edge-consent-legacy"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=edge-consent-legacy"/>
+```swift
+MobileCore.setPrivacyStatus(.optedIn)   // send
+MobileCore.setPrivacyStatus(.optedOut)  // drop + clear
+MobileCore.setPrivacyStatus(.unknown)   // queue
+```
 
 ### Data Deletion
 
 To delete data, use `resetIdentities()` to reset identities, clear cache and queue.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+MobileCore.resetIdentities()  // clears cache + queue
+```
 
-<Tabs query="platform=android&task=data-deletion"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=data-deletion"/>
+```swift
+MobileCore.resetIdentities()  // clears cache + queue
+```
 
 ## Featurization
 
@@ -188,15 +217,17 @@ The default settings (`maxBatchSize: 10`, `batchFlushInterval: 2000` ms) should 
 
 Use `setLogLevel()` to set the debugging level.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+MobileCore.setLogLevel(LoggingMode.VERBOSE)
+```
 
-<Tabs query="platform=android&task=debugging"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=debugging"/>
+```swift
+MobileCore.setLogLevel(.debug)
+```
 
 Log entries are tagged. See below for the various tags.
 

@@ -10,8 +10,6 @@ keywords:
 - iOS
 - Code-based Experiences
 ---
-import Tabs from './tabs/proposition.md'
-
 # Proposition
 
 The `Proposition` class represents the decision propositions received from the remote, upon a personalization query request to the Experience Edge network.
@@ -52,28 +50,41 @@ public lazy var items: [PropositionItem]
 
 Returns this proposition's unique identifier as a string.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=get-items"/>
+### Syntax
+
+```java
+public List<PropositionItem> getItems()
+```
 
 ### getScope
 
 Returns this proposition's unique identifier as a string.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=get-scope"/>
+### Syntax
+
+```java
+public String getScope()
+```
 
 ### getUniqueId
 
 Returns this proposition's unique identifier as a string.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=get-unique-id"/>
+### Syntax
+
+```java
+public String getUniqueId()
+```
+

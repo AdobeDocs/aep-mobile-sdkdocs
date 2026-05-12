@@ -8,8 +8,6 @@ keywords:
 - Signal for Mobile Core
 ---
 
-import Tabs from './tabs/api-reference.md'
-
 # Signal API reference
 
 ## extensionVersion
@@ -18,23 +16,65 @@ The `extensionVersion()` API returns the version of the Signal extension that is
 
 To get the version of the Signal extension, use the following code sample:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&api=extension-version"/>
+### Syntax
 
-iOS
+```java
+@NonNull
+public static String extensionVersion();
+```
 
-<Tabs query="platform=ios&api=extension-version"/>
+### Example
+
+```java
+String signalExtensionVersion = Signal.extensionVersion();
+```
+
+### iOS
+
+### Syntax
+
+```swift
+public static let extensionVersion
+```
+
+**Examples**
+
+**Swift**
+
+```swift
+let version = Signal.extensionVersion
+```
+
+**Objective-C**
+
+```objectivec
+NSString *version = [AEPMobileSignal extensionVersion];
+```
+
+\<!--- <Variant platform="react-native" api="extension-version" repeat="2"/>
+
+#### JavaScript
+
+```jsx
+ACPSignal.extensionVersion().then(signalExtensionVersion => console.log("AdobeExperienceSDK: ACPSignal version: " + signalExtensionVersion));
+```
 
 \<!--- React Native
 
 <Tabs query="platform=react-native&api=extension-version"/>
 
-Flutter
+### Flutter
 
-<Tabs query="platform=flutter&api=extension-version"/> ---\>
+#### Dart
+
+```dart
+String signalExtensionVersion = await FlutterACPSignal.extensionVersion;
+``` --->
+ ---\>
 
 ## registerExtension
 
@@ -46,11 +86,25 @@ Use [`MobileCore.registerExtensions()`](../mobile-core/api-reference.md#register
 
 Registers the Signal extension with the Mobile Core.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&api=register-extension"/>
+### Syntax
+
+```java
+public static void registerExtension()
+```
+
+### Example
+
+```java
+Signal.registerExtension();
+```
+
+\<!--- <Variant platform="react-native" api="register-extension" repeat="1"/>
+
+When using React Native, register the Signal extension with Mobile Core in native code as shown on the Android and iOS tabs. ---\>
 
 \<!--- React Native
 

@@ -6,8 +6,6 @@ keywords:
 - FAQ
 ---
 
-import FAQ from './tabs/faq.md'
-
 # Frequently asked questions
 
 ## What's new in the Adobe Experience Platform Mobile SDK?
@@ -104,13 +102,7 @@ For a complete list of supported platforms, please read the [latest SDK versions
 
 ### Where does the SDK store identities and preferences on the app?
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
-
-Android
-
 <FAQ query="platform=android&task=storage-locations"/>
-
-iOS
 
 <FAQ query="platform=ios&task=storage-locations"/>
 
@@ -171,13 +163,7 @@ Implementing push notification tracking and measurement with the SDK depends on 
 
 If you are getting the following errors from the SDK logged in your console, then you have not correctly published the mobile property in Data Collection UI. To correctly publish the mobile property follow the [docs here](https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
-
-Android
-
 <FAQ query="platform=android&task=configuration-download-error"/>
-
-iOS
 
 <FAQ query="platform=ios&task=configuration-download-error"/>
 

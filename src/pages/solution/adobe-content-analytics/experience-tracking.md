@@ -5,9 +5,6 @@ keywords:
 - Adobe Analytics
 - Product overview
 ---
-import Tabs from './tabs/experience-tracking.md'
-import InitializeSDK from '/src/pages/resources/initialize.md'
-
 # Experience tracking
 
 Experience tracking measures how users interact with complete experiences (combinations of images, text, and CTAs) in your app.
@@ -16,15 +13,39 @@ Experience tracking measures how users interact with complete experiences (combi
 
 You first register the experience. Then you can track the view of the experience, when the experience becomes visible. Or you can track the interaction on the experience, when the experience gets clicked (tapped).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+// 1. Register (once per experience)
+val expId = ContentAnalytics.registerExperience(
+    assets = listOf(ContentItem("https://example.com/hero.jpg", emptyMap())),
+    texts = listOf(ContentItem("Buy Now", mapOf("role" to "headline"))),
+    ctas = listOf(ContentItem("Shop", mapOf("enabled" to true)))
+)
 
-<Tabs query="platform=android&task=quick-start"/>
+// 2. Track view (when visible)
+ContentAnalytics.trackExperienceView(expId, "homepage.hero")
 
-iOS
+// 3. Track click (on tap)
+ContentAnalytics.trackExperienceClick(expId, "homepage.hero")
+```
 
-<Tabs query="platform=ios&task=quick-start"/>
+### iOS
+
+```swift
+// 1. Register (once per experience)
+let expId = ContentAnalytics.registerExperience(
+    assets: [ContentItem(value: "https://example.com/hero.jpg", styles: [:])],
+    texts: [ContentItem(value: "Buy Now", styles: ["role": "headline"])],
+    ctas: [ContentItem(value: "Shop", styles: ["enabled": true])]
+)
+
+// 2. Track view (when visible)
+ContentAnalytics.trackExperienceView(experienceId: expId, experienceLocation: "homepage.hero")
+
+// 3. Track click (on tap)
+ContentAnalytics.trackExperienceClick(experienceId: expId, experienceLocation: "homepage.hero")
+```
 
 ## Registration required
 
@@ -42,43 +63,87 @@ Basis usage of experience tracking is that you first register the experience, an
 
 Register the experience once with all of its content.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+val experienceId = ContentAnalytics.registerExperience(
+    assets = listOf(
+        ContentItem("https://example.com/hero.jpg", emptyMap()),
+        ContentItem("https://example.com/icon.png", emptyMap())
+    ),
+    texts = listOf(
+        ContentItem("iPhone 16 Pro", mapOf("role" to "headline")),
+        ContentItem("Forged in titanium", mapOf("role" to "body")),
+        ContentItem("$999", mapOf("role" to "price"))
+    ),
+    ctas = listOf(
+        ContentItem("Buy Now", mapOf("enabled" to true))
+    )
+)
+```
 
-<Tabs query="platform=android&task=basic-usage"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=basic-usage"/>
+```swift
+let experienceId = ContentAnalytics.registerExperience(
+    assets: [
+        ContentItem(value: "https://example.com/hero.jpg", styles: [:]),
+        ContentItem(value: "https://example.com/icon.png", styles: [:])
+    ],
+    texts: [
+        ContentItem(value: "iPhone 16 Pro", styles: ["role": "headline"]),
+        ContentItem(value: "Forged in titanium", styles: ["role": "body"]),
+        ContentItem(value: "$999", styles: ["role": "price"])
+    ],
+    ctas: [
+        ContentItem(value: "Buy Now", styles: ["enabled": true])
+    ]
+)
+```
 
 ### Track interactions
 
 Then track the experience.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+ContentAnalytics.trackExperienceView(experienceId, "product.detail")
+ContentAnalytics.trackExperienceClick(experienceId, "product.detail")
+```
 
-<Tabs query="platform=android&task=track-experience"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=track-experience"/>
+```swift
+ContentAnalytics.trackExperienceView(experienceId: experienceId, experienceLocation: "product.detail")
+ContentAnalytics.trackExperienceClick(experienceId: experienceId, experienceLocation: "product.detail")
+```
 
 ## Session lifecycle
 
 Experience definitions are cached in memory for the duration of the app session. After app restart or crash, you'll need to re-register experiences before tracking.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+// Each app session
+val expId = ContentAnalytics.registerExperience(
+    assets = listOf(ContentItem("https://example.com/hero.jpg", emptyMap())),
+    texts = listOf(ContentItem("Title", mapOf("role" to "headline")))
+)
+ContentAnalytics.trackExperienceView(expId, "home")
+```
 
-<Tabs query="platform=android&task=session-lifecycle"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=session-lifecycle"/>
+```swift
+// Each app session
+let expId = ContentAnalytics.registerExperience(
+    assets: [ContentItem(value: "https://example.com/hero.jpg", styles: [:])],
+    texts: [ContentItem(value: "Title", styles: ["role": "headline"])]
+)
+ContentAnalytics.trackExperienceView(experienceId: expId, experienceLocation: "home")
+```
 
 Re-registration is idempotent. Calling `registerExperience()` with the same content returns the same ID with no negative side effects. The featurization service is also idempotent, so even if the same experience definition is sent multiple times (for example, after cache eviction or app restart), there's no duplication or data inconsistency on the backend.
 
@@ -108,29 +173,126 @@ See below for examples of implementation patterns.
 
 Implementation of experience tracking for a single screen.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+class ProductDetailActivity : AppCompatActivity() {
+    private var experienceId: String? = null
+    
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_product_detail)
+        
+        experienceId = ContentAnalytics.registerExperience(
+            assets = product.imageURLs.map { ContentItem(it, emptyMap()) },
+            texts = listOf(
+                ContentItem(product.name, mapOf("role" to "headline")),
+                ContentItem(product.price, mapOf("role" to "price"))
+            ),
+            ctas = listOf(ContentItem("Add to Cart", mapOf("enabled" to true)))
+        )
+    }
+    
+    override fun onResume() {
+        super.onResume()
+        experienceId?.let { expId ->
+            ContentAnalytics.trackExperienceView(expId, "product.detail.${product.id}")
+        }
+    }
+    
+    fun onBuyButtonClicked() {
+        experienceId?.let { expId ->
+            ContentAnalytics.trackExperienceClick(expId, "product.detail.${product.id}")
+        }
+    }
+}
+```
 
-<Tabs query="platform=android&task=implementation-single-screen"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=implementation-single-screen"/>
+```swift
+class ProductDetailViewController {
+    var experienceId: String?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        experienceId = ContentAnalytics.registerExperience(
+            assets: product.imageURLs.map { ContentItem(value: $0, styles: [:]) },
+            texts: [
+                ContentItem(value: product.name, styles: ["role": "headline"]),
+                ContentItem(value: product.price, styles: ["role": "price"])
+            ],
+            ctas: [ContentItem(value: "Add to Cart", styles: ["enabled": true])]
+        )
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if let expId = experienceId {
+            ContentAnalytics.trackExperienceView(experienceId: expId, experienceLocation: "product.detail.\(product.id)")
+        }
+    }
+    
+    @IBAction func buyButtonTapped(_ sender: Any) {
+        if let expId = experienceId {
+            ContentAnalytics.trackExperienceClick(experienceId: expId, experienceLocation: "product.detail.\(product.id)")
+        }
+    }
+}
+```
 
 ### Collection or feed
 
 Implementation of experience tracking for a collection or a feed.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+class FeedFragment : Fragment() {
+    private val experienceIds = mutableMapOf<String, String>()
+    
+    fun displayProduct(product: Product) {
+        if (!experienceIds.containsKey(product.id)) {
+            val expId = ContentAnalytics.registerExperience(
+                assets = product.imageURLs.map { ContentItem(it, emptyMap()) },
+                texts = listOf(ContentItem(product.name, mapOf("role" to "headline")))
+            )
+            experienceIds[product.id] = expId
+        }
+    }
+    
+    fun onProductCellVisible(product: Product) {
+        experienceIds[product.id]?.let { expId ->
+            ContentAnalytics.trackExperienceView(expId, "feed.item.${product.id}")
+        }
+    }
+}
+```
 
-<Tabs query="platform=android&task=implementation-collection-feed"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=implementation-collection-feed"/>
+```swift
+class FeedViewController: UIViewController {
+    var experienceIds: [String: String] = [:]
+    
+    func displayProduct(_ product: Product) {
+        if experienceIds[product.id] == nil {
+            let expId = ContentAnalytics.registerExperience(
+                assets: product.imageURLs.map { ContentItem(value: $0, styles: [:]) },
+                texts: [ContentItem(value: product.name, styles: ["role": "headline"])]
+            )
+            experienceIds[product.id] = expId
+        }
+    }
+    
+    func productCellBecameVisible(_ product: Product) {
+        if let expId = experienceIds[product.id] {
+            ContentAnalytics.trackExperienceView(experienceId: expId, experienceLocation: "feed.item.\(product.id)")
+        }
+    }
+}
+```
 
 ### Experience ID generation
 
@@ -160,15 +322,31 @@ This means you can:
 * Cache by content hash instead of arbitrary keys.
 * Detect content changes by comparing IDs.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+import java.security.MessageDigest
 
-<Tabs query="platform=android&task=experience-id-generation"/>
+fun computeExperienceId(texts: List<String>, assets: List<String>, ctas: List<String>): String {
+    val content = (texts.sorted() + assets.sorted() + ctas.sorted()).joinToString("|")
+    val hash = MessageDigest.getInstance("SHA-1")
+        .digest(content.toByteArray())
+        .joinToString("") { "%02x".format(it) }
+    return "mobile-${hash.take(12)}"
+}
+```
 
-iOS
+### iOS
 
-<Tabs query="platform=ios&task=experience-id-generation"/>
+```swift
+import CommonCrypto
+
+func computeExperienceId(texts: [String], assets: [String], ctas: [String]) -> String {
+    let content = (texts.sorted() + assets.sorted() + ctas.sorted()).joined(separator: "|")
+    let hash = content.data(using: .utf8)!.sha1Hex()
+    return "mobile-\(hash.prefix(12))"
+}
+```
 
 ## Missing registration warning
 
@@ -186,15 +364,30 @@ This means:
 
 Fix the warning by registering the experience first.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+// Wrong
+ContentAnalytics.trackExperienceView("exp-123", "home")
 
-<Tabs query="platform=android&task=missing-registration-warning"/>
+// Correct
+val expId = ContentAnalytics.registerExperience(
+    assets = listOf(ContentItem("https://example.com/image.jpg", emptyMap())),
+    texts = listOf(ContentItem("Title", mapOf("role" to "headline")))
+)
+ContentAnalytics.trackExperienceView(expId, "home")
+```
 
-iOS
+### iOS
 
-<Tabs query="platform=ios&task=missing-registration-warning"/>
+```swift
+// Wrong
+ContentAnalytics.trackExperienceView(experienceId: "exp-123")
+
+// Correct
+let expId = ContentAnalytics.registerExperience(...)
+ContentAnalytics.trackExperienceView(experienceId: expId)
+```
 
 ## Asset attribution
 
@@ -208,15 +401,43 @@ Asset attribution works regardless of the `batchingEnabled` setting. The SDK cac
 
 See below how asset attribution works.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+// 1. Register experience with assets
+val expId = ContentAnalytics.registerExperience(
+    assets = listOf(
+        ContentItem("https://example.com/hero.jpg", emptyMap()),
+        ContentItem("https://example.com/thumbnail.jpg", emptyMap())
+    ),
+    texts = listOf(ContentItem("Summer Sale", mapOf("role" to "headline")))
+)
 
-<Tabs query="platform=android&task=asset-attribution"/>
+// 2. Track asset view (SDK knows this belongs to the experience above)
+ContentAnalytics.trackAssetView("https://example.com/hero.jpg")
 
-iOS
+// 3. Track experience interaction
+ContentAnalytics.trackExperienceView(expId, "homepage")
+```
 
-<Tabs query="platform=ios&task=asset-attribution"/>
+### iOS
+
+```swift
+// 1. Register experience with assets
+let expId = ContentAnalytics.registerExperience(
+    assets: [
+        ContentItem(value: "https://example.com/hero.jpg", styles: [:]),
+        ContentItem(value: "https://example.com/thumbnail.jpg", styles: [:])
+    ],
+    texts: [ContentItem(value: "Summer Sale", styles: ["role": "headline"])]
+)
+
+// 2. Track asset view (SDK knows this belongs to the experience above)
+ContentAnalytics.trackAssetView(assetURL: "https://example.com/hero.jpg")
+
+// 3. Track experience interaction
+ContentAnalytics.trackExperienceView(experienceId: expId, experienceLocation: "homepage")
+```
 
 When the analytics backend receives `trackAssetView` for `hero.jpg`, the backend attributes that view to the `Summer Sale` experience because the asset URL was registered.
 
@@ -224,15 +445,53 @@ When the analytics backend receives `trackAssetView` for `hero.jpg`, the backend
 
 You can track an asset without registering the experience first.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+class FeedFragment : Fragment() {
+    private val experienceIds = mutableMapOf<String, String>()
+    
+    fun displayProduct(product: Product) {
+        if (!experienceIds.containsKey(product.id)) {
+            val expId = ContentAnalytics.registerExperience(
+                assets = product.imageURLs.map { ContentItem(it, emptyMap()) },
+                texts = listOf(ContentItem(product.name, mapOf("role" to "headline")))
+            )
+            experienceIds[product.id] = expId
+        }
+    }
+    
+    fun onProductCellVisible(product: Product) {
+        experienceIds[product.id]?.let { expId ->
+            ContentAnalytics.trackExperienceView(expId, "feed.item.${product.id}")
+        }
+    }
+}
+```
 
-<Tabs query="platform=android&task=implementation-collection-feed"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=implementation-collection-feed"/>
+```swift
+class FeedViewController: UIViewController {
+    var experienceIds: [String: String] = [:]
+    
+    func displayProduct(_ product: Product) {
+        if experienceIds[product.id] == nil {
+            let expId = ContentAnalytics.registerExperience(
+                assets: product.imageURLs.map { ContentItem(value: $0, styles: [:]) },
+                texts: [ContentItem(value: product.name, styles: ["role": "headline"])]
+            )
+            experienceIds[product.id] = expId
+        }
+    }
+    
+    func productCellBecameVisible(_ product: Product) {
+        if let expId = experienceIds[product.id] {
+            ContentAnalytics.trackExperienceView(experienceId: expId, experienceLocation: "feed.item.\(product.id)")
+        }
+    }
+}
+```
 
 The asset view is still recorded, but the asset view is not linked to any experience. As a result, you lose:
 
@@ -248,15 +507,23 @@ The `experienceLocation` and `assetLocation` parameters control how metrics are 
 
 Track the same experience at different locations.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+// Same experience tracked at different locations
+ContentAnalytics.trackExperienceView(expId, "homepage.hero")
+ContentAnalytics.trackExperienceView(expId, "product.sidebar")
+ContentAnalytics.trackExperienceView(expId, "checkout.upsell")
+```
 
-<Tabs query="platform=android&task=with-location-metrics-per-placement"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=with-location-metrics-per-placement"/>
+```swift
+// Same experience tracked at different locations
+ContentAnalytics.trackExperienceView(experienceId: expId, experienceLocation: "homepage.hero")
+ContentAnalytics.trackExperienceView(experienceId: expId, experienceLocation: "product.sidebar")
+ContentAnalytics.trackExperienceView(experienceId: expId, experienceLocation: "checkout.upsell")
+```
 
 A sample Customer Journey Analytics report for this scenario will look like:
 
@@ -272,15 +539,19 @@ You can use this report to answer questions like *"Where does this experience pe
 
 Track experiences without location details to get aggregate metrics.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+// Track without location for aggregate metrics
+ContentAnalytics.trackExperienceView(expId)
+```
 
-<Tabs query="platform=android&task=without-location-global-metrics"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=without-location-global-metrics"/>
+```swift
+// Track without location for aggregate metrics
+ContentAnalytics.trackExperienceView(experienceId: expId)
+```
 
 A sample Customer Journey Analytics report for this scenario will look like:
 
@@ -294,15 +565,27 @@ You can use this report to answer questions like *How is this experience perform
 
 Track the same asset on different locations.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+val heroImage = "https://example.com/hero.jpg"
 
-<Tabs query="platform=android&task=same-asset-different-locations"/>
+// Track per location
+ContentAnalytics.trackAssetView(heroImage, "homepage")
+ContentAnalytics.trackAssetView(heroImage, "category.electronics")
+ContentAnalytics.trackAssetView(heroImage, "search.results")
+```
 
-iOS
+### iOS
 
-<Tabs query="platform=ios&task=same-asset-different-locations"/>
+```swift
+let heroImage = "https://example.com/hero.jpg"
+
+// Track per location
+ContentAnalytics.trackAssetView(assetURL: heroImage, assetLocation: "homepage")
+ContentAnalytics.trackAssetView(assetURL: heroImage, assetLocation: "category.electronics")
+ContentAnalytics.trackAssetView(assetURL: heroImage, assetLocation: "search.results")
+```
 
 Customer Journey Analytics report will look like:
 
@@ -379,15 +662,37 @@ Insight: **Lifestyle** imagery works on homepage, but **Product-focused** images
 1. Attributes are stored: machine learning attributes are linked to the experience/asset.
 1. Customer Journey Analytics queries: reports can segment by any machine learning attribute and location.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+// You just track normally - ML attributes are automatic
+val expId = ContentAnalytics.registerExperience(
+    assets = listOf(ContentItem("https://example.com/urgency-banner.jpg", emptyMap())),
+    texts = listOf(
+        ContentItem("Only 3 left!", mapOf("role" to "headline")),
+        ContentItem("Order now before it's gone", mapOf("role" to "body"))
+    )
+)
+// Featurization service detects: persuasion_strategy = "scarcity + urgency"
 
-<Tabs query="platform=android&task=performance-by-content-category"/>
+ContentAnalytics.trackExperienceView(expId, "product.detail")
+```
 
-iOS
+### iOS
 
-<Tabs query="platform=ios&task=performance-by-content-category"/>
+```swift
+// You just track normally - ML attributes are automatic
+let expId = ContentAnalytics.registerExperience(
+    assets: [ContentItem(value: "https://example.com/urgency-banner.jpg", styles: [:])],
+    texts: [
+        ContentItem(value: "Only 3 left!", styles: ["role": "headline"]),
+        ContentItem(value: "Order now before it's gone", styles: ["role": "body"])
+    ]
+)
+// Featurization service detects: persuasion_strategy = "scarcity + urgency"
+
+ContentAnalytics.trackExperienceView(experienceId: expId, experienceLocation: "product.detail")
+```
 
 In Customer Journey Analytics, you can then filter or group by persuasion strategy to see what messaging resonates in each location.
 
@@ -399,43 +704,178 @@ The `additionalData` parameter lets you attach custom metrics to tracking events
 
 To get asset performance metrics, see this example.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+// Track asset load time
+val loadStart = System.currentTimeMillis()
+// ... load image ...
+val loadTime = System.currentTimeMillis() - loadStart
 
-<Tabs query="platform=android&task=asset-performance-metrics"/>
+ContentAnalytics.trackAssetView(
+    assetURL = imageURL,
+    assetLocation = "product.gallery",
+    additionalData = mapOf(
+        "assetLoadTime" to loadTime,         // How long to load (ms)
+        "assetSize" to imageData.size,       // Bytes
+        "assetSource" to "cdn"               // Cache vs CDN
+    )
+)
+```
 
-iOS
+### iOS
 
-<Tabs query="platform=ios&task=asset-performance-metrics"/>
+```swift
+// Track asset load time
+let loadStart = Date()
+// ... load image ...
+let loadTime = Date().timeIntervalSince(loadStart) * 1000 // ms
+
+ContentAnalytics.trackAssetView(
+    assetURL: imageURL,
+    assetLocation: "product.gallery",
+    additionalData: [
+        "assetLoadTime": loadTime,           // How long to load (ms)
+        "assetSize": imageData.count,        // Bytes
+        "assetSource": "cdn"                 // Cache vs CDN
+    ]
+)
+```
 
 ### Asset view duration
 
 To get asset view duration, see this example.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+class ImageFragment : Fragment() {
+    private var viewStartTime: Long = 0
+    private var imageURL: String? = null
+    
+    override fun onResume() {
+        super.onResume()
+        viewStartTime = System.currentTimeMillis()
+        ContentAnalytics.trackAssetView(imageURL!!, "gallery")
+    }
+    
+    override fun onPause() {
+        super.onPause()
+        val viewDuration = System.currentTimeMillis() - viewStartTime
+        
+        ContentAnalytics.trackAssetClick(
+            assetURL = imageURL!!,
+            assetLocation = "gallery",
+            additionalData = mapOf(
+                "assetViewDuration" to viewDuration  // Time spent viewing (ms)
+            )
+        )
+    }
+}
+```
 
-<Tabs query="platform=android&task=asset-view-duration"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=asset-view-duration"/>
+```swift
+class ImageViewController {
+    var viewStartTime: Date?
+    var imageURL: String?
+    
+    func viewDidAppear() {
+        viewStartTime = Date()
+        ContentAnalytics.trackAssetView(assetURL: imageURL!, assetLocation: "gallery")
+    }
+    
+    func viewWillDisappear() {
+        guard let start = viewStartTime else { return }
+        let viewDuration = Date().timeIntervalSince(start) * 1000 // ms
+        
+        ContentAnalytics.trackAssetClick(
+            assetURL: imageURL!,
+            assetLocation: "gallery",
+            additionalData: [
+                "assetViewDuration": viewDuration  // Time spent viewing (ms)
+            ]
+        )
+    }
+}
+```
 
 ### Experience engagement metrics
 
 To get experience engagement metrics, see this example.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+@Composable
+fun ProductCard(product: Product) {
+    var expId by remember { mutableStateOf<String?>(null) }
+    var appearTime by remember { mutableStateOf(0L) }
+    
+    LaunchedEffect(product.id) {
+        appearTime = System.currentTimeMillis()
+        expId = ContentAnalytics.registerExperience(
+            assets = listOf(ContentItem(product.imageUrl, emptyMap())),
+            texts = listOf(ContentItem(product.name, mapOf("role" to "headline")))
+        )
+        ContentAnalytics.trackExperienceView(expId!!, "homepage.featured")
+    }
+    
+    Column(
+        modifier = Modifier.clickable {
+            val viewDuration = System.currentTimeMillis() - appearTime
+            
+            ContentAnalytics.trackExperienceClick(
+                experienceId = expId!!,
+                experienceLocation = "homepage.featured",
+                additionalData = mapOf(
+                    "experienceViewDuration" to viewDuration,  // Time before click
+                    "scrollDepth" to currentScrollPercent,     // How far scrolled
+                    "interactionIndex" to tapCount             // Nth interaction
+                )
+            )
+        }
+    ) {
+        // ... UI content
+    }
+}
+```
 
-<Tabs query="platform=android&task=experience-engagement-metrics"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=experience-engagement-metrics"/>
+```swift
+class ProductCardView {
+    var expId: String?
+    var appearTime: Date?
+    
+    func onAppear() {
+        appearTime = Date()
+        expId = ContentAnalytics.registerExperience(
+            assets: [ContentItem(value: product.imageURL, styles: [:])],
+            texts: [ContentItem(value: product.name, styles: ["role": "headline"])]
+        )
+        ContentAnalytics.trackExperienceView(
+            experienceId: expId!,
+            experienceLocation: "homepage.featured"
+        )
+    }
+    
+    func onTap() {
+        let viewDuration = Date().timeIntervalSince(appearTime!) * 1000
+        
+        ContentAnalytics.trackExperienceClick(
+            experienceId: expId!,
+            experienceLocation: "homepage.featured",
+            additionalData: [
+                "experienceViewDuration": viewDuration,  // Time before click (ms)
+                "scrollDepth": currentScrollPercent,     // How far user scrolled
+                "interactionIndex": tapCount             // Nth interaction
+            ]
+        )
+    }
+}
+```
 
 ### Common custom metrics
 
@@ -471,15 +911,25 @@ Adobe Assurance (Project Griffon) lets you inspect tracking events in real-time.
 
 To setup Assurance, import the extension and start the session.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+// In your Application class or Activity
+import com.adobe.marketing.mobile.Assurance
 
-<Tabs query="platform=android&task=debugging-with-assurance"/>
+// Start Assurance session (typically via deep link)
+Assurance.startSession(assuranceDeepLink)
+```
 
-iOS
+### iOS
 
-<Tabs query="platform=ios&task=debugging-with-assurance"/>
+```swift
+// In your app delegate or SwiftUI app
+import AEPAssurance
+
+// Start Assurance session (typically via deep link)
+Assurance.startSession(url: assuranceDeepLink)
+```
 
 ### What You'll See in Assurance
 
@@ -596,15 +1046,17 @@ Missing experienceId in track events:
 
 To test your implementation, enable verbose logging.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+MobileCore.setLogLevel(LoggingMode.VERBOSE)
+```
 
-<Tabs query="platform=android&task=testing"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=testing"/>
+```swift
+MobileCore.setLogLevel(.trace)
+```
 
 Then look for registration confirmation
 
@@ -625,15 +1077,24 @@ Test cross-session: register, force quit, relaunch, track same ID. No warning sh
 * Assets not attributed. Same issue - register with `assetURLs` before tracking.
 * Duplicate registrations: Check if already registered before calling `registerExperience()`:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+if (!experienceIds.containsKey(productId)) {
+    experienceIds[productId] = ContentAnalytics.registerExperience(
+        assets = listOf(ContentItem(product.imageUrl, emptyMap())),
+        texts = listOf(ContentItem(product.name, mapOf("role" to "headline")))
+    )
+}
+```
 
-<Tabs query="platform=android&task=troubleshooting"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=troubleshooting"/>
+```swift
+if experienceIds[productId] == nil {
+    experienceIds[productId] = ContentAnalytics.registerExperience(...)
+}
+```
 
 * Or compute the ID yourself using the algorithm above for content-based caching.
 
@@ -645,41 +1106,229 @@ Common implementation patterns are illustrated below.
 
 To implement a carousel or banner, see below for an example.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+class CarouselAdapter : RecyclerView.Adapter<CarouselViewHolder>() {
+    private val experienceIds = mutableMapOf<Int, String>()
+    
+    override fun onBindViewHolder(holder: CarouselViewHolder, position: Int) {
+        val slide = slides[position]
+        
+        experienceIds[position] = ContentAnalytics.registerExperience(
+            assets = listOf(ContentItem(slide.imageUrl, emptyMap())),
+            texts = listOf(ContentItem(slide.title, mapOf("role" to "headline"))),
+            ctas = slide.ctaText?.let { listOf(ContentItem(it, mapOf("enabled" to true))) }
+        )
+        
+        holder.bind(slide)
+    }
+    
+    override fun onViewAttachedToWindow(holder: CarouselViewHolder) {
+        experienceIds[holder.adapterPosition]?.let { expId ->
+            ContentAnalytics.trackExperienceView(expId, "home.carousel.${holder.adapterPosition}")
+        }
+    }
+    
+    fun onSlideClicked(position: Int) {
+        experienceIds[position]?.let { expId ->
+            ContentAnalytics.trackExperienceClick(expId, "home.carousel.$position")
+        }
+    }
+}
+```
 
-<Tabs query="platform=android&task=carousel-banner"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=carousel-banner"/>
+```swift
+class CarouselView: UIView {
+    private var experienceIds: [Int: String] = [:]
+    
+    func configureSlide(_ slide: Slide, at index: Int) {
+        experienceIds[index] = ContentAnalytics.registerExperience(
+            assets: [ContentItem(value: slide.imageURL, styles: [:])],
+            texts: [ContentItem(value: slide.title, styles: ["role": "headline"])],
+            ctas: slide.ctaText.map { [ContentItem(value: $0, styles: ["enabled": true])] }
+        )
+    }
+    
+    func slideDidAppear(at index: Int) {
+        guard let expId = experienceIds[index] else { return }
+        ContentAnalytics.trackExperienceView(experienceId: expId, experienceLocation: "home.carousel.\(index)")
+    }
+    
+    func slideWasTapped(at index: Int) {
+        guard let expId = experienceIds[index] else { return }
+        ContentAnalytics.trackExperienceClick(experienceId: expId, experienceLocation: "home.carousel.\(index)")
+    }
+}
+```
 
 ### Product Grid
 
 To implement a product grid, see below for an example.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+@Composable
+fun ProductCard(product: Product) {
+    var expId by remember { mutableStateOf<String?>(null) }
+    
+    LaunchedEffect(product.id) {
+        expId = ContentAnalytics.registerExperience(
+            assets = listOf(ContentItem(product.imageUrl, emptyMap())),
+            texts = listOf(
+                ContentItem(product.name, mapOf("role" to "headline")),
+                ContentItem(product.price, mapOf("role" to "price"))
+            )
+        )
+        expId?.let {
+            ContentAnalytics.trackExperienceView(it, "catalog.product.${product.id}")
+        }
+    }
+    
+    Column(
+        modifier = Modifier.clickable {
+            expId?.let {
+                ContentAnalytics.trackExperienceClick(it, "catalog.product.${product.id}")
+            }
+        }
+    ) {
+        AsyncImage(model = product.imageUrl, contentDescription = null)
+        Text(product.name)
+        Text(product.price)
+    }
+}
+```
 
-<Tabs query="platform=android&task=product-grid"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=product-grid"/>
+```swift
+struct ProductCard: View {
+    let product: Product
+    @State private var expId: String?
+    
+    var body: some View {
+        VStack {
+            AsyncImage(url: URL(string: product.imageURL))
+            Text(product.name)
+            Text(product.price)
+        }
+        .onAppear {
+            if expId == nil {
+                expId = ContentAnalytics.registerExperience(
+                    assets: [ContentItem(value: product.imageURL, styles: [:])],
+                    texts: [
+                        ContentItem(value: product.name, styles: ["role": "headline"]),
+                        ContentItem(value: product.price, styles: ["role": "price"])
+                    ]
+                )
+            }
+            if let id = expId {
+                ContentAnalytics.trackExperienceView(experienceId: id, experienceLocation: "catalog.product.\(product.id)")
+            }
+        }
+        .onTapGesture {
+            if let id = expId {
+                ContentAnalytics.trackExperienceClick(experienceId: id, experienceLocation: "catalog.product.\(product.id)")
+            }
+        }
+    }
+}
+```
 
 ### Reusable Tracking Component
 
 To implement a reusable tracking component, see below for an example.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+@Composable
+fun TrackedExperience(
+    assets: List<ContentItem>,
+    texts: List<ContentItem>,
+    location: String,
+    onClick: (() -> Unit)? = null,
+    content: @Composable () -> Unit
+) {
+    var expId by remember { mutableStateOf<String?>(null) }
+    
+    LaunchedEffect(location) {
+        expId = ContentAnalytics.registerExperience(assets = assets, texts = texts)
+        expId?.let { ContentAnalytics.trackExperienceView(it, location) }
+    }
+    
+    Box(
+        modifier = Modifier.clickable {
+            expId?.let { ContentAnalytics.trackExperienceClick(it, location) }
+            onClick?.invoke()
+        }
+    ) {
+        content()
+    }
+}
 
-<Tabs query="platform=android&task=reusable-tracking-component"/>
+// Usage
+TrackedExperience(
+    assets = listOf(ContentItem(product.imageUrl, emptyMap())),
+    texts = listOf(ContentItem(product.name, mapOf("role" to "headline"))),
+    location = "product.${product.id}"
+) {
+    ProductCardView(product)
+}
+```
 
-iOS
+### iOS
 
-<Tabs query="platform=ios&task=reusable-tracking-component"/>
+```swift
+struct TrackedExperience<Content: View>: View {
+    let assets: [ContentItem]
+    let texts: [ContentItem]
+    let location: String
+    let content: Content
+    
+    @State private var expId: String?
+    
+    init(
+        assets: [ContentItem],
+        texts: [ContentItem],
+        location: String,
+        @ViewBuilder content: () -> Content
+    ) {
+        self.assets = assets
+        self.texts = texts
+        self.location = location
+        self.content = content()
+    }
+    
+    var body: some View {
+        content
+            .onAppear {
+                if expId == nil {
+                    expId = ContentAnalytics.registerExperience(assets: assets, texts: texts)
+                }
+                if let id = expId {
+                    ContentAnalytics.trackExperienceView(experienceId: id, experienceLocation: location)
+                }
+            }
+            .onTapGesture {
+                if let id = expId {
+                    ContentAnalytics.trackExperienceClick(experienceId: id, experienceLocation: location)
+                }
+            }
+    }
+}
+
+// Usage
+TrackedExperience(
+    assets: [ContentItem(value: product.imageURL, styles: [:])],
+    texts: [ContentItem(value: product.name, styles: ["role": "headline"])],
+    location: "product.\(product.id)"
+) {
+    ProductCardView(product: product)
+}
+```
+
 ```

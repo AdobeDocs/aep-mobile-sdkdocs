@@ -10,8 +10,6 @@ keywords:
 - Tutorial
 ---
 
-import Tabs from './tabs/re-evaluate.md'
-
 # Re-evaluate in-app messages before display
 
 This guide explains how to create re-evaluate campaigns in the Adobe Journey Optimizer UI. These campaigns are validated before the in-app message is displayed to the user.
@@ -28,15 +26,17 @@ When the re-evaluate option is enabled on a campaign trigger, the SDK fetches th
 
 Re-evaluate is supported in the following SDK versions. Update your app to at least these versions of the Mobile Core and Adobe Journey Optimizer (AJO) extensions to use the feature.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+Re-evaluate is available from **AEPMessaging** (Messaging extension) version **3.7.0** and **Mobile Core** version **3.6.0**. Update your app to use these versions or later to enable the feature.
 
-<Tabs query="platform=android&function=version"/>
+See [Current SDK versions](../../../../../home/current-sdk-versions.md) for the latest extension versions.
 
-iOS
+### iOS
 
-<Tabs query="platform=ios&function=version"/>
+Re-evaluate is available from **AEPMessaging** (Messaging extension) version **5.10.0** and **Mobile Core** version **5.8.0**. Update your app to use these versions or later to enable the feature.
+
+See [Current SDK versions](../../../../../home/current-sdk-versions.md) for the latest extension versions.
 
 ## Create re-evaluable campaigns
 

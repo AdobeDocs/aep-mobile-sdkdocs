@@ -10,8 +10,6 @@ keywords:
 - ActivityKit
 ---
 
-import Tabs from './tabs/api-reference.md'
-
 # Live Activities - API reference
 
 This document lists the public APIs available in the Messaging extension for implementing Live Activities with Adobe Journey Optimizer.
@@ -33,8 +31,43 @@ This API must be called after the Messaging extension has been registered with `
 
 When registering multiple types, their push-to-start tokens are automatically batched together and dispatched in a single event, improving efficiency.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### iOS Swift
 
-iOS
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=ios&api=register-live-activities"/>
+### Syntax
+
+```swift
+static func registerLiveActivities(_ activityTypes: [any LiveActivityAttributes.Type])
+```
+
+* _activityTypes_ is an array of types conforming to the `LiveActivityAttributes` protocol. Each type represents a Live Activity that will be monitored for push-to-start tokens (iOS 17.2+), activity update tokens, and lifecycle events.
+
+### Example
+
+```swift
+import AEPMessaging
+import AEPMessagingLiveActivity
+import ActivityKit
+
+// Register a single Live Activity type
+if #available(iOS 16.1, *) {
+    Messaging.registerLiveActivities([FoodDeliveryLiveActivityAttributes.self])
+}
+
+// Register multiple Live Activity types
+if #available(iOS 16.1, *) {
+    Messaging.registerLiveActivities([
+        AirplaneTrackingAttributes.self,
+        FoodDeliveryLiveActivityAttributes.self,
+        GameScoreLiveActivityAttributes.self
+    ])
+}
+```
+
+### iOS Objective-C
+
+<InlineAlert variant="info" slots="text"/>
+
+The `registerLiveActivities` API is only available in Swift. ActivityKit and its `ActivityAttributes` protocol are Swift-only APIs and cannot be called from Objective-C.
+

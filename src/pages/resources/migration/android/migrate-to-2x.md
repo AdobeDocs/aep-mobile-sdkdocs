@@ -2,8 +2,6 @@
 title: "Migrate to Adobe Experience Platform 2.x SDKs for Android"
 description: "This Mobile SDK version for Android now supports a minimum API level of 19."
 ---
-import Tabs from './tabs/migrate-to-2x.md'
-
 # Migrate to Adobe Experience Platform 2.x SDKs for Android
 
 <InlineAlert variant="info" slots="text"/>
@@ -98,15 +96,58 @@ After you have imported the new Android libraries, you'll need to update SDK ini
 
 The following code snippets show the recommended initialization code for the 2.x Mobile SDKs.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
-
 Java
 
-<Tabs query="lang=java"/>
+### 
+
+```java
+public class MainApp extends Application {
+    private static final String ENVIRONMENT_FILE_ID = "<your_environment_file_id>";
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        MobileCore.setApplication(this);
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
+        List<Class<? extends Extension>> extensions = new ArrayList<>();
+        extensions.add(Lifecycle.EXTENSION);
+        extensions.add(Signal.EXTENSION);
+        extensions.add(UserProfile.EXTENSION);
+        extensions.add(Assurance.EXTENSION);
+        extensions.add(Identity.EXTENSION);
+        MobileCore.registerExtensions(extensions, o -> {
+            Log.d(LOG_TAG, "Adobe Experience Platform Mobile SDK is initialized");
+        });
+}
+}
+
+```
 
 Kotlin
 
-<Tabs query="lang=kotlin"/>
+### 
+
+```kotlin
+class MyApp : Application() {
+    val ENVIRONMENT_FILE_ID = "<your_environment_file_id>"
+
+    override fun onCreate() {
+        super.onCreate()
+        MobileCore.setApplication(this)
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
+        val extensions = listOf(
+            Identity.EXTENSION,
+            Signal.EXTENSION,
+            Lifecycle.EXTENSION,
+            UserProfile.EXTENSION,
+            Assurance.EXTENSION
+            )
+        MobileCore.registerExtensions(extensions) {
+            Log.d(LOG_TAG, "Adobe Experience Platform Mobile SDK is initialized")
+        }
+    }
+}
+```
 
 ## Update outdated API references
 

@@ -2,8 +2,6 @@
 title: "Migrate to Adobe Experience Platform 3.x SDKs for iOS"
 description: "This Mobile SDK version for iOS supports a minimum iOS version of 10.0 and a tvOS version of 10.0."
 ---
-import Tabs from './tabs/migrate-to-3x.md'
-
 # Migrate to Adobe Experience Platform 3.x SDKs for iOS
 
 <InlineAlert variant="info" slots="text"/>
@@ -99,15 +97,58 @@ After you have imported the new Swift-based AEP-prefix libraries, you'll need to
 
 The following code snippets show the new and correct initialization code required for the Swift-based, AEP-prefix SDK libraries.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
-
 Swift
 
-<Tabs query="lang=swift"/>
+### 
+
+```swift
+// AppDelegate.swift
+import AEPCore
+import AEPIdentity
+import AEPLifecycle
+import AEPSignal
+import AEPUserProfile
+
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    let appState = application.applicationState
+    MobileCore.registerExtensions([Signal.self, Lifecycle.self, UserProfile.self, Identity.self], {
+        MobileCore.configureWith(appId: "<your_environment_file_id>")
+        if appState != .background {
+          // only start lifecycle if the application is not in the background
+          MobileCore.lifecycleStart(additionalContextData: ["contextDataKey": "contextDataVal"])
+        }
+    })
+  ...
+}
+```
 
 Objective-C
 
-<Tabs query="lang=obj-c"/>
+### 
+
+```objc
+@import AEPCore;
+@import AEPSignal;
+@import AEPLifecycle;
+@import AEPIdentity;
+@import AEPUserProfile;
+@import AEPServices;
+...
+
+// AppDelegate.m
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+      const UIApplicationState appState = application.applicationState;
+      [AEPMobileCore setLogLevel: AEPLogLevelDebug];
+      [AEPMobileCore registerExtensions:@[AEPMobileSignal.class, AEPMobileLifecycle.class, AEPMobileUserProfile.class, AEPMobileIdentity.class] completion:^{
+        [AEPMobileCore configureWithAppId: @"<your_environment_file_id>"];
+        if (appState != UIApplicationStateBackground) {
+          // only start lifecycle if the application is not in the background
+          [AEPMobileCore lifecycleStart:@{@"contextDataKey": @"contextDataVal"}];
+        }
+       }];
+    ...
+}
+```
 
 ## Update outdated API references
 

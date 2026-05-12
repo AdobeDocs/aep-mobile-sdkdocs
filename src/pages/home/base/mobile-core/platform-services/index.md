@@ -7,8 +7,6 @@ keywords:
 - Product overview
 ---
 
-import Tabs from './tabs/index.md'
-
 # Platform Services
 
 The Platform Services are provided by the Adobe Experience Platform Mobile SDKs as part of the Mobile Core extension. These services provide shared functionality throughout the SDK that can be shared by extensions. For example, services provide shared functionality for networking, data queuing, and caching. For more information on services provided by the SDK please see the documentation in our [iOS](https://github.com/adobe/aepsdk-core-ios/blob/main/Documentation/Services/README.md) and [Android](https://github.com/adobe/aepsdk-core-ios/tree/main/Documentation/Services) repositories.
@@ -21,15 +19,17 @@ Some services provide wrapper classes. For example, the `Log` class is a wrapper
 
 For example, the following code snippet shows how to access `CacheService`.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+```java
+CacheService cacheService = ServiceProvider.getInstance().getCacheService();
+```
 
-<Tabs query="platform=android&task=access"/>
+### iOS Swift
 
-iOS
-
-<Tabs query="platform=ios&task=access"/>
+```swift
+private var cacheService: Caching { return ServiceProvider.shared.cacheService }
+```
 
 ## Overriding services
 
@@ -39,12 +39,62 @@ The SDK allows overriding some services with your custom implemetation. This sec
 
 Use caution when overriding services. Changes to behavior for a given service can have unintended consequences throughout the SDK.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+First, implement a class that conforms to the `Logging` interface. Below is an example of a logging service that only prints out messages with a log level of Error.
 
-<Tabs query="platform=android&task=override"/>
+```java
+class ErrorLogger implements Logging {
+ @Override
+ public void trace(String tag, String message) {}
 
-iOS
+ @Override
+ public void debug(String tag, String message) {}
 
-<Tabs query="platform=ios&task=override"/>
+ @Override
+ public void warning(String tag, String message) {}
+
+ @Override
+ public void error(String tag, String message) {
+  Log.e("ErrorLogger", message);
+ }
+}
+```
+
+Next, use the `setLoggingService` API of `ServiceProvider` to update the logging service used by the SDK.
+
+```java
+ServiceProvider.getInstance().setLoggingService(new ErrorLogger());
+```
+
+To revert to the default implementation of the `LoggingService`, you can set the logging service to nil using `setLoggingService` API.
+
+```java
+ServiceProvider.getInstance().setLoggingService(null);
+```
+
+### iOS Swift
+
+First, implement a type that conforms to the Logging protocol, as defined above.  Below is an example of a logging service that only prints out messages with a log level of `Error`.
+
+```swift
+class ErrorLogger: Logging {
+  func log(level: LogLevel, label: String, message: String) {
+    guard level == .error else { return }
+    print("\(label): \(message)")
+  }
+}
+```
+
+Next, set the `loggingService` on the shared `ServiceProvider` used by the SDK.
+
+```swift
+ServiceProvider.shared.loggingService = ErrorLogger()
+```
+
+To revert to the default implementation of the `LoggingService`, you can set the loggingService to nil.
+
+```swift
+ServiceProvider.shared.loggingService = nil
+```
+

@@ -8,8 +8,6 @@ keywords:
 - Product overview
 ---
 
-import Tabs from './tabs/index.md'
-
 # Configuration
 
 The Configuration extension is built into the Mobile Core extension. It provides several different APIs for you to setup the configuration either remotely in the Data Collection UI or locally.

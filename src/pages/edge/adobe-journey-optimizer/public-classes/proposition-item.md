@@ -10,8 +10,6 @@ keywords:
 - iOS
 - Code-based Experiences
 ---
-import Tabs from './tabs/proposition-item.md'
-
 # PropositionItem
 
 The `PropositionItem` class represents the decision proposition item received from the remote, upon a personalization query to the Experience Edge network.
@@ -94,21 +92,37 @@ public let schema: String
 
 Returns a dictionary containing XDM data for interaction with the given proposition item, for the provided event type.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### iOS Swift
 
-iOS
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=ios&function=generate-interaction-xdm"/>
+### Syntax
+
+```swift
+func generateInteractionXdm(_ interaction: String? = nil, withEdgeEventType eventType: MessagingEdgeEventType, forTokens tokens: [String]? = nil) -> [String: Any]?
+```
+
+* _interaction_ is a custom string value describing the interaction.
+* _eventType_ is an enum specifying event type for the interaction.
+* _tokens_ is an array containing the decision item tokens for recording interaction.
 
 ### track
 
 Tracks interaction with the given proposition item.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### iOS Swift
 
-iOS
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=ios&function=track"/>
+### Syntax
+
+```swift
+func track(_ interaction: String? = nil, withEdgeEventType eventType: MessagingEdgeEventType, forTokens tokens: [String]? = nil)
+```
+
+* _interaction_ is a custom string value describing the interaction.
+* _eventType_ is an enum specifying event type for the interaction.
+* _tokens_ is an array containing the decision item tokens for recording interaction.
 
 ## Android Interface
 
@@ -118,128 +132,193 @@ iOS
 
 Returns a Map containing XDM data for interaction with the given proposition item, for the provided event type.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=generate-interaction-xdm"/>
+### Syntax
+
+```java
+public Map<String, Object> generateInteractionXdm(@NonNull final MessagingEdgeEventType eventType)
+```
+
+* _eventType_ is an enum specifying event type for the interaction.
 
 ### generateInteractionXdm
 
 Returns a Map containing XDM data for interaction with the given proposition item, for the provided event type and decision item tokens.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=generate-interaction-xdm-with-tokens"/>
+### Syntax
+
+```java
+public Map<String, Object> generateInteractionXdm(final String interaction, @NonNull final MessagingEdgeEventType eventType, final List<String> tokens)
+```
+
+* _interaction_ is a custom string value describing the interaction.
+* _eventType_ is an enum specifying event type for the interaction.
+* _tokens_ is a list containing the decision item tokens for recording interaction.
 
 ### getContentCardSchemaData
 
 Decodes and returns this proposition item's content schema as a [ContentCardSchemaData](content-card-schema-data.md), or `null` if decoding fails.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=get-content-card-schema-data"/>
+### Syntax
+
+```java
+public ContentCardSchemaData getContentCardSchemaData()
+```
 
 ### getHtmlContent
 
 Returns item data content as a string if the proposition item schema is `HTML_CONTENT`, otherwise returns null.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=get-html-content"/>
+### Syntax
+
+```java
+public String getHtmlContent()
+```
 
 ### getInAppSchemaData
 
 Decodes and returns this proposition item's content schema as a [InAppSchemaData](inapp-schema-data.md), or `null` if decoding fails.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=get-inapp-schema-data"/>
+### Syntax
+
+```java
+public InAppSchemaData getInAppSchemaData()
+```
 
 ### getInboxSchemaData
 
 Decodes and returns this proposition item's content schema as an [InboxContentSchemaData](inbox-content-schema-data.md) if the schema for this proposition item is `SchemaType.INBOX`, `null` otherwise.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=get-inbox-schema-data"/>
+### Syntax
+
+```java
+public InboxContentSchemaData getInboxSchemaData()
+```
 
 ### getItemData
 
 Returns this proposition's unique identifier as a string.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=get-item-data"/>
+### Syntax
+
+```java
+public Map<String, Object> getItemData()
+```
 
 ### getItemId
 
 Returns this proposition item's unique identifier as a string.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=get-item-id"/>
+### Syntax
+
+```java
+public String getItemId()
+```
 
 ### getJsonContentArrayList
 
 Returns item data content as a list if it can be parsed as a list and if the proposition item schema is `JSON_CONTENT`, otherwise returns null.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=get-json-content-array-list"/>
+### Syntax
+
+```java
+public List<Map<String, Object>> getJsonContentArrayList()
+```
 
 ### getJsonContentMap
 
 Returns item data content as a Map if it can be parsed as a Map and if the proposition item schema is `JSON_CONTENT`, otherwise returns null.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=get-json-content-map"/>
+### Syntax
+
+```java
+public Map<String, Object> getJsonContentMap()
+```
 
 ### getSchema
 
 Returns this proposition item's content schema as a string.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=get-schema"/>
+### Syntax
+
+```java
+public SchemaType getSchema()
+```
 
 ### track
 
 Tracks interaction with the given proposition item.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=track"/>
+### Syntax
+
+```java
+public void track(@NonNull final MessagingEdgeEventType eventType)
+```
+
+* _eventType_ is an enum specifying event type for the interaction.
 
 ### track
 
 Tracks interaction with the given proposition item for the provided decision item tokens.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=track-with-tokens"/>
+### Syntax
+
+```java
+public void track(final String interaction, @NonNull final MessagingEdgeEventType eventType, final List<String> tokens)
+```
+
+* _interaction_ is a custom string value describing the interaction.
+* _eventType_ is an enum specifying event type for the interaction.
+* _tokens_ is a list containing the decision item tokens for recording interaction.
+
