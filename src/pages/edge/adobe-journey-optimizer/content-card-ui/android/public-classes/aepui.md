@@ -81,7 +81,7 @@ Updates the state of the UI component with a new state.
 
 * _newState_ - The new state of type `S` to update within the UI component.
 
-##### Syntax
+#### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
@@ -97,7 +97,7 @@ fun updateState(newState: S)
 
 Implementation of the [AepUI](#AepUI) interface used in rendering a UI for a [ImageOnlyTemplate](../../android/public-classes/ui-models/imageonlytemplate.md).
 
-**Class Definition**
+#### Class Definition
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
@@ -114,7 +114,7 @@ class ImageOnlyUI(
 
 Implementation of the [AepUI](#AepUI) interface used in rendering a UI for a [LargeImageTemplate](../../android/public-classes/ui-models/largeimagetemplate.md).
 
-**Class Definition**
+#### Class Definition
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 

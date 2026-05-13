@@ -51,11 +51,9 @@ If an extension is missing or has an incorrect version, review your Mobile SDK r
 
 Depending on the method you are using to send Analytics data through Edge Network, verify the presence of the following extensions:
 
-Edge.sendEvent
+### Edge.sendEvent
 
-### 
-
-#### Requried Extensions
+#### Required Extensions
 
 Core Extension, Edge Extension, Edge Identity Extension
 
@@ -63,11 +61,9 @@ Core Extension, Edge Extension, Edge Identity Extension
 
 Consent Extension, Lifecycle Extension
 
-MobileCore.trackAction/trackState
+### MobileCore.trackAction/trackState
 
-### 
-
-#### Requried Extensions
+#### Required Extensions
 
 Core Extension, Edge Extension, Edge Identity Extension, Edge Bridge Extension
 

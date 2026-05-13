@@ -35,11 +35,11 @@ Image sources are prioritized in the following order:
 
 | Property | Type | Description | Default Value |
 | --- | --- | --- | --- |
-| contentMode | [ContentMode](https://developer.apple.com/documentation/uikit/uiview/1622619-contentmode) | The content mode of the image.|[ContentMode.fit](https://developer.apple.com/documentation/swiftui/contentmode/fit)
-| modifier | AEPViewModifier | A custom view modifier that can be applied to the text view for additional styling. | N/A  |
-| icon | String |	The name of the SF Symbol icon used in the image.\<br/\> This applies only to images sourced from icons. |	N/A |
-| iconFont |	[Font](https://developer.apple.com/documentation/swiftui/font) |	The font of the SF Symbol icon used in the image.\<br/\>This applies only to images sourced from icons. |	N/A |
-| iconColor |	[Color](https://developer.apple.com/documentation/swiftui/color) |	The color of the SF Symbol icon used in the image.\<br/\> This applies only to images sourced from icons.| [primary](https://developer.apple.com/documentation/swiftui/color/primary) |
+| contentMode | [ContentMode](https://developer.apple.com/documentation/uikit/uiview/1622619-contentmode) | The content mode of the image. | [ContentMode.fit](https://developer.apple.com/documentation/swiftui/contentmode/fit) |
+| modifier | AEPViewModifier | A custom view modifier that can be applied to the text view for additional styling. | N/A |
+| icon | String | The name of the SF Symbol icon used in the image. This applies only to images sourced from icons. | N/A |
+| iconFont | [Font](https://developer.apple.com/documentation/swiftui/font) | The font of the SF Symbol icon used in the image. This applies only to images sourced from icons. | N/A |
+| iconColor | [Color](https://developer.apple.com/documentation/swiftui/color) | The color of the SF Symbol icon used in the image. This applies only to images sourced from icons. | [primary](https://developer.apple.com/documentation/swiftui/color/primary) |
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -49,9 +49,9 @@ All properties are marked with [@Published](https://developer.apple.com/document
 
 You can customize AEPImage properties when working with a template that includes an image. Here's an example:
 
-<CodeBlock slots="heading, code" repeat="1" languages="Swift" />
+<CodeBlock slots="heading, code" repeat="1" />
 
-#### Swift
+### Swift
 
 ```swift
 class MyCustomizer: ContentCardCustomizing {
@@ -64,9 +64,9 @@ class MyCustomizer: ContentCardCustomizing {
         // dismiss buttons are images sourced from SF Symbols icons
         template.dismissButton?.image.iconName = "xmark" // SF Symbol name
         template.dismissButton?.image.iconColor = .primary
-        template.dismissButton?.image.iconFont = .system(size: 10)        
+        template.dismissButton?.image.iconFont = .system(size: 10)
     }
-    
+
     struct MyImageModifier: ViewModifier {
         func body(content: Content) -> some View {
             content

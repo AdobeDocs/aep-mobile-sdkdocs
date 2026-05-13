@@ -17,7 +17,7 @@ keywords:
 
 This document provides information on how to use the Messaging APIs to receive and display content card views in your application.
 
-### getContentCardUIFlow
+## getContentCardUIFlow
 
 The `getContentCardUIFlow` method returns a cold [Flow](https://developer.android.com/kotlin/flow) of [AepUI](../android/public-classes/aepui.md) objects for the provided surface. These `AepUI` objects represent templated content cards whose UI can be rendered using provided card composables. Content is fetched lazily when the flow is collected.
 
@@ -70,7 +70,7 @@ class MyScreenViewModel : ViewModel() {
 }
 ```
 
-### getContentCardUI (Deprecated)
+## getContentCardUI (Deprecated)
 
 <InlineAlert variant="warning" slots="text"/>
 

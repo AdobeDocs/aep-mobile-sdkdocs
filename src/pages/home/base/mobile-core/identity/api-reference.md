@@ -57,9 +57,12 @@ If your application uses more complicated URLs, such as Angular URLs, you should
 
 ### Android Java
 
-<CodeBlock slots="heading, code" repeat="2" />
-
 This API can be called with [AdobeCallback](../api-reference.md#public-classes) or [AdobeCallbackWithError](../api-reference.md#public-classes) for retrieving the attributes from the Mobile SDK. When `AdobeCallbackWithError` is provided, this API uses a default timeout of 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate [AdobeError](../api-reference.md#public-classes).
+
+* _baseUrl_ is the URL to which the visitor information needs to be appended. If the visitor information is nil or empty, the URL is returned as is.
+* _callback_ is invoked after the updated URL is available.
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -67,9 +70,6 @@ This API can be called with [AdobeCallback](../api-reference.md#public-classes) 
 public static void appendVisitorInfoForURL(
             @NonNull final String baseURL, @NonNull final AdobeCallback<String> callback)
 ```
-
-* _baseUrl_ is the URL to which the visitor information needs to be appended. If the visitor information is nil or empty, the URL is returned as is.
-* _callback_ is invoked after the updated URL is available.
 
 ### Example
 
@@ -89,6 +89,9 @@ Identity.appendVisitorInfoForURL("https://example.com", new AdobeCallback<String
 
 ### iOS Swift
 
+* _url_ is the URL to which the visitor information needs to be appended. If the visitor information is nil or empty, the URL is returned as is.
+* _completion_ is invoked after the updated _URL_ is available or _Error_ if an unexpected exception occurs or the request times out. The returned `Error` contains the [AEPError](../api-reference.md#public-classes) code of the specific error.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -96,9 +99,6 @@ Identity.appendVisitorInfoForURL("https://example.com", new AdobeCallback<String
 ```swift
 static func appendTo(url: URL?, completion: @escaping (URL?, Error?) -> Void)
 ```
-
-* _url_ is the URL to which the visitor information needs to be appended. If the visitor information is nil or empty, the URL is returned as is.
-* _completion_ is invoked after the updated _URL_ is available or _Error_ if an unexpected exception occurs or the request times out. The returned `Error` contains the [AEPError](../api-reference.md#public-classes) code of the specific error.
 
 ### Example
 
@@ -122,7 +122,7 @@ Identity.appendTo(url: URL(string: "https://example.com")) { appendedURL, error 
 
 ### iOS Objective-C
 
-<CodeBlock slots="heading, code" repeat="4" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -150,46 +150,6 @@ NSURL* url = [NSURL URLWithString:@"https://example.com"];
   }
 }];
 ```
-
-\<!--- <Variant platform="react-native" api="append-to-url" repeat="6"/>
-
-#### JavaScript
-### Syntax
-```jsx
-appendVisitorInfoForURL(baseURL?: String): Promise<?string>;
-```
-* _baseUrl_ is the URL to which the visitor information needs to be appended. If the visitor information is nil or empty, the URL is returned as is.
-### Example
-```jsx
-ACPIdentity.appendVisitorInfoForURL("https://example.com").then(urlWithVistorData => console.log("AdobeExperenceSDK: Url with Visitor Data = " + urlWithVisitorData));
-```
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=append-to-url"/>
-
-### Flutter
-
-#### Dart
-
-### Syntax
-
-```dart
-Future<String> appendToUrl (String url);
-```
-
-* _url_ is the URL to which the visitor information needs to be appended. If the visitor information is nil or empty, the URL is returned as is.
-### Example
-
-```dart
-String result = "";
-try {
-  result = await FlutterACPIdentity.appendToUrl("https://example.com");
-} on PlatformException {
-  log("Failed to append URL");
-}
-``` --->
- ---\>
 
 ## extensionVersion
 
@@ -246,24 +206,6 @@ let identityExtensionVersion  = Identity.extensionVersion
 NSString *identityVersion = [AEPMobileIdentity extensionVersion];
 ```
 
-\<!--- <Variant platform="react-native" api="extension-version" repeat="2"/>
-#### JavaScript
-```jsx
-ACPIdentity.extensionVersion().then(identityExtensionVersion => console.log("AdobeExperienceSDK: ACPIdentity version: " + identityExtensionVersion));
-```
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=extension-version"/>
-
-### Flutter
-
-#### Dart
-```dart
-String identityExtensionVersion = FlutterACPIdentity.extensionVersion;
-``` --->
- ---\>
-
 ## getExperienceCloudId
 
 This API retrieves the Adobe Experience Cloud ID (ECID) that was generated when the app was initially launched and is stored in the Adobe Experience Cloud Identity Service.
@@ -272,17 +214,17 @@ This ID is preserved between app upgrades, is saved and restored during the stan
 
 ### Android Java
 
-<CodeBlock slots="heading, code" repeat="2" />
-
 This API can be called with [AdobeCallback](../api-reference.md#public-classes) or [AdobeCallbackWithError](../api-reference.md#public-classes) for retrieving the ECID from the Mobile SDK. When `AdobeCallbackWithError` is provided, this API uses a default timeout of 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate [AdobeError](../api-reference.md#public-classes).
+
+* _callback_ is invoked after the ECID is available.
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
 ```java
 public static void getExperienceCloudId(@NonNull final AdobeCallback<String> callback)
 ```
-
-* _callback_ is invoked after the ECID is available.
 
 ### Example
 
@@ -297,6 +239,8 @@ Identity.getExperienceCloudId(new AdobeCallback<String>() {
 
 ### iOS Swift
 
+* _completion_ is invoked with _String_ after the ECID is available, or _Error_ if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../api-reference.md#public-classes) code of the specific error.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -305,8 +249,6 @@ Identity.getExperienceCloudId(new AdobeCallback<String>() {
 @objc(getExperienceCloudId:)
 static func getExperienceCloudId(completion: @escaping (String?, Error?) -> Void)
 ```
-
-* _completion_ is invoked with _String_ after the ECID is available, or _Error_ if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../api-reference.md#public-classes) code of the specific error.
 
 ### Example
 
@@ -322,7 +264,7 @@ Identity.getExperienceCloudId { ecid, error in
 
 ### iOS Objective-C
 
-<CodeBlock slots="heading, code" repeat="4" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -342,56 +284,23 @@ Identity.getExperienceCloudId { ecid, error in
 }];
 ```
 
-\<!--- <Variant platform="react-native" api="get-experience-cloud-id" repeat="5"/>
-#### JavaScript
-### Syntax
-```jsx
-getExperienceCloudId(): Promise<?string>;
-```
-### Example
-```jsx
-ACPIdentity.getExperienceCloudId().then(cloudId => console.log("AdobeExperienceSDK: CloudID = " + cloudId));
-```
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=get-experience-cloud-id"/>
-
-### Flutter
-
-#### Dart
-### Syntax
-```dart
-Future<String> experienceCloudId;
-```
-### Example
-```dart
-String result = "";
-try {
-  result = await FlutterACPIdentity.experienceCloudId;
-} on PlatformException {
-  log("Failed to get experienceCloudId");
-}
-``` --->
- ---\>
-
 ## getIdentifiers
 
 This API returns all customer identifiers that were previously synced with the Adobe Experience Cloud Identity Service.
 
 ### Android Java
 
-<CodeBlock slots="heading, code" repeat="2" />
-
 This API can be called with [AdobeCallback](../api-reference.md#public-classes) or [AdobeCallbackWithError](../api-reference.md#public-classes) for retrieving the custom identifiers from the Mobile SDK. When `AdobeCallbackWithError` is provided, this API uses a default timeout of 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate [AdobeError](../api-reference.md#public-classes).
+
+* _callback_ is invoked after the customer identifiers are available.
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
 ```java
 public static void getIdentifiers(@NonNull final AdobeCallback<List<VisitorID>> callback)
 ```
-
-* _callback_ is invoked after the customer identifiers are available.
 
 ### Example
 
@@ -407,6 +316,8 @@ Identity.getIdentifiers(new AdobeCallback<List<VisitorID>>() {
 
 ### iOS Swift
 
+* _completion_ is invoked with a list of _Identifiable_ objects after the customer identifiers are available, or _Error_ if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../api-reference.md#public-classes) code of the specific error.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -415,8 +326,6 @@ Identity.getIdentifiers(new AdobeCallback<List<VisitorID>>() {
 @objc(getIdentifiers:)
 static func getIdentifiers(completion: @escaping ([Identifiable]?, Error?) -> Void)
 ```
-
-* _completion_ is invoked with a list of _Identifiable_ objects after the customer identifiers are available, or _Error_ if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../api-reference.md#public-classes) code of the specific error.
 
 ### Example
 
@@ -432,7 +341,7 @@ Identity.getIdentifiers { identifiers, error in
 
 ### iOS Objective-C
 
-<CodeBlock slots="heading, code" repeat="4" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -452,39 +361,6 @@ Identity.getIdentifiers { identifiers, error in
 }];
 ```
 
-\<!--- <Variant platform="react-native" api="get-identifiers" repeat="5"/>
-#### JavaScript
-### Syntax
-```jsx
-getIdentifiers(): Promise<Array<?ACPVisitorID>>;
-```
-### Example
-```jsx
-ACPIdentity.getIdentifiers().then(identifiers => console.log("AdobeExperienceSDK: Identifiers = " + identifiers));
-```
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=get-identifiers"/>
-
-### Flutter
-
-#### Dart
-### Syntax
-```dart
- Future<List<ACPMobileVisitorId>> identifiers;
-```
-### Example
-```dart
-List<ACPMobileVisitorId> result;
-try {
-  result = await FlutterACPIdentity.identifiers;
-} on PlatformException {
-  log("Failed to get identifiers");
-}
-``` --->
- ---\>
-
 ## getUrlVariables
 
 This API gets the Adobe Experience Cloud Identity Service variables in URL query parameter form, and these variables will be consumed by the hybrid app. This method returns an appropriately formed string that contains the Experience Cloud Identity Service URL variables. There will be no leading (&) or (?) punctuation because the caller is responsible for placing the variables in their resulting URL in the correct location.
@@ -500,19 +376,19 @@ If an error occurs while retrieving the URL string, the callback handler will be
 
 ### Android Java
 
-<CodeBlock slots="heading, code" repeat="2" />
-
 This method was added in Core version 1.4.0 and Identity version 1.1.0.
 
 This API can be called with [AdobeCallback](../api-reference.md#public-classes) or [AdobeCallbackWithError](../api-reference.md#public-classes) for retrieving the attributes from the Mobile SDK. When `AdobeCallbackWithError` is provided, this API uses a default timeout of 500ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate [AdobeError](../api-reference.md#public-classes).
+
+* _callback_ has an NSString value that contains the visitor identifiers as a query string after the service request is complete.
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
 ```java
 public static void getUrlVariables(final AdobeCallback<String> callback);
 ```
-
-* _callback_ has an NSString value that contains the visitor identifiers as a query string after the service request is complete.
 
 ### Example
 
@@ -532,6 +408,8 @@ Identity.getUrlVariables(new AdobeCallback<String>() {
 
 ### iOS Swift
 
+* _completion_ is invoked with _String_ containing the visitor identifiers as a query string, or _Error_ if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../api-reference.md#public-classes) code of the specific error. The default timeout of 500ms.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -540,8 +418,6 @@ Identity.getUrlVariables(new AdobeCallback<String>() {
 @objc(getUrlVariables:)
 static func getUrlVariables(completion: @escaping (String?, Error?) -> Void)
 ```
-
-* _completion_ is invoked with _String_ containing the visitor identifiers as a query string, or _Error_ if an unexpected error occurs or the request times out. The returned `Error` contains the [AEPError](../api-reference.md#public-classes) code of the specific error. The default timeout of 500ms.
 
 ### Example
 
@@ -569,7 +445,7 @@ Identity.getUrlVariables { (urlVariables, error) in
 
 ### iOS Objective-C
 
-<CodeBlock slots="heading, code" repeat="4" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -595,40 +471,6 @@ Identity.getUrlVariables { (urlVariables, error) in
   }
 }];
 ```
-
-\<!--- <Variant platform="react-native" api="get-url-variables" repeat="6"/>
-This method was added in react-native-acpcore v1.0.5.
-#### JavaScript
-### Syntax
-```jsx
-getUrlVariables(): Promise<?string>;
-```
-### Example
-```jsx
-ACPIdentity.getUrlVariables().then(urlVariables => console.log("AdobeExperenceSDK: query params = " + urlVariables));
-```
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=get-url-variables"/>
-
-### Flutter
-
-#### Dart
-### Syntax
-```dart
- Future<String> urlVariables;
-```
-### Example
-```dart
-String result = "";
-try {
-  result = await FlutterACPIdentity.urlVariables;
-} on PlatformException {
-  log("Failed to get url variables");
-}
-``` --->
- ---\>
 
 ## registerExtension
 
@@ -688,7 +530,14 @@ If the current SDK privacy status is `optedout`, the advertising identifier is n
 
 ### Android Java
 
-<CodeBlock slots="heading, code" repeat="1" />
+* _advertisingIdentifier_ is a string that provides developers with a simple, standard system to track the Ads through their apps.
+
+#### Example
+This is just an implementation example. For more information about advertising identifiers and how to handle them correctly in your mobile application, see [Google Play Services documentation about AdvertisingIdClient](https://developers.google.com/android/reference/com/google/android/gms/ads/identifier/AdvertisingIdClient).
+
+This example requires Google Play Services to be configured in your mobile application. For instructions on how to import the Google Mobile Ads SDK and how to configure your ApplicationManifest.xml file, see [Google Mobile Ads SDK setup](https://developers.google.com/admob/android/quick-start).
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -696,13 +545,7 @@ If the current SDK privacy status is `optedout`, the advertising identifier is n
 public static void setAdvertisingIdentifier(@Nullable final String advertisingIdentifier)
 ```
 
-* _advertisingIdentifier_ is a string that provides developers with a simple, standard system to track the Ads through their apps.
-
 ### Example
-
-This is just an implementation example. For more information about advertising identifiers and how to handle them correctly in your mobile application, see [Google Play Services documentation about AdvertisingIdClient](https://developers.google.com/android/reference/com/google/android/gms/ads/identifier/AdvertisingIdClient).
-
-This example requires Google Play Services to be configured in your mobile application. For instructions on how to import the Google Mobile Ads SDK and how to configure your ApplicationManifest.xml file, see [Google Mobile Ads SDK setup](https://developers.google.com/admob/android/quick-start).
 
 ```java
 ...
@@ -743,10 +586,13 @@ public void onResume() {
 }
 ```
 
-To access IDFA and handle it correctly in your mobile application, see the [Apple developer documentation about IDFA](https://developer.apple.com/documentation/adsupport/asidentifiermanager)
+### iOS Swift
+
+To access IDFA and handle it correctly in your mobile application, see the [Apple developer documentation about IDFA](https://developer.apple.com/documentation/adsupport/asidentifiermanager).
 
 Starting iOS 14+, applications must use the [App Tracking Transparency](https://developer.apple.com/documentation/apptrackingtransparency) framework to request user authorization before using the Identifier for Advertising (IDFA).
-### iOS Swift
+
+* _identifier_ is a string that provides developers with a simple, standard system to continue to track the Ads through their apps.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
@@ -756,8 +602,6 @@ Starting iOS 14+, applications must use the [App Tracking Transparency](https://
 @objc(setAdvertisingIdentifier:)
 public static func setAdvertisingIdentifier(_ identifier: String?)
 ```
-
-* _identifier_ is a string that provides developers with a simple, standard system to continue to track the Ads through their apps.
 
 ### Example
 
@@ -814,7 +658,7 @@ func setAdvertisingIdentiferUsingTrackingManager() {
 
 ### iOS Objective-C
 
-<CodeBlock slots="heading, code" repeat="4" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -881,36 +725,6 @@ func setAdvertisingIdentiferUsingTrackingManager() {
 }
 ```
 
-\<!--- <Variant platform="react-native" api="set-advertising-identifier" repeat="6"/>
-#### JavaScript
-### Syntax
-```jsx
-setAdvertisingIdentifier(advertisingIdentifier?: String);
-```
-* _adID_ is a string that provides developers with a simple, standard system to continue to track the Ads through their apps.
-### Example
-```jsx
-ACPCore.setAdvertisingIdentifier("ADVTID");
-```
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=set-advertising-identifier"/>
-
-### Flutter
-
-#### Dart
-### Syntax
-```dart
-Future<void> setAdvertisingIdentifier (String aid);
-```
-* _aid_ is a string that provides developers with a simple, standard system to continue to track the Ads through their apps.
-### Example
-```dart
-FlutterACPCore.setAdvertisingIdentifier("ADVTID");
-``` --->
- ---\>
-
 ## setPushIdentifier
 
 This API sets the device token for push notifications in the SDK. If the current SDK privacy status is `optedout`, the push identifier is not set.
@@ -921,6 +735,8 @@ You should call `setPushIdentifier` on each application launch to ensure the mos
 
 ### Android Java
 
+* _pushIdentifier_ is a string that contains the device token for push notifications.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -928,8 +744,6 @@ You should call `setPushIdentifier` on each application launch to ensure the mos
 ```java
 public static void setPushIdentifier(@Nullable final String pushIdentifier)
 ```
-
-* _pushIdentifier_ is a string that contains the device token for push notifications.
 
 ### Example
 
@@ -940,6 +754,8 @@ MobileCore.setPushIdentifier(token);
 
 ### iOS Swift
 
+* _deviceToken_ is a string that contains the device token for push notifications.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -948,8 +764,6 @@ MobileCore.setPushIdentifier(token);
 @objc(setPushIdentifier:)
 public static func setPushIdentifier(_ deviceToken: Data?)
 ```
-
-* _deviceToken_ is a string that contains the device token for push notifications.
 
 ### Example
 
@@ -960,7 +774,7 @@ MobileCore.setPushIdentifier(deviceToken)
 
 ### iOS Objective-C
 
-<CodeBlock slots="heading, code" repeat="4" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -974,22 +788,6 @@ MobileCore.setPushIdentifier(deviceToken)
 // Set the deviceToken that the APNS has assigned to the device
 [AEPMobileCore setPushIdentifier:deviceToken];
 ```
-
-\<!--- <Variant platform="react-native" api="set-push-identifier" repeat="6"/>
-#### JavaScript
-### Syntax
-```jsx
-ACPCore.setPushIdentifier(pushIdentifier);
-```
-* _pushIdentifier_ is a string that contains the device token for push notifications.
-### Example
-```jsx
-ACPCore.setPushIdentifier("pushID");
-``` --->
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=set-push-identifier"/> ---\>
 
 ## syncIdentifier
 
@@ -1007,6 +805,10 @@ This API updates or appends the provided customer identifier type key and value 
 
 ### Android Java
 
+* _identifierType (String)_ contains the `identifier type`, and this parameter should not be null or empty. The allowed characters are [A-Za-z0-9_.]
+* _identifier (String)_ contains the `identifier value`, and this parameter should not be null or empty.
+* _authenticationState (AuthenticationState)_ indicates the authentication state of the user and contains one of the [VisitorID.AuthenticationState](#public-classes) values.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -1018,10 +820,6 @@ public static void syncIdentifier(
             @NonNull final VisitorID.AuthenticationState authenticationState)
 ```
 
-* _identifierType (String)_ contains the `identifier type`, and this parameter should not be null or empty. The allowed characters are [A-Za-z0-9_.]
-* _identifier (String)_ contains the `identifier value`, and this parameter should not be null or empty.
-* _authenticationState (AuthenticationState)_ indicates the authentication state of the user and contains one of the [VisitorID.AuthenticationState](#public-classes) values.
-
 ### Example
 
 ```java
@@ -1032,6 +830,10 @@ Identity.syncIdentifier("idType",
 
 ### iOS Swift
 
+* The _identifierType (String)_ contains the `identifier type`, and this parameter should not be null or empty. The allowed characters are [A-Za-z0-9_.]
+* The _identifier (String)_ contains the `identifier` value, and this parameter should not be null or empty. If either the `identifierType` or `identifier` contains a null or an empty string, the identifier is ignored by the Identity extension.
+* The _authenticationState (MobileVisitorAuthenticationState)_ value indicates the authentication state for the user and contains one of the [MobileVisitorAuthenticationState](#public-classes) values.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -1040,10 +842,6 @@ Identity.syncIdentifier("idType",
 @objc(syncIdentifierWithType:identifier:authenticationState:)
 static func syncIdentifier(identifierType: String, identifier: String, authenticationState: MobileVisitorAuthenticationState)
 ```
-
-* The _identifierType (String)_ contains the `identifier type`, and this parameter should not be null or empty. The allowed characters are [A-Za-z0-9_.]
-* The _identifier (String)_ contains the `identifier` value, and this parameter should not be null or empty. If either the `identifierType` or `identifier` contains a null or an empty string, the identifier is ignored by the Identity extension.
-* The _authenticationState (MobileVisitorAuthenticationState)_ value indicates the authentication state for the user and contains one of the [MobileVisitorAuthenticationState](#public-classes) values.
 
 ### Example
 
@@ -1055,7 +853,7 @@ Identity.syncIdentifier(identifierType: "idType",
 
 ### iOS Objective-C
 
-<CodeBlock slots="heading, code" repeat="4" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -1073,47 +871,13 @@ Identity.syncIdentifier(identifierType: "idType",
                       authenticationState:AEPMobileVisitorAuthStateUnknown];
 ```
 
-\<!--- <Variant platform="react-native" api="sync-identifier" repeat="6"/>
-#### JavaScript
-### Syntax
-```jsx
-syncIdentifier(identifierType: String, identifier: String, authenticationState: string);
-```
-* The _identifierType (String)_ contains the `identifier type`, and this parameter should not be null or empty. The allowed characters are [A-Za-z0-9_.]
-* The _identifier (String)_ contains the `identifier` value, and this parameter should not be null or empty. If either the `identifier type` or `identifier` contains a null or an empty string, the identifier is ignored by the Identity extension.
-* _authenticationState (ACPMobileVisitorAuthenticationState)_ value indicating authentication state for the user and contains one of the following [ACPMobileVisitorAuthenticationState](#public-classes) values.
-### Example
-```jsx
-import {ACPMobileVisitorAuthenticationState} from '@adobe/react-native-acpcore';
-ACPIdentity.syncIdentifier("identifierType", "identifier", ACPMobileVisitorAuthenticationState.AUTHENTICATED);
-```
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=sync-identifier"/>
-
-### Flutter
-
-#### Dart
-### Syntax
-```dart
-Future<void> syncIdentifier(String identifierType, String identifier, ACPMobileVisitorAuthenticationState authState);
-```
-* The _identifierType (String)_ contains the `identifier type`, and this parameter should not be null or empty. The allowed characters are [A-Za-z0-9_.]
-* The _identifier (String)_ contains the `identifier` value, and this parameter should not be null or empty. If either the `identifier type` or `identifier` contains a null or an empty string, the identifier is ignored by the Identity extension.
-* _authState (ACPMobileVisitorAuthenticationState_ value indicating authentication state for the user and contains one of the following [ACPMobileVisitorAuthenticationState](#public-classes) values.
-### Example
-```dart
-import 'package:flutter_acpcore/src/acpmobile_visitor_id.dart';
-FlutterACPIdentity.syncIdentifier("identifierType", "identifier", ACPMobileVisitorAuthenticationState.AUTHENTICATED);
-``` --->
- ---\>
-
 ## syncIdentifiers
 
 This API is an overloaded version, which does not include the parameter for the authentication state and it assumes a default value of `VisitorID.AuthenticationState.UNKNOWN`.
 
 ### Android Java
+
+* _identifiers_ is a map that contains the identifiers with the Identifier type as the key, and the string identifier as the value. In each identifier pair, if the `identifier type` contains a null or an empty string, the identifier is ignored by the Identity extension.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
@@ -1122,8 +886,6 @@ This API is an overloaded version, which does not include the parameter for the 
 ```java
 public static void syncIdentifiers(@NonNull final Map<String, String> identifiers)
 ```
-
-* _identifiers_ is a map that contains the identifiers with the Identifier type as the key, and the string identifier as the value. In each identifier pair, if the `identifier type` contains a null or an empty string, the identifier is ignored by the Identity extension.
 
 ### Example
 
@@ -1137,6 +899,8 @@ Identity.syncIdentifiers(identifiers);
 
 ### iOS Swift
 
+* The _identifiers_ dictionary contains identifier type as the key and identifier as the value, both identifier type and identifier should be non empty and non nil values.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -1145,8 +909,6 @@ Identity.syncIdentifiers(identifiers);
 @objc(syncIdentifiers:)
 static func syncIdentifiers(identifiers: [String: String]?)
 ```
-
-* The _identifiers_ dictionary contains identifier type as the key and identifier as the value, both identifier type and identifier should be non empty and non nil values.
 
 ### Example
 
@@ -1159,7 +921,7 @@ Identity.syncIdentifiers(identifiers: ids)
 
 ### iOS Objective-C
 
-<CodeBlock slots="heading, code" repeat="4" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -1176,38 +938,6 @@ NSDictionary *ids = @{@"idType1":@"idValue1",
 [AEPMobileIdentity syncIdentifiers:ids];
 ```
 
-\<!--- <Variant platform="react-native" api="sync-identifiers" repeat="6"/>
-#### JavaScript
-### Syntax
-```jsx
-syncIdentifiers(identifiers?: {string: string});
-```
-* The _identifiers_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value. If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
-### Example
-```jsx
-ACPIdentity.syncIdentifiers({"id1": "identifier1"});
-```
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=sync-identifiers"/>
-
-### Flutter
-
-#### Dart
-### Syntax
-```dart
-Future<void> syncIdentifiers (Map<String, String> identifiers);
-```
-* The _identifiers_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value. If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
-### Example
-```jsx
-FlutterACPIdentity.syncIdentifiers({"idType1":"idValue1",
-                                    "idType2":"idValue2",
-                                    "idType3":"idValue3"});
-``` --->
- ---\>
-
 ## syncIdentifiers (overloaded)
 
 The function of this API is the same as the `syncIdentifier` API. This API passes a list of identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value. In each identifier pair, if the `identifier type` contains a null or an empty string, the identifier is ignored by the Identity extension.
@@ -1215,6 +945,9 @@ The function of this API is the same as the `syncIdentifier` API. This API passe
 Starting with _ACPIdentity v2.1.3 (iOS)_ and _Identity v1.1.2 (Android)_ if the new `identifier` value is null or empty, this ID type is removed from the local storage, Identity shared state and not synced with the Adobe Experience Cloud Identity Service.
 
 ### Android Java
+
+* _identifiers_ is a map that contains IDs with the identifier type as the key, and the string identifier as the value.
+* _authState_ indicates the authentication state for the user, which contains one of the following [VisitorID.AuthenticationState](#public-classes) values.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
@@ -1225,9 +958,6 @@ public static void syncIdentifiers(
             @NonNull final Map<String, String> identifiers,
             @NonNull final VisitorID.AuthenticationState authenticationState)
 ```
-
-* _identifiers_ is a map that contains IDs with the identifier type as the key, and the string identifier as the value.
-* _authState_ indicates the authentication state for the user, which contains one of the following [VisitorID.AuthenticationState](#public-classes) values.
 
 ### Example
 
@@ -1241,6 +971,9 @@ Identity.syncIdentifiers(identifiers, VisitorID.AuthenticationState.AUTHENTICATE
 
 ### iOS Swift
 
+* The _identifiers_ dictionary contains identifier type as the key and identifier as the value, both identifier type and identifier should be non empty and non nil values.
+* The _authenticationState (MobileVisitorAuthenticationState)_ indicates the authentication state of the user and contains one of the [MobileVisitorAuthenticationState](#public-classes) values.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -1249,9 +982,6 @@ Identity.syncIdentifiers(identifiers, VisitorID.AuthenticationState.AUTHENTICATE
 @objc(syncIdentifiers:authenticationState:)
 static func syncIdentifiers(identifiers: [String: String]?, authenticationState: MobileVisitorAuthenticationState)
 ```
-
-* The _identifiers_ dictionary contains identifier type as the key and identifier as the value, both identifier type and identifier should be non empty and non nil values.
-* The _authenticationState (MobileVisitorAuthenticationState)_ indicates the authentication state of the user and contains one of the [MobileVisitorAuthenticationState](#public-classes) values.
 
 ### Example
 
@@ -1264,7 +994,7 @@ Identity.syncIdentifiers(identifiers: ids, authenticationState: .authenticated)
 
 ### iOS Objective-C
 
-<CodeBlock slots="heading, code" repeat="4" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -1281,40 +1011,6 @@ NSDictionary *ids = @{@"idType1":@"idValue1",
                       @"idType3":@"idValue3"};
 [AEPMobileIdentity syncIdentifiers:ids authenticationState:AEPMobileVisitorAuthStateAuthenticated];
 ```
-
-\<!--- <Variant platform="react-native" api="sync-identifiers-overloaded" repeat="6"/>
-#### JavaScript
-### Syntax
-```jsx
-syncIdentifiersWithAuthState(identifiers?: {string: string}, authenticationState: string);
-```
-* The _identifiers_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value. If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
-* The _authenticationState (ACPMobileVisitorAuthenticationState)_ indicates the authentication state of the user and contains one of the [ACPMobileVisitorAuthenticationState](#public-classes) values.
-### Example
-```jsx
-import {ACPMobileVisitorAuthenticationState} from '@adobe/react-native-acpcore';
-ACPIdentity.syncIdentifiersWithAuthState({"id1": "identifier1"}, ACPMobileVisitorAuthenticationState.UNKNOWN);
-```
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=sync-identifiers-overloaded"/>
-
-### Flutter
-
-#### Dart
-### Syntax
-```dart
-Future<void> syncIdentifiersWithAuthState (Map<String, String> identifiers, ACPMobileVisitorAuthenticationState authState);
-```
-* The _identifiers_ dictionary contains identifiers, and each identifier contains an `identifier type` as the key and an `identifier` as the value. If any of the identifier pairs contains an empty or null value as the `identifier type`, then it will be ignored.
-* The _authState (ACPMobileVisitorAuthenticationState)_ indicates the authentication state of the user and contains one of the [ACPMobileVisitorAuthenticationState](#public-classes) values.
-### Example
-```dart
-import 'package:flutter_acpcore/src/acpmobile_visitor_id.dart';
-FlutterACPIdentity.syncIdentifiersWithAuthState({"idType1":"idValue1", "idType2":"idValue2", "idType3":"idValue3"}, ACPMobileVisitorAuthenticationState.UNKNOWN);
-``` --->
- ---\>
 
 ## Public classes
 
@@ -1383,46 +1079,3 @@ This is used to indicate the authentication state for the current `Identifiable`
     var authenticationState: MobileVisitorAuthenticationState { get }
 }
 ```
-
-\<!--- <Variant platform="react-native" api="public-classes" repeat="7"/>
-#### JavaScript
-**ACPVisitorID**
-This is an identifier to be used with the Adobe Experience Cloud Identity Service and it contains the origin, the identifier type, the identifier, and the authentication state of the visitor ID.
-```jsx
-import {ACPVisitorID} from '@adobe/react-native-acpcore';
-var visitorId = new ACPVisitorID(idOrigin?: string, idType: string, id?: string, authenticationState?: ACPMobileVisitorAuthenticationState);
-```
-**ACPMobileVisitorAuthenticationState**
-This is used to indicate the authentication state for the current `VisitorID`.
-```jsx
-import {ACPMobileVisitorAuthenticationState} from '@adobe/react-native-acpcore';
-var state = ACPMobileVisitorAuthenticationState.AUTHENTICATED;
-//var state = ACPMobileVisitorAuthenticationState.LOGGED_OUT;
-//var state = ACPMobileVisitorAuthenticationState.UNKNOWN;
-```
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=public-classes"/>
-
-### Flutter
-
-#### Dart
-**ACPVisitorID**
-This is an identifier to be used with the Adobe Experience Cloud Identity Service and it contains the origin, the identifier type, the identifier, and the authentication state of the visitor ID.
-```dart
-import 'package:flutter_acpcore/src/acpmobile_visitor_id.dart';
-class ACPMobileVisitorId {
-  String get idOrigin;
-  String get idType;
-  String get identifier;
-  ACPMobileVisitorAuthenticationState get authenticationState;
-};
-```
-**ACPMobileVisitorAuthenticationState**
-This is used to indicate the authentication state for the current `VisitorID`.
-```dart
-import 'package:flutter_acpcore/src/acpmobile_visitor_id.dart';
-enum ACPMobileVisitorAuthenticationState {UNKNOWN, AUTHENTICATED, LOGGED_OUT};
-``` --->
- ---\>

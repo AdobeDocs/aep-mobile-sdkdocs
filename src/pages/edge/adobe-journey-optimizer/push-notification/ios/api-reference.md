@@ -24,7 +24,7 @@ This document details how to use the APIs provided by the AEPMessaging framework
 
 To retrieve the push token in iOS, refer to the [Apple documentation for registering your app with APNs](https://developer.apple.com/documentation/usernotifications/registering_your_app_with_apns). Then add the following code to the `application(_: didRegisterForRemoteNotificationsWithDeviceToken:)` method in the `AppDelegate` to sync the device's push token with profile in Adobe Experience Platform.
 
-<CodeBlock slots="heading, code" repeat="2" languages="Swift, Objective-C" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 #### Swift
 
@@ -52,7 +52,7 @@ Use [`handleNotificationResponse`](./../../api-reference.md#handlenotificationre
 
 In iOS, [UNUserNotificationCenterDelegate](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) is the interface for processing incoming notifications and responding to notification actions. Once the delegate is implemented, handle push notification responses in [userNotificationCenter(_:didReceive:withCompletionHandler:)](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate/1649501-usernotificationcenter) method.
 
-<CodeBlock slots="heading, code" repeat="2" languages="Swift, Objective-C" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 #### Swift
 
@@ -106,7 +106,7 @@ This API method will automatically handle click behaviour defined for the push n
 
 Implement the callback in `handleNotificationResponse` API to read [PushTrackingStatus](../../public-classes/push-tracking-status.md) enum representing tracking status of the push notification.
 
-<CodeBlock slots="heading, code" repeat="2" languages="Swift, Objective-C" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 #### Swift
 

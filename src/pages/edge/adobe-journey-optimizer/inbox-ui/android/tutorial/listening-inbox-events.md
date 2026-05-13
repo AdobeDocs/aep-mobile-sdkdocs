@@ -282,7 +282,7 @@ For detailed information on content card events, implementing `ContentCardUIEven
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 class InboxViewModel : ViewModel() {

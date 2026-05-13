@@ -22,7 +22,7 @@ To use the Messaging APIs, import the Messaging module in your Swift file.
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 
-#### Swift
+### Swift
 
 ```swift
 import AEPMessaging
@@ -32,7 +32,7 @@ import AEPMessaging
 
 The `getInboxUI` method obtains an [InboxUI](../ios/public-classes/inboxui.md) instance for a given surface so you can display a SwiftUI Inbox view with the qualified content cards.
 
-#### Parameters:
+### Parameters
 
 * _surface_ - The [Surface](../../public-classes/surface.md) for which to retrieve the inbox.
 * _customizer_ - An optional [ContentCardCustomizing](../../content-card-ui/ios/public-classes/contentcardcustomizing.md) object to customize the appearance of the content cards within the inbox. If you do not need to customize the appearance of the content cards, this parameter can be omitted.
@@ -42,11 +42,11 @@ The `getInboxUI` method obtains an [InboxUI](../ios/public-classes/inboxui.md) i
 
 This API returns an `InboxUI` immediately. The inbox will not have content until proposition data has been fetched for the same surface. You **must** call the [`updatePropositionsForSurfaces`](../../code-based/api-reference.md#updatepropositionsforsurfaces) API with the desired surfaces prior to or after obtaining the inbox UI, depending on when you want content to appear.
 
-#### Syntax
+### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 
-#### Swift
+### Swift
 
 ```swift
 @available(iOS 15.0, *)
@@ -55,11 +55,11 @@ public static func getInboxUI(for surface: Surface,
                               listener: InboxEventListening? = nil) -> InboxUI
 ```
 
-#### Example
+### Example
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 
-#### Swift
+### Swift
 
 ```swift
 // Create a surface matching your Adobe Journey Optimizer campaign configuration
@@ -79,11 +79,11 @@ struct InboxPage: View {
 }
 ```
 
-#### Example with listener and customizer
+### Example with listener and customizer
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 
-#### Swift
+### Swift
 
 ```swift
 let inboxSurface = Surface(path: "inbox")
@@ -105,7 +105,7 @@ let inboxUI = Messaging.getInboxUI(
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 
-#### Swift
+### Swift
 
 ```swift
 import SwiftUI

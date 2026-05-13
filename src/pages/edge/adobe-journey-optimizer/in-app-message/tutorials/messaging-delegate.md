@@ -18,7 +18,8 @@ You can now implement a `PresentationDelegate` or `MessagingDelegate`(for older 
 Android 3.x
 
 On Android 3.x, you must implement the `PresentationDelegate` interface to be alerted of in-app message events. The `AEPUIService` class, which implements the `UIService` interface, maintains an optional property that holds reference to the `PresentationDelegate`.
-### android3x Kotlin
+
+### Android 3.x Kotlin
 
 ```kotlin
 // accessed via the public class ServiceProvider which contains a getter for the UIService implementation
@@ -29,14 +30,14 @@ interface UIService {
 
 On Android 3.x, the custom implementation of `PresentationDelegate` is registered with the `UIService` by accessing it using the `ServiceProvider`.
 
-### android3x Kotlin
+### Android 3.x Kotlin
 
 ```kotlin
 val myPresentationDelegate = CustomDelegate()
 ServiceProvider.getInstance().uiService.setPresentationDelegate(myPresentationDelegate)
 ```
 
-### android3x Java
+### Android 3.x Java
 
 ```java
 CustomDelegate myPresentationDelegate = new CustomDelegate();
@@ -46,7 +47,8 @@ ServiceProvider.getInstance().getUIService().setPresentationDelegate(myPresentat
 Android 2.x (Older version)
 
 On Android 2.x and older, the delegate is registered with the Adobe Service Provider. The `ServiceProvider` class maintains an optional property that holds reference to the `FullscreenMessaageDelegate`.
-### android2x Java
+
+### Android 2.x Java
 
 ```java
 // defined in public class ServiceProvider 
@@ -62,6 +64,7 @@ MobileCore.setMessagingDelegate(myMessagingDelegate);
 ```
 
 On iOS, the delegate is registered with Mobile Core. The `MobileCore` framework maintains an optional property that holds reference to the `MessagingDelegate`.
+
 ### iOS Swift
 
 ```swift
@@ -80,8 +83,6 @@ MobileCore.messagingDelegate = myMessagingDelegate
 ## MessagingDelegate definition
 
 Android 3.x
-
-### android3x
 
 The `PresentationDelegate` interface extends the `PresentationListener` and `PresentationLever` interfaces. It is available in the `com.adobe.marketing.mobile.services.ui` package.
 
@@ -165,7 +166,8 @@ interface PresentationLever {
 Android 2.x (Older version)
 
 The `MessagingDelegate` interface, which is implemented in the `AEPServices` framework, is defined below:
-### android2x Java
+
+### Android 2.x Java
 
 ```java
 /**
@@ -216,6 +218,7 @@ public interface MessagingDelegate {
 ```
 
 On iOS, the `MessagingDelegate` protocol, which is implemented in the `AEPServices` framework, is defined below:
+
 ### iOS Swift
 
 ```swift
@@ -260,7 +263,8 @@ public protocol MessagingDelegate {
 Android 3.x
 
 The `Message` class has the business logic related to the in-app message to perform actions like sending tracking events on interactions and suppress tracking. The class that implements `PresentationDelegate` will receive a `Presentable` object, which is the Mobile Core class containing in-app message view. You will need to get the `Message` object associated with `Presentable` object using  the `MessagingUtils.getMessageForPresentable(Presentable)` .
-### android3x Kotlin
+
+### Android 3.x Kotlin
 
 ```kotlin
 var currentMessagePresentable: Presentable<InAppMessage>? = null
@@ -273,7 +277,7 @@ override fun onShow(presentable: Presentable<*>) {
  }
  ```
 
-### android3x Java
+### Android 3.x Java
 
 ```java
 Presentable<InAppMessage> currentMessagePresentable = null;
@@ -292,7 +296,8 @@ Android 2.x (Older version)
 The user interface methods (except for `onShowFailure()`) in a `MessagingDelegate` implementation will be passed an `AEPMessage` object. An `AEPMessage` object is the Android Core implementation of the `FullscreenMessage` interface. It contains a reference to the parent `Message` class and is your primary way to interact with the message.
 
 A reference to the `AEPMessage` object can be obtained by calling `fullscreenMessage.getParent()` . An example of how to access the `Message` in the `onShow` delegate method can be seen below:
-### android2x Java
+
+### Android 2.x Java
 
 ```java
 @Override
@@ -310,6 +315,7 @@ To get a reference to the `Message` object:
 2. Access the `parent` variable (note that `parent` is variable defined in `FullscreenMessage+Message.swift`, an extension in the AEPMessaging framework)
 
 An example of how to access the `Message` in the `onShow` delegate method can be seen below:
+
 ### iOS Swift
 
 ```swift
@@ -327,7 +333,8 @@ Android 3.x
 If a custom `PresentationDelegate` implementation has been set in the `UIService`, the delegate's `canShow` method will be called prior to displaying an in-app message for which the end user has qualified. You are responsible for returning `true` if the message should be shown, or `false` if the message should be suppressed. If you returned `false` in the `canShow` method, you can store a reference to the Message object, and call the show() method on it at a later time.
 
 An example of when you may choose to suppress an in-app message due to the status of some other workflow within the app and show it at a later time upon completion of the other workflow can be seen below:
-### android3x Kotlin
+
+### Android 3.x Kotlin
 
 ```kotlin
 var currentMessage: Message? = null
@@ -364,7 +371,7 @@ fun otherWorkflowFinished() {
 }
 ```
 
-### android3x Java
+### Android 3.x Java
 
 ```java
 Message currentMessage = null;
@@ -411,7 +418,8 @@ Android 2.x (Older version)
 If a custom  `MessagingDelegate` has been set in the `ServiceProvider`, this delegate's `shouldShowMessage` method will be called prior to displaying an in-app message for which the end user has qualified. You are responsible for returning `true` if the message should be shown, or `false` if the message should be suppressed.
 
 An example of when you may choose to suppress an in-app message due to the status of some other workflow within the app can be seen below:
-### android2x Java
+
+### Android 2.x Java
 
 ```java
 @Override
@@ -451,6 +459,7 @@ public boolean shouldShowMessage(FullscreenMessage fullscreenMessage) {
 If a `MessagingDelegate` has been provided to `MobileCore`, the delegate's `shouldShowMessage` method will be called prior to displaying an in-app message for which the end user has qualified. You are responsible for returning `true` if the message should be shown, or `false` if the message should be suppressed.
 
 An example of when you may choose to suppress an in-app message due to the status of some other workflow within the app can be seen below:
+
 ### iOS Swift
 
 ```swift

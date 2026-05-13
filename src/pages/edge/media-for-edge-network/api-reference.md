@@ -1163,7 +1163,7 @@ Tracks media events.
 | Parameter | Description | Required |
 | :--- | :--- | :--: |
 | `event` | The media event being tracked, use [Media event constants](#media-events) | Yes|
-| `info` | For an `AdBreakStart` event, the AdBreak information is created by using the `createAdBreakObjectWith` method.\<br/\> For an `AdStart` event, the Ad information is created by using the `createAdObjectWith` method.\<br/\> For a `ChapterStart` event, the Chapter information is created by using the `createChapterObjectWith` method.\<br/\> For a `StateStart` and `StateEnd` event, the State information is created by using the `createStateObjectWith` method. | Yes/No* |
+| `info` | For an `AdBreakStart` event, the AdBreak information is created by using the `createAdBreakObjectWith` method. For an `AdStart` event, the Ad information is created by using the `createAdObjectWith` method. For a `ChapterStart` event, the Chapter information is created by using the `createChapterObjectWith` method. For a `StateStart` and `StateEnd` event, the State information is created by using the `createStateObjectWith` method. | Yes/No* |
 | metadata | Optional context data can be provided for `AdStart` and `ChapterStart` events. This is not required for other events. | No |
 
 <InlineAlert variant="info" slots="text"/>
@@ -1584,7 +1584,7 @@ Provides the current media playhead value to the MediaTracker instance. For accu
 
 | Parameter | Description | Required |
 | :--- | :--- | :---: |
-| `time` | Current playhead value in seconds.\<br/\>\<br/\> For video-on-demand (VOD), the value is specified in seconds from the beginning of the media item.\<br/\>\<br/\> For live streaming, if the player does not provide information about the content duration, the value can be specified as the number of seconds since midnight UTC of that day.| Yes |
+| `time` | Current playhead value in seconds. For video-on-demand (VOD), the value is specified in seconds from the beginning of the media item. For live streaming, if the player does not provide information about the content duration, the value can be specified as the number of seconds since midnight UTC of that day. | Yes |
 
 ### Android Java
 
@@ -1765,7 +1765,6 @@ public class Media {
 }
 ```
 
-### Example
 ### Android Java
 
 ```java
@@ -1796,7 +1795,6 @@ public enum MediaType: Int, RawRepresentable {
 }
 ```
 
-### Example
 ### iOS Swift
 
 ```swift
@@ -1859,7 +1857,6 @@ public class MediaConstants {
 }
 ```
 
-### Example
 ### Android Java
 
 ```java
@@ -1900,7 +1897,6 @@ public class MediaConstants: NSObject {
 }
 ```
 
-### Example
 ### iOS Swift
 
 ```swift
@@ -1951,7 +1947,6 @@ public class MediaConstants {
 }
 ```
 
-### Example
 ### Android Java
 
 ```java
@@ -2010,7 +2005,6 @@ public class MediaConstants: NSObject {
 }
 ```
 
-### Example
 ### iOS Swift
 
 ```swift
@@ -2056,7 +2050,6 @@ public class MediaConstants {
 }
 ```
 
-### Example
 ### Android Java
 
 ```java
@@ -2104,7 +2097,6 @@ public class MediaConstants: NSObject {
 }
 ```
 
-### Example
 ### iOS Swift
 
 ```swift
@@ -2150,7 +2142,6 @@ public class MediaConstants {
 }
 ```
 
-### Example
 ### Android Java
 
 ```java
@@ -2189,7 +2180,6 @@ public class MediaConstants: NSObject {
 }
 ```
 
-### Example
 ### iOS Swift
 
 ```swift
@@ -2233,7 +2223,6 @@ public class MediaConstants {
 }
 ```
 
-### Example
 ### Android Java
 
 ```java
@@ -2259,7 +2248,6 @@ public class MediaConstants: NSObject {
 }
 ```
 
-### Example
 ### iOS Swift
 
 ```swift
@@ -2413,7 +2401,6 @@ public enum MediaEvent: Int, RawRepresentable {
 }
 ```
 
-### Example
 ### iOS Swift
 
 ```swift
@@ -2449,9 +2436,7 @@ public class MediaConstants {
 }
 ```
 
-### Example
-
-### Android Java
+### Android Java Example
 
 ```java
 HashMap<String, Object> mediaInfo = Media.createMediaObject("mediaName", "mediaId", 60, MediaConstants.StreamType.VOD, Media.MediaType.Video);

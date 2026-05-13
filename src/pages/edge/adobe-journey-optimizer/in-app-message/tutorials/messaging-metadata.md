@@ -19,7 +19,7 @@ You can add and retrieve custom metadata in an in-app message payload by complet
 * [Implement and assign a `PresentationDelegate`/`MessagingDelegate`](#implement-and-assign-a-presentationdelegate-messagingdelegate)
 * [Retrieve custom metadata from the Message object](#retrieve-custom-metadata-from-the-message-object)
 
-<InlineAlert variant="info" slots="heading, text1, text2"/>
+<InlineAlert variant="info" slots="text1, text2, text3"/>
 
 Available since
 
@@ -47,7 +47,8 @@ From within the `PresentationDelegate` or `MessagingDelegate`, call `Message.get
 Android 3.x
 
 The following example shows retrieving custom metadata using the `Message.getMetadata()` API. The example uses the `canShow` method of the `PresentationDelegate`, however you may retrieve the custom metadata anywhere within the delegate where the `Message` object is available.
-### android3x Kotlin
+
+### Android 3.x Kotlin
 
 ```kotlin
 var currentMessagePresentable: Presentable<InAppMessage>? = null
@@ -65,7 +66,7 @@ override fun canShow(presentable: Presentable<*>): Boolean {
 }
 ```
 
-### android3x Java
+### Android 3.x Java
 
 ```java
 Presentable<InAppMessage> currentMessagePresentable = null;
@@ -88,6 +89,7 @@ public void canShow(Presentable<?> presentable) {
 ```
 
 The following example shows retrieving custom metadata using the `Message.metadata` API. The example uses the `shouldShowMessage` method of the `MessagingDelegate`, however you may retrieve the custom metadata anywhere within the delegate where the `Message` object is available.
+
 ### iOS Swift
 
 ```swift

@@ -36,15 +36,15 @@ Complete the following steps to listen to content card events:
 
 Below is an example implementation of `ContentCardEventListening`:
 
-<CodeBlock slots="heading, code" repeat="1" languages="Swift" />
+<CodeBlock slots="heading, code" repeat="1" />
 
-#### Swift
+### Swift
 
 ```swift
 struct HomePage: View, ContentCardUIEventListening {
-    
+
     @State var savedCards : [ContentCardUI] = []
-    
+
     var body: some View {
         ScrollView (.vertical) {
           // Display the content cards here
@@ -57,23 +57,23 @@ struct HomePage: View, ContentCardUIEventListening {
                 switch result {
                 case .success(let cards):
                     savedCards = cards
-                    
+
                 case .failure(let error):
-                    // handle error here                    
+                    // handle error here
                 }
             }
         }
     }
-    
+
     // Implement the ContentCardUIEventListening protocol methods
     func onDisplay(_ card: ContentCardUI) {
         // Handle the card display event
     }
-    
+
     func onDismiss(_ card: ContentCardUI) {
         // Handle the card dismiss event
     }
-    
+
     func onInteract(_ card: ContentCardUI, _ interactionId: String, actionURL: URL?) -> Bool {
         // Handle the card interaction event
         return false
@@ -89,14 +89,14 @@ The `onInteract` method provides an optional `actionURL` parameter associated wi
 
 * Returns `false` to allow the SDK to process the URL.
 
-<CodeBlock slots="heading, code" repeat="1" languages="Swift" />
+<CodeBlock slots="heading, code" repeat="1" />
 
-#### Swift
+### Swift
 
 ```swift
 func onInteract(_ card: ContentCardUI, _ interactionId: String, actionURL: URL?) -> Bool {
     guard let url = actionURL else { return false }
-    
+
     // Your application handles the actionable URL here
 
     // Return true to indicate that the SDK need not process the URL
@@ -112,9 +112,9 @@ Removing a dismissed content card from the UI is the responsibility of the app d
 
 To remove a content card from the UI when the user dismisses it, implement the `onDismiss` method:
 
-<CodeBlock slots="heading, code" repeat="1" languages="Swift" />
+<CodeBlock slots="heading, code" repeat="1" />
 
-#### Swift
+### Swift
 
 ```swift
     func onDismiss(_ card: ContentCardUI) {

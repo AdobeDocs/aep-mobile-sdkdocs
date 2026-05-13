@@ -34,7 +34,7 @@ Data class containing the properties for rendering the inbox container, as confi
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 data class InboxTemplate(
@@ -63,7 +63,7 @@ Enum representing the layout orientation of the inbox.
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 when (val state = inboxUIState) {

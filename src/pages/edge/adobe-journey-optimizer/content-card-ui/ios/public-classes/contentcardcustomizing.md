@@ -18,9 +18,9 @@ Protocol defining methodology for customizing content cards based on the templat
 
 ## Protocol Definition
 
-<CodeBlock slots="heading, code" repeat="1" languages="Swift" />
+<CodeBlock slots="heading, code" repeat="1" />
 
-#### Swift
+### Swift
 
 ```swift
 protocol ContentCardCustomizing {
@@ -32,7 +32,7 @@ protocol ContentCardCustomizing {
 
 ### customize
 
-Customize content cards with [SmallImageTemplate](../PublicClasses/Template/smallimage-template.md).
+Customize content cards with [SmallImageTemplate](../templates/smallimage-template.md).
 
 #### Parameters
 
@@ -40,10 +40,10 @@ Customize content cards with [SmallImageTemplate](../PublicClasses/Template/smal
 
 #### Syntax
 
-<CodeBlock slots="heading, code" repeat="1" languages="Swift" />
+<CodeBlock slots="heading, code" repeat="1" />
 
 #### Swift
 
-``` swift
+```swift
 func customize(template: SmallImageTemplate)
 ```

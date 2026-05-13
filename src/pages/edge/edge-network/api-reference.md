@@ -6,48 +6,184 @@ keywords:
 - Edge Network
 ---
 
-import Alerts from '/src/pages/resources/alerts.md'
-import Tabs from './tabs/api-reference.md'
-
 # Edge Network API reference
 
 ## extensionVersion
 
 Returns the version of the client-side Edge extension.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&api=extension-version"/>
+### Syntax
 
-iOS
+```java
+public static String extensionVersion();
+```
 
-<Tabs query="platform=ios&api=extension-version"/>
+### Example
+
+```java
+String extensionVersion = Edge.extensionVersion();
+```
+
+### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+### Example
+
+```java
+val extensionVersion = EdgeBridge.extensionVersion()
+```
+
+### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+### Syntax
+
+```swift
+static let extensionVersion
+```
+
+### Example
+
+```swift
+let extensionVersion = Edge.extensionVersion
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+### Syntax
+
+```objectivec
++ (nonnull NSString*) extensionVersion;
+```
+
+### Example
+
+```objectivec
+NSString *extensionVersion = [AEPMobileEdge extensionVersion];
+```
 
 ## getLocationHint
 
 Gets the Edge Network location hint used in requests to the Adobe Experience Platform Edge Network. The Edge Network location hint may be used when building the URL for Adobe Experience Platform Edge Network requests to hint at the server cluster to use.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+* _callback_ is invoked with the location hint. The location hint value may be null if the location hint expired or was not set. The callback may be invoked on a different thread. If `AdobeCallbackWithError` is provided, the default timeout is 1000ms and the `fail` method is called if the operation times out or an unexpected error occurs.
 
-<Tabs query="platform=android&api=get-location-hint"/>
+<CodeBlock slots="heading, code" repeat="2" />
 
-iOS
+### Syntax
 
-<Tabs query="platform=ios&api=get-location-hint"/>
+```java
+public static void getLocationHint(final AdobeCallback<String> callback)
+```
+
+### Example
+
+```java
+Edge.getLocationHint(new AdobeCallbackWithError<String>() {
+    @Override
+    public void call(final String hint) {
+        // Handle the hint here
+    }
+
+    @Override
+    public void fail(AdobeError adobeError) {
+        // Handle the error here
+    }
+});
+```
+
+### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+### Example
+
+```java
+Edge.getLocationHint(object: AdobeCallbackWithError<String> {
+    override fun call(hint: String) {
+      // Handle the hint here
+    }
+    override fun fail(error: AdobeError?) {
+      // Handle the error here
+    }
+})
+```
+
+### iOS Swift
+
+* _completion_ is invoked with the location hint, or an `AEPError` if the request times out or an unexpected error occurs. The location hint value may be nil if the location hint expired or was not set. The default timeout is 1000ms. The completion handler may be invoked on a different thread.
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+### Syntax
+
+```swift
+static func getLocationHint(completion: @escaping (String?, Error?) -> Void)
+```
+
+### Example
+
+```swift
+Edge.getLocationHint { (hint, error) in
+  if let error = error {
+    // Handle the error here
+  } else {
+    // Handle the location hint here
+  }
+}
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+### Syntax
+
+```objectivec
++ (void) getLocationHint:^(NSString * _Nullable hint, NSError * _Nullable error)completion
+```
+
+### Example
+
+```objectivec
+[AEPMobileEdge getLocationHint:^(NSString *hint, NSError *error) {
+    // handle the error and the hint here
+}];
+```
 
 ## registerExtension
 
-<Alerts query="platform=android-register-extension&componentClass=InlineNestedAlert"/>
+<InlineAlert variant="warning" slots="text1, text2"/>
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the Android mobile extension.
 
-Android
+Use [`MobileCore.registerExtensions()`](../../home/base/mobile-core/api-reference.md#registerextensions) API instead.
 
-<Tabs query="platform=android&api=register-extension"/>
+### Android Java
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+### Syntax
+
+```java
+public static void registerExtension();
+```
+
+### Example
+
+```java
+Edge.registerExtension();
+```
 
 ## resetIdentities
 
@@ -68,15 +204,378 @@ The process involves two steps:
 1. Define your Datastream configuration overrides on the [datastream configuration page](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html).
 2. Send these overrides to the Edge Network using the `sendEvent` API.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+* _experienceEvent_ - the XDM [Experience Event](#experienceevent) to be sent to Adobe Experience Platform Edge Network
+* _completion_ - optional callback to be invoked when the request is complete, returning the associated [EdgeEventHandle(s)](#edgeeventhandle) received from the Adobe Experience Platform Edge Network. It may be invoked on a different thread.
 
-<Tabs query="platform=android&api=send-event"/>
+<CodeBlock slots="heading, code" repeat="6" />
 
-iOS
+### Syntax
 
-<Tabs query="platform=ios&api=send-event"/>
+```java
+public static void sendEvent(final ExperienceEvent experienceEvent,
+                             final EdgeCallback callback);
+```
+
+### Example
+
+```java
+// Create Experience Event from map
+Map<String, Object> xdmData = new HashMap<>();
+xdmData.put("eventType", "SampleXDMEvent");
+xdmData.put("sample", "data");
+
+ExperienceEvent experienceEvent = new ExperienceEvent.Builder()
+  .setXdmSchema(xdmData)
+  .build();
+```
+
+### Example 1
+
+```java
+// Example 1 - send the Experience Event without handling the Edge Network response
+Edge.sendEvent(experienceEvent, null);
+```
+
+### Example 2
+
+```java
+// Example 2 - send the Experience Event and handle the Edge Network response onComplete
+Edge.sendEvent(experienceEvent, new EdgeCallback() {
+  @Override
+  public void onComplete(final List<EdgeEventHandle> handles) {
+        // Handle the Edge Network response
+  }
+});
+```
+
+#### Example with Datastream ID override
+
+```java
+// Create experience event from Map
+Map<String, Object> xdmData = new HashMap<>();
+xdmData.put("eventType", "SampleXDMEvent");
+xdmData.put("sample", "data");
+
+ExperienceEvent experienceEvent = new ExperienceEvent.Builder()
+  .setXdmSchema(xdmData)
+  .setDatastreamIdOverride("SampleDatastreamId")
+  .build();
+
+Edge.sendEvent(experienceEvent, new EdgeCallback() {
+  @Override
+  public void onComplete(final List<EdgeEventHandle> handles) {
+    // Handle the Edge Network response
+  }
+});
+```
+
+#### Example with Datastream config override
+
+```java
+// ----------------- Datastream config overrides map start -----------------
+Map<String, Object> configOverrides = new HashMap<>();
+
+// com_adobe_experience_platform
+Map<String, Object> experiencePlatform = new HashMap<>();
+Map<String, Object> datasets = new HashMap<>();
+
+Map<String, Object> eventDataset = new HashMap<>();
+eventDataset.put("datasetId", "SampleEventDatasetIdOverride");
+
+datasets.put("event", eventDataset);
+
+experiencePlatform.put("datasets", datasets);
+configOverrides.put("com_adobe_experience_platform", experiencePlatform);
+
+// com_adobe_analytics
+Map<String, Object> analytics = new HashMap<>();
+analytics.put("reportSuites", new String[]{"rsid1", "rsid2", "rsid3"});
+configOverrides.put("com_adobe_analytics", analytics);
+
+// com_adobe_identity
+Map<String, Object> identity = new HashMap<>();
+identity.put("idSyncContainerId", "1234567");
+configOverrides.put("com_adobe_identity", identity);
+
+// com_adobe_target
+Map<String, Object> target = new HashMap<>();
+target.put("propertyToken", "SamplePropertyToken");
+configOverrides.put("com_adobe_target", target);
+// ----------------- Datastream config overrides map end -----------------
+
+// Create experience event from Map
+Map<String, Object> xdmData = new HashMap<>();
+xdmData.put("eventType", "SampleXDMEvent");
+xdmData.put("sample", "data");
+
+ExperienceEvent experienceEvent = new ExperienceEvent.Builder()
+  .setXdmSchema(xdmData)
+  .setDatastreamConfigOverride(configOverrides)
+  .build();
+
+Edge.sendEvent(experienceEvent, new EdgeCallback() {
+  @Override
+  public void onComplete(final List<EdgeEventHandle> handles) {
+    // Handle the Edge Network response
+  }
+});
+```
+
+### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="5" />
+
+### Example
+
+```kotlin
+// Create Experience Event from map
+val xdmData = mutableMapOf<String, Any>()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
+
+val experienceEvent = ExperienceEvent.Builder()
+  .setXdmSchema(xdmData)
+  .build()
+```
+### Example 1
+
+```kotlin
+// Example 1 - send the Experience Event without handling the Edge Network response
+Edge.sendEvent(experienceEvent, null)
+```
+### Example 2
+
+```kotlin
+// Example 2 - send the Experience Event and handle the Edge Network response onComplete
+Edge.sendEvent(experienceEvent) {
+  // Handle the Edge Network response
+}
+```
+
+#### Example with Datastream ID override
+
+```kotlin
+// Create experience event from Map
+val xdmData = mutableMapOf<String, Any>()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
+
+val experienceEvent = ExperienceEvent.Builder()
+  .setXdmSchema(xdmData)
+  .setDatastreamIdOverride("SampleDatastreamId")
+  .build()
+
+Edge.sendEvent(experienceEvent) {
+  // Handle the Edge Network response
+}
+```
+
+#### Example with Datastream config override
+
+```kotlin
+// Create experience event from Map
+val xdmData = mutableMapOf<String, Any>()
+xdmData["eventType"] = "SampleXDMEvent"
+xdmData["sample"] = "data"
+
+val configOverrides = mapOf(
+                "com_adobe_experience_platform" to mapOf(
+                    "datasets" to mapOf(
+                        "event" to mapOf("datasetId" to "SampleEventDatasetIdOverride")
+                    )
+                ),
+                "com_adobe_analytics" to mapOf(
+                    "reportSuites" to listOf("rsid1", "rsid2", "rsid3")
+                ),
+                "com_adobe_identity" to mapOf(
+                    "idSyncContainerId" to "1234567"
+                ),
+                "com_adobe_target" to mapOf(
+                    "propertyToken" to "SamplePropertyToken"
+                )
+            )
+
+val experienceEvent = ExperienceEvent.Builder()
+  .setXdmSchema(xdmData)
+  .setDatastreamConfigOverride(configOverrides)
+  .build()
+
+Edge.sendEvent(experienceEvent) {
+  // Handle the Edge Network response
+}
+```
+
+### iOS Swift
+
+* _experienceEvent_ - the XDM [Experience Event](#experienceevent) to be sent to Adobe Experience Platform Edge Network
+* _completion_ - optional callback to be invoked when the request is complete, returning the associated [EdgeEventHandle(s)](#edgeeventhandle) received from the Adobe Experience Platform Edge Network. It may be invoked on a different thread.
+
+<CodeBlock slots="heading, code" repeat="6" />
+
+### Syntax
+
+```swift
+static func sendEvent(experienceEvent: ExperienceEvent, _ completion: (([EdgeEventHandle]) -> Void)? = nil)
+```
+
+### Example
+
+```swift
+// Create Experience Event from dictionary:
+var xdmData : [String: Any] = ["eventType" : "SampleXDMEvent",
+                              "sample": "data"]
+let experienceEvent = ExperienceEvent(xdm: xdmData)
+```
+
+### Example 1
+
+```swift
+// Example 1 - send the Experience Event without handling the Edge Network response
+Edge.sendEvent(experienceEvent: experienceEvent)
+```
+
+### Example 2
+
+```swift
+// Example 2 - send the Experience Event and handle the Edge Network response onComplete
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+  // Handle the Edge Network response
+}
+```
+
+#### Example with Datastream ID override
+
+```swift
+// Create Experience event from dictionary
+var xdmData : [String: Any] = ["eventType" : "SampleXDMEvent",
+                              "sample": "data"]
+let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamIdOverride: "SampleDatastreamId")
+
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+  // Handle the Edge Network response
+}
+```
+
+#### Example with Datastream config override
+
+```swift
+// Create Experience event from dictionary
+var xdmData : [String: Any] = ["eventType" : "SampleXDMEvent",
+                              "sample": "data"]
+
+let configOverrides: [String: Any] = [
+                                        "com_adobe_experience_platform": [
+                                          "datasets": [
+                                            "event": [
+                                              "datasetId": "SampleEventDatasetIdOverride"
+                                            ]
+                                          ]
+                                        ],
+                                        "com_adobe_analytics": [
+                                          "reportSuites": [
+                                            "rsid1",
+                                            "rsid2",
+                                            "rsid3"
+                                            ]
+                                        ],
+                                        "com_adobe_identity": [
+                                          "idSyncContainerId": "1234567"
+                                        ],
+                                        "com_adobe_target": [
+                                          "propertyToken": "SamplePropertyToken"
+                                        ]
+                                      ]
+
+let experienceEvent = ExperienceEvent(xdm: xdmData, datastreamConfigOverride: configOverrides)
+
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+  // Handle the Edge Network response
+}
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="6" />
+
+### Syntax
+
+```objectivec
++ (void) sendExperienceEvent:(AEPExperienceEvent * _Nonnull) completion:^(NSArray<AEPEdgeEventHandle *> * _Nonnull)completion
+```
+
+### Example
+
+```objectivec
+// Create Experience Event from dictionary:
+NSDictionary *xdmData = @{ @"eventType" : @"SampleXDMEvent"};
+NSDictionary *data = @{ @"sample" : @"data"};
+```
+
+### Example 1
+
+```objectivec
+// Example 1 - send the Experience Event without handling the Edge Network response
+[AEPMobileEdge sendExperienceEvent:event completion:nil];
+```
+
+### Example 2
+
+```objectivec
+// Example 2 - send the Experience Event and handle the Edge Network response onComplete
+[AEPMobileEdge sendExperienceEvent:event completion:^(NSArray<AEPEdgeEventHandle *> * _Nonnull handles) {
+  // handle the Edge Network response
+}];
+```
+
+#### Example with Datastream ID override
+
+```objectivec
+// Create Experience event from dictionary:
+NSDictionary *xdmData = @{ @"eventType" : @"SampleXDMEvent"};
+NSDictionary *data = @{ @"sample" : @"data"};
+AEPExperienceEvent* event = [[AEPExperienceEvent alloc]initWithXdm:xdmData data:data datastreamIdOverride: @"SampleDatastreamIdOverride"];
+
+[AEPMobileEdge sendExperienceEvent:event completion:^(NSArray<AEPEdgeEventHandle *> * _Nonnull handles) {
+  // Handle the Edge Network response
+}];
+```
+
+#### Example with Datastream config override
+
+```objectivec
+// Create Experience event from dictionary:
+NSDictionary *xdmData = @{ @"eventType" : @"SampleXDMEvent"};
+NSDictionary *data = @{ @"sample" : @"data"};
+NSDictionary *configOverrides = @{ @"com_adobe_experience_platform" : @{
+                                    @"datasets" : @{
+                                        @"event" : @{
+                                          @"datasetId": @"SampleEventDatasetIdOverride"
+                                        }
+                                      }
+                                    },
+                                    @"com_adobe_analytics" : @{
+                                      @"reportSuites" : @[
+                                        @"rsid1",
+                                        @"rsid2",
+                                        @"rsid3",
+                                      ]
+                                    },
+                                    @"com_adobe_identity" : @{
+                                      @"idSyncContainerId": @"1234567"
+                                    },
+                                    @"com_adobe_target" : @{
+                                      @"propertyToken": @"SamplePropertyToken"
+                                    }
+                                  }
+
+AEPExperienceEvent* event = [[AEPExperienceEvent alloc]initWithXdm:xdmData data:data datastreamConfigOverride: configOverrides];
+
+[AEPMobileEdge sendExperienceEvent:event completion:^(NSArray<AEPEdgeEventHandle *> * _Nonnull handles) {
+  // Handle the Edge Network response
+}];
+```
 
 ## setLocationHint
 
@@ -86,15 +585,68 @@ Sets the Edge Network location hint used in requests to the Adobe Experience Pla
 
 Use caution when setting the location hint. Only use location hints for the "EdgeNetwork" scope. An incorrect location hint value will cause all Edge Network requests to fail with 404 response code.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+* _hint_ the Edge Network location hint to use when connecting to the Adobe Experience Platform Edge Network.
 
-<Tabs query="platform=android&api=set-location-hint"/>
+<CodeBlock slots="heading, code" repeat="2" />
 
-iOS
+### Syntax
 
-<Tabs query="platform=ios&api=set-location-hint"/>
+```java
+public static void setLocationHint(final String hint)
+```
+
+### Example
+
+```java
+Edge.setLocationHint(hint);
+```
+
+### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+### Example
+
+```java
+Edge.setLocationHint(hint)
+```
+
+### iOS Swift
+
+* _hint_ the Edge Network location hint to use when connecting to the Adobe Experience Platform Edge Network.
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+### Syntax
+
+```swift
+@objc(setLocationHint:)
+public static func setLocationHint(_ hint: String?)
+```
+
+### Example
+
+```swift
+Edge.setLocationHint(hint)
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+### Syntax
+
+```objectivec
++ (void) setLocationHint: (NSString * _Nullable hint);
+```
+
+### Example
+
+```objectivec
+[AEPMobileEdge setLocationHint:hint];
+```
 
 ## Public classes
 
@@ -102,30 +654,115 @@ iOS
 
 The AEP Edge extension provides the Schema and Property interfaces (Android) / XDMSchema protocol (iOS) that can be used to define the classes associated with your XDM schema in Adobe Experience Platform.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Java
 
-Android
+```java
+/**
+ * The interface that represents an Experience XDM event data schema.
+ */
+public interface Schema {
 
-<Tabs query="platform=android&api=xdm-schema"/>
+    /**
+     * Returns the version of this schema as defined in the Adobe Experience Platform.
+     * @return the version of this schema.
+     */
+    String getSchemaVersion();
 
-iOS
+    /**
+     * Returns the identifier for this schema as defined in the Adobe Experience Platform.
+     * The identifier is a URI where this schema is defined.
+     * @return the URI identifier for this schema.
+     */
+    String getSchemaIdentifier();
 
-<Tabs query="platform=ios&api=xdm-schema"/>
+    /**
+     * Returns the identifier for this dataset as defined in the Adobe Experience Platform.
+     * @return the dataset ID
+     */
+    String getDatasetIdentifier();
+
+    /**
+     * Serialize this {@code Schema} object to a map with the same format as its XDM schema.
+     * @return the XDM-formatted map of this {@code Schema} object.
+     */
+    Map<String, Object> serializeToXdm();
+}
+```
+
+By implementing the **Property** interface, you can define complex properties for your XDM Schema. A complex property is defined as not being a primitive type, String, or Date.
+
+```java
+public interface Property {
+
+    /**
+     * Serialize this {@code Property} object to a map with the same format as its XDM schema.
+     * @return XDM-formatted map of this {@code Property} object.
+     */
+    Map<String, Object> serializeToXdm();
+}
+```
+
+When defining your custom XDM schema(s), implement these interfaces to ensure that the AEP Edge extension successfully serializes the provided data before sending it to Adobe Experience Platform Edge Network.
+
+#### iOS Swift
+
+```swift
+/// An interface representing a Platform XDM Event Data schema.
+public protocol XDMSchema: Encodable {
+
+    /// Returns the version of this schema as defined in the Adobe Experience Platform.
+    /// - Returns: The version of this schema
+    var schemaVersion: String { get }
+
+    /// Returns the identifier for this schema as defined in the Adobe Experience Platform.
+    /// The identifier is a URI where this schema is defined.
+    /// - Returns: The URI identifier for this schema
+    var schemaIdentifier: String { get }
+
+    /// Returns the identifier for this dataset as defined in the Adobe Experience Platform.
+    /// This is a system generated identifier for the Dataset the event belongs to.
+    /// - Returns: The  identifier as a String for this dataset
+    var datasetIdentifier: String { get }
+}
+```
 
 ### EdgeEventHandle
 
 The `EdgeEventHandle` is a response fragment from Adobe Experience Platform Edge Network for a sent XDM Experience Event.
 One event can receive none, one or multiple `EdgeEventHandle`(s) as response.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Java
 
-Android
+```java
+/**
+ * The {@link EdgeEventHandle} is a response fragment from Adobe Experience Edge Service for a sent XDM Experience Event.
+ * One event can receive none, one or multiple {@link EdgeEventHandle}(s) as response.
+ */
+public class EdgeEventHandle {
+  /**
+   * @return the payload type or null if not found in the {@link JSONObject} response
+   */
+  public String getType() {...}
 
-<Tabs query="platform=android&api=edge-event-handle"/>
+  /**
+   * @return the event payload values for this {@link EdgeEventHandle} or null if not found in the {@link JSONObject} response
+   */
+  public List<Map<String, Object>> getPayload() {...}
+}
+```
 
-iOS
+#### iOS Swift
 
-<Tabs query="platform=ios&api=edge-event-handle"/>
+```swift
+@objc(AEPEdgeEventHandle)
+public class EdgeEventHandle: NSObject, Codable {
+    /// Payload type
+    @objc public let type: String?
+
+    /// Event payload values
+    @objc public let payload: [[String: Any]]?
+}
+```
 
 Use this class when calling the [sendEvent](#sendevent) API with EdgeCallback.
 
@@ -134,14 +771,322 @@ Use this class when calling the [sendEvent](#sendevent) API with EdgeCallback.
 Experience Event is the event to be sent to Adobe Experience Platform Edge Network.
 The XDM data is required for any Experience Event being sent using the Edge extension.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="4" />
 
-<Tabs query="platform=android&api=experience-event"/>
+#### Syntax 
 
-iOS
+```Java
+public final class ExperienceEvent {
 
-<Tabs query="platform=ios&api=experience-event"/>
+  public static class Builder {
+    ...
+
+    public Builder() {
+      ...
+    }
+
+    /**
+    * Sets free form data associated with this event to be passed to Adobe Experience Edge.
+    *
+    * @param data free form data, JSON like types are accepted
+    * @return instance of current builder
+    * @throws UnsupportedOperationException if this instance was already built
+    */
+    public Builder setData(final Map<String, Object> data) {...}
+
+    /**
+    * Solution specific XDM event data for this event.
+    *
+    * @param xdm {@link Schema} information
+    * @return instance of current builder
+    * @throws UnsupportedOperationException if this instance was already built
+    */
+    public Builder setXdmSchema(final Schema xdm) {...}
+
+    /**
+    * Solution specific XDM event data and dataset identifier for this event.
+    *
+    * @param xdm {@code Map<String, Object>} of raw XDM schema data
+    * @param datasetIdentifier The Experience Platform dataset identifier where this event is sent.
+    *                          If not provided, the default dataset defined in the configuration ID is used
+    * @return instance of current builder
+    * @throws UnsupportedOperationException if this instance was already built
+    */
+    public Builder setXdmSchema(final Map<String, Object> xdm, final String datasetIdentifier) {...}
+
+    /**
+    * Solution specific XDM event data for this event, passed as raw mapping of keys and
+    * Object values.
+    *
+    * @param xdm {@code Map<String, Object>} of raw XDM schema data
+    * @return instance of current builder
+    * @throws UnsupportedOperationException if this instance was already built
+    */
+    public Builder setXdmSchema(final Map<String, Object> xdm) {...}
+
+    /**
+    * Override the default datastream identifier to send this event's data to a different datastream.
+    *
+    * When using {@link Edge#sendEvent}, this event is sent to the Experience Platform using the
+    * datastream identifier {@code datastreamIdOverride} instead of the default Experience Edge
+    * configuration ID set in the SDK Configuration key {@code edge.configId}.
+    *
+    * @param datastreamIdOverride Datastream identifier to override the default datastream identifier set in the Edge configuration
+    * @return instance of current builder
+    * @throws UnsupportedOperationException if this instance was already built
+    *
+    */
+    public Builder setDatastreamIdOverride(final String datastreamIdOverride) {...}
+
+    /**
+    * Override the default datastream configuration settings for individual services for this event.
+    *
+    * When using {@link Edge#sendEvent}, this event is sent to the Experience Platform along with the
+    * datastream overrides defined in {@code datastreamConfigOverride}.
+    *
+    * @param datastreamConfigOverride Map defining datastream configuration overrides for this Experience Event
+    * @return instance of current builder
+    * @throws UnsupportedOperationException if this instance was already built
+    */
+    public Builder setDatastreamConfigOverride(final Map<String, Object> datastreamConfigOverride) {...}
+
+    /**
+    * Builds and returns a new instance of {@code ExperienceEvent}.
+    *
+    * @return a new instance of {@code ExperienceEvent} or null if one of the required parameters is missing
+    * @throws UnsupportedOperationException if this instance was already built
+    */
+    public ExperienceEvent build() {...}
+  }
+
+  public Map<String, Object> getData() {...}
+
+  public Map<String, Object> getXdmSchema() {...}
+
+  public String getDatastreamIdOverride() {...}
+
+  public Map<String, Object> getDatastreamConfigOverride() {...}
+}
+```
+
+#### Examples 1
+
+```java
+// Example 1
+// Create Experience Event with both XDM and freeform data using maps
+Map<String, Object> xdmData = new HashMap<>();
+xdmData.put("eventType", "SampleXDMEvent");
+xdmData.put("sample", "data");
+
+Map<String, Object> data = new HashMap<>();
+data.put("free", "form");
+data.put("data", "example");
+
+ExperienceEvent experienceEvent = new ExperienceEvent.Builder()
+  .setXdmSchema(xdmData)
+  .setData(data)
+  .build();
+```
+
+#### Examples 2
+
+```java
+// Example 2
+// Create Experience Event from XDM Schema implementation
+public class XDMSchemaExample implements com.adobe.marketing.mobile.xdm.Schema {
+  private String eventType;
+  private String otherField;
+      ...
+
+      public String getEventType() {
+        return this.eventType;
+      }
+
+      public void setEventType(final String newValue) {
+        this.eventType = newValue;
+      }
+
+      public String getOtherField() {
+        return this.otherField;
+      }
+
+      public void setOtherField(final String newValue) {
+        this.otherField = newValue;
+      }
+      }
+
+// Create Experience Event from Schema
+XDMSchemaExample xdmData = new XDMSchemaExample();
+xdmData.setEventType("SampleXDMEvent");
+xdmData.setOtherField("OtherFieldValue");
+
+ExperienceEvent experienceEvent = new ExperienceEvent.Builder()
+  .setXdmSchema(xdmData)
+  .build();
+```
+
+#### Examples 3
+
+```java
+// Example 3
+// Set the destination Dataset identifier to the current Experience Event
+Map<String, Object> xdmData = new HashMap<>();
+xdmData.put("eventType", "SampleXDMEvent");
+xdmData.put("sample", "data");
+
+ExperienceEvent experienceEvent = new ExperienceEvent.Builder()
+  .setXdmSchema(xdmData, "datasetIdExample")
+  .build();
+```
+
+#### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="4" />
+
+#### Syntax
+
+```swift
+@objc(AEPExperienceEvent)
+public class ExperienceEvent: NSObject {
+
+    /// XDM formatted data, use an `XDMSchema` implementation for a better XDM data injection and format control
+    @objc public let xdm: [String: Any]?
+
+    /// Optional free-form data associated with this event
+    @objc public let data: [String: Any]?
+
+    /// Datastream identifier used to override the default datastream identifier set in the Edge configuration for this event
+    @objc public private(set) var datastreamIdOverride: String?
+
+    /// Datastream configuration used to override individual settings from the default datastream configuration for this event
+    @objc public private(set) var datastreamConfigOverride: [String: Any]?
+
+    /// Adobe Experience Platform dataset identifier, if not set the default dataset identifier set in the Edge Configuration is used
+    @objc public let datasetIdentifier: String?
+
+    /// Initialize an Experience Event with the provided event data
+    /// - Parameters:
+    ///   - xdm:  XDM formatted data for this event, passed as a raw XDM Schema data dictionary.
+    ///   - data: Any free form data in a [String : Any] dictionary structure.
+    @objc public init(xdm: [String: Any], data: [String: Any]? = nil) {...}
+
+    /// Initialize an Experience Event with the provided event data
+    /// - Parameters:
+    ///   - xdm:  XDM formatted data for this event, passed as a raw XDM Schema data dictionary.
+    ///   - data: Any free form data in a [String : Any] dictionary structure.
+    ///   - datasetIdentifier: The Experience Platform dataset identifier where this event should be sent to; if not provided, the default dataset identifier set in the Edge configuration is used
+    @objc public convenience init(xdm: [String: Any], data: [String: Any]? = nil, datasetIdentifier: String? = nil) {...}
+
+    /// Initialize an Experience Event with the provided event data
+    /// - Parameters:
+    ///   - xdm:  XDM formatted data for this event, passed as a raw XDM Schema data dictionary.
+    ///   - data: Any free form data in a [String : Any] dictionary structure.
+    ///   - datastreamIdOverride: Datastream identifier used to override the default datastream identifier set in the Edge configuration for this event.
+    ///   - datastreamConfigOverride: Datastream configuration used to override individual settings from the default datastream configuration for this event.
+    @objc public convenience init(xdm: [String: Any], data: [String: Any]? = nil, datastreamIdOverride: String? = nil, datastreamConfigOverride: [String: Any]? = nil) {...}
+
+    /// Initialize an Experience Event with the provided event data
+    /// - Parameters:
+    ///   - xdm: XDM formatted event data passed as an XDMSchema
+    ///   - data: Any free form data in a [String : Any] dictionary structure.
+    public init(xdm: XDMSchema, data: [String: Any]? = nil) {...}
+
+    /// Initialize an Experience Event with the provided event data
+    /// - Parameters:
+    ///   - xdm: XDM formatted event data passed as an XDMSchema
+    ///   - data: Any free form data in a [String : Any] dictionary structure.
+    ///   - datastreamIdOverride: Datastream identifier used to override the default datastream identifier set in the Edge configuration for this event.
+    ///   - datastreamConfigOverride: Datastream configuration used to override individual settings from the default datastream configuration for this event.
+    public convenience init(xdm: XDMSchema, data: [String: Any]? = nil, datastreamIdOverride: String? = nil, datastreamConfigOverride: [String: Any]? = nil) {...}
+}
+```
+
+##### Examples 1
+
+```swift
+// Example 1
+// Create Experience Event with both XDM and freeform data using dictionaries
+var xdmData : [String: Any] = ["eventType" : "SampleXDMEvent",
+                              "sample": "data"]
+
+let experienceEvent = ExperienceEvent(xdm: xdmData, data: ["free": "form", "data": "example"])
+```
+
+##### Examples 2
+
+```swift
+// Example 2
+// Create Experience Event from XDM Schema implementation
+import AEPEdge
+
+public struct XDMSchemaExample : XDMSchema {
+    public let schemaVersion = "1.0" // Returns the version of this schema as defined in the Adobe Experience Platform.
+    public let schemaIdentifier = "" // The URI identifier for this schema
+    public let datasetIdentifier = "" // The identifier for the Dataset this event belongs to.
+
+    public init() {}
+
+    public var eventType: String?
+    public var otherField: String?
+
+    enum CodingKeys: String, CodingKey {
+    case eventType = "eventType"
+    case otherField = "otherField"
+    }
+}
+
+extension XDMSchemaExample {
+    public func encode(to encoder: Encoder) throws {
+      var container = encoder.container(keyedBy: CodingKeys.self)
+      if let unwrapped = eventType { try container.encode(unwrapped, forKey: .eventType) }
+      if let unwrapped = otherField { try container.encode(unwrapped, forKey: .otherField) }
+    }
+}
+...
+
+// Create Experience Event from XDMSchema
+var xdmData = XDMSchemaExample()
+xdmData.eventType = "SampleXDMEvent"
+xdm.otherField = "OtherFieldValue"
+let event = ExperienceEvent(xdm: xdmData)
+```
+
+##### Examples 3
+
+```swift
+// Example 3
+// Set the destination Dataset identifier to the current Experience Event
+var xdmData : [String: Any] = ["eventType" : "SampleXDMEvent",
+                              "sample": "data"]
+
+let experienceEvent = ExperienceEvent(xdm: xdmData, datasetIdentifier: "datasetIdExample")
+```
+
+#### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+##### Example 1
+
+```objectivec
+// Example 1
+// Create Experience Event with both XDM and freeform data using dictionaries
+NSDictionary *xdmData = @{ @"eventType" : @"SampleXDMEvent"};
+NSDictionary *data = @{ @"sample" : @"data"};
+
+AEPExperienceEvent* event = [[AEPExperienceEvent alloc]initWithXdm:xdmData data:data];
+```
+
+##### Example 2
+
+```objectivec
+// Example 2
+// Set the destination Dataset identifier to the current Experience Event
+NSDictionary *xdmData = @{ @"eventType" : @"SampleXDMEvent"};
+
+AEPExperienceEvent *event = [[AEPExperienceEvent alloc] initWithXdm:xdmData data:nil datasetIdentifier:@"datasetIdExample"];
+```
 
 See [Edge Extension Usage](https://github.com/adobe/aepsdk-edge-ios/blob/main/Documentation/extension-usage.md) for more examples.

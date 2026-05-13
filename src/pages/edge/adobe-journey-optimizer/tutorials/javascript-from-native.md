@@ -29,6 +29,7 @@ For more detailed instructions on implementing and using a MessagingDelegate, pl
 In the `shouldShowMessage` function of the `MessagingDelegate`, get a reference to the web view used by the message.
 
 On Android, the web view is represented as `WebView`.
+
 ### Android Java
 
 ```java
@@ -44,6 +45,7 @@ public boolean shouldShowMessage(FullscreenMessage fullscreenMessage) {
 ```
 
 On iOS, the web view is represented as `WKWebView`.
+
 ### iOS Swift
 
 ```swift
@@ -63,6 +65,7 @@ func shouldShowMessage(message: Showable) -> Bool {
 With a reference to the `WebView`, the instance method `public void evaluateJavascript(@NonNull String script, @Nullable ValueCallback<String> resultCallback)` can now be leveraged to call a JavaScript method.
 
 Further details of this API are explained in the [Android documentation](https://developer.android.com/reference/android/webkit/WebView#evaluateJavascript(java.lang.String,%20android.webkit.ValueCallback%3Cjava.lang.String%3E)) - the example below is provided for the purpose of demonstration:
+
 ### Android Java
 
 ```java
@@ -92,6 +95,7 @@ public boolean shouldShowMessage(FullscreenMessage fullscreenMessage) {
 With a reference to the `WKWebView`, the instance method `evaluateJavaScript(_:completionHandler:)` can now be leveraged to call a JavaScript method.
 
 Further details of this API are explained in the [Apple documentation](https://developer.apple.com/documentation/webkit/wkwebview/1415017-evaluateJavaScript) - the example below is provided for the purpose of demonstration:
+
 ### iOS Swift
 
 ```swift

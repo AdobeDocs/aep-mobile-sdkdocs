@@ -10,29 +10,25 @@ keywords:
 
 ## Android
 
-<InlineAlert variant="info" slots="text"/>
+<InlineAlert variant="info" slots="text1, text2"/>
 
-**Migrate to latest Mobile SDKs for Android**<br/>If you are currently using older SDK versions, please see the [Migrating to latest Mobile SDKs for Android](../resources/migration/android/index.md) guide for next steps.
+**Migrate to latest Mobile SDKs for Android**
 
-<InlineAlert variant="info" slots="text"/>
+If you are currently using older SDK versions, please see the [Migrating to latest Mobile SDKs for Android](../resources/migration/android/index.md) guide for next steps.
 
-**Start using the BOM artifact for Android**<br/> The Adobe SDK BOM artifact enables managing all compatible versions of Adobe Experience Platform Android extensions by specifying a single BOM version. This is now the recommended way to manage Android SDKs. For the installation instructions, see the steps to [add dependencies to your project](getting-started/get-the-sdk.md#installation-instructions). The BOM project is open-sourced. For more information, please refer to the [README](https://github.com/adobe/aepsdk-commons/blob/main/android/aepsdk-bom/README.md) file located in the public repository.
+<InlineAlert variant="info" slots="text1, text2"/>
+
+**Start using the BOM artifact for Android**
+
+The Adobe SDK BOM artifact enables managing all compatible versions of Adobe Experience Platform Android extensions by specifying a single BOM version. This is now the recommended way to manage Android SDKs. For the installation instructions, see the steps to [add dependencies to your project](getting-started/get-the-sdk.md#installation-instructions). The BOM project is open-sourced. For more information, please refer to the [README](https://github.com/adobe/aepsdk-commons/blob/main/android/aepsdk-bom/README.md) file located in the public repository.
 
 ### Android BOM
 
-<div style="height:20px; width:120px;"></div>
-
-<div style="height:30px; width:140px;">
-<a href="https://mvnrepository.com/artifact/com.adobe.marketing.mobile/sdk-bom">
-<img src="https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/sdk-bom.svg?logo=android&logoColor=white&label=sdk-bom&style=flat-square" alt="descriptive text"/>
-</a>
-</div>
+[![sdk-bom](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/sdk-bom.svg?logo=android&logoColor=white&label=sdk-bom&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/sdk-bom)
 
 The Android BOM (Bill of Materials) artifact has been released to Maven Central. The above Maven Badge displays the latest BOM version. To obtain information about which Android extension versions are mapped to the latest BOM, refer to the [release notes](https://developer.adobe.com/client-sdks/home/release-notes/).
 
 ### Android extensions
-
-<div style="height:20px; width:120px;"></div>
 
 | Extension | Maven | Github | Testapp |
 |---|---|---|---|
@@ -62,9 +58,11 @@ The Android BOM (Bill of Materials) artifact has been released to Maven Central.
 
 ## iOS
 
-<InlineAlert variant="info" slots="text"/>
+<InlineAlert variant="info" slots="text1, text2"/>
 
-**Migrate to latest Mobile SDKs for iOS**<br/>If you are currently using older SDK versions, please see the [Migrating to latest Mobile SDKs for iOS](../resources/migration/ios/index.md) guide for next steps.
+**Migrate to latest Mobile SDKs for iOS**
+
+If you are currently using older SDK versions, please see the [Migrating to latest Mobile SDKs for iOS](../resources/migration/ios/index.md) guide for next steps.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -156,19 +154,11 @@ Please note that the Adobe Analytics extension is not supported in AEP-prefixed 
 
 ## Roku
 
-<div style="height:20px; width:120px;"></div>
-
-<div style="height:30px; width:140px;">
-<a href="https://github.com/adobe/aepsdk-roku/releases">
-<img src="https://img.shields.io/github/v/release/adobe/aepsdk-roku.svg?label=AEP%20Roku%20SDK&logo=github"/>
-</a>
-</div>
+[![AEP Roku SDK](https://img.shields.io/github/v/release/adobe/aepsdk-roku.svg?label=AEP%20Roku%20SDK&logo=github)](https://github.com/adobe/aepsdk-roku/releases)
 
 The Adobe Experience Platform SDK for Roku supports Roku OS 11.0 or later. The project is open sourced in GitHub. For more information, refer to the [aepsdk-roku](https://github.com/adobe/aepsdk-roku) repository.
 
 ## Vega OS
-
-<div style="height:20px; width:120px;"></div>
 
 | Extension | npmjs |
 |---|---|

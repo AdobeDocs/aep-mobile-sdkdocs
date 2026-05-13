@@ -11,7 +11,7 @@ keywords:
 
 This document outlines the various push notification payload keys used by the Adobe Journey Optimizer.
 
-### Android
+## Android
 
 * Adobe Journey Optimizer uses [data messages](https://firebase.google.com/docs/cloud-messaging/concept-options#data_messages) with custom key-value pairs to send push notifications to client apps.
 * When using [manual display and tracking](../android/manual-display-and-tracking.md), use the [MessagingPushPayload](../../public-classes/messaging-push-payload.md) class to extract the payload values.
@@ -58,7 +58,7 @@ This document outlines the various push notification payload keys used by the Ad
 | `adb_act.uri` | String | The URI for custom action button. |
 | `adb_act.type` | enum | The action type for custom action button. It can be one of the following values: `DEEPLINK`, `WEBURL`, `OPENAPP`. |
 
-### iOS
+## iOS
 
 ```json
 {

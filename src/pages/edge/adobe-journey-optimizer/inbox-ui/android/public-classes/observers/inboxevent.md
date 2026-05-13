@@ -21,7 +21,7 @@ Represents different types of inbox-level events triggered by lifecycle changes 
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 sealed class InboxEvent(open val inboxUIState: InboxUIState)
@@ -33,13 +33,13 @@ Event indicating that the inbox has been displayed to the user.
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 data class Display(override val inboxUIState: InboxUIState.Success) : InboxEvent(inboxUIState)
 ```
 
-#### Properties
+### Properties
 
 | Property | Type | Description |
 | -------- | ---- | ----------- |

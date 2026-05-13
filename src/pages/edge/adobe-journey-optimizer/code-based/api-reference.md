@@ -21,6 +21,9 @@ If a requested surface was not previously cached prior to calling `getPropositio
 
 ### Android Java
 
+* _surfaces_ is a list of surfaces for which propositions are requested.
+* _callback_ `call` method is invoked with propositions map of type `Map<Surface, List<Proposition>>`. If the callback is an instance of [AdobeCallbackWithError](../../../../home/base/mobile-core/api-reference.md#adobecallbackwitherror), and if the operation times out or an error occurs in retrieving propositions, the `fail` method is invoked with the appropriate [AdobeError](../../../../home/base/mobile-core/api-reference.md#adobeerror).
+
 <CodeBlock slots="heading, code" repeat="1" />
 
 ### Syntax
@@ -29,12 +32,11 @@ If a requested surface was not previously cached prior to calling `getPropositio
 public static void getPropositionsForSurfaces(@NonNull final List<Surface> surfaces, @NonNull final AdobeCallback<Map<Surface, List<Proposition>>> callback)
 ```
 
-* _surfaces_ is a list of surfaces for which propositions are requested.
-* _callback_ `call` method is invoked with propositions map of type `Map<Surface, List<Proposition>>`. If the callback is an instance of [AdobeCallbackWithError](../../../../home/base/mobile-core/api-reference.md#adobecallbackwitherror), and if the operation times out or an error occurs in retrieving propositions, the `fail` method is invoked with the appropriate [AdobeError](../../../../home/base/mobile-core/api-reference.md#adobeerror).
+### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
 
 ### Example
-
-### Android Kotlin
 
 ```kotlin
 val surface1 = Surface("myActivity#button")
@@ -57,6 +59,10 @@ Messaging.getPropositionsForSurfaces(surfaces) {
 ```
 
 ### Android Java
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+### Example
 
 ```java
 final Surface surface1 = new Surface("myActivity#button");
@@ -91,6 +97,9 @@ Messaging.getPropositionsForSurfaces(surfaces, new AdobeCallbackWithError<Map<Su
 
 ### iOS Swift
 
+* _surfaces_ is an array of surfaces for which propositions are requested.
+* _completion_ is invoked with propositions dictionary of type `[Surface: [Proposition]]`. An `Error` is returned if SDK fails to retrieve the propositions.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -98,9 +107,6 @@ Messaging.getPropositionsForSurfaces(surfaces, new AdobeCallbackWithError<Map<Su
 ```swift
 static func getPropositionsForSurfaces(_ surfacePaths: [Surface], _ completion: @escaping ([Surface: [Proposition]]?, Error?) -> Void)
 ```
-
-* _surfaces_ is an array of surfaces for which propositions are requested.
-* _completion_ is invoked with propositions dictionary of type `[Surface: [Proposition]]`. An `Error` is returned if SDK fails to retrieve the propositions.
 
 ### Example
 
@@ -132,6 +138,9 @@ Messaging.getPropositionsForSurfaces([surface1, surface2]) { propositionsDict, e
 
 ### iOS Objective-C
 
+* _surfaces_ is an array of surfaces for which propositions are requested.
+* _completion_ is invoked with propositions dictionary of type `NSDictionary<AEPSurface*, NSArray<AEPProposition*>*>`. An `NSError` is returned if SDK fails to retrieve the propositions.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -140,9 +149,6 @@ Messaging.getPropositionsForSurfaces([surface1, surface2]) { propositionsDict, e
 + (void) getPropositionsForSurfaces: (NSArray<AEPSurface*>* _Nonnull) surfaces 
               completion: (void (^ _Nonnull)(NSDictionary<AEPSurface*, NSArray<AEPProposition*>*>* _Nullable propositionsDict, NSError* _Nullable error)) completion;
 ```
-
-* _surfaces_ is an array of surfaces for which propositions are requested.
-* _completion_ is invoked with propositions dictionary of type `NSDictionary<AEPSurface*, NSArray<AEPProposition*>*>`. An `NSError` is returned if SDK fails to retrieve the propositions.
 
 ### Example
 
@@ -173,6 +179,8 @@ To retrieve previously cached decision propositions, use `getPropositionsForSurf
 
 ### Android Java
 
+* _surfaces_ is a list of surfaces for which propositions need updating.
+
 <CodeBlock slots="heading, code" repeat="1" />
 
 ### Syntax
@@ -181,11 +189,11 @@ To retrieve previously cached decision propositions, use `getPropositionsForSurf
 public static void updatePropositionsForSurfaces(@NonNull final List<Surface> surfaces)
 ```
 
-* _surfaces_ is a list of surfaces for which propositions need updating.
+### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
 
 ### Example
-
-### Android Kotlin
 
 ```kotlin
 val surface1 = Surface("myActivity#button")
@@ -196,6 +204,10 @@ Messaging.updatePropositionsForSurfaces(surfaces)
 ```
 
 ### Android Java
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+### Example
 
 ```java
 final Surface surface1 = new Surface("myActivity#button");
@@ -210,6 +222,8 @@ Messaging.updatePropositionsForSurfaces(surfaces)
 
 ### iOS Swift
 
+* _surfaces_ is an array of surfaces for which propositions need updating.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -217,8 +231,6 @@ Messaging.updatePropositionsForSurfaces(surfaces)
 ```swift
 static func updatePropositionsForSurfaces(_ surfaces: [Surface])
 ```
-
-* _surfaces_ is an array of surfaces for which propositions need updating.
 
 ### Example
 
@@ -231,6 +243,8 @@ Messaging.updatePropositionsForSurfaces([surface1, surface2])
 
 ### iOS Objective-C
 
+* _surfaces_ is an array of surfaces for which propositions need updating.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -238,8 +252,6 @@ Messaging.updatePropositionsForSurfaces([surface1, surface2])
 ```objc
 + (void) updatePropositionsForSurfaces: (NSArray<AEPSurface*>* _Nonnull) surfaces;
 ```
-
-* _surfaces_ is an array of surfaces for which propositions need updating.
 
 ### Example
 
@@ -260,6 +272,9 @@ To retrieve previously cached decision propositions, use `getPropositionsForSurf
 
 ### Android Java
 
+* _surfaces_ is a list of surfaces for which propositions need updating.
+* _callback_ `call` method is invoked with `true` if a network response was returned and successfully processed, `false` otherwise
+
 <CodeBlock slots="heading, code" repeat="1" />
 
 ### Syntax
@@ -268,12 +283,11 @@ To retrieve previously cached decision propositions, use `getPropositionsForSurf
 public static void updatePropositionsForSurfaces(@NonNull final List<Surface> surfaces, @Nullable final AdobeCallback<Boolean> callback)
 ```
 
-* _surfaces_ is a list of surfaces for which propositions need updating.
-* _callback_ `call` method is invoked with `true` if a network response was returned and successfully processed, `false` otherwise
+### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
 
 ### Example
-
-### Android Kotlin
 
 ```kotlin
 val surface1 = Surface("myActivity#button")
@@ -290,6 +304,10 @@ Messaging.updatePropositionsForSurfaces(surfaces) { success ->
 ```
 
 ### Android Java
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+### Example
 
 ```java
 final Surface surface1 = new Surface("myActivity#button");
@@ -310,6 +328,9 @@ Messaging.updatePropositionsForSurfaces(surfaces, success -> {
 
 ### iOS Swift
 
+* _surfaces_ is an array of surfaces for which propositions need updating.
+* _completion_ is invoked with `true` if a network response was returned and successfully processed, `false` otherwise
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -317,9 +338,6 @@ Messaging.updatePropositionsForSurfaces(surfaces, success -> {
 ```swift
 static func updatePropositionsForSurfaces(_ surfaces: [Surface], _ completion: ((Bool) -> Void)? = nil)
 ```
-
-* _surfaces_ is an array of surfaces for which propositions need updating.
-* _completion_ is invoked with `true` if a network response was returned and successfully processed, `false` otherwise
 
 ### Example
 
@@ -338,6 +356,9 @@ Messaging.updatePropositionsForSurfaces([surface1, surface2]) { success in
 
 ### iOS Objective-C
 
+* _surfaces_ is an array of surfaces for which propositions need updating.
+* _completion_ is invoked with `true` if a network response was returned and successfully processed, `false` otherwise
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -346,9 +367,6 @@ Messaging.updatePropositionsForSurfaces([surface1, surface2]) { success in
 + (void) updatePropositionsForSurfaces: (NSArray<AEPSurface*>* _Nonnull) surfaces
                             completion: (void (^)(BOOL)) completion;
 ```
-
-* _surfaces_ is an array of surfaces for which propositions need updating.
-* _completion_ is invoked with `true` if a network response was returned and successfully processed, `false` otherwise
 
 ### Example
 
@@ -364,4 +382,3 @@ AEPSurface* surface2 = [[AEPSurface alloc] initWithPath: @"myViewAttributes"];
     }
 }];
 ```
-

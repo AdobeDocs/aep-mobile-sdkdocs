@@ -16,6 +16,7 @@ You can now implement a `MessagingDelegate` in order to be alerted when specific
 ## Register the delegate
 
 On Android, the delegate is registered with the Adobe Service Provider. The `ServiceProvider` class maintains an optional property that holds reference to the `FullscreenMessaageDelegate`.
+
 ### Android Java
 
 ```java
@@ -32,6 +33,7 @@ MobileCore.setMessagingDelegate(myMessagingDelegate);
 ```
 
 On iOS, the delegate is registered with Mobile Core. The `MobileCore` framework maintains an optional property that holds reference to the `MessagingDelegate`.
+
 ### iOS Swift
 
 ```swift
@@ -50,6 +52,7 @@ MobileCore.messagingDelegate = myMessagingDelegate
 ## MessagingDelegate definition
 
 The `MessagingDelegate` interface, which is implemented in the `AEPServices` framework, is defined below:
+
 ### Android Java
 
 ```java
@@ -101,6 +104,7 @@ public interface MessagingDelegate {
 ```
 
 On iOS, the `MessagingDelegate` protocol, which is implemented in the `AEPServices` framework, is defined below:
+
 ### iOS Swift
 
 ```swift
@@ -145,6 +149,7 @@ public protocol MessagingDelegate {
 The user interface methods (except for `onShowFailure()`) in a `MessagingDelegate` implementation will be passed an `AEPMessage` object. An `AEPMessage` object is the Android Core implementation of the `FullscreenMessage` interface. It contains a reference to the parent `Message` class and is your primary way to interact with the message.
 
 A reference to the `AEPMessage` object can be obtained by calling `fullscreenMessage.getParent()` . An example of how to access the `Message` in the `onShow` delegate method can be seen below:
+
 ### Android Java
 
 ```java
@@ -163,6 +168,7 @@ To get a reference to the `Message` object:
 2. Access the `parent` variable (note that `parent` is variable defined in `FullscreenMessage+Message.swift`, an extension in the AEPMessaging framework)
 
 An example of how to access the `Message` in the `onShow` delegate method can be seen below:
+
 ### iOS Swift
 
 ```swift
@@ -178,6 +184,7 @@ func onShow(message: Showable) {
 If a custom  `MessagingDelegate` has been set in the `ServiceProvider`, this delegate's `shouldShowMessage` method will be called prior to displaying an in-app message for which the end user has qualified. You are responsible for returning `true` if the message should be shown, or `false` if the message should be suppressed.
 
 An example of when you may choose to suppress an in-app message due to the status of some other workflow within the app can be seen below:
+
 ### Android Java
 
 ```java
@@ -218,6 +225,7 @@ public boolean shouldShowMessage(FullscreenMessage fullscreenMessage) {
 If a `MessagingDelegate` has been provided to `MobileCore`, the delegate's `shouldShowMessage` method will be called prior to displaying an in-app message for which the end user has qualified. You are responsible for returning `true` if the message should be shown, or `false` if the message should be suppressed.
 
 An example of when you may choose to suppress an in-app message due to the status of some other workflow within the app can be seen below:
+
 ### iOS Swift
 
 ```swift
@@ -261,6 +269,7 @@ func shouldShowMessage(message: Showable) -> Bool {
 If you would like to manually integrate the `View` that contains the UI for an in-app message, you can do so by accessing the `WebView` directly in a `MessagingDelegate` method.  
 
 In the example below, you can decide whether or not the in-app message should be directly integrated into your existing UI. If so, you capture a reference to the message's `WebView` and return `false` to prevent the message from being shown by the SDK:
+
 ### Android Java
 
 ```java
@@ -288,6 +297,7 @@ If you would like to manually integrate the `View` that contains the UI for an i
 IMPORTANT! - The `shouldShowMessage` delegate method is called on a background thread. Any direct interactions with the Message's `WKWebView` made by the delegate should be dispatched back to the main thread.
 
 In the example below, you can decide whether or not the in-app message should be directly integrated into your existing UI. If so, you capture a reference to the message's `WKWebView` and return `false` to prevent the message from being shown by the SDK:
+
 ### iOS Swift
 
 ```swift
@@ -315,7 +325,7 @@ The test apps in this repository demonstrate using a `MessagingDelegate`:
 * [Objective-C](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps/MessagingDemoAppObjC)
 * [Kotlin](https://github.com/adobe/aepsdk-messaging-android/tree/main/code/testapp)
 
-#### Further reading
+### Further reading
 
 * [More information on how to use the Message object](../public-classes.md)
 * [Call native code from the JavaScript of an in-app message](native-from-javascript.md)

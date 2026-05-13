@@ -22,7 +22,7 @@ Classes implementing this interface will define a strategy to provide content fo
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 interface AepInboxContentProvider {

@@ -17,7 +17,7 @@ keywords:
 
 Messaging implementation of [AepUIEventObserver](../../../android/public-classes/observers/aepuieventobserver.md) for handling content card events.
 
-### Parameters
+## Parameters
 
 The primary constructor takes two optional parameters.
 

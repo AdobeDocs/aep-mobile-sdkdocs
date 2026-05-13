@@ -34,7 +34,8 @@ In the `onShow` function of the `PresentationDelegate`, call `handleJavascriptMe
 The name of the message you intend to pass from the JavaScript side should be specified in the first parameter.
 
 The following example shows a handler that dispatches an `decisioning.propositionInteract` Experience Event natively when the JavaScript of the in-app message posts a myInappCallback message:
-### android3x Kotlin
+
+### Android 3.x Kotlin
 
 ```kotlin
 var eventHandler: InAppMessageEventHandler? = null
@@ -57,7 +58,7 @@ override fun onShow(presentable: Presentable<*>) {
 }
 ```
 
-### android3x Java
+### Android 3.x Java
 
 ```java
 InAppMessageEventHandler eventHandler = null;
@@ -90,7 +91,8 @@ In the `shouldShowMessage` function of the `MessagingDelegate`, call `public voi
 The name of the message you intend to pass from the JavaScript side should be specified in the first parameter.
 
 The following example shows a handler that dispatches a `decisioning.propositionInteract` Experience Event natively when the JavaScript of the in-app message posts a `myInappCallback` message:
-### android2x Java
+
+### Android 2.x Java
 
 ```java
 @Override
@@ -113,6 +115,7 @@ In the `shouldShowMessage` function of the `MessagingDelegate`, call [`handleJav
 The name of the message you intend to pass from the JavaScript side should be specified in the first parameter.
 
 The following example shows a handler that dispatches a `decisioning.propositionInteract` Experience Event natively when the JavaScript of the in-app message posts a `myInappCallback` message:
+
 ### iOS Swift
 
 ```swift

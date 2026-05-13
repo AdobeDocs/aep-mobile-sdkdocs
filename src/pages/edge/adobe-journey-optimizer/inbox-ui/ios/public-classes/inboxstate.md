@@ -37,7 +37,7 @@ public enum InboxState {
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 
-#### Swift
+### Swift
 
 ```swift
 import SwiftUI

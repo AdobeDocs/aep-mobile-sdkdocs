@@ -34,7 +34,7 @@ Additionally, you'll need to add the `Environment Details` field group and creat
 
 ### Create an Experience Event
 
-### Android Java
+#### Android Java
 
 ```java
 Map<String, Object> reviewXdmData = new HashMap<>();
@@ -52,7 +52,7 @@ ExperienceEvent experienceEvent = new ExperienceEvent.Builder()
                 .build();
 ```
 
-### iOS Swift
+#### iOS Swift
 
 ```swift
 var xdmData : [String: Any] = [:]
@@ -64,7 +64,7 @@ xdmData[_yourTenantId] = ["productSku": "demo123",
 let experienceEvent = ExperienceEvent(xdm: xdmData)
 ```
 
-### iOS Objective-C
+#### iOS Objective-C
 
 ```objc
 NSDictionary<NSString*, NSObject*>* xdmData;
@@ -81,19 +81,19 @@ AEPExperienceEvent *experienceEvent = [[AEPExperienceEvent alloc] initWithXdm:xd
 
 Use the Adobe Experience Platform Edge Mobile Extension to send the Experience Event created in the previous step.
 
-### Android Java
+#### Android Java
 
 ```java
 Edge.sendEvent(experienceEvent, null);
 ```
 
-### iOS Swift
+#### iOS Swift
 
 ```swift
 Edge.sendEvent(experienceEvent: experienceEvent)
 ```
 
-### iOS Objective-C
+#### iOS Objective-C
 
 ```objc
 [AEPMobileEdge sendExperienceEvent:event completion:nil];
@@ -145,7 +145,7 @@ MobileCore.track(action: "actionName", data: ["key": "value"])
 
 ### iOS Objective-C
 
-<CodeBlock slots="heading, code" repeat="6" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -160,96 +160,12 @@ static func track(action: String?, data: [String: Any]?)
 [AEPMobileCore trackAction:@"action name" data:@{@"key": @"value"}];
 ```
 
-\<!-- <Variant platform="react-native" task="track-action" repeat="5"/>
-
-#### JavaScript
-
-### Syntax
-
-```jsx
-trackAction(action?: String, contextData?: { string: string });
-```
-
-### Example
-
-```jsx
-ACPCore.trackAction("action", {"mytest": "action"});
-``` -->
-
-\<!-- <Variant platform="flutter" task="track-action" repeat="5"/>
-
-#### Dart
-
-### Syntax
-
-```dart
-Future<void> trackAction(String action, {Map<String, String> data});
-```
-
-### Example
-
-```dart
-FlutterACPCore.trackAction("mytest",  data: {"mytest": "action"});J
-``` -->
-
-\<!-- <Variant platform="cordova" task="track-action" repeat="2"/>
-
-#### Javascript
-
-```javascript
-ACPCore.trackAction("cordovaAction", {"cordovaKey":"cordovaValue"}, successCallback, errorCallback);
-```
-
-\<!-- React Native
-
-<Tabs query="platform=react-native&task=track-action"/> --\>
-
-\<!-- Flutter
-
-<Tabs query="platform=flutter&task=track-action"/> --\>
-
-\<!-- Cordova
-
-<Tabs query="platform=cordova&task=track-action"/>
-
-### Unity
-
-#### C#
-
-```csharp
-var contextData = new Dictionary<string, string>();
-contextData.Add("key", "value");
-ACPCore.TrackAction("action name", contextData);
-```
-
-### Xamarin
-
-#### C#
-
-**iOS**
-
-```csharp
-var data = new NSMutableDictionary<NSString, NSString>
-{
-  ["key"] = new NSString("value")
-};
-ACPCore.TrackAction("action", data);
-```
-
-**Android**
-
-```csharp
-var data = new Dictionary<string, string>();
-data.Add("key", "value");
-ACPCore.TrackAction("action", data);
-``` -->
- --\>
-
 ## Track app states and screens (for Adobe Analytics)
 
 States represent screens or views in your app. The `trackState` method is called every time a new state is displayed in your application. For example, this method would be called when a user navigates from the home page to the news feed. This method also sends an Adobe Analytics state-tracking hit with optional context data.
 
 On Android, `trackState` is typically called each time a new activity is loaded.
+
 ### Android Java
 
 <CodeBlock slots="heading, code" repeat="2" />
@@ -286,7 +202,7 @@ MobileCore.track(state: "state name", data: ["key": "value"])
 
 ### iOS Objective-C
 
-<CodeBlock slots="heading, code" repeat="6" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -300,91 +216,6 @@ static func track(state: String?, data: [String: Any]?)
 ```objectivec
 [AEPMobileCore trackState:@"state name" data:@{@"key": @"value"}];
 ```
-
-\<!-- <Variant platform="react-native" task="track-state" repeat="5"/>
-
-#### JavaScript
-
-### Syntax
-
-```jsx
-trackState(state?: String, contextData?: { string: string });
-```
-
-### Example
-
-```jsx
-ACPCore.trackState("state", {"mytest": "state"});
-``` -->
-
-\<!-- <Variant platform="flutter" task="track-state" repeat="5"/>
-
-#### Dart
-
-### Syntax
-
-```dart
-Future<void> trackState(String state, {Map<String, String> data});
-```
-
-### Example
-
-```dart
-FlutterACPCore.trackState("state",  data: {"mytest": "state"});
-``` -->
-
-\<!-- <Variant platform="cordova" task="track-state" repeat="2"/>
-
-#### Javascript
-
-```javascript
-ACPCore.trackState("cordovaState", {"cordovaKey":"cordovaValue"}, successCallback, errorCallback);
-```
-
-\<!-- React Native
-
-<Tabs query="platform=react-native&task=track-state"/> --\>
-
-\<!-- Flutter
-
-<Tabs query="platform=flutter&task=track-state"/> --\>
-
-\<!-- Cordova
-
-<Tabs query="platform=cordova&task=track-state"/>
-
-### Unity
-
-#### C#
-
-```csharp
-var dict = new Dictionary<string, string>();
-dict.Add("key", "state value");
-ACPCore.TrackState("state", dict);
-```
-
-### Xamarin
-
-#### C#
-
-**iOS**
-
-```csharp
-var data = new NSMutableDictionary<NSString, NSString>
-{
-  ["key"] = new NSString("value")
-};
-ACPCore.TrackState("state", data);
-```
-
-**Android**
-
-```csharp
-var data = new Dictionary<string, string>();
-data.Add("key", "value");
-ACPCore.TrackState("state", data);
-``` -->
- --\>
 
 For more information, see the [Mobile Core API Reference](../base/mobile-core/api-reference.md).
 

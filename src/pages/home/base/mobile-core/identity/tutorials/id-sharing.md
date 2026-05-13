@@ -12,8 +12,6 @@ keywords:
 - Mobile application
 ---
 
-import Tabs from '../tabs/id-sharing.md'
-
 # Mobile to web identity sharing
 
 If your app opens mobile web content, you need to ensure that visitors are not identified separately as they move between the native and mobile web.
@@ -38,23 +36,102 @@ To use the same visitor ID in the app and mobile web and pass the visitor ID to 
 
 ## Implementing visitor tracking between an app and the mobile web
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+To append visitor information to the URL that is being used to open the web view, call [appendVisitorInfoForUrl](../api-reference.md#appendtourl-appendvisitorinfoforurl):
 
-<Tabs query="platform=android&task=implement"/>
+```java
+Identity.appendVisitorInfoForURL("https://example.com", new AdobeCallback<String>() {
+    @Override
+    public void call(String urlWithAdobeVisitorInfo) {
+        //handle the new URL here
+        //For example, open the URL on the device browser
+        //
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(urlWithAdobeVisitorInfo));
+        startActivity(i);
+    }
+});
+```
 
-iOS
+Alternately, starting in SDK version 1.4.0 (Identity version 1.1.0), you can call [getUrlVariables](../api-reference.md#geturlvariables) and build your own URL:
 
-<Tabs query="platform=ios&task=implement"/>
+```java
+Identity.getUrlVariables(new AdobeCallback<String>() {
+    @Override
+    public void call(String stringWithAdobeVisitorInfo) {
+        //handle the URL query parameter string here
+        //For example, open the URL on the device browser
+        //
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse("https://example.com?" + urlWithAdobeVisitorInfo));
+        startActivity(i);
+    }
+});
+```
 
-\<!--- React Native
+### iOS Swift
 
-<Tabs query="platform=react-native&task=implement"/>
+To append visitor information to the URL that is being used to open the web view, call [appendToUrl](../api-reference.md#appendtourl-appendvisitorinfoforurl):
 
-Flutter
+```swift
+let url = URL(string: "https://example.com")
+Identity.appendTo(url: url) { appendedUrl, error in
+    if error != nil {
+        // handle error here
+    } else {
+        // handle appended url here
+    }
+}
+```
 
-<Tabs query="platform=flutter&task=implement"/> ---\>
+Alternately, you can call [getUrlVariables](../api-reference.md#geturlvariables) and build your own URL:
+
+```swift
+Identity.getUrlVariables { urlVariables, error in
+    if error != nil {
+        // handle error here
+    } else {
+        if let url = URL(string: "https://example.com?\(urlVariables ?? "")") {
+            DispatchQueue.main.async {
+                UIApplication.shared.open(url)
+            }
+        }
+    }
+}
+```
+
+### iOS Objective-C
+
+To append visitor information to the URL that is being used to open the web view, call [appendToUrl](../api-reference.md#appendtourl-appendvisitorinfoforurl):
+
+```objectivec
+NSURL *sampleUrl = [NSURL URLWithString:@"https://example.com"];
+[AEPMobileIdentity appendToUrl:sampleUrl completion:^(NSURL * _Nullable appendedUrl, NSError *error) {
+    if (error != nil) {
+        // Handle error here
+    } else {
+        // Handle appended url here
+    }
+}];
+```
+
+Alternately, you can call [getUrlVariables](../api-reference.md#geturlvariables) and build your own URL:
+
+```objectivec
+[AEPMobileIdentity getUrlVariables:^(NSString * _Nullable urlVariables, NSError *error) {
+    NSString *sampleURLString = @"https://example.com";
+    if (error != nil) {
+        // Handle variables being nil
+    } else {
+        NSString *stringWithData = [NSString stringWithFormat:@"%@?%@", sampleURLString, urlVariables];
+        NSURL *appendedUrl = [NSURL URLWithString:stringWithData];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[UIApplication sharedApplication] openURL:appendedUrl options:@{} completionHandler:nil];
+        });
+    }
+}];
+```
 
 The ID service code on the destination domain extracts the ECID from the URL instead of sending a request to Adobe for a new ID. The ID service code on the destination page uses this ECID to track the visitor. On hits from the mobile web content, verify that the `mid` parameter exists on each hit, and that this value matches the `mid`value that is being sent by the app code.
 

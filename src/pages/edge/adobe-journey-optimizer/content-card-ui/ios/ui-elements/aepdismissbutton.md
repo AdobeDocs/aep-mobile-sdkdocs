@@ -24,11 +24,11 @@ AEPDismissButton conforms to `ObservableObject`, allowing it to be used reactive
 
 ## Public Properties
 
-| Property |	Type |	Description |
+| Property | Type | Description |
 | --- | --- | --- |
-| image | [AEPImage](../../ios/ui-elements/aepimage.md) |	The image model representing the dismiss button's image. |
-| alignment | [Alignment](https://developer.apple.com/documentation/swiftui/alignment) |	The alignment of the dismiss button within the content card. |
-| modifier |	`AEPViewModifier` |	A custom view modifier that can be applied to the dismiss button view for additional styling. |
+| image | [AEPImage](../../ios/ui-elements/aepimage.md) | The image model representing the dismiss button's image. |
+| alignment | [Alignment](https://developer.apple.com/documentation/swiftui/alignment) | The alignment of the dismiss button within the content card. |
+| modifier | `AEPViewModifier` | A custom view modifier that can be applied to the dismiss button view for additional styling. |
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -38,13 +38,13 @@ All properties are marked with [@Published](https://developer.apple.com/document
 
 You can customize the AEPDismissButton properties when working with a template that includes a dismiss button. Here's an example:
 
-<CodeBlock slots="heading, code" repeat="1" languages="Swift" />
+<CodeBlock slots="heading, code" repeat="1" />
 
-#### Swift
+### Swift
 
 ```swift
 class MyCustomizer: ContentCardCustomizing {
-    func customize(template: SmallImageTemplate) {        
+    func customize(template: SmallImageTemplate) {
         // Customize the dismiss button
         template.dismissButton?.image.icon = "xmark.diamond"  // SF Symbol name
         template.dismissButton?.image.iconColor = .primary
@@ -52,11 +52,11 @@ class MyCustomizer: ContentCardCustomizing {
         template.dismissButton?.alignment = .topTrailing
         template.dismissButton?.modifier = AEPViewModifier(MyDismissButtonModifier())
     }
-    
+
     struct MyDismissButtonModifier: ViewModifier {
         func body(content: Content) -> some View {
             content
-                .padding()                
+                .padding()
         }
     }
 }

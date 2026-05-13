@@ -23,10 +23,10 @@ AEPButton conforms to `ObservableObject`, allowing it to be used reactively in S
 
 ## Public Properties
 
-| Property |	Type |	Description |
+| Property | Type | Description |
 | --- | --- | --- |
-| text | [AEPText](../../ios/ui-elements/aeptext.md) |	The text model representing the button's label. |
-| modifier |	`AEPViewModifier` |	A custom view modifier that can be applied to the button view for additional styling. |
+| text | [AEPText](../../ios/ui-elements/aeptext.md) | The text model representing the button's label. |
+| modifier | `AEPViewModifier` | A custom view modifier that can be applied to the button view for additional styling. |
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -36,9 +36,9 @@ All properties are marked with [@Published](https://developer.apple.com/document
 
 You can customize the `AEPButton` properties when working with a template that includes a button. Here's an example:
 
-<CodeBlock slots="heading, code" repeat="1" languages="Swift" />
+<CodeBlock slots="heading, code" repeat="1" />
 
-#### Swift
+### Swift
 
 ```swift
 class MyCustomizer: ContentCardCustomizing {
@@ -48,7 +48,7 @@ class MyCustomizer: ContentCardCustomizing {
         template.buttons?.first?.text.textColor = .white
         template.buttons?.first?.modifier = AEPViewModifier(MyButtonModifier())
     }
-    
+
     struct MyButtonModifier: ViewModifier {
         func body(content: Content) -> some View {
             content

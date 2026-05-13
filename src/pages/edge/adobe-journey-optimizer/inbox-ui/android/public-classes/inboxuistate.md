@@ -76,7 +76,7 @@ data class Error(
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 val inboxUIState by viewModel.inboxUIState.collectAsStateWithLifecycle()

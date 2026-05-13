@@ -32,7 +32,7 @@ public struct EmptyStateSettings: Codable
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 
-#### Swift
+### Swift
 
 ```swift
 inboxUI.setEmptyView { emptyStateSettings in

@@ -11,7 +11,7 @@ keywords:
 
 # Manual display and tracking of push notification
 
-This document describes how to manually build, display and track push notifications from Adobe Journey Optimizer using the AEPMessaging extension. You should use the [automatic display and tracking](./automatic-handling-and-tracking.md) method unless you have a specific requirement to manually build, display, and track push notifications.
+This document describes how to manually build, display and track push notifications from Adobe Journey Optimizer using the AEPMessaging extension. You should use the [automatic display and tracking](./automatic-display-and-tracking.md) method unless you have a specific requirement to manually build, display, and track push notifications.
 
 ## Pre-requisites
 
@@ -57,7 +57,7 @@ Calling [resetIdentities](../../api-reference.md#resetidentities) will clear the
     MessagingPushPayload payload = new MessagingPushPayload(remoteMessage);
     ```
 
-2. Use the [Public APIs](../enum-public-classes/messaging-push-payload.md) of MessagingPushPayload to get the attributes required for creating the push notification.
+2. Use the [Public APIs](../../public-classes/messaging-push-payload.md) of MessagingPushPayload to get the attributes required for creating the push notification.
 
     ```java
     // Following are a few examples of using the public APIs of MessagingPushPayload

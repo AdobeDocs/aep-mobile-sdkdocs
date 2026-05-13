@@ -28,11 +28,11 @@ ImageOnlyTemplate conforms to `ObservableObject`, allowing it to be used reactiv
 
 ## Layout
 
-<img src="../../assets/ios/imageonlytemplate-layout.png" width="500"/>
+![ImageOnlyTemplate Layout](../../assets/ios/imageonlytemplate-layout.png)
 
 ## Public properties
 
-| Property      | Type                                           | Description                                                  |
-| ------------- | ---------------------------------------------- | ------------------------------------------------------------ |
-| image         | [AEPImage](../UIElements/aepimage.md)          | The image to be shown on the content card.                   |
-| dismissButton | [AEPDismissButton](../UIElements/aepdismissbutton.md) | *Optional*\<br/\>The dismiss button for the content card.       |
+| Property      | Type                                                          | Description                                          |
+| ------------- | ------------------------------------------------------------- | ---------------------------------------------------- |
+| image         | [AEPImage](../../ios/ui-elements/aepimage.md)                 | The image to be shown on the content card.           |
+| dismissButton | [AEPDismissButton](../../ios/ui-elements/aepdismissbutton.md) | *Optional* The dismiss button for the content card. |

@@ -8,8 +8,6 @@ keywords:
 - Troubleshooting
 ---
 
-import Tabs from '../tabs/push-sync.md'
-
 # Troubleshooting push identifier sync
 
 <InlineAlert variant="info" slots="text"/>
@@ -33,19 +31,53 @@ If SDK privacy status isoptedout, the push identifier will not be set.
 
 ### setPushIdentifier
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&task=set-push"/>
+### Syntax
 
-iOS
+```java
+public static void setPushIdentifier(final String pushIdentifier);
+```
 
-<Tabs query="platform=ios&task=set-push"/>
+### Example
 
-\<!--- React Native
+```java
+// retrieve the token from either GCM or FCM, and pass it to the SDK
+```
 
-<Tabs query="platform=react-native&task=set-push"/> ---\>
+#### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+### Syntax
+
+```swift
+Void setPushIdentifier(deviceToken: Data?)
+```
+
+### Example
+
+```swift
+// pass the deviceToken that the APNS has assigned to the device.
+```
+
+#### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+### Syntax
+
+```objectivec
++ (void) setPushIdentifier: (nullable NSData*) deviceToken;
+```
+
+### Example
+
+```objectivec
+// pass the deviceToken that the APNS has assigned to the device
+```
 
 ## Verify push token sync with the Experience Cloud Identity service
 

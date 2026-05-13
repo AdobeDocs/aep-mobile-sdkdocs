@@ -64,27 +64,6 @@ let version = Lifecycle.extensionVersion
 NSString *version = [AEPMobileLifecycle extensionVersion];
 ```
 
-\<!--- <Variant platform="react-native" api="extension-version" repeat="2"/>
-
-**JavaScript**
-
-```jsx
-ACPLifecycle.extensionVersion().then(lifecycleExtensionVersion => console.log("AdobeExperienceSDK: ACPLifecycle version: " + lifecycleExtensionVersion));
-```
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=extension-version"/>
-
-### Flutter
-
-**Dart**
-
-```dart
-String lifeycycleExtensionVersion = await FlutterACPLifecycle.extensionVersion;
-``` --->
- ---\>
-
 ## lifecycleStart
 
 Starts the collection of lifecycle data.
@@ -95,9 +74,9 @@ Starts the collection of lifecycle data.
 
 ### Android Java
 
-<CodeBlock slots="heading, code" repeat="2" />
-
 This method should be called from the Activity onResume method.
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -163,16 +142,6 @@ If you need to collect additional lifecycle data:
  [AEPMobileCore lifecycleStart:@{@"contextDataKey": @"contextDataVal"}];
 ```
 
-\<!--- <Variant platform="react-native" api="lifecycle-start" repeat="2"/>
-
-#### JavaScript
-
-When using React Native, starting to collect lifecycle data should be done in native code which is shown under the Android and iOS (ACP 2.x) tabs. ---\>
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=lifecycle-start"/> ---\>
-
 ## lifecyclePause
 
 Pauses the collection of lifecycle data.
@@ -230,19 +199,9 @@ MobileCore.lifecyclePause();
  [AEPMobileCore lifecyclePause];
 ```
 
-\<!--- <Variant platform="react-native" api="lifecycle-pause" repeat="2"/>
-
-#### JavaScript
-
-When using React Native, pausing the collection of lifecycle data should be done in native code which is shown under the Android and iOS (ACP 2.x) tabs. ---\>
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=lifecycle-pause"/> ---\>
-
 ## registerExtension
 
-<InlineAlert variant="warning" slots="heading, text1"/>
+<InlineAlert variant="warning" slots="text1, text2"/>
 
 This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the Android mobile extension.
 
@@ -264,7 +223,5 @@ public static void registerExtension()
 
 ```java
 Lifecycle.registerExtension();
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=register-extension"/> ---\>
+export const _frontmatter = {}
+```

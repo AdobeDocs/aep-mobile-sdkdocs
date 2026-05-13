@@ -157,7 +157,7 @@ Below is an example implementation of `InboxEventListening`:
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 
-#### Swift
+### Swift
 
 ```swift
 import SwiftUI

@@ -7,9 +7,6 @@ keywords:
 - Product overview
 ---
 
-import Tabs from './tabs/index.md'
-import InitializeSDK from '/src/pages/resources/initialize.md'
-
 # Adobe Journey Optimizer
 
 The [Adobe Journey Optimizer](https://business.adobe.com/products/journey-optimizer/adobe-journey-optimizer.html) extension for Adobe Experience Platform Mobile SDKs powers push notifications and in-app messages for your mobile apps. This extension also helps you to collect user push tokens and manages interaction measurement with Adobe Experience Platform services.
@@ -66,19 +63,51 @@ The datasets selected should use a schema that uses the "Push Notification Track
 
 Add MobileCore, Edge and Messaging extensions as dependencies to your project.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+#### Android Kotlin
 
-Kotlin<br/>(Android)
+Add the required dependencies to your project by including them in the app's Gradle file.
 
-<Tabs query="platform=android-kotlin&task=add"/>
+```kotlin
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation("com.adobe.marketing.mobile:core")
+implementation("com.adobe.marketing.mobile:edgeidentity")
+implementation("com.adobe.marketing.mobile:edge")
+implementation("com.adobe.marketing.mobile:messaging")
+```
 
-Groovy<br/>(Android)
+<InlineAlert variant="warning" slots="text"/>
 
-<Tabs query="platform=android-groovy&task=add"/>
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
 
-CocoaPods<br/>(iOS)
+#### Android Groovy
 
-<Tabs query="platform=ios-pods&task=add"/>
+Add the required dependencies to your project by including them in the app's Gradle file.
+
+```java
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
+implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:edgeidentity'
+implementation 'com.adobe.marketing.mobile:edge'
+implementation 'com.adobe.marketing.mobile:messaging'
+```
+
+<InlineAlert variant="warning" slots="text"/>
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
+
+#### iOS CocoaPods
+
+Add the required dependencies to your project using CocoaPods. Add following pods in your `Podfile`:
+
+```swift
+use_frameworks!
+target 'YourTargetApp' do
+    pod 'AEPCore', '~> 5.0'
+    pod 'AEPEdge', '~> 5.0'
+    pod 'AEPEdgeIdentity', '~> 5.0'
+    pod 'AEPMessaging', '~> 5.0'
+end
+```
 
 ### Initialize Adobe Experience Platform SDK with Messaging Extension
 
@@ -86,7 +115,94 @@ Next, initialize the SDK by registering all the solution extensions that have be
 
 Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
 
-<InitializeSDK query="componentClass=TabsBlock"/>
+#### Android Kotlin
+
+<InlineAlert variant="warning" slots="text"/>
+
+This API is available starting from **Android BOM version 3.8.0**.
+
+```kotlin
+import com.adobe.marketing.mobile.LoggingMode
+import com.adobe.marketing.mobile.MobileCore
+...
+import android.app.Application
+...
+
+class MainApp : Application() {
+  override fun onCreate() {
+    super.onCreate()
+    MobileCore.setLogLevel(LoggingMode.DEBUG)
+    MobileCore.initialize(this, "ENVIRONMENT_ID")
+  }
+}
+```
+
+#### Android Java
+
+<InlineAlert variant="warning" slots="text"/>
+
+This API is available starting from **Android BOM version 3.8.0**.
+
+```java
+import com.adobe.marketing.mobile.LoggingMode;
+import com.adobe.marketing.mobile.MobileCore;
+...
+import android.app.Application;
+...
+public class MainApp extends Application {
+  @Override
+  public void onCreate(){
+    super.onCreate();
+    MobileCore.setLogLevel(LoggingMode.DEBUG);
+    MobileCore.initialize(this, "ENVIRONMENT_ID");
+  }
+}
+```
+
+#### iOS Swift
+
+<InlineAlert variant="warning" slots="text"/>
+
+This API is available starting from **iOS version 5.4.0**.
+
+```swift
+// AppDelegate.swift
+import AEPCore
+import AEPServices
+...
+
+final class AppDelegate: NSObject, UIApplicationDelegate {
+  func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+    MobileCore.setLogLevel(.debug)
+    MobileCore.initialize(appId: "ENVIRONMENT_ID")
+    ...
+  }
+}
+```
+
+#### iOS Objective-C
+
+<InlineAlert variant="warning" slots="text"/>
+
+This API is available starting from **iOS version 5.4.0**.
+
+```objectivec
+// AppDelegate.m
+#import "AppDelegate.h"
+@import AEPCore;
+@import AEPServices;
+...
+@implementation AppDelegate
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  [AEPMobileCore setLogLevel: AEPLogLevelDebug];  
+  [AEPMobileCore initializeWithAppId:@"ENVIRONMENT_ID" completion:^{
+      NSLog(@"AEP Mobile SDK is initialized");
+  }];
+  ...
+  return YES;
+}
+@end
+```
 
 ## Configuration keys
 

@@ -23,7 +23,7 @@ Implementation of [AepInboxEventObserver](../../../android/public-classes/observ
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 InboxEventObserver(

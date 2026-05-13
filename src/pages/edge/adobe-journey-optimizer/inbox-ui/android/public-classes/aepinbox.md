@@ -20,7 +20,7 @@ keywords:
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 @Composable
@@ -36,7 +36,7 @@ fun AepInbox(
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-| uiState | [InboxUIState](../../android/public-classes/inboxuistate.md) | The current state of the Inbox UI. This determines what content is rendered:\<br/\>- `InboxUIState.Loading` - Displays the loading view\<br/\>- `InboxUIState.Success` - Displays the inbox with content cards\<br/\>- `InboxUIState.Error` - Displays the error view |
+| uiState | [InboxUIState](../../android/public-classes/inboxuistate.md) | The current state of the Inbox UI. This determines what content is rendered. `InboxUIState.Loading` displays the loading view, `InboxUIState.Success` displays the inbox with content cards, and `InboxUIState.Error` displays the error view. |
 | inboxStyle | [InboxUIStyle](../../android/public-classes/styles/inboxuistyle.md) | _(optional)_ The style to customize the inbox container appearance, including heading, layout, empty state views, and unread indicators. Defaults to a standard inbox style. |
 | itemsStyle | [AepUIStyle](../../android/public-classes/aepuistyle.md) | _(optional)_ The style to customize individual content cards within the inbox. This allows styling of different card types ([SmallImageUIStyle](../../../content-card-ui/android/public-classes/styles/smallimageuistyle.md), [LargeImageUIStyle](../../../content-card-ui/android/public-classes/styles/largeimageuistyle.md), [ImageOnlyUIStyle](../../../content-card-ui/android/public-classes/styles/imageonlyuistyle.md)). Defaults to a standard card style. |
 | observer | [AepInboxEventObserver](../../android/public-classes/observers/aepinboxeventobserver.md) | _(required)_ An event observer that handles inbox-level events internally (such as inbox display tracking) and allows apps to listen to content card events (Display, Interact, Dismiss). Use [InboxEventObserver](../../android/public-classes/observers/inboxeventobserver.md) which automatically handles inbox tracking and can optionally delegate card events to your [ContentCardUIEventListener](../../../content-card-ui/android/public-classes/contentcarduieventlistener.md). |
@@ -53,9 +53,9 @@ The `AepInbox` composable automatically:
 
 ## Example Usage
 
-<InlineAlert variant="warning" slots="heading, text" />
+<InlineAlert variant="warning" slots="text1, text2" />
 
-Do not embed AepInbox inside an unbounded container/lazy layout that scrolls in the same direction
+Do not embed AepInbox inside an unbounded container/lazy layout that scrolls in the same direction.
 
 `AepInbox` uses a `LazyColumn` for vertical layouts and a `LazyRow` for horizontal layouts. The orientation is set when the inbox campaign is authored and published on Adobe Journey Optimizer UI. Embedding `AepInbox` inside an unbounded container/lazy layout that scrolls in the same direction — such as a `LazyColumn` for a vertical scrolling inbox or a `LazyRow` for a horizontal scrolling inbox — causes a runtime crash (`IllegalStateException: Vertically/Horizontally scrollable component was measured with an infinity maximum constraints`).
 

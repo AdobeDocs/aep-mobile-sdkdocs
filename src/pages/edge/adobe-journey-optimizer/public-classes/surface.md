@@ -10,6 +10,7 @@ keywords:
 - iOS
 - Code-based Experiences
 ---
+
 # Surface
 
 The `Surface` class represents an entity for user or system interaction. It is identified by a self-describing URI which is used to fetch the decision propositions from the AJO campaigns. For example, all mobile application surface URIs start with `mobileapp://`, followed by app bundle identifier and an optional path.
@@ -18,9 +19,9 @@ The `Surface` class represents an entity for user or system interaction. It is i
 
 `Surface` class is used to create surface instances for requesting propositions in personalization query requests.
 
-## Public variables
+### Public variables
 
-### uri
+#### uri
 
 Unique surface URI string.
 
@@ -28,25 +29,25 @@ Unique surface URI string.
 public let uri: String
 ```
 
-## Public functions
+### Public functions
 
-### init
+#### init
 
 Creates a new surface by appending the given surface `path` to the mobile app surface prefix.
 
-### iOS Swift
+* _path_ is a string representation for the surface path.
+
+##### iOS Swift
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+##### Syntax
 
 ```swift
 public init(path: String)
 ```
 
-* _path_ is a string representation for the surface path.
-
-### Example
+##### Example
 
 ```swift
 // Creates a surface instance representing a banner within homeView view in my mobile application.
@@ -57,97 +58,102 @@ let surface = Surface(path: "homeView#banner")
 
 `Surface` class is used to create surface objects for requesting propositions in personalization query requests.
 
-## Public functions
+### Public functions
 
-### Parameterized Constructor
+#### Parameterized Constructor
 
 Creates a new surface by appending the given surface `path` to the mobile app surface prefix.
 
-### Android Java
+* _path_ is a string containing the surface path.
 
-<CodeBlock slots="heading, code" repeat="1" />
+##### Android Java
 
-### Syntax
+<CodeBlock slots="heading, code" repeat="2" />
+
+##### Syntax
 
 ```java
 public Surface(final String path)
 ```
 
-* _path_ is a string containing the surface path.
-
-### Example
-
-### Android Kotlin
-
-```kotlin
-// Creates a surface instance representing a banner view within homeActivity in my mobile application.
-val surface = Surface("homeActivity#banner")
-```
-
-### Android Java
+##### Example
 
 ```java
 // Creates a surface instance representing a banner view within homeActivity in my mobile application.
 final Surface surface = new Surface("homeActivity#banner")
 ```
 
-### Default Constructor
-
-Creates a new base surface by appending application package name to the mobile app surface prefix `mobileapp://`.
-
-### Android Java
+##### Android Kotlin
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Syntax
+##### Example
+
+```kotlin
+// Creates a surface instance representing a banner view within homeActivity in my mobile application.
+val surface = Surface("homeActivity#banner")
+```
+
+#### Default Constructor
+
+Creates a new base surface by appending application package name to the mobile app surface prefix `mobileapp://`.
+
+##### Android Java
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+##### Syntax
 
 ```java
 public Surface()
 ```
 
-### Example
-
-### Android Kotlin
-
-```kotlin
-// Creates a new base surface by appending application package name to the mobile app surface prefix mobileapp://
-val surface = Surface()
-```
-
-### Android Java
+##### Example
 
 ```java
 // Creates a new base surface by appending application package name to the mobile app surface prefix mobileapp://
 final Surface surface = new Surface()
 ```
 
-### getUri
-
-Returns this surface's URI as a string.
-
-### Android Java
+##### Android Kotlin
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Syntax
+##### Example
+
+```kotlin
+// Creates a new base surface by appending application package name to the mobile app surface prefix mobileapp://
+val surface = Surface()
+```
+
+#### getUri
+
+Returns this surface's URI as a string.
+
+##### Android Java
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+##### Syntax
 
 ```java
 public String getUri()
 ```
 
-### Example
-
-### Android Kotlin
-
-```kotlin
-val surface = Surface("homeActivity#banner")
-val uri = surface.uri
-```
-
-### Android Java
+##### Example
 
 ```java
 final Surface surface = new Surface("homeActivity#banner")
 final String uri = surface.getUri()
 ```
 
+##### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+##### Example
+
+```kotlin
+val surface = Surface("homeActivity#banner")
+val uri = surface.uri
+```

@@ -28,7 +28,7 @@ Class that encapsulates the style configuration for all supported types of Exper
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 class AepUIStyle(

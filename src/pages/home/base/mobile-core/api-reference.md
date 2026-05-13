@@ -34,8 +34,6 @@ The Android SDK automatically registers an `Application.ActivityLifecycleCallbac
 
 ### iOS Swift
 
-<CodeBlock slots="heading, code" repeat="2" />
-
 This method should be called to support the following use cases:
 
 * Tracking deep link clickthroughs
@@ -43,6 +41,8 @@ This method should be called to support the following use cases:
   * Extract `userInfo` from `url: UIApplication.LaunchOptionsKey`
 * Tracking push message clickthrough
   * From `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)`
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -58,8 +58,6 @@ This method should be called to support the following use cases:
 
 ### iOS Objective-C
 
-<CodeBlock slots="heading, code" repeat="2" />
-
 This method should be called to support the following use cases:
 
 * Tracking deep link clickthroughs
@@ -67,6 +65,8 @@ This method should be called to support the following use cases:
   * Extract `userInfo` from `UIApplicationLaunchOptionsURLKey`
     * Tracking push message clickthrough
   * From `application:didReceiveRemoteNotification:fetchCompletionHandler:`
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -127,7 +127,7 @@ MobileCore.collectPii(["key1" : "value1","key2" : "value2"]);
 
 ### iOS Objective-C
 
-<CodeBlock slots="heading, code" repeat="4" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -143,42 +143,6 @@ MobileCore.collectPii(["key1" : "value1","key2" : "value2"]);
                             @"key2" : @"value2"
                             }];
 ```
-
-\<!--- <Variant platform="react-native" api="collect-pii" repeat="10"/>
-
-#### Javascript
-
-### Syntax
-
-```jsx
-ACPCore.collectPii(data: [String : String])
-```
-
-### Example
-
-```jsx
-ACPCore.collectPii({"myPii": "data"});
-```
-
-### iOS Swift
-
-<CodeBlock slots="heading, code" repeat="2" />
-
-### Syntax
-
-```swift
-ACPCore.collectPii(data: [String : String])
-```
-
-### Example
-
-```objectivec
-MobileCore.collectPii(["key1" : "value1","key2" : "value2"]);
-``` --->
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=collect-pii"/> ---\>
 
 ## configureWithAppId
 
@@ -328,9 +292,9 @@ You can use the `getApplication` method to get the previously set Android `Appli
 
 ### Android Java
 
-<CodeBlock slots="heading, code" repeat="2" />
-
 `MobileCore.getApplication` will return `null` if the `Application` object was destroyed or if `MobileCore.setApplication` was not previously called.
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -372,6 +336,8 @@ LoggingMode mode = MobileCore.getLogLevel();
 The logLevel getter has been deprecated. To get the log level in the Swift AEP 3.x SDKs, please use `Log.logFilter` instead.
 ### iOS Swift
 
+This variable is part of the `Log` class within `AEPServices`.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -379,8 +345,6 @@ The logLevel getter has been deprecated. To get the log level in the Swift AEP 3
 ```swift
 public static var logFilter: LogLevel
 ```
-
-This variable is part of the `Log` class within `AEPServices`.
 
 ### Example
 
@@ -390,7 +354,7 @@ var logLevel = Log.logFilter
 
 ### iOS Objective-C
 
-<CodeBlock slots="heading, code" repeat="3" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -403,20 +367,6 @@ var logLevel = Log.logFilter
 ```objectivec
 AEPLogLevel logLevel = [AEPLog logFilter];
 ```
-
-\<!--- <Variant platform="react-native" api="get-log-level" repeat="3"/>
-
-#### Javascript
-
-### Example
-
-```jsx
-ACPCore.getLogLevel().then(level => console.log("AdobeExperienceSDK: Log Level = " + level));
-``` --->
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=get-log-level"/> ---\>
 
 ## getPrivacyStatus
 
@@ -437,11 +387,15 @@ The following SDK identities are locally stored:
 
 To retrieve data as a JSON string from the SDKs and send this data to your servers, use the `getSdkIdentities` method.
 
-<InlineAlert variant="warning" slots="text"/>
+<InlineAlert variant="warning" slots="text1, text2"/>
 
-You must call the API below and retrieve identities stored in the SDK, **before** the user opts out.<br/><br/>This API does **not** include the identities stored in the Edge Identity extension. To retrieve the identities from the Edge Identity extension, use [getIdentities](../../edge/identity-for-edge-network/api-reference.md#getidentities).
+You must call the API below and retrieve identities stored in the SDK, **before** the user opts out.
+
+This API does **not** include the identities stored in the Edge Identity extension. To retrieve the identities from the Edge Identity extension, use [getIdentities](../../edge/identity-for-edge-network/api-reference.md#getidentities).
 
 ### Android Java
+
+* _callback_ is invoked with the SDK identities as a JSON string. If an instance of  `AdobeCallbackWithError` is provided, and you are fetching the attributes from the Mobile SDK, the timeout value is 5000ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate `AdobeError`.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
@@ -450,8 +404,6 @@ You must call the API below and retrieve identities stored in the SDK, **before*
 ```java
 void getSdkIdentities(@NonNull AdobeCallback<String> callback);
 ```
-
-* _callback_ is invoked with the SDK identities as a JSON string. If an instance of  `AdobeCallbackWithError` is provided, and you are fetching the attributes from the Mobile SDK, the timeout value is 5000ms. If the operation times out or an unexpected error occurs, the `fail` method is called with the appropriate `AdobeError`.
 
 ### Example
 
@@ -466,6 +418,9 @@ MobileCore.getSdkIdentities(new AdobeCallback<String>() {
 
 ### iOS Swift
 
+* _callback_ is invoked with the SDK identities as a JSON string.
+* _completionHandler_ is invoked with the SDK identities as a JSON string, or _error_ if an unexpected error occurs or the request times out. The default timeout is 1000ms.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -473,9 +428,6 @@ MobileCore.getSdkIdentities(new AdobeCallback<String>() {
 ```swift
 static func getSdkIdentities(completion: @escaping (String?, Error?) -> Void)
 ```
-
-* _callback_ is invoked with the SDK identities as a JSON string.
-* _completionHandler_ is invoked with the SDK identities as a JSON string, or _error_ if an unexpected error occurs or the request times out. The default timeout is 1000ms.
 
 ### Example
 
@@ -487,6 +439,9 @@ static func getSdkIdentities(completion: @escaping (String?, Error?) -> Void)
 
 ### iOS Objective-C
 
+* _callback_ is invoked with the SDK identities as a JSON string.
+* _completionHandler_ is invoked with the SDK identities as a JSON string, or _error_ if an unexpected error occurs or the request times out. The default timeout is 1000ms.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -495,9 +450,6 @@ static func getSdkIdentities(completion: @escaping (String?, Error?) -> Void)
  @objc(getSdkIdentities:)
  static func getSdkIdentities(completion: @escaping (String?, Error?) -> Void)
 ```
-
-* _callback_ is invoked with the SDK identities as a JSON string.
-* _completionHandler_ is invoked with the SDK identities as a JSON string, or _error_ if an unexpected error occurs or the request times out. The default timeout is 1000ms.
 
 ### Example
 
@@ -529,6 +481,10 @@ Two versions of this API are available, which accept **app ID** or **InitOptions
 
 ### Android Java
 
+* _application_ The Android Application instance.
+* _appID_ The mobile property environment ID configured from the Data Collection UI.
+* _completionCallback_ An Optional [AdobeCallback](#adobecallback) triggered once initialization is complete.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -539,10 +495,6 @@ Two versions of this API are available, which accept **app ID** or **InitOptions
             @NonNull final String appId,
             @Nullable final AdobeCallback<?> completionCallback) 
 ```
-
-* _application_ The Android Application instance.
-* _appID_ The mobile property environment ID configured from the Data Collection UI.
-* _completionCallback_ An Optional [AdobeCallback](#adobecallback) triggered once initialization is complete.
 
 ### Example
 
@@ -560,6 +512,10 @@ public class CoreApp extends Application {
 
 ### iOS Swift
 
+* _appId_ The mobile property environment ID configured from the Data Collection UI.
+* _completion_ An Optional callback triggered once initialization is complete.
+
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -568,8 +524,6 @@ public class CoreApp extends Application {
 public static func initialize(appId: String, _ completion: (() -> Void)? = nil)
 ```
 
-* _appId_ The mobile property environment ID configured from the Data Collection UI.
-* _completion_ An Optional callback triggered once initialization is complete.
 
 ### Example
 
@@ -585,6 +539,9 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 ### iOS Objective-C
 
+* _appId_ The mobile property environment ID configured from the Data Collection UI.
+* _completion_ An Optional callback triggered once initialization is complete.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -593,9 +550,6 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 @objc(initializeWithAppId:completion:)
 public static func initialize(appId: String, _ completion: (() -> Void)? = nil) 
 ```
-
-* _appId_ The mobile property environment ID configured from the Data Collection UI.
-* _completion_ An Optional callback triggered once initialization is complete.
 
 ### Example
 
@@ -613,6 +567,10 @@ public static func initialize(appId: String, _ completion: (() -> Void)? = nil)
 
 ### Android Java
 
+* _application_ The Android Application instance.
+* _initOptions_ The [InitOptions](#initoptions) to configure the SDK.
+* _completionCallback_ An Optional [AdobeCallback](#adobecallback) triggered once initialization is complete.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -623,10 +581,6 @@ public static void initialize(
             @NonNull final InitOptions initOptions,
             @Nullable final AdobeCallback<?> completionCallback)
 ```
-
-* _application_ The Android Application instance.
-* _initOptions_ The [InitOptions](#initoptions) to configure the SDK.
-* _completionCallback_ An Optional [AdobeCallback](#adobecallback) triggered once initialization is complete.
 
 ### Example
 
@@ -648,6 +602,9 @@ public class CoreApp extends Application {
 
 ### iOS Swift
 
+* _options_ The [InitOptions](#initoptions) to configure the SDK.
+* _completion_ An Optional callback triggered once initialization is complete.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -655,9 +612,6 @@ public class CoreApp extends Application {
 ```swift
 public static func initialize(options: InitOptions, _ completion: (() -> Void)? = nil)
 ```
-
-* _options_ The [InitOptions](#initoptions) to configure the SDK.
-* _completion_ An Optional callback triggered once initialization is complete.
 
 ### Example
 
@@ -677,6 +631,9 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 ### iOS Objective-C
 
+* _options_ The [InitOptions](#initoptions) to configure the SDK.
+* _completion_ An Optional callback triggered once initialization is complete.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -685,9 +642,6 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 @objc(initializeWithOptions:completion:)
 public static func initialize(options: InitOptions, _ completion: (() -> Void)? = nil)        
 ```
-
-* _options_ The [InitOptions](#initoptions) to configure the SDK.
-* _completion_ An Optional callback triggered once initialization is complete.
 
 ### Example
 
@@ -712,8 +666,6 @@ This is the API used to log from the SDK.
 This API was deprecated in v2.0.0 of the Mobile Core extension. Use the `com.adobe.marketing.mobile.services.Log` instead.
 ### Android Java
 
-<CodeBlock slots="heading, code" repeat="2" />
-
 The `MobileCore` logging APIs use the `android.util.Log` APIs to log messages to Android. Based on the `LoggingMode` that is passed to `MobileCore.log()`, the following Android method is called:
 
 * `LoggingMode.VERBOSE` uses `android.util.Log.v`
@@ -722,6 +674,8 @@ The `MobileCore` logging APIs use the `android.util.Log` APIs to log messages to
 * `LoggingMode.ERROR` uses `android.util.Log.e`
 
 All log messages from the Adobe Experience SDK to Android use the same log tag of `AdobeExperienceSDK`. For example, if logging an error message is using `MobileCore.log()`, the call to `android.util.Log.e` looks like `Log.e("AdobeExperienceSDK", tag + " - " + message)`.
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -743,9 +697,9 @@ D/AdobeExperienceSDK: MyClassName - Provided data was null
 
 ### iOS Swift
 
-<CodeBlock slots="heading, code" repeat="2" />
-
 The log messages from the Adobe Experience SDK are printed to the Apple System Log facility and use a common format that contains the tag `AEP SDK`. For example, if logging an error message using `Log.error(label:_ message:_)`, the printed output looks like `[AEP SDK ERROR <label>]: message`.
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -767,9 +721,9 @@ Log.error(label: "testLabel", "Test message")
 
 ### iOS Objective-C
 
-<CodeBlock slots="heading, code" repeat="3" />
-
 The log messages from the Adobe Experience SDK are printed to the Apple System Log facility and use a common format that contains the tag `AEP SDK`. For example, if logging an error message using `[AEPLog errorWithLabel: _ message:_]`, the printed output looks like `[AEP SDK ERROR <label>]: message`.
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -795,31 +749,6 @@ public static func error(label: String, _ message: String)
 [AEPLog warningWithLabel:@"testLabel" message:@"testMessage"];
 [AEPLog errorWithLabel:@"testLabel" message:@"testMessage"];
 ```
-
-\<!--- <Variant platform="react-native" api="log" repeat="6"/>
-
-#### JavaScript
-
-The log messages from the Adobe Experience SDK are printed to the Log facility and use a common format that contains the tag `ACPMobileLogLevel`.
-
-### Example
-
-```jsx
-ACPCore.log(ACPMobileLogLevel.ERROR, "React Native Tag", "React Native Message");
-```
-
-Note: `ACPMobileLogLevel` contains the following getters:
-
-```jsx
-const ERROR = "ACP_LOG_LEVEL_ERROR";
-const WARNING = "ACP_LOG_LEVEL_WARNING";
-const DEBUG = "ACP_LOG_LEVEL_DEBUG";
-const VERBOSE = "ACP_LOG_LEVEL_VERBOSE";
-``` --->
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=log"/> ---\>
 
 ## registerEventListener
 
@@ -887,12 +816,13 @@ public static func registerEventListener(type: String, source: String, listener:
 
 Extensions can be incrementally registered with Mobile Core using the `registerExtension` API.
 
+### Android Java
+
 <InlineAlert variant="warning" slots="text1, text2"/>
 
 This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of Mobile Core extension.
 
 Use [registerExtensions](#registerextensions) to register desired extensions and boot up the SDK for event processing. Calling `MobileCore.start()` API is no longer required when using `MobileCore.registerExtensions()`.
-### Android Java
 
 <CodeBlock slots="heading, code" repeat="2" />
 
@@ -1054,97 +984,6 @@ public static func registerExtensions(_ extensions: [NSObject.Type], _ completio
 }
 ```
 
-\<!--- <Variant platform="react-native" api="register-extension" repeat="5"/>
-
-For React Native apps, initialize the SDK using native code in your `AppDelegate` (iOS) and `MainApplication` (Android).
-
-#### iOS
-
-```objectivec
-#import "ACPCore.h"
-#import "ACPUserProfile.h"
-#import "ACPIdentity.h"
-#import "ACPLifecycle.h"
-#import "ACPSignal.h"
-...
-@implementation AppDelegate
--(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [ACPCore setLogLevel:ACPMobileLogLevelDebug];
-    [ACPCore configureWithAppId:@"<your_environment_id_from_Launch>"];
-    [ACPUserProfile registerExtension];
-    [ACPIdentity registerExtension];
-    [ACPLifecycle registerExtension];
-    [ACPSignal registerExtension];
-
-    const UIApplicationState appState = application.applicationState;
-    [ACPCore start:^{
-      // only start lifecycle if the application is not in the background
-      if (appState != UIApplicationStateBackground) {
-        [ACPCore lifecycleStart:nil];
-      }
-    }];
-    ...
-  return YES;
-}
-
-@end
-```
-
-#### Android
-
-```java
-import com.adobe.marketing.mobile.AdobeCallback;
-import com.adobe.marketing.mobile.Identity;
-import com.adobe.marketing.mobile.InvalidInitException;
-import com.adobe.marketing.mobile.Lifecycle;
-import com.adobe.marketing.mobile.LoggingMode;
-import com.adobe.marketing.mobile.MobileCore;
-import com.adobe.marketing.mobile.Signal;
-import com.adobe.marketing.mobile.UserProfile;
-...
-import android.app.Application;
-...
-public class MainApplication extends Application implements ReactApplication {
-  ...
-  @Override
-  public void onCreate(){
-    super.onCreate();
-    ...
-    MobileCore.setApplication(this);
-    MobileCore.setLogLevel(LoggingMode.DEBUG);
-    MobileCore.setWrapperType(WrapperType.REACT_NATIVE);
-
-    try {
-      UserProfile.registerExtension();
-      Identity.registerExtension();
-      Lifecycle.registerExtension();
-      Signal.registerExtension();
-      MobileCore.start(new AdobeCallback () {
-          @Override
-          public void call(Object o) {
-            MobileCore.configureWithAppID("<your_environment_id_from_Launch>");
-         }
-      });
-    } catch (InvalidInitException e) {
-      ...
-    }
-  }
-}
-```
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=register-extension"/>
-
-### Flutter
-
-#### Dart
-
-For Flutter apps, initialize the SDK using native code in your `AppDelegate` and `MainApplication` in iOS and Android, respectively.
-
-The initialization code is located in the [Flutter ACPCore Github README](https://github.com/adobe/flutter_acpcore). ---\>
- ---\>
-
 ## resetIdentities
 
 The `resetIdentities` method requests that each extension resets the identities it owns and each extension responds to this request uniquely. For more details, check the `resetIdentities` API reference on each of the extensions you use.
@@ -1303,9 +1142,11 @@ In a production application, you should use a less verbose logging mode, such as
 
 By default, Mobile SDK logging mode is set to `LoggingMode.ERROR` for Android and `LogLevel.error`on iOS.
 
-<InlineAlert variant="info" slots="text"/>
+<InlineAlert variant="info" slots="text1, text2"/>
 
-On **Android**, Mobile SDK uses the `android.util.Log` class to log messages.<br/><br/>On **iOS**, Mobile SDK uses `NSLog` to messages to Apple System Log facility.
+On **Android**, Mobile SDK uses the `android.util.Log` class to log messages.
+
+On **iOS**, Mobile SDK uses `NSLog` to messages to Apple System Log facility.
 
 ### Android Java
 
@@ -1347,7 +1188,7 @@ import AEPServices
 
 ### iOS Objective-C
 
-<CodeBlock slots="heading, code" repeat="4" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -1365,45 +1206,6 @@ import AEPServices
  [AEPMobileCore setLogLevel: AEPLogLevelTrace];
 ```
 
-\<!--- <Variant platform="react-native" api="set-log-level" repeat="5"/>
-
-#### Javascript
-
-### Syntax
-
-```jsx
-(void) setLogLevel: (ACPMobileLogLevel) logLevel;
-```
-
-### Example
-
-```jsx
-import {ACPMobileLogLevel} from '@adobe/react-native-acpcore';
-ACPCore.setLogLevel(ACPMobileLogLevel.VERBOSE);
-```
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=set-log-level"/>
-
-### Flutter
-
-#### Dart
-
-### Syntax
-
-```dart
-(void) setLogLevel: (ACPMobileLogLevel) logLevel;
-```
-
-### Example
-
-```dart
-import 'package:flutter_acpcore/src/acpmobile_logging_level.dart';
-FlutterACPCore.setLogLevel(ACPLoggingLevel.VERBOSE);
-``` --->
- ---\>
-
 ## setPrivacyStatus
 
 You can use the `setPrivacyStatus` API to set the privacy status. For more information about privacy in Mobile Core, please see [Privacy and GDPR](../../../resources/privacy-and-gdpr.md#setprivacystatus) API's.
@@ -1418,6 +1220,8 @@ You should call `setPushIdentifier` on each application launch to ensure the mos
 
 ### Android Java
 
+* _pushIdentifier_  is a string that contains the device token for push notifications.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -1425,8 +1229,6 @@ You should call `setPushIdentifier` on each application launch to ensure the mos
 ```java
 public static void setPushIdentifier(@Nullable final String pushIdentifier);
 ```
-
-* _pushIdentifier_  is a string that contains the device token for push notifications.
 
 ### Example
 
@@ -1474,13 +1276,14 @@ You can set the small and large icons that will be used for notifications that a
 
 ### Android Java
 
-<CodeBlock slots="heading, code" repeat="4" />
-
 #### setSmallIconResourceID
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
 ```java
+
 public static void setSmallIconResourceID(int resourceID)
 ```
 
@@ -1491,6 +1294,8 @@ public static void setSmallIconResourceID(int resourceID)
 ```
 
 #### setLargeIconResourceID
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -1625,6 +1430,9 @@ If you installed and configured the Adobe Analytics extension, this method sends
 
 ### Android Java
 
+* _action_ contains the name of the action to track.
+* _contextData_ contains the context data to attach on the hit.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -1632,9 +1440,6 @@ If you installed and configured the Adobe Analytics extension, this method sends
 ```java
 public static void trackAction(@NonNull final String action, @Nullable final Map<String, String> contextData)
 ```
-
-* _action_ contains the name of the action to track.
-* _contextData_ contains the context data to attach on the hit.
 
 ### Example
 
@@ -1646,6 +1451,9 @@ MobileCore.trackAction("loginClicked", additionalContextData);
 
 ### iOS Swift
 
+* _action_ contains the name of the action to track.
+* _contextData_ contains the context data to attach on this hit.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -1653,9 +1461,6 @@ MobileCore.trackAction("loginClicked", additionalContextData);
 ```swift
  static func track(action: String?, data: [String: Any]?)
 ```
-
-* _action_ contains the name of the action to track.
-* _contextData_ contains the context data to attach on this hit.
 
 ### Example
 
@@ -1665,7 +1470,10 @@ MobileCore.trackAction("loginClicked", additionalContextData);
 
 ### iOS Objective-C
 
-<CodeBlock slots="heading, code" repeat="4" />
+* _action_ contains the name of the action to track.
+* _contextData_ contains the context data to attach on this hit.
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -1674,57 +1482,11 @@ MobileCore.trackAction("loginClicked", additionalContextData);
  static func track(action: String?, data: [String: Any]?)
 ```
 
-* _action_ contains the name of the action to track.
-* _contextData_ contains the context data to attach on this hit.
-
 ### Example
 
 ```objectivec
   [AEPMobileCore trackAction:@"action name" data:@{@"key":@"value"}];
 ```
-
-\<!--- <Variant platform="react-native" api="track-action" repeat="6"/>
-
-#### Javascript
-
-### Syntax
-
-```jsx
-trackAction(action?: String, contextData?: { string: string });
-```
-
-* _action_ contains the name of the action to track.
-* _contextData_ contains the context data to attach on the hit.
-
-### Example
-
-```jsx
-ACPCore.trackAction("action name", {"key": "value"});
-```
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=track-action"/>
-
-### Flutter
-
-#### Dart
-
-### Syntax
-
-```dart
-Future<void> trackAction (String action, {Map<String, String> contextData});
-```
-
-* _action_ contains the name of the action to track.
-* _contextData_ contains the context data to attach on the hit.
-
-### Example
-
-```dart
-FlutterACPCore.trackAction("action name",  data: {"key": "value"});
-``` --->
- ---\>
 
 ## trackState
 
@@ -1736,18 +1498,18 @@ If you installed and configured the Adobe Analytics extension, the `trackState` 
 
 ### Android Java
 
-<CodeBlock slots="heading, code" repeat="2" />
-
 In Android, `trackState` is typically called every time a new `Activity` is loaded.
+
+* _state_ contains the name of the state to track.
+* _contextData_ contains the context data to attach on the hit.
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
 ```java
 public static void trackState(@NonNull final String state, @Nullable final Map<String, String> contextData)
 ```
-
-* _state_ contains the name of the state to track.
-* _contextData_ contains the context data to attach on the hit.
 
 ### Example
 
@@ -1759,6 +1521,9 @@ MobileCore.trackState("homePage", additionalContextData);
 
 ### iOS Swift
 
+* _state_ contains the name of the state to track.
+* _contextData_ contains the context data to attach on this hit.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -1766,9 +1531,6 @@ MobileCore.trackState("homePage", additionalContextData);
 ```swift
  static func track(state: String?, data: [String: Any]?)
 ```
-
-* _state_ contains the name of the state to track.
-* _contextData_ contains the context data to attach on this hit.
 
 ### Example
 
@@ -1778,7 +1540,10 @@ MobileCore.trackState("homePage", additionalContextData);
 
 ### iOS Objective-C
 
-<CodeBlock slots="heading, code" repeat="4" />
+* _state_ contains the name of the state to track.
+* _contextData_ contains the context data to attach on this hit.
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -1787,57 +1552,11 @@ MobileCore.trackState("homePage", additionalContextData);
  static func track(state: String?, data: [String: Any]?)
 ```
 
-* _state_ contains the name of the state to track.
-* _contextData_ contains the context data to attach on this hit.
-
 ### Example
 
 ```objectivec
   [AEPMobileCore trackState:@"state name" data:@{@"key":@"value"}];
 ```
-
-\<!--- <Variant platform="react-native" api="track-state" repeat="6"/>
-
-#### Javascript
-
-### Syntax
-
-```jsx
-trackState(state?: String, contextData?: { string: string });
-```
-
-* _state_ contains the name of the state to track.
-* _contextData_ contains the context data to attach on the hit.
-
-### Example
-
-```jsx
-ACPCore.trackState("state name", {"key": "value"});
-```
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=track-state"/>
-
-### Flutter
-
-#### Dart
-
-### Syntax
-
-```dart
-Future<void> trackState (String state, {Map<String, String> contextData});
-```
-
-* _state_ contains the name of the state to track.
-* _contextData_ contains the context data to attach on the hit.
-
-### Example
-
-```dart
-FlutterACPCore.trackState("state name",  data: {"key1: "value"})
-``` --->
- ---\>
 
 ## updateConfiguration
 

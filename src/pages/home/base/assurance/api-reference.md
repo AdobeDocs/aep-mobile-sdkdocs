@@ -51,7 +51,7 @@ AEPAssurance.extensionVersion()
 
 ### iOS Objective-C
 
-<CodeBlock slots="heading, code" repeat="3" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -65,40 +65,9 @@ AEPAssurance.extensionVersion()
 [AEPAssurance extensionVersion];
 ```
 
-\<!--- <Variant platform="react-native" api="extension-version" repeat="3"/>
-
-#### JavaScript
-
-### Example
-
-```objectivec
-AEPAssurance.extensionVersion().then(version => console.log("AdobeExperienceSDK: AEP Assurance version: " + version));
-```
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=extension-version"/>
-
-### Flutter
-
-#### Dart
-
-### Syntax
-
-```dart
-static Future<String> get extensionVersion async
-```
-
-### Example
-
-```dart
-assuranceVersion = await FlutterAssurance.extensionVersion;
-``` --->
- ---\>
-
 ## registerExtension
 
-<InlineAlert variant="warning" slots="heading, text1"/>
+<InlineAlert variant="warning" slots="text1, text2"/>
 
 This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the Android mobile extension.
 
@@ -133,6 +102,7 @@ You may call this API when the app launches with a URL (see code snippet below f
 <InlineAlert variant="info" slots="text"/>
 
 This API is optional for Android. Deep linking is the best way to connect to an Assurance session when using the Android SDK. Assurance SDK on Android is already setup to handle incoming intents to your app. You can [add an intent filter for incoming links in your app](https://developer.android.com/training/app-links/deep-linking) to complete the deep link configuration.
+
 ### Android Java
 
 <CodeBlock slots="heading, code" repeat="2" />
@@ -186,7 +156,7 @@ For SceneDelegate based applications
 
 ### iOS Objective-C
 
-<CodeBlock slots="heading, code" repeat="3" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -202,37 +172,6 @@ For SceneDelegate based applications
     return false;
 }
 ```
-
-\<!--- <Variant platform="react-native" api="start-session" repeat="3"/>
-
-#### JavaScript
-
-### Example
-
-```javascript
-AEPAssurance.startSession("your-assurance-session-url");
-```
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=start-session"/>
-
-### Flutter
-
-#### Dart
-
-### Syntax
-
-```dart
-static Future<void> startSession(String url);
-```
-
-### Example
-
-```dart
-FlutterAssurance.startSession(url);
-``` --->
- ---\>
 
 ## startSession (Quick Connect)
 

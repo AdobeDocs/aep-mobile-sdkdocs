@@ -17,6 +17,7 @@ This enum is used in conjunction with the [`track(_:withEdgeEventType:)`](messag
 This enum has been changed in v3.0.0 of Adobe Journey Optimizer extension.
 
 Please use newly added `DISMISS`, `INTERACT`, `TRIGGER`, `DISPLAY` values in place of `IN_APP_DISMISS`, `IN_APP_INTERACT`, `IN_APP_TRIGGER`, `IN_APP_DISPLAY` from earlier versions.
+
 ### Android Java
 
 ```java
@@ -92,6 +93,7 @@ public enum MessagingEdgeEventType {
 This enum has been changed in v5.0.0 of Adobe Journey Optimizer extension.
 
 Please use newly added  values `dismiss`, `interact`, `trigger`, `display` in place of `inappDismiss`, `inappInteract`, `inappTrigger`, `inappDisplay` from earlier versions.
+
 ### iOS Swift
 
 ```swift

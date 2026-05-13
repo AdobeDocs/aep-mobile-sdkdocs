@@ -24,11 +24,11 @@ The `getInboxUI` method retrieves a flow of [InboxUIState](../android/public-cla
 
 Calling this API will not download the inbox configuration or content cards from Adobe Journey Optimizer; it will only retrieve the data that is already downloaded and cached by the Messaging extension. You **must** call [`updatePropositionsForSurfaces`](../../code-based/api-reference.md#updatepropositionsforsurfaces) API from the AEPMessaging extension with the desired surfaces prior to calling this API.
 
-#### Syntax
+### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 fun getInboxUI(): Flow<InboxUIState>
@@ -42,11 +42,11 @@ The `refresh` method refreshes the Inbox content by fetching new inbox and conte
 
 `getInboxUI` automatically loads initial content when first collected, so this method is only needed for manual refresh operations (e.g., pull-to-refresh or refresh button).
 
-#### Syntax
+### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 suspend fun refresh()
@@ -56,7 +56,7 @@ suspend fun refresh()
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 import androidx.lifecycle.ViewModel

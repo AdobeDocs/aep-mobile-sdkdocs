@@ -20,7 +20,7 @@ This document lists the public APIs available in the Messaging extension for imp
 
 The `getContentCardsUI` method retrieves an array of [ContentCardUI](../ios/public-classes/contentcardui.md) objects for the provided surface. These ContentCardUI objects provide the user interface for templated content cards to your application.
 
-#### Parameters:
+### Parameters
 
 * _surface_ - The [Surface](../../public-classes/surface.md) for which the content cards should be retrieved.
 * _customizer_ - An optional [ContentCardCustomizing](../ios/public-classes/contentcardcustomizing.md) object to customize the appearance of the content card template. If you do not need to customize the appearance of the content card template, this parameter can be omitted.
@@ -33,9 +33,9 @@ The `getContentCardsUI` method retrieves an array of [ContentCardUI](../ios/publ
 
 Calling this API will not download content cards from Adobe Journey Optimizer; it will only retrieve the content cards that are already downloaded and cached by the Messaging extension. You **must** call the [`updatePropositionsForSurfaces`](../../code-based/api-reference.md#updatepropositionsforsurfaces) API with the desired surfaces prior to calling this API.
 
-#### Syntax
+### Syntax
 
-<CodeBlock slots="heading, code" repeat="1" languages="Swift" />
+<CodeBlock slots="heading, code" repeat="1" />
 
 #### Swift
 
@@ -46,9 +46,9 @@ public static func getContentCardsUI(for surface: Surface,
                                      _ completion: @escaping (Result<[ContentCardUI], Error>) -> Void)
 ```
 
-#### Example
+### Example
 
-<CodeBlock slots="heading, code" repeat="1" languages="Swift" />
+<CodeBlock slots="heading, code" repeat="1" />
 
 #### Swift
 

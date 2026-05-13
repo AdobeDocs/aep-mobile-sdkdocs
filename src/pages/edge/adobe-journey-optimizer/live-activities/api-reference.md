@@ -33,6 +33,8 @@ When registering multiple types, their push-to-start tokens are automatically ba
 
 ### iOS Swift
 
+* _activityTypes_ is an array of types conforming to the `LiveActivityAttributes` protocol. Each type represents a Live Activity that will be monitored for push-to-start tokens (iOS 17.2+), activity update tokens, and lifecycle events.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
@@ -40,8 +42,6 @@ When registering multiple types, their push-to-start tokens are automatically ba
 ```swift
 static func registerLiveActivities(_ activityTypes: [any LiveActivityAttributes.Type])
 ```
-
-* _activityTypes_ is an array of types conforming to the `LiveActivityAttributes` protocol. Each type represents a Live Activity that will be monitored for push-to-start tokens (iOS 17.2+), activity update tokens, and lifecycle events.
 
 ### Example
 
@@ -70,4 +70,3 @@ if #available(iOS 16.1, *) {
 <InlineAlert variant="info" slots="text"/>
 
 The `registerLiveActivities` API is only available in Swift. ActivityKit and its `ActivityAttributes` protocol are Swift-only APIs and cannot be called from Objective-C.
-

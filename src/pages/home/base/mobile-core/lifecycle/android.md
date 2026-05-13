@@ -24,9 +24,11 @@ When Lifecycle data collection is implemented in an application, pausing Lifecyc
 
 The flag is controlled by calls to [lifecyclePause](api-reference.md#lifecyclepause) (which sets the flag) and [lifecycleStart](api-reference.md#lifecyclestart) (which clears the flag).
 
-<InlineAlert variant="info" slots="text"/>
+<InlineAlert variant="info" slots="text1, text2"/>
 
-To ensure accurate session and crash reporting, you should call `MobileCore.lifecycleStart()` in the **onResume()** method of each activity, and `MobileCore.lifecyclePause()` in the **onPause()** method of each activity.<br/><br/>You should not call Lifecycle start and pause APIs from fragments.
+To ensure accurate session and crash reporting, you should call `MobileCore.lifecycleStart()` in the **onResume()** method of each activity, and `MobileCore.lifecyclePause()` in the **onPause()** method of each activity.
+
+You should not call Lifecycle start and pause APIs from fragments.
 
 To understand why this is essential, here is an illustration of the Android activity lifecycle:![](./assets/android/android-crash.png)
 

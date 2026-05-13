@@ -27,7 +27,7 @@ To fetch the inbox content for the surfaces configured in [Adobe Journey Optimiz
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 
-#### Swift
+### Swift
 
 ```swift
 let inboxSurface = Surface(path: "inbox")
@@ -167,7 +167,7 @@ inboxUI.refresh()
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 
-#### Swift
+### Swift
 
 ```swift
 let notificationsInboxUI = Messaging.getInboxUI(for: Surface(path: "notifications"))

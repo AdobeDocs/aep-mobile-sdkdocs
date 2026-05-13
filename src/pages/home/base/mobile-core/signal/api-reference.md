@@ -33,7 +33,9 @@ public static String extensionVersion();
 String signalExtensionVersion = Signal.extensionVersion();
 ```
 
-### iOS
+### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -41,44 +43,25 @@ String signalExtensionVersion = Signal.extensionVersion();
 public static let extensionVersion
 ```
 
-**Examples**
-
-**Swift**
+### Example
 
 ```swift
 let version = Signal.extensionVersion
 ```
 
-**Objective-C**
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+### Example
 
 ```objectivec
 NSString *version = [AEPMobileSignal extensionVersion];
 ```
 
-\<!--- <Variant platform="react-native" api="extension-version" repeat="2"/>
-
-#### JavaScript
-
-```jsx
-ACPSignal.extensionVersion().then(signalExtensionVersion => console.log("AdobeExperienceSDK: ACPSignal version: " + signalExtensionVersion));
-```
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=extension-version"/>
-
-### Flutter
-
-#### Dart
-
-```dart
-String signalExtensionVersion = await FlutterACPSignal.extensionVersion;
-``` --->
- ---\>
-
 ## registerExtension
 
-<InlineAlert variant="warning" slots="heading, text1"/>
+<InlineAlert variant="warning" slots="text1, text2"/>
 
 This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the Android mobile extension.
 
@@ -101,14 +84,6 @@ public static void registerExtension()
 ```java
 Signal.registerExtension();
 ```
-
-\<!--- <Variant platform="react-native" api="register-extension" repeat="1"/>
-
-When using React Native, register the Signal extension with Mobile Core in native code as shown on the Android and iOS tabs. ---\>
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=register-extension"/> ---\>
 
 ## collectPii
 

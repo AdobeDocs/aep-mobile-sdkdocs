@@ -32,7 +32,7 @@ public class InboxSchemaData: NSObject, Codable
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 
-#### Swift
+### Swift
 
 ```swift
 let inboxUI = Messaging.getInboxUI(for: Surface(path: "inbox"))

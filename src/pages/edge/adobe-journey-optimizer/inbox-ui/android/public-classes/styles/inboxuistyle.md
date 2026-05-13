@@ -35,7 +35,7 @@ Class representing the style for the Inbox composable. Use the `Builder` class t
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 val inboxStyle = InboxUIStyle.Builder()

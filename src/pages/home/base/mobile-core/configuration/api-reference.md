@@ -263,27 +263,6 @@ let version = MobileCore.extensionVersion
 NSString *version = [AEPMobileCore extensionVersion];
 ```
 
-\<!--- <Variant platform="react-native" api="extension-version" repeat="2"/>
-
-#### JavaScript
-
-```jsx
-ACPCore.extensionVersion().then(coreExtensionVersion => console.log("AdobeExperienceSDK: ACPCore version: " + coreExtensionVersion));
-```
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=extension-version"/>
-
-### Flutter
-
-#### Dart
-
-```dart
-String coreExtensionVersion = await FlutterACPCore.extensionVersion;
-``` --->
- ---\>
-
 ## updateConfiguration
 
 You can also update the configuration programmatically by passing configuration keys and values to override the existing configuration.
@@ -334,7 +313,7 @@ static func updateConfigurationWith(configDict: [String: Any])
 
 ### iOS Objective-C
 
-<CodeBlock slots="heading, code" repeat="4" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -348,40 +327,3 @@ static func updateConfigurationWith(configDict: [String: Any])
  NSDictionary *updatedConfig = @{@"global.privacy":@"optedout"};
  [AEPMobileCore updateConfiguration:updatedConfig];
 ```
-
-\<!--- <Variant platform="react-native" api="update-configuration" repeat="5"/>
-
-#### JavaScript
-
-### Syntax
-
-```javascript
-updateConfiguration(configMap?: { string: any })
-```
-
-### Example
-
-```jsx
-ACPCore.updateConfiguration({"global.privacy":"optedout"});
-```
-
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=update-configuration"/>
-
-### Flutter
-
-#### Dart
-
-### Syntax
-
-```dart
-static Future<void> updateConfiguration(Map<String, Object> configMap);
-```
-
-### Example
-
-```dart
-FlutterACPCore.updateConfiguration({"global.privacy":"optedout"});
-``` --->
- ---\>

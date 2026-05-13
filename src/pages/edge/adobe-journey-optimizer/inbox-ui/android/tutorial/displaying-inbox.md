@@ -30,7 +30,7 @@ To fetch the inbox settings and content cards for the surfaces configured in [Ad
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 val surfaces = mutableListOf<Surface>()
@@ -48,7 +48,7 @@ To display an Inbox, first create a `MessagingInboxProvider` with your configure
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 import com.adobe.marketing.mobile.messaging.MessagingInboxProvider
@@ -77,7 +77,7 @@ To retrieve the inbox state, create a `MessagingInboxProvider` in your ViewModel
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 import androidx.lifecycle.ViewModel
@@ -121,15 +121,15 @@ Only content cards for which the user has qualified are returned. Client-side ru
 
 The Inbox user interface is implemented using Jetpack Compose. To display the inbox, use the `AepInbox` composable with the `InboxUIState` from your ViewModel:
 
-<InlineAlert variant="warning" slots="heading, text" />
+<InlineAlert variant="warning" slots="text1, text2" />
 
-Do not embed AepInbox inside an unbounded container/lazy layout that scrolls in the same direction
+Do not embed AepInbox inside an unbounded container/lazy layout that scrolls in the same direction.
 
 `AepInbox` uses a `LazyColumn` for vertical layouts and a `LazyRow` for horizontal layouts. The orientation is set when the inbox campaign is authored and published on Adobe Journey Optimizer UI. Embedding `AepInbox` inside an unbounded container/lazy layout that scrolls in the same direction — such as a `LazyColumn` for a vertical scrolling inbox or a `LazyRow` for a horizontal scrolling inbox — causes a runtime crash (`IllegalStateException: Vertically/Horizontally scrollable component was measured with an infinity maximum constraints`).
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 import androidx.compose.runtime.Composable
@@ -159,7 +159,7 @@ To display an Inbox in a View-based (non-Compose) application, use `ComposeView`
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 import android.os.Bundle
@@ -247,7 +247,7 @@ The `getInboxUI()` method automatically calls `refresh()` when first collected, 
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 val inboxUIState: StateFlow<InboxUIState> = inboxProvider.getInboxUI()
@@ -262,7 +262,7 @@ val inboxUIState: StateFlow<InboxUIState> = inboxProvider.getInboxUI()
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 AppTheme {
@@ -278,7 +278,7 @@ AppTheme {
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 val inboxUIState by viewModel.inboxUIState.collectAsStateWithLifecycle()
@@ -288,7 +288,7 @@ val inboxUIState by viewModel.inboxUIState.collectAsStateWithLifecycle()
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 // Use the same surface path in both places
@@ -301,7 +301,7 @@ val inboxProvider = MessagingInboxProvider(surface)
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 fun onRefreshClicked() {
@@ -320,7 +320,7 @@ fun onRefreshClicked() {
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 // Notifications inbox

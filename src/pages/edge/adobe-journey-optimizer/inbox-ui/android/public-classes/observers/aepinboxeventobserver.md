@@ -22,7 +22,7 @@ Interface for observing inbox-level events in addition to item-level UI events. 
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 interface AepInboxEventObserver : AepUIEventObserver {

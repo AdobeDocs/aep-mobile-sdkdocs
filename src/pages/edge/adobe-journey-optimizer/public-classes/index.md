@@ -25,7 +25,7 @@ This documents lists details about the public classes and enums available in Mes
 * [Class - Message](message.md)
 * [Enum - MessagingEdgeEventType](messaging-edge-event-type.md)
 
-## Proposition-based messaging<br /> \(Code-based experiences & Content Cards)
+## Proposition-based messaging (Code-based experiences & Content Cards)
 
 * [Class - ContentCard](content-card.md)
 * [Class - Proposition](proposition.md)

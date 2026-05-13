@@ -8,9 +8,6 @@ keywords:
 - Product overview
 ---
 
-import Tabs from './tabs/index.md'
-import InitializeSDK from '/src/pages/resources/initialize.md'
-
 # Lifecycle
 
 Sessions contain information about the app's current lifecycle, such as the device information, the application install or upgrade information, the session start and pause times, the number of application launches, and additional context data that is provided by the developer through the `lifecycleStart` API. Session data is persisted, so it is available across application launches.
@@ -21,19 +18,46 @@ Sessions contain information about the app's current lifecycle, such as the devi
 
 Add MobileCore and Lifecycle extensions as dependencies to your project.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+#### Android Kotlin
 
-Kotlin<br/>(Android)
+Add the required dependencies to your project by including them in the app's Gradle file.
 
-<Tabs query="platform=android-kotlin&task=add"/>
+```kotlin
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation("com.adobe.marketing.mobile:core")
+implementation("com.adobe.marketing.mobile:lifecycle")
+```
 
-Groovy<br/>(Android)
+<InlineAlert variant="warning" slots="text"/>
 
-<Tabs query="platform=android-groovy&task=add"/>
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../../../resources/manage-gradle-dependencies.md) for more information.
 
-CocoaPods<br/>(iOS)
+#### Android Groovy
 
-<Tabs query="platform=ios-pods&task=add"/>
+Add the required dependencies to your project by including them in the app's Gradle file.
+
+```java
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
+implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:lifecycle'
+```
+
+<InlineAlert variant="warning" slots="text"/>
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../../../resources/manage-gradle-dependencies.md) for more information.
+
+#### iOS CocoaPods
+
+Add the required dependencies to your project using CocoaPods. Add following pods in your `Podfile`:
+
+```swift
+use_frameworks!
+
+target 'YourTargetApp' do
+  pod 'AEPCore', '~> 5.0'
+  pod 'AEPLifecycle', '~> 5.0'
+end
+```
 
 ### Initialize Adobe Experience Platform SDK with Lifecycle Extension
 
@@ -41,7 +65,94 @@ Next, initialize the SDK by registering all the solution extensions that have be
 
 Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
 
-<InitializeSDK query="componentClass=TabsBlock"/>
+#### Android Kotlin
+
+<InlineAlert variant="warning" slots="text"/>
+
+This API is available starting from **Android BOM version 3.8.0**.
+
+```kotlin
+import com.adobe.marketing.mobile.LoggingMode
+import com.adobe.marketing.mobile.MobileCore
+...
+import android.app.Application
+...
+
+class MainApp : Application() {
+  override fun onCreate() {
+    super.onCreate()
+    MobileCore.setLogLevel(LoggingMode.DEBUG)
+    MobileCore.initialize(this, "ENVIRONMENT_ID")
+  }
+}
+```
+
+#### Android Java
+
+<InlineAlert variant="warning" slots="text"/>
+
+This API is available starting from **Android BOM version 3.8.0**.
+
+```java
+import com.adobe.marketing.mobile.LoggingMode;
+import com.adobe.marketing.mobile.MobileCore;
+...
+import android.app.Application;
+...
+public class MainApp extends Application {
+  @Override
+  public void onCreate(){
+    super.onCreate();
+    MobileCore.setLogLevel(LoggingMode.DEBUG);
+    MobileCore.initialize(this, "ENVIRONMENT_ID");
+  }
+}
+```
+
+#### iOS Swift
+
+<InlineAlert variant="warning" slots="text"/>
+
+This API is available starting from **iOS version 5.4.0**.
+
+```swift
+// AppDelegate.swift
+import AEPCore
+import AEPServices
+...
+
+final class AppDelegate: NSObject, UIApplicationDelegate {
+  func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+    MobileCore.setLogLevel(.debug)
+    MobileCore.initialize(appId: "ENVIRONMENT_ID")
+    ...
+  }
+}
+```
+
+#### iOS Objective-C
+
+<InlineAlert variant="warning" slots="text"/>
+
+This API is available starting from **iOS version 5.4.0**.
+
+```objectivec
+// AppDelegate.m
+#import "AppDelegate.h"
+@import AEPCore;
+@import AEPServices;
+...
+@implementation AppDelegate
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  [AEPMobileCore setLogLevel: AEPLogLevelDebug];  
+  [AEPMobileCore initializeWithAppId:@"ENVIRONMENT_ID" completion:^{
+      NSLog(@"AEP Mobile SDK is initialized");
+  }];
+  ...
+  return YES;
+}
+@end
+```
 
 ## Add Lifecycle start and pause calls
 
@@ -61,15 +172,33 @@ Start Lifecycle data collection by calling `lifecycleStart(_:)` from within the 
 
 If your iOS application supports background capabilities, your `application(_:didFinishLaunchingWithOptions:)` method might be called when iOS launches your app in the background. If you do not want background launches to count towards your lifecycle metrics, then `lifecycleStart(_:)` should only be called when the application state is not equal to `UIApplicationStateBackground`.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### iOS Swift
 
-Swift
+```swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    let appState = application.applicationState
+    MobileCore.registerExtensions([Lifecycle.self, ...], {
+        if appState != .background {
+        // only start lifecycle if the application is not in the background
+        MobileCore.lifecycleStart(additionalContextData: nil)
+        }
+    }
+}
+```
 
-<Tabs query="platform=ios-swift&task=start-lifecycle-didfinishlaunch"/>
+#### iOS Objective-C
 
-Objective-C
-
-<Tabs query="platform=ios-objc&task=start-lifecycle-didfinishlaunch"/>
+```objectivec
+- (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    const UIApplicationState appState = application.applicationState;
+    [AEPMobileCore registerExtensions:@[AEPMobileLifecycle.class, ...] completion:^{
+    // only start lifecycle if the application is not in the background
+    if (appState != UIApplicationStateBackground) {
+        [AEPMobileCore lifecycleStart:nil];
+    }
+    }];
+}
+```
 
 #### Start and Pause Lifecycle data collection from iOS lifecycle delegate
 
@@ -81,15 +210,65 @@ When your app is resuming from the background state, call `lifecycleStart(_:)` f
 
 * If your application supports both a scene delegate and an app delegate, implement the Lifecycle APIs in both delegate objects.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### iOS Swift
 
-Swift
+In iOS 13 and later, for a scene-based application, use the `UISceneDelegate` as follows:
 
-<Tabs query="platform=ios-swift&task=start-pause"/>
+```swift
+func sceneWillEnterForeground(_ scene: UIScene) {
+    MobileCore.lifecycleStart(additionalContextData: nil)
+}
+```
 
-Objective-C
+```swift
+func sceneDidEnterBackground(_ scene: UIScene) {
+    MobileCore.lifecyclePause()
+}
+```
 
-<Tabs query="platform=ios-objc&task=start-pause"/>
+In iOS 12 and earlier, use the `UIApplicationDelegate` as follows:
+
+```swift
+func applicationWillEnterForeground(_ application: UIApplication) {
+    MobileCore.lifecycleStart(additionalContextData: nil)
+}
+```
+
+```swift
+func applicationDidEnterBackground(_ application: UIApplication) {
+    MobileCore.lifecyclePause()
+}
+```
+
+#### iOS Objective-C
+
+In iOS 13 and later, for a scene-based application, use the `UISceneDelegate` as follows:
+
+```objectivec
+- (void) sceneWillEnterForeground:(UIScene *)scene {
+    [AEPMobileCore lifecycleStart:nil];
+}
+```
+
+```objectivec
+- (void) sceneDidEnterBackground:(UIScene *)scene {
+    [AEPMobileCore lifecyclePause];
+}
+```
+
+In iOS 12 and earlier, use the `UIApplicationDelegate` as follows:
+
+```objectivec
+- (void) applicationWillEnterForeground:(UIApplication *)application {
+    [AEPMobileCore lifecycleStart:nil];
+}
+```
+
+```objectivec
+- (void) applicationDidEnterBackground:(UIApplication *)application {
+    [AEPMobileCore lifecyclePause];
+}
+```
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -146,15 +325,17 @@ For more information, read the full blog post [Implement Adobe Experience Cloud 
 
 To include additional data with lifecycle tracking calls, pass an additional parameter to `lifecycleStart(additionalContextData:)` that contains context data:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### iOS Swift
 
-Swift
+```swift
+MobileCore.lifecycleStart(additionalContextData: ["myapp.category": "Game"])
+```
 
-<Tabs query="platform=ios-swift&task=context-data"/>
+#### iOS Objective-C
 
-Objective-C
-
-<Tabs query="platform=ios-objc&task=context-data"/>
+```objectivec
+[AEPMobileCore lifecycleStart:@{@"myapp.category": @"Game"}];      
+```
 
 ### Lifecycle on Android
 
@@ -162,15 +343,53 @@ Objective-C
 
 To ensure accurate session and crash reporting, the Lifecycle APIs must be implemented in every Activity of the Android Application. Do not start or stop Lifecycle in a Fragment.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Kotlin
 
-Kotlin
+Add the following to each Android Activity class.
 
-<Tabs query="platform=android-kotlin&task=activity-start-pause"/>
+```kotlin
+import com.adobe.marketing.mobile.MobileCore
+import com.adobe.marketing.mobile.Lifecycle
+...
+```
 
-Java
+```kotlin
+    override fun onResume() {
+        MobileCore.setApplication(this.application)
+        MobileCore.lifecycleStart(null)
+    }
+```
 
-<Tabs query="platform=android-java&task=activity-start-pause"/>
+```kotlin
+    override fun onPause() {
+        MobileCore.lifecyclePause()
+    }
+```
+
+#### Android Java
+
+Add the following to each Android Activity class.
+
+```java
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Lifecycle;
+...
+```
+
+```java
+    @Override
+    public void onResume() {
+        MobileCore.setApplication(getApplication());
+        MobileCore.lifecycleStart(null);
+    }
+```
+
+```java
+    @Override
+    public void onPause() {
+        MobileCore.lifecyclePause();
+    }
+```
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -182,29 +401,103 @@ Starting with API Level 14, Android allows global lifecycle callbacks for activi
 
 You can use these callbacks to ensure that all of your activities correctly call the Lifecycle APIs without needing to update each individual Activity class. Add code to register an instance of [ActivityLifecycleCallbacks](https://developer.android.com/reference/android/app/Application.ActivityLifecycleCallbacks) in your Application class, just before [registering your extensions](#register-lifecycle-with-mobile-core) with MobileCore.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Kotlin
 
-Kotlin
+```kotlin
+import com.adobe.marketing.mobile.MobileCore
+import com.adobe.marketing.mobile.Lifecycle
 
-<Tabs query="platform=android-kotlin&task=global-lifecycle"/>
+class MobileApp : Application() {
 
-Java
+override fun onCreate() {
+    super.onCreate()
 
-<Tabs query="platform=android-java&task=global-lifecycle"/>
+    registerActivityLifecycleCallbacks(object: ActivityLifecycleCallbacks {
+        override fun onActivityResumed(activity: Activity) {
+            MobileCore.setApplication(activity.application)
+            MobileCore.lifecycleStart(null)
+        }
+
+        override fun onActivityPaused(activity: Activity) {
+            MobileCore.lifecyclePause()
+        }
+
+        // the following methods aren't needed for our lifecycle purposes, but are
+        // required to be implemented by the ActivityLifecycleCallbacks object
+        override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {}
+        override fun onActivityStarted(activity: Activity) {}
+        override fun onActivityStopped(activity: Activity) {}
+        override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
+        override fun onActivityDestroyed(activity: Activity) {}
+    })
+
+    ...
+}
+ ...
+}
+```
+
+#### Android Java
+
+```java
+import com.adobe.marketing.mobile.MobileCore;
+import com.adobe.marketing.mobile.Lifecycle;
+
+public class MobileApp extends Application {
+
+@Override
+protected void onCreate() {
+    super.onCreate();
+
+    registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
+        @Override
+        public void onActivityResumed(Activity activity) {
+            MobileCore.setApplication(activity.getApplication());
+            MobileCore.lifecycleStart(null);
+        }
+
+        @Override
+        public void onActivityPaused(Activity activity) {
+            MobileCore.lifecyclePause();
+        }
+
+        // the following methods aren't needed for our lifecycle purposes, but are
+        // required to be implemented by the ActivityLifecycleCallbacks object
+        @Override
+        public void onActivityCreated(Activity activity, Bundle savedInstanceState) {}
+        @Override
+        public void onActivityStarted(Activity activity) {}
+        @Override
+        public void onActivityStopped(Activity activity) {}
+        @Override
+        public void onActivitySaveInstanceState(Activity activity, Bundle outState) {}
+        @Override
+        public void onActivityDestroyed(Activity activity) {}
+    });
+
+    ...
+}
+ ...
+}
+```
 
 #### Include additional context data
 
 To include additional data with lifecycle tracking calls, pass an additional parameter to `lifecycleStart(Map)` that contains context data:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Kotlin
 
-Kotlin
+```kotlin
+MobileCore.lifecycleStart(mapOf("myapp.category" to "Game"))
+```
 
-<Tabs query="platform=android-kotlin&task=context-data"/>
+#### Android Java
 
-Java
-
-<Tabs query="platform=android-java&task=context-data"/>
+```java
+HashMap<String, Object> additionalContextData = new HashMap<String, Object>();
+contextData.put("myapp.category", "Game");
+MobileCore.lifecycleStart(additionalContextData);
+```
 
 <InlineAlert variant="info" slots="text"/>
 

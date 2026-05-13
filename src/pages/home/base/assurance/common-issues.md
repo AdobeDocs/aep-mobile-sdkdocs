@@ -18,12 +18,17 @@ Please follow OS developer documentation to learn more on setting up deep linkin
 
 ### Android
 
-Follow the [Android documention](https://developer.android.com/training/app-links/deep-linking) on information about how to set up a deeplink.
-
+```text
+Follow the [Android documentation](https://developer.android.com/training/app-links/deep-linking) 
+on information about how to set up a deeplink.
+```
 ### iOS
 
-Follow the [Apple developer](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app) documentation to set a custom URL scheme for your application.
-
+```text
+Follow the [Apple developer documentation] 
+(https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app) 
+to set a custom URL scheme for your application.
+```
 ## PIN screen does not appear
 
 When the generated link or QR code from Adobe Experience Platform Assurance is opened on device, it should launch your app and show a PIN screen to establish a Assurance session (as shown below). If this screen does not appear, ensure the following:
@@ -41,13 +46,15 @@ The PIN screen may not show if the link or QR code is incorrect (or doesn't cont
 ### Android
 
 ```text
-AdobeExperienceSDK: Assurance - Not a valid Assurance deeplink, Ignoring start session API call. URL :  <deeplink URL>
+AdobeExperienceSDK: Assurance - Not a valid Assurance deeplink,
+Ignoring start session API call. URL :  <deeplink URL>
 ```
 
 ### iOS
 
 ```text
-AdobeExperienceSDK: Assurance - Not a valid Assurance deeplink, Ignoring start session API call. URL :  <deeplink URL>
+AdobeExperienceSDK: Assurance - Not a valid Assurance deeplink,
+Ignoring start session API call. URL :  <deeplink URL>
 ```
 
 This issue may be resolved by scanning the right QR code or correctly copying the link generated in Assurance.
@@ -79,13 +86,20 @@ If you see an Invalid Mobile SDK Configuration error (see screenshot below), ver
 ### Android
 
 ```text
-W/AdobeExperienceSDK: Assurance - Assurance connection closed. Reason: Invalid Configuration, Description: The Experience Cloud organization identifier is unavailable from the SDK. Ensure SDK configuration is setup correctly. See documentation for more detail.
+W/AdobeExperienceSDK: Assurance - Assurance connection closed.
+Reason: Invalid Configuration,
+Description: The Experience Cloud organization identifier is
+unavailable from the SDK. Ensure SDK configuration is setup
+correctly. See documentation for more detail.
 ```
 
 ### iOS
 
 ```text
-[AdobeExperienceSDK ERROR <AEPAssurance>]: Invalid Configuration, Description: The Experience Cloud organization identifier is unavailable from the SDK. Ensure SDK configuration is setup correctly. See documentation for more detail.
+[AdobeExperienceSDK ERROR <AEPAssurance>]: Invalid Configuration,
+Description: The Experience Cloud organization identifier is
+unavailable from the SDK. Ensure SDK configuration is setup
+correctly. See documentation for more detail.
 ```
 
 ## Unauthorized access
@@ -99,13 +113,23 @@ This error may happen when you have access to multiple organizations in your Ado
 ### Android
 
 ```text
-W/AdobeExperienceSDK: Assurance - Assurance connection closed. Reason: Unauthorized Access, Description: The Experience Cloud organization identifier does not match with that of the Assurance session. Ensure the right Experience Cloud organization is being used. See documentation for more detail.
+W/AdobeExperienceSDK: Assurance - Assurance connection closed.
+Reason: Unauthorized Access,
+Description: The Experience Cloud organization identifier does not
+match with that of the Assurance session. Ensure the right
+Experience Cloud organization is being used.
+See documentation for more detail.
 ```
 
 ### iOS
 
 ```text
-[AdobeExperienceSDK ERROR <AEPAssurance>]: Assurance connection closed. Reason: Unauthorized Access, Description: The Experience Cloud organization identifier does not match with that of the Assurance session. Ensure the right Experience Cloud organization is being used. See documentation for more detail.
+[AdobeExperienceSDK ERROR <AEPAssurance>]: Assurance connection closed.
+Reason: Unauthorized Access,
+Description: The Experience Cloud organization identifier does not
+match with that of the Assurance session. Ensure the right
+Experience Cloud organization is being used.
+See documentation for more detail.
 ```
 
 ## Timeout
@@ -117,13 +141,17 @@ This SDK log message is not an error and is displayed during the routine course 
 ### Android
 
 ```text
-D/AdobeExperienceSDK: Assurance - Timeout - Assurance did not receive deeplink to start Assurance session within 5 seconds. Shutting down Assurance extension
+D/AdobeExperienceSDK: Assurance - Timeout -
+Assurance did not receive deeplink to start Assurance session
+within 5 seconds. Shutting down Assurance extension
 ```
 
 ### iOS
 
 ```text
-[AdobeExperienceSDK DEBUG <AEPAssurance>]: Timeout - Assurance extension did not receive session url. Shutting down from processing any further events.
+[AdobeExperienceSDK DEBUG <AEPAssurance>]: Timeout -
+Assurance extension did not receive session url.
+Shutting down from processing any further events.
 ```
 
 ## Failed to show fullscreen takeover
@@ -133,5 +161,6 @@ This log message is not an error and will appear with routine usage on Android d
 #### Sample log
 
 ```text
-W/AdobeExperienceSDK: Assurance - Failed to show fullscreen takeover, could not get fullScreenTakeover object.
+W/AdobeExperienceSDK: Assurance - Failed to show fullscreen takeover,
+could not get fullScreenTakeover object.
 ```

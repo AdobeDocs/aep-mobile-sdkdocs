@@ -32,7 +32,8 @@ In the `shouldShowMessage` function of the `MessagingDelegate`, get a reference 
 Android 3.x
 
 In the `onShow` function of the `PresentationDelegate`, obtain a reference to the `InAppMessageEventHandler` for use in Javascript interactions.
-### android3x Kotlin
+
+### Android 3.x Kotlin
 
 ```kotlin
 var eventHandler: InAppMessageEventHandler? = null
@@ -48,7 +49,7 @@ override fun onShow(presentable: Presentable<*>) {
 }
 ```
 
-### android3x Java
+### Android 3.x Java
 
 ```java
 InAppMessageEventHandler eventHandler = null;
@@ -67,7 +68,8 @@ public void onShow(Presentable<?> presentable) {
 Android 2.x (Older version)
 
 On Android, the web view is represented as `WebView`.
-### android2x Java
+
+### Android 2.x Java
 
 ```java
 @Override
@@ -82,6 +84,7 @@ public boolean shouldShowMessage(FullscreenMessage fullscreenMessage) {
 ```
 
 On iOS, the web view is represented as `WKWebView`.
+
 ### iOS Swift
 
 ```swift
@@ -103,7 +106,8 @@ Android 3.x
 With a reference to the `InAppMessageEventHandler`, the instance method `evaluateJavascript(String, AdobeCallback<String>)` can now be leveraged to call a JavaScript method.
 
 Further details of this API are explained in the [Android](https://developer.android.com/reference/android/webkit/WebView#evaluateJavascript(java.lang.String,%20android.webkit.ValueCallback%3Cjava.lang.String%3E)) documentation - the example below is provided for the purpose of demonstration:
-### android3x Kotlin
+
+### Android 3.x Kotlin
 
 ```kotlin
 var eventHandler: InAppMessageEventHandler? = null
@@ -121,7 +125,7 @@ override fun onShow(presentable: Presentable<*>) {
 }
 ```
 
-### android3x Java
+### Android 3.x Java
 
 ```java
 InAppMessageEventHandler eventHandler = null;
@@ -147,7 +151,8 @@ Android 2.x (Older version)
 With a reference to the `WebView`, the instance method `public void evaluateJavascript(@NonNull String script, @Nullable ValueCallback<String> resultCallback)` can now be leveraged to call a JavaScript method.
 
 Further details of this API are explained in the [Android documentation](https://developer.android.com/reference/android/webkit/WebView#evaluateJavascript(java.lang.String,%20android.webkit.ValueCallback%3Cjava.lang.String%3E)) - the example below is provided for the purpose of demonstration:
-### android2x Java
+
+### Android 2.x Java
 
 ```java
 @Override
@@ -176,6 +181,7 @@ public boolean shouldShowMessage(FullscreenMessage fullscreenMessage) {
 With a reference to the `WKWebView`, the instance method `evaluateJavaScript(_:completionHandler:)` can now be leveraged to call a JavaScript method.
 
 Further details of this API are explained in the [Apple documentation](https://developer.apple.com/documentation/webkit/wkwebview/1415017-evaluateJavaScript) - the example below is provided for the purpose of demonstration:
+
 ### iOS Swift
 
 ```swift

@@ -17,9 +17,9 @@ A protocol that defines methods for listening to UI events related to content ca
 
 ## Protocol Definition
 
-<CodeBlock slots="heading, code" repeat="1" languages="Swift" />
+<CodeBlock slots="heading, code" repeat="1" />
 
-#### Swift
+### Swift
 
 ```swift
 public protocol ContentCardUIEventListening {
@@ -41,7 +41,7 @@ Called when the content card appears on the screen. Implementation of this metho
 
 #### Syntax
 
-<CodeBlock slots="heading, code" repeat="1" languages="Swift" />
+<CodeBlock slots="heading, code" repeat="1" />
 
 #### Swift
 
@@ -59,7 +59,7 @@ Called when the content card is dismissed. Implementation of this method is opti
 
 #### Syntax
 
-<CodeBlock slots="heading, code" repeat="1" languages="Swift" />
+<CodeBlock slots="heading, code" repeat="1" />
 
 #### Swift
 
@@ -83,7 +83,7 @@ A boolean value indicating whether the interaction event was handled. Return `tr
 
 #### Syntax
 
-<CodeBlock slots="heading, code, content" repeat="1" languages="Swift" />
+<CodeBlock slots="heading, code" repeat="1" />
 
 #### Swift
 

@@ -20,7 +20,7 @@ Messaging extension implementation of [AepInboxContentProvider](../../../android
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 MessagingInboxProvider(surface: Surface)
@@ -76,7 +76,7 @@ override suspend fun refresh()
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
-#### Kotlin
+### Kotlin
 
 ```kotlin
 class InboxViewModel : ViewModel() {

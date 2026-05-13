@@ -10,15 +10,16 @@ keywords:
 - iOS
 - Code-based Experiences
 ---
+
 # Proposition
 
 The `Proposition` class represents the decision propositions received from the remote, upon a personalization query request to the Experience Edge network.
 
 ## iOS Interface - Proposition
 
-## Public variables
+### Public variables
 
-### uniqueId
+#### uniqueId
 
 Unique proposition identifier.
 
@@ -26,7 +27,7 @@ Unique proposition identifier.
 public let uniqueId: String
 ```
 
-### scope
+#### scope
 
 Scope string.
 
@@ -34,7 +35,7 @@ Scope string.
 public let scope: String
 ```
 
-### items
+#### items
 
 An array containing proposition decision items.
 
@@ -44,47 +45,46 @@ public lazy var items: [PropositionItem]
 
 ## Android Interface - Proposition
 
-## Public functions
+### Public functions
 
-### getItems
+#### getItems
 
 Returns this proposition's unique identifier as a string.
 
-### Android Java
+##### Android Java
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Syntax
+##### Syntax
 
 ```java
 public List<PropositionItem> getItems()
 ```
 
-### getScope
+#### getScope
 
 Returns this proposition's unique identifier as a string.
 
-### Android Java
+##### Android Java
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Syntax
+##### Syntax
 
 ```java
 public String getScope()
 ```
 
-### getUniqueId
+#### getUniqueId
 
 Returns this proposition's unique identifier as a string.
 
-### Android Java
+##### Android Java
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Syntax
+##### Syntax
 
 ```java
 public String getUniqueId()
 ```
-

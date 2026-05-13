@@ -70,17 +70,18 @@ let extensionVersion = UserProfile.extensionVersion
 NSString *extensionVersion = [AEPMobileUserProfile extensionVersion];
 ```
 
-\<!--- React Native
-
-<Tabs query="platform=react-native&api=extension-version"/> ---\>
-
 ## getUserAttributes
 
 The `getUserAttributes()` API gets the user profile attributes with the given keys.
 
 ### Android Java
 
-<CodeBlock slots="heading, code" repeat="1" />
+* _callback_ is invoked after the customer attributes are available.
+
+* A retail application wants to get the `itemsAddedToCart` user data when processing checkout.
+When `AdobeCallbackWithError` is provided, if the operation times out (5s) or an unexpected error occurs, the `fail` method is called with the appropriate `AdobeError`.
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -88,13 +89,8 @@ The `getUserAttributes()` API gets the user profile attributes with the given ke
 public static void getUserAttributes(@NonNull final List<String> keys, @NonNull final AdobeCallback<Map<String, Object>> callback)
 ```
 
-* _callback_ is invoked after the customer attributes are available.
 
 ### Example
-
-A retail application wants to get the `itemsAddedToCart` user data when processing checkout.
-
-When `AdobeCallbackWithError` is provided, if the operation times out (5s) or an unexpected error occurs, the `fail` method is called with the appropriate `AdobeError`.
 
 ```java
 UserProfile.getUserAttributes(Arrays.asList("itemsAddedToCart"), new AdobeCallbackWithError<Map<String, Object>>() {
@@ -111,11 +107,13 @@ UserProfile.getUserAttributes(Arrays.asList("itemsAddedToCart"), new AdobeCallba
 
 ### Android Kotlin
 
-### Example
-
 A retail application wants to get the `itemsAddedToCart` user data when processing checkout.
 
 When `AdobeCallbackWithError` is provided, if the operation times out (5s) or an unexpected error occurs, the `fail` method is called with the appropriate `AdobeError`.
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+### Example
 
 ```java
 UserProfile.getUserAttributes(listOf("itemsAddedToCart")) {
@@ -133,7 +131,11 @@ UserProfile.getUserAttributes(listOf("itemsAddedToCart")) {
 
 ### iOS Swift
 
-<CodeBlock slots="heading, code" repeat="1" />
+* _completion_ is the callback `function` which will be called with user attributes.
+* A retail application wants to get the `itemsAddedToCart` user data when processing checkout.
+When the callback is provided, if the operation times out (5s) or an unexpected error occurs, the `completion` method is called with the appropriate `AEPError`.
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -141,13 +143,7 @@ UserProfile.getUserAttributes(listOf("itemsAddedToCart")) {
 static func getUserAttributes(attributeNames: [String], completion: @escaping ([String: Any]?, AEPError) -> Void)
 ```
 
-* _completion_ is the callback `function` which will be called with user attributes.
-
 ### Example
-
-A retail application wants to get the `itemsAddedToCart` user data when processing checkout.
-
-When the callback is provided, if the operation times out (5s) or an unexpected error occurs, the `completion` method is called with the appropriate `AEPError`.
 
 ```swift
 UserProfile.getUserAttributes(attributeNames: ["itemsAddedToCart"]) { attributes, error in
@@ -176,7 +172,7 @@ NSArray *attributes = @[@"itemsAddedToCart"];
 
 ## registerExtension
 
-<InlineAlert variant="warning" slots="heading, text1"/>
+<InlineAlert variant="warning" slots="text1, text2"/>
 
 This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the Android mobile extension.
 
@@ -207,7 +203,7 @@ UserProfile.registerExtension();
 
 ## removeUserAttribute
 
-<InlineAlert variant="warning" slots="heading, text1"/>
+<InlineAlert variant="warning" slots="text1, text2"/>
 
 This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the Android mobile extension.
 
@@ -217,7 +213,9 @@ Deprecated as of 2.0.0. Please use the [removeUserAttributes](#removeuserattribu
 
 ### Android Java
 
-<CodeBlock slots="heading, code" repeat="1" />
+A retail application wants to remove the `itemsAddedToCart` user data after the product is purchased.
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -227,8 +225,6 @@ public static void removeUserAttribute(@NonNull final String attributeName)
 ```
 
 ### Example
-
-A retail application wants to remove the `itemsAddedToCart` user data after the product is purchased.
 
 ```java
 UserProfile.removeUserAttribute("itemsAddedToCart");
@@ -240,7 +236,9 @@ Removes the user profile attributes for the given keys.
 
 ### Android Java
 
-<CodeBlock slots="heading, code" repeat="1" />
+You want to remove `username`, `usertype` user data when session timeout occurs.
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -250,17 +248,17 @@ public static void removeUserAttributes(@NonNull final List<String> attributeNam
 
 ### Example
 
-You want to remove `username`, `usertype` user data when session timeout occurs.
-
 ```java
 UserProfile.removeUserAttributes(Arrays.asList("username", "usertype"));
 ```
 
 ### Android Kotlin
 
-### Example
-
 You want to remove `username`, `usertype` user data when session timeout occurs.
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+### Example
 
 ```java
 UserProfile.removeUserAttributes(listOf("username", "usertype"))
@@ -268,7 +266,9 @@ UserProfile.removeUserAttributes(listOf("username", "usertype"))
 
 ### iOS Swift
 
-<CodeBlock slots="heading, code" repeat="1" />
+You want to remove `username`, `usertype` user data when session timeout occurs.
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -277,8 +277,6 @@ public static void removeUserAttributes(List<String> attributeNames)
 ```
 
 ### Example
-
-You want to remove `username`, `usertype` user data when session timeout occurs.
 
 ```swift
 UserProfile.removeUserAttributes(Arrays.asList("username", "usertype"));
@@ -302,7 +300,7 @@ UserProfile.removeUserAttributes(Arrays.asList("username", "usertype"));
 
 ## updateUserAttribute
 
-<InlineAlert variant="warning" slots="heading, text1"/>
+<InlineAlert variant="warning" slots="text1, text2"/>
 
 This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the Android mobile extension.
 
@@ -318,7 +316,9 @@ Remember the following information:
 
 ### Android Java
 
-<CodeBlock slots="heading, code" repeat="1" />
+You want to update `username` of a user obtained in the log in page:
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -328,8 +328,6 @@ public static void updateUserAttribute(@NonNull final String attributeName, @Nul
 ```
 
 ### Example
-
-You want to update `username` of a user obtained in the log in page:
 
 ```java
 UserProfile.updateUserAttribute("username", "Will Smith");
@@ -349,7 +347,9 @@ Allows you to create/update a batch of user profile attributes:
 
 ### Android Java
 
-<CodeBlock slots="heading, code" repeat="1" />
+You want to update `username`, `usertype` of a user obtained in the log in page:
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -358,8 +358,6 @@ public static void updateUserAttributes(@NonNull final Map<String, Object> attri
 ```
 
 ### Example
-
-You want to update `username`, `usertype` of a user obtained in the log in page:
 
 ```java
 HashMap<String, Object> profileMap = new HashMap<>();
@@ -370,9 +368,11 @@ UserProfile.updateUserAttributes(profileMap);
 
 ### Android Kotlin
 
-### Example
-
 You want to update `username`, `usertype` of a user obtained in the log in page:
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+### Example
 
 ```java
 val profileMap = mapOf(
@@ -384,7 +384,9 @@ UserProfile.updateUserAttributes(profileMap)
 
 ### iOS Swift
 
-<CodeBlock slots="heading, code" repeat="1" />
+You want to update `username, usertype` of a user obtained in the log in page:
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### Syntax
 
@@ -393,8 +395,6 @@ public static func updateUserAttributes(attributeDict: [String: Any])
 ```
 
 ### Example
-
-You want to update `username, usertype` of a user obtained in the log in page:
 
 ```swift
 var profileMap = [AnyHashable: Any]()
