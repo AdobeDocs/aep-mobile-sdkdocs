@@ -26,7 +26,7 @@ If a requested surface was not previously cached prior to calling `getPropositio
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void getPropositionsForSurfaces(@NonNull final List<Surface> surfaces, @NonNull final AdobeCallback<Map<Surface, List<Proposition>>> callback)
@@ -36,7 +36,7 @@ public static void getPropositionsForSurfaces(@NonNull final List<Surface> surfa
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```kotlin
 val surface1 = Surface("myActivity#button")
@@ -62,7 +62,7 @@ Messaging.getPropositionsForSurfaces(surfaces) {
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 final Surface surface1 = new Surface("myActivity#button");
@@ -102,13 +102,13 @@ Messaging.getPropositionsForSurfaces(surfaces, new AdobeCallbackWithError<Map<Su
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func getPropositionsForSurfaces(_ surfacePaths: [Surface], _ completion: @escaping ([Surface: [Proposition]]?, Error?) -> Void)
 ```
 
-### Example
+#### Example
 
 ```swift
 let surface1 = Surface(path: "myView#button")
@@ -143,14 +143,14 @@ Messaging.getPropositionsForSurfaces([surface1, surface2]) { propositionsDict, e
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 + (void) getPropositionsForSurfaces: (NSArray<AEPSurface*>* _Nonnull) surfaces 
               completion: (void (^ _Nonnull)(NSDictionary<AEPSurface*, NSArray<AEPProposition*>*>* _Nullable propositionsDict, NSError* _Nullable error)) completion;
 ```
 
-### Example
+#### Example
 
 ```objc
 AEPSurface* surface1 = [[AEPSurface alloc] initWithPath: @"myView#button"];
@@ -183,7 +183,7 @@ To retrieve previously cached decision propositions, use `getPropositionsForSurf
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void updatePropositionsForSurfaces(@NonNull final List<Surface> surfaces)
@@ -193,7 +193,7 @@ public static void updatePropositionsForSurfaces(@NonNull final List<Surface> su
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```kotlin
 val surface1 = Surface("myActivity#button")
@@ -207,7 +207,7 @@ Messaging.updatePropositionsForSurfaces(surfaces)
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 final Surface surface1 = new Surface("myActivity#button");
@@ -226,13 +226,13 @@ Messaging.updatePropositionsForSurfaces(surfaces)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func updatePropositionsForSurfaces(_ surfaces: [Surface])
 ```
 
-### Example
+#### Example
 
 ```swift
 let surface1 = Surface(path: "myView#button")
@@ -247,13 +247,13 @@ Messaging.updatePropositionsForSurfaces([surface1, surface2])
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 + (void) updatePropositionsForSurfaces: (NSArray<AEPSurface*>* _Nonnull) surfaces;
 ```
 
-### Example
+#### Example
 
 ```objc
 AEPSurface* surface1 = [[AEPSurface alloc] initWithPath: @"myView#button"];
@@ -277,7 +277,7 @@ To retrieve previously cached decision propositions, use `getPropositionsForSurf
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void updatePropositionsForSurfaces(@NonNull final List<Surface> surfaces, @Nullable final AdobeCallback<Boolean> callback)
@@ -287,7 +287,7 @@ public static void updatePropositionsForSurfaces(@NonNull final List<Surface> su
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```kotlin
 val surface1 = Surface("myActivity#button")
@@ -307,7 +307,7 @@ Messaging.updatePropositionsForSurfaces(surfaces) { success ->
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 final Surface surface1 = new Surface("myActivity#button");
@@ -333,13 +333,13 @@ Messaging.updatePropositionsForSurfaces(surfaces, success -> {
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func updatePropositionsForSurfaces(_ surfaces: [Surface], _ completion: ((Bool) -> Void)? = nil)
 ```
 
-### Example
+#### Example
 
 ```swift
 let surface1 = Surface(path: "myView#button")
@@ -361,14 +361,14 @@ Messaging.updatePropositionsForSurfaces([surface1, surface2]) { success in
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 + (void) updatePropositionsForSurfaces: (NSArray<AEPSurface*>* _Nonnull) surfaces
                             completion: (void (^)(BOOL)) completion;
 ```
 
-### Example
+#### Example
 
 ```objc
 AEPSurface* surface1 = [[AEPSurface alloc] initWithPath: @"myView#button"];

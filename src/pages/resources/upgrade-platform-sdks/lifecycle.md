@@ -11,7 +11,7 @@ keywords:
 
 <InlineAlert variant="info" slots="text"/>
 
-In Adobe Mobile Library (v4) iOS SDK, this implementation was completed automatically.<br/>When upgrading to the Experience Platform SDK, you must add code to continue collecting Lifecycle metrics.
+In Adobe Mobile Library (v4) iOS SDK, this implementation was completed automatically.\<br/\>When upgrading to the Experience Platform SDK, you must add code to continue collecting Lifecycle metrics.
 
 Follow the [Lifecycle implementation guide](../../home/base/mobile-core/lifecycle/index.md) which includes the following steps:
 

@@ -44,13 +44,13 @@ This method should be called to support the following use cases:
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
  public static func collectLaunchInfo(_ userInfo: [String: Any])
 ```
 
-### Example
+#### Example
 
 ```swift
  MobileCore.collectLaunchInfo(userInfo)
@@ -68,14 +68,14 @@ This method should be called to support the following use cases:
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 @objc(collectLaunchInfo:)
 public static func collectLaunchInfo(_ userInfo: [String: Any])
 ```
 
-### Example
+#### Example
 
 ```objc
  [AEPMobileCore collectLaunchInfo:launchOptions];
@@ -93,13 +93,13 @@ Although this method enables the collection of sensitive data, no data is sent t
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void collectPii(@NonNull final Map<String, String> data)
 ```
 
-### Example
+#### Example
 
 ```java
 Map<String, String> data = new HashMap<String, String>();
@@ -113,13 +113,13 @@ MobileCore.collectPii(data);
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 public static func collectPii(_ data: [String: Any])
 ```
 
-### Example
+#### Example
 
 ```objectivec
 MobileCore.collectPii(["key1" : "value1","key2" : "value2"]);
@@ -129,14 +129,14 @@ MobileCore.collectPii(["key1" : "value1","key2" : "value2"]);
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
  @objc(collectPii:)
  public static func collectPii(_ data: [String: Any])
 ```
 
-### Example
+#### Example
 
 ```objectivec
  [AEPMobileCore collectPii:data:@{@"key1" : @"value1",
@@ -164,13 +164,13 @@ This method can be used to send an event through the Mobile Core for other exten
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void dispatchEvent(@NonNull final Event event)
 ```
 
-### Example
+#### Example
 
 ```java
 final Map<String, Object> eventData = new HashMap<>();
@@ -187,13 +187,13 @@ MobileCore.dispatchEvent(sampleEvent);
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 public static func dispatch(event: Event)
 ```
 
-### Example
+#### Example
 
 ```swift
 let event = Event(name: "Sample Event Name", type: EventType.custom, source: EventType.custom, data: ["sampleKey": "sampleValue"])
@@ -204,14 +204,14 @@ MobileCore.dispatch(event: event)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 @objc(dispatch:)
 public static func dispatch(event: Event)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 AEPEvent *event = [[AEPEvent alloc] initWithName:@"Sample Event Name" type:AEPEventType.custom source:AEPEventType.custom data:@{@"sampleKey": @"sampleValue"}];
@@ -226,13 +226,13 @@ This method can be used to send an event through the Mobile Core for other exten
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void dispatchEventWithResponseCallback(@NonNull final Event event, final long timeoutMS, @NonNull final AdobeCallbackWithError<Event> responseCallback)
 ```
 
-### Example
+#### Example
 
 ```java
 final Map<String, Object> eventData = new HashMap<>();
@@ -251,13 +251,13 @@ MobileCore.dispatchEventWithResponseCallback(sampleEvent, 5000L, new AdobeCallba
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 public static func dispatch(event: Event, timeout: TimeInterval = 1, responseCallback: @escaping (Event?) -> Void)
 ```
 
-### Example
+#### Example
 
 ```swift
 let event = Event(name: "My Event", type: EventType.custom, source: EventType.custom, data: ["sampleKey": "sampleValue"])
@@ -270,14 +270,14 @@ MobileCore.dispatch(event: event) { (responseEvent) in
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 @objc(dispatch:timeout:responseCallback:)
 public static func dispatch(event: Event, timeout: TimeInterval = 1, responseCallback: @escaping (Event?) -> Void)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 AEPEvent *event = [[AEPEvent alloc] initWithName:@"My Event" type:AEPEventType.custom source:AEPEventType.custom data:@{@"sampleKey": @"sampleValue"}];
@@ -296,14 +296,14 @@ You can use the `getApplication` method to get the previously set Android `Appli
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 @Nullable
 public static Application getApplication()
 ```
 
-### Example
+#### Example
 
 ```java
 Application app = MobileCore.getApplication();
@@ -320,14 +320,14 @@ This API gets the current log level being used in the SDK.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 @NonNull
 public static LoggingMode getLogLevel()
 ```
 
-### Example
+#### Example
 
 ```java
 LoggingMode mode = MobileCore.getLogLevel();
@@ -340,13 +340,13 @@ This variable is part of the `Log` class within `AEPServices`.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 public static var logFilter: LogLevel
 ```
 
-### Example
+#### Example
 
 ```swift
 var logLevel = Log.logFilter
@@ -356,13 +356,13 @@ var logLevel = Log.logFilter
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 @objc public static var logFilter: LogLevel
 ```
 
-### Example
+#### Example
 
 ```objectivec
 AEPLogLevel logLevel = [AEPLog logFilter];
@@ -399,13 +399,13 @@ This API does **not** include the identities stored in the Edge Identity extensi
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 void getSdkIdentities(@NonNull AdobeCallback<String> callback);
 ```
 
-### Example
+#### Example
 
 ```java
 MobileCore.getSdkIdentities(new AdobeCallback<String>() {
@@ -423,13 +423,13 @@ MobileCore.getSdkIdentities(new AdobeCallback<String>() {
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func getSdkIdentities(completion: @escaping (String?, Error?) -> Void)
 ```
 
-### Example
+#### Example
 
 ```swift
  MobileCore.getSdkIdentities { (content, error) in
@@ -444,14 +444,14 @@ static func getSdkIdentities(completion: @escaping (String?, Error?) -> Void)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
  @objc(getSdkIdentities:)
  static func getSdkIdentities(completion: @escaping (String?, Error?) -> Void)
 ```
 
-### Example
+#### Example
 
 ```objectivec
  [AEPMobileCore getSdkIdentities:^(NSString * _Nullable content, NSError * _Nullable error) {
@@ -487,7 +487,7 @@ Two versions of this API are available, which accept **app ID** or **InitOptions
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
  public static void initialize(
@@ -496,7 +496,7 @@ Two versions of this API are available, which accept **app ID** or **InitOptions
             @Nullable final AdobeCallback<?> completionCallback) 
 ```
 
-### Example
+#### Example
 
 ```java
 public class CoreApp extends Application {
@@ -518,14 +518,14 @@ public class CoreApp extends Application {
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 public static func initialize(appId: String, _ completion: (() -> Void)? = nil)
 ```
 
 
-### Example
+#### Example
 
 ```swift
 // AppDelegate.swift
@@ -544,14 +544,14 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 @objc(initializeWithAppId:completion:)
 public static func initialize(appId: String, _ completion: (() -> Void)? = nil) 
 ```
 
-### Example
+#### Example
 
 ```objc
 // AppDelegate.m
@@ -573,7 +573,7 @@ public static func initialize(appId: String, _ completion: (() -> Void)? = nil)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void initialize(
@@ -582,7 +582,7 @@ public static void initialize(
             @Nullable final AdobeCallback<?> completionCallback)
 ```
 
-### Example
+#### Example
 
 ```java
 public class CoreApp extends Application {
@@ -607,13 +607,13 @@ public class CoreApp extends Application {
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 public static func initialize(options: InitOptions, _ completion: (() -> Void)? = nil)
 ```
 
-### Example
+#### Example
 
 ```swift
 // AppDelegate.swift
@@ -636,14 +636,14 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 @objc(initializeWithOptions:completion:)
 public static func initialize(options: InitOptions, _ completion: (() -> Void)? = nil)        
 ```
 
-### Example
+#### Example
 
 ```objc
 // AppDelegate.m
@@ -677,13 +677,13 @@ All log messages from the Adobe Experience SDK to Android use the same log tag o
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void log(final LoggingMode mode, final String tag, final String message)
 ```
 
-### Example
+#### Example
 
 ```java
 MobileCore.log(LoggingMode.DEBUG, "MyClassName", "Provided data was null");
@@ -701,7 +701,7 @@ The log messages from the Adobe Experience SDK are printed to the Apple System L
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 public static func trace(label: String, _ message: String) {
@@ -710,7 +710,7 @@ public static func warning(label: String, _ message: String) {
 public static func error(label: String, _ message: String) {
 ```
 
-### Example
+#### Example
 
 ```swift
 Log.trace(label: "testLabel", "Test message")
@@ -725,7 +725,7 @@ The log messages from the Adobe Experience SDK are printed to the Apple System L
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 @objc(traceWithLabel:message:)
@@ -741,7 +741,7 @@ public static func warning(label: String, _ message: String)
 public static func error(label: String, _ message: String)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [AEPLog traceWithLabel:@"testLabel" message:@"testMessage"];
@@ -758,13 +758,13 @@ An EventListener can be registered with MobileCore to be notified when Events ma
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void registerEventListener(@NonNull final String eventType, @NonNull final String eventSource, @NonNull final AdobeCallback<Event> callback)
 ```
 
-### Example
+#### Example
 
 ```java
 MobileCore.registerEventListener(EventType.CONFIGURATION, EventSource.RESPONSE_CONTENT, new AdobeCallback<Event>() {
@@ -779,13 +779,13 @@ MobileCore.registerEventListener(EventType.CONFIGURATION, EventSource.RESPONSE_C
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 public static func registerEventListener(type: String, source: String, listener: @escaping EventListener)
 ```
 
-### Example
+#### Example
 
 ```swift
 MobileCore.registerEventListener(type: EventType.configuration, source: EventSource.responseContent, listener: { event in
@@ -797,14 +797,14 @@ MobileCore.registerEventListener(type: EventType.configuration, source: EventSou
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 @objc(registerEventListenerWithType:source:listener:)
 public static func registerEventListener(type: String, source: String, listener: @escaping EventListener)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [AEPMobileCore registerEventListenerWithType: type source: source listener:^(AEPEvent * _Nonnull event) {
@@ -826,13 +826,13 @@ Use [registerExtensions](#registerextensions) to register desired extensions and
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static boolean registerExtension(@NonNull final Class<? extends Extension> extensionClass, @Nullable final ExtensionErrorCallback<ExtensionError> errorCallback)
 ```
 
-### Example
+#### Example
 
 ```java
 MobileCore.registerExtension(Signal.EXTENSION, errorCallback -> {
@@ -844,13 +844,13 @@ MobileCore.registerExtension(Signal.EXTENSION, errorCallback -> {
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 public static func registerExtension(_ exten: Extension.Type, _ completion: (() -> Void)? = nil)
 ```
 
-### Example
+#### Example
 
 ```swift
 MobileCore.registerExtension(Lifecycle.self) {
@@ -862,14 +862,14 @@ MobileCore.registerExtension(Lifecycle.self) {
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 @objc(registerExtension:completion:)
 public static func registerExtension(_ exten: Extension.Type, _ completion: (() -> Void)? = nil)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [AEPMobileCore registerExtension:AEPMobileLifecycle.class completion:^{
@@ -892,13 +892,13 @@ The following code snippets demonstrate how Lifecycle, Signal, Profile, Edge, an
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void registerExtensions(@NonNull final List<Class<? extends Extension>> extensions, @Nullable final AdobeCallback<?> completionCallback)
 ```
 
-### Example
+#### Example
 
 ```java
 import com.adobe.marketing.mobile.AdobeCallback;
@@ -943,13 +943,13 @@ public class MainApp extends Application {
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 public static func registerExtensions(_ extensions: [NSObject.Type], _ completion: (() -> Void)? = nil)
 ```
 
-### Example
+#### Example
 
 ```swift
 // AppDelegate.swift
@@ -965,14 +965,14 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 @objc(registerExtensions:completion:)
 public static func registerExtensions(_ extensions: [NSObject.Type], _ completion: (() -> Void)? = nil)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 // AppDelegate.m
@@ -992,13 +992,13 @@ The `resetIdentities` method requests that each extension resets the identities 
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 void resetIdentities();
 ```
 
-### Example
+#### Example
 
 ```java
 MobileCore.resetIdentities();
@@ -1008,13 +1008,13 @@ MobileCore.resetIdentities();
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func resetIdentities()
 ```
 
-### Example
+#### Example
 
 ```swift
 MobileCore.resetIdentities()
@@ -1024,14 +1024,14 @@ MobileCore.resetIdentities()
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 @objc(resetIdentities)
 static func resetIdentities()
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [AEPMobileCore resetIdentities];
@@ -1055,13 +1055,13 @@ This API _must_ be called in `AppDidFinishLaunching` and before any other intera
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 public static func setAppGroup(_ group: String?)
 ```
 
-### Example
+#### Example
 
 ```swift
 MobileCore.setAppGroup("appGroupId")
@@ -1071,14 +1071,14 @@ MobileCore.setAppGroup("appGroupId")
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 @objc(setAppGroup:)
 public static func setAppGroup(_ group: String?)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [AEPMobileCore setAppGroup:@"app-group-id"];
@@ -1098,13 +1098,13 @@ You can use the `setApplication` method to pass the Android `Application` instan
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void setApplication(@NonNull final Application app)
 ```
 
-### Example
+#### Example
 
 ```java
 public class CoreApp extends Application {
@@ -1152,13 +1152,13 @@ On **iOS**, Mobile SDK uses `NSLog` to messages to Apple System Log facility.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void setLogLevel(@NonNull LoggingMode mode)
 ```
 
-### Example
+#### Example
 
 ```java
 import com.adobe.marketing.mobile.LoggingMode;
@@ -1171,13 +1171,13 @@ MobileCore.setLogLevel(LoggingMode.VERBOSE);
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
  public static func setLogLevel(_ level: LogLevel)
 ```
 
-### Example
+#### Example
 
 ```swift
 import AEPCore
@@ -1190,14 +1190,14 @@ import AEPServices
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
  @objc(setLogLevel:)
  public static func setLogLevel(_ level: LogLevel)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 @import AEPCore;
@@ -1224,13 +1224,13 @@ You should call `setPushIdentifier` on each application launch to ensure the mos
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void setPushIdentifier(@Nullable final String pushIdentifier);
 ```
 
-### Example
+#### Example
 
 ```java
 //Retrieve the token from either GCM or FCM, and pass it to the SDK
@@ -1241,13 +1241,13 @@ MobileCore.setPushIdentifier(token);
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 public static func setPushIdentifier(_ deviceToken: Data?)
 ```
 
-### Example
+#### Example
 
 ```swift
 MobileCore.setPushIdentifier(deviceToken)
@@ -1257,14 +1257,14 @@ MobileCore.setPushIdentifier(deviceToken)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
  @objc(setPushIdentifier:)
  public static func setPushIdentifier(_ deviceToken: Data?)
 ```
 
-### Example
+#### Example
 
 ```objectivec
  [AEPMobileCore setPushIdentifier:deviceToken];
@@ -1280,14 +1280,14 @@ You can set the small and large icons that will be used for notifications that a
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 
 public static void setSmallIconResourceID(int resourceID)
 ```
 
-### Example
+#### Example
 
 ```java
  MobileCore.setSmallIconResourceID(R.mipmap.ic_launcher_round);
@@ -1297,13 +1297,13 @@ public static void setSmallIconResourceID(int resourceID)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void setLargeIconResourceID(int resourceID)
 ```
 
-### Example
+#### Example
 
 ```java
  MobileCore.setLargeIconResourceID(R.mipmap.ic_launcher_round);
@@ -1318,13 +1318,13 @@ The wrapper type can be set to one of the follwing types: `NONE`, `REACT_NATIVE`
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void setWrapperType(@NonNull final WrapperType wrapperType)
 ```
 
-### Example
+#### Example
 
 ```java
 MobileCore.setWrapperType(WrapperType.REACT_NATIVE);
@@ -1335,13 +1335,13 @@ The wrapper type can be set to one of the follwing types: `none`, `reactNative`,
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 public static func setWrapperType(_ type: WrapperType)
 ```
 
-### Example
+#### Example
 
 ```swift
 MobileCore.setWrapperType(.flutter)
@@ -1351,14 +1351,14 @@ MobileCore.setWrapperType(.flutter)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 @objc(setWrapperType:)
 public static func setWrapperType(_ type: WrapperType)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [AEPMobileCore setWrapperType:AEPWrapperTypeFlutter];
@@ -1377,13 +1377,13 @@ The `start` API triggers Mobile Core to start event processing. This should be u
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void start(@Nullable final AdobeCallback<?> completionCallback)
 ```
 
-### Example
+#### Example
 
 ```java
 import com.adobe.marketing.mobile.AdobeCallback;
@@ -1435,13 +1435,13 @@ If you installed and configured the Adobe Analytics extension, this method sends
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void trackAction(@NonNull final String action, @Nullable final Map<String, String> contextData)
 ```
 
-### Example
+#### Example
 
 ```java
 Map<String, String> additionalContextData = new HashMap<String, String>();
@@ -1456,13 +1456,13 @@ MobileCore.trackAction("loginClicked", additionalContextData);
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
  static func track(action: String?, data: [String: Any]?)
 ```
 
-### Example
+#### Example
 
 ```swift
  MobileCore.track(action: "action name", data: ["key": "value"])
@@ -1475,14 +1475,14 @@ MobileCore.trackAction("loginClicked", additionalContextData);
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
  @objc(trackAction:data:)
  static func track(action: String?, data: [String: Any]?)
 ```
 
-### Example
+#### Example
 
 ```objectivec
   [AEPMobileCore trackAction:@"action name" data:@{@"key":@"value"}];
@@ -1505,13 +1505,13 @@ In Android, `trackState` is typically called every time a new `Activity` is load
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void trackState(@NonNull final String state, @Nullable final Map<String, String> contextData)
 ```
 
-### Example
+#### Example
 
 ```java
 Map<String, String> additionalContextData = new HashMap<String, String>();        
@@ -1526,13 +1526,13 @@ MobileCore.trackState("homePage", additionalContextData);
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
  static func track(state: String?, data: [String: Any]?)
 ```
 
-### Example
+#### Example
 
 ```swift
  MobileCore.track(state: "state name", data: ["key": "value"])
@@ -1545,14 +1545,14 @@ MobileCore.trackState("homePage", additionalContextData);
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
  @objc(trackState:data:)
  static func track(state: String?, data: [String: Any]?)
 ```
 
-### Example
+#### Example
 
 ```objectivec
   [AEPMobileCore trackState:@"state name" data:@{@"key":@"value"}];
@@ -1586,7 +1586,7 @@ When using this class, if the request cannot be completed within the default tim
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public interface AdobeCallbackWithError<T> extends AdobeCallback<T> {
@@ -1594,7 +1594,7 @@ public interface AdobeCallbackWithError<T> extends AdobeCallback<T> {
 }
 ```
 
-### Example
+#### Example
 
 ```java
 MobileCore.getPrivacyStatus(new AdobeCallbackWithError<MobilePrivacyStatus>() {
@@ -1630,7 +1630,7 @@ MobileCore.getPrivacyStatus(new AdobeCallbackWithError<MobilePrivacyStatus>() {
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```swift
 MobileCore.getSdkIdentities { (content, error) in
@@ -1666,7 +1666,7 @@ MobileCore.getSdkIdentities { (content, error) in
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```objectivec
 [AEPMobileCore getSdkIdentities:^(NSString * _Nullable content, NSError * _Nullable error) {

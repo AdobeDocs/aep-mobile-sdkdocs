@@ -113,13 +113,13 @@ You must call this API when an event that you want to track occurs. In addition 
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void trackAction(final String action, final Map<String, String> contextData)
 ```
 
-### Example
+#### Example
 
 ```java
 Map<String, String> additionalContextData = new HashMap<String, String>();
@@ -131,13 +131,13 @@ MobileCore.trackAction("loginClicked", additionalContextData);
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func track(action: String?, data: [String: Any]?)
 ```
 
-### Example
+#### Example
 
 ```swift
 MobileCore.track(action: "actionName", data: ["key": "value"])
@@ -147,14 +147,14 @@ MobileCore.track(action: "actionName", data: ["key": "value"])
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 @objc(trackAction:data:)
 static func track(action: String?, data: [String: Any]?)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [AEPMobileCore trackAction:@"action name" data:@{@"key": @"value"}];
@@ -170,13 +170,13 @@ On Android, `trackState` is typically called each time a new activity is loaded.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void trackState(final String state, final Map<String, String> contextData)
 ```
 
-### Example
+#### Example
 
 ```java
 Map<String, String> additionalContextData = new HashMap<String, String>();         
@@ -188,13 +188,13 @@ MobileCore.trackState("homePage", additionalContextData);
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func track(state: String?, data: [String: Any]?) 
 ```
 
-### Example
+#### Example
 
 ```swift
 MobileCore.track(state: "state name", data: ["key": "value"])
@@ -204,14 +204,14 @@ MobileCore.track(state: "state name", data: ["key": "value"])
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 @objc(trackState:data:)
 static func track(state: String?, data: [String: Any]?) 
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [AEPMobileCore trackState:@"state name" data:@{@"key": @"value"}];

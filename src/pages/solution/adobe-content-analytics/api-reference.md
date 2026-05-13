@@ -18,7 +18,7 @@ Registers an experience and return an ID to track the experience.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 static String registerExperience(List<ContentItem> assets, List<ContentItem> texts)
@@ -26,7 +26,7 @@ static String registerExperience(List<ContentItem> assets, List<ContentItem> tex
 
 ```
 
-### Example
+#### Example
 
 ```java
 String expId = ContentAnalytics.registerExperience(
@@ -49,7 +49,7 @@ ContentAnalytics.trackExperienceView(expId, "product.detail")
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 fun registerExperience(
@@ -60,7 +60,7 @@ fun registerExperience(
 
 ```
 
-### Example
+#### Example
 
 ```java
 // Using InteractionType enum directly
@@ -84,7 +84,7 @@ ContentAnalytics.trackExperienceView(experienceId: expId, experienceLocation: "p
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 @discardableResult
@@ -95,7 +95,7 @@ static func registerExperience(
 ) -> String
 ```
 
-### Example
+#### Example
 
 ```swift
 let expId = ContentAnalytics.registerExperience(
@@ -113,7 +113,7 @@ ContentAnalytics.trackExperienceView(experienceId: expId, experienceLocation: "p
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 + (NSString *)registerExperienceWithAssets:(NSArray<AEPContentItem *> *)assets
@@ -121,7 +121,7 @@ ContentAnalytics.trackExperienceView(experienceId: expId, experienceLocation: "p
                                       ctas:(nullable NSArray<AEPContentItem *> *)ctas;
 ```
 
-### Example
+#### Example
 
 ```objc
 NSString *expId = [AEPContentAnalytics registerExperienceWithAssets:@[
@@ -147,7 +147,7 @@ Tracks an asset with an explicit defined interaction type.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 static void trackAsset(String assetURL)
@@ -157,7 +157,7 @@ static void trackAsset(String assetURL, InteractionType interactionType, String 
 
 ```
 
-### Example
+#### Example
 
 ```java
 // Using InteractionType enum directly
@@ -172,7 +172,7 @@ ContentAnalytics.trackAsset(
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 fun trackAsset(
@@ -183,7 +183,7 @@ fun trackAsset(
 ): Unit
 ```
 
-### Example
+#### Example
 
 ```java
 // Using InteractionType enum directly
@@ -198,7 +198,7 @@ ContentAnalytics.trackAsset(
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func trackAsset(
@@ -209,7 +209,7 @@ static func trackAsset(
 )
 ```
 
-### Example
+#### Example
 
 ```swift
 ContentAnalytics.trackAsset(
@@ -223,7 +223,7 @@ ContentAnalytics.trackAsset(
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 + (void)trackAsset:(NSString *)assetURL
@@ -232,7 +232,7 @@ ContentAnalytics.trackAsset(
     additionalData:(nullable NSDictionary<NSString *,id> *)additionalData;
 ```
 
-### Example
+#### Example
 
 ```objc
 [AEPContentAnalytics trackAsset:@"https://example.com/image.jpg"
@@ -248,7 +248,7 @@ Convenience method for tracking asset clicks.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 static void trackAssetClick(String assetURL)
@@ -256,7 +256,7 @@ static void trackAssetClick(String assetURL, String assetLocation)
 static void trackAssetClick(String assetURL, String assetLocation, Map<String, Object> additionalData)
 ```
 
-### Example
+#### Example
 
 ```java
 // Using InteractionType enum directly
@@ -271,7 +271,7 @@ ContentAnalytics.trackAssetClick(
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 fun trackAssetClick(
@@ -281,7 +281,7 @@ fun trackAssetClick(
 ): Unit
 ```
 
-### Example
+#### Example
 
 ```java
 // Using InteractionType enum directly
@@ -296,7 +296,7 @@ ContentAnalytics.trackAssetClick(
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func trackAssetClick(
@@ -306,7 +306,7 @@ static func trackAssetClick(
 )
 ```
 
-### Example
+#### Example
 
 ```swift
 ContentAnalytics.trackAssetClick(
@@ -319,7 +319,7 @@ ContentAnalytics.trackAssetClick(
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 + (void)trackAssetClick:(NSString *)assetURL
@@ -327,7 +327,7 @@ ContentAnalytics.trackAssetClick(
     additionalData:(nullable NSDictionary<NSString *,id> *)additionalData;
 ```
 
-### Example
+#### Example
 
 ```objc
 [AEPContentAnalytics trackAssetClick:@"https://example.com/image.jpg"
@@ -342,7 +342,7 @@ Tracks multiple assets with the same interaction type.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 static void trackAssetCollection(List<String> assetURLs)
@@ -351,7 +351,7 @@ static void trackAssetCollection(List<String> assetURLs, InteractionType interac
 
 ```
 
-### Example
+#### Example
 
 ```java
 ContentAnalytics.trackAssetCollection(
@@ -367,7 +367,7 @@ ContentAnalytics.trackAssetCollection(
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 fun trackAssetCollection(
@@ -377,7 +377,7 @@ fun trackAssetCollection(
 ): Unit
 ```
 
-### Example
+#### Example
 
 ```java
 ContentAnalytics.trackAssetCollection(
@@ -393,7 +393,7 @@ ContentAnalytics.trackAssetCollection(
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func trackAssetCollection(
@@ -403,7 +403,7 @@ static func trackAssetCollection(
 )
 ```
 
-### Example
+#### Example
 
 ```swift
 ContentAnalytics.trackAssetCollection(
@@ -416,7 +416,7 @@ ContentAnalytics.trackAssetCollection(
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 + (void)trackAssetCollectionWithAssetURLs:(NSArray<NSString *> *)assetURLs
@@ -424,7 +424,7 @@ ContentAnalytics.trackAssetCollection(
                             assetLocation:(nullable NSString *)assetLocation;
 ```
 
-### Example
+#### Example
 
 ```objc
 [AEPContentAnalytics trackAssetCollectionWithAssetURLs:@[@"https://example.com/image1.jpg",@"https://example.com/image1.jpg"]
@@ -440,7 +440,7 @@ Convenience method for tracking asset views.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 static void trackAssetView(String assetURL)
@@ -449,7 +449,7 @@ static void trackAssetView(String assetURL, String assetLocation, Map<String, Ob
 
 ```
 
-### Example
+#### Example
 
 ```java
 // Using InteractionType enum directly
@@ -463,7 +463,7 @@ ContentAnalytics.trackAssetView(
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 fun trackAssetView(
@@ -473,7 +473,7 @@ fun trackAssetView(
 ): Unit
 ```
 
-### Example
+#### Example
 
 ```java
 // Using InteractionType enum directly
@@ -487,7 +487,7 @@ ContentAnalytics.trackAssetView(
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func trackAssetView(
@@ -497,7 +497,7 @@ static func trackAssetView(
 )
 ```
 
-### Example
+#### Example
 
 ```swift
 ContentAnalytics.trackAsset(
@@ -510,7 +510,7 @@ ContentAnalytics.trackAsset(
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 + (void)trackAssetView:(NSString *)assetURL
@@ -519,7 +519,7 @@ ContentAnalytics.trackAsset(
 
 ```
 
-### Example
+#### Example
 
 ```objc
 [AEPContentAnalytics trackAssetView:@"https://example.com/image.jpg"
@@ -538,7 +538,7 @@ You must call [`registerExperience()`](#registerexperience) before you can track
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 static void trackExperienceClick(String experienceId)
@@ -547,7 +547,7 @@ static void trackExperienceClick(String experienceId, String experienceLocation,
 
 ```
 
-### Example
+#### Example
 
 ```java
 ContentAnalytics.trackExperienceClick(
@@ -561,7 +561,7 @@ ContentAnalytics.trackExperienceClick(
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 fun trackExperienceClick(
@@ -571,7 +571,7 @@ fun trackExperienceClick(
 ): Unit
 ```
 
-### Example
+#### Example
 
 ```java
 // Using InteractionType enum directly
@@ -586,7 +586,7 @@ ContentAnalytics.trackExperienceClick(
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func trackExperienceClick(
@@ -596,7 +596,7 @@ static func trackExperienceClick(
 )
 ```
 
-### Example
+#### Example
 
 ```swift
 ContentAnalytics.trackExperienceClick(
@@ -610,7 +610,7 @@ ContentAnalytics.trackExperienceClick(
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 + (void)trackExperienceClick:(NSString *)assetURL
@@ -619,7 +619,7 @@ ContentAnalytics.trackExperienceClick(
 
 ```
 
-### Example
+#### Example
 
 ```objc
 [AEPContentAnalytics trackExperienceClick:expId
@@ -639,7 +639,7 @@ You must call [`registerExperience()`](#registerexperience) before you can track
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 static void trackExperienceView(String experienceId)
@@ -648,7 +648,7 @@ static void trackExperienceView(String experienceId, String experienceLocation, 
 
 ```
 
-### Example
+#### Example
 
 ```java
 ContentAnalytics.trackExperienceView(
@@ -662,7 +662,7 @@ ContentAnalytics.trackExperienceView(
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 fun trackExperienceView(
@@ -672,7 +672,7 @@ fun trackExperienceView(
 ): Unit
 ```
 
-### Example
+#### Example
 
 ```java
 // Using InteractionType enum directly
@@ -687,7 +687,7 @@ ContentAnalytics.trackExperienceView(
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func trackExperienceView(
@@ -697,7 +697,7 @@ static func trackExperienceView(
 )
 ```
 
-### Example
+#### Example
 
 ```swift
 ContentAnalytics.trackExperienceView(
@@ -711,7 +711,7 @@ ContentAnalytics.trackExperienceView(
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 + (void)trackExperienceView:(NSString *)assetURL
@@ -720,7 +720,7 @@ ContentAnalytics.trackExperienceView(
 
 ```
 
-### Example
+#### Example
 
 ```objc
 [AEPContentAnalytics trackExperienceView:expId
@@ -738,7 +738,7 @@ Represents the content within an experience (assets, texts, CTAs).
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public class ContentItem {
@@ -791,7 +791,7 @@ public class ContentItem {
 }
 ```
 
-### Example
+#### Example
 
 ```java
 // Asset with URL
@@ -808,7 +808,7 @@ ContentItem("Shop Now", mapOf("enabled" to true, "role" to "primary"))
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 data class ContentItem(
@@ -819,7 +819,7 @@ data class ContentItem(
 }
 ```
 
-### Example
+#### Example
 
 ```java
 // Asset with URL
@@ -836,7 +836,7 @@ ContentItem(value: "Shop Now", styles: mapOf("enabled" to true, "role" to "prima
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 public struct ContentItem {
@@ -847,7 +847,7 @@ public struct ContentItem {
 }
 ```
 
-### Example
+#### Example
 
 ```swift
 // Asset
@@ -865,7 +865,7 @@ ContentItem(value: "Buy Now", styles: ["enabled": true])
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 @implementation AEPContentItem
@@ -880,7 +880,7 @@ ContentItem(value: "Buy Now", styles: ["enabled": true])
 }
 ```
 
-### Example
+#### Example
 
 ```objc
 AEPContentItem *asset = [[AEPContentItem alloc] initWithValue:@"https://example.com/image.jpg"
@@ -904,7 +904,7 @@ Defines the type of interaction, either a view or a click.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public enum InteractionType {
@@ -918,7 +918,7 @@ public enum InteractionType {
 }
 ```
 
-### Example
+#### Example
 
 ```java
 ContentAnalytics.trackAsset(
@@ -931,7 +931,7 @@ ContentAnalytics.trackAsset(
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 enum class InteractionType {
@@ -944,7 +944,7 @@ enum class InteractionType {
 }
 ```
 
-### Example
+#### Example
 
 ```java
 ContentAnalytics.trackAsset(
@@ -957,7 +957,7 @@ ContentAnalytics.trackAsset(
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 public enum InteractionType: Int {
@@ -969,7 +969,7 @@ public enum InteractionType: Int {
 }
 ```
 
-### Example
+#### Example
 
 ```swift
 ContentAnalytics.trackAsset(
@@ -982,7 +982,7 @@ ContentAnalytics.trackAsset(
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 @objc(AEPInteractionType)
@@ -995,7 +995,7 @@ public enum InteractionType: Int {
 }
 ```
 
-### Example
+#### Example
 
 ```objc
 [ContentAnalytics trackAsset:@"https://example.com/hero.jpg"

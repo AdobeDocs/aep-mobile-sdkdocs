@@ -56,7 +56,7 @@ A rule might be read out in the following way: If the SDK **Event** occurs and *
 
 <InlineAlert variant="warning" slots="text"/>
 
-Modify data rule actions may modify or remove data from the triggering event.<br/><br/>If there is a conflict between the data that is defined in your rule and the data in the event, the data in the event will be overwritten.
+Modify data rule actions may modify or remove data from the triggering event.\<br/\>\<br/\>If there is a conflict between the data that is defined in your rule and the data in the event, the data in the event will be overwritten.
 
 ### Defining a payload for the modify data action
 

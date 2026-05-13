@@ -16,13 +16,13 @@ This API clears out the client-side in-memory propositions cache.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void clearCachedPropositions()
 ```
 
-### Example
+#### Example
 
 ```java
 Optimize.clearCachedPropositions();
@@ -32,13 +32,13 @@ Optimize.clearCachedPropositions();
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func clearCachedPropositions()
 ```
 
-### Example
+#### Example
 
 ```swift
 Optimize.clearCachedPropositions()
@@ -48,13 +48,13 @@ Optimize.clearCachedPropositions()
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 + (void) clearCachedPropositions;
 ```
 
-### Example
+#### Example
 
 ```objc
 [AEPMobileOptimize clearCachedPropositions];
@@ -68,13 +68,13 @@ The `extensionVersion()` method (on Android) or the `extensionVersion` property 
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static String extensionVersion()
 ```
 
-### Example
+#### Example
 
 ```java
 Optimize.extensionVersion();
@@ -84,13 +84,13 @@ Optimize.extensionVersion();
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static var extensionVersion: String
 ```
 
-### Example
+#### Example
 
 ```swift
 let extensionVersion = Optimize.extensionVersion
@@ -100,13 +100,13 @@ let extensionVersion = Optimize.extensionVersion
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 + (nonnull NSString*) extensionVersion;
 ```
 
-### Example
+#### Example
 
 ```objc
 NSString *extensionVersion = [AEPMobileOptimize extensionVersion];
@@ -125,13 +125,13 @@ When connected to Assurance for previewing content, this method will return [**s
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void getPropositions(final List<DecisionScope> decisionScopes, final AdobeCallback<Map<DecisionScope, OptimizeProposition>> callback)
 ```
 
-### Example
+#### Example
 
 ```java
 final DecisionScope decisionScope1 = DecisionScope("xcore:offer-activity:1111111111111111", "xcore:offer-placement:1111111111111111", 2);
@@ -171,14 +171,14 @@ Optimize.getPropositions(scopes, new AdobeCallbackWithError<Map<DecisionScope, O
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func getPropositions(for decisionScopes: [DecisionScope], 
                             _ completion: @escaping ([DecisionScope: OptimizeProposition]?, Error?) -> Void)
 ```
 
-### Example
+#### Example
 
 ```swift
 let decisionScope1 = DecisionScope(activityId: "xcore:offer-activity:1111111111111111", 
@@ -214,14 +214,14 @@ Optimize.getPropositions(for: [decisionScope1, decisionScope2]) { propositionsDi
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 + (void) getPropositions: (NSArray<AEPDecisionScope*>* _Nonnull) decisionScopes 
               completion: (void (^ _Nonnull)(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* _Nullable propositionsDict, NSError* _Nullable error)) completion;
 ```
 
-### Example
+#### Example
 
 ```objc
 AEPDecisionScope* decisionScope1 = [[AEPDecisionScope alloc] initWithActivityId: @"xcore:offer-activity:1111111111111111" 
@@ -260,13 +260,13 @@ When connected to Assurance for previewing content, this method will return [**s
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void getPropositions(final List<DecisionScope> decisionScopes, final double timeoutSeconds, final AdobeCallback<Map<DecisionScope, OptimizeProposition>> callback)
 ```
 
-### Example
+#### Example
 
 ```java
 final DecisionScope decisionScope1 = DecisionScope("xcore:offer-activity:1111111111111111", "xcore:offer-placement:1111111111111111", 2);
@@ -307,7 +307,7 @@ Optimize.getPropositions(scopes, 10.0, new AdobeCallbackWithError<Map<DecisionSc
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func getPropositions(for decisionScopes: [DecisionScope], 
@@ -315,7 +315,7 @@ static func getPropositions(for decisionScopes: [DecisionScope],
                             _ completion: @escaping ([DecisionScope: OptimizeProposition]?, Error?) -> Void)
 ```
 
-### Example
+#### Example
 
 ```swift
 let decisionScope1 = DecisionScope(activityId: "xcore:offer-activity:1111111111111111", 
@@ -352,7 +352,7 @@ Optimize.getPropositions(for: [decisionScope1, decisionScope2], timeout: 1.0) { 
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 + (void)getPropositions:(NSArray<AEPDecisionScope *> *_Nonnull) decisionScopes
@@ -361,7 +361,7 @@ Optimize.getPropositions(for: [decisionScope1, decisionScope2], timeout: 1.0) { 
               
 ```
 
-### Example
+#### Example
 
 ```objc
 AEPDecisionScope* decisionScope1 = [[AEPDecisionScope alloc] initWithActivityId: @"xcore:offer-activity:1111111111111111" 
@@ -401,13 +401,13 @@ When connected to Assurance for previewing content, this method will return [**s
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void onPropositionsUpdate(final AdobeCallback<Map<DecisionScope, OptimizeProposition>> callback)
 ```
 
-### Example
+#### Example
 
 ```java
 Optimize.onPropositionsUpdate(new AdobeCallback<Map<DecisionScope, OptimizeProposition>>() {
@@ -426,13 +426,13 @@ Optimize.onPropositionsUpdate(new AdobeCallback<Map<DecisionScope, OptimizePropo
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func onPropositionsUpdate(perform action: @escaping ([DecisionScope: OptimizeProposition]?) -> Void)
 ```
 
-### Example
+#### Example
 
 ```swift
 Optimize.onPropositionsUpdate { propositionsDict in
@@ -448,13 +448,13 @@ Optimize.onPropositionsUpdate { propositionsDict in
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 + (void) onPropositionsUpdate: (void (^ _Nonnull)(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* _Nullable)) action;
 ```
 
-### Example
+#### Example
 
 ```objc
 [AEPMobileOptimize onPropositionsUpdate: ^(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* propositionsDict) {
@@ -474,13 +474,13 @@ Use [`MobileCore.registerExtensions()`](../../home/base/mobile-core/api-referenc
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void registerExtension()
 ```
 
-### Example
+#### Example
 
 ```java
 Optimize.registerExtension();
@@ -515,13 +515,13 @@ When connected to Assurance for previewing content, this method will **override*
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void updatePropositions(final List<DecisionScope> decisionScopes, final Map<String, Object> xdm, final Map<String, Object> data)
 ```
 
-### Example
+#### Example
 
 ```java
 final DecisionScope decisionScope1 = DecisionScope("xcore:offer-activity:1111111111111111", "xcore:offer-placement:1111111111111111", 2);
@@ -552,7 +552,7 @@ Optimize.updatePropositions(decisionScopes,
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func updatePropositions(for decisionScopes: [DecisionScope], 
@@ -560,7 +560,7 @@ static func updatePropositions(for decisionScopes: [DecisionScope],
                                andData data: [String: Any]? = nil)
 ```
 
-### Example
+#### Example
 
 ```swift
 let decisionScope1 = DecisionScope(activityId: "xcore:offer-activity:1111111111111111", 
@@ -581,7 +581,7 @@ Optimize.updatePropositions(for: [decisionScope1, decisionScope2]
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 + (void) updatePropositions: (NSArray<AEPDecisionScope*>* _Nonnull) decisionScopes 
@@ -589,7 +589,7 @@ Optimize.updatePropositions(for: [decisionScope1, decisionScope2]
                     andData: (NSDictionary<NSString*, id>* _Nullable) data;
 ```
 
-### Example
+#### Example
 
 ```objc
 AEPDecisionScope* decisionScope1 = [[AEPDecisionScope alloc] initWithActivityId: @"xcore:offer-activity:1111111111111111" 
@@ -619,7 +619,7 @@ Completion callback passed to `updatePropositions` supports network timeout and 
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void updatePropositions(final List<DecisionScope> decisionScopes, 
@@ -628,7 +628,7 @@ public static void updatePropositions(final List<DecisionScope> decisionScopes,
                                       final AdobeCallback<Map<DecisionScope, OptimizeProposition>> callback)
 ```
 
-### Example
+#### Example
 
 ```java
 final DecisionScope decisionScope1 = DecisionScope("xcore:offer-activity:1111111111111111", "xcore:offer-placement:1111111111111111", 2);
@@ -671,7 +671,7 @@ Optimize.updatePropositions(decisionScopes,
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func updatePropositions(for decisionScopes: [DecisionScope],
@@ -680,7 +680,7 @@ static func updatePropositions(for decisionScopes: [DecisionScope],
                                _completion: (([DecisionScope: OptimizeProposition]?, Error?) -> Void)? = nil)
 ```
 
-### Example
+#### Example
 
 ```swift
 let decisionScope1 = DecisionScope(activityId: "xcore:offer-activity:1111111111111111",
@@ -706,7 +706,7 @@ Optimize.updatePropositions(for: [decisionScope1, decisionScope2]
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 + (void) updatePropositions: (NSArray<AEPDecisionScope*>* _Nonnull) decisionScopes
@@ -715,7 +715,7 @@ Optimize.updatePropositions(for: [decisionScope1, decisionScope2]
                  completion: (void (^ _Nonnull)(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* _Nullable propositionsDict, NSError* _Nullable error)) completion;
 ```
 
-### Example
+#### Example
 
 ```objc
 
@@ -761,7 +761,7 @@ Completion callback passed to `updatePropositions` supports network timeout and 
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void updatePropositions(final List<DecisionScope> decisionScopes, 
@@ -771,7 +771,7 @@ public static void updatePropositions(final List<DecisionScope> decisionScopes,
                                       final AdobeCallback<Map<DecisionScope, OptimizeProposition>> callback)
 ```
 
-### Example
+#### Example
 
 ```java
 final DecisionScope decisionScope1 = DecisionScope("xcore:offer-activity:1111111111111111", "xcore:offer-placement:1111111111111111", 2);
@@ -816,7 +816,7 @@ Optimize.updatePropositions(decisionScopes,
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func updatePropositions(for decisionScopes: [DecisionScope],
@@ -826,7 +826,7 @@ static func updatePropositions(for decisionScopes: [DecisionScope],
                                _completion: (([DecisionScope: OptimizeProposition]?, Error?) -> Void)? = nil)
 ```
 
-### Example
+#### Example
 
 ```swift
 let decisionScope1 = DecisionScope(activityId: "xcore:offer-activity:1111111111111111",
@@ -854,7 +854,7 @@ Optimize.updatePropositions(for: [decisionScope1, decisionScope2],
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 + (void) updatePropositions: (NSArray<AEPDecisionScope*>* _Nonnull) decisionScopes
@@ -864,7 +864,7 @@ Optimize.updatePropositions(for: [decisionScope1, decisionScope2],
                  completion: (void (^ _Nonnull)(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* _Nullable propositionsDict, NSError* _Nullable error)) completion;
 ```
 
-### Example
+#### Example
 
 ```objc
 

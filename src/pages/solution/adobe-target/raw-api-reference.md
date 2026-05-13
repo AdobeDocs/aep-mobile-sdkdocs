@@ -14,18 +14,18 @@ This API can be used to retrieve prefetch or execute responses for mbox location
 
 ### Android Java
 
+* `request`: A map containing prefetch or execute request data in the Target v1 delivery API request format.
+* `callback`: An AdobeCallback instance which will be called after the Target request is completed. The parameter in the callback will contain the response data if the request executed successfully, or it will contain null otherwise.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void executeRawRequest(final Map<String, Object> request, final AdobeCallback<Map<String, Object>> callback)
 ```
 
-* `request`: A map containing prefetch or execute request data in the Target v1 delivery API request format.
-* `callback`: An AdobeCallback instance which will be called after the Target request is completed. The parameter in the callback will contain the response data if the request executed successfully, or it will contain null otherwise.
-
-### Example
+#### Example
 
 ```java
 final Map<String, Object> executeMbox1 = new HashMap<String, Object>() {
@@ -102,18 +102,18 @@ Target.executeRawRequest(request, response -> {
 
 ### iOS Swift
 
+* `request`: A dictionary containing prefetch or execute request data in the Target v1 delivery API request format.
+* `completion`: A callback which will be invoked with the Target response data or error message after the request is completed.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func executeRawRequest(_ request: [[String: Any]], _ completion: @escaping ([[String: Any]]?, Error?) -> Void)
 ```
 
-* `request`: A dictionary containing prefetch or execute request data in the Target v1 delivery API request format.
-* `completion`: A callback which will be invoked with the Target response data or error message after the request is completed.
-
-### Example
+#### Example
 
 ```swift
 let request: [String: Any] = [ 
@@ -167,18 +167,18 @@ Target.executeRawRequest(request) { responseData, error in
 
 ### iOS Objective-C
 
+* `request`: A dictionary containing prefetch or execute request data in the Target v1 delivery API request format.
+* `completion`: A callback which will be invoked with the Target response data or error message after the request is completed.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 + (void)executeRawRequest:(nonnull NSDictionary<NSString *, id> *)request completion:(void (nonnull ^)(nullable NSDictionary<NSString *, id> *, nullable NSError *))completion
 ```
 
-* `request`: A dictionary containing prefetch or execute request data in the Target v1 delivery API request format.
-* `completion`: A callback which will be invoked with the Target response data or error message after the request is completed.
-
-### Example
+#### Example
 
 ```objc
 NSDictionary *request = @{ 
@@ -234,17 +234,17 @@ This API sends notification request(s) to the configured Target server for click
 
 ### Android Java
 
+* `request`: A map containing notifications data in the Target v1 delivery API request format.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void sendRawNotifications(final Map<String, Object> request)
 ```
 
-* `request`: A map containing notifications data in the Target v1 delivery API request format.
-
-### Example
+#### Example
 
 ```java
 final List<Map<String, Object>> notifications = new ArrayList<>();
@@ -278,17 +278,17 @@ Target.sendRawNotifications(request);
 
 ### iOS Swift
 
+* `request`: A dictionary containing notifications data in the Target v1 delivery API request format.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func sendRawNotifications(_ request: [String: Any]) 
 ```
 
-* `request`: A dictionary containing notifications data in the Target v1 delivery API request format.
-
-### Example
+#### Example
 
 ```swift
 var notifications: [[String: Any]] = [] 
@@ -317,17 +317,17 @@ Target.sendRawNotifications([
 
 ### iOS Objective-C
 
+* `request`: A dictionary containing notifications data in the Target v1 delivery API request format.
+
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
 + (void)sendRawNotifications:(nonnull NSDictionary<NSString *, id> *)request
 ```
 
-* `request`: A dictionary containing notifications data in the Target v1 delivery API request format.
-
-### Example
+#### Example
 
 ```objc
 NSMutableArray *notifications = [[NSMutableArray alloc] init]; 

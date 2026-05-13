@@ -24,7 +24,7 @@ Some use cases may require the client to request an update from the remote more 
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```kotlin
 Messaging.refreshInAppMessages()
@@ -34,7 +34,7 @@ Messaging.refreshInAppMessages()
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 Messaging.refreshInAppMessages();
@@ -44,7 +44,7 @@ Messaging.refreshInAppMessages();
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```swift
 Messaging.refreshInAppMessages()
@@ -54,7 +54,7 @@ Messaging.refreshInAppMessages()
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```objc
 [AEPMobileMessaging refreshInAppMessages];

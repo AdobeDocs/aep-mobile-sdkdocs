@@ -33,7 +33,7 @@ The `getContentCardsUI` method retrieves an array of [ContentCardUI](../ios/publ
 
 Calling this API will not download content cards from Adobe Journey Optimizer; it will only retrieve the content cards that are already downloaded and cached by the Messaging extension. You **must** call the [`updatePropositionsForSurfaces`](../../code-based/api-reference.md#updatepropositionsforsurfaces) API with the desired surfaces prior to calling this API.
 
-### Syntax
+#### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" />
 
@@ -46,7 +46,7 @@ public static func getContentCardsUI(for surface: Surface,
                                      _ completion: @escaping (Result<[ContentCardUI], Error>) -> Void)
 ```
 
-### Example
+#### Example
 
 <CodeBlock slots="heading, code" repeat="1" />
 

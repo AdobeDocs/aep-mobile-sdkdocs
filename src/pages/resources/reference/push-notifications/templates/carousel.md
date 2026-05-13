@@ -54,15 +54,15 @@ The properties below define the payload sent to FCM:
 
 Default Manual Carousel:
 
-<img src="./../assets/android_manual_carousel.gif" width="50%" height="50%"/>
+![Default Manual Carousel](./../templates/assets/android-manual-carousel.gif)
 
 Filmstrip Manual Carousel:
 
-<img src="./../assets/android_filmstrip_carousel.gif" width="50%" height="50%"/>
+![Filmstrip Manual Carousel](./../templates/assets/android-filmstrip-carousel.gif)
 
 Automatic Carousel:
 
-<img src="./../assets/android_auto_carousel.gif" width="50%" height="50%"/>
+![Automatic Carousel](./../templates/assets/android-auto-carousel.gif)
 
 Below is a sample of what a payload might look like for a carousel notification:
 
@@ -154,7 +154,7 @@ The properties below define the payload sent to APNS:
 
 ## Example
 
-![gif of sample carousel notification](./../assets/carousel.gif)
+![gif of sample carousel notification](./../templates/assets/carousel.gif)
 
 Below is a sample of what a payload might look like for a notification using a carousel template:
 

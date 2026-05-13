@@ -17,13 +17,13 @@ The extensionVersion() API returns the version of the Identity for Edge Network 
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static String extensionVersion()
 ```
 
-### Example
+#### Example
 
 ```java
 String extensionVersion = Identity.extensionVersion();
@@ -33,7 +33,7 @@ String extensionVersion = Identity.extensionVersion();
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 val extensionVersion = Identity.extensionVersion()
@@ -43,13 +43,13 @@ val extensionVersion = Identity.extensionVersion()
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static var extensionVersion: String
 ```
 
-### Example
+#### Example
 
 ```swift
 let extensionVersion = EdgeIdentity.extensionVersion
@@ -59,13 +59,13 @@ let extensionVersion = EdgeIdentity.extensionVersion
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (nonnull NSString*) extensionVersion;
 ```
 
-### Example
+#### Example
 
 ```objectivec
 NSString *extensionVersion = [AEPMobileEdgeIdentity extensionVersion];
@@ -85,13 +85,13 @@ The ECID value is returned via the [AdobeCallback](../../home/base/mobile-core/a
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void getExperienceCloudId(final AdobeCallback<String> callback);
 ```
 
-### Example
+#### Example
 
 ```java
 Identity.getExperienceCloudId(new AdobeCallback<String>() {    
@@ -106,7 +106,7 @@ Identity.getExperienceCloudId(new AdobeCallback<String>() {
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 Identity.getExperienceCloudId { id ->
@@ -120,13 +120,13 @@ Identity.getExperienceCloudId { id ->
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func getExperienceCloudId(completion: @escaping (String?, Error?) -> Void)
 ```
 
-### Example
+#### Example
 
 ```swift
 Identity.getExperienceCloudId { (ecid, error) in
@@ -142,13 +142,13 @@ Identity.getExperienceCloudId { (ecid, error) in
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) getExperienceCloudId:^(NSString * _Nullable ecid, NSError * _Nullable error)completion
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [AEPMobileEdgeIdentity getExperienceCloudId:^(NSString *ecid, NSError *error) {   
@@ -170,13 +170,13 @@ When [AdobeCallbackWithError](../../home/base/mobile-core/api-reference.md#publi
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void getIdentities(final AdobeCallback<IdentityMap> callback);
 ```
 
-### Example
+#### Example
 
 ```java
 Identity.getIdentities(new AdobeCallback<IdentityMap>() {    
@@ -191,7 +191,7 @@ Identity.getIdentities(new AdobeCallback<IdentityMap>() {
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 Identity.getIdentities { identityMap ->
@@ -205,13 +205,13 @@ Identity.getIdentities { identityMap ->
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func getIdentities(completion: @escaping (IdentityMap?, Error?) -> Void)
 ```
 
-### Example
+#### Example
 
 ```swift
 Identity.getIdentities { (identityMap, error) in
@@ -227,13 +227,13 @@ Identity.getIdentities { (identityMap, error) in
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) getIdentities:^(AEPIdentityMap * _Nullable map, NSError * _Nullable error)completion
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [AEPMobileEdgeIdentity getIdentities:^(AEPIdentityMap *map, NSError *error) {   
@@ -265,13 +265,13 @@ When `AdobeCallbackWithError` is provided and you are fetching the URL variables
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void getUrlVariables(final AdobeCallback<String> callback);
 ```
 
-### Example
+#### Example
 
 ```java
 Identity.getUrlVariables(new AdobeCallback<String>() {    
@@ -290,7 +290,7 @@ Identity.getUrlVariables(new AdobeCallback<String>() {
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 Identity.getUrlVariables { urlVariablesString ->
@@ -307,13 +307,13 @@ Identity.getUrlVariables { urlVariablesString ->
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func getUrlVariables(completion: @escaping (String?, Error?) -> Void)
 ```
 
-### Example
+#### Example
 
 ```swift
 Identity.getUrlVariables { (urlVariables, error) in
@@ -343,13 +343,13 @@ Identity.getUrlVariables { (urlVariables, error) in
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) getUrlVariables:^(NSString * _Nullable urlVariables, NSError * _Nullable error)completion
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [AEPMobileEdgeIdentity getUrlVariables:^(NSString *urlVariables, NSError *error){
@@ -381,13 +381,13 @@ Use [`MobileCore.registerExtensions()`](../../home/base/mobile-core/api-referenc
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void registerExtension()
 ```
 
-### Example
+#### Example
 
 ```java
 import com.adobe.marketing.mobile.edge.identity.Identity
@@ -412,13 +412,13 @@ Removing identities using a reserved namespace is not allowed using this API. Th
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void removeIdentity(final IdentityItem item, final String namespace);
 ```
 
-### Example
+#### Example
 
 ```java
 IdentityItem item = new IdentityItem("user@example.com");
@@ -429,7 +429,7 @@ Identity.removeIdentity(item, "Email");
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 val item = IdentityItem("user@example.com")
@@ -440,13 +440,13 @@ Identity.removeIdentity(item, "Email")
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func removeIdentity(item: IdentityItem, withNamespace: String)
 ```
 
-### Example
+#### Example
 
 ```swift
 Identity.removeIdentity(item: IdentityItem(id: "user@example.com"), withNamespace: "Email")
@@ -456,14 +456,14 @@ Identity.removeIdentity(item: IdentityItem(id: "user@example.com"), withNamespac
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) removeIdentityItem:(AEPIdentityItem * _Nonnull) item
                              withNamespace: (NSString * _Nonnull) namespace
 ```
 
-### Example
+#### Example
 
 ```objectivec
 AEPIdentityItem *item = [[AEPIdentityItem alloc] initWithId:@"user@example.com" authenticatedState:AEPAuthenticatedStateAuthenticated primary:false];
@@ -513,13 +513,13 @@ These examples require Google Play Services to be configured in your mobile appl
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void setAdvertisingIdentifier(final String advertisingIdentifier);
 ```
 
-### Example
+#### Example
 
 ```java
 import com.google.android.gms.ads.identifier.AdvertisingIdClient;
@@ -570,7 +570,7 @@ public void onResume() {
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 import android.content.Context
@@ -629,14 +629,14 @@ Starting from iOS 14+, applications must use the [App Tracking Transparency](htt
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 @objc(setAdvertisingIdentifier:)
 public static func setAdvertisingIdentifier(_ identifier: String?)
 ```
 
-### Example
+#### Example
 
 ```swift
 import AdSupport
@@ -695,13 +695,13 @@ func setAdvertisingIdentifierUsingTrackingManager() {
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) setAdvertisingIdentifier: (NSString * _Nullable identifier);
 ```
 
-### Example
+#### Example
 
 ```objectivec
 #import <AdSupport/ASIdentifierManager.h>
@@ -776,13 +776,13 @@ Updating identities using a reserved namespace is not allowed using this API. Th
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void updateIdentities(final IdentityMap identityMap);
 ```
 
-### Example
+#### Example
 
 ```java
 IdentityItem item = new IdentityItem("user@example.com");
@@ -795,7 +795,7 @@ Identity.updateIdentities(identityMap);
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 val item = IdentityItem("user@example.com")
@@ -808,13 +808,13 @@ Identity.updateIdentities(identityMap)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func updateIdentities(with map: IdentityMap)
 ```
 
-### Example
+#### Example
 
 ```swift
 let identityMap = IdentityMap()
@@ -826,13 +826,13 @@ Identity.updateIdentities(with: identityMap)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) updateIdentities:(AEPIdentityMap * _Nonnull)map
 ```
 
-### Example
+#### Example
 
 ```objectivec
 AEPIdentityItem *item = [[AEPIdentityItem alloc] initWithId:@"user@example.com" authenticatedState:AEPAuthenticatedStateAuthenticated primary:false];

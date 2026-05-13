@@ -19,13 +19,13 @@ The `extensionVersion()` API returns the version of the Media for Edge Network e
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static String extensionVersion() {
 ```
 
-### Example
+#### Example
 
 ```java
 String mediaExtensionVersion = Media.extensionVersion();
@@ -35,7 +35,7 @@ String mediaExtensionVersion = Media.extensionVersion();
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 val mediaExtensionVersion = Media.extensionVersion()
@@ -45,13 +45,13 @@ val mediaExtensionVersion = Media.extensionVersion()
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static var extensionVersion: String
 ```
 
-### Example
+#### Example
 
 ```swift
 let mediaExtensionVersion = Media.extensionVersion()
@@ -61,13 +61,13 @@ let mediaExtensionVersion = Media.extensionVersion()
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (nonnull NSString*) extensionVersion;
 ```
 
-### Example
+#### Example
 
 ```objectivec
 NSString *mediaExtensionVersion = [AEPMobileEdgeMedia extensionVersion];
@@ -87,13 +87,13 @@ Creates a MediaTracker instance that should be used to track a playback session.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static MediaTracker createTracker()
 ```
 
-### Example
+#### Example
 
 ```java
 MediaTracker mediaTracker = Media.createTracker();  // Use the instance for tracking media.
@@ -103,7 +103,7 @@ MediaTracker mediaTracker = Media.createTracker();  // Use the instance for trac
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 val tracker = Media.createTracker()
@@ -113,13 +113,13 @@ val tracker = Media.createTracker()
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func createTracker()
 ```
 
-### Example
+#### Example
 
 ```swift
 let tracker = Media.createTracker()  // Use the instance for tracking media.
@@ -129,13 +129,13 @@ let tracker = Media.createTracker()  // Use the instance for tracking media.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) createTracker
 ```
 
-### Example
+#### Example
 
 ```objc
 id<AEPEdgeMediaTracker> tracker;
@@ -156,13 +156,13 @@ Creates a MediaTracker instance that should be used to track a playback session.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static MediaTracker createTracker(Map<String, Object> config)
 ```
 
-### Example
+#### Example
 
 ```java
 HashMap<String, Object> config = new HashMap<String, Object>();
@@ -177,7 +177,7 @@ MediaTracker mediaTracker = Media.createTracker(config);  // Use the instance fo
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 val config = mapOf(
@@ -192,13 +192,13 @@ val tracker = Media.createTracker(config) // Use the instance for tracking media
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func createTrackerWith(config: [String: Any]?)
 ```
 
-### Example
+#### Example
 
 ```swift
 var config: [String: Any] = [:]
@@ -213,13 +213,13 @@ let tracker = Media.createTrackerWith(config: config)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 +(id<AEPEdgeMediaTracker> _Nonnull) createTrackerWithConfig:(NSDictionary<NSString *,id> * _Nullable)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 id<AEPEdgeMediaTracker> tracker;
@@ -248,7 +248,7 @@ Creates an instance of the Media object which is a map/dictionary that contains 
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static HashMap<String, Object> createMediaObject(String name,
@@ -258,7 +258,7 @@ public static HashMap<String, Object> createMediaObject(String name,
                                                         MediaType mediaType);
 ```
 
-### Example
+#### Example
 
 ```java
 HashMap<String, Object> mediaInfo = Media.createMediaObject("videoName",
@@ -272,7 +272,7 @@ HashMap<String, Object> mediaInfo = Media.createMediaObject("videoName",
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 var mediaInfo = Media.createMediaObject("videoName",
@@ -286,7 +286,7 @@ var mediaInfo = Media.createMediaObject("videoName",
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func createMediaObjectWith(name: String,
@@ -296,7 +296,7 @@ static func createMediaObjectWith(name: String,
                              mediaType: MediaType) -> [String: Any]?
 ```
 
-### Example
+#### Example
 
 ```swift
 let mediaObject = Media.createMediaObjectWith(name: "videoName",
@@ -310,13 +310,13 @@ let mediaObject = Media.createMediaObjectWith(name: "videoName",
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (NSDictionary<NSString *, id> * _Nullable) createMediaObjectWith:(NSString * _Nonnull) id:(NSString * _Nonnull) length:(NSInteger) streamType:(NSString * _Nonnull) mediaType:(enum AEPEdgeMediaType)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 NSDictionary *mediaObject = [AEPMobileEdgeMedia createMediaObjectWith:@"videoName"
@@ -340,13 +340,13 @@ Creates an instance of the AdBreak object which is a map/dictionary that contain
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static HashMap<String, Object> createAdBreakObject(String name, int position, int startTime);
 ```
 
-### Example
+#### Example
 
 ```java
 HashMap<String, Object> adBreakInfo = Media.createAdBreakObject("adbreakName", 1, 0);
@@ -356,7 +356,7 @@ HashMap<String, Object> adBreakInfo = Media.createAdBreakObject("adbreakName", 1
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 val adBreakInfo = Media.createAdBreakObject("adbreakName", 1, 0)
@@ -366,7 +366,7 @@ val adBreakInfo = Media.createAdBreakObject("adbreakName", 1, 0)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func createAdBreakObjectWith(name: String,
@@ -374,7 +374,7 @@ static func createAdBreakObjectWith(name: String,
                                startTime: Int) -> [String: Any]?
 ```
 
-### Example
+#### Example
 
 ```swift
 let adBreakInfo = Media.createAdBreakObjectWith(name: "adbreakName",
@@ -386,13 +386,13 @@ let adBreakInfo = Media.createAdBreakObjectWith(name: "adbreakName",
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (NSDictionary  <NSString *, id> * _Nullable) createAdBreakObjectWith:(NSString * _Nonnull)position:(NSInteger) startTime:(NSInteger)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 NSDictionary *adBreakInfo = [AEPMobileEdgeMedia createAdBreakObjectWith:@"adbreakName"
@@ -415,13 +415,13 @@ Creates an instance of the Ad object which is a map/dictionary that contains inf
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static HashMap<String, Object> createAdObject(String name, String id, int position, int length);
 ```
 
-### Example
+#### Example
 
 ```java
 HashMap<String, Object> adInfo = Media.createAdObject("adName", "adId", 1, 15);
@@ -431,7 +431,7 @@ HashMap<String, Object> adInfo = Media.createAdObject("adName", "adId", 1, 15);
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 val adInfo = Media.createAdObject("adName", "adId", 1, 15)
@@ -441,7 +441,7 @@ val adInfo = Media.createAdObject("adName", "adId", 1, 15)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func createAdObjectWith(name: String,
@@ -450,7 +450,7 @@ static func createAdObjectWith(name: String,
                              length: Int) -> [String: Any]?
 ```
 
-### Example
+#### Example
 
 ```swift
 let adInfo = Media.createObjectWith(name: "adName",
@@ -463,7 +463,7 @@ let adInfo = Media.createObjectWith(name: "adName",
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (NSDictionary  <NSString *, id> * _Nullable) createAdObjectWith:(NSString * _Nonnull)
@@ -472,7 +472,7 @@ let adInfo = Media.createObjectWith(name: "adName",
                                                            length:(NSInteger)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 NSDictionary *adInfo = [AEPMobileEdgeMedia createAdObjectWith:@"adName"
@@ -496,7 +496,7 @@ Creates an instance of the Chapter object which is a map/dictionary that contain
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static HashMap<String, Object> createChapterObject(String name,
@@ -505,7 +505,7 @@ public static HashMap<String, Object> createChapterObject(String name,
                                                           int startTime);
 ```
 
-### Example
+#### Example
 
 ```java
 HashMap<String, Object> chapterInfo = Media.createChapterObject("chapterName", 1, 60, 0);
@@ -515,7 +515,7 @@ HashMap<String, Object> chapterInfo = Media.createChapterObject("chapterName", 1
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 val chapterInfo = Media.createChapterObject("chapterName", 1, 60, 0)
@@ -525,7 +525,7 @@ val chapterInfo = Media.createChapterObject("chapterName", 1, 60, 0)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func createChapterObjectWith(name: String,
@@ -534,7 +534,7 @@ static func createChapterObjectWith(name: String,
                                startTime: Int) -> [String: Any]?
 ```
 
-### Example
+#### Example
 
 ```swift
 let chapterInfo = Media.createChapterObjectWith(name: "chapterName",
@@ -547,7 +547,7 @@ let chapterInfo = Media.createChapterObjectWith(name: "chapterName",
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (NSDictionary  <NSString *, id> * _Nullable) createChapterObjectWith:(NSString * _Nonnull)
@@ -556,7 +556,7 @@ let chapterInfo = Media.createChapterObjectWith(name: "chapterName",
                                                              startTime:(NSInteger)
 ```
 
-### Example
+#### Example
 
 ```objectivc
 NSDictionary *chapterInfo = [AEPMobileEdgeMedia createChapterObjectWith:@"chapterName"
@@ -580,7 +580,7 @@ Creates an instance of the QoE (Quality of Experience) object which is a map/dic
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static HashMap<String, Object> createQoEObject(int bitrate,
@@ -589,7 +589,7 @@ public static HashMap<String, Object> createQoEObject(int bitrate,
                                                       int droppedFrames);
 ```
 
-### Example
+#### Example
 
 ```java
 HashMap<String, Object> qoeInfo = Media.createQoEObject(10000000, 2, 23, 10);
@@ -599,7 +599,7 @@ HashMap<String, Object> qoeInfo = Media.createQoEObject(10000000, 2, 23, 10);
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 val qoeInfo = Media.createQoEObject(10000000, 2, 23, 10)
@@ -609,7 +609,7 @@ val qoeInfo = Media.createQoEObject(10000000, 2, 23, 10)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func createQoEObjectWith(bitrate: Int,
@@ -618,7 +618,7 @@ static func createQoEObjectWith(bitrate: Int,
                           droppedFrames: Int) -> [String: Any]?
 ```
 
-### Example
+#### Example
 
 ```swift
 let qoeInfo = Media.createQoEObjectWith(bitrate: 500000,
@@ -631,7 +631,7 @@ let qoeInfo = Media.createQoEObjectWith(bitrate: 500000,
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (NSDictionary  <NSString *, id> * _Nullable) createQoEObjectWith:(NSInteger)
@@ -640,7 +640,7 @@ let qoeInfo = Media.createQoEObjectWith(bitrate: 500000,
                                                      droppedFrames:(NSInteger)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 NSDictionary *qoeInfo = [AEPMobileEdgeMedia createQoEObjectWith:500000
@@ -661,13 +661,13 @@ Creates an instance of the Player State object which is a dictionary that contai
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static HashMap<String, Object> createStateObject(String stateName);
 ```
 
-### Example
+#### Example
 
 ```java
 HashMap<String, Object> fullScreenState = Media.createStateObject(MediaConstants.PlayerState.FULLSCREEN);
@@ -677,7 +677,7 @@ HashMap<String, Object> fullScreenState = Media.createStateObject(MediaConstants
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 val fullScreenState = Media.createStateObject(MediaConstants.PlayerState.FULLSCREEN)
@@ -687,13 +687,13 @@ val fullScreenState = Media.createStateObject(MediaConstants.PlayerState.FULLSCR
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func createStateObjectWith(stateName: String) -> [String: Any]
 ```
 
-### Example
+#### Example
 
 ```swift
 let fullScreenState = Media.createStateObjectWith(stateName: MediaConstants.PlayerState.FULLSCREEN)
@@ -703,13 +703,13 @@ let fullScreenState = Media.createStateObjectWith(stateName: MediaConstants.Play
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (NSDictionary  <NSString *, id> * _Nullable) createStateObjectWith:(NSString * _Nonnull)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 NSDictionary* fullScreenState = [AEPMobileEdgeMedia createStateObjectWith:AEPEdgeMediaPlayerState.FULLSCREEN]
@@ -738,13 +738,13 @@ Main ping interval can now be customized to duration between 10 to 50 seconds us
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public void trackSessionStart(Map<String, Object> mediaInfo, Map<String, String> contextData);
 ```
 
-### Example
+#### Example
 
 ```java
 HashMap<String, Object> mediaInfo = Media.createMediaObject("mediaName", "mediaId", 60, MediaConstants.StreamType.VOD, Media.MediaType.Video);
@@ -765,7 +765,7 @@ tracker.trackSessionStart(mediaInfo, mediaMetadata);
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 val mediaInfo = Media.createMediaObject(
@@ -792,13 +792,13 @@ tracker.trackSessionStart(mediaInfo, mediaMetadata)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 public func trackSessionStart(info: [String: Any], metadata: [String: String]? = nil)
 ```
 
-### Example
+#### Example
 
 ```swift
 let mediaInfo = Media.createMediaObjectWith(name: "videoName", id: "videoId", length: 60, streamType: MediaConstants.StreamType.VOD, mediaType: MediaType.Video)
@@ -819,13 +819,13 @@ tracker.trackSessionStart(info: mediaInfo, metadata: mediaMetadata)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) trackSessionStart:(NSDictionary<NSString *,id> * _Nonnull) metadata:(NSDictionary<NSString *,NSString *> * _Nullable)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 NSDictionary *mediaInfo = [AEPMobileEdgeMedia createMediaObjectWith:@"videoName" id:@"videoId" length:60 streamType:AEPEdgeMediaStreamType.VOD mediaType:AEPEdgeMediaTypeVideo];
@@ -850,13 +850,13 @@ Tracks the media play, or resume, after a previous pause.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public void trackPlay();
 ```
 
-### Example
+#### Example
 
 ```java
 tracker.trackPlay();
@@ -866,7 +866,7 @@ tracker.trackPlay();
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 tracker.trackPlay()
@@ -876,13 +876,13 @@ tracker.trackPlay()
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 func trackPlay()
 ```
 
-### Example
+#### Example
 
 ```swift
 tracker.trackPlay()
@@ -892,13 +892,13 @@ tracker.trackPlay()
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 - (void) trackPlay;
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [tracker trackPlay];
@@ -912,13 +912,13 @@ Tracks the media pause.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public void trackPause();
 ```
 
-### Example
+#### Example
 
 ```java
 tracker.trackPause();
@@ -928,7 +928,7 @@ tracker.trackPause();
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 tracker.trackPause()
@@ -938,13 +938,13 @@ tracker.trackPause()
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 func trackPause()
 ```
 
-### Example
+#### Example
 
 ```swift
 tracker.trackPause()
@@ -954,13 +954,13 @@ tracker.trackPause()
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 - (void) trackPause
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [tracker trackPause];
@@ -974,13 +974,13 @@ Tracks the completion of the media playback session. Call this method only when 
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public void trackComplete();
 ```
 
-### Example
+#### Example
 
 ```java
 tracker.trackComplete();
@@ -990,7 +990,7 @@ tracker.trackComplete();
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 tracker.trackComplete()
@@ -1000,13 +1000,13 @@ tracker.trackComplete()
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 func trackComplete()
 ```
 
-### Example
+#### Example
 
 ```swift
 tracker.trackComplete()
@@ -1016,13 +1016,13 @@ tracker.trackComplete()
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 - (void) trackComplete
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [tracker trackComplete];
@@ -1036,13 +1036,13 @@ Tracks the end of a media playback session. Call this method when the viewing se
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public void trackSessionEnd();
 ```
 
-### Example
+#### Example
 
 ```java
 tracker.trackSessionEnd();
@@ -1052,7 +1052,7 @@ tracker.trackSessionEnd();
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```kotlin
 tracker.trackSessionEnd()
@@ -1062,13 +1062,13 @@ tracker.trackSessionEnd()
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 func trackSessionEnd()
 ```
 
-### Example
+#### Example
 
 ```swift
 tracker.trackSessionEnd()
@@ -1078,13 +1078,13 @@ tracker.trackSessionEnd()
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 - (void) trackSessionEnd
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [tracker trackSessionEnd];
@@ -1102,13 +1102,13 @@ Tracks an error in media playback.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public void trackError(String errorId);
 ```
 
-### Example
+#### Example
 
 ```java
 tracker.trackError("errorId");
@@ -1118,7 +1118,7 @@ tracker.trackError("errorId");
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 tracker.trackError("errorId")
@@ -1128,13 +1128,13 @@ tracker.trackError("errorId")
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 func trackError(errorId: String)
 ```
 
-### Example
+#### Example
 
 ```swift
 tracker.trackError(errorId: "errorId")
@@ -1144,13 +1144,13 @@ tracker.trackError(errorId: "errorId")
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 - (void) trackError:(NSString * _Nonnull)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [tracker trackError:@"errorId"];
@@ -1178,7 +1178,7 @@ Ad ping interval can now be customized to duration between 1 to 10 seconds using
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Syntax
+#### Syntax
 
 ```java
   public void trackEvent(Media.Event event,
@@ -1379,7 +1379,7 @@ Ad ping interval can now be customized to duration between 1 to 10 seconds using
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Syntax
+#### Syntax
 
 ```swift
 func trackEvent(event: MediaEvent, info: [String: Any]?, metadata: [String: String]?)
@@ -1480,7 +1480,7 @@ func trackEvent(event: MediaEvent, info: [String: Any]?, metadata: [String: Stri
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 - (void) trackEvent:(enum AEPEdgeMediaEvent) info:(NSDictionary<NSString *,id> * _Nullable) metadata:(NSDictionary<NSString *,NSString *> * _Nullable)
@@ -1590,13 +1590,13 @@ Provides the current media playhead value to the MediaTracker instance. For accu
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public void updateCurrentPlayhead(int time);
 ```
 
-### Example
+#### Example
 
 ```java
 tracker.updateCurrentPlayhead(1);
@@ -1615,7 +1615,7 @@ tracker.updateCurrentPlayhead(timeFromMidnightInSecond);
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 tracker.updateCurrentPlayhead(1)
@@ -1633,13 +1633,13 @@ tracker.updateCurrentPlayhead(timeFromMidnightInSecond)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 func updateCurrentPlayhead(time: Int)
 ```
 
-### Example
+#### Example
 
 ```swift
 tracker.updateCurrentPlayhead(1)
@@ -1659,13 +1659,13 @@ tracker.updateCurrentPlayhead(time: timeFromMidnightInSecond)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 - (void) updateCurrentPlayhead:(NSInteger)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [tracker updateCurrentPlayhead:1];
@@ -1683,13 +1683,13 @@ Provides the MediaTracker with the current Quality of Experience (QoE) informati
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public void updateQoEObject(Map<String, Object> qoeInfo);
 ```
 
-### Example
+#### Example
 
 ```java
 HashMap<String, Object> qoeInfo = Media.createQoEObject(1000000, 2, 25, 10);
@@ -1700,7 +1700,7 @@ tracker.updateQoEObject(qoeInfo);
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 val qoeInfo = Media.createQoEObject(1000000, 2, 25, 10)
@@ -1711,13 +1711,13 @@ tracker.updateQoEObject(qoeInfo)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 func updateQoEObject(qoe: [String: Any])
 ```
 
-### Example
+#### Example
 
 ```swift
 let qoeInfo = Media.createQoEObjectWith(bitrate: 500000, startupTime: 2, fps: 24, droppedFrames: 10)
@@ -1728,13 +1728,13 @@ tracker.updateQoEObject(qoe: qoeInfo)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 - (void) updateQoEObject:(NSDictionary<NSString *,id> * _Nonnull)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 NSDictionary *qoeInfo = [AEPMobileEdgeMedia createQoEObjectWith:50000 startTime:2 fps:24 droppedFrames:10]
@@ -2421,7 +2421,7 @@ Constant to denote that the current tracking session is resuming a previously cl
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Syntax
+#### Syntax
 
 ```java
 public class MediaConstants {
@@ -2462,7 +2462,7 @@ tracker.trackSessionStart(mediaInfo, null)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 public class MediaConstants: NSObject {
@@ -2473,7 +2473,7 @@ public class MediaConstants: NSObject {
 }
 ```
 
-### Example
+#### Example
 
 ```swift
 var mediaObject = Media.createMediaObjectWith(name: "videoName", id: "videoId", length: 60, streamType: MediaConstants.StreamType.VOD, mediaType: MediaType.Video)
@@ -2486,14 +2486,14 @@ tracker.trackSessionStart(info: mediaObject, metadata: nil)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 @interface AEPEdgeMediaObjectKey : NSObject
 + (NSString * _Nonnull)RESUMED
 ```
 
-### Example
+#### Example
 
 ```objectivec
 NSDictionary *mediaObject = [AEPMobileEdgeMedia createMediaObjectWith:@"videoName" id:@"videoId" length:60 streamType:AEPEdgeMediaStreamType.VOD mediaType:AEPEdgeMediaTypeVideo];

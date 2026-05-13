@@ -16,13 +16,13 @@ The `extensionVersion()` API returns the version of the Profile extension.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 @NonNull public static String extensionVersion()
 ```
 
-### Example
+#### Example
 
 ```java
 String extensionVersion = UserProfile.extensionVersion();
@@ -32,7 +32,7 @@ String extensionVersion = UserProfile.extensionVersion();
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 val extensionVersion = UserProfile.extensionVersion();
@@ -42,13 +42,13 @@ val extensionVersion = UserProfile.extensionVersion();
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static var extensionVersion: String
 ```
 
-### Example
+#### Example
 
 ```swift
 let extensionVersion = UserProfile.extensionVersion
@@ -58,13 +58,13 @@ let extensionVersion = UserProfile.extensionVersion
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (nonnull NSString*) extensionVersion;
 ```
 
-### Example
+#### Example
 
 ```objectivec
 NSString *extensionVersion = [AEPMobileUserProfile extensionVersion];
@@ -83,14 +83,14 @@ When `AdobeCallbackWithError` is provided, if the operation times out (5s) or an
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void getUserAttributes(@NonNull final List<String> keys, @NonNull final AdobeCallback<Map<String, Object>> callback)
 ```
 
 
-### Example
+#### Example
 
 ```java
 UserProfile.getUserAttributes(Arrays.asList("itemsAddedToCart"), new AdobeCallbackWithError<Map<String, Object>>() {
@@ -113,7 +113,7 @@ When `AdobeCallbackWithError` is provided, if the operation times out (5s) or an
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 UserProfile.getUserAttributes(listOf("itemsAddedToCart")) {
@@ -137,13 +137,13 @@ When the callback is provided, if the operation times out (5s) or an unexpected 
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func getUserAttributes(attributeNames: [String], completion: @escaping ([String: Any]?, AEPError) -> Void)
 ```
 
-### Example
+#### Example
 
 ```swift
 UserProfile.getUserAttributes(attributeNames: ["itemsAddedToCart"]) { attributes, error in
@@ -155,13 +155,13 @@ UserProfile.getUserAttributes(attributeNames: ["itemsAddedToCart"]) { attributes
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void)getUserAttributesWithAttributeNames:(NSArray<NSString *> * _Nonnull) comletion:^(NSDictionary<NSString *,id> * _Nullable, enum AEPError)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 NSArray *attributes = @[@"itemsAddedToCart"];
@@ -184,14 +184,14 @@ Registers the Profile extension with the Mobile Core extension.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 @Deprecated
 public static void registerExtension()
 ```
 
-### Example
+#### Example
 
 ```java
 import com.adobe.marketing.mobile.UserProfile
@@ -217,14 +217,14 @@ A retail application wants to remove the `itemsAddedToCart` user data after the 
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 @Deprecated
 public static void removeUserAttribute(@NonNull final String attributeName)
 ```
 
-### Example
+#### Example
 
 ```java
 UserProfile.removeUserAttribute("itemsAddedToCart");
@@ -240,13 +240,13 @@ You want to remove `username`, `usertype` user data when session timeout occurs.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void removeUserAttributes(@NonNull final List<String> attributeNames)
 ```
 
-### Example
+#### Example
 
 ```java
 UserProfile.removeUserAttributes(Arrays.asList("username", "usertype"));
@@ -258,7 +258,7 @@ You want to remove `username`, `usertype` user data when session timeout occurs.
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 UserProfile.removeUserAttributes(listOf("username", "usertype"))
@@ -270,13 +270,13 @@ You want to remove `username`, `usertype` user data when session timeout occurs.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 public static void removeUserAttributes(List<String> attributeNames)
 ```
 
-### Example
+#### Example
 
 ```swift
 UserProfile.removeUserAttributes(Arrays.asList("username", "usertype"));
@@ -286,13 +286,13 @@ UserProfile.removeUserAttributes(Arrays.asList("username", "usertype"));
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) removeUserAttributesWithAttributeNames:(NSArray<NSString *> * _Nonnull)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [AEPMobileUserProfile removeUserAttributesWithAttributeNames:@[@"username", @"usertype"]]
@@ -320,14 +320,14 @@ You want to update `username` of a user obtained in the log in page:
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 @Deprecated
 public static void updateUserAttribute(@NonNull final String attributeName, @Nullable final Object attributeValue)
 ```
 
-### Example
+#### Example
 
 ```java
 UserProfile.updateUserAttribute("username", "Will Smith");
@@ -351,13 +351,13 @@ You want to update `username`, `usertype` of a user obtained in the log in page:
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void updateUserAttributes(@NonNull final Map<String, Object> attributeMap)
 ```
 
-### Example
+#### Example
 
 ```java
 HashMap<String, Object> profileMap = new HashMap<>();
@@ -372,7 +372,7 @@ You want to update `username`, `usertype` of a user obtained in the log in page:
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 val profileMap = mapOf(
@@ -388,13 +388,13 @@ You want to update `username, usertype` of a user obtained in the log in page:
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 public static func updateUserAttributes(attributeDict: [String: Any])
 ```
 
-### Example
+#### Example
 
 ```swift
 var profileMap = [AnyHashable: Any]()
@@ -407,13 +407,13 @@ UserProfile.updateUserAttributes(attributeDict: profileMap)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void)updateUserAttributesWithAttributeDict:(NSDictionary<NSString *,id> * _Nonnull)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 NSMutableDictionary *profileMap = [NSMutableDictionary dictionary];

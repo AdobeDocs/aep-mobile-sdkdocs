@@ -43,7 +43,7 @@ public enum InboxError: Int, Error {
 | `failureReason` | The reason the error occurred. |
 | `recoverySuggestion` | A suggested action to resolve the error. |
 
-### Example
+#### Example
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 

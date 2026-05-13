@@ -35,13 +35,13 @@ If SDK privacy status isoptedout, the push identifier will not be set.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void setPushIdentifier(final String pushIdentifier);
 ```
 
-### Example
+#### Example
 
 ```java
 // retrieve the token from either GCM or FCM, and pass it to the SDK
@@ -51,13 +51,13 @@ public static void setPushIdentifier(final String pushIdentifier);
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 Void setPushIdentifier(deviceToken: Data?)
 ```
 
-### Example
+#### Example
 
 ```swift
 // pass the deviceToken that the APNS has assigned to the device.
@@ -67,13 +67,13 @@ Void setPushIdentifier(deviceToken: Data?)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) setPushIdentifier: (nullable NSData*) deviceToken;
 ```
 
-### Example
+#### Example
 
 ```objectivec
 // pass the deviceToken that the APNS has assigned to the device

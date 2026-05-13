@@ -6,7 +6,6 @@ keywords:
 - Event reference
 ---
 
-
 # Adobe Audience Manager event reference
 
 ## Events handled

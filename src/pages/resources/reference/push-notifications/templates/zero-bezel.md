@@ -48,7 +48,7 @@ The properties below define the payload sent to FCM:
 
 ## Example
 
-<img src="./../assets/zero_bezel.gif" width="50%" height="50%"/>
+![zero bezel](./../templates/assets/zero-bezel.gif)
 
 Below is a sample of what a payload might look like for a zero bezel notification:
 

@@ -16,14 +16,14 @@ Returns the current version of the AEP Assurance extension.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 @NonNull
 public static String extensionVersion()
 ```
 
-### Example
+#### Example
 
 ```java
 final String extensionVersion = Assurance.extensionVersion();
@@ -33,7 +33,7 @@ final String extensionVersion = Assurance.extensionVersion();
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 val extensionVersion: String = Assurance.extensionVersion()
@@ -43,7 +43,7 @@ val extensionVersion: String = Assurance.extensionVersion()
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```swift
 AEPAssurance.extensionVersion()
@@ -53,13 +53,13 @@ AEPAssurance.extensionVersion()
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (nonnull NSString*) extensionVersion;
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [AEPAssurance extensionVersion];
@@ -79,13 +79,13 @@ Registers the Assurance extension with the Mobile Core.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void registerExtension()
 ```
 
-### Example
+#### Example
 
 ```java
 Assurance.registerExtension();
@@ -107,13 +107,13 @@ This API is optional for Android. Deep linking is the best way to connect to an 
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void startSession(@NonNull final String url)
 ```
 
-### Example
+#### Example
 
 ```java
 final String url = "<assurance_session_url>";
@@ -124,7 +124,7 @@ Assurance.startSession(url);
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 val url: String = "<assurance_session_url>"
@@ -135,7 +135,7 @@ Assurance.startSession(url)
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -158,13 +158,13 @@ For SceneDelegate based applications
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) startSession: (NSURL* _Nonnull) url;
 ```
 
-### Example
+#### Example
 
 ```objectivec
 - (BOOL)application:(UIApplication *)app openURL:(nonnull NSURL *)url options:(nonnull NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
@@ -185,13 +185,13 @@ This API is only supported on debug builds. Calling this method on a non-debugga
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void startSession()
 ```
 
-### Example
+#### Example
 
 ```java
 Assurance.startSession();
@@ -201,7 +201,7 @@ Assurance.startSession();
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```kotlin
 Assurance.startSession()
@@ -211,13 +211,13 @@ Assurance.startSession()
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func startSession()
 ```
 
-### Example
+#### Example
 
 ```swift
 AEPAssurance.startSession()
@@ -227,13 +227,13 @@ AEPAssurance.startSession()
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) startSession;
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [AEPAssurance startSession];

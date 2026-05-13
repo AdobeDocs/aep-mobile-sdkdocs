@@ -20,14 +20,14 @@ To get the version of the Signal extension, use the following code sample:
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 @NonNull
 public static String extensionVersion();
 ```
 
-### Example
+#### Example
 
 ```java
 String signalExtensionVersion = Signal.extensionVersion();
@@ -37,13 +37,13 @@ String signalExtensionVersion = Signal.extensionVersion();
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 public static let extensionVersion
 ```
 
-### Example
+#### Example
 
 ```swift
 let version = Signal.extensionVersion
@@ -53,7 +53,7 @@ let version = Signal.extensionVersion
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```objectivec
 NSString *version = [AEPMobileSignal extensionVersion];
@@ -73,13 +73,13 @@ Registers the Signal extension with the Mobile Core.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void registerExtension()
 ```
 
-### Example
+#### Example
 
 ```java
 Signal.registerExtension();

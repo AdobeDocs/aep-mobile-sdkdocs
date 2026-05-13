@@ -6,9 +6,6 @@ keywords:
 - Product overview
 ---
 
-import Tabs from './tabs/index.md'
-import InitializeSDK from '/src/pages/resources/initialize.md'
-
 # Adobe Analytics
 
 ## Configure the Analytics extension in the Data Collection UI
@@ -61,7 +58,7 @@ When the **Offline Enabled** checkbox is selected, Analytics hits are queued whe
 
 <InlineAlert variant="warning" slots="text"/>
 
-If your report suite is timestamp enabled, the checkbox must be selected. If your report suite is not timestamped enabled, leave the checkbox unselected. If this setting is not configured correctly, data will be lost.<br/><br/>If you are not sure whether your report suite is timestamp enabled, contact Customer Care.
+If your report suite is timestamp enabled, the checkbox must be selected. If your report suite is not timestamped enabled, leave the checkbox unselected. If this setting is not configured correctly, data will be lost.\<br/\>\<br/\>If you are not sure whether your report suite is timestamp enabled, contact Customer Care.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -109,19 +106,47 @@ The number of seconds to wait before Analytics launch hits are sent from the SDK
 
 Add MobileCore, Identity, and Analytics extensions as dependencies to your project.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+#### Android Kotlin
 
-Kotlin<br/>(Android)
+Add the required dependencies to your project by including them in the app's Gradle file.
 
-<Tabs query="platform=android-kotlin&task=add"/>
+```kotlin
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation("com.adobe.marketing.mobile:core")
+implementation("com.adobe.marketing.mobile:identity")
+implementation("com.adobe.marketing.mobile:analytics")
+```
 
-Groovy<br/>(Android)
+<InlineAlert variant="warning" slots="text"/>
 
-<Tabs query="platform=android-groovy&task=add"/>
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
 
-CocoaPods<br/>(iOS)
+#### Android Groovy
 
-<Tabs query="platform=ios-pods&task=add"/>
+```java
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
+implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:identity'
+implementation 'com.adobe.marketing.mobile:analytics'
+```
+
+<InlineAlert variant="warning" slots="text"/>
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
+
+#### iOS CocoaPods
+
+Add the required dependencies to your project using CocoaPods. Add following pods in your `Podfile`:
+
+```swift
+use_frameworks!
+
+target 'YourTargetApp' do
+    pod 'AEPCore', '~> 5.0'
+    pod 'AEPAnalytics', '~> 5.0'
+    pod 'AEPIdentity', '~> 5.0'
+end
+```
 
 ### Initialize Adobe Experience Platform SDK with Analytics Extension
 
@@ -129,7 +154,94 @@ Next, initialize the SDK by registering all the solution extensions that have be
 
 Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
 
-<InitializeSDK query="componentClass=TabsBlock"/>
+#### Android Kotlin
+
+<InlineAlert variant="warning" slots="text"/>
+
+This API is available starting from **Android BOM version 3.8.0**.
+
+```kotlin
+import com.adobe.marketing.mobile.LoggingMode
+import com.adobe.marketing.mobile.MobileCore
+...
+import android.app.Application
+...
+
+class MainApp : Application() {
+  override fun onCreate() {
+    super.onCreate()
+    MobileCore.setLogLevel(LoggingMode.DEBUG)
+    MobileCore.initialize(this, "ENVIRONMENT_ID")
+  }
+}
+```
+
+#### Android Java
+
+<InlineAlert variant="warning" slots="text"/>
+
+This API is available starting from **Android BOM version 3.8.0**.
+
+```java
+import com.adobe.marketing.mobile.LoggingMode;
+import com.adobe.marketing.mobile.MobileCore;
+...
+import android.app.Application;
+...
+public class MainApp extends Application {
+  @Override
+  public void onCreate(){
+    super.onCreate();
+    MobileCore.setLogLevel(LoggingMode.DEBUG);
+    MobileCore.initialize(this, "ENVIRONMENT_ID");
+  }
+}
+```
+
+#### iOS Swift
+
+<InlineAlert variant="warning" slots="text"/>
+
+This API is available starting from **iOS version 5.4.0**.
+
+```swift
+// AppDelegate.swift
+import AEPCore
+import AEPServices
+...
+
+final class AppDelegate: NSObject, UIApplicationDelegate {
+  func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+    MobileCore.setLogLevel(.debug)
+    MobileCore.initialize(appId: "ENVIRONMENT_ID")
+    ...
+  }
+}
+```
+
+#### iOS Objective-C
+
+<InlineAlert variant="warning" slots="text"/>
+
+This API is available starting from **iOS version 5.4.0**.
+
+```objectivec
+// AppDelegate.m
+#import "AppDelegate.h"
+@import AEPCore;
+@import AEPServices;
+...
+@implementation AppDelegate
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  [AEPMobileCore setLogLevel: AEPLogLevelDebug];  
+  [AEPMobileCore initializeWithAppId:@"ENVIRONMENT_ID" completion:^{
+      NSLog(@"AEP Mobile SDK is initialized");
+  }];
+  ...
+  return YES;
+}
+@end
+```
 
 ## Send Lifecycle metrics to Analytics
 
@@ -141,7 +253,7 @@ To track mobile app states and actions in Adobe Analytics, implement the [trackA
 
 <InlineAlert variant="info" slots="text"/>
 
-[trackState](../../home/base/mobile-core/api-reference.md#trackstate) reports the view state as the **Page Name**, and state views are reported as **Page View** in Analytics. The value is sent to Analytics by using the page name variable (`pagename=value`).<br/><br/> [trackAction](../../home/base/mobile-core/api-reference.md#trackaction) reports the Action as an **event** and does not increment your page views in Analytics. The value is sent to Analytics by using the action variable (`action=value`).
+[trackState](../../home/base/mobile-core/api-reference.md#trackstate) reports the view state as the **Page Name**, and state views are reported as **Page View** in Analytics. The value is sent to Analytics by using the page name variable (`pagename=value`).\<br/\>\<br/\> [trackAction](../../home/base/mobile-core/api-reference.md#trackaction) reports the Action as an **event** and does not increment your page views in Analytics. The value is sent to Analytics by using the action variable (`action=value`).
 
 ## Integrations with Adobe Experience Platform solutions and services
 
@@ -163,15 +275,103 @@ For more information about collecting audio and video analytics, please read the
 
 Event serialization is not supported by processing rules. To set serialized events directly on the hits sent to Analytics, use the following syntax in context data parameters:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&task=serialize"/>
+#### Syntax
 
-iOS
+```java
+cdata.put("&&events", "event1:12341234");
+```
 
-<Tabs query="platform=ios&task=serialize"/>
+#### Example
+
+```java
+//create a context data dictionary
+HashMap cdata = new HashMap<String, Object>();
+
+// add events
+cdata.put("&&events", "event1:12341234");
+
+// send a tracking call - use either a trackAction or TrackState call.
+// trackAction example:
+MobileCore.trackAction("Action Name", cdata);
+// trackState example:
+MobileCore.trackState("State Name", cdata);
+```
+
+### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```kotlin
+//create a context data dictionary
+val cdata: Map<String, Any?> = mapOf(
+    "&&events" to "event1:12341234"
+)
+
+// send a tracking call - use either a trackAction or TrackState call.
+// trackAction example:
+MobileCore.trackAction("Action Name", cdata);
+// trackState example:
+MobileCore.trackState("State Name", cdata);
+```
+
+### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+contextdata["&&events"] = "event1:12341234"
+```
+
+#### Example
+
+```swift
+//create a context data dictionary
+var contextData = [String: Any]()
+
+// add events
+contextData["&&events"] = "event1:12341234"
+
+// send the tracking call - use either a trackAction or trackState call.
+// trackAction example:
+MobileCore.track(action: "Action Name" as String, data: contextData)
+
+// trackState example:
+MobileCore.track(state: "State Name" as String, data: contextData)
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objectivec
+[contextData setObject:@"eventN:serial number" forKey:@"&&events"];
+```
+
+#### Example
+
+```objectivec
+//create a context data dictionary
+NSMutableDictionary *contextData = [NSMutableDictionary dictionary];
+
+// add events
+[contextData setObject:@"event1:12341234" forKey:@"&&events"];
+
+// send the tracking call - use either a trackAction or trackState call.
+// trackAction example:
+[AEPMobileCore trackAction:@"Action Name" data:contextData];
+// trackState example:
+[AEPMobileCore trackState:@"State Name" data:contextData];
+```
 
 ## Configuration keys
 
@@ -188,14 +388,65 @@ To update the SDK configuration programmatically, use the following information 
 
 ## Update Analytics configuration
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&task=update"/>
+#### Example
 
-iOS
+```java
+HashMap<String, Object> data = new HashMap<String, Object>();
+data.put("analytics.server", "sample.analytics.tracking.server");
+data.put("analytics.rsids", "rsid1,rsid2");
+data.put("analytics.batchLimit", 10);
+data.put("analytics.offlineEnabled", true);
 
-<Tabs query="platform=ios&task=update"/>
+MobileCore.updateConfiguration(data);
+```
+
+### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```kotlin
+val data: Map<String, Any?> = mapOf(
+    "analytics.server" to "sample.analytics.tracking.server",
+    "analytics.rsids" to "rsid1,rsid2",
+    "analytics.batchLimit" to 10,
+    "analytics.offlineEnabled" to true
+)
+
+MobileCore.updateConfiguration(data)
+```
+
+### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```swift
+let updatedConfig = ["analytics.server":"sample.analytics.tracking.server",
+                     "analytics.rsids":"rsid1,rsid2",
+                     "analytics.batchLimit":10,
+                     "analytics.offlineEnabled":true] as [String: Any]
+MobileCore.updateConfigurationWith(configDict: updatedConfig)
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```objectivec
+NSDictionary *updatedConfig = @{@"analytics.server":@"sample.analytics.tracking.server",
+                                @"analytics.rsids":@"rsid1,rsid2",
+                                @"analytics.batchLimit":@(10),
+                                @"analytics.offlineEnabled":@YES};
+[AEPMobileCore updateConfiguration:updatedConfig];
+```
 
 For more information, see the [configuration API reference](../../home/base/mobile-core/configuration/api-reference.md).

@@ -20,13 +20,13 @@ To get the version of the Lifecycle extension, use the following code sample:
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static String extensionVersion()
 ```
 
-### Example
+#### Example
 
 ```java
 final String lifecycleExtensionVersion = Lifecycle.extensionVersion();
@@ -36,13 +36,13 @@ final String lifecycleExtensionVersion = Lifecycle.extensionVersion();
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static var extensionVersion: String
 ```
 
-### Example
+#### Example
 
 ```swift
 let version = Lifecycle.extensionVersion
@@ -52,13 +52,13 @@ let version = Lifecycle.extensionVersion
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 @objc static var extensionVersion: String
 ```
 
-### Example
+#### Example
 
 ```objectivec
 NSString *version = [AEPMobileLifecycle extensionVersion];
@@ -78,13 +78,13 @@ This method should be called from the Activity onResume method.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void lifecycleStart(@Nullable final Map<String, String> additionalContextData)
 ```
 
-### Example
+#### Example
 
 ```java
 MobileCore.lifecycleStart(null);
@@ -101,13 +101,13 @@ MobileCore.lifecycleStart(additionalContextData);
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
  static func lifecycleStart(additionalContextData: [String: Any]?)
 ```
 
-### Example
+#### Example
 
 ```swift
  MobileCore.lifecycleStart(additionalContextData: nil)
@@ -123,14 +123,14 @@ If you need to collect additional lifecycle data:
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
  @objc(lifecycleStart:)
  static func lifecycleStart(additionalContextData: [String: Any]?)
 ```
 
-### Example
+#### Example
 
 ```objc
  [AEPMobileCore lifecycleStart:nil];
@@ -154,13 +154,13 @@ Pauses the collection of lifecycle data.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void lifecyclePause()
 ```
 
-### Example
+#### Example
 
 ```java
 MobileCore.lifecyclePause();
@@ -170,13 +170,13 @@ MobileCore.lifecyclePause();
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
  static func lifecyclePause()
 ```
 
-### Example
+#### Example
 
 ```swift
  MobileCore.lifecyclePause()
@@ -186,14 +186,14 @@ MobileCore.lifecyclePause();
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objc
  @objc(lifecyclePause)
  static func lifecyclePause()
 ```
 
-### Example
+#### Example
 
 ```objc
  [AEPMobileCore lifecyclePause];
@@ -213,13 +213,13 @@ Registers the Lifecycle extension with the Mobile Core.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void registerExtension()
 ```
 
-### Example
+#### Example
 
 ```java
 Lifecycle.registerExtension();

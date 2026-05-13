@@ -42,7 +42,7 @@ The `getInboxUI` method obtains an [InboxUI](../ios/public-classes/inboxui.md) i
 
 This API returns an `InboxUI` immediately. The inbox will not have content until proposition data has been fetched for the same surface. You **must** call the [`updatePropositionsForSurfaces`](../../code-based/api-reference.md#updatepropositionsforsurfaces) API with the desired surfaces prior to or after obtaining the inbox UI, depending on when you want content to appear.
 
-### Syntax
+#### Syntax
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 
@@ -55,7 +55,7 @@ public static func getInboxUI(for surface: Surface,
                               listener: InboxEventListening? = nil) -> InboxUI
 ```
 
-### Example
+#### Example
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 
@@ -79,7 +79,7 @@ struct InboxPage: View {
 }
 ```
 
-### Example with listener and customizer
+#### Example with listener and customizer
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 

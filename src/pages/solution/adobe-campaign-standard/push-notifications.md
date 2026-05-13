@@ -28,7 +28,7 @@ To set up server key/APNS server certificate in the Campaign Standard instance, 
 4. Verify that Firebase server key is configured in the Campaign instance by clicking **Adobe Campaign &gt; Administrator &gt; Channels &gt; Mobile App (AEP SDK)**.
 5. Select the mobile app from the list and verify that the push channel settings status for Android is _Android key set up success_.
 
-   ![Server key configuration in Android](../assets/push-notifications/android-server-key.png)
+![Server key configuration in Android](assets/push-notifications/android-server-key.png)
 
 ### iOS
 
@@ -44,7 +44,7 @@ To set up server key/APNS server certificate in the Campaign Standard instance, 
 
 3. Verify that the APNS server certificate is configured in the Campaign instance by clicking **Adobe Campaign &gt; Administrator &gt; Channels &gt; Mobile App (AEP SDK)**.
 4. Select the mobile app from the list and verify that push channel settings status for iOS is _iOS certificate with filename *.pem is successfully uploaded_.
-5. Verify that you are using production certificate for production environment and development certificate for development environment. ![Configured push certificate in Campaign](../assets/push-notifications/campaign-ios-cert-configured.png)
+5. Verify that you are using production certificate for production environment and development certificate for development environment. ![Configured push certificate in Campaign](assets/push-notifications/campaign-ios-cert-configured.png)
 
 For more information about configuration, see [Channel specific application configuration in Adobe Campaign](https://experienceleague.adobe.com/docs/campaign-standard/using/administrating/configuring-channels/configuring-a-mobile-application.html).
 
@@ -70,14 +70,14 @@ If SDK privacy status is `optedout`, the push identifier will not be set.
 1. Verify the push token sync with the Experience Cloud ID service (ECID).
 2. To verify, launch your app connected to an Adobe Experience Platform Assurance session.
 3. In the list of events, verify that you have an event with type _SetPushIdentifier_.
-4. In the details panel on the right, verify the value of the push token for this device. The value in pushIdentifier is the same value that is sent to the ECID service. ![Verify SetPushIdentifier event](../assets/push-notifications/push-token-to-identity.png)
+4. In the details panel on the right, verify the value of the push token for this device. The value in pushIdentifier is the same value that is sent to the ECID service. ![Verify SetPushIdentifier event](assets/push-notifications/push-token-to-identity.png)
 5. To verify that app's push token is mapped to the correct Experience Cloud ID (ECID) in the Campaign instance, click **Adobe Campaign &gt; Administrator &gt; Channels &gt; Mobile App (AEP SDK)**.
-6. Select your app, under the mobile application subscribers verify that the Experience Cloud ID and the Registration token for the user is displayed. ![App subscriber list, verify mid and push token](../assets/push-notifications/subscriber-list-android.png)
+6. Select your app, under the mobile application subscribers verify that the Experience Cloud ID and the Registration token for the user is displayed. ![App subscriber list, verify mid and push token](assets/push-notifications/subscriber-list-android.png)
 7. If you are using Charles, verify that the push token has successfully synced with the ECID service.
 8. Check for the _demdex request_, which is marked with the red line in the screenshot below.  
 9. Verify the successful response(200) for this network call.
 
-   ![ECID network request for push token sync](../assets/push-notifications/push-identifier.png)
+   ![ECID network request for push token sync](assets/push-notifications/push-identifier.png)
 
 ### iOS
 
@@ -102,7 +102,7 @@ If SDK privacy status is `optedout`, the push identifier will not be set.
 3. In the list of events, verify that you have an event with type _SetPushIdentifier_.
 4. In the details panel on the right, verify the value of the push token for this device.
 
-   The value in pushIdentifier is the same value that is sent to the ECID service. ![Verify SetPushIdentifier event](../assets/push-notifications/push-token-to-identity.png)
+   The value in pushIdentifier is the same value that is sent to the ECID service. ![Verify SetPushIdentifier event](assets/push-notifications/push-token-to-identity.png)
 
 5. To verify that app's push token is mapped to the correct Experience Cloud ID (ECID) in the Campaign instance, click **Adobe Campaign &gt; Administrator &gt; Channels &gt; Mobile App (AEP SDK)**.
 6. Select your app, under the mobile application subscribers verify that the Experience Cloud ID and the Registration token for the user is displayed. ![App subscriber list, verify mid and Registration token](../assets/push-notifications/subscriber-list-ios.png)
@@ -110,7 +110,7 @@ If SDK privacy status is `optedout`, the push identifier will not be set.
 8. Check for the **demdex request**, which is marked with the red line in the screenshot below.  
 9. Verify the successful response (200) for this network call.
 
-   ![ECID network request for push token sync](../assets/push-notifications/charles-demdex-call-ios.png)
+   ![ECID network request for push token sync](assets/push-notifications/charles-demdex-call-ios.png)
 
 ## Troubleshooting push notification events tracking
 
@@ -127,24 +127,24 @@ For more information about implementing the tracking of push notification events
 You can verify the push notification tracking in Assurance.
 
 1. Connect your app to an Assurance session.
-1. Send a push notification to app from your Campaign instance.<br/>To know more about how to send push notification, see [Preparing and sending a push notification](https://experienceleague.adobe.com/docs/campaign-standard/using/communication-channels/push-notifications/preparing-and-sending-a-push-notification.html).
+1. Send a push notification to app from your Campaign instance.\<br/\>To know more about how to send push notification, see [Preparing and sending a push notification](https://experienceleague.adobe.com/docs/campaign-standard/using/communication-channels/push-notifications/preparing-and-sending-a-push-notification.html).
 1. Receive a push notification in the device.
 1. Click on the push notification to launch the app.
 1. In the list of events, verify that you have an event with type CollectData.
-1. In the Details panel on the right, verify the value of the action.<br/>
+1. In the Details panel on the right, verify the value of the action.\<br/\>
 The value of the action should be 7 for impression, 2 for the click, and 1 for open.
 
 Impression event tracking (action value 7)
 
-![Impression event tracking](./assets/push-notifications/push-tracking-impression.png)
+![Impression event tracking](assets/push-notifications/push-tracking-impression.png)
 
 Click event tracking (action value 2)
 
-![Click event tracking](./assets/push-notifications/push-tracking-click.png)
+![Click event tracking](assets/push-notifications/push-tracking-click.png)
 
 Open event tracking (action value 1)
 
-![Open event tracking](./assets/push-notifications/push-tracking-open.png)
+![Open event tracking](assets/push-notifications/push-tracking-open.png)
 
 ### Troubleshooting using Charles
 
@@ -152,12 +152,12 @@ To verify that a successful network call is made to track the push notification 
 
 Impression event tracking (action value 7)
 
-![Impression event tracking](./assets/push-notifications/tracking-impression.png)
+![Impression event tracking](assets/push-notifications/tracking-impression.png)
 
 Click event tracking (action value 2)
 
-![Click event tracking](./assets/push-notifications/tracking-click.png)
+![Click event tracking](assets/push-notifications/tracking-click.png)
 
 Open event tracking (action value 1)
 
-![Click event tracking](./assets/push-notifications/tracking-open.png)
+![Click event tracking](assets/push-notifications/tracking-open.png)

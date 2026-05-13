@@ -170,7 +170,7 @@ Theme identification information.
 | `metadata.language` | string | `"en-US"` | Locale identifier |
 | `metadata.namespace` | string | `"brand-concierge"` | Theme namespace |
 
-### Example
+#### Example
 
 ```json
 {
@@ -263,7 +263,7 @@ Feature toggles and interaction configuration.
 | `behavior.privacyNotice.title` | string | `"Privacy Notice"` | Privacy dialog title |
 | `behavior.privacyNotice.text` | string | `"Privacy notice text."` | Privacy notice content |
 
-### Example
+#### Example
 
 ```json
 {
@@ -330,7 +330,7 @@ Legal disclaimer text with embedded links.
 | `disclaimer.links[].text` | string | `""` | Link display text (matches placeholder) |
 | `disclaimer.links[].url` | string | `""` | Link URL |
 
-### Example
+#### Example
 
 ```json
 {
@@ -427,7 +427,7 @@ While there are no strict requirements for character limits in many of these tex
 |----------|---------|-------------|
 | `text["suggestions.header"]` | `"Suggestions"` | Header label shown above prompt suggestion chips when `behavior.promptSuggestions.showHeader` is `true`. |
 
-### Example
+#### Example
 
 ```json
 {
@@ -470,7 +470,7 @@ List-based configuration for examples and feedback options.
 | `arrays["feedback.positive.options"]` | array | Positive feedback checkbox options; array of strings. |
 | `arrays["feedback.negative.options"]` | array | Negative feedback checkbox options; array of strings. |
 
-### Example
+#### Example
 
 ```json
 {
@@ -514,7 +514,7 @@ Icon and image asset configuration.
 
 Remote URLs must resolve to a supported raster format (PNG, JPEG, WebP, HEIC/HEIF, GIF, TIFF, BMP). SVG is not supported for remote or local icons.
 
-### Example
+#### Example
 
 ```json
 {

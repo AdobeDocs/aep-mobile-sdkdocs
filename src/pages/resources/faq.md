@@ -102,9 +102,25 @@ For a complete list of supported platforms, please read the [latest SDK versions
 
 ### Where does the SDK store identities and preferences on the app?
 
-<FAQ query="platform=android&task=storage-locations"/>
+#### Android
 
-<FAQ query="platform=ios&task=storage-locations"/>
+The SDK uses the cache and shared preferences at these locations:
+
+```bash
+data/data/your.app.package/cache
+data/data/your.app.package/shared_prefs
+```
+
+#### iOS
+
+On iOS, the SDK uses the cache and local storage at these locations:
+
+```bash
+Library/Caches/com.adobe.*
+Library/com.adobe.aep.datastore
+```
+
+On tvOS, the SDK uses `NSUserDefaults` using the prefix `adobe.*`.
 
 ### What is the size of the SDK?
 
@@ -163,9 +179,18 @@ Implementing push notification tracking and measurement with the SDK depends on 
 
 If you are getting the following errors from the SDK logged in your console, then you have not correctly published the mobile property in Data Collection UI. To correctly publish the mobile property follow the [docs here](https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview).
 
-<FAQ query="platform=android&task=configuration-download-error"/>
+#### Android
 
-<FAQ query="platform=ios&task=configuration-download-error"/>
+```bash
+D/AdobeExperienceSDK: HttpConnectionHandler - Connecting to URL https://assets.adobedtm.com/<APP_ID>.json (GET)
+W/AdobeExperienceSDK: RemoteDownloader - File could not be downloaded from URL (https://assets.adobedtm.com/<APP_ID>.json) Response: (-1) Message: (null)
+```
+
+#### iOS
+
+```bash
+[AEP SDK ERROR - <ConfigurationDownloader>] Loading config from URL https://assets.adobedtm.com/<APP_ID>.json failed with response code: Optional(404)
+```
 
 ## Migrating to Android Mobile Core 2.x and compatible extensions
 

@@ -17,13 +17,13 @@ The extensionVersion API returns the library version.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static String extensionVersion();
 ```
 
-### Example
+#### Example
 
 ```java
 Messaging.extensionVersion();
@@ -33,7 +33,7 @@ Messaging.extensionVersion();
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```kotlin
 Messaging.extensionVersion()
@@ -43,13 +43,13 @@ Messaging.extensionVersion()
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 public static let extensionVersion
 ```
 
-### Example
+#### Example
 
 ```swift
 Messaging.extensionVersion
@@ -59,13 +59,13 @@ Messaging.extensionVersion
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 public static let extensionVersion
 ```
 
-### Example
+#### Example
 
 ```objc
 [AEPMobileMessaging extensionVersion];
@@ -83,13 +83,13 @@ Use [`MobileCore.registerExtensions()`](../../home/base/mobile-core/api-referenc
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void registerExtension();
 ```
 
-### Example
+#### Example
 
 ```java
 Messaging.registerExtension();
@@ -99,7 +99,7 @@ Messaging.registerExtension();
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```kotlin
 Messaging.registerExtension()
@@ -113,7 +113,7 @@ The [MobileCore.resetIdentities](../../home/base/mobile-core/api-reference.md#re
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 MobileCore.resetIdentities();
@@ -123,7 +123,7 @@ MobileCore.resetIdentities();
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```kotlin
 MobileCore.resetIdentities()
@@ -133,7 +133,7 @@ MobileCore.resetIdentities()
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```swift
 MobileCore.resetIdentities()
@@ -143,7 +143,7 @@ MobileCore.resetIdentities()
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```objc
 [AEPMobileCore resetIdentities];

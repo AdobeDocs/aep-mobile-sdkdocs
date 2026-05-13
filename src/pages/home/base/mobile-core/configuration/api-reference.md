@@ -45,13 +45,13 @@ Result: In this example, the configuration will have the initial `MobilePrivacyS
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void clearUpdatedConfiguration();
 ```
 
-### Example
+#### Example
 
 ```java
 MobileCore.clearUpdatedConfiguration();
@@ -61,13 +61,13 @@ MobileCore.clearUpdatedConfiguration();
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func clearUpdatedConfiguration()
 ```
 
-### Example
+#### Example
 
 ```swift
 MobileCore.clearUpdatedConfiguration()
@@ -77,13 +77,13 @@ MobileCore.clearUpdatedConfiguration()
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) clearUpdatedConfiguration(); 
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [AEPMobileCore clearUpdatedConfiguration];
@@ -107,13 +107,13 @@ As best practice, you should configure a mobile property in the Data Collection 
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void configureWithAppID(@NonNull final String appId);
 ```
 
-### Example
+#### Example
 
 ```java
 MobileCore.configureWithAppId("1423ae38-8385-8963-8693-28375403491d");
@@ -123,13 +123,13 @@ MobileCore.configureWithAppId("1423ae38-8385-8963-8693-28375403491d");
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
  static func configureWith(appId: String)
 ```
 
-### Example
+#### Example
 
 ```swift
  MobileCore.configureWith(appId: "1423ae38-8385-8963-8693-28375403491d")
@@ -139,13 +139,13 @@ MobileCore.configureWithAppId("1423ae38-8385-8963-8693-28375403491d");
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) configureWithAppId: (NSString* appId);
 ```
 
-### Example
+#### Example
 
 ```objectivec
  [AEPMobileCore configureWithAppId: @"1423ae38-8385-8963-8693-28375403491d"];
@@ -167,13 +167,13 @@ This will replace any configuration previously loaded during app launch or with 
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void configureWithFileInAssets(@NonNull final String fileName);
 ```
 
-### Example
+#### Example
 
 ```java
 MobileCore.configureWithFileInAssets("exampleJSONfile.json");
@@ -193,13 +193,13 @@ To pass in a bundled path and file name:
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void configureWithFileInPath(@NonNull final String filePath);
 ```
 
-### Example
+#### Example
 
 ```java
 MobileCore.configureWithFileInPath("absolute/path/to/exampleJSONfile.json");
@@ -209,13 +209,13 @@ MobileCore.configureWithFileInPath("absolute/path/to/exampleJSONfile.json");
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
  static func configureWith(filePath: String)
 ```
 
-### Example
+#### Example
 
 ```swift
  let filePath = Bundle.main.path(forResource: "ExampleJSONFile", ofType: "json")
@@ -226,13 +226,13 @@ MobileCore.configureWithFileInPath("absolute/path/to/exampleJSONfile.json");
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) configureWithFileInPath: (NSString* __nullable) filepath;
 ```
 
-### Example
+#### Example
 
 ```objectivec
  NSString *filePath = [[NSBundle mainBundle] pathForResource:@"ExampleJSONFile" ofType:@"json"];
@@ -279,13 +279,13 @@ Do not use this API to update the `build.environment` key or any key with an env
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void updateConfiguration(@NonNull final Map configMap);
 ```
 
-### Example
+#### Example
 
 ```java
 HashMap<String, Object> data = new HashMap<String, Object>();
@@ -297,14 +297,14 @@ MobileCore.updateConfiguration(data);
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 @objc(updateConfiguration:)
 static func updateConfigurationWith(configDict: [String: Any])
 ```
 
-### Example
+#### Example
 
 ```swift
  let updatedConfig = ["global.privacy":"optedout"]
@@ -315,13 +315,13 @@ static func updateConfigurationWith(configDict: [String: Any])
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
  + (void) updateConfiguration: (NSDictionary* __nullable) config;
 ```
 
-### Example
+#### Example
 
 ```objectivec
  NSDictionary *updatedConfig = @{@"global.privacy":@"optedout"};

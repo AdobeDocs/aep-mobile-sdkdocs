@@ -8,9 +8,9 @@ description: "The Adobe Experience Platform Analytics extension uses [tags](http
 
 The Adobe Experience Platform Analytics extension uses [tags](https://experience.adobe.com/#/data-collection/) to configure the Experience Platform SDKs. This replaces the ADBMobileConfig.json which the Mobile Services SDK used for configuration. To get started with the AEP SDKs:
 
-1. Create a mobile property on tags. <br/>See [Set up a mobile property](../../home/getting-started/create-a-mobile-property.md) for more information.
-2. Configure your mobile app with the create mobile property.<br/>The AEP Mobile Core extension provides general functionality required by all the Adobe AEP extensions. The Configuration extension is built into the Mobile Core and contains the configureWithAppId API. This API is used to link the tag mobile property with your mobile app. The documentation for this API can be seen at the [Configuration API Reference](../../home/base/mobile-core/configuration/api-reference.md#configurewithappid) page. A code sample showing the usage of this API is provided below.
-3. Once all the Platform extensions are imported and configured correctly, remove the v4 Mobile SDK dependency. <br/>This step is mandatory and a mix of v4 and AEP API calls is not supported.
+1. Create a mobile property on tags. \<br/\>See [Set up a mobile property](../../home/getting-started/create-a-mobile-property.md) for more information.
+2. Configure your mobile app with the create mobile property.\<br/\>The AEP Mobile Core extension provides general functionality required by all the Adobe AEP extensions. The Configuration extension is built into the Mobile Core and contains the configureWithAppId API. This API is used to link the tag mobile property with your mobile app. The documentation for this API can be seen at the [Configuration API Reference](../../home/base/mobile-core/configuration/api-reference.md#configurewithappid) page. A code sample showing the usage of this API is provided below.
+3. Once all the Platform extensions are imported and configured correctly, remove the v4 Mobile SDK dependency. \<br/\>This step is mandatory and a mix of v4 and AEP API calls is not supported.
 
 ### Android
 
@@ -174,10 +174,11 @@ The Adobe Mobile Library (v4) syntax and usage examples for these API are:
 [ADBMobile trackAction:@"linkClicked" data:@{@"url":@"https://www.adobe.com"}];
 ```
 
-#### Experience Platform Mobile SDKs
+### Experience Platform Mobile SDKs
+
+### Android Java
 
 The Mobile SDKs have moved the `trackAction` and `trackState` APIs to the MobileCore extension. In addition, the context data Map has been changed from `<String, Object>` to `<String, String>`. The syntax is:
-### Android Java
 
 ```java
 // syntax
@@ -198,6 +199,8 @@ MobileCore.trackAction("linkClicked", new HashMap<String, String>() {{
   put("url", "https://www.adobe.com");
 }});
 ```
+
+### IOS
 
 The Mobile SDKs have moved the `trackAction` and `trackState` APIs to the MobileCore extension. The syntax is:
 

@@ -67,7 +67,7 @@ The properties below define the payload sent to FCM:
 
 ## Example
 
-<img src="./../assets/android_basic.gif" width="50%" height="50%"/>
+![Android Basic](./../templates/assets/android-basic.gif)
 
 Below is a sample of what a payload might look like for a basic notification:
 
@@ -166,7 +166,7 @@ The properties below define the payload sent to APNS:
 
 ## Example
 
-![gif of sample basic notification](./../assets/basic.gif)
+![gif of sample basic notification](./../templates/assets/basic.gif)
 
 Below is a sample of what a payload might look like for a notification using a basic template:
 

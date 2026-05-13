@@ -16,13 +16,13 @@ Returns the version of the client-side Edge extension.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static String extensionVersion();
 ```
 
-### Example
+#### Example
 
 ```java
 String extensionVersion = Edge.extensionVersion();
@@ -32,7 +32,7 @@ String extensionVersion = Edge.extensionVersion();
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 val extensionVersion = EdgeBridge.extensionVersion()
@@ -42,13 +42,13 @@ val extensionVersion = EdgeBridge.extensionVersion()
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static let extensionVersion
 ```
 
-### Example
+#### Example
 
 ```swift
 let extensionVersion = Edge.extensionVersion
@@ -58,13 +58,13 @@ let extensionVersion = Edge.extensionVersion
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (nonnull NSString*) extensionVersion;
 ```
 
-### Example
+#### Example
 
 ```objectivec
 NSString *extensionVersion = [AEPMobileEdge extensionVersion];
@@ -80,13 +80,13 @@ Gets the Edge Network location hint used in requests to the Adobe Experience Pla
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void getLocationHint(final AdobeCallback<String> callback)
 ```
 
-### Example
+#### Example
 
 ```java
 Edge.getLocationHint(new AdobeCallbackWithError<String>() {
@@ -106,7 +106,7 @@ Edge.getLocationHint(new AdobeCallbackWithError<String>() {
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 Edge.getLocationHint(object: AdobeCallbackWithError<String> {
@@ -125,13 +125,13 @@ Edge.getLocationHint(object: AdobeCallbackWithError<String> {
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func getLocationHint(completion: @escaping (String?, Error?) -> Void)
 ```
 
-### Example
+#### Example
 
 ```swift
 Edge.getLocationHint { (hint, error) in
@@ -147,13 +147,13 @@ Edge.getLocationHint { (hint, error) in
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) getLocationHint:^(NSString * _Nullable hint, NSError * _Nullable error)completion
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [AEPMobileEdge getLocationHint:^(NSString *hint, NSError *error) {
@@ -173,13 +173,13 @@ Use [`MobileCore.registerExtensions()`](../../home/base/mobile-core/api-referenc
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void registerExtension();
 ```
 
-### Example
+#### Example
 
 ```java
 Edge.registerExtension();
@@ -211,14 +211,14 @@ The process involves two steps:
 
 <CodeBlock slots="heading, code" repeat="6" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void sendEvent(final ExperienceEvent experienceEvent,
                              final EdgeCallback callback);
 ```
 
-### Example
+#### Example
 
 ```java
 // Create Experience Event from map
@@ -231,14 +231,14 @@ ExperienceEvent experienceEvent = new ExperienceEvent.Builder()
   .build();
 ```
 
-### Example 1
+#### Example 1
 
 ```java
 // Example 1 - send the Experience Event without handling the Edge Network response
 Edge.sendEvent(experienceEvent, null);
 ```
 
-### Example 2
+#### Example 2
 
 ```java
 // Example 2 - send the Experience Event and handle the Edge Network response onComplete
@@ -327,7 +327,7 @@ Edge.sendEvent(experienceEvent, new EdgeCallback() {
 
 <CodeBlock slots="heading, code" repeat="5" />
 
-### Example
+#### Example
 
 ```kotlin
 // Create Experience Event from map
@@ -339,13 +339,13 @@ val experienceEvent = ExperienceEvent.Builder()
   .setXdmSchema(xdmData)
   .build()
 ```
-### Example 1
+#### Example 1
 
 ```kotlin
 // Example 1 - send the Experience Event without handling the Edge Network response
 Edge.sendEvent(experienceEvent, null)
 ```
-### Example 2
+#### Example 2
 
 ```kotlin
 // Example 2 - send the Experience Event and handle the Edge Network response onComplete
@@ -414,13 +414,13 @@ Edge.sendEvent(experienceEvent) {
 
 <CodeBlock slots="heading, code" repeat="6" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func sendEvent(experienceEvent: ExperienceEvent, _ completion: (([EdgeEventHandle]) -> Void)? = nil)
 ```
 
-### Example
+#### Example
 
 ```swift
 // Create Experience Event from dictionary:
@@ -429,14 +429,14 @@ var xdmData : [String: Any] = ["eventType" : "SampleXDMEvent",
 let experienceEvent = ExperienceEvent(xdm: xdmData)
 ```
 
-### Example 1
+#### Example 1
 
 ```swift
 // Example 1 - send the Experience Event without handling the Edge Network response
 Edge.sendEvent(experienceEvent: experienceEvent)
 ```
 
-### Example 2
+#### Example 2
 
 ```swift
 // Example 2 - send the Experience Event and handle the Edge Network response onComplete
@@ -499,13 +499,13 @@ Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) 
 
 <CodeBlock slots="heading, code" repeat="6" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) sendExperienceEvent:(AEPExperienceEvent * _Nonnull) completion:^(NSArray<AEPEdgeEventHandle *> * _Nonnull)completion
 ```
 
-### Example
+#### Example
 
 ```objectivec
 // Create Experience Event from dictionary:
@@ -513,14 +513,14 @@ NSDictionary *xdmData = @{ @"eventType" : @"SampleXDMEvent"};
 NSDictionary *data = @{ @"sample" : @"data"};
 ```
 
-### Example 1
+#### Example 1
 
 ```objectivec
 // Example 1 - send the Experience Event without handling the Edge Network response
 [AEPMobileEdge sendExperienceEvent:event completion:nil];
 ```
 
-### Example 2
+#### Example 2
 
 ```objectivec
 // Example 2 - send the Experience Event and handle the Edge Network response onComplete
@@ -591,13 +591,13 @@ Use caution when setting the location hint. Only use location hints for the "Edg
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void setLocationHint(final String hint)
 ```
 
-### Example
+#### Example
 
 ```java
 Edge.setLocationHint(hint);
@@ -607,7 +607,7 @@ Edge.setLocationHint(hint);
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 Edge.setLocationHint(hint)
@@ -619,14 +619,14 @@ Edge.setLocationHint(hint)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 @objc(setLocationHint:)
 public static func setLocationHint(_ hint: String?)
 ```
 
-### Example
+#### Example
 
 ```swift
 Edge.setLocationHint(hint)
@@ -636,13 +636,13 @@ Edge.setLocationHint(hint)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) setLocationHint: (NSString * _Nullable hint);
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [AEPMobileEdge setLocationHint:hint];

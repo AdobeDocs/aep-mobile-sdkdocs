@@ -18,13 +18,13 @@ To set the products variable, set a context data key to `&&products`, and set th
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 cdata.put("&&products", "Category;Product;Quantity;Price[,Category;Product;Quantity;Price]");
 ```
 
-### Example
+#### Example
 
 ```java
 //create a context data dictionary
@@ -45,7 +45,7 @@ MobileCore.trackState("Order Confirmation", cdata);
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```kotlin
 //create a context data dictionary
@@ -66,14 +66,14 @@ MobileCore.trackState("Order Confirmation", cdata);
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 contextData["&&events"] = "event1:12341234"
 contextData["&&products"] = "Category;Product;Quantity;Price[,Category;Product;Quantity;Price]"
 ```
 
-### Example
+#### Example
 
 ```swift
 //create a context data dictionary
@@ -96,13 +96,13 @@ MobileCore.track(state: "Order Confirmation", data: contextData)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 [contextData setObject:@"Category;Product;Quantity;Price[,Category;Product;Quantity;Price]" forKey:@"&&products"];
 ```
 
-### Example
+#### Example
 
 ```objectivec
 //create a context data dictionary
@@ -135,7 +135,7 @@ The following code samples show an example of the products variable with merchan
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```java
 //create a context data dictionary 
@@ -161,7 +161,7 @@ MobileCore.trackState("Order Confirmation", cdata);
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```kotlin
 //create a context data dictionary
@@ -183,7 +183,7 @@ MobileCore.trackState("Order Confirmation", cdata);
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```swift
 //create a context data dictionary
@@ -210,7 +210,7 @@ MobileCore.track(state: "Order Confirmation" as String, data: contextData)
 
 <CodeBlock slots="heading, code" repeat="1" />
 
-### Example
+#### Example
 
 ```objectivec
 //create a context data dictionary 

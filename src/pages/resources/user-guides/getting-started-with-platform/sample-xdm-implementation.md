@@ -9,13 +9,6 @@ keywords:
 - XDM
 ---
 
-import DownloadSampleApplicationAndroid from './tabs/sample-xdm-implementation/download-sample-application/android.md'
-import DownloadSampleApplicationIos from './tabs/sample-xdm-implementation/download-sample-application/ios.md'
-import BuildXDMObjectsAndroid from './tabs/sample-xdm-implementation/build-xdm-objects/android.md'
-import BuildXDMObjectsIos from './tabs/sample-xdm-implementation/build-xdm-objects/ios.md'
-import OverrideDefaultDatasetAndroid from './tabs/sample-xdm-implementation/override-default-dataset/android.md'
-import OverrideDefaultDatasetIos from './tabs/sample-xdm-implementation/override-default-dataset/ios.md'
-
 # Sample XDM Implementation
 
 ## Prerequisites for this tutorial
@@ -24,15 +17,17 @@ Before starting this tutorial, please read and follow the steps in the [getting 
 
 ### Download the sample application
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Java
 
-Android
+Download the Android Sample application from the [Adobe Experience Platform SDK GitHub](https://github.com/adobe/aepsdk-sample-app-android/archive/beta-assignment-3.zip).
 
-<DownloadSampleApplicationAndroid/>
+To get started, follow the steps described in the installation section of the [Adobe Experience Platform SDK GitHub](https://github.com/adobe/aepsdk-sample-app-android/tree/beta-assignment-3#installation).
 
-iOS
+#### iOS Swift
 
-<DownloadSampleApplicationIos/>
+Download the iOS Swift Sample application from the [Adobe Experience Platform SDK GitHub](https://github.com/adobe/aepsdk-sample-app-ios/archive/beta-assignment-3.zip).
+
+To get started, follow the steps described in the installation section of the [Adobe Experience Platform SDK GitHub](https://github.com/adobe/aepsdk-sample-app-ios/tree/beta-assignment-3#installation).
 
 ### Set up the configuration
 
@@ -85,15 +80,53 @@ You can now implement the product review functionality in the sample application
 
 1. Create the XDM Experience Event using the `XDM IdentityMap` containing the reviewer `Email` and the review information.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Java
 
-Android
+```java
+// TODO - Assignment 3
+Map<String, Object> xdmData = new HashMap<String, Object>();
 
-<BuildXDMObjectsAndroid/>
+// 1. Add Email to the IdentityMap.
+// Note: this app does not implement a logging system, so authenticatedState ambiguous is used
+// in this case. The other authenticatedState values are: authenticated, loggedOut
+Map<String, Object> identityMap = new HashMap<String, Object>();
+identityMap.put("Email", new ArrayList<Object>() {{
+  add(new HashMap<String, Object>() {{
+    put("id", reviewerId);
+    put("authenticatedState", "ambiguous");
+  }});
+}});
+xdmData.put("identityMap", identityMap);
 
-iOS
+// 2. Add product review details in the custom field group
+// Note: use your _tenantId here as specified in the Product Reviews Schema in Adobe Experience Platform
+xdmData.put("_tenantId", new HashMap<String, Object>() {{
+    put("productSku", product.sku);
+    put("rating", rating);
+    put("reviewText", text);
+  put("reviewerId", reviewerId);
+}});
+```
 
-<BuildXDMObjectsIos/>
+#### iOS Swift
+
+```swift
+// TODO - Assignment 3
+var xdmData : [String: Any] = [:]
+
+// 1. Add Email to the IdentityMap.
+// Note: this app does not implement a logging system, so authenticatedState ambiguous is used
+// in this case. The other authenticatedState values are: authenticated, loggedOut
+xdmData["identityMap"] = ["Email": [["id": reviewerEmail,
+                                     "authenticatedState": "ambiguous"]]]
+
+// 2. Add product review details in the custom field group
+// Note: use your _tenantId here as specified in the Product Reviews Schema in Adobe Experience Platform
+xdmData["_tenantId"] = ["productSku": products[productIndex].sku,
+                         "rating": reviewRating,
+                         "reviewText": reviewText,
+                            "reviewerId": reviewerEmail]
+```
 
 **Note:** When sending XDM data for custom field groups, use your **_tenantId** as shown in the schema.
 
@@ -106,15 +139,37 @@ Use the knowledge from Assignment 1 and connect to an Assurance Session to verif
 1. Send the Experience Event using the Adobe Experience Platform Edge extension and specify the dataset identifier for "Product Reviews".
    * Copy the `<DatasetIdentifier>` from the "Product Reviews" dataset in Platform and replace it in the sample app implementation where indicated below.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Java
 
-Android
+```java
+// 3. Send the XDM data using the Edge extension, by specifying Product Reviews Dataset identifiers as
+// shown in Adobe Experience Platform
+// Note: the Dataset identifier specified at Event level overrides the Experience Event Dataset specified in the
+// Datastream configuration
+xdmData.put("eventType", "product.review");
+ExperienceEvent event = new ExperienceEvent.Builder()
+  .setXdmSchema(xdmData, "<DatasetIdentifier>")
+  .build();
+Edge.sendEvent(event, new EdgeCallback() {
+  @Override
+  public void onResponse(Map<String, Object> data) {
+    Log.d("Send XDM Event", String.format("Received response for event 'product.review': %s", data));
+  }
+});
+```
 
-<OverrideDefaultDatasetAndroid/>
+#### iOS Swift
 
-iOS
-
-<OverrideDefaultDatasetIos/>
+```swift
+// 3. Send the XDM data using the Edge extension, by specifying Product Reviews Dataset identifiers as
+// shown in Adobe Experience Platform
+// Note: the Dataset identifier specified at Event level overrises the Experience Event Dataset specified in the
+// Datastream configuration
+xdmData["eventType"] = "product.review"
+let experienceEvent =
+ExperienceEvent(xdm: xdmData, datasetIdentifier: "<DatasetIdentifier>")
+Edge.sendEvent(experienceEvent: experienceEvent)
+```
 
 ### Run the sample application
 

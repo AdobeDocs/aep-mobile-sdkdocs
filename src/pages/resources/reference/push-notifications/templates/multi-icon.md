@@ -40,7 +40,7 @@ The properties below define the payload sent to FCM:
 
 ## Example
 
-<img src="./../assets/multi_icon.gif" width="50%" height="50%"/>
+![multi icon](./../templates/assets/multi-icon.gif)
 
 Below is a sample of what a payload might look like for a multi icon notification:
 

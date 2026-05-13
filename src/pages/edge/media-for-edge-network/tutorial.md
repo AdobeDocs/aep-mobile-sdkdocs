@@ -41,7 +41,7 @@ Initialize the AEP Vega SDK using `AEPSDK.initialize()` with your Edge datastrea
 
 <CodeBlock slots="heading, code" repeat="1" languages="TypeScript" />
 
-### Example
+#### Example
 
 ```typescript
 import { AEPSDK, LogLevel } from '@adobe/vega-aepcore';
@@ -75,7 +75,7 @@ Use `AEPSDK.updateConfiguration()` to update SDK configuration after initializat
 
 <CodeBlock slots="heading, code" repeat="1" languages="TypeScript" />
 
-### Example
+#### Example
 
 ```typescript
 AEPSDK.updateConfiguration({
@@ -89,7 +89,7 @@ Use the `AEPSDK.setLogLevel()` API with the `LogLevel` enum to control the verbo
 
 <CodeBlock slots="heading, code" repeat="1" languages="TypeScript" />
 
-### Example
+#### Example
 
 ```typescript
 import { AEPSDK, LogLevel } from '@adobe/vega-aepcore';
@@ -116,7 +116,7 @@ The SDK automatically generates and manages the Experience Cloud ID (ECID) for d
 
 <CodeBlock slots="heading, code" repeat="1" languages="TypeScript" />
 
-### Example
+#### Example
 
 ```typescript
 // Using async/await
@@ -139,7 +139,7 @@ Use the `AEPSDK.setConsent()` API to send user consent preferences to the Edge N
 
 <CodeBlock slots="heading, code" repeat="1" languages="TypeScript" />
 
-### Example
+#### Example
 
 ```typescript
 AEPSDK.setConsent({
@@ -207,7 +207,7 @@ Only one media session can be active at a time. You must end the current session
 
 <CodeBlock slots="heading, code" repeat="1" languages="TypeScript" />
 
-### Example
+#### Example
 
 ```typescript
 import { Media } from '@adobe/vega-aepmedia';
@@ -250,7 +250,7 @@ Once a media session is created, use `Media.sendMediaEvent()` to track media pla
 
 <CodeBlock slots="heading, code" repeat="1" languages="TypeScript" />
 
-### Example
+#### Example
 
 ```typescript
 import { Media } from '@adobe/vega-aepmedia';
@@ -329,7 +329,7 @@ The following example demonstrates a complete media tracking workflow, from SDK 
 
 <CodeBlock slots="heading, code" repeat="1" languages="TypeScript" />
 
-### Example
+#### Example
 
 ```typescript
 import { AEPSDK, LogLevel } from '@adobe/vega-aepcore';

@@ -60,11 +60,11 @@ The properties below define the payload sent to FCM:
 
 Vertical Product Catalog:
 
-<img src="./../assets/vertical_catalog.gif" width="50%" height="50%"/>
+![Vertical Product Catalog](./../templates/assets/vertical-catalog.gif)
 
 Horizontal Product Catalog:
 
-<img src="./../assets/horizontal_catalog.gif" width="50%" height="50%"/>
+![Horizontal Product Catalog](./../templates/assets/horizontal-catalog.gif)
 
 Below is a sample of what a payload might look like for a product catalog notification:
 

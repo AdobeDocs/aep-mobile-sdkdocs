@@ -17,13 +17,13 @@ The extensionVersion() API returns the version of the client-side Consent extens
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```kotlin
 fun extensionVersion(): String
 ```
 
-### Example
+#### Example
 
 ```kotlin
 val extensionVersion = Consent.extensionVersion()
@@ -33,13 +33,13 @@ val extensionVersion = Consent.extensionVersion()
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static String extensionVersion();
 ```
 
-### Example
+#### Example
 
 ```java
 String extensionVersion = Consent.extensionVersion();
@@ -49,13 +49,13 @@ String extensionVersion = Consent.extensionVersion();
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static var extensionVersion: String
 ```
 
-### Example
+#### Example
 
 ```swift
 let extensionVersion = Consent.extensionVersion
@@ -65,13 +65,13 @@ let extensionVersion = Consent.extensionVersion
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (nonnull NSString*) extensionVersion;
 ```
 
-### Example
+#### Example
 
 ```objectivec
 NSString *extensionVersion = [AEPMobileEdgeConsent extensionVersion];
@@ -87,13 +87,13 @@ Retrieves the current consent preferences stored in the Consent extension.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```kotlin
 fun getConsents(callback: AdobeCallback<Map<String, Any>>)
 ```
 
-### Example
+#### Example
 
 ```kotlin
 Consent.getConsents { currentConsents ->
@@ -107,13 +107,13 @@ Consent.getConsents { currentConsents ->
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void getConsents(final AdobeCallback<Map<String, Object>> callback);
 ```
 
-### Example
+#### Example
 
 ```java
 Consent.getConsents(new AdobeCallback<Map<String, Object>>() {
@@ -130,13 +130,13 @@ Consent.getConsents(new AdobeCallback<Map<String, Object>>() {
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func getConsents(completion: @escaping ([String: Any]?, Error?) -> Void)
 ```
 
-### Example
+#### Example
 
 ```swift
 Consent.getConsents { currentConsents, error in
@@ -150,13 +150,13 @@ Consent.getConsents { currentConsents, error in
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) getConsents:^ (NSDictionary<NSString *,id> * _Nullable, NSError * _Nullable)
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [AEPMobileEdgeConsent getConsents:^(NSDictionary *currentConsents, NSError *error){
@@ -176,13 +176,13 @@ Use [`MobileCore.registerExtensions()`](../../home/base/mobile-core/api-referenc
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void registerExtension();
 ```
 
-### Example
+#### Example
 
 ```java
 Consent.registerExtension();
@@ -194,14 +194,14 @@ Use the MobileCore API to register the Edge Consent extension.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func registerExtensions(_ extensions: [NSObject.Type], 
                                _ completion: (() -> Void)? = nil)
 ```
 
-### Example
+#### Example
 
 ```swift
 import AEPEdgeConsent
@@ -216,14 +216,14 @@ Use the AEPMobileCore API to register the Edge Consent extension.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) registerExtensions: (NSArray<Class*>* _Nonnull) extensions 
                   completion: (void (^ _Nullable)(void)) completion;
 ```
 
-### Example
+#### Example
 
 ```objectivec
 @import AEPEdgeConsent;
@@ -280,13 +280,13 @@ For additional information about the management of consent preferences, please r
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```kotlin
 fun update(consents: Map<String, Any>)
 ```
 
-### Example
+#### Example
 
 ```kotlin
 // Example 1, updating users collect consent to 'yes'
@@ -314,13 +314,13 @@ Consent.update(consents)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void update(final Map<String, Object> consents);
 ```
 
-### Example
+#### Example
 
 ```java
 // Example 1, updating users collect consent to 'yes'
@@ -356,13 +356,13 @@ Consent.update(consents);
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func update(with consents: [String: Any])
 ```
 
-### Example
+#### Example
 
 ```swift
 // Example 1, updating users collect consent to 'yes'
@@ -382,13 +382,13 @@ Consent.update(with: currentConsents)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) updateWithConsents:(NSDictionary<NSString *,id> * _Nonnull)
 ```
 
-### Example
+#### Example
 
 ```objc
 // Example 1, updating users collect consent to 'yes'

@@ -37,13 +37,13 @@ When registering multiple types, their push-to-start tokens are automatically ba
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func registerLiveActivities(_ activityTypes: [any LiveActivityAttributes.Type])
 ```
 
-### Example
+#### Example
 
 ```swift
 import AEPMessaging

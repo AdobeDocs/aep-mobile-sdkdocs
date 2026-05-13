@@ -64,14 +64,14 @@ This API can be called with [AdobeCallback](../api-reference.md#public-classes) 
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void appendVisitorInfoForURL(
             @NonNull final String baseURL, @NonNull final AdobeCallback<String> callback)
 ```
 
-### Example
+#### Example
 
 ```java
 Identity.appendVisitorInfoForURL("https://example.com", new AdobeCallback<String>() {
@@ -94,13 +94,13 @@ Identity.appendVisitorInfoForURL("https://example.com", new AdobeCallback<String
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static func appendTo(url: URL?, completion: @escaping (URL?, Error?) -> Void)
 ```
 
-### Example
+#### Example
 
 ```swift
 Identity.appendTo(url: URL(string: "https://example.com")) { appendedURL, error in
@@ -124,13 +124,13 @@ Identity.appendTo(url: URL(string: "https://example.com")) { appendedURL, error 
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) appendToUrl: (NSURL * _Nullable baseUrl) completion: ^(NSURL * _Nullable urlWithVisitorData, NSError * _Nullable error) completion;
 ```
 
-### Example
+#### Example
 
 ```objectivec
 NSURL* url = [NSURL URLWithString:@"https://example.com"];
@@ -161,14 +161,14 @@ To get the version of the Identity extension, use the following code sample:
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 @NonNull
 public static String extensionVersion();
 ```
 
-### Example
+#### Example
 
 ```java
 String identityExtensionVersion = Identity.extensionVersion();
@@ -178,13 +178,13 @@ String identityExtensionVersion = Identity.extensionVersion();
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 static var extensionVersion: String
 ```
 
-### Example
+#### Example
 
 ```swift
 let identityExtensionVersion  = Identity.extensionVersion
@@ -194,13 +194,13 @@ let identityExtensionVersion  = Identity.extensionVersion
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (nonnull NSString*) extensionVersion;
 ```
 
-### Example
+#### Example
 
 ```objectivec
 NSString *identityVersion = [AEPMobileIdentity extensionVersion];
@@ -220,13 +220,13 @@ This API can be called with [AdobeCallback](../api-reference.md#public-classes) 
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void getExperienceCloudId(@NonNull final AdobeCallback<String> callback)
 ```
 
-### Example
+#### Example
 
 ```java
 Identity.getExperienceCloudId(new AdobeCallback<String>() {
@@ -243,14 +243,14 @@ Identity.getExperienceCloudId(new AdobeCallback<String>() {
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 @objc(getExperienceCloudId:)
 static func getExperienceCloudId(completion: @escaping (String?, Error?) -> Void)
 ```
 
-### Example
+#### Example
 
 ```swift
 Identity.getExperienceCloudId { ecid, error in
@@ -266,13 +266,13 @@ Identity.getExperienceCloudId { ecid, error in
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) getExperienceCloudId: ^(NSString * _Nullable ecid, NSError * _Nullable error) completion;
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [AEPMobileIdentity getExperienceCloudId:^(NSString * _Nullable ecid, NSError *error) {
@@ -296,13 +296,13 @@ This API can be called with [AdobeCallback](../api-reference.md#public-classes) 
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void getIdentifiers(@NonNull final AdobeCallback<List<VisitorID>> callback)
 ```
 
-### Example
+#### Example
 
 ```java
 Identity.getIdentifiers(new AdobeCallback<List<VisitorID>>() {
@@ -320,14 +320,14 @@ Identity.getIdentifiers(new AdobeCallback<List<VisitorID>>() {
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 @objc(getIdentifiers:)
 static func getIdentifiers(completion: @escaping ([Identifiable]?, Error?) -> Void)
 ```
 
-### Example
+#### Example
 
 ```swift
 Identity.getIdentifiers { identifiers, error in
@@ -343,13 +343,13 @@ Identity.getIdentifiers { identifiers, error in
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) getIdentifiers: ^(NSArray<id<AEPIdentifiables>> * _Nullable identifiers, NSError * _Nullable error) completion;
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [[AEPMobileIdentity getIdentifiers:^(NSArray<id<AEPIdentifiable>> * _Nullable identifiers, NSError *error) {
@@ -384,13 +384,13 @@ This API can be called with [AdobeCallback](../api-reference.md#public-classes) 
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void getUrlVariables(final AdobeCallback<String> callback);
 ```
 
-### Example
+#### Example
 
 ```java
 Identity.getUrlVariables(new AdobeCallback<String>() {
@@ -412,14 +412,14 @@ Identity.getUrlVariables(new AdobeCallback<String>() {
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 @objc(getUrlVariables:)
 static func getUrlVariables(completion: @escaping (String?, Error?) -> Void)
 ```
 
-### Example
+#### Example
 
 ```swift
 Identity.getUrlVariables { (urlVariables, error) in
@@ -447,13 +447,13 @@ Identity.getUrlVariables { (urlVariables, error) in
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) getUrlVariables: ^(NSString * _Nullable urlVariables, NSError * _Nullable error) completion;
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [AEPMobileIdentity getUrlVariables:^(NSString * _Nullable urlVariables, NSError *error) {
@@ -539,13 +539,13 @@ This example requires Google Play Services to be configured in your mobile appli
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void setAdvertisingIdentifier(@Nullable final String advertisingIdentifier)
 ```
 
-### Example
+#### Example
 
 ```java
 ...
@@ -596,14 +596,14 @@ Starting iOS 14+, applications must use the [App Tracking Transparency](https://
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 @objc(setAdvertisingIdentifier:)
 public static func setAdvertisingIdentifier(_ identifier: String?)
 ```
 
-### Example
+#### Example
 
 ```swift
 import AdSupport
@@ -660,13 +660,13 @@ func setAdvertisingIdentiferUsingTrackingManager() {
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) setAdvertisingIdentifier: (NSString * _Nullable identifier);
 ```
 
-### Example
+#### Example
 
 ```objectivec
 #import <AdSupport/ASIdentifierManager.h>
@@ -739,13 +739,13 @@ You should call `setPushIdentifier` on each application launch to ensure the mos
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void setPushIdentifier(@Nullable final String pushIdentifier)
 ```
 
-### Example
+#### Example
 
 ```java
 //Retrieve the token from either GCM or FCM, and pass it to the SDK
@@ -758,14 +758,14 @@ MobileCore.setPushIdentifier(token);
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 @objc(setPushIdentifier:)
 public static func setPushIdentifier(_ deviceToken: Data?)
 ```
 
-### Example
+#### Example
 
 ```swift
 // Set the deviceToken that the APNs has assigned to the device
@@ -776,13 +776,13 @@ MobileCore.setPushIdentifier(deviceToken)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) setPushIdentifier: (NSString * _Nullable deviceToken);
 ```
 
-### Example
+#### Example
 
 ```objectivec
 // Set the deviceToken that the APNS has assigned to the device
@@ -811,7 +811,7 @@ This API updates or appends the provided customer identifier type key and value 
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void syncIdentifier(
@@ -820,7 +820,7 @@ public static void syncIdentifier(
             @NonNull final VisitorID.AuthenticationState authenticationState)
 ```
 
-### Example
+#### Example
 
 ```java
 Identity.syncIdentifier("idType",
@@ -836,14 +836,14 @@ Identity.syncIdentifier("idType",
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 @objc(syncIdentifierWithType:identifier:authenticationState:)
 static func syncIdentifier(identifierType: String, identifier: String, authenticationState: MobileVisitorAuthenticationState)
 ```
 
-### Example
+#### Example
 
 ```swift
 Identity.syncIdentifier(identifierType: "idType",
@@ -855,7 +855,7 @@ Identity.syncIdentifier(identifierType: "idType",
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) syncIdentifierWithType: (NSString * _Nonnull identifierType)
@@ -863,7 +863,7 @@ Identity.syncIdentifier(identifierType: "idType",
                                  authentication: (enum AEPAuthenticationState authenticationState);
 ```
 
-### Example
+#### Example
 
 ```objectivec
 [AEPMobileIdentity syncIdentifierWithType:@"idType"
@@ -881,13 +881,13 @@ This API is an overloaded version, which does not include the parameter for the 
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void syncIdentifiers(@NonNull final Map<String, String> identifiers)
 ```
 
-### Example
+#### Example
 
 ```java
 Map<String, String> identifiers = new HashMap<String, String>();
@@ -903,14 +903,14 @@ Identity.syncIdentifiers(identifiers);
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 @objc(syncIdentifiers:)
 static func syncIdentifiers(identifiers: [String: String]?)
 ```
 
-### Example
+#### Example
 
 ```swift
 let ids : [String: String] = ["idType1":"idValue1",
@@ -923,13 +923,13 @@ Identity.syncIdentifiers(identifiers: ids)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) syncIdentifiers: (NSDictionary<NSString *, NSString *> * _Nullable identifiers);
 ```
 
-### Example
+#### Example
 
 ```objectivec
 NSDictionary *ids = @{@"idType1":@"idValue1",
@@ -951,7 +951,7 @@ Starting with _ACPIdentity v2.1.3 (iOS)_ and _Identity v1.1.2 (Android)_ if the 
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```java
 public static void syncIdentifiers(
@@ -959,7 +959,7 @@ public static void syncIdentifiers(
             @NonNull final VisitorID.AuthenticationState authenticationState)
 ```
 
-### Example
+#### Example
 
 ```java
 Map<String, String> identifiers = new HashMap<String, String>();
@@ -976,14 +976,14 @@ Identity.syncIdentifiers(identifiers, VisitorID.AuthenticationState.AUTHENTICATE
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```swift
 @objc(syncIdentifiers:authenticationState:)
 static func syncIdentifiers(identifiers: [String: String]?, authenticationState: MobileVisitorAuthenticationState)
 ```
 
-### Example
+#### Example
 
 ```swift
 let ids : [String: String] = ["idType1":"idValue1",
@@ -996,14 +996,14 @@ Identity.syncIdentifiers(identifiers: ids, authenticationState: .authenticated)
 
 <CodeBlock slots="heading, code" repeat="2" />
 
-### Syntax
+#### Syntax
 
 ```objectivec
 + (void) syncIdentifiers: (NSDictionary<NSString *, NSString *> * _Nullable identifiers)
                   authentication: (enum AEPAuthenticationState authenticationState);
 ```
 
-### Example
+#### Example
 
 ```objectivec
 NSDictionary *ids = @{@"idType1":@"idValue1",
