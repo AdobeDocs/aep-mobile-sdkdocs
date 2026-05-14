@@ -85,6 +85,8 @@ The user has entered the radius for POI A:
 * **Last Entered POI** is set to POI A.  
 * **Last Exited POI** remains unchanged as none.  
 
+![Places states after entering POI A in a non-intersecting scenario](./assets/behavior-reference/non-intersecting-enter-a.png)
+
 #### Exit POI A
 
 The user has exited the radius for POI A:  
@@ -93,6 +95,8 @@ The user has exited the radius for POI A:
 * **Last Entered POI** remains unchanged as POI A.  
 * **Last Exited POI** is set to POI A.  
 
+![Places states after exiting POI A in a non-intersecting scenario](./assets/behavior-reference/non-intersecting-exit-a.png)
+
 #### Enter POI B
 
 The user has entered the radius for POI B:  
@@ -100,6 +104,8 @@ The user has entered the radius for POI B:
 * **Current POI** is set to POI B.  
 * **Last Entered POI** is set to POI B.  
 * **Last Exited POI** remains unchanged as POI A.  
+
+![Places states after entering POI B in a non-intersecting scenario](./assets/behavior-reference/non-intersecting-enter-b.png)
 
 ### Scenario: Intersecting points
 
@@ -111,6 +117,8 @@ The user has entered the radius for POI A:
 * **Last Entered POI** is set to POI A.  
 * **Last Exited POI** remains unchanged as none.  
 
+![Places states after entering POI A in an intersecting scenario](./assets/behavior-reference/intersecting-enter-a.png)
+
 #### Enter POI B
 
 The user has entered the radius for POI B:  
@@ -120,6 +128,8 @@ The user has entered the radius for POI B:
 * **Last Entered POI** is set to POI B.  
 * **Last Exited POI** remains unchanged as none.  
 
+![Places states after entering POI B in an intersecting scenario](./assets/behavior-reference/intersecting-enter-b.png)
+
 #### Exit POI A
 
 The user has exited the radius for POI A:  
@@ -128,4 +138,6 @@ The user has exited the radius for POI A:
   * POI A is removed from the entered POIs list, while POI B remains. Notice that Current POI updates to POI B upon receiving an exit signal.  
 * **Last entered POI** remains unchanged and is set to POI B.  
 * **Last exited POI** is set to POI A.
+
+![Places states after exiting POI A in an intersecting scenario](./assets/behavior-reference/intersecting-exit-a.png)
 
