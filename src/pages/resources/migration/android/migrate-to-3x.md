@@ -1,6 +1,6 @@
 ---
-title: "Migrate to Adobe Experience Platform 3.x SDKs for Android"
-description: "This Mobile SDK version for Android now supports a minimum API level of 21."
+title: Migrate to Adobe Experience Platform 3.x SDKs for Android
+description: This Mobile SDK version for Android now supports a minimum API level of 21.
 ---
 # Migrate to Adobe Experience Platform 3.x SDKs for Android
 
@@ -12,17 +12,9 @@ This Mobile SDK version for Android now supports a minimum API level of 21.
 
 ### Android BOM
 
-<div style="height:20px; width:120px;"></div>
-
-<div style="height:30px; width:140px;">
-<a href="https://mvnrepository.com/artifact/com.adobe.marketing.mobile/sdk-bom">
-<img src="https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/sdk-bom.svg?logo=android&logoColor=white&label=sdk-bom&style=flat-square&versionPrefix=3" alt="descriptive text"/>
-</a>
-</div>
+[![descriptive text](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/sdk-bom.svg?logo=android&logoColor=white&label=sdk-bom&style=flat-square&versionPrefix=3)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/sdk-bom)
 
 ### Android extensions
-
-<div style="height:20px; width:120px;"></div>
 
 | Extension | Version |
 |---|---|
@@ -33,7 +25,7 @@ This Mobile SDK version for Android now supports a minimum API level of 21.
 | [Profile](../../../home/base/profile/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/userprofile.svg?logo=android&logoColor=white&label=userprofile&style=flat-square&versionPrefix=3)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/userprofile) |
 | [Adobe Experience Platform Assurance](../../../home/base/assurance/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/assurance.svg?logo=android&logoColor=white&label=assurance&style=flat-square&versionPrefix=3)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/assurance) |
 | [Adobe Experience Platform Edge Network](../../../edge/edge-network/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edge.svg?logo=android&logoColor=white&label=edge&style=flat-square&versionPrefix=3)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edge) |
-| [Identity for Edge Network](../../../edge/identity-for-edge-network/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edgeidentity.svg?logo=android&logoColor=white&label=edgeidentity&style=flat-square&versionPrefix=3)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edgeidentity) |adobe/aepsdk-edgeidentity-android) |
+| [Identity for Edge Network](../../../edge/identity-for-edge-network/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edgeidentity.svg?logo=android&logoColor=white&label=edgeidentity&style=flat-square&versionPrefix=3)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edgeidentity) |
 | [Consent for Edge Network](../../../edge/consent-for-edge-network/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edgeconsent.svg?logo=android&logoColor=white&label=edgeconsent&style=flat-square&versionPrefix=3)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edgeconsent) |
 | [Media for Edge Network](../../../edge/media-for-edge-network/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edgemedia.svg?logo=android&logoColor=white&label=edgemedia&style=flat-square&versionPrefix=3)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edgemedia) |
 | [Edge Bridge](../../../solution/adobe-analytics/migrate-to-edge-network.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edgebridge.svg?logo=android&logoColor=white&label=edgebridge&style=flat-square&versionPrefix=3)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edgebridge) |

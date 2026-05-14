@@ -83,7 +83,7 @@ class MainApp : Application() {
 }
 ```
 
-Replace `YOUR_APP_ID` with your mobile property App ID from Adobe Data Collection. For full setup instructions see the [Adobe Experience Platform Mobile SDK getting started guide](/src/pages/home/getting-started/).
+Replace `YOUR_APP_ID` with your mobile property App ID from Adobe Data Collection. For full setup instructions see the [Adobe Experience Platform Mobile SDK getting started guide](/home/getting-started/index.md).
 
 ### Step 2: Validate the Brand Concierge configuration keys exist
 
@@ -298,7 +298,7 @@ fun MyScreen() {
 }
 ```
 
-More information regarding theme customization can be found in the [Style guide (Android)](/edge/adobe-brand-concierge/android/style-guide/).
+More information regarding theme customization can be found in the [Style guide (Android)](/edge/adobe-brand-concierge/android/style-guide.md).
 
 <HorizontalLine />
 
@@ -417,5 +417,5 @@ No additional configuration is required for this behavior. App Link forwarding w
 
 ## Next steps
 
-* [API reference (Android)](/edge/adobe-brand-concierge/android/api-reference/) — Full parameter documentation for all public APIs.
-* [Style guide (Android)](/edge/adobe-brand-concierge/android/style-guide/) — Theme JSON reference and implementation status for Android.
+* [API reference (Android)](/edge/adobe-brand-concierge/android/api-reference.md) — Full parameter documentation for all public APIs.
+* [Style guide (Android)](/edge/adobe-brand-concierge/android/style-guide.md) — Theme JSON reference and implementation status for Android.

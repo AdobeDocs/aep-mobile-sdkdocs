@@ -160,7 +160,7 @@ public void onShow(FullscreenMessage fullscreenMessage) {
 }
 ```
 
-Each of the methods implemented in the `MessagingDelegate` will be passed a [`Showable`](https://github.com/adobe/aepsdk-core-ios/blob/main/AEPServices/Sources/ui/Showable.swift) object. In the AEPMessaging SDK, the class implementing `Showable` is [`FullscreenMessage`](https://github.com/adobe/aepsdk-core-ios/blob/main/AEPServices/Sources/ui/fullscreen/FullscreenMessage.swift). A `FullscreenMessage` object is wrapped in the [`Message`](../public-classes-enums.md) class, and is your primary way to interact with the message.
+Each of the methods implemented in the `MessagingDelegate` will be passed a [`Showable`](https://github.com/adobe/aepsdk-core-ios/blob/main/AEPServices/Sources/ui/Showable.swift) object. In the AEPMessaging SDK, the class implementing `Showable` is [`FullscreenMessage`](https://github.com/adobe/aepsdk-core-ios/blob/main/AEPServices/Sources/ui/fullscreen/FullscreenMessage.swift). A `FullscreenMessage` object is wrapped in the [`Message`](../public-classes/message.md) class, and is your primary way to interact with the message.
 
 To get a reference to the `Message` object:
 
@@ -327,6 +327,6 @@ The test apps in this repository demonstrate using a `MessagingDelegate`:
 
 ### Further reading
 
-* [More information on how to use the Message object](../public-classes.md)
+* [More information on how to use the Message object](../public-classes/index.md)
 * [Call native code from the JavaScript of an in-app message](native-from-javascript.md)
 * [Execute JavaScript code in an in-app message from native code](javascript-from-native.md)

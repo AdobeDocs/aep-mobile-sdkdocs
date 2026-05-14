@@ -1,6 +1,6 @@
 ---
-title: "Migrate from Analytics mobile extension to Adobe Experience Platform Edge Network"
-description: "Are you currently using the Adobe Analytics mobile extension and considering a migration to Edge Network? If so, you've come to the right place!"
+title: Migrate from Analytics mobile extension to Adobe Experience Platform Edge Network
+description: Are you currently using the Adobe Analytics mobile extension and considering a migration to Edge Network? If so, you've come to the right place!
 ---
 # Migrate from Analytics mobile extension to Adobe Experience Platform Edge Network
 

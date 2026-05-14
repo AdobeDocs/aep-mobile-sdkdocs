@@ -166,7 +166,7 @@ The properties below define the payload sent to APNS:
 
 ## Example
 
-![gif of sample timer notification](./../assets/timer.gif)
+![gif of sample timer notification](assets/timer.gif)
 
 Below is a sample of what a payload might look like for a notification using the timer template:
 

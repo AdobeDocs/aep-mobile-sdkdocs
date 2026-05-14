@@ -1,6 +1,6 @@
 ---
-title: "API Changelog"
-description: "This page details SDK API changes between the Experience Platform SDKs and 4x SDKs."
+title: API Changelog
+description: This page details SDK API changes between the Experience Platform SDKs and 4x SDKs.
 ---
 # API Changelog
 
@@ -18,7 +18,7 @@ For more information, see the [Mobile Core API reference](../../home/base/mobile
 | [getPrivacyStatus:](../privacy-and-gdpr.md#getprivacystatus) | privacyStatus |
 | [setPrivacyStatus:](../privacy-and-gdpr.md#setprivacystatus) | setPrivacyStatus: |
 | [setLogLevel:](../../home/base/mobile-core/api-reference.md#setloglevel) | setDebugLogging: |
-| [configureWithFileInPath:](../../home/base/mobile-core/configuration/api-reference.md/#configurewithfileinpath) | overrideConfigPath: |
+| [configureWithFileInPath:](../../home/base/mobile-core/configuration/api-reference.md#configurewithfileinpath) | overrideConfigPath: |
 | [setAppGroup:](../../home/base/mobile-core/api-reference.md#setappgroup) | setAppGroup: |
 | [trackState:data:](../../home/base/mobile-core/api-reference.md#trackstate) | trackState:data: |
 | [trackAction:data:](../../home/base/mobile-core/api-reference.md#trackaction) | trackAction:data: |
@@ -67,7 +67,7 @@ For more information, see the [Lifecycle API reference](../../home/base/mobile-c
 
 ## Identity extension APIs
 
-For more information, see the [Identity API reference](../../base-extensions-mobile-core/identity/api-reference.md).
+For more information, see the [Identity API reference](../../home/base/mobile-core/identity/api-reference.md).
 
 ### Supported APIs
 
@@ -114,11 +114,11 @@ For more information, see the [Audience Manager Extension API reference](../../s
 
 | 4x SDK | Notes |
 | ------ | ----- |
-| audienceSetDpid:dpuuid: | Replaced - See [Link](​[https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/cid.html](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/cid.html)) |
+| audienceSetDpid:dpuuid: | Replaced - See [Link](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/cid.html) |
 | audienceDpid: | Replaced - See [Link](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/cid.html) |
 | audienceDpuuid: | Replaced - See [Link](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/cid.html) |
 
-​## Adobe Target extension APIs
+## Adobe Target extension APIs
 
 For more information see [Target API reference](../../solution/adobe-target/api-reference.md).
 

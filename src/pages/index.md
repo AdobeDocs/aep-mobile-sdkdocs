@@ -1,5 +1,5 @@
 ---
-title: "Pages"
-description: "Overview of Pages"
+title: Pages
+description: Overview of Pages
 ---
 <HorizontalLine />

@@ -225,7 +225,7 @@ The Identity for Edge Network extension and the Identity for Experience Cloud ID
 
 The Identity for Edge Network extension does not clear its stored identities or regenerate the ECID due to privacy status changes. Instead, use the [resetIdentities](api-reference.md#resetidentities) API. Note this API does not clear the ECID but instead generates a new ECID.
 
-Each identity extension has its own API to retrieve their respective ECIDs as well. Use [Identity.getExperienceCloudId](api-reference.md#getexperiencecloudid) to get the Identity for Edge Network extension's ECID, and [Identity.getExperienceCloudId](../mobile-core/identity/api-reference.md#getexperiencecloudid) to get the Identity for Experience Cloud ID Service extension's ECID.
+Each identity extension has its own API to retrieve their respective ECIDs as well. Use [Identity.getExperienceCloudId](api-reference.md#getexperiencecloudid) to get the Identity for Edge Network extension's ECID, and [Identity.getExperienceCloudId](../../home/base/mobile-core/identity/api-reference.md#getexperiencecloudid) to get the Identity for Experience Cloud ID Service extension's ECID.
 
 ## Q: How can I get all the identifiers used by the SDK when using both Edge extensions and Adobe Solutions extensions?
 
@@ -249,7 +249,7 @@ A: The Identity for the Edge Network extension does not automatically reset or c
 
 * Cleared when the app is uninstalled.
 * Reset using the [`resetIdentities`](../../home/base/mobile-core/api-reference.md#resetidentities) API.
-* Reset when the app local persistence is cleared for any reason in the app implementation. To learn more, see where the [Mobile SDK stores identity data](../../../resources/faq.md#where-does-the-sdk-store-identities-and-preferences-on-the-app).
+* Reset when the app local persistence is cleared for any reason in the app implementation. To learn more, see where the [Mobile SDK stores identity data](../../resources/faq.md#where-does-the-sdk-store-identities-and-preferences-on-the-app).
 
 ## Q: What steps are needed to generate a new Experience Cloud ID (ECID) for a user when using both Edge extensions and Adobe Solutions extensions?
 

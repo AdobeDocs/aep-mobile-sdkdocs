@@ -12,7 +12,7 @@ keywords:
 
 ## clearUpdatedConfiguration
 
-You can clear any programmatic updates made to the configuration via the `clearUpdatedConfiguration` API. This will clear programmatic updates to configuration made via the [updateConfiguration](#updateconfiguration) API. It will also clear any updates to the `MobilePrivacyStatus`(Android)/ `PrivacyStatus`(iOS)  made via [setPrivacyStatus](../../../../resources/privacy-and-gdpr.md/#setprivacystatus).
+You can clear any programmatic updates made to the configuration via the `clearUpdatedConfiguration` API. This will clear programmatic updates to configuration made via the [updateConfiguration](#updateconfiguration) API. It will also clear any updates to the `MobilePrivacyStatus`(Android)/ `PrivacyStatus`(iOS)  made via [setPrivacyStatus](../../../../resources/privacy-and-gdpr.md#setprivacystatus).
 
 Here are some scenarios based on the order of calls:
 
@@ -36,7 +36,7 @@ Result: You end up with the initial configuration set via `configureWithFileInPa
 Result: In this example, the configuration will be the most recently updated configuration and will not have any keys from the first update unless they are included in the most recent update.
 
 1. [configureWithAppId](#configurewithappid) or [configureWithFileInPath](#configurewithfileinpath) or [configureWithFileInAssets](#configurewithfileinassets)
-2. [setPrivacyStatus](../../../../resources/privacy-and-gdpr.md/#setprivacystatus)
+2. [setPrivacyStatus](../../../../resources/privacy-and-gdpr.md#setprivacystatus)
 3. clearUpdatedConfiguration
 
 Result: In this example, the configuration will have the initial `MobilePrivacyStatus`(Android)/ `PrivacyStatus`(iOS) set via [configureWithAppId](#configurewithappid) or [configureWithFileInPath](#configurewithfileinpath) or [configureWithFileInAssets](#configurewithfileinassets).

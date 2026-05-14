@@ -22,7 +22,7 @@ If a requested surface was not previously cached prior to calling `getPropositio
 ### Android Java
 
 * _surfaces_ is a list of surfaces for which propositions are requested.
-* _callback_ `call` method is invoked with propositions map of type `Map<Surface, List<Proposition>>`. If the callback is an instance of [AdobeCallbackWithError](../../../../home/base/mobile-core/api-reference.md#adobecallbackwitherror), and if the operation times out or an error occurs in retrieving propositions, the `fail` method is invoked with the appropriate [AdobeError](../../../../home/base/mobile-core/api-reference.md#adobeerror).
+* _callback_ `call` method is invoked with propositions map of type `Map<Surface, List<Proposition>>`. If the callback is an instance of [AdobeCallbackWithError](../../../home/base/mobile-core/api-reference.md#adobecallbackwitherror), and if the operation times out or an error occurs in retrieving propositions, the `fail` method is invoked with the appropriate [AdobeError](../../../home/base/mobile-core/api-reference.md#adobeerror).
 
 <CodeBlock slots="heading, code" repeat="1" />
 

@@ -77,7 +77,7 @@ If we have a more complex map named `userDetails` nested within another map name
 
 We can setup a rule trigger on the AJO UI which uses a dot notation to access the nested map's key value pairs:
 
-![send-data-event-define-nested-rule](../../assets/trigger-campaign/send-data-event-define-nested-rule.png)
+![send-data-event-define-nested-rule](../assets/trigger-campaign/send-data-event-define-nested-rule.png)
 
 We can then trigger the campaign using XDM data containing nested maps:
 
@@ -136,7 +136,7 @@ If we have a more complex dictionary named `userDetails` nested within another d
 
 We can setup a rule trigger on the AJO UI which uses a dot notation to access the nested dictionary's key value pairs:
 
-![send-data-event-define-nested-rule](../../assets/trigger-campaign/send-data-event-define-nested-rule.png)
+![send-data-event-define-nested-rule](../assets/trigger-campaign/send-data-event-define-nested-rule.png)
 
 We can then trigger the campaign using XDM data containing nested dictionaries:
 

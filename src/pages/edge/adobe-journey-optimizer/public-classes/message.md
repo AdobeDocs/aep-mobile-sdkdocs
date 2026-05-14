@@ -97,7 +97,7 @@ Adds a handler for named JavaScript messages sent from the message's `WKWebView`
 
 The parameter passed to `handler` will contain the body of the message passed from the `WKWebView`'s JavaScript.
 
-For a full guide on how to use `handleJavascriptMessage`, read [Call native code from the Javascript of an in-app message](./tutorials/native-from-javascript.md).
+For a full guide on how to use `handleJavascriptMessage`, read [Call native code from the Javascript of an in-app message](../tutorials/native-from-javascript.md).
 
 ##### Parameters
 
@@ -151,7 +151,7 @@ Generates and dispatches an Edge Event for the provided `interaction` and `event
 ##### Parameters
 
 * *interaction*: A custom `String` value to be recorded in the interaction
-* *eventType*: The [`MessagingEdgeEventType`](../messaging-edge-event-type.md) to be used for the ensuing Edge Event
+* *eventType*: The [`MessagingEdgeEventType`](messaging-edge-event-type.md) to be used for the ensuing Edge Event
 
 ##### Android Java
 

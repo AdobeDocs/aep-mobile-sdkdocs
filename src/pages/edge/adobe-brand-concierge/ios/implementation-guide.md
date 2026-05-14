@@ -121,7 +121,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-Replace `YOUR_APP_ID` with your mobile property App ID from Adobe Data Collection. For full setup instructions see the [Adobe Experience Platform Mobile SDK getting started guide](/src/pages/home/getting-started/).
+Replace `YOUR_APP_ID` with your mobile property App ID from Adobe Data Collection. For full setup instructions see the [Adobe Experience Platform Mobile SDK getting started guide](/home/getting-started/index.md).
 
 ### Step 2: Validate the Brand Concierge configuration keys
 
@@ -159,7 +159,7 @@ var body: some View {
 }
 ```
 
-More information regarding theme customization can be found in the [Style guide (iOS)](/edge/adobe-brand-concierge/ios/style-guide/).
+More information regarding theme customization can be found in the [Style guide (iOS)](/edge/adobe-brand-concierge/ios/style-guide.md).
 
 <HorizontalLine />
 
@@ -333,5 +333,5 @@ No additional configuration is required for this behavior. Universal-link forwar
 
 ## Next steps
 
-* [API reference (iOS)](/edge/adobe-brand-concierge/ios/api-reference/) — Full parameter documentation for all public APIs.
-* [Style guide (iOS)](/edge/adobe-brand-concierge/ios/style-guide/) — Theme JSON reference and implementation status for iOS.
+* [API reference (iOS)](/edge/adobe-brand-concierge/ios/api-reference.md) — Full parameter documentation for all public APIs.
+* [Style guide (iOS)](/edge/adobe-brand-concierge/ios/style-guide.md) — Theme JSON reference and implementation status for iOS.

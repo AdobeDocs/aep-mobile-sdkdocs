@@ -14,7 +14,7 @@ This document outlines the various push notification payload keys used by the Ad
 ## Android
 
 * Adobe Journey Optimizer uses [data messages](https://firebase.google.com/docs/cloud-messaging/concept-options#data_messages) with custom key-value pairs to send push notifications to client apps.
-* When using [manual display and tracking](../android/manual-display-and-tracking.md), use the [MessagingPushPayload](../../public-classes/messaging-push-payload.md) class to extract the payload values.
+* When using [manual display and tracking](android/manual-display-and-tracking.md), use the [MessagingPushPayload](../public-classes/messaging-push-payload.md) class to extract the payload values.
 
 ```json
 {

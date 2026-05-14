@@ -110,7 +110,7 @@ public boolean shouldShowMessage(FullscreenMessage fullscreenMessage) {
 }
 ```
 
-In the `shouldShowMessage` function of the `MessagingDelegate`, call [`handleJavascriptMessage(_:withHandler)`](./class-message.md#handlejavascriptmessage_withhandler) to register your handler.
+In the `shouldShowMessage` function of the `MessagingDelegate`, call [`handleJavascriptMessage(_:withHandler)`](../../public-classes/message.md#handlejavascriptmessage_withhandler) to register your handler.
 
 The name of the message you intend to pass from the JavaScript side should be specified in the first parameter.
 

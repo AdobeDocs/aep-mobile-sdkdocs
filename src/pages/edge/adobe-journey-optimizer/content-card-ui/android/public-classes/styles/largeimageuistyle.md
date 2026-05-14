@@ -34,7 +34,7 @@ Class representing the style for a large image Adobe Experience Platform UI.
 | `titleTextStyle`         | [AepTextStyle](../../../android/public-classes/styles/aeptextstyle.md)                            | The text style for the title.                                |
 | `bodyTextStyle`          | [AepTextStyle](../../../android/public-classes/styles/aeptextstyle.md)                            | The text style for the body.                                 |
 | `buttonRowStyle`         | [AepRowStyle](../../../android/public-classes/styles/aeprowstyle.md)                              | The style for the row containing the buttons.                |
-| `buttonStyle`            | Array<[AepButtonStyle](../../../android/public-classes/styles/aepbuttonstyle.md)>                 | The style for the buttons.                                   |
+| `buttonStyle`            | Array\<[AepButtonStyle](../../../android/public-classes/styles/aepbuttonstyle.md)\>                 | The style for the buttons.                                   |
 | `dismissButtonStyle`     | [AepIconStyle](../../../android/public-classes/styles/aepiconstyle.md)                            | The style for the dismiss button.                            |
 | `dismissButtonAlignment` | [Alignment](https://developer.android.com/reference/kotlin/androidx/compose/ui/Alignment) | The alignment for the dismiss button.                        |
 

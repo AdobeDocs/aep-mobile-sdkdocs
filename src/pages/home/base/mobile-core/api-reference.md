@@ -391,7 +391,7 @@ To retrieve data as a JSON string from the SDKs and send this data to your serve
 
 You must call the API below and retrieve identities stored in the SDK, **before** the user opts out.
 
-This API does **not** include the identities stored in the Edge Identity extension. To retrieve the identities from the Edge Identity extension, use [getIdentities](../../edge/identity-for-edge-network/api-reference.md#getidentities).
+This API does **not** include the identities stored in the Edge Identity extension. To retrieve the identities from the Edge Identity extension, use [getIdentities](../../../edge/identity-for-edge-network/api-reference.md#getidentities).
 
 ### Android Java
 
@@ -1039,7 +1039,7 @@ static func resetIdentities()
 
 ## setAdvertisingIdentifier
 
-The advertising ID is preserved between app upgrades, is saved and restored during the standard application backup process, available via [Signals](signals/index.md), and is removed at uninstall.
+The advertising ID is preserved between app upgrades, is saved and restored during the standard application backup process, available via [Signals](signal/index.md), and is removed at uninstall.
 
 For more information about identity in Mobile Core, please read the documentation on the [identity APIs](identity/api-reference.md#setadvertisingidentifier).
 

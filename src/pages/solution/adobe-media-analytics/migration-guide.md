@@ -302,7 +302,7 @@ The Media for Edge Network extension uses the same class names as the Media Anal
 
 Media extension allowed for ad content tracking of `1 second` when setting the `MediaConstants.MediaObjectKey.GRANULAR_AD_TRACKING` key in the media object.
 
-Media for Edge Network extension supports customizable ping intervals. `Ad content` tracking interval can be set in the range `[1-10] seconds`, and `main content` tracking interval can be set in the range `[10-50] seconds`. For more details, refer to the [createTrackerWithConfig API](../../edge/media-for-edge-network/api-reference.md/#createtrackerwithconfig).
+Media for Edge Network extension supports customizable ping intervals. `Ad content` tracking interval can be set in the range `[1-10] seconds`, and `main content` tracking interval can be set in the range `[10-50] seconds`. For more details, refer to the [createTrackerWithConfig API](../../edge/media-for-edge-network/api-reference.md#createtrackerwithconfig).
 
 ### Android Java
 

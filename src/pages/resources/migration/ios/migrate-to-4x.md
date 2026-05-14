@@ -1,6 +1,6 @@
 ---
-title: "Migrate to Adobe Experience Platform 4.x SDKs for iOS"
-description: "This Mobile SDK version for iOS now supports a minimum iOS version of 11.0 and a tvOS version of 11.0. The XCFrameworks included in the GitHub release are ..."
+title: Migrate to Adobe Experience Platform 4.x SDKs for iOS
+description: This Mobile SDK version for iOS now supports a minimum iOS version of 11.0 and a tvOS version of 11.0. The XCFrameworks included in the GitHub release are ...
 ---
 # Migrate to Adobe Experience Platform 4.x SDKs for iOS
 

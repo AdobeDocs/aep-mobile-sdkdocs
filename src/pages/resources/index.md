@@ -1,6 +1,6 @@
 ---
-title: "Resources"
-description: "The following document provides a list of resources for you to better understand how to use Mobile SDK."
+title: Resources
+description: The following document provides a list of resources for you to better understand how to use Mobile SDK.
 ---
 # Resources
 

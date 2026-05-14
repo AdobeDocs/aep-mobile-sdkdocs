@@ -1,6 +1,6 @@
 ---
-title: "Initialize"
-description: "Overview of Initialize"
+title: Initialize
+description: Overview of Initialize
 ---
 
 ### Android Kotlin

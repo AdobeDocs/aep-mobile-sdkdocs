@@ -60,8 +60,8 @@ Remember the following information when you add the Campaign extension to your a
 
 | Extension | Information |
 | :--- | :--- |
-| Campaign Standard | The Campaign Standard extension requires the [Mobile Core](../../home/base/mobile-core/index.md), [Profile](../profile/index.md), [Lifecycle](../../home/base/mobile-core/lifecycle/index.md), and [Signal](../../home/base/mobile-core/signal/index.md) extensions. You should always ensure that you get the latest version of the extensions. |
-| Profile | The Profile extension is required for in-app trigger frequencies to work accurately. For more information, see [Profile](../profile/index.md). |
+| Campaign Standard | The Campaign Standard extension requires the [Mobile Core](../../home/base/mobile-core/index.md), [Profile](../../home/base/profile/index.md), [Lifecycle](../../home/base/mobile-core/lifecycle/index.md), and [Signal](../../home/base/mobile-core/signal/index.md) extensions. You should always ensure that you get the latest version of the extensions. |
+| Profile | The Profile extension is required for in-app trigger frequencies to work accurately. For more information, see [Profile](../../home/base/profile/index.md). |
 | Signal | The Signal extension is required for all postback rules to work. For more information, see [Signal](../../home/base/mobile-core/signal/index.md). |
 | Lifecycle | The Lifecycle extension is required for a profile to be registered in Campaign. In order to do this, you will need to implement the Lifecycle APIs. For more information, please read either the [Lifecycle API (Android)](../../home/base/mobile-core/lifecycle/android.md) or the [Lifecycle API (iOS)](../../home/base/mobile-core/lifecycle/ios.md) documentation. |
 

@@ -48,4 +48,4 @@ The following steps illustrate how to create a sample datastream for a mobile im
 
 Your datastream is ready to be used now. If different settings are required per environment, create new datastreams with the respective configuration settings.
 
-For additional information on datastreams in the Data Collection UI, see the [datastream configuration override guide](../../edge/edge-network/tutorials/datastream-config-override-rules.md).
+For additional information on datastreams in the Data Collection UI, see the [datastream configuration override guide](../../edge/edge-network/tutorials/send-overrides-rules.md).

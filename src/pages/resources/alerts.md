@@ -1,6 +1,6 @@
 ---
-title: "Alerts"
-description: "Overview of Alerts"
+title: Alerts
+description: Overview of Alerts
 ---
 
 \<!-- InlineNestedAlert - Warning for dynamic dependency versions: Android Gradle --\>
@@ -19,7 +19,7 @@ Using dynamic dependency versions is **not** recommended for production apps. Pl
 
 This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the Android mobile extension.
 
-Use [`MobileCore.registerExtensions()`](../../home/base/mobile-core/api-reference.md#registerextensions) API instead.
+Use [`MobileCore.registerExtensions()`](../home/base/mobile-core/api-reference.md#registerextensions) API instead.
 
 \</InlineNestedAlert\>
 

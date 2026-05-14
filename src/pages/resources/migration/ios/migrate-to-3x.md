@@ -1,6 +1,6 @@
 ---
-title: "Migrate to Adobe Experience Platform 3.x SDKs for iOS"
-description: "This Mobile SDK version for iOS supports a minimum iOS version of 10.0 and a tvOS version of 10.0."
+title: Migrate to Adobe Experience Platform 3.x SDKs for iOS
+description: This Mobile SDK version for iOS supports a minimum iOS version of 10.0 and a tvOS version of 10.0.
 ---
 # Migrate to Adobe Experience Platform 3.x SDKs for iOS
 

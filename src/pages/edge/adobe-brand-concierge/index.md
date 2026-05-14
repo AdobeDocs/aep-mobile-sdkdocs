@@ -21,23 +21,23 @@ For more information, see the [official documentation](https://business.adobe.co
 
 Install, register, and integrate the Brand Concierge chat UI in your app:
 
-* **[Implementation guide (Android)](/edge/adobe-brand-concierge/android/implementation-guide/)**
-* **[Implementation guide (iOS)](/edge/adobe-brand-concierge/ios/implementation-guide/)**
+* **[Implementation guide (Android)](/edge/adobe-brand-concierge/android/implementation-guide.md)**
+* **[Implementation guide (iOS)](/edge/adobe-brand-concierge/ios/implementation-guide.md)**
 
 ## API reference
 
 Full parameter documentation for all public APIs.
 
-* **[API reference (Android)](/edge/adobe-brand-concierge/android/api-reference/)**
-* **[API reference (iOS)](/edge/adobe-brand-concierge/ios/api-reference/)**
+* **[API reference (Android)](/edge/adobe-brand-concierge/android/api-reference.md)**
+* **[API reference (iOS)](/edge/adobe-brand-concierge/ios/api-reference.md)**
 
 ## Customize the Concierge Chat UI
 
 Theming and customization (theme JSON, tokens, implementation status).
 
-* **[Style guide (Android)](/edge/adobe-brand-concierge/android/style-guide/)**
-* **[Style guide (iOS)](/edge/adobe-brand-concierge/ios/style-guide/)**
+* **[Style guide (Android)](/edge/adobe-brand-concierge/android/style-guide.md)**
+* **[Style guide (iOS)](/edge/adobe-brand-concierge/ios/style-guide.md)**
 
 ## Version History
 
-* **[Release notes](/edge/adobe-brand-concierge/release-notes/)**
+* **[Release notes](/edge/adobe-brand-concierge/release-notes.md)**

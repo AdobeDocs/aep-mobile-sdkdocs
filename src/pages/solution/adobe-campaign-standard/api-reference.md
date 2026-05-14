@@ -82,13 +82,13 @@ NSString *campaignVersion = [AEPMobileCampaign extensionVersion];
 
 This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the Android mobile extension.
 
-Use [`MobileCore.registerExtensions()`](../../../home/base/mobile-core/api-reference.md#registerextensions) API instead.
+Use [`MobileCore.registerExtensions()`](../../home/base/mobile-core/api-reference.md#registerextensions) API instead.
 
 Registers the Campaign Standard extension with the Mobile Core.
 
 This API has been deprecated as of version 2.0.0. Please use the [Mobile Core registerExtension API](../../home/base/mobile-core/api-reference.md) instead.
 
-This API no longer exists in the Adobe Campaign Standard extension. Instead, the extension should be registered by calling the `registerExtensions` API in the MobileCore. Please see the updated SDK initialization steps at the [migrate to Swift tutorial](../../../resources/migration/ios/migrate-to-3x.md).
+This API no longer exists in the Adobe Campaign Standard extension. Instead, the extension should be registered by calling the `registerExtensions` API in the MobileCore. Please see the updated SDK initialization steps at the [migrate to Swift tutorial](../../resources/migration/ios/migrate-to-3x.md).
 
 ## resetLinkageFields
 

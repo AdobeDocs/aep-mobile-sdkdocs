@@ -1,6 +1,6 @@
 ---
-title: "Upgrade to the Experience Platform SDKs"
-description: "This section contains a checklist that you can use as you plan your upgrade from Adobe Mobile Library (v4) to the Experience Platform SDKs."
+title: Upgrade to the Experience Platform SDKs
+description: This section contains a checklist that you can use as you plan your upgrade from Adobe Mobile Library (v4) to the Experience Platform SDKs.
 ---
 # Upgrade to the Experience Platform SDKs
 

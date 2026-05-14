@@ -30,7 +30,7 @@ Class which implements [AepUITemplateType](../../../android/public-classes/ui-mo
 | `body`       | [AepText](../../../android/public-classes/ui-models/aeptext.md)?           | The body text and display settings.                          |
 | `image`      | [AepImage](../../../android/public-classes/ui-models/aepimage.md)?         | The details of the image to be displayed.                    |
 | `actionUrl`  | String?                            | The URL to be opened when the large image card is clicked.   |
-| `buttons`    | List<[AepButton](../../../android/public-classes/ui-models/aepbutton.md)>? | The details for the large image template buttons.            |
+| `buttons`    | List\<[AepButton](../../../android/public-classes/ui-models/aepbutton.md)\>? | The details for the large image template buttons.            |
 | `dismissBtn` | [AepIcon](../../../android/public-classes/ui-models/aepicon.md)?           | The details for the large image template dismiss button.     |
 
 ## Methods

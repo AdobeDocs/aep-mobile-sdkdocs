@@ -88,7 +88,7 @@ For more details, refer to:
 
 ### Where can I download the SDK?
 
-The Experience Platform SDK is available through [Cocoapods](https://cocoapods.org) and [Gradle](https://gradle.org/), and [Github](https://github.com/Adobe-Marketing-Cloud/acp-sdks/). For more information, please read the [get the SDK tutorial](../getting-started/get-the-sdk.md).
+The Experience Platform SDK is available through [Cocoapods](https://cocoapods.org) and [Gradle](https://gradle.org/), and [Github](https://github.com/Adobe-Marketing-Cloud/acp-sdks/). For more information, please read the [get the SDK tutorial](../home/getting-started/get-the-sdk.md).
 
 ### Can I use both the 4x SDK and the new Experience Platform SDK at the same time?
 

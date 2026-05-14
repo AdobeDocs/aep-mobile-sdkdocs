@@ -730,9 +730,9 @@ Used when `behavior.productCard.cardStyle` is `"productDetail"`.
 
 | CSS Variable | Kotlin Property | Type | Default | Description |
 |--------------|-----------------|------|---------|-------------|
-|| `--cta-button-background-color` | `colors.ctaButton.background` | `String` | `"#EDEDED"` | CTA button background color (hex) |
-|| `--cta-button-text-color` | `colors.ctaButton.text` | `String` | `"#191F1C"` | CTA button label text color (hex) |
-|| `--cta-button-icon-color` | `colors.ctaButton.iconColor` | `String` | `"#161313"` | CTA button icon color (hex) |
+| `--cta-button-background-color` | `colors.ctaButton.background` | `String` | `"#EDEDED"` | CTA button background color (hex) |
+| `--cta-button-text-color` | `colors.ctaButton.text` | `String` | `"#191F1C"` | CTA button label text color (hex) |
+| `--cta-button-icon-color` | `colors.ctaButton.iconColor` | `String` | `"#161313"` | CTA button icon color (hex) |
 
 ### Layout - Input
 

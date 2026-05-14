@@ -19,9 +19,9 @@ This document outlines the integration of Adobe Streaming Media for Edge Network
 
 Before starting, ensure the following:
 
-1. Complete the [Adobe Streaming Media for Edge Network setup](/edge/media-for-edge-network#before-starting) including report suite definition, schema setup, dataset creation, and datastream configuration.
+1. Complete the [Adobe Streaming Media for Edge Network setup](/edge/media-for-edge-network/index.md#before-starting) including report suite definition, schema setup, dataset creation, and datastream configuration.
 2. [Configure the Edge extension](../edge-network/index.md#configure-the-edge-network-extension-in-data-collection-ui) and [Edge Identity extension](../identity-for-edge-network/index.md#configure-the-identity-extension-in-the-data-collection-ui) in the Data Collection UI.
-3. [Configure Media for Edge Network extension in Data Collection Tags](/edge/media-for-edge-network#configure-media-for-edge-network-extension-in-the-data-collection-tags).
+3. [Configure Media for Edge Network extension in Data Collection Tags](/edge/media-for-edge-network/index.md#configure-media-for-edge-network-extension-in-the-data-collection-tags).
 4. Have a working Vega React Native application where you will integrate the SDK.
 
 ## Install the AEP Vega SDK packages

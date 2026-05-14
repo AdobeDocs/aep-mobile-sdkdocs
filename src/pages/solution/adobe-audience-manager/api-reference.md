@@ -167,7 +167,7 @@ Audience.getVisitorProfile { (visitorProfile, error) in
 
 This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the Android mobile extension.
 
-Use [`MobileCore.registerExtensions()`](../../../home/base/mobile-core/api-reference.md#registerextensions) API instead.
+Use [`MobileCore.registerExtensions()`](../../home/base/mobile-core/api-reference.md#registerextensions) API instead.
 
 Registers the Audience Manager extension with the Mobile Core SDK.
 

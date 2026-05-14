@@ -1,6 +1,6 @@
 ---
-title: "Migration guides"
-description: "Learn how to [migrate between different versions of Adobe Experience Platform SDKs for Android](android/index.md)."
+title: Migration guides
+description: Learn how to [migrate between different versions of Adobe Experience Platform SDKs for Android](android/index.md).
 ---
 # Migration guides
 

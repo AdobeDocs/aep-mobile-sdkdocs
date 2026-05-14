@@ -1,6 +1,6 @@
 ---
-title: "Frequently asked questions - Adobe Mobile Library (v4) end-of-support"
-description: "The version 4 SDKs were first released in September 2013 to support mobile app implementations for Adobe Analytics (including Mobile Services), Adobe Audie..."
+title: Frequently asked questions - Adobe Mobile Library (v4) end-of-support
+description: The version 4 SDKs were first released in September 2013 to support mobile app implementations for Adobe Analytics (including Mobile Services), Adobe Audie...
 ---
 # Frequently asked questions - Adobe Mobile Library (v4) end-of-support
 
