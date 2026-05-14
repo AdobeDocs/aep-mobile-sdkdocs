@@ -4,7 +4,7 @@
 - pages:
     - Versions
         - [Latest version](/home/index.md)
-        - [Previous versions](/previous-versions.md)
+        - [Previous versions](https://developer.adobe.com/client-sdks/previous-versions/documentation/)
     - [Home](/home/index.md)
     - [Edge Network extensions](/edge/index.md)
     - [Solution-specific extensions](/solution/index.md)
