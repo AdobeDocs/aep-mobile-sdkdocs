@@ -85,58 +85,11 @@ The user has entered the radius for POI A:
 * **Last Entered POI** is set to POI A.  
 * **Last Exited POI** remains unchanged as none.  
 
-![](assets/behavior-reference/non-intersecting-enter-a.svg)
-
-#### Exit POI A
-
-The user has exited the radius for POI A:  
-
-* **Current POI** is set to none.  
-* **Last Entered POI** remains unchanged as POI A.  
-* **Last Exited POI** is set to POI A.  
-
-![](assets/behavior-reference/non-intersecting-exit-a.svg)
-
-#### Enter POI B
-
-The user has entered the radius for POI B:  
-
-* **Current POI** is set to POI B.  
-* **Last Entered POI** is set to POI B.  
-* **Last Exited POI** remains unchanged as POI A.  
-
-![](assets/behavior-reference/non-intersecting-enter-b.svg)
-
-### Scenario: Intersecting points
-
-#### Enter POI A
-
-The user has entered the radius for POI A:  
-
-* **Current POI** is set to POI A.  
-* **Last Entered POI** is set to POI A.  
-* **Last Exited POI** remains unchanged as none.  
-
-![](assets/behavior-reference/intersecting-enter-a.svg)
-
-#### Enter POI B
-
-The user has entered the radius for POI B:  
-
-* **Current POI** remains unchanged as POI A.  
-  * This illustrates how library rankings influence the Current POI when multiple POIs are entered. Although POI B was most recently entered, POI A remains the Current POI due to its higher library ranking. Refer to [Current POI](#current-poi) for the complete list of criteria.  
-* **Last Entered POI** is set to POI B.  
-* **Last Exited POI** remains unchanged as none.  
-
-![](assets/behavior-reference/intersecting-enter-b.svg)
-
-#### Exit POI A
-
-The user has exited the radius for POI A:  
-
-* **Current POI** is set to POI B.  
-  * POI A is removed from the entered POIs list, while POI B remains. Notice that Current POI updates to POI B upon receiving an exit signal.  
-* **Last entered POI** remains unchanged and is set to POI B.  
-* **Last exited POI** is set to POI A.
-
-![](assets/behavior-reference/intersecting-exit-a.svg)
+\<!-- 
+Note for diagram maintainers:
+The original draw.io source file which contains all diagram pages is also included with the assets to easily modify as needed and export in the desired format. 
+- Exported as SVG with options:
+- Size: Diagram
+- Transparent background
+- Appearance: Light (Dark mode is not currently supported, so dynamically switching SVGs perform worse.)
+ --\>
