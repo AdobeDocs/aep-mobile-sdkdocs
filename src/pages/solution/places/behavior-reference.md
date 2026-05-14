@@ -15,11 +15,11 @@ The Places extension provides three different point of interest (POI) states tha
 
 For definitions of key terms, see [Places Terminology](https://experienceleague.adobe.com/en/docs/places/using/home#terminology).
 
-#### Library rank
+### Library rank
 
 A **library rank**, also referred to as **weight**, is the priority assigned to a library when multiple libraries are in use. A smaller rank value (for example, 1) indicates a higher priority, while a larger rank value (for example, 4) indicates a lower priority. This ranking is one of the factors used to determine which library’s points of interest (POIs) take precedence when overlaps occur.
 
-#### Membership time to live
+### Membership time to live
 
 **Membership time to live** specifies how long POI states (Current POI, Last Entered POI, Last Exited POI) remain valid. This duration applies globally to all POIs and has a default value of one hour. The duration is refreshed in the following cases:
 
@@ -85,6 +85,7 @@ The user has entered the radius for POI A:
 * **Last Entered POI** is set to POI A.  
 * **Last Exited POI** remains unchanged as none.  
 
+![Places states after entering POI A in a non-intersecting scenario](./assets/behavior-reference/non-intersecting-enter-a.svg)
 
 #### Exit POI A
 
@@ -94,6 +95,7 @@ The user has exited the radius for POI A:
 * **Last Entered POI** remains unchanged as POI A.  
 * **Last Exited POI** is set to POI A.  
 
+![Places states after exiting POI A in a non-intersecting scenario](./assets/behavior-reference/non-intersecting-exit-a.svg)
 
 #### Enter POI B
 
@@ -103,6 +105,7 @@ The user has entered the radius for POI B:
 * **Last Entered POI** is set to POI B.  
 * **Last Exited POI** remains unchanged as POI A.  
 
+![Places states after entering POI B in a non-intersecting scenario](./assets/behavior-reference/non-intersecting-enter-b.svg)
 
 ### Scenario: Intersecting points
 
@@ -114,6 +117,7 @@ The user has entered the radius for POI A:
 * **Last Entered POI** is set to POI A.  
 * **Last Exited POI** remains unchanged as none.  
 
+![Places states after entering POI A in an intersecting scenario](./assets/behavior-reference/intersecting-enter-a.svg)
 
 #### Enter POI B
 
@@ -124,6 +128,7 @@ The user has entered the radius for POI B:
 * **Last Entered POI** is set to POI B.  
 * **Last Exited POI** remains unchanged as none.  
 
+![Places states after entering POI B in an intersecting scenario](./assets/behavior-reference/intersecting-enter-b.svg)
 
 #### Exit POI A
 
@@ -133,4 +138,6 @@ The user has exited the radius for POI A:
   * POI A is removed from the entered POIs list, while POI B remains. Notice that Current POI updates to POI B upon receiving an exit signal.  
 * **Last entered POI** remains unchanged and is set to POI B.  
 * **Last exited POI** is set to POI A.
+
+![Places states after exiting POI A in an intersecting scenario](./assets/behavior-reference/intersecting-exit-a.svg)
 
