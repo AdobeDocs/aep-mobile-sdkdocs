@@ -145,6 +145,6 @@ The user has exited the radius for POI A:
 * **Current POI** is set to POI B.  
   * POI A is removed from the entered POIs list, while POI B remains. Notice that Current POI updates to POI B upon receiving an exit signal.  
 * **Last entered POI** remains unchanged and is set to POI B.  
-* **Last exited POI** is set to POI A.  
+* **Last exited POI** is set to POI A.
 
 ![](./assets/behavior-reference/intersecting-exit-a.svg)
