@@ -7,6 +7,12 @@ Keywords:
 
 # Release notes
 
+## May 19, 2026
+
+### iOS Messaging 5.14.0
+
+
+
 ## April 21, 2026
 
 ### React Native Messaging 7.4.0
