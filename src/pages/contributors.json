@@ -1,7 +1,7 @@
 {
-  "total": 388,
+  "total": 333,
   "offset": 0,
-  "limit": 388,
+  "limit": 333,
   "data": [
     {
       "page": "/",
@@ -17,7 +17,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/14/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/",
@@ -238,80 +238,35 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/api-usage",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/api-usage",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/aepui",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/aepui",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/content-provider/aepuicontentprovider",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/content-provider/aepuicontentprovider",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/content-provider/contentcarduiprovider",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/content-provider/contentcarduiprovider",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/contentcardmapper",
@@ -321,29 +276,11 @@
       "lastUpdated": "5/12/2026"
     },
     {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/contentcardmapper",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/contentcarduieventlistener",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/contentcarduieventlistener",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/observers/aepuieventobserver",
@@ -353,29 +290,11 @@
       "lastUpdated": "5/12/2026"
     },
     {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/observers/aepuieventobserver",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/observers/contentcardeventobserver",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/observers/contentcardeventobserver",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/aepcarduistate",
@@ -385,59 +304,25 @@
       "lastUpdated": "5/12/2026"
     },
     {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/state/aepcarduistate",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/imageonlycarduistate",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/state/imageonlycarduistate",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/largeimagecarduistate",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/state/largeimagecarduistate",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/smallimagecarduistate",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/state/smallimagecarduistate",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepbuttonstyle",
@@ -447,27 +332,11 @@
       "lastUpdated": "5/12/2026"
     },
     {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aepbuttonstyle",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepcardstyle",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
       "lastUpdated": "5/12/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aepcardstyle",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepcolumnstyle",
@@ -477,27 +346,11 @@
       "lastUpdated": "5/12/2026"
     },
     {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aepcolumnstyle",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepiconstyle",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
       "lastUpdated": "5/12/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aepiconstyle",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepimagestyle",
@@ -507,27 +360,11 @@
       "lastUpdated": "5/12/2026"
     },
     {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aepimagestyle",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aeprowstyle",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
       "lastUpdated": "5/12/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aeprowstyle",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aeptextstyle",
@@ -537,73 +374,32 @@
       "lastUpdated": "5/12/2026"
     },
     {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aeptextstyle",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/imageonlyuistyle",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/imageonlyuistyle",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/largeimageuistyle",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/14/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/largeimageuistyle",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
-      ],
-      "lastUpdated": "5/14/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/smallimageuistyle",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/14/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/smallimageuistyle",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/14/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepbutton",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepbutton",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepcolor",
@@ -613,27 +409,11 @@
       "lastUpdated": "5/12/2026"
     },
     {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepcolor",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepicon",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
       "lastUpdated": "5/12/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepicon",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepimage",
@@ -643,27 +423,11 @@
       "lastUpdated": "5/12/2026"
     },
     {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepimage",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aeptext",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
       "lastUpdated": "5/12/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aeptext",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepuitemplate",
@@ -673,74 +437,32 @@
       "lastUpdated": "5/12/2026"
     },
     {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepuitemplate",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepuitemplatetype",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepuitemplatetype",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/imageonlytemplate",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/imageonlytemplate",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/largeimagetemplate",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/14/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/largeimagetemplate",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
-      ],
-      "lastUpdated": "5/14/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/smallimagetemplate",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/14/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/smallimagetemplate",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/14/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/uiaction",
@@ -750,91 +472,46 @@
       "lastUpdated": "5/12/2026"
     },
     {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/uiaction",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/uievent",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/uievent",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/tutorial/customizing-content-card-templates",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/tutorial/customizing-content-card-templates",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/tutorial/displaying-content-cards",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/tutorial/displaying-content-cards",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/tutorial/listening-content-card-events",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/content-card-ui/Android/tutorial/listening-content-card-events",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/api-usage",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/public-classes/contentcardcustomizing",
@@ -862,70 +539,70 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/templates/imageonly-template",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/templates/largeimage-template",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/templates/smallimage-template",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/tutorial/customizing-content-card-templates",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/tutorial/displaying-content-cards",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/tutorial/listening-content-card-events",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aepbutton",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aepdismissbutton",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aepimage",
@@ -1035,45 +712,21 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/inbox-ui/Android/",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/android/api-usage",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/inbox-ui/Android/api-usage",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/aepinbox",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/aepinbox",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/aepuistyle",
@@ -1083,42 +736,18 @@
       "lastUpdated": "5/13/2026"
     },
     {
-      "page": "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/aepuistyle",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/content-provider/aepinboxcontentprovider",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/content-provider/aepinboxcontentprovider",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/content-provider/messaginginboxprovider",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/content-provider/messaginginboxprovider",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/inboxtemplate",
@@ -1128,72 +757,32 @@
       "lastUpdated": "5/13/2026"
     },
     {
-      "page": "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/inboxtemplate",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/inboxuistate",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/inboxuistate",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/observers/aepinboxeventobserver",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/observers/aepinboxeventobserver",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/observers/inboxevent",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/observers/inboxevent",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/observers/inboxeventobserver",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/observers/inboxeventobserver",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/styles/aeplazycolumnstyle",
@@ -1203,14 +792,6 @@
       "lastUpdated": "5/12/2026"
     },
     {
-      "page": "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/styles/aeplazycolumnstyle",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/styles/aeplazyrowstyle",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
@@ -1218,55 +799,23 @@
       "lastUpdated": "5/12/2026"
     },
     {
-      "page": "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/styles/aeplazyrowstyle",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/styles/inboxuistyle",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/14/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/styles/inboxuistyle",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
-      ],
-      "lastUpdated": "5/14/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/android/tutorial/customizing-inbox",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/inbox-ui/Android/tutorial/customizing-inbox",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/android/tutorial/displaying-inbox",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
-      "page": "/edge/adobe-journey-optimizer/inbox-ui/Android/tutorial/displaying-inbox",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
       ],
       "lastUpdated": "5/13/2026"
     },
@@ -1278,26 +827,18 @@
       "lastUpdated": "5/13/2026"
     },
     {
-      "page": "/edge/adobe-journey-optimizer/inbox-ui/Android/tutorial/listening-inbox-events",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/63024083?v=4"
-      ],
-      "lastUpdated": "5/13/2026"
-    },
-    {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/api-usage",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/emptystatessettings",
@@ -1325,14 +866,14 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/layoutsettings",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/unreadbackgroundsettings",
@@ -1346,70 +887,70 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/unreadindicatorsettings",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxerror",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxeventlistening",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxschemadata",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxstate",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxui",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/tutorial/customizing-inbox",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/tutorial/displaying-inbox",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/tutorial/listening-inbox-events",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/live-activities/",
@@ -1624,7 +1165,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11319121?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/push-notification/android/push-to-iam",
@@ -1641,7 +1182,7 @@
         "https://avatars.githubusercontent.com/u/11319121?v=4",
         "https://avatars.githubusercontent.com/u/6742873?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/push-notification/ios/display-rich-notifications",
@@ -1664,7 +1205,7 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/63024083?v=4"
       ],
-      "lastUpdated": "5/14/2026"
+      "lastUpdated": "5/21/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/push-notification/push-payload",
