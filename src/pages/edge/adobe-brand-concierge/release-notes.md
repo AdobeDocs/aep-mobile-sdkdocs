@@ -12,7 +12,7 @@ keywords:
 
 ### iOS Brand Concierge 5.5.0
 
-* Added comprehensive theming support for the feedback dialog, including background, text, checkbox, drag handle, and button styling. See the new feedback dialog rows in the iOS [style guide](./ios/style-guide.md).
+* Added comprehensive theming support for the feedback dialog, including background, text, checkbox, drag handle, and button styling. See the new feedback dialog rows in the iOS [style guide](ios/style-guide.md).
 * Added behavior flags to independently control the visibility of the X close and Cancel buttons in the feedback dialog.
 * Extended text alignment tokens to accept additional value aliases.
 * Improved markdown paragraph rendering to correctly preserve paragraph boundaries when paragraphs begin with inline formatting.
@@ -25,7 +25,7 @@ keywords:
 
 ### Android Brand Concierge 3.4.0
 
-* Added comprehensive theming support for the feedback dialog, including background, text, checkbox, drag handle, and button styling. See the new feedback dialog rows in the Android [style guide](./android/style-guide.md).
+* Added comprehensive theming support for the feedback dialog, including background, text, checkbox, drag handle, and button styling. See the new feedback dialog rows in the Android [style guide](android/style-guide.md).
 * Added behavior flags to independently control the visibility of the X close and Cancel buttons in the feedback dialog.
 * Extended text alignment tokens to accept additional value aliases.
 * Improved feedback dialog layout consistency between modal card and bottom sheet display modes.

@@ -1,3 +1,7 @@
+---
+title: Places Service event forwarding to Adobe Experience Platform
+description: 1. Enriches Adobe Journey Optimizer's ability to engage with users based on location entry and exit triggers. 2. Allows creating audiences based on points ...
+---
 # Places Service event forwarding to Adobe Experience Platform
 
 ## Capabilities
@@ -45,7 +49,7 @@ Upgrade the Mobile SDK to the following Places extension version
 
 Also mask the **devices** and **environment** fields if they are not relevant to your application.
 
-![Manage Places Context Text Fields](./assets/index/mask-everything-except-poiId.png)
+![Manage Places Context Text Fields](./assets/index/mask-everything-except-poi-id.png)
 
 * Save your schema and
 select confirm. Your schema's **placeContext** field-group should look like:

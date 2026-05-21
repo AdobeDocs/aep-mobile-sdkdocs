@@ -8,13 +8,11 @@ keywords:
 - Mobile Core
 ---
 
-import Tabs from './tabs/api-reference.md'
-
 # Configuration API reference
 
 ## clearUpdatedConfiguration
 
-You can clear any programmatic updates made to the configuration via the `clearUpdatedConfiguration` API. This will clear programmatic updates to configuration made via the [updateConfiguration](#updateconfiguration) API. It will also clear any updates to the `MobilePrivacyStatus`(Android)/ `PrivacyStatus`(iOS)  made via [setPrivacyStatus](../../../../resources/privacy-and-gdpr.md/#setprivacystatus).
+You can clear any programmatic updates made to the configuration via the `clearUpdatedConfiguration` API. This will clear programmatic updates to configuration made via the [updateConfiguration](#updateconfiguration) API. It will also clear any updates to the `MobilePrivacyStatus`(Android)/ `PrivacyStatus`(iOS)  made via [setPrivacyStatus](../../../../resources/privacy-and-gdpr.md#setprivacystatus).
 
 Here are some scenarios based on the order of calls:
 
@@ -38,20 +36,58 @@ Result: You end up with the initial configuration set via `configureWithFileInPa
 Result: In this example, the configuration will be the most recently updated configuration and will not have any keys from the first update unless they are included in the most recent update.
 
 1. [configureWithAppId](#configurewithappid) or [configureWithFileInPath](#configurewithfileinpath) or [configureWithFileInAssets](#configurewithfileinassets)
-2. [setPrivacyStatus](../../../../resources/privacy-and-gdpr.md/#setprivacystatus)
+2. [setPrivacyStatus](../../../../resources/privacy-and-gdpr.md#setprivacystatus)
 3. clearUpdatedConfiguration
 
 Result: In this example, the configuration will have the initial `MobilePrivacyStatus`(Android)/ `PrivacyStatus`(iOS) set via [configureWithAppId](#configurewithappid) or [configureWithFileInPath](#configurewithfileinpath) or [configureWithFileInAssets](#configurewithfileinassets).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&api=clear-updated-configuration"/>
+#### Syntax
 
-iOS
+```java
+public static void clearUpdatedConfiguration();
+```
 
-<Tabs query="platform=ios&api=clear-updated-configuration"/>
+#### Example
+
+```java
+MobileCore.clearUpdatedConfiguration();
+```
+
+### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+static func clearUpdatedConfiguration()
+```
+
+#### Example
+
+```swift
+MobileCore.clearUpdatedConfiguration()
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objectivec
++ (void) clearUpdatedConfiguration(); 
+```
+
+#### Example
+
+```objectivec
+[AEPMobileCore clearUpdatedConfiguration];
+```
 
 ## configureWithAppID
 
@@ -67,15 +103,53 @@ When you configure a mobile property, a unique environment ID is generated that 
 
 As best practice, you should configure a mobile property in the Data Collection UI and use environment IDs to configure your application. Follow the steps in the tutorial on [setting up a mobile property](../../../getting-started/create-a-mobile-property.md) if you need to create a new Experience Platform App.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&api=configure-with-app-id"/>
+#### Syntax
 
-iOS
+```java
+public static void configureWithAppID(@NonNull final String appId);
+```
 
-<Tabs query="platform=ios&api=configure-with-app-id"/>
+#### Example
+
+```java
+MobileCore.configureWithAppId("1423ae38-8385-8963-8693-28375403491d");
+```
+
+### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+ static func configureWith(appId: String)
+```
+
+#### Example
+
+```swift
+ MobileCore.configureWith(appId: "1423ae38-8385-8963-8693-28375403491d")
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objectivec
++ (void) configureWithAppId: (NSString* appId);
+```
+
+#### Example
+
+```objectivec
+ [AEPMobileCore configureWithAppId: @"1423ae38-8385-8963-8693-28375403491d"];
+```
 
 ## configureWithFileInAssets
 
@@ -89,11 +163,21 @@ You can use this API to load the configuration from the JSON configuration file 
 
 This will replace any configuration previously loaded during app launch or with the [configureWithAppID](#configurewithappid) API.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&api=configure-with-file-in-assets"/>
+#### Syntax
+
+```java
+public static void configureWithFileInAssets(@NonNull final String fileName);
+```
+
+#### Example
+
+```java
+MobileCore.configureWithFileInAssets("exampleJSONfile.json");
+```
 
 ## configureWithFileInPath
 
@@ -105,15 +189,55 @@ This will replace any configuration previously loaded during app launch or with 
 
 To pass in a bundled path and file name:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&api=configure-with-file-in-path"/>
+#### Syntax
 
-iOS
+```java
+public static void configureWithFileInPath(@NonNull final String filePath);
+```
 
-<Tabs query="platform=ios&api=configure-with-file-in-path"/>
+#### Example
+
+```java
+MobileCore.configureWithFileInPath("absolute/path/to/exampleJSONfile.json");
+```
+
+### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+ static func configureWith(filePath: String)
+```
+
+#### Example
+
+```swift
+ let filePath = Bundle.main.path(forResource: "ExampleJSONFile", ofType: "json")
+ MobileCore.configureWith(filePath: filePath)
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objectivec
++ (void) configureWithFileInPath: (NSString* __nullable) filepath;
+```
+
+#### Example
+
+```objectivec
+ NSString *filePath = [[NSBundle mainBundle] pathForResource:@"ExampleJSONFile" ofType:@"json"];
+ [AEPMobileCore configureWithFilePath:filePath];
+```
 
 ## extensionVersion
 
@@ -121,23 +245,23 @@ The `extensionVersion()` API returns the version of the Configuration extension.
 
 To get the version of the Configuration extension, use the following code sample:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+```java
+String coreExtensionVersion = MobileCore.extensionVersion();
+```
 
-<Tabs query="platform=android&api=extension-version"/>
+### iOS Swift
 
-iOS
+```swift
+let version = MobileCore.extensionVersion
+```
 
-<Tabs query="platform=ios&api=extension-version"/>
+### iOS Objective-C
 
-<!--- React Native
-
-<Tabs query="platform=react-native&api=extension-version"/>
-
-Flutter
-
-<Tabs query="platform=flutter&api=extension-version"/> --->
+```objectivec
+NSString *version = [AEPMobileCore extensionVersion];
+```
 
 ## updateConfiguration
 
@@ -149,22 +273,57 @@ Keys that are not found on the current configuration are added when this method 
 
 <InlineAlert variant="warning" slots="text"/>
 
-Do not use this API to update the `build.environment` key or any key with an environment prefix, because it can lead to unexpected behaviors. For more information, read [Environment-aware configuration properties](/src/pages/home/base/mobile-core/configuration/index.md#environment-aware-configuration-properties).
+Do not use this API to update the `build.environment` key or any key with an environment prefix, because it can lead to unexpected behaviors. For more information, read [Environment-aware configuration properties](index.md#environment-aware-configuration-properties).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&api=update-configuration"/>
+#### Syntax
 
-iOS
+```java
+public static void updateConfiguration(@NonNull final Map configMap);
+```
 
-<Tabs query="platform=ios&api=update-configuration"/>
+#### Example
 
-<!--- React Native
+```java
+HashMap<String, Object> data = new HashMap<String, Object>();
+data.put("global.privacy", "optedout");
+MobileCore.updateConfiguration(data);
+```
 
-<Tabs query="platform=react-native&api=update-configuration"/>
+### iOS Swift
 
-Flutter
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=flutter&api=update-configuration"/> --->
+#### Syntax
+
+```swift
+@objc(updateConfiguration:)
+static func updateConfigurationWith(configDict: [String: Any])
+```
+
+#### Example
+
+```swift
+ let updatedConfig = ["global.privacy":"optedout"]
+ MobileCore.updateConfigurationWith(configDict: updatedConfig)
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objectivec
+ + (void) updateConfiguration: (NSDictionary* __nullable) config;
+```
+
+#### Example
+
+```objectivec
+ NSDictionary *updatedConfig = @{@"global.privacy":@"optedout"};
+ [AEPMobileCore updateConfiguration:updatedConfig];
+```

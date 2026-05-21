@@ -7,8 +7,6 @@ keywords:
 - Tutorial
 ---
 
-import Tabs from './tabs/track-events.md'
-
 # Track events
 
 The SDK provides three event tracking APIs to log events for reporting, segmentation, and various other data collection use cases:
@@ -36,29 +34,70 @@ Additionally, you'll need to add the `Environment Details` field group and creat
 
 ### Create an Experience Event
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Java
 
-Android
+```java
+Map<String, Object> reviewXdmData = new HashMap<>();
+reviewXdmData.put("productSku", "demo123");
+reviewXdmData.put("rating", 5);
+reviewXdmData.put("reviewText", "I love this demo!");
+reviewXdmData.put("reviewerId", "Anonymous user");
 
-<Tabs query="platform=android&task=create"/>
+Map<String, Object> xdmData = new HashMap<>();
+xdmData.put("eventType", "MyFirstXDMExperienceEvent");
+xdmData.put(_yourTenantId, reviewXdmData);
 
-iOS
+ExperienceEvent experienceEvent = new ExperienceEvent.Builder()
+                .setXdmSchema(xdmData)
+                .build();
+```
 
-<Tabs query="platform=ios&task=create"/>
+#### iOS Swift
+
+```swift
+var xdmData : [String: Any] = [:]
+xdmData["eventType"] = "MyFirstXDMExperienceEvent"
+xdmData[_yourTenantId] = ["productSku": "demo123",
+                          "rating": 5,
+                          "reviewText": "I love this demo!",
+                          "reviewerId": "Anonymous user"]
+let experienceEvent = ExperienceEvent(xdm: xdmData)
+```
+
+#### iOS Objective-C
+
+```objc
+NSDictionary<NSString*, NSObject*>* xdmData;
+[xdmData setValue:@"MyFirstXDMExperienceEvent" forKey:@"eventType"];
+[xdmData setValue:@{@"productSku": @"demo123",
+                    @"rating": @5,
+                    @"reviewText": @"I love this demo!",
+                    @"reviewerId": @"Anonymous user"}
+                      forKey:_yourTenantId];
+AEPExperienceEvent *experienceEvent = [[AEPExperienceEvent alloc] initWithXdm:xdmData data:nil datasetIdentifier:nil];
+```
 
 ### Send the Experience Event to Edge Network
 
 Use the Adobe Experience Platform Edge Mobile Extension to send the Experience Event created in the previous step.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Java
 
-Android
+```java
+Edge.sendEvent(experienceEvent, null);
+```
 
-<Tabs query="platform=android&task=send"/>
+#### iOS Swift
 
-iOS
+```swift
+Edge.sendEvent(experienceEvent: experienceEvent)
+```
 
-<Tabs query="platform=ios&task=send"/>
+#### iOS Objective-C
+
+```objc
+[AEPMobileEdge sendExperienceEvent:event completion:nil];
+```
 
 ## Track user actions (for Adobe Analytics)
 
@@ -70,69 +109,113 @@ Actions are events that occur in your app. Use this API to track and measure an 
 
 You must call this API when an event that you want to track occurs. In addition to the action name, you can send additional context data with each track action call.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&task=track-action"/>
+#### Syntax
 
-iOS
+```java
+public static void trackAction(final String action, final Map<String, String> contextData)
+```
 
-<Tabs query="platform=ios&task=track-action"/>
+#### Example
 
-<!-- React Native
+```java
+Map<String, String> additionalContextData = new HashMap<String, String>();
+additionalContextData.put("customKey", "value");
+MobileCore.trackAction("loginClicked", additionalContextData);
+```
 
-<Tabs query="platform=react-native&task=track-action"/> -->
+### iOS Swift
 
-<!-- Flutter
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=flutter&task=track-action"/> -->
+#### Syntax
 
-<!-- Cordova
+```swift
+static func track(action: String?, data: [String: Any]?)
+```
 
-<Tabs query="platform=cordova&task=track-action"/>
+#### Example
 
-Unity
+```swift
+MobileCore.track(action: "actionName", data: ["key": "value"])
+```
 
-<Tabs query="platform=unity&task=track-action"/>
+### iOS Objective-C
 
-Xamarin
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=xamarin&task=track-action"/> -->
+#### Syntax
+
+```swift
+@objc(trackAction:data:)
+static func track(action: String?, data: [String: Any]?)
+```
+
+#### Example
+
+```objectivec
+[AEPMobileCore trackAction:@"action name" data:@{@"key": @"value"}];
+```
 
 ## Track app states and screens (for Adobe Analytics)
 
 States represent screens or views in your app. The `trackState` method is called every time a new state is displayed in your application. For example, this method would be called when a user navigates from the home page to the news feed. This method also sends an Adobe Analytics state-tracking hit with optional context data.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+On Android, `trackState` is typically called each time a new activity is loaded.
 
-Android
+### Android Java
 
-<Tabs query="platform=android&task=track-state"/>
+<CodeBlock slots="heading, code" repeat="2" />
 
-iOS
+#### Syntax
 
-<Tabs query="platform=ios&task=track-state"/>
+```java
+public static void trackState(final String state, final Map<String, String> contextData)
+```
 
-<!-- React Native
+#### Example
 
-<Tabs query="platform=react-native&task=track-state"/> -->
+```java
+Map<String, String> additionalContextData = new HashMap<String, String>();         
+additionalContextData.put("customKey", "value");         
+MobileCore.trackState("homePage", additionalContextData);
+```
 
-<!-- Flutter
+### iOS Swift
 
-<Tabs query="platform=flutter&task=track-state"/> -->
+<CodeBlock slots="heading, code" repeat="2" />
 
-<!-- Cordova
+#### Syntax
 
-<Tabs query="platform=cordova&task=track-state"/>
+```swift
+static func track(state: String?, data: [String: Any]?) 
+```
 
-Unity
+#### Example
 
-<Tabs query="platform=unity&task=track-state"/>
+```swift
+MobileCore.track(state: "state name", data: ["key": "value"])
+```
 
-Xamarin
+### iOS Objective-C
 
-<Tabs query="platform=xamarin&task=track-state"/> -->
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+@objc(trackState:data:)
+static func track(state: String?, data: [String: Any]?) 
+```
+
+#### Example
+
+```objectivec
+[AEPMobileCore trackState:@"state name" data:@{@"key": @"value"}];
+```
 
 For more information, see the [Mobile Core API Reference](../base/mobile-core/api-reference.md).
 

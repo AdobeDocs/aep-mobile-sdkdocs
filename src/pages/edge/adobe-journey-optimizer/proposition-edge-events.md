@@ -24,7 +24,7 @@ The following XDM event types are used in proposition tracking:
 | `decisioning.propositionTrigger` | Client-side criteria have been met to display the proposition to the user. |
 | `personalization.request` | The client is making a request to Adobe servers for propositions (including in-app messages, content cards, and code-based experiences). |
 
-The contents of XDM data for these events vary, and are derived based on the provided [MessagingEdgeEventType](./public-classes/messaging-edge-event-type.md) enum value and, in some cases, additional parameters provided by the user or application developer.
+The contents of XDM data for these events vary, and are derived based on the provided [MessagingEdgeEventType](public-classes/messaging-edge-event-type.md) enum value and, in some cases, additional parameters provided by the user or application developer.
 
 ## Sample personalization requests
 
@@ -308,7 +308,7 @@ Two full screen in-app messages were created with identical triggering criteria.
 
 #### Use case - app developer suppression
 
-An in-app message was created to show during app startup. The app user is performing a time-sensitive onboarding workflow during app startup. The application developer has implemented a [`MessagingDelegate`](./in-app-message/tutorials/messaging-delegate.md), and decided to not show the in-app message for fear of disrupting the user. The message display is suppressed, and the SDK will emit an event similar to the following:
+An in-app message was created to show during app startup. The app user is performing a time-sensitive onboarding workflow during app startup. The application developer has implemented a [`MessagingDelegate`](in-app-message/tutorials/messaging-delegate.md), and decided to not show the in-app message for fear of disrupting the user. The message display is suppressed, and the SDK will emit an event similar to the following:
 
 ```json
 {

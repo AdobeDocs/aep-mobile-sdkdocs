@@ -11,8 +11,6 @@ keywords:
 - Key value pairs
 ---
 
-import Tabs from './tabs/messaging-metadata.md'
-
 # Use custom metadata with in-app messages
 
 You can add and retrieve custom metadata in an in-app message payload by completing the following steps:
@@ -21,7 +19,7 @@ You can add and retrieve custom metadata in an in-app message payload by complet
 * [Implement and assign a `PresentationDelegate`/`MessagingDelegate`](#implement-and-assign-a-presentationdelegate-messagingdelegate)
 * [Retrieve custom metadata from the Message object](#retrieve-custom-metadata-from-the-message-object)
 
-<InlineAlert variant="info" slots="header, text1, text2"/>
+<InlineAlert variant="info" slots="text1, text2, text3"/>
 
 Available since
 
@@ -40,18 +38,69 @@ When authoring an in-app message in AJO, from the **Content** tab, under **Messa
 
 To retrieve custom metadata from a `Message` object, you will first need to implement and set a `PresentationDelegate` (for Android SDK) or `MessagingDelegate` (for iOS SDK).
 
-Please read the [tutorial](./messaging-delegate.md) for more detailed instructions on implementing and using a PresentationDelegate/MessagingDelegate.
+Please read the [tutorial](messaging-delegate.md) for more detailed instructions on implementing and using a PresentationDelegate/MessagingDelegate.
 
 ## Retrieve custom metadata from the Message object
 
 From within the `PresentationDelegate` or `MessagingDelegate`, call `Message.getMetadata()` or `Message.metadata` after getting an instance of the `Message` object.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
-
 Android 3.x
 
-<Tabs query="platform=android3x&function=metadata"/>
+The following example shows retrieving custom metadata using the `Message.getMetadata()` API. The example uses the `canShow` method of the `PresentationDelegate`, however you may retrieve the custom metadata anywhere within the delegate where the `Message` object is available.
 
-iOS
+### Android 3.x Kotlin
 
-<Tabs query="platform=ios&function=metadata"/>
+```kotlin
+var currentMessagePresentable: Presentable<InAppMessage>? = null
+
+override fun canShow(presentable: Presentable<*>): Boolean {
+  if (presentable.getPresentation() !is InAppMessage) {
+    return
+  }
+  currentMessagePresentable = presentable as Presentable<InAppMessage>
+
+  // Get the Message object
+  val message = MessagingUtils.getMessageForPresentable(currentMessagePresentable)
+  // Retrieve the custom metadata as type Map<String, Any>
+  val metadata = message?.metadata
+}
+```
+
+### Android 3.x Java
+
+```java
+Presentable<InAppMessage> currentMessagePresentable = null;
+
+@Override
+public void canShow(Presentable<?> presentable) {
+    if (!(presentable.getPresentation() instanceof InAppMessage)) {
+      return;
+    }
+    currentMessagePresentable = (Presentable<InAppMessage>) presentable;
+
+    // Get the Message object
+    Message message = MessagingUtils.getMessageForPresentable(currentMessagePresentable);
+
+    // Retrieve the custom metadata
+    if (message != null) {
+        Map<String, Object> metadata = message.getMetadata();
+    }
+}
+```
+
+The following example shows retrieving custom metadata using the `Message.metadata` API. The example uses the `shouldShowMessage` method of the `MessagingDelegate`, however you may retrieve the custom metadata anywhere within the delegate where the `Message` object is available.
+
+### iOS Swift
+
+```swift
+func shouldShowMessage(message: Showable) -> Bool {    
+    let fullscreenMessage = message as? FullscreenMessage
+    let message = fullscreenMessage?.parent
+
+    // Retrieve the custom metadata
+    let metadata = message?.metadata
+
+    return true
+}
+```
+

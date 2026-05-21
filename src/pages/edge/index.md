@@ -11,11 +11,11 @@ Edge extensions are extensions that you can use with the Mobile SDKs that are bu
 
 ## Extensions
 
-* [Adobe Brand Concierge](./adobe-brand-concierge/index.md)
-* [Adobe Experience Platform Edge Network](./edge-network/index.md)
-* [Adobe Journey Optimizer](./adobe-journey-optimizer/index.md)
-* [Offer Decisioning and Target](./adobe-journey-optimizer-decisioning/index.md)
-* [Adobe Streaming Media for Edge Network](./media-for-edge-network/index.md)
-* [Consent for Edge Network](./consent-for-edge-network/index.md)
-* [Identity for Edge Network](./identity-for-edge-network/index.md)
-* [Lifecycle for Edge Network](./lifecycle-for-edge-network/index.md)
+* [Adobe Brand Concierge](adobe-brand-concierge/index.md)
+* [Adobe Experience Platform Edge Network](edge-network/index.md)
+* [Adobe Journey Optimizer](adobe-journey-optimizer/index.md)
+* [Offer Decisioning and Target](adobe-journey-optimizer-decisioning/index.md)
+* [Adobe Streaming Media for Edge Network](media-for-edge-network/index.md)
+* [Consent for Edge Network](consent-for-edge-network/index.md)
+* [Identity for Edge Network](identity-for-edge-network/index.md)
+* [Lifecycle for Edge Network](lifecycle-for-edge-network/index.md)

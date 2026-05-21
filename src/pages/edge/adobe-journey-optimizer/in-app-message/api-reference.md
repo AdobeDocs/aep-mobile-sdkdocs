@@ -20,27 +20,41 @@ By default, the SDK will automatically fetch in-app message definitions from the
 
 Some use cases may require the client to request an update from the remote more frequently. Calling the following API will force the Messaging extension to get an updated definition of messages from the remote:
 
-<CodeBlock slots="heading, code" repeat="4" languages="Kotlin, Java, Swift, ObjC" />
+### Android Kotlin
 
-#### Android
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
 
 ```kotlin
 Messaging.refreshInAppMessages()
 ```
 
-#### Android
+### Android Java
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
 
 ```java
 Messaging.refreshInAppMessages();
 ```
 
-#### iOS
+### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
 
 ```swift
 Messaging.refreshInAppMessages()
 ```
 
-#### iOS
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
 
 ```objc
 [AEPMobileMessaging refreshInAppMessages];

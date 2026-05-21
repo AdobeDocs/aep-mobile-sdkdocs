@@ -14,5 +14,5 @@ keywords:
 
 This page provides a list of available tutorials for the Identity extension in Mobile Core.
 
-* [Mobile to web identity sharing](./id-sharing.md)
-* [Troubleshooting push identifier sync](./push-sync.md)
+* [Mobile to web identity sharing](id-sharing.md)
+* [Troubleshooting push identifier sync](push-sync.md)

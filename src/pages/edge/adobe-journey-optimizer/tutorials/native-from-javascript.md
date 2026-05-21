@@ -10,8 +10,6 @@ keywords:
 - Tutorial
 ---
 
-import Tabs from './tabs/native-from-javascript.md'
-
 # Native handling of JavaScript events
 
 You can handle events from in-app message interactions natively within your application by completing the following steps:
@@ -24,19 +22,58 @@ You can handle events from in-app message interactions natively within your appl
 
 To register a JavaScript event handler with a `Message` object, you will first need to implement and set a `MessagingDelegate`.
 
-For more detailed instructions on implementing and using a MessagingDelegate, please read the [tutorial on using MessagingDelegate](./messaging-delegate.md).
+For more detailed instructions on implementing and using a MessagingDelegate, please read the [tutorial on using MessagingDelegate](messaging-delegate.md).
 
 ## Register a JavaScript handler for your In-App Message
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+In the `shouldShowMessage` function of the `MessagingDelegate`, call `public void handleJavascriptMessage(final String name, final AdobeCallback<String> callback)` to register your handler.
 
-Android
+The name of the message you intend to pass from the JavaScript side should be specified in the first parameter.
 
-<Tabs query="platform=android&function=register"/>
+The following example shows a handler that dispatches a `decisioning.propositionInteract` Experience Event natively when the JavaScript of the in-app message posts a `myInappCallback` message:
 
-iOS
+### Android Java
 
-<Tabs query="platform=ios&function=register"/>
+```java
+@Override
+public boolean shouldShowMessage(FullscreenMessage fullscreenMessage) {
+  Message message = (Message) fullscreenMessage.getParent();
+  
+  // in-line handling of JavaScript calls
+  message.handleJavascriptMessage("myInappCallback", new AdobeCallback<String>() {
+    @Override
+    public void call(String content) {
+      System.out.println("JavaScript body passed to native callback: " + content);
+      message.track(content, MessagingEdgeEventType.IN_APP_INTERACT);
+    }
+  });
+}
+```
+
+In the `shouldShowMessage` function of the `MessagingDelegate`, call `handleJavascriptMessage(_:withHandler)` to register your handler.
+
+The name of the message you intend to pass from the JavaScript side should be specified in the first parameter.
+
+The following example shows a handler that dispatches a `decisioning.propositionInteract` Experience Event natively when the JavaScript of the in-app message posts a `myInappCallback` message:
+
+### iOS Swift
+
+```swift
+func shouldShowMessage(message: Showable) -> Bool {    
+    let fullscreenMessage = message as? FullscreenMessage
+    let message = fullscreenMessage?.parent
+
+    // in-line handling of JavaScript calls
+    message?.handleJavascriptMessage("myInappCallback") { content
+
+        print("JavaScript body passed to native callback: \(content ?? "empty")")
+
+        message?.track(content as? String, withEdgeEventType: .inappInteract)
+    }
+
+    return true
+}
+```
 
 ## Post the JavaScript message from your In-App Message
 

@@ -5,9 +5,6 @@ keywords:
 - Adobe Analytics
 - Product overview
 ---
-import Tabs from './tabs/index.md'
-import InitializeSDK from '/src/pages/resources/initialize.md'
-
 # Adobe Content Analytics
 
 ## Configure Content Analytics extension in the Data Collection UI
@@ -50,9 +47,9 @@ Enter a value in **Batch Flush Interval (ms)** to define a time in miliseconds t
 
 Specify exclusions for asset URLs, assets locations, and experience locations.
 
-* Enter an **Asset URL Pattern** to specify a regular expression to filter which asset URLs should be excluded when collecting data for Content Analytics. For example: `.*\\.gif$|.*\\.svg$` to exclude GIF or SVG files.<br/>Use **Test Regex** to open the **Regular Expression Tester** where you can validate your regular expression.
-* Enter an **Asset Location Pattern** to specify a regular expression to filter which asset locations should be excluded when collecting data for Content Analytics. For example: `^(debug|test).*` to exclude asset location that contain `debug` or `test`. <br/>Use **Test Regex** to open the **Regular Expression Tester** where you can validate your regular expression.
-* Enter an **Experience Location Pattern** to specify a regular expression to filter which experience locations should be excluded when collecting data for Content Analytics. For example: `^test\\..*|^dev\\..*` to exclude any experience location that contains `test.` or `dev.` <br/>Use **Test Regex** to open the **Regular Expression Tester** where you can validate your regular expression.
+* Enter an **Asset URL Pattern** to specify a regular expression to filter which asset URLs should be excluded when collecting data for Content Analytics. For example: `.*\\.gif$|.*\\.svg$` to exclude GIF or SVG files.\<br/\>Use **Test Regex** to open the **Regular Expression Tester** where you can validate your regular expression.
+* Enter an **Asset Location Pattern** to specify a regular expression to filter which asset locations should be excluded when collecting data for Content Analytics. For example: `^(debug|test).*` to exclude asset location that contain `debug` or `test`. \<br/\>Use **Test Regex** to open the **Regular Expression Tester** where you can validate your regular expression.
+* Enter an **Experience Location Pattern** to specify a regular expression to filter which experience locations should be excluded when collecting data for Content Analytics. For example: `^test\\..*|^dev\\..*` to exclude any experience location that contains `test.` or `dev.` \<br/\>Use **Test Regex** to open the **Regular Expression Tester** where you can validate your regular expression.
 
 ## Add Content Analytics extension to your app
 
@@ -62,20 +59,74 @@ To add the Content Analytics extension to your app, follow the steps below based
 
 Add MobileCore, Edge, EdgeIdentity, and Content Analytics as dependencies to your project.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
+#### Android Kotlin
 
-Kotlin<br/>(Android)
+Add the required dependencies to your project by including them in the app's Gradle file.
 
-<Tabs query="platform=android-kotlin&task=add"/>
+```kotlin
+// Use the BOM to manage Adobe Mobile SDK versions
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
 
-Groovy<br/>(Android)
+// Adobe Mobile SDK dependencies (versions managed by BOM)
+implementation("com.adobe.marketing.mobile:core")
+implementation("com.adobe.marketing.mobile:edge")
+    
+// Content Analytics (not yet in BOM - specify version explicitly)
+implementation("com.adobe.marketing.mobile:contentanalytics:1.0.0")
+```
 
-<Tabs query="platform=android-groovy&task=add"/>
+<InlineAlert variant="warning" slots="text"/>
 
-SPM<br/>(iOS)
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
 
-<Tabs query="platform=ios-spm&task=add"/>
+#### Android Groovy
 
-CocoaPods<br/>(iOS)
+Add the required dependencies to your project by including them in the app's Gradle file.
 
-<Tabs query="platform=ios-pods&task=add"/>
+```java
+// Use the BOM to manage Adobe Mobile SDK versions
+
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
+
+// Adobe Mobile SDK dependencies (versions managed by BOM)
+implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:edge'
+
+// Content Analytics (not yet in BOM - specify version explicitly)
+implementation 'com.adobe.marketing.mobile:contentanalytics:1.0.0"
+```
+
+<InlineAlert variant="warning" slots="text"/>
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
+
+#### iOS SPM
+
+Add the required dependencies to your project using Swift Package Manager. For Content Analytics, use the following instructions.
+
+1. In Xcode, select **File** > **Add Package Dependencies**.
+
+1. Enter the package URL:
+
+   ```text
+   https://github.com/adobe/aca-mobile-sdk-ios-extension
+   ```
+
+1. Select version `5.0.0` or later.
+
+1. Select **Add Package**.
+
+#### iOS CocoaPods
+
+Add the required dependencies to your project using CocoaPods. Add following pods in your `Podfile`:
+
+```swift
+use_frameworks!
+
+target 'YourTargetApp' do
+  pod 'AEPCore', '~> 5.0'
+  pod 'AEPEdge', '~> 5.0'
+  pod 'AEPContentAnalytics', '~> 5.0'
+end
+```
+

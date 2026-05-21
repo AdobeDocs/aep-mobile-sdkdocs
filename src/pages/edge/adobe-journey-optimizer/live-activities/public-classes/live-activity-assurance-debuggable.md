@@ -112,5 +112,5 @@ Implementing this protocol provides the following benefits:
 
 ## Related classes and protocols
 
-* [LiveActivityAttributes](./live-activity-attributes.md)
-* [LiveActivityData](./live-activity-data.md)
+* [LiveActivityAttributes](live-activity-attributes.md)
+* [LiveActivityData](live-activity-data.md)

@@ -6,35 +6,68 @@ keywords:
 - API reference
 ---
 
-import Tabs from './tabs/api-reference.md'
-
 # Assurance API reference
 
 ## extensionVersion
 
 Returns the current version of the AEP Assurance extension.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&api=extension-version"/>
+#### Syntax
 
-iOS
+```java
+@NonNull
+public static String extensionVersion()
+```
 
-<Tabs query="platform=ios&api=extension-version"/>
+#### Example
 
-<!--- React Native
+```java
+final String extensionVersion = Assurance.extensionVersion();
+```
 
-<Tabs query="platform=react-native&api=extension-version"/>
+### Android Kotlin
 
-Flutter
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=flutter&api=extension-version"/> --->
+#### Example
+
+```java
+val extensionVersion: String = Assurance.extensionVersion()
+```
+
+### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```swift
+AEPAssurance.extensionVersion()
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objectivec
++ (nonnull NSString*) extensionVersion;
+```
+
+#### Example
+
+```objectivec
+[AEPAssurance extensionVersion];
+```
 
 ## registerExtension
 
-<InlineAlert variant="warning" slots="header, text1"/>
+<InlineAlert variant="warning" slots="text1, text2"/>
 
 This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the Android mobile extension.
 
@@ -42,11 +75,21 @@ Use [`MobileCore.registerExtensions()`](../mobile-core/api-reference.md#register
 
 Registers the Assurance extension with the Mobile Core.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&api=register-extension"/>
+#### Syntax
+
+```java
+public static void registerExtension()
+```
+
+#### Example
+
+```java
+Assurance.registerExtension();
+```
 
 ## startSession
 
@@ -56,23 +99,79 @@ The `startSession` API needs to be called to begin a AEP Assurance session. When
 
 You may call this API when the app launches with a URL (see code snippet below for sample usage)
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+<InlineAlert variant="info" slots="text"/>
 
-Android
+This API is optional for Android. Deep linking is the best way to connect to an Assurance session when using the Android SDK. Assurance SDK on Android is already setup to handle incoming intents to your app. You can [add an intent filter for incoming links in your app](https://developer.android.com/training/app-links/deep-linking) to complete the deep link configuration.
 
-<Tabs query="platform=android&api=start-session"/>
+### Android Java
 
-iOS
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=ios&api=start-session"/>
+#### Syntax
 
-<!--- React Native
+```java
+public static void startSession(@NonNull final String url)
+```
 
-<Tabs query="platform=react-native&api=start-session"/>
+#### Example
 
-Flutter
+```java
+final String url = "<assurance_session_url>";
+Assurance.startSession(url);
+```
 
-<Tabs query="platform=flutter&api=start-session"/> --->
+### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```java
+val url: String = "<assurance_session_url>"
+Assurance.startSession(url)
+```
+
+### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```swift
+func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+    do {
+        AEPAssurance.startSession(url)
+        return false
+    }
+}
+```
+
+For SceneDelegate based applications
+
+```swift
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        AEPAssurance.startSession(URLContexts.first!.url)
+    }
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objectivec
++ (void) startSession: (NSURL* _Nonnull) url;
+```
+
+#### Example
+
+```objectivec
+- (BOOL)application:(UIApplication *)app openURL:(nonnull NSURL *)url options:(nonnull NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    [AEPAssurance startSession:url];
+    return false;
+}
+```
 
 ## startSession (Quick Connect)
 
@@ -82,12 +181,61 @@ Displays a Quick Connect authorization overlay to begin an Experience Platform A
 
 This API is only supported on debug builds. Calling this method on a non-debuggable build will result in a no-op.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&api=start-session-quickconnect"/>
+#### Syntax
 
-iOS
+```java
+public static void startSession()
+```
 
-<Tabs query="platform=ios&api=start-session-quickconnect"/>
+#### Example
+
+```java
+Assurance.startSession();
+```
+
+### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```kotlin
+Assurance.startSession()
+```
+
+### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+static func startSession()
+```
+
+#### Example
+
+```swift
+AEPAssurance.startSession()
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objectivec
++ (void) startSession;
+```
+
+#### Example
+
+```objectivec
+[AEPAssurance startSession];
+```
+

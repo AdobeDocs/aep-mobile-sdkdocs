@@ -124,9 +124,9 @@ For more information, refer to the documentation below:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact | BOM (3.17.0) | BOM (3.18.0) |
 |-----|-----|-----|
@@ -151,10 +151,6 @@ For more information, refer to the documentation below:
 | com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
 | com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
 | com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
-
-</AccordionItem>
-
-</Accordion>
 
 ### Android Messaging 3.8.0
 
@@ -232,9 +228,9 @@ For more information, refer to the documentation below:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact | BOM (3.16.0) | BOM (3.17.0) |
 |-----|-----|-----|
@@ -259,10 +255,6 @@ For more information, refer to the documentation below:
 | com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
 | com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
 | com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
-
-</AccordionItem>
-
-</Accordion>
 
 ### Android Messaging 3.7.0
 
@@ -305,9 +297,9 @@ For more information, refer to the documentation below:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (3.15.1) | BOM (3.16.0) |
 | ---------------------------------------------- | ------------ | ------------ |
@@ -332,10 +324,6 @@ For more information, refer to the documentation below:
 | com.adobe.marketing.mobile:signal              | 3.0.1        | 3.0.1        |
 | com.adobe.marketing.mobile:target              | 3.0.2        | 3.0.2        |
 | com.adobe.marketing.mobile:userprofile         | 3.0.1        | 3.0.1        |
-
-</AccordionItem>
-
-</Accordion>
 
 ### Android Messaging 3.6.0
 
@@ -377,9 +365,9 @@ For more information, refer to the documentation below:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (3.15.0) | BOM (3.15.1) |
 | ---------------------------------------------- | ------------ | ------------ |
@@ -404,10 +392,6 @@ For more information, refer to the documentation below:
 | com.adobe.marketing.mobile:signal              | 3.0.1        | 3.0.1        |
 | com.adobe.marketing.mobile:target              | 3.0.2        | 3.0.2        |
 | com.adobe.marketing.mobile:userprofile         | 3.0.1        | 3.0.1        |
-
-</AccordionItem>
-
-</Accordion>
 
 ### Android Messaging 3.5.1
 
@@ -472,9 +456,9 @@ For more information, refer to the documentation below:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (3.14.1) | BOM (3.15.0) |
 | ---------------------------------------------- | ------------ | ------------ |
@@ -499,10 +483,6 @@ For more information, refer to the documentation below:
 | com.adobe.marketing.mobile:signal              | 3.0.1        | 3.0.1        |
 | com.adobe.marketing.mobile:target              | 3.0.2        | 3.0.2        |
 | com.adobe.marketing.mobile:userprofile         | 3.0.1        | 3.0.1        |
-
-</AccordionItem>
-
-</Accordion>
 
 ### iOS EdgeConsent 5.0.1
 
@@ -532,9 +512,9 @@ For more information, refer to the documentation below:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (3.14.0) | BOM (3.14.1) |
 | ---------------------------------------------- | ------------ | ------------ |
@@ -559,10 +539,6 @@ For more information, refer to the documentation below:
 | com.adobe.marketing.mobile:signal              | 3.0.1        | 3.0.1        |
 | com.adobe.marketing.mobile:target              | 3.0.2        | 3.0.2        |
 | com.adobe.marketing.mobile:userprofile         | 3.0.1        | 3.0.1        |
-
-</AccordionItem>
-
-</Accordion>
 
 ## August 1, 2025
 
@@ -589,9 +565,9 @@ For more information, refer to the documentation below:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (3.13.0) | BOM (3.14.0) |
 | ---------------------------------------------- | ------------ | ------------ |
@@ -616,10 +592,6 @@ For more information, refer to the documentation below:
 | com.adobe.marketing.mobile:signal              | 3.0.1        | 3.0.1        |
 | com.adobe.marketing.mobile:target              | 3.0.2        | 3.0.2        |
 | com.adobe.marketing.mobile:userprofile         | 3.0.1        | 3.0.1        |
-
-</AccordionItem>
-
-</Accordion>
 
 ### Android Messaging 3.4.0
 
@@ -689,9 +661,9 @@ For more information, refer to the documentation below:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (3.12.0) | BOM (3.13.0) |
 | ---------------------------------------------- | ------------ | ------------ |
@@ -716,10 +688,6 @@ For more information, refer to the documentation below:
 | com.adobe.marketing.mobile:signal              | 3.0.1        | 3.0.1        |
 | com.adobe.marketing.mobile:target              | 3.0.2        | 3.0.2        |
 | com.adobe.marketing.mobile:userprofile         | 3.0.1        | 3.0.1        |
-
-</AccordionItem>
-
-</Accordion>
 
 ### Android Core 3.4.1
 
@@ -763,9 +731,9 @@ For more information, refer to the documentation below:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (3.11.0) | BOM (3.12.0) |
 | ---------------------------------------------- | ------------ | ------------ |
@@ -790,10 +758,6 @@ For more information, refer to the documentation below:
 | com.adobe.marketing.mobile:signal              | 3.0.1        | 3.0.1        |
 | com.adobe.marketing.mobile:target              | 3.0.2        | 3.0.2        |
 | com.adobe.marketing.mobile:userprofile         | 3.0.1        | 3.0.1        |
-
-</AccordionItem>
-
-</Accordion>
 
 ### Android Messaging 3.3.2
 
@@ -827,9 +791,9 @@ For more information, refer to the documentation below:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (3.10.0) | BOM (3.11.0) |
 | ---------------------------------------------- | ------------ | ------------ |
@@ -855,10 +819,6 @@ For more information, refer to the documentation below:
 | com.adobe.marketing.mobile:target              | 3.0.2        | 3.0.2        |
 | com.adobe.marketing.mobile:userprofile         | 3.0.1        | 3.0.1        |
 
-</AccordionItem>
-
-</Accordion>
-
 ### Android Optimize 3.5.0
 
 * New API Available: Introduced `[List<Offer>. generateDisplayInteractionXdm()]` to generate the XDM with batched list of display proposition that can be used in events tracking using Edge extension API (i.e, `sendEvent()`).
@@ -875,9 +835,9 @@ For more information, refer to the documentation below:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (3.9.2) | BOM (3.10.0) |
 | ---------------------------------------------- | ----------- | ------------ |
@@ -902,10 +862,6 @@ For more information, refer to the documentation below:
 | com.adobe.marketing.mobile:signal              | 3.0.1       | 3.0.1        |
 | com.adobe.marketing.mobile:target              | 3.0.2       | 3.0.2        |
 | com.adobe.marketing.mobile:userprofile         | 3.0.1       | 3.0.1        |
-
-</AccordionItem>
-
-</Accordion>
 
 ### Android Optimize 3.4.0
 
@@ -975,9 +931,9 @@ For more information, refer to the documentation below:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (3.9.1) | BOM (3.9.2) |
 | ---------------------------------------------- | ----------- | ----------- |
@@ -1002,10 +958,6 @@ For more information, refer to the documentation below:
 | com.adobe.marketing.mobile:signal              | 3.0.1       | 3.0.1       |
 | com.adobe.marketing.mobile:target              | 3.0.2       | 3.0.2       |
 | com.adobe.marketing.mobile:userprofile         | 3.0.1       | 3.0.1       |
-
-</AccordionItem>
-
-</Accordion>
 
 ## March 11, 2025
 
@@ -1083,9 +1035,9 @@ Users can now configure:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (3.9.0) | BOM (3.9.1) |
 | ---------------------------------------------- | ----------- | ----------- |
@@ -1110,10 +1062,6 @@ Users can now configure:
 | com.adobe.marketing.mobile:places              | 3.0.2       | 3.0.2       |
 | com.adobe.marketing.mobile:signal              | 3.0.1       | 3.0.1       |
 | com.adobe.marketing.mobile:userprofile         | 3.0.1       | 3.0.1       |
-
-</AccordionItem>
-
-</Accordion>
 
 ### Android Edge 3.0.2
 
@@ -1153,9 +1101,9 @@ Users can now configure:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (3.8.0) | BOM (3.9.0) |
 | ---------------------------------------------- | ----------- | ----------- |
@@ -1180,10 +1128,6 @@ Users can now configure:
 | com.adobe.marketing.mobile:signal              | 3.0.1       | 3.0.1       |
 | com.adobe.marketing.mobile:target              | 3.0.1       | 3.0.1       |
 | com.adobe.marketing.mobile:userprofile         | 3.0.1       | 3.0.1       |
-
-</AccordionItem>
-
-</Accordion>
 
 ### Android Optimize 3.3.0
 
@@ -1212,9 +1156,9 @@ Users can now configure:
 * Starting with this BOM version, AEP SDKs offer simplified initialization. For more information, refer to the [`MobileCore.initialize`](../base/mobile-core/api-reference.md#initialize) API.
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                                 | BOM (3.7.0) | BOM (3.8.0) |
 | -------------------------------------------------- | ----------- | ----------- |
@@ -1239,10 +1183,6 @@ Users can now configure:
 | **com.adobe.marketing.mobile:signal**              | **3.0.0**   | **3.0.1**   |
 | **com.adobe.marketing.mobile:target**              | **3.0.0**   | **3.0.1**   |
 | **com.adobe.marketing.mobile:userprofile**         | **3.0.0**   | **3.0.1**   |
-
-</AccordionItem>
-
-</Accordion>
 
 ### Android Optimize 3.2.4
 
@@ -1336,9 +1276,9 @@ Users can now configure:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (3.6.1) | BOM (3.7.0) |
 | ---------------------------------------------- | ----------- | ----------- |
@@ -1364,10 +1304,6 @@ Users can now configure:
 | com.adobe.marketing.mobile:target              | 3.0.0       | 3.0.0       |
 | com.adobe.marketing.mobile:userprofile         | 3.0.0       | 3.0.0       |
 
-</AccordionItem>
-
-</Accordion>
-
 ### Android Messaging 3.3.0
 
 * Introduced support for out-of-the-box content card UI rendering using the new `ContentCardUIProvider.getContentCardUI()` API to create and display the views for templated content cards.
@@ -1383,9 +1319,9 @@ Users can now configure:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (3.6.0) | BOM (3.6.1) |
 | ---------------------------------------------- | ----------- | ----------- |
@@ -1410,10 +1346,6 @@ Users can now configure:
 | com.adobe.marketing.mobile:signal              | 3.0.0       | 3.0.0       |
 | com.adobe.marketing.mobile:target              | 3.0.0       | 3.0.0       |
 | com.adobe.marketing.mobile:userprofile         | 3.0.0       | 3.0.0       |
-
-</AccordionItem>
-
-</Accordion>
 
 ### Android Media 3.1.1
 
@@ -1455,9 +1387,9 @@ Users can now configure:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (3.5.1) | BOM (3.6.0) |
 | ---------------------------------------------- | ----------- | ----------- |
@@ -1482,10 +1414,6 @@ Users can now configure:
 | com.adobe.marketing.mobile:signal              | 3.0.0       | 3.0.0       |
 | com.adobe.marketing.mobile:target              | 3.0.0       | 3.0.0       |
 | com.adobe.marketing.mobile:userprofile         | 3.0.0       | 3.0.0       |
-
-</AccordionItem>
-
-</Accordion>
 
 ## December 19, 2024
 
@@ -1531,9 +1459,9 @@ Users can now configure:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (3.5.0) | BOM (3.5.1) |
 | ---------------------------------------------- | ----------- | ----------- |
@@ -1559,17 +1487,13 @@ Users can now configure:
 | com.adobe.marketing.mobile:target              | 3.0.0       | 3.0.0       |
 | com.adobe.marketing.mobile:userprofile         | 3.0.0       | 3.0.0       |
 
-</AccordionItem>
-
-</Accordion>
-
 ### Android BOM 2.9.10
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                         | BOM (2.9.9) | BOM (2.9.10) |
 | ------------------------------------------ | ----------- | ------------ |
@@ -1593,10 +1517,6 @@ Users can now configure:
 | com.adobe.marketing.mobile:signal          | 2.0.1       | 2.0.1        |
 | com.adobe.marketing.mobile:target          | 2.0.3       | 2.0.3        |
 | com.adobe.marketing.mobile:userprofile     | 2.0.1       | 2.0.1        |
-
-</AccordionItem>
-
-</Accordion>
 
 ### Android Assurance 3.0.4
 
@@ -1622,9 +1542,9 @@ Users can now configure:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (3.4.0) | BOM (3.5.0) |
 | ---------------------------------------------- | ----------- | ----------- |
@@ -1650,10 +1570,6 @@ Users can now configure:
 | com.adobe.marketing.mobile:target              | 3.0.0       | 3.0.0       |
 | com.adobe.marketing.mobile:userprofile         | 3.0.0       | 3.0.0       |
 
-</AccordionItem>
-
-</Accordion>
-
 ### Android Optimize 3.1.0
 
 * Added a new `updatePropositions` API to support completion callback with retrieved propositions and errors (if any).
@@ -1664,9 +1580,9 @@ Users can now configure:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (3.3.2) | BOM (3.4.0) |
 | ---------------------------------------------- | ----------- | ----------- |
@@ -1691,10 +1607,6 @@ Users can now configure:
 | com.adobe.marketing.mobile:signal              | 3.0.0       | 3.0.0       |
 | com.adobe.marketing.mobile:target              | 3.0.0       | 3.0.0       |
 | com.adobe.marketing.mobile:userprofile         | 3.0.0       | 3.0.0       |
-
-</AccordionItem>
-
-</Accordion>
 
 ### iOS Optimize 5.1.0
 
@@ -1750,9 +1662,9 @@ Users can now configure:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                                 | BOM (3.3.1) | BOM (3.3.2) |
 | -------------------------------------------------- | ----------- | ----------- |
@@ -1778,10 +1690,6 @@ Users can now configure:
 | com.adobe.marketing.mobile:target                  | 3.0.0       | 3.0.0       |
 | com.adobe.marketing.mobile:userprofile             | 3.0.0       | 3.0.0       |
 
-</AccordionItem>
-
-</Accordion>
-
 ## September 10, 2024
 
 ### Android Campaign Classic 3.1.2
@@ -1803,9 +1711,9 @@ Users can now configure:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (3.3.0) | BOM (3.3.1) |
 | ---------------------------------------------- | ----------- | ----------- |
@@ -1831,10 +1739,6 @@ Users can now configure:
 | com.adobe.marketing.mobile:target              | 3.0.0       | 3.0.0       |
 | com.adobe.marketing.mobile:userprofile         | 3.0.0       | 3.0.0       |
 
-</AccordionItem>
-
-</Accordion>
-
 ### Android Core 3.1.2
 
 * Added screen reader support for in-app messages.
@@ -1851,9 +1755,9 @@ Users can now configure:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                                 | BOM (3.2.2) | BOM (3.3.0) |
 | -------------------------------------------------- | ----------- | ----------- |
@@ -1879,10 +1783,6 @@ Users can now configure:
 | com.adobe.marketing.mobile:target                  | 3.0.0       | 3.0.0       |
 | com.adobe.marketing.mobile:userprofile             | 3.0.0       | 3.0.0       |
 
-</AccordionItem>
-
-</Accordion>
-
 ### Android Campaign Classic 3.1.1
 
 * Removed unused `app_name` string resource to prevent conflicts with resources defined by the app.
@@ -1903,7 +1803,7 @@ Users can now configure:
 
 * Fixed timer notification background color.
 * Updated optional fields within the multi-icon push template.
-* Fixed issues seen with lower level Android API. See https://github.com/adobe/aepsdk-ui-android/pull/64 for details.
+* Fixed issues seen with lower level Android API. See [https://github.com/adobe/aepsdk-ui-android/pull/64](https://github.com/adobe/aepsdk-ui-android/pull/64) for details.
 
 ## August 19, 2024
 
@@ -1942,9 +1842,9 @@ Users can now configure:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (3.2.1) | BOM (3.2.2) |
 | ---------------------------------------------- | ----------- | ----------- |
@@ -1970,10 +1870,6 @@ Users can now configure:
 | com.adobe.marketing.mobile:target              | 3.0.0       | 3.0.0       |
 | com.adobe.marketing.mobile:userprofile         | 3.0.0       | 3.0.0       |
 
-</AccordionItem>
-
-</Accordion>
-
 ### Android Core 3.1.1
 
 * Fixed an issue causing in-app messages to cast a shadow.
@@ -1992,9 +1888,9 @@ Users can now configure:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (3.2.0) | BOM (3.2.1) |
 | ---------------------------------------------- | ----------- | ----------- |
@@ -2020,10 +1916,6 @@ Users can now configure:
 | com.adobe.marketing.mobile:target              | 3.0.0       | 3.0.0       |
 | com.adobe.marketing.mobile:userprofile         | 3.0.0       | 3.0.0       |
 
-</AccordionItem>
-
-</Accordion>
-
 ## June 27, 2024
 
 ### iOS Analytics 5.0.2
@@ -2040,9 +1932,9 @@ Users can now configure:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (3.1.0) | BOM (3.2.0) |
 | ---------------------------------------------- | ----------- | ----------- |
@@ -2068,10 +1960,6 @@ Users can now configure:
 | com.adobe.marketing.mobile:target              | 3.0.0       | 3.0.0       |
 | com.adobe.marketing.mobile:userprofile         | 3.0.0       | 3.0.0       |
 
-</AccordionItem>
-
-</Accordion>
-
 ### Android Messaging 3.1.0
 
 * Added support for [Content Cards](https://github.com/adobe/aepsdk-messaging-android/blob/main/Documentation/sources/propositions/content-card.md).
@@ -2095,9 +1983,9 @@ Users can now configure:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (2.9.8) | BOM (2.9.9) |
 | ---------------------------------------------- | ----------- | ----------- |
@@ -2122,19 +2010,15 @@ Users can now configure:
 | com.adobe.marketing.mobile:target              | 2.0.3       | 2.0.3       |
 | com.adobe.marketing.mobile:userprofile         | 2.0.1       | 2.0.1       |
 
-</AccordionItem>
-
-</Accordion>
-
 ## June 21, 2024
 
 ### Android BOM 3.1.0
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                                 | BOM (3.0.3) | BOM (3.1.0) |
 | -------------------------------------------------- | ----------- | ----------- |
@@ -2159,10 +2043,6 @@ Users can now configure:
 | com.adobe.marketing.mobile:signal                  | 3.0.0       | 3.0.0       |
 | com.adobe.marketing.mobile:target                  | 3.0.0       | 3.0.0       |
 | com.adobe.marketing.mobile:userprofile             | 3.0.0       | 3.0.0       |
-
-</AccordionItem>
-
-</Accordion>
 
 ### Android Campaign Classic 3.1.0
 
@@ -2261,9 +2141,9 @@ This is the initial release of AEP Notification Builder. Added support for out-o
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                         | BOM (3.0.2) | BOM (3.0.3) |
 | ------------------------------------------ | ----------- | ----------- |
@@ -2287,10 +2167,6 @@ This is the initial release of AEP Notification Builder. Added support for out-o
 | com.adobe.marketing.mobile:signal          | 3.0.0       | 3.0.0       |
 | com.adobe.marketing.mobile:target          | 3.0.0       | 3.0.0       |
 | com.adobe.marketing.mobile:userprofile     | 3.0.0       | 3.0.0       |
-
-</AccordionItem>
-
-</Accordion>
 
 ### Android Core 3.0.2
 
@@ -2332,9 +2208,9 @@ This is the initial release of AEP Notification Builder. Added support for out-o
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                         | BOM (3.0.1) | BOM (3.0.2) |
 | ------------------------------------------ | ----------- | ----------- |
@@ -2358,10 +2234,6 @@ This is the initial release of AEP Notification Builder. Added support for out-o
 | com.adobe.marketing.mobile:signal          | 3.0.0       | 3.0.0       |
 | com.adobe.marketing.mobile:target          | 3.0.0       | 3.0.0       |
 | com.adobe.marketing.mobile:userprofile     | 3.0.0       | 3.0.0       |
-
-</AccordionItem>
-
-</Accordion>
 
 ### Android Lifecycle 3.0.1
 
@@ -2400,9 +2272,9 @@ This is the initial release of AEP Notification Builder. Added support for out-o
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                         | BOM (3.0.0) | BOM (3.0.1) |
 | ------------------------------------------ | ----------- | ----------- |
@@ -2426,10 +2298,6 @@ This is the initial release of AEP Notification Builder. Added support for out-o
 | com.adobe.marketing.mobile:signal          | 3.0.0       | 3.0.0       |
 | com.adobe.marketing.mobile:target          | 3.0.0       | 3.0.0       |
 | com.adobe.marketing.mobile:userprofile     | 3.0.0       | 3.0.0       |
-
-</AccordionItem>
-
-</Accordion>
 
 ### iOS Optimize 5.0.1
 
@@ -2490,9 +2358,9 @@ This is the initial release of AEP Notification Builder. Added support for out-o
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                         | BOM (2.9.7) | BOM (2.9.8) |
 | ------------------------------------------ | ----------- | ----------- |
@@ -2517,10 +2385,6 @@ This is the initial release of AEP Notification Builder. Added support for out-o
 | com.adobe.marketing.mobile:target          | 2.0.3       | 2.0.3       |
 | com.adobe.marketing.mobile:userprofile     | 2.0.1       | 2.0.1       |
 
-</AccordionItem>
-
-</Accordion>
-
 ### Android Core 2.6.3
 
 * Enhanced error handling in the `collectLaunchInfo` API to catch exceptions when retrieving bundled data from an Activity.
@@ -2544,9 +2408,9 @@ This is the initial release of AEP Notification Builder. Added support for out-o
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (2.9.6) | BOM (2.9.7) |
 | ---------------------------------------------- | ----------- | ----------- |
@@ -2570,10 +2434,6 @@ This is the initial release of AEP Notification Builder. Added support for out-o
 | com.adobe.marketing.mobile:signal              | 2.0.1       | 2.0.1       |
 | com.adobe.marketing.mobile:target              | 2.0.3       | 2.0.3       |
 | com.adobe.marketing.mobile:userprofile         | 2.0.1       | 2.0.1       |
-
-</AccordionItem>
-
-</Accordion>
 
 ## April 29, 2024
 
@@ -2908,9 +2768,9 @@ For help on moving to these versions, and information on deprecated APIs please 
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (2.9.6) | BOM (3.0.0) |
 | ---------------------------------------------- | ----------- | ----------- |
@@ -2934,10 +2794,6 @@ For help on moving to these versions, and information on deprecated APIs please 
 | **com.adobe.marketing.mobile:signal**          | **2.0.1**   | **3.0.0**   |
 | **com.adobe.marketing.mobile:target**          | **2.0.3**   | **3.0.0**   |
 | **com.adobe.marketing.mobile:userprofile**     | **2.0.1**   | **3.0.0**   |
-
-</AccordionItem>
-
-</Accordion>
 
 ### Android Messaging 3.0.0
 
@@ -3175,12 +3031,12 @@ Major version update for [Adobe Journey Optimizer](../../edge/adobe-journey-opti
 
 * Updated the minimum supported version to iOS 12.0.
 * Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
-* Added [`handleNotificationResponse(_:urlHandler:closure:)`](./../../edge/adobe-journey-optimizer/api-reference/#handlenotificationresponse) API to provide more control over URL handling from `UNNotificationResponse` objects.
+* Added [`handleNotificationResponse(_:urlHandler:closure:)`](../../edge/adobe-journey-optimizer/api-reference.md#handlenotificationresponse) API to provide more control over URL handling from `UNNotificationResponse` objects.
   * Removed deprecated public API `Messaging.handleNotificationResponse(_:applicationOpened:withCustomActionId:)`.
   * Removed public API `Messaging.handleNotificationResponse(_:closure:)` API.
 * Added support for [Code Based Experiences](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based).
-  * Added public API [`Messaging.updatePropositionsForSurfaces(_)`](./../../edge/adobe-journey-optimizer/code-based/api-reference/#updatepropositionsforsurfaces).
-  * Added public API [`Messaging.getPropositionsForSurfaces(_:completion:)`](./../../edge/adobe-journey-optimizer/code-based/api-reference/#getpropositionsforsurfaces).
+  * Added public API [`Messaging.updatePropositionsForSurfaces(_)`](../../edge/adobe-journey-optimizer/code-based/api-reference.md#updatepropositionsforsurfaces).
+  * Added public API [`Messaging.getPropositionsForSurfaces(_:completion:)`](../../edge/adobe-journey-optimizer/code-based/api-reference.md#getpropositionsforsurfaces).
 
 ### iOS Optimize 5.0.0
 
@@ -3301,9 +3157,9 @@ Major version update for [Identity for Edge Network](../../edge/identity-for-edg
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (2.9.5) | BOM (2.9.6) |
 | ---------------------------------------------- | ----------- | ----------- |
@@ -3327,10 +3183,6 @@ Major version update for [Identity for Edge Network](../../edge/identity-for-edg
 | com.adobe.marketing.mobile:signal              | 2.0.1       | 2.0.1       |
 | com.adobe.marketing.mobile:target              | 2.0.3       | 2.0.3       |
 | com.adobe.marketing.mobile:userprofile         | 2.0.1       | 2.0.1       |
-
-</AccordionItem>
-
-</Accordion>
 
 ## March 11, 2024
 
@@ -3397,9 +3249,9 @@ Major version update for [Identity for Edge Network](../../edge/identity-for-edg
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                         | BOM (2.9.4) | BOM (2.9.5) |
 | ------------------------------------------ | ----------- | ----------- |
@@ -3424,10 +3276,6 @@ Major version update for [Identity for Edge Network](../../edge/identity-for-edg
 | com.adobe.marketing.mobile:target          | 2.0.3       | 2.0.3       |
 | com.adobe.marketing.mobile:userprofile     | 2.0.1       | 2.0.1       |
 
-</AccordionItem>
-
-</Accordion>
-
 ## March 5, 2024
 
 ### Android Messaging 2.2.1
@@ -3440,9 +3288,9 @@ Major version update for [Identity for Edge Network](../../edge/identity-for-edg
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (2.9.3) | BOM (2.9.4) |
 | ---------------------------------------------- | ----------- | ----------- |
@@ -3466,10 +3314,6 @@ Major version update for [Identity for Edge Network](../../edge/identity-for-edg
 | com.adobe.marketing.mobile:signal              | 2.0.1       | 2.0.1       |
 | com.adobe.marketing.mobile:target              | 2.0.3       | 2.0.3       |
 | com.adobe.marketing.mobile:userprofile         | 2.0.1       | 2.0.1       |
-
-</AccordionItem>
-
-</Accordion>
 
 ## February 28, 2024
 
@@ -3518,9 +3362,9 @@ Major version update for [Identity for Edge Network](../../edge/identity-for-edg
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (2.9.2) | BOM (2.9.3) |
 | ---------------------------------------------- | ----------- | ----------- |
@@ -3545,10 +3389,6 @@ Major version update for [Identity for Edge Network](../../edge/identity-for-edg
 | com.adobe.marketing.mobile:target              | 2.0.3       | 2.0.3       |
 | com.adobe.marketing.mobile:userprofile         | 2.0.1       | 2.0.1       |
 
-</AccordionItem>
-
-</Accordion>
-
 ## February 2, 2024
 
 ### Android Campaign Classic 2.1.3
@@ -3561,9 +3401,9 @@ Major version update for [Identity for Edge Network](../../edge/identity-for-edg
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (2.9.1) | BOM (2.9.2) |
 | ---------------------------------------------- | ----------- | ----------- |
@@ -3588,10 +3428,6 @@ Major version update for [Identity for Edge Network](../../edge/identity-for-edg
 | com.adobe.marketing.mobile:signal              | 2.0.1       | 2.0.1       |
 | com.adobe.marketing.mobile:userprofile         | 2.0.1       | 2.0.1       |
 
-</AccordionItem>
-
-</Accordion>
-
 ## January 30, 2024
 
 ### Android Assurance 2.2.1
@@ -3610,9 +3446,9 @@ Major version update for [Identity for Edge Network](../../edge/identity-for-edg
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                         | BOM (2.9.0) | BOM (2.9.1) |
 | ------------------------------------------ | ----------- | ----------- |
@@ -3636,10 +3472,6 @@ Major version update for [Identity for Edge Network](../../edge/identity-for-edg
 | com.adobe.marketing.mobile:signal          | 2.0.1       | 2.0.1       |
 | com.adobe.marketing.mobile:target          | 2.0.2       | 2.0.2       |
 | com.adobe.marketing.mobile:userprofile     | 2.0.1       | 2.0.1       |
-
-</AccordionItem>
-
-</Accordion>
 
 ### Android Core 2.6.2
 
@@ -3672,9 +3504,9 @@ The response tokens should be parsed as `Map<String: Object>`. For details, see 
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact                             | BOM (2.8.1) | BOM (2.9.0) |
 | ---------------------------------------------- | ----------- | ----------- |
@@ -3699,10 +3531,6 @@ The response tokens should be parsed as `Map<String: Object>`. For details, see 
 | com.adobe.marketing.mobile:target              | 2.0.2       | 2.0.2       |
 | com.adobe.marketing.mobile:userprofile         | 2.0.1       | 2.0.1       |
 
-</AccordionItem>
-
-</Accordion>
-
 ## January 22, 2024
 
 ### iOS Core 4.2.2
@@ -3722,7 +3550,7 @@ The response tokens should be parsed as `Map<String: Object>`. For details, see 
   * Basic notifications, including remind me later and call-to-action functionality
   * Manual and automatic image carousels of three to five items
 
-See a full description of the new [push template payloads](./../../solution/adobe-campaign-classic/push-templates).
+See a full description of the new [push template payloads](../../solution/adobe-campaign-classic/push-templates/index.md).
 
 ## January 17, 2024
 

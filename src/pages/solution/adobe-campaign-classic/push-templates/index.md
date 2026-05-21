@@ -11,7 +11,7 @@ keywords:
 
 # Adobe Campaign Classic - push templates
 
-For more information about supported push templates, visit the [push template reference documentation](./../../../resources/reference/push-notifications/).
+For more information about supported push templates, visit the [push template reference documentation](../../../resources/reference/push-notifications/index.md).
 
 <InlineAlert variant="warning" slots="text"/>
 

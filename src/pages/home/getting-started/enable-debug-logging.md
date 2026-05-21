@@ -8,8 +8,6 @@ keywords:
 - Tutorial
 ---
 
-import Tabs from './tabs/enable-debug-logging.md'
-
 # Debugging and lifecycle metrics
 
 ## Debug logging
@@ -31,31 +29,32 @@ Using `Debug` or `Verbose` log levels may cause performance or security concerns
 
 To enable debug logging, use the following methods:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+```java
+MobileCore.setLogLevel(LoggingMode.DEBUG);
+// MobileCore.setLogLevel(LoggingMode.VERBOSE);
+// MobileCore.setLogLevel(LoggingMode.WARNING);
+// MobileCore.setLogLevel(LoggingMode.ERROR);
+```
 
-<Tabs query="platform=android&task=enable"/>
+### iOS Swift
 
-iOS
+```swift
+MobileCore.setLogLevel(.debug)
+// MobileCore.setLogLevel(.trace)
+// MobileCore.setLogLevel(.warning)
+// MobileCore.setLogLevel(.error)
+```
 
-<Tabs query="platform=ios&task=enable"/>
+### iOS Objective-C
 
-<!-- React Native
-
-<Tabs query="platform=react-native&task=enable"/> -->
-
-<!-- Flutter
-
-<Tabs query="platform=flutter&task=enable"/> -->
-
-<!-- Cordova
-
-<Tabs query="platform=cordova&task=enable"/>
-
-Unity
-
-<Tabs query="platform=unity&task=enable"/> -->
+```objectivec
+[AEPMobileCore setLogLevel:AEPLogLevelDebug];
+// [AEPMobileCore setLogLevel:AEPLogLevelTrace];
+// [AEPMobileCore setLogLevel:AEPLogLevelWarning];
+// [AEPMobileCore setLogLevel:AEPLogLevelError];
+```
 
 ## Lifecycle metrics
 
@@ -71,34 +70,160 @@ This section shows you how to collect lifecycle metrics. To view, and report on 
 
 Lifecycle metrics are now available for Edge Network implementations. For more details about the XDM-based lifecycle metrics, see [Lifecycle for Edge Network](../../edge/lifecycle-for-edge-network/index.md).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+With the `onResume` function, start Lifecycle data collection:
 
-<Tabs query="platform=android&task=metrics"/>
+```java
+@Override  
+   public void onResume() {  
+      MobileCore.setApplication(getApplication());
+      MobileCore.lifecycleStart(null);
+   }
+```
 
-iOS
+Setting the application is only necessary on activities that are entry points for your application. However, setting the application on each `Activity` has no negative impact and ensures that the SDK always has the necessary reference to your application. As a result, you should call `setApplication` on each of your activities.
 
-<Tabs query="platform=ios&task=metrics"/>
+You can use the `onPause` function to pause the lifecycle data collection:
 
-<!-- React Native
+To ensure accurate session and crash reporting, this call must be added to every `Activity`.
 
-<Tabs query="platform=react-native&task=metrics"/> -->
+```java
+@Override
+   public void onPause() {
+      MobileCore.lifecyclePause();
+   }
+```
 
-<!-- Flutter
+### iOS Swift
 
-<Tabs query="platform=flutter&task=metrics"/> -->
+1. Register the Lifecycle extension with the SDK Core by adding the following to your app's `application:didFinishLaunchingWithOptions:` delegate method. This will register the extension with Core and begin Lifecycle event processing:
 
-<!-- Cordova
+```swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    MobileCore.registerExtensions([Lifecycle.self, ...], {
+        ...
+    }
+}
+```
 
-<Tabs query="platform=cordova&task=metrics"/>
+2. Start Lifecycle data collection by calling `lifecycleStart:` from within the callback of the `MobileCore.registerExtensions` method in your app's `application:didFinishLaunchingWithOptions:` delegate method.
 
-Unity
+If your iOS application supports background capabilities, your `application:didFinishLaunchingWithOptions:` method might be called when iOS launches your app in the background. If you do not want background launches to count towards your lifecycle metrics, then `lifecycleStart:` should only be called when the application state is not equal to `UIApplicationStateBackground`.
 
-<Tabs query="platform=unity&task=metrics"/>
+```swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    let appState = application.applicationState
+    MobileCore.registerExtensions([Lifecycle.self, ...], {
+        if appState != .background {
+        // only start lifecycle if the application is not in the background
+        MobileCore.lifecycleStart(additionalContextData: nil)
+        }
+    }
+}
+```
 
-Xamarin
+3. When launched, if your app is resuming from a backgrounded state, iOS might call your `applicationWillEnterForeground:` delegate method. You also need to call `lifecycleStart:`, but this time you do not need all of the supporting code that you used in `application:didFinishLaunchingWithOptions:`:
 
-<Tabs query="platform=xamarin&task=metrics"/> -->
+```swift
+func applicationWillEnterForeground(_ application: UIApplication) {
+    MobileCore.lifecycleStart(additionalContextData: nil)
+}
+```
+
+In iOS 13 and later, for a scene-based application, use the `UISceneDelegate`'s `sceneWillEnterForeground` method as follows:
+
+```swift
+func sceneWillEnterForeground(_ scene: UIScene) {
+    MobileCore.lifecycleStart(additionalContextData: nil)
+}
+```
+
+For more information on handling foregrounding applications with Scenes, refer to Apple's documentation [here](https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_foreground)
+
+4. When the app enters the background, pause Lifecycle data collection from your app's `applicationDidEnterBackground:` delegate method:
+
+```swift
+func applicationDidEnterBackground(_ application: UIApplication) {
+    MobileCore.lifecyclePause()
+}
+```
+
+In iOS 13 and later, for a scene-based application, use the `UISceneDelegate`'s `sceneDidEnterBackground` method as follows:
+
+```swift
+func sceneDidEnterBackground(_ scene: UIScene) {
+    MobileCore.lifecyclePause()
+}
+```
+
+For more information on handling backgrounding applications with Scenes, refer to Apple's documentation [here](https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_background)
+
+### iOS Objective-C
+
+1. Register the Lifecycle extension with the SDK Core by adding the following to your app's `application:didFinishLaunchingWithOptions:` delegate method. This will register the extension with Core and begin Lifecycle event processing:
+
+```objectivec
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // register the lifecycle extension
+[AEPMobileCore registerExtensions:@[AEPMobileLifecycle.class, ...] completion:^{
+    ...
+}];
+return YES;
+}
+```
+
+2. Start Lifecycle data collection by calling `lifecycleStart:` from within the callback of the `AEPMobileCore::registerExtensions:` method in your app's `application:didFinishLaunchingWithOptions:` delegate method.
+
+If your iOS application supports background capabilities, your `application:didFinishLaunchingWithOptions:` method might be called when iOS launches your app in the background. If you do not want background launches to count towards your lifecycle metrics, then `lifecycleStart:` should only be called when the application state is not equal to `UIApplicationStateBackground`.
+
+```objectivec
+- (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // register the lifecycle extension, and begin event processing with Core
+    const UIApplicationState appState = application.applicationState;
+    [AEPMobileCore registerExtensions:@[AEPMobileLifecycle.class, ...] completion:^{
+    // only start lifecycle if the application is not in the background
+    if (appState != UIApplicationStateBackground) {
+        [AEPMobileCore lifecycleStart:nil];
+    }
+    }];
+}
+```
+
+3. When launched, if your app is resuming from a backgrounded state, iOS might call your `applicationWillEnterForeground:` delegate method. You also need to call `lifecycleStart:`, but this time you do not need all of the supporting code that you used in `application:didFinishLaunchingWithOptions:`:
+
+```objectivec
+- (void) applicationWillEnterForeground:(UIApplication *)application {
+    [AEPMobileCore lifecycleStart:nil];
+}
+```
+
+In iOS 13 and later, for a scene-based application, use the `UISceneDelegate`'s `sceneWillEnterForeground` method as follows:
+
+```objectivec
+- (void) sceneWillEnterForeground:(UIScene *)scene {
+    [AEPMobileCore lifecycleStart:nil];
+}
+```
+
+For more information on handling foregrounding applications with Scenes, refer to Apple's documentation [here](https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_foreground)
+
+4. When the app enters the background, pause Lifecycle data collection from your app's `applicationDidEnterBackground:` delegate method:
+
+```objectivec
+- (void) applicationDidEnterBackground:(UIApplication *)application {
+    [AEPMobileCore lifecyclePause];
+}
+```
+
+In iOS 13 and later, for a scene-based application, use the `UISceneDelegate`'s `sceneDidEnterBackground` method as follows:
+
+```objectivec
+- (void) sceneDidEnterBackground:(UIScene *)scene {
+    [AEPMobileCore lifecyclePause];
+}
+```
+
+For more information on handling backgrounding applications with Scenes, refer to Apple's documentation [here](https://developer.apple.com/documentation/uikit/app_and_environment/scenes/preparing_your_ui_to_run_in_the_background)
 
 For more information, see the documentation on [Lifecycle metrics](../base/mobile-core/lifecycle/index.md).

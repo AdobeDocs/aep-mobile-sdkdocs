@@ -1,0 +1,2871 @@
+{
+  "total": 333,
+  "offset": 0,
+  "limit": 333,
+  "data": [
+    {
+      "page": "/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4",
+        "https://avatars.githubusercontent.com/u/23483039?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/config",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-brand-concierge/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/95260439?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/edge/adobe-brand-concierge/android/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/95260439?v=4"
+      ],
+      "lastUpdated": "4/22/2026"
+    },
+    {
+      "page": "/edge/adobe-brand-concierge/android/implementation-guide",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/95260439?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/edge/adobe-brand-concierge/android/style-guide",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/95260439?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/edge/adobe-brand-concierge/ios/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/95260439?v=4"
+      ],
+      "lastUpdated": "4/22/2026"
+    },
+    {
+      "page": "/edge/adobe-brand-concierge/ios/implementation-guide",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/95260439?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/edge/adobe-brand-concierge/ios/style-guide",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/95260439?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-brand-concierge/release-notes",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/95260439?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer-decisioning/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/169874009?v=4",
+        "https://avatars.githubusercontent.com/u/57627350?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer-decisioning/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/169874009?v=4",
+        "https://avatars.githubusercontent.com/u/169383978?v=4",
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/171221424?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer-decisioning/assurance-for-decisioning",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/194229688?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer-decisioning/assurance-setup",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/194229688?v=4"
+      ],
+      "lastUpdated": "7/23/2025"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer-decisioning/optimize-configuration-view",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/194229688?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer-decisioning/release-notes",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/169874009?v=4",
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
+        "https://avatars.githubusercontent.com/u/57627350?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/u/173353453?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer-decisioning/review-simulate",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/194229688?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/176364653?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
+        "https://avatars.githubusercontent.com/u/33132425?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4",
+        "https://avatars.githubusercontent.com/u/13000319?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/code-based/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/13000319?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/code-based/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4",
+        "https://avatars.githubusercontent.com/u/13000319?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/code-based/tutorial",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/api-usage",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/aepui",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/content-provider/aepuicontentprovider",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/content-provider/contentcarduiprovider",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/contentcardmapper",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/contentcarduieventlistener",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/observers/aepuieventobserver",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/observers/contentcardeventobserver",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/aepcarduistate",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/imageonlycarduistate",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/largeimagecarduistate",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/smallimagecarduistate",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepbuttonstyle",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepcardstyle",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepcolumnstyle",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepiconstyle",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepimagestyle",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aeprowstyle",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aeptextstyle",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/imageonlyuistyle",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/largeimageuistyle",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/smallimageuistyle",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepbutton",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepcolor",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepicon",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepimage",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aeptext",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepuitemplate",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepuitemplatetype",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/imageonlytemplate",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/largeimagetemplate",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/smallimagetemplate",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/uiaction",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/uievent",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/tutorial/customizing-content-card-templates",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/tutorial/displaying-content-cards",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/tutorial/listening-content-card-events",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/api-usage",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/public-classes/contentcardcustomizing",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/public-classes/contentcardtemplatetype",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/public-classes/contentcardui",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/public-classes/contentcarduieventlistening",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/templates/imageonly-template",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/templates/largeimage-template",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/templates/smallimage-template",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/tutorial/customizing-content-card-templates",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/tutorial/displaying-content-cards",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/tutorial/listening-content-card-events",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aepbutton",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aepdismissbutton",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aepimage",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aepstack",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aeptext",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/in-app-message/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/in-app-message/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/in-app-message/tutorials/handle-clicks",
+      "avatars": [],
+      "lastUpdated": "10/24/2023"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/in-app-message/tutorials/javascript-from-native",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-metadata",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/in-app-message/tutorials/native-from-javascript",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/in-app-message/tutorials/re-evaluate",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/194229688?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/in-app-message/tutorials/trigger-campaign",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/in-app-message/validate-messages",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/android/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/android/api-usage",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/aepinbox",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/aepuistyle",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/content-provider/aepinboxcontentprovider",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/content-provider/messaginginboxprovider",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/inboxtemplate",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/inboxuistate",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/observers/aepinboxeventobserver",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/observers/inboxevent",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/observers/inboxeventobserver",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/styles/aeplazycolumnstyle",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/styles/aeplazyrowstyle",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/styles/inboxuistyle",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/android/tutorial/customizing-inbox",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/android/tutorial/displaying-inbox",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/android/tutorial/listening-inbox-events",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/api-usage",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/emptystatessettings",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/iconplacement",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/inboxorientation",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/inboxsettings",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/layoutsettings",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/unreadbackgroundsettings",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/unreadiconsettings",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/unreadindicatorsettings",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxerror",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxeventlistening",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxschemadata",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxstate",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxui",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/tutorial/customizing-inbox",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/tutorial/displaying-inbox",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/inbox-ui/ios/tutorial/listening-inbox-events",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/176364653?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/176364653?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-assurance-debuggable",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/176364653?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-attributes",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/176364653?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-data",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/176364653?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-origin",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/176364653?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/tutorial",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/176364653?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/proposition-edge-events",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/public-classes/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/public-classes/content-card",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/public-classes/content-card-schema-data",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/public-classes/content-type",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/public-classes/html-content-schema-data",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/6742873?v=4"
+      ],
+      "lastUpdated": "6/24/2024"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/public-classes/inapp-schema-data",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/6742873?v=4"
+      ],
+      "lastUpdated": "6/24/2024"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/public-classes/inbox-content-schema-data",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/63024083?v=4"
+      ],
+      "lastUpdated": "2/26/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/public-classes/json-content-schema-data",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/6742873?v=4"
+      ],
+      "lastUpdated": "6/24/2024"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/public-classes/message",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/public-classes/messaging-edge-event-type",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/public-classes/messaging-push-payload",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/63024083?v=4"
+      ],
+      "lastUpdated": "2/6/2025"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/public-classes/proposition",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4",
+        "https://avatars.githubusercontent.com/u/13000319?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/public-classes/proposition-item",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/13000319?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/public-classes/push-tracking-status",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/public-classes/surface",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4",
+        "https://avatars.githubusercontent.com/u/13000319?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/push-notification/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/push-notification/android/automatic-display-and-tracking",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/push-notification/android/manual-display-and-tracking",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/push-notification/android/push-to-iam",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/push-notification/ios/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/push-notification/ios/display-rich-notifications",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/173353453?v=4"
+      ],
+      "lastUpdated": "4/30/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/push-notification/ios/display-rich-notifications-aep",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/173353453?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/push-notification/ios/push-to-iam",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4"
+      ],
+      "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/push-notification/push-payload",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/push-notification/push-token-sync-optimizations",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/push-notification/rich-media-notifications-overview",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/release-notes",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/51965286?v=4",
+        "https://avatars.githubusercontent.com/u/8909148?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/176364653?v=4",
+        "https://avatars.githubusercontent.com/u/197083316?v=4",
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/96199823?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4",
+        "https://avatars.githubusercontent.com/u/18382782?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/tutorials/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/tutorials/handle-clicks",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "10/17/2023"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/tutorials/javascript-from-native",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/tutorials/messaging-delegate",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/tutorials/native-from-javascript",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/tutorials/validate-messages",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/consent-for-edge-network/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/consent-for-edge-network/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/consent-for-edge-network/release-notes",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/edge-network/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/edge-network/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/4697559?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/edge-network/release-notes",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/u/4697559?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/edge-network/tutorials/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/4697559?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/edge-network/tutorials/send-overrides-rules",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/edge-network/tutorials/send-overrides-sendevent",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/edge-network/validation/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/edge-network/validation/edge-analytics-validation",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/95260439?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/edge-network/validation/validation",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/edge/edge-network/xdm-experience-events",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/identity-for-edge-network/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/identity-for-edge-network/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/identity-for-edge-network/faq",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/u/66745788?v=4",
+        "https://avatars.githubusercontent.com/u/95260439?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/edge/identity-for-edge-network/release-notes",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/lifecycle-for-edge-network/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/lifecycle-for-edge-network/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "10/17/2023"
+    },
+    {
+      "page": "/edge/lifecycle-for-edge-network/behavior-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/u/95260439?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/lifecycle-for-edge-network/event-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "10/17/2023"
+    },
+    {
+      "page": "/edge/lifecycle-for-edge-network/metrics",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/lifecycle-for-edge-network/migration-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/media-for-edge-network/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/media-for-edge-network/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/media-for-edge-network/release-notes",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/edge/media-for-edge-network/tutorial",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/179128758?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/home/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/96199823?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/10753118?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/home/base/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/home/base/assurance/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/home/base/assurance/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/96199823?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/home/base/assurance/common-issues",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/home/base/assurance/release-notes",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/96199823?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/u/10753118?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "10/17/2023"
+    },
+    {
+      "page": "/home/base/mobile-core/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/configuration/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/10753118?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/configuration/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/95260439?v=4",
+        "https://avatars.githubusercontent.com/u/10753118?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/identity/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/identity/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/identity/tutorials/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/identity/tutorials/id-sharing",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/identity/tutorials/push-sync",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/lifecycle/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/lifecycle/android",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/lifecycle/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/lifecycle/behavior-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/u/95260439?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/lifecycle/configuration-keys",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/lifecycle/event-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/lifecycle/ios",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/lifecycle/metrics",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/platform-services/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/platform-services/network-service",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/release-notes",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/8909148?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/96199823?v=4",
+        "https://avatars.githubusercontent.com/u/10753118?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/rules-engine/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/rules-engine/consequence-details",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/rules-engine/technical-details",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/95260439?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/signal/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/signal/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/signal/rules-engine-integration",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/home/base/profile/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/home/base/profile/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/home/base/profile/release-notes",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/home/current-sdk-versions",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/173353453?v=4",
+        "https://avatars.githubusercontent.com/u/4697559?v=4",
+        "https://avatars.githubusercontent.com/u/33132425?v=4",
+        "https://avatars.githubusercontent.com/u/10753118?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/13000319?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/home/getting-started/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/home/getting-started/configure-datastreams",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/home/getting-started/create-a-mobile-property",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/home/getting-started/enable-debug-logging",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/home/getting-started/get-the-sdk",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/home/getting-started/set-up-schemas-and-datasets",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "10/17/2023"
+    },
+    {
+      "page": "/home/getting-started/track-events",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/home/getting-started/validate",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "10/17/2023"
+    },
+    {
+      "page": "/home/release-notes/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
+        "https://avatars.githubusercontent.com/u/95260439?v=4",
+        "https://avatars.githubusercontent.com/u/51965286?v=4",
+        "https://avatars.githubusercontent.com/u/8909148?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/176364653?v=4",
+        "https://avatars.githubusercontent.com/u/197083316?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/96199823?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/u/169874009?v=4",
+        "https://avatars.githubusercontent.com/u/57627350?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/4697559?v=4",
+        "https://avatars.githubusercontent.com/u/173353453?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/home/release-notes/2021",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/home/release-notes/2022",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "3/2/2024"
+    },
+    {
+      "page": "/home/release-notes/2023",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/home/release-notes/2024",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/8909148?v=4",
+        "https://avatars.githubusercontent.com/u/96199823?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/home/release-notes/2025",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/resources/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/10753118?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/resources/alerts",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/resources/faq",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
+        "https://avatars.githubusercontent.com/u/4697559?v=4",
+        "https://avatars.githubusercontent.com/u/96199823?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/10753118?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/resources/initialize",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/resources/major-version-alignment",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/resources/manage-gradle-dependencies",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "10/17/2023"
+    },
+    {
+      "page": "/resources/manage-spm-dependencies",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "10/17/2023"
+    },
+    {
+      "page": "/resources/migration/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/resources/migration/android/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/resources/migration/android/migrate-to-2x",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/resources/migration/android/migrate-to-3x",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/33132425?v=4",
+        "https://avatars.githubusercontent.com/u/96199823?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/resources/migration/ios/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/resources/migration/ios/migrate-to-3x",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/resources/migration/ios/migrate-to-4x",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/resources/migration/ios/migrate-to-5x",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/resources/privacy-and-gdpr",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/resources/privacy-announcement",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "10/17/2023"
+    },
+    {
+      "page": "/resources/privacy-manifest",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/10753118?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/resources/reference/push-notifications/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/resources/reference/push-notifications/android/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/resources/reference/push-notifications/ios/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/8909148?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/resources/reference/push-notifications/ios/configure-extension",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/resources/reference/push-notifications/ios/create-extension",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/resources/reference/push-notifications/ios/validate-integration",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/6742873?v=4"
+      ],
+      "lastUpdated": "4/30/2024"
+    },
+    {
+      "page": "/resources/reference/push-notifications/templates/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/resources/reference/push-notifications/templates/basic",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/resources/reference/push-notifications/templates/carousel",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/resources/reference/push-notifications/templates/catalog",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/resources/reference/push-notifications/templates/input-box",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/resources/reference/push-notifications/templates/multi-icon",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/resources/reference/push-notifications/templates/rating",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/resources/reference/push-notifications/templates/timer",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/resources/reference/push-notifications/templates/zero-bezel",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/resources/sdks-end-of-support",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/resources/upgrade-platform-sdks/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/resources/upgrade-platform-sdks/analytics",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/resources/upgrade-platform-sdks/api-changelog",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/resources/upgrade-platform-sdks/comparison",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "4/8/2024"
+    },
+    {
+      "page": "/resources/upgrade-platform-sdks/lifecycle",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/resources/upgrade-platform-sdks/v4-faq",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/resources/user-guides/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/resources/user-guides/app-extension",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "10/17/2023"
+    },
+    {
+      "page": "/resources/user-guides/attach-data",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/resources/user-guides/building-mobile-extensions",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "10/17/2023"
+    },
+    {
+      "page": "/resources/user-guides/getting-started-with-platform/overview",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/resources/user-guides/getting-started-with-platform/rules-and-xdm-events",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/resources/user-guides/getting-started-with-platform/sample-xdm-implementation",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/resources/user-guides/modify-data",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/resources/user-guides/tags-data-elements",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "10/17/2023"
+    },
+    {
+      "page": "/solution/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/2020923?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/solution/adobe-analytics/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/solution/adobe-analytics/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/solution/adobe-analytics/event-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/solution/adobe-analytics/faq",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/solution/adobe-analytics/migrate-to-edge-network",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/4697559?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/solution/adobe-analytics/product-variable",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/solution/adobe-analytics/release-notes",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/solution/adobe-analytics/track-beacon",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/solution/adobe-audience-manager/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/solution/adobe-audience-manager/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/solution/adobe-audience-manager/event-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/solution/adobe-audience-manager/release-notes",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/solution/adobe-campaign-classic/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/208768492?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/solution/adobe-campaign-classic/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/solution/adobe-campaign-classic/event-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "10/17/2023"
+    },
+    {
+      "page": "/solution/adobe-campaign-classic/push-templates/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/solution/adobe-campaign-classic/release-notes",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/208768492?v=4",
+        "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/96199823?v=4",
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/u/6742873?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/solution/adobe-campaign-standard/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/solution/adobe-campaign-standard/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/solution/adobe-campaign-standard/event-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "10/17/2023"
+    },
+    {
+      "page": "/solution/adobe-campaign-standard/push-notifications",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/solution/adobe-campaign-standard/release-notes",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/96199823?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/solution/adobe-content-analytics/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/2020923?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/solution/adobe-content-analytics/advanced-configuration",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/2020923?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/solution/adobe-content-analytics/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/2020923?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/solution/adobe-content-analytics/crash-recovery",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/2020923?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/solution/adobe-content-analytics/experience-tracking",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/2020923?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/solution/adobe-media-analytics/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/solution/adobe-media-analytics/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/solution/adobe-media-analytics/migration-guide",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/solution/adobe-media-analytics/release-notes",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/4697559?v=4",
+        "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/u/40409666?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/solution/adobe-target/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/13000319?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/solution/adobe-target/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/173353453?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/solution/adobe-target/event-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "10/17/2023"
+    },
+    {
+      "page": "/solution/adobe-target/raw-api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/solution/adobe-target/release-notes",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/8909148?v=4",
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/u/13000319?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/solution/places/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/29806547?v=4",
+        "https://avatars.githubusercontent.com/u/95260439?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/solution/places/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/solution/places/behavior-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/95260439?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/solution/places/places-to-platform",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/14/2026"
+    },
+    {
+      "page": "/solution/places/release-notes",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
+        "https://avatars.githubusercontent.com/u/20484288?v=4",
+        "https://avatars.githubusercontent.com/u/63024083?v=4",
+        "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "5/12/2026"
+    }
+  ],
+  ":type": "sheet"
+}

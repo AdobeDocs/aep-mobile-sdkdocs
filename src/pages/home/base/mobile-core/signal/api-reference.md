@@ -8,8 +8,6 @@ keywords:
 - Signal for Mobile Core
 ---
 
-import Tabs from './tabs/api-reference.md'
-
 # Signal API reference
 
 ## extensionVersion
@@ -18,43 +16,74 @@ The `extensionVersion()` API returns the version of the Signal extension that is
 
 To get the version of the Signal extension, use the following code sample:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&api=extension-version"/>
+#### Syntax
 
-iOS
+```java
+@NonNull
+public static String extensionVersion();
+```
 
-<Tabs query="platform=ios&api=extension-version"/>
+#### Example
 
-<!--- React Native
+```java
+String signalExtensionVersion = Signal.extensionVersion();
+```
 
-<Tabs query="platform=react-native&api=extension-version"/>
+### iOS Swift
 
-Flutter
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=flutter&api=extension-version"/> --->
+#### Syntax
+
+```swift
+public static let extensionVersion
+```
+
+#### Example
+
+```swift
+let version = Signal.extensionVersion
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```objectivec
+NSString *version = [AEPMobileSignal extensionVersion];
+```
 
 ## registerExtension
 
-<InlineAlert variant="warning" slots="header, text1"/>
+<InlineAlert variant="warning" slots="text1, text2"/>
 
 This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the Android mobile extension.
 
-Use [`MobileCore.registerExtensions()`](../mobile-core/api-reference.md#registerextensions) API instead.
+Use [`MobileCore.registerExtensions()`](../api-reference.md#registerextensions) API instead.
 
 Registers the Signal extension with the Mobile Core.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&api=register-extension"/>
+#### Syntax
 
-<!--- React Native
+```java
+public static void registerExtension()
+```
 
-<Tabs query="platform=react-native&api=register-extension"/> --->
+#### Example
+
+```java
+Signal.registerExtension();
+```
 
 ## collectPii
 

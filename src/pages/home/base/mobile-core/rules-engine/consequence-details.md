@@ -17,7 +17,7 @@ The Adobe Experience Platform Mobile SDK supports multiple types of rule consequ
 
 ## Analytics consequence
 
-This rule consequence is currently handled by the [Analytics](../../../solution/adobe-analytics/index.md) extension.
+This rule consequence is currently handled by the [Analytics](../../../../solution/adobe-analytics/index.md) extension.
 
 | Friendly name | Key | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
@@ -27,7 +27,7 @@ This rule consequence is currently handled by the [Analytics](../../../solution/
 
 ## In-App message consequence
 
-This rule consequence is currently handled by the [Campaign](../../../solution/adobe-campaign-standard/index.md) extension.
+This rule consequence is currently handled by the [Campaign](../../../../solution/adobe-campaign-standard/index.md) extension.
 
 | Friendly name | Key | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
@@ -82,8 +82,8 @@ This rule is currently handled by the [Profile](../../profile/index.md) extensio
 
 | Friendly name | Key | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| Operation to perform | `operation` | String | Yes | Determines the type of operation to be performed on the profile. The following operations are supported: <ul><li> `write`: Saves the `value` in the given `key` in the shared state and the local profile. If an associated value for the key already exists, the existing value will be overwritten.</li><li> `delete`: Removes `key` from the profile's shared state and the local profile.</li></ul> |
-| Device-side profile key | key | String | Yes | Key in the device-side profile on which the requested operation will be performed. **Note**: This key will be accessible later through the shared state from the Profile extension. For more details, please read the [user profile shared state](../../profile/event-reference#shared-state). |
+| Operation to perform | `operation` | String | Yes | Determines the type of operation to be performed on the profile. The following operations are supported: \<ul\>\<li\> `write`: Saves the `value` in the given `key` in the shared state and the local profile. If an associated value for the key already exists, the existing value will be overwritten.\</li\>\<li\> `delete`: Removes `key` from the profile's shared state and the local profile.\</li\>\</ul\> |
+| Device-side profile key | key | String | Yes | Key in the device-side profile on which the requested operation will be performed. **Note**: This key will be accessible later through the shared state from the Profile extension. For more details, please read the [user profile shared state](../../profile/index.md#shared-state). |
 | Device-side profile value | value | String or Number | Yes, for write operations | New value to write to the key. |
 
 ## Attach data consequence

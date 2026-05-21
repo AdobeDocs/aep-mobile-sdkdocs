@@ -8,5 +8,5 @@ keywords:
 
 # Adobe Experience Platform Edge Network - Validation
 
-* [Edge Analytics Validation](./edge-analytics-validation.md)
-* [Edge Network Validation](./validation.md)
+* [Edge Analytics Validation](edge-analytics-validation.md)
+* [Edge Network Validation](validation.md)

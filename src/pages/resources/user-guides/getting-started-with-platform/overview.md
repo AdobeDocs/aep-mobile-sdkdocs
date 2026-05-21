@@ -70,7 +70,7 @@ To create a configuration identifier use the following steps:
 
 ## Configure the tags property
 
-As a prerequisite, the Adobe Experience Platform Edge extension requires the successful implementation of the Adobe Experience Platform Mobile SDK - [Mobile Core](../../mobile-core/index.md).
+As a prerequisite, the Adobe Experience Platform Edge extension requires the successful implementation of the Adobe Experience Platform Mobile SDK - [Mobile Core](../../../home/base/mobile-core/index.md).
 
 Experience Edge extension relies on the [Mobile Core](../../../home/base/mobile-core/index.md) for the transmission of events, managing identity (ECID), and triggering client-side rules based on XDM.
 
@@ -184,7 +184,7 @@ AEP Assurance (formerly known as Project Griffon) is a product from Adobe that l
    ![](./assets/overview/commerce-assurance-connection.png)
 
 7. Once connected to Assurance, you will see a Platform icon in red color on the top right corner of the app view. The color of the Platform icon becomes gray if the connectivity to Assurance server is lost for any reason. In this case, you want to reconnect to continue to see the session in the UI.
-8. In the Assurance session, you should now start seeing events populating the Events List. When clicking the `Purchase` button from the `Edge` tab, you should see the Experience events sent to Experience Edge. For more details, refer to [Event types handled by the AEP Mobile extension](../../../edge/edge-network/validation.md).
+8. In the Assurance session, you should now start seeing events populating the Events List. When clicking the `Purchase` button from the `Edge` tab, you should see the Experience events sent to Experience Edge. For more details, refer to [Event types handled by the AEP Mobile extension](../../../edge/edge-network/index.md).
 
    To check the XDM Experience event was successfully validated, check that the `validation for the given event was successful` message is present in the `service com.adobe.streaming.validation` event.
 
@@ -233,8 +233,8 @@ To learn more about Experience Data Model (XDM), schemas, datasets, and field gr
 
 ### Sample XDM implementation
 
-To see a sample XDM implementation, please read the [sample XDM Implementation tutorial](./sample-xdm-implementation.md).
+To see a sample XDM implementation, please read the [sample XDM Implementation tutorial](sample-xdm-implementation.md).
 
 ### Rules and XDM events
 
-To learn more about the rules used for XDM events, please read the [rules and XDM events tutorial](./rules-and-xdm-events.md).
+To learn more about the rules used for XDM events, please read the [rules and XDM events tutorial](rules-and-xdm-events.md).

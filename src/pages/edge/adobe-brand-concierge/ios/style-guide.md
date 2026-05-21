@@ -56,7 +56,7 @@ struct ContentView: View {
 
 **Important:** The `.conciergeTheme()` modifier must be applied to the result of `Concierge.wrap()` so the theme is available to both the wrapper and the chat overlay.
 
----
+<HorizontalLine />
 
 ## JSON Structure
 
@@ -72,7 +72,7 @@ The theme JSON file contains these top-level keys:
 | `assets` | Icon and image assets |
 | `theme` | Visual styling tokens (CSS variables) |
 
----
+<HorizontalLine />
 
 ## Value Formats
 
@@ -157,7 +157,7 @@ Font weights use CSS numeric or named values:
 | `center` | `.center` |
 | `right` | `.trailing` |
 
----
+<HorizontalLine />
 
 ## Metadata
 
@@ -170,7 +170,7 @@ Theme identification information.
 | `metadata.language` | string | `"en-US"` | Locale identifier |
 | `metadata.namespace` | string | `"brand-concierge"` | Theme namespace |
 
-### Example
+#### Example
 
 ```json
 {
@@ -183,7 +183,7 @@ Theme identification information.
 }
 ```
 
----
+<HorizontalLine />
 
 ## Behavior
 
@@ -263,7 +263,7 @@ Feature toggles and interaction configuration.
 | `behavior.privacyNotice.title` | string | `"Privacy Notice"` | Privacy dialog title |
 | `behavior.privacyNotice.text` | string | `"Privacy notice text."` | Privacy notice content |
 
-### Example
+#### Example
 
 ```json
 {
@@ -317,7 +317,7 @@ Feature toggles and interaction configuration.
 }
 ```
 
----
+<HorizontalLine />
 
 ## Disclaimer
 
@@ -330,7 +330,7 @@ Legal disclaimer text with embedded links.
 | `disclaimer.links[].text` | string | `""` | Link display text (matches placeholder) |
 | `disclaimer.links[].url` | string | `""` | Link URL |
 
-### Example
+#### Example
 
 ```json
 {
@@ -346,7 +346,7 @@ Legal disclaimer text with embedded links.
 }
 ```
 
----
+<HorizontalLine />
 
 ## Text (Copy)
 
@@ -427,7 +427,7 @@ While there are no strict requirements for character limits in many of these tex
 |----------|---------|-------------|
 | `text["suggestions.header"]` | `"Suggestions"` | Header label shown above prompt suggestion chips when `behavior.promptSuggestions.showHeader` is `true`. |
 
-### Example
+#### Example
 
 ```json
 {
@@ -440,7 +440,7 @@ While there are no strict requirements for character limits in many of these tex
 }
 ```
 
----
+<HorizontalLine />
 
 ## Arrays
 
@@ -470,7 +470,7 @@ List-based configuration for examples and feedback options.
 | `arrays["feedback.positive.options"]` | array | Positive feedback checkbox options; array of strings. |
 | `arrays["feedback.negative.options"]` | array | Negative feedback checkbox options; array of strings. |
 
-### Example
+#### Example
 
 ```json
 {
@@ -496,7 +496,7 @@ List-based configuration for examples and feedback options.
 }
 ```
 
----
+<HorizontalLine />
 
 ## Assets
 
@@ -514,7 +514,7 @@ Icon and image asset configuration.
 
 Remote URLs must resolve to a supported raster format (PNG, JPEG, WebP, HEIC/HEIF, GIF, TIFF, BMP). SVG is not supported for remote or local icons.
 
-### Example
+#### Example
 
 ```json
 {
@@ -526,7 +526,7 @@ Remote URLs must resolve to a supported raster format (PNG, JPEG, WebP, HEIC/HEI
 }
 ```
 
----
+<HorizontalLine />
 
 ## Theme Tokens
 
@@ -815,7 +815,7 @@ Visual styling using CSS-like variable names. All properties in the `theme` obje
 | `--thinking-bubble-padding-vertical` | `layout.thinkingBubblePaddingVertical` | `CGFloat?` | `8` | Vertical inner padding of the thinking bubble |
 | `--thinking-dot-vertical-alignment` | `layout.thinkingDotVerticalAlignment` | `String?` | `"center"` | Vertical alignment of the dots row: `"top"`, `"center"`, or `"bottom"` |
 
----
+<HorizontalLine />
 
 ## Complete Example
 
@@ -1056,7 +1056,7 @@ Visual styling using CSS-like variable names. All properties in the `theme` obje
 }
 ```
 
----
+<HorizontalLine />
 
 ## Implementation Status
 

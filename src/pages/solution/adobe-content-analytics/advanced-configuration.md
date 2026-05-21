@@ -5,42 +5,47 @@ keywords:
 - Adobe Analytics
 - Product overview
 ---
-import Tabs from './tabs/advanced-configuration.md'
-import InitializeSDK from '/src/pages/resources/initialize.md'
-
 # Advanced Configuration
 
 ## Configuration Keys
 
 This section details how to programmatically configure the Content Analytics extension.
 
-The following config settings are available. These settings can also be managed within the [Adobe Content Analytics extension](/src/pages/solution/adobe-content-analytics/index.md#configure-the-content-analytics-extension).
+The following config settings are available. These settings can also be managed within the [Adobe Content Analytics extension](index.md#configure-the-content-analytics-extension).
 
 | Setting | Type | Default | Description |
 |---|---|---|---|
-| `configId` | String | N/A | [Custom datastream for Content Analytics events](/src/pages/solution/adobe-content-analytics/index.md#datastreams) (overrides edge.configId) |
-| `batchingEnabled` | Boolean | true | [Enable batching](/src/pages/solution/adobe-content-analytics/index.md#batching-settings) |
-| `maxBatchSize` | Integer | 10 | [Maximum events per batch](/src/pages/solution/adobe-content-analytics/index.md#batching-settings). |
-| `flushInterval` | Integer | 2000 | [Flush interval (in milliseconds)](/src/pages/solution/adobe-content-analytics/index.md#batching-settings) |
-| `trackExperiences` | Boolean | true | [Enable experience tracking](/src/pages/solution/adobe-content-analytics/index.md#general-settings). |
-| `excludedAssetLocationsRegexp` | String | - | [Asset location regex pattern](/src/pages/solution/adobe-content-analytics/index.md#exclusions). |
-| `excludedAssetUrlsRegexp` | String | - | [Asset URL regex pattern](/src/pages/solution/adobe-content-analytics/index.md#exclusions). |
-| `excludedExperienceLocationsRegexp` | String | - | [Experience location regex pattern](/src/pages/solution/adobe-content-analytics/index.md#exclusions). |
-| `debugLogging` | Boolean | false | [Verbose logging](/src/pages/solution/adobe-content-analytics/index.md#general-settings). |
+| `configId` | String | N/A | [Custom datastream for Content Analytics events](index.md#datastreams) (overrides edge.configId) |
+| `batchingEnabled` | Boolean | true | [Enable batching](index.md#batching-settings) |
+| `maxBatchSize` | Integer | 10 | [Maximum events per batch](index.md#batching-settings). |
+| `flushInterval` | Integer | 2000 | [Flush interval (in milliseconds)](index.md#batching-settings) |
+| `trackExperiences` | Boolean | true | [Enable experience tracking](index.md#general-settings). |
+| `excludedAssetLocationsRegexp` | String | - | [Asset location regex pattern](index.md#exclusions). |
+| `excludedAssetUrlsRegexp` | String | - | [Asset URL regex pattern](index.md#exclusions). |
+| `excludedExperienceLocationsRegexp` | String | - | [Experience location regex pattern](index.md#exclusions). |
+| `debugLogging` | Boolean | false | [Verbose logging](index.md#general-settings). |
 
 All keys are prepended with `contentanalytics.`.
 
 You can configure the extension through the Data Collection Content Analytics extension UI, or programmatically.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+MobileCore.updateConfiguration(mapOf(
+    "contentanalytics.maxBatchSize" to 20,
+    "contentanalytics.batchFlushInterval" to 5000
+))
+```
 
-<Tabs query="platform=android&task=launch"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=launch"/>
+```swift
+MobileCore.updateConfigurationWith(configDict: [
+    "contentanalytics.maxBatchSize": 20,
+    "contentanalytics.batchFlushInterval": 5000
+])
+```
 
 ## Datastream
 
@@ -110,15 +115,31 @@ To manage privacy, use the consent API's.
 
 ### Edge Consent
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+// Opt in
+Consent.update(mapOf("consents" to mapOf("collect" to mapOf("val" to "y"))))
 
-<Tabs query="platform=android&task=edge-consent"/>
+// Opt out
+Consent.update(mapOf("consents" to mapOf("collect" to mapOf("val" to "n"))))
 
-iOS
+// Pending
+Consent.update(mapOf("consents" to mapOf("collect" to mapOf("val" to "p"))))
+```
 
-<Tabs query="platform=ios&task=edge-consent"/>
+### iOS
+
+```swift
+// Opt in
+Consent.update(with: ["consents": ["collect": ["val": "y"]]])
+
+// Opt out
+Consent.update(with: ["consents": ["collect": ["val": "n"]]])
+
+// Pending
+Consent.update(with: ["consents": ["collect": ["val": "p"]]])
+```
 
 | Value | Result |
 |-------|--------|
@@ -130,29 +151,37 @@ iOS
 
 The legacy privacy APIs also should work.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+MobileCore.setPrivacyStatus(MobilePrivacyStatus.OPT_IN)   // send
+MobileCore.setPrivacyStatus(MobilePrivacyStatus.OPT_OUT)  // drop + clear
+MobileCore.setPrivacyStatus(MobilePrivacyStatus.UNKNOWN)  // queue
+```
 
-<Tabs query="platform=android&task=edge-consent-legacy"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=edge-consent-legacy"/>
+```swift
+MobileCore.setPrivacyStatus(.optedIn)   // send
+MobileCore.setPrivacyStatus(.optedOut)  // drop + clear
+MobileCore.setPrivacyStatus(.unknown)   // queue
+```
 
 ### Data Deletion
 
 To delete data, use `resetIdentities()` to reset identities, clear cache and queue.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+MobileCore.resetIdentities()  // clears cache + queue
+```
 
-<Tabs query="platform=android&task=data-deletion"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=data-deletion"/>
+```swift
+MobileCore.resetIdentities()  // clears cache + queue
+```
 
 ## Featurization
 
@@ -188,15 +217,17 @@ The default settings (`maxBatchSize: 10`, `batchFlushInterval: 2000` ms) should 
 
 Use `setLogLevel()` to set the debugging level.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+```java
+MobileCore.setLogLevel(LoggingMode.VERBOSE)
+```
 
-<Tabs query="platform=android&task=debugging"/>
+### iOS
 
-iOS
-
-<Tabs query="platform=ios&task=debugging"/>
+```swift
+MobileCore.setLogLevel(.debug)
+```
 
 Log entries are tagged. See below for the various tags.
 

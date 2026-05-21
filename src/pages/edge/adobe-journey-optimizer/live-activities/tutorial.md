@@ -23,7 +23,7 @@ This document describes how to register and manage Live Activities using the Ado
 
 ## Step 1: Define your LiveActivityAttributes
 
-Define an attribute type that conforms to the [`LiveActivityAttributes`](./public-classes/live-activity-attributes.md) protocol. This protocol extends Apple's `ActivityAttributes` and adds a required [`liveActivityData`](./public-classes/live-activity-data.md) property for Adobe Experience Platform integration.
+Define an attribute type that conforms to the [`LiveActivityAttributes`](public-classes/live-activity-attributes.md) protocol. This protocol extends Apple's `ActivityAttributes` and adds a required [`liveActivityData`](public-classes/live-activity-data.md) property for Adobe Experience Platform integration.
 
 Live Activities support two delivery models:
 
@@ -32,9 +32,9 @@ Live Activities support two delivery models:
 
 <InlineAlert variant="info" slots="text"/>
 
-The `liveActivityData` property is mandatory - it is required by the [`LiveActivityAttributes`](./public-classes/live-activity-attributes.md) protocol. For transactional activities, provide a `liveActivityID`. For broadcast activities, provide a `channelID`. The SDK uses this data to track and manage the Live Activity through Adobe Experience Platform.
+The `liveActivityData` property is mandatory - it is required by the [`LiveActivityAttributes`](public-classes/live-activity-attributes.md) protocol. For transactional activities, provide a `liveActivityID`. For broadcast activities, provide a `channelID`. The SDK uses this data to track and manage the Live Activity through Adobe Experience Platform.
 
-<CodeBlock slots="heading, code" repeat="1" languages="Swift" />
+<CodeBlock slots="heading, code" repeat="1" />
 
 #### Swift
 
@@ -59,11 +59,11 @@ struct FoodDeliveryLiveActivityAttributes: LiveActivityAttributes {
 
 ## Step 2: Register Live Activity types
 
-Register your attribute types with the Messaging extension using the [registerLiveActivities](./api-reference.md#registerliveactivities) API. Call this after the Messaging extension has been registered with `MobileCore`, typically in your `AppDelegate`.
+Register your attribute types with the Messaging extension using the [registerLiveActivities](api-reference.md#registerliveactivities) API. Call this after the Messaging extension has been registered with `MobileCore`, typically in your `AppDelegate`.
 
 Once registered, the extension automatically collects push-to-start tokens (iOS 17.2+) and activity update tokens, and forwards them to Adobe Experience Platform.
 
-<CodeBlock slots="heading, code" repeat="1" languages="Swift" />
+<CodeBlock slots="heading, code" repeat="1" />
 
 #### Swift
 
@@ -106,7 +106,7 @@ Start a Live Activity from your app using Apple's ActivityKit APIs.
 
 #### Transactional
 
-<CodeBlock slots="heading, code" repeat="1" languages="Swift" />
+<CodeBlock slots="heading, code" repeat="1" />
 
 #### Swift
 
@@ -142,7 +142,7 @@ if #available(iOS 16.1, *) {
 
 #### Broadcast (iOS 18+)
 
-<CodeBlock slots="heading, code" repeat="1" languages="Swift" />
+<CodeBlock slots="heading, code" repeat="1" />
 
 #### Swift
 
@@ -184,7 +184,7 @@ Use `"event": "start"` with a push-to-start token to remotely start a Live Activ
 
 #### Transactional
 
-<CodeBlock slots="heading, code" repeat="1" languages="JSON" />
+<CodeBlock slots="heading, code" repeat="1" />
 
 #### JSON
 
@@ -219,7 +219,7 @@ Use `"event": "start"` with a push-to-start token to remotely start a Live Activ
 
 For broadcast, use `channelID` in `liveActivityData` and include the matching `input-push-channel` key inside `aps`.
 
-<CodeBlock slots="heading, code" repeat="1" languages="JSON" />
+<CodeBlock slots="heading, code" repeat="1" />
 
 #### JSON
 
@@ -273,7 +273,7 @@ Use `"event": "update"` to update the Live Activity content. The `content-state`
 
 #### Transactional
 
-<CodeBlock slots="heading, code" repeat="1" languages="JSON" />
+<CodeBlock slots="heading, code" repeat="1" />
 
 #### JSON
 
@@ -303,7 +303,7 @@ Use `"event": "update"` to update the Live Activity content. The `content-state`
 
 #### Broadcast (iOS 18+)
 
-<CodeBlock slots="heading, code" repeat="1" languages="JSON" />
+<CodeBlock slots="heading, code" repeat="1" />
 
 #### JSON
 
@@ -338,7 +338,7 @@ Use `"event": "end"` to end the Live Activity. The activity is dismissed from th
 
 #### Transactional
 
-<CodeBlock slots="heading, code" repeat="1" languages="JSON" />
+<CodeBlock slots="heading, code" repeat="1" />
 
 #### JSON
 
@@ -364,7 +364,7 @@ Use `"event": "end"` to end the Live Activity. The activity is dismissed from th
 
 #### Broadcast (iOS 18+)
 
-<CodeBlock slots="heading, code" repeat="1" languages="JSON" />
+<CodeBlock slots="heading, code" repeat="1" />
 
 #### JSON
 
@@ -395,7 +395,7 @@ Include `"dismissal-date"` (a Unix timestamp) to control exactly when the ended 
 
 #### Transactional
 
-<CodeBlock slots="heading, code" repeat="1" languages="JSON" />
+<CodeBlock slots="heading, code" repeat="1" />
 
 #### JSON
 
@@ -422,7 +422,7 @@ Include `"dismissal-date"` (a Unix timestamp) to control exactly when the ended 
 
 #### Broadcast (iOS 18+)
 
-<CodeBlock slots="heading, code" repeat="1" languages="JSON" />
+<CodeBlock slots="heading, code" repeat="1" />
 
 #### JSON
 

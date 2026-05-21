@@ -6,45 +6,173 @@ keywords:
 - Profile
 ---
 
-import Tabs from './tabs/api-reference.md'
-
 # API reference
 
 ## extensionVersion
 
 The `extensionVersion()` API returns the version of the Profile extension.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&api=extension-version"/>
+#### Syntax
 
-iOS
+```java
+@NonNull public static String extensionVersion()
+```
 
-<Tabs query="platform=ios&api=extension-version"/>
+#### Example
 
-<!--- React Native
+```java
+String extensionVersion = UserProfile.extensionVersion();
+```
 
-<Tabs query="platform=react-native&api=extension-version"/> --->
+### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```java
+val extensionVersion = UserProfile.extensionVersion();
+```
+
+### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+static var extensionVersion: String
+```
+
+#### Example
+
+```swift
+let extensionVersion = UserProfile.extensionVersion
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objectivec
++ (nonnull NSString*) extensionVersion;
+```
+
+#### Example
+
+```objectivec
+NSString *extensionVersion = [AEPMobileUserProfile extensionVersion];
+```
 
 ## getUserAttributes
 
 The `getUserAttributes()` API gets the user profile attributes with the given keys.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+* _callback_ is invoked after the customer attributes are available.
 
-<Tabs query="platform=android&api=get-user-attributes"/>
+* A retail application wants to get the `itemsAddedToCart` user data when processing checkout.
+When `AdobeCallbackWithError` is provided, if the operation times out (5s) or an unexpected error occurs, the `fail` method is called with the appropriate `AdobeError`.
 
-iOS
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=ios&api=get-user-attributes"/>
+#### Syntax
+
+```java
+public static void getUserAttributes(@NonNull final List<String> keys, @NonNull final AdobeCallback<Map<String, Object>> callback)
+```
+
+
+#### Example
+
+```java
+UserProfile.getUserAttributes(Arrays.asList("itemsAddedToCart"), new AdobeCallbackWithError<Map<String, Object>>() {
+    @Override
+    public void fail(AdobeError adobeError) {
+         // your customized code
+    }
+    @Override
+    public void call(Map<String, Object> stringObjectMap) {
+        // your customized code
+    }
+});
+```
+
+### Android Kotlin
+
+A retail application wants to get the `itemsAddedToCart` user data when processing checkout.
+
+When `AdobeCallbackWithError` is provided, if the operation times out (5s) or an unexpected error occurs, the `fail` method is called with the appropriate `AdobeError`.
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```java
+UserProfile.getUserAttributes(listOf("itemsAddedToCart")) {
+    object : AdobeCallbackWithError<Map<String, Any?>> {
+        override fun fail(adobeError: AdobeError) {
+            // your customized code
+        }
+
+        override fun call(value: Map<String, Any?>) {
+            // your customized code
+        }
+    }
+}
+```
+
+### iOS Swift
+
+* _completion_ is the callback `function` which will be called with user attributes.
+* A retail application wants to get the `itemsAddedToCart` user data when processing checkout.
+When the callback is provided, if the operation times out (5s) or an unexpected error occurs, the `completion` method is called with the appropriate `AEPError`.
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+static func getUserAttributes(attributeNames: [String], completion: @escaping ([String: Any]?, AEPError) -> Void)
+```
+
+#### Example
+
+```swift
+UserProfile.getUserAttributes(attributeNames: ["itemsAddedToCart"]) { attributes, error in
+// your customized code
+}
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objectivec
++ (void)getUserAttributesWithAttributeNames:(NSArray<NSString *> * _Nonnull) comletion:^(NSDictionary<NSString *,id> * _Nullable, enum AEPError)
+```
+
+#### Example
+
+```objectivec
+NSArray *attributes = @[@"itemsAddedToCart"];
+[AEPMobileUserProfile getUserAttributesWithAttributeNames:attributes completion:^(NSDictionary<NSString *,id> * _Nullable, enum AEPError) {
+        // your customized code
+}];
+```
 
 ## registerExtension
 
-<InlineAlert variant="warning" slots="header, text1"/>
+<InlineAlert variant="warning" slots="text1, text2"/>
 
 This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the Android mobile extension.
 
@@ -52,15 +180,30 @@ Use [`MobileCore.registerExtensions()`](../mobile-core/api-reference.md#register
 
 Registers the Profile extension with the Mobile Core extension.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&api=register-extension"/>
+#### Syntax
+
+```java
+@Deprecated
+public static void registerExtension()
+```
+
+#### Example
+
+```java
+import com.adobe.marketing.mobile.UserProfile
+
+...
+
+UserProfile.registerExtension();
+```
 
 ## removeUserAttribute
 
-<InlineAlert variant="warning" slots="header, text1"/>
+<InlineAlert variant="warning" slots="text1, text2"/>
 
 This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the Android mobile extension.
 
@@ -68,29 +211,96 @@ Use [`removeUserAttributes`](#removeuserattributes) API instead.
 
 Deprecated as of 2.0.0. Please use the [removeUserAttributes](#removeuserattributes) API instead.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+A retail application wants to remove the `itemsAddedToCart` user data after the product is purchased.
 
-<Tabs query="platform=android&api=remove-user-attribute"/>
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```java
+@Deprecated
+public static void removeUserAttribute(@NonNull final String attributeName)
+```
+
+#### Example
+
+```java
+UserProfile.removeUserAttribute("itemsAddedToCart");
+```
 
 ## removeUserAttributes
 
 Removes the user profile attributes for the given keys.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+You want to remove `username`, `usertype` user data when session timeout occurs.
 
-<Tabs query="platform=android&api=remove-user-attributes"/>
+<CodeBlock slots="heading, code" repeat="2" />
 
-iOS
+#### Syntax
 
-<Tabs query="platform=ios&api=remove-user-attributes"/>
+```java
+public static void removeUserAttributes(@NonNull final List<String> attributeNames)
+```
+
+#### Example
+
+```java
+UserProfile.removeUserAttributes(Arrays.asList("username", "usertype"));
+```
+
+### Android Kotlin
+
+You want to remove `username`, `usertype` user data when session timeout occurs.
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```java
+UserProfile.removeUserAttributes(listOf("username", "usertype"))
+```
+
+### iOS Swift
+
+You want to remove `username`, `usertype` user data when session timeout occurs.
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+public static void removeUserAttributes(List<String> attributeNames)
+```
+
+#### Example
+
+```swift
+UserProfile.removeUserAttributes(Arrays.asList("username", "usertype"));
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objectivec
++ (void) removeUserAttributesWithAttributeNames:(NSArray<NSString *> * _Nonnull)
+```
+
+#### Example
+
+```objectivec
+[AEPMobileUserProfile removeUserAttributesWithAttributeNames:@[@"username", @"usertype"]]
+```
 
 ## updateUserAttribute
 
-<InlineAlert variant="warning" slots="header, text1"/>
+<InlineAlert variant="warning" slots="text1, text2"/>
 
 This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the Android mobile extension.
 
@@ -104,11 +314,24 @@ Remember the following information:
 * If the attribute exists, the value will be updated.
 * A null attribute value removes the attribute.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+### Android Java
 
-Android
+You want to update `username` of a user obtained in the log in page:
 
-<Tabs query="platform=android&api=update-user-attribute"/>
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```java
+@Deprecated
+public static void updateUserAttribute(@NonNull final String attributeName, @Nullable final Object attributeValue)
+```
+
+#### Example
+
+```java
+UserProfile.updateUserAttribute("username", "Will Smith");
+```
 
 ## updateUserAttributes
 
@@ -122,12 +345,80 @@ Allows you to create/update a batch of user profile attributes:
 * If the attribute already exists, the value is updated.
 * A null attribute value will remove the attribute.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+You want to update `username`, `usertype` of a user obtained in the log in page:
 
-<Tabs query="platform=android&api=update-user-attributes"/>
+<CodeBlock slots="heading, code" repeat="2" />
 
-iOS
+#### Syntax
 
-<Tabs query="platform=ios&api=update-user-attributes"/>
+```java
+public static void updateUserAttributes(@NonNull final Map<String, Object> attributeMap)
+```
+
+#### Example
+
+```java
+HashMap<String, Object> profileMap = new HashMap<>();
+profileMap.put("username","Will Smith");
+profileMap.put("usertype","Actor");
+UserProfile.updateUserAttributes(profileMap);
+```
+
+### Android Kotlin
+
+You want to update `username`, `usertype` of a user obtained in the log in page:
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```java
+val profileMap = mapOf(
+        "username" to "Will Smith",
+        "usertype" to "Actor"
+    )
+UserProfile.updateUserAttributes(profileMap)
+```
+
+### iOS Swift
+
+You want to update `username, usertype` of a user obtained in the log in page:
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+public static func updateUserAttributes(attributeDict: [String: Any])
+```
+
+#### Example
+
+```swift
+var profileMap = [AnyHashable: Any]()
+profileMap["username"] = "will_smith"
+profileMap["usertype"] = "Actor"
+UserProfile.updateUserAttributes(attributeDict: profileMap)
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objectivec
++ (void)updateUserAttributesWithAttributeDict:(NSDictionary<NSString *,id> * _Nonnull)
+```
+
+#### Example
+
+```objectivec
+NSMutableDictionary *profileMap = [NSMutableDictionary dictionary];
+[profileMap setObject:@"username" forKey:@"will_smith"];
+[profileMap setObject:@"usertype" forKey:@"Actor"];
+[AEPMobileUserProfile updateUserAttributesWithAttributeDict:profileMap];
+```
+

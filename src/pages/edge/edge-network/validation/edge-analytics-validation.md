@@ -8,8 +8,6 @@ keywords:
 - Assurance
 ---
 
-import Tabs from './tabs/edge-analytics-validation.md'
-
 # Validating the Adobe Experience Platform Edge Network to Analytics workflow with Assurance
 
 This guide outlines the steps for using Adobe Experience Platform Assurance to validate the data flow from Edge Network to Analytics.
@@ -53,15 +51,25 @@ If an extension is missing or has an incorrect version, review your Mobile SDK r
 
 Depending on the method you are using to send Analytics data through Edge Network, verify the presence of the following extensions:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Edge.sendEvent
 
-Edge.sendEvent
+#### Required Extensions
 
-<Tabs query="api=sendevent&task=extension-validation"/>
+Core Extension, Edge Extension, Edge Identity Extension
 
-MobileCore.trackAction/trackState
+#### Optional Extensions
 
-<Tabs query="api=trackapi&task=extension-validation"/>
+Consent Extension, Lifecycle Extension
+
+### MobileCore.trackAction/trackState
+
+#### Required Extensions
+
+Core Extension, Edge Extension, Edge Identity Extension, Edge Bridge Extension
+
+#### Optional Extensions
+
+Consent Extension, Lifecycle Extension
 
 For more details on which extensions to use, refer to the [Adobe Analytics documentation](https://developer.adobe.com/client-sdks/solution/adobe-analytics/migrate-to-edge-network/).
 
