@@ -25,7 +25,7 @@ AEPButton conforms to `ObservableObject`, allowing it to be used reactively in S
 
 | Property | Type | Description |
 | --- | --- | --- |
-| text | [AEPText](../../ios/ui-elements/aeptext.md) | The text model representing the button's label. |
+| text | [AEPText](aeptext.md) | The text model representing the button's label. |
 | modifier | `AEPViewModifier` | A custom view modifier that can be applied to the button view for additional styling. |
 
 <InlineAlert variant="info" slots="text"/>

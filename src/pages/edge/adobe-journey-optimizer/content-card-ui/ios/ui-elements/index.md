@@ -21,8 +21,8 @@ keywords:
 
 Messaging extension provides the following UI elements that act as building blocks for creating templated content cards:
 
-* [AEPText](../../ios/ui-elements/aeptext.md)
-* [AEPButton](../../ios/ui-elements/aepbutton.md)
-* [AEPImage](../../ios/ui-elements/aepimage.md)
-* [AEPStack](../../ios/ui-elements/aepstack.md)
-* [AEPDismissButton](../../ios/ui-elements/aepdismissbutton.md)
+* [AEPText](aeptext.md)
+* [AEPButton](aepbutton.md)
+* [AEPImage](aepimage.md)
+* [AEPStack](aepstack.md)
+* [AEPDismissButton](aepdismissbutton.md)

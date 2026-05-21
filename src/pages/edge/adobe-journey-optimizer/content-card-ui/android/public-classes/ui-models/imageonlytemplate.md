@@ -19,16 +19,16 @@ keywords:
 
 ImageOnlyTemplate is only available in AEP SDK BOM version 3.15.0+.
 
-Class which implements [AepUITemplateType](../../../android/public-classes/ui-models/aepuitemplatetype.md) and represents an image-only template.
+Class which implements [AepUITemplateType](aepuitemplatetype.md) and represents an image-only template.
 
 ## Public Properties
 
 | Property     | Type                             | Description                                               |
 | ------------ | -------------------------------- | --------------------------------------------------------- |
 | `id`         | String                           | The unique identifier for this template.                  |
-| `image`      | [AepImage](../../../android/public-classes/ui-models/aepimage.md)        | The details of the image to be displayed.                 |
+| `image`      | [AepImage](aepimage.md)        | The details of the image to be displayed.                 |
 | `actionUrl`  | String?                          | The URL to be opened when the image-only card is clicked. |
-| `dismissBtn` | [AepIcon](../../../android/public-classes/ui-models/aepicon.md)?         | The details for the image-only template dismiss button.   |
+| `dismissBtn` | [AepIcon](aepicon.md)?         | The details for the image-only template dismiss button.   |
 
 ## Methods
 

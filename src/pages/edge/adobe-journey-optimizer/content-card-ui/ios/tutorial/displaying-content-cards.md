@@ -38,7 +38,7 @@ Messaging.updatePropositionsForSurfaces([homePageSurface])
 
 ## Retrieve Content Cards
 
-To retrieve the content cards for a specific surface, call `getContentCardsUI`. This API returns an array of [ContentCardUI](../../ios/public-classes/contentcardui.md) objects representing content cards for which the user is qualified.
+To retrieve the content cards for a specific surface, call `getContentCardsUI`. This API returns an array of [ContentCardUI](../public-classes/contentcardui.md) objects representing content cards for which the user is qualified.
 
 `ContentCardUI` objects are created only for content cards with templates recognized by the Messaging extension. The array of `ContentCardUI` objects may contain multiple content card template types.
 

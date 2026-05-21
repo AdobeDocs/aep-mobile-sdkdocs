@@ -23,4 +23,4 @@ Each case corresponds to a specific template type, identified by its JSON string
 
 | Case        | Raw Value    | Description                                                  |
 | ----------- | ------------ | ------------------------------------------------------------ |
-| SMALL_IMAGE | `SmallImage` | Represents [SmallImageTemplate](../../../android/public-classes/ui-models/smallimagetemplate.md). |
+| SMALL_IMAGE | `SmallImage` | Represents [SmallImageTemplate](smallimagetemplate.md). |

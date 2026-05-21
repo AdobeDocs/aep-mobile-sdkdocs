@@ -24,5 +24,5 @@ public struct UnreadIconSettings: Codable
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `placement` | [`IconPlacement`](../../../ios/public-classes/inbox-settings/iconplacement.md) | The corner of the content card where the unread indicator is displayed. |
+| `placement` | [`IconPlacement`](iconplacement.md) | The corner of the content card where the unread indicator is displayed. |
 | `image` | [`AEPImage`](../../../../content-card-ui/ios/ui-elements/aepimage.md) | The image used as the unread indicator icon. |

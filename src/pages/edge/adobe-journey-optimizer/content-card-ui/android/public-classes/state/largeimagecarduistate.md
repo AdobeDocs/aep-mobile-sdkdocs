@@ -19,7 +19,7 @@ keywords:
 
 LargeImageCardUIState is only available in AEP SDK BOM version 3.15.0+.
 
-Class which implements [AepCardUIState](../../../android/public-classes/state/aepcarduistate.md) and represents the UI state of a Large Image template card.
+Class which implements [AepCardUIState](aepcarduistate.md) and represents the UI state of a Large Image template card.
 
 ## Class Definition
 

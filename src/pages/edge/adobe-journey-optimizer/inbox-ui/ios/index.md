@@ -22,29 +22,29 @@ keywords:
 
 ## API Reference
 
-* [Inbox APIs](../ios/api-usage.md)
+* [Inbox APIs](api-usage.md)
 
 ## Public Classes, Enums, and Protocols
 
-* [Class - InboxUI](../ios/public-classes/inboxui.md)
-* [Protocol - InboxEventListening](../ios/public-classes/inboxeventlistening.md)
-* [Enum - InboxError](../ios/public-classes/inboxerror.md)
-* [Enum - InboxState](../ios/public-classes/inboxstate.md)
-* [Class - InboxSchemaData](../ios/public-classes/inboxschemadata.md)
+* [Class - InboxUI](public-classes/inboxui.md)
+* [Protocol - InboxEventListening](public-classes/inboxeventlistening.md)
+* [Enum - InboxError](public-classes/inboxerror.md)
+* [Enum - InboxState](public-classes/inboxstate.md)
+* [Class - InboxSchemaData](public-classes/inboxschemadata.md)
 
 ## Inbox Settings
 
-* [InboxSettings](../ios/public-classes/inbox-settings/inboxsettings.md)
-* [EmptyStateSettings](../ios/public-classes/inbox-settings/emptystatessettings.md)
-* [LayoutSettings](../ios/public-classes/inbox-settings/layoutsettings.md)
-* [InboxOrientation](../ios/public-classes/inbox-settings/inboxorientation.md)
-* [UnreadIndicatorSettings](../ios/public-classes/inbox-settings/unreadindicatorsettings.md)
-* [UnreadBackgroundSettings](../ios/public-classes/inbox-settings/unreadbackgroundsettings.md)
-* [UnreadIconSettings](../ios/public-classes/inbox-settings/unreadiconsettings.md)
-* [IconPlacement](../ios/public-classes/inbox-settings/iconplacement.md)
+* [InboxSettings](public-classes/inbox-settings/inboxsettings.md)
+* [EmptyStateSettings](public-classes/inbox-settings/emptystatessettings.md)
+* [LayoutSettings](public-classes/inbox-settings/layoutsettings.md)
+* [InboxOrientation](public-classes/inbox-settings/inboxorientation.md)
+* [UnreadIndicatorSettings](public-classes/inbox-settings/unreadindicatorsettings.md)
+* [UnreadBackgroundSettings](public-classes/inbox-settings/unreadbackgroundsettings.md)
+* [UnreadIconSettings](public-classes/inbox-settings/unreadiconsettings.md)
+* [IconPlacement](public-classes/inbox-settings/iconplacement.md)
 
 ## Tutorials
 
-* [Fetch and Display Inbox](../ios/tutorial/displaying-inbox.md)
-* [Customizing Inbox](../ios/tutorial/customizing-inbox.md)
-* [Listening to Inbox Events](../ios/tutorial/listening-inbox-events.md)
+* [Fetch and Display Inbox](tutorial/displaying-inbox.md)
+* [Customizing Inbox](tutorial/customizing-inbox.md)
+* [Listening to Inbox Events](tutorial/listening-inbox-events.md)

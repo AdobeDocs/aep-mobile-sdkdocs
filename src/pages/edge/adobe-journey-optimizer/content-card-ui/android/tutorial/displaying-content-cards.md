@@ -35,7 +35,7 @@ Messaging.updatePropositionsForSurfaces(surfaces)
 
 ## Retrieve Content Cards
 
-To retrieve the content cards for a specific surface, call `getContentCardUIFlow`. This API returns a [flow](https://developer.android.com/kotlin/flow) of [Result](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/) containing [AepUI](../../android/public-classes/aepui.md) objects representing content cards for which the user is qualified.
+To retrieve the content cards for a specific surface, call `getContentCardUIFlow`. This API returns a [flow](https://developer.android.com/kotlin/flow) of [Result](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/) containing [AepUI](../public-classes/aepui.md) objects representing content cards for which the user is qualified.
 
 `AepUI` objects are created only for content cards with templates recognized by the Messaging extension. The flow of `AepUI` objects may contain multiple content card template types: SmallImageUI, LargeImageUI, and ImageOnlyUI.
 
@@ -145,7 +145,7 @@ Refer to this [TestApp](https://github.com/adobe/aepsdk-messaging-android/tree/m
 
 ### Retrieve ContentCardSchemaData from the Messaging extension
 
-You may retrieve the `ContentCardSchemaData` for a Content Card with the template ID using the [ContentCardMapper](../../android/public-classes/contentcardmapper.md):
+You may retrieve the `ContentCardSchemaData` for a Content Card with the template ID using the [ContentCardMapper](../public-classes/contentcardmapper.md):
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 

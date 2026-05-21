@@ -67,7 +67,7 @@
                     - [Manual display and tracking](/edge/adobe-journey-optimizer/push-notification/android/manual-display-and-tracking.md)
                     - [Display IAM on push notification interaction](/edge/adobe-journey-optimizer/push-notification/android/push-to-iam.md)
                 - [Rich Media Push Notification Support](/edge/adobe-journey-optimizer/push-notification/rich-media-notifications-overview.md)
-                - [Public classes and enums](/edge/adobe-journey-optimizer/public-classes/#push-notification.md)
+                - [Public classes and enums](/edge/adobe-journey-optimizer/public-classes/index.md#push-notification)
                     - [Class - MessagingPushPayload (Android only)](/edge/adobe-journey-optimizer/public-classes/messaging-push-payload.md)
                     - [Enum - PushTrackingStatus](/edge/adobe-journey-optimizer/public-classes/push-tracking-status.md)
                 - [Payload keys](/edge/adobe-journey-optimizer/push-notification/push-payload.md)

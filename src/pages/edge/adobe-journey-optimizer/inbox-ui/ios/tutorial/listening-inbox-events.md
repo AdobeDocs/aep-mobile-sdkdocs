@@ -18,7 +18,7 @@ This tutorial explains how to listen to events from the Inbox in your applicatio
 
 ## Overview
 
-The Messaging extension provides a way to listen to events from both the Inbox container and individual content cards within it. By conforming to the [InboxEventListening](../../ios/public-classes/inboxeventlistening.md) protocol, you can respond to inbox-level state changes and individual content card interactions.
+The Messaging extension provides a way to listen to events from both the Inbox container and individual content cards within it. By conforming to the [InboxEventListening](../public-classes/inboxeventlistening.md) protocol, you can respond to inbox-level state changes and individual content card interactions.
 
 ## Inbox-Level Events
 
@@ -54,7 +54,7 @@ func onSuccess(_ inbox: InboxUI) {
 
 ### onError
 
-Called when the inbox encounters an error while loading. See [InboxError](../../ios/public-classes/inboxerror.md) for the error types that can be returned.
+Called when the inbox encounters an error while loading. See [InboxError](../public-classes/inboxerror.md) for the error types that can be returned.
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 
@@ -150,8 +150,8 @@ func onCardDismissed(_ card: ContentCardUI) {
 
 Complete the following steps to listen to inbox events:
 
-1. Conform to the [InboxEventListening](../../ios/public-classes/inboxeventlistening.md) protocol in your class or struct and implement the desired methods.
-2. Pass the listener to the [getInboxUI](../../ios/api-usage.md#getinboxui) API.
+1. Conform to the [InboxEventListening](../public-classes/inboxeventlistening.md) protocol in your class or struct and implement the desired methods.
+2. Pass the listener to the [getInboxUI](../api-usage.md#getinboxui) API.
 
 Below is an example implementation of `InboxEventListening`:
 
@@ -279,5 +279,5 @@ func onCardInteracted(_ card: ContentCardUI, _ interactionId: String, actionURL:
 
 ## Next Steps
 
-* [Displaying Inbox](../../ios/tutorial/displaying-inbox.md) - Learn how to fetch and display the Inbox
-* [Customizing Your Inbox](../../ios/tutorial/customizing-inbox.md) - Customize appearance, spacing, and views
+* [Displaying Inbox](displaying-inbox.md) - Learn how to fetch and display the Inbox
+* [Customizing Your Inbox](customizing-inbox.md) - Customize appearance, spacing, and views

@@ -11,7 +11,7 @@ keywords:
 
 # Manual display and tracking of push notification
 
-This document describes how to manually build, display and track push notifications from Adobe Journey Optimizer using the AEPMessaging extension. You should use the [automatic display and tracking](./automatic-display-and-tracking.md) method unless you have a specific requirement to manually build, display, and track push notifications.
+This document describes how to manually build, display and track push notifications from Adobe Journey Optimizer using the AEPMessaging extension. You should use the [automatic display and tracking](automatic-display-and-tracking.md) method unless you have a specific requirement to manually build, display, and track push notifications.
 
 ## Pre-requisites
 

@@ -474,6 +474,6 @@ inboxUI.setBackground(DesignSystem.primaryGradient)
 
 ## Next Steps
 
-* [Displaying Inbox](../../ios/tutorial/displaying-inbox.md) - Learn how to fetch and display the Inbox
-* [Listening to Inbox Events](../../ios/tutorial/listening-inbox-events.md) - Respond to user interactions
+* [Displaying Inbox](displaying-inbox.md) - Learn how to fetch and display the Inbox
+* [Listening to Inbox Events](listening-inbox-events.md) - Respond to user interactions
 * [ContentCardCustomizing Protocol](../../../content-card-ui/ios/public-classes/contentcardcustomizing.md) - Deep dive into card customization

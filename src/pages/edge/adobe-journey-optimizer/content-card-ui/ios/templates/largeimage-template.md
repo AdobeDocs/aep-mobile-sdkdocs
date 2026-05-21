@@ -42,11 +42,11 @@ LargeImageTemplate conforms to `ObservableObject`, allowing it to be used reacti
 
 | Property      | Type                                                          | Description                                                  |
 | ------------- | ------------------------------------------------------------- | ------------------------------------------------------------ |
-| title         | [AEPText](../../ios/ui-elements/aeptext.md)                   | The title text for the content card.                         |
-| body          | [AEPText](../../ios/ui-elements/aeptext.md)                   | *Optional* The body text of the content card.                |
-| image         | [AEPImage](../../ios/ui-elements/aepimage.md)                 | *Optional* The image to be shown on the content card.        |
-| buttons       | [[AEPButton](../../ios/ui-elements/aepbutton.md)]             | *Optional* The list of buttons on the content card.          |
-| buttonHStack  | [AEPHStack](../../ios/ui-elements/aepstack.md#aephstack)      | A horizontal stack for arranging buttons.                    |
-| textVStack    | [AEPVStack](../../ios/ui-elements/aepstack.md#aepvstack)      | A vertical stack for arranging the title, body, and buttons. |
-| rootVStack    | [AEPVStack](../../ios/ui-elements/aepstack.md#aepvstack)      | A vertical stack for arranging the image and text stack.     |
-| dismissButton | [AEPDismissButton](../../ios/ui-elements/aepdismissbutton.md) | *Optional* The dismiss button for the content card.          |
+| title         | [AEPText](../ui-elements/aeptext.md)                   | The title text for the content card.                         |
+| body          | [AEPText](../ui-elements/aeptext.md)                   | *Optional* The body text of the content card.                |
+| image         | [AEPImage](../ui-elements/aepimage.md)                 | *Optional* The image to be shown on the content card.        |
+| buttons       | [[AEPButton](../ui-elements/aepbutton.md)]             | *Optional* The list of buttons on the content card.          |
+| buttonHStack  | [AEPHStack](../ui-elements/aepstack.md#aephstack)      | A horizontal stack for arranging buttons.                    |
+| textVStack    | [AEPVStack](../ui-elements/aepstack.md#aepvstack)      | A vertical stack for arranging the title, body, and buttons. |
+| rootVStack    | [AEPVStack](../ui-elements/aepstack.md#aepvstack)      | A vertical stack for arranging the image and text stack.     |
+| dismissButton | [AEPDismissButton](../ui-elements/aepdismissbutton.md) | *Optional* The dismiss button for the content card.          |

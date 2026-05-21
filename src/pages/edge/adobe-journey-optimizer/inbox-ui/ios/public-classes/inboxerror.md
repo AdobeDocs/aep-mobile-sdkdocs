@@ -11,7 +11,7 @@ keywords:
 
 # InboxError
 
-An enum describing errors that can occur when loading an [InboxUI](../../ios/public-classes/inboxui.md). Conforms to `LocalizedError`.
+An enum describing errors that can occur when loading an [InboxUI](inboxui.md). Conforms to `LocalizedError`.
 
 ## Enum Definition
 

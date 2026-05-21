@@ -14,7 +14,7 @@ keywords:
 
 # AepInbox
 
-`AepInbox` is a Jetpack Compose composable that renders an Inbox UI based on the provided [InboxUIState](../../android/public-classes/inboxuistate.md). It automatically handles different states (Loading, Success, Error) and renders the appropriate UI for each state.
+`AepInbox` is a Jetpack Compose composable that renders an Inbox UI based on the provided [InboxUIState](inboxuistate.md). It automatically handles different states (Loading, Success, Error) and renders the appropriate UI for each state.
 
 ## Function Definition
 
@@ -36,10 +36,10 @@ fun AepInbox(
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-| uiState | [InboxUIState](../../android/public-classes/inboxuistate.md) | The current state of the Inbox UI. This determines what content is rendered. `InboxUIState.Loading` displays the loading view, `InboxUIState.Success` displays the inbox with content cards, and `InboxUIState.Error` displays the error view. |
-| inboxStyle | [InboxUIStyle](../../android/public-classes/styles/inboxuistyle.md) | _(optional)_ The style to customize the inbox container appearance, including heading, layout, empty state views, and unread indicators. Defaults to a standard inbox style. |
-| itemsStyle | [AepUIStyle](../../android/public-classes/aepuistyle.md) | _(optional)_ The style to customize individual content cards within the inbox. This allows styling of different card types ([SmallImageUIStyle](../../../content-card-ui/android/public-classes/styles/smallimageuistyle.md), [LargeImageUIStyle](../../../content-card-ui/android/public-classes/styles/largeimageuistyle.md), [ImageOnlyUIStyle](../../../content-card-ui/android/public-classes/styles/imageonlyuistyle.md)). Defaults to a standard card style. |
-| observer | [AepInboxEventObserver](../../android/public-classes/observers/aepinboxeventobserver.md) | _(required)_ An event observer that handles inbox-level events internally (such as inbox display tracking) and allows apps to listen to content card events (Display, Interact, Dismiss). Use [InboxEventObserver](../../android/public-classes/observers/inboxeventobserver.md) which automatically handles inbox tracking and can optionally delegate card events to your [ContentCardUIEventListener](../../../content-card-ui/android/public-classes/contentcarduieventlistener.md). |
+| uiState | [InboxUIState](inboxuistate.md) | The current state of the Inbox UI. This determines what content is rendered. `InboxUIState.Loading` displays the loading view, `InboxUIState.Success` displays the inbox with content cards, and `InboxUIState.Error` displays the error view. |
+| inboxStyle | [InboxUIStyle](styles/inboxuistyle.md) | _(optional)_ The style to customize the inbox container appearance, including heading, layout, empty state views, and unread indicators. Defaults to a standard inbox style. |
+| itemsStyle | [AepUIStyle](aepuistyle.md) | _(optional)_ The style to customize individual content cards within the inbox. This allows styling of different card types ([SmallImageUIStyle](../../../content-card-ui/android/public-classes/styles/smallimageuistyle.md), [LargeImageUIStyle](../../../content-card-ui/android/public-classes/styles/largeimageuistyle.md), [ImageOnlyUIStyle](../../../content-card-ui/android/public-classes/styles/imageonlyuistyle.md)). Defaults to a standard card style. |
+| observer | [AepInboxEventObserver](observers/aepinboxeventobserver.md) | _(required)_ An event observer that handles inbox-level events internally (such as inbox display tracking) and allows apps to listen to content card events (Display, Interact, Dismiss). Use [InboxEventObserver](observers/inboxeventobserver.md) which automatically handles inbox tracking and can optionally delegate card events to your [ContentCardUIEventListener](../../../content-card-ui/android/public-classes/contentcarduieventlistener.md). |
 
 ## Behavior
 

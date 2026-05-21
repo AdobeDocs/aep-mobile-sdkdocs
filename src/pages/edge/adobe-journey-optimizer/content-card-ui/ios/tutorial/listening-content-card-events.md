@@ -21,7 +21,7 @@ This tutorial explains how to listen to content card events in your application.
 
 ## Overview
 
-The Messaging extension provides a way to listen to events from content cards displayed in your application. The following functions can be implemented in conformance with the [ContentCardUIEventListening](../../ios/public-classes/contentcarduieventlistening.md) protocol:
+The Messaging extension provides a way to listen to events from content cards displayed in your application. The following functions can be implemented in conformance with the [ContentCardUIEventListening](../public-classes/contentcarduieventlistening.md) protocol:
 
 * `onDisplay`
 * `onDismiss`
@@ -31,8 +31,8 @@ The Messaging extension provides a way to listen to events from content cards di
 
 Complete the following steps to listen to content card events:
 
-1. Conform to the [ContentCardUIEventListening](../../ios/public-classes/contentcarduieventlistening.md) protocol in your class or struct and implement the desired methods.
-1. Pass the listener to the [getContentCardsUI](../../ios/api-usage.md#getcontentcardsui) API.
+1. Conform to the [ContentCardUIEventListening](../public-classes/contentcarduieventlistening.md) protocol in your class or struct and implement the desired methods.
+1. Pass the listener to the [getContentCardsUI](../api-usage.md#getcontentcardsui) API.
 
 Below is an example implementation of `ContentCardEventListening`:
 

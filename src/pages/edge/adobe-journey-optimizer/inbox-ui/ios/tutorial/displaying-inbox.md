@@ -36,7 +36,7 @@ Messaging.updatePropositionsForSurfaces([inboxSurface])
 
 ## Display Inbox
 
-To display an Inbox, call `getInboxUI` with your configured surface. This API returns an [InboxUI](../../ios/public-classes/inboxui.md) instance immediately, which manages its own state transitions — loading, loaded, and error — automatically.
+To display an Inbox, call `getInboxUI` with your configured surface. This API returns an [InboxUI](../public-classes/inboxui.md) instance immediately, which manages its own state transitions — loading, loaded, and error — automatically.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -176,5 +176,5 @@ let promotionsInboxUI = Messaging.getInboxUI(for: Surface(path: "promotions"))
 
 ## Next Steps
 
-* [Listening to Inbox Events](../../ios/tutorial/listening-inbox-events.md) - Learn how to respond to user interactions
-* [Customizing Your Inbox](../../ios/tutorial/customizing-inbox.md) - Customize appearance, spacing, and views
+* [Listening to Inbox Events](listening-inbox-events.md) - Learn how to respond to user interactions
+* [Customizing Your Inbox](customizing-inbox.md) - Customize appearance, spacing, and views

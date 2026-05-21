@@ -24,5 +24,5 @@ public struct UnreadIndicatorSettings: Codable
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `unreadBackground` | [`UnreadBackgroundSettings?`](../../../ios/public-classes/inbox-settings/unreadbackgroundsettings.md) | Optional configuration for the background color of the unread indicator. |
-| `unreadIcon` | [`UnreadIconSettings?`](../../../ios/public-classes/inbox-settings/unreadiconsettings.md) | Optional configuration for the icon image and its placement within the unread indicator. |
+| `unreadBackground` | [`UnreadBackgroundSettings?`](unreadbackgroundsettings.md) | Optional configuration for the background color of the unread indicator. |
+| `unreadIcon` | [`UnreadIconSettings?`](unreadiconsettings.md) | Optional configuration for the icon image and its placement within the unread indicator. |

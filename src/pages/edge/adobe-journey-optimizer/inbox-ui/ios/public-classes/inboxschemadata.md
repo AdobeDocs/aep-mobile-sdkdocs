@@ -12,7 +12,7 @@ keywords:
 
 # InboxSchemaData
 
-Represents the schema data for an inbox that drives the layout, heading, empty state, and unread indicator behavior of the [InboxUI](../../ios/public-classes/inboxui.md).
+Represents the schema data for an inbox that drives the layout, heading, empty state, and unread indicator behavior of the [InboxUI](inboxui.md).
 
 ## Class Definition
 
@@ -24,11 +24,11 @@ public class InboxSchemaData: NSObject, Codable
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `content` | [`InboxSettings`](../../ios/public-classes/inbox-settings/inboxsettings.md) | The inbox configuration settings, containing layout, heading, capacity, empty state, and unread indicator configuration. |
+| `content` | [`InboxSettings`](inbox-settings/inboxsettings.md) | The inbox configuration settings, containing layout, heading, capacity, empty state, and unread indicator configuration. |
 
 ## Usage
 
-`InboxSchemaData` is available as the `inboxSchemaData` property on [InboxUI](../../ios/public-classes/inboxui.md). It is set automatically once the inbox loads, and is `nil` while in the loading state.
+`InboxSchemaData` is available as the `inboxSchemaData` property on [InboxUI](inboxui.md). It is set automatically once the inbox loads, and is `nil` while in the loading state.
 
 <CodeBlock slots="heading, code" repeat="1" languages="Swift" />
 

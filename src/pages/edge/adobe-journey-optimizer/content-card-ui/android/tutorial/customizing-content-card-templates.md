@@ -23,7 +23,7 @@ The Messaging extension provides a way to customize content cards by using [Comp
 
 Perform the following steps to customize content card templates:
 
-1. Create a style object with a `Modifier` passing in any additional customizations as part of the constructor parameters. If customizing an [AepButtonStyle](../../android/public-classes/styles/aepbuttonstyle.md), for example, you may pass customizations such as the enabled state, elevation, shape, border, color, and padding alongside the `Modifier`.
+1. Create a style object with a `Modifier` passing in any additional customizations as part of the constructor parameters. If customizing an [AepButtonStyle](../public-classes/styles/aepbuttonstyle.md), for example, you may pass customizations such as the enabled state, elevation, shape, border, color, and padding alongside the `Modifier`.
 2. Use the created style object when invoking the builder of the template style object (e.g. `SmallImageUIStyle`)
 
 Below is an example implementation of customizing a `SmallImageCard`:

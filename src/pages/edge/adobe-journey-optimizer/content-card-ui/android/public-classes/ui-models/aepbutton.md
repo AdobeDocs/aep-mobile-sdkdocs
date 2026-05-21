@@ -23,4 +23,4 @@ Data class representing a button element in the UI.
 | --- | --- | --- |
 | `id` | String |	The unique ID for the button. |
 | `actionUrl` |	String |	The URL to be opened when the button is clicked. |
-| `text` |	[AepText](../../../android/public-classes/ui-models/aeptext.md) |	The text to be displayed on the button, represented by an AepText object. |
+| `text` |	[AepText](aeptext.md) |	The text to be displayed on the button, represented by an AepText object. |

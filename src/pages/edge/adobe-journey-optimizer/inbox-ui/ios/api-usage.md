@@ -30,13 +30,13 @@ import AEPMessaging
 
 ## getInboxUI
 
-The `getInboxUI` method obtains an [InboxUI](../ios/public-classes/inboxui.md) instance for a given surface so you can display a SwiftUI Inbox view with the qualified content cards.
+The `getInboxUI` method obtains an [InboxUI](public-classes/inboxui.md) instance for a given surface so you can display a SwiftUI Inbox view with the qualified content cards.
 
 ### Parameters
 
 * _surface_ - The [Surface](../../public-classes/surface.md) for which to retrieve the inbox.
 * _customizer_ - An optional [ContentCardCustomizing](../../content-card-ui/ios/public-classes/contentcardcustomizing.md) object to customize the appearance of the content cards within the inbox. If you do not need to customize the appearance of the content cards, this parameter can be omitted.
-* _listener_ - An optional [InboxEventListening](../ios/public-classes/inboxeventlistening.md) object to listen to state and interaction events from the inbox. If you do not need to listen to events, this parameter can be omitted.
+* _listener_ - An optional [InboxEventListening](public-classes/inboxeventlistening.md) object to listen to state and interaction events from the inbox. If you do not need to listen to events, this parameter can be omitted.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -134,6 +134,6 @@ struct InboxPage: View {
 
 ## Next Steps
 
-* [Displaying Inbox](../ios/tutorial/displaying-inbox.md) - Detailed guide on displaying an Inbox in SwiftUI and UIKit
-* [Listening to Inbox Events](../ios/tutorial/listening-inbox-events.md) - Respond to inbox state changes and card interactions
-* [Customizing Your Inbox](../ios/tutorial/customizing-inbox.md) - Customize appearance, spacing, and views
+* [Displaying Inbox](tutorial/displaying-inbox.md) - Detailed guide on displaying an Inbox in SwiftUI and UIKit
+* [Listening to Inbox Events](tutorial/listening-inbox-events.md) - Respond to inbox state changes and card interactions
+* [Customizing Your Inbox](tutorial/customizing-inbox.md) - Customize appearance, spacing, and views

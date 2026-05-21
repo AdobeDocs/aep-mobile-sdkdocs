@@ -23,7 +23,7 @@ This tutorial explains how to customize the UI of content card in your applicati
 
 ## Overview
 
-Messaging extension provides a way to customize content cards based on the template type. You can customize the content card templates using the [ContentCardCustomizing](../../ios/public-classes/contentcardcustomizing.md) protocol.
+Messaging extension provides a way to customize content cards based on the template type. You can customize the content card templates using the [ContentCardCustomizing](../public-classes/contentcardcustomizing.md) protocol.
 
 ## Implementing ContentCardCustomizing
 

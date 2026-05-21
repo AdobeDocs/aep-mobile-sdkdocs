@@ -21,15 +21,15 @@ ImageOnlyUIStyle is only available in AEP SDK BOM version 3.15.0+.
 
 Class representing the style for an image-only Adobe Experience Platform UI.
 
-![Image Only Card Composeable Layout](<../../../assets/Android/image-only-card-layout.png>)
+![Image Only Card Composeable Layout](../../../assets/android/image-only-card-layout.png)
 
 ## Public Properties
 
 | Property                 | Type                                                         | Description                                                  |
 | ------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `cardStyle`              | [AepCardStyle](../../../android/public-classes/styles/aepcardstyle.md)                            | The style for the card.                                      |
-| `imageStyle`             | [AepImageStyle](../../../android/public-classes/styles/aepimagestyle.md)                          | The style for the image.                                     |
-| `dismissButtonStyle`     | [AepIconStyle](../../../android/public-classes/styles/aepiconstyle.md)                            | The style for the dismiss button.                            |
+| `cardStyle`              | [AepCardStyle](aepcardstyle.md)                            | The style for the card.                                      |
+| `imageStyle`             | [AepImageStyle](aepimagestyle.md)                          | The style for the image.                                     |
+| `dismissButtonStyle`     | [AepIconStyle](aepiconstyle.md)                            | The style for the dismiss button.                            |
 | `dismissButtonAlignment` | [Alignment](https://developer.android.com/reference/kotlin/androidx/compose/ui/Alignment) | The alignment for the dismiss button.                        |
 
 ## Customization

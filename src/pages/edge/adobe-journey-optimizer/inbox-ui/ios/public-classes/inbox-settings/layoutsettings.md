@@ -23,4 +23,4 @@ public struct LayoutSettings: Codable
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `orientation` | [`InboxOrientation`](../../../ios/public-classes/inbox-settings/inboxorientation.md) | The direction in which content cards are arranged. |
+| `orientation` | [`InboxOrientation`](inboxorientation.md) | The direction in which content cards are arranged. |

@@ -48,7 +48,7 @@ Calling [resetIdentities](../../api-reference.md#resetidentities) will clear the
 
 ## Track push notification interactions
 
-Use [`handleNotificationResponse`](./../../api-reference.md#handlenotificationresponse) API to send push notification interaction data to Adobe Experience Platform.
+Use [`handleNotificationResponse`](../../api-reference.md#handlenotificationresponse) API to send push notification interaction data to Adobe Experience Platform.
 
 In iOS, [UNUserNotificationCenterDelegate](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate) is the interface for processing incoming notifications and responding to notification actions. Once the delegate is implemented, handle push notification responses in [userNotificationCenter(_:didReceive:withCompletionHandler:)](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate/1649501-usernotificationcenter) method.
 

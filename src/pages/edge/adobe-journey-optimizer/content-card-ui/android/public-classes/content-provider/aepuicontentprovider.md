@@ -42,7 +42,7 @@ Retrieves the content for the UI. Content is fetched lazily when the returned fl
 
 #### Returns
 
-The content for the UI as a [Flow](https://developer.android.com/kotlin/flow) of [Result](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/) containing a list of [AepUITemplate](../../../android/public-classes/ui-models/aepuitemplate.md)s.
+The content for the UI as a [Flow](https://developer.android.com/kotlin/flow) of [Result](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-result/) containing a list of [AepUITemplate](../ui-models/aepuitemplate.md)s.
 
 #### Syntax
 

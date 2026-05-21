@@ -27,7 +27,7 @@ The Messaging extension provides a way to listen to events from content cards di
 
 Complete the following steps to hear content card events:
 
-1. Implement the [ContentCardUIEventListener](../../android/public-classes/contentcarduieventlistener.md) interface in your class.
+1. Implement the [ContentCardUIEventListener](../public-classes/contentcarduieventlistener.md) interface in your class.
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
@@ -55,7 +55,7 @@ class ContentCardCallback: ContentCardUIEventListener {
 }
 ```
 
-2. Pass the listener to the [ContentCardEventObservers](../../android/public-classes/observers/contentcardeventobserver.md) class when retrieving the card composable.
+2. Pass the listener to the [ContentCardEventObservers](../public-classes/observers/contentcardeventobserver.md) class when retrieving the card composable.
 
 <CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 

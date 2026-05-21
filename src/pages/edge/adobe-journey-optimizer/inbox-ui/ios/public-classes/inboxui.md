@@ -28,9 +28,9 @@ public class InboxUI: Identifiable, ObservableObject
 | --- | --- | --- |
 | `id` | `UUID` | A unique identifier for this inbox instance. |
 | `surface` | `Surface` | The surface this inbox is bound to. |
-| `state` | [`InboxState`](../../ios/public-classes/inboxstate.md) | The current state of the inbox. Published — changes automatically update the view. |
-| `inboxSchemaData` | [`InboxSchemaData?`](../../ios/public-classes/inboxschemadata.md) | The inbox schema data, including layout, heading, and empty state settings. Published and read-only. |
-| `listener` | [`InboxEventListening?`](../../ios/public-classes/inboxeventlistening.md) | An optional listener to receive inbox state and card interaction events. |
+| `state` | [`InboxState`](inboxstate.md) | The current state of the inbox. Published — changes automatically update the view. |
+| `inboxSchemaData` | [`InboxSchemaData?`](inboxschemadata.md) | The inbox schema data, including layout, heading, and empty state settings. Published and read-only. |
+| `listener` | [`InboxEventListening?`](inboxeventlistening.md) | An optional listener to receive inbox state and card interaction events. |
 | `isPullToRefreshEnabled` | `Bool` | Whether pull-to-refresh is enabled. Default: `false`. |
 | `cardSpacing` | `CGFloat` | The vertical spacing between content cards. Default: `16`. |
 | `contentPadding` | `EdgeInsets` | The padding around the content area. Default: `EdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16)`. |
@@ -47,7 +47,7 @@ Creates a new `InboxUI` instance. Use `Messaging.getInboxUI(for:)` as the prefer
 
 * _surface_ - The `Surface` for which to display the inbox.
 * _customizer_ - An optional [`ContentCardCustomizing`](../../../content-card-ui/ios/public-classes/contentcardcustomizing.md) object to customize the appearance of content cards within the inbox.
-* _listener_ - An optional [`InboxEventListening`](../../ios/public-classes/inboxeventlistening.md) object to listen to inbox events.
+* _listener_ - An optional [`InboxEventListening`](inboxeventlistening.md) object to listen to inbox events.
 
 #### Syntax
 
@@ -206,7 +206,7 @@ Replaces the default empty state view with a custom view.
 
 #### Parameters
 
-* _builder_ - A closure that receives the optional [`EmptyStateSettings`](../../ios/public-classes/inbox-settings/emptystatessettings.md) and returns an `AnyView` to display when the inbox has no content.
+* _builder_ - A closure that receives the optional [`EmptyStateSettings`](inbox-settings/emptystatessettings.md) and returns an `AnyView` to display when the inbox has no content.
 
 #### Syntax
 

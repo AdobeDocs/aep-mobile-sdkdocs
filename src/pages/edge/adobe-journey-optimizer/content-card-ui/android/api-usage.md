@@ -19,7 +19,7 @@ This document provides information on how to use the Messaging APIs to receive a
 
 ## getContentCardUIFlow
 
-The `getContentCardUIFlow` method returns a cold [Flow](https://developer.android.com/kotlin/flow) of [AepUI](../android/public-classes/aepui.md) objects for the provided surface. These `AepUI` objects represent templated content cards whose UI can be rendered using provided card composables. Content is fetched lazily when the flow is collected.
+The `getContentCardUIFlow` method returns a cold [Flow](https://developer.android.com/kotlin/flow) of [AepUI](public-classes/aepui.md) objects for the provided surface. These `AepUI` objects represent templated content cards whose UI can be rendered using provided card composables. Content is fetched lazily when the flow is collected.
 
 <InlineAlert variant="info" slots="text"/>
 

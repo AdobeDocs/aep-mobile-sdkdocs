@@ -12,7 +12,7 @@ keywords:
 
 # InboxEventListening
 
-A protocol that defines methods for listening to state changes and content card interaction events from an [InboxUI](../../ios/public-classes/inboxui.md) instance.
+A protocol that defines methods for listening to state changes and content card interaction events from an [InboxUI](inboxui.md) instance.
 
 ## Protocol Definition
 
@@ -38,7 +38,7 @@ Called when the inbox begins loading content. Triggered when the `InboxUI` is fi
 
 #### Parameters
 
-* _inbox_ - The [InboxUI](../../ios/public-classes/inboxui.md) that is loading.
+* _inbox_ - The [InboxUI](inboxui.md) that is loading.
 
 #### Syntax
 
@@ -58,7 +58,7 @@ Called when the inbox successfully loads content. Triggered whether the inbox co
 
 #### Parameters
 
-* _inbox_ - The [InboxUI](../../ios/public-classes/inboxui.md) that loaded successfully.
+* _inbox_ - The [InboxUI](inboxui.md) that loaded successfully.
 
 #### Syntax
 
@@ -74,11 +74,11 @@ func onSuccess(_ inbox: InboxUI)
 
 ### onError
 
-Called when the inbox encounters an error while loading. See [InboxError](../../ios/public-classes/inboxerror.md) for the error types that can be returned.
+Called when the inbox encounters an error while loading. See [InboxError](inboxerror.md) for the error types that can be returned.
 
 #### Parameters
 
-* _inbox_ - The [InboxUI](../../ios/public-classes/inboxui.md) that encountered an error.
+* _inbox_ - The [InboxUI](inboxui.md) that encountered an error.
 * _error_ - The error describing what went wrong.
 
 #### Syntax

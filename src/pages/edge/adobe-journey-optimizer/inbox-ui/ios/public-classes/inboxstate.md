@@ -11,7 +11,7 @@ keywords:
 
 # InboxState
 
-An enum representing the current state of an [InboxUI](../../ios/public-classes/inboxui.md) instance.
+An enum representing the current state of an [InboxUI](inboxui.md) instance.
 
 ## Enum Definition
 
@@ -29,7 +29,7 @@ public enum InboxState {
 | --- | --- | --- |
 | `loading` | — | The inbox is fetching content. The default loading view (or custom loading view) is displayed. |
 | `loaded` | `[ContentCardUI]` | Content has been fetched. The associated array contains the content cards to display. The array may be empty if the inbox has no content, in which case the empty state view is displayed. |
-| `error` | `Error` | An error occurred while loading. The associated value is the `Error` that was encountered. See [InboxError](../../ios/public-classes/inboxerror.md) for inbox-specific error types. |
+| `error` | `Error` | An error occurred while loading. The associated value is the `Error` that was encountered. See [InboxError](inboxerror.md) for inbox-specific error types. |
 
 ## Usage
 
