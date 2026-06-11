@@ -18,8 +18,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3.1.0
-        with:
-          ref: main
 
       - name: Check existing PRs
         run: |
@@ -38,6 +36,11 @@ jobs:
         with:
           timezoneLinux: "America/Los_Angeles"
           timezoneMacos: "America/Los_Angeles"
+
+      - name: Setup Node v24
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
 
       - name: Yarn install
         run: yarn install

@@ -14,6 +14,11 @@
   "engines": {
     "node": "^24.11.0"
   },
+  "devDependencies": {
+    "lodash": "^4.17.21",
+    "lodash.template": "^4.5.0",
+    "octokit": "^3.2.0"
+  },
   "scripts": {
     "dev": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils dev",
     "buildNavigation": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils buildNavigation -v",
