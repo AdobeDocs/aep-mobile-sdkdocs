@@ -9,6 +9,22 @@ keywords:
 
 # Release notes
 
+## June 4, 2026
+
+### iOS EdgeConsent 5.0.2
+
+## What's Changed
+* Add collectConsentResyncRequired flag for collect-consent transitions
+
+**Full Changelog**: https://github.com/adobe/aepsdk-edgeconsent-ios/compare/5.0.1...5.0.2
+
+### Android EdgeConsent 3.0.3
+
+## What's Changed
+* Add collectConsentResyncRequired flag for collect-consent grant transitions
+
+**Full Changelog**: https://github.com/adobe/aepsdk-edgeconsent-android/compare/v3.0.2...v3.0.3
+
 ## August 14, 2025
 
 ### iOS EdgeConsent 5.0.1
