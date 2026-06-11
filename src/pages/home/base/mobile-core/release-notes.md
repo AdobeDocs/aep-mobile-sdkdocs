@@ -8,6 +8,28 @@ keywords:
 
 # Release notes
 
+## June 5, 2026
+
+### Flutter Core 5.1.0
+
+* Added MobileCore.setPushIdentifier API.
+
+### iOS Core 5.9.0
+
+* Added completion callback invocation for MobileCore.initialize() calls made while initialization is already in progress.
+* Added support to load bundled rules regardless of whether rules.url is set in configuration.
+
+
+**Full Changelog**: https://github.com/adobe/aepsdk-core-ios/compare/5.8.0...5.9.0
+
+## June 3, 2026
+
+### Android Core 3.7.0
+
+* Added completion callback invocation for MobileCore.initialize() calls made while initialization is already in progress.
+
+**Full Changelog**: https://github.com/adobe/aepsdk-core-android/compare/v3.6.0-core...v3.7.0-core
+
 ## February 19, 2026
 
 ### Android Core 3.6.0
