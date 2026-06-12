@@ -1562,6 +1562,37 @@ MobileCore.trackState("homePage", additionalContextData);
 
 You can update the configuration programmatically by passing configuration keys and values to override the existing configuration using `updateConfiguration` API. For more information about configuration in Mobile Core, please refer to the [Configuration API reference](configuration/api-reference.md#updateconfiguration).
 
+## updateProfileAttributes
+
+Returns a `ProfileAttributesBuilder` for syncing user profile attributes — such as device timezone — to the Adobe Edge Network. Each setter on the builder dispatches a Core event immediately; no `.send()` call is required.
+
+<InlineAlert variant="info" slots="text"/>
+
+It is the responsibility of the app to call this API with a valid value and keep profile attributes up to date. The SDK does not read any attribute from the OS — the caller must supply the correct value explicitly. Call this API as early as possible during app launch so that the Edge Network has accurate data before any personalization or notification requests are made.
+
+<InlineAlert variant="info" slots="text"/>
+
+Requires the [Identity for Edge Network](../../../edge/identity-for-edge-network/index.md) extension to be registered. That extension validates each value, deduplicates against its persistent store (so unchanged values never trigger a network request even after an app restart), and forwards new values to the Edge Network as a `profile.updateAttributes` XDM event.
+
+### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+@available(iOS 12.0, tvOS 12.0, *)
+@discardableResult
+public static func updateProfileAttributes() -> ProfileAttributesBuilder
+```
+
+#### Example
+
+```swift
+MobileCore.updateProfileAttributes()
+    .setTimezone(TimeZone(identifier: "America/New_York")!)
+```
+
 ## Public classes
 
 ### AdobeCallback
