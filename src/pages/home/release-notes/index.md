@@ -7,6 +7,282 @@ Keywords:
 
 # Release notes
 
+## June 11, 2026
+
+### Android BOM 3.19.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.18.0) | BOM (3.19.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:core** | **3.6.0** | **3.7.0**|
+| **com.adobe.marketing.mobile:edgeconsent** | **3.0.2** | **3.0.3**|
+| **com.adobe.marketing.mobile:messaging** | **3.8.0** | **3.10.0**|
+| com.adobe.marketing.mobile:analytics | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:assurance | 3.0.7 | 3.0.7 |
+| com.adobe.marketing.mobile:audience | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaign | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.4 | 3.1.4 |
+| com.adobe.marketing.mobile:edge | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeidentity | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:identity | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:media | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:optimize | 3.6.2 | 3.6.2 |
+| com.adobe.marketing.mobile:places | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+## June 10, 2026
+
+### Android Messaging 3.10.0
+
+* Added push receive tracking support to record delivery of push notifications in Adobe Experience Platform.
+* Added Messaging.trackPushReceived(remoteMessage) public API to dispatch a push receive event; intended for manual tracking flows where the client builds and displays their own notification.
+* Added automatic push receive tracking to MessagingService.handleRemoteMessage via selfInit bootstrap; when a push arrives during a cold-start, the SDK is automatically initialized from a cached app ID and the push receive event is dispatched once the SDK is ready.
+* Added SDK initialization prerequisite note to trackPushReceived documentation clarifying that MobileCore.initialize must be called before invoking the API manually
+* Added Consent Listener to sync Push Token to Adobe Experience Platform. Handling for consent change after token sync request
+* Added Notification interaction listener to allow applications to listen to notification related events like received, clicked, dismissed.
+* Added exported=false flag to NotificationInteractionReceiver to avoid static code check warnings.
+
+## June 5, 2026
+
+### Android Brand Concierge 3.7.1
+
+* Patch for Disclaimer Link Click handling fix
+
+
+**Full Changelog**: https://github.com/adobe/aepsdk-concierge-android/compare/v3.7.0...v3.7.1
+
+### Flutter Messaging 5.1.0
+
+* Fixed Android refreshInAppMessages returning Unit instead of null over the method channel, causing a type mismatch on the Flutter side.
+
+### Flutter Core 5.1.0
+
+* Added MobileCore.setPushIdentifier API.
+
+### iOS Core 5.9.0
+
+* Added completion callback invocation for MobileCore.initialize() calls made while initialization is already in progress.
+* Added support to load bundled rules regardless of whether rules.url is set in configuration.
+
+
+**Full Changelog**: https://github.com/adobe/aepsdk-core-ios/compare/5.8.0...5.9.0
+
+## June 4, 2026
+
+### iOS EdgeConsent 5.0.2
+
+## What's Changed
+* Add collectConsentResyncRequired flag for collect-consent transitions
+
+**Full Changelog**: https://github.com/adobe/aepsdk-edgeconsent-ios/compare/5.0.1...5.0.2
+
+### Android EdgeConsent 3.0.3
+
+## What's Changed
+* Add collectConsentResyncRequired flag for collect-consent grant transitions
+
+**Full Changelog**: https://github.com/adobe/aepsdk-edgeconsent-android/compare/v3.0.2...v3.0.3
+
+## June 3, 2026
+
+### Android Core 3.7.0
+
+* Added completion callback invocation for MobileCore.initialize() calls made while initialization is already in progress.
+
+**Full Changelog**: https://github.com/adobe/aepsdk-core-android/compare/v3.6.0-core...v3.7.0-core
+
+## May 29, 2026
+
+### iOS Brand Concierge 5.7.0
+
+## What's Changed
+* Making Product Carousel and Cards Adaptive to content
+* Link click tracking event added
+
+**Full Changelog**: https://github.com/adobe/aepsdk-concierge-ios/compare/5.6.0...5.7.0
+
+### Android Brand Concierge 3.7.0
+
+* Making Product Carousel and Cards Adaptive to content 
+* Link Click Tracking event fired
+
+
+**Full Changelog**: https://github.com/adobe/aepsdk-concierge-android/compare/v3.6.0...v3.7.0
+
+## May 21, 2026
+
+### Android Brand Concierge 3.6.0
+
+## Release Notes
+### Event Tracking System
+
+* Adds event tracking at parity with Android SDK via `ConciergeEventTracker`
+* Tracking is **opt-in** — disabled by default. Call `Concierge.enableTracking(enable: true)` to activate.
+* AEPEdge is not a compile-time dependency — events are silently dropped if the extension is absent.
+* PII sanitization: `query` (QuerySubmitted) and `notes` (FeedbackSubmitted) are dropped. Card payloads filtered to `productName` and `productPageURL` only.
+* Public API renamed to `setEdgeTrackingEnabled(enable:)`.
+* Chat lifecycle tracking: open timestamp, close with duration (ms).
+* Cards-only responses correctly emit paired `responseStarted`/`responseCompleted`.
+* `ConciergeCardTapHandler` for card tap tracking.
+* Demo app: `ConciergeTracker` as an integration reference. If the application wants to implement it's own tracking.
+* CI: iOS simulator bumped to 18.5.
+
+| Event | XDM Type | Payload Keys |
+|---|---|---|
+| `sessionInitialized` | `session:initialized` | — |
+| `chatOpened` | `chat:opened` | `epochTime` |
+| `chatClosed` | `chat:closed` | `epochTime`, `durationMillis` |
+| `querySubmitted` | `query:submitted` | *(query dropped — PII)* |
+| `promptSuggestionClicked` | `promptSuggestion:clicked` | `suggestion` |
+| `welcomePromptSuggestionClicked` | `welcomePromptSuggestion:clicked` | `suggestion` |
+| `cardClicked` | `card:clicked` | `element` (`productName`, `productPageURL` only) |
+| `micButtonClicked` | `micButton:clicked` | — |
+| `responseStarted` | `response:started` | `conversationId`, `interactionId` |
+| `responseCompleted` | `response:completed` | `conversationId`, `interactionId` |
+| `cardsRendered` | `cards:rendered` | `displayMode`, `elements` (filtered) |
+| `feedbackSubmitted` | `feedback:submitted` | `conversationId`, `interactionId`, `feedbackType`, `selectedOptions` *(notes dropped — PII)* |
+| `disclaimerLinkClicked` | `disclaimerLink:clicked` | `url` |
+| `errorOccurred` | `error:occurred` | `errorMessage` |
+| `ctaButtonClicked` | `ctaButton:clicked` | — |
+
+*--
+
+### LinkHints
+
+* `LinkHint` struct (`kind`, `href`) surfaced from the server response and passed through to `ChatMessageView`.
+* Drives semantic link icons in citations: `kind == "phone"` → phone icon, `kind == "store"` → storefront icon.
+* Controlled by `theme.behavior.citations.showLinkIcon`; no icon rendered when disabled.
+* Example theme JSON:
+  ```json
+  {
+    "behavior": {
+      "citations": {
+        "showLinkIcon": true,
+        "phoneIcon": "your_phone_asset_name",
+        "storeIcon": "your_store_asset_name",
+        "defaultLinkIcon": "your_default_asset_name",
+        "linkIconStyle": {
+          "size": 10,
+          "spacing": 2,
+          "baselineAdjust": 0,
+          "color": "#004C3F"
+        }
+      }
+    }
+  }
+  ```
+
+*--
+
+### Configurable Feedback
+
+* `ConciergeFeedbackBehavior` controls the thumbs-up/down feedback overlay via theme.
+* `displayMode`: `"modal"` (centered dialog with blurred backdrop) or `"action"` (bottom action sheet with drag affordance).
+* `thumbsPlacement`: `"inline"` (in sources row), `"below"` (below source rows), `"standalone"` (always a separate block).
+* `showCloseButton` / `showCancelButton`: optional overrides (defaults driven by `displayMode`).
+* `alwaysDisplay`: shows thumbs on every agent message regardless of server `feedback.eligible` flag.
+* Positive/negative option lists and notes field enabled/disabled via theme arrays.
+* Example theme JSON:
+  ```json
+  {
+    "behavior": {
+      "feedback": {
+        "thumbsPlacement": "inline",
+        "alwaysDisplay": false
+      }
+    }
+  }
+  ```
+
+*--
+
+### Chat Top Bar Image Support
+
+* Added a new top-level `header` theme section (`ConciergeHeaderConfig`) with the following configurable keys:
+
+| Theme JSON key | Type | Default | Description |
+|---|---|---|---|
+| `header.title` | `String` | `""` | Title text shown in the header bar |
+| `header.subtitle` | `String` | `""` | Subtitle text shown below the title |
+| `header.image` | `String` | `""` | Local asset name for the header image |
+| `header.layoutType` | `"textOnly"` \| `"imageOnly"` | `"textOnly"` | Controls whether image or text is shown |
+| `header.imageHeight` | `CGFloat` | `48` | Maximum height of the header image in points |
+
+* `textOnly` (default): shows title/subtitle; image is hidden even if provided.
+* `imageOnly`: shows the header image only; title/subtitle are hidden.
+* Falls back to SF Symbol `ellipsis.message.fill` when `header.image` is absent or the asset cannot be resolved.
+* **Breaking change**: `header.title` and `header.subtitle` have been moved out of the `text` (`ConciergeCopy`) section into the new `header` top-level object. Remove `"header.title"` and `"header.subtitle"` from the `text` block of any existing theme JSON.
+
+*--
+
+### Input Bar Revamp
+
+* Animated transitions between recording and text states in the composer.
+* Bottom-aligned cross, send, recording, and other action icons.
+* Max input lines increased to 10.
+* New behavior theme keys in `ConciergeInputBehavior` (`behavior.input`):
+
+| Theme JSON key | Type | Default | Description |
+|---|---|---|---|
+| `enableRecordingAnimation` | `Bool` | `false` | Show/hide the rotating glow border animation during voice recording |
+| `stopRecordingIcon` | `String?` | `nil` | Asset name for the stop-recording button; falls back to SF Symbol `stop.circle.fill` |
+
+*--
+
+### Theme / Layout Changes
+
+New and updated keys in `ConciergeLayout` (`layout`) — also available as CSS variables:
+
+| Theme JSON key | CSS variable | Type | Old default | New default | Description |
+|---|---|---|---|---|---|
+| `productCardTitleSubtitleSpacing` | `product-card-title-subtitle-spacing` | `CGFloat?` | — | `nil` | Spacing between title and subtitle in product cards |
+| `productCardSectionSpacing` | `product-card-section-spacing` | `CGFloat?` | — | `nil` | Spacing between sections in product cards |
+| `productCardPriceSpacing` | `product-card-price-spacing` | `CGFloat?` | — | `nil` | Spacing above the price row in product cards |
+| `productCardTextTopPadding` | `product-card-text-top-padding` | `CGFloat` | `20` | `16` | Top padding for the product card text area |
+| `productCardTextBottomPadding` | `product-card-text-bottom-padding` | `CGFloat` | `12` | `0` | Bottom padding for the product card text area |
+| `productCardTextHorizontalPadding` | `product-card-text-horizontal-padding` | `CGFloat` | `12` | `0` | Horizontal padding for the product card text area |
+
+*--
+
+### Bug Fixes
+
+* **ChatMessageView stack overflow crash**: Extracted `BasicMessageView` from `ChatMessageView` to resolve a recursive layout crash on physical devices.
+* **Stop recording icon**: Fixed resizing and scaling of the stop-recording button icon in the input bar.
+* **Product card dynamic height**: Removed hardcoded card height; image view is now flexible.
+* **Font design**: Removed `.rounded` font design from chat views to use the default system font.
+
+## New Contributors
+* @sagar-sharma-adobe made their first contribution in https://github.com/adobe/aepsdk-concierge-android/pull/116
+* @ishwetansh made their first contribution in https://github.com/adobe/aepsdk-concierge-android/pull/119
+* @navratan-soni made their first contribution in https://github.com/adobe/aepsdk-concierge-android/pull/123
+
+**Full Changelog**: https://github.com/adobe/aepsdk-concierge-android/compare/v3.5.0...v3.6.0
+
+### iOS Brand Concierge 5.6.0
+
+
+
+## May 19, 2026
+
+### iOS Messaging 5.14.0
+
+
+
 ## April 21, 2026
 
 ### React Native Messaging 7.4.0

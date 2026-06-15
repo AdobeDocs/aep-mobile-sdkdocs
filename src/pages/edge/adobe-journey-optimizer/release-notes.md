@@ -9,6 +9,30 @@ keywords:
 
 # Release notes
 
+## June 10, 2026
+
+### Android Messaging 3.10.0
+
+* Added push receive tracking support to record delivery of push notifications in Adobe Experience Platform.
+* Added Messaging.trackPushReceived(remoteMessage) public API to dispatch a push receive event; intended for manual tracking flows where the client builds and displays their own notification.
+* Added automatic push receive tracking to MessagingService.handleRemoteMessage via selfInit bootstrap; when a push arrives during a cold-start, the SDK is automatically initialized from a cached app ID and the push receive event is dispatched once the SDK is ready.
+* Added SDK initialization prerequisite note to trackPushReceived documentation clarifying that MobileCore.initialize must be called before invoking the API manually
+* Added Consent Listener to sync Push Token to Adobe Experience Platform. Handling for consent change after token sync request
+* Added Notification interaction listener to allow applications to listen to notification related events like received, clicked, dismissed.
+* Added exported=false flag to NotificationInteractionReceiver to avoid static code check warnings.
+
+## June 5, 2026
+
+### Flutter Messaging 5.1.0
+
+* Fixed Android refreshInAppMessages returning Unit instead of null over the method channel, causing a type mismatch on the Flutter side.
+
+## May 19, 2026
+
+### iOS Messaging 5.14.0
+
+
+
 ## April 21, 2026
 
 ### React Native Messaging 7.4.0
