@@ -34,6 +34,10 @@ jobs:
           PR_NUMBER: ${{ github.event.pull_request.number }}
         run: echo "$PR_NUMBER" > pr-number.txt
 
+      - name: Create empty linter report if linting was skipped
+        if: steps.changes.outputs.changed == 'false'
+        run: touch linter-report.txt
+
       - name: Upload linter report
         if: always()
         uses: actions/upload-artifact@v7
