@@ -8,6 +8,18 @@ keywords:
 
 # Release notes
 
+## June 22, 2026
+
+### Android Core 3.7.1
+
+## What's Changed
+* Fix In-App Message freeze and concurrent-presentable crash on plain android.app.Activity hosts (Unity) by @navratan-soni in https://github.com/adobe/aepsdk-core-android/pull/813
+* Updating Core  version to 3.7.1 by @github-actions[bot] in https://github.com/adobe/aepsdk-core-android/pull/814
+* Merge branch v3.7.1 by @navratan-soni in https://github.com/adobe/aepsdk-core-android/pull/815
+
+
+**Full Changelog**: https://github.com/adobe/aepsdk-core-android/compare/v3.7.0-core...v3.7.1-core
+
 ## June 5, 2026
 
 ### Flutter Core 5.1.0
