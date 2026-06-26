@@ -8,6 +8,14 @@ keywords:
 
 # Release notes
 
+## June 22, 2026
+
+### Android Core 3.7.1
+
+* Added support for In-App Message on plain android.app.Activity hosts, which fixes freeze and concurrent-presentable crash in In-App message on Activity.
+
+**Full Changelog**: https://github.com/adobe/aepsdk-core-android/compare/v3.7.0-core...v3.7.1-core
+
 ## June 5, 2026
 
 ### Flutter Core 5.1.0
