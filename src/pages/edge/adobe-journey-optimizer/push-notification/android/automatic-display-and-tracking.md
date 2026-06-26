@@ -91,7 +91,7 @@ public class YourAppFirebaseMessagingService extends FirebaseMessagingService {
 
 ## Push notification received tracking
 
-When the Messaging extension handles the push notification (either via the registered `MessagingService` or via `MessagingService.handleRemoteMessage`), it automatically dispatches a `pushTracking.receive` Experience Event to Adobe Experience Platform recording that the push was delivered to the device. No additional API call is required.
+When the Messaging extension handles the push notification (either via the registered `MessagingService` or via `MessagingService.handleRemoteMessage`), it automatically dispatches a `pushTracking.receive` Experience Event to Adobe Experience Platform, recording that the push was delivered to the device. No additional API call is required.
 
 This event lands in the same dataset as `applicationOpened` and `customAction` events, enabling AJO to measure the full delivery funnel (sent → received → opened) and surface pushes that are delivered but never engaged with.
 
