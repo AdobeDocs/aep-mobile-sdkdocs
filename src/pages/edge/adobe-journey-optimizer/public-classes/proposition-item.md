@@ -10,7 +10,6 @@ keywords:
 - iOS
 - Code-based Experiences
 ---
-import Tabs from './tabs/proposition-item.md'
 
 # PropositionItem
 
@@ -18,11 +17,11 @@ The `PropositionItem` class represents the decision proposition item received fr
 
 ## iOS Interface
 
-## Public variables
+### Public variables
 
-### contentCardSchemaData
+#### contentCardSchemaData
 
-Decodes and returns item data content as an [ContentCardSchemaData](./content-card-schema-data.md) object.
+Decodes and returns item data content as an [ContentCardSchemaData](content-card-schema-data.md) object.
 
 Returns `nil` if decoding fails or if the proposition item schema is not `.contentCard`.
 
@@ -30,7 +29,7 @@ Returns `nil` if decoding fails or if the proposition item schema is not `.conte
 var contentCardSchemaData: ContentCardSchemaData?
 ```
 
-### htmlContent
+#### htmlContent
 
 Returns item data content as a string if the proposition item schema is `htmlContent`, otherwise returns `nil`.
 
@@ -38,9 +37,9 @@ Returns item data content as a string if the proposition item schema is `htmlCon
 var htmlContent: String? 
 ```
 
-### inappSchemaData
+#### inappSchemaData
 
-Decodes and returns item data content as an [InAppSchemaData](./inapp-schema-data.md) object.
+Decodes and returns item data content as an [InAppSchemaData](inapp-schema-data.md) object.
 
 Returns `nil` if decoding fails or if the proposition item schema is not `.inApp`.
 
@@ -48,7 +47,7 @@ Returns `nil` if decoding fails or if the proposition item schema is not `.inApp
 var inappSchemaData: InAppSchemaData?
 ```
 
-### itemData
+#### itemData
 
 Proposition item data as dictionary.
 
@@ -56,7 +55,7 @@ Proposition item data as dictionary.
 public let itemData: [String: Any]
 ```
 
-### itemId
+#### itemId
 
 Unique proposition item identifier.
 
@@ -64,7 +63,7 @@ Unique proposition item identifier.
 public let itemId: String
 ```
 
-### jsonContentArray
+#### jsonContentArray
 
 Returns item data content as an array if it can be parsed as an array and if the proposition item schema is `jsonContent`, otherwise returns `nil`.
 
@@ -72,7 +71,7 @@ Returns item data content as an array if it can be parsed as an array and if the
 var jsonContentArray: [Any]?
 ```
 
-### jsonContentDictionary
+#### jsonContentDictionary
 
 Returns item data content as a dictionary if it can be parsed as a dictionary and if the proposition item schema is `jsonContent`, otherwise returns `nil`.
 
@@ -80,7 +79,7 @@ Returns item data content as a dictionary if it can be parsed as a dictionary an
 var jsonContentDictionary: [String: Any]?
 ```
 
-### schema
+#### schema
 
 Proposition item schema string.
 
@@ -88,158 +87,238 @@ Proposition item schema string.
 public let schema: String
 ```
 
-## Public functions
+### Public functions
 
-### generateInteractionXdm
+#### generateInteractionXdm
 
 Returns a dictionary containing XDM data for interaction with the given proposition item, for the provided event type.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+* _interaction_ is a custom string value describing the interaction.
+* _eventType_ is an enum specifying event type for the interaction.
+* _tokens_ is an array containing the decision item tokens for recording interaction.
 
-iOS
+##### iOS Swift
 
-<Tabs query="platform=ios&function=generate-interaction-xdm"/>
+<CodeBlock slots="heading, code" repeat="1" />
 
-### track
+##### Syntax
+
+```swift
+func generateInteractionXdm(_ interaction: String? = nil, withEdgeEventType eventType: MessagingEdgeEventType, forTokens tokens: [String]? = nil) -> [String: Any]?
+```
+
+#### track
 
 Tracks interaction with the given proposition item.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+* _interaction_ is a custom string value describing the interaction.
+* _eventType_ is an enum specifying event type for the interaction.
+* _tokens_ is an array containing the decision item tokens for recording interaction.
 
-iOS
+##### iOS Swift
 
-<Tabs query="platform=ios&function=track"/>
+<CodeBlock slots="heading, code" repeat="1" />
+
+##### Syntax
+
+```swift
+func track(_ interaction: String? = nil, withEdgeEventType eventType: MessagingEdgeEventType, forTokens tokens: [String]? = nil)
+```
 
 ## Android Interface
 
-## Public functions
+### Public functions
 
-### generateInteractionXdm
+#### generateInteractionXdm
 
 Returns a Map containing XDM data for interaction with the given proposition item, for the provided event type.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+* _eventType_ is an enum specifying event type for the interaction.
 
-Android
+##### Android Java
 
-<Tabs query="platform=android&function=generate-interaction-xdm"/>
+<CodeBlock slots="heading, code" repeat="1" />
 
-### generateInteractionXdm
+##### Syntax
+
+```java
+public Map<String, Object> generateInteractionXdm(@NonNull final MessagingEdgeEventType eventType)
+```
+
+#### generateInteractionXdm (with interaction and tokens)
 
 Returns a Map containing XDM data for interaction with the given proposition item, for the provided event type and decision item tokens.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+* _interaction_ is a custom string value describing the interaction.
+* _eventType_ is an enum specifying event type for the interaction.
+* _tokens_ is a list containing the decision item tokens for recording interaction.
 
-Android
+##### Android Java
 
-<Tabs query="platform=android&function=generate-interaction-xdm-with-tokens"/>
+<CodeBlock slots="heading, code" repeat="1" />
 
-### getContentCardSchemaData
+##### Syntax
 
-Decodes and returns this proposition item's content schema as a [ContentCardSchemaData](./content-card-schema-data.md), or `null` if decoding fails.
+```java
+public Map<String, Object> generateInteractionXdm(final String interaction, @NonNull final MessagingEdgeEventType eventType, final List<String> tokens)
+```
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+#### getContentCardSchemaData
 
-Android
+Decodes and returns this proposition item's content schema as a [ContentCardSchemaData](content-card-schema-data.md), or `null` if decoding fails.
 
-<Tabs query="platform=android&function=get-content-card-schema-data"/>
+##### Android Java
 
-### getHtmlContent
+<CodeBlock slots="heading, code" repeat="1" />
+
+##### Syntax
+
+```java
+public ContentCardSchemaData getContentCardSchemaData()
+```
+
+#### getHtmlContent
 
 Returns item data content as a string if the proposition item schema is `HTML_CONTENT`, otherwise returns null.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+##### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=get-html-content"/>
+##### Syntax
 
-### getInAppSchemaData
+```java
+public String getHtmlContent()
+```
 
-Decodes and returns this proposition item's content schema as a [InAppSchemaData](./inapp-schema-data.md), or `null` if decoding fails.
+#### getInAppSchemaData
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+Decodes and returns this proposition item's content schema as a [InAppSchemaData](inapp-schema-data.md), or `null` if decoding fails.
 
-Android
+##### Android Java
 
-<Tabs query="platform=android&function=get-inapp-schema-data"/>
+<CodeBlock slots="heading, code" repeat="1" />
 
-### getInboxSchemaData
+##### Syntax
 
-Decodes and returns this proposition item's content schema as an [InboxContentSchemaData](./inbox-content-schema-data.md) if the schema for this proposition item is `SchemaType.INBOX`, `null` otherwise.
+```java
+public InAppSchemaData getInAppSchemaData()
+```
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+#### getInboxSchemaData
 
-Android
+Decodes and returns this proposition item's content schema as an [InboxContentSchemaData](inbox-content-schema-data.md) if the schema for this proposition item is `SchemaType.INBOX`, `null` otherwise.
 
-<Tabs query="platform=android&function=get-inbox-schema-data"/>
+##### Android Java
 
-### getItemData
+<CodeBlock slots="heading, code" repeat="1" />
+
+##### Syntax
+
+```java
+public InboxContentSchemaData getInboxSchemaData()
+```
+
+#### getItemData
 
 Returns this proposition's unique identifier as a string.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+##### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=get-item-data"/>
+##### Syntax
 
-### getItemId
+```java
+public Map<String, Object> getItemData()
+```
+
+#### getItemId
 
 Returns this proposition item's unique identifier as a string.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+##### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=get-item-id"/>
+##### Syntax
 
-### getJsonContentArrayList
+```java
+public String getItemId()
+```
+
+#### getJsonContentArrayList
 
 Returns item data content as a list if it can be parsed as a list and if the proposition item schema is `JSON_CONTENT`, otherwise returns null.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+##### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=get-json-content-array-list"/>
+##### Syntax
 
-### getJsonContentMap
+```java
+public List<Map<String, Object>> getJsonContentArrayList()
+```
+
+#### getJsonContentMap
 
 Returns item data content as a Map if it can be parsed as a Map and if the proposition item schema is `JSON_CONTENT`, otherwise returns null.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+##### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=get-json-content-map"/>
+##### Syntax
 
-### getSchema
+```java
+public Map<String, Object> getJsonContentMap()
+```
+
+#### getSchema
 
 Returns this proposition item's content schema as a string.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+##### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=get-schema"/>
+##### Syntax
 
-### track
+```java
+public SchemaType getSchema()
+```
+
+#### track
 
 Tracks interaction with the given proposition item.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+* _eventType_ is an enum specifying event type for the interaction.
 
-Android
+##### Android Java
 
-<Tabs query="platform=android&function=track"/>
+<CodeBlock slots="heading, code" repeat="1" />
 
-### track
+##### Syntax
+
+```java
+public void track(@NonNull final MessagingEdgeEventType eventType)
+```
+
+#### track (with interaction and tokens)
 
 Tracks interaction with the given proposition item for the provided decision item tokens.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+* _interaction_ is a custom string value describing the interaction.
+* _eventType_ is an enum specifying event type for the interaction.
+* _tokens_ is a list containing the decision item tokens for recording interaction.
 
-Android
+##### Android Java
 
-<Tabs query="platform=android&function=track-with-tokens"/>
+<CodeBlock slots="heading, code" repeat="1" />
+
+##### Syntax
+
+```java
+public void track(final String interaction, @NonNull final MessagingEdgeEventType eventType, final List<String> tokens)
+```

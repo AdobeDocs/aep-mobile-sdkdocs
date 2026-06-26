@@ -7,48 +7,147 @@ keywords:
 - Messaging
 ---
 
-import Alerts from '/src/pages/resources/alerts.md'
-import Tabs from './tabs/api-reference.md'
-
 # Adobe Journey Optimizer API reference
 
 ## extensionVersion
 
 The extensionVersion API returns the library version.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&api=extension-version"/>
+#### Syntax
 
-iOS
+```java
+public static String extensionVersion();
+```
 
-<Tabs query="platform=ios&api=extension-version"/>
+#### Example
+
+```java
+Messaging.extensionVersion();
+```
+
+### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```kotlin
+Messaging.extensionVersion()
+```
+
+### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+public static let extensionVersion
+```
+
+#### Example
+
+```swift
+Messaging.extensionVersion
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+public static let extensionVersion
+```
+
+#### Example
+
+```objc
+[AEPMobileMessaging extensionVersion];
+```
 
 ## registerExtension
 
-<Alerts query="platform=android-register-extension&componentClass=InlineNestedAlert"/>
+<InlineAlert variant="warning" slots="text1, text2"/>
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the Android mobile extension.
 
-Android
+Use [`MobileCore.registerExtensions()`](../../home/base/mobile-core/api-reference.md#registerextensions) API instead.
 
-<Tabs query="platform=android&api=register-extension"/>
+### Android Java
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```java
+public static void registerExtension();
+```
+
+#### Example
+
+```java
+Messaging.registerExtension();
+```
+
+### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```kotlin
+Messaging.registerExtension()
+```
 
 ## resetIdentities
 
 The [MobileCore.resetIdentities](../../home/base/mobile-core/api-reference.md#resetidentities) API is used to inform extensions to clear any identities that it owns. Starting with release 3.3.3 on Android and 5.6.3 on iOS, the Messaging extension handles the `MobileCore.resetIdentities` API by clearing the push identifier from the Messaging extension. Using this API does not remove the push identifier from the server-side User Profile Graph.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&api=reset-identities"/>
+#### Example
 
-iOS
+```java
+MobileCore.resetIdentities();
+```
 
-<Tabs query="platform=ios&api=reset-identities"/>
+### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```kotlin
+MobileCore.resetIdentities()
+```
+
+### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```swift
+MobileCore.resetIdentities()
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```objc
+[AEPMobileCore resetIdentities];
+```
 
 <InlineAlert variant="info" slots="text"/>
 

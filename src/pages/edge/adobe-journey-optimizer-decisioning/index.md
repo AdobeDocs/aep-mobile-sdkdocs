@@ -6,9 +6,6 @@ keywords:
 - Product overview
 ---
 
-import Tabs from './tabs/index.md'
-import InitializeSDK from '/src/pages/resources/initialize.md'
-
 # Offer Decisioning and Target Extension
 
 The Offer Decisioning and Target extension powers real-time personalization workflows using Adobe Journey Optimizer - Offer Decisioning or Adobe Target in mobile apps via the Edge Network. It helps deliver personalized decisions to your app and enables tracking user interactions with the proposed decisions.
@@ -44,39 +41,158 @@ On [Experience Platform Data Collection](https://experience.adobe.com/#/data-col
 4. Click **Save**.
 5. Follow the publishing process to update SDK configuration. For more details, see the [publish the configuration guide](../../home/getting-started/create-a-mobile-property.md#publish-the-configuration).
 
-![Offer Decisioning and Target extension configuration](../../../../src/pages/edge/adobe-journey-optimizer-decisioning/assets/index/configuration.png)
+![Offer Decisioning and Target extension configuration](./assets/index/configuration.png)
 
 ## Add the Offer Decisioning and Target extension to your app
 
 <InlineAlert variant="warning" slots="text"/>
 
-For the AEPOptimize APIs to work properly, you need to integrate Mobile Core and Edge extensions in your mobile app. For more details see, documentation on [Mobile Core](../../home/base/mobile-core/index.md) and [Adobe Experience Platform Edge Network](../../edge/edge-network/index.md).
+For the AEPOptimize APIs to work properly, you need to integrate Mobile Core and Edge extensions in your mobile app. For more details see, documentation on [Mobile Core](../../home/base/mobile-core/index.md) and [Adobe Experience Platform Edge Network](../edge-network/index.md).
 
 ### Include the Optimize extension as an app dependency
 
 Add MobileCore, Edge and Optimize extensions as dependencies to your project.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+#### Android Kotlin
 
-Kotlin<br/>(Android)
+Add the required dependencies to your project by including them in the app's Gradle file.
 
-<Tabs query="platform=android-kotlin&task=add"/>
+```kotlin
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation("com.adobe.marketing.mobile:core")
+implementation("com.adobe.marketing.mobile:edgeidentity")
+implementation("com.adobe.marketing.mobile:edge")
+implementation("com.adobe.marketing.mobile:optimize")
+```
 
-Groovy<br/>(Android)
+<InlineAlert variant="warning" slots="text"/>
 
-<Tabs query="platform=android-groovy&task=add"/>
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
 
-CocoaPods<br/>(iOS)
+#### Android Groovy
 
-<Tabs query="platform=ios-pods&task=add"/>
+Add the required dependencies to your project by including them in the app's Gradle file.
+
+```java
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
+implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:edgeidentity'
+implementation 'com.adobe.marketing.mobile:edge'
+implementation 'com.adobe.marketing.mobile:optimize'
+```
+
+<InlineAlert variant="warning" slots="text"/>
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
+
+#### iOS CocoaPods
+
+Add the required dependencies to your project using CocoaPods. Add following pods in your `Podfile`:
+
+```swift
+use_frameworks!
+target 'YourAppTarget' do
+    pod 'AEPCore', '~> 5.0'
+    pod 'AEPEdge', '~> 5.0'
+    pod 'AEPEdgeIdentity', '~> 5.0'
+    pod 'AEPOptimize', '~> 5.0'
+end
+```
 
 ### Initialize Adobe Experience Platform SDK with Optimize Extension
 
-Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](../../home/getting-started/get-the-sdk.md#2-add-initialization-code) section of the getting started page.
 
 Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
 
-<InitializeSDK query="componentClass=TabsBlock"/>
+#### Android Kotlin
+
+<InlineAlert variant="warning" slots="text"/>
+
+This API is available starting from **Android BOM version 3.8.0**.
+
+```kotlin
+import com.adobe.marketing.mobile.LoggingMode
+import com.adobe.marketing.mobile.MobileCore
+...
+import android.app.Application
+...
+
+class MainApp : Application() {
+  override fun onCreate() {
+    super.onCreate()
+    MobileCore.setLogLevel(LoggingMode.DEBUG)
+    MobileCore.initialize(this, "ENVIRONMENT_ID")
+  }
+}
+```
+
+#### Android Java
+
+<InlineAlert variant="warning" slots="text"/>
+
+This API is available starting from **Android BOM version 3.8.0**.
+
+```java
+import com.adobe.marketing.mobile.LoggingMode;
+import com.adobe.marketing.mobile.MobileCore;
+...
+import android.app.Application;
+...
+public class MainApp extends Application {
+  @Override
+  public void onCreate(){
+    super.onCreate();
+    MobileCore.setLogLevel(LoggingMode.DEBUG);
+    MobileCore.initialize(this, "ENVIRONMENT_ID");
+  }
+}
+```
+
+#### iOS Swift
+
+<InlineAlert variant="warning" slots="text"/>
+
+This API is available starting from **iOS version 5.4.0**.
+
+```swift
+// AppDelegate.swift
+import AEPCore
+import AEPServices
+...
+
+final class AppDelegate: NSObject, UIApplicationDelegate {
+  func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+    MobileCore.setLogLevel(.debug)
+    MobileCore.initialize(appId: "ENVIRONMENT_ID")
+    ...
+  }
+}
+```
+
+#### iOS Objective-C
+
+<InlineAlert variant="warning" slots="text"/>
+
+This API is available starting from **iOS version 5.4.0**.
+
+```objectivec
+// AppDelegate.m
+#import "AppDelegate.h"
+@import AEPCore;
+@import AEPServices;
+...
+@implementation AppDelegate
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  [AEPMobileCore setLogLevel: AEPLogLevelDebug];  
+  [AEPMobileCore initializeWithAppId:@"ENVIRONMENT_ID" completion:^{
+      NSLog(@"AEP Mobile SDK is initialized");
+  }];
+  ...
+  return YES;
+}
+@end
+```
 
 ## Offer Decisioning and Target
 
@@ -84,27 +200,47 @@ Using the `MobileCore.initialize` API to initialize the Adobe Experience Platfor
 
 The `DecisionScope` public class provides a constructor to create a scope object using the activityId, placementId, and optional itemCount. The decision scope activity and placement information can be obtained from the decision on the Experience Platform UI.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Java
 
-Android
+```java
+final DecisionScope decisionScope = DecisionScope("xcore:offer-activity:1111111111111111", "xcore:offer-placement:1111111111111111", 3);
+```
 
-<Tabs query="platform=android&task=decisionscope"/>
+#### iOS Swift
 
-iOS
+```swift
+let decisionScope = DecisionScope(activityId: "xcore:offer-activity:1111111111111111", 
+                                  placementId: "xcore:offer-placement:1111111111111111",
+                                  itemCount: 3)
+```
 
-<Tabs query="platform=ios&task=decisionscope"/>
+#### iOS Objective-C
+
+```objc
+AEPDecisionScope* decisionScope = [[AEPDecisionScope alloc] initWithActivityId:@"xcore:offer-activity:1111111111111111"         
+                                                                   placementId:@"xcore:offer-placement:1111111111111111" 
+                                                                     itemCount:3];
+```
 
 Alternately, another of the class's constructor can be used to create a scope object using the encoded decision scope. The encoded scope can also be read directly from the decision on the Experience Platform UI.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Java
 
-Android
+```java
+final DecisionScope decisionScope = DecisionScope("eyJ4ZG06YWN0aXZpdHlJZCI6Inhjb3JlOm9mZmVyLWFjdGl2aXR5OjEyYmEyZjM4MWJjYTY3NWUiLCJ4ZG06cGxhY2VtZW50SWQiOiJ4Y29yZTpvZmZlci1wbGFjZW1lbnQ6MTJiOWEwMDA1NTUwNzM1NyIsICJ4ZG06aXRlbUNvdW50IjozfQ==");
+```
 
-<Tabs query="platform=android&task=encodedscope"/>
+#### iOS Swift
 
-iOS
+```swift
+let decisionScope = DecisionScope(name: "eyJ4ZG06YWN0aXZpdHlJZCI6Inhjb3JlOm9mZmVyLWFjdGl2aXR5OjEyYmEyZjM4MWJjYTY3NWUiLCJ4ZG06cGxhY2VtZW50SWQiOiJ4Y29yZTpvZmZlci1wbGFjZW1lbnQ6MTJiOWEwMDA1NTUwNzM1NyIsICJ4ZG06aXRlbUNvdW50IjozfQ==")
+```
 
-<Tabs query="platform=ios&task=encodedscope"/>
+#### iOS Objective-C
+
+```objc
+AEPDecisionScope* decisionScope = [[AEPDecisionScope alloc] initWithName:@"eyJ4ZG06YWN0aXZpdHlJZCI6Inhjb3JlOm9mZmVyLWFjdGl2aXR5OjEyYmEyZjM4MWJjYTY3NWUiLCJ4ZG06cGxhY2VtZW50SWQiOiJ4Y29yZTpvZmZlci1wbGFjZW1lbnQ6MTJiOWEwMDA1NTUwNzM1NyIsICJ4ZG06aXRlbUNvdW50IjozfQ=="];
+```
 
 ## Adobe Target
 
@@ -112,29 +248,119 @@ iOS
 
 The `DecisionScope` public class provides a designated initializer which can be used to create a Target location (or mbox).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Java
 
-Android
+```java
+final DecisionScope decisionScope = DecisionScope("myTargetLocation");
+```
 
-<Tabs query="platform=android&task=target-location"/>
+#### iOS Swift
 
-iOS
+```swift
+let decisionScope = DecisionScope(name: "myTargetLocation")
+```
 
-<Tabs query="platform=ios&task=target-location"/>
+#### iOS Objective-C
+
+```objc
+AEPDecisionScope* decisionScope = [[AEPDecisionScope alloc] initWithName:@"myTargetLocation"];
+```
 
 ### Target Parameters
 
 Target Parameters can be sent in a personalization query request to the Experience Edge network by adding them in `data` dictionary when calling the `updatePropositions` API.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Java
 
-Android
+```java
+final Map<String, Object> data = new HashMap<>();
+final Map<String, String> targetParameters = new HashMap<>();
 
-<Tabs query="platform=android&task=target-parameters"/>
+// Add mbox parameters
+targetParameters.put("someKey", "someValue");
 
-iOS
+// Add profile parameters - prefix with profile.
+targetParameters.put("profile.membershipLevel", "platinum");
 
-<Tabs query="platform=ios&task=target-parameters"/>
+// Add product parameters
+targetParameters.put("productId", "111");
+targetParameters.put("categoryId", "Books");
+
+// Add order parameters
+targetParameters.put("orderId", "10");
+targetParameters.put("orderTotal", "110.56");
+targetParameters.put("purchasedProductIds", "111");
+
+data.put("__adobe", new HashMap<String, Object>() {
+  {
+    put("target", targetParameters);
+  }
+});
+
+
+final DecisionScope decisionScope = DecisionScope("myTargetLocation") // Target location (or mbox)
+
+final List<DecisionScope> decisionScopes = new ArrayList<>();
+decisionScopes.add(decisionScope);
+
+Optimize.updatePropositions(decisionScopes, null, data);
+```
+
+#### iOS Swift
+
+```swift
+var data: [String: Any] = [:]
+var targetParameters: [String: String] = [:]
+
+// Add mbox parameters
+targetParameters["someKey"] = "someValue"
+
+// Add profile parameters - prefix with profile.
+targetParameters["profile.membershipLevel"] = "platinum"
+
+// Add product parameters
+targetParameters["productId"] = "111"
+targetParameters["categoryId"] = "Books"
+
+// Add order parameters
+targetParameters["orderId"] = "10"
+targetParameters["orderTotal"] = "110.56"
+targetParameters["purchasedProductIds"] = "111"
+
+data["__adobe"] = [
+  "target": targetParameters
+]
+
+let decisionScope = DecisionScope(name: "myTargetLocation") // Target location (or mbox)
+Optimize.updatePropositions(for: [decisionScope] withXdm: nil andData: data)
+```
+
+#### iOS Objective-C
+
+```objc
+NSMutableDictionary* data = [NSMutableDictionary dictionary];
+NSMutableDictionary* targetParameters = [NSMutableDictionary dictionary];
+
+// Add mbox parameters
+targetParameters[@"someKey"] = @"someValue";
+
+// Add profile parameters - prefix with profile.
+targetParameters[@"profile.membershipLevel"] = @"platinum";
+
+// Add product parameters
+targetParameters[@"productId"] = @"111";
+targetParameters[@"categoryId"] = @"Books";
+
+// Add order parameters
+targetParameters[@"orderId"] = @"10";
+targetParameters[@"orderTotal"] = @"110.56";
+targetParameters[@"purchasedProductIds"] = @"111";
+
+[data setObject:[NSDictionary dictionaryWithObject:targetParameters forKey:@"target"] forKey:@"__adobe"];
+
+AEPDecisionScope* decisionScope = [[AEPDecisionScope alloc] initWithName:@"myTargetLocation"]; // Target location (or mbox)
+[AEPMobileOptimize updatePropositions:@[decisionScope] withXdm:nil andData:data];
+```
 
 ### Target Third Party ID
 
@@ -147,17 +373,36 @@ To use Target Third Party ID in the Experience Edge mobile workflows, the corres
 
 ![Target Third Party ID configuration](./assets/index/target-tpid.png)
 
-In your mobile application, integrate the Identity for Edge Network extension to add the Target Third Party ID in the Identity Map in the personalization query request to the Edge network when calling the `updatePropositions` API. For more details, see the [Identity for Edge Network - updateIdentities API](../../edge/identity-for-edge-network/api-reference.md#updateidentities).
+In your mobile application, integrate the Identity for Edge Network extension to add the Target Third Party ID in the Identity Map in the personalization query request to the Edge network when calling the `updatePropositions` API. For more details, see the [Identity for Edge Network - updateIdentities API](../identity-for-edge-network/api-reference.md#updateidentities).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Java
 
-Android
+```java
+final IdentityItem item = new IdentityItem("1111", AuthenticatedState.AUTHENTICATED, true);
+final IdentityMap identityMap = new IdentityMap();
+identityMap.addItem(item, "userCRMID") // userCRMID being used as Third Party ID
+Identity.updateIdentities(identityMap);
+```
 
-<Tabs query="platform=android&task=target-tpid"/>
+#### iOS Swift
 
-iOS
+```swift
+let identityMap = IdentityMap()
+identityMap.add(item: IdentityItem(id: "1111", authenticatedState: AuthenticatedState.authenticated, primary: true),
+                withNamespace: "userCRMID") // userCRMID being used as Third Party ID
+Identity.updateIdentities(with: identityMap)
+```
 
-<Tabs query="platform=ios&task=target-tpid"/>
+#### iOS Objective-C
+
+```objc
+AEPIdentityItem *item = [[AEPIdentityItem alloc] initWithId:@"1111" authenticatedState:AEPAuthenticatedStateAuthenticated primary:true];
+
+AEPIdentityMap *identityMap = [[AEPIdentityMap alloc] init];
+[identityMap addItem:item withNamespace:@"userCRMID"]; // userCRMID being used as Third Party ID
+
+[AEPMobileEdgeIdentity updateIdentities:identityMap];
+```
 
 ### Target Audience Segmentation using Mobile Lifecycle Metrics
 
@@ -241,9 +486,11 @@ Once Analytics is listed as the reporting source for an activity on Target UI, b
 
 When using server-side logging, [tracking methods](#proposition-tracking-using-direct-offer-class-methods) need to be implemented in the customer mobile apps for server-side data exchange to happen with Adobe Analytics. This is because Optimize mobile SDK operates in prefetch mode and display notifications are required to indicate scope content is rendered so Experience Edge should share relevant A4T payloads with Adobe Analytics. In addition, content interactions need to be reported using click notifications and these may lead to additional A4T data exchange with Adobe Analytics.
 
-<InlineAlert variant="info" slots="text"/>
+<InlineAlert variant="info" slots="text1, text2"/>
 
-**Server-side logging**: If Analytics is enabled and configured in your datastream for the desired environment, then it is considered server-side logging. In this case, the Experience Edge handles forwarding any Target A4T payloads to Adobe Analytics, upon tracking method calls, and no Analytics tokens are returned to the client.<br/>**Client-side logging**: If Analytics is disabled in your datastream for the desired environment, then it is considered client-side logging. In this case, Analytics tokens are returned to the client and it is the responsibility of the customer to extract and send the data to Adobe Analytics, if desired.
+**Server-side logging**: If Analytics is enabled and configured in your datastream for the desired environment, then it is considered server-side logging. In this case, the Experience Edge handles forwarding any Target A4T payloads to Adobe Analytics, upon tracking method calls, and no Analytics tokens are returned to the client.
+
+**Client-side logging**: If Analytics is disabled in your datastream for the desired environment, then it is considered client-side logging. In this case, Analytics tokens are returned to the client and it is the responsibility of the customer to extract and send the data to Adobe Analytics, if desired.
 
 ## Tracking
 
@@ -251,35 +498,62 @@ When using server-side logging, [tracking methods](#proposition-tracking-using-d
 
 User interactions with the decision propositions can be tracked using the following public methods in the `Offer` class.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Java
 
-Android
+```java
+public class Offer {
+  ...
+  /**
+    * Dispatches an event for the Edge network extension to send an Experience Event to the Edge network with the display interaction data for the
+    * given {@code Proposition} offer.
+    */
+  public void displayed() {...}
 
-<Tabs query="platform=android&task=proposition-tracking-offer"/>
+  /**
+    * Dispatches an event for the Edge network extension to send an Experience Event to the Edge network with the tap interaction data for the
+    * given {@code Proposition} offer.
+    */
+  public void tapped() {...}
+}
+```
 
-iOS
+#### iOS Swift
 
-<Tabs query="platform=ios&task=proposition-tracking-offer"/>
+```swift
+public extension Offer {
+    /// Dispatches an event for the Edge extension to send an Experience Event to the Edge network with the display interaction data for the given proposition item.
+    func displayed() {...}
+
+    /// Dispatches an event for the Edge extension to send an Experience Event to the Edge network with the tap interaction data for the given proposition item.
+    func tapped() {...}
+}
+```
 
 Upon calling these `Offer` methods, an Experience Event is sent to the Edge network with the proposition interaction data for the given offer.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
+#### Android Java
 
-Java<br/>(Android)
+```java
+offer.displayed(); // Sends an Offer display notification to Edge network
+```
 
-<Tabs query="platform=android-java&task=send-event-offer"/>
+#### Android Kotlin
 
-Kotlin<br/>(Android)
+```kotlin
+offer.displayed() // Sends an Offer display notification to Edge network
+```
 
-<Tabs query="platform=android-kotlin&task=send-event-offer"/>
+#### iOS Swift
 
-Swift<br/>(iOS)
+```swift
+offer.displayed() // Sends an Offer display notification to Edge network
+```
 
-<Tabs query="platform=ios-swift&task=send-event-offer"/>
+#### iOS Objective-C
 
-Objective-C<br/>(iOS)
-
-<Tabs query="platform=ios-objectivec&task=send-event-offer"/>
+```objc
+[offer displayed]; // Sends an Offer display notification to Edge network
+```
 
 ### Multiple offers display interactions events tracking
 
@@ -289,69 +563,200 @@ To track display interactions involving multiple offers from different propositi
 
 Currently, batching multiple offer interactions is supported only for display interaction events. Tap interactions must still be tracked individually.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Kotlin
 
-Android
+```kotlin
+object OfferUtils {
+    /**
+     * Dispatches an event for the Edge network extension to send an Experience Event to the Edge
+     * network with the display interaction data for the given list of [Offer]s.
+     *
+     * This function extracts unique [OptimizeProposition]s from the list of offers based on their
+     * proposition ID and dispatches an event with multiple propositions.
+     *
+     * @see XDMUtils.trackWithData
+     */
+    @JvmStatic
+    fun List<Offer>.displayed() {...}
+}
+```
 
-<Tabs query="platform=android&task=offerutils"/>
+#### iOS Swift
 
-iOS
-
-<Tabs query="platform=ios&task=optimize"/>
+```swift
+@objc
+public extension Optimize {
+    /// This API dispatches an event for the Edge extension to send an Experience Event to the Edge network with the display interaction data for list of offers passed.
+    ///
+    /// - Parameter offers: An array of offer.
+    @objc(displayed:)
+    static func displayed(for offers: [Offer]) {...}
+}
+```
 
 Upon calling this `OfferUtils` | `Optimize` methods of android or iOS respectively, an Experience Event is sent to the Edge network with the display proposition interaction data for the given list of offers.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
+#### Android Kotlin
 
-Kotlin<br/>(Android)
+```kotlin
+// Create a list of offers from different propositions
+val offersToDisplay = listOf(
+    proposition1.offers[0],
+    proposition2.offers[0]
+)
+// Send list of offers to multiple offers display track public API
+offersToDisplay.displayed()
+```
 
-<Tabs query="platform=android-kotlin&task=proposition-tracking-batch"/>
+#### Android Java
 
-Java<br/>(Android)
+```java
+// Create a list of offers from different propositions
+final List<Offer> offersToDisplay = new ArrayList<>();
+offersToDisplay.add(proposition1.getOffers().get(0));
+offersToDisplay.add(proposition2.getOffers().get(0));
+// Send list of offers to multiple offers display track public API
+OfferUtils.displayed(offersToDisplay);
+```
 
-<Tabs query="platform=android-java&task=proposition-tracking-batch"/>
+#### iOS Swift
 
-Swift<br/>(iOS)
+```swift
+// Create an array of offers from different propositions
+let offersToDisplay = [
+    proposition1.offers[0],
+    proposition2.offers[0]
+]
+// Send array of offers to multiple offers display track public API
+Optimize.displayed(offersToDisplay)
+```
 
-<Tabs query="platform=ios-swift&task=proposition-tracking-batch"/>
+#### iOS Objective-C
 
-Objective-C<br/>(iOS)
-
-<Tabs query="platform=ios-objectivec&task=proposition-tracking-batch"/>
+```objc
+// Create an array of offers from different propositions
+NSArray<AEPOffer *> *offersToDisplay = @[
+    proposition1.offers[0],
+    proposition2.offers[0]
+];
+// Send array of offers to multiple offers display track public API
+[AEPMobileOptimize displayed: offersToDisplay];
+```
 
 ### Single offer interactions events tracking using Edge extension API
 
 For more advanced tracking use cases, additional public methods are available in the `Offer` class. These methods can be used to generate XDM formatted data for `Experience Event - Proposition Interactions` field groups.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Java
 
-Android
+```java
+public class Offer {
+  ...
+  /**
+    * Generates a map containing XDM formatted data for {@code Experience Event - Proposition Interactions} field group from this {@code Proposition} item.
+    *
+    * The returned XDM data does contain the {@code eventType} for the Experience Event with value {@code decisioning.propositionDisplay}.
+    *
+    * Note: The Edge sendEvent API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, and override
+    * dataset identifier.
+    *
+    * @return {@code Map<String, Object>} containing the XDM data for the proposition interaction.
+    */
+  public Map<String, Object> generateDisplayInteractionXdm() {...}
 
-<Tabs query="platform=android&task=proposition-tracking-edge"/>
+  /**
+    * Generates a map containing XDM formatted data for {@code Experience Event - Proposition Interactions} field group from this {@code Proposition} offer.
+    *
+    * The returned XDM data contains the {@code eventType} for the Experience Event with value {@code decisioning.propositionInteract}.
+    *
+    * Note: The Edge sendEvent API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, and override
+    * dataset identifier.
+    *
+    * @return {@code Map<String, Object>} containing the XDM data for the proposition interaction.
+    */
+  public Map<String, Object> generateTapInteractionXdm() {...}
+}
+```
 
-iOS
+#### iOS Swift
 
-<Tabs query="platform=ios&task=proposition-tracking-edge"/>
+```swift
+public extension Offer {
+  /// Creates a dictionary containing XDM formatted data for `Experience Event - Proposition Interactions` field group from the given proposition option.
+  ///
+  /// The Edge `sendEvent(experienceEvent:_:)` API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, or override dataset identifier.
+  ///
+  /// - Note: The returned XDM data also contains the `eventType` for the Experience Event with value `decisioning.propositionDisplay`.
+  /// - Returns A dictionary containing XDM data for the proposition interactions.
+  func generateDisplayInteractionXdm() -> [String: Any] {...}
 
-The Edge `sendEvent` API can then be used to send this tracking XDM data along with any additional XDM and freeform data to the Experience Edge network. Additionally, an override dataset can also be specified for tracking data. For more details, see [Edge - sendEvent API](../../edge/edge-network/api-reference.md#sendevent).
+  /// Creates a dictionary containing XDM formatted data for `Experience Event - Proposition Interactions` field group from the given proposition option.
+  ///
+  /// The Edge `sendEvent(experienceEvent:_:)` API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, or override dataset identifier.
+  ///
+  /// - Note: The returned XDM data also contains the `eventType` for the Experience Event with value `decisioning.propositionInteract`.
+  /// - Returns A dictionary containing XDM data for the proposition interactions.
+  func generateTapInteractionXdm() -> [String: Any] {...}
+}
+```
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
+The Edge `sendEvent` API can then be used to send this tracking XDM data along with any additional XDM and freeform data to the Experience Edge network. Additionally, an override dataset can also be specified for tracking data. For more details, see [Edge - sendEvent API](../edge-network/api-reference.md#sendevent).
 
-Kotlin<br/>(Android)
+#### Android Kotlin
 
-<Tabs query="platform=android-kotlin&task=send-event-edge"/>
+```kotlin
+// When a proposition is retrieved using getPropositions API or onUpdatePropositions API callback 
+// and the corresponding offer is displayed, invoke method on Offer object to get the XDM data.
 
-Java<br/>(Android)
+val displayInteractionXdm = offer.generateDisplayInteractionXdm() // Offer display tracking XDM
+val additionalData = mapOf("someDataKey" to "someDataValue")
 
-<Tabs query="platform=android-java&task=send-event-edge"/>
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(displayInteractionXdm)
+    .setData(additionalData)
+    .build()
+Edge.sendEvent(experienceEvent, null)
+```
 
-Swift<br/>(iOS)
+#### Android Java
 
-<Tabs query="platform=ios-swift&task=send-event-edge"/>
+```java
+// When a proposition is retrieved using getPropositions API or onUpdatePropositions API callback 
+// and the corresponding offer is displayed, invoke method on Offer object to get the XDM data.
 
-Objective-C<br/>(iOS)
+final Map<String, Object> displayInteractionXdm = offer.generateDisplayInteractionXdm() // Offer display tracking XDM
+final Map<String, Object> additionalData = new HashMap<>();
+additionalData.put("someDataKey", "someDataValue");
 
-<Tabs query="platform=ios-objectivec&task=send-event-edge"/>
+final ExperienceEvent experienceEvent = new ExperienceEvent.Builder().setXdmSchema(displayInteractionXdm).setData(additionalData).build();
+Edge.sendEvent(experienceEvent, null) 
+```
+
+#### iOS Swift
+
+```swift
+// When a proposition is retrieved using getPropositions API or onUpdatePropositions API callback 
+// and the corresponding offer is displayed, invoke method on Offer object to get the XDM data.
+
+let displayInteractionXdm = offer.generateDisplayInteractionXdm() // Offer display tracking XDM
+let additionalData: [String: Any] = ["someDataKey": "someDataValue"]
+
+let experienceEvent = ExperienceEvent(xdm: displayInteractionXdm, data: additionalData)
+Edge.sendEvent(experienceEvent)
+```
+
+#### iOS Objective-C
+
+```objc
+// When a proposition is retrieved using getPropositions API or onUpdatePropositions API callback 
+// and the corresponding offer is displayed, invoke method on Offer object to get the XDM data.
+
+NSDictionary* displayInteractionXdm = [offer generateDisplayInteractionXdm];
+NSDictionary* additionalData = @{@"someDataKey": @"someDataValue"};
+
+AEPExperienceEvent* experienceEvent = [[AEPExperienceEvent alloc] initWithXdm:displayInteractionXdm data:additionalData datasetIdentifier:nil];
+[AEPMobileEdge sendExperienceEvent:event completion:nil];
+```
 
 ### Multiple offer display interactions events tracking using Edge extension API
 
@@ -361,49 +766,151 @@ Starting with Optimize SDK version 3.5.0 for Android and 5.5.0 for iOS, you can 
 
 Currently, generating XDM with batched multiple offer interactions is supported only for display interaction events. Generating XDM with batched offer tap interactions events must still be tracked individually.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Kotlin
 
-Android
+```kotlin
+object OfferUtils {
+    /**
+     * Generates a map containing XDM formatted data for `Experience Event - OptimizeProposition
+     * Interactions` field group from the given list of [Offer]s.
+     *
+     * This function extracts unique [OptimizeProposition]s from the list of offers based on their
+     * proposition ID and generates XDM data for the interaction.
+     *
+     * @return [Map] containing the XDM data for the proposition interaction, or null if the list is empty
+     * or no valid propositions are found
+     */
+    @JvmStatic
+    fun List<Offer>.generateDisplayInteractionXdm(): Map<String, Any>? {...}
+}
+```
 
-<Tabs query="platform=android&task=multiple-display-propositions-tracking-edge"/>
+#### iOS Swift
 
-iOS
+```swift
+@objc
+public extension Optimize {
+    /// This API returns a dictionary containing XDM formatted data for Experience Event - Proposition Interactions field group for the list of offers
+    ///
+    /// The Edge sendEvent(experienceEvent:_:) API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, or override dataset identifier.
+    ///
+    /// - Parameter offers: An array of offer.
+    /// - Note: The returned XDM data also contains the eventType for the Experience Event with value decisioning.propositionInteract.
+    /// - Returns A dictionary containing XDM data for the propositon interactions.
+    /// - SeeAlso: interactionXdm(for:)
+    @objc(generateDisplayInteractionXdm:)
+    static func generateDisplayInteractionXdm(for offers: [Offer]) -> [String: Any]?{...}
+}
+```
 
-<Tabs query="platform=ios&task=multiple-display-propositions-tracking-edge"/>
+The Edge `sendEvent` API can then be used to send this tracking XDM data along with any additional XDM and freeform data to the Experience Edge network. Additionally, an override dataset can also be specified for tracking data. For more details, see [Edge - sendEvent API](../edge-network/api-reference.md#sendevent).
 
-The Edge `sendEvent` API can then be used to send this tracking XDM data along with any additional XDM and freeform data to the Experience Edge network. Additionally, an override dataset can also be specified for tracking data. For more details, see [Edge - sendEvent API](../../edge/edge-network/api-reference.md#sendevent).
+#### Android Kotlin
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="4"/>
+```kotlin
+// When propositions are retrieved using getPropositions API or onUpdatePropositions API callback 
+// and the corresponding offers are displayed, invoke method on List<Offer> to get the XDM data.
 
-Kotlin<br/>(Android)
+val displayInteractionXdm = offers.generateDisplayInteractionXdm() // Offers display tracking XDM
+val additionalData = mapOf("someDataKey" to "someDataValue")
 
-<Tabs query="platform=android-kotlin&task=send-multiple-display-interaction-event-edge"/>
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(displayInteractionXdm)
+    .setData(additionalData)
+    .build()
+Edge.sendEvent(experienceEvent, null)
+```
 
-Java<br/>(Android)
+##### Parameters
 
-<Tabs query="platform=android-java&task=send-multiple-display-interaction-event-edge"/>
+* _offers_ - A `[Offer]` that may or may not belong to the same proposition. The associated proposition(s) need to be tracked.
 
-Swift<br/>(iOS)
+#### Android Java
 
-<Tabs query="platform=ios-swift&task=send-multiple-display-interaction-event-edge"/>
+```java
+// When propositions are retrieved using getPropositions API or onUpdatePropositions API callback 
+// and the corresponding offers are displayed, invoke method on List<Offer> to get the XDM data.
 
-Objective-C<br/>(iOS)
+final Map<String, Object> displayInteractionXdm = offers.generateDisplayInteractionXdm() // Offers display tracking XDM
+final Map<String, Object> additionalData = new HashMap<>();
+additionalData.put("someDataKey", "someDataValue");
 
-<Tabs query="platform=ios-objectivec&task=send-multiple-display-interaction-event-edge"/>
+final ExperienceEvent experienceEvent = new ExperienceEvent.Builder().setXdmSchema(displayInteractionXdm).setData(additionalData).build();
+Edge.sendEvent(experienceEvent, null)
+```
+
+##### Parameters
+
+* _offers_ - A `List<Offer>` that may or may not belong to the same proposition. The associated proposition(s) need to be tracked.
+
+#### iOS Swift
+
+```swift
+// When propositions are retrieved using getPropositions API or onUpdatePropositions API callback 
+// and the corresponding offers are displayed, invoke method on [Offer] to get the XDM data.
+
+let displayInteractionXdm = offers.generateDisplayInteractionXdm() // Offers display tracking XDM
+let additionalData: [String: Any] = ["someDataKey": "someDataValue"]
+
+let experienceEvent = ExperienceEvent(xdm: displayInteractionXdm, data: additionalData)
+Edge.sendEvent(experienceEvent)
+```
+
+##### Parameters
+
+* _offers_ - A `[Offer]` that may or may not belong to the same proposition. The associated proposition(s) need to be tracked.
+
+#### iOS Objective-C
+
+```objc
+// When propositions are retrieved using getPropositions API or onUpdatePropositions API callback 
+// and the corresponding offers are displayed, invoke method on NSArray<AEPOffer *> to get the XDM data.
+
+NSDictionary* displayInteractionXdm = [offers generateDisplayInteractionXdm];
+NSDictionary* additionalData = @{@"someDataKey": @"someDataValue"};
+
+AEPExperienceEvent* experienceEvent = [[AEPExperienceEvent alloc] initWithXdm:displayInteractionXdm data:additionalData datasetIdentifier:nil];
+[AEPMobileEdge sendExperienceEvent:event completion:nil];
+```
+
+##### Parameters
+
+* _offers_ - A `List<Offer>` that may or may not belong to the same proposition. The associated proposition(s) need to be tracked.
 
 <InlineAlert variant="info" slots="text"/>
 
-Make sure that the size of the map generated by [generateDisplayInteractionXdm()](../../edge/adobe-journey-optimizer-decisioning/api-reference.md#offerutils--optimize) - whether called directly or through the [display()](../../edge/adobe-journey-optimizer-decisioning/api-reference.md#offerutils--optimize) methods - should not be greater than 64 KB. This size limit applies to both individual calls and batched display interactions. Use the below code to check the size in your test app before deploying to production.
+Make sure that the size of the map generated by [generateDisplayInteractionXdm()](api-reference.md#offerutils--optimize) - whether called directly or through the [display()](api-reference.md#offerutils--optimize) methods - should not be greater than 64 KB. This size limit applies to both individual calls and batched display interactions. Use the below code to check the size in your test app before deploying to production.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Kotlin
 
-Kotlin
+```kotlin
+import com.google.gson.Gson
+import java.nio.charset.StandardCharsets
 
-<Tabs query="platform=android&task=calculate-json-size"/>
+fun calculateJsonSizeInKB(jsonMap: Map<String, Any>) {
+    val gson = Gson()
+    val jsonString = gson.toJson(jsonMap)
+    val byteArray = jsonString.toByteArray(StandardCharsets.UTF_8)
+    val sizeInKB = byteArray.size / 1024.0 
+    println("JSON size: %.2f KB".format(sizeInKB))
+}
+```
 
-Swift
+#### iOS Swift
 
-<Tabs query="platform=ios&task=calculate-json-size"/>
+```swift
+import Foundation
+
+func calculateJsonSizeInKB(jsonMap: [String: Any]) {
+    do {
+        let jsonData = try JSONSerialization.data(withJSONObject: jsonMap)
+        let sizeInKB = Double(jsonData.count) / 1024.0
+        print(String(format: "JSON size: %.2f KB", sizeInKB))
+    } catch {
+        print("Error calculating JSON size: \(error)")
+    }
+}
+```
 
 ## Configuration keys
 

@@ -51,9 +51,9 @@ The above rule to show the in-app message when the app is opened from a push not
 
 <InlineAlert variant="info" slots="text"/>
 
-This step can be skipped if your app is [automatically displaying and tracking push notification using AEPMessaging extension](./automatic-display-and-tracking.md).
+This step can be skipped if your app is [automatically displaying and tracking push notification using AEPMessaging extension](automatic-display-and-tracking.md).
 
-Call the [MessagingPushPayload.putDataInExtras(intent)](./../../public-classes/messaging-push-payload.md#public-apis) method to add the push notification data to the intent sent when the notification is clicked or cleared, depending on which action leads to the app to open and display of the in-app message. The following example shows how to add the `MessagingPushPayload` data to the push notification open and delete intents in a custom implementation of `FirebaseMessagingService`.
+Call the [MessagingPushPayload.putDataInExtras(intent)](../../public-classes/messaging-push-payload.md#public-apis) method to add the push notification data to the intent sent when the notification is clicked or cleared, depending on which action leads to the app to open and display of the in-app message. The following example shows how to add the `MessagingPushPayload` data to the push notification open and delete intents in a custom implementation of `FirebaseMessagingService`.
 
 ```java
 public class CustomNotificationService extends FirebaseMessagingService {
@@ -97,6 +97,6 @@ public class CustomNotificationService extends FirebaseMessagingService {
 
 <InlineAlert variant="info" slots="text"/>
 
-This step can be skipped if your app is [automatically displaying and tracking push notification using AEPMessaging extension](./automatic-display-and-tracking.md).
+This step can be skipped if your app is [automatically displaying and tracking push notification using AEPMessaging extension](automatic-display-and-tracking.md).
 
-After the application is opened by the user by clicking on the push notification, verify push notification interaction is being tracked using [handleNotificationResponse](./manual-display-and-tracking.md#tracking-push-notification-interactions) API.
+After the application is opened by the user by clicking on the push notification, verify push notification interaction is being tracked using [handleNotificationResponse](manual-display-and-tracking.md#tracking-push-notification-interactions) API.

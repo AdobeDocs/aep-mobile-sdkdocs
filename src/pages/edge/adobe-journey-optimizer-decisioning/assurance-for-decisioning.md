@@ -17,6 +17,6 @@ This document shows you how to use Assurance to validate Offer Decisioning and T
 
 ## Tutorials
 
-* [**Setting up Offer Decisioning and Target plugins in Assurance**](./assurance-setup.md)
-* [**Offer Decisioning and Target Validation view**](./optimize-configuration-view.md)
-* [**Offer Decisioning and Target Review & Simulate**](./review-simulate.md)
+* [**Setting up Offer Decisioning and Target plugins in Assurance**](assurance-setup.md)
+* [**Offer Decisioning and Target Validation view**](optimize-configuration-view.md)
+* [**Offer Decisioning and Target Review & Simulate**](review-simulate.md)

@@ -14,7 +14,7 @@ Learn how to install the AEPNotificationContent package by following the instruc
 
 ## Prerequisites
 
-Make sure you have [created a notification extension](./create-extension.md) and configured your app to [use Adobe Campaign Classic](./../../../../solution/adobe-campaign-classic/).
+Make sure you have [created a notification extension](create-extension.md) and configured your app to [use Adobe Campaign Classic](../../../../solution/adobe-campaign-classic/index.md).
 
 ## Install using [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
 
@@ -76,4 +76,4 @@ This will generate an XCFramework under the `build` folder. Drag and drop `AEPNo
 
 ### Configure your Notification Content extension
 
-With the `AEPNotificationContent` package now available in your application, you need to [configure your notification content extension](./configure-extension.md) to use it.
+With the `AEPNotificationContent` package now available in your application, you need to [configure your notification content extension](configure-extension.md) to use it.

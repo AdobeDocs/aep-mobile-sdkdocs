@@ -16,7 +16,7 @@ The Brand Concierge UI is presented in two steps:
 
 Internally, `Concierge.show(...)` dispatches an event in the Adobe Experience Platform Mobile SDK that the Concierge extension handles to build a `ConciergeConfiguration`, then the SwiftUI overlay presents `ChatView`.
 
----
+<HorizontalLine />
 
 ## Prerequisites
 
@@ -41,7 +41,7 @@ Speech to text uses iOS Speech and microphone APIs. Add these to your app `Info.
 
 The SDK handles permission requests internally when the user taps the microphone button; no additional permission-request code is required from the host app.
 
----
+<HorizontalLine />
 
 ## Installation
 
@@ -91,7 +91,7 @@ make archive
 
 This generates `AEPBrandConcierge.xcframework` under the `build` folder. Drag and drop it into your app target in Xcode.
 
----
+<HorizontalLine />
 
 ## Configuration
 
@@ -121,7 +121,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
-Replace `YOUR_APP_ID` with your mobile property App ID from Adobe Data Collection. For full setup instructions see the [Adobe Experience Platform Mobile SDK getting started guide](/src/pages/home/getting-started/).
+Replace `YOUR_APP_ID` with your mobile property App ID from Adobe Data Collection. For full setup instructions see the [Adobe Experience Platform Mobile SDK getting started guide](/home/getting-started/index.md).
 
 ### Step 2: Validate the Brand Concierge configuration keys
 
@@ -140,9 +140,9 @@ Brand Concierge expects the following keys in the Configuration shared state:
 
 The ECID is read from the Edge Identity shared state. Surfaces are not a Configuration key; they are supplied per session via the `surfaces:` parameter on `Concierge.wrap(...)`, `Concierge.show(...)`, or `Concierge.present(on:...)`.
 
-Another option for validation is to use Adobe Assurance. Refer to the [Mobile SDK validation guide](/src/pages/home/getting-started/validate/) for more information.
+Another option for validation is to use Adobe Assurance. Refer to the [Mobile SDK validation guide](../../../home/getting-started/validate.md) for more information.
 
----
+<HorizontalLine />
 
 ## Optional styling
 
@@ -159,9 +159,9 @@ var body: some View {
 }
 ```
 
-More information regarding theme customization can be found in the [Style guide (iOS)](/edge/adobe-brand-concierge/ios/style-guide/).
+More information regarding theme customization can be found in the [Style guide (iOS)](/edge/adobe-brand-concierge/ios/style-guide.md).
 
----
+<HorizontalLine />
 
 ## Basic usage
 
@@ -213,7 +213,7 @@ Dismiss the overlay from code with:
 Concierge.hide()
 ```
 
----
+<HorizontalLine />
 
 ## UIKit usage
 
@@ -241,7 +241,7 @@ To dismiss the presented UI:
 Concierge.hide()
 ```
 
----
+<HorizontalLine />
 
 ## Link Handling
 
@@ -329,9 +329,9 @@ Links clicked inside the in-app WebView overlay (for example, links on a page th
 
 No additional configuration is required for this behavior. Universal-link forwarding for in-chat links (the `handleLink` -> universal link -> WebView fallback described above) applies only to links tapped in chat messages; it is not re-evaluated for links inside an already loaded WebView page.
 
----
+<HorizontalLine />
 
 ## Next steps
 
-* [API reference (iOS)](/edge/adobe-brand-concierge/ios/api-reference/) — Full parameter documentation for all public APIs.
-* [Style guide (iOS)](/edge/adobe-brand-concierge/ios/style-guide/) — Theme JSON reference and implementation status for iOS.
+* [API reference (iOS)](/edge/adobe-brand-concierge/ios/api-reference.md) — Full parameter documentation for all public APIs.
+* [Style guide (iOS)](/edge/adobe-brand-concierge/ios/style-guide.md) — Theme JSON reference and implementation status for iOS.

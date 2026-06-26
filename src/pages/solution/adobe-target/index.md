@@ -6,9 +6,6 @@ keywords:
 - Product overview
 ---
 
-import Tabs from './tabs/index.md'
-import InitializeSDK from '/src/pages/resources/initialize.md'
-
 # Adobe Target
 
 Adobe Target helps test, personalize, and optimize mobile app experiences based on user behavior and mobile context. You can deliver interactions that engage and convert through iterative testing and rules-based and AI-powered personalization.
@@ -42,27 +39,144 @@ To get started with Target, follow these steps:
 
 Add the MobileCore, Identity and Target extensions to your project using the app's Gradle file.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="3"/>
+#### Android Kotlin
 
-Kotlin<br/>(Android)
+Add the required dependencies to your project by including them in the app's Gradle file.
 
-<Tabs query="platform=android-kotlin&task=add"/>
+```kotlin
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation("com.adobe.marketing.mobile:core")
+implementation("com.adobe.marketing.mobile:identity")
+implementation("com.adobe.marketing.mobile:target")
+```
 
-Groovy<br/>(Android)
+<InlineAlert variant="warning" slots="text"/>
 
-<Tabs query="platform=android-groovy&task=add"/>
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
 
-CocoaPods<br/>(iOS)
+#### Android Groovy
 
-<Tabs query="platform=ios-pods&task=add"/>
+Add the required dependencies to your project by including them in the app's Gradle file.
+
+```java
+implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
+implementation 'com.adobe.marketing.mobile:core'
+implementation 'com.adobe.marketing.mobile:identity'
+implementation 'com.adobe.marketing.mobile:target'
+```
+
+<InlineAlert variant="warning" slots="text"/>
+
+Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../resources/manage-gradle-dependencies.md) for more information.
+
+#### iOS CocoaPods
+
+Add the required dependencies to your project using CocoaPods. Add following pods in your `Podfile`:
+
+```swift
+use_frameworks!
+
+target 'YourTargetApp' do
+  pod 'AEPCore','~>5.0'    
+  pod 'AEPIdentity','~>5.0'
+  pod 'AEPTarget','~>5.0'
+end
+```
 
 ### Initialize Adobe Experience Platform SDK with Target Extension
 
-Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](/src/pages/home/getting-started/get-the-sdk/#2-add-initialization-code) section of the getting started page.
+Next, initialize the SDK by registering all the solution extensions that have been added as dependencies to your project with Mobile Core. For detailed instructions, refer to the [initialization](../../home/getting-started/get-the-sdk.md#2-add-initialization-code) section of the getting started page.
 
 Using the `MobileCore.initialize` API to initialize the Adobe Experience Platform Mobile SDK simplifies the process by automatically registering solution extensions and enabling lifecycle tracking.
 
-<InitializeSDK query="componentClass=TabsBlock"/>
+#### Android Kotlin
+
+<InlineAlert variant="warning" slots="text"/>
+
+This API is available starting from **Android BOM version 3.8.0**.
+
+```kotlin
+import com.adobe.marketing.mobile.LoggingMode
+import com.adobe.marketing.mobile.MobileCore
+...
+import android.app.Application
+...
+
+class MainApp : Application() {
+  override fun onCreate() {
+    super.onCreate()
+    MobileCore.setLogLevel(LoggingMode.DEBUG)
+    MobileCore.initialize(this, "ENVIRONMENT_ID")
+  }
+}
+```
+
+#### Android Java
+
+<InlineAlert variant="warning" slots="text"/>
+
+This API is available starting from **Android BOM version 3.8.0**.
+
+```java
+import com.adobe.marketing.mobile.LoggingMode;
+import com.adobe.marketing.mobile.MobileCore;
+...
+import android.app.Application;
+...
+public class MainApp extends Application {
+  @Override
+  public void onCreate(){
+    super.onCreate();
+    MobileCore.setLogLevel(LoggingMode.DEBUG);
+    MobileCore.initialize(this, "ENVIRONMENT_ID");
+  }
+}
+```
+
+#### iOS Swift
+
+<InlineAlert variant="warning" slots="text"/>
+
+This API is available starting from **iOS version 5.4.0**.
+
+```swift
+// AppDelegate.swift
+import AEPCore
+import AEPServices
+...
+
+final class AppDelegate: NSObject, UIApplicationDelegate {
+  func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+    MobileCore.setLogLevel(.debug)
+    MobileCore.initialize(appId: "ENVIRONMENT_ID")
+    ...
+  }
+}
+```
+
+#### iOS Objective-C
+
+<InlineAlert variant="warning" slots="text"/>
+
+This API is available starting from **iOS version 5.4.0**.
+
+```objectivec
+// AppDelegate.m
+#import "AppDelegate.h"
+@import AEPCore;
+@import AEPServices;
+...
+@implementation AppDelegate
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  [AEPMobileCore setLogLevel: AEPLogLevelDebug];  
+  [AEPMobileCore initializeWithAppId:@"ENVIRONMENT_ID" completion:^{
+      NSLog(@"AEP Mobile SDK is initialized");
+  }];
+  ...
+  return YES;
+}
+@end
+```
 
 ## Parameters in a Target request
 
@@ -72,55 +186,213 @@ Here is some information about the parameters in a Target request:
 
 The `TargetOrder` class encapsulates the order ID, the order total, and the purchased product IDs. You can instantiate this class to create order parameters.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&task=target-order"/>
+#### Syntax
 
-iOS
+```java
+public TargetOrder(final String id, final double total, final List<String> purchasedProductIds)
+```
 
-<Tabs query="platform=ios&task=target-order"/>
+#### Example
 
-<!--- React Native
+```java
+List<String> purchasedProductIds = new ArrayList<String>();
+purchasedProductIds.add("34");
+purchasedProductIds.add("125");
+TargetOrder targetOrder = new TargetOrder("123", 567.89, purchasedProductIds);
+```
 
-<Tabs query="platform=react-native&task=target-order"/> --->
+#### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+public init(id: String, total: Double = 0, purchasedProductIds: [String]? = nil)
+```
+
+#### Example
+
+```swift
+let order = TargetOrder(id: "id1", total: 1.0, purchasedProductIds: ["ppId1"])
+```
+
+#### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objectivec
+- (nonnull instancetype) initWithId: (nonnull NSString*) id total: (double) total purchasedProductIds: (nullable NSArray<NSString*>*) purchasedProductIds;
+```
+
+#### Example
+
+```objectivec
+AEPTargetOrder *order = [[AEPTargetOrder alloc] initWithId:@"id1" total:1.0 purchasedProductIds:@[@"ppId1"]];
+```
+
+\<!--- React Native
+
+\<Tabs query="platform=react-native&task=target-order"/\> ---\>
 
 ### Target Product class
 
 The `TargetProduct` class encapsulates the product ID and the product category ID, and you can instantiate this class to create order parameters.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&task=target-product"/>
+#### Syntax
 
-iOS
+```java
+public TargetProduct(final String id, final String categoryId)
+```
 
-<Tabs query="platform=ios&task=target-product"/>
+#### Example
 
-<!--- React Native
+```java
+TargetProduct targetProduct = new TargetProduct("123", "Books");
+```
 
-<Tabs query="platform=react-native&task=target-product"/> --->
+#### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+public init(productId: String, categoryId: String? = nil)
+```
+
+#### Example
+
+```swift
+let product = TargetProduct(productId: "pId1", categoryId: "cId1")
+```
+
+#### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objectivec
+- (nonnull instancetype) initWithProductId:(nonnull NSString*) productId categoryId:(nullable NSString*) categoryId;
+```
+
+#### Example
+
+```objectivec
+AEPTargetProduct *product =[[AEPTargetProduct alloc] initWithProductId:@"pId1" categoryId:@"cId1"];
+```
+
+\<!--- React Native
+
+\<Tabs query="platform=react-native&task=target-product"/\> ---\>
 
 ### Target Parameters
 
 `TargetParameters` encapsulates `mboxParameters`, `profileParameters`, `orderParameters`, and `productParameters`, and allows you easily pass these parameters in a Target request.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&task=target-parameters"/>
+#### Syntax
 
-iOS
+```java
+TargetParameters targetParameters = new TargetParameters.Builder()
+.parameters(new HashMap<String, String>())
+.profileParameters(new HashMap<String, String>())
+.product(new TargetProduct("productId", "productCategoryId"))
+.order(new TargetOrder("orderId", 0.0, new ArrayList<String>()))
+.build();
+```
 
-<Tabs query="platform=ios&task=target-parameters"/>
+#### Example
 
-<!--- React Native
+```java
+List<String> purchasedProductIds = new ArrayList<String>();
+purchasedProductIds.add("34");
+purchasedProductIds.add("125");
+TargetOrder targetOrder = new TargetOrder("123", 567.89, purchasedProductIds);
 
-<Tabs query="platform=react-native&task=target-parameters"/> --->
+TargetProduct targetProduct = new TargetProduct("123", "Books");
+
+Map<String, String> mboxParameters = new HashMap<String, String>();
+mboxParameters1.put("status", "platinum");
+
+Map<String, String> profileParameters = new HashMap<String, String>();
+profileParameters1.put("gender", "male");
+
+TargetParameters targetParameters = new TargetParameters.Builder()
+.parameters(mboxParameters)
+.profileParameters(profileParameters)
+.product(targetProduct)
+.order(targetOrder)
+.build();
+```
+
+#### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+public init(parameters: [String: String]? = nil, profileParameters: [String: String]? = nil, order: TargetOrder? = nil, product: TargetProduct? = nil)
+```
+
+#### Example
+
+```swift
+let mboxParameters = [
+"status": "Platinum"
+]
+let profileParameters = [
+"gender": "female"
+]
+
+let order = TargetOrder(id: "id1", total: 1.0, purchasedProductIds: ["ppId1"])
+
+let product = TargetProduct(productId: "pId1", categoryId: "cId1")
+
+let targetParameters = TargetParameters(parameters: mboxParameters, profileParameters: profileParameters, order: order, product: product))
+```
+
+#### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objectivec
+- (nonnull instancetype) initWithParameters:(nullable NSDictionary<NSString*, NSString*>*) parameters profileParameters:(nullable NSDictionary<NSString*, NSString*>*) profileParameters order:(nullable AEPTargetOrder*) order product:(nullable AEPTargetProduct*) product;
+```
+
+#### Example
+
+```objectivec
+NSDictionary *mboxParameters = @{@"status":@"Platinum"};
+NSDictionary *profileParameters = @{@"gender":@"female"};
+
+AEPTargetProduct *product =[[AEPTargetProduct alloc] initWithProductId:@"pId1" categoryId:@"cId1"];
+
+AEPTargetOrder *order = [[AEPTargetOrder alloc] initWithId:@"id1" total:1.0 purchasedProductIds:@[@"ppId1"]];
+
+AEPTargetParameters * targetParams = [[AEPTargetParameters alloc] initWithParameters:mboxParameters profileParameters:profileParameters order:order product:product];
+```
+
+\<!--- React Native
+
+\<Tabs query="platform=react-native&task=target-parameters"/\> ---\>
 
 ### Merge behavior of Target parameters
 
@@ -132,33 +404,51 @@ When merging, the new keys in the mbox parameters or the profile parameters are 
 
 The Target extension supports persistent sessions. When a Target request is received, if a session ID does not exist, a new ID is generated and is sent in the request. This ID, with the Edge Host that is returned from Target, is kept in persistent storage for the configured `target.sessionTimeout` period. If the timeout value is not configured, the default value is 30 minutes.
 
-If no Target request is received during the configured `target.sessionTimeout` or if the [resetExperience](./api-reference.md#resetexperience) API is called, these variables are reset and removed from persistent storage.
+If no Target request is received during the configured `target.sessionTimeout` or if the [resetExperience](api-reference.md#resetexperience) API is called, these variables are reset and removed from persistent storage.
 
 ## Visual preview
 
 The visual preview mode allows you to easily perform end-to-end QA activities by enrolling and previewing these activities on your device. This mode does not require a specialized testing set up. To get started, set up a URL scheme and generate the preview links. For more information about setting up Target visual preview, see [Target mobile preview](https://experienceleague.adobe.com/docs/target/using/implement-target/mobile-apps/target-mobile-preview.html). For more information about setting URL schemes for iOS, see [Defining a Custom URL Scheme for Your App](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app). For more information about setting URL schemes for Android, see [Create Deep Links to App Content](https://developer.android.com/training/app-links/deep-linking).
 
-You can also set an application deep link that can be triggered when selections are made in the preview mode by using the [setPreviewRestartDeeplink](./api-reference.md#setpreviewrestartdeeplink) API.
+You can also set an application deep link that can be triggered when selections are made in the preview mode by using the [setPreviewRestartDeeplink](api-reference.md#setpreviewrestartdeeplink) API.
 
 To enter the preview visual mode, use the `collectLaunchInfo` API to enable the mode and select the red floating button that appears on the app screen. For more information, see [collectLaunchInfo](../../home/base/mobile-core/api-reference.md#collectlaunchinfo).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android
 
-Android
+On Android, when the application is launched as a result of a deep link, the Mobile Core's [collectLaunchInfo](../../home/base/mobile-core/api-reference.md#collectlaunchinfo) API is internally invoked, and the Target activity and deep link information is extracted from the Intent extras.
 
-<Tabs query="platform=android&task=visual-preview"/>
+The SDK can only collect information from the launching Activity if [setApplication](../../home/base/mobile-core/api-reference.md#setapplication) has been called. Setting the Application is only necessary on an Activity that is also an entry point for your application. However, setting the Application on each Activity has no negative impact and ensures that the SDK always has the necessary reference to your Application. We recommend that you call `setApplication` API in each of your Activities.
 
-iOS
+### iOS Swift
 
-<Tabs query="platform=ios&task=visual-preview"/>
+On iOS, the Mobile Core's [collectLaunchInfo](../../home/base/mobile-core/api-reference.md#collectlaunchinfo) API can be invoked with the Target preview deep link as shown below:
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```swift
+    MobileCore.collectLaunchInfo(["adb_deeplink" : "com.adobe.targetpreview://app.adobetarget.com?at_preview_token=tokenFromTarget"])
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```objectivec
+ [AEPMobileCore collectLaunchInfo:@{@"adb_deeplink" : @"com.adobe.targetpreview://app.adobetarget.com?at_preview_token=tokenFromTarget"}];
+```
 
 ## Offer Prefetch
 
-The SDK can minimize the number of times it reaches out to Target servers to fetch offers by caching server responses. With a successful prefetch call for mbox locations, offer content is retrieved and cached in the SDK. This content is retrieved from the cache for all future [retrieveLocationContent](./api-reference.md#retrievelocationcontent) API calls for the specified mbox names. This prefetch process reduces the offer load time and network calls that were made to the Target servers, and the process allows Target to be notified which mbox was visited by the mobile app user.
+The SDK can minimize the number of times it reaches out to Target servers to fetch offers by caching server responses. With a successful prefetch call for mbox locations, offer content is retrieved and cached in the SDK. This content is retrieved from the cache for all future [retrieveLocationContent](api-reference.md#retrievelocationcontent) API calls for the specified mbox names. This prefetch process reduces the offer load time and network calls that were made to the Target servers, and the process allows Target to be notified which mbox was visited by the mobile app user.
 
 <InlineAlert variant="warning" slots="text"/>
 
-Prefetched offer content does not persist across application launches. The prefetch content is cached as long as the application lives in memory or until the API to clear the cache is called. For more information, see [clearPrefetchCache](./api-reference.md#clearprefetchcache).
+Prefetched offer content does not persist across application launches. The prefetch content is cached as long as the application lives in memory or until the API to clear the cache is called. For more information, see [clearPrefetchCache](api-reference.md#clearprefetchcache).
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -172,8 +462,8 @@ Once Analytics is listed as the reporting source for an activity on Target UI, A
 
 The A4T payload returned from Target servers is sent to Adobe Analytics in the following cases:
 
-* When one or more locations are retrieved using [retrieveLocationContent](../adobe-target/api-reference.md#retrievelocationcontent) API call.
-* When one or more prefetched locations are loaded and a subsequent [locationsDisplayed](./api-reference.md#displayedlocations) API call is made for the location(s).
+* When one or more locations are retrieved using [retrieveLocationContent](api-reference.md#retrievelocationcontent) API call.
+* When one or more prefetched locations are loaded and a subsequent [locationsDisplayed](api-reference.md#displayedlocations) API call is made for the location(s).
 
 <InlineAlert variant="warning" slots="text"/>
 

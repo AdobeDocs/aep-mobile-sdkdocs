@@ -6,54 +6,243 @@ keywords:
 - API reference
 ---
 
-import Alerts from '/src/pages/resources/alerts.md'
-import Tabs from './tabs/api-reference.md'
-
 # API reference
 
 ## clearPropositions
 
 This API clears out the client-side in-memory propositions cache.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&api=clear-propositions"/>
+#### Syntax
 
-iOS
+```java
+public static void clearCachedPropositions()
+```
 
-<Tabs query="platform=ios&api=clear-propositions"/>
+#### Example
+
+```java
+Optimize.clearCachedPropositions();
+```
+
+### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+static func clearCachedPropositions()
+```
+
+#### Example
+
+```swift
+Optimize.clearCachedPropositions()
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objc
++ (void) clearCachedPropositions;
+```
+
+#### Example
+
+```objc
+[AEPMobileOptimize clearCachedPropositions];
+```
 
 ## extensionVersion
 
 The `extensionVersion()` method (on Android) or the `extensionVersion` property (on iOS) returns the version information for currently installed AEPOptimize extension.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&api=extension-version"/>
+#### Syntax
 
-iOS
+```java
+public static String extensionVersion()
+```
 
-<Tabs query="platform=ios&api=extension-version"/>
+#### Example
+
+```java
+Optimize.extensionVersion();
+```
+
+### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+static var extensionVersion: String
+```
+
+#### Example
+
+```swift
+let extensionVersion = Optimize.extensionVersion
+```
+
+### iOS Objective-C
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objc
++ (nonnull NSString*) extensionVersion;
+```
+
+#### Example
+
+```objc
+NSString *extensionVersion = [AEPMobileOptimize extensionVersion];
+```
 
 ## getPropositions
 
 This API retrieves the previously fetched propositions, for the provided decision scopes, from the in-memory extension propositions cache. The completion callback is invoked with the decision propositions corresponding to the given decision scopes. If a certain decision scope has not already been fetched prior to this API call, it will not be contained in the returned propositions.
 
-When connected to Assurance for previewing content, this method will return [**simulated results**](./review-simulate.md#simulate-different-results).
+When connected to Assurance for previewing content, this method will return [**simulated results**](review-simulate.md#simulate-different-results).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+* _decisionScopes_ is a list of decision scopes for which propositions are requested.
+* _callback_ `call` method is invoked with propositions map of type `Map<DecisionScope, OptimizeProposition>`. If the callback is an instance of [AdobeCallbackWithError](../../home/base/mobile-core/api-reference.md#adobecallbackwitherror), and if the operation times out or an error occurs in retrieving propositions, the `fail` method is invoked with the appropriate [AdobeError](../../home/base/mobile-core/api-reference.md#adobeerror).
 
-<Tabs query="platform=android&api=get-propositions"/>
+<CodeBlock slots="heading, code" repeat="2" />
 
-iOS
+#### Syntax
 
-<Tabs query="platform=ios&api=get-propositions"/>
+```java
+public static void getPropositions(final List<DecisionScope> decisionScopes, final AdobeCallback<Map<DecisionScope, OptimizeProposition>> callback)
+```
+
+#### Example
+
+```java
+final DecisionScope decisionScope1 = DecisionScope("xcore:offer-activity:1111111111111111", "xcore:offer-placement:1111111111111111", 2);
+final DecisionScope decisionScope2 = new DecisionScope("myScope");
+
+final List<DecisionScope> decisionScopes = new ArrayList<>();
+decisionScopes.add(decisionScope1);
+decisionScopes.add(decisionScope2);
+
+Optimize.getPropositions(scopes, new AdobeCallbackWithError<Map<DecisionScope, OptimizeProposition>>() {
+    @Override
+    public void fail(final AdobeError adobeError) {
+        // handle error
+    }
+
+    @Override
+    public void call(Map<DecisionScope, OptimizeProposition> propositionsMap) {
+        if (propositionsMap != null && !propositionsMap.isEmpty()) {
+            // get the propositions for the given decision scopes
+            if (propositionsMap.contains(decisionScope1)) {
+                final OptimizeProposition proposition1 = propsMap.get(decisionScope1)
+                // read proposition1 offers
+            }
+            if (propositionsMap.contains(decisionScope2)) {
+                final OptimizeProposition proposition2 = propsMap.get(decisionScope2)
+                // read proposition2 offers
+            }
+        }
+    }
+});
+```
+
+### iOS Swift
+
+* _decisionScopes_ is an array of decision scopes for which propositions are requested.
+* _completion_ is invoked with propositions dictionary of type `[DecisionScope: OptimizeProposition]`. An `Error` is returned if SDK fails to retrieve the propositions.
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+static func getPropositions(for decisionScopes: [DecisionScope], 
+                            _ completion: @escaping ([DecisionScope: OptimizeProposition]?, Error?) -> Void)
+```
+
+#### Example
+
+```swift
+let decisionScope1 = DecisionScope(activityId: "xcore:offer-activity:1111111111111111", 
+                                   placementId: "xcore:offer-placement:1111111111111111",
+                                   itemCount: 2)
+let decisionScope2 = DecisionScope(name: "myScope")
+
+Optimize.getPropositions(for: [decisionScope1, decisionScope2]) { propositionsDict, error in
+
+    if let error = error {
+        // handle error
+        return
+    }
+
+    if let propositionsDict = propositionsDict {
+        // get the propositions for the given decision scopes
+
+        if let proposition1 = propositionsDict[decisionScope1] {
+            // read proposition1 offers
+        }
+
+        if let proposition2 = propositionsDict[decisionScope2] {
+            // read proposition2 offers
+        }
+    }
+}
+```
+
+### iOS Objective-C
+
+* _decisionScopes_ is an array of decision scopes for which propositions are requested.
+* _completion_ is invoked with propositions dictionary of type `NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>`. An `NSError` is returned if SDK fails to retrieve the propositions.
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objc
++ (void) getPropositions: (NSArray<AEPDecisionScope*>* _Nonnull) decisionScopes 
+              completion: (void (^ _Nonnull)(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* _Nullable propositionsDict, NSError* _Nullable error)) completion;
+```
+
+#### Example
+
+```objc
+AEPDecisionScope* decisionScope1 = [[AEPDecisionScope alloc] initWithActivityId: @"xcore:offer-activity:1111111111111111" 
+                                                                   placementId: @"xcore:offer-placement:1111111111111111" 
+                                                                     itemCount: 2];
+AEPDecisionScope* decisionScope2 = [[AEPDecisionScope alloc] initWithName: @"myScope"];
+
+[AEPMobileOptimize getPropositions: @[decisionScope1, decisionScope2] 
+                        completion: ^(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* propositionsDict, NSError* error) {
+  if (error != nil) {
+    // handle error   
+    return;
+  }
+
+  AEPOptimizeProposition* proposition1 = propositionsDict[decisionScope1];
+  // read proposition1 offers
+
+  AEPOptimizeProposition* proposition2 = propositionsDict[decisionScope2];
+  // read proposition2 offers
+}];
+```
 
 ## getPropositionsWithTimeout
 
@@ -61,17 +250,140 @@ This API retrieves the previously fetched propositions for the provided decision
 
 Additionally, this API allows specifying a timeout for the operation. If the propositions retrieval does not complete within the given timeout, an error is returned, providing improved control over handling delays and ensuring timely application responses.
 
-When connected to Assurance for previewing content, this method will return [**simulated results**](./review-simulate.md#simulate-different-results).
+When connected to Assurance for previewing content, this method will return [**simulated results**](review-simulate.md#simulate-different-results).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+* _decisionScopes_ is a list of decision scopes for which propositions are requested.
+* _timeoutSeconds_ is a duration in seconds specifying the maximum time `getProposition` will wait for completion before returning [AdobeError](../../home/base/mobile-core/api-reference.md#adobeerror).
+* _callback_ `call` method is invoked with propositions map of type `Map<DecisionScope, OptimizeProposition>`. If the callback is an instance of [AdobeCallbackWithError](../../home/base/mobile-core/api-reference.md#adobecallbackwitherror), and if the operation times out or an error occurs in retrieving propositions, the `fail` method is invoked with the appropriate [AdobeError](../../home/base/mobile-core/api-reference.md#adobeerror).
 
-<Tabs query="platform=android&api=get-propositions-withTimeout"/>
+<CodeBlock slots="heading, code" repeat="2" />
 
-iOS
+#### Syntax
 
-<Tabs query="platform=ios&api=get-propositions-withTimeout"/>
+```java
+public static void getPropositions(final List<DecisionScope> decisionScopes, final double timeoutSeconds, final AdobeCallback<Map<DecisionScope, OptimizeProposition>> callback)
+```
+
+#### Example
+
+```java
+final DecisionScope decisionScope1 = DecisionScope("xcore:offer-activity:1111111111111111", "xcore:offer-placement:1111111111111111", 2);
+final DecisionScope decisionScope2 = new DecisionScope("myScope");
+
+final List<DecisionScope> decisionScopes = new ArrayList<>();
+decisionScopes.add(decisionScope1);
+decisionScopes.add(decisionScope2);
+
+Optimize.getPropositions(scopes, 10.0, new AdobeCallbackWithError<Map<DecisionScope, OptimizeProposition>>() {
+    @Override
+    public void fail(final AdobeError adobeError) {
+        // handle error
+    }
+
+    @Override
+    public void call(Map<DecisionScope, OptimizeProposition> propositionsMap) {
+        if (propositionsMap != null && !propositionsMap.isEmpty()) {
+            // get the propositions for the given decision scopes
+            if (propositionsMap.contains(decisionScope1)) {
+                final OptimizeProposition proposition1 = propsMap.get(decisionScope1)
+                // read proposition1 offers
+            }
+            if (propositionsMap.contains(decisionScope2)) {
+                final OptimizeProposition proposition2 = propsMap.get(decisionScope2)
+                // read proposition2 offers
+            }
+        }
+    }
+});
+```
+
+### iOS Swift
+
+* _decisionScopes_ is an array of decision scopes for which propositions are requested.
+* _timeout_ is a duration in seconds specifying the maximum time `getProposition` will wait for completion before returning `Error`.
+* _completion_ is invoked with propositions dictionary of type `[DecisionScope: OptimizeProposition]`. An `Error` is returned if SDK fails to retrieve the propositions.
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+static func getPropositions(for decisionScopes: [DecisionScope], 
+                            timeout: TimeInterval,
+                            _ completion: @escaping ([DecisionScope: OptimizeProposition]?, Error?) -> Void)
+```
+
+#### Example
+
+```swift
+let decisionScope1 = DecisionScope(activityId: "xcore:offer-activity:1111111111111111", 
+                                   placementId: "xcore:offer-placement:1111111111111111",
+                                   itemCount: 2)
+let decisionScope2 = DecisionScope(name: "myScope")
+
+Optimize.getPropositions(for: [decisionScope1, decisionScope2], timeout: 1.0) { propositionsDict, error in
+
+    if let error = error {
+        // handle error
+        return
+    }
+
+    if let propositionsDict = propositionsDict {
+        // get the propositions for the given decision scopes
+
+        if let proposition1 = propositionsDict[decisionScope1] {
+            // read proposition1 offers
+        }
+
+        if let proposition2 = propositionsDict[decisionScope2] {
+            // read proposition2 offers
+        }
+    }
+}
+```
+
+### iOS Objective-C
+
+* _decisionScopes_ is an array of decision scopes for which propositions are requested.
+* _timeout_ is a duration in seconds specifying the maximum time `getProposition` will wait for completion before returning `NSError`.
+* _completion_ is invoked with propositions dictionary of type `NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>`. An `NSError` is returned if SDK fails to retrieve the propositions.
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objc
++ (void)getPropositions:(NSArray<AEPDecisionScope *> *_Nonnull) decisionScopes
+                timeout:(NSTimeInterval) timeout
+             completion:(void (^_Nonnull)(NSDictionary<AEPDecisionScope *, AEPOptimizeProposition *> *_Nullable propositionsDict, NSError *_Nullable error)) completion;
+              
+```
+
+#### Example
+
+```objc
+AEPDecisionScope* decisionScope1 = [[AEPDecisionScope alloc] initWithActivityId: @"xcore:offer-activity:1111111111111111" 
+                                                                   placementId: @"xcore:offer-placement:1111111111111111" 
+                                                                     itemCount: 2];
+AEPDecisionScope* decisionScope2 = [[AEPDecisionScope alloc] initWithName: @"myScope"];
+
+[AEPMobileOptimize getPropositions: @[decisionScope1, decisionScope2] 
+                        timeout:1.0
+                        completion: ^(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* propositionsDict, NSError* error) {
+  if (error != nil) {
+    // handle error   
+    return;
+  }
+
+  AEPOptimizeProposition* proposition1 = propositionsDict[decisionScope1];
+  // read proposition1 offers
+
+  AEPOptimizeProposition* proposition2 = propositionsDict[decisionScope2];
+  // read proposition2 offers
+}];
+```
 
 ## onPropositionsUpdate
 
@@ -81,27 +393,98 @@ This API registers a permanent callback which is invoked whenever the Edge exten
 
 The callback passed to `onPropositionsUpdate` will not be invoked if the Experience Edge Network returns an error for the personalization query, or if the response event payload is empty or has invalid proposition data. This API should not be used for handling errors that might occur when `updatePropositions` is called.
 
-When connected to Assurance for previewing content, this method will return [**simulated results**](./review-simulate.md#simulate-different-results).
+When connected to Assurance for previewing content, this method will return [**simulated results**](review-simulate.md#simulate-different-results).
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+* _callback_ `call` method is invoked with propositions map of type `Map<DecisionScope, OptimizeProposition>`. Errors and empty responses for personalization queries are **not** passed back in the `call` method.
 
-<Tabs query="platform=android&api=on-propositions-update"/>
+<CodeBlock slots="heading, code" repeat="2" />
 
-iOS
+#### Syntax
 
-<Tabs query="platform=ios&api=on-propositions-update"/>
+```java
+public static void onPropositionsUpdate(final AdobeCallback<Map<DecisionScope, OptimizeProposition>> callback)
+```
+
+#### Example
+
+```java
+Optimize.onPropositionsUpdate(new AdobeCallback<Map<DecisionScope, OptimizeProposition>>() {
+    @Override
+    public void call(final Map<DecisionScope, OptimizeProposition> propositionsMap) {
+        if (propositionsMap != null && !propositionsMap.isEmpty()) {
+            // handle propositions
+        }
+    }
+});
+```
+
+### iOS Swift
+
+* _action_ is invoked with propositions dictionary of type `[DecisionScope: OptimizeProposition]`. Errors and empty responses for personalization queries are **not** passed back in _action_.
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+static func onPropositionsUpdate(perform action: @escaping ([DecisionScope: OptimizeProposition]?) -> Void)
+```
+
+#### Example
+
+```swift
+Optimize.onPropositionsUpdate { propositionsDict in
+  if let propositionsDict = propositionsDict {
+    // handle propositions
+  }
+}
+```
+
+### iOS Objective-C
+
+* _action_ is invoked with propositions dictionary of type `NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>`. Errors and empty responses for personalization queries are **not** passed back in _action_.
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objc
++ (void) onPropositionsUpdate: (void (^ _Nonnull)(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* _Nullable)) action;
+```
+
+#### Example
+
+```objc
+[AEPMobileOptimize onPropositionsUpdate: ^(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* propositionsDict) {
+  // handle propositions
+}];
+```
 
 ## registerExtension
 
-<Alerts query="platform=android-register-extension&componentClass=InlineNestedAlert"/>
+<InlineAlert variant="warning" slots="text1, text2"/>
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+This API has been deprecated starting in v2.0.0 and removed in v3.0.0 of the Android mobile extension.
 
-Android
+Use [`MobileCore.registerExtensions()`](../../home/base/mobile-core/api-reference.md#registerextensions) API instead.
 
-<Tabs query="platform=android&api=register-extension"/>
+### Android Java
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```java
+public static void registerExtension()
+```
+
+#### Example
+
+```java
+Optimize.registerExtension();
+```
 
 ## resetIdentities
 
@@ -114,25 +497,110 @@ For details on syntax, usage and availability, refer to [Mobile Core - Reset ide
 
 ## updatePropositions
 
-<InlineAlert variant="warning" slots="header, text1"/>
+<InlineAlert variant="warning" slots="text1, text2"/>
 
 This API has been deprecated starting in v3.2.2(Android) and v5.2.0(iOS). They will be removed in the next major release of the Optimize SDK.
 
-Use [`Optimize.updatePropositions`](../api-reference.md#updatepropositionswithcompletionhandler) or  [`Optimize.updatePropositions`](../api-reference.md#updatepropositionswithcompletionhandlerandtimeout) APIs instead.
+Use [`Optimize.updatePropositions`](#updatepropositionswithcompletionhandler) or [`Optimize.updatePropositions`](#updatepropositionswithcompletionhandlerandtimeout) APIs instead.
 
 This API dispatches an Event for the Edge network extension to fetch decision propositions, for the provided decision scopes array, from the decisioning services enabled in the Experience Edge. The returned decision propositions are cached in-memory in the Optimize SDK extension and can be retrieved using `getPropositions` API.
 
-When connected to Assurance for previewing content, this method will **override** the [**simulated results**](./review-simulate.md#simulate-different-results). It will remove all simluated results and serve the actual data.
+When connected to Assurance for previewing content, this method will **override** the [**simulated results**](review-simulate.md#simulate-different-results). It will remove all simluated results and serve the actual data.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+* _decisionScopes_ is a list of decision scopes for which propositions need updating.
+* _xdm_ is a map containing additional XDM formatted data to be attached to the Experience Event.
+* _data_ is a map containing additional freeform data to be attached to the Experience Event.
 
-<Tabs query="platform=android&api=update-propositions"/>
+<CodeBlock slots="heading, code" repeat="2" />
 
-iOS
+#### Syntax
 
-<Tabs query="platform=ios&api=update-propositions"/>
+```java
+public static void updatePropositions(final List<DecisionScope> decisionScopes, final Map<String, Object> xdm, final Map<String, Object> data)
+```
+
+#### Example
+
+```java
+final DecisionScope decisionScope1 = DecisionScope("xcore:offer-activity:1111111111111111", "xcore:offer-placement:1111111111111111", 2);
+final DecisionScope decisionScope2 = new DecisionScope("myScope");
+
+final List<DecisionScope> decisionScopes = new ArrayList<>();
+decisionScopes.add(decisionScope1);
+decisionScopes.add(decisionScope2);
+
+Optimize.updatePropositions(decisionScopes, 
+                            new HashMap<String, Object>() {
+                                {
+                                    put("xdmKey", "xdmValue");
+                                }
+                            },
+                            new HashMap<String, Object>() {
+                                {
+                                    put("dataKey", "dataValue");
+                                }
+                            });
+```
+
+### iOS Swift
+
+* _decisionScopes_ is an array of decision scopes for which propositions need updating.
+* _xdm_ is a dictionary containing additional XDM formatted data to be attached to the Experience Event.
+* _data_ is a dictionary containing additional freeform data to be attached to the Experience Event.
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+static func updatePropositions(for decisionScopes: [DecisionScope], 
+                               withXdm xdm: [String: Any]?,
+                               andData data: [String: Any]? = nil)
+```
+
+#### Example
+
+```swift
+let decisionScope1 = DecisionScope(activityId: "xcore:offer-activity:1111111111111111", 
+                                   placementId: "xcore:offer-placement:1111111111111111",
+                                   itemCount: 2)
+let decisionScope2 = DecisionScope(name: "myScope")
+
+Optimize.updatePropositions(for: [decisionScope1, decisionScope2] 
+                            withXdm: ["xdmKey": "xdmValue"] 
+                            andData: ["dataKey": "dataValue"])
+```
+
+### iOS Objective-C
+
+* _decisionScopes_ is an array of decision scopes for which propositions need updating.
+* _xdm_ is a dictionary containing additional XDM formatted data to be attached to the Experience Event.
+* _data_ is a dictionary containing additional freeform data to be attached to the Experience Event.
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objc
++ (void) updatePropositions: (NSArray<AEPDecisionScope*>* _Nonnull) decisionScopes 
+                    withXdm: (NSDictionary<NSString*, id>* _Nullable) xdm
+                    andData: (NSDictionary<NSString*, id>* _Nullable) data;
+```
+
+#### Example
+
+```objc
+AEPDecisionScope* decisionScope1 = [[AEPDecisionScope alloc] initWithActivityId: @"xcore:offer-activity:1111111111111111" 
+                                                                   placementId: @"xcore:offer-placement:1111111111111111" 
+                                                                     itemCount: 2];
+AEPDecisionScope* decisionScope2 = [[AEPDecisionScope alloc] initWithName: @"myScope"]; 
+
+[AEPMobileOptimize updatePropositions: @[decisionScope1, decisionScope2] 
+                              withXdm: @{@"xdmKey": @"xdmValue"} 
+                              andData: @{@"dataKey": @"dataValue"}];
+```
 
 ## updatePropositionsWithCompletionHandler
 
@@ -142,15 +610,136 @@ This API dispatches an event for the Edge network extension to fetch decision pr
 
 Completion callback passed to `updatePropositions` supports network timeout and fatal errors returned by edge network along with fetched propositions data. The SDK's internal retry mechanism handles the recoverable HTTP errors. As a result, recoverable HTTP errors are not returned through this callback.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+* _decisionScopes_ is a list of decision scopes for which propositions need updating.
+* _xdm_ is a map containing additional XDM formatted data to be attached to the Experience Event.
+* _data_ is a map containing additional freeform data to be attached to the Experience Event.
+* _callback_ is an optional completion handler that is invoked at the completion of the edge request. The `call` method is invoked with propositions map of type `Map<DecisionScope, OptimizeProposition>`. If the callback is an instance of `AdobeCallbackWithOptimizeError`, and if the operation times out or an error occurs in retrieving propositions, the `fail` method is invoked with the appropriate [AEPOptimizeError](#aepoptimizeerror). _Note:_ In certain cases, both the success and failure callbacks may be triggered. To handle these cases, ensure that your implementation checks for both successful propositions and errors within the callback, as both may be present simultaneously.
 
-<Tabs query="platform=android&api=update-propositions-withCallback"/>
+<CodeBlock slots="heading, code" repeat="2" />
 
-iOS
+#### Syntax
 
-<Tabs query="platform=ios&api=update-propositions-withCallback"/>
+```java
+public static void updatePropositions(final List<DecisionScope> decisionScopes, 
+                                      final Map<String, Object> xdm,
+                                      final Map<String, Object> data,
+                                      final AdobeCallback<Map<DecisionScope, OptimizeProposition>> callback)
+```
+
+#### Example
+
+```java
+final DecisionScope decisionScope1 = DecisionScope("xcore:offer-activity:1111111111111111", "xcore:offer-placement:1111111111111111", 2);
+final DecisionScope decisionScope2 = new DecisionScope("myScope");
+
+final List<DecisionScope> decisionScopes = new ArrayList<>();
+decisionScopes.add(decisionScope1);
+decisionScopes.add(decisionScope2);
+
+Optimize.updatePropositions(decisionScopes,
+                            new HashMap<String, Object>() {
+                                {
+                                    put("xdmKey", "xdmValue");
+                                }
+                            },
+                            new HashMap<String, Object>() {
+                                {
+                                    put("dataKey", "dataValue");
+                                }
+                            },
+                            new AdobeCallbackWithOptimizeError<Map<DecisionScope, OptimizeProposition>>() {
+                                @Override
+                                public void fail(AEPOptimizeError optimizeError) {
+                                    responseError = optimizeError;
+                                }
+
+                                @Override
+                                public void call(Map<DecisionScope, OptimizeProposition> propositionsMap) {
+                                    responseMap = propositionsMap;
+                                }
+                            });
+```
+
+### iOS Swift
+
+* _decisionScopes_ is an array of decision scopes for which propositions need updating.
+* _xdm_ is a dictionary containing additional XDM formatted data to be attached to the Experience Event.
+* _data_ is a dictionary containing additional freeform data to be attached to the Experience Event.
+* _completion_ is a optional completion handler invoked at the completion of the edge request with map of successful decision scopes to propositions and errors, if any.
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+static func updatePropositions(for decisionScopes: [DecisionScope],
+                               withXdm xdm: [String: Any]?,
+                               andData data: [String: Any]? = nil,
+                               _completion: (([DecisionScope: OptimizeProposition]?, Error?) -> Void)? = nil)
+```
+
+#### Example
+
+```swift
+let decisionScope1 = DecisionScope(activityId: "xcore:offer-activity:1111111111111111",
+                                   placementId: "xcore:offer-placement:1111111111111111",
+                                   itemCount: 2)
+let decisionScope2 = DecisionScope(name: "myScope")
+
+Optimize.updatePropositions(for: [decisionScope1, decisionScope2]
+                            withXdm: ["xdmKey": "xdmValue"]
+                            andData: ["dataKey": "dataValue"]) { data, error in
+            if let error = error as? AEPOptimizeError {
+                // handle error
+            }
+        }
+```
+
+### iOS Objective-C
+
+* _decisionScopes_ is an array of decision scopes for which propositions are requested.
+* _xdm_ is a dictionary containing additional XDM formatted data to be attached to the Experience Event.
+* _data_ is a dictionary containing additional freeform data to be attached to the Experience Event.
+* _completion_ is invoked with propositions dictionary of type `NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>`. An `NSError` is returned if SDK fails to retrieve the propositions.
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objc
++ (void) updatePropositions: (NSArray<AEPDecisionScope*>* _Nonnull) decisionScopes
+                    withXdm: (NSDictionary<NSString*, id>* _Nullable) xdm
+                    andData: (NSDictionary<NSString*, id>* _Nullable) data
+                 completion: (void (^ _Nonnull)(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* _Nullable propositionsDict, NSError* _Nullable error)) completion;
+```
+
+#### Example
+
+```objc
+
+AEPDecisionScope* decisionScope1 = [[AEPDecisionScope alloc] initWithActivityId: @"xcore:offer-activity:1111111111111111"
+                                                                   placementId: @"xcore:offer-placement:1111111111111111"
+                                                                     itemCount: 2];
+AEPDecisionScope* decisionScope2 = [[AEPDecisionScope alloc] initWithName: @"myScope"];
+
+[AEPMobileOptimize updatePropositions: @[decisionScope1, decisionScope2]
+                              withXdm: @{@"xdmKey": @"xdmValue"}
+                              andData: @{@"dataKey": @"dataValue"}]
+                           completion: ^(NSDictionary<AEPDecisionScope* AEPOptimizeProposition*>* propositionsDict, NSError* error) {
+  if (error != nil) {
+    // handle error
+    return;
+  }
+
+  AEPOptimizeProposition* proposition1 = propositionsDict[decisionScope1];
+  // read proposition1 offers
+
+  AEPOptimizeProposition* proposition2 = propositionsDict[decisionScope2];
+  // read proposition2 offers
+}];
+```
 
 ## updatePropositionsWithCompletionHandlerAndTimeout
 
@@ -162,15 +751,145 @@ Additionally, this API allows specifying a completion timeout, ensuring that the
 
 Completion callback passed to `updatePropositions` supports network timeout and fatal errors returned by edge network along with fetched propositions data. The SDK's internal retry mechanism handles the recoverable HTTP errors. As a result, recoverable HTTP errors are not returned through this callback.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Android Java
 
-Android
+* _decisionScopes_ is a list of decision scopes for which propositions need updating.
+* _xdm_ is a map containing additional XDM formatted data to be attached to the Experience Event.
+* _data_ is a map containing additional freeform data to be attached to the Experience Event.
+* _timeoutSeconds_ is a duration in seconds specifying the maximum time `updateProposition` will wait for completion before returning [AEPOptimizeError](#aepoptimizeerror) which contains [AdobeError.CALLBACK_TIMEOUT](../../home/base/mobile-core/api-reference.md#adobeerror).
+* _callback_ is an optional completion handler that is invoked at the completion of the edge request. The `call` method is invoked with propositions map of type `Map<DecisionScope, OptimizeProposition>`. If the callback is an instance of `AdobeCallbackWithOptimizeError`, and if the operation times out or an error occurs in retrieving propositions, the `fail` method is invoked with the appropriate [AEPOptimizeError](#aepoptimizeerror). _Note:_ In certain cases, both the success and failure callbacks may be triggered. To handle these cases, ensure that your implementation checks for both successful propositions and errors within the callback, as both may be present simultaneously.
 
-<Tabs query="platform=android&api=update-propositions-withCallback-withTimeout"/>
+<CodeBlock slots="heading, code" repeat="2" />
 
-iOS
+#### Syntax
 
-<Tabs query="platform=ios&api=update-propositions-withCallback-withTimeout"/>
+```java
+public static void updatePropositions(final List<DecisionScope> decisionScopes, 
+                                      final Map<String, Object> xdm,
+                                      final Map<String, Object> data,
+                                      final double timeoutSeconds, 
+                                      final AdobeCallback<Map<DecisionScope, OptimizeProposition>> callback)
+```
+
+#### Example
+
+```java
+final DecisionScope decisionScope1 = DecisionScope("xcore:offer-activity:1111111111111111", "xcore:offer-placement:1111111111111111", 2);
+final DecisionScope decisionScope2 = new DecisionScope("myScope");
+
+final List<DecisionScope> decisionScopes = new ArrayList<>();
+decisionScopes.add(decisionScope1);
+decisionScopes.add(decisionScope2);
+
+Optimize.updatePropositions(decisionScopes,
+                            new HashMap<String, Object>() {
+                                {
+                                    put("xdmKey", "xdmValue");
+                                }
+                            },
+                            new HashMap<String, Object>() {
+                                {
+                                    put("dataKey", "dataValue");
+                                }
+                            },
+                            10.0,
+                            new AdobeCallbackWithOptimizeError<Map<DecisionScope, OptimizeProposition>>() {
+                                @Override
+                                public void fail(AEPOptimizeError optimizeError) {
+                                    responseError = optimizeError;
+                                }
+
+                                @Override
+                                public void call(Map<DecisionScope, OptimizeProposition> propositionsMap) {
+                                    responseMap = propositionsMap;
+                                }
+                            });
+```
+
+### iOS Swift
+
+* _decisionScopes_ is an array of decision scopes for which propositions need updating.
+* _xdm_ is a dictionary containing additional XDM formatted data to be attached to the Experience Event.
+* _data_ is a dictionary containing additional freeform data to be attached to the Experience Event.
+* _timeout_ is a duration in seconds specifying the maximum time `updateProposition` will wait for completion before returning `AEPOptimizeError`.
+* _completion_ is a optional completion handler invoked at the completion of the edge request with map of successful decision scopes to propositions and `AEPOptimizeError`, if any.
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+static func updatePropositions(for decisionScopes: [DecisionScope],
+                               withXdm xdm: [String: Any]?,
+                               andData data: [String: Any]? = nil,
+                               timeout: TimeInterval,
+                               _completion: (([DecisionScope: OptimizeProposition]?, Error?) -> Void)? = nil)
+```
+
+#### Example
+
+```swift
+let decisionScope1 = DecisionScope(activityId: "xcore:offer-activity:1111111111111111",
+                                   placementId: "xcore:offer-placement:1111111111111111",
+                                   itemCount: 2)
+let decisionScope2 = DecisionScope(name: "myScope")
+
+Optimize.updatePropositions(for: [decisionScope1, decisionScope2],
+                            withXdm: ["xdmKey": "xdmValue"],
+                            andData: ["dataKey": "dataValue"],
+                            timeout: 1.0) { data, error in
+            if let error = error as? AEPOptimizeError {
+                // handle error
+            }
+        }
+```
+
+### iOS Objective-C
+
+* _decisionScopes_ is an array of decision scopes for which propositions are requested.
+* _xdm_ is a dictionary containing additional XDM formatted data to be attached to the Experience Event.
+* _data_ is a dictionary containing additional freeform data to be attached to the Experience Event.
+* _timeout_ is a duration in seconds specifying the maximum time `updateProposition` will wait for completion before returning `NSError`.
+* _completion_ is invoked with propositions dictionary of type `NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>`. An `NSError` is returned if SDK fails to retrieve the propositions.
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objc
++ (void) updatePropositions: (NSArray<AEPDecisionScope*>* _Nonnull) decisionScopes
+                    withXdm: (NSDictionary<NSString*, id>* _Nullable) xdm
+                    andData: (NSDictionary<NSString*, id>* _Nullable) data
+                    timeout:(NSTimeInterval) timeout
+                 completion: (void (^ _Nonnull)(NSDictionary<AEPDecisionScope*, AEPOptimizeProposition*>* _Nullable propositionsDict, NSError* _Nullable error)) completion;
+```
+
+#### Example
+
+```objc
+
+AEPDecisionScope* decisionScope1 = [[AEPDecisionScope alloc] initWithActivityId: @"xcore:offer-activity:1111111111111111"
+                                                                   placementId: @"xcore:offer-placement:1111111111111111"
+                                                                     itemCount: 2];
+AEPDecisionScope* decisionScope2 = [[AEPDecisionScope alloc] initWithName: @"myScope"];
+
+[AEPMobileOptimize updatePropositions: @[decisionScope1, decisionScope2]
+                              withXdm: @{@"xdmKey": @"xdmValue"}
+                              andData: @{@"dataKey": @"dataValue"}]
+                              timeout:1.0
+                              completion: ^(NSDictionary<AEPDecisionScope* AEPOptimizeProposition*>* propositionsDict, NSError* error) {
+  if (error != nil) {
+    // handle error
+    return;
+  }
+
+  AEPOptimizeProposition* proposition1 = propositionsDict[decisionScope1];
+  // read proposition1 offers
+
+  AEPOptimizeProposition* proposition2 = propositionsDict[decisionScope2];
+  // read proposition2 offers
+}];
+```
 
 ## Public classes
 
@@ -187,15 +906,81 @@ iOS
 
 This class represents the decision scope which is used to fetch the decision propositions from the Edge decisioning services. The encapsulated scope name can also represent the Base64-encoded JSON string created using the provided activityId, placementId, and itemCount.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Java
 
-Android
+```java
+/**
+ * {@code DecisionScope} class represents a scope used to fetch personalized offers from the Experience Edge network.
+ */
+public class DecisionScope {
 
-<Tabs query="platform=android&api=decisionscope"/>
+    /**
+     * Constructor creates a {@code DecisionScope} using the provided {@code name}.
+     *
+     * @param name {@link String} containing scope name.
+     */
+    public DecisionScope(final String name) {...}
+    /**
+     * Constructor creates a {@code DecisionScope} using the provided {@code activityId} and {@code placementId}.
+     *
+     * This constructor assumes the item count for the given scope to be {@value #DEFAULT_ITEM_COUNT}.
+     *
+     * @param activityId {@link String} containing activity identifier for the given scope.
+     * @param placementId {@code String} containing placement identifier for the given scope.
+     */
+    public DecisionScope(final String activityId, final String placementId) {...}
 
-iOS
+    /**
+     * Constructor creates a {@code DecisionScope} using the provided {@code activityId} and {@code placementId}.
+     *
+     * @param activityId {@link String} containing activity identifier for the given scope.
+     * @param placementId {@code String} containing placement identifier for the given scope.
+     * @param itemCount {@code String} containing number of items to be returned for the given scope.
+     */
+    public DecisionScope(final String activityId, final String placementId, final int itemCount) {...}
 
-<Tabs query="platform=ios&api=decisionscope"/>
+    /**
+     * Gets the name for this scope.
+     *
+     * @return {@link String} containing the scope name.
+     */
+    public String getName() {...}
+}
+```
+
+#### iOS Swift
+
+```swift
+/// `DecisionScope` class is used to create decision scopes for personalization query requests to Experience Edge Network.
+@objc(AEPDecisionScope)
+public class DecisionScope: NSObject, Codable {
+    /// Decision scope name
+    @objc public let name: String
+
+    /// Creates a new decision scope using the given scope `name`.
+    ///
+    /// - Parameter name: string representation for the decision scope.
+    @objc
+    public init(name: String) {...}
+
+    /// Creates a new decision scope using the given `activityId`, `placementId` and `itemCount`.
+    ///
+    /// This initializer creates a scope name by Base64 encoding the JSON string created using the provided data.
+    ///
+    /// If `itemCount` == 1, JSON string is
+    ///
+    ///     {"activityId":#activityId,"placementId":#placementId}
+    /// otherwise,
+    ///
+    ///     {"activityId":#activityId,"placementId":#placementId,"itemCount":#itemCount}
+    /// - Parameters:
+    ///   - activityId: unique activity identifier for the decisioning activity.
+    ///   - placementId: unique placement identifier for the decisioning activity offer.
+    ///   - itemCount: number of offers to be returned from the server.
+    @objc
+    public convenience init(activityId: String, placementId: String, itemCount: UInt = 1) {...}
+}
+```
 
 ### OptimizeProposition
 
@@ -206,15 +991,136 @@ This class represents the decision propositions received from the decisioning se
 * In SDK versions lower than Android 3.0.0 and iOS 5.0.0, this class was named `Proposition`
 * OptimizeProposition for ODE offers do not support the `activity` and `placement` objects in SDK versions prior to Android 3.6.0 and iOS 5.6.0
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Java
 
-Android
+```java
+/**
+ * {@code OptimizeProposition} class represents a proposition containing personalized offers from the Experience Edge network.
+ * This class supports both Target and ODE (Offer Decisioning Engine) propositions.
+ * 
+ * Note: Activity and placement object support for ODE offers is available from SDK version 3.6.0 onwards.
+ * For versions below 3.6.0, these objects will be null for ODE offers.
+ */
+public class OptimizeProposition {
 
-<Tabs query="platform=android&api=proposition"/>
+    /**
+     * Constructor creates a {@code OptimizeProposition} using the provided proposition details.
+     *
+     * @param id {@link String} containing proposition identifier.
+     * @param offers {@code List<Offer>} containing proposition items.
+     * @param scope {@code String} containing encoded scope.
+     * @param scopeDetails {@code Map<String, Object>} containing scope details.
+     * @param activity {@code Map<String, Object>} containing activity details for ODE offers.
+     * @param placement {@code Map<String, Object>} containing placement details for ODE offers.
+     */
+    OptimizeProposition(
+        final String id, 
+        final List<Offer> offers, 
+        final String scope, 
+        final Map<String, Object> scopeDetails, 
+        final Map<String, Object> activity, 
+        final Map<String, Object> placement
+    ) {...}
 
-iOS
+    /**
+     * Gets the {@code OptimizeProposition} identifier.
+     *
+     * @return {@link String} containing the {@link OptimizeProposition} identifier.
+     */
+    public String getId() {...}
 
-<Tabs query="platform=ios&api=proposition"/>
+    /**
+     * Gets the {@code OptimizeProposition} items.
+     *
+     * @return {@code List<Offer>} containing the {@link OptimizeProposition} items.
+     */
+    public List<Offer> getOffers() {...}
+
+    /**
+     * Gets the {@code OptimizeProposition} scope.
+     *
+     * @return {@link String} containing the encoded {@link OptimizeProposition} scope.
+     */
+    public String getScope() {...}
+
+    /**
+     * Gets the {@code OptimizeProposition} scope details.
+     *
+     * @return {@code Map<String, Object>} or {@code null} containing the {@link OptimizeProposition} scope details.
+     */
+    @Nullable public Map<String, Object> getScopeDetails() {...}
+
+    /**
+     * Gets the {@code OptimizeProposition} activity details for ODE offers.
+     *
+     * @return {@code Map<String, Object>} or {@code null} containing the activity details.
+     */
+    @Nullable public Map<String, Object> getActivity() {...}
+
+    /**
+     * Gets the {@code OptimizeProposition} placement details for ODE offers.
+     *
+     * @return {@code Map<String, Object>} or {@code null} containing the placement details.
+     */
+    @Nullable public Map<String, Object> getPlacement() {...}
+
+    /**
+     * Generates a map containing XDM formatted data for {@code Experience Event - OptimizeProposition Reference} field group from this {@code OptimizeProposition}.
+     *
+     * The returned XDM data does not contain {@code eventType} for the Experience Event.
+     *
+     * @return {@code Map<String, Object>} containing the XDM data for the OptimizeProposition reference.
+     */
+    public Map<String, Object> generateReferenceXdm() {...}
+}
+```
+
+#### iOS Swift
+
+```swift
+/// `OptimizeProposition` class represents a proposition containing personalized offers from the Experience Edge network.
+/// This class supports both Target and ODE (Offer Decisioning Engine) propositions.
+/// 
+/// Note: Activity and placement object support for ODE offers is available from SDK version 5.6.0 onwards.
+/// For versions below 5.6.0, these objects will be nil for ODE offers.
+@objc(AEPOptimizeProposition)
+public class OptimizeProposition: NSObject, Codable {
+
+    /// Unique proposition identifier
+    @objc public let id: String
+
+    /// Array containing proposition decision options
+    @objc public lazy var offers: [Offer] = {...}()
+
+    /// Decision scope string
+    @objc public let scope: String
+
+    /// Scope details dictionary
+    @objc public var scopeDetails: [String: Any]?
+
+    /// Activity details dictionary for ODE offers
+    @objc public var activity: [String: Any]?
+
+    /// Placement details dictionary for ODE offers
+    @objc public var placement: [String: Any]?
+}
+```
+
+The `OptimizeProposition` class extension provides a method for generating XDM data for Proposition Reference field group which can be used for proposition tracking.
+
+```swift
+/// `OptimizeProposition` extension
+@objc
+public extension OptimizeProposition {
+    /// Creates a dictionary containing XDM formatted data for `Experience Event - Proposition Reference` field group from the given proposition.
+    ///
+    /// The Edge `sendEvent(experienceEvent:_:)` API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, or override dataset identifier.
+    ///
+    /// - Note: The returned XDM data does not contain an `eventType` for the Experience Event.
+    /// - Returns A dictionary containing XDM data for the proposition reference.
+    func generateReferenceXdm() -> [String: Any] {...}
+}
+```
 
 ### Offer
 
@@ -224,54 +1130,423 @@ This class represents the proposition option received from the decisioning servi
 
 In SDK versions lower than Android 3.3.0 and iOS 5.2.1, the datatype for `Offer Score` was `int`. It is now changed to `double`
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Java
 
-Android
+```java
+public class Offer {
 
-<Tabs query="platform=android&api=offer"/>
+    /**
+     * {@code Offer} Builder.
+     */
+    public static class Builder {
+        
+        /**
+        * Builder constructor with required {@code Offer} attributes as parameters.
+        *
+        * It sets default values for remaining {@link Offer} attributes.
+        *
+        * @param id required {@link String} containing {@code Offer} identifier.
+        * @param type required {@link OfferType} indicating the {@code Offer} type.
+        * @param content required {@link String} containing the {@code Offer} content.
+        */
+        public Builder(final String id, final OfferType type, final String content) {...}
 
-iOS
+        /**
+        * Sets the etag for this {@code Offer}.
+        *
+        * @param etag {@link String} containing {@link Offer} etag.
+        * @return this Offer {@link Builder}
+        * @throws UnsupportedOperationException if this method is invoked after {@link Builder#build()}.
+        */
+        public Builder setEtag(final String etag) {...}
 
-<Tabs query="platform=ios&api=offer"/>
+        /**
+         * Sets the score for this {@code Offer}.
+         *
+         * @param score {@code double} containing {@link Offer} score.
+         * @return this Offer {@link Builder}
+         * @throws UnsupportedOperationException if this method is invoked after {@link Builder#build()}.
+         */
+        public Builder setScore(final double score) {...}
+
+        /**
+        * Sets the schema for this {@code Offer}.
+        *
+        * @param schema {@link String} containing {@link Offer} schema.
+        * @return this Offer {@link Builder}
+        * @throws UnsupportedOperationException if this method is invoked after {@link Builder#build()}.
+        */
+        public Builder setSchema(final String schema) {...} 
+
+        /**
+         * Sets the metadata for this {@code Offer}.
+         *
+         * @param meta {@code Map<String, Object>} containing {@link Offer} metadata.
+         * @return this Offer {@link Builder}
+         * @throws UnsupportedOperationException if this method is invoked after {@link Builder#build()}.
+         */
+        public Builder setMeta(final Map<String, Object> meta) {...}
+
+        /**
+        * Sets the language for this {@code Offer}.
+        *
+        * @param language {@code List<String>} containing supported {@link Offer} language.
+        * @return this Offer {@link Builder}
+        * @throws UnsupportedOperationException if this method is invoked after {@link Builder#build()}.
+        */
+        public Builder setLanguage(final List<String> language) {...}
+
+        /**
+        * Sets the characteristics for this {@code Offer}.
+        *
+        * @param characteristics {@code Map<String, String>} containing {@link Offer} characteristics.
+        * @return this Offer {@link Builder}
+        * @throws UnsupportedOperationException if this method is invoked after {@link Builder#build()}.
+        */
+        public Builder setCharacteristics(final Map<String, String> characteristics) {...}
+
+        /**
+        * Builds and returns the {@code Offer} object.
+        *
+        * @return {@link Offer} object or null.
+        * @throws UnsupportedOperationException if this method is invoked after {@link Builder#build()}.
+        */
+        public Offer build() {...}
+    }
+
+    /**
+     * Gets the {@code Offer} identifier.
+     *
+     * @return {@link String} containing the {@link Offer} identifier.
+     */
+    public String getId() {...}
+
+    /**
+     * Gets the {@code Offer} etag.
+     *
+     * @return {@link String} containing the {@link Offer} etag.
+     */
+    public String getEtag() {...}
+
+    /**
+     * Gets the {@code Offer} score.
+     *
+     * @return {@code double} containing the {@link Offer} score.
+     */
+    public double getScore() {...}
+
+    /**
+     * Gets the {@code Offer} schema.
+     *
+     * @return {@link String} containing the {@link Offer} schema.
+     */
+    public String getSchema() {...}
+
+    /**
+     * Gets the {@code Offer} metadata.
+     *
+     * @return {@code Map<String, Object>} containing the {@link Offer} metadata.
+     */
+    public Map<String, Object> getMeta() {...}
+
+    /**
+     * Gets the {@code Offer} type.
+     *
+     * @return {@link OfferType} indicating the {@link Offer} type.
+     */
+    public OfferType getType() {...}
+
+    /**
+     * Gets the {@code Offer} language.
+     *
+     * @return {@code List<String>} containing the supported {@link Offer} language.
+     */
+    public List<String> getLanguage() {...}
+
+    /**
+     * Gets the {@code Offer} content.
+     *
+     * @return {@link String} containing the {@link Offer} content.
+     */
+    public String getContent() {...}
+
+    /**
+     * Gets the {@code Offer} characteristics.
+     *
+     * @return {@code Map<String, String>} containing the {@link Offer} characteristics.
+     */
+    public Map<String, String> getCharacteristics() {...}
+
+    /**
+     * Gets the containing {@code OptimizeProposition} for this {@code Offer}.
+     *
+     * @return {@link OptimizeProposition} instance.
+     */
+    public OptimizeProposition getProposition() {...}
+
+    /**
+     * Dispatches an event for the Edge network extension to send an Experience Event to the Edge network with the display interaction data for the
+     * given {@code OptimizeProposition} offer.
+     */
+    public void displayed() {...}
+
+    /**
+     * Dispatches an event for the Edge network extension to send an Experience Event to the Edge network with the tap interaction data for the
+     * given {@code OptimizeProposition} offer.
+     */
+    public void tapped() {...}
+
+    /**
+     * Generates a map containing XDM formatted data for {@code Experience Event - Proposition Interactions} field group from this {@code OptimizeProposition} item.
+     *
+     * The returned XDM data does contain the {@code eventType} for the Experience Event with value {@code decisioning.propositionDisplay}.
+     *
+     * Note: The Edge sendEvent API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, and override
+     * dataset identifier.
+     *
+     * @return {@code Map<String, Object>} containing the XDM data for the proposition interaction.
+     */
+    public Map<String, Object> generateDisplayInteractionXdm() {...}
+
+    /**
+     * Generates a map containing XDM formatted data for {@code Experience Event - Proposition Interactions} field group from this {@code OptimizeProposition} offer.
+     *
+     * The returned XDM data contains the {@code eventType} for the Experience Event with value {@code decisioning.propositionInteract}.
+     *
+     * Note: The Edge sendEvent API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, and override
+     * dataset identifier.
+     *
+     * @return {@code Map<String, Object>} containing the XDM data for the proposition interaction.
+     */
+    public Map<String, Object> generateTapInteractionXdm() {...}
+
+}
+```
+
+#### iOS Swift
+
+```swift
+/// `Offer` class
+@objc(AEPOffer)
+public class Offer: NSObject, Codable {
+    /// Unique Offer identifier
+    @objc public let id: String
+
+    /// Offer revision detail at the time of the request
+    @objc public let etag: String
+
+    /// Offer priority score
+    @objc public let score: Double
+
+    /// Offer schema string
+    @objc public let schema: String
+
+    /// Offer metadata
+    @objc public let meta: [String: Any]?
+    
+    /// Offer type as represented in enum `OfferType`
+    @objc public let type: OfferType
+
+    /// Optional Offer language array
+    @objc public let language: [String]?
+
+    /// Offer content string
+    @objc public let content: String
+
+    /// Optional Offer characteristics dictionary
+    @objc public let characteristics: [String: String]?
+}
+```
+
+The `Offer` class extension provides methods for generating XDM data for Proposition Interactions field group which can be used for proposition tracking.
+
+```swift
+/// `Offer` extension
+@objc
+public extension Offer {
+    /// Creates a dictionary containing XDM formatted data for `Experience Event - Proposition Interactions` field group from the given proposition option.
+    ///
+    /// The Edge `sendEvent(experienceEvent:_:)` API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, or override dataset identifier.
+    /// If the proposition reference within the option is released and no longer valid, the method returns `nil`.
+    ///
+    /// - Note: The returned XDM data also contains the `eventType` for the Experience Event with value `decisioning.propositionDisplay`.
+    /// - Returns A dictionary containing XDM data for the proposition interactions.
+    func generateDisplayInteractionXdm() -> [String: Any]? {...}
+
+    /// Creates a dictionary containing XDM formatted data for `Experience Event - Proposition Interactions` field group from the given proposition option.
+    ///
+    /// The Edge `sendEvent(experienceEvent:_:)` API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, or override dataset identifier.
+    /// If the proposition reference within the option is released and no longer valid, the method returns `nil`.
+    ///
+    /// - Note: The returned XDM data also contains the `eventType` for the Experience Event with value `decisioning.propositionInteract`.
+    /// - Returns A dictionary containing XDM data for the proposition interactions.
+    func generateTapInteractionXdm() -> [String: Any]? {...}
+
+    /// Dispatches an event for the Edge extension to send an Experience Event to the Edge network with the display interaction data for the given proposition item.
+    func displayed() {...}
+
+    /// Dispatches an event for the Edge extension to send an Experience Event to the Edge network with the tap interaction data for the given proposition item.
+    func tapped() {...}
+}
+```
 
 ### OfferUtils | Optimize
 
 Starting from Android SDK version 3.4.0 and iOS SDK version 5.4.0, the Optimize SDK provides enhanced support for batching multiple display propositions track events. The following methods are available in the `OfferUtils.kt` and `Optimize.swift` public classes respectively.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Kotlin
 
-Android
+```kotlin
+object OfferUtils {
+    /**
+     * Dispatches an event for the Edge network extension to send an Experience Event to the Edge
+     * network with the display interaction data for the given list of [Offer]s.
+     *
+     * This function extracts unique [OptimizeProposition]s from the list of offers based on their
+     * proposition ID and dispatches an event with multiple propositions.
+     *
+     * @see XDMUtils.trackWithData
+     */
+    @JvmStatic
+    fun List<Offer>.displayed() {...}
 
-<Tabs query="platform=android&api=offerutils"/>
+    /**
+     * Generates a map containing XDM formatted data for `Experience Event - OptimizeProposition
+     * Interactions` field group from the given list of [Offer]s.
+     *
+     * This function extracts unique [OptimizeProposition]s from the list of offers based on their
+     * proposition ID and generates XDM data for the interaction.
+     *
+     * @return [Map] containing the XDM data for the proposition interaction, or null if the list is empty
+     * or no valid propositions are found
+     */
+    @JvmStatic
+    fun List<Offer>.generateDisplayInteractionXdm(): Map<String, Any>? {...}
+}
+```
 
-iOS
+#### iOS Swift
 
-<Tabs query="platform=ios&api=optimize"/>
+```swift
+/// This API dispatches an event for the Edge extension to send an Experience Event to the Edge network with the display interaction data for list of offers passed.
+///
+/// - Parameter offers: An array of offer.
+@objc(displayed:)
+static func displayed(for offers: [Offer]){...}
+
+/// This API returns a dictionary containing XDM formatted data for `Experience Event - Proposition Interactions` field group for the list of offers
+///
+/// The Edge `sendEvent(experienceEvent:_:)` API can be used to dispatch this data in an Experience Event along with any additional XDM, free-form data, or override dataset identifier.
+///
+/// - Parameter offers: An array of offer.
+/// - Note: The returned XDM data also contains the `eventType` for the Experience Event with value `decisioning.propositionInteract`.
+/// - Returns A dictionary containing XDM data for the propositon interactions.
+/// - SeeAlso: `interactionXdm(for:)`
+@objc(generateDisplayInteractionXdm:)
+static func generateDisplayInteractionXdm(for offers: [Offer]) -> [String: Any]?{...}
+```
 
 ### OfferType
 
 An enum indicating the type of an offer, derived from the proposition item `format` field in personalization query response.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### Android Java
 
-Android
+```java
+public enum OfferType {
+    UNKNOWN, JSON, TEXT, HTML, IMAGE;
 
-<Tabs query="platform=android&api=offertype"/>
+    @Override
+    public String toString() {...}
 
-iOS
+    /**
+     * Returns the {@code OfferType} for the given {@code format}.
+     *
+     * @param format {@link String} containing the {@link Offer} format.
+     * @return {@link OfferType} indicating the {@code Offer} format.
+     */
+    public static OfferType from(final String format) {...}
+}
+```
 
-<Tabs query="platform=ios&api=offertype"/>
+#### iOS Swift
 
-###  AEPOptimizeError
+```swift
+/// Enum representing the supported Offer Types.
+public enum OfferType: Int, Codable {
+
+    /// Unknown Offer type
+    case unknown = 0
+
+    /// JSON Offer
+    case json = 1
+
+    /// Plain text Offer
+    case text = 2
+
+    /// Html Offer
+    case html = 3
+
+    /// Image Offer
+    case image = 4
+
+    /// Initializes OfferType with the provided format string.
+    /// - Parameter format: Offer format string
+    init(from format: String) {...}
+}
+```
+
+### AEPOptimizeError
 
 This class represents the error details returned by the Edge Network while fetching propositions.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+#### iOS Swift
 
-Android
+Error details received from Edge response along with [AEPError](../../home/base/mobile-core/api-reference.md#aeperror) object returned with values:
 
-<Tabs query="platform=android&api=optimizeerror"/>
+* _AEPError.callbackTimeout_ is returned when request timeout without any response.
+* _AEPError.serverErrors_ is returned for HTTP Status 500.
+* _AEPError.invalidRequest_ is returned for HTTP Status 400 - 499 (except 408 and 429).
 
-iOS
+```swift
+@objc(AEPOptimizeError)
+public class AEPOptimizeError: NSObject, Error {
+    // This is a URI reference (RFC3986) that identifies the problem type  
+    public let type: String?
 
-<Tabs query="platform=ios&api=optimizeerror"/>
+    // This is the HTTP status code generated by the server for this occurrence of the problem.
+    public let status: Int?
+
+    // This is a short, human-readable summary of the problem type.
+    public let title: String?
+
+    // This is human-readable description of the problem type.
+    public let detail: String?
+
+    // This is a map of additional properties that aid in debugging such as the request ID or the org ID. In some cases, it might contain data specific to the error at hand, such as a list of validation errors.
+    public let report: [String: Any]?
+
+    // This ia a mandatory AEPError representing the high level error status
+    public var aepError = AEPError.unexpected
+
+    // Initializer for AEPOptimizeError based based on the Error details returned by Edge respose
+    public init(type: String?, status: Int?, title: String?, detail: String?, aepError: AEPError? = nil) {...}
+}
+```
+
+#### Android Kotlin
+
+Error details received from Edge response along with [AdobeError](../../home/base/mobile-core/api-reference.md#adobeerror) object returned with values:
+
+* _AdobeError.CALLBACK_TIMEOUT_ is returned when request timeout without any response.
+* _AdobeError.SERVER_ERROR_ is returned for HTTP Status 500.
+* _AdobeError.INVALID_REQUEST_ is returned for HTTP Status 400 - 499 (except 408 and 429).
+
+```kotlin
+class AEPOptimizeError(val type: String? = "",
+                       val status: Int? = 0,
+                       val title: String? = "", 
+                       val detail: String? = "", 
+                       var report: Map<String, Any>?, 
+                       var adobeError: AdobeError?) {...}
+```

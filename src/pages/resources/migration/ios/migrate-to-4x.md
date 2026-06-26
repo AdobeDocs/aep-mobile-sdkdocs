@@ -1,5 +1,7 @@
-import Tabs from './tabs/migrate-to-4x.md'
-
+---
+title: Migrate to Adobe Experience Platform 4.x SDKs for iOS
+description: This Mobile SDK version for iOS now supports a minimum iOS version of 11.0 and a tvOS version of 11.0. The XCFrameworks included in the GitHub release are ...
+---
 # Migrate to Adobe Experience Platform 4.x SDKs for iOS
 
 <InlineAlert variant="info" slots="text"/>
@@ -82,12 +84,25 @@ The following APIs have been removed:
 | :------------- | :-------------- |
 | `XDMFormatters` utility | Use `getISO8601UTCDateWithMilliseconds()` and `getISO8601FullDate()` functions in the [Date class extension](https://github.com/adobe/aepsdk-core-ios/blob/4.0.0/AEPServices/Sources/utility/Date%2BFormat.swift) from the AEPServices module. |
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
-
 iOS 3.x
 
-<Tabs query="platform=ios&extension=edge&version=3"/>
+### iOS Swift
+
+```swift
+import AEPEdge
+let date = Date()
+let formattedDate = XDMFormatters.dateToFullDateString(date)
+let formattedDateWithMs = XDMFormatters.dateToISO8601String(date)
+```
 
 iOS 4.x
 
-<Tabs query="platform=ios&extension=edge&version=4"/>
+### iOS Swift
+
+```swift
+import AEPServices
+let date = Date()
+let formattedDate = date.getISO8601FullDate()
+let formattedDateWithMs = date.getISO8601UTCDateWithMilliseconds()
+```
+

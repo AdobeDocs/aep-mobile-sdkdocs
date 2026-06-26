@@ -1,3 +1,7 @@
+---
+title: Resources
+description: The following document provides a list of resources for you to better understand how to use Mobile SDK.
+---
 # Resources
 
 The following document provides a list of resources for you to better understand how to use Mobile SDK.
@@ -28,4 +32,4 @@ To find answers to the most frequently asked questions about Mobile SDK, please 
 
 ## Adobe Mobile Library (v4) end-of-support
 
-You can learn about upgrading from Adobe Mobile Library (v4) to the Experience Platform SDKs by following the instructions in the [upgrading to Experience Platform SDKs overview](./upgrade-platform-sdks/index.md).
+You can learn about upgrading from Adobe Mobile Library (v4) to the Experience Platform SDKs by following the instructions in the [upgrading to Experience Platform SDKs overview](upgrade-platform-sdks/index.md).

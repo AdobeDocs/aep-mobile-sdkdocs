@@ -9,6 +9,22 @@ keywords:
 
 # Release notes
 
+## June 4, 2026
+
+### iOS EdgeConsent 5.0.2
+
+## What's Changed
+* Add collectConsentResyncRequired flag for collect-consent transitions
+
+**Full Changelog**: https://github.com/adobe/aepsdk-edgeconsent-ios/compare/5.0.1...5.0.2
+
+### Android EdgeConsent 3.0.3
+
+## What's Changed
+* Add collectConsentResyncRequired flag for collect-consent grant transitions
+
+**Full Changelog**: https://github.com/adobe/aepsdk-edgeconsent-android/compare/v3.0.2...v3.0.3
+
 ## August 14, 2025
 
 ### iOS EdgeConsent 5.0.1
@@ -86,7 +102,7 @@ Major version update for [Consent](https://github.com/adobe/aepsdk-react-native/
 
 ### Android EdgeConsent 3.0.0
 
-Major version update for [Consent for Edge Network](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+Major version update for [Consent for Edge Network](index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
 * Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
@@ -95,7 +111,7 @@ Major version update for [Consent for Edge Network](./index.md) for Adobe Experi
 
 ### iOS EdgeConsent 5.0.0
 
-Major version update for [Consent for Edge Network](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+Major version update for [Consent for Edge Network](index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 12.0 and tvOS 12.0.
 * Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
@@ -110,7 +126,7 @@ Major version update for [Consent for Edge Network](./index.md) for Adobe Experi
 
 ### iOS Consent 4.0.0
 
-Major version update for [Consent for Edge Network](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+Major version update for [Consent for Edge Network](index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 11.0 and tvOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
@@ -125,7 +141,7 @@ Major version update for [Consent for Edge Network](./index.md) for Adobe Experi
 
 ### Android Consent 2.0.0
 
-* Major version update for [Consent for Edge Network](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgeconsent-android).
+* Major version update for [Consent for Edge Network](index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-edgeconsent-android).
 
 ## April 8, 2022
 

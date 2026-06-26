@@ -9,9 +9,6 @@ keywords:
 - Tutorial
 ---
 
-import AttachingDataAnalytics from './tabs/attach-data/attaching-data/analytics.md'
-import AttachingDataTarget from './tabs/attach-data/attaching-data/target.md'
-
 # Attach data to SDK events
 
 The attach data_rule action is supported in [Mobile Core](../../home/base/mobile-core/index.md) starting from version 2.1.8 (Launch), 2.3.5 (iOS), and 1.4.5 (Android). This action is powerful, complex, and enables advanced use cases.
@@ -60,7 +57,7 @@ A rule might be read out in the following way: If the SDK **Event** occurs and *
 
 <InlineAlert variant="info" slots="text"/>
 
-Attach data rule actions will only add data to the event. These actions never modify or remove data. <br/><br/> If there is a conflict between the data that is defined in your rule and the data in the event, the data in the event always has preference.
+Attach data rule actions will only add data to the event. These actions never modify or remove data. \<br/\>\<br/\> If there is a conflict between the data that is defined in your rule and the data in the event, the data in the event always has preference.
 
 ### Defining a payload for the attach data action
 
@@ -70,12 +67,278 @@ As a result, it is highly recommended to enable verbose logging in the SDK and c
 
 ## Example - attaching data to an event
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+### Analytics
 
-Analytics
+The following sample shows how to attach data to all outgoing `TrackAction` Analytics network requests. To create this type of rule, select your property in the Data Collection UI and complete the following steps.
 
-<AttachingDataAnalytics/>
+#### Create a rule
 
-Target
+1. On the **Rules** tab, select **Create New Rule**.
 
-<AttachingDataTarget/>
+<InlineAlert variant="info" slots="text"/>
+
+If you do not have existing rules for this property, the **Create New Rule** button will be in the middle of the screen. If your property has rules, the button will be in the top right of the screen.
+
+#### Select an event
+
+1. Give your rule an easily recognizable name in your list of rules.
+
+   In this example, the rule is named "Attach Places Data to Analytics Track Action Events".
+
+2. Under the **Events** section, select **Add**.
+3. From the **Extension** dropdown list, select **Mobile Core**.
+4. From the **Event Type** dropdown list, select **Track Action**.
+5. Select **Keep Changes**.
+
+![](assets/attach-data/set-event.png)
+
+#### Define the action
+
+1. Under the **Actions** section, select **Add**.
+2. From the **Extension** dropdown list, select **Mobile Core**.
+3. From the **Action Type** dropdown list, select **Attach Data**.
+4. On the right pane, in the **JSON Payload** field, type the data that will be added to this event.
+5. Select **Keep Changes**.
+
+On the right pane, you can add a freeform JSON payload that adds data to an SDK event before an extension that is listening for this event can hear the event. In this example, some context data is added to this event before the Adobe Analytics extension processes it. The added context data will now be on the outgoing Adobe Analytics hit.
+
+In the following example, `launches` and `anAddedKey` keys are added to the `contextdata` of the Analytics event. Values for the new keys can either be hardcoded in the rule, or dynamically determined by the SDK when this event processes by using data elements.
+
+![](assets/attach-data/set-action.png)
+
+#### Save the rule and rebuild your property
+
+After you complete your configuration, verify that your rule looks like the following:
+
+![](assets/attach-data/rule-complete.png)
+
+1. Select **Save**
+2. Rebuild your mobile property and deploy it to the correct Environment.
+
+### Target
+
+<InlineAlert variant="warning" slots="text"/>
+
+The attach data feature applies **only** to the Target extension.
+
+#### Attach additional data to Target to retrieve location events
+
+The following sample shows how to attach data to all outgoing `retrieveLocationContent` Target network requests. To create this type of rule, select your property in the Data Collection UI and complete the following steps.
+
+#### Create a rule
+
+1. On the **Rules** tab, select **Create New Rule**.
+
+<InlineAlert variant="info" slots="text"/>
+
+If you do not have existing rules for this property, the **Create New Rule** button will be in the middle of the screen. If your property has rules, the button will be in the top right of the screen.
+
+#### Select an event
+
+1. Give your rule an easily recognizable name in your list of rules.
+
+   In this example, the rule is named **Attach additional data to Target retrieve location Events**.
+
+2. Under the **Events** section, select **Add**.
+3. From the **Extension** dropdown list, select **Adobe Target**.
+4. From the **Event Type** dropdown list, select **Content Requested**.
+5. Select **Keep Changes**.
+
+![](assets/attach-data/target-attach-data-event-setup.png)
+
+#### Define the action
+
+1. Under the **Actions** section, select **Add**.
+2. From the **Extension** dropdown list, select **Mobile Core**.
+3. From the **Action Type** dropdown list, select **Attach Data**.
+4. On the right pane, in the **JSON Payload** field, type the data that will be added to this event.
+5. Select **Keep Changes**.
+
+On the right pane, you can add a freeform JSON payload that adds data to an SDK event before an extension that is listening for this event can hear the event.
+
+```json
+{
+    "request[*]": {
+        "targetparams": {
+            "profileparams": {
+                "extraRetrieveLocationKey": "extraRetrieveLocationValue"
+            },
+            "mboxparameters": {
+                "extraRetrieveLocationMboxKey": "extraRetrieveLocationMboxValue"
+            }
+        }
+    }
+}
+```
+
+In the above example,  the JSON payload adds custom parameters to each of the Target retrieve location objects.
+
+#### Save the rule and rebuild your property
+
+After you complete your configuration, verify that your rule looks like the following:
+
+![](assets/attach-data/target-attach-data-rule-setup.png)
+
+1. Select **Save**
+2. Rebuild your mobile property and deploy it to the correct Environment.
+
+#### Attach additional data to Target to prefetch content events
+
+The following sample shows how to add a custom mbox to prefetch in all outgoing `prefetchContent` Target network requests. To create this type of rule, select your property in the Data Collection UI and complete the following steps.
+
+#### Create a rule
+
+1. On the **Rules** tab, select **Create New Rule**.
+
+<InlineAlert variant="info" slots="text"/>
+
+If you do not have existing rules for this property, the **Create New Rule** button will be in the middle of the screen. If your property has rules, the button will be in the top right of the screen.
+
+#### Select an event
+
+1. Give your rule an easily recognizable name in your list of rules.
+
+   In this example, the rule is named "Attach additional data to Target prefetch content Events".
+
+2. Under the **Events** section, select **Add**.
+3. From the **Extension** dropdown list, select **Adobe Target**.
+4. From the **Event Type** dropdown list, select **Content Prefetched**.
+5. Select **Keep Changes**.
+
+![](assets/attach-data/target-attach-data-event-setup-prefetch.png)
+
+#### Define the action
+
+1. Under the **Actions** section, select **Add**.
+2. From the **Extension** dropdown list, select **Mobile Core**.
+3. From the **Action Type** dropdown list, select **Attach Data**.
+4. On the right pane, in the **JSON Payload** field, type the data that will be added to this event.
+5. Select **Keep Changes**.
+
+On the right pane, you can add a freeform JSON payload that adds data to an SDK event before an extension that is listening for this event can hear the event.
+
+```json
+{
+    "prefetch[*]": {
+        "targetparams": {
+            "profileparams": {
+                "extraPrefetchProfileKey": "extraPrefetchProfileValue"
+            },
+            "mboxparameters": {
+                "extraPrefetchMboxKey": "extraPrefetchMboxValue"
+            }
+        }
+    }
+}
+```
+
+In the above example, the JSON payload adds custom mbox parameters to each of the Target prefetch objects.
+
+#### Save the rule and rebuild your property
+
+After you complete your configuration, verify that your rule looks like the following:
+
+![](assets/attach-data/target-attach-data-rule-setup-prefetch.png)
+
+1. Select **Save**
+2. Rebuild your mobile property and deploy it to the correct Environment.
+
+#### Attach additional data to Target location-clicked events
+
+The following sample shows how to add additional mbox and profile parameters in all outgoing `locationClicked` Target network requests. To create this type of rule, select your property in the Data Collection UI and complete the following steps.
+
+#### Create a rule
+
+1. On the **Rules** tab, select **Create New Rule**.
+
+<InlineAlert variant="info" slots="text"/>
+
+If you do not have existing rules for this property, the **Create New Rule** button will be in the middle of the screen. If your property has rules, the button will be in the top right of the screen.
+
+#### Select an event
+
+1. Give your rule an easily recognizable name in your list of rules.
+
+   In this example, the rule is named "Attach additional data to Target location clicked Events".
+
+2. Under the **Events** section, select **Add**.
+3. From the **Extension** dropdown list, select **Adobe Target**.
+4. From the **Event Type** dropdown list, select **Location Clicked**.
+5. Select **Keep Changes**.
+
+![](assets/attach-data/target-attach-data-event-setup-location-clicked.png)
+
+#### Define the action
+
+1. Under the **Actions** section, select **Add**.
+2. From the **Extension** dropdown list, select **Mobile Core**.
+3. From the **Action Type** dropdown list, select **Attach Data**.
+4. On the right pane, in the **JSON Payload** field, type the data that will be added to this event.
+5. Select **Keep Changes**.
+
+On the right pane, you can add a freeform JSON payload that adds data to an SDK event before an extension that is listening for this event can hear the event. In this example, custom mbox and profile parameters are added to the event before the Target extension processes it. The added mbox and profile parameters will now be added on outgoing Target location clicked requests.
+
+In the following example, **extraKey** and **extraKey2** are added to the profile parameters. A key named `customMboxParameter` and a data element that was defined for the **OS version** are added to the mbox parameters of the Target event. Values for the new keys can either be hardcoded in the rule or be dynamically determined by the SDK when this event processes by using data elements.
+
+![](assets/attach-data/target-attach-data-json-example-location-clicked.png)
+
+The following example shows how the data element for this OS version was created.
+
+![](assets/attach-data/target-attach-data-data-element-setup.png)
+
+#### Save the rule and rebuild your property
+
+After you complete your configuration, verify that your rule looks like the following:
+
+![](assets/attach-data/target-attach-data-rule-setup-location-clicked.png)
+
+1. Select **Save**
+2. Rebuild your mobile property and deploy it to the correct Environment.
+
+#### Attach additional data to Target location-displayed events
+
+The following sample shows how to add additional mbox and profile parameters in all outgoing `locationDisplayed` Target network requests. To create this type of rule, select your property in the Data Collection UI and complete the following steps.
+
+#### Create a rule
+
+1. On the **Rules** tab, select **Create New Rule**.
+
+<InlineAlert variant="info" slots="text"/>
+
+If you do not have existing rules for this property, the **Create New Rule** button will be in the middle of the screen. If your property has rules, the button will be in the top right of the screen.
+
+#### Select an event
+
+1. Give your rule an easily recognizable name in your list of rules.
+
+   In this example, the rule is named "Attach additional data to Target location displayed Events".
+
+2. Under the **Events** section, select **Add**.
+3. From the **Extension** dropdown list, select **Adobe Target**.
+4. From the **Event Type** dropdown list, select **Location Displayed**.
+5. Select **Keep Changes**.
+
+![](assets/attach-data/target-attach-data-event-setup-location-displayed.png)
+
+#### Define the action
+
+1. Under the **Actions** section, select **Add**.
+2. From the **Extension** dropdown list, select **Mobile Core**.
+3. From the **Action Type** dropdown list, select **Attach Data**.
+4. On the right pane, in the **JSON Payload** field, type the data that will be added to this event.
+5. Select **Keep Changes**.
+
+On the right pane, you can add a freeform JSON payload that adds data to an SDK event before an extension that is listening for this event can hear the event. In this example, custom mbox and profile parameters are added to the event before the Target extension processes it. The added mbox and profile parameters will now be added on outgoing Target location displayed requests.
+
+In the following example, **extraKey** and **extraKey2** are added to the profile parameters. A key named `customMboxParameter` and a data element that was defined for the OS version are added to the mbox parameters of the Target event. Values for the new keys can either be hardcoded in the rule or be dynamically determined by the SDK when this event processes by using data elements.
+
+![](assets/attach-data/target-attach-data-json-example-location-clicked.png)
+
+#### Save the rule and rebuild your property
+
+After you complete your configuration, verify that your rule looks like the following:
+
+![](assets/attach-data/target-attach-data-rule-setup-location-displayed.png)
+
+1. Select **Save**
+2. Rebuild your mobile property and deploy it to the correct Environment.

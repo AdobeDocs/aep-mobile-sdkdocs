@@ -49,4 +49,4 @@ The above rule to show the in-app message when the app is opened from a push not
 
 ## Track push notification interaction
 
-After the application is opened by the user by clicking on the push notification, verify push notification interaction is being tracked using [handleNotificationResponse](./api-reference.md/#track-push-notification-interactions) API in the delegate implementing [UNUserNotificationCenterDelegate](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate).
+After the application is opened by the user by clicking on the push notification, verify push notification interaction is being tracked using [handleNotificationResponse](api-reference.md#track-push-notification-interactions) API in the delegate implementing [UNUserNotificationCenterDelegate](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate).

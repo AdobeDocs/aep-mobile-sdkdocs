@@ -10,7 +10,6 @@ keywords:
 - iOS
 - Code-based Experiences
 ---
-import Tabs from './tabs/proposition.md'
 
 # Proposition
 
@@ -18,9 +17,9 @@ The `Proposition` class represents the decision propositions received from the r
 
 ## iOS Interface - Proposition
 
-## Public variables
+### Public variables
 
-### uniqueId
+#### uniqueId
 
 Unique proposition identifier.
 
@@ -28,7 +27,7 @@ Unique proposition identifier.
 public let uniqueId: String
 ```
 
-### scope
+#### scope
 
 Scope string.
 
@@ -36,7 +35,7 @@ Scope string.
 public let scope: String
 ```
 
-### items
+#### items
 
 An array containing proposition decision items.
 
@@ -46,34 +45,46 @@ public lazy var items: [PropositionItem]
 
 ## Android Interface - Proposition
 
-## Public functions
+### Public functions
 
-### getItems
-
-Returns this proposition's unique identifier as a string.
-
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
-
-Android
-
-<Tabs query="platform=android&function=get-items"/>
-
-### getScope
+#### getItems
 
 Returns this proposition's unique identifier as a string.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+##### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=get-scope"/>
+##### Syntax
 
-### getUniqueId
+```java
+public List<PropositionItem> getItems()
+```
+
+#### getScope
 
 Returns this proposition's unique identifier as a string.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+##### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="1" />
 
-<Tabs query="platform=android&function=get-unique-id"/>
+##### Syntax
+
+```java
+public String getScope()
+```
+
+#### getUniqueId
+
+Returns this proposition's unique identifier as a string.
+
+##### Android Java
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+##### Syntax
+
+```java
+public String getUniqueId()
+```

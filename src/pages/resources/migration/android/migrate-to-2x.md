@@ -1,5 +1,7 @@
-import Tabs from './tabs/migrate-to-2x.md'
-
+---
+title: Migrate to Adobe Experience Platform 2.x SDKs for Android
+description: This Mobile SDK version for Android now supports a minimum API level of 19.
+---
 # Migrate to Adobe Experience Platform 2.x SDKs for Android
 
 <InlineAlert variant="info" slots="text"/>
@@ -10,17 +12,9 @@ This Mobile SDK version for Android now supports a minimum API level of 19.
 
 ### Android BOM
 
-<div style="height:20px; width:120px;"></div>
-
-<div style="height:30px; width:140px;">
-<a href="https://mvnrepository.com/artifact/com.adobe.marketing.mobile/sdk-bom">
-<img src="https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/sdk-bom.svg?logo=android&logoColor=white&label=sdk-bom&style=flat-square&versionPrefix=2" alt="descriptive text"/>
-</a>
-</div>
+[![descriptive text](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/sdk-bom.svg?logo=android&logoColor=white&label=sdk-bom&style=flat-square&versionPrefix=2)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/sdk-bom)
 
 ### Android extensions
-
-<div style="height:20px; width:120px;"></div>
 
 | Extension | Version |
 |---|---|
@@ -31,7 +25,7 @@ This Mobile SDK version for Android now supports a minimum API level of 19.
 | [Profile](../../../home/base/profile/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/userprofile.svg?logo=android&logoColor=white&label=userprofile&style=flat-square&versionPrefix=2)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/userprofile) |
 | [Adobe Experience Platform Assurance](../../../home/base/assurance/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/assurance.svg?logo=android&logoColor=white&label=assurance&style=flat-square&versionPrefix=2)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/assurance) |
 | [Adobe Experience Platform Edge Network](../../../edge/edge-network/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edge.svg?logo=android&logoColor=white&label=edge&style=flat-square&versionPrefix=2)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edge) |
-| [Identity for Edge Network](../../../edge/identity-for-edge-network/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edgeidentity.svg?logo=android&logoColor=white&label=edgeidentity&style=flat-square&versionPrefix=2)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edgeidentity) |adobe/aepsdk-edgeidentity-android) |
+| [Identity for Edge Network](../../../edge/identity-for-edge-network/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edgeidentity.svg?logo=android&logoColor=white&label=edgeidentity&style=flat-square&versionPrefix=2)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edgeidentity) |
 | [Consent for Edge Network](../../../edge/consent-for-edge-network/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edgeconsent.svg?logo=android&logoColor=white&label=edgeconsent&style=flat-square&versionPrefix=2)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edgeconsent) |
 | [Media for Edge Network](../../../edge/media-for-edge-network/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edgemedia.svg?logo=android&logoColor=white&label=edgemedia&style=flat-square&versionPrefix=2)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edgemedia) |
 | [Edge Bridge](../../../solution/adobe-analytics/migrate-to-edge-network.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edgebridge.svg?logo=android&logoColor=white&label=edgebridge&style=flat-square&versionPrefix=2)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edgebridge) |
@@ -61,7 +55,7 @@ The Adobe SDK BOM artifact enables managing all compatible versions of Adobe Exp
 
 <InlineAlert variant="warning" slots="text"/>
 
-Using dynamic dependency versions is not recommended for production apps. Refer to this [page](../../../resources/manage-gradle-dependencies.md) for managing Gradle dependencies.
+Using dynamic dependency versions is not recommended for production apps. Refer to this [page](../../manage-gradle-dependencies.md) for managing Gradle dependencies.
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -94,15 +88,58 @@ After you have imported the new Android libraries, you'll need to update SDK ini
 
 The following code snippets show the recommended initialization code for the 2.x Mobile SDKs.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
-
 Java
 
-<Tabs query="lang=java"/>
+### 
+
+```java
+public class MainApp extends Application {
+    private static final String ENVIRONMENT_FILE_ID = "<your_environment_file_id>";
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        MobileCore.setApplication(this);
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID);
+        List<Class<? extends Extension>> extensions = new ArrayList<>();
+        extensions.add(Lifecycle.EXTENSION);
+        extensions.add(Signal.EXTENSION);
+        extensions.add(UserProfile.EXTENSION);
+        extensions.add(Assurance.EXTENSION);
+        extensions.add(Identity.EXTENSION);
+        MobileCore.registerExtensions(extensions, o -> {
+            Log.d(LOG_TAG, "Adobe Experience Platform Mobile SDK is initialized");
+        });
+}
+}
+
+```
 
 Kotlin
 
-<Tabs query="lang=kotlin"/>
+### 
+
+```kotlin
+class MyApp : Application() {
+    val ENVIRONMENT_FILE_ID = "<your_environment_file_id>"
+
+    override fun onCreate() {
+        super.onCreate()
+        MobileCore.setApplication(this)
+        MobileCore.configureWithAppID(ENVIRONMENT_FILE_ID)
+        val extensions = listOf(
+            Identity.EXTENSION,
+            Signal.EXTENSION,
+            Lifecycle.EXTENSION,
+            UserProfile.EXTENSION,
+            Assurance.EXTENSION
+            )
+        MobileCore.registerExtensions(extensions) {
+            Log.d(LOG_TAG, "Adobe Experience Platform Mobile SDK is initialized")
+        }
+    }
+}
+```
 
 ## Update outdated API references
 
@@ -123,8 +160,8 @@ The `registerExtension` API for each extension is deprecated in the 2.x version 
 
 | Removed API | Alternative API |
 | :------------- | :-------------- |
-| Target.locationsDisplayed | [Target.displayedLocations](../../../solution/adobe-target//api-reference.md) |
-| Target.locationClicked | [Target.clickedLocation](../../../solution/adobe-target//api-reference.md) |
+| Target.locationsDisplayed | [Target.displayedLocations](../../../solution/adobe-target/api-reference.md) |
+| Target.locationClicked | [Target.clickedLocation](../../../solution/adobe-target/api-reference.md) |
 | com.adobe.marketing.mobile.TargetRequest | Moved into **target** subpackage. Update import statements to reference **com.adobe.marketing.mobile.target.TargetRequest** |
 | com.adobe.marketing.mobile.TargetPrefetch | Moved into **target** subpackage. Update import statements to reference **com.adobe.marketing.mobile.target.TargetPrefetch** |
 | com.adobe.marketing.mobile.TargetOrder | Moved into **target** subpackage. Update import statements to reference **com.adobe.marketing.mobile.target.TargetOrder** |
@@ -204,7 +241,7 @@ If you attempt to use 2.x Mobile Core SDK and solution SDKs that were built for 
     java.lang.NoSuchMethodError: No static method getCore()Lcom/adobe/marketing/mobile/Core; in class Lcom/adobe/marketing/mobile/MobileCore; or its super classes (declaration of 'com.adobe.marketing.mobile.MobileCore' appears in XXX
 ```
 
-To resolve this error, upgrade all your solution SDKs to the [most recent versions](../home/current-sdk-versions.md#android).
+To resolve this error, upgrade all your solution SDKs to the [most recent versions](../../../home/current-sdk-versions.md#android).
 
 ### Why do I not see 'sdk-core' dependency for 2.x version of Mobile SDK for Android?
 
@@ -235,7 +272,7 @@ To resolve the build warning, remove FullscreenMessageActivity from your applica
 
 ### Why do I see 'unresolved reference' error when upgrading Adobe Target SDK?
 
-The [2.x version](../solution/adobe-target/release-notes.md#android-target-200) of Adobe Target Mobile SDK has the following breaking API changes for alignment with the iOS SDK:
+The [2.x version](../../../solution/adobe-target/release-notes.md#android-target-200) of Adobe Target Mobile SDK has the following breaking API changes for alignment with the iOS SDK:
 
 * **locationsDisplayed** is now **displayedLocations**
 * **locationClicked** is now **clickedLocation**

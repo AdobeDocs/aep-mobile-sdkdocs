@@ -29,9 +29,9 @@ After configuring the datastream overrides, you can now send these overrides to 
 
 The following examples demonstrate what a datastream ID override looks like in a Mobile SDK integration:
 
-<CodeBlock slots="heading, code" repeat="2" languages="iOS (Swift), Android (Kotlin)" />
+<CodeBlock slots="heading, code" repeat="2" />
 
-iOS (Swift)
+### iOS Swift
 
 ```swift
 // Create Experience event from dictionary
@@ -46,7 +46,7 @@ Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) 
 }
 ```
 
-Android (Kotlin)
+### Android Kotlin
 
 ```kotlin
 // Create experience event from Map
@@ -68,9 +68,9 @@ Edge.sendEvent(experienceEvent) {
 
 The following examples demonstrate what a datastream configuration override could look like in a Mobile SDK integration:
 
-<CodeBlock slots="heading, code" repeat="2" languages="iOS (Swift), Android (Kotlin)" />
+<CodeBlock slots="heading, code" repeat="2" />
 
-iOS (Swift)
+### iOS Swift
 
 ```swift
 // Create Experience event from dictionary
@@ -109,7 +109,7 @@ Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) 
 }
 ```
 
-Android (Kotlin)
+### Android Kotlin
 
 ```kotlin
 // Create experience event from Map

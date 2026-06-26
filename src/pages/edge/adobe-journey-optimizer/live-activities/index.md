@@ -32,15 +32,15 @@ Live Activities are supported on iOS 16.1 and above. Push-to-start support requi
 
 ## API reference
 
-* [Live Activities APIs](./api-reference.md)
+* [Live Activities APIs](api-reference.md)
 
 ## Tutorial
 
-* [Live Activities implementation tutorial](./tutorial.md)
+* [Live Activities implementation tutorial](tutorial.md)
 
 ## Public Classes and Protocols
 
-* [Protocol - LiveActivityAttributes](./public-classes/live-activity-attributes.md)
-* [Class - LiveActivityData](./public-classes/live-activity-data.md)
-* [Enum - LiveActivityOrigin](./public-classes/live-activity-origin.md)
-* [Protocol - LiveActivityAssuranceDebuggable](./public-classes/live-activity-assurance-debuggable.md)
+* [Protocol - LiveActivityAttributes](public-classes/live-activity-attributes.md)
+* [Class - LiveActivityData](public-classes/live-activity-data.md)
+* [Enum - LiveActivityOrigin](public-classes/live-activity-origin.md)
+* [Protocol - LiveActivityAssuranceDebuggable](public-classes/live-activity-assurance-debuggable.md)

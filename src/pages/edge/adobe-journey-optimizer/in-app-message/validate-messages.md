@@ -21,7 +21,7 @@ This guide will walk you through steps necessary to ensure your app is properly 
 
 ## Prerequisites
 
-* Your app must have the **AEPMessaging** SDK extension installed. Integrate **AEPMessaging** by following the guide on [setting up AEPMessaging SDK](../setup.md).
+* Your app must have the **AEPMessaging** SDK extension installed. Integrate **AEPMessaging** by following the guide on [setting up AEPMessaging SDK](../index.md).
 
 * This troubleshooting guide uses validation provided by the **AEPAssurance** extension and the **Adobe Assurance UI**. Integrate **AEPAssurance** in your application by following the [Adobe Experience Platform Assurance installation guide](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html).
 
@@ -127,7 +127,7 @@ Using the IAM plugin you can do the following for each message downloaded by the
 
 ### What do I do when one of the required extensions is missing?
 
-Ensure that each required extension is linked to your project and registered by `MobileCore`. For more information, please read the [Mobile Core API reference](../../mobile-core/api-reference.md#registerextensions).
+Ensure that each required extension is linked to your project and registered by `MobileCore`. For more information, please read the [Mobile Core API reference](../../../home/base/mobile-core/api-reference.md#registerextensions).
 
 ### Why can't I find an event named `Retrieve message definitions`?
 

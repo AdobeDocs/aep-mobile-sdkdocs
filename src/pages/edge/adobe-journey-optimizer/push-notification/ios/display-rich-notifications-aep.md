@@ -60,7 +60,7 @@ For `Dependency Rule`, select `Up to Next Major Version`.
 
 Notifications from Adobe Journey Optimizer contain a media attachment URL in the `adb_media` key of the notification payload. Use `MessagingNotificationHelper` in your service extension to automatically download the media attachment and attach it to the notification before displaying it on the user's device.
 
-<CodeBlock slots="heading, code" repeat="2" languages="Swift, Objective-C" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 #### Swift
 

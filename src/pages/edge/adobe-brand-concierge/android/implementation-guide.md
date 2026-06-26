@@ -18,7 +18,7 @@ The Brand Concierge UI has two integration approaches:
 
 Both approaches are available for Compose and XML/Views-based apps.
 
----
+<HorizontalLine />
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ Speech to text uses Android Speech Recognition APIs and microphone APIs for voic
 
 The SDK handles permission requests internally when users interact with the microphone button.
 
----
+<HorizontalLine />
 
 ## Installation
 
@@ -60,7 +60,7 @@ dependencies {
 
 Then sync your project with the Gradle files.
 
----
+<HorizontalLine />
 
 ## Configuration
 
@@ -83,7 +83,7 @@ class MainApp : Application() {
 }
 ```
 
-Replace `YOUR_APP_ID` with your mobile property App ID from Adobe Data Collection. For full setup instructions see the [Adobe Experience Platform Mobile SDK getting started guide](/src/pages/home/getting-started/).
+Replace `YOUR_APP_ID` with your mobile property App ID from Adobe Data Collection. For full setup instructions see the [Adobe Experience Platform Mobile SDK getting started guide](/home/getting-started/index.md).
 
 ### Step 2: Validate the Brand Concierge configuration keys exist
 
@@ -102,9 +102,9 @@ Brand Concierge expects the following keys to be present in the Configuration sh
 
 The ECID is read from the Edge Identity shared state.
 
-Another option for validation is to use Adobe Assurance. Refer to the [Mobile SDK validation guide](/src/pages/home/getting-started/validate/) for more information.
+Another option for validation is to use Adobe Assurance. Refer to the [Mobile SDK validation guide](../../../home/getting-started/validate.md) for more information.
 
----
+<HorizontalLine />
 
 ## Integration
 
@@ -194,7 +194,7 @@ class XmlActivity : AppCompatActivity() {
 }
 ```
 
----
+<HorizontalLine />
 
 ### Custom Integration
 
@@ -298,9 +298,9 @@ fun MyScreen() {
 }
 ```
 
-More information regarding theme customization can be found in the [Style guide (Android)](/edge/adobe-brand-concierge/android/style-guide/).
+More information regarding theme customization can be found in the [Style guide (Android)](/edge/adobe-brand-concierge/android/style-guide.md).
 
----
+<HorizontalLine />
 
 ### Deep Links and App Links
 
@@ -417,5 +417,5 @@ No additional configuration is required for this behavior. App Link forwarding w
 
 ## Next steps
 
-* [API reference (Android)](/edge/adobe-brand-concierge/android/api-reference/) — Full parameter documentation for all public APIs.
-* [Style guide (Android)](/edge/adobe-brand-concierge/android/style-guide/) — Theme JSON reference and implementation status for Android.
+* [API reference (Android)](/edge/adobe-brand-concierge/android/api-reference.md) — Full parameter documentation for all public APIs.
+* [Style guide (Android)](/edge/adobe-brand-concierge/android/style-guide.md) — Theme JSON reference and implementation status for Android.

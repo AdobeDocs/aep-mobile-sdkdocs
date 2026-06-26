@@ -109,5 +109,5 @@ let attributes = GameScoreLiveActivityAttributes(
 
 ## Related classes and protocols
 
-* [LiveActivityAttributes](./live-activity-attributes.md)
-* [LiveActivityOrigin](./live-activity-origin.md)
+* [LiveActivityAttributes](live-activity-attributes.md)
+* [LiveActivityOrigin](live-activity-origin.md)

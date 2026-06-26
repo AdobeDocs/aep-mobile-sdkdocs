@@ -5,8 +5,6 @@ keywords:
 - Privacy
 ---
 
-import PrivacyTabs from './tabs/privacy-and-gdpr.md'
-
 # Privacy and GDPR
 
 The Adobe Experience Platform SDKs give you controls to manage consent and privacy obligations, such as the European Union's General Data Protection Regulation (GDPR). Developers can retrieve locally stored identities and set opt status flags for data collection and transmission.
@@ -21,7 +19,7 @@ The following sections provide details on how you can collect consent and privac
 
 Depending on the mobile extensions you use, there are two ways of collecting and enforcing consent preferences when using the Experience Platform SDKs:
 
-1. When using the **Edge Network** mobile extensions, you should use the [Consent for Edge Network](../consent-for-edge-network/index.md) extension.
+1. When using the **Edge Network** mobile extensions, you should use the [Consent for Edge Network](../edge/consent-for-edge-network/index.md) extension.
 2. When using **Adobe Experience Cloud** mobile extensions, you should use privacy status settings.
 
 The two options are documented in detail below.
@@ -48,43 +46,25 @@ Updating the collect consent status to No (n) does not reset or clear the identi
 
 ### Collect consent settings
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+\<PrivacyTabs query="platform=android&task=collect-consent-settings"/\>
 
-Android
-
-<PrivacyTabs query="platform=android&task=collect-consent-settings"/>
-
-iOS
-
-<PrivacyTabs query="platform=ios&task=collect-consent-settings"/>
+\<PrivacyTabs query="platform=ios&task=collect-consent-settings"/\>
 
 ### getConsents
 
 You can programmatically view the current collect consent preferences status in a dictionary representation by using the following API.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+\<PrivacyTabs query="platform=android&task=get-consents"/\>
 
-Android
-
-<PrivacyTabs query="platform=android&task=get-consents"/>
-
-iOS
-
-<PrivacyTabs query="platform=ios&task=get-consents"/>
+\<PrivacyTabs query="platform=ios&task=get-consents"/\>
 
 ### updateConsents
 
 Use this example to programmatically update the consent collect for the application user.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+\<PrivacyTabs query="platform=android&task=update-consents"/\>
 
-Android
-
-<PrivacyTabs query="platform=android&task=update-consents"/>
-
-iOS
-
-<PrivacyTabs query="platform=ios&task=update-consents"/>
+\<PrivacyTabs query="platform=ios&task=update-consents"/\>
 
 ### getIdentities
 
@@ -118,29 +98,17 @@ You can set a privacy status to ensure collection of data suits your user's pref
 
 ### setPrivacyStatus
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+\<PrivacyTabs query="platform=android&task=set-privacy-status"/\>
 
-Android
-
-<PrivacyTabs query="platform=android&task=set-privacy-status"/>
-
-iOS
-
-<PrivacyTabs query="platform=ios&task=set-privacy-status"/>
+\<PrivacyTabs query="platform=ios&task=set-privacy-status"/\>
 
 ### getPrivacyStatus
 
 You can also programmatically view the current privacy status by using the following:
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="2"/>
+\<PrivacyTabs query="platform=android&task=get-privacy-status"/\>
 
-Android
-
-<PrivacyTabs query="platform=android&task=get-privacy-status"/>
-
-iOS
-
-<PrivacyTabs query="platform=ios&task=get-privacy-status"/>
+\<PrivacyTabs query="platform=ios&task=get-privacy-status"/\>
 
 ### getSdkIdentities
 

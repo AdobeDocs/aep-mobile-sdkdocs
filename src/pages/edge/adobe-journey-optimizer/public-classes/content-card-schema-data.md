@@ -43,19 +43,23 @@ public class ContentCardSchemaData: NSObject, Codable {
 
 ### Public functions
 
----
+<HorizontalLine />
 
 ### getContentCard - DEPRECATED
 
-<InlineAlert variant="warning" slots="header, text" />
+<InlineAlert variant="warning" slots="text1, text2"/>
 
 Notice of deprecation
 
 `ContentCard` class is deprecated as of `v5.2.0` (iOS) and will be removed in the next major release of the Messaging extension.
 
-Tries to convert the `content` of this `ContentCardSchemaData` into a [`ContentCard`](./content-card.md) object.
+Tries to convert the `content` of this `ContentCardSchemaData` into a [`ContentCard`](content-card.md) object.
 
 Returns `nil` if the `contentType` is not equal to `.applicationJson` or the data in `content` is not decodable into a `ContentCard`.
+
+#### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 #### Syntax
 
@@ -77,16 +81,20 @@ if let contentCardSchemaData = propositionItem.contentCardSchemaData,
 
 Tracks an interaction with the given `ContentCardSchemaData`.
 
+### Parameters
+
+* _interaction_ - a custom `String` value to be recorded in the interaction
+* _eventType_ - the [`MessagingEdgeEventType`](messaging-edge-event-type.md) to be used for the ensuing Edge Event
+
+#### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="2" />
+
 #### Syntax
 
 ```swift
 public func track(_ interaction: String? = nil, withEdgeEventType eventType: MessagingEdgeEventType)
 ```
-
-#### Parameters
-
-* _interaction_ - a custom `String` value to be recorded in the interaction
-* _eventType_ - the [`MessagingEdgeEventType`](./messaging-edge-event-type.md) to be used for the ensuing Edge Event
 
 #### Example
 
@@ -137,19 +145,23 @@ public class ContentCardSchemaData implements SchemaData {
 
 ### Public functions
 
----
+<HorizontalLine />
 
 ### getContentCard - DEPRECATED
 
-<InlineAlert variant="warning" slots="header, text" />
+<InlineAlert variant="warning" slots="text1, text2"/>
 
 Notice of deprecation
 
 `ContentCard` class is deprecated as of `v3.2.0` (Android) and will be removed in the next major release of the Messaging extension.
 
-Tries to convert the `content` of this `ContentCardSchemaData` into a [`ContentCard`](./content-card.md) object.
+Tries to convert the `content` of this `ContentCardSchemaData` into a [`ContentCard`](content-card.md) object.
 
 Returns `null` if the `contentType` is not equal to `ContentType.APPLICATION_JSON` or the data in `content` is not decodable into a `ContentCard`.
+
+#### Android Java
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 #### Syntax
 
@@ -158,19 +170,6 @@ Returns `null` if the `contentType` is not equal to `ContentType.APPLICATION_JSO
 ```
 
 #### Example
-
-#### Kotlin
-
-```kotlin
-val propisitionItem: PropositionItem
-val contentCardData = item?.contentCardSchemaData
-val contentCard = contentCardData?.contentCard
-contentCard?.let {
-  // do something with the ContentCard object
-}
-```
-
-#### Java
 
 ```java
 PropositionItem propositionItem;
@@ -181,9 +180,33 @@ if (contentCard != null) {
 }
 ```
 
+#### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```kotlin
+val propisitionItem: PropositionItem
+val contentCardData = item?.contentCardSchemaData
+val contentCard = contentCardData?.contentCard
+contentCard?.let {
+  // do something with the ContentCard object
+}
+```
+
 ### track
 
 Tracks an interaction with the given `ContentCardSchemaData`.
+
+### Parameters
+
+* _interaction_ - a custom `String` value to be recorded in the interaction
+* _eventType_ - the [`MessagingEdgeEventType`](messaging-edge-event-type.md) to be used for the ensuing Edge Event
+
+#### Android Java
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 #### Syntax
 
@@ -191,26 +214,7 @@ Tracks an interaction with the given `ContentCardSchemaData`.
 public void track(final String interaction, final MessagingEdgeEventType eventType);
 ```
 
-#### Parameters
-
-* _interaction_ - a custom `String` value to be recorded in the interaction
-* _eventType_ - the [`MessagingEdgeEventType`](./messaging-edge-event-type.md) to be used for the ensuing Edge Event
-
 #### Example
-
-#### Kotlin
-
-```kotlin
-val contentCardSchemaData = item?.contentCardSchemaData
-
-// tracking a display
-contentCardSchemaData?.track(null, MessagingEdgeEventType.DISPLAY)
-
-// tracking a user interaction
-contentCardSchemaData?.track("itemSelected", MessagingEdgeEventType.INTERACT)
-```
-
-#### Java
 
 ```java
 ContentCardSchemaData contentCardSchemaData;
@@ -220,4 +224,20 @@ contentCardSchemaData.track(null, MessagingEdgeEventType.DISPLAY);
 
 // tracking a user interaction
 contentCardSchemaData.track("itemSelected", MessagingEdgeEventType.INTERACT);
+```
+
+#### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```kotlin
+val contentCardSchemaData = item?.contentCardSchemaData
+
+// tracking a display
+contentCardSchemaData?.track(null, MessagingEdgeEventType.DISPLAY)
+
+// tracking a user interaction
+contentCardSchemaData?.track("itemSelected", MessagingEdgeEventType.INTERACT)
 ```

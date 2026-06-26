@@ -46,7 +46,7 @@ Major version update for [Campaign Classic](https://github.com/adobe/aepsdk-reac
 
 ### Android Campaign Standard 3.0.0
 
-Major version update for [Campaign Standard](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+Major version update for [Campaign Standard](index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
 * The SDK is now compatible with Kotlin 1.8 and higher.
@@ -58,7 +58,7 @@ Major version update for [Campaign Standard](./index.md) for Adobe Experience Pl
 
 ### iOS Campaign Standard 5.0.0
 
-Major version update for [Campaign Standard](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+Major version update for [Campaign Standard](index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 12.0.
 * Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
@@ -85,7 +85,7 @@ Major version update for [Campaign Standard](./index.md) for Adobe Experience Pl
 
 ### iOS Campaign Standard 4.0.0
 
-Major version update for [Adobe Campaign Standard workflows](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+Major version update for [Adobe Campaign Standard workflows](index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
@@ -118,7 +118,7 @@ Major version update for [Adobe Campaign Standard workflows](./index.md) for Ado
 
 ### Android Campaign Standard 2.0.0
 
-* Major version update for [Adobe Campaign Standard workflows](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaign-android).
+* Major version update for [Adobe Campaign Standard workflows](index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is now available as an [open source project on GitHub](https://github.com/adobe/aepsdk-campaign-android).
 
 ## February 9, 2022
 
@@ -130,4 +130,4 @@ Major version update for [Adobe Campaign Standard workflows](./index.md) for Ado
 
 ### iOS Campaign Standard 3.0.0
 
-* Initial release to support [Adobe Campaign Standard workflows](./index.md) for Adobe Experience Platform Mobile SDKs for iOS in Swift. This extension library is [available as an open source project on GitHub](https://github.com/adobe/aepsdk-campaign-ios).
+* Initial release to support [Adobe Campaign Standard workflows](index.md) for Adobe Experience Platform Mobile SDKs for iOS in Swift. This extension library is [available as an open source project on GitHub](https://github.com/adobe/aepsdk-campaign-ios).

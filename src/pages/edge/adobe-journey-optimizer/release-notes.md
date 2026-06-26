@@ -9,6 +9,30 @@ keywords:
 
 # Release notes
 
+## June 10, 2026
+
+### Android Messaging 3.10.0
+
+* Added push receive tracking support to record delivery of push notifications in Adobe Experience Platform.
+* Added Messaging.trackPushReceived(remoteMessage) public API to dispatch a push receive event; intended for manual tracking flows where the client builds and displays their own notification.
+* Added automatic push receive tracking to MessagingService.handleRemoteMessage via selfInit bootstrap; when a push arrives during a cold-start, the SDK is automatically initialized from a cached app ID and the push receive event is dispatched once the SDK is ready.
+* Added SDK initialization prerequisite note to trackPushReceived documentation clarifying that MobileCore.initialize must be called before invoking the API manually
+* Added Consent Listener to sync Push Token to Adobe Experience Platform. Handling for consent change after token sync request
+* Added Notification interaction listener to allow applications to listen to notification related events like received, clicked, dismissed.
+* Added exported=false flag to NotificationInteractionReceiver to avoid static code check warnings.
+
+## June 5, 2026
+
+### Flutter Messaging 5.1.0
+
+* Fixed Android refreshInAppMessages returning Unit instead of null over the method channel, causing a type mismatch on the Flutter side.
+
+## May 19, 2026
+
+### iOS Messaging 5.14.0
+
+
+
 ## April 21, 2026
 
 ### React Native Messaging 7.4.0
@@ -321,7 +345,7 @@ Major version update for [Adobe Journey Optimizer](https://github.com/adobe/aeps
 
 ### Android Messaging 3.0.0
 
-Major version update for [Adobe Journey Optimizer](./index.md) for Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+Major version update for [Adobe Journey Optimizer](index.md) for Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
 * Migrated the in-app message feature to use Jetpack Compose based UI Services from MobileCore 3.0.0.
@@ -330,16 +354,16 @@ Major version update for [Adobe Journey Optimizer](./index.md) for Android compa
 
 ## March 20, 2024
 
-Major version update for [Adobe Journey Optimizer](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
+Major version update for [Adobe Journey Optimizer](index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 5.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 12.0.
 * Include XCFrameworks built with Xcode 15.0.1 with the GitHub release.
-* Added [`handleNotificationResponse(_:urlHandler:closure:)`](./api-reference/#handlenotificationresponse) API to provide more control over URL handling from `UNNotificationResponse` objects.
+* Added [`handleNotificationResponse(_:urlHandler:closure:)`](api-reference.md#handlenotificationresponse) API to provide more control over URL handling from `UNNotificationResponse` objects.
   * Removed deprecated public API `Messaging.handleNotificationResponse(_:applicationOpened:withCustomActionId:)`.
   * Removed public API `Messaging.handleNotificationResponse(_:closure:)` API.
 * Added support for [Code Based Experiences](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based).
-  * Added public API [`Messaging.updatePropositionsForSurfaces(_)`](./code-based/api-reference/#updatepropositionsforsurfaces).
-  * Added public API [`Messaging.getPropositionsForSurfaces(_:completion:)`](./code-based/api-reference/#getpropositionsforsurfaces).
+  * Added public API [`Messaging.updatePropositionsForSurfaces(_)`](code-based/api-reference.md#updatepropositionsforsurfaces).
+  * Added public API [`Messaging.getPropositionsForSurfaces(_:completion:)`](code-based/api-reference.md#getpropositionsforsurfaces).
 
 ## March 5, 2024
 
@@ -371,7 +395,7 @@ Major version update for [Adobe Journey Optimizer](./index.md) for Adobe Experie
 
 ### iOS Messaging 4.0.0
 
-Major version update for [Adobe Journey Optimizer](./index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
+Major version update for [Adobe Journey Optimizer](index.md) for Adobe Experience Platform Mobile SDKs on iOS compatible with Mobile Core 4.0.0. The current release includes the following changes:
 
 * Updated the minimum supported version to iOS 11.0.
 * Include XCFrameworks built with Xcode 14.1 with the GitHub release.
@@ -448,7 +472,7 @@ Major version update for [Adobe Journey Optimizer](./index.md) for Adobe Experie
 
 ### Android Messaging 2.0.0
 
-* Major version update for [Adobe Journey Optimizer](./index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-messaging-android).
+* Major version update for [Adobe Journey Optimizer](index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 2.0.0. This library is already available as an [open source project on GitHub](https://github.com/adobe/aepsdk-messaging-android).
 * Adds support for Adobe Journey Optimizer powered in-app messages.
 
 ## June 17, 2021

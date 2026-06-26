@@ -72,5 +72,5 @@ if let origin = attributes.liveActivityData.origin {
 
 ## Related classes and protocols
 
-* [LiveActivityData](./live-activity-data.md)
-* [LiveActivityAttributes](./live-activity-attributes.md)
+* [LiveActivityData](live-activity-data.md)
+* [LiveActivityAttributes](live-activity-attributes.md)

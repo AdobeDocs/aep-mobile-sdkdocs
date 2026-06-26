@@ -10,39 +10,35 @@ keywords:
 
 ## Android
 
-<InlineAlert variant="info" slots="text"/>
+<InlineAlert variant="info" slots="text1, text2"/>
 
-**Migrate to latest Mobile SDKs for Android**<br/>If you are currently using older SDK versions, please see the [Migrating to latest Mobile SDKs for Android](../resources/migration/android/index.md) guide for next steps.
+**Migrate to latest Mobile SDKs for Android**
 
-<InlineAlert variant="info" slots="text"/>
+If you are currently using older SDK versions, please see the [Migrating to latest Mobile SDKs for Android](../resources/migration/android/index.md) guide for next steps.
 
-**Start using the BOM artifact for Android**<br/> The Adobe SDK BOM artifact enables managing all compatible versions of Adobe Experience Platform Android extensions by specifying a single BOM version. This is now the recommended way to manage Android SDKs. For the installation instructions, see the steps to [add dependencies to your project](../home/getting-started/get-the-sdk.md#installation-instructions). The BOM project is open-sourced. For more information, please refer to the [README](https://github.com/adobe/aepsdk-commons/blob/main/android/aepsdk-bom/README.md) file located in the public repository.
+<InlineAlert variant="info" slots="text1, text2"/>
+
+**Start using the BOM artifact for Android**
+
+The Adobe SDK BOM artifact enables managing all compatible versions of Adobe Experience Platform Android extensions by specifying a single BOM version. This is now the recommended way to manage Android SDKs. For the installation instructions, see the steps to [add dependencies to your project](getting-started/get-the-sdk.md#installation-instructions). The BOM project is open-sourced. For more information, please refer to the [README](https://github.com/adobe/aepsdk-commons/blob/main/android/aepsdk-bom/README.md) file located in the public repository.
 
 ### Android BOM
 
-<div style="height:20px; width:120px;"></div>
-
-<div style="height:30px; width:140px;">
-<a href="https://mvnrepository.com/artifact/com.adobe.marketing.mobile/sdk-bom">
-<img src="https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/sdk-bom.svg?logo=android&logoColor=white&label=sdk-bom&style=flat-square" alt="descriptive text"/>
-</a>
-</div>
+[![sdk-bom](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/sdk-bom.svg?logo=android&logoColor=white&label=sdk-bom&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/sdk-bom)
 
 The Android BOM (Bill of Materials) artifact has been released to Maven Central. The above Maven Badge displays the latest BOM version. To obtain information about which Android extension versions are mapped to the latest BOM, refer to the [release notes](https://developer.adobe.com/client-sdks/home/release-notes/).
 
 ### Android extensions
 
-<div style="height:20px; width:120px;"></div>
-
 | Extension | Maven | Github | Testapp |
 |---|---|---|---|
-| [Mobile Core](./base/mobile-core/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/core.svg?logo=android&logoColor=white&label=core&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/core) | [GitHub](https://github.com/adobe/aepsdk-core-android) | [Test app](https://github.com/adobe/aepsdk-core-android/tree/main/code/testapp) |
-| [Rules Engine](./base/mobile-core/rules-engine/index.md) | Bundled in Mobile Core | - | - |
-| [Signal](./base/mobile-core/signal/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/signal.svg?logo=android&logoColor=white&label=signal&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/signal) | [GitHub](https://github.com/adobe/aepsdk-core-android) | [Test app](https://github.com/adobe/aepsdk-core-android/tree/main/code/testapp) |
-| [Lifecycle](./base/mobile-core/lifecycle/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/lifecycle.svg?logo=android&logoColor=white&label=lifecycle&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/lifecycle) | [GitHub](https://github.com/adobe/aepsdk-core-android) | [Test app](https://github.com/adobe/aepsdk-core-android/tree/main/code/testapp) |
-| [Identity](./base/mobile-core/identity/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/identity.svg?logo=android&logoColor=white&label=identity&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/identity) | [GitHub](https://github.com/adobe/aepsdk-core-android) | [Test app](https://github.com/adobe/aepsdk-core-android/tree/main/code/testapp) |
-| [Profile](./base/profile/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/userprofile.svg?logo=android&logoColor=white&label=userprofile&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/userprofile) | [GitHub](https://github.com/adobe/aepsdk-userprofile-android) | [Test app](https://github.com/adobe/aepsdk-userprofile-android/tree/main/code/testapp) |
-| [Adobe Experience Platform Assurance](./base/assurance/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/assurance.svg?logo=android&logoColor=white&label=assurance&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/assurance) | [GitHub](https://github.com/adobe/aepsdk-assurance-android) | [Test app](https://github.com/adobe/aepsdk-assurance-android/tree/main/code/assurance-testapp) |
+| [Mobile Core](base/mobile-core/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/core.svg?logo=android&logoColor=white&label=core&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/core) | [GitHub](https://github.com/adobe/aepsdk-core-android) | [Test app](https://github.com/adobe/aepsdk-core-android/tree/main/code/testapp) |
+| [Rules Engine](base/mobile-core/rules-engine/index.md) | Bundled in Mobile Core | - | - |
+| [Signal](base/mobile-core/signal/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/signal.svg?logo=android&logoColor=white&label=signal&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/signal) | [GitHub](https://github.com/adobe/aepsdk-core-android) | [Test app](https://github.com/adobe/aepsdk-core-android/tree/main/code/testapp) |
+| [Lifecycle](base/mobile-core/lifecycle/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/lifecycle.svg?logo=android&logoColor=white&label=lifecycle&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/lifecycle) | [GitHub](https://github.com/adobe/aepsdk-core-android) | [Test app](https://github.com/adobe/aepsdk-core-android/tree/main/code/testapp) |
+| [Identity](base/mobile-core/identity/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/identity.svg?logo=android&logoColor=white&label=identity&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/identity) | [GitHub](https://github.com/adobe/aepsdk-core-android) | [Test app](https://github.com/adobe/aepsdk-core-android/tree/main/code/testapp) |
+| [Profile](base/profile/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/userprofile.svg?logo=android&logoColor=white&label=userprofile&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/userprofile) | [GitHub](https://github.com/adobe/aepsdk-userprofile-android) | [Test app](https://github.com/adobe/aepsdk-userprofile-android/tree/main/code/testapp) |
+| [Adobe Experience Platform Assurance](base/assurance/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/assurance.svg?logo=android&logoColor=white&label=assurance&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/assurance) | [GitHub](https://github.com/adobe/aepsdk-assurance-android) | [Test app](https://github.com/adobe/aepsdk-assurance-android/tree/main/code/assurance-testapp) |
 | [Adobe Experience Platform Edge Network](../edge/edge-network/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edge.svg?logo=android&logoColor=white&label=edge&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edge) | [GitHub](https://github.com/adobe/aepsdk-edge-android) | [Test app](https://github.com/adobe/aepsdk-edge-android/tree/main/code/app-kotlin) |
 | [Identity for Edge Network](../edge/identity-for-edge-network/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edgeidentity.svg?logo=android&logoColor=white&label=edgeidentity&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edgeidentity) | [GitHub](https://github.com/adobe/aepsdk-edgeidentity-android) | [Test app](https://github.com/adobe/aepsdk-edgeidentity-android/tree/main/code/app) |
 | [Consent for Edge Network](../edge/consent-for-edge-network/index.md) | [![Maven Central](https://img.shields.io/maven-central/v/com.adobe.marketing.mobile/edgeconsent.svg?logo=android&logoColor=white&label=edgeconsent&style=flat-square)](https://mvnrepository.com/artifact/com.adobe.marketing.mobile/edgeconsent) | [GitHub](https://github.com/adobe/aepsdk-edgeconsent-android) | [Test app](https://github.com/adobe/aepsdk-edgeconsent-android/tree/main/code/app) |
@@ -62,9 +58,11 @@ The Android BOM (Bill of Materials) artifact has been released to Maven Central.
 
 ## iOS
 
-<InlineAlert variant="info" slots="text"/>
+<InlineAlert variant="info" slots="text1, text2"/>
 
-**Migrate to latest Mobile SDKs for iOS**<br/>If you are currently using older SDK versions, please see the [Migrating to latest Mobile SDKs for iOS](../resources/migration/ios/index.md) guide for next steps.
+**Migrate to latest Mobile SDKs for iOS**
+
+If you are currently using older SDK versions, please see the [Migrating to latest Mobile SDKs for iOS](../resources/migration/ios/index.md) guide for next steps.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -72,18 +70,18 @@ Starting May 7th, 2024, our iOS releases will include signed XCFrameworks. Addit
 
 | Extension | tvOS | App Extension | CocoaPods | GitHub | Test app |
 |---|---|---|---|---|---|
-| [Mobile Core](./base/mobile-core/index.md) | ✔️ | ✔️ | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-core-ios.svg?label=AEPCore&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPCore) | [GitHub](https://github.com/adobe/aepsdk-core-ios) | [Test app](https://github.com/adobe/aepsdk-core-ios/tree/main/TestApps) |
-| [Rules Engine](./base/mobile-core/rules-engine/index.md) | ✔️ |   | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-rulesengine-ios.svg?label=AEPRulesEngine&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPRulesEngine) | [GitHub](https://github.com/adobe/aepsdk-rulesengine-ios) | - |
-| [Signal](./base/mobile-core/signal/index.md) | ✔️ |   | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-core-ios.svg?label=AEPSignal&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPSignal) | [GitHub](https://github.com/adobe/aepsdk-core-ios) | [Test app](https://github.com/adobe/aepsdk-core-ios/tree/main/TestApps) |
-| [Identity](./base/mobile-core/identity/index.md) | ✔️ | ✔️ | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-core-ios.svg?label=AEPIdentity&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPIdentity) | [GitHub](https://github.com/adobe/aepsdk-core-ios) | [Test app](https://github.com/adobe/aepsdk-core-ios/tree/main/TestApps) |
-| [Lifecycle](./base/mobile-core/lifecycle/index.md) | ✔️ | ✔️ | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-core-ios.svg?label=AEPLifecycle&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPLifecycle) | [GitHub](https://github.com/adobe/aepsdk-core-ios) | [Test app](https://github.com/adobe/aepsdk-core-ios/tree/main/TestApps) |
-| [Profile](./base/profile/index.md) |   |   | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-userprofile-ios.svg?label=AEPUserProfile&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPUserProfile) | [GitHub](https://github.com/adobe/aepsdk-userprofile-ios) | - |
-| [Adobe Experience Platform Assurance](./base/assurance/index.md) |  |   | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-assurance-ios.svg?label=AEPAssurance&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPAssurance) | [GitHub](https://github.com/adobe/aepsdk-assurance-ios) | [Test app](https://github.com/adobe/aepsdk-assurance-ios/tree/main/TestApp) |
+| [Mobile Core](base/mobile-core/index.md) | ✔️ | ✔️ | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-core-ios.svg?label=AEPCore&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPCore) | [GitHub](https://github.com/adobe/aepsdk-core-ios) | [Test app](https://github.com/adobe/aepsdk-core-ios/tree/main/TestApps) |
+| [Rules Engine](base/mobile-core/rules-engine/index.md) | ✔️ |   | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-rulesengine-ios.svg?label=AEPRulesEngine&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPRulesEngine) | [GitHub](https://github.com/adobe/aepsdk-rulesengine-ios) | - |
+| [Signal](base/mobile-core/signal/index.md) | ✔️ |   | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-core-ios.svg?label=AEPSignal&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPSignal) | [GitHub](https://github.com/adobe/aepsdk-core-ios) | [Test app](https://github.com/adobe/aepsdk-core-ios/tree/main/TestApps) |
+| [Identity](base/mobile-core/identity/index.md) | ✔️ | ✔️ | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-core-ios.svg?label=AEPIdentity&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPIdentity) | [GitHub](https://github.com/adobe/aepsdk-core-ios) | [Test app](https://github.com/adobe/aepsdk-core-ios/tree/main/TestApps) |
+| [Lifecycle](base/mobile-core/lifecycle/index.md) | ✔️ | ✔️ | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-core-ios.svg?label=AEPLifecycle&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPLifecycle) | [GitHub](https://github.com/adobe/aepsdk-core-ios) | [Test app](https://github.com/adobe/aepsdk-core-ios/tree/main/TestApps) |
+| [Profile](base/profile/index.md) |   |   | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-userprofile-ios.svg?label=AEPUserProfile&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPUserProfile) | [GitHub](https://github.com/adobe/aepsdk-userprofile-ios) | - |
+| [Adobe Experience Platform Assurance](base/assurance/index.md) |  |   | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-assurance-ios.svg?label=AEPAssurance&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPAssurance) | [GitHub](https://github.com/adobe/aepsdk-assurance-ios) | [Test app](https://github.com/adobe/aepsdk-assurance-ios/tree/main/TestApp) |
 | [Adobe Experience Platform Edge Network](../edge/edge-network/index.md) | ✔️ |   | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-edge-ios.svg?label=AEPEdge&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPEdge) | [GitHub](https://github.com/adobe/aepsdk-edge-ios) | [Test app](https://github.com/adobe/aepsdk-edge-ios/tree/main/TestApps) |
 | [Identity for Edge Network](../edge/identity-for-edge-network/index.md) | ✔️ |   | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-edgeidentity-ios.svg?label=AEPEdgeIdentity&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPEdgeIdentity) | [GitHub](https://github.com/adobe/aepsdk-edgeidentity-ios) | [Test app](https://github.com/adobe/aepsdk-edgeidentity-ios/tree/main/SampleApps) |
 | [Consent for Edge Network](../edge/consent-for-edge-network/index.md) | ✔️ |   | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-edgeconsent-ios.svg?label=AEPEdgeConsent&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPEdgeConsent) | [GitHub](https://github.com/adobe/aepsdk-edgeconsent-ios) | [Test app](https://github.com/adobe/aepsdk-edgeconsent-ios/tree/main/TestApp) |
 | [Media for Edge Network](../edge/media-for-edge-network/index.md) | ✔️ |   | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-edgemedia-ios.svg?label=AEPEdgeMedia&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPEdgeMedia) | [GitHub](https://github.com/adobe/aepsdk-edgemedia-ios) | [Test app](https://github.com/adobe/aepsdk-edgemedia-ios/tree/main/TestApps) |
-| [Edge Bridge](../adobe-analytics/migrate-to-edge-network.md) | ✔️ |   | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-edgebridge-ios.svg?label=AEPEdgeBridge&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPEdgeBridge) | [GitHub](https://github.com/adobe/aepsdk-edgebridge-ios) | [Test app](https://github.com/adobe/aepsdk-edgebridge-ios/tree/main/TestApps) |
+| [Edge Bridge](../solution/adobe-analytics/migrate-to-edge-network.md) | ✔️ |   | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-edgebridge-ios.svg?label=AEPEdgeBridge&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPEdgeBridge) | [GitHub](https://github.com/adobe/aepsdk-edgebridge-ios) | [Test app](https://github.com/adobe/aepsdk-edgebridge-ios/tree/main/TestApps) |
 | [Adobe Journey Optimizer](../edge/adobe-journey-optimizer/index.md) |   |   | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-messaging-ios.svg?label=AEPMessaging&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPMessaging) | [GitHub](https://github.com/adobe/aepsdk-messaging-ios) | [Test app](https://github.com/adobe/aepsdk-messaging-ios/tree/main/TestApps) |
 | [Offer Decisioning and Target](../edge/adobe-journey-optimizer-decisioning/index.md) |   | ✔️ | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-optimize-ios.svg?label=AEPOptimize&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPOptimize) | [GitHub](https://github.com/adobe/aepsdk-optimize-ios) | [Test app](https://github.com/adobe/aepsdk-optimize-ios/tree/main/TestApps) |
 | [Places Service](https://experienceleague.adobe.com/docs/places/using/home.html) |  |   | [![CocoaPods](https://img.shields.io/github/v/release/adobe/aepsdk-places-ios.svg?label=AEPPlaces&logo=apple&logoColor=white&color=orange&sort=semver)](https://cocoapods.org/pods/AEPPlaces) | [GitHub](https://github.com/adobe/aepsdk-places-ios) | [Test app](https://github.com/adobe/aepsdk-places-ios/tree/main/TestApps) |
@@ -110,9 +108,9 @@ If you are currently using the ACP-prefixed React Native libraries, please see [
 
 | Extension | npmjs |
 |---|---|
-| [Mobile Core](./base/mobile-core/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepcore.svg?color=green&label=%40adobe%2Freact-native-aepcore&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepcore) |
-| [Profile](./base/profile/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepuserprofile.svg?color=green&label=%40adobe%2Freact-native-aepuserprofile&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepuserprofile) |
-| [Adobe Experience Platform Assurance](./base/assurance/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepassurance.svg?color=green&label=%40adobe%2Freact-native-aepassurance&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepassurance) |
+| [Mobile Core](base/mobile-core/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepcore.svg?color=green&label=%40adobe%2Freact-native-aepcore&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepcore) |
+| [Profile](base/profile/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepuserprofile.svg?color=green&label=%40adobe%2Freact-native-aepuserprofile&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepuserprofile) |
+| [Adobe Experience Platform Assurance](base/assurance/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepassurance.svg?color=green&label=%40adobe%2Freact-native-aepassurance&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepassurance) |
 | [Adobe Experience Platform Edge Network](../edge/edge-network/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepedge.svg?color=green&label=%40adobe%2Freact-native-aepedge&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepedge) |
 | [Identity for Edge Network](../edge/identity-for-edge-network/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepedgeidentity.svg?color=green&label=%40adobe%2Freact-native-aepedgeidentity&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepedgeidentity) |
 | [Consent for Edge Network](../edge/consent-for-edge-network/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/react-native-aepedgeconsent.svg?color=green&label=%40adobe%2Freact-native-aepedgeconsent&logo=npm&style=flat-square)](https://badge.fury.io/js/%40adobe%2Freact-native-aepedgeconsent) |
@@ -143,9 +141,9 @@ If you are currently using the ACP-prefixed Flutter libraries, please see [the g
 
 | Extension | pub.dev |
 |---|---|
-| [Mobile Core](./base/mobile-core/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepcore.svg?label=flutter_aepcore)](https://pub.dartlang.org/packages/flutter_aepcore) |
-| [Profile](./base/profile/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepuserprofile.svg?label=flutter_aepuserprofile)](https://pub.dartlang.org/packages/flutter_aepuserprofile) |
-| [Adobe Experience Platform Assurance](./base/assurance/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepassurance.svg?label=flutter_aepassurance)](https://pub.dartlang.org/packages/flutter_aepassurance) |
+| [Mobile Core](base/mobile-core/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepcore.svg?label=flutter_aepcore)](https://pub.dartlang.org/packages/flutter_aepcore) |
+| [Profile](base/profile/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepuserprofile.svg?label=flutter_aepuserprofile)](https://pub.dartlang.org/packages/flutter_aepuserprofile) |
+| [Adobe Experience Platform Assurance](base/assurance/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepassurance.svg?label=flutter_aepassurance)](https://pub.dartlang.org/packages/flutter_aepassurance) |
 | [Adobe Experience Platform Edge Network](../edge/edge-network/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedge.svg?label=flutter_aepedge)](https://pub.dartlang.org/packages/flutter_aepedge) |
 | [Identity for Edge Network](../edge/identity-for-edge-network/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgeidentity.svg?label=flutter_aepedgeidentity)](https://pub.dartlang.org/packages/flutter_aepedgeidentity) |
 | [Consent for Edge Network](../edge/consent-for-edge-network/index.md) | [![pub package](https://img.shields.io/pub/v/flutter_aepedgeconsent.svg?label=flutter_aepedgeconsent)](https://pub.dartlang.org/packages/flutter_aepedgeconsent) |
@@ -156,26 +154,18 @@ Please note that the Adobe Analytics extension is not supported in AEP-prefixed 
 
 ## Roku
 
-<div style="height:20px; width:120px;"></div>
-
-<div style="height:30px; width:140px;">
-<a href="https://github.com/adobe/aepsdk-roku/releases">
-<img src="https://img.shields.io/github/v/release/adobe/aepsdk-roku.svg?label=AEP%20Roku%20SDK&logo=github"/>
-</a>
-</div>
+[![AEP Roku SDK](https://img.shields.io/github/v/release/adobe/aepsdk-roku.svg?label=AEP%20Roku%20SDK&logo=github)](https://github.com/adobe/aepsdk-roku/releases)
 
 The Adobe Experience Platform SDK for Roku supports Roku OS 11.0 or later. The project is open sourced in GitHub. For more information, refer to the [aepsdk-roku](https://github.com/adobe/aepsdk-roku) repository.
 
 ## Vega OS
 
-<div style="height:20px; width:120px;"></div>
-
 | Extension | npmjs |
 |---|---|
-| [Mobile Core](./base/mobile-core/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/vega-aepcore.svg?color=green&label=%40adobe%2Fvega-aepcore&logo=npm&style=flat-square)](https://www.npmjs.com/package/@adobe/vega-aepcore) |
+| [Mobile Core](base/mobile-core/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/vega-aepcore.svg?color=green&label=%40adobe%2Fvega-aepcore&logo=npm&style=flat-square)](https://www.npmjs.com/package/@adobe/vega-aepcore) |
 | [Media for Edge Network](../edge/media-for-edge-network/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/vega-aepmedia.svg?color=green&label=%40adobe%2Fvega-aepmedia&logo=npm&style=flat-square)](https://www.npmjs.com/package/@adobe/vega-aepmedia) |
 
-The Adobe Experience Platform SDK for Vega OS supports [Vega OS](https://developer.amazon.com/docs/vega/vega.html) — the operating system designed for Fire TV streaming media players. For information about changes and updates, refer to the [release notes](./release-notes/#vega-os-core-101).
+The Adobe Experience Platform SDK for Vega OS supports [Vega OS](https://developer.amazon.com/docs/vega/vega.html) — the operating system designed for Fire TV streaming media players. For information about changes and updates, refer to the [release notes](release-notes/index.md#vega-os-core-101).
 
 ## Supported Platforms
 

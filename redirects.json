@@ -1,0 +1,2952 @@
+{
+  "total": 736,
+  "offset": 0,
+  "limit": 736,
+  "data": [
+    {
+      "Source": "/client-sdks",
+      "Destination": "/client-sdks/"
+    },
+    {
+      "Source": "/client-sdks/index",
+      "Destination": "/client-sdks/"
+    },
+    {
+      "Source": "/client-sdks/solution",
+      "Destination": "/client-sdks/solution/"
+    },
+    {
+      "Source": "/client-sdks/solution/index",
+      "Destination": "/client-sdks/solution/"
+    },
+    {
+      "Source": "/client-sdks/solution/places/release-notes/",
+      "Destination": "/client-sdks/solution/places/release-notes"
+    },
+    {
+      "Source": "/client-sdks/solution/places/places-to-platform/",
+      "Destination": "/client-sdks/solution/places/places-to-platform"
+    },
+    {
+      "Source": "/client-sdks/solution/places",
+      "Destination": "/client-sdks/solution/places/"
+    },
+    {
+      "Source": "/client-sdks/solution/places/index",
+      "Destination": "/client-sdks/solution/places/"
+    },
+    {
+      "Source": "/client-sdks/solution/places/behavior-reference/",
+      "Destination": "/client-sdks/solution/places/behavior-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/places/api-reference/",
+      "Destination": "/client-sdks/solution/places/api-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/places/tabs",
+      "Destination": "/client-sdks/solution/places/tabs/"
+    },
+    {
+      "Source": "/client-sdks/solution/places/tabs/index",
+      "Destination": "/client-sdks/solution/places/tabs/"
+    },
+    {
+      "Source": "/client-sdks/solution/places/tabs/api-reference/",
+      "Destination": "/client-sdks/solution/places/tabs/api-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-target/release-notes/",
+      "Destination": "/client-sdks/solution/adobe-target/release-notes"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-target/raw-api-reference/",
+      "Destination": "/client-sdks/solution/adobe-target/raw-api-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-target",
+      "Destination": "/client-sdks/solution/adobe-target/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-target/index",
+      "Destination": "/client-sdks/solution/adobe-target/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-target/event-reference/",
+      "Destination": "/client-sdks/solution/adobe-target/event-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-target/api-reference/",
+      "Destination": "/client-sdks/solution/adobe-target/api-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-target/tabs/raw-api-reference/",
+      "Destination": "/client-sdks/solution/adobe-target/tabs/raw-api-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-target/tabs",
+      "Destination": "/client-sdks/solution/adobe-target/tabs/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-target/tabs/index",
+      "Destination": "/client-sdks/solution/adobe-target/tabs/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-target/tabs/api-reference/",
+      "Destination": "/client-sdks/solution/adobe-target/tabs/api-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-media-analytics/release-notes/",
+      "Destination": "/client-sdks/solution/adobe-media-analytics/release-notes"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-media-analytics/migration-guide/",
+      "Destination": "/client-sdks/solution/adobe-media-analytics/migration-guide"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-media-analytics",
+      "Destination": "/client-sdks/solution/adobe-media-analytics/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-media-analytics/index",
+      "Destination": "/client-sdks/solution/adobe-media-analytics/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-media-analytics/api-reference/",
+      "Destination": "/client-sdks/solution/adobe-media-analytics/api-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-media-analytics/tabs/migration-guide/",
+      "Destination": "/client-sdks/solution/adobe-media-analytics/tabs/migration-guide"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-media-analytics/tabs",
+      "Destination": "/client-sdks/solution/adobe-media-analytics/tabs/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-media-analytics/tabs/index",
+      "Destination": "/client-sdks/solution/adobe-media-analytics/tabs/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-media-analytics/tabs/api-reference/",
+      "Destination": "/client-sdks/solution/adobe-media-analytics/tabs/api-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-content-analytics",
+      "Destination": "/client-sdks/solution/adobe-content-analytics/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-content-analytics/index",
+      "Destination": "/client-sdks/solution/adobe-content-analytics/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-content-analytics/experience-tracking/",
+      "Destination": "/client-sdks/solution/adobe-content-analytics/experience-tracking"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-content-analytics/crash-recovery/",
+      "Destination": "/client-sdks/solution/adobe-content-analytics/crash-recovery"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-content-analytics/api-reference/",
+      "Destination": "/client-sdks/solution/adobe-content-analytics/api-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-content-analytics/advanced-configuration/",
+      "Destination": "/client-sdks/solution/adobe-content-analytics/advanced-configuration"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-content-analytics/tabs",
+      "Destination": "/client-sdks/solution/adobe-content-analytics/tabs/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-content-analytics/tabs/index",
+      "Destination": "/client-sdks/solution/adobe-content-analytics/tabs/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-content-analytics/tabs/experience-tracking/",
+      "Destination": "/client-sdks/solution/adobe-content-analytics/tabs/experience-tracking"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-content-analytics/tabs/crash-recovery/",
+      "Destination": "/client-sdks/solution/adobe-content-analytics/tabs/crash-recovery"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-content-analytics/tabs/api-reference/",
+      "Destination": "/client-sdks/solution/adobe-content-analytics/tabs/api-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-content-analytics/tabs/advanced-configuration/",
+      "Destination": "/client-sdks/solution/adobe-content-analytics/tabs/advanced-configuration"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-campaign-standard/release-notes/",
+      "Destination": "/client-sdks/solution/adobe-campaign-standard/release-notes"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-campaign-standard/push-notifications/",
+      "Destination": "/client-sdks/solution/adobe-campaign-standard/push-notifications"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-campaign-standard",
+      "Destination": "/client-sdks/solution/adobe-campaign-standard/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-campaign-standard/index",
+      "Destination": "/client-sdks/solution/adobe-campaign-standard/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-campaign-standard/event-reference/",
+      "Destination": "/client-sdks/solution/adobe-campaign-standard/event-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-campaign-standard/api-reference/",
+      "Destination": "/client-sdks/solution/adobe-campaign-standard/api-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-campaign-standard/tabs/push-notifications/",
+      "Destination": "/client-sdks/solution/adobe-campaign-standard/tabs/push-notifications"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-campaign-standard/tabs",
+      "Destination": "/client-sdks/solution/adobe-campaign-standard/tabs/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-campaign-standard/tabs/index",
+      "Destination": "/client-sdks/solution/adobe-campaign-standard/tabs/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-campaign-standard/tabs/api-reference/",
+      "Destination": "/client-sdks/solution/adobe-campaign-standard/tabs/api-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-campaign-classic/release-notes/",
+      "Destination": "/client-sdks/solution/adobe-campaign-classic/release-notes"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-campaign-classic",
+      "Destination": "/client-sdks/solution/adobe-campaign-classic/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-campaign-classic/index",
+      "Destination": "/client-sdks/solution/adobe-campaign-classic/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-campaign-classic/event-reference/",
+      "Destination": "/client-sdks/solution/adobe-campaign-classic/event-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-campaign-classic/api-reference/",
+      "Destination": "/client-sdks/solution/adobe-campaign-classic/api-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-campaign-classic/tabs",
+      "Destination": "/client-sdks/solution/adobe-campaign-classic/tabs/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-campaign-classic/tabs/index",
+      "Destination": "/client-sdks/solution/adobe-campaign-classic/tabs/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-campaign-classic/tabs/api-reference/",
+      "Destination": "/client-sdks/solution/adobe-campaign-classic/tabs/api-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-campaign-classic/push-templates",
+      "Destination": "/client-sdks/solution/adobe-campaign-classic/push-templates/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-campaign-classic/push-templates/index",
+      "Destination": "/client-sdks/solution/adobe-campaign-classic/push-templates/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-audience-manager/release-notes/",
+      "Destination": "/client-sdks/solution/adobe-audience-manager/release-notes"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-audience-manager",
+      "Destination": "/client-sdks/solution/adobe-audience-manager/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-audience-manager/index",
+      "Destination": "/client-sdks/solution/adobe-audience-manager/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-audience-manager/event-reference/",
+      "Destination": "/client-sdks/solution/adobe-audience-manager/event-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-audience-manager/api-reference/",
+      "Destination": "/client-sdks/solution/adobe-audience-manager/api-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-audience-manager/tabs",
+      "Destination": "/client-sdks/solution/adobe-audience-manager/tabs/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-audience-manager/tabs/index",
+      "Destination": "/client-sdks/solution/adobe-audience-manager/tabs/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-audience-manager/tabs/api-reference/",
+      "Destination": "/client-sdks/solution/adobe-audience-manager/tabs/api-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-analytics/track-beacon/",
+      "Destination": "/client-sdks/solution/adobe-analytics/track-beacon"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-analytics/release-notes/",
+      "Destination": "/client-sdks/solution/adobe-analytics/release-notes"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-analytics/product-variable/",
+      "Destination": "/client-sdks/solution/adobe-analytics/product-variable"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-analytics/migrate-to-edge-network/",
+      "Destination": "/client-sdks/solution/adobe-analytics/migrate-to-edge-network"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-analytics",
+      "Destination": "/client-sdks/solution/adobe-analytics/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-analytics/index",
+      "Destination": "/client-sdks/solution/adobe-analytics/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-analytics/faq/",
+      "Destination": "/client-sdks/solution/adobe-analytics/faq"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-analytics/event-reference/",
+      "Destination": "/client-sdks/solution/adobe-analytics/event-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-analytics/api-reference/",
+      "Destination": "/client-sdks/solution/adobe-analytics/api-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-analytics/tabs/product-variable/",
+      "Destination": "/client-sdks/solution/adobe-analytics/tabs/product-variable"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-analytics/tabs",
+      "Destination": "/client-sdks/solution/adobe-analytics/tabs/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-analytics/tabs/index",
+      "Destination": "/client-sdks/solution/adobe-analytics/tabs/"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-analytics/tabs/api-reference/",
+      "Destination": "/client-sdks/solution/adobe-analytics/tabs/api-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-analytics/tabs/track-beacon/track-beacon/ios/",
+      "Destination": "/client-sdks/solution/adobe-analytics/tabs/track-beacon/track-beacon/ios"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-analytics/tabs/track-beacon/track-beacon/android/",
+      "Destination": "/client-sdks/solution/adobe-analytics/tabs/track-beacon/track-beacon/android"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-analytics/tabs/track-beacon/clear-beacon/ios/",
+      "Destination": "/client-sdks/solution/adobe-analytics/tabs/track-beacon/clear-beacon/ios"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-analytics/tabs/track-beacon/clear-beacon/android/",
+      "Destination": "/client-sdks/solution/adobe-analytics/tabs/track-beacon/clear-beacon/android"
+    },
+    {
+      "Source": "/client-sdks/resources/sdks-end-of-support/",
+      "Destination": "/client-sdks/resources/sdks-end-of-support"
+    },
+    {
+      "Source": "/client-sdks/resources/privacy-manifest/",
+      "Destination": "/client-sdks/resources/privacy-manifest"
+    },
+    {
+      "Source": "/client-sdks/resources/privacy-announcement/",
+      "Destination": "/client-sdks/resources/privacy-announcement"
+    },
+    {
+      "Source": "/client-sdks/resources/privacy-and-gdpr/",
+      "Destination": "/client-sdks/resources/privacy-and-gdpr"
+    },
+    {
+      "Source": "/client-sdks/resources/manage-spm-dependencies/",
+      "Destination": "/client-sdks/resources/manage-spm-dependencies"
+    },
+    {
+      "Source": "/client-sdks/resources/manage-gradle-dependencies/",
+      "Destination": "/client-sdks/resources/manage-gradle-dependencies"
+    },
+    {
+      "Source": "/client-sdks/resources/major-version-alignment/",
+      "Destination": "/client-sdks/resources/major-version-alignment"
+    },
+    {
+      "Source": "/client-sdks/resources/initialize/",
+      "Destination": "/client-sdks/resources/initialize"
+    },
+    {
+      "Source": "/client-sdks/resources",
+      "Destination": "/client-sdks/resources/"
+    },
+    {
+      "Source": "/client-sdks/resources/index",
+      "Destination": "/client-sdks/resources/"
+    },
+    {
+      "Source": "/client-sdks/resources/faq/",
+      "Destination": "/client-sdks/resources/faq"
+    },
+    {
+      "Source": "/client-sdks/resources/alerts/",
+      "Destination": "/client-sdks/resources/alerts"
+    },
+    {
+      "Source": "/client-sdks/resources/user-guides/tags-data-elements/",
+      "Destination": "/client-sdks/resources/user-guides/tags-data-elements"
+    },
+    {
+      "Source": "/client-sdks/resources/user-guides/modify-data/",
+      "Destination": "/client-sdks/resources/user-guides/modify-data"
+    },
+    {
+      "Source": "/client-sdks/resources/user-guides",
+      "Destination": "/client-sdks/resources/user-guides/"
+    },
+    {
+      "Source": "/client-sdks/resources/user-guides/index",
+      "Destination": "/client-sdks/resources/user-guides/"
+    },
+    {
+      "Source": "/client-sdks/resources/user-guides/building-mobile-extensions/",
+      "Destination": "/client-sdks/resources/user-guides/building-mobile-extensions"
+    },
+    {
+      "Source": "/client-sdks/resources/user-guides/attach-data/",
+      "Destination": "/client-sdks/resources/user-guides/attach-data"
+    },
+    {
+      "Source": "/client-sdks/resources/user-guides/app-extension/",
+      "Destination": "/client-sdks/resources/user-guides/app-extension"
+    },
+    {
+      "Source": "/client-sdks/resources/user-guides/tabs/attach-data/attaching-data/target/",
+      "Destination": "/client-sdks/resources/user-guides/tabs/attach-data/attaching-data/target"
+    },
+    {
+      "Source": "/client-sdks/resources/user-guides/tabs/attach-data/attaching-data/analytics/",
+      "Destination": "/client-sdks/resources/user-guides/tabs/attach-data/attaching-data/analytics"
+    },
+    {
+      "Source": "/client-sdks/resources/user-guides/getting-started-with-platform/sample-xdm-implementation/",
+      "Destination": "/client-sdks/resources/user-guides/getting-started-with-platform/sample-xdm-implementation"
+    },
+    {
+      "Source": "/client-sdks/resources/user-guides/getting-started-with-platform/rules-and-xdm-events/",
+      "Destination": "/client-sdks/resources/user-guides/getting-started-with-platform/rules-and-xdm-events"
+    },
+    {
+      "Source": "/client-sdks/resources/user-guides/getting-started-with-platform/overview/",
+      "Destination": "/client-sdks/resources/user-guides/getting-started-with-platform/overview"
+    },
+    {
+      "Source": "/client-sdks/resources/user-guides/getting-started-with-platform/tabs/sample-xdm-implementation/override-default-dataset/ios/",
+      "Destination": "/client-sdks/resources/user-guides/getting-started-with-platform/tabs/sample-xdm-implementation/override-default-dataset/ios"
+    },
+    {
+      "Source": "/client-sdks/resources/user-guides/getting-started-with-platform/tabs/sample-xdm-implementation/override-default-dataset/android/",
+      "Destination": "/client-sdks/resources/user-guides/getting-started-with-platform/tabs/sample-xdm-implementation/override-default-dataset/android"
+    },
+    {
+      "Source": "/client-sdks/resources/user-guides/getting-started-with-platform/tabs/sample-xdm-implementation/download-sample-application/ios/",
+      "Destination": "/client-sdks/resources/user-guides/getting-started-with-platform/tabs/sample-xdm-implementation/download-sample-application/ios"
+    },
+    {
+      "Source": "/client-sdks/resources/user-guides/getting-started-with-platform/tabs/sample-xdm-implementation/download-sample-application/android/",
+      "Destination": "/client-sdks/resources/user-guides/getting-started-with-platform/tabs/sample-xdm-implementation/download-sample-application/android"
+    },
+    {
+      "Source": "/client-sdks/resources/user-guides/getting-started-with-platform/tabs/sample-xdm-implementation/build-xdm-objects/ios/",
+      "Destination": "/client-sdks/resources/user-guides/getting-started-with-platform/tabs/sample-xdm-implementation/build-xdm-objects/ios"
+    },
+    {
+      "Source": "/client-sdks/resources/user-guides/getting-started-with-platform/tabs/sample-xdm-implementation/build-xdm-objects/android/",
+      "Destination": "/client-sdks/resources/user-guides/getting-started-with-platform/tabs/sample-xdm-implementation/build-xdm-objects/android"
+    },
+    {
+      "Source": "/client-sdks/resources/upgrade-platform-sdks/v4-faq/",
+      "Destination": "/client-sdks/resources/upgrade-platform-sdks/v4-faq"
+    },
+    {
+      "Source": "/client-sdks/resources/upgrade-platform-sdks/lifecycle/",
+      "Destination": "/client-sdks/resources/upgrade-platform-sdks/lifecycle"
+    },
+    {
+      "Source": "/client-sdks/resources/upgrade-platform-sdks",
+      "Destination": "/client-sdks/resources/upgrade-platform-sdks/"
+    },
+    {
+      "Source": "/client-sdks/resources/upgrade-platform-sdks/index",
+      "Destination": "/client-sdks/resources/upgrade-platform-sdks/"
+    },
+    {
+      "Source": "/client-sdks/resources/upgrade-platform-sdks/comparison/",
+      "Destination": "/client-sdks/resources/upgrade-platform-sdks/comparison"
+    },
+    {
+      "Source": "/client-sdks/resources/upgrade-platform-sdks/api-changelog/",
+      "Destination": "/client-sdks/resources/upgrade-platform-sdks/api-changelog"
+    },
+    {
+      "Source": "/client-sdks/resources/upgrade-platform-sdks/analytics/",
+      "Destination": "/client-sdks/resources/upgrade-platform-sdks/analytics"
+    },
+    {
+      "Source": "/client-sdks/resources/upgrade-platform-sdks/tabs/analytics/",
+      "Destination": "/client-sdks/resources/upgrade-platform-sdks/tabs/analytics"
+    },
+    {
+      "Source": "/client-sdks/resources/tabs/privacy-and-gdpr/",
+      "Destination": "/client-sdks/resources/tabs/privacy-and-gdpr"
+    },
+    {
+      "Source": "/client-sdks/resources/tabs/initialize/",
+      "Destination": "/client-sdks/resources/tabs/initialize"
+    },
+    {
+      "Source": "/client-sdks/resources/tabs/faq/",
+      "Destination": "/client-sdks/resources/tabs/faq"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications",
+      "Destination": "/client-sdks/resources/reference/push-notifications/"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/index",
+      "Destination": "/client-sdks/resources/reference/push-notifications/"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/zero-bezel/",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/zero-bezel"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/timer/",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/timer"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/rating/",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/rating"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/multi-icon/",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/multi-icon"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/input-box/",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/input-box"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/index",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/catalog/",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/catalog"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/carousel/",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/carousel"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/basic/",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/basic"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/tabs/zero-bezel/",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/tabs/zero-bezel"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/tabs/timer/",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/tabs/timer"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/tabs/rating/",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/tabs/rating"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/tabs/multi-icon/",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/tabs/multi-icon"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/tabs/input-box/",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/tabs/input-box"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/tabs/catalog/",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/tabs/catalog"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/tabs/carousel/",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/tabs/carousel"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/tabs/basic/",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/tabs/basic"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/ios/validate-integration/",
+      "Destination": "/client-sdks/resources/reference/push-notifications/ios/validate-integration"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/ios",
+      "Destination": "/client-sdks/resources/reference/push-notifications/ios/"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/ios/index",
+      "Destination": "/client-sdks/resources/reference/push-notifications/ios/"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/ios/create-extension/",
+      "Destination": "/client-sdks/resources/reference/push-notifications/ios/create-extension"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/ios/configure-extension/",
+      "Destination": "/client-sdks/resources/reference/push-notifications/ios/configure-extension"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/android",
+      "Destination": "/client-sdks/resources/reference/push-notifications/android/"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/android/index",
+      "Destination": "/client-sdks/resources/reference/push-notifications/android/"
+    },
+    {
+      "Source": "/client-sdks/resources/migration",
+      "Destination": "/client-sdks/resources/migration/"
+    },
+    {
+      "Source": "/client-sdks/resources/migration/index",
+      "Destination": "/client-sdks/resources/migration/"
+    },
+    {
+      "Source": "/client-sdks/resources/migration/ios/migrate-to-5x/",
+      "Destination": "/client-sdks/resources/migration/ios/migrate-to-5x"
+    },
+    {
+      "Source": "/client-sdks/resources/migration/ios/migrate-to-4x/",
+      "Destination": "/client-sdks/resources/migration/ios/migrate-to-4x"
+    },
+    {
+      "Source": "/client-sdks/resources/migration/ios/migrate-to-3x/",
+      "Destination": "/client-sdks/resources/migration/ios/migrate-to-3x"
+    },
+    {
+      "Source": "/client-sdks/resources/migration/ios",
+      "Destination": "/client-sdks/resources/migration/ios/"
+    },
+    {
+      "Source": "/client-sdks/resources/migration/ios/index",
+      "Destination": "/client-sdks/resources/migration/ios/"
+    },
+    {
+      "Source": "/client-sdks/resources/migration/ios/tabs/migrate-to-4x/",
+      "Destination": "/client-sdks/resources/migration/ios/tabs/migrate-to-4x"
+    },
+    {
+      "Source": "/client-sdks/resources/migration/ios/tabs/migrate-to-3x/",
+      "Destination": "/client-sdks/resources/migration/ios/tabs/migrate-to-3x"
+    },
+    {
+      "Source": "/client-sdks/resources/migration/android/migrate-to-3x/",
+      "Destination": "/client-sdks/resources/migration/android/migrate-to-3x"
+    },
+    {
+      "Source": "/client-sdks/resources/migration/android/migrate-to-2x/",
+      "Destination": "/client-sdks/resources/migration/android/migrate-to-2x"
+    },
+    {
+      "Source": "/client-sdks/resources/migration/android",
+      "Destination": "/client-sdks/resources/migration/android/"
+    },
+    {
+      "Source": "/client-sdks/resources/migration/android/index",
+      "Destination": "/client-sdks/resources/migration/android/"
+    },
+    {
+      "Source": "/client-sdks/resources/migration/android/tabs/migrate-to-2x/",
+      "Destination": "/client-sdks/resources/migration/android/tabs/migrate-to-2x"
+    },
+    {
+      "Source": "/client-sdks/home",
+      "Destination": "/client-sdks/home/"
+    },
+    {
+      "Source": "/client-sdks/home/index",
+      "Destination": "/client-sdks/home/"
+    },
+    {
+      "Source": "/client-sdks/home/current-sdk-versions/",
+      "Destination": "/client-sdks/home/current-sdk-versions"
+    },
+    {
+      "Source": "/client-sdks/home/release-notes",
+      "Destination": "/client-sdks/home/release-notes/"
+    },
+    {
+      "Source": "/client-sdks/home/release-notes/index",
+      "Destination": "/client-sdks/home/release-notes/"
+    },
+    {
+      "Source": "/client-sdks/home/release-notes/2025/",
+      "Destination": "/client-sdks/home/release-notes/2025"
+    },
+    {
+      "Source": "/client-sdks/home/release-notes/2024/",
+      "Destination": "/client-sdks/home/release-notes/2024"
+    },
+    {
+      "Source": "/client-sdks/home/release-notes/2023/",
+      "Destination": "/client-sdks/home/release-notes/2023"
+    },
+    {
+      "Source": "/client-sdks/home/release-notes/2022/",
+      "Destination": "/client-sdks/home/release-notes/2022"
+    },
+    {
+      "Source": "/client-sdks/home/release-notes/2021/",
+      "Destination": "/client-sdks/home/release-notes/2021"
+    },
+    {
+      "Source": "/client-sdks/home/getting-started/validate/",
+      "Destination": "/client-sdks/home/getting-started/validate"
+    },
+    {
+      "Source": "/client-sdks/home/getting-started/track-events/",
+      "Destination": "/client-sdks/home/getting-started/track-events"
+    },
+    {
+      "Source": "/client-sdks/home/getting-started/set-up-schemas-and-datasets/",
+      "Destination": "/client-sdks/home/getting-started/set-up-schemas-and-datasets"
+    },
+    {
+      "Source": "/client-sdks/home/getting-started",
+      "Destination": "/client-sdks/home/getting-started/"
+    },
+    {
+      "Source": "/client-sdks/home/getting-started/index",
+      "Destination": "/client-sdks/home/getting-started/"
+    },
+    {
+      "Source": "/client-sdks/home/getting-started/get-the-sdk/",
+      "Destination": "/client-sdks/home/getting-started/get-the-sdk"
+    },
+    {
+      "Source": "/client-sdks/home/getting-started/enable-debug-logging/",
+      "Destination": "/client-sdks/home/getting-started/enable-debug-logging"
+    },
+    {
+      "Source": "/client-sdks/home/getting-started/create-a-mobile-property/",
+      "Destination": "/client-sdks/home/getting-started/create-a-mobile-property"
+    },
+    {
+      "Source": "/client-sdks/home/getting-started/configure-datastreams/",
+      "Destination": "/client-sdks/home/getting-started/configure-datastreams"
+    },
+    {
+      "Source": "/client-sdks/home/getting-started/tabs/track-events/",
+      "Destination": "/client-sdks/home/getting-started/tabs/track-events"
+    },
+    {
+      "Source": "/client-sdks/home/getting-started/tabs/get-the-sdk/",
+      "Destination": "/client-sdks/home/getting-started/tabs/get-the-sdk"
+    },
+    {
+      "Source": "/client-sdks/home/getting-started/tabs/enable-debug-logging/",
+      "Destination": "/client-sdks/home/getting-started/tabs/enable-debug-logging"
+    },
+    {
+      "Source": "/client-sdks/home/base",
+      "Destination": "/client-sdks/home/base/"
+    },
+    {
+      "Source": "/client-sdks/home/base/index",
+      "Destination": "/client-sdks/home/base/"
+    },
+    {
+      "Source": "/client-sdks/home/base/profile/release-notes/",
+      "Destination": "/client-sdks/home/base/profile/release-notes"
+    },
+    {
+      "Source": "/client-sdks/home/base/profile",
+      "Destination": "/client-sdks/home/base/profile/"
+    },
+    {
+      "Source": "/client-sdks/home/base/profile/index",
+      "Destination": "/client-sdks/home/base/profile/"
+    },
+    {
+      "Source": "/client-sdks/home/base/profile/api-reference/",
+      "Destination": "/client-sdks/home/base/profile/api-reference"
+    },
+    {
+      "Source": "/client-sdks/home/base/profile/tabs",
+      "Destination": "/client-sdks/home/base/profile/tabs/"
+    },
+    {
+      "Source": "/client-sdks/home/base/profile/tabs/index",
+      "Destination": "/client-sdks/home/base/profile/tabs/"
+    },
+    {
+      "Source": "/client-sdks/home/base/profile/tabs/api-reference/",
+      "Destination": "/client-sdks/home/base/profile/tabs/api-reference"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/release-notes/",
+      "Destination": "/client-sdks/home/base/mobile-core/release-notes"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core",
+      "Destination": "/client-sdks/home/base/mobile-core/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/index",
+      "Destination": "/client-sdks/home/base/mobile-core/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/api-reference/",
+      "Destination": "/client-sdks/home/base/mobile-core/api-reference"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/tabs/api-reference/",
+      "Destination": "/client-sdks/home/base/mobile-core/tabs/api-reference"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/signal/rules-engine-integration/",
+      "Destination": "/client-sdks/home/base/mobile-core/signal/rules-engine-integration"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/signal",
+      "Destination": "/client-sdks/home/base/mobile-core/signal/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/signal/index",
+      "Destination": "/client-sdks/home/base/mobile-core/signal/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/signal/api-reference/",
+      "Destination": "/client-sdks/home/base/mobile-core/signal/api-reference"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/signal/tabs",
+      "Destination": "/client-sdks/home/base/mobile-core/signal/tabs/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/signal/tabs/index",
+      "Destination": "/client-sdks/home/base/mobile-core/signal/tabs/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/signal/tabs/api-reference/",
+      "Destination": "/client-sdks/home/base/mobile-core/signal/tabs/api-reference"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/rules-engine/technical-details/",
+      "Destination": "/client-sdks/home/base/mobile-core/rules-engine/technical-details"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/rules-engine",
+      "Destination": "/client-sdks/home/base/mobile-core/rules-engine/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/rules-engine/index",
+      "Destination": "/client-sdks/home/base/mobile-core/rules-engine/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/rules-engine/consequence-details/",
+      "Destination": "/client-sdks/home/base/mobile-core/rules-engine/consequence-details"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/platform-services/network-service/",
+      "Destination": "/client-sdks/home/base/mobile-core/platform-services/network-service"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/platform-services",
+      "Destination": "/client-sdks/home/base/mobile-core/platform-services/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/platform-services/index",
+      "Destination": "/client-sdks/home/base/mobile-core/platform-services/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/platform-services/tabs/network-service/",
+      "Destination": "/client-sdks/home/base/mobile-core/platform-services/tabs/network-service"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/platform-services/tabs",
+      "Destination": "/client-sdks/home/base/mobile-core/platform-services/tabs/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/platform-services/tabs/index",
+      "Destination": "/client-sdks/home/base/mobile-core/platform-services/tabs/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/lifecycle/metrics/",
+      "Destination": "/client-sdks/home/base/mobile-core/lifecycle/metrics"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/lifecycle/ios/",
+      "Destination": "/client-sdks/home/base/mobile-core/lifecycle/ios"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/lifecycle",
+      "Destination": "/client-sdks/home/base/mobile-core/lifecycle/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/lifecycle/index",
+      "Destination": "/client-sdks/home/base/mobile-core/lifecycle/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/lifecycle/event-reference/",
+      "Destination": "/client-sdks/home/base/mobile-core/lifecycle/event-reference"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/lifecycle/configuration-keys/",
+      "Destination": "/client-sdks/home/base/mobile-core/lifecycle/configuration-keys"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/lifecycle/behavior-reference/",
+      "Destination": "/client-sdks/home/base/mobile-core/lifecycle/behavior-reference"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/lifecycle/api-reference/",
+      "Destination": "/client-sdks/home/base/mobile-core/lifecycle/api-reference"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/lifecycle/android/",
+      "Destination": "/client-sdks/home/base/mobile-core/lifecycle/android"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/lifecycle/tabs",
+      "Destination": "/client-sdks/home/base/mobile-core/lifecycle/tabs/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/lifecycle/tabs/index",
+      "Destination": "/client-sdks/home/base/mobile-core/lifecycle/tabs/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/lifecycle/tabs/api-reference/",
+      "Destination": "/client-sdks/home/base/mobile-core/lifecycle/tabs/api-reference"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/identity",
+      "Destination": "/client-sdks/home/base/mobile-core/identity/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/identity/index",
+      "Destination": "/client-sdks/home/base/mobile-core/identity/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/identity/api-reference/",
+      "Destination": "/client-sdks/home/base/mobile-core/identity/api-reference"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/identity/tutorials/push-sync/",
+      "Destination": "/client-sdks/home/base/mobile-core/identity/tutorials/push-sync"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/identity/tutorials",
+      "Destination": "/client-sdks/home/base/mobile-core/identity/tutorials/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/identity/tutorials/index",
+      "Destination": "/client-sdks/home/base/mobile-core/identity/tutorials/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/identity/tutorials/id-sharing/",
+      "Destination": "/client-sdks/home/base/mobile-core/identity/tutorials/id-sharing"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/identity/tabs/push-sync/",
+      "Destination": "/client-sdks/home/base/mobile-core/identity/tabs/push-sync"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/identity/tabs",
+      "Destination": "/client-sdks/home/base/mobile-core/identity/tabs/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/identity/tabs/index",
+      "Destination": "/client-sdks/home/base/mobile-core/identity/tabs/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/identity/tabs/id-sharing/",
+      "Destination": "/client-sdks/home/base/mobile-core/identity/tabs/id-sharing"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/identity/tabs/api-reference/",
+      "Destination": "/client-sdks/home/base/mobile-core/identity/tabs/api-reference"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/configuration",
+      "Destination": "/client-sdks/home/base/mobile-core/configuration/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/configuration/index",
+      "Destination": "/client-sdks/home/base/mobile-core/configuration/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/configuration/api-reference/",
+      "Destination": "/client-sdks/home/base/mobile-core/configuration/api-reference"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/configuration/tabs",
+      "Destination": "/client-sdks/home/base/mobile-core/configuration/tabs/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/configuration/tabs/index",
+      "Destination": "/client-sdks/home/base/mobile-core/configuration/tabs/"
+    },
+    {
+      "Source": "/client-sdks/home/base/mobile-core/configuration/tabs/api-reference/",
+      "Destination": "/client-sdks/home/base/mobile-core/configuration/tabs/api-reference"
+    },
+    {
+      "Source": "/client-sdks/home/base/assurance/release-notes/",
+      "Destination": "/client-sdks/home/base/assurance/release-notes"
+    },
+    {
+      "Source": "/client-sdks/home/base/assurance",
+      "Destination": "/client-sdks/home/base/assurance/"
+    },
+    {
+      "Source": "/client-sdks/home/base/assurance/index",
+      "Destination": "/client-sdks/home/base/assurance/"
+    },
+    {
+      "Source": "/client-sdks/home/base/assurance/common-issues/",
+      "Destination": "/client-sdks/home/base/assurance/common-issues"
+    },
+    {
+      "Source": "/client-sdks/home/base/assurance/api-reference/",
+      "Destination": "/client-sdks/home/base/assurance/api-reference"
+    },
+    {
+      "Source": "/client-sdks/home/base/assurance/tabs",
+      "Destination": "/client-sdks/home/base/assurance/tabs/"
+    },
+    {
+      "Source": "/client-sdks/home/base/assurance/tabs/index",
+      "Destination": "/client-sdks/home/base/assurance/tabs/"
+    },
+    {
+      "Source": "/client-sdks/home/base/assurance/tabs/common-issues/",
+      "Destination": "/client-sdks/home/base/assurance/tabs/common-issues"
+    },
+    {
+      "Source": "/client-sdks/home/base/assurance/tabs/api-reference/",
+      "Destination": "/client-sdks/home/base/assurance/tabs/api-reference"
+    },
+    {
+      "Source": "/client-sdks/edge",
+      "Destination": "/client-sdks/edge/"
+    },
+    {
+      "Source": "/client-sdks/edge/index",
+      "Destination": "/client-sdks/edge/"
+    },
+    {
+      "Source": "/client-sdks/edge/media-for-edge-network/tutorial/",
+      "Destination": "/client-sdks/edge/media-for-edge-network/tutorial"
+    },
+    {
+      "Source": "/client-sdks/edge/media-for-edge-network/release-notes/",
+      "Destination": "/client-sdks/edge/media-for-edge-network/release-notes"
+    },
+    {
+      "Source": "/client-sdks/edge/media-for-edge-network",
+      "Destination": "/client-sdks/edge/media-for-edge-network/"
+    },
+    {
+      "Source": "/client-sdks/edge/media-for-edge-network/index",
+      "Destination": "/client-sdks/edge/media-for-edge-network/"
+    },
+    {
+      "Source": "/client-sdks/edge/media-for-edge-network/api-reference/",
+      "Destination": "/client-sdks/edge/media-for-edge-network/api-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/media-for-edge-network/tabs",
+      "Destination": "/client-sdks/edge/media-for-edge-network/tabs/"
+    },
+    {
+      "Source": "/client-sdks/edge/media-for-edge-network/tabs/index",
+      "Destination": "/client-sdks/edge/media-for-edge-network/tabs/"
+    },
+    {
+      "Source": "/client-sdks/edge/media-for-edge-network/tabs/api-reference/",
+      "Destination": "/client-sdks/edge/media-for-edge-network/tabs/api-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/lifecycle-for-edge-network/migration-reference/",
+      "Destination": "/client-sdks/edge/lifecycle-for-edge-network/migration-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/lifecycle-for-edge-network/metrics/",
+      "Destination": "/client-sdks/edge/lifecycle-for-edge-network/metrics"
+    },
+    {
+      "Source": "/client-sdks/edge/lifecycle-for-edge-network",
+      "Destination": "/client-sdks/edge/lifecycle-for-edge-network/"
+    },
+    {
+      "Source": "/client-sdks/edge/lifecycle-for-edge-network/index",
+      "Destination": "/client-sdks/edge/lifecycle-for-edge-network/"
+    },
+    {
+      "Source": "/client-sdks/edge/lifecycle-for-edge-network/event-reference/",
+      "Destination": "/client-sdks/edge/lifecycle-for-edge-network/event-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/lifecycle-for-edge-network/behavior-reference/",
+      "Destination": "/client-sdks/edge/lifecycle-for-edge-network/behavior-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/lifecycle-for-edge-network/api-reference/",
+      "Destination": "/client-sdks/edge/lifecycle-for-edge-network/api-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/identity-for-edge-network/release-notes/",
+      "Destination": "/client-sdks/edge/identity-for-edge-network/release-notes"
+    },
+    {
+      "Source": "/client-sdks/edge/identity-for-edge-network",
+      "Destination": "/client-sdks/edge/identity-for-edge-network/"
+    },
+    {
+      "Source": "/client-sdks/edge/identity-for-edge-network/index",
+      "Destination": "/client-sdks/edge/identity-for-edge-network/"
+    },
+    {
+      "Source": "/client-sdks/edge/identity-for-edge-network/faq/",
+      "Destination": "/client-sdks/edge/identity-for-edge-network/faq"
+    },
+    {
+      "Source": "/client-sdks/edge/identity-for-edge-network/api-reference/",
+      "Destination": "/client-sdks/edge/identity-for-edge-network/api-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/identity-for-edge-network/tabs",
+      "Destination": "/client-sdks/edge/identity-for-edge-network/tabs/"
+    },
+    {
+      "Source": "/client-sdks/edge/identity-for-edge-network/tabs/index",
+      "Destination": "/client-sdks/edge/identity-for-edge-network/tabs/"
+    },
+    {
+      "Source": "/client-sdks/edge/identity-for-edge-network/tabs/faq/",
+      "Destination": "/client-sdks/edge/identity-for-edge-network/tabs/faq"
+    },
+    {
+      "Source": "/client-sdks/edge/identity-for-edge-network/tabs/api-reference/",
+      "Destination": "/client-sdks/edge/identity-for-edge-network/tabs/api-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/edge-network/xdm-experience-events/",
+      "Destination": "/client-sdks/edge/edge-network/xdm-experience-events"
+    },
+    {
+      "Source": "/client-sdks/edge/edge-network/release-notes/",
+      "Destination": "/client-sdks/edge/edge-network/release-notes"
+    },
+    {
+      "Source": "/client-sdks/edge/edge-network",
+      "Destination": "/client-sdks/edge/edge-network/"
+    },
+    {
+      "Source": "/client-sdks/edge/edge-network/index",
+      "Destination": "/client-sdks/edge/edge-network/"
+    },
+    {
+      "Source": "/client-sdks/edge/edge-network/api-reference/",
+      "Destination": "/client-sdks/edge/edge-network/api-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/edge-network/validation/validation/",
+      "Destination": "/client-sdks/edge/edge-network/validation/validation"
+    },
+    {
+      "Source": "/client-sdks/edge/edge-network/validation",
+      "Destination": "/client-sdks/edge/edge-network/validation/"
+    },
+    {
+      "Source": "/client-sdks/edge/edge-network/validation/index",
+      "Destination": "/client-sdks/edge/edge-network/validation/"
+    },
+    {
+      "Source": "/client-sdks/edge/edge-network/validation/edge-analytics-validation/",
+      "Destination": "/client-sdks/edge/edge-network/validation/edge-analytics-validation"
+    },
+    {
+      "Source": "/client-sdks/edge/edge-network/validation/tabs/edge-analytics-validation/",
+      "Destination": "/client-sdks/edge/edge-network/validation/tabs/edge-analytics-validation"
+    },
+    {
+      "Source": "/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/",
+      "Destination": "/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent"
+    },
+    {
+      "Source": "/client-sdks/edge/edge-network/tutorials/send-overrides-rules/",
+      "Destination": "/client-sdks/edge/edge-network/tutorials/send-overrides-rules"
+    },
+    {
+      "Source": "/client-sdks/edge/edge-network/tutorials",
+      "Destination": "/client-sdks/edge/edge-network/tutorials/"
+    },
+    {
+      "Source": "/client-sdks/edge/edge-network/tutorials/index",
+      "Destination": "/client-sdks/edge/edge-network/tutorials/"
+    },
+    {
+      "Source": "/client-sdks/edge/edge-network/tabs",
+      "Destination": "/client-sdks/edge/edge-network/tabs/"
+    },
+    {
+      "Source": "/client-sdks/edge/edge-network/tabs/index",
+      "Destination": "/client-sdks/edge/edge-network/tabs/"
+    },
+    {
+      "Source": "/client-sdks/edge/edge-network/tabs/api-reference/",
+      "Destination": "/client-sdks/edge/edge-network/tabs/api-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/consent-for-edge-network/release-notes/",
+      "Destination": "/client-sdks/edge/consent-for-edge-network/release-notes"
+    },
+    {
+      "Source": "/client-sdks/edge/consent-for-edge-network",
+      "Destination": "/client-sdks/edge/consent-for-edge-network/"
+    },
+    {
+      "Source": "/client-sdks/edge/consent-for-edge-network/index",
+      "Destination": "/client-sdks/edge/consent-for-edge-network/"
+    },
+    {
+      "Source": "/client-sdks/edge/consent-for-edge-network/api-reference/",
+      "Destination": "/client-sdks/edge/consent-for-edge-network/api-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/consent-for-edge-network/tabs",
+      "Destination": "/client-sdks/edge/consent-for-edge-network/tabs/"
+    },
+    {
+      "Source": "/client-sdks/edge/consent-for-edge-network/tabs/index",
+      "Destination": "/client-sdks/edge/consent-for-edge-network/tabs/"
+    },
+    {
+      "Source": "/client-sdks/edge/consent-for-edge-network/tabs/api-reference/",
+      "Destination": "/client-sdks/edge/consent-for-edge-network/tabs/api-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer-decisioning/review-simulate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer-decisioning/review-simulate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer-decisioning/release-notes/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer-decisioning/release-notes"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer-decisioning/optimize-configuration-view/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer-decisioning/optimize-configuration-view"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer-decisioning",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer-decisioning/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer-decisioning/index",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer-decisioning/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer-decisioning/assurance-setup/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer-decisioning/assurance-setup"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer-decisioning/assurance-for-decisioning/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer-decisioning/assurance-for-decisioning"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer-decisioning/api-reference/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer-decisioning/api-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer-decisioning/tabs",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer-decisioning/tabs/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer-decisioning/tabs/index",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer-decisioning/tabs/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer-decisioning/tabs/api-reference/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer-decisioning/tabs/api-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/release-notes/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/release-notes"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/proposition-edge-events/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/proposition-edge-events"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/index",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/api-reference/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/api-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/tutorials/validate-messages/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/tutorials/validate-messages"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/tutorials/native-from-javascript/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/tutorials/native-from-javascript"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/tutorials/messaging-delegate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/tutorials/messaging-delegate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/tutorials/javascript-from-native/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/tutorials/javascript-from-native"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/tutorials",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/tutorials/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/tutorials/index",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/tutorials/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/tutorials/handle-clicks/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/tutorials/handle-clicks"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/tutorials/tabs/native-from-javascript/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/tutorials/tabs/native-from-javascript"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/tutorials/tabs/messaging-delegate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/tutorials/tabs/messaging-delegate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/tutorials/tabs/javascript-from-native/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/tutorials/tabs/javascript-from-native"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/tabs/public-classes/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/tabs/public-classes"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/tabs",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/tabs/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/tabs/index",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/tabs/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/tabs/api-reference/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/tabs/api-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/push-notification/rich-media-notifications-overview/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/push-notification/rich-media-notifications-overview"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/push-notification/push-token-sync-optimizations/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/push-notification/push-token-sync-optimizations"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/push-notification/push-payload/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/push-notification/push-payload"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/push-notification",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/push-notification/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/push-notification/index",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/push-notification/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/push-notification/tabs/push-token-sync-optimizations/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/push-notification/tabs/push-token-sync-optimizations"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/push-notification/tabs/push-payload/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/push-notification/tabs/push-payload"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/push-notification/ios/push-to-iam/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/push-notification/ios/push-to-iam"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/push-notification/ios/display-rich-notifications/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/push-notification/ios/display-rich-notifications"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/push-notification/ios/display-rich-notifications-aep/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/push-notification/ios/display-rich-notifications-aep"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/push-notification/ios/api-reference/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/push-notification/ios/api-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/push-notification/android/push-to-iam/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/push-notification/android/push-to-iam"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/push-notification/android/manual-display-and-tracking/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/push-notification/android/manual-display-and-tracking"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/push-notification/android/automatic-display-and-tracking/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/push-notification/android/automatic-display-and-tracking"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes/surface/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/surface"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes/push-tracking-status/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/push-tracking-status"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes/proposition/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/proposition"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes/proposition-item/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/proposition-item"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes/messaging-push-payload/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/messaging-push-payload"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes/messaging-edge-event-type/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/messaging-edge-event-type"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes/message/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/message"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes/json-content-schema-data/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/json-content-schema-data"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes/index",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes/inbox-content-schema-data/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/inbox-content-schema-data"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes/inapp-schema-data/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/inapp-schema-data"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes/html-content-schema-data/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/html-content-schema-data"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes/content-type/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/content-type"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes/content-card/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/content-card"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes/content-card-schema-data/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/content-card-schema-data"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes/tabs/surface/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/tabs/surface"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes/tabs/push-tracking-status/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/tabs/push-tracking-status"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes/tabs/public-classes/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/tabs/public-classes"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes/tabs/proposition/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/tabs/proposition"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes/tabs/proposition-item/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/tabs/proposition-item"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes/tabs/messaging-edge-event-type/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/tabs/messaging-edge-event-type"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes/tabs/message/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/tabs/message"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/public-classes/tabs/content-type/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/public-classes/tabs/content-type"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/live-activities/tutorial/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/live-activities/tutorial"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/live-activities",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/live-activities/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/live-activities/index",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/live-activities/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/live-activities/api-reference/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/live-activities/api-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/live-activities/tabs/api-reference/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/live-activities/tabs/api-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-origin/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-origin"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-data/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-data"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-attributes/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-attributes"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-assurance-debuggable/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-assurance-debuggable"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/index",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/index",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/api-usage/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/api-usage"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/api-usage/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/api-usage"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/tutorial/listening-inbox-events/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/tutorial/listening-inbox-events"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/tutorial/listening-inbox-events/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/tutorial/listening-inbox-events"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/tutorial/displaying-inbox/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/tutorial/displaying-inbox"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/tutorial/displaying-inbox/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/tutorial/displaying-inbox"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/tutorial/customizing-inbox/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/tutorial/customizing-inbox"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/tutorial/customizing-inbox/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/tutorial/customizing-inbox"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inboxui/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxui"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxui/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxui"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inboxstate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxstate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxstate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxstate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inboxschemadata/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxschemadata"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxschemadata/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxschemadata"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inboxeventlistening/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxeventlistening"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxeventlistening/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxeventlistening"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inboxerror/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxerror"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxerror/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxerror"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/unreadindicatorsettings/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/unreadindicatorsettings"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/unreadindicatorsettings/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/unreadindicatorsettings"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/unreadiconsettings/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/unreadiconsettings"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/unreadiconsettings/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/unreadiconsettings"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/unreadbackgroundsettings/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/unreadbackgroundsettings"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/unreadbackgroundsettings/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/unreadbackgroundsettings"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/layoutsettings/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/layoutsettings"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/layoutsettings/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/layoutsettings"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/inboxsettings/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/inboxsettings"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/inboxsettings/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/inboxsettings"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/inboxorientation/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/inboxorientation"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/inboxorientation/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/inboxorientation"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/iconplacement/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/iconplacement"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/iconplacement/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/iconplacement"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/emptystatessettings/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/emptystatessettings"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/emptystatessettings/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/emptystatessettings"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/index",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/index",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/api-usage/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/api-usage"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/api-usage/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/api-usage"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/tutorial/listening-inbox-events/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/tutorial/listening-inbox-events"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/tutorial/listening-inbox-events/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/tutorial/listening-inbox-events"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/tutorial/displaying-inbox/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/tutorial/displaying-inbox"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/tutorial/displaying-inbox/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/tutorial/displaying-inbox"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/tutorial/customizing-inbox/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/tutorial/customizing-inbox"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/tutorial/customizing-inbox/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/tutorial/customizing-inbox"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/inboxuistate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/inboxuistate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/inboxuistate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/inboxuistate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/inboxtemplate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/inboxtemplate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/inboxtemplate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/inboxtemplate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/aepuistyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/aepuistyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/aepuistyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/aepuistyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/aepinbox/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/aepinbox"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/aepinbox/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/aepinbox"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/styles/inboxuistyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/styles/inboxuistyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/styles/inboxuistyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/styles/inboxuistyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/styles/aeplazyrowstyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/styles/aeplazyrowstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/styles/aeplazyrowstyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/styles/aeplazyrowstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/styles/aeplazycolumnstyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/styles/aeplazycolumnstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/styles/aeplazycolumnstyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/styles/aeplazycolumnstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/observers/inboxeventobserver/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/observers/inboxeventobserver"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/observers/inboxeventobserver/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/observers/inboxeventobserver"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/observers/inboxevent/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/observers/inboxevent"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/observers/inboxevent/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/observers/inboxevent"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/observers/aepinboxeventobserver/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/observers/aepinboxeventobserver"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/observers/aepinboxeventobserver/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/observers/aepinboxeventobserver"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/content-provider/messaginginboxprovider/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/content-provider/messaginginboxprovider"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/content-provider/messaginginboxprovider/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/content-provider/messaginginboxprovider"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/content-provider/aepinboxcontentprovider/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/content-provider/aepinboxcontentprovider"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/content-provider/aepinboxcontentprovider/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/content-provider/aepinboxcontentprovider"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/validate-messages/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/validate-messages"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/in-app-message",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/index",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/api-reference/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/api-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/trigger-campaign/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/trigger-campaign"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/re-evaluate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/re-evaluate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/native-from-javascript/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/native-from-javascript"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-metadata/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-metadata"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/messaging-delegate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/javascript-from-native/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/javascript-from-native"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/handle-clicks/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/handle-clicks"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/tabs/trigger-campaign/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/tabs/trigger-campaign"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/tabs/re-evaluate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/tabs/re-evaluate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/tabs/native-from-javascript/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/tabs/native-from-javascript"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/tabs/messaging-metadata/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/tabs/messaging-metadata"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/tabs/messaging-delegate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/tabs/messaging-delegate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/tabs/javascript-from-native/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/in-app-message/tutorials/tabs/javascript-from-native"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/index",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/index",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/api-usage/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/api-usage"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/api-usage/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/api-usage"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/index",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/index",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/aeptext/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aeptext"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aeptext/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aeptext"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/aepstack/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aepstack"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aepstack/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aepstack"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/aepimage/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aepimage"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aepimage/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aepimage"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/aepdismissbutton/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aepdismissbutton"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aepdismissbutton/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aepdismissbutton"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/aepbutton/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aepbutton"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aepbutton/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aepbutton"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/tutorial/listening-content-card-events/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/tutorial/listening-content-card-events"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/tutorial/listening-content-card-events/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/tutorial/listening-content-card-events"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/tutorial/displaying-content-cards/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/tutorial/displaying-content-cards"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/tutorial/displaying-content-cards/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/tutorial/displaying-content-cards"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/tutorial/customizing-content-card-templates/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/tutorial/customizing-content-card-templates"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/tutorial/customizing-content-card-templates/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/tutorial/customizing-content-card-templates"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/templates/smallimage-template/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/templates/smallimage-template"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/templates/smallimage-template/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/templates/smallimage-template"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/templates/largeimage-template/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/templates/largeimage-template"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/templates/largeimage-template/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/templates/largeimage-template"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/templates/imageonly-template/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/templates/imageonly-template"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/templates/imageonly-template/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/templates/imageonly-template"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/public-classes/contentcarduieventlistening/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/public-classes/contentcarduieventlistening"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/public-classes/contentcarduieventlistening/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/public-classes/contentcarduieventlistening"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/public-classes/contentcardui/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/public-classes/contentcardui"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/public-classes/contentcardui/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/public-classes/contentcardui"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/public-classes/contentcardtemplatetype/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/public-classes/contentcardtemplatetype"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/public-classes/contentcardtemplatetype/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/public-classes/contentcardtemplatetype"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/public-classes/contentcardcustomizing/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/public-classes/contentcardcustomizing"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/public-classes/contentcardcustomizing/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/public-classes/contentcardcustomizing"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/index",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/index",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/api-usage/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/api-usage"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/api-usage/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/api-usage"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/tutorial/listening-content-card-events/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/tutorial/listening-content-card-events"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/tutorial/listening-content-card-events/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/tutorial/listening-content-card-events"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/tutorial/displaying-content-cards/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/tutorial/displaying-content-cards"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/tutorial/displaying-content-cards/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/tutorial/displaying-content-cards"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/tutorial/customizing-content-card-templates/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/tutorial/customizing-content-card-templates"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/tutorial/customizing-content-card-templates/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/tutorial/customizing-content-card-templates"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/uievent/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/uievent"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/uievent/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/uievent"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/uiaction/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/uiaction"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/uiaction/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/uiaction"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/contentcarduieventlistener/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/contentcarduieventlistener"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/contentcarduieventlistener/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/contentcarduieventlistener"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/contentcardmapper/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/contentcardmapper"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/contentcardmapper/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/contentcardmapper"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/aepui/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/aepui"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/aepui/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/aepui"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/smallimagetemplate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/smallimagetemplate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/smallimagetemplate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/smallimagetemplate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/largeimagetemplate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/largeimagetemplate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/largeimagetemplate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/largeimagetemplate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/imageonlytemplate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/imageonlytemplate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/imageonlytemplate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/imageonlytemplate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepuitemplatetype/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepuitemplatetype"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepuitemplatetype/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepuitemplatetype"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepuitemplate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepuitemplate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepuitemplate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepuitemplate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aeptext/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aeptext"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aeptext/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aeptext"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepimage/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepimage"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepimage/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepimage"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepicon/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepicon"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepicon/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepicon"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepcolor/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepcolor"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepcolor/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepcolor"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepbutton/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepbutton"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepbutton/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepbutton"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/smallimageuistyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/smallimageuistyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/smallimageuistyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/smallimageuistyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/largeimageuistyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/largeimageuistyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/largeimageuistyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/largeimageuistyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/imageonlyuistyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/imageonlyuistyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/imageonlyuistyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/imageonlyuistyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aeptextstyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aeptextstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aeptextstyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aeptextstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aeprowstyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aeprowstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aeprowstyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aeprowstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aepimagestyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepimagestyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepimagestyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepimagestyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aepiconstyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepiconstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepiconstyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepiconstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aepcolumnstyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepcolumnstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepcolumnstyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepcolumnstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aepcardstyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepcardstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepcardstyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepcardstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aepbuttonstyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepbuttonstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepbuttonstyle/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepbuttonstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/state/smallimagecarduistate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/smallimagecarduistate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/smallimagecarduistate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/smallimagecarduistate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/state/largeimagecarduistate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/largeimagecarduistate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/largeimagecarduistate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/largeimagecarduistate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/state/imageonlycarduistate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/imageonlycarduistate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/imageonlycarduistate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/imageonlycarduistate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/state/aepcarduistate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/aepcarduistate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/aepcarduistate/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/aepcarduistate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/observers/contentcardeventobserver/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/observers/contentcardeventobserver"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/observers/contentcardeventobserver/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/observers/contentcardeventobserver"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/observers/aepuieventobserver/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/observers/aepuieventobserver"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/observers/aepuieventobserver/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/observers/aepuieventobserver"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/content-provider/contentcarduiprovider/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/content-provider/contentcarduiprovider"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/content-provider/contentcarduiprovider/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/content-provider/contentcarduiprovider"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/content-provider/aepuicontentprovider/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/content-provider/aepuicontentprovider"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/content-provider/aepuicontentprovider/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/content-provider/aepuicontentprovider"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/code-based/tutorial/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/code-based/tutorial"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/code-based",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/code-based/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/code-based/index",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/code-based/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/code-based/api-reference/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/code-based/api-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/code-based/tabs/tutorial/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/code-based/tabs/tutorial"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/code-based/tabs/api-reference/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/code-based/tabs/api-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-brand-concierge/release-notes/",
+      "Destination": "/client-sdks/edge/adobe-brand-concierge/release-notes"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-brand-concierge",
+      "Destination": "/client-sdks/edge/adobe-brand-concierge/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-brand-concierge/index",
+      "Destination": "/client-sdks/edge/adobe-brand-concierge/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-brand-concierge/ios/style-guide/",
+      "Destination": "/client-sdks/edge/adobe-brand-concierge/ios/style-guide"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-brand-concierge/ios/implementation-guide/",
+      "Destination": "/client-sdks/edge/adobe-brand-concierge/ios/implementation-guide"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-brand-concierge/ios/api-reference/",
+      "Destination": "/client-sdks/edge/adobe-brand-concierge/ios/api-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-brand-concierge/android/style-guide/",
+      "Destination": "/client-sdks/edge/adobe-brand-concierge/android/style-guide"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-brand-concierge/android/implementation-guide/",
+      "Destination": "/client-sdks/edge/adobe-brand-concierge/android/implementation-guide"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-brand-concierge/android/api-reference/",
+      "Destination": "/client-sdks/edge/adobe-brand-concierge/android/api-reference"
+    },
+    {
+      "Source": "/client-sdks/solution/places/assets/index/mask-everything-except-poiId",
+      "Destination": "/client-sdks/solution/places/assets/index/mask-everything-except-poi-id"
+    },
+    {
+      "Source": "/client-sdks/solution/places/assets/behavior-reference/non-intersecting-exit-A",
+      "Destination": "/client-sdks/solution/places/assets/behavior-reference/non-intersecting-exit-a"
+    },
+    {
+      "Source": "/client-sdks/solution/places/assets/behavior-reference/non-intersecting-enter-B",
+      "Destination": "/client-sdks/solution/places/assets/behavior-reference/non-intersecting-enter-b"
+    },
+    {
+      "Source": "/client-sdks/solution/places/assets/behavior-reference/non-intersecting-enter-A",
+      "Destination": "/client-sdks/solution/places/assets/behavior-reference/non-intersecting-enter-a"
+    },
+    {
+      "Source": "/client-sdks/solution/places/assets/behavior-reference/intersecting-exit-A",
+      "Destination": "/client-sdks/solution/places/assets/behavior-reference/intersecting-exit-a"
+    },
+    {
+      "Source": "/client-sdks/solution/places/assets/behavior-reference/intersecting-enter-B",
+      "Destination": "/client-sdks/solution/places/assets/behavior-reference/intersecting-enter-b"
+    },
+    {
+      "Source": "/client-sdks/solution/places/assets/behavior-reference/intersecting-enter-A",
+      "Destination": "/client-sdks/solution/places/assets/behavior-reference/intersecting-enter-a"
+    },
+    {
+      "Source": "/client-sdks/solution/adobe-analytics/assets/index/compareWorkflows",
+      "Destination": "/client-sdks/solution/adobe-analytics/assets/index/compare-workflows"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/assets/zero_bezel",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/assets/zero-bezel"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/assets/vertical_catalog",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/assets/vertical-catalog"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/assets/multi_icon",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/assets/multi-icon"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/assets/input_box",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/assets/input-box"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/assets/horizontal_catalog",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/assets/horizontal-catalog"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/assets/android_timer",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/assets/android-timer"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/assets/android_manual_carousel",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/assets/android-manual-carousel"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/assets/android_filmstrip_carousel",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/assets/android-filmstrip-carousel"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/assets/android_basic",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/assets/android-basic"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/templates/assets/android_auto_carousel",
+      "Destination": "/client-sdks/resources/reference/push-notifications/templates/assets/android-auto-carousel"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/ios/assets/createNotificationContentExtension",
+      "Destination": "/client-sdks/resources/reference/push-notifications/ios/assets/create-notification-content-extension"
+    },
+    {
+      "Source": "/client-sdks/resources/reference/push-notifications/ios/assets/configurePlist",
+      "Destination": "/client-sdks/resources/reference/push-notifications/ios/assets/configure-plist"
+    },
+    {
+      "Source": "/client-sdks/edge/edge-network/assets/tutorial/configOverrides/if-event-application-launch",
+      "Destination": "/client-sdks/edge/edge-network/assets/tutorial/config-overrides/if-event-application-launch"
+    },
+    {
+      "Source": "/client-sdks/edge/edge-network/assets/tutorial/configOverrides/if-event-application-close",
+      "Destination": "/client-sdks/edge/edge-network/assets/tutorial/config-overrides/if-event-application-close"
+    },
+    {
+      "Source": "/client-sdks/edge/edge-network/assets/tutorial/configOverrides/final-rule-configoverrides",
+      "Destination": "/client-sdks/edge/edge-network/assets/tutorial/config-overrides/final-rule-configoverrides"
+    },
+    {
+      "Source": "/client-sdks/edge/edge-network/assets/tutorial/configOverrides/datastream-id-override-payload",
+      "Destination": "/client-sdks/edge/edge-network/assets/tutorial/config-overrides/datastream-id-override-payload"
+    },
+    {
+      "Source": "/client-sdks/edge/edge-network/assets/tutorial/configOverrides/datastream-config-override-payload",
+      "Destination": "/client-sdks/edge/edge-network/assets/tutorial/config-overrides/datastream-config-override-payload"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/api-usage",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/api-usage"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/tutorial/listening-inbox-events",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/tutorial/listening-inbox-events"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/tutorial/displaying-inbox",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/tutorial/displaying-inbox"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/tutorial/customizing-inbox",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/tutorial/customizing-inbox"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inboxui",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxui"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inboxstate",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxstate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inboxschemadata",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxschemadata"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inboxeventlistening",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxeventlistening"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inboxerror",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inboxerror"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/unreadindicatorsettings",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/unreadindicatorsettings"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/unreadiconsettings",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/unreadiconsettings"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/unreadbackgroundsettings",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/unreadbackgroundsettings"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/layoutsettings",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/layoutsettings"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/inboxsettings",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/inboxsettings"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/inboxorientation",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/inboxorientation"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/iconplacement",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/iconplacement"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/iOS/public-classes/inbox-settings/emptystatessettings",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/ios/public-classes/inbox-settings/emptystatessettings"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/api-usage",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/api-usage"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/tutorial/listening-inbox-events",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/tutorial/listening-inbox-events"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/tutorial/displaying-inbox",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/tutorial/displaying-inbox"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/tutorial/customizing-inbox",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/tutorial/customizing-inbox"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/inboxuistate",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/inboxuistate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/inboxtemplate",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/inboxtemplate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/aepuistyle",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/aepuistyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/aepinbox",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/aepinbox"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/styles/inboxuistyle",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/styles/inboxuistyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/styles/aeplazyrowstyle",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/styles/aeplazyrowstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/styles/aeplazycolumnstyle",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/styles/aeplazycolumnstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/observers/inboxeventobserver",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/observers/inboxeventobserver"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/observers/inboxevent",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/observers/inboxevent"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/observers/aepinboxeventobserver",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/observers/aepinboxeventobserver"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/content-provider/messaginginboxprovider",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/content-provider/messaginginboxprovider"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/Android/public-classes/content-provider/aepinboxcontentprovider",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/inbox-ui/android/public-classes/content-provider/aepinboxcontentprovider"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/api-usage",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/api-usage"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/aeptext",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aeptext"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/aepstack",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aepstack"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/aepimage",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aepimage"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/aepdismissbutton",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aepdismissbutton"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/ui-elements/aepbutton",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/aepbutton"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/tutorial/listening-content-card-events",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/tutorial/listening-content-card-events"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/tutorial/displaying-content-cards",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/tutorial/displaying-content-cards"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/tutorial/customizing-content-card-templates",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/tutorial/customizing-content-card-templates"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/templates/smallimage-template",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/templates/smallimage-template"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/templates/largeimage-template",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/templates/largeimage-template"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/templates/imageonly-template",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/templates/imageonly-template"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/public-classes/contentcarduieventlistening",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/public-classes/contentcarduieventlistening"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/public-classes/contentcardui",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/public-classes/contentcardui"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/public-classes/contentcardtemplatetype",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/public-classes/contentcardtemplatetype"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/iOS/public-classes/contentcardcustomizing",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/ios/public-classes/contentcardcustomizing"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/assets/iOS/smallimagetemplate-layout",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/assets/ios/smallimagetemplate-layout"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/assets/iOS/largeimagetemplate-layout",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/assets/ios/largeimagetemplate-layout"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/assets/iOS/imageonlytemplate-layout",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/assets/ios/imageonlytemplate-layout"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/assets/Android/large-image-card-layout",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/assets/android/large-image-card-layout"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/assets/Android/image-only-card-layout",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/assets/android/image-only-card-layout"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/assets/Android/SmallImageCard composable layout",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/assets/android/small-image-card-composable-layout"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/api-usage",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/api-usage"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/tutorial/listening-content-card-events",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/tutorial/listening-content-card-events"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/tutorial/displaying-content-cards",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/tutorial/displaying-content-cards"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/tutorial/customizing-content-card-templates",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/tutorial/customizing-content-card-templates"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/uievent",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/uievent"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/uiaction",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/uiaction"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/contentcarduieventlistener",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/contentcarduieventlistener"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/contentcardmapper",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/contentcardmapper"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/aepui",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/aepui"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/smallimagetemplate",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/smallimagetemplate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/largeimagetemplate",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/largeimagetemplate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/imageonlytemplate",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/imageonlytemplate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepuitemplatetype",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepuitemplatetype"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepuitemplate",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepuitemplate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aeptext",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aeptext"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepimage",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepimage"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepicon",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepicon"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepcolor",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepcolor"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/ui-models/aepbutton",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/ui-models/aepbutton"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/smallimageuistyle",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/smallimageuistyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/largeimageuistyle",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/largeimageuistyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/imageonlyuistyle",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/imageonlyuistyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aeptextstyle",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aeptextstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aeprowstyle",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aeprowstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aepimagestyle",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepimagestyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aepiconstyle",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepiconstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aepcolumnstyle",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepcolumnstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aepcardstyle",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepcardstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/styles/aepbuttonstyle",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/styles/aepbuttonstyle"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/state/smallimagecarduistate",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/smallimagecarduistate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/state/largeimagecarduistate",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/largeimagecarduistate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/state/imageonlycarduistate",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/imageonlycarduistate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/state/aepcarduistate",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/state/aepcarduistate"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/observers/contentcardeventobserver",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/observers/contentcardeventobserver"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/observers/aepuieventobserver",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/observers/aepuieventobserver"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/content-provider/contentcarduiprovider",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/content-provider/contentcarduiprovider"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/Android/public-classes/content-provider/aepuicontentprovider",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/content-provider/aepuicontentprovider"
+    }
+  ],
+  ":type": "sheet"
+}

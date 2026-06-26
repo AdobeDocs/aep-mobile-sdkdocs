@@ -94,6 +94,6 @@ let activity = try Activity<FoodDeliveryLiveActivityAttributes>.request(
 
 ## Related classes and protocols
 
-* [LiveActivityData](./live-activity-data.md)
-* [LiveActivityOrigin](./live-activity-origin.md)
-* [LiveActivityAssuranceDebuggable](./live-activity-assurance-debuggable.md)
+* [LiveActivityData](live-activity-data.md)
+* [LiveActivityOrigin](live-activity-origin.md)
+* [LiveActivityAssuranceDebuggable](live-activity-assurance-debuggable.md)

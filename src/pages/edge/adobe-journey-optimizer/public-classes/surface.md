@@ -10,7 +10,6 @@ keywords:
 - iOS
 - Code-based Experiences
 ---
-import Tabs from './tabs/surface.md'
 
 # Surface
 
@@ -20,9 +19,9 @@ The `Surface` class represents an entity for user or system interaction. It is i
 
 `Surface` class is used to create surface instances for requesting propositions in personalization query requests.
 
-## Public variables
+### Public variables
 
-### uri
+#### uri
 
 Unique surface URI string.
 
@@ -30,50 +29,131 @@ Unique surface URI string.
 public let uri: String
 ```
 
-## Public functions
+### Public functions
 
-### init
+#### init
 
 Creates a new surface by appending the given surface `path` to the mobile app surface prefix.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+* _path_ is a string representation for the surface path.
 
-iOS
+##### iOS Swift
 
-<Tabs query="platform=ios&function=init"/>
+<CodeBlock slots="heading, code" repeat="2" />
+
+##### Syntax
+
+```swift
+public init(path: String)
+```
+
+##### Example
+
+```swift
+// Creates a surface instance representing a banner within homeView view in my mobile application.
+let surface = Surface(path: "homeView#banner")
+```
 
 ## Android Interface - Surface
 
 `Surface` class is used to create surface objects for requesting propositions in personalization query requests.
 
-## Public functions
+### Public functions
 
-### Parameterized Constructor
+#### Parameterized Constructor
 
 Creates a new surface by appending the given surface `path` to the mobile app surface prefix.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+* _path_ is a string containing the surface path.
 
-Android
+##### Android Java
 
-<Tabs query="platform=android&function=constructor-parameterized"/>
+<CodeBlock slots="heading, code" repeat="2" />
 
-### Default Constructor
+##### Syntax
+
+```java
+public Surface(final String path)
+```
+
+##### Example
+
+```java
+// Creates a surface instance representing a banner view within homeActivity in my mobile application.
+final Surface surface = new Surface("homeActivity#banner")
+```
+
+##### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+##### Example
+
+```kotlin
+// Creates a surface instance representing a banner view within homeActivity in my mobile application.
+val surface = Surface("homeActivity#banner")
+```
+
+#### Default Constructor
 
 Creates a new base surface by appending application package name to the mobile app surface prefix `mobileapp://`.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+##### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&function=constructor-default"/>
+##### Syntax
 
-### getUri
+```java
+public Surface()
+```
+
+##### Example
+
+```java
+// Creates a new base surface by appending application package name to the mobile app surface prefix mobileapp://
+final Surface surface = new Surface()
+```
+
+##### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+##### Example
+
+```kotlin
+// Creates a new base surface by appending application package name to the mobile app surface prefix mobileapp://
+val surface = Surface()
+```
+
+#### getUri
 
 Returns this surface's URI as a string.
 
-<TabsBlock orientation="horizontal" slots="heading, content" repeat="1"/>
+##### Android Java
 
-Android
+<CodeBlock slots="heading, code" repeat="2" />
 
-<Tabs query="platform=android&function=get-uri"/>
+##### Syntax
+
+```java
+public String getUri()
+```
+
+##### Example
+
+```java
+final Surface surface = new Surface("homeActivity#banner")
+final String uri = surface.getUri()
+```
+
+##### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+##### Example
+
+```kotlin
+val surface = Surface("homeActivity#banner")
+val uri = surface.uri
+```

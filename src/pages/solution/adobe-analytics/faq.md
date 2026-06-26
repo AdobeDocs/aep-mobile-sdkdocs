@@ -27,7 +27,7 @@ If you see SDK identifiers unexpectedly change, try the following fixes to addre
 The metric `Crashes` is computed based on the Lifecycle start and pause API calls implemented in your mobile application. How can you verify if the implementation is correct:
 
 * Ensure that the Lifecycle extension is registered.
-* Verify that both MobileCore APIs `lifecycleStart` and `lifecyclePause` are implemented in the application based on the recommended settings for each platform. See the [Lifecycle guide for adding appropriate start/pause calls](/src/pages/home/base/mobile-core/lifecycle/index.md#add-lifecycle-start-and-pause-calls).
+* Verify that both MobileCore APIs `lifecycleStart` and `lifecyclePause` are implemented in the application based on the recommended settings for each platform. See the [Lifecycle guide for adding appropriate start/pause calls](../../home/base/mobile-core/lifecycle/index.md#add-lifecycle-start-and-pause-calls).
 * For more details, see also [Tracking app crashes in iOS](../../home/base/mobile-core/lifecycle/ios.md#tracking-app-crashes-in-ios) and [Android](../../home/base/mobile-core/lifecycle/android.md#tracking-app-crashes-in-android).
 
 ## How are mobile visits different from launches?
@@ -38,7 +38,7 @@ A visit is a server-side calculation by Adobe Analytics and is based on the firs
 
 ## Can I send my analytics data to multiple report suites?
 
-Yes. To capture data in multiple report suites, please read the [report suites guide](./index.md#report-suites).
+Yes. To capture data in multiple report suites, please read the [report suites guide](index.md#report-suites).
 
 ## I don't see data in my Adobe Analytics report suite - what can I do?
 
@@ -46,7 +46,7 @@ If you have followed the documentation and are unable to see reporting data in y
 
 ### Verify that the Analytics extension is registered
 
-The [Analytics extension](./index.md) and its dependent [Identity extension](../../home/base/mobile-core/identity/index.md) should be registered and configured correctly for the SDK to start processing trackAction/trackState requests.
+The [Analytics extension](index.md) and its dependent [Identity extension](../../home/base/mobile-core/identity/index.md) should be registered and configured correctly for the SDK to start processing trackAction/trackState requests.
 
 ### Verify that network requests are sent to Adobe Analytics
 
@@ -71,4 +71,4 @@ If you are unable to resolve your concerns through resources provided here, plea
 
 ## How do I send data to Adobe Analytics in React Native and Flutter?
 
-In the latest SDK version (AEP-prefixed) for React Native and Flutter, you can send data to Analytics via the Edge Network using the Edge Network extension and `sendEvent` API. If you want a drop-in migration solution for an existing `trackAction` / `trackState` implementation, you can do this with the help of the Edge Bridge extension. You can learn more about these options in the [migration guide](./migrate-to-edge-network.md).
+In the latest SDK version (AEP-prefixed) for React Native and Flutter, you can send data to Analytics via the Edge Network using the Edge Network extension and `sendEvent` API. If you want a drop-in migration solution for an existing `trackAction` / `trackState` implementation, you can do this with the help of the Edge Bridge extension. You can learn more about these options in the [migration guide](migrate-to-edge-network.md).

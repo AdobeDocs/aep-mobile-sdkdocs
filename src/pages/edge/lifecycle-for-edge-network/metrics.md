@@ -9,7 +9,7 @@ keywords:
 
 # Lifecycle for Edge Network data
 
-When used with the [Edge Network extension](../edge-network/index.md), the following data is collected and sent to Platform on every application launch. An additional [rule in the mobile property](/src/pages/edge/lifecycle-for-edge-network/index.md#configure-a-rule-to-forward-lifecycle-data-to-platform) is required to send Lifecycle data to the Edge Network extension.
+When used with the [Edge Network extension](../edge-network/index.md), the following data is collected and sent to Platform on every application launch. An additional [rule in the mobile property](index.md#configure-a-rule-to-forward-lifecycle-data-to-platform) is required to send Lifecycle data to the Edge Network extension.
 
 When the Analytics service is enabled in the datastream configuration, the XDM Lifecycle data is automatically mapped to Analytics. See the [XDM object variable mapping to Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/xdm-var-mapping) documentation for more information.
 
@@ -35,7 +35,7 @@ The following data is collected on each [Lifecycle Application Foreground](../..
 
 <InlineAlert variant="info" slots="text1, text2, text3, text4"/>
 
-For the [Edge Network extension](../edge-network/index.md), the `xdm:isUpgrade` property, which identifies app upgrades, is collected within the [Lifecycle extension](../../home/base/mobile-core/lifecycle/) by comparing version information at each app launch. Starting with Lifecycle extension for Android version 3.0.1 and Lifecycle extension for iOS version 5.1.0, there is an enhancement to the method of calculating this property.
+For the [Edge Network extension](../edge-network/index.md), the `xdm:isUpgrade` property, which identifies app upgrades, is collected within the [Lifecycle extension](../../home/base/mobile-core/lifecycle/index.md) by comparing version information at each app launch. Starting with Lifecycle extension for Android version 3.0.1 and Lifecycle extension for iOS version 5.1.0, there is an enhancement to the method of calculating this property.
 
 **xdm:isUpgrade (Previous Method)**
 In Lifecycle extension for Android version (2.0.0 - 3.0.0) and Lifecycle extension for iOS version (4.0.0 - 5.0.0), the app upgrade event is detected by comparing the `build number`s on iOS and the `version name`s on Android.

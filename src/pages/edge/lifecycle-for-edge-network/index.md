@@ -13,11 +13,11 @@ The Adobe Experience Platform Mobile SDK Lifecycle extension enables application
 
 ## Migrating from Analytics to Lifecycle for Edge Network
 
-If you are an existing Mobile Analytics customer and are migrating to the Edge Network or would like more information on how Lifecycle for Edge Network works, please read the [Lifecycle for Edge Network migration reference](./migration-reference.md). Here you will find important information about the differences of how Lifecycle works when using Edge Network versus Analytics.
+If you are an existing Mobile Analytics customer and are migrating to the Edge Network or would like more information on how Lifecycle for Edge Network works, please read the [Lifecycle for Edge Network migration reference](migration-reference.md). Here you will find important information about the differences of how Lifecycle works when using Edge Network versus Analytics.
 
 <InlineAlert variant="warning" slots="text"/>
 
-After migrating to Lifecycle for Edge Network from Analytics, the number of events (hits) sent to Adobe Experience Platform may increase and could impact billable events. It is important to understand the changes to Lifecycle for Edge Network by reading the [migration reference](./migration-reference.md).
+After migrating to Lifecycle for Edge Network from Analytics, the number of events (hits) sent to Adobe Experience Platform may increase and could impact billable events. It is important to understand the changes to Lifecycle for Edge Network by reading the [migration reference](migration-reference.md).
 
 ## Configure and install Lifecycle for Edge Network
 
@@ -107,7 +107,7 @@ After you complete your configuration, verify that your rule looks like the foll
 
 Installing Lifecycle for Edge Network is the same as installing Lifecycle for Analytics as there is only a single mobile SDK Lifecycle extension. The Lifecycle APIs for `lifecycleStart` and `lifecyclePause` are the same for both Lifecycle workflows. If your application already includes the Lifecycle extension then you are already setup for Lifecycle for Edge Network.
 
-For implementation details, please reference the [implementation guide for Lifecycle](/src/pages/home/base/mobile-core/lifecycle/index.md).
+For implementation details, please reference the [implementation guide for Lifecycle](../../home/base/mobile-core/lifecycle/index.md).
 
 ### Add Edge Network extension to your app
 

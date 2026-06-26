@@ -8,6 +8,36 @@ keywords:
 
 # Release notes
 
+## June 22, 2026
+
+### Android Core 3.7.1
+
+* Added support for In-App Message on plain android.app.Activity hosts, which fixes freeze and concurrent-presentable crash in In-App message on Activity.
+
+**Full Changelog**: https://github.com/adobe/aepsdk-core-android/compare/v3.7.0-core...v3.7.1-core
+
+## June 5, 2026
+
+### Flutter Core 5.1.0
+
+* Added MobileCore.setPushIdentifier API.
+
+### iOS Core 5.9.0
+
+* Added completion callback invocation for MobileCore.initialize() calls made while initialization is already in progress.
+* Added support to load bundled rules regardless of whether rules.url is set in configuration.
+
+
+**Full Changelog**: https://github.com/adobe/aepsdk-core-ios/compare/5.8.0...5.9.0
+
+## June 3, 2026
+
+### Android Core 3.7.0
+
+* Added completion callback invocation for MobileCore.initialize() calls made while initialization is already in progress.
+
+**Full Changelog**: https://github.com/adobe/aepsdk-core-android/compare/v3.6.0-core...v3.7.0-core
+
 ## February 19, 2026
 
 ### Android Core 3.6.0
@@ -123,7 +153,7 @@ keywords:
 
 ### iOS Core 5.4.0
 
-* Added new [`MobileCore.initialize`](../mobile-core/api-reference.md#initialize) APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
+* Added new [`MobileCore.initialize`](api-reference.md#initialize) APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
 * Fixed issue where in-app message scrolling was disabled when gestures were nil or empty.
 * Allow disabling callback timeout when using `MobileCore.dispatch` API.
 
@@ -143,7 +173,7 @@ keywords:
 
 ### Android Core 3.3.0
 
-* Added new [`MobileCore.initialize`](../mobile-core/api-reference.md#initialize) APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
+* Added new [`MobileCore.initialize`](api-reference.md#initialize) APIs to simplify AEP SDK initialization by enabling automatic extension registration and lifecycle tracking.
 * Fixed an issue where certain HTTP request timeouts were incorrectly configured.
 
 ## January 16, 2025
@@ -332,7 +362,7 @@ To learn how Apple's privacy related announcements made in WWDC of 2023 affect t
 
 ### Android Signal 3.0.0
 
-Major version update for [Signal](./signal/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+Major version update for [Signal](signal/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
 * The SDK is now compatible with Kotlin 1.8 and higher.
@@ -341,14 +371,14 @@ Major version update for [Signal](./signal/index.md) for Adobe Experience Platfo
 
 ### Android Lifecycle 3.0.0
 
-Major version update for [Lifecycle](./lifecycle/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+Major version update for [Lifecycle](lifecycle/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
 * Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
 
 ### Android Identity 3.0.0
 
-Major version update for [Identity](./identity/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
+Major version update for [Identity](identity/index.md) for Adobe Experience Platform Mobile SDKs on Android compatible with Mobile Core 3.0.0. The current release includes the following changes:
 
 * Updated the minimum supported Android API level to 21.
 * Removed deprecated `registerExtension` API. Use the MobileCore.registerExtensions() API for registering extensions and initializing the SDK instead.
