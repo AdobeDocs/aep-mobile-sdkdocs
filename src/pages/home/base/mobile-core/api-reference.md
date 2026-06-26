@@ -1572,7 +1572,7 @@ It is the responsibility of the app to provide valid and up-to-date profile attr
 
 <InlineAlert variant="info" slots="text"/>
 
-Requires the [Identity for Edge Network](../../../edge/identity-for-edge-network/index.md) extension to be registered.
+This API is available starting from **Mobile Core** version **5.10.0** on iOS. Requires the [Identity for Edge Network](../../../edge/identity-for-edge-network/index.md) extension to be registered (**AEPEdgeIdentity** version **5.x.x** or later).
 
 ### iOS Swift
 
