@@ -7,6 +7,35 @@ Keywords:
 
 # Release notes
 
+## June 26, 2026
+
+### Android Brand Concierge 3.7.2
+
+* Improved chat rendering performance by optimizing Compose recompositions.
+* Optimized markdown rendering by memoizing rendered content and correcting cache behavior to eliminate unnecessary re-rendering.
+* Updated error handling to display user-friendly fallback messages instead of exposing raw exception details.
+
+**Full Changelog**: https://github.com/adobe/aepsdk-concierge-android/compare/v3.7.1...v3.7.2
+
+## June 25, 2026
+
+### iOS Brand Concierge 5.7.1
+
+## Release Notes
+### Enhancements
+* Improved performance of markdown renderer
+* Improved performance during SSE chunk handling
+
+**Full Changelog**: https://github.com/adobe/aepsdk-concierge-ios/compare/5.7.0...5.7.1
+
+### Android Optimize 3.7.0
+
+* Updated personalization requests eventtype from personalization.request to decisioning.propositionFetch.
+
+### iOS Optimize 5.7.0
+
+* Updated personalization requests eventtype from personalization.request to decisioning.propositionFetch.
+
 ## June 22, 2026
 
 ### Android Core 3.7.1
