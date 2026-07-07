@@ -117,6 +117,60 @@ public class YourAppFirebaseMessagingService extends FirebaseMessagingService {
 }
 ```
 
+## Tracking push notification received
+
+After your `FirebaseMessagingService` receives a push notification from Adobe Journey Optimizer, call the `trackPushReceived` API to send a `pushTracking.receive` Experience Event to Adobe Experience Platform. This event records that the push was delivered to the device — independent of whether the user later opens or interacts with the notification.
+
+`trackPushReceived` enables AJO to measure the full delivery funnel (sent → received → opened) and surfaces the cohort of pushes that are delivered but never engaged with, which is invisible to `applicationOpened` and `customAction` tracking alone.
+
+<InlineAlert variant="info" slots="text"/>
+
+The Messaging extension must be initialized and registered before calling `trackPushReceived`. If you initialize the SDK in `Application.onCreate`, this is already handled. If your application initializes the SDK later (for example, in `MainActivity.onCreate`) and a push arrives while the app is killed, the receive event may be dispatched into the SDK's pre-init event queue and lost. Initialize the SDK in `Application.onCreate` to guarantee receive tracking on cold-start pushes.
+
+```java
+public static void trackPushReceived(
+    @NonNull final RemoteMessage remoteMessage); // the Firebase remote message received in onMessageReceived
+```
+
+The SDK maintains a bounded in-memory deduplication cache keyed on `messageId`, so it is safe to invoke `trackPushReceived` more than once for the same `RemoteMessage` within a process lifetime — only the first call dispatches an event.
+
+**Sample code**
+
+Add the `trackPushReceived` call in your `FirebaseMessagingService` after you have built and displayed the notification:
+
+```java
+public class YourAppFirebaseMessagingService extends FirebaseMessagingService {
+
+    @Override
+    public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {
+        super.onMessageReceived(remoteMessage);
+
+        // Build and display the notification (see "Building and displaying notification" above).
+        // ...
+
+        // Record that the push was delivered to the device.
+        Messaging.trackPushReceived(remoteMessage);
+    }
+}
+```
+
+In Kotlin:
+
+```kotlin
+class YourAppFirebaseMessagingService : FirebaseMessagingService() {
+
+    override fun onMessageReceived(remoteMessage: RemoteMessage) {
+        super.onMessageReceived(remoteMessage)
+
+        // Build and display the notification (see "Building and displaying notification" above).
+        // ...
+
+        // Record that the push was delivered to the device.
+        Messaging.trackPushReceived(remoteMessage)
+    }
+}
+```
+
 ## Tracking push notification interactions
 
 After the application is opened by the user by clicking on the push notification, use the `handleNotificationResponse` API to send the push notification interactions feedback to Platform.

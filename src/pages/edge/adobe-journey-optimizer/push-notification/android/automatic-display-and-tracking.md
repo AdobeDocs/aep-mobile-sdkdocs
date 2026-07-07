@@ -89,6 +89,16 @@ public class YourAppFirebaseMessagingService extends FirebaseMessagingService {
 }
 ```
 
+## Push notification received tracking
+
+When the Messaging extension handles the push notification (either via the registered `MessagingService` or via `MessagingService.handleRemoteMessage`), it automatically dispatches a `pushTracking.receive` Experience Event to Adobe Experience Platform, recording that the push was delivered to the device. No additional API call is required.
+
+This event lands in the same dataset as `applicationOpened` and `customAction` events, enabling AJO to measure the full delivery funnel (sent → received → opened) and surface pushes that are delivered but never engaged with.
+
+<InlineAlert variant="info" slots="text"/>
+
+If you build and display the notification manually (without delegating to `MessagingService.handleRemoteMessage`), call `Messaging.trackPushReceived(remoteMessage)` explicitly. See [Manual display and tracking](./manual-display-and-tracking.md#tracking-push-notification-received).
+
 ## Notification channel
 
 Notification channels were introduced in Android Oreo (API level 26). They allow you to group notifications and allows users to customize the notification preferences for each channel.
