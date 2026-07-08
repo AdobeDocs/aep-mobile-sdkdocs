@@ -8,6 +8,17 @@ keywords:
 
 # Release notes
 
+## July 7, 2026
+
+### iOS Core 5.10.0
+
+* Added the `MobileCore.updateProfileAttributes(_:)` API for syncing profile attributes 
+*  Profile attribute updates (`MobileCore.updateProfileAttributes(_:)`) require AEPEdgeIdentity **5.1.0** or later 
+
+### Android Core 3.8.0
+
+* Added Update Profile Attributes API for syncing user timeZone in profile attributes.
+
 ## June 22, 2026
 
 ### Android Core 3.7.1
