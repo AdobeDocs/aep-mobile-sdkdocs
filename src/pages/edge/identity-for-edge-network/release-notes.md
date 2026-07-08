@@ -9,6 +9,19 @@ keywords:
 
 # Release notes
 
+## July 8, 2026
+
+### iOS EdgeIdentity 5.1.0
+
+* Added support for processing `updateProfileAttributes` events dispatched by AEPCore, including `timeZone` profile attribute sync to Edge.
+*  **Dependency:** AEPCore 5.10.0 or later  is required for profile attribute updates.
+
+## July 7, 2026
+
+### Android EdgeIdentity 3.1.0
+
+* Added profile attributes update functionality for syncing user timeZone 
+
 ## March 28, 2025
 
 ### React Native EdgeIdentity 7.0.0

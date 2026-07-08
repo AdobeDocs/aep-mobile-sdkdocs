@@ -8,6 +8,16 @@ keywords:
 
 # Release notes
 
+## June 25, 2026
+
+### Android Optimize 3.7.0
+
+* Updated personalization requests eventtype from personalization.request to decisioning.propositionFetch.
+
+### iOS Optimize 5.7.0
+
+* Updated personalization requests eventtype from personalization.request to decisioning.propositionFetch.
+
 ## January 7, 2026
 
 ### React Native Optimize 7.1.1
