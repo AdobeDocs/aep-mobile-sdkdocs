@@ -8,6 +8,27 @@ keywords:
 
 # Release notes
 
+## July 7, 2026
+
+### iOS Core 5.10.0
+
+## What's Changed
+* feat: add updateProfileAttributes API for timezone sync by @namArora3112 in https://github.com/adobe/aepsdk-core-ios/pull/1204
+* Dev v5.10.0 by @namArora3112 in https://github.com/adobe/aepsdk-core-ios/pull/1212
+* Staging by @namArora3112 in https://github.com/adobe/aepsdk-core-ios/pull/1213
+* Updating version to 5.10.0 by @github-actions[bot] in https://github.com/adobe/aepsdk-core-ios/pull/1214
+* Dev v5.10.0 -> Staging by @akhiljain1907 in https://github.com/adobe/aepsdk-core-ios/pull/1215
+* Staging -> Main by @akhiljain1907 in https://github.com/adobe/aepsdk-core-ios/pull/1216
+
+## New Contributors
+* @namArora3112 made their first contribution in https://github.com/adobe/aepsdk-core-ios/pull/1204
+
+**Full Changelog**: https://github.com/adobe/aepsdk-core-ios/compare/5.9.0...5.10.0
+
+### Android Core 3.8.0
+
+* Added Update Profile Attributes API for syncing user timeZone in profile attributes.
+
 ## June 22, 2026
 
 ### Android Core 3.7.1

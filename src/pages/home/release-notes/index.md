@@ -7,6 +7,96 @@ Keywords:
 
 # Release notes
 
+## July 7, 2026
+
+### Android BOM 3.20.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.19.0) | BOM (3.20.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:core** | **3.7.0** | **3.8.0**|
+| **com.adobe.marketing.mobile:edgeidentity** | **3.0.1** | **3.1.0**|
+| **com.adobe.marketing.mobile:optimize** | **3.6.2** | **3.7.0**|
+| com.adobe.marketing.mobile:analytics | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:assurance | 3.0.7 | 3.0.7 |
+| com.adobe.marketing.mobile:audience | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaign | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.4 | 3.1.4 |
+| com.adobe.marketing.mobile:edge | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:identity | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:media | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:messaging | 3.10.0 | 3.10.0 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:places | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android EdgeIdentity 3.1.0
+
+* Added profile attributes update functionality for syncing user timeZone 
+
+### iOS Core 5.10.0
+
+## What's Changed
+* feat: add updateProfileAttributes API for timezone sync by @namArora3112 in https://github.com/adobe/aepsdk-core-ios/pull/1204
+* Dev v5.10.0 by @namArora3112 in https://github.com/adobe/aepsdk-core-ios/pull/1212
+* Staging by @namArora3112 in https://github.com/adobe/aepsdk-core-ios/pull/1213
+* Updating version to 5.10.0 by @github-actions[bot] in https://github.com/adobe/aepsdk-core-ios/pull/1214
+* Dev v5.10.0 -> Staging by @akhiljain1907 in https://github.com/adobe/aepsdk-core-ios/pull/1215
+* Staging -> Main by @akhiljain1907 in https://github.com/adobe/aepsdk-core-ios/pull/1216
+
+## New Contributors
+* @namArora3112 made their first contribution in https://github.com/adobe/aepsdk-core-ios/pull/1204
+
+**Full Changelog**: https://github.com/adobe/aepsdk-core-ios/compare/5.9.0...5.10.0
+
+### Android Core 3.8.0
+
+* Added Update Profile Attributes API for syncing user timeZone in profile attributes.
+
+## June 26, 2026
+
+### Android Brand Concierge 3.7.2
+
+* Improved chat rendering performance by optimizing Compose recompositions.
+* Optimized markdown rendering by memoizing rendered content and correcting cache behavior to eliminate unnecessary re-rendering.
+* Updated error handling to display user-friendly fallback messages instead of exposing raw exception details.
+
+**Full Changelog**: https://github.com/adobe/aepsdk-concierge-android/compare/v3.7.1...v3.7.2
+
+## June 25, 2026
+
+### iOS Brand Concierge 5.7.1
+
+## Release Notes
+### Enhancements
+* Improved performance of markdown renderer
+* Improved performance during SSE chunk handling
+
+**Full Changelog**: https://github.com/adobe/aepsdk-concierge-ios/compare/5.7.0...5.7.1
+
+### Android Optimize 3.7.0
+
+* Updated personalization requests eventtype from personalization.request to decisioning.propositionFetch.
+
+### iOS Optimize 5.7.0
+
+* Updated personalization requests eventtype from personalization.request to decisioning.propositionFetch.
+
 ## June 22, 2026
 
 ### Android Core 3.7.1

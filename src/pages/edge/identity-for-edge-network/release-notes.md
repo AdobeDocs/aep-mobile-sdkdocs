@@ -9,6 +9,12 @@ keywords:
 
 # Release notes
 
+## July 7, 2026
+
+### Android EdgeIdentity 3.1.0
+
+* Added profile attributes update functionality for syncing user timeZone 
+
 ## March 28, 2025
 
 ### React Native EdgeIdentity 7.0.0
