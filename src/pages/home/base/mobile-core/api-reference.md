@@ -1568,13 +1568,36 @@ Updates profile attributes for syncing to the Adobe Experience Platform Edge Net
 
 <InlineAlert variant="info" slots="text"/>
 
-It is the responsibility of the app to provide valid and up-to-date profile attribute values. The SDK does not read these values automatically from the OS. Call this API as early as possible during app launch so that the Edge Network has accurate data before personalization or notification requests are made.
+It is the responsibility of the app to provide valid and up-to-date profile attribute values. For now, only the `timeZone` attribute is supported. The SDK does not read the timezone on its own; your app must provide it when calling this API. Call this API as early as possible during app launch so that the Edge Network has accurate data before personalization or notification requests are made.
 
 <InlineAlert variant="info" slots="text"/>
 
-This API is available starting from **Mobile Core** version **5.10.0** on iOS. Requires the [Identity for Edge Network](../../../edge/identity-for-edge-network/index.md) extension to be registered (**AEPEdgeIdentity** version **5.1.0** or later).
+This API is available starting from **Mobile Core** version **5.10.0** on iOS and version **3.8.0** on Android (BOM version **3.20.0** or later). Requires the [Identity for Edge Network](../../../edge/identity-for-edge-network/index.md) extension to be registered (**AEPEdgeIdentity** version **5.1.0** or later on iOS, version **3.1.0** or later on Android).
+
+### Android Java
+
+* _attributes_ contains the [`ProfileAttributes`](#profileattributes) to sync to the user's Adobe Experience Platform profile. It should not be null.
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```java
+public static void updateProfileAttributes(@NonNull final ProfileAttributes attributes)
+```
+
+#### Example
+
+```java
+ProfileAttributes attributes = new ProfileAttributes.Builder()
+        .setTimeZone(TimeZone.getTimeZone("America/New_York"))
+        .build();
+MobileCore.updateProfileAttributes(attributes);
+```
 
 ### iOS Swift
+
+* _attributes_ contains the [`ProfileAttributes`](#profileattributes) to sync to the user's Adobe Experience Platform profile. The `timeZone` value must be a valid IANA timezone identifier (for example, `America/New_York`).
 
 <CodeBlock slots="heading, code" repeat="2" />
 
@@ -1752,6 +1775,12 @@ The `AEPError` enum (iOS) shows the errors that can be passed to a completion ha
 * `case invalidRequest` - There was an invalid request.
 * `case invalidResponse` - There was an invalid response.
 * `case errorExtensionNotInitialized` - The extension is not initialized.
+
+### ProfileAttributes
+
+The `ProfileAttributes` class defines profile attributes to sync to the Adobe Experience Platform Edge Network using [`updateProfileAttributes`](#updateprofileattributes). It currently supports the following attribute:
+
+* `timeZone` – The device timezone as an IANA identifier string (for example, `America/New_York`).
 
 ### InitOptions
 
