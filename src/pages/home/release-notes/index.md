@@ -20,9 +20,9 @@ Keywords:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact | BOM (3.19.0) | BOM (3.20.0) |
 |-----|-----|-----|
@@ -48,13 +48,10 @@ Keywords:
 | com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
 | com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
 
-</AccordionItem>
-
-</Accordion>
-
 ### Android EdgeIdentity 3.1.0
 
 * Added profile attributes update functionality for syncing user timeZone 
+* **Dependency:** Android Core 3.8.0 or later is required for profile attribute updates.
 
 ### iOS Core 5.10.0
 
@@ -102,9 +99,9 @@ Keywords:
 
 * This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
 
-<Accordion>
+<AccordionItem slots="heading, table"/>
 
-<AccordionItem header='Expand'>
+### Expand
 
 | Extension artifact | BOM (3.18.0) | BOM (3.19.0) |
 |-----|-----|-----|
@@ -129,10 +126,6 @@ Keywords:
 | com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
 | com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
 | com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
-
-</AccordionItem>
-
-</Accordion>
 
 ## June 10, 2026
 
