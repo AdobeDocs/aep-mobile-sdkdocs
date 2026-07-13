@@ -7,6 +7,10 @@ Keywords:
 
 # Release notes
 
+## July 13, 2026
+
+Test entry to trigger the v3 lint workflow on this file (contains the existing `business.adobe.com/products/brand-concierge.html` links below) — scratch change, not a real release note.
+
 ## July 8, 2026
 
 ### iOS EdgeIdentity 5.1.0
