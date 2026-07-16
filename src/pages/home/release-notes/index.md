@@ -7,6 +7,12 @@ Keywords:
 
 # Release notes
 
+## July 16, 2026
+
+### React Native Optimize 7.2.0
+
+* Implemented support for React Native Turbo Modules.
+
 ## July 8, 2026
 
 ### iOS EdgeIdentity 5.1.0
