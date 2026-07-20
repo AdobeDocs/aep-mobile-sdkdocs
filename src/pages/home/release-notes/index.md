@@ -11,7 +11,7 @@ Keywords:
 
 ### React Native Optimize 7.2.0
 
-* Implemented support for React Native Turbo Modules.
+* Implemented support for React Native Turbo Module.
 
 ## July 8, 2026
 
