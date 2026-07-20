@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## July 16, 2026
+
+### React Native Optimize 7.2.0
+
+* Implemented support for React Native Turbo Module.
+
 ## June 25, 2026
 
 ### Android Optimize 3.7.0
