@@ -382,3 +382,272 @@ AEPSurface* surface2 = [[AEPSurface alloc] initWithPath: @"myViewAttributes"];
     }
 }];
 ```
+
+## updatePropositionsForSurfacesWithXdmAndData
+
+The `updatePropositionsForSurfaces` API dispatches an event for the Edge network extension to fetch personalization decisions from the AJO campaigns for the provided surfaces array. The returned decision propositions are cached in-memory by the Messaging extension.
+
+Custom XDM and/or free-form data can be attached to the personalization request using the `xdm` and `data` parameters respectively. Internal keys required by the SDK (for example, the personalization request `eventType`) always take precedence and cannot be overwritten by the caller.
+
+To retrieve previously cached decision propositions, use `getPropositionsForSurfaces` API.
+
+### Android Java
+
+* _surfaces_ is a list of surfaces for which propositions need updating.
+* _xdm_ is a map of custom XDM key-value pairs to be attached to the personalization request. Internal SDK keys take precedence and cannot be overwritten.
+* _data_ is a map of custom free-form data to be attached to the personalization request. Internal SDK keys take precedence and cannot be overwritten.
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Syntax
+
+```java
+public static void updatePropositionsForSurfaces(@NonNull final List<Surface> surfaces, @Nullable final Map<String, Object> xdm, @Nullable final Map<String, Object> data)
+```
+
+### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```kotlin
+val surface1 = Surface("myActivity#button")
+val surface2 = Surface("myActivityAttributes")
+val surfaces = listOf(surface1, surface2)
+
+val xdmData = mapOf("myXdmKey" to "myXdmValue")
+val data = mapOf("myKey" to "myValue")
+
+Messaging.updatePropositionsForSurfaces(surfaces, xdmData, data)
+```
+
+### Android Java
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```java
+final Surface surface1 = new Surface("myActivity#button");
+final Surface surface2 = new Surface("myActivityAttributes");
+
+final List<Surface> surfaces = new ArrayList<>();
+surfaces.add(surface1);
+surfaces.add(surface2);
+
+final Map<String, Object> xdmData = new HashMap<>();
+xdmData.put("myXdmKey", "myXdmValue");
+
+final Map<String, Object> data = new HashMap<>();
+data.put("myKey", "myValue");
+
+Messaging.updatePropositionsForSurfaces(surfaces, xdmData, data);
+```
+
+### iOS Swift
+
+* _surfaces_ is an array of surfaces for which propositions need updating.
+* _xdm_ is a dictionary of custom XDM key-value pairs to be attached to the personalization request. Internal SDK keys take precedence and cannot be overwritten.
+* _data_ is a dictionary of custom free-form data to be attached to the personalization request. Internal SDK keys take precedence and cannot be overwritten.
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+static func updatePropositionsForSurfaces(_ surfaces: [Surface], withXdm xdm: [String: Any]?, andData data: [String: Any]? = nil, _ completion: ((Bool) -> Void)? = nil)
+```
+
+#### Example
+
+```swift
+let surface1 = Surface(path: "myView#button")
+let surface2 = Surface(path: "myViewAttributes")
+
+let xdmData = ["myXdmKey": "myXdmValue"]
+let data = ["myKey": "myValue"]
+
+Messaging.updatePropositionsForSurfaces([surface1, surface2], withXdm: xdmData, andData: data)
+```
+
+### iOS Objective-C
+
+* _surfaces_ is an array of surfaces for which propositions need updating.
+* _xdm_ is a dictionary of custom XDM key-value pairs to be attached to the personalization request. Internal SDK keys take precedence and cannot be overwritten.
+* _data_ is a dictionary of custom free-form data to be attached to the personalization request. Internal SDK keys take precedence and cannot be overwritten.
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objc
++ (void) updatePropositionsForSurfaces: (NSArray<AEPSurface*>* _Nonnull) surfaces
+                               withXdm: (NSDictionary* _Nullable) xdm
+                               andData: (NSDictionary* _Nullable) data
+                            completion: (void (^_Nullable)(BOOL)) completion;
+```
+
+#### Example
+
+```objc
+AEPSurface* surface1 = [[AEPSurface alloc] initWithPath: @"myView#button"];
+AEPSurface* surface2 = [[AEPSurface alloc] initWithPath: @"myViewAttributes"];
+
+NSDictionary* xdmData = @{@"myXdmKey": @"myXdmValue"};
+NSDictionary* data = @{@"myKey": @"myValue"};
+
+[AEPMobileMessaging updatePropositionsForSurfaces:@[surface1, surface2]
+                                          withXdm:xdmData
+                                          andData:data
+                                       completion:nil];
+```
+
+## updatePropositionsForSurfacesWithXdmAndDataWithCompletionHandler
+
+The `updatePropositionsForSurfaces` API dispatches an event for the Edge network extension to fetch personalization decisions from the AJO campaigns for the provided surfaces array. The returned decision propositions are cached in-memory by the Messaging extension.
+
+Custom XDM and/or free-form data can be attached to the personalization request using the `xdm` and `data` parameters respectively. Internal keys required by the SDK (for example, the personalization request `eventType`) always take precedence and cannot be overwritten by the caller.
+
+If provided, `completion` will be called on the Messaging extension's background thread once the response has been fully processed. `true` will be passed to the `completion` method if a network response was returned and successfully processed.
+
+To retrieve previously cached decision propositions, use `getPropositionsForSurfaces` API.
+
+### Android Java
+
+* _surfaces_ is a list of surfaces for which propositions need updating.
+* _xdm_ is a map of custom XDM key-value pairs to be attached to the personalization request. Internal SDK keys take precedence and cannot be overwritten.
+* _data_ is a map of custom free-form data to be attached to the personalization request. Internal SDK keys take precedence and cannot be overwritten.
+* _callback_ `call` method is invoked with `true` if a network response was returned and successfully processed, `false` otherwise.
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Syntax
+
+```java
+public static void updatePropositionsForSurfaces(@NonNull final List<Surface> surfaces, @Nullable final Map<String, Object> xdm, @Nullable final Map<String, Object> data, @Nullable final AdobeCallback<Boolean> callback)
+```
+
+### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```kotlin
+val surface1 = Surface("myActivity#button")
+val surface2 = Surface("myActivityAttributes")
+val surfaces = listOf(surface1, surface2)
+
+val xdmData = mapOf("myXdmKey" to "myXdmValue")
+val data = mapOf("myKey" to "myValue")
+
+Messaging.updatePropositionsForSurfaces(surfaces, xdmData, data) { success ->
+    if (success) {
+        // handle success scenario
+    } else {
+        // handle error scenario
+    }
+}
+```
+
+### Android Java
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```java
+final Surface surface1 = new Surface("myActivity#button");
+final Surface surface2 = new Surface("myActivityAttributes");
+
+final List<Surface> surfaces = new ArrayList<>();
+surfaces.add(surface1);
+surfaces.add(surface2);
+
+final Map<String, Object> xdmData = new HashMap<>();
+xdmData.put("myXdmKey", "myXdmValue");
+
+final Map<String, Object> data = new HashMap<>();
+data.put("myKey", "myValue");
+
+Messaging.updatePropositionsForSurfaces(surfaces, xdmData, data, success -> {
+    if (success) {
+        // handle success scenario
+    } else {
+        // handle error scenario
+    }
+});
+```
+
+### iOS Swift
+
+* _surfaces_ is an array of surfaces for which propositions need updating.
+* _xdm_ is a dictionary of custom XDM key-value pairs to be attached to the personalization request. Internal SDK keys take precedence and cannot be overwritten.
+* _data_ is a dictionary of custom free-form data to be attached to the personalization request. Internal SDK keys take precedence and cannot be overwritten.
+* _completion_ is invoked with `true` if a network response was returned and successfully processed, `false` otherwise.
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+static func updatePropositionsForSurfaces(_ surfaces: [Surface], withXdm xdm: [String: Any]?, andData data: [String: Any]? = nil, _ completion: ((Bool) -> Void)? = nil)
+```
+
+#### Example
+
+```swift
+let surface1 = Surface(path: "myView#button")
+let surface2 = Surface(path: "myViewAttributes")
+
+let xdmData = ["myXdmKey": "myXdmValue"]
+let data = ["myKey": "myValue"]
+
+Messaging.updatePropositionsForSurfaces([surface1, surface2], withXdm: xdmData, andData: data) { success in
+    if success {
+        // handle success scenario
+    } else {
+        // handle error scenario
+    }
+}
+```
+
+### iOS Objective-C
+
+* _surfaces_ is an array of surfaces for which propositions need updating.
+* _xdm_ is a dictionary of custom XDM key-value pairs to be attached to the personalization request. Internal SDK keys take precedence and cannot be overwritten.
+* _data_ is a dictionary of custom free-form data to be attached to the personalization request. Internal SDK keys take precedence and cannot be overwritten.
+* _completion_ is invoked with `true` if a network response was returned and successfully processed, `false` otherwise.
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objc
++ (void) updatePropositionsForSurfaces: (NSArray<AEPSurface*>* _Nonnull) surfaces
+                               withXdm: (NSDictionary* _Nullable) xdm
+                               andData: (NSDictionary* _Nullable) data
+                            completion: (void (^_Nullable)(BOOL)) completion;
+```
+
+#### Example
+
+```objc
+AEPSurface* surface1 = [[AEPSurface alloc] initWithPath: @"myView#button"];
+AEPSurface* surface2 = [[AEPSurface alloc] initWithPath: @"myViewAttributes"];
+
+NSDictionary* xdmData = @{@"myXdmKey": @"myXdmValue"};
+NSDictionary* data = @{@"myKey": @"myValue"};
+
+[AEPMobileMessaging updatePropositionsForSurfaces:@[surface1, surface2]
+                                          withXdm:xdmData
+                                          andData:data
+                                       completion:^(BOOL success) {
+    if (success) {
+        // handle success scenario
+    } else {
+        // handle error scenario
+    }
+}];
+```
