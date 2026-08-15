@@ -9,6 +9,13 @@ keywords:
 
 # Release notes
 
+## August 10, 2026
+
+### Android Messaging 3.11.0
+
+* Added new api for updatePropositionForSurfaces with xdm and additional data. 
+* Updated personalization.request event type to decisioning.propositionFetch 
+
 ## August 6, 2026
 
 ### iOS Messaging 5.15.0
