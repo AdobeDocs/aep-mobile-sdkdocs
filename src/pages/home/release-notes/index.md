@@ -7,6 +7,21 @@ Keywords:
 
 # Release notes
 
+## August 10, 2026
+
+### Android Messaging 3.11.0
+
+* Added new api for updatePropositionForSurfaces with xdm and additional data. 
+* Updated personalization.request event type to decisioning.propositionFetch 
+
+## August 6, 2026
+
+### iOS Messaging 5.15.0
+
+* Added a new Update Propositions API with support for both XDM and data fields.
+* Updated personalization.request event type to decisioning.propositionFetch.
+* Fixed an issue where unread background rendered as opaque black when the color was unset for actions.
+
 ## July 31, 2026
 
 ### Flutter Optimize 5.0.0
