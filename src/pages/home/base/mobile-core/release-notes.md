@@ -8,6 +8,16 @@ keywords:
 
 # Release notes
 
+## August 18, 2026
+
+### iOS Core 5.11.0
+
+## What's Changed
+* Staging -> Main (5.11.0 Release) by @namArora3112 in https://github.com/adobe/aepsdk-core-ios/pull/1220
+
+
+**Full Changelog**: https://github.com/adobe/aepsdk-core-ios/compare/5.10.0...5.11.0
+
 ## July 7, 2026
 
 ### iOS Core 5.10.0
