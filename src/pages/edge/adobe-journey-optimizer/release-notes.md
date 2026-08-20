@@ -9,6 +9,24 @@ keywords:
 
 # Release notes
 
+## August 20, 2026
+
+### iOS Messaging 5.16.0
+
+* Added offline content card availability. Content cards can now be persisted to disk and served across app launches without a network connection. Opt-in and disabled by default
+* Added a new API `clearCachedPropositions` for clearing content card cached propositions from memory and disk.
+* Added a `servedFromPersistentCache` flag in the interaction XDM, indicating whether a card was served from the offline disk cache (true) or refreshed from a live network response this session (`false`).
+* Cleared content card state and persisted content card cache on identity reset.
+* Skipped user-triggered proposition updates when the device is offline and returned `false` in the completion callback.
+
+### Android Messaging 3.12.0
+
+* Added offline content card availability. Content cards can now be persisted to disk and served across app launches without a network connection. Opt-in and disabled by default
+* Added a new API clearCachedPropositions for clearing cached propositions from memory and disk.
+* Added a servedFromPersistentCache flag in the interaction XDM, indicating whether a card was served from the offline disk cache (true) or refreshed from a live network response this session (false).
+* Cleared content card state and persisted cache on identity reset.
+* Skipped user-triggered proposition updates when the device is offline and returned false in the completion callback.
+
 ## August 10, 2026
 
 ### Android Messaging 3.11.0
