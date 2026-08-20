@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## August 18, 2026
+
+### iOS Core 5.11.0
+
+*  Added `isInternetAvailable()` to the Networking protocol; existing conformers require no changes.
+
 ## July 7, 2026
 
 ### iOS Core 5.10.0
