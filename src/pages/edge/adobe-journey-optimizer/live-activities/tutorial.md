@@ -448,6 +448,57 @@ Include `"dismissal-date"` (a Unix timestamp) to control exactly when the ended 
 }
 ```
 
+## Receiving execution metadata from the API trigger
+
+When a Live Activity is triggered through the Adobe Journey Optimizer headless API, the campaign can attach a set of custom key/value pairs called `executionMetadata` (for example an order ID, a loyalty tier, or a region code). These values are delivered to the device alongside the Live Activity push, so your app can read back the same data that was sent through the API.
+
+<InlineAlert variant="info" slots="text"/>
+
+The SDK receives `executionMetadata` in the `_xdm` object of the push payload - a sibling of `aps` - under `mixins._experience.customerJourneyManagement.messageExecution.metadata`. The values are delivered exactly as they were sent; personalization expressions are not evaluated. This data is intended for reporting and app-side correlation and does not change how the Live Activity is displayed.
+
+The example below shows an update payload that carries `executionMetadata` (`orderId`, `tier`, and `region`) next to the standard `aps` content.
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### JSON
+
+```json
+{
+  "aps": {
+    "timestamp": 1234567890,
+    "event": "update",
+    "attributes": {
+      "liveActivityData": {
+        "liveActivityID": "order-12345",
+        "origin": "remote"
+      }
+    },
+    "content-state": {
+      "driverName": "John Doe",
+      "deliveryTime": "5 minutes",
+      "orderStatus": "Out for delivery"
+    }
+  },
+  "_xdm": {
+    "mixins": {
+      "_experience": {
+        "customerJourneyManagement": {
+          "messageExecution": {
+            "messageExecutionID": "HUOC-016240333",
+            "metadata": {
+              "orderId": "A-123",
+              "tier": "gold",
+              "region": "EU"
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+
 ## Best practices
 
 * **Register early**: Call `registerLiveActivities` during app initialization, after the Messaging extension has been registered with `MobileCore`. This ensures tokens are collected as soon as possible.
