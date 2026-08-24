@@ -9,6 +9,39 @@ keywords:
 
 # Release notes
 
+## August 20, 2026
+
+### iOS Messaging 5.16.0
+
+* Added offline content card availability. Content cards can now be persisted to disk and served across app launches without a network connection. Opt-in and disabled by default
+* Added a new API `clearCachedPropositions` for clearing content card cached propositions from memory and disk.
+* Added a `servedFromPersistentCache` flag in the interaction XDM, indicating whether a card was served from the offline disk cache (true) or refreshed from a live network response this session (`false`).
+* Cleared content card state and persisted content card cache on identity reset.
+* Skipped user-triggered proposition updates when the device is offline and returned `false` in the completion callback.
+
+### Android Messaging 3.12.0
+
+* Added offline content card availability. Content cards can now be persisted to disk and served across app launches without a network connection. Opt-in and disabled by default
+* Added a new API `clearCachedPropositions` for clearing cached content card propositions from memory and disk.
+* Added a `servedFromPersistentCache` flag in the interaction XDM, indicating whether a card was served from the offline disk cache (`true`) or refreshed from a live network response this session (`false`).
+* Cleared content card state and persisted content card cache on identity reset.
+* Skipped user-triggered proposition updates when the device is offline and returned false in the completion callback.
+
+## August 10, 2026
+
+### Android Messaging 3.11.0
+
+* Added new api for updatePropositionForSurfaces with xdm and additional data. 
+* Updated personalization.request event type to decisioning.propositionFetch 
+
+## August 6, 2026
+
+### iOS Messaging 5.15.0
+
+* Added a new Update Propositions API with support for both XDM and data fields.
+* Updated personalization.request event type to decisioning.propositionFetch.
+* Fixed an issue where unread background rendered as opaque black when the color was unset for actions.
+
 ## June 10, 2026
 
 ### Android Messaging 3.10.0
