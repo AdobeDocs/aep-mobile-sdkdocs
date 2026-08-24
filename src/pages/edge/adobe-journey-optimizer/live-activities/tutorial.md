@@ -282,6 +282,7 @@ Use `"event": "update"` to update the Live Activity content. The `content-state`
   "aps": {
     "timestamp": 1234567890,
     "event": "update",
+    "attributes-type": "FoodDeliveryLiveActivityAttributes",
     "attributes": {
       "liveActivityData": {
         "liveActivityID": "order-12345",
@@ -313,6 +314,7 @@ Use `"event": "update"` to update the Live Activity content. The `content-state`
     "timestamp": 1234567890,
     "event": "update",
     "input-push-channel": "34zeQRIvEfEAAArq/RXKSw==",
+    "attributes-type": "FoodDeliveryLiveActivityAttributes",
     "attributes": {
       "liveActivityData": {
         "channelID": "34zeQRIvEfEAAArq/RXKSw==",
@@ -347,6 +349,7 @@ Use `"event": "end"` to end the Live Activity. The activity is dismissed from th
   "aps": {
     "timestamp": 1234567890,
     "event": "end",
+    "attributes-type": "FoodDeliveryLiveActivityAttributes",
     "attributes": {
       "liveActivityData": {
         "liveActivityID": "order-12345",
@@ -374,6 +377,7 @@ Use `"event": "end"` to end the Live Activity. The activity is dismissed from th
     "timestamp": 1234567890,
     "event": "end",
     "input-push-channel": "34zeQRIvEfEAAArq/RXKSw==",
+    "attributes-type": "FoodDeliveryLiveActivityAttributes",
     "attributes": {
       "liveActivityData": {
         "channelID": "34zeQRIvEfEAAArq/RXKSw==",
@@ -405,6 +409,7 @@ Include `"dismissal-date"` (a Unix timestamp) to control exactly when the ended 
     "timestamp": 1234567890,
     "event": "end",
     "dismissal-date": 1234575490,
+    "attributes-type": "FoodDeliveryLiveActivityAttributes",
     "attributes": {
       "liveActivityData": {
         "liveActivityID": "order-12345",
@@ -433,6 +438,7 @@ Include `"dismissal-date"` (a Unix timestamp) to control exactly when the ended 
     "event": "end",
     "dismissal-date": 1234575490,
     "input-push-channel": "34zeQRIvEfEAAArq/RXKSw==",
+    "attributes-type": "FoodDeliveryLiveActivityAttributes",
     "attributes": {
       "liveActivityData": {
         "channelID": "34zeQRIvEfEAAArq/RXKSw==",
