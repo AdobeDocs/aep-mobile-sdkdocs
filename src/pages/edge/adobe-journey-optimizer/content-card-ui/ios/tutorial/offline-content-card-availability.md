@@ -28,7 +28,7 @@ This feature is **opt-in** and must be enabled through the Adobe Journey Optimiz
 
 ## Pre-requisites
 
-1. [Integrate and register the AEPMessaging extension](../../../index.md#implement-extension-in-mobile-app) in your app.
+1. [Integrate and register the AEPMessaging extension](../../../index.md#add-the-adobe-journey-optimizer-extension-to-your-app) in your app.
 2. Ensure you are using **AEPMessaging** version **5.16.0** or later (which requires **AEPCore** and **AEPServices** **5.11.0** or later).
 
 ## Step 1: Enable offline availability in Tags
