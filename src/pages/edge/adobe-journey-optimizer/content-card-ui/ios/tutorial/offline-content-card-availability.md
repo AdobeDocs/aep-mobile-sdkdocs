@@ -24,12 +24,12 @@ When offline availability is enabled, Content Cards fetched from Adobe Journey O
 
 <InlineAlert variant="info" slots="text"/>
 
-This feature is **opt-in** and must be enabled through the Adobe Journey Optimizer extension configuration in Adobe Experience Platform Data Collection (Tags). It requires **AEPCore** and **AEPServices** version **5.11.0** or later.
+This feature is **opt-in** and must be enabled through the Adobe Journey Optimizer extension configuration in Adobe Experience Platform Data Collection (Tags). It requires **AEPMessaging** version **5.16.0** or later, as well as **AEPCore** and **AEPServices** version **5.11.0** or later.
 
 ## Pre-requisites
 
 1. [Integrate and register the AEPMessaging extension](../../../index.md#implement-extension-in-mobile-app) in your app.
-2. Ensure you are using **AEPCore** and **AEPServices** version **5.11.0** or later.
+2. Ensure you are using **AEPMessaging** version **5.16.0** or later (which requires **AEPCore** and **AEPServices** **5.11.0** or later).
 
 ## Step 1: Enable offline availability in Tags
 
@@ -66,7 +66,7 @@ let homePageSurface = Surface(path: "homepage")
 
 // Cards are served from the disk cache if a prior session fetched them successfully —
 // no updatePropositionsForSurfaces call is needed in the current session
-Messaging.getContentCardsUI(surface: homePageSurface) { result in
+Messaging.getContentCardsUI(for: homePageSurface) { result in
     switch result {
     case .success(let contentCards):
         // display contentCards
@@ -78,7 +78,7 @@ Messaging.getContentCardsUI(surface: homePageSurface) { result in
 
 <InlineAlert variant="warning" slots="text"/>
 
-`getContentCardsUI` only returns cards from the disk cache when **both** conditions are met: the Content Card Offline Availability setting was enabled in Tags when the cards were originally fetched, **and** a prior session had a successful `updatePropositionsForSurfaces` call for that surface. If neither condition is met, the result is empty until `updatePropositionsForSurfaces` succeeds in the current session.
+`getContentCardsUI` only returns cards from the disk cache when **all** of the following conditions are met: the Content Card Offline Availability setting was enabled in Tags when the cards were originally fetched, a prior session had a successful `updatePropositionsForSurfaces` call for that surface, **and** the setting is still enabled in the current session. If the setting is disabled after cards have been persisted, the SDK clears the disk cache and filters out any disk-origin cards — so turning the feature off removes offline availability immediately, even for previously cached content. If none of the conditions are met, the result is empty until `updatePropositionsForSurfaces` succeeds in the current session.
 
 ## Step 4: Clear the cache when needed
 

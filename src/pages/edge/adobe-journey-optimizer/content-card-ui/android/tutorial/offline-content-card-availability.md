@@ -26,12 +26,12 @@ When offline availability is enabled, Content Cards fetched from Adobe Journey O
 
 <InlineAlert variant="info" slots="text"/>
 
-This feature is **opt-in** and must be enabled through the Adobe Journey Optimizer extension configuration in Adobe Experience Platform Data Collection (Tags). It requires **AEPCore** and **AEPServices** version **5.11.0** or later.
+This feature is **opt-in** and must be enabled through the Adobe Journey Optimizer extension configuration in Adobe Experience Platform Data Collection (Tags). It requires **AEPMessaging** version **3.12.0** or later and **AEPCore** version **3.x.x** or later.
 
 ## Pre-requisites
 
 1. [Integrate and register AEPMessaging extension](https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer/#implement-extension-in-mobile-app) in your app.
-2. Ensure you are using **AEPCore** and **AEPServices** version **5.11.0** or later.
+2. Ensure you are using **AEPMessaging** version **3.12.0** or later and **AEPCore** version **3.x.x** or later.
 
 ## Step 1: Enable offline availability in Tags
 
@@ -95,7 +95,7 @@ class AepContentCardViewModel(
 
 <InlineAlert variant="warning" slots="text"/>
 
-`getContentCardUIFlow` only emits cards from the disk cache when **both** conditions are met: the Content Card Offline Availability setting was enabled in Tags when the cards were originally fetched, **and** a prior session had a successful `updatePropositionsForSurfaces` call for that surface. If neither condition is met, the flow emits an empty list until `updatePropositionsForSurfaces` succeeds in the current session.
+`getContentCardUIFlow` only emits cards from the disk cache when **all** of the following conditions are met: the Content Card Offline Availability setting was enabled in Tags when the cards were originally fetched, a prior session had a successful `updatePropositionsForSurfaces` call for that surface, **and** the setting is still enabled in the current session. If the setting is disabled after cards have been persisted, the SDK clears the disk cache and filters out any disk-origin cards — so turning the feature off removes offline availability immediately, even for previously cached content. If none of the conditions are met, the flow emits an empty list until `updatePropositionsForSurfaces` succeeds in the current session.
 
 ## Step 4: Clear the cache when needed
 
