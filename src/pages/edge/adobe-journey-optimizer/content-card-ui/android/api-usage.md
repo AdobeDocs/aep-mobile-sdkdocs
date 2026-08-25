@@ -90,18 +90,12 @@ fun clearCachedPropositions()
 
 #### Example
 
-<CodeBlock slots="heading, code" repeat="2" languages="Kotlin, Java" />
+<CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
 
 #### Kotlin
 
 ```kotlin
 Messaging.clearCachedPropositions()
-```
-
-#### Java
-
-```java
-Messaging.clearCachedPropositions();
 ```
 
 ## getContentCardUI (Deprecated)
