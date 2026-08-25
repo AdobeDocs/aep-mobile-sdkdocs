@@ -27,6 +27,16 @@ keywords:
 * Cleared content card state and persisted content card cache on identity reset.
 * Skipped user-triggered proposition updates when the device is offline and returned false in the completion callback.
 
+## August 18, 2026
+
+### Adobe Journey Optimizer Messaging extension 1.2.0
+
+Added offline availability toggle to the Adobe Journey Optimizer Messaging extension in the Tags UI for mobile Tag Properties.
+
+Users can now configure:
+
+* Content card offline available - Allows content cards to be available when the device is offline.
+
 ## August 10, 2026
 
 ### Android Messaging 3.11.0
