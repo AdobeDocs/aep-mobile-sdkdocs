@@ -7,6 +7,90 @@ Keywords:
 
 # Release notes
 
+## August 20, 2026
+
+### Android BOM 3.21.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.20.0) | BOM (3.21.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:messaging** | **3.10.0** | **3.12.0**|
+| com.adobe.marketing.mobile:analytics | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:assurance | 3.0.7 | 3.0.7 |
+| com.adobe.marketing.mobile:audience | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaign | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.4 | 3.1.4 |
+| com.adobe.marketing.mobile:core | 3.8.0 | 3.8.0 |
+| com.adobe.marketing.mobile:edge | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:edgeidentity | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:identity | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:media | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:optimize | 3.7.0 | 3.7.0 |
+| com.adobe.marketing.mobile:places | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### iOS Messaging 5.16.0
+
+* Added offline content card availability. Content cards can now be persisted to disk and served across app launches without a network connection. Opt-in and disabled by default
+* Added a new API `clearCachedPropositions` for clearing content card cached propositions from memory and disk.
+* Added a `servedFromPersistentCache` flag in the interaction XDM, indicating whether a card was served from the offline disk cache (true) or refreshed from a live network response this session (`false`).
+* Cleared content card state and persisted content card cache on identity reset.
+* Skipped user-triggered proposition updates when the device is offline and returned `false` in the completion callback.
+* **Dependency**: AEPCore 5.11.0 or later is required to support offline availability of Content Cards.
+
+### Android Messaging 3.12.0
+
+* Added offline content card availability. Content cards can now be persisted to disk and served across app launches without a network connection. Opt-in and disabled by default
+* Added a new API `clearCachedPropositions` for clearing cached content card propositions from memory and disk.
+* Added a `servedFromPersistentCache` flag in the interaction XDM, indicating whether a card was served from the offline disk cache (`true`) or refreshed from a live network response this session (`false`).
+* Cleared content card state and persisted content card cache on identity reset.
+* Skipped user-triggered proposition updates when the device is offline and returned false in the completion callback.
+
+## August 18, 2026
+
+### iOS Core 5.11.0
+
+*  Added `isInternetAvailable()` to the Networking protocol; existing conformers require no changes.
+
+### Adobe Journey Optimizer Messaging extension 1.2.0
+
+Added offline availability toggle to the Adobe Journey Optimizer Messaging extension in the Tags UI for mobile Tag Properties.
+
+Users can now configure:
+
+* Content card offline available - Allows content cards to be available when the device is offline.
+
+## August 10, 2026
+
+### Android Messaging 3.11.0
+
+* Added new api for updatePropositionForSurfaces with xdm and additional data. 
+* Updated personalization.request event type to decisioning.propositionFetch 
+
+## August 6, 2026
+
+### iOS Messaging 5.15.0
+
+* Added a new Update Propositions API with support for both XDM and data fields.
+* Updated personalization.request event type to decisioning.propositionFetch.
+* Fixed an issue where unread background rendered as opaque black when the color was unset for actions.
+
 ## July 31, 2026
 
 ### Flutter Optimize 5.0.0
@@ -156,6 +240,7 @@ Keywords:
 * Added Consent Listener to sync Push Token to Adobe Experience Platform. Handling for consent change after token sync request
 * Added Notification interaction listener to allow applications to listen to notification related events like received, clicked, dismissed.
 * Added exported=false flag to NotificationInteractionReceiver to avoid static code check warnings.
+* **Dependency**: AEPCore 3.7.0 or later is required for the self-init mechanism used in push receive tracking.
 
 ## June 5, 2026
 
