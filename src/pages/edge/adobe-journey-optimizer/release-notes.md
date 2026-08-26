@@ -18,6 +18,7 @@ keywords:
 * Added a `servedFromPersistentCache` flag in the interaction XDM, indicating whether a card was served from the offline disk cache (true) or refreshed from a live network response this session (`false`).
 * Cleared content card state and persisted content card cache on identity reset.
 * Skipped user-triggered proposition updates when the device is offline and returned `false` in the completion callback.
+* **Dependency**: AEPCore 5.11.0 or later is required to support offline availability of Content Cards.
 
 ### Android Messaging 3.12.0
 
@@ -63,6 +64,7 @@ Users can now configure:
 * Added Consent Listener to sync Push Token to Adobe Experience Platform. Handling for consent change after token sync request
 * Added Notification interaction listener to allow applications to listen to notification related events like received, clicked, dismissed.
 * Added exported=false flag to NotificationInteractionReceiver to avoid static code check warnings.
+* **Dependency**: AEPCore 3.7.0 or later is required for the self-init mechanism used in push receive tracking.
 
 ## June 5, 2026
 
