@@ -335,6 +335,7 @@
                 - [Overview](/home/base/mobile-core/signal/index.md)
                 - [API reference](/home/base/mobile-core/signal/api-reference.md)
                 - [Signal and Rules Engine integration](/home/base/mobile-core/signal/rules-engine-integration.md)
+            - [Plugins](/home/base/mobile-core/plugins/index.md)
             - [API reference](/home/base/mobile-core/api-reference.md)
             - [Release notes](/home/base/mobile-core/release-notes.md)
         - [Adobe Experience Platform Assurance](/home/base/assurance/index.md)

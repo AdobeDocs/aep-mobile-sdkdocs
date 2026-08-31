@@ -8,6 +8,26 @@ keywords:
 
 # Mobile Core API reference
 
+## addPlugins
+
+Registers one or more [plugins](plugins.md) so that host extensions can resolve and use them at runtime. Plugins are optional add-on capabilities (such as Live Updates and push templates). For more information, see [Mobile Core plugins](plugins.md).
+
+<InlineAlert variant="info" slots="text"/>
+
+The plugin APIs (`addPlugins` and `getPlugin`) are available for **Android only**.
+
+### Android
+
+```java
+public static void addPlugins(@NonNull final IAepPlugin... plugins)
+```
+
+Register the plugin(s) you want once at startup, usually in `Application.onCreate`:
+
+```kotlin
+MobileCore.addPlugins(LiveUpdatePlugin(MyLiveUpdateStyleProvider()))
+```
+
 ## clearUpdatedConfiguration
 
 Programmatic updates made to the configuration can be cleared via the `clearUpdatedConfiguration` API. For more information about configuration in Mobile Core, please refer to the [Configuration API reference](configuration/api-reference.md#clearupdatedconfiguration).
@@ -366,6 +386,25 @@ var logLevel = Log.logFilter
 
 ```objectivec
 AEPLogLevel logLevel = [AEPLog logFilter];
+```
+
+## getPlugin
+
+Resolves a registered [plugin](plugins.md) by its contract type, or returns `null` when no matching plugin is registered. For more information, see [Mobile Core plugins](plugins.md).
+
+<InlineAlert variant="info" slots="text"/>
+
+The plugin APIs (`addPlugins` and `getPlugin`) are available for **Android only**.
+
+### Android
+
+```java
+@Nullable
+public static <T extends IAepPlugin> T getPlugin(@NonNull final Class<T> type)
+```
+
+```kotlin
+val plugin: ILiveupdatePlugin? = MobileCore.getPlugin(ILiveupdatePlugin::class.java)
 ```
 
 ## getPrivacyStatus
