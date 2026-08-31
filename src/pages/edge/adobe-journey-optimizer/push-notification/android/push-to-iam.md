@@ -19,7 +19,8 @@ This document describes the steps that allow a designated in-app message to be s
 
 ## Pre-requisites
 
-[Integrate and register Messaging extension](../../../index.md#implement-extension-in-mobile-app) in your app.
+- [Integrate and register Messaging extension](../../../index.md#implement-extension-in-mobile-app) in your app.
+- Version **3.3.0** or newer of Messaging extension for Android.
 
 ## Add a trigger in the in-app message campaign
 
