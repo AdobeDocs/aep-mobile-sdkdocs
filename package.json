@@ -34,5 +34,25 @@
     "link:checkAllLinks": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils runLint --internal-links-only --external-links-only -v",
     "redirectCheck:stage": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils redirectChecker stage --verbose",
     "redirectCheck:prod": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils redirectChecker prod --verbose"
+  },
+  "lint": {
+    "skipUrlPatterns": [
+      "https://business.adobe.com/",
+      "https://experience.adobe.com/",
+      "https://experiencecloud.adobe.com/",
+      "https://experienceleague.adobe.com/",
+      "https://developer.adobe.com/",
+      "https://blog.developer.adobe.com/",
+      "https://developer.android.com/",
+      "https://source.android.com/",
+      "https://firebase.google.com/",
+      "https://developers.google.com/",
+      "https://developer.apple.com/",
+      "https://www.swift.org/",
+      "https://mvnrepository.com/",
+      "https://www.npmjs.com/",
+      "https://badge.fury.io/",
+      "https://www.adobe.com/"
+    ]
   }
 }
