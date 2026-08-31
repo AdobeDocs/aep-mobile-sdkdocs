@@ -57,6 +57,11 @@ This document outlines the various push notification payload keys used by the Ad
 | `adb_act.label` | String | The label for custom action button. |
 | `adb_act.uri` | String | The URI for custom action button. |
 | `adb_act.type` | enum | The action type for custom action button. It can be one of the following values: `DEEPLINK`, `WEBURL`, `OPENAPP`. |
+| `adb_liveupdate_data` | String (JSON) | Present when the push is a [Live Update](../live-activities/android/index.md). Its value is a JSON envelope carrying the Live Update fields; see the [Live Updates payload](../live-activities/android/api-reference.md#liveupdatepayload) for the envelope keys. |
+
+<InlineAlert variant="info" slots="text"/>
+
+A Live Update push is a data message identified by the `adb_liveupdate_data` key. Its inner fields (`notification_id`, `event_type`, `title`, and so on) are documented with the [Live Updates payload](../live-activities/android/api-reference.md#liveupdatepayload), not here.
 
 ## iOS
 
