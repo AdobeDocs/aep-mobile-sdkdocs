@@ -1,48 +1,32 @@
 ---
 title: Batching Experience Events
-description: Learn how to coalesce multiple Experience Events into a single Edge Network request using the Edge event batching configuration.
+description: This guide provides instructions on combining multiple Experience Events into a single Edge Network request using event batching.
 keywords:
 - Edge Network
+- Event batching
 - Batching
-- edge.batching
-- maxBatchSize
 - Guide
-- Tutorial
 ---
 
 # Batching Experience Events
 
-By default, the Adobe Experience Platform Edge Network extension sends each Experience Event to the Edge Network in its own network request. **Event batching** lets you coalesce multiple queued Experience Events into a single Edge Network request, which can reduce the number of network calls, save battery, and lower data usage — especially for apps that emit many events in quick succession.
-
-Batching is **opt-in** and **allow-list based**: it is disabled by default, and once enabled only the event types you explicitly allow are combined. Enabling batching does not change how you call `sendEvent`, and it does not change how per-event responses, completion handlers, or errors are delivered — each event in a batch is still tracked and answered individually.
+By default, the **Adobe Experience Platform Edge Network** extension sends each Experience event to the Edge Network in its own request. Event batching combines multiple queued Experience events into a single Edge Network request, which reduces the number of network calls made by your app and can lower the overall response time when several events are queued. Batching is disabled by default and applies only to the event types you explicitly allow. This tutorial explains how to enable batching, select which events are combined, and verify the result.
 
 ## Prerequisites
 
 Before continuing with this tutorial, please ensure that the Edge extension version meets the minimum requirements:
 
-* [Edge](../index.md) extension version >= **TBD** (Android) and >= **TBD** (iOS).
-
-<InlineAlert variant="info" slots="text"/>
-
-Batching only applies to Experience Events sent through the `sendEvent` API. Consent and identity-reset requests are never batched and are always sent individually.
+* [Edge](../../index.md) extension version >= **TBD** (Android) and >= **TBD** (iOS).
 
 ## How batching works
 
-When batching is enabled, the Edge extension processes a **window** of queued events per cycle instead of one:
+When batching is enabled, the Edge Network extension combines the Experience events at the front of its send queue into a single request, up to a configurable maximum. Events are combined only when they are consecutive in the queue, share the same datastream configuration, and have an `xdm.eventType` that is present on the allow-list. Consent and identity reset requests are never batched.
 
-* **Window size** is `min(queued events, maxBatchSize)`.
-* Only **consecutive events at the front of the queue** that all of the following are true are combined into one request:
-  1. they are Experience Events (sent with `sendEvent`),
-  2. their `xdm.eventType` is on the allow-list (see [Select which events to batch](#select-which-events-to-batch)), and
-  3. they share the same datastream configuration (datastream ID, any per-event datastream overrides) and request path.
-* The run stops at the first event that fails any of these checks. That event becomes the head of a later cycle.
-* The batching "window" is the network round-trip itself — there is no debounce timer. While one request is in flight, newly queued events accumulate and are combined on the next cycle.
-
-Each event in a batch keeps its own identity in the response: response handles and errors are routed back to the originating event, and any completion handler you registered for that event is invoked exactly once.
+Batching does not change how you send events with the `sendEvent` API, and it does not change how responses are handled. Each event in a batch is tracked individually, so response handles, errors, and completion handlers are still delivered per event.
 
 ## Configure batching
 
-Batching is configured through a single `edge.batching` object. The same format is used whether the object is delivered through your mobile property configuration (remote) or through a configuration file bundled in your app.
+Batching is configured through a single `edge.batching` object. The same format applies whether you provide the object at runtime using the `updateConfiguration` API or bundle it with your app.
 
 ```json
 {
@@ -60,23 +44,33 @@ Batching is configured through a single `edge.batching` object. The same format 
 
 | Key | Type | Description |
 | --- | --- | --- |
-| `enabled` | Boolean | Master switch. When `false` (default), every event is sent individually. |
-| `maxBatchSize` | Number | Maximum number of events per request. Defaults to `10`, must be positive, and is clamped to an upper bound of `20`. |
-| `wildcards` | Array | Allow-list entries whose `xdmEventType` is treated as a pattern (see [Wildcards](#wildcards)). |
-| _any other key_ | Array | An **extension group** — an array of allow-list entries. The key name (for example `commerce`) is only for readability; all groups are flattened into a single allow-list. |
-| `_meta` | Object | Reserved for metadata. Ignored by the SDK. |
+| `enabled` | Boolean | Enables or disables batching. When `false` (the default), each event is sent in its own request. |
+| `maxBatchSize` | Number | The maximum number of events combined into one request. Defaults to `10`, must be a positive value, and is capped at `20`. |
+| `wildcards` | Array | Allow-list entries whose `xdmEventType` is matched as a pattern. See [Select which events to batch](#select-which-events-to-batch). |
+| _any other key_ | Array | An extension group — an array of allow-list entries. The key (for example, `commerce`) is used only for readability; all groups are combined into a single allow-list. |
+| `_meta` | Object | Reserved for metadata and ignored by the Mobile SDK. |
 
-Each allow-list entry is an object with an `xdmEventType` (String) and an `enabled` (Boolean) flag. An entry with `"enabled": false` is ignored — use it to keep an example or a temporarily disabled type in the file without batching it.
+Each allow-list entry is an object with an `xdmEventType` value and an `enabled` flag. An event is batched only when its `xdm.eventType` matches an entry whose `enabled` value is `true`; an event type that is not listed, or is listed only with `enabled` set to `false`, is always sent in its own request.
 
-<InlineAlert variant="warning" slots="text"/>
+### Override the configuration at runtime
 
-Batching is strictly an allow-list. An event is batched only when its `xdm.eventType` matches an **enabled** entry (exact or wildcard). An event type that is absent, or matched only by disabled entries, is always sent individually.
+Provide the `edge.batching` object at runtime using the `updateConfiguration` API. This overrides the current configuration and takes effect immediately:
 
-### Set the configuration remotely
+<CodeBlock slots="heading, code" repeat="2" />
 
-Add the `edge.batching` object to your mobile property configuration so it is delivered with the rest of your SDK configuration. You can also set or override it at runtime with `updateConfiguration`:
+#### iOS Swift
 
-<CodeBlock slots="heading, code" repeat="4" />
+```swift
+let batching: [String: Any] = [
+  "enabled": true,
+  "maxBatchSize": 10,
+  "commerce": [
+    ["xdmEventType": "commerce.purchases", "enabled": true]
+  ]
+]
+
+MobileCore.updateConfigurationWith(configDict: ["edge.batching": batching])
+```
 
 #### Android Kotlin
 
@@ -88,55 +82,15 @@ val batching = mapOf(
         mapOf("xdmEventType" to "commerce.purchases", "enabled" to true)
     )
 )
+
 MobileCore.updateConfiguration(mapOf("edge.batching" to batching))
 ```
 
-#### Android Java
-
-```java
-Map<String, Object> entry = new HashMap<>();
-entry.put("xdmEventType", "commerce.purchases");
-entry.put("enabled", true);
-
-Map<String, Object> batching = new HashMap<>();
-batching.put("enabled", true);
-batching.put("maxBatchSize", 10);
-batching.put("commerce", Collections.singletonList(entry));
-
-Map<String, Object> config = new HashMap<>();
-config.put("edge.batching", batching);
-MobileCore.updateConfiguration(config);
-```
-
-#### iOS Swift
-
-```swift
-let batching: [String: Any] = [
-    "enabled": true,
-    "maxBatchSize": 10,
-    "commerce": [
-        ["xdmEventType": "commerce.purchases", "enabled": true]
-    ]
-]
-MobileCore.updateConfigurationWith(configDict: ["edge.batching": batching])
-```
-
-#### iOS Objective-C
-
-```objectivec
-NSDictionary *batching = @{
-    @"enabled": @YES,
-    @"maxBatchSize": @10,
-    @"commerce": @[ @{ @"xdmEventType": @"commerce.purchases", @"enabled": @YES } ]
-};
-[AEPMobileCore updateConfiguration:@{ @"edge.batching": batching }];
-```
-
-A batching configuration present in your mobile property configuration (or set with `updateConfiguration`) always takes precedence, as a whole, over the bundled file described below.
+A batching configuration provided through the `updateConfiguration` API takes precedence, as a whole, over the bundled file described below.
 
 ### Bundle the configuration in your app
 
-If you cannot yet deliver the configuration remotely, you can bundle it with your app. Create a file named `ADBMobileEdgeBatchingConfig.json` and add it to your app bundle. The file contains the batching object directly, **without** the `edge.batching` wrapper key:
+If you are not providing the configuration through the `updateConfiguration` API, you can bundle it with your app. Create a file named `ADBMobileEdgeBatchingConfig.json` that contains the batching object directly, without the `edge.batching` key:
 
 ```json
 {
@@ -152,90 +106,212 @@ If you cannot yet deliver the configuration remotely, you can bundle it with you
 }
 ```
 
-* **Android** — place `ADBMobileEdgeBatchingConfig.json` in the app's `assets` folder (`app/src/main/assets/`).
-* **iOS** — add `ADBMobileEdgeBatchingConfig.json` to your app target so it is copied into the app bundle.
+The Edge Network extension loads this file automatically at startup; no additional code is required. The bundled file is used only when an `edge.batching` object is not present in your configuration.
 
-The bundled file is used only when the `edge.batching` object is not present in the Configuration. It is a wholesale fallback, not a per-key merge.
+#### Android
+
+Place `ADBMobileEdgeBatchingConfig.json` in your app module's `src/main/assets` directory. If the `assets` directory does not already exist, create it, then perform a clean build so the file is packaged with the app.
+
+#### iOS
+
+Add `ADBMobileEdgeBatchingConfig.json` to your Xcode project (for example, by dragging it into the Project navigator). In the file inspector, add it to your app target, and confirm the file appears under the target's **Build Phases** > **Copy Bundle Resources**.
 
 ## Select which events to batch
 
-An event is batched by its `xdm.eventType`. List the exact event types you want to combine under any extension group, or use the `wildcards` array for patterns.
+An event is added to the allow-list by its `xdm.eventType`. List the exact event types under any extension group, or use the `wildcards` array to match a family of event types with a single `*`.
 
-### Wildcards
+| Pattern | Matches |
+| --- | --- |
+| `prefix.*` | Any event type that starts with `prefix.`, for example `commerce.*` matches `commerce.purchases`. |
+| `*.suffix` | Any event type that ends with `.suffix`, for example `*.purchases` matches `commerce.purchases`. |
+| `*` | Any event type. |
 
-Wildcard patterns are matched case-sensitively and support a single `*`:
+### Batch custom event types
 
-| Pattern | Matches | Example |
-| --- | --- | --- |
-| `prefix.*` | Any type that starts with `prefix.` | `commerce.*` matches `commerce.purchases` |
-| `*.suffix` | Any type that ends with `.suffix` | `*.purchases` matches `commerce.purchases` |
-| `*` | Any event type | Batches everything (use with care) |
+Batching matches an event by its `xdm.eventType`, so any value can be batched — including custom event types your app defines. Add the custom type to the allow-list under any group, or match a family of them with a wildcard such as `myapp.*`:
 
-## Send events
-
-You do not change how you send events — batching is applied transparently to the Experience Events you already send with `sendEvent`. Send several allow-listed events in succession and the extension combines the queued ones into a single request:
-
-<CodeBlock slots="heading, code" repeat="4" />
-
-### Android Kotlin
-
-```kotlin
-val xdmData = mapOf("eventType" to "commerce.purchases", "commerce" to mapOf("order" to mapOf("priceTotal" to 19.99)))
-val event = ExperienceEvent.Builder().setXdmSchema(xdmData).build()
-Edge.sendEvent(event) { handles ->
-    // Invoked for this event once its response is received
+```json
+{
+  "enabled": true,
+  "maxBatchSize": 10,
+  "myApp": [
+    { "xdmEventType": "myapp.levelComplete", "enabled": true },
+    { "xdmEventType": "myapp.itemPurchased", "enabled": true }
+  ]
 }
 ```
 
-### Android Java
+Send the event as usual, setting `eventType` in the XDM data to your custom value:
 
-```java
-Map<String, Object> xdmData = new HashMap<>();
-xdmData.put("eventType", "commerce.purchases");
+<CodeBlock slots="heading, code" repeat="2" />
 
-ExperienceEvent event = new ExperienceEvent.Builder().setXdmSchema(xdmData).build();
-Edge.sendEvent(event, handles -> {
-    // Invoked for this event once its response is received
-});
+#### iOS Swift
+
+```swift
+// Create Experience event from dictionary
+let xdmData: [String: Any] = [
+  "eventType": "myapp.levelComplete"
+]
+let experienceEvent = ExperienceEvent(xdm: xdmData)
+
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+  // Handle the Edge Network response
+}
 ```
+
+#### Android Kotlin
+
+```kotlin
+// Create experience event from Map
+val xdmData = mutableMapOf<String, Any>()
+xdmData["eventType"] = "myapp.levelComplete"
+
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(xdmData)
+    .build()
+
+Edge.sendEvent(experienceEvent) {
+    // Handle the Edge Network response
+}
+```
+
+## Complete configuration reference
+
+The following is a complete `edge.batching` configuration for the standard Adobe extensions, including the `_meta` block, an example wildcard, and every event type these extensions send. Use it as a starting point and set `enabled` to `true` only for the event types you want to batch. Copy it from the section below, or [download ADBMobileEdgeBatchingConfig.json](../assets/tutorial/batching/ADBMobileEdgeBatchingConfig.json).
+
+<AccordionItem slots="heading, code"/>
+
+#### Complete edge.batching configuration
+
+```json
+{
+  "_meta": {
+    "schemaVersion": 1,
+    "description": "Edge event batching configuration. Extension keys map to arrays of event objects. The Edge SDK parses only `xdmEventType` and `enabled`, ORs duplicates across extensions, and builds a flat allow-list of enabled xdm.eventType values. At send time, an outgoing edge/requestContent Experience Event is batched iff its xdm.eventType matches an enabled exact entry or an enabled wildcard. `purpose` and this `_meta` are ignored at parse time.",
+    "matchKey": "xdm.eventType"
+  },
+  "wildcards": [
+    {
+      "xdmEventType": "media.*",
+      "enabled": false,
+      "purpose": "EXAMPLE wildcard: set enabled to true to batch every media.* event in one line instead of listing them individually. Disabled here — the explicit edgeMedia entries below govern batching."
+    }
+  ],
+  "edgeBridge": [
+    { "xdmEventType": "analytics.track", "enabled": true, "purpose": "Analytics trackAction/trackState forwarded to Edge via Edge Bridge." }
+  ],
+  "edgeMedia": [
+    { "xdmEventType": "media.sessionStart", "enabled": true, "purpose": "Streaming session begins." },
+    { "xdmEventType": "media.sessionComplete", "enabled": true, "purpose": "Media reached its natural end." },
+    { "xdmEventType": "media.sessionEnd", "enabled": true, "purpose": "Session terminated without completing." },
+    { "xdmEventType": "media.play", "enabled": true, "purpose": "Player entered or resumed active playback." },
+    { "xdmEventType": "media.pauseStart", "enabled": true, "purpose": "Player paused or seeking." },
+    { "xdmEventType": "media.ping", "enabled": true, "purpose": "Periodic playhead heartbeat — highest-frequency event." },
+    { "xdmEventType": "media.error", "enabled": true, "purpose": "Playback error." },
+    { "xdmEventType": "media.bufferStart", "enabled": true, "purpose": "Player entered buffering." },
+    { "xdmEventType": "media.bitrateChange", "enabled": true, "purpose": "Streaming bitrate changed." },
+    { "xdmEventType": "media.adBreakStart", "enabled": true, "purpose": "Ad break (pod) started." },
+    { "xdmEventType": "media.adBreakComplete", "enabled": true, "purpose": "Ad break finished." },
+    { "xdmEventType": "media.adStart", "enabled": true, "purpose": "Individual ad started." },
+    { "xdmEventType": "media.adSkip", "enabled": true, "purpose": "Ad skipped." },
+    { "xdmEventType": "media.adComplete", "enabled": true, "purpose": "Ad finished." },
+    { "xdmEventType": "media.chapterStart", "enabled": true, "purpose": "Chapter/segment started." },
+    { "xdmEventType": "media.chapterSkip", "enabled": true, "purpose": "Chapter skipped." },
+    { "xdmEventType": "media.chapterComplete", "enabled": true, "purpose": "Chapter finished." },
+    { "xdmEventType": "media.statesUpdate", "enabled": true, "purpose": "Custom player state (for example, fullscreen or mute) start or end." }
+  ],
+  "messaging": [
+    { "xdmEventType": "pushTracking.applicationOpened", "enabled": true, "purpose": "Push notification opened (application launch from push)." },
+    { "xdmEventType": "pushTracking.customAction", "enabled": true, "purpose": "Push notification custom-action button interaction." },
+    { "xdmEventType": "decisioning.propositionFetch", "enabled": true, "purpose": "Personalization query for in-app, content-card, and code-based propositions." },
+    { "xdmEventType": "decisioning.propositionDisplay", "enabled": true, "purpose": "Proposition displayed (impression) tracking." },
+    { "xdmEventType": "decisioning.propositionInteract", "enabled": true, "purpose": "Proposition interaction (tap) tracking." },
+    { "xdmEventType": "decisioning.propositionDismiss", "enabled": true, "purpose": "Proposition dismissed tracking." },
+    { "xdmEventType": "decisioning.propositionTrigger", "enabled": true, "purpose": "Proposition trigger tracking." },
+    { "xdmEventType": "decisioning.propositionDisqualify", "enabled": true, "purpose": "Proposition disqualify tracking." },
+    { "xdmEventType": "decisioning.propositionSuppressDisplay", "enabled": true, "purpose": "Proposition suppressed-display tracking." },
+    { "xdmEventType": "liveActivity.pushToStart", "enabled": true, "purpose": "Live Activity push-to-start token sync." },
+    { "xdmEventType": "liveActivity.start", "enabled": true, "purpose": "Live Activity start tracking." },
+    { "xdmEventType": "liveActivity.updateToken", "enabled": true, "purpose": "Live Activity per-activity update token sync." }
+  ],
+  "optimize": [
+    { "xdmEventType": "decisioning.propositionFetch", "enabled": true, "purpose": "Personalization decisions query for decision scopes. (Same xdm.eventType is also produced by messaging.)" },
+    { "xdmEventType": "decisioning.propositionDisplay", "enabled": true, "purpose": "Proposition display tracking. (Also produced by messaging.)" },
+    { "xdmEventType": "decisioning.propositionInteract", "enabled": true, "purpose": "Proposition interaction tracking. (Also produced by messaging.)" }
+  ],
+  "edgeIdentity": [
+    { "xdmEventType": "profile.updateAttributes", "enabled": true, "purpose": "Profile attribute updates (for example, timezone) sent to Edge." }
+  ],
+  "places": [
+    { "xdmEventType": "location.entry", "enabled": true, "purpose": "Geofence POI entry." },
+    { "xdmEventType": "location.exit", "enabled": true, "purpose": "Geofence POI exit." }
+  ],
+  "lifecycle": [
+    { "xdmEventType": "application.launch", "enabled": true, "purpose": "App foreground/launch — reaches Edge only via a 'Forward to Edge Network' rule; the forwarded event carries this xdm.eventType." },
+    { "xdmEventType": "application.close", "enabled": true, "purpose": "App background/close — reaches Edge only via a 'Forward to Edge Network' rule; the forwarded event carries this xdm.eventType." }
+  ],
+  "offerDecisioning": [
+    { "xdmEventType": "personalization.request", "enabled": true, "purpose": "Offer prefetch personalization query." }
+  ],
+  "analyticsEdge": [
+    { "xdmEventType": "legacy.analytics", "enabled": true, "purpose": "Legacy Analytics track event forwarded to Edge." }
+  ]
+}
+```
+
+## Send events
+
+Batching is applied to the Experience events you send with the `sendEvent` API — you do not change how you send them. When batching is enabled and their event types are on the allow-list, events sent in succession are combined into a single request.
+
+<CodeBlock slots="heading, code" repeat="2" />
 
 ### iOS Swift
 
 ```swift
-let xdmData: [String: Any] = ["eventType": "commerce.purchases"]
-let event = ExperienceEvent(xdm: xdmData)
-Edge.sendEvent(experienceEvent: event) { (handles: [EdgeEventHandle]) in
-    // Invoked for this event once its response is received
+// Create Experience event from dictionary
+let xdmData: [String: Any] = [
+  "eventType": "commerce.purchases"
+]
+let experienceEvent = ExperienceEvent(xdm: xdmData)
+
+Edge.sendEvent(experienceEvent: experienceEvent) { (handles: [EdgeEventHandle]) in
+  // Handle the Edge Network response
 }
 ```
 
-### iOS Objective-C
+### Android Kotlin
 
-```objectivec
-NSDictionary *xdmData = @{ @"eventType": @"commerce.purchases" };
-AEPExperienceEvent *event = [[AEPExperienceEvent alloc] initWithXdm:xdmData data:nil];
-[AEPMobileEdge sendExperienceEvent:event completion:^(NSArray<AEPEdgeEventHandle *> * _Nonnull handles) {
-    // Invoked for this event once its response is received
-}];
+```kotlin
+// Create experience event from Map
+val xdmData = mutableMapOf<String, Any>()
+xdmData["eventType"] = "commerce.purchases"
+
+val experienceEvent = ExperienceEvent.Builder()
+    .setXdmSchema(xdmData)
+    .build()
+
+Edge.sendEvent(experienceEvent) {
+    // Handle the Edge Network response
+}
 ```
 
 ## Response outcomes
 
-The response for a batch is applied per event, and mirrors the behavior of individually sent events:
+The response for a batch is applied per event, matching the behavior of events sent individually:
 
 | Server response | Behavior |
 | --- | --- |
-| `2xx` / `207` | Success — per-event handles and errors are routed to the originating events. |
-| `429` / recoverable `5xx` / timeout | The whole batch is retried in place, honoring `Retry-After`. Events are never lost. |
-| `400` | Nothing was ingested — each event in the batch is re-sent individually so a single problematic event cannot block the others. |
-| Other non-recoverable (`403`, `404`, `422`, …) | The batch is dropped and each event receives the error. |
+| `2xx` / `207` | The per-event handles and errors are routed to the originating events. |
+| `429`, recoverable `5xx`, or timeout | The batch is retried, honoring `Retry-After`. Events are not lost. |
+| `400` | Nothing was ingested, so each event in the batch is re-sent in its own request. |
+| Other non-recoverable errors (`403`, `404`, `422`, and so on) | The batch is dropped and each event receives the error. |
 
 ## Verify batching
 
-You can confirm that events are being combined by inspecting the SDK logs at `verbose` level. When a batch is formed you will see a log line similar to:
+Set the SDK log level to `verbose` and confirm that events are combined. When a batch is formed, a log entry similar to the following is printed:
 
 ```text
 Edge/EdgeHitProcessor - Processing batch of 4 ExperienceEvent(s).
 ```
 
-You can also confirm in a network debugging tool that the queued events were delivered in a single request to the Edge Network `/v1/interact` endpoint.
+You can also use a network debugging tool to confirm that the combined events were delivered in a single request to the Edge Network.

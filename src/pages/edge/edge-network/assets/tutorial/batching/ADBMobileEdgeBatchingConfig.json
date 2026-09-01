@@ -1,0 +1,73 @@
+{
+  "_meta": {
+    "schemaVersion": 1,
+    "description": "Edge event batching configuration. Extension keys map to arrays of event objects. The Edge SDK parses only `xdmEventType` and `enabled`, ORs duplicates across extensions, and builds a flat allow-list of enabled xdm.eventType values. At send time, an outgoing edge/requestContent Experience Event is batched iff its xdm.eventType matches an enabled exact entry or an enabled wildcard. `purpose` and this `_meta` are ignored at parse time.",
+    "matchKey": "xdm.eventType"
+  },
+  "wildcards": [
+    {
+      "xdmEventType": "media.*",
+      "enabled": false,
+      "purpose": "EXAMPLE wildcard: set enabled to true to batch every media.* event in one line instead of listing them individually. Disabled here — the explicit edgeMedia entries below govern batching."
+    }
+  ],
+  "edgeBridge": [
+    { "xdmEventType": "analytics.track", "enabled": true, "purpose": "Analytics trackAction/trackState forwarded to Edge via Edge Bridge." }
+  ],
+  "edgeMedia": [
+    { "xdmEventType": "media.sessionStart", "enabled": true, "purpose": "Streaming session begins." },
+    { "xdmEventType": "media.sessionComplete", "enabled": true, "purpose": "Media reached its natural end." },
+    { "xdmEventType": "media.sessionEnd", "enabled": true, "purpose": "Session terminated without completing." },
+    { "xdmEventType": "media.play", "enabled": true, "purpose": "Player entered or resumed active playback." },
+    { "xdmEventType": "media.pauseStart", "enabled": true, "purpose": "Player paused or seeking." },
+    { "xdmEventType": "media.ping", "enabled": true, "purpose": "Periodic playhead heartbeat — highest-frequency event." },
+    { "xdmEventType": "media.error", "enabled": true, "purpose": "Playback error." },
+    { "xdmEventType": "media.bufferStart", "enabled": true, "purpose": "Player entered buffering." },
+    { "xdmEventType": "media.bitrateChange", "enabled": true, "purpose": "Streaming bitrate changed." },
+    { "xdmEventType": "media.adBreakStart", "enabled": true, "purpose": "Ad break (pod) started." },
+    { "xdmEventType": "media.adBreakComplete", "enabled": true, "purpose": "Ad break finished." },
+    { "xdmEventType": "media.adStart", "enabled": true, "purpose": "Individual ad started." },
+    { "xdmEventType": "media.adSkip", "enabled": true, "purpose": "Ad skipped." },
+    { "xdmEventType": "media.adComplete", "enabled": true, "purpose": "Ad finished." },
+    { "xdmEventType": "media.chapterStart", "enabled": true, "purpose": "Chapter/segment started." },
+    { "xdmEventType": "media.chapterSkip", "enabled": true, "purpose": "Chapter skipped." },
+    { "xdmEventType": "media.chapterComplete", "enabled": true, "purpose": "Chapter finished." },
+    { "xdmEventType": "media.statesUpdate", "enabled": true, "purpose": "Custom player state (for example, fullscreen or mute) start or end." }
+  ],
+  "messaging": [
+    { "xdmEventType": "pushTracking.applicationOpened", "enabled": true, "purpose": "Push notification opened (application launch from push)." },
+    { "xdmEventType": "pushTracking.customAction", "enabled": true, "purpose": "Push notification custom-action button interaction." },
+    { "xdmEventType": "decisioning.propositionFetch", "enabled": true, "purpose": "Personalization query for in-app, content-card, and code-based propositions." },
+    { "xdmEventType": "decisioning.propositionDisplay", "enabled": true, "purpose": "Proposition displayed (impression) tracking." },
+    { "xdmEventType": "decisioning.propositionInteract", "enabled": true, "purpose": "Proposition interaction (tap) tracking." },
+    { "xdmEventType": "decisioning.propositionDismiss", "enabled": true, "purpose": "Proposition dismissed tracking." },
+    { "xdmEventType": "decisioning.propositionTrigger", "enabled": true, "purpose": "Proposition trigger tracking." },
+    { "xdmEventType": "decisioning.propositionDisqualify", "enabled": true, "purpose": "Proposition disqualify tracking." },
+    { "xdmEventType": "decisioning.propositionSuppressDisplay", "enabled": true, "purpose": "Proposition suppressed-display tracking." },
+    { "xdmEventType": "liveActivity.pushToStart", "enabled": true, "purpose": "Live Activity push-to-start token sync." },
+    { "xdmEventType": "liveActivity.start", "enabled": true, "purpose": "Live Activity start tracking." },
+    { "xdmEventType": "liveActivity.updateToken", "enabled": true, "purpose": "Live Activity per-activity update token sync." }
+  ],
+  "optimize": [
+    { "xdmEventType": "decisioning.propositionFetch", "enabled": true, "purpose": "Personalization decisions query for decision scopes. (Same xdm.eventType is also produced by messaging.)" },
+    { "xdmEventType": "decisioning.propositionDisplay", "enabled": true, "purpose": "Proposition display tracking. (Also produced by messaging.)" },
+    { "xdmEventType": "decisioning.propositionInteract", "enabled": true, "purpose": "Proposition interaction tracking. (Also produced by messaging.)" }
+  ],
+  "edgeIdentity": [
+    { "xdmEventType": "profile.updateAttributes", "enabled": true, "purpose": "Profile attribute updates (for example, timezone) sent to Edge." }
+  ],
+  "places": [
+    { "xdmEventType": "location.entry", "enabled": true, "purpose": "Geofence POI entry." },
+    { "xdmEventType": "location.exit", "enabled": true, "purpose": "Geofence POI exit." }
+  ],
+  "lifecycle": [
+    { "xdmEventType": "application.launch", "enabled": true, "purpose": "App foreground/launch — reaches Edge only via a 'Forward to Edge Network' rule; the forwarded event carries this xdm.eventType." },
+    { "xdmEventType": "application.close", "enabled": true, "purpose": "App background/close — reaches Edge only via a 'Forward to Edge Network' rule; the forwarded event carries this xdm.eventType." }
+  ],
+  "offerDecisioning": [
+    { "xdmEventType": "personalization.request", "enabled": true, "purpose": "Offer prefetch personalization query." }
+  ],
+  "analyticsEdge": [
+    { "xdmEventType": "legacy.analytics", "enabled": true, "purpose": "Legacy Analytics track event forwarded to Edge." }
+  ]
+}
