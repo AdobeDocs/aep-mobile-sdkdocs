@@ -11,3 +11,4 @@ keywords:
 
 * [Sending configuration overrides using sendEvent](send-overrides-sendevent.md)
 * [Sending configuration overrides using Rules](send-overrides-rules.md)
+* [Batching Experience Events](batching-edge-events.md)

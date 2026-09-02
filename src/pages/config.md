@@ -51,6 +51,7 @@
             - [Tutorials](/edge/edge-network/tutorials/index.md)
                 - [Sending configuration overrides using sendEvent](/edge/edge-network/tutorials/send-overrides-sendevent.md)
                 - [Sending configuration overrides using Rules](/edge/edge-network/tutorials/send-overrides-rules.md)
+                - [Batching Experience Events](/edge/edge-network/tutorials/batching-edge-events.md)
             - [Release notes](/edge/edge-network/release-notes.md)
         - [Adobe Journey Optimizer](/edge/adobe-journey-optimizer/index.md)
             - [Overview](/edge/adobe-journey-optimizer/index.md)
