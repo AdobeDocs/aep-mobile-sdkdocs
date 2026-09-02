@@ -1,7 +1,7 @@
 {
   "_meta": {
     "schemaVersion": 1,
-    "description": "Edge event batching configuration. Extension keys map to arrays of event objects. The Edge SDK parses only `xdmEventType` and `enabled`, ORs duplicates across extensions, and builds a flat allow-list of enabled xdm.eventType values. At send time, an outgoing edge/requestContent Experience Event is batched iff its xdm.eventType matches an enabled exact entry or an enabled wildcard. `purpose` and this `_meta` are ignored at parse time.",
+    "description": "Edge event batching configuration. Extension keys map to arrays of event objects. The Edge SDK parses only `xdmEventType` and `enabled`, ORs duplicates across extensions, and builds a flat allowlist of enabled xdm.eventType values. At send time, an outgoing edge/requestContent Experience Event is batched iff its xdm.eventType matches an enabled exact entry or an enabled wildcard. `purpose` and this `_meta` are ignored at parse time.",
     "matchKey": "xdm.eventType"
   },
   "wildcards": [

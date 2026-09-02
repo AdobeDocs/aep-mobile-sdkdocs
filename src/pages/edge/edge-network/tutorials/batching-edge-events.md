@@ -10,7 +10,7 @@ keywords:
 
 # Batching Experience Events
 
-By default, the **Adobe Experience Platform Edge Network** extension sends each Experience event to the Edge Network in its own request. Event batching combines multiple queued Experience events into a single Edge Network request, which reduces the number of network calls made by your app and can lower the overall response time when several events are queued. Batching is disabled by default and applies only to the event types you explicitly allow. This tutorial explains how to enable batching, select which events are combined, and verify the result.
+By default, the **Adobe Experience Platform Edge Network** extension sends each Experience Event to the Edge Network in its own request. Event batching combines multiple queued Experience Events into a single Edge Network request, which reduces the number of network calls made by your app and can lower the overall response time when several events are queued. Batching is disabled by default and applies only to the event types you explicitly allow. This tutorial explains how to enable batching, select which events are combined, and verify the result.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ Before continuing with this tutorial, please ensure that the Edge extension vers
 
 ## How batching works
 
-When batching is enabled, the Edge Network extension combines the Experience events at the front of its send queue into a single request, up to a configurable maximum. Events are combined only when they are consecutive in the queue, share the same datastream configuration, and have an `xdm.eventType` that is present on the allow-list. Consent and identity reset requests are never batched.
+When batching is enabled, the Edge Network extension combines the Experience Events at the front of its send queue into a single request, up to a configurable maximum. Events are combined only when they are consecutive in the queue, share the same datastream configuration, and have an `xdm.eventType` that is present on the allowlist. Consent and identity reset requests are never batched.
 
 Batching does not change how you send events with the `sendEvent` API, and it does not change how responses are handled. Each event in a batch is tracked individually, so response handles, errors, and completion handlers are still delivered per event.
 
@@ -46,11 +46,11 @@ Batching is configured through a single `edge.batching` object. The same format 
 | --- | --- | --- |
 | `enabled` | Boolean | Enables or disables batching. When `false` (the default), each event is sent in its own request. |
 | `maxBatchSize` | Number | The maximum number of events combined into one request. Defaults to `10`, must be a positive value, and is capped at `20`. |
-| `wildcards` | Array | Allow-list entries whose `xdmEventType` is matched as a pattern. See [Select which events to batch](#select-which-events-to-batch). |
-| _any other key_ | Array | An extension group — an array of allow-list entries. The key (for example, `commerce`) is used only for readability; all groups are combined into a single allow-list. |
+| `wildcards` | Array | Allowlist entries whose `xdmEventType` is matched as a pattern. See [select which events to batch](#select-which-events-to-batch) for more information. |
+| _any other key_ | Array | An extension group — an array of allowlist entries. The key (for example, `commerce`) is used only for readability; all groups are combined into a single allowlist. |
 | `_meta` | Object | Reserved for metadata and ignored by the Mobile SDK. |
 
-Each allow-list entry is an object with an `xdmEventType` value and an `enabled` flag. An event is batched only when its `xdm.eventType` matches an entry whose `enabled` value is `true`; an event type that is not listed, or is listed only with `enabled` set to `false`, is always sent in its own request.
+Each allowlist entry is an object with an `xdmEventType` value and an `enabled` flag. An event is batched only when its `xdm.eventType` matches an entry whose `enabled` value is `true`; an event type that is not listed, or is listed only with `enabled` set to `false`, is always sent in its own request.
 
 ### Override the configuration at runtime
 
@@ -118,7 +118,7 @@ Add `ADBMobileEdgeBatchingConfig.json` to your Xcode project (for example, by dr
 
 ## Select which events to batch
 
-An event is added to the allow-list by its `xdm.eventType`. List the exact event types under any extension group, or use the `wildcards` array to match a family of event types with a single `*`.
+An event is added to the allowlist by its `xdm.eventType`. List the exact event types under any extension group, or use the `wildcards` array to match a family of event types with a single `*`.
 
 | Pattern | Matches |
 | --- | --- |
@@ -128,7 +128,7 @@ An event is added to the allow-list by its `xdm.eventType`. List the exact event
 
 ### Batch custom event types
 
-Batching matches an event by its `xdm.eventType`, so any value can be batched — including custom event types your app defines. Add the custom type to the allow-list under any group, or match a family of them with a wildcard such as `myapp.*`:
+Batching matches an event by its `xdm.eventType`, so any value can be batched — including custom event types your app defines. Add the custom type to the allowlist under any group, or match a family of them with a wildcard such as `myapp.*`:
 
 ```json
 {
@@ -187,7 +187,7 @@ The following is a complete `edge.batching` configuration for the standard Adobe
 {
   "_meta": {
     "schemaVersion": 1,
-    "description": "Edge event batching configuration. Extension keys map to arrays of event objects. The Edge SDK parses only `xdmEventType` and `enabled`, ORs duplicates across extensions, and builds a flat allow-list of enabled xdm.eventType values. At send time, an outgoing edge/requestContent Experience Event is batched iff its xdm.eventType matches an enabled exact entry or an enabled wildcard. `purpose` and this `_meta` are ignored at parse time.",
+    "description": "Edge event batching configuration. Extension keys map to arrays of event objects. The Edge SDK parses only `xdmEventType` and `enabled`, ORs duplicates across extensions, and builds a flat allowlist of enabled xdm.eventType values. At send time, an outgoing edge/requestContent Experience Event is batched iff its xdm.eventType matches an enabled exact entry or an enabled wildcard. `purpose` and this `_meta` are ignored at parse time.",
     "matchKey": "xdm.eventType"
   },
   "wildcards": [
@@ -261,7 +261,7 @@ The following is a complete `edge.batching` configuration for the standard Adobe
 
 ## Send events
 
-Batching is applied to the Experience events you send with the `sendEvent` API — you do not change how you send them. When batching is enabled and their event types are on the allow-list, events sent in succession are combined into a single request.
+Batching is automatically applied to the Experience Events you send with the `sendEvent` API. When batching is enabled and their event types are on the allowlist, events sent in succession are combined into a single request.
 
 <CodeBlock slots="heading, code" repeat="2" />
 
