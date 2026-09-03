@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## September 2, 2026
+
+### React Native Edge 7.0.1
+
+* Fixed an Android promise hang during SDK response conversion.
+
 ## March 28, 2025
 
 ### React Native Edge 7.0.0
