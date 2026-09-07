@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## September 2, 2026
+
+### React Native Core 7.0.1
+
+* Fixed an Android promise hang during SDK response conversion.
+
 ## August 18, 2026
 
 ### iOS Core 5.11.0

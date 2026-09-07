@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## September 2, 2026
+
+### React Native Target 7.0.1
+
+* Fixed an Android promise hang during SDK response conversion.
+
 ## April 7, 2026
 
 ### iOS Target 5.1.0
