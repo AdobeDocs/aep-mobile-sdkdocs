@@ -7,6 +7,28 @@ Keywords:
 
 # Release notes
 
+## September 2, 2026
+
+### React Native UserProfile 7.0.1
+
+* Fixed an Android promise hang during SDK response conversion.
+
+### React Native Target 7.0.1
+
+* Fixed an Android promise hang during SDK response conversion.
+
+### React Native EdgeConsent 7.0.1
+
+* Fixed an Android promise hang during SDK response conversion.
+
+### React Native Edge 7.0.1
+
+* Fixed an Android promise hang during SDK response conversion.
+
+### React Native Core 7.0.1
+
+* Fixed an Android promise hang during SDK response conversion.
+
 ## August 20, 2026
 
 ### Android BOM 3.21.0
