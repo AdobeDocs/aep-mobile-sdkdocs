@@ -16,7 +16,7 @@ By default, the **Adobe Experience Platform Edge Network** extension sends each 
 
 Before continuing with this tutorial, please ensure that the Edge extension version meets the minimum requirements:
 
-* [Edge](../../index.md) extension version >= **TBD** (Android) and >= **TBD** (iOS).
+* [Edge](../../index.md) extension version >= **3.1.0** (Android) and >= **5.1.0** (iOS).
 
 ## How batching works
 
