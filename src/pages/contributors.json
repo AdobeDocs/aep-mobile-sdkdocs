@@ -1,7 +1,7 @@
 {
-  "total": 335,
+  "total": 336,
   "offset": 0,
-  "limit": 335,
+  "limit": 336,
   "data": [
     {
       "page": "/",
@@ -15,10 +15,11 @@
     {
       "page": "/config",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
         "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "8/26/2026"
+      "lastUpdated": "8/31/2026"
     },
     {
       "page": "/edge/",
@@ -1402,10 +1403,18 @@
     {
       "page": "/edge/edge-network/tutorials/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/4697559?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "8/31/2026"
+    },
+    {
+      "page": "/edge/edge-network/tutorials/batching-edge-events",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4"
+      ],
+      "lastUpdated": "9/8/2026"
     },
     {
       "page": "/edge/edge-network/tutorials/send-overrides-rules",
