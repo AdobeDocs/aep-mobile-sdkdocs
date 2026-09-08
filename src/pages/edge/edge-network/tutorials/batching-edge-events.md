@@ -177,7 +177,7 @@ Edge.sendEvent(experienceEvent) {
 
 ## Complete configuration reference
 
-The following is a complete `edge.batching` configuration for the standard Adobe extensions, including the `_meta` block, an example wildcard, and every event type these extensions send. Use it as a starting point and set `enabled` to `true` only for the event types you want to batch. Copy it from the section below, or [download the configuration file](../assets/tutorial/batching/adbmobileedgebatchingconfig.json) and save it as `ADBMobileEdgeBatchingConfig.json`.
+The following is a complete `edge.batching` configuration for the standard Adobe extensions, including the `_meta` block, an example wildcard, and every event type these extensions send. Use it as a starting point and set `enabled` to `true` only for the event types you want to batch. Copy the configuration from the section below into a file named `ADBMobileEdgeBatchingConfig.json`.
 
 <AccordionItem slots="heading, code"/>
 
