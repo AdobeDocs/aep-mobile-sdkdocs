@@ -63,11 +63,14 @@ This document outlines the various push notification payload keys used by the Ad
 | `adb_act.type` | enum | The action type for custom action button. It can be one of the following values: `DEEPLINK`, `WEBURL`, `OPENAPP`. |
 | `adb_version` | String | Optional. The payload version assigned by the authoring UI. Applies to a [push template](android/push-templates.md) push; defaults to `"1"` when absent. Must be a top level key, not nested inside `adb_template_properties`. |
 | `adb_template_type` | String | Present when the push carries a [push template](android/push-templates.md). Identifies which template to render, for example `ajo_basic` or `ajo_bigtext`. |
-| `adb_template_properties` | String (JSON) | Present when the push carries a [push template](android/push-templates.md). A JSON-encoded string carrying the fields specific to that template; see [Push templates](android/push-templates.md) for the keys per template. |
+| `adb_template_properties` | String (JSON) | Present when the push carries a [push template](android/push-templates.md). A JSON-encoded string carrying the fields specific to the template named in `adb_template_type`. |
+| `adb_template_properties.adb_image_scale_type` | String | `ajo_basic` template only. How the hero image (`adb_image`) scales inside its frame. One of `center_crop` (default) or `fit_center`. |
+| `adb_template_properties.adb_collapsed_text` | String | `ajo_bigtext` template only. Short text shown when the notification is collapsed. Falls back to `adb_body` when absent. |
+| `adb_template_properties.adb_large_icon` | String | `ajo_bigtext` template only. URL of the large side icon, shown in both the collapsed and expanded state and always rendered center-cropped (no scale type option). Note that this key lives inside `adb_template_properties`, not as a flat, top level `adb_large_icon` key. |
 
 <InlineAlert variant="info" slots="text"/>
 
-A push template push is identified by the `adb_template_type` key. Its template-specific inner fields are documented with [Push templates](android/push-templates.md), not here.
+A push template push is identified by the `adb_template_type` key, currently `ajo_basic` (basic template) or `ajo_bigtext` (big text template). Both templates also use `adb_title`, `adb_body`, `adb_sound`, `adb_n_count`, `adb_n_priority`, `adb_n_visibility`, `adb_channel_id`, `adb_icon`, `adb_tag`, `adb_sticky`, `adb_ticker`, `adb_a_type`, `adb_uri`, and `adb_act` from the table above; neither supports the `adb_clr_*` color keys. See [Push templates](android/push-templates.md) for the plugin setup, a full walkthrough, and a sample payload per template.
 
 ## iOS
 
