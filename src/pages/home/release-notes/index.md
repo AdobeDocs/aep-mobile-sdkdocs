@@ -7,6 +7,16 @@ Keywords:
 
 # Release notes
 
+## September 8, 2026
+
+### iOS Edge 5.1.0
+
+* Added Edge Event Batching for queued events.
+
+### Android Edge 3.1.0
+
+* Added Event batching for queued events
+
 ## September 2, 2026
 
 ### React Native UserProfile 7.0.1
