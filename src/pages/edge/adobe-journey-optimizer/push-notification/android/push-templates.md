@@ -48,11 +48,11 @@ If your app does not add this dependency, or does not register the plugin, a pus
 
 ## Payload keys
 
-Every push template push carries the top level `adb_version` and `adb_template_type` keys, described in [Push notification payload keys](../push-payload.md). The template-specific fields below live inside the `adb_template_properties` key, a JSON-encoded string.
+Every push template push carries the top level `adb_template_type` key, and optionally `adb_version`, both described in [Push notification payload keys](../push-payload.md). The template-specific fields below live inside the `adb_template_properties` key, a JSON-encoded string.
 
 <InlineAlert variant="warning" slots="text"/>
 
-`adb_version` must be a top level key in the push data, not nested inside `adb_template_properties`. If it is nested inside `adb_template_properties` instead, it is not read and silently defaults to `"1"`.
+`adb_version` is optional and defaults to `"1"` when absent. If you do set it, it must be a top level key in the push data, not nested inside `adb_template_properties` - nesting it there means it is not read, and the default is used instead.
 
 Both templates also use the shared keys already documented in [Push notification payload keys](../push-payload.md): `adb_title`, `adb_body`, `adb_sound`, `adb_n_count`, `adb_n_priority`, `adb_n_visibility`, `adb_channel_id`, `adb_small_icon` (or the legacy `adb_icon`), `adb_a_type`, `adb_uri`, `adb_act`, `adb_tag`, `adb_sticky`, and `adb_ticker`. Neither template supports the `adb_clr_*` color keys or the "remind later" keys (`adb_rem_txt`, `adb_rem_ts`).
 

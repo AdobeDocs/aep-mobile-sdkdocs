@@ -61,7 +61,7 @@ This document outlines the various push notification payload keys used by the Ad
 | `adb_act.label` | String | The label for custom action button. |
 | `adb_act.uri` | String | The URI for custom action button. |
 | `adb_act.type` | enum | The action type for custom action button. It can be one of the following values: `DEEPLINK`, `WEBURL`, `OPENAPP`. |
-| `adb_version` | String | Required when the push carries a [push template](android/push-templates.md). The payload version assigned by the authoring UI. Must remain a top level key, not nested inside `adb_template_properties`. |
+| `adb_version` | String | Optional. The payload version assigned by the authoring UI. Applies to a [push template](android/push-templates.md) push; defaults to `"1"` when absent. Must be a top level key, not nested inside `adb_template_properties`. |
 | `adb_template_type` | String | Present when the push carries a [push template](android/push-templates.md). Identifies which template to render, for example `ajo_basic` or `ajo_bigtext`. |
 | `adb_template_properties` | String (JSON) | Present when the push carries a [push template](android/push-templates.md). A JSON-encoded string carrying the fields specific to that template; see [Push templates](android/push-templates.md) for the keys per template. |
 
