@@ -48,15 +48,26 @@ This document outlines the various push notification payload keys used by the Ad
 | `adb_sound` | String | The push notification's sound. |
 | `adb_n_count` | String | The push notification badge count. |
 | `adb_n_priority` | String | The push notification's priority. For more information, please read the [Firebase documentation](https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#notificationpriority) |
+| `adb_n_visibility` | String | The push notification's visibility on the lock screen. |
 | `adb_channel_id` | String | The push notification's channel ID. |
 | `adb_icon` | String | The push notification's icon resource name. |
 | `adb_image` | String | The URL of the image to be displayed on the notification. |
+| `adb_tag` | String | If present and a notification with the same tag is already being shown, the new notification replaces the existing one in the notification drawer. |
+| `adb_sticky` | Boolean | When set to `false` or unset, the notification is automatically dismissed when the user clicks it in the panel. When set to `true`, the notification persists even when the user clicks it. |
+| `adb_ticker` | String | If present, sets the notification's "ticker" text, which is sent to accessibility services. |
 | `adb_a_type` | enum | An enum that determines what type of action will be performed when the notification is clicked. It can be one of the following values: `DEEPLINK`, `WEBURL`, or `OPENAPP`. |
 | `adb_uri` | String | The URI used for deeplinking. The deeplink is used to open the appropriate webpage or app screen when the notification is clicked. |
 | `adb_act` | Array | An array that contains the action object(s). |
 | `adb_act.label` | String | The label for custom action button. |
 | `adb_act.uri` | String | The URI for custom action button. |
 | `adb_act.type` | enum | The action type for custom action button. It can be one of the following values: `DEEPLINK`, `WEBURL`, `OPENAPP`. |
+| `adb_version` | String | Required when the push carries a [push template](android/push-templates.md). The payload version assigned by the authoring UI. Must remain a top level key, not nested inside `adb_template_properties`. |
+| `adb_template_type` | String | Present when the push carries a [push template](android/push-templates.md). Identifies which template to render, for example `ajo_basic` or `ajo_bigtext`. |
+| `adb_template_properties` | String (JSON) | Present when the push carries a [push template](android/push-templates.md). A JSON-encoded string carrying the fields specific to that template; see [Push templates](android/push-templates.md) for the keys per template. |
+
+<InlineAlert variant="info" slots="text"/>
+
+A push template push is identified by the `adb_template_type` key. Its template-specific inner fields are documented with [Push templates](android/push-templates.md), not here.
 
 ## iOS
 
