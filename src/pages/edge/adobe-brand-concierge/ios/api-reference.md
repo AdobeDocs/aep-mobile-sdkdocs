@@ -154,6 +154,36 @@ final class MyViewController: UIViewController {
 }
 ```
 
+## setAuthTokenProvider
+
+Registers the provider the SDK consults for an auth token before every chat and feedback turn. Lets a host app attach its own opaque, app-minted authentication token to Brand Concierge conversation turns.
+
+<InlineAlert variant="info" slots="text"/>
+
+Supply only the opaque, app-minted token your backend expects — never a raw identity-provider (e.g. Auth0) token. The SDK attaches it verbatim as its own request-body field, never as an `Authorization` header and never merged into the identity payload, and never inspects or logs it.
+
+#### Syntax
+
+```swift
+static func setAuthTokenProvider(
+    timeout: TimeInterval = 3,
+    _ provider: (@Sendable () async -> String?)?
+)
+```
+
+#### Parameters
+
+* _timeout_ - How long to await the provider before sending the turn without a token. Defaults to `3` seconds; raise it if minting the token may take longer.
+* _provider_ **required** - An `async` closure returning the current token, or `nil` to clear a previously registered provider. The closure is consulted fresh on every turn (never cached) and works for both synchronous (`{ tokenCache.current }`) and asynchronous (`{ await tokenCache.freshToken() }`) callers. Returning `nil`/blank, or not returning within `timeout`, sends the turn without a token instead of failing it.
+
+#### Example
+
+```swift
+Concierge.setAuthTokenProvider { [weak tokenCache] in
+    await tokenCache?.freshToken()
+}
+```
+
 ## ConciergeThemeLoader.load
 
 Loads a `ConciergeTheme` from a JSON file in a bundle. Returns `nil` if the file cannot be found or parsed.
