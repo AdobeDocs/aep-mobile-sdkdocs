@@ -260,6 +260,8 @@ When a user taps a link in the chat, the SDK routes it through `ConciergeLinkHan
 
 **Default link handling flow:** `handleLink` callback (if provided) -> deep link / universal link check -> WebView overlay.
 
+Store "Get directions" links arrive as platform-neutral `geo:` URIs. iOS has no native `geo:` handler, so these are rewritten to an Apple Maps directions URL (`https://maps.apple.com/?daddr=...`) before the deep link / universal link check above runs — opening the Maps app via universal link, or falling back to the in-app WebView (for example, on the Simulator). This rewrite happens after `handleLink` is consulted, so a `handleLink` callback still sees the original `geo:` URL.
+
 ### Custom link handling
 
 All three public APIs accept an optional `handleLink` closure that is called before the SDK's default routing. Return `true` to claim the URL (the SDK takes no further action). Return `false` to let the SDK handle it normally.
@@ -328,6 +330,20 @@ Links clicked inside the in-app WebView overlay (for example, links on a page th
 * **Non-web schemes** (for example, `mailto:`, `tel:`, `sms:`, `myapp://`): The WebView cancels the navigation and forwards the URL to the system via `UIApplication.open`, which routes it to the appropriate handler app (Mail, Phone, Messages, a custom deep-link destination, etc.).
 
 No additional configuration is required for this behavior. Universal-link forwarding for in-chat links (the `handleLink` -> universal link -> WebView fallback described above) applies only to links tapped in chat messages; it is not re-evaluated for links inside an already loaded WebView page.
+
+<HorizontalLine />
+
+## Authentication
+
+If your backend needs to verify the caller's identity on each conversation turn, register a token provider so the SDK attaches your app's own opaque, app-minted authentication token to every chat and feedback request:
+
+```swift
+Concierge.setAuthTokenProvider { [weak tokenCache] in
+    await tokenCache?.freshToken()
+}
+```
+
+The provider is consulted fresh on every turn (never cached), works for both synchronous and asynchronous callers, and is optional — omit it (or pass `nil`) and turns are sent without a token. See [setAuthTokenProvider](/edge/adobe-brand-concierge/ios/api-reference.md#setauthtokenprovider) in the API reference for the full parameter and behavior details.
 
 <HorizontalLine />
 
