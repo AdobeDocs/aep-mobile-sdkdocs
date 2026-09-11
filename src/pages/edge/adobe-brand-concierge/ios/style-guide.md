@@ -1180,7 +1180,7 @@ This section documents which properties are fully implemented, partially impleme
 | `text["input.placeholder"]` | ✅ | Used in ComposerEditingView |
 | `text["input.messageInput.aria"]` | ✅ | Used for accessibility |
 | `text["input.send.aria"]` | ✅ | Used for accessibility |
-| `text["input.aiChatIcon.tooltip"]` | ⚠️ | Parsed but AI icon not rendered |
+| `text["input.aiChatIcon.tooltip"]` | ✅ | Used as the accessibility label for the leading input icon in ComposerEditingView |
 | `text["input.mic.aria"]` | ✅ | Used for accessibility |
 | `text["card.aria.select"]` | ✅ | Used in ChatMessageView |
 | `text["carousel.prev.aria"]` | ✅ | Used in CarouselGroupView |
@@ -1230,7 +1230,7 @@ This section documents which properties are fully implemented, partially impleme
 
 | CSS Variable | Status | Notes |
 |--------------|--------|-------|
-| `--color-primary` | ✅ | Used throughout UI |
+| `--color-primary` | ✅ | Used throughout UI; inline link text in BasicMessageView |
 | `--color-text` | ✅ | Used for text styling |
 | `--color-container` | ✅ | Background fallback for prompt suggestion chips, product cards, and message bubbles |
 | `--suggestion-background-color` | ✅ | Used in ChatMessageView for suggestion chip background |
