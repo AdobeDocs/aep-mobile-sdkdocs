@@ -8,6 +8,15 @@ keywords:
 
 # Release notes
 
+## September 11, 2026
+
+### Android Brand Concierge 3.8.1
+
+* Added support for a `concierge.region` configuration key to specify the region as part of Concierge configuration.
+* Prefixed Concierge drawable resource names to avoid collisions with host app resources.
+
+**Full Changelog**: https://github.com/adobe/aepsdk-concierge-android/compare/v3.8.0...v3.8.1
+
 ## September 10, 2026
 
 ### Android Brand Concierge 3.8.0

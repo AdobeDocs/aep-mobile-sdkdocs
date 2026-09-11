@@ -99,6 +99,7 @@ Brand Concierge expects the following keys to be present in the Configuration sh
 
 * **`concierge.server`**: String (server host or base domain used by Brand Concierge requests)
 * **`concierge.configId`**: String (datastream ID)
+* **`concierge.region`**: String, optional (region identifier, e.g. `va6`, inserted into the Brand Concierge request path; omit to use the default unqualified endpoint)
 
 The ECID is read from the Edge Identity shared state.
 
