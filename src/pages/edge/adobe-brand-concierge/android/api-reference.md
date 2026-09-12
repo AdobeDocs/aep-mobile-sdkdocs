@@ -176,6 +176,51 @@ chatView.bind(
 )
 ```
 
+## Concierge.setAuthTokenProvider
+
+Registers a `ConciergeAuthTokenProvider` that supplies an app-minted authentication token, attached to every chat and feedback request until cleared. Pass `null` to clear a previously registered provider.
+
+#### Syntax
+
+```kotlin
+@JvmStatic
+@JvmOverloads
+fun setAuthTokenProvider(
+    provider: ConciergeAuthTokenProvider?,
+    timeoutMillis: Long = 3000L
+)
+```
+
+#### Parameters
+
+* _provider_ **required** - A `ConciergeAuthTokenProvider` instance, or `null` to clear a previously registered provider.
+* _timeoutMillis_ - How long to wait for `provider.provideToken()` before sending the turn without a token. Defaults to `3000` (3 seconds); out-of-bounds values are clamped rather than rejected.
+
+#### Example
+
+```kotlin
+Concierge.setAuthTokenProvider(
+    ConciergeAuthTokenProvider { myAuthTokenCache.getCurrentToken() },
+    timeoutMillis = 5000L
+)
+```
+
+## ConciergeAuthTokenProvider
+
+A functional interface that supplies the app-minted authentication token attached to each conversation turn (chat and feedback). Register an implementation with `Concierge.setAuthTokenProvider`.
+
+#### Syntax
+
+```kotlin
+fun interface ConciergeAuthTokenProvider {
+    fun provideToken(): String?
+}
+```
+
+#### Parameters
+
+* _provideToken_ **required** - Called immediately before building each turn's request. Return the current opaque, app-minted token, or `null` to send the turn without one. Invoked on a background thread and may block briefly to refresh the token; the SDK bounds the wait via `timeoutMillis`.
+
 ## ConciergeThemeLoader.load
 
 Loads a `ConciergeThemeData` from a JSON file in the app's `assets` directory. Returns `null` if the file cannot be found or parsed.

@@ -70,7 +70,7 @@ Import and register the extensions in your `Application` class `onCreate()`:
 
 ```kotlin
 import com.adobe.marketing.mobile.MobileCore
-import com.adobe.marketing.mobile.Concierge
+import com.adobe.marketing.mobile.concierge.Concierge
 import com.adobe.marketing.mobile.edge.identity.Identity as EdgeIdentity
 import android.app.Application
 
@@ -99,10 +99,40 @@ Brand Concierge expects the following keys to be present in the Configuration sh
 
 * **`concierge.server`**: String (server host or base domain used by Brand Concierge requests)
 * **`concierge.configId`**: String (datastream ID)
+* **`concierge.region`**: String, optional (region identifier, e.g. `va6`, inserted into the Brand Concierge request path; omit to use the default unqualified endpoint)
 
 The ECID is read from the Edge Identity shared state.
 
 Another option for validation is to use Adobe Assurance. Refer to the [Mobile SDK validation guide](../../../home/getting-started/validate.md) for more information.
+
+<HorizontalLine />
+
+## Authentication
+
+If your backend requires proof of the user's identity, register a `ConciergeAuthTokenProvider` to supply an app-minted authentication token. Brand Concierge attaches it to every chat and feedback request until the provider is cleared.
+
+```kotlin
+import com.adobe.marketing.mobile.concierge.Concierge
+import com.adobe.marketing.mobile.concierge.ConciergeAuthTokenProvider
+
+Concierge.setAuthTokenProvider(ConciergeAuthTokenProvider {
+    // Return the current token, or null to send the turn without one
+    myAuthTokenCache.getCurrentToken()
+})
+```
+
+Register the provider once, typically alongside extension registration in your `Application.onCreate()`. Pass `null` to `setAuthTokenProvider` to clear a previously registered provider.
+
+* `provideToken()` is called once per turn (chat and feedback) on a background thread — the token is never cached, so refreshed or rotated tokens are picked up on the next turn. It may block briefly to refresh the token; the SDK bounds the wait (3 seconds by default) and sends the turn without a token if `provideToken()` doesn't return in time.
+* Returning `null` or a blank value, or throwing, sends the turn without a token rather than failing it — the token is never merged into the identity payload or sent as a request header.
+* To use a different wait budget than the 3-second default (for example if your token mint is consistently slower or faster), pass `timeoutMillis` to `setAuthTokenProvider`:
+
+```kotlin
+Concierge.setAuthTokenProvider(
+    ConciergeAuthTokenProvider { myAuthTokenCache.getCurrentToken() },
+    timeoutMillis = 5000L
+)
+```
 
 <HorizontalLine />
 
@@ -321,9 +351,9 @@ Add an `<intent-filter>` with `android:autoVerify="true"` to the activity in you
 </activity>
 ```
 
-**2. Package visibility (Android 11 and higher)**
+**2. Package visibility for Android 11 or higher**
 
-Add the following `<queries>` block to your `AndroidManifest.xml`. Without it, the Concierge extension cannot use `PackageManager.resolveActivity()` to detect the App Link handler on API 30 or higher, and App Links will silently fall back to the in-app WebView.
+Add the following `<queries>` block to your `AndroidManifest.xml`. Without it, the Concierge extension cannot use `PackageManager.resolveActivity()` to detect the App Link handler on API 30 or higher, and App Links will silently fall back to the in-app WebView on that API level.
 
 ```xml
 <!-- Required for PackageManager.resolveActivity() on Android 11+ to detect
@@ -340,13 +370,13 @@ Add the following `<queries>` block to your `AndroidManifest.xml`. Without it, t
 </queries>
 ```
 
-#### Link handling
+#### Chat message link handling
 
-The Concierge extension automatically opens links when your app is the verified handler for the URL's domain. If your app is not the handler, the link opens in an in-app WebView overlay.
+The Concierge extension automatically opens links when your app is the verified handler for the URL's domain (e.g., listed in the domain's assetlinks.json). If your app is not the handler, the link opens in the in-app WebView overlay.
 
-**Default link handling flow:** `handleLink` callback (if provided) → App Link check → WebView overlay.
+**Default link handling flow:** host `handleLink` callback (if provided) → App Link check → WebView overlay.
 
-To customize this behavior, provide a `handleLink` callback. Return `true` if your app handled the link; return `false` to fall back to the default behavior (App Link check, then WebView overlay).
+To customize this behavior, provide a `handleLink` callback. Return `true` if your app handled the link; return `false` to have the Brand Concierge extension handle the link with its default behavior (trying to open it as an App Link first, then using the WebView overlay).
 
 **Compose (ConciergeChat):**
 
@@ -388,7 +418,9 @@ chatView.bind(
 )
 ```
 
-To close the chat when a deep link is tapped, call `viewModel.closeConcierge()` inside your `handleLink` callback before returning `true`:
+When `handleLink` returns `true`, the SDK does not open the WebView overlay. When it returns `false` or is null, the SDK uses the default flow (trying to open it as an App Link first, then using the WebView overlay).
+
+To close the chat when a deeplink is clicked, call `viewModel.closeConcierge()` inside your `handleLink` callback before returning `true`:
 
 ```kotlin
 ConciergeChat(

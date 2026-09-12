@@ -7,6 +7,24 @@ Keywords:
 
 # Release notes
 
+## September 11, 2026
+
+### Android Brand Concierge 3.8.1
+
+* Added support for a `concierge.region` configuration key to specify the region as part of Concierge configuration.
+* Prefixed Concierge drawable resource names to avoid collisions with host app resources.
+
+## September 10, 2026
+
+### Android Brand Concierge 3.8.0
+
+* Fixed ExtendedProductCard dimensions and drop shadow to match spec.
+* Added a themeable, payload-driven CTA button to product cards with accurate product-name reporting in CTA analytics.
+* Added gradient theming support for the chat input bar border and mic/send icons.
+* Added audio-reactive gradient theming to the listening waveform.
+* Updated the external-link pop-out icon and fixed input bar icon-sizing regressions.
+* Added support for providing an auth token via `setAuthTokenProvider`, with a configurable timeout aligned to iOS behavior.
+
 ## September 2, 2026
 
 ### React Native UserProfile 7.0.1
