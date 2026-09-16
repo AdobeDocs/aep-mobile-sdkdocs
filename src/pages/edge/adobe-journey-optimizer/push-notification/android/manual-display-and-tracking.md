@@ -53,7 +53,7 @@ Calling [resetIdentities](../../api-reference.md#resetidentities) will clear the
 
 <InlineAlert variant="warning" slots="text"/>
 
-`MessagingPushPayload` does not render [push templates](push-templates.md) (identified by the `adb_template_type` key). A push template is rendered only on the [automatic display and tracking](automatic-display-and-tracking.md) path.
+`MessagingPushPayload` does not render [push templates](../../../../home/base/mobile-core/plugins/built-in-plugins/push-templates-plugin/index.md) (identified by the `adb_template_type` key). A push template is rendered only on the [automatic display and tracking](automatic-display-and-tracking.md) path.
 
 1. In `onMessageReceived` method of `YourAppFirebaseMessagingService` class, create a `MessagingPushPayload` object from the remoteMessage. `MessagingPushPayload` will unpack the remoteMessage and provide APIs for getting attributes used for creating the push notification.
 
