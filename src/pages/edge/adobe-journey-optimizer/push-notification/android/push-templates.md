@@ -46,26 +46,40 @@ MobileCore.addPlugins(new NotificationBuilderPlugin());
 
 If your app does not add this dependency, or does not register the plugin, a push carrying `adb_template_type` falls back to a basic notification. This is a non-event: no crash, just a log warning.
 
-## Payload keys
-
-Every push template push carries the top level `adb_template_type` key, and optionally `adb_version`, both described in [Push notification payload keys](../push-payload.md). The template-specific fields below live inside the `adb_template_properties` key, a JSON-encoded string.
-
-<InlineAlert variant="warning" slots="text"/>
-
-`adb_version` is optional and defaults to `"1"` when absent. If you do set it, it must be a top level key in the push data, not nested inside `adb_template_properties` - nesting it there means it is not read, and the default is used instead.
-
-Both templates also use the shared keys already documented in [Push notification payload keys](../push-payload.md): `adb_title`, `adb_body`, `adb_sound`, `adb_n_count`, `adb_n_priority`, `adb_n_visibility`, `adb_channel_id`, `adb_small_icon` (or the legacy `adb_icon`), `adb_a_type`, `adb_uri`, `adb_act`, `adb_tag`, `adb_sticky`, and `adb_ticker`. Neither template supports the `adb_clr_*` color keys or the "remind later" keys (`adb_rem_txt`, `adb_rem_ts`).
-
 ## Basic template (`ajo_basic`)
 
-A title, a body, and an expanded hero image. There is no large side icon.
+A title, a body, and an expanded hero image. There is no large side icon. The same `adb_body` text is shown in both the collapsed and expanded state; `adb_body_ex` has no effect on this template.
 
-| **Key** | **Type** | **Description** |
-| :------ | :------- | :--------------- |
-| `adb_image` | String | URL of the hero image shown when the notification is expanded. |
-| `adb_template_properties.adb_image_scale_type` | String | How the hero image scales inside its frame. One of `center_crop` (default) or `fit_center`. |
+### Configuration
 
-Sample payload:
+No additional `AndroidManifest.xml` configuration is required. Unlike the Campaign Classic basic template, the AJO basic template does not support "remind later", so `USE_EXACT_ALARM` is not needed.
+
+### Properties
+
+| **Field** | **Required** | **Key** | **Type** | **Description** |
+| :-------- | :----------- | :------ | :------- | :--------------- |
+| Payload Version | ⛔️ | `adb_version` | string | Version of the payload assigned by the authoring UI. Defaults to `"1"` when absent. Must be a top level key, not nested inside `adb_template_properties`. |
+| Template Type | ✅ | `adb_template_type` | string | Identifies the template to render. The basic template uses a value of `"ajo_basic"`. |
+| Title | ✅ | `adb_title` | string | Text shown in the notification's title, in both the collapsed and expanded state. |
+| Body | ✅ | `adb_body` | string | Text shown in the notification's body, in both the collapsed and expanded state. |
+| Image | ⛔️ | `adb_image` | string | URL of the hero image shown when the notification is expanded. |
+| Image Scale Type | ⛔️ | `adb_template_properties.adb_image_scale_type` | string | How the hero image scales inside its frame. One of `center_crop` (default) or `fit_center`. |
+| Sound | ⛔️ | `adb_sound` | string | Sound played when the notification is delivered. |
+| Small Icon | ⛔️ | `adb_small_icon` | string | Name of a small icon to use in the notification. Falls back to the legacy `adb_icon` key. The notification is not displayed without a small icon. |
+| Link URI | ⛔️ | `adb_uri` | string | URI handled when the user clicks the notification. |
+| Link Type | ⛔️ | `adb_a_type` | string | Type of link represented in `adb_uri`. Required if `adb_uri` is specified. |
+| Button(s) | ⛔️ | `adb_act` | string | An encoded JSON string of one to three action button objects (`label`, `uri`, `type`). |
+| Channel ID | ⛔️ | `adb_channel_id` | string | The notification's channel ID. Falls back to a default "General Notifications" channel when absent. |
+| Badge Count | ⛔️ | `adb_n_count` | string | Value to show on the app's badge. |
+| Priority | ⛔️ | `adb_n_priority` | string | Notification priority (API < 26) or channel importance (API >= 26). |
+| Visibility | ⛔️ | `adb_n_visibility` | string | Notification visibility on the lock screen. |
+| Tag | ⛔️ | `adb_tag` | string | Replaces an existing notification with the same tag, instead of creating a new one. |
+| Sticky | ⛔️ | `adb_sticky` | boolean | When `true`, the notification persists after the user clicks it, instead of auto-dismissing. |
+| Ticker | ⛔️ | `adb_ticker` | string | Ticker text sent to accessibility services. |
+
+Not supported by this template: the `adb_clr_*` color keys, `adb_body_ex`, and the "remind later" keys (`adb_rem_txt`, `adb_rem_ts`).
+
+### Example
 
 ```json
 {
@@ -95,16 +109,36 @@ A title, a short collapsed body, a longer expanded body, and an optional large s
 
 Body text is split across two keys: the flat `adb_body` key holds the full text shown when the notification is expanded, and `adb_template_properties.adb_collapsed_text` holds the short text shown when it is collapsed. When `adb_collapsed_text` is absent, the collapsed state falls back to `adb_body`.
 
-| **Key** | **Type** | **Description** |
-| :------ | :------- | :--------------- |
-| `adb_template_properties.adb_collapsed_text` | String | Short text shown in the collapsed state. Falls back to `adb_body` when absent. |
-| `adb_template_properties.adb_large_icon` | String | URL of the large side icon, shown in both the collapsed and expanded state. Always rendered center-cropped; there is no scale type option. |
+### Configuration
 
-<InlineAlert variant="warning" slots="text"/>
+No additional `AndroidManifest.xml` configuration is required.
 
-The large icon for this template is the `adb_large_icon` key **inside** `adb_template_properties`. The flat, top level `adb_large_icon` key (used by other push notification types) is not read by this template.
+### Properties
 
-Sample payload:
+| **Field** | **Required** | **Key** | **Type** | **Description** |
+| :-------- | :----------- | :------ | :------- | :--------------- |
+| Payload Version | ⛔️ | `adb_version` | string | Version of the payload assigned by the authoring UI. Defaults to `"1"` when absent. Must be a top level key, not nested inside `adb_template_properties`. |
+| Template Type | ✅ | `adb_template_type` | string | Identifies the template to render. The big text template uses a value of `"ajo_bigtext"`. |
+| Title | ✅ | `adb_title` | string | Text shown in the notification's title, in both the collapsed and expanded state. |
+| Body (expanded) | ✅ | `adb_body` | string | Full text shown when the notification is expanded. |
+| Collapsed Text | ⛔️ | `adb_template_properties.adb_collapsed_text` | string | Short text shown when the notification is collapsed. Falls back to `adb_body` when absent. |
+| Large Icon | ⛔️ | `adb_template_properties.adb_large_icon` | string | URL of the large side icon, shown in both the collapsed and expanded state. Always rendered center-cropped; there is no scale type option. Lives inside `adb_template_properties`, not as a flat, top level `adb_large_icon` key. |
+| Sound | ⛔️ | `adb_sound` | string | Sound played when the notification is delivered. |
+| Small Icon | ⛔️ | `adb_small_icon` | string | Name of a small icon to use in the notification. Falls back to the legacy `adb_icon` key. The notification is not displayed without a small icon. |
+| Link URI | ⛔️ | `adb_uri` | string | URI handled when the user clicks the notification. |
+| Link Type | ⛔️ | `adb_a_type` | string | Type of link represented in `adb_uri`. Required if `adb_uri` is specified. |
+| Button(s) | ⛔️ | `adb_act` | string | An encoded JSON string of one to three action button objects (`label`, `uri`, `type`). |
+| Channel ID | ⛔️ | `adb_channel_id` | string | The notification's channel ID. Falls back to a default "General Notifications" channel when absent. |
+| Badge Count | ⛔️ | `adb_n_count` | string | Value to show on the app's badge. |
+| Priority | ⛔️ | `adb_n_priority` | string | Notification priority (API < 26) or channel importance (API >= 26). |
+| Visibility | ⛔️ | `adb_n_visibility` | string | Notification visibility on the lock screen. |
+| Tag | ⛔️ | `adb_tag` | string | Replaces an existing notification with the same tag, instead of creating a new one. |
+| Sticky | ⛔️ | `adb_sticky` | boolean | When `true`, the notification persists after the user clicks it, instead of auto-dismissing. |
+| Ticker | ⛔️ | `adb_ticker` | string | Ticker text sent to accessibility services. |
+
+Not supported by this template: the `adb_clr_*` color keys and the "remind later" keys (`adb_rem_txt`, `adb_rem_ts`).
+
+### Example
 
 ```json
 {
