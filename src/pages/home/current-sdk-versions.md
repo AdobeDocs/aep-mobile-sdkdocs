@@ -165,7 +165,7 @@ The Adobe Experience Platform SDK for Roku supports Roku OS 11.0 or later. The p
 | [Mobile Core](base/mobile-core/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/vega-aepcore.svg?color=green&label=%40adobe%2Fvega-aepcore&logo=npm&style=flat-square)](https://www.npmjs.com/package/@adobe/vega-aepcore) |
 | [Media for Edge Network](../edge/media-for-edge-network/index.md) | [![npm version](https://img.shields.io/npm/v/@adobe/vega-aepmedia.svg?color=green&label=%40adobe%2Fvega-aepmedia&logo=npm&style=flat-square)](https://www.npmjs.com/package/@adobe/vega-aepmedia) |
 
-The Adobe Experience Platform SDK for Vega OS supports [Vega OS](https://developer.amazon.com/docs/vega/vega.html) — the operating system designed for Fire TV streaming media players. For information about changes and updates, refer to the [release notes](release-notes/index.md#vega-os-core-101).
+The Adobe Experience Platform SDK for Vega OS supports [Vega OS](https://developer.amazon.com/docs/vega/vega.html) — the operating system designed for Fire TV streaming media players. For information about changes and updates, refer to the [release notes](release-notes/index.md#vega-os-core-110).
 
 ## Supported Platforms
 

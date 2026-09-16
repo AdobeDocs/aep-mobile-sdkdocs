@@ -25,6 +25,30 @@ Keywords:
 * Updated the external-link pop-out icon and fixed input bar icon-sizing regressions.
 * Added support for providing an auth token via `setAuthTokenProvider`, with a configurable timeout aligned to iOS behavior.
 
+### Vega OS Core 1.1.0
+
+This release adds support for the general availability (GA) release of the Vega SDK.
+
+* Added support for Vega SDK **0.24** (GA) with **React Native 0.83** (React 19.2.0).
+* Maintains compatibility with Vega SDK **0.23** on **React Native 0.72**.
+
+For more information, refer to the documentation below:
+
+* [`@adobe/vega-aepcore`](https://www.npmjs.com/package/@adobe/vega-aepcore)
+* [Integration tutorial](../../edge/media-for-edge-network/tutorial.md)
+
+### Vega OS Media for Edge Network 1.1.0
+
+This release adds support for the general availability (GA) release of the Vega SDK.
+
+* Added support for Vega SDK **0.24** (GA) with **React Native 0.83** (React 19.2.0).
+* Maintains compatibility with Vega SDK **0.23** on **React Native 0.72**.
+
+For more information, refer to the documentation below:
+
+* [`@adobe/vega-aepmedia`](https://www.npmjs.com/package/@adobe/vega-aepmedia)
+* [Integration tutorial](../../edge/media-for-edge-network/tutorial.md)
+
 ## September 2, 2026
 
 ### React Native UserProfile 7.0.1
