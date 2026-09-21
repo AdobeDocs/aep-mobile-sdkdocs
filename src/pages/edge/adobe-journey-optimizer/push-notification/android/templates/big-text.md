@@ -13,19 +13,13 @@ keywords:
 
 # Big text template (`ajo_bigtext`)
 
-A title, a short collapsed body, a longer expanded body, and an optional large side icon. There is no hero image.
+A title, a short collapsed body, a longer expanded body, and an optional large side icon.
 
-<InlineAlert variant="info" slots="text"/>
-
-This template renders only when the [push templates plugin](../../../../../home/base/mobile-core/plugins/built-in-plugins/push-templates-plugin/index.md) (`notificationbuilder`) is added to the app and registered with `MobileCore.addPlugins(...)`. Without it, this push falls back to a plain notification.
-
-<InlineAlert variant="info" slots="text"/>
-
-Body text is split across two keys: the flat `adb_body` key holds the full text shown when the notification is expanded, and `adb_template_properties.adb_collapsed_text` holds the short text shown when it is collapsed. When `adb_collapsed_text` is absent, the collapsed state falls back to `adb_body`.
+Body text is split across two keys: `adb_body` holds the full text shown when the notification is expanded, and `adb_template_properties.adb_collapsed_text` holds the short text shown when it is collapsed. When `adb_collapsed_text` is absent, the collapsed state falls back to `adb_body`.
 
 ## Configuration
 
-Add and configure the [push templates plugin](../../../../../home/base/mobile-core/plugins/built-in-plugins/push-templates-plugin/index.md) - no additional `AndroidManifest.xml` configuration is required beyond that.
+This template is rendered by the [push templates plugin](../../../../../home/base/mobile-core/plugins/built-in-plugins/push-templates-plugin/index.md). Add the plugin to your app and register it with `MobileCore.addPlugins(...)`. When the plugin is not present, the push falls back to a plain notification.
 
 ## Properties
 

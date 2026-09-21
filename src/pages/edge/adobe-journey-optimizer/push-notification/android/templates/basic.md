@@ -13,15 +13,11 @@ keywords:
 
 # Basic template (`ajo_basic`)
 
-A title, a body, and an expanded hero image. There is no large side icon. The same `adb_body` text is shown in both the collapsed and expanded state; `adb_body_ex` has no effect on this template.
-
-<InlineAlert variant="info" slots="text"/>
-
-This template renders only when the [push templates plugin](../../../../../home/base/mobile-core/plugins/built-in-plugins/push-templates-plugin/index.md) (`notificationbuilder`) is added to the app and registered with `MobileCore.addPlugins(...)`. Without it, this push falls back to a plain notification.
+A title, a body, and an expanded hero image. The same body text is shown in both the collapsed and expanded states.
 
 ## Configuration
 
-Add and configure the [push templates plugin](../../../../../home/base/mobile-core/plugins/built-in-plugins/push-templates-plugin/index.md) - no additional `AndroidManifest.xml` configuration is required beyond that.
+This template is rendered by the [push templates plugin](../../../../../home/base/mobile-core/plugins/built-in-plugins/push-templates-plugin/index.md). Add the plugin to your app and register it with `MobileCore.addPlugins(...)`. When the plugin is not present, the push falls back to a plain notification.
 
 ## Properties
 
