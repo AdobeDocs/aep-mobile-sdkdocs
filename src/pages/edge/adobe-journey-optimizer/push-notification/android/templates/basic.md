@@ -21,7 +21,7 @@ This template renders only when the [push templates plugin](../../../../../home/
 
 ## Configuration
 
-No additional `AndroidManifest.xml` configuration is required.
+Add and configure the [push templates plugin](../../../../../home/base/mobile-core/plugins/built-in-plugins/push-templates-plugin/index.md) - no additional `AndroidManifest.xml` configuration is required beyond that.
 
 ## Properties
 
@@ -29,12 +29,10 @@ In addition to the top level keys documented on [Push notification payload keys]
 
 | **Field** | **Required** | **Key** | **Type** | **Description** |
 | :-------- | :----------- | :------ | :------- | :--------------- |
-| Template Type | ✅ | `adb_template_type` | string | Identifies the template to render. The basic template uses a value of `"ajo_basic"`. |
-| Payload Version | ⛔️ | `adb_version` | string | Version of the payload assigned by the authoring UI. Defaults to `"1"` when absent. |
-| Image | ⛔️ | `adb_image` | string | URL of the hero image shown when the notification is expanded. |
-| Image Scale Type | ⛔️ | `adb_template_properties.adb_image_scale_type` | enum | How the hero image scales inside its frame. One of `center_crop` (default) or `fit_center`. |
-
-Not supported by this template: the `adb_clr_*` color keys, `adb_body_ex`, and the "remind later" keys (`adb_rem_txt`, `adb_rem_ts`).
+| Template Type | Yes | `adb_template_type` | string | Identifies the template to render. The basic template uses a value of `"ajo_basic"`. |
+| Payload Version | No | `adb_version` | string | Version of the payload assigned by the authoring UI. Defaults to `"1"` when absent. |
+| Image | No | `adb_image` | string | URL of the hero image shown when the notification is expanded. |
+| Image Scale Type | No | `adb_template_properties.adb_image_scale_type` | enum | How the hero image scales inside its frame. One of `center_crop` (default) or `fit_center`. |
 
 ## Example
 

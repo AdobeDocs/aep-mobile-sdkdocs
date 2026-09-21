@@ -17,6 +17,6 @@ A title, a body, and an expanded hero image. There is no large side icon.
 
 See the [push templates plugin](index.md) for the mechanism, prerequisites, and how to add the plugin.
 
-<!-- TODO: add a screenshot/GIF of the rendered ajo_basic notification (collapsed and expanded) -->
+{/* TODO: add a screenshot/GIF of the rendered ajo_basic notification (collapsed and expanded) */}
 
 For the payload keys, configuration notes, and a sample payload, see [Basic template](../../../../../../edge/adobe-journey-optimizer/push-notification/android/templates/basic.md) under Rich Media Push Notifications.

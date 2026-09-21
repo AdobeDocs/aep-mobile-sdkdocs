@@ -25,7 +25,7 @@ Body text is split across two keys: the flat `adb_body` key holds the full text 
 
 ## Configuration
 
-No additional `AndroidManifest.xml` configuration is required.
+Add and configure the [push templates plugin](../../../../../home/base/mobile-core/plugins/built-in-plugins/push-templates-plugin/index.md) - no additional `AndroidManifest.xml` configuration is required beyond that.
 
 ## Properties
 
@@ -33,12 +33,10 @@ In addition to the top level keys documented on [Push notification payload keys]
 
 | **Field** | **Required** | **Key** | **Type** | **Description** |
 | :-------- | :----------- | :------ | :------- | :--------------- |
-| Template Type | ✅ | `adb_template_type` | string | Identifies the template to render. The big text template uses a value of `"ajo_bigtext"`. |
-| Payload Version | ⛔️ | `adb_version` | string | Version of the payload assigned by the authoring UI. Defaults to `"1"` when absent. |
-| Collapsed Text | ⛔️ | `adb_template_properties.adb_collapsed_text` | string | Short text shown when the notification is collapsed. Falls back to `adb_body` when absent. |
-| Large Icon | ⛔️ | `adb_template_properties.adb_large_icon` | string | URL of the large side icon, shown in both the collapsed and expanded state. Always rendered center-cropped; there is no scale type option. Lives inside `adb_template_properties`, not as a flat, top level `adb_large_icon` key. |
-
-Not supported by this template: the `adb_clr_*` color keys and the "remind later" keys (`adb_rem_txt`, `adb_rem_ts`).
+| Template Type | Yes | `adb_template_type` | string | Identifies the template to render. The big text template uses a value of `"ajo_bigtext"`. |
+| Payload Version | No | `adb_version` | string | Version of the payload assigned by the authoring UI. Defaults to `"1"` when absent. |
+| Collapsed Text | No | `adb_template_properties.adb_collapsed_text` | string | Short text shown when the notification is collapsed. Falls back to `adb_body` when absent. |
+| Large Icon | No | `adb_template_properties.adb_large_icon` | string | URL of the large side icon, shown in both the collapsed and expanded state. Always rendered center-cropped; there is no scale type option. Lives inside `adb_template_properties`, not as a flat, top level `adb_large_icon` key. |
 
 ## Example
 
