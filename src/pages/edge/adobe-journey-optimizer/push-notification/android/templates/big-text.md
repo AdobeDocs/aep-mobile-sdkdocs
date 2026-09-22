@@ -32,6 +32,14 @@ In addition to the top level keys documented on [Push notification payload keys]
 | Collapsed Text | No | `adb_template_properties.adb_collapsed_text` | string | Short text shown when the notification is collapsed. Falls back to `adb_body` when absent. |
 | Large Icon | No | `adb_template_properties.adb_large_icon` | string | URL of the large side icon, shown in both the collapsed and expanded state. Always rendered center-cropped; there is no scale type option. Lives inside `adb_template_properties`, not as a flat, top level `adb_large_icon` key. |
 
+### Large icon recommendations
+
+<InlineAlert variant="info" slots="text"/>
+
+The aspect ratio recommendation helps the large icon display reliably across multiple devices. **This recommendation acts only as a guideline** - you should still test a notification prior to sending it.
+
+* Recommended aspect ratio: 1:1 (square). The large icon is always rendered center-cropped, so a square source image fills the icon area without unexpected cropping.
+
 ## Example
 
 ```json
