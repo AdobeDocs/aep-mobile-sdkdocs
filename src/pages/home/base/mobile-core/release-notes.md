@@ -8,6 +8,20 @@ keywords:
 
 # Release notes
 
+## September 23, 2026
+
+### React Native Core 7.0.2
+
+* Fixed missing TypeScript declaration (.d.ts) files, restoring type definitions and IDE autocomplete for consumers.
+
+## September 17, 2026
+
+### Android Core 3.9.0
+
+* Added support for Plugin Architecture
+* Optimized log statements to save memory
+* Added type checks in Data marshaller logic for preventing unsopported types from being marshalled.
+
 ## September 2, 2026
 
 ### React Native Core 7.0.1

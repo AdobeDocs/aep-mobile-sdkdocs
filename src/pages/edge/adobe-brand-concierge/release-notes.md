@@ -10,6 +10,10 @@ keywords:
 
 ## September 11, 2026
 
+### iOS Brand Concierge 5.8.1
+
+* Region is now optionally configurable for Brand Concierge endpoint creation
+
 ### Android Brand Concierge 3.8.1
 
 * Added support for a `concierge.region` configuration key to specify the region as part of Concierge configuration.
@@ -18,6 +22,17 @@ keywords:
 **Full Changelog**: https://github.com/adobe/aepsdk-concierge-android/compare/v3.8.0...v3.8.1
 
 ## September 10, 2026
+
+### iOS Brand Concierge 5.8.0
+
+* Fixed voice-to-text never stopping after the user stops talking
+* More prominent listening waveform + gradient theming
+* Render input bar leading icon + fix icon centering
+* Gradient support for input bar border and mic/send icons
+* Fix excess white space after last message 
+* Auth token support
+* Themeable CTA button on product cards support
+* Add support for geo uri links to route to Apple maps in chat window
 
 ### Android Brand Concierge 3.8.0
 

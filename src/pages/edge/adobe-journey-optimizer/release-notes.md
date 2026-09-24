@@ -9,6 +9,23 @@ keywords:
 
 # Release notes
 
+## September 23, 2026
+
+### iOS Messaging 5.16.2
+
+Fixed update proposition api's completion callback to return true in case of non recoverable edge error to handle both success and error scenario for a single request.
+
+### Android Messaging 3.12.1
+
+Fixed error handling for edge response with success along with error scenario by applying proposition change and calling completion callback with true.
+Fixed In app message frequency capping issue on App launch condition.
+
+## September 16, 2026
+
+### iOS Messaging 5.16.1
+
+* Fixed an issue where push notification tracking could omit messageProfile and pushChannelContext from the XDM, whenever the notification's decisioning block had no experienceDecisioningRequestId.
+
 ## August 20, 2026
 
 ### iOS Messaging 5.16.0
