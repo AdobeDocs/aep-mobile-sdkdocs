@@ -7,7 +7,106 @@ Keywords:
 
 # Release notes
 
+## September 23, 2026
+
+### React Native UserProfile 7.0.2
+
+* Fixed missing TypeScript declaration (.d.ts) files, restoring type definitions and IDE autocomplete for consumers.
+
+### React Native Target 7.0.2
+
+* Fixed missing TypeScript declaration (.d.ts) files, restoring type definitions and IDE autocomplete for consumers.
+
+### React Native Optimize 7.2.1
+
+* Fixed missing TypeScript declaration (.d.ts) files, restoring type definitions and IDE autocomplete for consumers.
+
+### React Native EdgeConsent 7.0.2
+
+* Fixed missing TypeScript declaration (.d.ts) files, restoring type definitions and IDE autocomplete for consumers.
+
+### React Native Edge 7.0.2
+
+* Fixed missing TypeScript declaration (.d.ts) files, restoring type definitions and IDE autocomplete for consumers.
+
+### React Native Core 7.0.2
+
+* Fixed missing TypeScript declaration (.d.ts) files, restoring type definitions and IDE autocomplete for consumers.
+
+### Android BOM 3.22.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.21.0) | BOM (3.22.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:core** | **3.8.0** | **3.9.0**|
+| **com.adobe.marketing.mobile:edge** | **3.0.2** | **3.1.0**|
+| **com.adobe.marketing.mobile:messaging** | **3.12.0** | **3.12.1**|
+| com.adobe.marketing.mobile:analytics | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:assurance | 3.0.7 | 3.0.7 |
+| com.adobe.marketing.mobile:audience | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaign | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.4 | 3.1.4 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:edgeidentity | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:identity | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:media | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:optimize | 3.7.0 | 3.7.0 |
+| com.adobe.marketing.mobile:places | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### iOS Messaging 5.16.2
+
+Fixed update proposition api's completion callback to return true in case of non recoverable edge error to handle both success and error scenario for a single request.
+
+### Android Messaging 3.12.1
+
+Fixed error handling for edge response with success along with error scenario by applying proposition change and calling completion callback with true.
+Fixed In app message frequency capping issue on App launch condition.
+
+## September 17, 2026
+
+### Android Core 3.9.0
+
+* Added support for Plugin Architecture
+* Optimized log statements to save memory
+* Added type checks in Data marshaller logic for preventing unsopported types from being marshalled.
+
+## September 16, 2026
+
+### iOS Messaging 5.16.1
+
+* Fixed an issue where push notification tracking could omit messageProfile and pushChannelContext from the XDM, whenever the notification's decisioning block had no experienceDecisioningRequestId.
+
+## September 8, 2026
+
+### iOS Edge 5.1.0
+
+* Added Edge Event Batching for queued events.
+
+### Android Edge 3.1.0
+
+* Added Event batching for queued events
+
 ## September 11, 2026
+
+### iOS Brand Concierge 5.8.1
+
+* Region is now optionally configurable for Brand Concierge endpoint creation
 
 ### Android Brand Concierge 3.8.1
 
@@ -15,6 +114,17 @@ Keywords:
 * Prefixed Concierge drawable resource names to avoid collisions with host app resources.
 
 ## September 10, 2026
+
+### iOS Brand Concierge 5.8.0
+
+* Fixed voice-to-text never stopping after the user stops talking
+* More prominent listening waveform + gradient theming
+* Render input bar leading icon + fix icon centering
+* Gradient support for input bar border and mic/send icons
+* Fix excess white space after last message 
+* Auth token support
+* Themeable CTA button on product cards support
+* Add support for geo uri links to route to Apple maps in chat window
 
 ### Android Brand Concierge 3.8.0
 

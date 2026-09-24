@@ -9,6 +9,12 @@ keywords:
 
 # Release notes
 
+## September 23, 2026
+
+### React Native EdgeConsent 7.0.2
+
+* Fixed missing TypeScript declaration (.d.ts) files, restoring type definitions and IDE autocomplete for consumers.
+
 ## September 2, 2026
 
 ### React Native EdgeConsent 7.0.1
