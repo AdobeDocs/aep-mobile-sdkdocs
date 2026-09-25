@@ -8,6 +8,23 @@ keywords:
 
 # Release notes
 
+## September 24, 2026
+
+### iOS Core 5.12.0
+
+## What's Changed
+* Mob 25282/network availabilty by @namArora3112 in https://github.com/adobe/aepsdk-core-ios/pull/1217
+* Updating version to 5.11.0 by @github-actions[bot] in https://github.com/adobe/aepsdk-core-ios/pull/1218
+* Dev v5.11.0 -> Staging  by @namArora3112 in https://github.com/adobe/aepsdk-core-ios/pull/1219
+* Back Merge Main -> Staging (5.11.0 Release) by @akhiljain1907 in https://github.com/adobe/aepsdk-core-ios/pull/1226
+* Feature/sqlite wal by @shushinde in https://github.com/adobe/aepsdk-core-ios/pull/1225
+* Updating version to 5.12.0 by @github-actions[bot] in https://github.com/adobe/aepsdk-core-ios/pull/1236
+* Dev v5.12.0 by @shushinde in https://github.com/adobe/aepsdk-core-ios/pull/1235
+* Staging->Main v5.12.0 by @shushinde in https://github.com/adobe/aepsdk-core-ios/pull/1237
+
+
+**Full Changelog**: https://github.com/adobe/aepsdk-core-ios/compare/5.11.0...5.12.0
+
 ## September 23, 2026
 
 ### React Native Core 7.0.2
