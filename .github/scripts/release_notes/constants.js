@@ -53,6 +53,7 @@ const repoNames = [
     "aepsdk-ui-android",
     "aepsdk-concierge-android",
     "aepsdk-concierge-ios",
+    "aepsdk-kepler",
 ]
 
 const EXTENSION_ENUM = Object.freeze({
@@ -80,7 +81,12 @@ const EXTENSION_ENUM = Object.freeze({
     CAMPAIGN_CLASSIC: "Campaign Classic",
     NOTIFICATION_CONTENT: "Notification Content Extension",
     NOTIFICATION_BUILDER: "Notification Builder",
-    CONCIERGE: "Brand Concierge"
+    CONCIERGE: "Brand Concierge",
+    // Vega OS packages (monorepo aepsdk-kepler). The display labels intentionally
+    // reuse "Core" and use "Media for Edge Network"; the "Vega OS" platform prefix
+    // disambiguates them from the iOS/Android extensions of the same name.
+    VEGA_CORE: "Core",
+    VEGA_MEDIA: "Media for Edge Network"
 })
 
 const PLATFORM_ENUM = Object.freeze({
@@ -88,7 +94,8 @@ const PLATFORM_ENUM = Object.freeze({
     ANDROID: "Android",
     FLUTTER: "Flutter",
     ROKU: "Roku",
-    REACT_NATIVE: "React Native"
+    REACT_NATIVE: "React Native",
+    VEGA: "Vega OS"
 })
 
 const releaseNotesLocation = (() => {
@@ -129,6 +136,8 @@ const REACT_NATIVE_RELEASE_TAG_PREFIX = "@adobe/react-native-aep" // React Nativ
 
 const FLUTTER_RELEASE_TAG_PREFIX = "flutter_aep" // Flutter release tag prefix
 
+const VEGA_RELEASE_TAG_PREFIX = "@adobe/vega-aep" // Vega OS release tag prefix (e.g. @adobe/vega-aepcore-1.1.0)
+
 module.exports = {
     repoNames,
     releaseNotesLocation,
@@ -139,5 +148,6 @@ module.exports = {
     PLATFORM_ENUM,
     BOM_RELEASE_TAG_PREFIX,
     REACT_NATIVE_RELEASE_TAG_PREFIX,
-    FLUTTER_RELEASE_TAG_PREFIX
+    FLUTTER_RELEASE_TAG_PREFIX,
+    VEGA_RELEASE_TAG_PREFIX
 }
