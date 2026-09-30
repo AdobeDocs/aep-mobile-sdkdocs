@@ -212,6 +212,7 @@
                 - [Android](/edge/adobe-journey-optimizer/live-activities/android/index.md)
                     - [Overview](/edge/adobe-journey-optimizer/live-activities/android/index.md)
                     - [API reference](/edge/adobe-journey-optimizer/live-activities/android/api-reference.md)
+                    - [Live Update payload](/edge/adobe-journey-optimizer/live-activities/android/payload.md)
                     - [Live Updates implementation tutorial](/edge/adobe-journey-optimizer/live-activities/android/tutorial.md)
             - [Public classes and enums](/edge/adobe-journey-optimizer/public-classes/index.md)
                 - [ContentCard](/edge/adobe-journey-optimizer/public-classes/content-card.md)

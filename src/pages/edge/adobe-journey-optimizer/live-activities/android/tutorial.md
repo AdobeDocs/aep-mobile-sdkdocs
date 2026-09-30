@@ -14,9 +14,9 @@ keywords:
 
 # Live Updates implementation tutorial
 
-This tutorial walks through a complete Live Updates integration: registering the plugin, providing a notification style, reacting to lifecycle and interaction callbacks, understanding automatic tracking, tracking FCM topic subscribe / unsubscribe, and suppressing unwanted updates with an interceptor.
+This tutorial walks through a complete Live Updates integration: registering the plugin, providing a notification style, reacting to lifecycle and interaction callbacks, understanding automatic tracking, tracking FCM topic subscribe and unsubscribe, suppressing unwanted updates with an interceptor, and troubleshooting.
 
-For the full API surface, see the [API reference](api-reference.md). For setup (dependencies and plugin registration), see the [overview](index.md).
+For the full API surface, see the [API reference](api-reference.md). For the payload keys and sample pushes, see [Live Update payload](payload.md). For setup (dependencies and plugin registration), see the [overview](index.md).
 
 ## Pre-requisites
 
@@ -24,14 +24,14 @@ A Live Update is delivered as an Adobe Journey Optimizer push notification, so *
 
 * [Sync the push token](../../push-notification/android/automatic-display-and-tracking.md#sync-the-push-token) with `MobileCore.setPushIdentifier(...)` so Adobe Journey Optimizer can target the device.
 * [Register the Messaging `FirebaseMessagingService`](../../push-notification/android/automatic-display-and-tracking.md#register-messaging-extensions-firebasemessagingservice) (or forward messages from your own service) so incoming pushes reach the SDK.
-* [Create a notification channel](../../push-notification/android/automatic-display-and-tracking.md#notification-channel) whose id you set in the Live Update payload's `notification_channel_id`.
-* [Configure the small icon](../../push-notification/android/automatic-display-and-tracking.md#configuring-small-icon) used by the notification.
+* On Android 13 (API 33) and later, [request the `POST_NOTIFICATIONS` permission](https://developer.android.com/develop/ui/views/notifications/notification-permission) at runtime.
+* Optionally, [configure the small icon](index.md#configuring-small-icon) and [create the notification channel](index.md#notification-channel) yourself. When the channel named in the payload's `notification_channel_id` does not exist, the plugin creates it with `IMPORTANCE_HIGH`.
 
 With push working, register the Live Updates plugin as shown in the [overview](index.md), then follow the steps below.
 
 ## 1. Provide a notification style
 
-The plugin renders the chip, but your app decides how it looks. Implement [`ILiveUpdateStyleProvider`](api-reference.md#iliveupdatestyleprovider), reading `payload.contentState` to build a `NotificationCompat.Style`. Return `null` to drop a payload you do not recognize.
+The plugin renders the chip, but your app decides how it looks. Implement [`ILiveUpdateStyleProvider`](api-reference.md#iliveupdatestyleprovider), reading `payload.contentState` to build a `NotificationCompat.Style`. The keys inside `content_state` are yours to define; the ones below match the [sample payloads](payload.md#example). If you return `null`, the plugin still posts the notification, without a style.
 
 ```kotlin
 class MyLiveUpdateStyleProvider(
@@ -44,7 +44,7 @@ class MyLiveUpdateStyleProvider(
                 val progress = payload.contentState?.optInt("custom_key_progress", 0) ?: 0
                 NotificationCompat.ProgressStyle().setProgress(progress)
             }
-            else -> null // unknown template -> SDK drops the push
+            else -> null // unknown template: posted without a style
         }
     }
 }
@@ -100,52 +100,55 @@ override fun onDismissed(payload: LiveUpdatePayload) {
 
 <InlineAlert variant="info" slots="text"/>
 
-`onClick` and `onDismissed` can arrive after the app process was killed and cold-started just to deliver the interaction. Register the listener in `Application.onCreate` (not from an `Activity`) so it is present when these fire. The re-hydrated `payload` reflects the most recently posted version of the chip - treat `payload.notificationId` as the stable key.
+`onClick` and `onDismissed` can arrive after the app process was killed and cold-started just to deliver the interaction. Register the listener in `Application.onCreate` (not from an `Activity`) so it is present when these fire. The re-hydrated `payload` reflects the most recently posted version of the chip, so treat `payload.notificationId` as the stable key. A notification posted by an `end` push does not call `onDismissed` when it is dismissed.
 
 ## Automatic tracking
 
-Once the plugin is registered, the SDK automatically dispatches Experience Events to Adobe Journey Optimizer for the Live Update lifecycle and the user's interactions - no additional API call is required. It tracks:
+Once the plugin is registered, the SDK automatically dispatches Experience Events to Adobe Journey Optimizer for the Live Update lifecycle and the user's interactions. No additional API call is required.
 
-* when a `start`, `update`, or `end` push is received and rendered;
-* when the user taps the chip;
-* when the user dismisses (swipes away) the chip.
+| **Interaction** | **XDM `eventType`** | **Details** |
+| :-------------- | :------------------ | :---------- |
+| A `start`, `update`, or `end` push is posted | `liveUpdateTracking.received` | `liveActivity.event` is `liveupdate_start`, `liveupdate_update`, or `liveupdate_end`. |
+| The user taps the chip | `liveUpdateTracking.applicationOpened` | |
+| The user dismisses the chip | `liveUpdateTracking.customAction` | `pushNotificationTracking.customAction.actionID` is `Dismiss`. |
+| Your app calls a [topic tracking API](#track-topic-subscribe-and-unsubscribe) | `liveUpdateTracking.topic` | `liveActivity.event` is `topic_subscribed` or `topic_unsubscribed`. |
 
-These events are dispatched through Mobile Core and the Edge Network to Adobe Journey Optimizer for reporting.
+`liveActivity.event` is the `_experience.customerJourneyManagement.pushChannelContext.liveActivity.event` field.
+
+The events are dispatched through Mobile Core and the Edge Network. When the `messaging.eventDataset` configuration is set (the dataset the Messaging extension uses for push tracking events), they are sent to that dataset. Each event carries the push's `_xdm` tracking data to correlate it with the originating campaign or journey; when a push has no `_xdm`, no tracking event is sent for it.
 
 ## Track topic subscribe and unsubscribe
 
-The Live Updates SDK does not subscribe the device to Firebase Cloud Messaging topics - your app owns that. The SDK exposes the matching tracking dispatch so subscribe / unsubscribe counts land in reporting. Perform the Firebase call, then, on success, dispatch the tracking event:
+The Live Updates SDK does not subscribe the device to Firebase Cloud Messaging topics; your app owns that. The SDK exposes the matching tracking dispatch so subscribe and unsubscribe counts land in reporting. A common pattern is to subscribe to the Live Update's `topic_name` in `onStart` and unsubscribe in `onEnd`. Perform the Firebase call, then, on success, dispatch the tracking event with the Live Update's payload:
 
 ```kotlin
-val topic = payload.topicName ?: return
-FirebaseMessaging.getInstance().subscribeToTopic(topic)
-    .addOnCompleteListener { task ->
-        if (task.isSuccessful) {
-            // Pass the payload so the topic event correlates to the originating campaign.
-            LiveUpdates.trackTopicSubscribed(topic, payload)
+override fun onStart(payload: LiveUpdatePayload) {
+    val topic = payload.topicName ?: return
+    FirebaseMessaging.getInstance().subscribeToTopic(topic)
+        .addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                // The payload supplies the topic and correlates the event to the originating campaign.
+                LiveUpdates.trackTopicSubscribed(payload)
+            }
         }
-    }
+}
 ```
 
 Unsubscribe mirrors it:
 
 ```kotlin
-FirebaseMessaging.getInstance().unsubscribeFromTopic(topic)
-    .addOnCompleteListener { task ->
-        if (task.isSuccessful) {
-            LiveUpdates.trackTopicUnsubscribed(topic, payload)
+override fun onEnd(payload: LiveUpdatePayload) {
+    val topic = payload.topicName ?: return
+    FirebaseMessaging.getInstance().unsubscribeFromTopic(topic)
+        .addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                LiveUpdates.trackTopicUnsubscribed(payload)
+            }
         }
-    }
+}
 ```
 
-For a standalone subscribe / unsubscribe not tied to a specific Live Update (for example, a topics screen), use the overloads without a payload:
-
-```kotlin
-LiveUpdates.trackTopicSubscribed(topic)
-LiveUpdates.trackTopicUnsubscribed(topic)
-```
-
-The subscribe and unsubscribe events are dispatched to Adobe Journey Optimizer so the counts appear in reporting alongside the Live Update lifecycle events.
+The subscribe and unsubscribe events are dispatched to Adobe Journey Optimizer so the counts appear in reporting alongside the Live Update lifecycle events. No event is sent when the payload has no `topic_name` or no `_xdm`.
 
 ## Suppress updates with an interceptor
 
@@ -163,11 +166,11 @@ LiveUpdates.setLiveUpdateInterceptor(object : ILiveUpdateInterceptor {
 
 <InlineAlert variant="info" slots="text"/>
 
-`shouldDisplayLiveUpdate` runs on the FCM background thread. Keep the decision fast and side-effect-light. When no interceptor is registered, every Live Update proceeds.
+`shouldDisplayLiveUpdate` runs on the FCM background thread. Keep the decision fast and free of side effects. When no interceptor is registered, or the interceptor throws an exception, the Live Update proceeds.
 
 ## Trigger a Live Update locally
 
-To raise a Live Update from local app state instead of a server push, build a payload and call `triggerLocalLiveUpdate`. It runs the same render and tracking path as a received push.
+To raise a Live Update from local app state instead of a server push, build a payload and call `triggerLocalLiveUpdate`. It runs the same path as a received push: interceptor, validation, style provider, posting, and listener callbacks (`onStart` for a local start).
 
 ```kotlin
 val payload = LiveUpdatePayload.create(
@@ -175,18 +178,21 @@ val payload = LiveUpdatePayload.create(
     channelId = "live_updates_channel",
     eventType = LiveUpdatePayload.EVENT_TYPE_LOCAL_START,
     title = "Order on the way",
+    timestamp = System.currentTimeMillis() / 1000,
     contentState = JSONObject().put("custom_key_template_type", "progress")
 )
 LiveUpdates.triggerLocalLiveUpdate(context, payload)
 ```
 
+A local start has no `_xdm`, so no tracking event is sent when it is posted. When a later `update` or `end` push from Adobe Journey Optimizer arrives for the same `notification_id` and `notification_channel_id`, the SDK reports the local start retroactively, with its original time. That push must carry a newer `timestamp` than the local start, or it is dropped.
+
 ## Manual mode
 
-Everything above uses the **SDK-rendered** path: the plugin parses the push, consults your interceptor and style provider, and builds, posts, and tracks the chip for you. In **manual mode** your app builds and posts the Live Update notification itself - the plugin flow does **not** run, so the interceptor and style provider are not consulted. Use manual mode only when you need full control over how the notification is built.
+Everything above uses the **SDK-rendered** path: the plugin parses the push, consults your interceptor and style provider, and builds, posts, and tracks the chip for you. In **manual mode** your app builds and posts the Live Update notification itself. The plugin flow does **not** run, so the interceptor, the `event_type` and `timestamp` validation, and the style provider are skipped. Use manual mode only when you need full control over how the notification is built.
 
 Manual mode for Live Updates is the Live Update counterpart of [Manual display and tracking of push notification](../../push-notification/android/manual-display-and-tracking.md). The push prerequisites (token sync, service registration) are the same; that document covers them.
 
-A Live Update push carries the envelope under the `adb_liveupdate_data` key. In your own `FirebaseMessagingService`, detect it by parsing the message: `LiveUpdatePayload.parse` returns `null` for a non-Live-Update push, so you can fall through to your standard push handling.
+A Live Update push carries the envelope under the `adb_liveupdate_data` key. In your own `FirebaseMessagingService`, detect it with `LiveUpdatePayload.isLiveUpdate`, then parse it with `LiveUpdatePayload.parse`, which returns `null` when the envelope is malformed or a required field is missing.
 
 ```kotlin
 class YourFirebaseMessagingService : FirebaseMessagingService() {
@@ -194,11 +200,11 @@ class YourFirebaseMessagingService : FirebaseMessagingService() {
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         super.onMessageReceived(remoteMessage)
 
-        val payload = LiveUpdatePayload.parse(remoteMessage)
-        if (payload == null) {
-            // Not a Live Update - handle it as a standard push (see Manual display and tracking).
+        if (!LiveUpdatePayload.isLiveUpdate(remoteMessage)) {
+            // Not a Live Update: handle it as a standard push (see Manual display and tracking).
             return
         }
+        val payload = LiveUpdatePayload.parse(remoteMessage) ?: return
 
         // 1. Build the notification yourself from the payload fields.
         val tapIntent = Intent(this, MainActivity::class.java)
@@ -214,6 +220,7 @@ class YourFirebaseMessagingService : FirebaseMessagingService() {
             .setContentTitle(payload.title)
             .setContentText(payload.body)
             .setOngoing(true)
+            .setRequestPromotedOngoing(true) // request promotion to a Live Update chip
             .setContentIntent(pendingIntent)
             .build()
 
@@ -240,3 +247,36 @@ class MainActivity : AppCompatActivity() {
 ```
 
 For a dismissal, wire your own delete intent (`setDeleteIntent`) and call `handleNotificationResponse(intent, applicationOpened = false, customActionId = LiveUpdates.ACTION_ID_DISMISS)`. See the [Manual mode APIs](api-reference.md#manual-mode-apis) for the full signatures.
+
+## Troubleshooting
+
+The SDK reports each dropped Live Update, and each notification that cannot be promoted to a chip, as a diagnostic event on the Mobile Core event hub. These events are not sent to Adobe Journey Optimizer. Inspect them with [Adobe Experience Platform Assurance](../../../../home/base/assurance/index.md), together with the verbose logs (`MobileCore.setLogLevel(LoggingMode.VERBOSE)`).
+
+### Live Update not displayed as expected
+
+The event is named `Live Update Render Error` and carries one of these reason codes:
+
+| **Reason** | **Meaning** |
+| :--------- | :---------- |
+| `no_plugin` | No Live Updates plugin is registered, so the Messaging extension dropped the push. Register `LiveUpdatePlugin` with `MobileCore.addPlugins(...)`. |
+| `app_discarded` | Your [interceptor](#suppress-updates-with-an-interceptor) returned `false`. |
+| `invalid_event_type` | `event_type` is not `start`, `update`, or `end`. |
+| `invalid_timestamp` | `timestamp` is more than 28 days old. |
+| `outdated_timestamp` | `timestamp` is not newer than the last push accepted for the same `notification_id` and `notification_channel_id`. |
+| `style_null` | Your style provider returned `null`. The notification is posted without a style. |
+| `notification_permission_missing` | Notifications are turned off for the app, for example because `POST_NOTIFICATIONS` was not granted. Android does not display the notification. |
+
+A push whose envelope is not valid JSON, or is missing a required field, is dropped with a warning log and no diagnostic event.
+
+### Live Update displayed but not promoted to a chip
+
+The notification is posted as a standard ongoing notification. The event is named `Live Update Incompatible` and carries one of these reason codes (see [Promotion to a Live Update chip](index.md#promotion-to-a-live-update-chip)):
+
+| **Reason** | **Meaning** |
+| :--------- | :---------- |
+| `device_api_below_36` | The device runs an Android version below 16 (API 36). |
+| `not_promotable` | `Notification.hasPromotableCharacteristics()` is `false`, for example because the notification has no title or its style is not allowed for Live Updates. |
+| `channel_not_registered` | The notification channel does not exist. |
+| `channel_importance_low` | The notification channel's importance is below `IMPORTANCE_HIGH`. |
+| `promotion_not_permitted` | The app is not allowed to post promoted notifications; the user may have turned this off in system settings. |
+| `notification_manager_unavailable` | The system `NotificationManager` was not available. |
