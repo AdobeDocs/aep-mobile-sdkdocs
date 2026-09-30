@@ -17,11 +17,40 @@ Use the Identity for Edge Network extension when including the Edge Network exte
 
 1. In Data Collection UI, in your mobile property, select the **Extensions** tab.
 2. On the **Catalog** tab, locate or search for the **Identity** extension, and select **Install**.
-3. There are no configuration settings for **Identity**.
+3. Optionally, select or clear **Optimize syncing operational profile data**. This setting is selected by default. For details, see [Optimize syncing operational profile data](#optimize-syncing-operational-profile-data).
 4. Select **Save**.
 5. Follow the publishing process to update SDK configuration.
 
 ![Identity for Edge Network extension configuration](./assets/index/configuration.png)
+
+### Optimize syncing operational profile data
+
+Starting with Identity extension version TBD, the **Optimize syncing operational profile data** setting controls whether operational profile data, such as the device time zone, is sent to the Edge Network again when its value has not changed since it was last synced. The setting is selected by default.
+
+* When selected, operational profile data is sent to the Edge Network only when a value has changed since the last time it was synced. This reduces unnecessary network requests from your app.
+* When cleared, operational profile data is sent every time the app syncs it, even if the value has not changed.
+
+#### Mobile SDK configuration APIs
+
+You can also control this behavior from your app by using the [MobileCore.updateConfiguration](../../home/base/mobile-core/configuration/api-reference.md#updateconfiguration) API with the `edgeidentity.optimizeOperationalProfileDataSync` configuration key:
+
+| Key | Required | Description | Data Type | Operating System |
+| :--- | :--- | :--- | :--- | :--- |
+| edgeidentity.optimizeOperationalProfileDataSync | No | If `false`, operational profile data is synced every time, even when its value has not changed. Default value is `true`. | Boolean | Android/iOS |
+
+##### Android
+
+```kotlin
+val config = mapOf("edgeidentity.optimizeOperationalProfileDataSync" to false)
+MobileCore.updateConfiguration(config)
+```
+
+##### iOS
+
+```swift
+let config = ["edgeidentity.optimizeOperationalProfileDataSync": false]
+MobileCore.updateConfigurationWith(configDict: config)
+```
 
 ## Add the Identity For Edge Network extension to your app
 

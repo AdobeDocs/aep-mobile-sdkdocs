@@ -7,6 +7,16 @@ Keywords:
 
 # Release notes
 
+## TBD
+
+### Identity extension TBD
+
+Added the **Optimize syncing operational profile data** setting to the Identity extension in the Tags UI for mobile Tag Properties.
+
+Users can now configure:
+
+* Optimize syncing operational profile data - Sends operational profile data to the Edge Network only when its value has changed since the last sync. Selected by default.
+
 ## September 23, 2026
 
 ### React Native UserProfile 7.0.2
