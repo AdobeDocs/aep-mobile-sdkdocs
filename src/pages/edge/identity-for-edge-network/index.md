@@ -30,6 +30,10 @@ Starting with Identity extension version TBD, the **Optimize syncing operational
 * When selected, operational profile data is sent to the Edge Network only when a value has changed since the last time it was synced. This reduces unnecessary network requests from your app.
 * When cleared, operational profile data is sent every time the app syncs it, even if the value has not changed.
 
+<InlineAlert variant="info" slots="text"/>
+
+If you upgrade from an earlier version of the Identity extension, open the extension configuration and select **Save** once before you build a library. Earlier versions had no configuration, so the saved extension needs updating.
+
 #### Mobile SDK configuration APIs
 
 You can also control this behavior from your app by using the [MobileCore.updateConfiguration](../../home/base/mobile-core/configuration/api-reference.md#updateconfiguration) API with the `edgeidentity.optimizeOperationalProfileDataSync` configuration key:
