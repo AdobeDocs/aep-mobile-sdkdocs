@@ -88,10 +88,12 @@ The plugin always requests promotion and always posts the notification. Android 
 * The notification channel has `IMPORTANCE_HIGH`.
 * The app is allowed to post promoted notifications (`NotificationManager.canPostPromotedNotifications()`). Users can turn this off in system settings.
 
-When a condition is not met, the plugin logs a warning, reports a diagnostic event (see [Troubleshooting](tutorial.md#troubleshooting)), and posts a standard ongoing notification instead.
+When a condition is not met, the plugin logs a warning, reports a diagnostic event (see [Live Updates troubleshooting](troubleshooting.md#incompatibility-issues)), and posts a standard ongoing notification instead.
 
 ## Next steps
 
 * [Live Update payload](payload.md)
 * [API reference](api-reference.md)
 * [Live Updates implementation tutorial](tutorial.md)
+* [Live Updates troubleshooting](troubleshooting.md)
+* [Public classes and interfaces](public-classes/live-update-plugin.md)

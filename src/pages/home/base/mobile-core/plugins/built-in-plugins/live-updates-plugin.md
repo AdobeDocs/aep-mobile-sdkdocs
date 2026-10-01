@@ -71,7 +71,7 @@ Push (adb_liveupdate_data)
 7. **Build and post.** The plugin builds the ongoing notification from the envelope fields only and requests promotion to a Live Update chip. It creates the notification channel if it does not exist, attaches tap and dismiss tracking, and applies `dismiss_after` on an `end` push. If the notification cannot be promoted (for example, the device runs an Android version below API 36), the plugin posts it as a standard ongoing notification. See [Promotion to a Live Update chip](../../../../../edge/adobe-journey-optimizer/live-activities/android/index.md#promotion-to-a-live-update-chip).
 8. **Track and notify.** The plugin dispatches the lifecycle tracking event to Adobe Journey Optimizer and invokes the registered [`ILiveUpdateListener`](../../../../../edge/adobe-journey-optimizer/live-activities/android/api-reference.md#iliveupdatelistener).
 
-The app owns only two of these steps: the **optional** interceptor and the **mandatory** style provider. The plugin handles everything else. Each dropped push, and each notification that cannot be promoted, is also reported as a diagnostic event. See [Troubleshooting](../../../../../edge/adobe-journey-optimizer/live-activities/android/tutorial.md#troubleshooting).
+The app owns only two of these steps: the **optional** interceptor and the **mandatory** style provider. The plugin handles everything else. Each dropped push, and each notification that cannot be promoted, is also reported as a diagnostic event. See [Live Updates troubleshooting](../../../../../edge/adobe-journey-optimizer/live-activities/android/troubleshooting.md).
 
 ## Prerequisites
 

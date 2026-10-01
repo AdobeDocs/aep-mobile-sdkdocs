@@ -34,7 +34,7 @@ fun interface ILiveUpdateStyleProvider {
 }
 ```
 
-Returning `null` does not drop the push: the plugin posts the notification without a style and reports a `style_null` diagnostic event (see [Troubleshooting](tutorial.md#troubleshooting)). `provideStyle` runs on the FCM background thread, so do not perform long-running work in it.
+Returning `null` does not drop the push: the plugin posts the notification without a style and reports a `style_null` diagnostic event (see [Live Updates troubleshooting](troubleshooting.md#render-errors)). `provideStyle` runs on the FCM background thread, so do not perform long-running work in it.
 
 ## setLiveUpdateListener / getLiveUpdateListener
 
@@ -94,7 +94,7 @@ interface ILiveUpdateInterceptor {
 }
 ```
 
-When no interceptor is registered, the SDK always proceeds. If the interceptor throws an exception, the SDK logs it and proceeds. The interceptor is consulted for pushes the plugin renders and for [`triggerLocalLiveUpdate`](#triggerlocalliveupdate), not in [manual mode](#manual-mode-apis). A common use is to suppress a duplicate or late push for a chip the user already dismissed. See the [tutorial](tutorial.md#suppress-updates-with-an-interceptor).
+When no interceptor is registered, the SDK always proceeds. If the interceptor throws an exception, the SDK logs it and proceeds. The interceptor is consulted for pushes the plugin renders and for [`triggerLocalLiveUpdate`](#triggerlocalliveupdate), not in [manual mode](#manual-mode-apis). Use it to drop a Live Update your app no longer wants to show, based on its own state. See the [tutorial](tutorial.md#suppress-updates-with-an-interceptor).
 
 ## Topic tracking
 
@@ -170,7 +170,7 @@ val payload = LiveUpdatePayload.create(
 val handled: Boolean = LiveUpdates.triggerLocalLiveUpdate(context, payload)
 ```
 
-A local start has no `_xdm`, so no tracking event is sent when it is posted. When a later `update` or `end` push from Adobe Journey Optimizer arrives for the same `notification_id` and `notification_channel_id`, the SDK reports the local start retroactively, with its original time, using that push's `_xdm`.
+A local start has no `_xdm`, so no tracking event is sent when it is posted. When a later `start`, `update`, or `end` push from Adobe Journey Optimizer arrives for the same `notification_id` and `notification_channel_id`, the SDK reports the local start retroactively, with its original time, using that push's `_xdm`. See [Local start is reported only after a push](troubleshooting.md#local-start-is-reported-only-after-a-push).
 
 Set `timestamp` to the current time in epoch seconds. Later pushes for the same Live Update must carry a newer `timestamp`, or they are dropped.
 

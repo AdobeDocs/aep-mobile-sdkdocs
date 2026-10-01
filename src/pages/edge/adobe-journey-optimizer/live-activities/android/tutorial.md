@@ -14,9 +14,9 @@ keywords:
 
 # Live Updates implementation tutorial
 
-This tutorial walks through a complete Live Updates integration: registering the plugin, providing a notification style, reacting to lifecycle and interaction callbacks, understanding automatic tracking, tracking FCM topic subscribe and unsubscribe, suppressing unwanted updates with an interceptor, and troubleshooting.
+This tutorial walks through a complete Live Updates integration: registering the plugin, providing a notification style, reacting to lifecycle and interaction callbacks, understanding automatic tracking, tracking FCM topic subscribe and unsubscribe, suppressing unwanted updates with an interceptor, triggering a Live Update locally, and manual mode.
 
-For the full API surface, see the [API reference](api-reference.md). For the payload keys and sample pushes, see [Live Update payload](payload.md). For setup (dependencies and plugin registration), see the [overview](index.md).
+For the full API surface, see the [API reference](api-reference.md). For the payload keys and sample pushes, see [Live Update payload](payload.md). For setup (dependencies and plugin registration), see the [overview](index.md). For diagnostic events, see [Live Updates troubleshooting](troubleshooting.md).
 
 ## Pre-requisites
 
@@ -67,15 +67,15 @@ LiveUpdates.setLiveUpdateListener(object : ILiveUpdateListener {
     }
 
     override fun onStart(payload: LiveUpdatePayload) {
-        // event_type == "start": the activity has begun.
+        // event_type == "start": the Live Update has begun.
     }
 
     override fun onUpdate(payload: LiveUpdatePayload) {
-        // event_type == "update": the activity advanced.
+        // event_type == "update": the Live Update has progressed.
     }
 
     override fun onEnd(payload: LiveUpdatePayload) {
-        // event_type == "end": the activity is finishing.
+        // event_type == "end": the Live Update is ending.
     }
 })
 ```
@@ -108,7 +108,7 @@ Once the plugin is registered, the SDK automatically dispatches Experience Event
 
 | **Interaction** | **XDM `eventType`** | **Details** |
 | :-------------- | :------------------ | :---------- |
-| A `start`, `update`, or `end` push is posted | `liveUpdateTracking.received` | `liveActivity.event` is `liveupdate_start`, `liveupdate_update`, or `liveupdate_end`. |
+| A `start`, `update`, or `end` push is posted | `liveUpdateTracking.received` | `liveActivity.event` is `liveupdate_start`, `liveupdate_update`, or `liveupdate_end`. A pending [local start](troubleshooting.md#local-start-is-reported-only-after-a-push) is reported just before it, as `liveupdate_localstart`. |
 | The user taps the chip | `liveUpdateTracking.applicationOpened` | |
 | The user dismisses the chip | `liveUpdateTracking.customAction` | `pushNotificationTracking.customAction.actionID` is `Dismiss`. |
 | Your app calls a [topic tracking API](#track-topic-subscribe-and-unsubscribe) | `liveUpdateTracking.topic` | `liveActivity.event` is `topic_subscribed` or `topic_unsubscribed`. |
@@ -152,17 +152,26 @@ The subscribe and unsubscribe events are dispatched to Adobe Journey Optimizer s
 
 ## Suppress updates with an interceptor
 
-A Live Update the user already dismissed can arrive again (a later `update` or `end` push for the same activity). Register an [`ILiveUpdateInterceptor`](api-reference.md#iliveupdateinterceptor) to veto such pushes before the SDK renders, tracks, or dispatches them. The interceptor is consulted after parsing and before any other processing; returning `false` drops the Live Update entirely.
+The interceptor lets your app decide, from its own state, whether an incoming Live Update should be shown at all. Register an [`ILiveUpdateInterceptor`](api-reference.md#iliveupdateinterceptor) to veto a Live Update before the SDK renders, tracks, or dispatches it. The interceptor is consulted after parsing and before any other processing; returning `false` drops the Live Update entirely.
+
+Typical reasons to drop a Live Update:
+
+* The user turned off this kind of update in your app's settings.
+* Your app already knows the Live Update is no longer relevant, for example the order was delivered or cancelled.
+* The user dismissed the Live Update, and a later `update` or `end` push for the same Live Update arrives.
 
 ```kotlin
 LiveUpdates.setLiveUpdateInterceptor(object : ILiveUpdateInterceptor {
     override fun shouldDisplayLiveUpdate(payload: LiveUpdatePayload): Boolean {
-        // Keep a record of dismissed ids (persist it so it survives process death),
-        // then veto any push for an id the user already dismissed.
-        return !dismissedStore.isDismissed(payload.notificationId)
+        // Decide from your own app state, using fields such as payload.notificationId,
+        // payload.topicName, or your own keys in payload.contentState.
+        // Return false to drop this Live Update, or true to let the SDK proceed.
+        return shouldShowLiveUpdate(payload)
     }
 })
 ```
+
+`shouldShowLiveUpdate` stands for your app's own check. Keep any state it depends on persisted, because a push can arrive after the app process was killed.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -184,7 +193,7 @@ val payload = LiveUpdatePayload.create(
 LiveUpdates.triggerLocalLiveUpdate(context, payload)
 ```
 
-A local start has no `_xdm`, so no tracking event is sent when it is posted. When a later `update` or `end` push from Adobe Journey Optimizer arrives for the same `notification_id` and `notification_channel_id`, the SDK reports the local start retroactively, with its original time. That push must carry a newer `timestamp` than the local start, or it is dropped.
+A local start has no `_xdm`, so no tracking event is sent when it is posted. When a later `start`, `update`, or `end` push from Adobe Journey Optimizer arrives for the same `notification_id` and `notification_channel_id`, the SDK reports the local start retroactively, with its original time. That push must carry a newer `timestamp` than the local start, or it is dropped. See [Local start is reported only after a push](troubleshooting.md#local-start-is-reported-only-after-a-push).
 
 ## Manual mode
 
@@ -248,35 +257,6 @@ class MainActivity : AppCompatActivity() {
 
 For a dismissal, wire your own delete intent (`setDeleteIntent`) and call `handleNotificationResponse(intent, applicationOpened = false, customActionId = LiveUpdates.ACTION_ID_DISMISS)`. See the [Manual mode APIs](api-reference.md#manual-mode-apis) for the full signatures.
 
-## Troubleshooting
+## Next steps
 
-The SDK reports each dropped Live Update, and each notification that cannot be promoted to a chip, as a diagnostic event on the Mobile Core event hub. These events are not sent to Adobe Journey Optimizer. Inspect them with [Adobe Experience Platform Assurance](../../../../home/base/assurance/index.md), together with the verbose logs (`MobileCore.setLogLevel(LoggingMode.VERBOSE)`).
-
-### Live Update not displayed as expected
-
-The event is named `Live Update Render Error` and carries one of these reason codes:
-
-| **Reason** | **Meaning** |
-| :--------- | :---------- |
-| `no_plugin` | No Live Updates plugin is registered, so the Messaging extension dropped the push. Register `LiveUpdatePlugin` with `MobileCore.addPlugins(...)`. |
-| `app_discarded` | Your [interceptor](#suppress-updates-with-an-interceptor) returned `false`. |
-| `invalid_event_type` | `event_type` is not `start`, `update`, or `end`. |
-| `invalid_timestamp` | `timestamp` is more than 28 days old. |
-| `outdated_timestamp` | `timestamp` is not newer than the last push accepted for the same `notification_id` and `notification_channel_id`. |
-| `style_null` | Your style provider returned `null`. The notification is posted without a style. |
-| `notification_permission_missing` | Notifications are turned off for the app, for example because `POST_NOTIFICATIONS` was not granted. Android does not display the notification. |
-
-A push whose envelope is not valid JSON, or is missing a required field, is dropped with a warning log and no diagnostic event.
-
-### Live Update displayed but not promoted to a chip
-
-The notification is posted as a standard ongoing notification. The event is named `Live Update Incompatible` and carries one of these reason codes (see [Promotion to a Live Update chip](index.md#promotion-to-a-live-update-chip)):
-
-| **Reason** | **Meaning** |
-| :--------- | :---------- |
-| `device_api_below_36` | The device runs an Android version below 16 (API 36). |
-| `not_promotable` | `Notification.hasPromotableCharacteristics()` is `false`, for example because the notification has no title or its style is not allowed for Live Updates. |
-| `channel_not_registered` | The notification channel does not exist. |
-| `channel_importance_low` | The notification channel's importance is below `IMPORTANCE_HIGH`. |
-| `promotion_not_permitted` | The app is not allowed to post promoted notifications; the user may have turned this off in system settings. |
-| `notification_manager_unavailable` | The system `NotificationManager` was not available. |
+* [Live Updates troubleshooting](troubleshooting.md)
