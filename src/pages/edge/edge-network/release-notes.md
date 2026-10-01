@@ -8,6 +8,18 @@ keywords:
 
 # Release notes
 
+## Unreleased
+
+### Edge Network Tags extension 2.1.0
+
+* Adds the **Forward Operational Data** rule action with Timezone, Push token, and Live Activity tokens selections.
+* Saves four backend attribute paths with enabled flags and app context. One Live Activity tokens checkbox controls both start and update token paths; saving with no selections is valid.
+* Upgrades the Tags extension from 2.0.1 in one minor release. Development payload iterations are not separate customer releases.
+
+<InlineAlert variant="info" slots="text"/>
+
+The release date and minimum supporting SDK versions remain pending. This is a Tags extension version, not an SDK release. See the [action configuration](index.md#forward-operational-data-rule-action).
+
 ## September 23, 2026
 
 ### React Native Edge 7.0.2

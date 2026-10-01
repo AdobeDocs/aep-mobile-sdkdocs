@@ -7,6 +7,26 @@ Keywords:
 
 # Release notes
 
+## Unreleased
+
+### Edge Network Tags extension 2.1.0
+
+* Adds the **Forward Operational Data** rule action for Timezone, Push token, and Live Activity tokens.
+* Saves backend attribute paths and enabled flags with app context. One Live Activity tokens checkbox controls both token paths; no selections remains valid.
+
+See the [Edge Network Tags extension release notes](../../edge/edge-network/release-notes.md).
+
+### Identity Tags extension 2.1.0
+
+* Adds **Optimize syncing operational profile data**, saved as `edgeidentity.optimizeOperationalProfileDataSync`.
+* Adds the **Sync Operational Data** rule event, packaged with the new configuration view.
+
+See the [Identity Tags extension release notes](../../edge/identity-for-edge-network/release-notes.md).
+
+<InlineAlert variant="info" slots="text"/>
+
+These are planned Tags extension releases, not Android or iOS SDK versions. Release dates, minimum supporting SDK versions, and Identity SDK default behavior remain pending confirmation. Mobile Core has no new Tags extension release in this update.
+
 ## September 23, 2026
 
 ### React Native UserProfile 7.0.2
