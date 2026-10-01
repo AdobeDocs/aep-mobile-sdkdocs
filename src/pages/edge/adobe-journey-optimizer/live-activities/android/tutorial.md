@@ -24,7 +24,7 @@ A Live Update is delivered as an Adobe Journey Optimizer push notification, so *
 
 * [Sync the push token](../../push-notification/android/automatic-display-and-tracking.md#sync-the-push-token) with `MobileCore.setPushIdentifier(...)` so Adobe Journey Optimizer can target the device.
 * [Register the Messaging `FirebaseMessagingService`](../../push-notification/android/automatic-display-and-tracking.md#register-messaging-extensions-firebasemessagingservice) (or forward messages from your own service) so incoming pushes reach the SDK.
-* On Android 13 (API 33) and later, [request the `POST_NOTIFICATIONS` permission](https://developer.android.com/develop/ui/views/notifications/notification-permission) at runtime.
+* On Android 13 (API 33) and later, [request the `POST_NOTIFICATIONS` permission](https://developer.android.com/develop/ui/compose/notifications/notification-permission) at runtime.
 * Optionally, [configure the small icon](index.md#configuring-small-icon) and [create the notification channel](index.md#notification-channel) yourself. When the channel named in the payload's `notification_channel_id` does not exist, the plugin creates it with `IMPORTANCE_HIGH`.
 
 With push working, register the Live Updates plugin as shown in the [overview](index.md), then follow the steps below.

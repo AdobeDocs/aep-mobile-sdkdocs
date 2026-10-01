@@ -27,7 +27,7 @@ A Live Update is delivered as an Adobe Journey Optimizer push notification, so y
 * `compileSdk` 36 or later. The `liveupdates` add-on supports `minSdk` 21; the chip itself requires a device running API 36 or later.
 * An app configured for [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/android/client).
 * Adobe Journey Optimizer **push notifications set up for your app**: the push token synced with `MobileCore.setPushIdentifier(...)` and the Messaging `FirebaseMessagingService` registered. Complete [Automatically display and track push notification](../../push-notification/android/automatic-display-and-tracking.md) first; the same push token sync and service registration deliver Live Updates.
-* On Android 13 (API 33) and later, the `POST_NOTIFICATIONS` permission granted by the user. The `liveupdates` add-on declares `POST_NOTIFICATIONS` and `POST_PROMOTED_NOTIFICATIONS` in its manifest, so both merge into your app automatically, but your app must still [request `POST_NOTIFICATIONS` at runtime](https://developer.android.com/develop/ui/views/notifications/notification-permission).
+* On Android 13 (API 33) and later, the `POST_NOTIFICATIONS` permission granted by the user. The `liveupdates` add-on declares `POST_NOTIFICATIONS` and `POST_PROMOTED_NOTIFICATIONS` in its manifest, so both merge into your app automatically, but your app must still [request `POST_NOTIFICATIONS` at runtime](https://developer.android.com/develop/ui/compose/notifications/notification-permission).
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -77,11 +77,7 @@ Each Live Update push names its channel in the `notification_channel_id` key. If
 
 ## Configuring small icon
 
-The plugin chooses the small icon in this order:
-
-1. The drawable named in the push's `small_icon` key, when your app has a drawable with that name.
-2. The icon set with `MobileCore.setSmallIconResourceID(...)`. See [Configuring small icon](../../push-notification/android/automatic-display-and-tracking.md#configuring-small-icon).
-3. The app's launcher icon.
+The plugin uses the icon set with `MobileCore.setSmallIconResourceID(...)`. See [Configuring small icon](../../push-notification/android/automatic-display-and-tracking.md#configuring-small-icon).
 
 ## Promotion to a Live Update chip
 

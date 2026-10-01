@@ -196,7 +196,6 @@ The parsed Live Update envelope (`adb_liveupdate_data`). The SDK parses it for y
 | `whenSeconds` | `Long?` (epoch seconds) | `when` |
 | `dismissAfterSeconds` | `Long?` | `dismiss_after` |
 | `priority` | `String?` | `priority` |
-| `smallIcon` | `String?` | `small_icon` |
 | `topicName` | `String?` | `topic_name` |
 | `contentState` | `JSONObject?` | `content_state` |
 | `xdm` | `JSONObject?` | `_xdm` (FCM data key, outside the envelope) |

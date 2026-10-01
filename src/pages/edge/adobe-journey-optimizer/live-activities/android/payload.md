@@ -43,7 +43,6 @@ Keys inside the `adb_liveupdate_data` envelope:
 | When | No | `when` | number | Time shown on the notification, in epoch seconds. |
 | Dismiss After | No | `dismiss_after` | number | Read only on an `end` push. When positive, the notification is removed this many seconds after the push arrives. |
 | Priority | No | `priority` | string | One of `PRIORITY_MAX`, `PRIORITY_HIGH`, `PRIORITY_LOW`, or `PRIORITY_MIN`. Any other value, or no value, uses the default priority. |
-| Small Icon | No | `small_icon` | string | Name of a drawable resource in your app to use as the small icon. See [Configuring small icon](index.md#configuring-small-icon). |
 | Topic Name | No | `topic_name` | string | FCM topic associated with this Live Update. Reported in tracking events and used by the [topic tracking APIs](api-reference.md#topic-tracking). |
 | Content State | No | `content_state` | object | App-defined state. The SDK does not read it; your [`ILiveUpdateStyleProvider`](api-reference.md#iliveupdatestyleprovider) reads it from `payload.contentState` to build the style. |
 

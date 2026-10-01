@@ -1,6 +1,6 @@
 ---
 title: Live Updates plugin
-description: How the Live Updates plugin integrates with Mobile Core and the Adobe Journey Optimizer Messaging extension to render, post, and track Live Update notifications on Android.
+description: How the Live Updates plugin works with Mobile Core and the Messaging extension to render, post, and track Android Live Update notifications.
 keywords:
 - Mobile Core
 - Plugin
