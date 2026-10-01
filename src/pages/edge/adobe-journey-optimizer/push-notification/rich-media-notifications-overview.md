@@ -79,14 +79,16 @@ See the documentation on [using the Messaging extension's implementation of the 
 
 ### Further customization with push templates
 
-Beyond a plain image attached to the notification, Adobe Journey Optimizer can also send a push that renders as a richer, pre-built layout:
+Beyond a plain image attached to the notification, Adobe Journey Optimizer can also send a push that renders as a richer, pre-built layout. The default payload of a push campaign now includes the `adb_template_type` key, with the Basic template (`ajo_basic`) as the default:
 
-* [Basic](android/templates/basic.md) (`ajo_basic`) - a title, a body, and an expanded hero image.
-* [Big text](android/templates/big-text.md) (`ajo_bigtext`) - a title, a short collapsed body, a longer expanded body, and an optional large side icon.
+* [Basic](push-templates/android/basic.md) (`ajo_basic`): a title, a body, and an expanded hero image.
+* [Big text](push-templates/android/big-text.md) (`ajo_bigtext`): a title, a short collapsed body, a longer expanded body, and an optional large side icon.
+
+These templates are rendered by Messaging `<MESSAGING_VERSION>` or later together with the [UI plugin](../../../home/base/mobile-core/plugins/built-in-plugins/ui-plugin/index.md) (`notificationbuilder` `<NOTIFICATIONBUILDER_VERSION>` or later), added to the app and registered with `MobileCore.addPlugins(...)`.
 
 <InlineAlert variant="info" slots="text"/>
 
-These templates require the [push templates plugin](../../../home/base/mobile-core/plugins/built-in-plugins/push-templates-plugin/index.md) (`notificationbuilder`) to be added to the app and registered with `MobileCore.addPlugins(...)`. Without it, this push falls back to a plain notification, so the setup above still applies either way.
+Apps on an earlier Messaging version, or without the UI plugin, keep displaying these pushes as plain notifications, with the image setup above, including pushes from new campaigns. See [Push templates troubleshooting](push-templates/android/troubleshooting.md).
 
 ## Additional Resources
 

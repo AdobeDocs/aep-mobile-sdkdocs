@@ -1,5 +1,5 @@
 ---
-title: Big text push template (ajo_bigtext) - Android
+title: Android big text push template (ajo_bigtext)
 description: Payload keys and a sample payload for the Adobe Journey Optimizer Big text push template (ajo_bigtext) on Android.
 keywords:
 - Adobe Journey Optimizer
@@ -19,7 +19,7 @@ Body text is split across two keys: `adb_body` holds the full text shown when th
 
 ## Configuration
 
-This template is rendered by the [push templates plugin](../../../../../home/base/mobile-core/plugins/built-in-plugins/push-templates-plugin/index.md). Add the plugin to your app and register it with `MobileCore.addPlugins(...)`. When the plugin is not present, the push falls back to a plain notification.
+This template is rendered by the [UI plugin](../../../../../home/base/mobile-core/plugins/built-in-plugins/ui-plugin/index.md). Add the plugin to your app and register it with `MobileCore.addPlugins(...)`. When the plugin is not present, the push falls back to a plain notification. See [Push templates troubleshooting](troubleshooting.md).
 
 ## Properties
 
@@ -36,7 +36,7 @@ In addition to the top level keys documented on [Push notification payload keys]
 
 <InlineAlert variant="info" slots="text"/>
 
-The aspect ratio recommendation helps the large icon display reliably across multiple devices. **This recommendation acts only as a guideline** - you should still test a notification prior to sending it.
+The aspect ratio recommendation helps the large icon display reliably across multiple devices. **This recommendation acts only as a guideline**; you should still test a notification prior to sending it.
 
 * Recommended aspect ratio: 1:1 (square). The large icon is always rendered center-cropped, so a square source image fills the icon area without unexpected cropping.
 
@@ -69,6 +69,6 @@ The aspect ratio recommendation helps the large icon display reliably across mul
 
 <InlineAlert variant="info" slots="text"/>
 
-`adb_template_properties` is a JSON-encoded string, like `adb_act` above - FCM data messages only allow string values. The object shown inside it is the decoded shape.
+`adb_template_properties` is a JSON-encoded string, like `adb_act` above, because FCM data messages only allow string values. The object shown inside it is the decoded shape.
 
-See also: [Basic template](basic.md).
+See also: [Basic template](basic.md), [Push templates troubleshooting](troubleshooting.md).
