@@ -54,19 +54,23 @@ interface ILiveupdatePlugin : IAepPlugin {
     fun handleLiveUpdatePush(context: Context, message: Any)
 }
 
-// Push-template (UI) plugin contract.
+// UI plugin contract (push templates).
 interface IUiTemplatePlugin : IAepPlugin {
-    // Builds and RETURNS the notification (it does not post it). Framework types only.
+    // Builds and RETURNS the notification (it does not post it). Every PendingIntent on it
+    // comes from the host's IPushTemplateTrackingProvider.
     fun buildPushTemplateNotification(
-        context: Context,
         messageData: Map<String, String>,
-        trackerActivityClass: Class<out Activity>?,
-        broadcastReceiverClass: Class<out BroadcastReceiver>?
+        trackingProvider: IPushTemplateTrackingProvider
     ): Notification?
+}
+
+// Implemented by the host extension: returns the PendingIntent for each interaction.
+interface IPushTemplateTrackingProvider {
+    fun getPendingIntent(interaction: PushInteraction): PendingIntent?
 }
 ```
 
-Contracts intentionally reference only Android framework types (`Context`, `Notification`, `Activity`, `BroadcastReceiver`, `Map`, `Any`) so that Mobile Core stays free of any `androidx` or Firebase dependency.
+Contracts intentionally reference only Android framework types (`Context`, `Notification`, `PendingIntent`, `Map`, `Any`) and Mobile Core types (`IPushTemplateTrackingProvider`, `PushInteraction`), so that Mobile Core stays free of any `androidx` or Firebase dependency. For `PushInteraction`, see the [UI plugin contract](built-in-plugins/ui-plugin/index.md#contract).
 
 ## Registering a plugin
 
@@ -112,7 +116,7 @@ Both facade methods are part of the public Mobile Core API. See the [Mobile Core
 Adobe ships built-in plugins that implement the `IAepPlugin` marker interface (through their capability-specific contract), so each is registered with `addPlugins` and resolved with `getPlugin`. Each built-in plugin is documented on its own page under **Built-in plugins** in the navigation:
 
 * **Live Updates plugin** - renders an ongoing "Live Update" notification from a push and **posts and tracks it itself**, so the add-on depends on the Adobe Journey Optimizer Messaging extension (for tracking) and Edge. The host routes to it when a push carries the `adb_liveupdate_data` key.
-* **Push templates (UI) plugin** - **builds and returns** a `Notification` for a rich push template while the **host** extension posts and tracks it, so the add-on depends only on Mobile Core. The host routes to it when a push carries the `adb_template_type` key.
+* **UI plugin** - **builds and returns** a `Notification` for a push template while the **host** extension posts and tracks it, so the add-on depends only on Mobile Core. The host routes to it when a push carries the `adb_template_type` key.
 
 <InlineAlert variant="info" slots="text"/>
 

@@ -64,7 +64,7 @@ This document outlines the various push notification payload keys used by the Ad
 
 <InlineAlert variant="info" slots="text"/>
 
-A push template push is identified by the `adb_template_type` key. Push templates render a richer, pre-built layout and require the [push templates plugin](../../../home/base/mobile-core/plugins/built-in-plugins/push-templates-plugin/index.md) to be added to the app. For the supported templates, their `adb_template_properties` keys, and a sample payload per template, see [Rich Media Push Notifications](rich-media-notifications-overview.md).
+A push template push is identified by the `adb_template_type` key. Push templates render a richer, pre-built layout and require the [UI plugin](../../../home/base/mobile-core/plugins/built-in-plugins/ui-plugin/index.md) to be added to the app. For the supported templates, their `adb_template_properties` keys, and a sample payload per template, see [Rich Media Push Notifications](rich-media-notifications-overview.md).
 
 ## iOS
 

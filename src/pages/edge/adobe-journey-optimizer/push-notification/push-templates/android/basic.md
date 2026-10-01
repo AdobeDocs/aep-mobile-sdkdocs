@@ -1,5 +1,5 @@
 ---
-title: Basic push template (ajo_basic) - Android
+title: Android basic push template (ajo_basic)
 description: Payload keys and a sample payload for the Adobe Journey Optimizer Basic push template (ajo_basic) on Android.
 keywords:
 - Adobe Journey Optimizer
@@ -17,7 +17,7 @@ A title, a body, and an expanded hero image. The same body text is shown in both
 
 ## Configuration
 
-This template is rendered by the [push templates plugin](../../../../../home/base/mobile-core/plugins/built-in-plugins/push-templates-plugin/index.md). Add the plugin to your app and register it with `MobileCore.addPlugins(...)`. When the plugin is not present, the push falls back to a plain notification.
+This template is rendered by the [UI plugin](../../../../../home/base/mobile-core/plugins/built-in-plugins/ui-plugin/index.md). Add the plugin to your app and register it with `MobileCore.addPlugins(...)`. When the plugin is not present, the push falls back to a plain notification. See [Push templates troubleshooting](troubleshooting.md).
 
 ## Properties
 
@@ -60,6 +60,6 @@ In addition to the top level keys documented on [Push notification payload keys]
 
 <InlineAlert variant="info" slots="text"/>
 
-`adb_template_properties` is a JSON-encoded string, like `adb_act` above - FCM data messages only allow string values. The object shown inside it (`{"adb_image_scale_type": "center_crop"}`) is the decoded shape.
+`adb_template_properties` is a JSON-encoded string, like `adb_act` above, because FCM data messages only allow string values. The object shown inside it (`{"adb_image_scale_type": "center_crop"}`) is the decoded shape.
 
-See also: [Big text template](big-text.md).
+See also: [Big text template](big-text.md), [Push templates troubleshooting](troubleshooting.md).

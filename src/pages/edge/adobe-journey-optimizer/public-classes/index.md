@@ -18,6 +18,7 @@ This documents lists details about the public classes and enums available in Mes
 ## Push notification
 
 * [Class - MessagingPushPayload](messaging-push-payload.md)
+* [Class - NotificationBuilderPlugin](notification-builder-plugin.md) (Android only, in the UI plugin)
 * [Enum - PushTrackingStatus](push-tracking-status.md)
 
 ## In-app message
