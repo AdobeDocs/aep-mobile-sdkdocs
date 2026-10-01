@@ -156,6 +156,7 @@ The interceptor lets your app decide, from its own state, whether an incoming Li
 
 Typical reasons to drop a Live Update:
 
+* This device was not supposed to receive it, for example it belongs to a user who is no longer signed in.
 * The user turned off this kind of update in your app's settings.
 * Your app already knows the Live Update is no longer relevant, for example the order was delivered or cancelled.
 * The user dismissed the Live Update, and a later `update` or `end` push for the same Live Update arrives.
@@ -163,8 +164,9 @@ Typical reasons to drop a Live Update:
 ```kotlin
 LiveUpdates.setLiveUpdateInterceptor(object : ILiveUpdateInterceptor {
     override fun shouldDisplayLiveUpdate(payload: LiveUpdatePayload): Boolean {
-        // Decide from your own app state, using fields such as payload.notificationId,
-        // payload.topicName, or your own keys in payload.contentState.
+        // Custom logic to discard any Live Update that this device was not supposed to receive,
+        // using fields such as payload.notificationId, payload.topicName, or your own keys in
+        // payload.contentState.
         // Return false to drop this Live Update, or true to let the SDK proceed.
         return shouldShowLiveUpdate(payload)
     }

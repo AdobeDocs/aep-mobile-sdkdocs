@@ -45,7 +45,8 @@ When no interceptor is registered, or the interceptor throws an exception, the L
 ```kotlin
 LiveUpdates.setLiveUpdateInterceptor(object : ILiveUpdateInterceptor {
     override fun shouldDisplayLiveUpdate(payload: LiveUpdatePayload): Boolean {
-        // Decide from your own app state. Return false to drop this Live Update.
+        // Custom logic to discard any Live Update that this device was not supposed to receive.
+        // Return false to drop this Live Update, or true to let the SDK proceed.
         return shouldShowLiveUpdate(payload)
     }
 })
