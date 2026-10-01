@@ -38,3 +38,13 @@ This documents lists details about the public classes and enums available in Mes
 * [Schema Class - InAppSchemaData](inapp-schema-data.md)
 * [Schema Class - InboxContentSchemaData](inbox-content-schema-data.md)
 * [Schema Class - JsonContentSchemaData](json-content-schema-data.md)
+
+## Live Activities (Android)
+
+Live Updates classes and interfaces, in the Live Updates add-on. See [Live Updates](../live-activities/android/index.md).
+
+* [LiveUpdatePlugin](../live-activities/android/public-classes/live-update-plugin.md) (class)
+* [LiveUpdatePayload](../live-activities/android/public-classes/live-update-payload.md) (class)
+* [ILiveUpdateStyleProvider](../live-activities/android/public-classes/live-update-style-provider.md) (interface)
+* [ILiveUpdateListener](../live-activities/android/public-classes/live-update-listener.md) (interface)
+* [ILiveUpdateInterceptor](../live-activities/android/public-classes/live-update-interceptor.md) (interface)
