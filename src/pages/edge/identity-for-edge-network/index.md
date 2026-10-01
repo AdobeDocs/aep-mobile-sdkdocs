@@ -21,7 +21,7 @@ Use the Identity for Edge Network extension when including the Edge Network exte
 4. Select **Save**.
 5. Follow the publishing process to update SDK configuration.
 
-![Identity for Edge Network extension configuration](./assets/index/configuration.png)
+![Identity for Edge Network extension configuration with the Optimize syncing operational profile data setting](./assets/index/configuration.png)
 
 ### Optimize syncing operational profile data
 

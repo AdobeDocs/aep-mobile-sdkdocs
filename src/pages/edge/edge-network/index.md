@@ -65,6 +65,8 @@ Edge Network Tags extension version 2.1.0 adds **Forward Operational Data** to t
 
 4. Save the action and include the updated rule and extension revisions in your library.
 
+![Forward Operational Data action configuration](./assets/index/forward-operational-data.png)
+
 One **Live Activity tokens** checkbox controls both token paths. Live Activity tokens apply to iOS only; Android uses the regular push token. App ID and platform are always included through the `["app"]` context. Saving with no fields selected is valid.
 
 For example, selecting Timezone and Push token saves this action configuration:
