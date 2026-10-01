@@ -9,15 +9,17 @@ keywords:
 
 # Release notes
 
-## TBD
+## Unreleased
 
-### Identity extension TBD
+### Identity Tags extension 2.1.0
 
-Added the **Optimize syncing operational profile data** setting to the Identity extension in the Tags UI for mobile Tag Properties.
+* Adds **Optimize syncing operational profile data**, saved as the boolean `edgeidentity.optimizeOperationalProfileDataSync` configuration key.
+* Adds the **Sync Operational Data** rule event under **Tracking**. The event matches `com.adobe.eventType.generic.operationalData` / `com.adobe.eventSource.requestContent` and has no additional configuration.
+* Packages the configuration setting and event in one minor release, upgrading the Tags extension from 2.0.0.
 
-Users can now configure:
+<InlineAlert variant="info" slots="text"/>
 
-* Optimize syncing operational profile data - Sends operational profile data to the Edge Network only when its value has changed since the last sync. Selected by default.
+The release date and minimum supporting SDK versions remain pending. This is a Tags extension version, not an SDK release. See the [configuration and upgrade instructions](index.md#configure-the-identity-extension-in-the-data-collection-ui).
 
 ## July 8, 2026
 

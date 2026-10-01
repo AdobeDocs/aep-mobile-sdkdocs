@@ -49,6 +49,50 @@ If you have a first-party domain mapped to the Adobe-provisioned Edge Network do
 
 **Note:** The domain name is expected to be just the domain without any protocol or trailing slashes. If no domain is provided, by default the `edge.adobedc.net` domain is used.
 
+## Forward Operational Data rule action
+
+Edge Network Tags extension version 2.1.0 adds **Forward Operational Data** to the rule builder. The action configures which operational fields a supporting SDK forwards, including before consent is granted; it does not supply device values.
+
+1. Add the Identity [Sync Operational Data event](../identity-for-edge-network/index.md#sync-operational-data-rule-event) to your rule.
+2. Add an action, select **Adobe Experience Platform Edge Network**, then select **Forward Operational Data**.
+3. Select the fields to forward:
+
+| Setting | Initial selection | Backend paths |
+| :--- | :--- | :--- |
+| Timezone | Selected | `["timezone"]` |
+| Push token | Not selected | `["tokens", "pushNotification"]` |
+| Live Activity tokens | Not selected | `["tokens", "liveActivityStart"]` and `["tokens", "liveActivityUpdate"]` |
+
+4. Save the action and include the updated rule and extension revisions in your library.
+
+One **Live Activity tokens** checkbox controls both token paths. Live Activity tokens apply to iOS only; Android uses the regular push token. App ID and platform are always included through the `["app"]` context. Saving with no fields selected is valid.
+
+For example, selecting Timezone and Push token saves this action configuration:
+
+```json
+{
+  "detail": {
+    "type": "com.adobe.eventType.edgeBypassConsent",
+    "source": "com.adobe.eventSource.requestContent",
+    "attributes": [
+      { "path": ["timezone"], "enabled": true },
+      { "path": ["tokens", "pushNotification"], "enabled": true },
+      { "path": ["tokens", "liveActivityStart"], "enabled": false },
+      { "path": ["tokens", "liveActivityUpdate"], "enabled": false }
+    ],
+    "context": [{ "path": ["app"] }]
+  }
+}
+```
+
+Tags supplies the outer consequence type, `forward-operational-data`, from the action definition. All four attribute entries are saved, including disabled entries; the SDK uses their backend paths to find values in the incoming event.
+
+<InlineAlert variant="info" slots="text"/>
+
+Version 2.1.0 is an unreleased Tags extension update, not an Android or iOS SDK version. Minimum SDK versions supporting the event and path-based action contract must be confirmed before this documentation is published. Uploading the Tags extension alone does not implement SDK delivery.
+
+If you tested an earlier development version of this action, open and resave it to migrate interim token-template or boolean settings to the path-based contract. Reuploading an extension package does not rewrite saved rules.
+
 ## Add the Edge Network extension to your app
 
 ### Include Edge Network extension as an app dependency

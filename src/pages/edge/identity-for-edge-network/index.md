@@ -17,7 +17,7 @@ Use the Identity for Edge Network extension when including the Edge Network exte
 
 1. In Data Collection UI, in your mobile property, select the **Extensions** tab.
 2. On the **Catalog** tab, locate or search for the **Identity** extension, and select **Install**.
-3. Optionally, select or clear **Optimize syncing operational profile data**. This setting is selected by default. For details, see [Optimize syncing operational profile data](#optimize-syncing-operational-profile-data).
+3. Starting with Tags extension version 2.1.0, select or clear **Optimize syncing operational profile data**. For details, see [Optimize syncing operational profile data](#optimize-syncing-operational-profile-data).
 4. Select **Save**.
 5. Follow the publishing process to update SDK configuration.
 
@@ -25,22 +25,23 @@ Use the Identity for Edge Network extension when including the Edge Network exte
 
 ### Optimize syncing operational profile data
 
-Starting with Identity extension version TBD, the **Optimize syncing operational profile data** setting controls whether operational profile data, such as the device time zone, is sent to the Edge Network again when its value has not changed since it was last synced. The setting is selected by default.
-
-* When selected, operational profile data is sent to the Edge Network only when a value has changed since the last time it was synced. This reduces unnecessary network requests from your app.
-* When cleared, operational profile data is sent every time the app syncs it, even if the value has not changed.
+Starting with Identity Tags extension version 2.1.0, the **Optimize syncing operational profile data** setting saves the boolean `edgeidentity.optimizeOperationalProfileDataSync` configuration key. The Tags UI selects the setting by default when no value has been saved, and preserves an explicitly saved `false`.
 
 <InlineAlert variant="info" slots="text"/>
 
-If you upgrade from an earlier version of the Identity extension, open the extension configuration and select **Save** once before you build a library. Earlier versions had no configuration, so the saved extension needs updating.
+Version 2.1.0 is an unreleased Tags extension update, not an Android or iOS SDK version. Supporting SDK versions and the SDK's default and optimized-sync behavior must be confirmed before this documentation is published.
+
+<InlineAlert variant="info" slots="text"/>
+
+Earlier Identity Tags extensions had no configuration view. On the **Extensions** tab, explicitly upgrade the installed Identity extension to the configuration-bearing package, configure it, and select **Save**. Include the updated extension revision in your library before building. Reuploading a development package does not update an existing installation's configuration metadata. If the configuration still displays **No configuration necessary**, selecting **Save** alone will not repair the installation; contact support to check the installed extension metadata.
 
 #### Mobile SDK configuration APIs
 
-You can also control this behavior from your app by using the [MobileCore.updateConfiguration](../../home/base/mobile-core/configuration/api-reference.md#updateconfiguration) API with the `edgeidentity.optimizeOperationalProfileDataSync` configuration key:
+With an SDK version that supports this configuration key, you can also set it from your app using the [MobileCore.updateConfiguration](../../home/base/mobile-core/configuration/api-reference.md#updateconfiguration) API:
 
 | Key | Required | Description | Data Type | Operating System |
 | :--- | :--- | :--- | :--- | :--- |
-| edgeidentity.optimizeOperationalProfileDataSync | No | If `false`, operational profile data is synced every time, even when its value has not changed. Default value is `true`. | Boolean | Android/iOS |
+| edgeidentity.optimizeOperationalProfileDataSync | No | Enables or disables operational-profile-data sync optimization. The Tags UI initializes this setting to `true`; SDK default behavior and minimum supporting versions require confirmation before release. | Boolean | Android/iOS |
 
 ##### Android
 
@@ -55,6 +56,14 @@ MobileCore.updateConfiguration(config)
 let config = ["edgeidentity.optimizeOperationalProfileDataSync": false]
 MobileCore.updateConfigurationWith(configDict: config)
 ```
+
+## Sync Operational Data rule event
+
+Identity Tags extension version 2.1.0 adds **Sync Operational Data** under the **Tracking** event category in the rule builder. Select **Identity** as the event extension, then select **Sync Operational Data**. The event has no additional configuration.
+
+The event matches SDK events with type `com.adobe.eventType.generic.operationalData` and source `com.adobe.eventSource.requestContent`. Pair it with the Edge Network [Forward Operational Data action](../edge-network/index.md#forward-operational-data-rule-action) to configure the operational fields to forward.
+
+The Tags rule does not generate device values. An SDK version that emits this event and processes the action's path-based contract is required.
 
 ## Add the Identity For Edge Network extension to your app
 
