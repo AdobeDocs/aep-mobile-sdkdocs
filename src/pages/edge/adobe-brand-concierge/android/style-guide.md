@@ -767,6 +767,7 @@ These tokens style the feedback dialog (modal card and action bottom sheet).
 ### Colors - Extended Product Cards
 
 Used when `behavior.productCard.cardStyle` is `"productDetail"`.
+Secondary card actions use `--button-secondary-border` and `--button-secondary-text`; configure their outline width through `styles.productActionButtons.secondaryBorderWidth`.
 
 | CSS Variable | Kotlin Property | Type | Default | Description |
 |--------------|-----------------|------|---------|-------------|
@@ -849,6 +850,7 @@ When `behavior.productCard.cardStyle` is `"productDetail"`, product recommendati
 | `--product-card-title-font-weight` | `cssLayout.productCardTitleFontWeight` | `Int` | `700` | Title font weight |
 | `--product-card-subtitle-font-size` | `cssLayout.productCardSubtitleFontSize` | `Double` | `12.0` | Subtitle font size (sp) |
 | `--product-card-subtitle-font-weight` | `cssLayout.productCardSubtitleFontWeight` | `Int` | `400` | Subtitle font weight |
+| `--product-card-description-max-lines` | `cssLayout.productCardDescriptionMaxLines` | `Int` | `2` | Maximum number of lines shown for the product description |
 | `--product-card-price-font-size` | `cssLayout.productCardPriceFontSize` | `Double` | `14.0` | Price font size (sp) |
 | `--product-card-price-font-weight` | `cssLayout.productCardPriceFontWeight` | `Int` | `400` | Price font weight |
 | `--product-card-badge-font-size` | `cssLayout.productCardBadgeFontSize` | `Double` | `12.0` | Badge font size (sp) |
@@ -1549,6 +1551,7 @@ Note: The feedback dialog checkbox uses `--color-primary` for the check box fill
 | `--product-card-title-font-weight` | ✅ | Extended product card title weight | `ExtendedProductCard` |
 | `--product-card-subtitle-font-size` | ✅ | Extended product card subtitle size | `ExtendedProductCard` |
 | `--product-card-subtitle-font-weight` | ✅ | Extended product card subtitle weight | `ExtendedProductCard` |
+| `--product-card-description-max-lines` | ✅ | Maximum visible lines in the extended product description | `ExtendedProductCard` |
 | `--product-card-price-font-size` | ✅ | Extended product card price size | `ExtendedProductCard` |
 | `--product-card-price-font-weight` | ✅ | Extended product card price weight | `ExtendedProductCard` |
 | `--product-card-badge-font-size` | ✅ | Extended product card badge size | `ExtendedProductCard` |

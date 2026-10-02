@@ -7,6 +7,24 @@ Keywords:
 
 # Release notes
 
+## September 29, 2026
+
+### iOS Brand Concierge 5.9.0
+
+* Added `Concierge.sendDataHandoff` for sending XDM data through the Brand Concierge service.
+* Forwarded the full Edge Identity `identityMap` to the conversation, with an ECID fallback when no identity map is available.
+* Added secondary CTA buttons to product cards, with theme keys for their colors and border width.
+* Added the `--product-card-description-max-lines` theme key to support longer product descriptions.
+* Fixed inline link theming, input focus border width with gradients, product-card CTA positioning, and input bar icon spacing.
+
+### Android Brand Concierge 3.9.0
+
+* Added `Concierge.sendDataHandoff` to send app data to Brand Concierge without a chat message; responses are rendered in the active chat.
+* Forwarded the full Edge Identity `identityMap` in chat and feedback requests instead of only the ECID.
+* Added secondary CTA buttons to product cards, with theme keys for their colors and border width.
+* Added the `--product-card-description-max-lines` theme key to support longer product descriptions.
+* Fixed product-card price and CTA alignment, the focused input bar's gradient border, and listening waveform clipping and bar shape.
+
 ## September 23, 2026
 
 ### React Native UserProfile 7.0.2

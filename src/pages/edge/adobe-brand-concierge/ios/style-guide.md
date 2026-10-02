@@ -677,6 +677,8 @@ Visual styling using CSS-like variable names. All properties in the `theme` obje
 | `--product-card-cta-button-background-color` | `colors.productCardCtaButton.background` | `Color` | `#BB5811` | Product card CTA button background color |
 | `--product-card-cta-button-text-color` | `colors.productCardCtaButton.text` | `Color` | `white` | Product card CTA button label text color |
 
+Secondary product-card actions use the shared `--button-secondary-border` and `--button-secondary-text` tokens documented under [Colors - Buttons](#colors---buttons).
+
 ### Colors - CTA Button
 
 | CSS Variable | Swift Property | Type | Default | Description |
@@ -783,6 +785,7 @@ Visual styling using CSS-like variable names. All properties in the `theme` obje
 | `--product-card-title-font-weight` | `layout.productCardTitleFontWeight` | `FontWeight` | `bold` | Title font weight |
 | `--product-card-subtitle-font-size` | `layout.productCardSubtitleFontSize` | `CGFloat` | `12` | Subtitle font size |
 | `--product-card-subtitle-font-weight` | `layout.productCardSubtitleFontWeight` | `FontWeight` | `regular` | Subtitle font weight |
+| `--product-card-description-max-lines` | `layout.productCardDescriptionMaxLines` | `Int` | `2` | Maximum description lines before ellipsis. Positive integers set the limit; `none`, zero, negative, or invalid values are ignored and use the default of two lines. For longer descriptions, increase `--product-card-max-height` as needed. |
 | `--product-card-price-font-size` | `layout.productCardPriceFontSize` | `CGFloat` | `14` | Price font size |
 | `--product-card-price-font-weight` | `layout.productCardPriceFontWeight` | `FontWeight` | `light` | Price font weight |
 | `--product-card-badge-font-size` | `layout.productCardBadgeFontSize` | `CGFloat` | `12` | Badge font size |
@@ -1370,6 +1373,7 @@ This section documents which properties are fully implemented, partially impleme
 | `--product-card-title-font-weight` | ✅ | Used in ProductDetailCardView |
 | `--product-card-subtitle-font-size` | ✅ | Used in ProductDetailCardView |
 | `--product-card-subtitle-font-weight` | ✅ | Used in ProductDetailCardView |
+| `--product-card-description-max-lines` | ✅ | Maximum visible lines in the product description |
 | `--product-card-price-font-size` | ✅ | Used in ProductDetailCardView |
 | `--product-card-price-font-weight` | ✅ | Used in ProductDetailCardView |
 | `--product-card-badge-font-size` | ✅ | Used in ProductDetailCardView |
