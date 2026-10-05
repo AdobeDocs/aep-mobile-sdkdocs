@@ -12,7 +12,7 @@ keywords:
 
 # ILiveUpdateInterceptor
 
-Interface your app implements to decide, from its own state, whether an incoming Live Update is shown. Register it with [setLiveUpdateInterceptor](../api-reference.md#setliveupdateinterceptor--getliveupdateinterceptor). Only one interceptor is active at a time.
+Interface your app implements to decide, from its own state, whether an incoming Live Update is shown. Register it with [setLiveUpdateInterceptor](../api-reference.md#setliveupdateinterceptor). Only one interceptor is active at a time.
 
 ## Interface Definition
 
@@ -36,11 +36,13 @@ Called after the push is parsed and before any other processing, for pushes the 
 
 #### Returns
 
-`true` to let the SDK proceed; `false` to drop the Live Update. A dropped Live Update is not posted, sends no tracking event, fires no listener callback, and is reported as an `app_discarded` [diagnostic event](../troubleshooting.md#render-errors).
+`true` to let the SDK proceed; `false` to drop the Live Update. A dropped Live Update is not posted, sends no tracking event, calls no listener callback, and is reported as an `app_discarded` [diagnostic event](../troubleshooting.md#render-errors).
 
 When no interceptor is registered, or the interceptor throws an exception, the Live Update proceeds. `shouldDisplayLiveUpdate` runs on the FCM background thread, so keep the decision fast.
 
 **Example**
+
+#### Android Kotlin
 
 ```kotlin
 LiveUpdates.setLiveUpdateInterceptor(object : ILiveUpdateInterceptor {
@@ -50,6 +52,16 @@ LiveUpdates.setLiveUpdateInterceptor(object : ILiveUpdateInterceptor {
         return shouldShowLiveUpdate(payload)
     }
 })
+```
+
+#### Android Java
+
+```java
+LiveUpdates.setLiveUpdateInterceptor(payload -> {
+    // Custom logic to discard any Live Update that this device was not supposed to receive.
+    // Return false to drop this Live Update, or true to let the SDK proceed.
+    return shouldShowLiveUpdate(payload);
+});
 ```
 
 For typical reasons to drop a Live Update, see [Suppress updates with an interceptor](../tutorial.md#suppress-updates-with-an-interceptor).

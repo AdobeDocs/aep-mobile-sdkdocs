@@ -1,6 +1,6 @@
 ---
 title: Live Updates troubleshooting
-description: Diagnostic events the Android Live Updates SDK and the Messaging extension report when a Live Update is dropped or not promoted to a chip.
+description: Diagnostic events the Android Live Updates SDK and the Adobe Journey Optimizer extension report when a Live Update is dropped or not promoted.
 keywords:
 - Adobe Journey Optimizer
 - Troubleshooting
@@ -12,7 +12,7 @@ keywords:
 
 # Live Updates troubleshooting
 
-The SDK reports each dropped Live Update, and each notification that cannot be promoted to a chip, as a diagnostic event on the Mobile Core event hub. Inspect these events with [Adobe Experience Platform Assurance](../../../../home/base/assurance/index.md), together with the verbose logs (`MobileCore.setLogLevel(LoggingMode.VERBOSE)`).
+The SDK reports each dropped Live Update, and each notification that cannot be promoted to a Live Update, as a diagnostic event on the Mobile Core event hub. Inspect these events with [Adobe Experience Platform Assurance](../../../../home/base/assurance/index.md), together with the verbose logs (`MobileCore.setLogLevel(LoggingMode.VERBOSE)`).
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -22,8 +22,8 @@ Diagnostic events are not sent to the Edge Network, so they are not written to t
 
 | **Event name** | **Dispatched by** | **Event type** | **Event source** | **Reported when** |
 | :------------- | :---------------- | :------------- | :--------------- | :---------------- |
-| `Live Update Render Error` | Live Updates SDK, or the Messaging extension for `no_plugin` | `com.adobe.eventType.messaging` | `com.adobe.eventSource.errorResponseContent` | A Live Update is dropped, or is posted but cannot be displayed as expected. See [Render errors](#render-errors). |
-| `Live Update Incompatible` | Live Updates SDK | `com.adobe.eventType.messaging` | `com.adobe.eventSource.errorResponseContent` | A Live Update is posted but cannot be promoted to a chip. See [Incompatibility issues](#incompatibility-issues). |
+| `Live Update Render Error` | Live Updates SDK, or the Adobe Journey Optimizer extension for `no_plugin` | `com.adobe.eventType.messaging` | `com.adobe.eventSource.errorResponseContent` | A Live Update is dropped, or is posted but cannot be displayed as expected. See [Render errors](#render-errors). |
+| `Live Update Incompatible` | Live Updates SDK | `com.adobe.eventType.messaging` | `com.adobe.eventSource.errorResponseContent` | A Live Update is posted but cannot be promoted. See [Incompatibility issues](#incompatibility-issues). |
 
 ## Event data
 
@@ -71,9 +71,9 @@ Every reason except `no_plugin` comes from the Live Updates SDK. The event data 
 
 When the push carries `_xdm`, its contents (such as `_experience.customerJourneyManagement.messageExecution`) are also copied into `xdm`, so the event identifies the originating campaign or journey. The event is reported even when the push has no `_xdm`.
 
-### Event from the Messaging extension
+### Event from the Adobe Journey Optimizer extension
 
-The Messaging extension reports `no_plugin`, because the Live Updates SDK never receives the push. Its event data is:
+The Adobe Journey Optimizer extension reports `no_plugin`, because the Live Updates SDK never receives the push. Its event data is:
 
 | **Key** | **Value** |
 | :------ | :-------- |
@@ -83,23 +83,23 @@ The Messaging extension reports `no_plugin`, because the Live Updates SDK never 
 
 ## Render errors
 
-Reported as `Live Update Render Error`. **Dropped** means no notification is posted, no tracking event is sent, and no listener callback fires.
+Reported as `Live Update Render Error`. **Dropped** means no notification is posted, no tracking event is sent, and no listener callback is called.
 
 | **Reason** | **Dropped** | **Meaning** |
 | :--------- | :---------- | :---------- |
-| `no_plugin` | Yes | No Live Updates plugin is registered, so the Messaging extension dropped the push. Register `LiveUpdatePlugin` with `MobileCore.addPlugins(...)`. |
+| `no_plugin` | Yes | No Live Updates plugin is registered, so the Adobe Journey Optimizer extension dropped the push. Register `LiveUpdatePlugin` with `MobileCore.addPlugins(...)`. |
 | `app_discarded` | Yes | Your [interceptor](tutorial.md#suppress-updates-with-an-interceptor) returned `false`. |
-| `invalid_event_type` | Yes | `event_type` is not `start`, `update`, or `end`. |
+| `invalid_event_type` | Yes | `event_type` is not `start`, `update`, `end`, or `localstart`. |
 | `invalid_timestamp` | Yes | `timestamp` is more than 28 days old. |
 | `outdated_timestamp` | Yes | `timestamp` is not newer than the last push accepted for the same `notification_id` and `notification_channel_id`. |
 | `style_null` | No | Your style provider returned `null`. The notification is posted without a style. |
 | `notification_permission_missing` | No | Notifications are turned off for the app, for example because `POST_NOTIFICATIONS` was not granted. The notification is posted, but Android does not display it. |
 
-A push whose envelope is not valid JSON, or is missing a required field, is dropped with a warning log and no diagnostic event.
+A push whose `adb_liveupdate_data` value is not valid JSON, or is missing a required field, is dropped with a warning log and no diagnostic event.
 
 ## Incompatibility issues
 
-Reported as `Live Update Incompatible`. None of these drop the Live Update: the notification is posted as a standard ongoing notification instead of a chip. See [Promotion to a Live Update chip](index.md#promotion-to-a-live-update-chip).
+Reported as `Live Update Incompatible`. None of these drop the Live Update: the notification is posted as a standard ongoing notification instead of a promoted Live Update. See [Promotion to a Live Update](index.md#promotion-to-a-live-update).
 
 | **Reason** | **Dropped** | **Meaning** |
 | :--------- | :---------- | :---------- |

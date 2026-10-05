@@ -42,6 +42,8 @@ The `NotificationCompat.Style` to apply. When it returns `null`, the plugin post
 
 **Example**
 
+#### Android Kotlin
+
 ```kotlin
 class MyLiveUpdateStyleProvider : ILiveUpdateStyleProvider {
     override fun provideStyle(payload: LiveUpdatePayload): NotificationCompat.Style? {
@@ -52,6 +54,22 @@ class MyLiveUpdateStyleProvider : ILiveUpdateStyleProvider {
         }
     }
 }
+```
+
+#### Android Java
+
+`ILiveUpdateStyleProvider` has a single method, so you can also pass a lambda.
+
+```java
+ILiveUpdateStyleProvider styleProvider = payload -> {
+    JSONObject contentState = payload.getContentState();
+    if (contentState != null
+            && "progress".equals(contentState.optString("custom_key_template_type"))) {
+        return new NotificationCompat.ProgressStyle()
+            .setProgress(contentState.optInt("custom_key_progress", 0));
+    }
+    return null;
+};
 ```
 
 ## Related classes and interfaces

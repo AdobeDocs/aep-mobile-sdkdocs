@@ -12,7 +12,7 @@ keywords:
 
 # LiveUpdatePlugin
 
-The Live Updates plugin. Register it with Mobile Core so the Messaging extension can route Live Update pushes to it. For how the plugin processes a push, see [Live Updates plugin](../../../../../home/base/mobile-core/plugins/built-in-plugins/live-updates-plugin.md).
+The Live Updates plugin. Add it to Mobile Core so the Adobe Journey Optimizer extension can route Live Update pushes to it. For how the plugin processes a push, see [Live Updates plugin](../../../../../home/base/mobile-core/plugins/built-in-plugins/live-updates-plugin.md).
 
 ## Class Definition
 
@@ -34,11 +34,15 @@ Creates the plugin with the style provider your app uses for every Live Update.
 
 **Example**
 
-Register the plugin once, in `Application.onCreate`, after `MobileCore.registerExtensions(...)`:
+Add the plugin once, in `Application.onCreate`, before you initialize the SDK:
+
+#### Android Kotlin
 
 ```kotlin
 MobileCore.addPlugins(LiveUpdatePlugin(MyLiveUpdateStyleProvider()))
 ```
+
+#### Android Java
 
 ```java
 MobileCore.addPlugins(new LiveUpdatePlugin(new MyLiveUpdateStyleProvider()));
@@ -48,7 +52,7 @@ MobileCore.addPlugins(new LiveUpdatePlugin(new MyLiveUpdateStyleProvider()));
 
 ### handleLiveUpdatePush
 
-Handles a Live Update push. The Messaging extension calls this method when a push carries the `adb_liveupdate_data` key; your app does not call it. To raise a Live Update from your app, use [triggerLocalLiveUpdate](../api-reference.md#triggerlocalliveupdate).
+Handles a Live Update push. The Adobe Journey Optimizer extension calls this method when a push carries the `adb_liveupdate_data` key; your app does not call it. To raise a Live Update from your app, use [triggerLocalLiveUpdate](../api-reference.md#triggerlocalliveupdate).
 
 ```kotlin
 override fun handleLiveUpdatePush(context: Context, message: Any)

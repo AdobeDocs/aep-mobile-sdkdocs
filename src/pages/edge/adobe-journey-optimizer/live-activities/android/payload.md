@@ -12,7 +12,7 @@ keywords:
 
 # Live Update payload
 
-A Live Update is sent as a Firebase Cloud Messaging (FCM) data message. The Live Update properties travel as a JSON-encoded string, the envelope, under the `adb_liveupdate_data` key. Each push carries one state of the Live Update: `start`, `update`, or `end`.
+A Live Update is sent as a Firebase Cloud Messaging (FCM) data message. The Live Update properties are sent as a JSON-encoded string under the `adb_liveupdate_data` key. Each push carries one state of the Live Update: `start`, `update`, or `end`.
 
 ## Configuration
 
@@ -22,14 +22,14 @@ This payload is rendered by the [Live Updates plugin](../../../../home/base/mobi
 
 | **Field** | **Required** | **Key** | **Type** | **Description** |
 | :-------- | :----------- | :------ | :------- | :--------------- |
-| Live Update Data | Yes | `adb_liveupdate_data` | string | JSON-encoded envelope carrying the [properties](#properties) below. Its presence identifies the push as a Live Update. |
-| Tracking Data | Yes | `_xdm` | string | Tracking data added by Adobe Journey Optimizer. The SDK copies it into every Live Update tracking event. Without it, no tracking events are sent, and the Messaging extension ignores the push unless it also has an `adb_title` key. |
+| Live Update Data | Yes | `adb_liveupdate_data` | string | JSON-encoded object containing the [properties](#properties) below. Its presence identifies the push as a Live Update. |
+| Tracking Data | Yes | `_xdm` | string | Tracking data added by Adobe Journey Optimizer. The SDK copies it into every Live Update tracking event. Without it, no tracking events are sent, and the Adobe Journey Optimizer extension ignores the push unless it also has an `adb_title` key. |
 
-The standard Android push keys documented on [Push notification payload keys](../../push-notification/push-payload.md), such as `adb_title` and `adb_body`, are not used to render a Live Update. The plugin builds the notification from the envelope only.
+The standard Android push keys documented on [Push notification payload keys](../../push-notification/push-payload.md), such as `adb_title` and `adb_body`, are not used to render a Live Update. The plugin builds the notification from the `adb_liveupdate_data` properties only.
 
 ## Properties
 
-Keys inside the `adb_liveupdate_data` envelope:
+Keys inside the `adb_liveupdate_data` object:
 
 | **Field** | **Required** | **Key** | **Type** | **Description** |
 | :-------- | :----------- | :------ | :------- | :--------------- |
@@ -37,14 +37,14 @@ Keys inside the `adb_liveupdate_data` envelope:
 | Notification Channel ID | Yes | `notification_channel_id` | string | Android notification channel to post on. See [Notification channel](index.md#notification-channel). |
 | Event Type | Yes | `event_type` | string | `start`, `update`, or `end`. A push with any other value is dropped. |
 | Timestamp | Yes | `timestamp` | number | Time this state was produced, in epoch seconds. The plugin drops a push whose timestamp is more than 28 days old, or not newer than the last push it accepted for the same `notification_id` and `notification_channel_id`. |
-| Title | No | `title` | string | Notification title. Needed for promotion to a Live Update chip. |
+| Title | No | `title` | string | Notification title. Required for promotion to a Live Update. |
 | Body | No | `body` | string | Notification text. |
-| Critical Text | No | `critical_text` | string | Short text shown in the status bar chip. |
+| Critical Text | No | `critical_text` | string | Short text shown in the status bar for a promoted Live Update. |
 | When | No | `when` | number | Time shown on the notification, in epoch seconds. |
-| Dismiss After | No | `dismiss_after` | number | Read only on an `end` push. When positive, the notification is removed this many seconds after the push arrives. |
+| Dismiss After | No | `dismiss_after` | number | Read only on an `end` push. When positive, the notification is removed this many seconds after the push arrives. When absent, the notification stays on the device as an ongoing notification until the user or your app removes it. |
 | Priority | No | `priority` | string | One of `PRIORITY_MAX`, `PRIORITY_HIGH`, `PRIORITY_LOW`, or `PRIORITY_MIN`. Any other value, or no value, uses the default priority. |
-| Topic Name | No | `topic_name` | string | FCM topic associated with this Live Update. Reported in tracking events and used by the [topic tracking APIs](api-reference.md#topic-tracking). |
-| Content State | No | `content_state` | object | App-defined state. The SDK does not read it; your [`ILiveUpdateStyleProvider`](api-reference.md#iliveupdatestyleprovider) reads it from `payload.contentState` to build the style. |
+| Topic Name | No | `topic_name` | string | FCM topic associated with this Live Update. Reported in tracking events and used for [broadcast Live Updates](tutorial.md#broadcast-live-updates). |
+| Content State | No | `content_state` | object | App-defined state. The SDK does not read it; your [ILiveUpdateStyleProvider](public-classes/live-update-style-provider.md) reads it from `payload.contentState` to build the style. |
 
 ## Example
 
@@ -65,7 +65,7 @@ A `start` push, as sent through FCM:
 
 <InlineAlert variant="info" slots="text"/>
 
-`adb_liveupdate_data` is a JSON-encoded string, because FCM data messages only allow string values. The envelopes below show its decoded shape. Set `timestamp` to the current time in epoch seconds when you send a push; the plugin drops pushes more than 28 days old.
+`adb_liveupdate_data` is a JSON-encoded string, because FCM data messages only allow string values. The examples below show its decoded value. Set `timestamp` to the current time in epoch seconds when you send a push; the plugin drops pushes more than 28 days old.
 
 ### Start
 
@@ -109,7 +109,7 @@ Same `notification_id` and `notification_channel_id`, with a newer `timestamp`. 
 
 ### End
 
-`dismiss_after` removes the notification 300 seconds after this push arrives.
+`dismiss_after` removes the notification 300 seconds after this push arrives. Without `dismiss_after`, the notification stays on the device after the `end` push, as an ongoing notification, until the user or your app removes it.
 
 ```json
 {
@@ -135,6 +135,7 @@ The `content_state` keys in these examples are app-defined. They match the style
 
 * **Updates in place.** Pushes with the same `notification_id` replace the same notification.
 * **Ordering.** Each push must have a newer `timestamp` than the last push the plugin accepted for the same `notification_id` and `notification_channel_id`. Older and duplicate pushes are dropped.
+* **Removal after `end`.** The SDK removes the notification only when the `end` push has a positive `dismiss_after` value. Otherwise, it stays until the user or your app removes it.
 * **After `end`.** A push that arrives after `end` with the same `notification_id` and a newer `timestamp` posts the notification again. To block it, use an [interceptor](tutorial.md#suppress-updates-with-an-interceptor).
 
 See also: [Push notification payload keys](../../push-notification/push-payload.md).
