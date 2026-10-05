@@ -12,9 +12,9 @@ keywords:
 
 The `addPlugins` API registers one or more plugins with Mobile Core. Plugins are optional modules that add a specific capability to an extension, such as Live Updates or push templates. For more information, see [Mobile Core plugins](plugins/index.md).
 
-Register plugins in the `onCreate` method of your `Application` class, after you initialize the SDK. Registering the same plugin instance more than once has no effect.
+Register plugins in the `onCreate` method of your `Application` class, before you initialize the SDK. Registering the same plugin instance more than once has no effect.
 
-Please note that this method is **only** supported on Android versions of Mobile Core, starting with version 3.10.0.
+Please note that this method is **only** supported on Android versions of Mobile Core.
 
 ### Android Java
 
@@ -414,7 +414,7 @@ AEPLogLevel logLevel = [AEPLog logFilter];
 
 The `getPlugin` API returns the registered plugin for the given plugin type, or `null` if no matching plugin is registered. Extensions use this API to access the plugins that your app registers. Apps typically do not need to call this API. For more information, see [Mobile Core plugins](plugins/index.md).
 
-Please note that this method is **only** supported on Android versions of Mobile Core, starting with version 3.10.0.
+Please note that this method is **only** supported on Android versions of Mobile Core.
 
 ### Android Java
 

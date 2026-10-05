@@ -14,11 +14,11 @@ keywords:
 
 <InlineAlert variant="info" slots="text"/>
 
-Plugins are available for **Android only**, starting with Mobile Core **3.10.0**.
+Plugins are available for **Android only**, starting with Mobile Core **3.10.0** (BOM **3.23.0**).
 
 Plugins are optional modules that add a specific capability to an Adobe Experience Platform Mobile SDK extension. For example, the Adobe Journey Optimizer extension uses the Live Updates plugin to display Android Live Updates, and the push templates plugin to display Adobe Journey Optimizer push templates.
 
-You register plugins with Mobile Core when your app starts. When an extension needs a capability, it uses the matching plugin that your app registered. If your app does not use a capability, you do not need to include or register its plugin.
+You add plugins to Mobile Core when your app starts, before you register extensions. When an extension needs a capability, it uses the matching plugin that your app registered. If your app does not use a capability, you do not need to include or register its plugin.
 
 ## Plugins and extensions
 
@@ -28,29 +28,28 @@ Extensions and plugins are both modules that you add to your app, but they serve
 | --- | --- | --- |
 | **Purpose** | Provide the features of an Adobe solution or service, such as Analytics, Edge Network, or Adobe Journey Optimizer. | Provide a specific capability to an extension, such as rendering push templates. |
 | **Registration** | Registered with the `MobileCore.initialize` or `MobileCore.registerExtensions` API. | Registered with the [`MobileCore.addPlugins`](../api-reference.md#addplugins) API. |
-| **How they work** | Process events through the SDK event hub and provide their own public APIs. | Used directly by the extension that needs the capability. Plugins do not process events from the event hub. |
-| **Customization** | Configured through the Data Collection UI and the extension's public APIs. | Customized in code when you create the plugin. For example, you pass your own style provider to the Live Updates plugin. |
-| **When not added** | The features of the extension are not available. | The extension continues to work and uses its default behavior for the capability. |
+| **How they work** | First-class components of the SDK. Each extension supports a set of related features and provides public APIs that your app uses to interact with the extension. | Additional, optional features that are developed separately from extensions, so your app can include them only if needed. |
+| **Requirements** | Depend only on their core dependencies and must be registered with Mobile Core. | Used by extensions, so they must be added before the extensions that use them are registered. |
+| **When not added** | The features of the extension are not available. | The features of the plugin are not available. |
 
 ## Benefits
 
 * **Include only what you use**: A capability that lives in a plugin is not part of the extension. Apps that do not use the capability do not need the plugin or its dependencies.
 * **Adopt new platform features independently**: A plugin can use newer Android APIs and libraries than the extension that uses it. For example, the Live Updates plugin is built on Android 16 (API 36) notification APIs, while the Adobe Journey Optimizer extension does not require them.
-* **Customize the behavior in your app**: Some plugins accept app-specific logic when you create them, such as how a Live Update notification is styled.
 * **Fall back safely**: If a plugin is not registered, the extension that uses it logs a warning and continues to work.
 
 ## Available plugins
 
 The following plugins are available for the Adobe Journey Optimizer extension.
 
-| Plugin | Capability | Artifact | Minimum versions |
-| --- | --- | --- | --- |
-| Live Updates (`LiveUpdatePlugin`) | Displays and tracks Android Live Updates sent from Adobe Journey Optimizer. Live Updates are ongoing notifications that show the progress of an activity, such as a delivery or a ride. | `com.adobe.marketing.mobile:liveupdates` | Live Updates 3.0.0, Messaging 3.13.0, Mobile Core 3.10.0 |
-| Push templates (`NotificationBuilderPlugin`) | Renders Adobe Journey Optimizer push templates. The Adobe Journey Optimizer extension displays and tracks the resulting notification. | `com.adobe.marketing.mobile:notificationbuilder` | Notification Builder 3.1.0, Messaging 3.13.0, Mobile Core 3.10.0 |
+| Plugin | Capability | Artifact | Minimum versions | Minimum BOM version |
+| --- | --- | --- | --- | --- |
+| Live Updates (`LiveUpdatePlugin`) | Displays and tracks Android Live Updates sent from Adobe Journey Optimizer. Live Updates are ongoing notifications that show the progress of an activity, such as a delivery or a ride. | `com.adobe.marketing.mobile:liveupdates` | Live Updates 3.0.0, Messaging 3.13.0, Mobile Core 3.10.0 | 3.24.0 |
+| Push templates (`NotificationBuilderPlugin`) | Renders Adobe Journey Optimizer push templates. The Adobe Journey Optimizer extension displays and tracks the resulting notification. | `com.adobe.marketing.mobile:notificationbuilder` | Notification Builder 3.1.0, Messaging 3.13.0, Mobile Core 3.10.0 | 3.23.0 |
 
 <InlineAlert variant="warning" slots="text"/>
 
-Starting with Messaging **3.13.0**, the Adobe Journey Optimizer extension no longer includes the Notification Builder library. To continue displaying Adobe Journey Optimizer push templates, add the `notificationbuilder` dependency to your app and register the `NotificationBuilderPlugin`.
+Starting with Messaging **3.13.0** (BOM **3.23.0**), the Adobe Journey Optimizer extension no longer includes the Notification Builder library. To continue displaying Adobe Journey Optimizer push templates, add the `notificationbuilder` dependency to your app and register the `NotificationBuilderPlugin`.
 
 ## Add plugins to your app
 
@@ -96,7 +95,7 @@ Using dynamic dependency versions is **not** recommended for production apps. Pl
 
 ### Register plugins with Mobile Core
 
-Register your plugins with the `MobileCore.addPlugins` API in the `onCreate` method of your `Application` class, after you initialize the SDK. Registering plugins in `Application.onCreate` ensures that they are available when your app is started by a push notification.
+Register your plugins with the `MobileCore.addPlugins` API in the `onCreate` method of your `Application` class, before you initialize the SDK. This ensures that plugins are available when extensions start processing, including when your app is started by a push notification.
 
 You can register one or more plugins in a single call. Registering the same plugin instance more than once has no effect.
 
@@ -113,12 +112,12 @@ import android.app.Application
 class MainApp : Application() {
   override fun onCreate() {
     super.onCreate()
-    MobileCore.initialize(this, "ENVIRONMENT_ID")
-
     MobileCore.addPlugins(
       NotificationBuilderPlugin(),
       LiveUpdatePlugin(MyLiveUpdateStyleProvider())
     )
+
+    MobileCore.initialize(this, "ENVIRONMENT_ID")
   }
 }
 ```
@@ -136,12 +135,12 @@ public class MainApp extends Application {
   @Override
   public void onCreate(){
     super.onCreate();
-    MobileCore.initialize(this, "ENVIRONMENT_ID");
-
     MobileCore.addPlugins(
       new NotificationBuilderPlugin(),
       new LiveUpdatePlugin(new MyLiveUpdateStyleProvider())
     );
+
+    MobileCore.initialize(this, "ENVIRONMENT_ID");
   }
 }
 ```
