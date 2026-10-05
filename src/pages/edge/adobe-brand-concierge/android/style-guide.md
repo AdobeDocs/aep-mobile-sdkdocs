@@ -850,7 +850,7 @@ When `behavior.productCard.cardStyle` is `"productDetail"`, product recommendati
 | `--product-card-title-font-weight` | `cssLayout.productCardTitleFontWeight` | `Int` | `700` | Title font weight |
 | `--product-card-subtitle-font-size` | `cssLayout.productCardSubtitleFontSize` | `Double` | `12.0` | Subtitle font size (sp) |
 | `--product-card-subtitle-font-weight` | `cssLayout.productCardSubtitleFontWeight` | `Int` | `400` | Subtitle font weight |
-| `--product-card-description-max-lines` | `cssLayout.productCardDescriptionMaxLines` | `Int` | `2` | Maximum number of lines shown for the product description |
+| `--product-card-description-max-lines` | `cssLayout.productCardDescriptionMaxLines` | `Int` | `2` | Maximum description lines before ellipsis. Positive integers set the limit; `none`, zero, negative, or invalid values are ignored and use the default of two lines. For longer descriptions, increase `--product-card-max-height` as needed. |
 | `--product-card-price-font-size` | `cssLayout.productCardPriceFontSize` | `Double` | `14.0` | Price font size (sp) |
 | `--product-card-price-font-weight` | `cssLayout.productCardPriceFontWeight` | `Int` | `400` | Price font weight |
 | `--product-card-badge-font-size` | `cssLayout.productCardBadgeFontSize` | `Double` | `12.0` | Badge font size (sp) |
