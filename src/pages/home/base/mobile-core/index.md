@@ -40,6 +40,10 @@ Rules Engine looks for the interactions between users and their associated data 
 
 The Signal extension allows you to send data third-party endpoints via GET and POST requests. Signals are configured by using rules in the Data Collection UI. For more information, please read the documentation on the [Signal extension](signal/index.md).
 
+## Plugins
+
+Plugins are optional modules that add a specific capability to an extension, such as Live Updates or push templates for the Adobe Journey Optimizer extension. Plugins are available for Android only. For more information, see [Mobile Core plugins](plugins/index.md).
+
 ## Platform Services
 
 The interaction with native platforms is mainly built into the Platform Services layer, which is used across all the extensions. It also makes it easy for the apps to customize the behavior if needed. For more information, see [Platform Services](platform-services/index.md).

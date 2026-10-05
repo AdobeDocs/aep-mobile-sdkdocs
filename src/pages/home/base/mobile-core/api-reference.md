@@ -10,22 +10,44 @@ keywords:
 
 ## addPlugins
 
-Registers one or more [plugins](plugins.md) so that host extensions can resolve and use them at runtime. Plugins are optional add-on capabilities (such as Live Updates and push templates). For more information, see [Mobile Core plugins](plugins.md).
+The `addPlugins` API registers one or more plugins with Mobile Core. Plugins are optional modules that add a specific capability to an extension, such as Live Updates or push templates. For more information, see [Mobile Core plugins](plugins/index.md).
 
-<InlineAlert variant="info" slots="text"/>
+Register plugins in the `onCreate` method of your `Application` class, after you initialize the SDK. Registering the same plugin instance more than once has no effect.
 
-The plugin APIs (`addPlugins` and `getPlugin`) are available for **Android only**.
+Please note that this method is **only** supported on Android versions of Mobile Core, starting with version 3.10.0.
 
-### Android
+### Android Java
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
 
 ```java
 public static void addPlugins(@NonNull final IAepPlugin... plugins)
 ```
 
-Register the plugin(s) you want once at startup, usually in `Application.onCreate`:
+* _plugins_ - One or more plugins to register.
+
+#### Example
+
+```java
+MobileCore.addPlugins(
+    new NotificationBuilderPlugin(),
+    new LiveUpdatePlugin(new MyLiveUpdateStyleProvider())
+);
+```
+
+### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
 
 ```kotlin
-MobileCore.addPlugins(LiveUpdatePlugin(MyLiveUpdateStyleProvider()))
+MobileCore.addPlugins(
+    NotificationBuilderPlugin(),
+    LiveUpdatePlugin(MyLiveUpdateStyleProvider())
+)
 ```
 
 ## clearUpdatedConfiguration
@@ -390,21 +412,37 @@ AEPLogLevel logLevel = [AEPLog logFilter];
 
 ## getPlugin
 
-Resolves a registered [plugin](plugins.md) by its contract type, or returns `null` when no matching plugin is registered. For more information, see [Mobile Core plugins](plugins.md).
+The `getPlugin` API returns the registered plugin for the given plugin type, or `null` if no matching plugin is registered. Extensions use this API to access the plugins that your app registers. Apps typically do not need to call this API. For more information, see [Mobile Core plugins](plugins/index.md).
 
-<InlineAlert variant="info" slots="text"/>
+Please note that this method is **only** supported on Android versions of Mobile Core, starting with version 3.10.0.
 
-The plugin APIs (`addPlugins` and `getPlugin`) are available for **Android only**.
+### Android Java
 
-### Android
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
 
 ```java
 @Nullable
 public static <T extends IAepPlugin> T getPlugin(@NonNull final Class<T> type)
 ```
 
+* _type_ - The plugin type to look up.
+
+#### Example
+
+```java
+ILiveupdatePlugin plugin = MobileCore.getPlugin(ILiveupdatePlugin.class);
+```
+
+### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
 ```kotlin
-val plugin: ILiveupdatePlugin? = MobileCore.getPlugin(ILiveupdatePlugin::class.java)
+val plugin = MobileCore.getPlugin(ILiveupdatePlugin::class.java)
 ```
 
 ## getPrivacyStatus
