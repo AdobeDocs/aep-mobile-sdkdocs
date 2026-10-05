@@ -101,9 +101,17 @@ Brand Concierge expects the following keys to be present in the Configuration sh
 * **`concierge.configId`**: String (datastream ID)
 * **`concierge.region`**: String, optional (region identifier, e.g. `va6`, inserted into the Brand Concierge request path; omit to use the default unqualified endpoint)
 
-The ECID is read from the Edge Identity shared state.
+The full Edge Identity `identityMap` (including the ECID) is read from the Edge Identity shared state and forwarded to Brand Concierge requests.
 
 Another option for validation is to use Adobe Assurance. Refer to the [Mobile SDK validation guide](../../../home/getting-started/validate.md) for more information.
+
+<HorizontalLine />
+
+## Identities
+
+Brand Concierge forwards the full Edge Identity `identityMap` on every chat and feedback request. The ECID is always included automatically. To send additional identities (for example, a hashed email, `CRMID`, or a custom namespace), set them using the Identity for Edge Network extension's [`updateIdentities`](/edge/identity-for-edge-network/api-reference.md#updateidentities) API. These identities are forwarded verbatim, so lowercasing and hashing are the app's responsibility.
+
+Namespace priority and identity graph rules are configured server-side in Adobe Experience Platform; the SDK does not interpret or relabel namespaces.
 
 <HorizontalLine />
 
@@ -133,6 +141,63 @@ Concierge.setAuthTokenProvider(
     timeoutMillis = 5000L
 )
 ```
+
+<HorizontalLine />
+
+## Data handoff
+
+Use `Concierge.sendDataHandoff(...)` when your app needs to hand the SDK data that did not originate in the chat UI, for example, the result of a native checkout flow that completed outside of chat. The SDK forwards the data to the Brand Concierge agent pipeline and renders its response through the active chat transcript without requiring the user to type or say a chat message.
+
+<InlineAlert variant="info" slots="text"/>
+
+**Prerequisite**: Keep a configured `ConciergeChat` or `ConciergeChatView` rendered with a non-empty `surfaces` list while calling this API. The active chat session provides both the routing surfaces and the transcript that receives the service response. A handoff made without an active chat session fails with `NO_ACTIVE_SESSION`.
+
+```kotlin
+import com.adobe.marketing.mobile.concierge.Concierge
+
+Concierge.sendDataHandoff(
+    routingHint = "successful-checkout",
+    xdmFields = mapOf(
+        "commerce" to mapOf(
+            "order" to mapOf(
+                "purchaseID" to orderId,
+                "priceTotal" to 129.99,
+                "currencyCode" to "USD"
+            )
+        )
+    ),
+    localMessage = "Your order is confirmed!"
+) { accepted, rejectReason ->
+    // accepted == true  -> Brand Concierge completed and rendered the response.
+    // accepted == false -> validation or delivery failed; inspect rejectReason before retrying.
+}
+```
+
+### `Concierge.sendDataHandoff(routingHint, xdmFields, localMessage, completion)`
+
+* **`routingHint`**: A string consumed only by Brand Concierge's current phrase-based router (for example, `"successful-checkout"`). The end user never sees it, and it is not conversational content. Defaults to an empty string; pass an empty or blank string when the XDM fields alone determine routing, and the SDK forwards it as an empty service query. Because it is the first parameter, `@JvmOverloads` generates no Java overload that omits it. Java callers pass `""` explicitly, and Kotlin callers use named arguments.
+* **`xdmFields`** *(required)*: Arbitrary XDM-shaped data merged into the root of the outbound XDM object alongside the SDK-owned identity map. Use nested Kotlin maps and lists, for example `mapOf("commerce" to mapOf("order" to mapOf("purchaseID" to "123")))`. The map must be non-empty, every key must be a `String`, and values must be JSON-safe: `String`, `Boolean`, finite `Int`, `Long`, `Float`, or `Double`, or maps and lists containing those values. Do not use `identityMap` as a top-level key because the SDK owns and populates it.
+* **`localMessage`**: Optional text for a local, non-networked chat message distinct from the data forwarded to Brand Concierge. The SDK renders it immediately before an accepted handoff starts, as an agent-attributed message rather than a user message.
+* **`completion`**: Optional `ConciergeDataHandoffCallback`, called exactly once on a background thread. `accepted` is `true` only after Brand Concierge completes a response stream with renderable content. When `accepted` is `false`, `rejectReason` is a typed `ConciergeDataHandoffRejectReason`:
+
+| Reject reason | Meaning |
+| --- | --- |
+| `MISSING_EVENT_DATA` | No payload reached the extension. This indicates an internal wiring issue and is not normally caller-triggered. |
+| `INVALID_ROUTING_HINT_TYPE` | `routingHint` was not a string in the underlying event payload. A missing or blank `routingHint` is accepted, not rejected. |
+| `MISSING_XDM_FIELDS` | `xdmFields` was missing from the underlying event payload. |
+| `INVALID_XDM_FIELDS_TYPE` | `xdmFields` was not a map in the underlying event payload. |
+| `EMPTY_XDM_FIELDS` | `xdmFields` was empty. |
+| `INVALID_XDM_FIELD_KEY` | `xdmFields` contained a key that was not a string. |
+| `RESERVED_KEY_COLLISION` | `xdmFields` used an SDK-reserved top-level key such as `identityMap`. |
+| `INVALID_XDM_FIELD_VALUE` | `xdmFields` contained a value that cannot be serialized as JSON. |
+| `NO_ACTIVE_SESSION` | No rendered Concierge chat session was available to receive the handoff. |
+| `CHAT_IN_PROGRESS` | A chat turn or another handoff is active or waiting. Retry after it completes. |
+| `DELIVERY_FAILED` | Brand Concierge returned an error or the service request could not complete. |
+| `EMPTY_RESPONSE` | Brand Concierge completed without any text, cards, or CTAs to render. |
+| `DELIVERY_TIMEOUT` | Brand Concierge did not complete within the handoff delivery timeout. |
+| `NO_RESPONSE` | The extension did not respond, for example because the request timed out. |
+
+Chat messages use a finite FIFO queue. Data handoffs never join that queue: if a chat message or another handoff is active or waiting, the SDK immediately reports `CHAT_IN_PROGRESS` and does not render `localMessage` or call the service. Retry the handoff after the active request completes. After an accepted handoff starts, delivery failures, empty responses, and timeouts do not add an error message to the transcript. An already-rendered `localMessage` remains visible, and the host app owns any failure UI based on the completion result.
 
 <HorizontalLine />
 
