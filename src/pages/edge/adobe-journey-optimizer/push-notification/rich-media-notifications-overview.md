@@ -77,6 +77,19 @@ For more information, see Google's documentation [on native Android image suppor
 
 See the documentation on [using the Messaging extension's implementation of the FirebaseMessagingService.](android/automatic-display-and-tracking.md#register-messaging-extensions-firebasemessagingservice)
 
+### Further customization with push templates
+
+Beyond a plain image attached to the notification, Adobe Journey Optimizer can also send a push that renders as a richer, pre-built layout. The default payload of a push campaign now includes the `adb_template_type` key, with the Basic template (`ajo_basic`) as the default:
+
+* [Basic](push-templates/android/basic.md) (`ajo_basic`): a title, a body, and an expanded hero image.
+* [Big text](push-templates/android/big-text.md) (`ajo_bigtext`): a title, a short collapsed body, a longer expanded body, and an optional large side icon.
+
+These templates are rendered by Messaging `<MESSAGING_VERSION>` or later together with the [UI plugin](../../../home/base/mobile-core/plugins/built-in-plugins/ui-plugin/index.md) (`notificationbuilder` `<NOTIFICATIONBUILDER_VERSION>` or later), added to the app and registered with `MobileCore.addPlugins(...)`.
+
+<InlineAlert variant="info" slots="text"/>
+
+Apps on an earlier Messaging version, or without the UI plugin, keep displaying these pushes as plain notifications, with the image setup above, including pushes from new campaigns. See [Push templates troubleshooting](push-templates/android/troubleshooting.md).
+
 ## Additional Resources
 
 * [Adobe Journey Optimizer Documentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/design-push.html)

@@ -48,6 +48,7 @@ This document outlines the various push notification payload keys used by the Ad
 | `adb_sound` | String | The push notification's sound. |
 | `adb_n_count` | String | The push notification badge count. |
 | `adb_n_priority` | String | The push notification's priority. For more information, please read the [Firebase documentation](https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages#notificationpriority) |
+| `adb_n_visibility` | String | The push notification's visibility on the lock screen. |
 | `adb_channel_id` | String | The push notification's channel ID. |
 | `adb_icon` | String | The push notification's icon resource name. |
 | `adb_image` | String | The URL of the image to be displayed on the notification. |
@@ -57,11 +58,18 @@ This document outlines the various push notification payload keys used by the Ad
 | `adb_act.label` | String | The label for custom action button. |
 | `adb_act.uri` | String | The URI for custom action button. |
 | `adb_act.type` | enum | The action type for custom action button. It can be one of the following values: `DEEPLINK`, `WEBURL`, `OPENAPP`. |
-| `adb_liveupdate_data` | String (JSON) | Present when the push is a [Live Update](../live-activities/android/index.md). Its value is a JSON-encoded envelope carrying the Live Update fields; see [Live Update payload](../live-activities/android/payload.md) for the envelope keys. |
+| `adb_liveupdate_data` | String (JSON) | Present when the push is a [Live Update](../live-activities/android/index.md). Its value is a JSON-encoded string containing the Live Update properties; see [Live Update payload](../live-activities/android/payload.md) for its keys. |
+| `adb_version` | String | Optional. The payload version assigned by the authoring UI. Defaults to `"1"` when absent. |
+| `adb_template_type` | String | Present when the push carries a push template. Identifies which template to render. |
+| `adb_template_properties` | String (JSON) | Present when the push carries a push template. A JSON-encoded string carrying the fields specific to the template named in `adb_template_type`. |
 
 <InlineAlert variant="info" slots="text"/>
 
 A Live Update push is a data message identified by the `adb_liveupdate_data` key. Its inner fields (`notification_id`, `event_type`, `timestamp`, and so on) are documented on [Live Update payload](../live-activities/android/payload.md), not here.
+
+<InlineAlert variant="info" slots="text"/>
+
+A push template push is identified by the `adb_template_type` key. Push templates render a richer, pre-built layout and require the [UI plugin](../../../home/base/mobile-core/plugins/built-in-plugins/ui-plugin/index.md) to be added to the app. For the supported templates, their `adb_template_properties` keys, and a sample payload per template, see [Rich Media Push Notifications](rich-media-notifications-overview.md).
 
 ## iOS
 
