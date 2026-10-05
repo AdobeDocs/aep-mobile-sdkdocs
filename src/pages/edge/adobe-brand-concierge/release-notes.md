@@ -8,6 +8,28 @@ keywords:
 
 # Release notes
 
+## September 29, 2026
+
+### iOS Brand Concierge 5.9.0
+
+* Added `Concierge.sendDataHandoff` for sending XDM data through the Brand Concierge service.
+* Forwarded the full Edge Identity `identityMap` to the conversation, with an ECID fallback when no identity map is available.
+* Added secondary CTA buttons to product cards, with theme keys for their colors and border width.
+* Added the `--product-card-description-max-lines` theme key to support longer product descriptions.
+* Fixed inline link theming, input focus border width with gradients, product-card CTA positioning, and input bar icon spacing.
+
+**Full Changelog**: https://github.com/adobe/aepsdk-concierge-ios/compare/5.8.1...5.9.0
+
+### Android Brand Concierge 3.9.0
+
+* Added `Concierge.sendDataHandoff` for sending XDM data through the Brand Concierge service.
+* Forwarded the full Edge Identity `identityMap` to the conversation, with an ECID fallback when no identity map is available.
+* Added secondary CTA buttons to product cards, with theme keys for their colors and border width.
+* Added the `--product-card-description-max-lines` theme key to support longer product descriptions.
+* Fixed product-card price and CTA alignment, the focused input bar's gradient border, and listening waveform clipping and bar shape.
+
+**Full Changelog**: https://github.com/adobe/aepsdk-concierge-android/compare/v3.8.1...v3.9.0
+
 ## September 11, 2026
 
 ### iOS Brand Concierge 5.8.1

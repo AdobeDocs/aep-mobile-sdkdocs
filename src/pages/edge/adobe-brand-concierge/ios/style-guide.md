@@ -105,7 +105,21 @@ Dimensions use CSS pixel units:
 }
 ```
 
-On iOS, prefer the `*-mobile` token names; `--input-height` and `--input-border-radius` without the suffix are not supported (see [Unsupported CSS Variables](#unsupported-css-variables)).
+On iOS, prefer the `*-mobile` token names for input height and corner radius; `--input-height` and `--input-border-radius` without the suffix are not supported (see [Unsupported CSS Variables](#unsupported-css-variables)).
+
+### Line clamp values
+
+Line-clamp tokens take a positive integer, limiting the text to that many lines and truncating the overflow with an ellipsis.
+
+```json
+{
+  "--product-card-description-max-lines": "6"
+}
+```
+
+`0`, negative numbers, `none`, and unparseable values all leave the token unset, so the component applies its own default clamp — they are not a way to request unbounded text. (A zero-line clamp would render the text invisible, so it is never passed through.) To approximate an unbounded description, set a large value such as `"99"` and raise `--product-card-max-height` to match.
+
+Clamping only limits the text; it does not reserve space. A description shorter than the clamp takes only the lines it needs, and in a carousel the surrounding card still stretches to the tallest card's height (see `--product-card-min-height` / `--product-card-max-height` under [Layout - Product Card](#layout---product-card)).
 
 ### Padding
 
@@ -578,7 +592,7 @@ Visual styling using CSS-like variable names. All properties in the `theme` obje
 | `--message-user-text` | `colors.message.userText` | `Color` | `primary` | User message text color |
 | `--message-concierge-background` | `colors.message.conciergeBackground` | `Color` | `systemBackground` | AI message bubble background |
 | `--message-concierge-text` | `colors.message.conciergeText` | `Color` | `primary` | AI message text color |
-| `--message-concierge-link-color` | `colors.message.conciergeLink` | `Color` | `accentColor` | Sources-list link color and inline link-**icon** fallback color. (Inline link *text* uses `--color-primary`.) |
+| `--message-concierge-link-color` | `colors.message.conciergeLink` | `Color` | `accentColor` | Link color for concierge messages: sources-list links, inline link **text**, and the inline link-**icon** fallback color. |
 
 ### Colors - Buttons
 
@@ -603,7 +617,7 @@ Visual styling using CSS-like variable names. All properties in the `theme` obje
 | `--input-outline-gradient-start-color` | `colors.input.outlineGradient` | `Color?` | `nil` | Input border gradient start color. See [Gradients](#gradients). Overrides `--input-outline-color` when set. |
 | `--input-outline-gradient-end-color` | `colors.input.outlineGradient` | `Color?` | `nil` | Input border gradient end color. |
 | `--input-outline-gradient-angle` | `colors.input.outlineGradient` | `Degrees` | `180` | Input border gradient direction. |
-| `--input-focus-outline-color` | `colors.input.outlineFocus` | `Color` | `accentColor` | Focused input border color |
+| `--input-focus-outline-color` | `colors.input.outlineFocus` | `Color` | `accentColor` | Focused input border color. Drawn *over* the base border, so when it differs from `--input-outline-color` the border visibly changes color on focus. Ignored when the border uses a gradient — see `--input-outline-gradient-start-color` — so focusing never flattens a gradient border to a solid ring. |
 
 ### Colors - Input Icons
 
@@ -674,8 +688,11 @@ Visual styling using CSS-like variable names. All properties in the `theme` obje
 | `--product-card-badge-text-color` | `colors.productCard.badgeTextColor` | `Color` | `white` | Badge label text color |
 | `--product-card-badge-background-color` | `colors.productCard.badgeBackgroundColor` | `Color` | `primary` | Badge background color |
 | `--product-card-outline-color` | `colors.productCard.outlineColor` | `Color` | `clear` | Card border/outline color |
-| `--product-card-cta-button-background-color` | `colors.productCardCtaButton.background` | `Color` | `#BB5811` | Product card CTA button background color |
-| `--product-card-cta-button-text-color` | `colors.productCardCtaButton.text` | `Color` | `white` | Product card CTA button label text color |
+| `--product-card-cta-button-background-color` | `colors.productCardCtaButton.background` | `Color` | `#BB5811` | Product card primary CTA button background color |
+| `--product-card-cta-button-text-color` | `colors.productCardCtaButton.text` | `Color` | `white` | Product card primary CTA button label text color |
+| `--product-card-secondary-cta-button-background-color` | `colors.productCardSecondaryCtaButton.background` | `Color` | `transparent` | Product card secondary (outlined) CTA button background color |
+| `--product-card-secondary-cta-button-text-color` | `colors.productCardSecondaryCtaButton.text` | `Color` | `#BB5811` | Product card secondary CTA button label text color |
+| `--product-card-secondary-cta-button-border-color` | `colors.productCardSecondaryCtaButton.border` | `Color` | `#BB5811` | Product card secondary CTA button outline color |
 
 ### Colors - CTA Button
 
@@ -696,6 +713,10 @@ Visual styling using CSS-like variable names. All properties in the `theme` obje
 | CSS Variable | Swift Property | Type | Default | Description |
 |--------------|----------------|------|---------|-------------|
 | `--thinking-dot-color` | `colors.thinking.dotColor` | `Color?` | `nil` (falls back to `primaryDotColor` from `ConciergeResponsePlaceholderConfig`) | Thinking indicator dot color |
+
+<InlineAlert variant="info" slots="text"/>
+
+**Layout value format**: All layout measurements are specified as CSS strings in the JSON theme object (for example, `"8px"`, `"16px"`) and integer quantities as numeric strings (for example, `"700"`, `"400"`). The SDK parses these into their internal Swift types (`CGFloat` for point values, `Int` for weights and orders). The **Type** and **Default** columns below reflect the internal representation.
 
 ### Layout - Input
 
@@ -779,6 +800,9 @@ Visual styling using CSS-like variable names. All properties in the `theme` obje
 |--------------|----------------|------|---------|-------------|
 | `--product-card-width` | `layout.productCardWidth` | `CGFloat` | `250` | Card width in points |
 | `--product-card-height` | `layout.productCardHeight` | `CGFloat` | `300` | Card height in points |
+| `--product-card-min-height` | `layout.productCardMinHeight` | `CGFloat` | `240` | Minimum product-detail card height. Cards shorter than this are padded out to it. |
+| `--product-card-max-height` | `layout.productCardMaxHeight` | `CGFloat` | `360` | Maximum product-detail card height. Content taller than this scrolls inside the card, which clips the bottom inset (and the bottom-anchored price/CTA block) below the fold. |
+| `--product-card-description-max-lines` | `layout.productCardDescriptionMaxLines` | `Int?` | unset (renders 2 lines) | Maximum number of lines the card description renders before truncating with an ellipsis. Accepts a positive integer; anything else leaves the token unset and the card clamps to 2 lines. See [Line clamp values](#line-clamp-values). Raising this usually requires raising `--product-card-max-height` too, or the extra lines push the card past its cap and it scrolls internally instead of growing. |
 | `--product-card-title-font-size` | `layout.productCardTitleFontSize` | `CGFloat` | `14` | Title font size |
 | `--product-card-title-font-weight` | `layout.productCardTitleFontWeight` | `FontWeight` | `bold` | Title font weight |
 | `--product-card-subtitle-font-size` | `layout.productCardSubtitleFontSize` | `CGFloat` | `12` | Subtitle font size |
@@ -799,8 +823,9 @@ Visual styling using CSS-like variable names. All properties in the `theme` obje
 | `--product-card-cta-button-border-radius` | `layout.productCardCtaButtonBorderRadius` | `CGFloat` | `40` | Product card CTA button corner radius |
 | `--product-card-cta-button-horizontal-padding` | `layout.productCardCtaButtonHorizontalPadding` | `CGFloat` | `16` | Product card CTA button horizontal padding |
 | `--product-card-cta-button-vertical-padding` | `layout.productCardCtaButtonVerticalPadding` | `CGFloat` | `8` | Product card CTA button vertical padding |
-| `--product-card-cta-button-font-size` | `layout.productCardCtaButtonFontSize` | `CGFloat` | `12` | Product card CTA button label font size |
-| `--product-card-cta-button-font-weight` | `layout.productCardCtaButtonFontWeight` | `FontWeight` | `semibold` | Product card CTA button label font weight |
+| `--product-card-cta-button-font-size` | `layout.productCardCtaButtonFontSize` | `CGFloat` | `12` | Product card CTA button label font size (shared by primary and secondary) |
+| `--product-card-cta-button-font-weight` | `layout.productCardCtaButtonFontWeight` | `FontWeight` | `semibold` | Product card CTA button label font weight (shared by primary and secondary) |
+| `--product-card-secondary-cta-button-border-width` | `layout.productCardSecondaryCtaButtonBorderWidth` | `CGFloat` | `1` | Product card secondary CTA button outline width |
 
 ### Layout - CTA Button
 
@@ -1053,6 +1078,9 @@ Visual styling using CSS-like variable names. All properties in the `theme` obje
     "--product-card-outline-color": "#00000000",
     "--product-card-width": "200px",
     "--product-card-height": "300px",
+    "--product-card-min-height": "240px",
+    "--product-card-max-height": "360px",
+    "--product-card-description-max-lines": "2",
     "--product-card-text-spacing": "8px",
     "--product-card-text-top-padding": "20px",
     "--product-card-text-bottom-padding": "12px",
@@ -1061,11 +1089,15 @@ Visual styling using CSS-like variable names. All properties in the `theme` obje
     "--product-card-carousel-horizontal-padding": "4px",
     "--product-card-cta-button-background-color": "#BB5811",
     "--product-card-cta-button-text-color": "#FFFFFF",
+    "--product-card-secondary-cta-button-background-color": "",
+    "--product-card-secondary-cta-button-text-color": "#BB5811",
+    "--product-card-secondary-cta-button-border-color": "#BB5811",
     "--product-card-cta-button-border-radius": "40px",
     "--product-card-cta-button-horizontal-padding": "16px",
     "--product-card-cta-button-vertical-padding": "8px",
     "--product-card-cta-button-font-size": "12px",
     "--product-card-cta-button-font-weight": "600",
+    "--product-card-secondary-cta-button-border-width": "1px",
     "--cta-button-background-color": "#EDEDED",
     "--cta-button-text-color": "#191F1C",
     "--cta-button-icon-color": "#161313",
@@ -1186,7 +1218,7 @@ This section documents which properties are fully implemented, partially impleme
 | `text["carousel.prev.aria"]` | ✅ | Used in CarouselGroupView |
 | `text["carousel.next.aria"]` | ✅ | Used in CarouselGroupView |
 | `text["scroll.bottom.aria"]` | ⚠️ | Parsed but scroll button not implemented |
-| `text["error.network"]` | ✅ | Used in ChatView |
+| `text["error.network"]` | ✅ | Rendered into the transcript by ChatController when a turn fails; synced from the theme by ChatView |
 | `text["loading.message"]` | ✅ | Used in ChatView placeholder |
 | `text["feedback.dialog.title.positive"]` | ✅ | Used in FeedbackOverlayView |
 | `text["feedback.dialog.title.negative"]` | ✅ | Used in FeedbackOverlayView |
@@ -1242,7 +1274,7 @@ This section documents which properties are fully implemented, partially impleme
 | `--message-user-text` | ✅ | Used in ChatMessageView |
 | `--message-concierge-background` | ✅ | Used in ChatMessageView, SourcesListView |
 | `--message-concierge-text` | ✅ | Used in ChatMessageView |
-| `--message-concierge-link-color` | ✅ | Used in SourceRowView; inline link-icon fallback in BasicMessageView |
+| `--message-concierge-link-color` | ✅ | Used in SourceRowView; inline link text and link-icon fallback in BasicMessageView |
 | `--button-primary-background` | ✅ | Used in ConciergePressableButtonStyle |
 | `--button-primary-text` | ✅ | Used in ConciergePressableButtonStyle |
 | `--button-secondary-border` | ✅ | Used in ConciergePressableButtonStyle |
@@ -1257,7 +1289,7 @@ This section documents which properties are fully implemented, partially impleme
 | `--input-outline-gradient-start-color` | ✅ | Used in ChatComposer for the input border gradient, overrides `--input-outline-color` |
 | `--input-outline-gradient-end-color` | ✅ | Used in ChatComposer for the input border gradient |
 | `--input-outline-gradient-angle` | ✅ | Used in ChatComposer for the input border gradient direction |
-| `--input-focus-outline-color` | ✅ | Used in ChatComposer |
+| `--input-focus-outline-color` | ✅ | Used in ChatComposer; skipped when the border has a renderable gradient so the gradient survives focus |
 | `--citations-background-color` | ✅ | Used in MarkdownBlockView |
 | `--citations-text-color` | ✅ | Used in MarkdownBlockView |
 | `--feedback-icon-btn-background` | ✅ | Used in SourcesListView |
@@ -1310,8 +1342,11 @@ This section documents which properties are fully implemented, partially impleme
 | `--product-card-badge-text-color` | ✅ | Used in ProductDetailCardView |
 | `--product-card-badge-background-color` | ✅ | Used in ProductDetailCardView |
 | `--product-card-outline-color` | ✅ | Used in ProductDetailCardView |
-| `--product-card-cta-button-background-color` | ✅ | Product card CTA button background, used in ProductDetailCardView |
-| `--product-card-cta-button-text-color` | ✅ | Product card CTA button label text color, used in ProductDetailCardView |
+| `--product-card-cta-button-background-color` | ✅ | Product card primary CTA button background, used in ProductDetailCardView |
+| `--product-card-cta-button-text-color` | ✅ | Product card primary CTA button label text color, used in ProductDetailCardView |
+| `--product-card-secondary-cta-button-background-color` | ✅ | Product card secondary CTA button background, used in ProductDetailCardView |
+| `--product-card-secondary-cta-button-text-color` | ✅ | Product card secondary CTA button label text color, used in ProductDetailCardView |
+| `--product-card-secondary-cta-button-border-color` | ✅ | Product card secondary CTA button outline color, used in ProductDetailCardView |
 
 ### Theme Tokens - Layout
 
@@ -1365,6 +1400,9 @@ This section documents which properties are fully implemented, partially impleme
 | `--welcome-prompt-corner-radius` | ✅ | Used in ChatMessageView for prompt card corner radius |
 | `--suggestion-item-border-radius` | ✅ | Used in ChatMessageView for post-response suggestion chip corner radius |
 | `--product-card-width` | ✅ | Used in ProductDetailCardView, CarouselGroupView |
+| `--product-card-min-height` | ✅ | Floor applied by `ProductDetailCardView.clampedHeight` |
+| `--product-card-max-height` | ✅ | Cap applied by `ProductDetailCardView.clampedHeight`; content beyond it scrolls internally |
+| `--product-card-description-max-lines` | ✅ | Applied as the `lineLimit` on the description in `ProductDetailCardView.productCardTitleSubtitleBlock`, falling back to `ProductDetailCardDimensions.defaultDescriptionMaxLines` when unset |
 | `--product-card-height` | ✅ | Used in ProductDetailCardView, CarouselGroupView |
 | `--product-card-title-font-size` | ✅ | Used in ProductDetailCardView |
 | `--product-card-title-font-weight` | ✅ | Used in ProductDetailCardView |
@@ -1388,6 +1426,7 @@ This section documents which properties are fully implemented, partially impleme
 | `--product-card-cta-button-vertical-padding` | ✅ | Used in ProductDetailCardView |
 | `--product-card-cta-button-font-size` | ✅ | Used in ProductDetailCardView |
 | `--product-card-cta-button-font-weight` | ✅ | Used in ProductDetailCardView |
+| `--product-card-secondary-cta-button-border-width` | ✅ | Secondary CTA outline width, used in ProductDetailCardView |
 | `--cta-button-border-radius` | ✅ | Used in CtaButtonView |
 | `--cta-button-horizontal-padding` | ✅ | Used in CtaButtonView |
 | `--cta-button-vertical-padding` | ✅ | Used in CtaButtonView |
