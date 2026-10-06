@@ -57,9 +57,9 @@ let config = ["edgeidentity.optimizeOperationalProfileDataSync": false]
 MobileCore.updateConfigurationWith(configDict: config)
 ```
 
-## Sync Operational Data rule event
+## Operational Data rule event
 
-Identity Tags extension version 2.1.0 adds **Sync Operational Data** under the **Tracking** event category in the rule builder. Select **Identity** as the event extension, then select **Sync Operational Data**. The event has no additional configuration.
+Identity Tags extension version 2.1.0 adds **Operational Data** under the **Attributes** event category in the rule builder. Select **Identity** as the event extension, then select **Operational Data**. The event has no additional configuration.
 
 The event matches SDK events with type `com.adobe.eventType.generic.operationalData` and source `com.adobe.eventSource.requestContent`. Pair it with the Edge Network [Forward Operational Data action](../edge-network/index.md#forward-operational-data-rule-action) to configure the operational fields to forward.
 

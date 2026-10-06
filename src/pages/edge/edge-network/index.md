@@ -53,7 +53,7 @@ If you have a first-party domain mapped to the Adobe-provisioned Edge Network do
 
 Edge Network Tags extension version 2.1.0 adds **Forward Operational Data** to the rule builder. The action configures which operational fields a supporting SDK forwards, including before consent is granted; it does not supply device values.
 
-1. Add the Identity [Sync Operational Data event](../identity-for-edge-network/index.md#sync-operational-data-rule-event) to your rule.
+1. Add the Identity [Operational Data event](../identity-for-edge-network/index.md#operational-data-rule-event) to your rule.
 2. Add an action, select **Adobe Experience Platform Edge Network**, then select **Forward Operational Data**.
 3. Select the fields to forward:
 

@@ -14,7 +14,7 @@ keywords:
 ### Identity Tags extension 2.1.0
 
 * Adds **Optimize syncing operational profile data**, saved as the boolean `edgeidentity.optimizeOperationalProfileDataSync` configuration key.
-* Adds the **Sync Operational Data** rule event under **Tracking**. The event matches `com.adobe.eventType.generic.operationalData` / `com.adobe.eventSource.requestContent` and has no additional configuration.
+* Adds the **Operational Data** rule event under **Attributes**. The event matches `com.adobe.eventType.generic.operationalData` / `com.adobe.eventSource.requestContent` and has no additional configuration.
 * Packages the configuration setting and event in one minor release, upgrading the Tags extension from 2.0.0.
 
 <InlineAlert variant="info" slots="text"/>
