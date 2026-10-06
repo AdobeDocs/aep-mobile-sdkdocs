@@ -22,7 +22,11 @@ keywords:
 ## Rich Media Push Notification Support
 
 * [Rich Media Push Notifications Overview](rich-media-notifications-overview.md)
-* [Push templates (Android)](push-templates/android/basic.md): [Basic template](push-templates/android/basic.md), [Big text template](push-templates/android/big-text.md), [Troubleshooting](push-templates/android/troubleshooting.md)
+
+## Push templates
+
+* [Push templates overview](push-templates/index.md)
+* Android: [Basic template](push-templates/android/basic.md), [Big text template](push-templates/android/big-text.md), [Troubleshooting](push-templates/android/troubleshooting.md)
 
 ## Public classes and enums
 

@@ -45,7 +45,7 @@ The following plugins are available for the Adobe Journey Optimizer extension.
 | Plugin | Capability | Artifact | Minimum versions | Minimum BOM version |
 | --- | --- | --- | --- | --- |
 | [Live Updates](built-in-plugins/live-updates-plugin.md) (`LiveUpdatePlugin`) | Displays and tracks Android Live Updates sent from Adobe Journey Optimizer. Live Updates are ongoing notifications that show the progress of an activity, such as a delivery or a ride. | `com.adobe.marketing.mobile:liveupdates` | Live Updates 3.0.0, Messaging 3.13.0, Mobile Core 3.10.0 | 3.24.0 |
-| [Push templates](built-in-plugins/ui-plugin/index.md) (`NotificationBuilderPlugin`) | Renders Adobe Journey Optimizer push templates. The Adobe Journey Optimizer extension displays and tracks the resulting notification. | `com.adobe.marketing.mobile:notificationbuilder` | Notification Builder 3.1.0, Messaging 3.13.0, Mobile Core 3.10.0 | 3.23.0 |
+| [UI Builder](built-in-plugins/ui-builder-plugin.md) (`NotificationBuilderPlugin`) | Builds user interface elements for the Adobe Journey Optimizer extension, starting with Adobe Journey Optimizer push templates. The Adobe Journey Optimizer extension displays and tracks the resulting notification. | `com.adobe.marketing.mobile:notificationbuilder` | Notification Builder 3.1.0, Messaging 3.13.0, Mobile Core 3.10.0 | 3.23.0 |
 
 <InlineAlert variant="warning" slots="text"/>
 

@@ -18,7 +18,7 @@ This documents lists details about the public classes and enums available in Mes
 ## Push notification
 
 * [Class - MessagingPushPayload](messaging-push-payload.md)
-* [Class - NotificationBuilderPlugin](notification-builder-plugin.md) (Android only, in the UI plugin)
+* [Class - NotificationBuilderPlugin](notification-builder-plugin.md) (Android only, in the UI Builder plugin)
 * [Enum - PushTrackingStatus](push-tracking-status.md)
 
 ## In-app message
@@ -42,7 +42,7 @@ This documents lists details about the public classes and enums available in Mes
 
 ## Live Activities (Android)
 
-Live Updates classes and interfaces, in the Live Updates add-on. See [Live Updates](../live-activities/android/index.md).
+Live Updates classes and interfaces, in the Live Updates library. See [Live Updates](../live-activities/android/index.md).
 
 * [LiveUpdatePlugin](../live-activities/android/public-classes/live-update-plugin.md) (class)
 * [LiveUpdatePayload](../live-activities/android/public-classes/live-update-payload.md) (class)

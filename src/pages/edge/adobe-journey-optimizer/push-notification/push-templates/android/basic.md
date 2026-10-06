@@ -1,5 +1,5 @@
 ---
-title: Android basic push template (ajo_basic)
+title: Android basic push template
 description: Payload keys and a sample payload for the Adobe Journey Optimizer Basic push template (ajo_basic) on Android.
 keywords:
 - Adobe Journey Optimizer
@@ -11,13 +11,30 @@ keywords:
 - ajo_basic
 ---
 
-# Basic template (`ajo_basic`)
+# Basic template
 
 A title, a body, and an expanded hero image. The same body text is shown in both the collapsed and expanded states.
 
+## How it looks
+
+The expanded notification shows the hero image below the body text. The image scale type controls how the image fills its frame. The following example shows the same portrait image with each scale type:
+
+| `center_crop` (default) | `fit_center` |
+| :---------------------: | :----------: |
+| ![Basic template with a portrait image using center_crop](./assets/basic/center-crop.png) | ![Basic template with a portrait image using fit_center](./assets/basic/fit-center.png) |
+
+* `center_crop` fills the frame and crops the edges of the image that don't fit.
+* `fit_center` shows the whole image, scaled down to fit the frame.
+
+### Image guidelines
+
+* Use a landscape image so it fills the frame without heavy cropping. Small images look blurry when they are scaled up to fill the frame.
+* Animated GIFs show only their first frame.
+* If the image can't be downloaded, the notification is shown with its text only.
+
 ## Configuration
 
-This template is rendered by the [UI plugin](../../../../../home/base/mobile-core/plugins/built-in-plugins/ui-plugin/index.md). Add the plugin to your app and register it with `MobileCore.addPlugins(...)`. When the plugin is not present, the push falls back to a plain notification. See [Push templates troubleshooting](troubleshooting.md).
+This template is rendered by the [UI Builder plugin](../../../../../home/base/mobile-core/plugins/built-in-plugins/ui-builder-plugin.md). To add the plugin to your app, see [Add the UI Builder plugin to your app](../../../../../home/base/mobile-core/plugins/built-in-plugins/ui-builder-plugin.md#add-the-ui-builder-plugin-to-your-app). When the plugin is not added, the push is displayed as a standard notification. See [Push templates troubleshooting](troubleshooting.md).
 
 ## Properties
 

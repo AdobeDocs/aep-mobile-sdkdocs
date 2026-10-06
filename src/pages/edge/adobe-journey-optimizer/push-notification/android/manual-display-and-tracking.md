@@ -57,7 +57,7 @@ If the push is a [Live Update](../../live-activities/android/index.md) (identifi
 
 <InlineAlert variant="warning" slots="text"/>
 
-`MessagingPushPayload` does not render [push templates](../push-templates/android/basic.md) (identified by the `adb_template_type` key), which need the [UI plugin](../../../../home/base/mobile-core/plugins/built-in-plugins/ui-plugin/index.md). A push template is rendered only on the [automatic display and tracking](automatic-display-and-tracking.md) path.
+`MessagingPushPayload` does not render [push templates](../push-templates/index.md) (identified by the `adb_template_type` key), which need the [UI Builder plugin](../../../../home/base/mobile-core/plugins/built-in-plugins/ui-builder-plugin.md). A push template is rendered only on the [automatic display and tracking](automatic-display-and-tracking.md) path.
 
 1. In `onMessageReceived` method of `YourAppFirebaseMessagingService` class, create a `MessagingPushPayload` object from the remoteMessage. `MessagingPushPayload` will unpack the remoteMessage and provide APIs for getting attributes used for creating the push notification.
 

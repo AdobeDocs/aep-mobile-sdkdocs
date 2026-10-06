@@ -13,7 +13,7 @@ This document outlines the various push notification payload keys used by the Ad
 
 ## Android
 
-* Adobe Journey Optimizer uses [data messages](https://firebase.google.com/docs/cloud-messaging/concept-options#data_messages) with custom key-value pairs to send push notifications to client apps.
+* Adobe Journey Optimizer uses [data messages](https://firebase.google.com/docs/cloud-messaging/customize-messages/set-message-type#data-messages) with custom key-value pairs to send push notifications to client apps.
 * When using [manual display and tracking](android/manual-display-and-tracking.md), use the [MessagingPushPayload](../public-classes/messaging-push-payload.md) class to extract the payload values.
 
 ```json
@@ -69,7 +69,7 @@ A Live Update push is a data message identified by the `adb_liveupdate_data` key
 
 <InlineAlert variant="info" slots="text"/>
 
-A push template push is identified by the `adb_template_type` key. Push templates render a richer, pre-built layout and require the [UI plugin](../../../home/base/mobile-core/plugins/built-in-plugins/ui-plugin/index.md) to be added to the app. For the supported templates, their `adb_template_properties` keys, and a sample payload per template, see [Rich Media Push Notifications](rich-media-notifications-overview.md).
+A push template push is identified by the `adb_template_type` key. Push templates render a richer, pre-built layout and require the [UI Builder plugin](../../../home/base/mobile-core/plugins/built-in-plugins/ui-builder-plugin.md) to be added to the app. For the supported templates, their `adb_template_properties` keys, and a sample payload per template, see [Push templates](push-templates/index.md).
 
 ## iOS
 
