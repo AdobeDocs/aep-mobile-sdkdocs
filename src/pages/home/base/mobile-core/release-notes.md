@@ -8,6 +8,24 @@ keywords:
 
 # Release notes
 
+## September 29, 2026
+
+### iOS Core 5.12.1
+
+* Added overloaded logger methods which gates prettify operation inside logfilter-check
+
+## September 28, 2026
+
+### Android Core 3.10.0
+
+* Updated push template plugin interfaces
+
+## September 24, 2026
+
+### iOS Core 5.12.0
+
+* Added support of enabling WAL for SQLiteDataQueue
+
 ## September 23, 2026
 
 ### React Native Core 7.0.2
