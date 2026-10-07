@@ -7,7 +7,158 @@ Keywords:
 
 # Release notes
 
+## September 30, 2026
+
+### Android BOM 3.24.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.23.0) | BOM (3.24.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:liveupdates** |  | **3.0.0** |
+| com.adobe.marketing.mobile:analytics | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:assurance | 3.0.8 | 3.0.8 |
+| com.adobe.marketing.mobile:audience | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaign | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.4 | 3.1.4 |
+| com.adobe.marketing.mobile:core | 3.10.0 | 3.10.0 |
+| com.adobe.marketing.mobile:edge | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:edgeidentity | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:identity | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:media | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:messaging | 3.13.0 | 3.13.0 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:optimize | 3.7.0 | 3.7.0 |
+| com.adobe.marketing.mobile:places | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android BOM 3.23.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.22.0) | BOM (3.23.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:assurance** | **3.0.7** | **3.0.8**|
+| **com.adobe.marketing.mobile:core** | **3.9.0** | **3.10.0**|
+| **com.adobe.marketing.mobile:messaging** | **3.12.1** | **3.13.0**|
+| **com.adobe.marketing.mobile:notificationbuilder** | **3.0.3** | **3.1.0**|
+| com.adobe.marketing.mobile:analytics | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:audience | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaign | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.4 | 3.1.4 |
+| com.adobe.marketing.mobile:edge | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:edgeidentity | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:identity | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:media | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:optimize | 3.7.0 | 3.7.0 |
+| com.adobe.marketing.mobile:places | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### iOS Messaging 5.17.0
+
+Added a new API, `Messaging.clearLiveActivities()`, to fully clear Live Activity push tokens tracked by the SDK.
+
+Calling this method:
+* Clears the tokens and marks them stale for the user on AJO
+* Clears the SDK's local token stores
+* Cancels all active Live Activity listener tasks
+
+This is a full teardown, not a one-time revocation  - call `registerLiveActivities(_:)` again afterward to resume token collection.
+
+```swift
+Messaging.clearLiveActivities()
+```
+
+> **Note:** If also calling `MobileCore.resetIdentities()`, call `clearLiveActivities()` first and allow time for the clear to reach Edge before resetting identities. See the [Live Activities API usage guide](https://github.com/adobe/aepsdk-messaging-ios/blob/main/Documentation/sources/live-activities/developer-documentation/api-usage.md#step-7-clear-push-and-live-activity-tokens-before-resetting-identities) for recommended sequencing.
+
+### Android Messaging 3.13.0
+
+* Added push template plugin support supporting AJO Basic and AJO Bigtext Templates
+* Added Live Update Support via Live Update Plugin
+
+## September 28, 2026
+
+### Android Notification Builder 3.1.0
+
+* Added Push Plugin and push template support for AJO
+* Updated Github actions added.
+
+### Android Core 3.10.0
+
+* Updated push template plugin interfaces
+
+## September 24, 2026
+
+### iOS Core 5.12.0
+
+Added support of enabling WAL for SQLiteDataQueue
+
 ## September 29, 2026
+
+### Android Assurance 3.0.8
+
+## What's Changed
+* Updated Pin Screen layout to be more adaptable across screen size and orientations
+* Added updated github actions
+
+## What's Changed
+* AEP Gradle plugin Maven central updates by @timkimadobe in https://github.com/adobe/aepsdk-assurance-android/pull/169
+* Updating version to 3.0.8 by @github-actions[bot] in https://github.com/adobe/aepsdk-assurance-android/pull/170
+* Update Android Gradle plugin to beta 2 by @timkimadobe in https://github.com/adobe/aepsdk-assurance-android/pull/171
+* Bump Android Gradle plugin version to `gp-3.4.0-beta.3` by @timkimadobe in https://github.com/adobe/aepsdk-assurance-android/pull/172
+* Bump plugin version to beta 4 by @timkimadobe in https://github.com/adobe/aepsdk-assurance-android/pull/173
+* Update workflow to point to dev for testing by @timkimadobe in https://github.com/adobe/aepsdk-assurance-android/pull/174
+* Merge `dev-3.x` into `staging` for verifying release scripts by @prudrabhat in https://github.com/adobe/aepsdk-assurance-android/pull/175
+* Merge `staging` into `main` for verifying release scripts by @prudrabhat in https://github.com/adobe/aepsdk-assurance-android/pull/176
+
+
+**Full Changelog**: https://github.com/adobe/aepsdk-assurance-android/compare/v3.0.7...v3.0.8
+
+### iOS Edge 5.2.0
+
+* Enabled SQLite WAL (write ahead logging) mode for the Edge hit queue.
+* Updated the minimum AEPCore dependency to 5.12.0.
+
+### iOS Core 5.12.1
+
+## What's Changed
+* Updating version to 5.12.1 by @github-actions[bot] in https://github.com/adobe/aepsdk-core-ios/pull/1240
+* added overloaded logging methods in existing logger by @shushinde in https://github.com/adobe/aepsdk-core-ios/pull/1234
+* Dev 5.12.1 -> staging by @shushinde in https://github.com/adobe/aepsdk-core-ios/pull/1241
+* Staging -> Main (5.12.1) by @shushinde in https://github.com/adobe/aepsdk-core-ios/pull/1242
+* Revert project file to Xcode 15 compatible format by @shushinde in https://github.com/adobe/aepsdk-core-ios/pull/1243
+* Staging -> main by @shushinde in https://github.com/adobe/aepsdk-core-ios/pull/1244
+
+
+**Full Changelog**: https://github.com/adobe/aepsdk-core-ios/compare/5.12.0...5.12.1
 
 ### iOS Brand Concierge 5.9.0
 

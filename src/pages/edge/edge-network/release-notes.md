@@ -8,6 +8,13 @@ keywords:
 
 # Release notes
 
+## September 29, 2026
+
+### iOS Edge 5.2.0
+
+* Enabled SQLite WAL (write ahead logging) mode for the Edge hit queue.
+* Updated the minimum AEPCore dependency to 5.12.0.
+
 ## September 23, 2026
 
 ### React Native Edge 7.0.2

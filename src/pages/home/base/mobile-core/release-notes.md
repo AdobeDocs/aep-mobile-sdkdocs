@@ -8,6 +8,33 @@ keywords:
 
 # Release notes
 
+## September 29, 2026
+
+### iOS Core 5.12.1
+
+## What's Changed
+* Updating version to 5.12.1 by @github-actions[bot] in https://github.com/adobe/aepsdk-core-ios/pull/1240
+* added overloaded logging methods in existing logger by @shushinde in https://github.com/adobe/aepsdk-core-ios/pull/1234
+* Dev 5.12.1 -> staging by @shushinde in https://github.com/adobe/aepsdk-core-ios/pull/1241
+* Staging -> Main (5.12.1) by @shushinde in https://github.com/adobe/aepsdk-core-ios/pull/1242
+* Revert project file to Xcode 15 compatible format by @shushinde in https://github.com/adobe/aepsdk-core-ios/pull/1243
+* Staging -> main by @shushinde in https://github.com/adobe/aepsdk-core-ios/pull/1244
+
+
+**Full Changelog**: https://github.com/adobe/aepsdk-core-ios/compare/5.12.0...5.12.1
+
+## September 28, 2026
+
+### Android Core 3.10.0
+
+* Updated push template plugin interfaces
+
+## September 24, 2026
+
+### iOS Core 5.12.0
+
+Added support of enabling WAL for SQLiteDataQueue
+
 ## September 23, 2026
 
 ### React Native Core 7.0.2
