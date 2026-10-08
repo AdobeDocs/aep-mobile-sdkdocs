@@ -176,6 +176,114 @@ chatView.bind(
 )
 ```
 
+## Concierge.setAuthTokenProvider
+
+Registers a `ConciergeAuthTokenProvider` that supplies an app-minted authentication token, attached to every chat and feedback request until cleared. Pass `null` to clear a previously registered provider.
+
+#### Syntax
+
+```kotlin
+@JvmStatic
+@JvmOverloads
+fun setAuthTokenProvider(
+    provider: ConciergeAuthTokenProvider?,
+    timeoutMillis: Long = 3000L
+)
+```
+
+#### Parameters
+
+* _provider_ **required** - A `ConciergeAuthTokenProvider` instance, or `null` to clear a previously registered provider.
+* _timeoutMillis_ - How long to wait for `provider.provideToken()` before sending the turn without a token. Defaults to `3000` (3 seconds); out-of-bounds values are clamped rather than rejected.
+
+#### Example
+
+```kotlin
+Concierge.setAuthTokenProvider(
+    ConciergeAuthTokenProvider { myAuthTokenCache.getCurrentToken() },
+    timeoutMillis = 5000L
+)
+```
+
+## ConciergeAuthTokenProvider
+
+A functional interface that supplies the app-minted authentication token attached to each conversation turn (chat and feedback). Register an implementation with `Concierge.setAuthTokenProvider`.
+
+#### Syntax
+
+```kotlin
+fun interface ConciergeAuthTokenProvider {
+    fun provideToken(): String?
+}
+```
+
+#### Parameters
+
+* _provideToken_ **required** - Called immediately before building each turn's request. Return the current opaque, app-minted token, or `null` to send the turn without one. Invoked on a background thread and may block briefly to refresh the token; the SDK bounds the wait via `timeoutMillis`.
+
+## Concierge.sendDataHandoff
+
+Hands data that did not originate in the chat UI (for example, the result of a native checkout flow) to the Brand Concierge agent pipeline. The response is rendered through the active chat transcript without requiring the user to type or say a chat message.
+
+<InlineAlert variant="info" slots="text"/>
+
+A configured `ConciergeChat` or `ConciergeChatView` must be rendered with a non-empty `surfaces` list while calling this API. A handoff made without an active chat session fails with `NO_ACTIVE_SESSION`. See [Data handoff](/edge/adobe-brand-concierge/android/implementation-guide.md#data-handoff) in the implementation guide for details.
+
+#### Syntax
+
+```kotlin
+@JvmStatic
+@JvmOverloads
+fun sendDataHandoff(
+    routingHint: String = "",
+    xdmFields: Map<String, Any>,
+    localMessage: String? = null,
+    completion: ConciergeDataHandoffCallback? = null
+)
+```
+
+#### Parameters
+
+* _routingHint_ - A string consumed only by Brand Concierge's phrase-based router (for example, `"successful-checkout"`). Never shown to the end user. Defaults to an empty string, which is appropriate when `xdmFields` alone determine routing. Java callers pass `""` explicitly.
+* _xdmFields_ **required** - Non-empty, XDM-shaped data merged into the root of the outbound XDM object. Keys must be `String`s, and values must be JSON-safe (`String`, `Boolean`, finite `Int`, `Long`, `Float`, or `Double`, or maps and lists containing those values). `identityMap` is reserved and cannot be used as a top-level key.
+* _localMessage_ - Optional text rendered as a local, agent-attributed chat message immediately before an accepted handoff starts. It is not sent to Brand Concierge.
+* _completion_ - Optional `ConciergeDataHandoffCallback`, called exactly once on a background thread with the outcome.
+
+#### Example
+
+```kotlin
+Concierge.sendDataHandoff(
+    routingHint = "successful-checkout",
+    xdmFields = mapOf(
+        "commerce" to mapOf(
+            "order" to mapOf("purchaseID" to orderId)
+        )
+    ),
+    localMessage = "Your order is confirmed!"
+) { accepted, rejectReason ->
+    if (!accepted) {
+        // Inspect rejectReason; retry on CHAT_IN_PROGRESS after the active turn completes.
+    }
+}
+```
+
+## ConciergeDataHandoffCallback
+
+A functional interface that reports the outcome of a `Concierge.sendDataHandoff` call. Invoked exactly once, on a background thread.
+
+#### Syntax
+
+```kotlin
+fun interface ConciergeDataHandoffCallback {
+    fun onResult(accepted: Boolean, rejectReason: ConciergeDataHandoffRejectReason?)
+}
+```
+
+#### Parameters
+
+* _accepted_ - `true` only after the handoff was validated, rendered through the active chat session, and completed by Brand Concierge with renderable content.
+* _rejectReason_ - A `ConciergeDataHandoffRejectReason` when `accepted` is `false`, or `null` when `accepted` is `true`. See the [reject reason table](/edge/adobe-brand-concierge/android/implementation-guide.md#data-handoff) in the implementation guide for all values.
+
 ## ConciergeThemeLoader.load
 
 Loads a `ConciergeThemeData` from a JSON file in the app's `assets` directory. Returns `null` if the file cannot be found or parsed.

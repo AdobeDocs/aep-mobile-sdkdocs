@@ -8,6 +8,35 @@ keywords:
 
 # Release notes
 
+## September 29, 2026
+
+### iOS Edge 5.2.0
+
+* Enabled SQLite WAL (write ahead logging) mode for the Edge hit queue.
+* Updated the minimum AEPCore dependency to 5.12.0.
+
+## September 23, 2026
+
+### React Native Edge 7.0.2
+
+* Fixed missing TypeScript declaration (.d.ts) files, restoring type definitions and IDE autocomplete for consumers.
+
+## September 8, 2026
+
+### iOS Edge 5.1.0
+
+* Added Edge Event Batching for queued events.
+
+### Android Edge 3.1.0
+
+* Added Event batching for queued events
+
+## September 2, 2026
+
+### React Native Edge 7.0.1
+
+* Fixed an Android promise hang during SDK response conversion.
+
 ## March 28, 2025
 
 ### React Native Edge 7.0.0

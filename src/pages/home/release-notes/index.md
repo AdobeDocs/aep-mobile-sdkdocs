@@ -7,6 +7,340 @@ Keywords:
 
 # Release notes
 
+## September 30, 2026
+
+### Android BOM 3.24.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.23.0) | BOM (3.24.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:liveupdates** |  | **3.0.0** |
+| com.adobe.marketing.mobile:analytics | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:assurance | 3.0.8 | 3.0.8 |
+| com.adobe.marketing.mobile:audience | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaign | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.4 | 3.1.4 |
+| com.adobe.marketing.mobile:core | 3.10.0 | 3.10.0 |
+| com.adobe.marketing.mobile:edge | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:edgeidentity | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:identity | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:media | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:messaging | 3.13.0 | 3.13.0 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:optimize | 3.7.0 | 3.7.0 |
+| com.adobe.marketing.mobile:places | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### Android BOM 3.23.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.22.0) | BOM (3.23.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:assurance** | **3.0.7** | **3.0.8**|
+| **com.adobe.marketing.mobile:core** | **3.9.0** | **3.10.0**|
+| **com.adobe.marketing.mobile:messaging** | **3.12.1** | **3.13.0**|
+| **com.adobe.marketing.mobile:notificationbuilder** | **3.0.3** | **3.1.0**|
+| com.adobe.marketing.mobile:analytics | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:audience | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaign | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.4 | 3.1.4 |
+| com.adobe.marketing.mobile:edge | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:edgeidentity | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:identity | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:media | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:optimize | 3.7.0 | 3.7.0 |
+| com.adobe.marketing.mobile:places | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### iOS Messaging 5.17.0
+
+Added a new API, `Messaging.clearLiveActivities()`, to fully clear Live Activity push tokens tracked by the SDK.
+
+Calling this method:
+* Clears the tokens and marks them stale for the user on AJO
+* Clears the SDK's local token stores
+* Cancels all active Live Activity listener tasks
+
+This is a full teardown, not a one-time revocation  - call `registerLiveActivities(_:)` again afterward to resume token collection.
+
+```swift
+Messaging.clearLiveActivities()
+```
+
+> **Note:** If also calling `MobileCore.resetIdentities()`, call `clearLiveActivities()` first and allow time for the clear to reach Edge before resetting identities. See the [Live Activities API usage guide](https://github.com/adobe/aepsdk-messaging-ios/blob/main/Documentation/sources/live-activities/developer-documentation/api-usage.md#step-7-clear-push-and-live-activity-tokens-before-resetting-identities) for recommended sequencing.
+
+### Android Messaging 3.13.0
+
+* Added push template plugin support supporting AJO Basic and AJO Bigtext Templates
+* Added Live Update Support via Live Update Plugin
+
+## September 28, 2026
+
+### Android Notification Builder 3.1.0
+
+* Added Push Plugin and push template support for AJO
+* Updated Github actions added.
+
+### Android Core 3.10.0
+
+* Updated push template plugin interfaces
+
+## September 24, 2026
+
+### iOS Core 5.12.0
+
+* Added support of enabling WAL for SQLiteDataQueue
+
+## September 29, 2026
+
+### Android Assurance 3.0.8
+
+## What's Changed
+* Updated Pin Screen layout to be more adaptable across screen size and orientations
+* Added updated github actions
+
+## What's Changed
+* AEP Gradle plugin Maven central updates by @timkimadobe in https://github.com/adobe/aepsdk-assurance-android/pull/169
+* Updating version to 3.0.8 by @github-actions[bot] in https://github.com/adobe/aepsdk-assurance-android/pull/170
+* Update Android Gradle plugin to beta 2 by @timkimadobe in https://github.com/adobe/aepsdk-assurance-android/pull/171
+* Bump Android Gradle plugin version to `gp-3.4.0-beta.3` by @timkimadobe in https://github.com/adobe/aepsdk-assurance-android/pull/172
+* Bump plugin version to beta 4 by @timkimadobe in https://github.com/adobe/aepsdk-assurance-android/pull/173
+* Update workflow to point to dev for testing by @timkimadobe in https://github.com/adobe/aepsdk-assurance-android/pull/174
+* Merge `dev-3.x` into `staging` for verifying release scripts by @prudrabhat in https://github.com/adobe/aepsdk-assurance-android/pull/175
+* Merge `staging` into `main` for verifying release scripts by @prudrabhat in https://github.com/adobe/aepsdk-assurance-android/pull/176
+
+
+**Full Changelog**: https://github.com/adobe/aepsdk-assurance-android/compare/v3.0.7...v3.0.8
+
+### iOS Edge 5.2.0
+
+* Enabled SQLite WAL (write ahead logging) mode for the Edge hit queue.
+* Updated the minimum AEPCore dependency to 5.12.0.
+
+### iOS Core 5.12.1
+
+* Added overloaded logger methods which gates prettify operation inside logfilter-check
+
+### iOS Brand Concierge 5.9.0
+
+* Added `Concierge.sendDataHandoff` for sending XDM data through the Brand Concierge service.
+* Forwarded the full Edge Identity `identityMap` to the conversation, with an ECID fallback when no identity map is available.
+* Added secondary CTA buttons to product cards, with theme keys for their colors and border width.
+* Added the `--product-card-description-max-lines` theme key to support longer product descriptions.
+* Fixed inline link theming, input focus border width with gradients, product-card CTA positioning, and input bar icon spacing.
+
+### Android Brand Concierge 3.9.0
+
+* Added `Concierge.sendDataHandoff` for sending XDM data through the Brand Concierge service.
+* Forwarded the full Edge Identity `identityMap` to the conversation, with an ECID fallback when no identity map is available.
+* Added secondary CTA buttons to product cards, with theme keys for their colors and border width.
+* Added the `--product-card-description-max-lines` theme key to support longer product descriptions.
+* Fixed product-card price and CTA alignment, the focused input bar's gradient border, and listening waveform clipping and bar shape.
+
+## September 23, 2026
+
+### React Native UserProfile 7.0.2
+
+* Fixed missing TypeScript declaration (.d.ts) files, restoring type definitions and IDE autocomplete for consumers.
+
+### React Native Target 7.0.2
+
+* Fixed missing TypeScript declaration (.d.ts) files, restoring type definitions and IDE autocomplete for consumers.
+
+### React Native Optimize 7.2.1
+
+* Fixed missing TypeScript declaration (.d.ts) files, restoring type definitions and IDE autocomplete for consumers.
+
+### React Native EdgeConsent 7.0.2
+
+* Fixed missing TypeScript declaration (.d.ts) files, restoring type definitions and IDE autocomplete for consumers.
+
+### React Native Edge 7.0.2
+
+* Fixed missing TypeScript declaration (.d.ts) files, restoring type definitions and IDE autocomplete for consumers.
+
+### React Native Core 7.0.2
+
+* Fixed missing TypeScript declaration (.d.ts) files, restoring type definitions and IDE autocomplete for consumers.
+
+### Android BOM 3.22.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.21.0) | BOM (3.22.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:core** | **3.8.0** | **3.9.0**|
+| **com.adobe.marketing.mobile:edge** | **3.0.2** | **3.1.0**|
+| **com.adobe.marketing.mobile:messaging** | **3.12.0** | **3.12.1**|
+| com.adobe.marketing.mobile:analytics | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:assurance | 3.0.7 | 3.0.7 |
+| com.adobe.marketing.mobile:audience | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaign | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.4 | 3.1.4 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:edgeidentity | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:identity | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:media | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:optimize | 3.7.0 | 3.7.0 |
+| com.adobe.marketing.mobile:places | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### iOS Messaging 5.16.2
+
+Fixed update proposition api's completion callback to return true in case of non recoverable edge error to handle both success and error scenario for a single request.
+
+### Android Messaging 3.12.1
+
+Fixed error handling for edge response with success along with error scenario by applying proposition change and calling completion callback with true.
+Fixed In app message frequency capping issue on App launch condition.
+
+## September 17, 2026
+
+### Android Core 3.9.0
+
+* Added support for Plugin Architecture
+* Optimized log statements to save memory
+* Added type checks in Data marshaller logic for preventing unsopported types from being marshalled.
+
+## September 16, 2026
+
+### iOS Messaging 5.16.1
+
+* Fixed an issue where push notification tracking could omit messageProfile and pushChannelContext from the XDM, whenever the notification's decisioning block had no experienceDecisioningRequestId.
+
+## September 8, 2026
+
+### iOS Edge 5.1.0
+
+* Added Edge Event Batching for queued events.
+
+### Android Edge 3.1.0
+
+* Added Event batching for queued events
+
+## September 11, 2026
+
+### iOS Brand Concierge 5.8.1
+
+* Region is now optionally configurable for Brand Concierge endpoint creation
+
+### Android Brand Concierge 3.8.1
+
+* Added support for a `concierge.region` configuration key to specify the region as part of Concierge configuration.
+* Prefixed Concierge drawable resource names to avoid collisions with host app resources.
+
+## September 10, 2026
+
+### iOS Brand Concierge 5.8.0
+
+* Fixed voice-to-text never stopping after the user stops talking
+* More prominent listening waveform + gradient theming
+* Render input bar leading icon + fix icon centering
+* Gradient support for input bar border and mic/send icons
+* Fix excess white space after last message 
+* Auth token support
+* Themeable CTA button on product cards support
+* Add support for geo uri links to route to Apple maps in chat window
+
+### Android Brand Concierge 3.8.0
+
+* Fixed ExtendedProductCard dimensions and drop shadow to match spec.
+* Added a themeable, payload-driven CTA button to product cards with accurate product-name reporting in CTA analytics.
+* Added gradient theming support for the chat input bar border and mic/send icons.
+* Added audio-reactive gradient theming to the listening waveform.
+* Updated the external-link pop-out icon and fixed input bar icon-sizing regressions.
+* Added support for providing an auth token via `setAuthTokenProvider`, with a configurable timeout aligned to iOS behavior.
+
+### Vega OS Core 1.1.0
+
+This release adds support for the general availability (GA) release of the Vega SDK.
+
+* Added support for Vega SDK **0.24** (GA) with **React Native 0.83** (React 19.2.0).
+* Maintains compatibility with Vega SDK **0.23** on **React Native 0.72**.
+
+For more information, refer to the documentation below:
+
+* [`@adobe/vega-aepcore`](https://www.npmjs.com/package/@adobe/vega-aepcore)
+* [Integration tutorial](../../edge/media-for-edge-network/tutorial.md)
+
+### Vega OS Media for Edge Network 1.1.0
+
+This release adds support for the general availability (GA) release of the Vega SDK.
+
+* Added support for Vega SDK **0.24** (GA) with **React Native 0.83** (React 19.2.0).
+* Maintains compatibility with Vega SDK **0.23** on **React Native 0.72**.
+
+For more information, refer to the documentation below:
+
+* [`@adobe/vega-aepmedia`](https://www.npmjs.com/package/@adobe/vega-aepmedia)
+* [Integration tutorial](../../edge/media-for-edge-network/tutorial.md)
+
+## September 2, 2026
+
+### React Native UserProfile 7.0.1
+
+* Fixed an Android promise hang during SDK response conversion.
+
+### React Native Target 7.0.1
+
+* Fixed an Android promise hang during SDK response conversion.
+
+### React Native EdgeConsent 7.0.1
+
+* Fixed an Android promise hang during SDK response conversion.
+
+### React Native Edge 7.0.1
+
+* Fixed an Android promise hang during SDK response conversion.
+
+### React Native Core 7.0.1
+
+* Fixed an Android promise hang during SDK response conversion.
+
 ## August 20, 2026
 
 ### Android BOM 3.21.0

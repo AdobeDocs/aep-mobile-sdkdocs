@@ -8,6 +8,65 @@ keywords:
 
 # Release notes
 
+## September 29, 2026
+
+### iOS Brand Concierge 5.9.0
+
+* Added `Concierge.sendDataHandoff` for sending XDM data through the Brand Concierge service.
+* Forwarded the full Edge Identity `identityMap` to the conversation, with an ECID fallback when no identity map is available.
+* Added secondary CTA buttons to product cards, with theme keys for their colors and border width.
+* Added the `--product-card-description-max-lines` theme key to support longer product descriptions.
+* Fixed inline link theming, input focus border width with gradients, product-card CTA positioning, and input bar icon spacing.
+
+**Full Changelog**: https://github.com/adobe/aepsdk-concierge-ios/compare/5.8.1...5.9.0
+
+### Android Brand Concierge 3.9.0
+
+* Added `Concierge.sendDataHandoff` for sending XDM data through the Brand Concierge service.
+* Forwarded the full Edge Identity `identityMap` to the conversation, with an ECID fallback when no identity map is available.
+* Added secondary CTA buttons to product cards, with theme keys for their colors and border width.
+* Added the `--product-card-description-max-lines` theme key to support longer product descriptions.
+* Fixed product-card price and CTA alignment, the focused input bar's gradient border, and listening waveform clipping and bar shape.
+
+**Full Changelog**: https://github.com/adobe/aepsdk-concierge-android/compare/v3.8.1...v3.9.0
+
+## September 11, 2026
+
+### iOS Brand Concierge 5.8.1
+
+* Region is now optionally configurable for Brand Concierge endpoint creation
+
+### Android Brand Concierge 3.8.1
+
+* Added support for a `concierge.region` configuration key to specify the region as part of Concierge configuration.
+* Prefixed Concierge drawable resource names to avoid collisions with host app resources.
+
+**Full Changelog**: https://github.com/adobe/aepsdk-concierge-android/compare/v3.8.0...v3.8.1
+
+## September 10, 2026
+
+### iOS Brand Concierge 5.8.0
+
+* Fixed voice-to-text never stopping after the user stops talking
+* More prominent listening waveform + gradient theming
+* Render input bar leading icon + fix icon centering
+* Gradient support for input bar border and mic/send icons
+* Fix excess white space after last message 
+* Auth token support
+* Themeable CTA button on product cards support
+* Add support for geo uri links to route to Apple maps in chat window
+
+### Android Brand Concierge 3.8.0
+
+* Fixed ExtendedProductCard dimensions and drop shadow to match spec.
+* Added a themeable, payload-driven CTA button to product cards with accurate product-name reporting in CTA analytics.
+* Added gradient theming support for the chat input bar border and mic/send icons.
+* Added audio-reactive gradient theming to the listening waveform.
+* Updated the external-link pop-out icon and fixed input bar icon-sizing regressions.
+* Added support for providing an auth token via `setAuthTokenProvider`, with a configurable timeout aligned to iOS behavior.
+
+**Full Changelog**: https://github.com/adobe/aepsdk-concierge-android/compare/v3.7.2...v3.8.0
+
 ## June 26, 2026
 
 ### Android Brand Concierge 3.7.2

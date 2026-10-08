@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## September 23, 2026
+
+### React Native Optimize 7.2.1
+
+* Fixed missing TypeScript declaration (.d.ts) files, restoring type definitions and IDE autocomplete for consumers.
+
 ## July 31, 2026
 
 ### Flutter Optimize 5.0.0
