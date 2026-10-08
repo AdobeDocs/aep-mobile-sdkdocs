@@ -35,10 +35,12 @@ The UI Builder plugin supports the following features.
 
 Add the `notificationbuilder` dependency to your app, along with Mobile Core, Edge Network, Identity for Edge Network, and the Adobe Journey Optimizer extension.
 
-#### Android Kotlin
+<CodeBlock slots="heading, code" repeat="2" languages="Kotlin, Groovy" />
+
+#### Kotlin
 
 ```kotlin
-implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:<bom-version>"))
 implementation("com.adobe.marketing.mobile:core")
 implementation("com.adobe.marketing.mobile:edge")
 implementation("com.adobe.marketing.mobile:edgeidentity")
@@ -46,10 +48,10 @@ implementation("com.adobe.marketing.mobile:messaging")
 implementation("com.adobe.marketing.mobile:notificationbuilder")
 ```
 
-#### Android Groovy
+#### Groovy
 
 ```groovy
-implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
+implementation platform('com.adobe.marketing.mobile:sdk-bom:<bom-version>')
 implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:edge'
 implementation 'com.adobe.marketing.mobile:edgeidentity'
@@ -57,9 +59,7 @@ implementation 'com.adobe.marketing.mobile:messaging'
 implementation 'com.adobe.marketing.mobile:notificationbuilder'
 ```
 
-<InlineAlert variant="warning" slots="text"/>
-
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../../../../resources/manage-gradle-dependencies.md) for more information.
+Replace `<bom-version>` with the latest BOM version, listed on [Current SDK versions](../../../../current-sdk-versions.md#android-bom).
 
 For the minimum versions, see [Available plugins](../index.md#available-plugins).
 
@@ -67,14 +67,16 @@ For the minimum versions, see [Available plugins](../index.md#available-plugins)
 
 Add the plugin with the `MobileCore.addPlugins` API in the `onCreate` method of your `Application` class, before you initialize the SDK.
 
-#### Android Kotlin
+<CodeBlock slots="heading, code" repeat="2" languages="Kotlin, Java" />
+
+#### Kotlin
 
 ```kotlin
 MobileCore.addPlugins(NotificationBuilderPlugin())
 MobileCore.initialize(this, "ENVIRONMENT_ID")
 ```
 
-#### Android Java
+#### Java
 
 ```java
 MobileCore.addPlugins(new NotificationBuilderPlugin());

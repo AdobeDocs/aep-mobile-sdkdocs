@@ -42,7 +42,9 @@ When no interceptor is registered, or the interceptor throws an exception, the L
 
 **Example**
 
-#### Android Kotlin
+<CodeBlock slots="heading, code" repeat="2" languages="Kotlin, Java" />
+
+#### Kotlin
 
 ```kotlin
 LiveUpdates.setLiveUpdateInterceptor(object : ILiveUpdateInterceptor {
@@ -54,7 +56,7 @@ LiveUpdates.setLiveUpdateInterceptor(object : ILiveUpdateInterceptor {
 })
 ```
 
-#### Android Java
+#### Java
 
 ```java
 LiveUpdates.setLiveUpdateInterceptor(payload -> {

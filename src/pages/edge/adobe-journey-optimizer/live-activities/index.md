@@ -18,7 +18,7 @@ Live Activities (iOS) and Live Updates (Android) display real-time, glanceable i
 
 <InlineAlert variant="info" slots="text"/>
 
-**Live Activities** is an iOS feature built on [ActivityKit](https://developer.apple.com/documentation/activitykit/displaying-live-data-with-live-activities) (Lock Screen and Dynamic Island). **Live Updates** is the Android counterpart, built on Android 16 (API 36) promoted ongoing notifications, shown prominently in the status bar and on the lock screen. Both are driven by the same Adobe Journey Optimizer campaigns; the client integration differs per platform.
+**Live Activities** is an iOS feature built on [ActivityKit](https://developer.apple.com/documentation/activitykit/displaying-live-data-with-live-activities) (Lock Screen and Dynamic Island). **Live Updates** is the Android counterpart, built on Android 16 (API 36.1) promoted ongoing notifications, shown prominently in the status bar and on the lock screen. Both are driven by the same Adobe Journey Optimizer campaigns; the client integration differs per platform.
 
 ## Choose your platform
 

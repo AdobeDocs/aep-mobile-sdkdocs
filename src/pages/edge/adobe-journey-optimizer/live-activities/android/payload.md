@@ -37,7 +37,7 @@ Keys inside the `adb_liveupdate_data` object:
 | Notification Channel ID | Yes | `notification_channel_id` | string | Android notification channel to post on. See [Notification channel](index.md#notification-channel). |
 | Event Type | Yes | `event_type` | string | `start`, `update`, or `end`. A push with any other value is dropped. |
 | Timestamp | Yes | `timestamp` | number | Time this state was produced, in epoch seconds. The plugin drops a push whose timestamp is more than 28 days old, or not newer than the last push it accepted for the same `notification_id` and `notification_channel_id`. |
-| Title | No | `title` | string | Notification title. Required for promotion to a Live Update. |
+| Title | No | `title` | string | Notification title. A title isn't mandatory, but some notification styles require one, so it may be needed depending on the style you use. |
 | Body | No | `body` | string | Notification text. |
 | Critical Text | No | `critical_text` | string | Short text shown in the status bar for a promoted Live Update. |
 | When | No | `when` | number | Time shown on the notification, in epoch seconds. |

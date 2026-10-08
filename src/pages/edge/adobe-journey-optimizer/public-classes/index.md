@@ -40,7 +40,7 @@ This documents lists details about the public classes and enums available in Mes
 * [Schema Class - InboxContentSchemaData](inbox-content-schema-data.md)
 * [Schema Class - JsonContentSchemaData](json-content-schema-data.md)
 
-## Live Activities (Android)
+## Live Updates (Android)
 
 Live Updates classes and interfaces, in the Live Updates library. See [Live Updates](../live-activities/android/index.md).
 

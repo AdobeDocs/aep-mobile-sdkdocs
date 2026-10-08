@@ -65,7 +65,9 @@ Every method takes the same parameter:
 
 **Example**
 
-#### Android Kotlin
+<CodeBlock slots="heading, code" repeat="2" languages="Kotlin, Java" />
+
+#### Kotlin
 
 ```kotlin
 LiveUpdates.setLiveUpdateListener(object : ILiveUpdateListener {
@@ -81,7 +83,7 @@ LiveUpdates.setLiveUpdateListener(object : ILiveUpdateListener {
 })
 ```
 
-#### Android Java
+#### Java
 
 ```java
 LiveUpdates.setLiveUpdateListener(new ILiveUpdateListener() {

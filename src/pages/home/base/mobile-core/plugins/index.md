@@ -16,7 +16,7 @@ keywords:
 
 Plugins are available for **Android only**, starting with Mobile Core **3.10.0** (BOM **3.23.0**).
 
-Plugins are optional modules that add a specific capability to an Adobe Experience Platform Mobile SDK extension. For example, the Adobe Journey Optimizer extension uses the Live Updates plugin to display Android Live Updates, and the push templates plugin to display Adobe Journey Optimizer push templates.
+Plugins are optional modules that add a specific capability to an Adobe Experience Platform Mobile SDK extension. For example, the Adobe Journey Optimizer extension uses the Live Updates plugin to display Android Live Updates, and the UI Builder plugin to display Adobe Journey Optimizer push templates.
 
 You add plugins to Mobile Core when your app starts, before you register extensions. When an extension needs a capability, it uses the matching plugin that your app registered. If your app does not use a capability, you do not need to include or register its plugin.
 
@@ -35,7 +35,7 @@ Extensions and plugins are both modules that you add to your app, but they serve
 ## Benefits
 
 * **Include only what you use**: A capability that lives in a plugin is not part of the extension. Apps that do not use the capability do not need the plugin or its dependencies.
-* **Adopt new platform features independently**: A plugin can use newer Android APIs and libraries than the extension that uses it. For example, the Live Updates plugin is built on Android 16 (API 36) notification APIs, while the Adobe Journey Optimizer extension does not require them.
+* **Adopt new platform features independently**: A plugin can use newer Android APIs and libraries than the extension that uses it. For example, the Live Updates plugin is built on Android 16 (API 36.1) notification APIs, while the Adobe Journey Optimizer extension does not require them.
 * **Fall back safely**: If a plugin is not registered, the extension that uses it logs a warning and continues to work.
 
 ## Available plugins
@@ -55,14 +55,14 @@ Starting with Messaging **3.13.0** (BOM **3.23.0**), the Adobe Journey Optimizer
 
 ### Include plugins as app dependencies
 
-Add the plugins that you want to use, along with Mobile Core and the Adobe Journey Optimizer extension, as dependencies to your project.
+Add the plugins that you want to use, along with Mobile Core and the Adobe Journey Optimizer extension, as dependencies to your project by including them in the app's Gradle file.
 
-#### Android Kotlin
+<CodeBlock slots="heading, code" repeat="2" languages="Kotlin, Groovy" />
 
-Add the required dependencies to your project by including them in the app's Gradle file.
+#### Kotlin
 
 ```kotlin
-implementation(platform("com.adobe.marketing.mobile:sdk-bom:3.+"))
+implementation(platform("com.adobe.marketing.mobile:sdk-bom:<bom-version>"))
 implementation("com.adobe.marketing.mobile:core")
 implementation("com.adobe.marketing.mobile:edge")
 implementation("com.adobe.marketing.mobile:edgeidentity")
@@ -71,16 +71,10 @@ implementation("com.adobe.marketing.mobile:liveupdates")
 implementation("com.adobe.marketing.mobile:notificationbuilder")
 ```
 
-<InlineAlert variant="warning" slots="text"/>
+#### Groovy
 
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../../../resources/manage-gradle-dependencies.md) for more information.
-
-#### Android Groovy
-
-Add the required dependencies to your project by including them in the app's Gradle file.
-
-```java
-implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
+```groovy
+implementation platform('com.adobe.marketing.mobile:sdk-bom:<bom-version>')
 implementation 'com.adobe.marketing.mobile:core'
 implementation 'com.adobe.marketing.mobile:edge'
 implementation 'com.adobe.marketing.mobile:edgeidentity'
@@ -89,9 +83,7 @@ implementation 'com.adobe.marketing.mobile:liveupdates'
 implementation 'com.adobe.marketing.mobile:notificationbuilder'
 ```
 
-<InlineAlert variant="warning" slots="text"/>
-
-Using dynamic dependency versions is **not** recommended for production apps. Please read the [managing Gradle dependencies guide](../../../../resources/manage-gradle-dependencies.md) for more information.
+Replace `<bom-version>` with the latest BOM version, listed on [Current SDK versions](../../../current-sdk-versions.md#android-bom). For the minimum versions, see [Available plugins](#available-plugins).
 
 ### Register plugins with Mobile Core
 
@@ -99,7 +91,9 @@ Register your plugins with the `MobileCore.addPlugins` API in the `onCreate` met
 
 You can register one or more plugins in a single call. Registering the same plugin instance more than once has no effect.
 
-#### Android Kotlin
+<CodeBlock slots="heading, code" repeat="2" languages="Kotlin, Java" />
+
+#### Kotlin
 
 ```kotlin
 import com.adobe.marketing.mobile.MobileCore
@@ -120,14 +114,9 @@ class MainApp : Application() {
     MobileCore.initialize(this, "ENVIRONMENT_ID")
   }
 }
-
-// Implemented by the host extension: returns the PendingIntent for each interaction.
-interface IPushTemplateTrackingProvider {
-    fun getPendingIntent(interaction: PushInteraction): PendingIntent?
-}
 ```
 
-#### Android Java
+#### Java
 
 ```java
 import com.adobe.marketing.mobile.MobileCore;
@@ -159,7 +148,7 @@ If your app receives a push notification that requires a plugin that is not regi
 | Push notification | Behavior without the plugin |
 | --- | --- |
 | Live Update | The notification is not displayed. |
-| Push template | A basic notification is displayed instead of the push template. |
+| Push template | A standard notification is displayed instead of the push template. |
 
 ## API reference
 

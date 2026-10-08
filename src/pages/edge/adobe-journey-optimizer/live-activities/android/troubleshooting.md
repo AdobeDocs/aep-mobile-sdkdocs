@@ -99,7 +99,7 @@ A push whose `adb_liveupdate_data` value is not valid JSON, or is missing a requ
 
 ## Incompatibility issues
 
-Reported as `Live Update Incompatible`. None of these drop the Live Update: the notification is posted as a standard ongoing notification instead of a promoted Live Update. See [Promotion to a Live Update](index.md#promotion-to-a-live-update).
+Reported as `Live Update Incompatible`. None of these drop the Live Update: the notification is posted as a standard ongoing notification instead of a promoted Live Update. See [Promotion to a Live Update](index.md#promotion-to-a-live-update), and [Live Updates](https://developer.android.com/develop/ui/views/notifications/live-update) in the Android documentation for the promotion requirements.
 
 | **Reason** | **Dropped** | **Meaning** |
 | :--------- | :---------- | :---------- |
@@ -107,7 +107,7 @@ Reported as `Live Update Incompatible`. None of these drop the Live Update: the 
 | `not_promotable` | No | `Notification.hasPromotableCharacteristics()` is `false`, for example because the notification has no title or its style is not allowed for Live Updates. |
 | `channel_not_registered` | No | The notification channel does not exist. |
 | `channel_importance_low` | No | The notification channel's importance is below `IMPORTANCE_HIGH`. |
-| `promotion_not_permitted` | No | The app is not allowed to post promoted notifications; the user may have turned this off in system settings. |
+| `promotion_not_permitted` | No | The app is not allowed to post promoted notifications. |
 | `notification_manager_unavailable` | No | The system `NotificationManager` was not available. |
 
 ## Use the events in a rule

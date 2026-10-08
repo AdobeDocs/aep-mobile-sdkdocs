@@ -42,7 +42,11 @@ The `NotificationCompat.Style` to apply. When it returns `null`, the plugin post
 
 **Example**
 
-#### Android Kotlin
+`ILiveUpdateStyleProvider` has a single method, so in Java you can also pass a lambda.
+
+<CodeBlock slots="heading, code" repeat="2" languages="Kotlin, Java" />
+
+#### Kotlin
 
 ```kotlin
 class MyLiveUpdateStyleProvider : ILiveUpdateStyleProvider {
@@ -56,9 +60,7 @@ class MyLiveUpdateStyleProvider : ILiveUpdateStyleProvider {
 }
 ```
 
-#### Android Java
-
-`ILiveUpdateStyleProvider` has a single method, so you can also pass a lambda.
+#### Java
 
 ```java
 ILiveUpdateStyleProvider styleProvider = payload -> {

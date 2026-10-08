@@ -20,7 +20,7 @@ The Live Updates plugin (`LiveUpdatePlugin`) is a [Mobile Core plugin](../index.
 
 When your app receives a Live Update push notification, the Adobe Journey Optimizer extension passes it to the Live Updates plugin. The plugin displays the notification and tracks its lifecycle and interaction events in Adobe Journey Optimizer.
 
-On devices running Android 16 (API level 36) or later, the notification is displayed as a Live Update. On earlier Android versions, it is displayed as a standard ongoing notification.
+When Android promotes the notification, it is displayed as a Live Update. Otherwise, it is displayed as a standard ongoing notification. See [Promotion to a Live Update](../../../../../edge/adobe-journey-optimizer/live-activities/android/index.md#promotion-to-a-live-update).
 
 ## Add the Live Updates plugin to your app
 
@@ -30,20 +30,22 @@ Add the `liveupdates` dependency to your app, along with Mobile Core, Edge Netwo
 
 <InlineAlert variant="info" slots="text"/>
 
-The Live Updates plugin requires your app to compile against Android API level 36 or later (`compileSdk` 36).
+The Live Updates plugin requires your app to compile against Android API level 36.1 or later.
 
 ### Add the plugin to Mobile Core
 
 Add the plugin with the `MobileCore.addPlugins` API in the `onCreate` method of your `Application` class, before you initialize the SDK. Create the plugin with an `ILiveUpdateStyleProvider` that defines how Live Update notifications are styled in your app.
 
-#### Android Kotlin
+<CodeBlock slots="heading, code" repeat="2" languages="Kotlin, Java" />
+
+#### Kotlin
 
 ```kotlin
 MobileCore.addPlugins(LiveUpdatePlugin(MyLiveUpdateStyleProvider()))
 MobileCore.initialize(this, "ENVIRONMENT_ID")
 ```
 
-#### Android Java
+#### Java
 
 ```java
 MobileCore.addPlugins(new LiveUpdatePlugin(new MyLiveUpdateStyleProvider()));

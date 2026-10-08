@@ -36,13 +36,15 @@ Creates the plugin with the style provider your app uses for every Live Update.
 
 Add the plugin once, in `Application.onCreate`, before you initialize the SDK:
 
-#### Android Kotlin
+<CodeBlock slots="heading, code" repeat="2" languages="Kotlin, Java" />
+
+#### Kotlin
 
 ```kotlin
 MobileCore.addPlugins(LiveUpdatePlugin(MyLiveUpdateStyleProvider()))
 ```
 
-#### Android Java
+#### Java
 
 ```java
 MobileCore.addPlugins(new LiveUpdatePlugin(new MyLiveUpdateStyleProvider()));

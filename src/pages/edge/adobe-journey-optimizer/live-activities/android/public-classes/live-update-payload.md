@@ -88,13 +88,15 @@ Builds a payload in your app, for [triggerLocalLiveUpdate](../api-reference.md#t
 * _notificationId_: Required. Identifies the Live Update.
 * _channelId_: Required. Android notification channel to post on.
 * _eventType_: Required. Use `EVENT_TYPE_LOCAL_START` for a local start.
-* _title_: Required, nullable. A notification without a title is not promoted to a Live Update.
+* _title_: Required, nullable. A title isn't mandatory, but some notification styles require one.
 * _timestamp_: Required. The current time in epoch seconds. A value in epoch milliseconds is converted to seconds.
 * _priority_, _body_, _criticalText_, _whenSeconds_, _dismissAfterSeconds_, _contentState_, _topicName_, _xdm_: Optional. Each defaults to `null`. In Java, pass the arguments in this order, and pass `null` for optional values you do not set.
 
 **Example**
 
-#### Android Kotlin
+<CodeBlock slots="heading, code" repeat="2" languages="Kotlin, Java" />
+
+#### Kotlin
 
 ```kotlin
 val payload = LiveUpdatePayload.create(
@@ -108,7 +110,7 @@ val payload = LiveUpdatePayload.create(
 LiveUpdates.triggerLocalLiveUpdate(context, payload)
 ```
 
-#### Android Java
+#### Java
 
 ```java
 JSONObject contentState = new JSONObject();

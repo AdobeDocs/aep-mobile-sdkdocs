@@ -24,8 +24,8 @@ A Live Update is delivered as an Adobe Journey Optimizer push notification, so *
 
 * [Sync the push token](../../push-notification/android/automatic-display-and-tracking.md#sync-the-push-token) with `MobileCore.setPushIdentifier(...)` so Adobe Journey Optimizer can target the device.
 * [Register the Adobe Journey Optimizer `FirebaseMessagingService`](../../push-notification/android/automatic-display-and-tracking.md#register-messaging-extensions-firebasemessagingservice) (or forward messages from your own service) so incoming pushes reach the SDK.
-* On Android 13 (API 33) and later, [request the `POST_NOTIFICATIONS` permission](https://developer.android.com/develop/ui/compose/notifications/notification-permission) at runtime.
-* Optionally, [configure the small icon](index.md#configuring-small-icon) and [create the notification channel](index.md#notification-channel) yourself. When the channel named in the payload's `notification_channel_id` does not exist, the plugin creates it with `IMPORTANCE_HIGH`.
+* Request the notification permission at runtime. See [Notification runtime permission](https://developer.android.com/develop/ui/compose/notifications/notification-permission) in the Android documentation.
+* Optionally, [create the notification channel](index.md#notification-channel) yourself. When the channel named in the payload's `notification_channel_id` does not exist, the plugin creates it with `IMPORTANCE_HIGH`.
 
 With push working, register the Live Updates plugin as shown in the [overview](index.md), then follow the steps below.
 
@@ -33,7 +33,9 @@ With push working, register the Live Updates plugin as shown in the [overview](i
 
 The plugin posts the notification, but your app decides how it looks. Implement [ILiveUpdateStyleProvider](public-classes/live-update-style-provider.md), reading `payload.contentState` to build a `NotificationCompat.Style`. The keys inside `content_state` are yours to define; the ones below match the [sample payloads](payload.md#example). If you return `null`, the plugin still posts the notification, without a style.
 
-#### Android Kotlin
+<CodeBlock slots="heading, code" repeat="2" languages="Kotlin, Java" />
+
+#### Kotlin
 
 ```kotlin
 class MyLiveUpdateStyleProvider : ILiveUpdateStyleProvider {
@@ -50,7 +52,7 @@ class MyLiveUpdateStyleProvider : ILiveUpdateStyleProvider {
 }
 ```
 
-#### Android Java
+#### Java
 
 ```java
 public class MyLiveUpdateStyleProvider implements ILiveUpdateStyleProvider {
@@ -69,13 +71,15 @@ public class MyLiveUpdateStyleProvider implements ILiveUpdateStyleProvider {
 
 Add the plugin with your style provider once, in `Application.onCreate`, before you initialize the SDK:
 
-#### Android Kotlin
+<CodeBlock slots="heading, code" repeat="2" languages="Kotlin, Java" />
+
+#### Kotlin
 
 ```kotlin
 MobileCore.addPlugins(LiveUpdatePlugin(MyLiveUpdateStyleProvider()))
 ```
 
-#### Android Java
+#### Java
 
 ```java
 MobileCore.addPlugins(new LiveUpdatePlugin(new MyLiveUpdateStyleProvider()));
@@ -83,11 +87,11 @@ MobileCore.addPlugins(new LiveUpdatePlugin(new MyLiveUpdateStyleProvider()));
 
 ## 2. React to lifecycle callbacks (start, update, end)
 
-Register an [ILiveUpdateListener](public-classes/live-update-listener.md) to be notified as a Live Update is received and progresses through its lifecycle. Register it in `Application.onCreate` so it is available when the app process is started to handle a push.
+Register an [ILiveUpdateListener](public-classes/live-update-listener.md) to be notified as a Live Update is received and progresses through its lifecycle. Register it in `Application.onCreate` so it is available when the app process is started to handle a push. In Kotlin, override only the callbacks you need. In Java, implement all six methods of the interface, including the interaction callbacks described in the next step.
 
-#### Android Kotlin
+<CodeBlock slots="heading, code" repeat="2" languages="Kotlin, Java" />
 
-In Kotlin, override only the callbacks you need.
+#### Kotlin
 
 ```kotlin
 LiveUpdates.setLiveUpdateListener(object : ILiveUpdateListener {
@@ -109,9 +113,7 @@ LiveUpdates.setLiveUpdateListener(object : ILiveUpdateListener {
 })
 ```
 
-#### Android Java
-
-In Java, implement all six methods of the interface, including the interaction callbacks described in the next step.
+#### Java
 
 ```java
 LiveUpdates.setLiveUpdateListener(new ILiveUpdateListener() {
@@ -147,7 +149,9 @@ LiveUpdates.setLiveUpdateListener(new ILiveUpdateListener() {
 
 The same listener receives the user's interactions with the Live Update notification.
 
-#### Android Kotlin
+<CodeBlock slots="heading, code" repeat="2" languages="Kotlin, Java" />
+
+#### Kotlin
 
 ```kotlin
 override fun onClick(payload: LiveUpdatePayload) {
@@ -163,7 +167,7 @@ override fun onDismissed(payload: LiveUpdatePayload) {
 }
 ```
 
-#### Android Java
+#### Java
 
 ```java
 @Override
@@ -183,7 +187,7 @@ public void onDismissed(LiveUpdatePayload payload) {
 
 <InlineAlert variant="info" slots="text"/>
 
-`onClick` and `onDismissed` can be called after the app process was stopped and then started again only to deliver the interaction. Register the listener in `Application.onCreate` (not from an `Activity`) so it is available when these are called. In that case, the `payload` is restored from the most recently posted version of the notification, so treat `payload.notificationId` as the stable key. A notification posted by an `end` push does not call `onDismissed` when it is dismissed.
+`onClick` and `onDismissed` can be called after the app process was stopped and then started again only to deliver the interaction. Register the listener in `Application.onCreate` (not from an `Activity`) so it is available when these are called. In that case, the `payload` is restored from the most recently posted version of the notification, so treat `payload.notificationId` as the stable key. After a Live Update has ended, `onDismissed` is not called, whether the notification is removed automatically by `dismiss_after` or swiped away by the user.
 
 ## Automatic tracking
 
@@ -209,9 +213,11 @@ The Live Updates SDK does not subscribe the device to FCM topics; your app does.
 1. The Live Update includes the topic in its [`topic_name`](payload.md#properties) key.
 2. In `onStart`, your app subscribes the device to `payload.topicName` with the Firebase SDK. When the subscription succeeds, it calls [trackTopicSubscribed](api-reference.md#tracktopicsubscribed), so Adobe Journey Optimizer can count subscribed devices.
 3. Later pushes sent to the topic reach every subscribed device, and the plugin updates the notification in place, matching it by `notification_id`.
-4. In `onEnd`, your app unsubscribes the device from the topic and calls [trackTopicUnsubscribed](api-reference.md#tracktopicunsubscribed).
+4. In `onEnd`, your app unsubscribes the device from the topic and calls [trackTopicUnsubscribed](api-reference.md#tracktopicunsubscribed). Do the same in `onDismissed`, so a device whose user dismissed the Live Update stops receiving its broadcast updates.
 
-#### Android Kotlin
+<CodeBlock slots="heading, code" repeat="2" languages="Kotlin, Java" />
+
+#### Kotlin
 
 ```kotlin
 override fun onStart(payload: LiveUpdatePayload) {
@@ -226,6 +232,15 @@ override fun onStart(payload: LiveUpdatePayload) {
 }
 
 override fun onEnd(payload: LiveUpdatePayload) {
+    unsubscribeFromTopic(payload)
+}
+
+override fun onDismissed(payload: LiveUpdatePayload) {
+    // The user dismissed the Live Update: stop receiving its broadcast updates.
+    unsubscribeFromTopic(payload)
+}
+
+private fun unsubscribeFromTopic(payload: LiveUpdatePayload) {
     val topic = payload.topicName ?: return
     FirebaseMessaging.getInstance().unsubscribeFromTopic(topic)
         .addOnCompleteListener { task ->
@@ -236,7 +251,7 @@ override fun onEnd(payload: LiveUpdatePayload) {
 }
 ```
 
-#### Android Java
+#### Java
 
 ```java
 @Override
@@ -256,6 +271,16 @@ public void onStart(LiveUpdatePayload payload) {
 
 @Override
 public void onEnd(LiveUpdatePayload payload) {
+    unsubscribeFromTopic(payload);
+}
+
+@Override
+public void onDismissed(LiveUpdatePayload payload) {
+    // The user dismissed the Live Update: stop receiving its broadcast updates.
+    unsubscribeFromTopic(payload);
+}
+
+private void unsubscribeFromTopic(LiveUpdatePayload payload) {
     String topic = payload.getTopicName();
     if (topic == null) {
         return;
@@ -278,11 +303,12 @@ The interceptor lets your app decide, from its own state, whether an incoming Li
 Typical reasons to drop a Live Update:
 
 * This device was not supposed to receive it, for example it belongs to a user who is no longer signed in.
-* The user turned off this kind of update in your app's settings.
 * Your app already knows the Live Update is no longer relevant, for example the order was delivered or cancelled.
 * The user dismissed the Live Update, and a later `update` or `end` push for the same Live Update arrives.
 
-#### Android Kotlin
+<CodeBlock slots="heading, code" repeat="2" languages="Kotlin, Java" />
+
+#### Kotlin
 
 ```kotlin
 LiveUpdates.setLiveUpdateInterceptor(object : ILiveUpdateInterceptor {
@@ -296,7 +322,7 @@ LiveUpdates.setLiveUpdateInterceptor(object : ILiveUpdateInterceptor {
 })
 ```
 
-#### Android Java
+#### Java
 
 ```java
 LiveUpdates.setLiveUpdateInterceptor(payload -> {
@@ -313,9 +339,11 @@ LiveUpdates.setLiveUpdateInterceptor(payload -> {
 
 ## Trigger a Live Update locally
 
-To raise a Live Update from local app state instead of a server push, build a payload and call `triggerLocalLiveUpdate`. It runs the same path as a received push: interceptor, validation, style provider, posting, and listener callbacks (`onStart` for a local start).
+To raise a Live Update from local app state instead of a server push, build a payload and call `triggerLocalLiveUpdate`. It runs the same path as a received push: interceptor, validation, style provider, posting, and listener callbacks (`onStart` for a local start). In Java, `create` takes its arguments in order; pass `null` for optional values you do not set.
 
-#### Android Kotlin
+<CodeBlock slots="heading, code" repeat="2" languages="Kotlin, Java" />
+
+#### Kotlin
 
 ```kotlin
 val payload = LiveUpdatePayload.create(
@@ -329,9 +357,7 @@ val payload = LiveUpdatePayload.create(
 LiveUpdates.triggerLocalLiveUpdate(context, payload)
 ```
 
-#### Android Java
-
-In Java, `create` takes its arguments in order. Pass `null` for optional values you do not set.
+#### Java
 
 ```java
 JSONObject contentState = new JSONObject();
@@ -359,15 +385,27 @@ LiveUpdates.triggerLocalLiveUpdate(context, payload);
 
 A local start has no `_xdm`, so no tracking event is sent when it is posted. When a later `start`, `update`, or `end` push from Adobe Journey Optimizer arrives for the same `notification_id` and `notification_channel_id`, the SDK reports the local start retroactively, with its original time. That push must carry a newer `timestamp` than the local start, or it is dropped. See [Local start is reported only after a push](troubleshooting.md#local-start-is-reported-only-after-a-push).
 
+## Use your own FirebaseMessagingService
+
+If your app registers the Adobe Journey Optimizer `FirebaseMessagingService`, Live Updates are handled for you, and nothing else is needed.
+
+If your app has its own `FirebaseMessagingService`, pass each message to `MessagingService.handleRemoteMessage`, as described in [Using your own FirebaseMessagingService](../../push-notification/android/automatic-display-and-tracking.md#using-your-own-firebasemessagingservice). The same call handles both Adobe Journey Optimizer push notifications and Live Updates: it passes Live Updates to the plugin, so your interceptor, style provider, listener, and automatic tracking all work as described above.
+
 ## Manual mode
 
-In the steps above, the plugin parses the push, calls your interceptor and style provider, and builds, posts, and tracks the notification for you. In **manual mode** your app builds and posts the Live Update notification itself. The plugin flow does **not** run, so the interceptor, the `event_type` and `timestamp` validation, and the style provider are skipped. Use manual mode only when you need full control over how the notification is built.
+In **manual mode**, your app builds and posts the Live Update notification itself, without the plugin. Use manual mode only when you need full control over how the notification is built.
+
+<InlineAlert variant="warning" slots="text"/>
+
+In manual mode, the plugin flow does not run. The interceptor, the `event_type` and `timestamp` validation, and the style provider are skipped. The lifecycle callbacks of your listener (`onLiveUpdateReceived`, `onStart`, `onUpdate`, and `onEnd`) are called only when you call `trackLiveUpdateEvent`, and `onClick` and `onDismissed` are not called.
 
 Manual mode for Live Updates is the Live Update counterpart of [Manual display and tracking of push notification](../../push-notification/android/manual-display-and-tracking.md). The push prerequisites (token sync, service registration) are the same; that document covers them.
 
 A Live Update push carries its properties under the `adb_liveupdate_data` key. In your own `FirebaseMessagingService`, detect it with `LiveUpdatePayload.isLiveUpdate`, then parse it with `LiveUpdatePayload.parse`, which returns `null` when the data is malformed or a required field is missing.
 
-#### Android Kotlin
+<CodeBlock slots="heading, code" repeat="2" languages="Kotlin, Java" />
+
+#### Kotlin
 
 ```kotlin
 class YourFirebaseMessagingService : FirebaseMessagingService() {
@@ -391,7 +429,6 @@ class YourFirebaseMessagingService : FirebaseMessagingService() {
         )
 
         val notification = NotificationCompat.Builder(this, payload.channelId)
-            .setSmallIcon(R.drawable.ic_notification)
             .setContentTitle(payload.title)
             .setContentText(payload.body)
             .setOngoing(true)
@@ -408,7 +445,7 @@ class YourFirebaseMessagingService : FirebaseMessagingService() {
 }
 ```
 
-#### Android Java
+#### Java
 
 ```java
 public class YourFirebaseMessagingService extends FirebaseMessagingService {
@@ -436,7 +473,6 @@ public class YourFirebaseMessagingService extends FirebaseMessagingService {
         );
 
         Notification notification = new NotificationCompat.Builder(this, payload.getChannelId())
-            .setSmallIcon(R.drawable.ic_notification)
             .setContentTitle(payload.getTitle())
             .setContentText(payload.getBody())
             .setOngoing(true)
@@ -455,7 +491,9 @@ public class YourFirebaseMessagingService extends FirebaseMessagingService {
 
 Then track interactions from the target `Activity`:
 
-#### Android Kotlin
+<CodeBlock slots="heading, code" repeat="2" languages="Kotlin, Java" />
+
+#### Kotlin
 
 ```kotlin
 class MainActivity : AppCompatActivity() {
@@ -468,7 +506,7 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-#### Android Java
+#### Java
 
 ```java
 public class MainActivity extends AppCompatActivity {
