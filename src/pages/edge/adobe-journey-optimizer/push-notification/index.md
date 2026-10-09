@@ -23,9 +23,15 @@ keywords:
 
 * [Rich Media Push Notifications Overview](rich-media-notifications-overview.md)
 
+## Push templates
+
+* [Push templates overview](push-templates/index.md)
+* Android: [Basic template](push-templates/android/basic.md), [Big text template](push-templates/android/big-text.md), [Troubleshooting](push-templates/android/troubleshooting.md)
+
 ## Public classes and enums
 
 * [Class - MessagingPushPayload](../public-classes/messaging-push-payload.md) (Android only)
+* [Class - NotificationBuilderPlugin](../public-classes/notification-builder-plugin.md) (Android only)
 * [Enum - PushTrackingStatus](../public-classes/push-tracking-status.md)
 
 ## More information
