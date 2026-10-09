@@ -1,7 +1,7 @@
 {
-  "total": 336,
+  "total": 361,
   "offset": 0,
-  "limit": 336,
+  "limit": 361,
   "data": [
     {
       "page": "/",
@@ -16,10 +16,11 @@
       "page": "/config",
       "avatars": [
         "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4",
         "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "8/31/2026"
+      "lastUpdated": "10/8/2026"
     },
     {
       "page": "/edge/",
@@ -982,10 +983,92 @@
     {
       "page": "/edge/adobe-journey-optimizer/live-activities/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/176364653?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/android/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/android/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/5/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/android/payload",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/android/public-classes/live-update-interceptor",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/android/public-classes/live-update-listener",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/android/public-classes/live-update-payload",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/android/public-classes/live-update-plugin",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/android/public-classes/live-update-style-provider",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/android/troubleshooting",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/android/tutorial",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/live-activities/api-reference",
@@ -994,6 +1077,55 @@
         "https://avatars.githubusercontent.com/u/176364653?v=4"
       ],
       "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/ios/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "8/31/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/ios/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "8/31/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/ios/public-classes/live-activity-assurance-debuggable",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "8/31/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/ios/public-classes/live-activity-attributes",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "8/31/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/ios/public-classes/live-activity-data",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "8/31/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/ios/public-classes/live-activity-origin",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "8/31/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/ios/tutorial",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "8/31/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-assurance-debuggable",
@@ -1049,12 +1181,14 @@
     {
       "page": "/edge/adobe-journey-optimizer/public-classes/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/63024083?v=4",
         "https://avatars.githubusercontent.com/u/6742873?v=4",
         "https://avatars.githubusercontent.com/u/20484288?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "10/8/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/public-classes/content-card",
@@ -1134,6 +1268,14 @@
       "lastUpdated": "2/6/2025"
     },
     {
+      "page": "/edge/adobe-journey-optimizer/public-classes/notification-builder-plugin",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
       "page": "/edge/adobe-journey-optimizer/public-classes/proposition",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4",
@@ -1175,11 +1317,13 @@
     {
       "page": "/edge/adobe-journey-optimizer/push-notification/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11319121?v=4",
         "https://avatars.githubusercontent.com/u/6742873?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "10/6/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/push-notification/android/automatic-display-and-tracking",
@@ -1193,11 +1337,13 @@
     {
       "page": "/edge/adobe-journey-optimizer/push-notification/android/manual-display-and-tracking",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4",
         "https://avatars.githubusercontent.com/u/173353453?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11319121?v=4"
       ],
-      "lastUpdated": "7/7/2026"
+      "lastUpdated": "10/6/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/push-notification/android/push-to-iam",
@@ -1242,9 +1388,42 @@
     {
       "page": "/edge/adobe-journey-optimizer/push-notification/push-payload",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/14/2026"
+      "lastUpdated": "10/6/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/push-notification/push-templates/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4"
+      ],
+      "lastUpdated": "10/6/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/push-notification/push-templates/android/basic",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/6/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/push-notification/push-templates/android/big-text",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/6/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/push-notification/push-templates/android/troubleshooting",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/6/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/push-notification/push-token-sync-optimizations",
@@ -1257,10 +1436,12 @@
     {
       "page": "/edge/adobe-journey-optimizer/push-notification/rich-media-notifications-overview",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11319121?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "10/6/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/release-notes",
@@ -1672,20 +1853,23 @@
     {
       "page": "/home/base/mobile-core/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
-      "lastUpdated": "10/17/2023"
+      "lastUpdated": "10/5/2026"
     },
     {
       "page": "/home/base/mobile-core/api-reference",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4",
         "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/6742873?v=4",
         "https://avatars.githubusercontent.com/u/20484288?v=4",
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
-      "lastUpdated": "7/8/2026"
+      "lastUpdated": "10/5/2026"
     },
     {
       "page": "/home/base/mobile-core/configuration/",
@@ -1840,6 +2024,29 @@
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
       "lastUpdated": "5/12/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/plugins/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/plugins/built-in-plugins/live-updates-plugin",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/plugins/built-in-plugins/ui-builder-plugin",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
     },
     {
       "page": "/home/base/mobile-core/release-notes",
