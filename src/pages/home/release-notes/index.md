@@ -7,6 +7,24 @@ Keywords:
 
 # Release notes
 
+## October 9, 2026
+
+### iOS Brand Concierge 5.10.0
+
+* **Session-level XDM context.** Added `Concierge.updateXDMContext(_:)`. You can now provide XDM fields once, and they are included with every conversation turn and `sendDataHandoff` call in the session, so you no longer need to pass them on each call.
+* Updates merge into the existing context. Nested dictionaries merge, an `NSNull()` value removes a key, and arrays are replaced.
+* `identityMap` is not accepted because the Edge extension manages it.
+* The context is cleared when the session ends. Your app needs to set it again for the new session.
+* **Conversations end when identities reset.** Calling `MobileCore.resetIdentities()` now ends the active Concierge conversation. It clears the saved session, transcript, draft message and any held XDM context. No new API or setup is needed.
+
+### Android Brand Concierge 3.10.0
+
+* **Session-level XDM context.** Added `Concierge.updateXDMContext(Map)`. You can now provide XDM fields once, and they are included with every conversation turn in the session, so you no longer need to pass them on each call.
+* Updates merge into the existing context. Nested maps merge, a `null` value removes a key, and lists are replaced.
+* `identityMap` is not accepted because the Edge extension manages it.
+* The context is cleared when the session ends. Your app needs to set it again for the new session.
+* **Conversations end when identities reset.** Calling `MobileCore.resetIdentities()` now ends the active Concierge conversation. It clears the saved session, transcript, draft message and any held XDM context. No new API or setup is needed.
+
 ## September 30, 2026
 
 ### Android BOM 3.24.0
