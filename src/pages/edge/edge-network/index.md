@@ -74,8 +74,8 @@ For example, selecting Timezone and Push token saves this action configuration:
 ```json
 {
   "detail": {
-    "type": "com.adobe.eventType.edgeBypassConsent",
-    "source": "com.adobe.eventSource.requestContent",
+    "type": "com.adobe.eventType.edgeIdentity",
+    "source": "com.adobe.eventSource.responseOperationalData",
     "attributes": [
       { "path": ["timezone"], "enabled": true },
       { "path": ["tokens", "pushNotification"], "enabled": true },
