@@ -85,8 +85,6 @@ The action is on Identity, not on the Edge Network extension. Edge Identity can 
 
 ![Forward Operational Data to Edge Network action configuration](./assets/index/forward-operational-data.png)
 
-The capture above still shows an earlier development placement on Edge Network. Replace it before publication.
-
 One **Live Activity tokens** checkbox controls both token paths. Live Activity tokens apply to iOS only; Android uses the regular push token. App ID and platform are always included through the `["app"]` context. Saving with no fields selected is valid.
 
 For example, selecting Timezone and Push token saves this action configuration:
