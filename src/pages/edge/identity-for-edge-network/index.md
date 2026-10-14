@@ -25,7 +25,7 @@ Use the Identity for Edge Network extension when including the Edge Network exte
 
 ### Optimize syncing operational profile data
 
-Starting with Identity Tags extension version 2.1.0, the **Optimize syncing operational profile data** setting saves the boolean `edgeidentity.optimizeOperationalProfileDataSync` configuration key. The Tags UI selects the setting by default when no value has been saved, and preserves an explicitly saved `false`.
+Starting with Identity Tags extension version 2.1.0, the **Optimize syncing operational profile data** setting saves the boolean `edgeidentity.optimizeOperationalProfileDataSync` configuration key. The Tags UI selects the setting by default when no value has been saved. That Tags default is `true`. An explicitly saved `false` stays cleared.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -41,7 +41,7 @@ With an SDK version that supports this configuration key, you can also set it fr
 
 | Key | Required | Description | Data Type | Operating System |
 | :--- | :--- | :--- | :--- | :--- |
-| edgeidentity.optimizeOperationalProfileDataSync | No | Enables or disables operational-profile-data sync optimization. The Tags UI initializes this setting to `true`; SDK default behavior and minimum supporting versions require confirmation before release. | Boolean | Android/iOS |
+| edgeidentity.optimizeOperationalProfileDataSync | No | Enables or disables operational-profile-data sync optimization. The Tags UI initializes this setting to `true`. SDK runtime behavior and minimum supporting versions require confirmation before release. | Boolean | Android/iOS |
 
 ##### Android
 
@@ -61,9 +61,59 @@ MobileCore.updateConfigurationWith(configDict: config)
 
 Identity Tags extension version 2.1.0 adds **Operational Data** under the **Attributes** event category in the rule builder. Select **Identity** as the event extension, then select **Operational Data**. The event has no additional configuration.
 
-The event matches SDK events with type `com.adobe.eventType.generic.operationalData` and source `com.adobe.eventSource.requestContent`. Pair it with the Edge Network [Forward Operational Data action](../edge-network/index.md#forward-operational-data-rule-action) to configure the operational fields to forward.
+The event matches SDK events with type `com.adobe.eventType.generic.operationalData` and source `com.adobe.eventSource.requestContent`. Pair it with [Forward operational data to Adobe Edge Network](#forward-operational-data-to-adobe-edge-network) to configure the operational fields to forward.
 
 The Tags rule does not generate device values. An SDK version that emits this event and processes the action's path-based contract is required.
+
+## Forward operational data to Adobe Edge Network
+
+Identity Tags extension version 2.1.0 adds **Forward operational data to Adobe Edge Network** to the rule builder. The action configures which operational fields a supporting SDK forwards to the Adobe Edge Network, including before consent is granted. It does not supply device values.
+
+The action is on Identity, not on the Edge Network extension. Edge Identity can dedupe and commit the operational data before Edge sends it.
+
+1. Add the [Operational Data event](#operational-data-rule-event) to your rule.
+2. Add an action, select **Identity**, then select **Forward operational data to Adobe Edge Network**.
+3. Select the fields to forward:
+
+| Setting | Initial selection | Backend paths |
+| :--- | :--- | :--- |
+| Timezone | Selected | `["timezone"]` |
+| Push token | Not selected | `["tokens", "pushNotification"]` |
+| Live Activity tokens | Not selected | `["tokens", "liveActivityStart"]` and `["tokens", "liveActivityUpdate"]` |
+
+4. Save the action and include the updated rule and extension revisions in your library.
+
+![Forward operational data to Adobe Edge Network action configuration](./assets/index/forward-operational-data.png)
+
+The capture above still shows an earlier development placement on Edge Network. Replace it before publication.
+
+One **Live Activity tokens** checkbox controls both token paths. Live Activity tokens apply to iOS only; Android uses the regular push token. App ID and platform are always included through the `["app"]` context. Saving with no fields selected is valid.
+
+For example, selecting Timezone and Push token saves this action configuration:
+
+```json
+{
+  "detail": {
+    "type": "com.adobe.eventType.edgeIdentity",
+    "source": "com.adobe.eventSource.responseOperationalData",
+    "attributes": [
+      { "path": ["timezone"], "enabled": true },
+      { "path": ["tokens", "pushNotification"], "enabled": true },
+      { "path": ["tokens", "liveActivityStart"], "enabled": false },
+      { "path": ["tokens", "liveActivityUpdate"], "enabled": false }
+    ],
+    "context": [{ "path": ["app"] }]
+  }
+}
+```
+
+Tags supplies the outer consequence type, `forward-operational-data`, from the action definition. All four attribute entries are saved, including disabled entries. A selection that has no value is saved as `enabled: false`, not `null`. The SDK uses the backend paths to find values in the incoming event.
+
+<InlineAlert variant="info" slots="text"/>
+
+Version 2.1.0 is an unreleased Tags extension update, not an Android or iOS SDK version. Minimum SDK versions supporting the event and path-based action contract must be confirmed before this documentation is published. Uploading the Tags extension alone does not implement SDK delivery.
+
+If you tested an earlier development version of this action, including one saved on the Edge Network extension, open and resave it on Identity to migrate interim token-template or boolean settings to the path-based contract. Reuploading an extension package does not rewrite saved rules.
 
 ## Add the Identity For Edge Network extension to your app
 
