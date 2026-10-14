@@ -51,9 +51,9 @@ If you have a first-party domain mapped to the Adobe-provisioned Edge Network do
 
 ## Forward Operational Data rule action
 
-The **Forward operational data to Adobe Edge Network** action is not part of the Edge Network extension. Identity for Edge Network Tags extension version 2.1.0 adds it.
+The **Forward Operational Data to Edge Network** action is not part of the Edge Network extension. Identity for Edge Network Tags extension version 2.1.1 adds it.
 
-Configure the action on [Identity for Edge Network](../identity-for-edge-network/index.md#forward-operational-data-to-adobe-edge-network). If a development rule used an earlier upload of this action on Edge Network, recreate that rule on Identity. Reuploading the Edge Network package does not move a saved rule.
+Configure the action on [Identity for Edge Network](../identity-for-edge-network/index.md#forward-operational-data-to-edge-network). If a development rule used an earlier upload of this action on Edge Network, recreate that rule on Identity. Reuploading the Edge Network package does not move a saved rule.
 
 ## Add the Edge Network extension to your app
 

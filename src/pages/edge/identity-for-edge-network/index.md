@@ -17,7 +17,7 @@ Use the Identity for Edge Network extension when including the Edge Network exte
 
 1. In Data Collection UI, in your mobile property, select the **Extensions** tab.
 2. On the **Catalog** tab, locate or search for the **Identity** extension, and select **Install**.
-3. Starting with Tags extension version 2.1.0, select or clear **Optimize syncing operational profile data**. For details, see [Optimize syncing operational profile data](#optimize-syncing-operational-profile-data).
+3. Starting with Tags extension version 2.1.1, select or clear **Optimize syncing operational profile data**. For details, see [Optimize syncing operational profile data](#optimize-syncing-operational-profile-data).
 4. Select **Save**.
 5. Follow the publishing process to update SDK configuration.
 
@@ -25,11 +25,11 @@ Use the Identity for Edge Network extension when including the Edge Network exte
 
 ### Optimize syncing operational profile data
 
-Starting with Identity Tags extension version 2.1.0, the **Optimize syncing operational profile data** setting saves the boolean `edgeidentity.optimizeOperationalProfileDataSync` configuration key. The Tags UI selects the setting by default when no value has been saved. That Tags default is `true`. An explicitly saved `false` stays cleared.
+Starting with Identity Tags extension version 2.1.1, the **Optimize syncing operational profile data** setting saves the boolean `edgeidentity.optimizeOperationalProfileDataSync` configuration key. The Tags UI selects the setting by default when no value has been saved. That Tags default is `true`. An explicitly saved `false` stays cleared.
 
 <InlineAlert variant="info" slots="text"/>
 
-Version 2.1.0 is an unreleased Tags extension update, not an Android or iOS SDK version. Supporting SDK versions and the SDK's default and optimized-sync behavior must be confirmed before this documentation is published.
+Version 2.1.1 is an unreleased Tags extension update, not an Android or iOS SDK version. Supporting SDK versions and the SDK's default and optimized-sync behavior must be confirmed before this documentation is published.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -57,22 +57,22 @@ let config = ["edgeidentity.optimizeOperationalProfileDataSync": false]
 MobileCore.updateConfigurationWith(configDict: config)
 ```
 
-## Operational Data rule event
+## Sync Operational Data rule event
 
-Identity Tags extension version 2.1.0 adds **Operational Data** under the **Attributes** event category in the rule builder. Select **Identity** as the event extension, then select **Operational Data**. The event has no additional configuration.
+Identity Tags extension version 2.1.1 adds **Sync Operational Data** under the **Attributes** event category in the rule builder. Select **Identity** as the event extension, then select **Sync Operational Data**. The event has no additional configuration.
 
-The event matches SDK events with type `com.adobe.eventType.generic.operationalData` and source `com.adobe.eventSource.requestContent`. Pair it with [Forward operational data to Adobe Edge Network](#forward-operational-data-to-adobe-edge-network) to configure the operational fields to forward.
+The event matches SDK events with type `com.adobe.eventType.generic.operationalData` and source `com.adobe.eventSource.requestContent`. Pair it with [Forward Operational Data to Edge Network](#forward-operational-data-to-edge-network) to configure the operational fields to forward.
 
 The Tags rule does not generate device values. An SDK version that emits this event and processes the action's path-based contract is required.
 
-## Forward operational data to Adobe Edge Network
+## Forward Operational Data to Edge Network
 
-Identity Tags extension version 2.1.0 adds **Forward operational data to Adobe Edge Network** to the rule builder. The action configures which operational fields a supporting SDK forwards to the Adobe Edge Network, including before consent is granted. It does not supply device values.
+Identity Tags extension version 2.1.1 adds **Forward Operational Data to Edge Network** to the rule builder. The action configures which operational fields a supporting SDK forwards to the Edge Network, including before consent is granted. It does not supply device values.
 
 The action is on Identity, not on the Edge Network extension. Edge Identity can dedupe and commit the operational data before Edge sends it.
 
-1. Add the [Operational Data event](#operational-data-rule-event) to your rule.
-2. Add an action, select **Identity**, then select **Forward operational data to Adobe Edge Network**.
+1. Add the [Sync Operational Data event](#sync-operational-data-rule-event) to your rule.
+2. Add an action, select **Identity**, then select **Forward Operational Data to Edge Network**.
 3. Select the fields to forward:
 
 | Setting | Initial selection | Backend paths |
@@ -83,7 +83,7 @@ The action is on Identity, not on the Edge Network extension. Edge Identity can 
 
 4. Save the action and include the updated rule and extension revisions in your library.
 
-![Forward operational data to Adobe Edge Network action configuration](./assets/index/forward-operational-data.png)
+![Forward Operational Data to Edge Network action configuration](./assets/index/forward-operational-data.png)
 
 The capture above still shows an earlier development placement on Edge Network. Replace it before publication.
 
@@ -111,7 +111,7 @@ Tags supplies the outer consequence type, `forward-operational-data`, from the a
 
 <InlineAlert variant="info" slots="text"/>
 
-Version 2.1.0 is an unreleased Tags extension update, not an Android or iOS SDK version. Minimum SDK versions supporting the event and path-based action contract must be confirmed before this documentation is published. Uploading the Tags extension alone does not implement SDK delivery.
+Version 2.1.1 is an unreleased Tags extension update, not an Android or iOS SDK version. Minimum SDK versions supporting the event and path-based action contract must be confirmed before this documentation is published. Uploading the Tags extension alone does not implement SDK delivery.
 
 If you tested an earlier development version of this action, including one saved on the Edge Network extension, open and resave it on Identity to migrate interim token-template or boolean settings to the path-based contract. Reuploading an extension package does not rewrite saved rules.
 

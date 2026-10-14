@@ -9,18 +9,18 @@ Keywords:
 
 ## Unreleased
 
-### Edge Network Tags extension 2.1.0
+### Edge Network Tags extension 2.1.1
 
-* Does not add the operational-data action. That action ships on Identity Tags extension 2.1.0.
-* Upgrades from 2.0.1 to 2.1.0. Development iterations are not separate customer releases.
+* Does not add the operational-data action. That action ships on Identity Tags extension 2.1.1.
+* Upgrades from 2.0.1 to 2.1.1. Development iterations are not separate customer releases.
 
 See the [Edge Network Tags extension release notes](../../edge/edge-network/release-notes.md).
 
-### Identity Tags extension 2.1.0
+### Identity Tags extension 2.1.1
 
 * Adds **Optimize syncing operational profile data**, saved as `edgeidentity.optimizeOperationalProfileDataSync`. The Tags UI selects it by default.
-* Adds the **Operational Data** rule event, packaged with the new configuration view.
-* Adds the **Forward operational data to Adobe Edge Network** rule action for Timezone, Push token, and Live Activity tokens.
+* Adds the **Sync Operational Data** rule event, packaged with the new configuration view.
+* Adds the **Forward Operational Data to Edge Network** rule action for Timezone, Push token, and Live Activity tokens.
 
 See the [Identity Tags extension release notes](../../edge/identity-for-edge-network/release-notes.md).
 
