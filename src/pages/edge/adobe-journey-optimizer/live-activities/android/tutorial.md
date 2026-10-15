@@ -25,13 +25,20 @@ A Live Update is delivered as an Adobe Journey Optimizer push notification, so *
 * [Sync the push token](../../push-notification/android/automatic-display-and-tracking.md#sync-the-push-token) with `MobileCore.setPushIdentifier(...)` so Adobe Journey Optimizer can target the device.
 * [Register the Adobe Journey Optimizer `FirebaseMessagingService`](../../push-notification/android/automatic-display-and-tracking.md#register-messaging-extensions-firebasemessagingservice) (or forward messages from your own service) so incoming pushes reach the SDK.
 * Request the notification permission at runtime. See [Notification runtime permission](https://developer.android.com/develop/ui/compose/notifications/notification-permission) in the Android documentation.
-* Optionally, [create the notification channel](index.md#notification-channel) yourself. When the channel named in the payload's `notification_channel_id` does not exist, the plugin creates it with `IMPORTANCE_HIGH`.
 
 With push working, register the Live Updates plugin as shown in the [overview](index.md), then follow the steps below.
+
+## How a Live Update is processed
+
+The diagram shows how your app, Mobile Core, the Adobe Journey Optimizer extension, and the Live Updates plugin work together: the app registers the plugin at startup, and when a Live Update push arrives, the extension hands it to the plugin, which calls your interceptor and style provider, posts the notification, sends the tracking event, and calls your listener.
+
+![Sequence diagram of the Live Update flow, from registering the plugin at app startup to posting the notification, sending the tracking event, and calling the listener](./assets/tutorial/liveupdate-plugin-flow.png)
 
 ## 1. Provide a notification style
 
 The plugin posts the notification, but your app decides how it looks. Implement [ILiveUpdateStyleProvider](public-classes/live-update-style-provider.md), reading `payload.contentState` to build a `NotificationCompat.Style`. The keys inside `content_state` are yours to define; the ones below match the [sample payloads](payload.md#example). If you return `null`, the plugin still posts the notification, without a style.
+
+Use only the styles that Android supports for Live Updates, listed in [Live Updates](https://developer.android.com/develop/ui/compose/notifications/live-update) in the Android documentation: no style (standard), `BigTextStyle`, `CallStyle`, `ProgressStyle`, or `MetricStyle`. A notification with any other style is still posted, but Android does not promote it to a Live Update, and the plugin reports a `not_promotable` [diagnostic event](troubleshooting.md#incompatibility-issues).
 
 <CodeBlock slots="heading, code" repeat="2" languages="Kotlin, Java" />
 
@@ -401,7 +408,7 @@ In manual mode, the plugin flow does not run. The interceptor, the `event_type` 
 
 Manual mode for Live Updates is the Live Update counterpart of [Manual display and tracking of push notification](../../push-notification/android/manual-display-and-tracking.md). The push prerequisites (token sync, service registration) are the same; that document covers them.
 
-A Live Update push carries its properties under the `adb_liveupdate_data` key. In your own `FirebaseMessagingService`, detect it with `LiveUpdatePayload.isLiveUpdate`, then parse it with `LiveUpdatePayload.parse`, which returns `null` when the data is malformed or a required field is missing.
+A Live Update push carries its properties under the `adb_liveupdate_data` key. In your own `FirebaseMessagingService`, detect it by checking the message data for that key, then parse it with `LiveUpdatePayload.parse`, which returns `null` when the data is malformed or a required field is missing.
 
 <CodeBlock slots="heading, code" repeat="2" languages="Kotlin, Java" />
 
@@ -413,7 +420,7 @@ class YourFirebaseMessagingService : FirebaseMessagingService() {
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         super.onMessageReceived(remoteMessage)
 
-        if (!LiveUpdatePayload.isLiveUpdate(remoteMessage)) {
+        if (!remoteMessage.data.containsKey("adb_liveupdate_data")) {
             // Not a Live Update: handle it as a standard push (see Manual display and tracking).
             return
         }
@@ -454,7 +461,7 @@ public class YourFirebaseMessagingService extends FirebaseMessagingService {
     public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
 
-        if (!LiveUpdatePayload.isLiveUpdate(remoteMessage)) {
+        if (!remoteMessage.getData().containsKey("adb_liveupdate_data")) {
             // Not a Live Update: handle it as a standard push (see Manual display and tracking).
             return;
         }
