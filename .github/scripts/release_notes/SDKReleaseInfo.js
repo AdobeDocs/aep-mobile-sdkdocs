@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-const { PLATFORM_ENUM, EXTENSION_ENUM, BOM_RELEASE_TAG_PREFIX, REACT_NATIVE_RELEASE_TAG_PREFIX, FLUTTER_RELEASE_TAG_PREFIX } = require('./constants')
+const { PLATFORM_ENUM, EXTENSION_ENUM, BOM_RELEASE_TAG_PREFIX, REACT_NATIVE_RELEASE_TAG_PREFIX, FLUTTER_RELEASE_TAG_PREFIX, VEGA_RELEASE_TAG_PREFIX } = require('./constants')
 const { GithubReleaseInfo } = require('./githubRelease');
 
 /**
@@ -89,6 +89,22 @@ function convertToSDKReleaseInfo(releaseInfo) {
                 return new SDKReleaseInfo(releaseInfo, PLATFORM_ENUM.ANDROID, standardizeExtensionName(array3[1]), extractAndroidVersion(array3[0]))
             }
             return new SDKReleaseInfo(releaseInfo, PLATFORM_ENUM.ANDROID, extractAndroidExtensionName(repoName), extractAndroidVersion(tagName))
+        case isVegaRelease(repoName):
+            // aepsdk-kepler is a monorepo; only per-package release tags are supported.
+            // Example: @adobe/vega-aepcore-1.1.0  ->  extension "core", version "1.1.0"
+            //          @adobe/vega-aepmedia-1.1.0 ->  extension "media", version "1.1.0"
+            // Other tags on this repo (e.g. v1.0.0-beta.1) are skipped.
+            if (!tagName.startsWith(VEGA_RELEASE_TAG_PREFIX)) {
+                return null
+            }
+            let vegaRemainder = tagName.substring(VEGA_RELEASE_TAG_PREFIX.length)
+            let vegaDashIndex = vegaRemainder.indexOf('-')
+            if (vegaDashIndex <= 0) {
+                return null
+            }
+            let vegaExtension = vegaRemainder.substring(0, vegaDashIndex)
+            let vegaVersion = vegaRemainder.substring(vegaDashIndex + 1)
+            return new SDKReleaseInfo(releaseInfo, PLATFORM_ENUM.VEGA, standardizeVegaExtensionName(vegaExtension), vegaVersion)
         default:
             throw Error("unsupported repoName: " + repoName)
     }
@@ -168,6 +184,29 @@ function isAndroidCoreRelease(repoName) {
 
 function isAndroidUIRelease(repoName) {
     return repoName === "aepsdk-ui-android"
+}
+
+function isVegaRelease(repoName) {
+    return repoName === "aepsdk-kepler"
+}
+
+/**
+ * Maps a Vega OS package short name (from the release tag) to its display label.
+ *
+ * @param {string} extensionName - The package short name, e.g. "core" or "media".
+ * @returns {string} The standardized Vega OS extension enum value.
+ * @throws {Error} If the Vega package name is not supported.
+ */
+function standardizeVegaExtensionName(extensionName) {
+    extensionName = extensionName.trim().toLowerCase()
+    switch (extensionName) {
+        case "core":
+            return EXTENSION_ENUM.VEGA_CORE;
+        case "media":
+            return EXTENSION_ENUM.VEGA_MEDIA;
+        default:
+            throw Error("unsupported Vega extension name : " + extensionName)
+    }
 }
 
 /**
