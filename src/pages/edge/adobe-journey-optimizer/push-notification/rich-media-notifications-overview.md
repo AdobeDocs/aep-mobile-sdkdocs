@@ -77,6 +77,10 @@ For more information, see Google's documentation [on native Android image suppor
 
 See the documentation on [using the Messaging extension's implementation of the FirebaseMessagingService.](android/automatic-display-and-tracking.md#register-messaging-extensions-firebasemessagingservice)
 
+### Push templates
+
+Adobe Journey Optimizer can also send push templates, which are displayed with pre-built layouts. For more information, see [Push templates](push-templates/index.md).
+
 ## Additional Resources
 
 * [Adobe Journey Optimizer Documentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/design-push.html)

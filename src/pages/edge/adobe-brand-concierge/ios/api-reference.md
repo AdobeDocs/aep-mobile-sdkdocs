@@ -184,6 +184,61 @@ Concierge.setAuthTokenProvider { [weak tokenCache] in
 }
 ```
 
+## sendDataHandoff
+
+Hands data that didn't originate from something the user typed or said in chat (for example, the result of a native checkout flow) to the agent pipeline (Brand Concierge / Product Advisor). Requires an active Concierge chat session. See [Data handoff](/edge/adobe-brand-concierge/ios/implementation-guide.md#data-handoff) in the implementation guide for details.
+
+#### Syntax
+
+```swift
+static func sendDataHandoff(
+    routingHint: String = "",
+    xdmFields: [String: Any],
+    localMessage: String? = nil,
+    completion: (@MainActor (Result<Void, ConciergeDataHandoffError>) -> Void)? = nil
+)
+```
+
+#### Parameters
+
+* _routingHint_ - A keyword consumed only by Brand Concierge's phrase-based router (for example, `"successful-checkout"`). Never shown to the end user. Defaults to empty, which is appropriate when `xdmFields` carries the routing context on its own.
+* _xdmFields_ **required** - Non-empty, JSON-serializable, XDM-shaped dictionary merged into the root of the forwarded XDM object. `identityMap` is reserved and cannot be used as a top-level key.
+* _localMessage_ - Optional text rendered immediately in the chat transcript as a local, non-networked message. It is not sent to Brand Concierge. If `nil` or empty, nothing is shown locally.
+* _completion_ - Optional closure called exactly once on the main actor, always within 60 seconds. `.success` means Brand Concierge completed the turn and its response was rendered. `.failure` carries a `ConciergeDataHandoffError`; a failed handoff leaves nothing in the transcript, so the app owns any failure UI.
+
+#### Example
+
+```swift
+Concierge.sendDataHandoff(
+    routingHint: "successful-checkout",
+    xdmFields: ["commerce": ["order": ["purchaseID": orderId]]],
+    localMessage: "Your order is confirmed!"
+) { result in
+    if case .failure(let error) = result {
+        analytics.track("concierge_handoff_failed", ["code": error.code])
+    }
+}
+```
+
+## ConciergeDataHandoffError
+
+The typed error passed to the `sendDataHandoff` completion on failure. Each case exposes a stable `code` string intended for analytics and crash reporting.
+
+| Error | `code` |
+| --- | --- |
+| `missingEventData` | `missing_event_data` |
+| `emptyXdmFields` | `empty_xdm_fields` |
+| `invalidXdmFieldValue` | `invalid_xdm_field_value` |
+| `reservedKeyCollision` | `reserved_key_collision` |
+| `noActiveSession` | `no_active_session` |
+| `chatInProgress` | `chat_in_progress` |
+| `deliveryFailed(String?)` | `delivery_failed` |
+| `emptyResponse` | `empty_response` |
+| `deliveryTimeout` | `delivery_timeout` |
+| `noResponse` | `no_response` |
+
+See the [error table](/edge/adobe-brand-concierge/ios/implementation-guide.md#data-handoff) in the implementation guide for the meaning of each case.
+
 ## ConciergeThemeLoader.load
 
 Loads a `ConciergeTheme` from a JSON file in a bundle. Returns `nil` if the file cannot be found or parsed.

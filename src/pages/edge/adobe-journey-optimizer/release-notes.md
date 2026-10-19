@@ -9,6 +9,30 @@ keywords:
 
 # Release notes
 
+## September 30, 2026
+
+### iOS Messaging 5.17.0
+
+Added a new API, `Messaging.clearLiveActivities()`, to fully clear Live Activity push tokens tracked by the SDK.
+
+Calling this method:
+* Clears the tokens and marks them stale for the user on AJO
+* Clears the SDK's local token stores
+* Cancels all active Live Activity listener tasks
+
+This is a full teardown, not a one-time revocation  - call `registerLiveActivities(_:)` again afterward to resume token collection.
+
+```swift
+Messaging.clearLiveActivities()
+```
+
+> **Note:** If also calling `MobileCore.resetIdentities()`, call `clearLiveActivities()` first and allow time for the clear to reach Edge before resetting identities. See the [Live Activities API usage guide](https://github.com/adobe/aepsdk-messaging-ios/blob/main/Documentation/sources/live-activities/developer-documentation/api-usage.md#step-7-clear-push-and-live-activity-tokens-before-resetting-identities) for recommended sequencing.
+
+### Android Messaging 3.13.0
+
+* Added push template plugin support supporting AJO Basic and AJO Bigtext Templates
+* Added Live Update Support via Live Update Plugin
+
 ## September 23, 2026
 
 ### iOS Messaging 5.16.2

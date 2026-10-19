@@ -778,8 +778,11 @@ Used when `behavior.productCard.cardStyle` is `"productDetail"`.
 | `--product-card-badge-text-color` | `cssLayout.productCardBadgeTextColor` | `String` | `"#FFFFFF"` | Badge text color (hex) |
 | `--product-card-badge-background-color` | `cssLayout.productCardBadgeBackgroundColor` | `String` | primary color | Badge background (hex) |
 | `--product-card-was-price-color` | `cssLayout.productCardWasPriceColor` | `String` | `"#6E6E6E"` | "Was" price text color (hex) |
-| `--product-card-cta-button-background-color` | `colors.productCardCtaButton.background` | `String` | `"#BB5811"` | Product card CTA button background color (hex) |
-| `--product-card-cta-button-text-color` | `colors.productCardCtaButton.text` | `String` | `"#FFFFFF"` | Product card CTA button label text color (hex) |
+| `--product-card-cta-button-background-color` | `colors.productCardCtaButton.background` | `String` | `"#BB5811"` | Product card primary CTA button background color (hex) |
+| `--product-card-cta-button-text-color` | `colors.productCardCtaButton.text` | `String` | `"#FFFFFF"` | Product card primary CTA button label text color (hex) |
+| `--product-card-secondary-cta-button-background-color` | `colors.productCardSecondaryCtaButton.background` | `String` | transparent | Product card secondary CTA button background color (hex); outlined style |
+| `--product-card-secondary-cta-button-text-color` | `colors.productCardSecondaryCtaButton.text` | `String` | `"#BB5811"` | Product card secondary CTA button label text color (hex) |
+| `--product-card-secondary-cta-button-border-color` | `colors.productCardSecondaryCtaButton.border` | `String` | `"#BB5811"` | Product card secondary CTA button border color (hex) |
 
 ### Colors - CTA Button
 
@@ -849,6 +852,7 @@ When `behavior.productCard.cardStyle` is `"productDetail"`, product recommendati
 | `--product-card-title-font-weight` | `cssLayout.productCardTitleFontWeight` | `Int` | `700` | Title font weight |
 | `--product-card-subtitle-font-size` | `cssLayout.productCardSubtitleFontSize` | `Double` | `12.0` | Subtitle font size (sp) |
 | `--product-card-subtitle-font-weight` | `cssLayout.productCardSubtitleFontWeight` | `Int` | `400` | Subtitle font weight |
+| `--product-card-description-max-lines` | `cssLayout.productCardDescriptionMaxLines` | `Int` | `2` | Maximum description lines before ellipsis. Positive integers set the limit; `none`, zero, negative, or invalid values are ignored and use the default of two lines. For longer descriptions, increase `--product-card-max-height` as needed. |
 | `--product-card-price-font-size` | `cssLayout.productCardPriceFontSize` | `Double` | `14.0` | Price font size (sp) |
 | `--product-card-price-font-weight` | `cssLayout.productCardPriceFontWeight` | `Int` | `400` | Price font weight |
 | `--product-card-badge-font-size` | `cssLayout.productCardBadgeFontSize` | `Double` | `12.0` | Badge font size (sp) |
@@ -870,6 +874,7 @@ When `behavior.productCard.cardStyle` is `"productDetail"`, product recommendati
 | `--product-card-cta-button-vertical-padding` | `cssLayout.productCardCtaButtonVerticalPadding` | `Double` | `8.0` | Product card CTA button vertical padding (dp). |
 | `--product-card-cta-button-font-size` | `cssLayout.productCardCtaButtonFontSize` | `Double` | `12.0` | Product card CTA button label font size (sp) |
 | `--product-card-cta-button-font-weight` | `cssLayout.productCardCtaButtonFontWeight` | `Int` | `600` | Product card CTA button label font weight |
+| `--product-card-secondary-cta-button-border-width` | `cssLayout.productCardSecondaryCtaButtonBorderWidth` | `Double` | `1.0` | Product card secondary CTA button border width (dp). Radius, padding, and font are shared with the primary CTA button's tokens above. |
 
 ### Layout - Buttons
 
@@ -1267,7 +1272,11 @@ Non-CSS `components.feedback` overrides for the feedback dialog.
     "--product-card-cta-button-horizontal-padding": "16px",
     "--product-card-cta-button-vertical-padding": "8px",
     "--product-card-cta-button-font-size": "12px",
-    "--product-card-cta-button-font-weight": "600"
+    "--product-card-cta-button-font-weight": "600",
+    "--product-card-secondary-cta-button-background-color": "transparent",
+    "--product-card-secondary-cta-button-text-color": "#BB5811",
+    "--product-card-secondary-cta-button-border-color": "#BB5811",
+    "--product-card-secondary-cta-button-border-width": "1px"
   }
 }
 ```
@@ -1508,8 +1517,11 @@ These colors are used internally by composables but cannot be customized in them
 | `--product-card-badge-text-color` | ✅ | Extended product card badge text color | `ExtendedProductCard` |
 | `--product-card-badge-background-color` | ✅ | Extended product card badge background | `ExtendedProductCard` |
 | `--product-card-was-price-color` | ✅ | Extended product card "was" price color | `ExtendedProductCard` |
-| `--product-card-cta-button-background-color` | ✅ | Product card CTA button background color | `ExtendedProductCard` |
-| `--product-card-cta-button-text-color` | ✅ | Product card CTA button label text color | `ExtendedProductCard` |
+| `--product-card-cta-button-background-color` | ✅ | Product card primary CTA button background color | `ExtendedProductCard` |
+| `--product-card-cta-button-text-color` | ✅ | Product card primary CTA button label text color | `ExtendedProductCard` |
+| `--product-card-secondary-cta-button-background-color` | ✅ | Product card secondary CTA button background color | `ExtendedProductCard` |
+| `--product-card-secondary-cta-button-text-color` | ✅ | Product card secondary CTA button label text color | `ExtendedProductCard` |
+| `--product-card-secondary-cta-button-border-color` | ✅ | Product card secondary CTA button border color | `ExtendedProductCard` |
 
 Note: The feedback dialog checkbox uses `--color-primary` for the check box filled color; the checkmark icon is white and is not configurable via theme.
 
@@ -1549,6 +1561,7 @@ Note: The feedback dialog checkbox uses `--color-primary` for the check box fill
 | `--product-card-title-font-weight` | ✅ | Extended product card title weight | `ExtendedProductCard` |
 | `--product-card-subtitle-font-size` | ✅ | Extended product card subtitle size | `ExtendedProductCard` |
 | `--product-card-subtitle-font-weight` | ✅ | Extended product card subtitle weight | `ExtendedProductCard` |
+| `--product-card-description-max-lines` | ✅ | Maximum visible lines in the extended product description | `ExtendedProductCard` |
 | `--product-card-price-font-size` | ✅ | Extended product card price size | `ExtendedProductCard` |
 | `--product-card-price-font-weight` | ✅ | Extended product card price weight | `ExtendedProductCard` |
 | `--product-card-badge-font-size` | ✅ | Extended product card badge size | `ExtendedProductCard` |
@@ -1570,6 +1583,7 @@ Note: The feedback dialog checkbox uses `--color-primary` for the check box fill
 | `--product-card-cta-button-vertical-padding` | ✅ | Product card CTA button vertical padding | `ExtendedProductCard` |
 | `--product-card-cta-button-font-size` | ✅ | Product card CTA button label font size | `ExtendedProductCard` |
 | `--product-card-cta-button-font-weight` | ✅ | Product card CTA button label font weight | `ExtendedProductCard` |
+| `--product-card-secondary-cta-button-border-width` | ✅ | Product card secondary CTA button border width | `ExtendedProductCard` |
 | `--button-height-s` | ⚠️ | Parsed but not used in composables | - |
 | `--cta-button-border-radius` | ✅ | CTA button corner radius | `CtaButton` |
 | `--cta-button-horizontal-padding` | ✅ | CTA button horizontal padding | `CtaButton` |

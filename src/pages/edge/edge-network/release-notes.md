@@ -19,6 +19,13 @@ keywords:
 
 The release date and minimum supporting SDK versions remain pending. This is a Tags extension version, not an SDK release. See the [Identity action configuration](../identity-for-edge-network/index.md#forward-operational-data-to-edge-network).
 
+## September 29, 2026
+
+### iOS Edge 5.2.0
+
+* Enabled SQLite WAL (write ahead logging) mode for the Edge hit queue.
+* Updated the minimum AEPCore dependency to 5.12.0.
+
 ## September 23, 2026
 
 ### React Native Edge 7.0.2
