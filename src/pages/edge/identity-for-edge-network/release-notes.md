@@ -9,6 +9,16 @@ keywords:
 
 # Release notes
 
+## October 19, 2026
+
+### Identity Tags extension 2.1.1
+
+* Adds **Optimize syncing operational profile data**, saved as the boolean `edgeidentity.optimizeOperationalProfileDataSync` configuration key. The Tags UI selects it by default. When enabled, sync calls are optimized to avoid redundant edge API calls.
+* Adds the **Sync Operational Data** rule event under **Attributes**. The event matches `com.adobe.eventType.generic.operationalData` / `com.adobe.eventSource.requestContent` and has no additional configuration.
+* Adds the **Forward Operational Data to Edge Network** rule action. The action forwards the selected operational data to the Edge Network. App ID and platform are always included. Selections are Timezone, Push token, and Live Activity tokens. One Live Activity tokens checkbox controls both start and update paths. Saving with no selections is valid.
+
+See the [configuration](index.md#configure-the-identity-extension-in-the-data-collection-ui) and [action](index.md#forward-operational-data-to-edge-network) instructions.
+
 ## July 8, 2026
 
 ### iOS EdgeIdentity 5.1.0

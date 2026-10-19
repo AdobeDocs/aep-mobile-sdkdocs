@@ -17,11 +17,85 @@ Use the Identity for Edge Network extension when including the Edge Network exte
 
 1. In Data Collection UI, in your mobile property, select the **Extensions** tab.
 2. On the **Catalog** tab, locate or search for the **Identity** extension, and select **Install**.
-3. There are no configuration settings for **Identity**.
+3. Select or clear **Optimize syncing operational profile data**. The setting is selected by default. For details, see [Optimize syncing operational profile data](#optimize-syncing-operational-profile-data).
 4. Select **Save**.
 5. Follow the publishing process to update SDK configuration.
 
 ![Identity for Edge Network extension configuration](./assets/index/configuration.png)
+
+### Optimize syncing operational profile data
+
+Identity Tags extension version 2.1.1 adds **Optimize syncing operational profile data**. The setting saves the boolean `edgeidentity.optimizeOperationalProfileDataSync` configuration key. The Tags UI selects the setting by default.
+
+The setting tooltip says: "When enabled, sync calls are optimized to avoid redundant edge API calls."
+
+#### Mobile SDK configuration APIs
+
+You can also set the key from your app with the [MobileCore.updateConfiguration](../../home/base/mobile-core/configuration/api-reference.md#updateconfiguration) API:
+
+| Key | Required | Description | Data Type | Operating System |
+| :--- | :--- | :--- | :--- | :--- |
+| edgeidentity.optimizeOperationalProfileDataSync | No | When enabled, sync calls are optimized to avoid redundant edge API calls. The Tags UI selects this setting by default. | Boolean | Android/iOS |
+
+##### Android
+
+```kotlin
+val config = mapOf("edgeidentity.optimizeOperationalProfileDataSync" to false)
+MobileCore.updateConfiguration(config)
+```
+
+##### iOS
+
+```swift
+let config = ["edgeidentity.optimizeOperationalProfileDataSync": false]
+MobileCore.updateConfigurationWith(configDict: config)
+```
+
+## Sync Operational Data rule event
+
+Identity Tags extension version 2.1.1 adds **Sync Operational Data** under the **Attributes** event category in the rule builder. Select **Identity** as the event extension, then select **Sync Operational Data**. The event has no additional configuration.
+
+The event matches SDK events with type `com.adobe.eventType.generic.operationalData` and source `com.adobe.eventSource.requestContent`. Pair it with [Forward Operational Data to Edge Network](#forward-operational-data-to-edge-network) to choose the operational fields to forward.
+
+## Forward Operational Data to Edge Network
+
+Identity Tags extension version 2.1.1 adds **Forward Operational Data to Edge Network**. The action says: "Forwards the selected operational data to the Edge Network. App ID and platform are always included."
+
+1. Add the [Sync Operational Data event](#sync-operational-data-rule-event) to your rule.
+2. Add an action, select **Identity**, then select **Forward Operational Data to Edge Network**.
+3. Select the fields to forward:
+
+| Setting | Initial selection | Description |
+| :--- | :--- | :--- |
+| Timezone | Selected | The device time zone, so messages can be timed to the user's local hours. |
+| Push token | Not selected | The device push token, used to deliver push notifications to this device. |
+| Live Activity tokens | Not selected | The tokens that start and update Live Activities on the device's lock screen and Dynamic Island. Live Activity tokens are for iOS only. Android uses the regular push token; these fields do not apply. |
+
+4. Save the action and include the updated rule and extension revisions in your library.
+
+![Forward Operational Data to Edge Network action configuration](./assets/index/forward-operational-data.png)
+
+One **Live Activity tokens** checkbox controls both the start and update token paths. Saving with no fields selected is valid.
+
+For example, selecting Timezone and Push token saves this action configuration:
+
+```json
+{
+  "detail": {
+    "type": "com.adobe.eventType.edgeIdentity",
+    "source": "com.adobe.eventSource.responseOperationalData",
+    "attributes": [
+      { "path": ["timezone"], "enabled": true },
+      { "path": ["tokens", "pushNotification"], "enabled": true },
+      { "path": ["tokens", "liveActivityStart"], "enabled": false },
+      { "path": ["tokens", "liveActivityUpdate"], "enabled": false }
+    ],
+    "context": [{ "path": ["app"] }]
+  }
+}
+```
+
+Unchecked fields remain in the saved configuration as `enabled: false`. The SDK uses these paths to read values from the incoming operational-data event.
 
 ## Add the Identity For Edge Network extension to your app
 

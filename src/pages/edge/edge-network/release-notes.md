@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## October 19, 2026
+
+### Edge Network Tags extension 2.1.1
+
+* Releases Tags extension version 2.1.1.
+
 ## September 29, 2026
 
 ### iOS Edge 5.2.0

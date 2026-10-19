@@ -7,6 +7,22 @@ Keywords:
 
 # Release notes
 
+## October 19, 2026
+
+### Identity Tags extension 2.1.1
+
+* Adds **Optimize syncing operational profile data**, saved as `edgeidentity.optimizeOperationalProfileDataSync`. The Tags UI selects it by default. When enabled, sync calls are optimized to avoid redundant edge API calls.
+* Adds the **Sync Operational Data** rule event under **Attributes**.
+* Adds the **Forward Operational Data to Edge Network** rule action for Timezone, Push token, and Live Activity tokens. App ID and platform are always included.
+
+See the [Identity Tags extension release notes](../../edge/identity-for-edge-network/release-notes.md).
+
+### Edge Network Tags extension 2.1.1
+
+* Releases Tags extension version 2.1.1.
+
+See the [Edge Network Tags extension release notes](../../edge/edge-network/release-notes.md).
+
 ## September 30, 2026
 
 ### Android BOM 3.24.0
