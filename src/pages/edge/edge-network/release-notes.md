@@ -8,16 +8,11 @@ keywords:
 
 # Release notes
 
-## Unreleased
+## October 19, 2026
 
 ### Edge Network Tags extension 2.1.1
 
-* Does not add the **Forward Operational Data to Edge Network** action. That action ships on Identity Tags extension 2.1.1.
-* Upgrades the Tags extension from 2.0.1 to 2.1.1. Development payload iterations are not separate customer releases.
-
-<InlineAlert variant="info" slots="text"/>
-
-The release date and minimum supporting SDK versions remain pending. This is a Tags extension version, not an SDK release. See the [Identity action configuration](../identity-for-edge-network/index.md#forward-operational-data-to-edge-network).
+* Releases Tags extension version 2.1.1.
 
 ## September 29, 2026
 

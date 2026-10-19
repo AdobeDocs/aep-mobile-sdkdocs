@@ -7,26 +7,21 @@ Keywords:
 
 # Release notes
 
-## Unreleased
-
-### Edge Network Tags extension 2.1.1
-
-* Does not add the operational-data action. That action ships on Identity Tags extension 2.1.1.
-* Upgrades from 2.0.1 to 2.1.1. Development iterations are not separate customer releases.
-
-See the [Edge Network Tags extension release notes](../../edge/edge-network/release-notes.md).
+## October 19, 2026
 
 ### Identity Tags extension 2.1.1
 
-* Adds **Optimize syncing operational profile data**, saved as `edgeidentity.optimizeOperationalProfileDataSync`. The Tags UI selects it by default.
-* Adds the **Sync Operational Data** rule event, packaged with the new configuration view.
-* Adds the **Forward Operational Data to Edge Network** rule action for Timezone, Push token, and Live Activity tokens.
+* Adds **Optimize syncing operational profile data**, saved as `edgeidentity.optimizeOperationalProfileDataSync`. The Tags UI selects it by default. When enabled, sync calls are optimized to avoid redundant edge API calls.
+* Adds the **Sync Operational Data** rule event under **Attributes**.
+* Adds the **Forward Operational Data to Edge Network** rule action for Timezone, Push token, and Live Activity tokens. App ID and platform are always included.
 
 See the [Identity Tags extension release notes](../../edge/identity-for-edge-network/release-notes.md).
 
-<InlineAlert variant="info" slots="text"/>
+### Edge Network Tags extension 2.1.1
 
-These are planned Tags extension releases, not Android or iOS SDK versions. Release dates, minimum supporting SDK versions, and Identity SDK default behavior remain pending confirmation. Mobile Core has no new Tags extension release in this update.
+* Releases Tags extension version 2.1.1.
+
+See the [Edge Network Tags extension release notes](../../edge/edge-network/release-notes.md).
 
 ## September 30, 2026
 
