@@ -8,16 +8,6 @@ keywords:
 
 # Release notes
 
-## October 14, 2026
-
-### iOS Brand Concierge 5.10.1
-
-This release contains bug fixes only. 
-
-### Android Brand Concierge 3.10.1
-
-This release contains bug fixes only. 
-
 ## October 9, 2026
 
 ### iOS Brand Concierge 5.10.0
