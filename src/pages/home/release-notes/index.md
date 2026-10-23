@@ -7,6 +7,132 @@ Keywords:
 
 # Release notes
 
+## October 22, 2026
+
+### Android BOM 3.25.0
+
+* This BOM ([Bill of Materials](https://central.sonatype.com/artifact/com.adobe.marketing.mobile/sdk-bom)) release includes changes to the following Android extensions.
+
+<Accordion>
+
+<AccordionItem header='Expand'>
+
+| Extension artifact | BOM (3.24.0) | BOM (3.25.0) |
+|-----|-----|-----|
+| **com.adobe.marketing.mobile:core** | **3.10.0** | **3.11.0**|
+| **com.adobe.marketing.mobile:edge** | **3.1.0** | **3.2.0**|
+| **com.adobe.marketing.mobile:edgeidentity** | **3.1.0** | **3.2.0**|
+| **com.adobe.marketing.mobile:messaging** | **3.13.0** | **3.14.0**|
+| com.adobe.marketing.mobile:analytics | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:assurance | 3.0.8 | 3.0.8 |
+| com.adobe.marketing.mobile:audience | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:campaign | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:campaignclassic | 3.1.4 | 3.1.4 |
+| com.adobe.marketing.mobile:edgebridge | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:edgeconsent | 3.0.3 | 3.0.3 |
+| com.adobe.marketing.mobile:edgemedia | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:identity | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:lifecycle | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:liveupdates | 3.0.0 | 3.0.0 |
+| com.adobe.marketing.mobile:media | 3.1.2 | 3.1.2 |
+| com.adobe.marketing.mobile:notificationbuilder | 3.1.0 | 3.1.0 |
+| com.adobe.marketing.mobile:optimize | 3.7.0 | 3.7.0 |
+| com.adobe.marketing.mobile:places | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:signal | 3.0.1 | 3.0.1 |
+| com.adobe.marketing.mobile:target | 3.0.2 | 3.0.2 |
+| com.adobe.marketing.mobile:userprofile | 3.0.1 | 3.0.1 |
+
+</AccordionItem>
+
+</Accordion>
+
+### iOS Messaging 5.18.0
+
+* Added consent-independent syncing of Live Activity tokens. When collect consent is not `y` (no or pending), Live Activity push-to-start and update tokens are also sent as operational data, so the Identity for Edge Network extension can send them to the Edge Network regardless of collect consent. Only values allowed by a Tags rule with a forward operational data consequence are sent. The existing Live Activity token sync to the profile, which depends on collect consent, is unchanged.
+* Messaging now updates its stored push token and Live Activity tokens, and its shared state, when the Identity for Edge Network extension confirms they were synced. An unchanged token is then not sent to the Edge Network again. See [`updateOperationalData`](https://github.com/adobe/aepsdk-edgeidentity-ios/blob/main/Documentation/api-reference.md#updateoperationaldata) in the Identity for Edge Network documentation.
+* **Dependency:** AEPCore and AEPServices 5.13.0 or later are required.
+* **Dependency:** AEPEdge 5.3.0 or later is required.
+* **Dependency:** AEPEdgeIdentity 5.2.0 or later is required.
+
+### Android Messaging 3.14.0
+
+* Added support for synchronizing push tokens from device attributes confirmed by Edge Identity. 
+* The confirmed push token is persisted and published to Messaging shared state without sending a duplicate Edge event. 
+* Updated required dependencies:
+  * AEPCore: 3.11.0
+  * AEPEdge: 3.2.0
+  * AEPEdgeIdentity: 3.2.0
+
+## October 21, 2026
+
+### iOS Edge 5.3.0
+
+* Added support for sending device attributes (such as  push tokens, Live Activity tokens and timezone) to the Edge Network `mobile/device-attributes` endpoint, independent of the collect consent setting. Requests are dispatched by the Identity for Edge Network extension and processed on a separate persistent queue; existing Experience Event and consent request handling is unchanged.
+* Updated the minimum AEPCore dependency to 5.13.0.
+* Updated the minimum AEPEdgeIdentity dependency to 5.2.0.
+
+### Android Edge 3.2.0
+
+* Added support for sending device attributes (such as  push tokens, Live Activity tokens and timezone) to the Edge Network `mobile/device-attributes` endpoint, independent of the collect consent setting. Requests are dispatched by the Identity for Edge Network extension and processed on a separate persistent queue; existing Experience Event and consent request handling is unchanged.
+* Updated the minimum AEPCore dependency to 3.11.0.
+* Updated the minimum AEPEdgeIdentity dependency to 3.2.0.
+
+### Android EdgeIdentity 3.2.0
+
+* Added the `updateOperationalData` API to send operational data, such as the timezone, push token and Live Activity push-to-start tokens, to the Edge Network regardless of collect consent. Only values allowed by a Tags rule with a forward operational data consequence are sent.
+* Added deduplication for the timezone, push token and Live Activity push-to-start tokens, so values are sent only when they change. It can be disabled with the `edgeidentity.optimizeOperationalProfileDataSync` configuration setting.
+* Added an `Operational Data Sync Result` event reporting the status of each `updateOperationalData` request, and an `Operational data confirmed` event that sends confirmed tokens to the Messaging extension.
+* Updated `updateProfileAttributes` handling to create the Edge Identity XDM shared state only when the timezone changes.
+* **Dependency:** AEPCore 3.11.0 or later is required.
+* **Dependency:** AEPEdge 3.2.0 or later is required to send operational data to the Edge Network.
+
+### iOS EdgeIdentity 5.2.0
+
+* Added the `updateOperationalData` API to send operational data, such as the timezone, push token and Live Activity push-to-start tokens, to the Edge Network regardless of collect consent. Only values allowed by a Tags rule with a forward operational data consequence are sent.
+* Added deduplication for the timezone, push token and Live Activity push-to-start tokens, so values are sent only when they change. It can be disabled with the `edgeidentity.optimizeOperationalProfileDataSync` configuration setting.
+* Added an `Operational Data Sync Result` event reporting the status of each `updateOperationalData` request, and an `Operational data confirmed` event that sends confirmed tokens to the Messaging extension.
+* Updated `updateProfileAttributes` handling to create the Edge Identity XDM shared state only when the timezone changes.
+* **Dependency:** AEPCore 5.13.0 or later is required.
+* **Dependency:** AEPEdge 5.3.0 or later is required to send operational data to the Edge Network.
+
+## October 19, 2026
+
+### Android Core 3.11.0
+
+* Added support for the forward-operational-data rule consequence to forward rule-allowed operational data as a chained event.
+
+### iOS Core 5.13.0
+
+* Added support for the forward-operational-data rule consequence to forward rule-allowed operational data as a chained event.
+
+## October 14, 2026
+
+### iOS Brand Concierge 5.10.1
+
+This release contains bug fixes only. 
+
+### Android Brand Concierge 3.10.1
+
+This release contains bug fixes only. 
+
+## October 9, 2026
+
+### iOS Brand Concierge 5.10.0
+
+* **Session-level XDM context.** Added `Concierge.updateXDMContext(_:)`. You can now provide XDM fields once, and they are included with every conversation turn and `sendDataHandoff` call in the session, so you no longer need to pass them on each call.
+* Updates merge into the existing context. Nested dictionaries merge, an `NSNull()` value removes a key, and arrays are replaced.
+* `identityMap` is not accepted because the Edge extension manages it.
+* The context is cleared when the session ends. Your app needs to set it again for the new session.
+* **Conversations end when identities reset.** Calling `MobileCore.resetIdentities()` now ends the active Concierge conversation. It clears the saved session, transcript, draft message and any held XDM context. No new API or setup is needed.
+
+### Android Brand Concierge 3.10.0
+
+* **Session-level XDM context.** Added `Concierge.updateXDMContext(Map)`. You can now provide XDM fields once, and they are included with every conversation turn in the session, so you no longer need to pass them on each call.
+* Updates merge into the existing context. Nested maps merge, a `null` value removes a key, and lists are replaced.
+* `identityMap` is not accepted because the Edge extension manages it.
+* The context is cleared when the session ends. Your app needs to set it again for the new session.
+* **Conversations end when identities reset.** Calling `MobileCore.resetIdentities()` now ends the active Concierge conversation. It clears the saved session, transcript, draft message and any held XDM context. No new API or setup is needed.
+
 ## September 30, 2026
 
 ### Android BOM 3.24.0
