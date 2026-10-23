@@ -101,3 +101,82 @@ This rule is currently handled by the [Mobile Core](../index.md) extension.
 | Friendly name | Key | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | Event data | `eventdata` | object | Yes | Dictionary of key-value pairs to add to or replace in the triggering event's EventData. If a key appears in both the original event data and the payload specified in the consequence, the value from the consequence overrides the original. If a key is provided in the detail object with a value of null, that key will be removed from the triggering event. For more information, see the [modify data tutorial](../../../../resources/user-guides/modify-data.md). |
+
+## Forward operational data consequence
+
+The `forward-operational-data` consequence is processed by the [Mobile Core](../index.md) Rules Engine, starting with Core **3.11.0 on Android** and **5.13.0 on iOS**. In the Data Collection UI, this action is available under the **Identity** extension as **Forward Operational Data**.
+
+When a rule matches, this consequence copies values from explicitly enabled paths in the triggering event's data into a new event. The new event is named **Forward operational data**, uses the type and source specified in the consequence's `detail`, and is chained to the triggering event as its parent. It does not modify the triggering event.
+
+Core performs filtering and event dispatch only. It does not check consent, deduplicate values, validate device tokens, add application or identity information, or make a network request. The receiving extension handles those responsibilities. For the Identity and Edge Network integration, see [Sync operational data independently of collect consent](../../../../edge/identity-for-edge-network/tutorials/operational-data-consent-independent.md).
+
+### Consequence detail fields
+
+Set the consequence object's `type` to `forward-operational-data`. Its `detail` object supports these fields:
+
+| Friendly name | Key | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| Destination event type | `type` | String | Yes | Event type used for the dispatched event. This is distinct from the consequence object's type. |
+| Destination event source | `source` | String | Yes | Event source used for the dispatched event. |
+| Attribute selections | `attributes` | Array of objects | No | Paths to consider for forwarding. A missing, empty, or incorrectly typed value selects no attributes. |
+| Attribute path | `attributes[].path` | Array of strings | Yes, for each selection | Non-empty sequence of exact dictionary keys to traverse in the triggering event data. |
+| Attribute enabled | `attributes[].enabled` | Boolean | Yes, to forward the selection | Only Boolean `true` enables the path. A missing, false, or incorrectly typed value does not enable it. |
+
+### Path selection and value handling
+
+* Paths traverse dictionaries only. Use `["tokens", "pushNotification"]` for a nested value, not the dotted string `"tokens.pushNotification"`. A dot within a path segment is a literal part of that key. Array indexes and wildcard matching are not supported.
+* Values are copied to the same path in the new event, preserving their types. Selecting an array or object copies the entire value; the consequence does not filter its individual elements or properties.
+* Missing paths, paths through non-dictionary values, and paths resolving to `null` are omitted. Empty strings, empty arrays, empty objects, `false`, and zero are values and are preserved.
+* Malformed path entries are skipped with a warning. Missing, empty, or incorrectly typed `attributes` also produces a warning.
+* If no enabled path resolves to a value, Core still dispatches a chained event with an empty data object, provided the destination type and source are valid. An empty Core event does not imply that the receiving extension will send a network request.
+* If the destination type or source is missing, Core logs an error and does not dispatch the consequence event. Forwarded events are subject to the Rules Engine's chained-dispatch limit.
+
+Each consequence selects its own paths independently. Disabling a path in one consequence does not prevent another matching consequence from forwarding it.
+
+### Example
+
+The following consequence allows timezone and Live Activity push-to-start tokens, but disables the push notification token:
+
+```json
+{
+  "id": "forward-operational-data-example",
+  "type": "forward-operational-data",
+  "detail": {
+    "type": "com.adobe.eventType.edgeIdentity",
+    "source": "com.adobe.eventSource.responseOperationalData",
+    "attributes": [
+      { "path": ["timezone"], "enabled": true },
+      { "path": ["tokens", "pushNotification"], "enabled": false },
+      { "path": ["tokens", "liveActivityStart"], "enabled": true }
+    ]
+  }
+}
+```
+
+Given this triggering event data:
+
+```json
+{
+  "timezone": "America/Los_Angeles",
+  "tokens": {
+    "pushNotification": "push-token",
+    "liveActivityStart": [
+      { "attributeType": "GameScoreLiveActivityAttributes", "value": "start-token" }
+    ]
+  },
+  "unselectedField": "not-forwarded"
+}
+```
+
+The dispatched event contains this data. The Live Activity token array remains an array rather than being converted to a string:
+
+```json
+{
+  "timezone": "America/Los_Angeles",
+  "tokens": {
+    "liveActivityStart": [
+      { "attributeType": "GameScoreLiveActivityAttributes", "value": "start-token" }
+    ]
+  }
+}
+```
