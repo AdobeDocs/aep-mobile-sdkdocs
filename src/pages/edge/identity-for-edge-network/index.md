@@ -13,11 +13,15 @@ The Identity for Edge Network mobile extension enables identity management, incl
 
 Use the Identity for Edge Network extension when including the Edge Network extension into an application. The Identity for Edge Network extension is not used with Adobe Solution extensions, which must use the [Identity for Experience Cloud ID Service extension](../../home/base/mobile-core/identity/index.md).
 
+## Tutorials
+
+* [Sync operational data independently of collect consent](tutorials/operational-data-consent-independent.md)
+
 ## Configure the Identity extension in the Data Collection UI
 
 1. In Data Collection UI, in your mobile property, select the **Extensions** tab.
 2. On the **Catalog** tab, locate or search for the **Identity** extension, and select **Install**.
-3. There are no configuration settings for **Identity**.
+3. Configure operational profile data sync optimization as needed. The `edgeidentity.optimizeOperationalProfileDataSync` setting defaults to `true` and skips unchanged operational values. See [Configure operational-data sync optimization](tutorials/operational-data-consent-independent.md#configure-operational-data-sync-optimization) for the affected attributes and consent behavior.
 4. Select **Save**.
 5. Follow the publishing process to update SDK configuration.
 

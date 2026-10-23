@@ -841,6 +841,56 @@ AEPIdentityMap *map = [[AEPIdentityMap alloc] init];
 [AEPMobileEdgeIdentity updateIdentities:map];
 ```
 
+## Operational data synchronization
+
+Use the platform API below to provide operational data for consent-independent synchronization. Values are sent only when a matching Data Collection rule allows them. This API does not change the user's collect-consent preference. See the [operational data sync tutorial](tutorials/operational-data-consent-independent.md) for rule setup and examples.
+
+### Android
+
+#### Java syntax
+
+```java
+public static void updateOperationalData(final Map<String, Object> attributes);
+```
+
+#### Kotlin example
+
+```kotlin
+Identity.updateOperationalData(
+    mapOf(
+        "timezone" to TimeZone.getDefault().id,
+        "tokens" to mapOf("pushNotification" to pushToken)
+    )
+)
+```
+
+### iOS
+
+#### Swift syntax
+
+```swift
+static func updateOperationalData(_ attributes: [String: Any])
+```
+
+#### Objective-C syntax
+
+```objectivec
++ (void) updateOperationalData:(NSDictionary<NSString *, id> * _Nonnull)attributes;
+```
+
+#### Swift example
+
+```swift
+Identity.updateOperationalData([
+    "timezone": TimeZone.current.identifier,
+    "tokens": [
+        "pushNotification": pushToken,
+        "liveActivityStart": [["attributeType": "GameScoreLiveActivityAttributes", "value": pushToStartToken]],
+        "liveActivityUpdate": [["liveActivityID": liveActivityID, "token": updateToken]]
+    ]
+])
+```
+
 ## Public Classes
 
 ### IdentityMap

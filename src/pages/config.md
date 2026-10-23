@@ -266,6 +266,8 @@
         - [Identity for Edge Network](/edge/identity-for-edge-network/index.md)
             - [Overview](/edge/identity-for-edge-network/index.md)
             - [API reference](/edge/identity-for-edge-network/api-reference.md)
+            - [Tutorials](/edge/identity-for-edge-network/tutorials/index.md)
+                - [Sync operational data independently of collect consent](/edge/identity-for-edge-network/tutorials/operational-data-consent-independent.md)
             - [Frequently asked questions](/edge/identity-for-edge-network/faq.md)
             - [Release notes](/edge/identity-for-edge-network/release-notes.md)
         - [Lifecycle for Edge Network](/edge/lifecycle-for-edge-network/index.md)
