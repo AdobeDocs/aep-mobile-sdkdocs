@@ -398,6 +398,47 @@ If your app registers the Adobe Journey Optimizer `FirebaseMessagingService`, Li
 
 If your app has its own `FirebaseMessagingService`, pass each message to `MessagingService.handleRemoteMessage`, as described in [Using your own FirebaseMessagingService](../../push-notification/android/automatic-display-and-tracking.md#using-your-own-firebasemessagingservice). The same call handles both Adobe Journey Optimizer push notifications and Live Updates: it passes Live Updates to the plugin, so your interceptor, style provider, listener, and automatic tracking all work as described above.
 
+Do not check for Live Updates yourself. `handleRemoteMessage` returns `true` for any push from Adobe Journey Optimizer, standard or Live Update, after it handles the push. It returns `false` for any other push, which your app handles.
+
+<CodeBlock slots="heading, code" repeat="2" languages="Kotlin, Java" />
+
+#### Kotlin
+
+```kotlin
+class YourFirebaseMessagingService : FirebaseMessagingService() {
+
+    override fun onMessageReceived(remoteMessage: RemoteMessage) {
+        super.onMessageReceived(remoteMessage)
+
+        if (MessagingService.handleRemoteMessage(this, remoteMessage)) {
+            // A push from Adobe Journey Optimizer, standard or Live Update: handled by the SDK.
+            return
+        }
+
+        // A push from another source: handle it in your app.
+    }
+}
+```
+
+#### Java
+
+```java
+public class YourFirebaseMessagingService extends FirebaseMessagingService {
+
+    @Override
+    public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {
+        super.onMessageReceived(remoteMessage);
+
+        if (MessagingService.handleRemoteMessage(this, remoteMessage)) {
+            // A push from Adobe Journey Optimizer, standard or Live Update: handled by the SDK.
+            return;
+        }
+
+        // A push from another source: handle it in your app.
+    }
+}
+```
+
 ## Manual mode
 
 In **manual mode**, your app builds and posts the Live Update notification itself, without the plugin. Use manual mode only when you need full control over how the notification is built.
