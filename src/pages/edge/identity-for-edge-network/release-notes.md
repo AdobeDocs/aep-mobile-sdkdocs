@@ -9,6 +9,12 @@ keywords:
 
 # Release notes
 
+## October 27, 2026
+
+### Identity Tags extension 2.1.2
+
+* Fixes the **details** link in the extension configuration view, which returned a 404. It now opens the [Identity for Edge Network](index.md) documentation.
+
 ## October 21, 2026
 
 ### Android EdgeIdentity 3.2.0
