@@ -21,6 +21,7 @@ keywords:
 * Added support for sending device attributes (such as  push tokens and timezone) to the Edge Network `mobile/device-attributes` endpoint, independent of the collect consent setting. Requests are dispatched by the Identity for Edge Network extension and processed on a separate persistent queue; existing Experience Event and consent request handling is unchanged.
 * Updated the minimum AEPCore dependency to 3.11.0.
 * Updated the minimum AEPEdgeIdentity dependency to 3.2.0.
+* This release and its required dependencies are included in [Android BOM 3.25.0](../../home/release-notes/index.md#android-bom-3250).
 
 ## September 29, 2026
 

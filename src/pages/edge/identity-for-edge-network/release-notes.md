@@ -19,6 +19,7 @@ keywords:
 * Updated `updateProfileAttributes` handling to create the Edge Identity XDM shared state only when the timezone changes.
 * **Dependency:** AEPCore 3.11.0 or later is required.
 * **Dependency:** AEPEdge 3.2.0 or later is required to send operational data to the Edge Network.
+* This release and its required dependencies are included in [Android BOM 3.25.0](../../home/release-notes/index.md#android-bom-3250).
 
 ### iOS EdgeIdentity 5.2.0
 

@@ -77,6 +77,7 @@ Keywords:
 * Added support for sending device attributes (such as  push tokens and timezone) to the Edge Network `mobile/device-attributes` endpoint, independent of the collect consent setting. Requests are dispatched by the Identity for Edge Network extension and processed on a separate persistent queue; existing Experience Event and consent request handling is unchanged.
 * Updated the minimum AEPCore dependency to 3.11.0.
 * Updated the minimum AEPEdgeIdentity dependency to 3.2.0.
+* This release and its required dependencies are included in [Android BOM 3.25.0](#android-bom-3250).
 
 ### Android EdgeIdentity 3.2.0
 
@@ -86,6 +87,7 @@ Keywords:
 * Updated `updateProfileAttributes` handling to create the Edge Identity XDM shared state only when the timezone changes.
 * **Dependency:** AEPCore 3.11.0 or later is required.
 * **Dependency:** AEPEdge 3.2.0 or later is required to send operational data to the Edge Network.
+* This release and its required dependencies are included in [Android BOM 3.25.0](#android-bom-3250).
 
 ### iOS EdgeIdentity 5.2.0
 
@@ -101,6 +103,7 @@ Keywords:
 ### Android Core 3.11.0
 
 * Added support for the forward-operational-data rule consequence to forward rule-allowed operational data as a chained event.
+* This release is included in [Android BOM 3.25.0](#android-bom-3250).
 
 ### iOS Core 5.13.0
 
