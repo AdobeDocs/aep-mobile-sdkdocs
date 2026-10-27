@@ -7,6 +7,14 @@ Keywords:
 
 # Release notes
 
+## October 27, 2026
+
+### Identity Tags extension 2.1.2
+
+* Fixes the **details** link in the extension configuration view, which returned a 404. It now opens the [Identity for Edge Network](../../edge/identity-for-edge-network/index.md) documentation.
+
+See the [Identity Tags extension release notes](../../edge/identity-for-edge-network/release-notes.md).
+
 ## October 22, 2026
 
 ### Android BOM 3.25.0
