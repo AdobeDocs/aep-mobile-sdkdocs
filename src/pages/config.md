@@ -406,6 +406,7 @@
             - [Rules and XDM events](/resources/user-guides/getting-started-with-platform/rules-and-xdm-events.md)
         - [Attach data to SDK events](/resources/user-guides/attach-data.md)
         - [Modify data in SDK events](/resources/user-guides/modify-data.md)
+        - [Forward Operational Data to Edge Network tutorial](/resources/user-guides/forward-operational-data.md)
         - [Tags data elements](/resources/user-guides/tags-data-elements.md)
         - [iOS App Extensions](/resources/user-guides/app-extension.md)
         - [Building mobile extensions](/resources/user-guides/building-mobile-extensions.md)
