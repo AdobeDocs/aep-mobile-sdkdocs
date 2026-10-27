@@ -55,9 +55,10 @@ MobileCore.updateConfigurationWith(configDict: config)
 
 Use the **Sync Operational Data** event and the **Forward Operational Data to Edge Network** action together. The rule decides which operational data the SDK sends to the Edge Network, independent of collect consent.
 
-<InlineAlert variant="info" slots="text"/>
+Operational data sync requires these SDK versions or later. Older SDKs ignore the configuration key, event and action.
 
-Operational data sync requires these SDK versions or later. Older SDKs ignore the configuration key, event and action.<br/><br/>**Android:** Mobile Core 3.11.0, Edge Network 3.2.0 and Identity for Edge Network 3.2.0, included in [Android BOM 3.25.0](../../home/release-notes/index.md#android-bom-3250).<br/>**iOS:** Mobile Core 5.13.0, Edge Network 5.3.0 and Identity for Edge Network 5.2.0. Live Activity tokens also need Adobe Journey Optimizer 5.18.0.
+* **Android:** Mobile Core 3.11.0, Edge Network 3.2.0 and Identity for Edge Network 3.2.0, included in [Android BOM 3.25.0](../../home/release-notes/index.md#android-bom-3250).
+* **iOS:** Mobile Core 5.13.0, Edge Network 5.3.0 and Identity for Edge Network 5.2.0. Live Activity tokens also need Adobe Journey Optimizer 5.18.0.
 
 ### Sync Operational Data rule event
 
