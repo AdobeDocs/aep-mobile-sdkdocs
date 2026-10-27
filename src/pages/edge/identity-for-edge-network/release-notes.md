@@ -9,6 +9,27 @@ keywords:
 
 # Release notes
 
+## October 21, 2026
+
+### Android EdgeIdentity 3.2.0
+
+* Added the `updateOperationalData` API to send operational data, such as the timezone and push tokens, to the Edge Network independent of collect consent. Only values allowed by a Tags rule with a forward operational data consequence are sent.
+* Added deduplication for the timezone and push token, so values are sent only when they change. It can be disabled with the `edgeidentity.optimizeOperationalProfileDataSync` configuration setting.
+* Added an `Operational Data Sync Result` event reporting the status of each `updateOperationalData` request, and an `Operational data confirmed` event that sends confirmed tokens to the Messaging extension.
+* Updated `updateProfileAttributes` handling to create the Edge Identity XDM shared state only when the timezone changes.
+* **Dependency:** AEPCore 3.11.0 or later is required.
+* **Dependency:** AEPEdge 3.2.0 or later is required to send operational data to the Edge Network.
+* This release and its required dependencies are included in [Android BOM 3.25.0](../../home/release-notes/index.md#android-bom-3250).
+
+### iOS EdgeIdentity 5.2.0
+
+* Added the `updateOperationalData` API to send operational data, such as the timezone, push token and Live Activity push-to-start tokens, to the Edge Network independent of collect consent. Only values allowed by a Tags rule with a forward operational data consequence are sent.
+* Added deduplication for the timezone, push token and Live Activity push-to-start tokens, so values are sent only when they change. It can be disabled with the `edgeidentity.optimizeOperationalProfileDataSync` configuration setting.
+* Added an `Operational Data Sync Result` event reporting the status of each `updateOperationalData` request, and an `Operational data confirmed` event that sends confirmed tokens to the Messaging extension.
+* Updated `updateProfileAttributes` handling to create the Edge Identity XDM shared state only when the timezone changes.
+* **Dependency:** AEPCore 5.13.0 or later is required.
+* **Dependency:** AEPEdge 5.3.0 or later is required to send operational data to the Edge Network.
+
 ## July 8, 2026
 
 ### iOS EdgeIdentity 5.1.0
