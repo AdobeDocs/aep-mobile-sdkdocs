@@ -27,7 +27,7 @@ Use the Identity for Edge Network extension when including the Edge Network exte
 
 Identity Tags extension version 2.1.1 adds **Optimize syncing operational profile data**. The setting saves the boolean `edgeidentity.optimizeOperationalProfileDataSync` configuration key. The Tags UI selects the setting by default.
 
-The setting tooltip says: "When enabled, sync calls are optimized to avoid redundant edge API calls."
+When the setting is selected, the SDK sends the timezone, push token and Live Activity push-to-start tokens only when they change. Other operational values are sent on every sync. When the setting is cleared, the SDK sends every value on every sync.
 
 #### Mobile SDK configuration APIs
 
@@ -35,7 +35,7 @@ You can also set the key from your app with the [MobileCore.updateConfiguration]
 
 | Key | Required | Description | Data Type | Operating System |
 | :--- | :--- | :--- | :--- | :--- |
-| edgeidentity.optimizeOperationalProfileDataSync | No | When enabled, sync calls are optimized to avoid redundant edge API calls. The Tags UI selects this setting by default. | Boolean | Android/iOS |
+| edgeidentity.optimizeOperationalProfileDataSync | No | When `true`, the timezone, push token and Live Activity push-to-start tokens are sent only when they change. When `false`, every value is sent on every sync. The Tags UI selects this setting by default. | Boolean | Android/iOS |
 
 ##### Android
 
@@ -51,13 +51,21 @@ let config = ["edgeidentity.optimizeOperationalProfileDataSync": false]
 MobileCore.updateConfigurationWith(configDict: config)
 ```
 
-## Sync Operational Data rule event
+## Sync operational data to the Edge Network
+
+Use the **Sync Operational Data** event and the **Forward Operational Data to Edge Network** action together. The rule decides which operational data the SDK sends to the Edge Network, independent of collect consent.
+
+<InlineAlert variant="info" slots="text"/>
+
+Operational data sync requires these SDK versions or later. Older SDKs ignore the configuration key, event and action.<br/><br/>**Android:** Mobile Core 3.11.0, Edge Network 3.2.0 and Identity for Edge Network 3.2.0, included in [Android BOM 3.25.0](../../home/release-notes/index.md#android-bom-3250).<br/>**iOS:** Mobile Core 5.13.0, Edge Network 5.3.0 and Identity for Edge Network 5.2.0. Live Activity tokens also need Adobe Journey Optimizer 5.18.0.
+
+### Sync Operational Data rule event
 
 Identity Tags extension version 2.1.1 adds **Sync Operational Data** under the **Attributes** event category in the rule builder. Select **Identity** as the event extension, then select **Sync Operational Data**. The event has no additional configuration.
 
-The event matches SDK events with type `com.adobe.eventType.generic.operationalData` and source `com.adobe.eventSource.requestContent`. Pair it with [Forward Operational Data to Edge Network](#forward-operational-data-to-edge-network) to choose the operational fields to forward.
+The SDK triggers this event when your app calls `updateOperationalData` ([Android](https://github.com/adobe/aepsdk-edgeidentity-android/blob/main/Documentation/api-reference.md#updateoperationaldata), [iOS](https://github.com/adobe/aepsdk-edgeidentity-ios/blob/main/Documentation/api-reference.md#updateoperationaldata)). On iOS, the Adobe Journey Optimizer extension also triggers it with Live Activity tokens.
 
-## Forward Operational Data to Edge Network
+### Forward Operational Data to Edge Network
 
 Identity Tags extension version 2.1.1 adds **Forward Operational Data to Edge Network**. The action says: "Forwards the selected operational data to the Edge Network. App ID and platform are always included."
 
@@ -69,33 +77,13 @@ Identity Tags extension version 2.1.1 adds **Forward Operational Data to Edge Ne
 | :--- | :--- | :--- |
 | Timezone | Selected | The device time zone, so messages can be timed to the user's local hours. |
 | Push token | Not selected | The device push token, used to deliver push notifications to this device. |
-| Live Activity tokens | Not selected | The tokens that start and update Live Activities on the device's lock screen and Dynamic Island. Live Activity tokens are for iOS only. Android uses the regular push token; these fields do not apply. |
+| Live Activity tokens | Not selected | The push-to-start and update tokens for Live Activities on the device's lock screen and Dynamic Island. iOS only. Android uses the push token. |
 
 4. Save the action and include the updated rule and extension revisions in your library.
 
 ![Forward Operational Data to Edge Network action configuration](./assets/index/forward-operational-data.png)
 
-One **Live Activity tokens** checkbox controls both the start and update token paths. Saving with no fields selected is valid.
-
-For example, selecting Timezone and Push token saves this action configuration:
-
-```json
-{
-  "detail": {
-    "type": "com.adobe.eventType.edgeIdentity",
-    "source": "com.adobe.eventSource.responseOperationalData",
-    "attributes": [
-      { "path": ["timezone"], "enabled": true },
-      { "path": ["tokens", "pushNotification"], "enabled": true },
-      { "path": ["tokens", "liveActivityStart"], "enabled": false },
-      { "path": ["tokens", "liveActivityUpdate"], "enabled": false }
-    ],
-    "context": [{ "path": ["app"] }]
-  }
-}
-```
-
-Unchecked fields remain in the saved configuration as `enabled: false`. The SDK uses these paths to read values from the incoming operational-data event.
+The SDK sends only the selected fields. Saving with no fields selected is valid.
 
 ## Add the Identity For Edge Network extension to your app
 
