@@ -27,6 +27,7 @@ keywords:
   * AEPCore: 3.11.0
   * AEPEdge: 3.2.0
   * AEPEdgeIdentity: 3.2.0
+* This release and its required dependencies are included in [Android BOM 3.25.0](../../home/release-notes/index.md#android-bom-3250).
 
 ## September 30, 2026
 
