@@ -109,6 +109,21 @@ Keywords:
 
 * Added support for the forward-operational-data rule consequence to forward rule-allowed operational data as a chained event.
 
+### Identity Tags extension 2.1.1
+
+* Adds **Optimize syncing operational profile data**, saved as `edgeidentity.optimizeOperationalProfileDataSync`. The Tags UI selects it by default. When selected, the timezone, push token and Live Activity push-to-start tokens are sent only when they change.
+* Adds the **Sync Operational Data** rule event under **Attributes**.
+* Adds the **Forward Operational Data to Edge Network** rule action for Timezone, Push token, and Live Activity tokens. App ID and platform are always included.
+* Requires Android Identity for Edge Network 3.2.0 or iOS Identity for Edge Network 5.2.0, or later, with their matching Edge Network and Mobile Core versions.
+
+See the [Identity Tags extension release notes](../../edge/identity-for-edge-network/release-notes.md).
+
+### Edge Network Tags extension 2.1.1
+
+* Fixes an issue where the extension configuration view, used to select datastreams, could fail to load.
+
+See the [Edge Network Tags extension release notes](../../edge/edge-network/release-notes.md).
+
 ## October 14, 2026
 
 ### iOS Brand Concierge 5.10.1

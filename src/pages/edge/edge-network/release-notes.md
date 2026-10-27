@@ -23,6 +23,12 @@ keywords:
 * Updated the minimum AEPEdgeIdentity dependency to 3.2.0.
 * This release and its required dependencies are included in [Android BOM 3.25.0](../../home/release-notes/index.md#android-bom-3250).
 
+## October 19, 2026
+
+### Edge Network Tags extension 2.1.1
+
+* Fixes an issue where the extension configuration view, used to select datastreams, could fail to load.
+
 ## September 29, 2026
 
 ### iOS Edge 5.2.0

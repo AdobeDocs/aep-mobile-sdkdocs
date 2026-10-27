@@ -30,6 +30,17 @@ keywords:
 * **Dependency:** AEPCore 5.13.0 or later is required.
 * **Dependency:** AEPEdge 5.3.0 or later is required to send operational data to the Edge Network.
 
+## October 19, 2026
+
+### Identity Tags extension 2.1.1
+
+* Adds **Optimize syncing operational profile data**, saved as the boolean `edgeidentity.optimizeOperationalProfileDataSync` configuration key. The Tags UI selects it by default. When selected, the timezone, push token and Live Activity push-to-start tokens are sent only when they change.
+* Adds the **Sync Operational Data** rule event under **Attributes**. The SDK triggers it when your app calls `updateOperationalData`, and on iOS when Adobe Journey Optimizer syncs Live Activity tokens.
+* Adds the **Forward Operational Data to Edge Network** rule action. Select Timezone, Push token or Live Activity tokens to forward. App ID and platform are always included.
+* Requires Android Identity for Edge Network 3.2.0, Edge Network 3.2.0 and Mobile Core 3.11.0, or iOS Identity for Edge Network 5.2.0, Edge Network 5.3.0 and Mobile Core 5.13.0, or later.
+
+See the [configuration](index.md#configure-the-identity-extension-in-the-data-collection-ui) and [operational data sync](index.md#sync-operational-data-to-the-edge-network) instructions.
+
 ## July 8, 2026
 
 ### iOS EdgeIdentity 5.1.0
