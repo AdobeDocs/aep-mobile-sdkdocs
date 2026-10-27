@@ -22,6 +22,7 @@ Before creating the rule:
 
 * Create a mobile property in Data Collection.
 * Install the **Edge Network** and **Identity for Edge Network** extensions in the mobile property.
+* For Messaging token synchronization, also install the **Adobe Journey Optimizer (Messaging)** extension in the mobile property.
 * Add and register the corresponding SDK extensions in your app.
 
 Use the following minimum SDK versions:
@@ -31,8 +32,9 @@ Use the following minimum SDK versions:
 | Core | 3.11.0 | 5.13.0 |
 | Edge Network | 3.2.0 | 5.3.0 |
 | Identity for Edge Network | 3.2.0 | 5.2.0 |
+| Messaging | 3.14.0 | 5.18.0 |
 
-For dependency and initialization instructions, see [Identity for Edge Network](../../edge/identity-for-edge-network/index.md).
+The Messaging versions above support synchronization of tokens confirmed by Edge Identity. For dependency and initialization instructions, see [Identity for Edge Network](../../edge/identity-for-edge-network/index.md) and [Adobe Journey Optimizer](../../edge/adobe-journey-optimizer/index.md).
 
 ## Context
 
