@@ -42,7 +42,7 @@ The Messaging versions above support synchronization of tokens confirmed by Edge
 
 The [Rules Engine](../../home/base/mobile-core/rules-engine/index.md) evaluates a rule against the triggering SDK event. When a rule matches, this consequence copies values from explicitly enabled paths in the triggering event's data into a new event.
 
-The new event is named **Forward operational data**, uses the type and source specified in the consequence's `detail`, and is chained to the triggering event as its parent. It does not modify the triggering event.
+The **Forward Operational Data to Edge Network** action dispatches a new event using the type and source specified in the consequence's `detail`. The new event is chained to the triggering event as its parent. The action does not modify the triggering event.
 
 Core performs filtering and event dispatch only. It does not check consent, deduplicate values, validate device tokens, add application or identity information, or make a network request. The receiving extension handles those responsibilities.
 
