@@ -843,28 +843,38 @@ AEPIdentityMap *map = [[AEPIdentityMap alloc] init];
 
 ## updateOperationalData
 
-Sends operational data, such as the device timezone and push tokens, to the Edge Network **independently of collect consent**. Use this API for data that must reach the user's profile even when the user has not consented to data collection.
+Sends operational data, such as the device timezone and push tokens, to the Edge Network **independently of collect consent**. Use this API for operational data that must reach the user's profile even when the user has not consented to data collection.
 
 <InlineAlert variant="info" slots="text"/>
 
-This API is available starting from **Identity for Edge Network** version **3.2.0** on Android (requires **Mobile Core** version **3.11.0** or later) and **AEPEdgeIdentity** version **5.2.0** on iOS (requires **AEPCore** version **5.13.0** or later).
+This API is available starting from **Identity for Edge Network** version **3.2.0** on Android and **AEPEdgeIdentity** version **5.2.0** on iOS.
+
+This API also requires the following minimum versions of the other extensions:
+
+| Extension | Android | iOS |
+| --- | --- | --- |
+| Mobile Core | 3.11.0 | 5.13.0 |
+| Edge Network | 3.2.0 | 5.3.0 |
+| Messaging | 3.14.0 | 5.18.0 |
+
+If your app also uses the Messaging extension, use the version listed above or later. This prevents the same push token from being sent twice when both the Messaging APIs and this API are used.
 
 The provided attributes are forwarded to the rules engine, and only the values returned by a Tags rule with a **forward operational data** consequence are sent to the Edge Network. If no rule matches, nothing is sent. Requests are sent one at a time.
 
-The following values are sent only when they change; all other values are sent on every call:
+The timezone (`timezone`) and push token (`tokens.pushNotification`) are sent only when they change; all other values are sent on every call.
 
-* **Android**: the timezone (`timezone`) and push token (`tokens.pushNotification`).
-* **iOS**: the timezone (`timezone`), push token (`tokens.pushNotification`), and Live Activity push-to-start tokens (`tokens.liveActivityStart`).
+A value is not sent again if it matches:
 
-A value is considered unchanged when it matches the value the Edge Network last confirmed. When collect consent is `y`, or the [Consent for Edge Network](../consent-for-edge-network/index.md) extension is not registered, a value is also considered unchanged when it matches the value already held by its owner: the timezone set through the [`updateProfileAttributes`](../../home/base/mobile-core/api-reference.md#updateprofileattributes) API, or the push token (and, on iOS, push-to-start tokens) held by the Messaging extension. Confirmed values are cleared by [`resetIdentities`](#resetidentities).
+* the value the Edge Network last confirmed through this API, or
+* when collect consent is `y` or the [Consent for Edge Network](../consent-for-edge-network/index.md) extension is not registered, the timezone set through the [`updateProfileAttributes`](../../home/base/mobile-core/api-reference.md#updateprofileattributes) API or the push tokens held by the Messaging extension.
 
-To send every value on every call, set `edgeidentity.optimizeOperationalProfileDataSync` to `false` in the SDK configuration (default is `true`).
+[`resetIdentities`](#resetidentities) clears the confirmed values from the shared state and local storage.
+
+To send every value on every call, clear **Optimize syncing operational profile data** in the Identity extension settings in the Data Collection UI, or set `edgeidentity.optimizeOperationalProfileDataSync` to `false` using the [`updateConfiguration`](../../home/base/mobile-core/api-reference.md#updateconfiguration) API (default is `true`).
 
 <InlineAlert variant="info" slots="text"/>
 
 Attribute values are not validated by the SDK and are sent as provided. Calling this API with an empty map has no effect.
-
-Each request ends with an event of type `com.adobe.eventType.edgeIdentity` and source `com.adobe.eventSource.responseContent` that contains the `status` (`success` or `failed`), `reason`, and `attributes` of the request.
 
 ### Android Java
 
@@ -924,8 +934,7 @@ static func updateOperationalData(_ attributes: [String: Any])
 Identity.updateOperationalData([
     "timezone": "America/Los_Angeles",
     "tokens": [
-        "pushNotification": "<push token>",
-        "liveActivityStart": [["attributeType": "GameScoreLiveActivityAttributes", "value": "<push-to-start token>"]]
+        "pushNotification": "<push token>"
     ]
 ])
 ```
