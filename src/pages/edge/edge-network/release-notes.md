@@ -8,6 +8,12 @@ keywords:
 
 # Release notes
 
+## October 28, 2026
+
+### Edge Network Tags extension 2.1.2
+
+* Fixes the **details** and **release notes** links in the extension configuration view, which opened a page that no longer exists. They now open the [Edge Network](index.md) documentation and these release notes.
+
 ## October 21, 2026
 
 ### iOS Edge 5.3.0

@@ -7,6 +7,28 @@ Keywords:
 
 # Release notes
 
+## October 28, 2026
+
+### Tags extension documentation link fixes
+
+* Fixes the **details**, **documentation** and **release notes** links in the configuration views of the following Tags extensions. The links previously opened a page that no longer exists and now open the current documentation.
+
+| Tags extension | Version |
+|-----|-----|
+| Adobe Analytics | 3.0.1 |
+| Adobe Analytics for Edge Network | 1.0.4 |
+| Adobe Campaign Classic | 4.0.2 |
+| Adobe Campaign Standard | 2.0.1 |
+| Adobe Journey Optimizer | 1.2.1 |
+| Adobe Media Analytics | 3.0.1 |
+| Adobe Target | 3.0.1 |
+| Consent for Edge Network | 2.0.1 |
+| Edge Network | 2.1.2 |
+| Mobile Core | 3.0.3 |
+| Places | 2.0.1 |
+
+See the [Edge Network Tags extension release notes](../../edge/edge-network/release-notes.md).
+
 ## October 22, 2026
 
 ### Android BOM 3.25.0
