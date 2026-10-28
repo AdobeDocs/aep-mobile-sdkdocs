@@ -8,6 +8,18 @@ keywords:
 
 # Release notes
 
+## October 27, 2026
+
+### iOS Brand Concierge 5.10.2
+
+* Added an optional privacy notice, configured with behavior.privacyNotice. It appears above the user's first message and supports a configurable title, body and links.
+* Added an optional `--agent-message-padding` theme token to set padding on agent messages without changing user messages.
+
+### Android Brand Concierge 3.10.2
+
+* Added an optional privacy notice, configured with `behavior.privacyNotice`. It appears above the user's first message and supports a configurable title, body and links.
+* Disclaimer link placeholders can now appear in any order and can be repeated.
+
 ## October 9, 2026
 
 ### iOS Brand Concierge 5.10.0
