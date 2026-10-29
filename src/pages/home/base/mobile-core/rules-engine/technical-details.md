@@ -348,6 +348,7 @@ The consequences section of a rule lists the file names of each consequence obje
 | Client Side Profile | `csp` | Create or delete operations against the client-side profile. | [Profile consequence detail definition](consequence-details.md#profile-consequence) |
 | Attach Data | `add` | Attaches key-value pairs to the EventData of an existing Event | [Attach data consequence detail definition](consequence-details.md#attach-data-consequence) |
 | Modify Data | `mod` | Modifies data in the triggering event | [Modify data consequence detail definition](consequence-details.md#modify-data-consequence) |
+| Forward Operational Data to Edge Network | `forward-operational-data` | Copies values from enabled event-data paths into a new chained event with the configured type and source. | [Forward operational data consequence detail definition](consequence-details.md#forward-operational-data-to-edge-network-consequence) |
 | Schema | `schema` | Schema-based actions for easy parsing by AEP Mobile SDKs | |
 
 ## rules.json examples

@@ -1,0 +1,175 @@
+---
+title: Forward Operational Data to Edge Network tutorial
+description: A tutorial that explains how to configure a rule to forward selected operational data to Edge Network.
+keywords:
+- Edge Network
+- Identity for Edge Network
+- Mobile Core
+- Operational data
+- Rules Engine
+- Tutorial
+---
+
+# Forward Operational Data to Edge Network tutorial
+
+The **Forward Operational Data to Edge Network** rule action lets you select operational data from an SDK event and forward it to Edge Network. The underlying `forward-operational-data` consequence is supported in [Mobile Core](../../home/base/mobile-core/index.md) starting with **3.11.0 on Android** and **5.13.0 on iOS**.
+
+This tutorial follows a push-token example using the **Identity** extension's **Sync Operational Data** event and **Forward Operational Data to Edge Network** action in the Data Collection UI.
+
+## Prerequisites
+
+Before creating the rule:
+
+* Create a mobile property in Data Collection.
+* Install the **Edge Network** and **Identity for Edge Network** extensions in the mobile property.
+* For Messaging token synchronization, also install the **Adobe Journey Optimizer (Messaging)** extension in the mobile property.
+* Add and register the corresponding SDK extensions in your app.
+
+Use the following minimum SDK versions:
+
+| Extension | Android | iOS |
+| :--- | :--- | :--- |
+| Core | 3.11.0 | 5.13.0 |
+| Edge Network | 3.2.0 | 5.3.0 |
+| Identity for Edge Network | 3.2.0 | 5.2.0 |
+| Messaging | 3.14.0 | 5.18.0 |
+
+The Messaging versions above support synchronization of tokens confirmed by Edge Identity. For dependency and initialization instructions, see [Identity for Edge Network](../../edge/identity-for-edge-network/index.md) and [Adobe Journey Optimizer](../../edge/adobe-journey-optimizer/index.md).
+
+## Context
+
+### How the consequence works
+
+The [Rules Engine](../../home/base/mobile-core/rules-engine/index.md) evaluates a rule against the triggering SDK event. When a rule matches, this consequence copies values from explicitly enabled paths in the triggering event's data into a new event.
+
+The **Forward Operational Data to Edge Network** action dispatches a new event using the type and source specified in the consequence's `detail`. The new event is chained to the triggering event as its parent. The action does not modify the triggering event.
+
+### Using the action
+
+The action offers the following operational-data selections:
+
+| Selection | Operational-data path | Platform |
+| :--- | :--- | :--- |
+| Timezone | `timezone` | Android and iOS |
+| Push token | `tokens.pushNotification` | Android and iOS |
+| Live Activity tokens | `tokens.liveActivityStart` and `tokens.liveActivityUpdate` | iOS only |
+
+The Edge integration includes App ID and platform with the selected operational data. Core does not add these fields when dispatching the consequence event.
+
+<InlineAlert variant="warning" slots="text"/>
+
+Only select operational data approved for your use case. This action does not change the user's collect-consent preference or enable consent-independent Experience Events. A field left unselected in one action is not a global denial: another matching rule can still allow it.
+
+## Example - Forwarding a push token to Edge Network
+
+To create the rule, select your mobile property in the Data Collection UI and complete the following steps:
+
+1. [Create a rule](#create-a-rule)
+2. [Select the event that triggers the rule](#select-an-event)
+3. [Select the action and the data to forward](#define-the-action)
+4. [Save the rule and rebuild your property](#save-the-rule-and-rebuild-your-property)
+
+### Create a rule
+
+1. On the **Rules** tab, select **Create New Rule** or **Add Rule**.
+2. Give the rule an easily recognizable name, such as **Forward operational data rules**.
+
+### Select an event
+
+1. Under the **Events** section, select **Add**.
+2. From the **Extension** dropdown list, select **Identity**.
+3. From the **Event Type** dropdown list, select **Sync Operational Data**.
+4. No additional event configuration is necessary. Select **Keep Changes**.
+
+![Identity event configuration with Sync Operational Data selected.](assets/forward-operational-data/set-event.png)
+
+### Define the action
+
+1. Under the **Actions** section, select **Add**.
+2. From the **Extension** dropdown list, select **Identity**.
+3. From the **Action Type** dropdown list, select **Forward Operational Data to Edge Network**.
+4. In the configuration pane, select **Push token**. Leave **Timezone** and **Live Activity tokens** unselected for this example.
+5. Select **Keep Changes**.
+
+![Identity action configuration with Forward Operational Data to Edge Network and Push token selected.](assets/forward-operational-data/set-action.png)
+
+The rule forwards the push token supplied by the triggering event at `tokens.pushNotification`. It does not obtain a token by itself. To forward other operational data, select the corresponding options and ensure the triggering event supplies those values. Live Activity token selections apply to iOS only; Android uses the regular push token.
+
+<InlineAlert variant="info" slots="text"/>
+
+On iOS, select **Live Activity tokens** to also forward push-to-start and update tokens to Edge Network, even when collect consent is `no` or pending. Set up the Messaging and Messaging Live Activity extensions in your app to provide these tokens. The rule only forwards tokens; it does not collect them.
+
+### Save the rule and rebuild your property
+
+1. Select **Save**.
+2. In **Publishing Flow**, create or update a library.
+3. Include the rule and the required extension configuration in the library.
+4. Build and publish the library for the environment used by your app.
+5. Launch the app and confirm that it downloads the updated configuration and rules before testing.
+
+### Verify the result
+
+Trigger an operational-data update from your app, such as a call to `Identity.updateOperationalData` that supplies a push notification token under `tokens.pushNotification`. Verify the SDK logs and the device attributes request in Assurance.
+
+If no rule matches, or the matching rules allow none of the supplied fields, no device attributes request is sent. Identity may also skip values it has already confirmed when operational-data sync optimization is enabled.
+
+## Consequence payload
+
+The following sections describe the SDK consequence payload and its filtering behavior. They are a reference for understanding how the rule is processed; the Data Collection UI configures the action in the preceding example.
+
+### Consequence detail fields
+
+Set the consequence object's `type` to `forward-operational-data`. Its `detail` object supports these fields:
+
+| Friendly name | Key | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| Event type | `type` | String | Yes | Event type used for the dispatched event. This is distinct from the consequence object's type. |
+| Event source | `source` | String | Yes | Event source used for the dispatched event. |
+| Attribute selections | `attributes` | Array of objects | No | Paths to consider for forwarding. A missing, empty, or incorrectly typed value selects no attributes. |
+| Attribute path | `attributes[].path` | Array of strings | Yes, for each selection | Non-empty sequence of exact dictionary keys to traverse in the triggering event data. |
+| Attribute enabled | `attributes[].enabled` | Boolean | Yes, to forward the selection | Only Boolean `true` enables the path. A missing, false, or incorrectly typed value does not enable it. |
+
+### Payload example
+
+The following SDK consequence example enables the push notification token and disables timezone and Live Activity push-to-start tokens, matching the push-token UI example above.
+
+```json
+{
+  "id": "forward-operational-data-example",
+  "type": "forward-operational-data",
+  "detail": {
+    "type": "com.adobe.eventType.edgeIdentity",
+    "source": "com.adobe.eventSource.responseOperationalData",
+    "attributes": [
+      { "path": ["timezone"], "enabled": false },
+      { "path": ["tokens", "pushNotification"], "enabled": true },
+      { "path": ["tokens", "liveActivityStart"], "enabled": false }
+    ]
+  }
+}
+```
+
+Given this triggering event data:
+
+```json
+{
+  "timezone": "America/Los_Angeles",
+  "tokens": {
+    "pushNotification": "push-token",
+    "liveActivityStart": [
+      { "attributeType": "GameScoreLiveActivityAttributes", "value": "start-token" }
+    ]
+  },
+  "unselectedField": "not-forwarded"
+}
+```
+
+The dispatched event contains only the selected push notification token. Timezone, Live Activity tokens, and unselected fields are not forwarded:
+
+```json
+{
+  "tokens": {
+    "pushNotification": "push-token"
+  }
+}
+```

@@ -859,7 +859,7 @@ This API also requires the following minimum versions of the other extensions:
 
 If your app also uses the Messaging extension, use the version listed above or later. This prevents the same push token from being sent twice when both the Messaging APIs and this API are used.
 
-The provided attributes are forwarded to the rules engine, and only the values returned by a Tags rule with a **forward operational data** consequence are sent to the Edge Network. If no rule matches, nothing is sent. Requests are sent one at a time.
+The provided attributes are forwarded to the rules engine, and only the values returned by a Tags rule with a [**forward operational data**](../../resources/user-guides/forward-operational-data.md) consequence are sent to the Edge Network. If no rule matches, nothing is sent. Requests are sent one at a time.
 
 The timezone (`timezone`) and push token (`tokens.pushNotification`) are sent only when they change; all other values are sent on every call.
 
