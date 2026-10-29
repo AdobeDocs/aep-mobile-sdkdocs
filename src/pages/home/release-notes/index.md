@@ -35,11 +35,15 @@ See the [Edge Network Tags extension release notes](../../edge/edge-network/rele
 
 * Added an optional privacy notice, configured with behavior.privacyNotice. It appears above the user's first message and supports a configurable title, body and links.
 * Added an optional `--agent-message-padding` theme token to set padding on agent messages without changing user messages.
+* Fixed feedback submissions.
+* Fixed agent messages shifting out of alignment when the company icon fails to load.
 
 ### Android Brand Concierge 3.10.2
 
 * Added an optional privacy notice, configured with `behavior.privacyNotice`. It appears above the user's first message and supports a configurable title, body and links.
 * Disclaimer link placeholders can now appear in any order and can be repeated.
+* Fixed disclaimer links losing their theme color on dark backgrounds.
+* Fixed --message-padding not being applied to agent messages. Themes that set this token will see updated padding after upgrading.
 
 ## October 22, 2026
 
@@ -162,11 +166,12 @@ See the [Edge Network Tags extension release notes](../../edge/edge-network/rele
 
 ### iOS Brand Concierge 5.10.1
 
-This release contains bug fixes only. 
+* Chat responses interrupted by app backgrounding are now recovered when the app returns to the foreground.
 
 ### Android Brand Concierge 3.10.1
 
-This release contains bug fixes only. 
+* Chat responses interrupted by app backgrounding are now recovered when the app returns to the foreground.
+* The microphone waveform now displays at full opacity while voice input is recording, using the configured mic color or waveform gradient.
 
 ## October 9, 2026
 
