@@ -841,6 +841,125 @@ AEPIdentityMap *map = [[AEPIdentityMap alloc] init];
 [AEPMobileEdgeIdentity updateIdentities:map];
 ```
 
+## updateOperationalData
+
+Sends operational data, such as the device timezone and push tokens, to the Edge Network **independently of collect consent**. Use this API for operational data that must reach the user's profile even when the user has not consented to data collection.
+
+<InlineAlert variant="info" slots="text"/>
+
+This API is available starting from **Identity for Edge Network** version **3.2.0** on Android and **AEPEdgeIdentity** version **5.2.0** on iOS.
+
+This API also requires the following minimum versions of the other extensions:
+
+| Extension | Android | iOS |
+| --- | --- | --- |
+| Mobile Core | 3.11.0 | 5.13.0 |
+| Edge Network | 3.2.0 | 5.3.0 |
+| Messaging | 3.14.0 | 5.18.0 |
+
+If your app also uses the Messaging extension, use the version listed above or later. This prevents the same push token from being sent twice when both the Messaging APIs and this API are used.
+
+The provided attributes are forwarded to the rules engine, and only the values returned by a Tags rule with a **forward operational data** consequence are sent to the Edge Network. If no rule matches, nothing is sent. Requests are sent one at a time.
+
+The timezone (`timezone`) and push token (`tokens.pushNotification`) are sent only when they change; all other values are sent on every call.
+
+A value is not sent again if it matches:
+
+* The value the Edge Network last confirmed through this API.
+* When collect consent is `y` or the [Consent for Edge Network](../consent-for-edge-network/index.md) extension is not registered, the timezone set through the [`updateProfileAttributes`](../../home/base/mobile-core/api-reference.md#updateprofileattributes) API or the push tokens held by the Messaging extension.
+
+[`resetIdentities`](#resetidentities) clears the confirmed values from the shared state and local storage.
+
+To send every value on every call, clear **Optimize syncing operational profile data** in the Identity extension settings in the Data Collection UI, or set `edgeidentity.optimizeOperationalProfileDataSync` to `false` using the [`updateConfiguration`](../../home/base/mobile-core/api-reference.md#updateconfiguration) API (default is `true`).
+
+<InlineAlert variant="info" slots="text"/>
+
+Attribute values are not validated by the SDK and are sent as provided. Calling this API with an empty map has no effect.
+
+### Android Java
+
+* _attributes_ is a map of attribute keys to JSON-compatible values (`String`, `Number`, `Boolean`, or lists and maps of those).
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```java
+public static void updateOperationalData(@NonNull final Map<String, Object> attributes);
+```
+
+#### Example
+
+```java
+Map<String, Object> tokens = new HashMap<>();
+tokens.put("pushNotification", "<push token>");
+
+Map<String, Object> attributes = new HashMap<>();
+attributes.put("timezone", "America/Los_Angeles");
+attributes.put("tokens", tokens);
+
+Identity.updateOperationalData(attributes);
+```
+
+### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```java
+Identity.updateOperationalData(
+    mapOf(
+        "timezone" to "America/Los_Angeles",
+        "tokens" to mapOf("pushNotification" to "<push token>")
+    )
+)
+```
+
+### iOS Swift
+
+* _attributes_ is a map of attribute keys to JSON-compatible values (`String`, `NSNumber`/`Bool`, or arrays and dictionaries of those).
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+static func updateOperationalData(_ attributes: [String: Any])
+```
+
+#### Example
+
+```swift
+Identity.updateOperationalData([
+    "timezone": "America/Los_Angeles",
+    "tokens": [
+        "pushNotification": "<push token>"
+    ]
+])
+```
+
+### iOS Objective-C
+
+* _attributes_ is a map of attribute keys to JSON-compatible values (`NSString`, `NSNumber`, or arrays and dictionaries of those).
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```objectivec
++ (void) updateOperationalData:(NSDictionary<NSString *, id> * _Nonnull)attributes;
+```
+
+#### Example
+
+```objectivec
+[AEPMobileEdgeIdentity updateOperationalData:@{
+    @"timezone": @"America/Los_Angeles",
+    @"tokens": @{@"pushNotification": @"<push token>"}
+}];
+```
+
 ## Public Classes
 
 ### IdentityMap
