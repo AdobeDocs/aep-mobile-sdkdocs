@@ -1,7 +1,7 @@
 {
-  "total": 361,
+  "total": 362,
   "offset": 0,
-  "limit": 361,
+  "limit": 362,
   "data": [
     {
       "page": "/",
@@ -15,12 +15,12 @@
     {
       "page": "/config",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/194229688?v=4",
         "https://avatars.githubusercontent.com/u/26108293?v=4",
-        "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "10/8/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/edge/",
@@ -1586,7 +1586,7 @@
         "https://avatars.githubusercontent.com/u/4697559?v=4",
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
-      "lastUpdated": "10/27/2026"
+      "lastUpdated": "10/28/2026"
     },
     {
       "page": "/edge/edge-network/tutorials/",
@@ -1668,11 +1668,13 @@
     {
       "page": "/edge/identity-for-edge-network/api-reference",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
+        "https://avatars.githubusercontent.com/u/173353453?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/20484288?v=4",
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/edge/identity-for-edge-network/faq",
@@ -2082,21 +2084,23 @@
     {
       "page": "/home/base/mobile-core/rules-engine/consequence-details",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/63024083?v=4",
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
-      "lastUpdated": "5/14/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/home/base/mobile-core/rules-engine/technical-details",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/63024083?v=4",
         "https://avatars.githubusercontent.com/u/95260439?v=4",
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/home/base/mobile-core/signal/",
@@ -2265,7 +2269,7 @@
         "https://avatars.githubusercontent.com/u/29806547?v=4",
         "https://avatars.githubusercontent.com/u/4697559?v=4"
       ],
-      "lastUpdated": "10/27/2026"
+      "lastUpdated": "10/28/2026"
     },
     {
       "page": "/home/release-notes/2021",
@@ -2689,6 +2693,13 @@
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
       "lastUpdated": "10/17/2023"
+    },
+    {
+      "page": "/resources/user-guides/forward-operational-data",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/179128758?v=4"
+      ],
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/resources/user-guides/getting-started-with-platform/overview",

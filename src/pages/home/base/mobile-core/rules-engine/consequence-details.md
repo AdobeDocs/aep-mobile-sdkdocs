@@ -101,3 +101,15 @@ This rule is currently handled by the [Mobile Core](../index.md) extension.
 | Friendly name | Key | Type | Required | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | Event data | `eventdata` | object | Yes | Dictionary of key-value pairs to add to or replace in the triggering event's EventData. If a key appears in both the original event data and the payload specified in the consequence, the value from the consequence overrides the original. If a key is provided in the detail object with a value of null, that key will be removed from the triggering event. For more information, see the [modify data tutorial](../../../../resources/user-guides/modify-data.md). |
+
+## Forward Operational Data to Edge Network Consequence
+
+This rule is handled by the [Mobile Core](../index.md) Rules Engine, starting with Core **3.11.0 on Android** and **5.13.0 on iOS**.
+
+The `forward-operational-data` consequence copies values from explicitly enabled paths in the triggering event's data into a new chained event without modifying the triggering event.
+
+| Friendly name | Key | Type | Required | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| Event type | `type` | String | Yes | Event type used for the dispatched event, specified in the consequence's `detail` object. |
+| Event source | `source` | String | Yes | Event source used for the dispatched event, specified in the consequence's `detail` object. |
+| Attribute selections | `attributes` | Array of objects | No | Paths in the triggering event's data to consider for forwarding. Each selection specifies a `path` array of dictionary keys and an `enabled` Boolean. Only paths with `enabled` set to `true` are forwarded. For configuration steps, payload details, and examples, see the [forward operational data tutorial](../../../../resources/user-guides/forward-operational-data.md). |
