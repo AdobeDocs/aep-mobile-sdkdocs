@@ -8,6 +8,17 @@ keywords:
 
 # Release notes
 
+## October 19, 2026
+
+### Android Core 3.11.0
+
+* Added support for the forward-operational-data rule consequence to forward rule-allowed operational data as a chained event.
+* This release is included in [Android BOM 3.25.0](../../release-notes/index.md#android-bom-3250).
+
+### iOS Core 5.13.0
+
+* Added support for the forward-operational-data rule consequence to forward rule-allowed operational data as a chained event.
+
 ## September 29, 2026
 
 ### iOS Core 5.12.1
