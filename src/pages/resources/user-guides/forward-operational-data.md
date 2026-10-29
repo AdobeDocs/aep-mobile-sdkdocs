@@ -44,8 +44,6 @@ The [Rules Engine](../../home/base/mobile-core/rules-engine/index.md) evaluates 
 
 The **Forward Operational Data to Edge Network** action dispatches a new event using the type and source specified in the consequence's `detail`. The new event is chained to the triggering event as its parent. The action does not modify the triggering event.
 
-Core performs filtering and event dispatch only. It does not check consent, deduplicate values, validate device tokens, add application or identity information, or make a network request. The receiving extension handles those responsibilities.
-
 ### Using the action
 
 The action offers the following operational-data selections:
@@ -130,17 +128,6 @@ Set the consequence object's `type` to `forward-operational-data`. Its `detail` 
 | Attribute selections | `attributes` | Array of objects | No | Paths to consider for forwarding. A missing, empty, or incorrectly typed value selects no attributes. |
 | Attribute path | `attributes[].path` | Array of strings | Yes, for each selection | Non-empty sequence of exact dictionary keys to traverse in the triggering event data. |
 | Attribute enabled | `attributes[].enabled` | Boolean | Yes, to forward the selection | Only Boolean `true` enables the path. A missing, false, or incorrectly typed value does not enable it. |
-
-### Path selection and value handling
-
-* Paths traverse dictionaries only. Use `["tokens", "pushNotification"]` for a nested value, not the dotted string `"tokens.pushNotification"`. A dot within a path segment is a literal part of that key. Array indexes and wildcard matching are not supported.
-* Values are copied to the same path in the new event, preserving their types. Selecting an array or object copies the entire value; the consequence does not filter its individual elements or properties.
-* Missing paths, paths through non-dictionary values, and paths resolving to `null` are omitted. Empty strings, empty arrays, empty objects, `false`, and zero are values and are preserved.
-* Malformed path entries are skipped with a warning. Missing, empty, or incorrectly typed `attributes` also produces a warning.
-* If no enabled path resolves to a value, Core still dispatches a chained event with an empty data object, provided the destination type and source are valid. An empty Core event does not imply that the receiving extension will send a network request.
-* If the destination type or source is missing, Core logs an error and does not dispatch the consequence event. Forwarded events are subject to the Rules Engine's chained-dispatch limit.
-
-Each consequence selects its own paths independently. Disabling a path in one consequence does not prevent another matching consequence from forwarding it.
 
 ### Payload example
 
