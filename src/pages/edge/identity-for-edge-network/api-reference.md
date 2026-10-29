@@ -865,8 +865,8 @@ The timezone (`timezone`) and push token (`tokens.pushNotification`) are sent on
 
 A value is not sent again if it matches:
 
-* the value the Edge Network last confirmed through this API, or
-* when collect consent is `y` or the [Consent for Edge Network](../consent-for-edge-network/index.md) extension is not registered, the timezone set through the [`updateProfileAttributes`](../../home/base/mobile-core/api-reference.md#updateprofileattributes) API or the push tokens held by the Messaging extension.
+* The value the Edge Network last confirmed through this API.
+* When collect consent is `y` or the [Consent for Edge Network](../consent-for-edge-network/index.md) extension is not registered, the timezone set through the [`updateProfileAttributes`](../../home/base/mobile-core/api-reference.md#updateprofileattributes) API or the push tokens held by the Messaging extension.
 
 [`resetIdentities`](#resetidentities) clears the confirmed values from the shared state and local storage.
 
