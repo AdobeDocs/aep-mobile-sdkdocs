@@ -7,6 +7,12 @@ Keywords:
 
 # Release notes
 
+## November 2, 2026
+
+### iOS Brand Concierge 5.10.3
+
+* Fixed the feedback Notes field so it can be hidden with `components.feedback.positiveNotesEnabled` and `negativeNotesEnabled`.
+
 ## October 28, 2026
 
 ### Tags extension documentation link fixes
