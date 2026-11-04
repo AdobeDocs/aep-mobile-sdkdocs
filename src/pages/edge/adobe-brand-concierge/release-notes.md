@@ -8,6 +8,110 @@ keywords:
 
 # Release notes
 
+## October 27, 2026
+
+### iOS Brand Concierge 5.10.2
+
+* Added an optional privacy notice, configured with behavior.privacyNotice. It appears above the user's first message and supports a configurable title, body and links.
+* Added an optional `--agent-message-padding` theme token to set padding on agent messages without changing user messages.
+* Fixed feedback submissions.
+* Fixed agent messages shifting out of alignment when the company icon fails to load.
+
+### Android Brand Concierge 3.10.2
+
+* Added an optional privacy notice, configured with `behavior.privacyNotice`. It appears above the user's first message and supports a configurable title, body and links.
+* Disclaimer link placeholders can now appear in any order and can be repeated.
+* Fixed disclaimer links losing their theme color on dark backgrounds.
+* Fixed --message-padding not being applied to agent messages. Themes that set this token will see updated padding after upgrading.
+
+## October 14, 2026
+
+### iOS Brand Concierge 5.10.1
+
+* Chat responses interrupted by app backgrounding are now recovered when the app returns to the foreground.
+
+### Android Brand Concierge 3.10.1
+
+* Chat responses interrupted by app backgrounding are now recovered when the app returns to the foreground.
+* The microphone waveform now displays at full opacity while voice input is recording, using the configured mic color or waveform gradient.
+
+## October 9, 2026
+
+### iOS Brand Concierge 5.10.0
+
+* **Session-level XDM context.** Added `Concierge.updateXDMContext(_:)`. You can now provide XDM fields once, and they are included with every conversation turn and `sendDataHandoff` call in the session, so you no longer need to pass them on each call.
+* Updates merge into the existing context. Nested dictionaries merge, an `NSNull()` value removes a key, and arrays are replaced.
+* `identityMap` is not accepted because the Edge extension manages it.
+* The context is cleared when the session ends. Your app needs to set it again for the new session.
+* **Conversations end when identities reset.** Calling `MobileCore.resetIdentities()` now ends the active Concierge conversation. It clears the saved session, transcript, draft message and any held XDM context. No new API or setup is needed.
+
+### Android Brand Concierge 3.10.0
+
+* **Session-level XDM context.** Added `Concierge.updateXDMContext(Map)`. You can now provide XDM fields once, and they are included with every conversation turn in the session, so you no longer need to pass them on each call.
+* Updates merge into the existing context. Nested maps merge, a `null` value removes a key, and lists are replaced.
+* `identityMap` is not accepted because the Edge extension manages it.
+* The context is cleared when the session ends. Your app needs to set it again for the new session.
+* **Conversations end when identities reset.** Calling `MobileCore.resetIdentities()` now ends the active Concierge conversation. It clears the saved session, transcript, draft message and any held XDM context. No new API or setup is needed.
+
+## September 29, 2026
+
+### iOS Brand Concierge 5.9.0
+
+* Added `Concierge.sendDataHandoff` for sending XDM data through the Brand Concierge service.
+* Forwarded the full Edge Identity `identityMap` to the conversation, with an ECID fallback when no identity map is available.
+* Added secondary CTA buttons to product cards, with theme keys for their colors and border width.
+* Added the `--product-card-description-max-lines` theme key to support longer product descriptions.
+* Fixed inline link theming, input focus border width with gradients, product-card CTA positioning, and input bar icon spacing.
+
+**Full Changelog**: https://github.com/adobe/aepsdk-concierge-ios/compare/5.8.1...5.9.0
+
+### Android Brand Concierge 3.9.0
+
+* Added `Concierge.sendDataHandoff` for sending XDM data through the Brand Concierge service.
+* Forwarded the full Edge Identity `identityMap` to the conversation, with an ECID fallback when no identity map is available.
+* Added secondary CTA buttons to product cards, with theme keys for their colors and border width.
+* Added the `--product-card-description-max-lines` theme key to support longer product descriptions.
+* Fixed product-card price and CTA alignment, the focused input bar's gradient border, and listening waveform clipping and bar shape.
+
+**Full Changelog**: https://github.com/adobe/aepsdk-concierge-android/compare/v3.8.1...v3.9.0
+
+## September 11, 2026
+
+### iOS Brand Concierge 5.8.1
+
+* Region is now optionally configurable for Brand Concierge endpoint creation
+
+### Android Brand Concierge 3.8.1
+
+* Added support for a `concierge.region` configuration key to specify the region as part of Concierge configuration.
+* Prefixed Concierge drawable resource names to avoid collisions with host app resources.
+
+**Full Changelog**: https://github.com/adobe/aepsdk-concierge-android/compare/v3.8.0...v3.8.1
+
+## September 10, 2026
+
+### iOS Brand Concierge 5.8.0
+
+* Fixed voice-to-text never stopping after the user stops talking
+* More prominent listening waveform + gradient theming
+* Render input bar leading icon + fix icon centering
+* Gradient support for input bar border and mic/send icons
+* Fix excess white space after last message 
+* Auth token support
+* Themeable CTA button on product cards support
+* Add support for geo uri links to route to Apple maps in chat window
+
+### Android Brand Concierge 3.8.0
+
+* Fixed ExtendedProductCard dimensions and drop shadow to match spec.
+* Added a themeable, payload-driven CTA button to product cards with accurate product-name reporting in CTA analytics.
+* Added gradient theming support for the chat input bar border and mic/send icons.
+* Added audio-reactive gradient theming to the listening waveform.
+* Updated the external-link pop-out icon and fixed input bar icon-sizing regressions.
+* Added support for providing an auth token via `setAuthTokenProvider`, with a configurable timeout aligned to iOS behavior.
+
+**Full Changelog**: https://github.com/adobe/aepsdk-concierge-android/compare/v3.7.2...v3.8.0
+
 ## June 26, 2026
 
 ### Android Brand Concierge 3.7.2

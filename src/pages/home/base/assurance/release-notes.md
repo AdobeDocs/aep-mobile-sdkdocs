@@ -8,6 +8,27 @@ keywords:
 
 # Release notes
 
+## September 29, 2026
+
+### Android Assurance 3.0.8
+
+## What's Changed
+* Updated Pin Screen layout to be more adaptable across screen size and orientations
+* Added updated github actions
+
+## What's Changed
+* AEP Gradle plugin Maven central updates by @timkimadobe in https://github.com/adobe/aepsdk-assurance-android/pull/169
+* Updating version to 3.0.8 by @github-actions[bot] in https://github.com/adobe/aepsdk-assurance-android/pull/170
+* Update Android Gradle plugin to beta 2 by @timkimadobe in https://github.com/adobe/aepsdk-assurance-android/pull/171
+* Bump Android Gradle plugin version to `gp-3.4.0-beta.3` by @timkimadobe in https://github.com/adobe/aepsdk-assurance-android/pull/172
+* Bump plugin version to beta 4 by @timkimadobe in https://github.com/adobe/aepsdk-assurance-android/pull/173
+* Update workflow to point to dev for testing by @timkimadobe in https://github.com/adobe/aepsdk-assurance-android/pull/174
+* Merge `dev-3.x` into `staging` for verifying release scripts by @prudrabhat in https://github.com/adobe/aepsdk-assurance-android/pull/175
+* Merge `staging` into `main` for verifying release scripts by @prudrabhat in https://github.com/adobe/aepsdk-assurance-android/pull/176
+
+
+**Full Changelog**: https://github.com/adobe/aepsdk-assurance-android/compare/v3.0.7...v3.0.8
+
 ## January 5, 2026
 
 ### iOS Assurance 5.0.3

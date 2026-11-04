@@ -70,6 +70,34 @@ class MyScreenViewModel : ViewModel() {
 }
 ```
 
+## clearCachedPropositions
+
+Clears all downloaded and cached content card propositions from both the in-memory cache and on-device storage. Call this API when a user signs out or when you need to ensure no persisted content card data carries forward to the next session.
+
+<InlineAlert variant="info" slots="text"/>
+
+This API only affects content card propositions. In-App Message rules and other extension data are not affected. See [Offline Content Card Availability](tutorial/offline-content-card-availability.md) for more details on the persistence feature.
+
+#### Syntax
+
+<CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
+
+#### Kotlin
+
+```kotlin
+fun clearCachedPropositions()
+```
+
+#### Example
+
+<CodeBlock slots="heading, code" repeat="1" languages="Kotlin" />
+
+#### Kotlin
+
+```kotlin
+Messaging.clearCachedPropositions()
+```
+
 ## getContentCardUI (Deprecated)
 
 <InlineAlert variant="warning" slots="text"/>

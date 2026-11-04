@@ -8,6 +8,18 @@ keywords:
 
 # Release notes
 
+## September 23, 2026
+
+### React Native UserProfile 7.0.2
+
+* Fixed missing TypeScript declaration (.d.ts) files, restoring type definitions and IDE autocomplete for consumers.
+
+## September 2, 2026
+
+### React Native UserProfile 7.0.1
+
+* Fixed an Android promise hang during SDK response conversion.
+
 ## March 28, 2025
 
 ### React Native UserProfile 7.0.0

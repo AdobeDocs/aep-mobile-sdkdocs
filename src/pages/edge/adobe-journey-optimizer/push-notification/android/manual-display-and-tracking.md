@@ -51,6 +51,14 @@ Calling [resetIdentities](../../api-reference.md#resetidentities) will clear the
 
 ## Building and displaying notification
 
+<InlineAlert variant="info" slots="text"/>
+
+If the push is a [Live Update](../../live-activities/android/index.md) (identified by the `adb_liveupdate_data` key), do not build it with `MessagingPushPayload`. Parse it with `LiveUpdatePayload.parse(remoteMessage)` and follow [Manual mode](../../live-activities/android/tutorial.md#manual-mode) in the Live Updates tutorial, which uses the Live Update tracking APIs instead of the standard push tracking APIs below.
+
+<InlineAlert variant="warning" slots="text"/>
+
+`MessagingPushPayload` does not render [push templates](../push-templates/index.md) (identified by the `adb_template_type` key), which need the [UI Builder plugin](../../../../home/base/mobile-core/plugins/built-in-plugins/ui-builder-plugin.md). A push template is rendered only on the [automatic display and tracking](automatic-display-and-tracking.md) path.
+
 1. In `onMessageReceived` method of `YourAppFirebaseMessagingService` class, create a `MessagingPushPayload` object from the remoteMessage. `MessagingPushPayload` will unpack the remoteMessage and provide APIs for getting attributes used for creating the push notification.
 
     ```java

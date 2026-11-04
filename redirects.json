@@ -1,8 +1,32 @@
 {
-  "total": 736,
+  "total": 742,
   "offset": 0,
-  "limit": 736,
+  "limit": 742,
   "data": [
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/live-activities/api-reference",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/live-activities/ios/api-reference"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/live-activities/tutorial",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/live-activities/ios/tutorial"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-attributes",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/live-activities/ios/public-classes/live-activity-attributes"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-data",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/live-activities/ios/public-classes/live-activity-data"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-origin",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/live-activities/ios/public-classes/live-activity-origin"
+    },
+    {
+      "Source": "/client-sdks/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-assurance-debuggable",
+      "Destination": "/client-sdks/edge/adobe-journey-optimizer/live-activities/ios/public-classes/live-activity-assurance-debuggable"
+    },
     {
       "Source": "/client-sdks",
       "Destination": "/client-sdks/"

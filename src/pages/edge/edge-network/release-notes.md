@@ -8,6 +8,62 @@ keywords:
 
 # Release notes
 
+## October 28, 2026
+
+### Edge Network Tags extension 2.1.2
+
+* Fixes the **details** and **release notes** links in the extension configuration view, which opened a page that no longer exists. They now open the [Edge Network](index.md) documentation and these release notes.
+
+## October 21, 2026
+
+### iOS Edge 5.3.0
+
+* Added support for sending device attributes (such as  push tokens, Live Activity tokens and timezone) to the Edge Network `mobile/device-attributes` endpoint, independent of the collect consent setting. Requests are dispatched by the Identity for Edge Network extension and processed on a separate persistent queue; existing Experience Event and consent request handling is unchanged.
+* Updated the minimum AEPCore dependency to 5.13.0.
+* Updated the minimum AEPEdgeIdentity dependency to 5.2.0.
+
+### Android Edge 3.2.0
+
+* Added support for sending device attributes (such as  push tokens and timezone) to the Edge Network `mobile/device-attributes` endpoint, independent of the collect consent setting. Requests are dispatched by the Identity for Edge Network extension and processed on a separate persistent queue; existing Experience Event and consent request handling is unchanged.
+* Updated the minimum AEPCore dependency to 3.11.0.
+* Updated the minimum AEPEdgeIdentity dependency to 3.2.0.
+* This release and its required dependencies are included in [Android BOM 3.25.0](../../home/release-notes/index.md#android-bom-3250).
+
+## October 19, 2026
+
+### Edge Network Tags extension 2.1.1
+
+* Fixes an issue where the extension configuration view, used to select datastreams, could fail to load.
+
+## September 29, 2026
+
+### iOS Edge 5.2.0
+
+* Enabled SQLite WAL (write ahead logging) mode for the Edge hit queue.
+* Updated the minimum AEPCore dependency to 5.12.0.
+
+## September 23, 2026
+
+### React Native Edge 7.0.2
+
+* Fixed missing TypeScript declaration (.d.ts) files, restoring type definitions and IDE autocomplete for consumers.
+
+## September 8, 2026
+
+### iOS Edge 5.1.0
+
+* Added Edge Event Batching for queued events.
+
+### Android Edge 3.1.0
+
+* Added Event batching for queued events
+
+## September 2, 2026
+
+### React Native Edge 7.0.1
+
+* Fixed an Android promise hang during SDK response conversion.
+
 ## March 28, 2025
 
 ### React Native Edge 7.0.0

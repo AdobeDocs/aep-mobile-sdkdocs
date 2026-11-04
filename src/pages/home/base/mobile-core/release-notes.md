@@ -8,6 +8,61 @@ keywords:
 
 # Release notes
 
+## October 19, 2026
+
+### Android Core 3.11.0
+
+* Added support for the forward-operational-data rule consequence to forward rule-allowed operational data as a chained event.
+* This release is included in [Android BOM 3.25.0](../../release-notes/index.md#android-bom-3250).
+
+### iOS Core 5.13.0
+
+* Added support for the forward-operational-data rule consequence to forward rule-allowed operational data as a chained event.
+
+## September 29, 2026
+
+### iOS Core 5.12.1
+
+* Added overloaded logger methods which gates prettify operation inside logfilter-check
+
+## September 28, 2026
+
+### Android Core 3.10.0
+
+* Updated push template plugin interfaces
+
+## September 24, 2026
+
+### iOS Core 5.12.0
+
+* Added support of enabling WAL for SQLiteDataQueue
+
+## September 23, 2026
+
+### React Native Core 7.0.2
+
+* Fixed missing TypeScript declaration (.d.ts) files, restoring type definitions and IDE autocomplete for consumers.
+
+## September 17, 2026
+
+### Android Core 3.9.0
+
+* Added support for Plugin Architecture
+* Optimized log statements to save memory
+* Added type checks in Data marshaller logic for preventing unsopported types from being marshalled.
+
+## September 2, 2026
+
+### React Native Core 7.0.1
+
+* Fixed an Android promise hang during SDK response conversion.
+
+## August 18, 2026
+
+### iOS Core 5.11.0
+
+*  Added `isInternetAvailable()` to the Networking protocol; existing conformers require no changes.
+
 ## July 7, 2026
 
 ### iOS Core 5.10.0

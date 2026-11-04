@@ -1,7 +1,7 @@
 {
-  "total": 333,
+  "total": 362,
   "offset": 0,
-  "limit": 333,
+  "limit": 362,
   "data": [
     {
       "page": "/",
@@ -15,9 +15,12 @@
     {
       "page": "/config",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/21/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/edge/",
@@ -41,62 +44,70 @@
     {
       "page": "/edge/adobe-brand-concierge/android/api-reference",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
         "https://avatars.githubusercontent.com/u/95260439?v=4"
       ],
-      "lastUpdated": "4/22/2026"
+      "lastUpdated": "10/5/2026"
     },
     {
       "page": "/edge/adobe-brand-concierge/android/implementation-guide",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/95260439?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
+        "https://avatars.githubusercontent.com/u/95260439?v=4"
       ],
-      "lastUpdated": "5/14/2026"
+      "lastUpdated": "10/5/2026"
     },
     {
       "page": "/edge/adobe-brand-concierge/android/style-guide",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/95260439?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
+        "https://avatars.githubusercontent.com/u/95260439?v=4"
       ],
-      "lastUpdated": "5/14/2026"
+      "lastUpdated": "10/5/2026"
     },
     {
       "page": "/edge/adobe-brand-concierge/ios/api-reference",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
+        "https://avatars.githubusercontent.com/u/10753118?v=4",
         "https://avatars.githubusercontent.com/u/95260439?v=4"
       ],
-      "lastUpdated": "4/22/2026"
+      "lastUpdated": "10/5/2026"
     },
     {
       "page": "/edge/adobe-brand-concierge/ios/implementation-guide",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
+        "https://avatars.githubusercontent.com/u/10753118?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/95260439?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
+        "https://avatars.githubusercontent.com/u/95260439?v=4"
       ],
-      "lastUpdated": "5/14/2026"
+      "lastUpdated": "10/5/2026"
     },
     {
       "page": "/edge/adobe-brand-concierge/ios/style-guide",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
+        "https://avatars.githubusercontent.com/u/10753118?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/95260439?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4"
+        "https://avatars.githubusercontent.com/u/95260439?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "10/5/2026"
     },
     {
       "page": "/edge/adobe-brand-concierge/release-notes",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/11319121?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/95260439?v=4",
-        "https://avatars.githubusercontent.com/u/11319121?v=4",
         "https://avatars.githubusercontent.com/u/63024083?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer-decisioning/",
@@ -156,8 +167,8 @@
     {
       "page": "/edge/adobe-journey-optimizer-decisioning/release-notes",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/20484288?v=4",
         "https://avatars.githubusercontent.com/u/63024083?v=4",
         "https://avatars.githubusercontent.com/u/169874009?v=4",
@@ -167,7 +178,7 @@
         "https://avatars.githubusercontent.com/u/173353453?v=4",
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "9/24/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer-decisioning/review-simulate",
@@ -196,13 +207,14 @@
     {
       "page": "/edge/adobe-journey-optimizer/api-reference",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11319121?v=4",
         "https://avatars.githubusercontent.com/u/63024083?v=4",
         "https://avatars.githubusercontent.com/u/20484288?v=4",
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "8/26/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/code-based/",
@@ -217,12 +229,13 @@
     {
       "page": "/edge/adobe-journey-optimizer/code-based/api-reference",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/173353453?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/63024083?v=4",
         "https://avatars.githubusercontent.com/u/6742873?v=4",
         "https://avatars.githubusercontent.com/u/13000319?v=4"
       ],
-      "lastUpdated": "5/14/2026"
+      "lastUpdated": "8/26/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/code-based/tutorial",
@@ -243,9 +256,10 @@
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/api-usage",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/21/2026"
+      "lastUpdated": "8/26/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/android/public-classes/aepui",
@@ -500,6 +514,13 @@
       "lastUpdated": "5/21/2026"
     },
     {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/android/tutorial/offline-content-card-availability",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/179128758?v=4"
+      ],
+      "lastUpdated": "8/26/2026"
+    },
+    {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4"
@@ -509,9 +530,10 @@
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/api-usage",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/21/2026"
+      "lastUpdated": "8/26/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/public-classes/contentcardcustomizing",
@@ -582,6 +604,13 @@
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
       "lastUpdated": "5/21/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/tutorial/offline-content-card-availability",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/179128758?v=4"
+      ],
+      "lastUpdated": "8/26/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/content-card-ui/ios/ui-elements/",
@@ -955,10 +984,92 @@
     {
       "page": "/edge/adobe-journey-optimizer/live-activities/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/176364653?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/android/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/android/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/5/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/android/payload",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/android/public-classes/live-update-interceptor",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/android/public-classes/live-update-listener",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/android/public-classes/live-update-payload",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/android/public-classes/live-update-plugin",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/android/public-classes/live-update-style-provider",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/android/troubleshooting",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/android/tutorial",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/live-activities/api-reference",
@@ -967,6 +1078,55 @@
         "https://avatars.githubusercontent.com/u/176364653?v=4"
       ],
       "lastUpdated": "5/13/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/ios/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "8/31/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/ios/api-reference",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "8/31/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/ios/public-classes/live-activity-assurance-debuggable",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "8/31/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/ios/public-classes/live-activity-attributes",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "8/31/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/ios/public-classes/live-activity-data",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "8/31/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/ios/public-classes/live-activity-origin",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "8/31/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/live-activities/ios/tutorial",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "8/31/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/live-activities/public-classes/live-activity-assurance-debuggable",
@@ -1003,28 +1163,33 @@
     {
       "page": "/edge/adobe-journey-optimizer/live-activities/tutorial",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/307542387?v=4",
+        "https://avatars.githubusercontent.com/u/222213072?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/176364653?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "8/24/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/proposition-edge-events",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/173353453?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/6742873?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "8/26/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/public-classes/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/63024083?v=4",
         "https://avatars.githubusercontent.com/u/6742873?v=4",
         "https://avatars.githubusercontent.com/u/20484288?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "10/8/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/public-classes/content-card",
@@ -1104,6 +1269,14 @@
       "lastUpdated": "2/6/2025"
     },
     {
+      "page": "/edge/adobe-journey-optimizer/public-classes/notification-builder-plugin",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
       "page": "/edge/adobe-journey-optimizer/public-classes/proposition",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4",
@@ -1145,27 +1318,33 @@
     {
       "page": "/edge/adobe-journey-optimizer/push-notification/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11319121?v=4",
         "https://avatars.githubusercontent.com/u/6742873?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "10/6/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/push-notification/android/automatic-display-and-tracking",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/173353453?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11319121?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "7/7/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/push-notification/android/manual-display-and-tracking",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4",
+        "https://avatars.githubusercontent.com/u/173353453?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11319121?v=4"
       ],
-      "lastUpdated": "5/21/2026"
+      "lastUpdated": "10/6/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/push-notification/android/push-to-iam",
@@ -1210,9 +1389,42 @@
     {
       "page": "/edge/adobe-journey-optimizer/push-notification/push-payload",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "5/14/2026"
+      "lastUpdated": "10/6/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/push-notification/push-templates/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4"
+      ],
+      "lastUpdated": "10/6/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/push-notification/push-templates/android/basic",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/6/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/push-notification/push-templates/android/big-text",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/6/2026"
+    },
+    {
+      "page": "/edge/adobe-journey-optimizer/push-notification/push-templates/android/troubleshooting",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/6/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/push-notification/push-token-sync-optimizations",
@@ -1225,24 +1437,28 @@
     {
       "page": "/edge/adobe-journey-optimizer/push-notification/rich-media-notifications-overview",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/11319121?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "10/6/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/release-notes",
       "avatars": [
+        "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/176364653?v=4",
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
+        "https://avatars.githubusercontent.com/in/1143301?v=4",
+        "https://avatars.githubusercontent.com/u/57627350?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/51965286?v=4",
         "https://avatars.githubusercontent.com/u/8909148?v=4",
         "https://avatars.githubusercontent.com/u/63024083?v=4",
-        "https://avatars.githubusercontent.com/u/176364653?v=4",
         "https://avatars.githubusercontent.com/u/197083316?v=4",
-        "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/26108293?v=4",
         "https://avatars.githubusercontent.com/u/47394585?v=4",
-        "https://avatars.githubusercontent.com/in/15368?v=4",
         "https://avatars.githubusercontent.com/u/11319121?v=4",
         "https://avatars.githubusercontent.com/u/20484288?v=4",
         "https://avatars.githubusercontent.com/u/40409666?v=4",
@@ -1252,7 +1468,7 @@
         "https://avatars.githubusercontent.com/u/18382782?v=4",
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "10/27/2026"
     },
     {
       "page": "/edge/adobe-journey-optimizer/tutorials/",
@@ -1326,17 +1542,17 @@
     {
       "page": "/edge/consent-for-edge-network/release-notes",
       "avatars": [
+        "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/40409666?v=4",
         "https://avatars.githubusercontent.com/u/63024083?v=4",
-        "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/29806547?v=4",
         "https://avatars.githubusercontent.com/u/20484288?v=4",
-        "https://avatars.githubusercontent.com/in/15368?v=4",
         "https://avatars.githubusercontent.com/u/47394585?v=4",
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "9/24/2026"
     },
     {
       "page": "/edge/edge-network/",
@@ -1360,24 +1576,34 @@
     {
       "page": "/edge/edge-network/release-notes",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/57627350?v=4",
+        "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/176364653?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/29806547?v=4",
         "https://avatars.githubusercontent.com/u/20484288?v=4",
-        "https://avatars.githubusercontent.com/in/15368?v=4",
         "https://avatars.githubusercontent.com/u/47394585?v=4",
         "https://avatars.githubusercontent.com/u/4697559?v=4",
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "10/28/2026"
     },
     {
       "page": "/edge/edge-network/tutorials/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/4697559?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "8/31/2026"
+    },
+    {
+      "page": "/edge/edge-network/tutorials/batching-edge-events",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4"
+      ],
+      "lastUpdated": "9/8/2026"
     },
     {
       "page": "/edge/edge-network/tutorials/send-overrides-rules",
@@ -1432,21 +1658,24 @@
     {
       "page": "/edge/identity-for-edge-network/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/57627350?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/29806547?v=4",
         "https://avatars.githubusercontent.com/u/40409666?v=4",
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "10/27/2026"
     },
     {
       "page": "/edge/identity-for-edge-network/api-reference",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
+        "https://avatars.githubusercontent.com/u/173353453?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/20484288?v=4",
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/edge/identity-for-edge-network/faq",
@@ -1463,15 +1692,16 @@
     {
       "page": "/edge/identity-for-edge-network/release-notes",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/57627350?v=4",
+        "https://avatars.githubusercontent.com/in/15368?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/29806547?v=4",
         "https://avatars.githubusercontent.com/u/20484288?v=4",
-        "https://avatars.githubusercontent.com/in/15368?v=4",
         "https://avatars.githubusercontent.com/u/47394585?v=4",
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "10/27/2026"
     },
     {
       "page": "/edge/lifecycle-for-edge-network/",
@@ -1562,6 +1792,7 @@
     {
       "page": "/home/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/29806547?v=4",
@@ -1570,7 +1801,7 @@
         "https://avatars.githubusercontent.com/u/10753118?v=4",
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "7/9/2026"
     },
     {
       "page": "/home/base/",
@@ -1611,6 +1842,7 @@
     {
       "page": "/home/base/assurance/release-notes",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/176364653?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/96199823?v=4",
         "https://avatars.githubusercontent.com/u/20484288?v=4",
@@ -1622,24 +1854,28 @@
         "https://avatars.githubusercontent.com/u/10753118?v=4",
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "10/7/2026"
     },
     {
       "page": "/home/base/mobile-core/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
-      "lastUpdated": "10/17/2023"
+      "lastUpdated": "10/5/2026"
     },
     {
       "page": "/home/base/mobile-core/api-reference",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4",
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/6742873?v=4",
         "https://avatars.githubusercontent.com/u/20484288?v=4",
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
-      "lastUpdated": "5/14/2026"
+      "lastUpdated": "10/5/2026"
     },
     {
       "page": "/home/base/mobile-core/configuration/",
@@ -1796,13 +2032,38 @@
       "lastUpdated": "5/12/2026"
     },
     {
+      "page": "/home/base/mobile-core/plugins/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/plugins/built-in-plugins/live-updates-plugin",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/home/base/mobile-core/plugins/built-in-plugins/ui-builder-plugin",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/194229688?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
       "page": "/home/base/mobile-core/release-notes",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/176364653?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4",
         "https://avatars.githubusercontent.com/u/179128758?v=4",
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/47394585?v=4",
         "https://avatars.githubusercontent.com/u/20484288?v=4",
-        "https://avatars.githubusercontent.com/in/15368?v=4",
         "https://avatars.githubusercontent.com/u/8909148?v=4",
         "https://avatars.githubusercontent.com/u/63024083?v=4",
         "https://avatars.githubusercontent.com/u/29806547?v=4",
@@ -1810,7 +2071,7 @@
         "https://avatars.githubusercontent.com/u/10753118?v=4",
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "10/27/2026"
     },
     {
       "page": "/home/base/mobile-core/rules-engine/",
@@ -1824,21 +2085,23 @@
     {
       "page": "/home/base/mobile-core/rules-engine/consequence-details",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/63024083?v=4",
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
-      "lastUpdated": "5/14/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/home/base/mobile-core/rules-engine/technical-details",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/63024083?v=4",
         "https://avatars.githubusercontent.com/u/95260439?v=4",
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/home/base/mobile-core/signal/",
@@ -1888,19 +2151,20 @@
     {
       "page": "/home/base/profile/release-notes",
       "avatars": [
+        "https://avatars.githubusercontent.com/in/15368?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/29806547?v=4",
         "https://avatars.githubusercontent.com/u/20484288?v=4",
-        "https://avatars.githubusercontent.com/in/15368?v=4",
         "https://avatars.githubusercontent.com/u/47394585?v=4",
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "9/24/2026"
     },
     {
       "page": "/home/current-sdk-versions",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/208768492?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/63024083?v=4",
@@ -1913,7 +2177,7 @@
         "https://avatars.githubusercontent.com/u/20484288?v=4",
         "https://avatars.githubusercontent.com/u/13000319?v=4"
       ],
-      "lastUpdated": "5/14/2026"
+      "lastUpdated": "9/16/2026"
     },
     {
       "page": "/home/getting-started/",
@@ -1983,28 +2247,29 @@
     {
       "page": "/home/release-notes/",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/14320591?v=4",
-        "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/11319121?v=4",
+        "https://avatars.githubusercontent.com/u/57627350?v=4",
+        "https://avatars.githubusercontent.com/u/47394585?v=4",
+        "https://avatars.githubusercontent.com/in/15368?v=4",
+        "https://avatars.githubusercontent.com/u/176364653?v=4",
+        "https://avatars.githubusercontent.com/u/208768492?v=4",
+        "https://avatars.githubusercontent.com/u/179128758?v=4",
+        "https://avatars.githubusercontent.com/in/1143301?v=4",
+        "https://avatars.githubusercontent.com/u/43785777?v=4",
+        "https://avatars.githubusercontent.com/u/26108293?v=4",
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/95260439?v=4",
         "https://avatars.githubusercontent.com/u/51965286?v=4",
         "https://avatars.githubusercontent.com/u/8909148?v=4",
         "https://avatars.githubusercontent.com/u/63024083?v=4",
-        "https://avatars.githubusercontent.com/u/176364653?v=4",
         "https://avatars.githubusercontent.com/u/197083316?v=4",
-        "https://avatars.githubusercontent.com/u/26108293?v=4",
-        "https://avatars.githubusercontent.com/u/47394585?v=4",
-        "https://avatars.githubusercontent.com/in/15368?v=4",
         "https://avatars.githubusercontent.com/u/96199823?v=4",
         "https://avatars.githubusercontent.com/u/20484288?v=4",
         "https://avatars.githubusercontent.com/u/40409666?v=4",
         "https://avatars.githubusercontent.com/u/169874009?v=4",
-        "https://avatars.githubusercontent.com/u/57627350?v=4",
-        "https://avatars.githubusercontent.com/u/29806547?v=4",
-        "https://avatars.githubusercontent.com/u/4697559?v=4",
-        "https://avatars.githubusercontent.com/u/173353453?v=4"
+        "https://avatars.githubusercontent.com/u/29806547?v=4"
       ],
-      "lastUpdated": "5/13/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/home/release-notes/2021",
@@ -2430,6 +2695,13 @@
       "lastUpdated": "10/17/2023"
     },
     {
+      "page": "/resources/user-guides/forward-operational-data",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/179128758?v=4"
+      ],
+      "lastUpdated": "10/29/2026"
+    },
+    {
       "page": "/resources/user-guides/getting-started-with-platform/overview",
       "avatars": [
         "https://avatars.githubusercontent.com/u/14320591?v=4",
@@ -2807,16 +3079,16 @@
     {
       "page": "/solution/adobe-target/release-notes",
       "avatars": [
+        "https://avatars.githubusercontent.com/in/15368?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4",
         "https://avatars.githubusercontent.com/u/8909148?v=4",
         "https://avatars.githubusercontent.com/u/179128758?v=4",
         "https://avatars.githubusercontent.com/u/20484288?v=4",
-        "https://avatars.githubusercontent.com/in/15368?v=4",
         "https://avatars.githubusercontent.com/u/47394585?v=4",
         "https://avatars.githubusercontent.com/u/13000319?v=4",
         "https://avatars.githubusercontent.com/u/74737634?v=4"
       ],
-      "lastUpdated": "5/12/2026"
+      "lastUpdated": "9/24/2026"
     },
     {
       "page": "/solution/places/",

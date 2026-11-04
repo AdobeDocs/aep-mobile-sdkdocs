@@ -22,7 +22,7 @@ The following XDM event types are used in proposition tracking:
 | `decisioning.propositionInteract` | The user has interacted with the proposition that was displayed to them. |
 | `decisioning.propositionSuppressDisplay` | Triggering criteria were met to display the proposition, but the SDK did not display it. |
 | `decisioning.propositionTrigger` | Client-side criteria have been met to display the proposition to the user. |
-| `personalization.request` | The client is making a request to Adobe servers for propositions (including in-app messages, content cards, and code-based experiences). |
+| `decisioning.propositionFetch` | The client is making a request to Adobe servers for propositions (including in-app messages, content cards, and code-based experiences). |
 
 The contents of XDM data for these events vary, and are derived based on the provided [MessagingEdgeEventType](public-classes/messaging-edge-event-type.md) enum value and, in some cases, additional parameters provided by the user or application developer.
 
@@ -34,7 +34,7 @@ This section provides **partial** JSON payloads of sample edge request events th
 
 The order in which the examples are given mimics the typical order seen in an application using in-app messaging.
 
-### personalization.request
+### decisioning.propositionFetch
 
 An event similar to the following is emitted any time the SDK makes a request to Adobe servers for propositions:
 
@@ -64,7 +64,7 @@ An event similar to the following is emitted any time the SDK makes a request to
             "xdm" : {
                 "timestamp" : "2024-09-25T19:47:55.994Z",
                 "_id" : "4729BDF3-E155-4AB4-85F8-93F0DC15C92C",
-                "eventType" : "personalization.request"
+                "eventType" : "decisioning.propositionFetch"
             }
         }
     ]

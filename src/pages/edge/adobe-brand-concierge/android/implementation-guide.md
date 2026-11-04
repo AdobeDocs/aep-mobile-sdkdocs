@@ -70,7 +70,7 @@ Import and register the extensions in your `Application` class `onCreate()`:
 
 ```kotlin
 import com.adobe.marketing.mobile.MobileCore
-import com.adobe.marketing.mobile.Concierge
+import com.adobe.marketing.mobile.concierge.Concierge
 import com.adobe.marketing.mobile.edge.identity.Identity as EdgeIdentity
 import android.app.Application
 
@@ -99,10 +99,105 @@ Brand Concierge expects the following keys to be present in the Configuration sh
 
 * **`concierge.server`**: String (server host or base domain used by Brand Concierge requests)
 * **`concierge.configId`**: String (datastream ID)
+* **`concierge.region`**: String, optional (region identifier, e.g. `va6`, inserted into the Brand Concierge request path; omit to use the default unqualified endpoint)
 
-The ECID is read from the Edge Identity shared state.
+The full Edge Identity `identityMap` (including the ECID) is read from the Edge Identity shared state and forwarded to Brand Concierge requests.
 
 Another option for validation is to use Adobe Assurance. Refer to the [Mobile SDK validation guide](../../../home/getting-started/validate.md) for more information.
+
+<HorizontalLine />
+
+## Identities
+
+Brand Concierge forwards the full Edge Identity `identityMap` on every chat and feedback request. The ECID is always included automatically. To send additional identities (for example, a hashed email, `CRMID`, or a custom namespace), set them using the Identity for Edge Network extension's [`updateIdentities`](/edge/identity-for-edge-network/api-reference.md#updateidentities) API. These identities are forwarded verbatim, so lowercasing and hashing are the app's responsibility.
+
+Namespace priority and identity graph rules are configured server-side in Adobe Experience Platform; the SDK does not interpret or relabel namespaces.
+
+<HorizontalLine />
+
+## Authentication
+
+If your backend requires proof of the user's identity, register a `ConciergeAuthTokenProvider` to supply an app-minted authentication token. Brand Concierge attaches it to every chat and feedback request until the provider is cleared.
+
+```kotlin
+import com.adobe.marketing.mobile.concierge.Concierge
+import com.adobe.marketing.mobile.concierge.ConciergeAuthTokenProvider
+
+Concierge.setAuthTokenProvider(ConciergeAuthTokenProvider {
+    // Return the current token, or null to send the turn without one
+    myAuthTokenCache.getCurrentToken()
+})
+```
+
+Register the provider once, typically alongside extension registration in your `Application.onCreate()`. Pass `null` to `setAuthTokenProvider` to clear a previously registered provider.
+
+* `provideToken()` is called once per turn (chat and feedback) on a background thread — the token is never cached, so refreshed or rotated tokens are picked up on the next turn. It may block briefly to refresh the token; the SDK bounds the wait (3 seconds by default) and sends the turn without a token if `provideToken()` doesn't return in time.
+* Returning `null` or a blank value, or throwing, sends the turn without a token rather than failing it — the token is never merged into the identity payload or sent as a request header.
+* To use a different wait budget than the 3-second default (for example if your token mint is consistently slower or faster), pass `timeoutMillis` to `setAuthTokenProvider`:
+
+```kotlin
+Concierge.setAuthTokenProvider(
+    ConciergeAuthTokenProvider { myAuthTokenCache.getCurrentToken() },
+    timeoutMillis = 5000L
+)
+```
+
+<HorizontalLine />
+
+## Data handoff
+
+Use `Concierge.sendDataHandoff(...)` when your app needs to hand the SDK data that did not originate in the chat UI, for example, the result of a native checkout flow that completed outside of chat. The SDK forwards the data to the Brand Concierge agent pipeline and renders its response through the active chat transcript without requiring the user to type or say a chat message.
+
+<InlineAlert variant="info" slots="text"/>
+
+**Prerequisite**: Keep a configured `ConciergeChat` or `ConciergeChatView` rendered with a non-empty `surfaces` list while calling this API. The active chat session provides both the routing surfaces and the transcript that receives the service response. A handoff made without an active chat session fails with `NO_ACTIVE_SESSION`.
+
+```kotlin
+import com.adobe.marketing.mobile.concierge.Concierge
+
+Concierge.sendDataHandoff(
+    routingHint = "successful-checkout",
+    xdmFields = mapOf(
+        "commerce" to mapOf(
+            "order" to mapOf(
+                "purchaseID" to orderId,
+                "priceTotal" to 129.99,
+                "currencyCode" to "USD"
+            )
+        )
+    ),
+    localMessage = "Your order is confirmed!"
+) { accepted, rejectReason ->
+    // accepted == true  -> Brand Concierge completed and rendered the response.
+    // accepted == false -> validation or delivery failed; inspect rejectReason before retrying.
+}
+```
+
+### `Concierge.sendDataHandoff(routingHint, xdmFields, localMessage, completion)`
+
+* **`routingHint`**: A string consumed only by Brand Concierge's current phrase-based router (for example, `"successful-checkout"`). The end user never sees it, and it is not conversational content. Defaults to an empty string; pass an empty or blank string when the XDM fields alone determine routing, and the SDK forwards it as an empty service query. Because it is the first parameter, `@JvmOverloads` generates no Java overload that omits it. Java callers pass `""` explicitly, and Kotlin callers use named arguments.
+* **`xdmFields`** *(required)*: Arbitrary XDM-shaped data merged into the root of the outbound XDM object alongside the SDK-owned identity map. Use nested Kotlin maps and lists, for example `mapOf("commerce" to mapOf("order" to mapOf("purchaseID" to "123")))`. The map must be non-empty, every key must be a `String`, and values must be JSON-safe: `String`, `Boolean`, finite `Int`, `Long`, `Float`, or `Double`, or maps and lists containing those values. Do not use `identityMap` as a top-level key because the SDK owns and populates it.
+* **`localMessage`**: Optional text for a local, non-networked chat message distinct from the data forwarded to Brand Concierge. The SDK renders it immediately before an accepted handoff starts, as an agent-attributed message rather than a user message.
+* **`completion`**: Optional `ConciergeDataHandoffCallback`, called exactly once on a background thread. `accepted` is `true` only after Brand Concierge completes a response stream with renderable content. When `accepted` is `false`, `rejectReason` is a typed `ConciergeDataHandoffRejectReason`:
+
+| Reject reason | Meaning |
+| --- | --- |
+| `MISSING_EVENT_DATA` | No payload reached the extension. This indicates an internal wiring issue and is not normally caller-triggered. |
+| `INVALID_ROUTING_HINT_TYPE` | `routingHint` was not a string in the underlying event payload. A missing or blank `routingHint` is accepted, not rejected. |
+| `MISSING_XDM_FIELDS` | `xdmFields` was missing from the underlying event payload. |
+| `INVALID_XDM_FIELDS_TYPE` | `xdmFields` was not a map in the underlying event payload. |
+| `EMPTY_XDM_FIELDS` | `xdmFields` was empty. |
+| `INVALID_XDM_FIELD_KEY` | `xdmFields` contained a key that was not a string. |
+| `RESERVED_KEY_COLLISION` | `xdmFields` used an SDK-reserved top-level key such as `identityMap`. |
+| `INVALID_XDM_FIELD_VALUE` | `xdmFields` contained a value that cannot be serialized as JSON. |
+| `NO_ACTIVE_SESSION` | No rendered Concierge chat session was available to receive the handoff. |
+| `CHAT_IN_PROGRESS` | A chat turn or another handoff is active or waiting. Retry after it completes. |
+| `DELIVERY_FAILED` | Brand Concierge returned an error or the service request could not complete. |
+| `EMPTY_RESPONSE` | Brand Concierge completed without any text, cards, or CTAs to render. |
+| `DELIVERY_TIMEOUT` | Brand Concierge did not complete within the handoff delivery timeout. |
+| `NO_RESPONSE` | The extension did not respond, for example because the request timed out. |
+
+Chat messages use a finite FIFO queue. Data handoffs never join that queue: if a chat message or another handoff is active or waiting, the SDK immediately reports `CHAT_IN_PROGRESS` and does not render `localMessage` or call the service. Retry the handoff after the active request completes. After an accepted handoff starts, delivery failures, empty responses, and timeouts do not add an error message to the transcript. An already-rendered `localMessage` remains visible, and the host app owns any failure UI based on the completion result.
 
 <HorizontalLine />
 
@@ -321,9 +416,9 @@ Add an `<intent-filter>` with `android:autoVerify="true"` to the activity in you
 </activity>
 ```
 
-**2. Package visibility (Android 11 and higher)**
+**2. Package visibility for Android 11 or higher**
 
-Add the following `<queries>` block to your `AndroidManifest.xml`. Without it, the Concierge extension cannot use `PackageManager.resolveActivity()` to detect the App Link handler on API 30 or higher, and App Links will silently fall back to the in-app WebView.
+Add the following `<queries>` block to your `AndroidManifest.xml`. Without it, the Concierge extension cannot use `PackageManager.resolveActivity()` to detect the App Link handler on API 30 or higher, and App Links will silently fall back to the in-app WebView on that API level.
 
 ```xml
 <!-- Required for PackageManager.resolveActivity() on Android 11+ to detect
@@ -340,13 +435,13 @@ Add the following `<queries>` block to your `AndroidManifest.xml`. Without it, t
 </queries>
 ```
 
-#### Link handling
+#### Chat message link handling
 
-The Concierge extension automatically opens links when your app is the verified handler for the URL's domain. If your app is not the handler, the link opens in an in-app WebView overlay.
+The Concierge extension automatically opens links when your app is the verified handler for the URL's domain (e.g., listed in the domain's assetlinks.json). If your app is not the handler, the link opens in the in-app WebView overlay.
 
-**Default link handling flow:** `handleLink` callback (if provided) → App Link check → WebView overlay.
+**Default link handling flow:** host `handleLink` callback (if provided) → App Link check → WebView overlay.
 
-To customize this behavior, provide a `handleLink` callback. Return `true` if your app handled the link; return `false` to fall back to the default behavior (App Link check, then WebView overlay).
+To customize this behavior, provide a `handleLink` callback. Return `true` if your app handled the link; return `false` to have the Brand Concierge extension handle the link with its default behavior (trying to open it as an App Link first, then using the WebView overlay).
 
 **Compose (ConciergeChat):**
 
@@ -388,7 +483,9 @@ chatView.bind(
 )
 ```
 
-To close the chat when a deep link is tapped, call `viewModel.closeConcierge()` inside your `handleLink` callback before returning `true`:
+When `handleLink` returns `true`, the SDK does not open the WebView overlay. When it returns `false` or is null, the SDK uses the default flow (trying to open it as an App Link first, then using the WebView overlay).
+
+To close the chat when a deeplink is clicked, call `viewModel.closeConcierge()` inside your `handleLink` callback before returning `true`:
 
 ```kotlin
 ConciergeChat(

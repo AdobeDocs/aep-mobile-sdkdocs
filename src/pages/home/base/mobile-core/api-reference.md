@@ -8,6 +8,48 @@ keywords:
 
 # Mobile Core API reference
 
+## addPlugins
+
+The `addPlugins` API registers one or more plugins with Mobile Core. Plugins are optional modules that add a specific capability to an extension, such as Live Updates or push templates. For more information, see [Mobile Core plugins](plugins/index.md).
+
+Register plugins in the `onCreate` method of your `Application` class, before you initialize the SDK. Registering the same plugin instance more than once has no effect.
+
+Please note that this method is **only** supported on Android versions of Mobile Core.
+
+### Android Java
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```java
+public static void addPlugins(@NonNull final IAepPlugin... plugins)
+```
+
+* _plugins_ - One or more plugins to register.
+
+#### Example
+
+```java
+MobileCore.addPlugins(
+    new NotificationBuilderPlugin(),
+    new LiveUpdatePlugin(new MyLiveUpdateStyleProvider())
+);
+```
+
+### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```kotlin
+MobileCore.addPlugins(
+    NotificationBuilderPlugin(),
+    LiveUpdatePlugin(MyLiveUpdateStyleProvider())
+)
+```
+
 ## clearUpdatedConfiguration
 
 Programmatic updates made to the configuration can be cleared via the `clearUpdatedConfiguration` API. For more information about configuration in Mobile Core, please refer to the [Configuration API reference](configuration/api-reference.md#clearupdatedconfiguration).
@@ -366,6 +408,41 @@ var logLevel = Log.logFilter
 
 ```objectivec
 AEPLogLevel logLevel = [AEPLog logFilter];
+```
+
+## getPlugin
+
+The `getPlugin` API returns the registered plugin for the given plugin type, or `null` if no matching plugin is registered. Extensions use this API to access the plugins that your app registers. Apps typically do not need to call this API. For more information, see [Mobile Core plugins](plugins/index.md).
+
+Please note that this method is **only** supported on Android versions of Mobile Core.
+
+### Android Java
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```java
+@Nullable
+public static <T extends IAepPlugin> T getPlugin(@NonNull final Class<T> type)
+```
+
+* _type_ - The plugin type to look up.
+
+#### Example
+
+```java
+ILiveupdatePlugin plugin = MobileCore.getPlugin(ILiveupdatePlugin.class);
+```
+
+### Android Kotlin
+
+<CodeBlock slots="heading, code" repeat="1" />
+
+#### Example
+
+```kotlin
+val plugin = MobileCore.getPlugin(ILiveupdatePlugin::class.java)
 ```
 
 ## getPrivacyStatus
