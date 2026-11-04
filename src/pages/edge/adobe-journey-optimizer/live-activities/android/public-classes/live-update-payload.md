@@ -67,18 +67,6 @@ public static LiveUpdatePayload parse(RemoteMessage message)
 
 The parsed payload, or `null` when the message has no `adb_liveupdate_data` key, the `adb_liveupdate_data` value is not valid JSON, or a required field (`notification_id`, `notification_channel_id`, `event_type`, `timestamp`) is missing.
 
-### isLiveUpdate
-
-Returns `true` when the FCM message carries the `adb_liveupdate_data` key.
-
-```kotlin
-fun isLiveUpdate(message: RemoteMessage): Boolean
-```
-
-```java
-public static boolean isLiveUpdate(RemoteMessage message)
-```
-
 ### create
 
 Builds a payload in your app, for [triggerLocalLiveUpdate](../api-reference.md#triggerlocalliveupdate).
