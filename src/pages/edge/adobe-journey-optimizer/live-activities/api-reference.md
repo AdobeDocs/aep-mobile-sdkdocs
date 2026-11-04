@@ -70,3 +70,62 @@ if #available(iOS 16.1, *) {
 <InlineAlert variant="info" slots="text"/>
 
 The `registerLiveActivities` API is only available in Swift. ActivityKit and its `ActivityAttributes` protocol are Swift-only APIs and cannot be called from Objective-C.
+
+## clearLiveActivities
+
+The `clearLiveActivities` API clears all Live Activity tokens tracked by the Messaging extension and tears down all Live Activity listeners. Calling this API:
+
+* Sends an empty push-to-start token to Adobe Experience Platform for every stored token, which clears the tokens and marks them as stale for the user in Adobe Journey Optimizer
+* Clears the SDK's local token stores
+* Cancels all active Live Activity listener tasks
+
+This is a full teardown, not a one-time revocation. To resume token collection, call [registerLiveActivities](#registerliveactivities) again.
+
+<InlineAlert variant="info" slots="text"/>
+
+This API is available starting with iOS Messaging version 5.17.0.
+
+### iOS Swift
+
+<CodeBlock slots="heading, code" repeat="2" />
+
+#### Syntax
+
+```swift
+static func clearLiveActivities()
+```
+
+#### Example
+
+```swift
+Messaging.clearLiveActivities()
+```
+
+### iOS Objective-C
+
+<InlineAlert variant="info" slots="text"/>
+
+The `clearLiveActivities` API is only available in Swift.
+
+### Clearing tokens before resetting identities
+
+<InlineAlert variant="warning" slots="text"/>
+
+`clearLiveActivities` dispatches its Edge event asynchronously. If your app also calls `MobileCore.resetIdentities()` (for example, when a user signs out), call `clearLiveActivities` first and allow time for the clear to reach Edge before resetting identities. If `resetIdentities()` runs first, the clear request may be sent with the new ECID and applied to the wrong profile.
+
+To clear the standard push token at the same time, call `MobileCore.setPushIdentifier(nil)` alongside `clearLiveActivities`. After the identities are reset, call `MobileCore.setPushIdentifier` with the current device token and `registerLiveActivities` again so that both tokens are collected and synced to the new profile.
+
+```swift
+// 1. Clear tokens so that the empty values are synced to the current profile.
+MobileCore.setPushIdentifier(nil)
+Messaging.clearLiveActivities()
+
+// 2. Wait for the clear events to be sent before resetting identities.
+DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+    MobileCore.resetIdentities()
+
+    // 3. Sync both tokens to the new profile.
+    MobileCore.setPushIdentifier(currentDeviceToken)
+    Messaging.registerLiveActivities([FoodDeliveryLiveActivityAttributes.self])
+}
+```

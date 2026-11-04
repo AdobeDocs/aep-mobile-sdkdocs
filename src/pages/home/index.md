@@ -15,22 +15,6 @@ Good to go for iOS 26 and Android 17
 
 The latest versions of the Adobe Experience Platform SDK for Android and iOS (Swift and Objective-C) have been tested for compatibility with the release versions of Google Android 17 and Apple iOS 26. See [Current SDK Versions](current-sdk-versions.md) to find our latest SDK versions, or [release notes](release-notes/index.md) for information on changes and updates.
 
-<InlineAlert variant="info" slots="text"/>
-
-To learn how Apple's privacy related announcements made in WWDC of 2023 affect the Mobile SDK, please read the guide on [iOS privacy manifest and related changes](../resources/privacy-manifest.md).
-
-<InlineAlert variant="info" slots="text"/>
-
-Effective June 30, 2024: Adobe Experience Platform 1.x SDKs for Android will no longer be supported. Refer to the [end-of-support](../resources/sdks-end-of-support.md) page for more information.
-
-<InlineAlert variant="info" slots="text"/>
-
-Effective August 31, 2023: ACP iOS SDKs, Flutter for ACP, React Native for ACP, Cordova, and Xamarin SDKs will no longer be supported. Refer to the [end-of-support](../resources/sdks-end-of-support.md) page for more information.
-
-<InlineAlert variant="info" slots="text"/>
-
-Check out our page discussing how we will [align major SDK versions](../resources/major-version-alignment.md) for future releases of the Adobe Experience Platform Mobile SDKs and wrappers.
-
 ## Bring the Adobe Experience Cloud to your apps
 
 The Adobe Experience Platform Mobile SDK helps power Adobe's Experience Cloud solutions and services in your mobile apps.
@@ -62,3 +46,21 @@ The Adobe Experience Platform Mobile SDK supports the following platforms:
 If you have any questions about the SDK, please visit the [SDK community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform/ct-p/adobe-experience-platform-community).
 
 If you need immediate assistance, please contact [Adobe Experience Cloud customer care](https://experienceleague.adobe.com/?support-solution=General#support).
+
+## Notices
+
+<InlineAlert variant="info" slots="text"/>
+
+To learn how Apple's privacy related announcements made in WWDC of 2023 affect the Mobile SDK, please read the guide on [iOS privacy manifest and related changes](../resources/privacy-manifest.md).
+
+<InlineAlert variant="info" slots="text"/>
+
+Effective June 30, 2024: Adobe Experience Platform 1.x SDKs for Android will no longer be supported. Refer to the [end-of-support](../resources/sdks-end-of-support.md) page for more information.
+
+<InlineAlert variant="info" slots="text"/>
+
+Effective August 31, 2023: ACP iOS SDKs, Flutter for ACP, React Native for ACP, Cordova, and Xamarin SDKs will no longer be supported. Refer to the [end-of-support](../resources/sdks-end-of-support.md) page for more information.
+
+<InlineAlert variant="info" slots="text"/>
+
+Check out our page discussing how we will [align major SDK versions](../resources/major-version-alignment.md) for future releases of the Adobe Experience Platform Mobile SDKs and wrappers.
