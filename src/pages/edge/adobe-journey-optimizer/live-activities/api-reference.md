@@ -75,9 +75,13 @@ The `registerLiveActivities` API is only available in Swift. ActivityKit and its
 
 The `clearLiveActivities` API clears all Live Activity tokens tracked by the Messaging extension and tears down all Live Activity listeners. Calling this API:
 
-* Sends an empty push-to-start token to Adobe Experience Platform for every stored token, which clears the tokens and marks them as stale for the user in Adobe Journey Optimizer
-* Clears the SDK's local token stores
+* Sends an empty push-to-start token to Adobe Experience Platform for every stored push-to-start token, which clears those tokens on the current profile
+* Clears the SDK's locally stored push-to-start tokens, Live Activity update tokens, and broadcast channel activities
 * Cancels all active Live Activity listener tasks
+
+<InlineAlert variant="info" slots="text"/>
+
+Only push-to-start tokens are sent to Adobe Experience Platform. Update tokens and channel activities are only cleared locally. If the ECID is not available, the empty push-to-start tokens are not sent, but the local stores are still cleared.
 
 This is a full teardown, not a one-time revocation. To resume token collection, call [registerLiveActivities](#registerliveactivities) again.
 
@@ -98,7 +102,9 @@ static func clearLiveActivities()
 #### Example
 
 ```swift
-Messaging.clearLiveActivities()
+if #available(iOS 16.1, *) {
+    Messaging.clearLiveActivities()
+}
 ```
 
 ### iOS Objective-C
@@ -118,7 +124,9 @@ To clear the standard push token at the same time, call `MobileCore.setPushIdent
 ```swift
 // 1. Clear tokens so that the empty values are synced to the current profile.
 MobileCore.setPushIdentifier(nil)
-Messaging.clearLiveActivities()
+if #available(iOS 16.1, *) {
+    Messaging.clearLiveActivities()
+}
 
 // 2. Wait for the clear events to be sent before resetting identities.
 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
@@ -126,6 +134,8 @@ DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
 
     // 3. Sync both tokens to the new profile.
     MobileCore.setPushIdentifier(currentDeviceToken)
-    Messaging.registerLiveActivities([FoodDeliveryLiveActivityAttributes.self])
+    if #available(iOS 16.1, *) {
+        Messaging.registerLiveActivities([FoodDeliveryLiveActivityAttributes.self])
+    }
 }
 ```
