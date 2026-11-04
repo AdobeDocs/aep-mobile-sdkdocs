@@ -9,6 +9,38 @@ keywords:
 
 # Release notes
 
+## October 21, 2026
+
+### Android EdgeIdentity 3.2.0
+
+* Added the `updateOperationalData` API to send operational data, such as the timezone and push tokens, to the Edge Network independent of collect consent. Only values allowed by a Tags rule with a forward operational data consequence are sent.
+* Added deduplication for the timezone and push token, so values are sent only when they change. It can be disabled with the `edgeidentity.optimizeOperationalProfileDataSync` configuration setting.
+* Added an `Operational Data Sync Result` event reporting the status of each `updateOperationalData` request, and an `Operational data confirmed` event that sends confirmed tokens to the Messaging extension.
+* Updated `updateProfileAttributes` handling to create the Edge Identity XDM shared state only when the timezone changes.
+* **Dependency:** AEPCore 3.11.0 or later is required.
+* **Dependency:** AEPEdge 3.2.0 or later is required to send operational data to the Edge Network.
+* This release and its required dependencies are included in [Android BOM 3.25.0](../../home/release-notes/index.md#android-bom-3250).
+
+### iOS EdgeIdentity 5.2.0
+
+* Added the `updateOperationalData` API to send operational data, such as the timezone, push token and Live Activity push-to-start tokens, to the Edge Network independent of collect consent. Only values allowed by a Tags rule with a forward operational data consequence are sent.
+* Added deduplication for the timezone, push token and Live Activity push-to-start tokens, so values are sent only when they change. It can be disabled with the `edgeidentity.optimizeOperationalProfileDataSync` configuration setting.
+* Added an `Operational Data Sync Result` event reporting the status of each `updateOperationalData` request, and an `Operational data confirmed` event that sends confirmed tokens to the Messaging extension.
+* Updated `updateProfileAttributes` handling to create the Edge Identity XDM shared state only when the timezone changes.
+* **Dependency:** AEPCore 5.13.0 or later is required.
+* **Dependency:** AEPEdge 5.3.0 or later is required to send operational data to the Edge Network.
+
+## October 19, 2026
+
+### Identity Tags extension 2.1.1
+
+* Adds **Optimize syncing operational profile data**, saved as the boolean `edgeidentity.optimizeOperationalProfileDataSync` configuration key. The Tags UI selects it by default. When selected, the timezone, push token and Live Activity push-to-start tokens are sent only when they change.
+* Adds the **Sync Operational Data** rule event under **Attributes**. The SDK triggers it when your app calls `updateOperationalData`, and on iOS when Adobe Journey Optimizer syncs Live Activity tokens.
+* Adds the **Forward Operational Data to Edge Network** rule action. Select Timezone, Push token or Live Activity tokens to forward. App ID and platform are always included.
+* Requires Android Identity for Edge Network 3.2.0, Edge Network 3.2.0 and Mobile Core 3.11.0, or iOS Identity for Edge Network 5.2.0, Edge Network 5.3.0 and Mobile Core 5.13.0, or later.
+
+See the [configuration](index.md#configure-the-identity-extension-in-the-data-collection-ui) and [operational data sync](index.md#sync-operational-data-to-the-edge-network) instructions.
+
 ## July 8, 2026
 
 ### iOS EdgeIdentity 5.1.0

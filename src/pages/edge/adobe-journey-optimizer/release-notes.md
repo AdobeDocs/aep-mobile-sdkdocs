@@ -9,6 +9,26 @@ keywords:
 
 # Release notes
 
+## October 22, 2026
+
+### iOS Messaging 5.18.0
+
+* Added consent-independent syncing of Live Activity tokens. When collect consent is not `y` (no or pending), Live Activity push-to-start and update tokens are also sent as operational data, so the Identity for Edge Network extension can send them to the Edge Network regardless of collect consent. Only values allowed by a Tags rule with a forward operational data consequence are sent. The existing Live Activity token sync to the profile, which depends on collect consent, is unchanged.
+* Messaging now updates its stored push token and Live Activity tokens, and its shared state, when the Identity for Edge Network extension confirms they were synced. An unchanged token is then not sent to the Edge Network again. See [`updateOperationalData`](https://github.com/adobe/aepsdk-edgeidentity-ios/blob/main/Documentation/api-reference.md#updateoperationaldata) in the Identity for Edge Network documentation.
+* **Dependency:** AEPCore and AEPServices 5.13.0 or later are required.
+* **Dependency:** AEPEdge 5.3.0 or later is required.
+* **Dependency:** AEPEdgeIdentity 5.2.0 or later is required.
+
+### Android Messaging 3.14.0
+
+* Added support for synchronizing push tokens from device attributes confirmed by Edge Identity. 
+* The confirmed push token is persisted and published to Messaging shared state without sending a duplicate Edge event. 
+* Updated required dependencies:
+  * AEPCore: 3.11.0
+  * AEPEdge: 3.2.0
+  * AEPEdgeIdentity: 3.2.0
+* This release and its required dependencies are included in [Android BOM 3.25.0](../../home/release-notes/index.md#android-bom-3250).
+
 ## September 30, 2026
 
 ### iOS Messaging 5.17.0
